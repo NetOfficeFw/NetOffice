@@ -52,7 +52,7 @@ namespace NetOffice
         /// <summary>
         /// returns type of entity
         /// </summary>
-        public EntityType Type;
+        public readonly EntityType Type;
 
         /// <summary>
         /// creates instance

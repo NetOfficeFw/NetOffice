@@ -65,9 +65,14 @@ namespace NetOffice.OfficeApi.Tools.Dialogs
             return result;
         }
 
+        /// <summary>
+        /// Shows an error in a standard message box
+        /// </summary>
+        /// <param name="error">error description</param>
         protected void ShowSingleException(Exception error)
         {
-            MessageBox.Show(this, error.ToString(), Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            if(null != error)
+                MessageBox.Show(this, error.ToString(), Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
         private void DoLayoutControls(Control.ControlCollection controls, DialogLayoutSettings layout)

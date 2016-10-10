@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using NetOffice;
@@ -16,10 +16,10 @@ namespace NetOffice.VisioApi
 
 	///<summary>
 	/// CoClass Section 
-	/// SupportByVersion Visio, 11,12,14,15
+	/// SupportByVersion Visio, 11,12,14,15,16
 	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff769382(v=office.14).aspx
 	///</summary>
-	[SupportByVersionAttribute("Visio", 11,12,14,15)]
+	[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class Section : IVSection,IEventBinding
 	{
@@ -94,7 +94,7 @@ namespace NetOffice.VisioApi
 		}
 		
 		///<summary>
-        ///creates a new instance of Section 
+        /// Creates a new instance of Section 
         ///</summary>		
 		public Section():base("Visio.Section")
 		{
@@ -102,7 +102,7 @@ namespace NetOffice.VisioApi
 		}
 		
 		///<summary>
-        ///creates a new instance of Section
+        /// Creates a new instance of Section
         ///</summary>
         ///<param name="progId">registered ProgID</param>
 		public Section(string progId):base(progId)
@@ -115,12 +115,12 @@ namespace NetOffice.VisioApi
 		#region Static CoClass Methods
 
 		/// <summary>
-        /// returns all running Visio.Section objects from the running object table(ROT)
+        /// Returns all running Visio.Section objects from the environment/system
         /// </summary>
         /// <returns>an Visio.Section array</returns>
 		public static NetOffice.VisioApi.Section[] GetActiveInstances()
 		{		
-			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("Visio","Section");
+			IDisposableEnumeration proxyList = NetOffice.ProxyService.GetActiveInstances("Visio","Section");
 			NetRuntimeSystem.Collections.Generic.List<NetOffice.VisioApi.Section> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.VisioApi.Section>();
 			foreach(object proxy in proxyList)
 				resultList.Add( new NetOffice.VisioApi.Section(null, proxy) );
@@ -128,12 +128,12 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-        /// returns a running Visio.Section object from the running object table(ROT). the method takes the first element from the table
+        /// Returns a running Visio.Section object from the environment/system.
         /// </summary>
         /// <returns>an Visio.Section object or null</returns>
 		public static NetOffice.VisioApi.Section GetActiveInstance()
 		{
-			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Visio","Section", false);
+			object proxy  = NetOffice.ProxyService.GetActiveInstance("Visio","Section", false);
 			if(null != proxy)
 				return new NetOffice.VisioApi.Section(null, proxy);
 			else
@@ -141,13 +141,13 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-        /// returns a running Visio.Section object from the running object table(ROT).  the method takes the first element from the table
+        /// Returns a running Visio.Section object from the environment/system. 
         /// </summary>
 	    /// <param name="throwOnError">throw an exception if no object was found</param>
         /// <returns>an Visio.Section object or null</returns>
 		public static NetOffice.VisioApi.Section GetActiveInstance(bool throwOnError)
 		{
-			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Visio","Section", throwOnError);
+			object proxy  = NetOffice.ProxyService.GetActiveInstance("Visio","Section", throwOnError);
 			if(null != proxy)
 				return new NetOffice.VisioApi.Section(null, proxy);
 			else
@@ -158,15 +158,15 @@ namespace NetOffice.VisioApi
 		#region Events
 
 		/// <summary>
-		/// SupportByVersion Visio, 11,12,14,15
+		/// SupportByVersion Visio, 11,12,14,15,16
 		/// </summary>
 		private event Section_CellChangedEventHandler _CellChangedEvent;
 
 		/// <summary>
-		/// SupportByVersion Visio 11 12 14 15
+		/// SupportByVersion Visio 11 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff765230(v=office.14).aspx </remarks>
-		[SupportByVersion("Visio", 11,12,14,15)]
+		[SupportByVersion("Visio", 11,12,14,15,16)]
 		public event Section_CellChangedEventHandler CellChangedEvent
 		{
 			add
@@ -181,15 +181,15 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio, 11,12,14,15
+		/// SupportByVersion Visio, 11,12,14,15,16
 		/// </summary>
 		private event Section_FormulaChangedEventHandler _FormulaChangedEvent;
 
 		/// <summary>
-		/// SupportByVersion Visio 11 12 14 15
+		/// SupportByVersion Visio 11 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff767144(v=office.14).aspx </remarks>
-		[SupportByVersion("Visio", 11,12,14,15)]
+		[SupportByVersion("Visio", 11,12,14,15,16)]
 		public event Section_FormulaChangedEventHandler FormulaChangedEvent
 		{
 			add
@@ -208,7 +208,7 @@ namespace NetOffice.VisioApi
 	    #region IEventBinding Member
         
 		/// <summary>
-        /// creates active sink helper
+        /// Creates active sink helper
         /// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public void CreateEventBridge()
@@ -230,6 +230,9 @@ namespace NetOffice.VisioApi
 			} 
         }
 
+        /// <summary>
+        /// The instance use currently an event listener 
+        /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public bool EventBridgeInitialized
         {
@@ -238,7 +241,10 @@ namespace NetOffice.VisioApi
                 return (null != _connectPoint);
             }
         }
-        
+
+        /// <summary>
+        ///  The instance has currently one or more event recipients 
+        /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public bool HasEventRecipients()       
         {
@@ -258,6 +264,9 @@ namespace NetOffice.VisioApi
 			return false;
         }
         
+        /// <summary>
+        /// Target methods from its actual event recipients
+        /// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public Delegate[] GetEventRecipients(string eventName)
         {
@@ -277,7 +286,10 @@ namespace NetOffice.VisioApi
             else
                 return new Delegate[0];
         }
-
+       
+        /// <summary>
+        /// Returns the current count of event recipients
+        /// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public int GetCountOfEventRecipients(string eventName)
         {
@@ -296,8 +308,14 @@ namespace NetOffice.VisioApi
             }
             else
                 return 0;
-        }
-
+           }
+        
+        /// <summary>
+        /// Raise an instance event
+        /// </summary>
+        /// <param name="eventName">name of the event without 'Event' at the end</param>
+        /// <param name="paramsArray">custom arguments for the event</param>
+        /// <returns>count of called event recipients</returns>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public int RaiseCustomEvent(string eventName, ref object[] paramsArray)
 		{
@@ -329,6 +347,9 @@ namespace NetOffice.VisioApi
                 return 0;
 		}
 
+        /// <summary>
+        /// Stop listening events for the instance
+        /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public void DisposeEventBridge()
         {

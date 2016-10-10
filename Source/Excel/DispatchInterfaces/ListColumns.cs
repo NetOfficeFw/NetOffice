@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using NetRuntimeSystem = System;
 using System.Runtime.InteropServices;
 using System.Runtime.CompilerServices;
@@ -11,10 +11,10 @@ namespace NetOffice.ExcelApi
 {
 	///<summary>
 	/// DispatchInterface ListColumns 
-	/// SupportByVersion Excel, 11,12,14,15
+	/// SupportByVersion Excel, 11,12,14,15,16
 	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838649.aspx
 	///</summary>
-	[SupportByVersionAttribute("Excel", 11,12,14,15)]
+	[SupportByVersionAttribute("Excel", 11,12,14,15,16)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class ListColumns : COMObject ,IEnumerable<NetOffice.ExcelApi.ListColumn>
 	{
@@ -94,11 +94,11 @@ namespace NetOffice.ExcelApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion Excel 11, 12, 14, 15
+		/// SupportByVersion Excel 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840144.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 11,12,14,15)]
+		[SupportByVersionAttribute("Excel", 11,12,14,15,16)]
 		public NetOffice.ExcelApi.Application Application
 		{
 			get
@@ -111,11 +111,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 11, 12, 14, 15
+		/// SupportByVersion Excel 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840704.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 11,12,14,15)]
+		[SupportByVersionAttribute("Excel", 11,12,14,15,16)]
 		public NetOffice.ExcelApi.Enums.XlCreator Creator
 		{
 			get
@@ -128,12 +128,12 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 11, 12, 14, 15
+		/// SupportByVersion Excel 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff820798.aspx
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 11,12,14,15)]
+		[SupportByVersionAttribute("Excel", 11,12,14,15,16)]
 		public object Parent
 		{
 			get
@@ -146,11 +146,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 11, 12, 14, 15
+		/// SupportByVersion Excel 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
 		/// <param name="index">object Index</param>
-		[SupportByVersionAttribute("Excel", 11,12,14,15)]
+		[SupportByVersionAttribute("Excel", 11,12,14,15,16)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
 		public NetOffice.ExcelApi.ListColumn this[object index]
 		{
@@ -164,11 +164,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 11, 12, 14, 15
+		/// SupportByVersion Excel 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837067.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 11,12,14,15)]
+		[SupportByVersionAttribute("Excel", 11,12,14,15,16)]
 		public Int32 Count
 		{
 			get
@@ -184,11 +184,11 @@ namespace NetOffice.ExcelApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByVersion Excel 11, 12, 14, 15
+		/// SupportByVersion Excel 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837110.aspx
 		/// </summary>
 		/// <param name="position">optional object Position</param>
-		[SupportByVersionAttribute("Excel", 11,12,14,15)]
+		[SupportByVersionAttribute("Excel", 11,12,14,15,16)]
 		public NetOffice.ExcelApi.ListColumn Add(object position)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(position);
@@ -198,11 +198,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 11, 12, 14, 15
+		/// SupportByVersion Excel 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837110.aspx
 		/// </summary>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 11,12,14,15)]
+		[SupportByVersionAttribute("Excel", 11,12,14,15,16)]
 		public NetOffice.ExcelApi.ListColumn Add()
 		{
 			object[] paramsArray = null;
@@ -216,9 +216,9 @@ namespace NetOffice.ExcelApi
        #region IEnumerable<NetOffice.ExcelApi.ListColumn> Member
         
         /// <summary>
-		/// SupportByVersionAttribute Excel, 11,12,14,15
+		/// SupportByVersionAttribute Excel, 11,12,14,15,16
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 11,12,14,15)]
+		[SupportByVersionAttribute("Excel", 11,12,14,15,16)]
        public IEnumerator<NetOffice.ExcelApi.ListColumn> GetEnumerator()  
        {
            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
@@ -231,9 +231,9 @@ namespace NetOffice.ExcelApi
 		#region IEnumerable Members
        
 		/// <summary>
-		/// SupportByVersionAttribute Excel, 11,12,14,15
+		/// SupportByVersionAttribute Excel, 11,12,14,15,16
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 11,12,14,15)]
+		[SupportByVersionAttribute("Excel", 11,12,14,15,16)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
 			return NetOffice.Utils.GetProxyEnumeratorAsProperty(this);

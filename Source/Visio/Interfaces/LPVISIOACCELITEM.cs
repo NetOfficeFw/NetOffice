@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using NetRuntimeSystem = System;
 using System.Runtime.InteropServices;
 using System.ComponentModel;
@@ -10,9 +10,9 @@ namespace NetOffice.VisioApi
 {
 	///<summary>
 	/// Interface LPVISIOACCELITEM 
-	/// SupportByVersion Visio, 11,12,14,15
+	/// SupportByVersion Visio, 11,12,14,15,16
 	///</summary>
-	[SupportByVersionAttribute("Visio", 11,12,14,15)]
+	[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
 	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class LPVISIOACCELITEM : COMObject
 	{
@@ -92,10 +92,10 @@ namespace NetOffice.VisioApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion Visio 11, 12, 14, 15
+		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 11,12,14,15)]
+		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public Int16 Default
 		{
@@ -108,10 +108,10 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio 11, 12, 14, 15
+		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 11,12,14,15)]
+		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
 		public Int16 CmdNum
 		{
 			get
@@ -128,10 +128,10 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio 11, 12, 14, 15
+		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 11,12,14,15)]
+		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
 		public Int16 Key
 		{
 			get
@@ -148,10 +148,10 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio 11, 12, 14, 15
+		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 11,12,14,15)]
+		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
 		public Int16 Alt
 		{
 			get
@@ -168,10 +168,10 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio 11, 12, 14, 15
+		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 11,12,14,15)]
+		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
 		public Int16 Shift
 		{
 			get
@@ -188,10 +188,10 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio 11, 12, 14, 15
+		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 11,12,14,15)]
+		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
 		public Int16 Control
 		{
 			get
@@ -208,10 +208,10 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio 11, 12, 14, 15
+		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 11,12,14,15)]
+		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
 		public NetOffice.VisioApi.IVAccelItems Parent
 		{
 			get
@@ -224,10 +224,10 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio 11, 12, 14, 15
+		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 11,12,14,15)]
+		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
 		public string AddOnName
 		{
 			get
@@ -244,10 +244,10 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio 11, 12, 14, 15
+		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 11,12,14,15)]
+		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
 		public string AddOnArgs
 		{
 			get
@@ -268,10 +268,10 @@ namespace NetOffice.VisioApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByVersion Visio 11, 12, 14, 15
+		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// 
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 11,12,14,15)]
+		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
 		public void Delete()
 		{
 			object[] paramsArray = null;

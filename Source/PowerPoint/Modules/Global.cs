@@ -8,7 +8,7 @@ namespace NetOffice.PowerPointApi.GlobalHelperModules
 	///<summary>
 	/// Module GlobalModule
 	///</summary>
-	[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
+	[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
 	[EntityTypeAttribute(EntityType.IsModule)]
 	public static class GlobalModule
 	{
@@ -61,10 +61,10 @@ namespace NetOffice.PowerPointApi.GlobalHelperModules
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
 		public static NetOffice.PowerPointApi.Presentation ActivePresentation
 		{
 			get
@@ -77,10 +77,10 @@ namespace NetOffice.PowerPointApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
 		public static NetOffice.PowerPointApi.DocumentWindow ActiveWindow
 		{
 			get
@@ -93,10 +93,10 @@ namespace NetOffice.PowerPointApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
 		public static NetOffice.PowerPointApi.AddIns AddIns
 		{
 			get
@@ -109,10 +109,10 @@ namespace NetOffice.PowerPointApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
 		public static NetOffice.PowerPointApi.Application Application
 		{
 			get
@@ -125,10 +125,10 @@ namespace NetOffice.PowerPointApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
 		public static NetOffice.OfficeApi.Assistant Assistant
 		{
 			get
@@ -141,10 +141,10 @@ namespace NetOffice.PowerPointApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public static NetOffice.PowerPointApi.PPDialogs Dialogs
 		{
@@ -158,10 +158,10 @@ namespace NetOffice.PowerPointApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
 		public static NetOffice.PowerPointApi.Presentations Presentations
 		{
 			get
@@ -174,10 +174,10 @@ namespace NetOffice.PowerPointApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
 		public static NetOffice.PowerPointApi.SlideShowWindows SlideShowWindows
 		{
 			get
@@ -190,10 +190,10 @@ namespace NetOffice.PowerPointApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
 		public static NetOffice.PowerPointApi.DocumentWindows Windows
 		{
 			get
@@ -206,10 +206,10 @@ namespace NetOffice.PowerPointApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
 		public static NetOffice.OfficeApi.CommandBars CommandBars
 		{
 			get
@@ -222,10 +222,10 @@ namespace NetOffice.PowerPointApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
 		public static NetOffice.OfficeApi.AnswerWizard AnswerWizard
 		{
 			get
@@ -238,10 +238,10 @@ namespace NetOffice.PowerPointApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 14, 15
+		/// SupportByVersion PowerPoint 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14,15)]
+		[SupportByVersionAttribute("PowerPoint", 14,15,16)]
 		public static NetOffice.PowerPointApi.FileConverters FileConverters
 		{
 			get
@@ -254,10 +254,10 @@ namespace NetOffice.PowerPointApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 14, 15
+		/// SupportByVersion PowerPoint 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14,15)]
+		[SupportByVersionAttribute("PowerPoint", 14,15,16)]
 		public static NetOffice.PowerPointApi.ProtectedViewWindows ProtectedViewWindows
 		{
 			get
@@ -270,10 +270,10 @@ namespace NetOffice.PowerPointApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 14, 15
+		/// SupportByVersion PowerPoint 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14,15)]
+		[SupportByVersionAttribute("PowerPoint", 14,15,16)]
 		public static NetOffice.PowerPointApi.ProtectedViewWindow ActiveProtectedViewWindow
 		{
 			get
@@ -286,10 +286,10 @@ namespace NetOffice.PowerPointApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 14, 15
+		/// SupportByVersion PowerPoint 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14,15)]
+		[SupportByVersionAttribute("PowerPoint", 14,15,16)]
 		public static bool IsSandboxed
 		{
 			get

@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using NetRuntimeSystem = System;
 using System.Runtime.InteropServices;
 using System.Runtime.CompilerServices;
@@ -10,10 +10,10 @@ namespace NetOffice.OfficeApi
 {
 	///<summary>
 	/// DispatchInterface ContactCard 
-	/// SupportByVersion Office, 14,15
+	/// SupportByVersion Office, 14,15,16
 	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff860545.aspx
 	///</summary>
-	[SupportByVersionAttribute("Office", 14,15)]
+	[SupportByVersionAttribute("Office", 14,15,16)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class ContactCard : _IMsoDispObj
 	{
@@ -97,10 +97,10 @@ namespace NetOffice.OfficeApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByVersion Office 14, 15
+		/// SupportByVersion Office 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff863157.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Office", 14,15)]
+		[SupportByVersionAttribute("Office", 14,15,16)]
 		public void Close()
 		{
 			object[] paramsArray = null;
@@ -108,7 +108,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 14, 15
+		/// SupportByVersion Office 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff861819.aspx
 		/// </summary>
 		/// <param name="cardStyle">NetOffice.OfficeApi.Enums.MsoContactCardStyle CardStyle</param>
@@ -118,7 +118,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="rectangleBottom">Int32 RectangleBottom</param>
 		/// <param name="horizontalPosition">Int32 HorizontalPosition</param>
 		/// <param name="showWithDelay">optional bool ShowWithDelay = false</param>
-		[SupportByVersionAttribute("Office", 14,15)]
+		[SupportByVersionAttribute("Office", 14,15,16)]
 		public void Show(NetOffice.OfficeApi.Enums.MsoContactCardStyle cardStyle, Int32 rectangleLeft, Int32 rectangleRight, Int32 rectangleTop, Int32 rectangleBottom, Int32 horizontalPosition, object showWithDelay)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(cardStyle, rectangleLeft, rectangleRight, rectangleTop, rectangleBottom, horizontalPosition, showWithDelay);
@@ -126,7 +126,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 14, 15
+		/// SupportByVersion Office 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff861819.aspx
 		/// </summary>
 		/// <param name="cardStyle">NetOffice.OfficeApi.Enums.MsoContactCardStyle CardStyle</param>
@@ -136,7 +136,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="rectangleBottom">Int32 RectangleBottom</param>
 		/// <param name="horizontalPosition">Int32 HorizontalPosition</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Office", 14,15)]
+		[SupportByVersionAttribute("Office", 14,15,16)]
 		public void Show(NetOffice.OfficeApi.Enums.MsoContactCardStyle cardStyle, Int32 rectangleLeft, Int32 rectangleRight, Int32 rectangleTop, Int32 rectangleBottom, Int32 horizontalPosition)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(cardStyle, rectangleLeft, rectangleRight, rectangleTop, rectangleBottom, horizontalPosition);

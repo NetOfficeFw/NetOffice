@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using NetRuntimeSystem = System;
 using System.Runtime.InteropServices;
 using System.ComponentModel;
@@ -11,9 +11,9 @@ namespace NetOffice.VisioApi
 {
 	///<summary>
 	/// Interface LPVISIOSTYLES 
-	/// SupportByVersion Visio, 11,12,14,15
+	/// SupportByVersion Visio, 11,12,14,15,16
 	///</summary>
-	[SupportByVersionAttribute("Visio", 11,12,14,15)]
+	[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
 	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class LPVISIOSTYLES : COMObject ,IEnumerable<NetOffice.VisioApi.IVStyle>
 	{
@@ -93,10 +93,10 @@ namespace NetOffice.VisioApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion Visio 11, 12, 14, 15
+		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 11,12,14,15)]
+		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
 		public NetOffice.VisioApi.IVApplication Application
 		{
 			get
@@ -109,10 +109,10 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio 11, 12, 14, 15
+		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 11,12,14,15)]
+		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
 		public Int16 ObjectType
 		{
 			get
@@ -124,11 +124,11 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio 11, 12, 14, 15
+		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
 		/// <param name="nameOrIndex">object NameOrIndex</param>
-		[SupportByVersionAttribute("Visio", 11,12,14,15)]
+		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
 		public NetOffice.VisioApi.IVStyle this[object nameOrIndex]
 		{
@@ -142,10 +142,10 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio 11, 12, 14, 15
+		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 11,12,14,15)]
+		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public Int16 Count16
 		{
@@ -158,10 +158,10 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio 11, 12, 14, 15
+		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 11,12,14,15)]
+		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
 		public NetOffice.VisioApi.IVDocument Document
 		{
 			get
@@ -174,10 +174,10 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio 11, 12, 14, 15
+		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 11,12,14,15)]
+		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
 		public Int16 Stat
 		{
 			get
@@ -189,10 +189,10 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio 11, 12, 14, 15
+		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 11,12,14,15)]
+		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
 		public NetOffice.VisioApi.IVEventList EventList
 		{
 			get
@@ -205,10 +205,10 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio 11, 12, 14, 15
+		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 11,12,14,15)]
+		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
 		public Int16 PersistsEvents
 		{
 			get
@@ -220,11 +220,11 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio 11, 12, 14, 15
+		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
 		/// <param name="objectID">Int16 ObjectID</param>
-		[SupportByVersionAttribute("Visio", 11,12,14,15)]
+		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public NetOffice.VisioApi.IVStyle get_ItemFromID16(Int16 objectID)
 		{		
@@ -235,21 +235,21 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio 11, 12, 14, 15
+		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// Alias for get_ItemFromID16
 		/// </summary>
 		/// <param name="objectID">Int16 ObjectID</param>
-		[SupportByVersionAttribute("Visio", 11,12,14,15)]
+		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
 		public NetOffice.VisioApi.IVStyle ItemFromID16(Int16 objectID)
 		{
 			return get_ItemFromID16(objectID);
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio 11, 12, 14, 15
+		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 11,12,14,15)]
+		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
 		public Int32 Count
 		{
 			get
@@ -261,11 +261,11 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio 11, 12, 14, 15
+		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
 		/// <param name="objectID">Int32 ObjectID</param>
-		[SupportByVersionAttribute("Visio", 11,12,14,15)]
+		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public NetOffice.VisioApi.IVStyle get_ItemFromID(Int32 objectID)
 		{		
@@ -276,22 +276,22 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio 11, 12, 14, 15
+		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// Alias for get_ItemFromID
 		/// </summary>
 		/// <param name="objectID">Int32 ObjectID</param>
-		[SupportByVersionAttribute("Visio", 11,12,14,15)]
+		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
 		public NetOffice.VisioApi.IVStyle ItemFromID(Int32 objectID)
 		{
 			return get_ItemFromID(objectID);
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio 11, 12, 14, 15
+		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
 		/// <param name="nameOrIndex">object NameOrIndex</param>
-		[SupportByVersionAttribute("Visio", 11,12,14,15)]
+		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public NetOffice.VisioApi.IVStyle get_ItemU(object nameOrIndex)
 		{		
@@ -302,11 +302,11 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio 11, 12, 14, 15
+		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// Alias for get_ItemU
 		/// </summary>
 		/// <param name="nameOrIndex">object NameOrIndex</param>
-		[SupportByVersionAttribute("Visio", 11,12,14,15)]
+		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
 		public NetOffice.VisioApi.IVStyle ItemU(object nameOrIndex)
 		{
 			return get_ItemU(nameOrIndex);
@@ -317,7 +317,7 @@ namespace NetOffice.VisioApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByVersion Visio 11, 12, 14, 15
+		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// 
 		/// </summary>
 		/// <param name="styleName">string StyleName</param>
@@ -325,7 +325,7 @@ namespace NetOffice.VisioApi
 		/// <param name="fIncludesText">Int16 fIncludesText</param>
 		/// <param name="fIncludesLine">Int16 fIncludesLine</param>
 		/// <param name="fIncludesFill">Int16 fIncludesFill</param>
-		[SupportByVersionAttribute("Visio", 11,12,14,15)]
+		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
 		public NetOffice.VisioApi.IVStyle Add(string styleName, string basedOn, Int16 fIncludesText, Int16 fIncludesLine, Int16 fIncludesFill)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(styleName, basedOn, fIncludesText, fIncludesLine, fIncludesFill);
@@ -335,11 +335,11 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio 11, 12, 14, 15
+		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// 
 		/// </summary>
 		/// <param name="localeSpecificNameArray">String[] localeSpecificNameArray</param>
-		[SupportByVersionAttribute("Visio", 11,12,14,15)]
+		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
 		public void GetNames(out String[] localeSpecificNameArray)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
@@ -350,11 +350,11 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio 11, 12, 14, 15
+		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// 
 		/// </summary>
 		/// <param name="localeIndependentNameArray">String[] localeIndependentNameArray</param>
-		[SupportByVersionAttribute("Visio", 11,12,14,15)]
+		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
 		public void GetNamesU(out String[] localeIndependentNameArray)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
@@ -369,9 +369,9 @@ namespace NetOffice.VisioApi
        #region IEnumerable<NetOffice.VisioApi.IVStyle> Member
         
         /// <summary>
-		/// SupportByVersionAttribute Visio, 11,12,14,15
+		/// SupportByVersionAttribute Visio, 11,12,14,15,16
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 11,12,14,15)]
+		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
        public IEnumerator<NetOffice.VisioApi.IVStyle> GetEnumerator()  
        {
            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
@@ -384,9 +384,9 @@ namespace NetOffice.VisioApi
 		#region IEnumerable Members
        
 		/// <summary>
-		/// SupportByVersionAttribute Visio, 11,12,14,15
+		/// SupportByVersionAttribute Visio, 11,12,14,15,16
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 11,12,14,15)]
+		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
 			return NetOffice.Utils.GetProxyEnumeratorAsProperty(this);

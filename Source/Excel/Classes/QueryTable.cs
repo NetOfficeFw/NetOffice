@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using NetOffice;
@@ -16,10 +16,10 @@ namespace NetOffice.ExcelApi
 
 	///<summary>
 	/// CoClass QueryTable 
-	/// SupportByVersion Excel, 9,10,11,12,14,15
+	/// SupportByVersion Excel, 9,10,11,12,14,15,16
 	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff198271.aspx
 	///</summary>
-	[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
+	[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class QueryTable : _QueryTable,IEventBinding
 	{
@@ -94,7 +94,7 @@ namespace NetOffice.ExcelApi
 		}
 		
 		///<summary>
-        ///creates a new instance of QueryTable 
+        /// Creates a new instance of QueryTable 
         ///</summary>		
 		public QueryTable():base("Excel.QueryTable")
 		{
@@ -102,7 +102,7 @@ namespace NetOffice.ExcelApi
 		}
 		
 		///<summary>
-        ///creates a new instance of QueryTable
+        /// Creates a new instance of QueryTable
         ///</summary>
         ///<param name="progId">registered ProgID</param>
 		public QueryTable(string progId):base(progId)
@@ -115,12 +115,12 @@ namespace NetOffice.ExcelApi
 		#region Static CoClass Methods
 
 		/// <summary>
-        /// returns all running Excel.QueryTable objects from the running object table(ROT)
+        /// Returns all running Excel.QueryTable objects from the environment/system
         /// </summary>
         /// <returns>an Excel.QueryTable array</returns>
 		public static NetOffice.ExcelApi.QueryTable[] GetActiveInstances()
 		{		
-			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("Excel","QueryTable");
+			IDisposableEnumeration proxyList = NetOffice.ProxyService.GetActiveInstances("Excel","QueryTable");
 			NetRuntimeSystem.Collections.Generic.List<NetOffice.ExcelApi.QueryTable> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.ExcelApi.QueryTable>();
 			foreach(object proxy in proxyList)
 				resultList.Add( new NetOffice.ExcelApi.QueryTable(null, proxy) );
@@ -128,12 +128,12 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-        /// returns a running Excel.QueryTable object from the running object table(ROT). the method takes the first element from the table
+        /// Returns a running Excel.QueryTable object from the environment/system.
         /// </summary>
         /// <returns>an Excel.QueryTable object or null</returns>
 		public static NetOffice.ExcelApi.QueryTable GetActiveInstance()
 		{
-			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Excel","QueryTable", false);
+			object proxy  = NetOffice.ProxyService.GetActiveInstance("Excel","QueryTable", false);
 			if(null != proxy)
 				return new NetOffice.ExcelApi.QueryTable(null, proxy);
 			else
@@ -141,13 +141,13 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-        /// returns a running Excel.QueryTable object from the running object table(ROT).  the method takes the first element from the table
+        /// Returns a running Excel.QueryTable object from the environment/system. 
         /// </summary>
 	    /// <param name="throwOnError">throw an exception if no object was found</param>
         /// <returns>an Excel.QueryTable object or null</returns>
 		public static NetOffice.ExcelApi.QueryTable GetActiveInstance(bool throwOnError)
 		{
-			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Excel","QueryTable", throwOnError);
+			object proxy  = NetOffice.ProxyService.GetActiveInstance("Excel","QueryTable", throwOnError);
 			if(null != proxy)
 				return new NetOffice.ExcelApi.QueryTable(null, proxy);
 			else
@@ -158,15 +158,15 @@ namespace NetOffice.ExcelApi
 		#region Events
 
 		/// <summary>
-		/// SupportByVersion Excel, 9,10,11,12,14,15
+		/// SupportByVersion Excel, 9,10,11,12,14,15,16
 		/// </summary>
 		private event QueryTable_BeforeRefreshEventHandler _BeforeRefreshEvent;
 
 		/// <summary>
-		/// SupportByVersion Excel 9 10 11 12 14 15
+		/// SupportByVersion Excel 9 10 11 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff823150.aspx </remarks>
-		[SupportByVersion("Excel", 9,10,11,12,14,15)]
+		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public event QueryTable_BeforeRefreshEventHandler BeforeRefreshEvent
 		{
 			add
@@ -181,15 +181,15 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel, 9,10,11,12,14,15
+		/// SupportByVersion Excel, 9,10,11,12,14,15,16
 		/// </summary>
 		private event QueryTable_AfterRefreshEventHandler _AfterRefreshEvent;
 
 		/// <summary>
-		/// SupportByVersion Excel 9 10 11 12 14 15
+		/// SupportByVersion Excel 9 10 11 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835922.aspx </remarks>
-		[SupportByVersion("Excel", 9,10,11,12,14,15)]
+		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public event QueryTable_AfterRefreshEventHandler AfterRefreshEvent
 		{
 			add
@@ -208,7 +208,7 @@ namespace NetOffice.ExcelApi
 	    #region IEventBinding Member
         
 		/// <summary>
-        /// creates active sink helper
+        /// Creates active sink helper
         /// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public void CreateEventBridge()
@@ -230,6 +230,9 @@ namespace NetOffice.ExcelApi
 			} 
         }
 
+        /// <summary>
+        /// The instance use currently an event listener 
+        /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public bool EventBridgeInitialized
         {
@@ -238,7 +241,10 @@ namespace NetOffice.ExcelApi
                 return (null != _connectPoint);
             }
         }
-        
+
+        /// <summary>
+        ///  The instance has currently one or more event recipients 
+        /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public bool HasEventRecipients()       
         {
@@ -258,6 +264,9 @@ namespace NetOffice.ExcelApi
 			return false;
         }
         
+        /// <summary>
+        /// Target methods from its actual event recipients
+        /// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public Delegate[] GetEventRecipients(string eventName)
         {
@@ -277,7 +286,10 @@ namespace NetOffice.ExcelApi
             else
                 return new Delegate[0];
         }
-
+       
+        /// <summary>
+        /// Returns the current count of event recipients
+        /// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public int GetCountOfEventRecipients(string eventName)
         {
@@ -296,8 +308,14 @@ namespace NetOffice.ExcelApi
             }
             else
                 return 0;
-        }
-
+           }
+        
+        /// <summary>
+        /// Raise an instance event
+        /// </summary>
+        /// <param name="eventName">name of the event without 'Event' at the end</param>
+        /// <param name="paramsArray">custom arguments for the event</param>
+        /// <returns>count of called event recipients</returns>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public int RaiseCustomEvent(string eventName, ref object[] paramsArray)
 		{
@@ -329,6 +347,9 @@ namespace NetOffice.ExcelApi
                 return 0;
 		}
 
+        /// <summary>
+        /// Stop listening events for the instance
+        /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public void DisposeEventBridge()
         {

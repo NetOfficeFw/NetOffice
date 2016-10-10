@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using NetRuntimeSystem = System;
 using System.Runtime.InteropServices;
 using System.Runtime.CompilerServices;
@@ -10,9 +10,9 @@ namespace NetOffice.PowerPointApi
 {
 	///<summary>
 	/// DispatchInterface _Presentation 
-	/// SupportByVersion PowerPoint, 9,10,11,12,14,15
+	/// SupportByVersion PowerPoint, 9,10,11,12,14,15,16
 	///</summary>
-	[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
+	[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class _Presentation : COMObject
 	{
@@ -92,11 +92,11 @@ namespace NetOffice.PowerPointApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745080.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
 		public NetOffice.PowerPointApi.Application Application
 		{
 			get
@@ -109,12 +109,12 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff743905.aspx
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
 		public object Parent
 		{
 			get
@@ -127,11 +127,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745484.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
 		public NetOffice.PowerPointApi._Master SlideMaster
 		{
 			get
@@ -144,11 +144,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746378.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
 		public NetOffice.PowerPointApi._Master TitleMaster
 		{
 			get
@@ -161,11 +161,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745657.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
 		public NetOffice.OfficeApi.Enums.MsoTriState HasTitleMaster
 		{
 			get
@@ -178,11 +178,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744870.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
 		public string TemplateName
 		{
 			get
@@ -194,11 +194,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff743938.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
 		public NetOffice.PowerPointApi._Master NotesMaster
 		{
 			get
@@ -211,11 +211,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746405.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
 		public NetOffice.PowerPointApi._Master HandoutMaster
 		{
 			get
@@ -228,11 +228,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746142.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
 		public NetOffice.PowerPointApi.Slides Slides
 		{
 			get
@@ -245,11 +245,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745413.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
 		public NetOffice.PowerPointApi.PageSetup PageSetup
 		{
 			get
@@ -262,11 +262,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744763.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
 		public NetOffice.PowerPointApi.ColorSchemes ColorSchemes
 		{
 			get
@@ -279,11 +279,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746216.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
 		public NetOffice.PowerPointApi.ExtraColors ExtraColors
 		{
 			get
@@ -296,11 +296,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745621.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
 		public NetOffice.PowerPointApi.SlideShowSettings SlideShowSettings
 		{
 			get
@@ -313,11 +313,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744620.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
 		public NetOffice.PowerPointApi.Fonts Fonts
 		{
 			get
@@ -330,11 +330,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746292.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
 		public NetOffice.PowerPointApi.DocumentWindows Windows
 		{
 			get
@@ -347,11 +347,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744602.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
 		public NetOffice.PowerPointApi.Tags Tags
 		{
 			get
@@ -364,11 +364,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744397.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
 		public NetOffice.PowerPointApi.Shape DefaultShape
 		{
 			get
@@ -381,12 +381,12 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746376.aspx
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
 		public object BuiltInDocumentProperties
 		{
 			get
@@ -399,12 +399,12 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744661.aspx
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
 		public object CustomDocumentProperties
 		{
 			get
@@ -417,11 +417,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745299.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
 		public NetOffice.VBIDEApi.VBProject VBProject
 		{
 			get
@@ -434,11 +434,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746329.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
 		public NetOffice.OfficeApi.Enums.MsoTriState ReadOnly
 		{
 			get
@@ -451,11 +451,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746313.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
 		public string FullName
 		{
 			get
@@ -467,11 +467,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745890.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
 		public string Name
 		{
 			get
@@ -483,11 +483,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745125.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
 		public string Path
 		{
 			get
@@ -499,11 +499,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744884.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
 		public NetOffice.OfficeApi.Enums.MsoTriState Saved
 		{
 			get
@@ -521,11 +521,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744109.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
 		public NetOffice.PowerPointApi.Enums.PpDirection LayoutDirection
 		{
 			get
@@ -543,11 +543,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744540.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
 		public NetOffice.PowerPointApi.PrintOptions PrintOptions
 		{
 			get
@@ -560,12 +560,12 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746277.aspx
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
 		public object Container
 		{
 			get
@@ -578,11 +578,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745979.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
 		public NetOffice.OfficeApi.Enums.MsoTriState DisplayComments
 		{
 			get
@@ -600,11 +600,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746803.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
 		public NetOffice.PowerPointApi.Enums.PpFarEastLineBreakLevel FarEastLineBreakLevel
 		{
 			get
@@ -622,11 +622,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746404.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
 		public string NoLineBreakBefore
 		{
 			get
@@ -643,11 +643,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746110.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
 		public string NoLineBreakAfter
 		{
 			get
@@ -664,11 +664,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745765.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
 		public NetOffice.PowerPointApi.SlideShowWindow SlideShowWindow
 		{
 			get
@@ -681,11 +681,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746489.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
 		public NetOffice.OfficeApi.Enums.MsoFarEastLineBreakLanguageID FarEastLineBreakLanguage
 		{
 			get
@@ -703,11 +703,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745465.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
 		public NetOffice.OfficeApi.Enums.MsoLanguageID DefaultLanguageID
 		{
 			get
@@ -725,11 +725,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746786.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
 		public NetOffice.OfficeApi.CommandBars CommandBars
 		{
 			get
@@ -742,10 +742,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
 		public NetOffice.PowerPointApi.PublishObjects PublishObjects
 		{
 			get
@@ -758,10 +758,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
 		public NetOffice.PowerPointApi.WebOptions WebOptions
 		{
 			get
@@ -774,10 +774,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
 		public NetOffice.OfficeApi.HTMLProject HTMLProject
 		{
 			get
@@ -790,11 +790,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746516.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
 		public NetOffice.OfficeApi.Enums.MsoTriState EnvelopeVisible
 		{
 			get
@@ -812,11 +812,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746671.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
 		public NetOffice.OfficeApi.Enums.MsoTriState VBASigned
 		{
 			get
@@ -829,11 +829,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746323.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15,16)]
 		public NetOffice.OfficeApi.Enums.MsoTriState SnapToGrid
 		{
 			get
@@ -851,11 +851,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744975.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15,16)]
 		public Single GridDistance
 		{
 			get
@@ -872,11 +872,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744959.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15,16)]
 		public NetOffice.PowerPointApi.Designs Designs
 		{
 			get
@@ -889,11 +889,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745705.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15,16)]
 		public NetOffice.OfficeApi.SignatureSet Signatures
 		{
 			get
@@ -906,11 +906,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746134.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15,16)]
 		public NetOffice.OfficeApi.Enums.MsoTriState RemovePersonalInformation
 		{
 			get
@@ -928,10 +928,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15,16)]
 		public NetOffice.PowerPointApi.Enums.PpRevisionInfo HasRevisionInfo
 		{
 			get
@@ -944,11 +944,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff743904.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15,16)]
 		public string PasswordEncryptionProvider
 		{
 			get
@@ -960,11 +960,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745251.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15,16)]
 		public string PasswordEncryptionAlgorithm
 		{
 			get
@@ -976,11 +976,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744792.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15,16)]
 		public Int32 PasswordEncryptionKeyLength
 		{
 			get
@@ -992,11 +992,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff743937.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15,16)]
 		public bool PasswordEncryptionFileProperties
 		{
 			get
@@ -1008,11 +1008,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745703.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15,16)]
 		public string Password
 		{
 			get
@@ -1029,11 +1029,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744704.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15,16)]
 		public string WritePassword
 		{
 			get
@@ -1050,11 +1050,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744658.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 11,12,14,15,16)]
 		public NetOffice.OfficeApi.Permission Permission
 		{
 			get
@@ -1067,11 +1067,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745343.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 11,12,14,15,16)]
 		public NetOffice.OfficeApi.SharedWorkspace SharedWorkspace
 		{
 			get
@@ -1084,11 +1084,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745948.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 11,12,14,15,16)]
 		public NetOffice.OfficeApi.Sync Sync
 		{
 			get
@@ -1101,11 +1101,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744818.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 11,12,14,15,16)]
 		public NetOffice.OfficeApi.DocumentLibraryVersions DocumentLibraryVersions
 		{
 			get
@@ -1118,11 +1118,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 12, 14, 15
+		/// SupportByVersion PowerPoint 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745118.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 12,14,15,16)]
 		public NetOffice.OfficeApi.MetaProperties ContentTypeProperties
 		{
 			get
@@ -1135,10 +1135,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 12, 14, 15
+		/// SupportByVersion PowerPoint 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 12,14,15,16)]
 		public Int32 SectionCount
 		{
 			get
@@ -1150,10 +1150,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 12, 14, 15
+		/// SupportByVersion PowerPoint 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 12,14,15,16)]
 		public bool HasSections
 		{
 			get
@@ -1165,11 +1165,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 12, 14, 15
+		/// SupportByVersion PowerPoint 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745108.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 12,14,15,16)]
 		public NetOffice.OfficeApi.ServerPolicy ServerPolicy
 		{
 			get
@@ -1182,11 +1182,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 12, 14, 15
+		/// SupportByVersion PowerPoint 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744654.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 12,14,15,16)]
 		public NetOffice.OfficeApi.DocumentInspectors DocumentInspectors
 		{
 			get
@@ -1199,11 +1199,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 12, 14, 15
+		/// SupportByVersion PowerPoint 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746792.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 12,14,15,16)]
 		public bool HasVBProject
 		{
 			get
@@ -1215,11 +1215,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 12, 14, 15
+		/// SupportByVersion PowerPoint 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745253.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 12,14,15,16)]
 		public NetOffice.OfficeApi.CustomXMLParts CustomXMLParts
 		{
 			get
@@ -1232,11 +1232,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 12, 14, 15
+		/// SupportByVersion PowerPoint 12, 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff743879.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 12,14,15,16)]
 		public bool Final
 		{
 			get
@@ -1253,11 +1253,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 12, 14, 15
+		/// SupportByVersion PowerPoint 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745858.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 12,14,15,16)]
 		public NetOffice.PowerPointApi.CustomerData CustomerData
 		{
 			get
@@ -1270,11 +1270,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 12, 14, 15
+		/// SupportByVersion PowerPoint 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746518.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 12,14,15,16)]
 		public NetOffice.PowerPointApi.Research Research
 		{
 			get
@@ -1287,11 +1287,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 12, 14, 15
+		/// SupportByVersion PowerPoint 12, 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745747.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 12,14,15,16)]
 		public string EncryptionProvider
 		{
 			get
@@ -1308,11 +1308,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 14, 15
+		/// SupportByVersion PowerPoint 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744806.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14,15)]
+		[SupportByVersionAttribute("PowerPoint", 14,15,16)]
 		public NetOffice.PowerPointApi.SectionProperties SectionProperties
 		{
 			get
@@ -1325,11 +1325,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 14, 15
+		/// SupportByVersion PowerPoint 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745326.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14,15)]
+		[SupportByVersionAttribute("PowerPoint", 14,15,16)]
 		public NetOffice.PowerPointApi.Coauthoring Coauthoring
 		{
 			get
@@ -1342,11 +1342,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 14, 15
+		/// SupportByVersion PowerPoint 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746423.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14,15)]
+		[SupportByVersionAttribute("PowerPoint", 14,15,16)]
 		public bool InMergeMode
 		{
 			get
@@ -1358,11 +1358,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 14, 15
+		/// SupportByVersion PowerPoint 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744901.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14,15)]
+		[SupportByVersionAttribute("PowerPoint", 14,15,16)]
 		public NetOffice.PowerPointApi.Broadcast Broadcast
 		{
 			get
@@ -1375,11 +1375,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 14, 15
+		/// SupportByVersion PowerPoint 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745775.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14,15)]
+		[SupportByVersionAttribute("PowerPoint", 14,15,16)]
 		public bool HasNotesMaster
 		{
 			get
@@ -1391,11 +1391,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 14, 15
+		/// SupportByVersion PowerPoint 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744680.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14,15)]
+		[SupportByVersionAttribute("PowerPoint", 14,15,16)]
 		public bool HasHandoutMaster
 		{
 			get
@@ -1407,11 +1407,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 14, 15
+		/// SupportByVersion PowerPoint 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff743993.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14,15)]
+		[SupportByVersionAttribute("PowerPoint", 14,15,16)]
 		public NetOffice.PowerPointApi.Enums.PpMediaTaskStatus CreateVideoStatus
 		{
 			get
@@ -1424,11 +1424,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 15
+		/// SupportByVersion PowerPoint 15,16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj229098.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 15)]
+		[SupportByVersionAttribute("PowerPoint", 15, 16)]
 		public bool ChartDataPointTrack
 		{
 			get
@@ -1445,11 +1445,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 15
+		/// SupportByVersion PowerPoint 15,16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj229702.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 15)]
+		[SupportByVersionAttribute("PowerPoint", 15, 16)]
 		public NetOffice.PowerPointApi.Guides Guides
 		{
 			get
@@ -1466,10 +1466,10 @@ namespace NetOffice.PowerPointApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746001.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
 		public NetOffice.PowerPointApi._Master AddTitleMaster()
 		{
 			object[] paramsArray = null;
@@ -1479,11 +1479,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff743876.aspx
 		/// </summary>
 		/// <param name="fileName">string FileName</param>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
 		public void ApplyTemplate(string fileName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName);
@@ -1491,10 +1491,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744342.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
 		public NetOffice.PowerPointApi.DocumentWindow NewWindow()
 		{
 			object[] paramsArray = null;
@@ -1504,7 +1504,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744691.aspx
 		/// </summary>
 		/// <param name="address">string Address</param>
@@ -1514,7 +1514,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="extraInfo">optional string ExtraInfo = </param>
 		/// <param name="method">optional NetOffice.OfficeApi.Enums.MsoExtraInfoMethod Method = 0</param>
 		/// <param name="headerInfo">optional string HeaderInfo = </param>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
 		public void FollowHyperlink(string address, object subAddress, object newWindow, object addHistory, object extraInfo, object method, object headerInfo)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(address, subAddress, newWindow, addHistory, extraInfo, method, headerInfo);
@@ -1522,12 +1522,12 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744691.aspx
 		/// </summary>
 		/// <param name="address">string Address</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
 		public void FollowHyperlink(string address)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(address);
@@ -1535,13 +1535,13 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744691.aspx
 		/// </summary>
 		/// <param name="address">string Address</param>
 		/// <param name="subAddress">optional string SubAddress = </param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
 		public void FollowHyperlink(string address, object subAddress)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(address, subAddress);
@@ -1549,14 +1549,14 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744691.aspx
 		/// </summary>
 		/// <param name="address">string Address</param>
 		/// <param name="subAddress">optional string SubAddress = </param>
 		/// <param name="newWindow">optional bool NewWindow = false</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
 		public void FollowHyperlink(string address, object subAddress, object newWindow)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(address, subAddress, newWindow);
@@ -1564,7 +1564,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744691.aspx
 		/// </summary>
 		/// <param name="address">string Address</param>
@@ -1572,7 +1572,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="newWindow">optional bool NewWindow = false</param>
 		/// <param name="addHistory">optional bool AddHistory = true</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
 		public void FollowHyperlink(string address, object subAddress, object newWindow, object addHistory)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(address, subAddress, newWindow, addHistory);
@@ -1580,7 +1580,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744691.aspx
 		/// </summary>
 		/// <param name="address">string Address</param>
@@ -1589,7 +1589,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="addHistory">optional bool AddHistory = true</param>
 		/// <param name="extraInfo">optional string ExtraInfo = </param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
 		public void FollowHyperlink(string address, object subAddress, object newWindow, object addHistory, object extraInfo)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(address, subAddress, newWindow, addHistory, extraInfo);
@@ -1597,7 +1597,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744691.aspx
 		/// </summary>
 		/// <param name="address">string Address</param>
@@ -1607,7 +1607,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="extraInfo">optional string ExtraInfo = </param>
 		/// <param name="method">optional NetOffice.OfficeApi.Enums.MsoExtraInfoMethod Method = 0</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
 		public void FollowHyperlink(string address, object subAddress, object newWindow, object addHistory, object extraInfo, object method)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(address, subAddress, newWindow, addHistory, extraInfo, method);
@@ -1615,10 +1615,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744969.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
 		public void AddToFavorites()
 		{
 			object[] paramsArray = null;
@@ -1626,10 +1626,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
 		/// 
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
 		public void Unused()
 		{
 			object[] paramsArray = null;
@@ -1637,7 +1637,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744928.aspx
 		/// </summary>
 		/// <param name="from">optional Int32 From = -1</param>
@@ -1645,7 +1645,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="printToFile">optional string PrintToFile = </param>
 		/// <param name="copies">optional Int32 Copies = 0</param>
 		/// <param name="collate">optional NetOffice.OfficeApi.Enums.MsoTriState Collate = -99</param>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
 		public void PrintOut(object from, object to, object printToFile, object copies, object collate)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(from, to, printToFile, copies, collate);
@@ -1653,11 +1653,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744928.aspx
 		/// </summary>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
 		public void PrintOut()
 		{
 			object[] paramsArray = null;
@@ -1665,12 +1665,12 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744928.aspx
 		/// </summary>
 		/// <param name="from">optional Int32 From = -1</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
 		public void PrintOut(object from)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(from);
@@ -1678,13 +1678,13 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744928.aspx
 		/// </summary>
 		/// <param name="from">optional Int32 From = -1</param>
 		/// <param name="to">optional Int32 To = -1</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
 		public void PrintOut(object from, object to)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(from, to);
@@ -1692,14 +1692,14 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744928.aspx
 		/// </summary>
 		/// <param name="from">optional Int32 From = -1</param>
 		/// <param name="to">optional Int32 To = -1</param>
 		/// <param name="printToFile">optional string PrintToFile = </param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
 		public void PrintOut(object from, object to, object printToFile)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(from, to, printToFile);
@@ -1707,7 +1707,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744928.aspx
 		/// </summary>
 		/// <param name="from">optional Int32 From = -1</param>
@@ -1715,7 +1715,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="printToFile">optional string PrintToFile = </param>
 		/// <param name="copies">optional Int32 Copies = 0</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
 		public void PrintOut(object from, object to, object printToFile, object copies)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(from, to, printToFile, copies);
@@ -1723,10 +1723,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745194.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
 		public void Save()
 		{
 			object[] paramsArray = null;
@@ -1734,13 +1734,13 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746389.aspx
 		/// </summary>
 		/// <param name="fileName">string FileName</param>
 		/// <param name="fileFormat">optional NetOffice.PowerPointApi.Enums.PpSaveAsFileType FileFormat = 1</param>
 		/// <param name="embedTrueTypeFonts">optional NetOffice.OfficeApi.Enums.MsoTriState EmbedTrueTypeFonts = -2</param>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
 		public void SaveAs(string fileName, object fileFormat, object embedTrueTypeFonts)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName, fileFormat, embedTrueTypeFonts);
@@ -1748,12 +1748,12 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746389.aspx
 		/// </summary>
 		/// <param name="fileName">string FileName</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
 		public void SaveAs(string fileName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName);
@@ -1761,13 +1761,13 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746389.aspx
 		/// </summary>
 		/// <param name="fileName">string FileName</param>
 		/// <param name="fileFormat">optional NetOffice.PowerPointApi.Enums.PpSaveAsFileType FileFormat = 1</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
 		public void SaveAs(string fileName, object fileFormat)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName, fileFormat);
@@ -1775,13 +1775,13 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744735.aspx
 		/// </summary>
 		/// <param name="fileName">string FileName</param>
 		/// <param name="fileFormat">optional NetOffice.PowerPointApi.Enums.PpSaveAsFileType FileFormat = 11</param>
 		/// <param name="embedTrueTypeFonts">optional NetOffice.OfficeApi.Enums.MsoTriState EmbedTrueTypeFonts = -2</param>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
 		public void SaveCopyAs(string fileName, object fileFormat, object embedTrueTypeFonts)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName, fileFormat, embedTrueTypeFonts);
@@ -1789,12 +1789,12 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744735.aspx
 		/// </summary>
 		/// <param name="fileName">string FileName</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
 		public void SaveCopyAs(string fileName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName);
@@ -1802,13 +1802,13 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744735.aspx
 		/// </summary>
 		/// <param name="fileName">string FileName</param>
 		/// <param name="fileFormat">optional NetOffice.PowerPointApi.Enums.PpSaveAsFileType FileFormat = 11</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
 		public void SaveCopyAs(string fileName, object fileFormat)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName, fileFormat);
@@ -1816,14 +1816,14 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746498.aspx
 		/// </summary>
 		/// <param name="path">string Path</param>
 		/// <param name="filterName">string FilterName</param>
 		/// <param name="scaleWidth">optional Int32 ScaleWidth = 0</param>
 		/// <param name="scaleHeight">optional Int32 ScaleHeight = 0</param>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
 		public void Export(string path, string filterName, object scaleWidth, object scaleHeight)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(path, filterName, scaleWidth, scaleHeight);
@@ -1831,13 +1831,13 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746498.aspx
 		/// </summary>
 		/// <param name="path">string Path</param>
 		/// <param name="filterName">string FilterName</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
 		public void Export(string path, string filterName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(path, filterName);
@@ -1845,14 +1845,14 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746498.aspx
 		/// </summary>
 		/// <param name="path">string Path</param>
 		/// <param name="filterName">string FilterName</param>
 		/// <param name="scaleWidth">optional Int32 ScaleWidth = 0</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
 		public void Export(string path, string filterName, object scaleWidth)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(path, filterName, scaleWidth);
@@ -1860,10 +1860,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff743857.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
 		public void Close()
 		{
 			object[] paramsArray = null;
@@ -1871,12 +1871,12 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
 		/// 
 		/// </summary>
 		/// <param name="text">string Text</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
 		public void SetUndoText(string text)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(text);
@@ -1884,10 +1884,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744167.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
 		public void UpdateLinks()
 		{
 			object[] paramsArray = null;
@@ -1895,10 +1895,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
 		/// 
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
 		public void WebPagePreview()
 		{
 			object[] paramsArray = null;
@@ -1906,11 +1906,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
 		/// 
 		/// </summary>
 		/// <param name="cp">NetOffice.OfficeApi.Enums.MsoEncoding cp</param>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
 		public void ReloadAs(NetOffice.OfficeApi.Enums.MsoEncoding cp)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(cp);
@@ -1918,12 +1918,12 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
 		/// 
 		/// </summary>
 		/// <param name="isDesignTemplate">NetOffice.OfficeApi.Enums.MsoTriState IsDesignTemplate</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
 		public void MakeIntoTemplate(NetOffice.OfficeApi.Enums.MsoTriState isDesignTemplate)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(isDesignTemplate);
@@ -1931,12 +1931,12 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
 		/// 
 		/// </summary>
 		/// <param name="s">string s</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
 		public void sblt(string s)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(s);
@@ -1944,11 +1944,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj228409.aspx
 		/// </summary>
 		/// <param name="path">string Path</param>
-		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15,16)]
 		public void Merge(string path)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(path);
@@ -1956,13 +1956,13 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745069.aspx
 		/// </summary>
 		/// <param name="saveChanges">optional bool SaveChanges = true</param>
 		/// <param name="comments">optional object Comments</param>
 		/// <param name="makePublic">optional object MakePublic</param>
-		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15,16)]
 		public void CheckIn(object saveChanges, object comments, object makePublic)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(saveChanges, comments, makePublic);
@@ -1970,11 +1970,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745069.aspx
 		/// </summary>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15,16)]
 		public void CheckIn()
 		{
 			object[] paramsArray = null;
@@ -1982,12 +1982,12 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745069.aspx
 		/// </summary>
 		/// <param name="saveChanges">optional bool SaveChanges = true</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15,16)]
 		public void CheckIn(object saveChanges)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(saveChanges);
@@ -1995,13 +1995,13 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745069.aspx
 		/// </summary>
 		/// <param name="saveChanges">optional bool SaveChanges = true</param>
 		/// <param name="comments">optional object Comments</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15,16)]
 		public void CheckIn(object saveChanges, object comments)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(saveChanges, comments);
@@ -2009,10 +2009,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744274.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15,16)]
 		public bool CanCheckIn()
 		{
 			object[] paramsArray = null;
@@ -2021,14 +2021,14 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
 		/// 
 		/// </summary>
 		/// <param name="recipients">optional string Recipients = </param>
 		/// <param name="subject">optional string Subject = </param>
 		/// <param name="showMessage">optional bool ShowMessage = true</param>
 		/// <param name="includeAttachment">optional object IncludeAttachment</param>
-		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15,16)]
 		public void SendForReview(object recipients, object subject, object showMessage, object includeAttachment)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(recipients, subject, showMessage, includeAttachment);
@@ -2036,11 +2036,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
 		/// 
 		/// </summary>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15,16)]
 		public void SendForReview()
 		{
 			object[] paramsArray = null;
@@ -2048,12 +2048,12 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
 		/// 
 		/// </summary>
 		/// <param name="recipients">optional string Recipients = </param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15,16)]
 		public void SendForReview(object recipients)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(recipients);
@@ -2061,13 +2061,13 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
 		/// 
 		/// </summary>
 		/// <param name="recipients">optional string Recipients = </param>
 		/// <param name="subject">optional string Subject = </param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15,16)]
 		public void SendForReview(object recipients, object subject)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(recipients, subject);
@@ -2075,14 +2075,14 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
 		/// 
 		/// </summary>
 		/// <param name="recipients">optional string Recipients = </param>
 		/// <param name="subject">optional string Subject = </param>
 		/// <param name="showMessage">optional bool ShowMessage = true</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15,16)]
 		public void SendForReview(object recipients, object subject, object showMessage)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(recipients, subject, showMessage);
@@ -2090,11 +2090,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
 		/// 
 		/// </summary>
 		/// <param name="showMessage">optional bool ShowMessage = true</param>
-		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15,16)]
 		public void ReplyWithChanges(object showMessage)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(showMessage);
@@ -2102,11 +2102,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
 		/// 
 		/// </summary>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15,16)]
 		public void ReplyWithChanges()
 		{
 			object[] paramsArray = null;
@@ -2114,10 +2114,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746226.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15,16)]
 		public void EndReview()
 		{
 			object[] paramsArray = null;
@@ -2125,11 +2125,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
 		/// 
 		/// </summary>
 		/// <param name="fileName">optional string FileName = </param>
-		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15,16)]
 		public void AddBaseline(object fileName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName);
@@ -2137,11 +2137,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
 		/// 
 		/// </summary>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15,16)]
 		public void AddBaseline()
 		{
 			object[] paramsArray = null;
@@ -2149,10 +2149,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
 		/// 
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15,16)]
 		public void RemoveBaseline()
 		{
 			object[] paramsArray = null;
@@ -2160,14 +2160,14 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff743880.aspx
 		/// </summary>
 		/// <param name="passwordEncryptionProvider">string PasswordEncryptionProvider</param>
 		/// <param name="passwordEncryptionAlgorithm">string PasswordEncryptionAlgorithm</param>
 		/// <param name="passwordEncryptionKeyLength">Int32 PasswordEncryptionKeyLength</param>
 		/// <param name="passwordEncryptionFileProperties">bool PasswordEncryptionFileProperties</param>
-		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15,16)]
 		public void SetPasswordEncryptionOptions(string passwordEncryptionProvider, string passwordEncryptionAlgorithm, Int32 passwordEncryptionKeyLength, bool passwordEncryptionFileProperties)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(passwordEncryptionProvider, passwordEncryptionAlgorithm, passwordEncryptionKeyLength, passwordEncryptionFileProperties);
@@ -2175,13 +2175,13 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744724.aspx
 		/// </summary>
 		/// <param name="recipients">optional string Recipients = </param>
 		/// <param name="subject">optional string Subject = </param>
 		/// <param name="showMessage">optional bool ShowMessage = false</param>
-		[SupportByVersionAttribute("PowerPoint", 11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 11,12,14,15,16)]
 		public void SendFaxOverInternet(object recipients, object subject, object showMessage)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(recipients, subject, showMessage);
@@ -2189,11 +2189,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744724.aspx
 		/// </summary>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("PowerPoint", 11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 11,12,14,15,16)]
 		public void SendFaxOverInternet()
 		{
 			object[] paramsArray = null;
@@ -2201,12 +2201,12 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744724.aspx
 		/// </summary>
 		/// <param name="recipients">optional string Recipients = </param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("PowerPoint", 11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 11,12,14,15,16)]
 		public void SendFaxOverInternet(object recipients)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(recipients);
@@ -2214,13 +2214,13 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744724.aspx
 		/// </summary>
 		/// <param name="recipients">optional string Recipients = </param>
 		/// <param name="subject">optional string Subject = </param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("PowerPoint", 11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 11,12,14,15,16)]
 		public void SendFaxOverInternet(object recipients, object subject)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(recipients, subject);
@@ -2228,14 +2228,14 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 12, 14, 15
+		/// SupportByVersion PowerPoint 12, 14, 15, 16
 		/// 
 		/// </summary>
 		/// <param name="index">Int32 Index</param>
 		/// <param name="afterSlide">bool AfterSlide</param>
 		/// <param name="sectionTitle">string sectionTitle</param>
 		/// <param name="newSectionIndex">Int32 newSectionIndex</param>
-		[SupportByVersionAttribute("PowerPoint", 12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 12,14,15,16)]
 		public void NewSectionAfter(Int32 index, bool afterSlide, string sectionTitle, out Int32 newSectionIndex)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,false,false,true);
@@ -2246,11 +2246,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 12, 14, 15
+		/// SupportByVersion PowerPoint 12, 14, 15, 16
 		/// 
 		/// </summary>
 		/// <param name="index">Int32 Index</param>
-		[SupportByVersionAttribute("PowerPoint", 12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 12,14,15,16)]
 		public void DeleteSection(Int32 index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
@@ -2258,10 +2258,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 12, 14, 15
+		/// SupportByVersion PowerPoint 12, 14, 15, 16
 		/// 
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 12,14,15,16)]
 		public void DisableSections()
 		{
 			object[] paramsArray = null;
@@ -2269,11 +2269,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 12, 14, 15
+		/// SupportByVersion PowerPoint 12, 14, 15, 16
 		/// 
 		/// </summary>
 		/// <param name="index">Int32 Index</param>
-		[SupportByVersionAttribute("PowerPoint", 12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 12,14,15,16)]
 		public string sectionTitle(Int32 index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
@@ -2282,11 +2282,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 12, 14, 15
+		/// SupportByVersion PowerPoint 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744345.aspx
 		/// </summary>
 		/// <param name="type">NetOffice.PowerPointApi.Enums.PpRemoveDocInfoType Type</param>
-		[SupportByVersionAttribute("PowerPoint", 12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 12,14,15,16)]
 		public void RemoveDocumentInformation(NetOffice.PowerPointApi.Enums.PpRemoveDocInfoType type)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type);
@@ -2294,14 +2294,14 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 12, 14, 15
+		/// SupportByVersion PowerPoint 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746800.aspx
 		/// </summary>
 		/// <param name="saveChanges">optional bool SaveChanges = true</param>
 		/// <param name="comments">optional object Comments</param>
 		/// <param name="makePublic">optional object MakePublic</param>
 		/// <param name="versionType">optional object VersionType</param>
-		[SupportByVersionAttribute("PowerPoint", 12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 12,14,15,16)]
 		public void CheckInWithVersion(object saveChanges, object comments, object makePublic, object versionType)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(saveChanges, comments, makePublic, versionType);
@@ -2309,11 +2309,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 12, 14, 15
+		/// SupportByVersion PowerPoint 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746800.aspx
 		/// </summary>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("PowerPoint", 12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 12,14,15,16)]
 		public void CheckInWithVersion()
 		{
 			object[] paramsArray = null;
@@ -2321,12 +2321,12 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 12, 14, 15
+		/// SupportByVersion PowerPoint 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746800.aspx
 		/// </summary>
 		/// <param name="saveChanges">optional bool SaveChanges = true</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("PowerPoint", 12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 12,14,15,16)]
 		public void CheckInWithVersion(object saveChanges)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(saveChanges);
@@ -2334,13 +2334,13 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 12, 14, 15
+		/// SupportByVersion PowerPoint 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746800.aspx
 		/// </summary>
 		/// <param name="saveChanges">optional bool SaveChanges = true</param>
 		/// <param name="comments">optional object Comments</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("PowerPoint", 12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 12,14,15,16)]
 		public void CheckInWithVersion(object saveChanges, object comments)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(saveChanges, comments);
@@ -2348,14 +2348,14 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 12, 14, 15
+		/// SupportByVersion PowerPoint 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746800.aspx
 		/// </summary>
 		/// <param name="saveChanges">optional bool SaveChanges = true</param>
 		/// <param name="comments">optional object Comments</param>
 		/// <param name="makePublic">optional object MakePublic</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("PowerPoint", 12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 12,14,15,16)]
 		public void CheckInWithVersion(object saveChanges, object comments, object makePublic)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(saveChanges, comments, makePublic);
@@ -2363,7 +2363,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 12, 14, 15
+		/// SupportByVersion PowerPoint 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746080.aspx
 		/// </summary>
 		/// <param name="path">string Path</param>
@@ -2382,7 +2382,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="bitmapMissingFonts">optional bool BitmapMissingFonts = true</param>
 		/// <param name="useISO19005_1">optional bool UseISO19005_1 = false</param>
 		/// <param name="externalExporter">optional object ExternalExporter</param>
-		[SupportByVersionAttribute("PowerPoint", 12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 12,14,15,16)]
 		public void ExportAsFixedFormat(string path, NetOffice.PowerPointApi.Enums.PpFixedFormatType fixedFormatType, object intent, object frameSlides, object handoutOrder, object outputType, object printHiddenSlides, object printRange, object rangeType, object slideShowName, object includeDocProperties, object keepIRMSettings, object docStructureTags, object bitmapMissingFonts, object useISO19005_1, object externalExporter)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(path, fixedFormatType, intent, frameSlides, handoutOrder, outputType, printHiddenSlides, printRange, rangeType, slideShowName, includeDocProperties, keepIRMSettings, docStructureTags, bitmapMissingFonts, useISO19005_1, externalExporter);
@@ -2390,13 +2390,13 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 12, 14, 15
+		/// SupportByVersion PowerPoint 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746080.aspx
 		/// </summary>
 		/// <param name="path">string Path</param>
 		/// <param name="fixedFormatType">NetOffice.PowerPointApi.Enums.PpFixedFormatType FixedFormatType</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("PowerPoint", 12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 12,14,15,16)]
 		public void ExportAsFixedFormat(string path, NetOffice.PowerPointApi.Enums.PpFixedFormatType fixedFormatType)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(path, fixedFormatType);
@@ -2404,14 +2404,14 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 12, 14, 15
+		/// SupportByVersion PowerPoint 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746080.aspx
 		/// </summary>
 		/// <param name="path">string Path</param>
 		/// <param name="fixedFormatType">NetOffice.PowerPointApi.Enums.PpFixedFormatType FixedFormatType</param>
 		/// <param name="intent">optional NetOffice.PowerPointApi.Enums.PpFixedFormatIntent Intent = 1</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("PowerPoint", 12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 12,14,15,16)]
 		public void ExportAsFixedFormat(string path, NetOffice.PowerPointApi.Enums.PpFixedFormatType fixedFormatType, object intent)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(path, fixedFormatType, intent);
@@ -2419,7 +2419,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 12, 14, 15
+		/// SupportByVersion PowerPoint 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746080.aspx
 		/// </summary>
 		/// <param name="path">string Path</param>
@@ -2427,7 +2427,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="intent">optional NetOffice.PowerPointApi.Enums.PpFixedFormatIntent Intent = 1</param>
 		/// <param name="frameSlides">optional NetOffice.OfficeApi.Enums.MsoTriState FrameSlides = 0</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("PowerPoint", 12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 12,14,15,16)]
 		public void ExportAsFixedFormat(string path, NetOffice.PowerPointApi.Enums.PpFixedFormatType fixedFormatType, object intent, object frameSlides)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(path, fixedFormatType, intent, frameSlides);
@@ -2435,7 +2435,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 12, 14, 15
+		/// SupportByVersion PowerPoint 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746080.aspx
 		/// </summary>
 		/// <param name="path">string Path</param>
@@ -2444,7 +2444,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="frameSlides">optional NetOffice.OfficeApi.Enums.MsoTriState FrameSlides = 0</param>
 		/// <param name="handoutOrder">optional NetOffice.PowerPointApi.Enums.PpPrintHandoutOrder HandoutOrder = 1</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("PowerPoint", 12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 12,14,15,16)]
 		public void ExportAsFixedFormat(string path, NetOffice.PowerPointApi.Enums.PpFixedFormatType fixedFormatType, object intent, object frameSlides, object handoutOrder)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(path, fixedFormatType, intent, frameSlides, handoutOrder);
@@ -2452,7 +2452,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 12, 14, 15
+		/// SupportByVersion PowerPoint 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746080.aspx
 		/// </summary>
 		/// <param name="path">string Path</param>
@@ -2462,7 +2462,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="handoutOrder">optional NetOffice.PowerPointApi.Enums.PpPrintHandoutOrder HandoutOrder = 1</param>
 		/// <param name="outputType">optional NetOffice.PowerPointApi.Enums.PpPrintOutputType OutputType = 1</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("PowerPoint", 12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 12,14,15,16)]
 		public void ExportAsFixedFormat(string path, NetOffice.PowerPointApi.Enums.PpFixedFormatType fixedFormatType, object intent, object frameSlides, object handoutOrder, object outputType)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(path, fixedFormatType, intent, frameSlides, handoutOrder, outputType);
@@ -2470,7 +2470,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 12, 14, 15
+		/// SupportByVersion PowerPoint 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746080.aspx
 		/// </summary>
 		/// <param name="path">string Path</param>
@@ -2481,7 +2481,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="outputType">optional NetOffice.PowerPointApi.Enums.PpPrintOutputType OutputType = 1</param>
 		/// <param name="printHiddenSlides">optional NetOffice.OfficeApi.Enums.MsoTriState PrintHiddenSlides = 0</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("PowerPoint", 12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 12,14,15,16)]
 		public void ExportAsFixedFormat(string path, NetOffice.PowerPointApi.Enums.PpFixedFormatType fixedFormatType, object intent, object frameSlides, object handoutOrder, object outputType, object printHiddenSlides)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(path, fixedFormatType, intent, frameSlides, handoutOrder, outputType, printHiddenSlides);
@@ -2489,7 +2489,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 12, 14, 15
+		/// SupportByVersion PowerPoint 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746080.aspx
 		/// </summary>
 		/// <param name="path">string Path</param>
@@ -2501,7 +2501,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="printHiddenSlides">optional NetOffice.OfficeApi.Enums.MsoTriState PrintHiddenSlides = 0</param>
 		/// <param name="printRange">optional NetOffice.PowerPointApi.PrintRange PrintRange = 0</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("PowerPoint", 12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 12,14,15,16)]
 		public void ExportAsFixedFormat(string path, NetOffice.PowerPointApi.Enums.PpFixedFormatType fixedFormatType, object intent, object frameSlides, object handoutOrder, object outputType, object printHiddenSlides, object printRange)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(path, fixedFormatType, intent, frameSlides, handoutOrder, outputType, printHiddenSlides, printRange);
@@ -2509,7 +2509,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 12, 14, 15
+		/// SupportByVersion PowerPoint 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746080.aspx
 		/// </summary>
 		/// <param name="path">string Path</param>
@@ -2522,7 +2522,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="printRange">optional NetOffice.PowerPointApi.PrintRange PrintRange = 0</param>
 		/// <param name="rangeType">optional NetOffice.PowerPointApi.Enums.PpPrintRangeType RangeType = 1</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("PowerPoint", 12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 12,14,15,16)]
 		public void ExportAsFixedFormat(string path, NetOffice.PowerPointApi.Enums.PpFixedFormatType fixedFormatType, object intent, object frameSlides, object handoutOrder, object outputType, object printHiddenSlides, object printRange, object rangeType)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(path, fixedFormatType, intent, frameSlides, handoutOrder, outputType, printHiddenSlides, printRange, rangeType);
@@ -2530,7 +2530,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 12, 14, 15
+		/// SupportByVersion PowerPoint 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746080.aspx
 		/// </summary>
 		/// <param name="path">string Path</param>
@@ -2544,7 +2544,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="rangeType">optional NetOffice.PowerPointApi.Enums.PpPrintRangeType RangeType = 1</param>
 		/// <param name="slideShowName">optional string SlideShowName = </param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("PowerPoint", 12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 12,14,15,16)]
 		public void ExportAsFixedFormat(string path, NetOffice.PowerPointApi.Enums.PpFixedFormatType fixedFormatType, object intent, object frameSlides, object handoutOrder, object outputType, object printHiddenSlides, object printRange, object rangeType, object slideShowName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(path, fixedFormatType, intent, frameSlides, handoutOrder, outputType, printHiddenSlides, printRange, rangeType, slideShowName);
@@ -2552,7 +2552,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 12, 14, 15
+		/// SupportByVersion PowerPoint 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746080.aspx
 		/// </summary>
 		/// <param name="path">string Path</param>
@@ -2567,7 +2567,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="slideShowName">optional string SlideShowName = </param>
 		/// <param name="includeDocProperties">optional bool IncludeDocProperties = false</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("PowerPoint", 12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 12,14,15,16)]
 		public void ExportAsFixedFormat(string path, NetOffice.PowerPointApi.Enums.PpFixedFormatType fixedFormatType, object intent, object frameSlides, object handoutOrder, object outputType, object printHiddenSlides, object printRange, object rangeType, object slideShowName, object includeDocProperties)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(path, fixedFormatType, intent, frameSlides, handoutOrder, outputType, printHiddenSlides, printRange, rangeType, slideShowName, includeDocProperties);
@@ -2575,7 +2575,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 12, 14, 15
+		/// SupportByVersion PowerPoint 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746080.aspx
 		/// </summary>
 		/// <param name="path">string Path</param>
@@ -2591,7 +2591,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="includeDocProperties">optional bool IncludeDocProperties = false</param>
 		/// <param name="keepIRMSettings">optional bool KeepIRMSettings = true</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("PowerPoint", 12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 12,14,15,16)]
 		public void ExportAsFixedFormat(string path, NetOffice.PowerPointApi.Enums.PpFixedFormatType fixedFormatType, object intent, object frameSlides, object handoutOrder, object outputType, object printHiddenSlides, object printRange, object rangeType, object slideShowName, object includeDocProperties, object keepIRMSettings)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(path, fixedFormatType, intent, frameSlides, handoutOrder, outputType, printHiddenSlides, printRange, rangeType, slideShowName, includeDocProperties, keepIRMSettings);
@@ -2599,7 +2599,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 12, 14, 15
+		/// SupportByVersion PowerPoint 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746080.aspx
 		/// </summary>
 		/// <param name="path">string Path</param>
@@ -2616,7 +2616,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="keepIRMSettings">optional bool KeepIRMSettings = true</param>
 		/// <param name="docStructureTags">optional bool DocStructureTags = true</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("PowerPoint", 12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 12,14,15,16)]
 		public void ExportAsFixedFormat(string path, NetOffice.PowerPointApi.Enums.PpFixedFormatType fixedFormatType, object intent, object frameSlides, object handoutOrder, object outputType, object printHiddenSlides, object printRange, object rangeType, object slideShowName, object includeDocProperties, object keepIRMSettings, object docStructureTags)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(path, fixedFormatType, intent, frameSlides, handoutOrder, outputType, printHiddenSlides, printRange, rangeType, slideShowName, includeDocProperties, keepIRMSettings, docStructureTags);
@@ -2624,7 +2624,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 12, 14, 15
+		/// SupportByVersion PowerPoint 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746080.aspx
 		/// </summary>
 		/// <param name="path">string Path</param>
@@ -2642,7 +2642,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="docStructureTags">optional bool DocStructureTags = true</param>
 		/// <param name="bitmapMissingFonts">optional bool BitmapMissingFonts = true</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("PowerPoint", 12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 12,14,15,16)]
 		public void ExportAsFixedFormat(string path, NetOffice.PowerPointApi.Enums.PpFixedFormatType fixedFormatType, object intent, object frameSlides, object handoutOrder, object outputType, object printHiddenSlides, object printRange, object rangeType, object slideShowName, object includeDocProperties, object keepIRMSettings, object docStructureTags, object bitmapMissingFonts)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(path, fixedFormatType, intent, frameSlides, handoutOrder, outputType, printHiddenSlides, printRange, rangeType, slideShowName, includeDocProperties, keepIRMSettings, docStructureTags, bitmapMissingFonts);
@@ -2650,7 +2650,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 12, 14, 15
+		/// SupportByVersion PowerPoint 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746080.aspx
 		/// </summary>
 		/// <param name="path">string Path</param>
@@ -2669,7 +2669,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="bitmapMissingFonts">optional bool BitmapMissingFonts = true</param>
 		/// <param name="useISO19005_1">optional bool UseISO19005_1 = false</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("PowerPoint", 12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 12,14,15,16)]
 		public void ExportAsFixedFormat(string path, NetOffice.PowerPointApi.Enums.PpFixedFormatType fixedFormatType, object intent, object frameSlides, object handoutOrder, object outputType, object printHiddenSlides, object printRange, object rangeType, object slideShowName, object includeDocProperties, object keepIRMSettings, object docStructureTags, object bitmapMissingFonts, object useISO19005_1)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(path, fixedFormatType, intent, frameSlides, handoutOrder, outputType, printHiddenSlides, printRange, rangeType, slideShowName, includeDocProperties, keepIRMSettings, docStructureTags, bitmapMissingFonts, useISO19005_1);
@@ -2677,10 +2677,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 12, 14, 15
+		/// SupportByVersion PowerPoint 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746373.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 12,14,15,16)]
 		public NetOffice.OfficeApi.WorkflowTasks GetWorkflowTasks()
 		{
 			object[] paramsArray = null;
@@ -2690,10 +2690,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 12, 14, 15
+		/// SupportByVersion PowerPoint 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746712.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 12,14,15,16)]
 		public NetOffice.OfficeApi.WorkflowTemplates GetWorkflowTemplates()
 		{
 			object[] paramsArray = null;
@@ -2703,10 +2703,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 12, 14, 15
+		/// SupportByVersion PowerPoint 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744831.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 12,14,15,16)]
 		public void LockServerFile()
 		{
 			object[] paramsArray = null;
@@ -2714,11 +2714,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 12, 14, 15
+		/// SupportByVersion PowerPoint 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746528.aspx
 		/// </summary>
 		/// <param name="themeName">string themeName</param>
-		[SupportByVersionAttribute("PowerPoint", 12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 12,14,15,16)]
 		public void ApplyTheme(string themeName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(themeName);
@@ -2726,13 +2726,13 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 12, 14, 15
+		/// SupportByVersion PowerPoint 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744375.aspx
 		/// </summary>
 		/// <param name="slideLibraryUrl">string SlideLibraryUrl</param>
 		/// <param name="overwrite">optional bool Overwrite = false</param>
 		/// <param name="useSlideOrder">optional bool UseSlideOrder = false</param>
-		[SupportByVersionAttribute("PowerPoint", 12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 12,14,15,16)]
 		public void PublishSlides(string slideLibraryUrl, object overwrite, object useSlideOrder)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(slideLibraryUrl, overwrite, useSlideOrder);
@@ -2740,12 +2740,12 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 12, 14, 15
+		/// SupportByVersion PowerPoint 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744375.aspx
 		/// </summary>
 		/// <param name="slideLibraryUrl">string SlideLibraryUrl</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("PowerPoint", 12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 12,14,15,16)]
 		public void PublishSlides(string slideLibraryUrl)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(slideLibraryUrl);
@@ -2753,13 +2753,13 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 12, 14, 15
+		/// SupportByVersion PowerPoint 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744375.aspx
 		/// </summary>
 		/// <param name="slideLibraryUrl">string SlideLibraryUrl</param>
 		/// <param name="overwrite">optional bool Overwrite = false</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("PowerPoint", 12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 12,14,15,16)]
 		public void PublishSlides(string slideLibraryUrl, object overwrite)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(slideLibraryUrl, overwrite);
@@ -2767,10 +2767,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 12, 14, 15
+		/// SupportByVersion PowerPoint 12, 14, 15, 16
 		/// 
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 12,14,15,16)]
 		public void Convert()
 		{
 			object[] paramsArray = null;
@@ -2778,12 +2778,12 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 14, 15
+		/// SupportByVersion PowerPoint 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744063.aspx
 		/// </summary>
 		/// <param name="withPresentation">string withPresentation</param>
 		/// <param name="baselinePresentation">string baselinePresentation</param>
-		[SupportByVersionAttribute("PowerPoint", 14,15)]
+		[SupportByVersionAttribute("PowerPoint", 14,15,16)]
 		public void MergeWithBaseline(string withPresentation, string baselinePresentation)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(withPresentation, baselinePresentation);
@@ -2791,10 +2791,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 14, 15
+		/// SupportByVersion PowerPoint 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745418.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14,15)]
+		[SupportByVersionAttribute("PowerPoint", 14,15,16)]
 		public void AcceptAll()
 		{
 			object[] paramsArray = null;
@@ -2802,10 +2802,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 14, 15
+		/// SupportByVersion PowerPoint 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745993.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14,15)]
+		[SupportByVersionAttribute("PowerPoint", 14,15,16)]
 		public void RejectAll()
 		{
 			object[] paramsArray = null;
@@ -2813,10 +2813,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 14, 15
+		/// SupportByVersion PowerPoint 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744528.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14,15)]
+		[SupportByVersionAttribute("PowerPoint", 14,15,16)]
 		public void EnsureAllMediaUpgraded()
 		{
 			object[] paramsArray = null;
@@ -2824,11 +2824,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 14, 15
+		/// SupportByVersion PowerPoint 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff743830.aspx
 		/// </summary>
 		/// <param name="fileName">string FileName</param>
-		[SupportByVersionAttribute("PowerPoint", 14,15)]
+		[SupportByVersionAttribute("PowerPoint", 14,15,16)]
 		public void Convert2(string fileName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName);
@@ -2836,7 +2836,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 14, 15
+		/// SupportByVersion PowerPoint 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746354.aspx
 		/// </summary>
 		/// <param name="fileName">string FileName</param>
@@ -2845,7 +2845,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="vertResolution">optional Int32 VertResolution = 720</param>
 		/// <param name="framesPerSecond">optional Int32 FramesPerSecond = 30</param>
 		/// <param name="quality">optional Int32 Quality = 85</param>
-		[SupportByVersionAttribute("PowerPoint", 14,15)]
+		[SupportByVersionAttribute("PowerPoint", 14,15,16)]
 		public void CreateVideo(string fileName, object useTimingsAndNarrations, object defaultSlideDuration, object vertResolution, object framesPerSecond, object quality)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName, useTimingsAndNarrations, defaultSlideDuration, vertResolution, framesPerSecond, quality);
@@ -2853,12 +2853,12 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 14, 15
+		/// SupportByVersion PowerPoint 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746354.aspx
 		/// </summary>
 		/// <param name="fileName">string FileName</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("PowerPoint", 14,15)]
+		[SupportByVersionAttribute("PowerPoint", 14,15,16)]
 		public void CreateVideo(string fileName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName);
@@ -2866,13 +2866,13 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 14, 15
+		/// SupportByVersion PowerPoint 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746354.aspx
 		/// </summary>
 		/// <param name="fileName">string FileName</param>
 		/// <param name="useTimingsAndNarrations">optional bool UseTimingsAndNarrations = true</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("PowerPoint", 14,15)]
+		[SupportByVersionAttribute("PowerPoint", 14,15,16)]
 		public void CreateVideo(string fileName, object useTimingsAndNarrations)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName, useTimingsAndNarrations);
@@ -2880,14 +2880,14 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 14, 15
+		/// SupportByVersion PowerPoint 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746354.aspx
 		/// </summary>
 		/// <param name="fileName">string FileName</param>
 		/// <param name="useTimingsAndNarrations">optional bool UseTimingsAndNarrations = true</param>
 		/// <param name="defaultSlideDuration">optional Int32 DefaultSlideDuration = 5</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("PowerPoint", 14,15)]
+		[SupportByVersionAttribute("PowerPoint", 14,15,16)]
 		public void CreateVideo(string fileName, object useTimingsAndNarrations, object defaultSlideDuration)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName, useTimingsAndNarrations, defaultSlideDuration);
@@ -2895,7 +2895,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 14, 15
+		/// SupportByVersion PowerPoint 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746354.aspx
 		/// </summary>
 		/// <param name="fileName">string FileName</param>
@@ -2903,7 +2903,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="defaultSlideDuration">optional Int32 DefaultSlideDuration = 5</param>
 		/// <param name="vertResolution">optional Int32 VertResolution = 720</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("PowerPoint", 14,15)]
+		[SupportByVersionAttribute("PowerPoint", 14,15,16)]
 		public void CreateVideo(string fileName, object useTimingsAndNarrations, object defaultSlideDuration, object vertResolution)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName, useTimingsAndNarrations, defaultSlideDuration, vertResolution);
@@ -2911,7 +2911,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 14, 15
+		/// SupportByVersion PowerPoint 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746354.aspx
 		/// </summary>
 		/// <param name="fileName">string FileName</param>
@@ -2920,7 +2920,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="vertResolution">optional Int32 VertResolution = 720</param>
 		/// <param name="framesPerSecond">optional Int32 FramesPerSecond = 30</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("PowerPoint", 14,15)]
+		[SupportByVersionAttribute("PowerPoint", 14,15,16)]
 		public void CreateVideo(string fileName, object useTimingsAndNarrations, object defaultSlideDuration, object vertResolution, object framesPerSecond)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName, useTimingsAndNarrations, defaultSlideDuration, vertResolution, framesPerSecond);
@@ -2928,12 +2928,12 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 15
+		/// SupportByVersion PowerPoint 15,16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj228125.aspx
 		/// </summary>
 		/// <param name="fileName">string FileName</param>
 		/// <param name="variant">string Variant</param>
-		[SupportByVersionAttribute("PowerPoint", 15)]
+		[SupportByVersionAttribute("PowerPoint", 15, 16)]
 		public void ApplyTemplate2(string fileName, string variant)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName, variant);
@@ -2941,7 +2941,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 15
+		/// SupportByVersion PowerPoint 15,16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj229507.aspx
 		/// </summary>
 		/// <param name="path">string Path</param>
@@ -2961,7 +2961,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="useISO19005_1">optional bool UseISO19005_1 = false</param>
 		/// <param name="includeMarkup">optional bool IncludeMarkup = false</param>
 		/// <param name="externalExporter">optional object ExternalExporter</param>
-		[SupportByVersionAttribute("PowerPoint", 15)]
+		[SupportByVersionAttribute("PowerPoint", 15, 16)]
 		public void ExportAsFixedFormat2(string path, NetOffice.PowerPointApi.Enums.PpFixedFormatType fixedFormatType, object intent, object frameSlides, object handoutOrder, object outputType, object printHiddenSlides, object printRange, object rangeType, object slideShowName, object includeDocProperties, object keepIRMSettings, object docStructureTags, object bitmapMissingFonts, object useISO19005_1, object includeMarkup, object externalExporter)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(path, fixedFormatType, intent, frameSlides, handoutOrder, outputType, printHiddenSlides, printRange, rangeType, slideShowName, includeDocProperties, keepIRMSettings, docStructureTags, bitmapMissingFonts, useISO19005_1, includeMarkup, externalExporter);
@@ -2969,13 +2969,13 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 15
+		/// SupportByVersion PowerPoint 15,16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj229507.aspx
 		/// </summary>
 		/// <param name="path">string Path</param>
 		/// <param name="fixedFormatType">NetOffice.PowerPointApi.Enums.PpFixedFormatType FixedFormatType</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("PowerPoint", 15)]
+		[SupportByVersionAttribute("PowerPoint", 15, 16)]
 		public void ExportAsFixedFormat2(string path, NetOffice.PowerPointApi.Enums.PpFixedFormatType fixedFormatType)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(path, fixedFormatType);
@@ -2983,14 +2983,14 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 15
+		/// SupportByVersion PowerPoint 15,16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj229507.aspx
 		/// </summary>
 		/// <param name="path">string Path</param>
 		/// <param name="fixedFormatType">NetOffice.PowerPointApi.Enums.PpFixedFormatType FixedFormatType</param>
 		/// <param name="intent">optional NetOffice.PowerPointApi.Enums.PpFixedFormatIntent Intent = 1</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("PowerPoint", 15)]
+		[SupportByVersionAttribute("PowerPoint", 15, 16)]
 		public void ExportAsFixedFormat2(string path, NetOffice.PowerPointApi.Enums.PpFixedFormatType fixedFormatType, object intent)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(path, fixedFormatType, intent);
@@ -2998,7 +2998,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 15
+		/// SupportByVersion PowerPoint 15,16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj229507.aspx
 		/// </summary>
 		/// <param name="path">string Path</param>
@@ -3006,7 +3006,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="intent">optional NetOffice.PowerPointApi.Enums.PpFixedFormatIntent Intent = 1</param>
 		/// <param name="frameSlides">optional NetOffice.OfficeApi.Enums.MsoTriState FrameSlides = 0</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("PowerPoint", 15)]
+		[SupportByVersionAttribute("PowerPoint", 15, 16)]
 		public void ExportAsFixedFormat2(string path, NetOffice.PowerPointApi.Enums.PpFixedFormatType fixedFormatType, object intent, object frameSlides)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(path, fixedFormatType, intent, frameSlides);
@@ -3014,7 +3014,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 15
+		/// SupportByVersion PowerPoint 15,16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj229507.aspx
 		/// </summary>
 		/// <param name="path">string Path</param>
@@ -3023,7 +3023,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="frameSlides">optional NetOffice.OfficeApi.Enums.MsoTriState FrameSlides = 0</param>
 		/// <param name="handoutOrder">optional NetOffice.PowerPointApi.Enums.PpPrintHandoutOrder HandoutOrder = 1</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("PowerPoint", 15)]
+		[SupportByVersionAttribute("PowerPoint", 15, 16)]
 		public void ExportAsFixedFormat2(string path, NetOffice.PowerPointApi.Enums.PpFixedFormatType fixedFormatType, object intent, object frameSlides, object handoutOrder)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(path, fixedFormatType, intent, frameSlides, handoutOrder);
@@ -3031,7 +3031,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 15
+		/// SupportByVersion PowerPoint 15,16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj229507.aspx
 		/// </summary>
 		/// <param name="path">string Path</param>
@@ -3041,7 +3041,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="handoutOrder">optional NetOffice.PowerPointApi.Enums.PpPrintHandoutOrder HandoutOrder = 1</param>
 		/// <param name="outputType">optional NetOffice.PowerPointApi.Enums.PpPrintOutputType OutputType = 1</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("PowerPoint", 15)]
+		[SupportByVersionAttribute("PowerPoint", 15, 16)]
 		public void ExportAsFixedFormat2(string path, NetOffice.PowerPointApi.Enums.PpFixedFormatType fixedFormatType, object intent, object frameSlides, object handoutOrder, object outputType)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(path, fixedFormatType, intent, frameSlides, handoutOrder, outputType);
@@ -3049,7 +3049,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 15
+		/// SupportByVersion PowerPoint 15,16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj229507.aspx
 		/// </summary>
 		/// <param name="path">string Path</param>
@@ -3060,7 +3060,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="outputType">optional NetOffice.PowerPointApi.Enums.PpPrintOutputType OutputType = 1</param>
 		/// <param name="printHiddenSlides">optional NetOffice.OfficeApi.Enums.MsoTriState PrintHiddenSlides = 0</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("PowerPoint", 15)]
+		[SupportByVersionAttribute("PowerPoint", 15, 16)]
 		public void ExportAsFixedFormat2(string path, NetOffice.PowerPointApi.Enums.PpFixedFormatType fixedFormatType, object intent, object frameSlides, object handoutOrder, object outputType, object printHiddenSlides)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(path, fixedFormatType, intent, frameSlides, handoutOrder, outputType, printHiddenSlides);
@@ -3068,7 +3068,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 15
+		/// SupportByVersion PowerPoint 15,16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj229507.aspx
 		/// </summary>
 		/// <param name="path">string Path</param>
@@ -3080,7 +3080,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="printHiddenSlides">optional NetOffice.OfficeApi.Enums.MsoTriState PrintHiddenSlides = 0</param>
 		/// <param name="printRange">optional NetOffice.PowerPointApi.PrintRange PrintRange = 0</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("PowerPoint", 15)]
+		[SupportByVersionAttribute("PowerPoint", 15, 16)]
 		public void ExportAsFixedFormat2(string path, NetOffice.PowerPointApi.Enums.PpFixedFormatType fixedFormatType, object intent, object frameSlides, object handoutOrder, object outputType, object printHiddenSlides, object printRange)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(path, fixedFormatType, intent, frameSlides, handoutOrder, outputType, printHiddenSlides, printRange);
@@ -3088,7 +3088,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 15
+		/// SupportByVersion PowerPoint 15,16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj229507.aspx
 		/// </summary>
 		/// <param name="path">string Path</param>
@@ -3101,7 +3101,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="printRange">optional NetOffice.PowerPointApi.PrintRange PrintRange = 0</param>
 		/// <param name="rangeType">optional NetOffice.PowerPointApi.Enums.PpPrintRangeType RangeType = 1</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("PowerPoint", 15)]
+		[SupportByVersionAttribute("PowerPoint", 15, 16)]
 		public void ExportAsFixedFormat2(string path, NetOffice.PowerPointApi.Enums.PpFixedFormatType fixedFormatType, object intent, object frameSlides, object handoutOrder, object outputType, object printHiddenSlides, object printRange, object rangeType)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(path, fixedFormatType, intent, frameSlides, handoutOrder, outputType, printHiddenSlides, printRange, rangeType);
@@ -3109,7 +3109,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 15
+		/// SupportByVersion PowerPoint 15,16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj229507.aspx
 		/// </summary>
 		/// <param name="path">string Path</param>
@@ -3123,7 +3123,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="rangeType">optional NetOffice.PowerPointApi.Enums.PpPrintRangeType RangeType = 1</param>
 		/// <param name="slideShowName">optional string SlideShowName = </param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("PowerPoint", 15)]
+		[SupportByVersionAttribute("PowerPoint", 15, 16)]
 		public void ExportAsFixedFormat2(string path, NetOffice.PowerPointApi.Enums.PpFixedFormatType fixedFormatType, object intent, object frameSlides, object handoutOrder, object outputType, object printHiddenSlides, object printRange, object rangeType, object slideShowName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(path, fixedFormatType, intent, frameSlides, handoutOrder, outputType, printHiddenSlides, printRange, rangeType, slideShowName);
@@ -3131,7 +3131,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 15
+		/// SupportByVersion PowerPoint 15,16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj229507.aspx
 		/// </summary>
 		/// <param name="path">string Path</param>
@@ -3146,7 +3146,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="slideShowName">optional string SlideShowName = </param>
 		/// <param name="includeDocProperties">optional bool IncludeDocProperties = false</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("PowerPoint", 15)]
+		[SupportByVersionAttribute("PowerPoint", 15, 16)]
 		public void ExportAsFixedFormat2(string path, NetOffice.PowerPointApi.Enums.PpFixedFormatType fixedFormatType, object intent, object frameSlides, object handoutOrder, object outputType, object printHiddenSlides, object printRange, object rangeType, object slideShowName, object includeDocProperties)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(path, fixedFormatType, intent, frameSlides, handoutOrder, outputType, printHiddenSlides, printRange, rangeType, slideShowName, includeDocProperties);
@@ -3154,7 +3154,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 15
+		/// SupportByVersion PowerPoint 15,16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj229507.aspx
 		/// </summary>
 		/// <param name="path">string Path</param>
@@ -3170,7 +3170,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="includeDocProperties">optional bool IncludeDocProperties = false</param>
 		/// <param name="keepIRMSettings">optional bool KeepIRMSettings = true</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("PowerPoint", 15)]
+		[SupportByVersionAttribute("PowerPoint", 15, 16)]
 		public void ExportAsFixedFormat2(string path, NetOffice.PowerPointApi.Enums.PpFixedFormatType fixedFormatType, object intent, object frameSlides, object handoutOrder, object outputType, object printHiddenSlides, object printRange, object rangeType, object slideShowName, object includeDocProperties, object keepIRMSettings)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(path, fixedFormatType, intent, frameSlides, handoutOrder, outputType, printHiddenSlides, printRange, rangeType, slideShowName, includeDocProperties, keepIRMSettings);
@@ -3178,7 +3178,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 15
+		/// SupportByVersion PowerPoint 15,16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj229507.aspx
 		/// </summary>
 		/// <param name="path">string Path</param>
@@ -3195,7 +3195,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="keepIRMSettings">optional bool KeepIRMSettings = true</param>
 		/// <param name="docStructureTags">optional bool DocStructureTags = true</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("PowerPoint", 15)]
+		[SupportByVersionAttribute("PowerPoint", 15, 16)]
 		public void ExportAsFixedFormat2(string path, NetOffice.PowerPointApi.Enums.PpFixedFormatType fixedFormatType, object intent, object frameSlides, object handoutOrder, object outputType, object printHiddenSlides, object printRange, object rangeType, object slideShowName, object includeDocProperties, object keepIRMSettings, object docStructureTags)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(path, fixedFormatType, intent, frameSlides, handoutOrder, outputType, printHiddenSlides, printRange, rangeType, slideShowName, includeDocProperties, keepIRMSettings, docStructureTags);
@@ -3203,7 +3203,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 15
+		/// SupportByVersion PowerPoint 15,16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj229507.aspx
 		/// </summary>
 		/// <param name="path">string Path</param>
@@ -3221,7 +3221,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="docStructureTags">optional bool DocStructureTags = true</param>
 		/// <param name="bitmapMissingFonts">optional bool BitmapMissingFonts = true</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("PowerPoint", 15)]
+		[SupportByVersionAttribute("PowerPoint", 15, 16)]
 		public void ExportAsFixedFormat2(string path, NetOffice.PowerPointApi.Enums.PpFixedFormatType fixedFormatType, object intent, object frameSlides, object handoutOrder, object outputType, object printHiddenSlides, object printRange, object rangeType, object slideShowName, object includeDocProperties, object keepIRMSettings, object docStructureTags, object bitmapMissingFonts)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(path, fixedFormatType, intent, frameSlides, handoutOrder, outputType, printHiddenSlides, printRange, rangeType, slideShowName, includeDocProperties, keepIRMSettings, docStructureTags, bitmapMissingFonts);
@@ -3229,7 +3229,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 15
+		/// SupportByVersion PowerPoint 15,16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj229507.aspx
 		/// </summary>
 		/// <param name="path">string Path</param>
@@ -3248,7 +3248,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="bitmapMissingFonts">optional bool BitmapMissingFonts = true</param>
 		/// <param name="useISO19005_1">optional bool UseISO19005_1 = false</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("PowerPoint", 15)]
+		[SupportByVersionAttribute("PowerPoint", 15, 16)]
 		public void ExportAsFixedFormat2(string path, NetOffice.PowerPointApi.Enums.PpFixedFormatType fixedFormatType, object intent, object frameSlides, object handoutOrder, object outputType, object printHiddenSlides, object printRange, object rangeType, object slideShowName, object includeDocProperties, object keepIRMSettings, object docStructureTags, object bitmapMissingFonts, object useISO19005_1)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(path, fixedFormatType, intent, frameSlides, handoutOrder, outputType, printHiddenSlides, printRange, rangeType, slideShowName, includeDocProperties, keepIRMSettings, docStructureTags, bitmapMissingFonts, useISO19005_1);
@@ -3256,7 +3256,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 15
+		/// SupportByVersion PowerPoint 15,16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj229507.aspx
 		/// </summary>
 		/// <param name="path">string Path</param>
@@ -3276,7 +3276,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="useISO19005_1">optional bool UseISO19005_1 = false</param>
 		/// <param name="includeMarkup">optional bool IncludeMarkup = false</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("PowerPoint", 15)]
+		[SupportByVersionAttribute("PowerPoint", 15, 16)]
 		public void ExportAsFixedFormat2(string path, NetOffice.PowerPointApi.Enums.PpFixedFormatType fixedFormatType, object intent, object frameSlides, object handoutOrder, object outputType, object printHiddenSlides, object printRange, object rangeType, object slideShowName, object includeDocProperties, object keepIRMSettings, object docStructureTags, object bitmapMissingFonts, object useISO19005_1, object includeMarkup)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(path, fixedFormatType, intent, frameSlides, handoutOrder, outputType, printHiddenSlides, printRange, rangeType, slideShowName, includeDocProperties, keepIRMSettings, docStructureTags, bitmapMissingFonts, useISO19005_1, includeMarkup);

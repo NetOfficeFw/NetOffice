@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using NetOffice;
@@ -17,10 +17,10 @@ namespace NetOffice.VisioApi
 
 	///<summary>
 	/// CoClass DataRecordsets 
-	/// SupportByVersion Visio, 12,14,15
+	/// SupportByVersion Visio, 12,14,15,16
 	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff769264(v=office.14).aspx
 	///</summary>
-	[SupportByVersionAttribute("Visio", 12,14,15)]
+	[SupportByVersionAttribute("Visio", 12,14,15,16)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class DataRecordsets : IVDataRecordsets,IEventBinding
 	{
@@ -95,7 +95,7 @@ namespace NetOffice.VisioApi
 		}
 		
 		///<summary>
-        ///creates a new instance of DataRecordsets 
+        /// Creates a new instance of DataRecordsets 
         ///</summary>		
 		public DataRecordsets():base("Visio.DataRecordsets")
 		{
@@ -103,7 +103,7 @@ namespace NetOffice.VisioApi
 		}
 		
 		///<summary>
-        ///creates a new instance of DataRecordsets
+        /// Creates a new instance of DataRecordsets
         ///</summary>
         ///<param name="progId">registered ProgID</param>
 		public DataRecordsets(string progId):base(progId)
@@ -116,12 +116,12 @@ namespace NetOffice.VisioApi
 		#region Static CoClass Methods
 
 		/// <summary>
-        /// returns all running Visio.DataRecordsets objects from the running object table(ROT)
+        /// Returns all running Visio.DataRecordsets objects from the environment/system
         /// </summary>
         /// <returns>an Visio.DataRecordsets array</returns>
 		public static NetOffice.VisioApi.DataRecordsets[] GetActiveInstances()
 		{		
-			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("Visio","DataRecordsets");
+			IDisposableEnumeration proxyList = NetOffice.ProxyService.GetActiveInstances("Visio","DataRecordsets");
 			NetRuntimeSystem.Collections.Generic.List<NetOffice.VisioApi.DataRecordsets> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.VisioApi.DataRecordsets>();
 			foreach(object proxy in proxyList)
 				resultList.Add( new NetOffice.VisioApi.DataRecordsets(null, proxy) );
@@ -129,12 +129,12 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-        /// returns a running Visio.DataRecordsets object from the running object table(ROT). the method takes the first element from the table
+        /// Returns a running Visio.DataRecordsets object from the environment/system.
         /// </summary>
         /// <returns>an Visio.DataRecordsets object or null</returns>
 		public static NetOffice.VisioApi.DataRecordsets GetActiveInstance()
 		{
-			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Visio","DataRecordsets", false);
+			object proxy  = NetOffice.ProxyService.GetActiveInstance("Visio","DataRecordsets", false);
 			if(null != proxy)
 				return new NetOffice.VisioApi.DataRecordsets(null, proxy);
 			else
@@ -142,13 +142,13 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-        /// returns a running Visio.DataRecordsets object from the running object table(ROT).  the method takes the first element from the table
+        /// Returns a running Visio.DataRecordsets object from the environment/system. 
         /// </summary>
 	    /// <param name="throwOnError">throw an exception if no object was found</param>
         /// <returns>an Visio.DataRecordsets object or null</returns>
 		public static NetOffice.VisioApi.DataRecordsets GetActiveInstance(bool throwOnError)
 		{
-			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Visio","DataRecordsets", throwOnError);
+			object proxy  = NetOffice.ProxyService.GetActiveInstance("Visio","DataRecordsets", throwOnError);
 			if(null != proxy)
 				return new NetOffice.VisioApi.DataRecordsets(null, proxy);
 			else
@@ -159,15 +159,15 @@ namespace NetOffice.VisioApi
 		#region Events
 
 		/// <summary>
-		/// SupportByVersion Visio, 12,14,15
+		/// SupportByVersion Visio, 12,14,15,16
 		/// </summary>
 		private event DataRecordsets_DataRecordsetAddedEventHandler _DataRecordsetAddedEvent;
 
 		/// <summary>
-		/// SupportByVersion Visio 12 14 15
+		/// SupportByVersion Visio 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff769186(v=office.14).aspx </remarks>
-		[SupportByVersion("Visio", 12,14,15)]
+		[SupportByVersion("Visio", 12,14,15,16)]
 		public event DataRecordsets_DataRecordsetAddedEventHandler DataRecordsetAddedEvent
 		{
 			add
@@ -182,15 +182,15 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio, 12,14,15
+		/// SupportByVersion Visio, 12,14,15,16
 		/// </summary>
 		private event DataRecordsets_BeforeDataRecordsetDeleteEventHandler _BeforeDataRecordsetDeleteEvent;
 
 		/// <summary>
-		/// SupportByVersion Visio 12 14 15
+		/// SupportByVersion Visio 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff769026(v=office.14).aspx </remarks>
-		[SupportByVersion("Visio", 12,14,15)]
+		[SupportByVersion("Visio", 12,14,15,16)]
 		public event DataRecordsets_BeforeDataRecordsetDeleteEventHandler BeforeDataRecordsetDeleteEvent
 		{
 			add
@@ -205,15 +205,15 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio, 12,14,15
+		/// SupportByVersion Visio, 12,14,15,16
 		/// </summary>
 		private event DataRecordsets_DataRecordsetChangedEventHandler _DataRecordsetChangedEvent;
 
 		/// <summary>
-		/// SupportByVersion Visio 12 14 15
+		/// SupportByVersion Visio 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff767609(v=office.14).aspx </remarks>
-		[SupportByVersion("Visio", 12,14,15)]
+		[SupportByVersion("Visio", 12,14,15,16)]
 		public event DataRecordsets_DataRecordsetChangedEventHandler DataRecordsetChangedEvent
 		{
 			add
@@ -232,7 +232,7 @@ namespace NetOffice.VisioApi
 	    #region IEventBinding Member
         
 		/// <summary>
-        /// creates active sink helper
+        /// Creates active sink helper
         /// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public void CreateEventBridge()
@@ -254,6 +254,9 @@ namespace NetOffice.VisioApi
 			} 
         }
 
+        /// <summary>
+        /// The instance use currently an event listener 
+        /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public bool EventBridgeInitialized
         {
@@ -262,7 +265,10 @@ namespace NetOffice.VisioApi
                 return (null != _connectPoint);
             }
         }
-        
+
+        /// <summary>
+        ///  The instance has currently one or more event recipients 
+        /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public bool HasEventRecipients()       
         {
@@ -282,6 +288,9 @@ namespace NetOffice.VisioApi
 			return false;
         }
         
+        /// <summary>
+        /// Target methods from its actual event recipients
+        /// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public Delegate[] GetEventRecipients(string eventName)
         {
@@ -301,7 +310,10 @@ namespace NetOffice.VisioApi
             else
                 return new Delegate[0];
         }
-
+       
+        /// <summary>
+        /// Returns the current count of event recipients
+        /// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public int GetCountOfEventRecipients(string eventName)
         {
@@ -320,8 +332,14 @@ namespace NetOffice.VisioApi
             }
             else
                 return 0;
-        }
-
+           }
+        
+        /// <summary>
+        /// Raise an instance event
+        /// </summary>
+        /// <param name="eventName">name of the event without 'Event' at the end</param>
+        /// <param name="paramsArray">custom arguments for the event</param>
+        /// <returns>count of called event recipients</returns>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public int RaiseCustomEvent(string eventName, ref object[] paramsArray)
 		{
@@ -353,6 +371,9 @@ namespace NetOffice.VisioApi
                 return 0;
 		}
 
+        /// <summary>
+        /// Stop listening events for the instance
+        /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public void DisposeEventBridge()
         {

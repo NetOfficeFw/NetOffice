@@ -8,17 +8,17 @@ namespace NetOffice
     public sealed class SupportByVersionAttribute : System.Attribute
     {
         /// <summary>
-        /// returns library name
+        /// Name of the Library
         /// </summary>
         public readonly string Name;
 
         /// <summary>
-        /// returns all supported library versions of entity
+        ///All supported library versions from the entity
         /// </summary>
         public readonly double[] Versions;
 
         /// <summary>
-        /// creates instance
+        /// Creates an instance of the attribute
         /// </summary>
         /// <param name="name">name of the library</param>
         /// <param name="versions">version of the library</param>

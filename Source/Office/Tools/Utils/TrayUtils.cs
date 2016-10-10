@@ -297,14 +297,36 @@ namespace NetOffice.OfficeApi.Tools.Utils
             Icon = icon;
         }
 
+        /// <summary>
+        /// Setup tray as one call
+        /// </summary>
+        /// <param name="visible">tray visibility</param>
+        /// <param name="text">shown text</param>
+        /// <param name="contextMenu">shortcut menu</param>
+        /// <param name="iconResource">full qualified icon resource address</param>
         public void Setup(bool visible, string text, ContextMenu contextMenu, string iconResource)
         {
-            throw new NotImplementedException();
+            Visible = visible;
+            Text = text;
+            ContextMenu = contextMenu;
+            System.IO.Stream iconStream = ReadRessource(iconResource);
+            if (null != iconStream)
+                Icon = new System.Drawing.Icon(iconStream);
         }
 
+        /// <summary>
+        ///  Setup tray as one call
+        /// </summary>
+        /// <param name="visible">tray visibility</param>
+        /// <param name="text">shown text</param>
+        ///  <param name="iconResource">full qualified icon resource address</param>
         public void Setup(bool visible, string text, string iconResource)
         {
-            throw new NotImplementedException();
+            Visible = visible;
+            Text = text;
+            System.IO.Stream iconStream = ReadRessource(iconResource);
+            if (null != iconStream)
+                Icon = new System.Drawing.Icon(iconStream);
         }
 
         /// <summary>
@@ -439,6 +461,12 @@ namespace NetOffice.OfficeApi.Tools.Utils
             {
                 _applicationIconResolved = true;
             }
+        }
+
+        private System.IO.Stream ReadRessource(string address)
+        {
+            System.Reflection.Assembly assembly = _owner.OwnerAssembly;
+            return assembly.GetManifestResourceStream(address);
         }
 
         #endregion

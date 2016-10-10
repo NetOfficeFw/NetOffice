@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using NetRuntimeSystem = System;
 using System.Runtime.InteropServices;
 using System.ComponentModel;
@@ -10,9 +10,9 @@ namespace NetOffice.ExcelApi
 {
 	///<summary>
 	/// Interface IDocEvents 
-	/// SupportByVersion Excel, 9,10,11,12,14,15
+	/// SupportByVersion Excel, 9,10,11,12,14,15,16
 	///</summary>
-	[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
+	[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
 	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class IDocEvents : COMObject
 	{
@@ -96,11 +96,11 @@ namespace NetOffice.ExcelApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// 
 		/// </summary>
 		/// <param name="target">NetOffice.ExcelApi.Range Target</param>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
 		public Int32 SelectionChange(NetOffice.ExcelApi.Range target)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(target);
@@ -109,12 +109,12 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// 
 		/// </summary>
 		/// <param name="target">NetOffice.ExcelApi.Range Target</param>
 		/// <param name="cancel">bool Cancel</param>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
 		public Int32 BeforeDoubleClick(NetOffice.ExcelApi.Range target, bool cancel)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(target, cancel);
@@ -123,12 +123,12 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// 
 		/// </summary>
 		/// <param name="target">NetOffice.ExcelApi.Range Target</param>
 		/// <param name="cancel">bool Cancel</param>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
 		public Int32 BeforeRightClick(NetOffice.ExcelApi.Range target, bool cancel)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(target, cancel);
@@ -137,10 +137,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// 
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
 		public Int32 Activate()
 		{
 			object[] paramsArray = null;
@@ -149,10 +149,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// 
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
 		public Int32 Deactivate()
 		{
 			object[] paramsArray = null;
@@ -161,10 +161,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// 
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
 		public Int32 Calculate()
 		{
 			object[] paramsArray = null;
@@ -173,11 +173,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// 
 		/// </summary>
 		/// <param name="target">NetOffice.ExcelApi.Range Target</param>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
 		public Int32 Change(NetOffice.ExcelApi.Range target)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(target);
@@ -186,11 +186,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// 
 		/// </summary>
 		/// <param name="target">NetOffice.ExcelApi.Hyperlink Target</param>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
 		public Int32 FollowHyperlink(NetOffice.ExcelApi.Hyperlink target)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(target);
@@ -199,11 +199,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 10, 11, 12, 14, 15
+		/// SupportByVersion Excel 10, 11, 12, 14, 15, 16
 		/// 
 		/// </summary>
 		/// <param name="target">NetOffice.ExcelApi.PivotTable Target</param>
-		[SupportByVersionAttribute("Excel", 10,11,12,14,15)]
+		[SupportByVersionAttribute("Excel", 10,11,12,14,15,16)]
 		public Int32 PivotTableUpdate(NetOffice.ExcelApi.PivotTable target)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(target);
@@ -212,12 +212,12 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 14, 15
+		/// SupportByVersion Excel 14, 15, 16
 		/// 
 		/// </summary>
 		/// <param name="targetPivotTable">NetOffice.ExcelApi.PivotTable TargetPivotTable</param>
 		/// <param name="targetRange">NetOffice.ExcelApi.Range TargetRange</param>
-		[SupportByVersionAttribute("Excel", 14,15)]
+		[SupportByVersionAttribute("Excel", 14,15,16)]
 		public Int32 PivotTableAfterValueChange(NetOffice.ExcelApi.PivotTable targetPivotTable, NetOffice.ExcelApi.Range targetRange)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(targetPivotTable, targetRange);
@@ -226,14 +226,14 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 14, 15
+		/// SupportByVersion Excel 14, 15, 16
 		/// 
 		/// </summary>
 		/// <param name="targetPivotTable">NetOffice.ExcelApi.PivotTable TargetPivotTable</param>
 		/// <param name="valueChangeStart">Int32 ValueChangeStart</param>
 		/// <param name="valueChangeEnd">Int32 ValueChangeEnd</param>
 		/// <param name="cancel">bool Cancel</param>
-		[SupportByVersionAttribute("Excel", 14,15)]
+		[SupportByVersionAttribute("Excel", 14,15,16)]
 		public Int32 PivotTableBeforeAllocateChanges(NetOffice.ExcelApi.PivotTable targetPivotTable, Int32 valueChangeStart, Int32 valueChangeEnd, bool cancel)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(targetPivotTable, valueChangeStart, valueChangeEnd, cancel);
@@ -242,14 +242,14 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 14, 15
+		/// SupportByVersion Excel 14, 15, 16
 		/// 
 		/// </summary>
 		/// <param name="targetPivotTable">NetOffice.ExcelApi.PivotTable TargetPivotTable</param>
 		/// <param name="valueChangeStart">Int32 ValueChangeStart</param>
 		/// <param name="valueChangeEnd">Int32 ValueChangeEnd</param>
 		/// <param name="cancel">bool Cancel</param>
-		[SupportByVersionAttribute("Excel", 14,15)]
+		[SupportByVersionAttribute("Excel", 14,15,16)]
 		public Int32 PivotTableBeforeCommitChanges(NetOffice.ExcelApi.PivotTable targetPivotTable, Int32 valueChangeStart, Int32 valueChangeEnd, bool cancel)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(targetPivotTable, valueChangeStart, valueChangeEnd, cancel);
@@ -258,13 +258,13 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 14, 15
+		/// SupportByVersion Excel 14, 15, 16
 		/// 
 		/// </summary>
 		/// <param name="targetPivotTable">NetOffice.ExcelApi.PivotTable TargetPivotTable</param>
 		/// <param name="valueChangeStart">Int32 ValueChangeStart</param>
 		/// <param name="valueChangeEnd">Int32 ValueChangeEnd</param>
-		[SupportByVersionAttribute("Excel", 14,15)]
+		[SupportByVersionAttribute("Excel", 14,15,16)]
 		public Int32 PivotTableBeforeDiscardChanges(NetOffice.ExcelApi.PivotTable targetPivotTable, Int32 valueChangeStart, Int32 valueChangeEnd)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(targetPivotTable, valueChangeStart, valueChangeEnd);
@@ -273,11 +273,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 14, 15
+		/// SupportByVersion Excel 14, 15, 16
 		/// 
 		/// </summary>
 		/// <param name="target">NetOffice.ExcelApi.PivotTable Target</param>
-		[SupportByVersionAttribute("Excel", 14,15)]
+		[SupportByVersionAttribute("Excel", 14,15,16)]
 		public Int32 PivotTableChangeSync(NetOffice.ExcelApi.PivotTable target)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(target);
@@ -286,10 +286,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 15
+		/// SupportByVersion Excel 15,16
 		/// 
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 15)]
+		[SupportByVersionAttribute("Excel", 15, 16)]
 		public Int32 LensGalleryRenderComplete()
 		{
 			object[] paramsArray = null;
@@ -298,11 +298,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 15
+		/// SupportByVersion Excel 15,16
 		/// 
 		/// </summary>
 		/// <param name="target">NetOffice.ExcelApi.TableObject Target</param>
-		[SupportByVersionAttribute("Excel", 15)]
+		[SupportByVersionAttribute("Excel", 15, 16)]
 		public Int32 TableUpdate(NetOffice.ExcelApi.TableObject target)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(target);
@@ -311,10 +311,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 15
+		/// SupportByVersion Excel 15,16
 		/// 
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 15)]
+		[SupportByVersionAttribute("Excel", 15, 16)]
 		public Int32 BeforeDelete()
 		{
 			object[] paramsArray = null;

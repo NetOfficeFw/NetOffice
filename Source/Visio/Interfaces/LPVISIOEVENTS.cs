@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using NetRuntimeSystem = System;
 using System.Runtime.InteropServices;
 using System.ComponentModel;
@@ -11,9 +11,9 @@ namespace NetOffice.VisioApi
 {
 	///<summary>
 	/// Interface LPVISIOEVENTS 
-	/// SupportByVersion Visio, 11,12,14,15
+	/// SupportByVersion Visio, 11,12,14,15,16
 	///</summary>
-	[SupportByVersionAttribute("Visio", 11,12,14,15)]
+	[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
 	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class LPVISIOEVENTS : COMObject ,IEnumerable<NetOffice.VisioApi.IVEvent>
 	{
@@ -93,10 +93,10 @@ namespace NetOffice.VisioApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion Visio 11, 12, 14, 15
+		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 11,12,14,15)]
+		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
 		public NetOffice.VisioApi.IVApplication Application
 		{
 			get
@@ -109,10 +109,10 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio 11, 12, 14, 15
+		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 11,12,14,15)]
+		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
 		public Int16 ObjectType
 		{
 			get
@@ -124,11 +124,11 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio 11, 12, 14, 15
+		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
 		/// <param name="index">Int16 Index</param>
-		[SupportByVersionAttribute("Visio", 11,12,14,15)]
+		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
 		public NetOffice.VisioApi.IVEvent this[Int16 index]
 		{
@@ -142,10 +142,10 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio 11, 12, 14, 15
+		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 11,12,14,15)]
+		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
 		public Int16 Count
 		{
 			get
@@ -157,11 +157,11 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio 11, 12, 14, 15
+		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
 		/// <param name="objectID">Int32 ObjectID</param>
-		[SupportByVersionAttribute("Visio", 11,12,14,15)]
+		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public NetOffice.VisioApi.IVEvent get_ItemFromID(Int32 objectID)
 		{		
@@ -172,11 +172,11 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio 11, 12, 14, 15
+		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// Alias for get_ItemFromID
 		/// </summary>
 		/// <param name="objectID">Int32 ObjectID</param>
-		[SupportByVersionAttribute("Visio", 11,12,14,15)]
+		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
 		public NetOffice.VisioApi.IVEvent ItemFromID(Int32 objectID)
 		{
 			return get_ItemFromID(objectID);
@@ -187,14 +187,14 @@ namespace NetOffice.VisioApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByVersion Visio 11, 12, 14, 15
+		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// 
 		/// </summary>
 		/// <param name="eventCode">Int16 EventCode</param>
 		/// <param name="action">Int16 Action</param>
 		/// <param name="target">string Target</param>
 		/// <param name="targetArgs">string TargetArgs</param>
-		[SupportByVersionAttribute("Visio", 11,12,14,15)]
+		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
 		public NetOffice.VisioApi.IVEvent Add(Int16 eventCode, Int16 action, string target, string targetArgs)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(eventCode, action, target, targetArgs);
@@ -204,14 +204,14 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio 11, 12, 14, 15
+		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// 
 		/// </summary>
 		/// <param name="eventCode">Int16 EventCode</param>
 		/// <param name="sinkIUnkOrIDisp">object SinkIUnkOrIDisp</param>
 		/// <param name="iIDSink">string IIDSink</param>
 		/// <param name="targetArgs">string TargetArgs</param>
-		[SupportByVersionAttribute("Visio", 11,12,14,15)]
+		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
 		public NetOffice.VisioApi.IVEvent AddAdvise(Int16 eventCode, object sinkIUnkOrIDisp, string iIDSink, string targetArgs)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(eventCode, sinkIUnkOrIDisp, iIDSink, targetArgs);
@@ -225,9 +225,9 @@ namespace NetOffice.VisioApi
        #region IEnumerable<NetOffice.VisioApi.IVEvent> Member
         
         /// <summary>
-		/// SupportByVersionAttribute Visio, 11,12,14,15
+		/// SupportByVersionAttribute Visio, 11,12,14,15,16
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 11,12,14,15)]
+		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
        public IEnumerator<NetOffice.VisioApi.IVEvent> GetEnumerator()  
        {
            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
@@ -240,9 +240,9 @@ namespace NetOffice.VisioApi
 		#region IEnumerable Members
        
 		/// <summary>
-		/// SupportByVersionAttribute Visio, 11,12,14,15
+		/// SupportByVersionAttribute Visio, 11,12,14,15,16
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 11,12,14,15)]
+		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
 			return NetOffice.Utils.GetProxyEnumeratorAsProperty(this);

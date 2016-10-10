@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using NetOffice;
@@ -14,10 +14,10 @@ namespace NetOffice.VisioApi
 
 	///<summary>
 	/// CoClass Validation 
-	/// SupportByVersion Visio, 14,15
+	/// SupportByVersion Visio, 14,15,16
 	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff769427(v=office.14).aspx
 	///</summary>
-	[SupportByVersionAttribute("Visio", 14,15)]
+	[SupportByVersionAttribute("Visio", 14,15,16)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class Validation : IVValidation
 	{
@@ -91,7 +91,7 @@ namespace NetOffice.VisioApi
 		}
 		
 		///<summary>
-        ///creates a new instance of Validation 
+        /// Creates a new instance of Validation 
         ///</summary>		
 		public Validation():base("Visio.Validation")
 		{
@@ -99,7 +99,7 @@ namespace NetOffice.VisioApi
 		}
 		
 		///<summary>
-        ///creates a new instance of Validation
+        /// Creates a new instance of Validation
         ///</summary>
         ///<param name="progId">registered ProgID</param>
 		public Validation(string progId):base(progId)
@@ -112,12 +112,12 @@ namespace NetOffice.VisioApi
 		#region Static CoClass Methods
 
 		/// <summary>
-        /// returns all running Visio.Validation objects from the running object table(ROT)
+        /// Returns all running Visio.Validation objects from the environment/system
         /// </summary>
         /// <returns>an Visio.Validation array</returns>
 		public static NetOffice.VisioApi.Validation[] GetActiveInstances()
 		{		
-			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("Visio","Validation");
+			IDisposableEnumeration proxyList = NetOffice.ProxyService.GetActiveInstances("Visio","Validation");
 			NetRuntimeSystem.Collections.Generic.List<NetOffice.VisioApi.Validation> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.VisioApi.Validation>();
 			foreach(object proxy in proxyList)
 				resultList.Add( new NetOffice.VisioApi.Validation(null, proxy) );
@@ -125,12 +125,12 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-        /// returns a running Visio.Validation object from the running object table(ROT). the method takes the first element from the table
+        /// Returns a running Visio.Validation object from the environment/system.
         /// </summary>
         /// <returns>an Visio.Validation object or null</returns>
 		public static NetOffice.VisioApi.Validation GetActiveInstance()
 		{
-			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Visio","Validation", false);
+			object proxy  = NetOffice.ProxyService.GetActiveInstance("Visio","Validation", false);
 			if(null != proxy)
 				return new NetOffice.VisioApi.Validation(null, proxy);
 			else
@@ -138,13 +138,13 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-        /// returns a running Visio.Validation object from the running object table(ROT).  the method takes the first element from the table
+        /// Returns a running Visio.Validation object from the environment/system. 
         /// </summary>
 	    /// <param name="throwOnError">throw an exception if no object was found</param>
         /// <returns>an Visio.Validation object or null</returns>
 		public static NetOffice.VisioApi.Validation GetActiveInstance(bool throwOnError)
 		{
-			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Visio","Validation", throwOnError);
+			object proxy  = NetOffice.ProxyService.GetActiveInstance("Visio","Validation", throwOnError);
 			if(null != proxy)
 				return new NetOffice.VisioApi.Validation(null, proxy);
 			else
@@ -159,7 +159,7 @@ namespace NetOffice.VisioApi
 	    #region IEventBinding Member
         
 		/// <summary>
-        /// creates active sink helper
+        /// Creates active sink helper
         /// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public void CreateEventBridge()
@@ -176,6 +176,9 @@ namespace NetOffice.VisioApi
  
         }
 
+        /// <summary>
+        /// The instance use currently an event listener 
+        /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public bool EventBridgeInitialized
         {
@@ -184,7 +187,10 @@ namespace NetOffice.VisioApi
                 return (null != _connectPoint);
             }
         }
-        
+
+        /// <summary>
+        ///  The instance has currently one or more event recipients 
+        /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public bool HasEventRecipients()       
         {
@@ -204,6 +210,9 @@ namespace NetOffice.VisioApi
 			return false;
         }
         
+        /// <summary>
+        /// Target methods from its actual event recipients
+        /// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public Delegate[] GetEventRecipients(string eventName)
         {
@@ -223,7 +232,10 @@ namespace NetOffice.VisioApi
             else
                 return new Delegate[0];
         }
-
+       
+        /// <summary>
+        /// Returns the current count of event recipients
+        /// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public int GetCountOfEventRecipients(string eventName)
         {
@@ -242,8 +254,14 @@ namespace NetOffice.VisioApi
             }
             else
                 return 0;
-        }
-
+           }
+        
+        /// <summary>
+        /// Raise an instance event
+        /// </summary>
+        /// <param name="eventName">name of the event without 'Event' at the end</param>
+        /// <param name="paramsArray">custom arguments for the event</param>
+        /// <returns>count of called event recipients</returns>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public int RaiseCustomEvent(string eventName, ref object[] paramsArray)
 		{
@@ -275,6 +293,9 @@ namespace NetOffice.VisioApi
                 return 0;
 		}
 
+        /// <summary>
+        /// Stop listening events for the instance
+        /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public void DisposeEventBridge()
         {

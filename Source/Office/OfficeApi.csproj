@@ -49,6 +49,8 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="Tools\ApplicationIdentifiers.cs" />
+    <Compile Include="Tools\CustomTaskPaneHandler.cs" />
     <Compile Include="Tools\Dialogs\AboutDialog.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -603,12 +605,6 @@
     </COMReference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\NetOffice\NetOffice.csproj">
-      <Project>{65442327-D01F-4ECB-8C39-6D5C7622A80F}</Project>
-      <Name>NetOffice</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="OfficeApi_v4.0.snk" />
   </ItemGroup>
   <ItemGroup>
@@ -651,6 +647,12 @@
   <ItemGroup>
     <EmbeddedResource Include="Tools\Dialogs\RichTextDialog.1031.xml" />
     <EmbeddedResource Include="Tools\Dialogs\RichTextDialog.1033.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\NetOffice\NetOffice.csproj">
+      <Project>{65442327-d01f-4ecb-8c39-6d5c7622a80f}</Project>
+      <Name>NetOffice</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

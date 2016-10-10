@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using NetRuntimeSystem = System;
 using System.Runtime.InteropServices;
 using System.Runtime.CompilerServices;
@@ -10,9 +10,9 @@ namespace NetOffice.OfficeApi
 {
 	///<summary>
 	/// DispatchInterface CustomTaskPaneEvents 
-	/// SupportByVersion Office, 12,14,15
+	/// SupportByVersion Office, 12,14,15,16
 	///</summary>
-	[SupportByVersionAttribute("Office", 12,14,15)]
+	[SupportByVersionAttribute("Office", 12,14,15,16)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class CustomTaskPaneEvents : COMObject
 	{
@@ -96,11 +96,11 @@ namespace NetOffice.OfficeApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByVersion Office 12, 14, 15
+		/// SupportByVersion Office 12, 14, 15, 16
 		/// 
 		/// </summary>
 		/// <param name="customTaskPaneInst">NetOffice.OfficeApi._CustomTaskPane CustomTaskPaneInst</param>
-		[SupportByVersionAttribute("Office", 12,14,15)]
+		[SupportByVersionAttribute("Office", 12,14,15,16)]
 		public void VisibleStateChange(NetOffice.OfficeApi._CustomTaskPane customTaskPaneInst)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(customTaskPaneInst);
@@ -108,11 +108,11 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 12, 14, 15
+		/// SupportByVersion Office 12, 14, 15, 16
 		/// 
 		/// </summary>
 		/// <param name="customTaskPaneInst">NetOffice.OfficeApi._CustomTaskPane CustomTaskPaneInst</param>
-		[SupportByVersionAttribute("Office", 12,14,15)]
+		[SupportByVersionAttribute("Office", 12,14,15,16)]
 		public void DockPositionStateChange(NetOffice.OfficeApi._CustomTaskPane customTaskPaneInst)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(customTaskPaneInst);

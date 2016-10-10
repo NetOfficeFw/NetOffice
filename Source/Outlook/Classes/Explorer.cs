@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using NetOffice;
@@ -32,10 +32,10 @@ namespace NetOffice.OutlookApi
 
 	///<summary>
 	/// CoClass Explorer 
-	/// SupportByVersion Outlook, 9,10,11,12,14,15
+	/// SupportByVersion Outlook, 9,10,11,12,14,15,16
 	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff860356.aspx
 	///</summary>
-	[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15)]
+	[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15,16)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class Explorer : _Explorer,IEventBinding
 	{
@@ -111,7 +111,7 @@ namespace NetOffice.OutlookApi
 		}
 		
 		///<summary>
-        ///creates a new instance of Explorer 
+        /// Creates a new instance of Explorer 
         ///</summary>		
 		public Explorer():base("Outlook.Explorer")
 		{
@@ -119,7 +119,7 @@ namespace NetOffice.OutlookApi
 		}
 		
 		///<summary>
-        ///creates a new instance of Explorer
+        /// Creates a new instance of Explorer
         ///</summary>
         ///<param name="progId">registered ProgID</param>
 		public Explorer(string progId):base(progId)
@@ -132,12 +132,12 @@ namespace NetOffice.OutlookApi
 		#region Static CoClass Methods
 
 		/// <summary>
-        /// returns all running Outlook.Explorer objects from the running object table(ROT)
+        /// Returns all running Outlook.Explorer objects from the environment/system
         /// </summary>
         /// <returns>an Outlook.Explorer array</returns>
 		public static NetOffice.OutlookApi.Explorer[] GetActiveInstances()
 		{		
-			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("Outlook","Explorer");
+			IDisposableEnumeration proxyList = NetOffice.ProxyService.GetActiveInstances("Outlook","Explorer");
 			NetRuntimeSystem.Collections.Generic.List<NetOffice.OutlookApi.Explorer> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.OutlookApi.Explorer>();
 			foreach(object proxy in proxyList)
 				resultList.Add( new NetOffice.OutlookApi.Explorer(null, proxy) );
@@ -145,12 +145,12 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-        /// returns a running Outlook.Explorer object from the running object table(ROT). the method takes the first element from the table
+        /// Returns a running Outlook.Explorer object from the environment/system.
         /// </summary>
         /// <returns>an Outlook.Explorer object or null</returns>
 		public static NetOffice.OutlookApi.Explorer GetActiveInstance()
 		{
-			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Outlook","Explorer", false);
+			object proxy  = NetOffice.ProxyService.GetActiveInstance("Outlook","Explorer", false);
 			if(null != proxy)
 				return new NetOffice.OutlookApi.Explorer(null, proxy);
 			else
@@ -158,13 +158,13 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-        /// returns a running Outlook.Explorer object from the running object table(ROT).  the method takes the first element from the table
+        /// Returns a running Outlook.Explorer object from the environment/system. 
         /// </summary>
 	    /// <param name="throwOnError">throw an exception if no object was found</param>
         /// <returns>an Outlook.Explorer object or null</returns>
 		public static NetOffice.OutlookApi.Explorer GetActiveInstance(bool throwOnError)
 		{
-			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Outlook","Explorer", throwOnError);
+			object proxy  = NetOffice.ProxyService.GetActiveInstance("Outlook","Explorer", throwOnError);
 			if(null != proxy)
 				return new NetOffice.OutlookApi.Explorer(null, proxy);
 			else
@@ -175,15 +175,15 @@ namespace NetOffice.OutlookApi
 		#region Events
 
 		/// <summary>
-		/// SupportByVersion Outlook, 9,10,11,12,14,15
+		/// SupportByVersion Outlook, 9,10,11,12,14,15,16
 		/// </summary>
 		private event Explorer_ActivateEventHandler _ActivateEvent;
 
 		/// <summary>
-		/// SupportByVersion Outlook 9 10 11 12 14 15
+		/// SupportByVersion Outlook 9 10 11 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff867298.aspx </remarks>
-		[SupportByVersion("Outlook", 9,10,11,12,14,15)]
+		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
 		public event Explorer_ActivateEventHandler ActivateEvent
 		{
 			add
@@ -198,15 +198,15 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook, 9,10,11,12,14,15
+		/// SupportByVersion Outlook, 9,10,11,12,14,15,16
 		/// </summary>
 		private event Explorer_FolderSwitchEventHandler _FolderSwitchEvent;
 
 		/// <summary>
-		/// SupportByVersion Outlook 9 10 11 12 14 15
+		/// SupportByVersion Outlook 9 10 11 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff865625.aspx </remarks>
-		[SupportByVersion("Outlook", 9,10,11,12,14,15)]
+		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
 		public event Explorer_FolderSwitchEventHandler FolderSwitchEvent
 		{
 			add
@@ -221,15 +221,15 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook, 9,10,11,12,14,15
+		/// SupportByVersion Outlook, 9,10,11,12,14,15,16
 		/// </summary>
 		private event Explorer_BeforeFolderSwitchEventHandler _BeforeFolderSwitchEvent;
 
 		/// <summary>
-		/// SupportByVersion Outlook 9 10 11 12 14 15
+		/// SupportByVersion Outlook 9 10 11 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff868537.aspx </remarks>
-		[SupportByVersion("Outlook", 9,10,11,12,14,15)]
+		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
 		public event Explorer_BeforeFolderSwitchEventHandler BeforeFolderSwitchEvent
 		{
 			add
@@ -244,15 +244,15 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook, 9,10,11,12,14,15
+		/// SupportByVersion Outlook, 9,10,11,12,14,15,16
 		/// </summary>
 		private event Explorer_ViewSwitchEventHandler _ViewSwitchEvent;
 
 		/// <summary>
-		/// SupportByVersion Outlook 9 10 11 12 14 15
+		/// SupportByVersion Outlook 9 10 11 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff868484.aspx </remarks>
-		[SupportByVersion("Outlook", 9,10,11,12,14,15)]
+		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
 		public event Explorer_ViewSwitchEventHandler ViewSwitchEvent
 		{
 			add
@@ -267,15 +267,15 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook, 9,10,11,12,14,15
+		/// SupportByVersion Outlook, 9,10,11,12,14,15,16
 		/// </summary>
 		private event Explorer_BeforeViewSwitchEventHandler _BeforeViewSwitchEvent;
 
 		/// <summary>
-		/// SupportByVersion Outlook 9 10 11 12 14 15
+		/// SupportByVersion Outlook 9 10 11 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff865397.aspx </remarks>
-		[SupportByVersion("Outlook", 9,10,11,12,14,15)]
+		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
 		public event Explorer_BeforeViewSwitchEventHandler BeforeViewSwitchEvent
 		{
 			add
@@ -290,15 +290,15 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook, 9,10,11,12,14,15
+		/// SupportByVersion Outlook, 9,10,11,12,14,15,16
 		/// </summary>
 		private event Explorer_DeactivateEventHandler _DeactivateEvent;
 
 		/// <summary>
-		/// SupportByVersion Outlook 9 10 11 12 14 15
+		/// SupportByVersion Outlook 9 10 11 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff866945.aspx </remarks>
-		[SupportByVersion("Outlook", 9,10,11,12,14,15)]
+		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
 		public event Explorer_DeactivateEventHandler DeactivateEvent
 		{
 			add
@@ -313,15 +313,15 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook, 9,10,11,12,14,15
+		/// SupportByVersion Outlook, 9,10,11,12,14,15,16
 		/// </summary>
 		private event Explorer_SelectionChangeEventHandler _SelectionChangeEvent;
 
 		/// <summary>
-		/// SupportByVersion Outlook 9 10 11 12 14 15
+		/// SupportByVersion Outlook 9 10 11 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff869813.aspx </remarks>
-		[SupportByVersion("Outlook", 9,10,11,12,14,15)]
+		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
 		public event Explorer_SelectionChangeEventHandler SelectionChangeEvent
 		{
 			add
@@ -336,15 +336,15 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook, 9,10,11,12,14,15
+		/// SupportByVersion Outlook, 9,10,11,12,14,15,16
 		/// </summary>
 		private event Explorer_CloseEventHandler _CloseEvent;
 
 		/// <summary>
-		/// SupportByVersion Outlook 9 10 11 12 14 15
+		/// SupportByVersion Outlook 9 10 11 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff862184.aspx </remarks>
-		[SupportByVersion("Outlook", 9,10,11,12,14,15)]
+		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
 		public event Explorer_CloseEventHandler CloseEvent
 		{
 			add
@@ -359,15 +359,15 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook, 10,11,12,14,15
+		/// SupportByVersion Outlook, 10,11,12,14,15,16
 		/// </summary>
 		private event Explorer_BeforeMaximizeEventHandler _BeforeMaximizeEvent;
 
 		/// <summary>
-		/// SupportByVersion Outlook 10 11 12 14 15
+		/// SupportByVersion Outlook 10 11 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff864743.aspx </remarks>
-		[SupportByVersion("Outlook", 10,11,12,14,15)]
+		[SupportByVersion("Outlook", 10,11,12,14,15,16)]
 		public event Explorer_BeforeMaximizeEventHandler BeforeMaximizeEvent
 		{
 			add
@@ -382,15 +382,15 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook, 10,11,12,14,15
+		/// SupportByVersion Outlook, 10,11,12,14,15,16
 		/// </summary>
 		private event Explorer_BeforeMinimizeEventHandler _BeforeMinimizeEvent;
 
 		/// <summary>
-		/// SupportByVersion Outlook 10 11 12 14 15
+		/// SupportByVersion Outlook 10 11 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff868043.aspx </remarks>
-		[SupportByVersion("Outlook", 10,11,12,14,15)]
+		[SupportByVersion("Outlook", 10,11,12,14,15,16)]
 		public event Explorer_BeforeMinimizeEventHandler BeforeMinimizeEvent
 		{
 			add
@@ -405,15 +405,15 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook, 10,11,12,14,15
+		/// SupportByVersion Outlook, 10,11,12,14,15,16
 		/// </summary>
 		private event Explorer_BeforeMoveEventHandler _BeforeMoveEvent;
 
 		/// <summary>
-		/// SupportByVersion Outlook 10 11 12 14 15
+		/// SupportByVersion Outlook 10 11 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff868815.aspx </remarks>
-		[SupportByVersion("Outlook", 10,11,12,14,15)]
+		[SupportByVersion("Outlook", 10,11,12,14,15,16)]
 		public event Explorer_BeforeMoveEventHandler BeforeMoveEvent
 		{
 			add
@@ -428,15 +428,15 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook, 10,11,12,14,15
+		/// SupportByVersion Outlook, 10,11,12,14,15,16
 		/// </summary>
 		private event Explorer_BeforeSizeEventHandler _BeforeSizeEvent;
 
 		/// <summary>
-		/// SupportByVersion Outlook 10 11 12 14 15
+		/// SupportByVersion Outlook 10 11 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff862995.aspx </remarks>
-		[SupportByVersion("Outlook", 10,11,12,14,15)]
+		[SupportByVersion("Outlook", 10,11,12,14,15,16)]
 		public event Explorer_BeforeSizeEventHandler BeforeSizeEvent
 		{
 			add
@@ -451,15 +451,15 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook, 10,11,12,14,15
+		/// SupportByVersion Outlook, 10,11,12,14,15,16
 		/// </summary>
 		private event Explorer_BeforeItemCopyEventHandler _BeforeItemCopyEvent;
 
 		/// <summary>
-		/// SupportByVersion Outlook 10 11 12 14 15
+		/// SupportByVersion Outlook 10 11 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff860454.aspx </remarks>
-		[SupportByVersion("Outlook", 10,11,12,14,15)]
+		[SupportByVersion("Outlook", 10,11,12,14,15,16)]
 		public event Explorer_BeforeItemCopyEventHandler BeforeItemCopyEvent
 		{
 			add
@@ -474,15 +474,15 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook, 10,11,12,14,15
+		/// SupportByVersion Outlook, 10,11,12,14,15,16
 		/// </summary>
 		private event Explorer_BeforeItemCutEventHandler _BeforeItemCutEvent;
 
 		/// <summary>
-		/// SupportByVersion Outlook 10 11 12 14 15
+		/// SupportByVersion Outlook 10 11 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff867174.aspx </remarks>
-		[SupportByVersion("Outlook", 10,11,12,14,15)]
+		[SupportByVersion("Outlook", 10,11,12,14,15,16)]
 		public event Explorer_BeforeItemCutEventHandler BeforeItemCutEvent
 		{
 			add
@@ -497,15 +497,15 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook, 10,11,12,14,15
+		/// SupportByVersion Outlook, 10,11,12,14,15,16
 		/// </summary>
 		private event Explorer_BeforeItemPasteEventHandler _BeforeItemPasteEvent;
 
 		/// <summary>
-		/// SupportByVersion Outlook 10 11 12 14 15
+		/// SupportByVersion Outlook 10 11 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff868366.aspx </remarks>
-		[SupportByVersion("Outlook", 10,11,12,14,15)]
+		[SupportByVersion("Outlook", 10,11,12,14,15,16)]
 		public event Explorer_BeforeItemPasteEventHandler BeforeItemPasteEvent
 		{
 			add
@@ -520,15 +520,15 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook, 14,15
+		/// SupportByVersion Outlook, 14,15,16
 		/// </summary>
 		private event Explorer_AttachmentSelectionChangeEventHandler _AttachmentSelectionChangeEvent;
 
 		/// <summary>
-		/// SupportByVersion Outlook 14 15
+		/// SupportByVersion Outlook 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff867876.aspx </remarks>
-		[SupportByVersion("Outlook", 14,15)]
+		[SupportByVersion("Outlook", 14,15,16)]
 		public event Explorer_AttachmentSelectionChangeEventHandler AttachmentSelectionChangeEvent
 		{
 			add
@@ -543,15 +543,15 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook, 15
+		/// SupportByVersion Outlook, 15, 16
 		/// </summary>
 		private event Explorer_InlineResponseEventHandler _InlineResponseEvent;
 
 		/// <summary>
-		/// SupportByVersion Outlook 15
+		/// SupportByVersion Outlook 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj229061.aspx </remarks>
-		[SupportByVersion("Outlook", 15)]
+		[SupportByVersion("Outlook", 15, 16)]
 		public event Explorer_InlineResponseEventHandler InlineResponseEvent
 		{
 			add
@@ -566,15 +566,15 @@ namespace NetOffice.OutlookApi
 		}
 
         /// <summary>
-        /// SupportByVersion Outlook, 15
+        /// SupportByVersion Outlook, 15, 16
         /// </summary>
         private event Explorer_InlineResponseCloseEventHandler _InlineResponseCloseEvent;
 
         /// <summary>
-        /// SupportByVersion Outlook 15
+        /// SupportByVersion Outlook 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj229061.aspx </remarks>
-        [SupportByVersion("Outlook", 15)]
+        [SupportByVersion("Outlook", 15, 16)]
         public event Explorer_InlineResponseCloseEventHandler InlineResponseCloseEvent
         {
             add
@@ -593,7 +593,7 @@ namespace NetOffice.OutlookApi
 	    #region IEventBinding Member
         
 		/// <summary>
-        /// creates active sink helper
+        /// Creates active sink helper
         /// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public void CreateEventBridge()
@@ -621,6 +621,9 @@ namespace NetOffice.OutlookApi
 			} 
         }
 
+        /// <summary>
+        /// The instance use currently an event listener 
+        /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public bool EventBridgeInitialized
         {
@@ -629,7 +632,10 @@ namespace NetOffice.OutlookApi
                 return (null != _connectPoint);
             }
         }
-        
+
+        /// <summary>
+        ///  The instance has currently one or more event recipients 
+        /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public bool HasEventRecipients()       
         {
@@ -649,6 +655,9 @@ namespace NetOffice.OutlookApi
 			return false;
         }
         
+        /// <summary>
+        /// Target methods from its actual event recipients
+        /// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public Delegate[] GetEventRecipients(string eventName)
         {
@@ -668,7 +677,10 @@ namespace NetOffice.OutlookApi
             else
                 return new Delegate[0];
         }
-
+       
+        /// <summary>
+        /// Returns the current count of event recipients
+        /// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public int GetCountOfEventRecipients(string eventName)
         {
@@ -687,8 +699,14 @@ namespace NetOffice.OutlookApi
             }
             else
                 return 0;
-        }
-
+           }
+        
+        /// <summary>
+        /// Raise an instance event
+        /// </summary>
+        /// <param name="eventName">name of the event without 'Event' at the end</param>
+        /// <param name="paramsArray">custom arguments for the event</param>
+        /// <returns>count of called event recipients</returns>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public int RaiseCustomEvent(string eventName, ref object[] paramsArray)
 		{
@@ -720,6 +738,9 @@ namespace NetOffice.OutlookApi
                 return 0;
 		}
 
+        /// <summary>
+        /// Stop listening events for the instance
+        /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public void DisposeEventBridge()
         {

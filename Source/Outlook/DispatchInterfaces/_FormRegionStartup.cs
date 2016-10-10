@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using NetRuntimeSystem = System;
 using System.Runtime.InteropServices;
 using System.Runtime.CompilerServices;
@@ -10,9 +10,9 @@ namespace NetOffice.OutlookApi
 {
 	///<summary>
 	/// DispatchInterface _FormRegionStartup 
-	/// SupportByVersion Outlook, 12,14,15
+	/// SupportByVersion Outlook, 12,14,15,16
 	///</summary>
-	[SupportByVersionAttribute("Outlook", 12,14,15)]
+	[SupportByVersionAttribute("Outlook", 12,14,15,16)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class _FormRegionStartup : COMObject
 	{
@@ -96,7 +96,7 @@ namespace NetOffice.OutlookApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByVersion Outlook 12, 14, 15
+		/// SupportByVersion Outlook 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff866042.aspx
 		/// </summary>
 		/// <param name="formRegionName">string FormRegionName</param>
@@ -104,7 +104,7 @@ namespace NetOffice.OutlookApi
 		/// <param name="lCID">Int32 LCID</param>
 		/// <param name="formRegionMode">NetOffice.OutlookApi.Enums.OlFormRegionMode FormRegionMode</param>
 		/// <param name="formRegionSize">NetOffice.OutlookApi.Enums.OlFormRegionSize FormRegionSize</param>
-		[SupportByVersionAttribute("Outlook", 12,14,15)]
+		[SupportByVersionAttribute("Outlook", 12,14,15,16)]
 		public object GetFormRegionStorage(string formRegionName, object item, Int32 lCID, NetOffice.OutlookApi.Enums.OlFormRegionMode formRegionMode, NetOffice.OutlookApi.Enums.OlFormRegionSize formRegionSize)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(formRegionName, item, lCID, formRegionMode, formRegionSize);
@@ -121,11 +121,11 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook 12, 14, 15
+		/// SupportByVersion Outlook 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff869072.aspx
 		/// </summary>
 		/// <param name="formRegion">NetOffice.OutlookApi.FormRegion FormRegion</param>
-		[SupportByVersionAttribute("Outlook", 12,14,15)]
+		[SupportByVersionAttribute("Outlook", 12,14,15,16)]
 		public void BeforeFormRegionShow(NetOffice.OutlookApi.FormRegion formRegion)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(formRegion);
@@ -133,12 +133,12 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook 12, 14, 15
+		/// SupportByVersion Outlook 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff869502.aspx
 		/// </summary>
 		/// <param name="formRegionName">string FormRegionName</param>
 		/// <param name="lCID">Int32 LCID</param>
-		[SupportByVersionAttribute("Outlook", 12,14,15)]
+		[SupportByVersionAttribute("Outlook", 12,14,15,16)]
 		public object GetFormRegionManifest(string formRegionName, Int32 lCID)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(formRegionName, lCID);
@@ -155,13 +155,13 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook 12, 14, 15
+		/// SupportByVersion Outlook 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff868914.aspx
 		/// </summary>
 		/// <param name="formRegionName">string FormRegionName</param>
 		/// <param name="lCID">Int32 LCID</param>
 		/// <param name="icon">NetOffice.OutlookApi.Enums.OlFormRegionIcon Icon</param>
-		[SupportByVersionAttribute("Outlook", 12,14,15)]
+		[SupportByVersionAttribute("Outlook", 12,14,15,16)]
 		public object GetFormRegionIcon(string formRegionName, Int32 lCID, NetOffice.OutlookApi.Enums.OlFormRegionIcon icon)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(formRegionName, lCID, icon);

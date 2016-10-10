@@ -1,0 +1,10 @@
+﻿This Tool Shows You Running Proxies
+
+ - From Running Object Table (ROT)
+ - From Desktop Windows Through IAccessible Interface
+ 
+ Only Excel, Word and PowerPoint supports the
+ IAccessible interface to recieve an Application proxy.
+
+ Moreover Word and PowerPoint must be have
+ a document open because IAccessible comes from document window.

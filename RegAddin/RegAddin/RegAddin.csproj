@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9C4A6ABC-DD1A-47E7-87EA-CCD02529B327}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>RegAddin</RootNamespace>
+    <AssemblyName>RegAddin</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>RegAddin.pfx</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="About.cs" />
+    <Compile Include="Alert\Window.cs" />
+    <Compile Include="Common\AddinRegAnalyzer.cs" />
+    <Compile Include="ConsoleAdapter.cs" />
+    <Compile Include="Command.cs" />
+    <Compile Include="CommandLineSettingsTransformer.cs" />
+    <Compile Include="CommandLineValidator.cs" />
+    <Compile Include="Commands.cs" />
+    <Compile Include="CommandsSyntax.cs" />
+    <Compile Include="CommandSyntax.cs" />
+    <Compile Include="Common\AddinClassInformations.cs" />
+    <Compile Include="Common\AddinClassReflection.cs" />
+    <Compile Include="Common\AssemblyReflection.cs" />
+    <Compile Include="Common\AssemblyResolve.cs" />
+    <Compile Include="Common\AttributeReflection.cs" />
+    <Compile Include="Common\CultureInfoConversion.cs" />
+    <Compile Include="Common\PathUtils.cs" />
+    <Compile Include="Common\Registry.cs" />
+    <Compile Include="Common\TokenConversion.cs" />
+    <Compile Include="Diag\Diagnostics.cs" />
+    <Compile Include="Dispatcher\MethodUtils.cs" />
+    <Compile Include="Dispatcher\RegisterMethod.cs" />
+    <Compile Include="Dispatcher\UnRegisterMethod.cs" />
+    <Compile Include="ErrorCodes.cs" />
+    <Compile Include="ExceptionPresenter.cs" />
+    <Compile Include="HelpPresenter.cs" />
+    <Compile Include="Common\IAppDomainMethod.cs" />
+    <Compile Include="Metrics\AddinMetrics.cs" />
+    <Compile Include="Metrics\ConsolePresenter.cs" />
+    <Compile Include="Metrics\WindowPresenter.cs" />
+    <Compile Include="OperationHandler.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="ProgramHandler.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RegAddinException.cs" />
+    <Compile Include="RegFile\RegFileException.cs" />
+    <Compile Include="RegFile\RegFileOperationHandler.cs" />
+    <Compile Include="RegFile\RegFileOperationHost.cs" />
+    <Compile Include="RegFile\RegFileOperationHostSettings.cs" />
+    <Compile Include="RegFile\RegValueConverter.cs" />
+    <Compile Include="RegFile\ResultCodes.cs" />
+    <Compile Include="RegFile\ResultValidator.cs" />
+    <Compile Include="Register\RegisterException.cs" />
+    <Compile Include="Register\RegisterOperationHost.cs" />
+    <Compile Include="Register\RegisterOperationHandler.cs" />
+    <Compile Include="Register\RegisterOperationHostSettings.cs" />
+    <Compile Include="Register\ResultCodes.cs" />
+    <Compile Include="Register\ResultValidator.cs" />
+    <Compile Include="SingletonSettings.cs" />
+    <Compile Include="Unregister\ResultCodes.cs" />
+    <Compile Include="Unregister\ResultValidator.cs" />
+    <Compile Include="Unregister\UnregisterException.cs" />
+    <Compile Include="Unregister\UnregisterOperationHandler.cs" />
+    <Compile Include="Unregister\UnregisterOperationHost.cs" />
+    <Compile Include="Unregister\UnregisterOperationHostSettings.cs" />
+    <Compile Include="VersionPresenter.cs" />
+    <Compile Include="WarningPresenter.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="RegAddin.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ToDo.txt" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

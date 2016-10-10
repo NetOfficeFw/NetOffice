@@ -164,58 +164,58 @@ namespace NetOffice.Tools
     }
 
     /// <summary>
-    ///  SupportByVersion Office 12, 14, 15
+    ///  SupportByVersion Office 12, 14, 15, 16
     /// </summary>
     public enum PaneDockPosition
     {
         /// <summary>
-        /// SupportByVersion Office 12, 14, 15
+        /// SupportByVersion Office 12, 14, 15, 16
         /// </summary>
         msoCTPDockPositionLeft = 0,
        
         /// <summary>
-        /// SupportByVersion Office 12, 14, 15
+        /// SupportByVersion Office 12, 14, 15, 16
         /// </summary>
         msoCTPDockPositionTop = 1,
         
         /// <summary>
-        /// SupportByVersion Office 12, 14, 15
+        /// SupportByVersion Office 12, 14, 15, 16
         /// </summary>
         msoCTPDockPositionRight = 2,
         
         /// <summary>
-        /// SupportByVersion Office 12, 14, 15
+        /// SupportByVersion Office 12, 14, 15, 16
         /// </summary>
         msoCTPDockPositionBottom = 3,
         
         /// <summary>
-        /// SupportByVersion Office 12, 14, 15
+        /// SupportByVersion Office 12, 14, 15, 16
         /// </summary>
         msoCTPDockPositionFloating = 4
     }
     
     /// <summary>
-    /// SupportByVersion Office 12, 14, 15
+    /// SupportByVersion Office 12, 14, 15, 16
     /// </summary>
     public enum PaneDockPositionRestrict
     {
         /// <summary>
-        /// SupportByVersion Office 12, 14, 15
+        /// SupportByVersion Office 12, 14, 15, 16
         /// </summary>
         msoCTPDockPositionRestrictNone = 0,
        
         /// <summary>
-        /// SupportByVersion Office 12, 14, 15
+        /// SupportByVersion Office 12, 14, 15, 16
         /// </summary>
         msoCTPDockPositionRestrictNoChange = 1,
         
         /// <summary>
-        /// SupportByVersion Office 12, 14, 15
+        /// SupportByVersion Office 12, 14, 15, 16
         /// </summary>
         msoCTPDockPositionRestrictNoHorizontal = 2,
        
         /// <summary>
-        /// SupportByVersion Office 12, 14, 15
+        /// SupportByVersion Office 12, 14, 15, 16
         /// </summary>
         msoCTPDockPositionRestrictNoVertical = 3
     }

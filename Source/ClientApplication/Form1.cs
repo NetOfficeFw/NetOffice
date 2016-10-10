@@ -9,9 +9,11 @@ using stdole;
 using NetOffice;
 using Excel = NetOffice.ExcelApi;
 using Office = NetOffice.OfficeApi;
+using Point = NetOffice.PowerPointApi;
 using VBIDE = NetOffice.VBIDEApi;
 using NOTools = NetOffice.OfficeApi.Tools;
 
+  
 namespace ClientApplication
 {
     public class Form1 : System.Windows.Forms.Form
@@ -24,27 +26,24 @@ namespace ClientApplication
         public Form1()
         {
             InitializeComponent();
+            Point.Application application = new NetOffice.PowerPointApi.Application();
+            application.Visible = NetOffice.OfficeApi.Enums.MsoTriState.msoTrue;
+
+            NetOffice.PowerPointApi.Tools.Utils.CommonUtils utils = new Point.Tools.Utils.CommonUtils(application);
+            string hwnd1 = utils.Application.HWND.ToString();
+            string hwnd2 = application.HWND.ToString();
+            Console.WriteLine(hwnd1);
+            Console.WriteLine(hwnd2);
+
+            //application.Quit();
+            //application.Dispose();
         }
 
         private void Form1_Shown(object sender, EventArgs e)
-        {
-            Excel.Application app = null;
+        {          
             try
             {
-                Settings.Default.PerformanceTrace.Alert += new PerformanceTrace.PerformanceAlertEventHandler(PerformanceTrace_Alert);
-                Settings.Default.PerformanceTrace["ExcelApi"].Enabled = true;
-                Settings.Default.PerformanceTrace["ExcelApi"].IntervalMS = 0;
-
-                //Settings.Default.PerformanceTrace["ExcelApi", "Application", "DisplayAlerts"].Enabled = true;
-                //Settings.Default.PerformanceTrace["ExcelApi", "Application", "DisplayAlerts"].IntervalMS = 0;
-
-                app = new Excel.Application();
-                NOTools.Utils.CommonUtils utils = new NOTools.Utils.CommonUtils(app, typeof(Form1).Assembly);
-                app.DisplayAlerts = false;
-             
-                utils.Dialog.SuppressOnAutomation = false;
-                utils.Dialog.SuppressOnHide = false;
-                utils.Dialog.ShowDiagnostics(true);
+                //new MultiRegisterClient().Test();
             }
             catch (Exception exception)
             {
@@ -52,15 +51,8 @@ namespace ClientApplication
             }
             finally
             {
-                app.Quit();
-                app.Dispose();
                 Close();
             }
-        }
-
-        private void PerformanceTrace_Alert(PerformanceTrace sender, PerformanceTrace.PerformanceAlertEventArgs e)
-        {
-            Console.WriteLine("Call {4} => {0}:{1} passed in {2} milliseconds ({3} Ticks)", e.EntityName, e.MethodName, e.TimeElapsedMS, e.Ticks, e.CallType);
         }
 
         /// <summary>

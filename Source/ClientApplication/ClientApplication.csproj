@@ -56,6 +56,10 @@
       <Project>{CBF10BD9-CFC5-4F6B-9BC1-374BC7C6DB80}</Project>
       <Name>ADODBApi</Name>
     </ProjectReference>
+    <ProjectReference Include="..\ClientAddin\ClientAddin.csproj">
+      <Project>{bb59318e-607a-4e20-b659-e6a7dac76d1e}</Project>
+      <Name>ClientAddin</Name>
+    </ProjectReference>
     <ProjectReference Include="..\DAO\DAOApi.csproj">
       <Project>{9F9E1AA6-516C-4121-87A9-241C80528866}</Project>
       <Name>DAOApi</Name>
@@ -118,9 +122,11 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ExcelClient.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="MultiRegisterClient.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

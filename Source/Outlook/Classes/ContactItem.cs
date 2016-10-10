@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using NetOffice;
@@ -40,10 +40,10 @@ namespace NetOffice.OutlookApi
 
 	///<summary>
 	/// CoClass ContactItem 
-	/// SupportByVersion Outlook, 9,10,11,12,14,15
+	/// SupportByVersion Outlook, 9,10,11,12,14,15,16
 	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff867603.aspx
 	///</summary>
-	[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15)]
+	[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15,16)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class ContactItem : _ContactItem,IEventBinding
 	{
@@ -119,7 +119,7 @@ namespace NetOffice.OutlookApi
 		}
 		
 		///<summary>
-        ///creates a new instance of ContactItem 
+        /// Creates a new instance of ContactItem 
         ///</summary>		
 		public ContactItem():base("Outlook.ContactItem")
 		{
@@ -127,7 +127,7 @@ namespace NetOffice.OutlookApi
 		}
 		
 		///<summary>
-        ///creates a new instance of ContactItem
+        /// Creates a new instance of ContactItem
         ///</summary>
         ///<param name="progId">registered ProgID</param>
 		public ContactItem(string progId):base(progId)
@@ -140,12 +140,12 @@ namespace NetOffice.OutlookApi
 		#region Static CoClass Methods
 
 		/// <summary>
-        /// returns all running Outlook.ContactItem objects from the running object table(ROT)
+        /// Returns all running Outlook.ContactItem objects from the environment/system
         /// </summary>
         /// <returns>an Outlook.ContactItem array</returns>
 		public static NetOffice.OutlookApi.ContactItem[] GetActiveInstances()
 		{		
-			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("Outlook","ContactItem");
+			IDisposableEnumeration proxyList = NetOffice.ProxyService.GetActiveInstances("Outlook","ContactItem");
 			NetRuntimeSystem.Collections.Generic.List<NetOffice.OutlookApi.ContactItem> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.OutlookApi.ContactItem>();
 			foreach(object proxy in proxyList)
 				resultList.Add( new NetOffice.OutlookApi.ContactItem(null, proxy) );
@@ -153,12 +153,12 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-        /// returns a running Outlook.ContactItem object from the running object table(ROT). the method takes the first element from the table
+        /// Returns a running Outlook.ContactItem object from the environment/system.
         /// </summary>
         /// <returns>an Outlook.ContactItem object or null</returns>
 		public static NetOffice.OutlookApi.ContactItem GetActiveInstance()
 		{
-			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Outlook","ContactItem", false);
+			object proxy  = NetOffice.ProxyService.GetActiveInstance("Outlook","ContactItem", false);
 			if(null != proxy)
 				return new NetOffice.OutlookApi.ContactItem(null, proxy);
 			else
@@ -166,13 +166,13 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-        /// returns a running Outlook.ContactItem object from the running object table(ROT).  the method takes the first element from the table
+        /// Returns a running Outlook.ContactItem object from the environment/system. 
         /// </summary>
 	    /// <param name="throwOnError">throw an exception if no object was found</param>
         /// <returns>an Outlook.ContactItem object or null</returns>
 		public static NetOffice.OutlookApi.ContactItem GetActiveInstance(bool throwOnError)
 		{
-			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Outlook","ContactItem", throwOnError);
+			object proxy  = NetOffice.ProxyService.GetActiveInstance("Outlook","ContactItem", throwOnError);
 			if(null != proxy)
 				return new NetOffice.OutlookApi.ContactItem(null, proxy);
 			else
@@ -183,15 +183,15 @@ namespace NetOffice.OutlookApi
 		#region Events
 
 		/// <summary>
-		/// SupportByVersion Outlook, 9,10,11,12,14,15
+		/// SupportByVersion Outlook, 9,10,11,12,14,15,16
 		/// </summary>
 		private event ContactItem_OpenEventHandler _OpenEvent;
 
 		/// <summary>
-		/// SupportByVersion Outlook 9 10 11 12 14 15
+		/// SupportByVersion Outlook 9 10 11 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff867143.aspx </remarks>
-		[SupportByVersion("Outlook", 9,10,11,12,14,15)]
+		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
 		public event ContactItem_OpenEventHandler OpenEvent
 		{
 			add
@@ -206,15 +206,15 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook, 9,10,11,12,14,15
+		/// SupportByVersion Outlook, 9,10,11,12,14,15,16
 		/// </summary>
 		private event ContactItem_CustomActionEventHandler _CustomActionEvent;
 
 		/// <summary>
-		/// SupportByVersion Outlook 9 10 11 12 14 15
+		/// SupportByVersion Outlook 9 10 11 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff869585.aspx </remarks>
-		[SupportByVersion("Outlook", 9,10,11,12,14,15)]
+		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
 		public event ContactItem_CustomActionEventHandler CustomActionEvent
 		{
 			add
@@ -229,15 +229,15 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook, 9,10,11,12,14,15
+		/// SupportByVersion Outlook, 9,10,11,12,14,15,16
 		/// </summary>
 		private event ContactItem_CustomPropertyChangeEventHandler _CustomPropertyChangeEvent;
 
 		/// <summary>
-		/// SupportByVersion Outlook 9 10 11 12 14 15
+		/// SupportByVersion Outlook 9 10 11 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff864389.aspx </remarks>
-		[SupportByVersion("Outlook", 9,10,11,12,14,15)]
+		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
 		public event ContactItem_CustomPropertyChangeEventHandler CustomPropertyChangeEvent
 		{
 			add
@@ -252,15 +252,15 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook, 9,10,11,12,14,15
+		/// SupportByVersion Outlook, 9,10,11,12,14,15,16
 		/// </summary>
 		private event ContactItem_ForwardEventHandler _ForwardEvent;
 
 		/// <summary>
-		/// SupportByVersion Outlook 9 10 11 12 14 15
+		/// SupportByVersion Outlook 9 10 11 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff869224.aspx </remarks>
-		[SupportByVersion("Outlook", 9,10,11,12,14,15)]
+		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
 		public event ContactItem_ForwardEventHandler ForwardEvent
 		{
 			add
@@ -275,15 +275,15 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook, 9,10,11,12,14,15
+		/// SupportByVersion Outlook, 9,10,11,12,14,15,16
 		/// </summary>
 		private event ContactItem_CloseEventHandler _CloseEvent;
 
 		/// <summary>
-		/// SupportByVersion Outlook 9 10 11 12 14 15
+		/// SupportByVersion Outlook 9 10 11 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff868853.aspx </remarks>
-		[SupportByVersion("Outlook", 9,10,11,12,14,15)]
+		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
 		public event ContactItem_CloseEventHandler CloseEvent
 		{
 			add
@@ -298,15 +298,15 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook, 9,10,11,12,14,15
+		/// SupportByVersion Outlook, 9,10,11,12,14,15,16
 		/// </summary>
 		private event ContactItem_PropertyChangeEventHandler _PropertyChangeEvent;
 
 		/// <summary>
-		/// SupportByVersion Outlook 9 10 11 12 14 15
+		/// SupportByVersion Outlook 9 10 11 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff864009.aspx </remarks>
-		[SupportByVersion("Outlook", 9,10,11,12,14,15)]
+		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
 		public event ContactItem_PropertyChangeEventHandler PropertyChangeEvent
 		{
 			add
@@ -321,15 +321,15 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook, 9,10,11,12,14,15
+		/// SupportByVersion Outlook, 9,10,11,12,14,15,16
 		/// </summary>
 		private event ContactItem_ReadEventHandler _ReadEvent;
 
 		/// <summary>
-		/// SupportByVersion Outlook 9 10 11 12 14 15
+		/// SupportByVersion Outlook 9 10 11 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff864989.aspx </remarks>
-		[SupportByVersion("Outlook", 9,10,11,12,14,15)]
+		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
 		public event ContactItem_ReadEventHandler ReadEvent
 		{
 			add
@@ -344,15 +344,15 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook, 9,10,11,12,14,15
+		/// SupportByVersion Outlook, 9,10,11,12,14,15,16
 		/// </summary>
 		private event ContactItem_ReplyEventHandler _ReplyEvent;
 
 		/// <summary>
-		/// SupportByVersion Outlook 9 10 11 12 14 15
+		/// SupportByVersion Outlook 9 10 11 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff860448.aspx </remarks>
-		[SupportByVersion("Outlook", 9,10,11,12,14,15)]
+		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
 		public event ContactItem_ReplyEventHandler ReplyEvent
 		{
 			add
@@ -367,15 +367,15 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook, 9,10,11,12,14,15
+		/// SupportByVersion Outlook, 9,10,11,12,14,15,16
 		/// </summary>
 		private event ContactItem_ReplyAllEventHandler _ReplyAllEvent;
 
 		/// <summary>
-		/// SupportByVersion Outlook 9 10 11 12 14 15
+		/// SupportByVersion Outlook 9 10 11 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff863599.aspx </remarks>
-		[SupportByVersion("Outlook", 9,10,11,12,14,15)]
+		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
 		public event ContactItem_ReplyAllEventHandler ReplyAllEvent
 		{
 			add
@@ -390,15 +390,15 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook, 9,10,11,12,14,15
+		/// SupportByVersion Outlook, 9,10,11,12,14,15,16
 		/// </summary>
 		private event ContactItem_SendEventHandler _SendEvent;
 
 		/// <summary>
-		/// SupportByVersion Outlook 9 10 11 12 14 15
+		/// SupportByVersion Outlook 9 10 11 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff862690.aspx </remarks>
-		[SupportByVersion("Outlook", 9,10,11,12,14,15)]
+		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
 		public event ContactItem_SendEventHandler SendEvent
 		{
 			add
@@ -413,15 +413,15 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook, 9,10,11,12,14,15
+		/// SupportByVersion Outlook, 9,10,11,12,14,15,16
 		/// </summary>
 		private event ContactItem_WriteEventHandler _WriteEvent;
 
 		/// <summary>
-		/// SupportByVersion Outlook 9 10 11 12 14 15
+		/// SupportByVersion Outlook 9 10 11 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff867819.aspx </remarks>
-		[SupportByVersion("Outlook", 9,10,11,12,14,15)]
+		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
 		public event ContactItem_WriteEventHandler WriteEvent
 		{
 			add
@@ -436,15 +436,15 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook, 9,10,11,12,14,15
+		/// SupportByVersion Outlook, 9,10,11,12,14,15,16
 		/// </summary>
 		private event ContactItem_BeforeCheckNamesEventHandler _BeforeCheckNamesEvent;
 
 		/// <summary>
-		/// SupportByVersion Outlook 9 10 11 12 14 15
+		/// SupportByVersion Outlook 9 10 11 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff866923.aspx </remarks>
-		[SupportByVersion("Outlook", 9,10,11,12,14,15)]
+		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
 		public event ContactItem_BeforeCheckNamesEventHandler BeforeCheckNamesEvent
 		{
 			add
@@ -459,15 +459,15 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook, 9,10,11,12,14,15
+		/// SupportByVersion Outlook, 9,10,11,12,14,15,16
 		/// </summary>
 		private event ContactItem_AttachmentAddEventHandler _AttachmentAddEvent;
 
 		/// <summary>
-		/// SupportByVersion Outlook 9 10 11 12 14 15
+		/// SupportByVersion Outlook 9 10 11 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff869827.aspx </remarks>
-		[SupportByVersion("Outlook", 9,10,11,12,14,15)]
+		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
 		public event ContactItem_AttachmentAddEventHandler AttachmentAddEvent
 		{
 			add
@@ -482,15 +482,15 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook, 9,10,11,12,14,15
+		/// SupportByVersion Outlook, 9,10,11,12,14,15,16
 		/// </summary>
 		private event ContactItem_AttachmentReadEventHandler _AttachmentReadEvent;
 
 		/// <summary>
-		/// SupportByVersion Outlook 9 10 11 12 14 15
+		/// SupportByVersion Outlook 9 10 11 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff865586.aspx </remarks>
-		[SupportByVersion("Outlook", 9,10,11,12,14,15)]
+		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
 		public event ContactItem_AttachmentReadEventHandler AttachmentReadEvent
 		{
 			add
@@ -505,15 +505,15 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook, 9,10,11,12,14,15
+		/// SupportByVersion Outlook, 9,10,11,12,14,15,16
 		/// </summary>
 		private event ContactItem_BeforeAttachmentSaveEventHandler _BeforeAttachmentSaveEvent;
 
 		/// <summary>
-		/// SupportByVersion Outlook 9 10 11 12 14 15
+		/// SupportByVersion Outlook 9 10 11 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff868975.aspx </remarks>
-		[SupportByVersion("Outlook", 9,10,11,12,14,15)]
+		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
 		public event ContactItem_BeforeAttachmentSaveEventHandler BeforeAttachmentSaveEvent
 		{
 			add
@@ -528,15 +528,15 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook, 10,11,12,14,15
+		/// SupportByVersion Outlook, 10,11,12,14,15,16
 		/// </summary>
 		private event ContactItem_BeforeDeleteEventHandler _BeforeDeleteEvent;
 
 		/// <summary>
-		/// SupportByVersion Outlook 10 11 12 14 15
+		/// SupportByVersion Outlook 10 11 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff868306.aspx </remarks>
-		[SupportByVersion("Outlook", 10,11,12,14,15)]
+		[SupportByVersion("Outlook", 10,11,12,14,15,16)]
 		public event ContactItem_BeforeDeleteEventHandler BeforeDeleteEvent
 		{
 			add
@@ -551,15 +551,15 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook, 12,14,15
+		/// SupportByVersion Outlook, 12,14,15,16
 		/// </summary>
 		private event ContactItem_AttachmentRemoveEventHandler _AttachmentRemoveEvent;
 
 		/// <summary>
-		/// SupportByVersion Outlook 12 14 15
+		/// SupportByVersion Outlook 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff869649.aspx </remarks>
-		[SupportByVersion("Outlook", 12,14,15)]
+		[SupportByVersion("Outlook", 12,14,15,16)]
 		public event ContactItem_AttachmentRemoveEventHandler AttachmentRemoveEvent
 		{
 			add
@@ -574,15 +574,15 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook, 12,14,15
+		/// SupportByVersion Outlook, 12,14,15,16
 		/// </summary>
 		private event ContactItem_BeforeAttachmentAddEventHandler _BeforeAttachmentAddEvent;
 
 		/// <summary>
-		/// SupportByVersion Outlook 12 14 15
+		/// SupportByVersion Outlook 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff869227.aspx </remarks>
-		[SupportByVersion("Outlook", 12,14,15)]
+		[SupportByVersion("Outlook", 12,14,15,16)]
 		public event ContactItem_BeforeAttachmentAddEventHandler BeforeAttachmentAddEvent
 		{
 			add
@@ -597,15 +597,15 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook, 12,14,15
+		/// SupportByVersion Outlook, 12,14,15,16
 		/// </summary>
 		private event ContactItem_BeforeAttachmentPreviewEventHandler _BeforeAttachmentPreviewEvent;
 
 		/// <summary>
-		/// SupportByVersion Outlook 12 14 15
+		/// SupportByVersion Outlook 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff866588.aspx </remarks>
-		[SupportByVersion("Outlook", 12,14,15)]
+		[SupportByVersion("Outlook", 12,14,15,16)]
 		public event ContactItem_BeforeAttachmentPreviewEventHandler BeforeAttachmentPreviewEvent
 		{
 			add
@@ -620,15 +620,15 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook, 12,14,15
+		/// SupportByVersion Outlook, 12,14,15,16
 		/// </summary>
 		private event ContactItem_BeforeAttachmentReadEventHandler _BeforeAttachmentReadEvent;
 
 		/// <summary>
-		/// SupportByVersion Outlook 12 14 15
+		/// SupportByVersion Outlook 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff868776.aspx </remarks>
-		[SupportByVersion("Outlook", 12,14,15)]
+		[SupportByVersion("Outlook", 12,14,15,16)]
 		public event ContactItem_BeforeAttachmentReadEventHandler BeforeAttachmentReadEvent
 		{
 			add
@@ -643,15 +643,15 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook, 12,14,15
+		/// SupportByVersion Outlook, 12,14,15,16
 		/// </summary>
 		private event ContactItem_BeforeAttachmentWriteToTempFileEventHandler _BeforeAttachmentWriteToTempFileEvent;
 
 		/// <summary>
-		/// SupportByVersion Outlook 12 14 15
+		/// SupportByVersion Outlook 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff869347.aspx </remarks>
-		[SupportByVersion("Outlook", 12,14,15)]
+		[SupportByVersion("Outlook", 12,14,15,16)]
 		public event ContactItem_BeforeAttachmentWriteToTempFileEventHandler BeforeAttachmentWriteToTempFileEvent
 		{
 			add
@@ -666,15 +666,15 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook, 12,14,15
+		/// SupportByVersion Outlook, 12,14,15,16
 		/// </summary>
 		private event ContactItem_UnloadEventHandler _UnloadEvent;
 
 		/// <summary>
-		/// SupportByVersion Outlook 12 14 15
+		/// SupportByVersion Outlook 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff861599.aspx </remarks>
-		[SupportByVersion("Outlook", 12,14,15)]
+		[SupportByVersion("Outlook", 12,14,15,16)]
 		public event ContactItem_UnloadEventHandler UnloadEvent
 		{
 			add
@@ -689,15 +689,15 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook, 12,14,15
+		/// SupportByVersion Outlook, 12,14,15,16
 		/// </summary>
 		private event ContactItem_BeforeAutoSaveEventHandler _BeforeAutoSaveEvent;
 
 		/// <summary>
-		/// SupportByVersion Outlook 12 14 15
+		/// SupportByVersion Outlook 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff869089.aspx </remarks>
-		[SupportByVersion("Outlook", 12,14,15)]
+		[SupportByVersion("Outlook", 12,14,15,16)]
 		public event ContactItem_BeforeAutoSaveEventHandler BeforeAutoSaveEvent
 		{
 			add
@@ -712,15 +712,15 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook, 14,15
+		/// SupportByVersion Outlook, 14,15,16
 		/// </summary>
 		private event ContactItem_BeforeReadEventHandler _BeforeReadEvent;
 
 		/// <summary>
-		/// SupportByVersion Outlook 14 15
+		/// SupportByVersion Outlook 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff869176.aspx </remarks>
-		[SupportByVersion("Outlook", 14,15)]
+		[SupportByVersion("Outlook", 14,15,16)]
 		public event ContactItem_BeforeReadEventHandler BeforeReadEvent
 		{
 			add
@@ -735,15 +735,15 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook, 14,15
+		/// SupportByVersion Outlook, 14,15,16
 		/// </summary>
 		private event ContactItem_AfterWriteEventHandler _AfterWriteEvent;
 
 		/// <summary>
-		/// SupportByVersion Outlook 14 15
+		/// SupportByVersion Outlook 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff869360.aspx </remarks>
-		[SupportByVersion("Outlook", 14,15)]
+		[SupportByVersion("Outlook", 14,15,16)]
 		public event ContactItem_AfterWriteEventHandler AfterWriteEvent
 		{
 			add
@@ -758,15 +758,15 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook, 15
+		/// SupportByVersion Outlook, 15, 16
 		/// </summary>
 		private event ContactItem_ReadCompleteEventHandler _ReadCompleteEvent;
 
 		/// <summary>
-		/// SupportByVersion Outlook 15
+		/// SupportByVersion Outlook 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj227683.aspx </remarks>
-		[SupportByVersion("Outlook", 15)]
+		[SupportByVersion("Outlook", 15, 16)]
 		public event ContactItem_ReadCompleteEventHandler ReadCompleteEvent
 		{
 			add
@@ -785,7 +785,7 @@ namespace NetOffice.OutlookApi
 	    #region IEventBinding Member
         
 		/// <summary>
-        /// creates active sink helper
+        /// Creates active sink helper
         /// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public void CreateEventBridge()
@@ -813,6 +813,9 @@ namespace NetOffice.OutlookApi
 			} 
         }
 
+        /// <summary>
+        /// The instance use currently an event listener 
+        /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public bool EventBridgeInitialized
         {
@@ -821,7 +824,10 @@ namespace NetOffice.OutlookApi
                 return (null != _connectPoint);
             }
         }
-        
+
+        /// <summary>
+        ///  The instance has currently one or more event recipients 
+        /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public bool HasEventRecipients()       
         {
@@ -841,6 +847,9 @@ namespace NetOffice.OutlookApi
 			return false;
         }
         
+        /// <summary>
+        /// Target methods from its actual event recipients
+        /// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public Delegate[] GetEventRecipients(string eventName)
         {
@@ -860,7 +869,10 @@ namespace NetOffice.OutlookApi
             else
                 return new Delegate[0];
         }
-
+       
+        /// <summary>
+        /// Returns the current count of event recipients
+        /// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public int GetCountOfEventRecipients(string eventName)
         {
@@ -879,8 +891,14 @@ namespace NetOffice.OutlookApi
             }
             else
                 return 0;
-        }
-
+           }
+        
+        /// <summary>
+        /// Raise an instance event
+        /// </summary>
+        /// <param name="eventName">name of the event without 'Event' at the end</param>
+        /// <param name="paramsArray">custom arguments for the event</param>
+        /// <returns>count of called event recipients</returns>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public int RaiseCustomEvent(string eventName, ref object[] paramsArray)
 		{
@@ -912,6 +930,9 @@ namespace NetOffice.OutlookApi
                 return 0;
 		}
 
+        /// <summary>
+        /// Stop listening events for the instance
+        /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public void DisposeEventBridge()
         {

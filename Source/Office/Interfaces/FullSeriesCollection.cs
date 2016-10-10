@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using NetRuntimeSystem = System;
 using System.Runtime.InteropServices;
 using System.ComponentModel;
@@ -11,9 +11,9 @@ namespace NetOffice.OfficeApi
 {
 	///<summary>
 	/// Interface FullSeriesCollection 
-	/// SupportByVersion Office, 15
+	/// SupportByVersion Office, 15, 16
 	///</summary>
-	[SupportByVersionAttribute("Office", 15)]
+	[SupportByVersionAttribute("Office", 15, 16)]
 	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class FullSeriesCollection : COMObject ,IEnumerable<NetOffice.OfficeApi.IMsoSeries>
 	{
@@ -93,11 +93,11 @@ namespace NetOffice.OfficeApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion Office 15
+		/// SupportByVersion Office 15,16
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("Office", 15)]
+		[SupportByVersionAttribute("Office", 15, 16)]
 		public object Parent
 		{
 			get
@@ -110,10 +110,10 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 15
+		/// SupportByVersion Office 15,16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Office", 15)]
+		[SupportByVersionAttribute("Office", 15, 16)]
 		public Int32 Count
 		{
 			get
@@ -125,11 +125,11 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 15
+		/// SupportByVersion Office 15,16
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("Office", 15)]
+		[SupportByVersionAttribute("Office", 15, 16)]
 		public object Application
 		{
 			get
@@ -142,10 +142,10 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 15
+		/// SupportByVersion Office 15,16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Office", 15)]
+		[SupportByVersionAttribute("Office", 15, 16)]
 		public Int32 Creator
 		{
 			get
@@ -157,11 +157,11 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 15
+		/// SupportByVersion Office 15,16
 		/// Get
 		/// </summary>
 		/// <param name="index">object Index</param>
-		[SupportByVersionAttribute("Office", 15)]
+		[SupportByVersionAttribute("Office", 15, 16)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
 		public NetOffice.OfficeApi.IMsoSeries this[object index]
 		{
@@ -183,9 +183,9 @@ namespace NetOffice.OfficeApi
        #region IEnumerable<NetOffice.OfficeApi.IMsoSeries> Member
         
         /// <summary>
-		/// SupportByVersionAttribute Office, 15
+		/// SupportByVersionAttribute Office, 15, 16
 		/// </summary>
-		[SupportByVersionAttribute("Office", 15)]
+		[SupportByVersionAttribute("Office", 15, 16)]
        public IEnumerator<NetOffice.OfficeApi.IMsoSeries> GetEnumerator()  
        {
            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
@@ -198,9 +198,9 @@ namespace NetOffice.OfficeApi
 		#region IEnumerable Members
        
 		/// <summary>
-		/// SupportByVersionAttribute Office, 15
+		/// SupportByVersionAttribute Office, 15, 16
 		/// </summary>
-		[SupportByVersionAttribute("Office", 15)]
+		[SupportByVersionAttribute("Office", 15, 16)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
 			return NetOffice.Utils.GetProxyEnumeratorAsMethod(this);
