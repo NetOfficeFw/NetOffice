@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using NetOffice;
@@ -40,9 +40,9 @@ namespace NetOffice.OutlookApi
 
 	///<summary>
 	/// CoClass MobileItem 
-	/// SupportByVersion Outlook, 14,15
+	/// SupportByVersion Outlook, 14,15,16
 	///</summary>
-	[SupportByVersionAttribute("Outlook", 14,15)]
+	[SupportByVersionAttribute("Outlook", 14,15,16)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class MobileItem : _MobileItem,IEventBinding
 	{
@@ -117,7 +117,7 @@ namespace NetOffice.OutlookApi
 		}
 		
 		///<summary>
-        ///creates a new instance of MobileItem 
+        /// Creates a new instance of MobileItem 
         ///</summary>		
 		public MobileItem():base("Outlook.MobileItem")
 		{
@@ -125,7 +125,7 @@ namespace NetOffice.OutlookApi
 		}
 		
 		///<summary>
-        ///creates a new instance of MobileItem
+        /// Creates a new instance of MobileItem
         ///</summary>
         ///<param name="progId">registered ProgID</param>
 		public MobileItem(string progId):base(progId)
@@ -138,12 +138,12 @@ namespace NetOffice.OutlookApi
 		#region Static CoClass Methods
 
 		/// <summary>
-        /// returns all running Outlook.MobileItem objects from the running object table(ROT)
+        /// Returns all running Outlook.MobileItem objects from the environment/system
         /// </summary>
         /// <returns>an Outlook.MobileItem array</returns>
 		public static NetOffice.OutlookApi.MobileItem[] GetActiveInstances()
 		{		
-			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("Outlook","MobileItem");
+			IDisposableEnumeration proxyList = NetOffice.ProxyService.GetActiveInstances("Outlook","MobileItem");
 			NetRuntimeSystem.Collections.Generic.List<NetOffice.OutlookApi.MobileItem> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.OutlookApi.MobileItem>();
 			foreach(object proxy in proxyList)
 				resultList.Add( new NetOffice.OutlookApi.MobileItem(null, proxy) );
@@ -151,12 +151,12 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-        /// returns a running Outlook.MobileItem object from the running object table(ROT). the method takes the first element from the table
+        /// Returns a running Outlook.MobileItem object from the environment/system.
         /// </summary>
         /// <returns>an Outlook.MobileItem object or null</returns>
 		public static NetOffice.OutlookApi.MobileItem GetActiveInstance()
 		{
-			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Outlook","MobileItem", false);
+			object proxy  = NetOffice.ProxyService.GetActiveInstance("Outlook","MobileItem", false);
 			if(null != proxy)
 				return new NetOffice.OutlookApi.MobileItem(null, proxy);
 			else
@@ -164,13 +164,13 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-        /// returns a running Outlook.MobileItem object from the running object table(ROT).  the method takes the first element from the table
+        /// Returns a running Outlook.MobileItem object from the environment/system. 
         /// </summary>
 	    /// <param name="throwOnError">throw an exception if no object was found</param>
         /// <returns>an Outlook.MobileItem object or null</returns>
 		public static NetOffice.OutlookApi.MobileItem GetActiveInstance(bool throwOnError)
 		{
-			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Outlook","MobileItem", throwOnError);
+			object proxy  = NetOffice.ProxyService.GetActiveInstance("Outlook","MobileItem", throwOnError);
 			if(null != proxy)
 				return new NetOffice.OutlookApi.MobileItem(null, proxy);
 			else
@@ -181,14 +181,14 @@ namespace NetOffice.OutlookApi
 		#region Events
 
 		/// <summary>
-		/// SupportByVersion Outlook, 10,11,12,14,15
+		/// SupportByVersion Outlook, 10,11,12,14,15,16
 		/// </summary>
 		private event MobileItem_OpenEventHandler _OpenEvent;
 
 		/// <summary>
-		/// SupportByVersion Outlook 10 11 12 14 15
+		/// SupportByVersion Outlook 10 11 12 14 15,16
 		/// </summary>
-		[SupportByVersion("Outlook", 10,11,12,14,15)]
+		[SupportByVersion("Outlook", 10,11,12,14,15,16)]
 		public event MobileItem_OpenEventHandler OpenEvent
 		{
 			add
@@ -203,14 +203,14 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook, 10,11,12,14,15
+		/// SupportByVersion Outlook, 10,11,12,14,15,16
 		/// </summary>
 		private event MobileItem_CustomActionEventHandler _CustomActionEvent;
 
 		/// <summary>
-		/// SupportByVersion Outlook 10 11 12 14 15
+		/// SupportByVersion Outlook 10 11 12 14 15,16
 		/// </summary>
-		[SupportByVersion("Outlook", 10,11,12,14,15)]
+		[SupportByVersion("Outlook", 10,11,12,14,15,16)]
 		public event MobileItem_CustomActionEventHandler CustomActionEvent
 		{
 			add
@@ -225,14 +225,14 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook, 10,11,12,14,15
+		/// SupportByVersion Outlook, 10,11,12,14,15,16
 		/// </summary>
 		private event MobileItem_CustomPropertyChangeEventHandler _CustomPropertyChangeEvent;
 
 		/// <summary>
-		/// SupportByVersion Outlook 10 11 12 14 15
+		/// SupportByVersion Outlook 10 11 12 14 15,16
 		/// </summary>
-		[SupportByVersion("Outlook", 10,11,12,14,15)]
+		[SupportByVersion("Outlook", 10,11,12,14,15,16)]
 		public event MobileItem_CustomPropertyChangeEventHandler CustomPropertyChangeEvent
 		{
 			add
@@ -247,14 +247,14 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook, 10,11,12,14,15
+		/// SupportByVersion Outlook, 10,11,12,14,15,16
 		/// </summary>
 		private event MobileItem_ForwardEventHandler _ForwardEvent;
 
 		/// <summary>
-		/// SupportByVersion Outlook 10 11 12 14 15
+		/// SupportByVersion Outlook 10 11 12 14 15,16
 		/// </summary>
-		[SupportByVersion("Outlook", 10,11,12,14,15)]
+		[SupportByVersion("Outlook", 10,11,12,14,15,16)]
 		public event MobileItem_ForwardEventHandler ForwardEvent
 		{
 			add
@@ -269,14 +269,14 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook, 10,11,12,14,15
+		/// SupportByVersion Outlook, 10,11,12,14,15,16
 		/// </summary>
 		private event MobileItem_CloseEventHandler _CloseEvent;
 
 		/// <summary>
-		/// SupportByVersion Outlook 10 11 12 14 15
+		/// SupportByVersion Outlook 10 11 12 14 15,16
 		/// </summary>
-		[SupportByVersion("Outlook", 10,11,12,14,15)]
+		[SupportByVersion("Outlook", 10,11,12,14,15,16)]
 		public event MobileItem_CloseEventHandler CloseEvent
 		{
 			add
@@ -291,14 +291,14 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook, 10,11,12,14,15
+		/// SupportByVersion Outlook, 10,11,12,14,15,16
 		/// </summary>
 		private event MobileItem_PropertyChangeEventHandler _PropertyChangeEvent;
 
 		/// <summary>
-		/// SupportByVersion Outlook 10 11 12 14 15
+		/// SupportByVersion Outlook 10 11 12 14 15,16
 		/// </summary>
-		[SupportByVersion("Outlook", 10,11,12,14,15)]
+		[SupportByVersion("Outlook", 10,11,12,14,15,16)]
 		public event MobileItem_PropertyChangeEventHandler PropertyChangeEvent
 		{
 			add
@@ -313,14 +313,14 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook, 10,11,12,14,15
+		/// SupportByVersion Outlook, 10,11,12,14,15,16
 		/// </summary>
 		private event MobileItem_ReadEventHandler _ReadEvent;
 
 		/// <summary>
-		/// SupportByVersion Outlook 10 11 12 14 15
+		/// SupportByVersion Outlook 10 11 12 14 15,16
 		/// </summary>
-		[SupportByVersion("Outlook", 10,11,12,14,15)]
+		[SupportByVersion("Outlook", 10,11,12,14,15,16)]
 		public event MobileItem_ReadEventHandler ReadEvent
 		{
 			add
@@ -335,14 +335,14 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook, 10,11,12,14,15
+		/// SupportByVersion Outlook, 10,11,12,14,15,16
 		/// </summary>
 		private event MobileItem_ReplyEventHandler _ReplyEvent;
 
 		/// <summary>
-		/// SupportByVersion Outlook 10 11 12 14 15
+		/// SupportByVersion Outlook 10 11 12 14 15,16
 		/// </summary>
-		[SupportByVersion("Outlook", 10,11,12,14,15)]
+		[SupportByVersion("Outlook", 10,11,12,14,15,16)]
 		public event MobileItem_ReplyEventHandler ReplyEvent
 		{
 			add
@@ -357,14 +357,14 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook, 10,11,12,14,15
+		/// SupportByVersion Outlook, 10,11,12,14,15,16
 		/// </summary>
 		private event MobileItem_ReplyAllEventHandler _ReplyAllEvent;
 
 		/// <summary>
-		/// SupportByVersion Outlook 10 11 12 14 15
+		/// SupportByVersion Outlook 10 11 12 14 15,16
 		/// </summary>
-		[SupportByVersion("Outlook", 10,11,12,14,15)]
+		[SupportByVersion("Outlook", 10,11,12,14,15,16)]
 		public event MobileItem_ReplyAllEventHandler ReplyAllEvent
 		{
 			add
@@ -379,14 +379,14 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook, 10,11,12,14,15
+		/// SupportByVersion Outlook, 10,11,12,14,15,16
 		/// </summary>
 		private event MobileItem_SendEventHandler _SendEvent;
 
 		/// <summary>
-		/// SupportByVersion Outlook 10 11 12 14 15
+		/// SupportByVersion Outlook 10 11 12 14 15,16
 		/// </summary>
-		[SupportByVersion("Outlook", 10,11,12,14,15)]
+		[SupportByVersion("Outlook", 10,11,12,14,15,16)]
 		public event MobileItem_SendEventHandler SendEvent
 		{
 			add
@@ -401,14 +401,14 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook, 10,11,12,14,15
+		/// SupportByVersion Outlook, 10,11,12,14,15,16
 		/// </summary>
 		private event MobileItem_WriteEventHandler _WriteEvent;
 
 		/// <summary>
-		/// SupportByVersion Outlook 10 11 12 14 15
+		/// SupportByVersion Outlook 10 11 12 14 15,16
 		/// </summary>
-		[SupportByVersion("Outlook", 10,11,12,14,15)]
+		[SupportByVersion("Outlook", 10,11,12,14,15,16)]
 		public event MobileItem_WriteEventHandler WriteEvent
 		{
 			add
@@ -423,14 +423,14 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook, 10,11,12,14,15
+		/// SupportByVersion Outlook, 10,11,12,14,15,16
 		/// </summary>
 		private event MobileItem_BeforeCheckNamesEventHandler _BeforeCheckNamesEvent;
 
 		/// <summary>
-		/// SupportByVersion Outlook 10 11 12 14 15
+		/// SupportByVersion Outlook 10 11 12 14 15,16
 		/// </summary>
-		[SupportByVersion("Outlook", 10,11,12,14,15)]
+		[SupportByVersion("Outlook", 10,11,12,14,15,16)]
 		public event MobileItem_BeforeCheckNamesEventHandler BeforeCheckNamesEvent
 		{
 			add
@@ -445,14 +445,14 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook, 10,11,12,14,15
+		/// SupportByVersion Outlook, 10,11,12,14,15,16
 		/// </summary>
 		private event MobileItem_AttachmentAddEventHandler _AttachmentAddEvent;
 
 		/// <summary>
-		/// SupportByVersion Outlook 10 11 12 14 15
+		/// SupportByVersion Outlook 10 11 12 14 15,16
 		/// </summary>
-		[SupportByVersion("Outlook", 10,11,12,14,15)]
+		[SupportByVersion("Outlook", 10,11,12,14,15,16)]
 		public event MobileItem_AttachmentAddEventHandler AttachmentAddEvent
 		{
 			add
@@ -467,14 +467,14 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook, 10,11,12,14,15
+		/// SupportByVersion Outlook, 10,11,12,14,15,16
 		/// </summary>
 		private event MobileItem_AttachmentReadEventHandler _AttachmentReadEvent;
 
 		/// <summary>
-		/// SupportByVersion Outlook 10 11 12 14 15
+		/// SupportByVersion Outlook 10 11 12 14 15,16
 		/// </summary>
-		[SupportByVersion("Outlook", 10,11,12,14,15)]
+		[SupportByVersion("Outlook", 10,11,12,14,15,16)]
 		public event MobileItem_AttachmentReadEventHandler AttachmentReadEvent
 		{
 			add
@@ -489,14 +489,14 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook, 10,11,12,14,15
+		/// SupportByVersion Outlook, 10,11,12,14,15,16
 		/// </summary>
 		private event MobileItem_BeforeAttachmentSaveEventHandler _BeforeAttachmentSaveEvent;
 
 		/// <summary>
-		/// SupportByVersion Outlook 10 11 12 14 15
+		/// SupportByVersion Outlook 10 11 12 14 15,16
 		/// </summary>
-		[SupportByVersion("Outlook", 10,11,12,14,15)]
+		[SupportByVersion("Outlook", 10,11,12,14,15,16)]
 		public event MobileItem_BeforeAttachmentSaveEventHandler BeforeAttachmentSaveEvent
 		{
 			add
@@ -511,14 +511,14 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook, 10,11,12,14,15
+		/// SupportByVersion Outlook, 10,11,12,14,15,16
 		/// </summary>
 		private event MobileItem_BeforeDeleteEventHandler _BeforeDeleteEvent;
 
 		/// <summary>
-		/// SupportByVersion Outlook 10 11 12 14 15
+		/// SupportByVersion Outlook 10 11 12 14 15,16
 		/// </summary>
-		[SupportByVersion("Outlook", 10,11,12,14,15)]
+		[SupportByVersion("Outlook", 10,11,12,14,15,16)]
 		public event MobileItem_BeforeDeleteEventHandler BeforeDeleteEvent
 		{
 			add
@@ -533,14 +533,14 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook, 12,14,15
+		/// SupportByVersion Outlook, 12,14,15,16
 		/// </summary>
 		private event MobileItem_AttachmentRemoveEventHandler _AttachmentRemoveEvent;
 
 		/// <summary>
-		/// SupportByVersion Outlook 12 14 15
+		/// SupportByVersion Outlook 12 14 15,16
 		/// </summary>
-		[SupportByVersion("Outlook", 12,14,15)]
+		[SupportByVersion("Outlook", 12,14,15,16)]
 		public event MobileItem_AttachmentRemoveEventHandler AttachmentRemoveEvent
 		{
 			add
@@ -555,14 +555,14 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook, 12,14,15
+		/// SupportByVersion Outlook, 12,14,15,16
 		/// </summary>
 		private event MobileItem_BeforeAttachmentAddEventHandler _BeforeAttachmentAddEvent;
 
 		/// <summary>
-		/// SupportByVersion Outlook 12 14 15
+		/// SupportByVersion Outlook 12 14 15,16
 		/// </summary>
-		[SupportByVersion("Outlook", 12,14,15)]
+		[SupportByVersion("Outlook", 12,14,15,16)]
 		public event MobileItem_BeforeAttachmentAddEventHandler BeforeAttachmentAddEvent
 		{
 			add
@@ -577,14 +577,14 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook, 12,14,15
+		/// SupportByVersion Outlook, 12,14,15,16
 		/// </summary>
 		private event MobileItem_BeforeAttachmentPreviewEventHandler _BeforeAttachmentPreviewEvent;
 
 		/// <summary>
-		/// SupportByVersion Outlook 12 14 15
+		/// SupportByVersion Outlook 12 14 15,16
 		/// </summary>
-		[SupportByVersion("Outlook", 12,14,15)]
+		[SupportByVersion("Outlook", 12,14,15,16)]
 		public event MobileItem_BeforeAttachmentPreviewEventHandler BeforeAttachmentPreviewEvent
 		{
 			add
@@ -599,14 +599,14 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook, 12,14,15
+		/// SupportByVersion Outlook, 12,14,15,16
 		/// </summary>
 		private event MobileItem_BeforeAttachmentReadEventHandler _BeforeAttachmentReadEvent;
 
 		/// <summary>
-		/// SupportByVersion Outlook 12 14 15
+		/// SupportByVersion Outlook 12 14 15,16
 		/// </summary>
-		[SupportByVersion("Outlook", 12,14,15)]
+		[SupportByVersion("Outlook", 12,14,15,16)]
 		public event MobileItem_BeforeAttachmentReadEventHandler BeforeAttachmentReadEvent
 		{
 			add
@@ -621,14 +621,14 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook, 12,14,15
+		/// SupportByVersion Outlook, 12,14,15,16
 		/// </summary>
 		private event MobileItem_BeforeAttachmentWriteToTempFileEventHandler _BeforeAttachmentWriteToTempFileEvent;
 
 		/// <summary>
-		/// SupportByVersion Outlook 12 14 15
+		/// SupportByVersion Outlook 12 14 15,16
 		/// </summary>
-		[SupportByVersion("Outlook", 12,14,15)]
+		[SupportByVersion("Outlook", 12,14,15,16)]
 		public event MobileItem_BeforeAttachmentWriteToTempFileEventHandler BeforeAttachmentWriteToTempFileEvent
 		{
 			add
@@ -643,14 +643,14 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook, 12,14,15
+		/// SupportByVersion Outlook, 12,14,15,16
 		/// </summary>
 		private event MobileItem_UnloadEventHandler _UnloadEvent;
 
 		/// <summary>
-		/// SupportByVersion Outlook 12 14 15
+		/// SupportByVersion Outlook 12 14 15,16
 		/// </summary>
-		[SupportByVersion("Outlook", 12,14,15)]
+		[SupportByVersion("Outlook", 12,14,15,16)]
 		public event MobileItem_UnloadEventHandler UnloadEvent
 		{
 			add
@@ -665,14 +665,14 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook, 12,14,15
+		/// SupportByVersion Outlook, 12,14,15,16
 		/// </summary>
 		private event MobileItem_BeforeAutoSaveEventHandler _BeforeAutoSaveEvent;
 
 		/// <summary>
-		/// SupportByVersion Outlook 12 14 15
+		/// SupportByVersion Outlook 12 14 15,16
 		/// </summary>
-		[SupportByVersion("Outlook", 12,14,15)]
+		[SupportByVersion("Outlook", 12,14,15,16)]
 		public event MobileItem_BeforeAutoSaveEventHandler BeforeAutoSaveEvent
 		{
 			add
@@ -687,14 +687,14 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook, 14,15
+		/// SupportByVersion Outlook, 14,15,16
 		/// </summary>
 		private event MobileItem_BeforeReadEventHandler _BeforeReadEvent;
 
 		/// <summary>
-		/// SupportByVersion Outlook 14 15
+		/// SupportByVersion Outlook 14 15,16
 		/// </summary>
-		[SupportByVersion("Outlook", 14,15)]
+		[SupportByVersion("Outlook", 14,15,16)]
 		public event MobileItem_BeforeReadEventHandler BeforeReadEvent
 		{
 			add
@@ -709,14 +709,14 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook, 14,15
+		/// SupportByVersion Outlook, 14,15,16
 		/// </summary>
 		private event MobileItem_AfterWriteEventHandler _AfterWriteEvent;
 
 		/// <summary>
-		/// SupportByVersion Outlook 14 15
+		/// SupportByVersion Outlook 14 15,16
 		/// </summary>
-		[SupportByVersion("Outlook", 14,15)]
+		[SupportByVersion("Outlook", 14,15,16)]
 		public event MobileItem_AfterWriteEventHandler AfterWriteEvent
 		{
 			add
@@ -731,14 +731,14 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook, 15
+		/// SupportByVersion Outlook, 15, 16
 		/// </summary>
 		private event MobileItem_ReadCompleteEventHandler _ReadCompleteEvent;
 
 		/// <summary>
-		/// SupportByVersion Outlook 15
+		/// SupportByVersion Outlook 15,16
 		/// </summary>
-		[SupportByVersion("Outlook", 15)]
+		[SupportByVersion("Outlook", 15, 16)]
 		public event MobileItem_ReadCompleteEventHandler ReadCompleteEvent
 		{
 			add
@@ -757,7 +757,7 @@ namespace NetOffice.OutlookApi
 	    #region IEventBinding Member
         
 		/// <summary>
-        /// creates active sink helper
+        /// Creates active sink helper
         /// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public void CreateEventBridge()
@@ -779,6 +779,9 @@ namespace NetOffice.OutlookApi
 			} 
         }
 
+        /// <summary>
+        /// The instance use currently an event listener 
+        /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public bool EventBridgeInitialized
         {
@@ -787,7 +790,10 @@ namespace NetOffice.OutlookApi
                 return (null != _connectPoint);
             }
         }
-        
+
+        /// <summary>
+        ///  The instance has currently one or more event recipients 
+        /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public bool HasEventRecipients()       
         {
@@ -807,6 +813,9 @@ namespace NetOffice.OutlookApi
 			return false;
         }
         
+        /// <summary>
+        /// Target methods from its actual event recipients
+        /// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public Delegate[] GetEventRecipients(string eventName)
         {
@@ -826,7 +835,10 @@ namespace NetOffice.OutlookApi
             else
                 return new Delegate[0];
         }
-
+       
+        /// <summary>
+        /// Returns the current count of event recipients
+        /// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public int GetCountOfEventRecipients(string eventName)
         {
@@ -845,8 +857,14 @@ namespace NetOffice.OutlookApi
             }
             else
                 return 0;
-        }
-
+           }
+        
+        /// <summary>
+        /// Raise an instance event
+        /// </summary>
+        /// <param name="eventName">name of the event without 'Event' at the end</param>
+        /// <param name="paramsArray">custom arguments for the event</param>
+        /// <returns>count of called event recipients</returns>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public int RaiseCustomEvent(string eventName, ref object[] paramsArray)
 		{
@@ -878,6 +896,9 @@ namespace NetOffice.OutlookApi
                 return 0;
 		}
 
+        /// <summary>
+        /// Stop listening events for the instance
+        /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public void DisposeEventBridge()
         {

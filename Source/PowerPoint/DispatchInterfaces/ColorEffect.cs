@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using NetRuntimeSystem = System;
 using System.Runtime.InteropServices;
 using System.Runtime.CompilerServices;
@@ -10,10 +10,10 @@ namespace NetOffice.PowerPointApi
 {
 	///<summary>
 	/// DispatchInterface ColorEffect 
-	/// SupportByVersion PowerPoint, 10,11,12,14,15
+	/// SupportByVersion PowerPoint, 10,11,12,14,15,16
 	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746177.aspx
 	///</summary>
-	[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15)]
+	[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15,16)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class ColorEffect : COMObject
 	{
@@ -93,11 +93,11 @@ namespace NetOffice.PowerPointApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744695.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15,16)]
 		public NetOffice.PowerPointApi.Application Application
 		{
 			get
@@ -110,12 +110,12 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745642.aspx
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15,16)]
 		public object Parent
 		{
 			get
@@ -128,11 +128,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746689.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15,16)]
 		public NetOffice.PowerPointApi.ColorFormat By
 		{
 			get
@@ -145,11 +145,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744103.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15,16)]
 		public NetOffice.PowerPointApi.ColorFormat From
 		{
 			get
@@ -162,11 +162,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746205.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15,16)]
 		public NetOffice.PowerPointApi.ColorFormat To
 		{
 			get

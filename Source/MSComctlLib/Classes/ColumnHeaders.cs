@@ -90,7 +90,7 @@ namespace NetOffice.MSComctlLibApi
 		}
 		
 		///<summary>
-        ///creates a new instance of ColumnHeaders 
+        /// Creates a new instance of ColumnHeaders 
         ///</summary>		
 		public ColumnHeaders():base("MSComctlLib.ColumnHeaders")
 		{
@@ -98,7 +98,7 @@ namespace NetOffice.MSComctlLibApi
 		}
 		
 		///<summary>
-        ///creates a new instance of ColumnHeaders
+        /// Creates a new instance of ColumnHeaders
         ///</summary>
         ///<param name="progId">registered ProgID</param>
 		public ColumnHeaders(string progId):base(progId)
@@ -111,12 +111,12 @@ namespace NetOffice.MSComctlLibApi
 		#region Static CoClass Methods
 
 		/// <summary>
-        /// returns all running MSComctlLib.ColumnHeaders objects from the running object table(ROT)
+        /// Returns all running MSComctlLib.ColumnHeaders objects from the environment/system
         /// </summary>
         /// <returns>an MSComctlLib.ColumnHeaders array</returns>
 		public static NetOffice.MSComctlLibApi.ColumnHeaders[] GetActiveInstances()
 		{		
-			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("MSComctlLib","ColumnHeaders");
+			IDisposableEnumeration proxyList = NetOffice.ProxyService.GetActiveInstances("MSComctlLib","ColumnHeaders");
 			NetRuntimeSystem.Collections.Generic.List<NetOffice.MSComctlLibApi.ColumnHeaders> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.MSComctlLibApi.ColumnHeaders>();
 			foreach(object proxy in proxyList)
 				resultList.Add( new NetOffice.MSComctlLibApi.ColumnHeaders(null, proxy) );
@@ -124,12 +124,12 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-        /// returns a running MSComctlLib.ColumnHeaders object from the running object table(ROT). the method takes the first element from the table
+        /// Returns a running MSComctlLib.ColumnHeaders object from the environment/system.
         /// </summary>
         /// <returns>an MSComctlLib.ColumnHeaders object or null</returns>
 		public static NetOffice.MSComctlLibApi.ColumnHeaders GetActiveInstance()
 		{
-			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("MSComctlLib","ColumnHeaders", false);
+			object proxy  = NetOffice.ProxyService.GetActiveInstance("MSComctlLib","ColumnHeaders", false);
 			if(null != proxy)
 				return new NetOffice.MSComctlLibApi.ColumnHeaders(null, proxy);
 			else
@@ -137,13 +137,13 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-        /// returns a running MSComctlLib.ColumnHeaders object from the running object table(ROT).  the method takes the first element from the table
+        /// Returns a running MSComctlLib.ColumnHeaders object from the environment/system. 
         /// </summary>
 	    /// <param name="throwOnError">throw an exception if no object was found</param>
         /// <returns>an MSComctlLib.ColumnHeaders object or null</returns>
 		public static NetOffice.MSComctlLibApi.ColumnHeaders GetActiveInstance(bool throwOnError)
 		{
-			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("MSComctlLib","ColumnHeaders", throwOnError);
+			object proxy  = NetOffice.ProxyService.GetActiveInstance("MSComctlLib","ColumnHeaders", throwOnError);
 			if(null != proxy)
 				return new NetOffice.MSComctlLibApi.ColumnHeaders(null, proxy);
 			else
@@ -158,7 +158,7 @@ namespace NetOffice.MSComctlLibApi
 	    #region IEventBinding Member
         
 		/// <summary>
-        /// creates active sink helper
+        /// Creates active sink helper
         /// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public void CreateEventBridge()
@@ -175,6 +175,9 @@ namespace NetOffice.MSComctlLibApi
  
         }
 
+        /// <summary>
+        /// The instance use currently an event listener 
+        /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public bool EventBridgeInitialized
         {
@@ -183,7 +186,10 @@ namespace NetOffice.MSComctlLibApi
                 return (null != _connectPoint);
             }
         }
-        
+
+        /// <summary>
+        ///  The instance has currently one or more event recipients 
+        /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public bool HasEventRecipients()       
         {
@@ -203,6 +209,9 @@ namespace NetOffice.MSComctlLibApi
 			return false;
         }
         
+        /// <summary>
+        /// Target methods from its actual event recipients
+        /// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public Delegate[] GetEventRecipients(string eventName)
         {
@@ -222,7 +231,10 @@ namespace NetOffice.MSComctlLibApi
             else
                 return new Delegate[0];
         }
-
+       
+        /// <summary>
+        /// Returns the current count of event recipients
+        /// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public int GetCountOfEventRecipients(string eventName)
         {
@@ -241,8 +253,14 @@ namespace NetOffice.MSComctlLibApi
             }
             else
                 return 0;
-        }
-
+           }
+        
+        /// <summary>
+        /// Raise an instance event
+        /// </summary>
+        /// <param name="eventName">name of the event without 'Event' at the end</param>
+        /// <param name="paramsArray">custom arguments for the event</param>
+        /// <returns>count of called event recipients</returns>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public int RaiseCustomEvent(string eventName, ref object[] paramsArray)
 		{
@@ -274,6 +292,9 @@ namespace NetOffice.MSComctlLibApi
                 return 0;
 		}
 
+        /// <summary>
+        /// Stop listening events for the instance
+        /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public void DisposeEventBridge()
         {

@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using NetRuntimeSystem = System;
 using System.Runtime.InteropServices;
 using System.Runtime.CompilerServices;
@@ -10,9 +10,9 @@ namespace NetOffice.OutlookApi
 {
 	///<summary>
 	/// DispatchInterface _NavigationFolder 
-	/// SupportByVersion Outlook, 12,14,15
+	/// SupportByVersion Outlook, 12,14,15,16
 	///</summary>
-	[SupportByVersionAttribute("Outlook", 12,14,15)]
+	[SupportByVersionAttribute("Outlook", 12,14,15,16)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class _NavigationFolder : COMObject
 	{
@@ -92,11 +92,11 @@ namespace NetOffice.OutlookApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion Outlook 12, 14, 15
+		/// SupportByVersion Outlook 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff862415.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Outlook", 12,14,15)]
+		[SupportByVersionAttribute("Outlook", 12,14,15,16)]
 		public NetOffice.OutlookApi._Application Application
 		{
 			get
@@ -109,11 +109,11 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook 12, 14, 15
+		/// SupportByVersion Outlook 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff869514.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Outlook", 12,14,15)]
+		[SupportByVersionAttribute("Outlook", 12,14,15,16)]
 		public NetOffice.OutlookApi.Enums.OlObjectClass Class
 		{
 			get
@@ -126,11 +126,11 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook 12, 14, 15
+		/// SupportByVersion Outlook 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff869910.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Outlook", 12,14,15)]
+		[SupportByVersionAttribute("Outlook", 12,14,15,16)]
 		public NetOffice.OutlookApi._NameSpace Session
 		{
 			get
@@ -143,12 +143,12 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook 12, 14, 15
+		/// SupportByVersion Outlook 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff868283.aspx
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("Outlook", 12,14,15)]
+		[SupportByVersionAttribute("Outlook", 12,14,15,16)]
 		public object Parent
 		{
 			get
@@ -161,11 +161,11 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook 12, 14, 15
+		/// SupportByVersion Outlook 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff860976.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Outlook", 12,14,15)]
+		[SupportByVersionAttribute("Outlook", 12,14,15,16)]
 		public NetOffice.OutlookApi.MAPIFolder Folder
 		{
 			get
@@ -178,11 +178,11 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook 12, 14, 15
+		/// SupportByVersion Outlook 12, 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff868414.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Outlook", 12,14,15)]
+		[SupportByVersionAttribute("Outlook", 12,14,15,16)]
 		public bool IsSelected
 		{
 			get
@@ -199,11 +199,11 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook 12, 14, 15
+		/// SupportByVersion Outlook 12, 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff860306.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Outlook", 12,14,15)]
+		[SupportByVersionAttribute("Outlook", 12,14,15,16)]
 		public bool IsSideBySide
 		{
 			get
@@ -220,11 +220,11 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook 12, 14, 15
+		/// SupportByVersion Outlook 12, 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff869198.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Outlook", 12,14,15)]
+		[SupportByVersionAttribute("Outlook", 12,14,15,16)]
 		public Int32 Position
 		{
 			get
@@ -241,11 +241,11 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook 12, 14, 15
+		/// SupportByVersion Outlook 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff868235.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Outlook", 12,14,15)]
+		[SupportByVersionAttribute("Outlook", 12,14,15,16)]
 		public bool IsRemovable
 		{
 			get
@@ -257,11 +257,11 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook 12, 14, 15
+		/// SupportByVersion Outlook 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff865026.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Outlook", 12,14,15)]
+		[SupportByVersionAttribute("Outlook", 12,14,15,16)]
 		public string DisplayName
 		{
 			get

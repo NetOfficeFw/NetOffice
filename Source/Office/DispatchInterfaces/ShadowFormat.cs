@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using NetRuntimeSystem = System;
 using System.Runtime.InteropServices;
 using System.Runtime.CompilerServices;
@@ -10,9 +10,9 @@ namespace NetOffice.OfficeApi
 {
 	///<summary>
 	/// DispatchInterface ShadowFormat 
-	/// SupportByVersion Office, 9,10,11,12,14,15
+	/// SupportByVersion Office, 9,10,11,12,14,15,16
 	///</summary>
-	[SupportByVersionAttribute("Office", 9,10,11,12,14,15)]
+	[SupportByVersionAttribute("Office", 9,10,11,12,14,15,16)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class ShadowFormat : _IMsoDispObj
 	{
@@ -92,11 +92,11 @@ namespace NetOffice.OfficeApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion Office 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("Office", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Office", 9,10,11,12,14,15,16)]
 		public object Parent
 		{
 			get
@@ -109,10 +109,10 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Office", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Office", 9,10,11,12,14,15,16)]
 		public NetOffice.OfficeApi.ColorFormat ForeColor
 		{
 			get
@@ -130,10 +130,10 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Office", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Office", 9,10,11,12,14,15,16)]
 		public NetOffice.OfficeApi.Enums.MsoTriState Obscured
 		{
 			get
@@ -151,10 +151,10 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Office", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Office", 9,10,11,12,14,15,16)]
 		public Single OffsetX
 		{
 			get
@@ -171,10 +171,10 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Office", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Office", 9,10,11,12,14,15,16)]
 		public Single OffsetY
 		{
 			get
@@ -191,10 +191,10 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Office", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Office", 9,10,11,12,14,15,16)]
 		public Single Transparency
 		{
 			get
@@ -211,10 +211,10 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Office", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Office", 9,10,11,12,14,15,16)]
 		public NetOffice.OfficeApi.Enums.MsoShadowType Type
 		{
 			get
@@ -232,10 +232,10 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Office", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Office", 9,10,11,12,14,15,16)]
 		public NetOffice.OfficeApi.Enums.MsoTriState Visible
 		{
 			get
@@ -253,10 +253,10 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 12, 14, 15
+		/// SupportByVersion Office 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Office", 12,14,15)]
+		[SupportByVersionAttribute("Office", 12,14,15,16)]
 		public NetOffice.OfficeApi.Enums.MsoShadowStyle Style
 		{
 			get
@@ -274,10 +274,10 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 12, 14, 15
+		/// SupportByVersion Office 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Office", 12,14,15)]
+		[SupportByVersionAttribute("Office", 12,14,15,16)]
 		public Single Blur
 		{
 			get
@@ -294,10 +294,10 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 12, 14, 15
+		/// SupportByVersion Office 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Office", 12,14,15)]
+		[SupportByVersionAttribute("Office", 12,14,15,16)]
 		public Single Size
 		{
 			get
@@ -314,10 +314,10 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 12, 14, 15
+		/// SupportByVersion Office 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Office", 12,14,15)]
+		[SupportByVersionAttribute("Office", 12,14,15,16)]
 		public NetOffice.OfficeApi.Enums.MsoTriState RotateWithShape
 		{
 			get
@@ -339,11 +339,11 @@ namespace NetOffice.OfficeApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByVersion Office 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
 		/// 
 		/// </summary>
 		/// <param name="increment">Single Increment</param>
-		[SupportByVersionAttribute("Office", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Office", 9,10,11,12,14,15,16)]
 		public void IncrementOffsetX(Single increment)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(increment);
@@ -351,11 +351,11 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
 		/// 
 		/// </summary>
 		/// <param name="increment">Single Increment</param>
-		[SupportByVersionAttribute("Office", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Office", 9,10,11,12,14,15,16)]
 		public void IncrementOffsetY(Single increment)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(increment);

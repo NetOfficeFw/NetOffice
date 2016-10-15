@@ -19,6 +19,7 @@ namespace Out_Parameters
 
             Word.Application application = new Word.Application();
             application.Visible = true;
+            application.DisplayAlerts = NetOffice.WordApi.Enums.WdAlertLevel.wdAlertsNone;
             Word.Document document = application.Documents.Add();
             application.Selection.TypeText("Hello World");
 
@@ -31,8 +32,15 @@ namespace Out_Parameters
 
             MessageBox.Show(string.Format("GetPoint returns Left:{0} Top:{1} Width:{2} Height:{3}", left, top, width, height));
 
-            application.Quit();
-            application.Dispose();
+            try
+            {
+                application.Quit();
+                application.Dispose();
+            }
+            catch
+            {
+                // may closed by user
+            }           
         }
     }
 }

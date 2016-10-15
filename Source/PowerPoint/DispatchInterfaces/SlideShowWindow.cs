@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using NetRuntimeSystem = System;
 using System.Runtime.InteropServices;
 using System.Runtime.CompilerServices;
@@ -10,10 +10,10 @@ namespace NetOffice.PowerPointApi
 {
 	///<summary>
 	/// DispatchInterface SlideShowWindow 
-	/// SupportByVersion PowerPoint, 9,10,11,12,14,15
+	/// SupportByVersion PowerPoint, 9,10,11,12,14,15,16
 	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744227.aspx
 	///</summary>
-	[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
+	[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class SlideShowWindow : COMObject
 	{
@@ -93,11 +93,11 @@ namespace NetOffice.PowerPointApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744634.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
 		public NetOffice.PowerPointApi.Application Application
 		{
 			get
@@ -110,12 +110,12 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744092.aspx
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
 		public object Parent
 		{
 			get
@@ -128,11 +128,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746632.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
 		public NetOffice.PowerPointApi.SlideShowView View
 		{
 			get
@@ -145,11 +145,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745757.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
 		public NetOffice.PowerPointApi.Presentation Presentation
 		{
 			get
@@ -162,11 +162,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744146.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
 		public NetOffice.OfficeApi.Enums.MsoTriState IsFullScreen
 		{
 			get
@@ -179,11 +179,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746447.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
 		public Single Left
 		{
 			get
@@ -200,11 +200,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744501.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
 		public Single Top
 		{
 			get
@@ -221,11 +221,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746601.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
 		public Single Width
 		{
 			get
@@ -242,11 +242,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff743837.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
 		public Single Height
 		{
 			get
@@ -263,10 +263,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
 		public Int32 HWND
 		{
 			get
@@ -278,11 +278,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745964.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
 		public NetOffice.OfficeApi.Enums.MsoTriState Active
 		{
 			get
@@ -295,11 +295,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 15
+		/// SupportByVersion PowerPoint 15,16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj227723.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 15)]
+		[SupportByVersionAttribute("PowerPoint", 15, 16)]
 		public NetOffice.PowerPointApi.SlideNavigation SlideNavigation
 		{
 			get
@@ -316,10 +316,10 @@ namespace NetOffice.PowerPointApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744303.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
 		public void Activate()
 		{
 			object[] paramsArray = null;

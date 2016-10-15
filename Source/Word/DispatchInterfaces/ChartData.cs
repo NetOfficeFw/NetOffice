@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using NetRuntimeSystem = System;
 using System.Runtime.InteropServices;
 using System.Runtime.CompilerServices;
@@ -10,10 +10,10 @@ namespace NetOffice.WordApi
 {
 	///<summary>
 	/// DispatchInterface ChartData 
-	/// SupportByVersion Word, 14,15
+	/// SupportByVersion Word, 14,15,16
 	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193319.aspx
 	///</summary>
-	[SupportByVersionAttribute("Word", 14,15)]
+	[SupportByVersionAttribute("Word", 14,15,16)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class ChartData : COMObject
 	{
@@ -93,12 +93,12 @@ namespace NetOffice.WordApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion Word 14, 15
+		/// SupportByVersion Word 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192338.aspx
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14,15)]
+		[SupportByVersionAttribute("Word", 14,15,16)]
 		public object Workbook
 		{
 			get
@@ -111,11 +111,11 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 14, 15
+		/// SupportByVersion Word 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838681.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14,15)]
+		[SupportByVersionAttribute("Word", 14,15,16)]
 		public bool IsLinked
 		{
 			get
@@ -131,10 +131,10 @@ namespace NetOffice.WordApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByVersion Word 14, 15
+		/// SupportByVersion Word 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845236.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14,15)]
+		[SupportByVersionAttribute("Word", 14,15,16)]
 		public void Activate()
 		{
 			object[] paramsArray = null;
@@ -142,10 +142,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 14, 15
+		/// SupportByVersion Word 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff191845.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14,15)]
+		[SupportByVersionAttribute("Word", 14,15,16)]
 		public void BreakLink()
 		{
 			object[] paramsArray = null;
@@ -153,10 +153,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 15
+		/// SupportByVersion Word 15,16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj232086.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 15)]
+		[SupportByVersionAttribute("Word", 15, 16)]
 		public void ActivateChartDataWindow()
 		{
 			object[] paramsArray = null;

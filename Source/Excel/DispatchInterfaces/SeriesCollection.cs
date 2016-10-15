@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using NetRuntimeSystem = System;
 using System.Runtime.InteropServices;
 using System.Runtime.CompilerServices;
@@ -11,10 +11,10 @@ namespace NetOffice.ExcelApi
 {
 	///<summary>
 	/// DispatchInterface SeriesCollection 
-	/// SupportByVersion Excel, 9,10,11,12,14,15
+	/// SupportByVersion Excel, 9,10,11,12,14,15,16
 	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836171.aspx
 	///</summary>
-	[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
+	[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class SeriesCollection : COMObject ,IEnumerable<NetOffice.ExcelApi.Series>
 	{
@@ -94,11 +94,11 @@ namespace NetOffice.ExcelApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193790.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
 		public NetOffice.ExcelApi.Application Application
 		{
 			get
@@ -111,11 +111,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196238.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
 		public NetOffice.ExcelApi.Enums.XlCreator Creator
 		{
 			get
@@ -128,12 +128,12 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838989.aspx
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
 		public object Parent
 		{
 			get
@@ -146,11 +146,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff198230.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
 		public Int32 Count
 		{
 			get
@@ -166,7 +166,7 @@ namespace NetOffice.ExcelApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194065.aspx
 		/// </summary>
 		/// <param name="source">object Source</param>
@@ -174,7 +174,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="seriesLabels">optional object SeriesLabels</param>
 		/// <param name="categoryLabels">optional object CategoryLabels</param>
 		/// <param name="replace">optional object Replace</param>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
 		public NetOffice.ExcelApi.Series Add(object source, object rowcol, object seriesLabels, object categoryLabels, object replace)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(source, rowcol, seriesLabels, categoryLabels, replace);
@@ -184,12 +184,12 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194065.aspx
 		/// </summary>
 		/// <param name="source">object Source</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
 		public NetOffice.ExcelApi.Series Add(object source)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(source);
@@ -199,13 +199,13 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194065.aspx
 		/// </summary>
 		/// <param name="source">object Source</param>
 		/// <param name="rowcol">optional NetOffice.ExcelApi.Enums.XlRowCol Rowcol = 2</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
 		public NetOffice.ExcelApi.Series Add(object source, object rowcol)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(source, rowcol);
@@ -215,14 +215,14 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194065.aspx
 		/// </summary>
 		/// <param name="source">object Source</param>
 		/// <param name="rowcol">optional NetOffice.ExcelApi.Enums.XlRowCol Rowcol = 2</param>
 		/// <param name="seriesLabels">optional object SeriesLabels</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
 		public NetOffice.ExcelApi.Series Add(object source, object rowcol, object seriesLabels)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(source, rowcol, seriesLabels);
@@ -232,7 +232,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194065.aspx
 		/// </summary>
 		/// <param name="source">object Source</param>
@@ -240,7 +240,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="seriesLabels">optional object SeriesLabels</param>
 		/// <param name="categoryLabels">optional object CategoryLabels</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
 		public NetOffice.ExcelApi.Series Add(object source, object rowcol, object seriesLabels, object categoryLabels)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(source, rowcol, seriesLabels, categoryLabels);
@@ -250,13 +250,13 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835207.aspx
 		/// </summary>
 		/// <param name="source">object Source</param>
 		/// <param name="rowcol">optional object Rowcol</param>
 		/// <param name="categoryLabels">optional object CategoryLabels</param>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
 		public object Extend(object source, object rowcol, object categoryLabels)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(source, rowcol, categoryLabels);
@@ -273,12 +273,12 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835207.aspx
 		/// </summary>
 		/// <param name="source">object Source</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
 		public object Extend(object source)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(source);
@@ -295,13 +295,13 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835207.aspx
 		/// </summary>
 		/// <param name="source">object Source</param>
 		/// <param name="rowcol">optional object Rowcol</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
 		public object Extend(object source, object rowcol)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(source, rowcol);
@@ -318,7 +318,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197570.aspx
 		/// </summary>
 		/// <param name="rowcol">optional NetOffice.ExcelApi.Enums.XlRowCol Rowcol = 2</param>
@@ -326,7 +326,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="categoryLabels">optional object CategoryLabels</param>
 		/// <param name="replace">optional object Replace</param>
 		/// <param name="newSeries">optional object NewSeries</param>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
 		public object Paste(object rowcol, object seriesLabels, object categoryLabels, object replace, object newSeries)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(rowcol, seriesLabels, categoryLabels, replace, newSeries);
@@ -343,11 +343,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197570.aspx
 		/// </summary>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
 		public object Paste()
 		{
 			object[] paramsArray = null;
@@ -364,12 +364,12 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197570.aspx
 		/// </summary>
 		/// <param name="rowcol">optional NetOffice.ExcelApi.Enums.XlRowCol Rowcol = 2</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
 		public object Paste(object rowcol)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(rowcol);
@@ -386,13 +386,13 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197570.aspx
 		/// </summary>
 		/// <param name="rowcol">optional NetOffice.ExcelApi.Enums.XlRowCol Rowcol = 2</param>
 		/// <param name="seriesLabels">optional object SeriesLabels</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
 		public object Paste(object rowcol, object seriesLabels)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(rowcol, seriesLabels);
@@ -409,14 +409,14 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197570.aspx
 		/// </summary>
 		/// <param name="rowcol">optional NetOffice.ExcelApi.Enums.XlRowCol Rowcol = 2</param>
 		/// <param name="seriesLabels">optional object SeriesLabels</param>
 		/// <param name="categoryLabels">optional object CategoryLabels</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
 		public object Paste(object rowcol, object seriesLabels, object categoryLabels)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(rowcol, seriesLabels, categoryLabels);
@@ -433,7 +433,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197570.aspx
 		/// </summary>
 		/// <param name="rowcol">optional NetOffice.ExcelApi.Enums.XlRowCol Rowcol = 2</param>
@@ -441,7 +441,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="categoryLabels">optional object CategoryLabels</param>
 		/// <param name="replace">optional object Replace</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
 		public object Paste(object rowcol, object seriesLabels, object categoryLabels, object replace)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(rowcol, seriesLabels, categoryLabels, replace);
@@ -458,10 +458,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194841.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
 		public NetOffice.ExcelApi.Series NewSeries()
 		{
 			object[] paramsArray = null;
@@ -471,11 +471,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 12, 14, 15
+		/// SupportByVersion Excel 12, 14, 15, 16
 		/// 
 		/// </summary>
 		/// <param name="index">object Index</param>
-		[SupportByVersionAttribute("Excel", 12,14,15)]
+		[SupportByVersionAttribute("Excel", 12,14,15,16)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
 		public NetOffice.ExcelApi.Series this[object index]
 		{
@@ -493,9 +493,9 @@ namespace NetOffice.ExcelApi
        #region IEnumerable<NetOffice.ExcelApi.Series> Member
         
         /// <summary>
-		/// SupportByVersionAttribute Excel, 9,10,11,12,14,15
+		/// SupportByVersionAttribute Excel, 9,10,11,12,14,15,16
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
        public IEnumerator<NetOffice.ExcelApi.Series> GetEnumerator()  
        {
            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
@@ -508,9 +508,9 @@ namespace NetOffice.ExcelApi
 		#region IEnumerable Members
        
 		/// <summary>
-		/// SupportByVersionAttribute Excel, 9,10,11,12,14,15
+		/// SupportByVersionAttribute Excel, 9,10,11,12,14,15,16
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
 			return NetOffice.Utils.GetProxyEnumeratorAsMethod(this);

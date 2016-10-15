@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using NetRuntimeSystem = System;
 using System.Runtime.InteropServices;
 using System.Runtime.CompilerServices;
@@ -10,10 +10,10 @@ namespace NetOffice.OutlookApi
 {
 	///<summary>
 	/// DispatchInterface OutlookBarShortcut 
-	/// SupportByVersion Outlook, 9,10,11,12,14,15
+	/// SupportByVersion Outlook, 9,10,11,12,14,15,16
 	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff870102.aspx
 	///</summary>
-	[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15)]
+	[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15,16)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class OutlookBarShortcut : COMObject
 	{
@@ -93,11 +93,11 @@ namespace NetOffice.OutlookApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff866924.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15,16)]
 		public NetOffice.OutlookApi._Application Application
 		{
 			get
@@ -110,11 +110,11 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff862403.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15,16)]
 		public NetOffice.OutlookApi.Enums.OlObjectClass Class
 		{
 			get
@@ -127,11 +127,11 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff868546.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15,16)]
 		public NetOffice.OutlookApi._NameSpace Session
 		{
 			get
@@ -144,12 +144,12 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff869157.aspx
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15,16)]
 		public object Parent
 		{
 			get
@@ -162,11 +162,11 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff863967.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15,16)]
 		public string Name
 		{
 			get
@@ -183,11 +183,11 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff868031.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15,16)]
 		public object Target
 		{
 			get
@@ -211,11 +211,11 @@ namespace NetOffice.OutlookApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByVersion Outlook 10, 11, 12, 14, 15
+		/// SupportByVersion Outlook 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff869317.aspx
 		/// </summary>
 		/// <param name="icon">object Icon</param>
-		[SupportByVersionAttribute("Outlook", 10,11,12,14,15)]
+		[SupportByVersionAttribute("Outlook", 10,11,12,14,15,16)]
 		public void SetIcon(object icon)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(icon);

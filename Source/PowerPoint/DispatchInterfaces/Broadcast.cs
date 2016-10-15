@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using NetRuntimeSystem = System;
 using System.Runtime.InteropServices;
 using System.Runtime.CompilerServices;
@@ -10,10 +10,10 @@ namespace NetOffice.PowerPointApi
 {
 	///<summary>
 	/// DispatchInterface Broadcast 
-	/// SupportByVersion PowerPoint, 14,15
+	/// SupportByVersion PowerPoint, 14,15,16
 	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745427.aspx
 	///</summary>
-	[SupportByVersionAttribute("PowerPoint", 14,15)]
+	[SupportByVersionAttribute("PowerPoint", 14,15,16)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class Broadcast : COMObject
 	{
@@ -93,11 +93,11 @@ namespace NetOffice.PowerPointApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 14, 15
+		/// SupportByVersion PowerPoint 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746713.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14,15)]
+		[SupportByVersionAttribute("PowerPoint", 14,15,16)]
 		public NetOffice.PowerPointApi.Application Application
 		{
 			get
@@ -110,12 +110,12 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 14, 15
+		/// SupportByVersion PowerPoint 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744882.aspx
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14,15)]
+		[SupportByVersionAttribute("PowerPoint", 14,15,16)]
 		public object Parent
 		{
 			get
@@ -128,11 +128,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 14, 15
+		/// SupportByVersion PowerPoint 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744687.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14,15)]
+		[SupportByVersionAttribute("PowerPoint", 14,15,16)]
 		public string AttendeeUrl
 		{
 			get
@@ -144,11 +144,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 14, 15
+		/// SupportByVersion PowerPoint 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744210.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14,15)]
+		[SupportByVersionAttribute("PowerPoint", 14,15,16)]
 		public bool IsBroadcasting
 		{
 			get
@@ -160,11 +160,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 15
+		/// SupportByVersion PowerPoint 15,16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj230343.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 15)]
+		[SupportByVersionAttribute("PowerPoint", 15, 16)]
 		public NetOffice.OfficeApi.Enums.MsoBroadcastState State
 		{
 			get
@@ -177,11 +177,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 15
+		/// SupportByVersion PowerPoint 15,16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj229261.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 15)]
+		[SupportByVersionAttribute("PowerPoint", 15, 16)]
 		public Int32 Capabilities
 		{
 			get
@@ -193,11 +193,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 15
+		/// SupportByVersion PowerPoint 15,16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj230327.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 15)]
+		[SupportByVersionAttribute("PowerPoint", 15, 16)]
 		public string SessionID
 		{
 			get
@@ -209,11 +209,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 15
+		/// SupportByVersion PowerPoint 15,16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj227435.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 15)]
+		[SupportByVersionAttribute("PowerPoint", 15, 16)]
 		public string PresenterServiceUrl
 		{
 			get
@@ -229,11 +229,11 @@ namespace NetOffice.PowerPointApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 14, 15
+		/// SupportByVersion PowerPoint 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746118.aspx
 		/// </summary>
 		/// <param name="serverUrl">string serverUrl</param>
-		[SupportByVersionAttribute("PowerPoint", 14,15)]
+		[SupportByVersionAttribute("PowerPoint", 14,15,16)]
 		public void Start(string serverUrl)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(serverUrl);
@@ -241,10 +241,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 14, 15
+		/// SupportByVersion PowerPoint 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746003.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14,15)]
+		[SupportByVersionAttribute("PowerPoint", 14,15,16)]
 		public void End()
 		{
 			object[] paramsArray = null;
@@ -252,10 +252,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 15
+		/// SupportByVersion PowerPoint 15,16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj230158.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 15)]
+		[SupportByVersionAttribute("PowerPoint", 15, 16)]
 		public void Pause()
 		{
 			object[] paramsArray = null;
@@ -263,10 +263,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 15
+		/// SupportByVersion PowerPoint 15,16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj229921.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 15)]
+		[SupportByVersionAttribute("PowerPoint", 15, 16)]
 		public void Resume()
 		{
 			object[] paramsArray = null;
@@ -274,12 +274,12 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 15
+		/// SupportByVersion PowerPoint 15,16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj229798.aspx
 		/// </summary>
 		/// <param name="notesUrl">string notesUrl</param>
 		/// <param name="notesWacUrl">string notesWacUrl</param>
-		[SupportByVersionAttribute("PowerPoint", 15)]
+		[SupportByVersionAttribute("PowerPoint", 15, 16)]
 		public void AddMeetingNotes(string notesUrl, string notesWacUrl)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(notesUrl, notesWacUrl);

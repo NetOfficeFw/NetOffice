@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using NetOffice;
@@ -19,10 +19,10 @@ namespace NetOffice.AccessApi
 
 	///<summary>
 	/// CoClass CustomControl 
-	/// SupportByVersion Access, 9,10,11,12,14,15
+	/// SupportByVersion Access, 9,10,11,12,14,15,16
 	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff821191.aspx
 	///</summary>
-	[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+	[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class CustomControl : _CustomControl,IEventBinding
 	{
@@ -98,7 +98,7 @@ namespace NetOffice.AccessApi
 		}
 		
 		///<summary>
-        ///creates a new instance of CustomControl 
+        /// Creates a new instance of CustomControl 
         ///</summary>		
 		public CustomControl():base("Access.CustomControl")
 		{
@@ -106,7 +106,7 @@ namespace NetOffice.AccessApi
 		}
 		
 		///<summary>
-        ///creates a new instance of CustomControl
+        /// Creates a new instance of CustomControl
         ///</summary>
         ///<param name="progId">registered ProgID</param>
 		public CustomControl(string progId):base(progId)
@@ -119,12 +119,12 @@ namespace NetOffice.AccessApi
 		#region Static CoClass Methods
 
 		/// <summary>
-        /// returns all running Access.CustomControl objects from the running object table(ROT)
+        /// Returns all running Access.CustomControl objects from the environment/system
         /// </summary>
         /// <returns>an Access.CustomControl array</returns>
 		public static NetOffice.AccessApi.CustomControl[] GetActiveInstances()
 		{		
-			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("Access","CustomControl");
+			IDisposableEnumeration proxyList = NetOffice.ProxyService.GetActiveInstances("Access","CustomControl");
 			NetRuntimeSystem.Collections.Generic.List<NetOffice.AccessApi.CustomControl> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.AccessApi.CustomControl>();
 			foreach(object proxy in proxyList)
 				resultList.Add( new NetOffice.AccessApi.CustomControl(null, proxy) );
@@ -132,12 +132,12 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-        /// returns a running Access.CustomControl object from the running object table(ROT). the method takes the first element from the table
+        /// Returns a running Access.CustomControl object from the environment/system.
         /// </summary>
         /// <returns>an Access.CustomControl object or null</returns>
 		public static NetOffice.AccessApi.CustomControl GetActiveInstance()
 		{
-			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Access","CustomControl", false);
+			object proxy  = NetOffice.ProxyService.GetActiveInstance("Access","CustomControl", false);
 			if(null != proxy)
 				return new NetOffice.AccessApi.CustomControl(null, proxy);
 			else
@@ -145,13 +145,13 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-        /// returns a running Access.CustomControl object from the running object table(ROT).  the method takes the first element from the table
+        /// Returns a running Access.CustomControl object from the environment/system. 
         /// </summary>
 	    /// <param name="throwOnError">throw an exception if no object was found</param>
         /// <returns>an Access.CustomControl object or null</returns>
 		public static NetOffice.AccessApi.CustomControl GetActiveInstance(bool throwOnError)
 		{
-			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Access","CustomControl", throwOnError);
+			object proxy  = NetOffice.ProxyService.GetActiveInstance("Access","CustomControl", throwOnError);
 			if(null != proxy)
 				return new NetOffice.AccessApi.CustomControl(null, proxy);
 			else
@@ -162,15 +162,15 @@ namespace NetOffice.AccessApi
 		#region Events
 
 		/// <summary>
-		/// SupportByVersion Access, 9,10,11,12,14,15
+		/// SupportByVersion Access, 9,10,11,12,14,15,16
 		/// </summary>
 		private event CustomControl_UpdatedEventHandler _UpdatedEvent;
 
 		/// <summary>
-		/// SupportByVersion Access 9 10 11 12 14 15
+		/// SupportByVersion Access 9 10 11 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193546.aspx </remarks>
-		[SupportByVersion("Access", 9,10,11,12,14,15)]
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public event CustomControl_UpdatedEventHandler UpdatedEvent
 		{
 			add
@@ -185,15 +185,15 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access, 9,10,11,12,14,15
+		/// SupportByVersion Access, 9,10,11,12,14,15,16
 		/// </summary>
 		private event CustomControl_EnterEventHandler _EnterEvent;
 
 		/// <summary>
-		/// SupportByVersion Access 9 10 11 12 14 15
+		/// SupportByVersion Access 9 10 11 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836867.aspx </remarks>
-		[SupportByVersion("Access", 9,10,11,12,14,15)]
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public event CustomControl_EnterEventHandler EnterEvent
 		{
 			add
@@ -208,15 +208,15 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access, 9,10,11,12,14,15
+		/// SupportByVersion Access, 9,10,11,12,14,15,16
 		/// </summary>
 		private event CustomControl_ExitEventHandler _ExitEvent;
 
 		/// <summary>
-		/// SupportByVersion Access 9 10 11 12 14 15
+		/// SupportByVersion Access 9 10 11 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192738.aspx </remarks>
-		[SupportByVersion("Access", 9,10,11,12,14,15)]
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public event CustomControl_ExitEventHandler ExitEvent
 		{
 			add
@@ -231,15 +231,15 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access, 9,10,11,12,14,15
+		/// SupportByVersion Access, 9,10,11,12,14,15,16
 		/// </summary>
 		private event CustomControl_GotFocusEventHandler _GotFocusEvent;
 
 		/// <summary>
-		/// SupportByVersion Access 9 10 11 12 14 15
+		/// SupportByVersion Access 9 10 11 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822815.aspx </remarks>
-		[SupportByVersion("Access", 9,10,11,12,14,15)]
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public event CustomControl_GotFocusEventHandler GotFocusEvent
 		{
 			add
@@ -254,15 +254,15 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access, 9,10,11,12,14,15
+		/// SupportByVersion Access, 9,10,11,12,14,15,16
 		/// </summary>
 		private event CustomControl_LostFocusEventHandler _LostFocusEvent;
 
 		/// <summary>
-		/// SupportByVersion Access 9 10 11 12 14 15
+		/// SupportByVersion Access 9 10 11 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff844932.aspx </remarks>
-		[SupportByVersion("Access", 9,10,11,12,14,15)]
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public event CustomControl_LostFocusEventHandler LostFocusEvent
 		{
 			add
@@ -281,7 +281,7 @@ namespace NetOffice.AccessApi
 	    #region IEventBinding Member
         
 		/// <summary>
-        /// creates active sink helper
+        /// Creates active sink helper
         /// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public void CreateEventBridge()
@@ -309,6 +309,9 @@ namespace NetOffice.AccessApi
 			} 
         }
 
+        /// <summary>
+        /// The instance use currently an event listener 
+        /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public bool EventBridgeInitialized
         {
@@ -317,7 +320,10 @@ namespace NetOffice.AccessApi
                 return (null != _connectPoint);
             }
         }
-        
+
+        /// <summary>
+        ///  The instance has currently one or more event recipients 
+        /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public bool HasEventRecipients()       
         {
@@ -337,6 +343,9 @@ namespace NetOffice.AccessApi
 			return false;
         }
         
+        /// <summary>
+        /// Target methods from its actual event recipients
+        /// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public Delegate[] GetEventRecipients(string eventName)
         {
@@ -356,7 +365,10 @@ namespace NetOffice.AccessApi
             else
                 return new Delegate[0];
         }
-
+       
+        /// <summary>
+        /// Returns the current count of event recipients
+        /// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public int GetCountOfEventRecipients(string eventName)
         {
@@ -375,8 +387,14 @@ namespace NetOffice.AccessApi
             }
             else
                 return 0;
-        }
-
+           }
+        
+        /// <summary>
+        /// Raise an instance event
+        /// </summary>
+        /// <param name="eventName">name of the event without 'Event' at the end</param>
+        /// <param name="paramsArray">custom arguments for the event</param>
+        /// <returns>count of called event recipients</returns>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public int RaiseCustomEvent(string eventName, ref object[] paramsArray)
 		{
@@ -408,6 +426,9 @@ namespace NetOffice.AccessApi
                 return 0;
 		}
 
+        /// <summary>
+        /// Stop listening events for the instance
+        /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public void DisposeEventBridge()
         {

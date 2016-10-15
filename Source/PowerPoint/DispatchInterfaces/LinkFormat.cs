@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using NetRuntimeSystem = System;
 using System.Runtime.InteropServices;
 using System.Runtime.CompilerServices;
@@ -10,10 +10,10 @@ namespace NetOffice.PowerPointApi
 {
 	///<summary>
 	/// DispatchInterface LinkFormat 
-	/// SupportByVersion PowerPoint, 9,10,11,12,14,15
+	/// SupportByVersion PowerPoint, 9,10,11,12,14,15,16
 	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746588.aspx
 	///</summary>
-	[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
+	[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class LinkFormat : COMObject
 	{
@@ -93,11 +93,11 @@ namespace NetOffice.PowerPointApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745803.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
 		public NetOffice.PowerPointApi.Application Application
 		{
 			get
@@ -110,12 +110,12 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744785.aspx
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
 		public object Parent
 		{
 			get
@@ -128,11 +128,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745161.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
 		public string SourceFullName
 		{
 			get
@@ -149,11 +149,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746467.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
 		public NetOffice.PowerPointApi.Enums.PpUpdateOption AutoUpdate
 		{
 			get
@@ -175,10 +175,10 @@ namespace NetOffice.PowerPointApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746176.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
 		public void Update()
 		{
 			object[] paramsArray = null;
@@ -186,10 +186,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 12, 14, 15
+		/// SupportByVersion PowerPoint 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746278.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 12,14,15,16)]
 		public void BreakLink()
 		{
 			object[] paramsArray = null;

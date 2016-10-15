@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using NetOffice;
@@ -22,9 +22,9 @@ namespace NetOffice.AccessApi
 
 	///<summary>
 	/// CoClass _PageHdrFtrInReport 
-	/// SupportByVersion Access, 9,10,11,12,14,15
+	/// SupportByVersion Access, 9,10,11,12,14,15,16
 	///</summary>
-	[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+	[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class _PageHdrFtrInReport : _Section,IEventBinding
 	{
@@ -100,7 +100,7 @@ namespace NetOffice.AccessApi
 		}
 		
 		///<summary>
-        ///creates a new instance of _PageHdrFtrInReport 
+        /// Creates a new instance of _PageHdrFtrInReport 
         ///</summary>		
 		public _PageHdrFtrInReport():base("Access._PageHdrFtrInReport")
 		{
@@ -108,7 +108,7 @@ namespace NetOffice.AccessApi
 		}
 		
 		///<summary>
-        ///creates a new instance of _PageHdrFtrInReport
+        /// Creates a new instance of _PageHdrFtrInReport
         ///</summary>
         ///<param name="progId">registered ProgID</param>
 		public _PageHdrFtrInReport(string progId):base(progId)
@@ -121,12 +121,12 @@ namespace NetOffice.AccessApi
 		#region Static CoClass Methods
 
 		/// <summary>
-        /// returns all running Access._PageHdrFtrInReport objects from the running object table(ROT)
+        /// Returns all running Access._PageHdrFtrInReport objects from the environment/system
         /// </summary>
         /// <returns>an Access._PageHdrFtrInReport array</returns>
 		public static NetOffice.AccessApi._PageHdrFtrInReport[] GetActiveInstances()
 		{		
-			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("Access","_PageHdrFtrInReport");
+			IDisposableEnumeration proxyList = NetOffice.ProxyService.GetActiveInstances("Access","_PageHdrFtrInReport");
 			NetRuntimeSystem.Collections.Generic.List<NetOffice.AccessApi._PageHdrFtrInReport> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.AccessApi._PageHdrFtrInReport>();
 			foreach(object proxy in proxyList)
 				resultList.Add( new NetOffice.AccessApi._PageHdrFtrInReport(null, proxy) );
@@ -134,12 +134,12 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-        /// returns a running Access._PageHdrFtrInReport object from the running object table(ROT). the method takes the first element from the table
+        /// Returns a running Access._PageHdrFtrInReport object from the environment/system.
         /// </summary>
         /// <returns>an Access._PageHdrFtrInReport object or null</returns>
 		public static NetOffice.AccessApi._PageHdrFtrInReport GetActiveInstance()
 		{
-			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Access","_PageHdrFtrInReport", false);
+			object proxy  = NetOffice.ProxyService.GetActiveInstance("Access","_PageHdrFtrInReport", false);
 			if(null != proxy)
 				return new NetOffice.AccessApi._PageHdrFtrInReport(null, proxy);
 			else
@@ -147,13 +147,13 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-        /// returns a running Access._PageHdrFtrInReport object from the running object table(ROT).  the method takes the first element from the table
+        /// Returns a running Access._PageHdrFtrInReport object from the environment/system. 
         /// </summary>
 	    /// <param name="throwOnError">throw an exception if no object was found</param>
         /// <returns>an Access._PageHdrFtrInReport object or null</returns>
 		public static NetOffice.AccessApi._PageHdrFtrInReport GetActiveInstance(bool throwOnError)
 		{
-			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Access","_PageHdrFtrInReport", throwOnError);
+			object proxy  = NetOffice.ProxyService.GetActiveInstance("Access","_PageHdrFtrInReport", throwOnError);
 			if(null != proxy)
 				return new NetOffice.AccessApi._PageHdrFtrInReport(null, proxy);
 			else
@@ -164,14 +164,14 @@ namespace NetOffice.AccessApi
 		#region Events
 
 		/// <summary>
-		/// SupportByVersion Access, 9,10,11,12,14,15
+		/// SupportByVersion Access, 9,10,11,12,14,15,16
 		/// </summary>
 		private event _PageHdrFtrInReport_FormatEventHandler _FormatEvent;
 
 		/// <summary>
-		/// SupportByVersion Access 9 10 11 12 14 15
+		/// SupportByVersion Access 9 10 11 12 14 15,16
 		/// </summary>
-		[SupportByVersion("Access", 9,10,11,12,14,15)]
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public event _PageHdrFtrInReport_FormatEventHandler FormatEvent
 		{
 			add
@@ -186,14 +186,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access, 9,10,11,12,14,15
+		/// SupportByVersion Access, 9,10,11,12,14,15,16
 		/// </summary>
 		private event _PageHdrFtrInReport_PrintEventHandler _PrintEvent;
 
 		/// <summary>
-		/// SupportByVersion Access 9 10 11 12 14 15
+		/// SupportByVersion Access 9 10 11 12 14 15,16
 		/// </summary>
-		[SupportByVersion("Access", 9,10,11,12,14,15)]
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public event _PageHdrFtrInReport_PrintEventHandler PrintEvent
 		{
 			add
@@ -208,14 +208,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access, 12,14,15
+		/// SupportByVersion Access, 12,14,15,16
 		/// </summary>
 		private event _PageHdrFtrInReport_ClickEventHandler _ClickEvent;
 
 		/// <summary>
-		/// SupportByVersion Access 12 14 15
+		/// SupportByVersion Access 12 14 15,16
 		/// </summary>
-		[SupportByVersion("Access", 12,14,15)]
+		[SupportByVersion("Access", 12,14,15,16)]
 		public event _PageHdrFtrInReport_ClickEventHandler ClickEvent
 		{
 			add
@@ -230,14 +230,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access, 12,14,15
+		/// SupportByVersion Access, 12,14,15,16
 		/// </summary>
 		private event _PageHdrFtrInReport_DblClickEventHandler _DblClickEvent;
 
 		/// <summary>
-		/// SupportByVersion Access 12 14 15
+		/// SupportByVersion Access 12 14 15,16
 		/// </summary>
-		[SupportByVersion("Access", 12,14,15)]
+		[SupportByVersion("Access", 12,14,15,16)]
 		public event _PageHdrFtrInReport_DblClickEventHandler DblClickEvent
 		{
 			add
@@ -252,14 +252,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access, 12,14,15
+		/// SupportByVersion Access, 12,14,15,16
 		/// </summary>
 		private event _PageHdrFtrInReport_MouseDownEventHandler _MouseDownEvent;
 
 		/// <summary>
-		/// SupportByVersion Access 12 14 15
+		/// SupportByVersion Access 12 14 15,16
 		/// </summary>
-		[SupportByVersion("Access", 12,14,15)]
+		[SupportByVersion("Access", 12,14,15,16)]
 		public event _PageHdrFtrInReport_MouseDownEventHandler MouseDownEvent
 		{
 			add
@@ -274,14 +274,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access, 12,14,15
+		/// SupportByVersion Access, 12,14,15,16
 		/// </summary>
 		private event _PageHdrFtrInReport_MouseMoveEventHandler _MouseMoveEvent;
 
 		/// <summary>
-		/// SupportByVersion Access 12 14 15
+		/// SupportByVersion Access 12 14 15,16
 		/// </summary>
-		[SupportByVersion("Access", 12,14,15)]
+		[SupportByVersion("Access", 12,14,15,16)]
 		public event _PageHdrFtrInReport_MouseMoveEventHandler MouseMoveEvent
 		{
 			add
@@ -296,14 +296,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access, 12,14,15
+		/// SupportByVersion Access, 12,14,15,16
 		/// </summary>
 		private event _PageHdrFtrInReport_MouseUpEventHandler _MouseUpEvent;
 
 		/// <summary>
-		/// SupportByVersion Access 12 14 15
+		/// SupportByVersion Access 12 14 15,16
 		/// </summary>
-		[SupportByVersion("Access", 12,14,15)]
+		[SupportByVersion("Access", 12,14,15,16)]
 		public event _PageHdrFtrInReport_MouseUpEventHandler MouseUpEvent
 		{
 			add
@@ -318,14 +318,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access, 12,14,15
+		/// SupportByVersion Access, 12,14,15,16
 		/// </summary>
 		private event _PageHdrFtrInReport_PaintEventHandler _PaintEvent;
 
 		/// <summary>
-		/// SupportByVersion Access 12 14 15
+		/// SupportByVersion Access 12 14 15,16
 		/// </summary>
-		[SupportByVersion("Access", 12,14,15)]
+		[SupportByVersion("Access", 12,14,15,16)]
 		public event _PageHdrFtrInReport_PaintEventHandler PaintEvent
 		{
 			add
@@ -344,7 +344,7 @@ namespace NetOffice.AccessApi
 	    #region IEventBinding Member
         
 		/// <summary>
-        /// creates active sink helper
+        /// Creates active sink helper
         /// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public void CreateEventBridge()
@@ -372,6 +372,9 @@ namespace NetOffice.AccessApi
 			} 
         }
 
+        /// <summary>
+        /// The instance use currently an event listener 
+        /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public bool EventBridgeInitialized
         {
@@ -380,7 +383,10 @@ namespace NetOffice.AccessApi
                 return (null != _connectPoint);
             }
         }
-        
+
+        /// <summary>
+        ///  The instance has currently one or more event recipients 
+        /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public bool HasEventRecipients()       
         {
@@ -400,6 +406,9 @@ namespace NetOffice.AccessApi
 			return false;
         }
         
+        /// <summary>
+        /// Target methods from its actual event recipients
+        /// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public Delegate[] GetEventRecipients(string eventName)
         {
@@ -419,7 +428,10 @@ namespace NetOffice.AccessApi
             else
                 return new Delegate[0];
         }
-
+       
+        /// <summary>
+        /// Returns the current count of event recipients
+        /// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public int GetCountOfEventRecipients(string eventName)
         {
@@ -438,8 +450,14 @@ namespace NetOffice.AccessApi
             }
             else
                 return 0;
-        }
-
+           }
+        
+        /// <summary>
+        /// Raise an instance event
+        /// </summary>
+        /// <param name="eventName">name of the event without 'Event' at the end</param>
+        /// <param name="paramsArray">custom arguments for the event</param>
+        /// <returns>count of called event recipients</returns>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public int RaiseCustomEvent(string eventName, ref object[] paramsArray)
 		{
@@ -471,6 +489,9 @@ namespace NetOffice.AccessApi
                 return 0;
 		}
 
+        /// <summary>
+        /// Stop listening events for the instance
+        /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public void DisposeEventBridge()
         {

@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using NetRuntimeSystem = System;
 using System.Runtime.InteropServices;
 using System.Runtime.CompilerServices;
@@ -10,10 +10,10 @@ namespace NetOffice.PowerPointApi
 {
 	///<summary>
 	/// DispatchInterface ChartFont 
-	/// SupportByVersion PowerPoint, 14,15
+	/// SupportByVersion PowerPoint, 14,15,16
 	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744113.aspx
 	///</summary>
-	[SupportByVersionAttribute("PowerPoint", 14,15)]
+	[SupportByVersionAttribute("PowerPoint", 14,15,16)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class ChartFont : COMObject
 	{
@@ -93,11 +93,11 @@ namespace NetOffice.PowerPointApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 14, 15
+		/// SupportByVersion PowerPoint 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744277.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14,15)]
+		[SupportByVersionAttribute("PowerPoint", 14,15,16)]
 		public object Background
 		{
 			get
@@ -122,11 +122,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 14, 15
+		/// SupportByVersion PowerPoint 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744994.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14,15)]
+		[SupportByVersionAttribute("PowerPoint", 14,15,16)]
 		public object Bold
 		{
 			get
@@ -151,11 +151,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 14, 15
+		/// SupportByVersion PowerPoint 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746258.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14,15)]
+		[SupportByVersionAttribute("PowerPoint", 14,15,16)]
 		public object Color
 		{
 			get
@@ -180,11 +180,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 14, 15
+		/// SupportByVersion PowerPoint 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744369.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14,15)]
+		[SupportByVersionAttribute("PowerPoint", 14,15,16)]
 		public object ColorIndex
 		{
 			get
@@ -209,11 +209,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 14, 15
+		/// SupportByVersion PowerPoint 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746054.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14,15)]
+		[SupportByVersionAttribute("PowerPoint", 14,15,16)]
 		public object FontStyle
 		{
 			get
@@ -238,11 +238,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 14, 15
+		/// SupportByVersion PowerPoint 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746211.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14,15)]
+		[SupportByVersionAttribute("PowerPoint", 14,15,16)]
 		public object Italic
 		{
 			get
@@ -267,11 +267,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 14, 15
+		/// SupportByVersion PowerPoint 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745688.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14,15)]
+		[SupportByVersionAttribute("PowerPoint", 14,15,16)]
 		public object Name
 		{
 			get
@@ -296,10 +296,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 14, 15
+		/// SupportByVersion PowerPoint 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14,15)]
+		[SupportByVersionAttribute("PowerPoint", 14,15,16)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public object OutlineFont
 		{
@@ -325,10 +325,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 14, 15
+		/// SupportByVersion PowerPoint 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14,15)]
+		[SupportByVersionAttribute("PowerPoint", 14,15,16)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public object Shadow
 		{
@@ -354,11 +354,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 14, 15
+		/// SupportByVersion PowerPoint 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745279.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14,15)]
+		[SupportByVersionAttribute("PowerPoint", 14,15,16)]
 		public object Size
 		{
 			get
@@ -383,11 +383,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 14, 15
+		/// SupportByVersion PowerPoint 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744034.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14,15)]
+		[SupportByVersionAttribute("PowerPoint", 14,15,16)]
 		public object Strikethrough
 		{
 			get
@@ -412,11 +412,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 14, 15
+		/// SupportByVersion PowerPoint 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744759.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14,15)]
+		[SupportByVersionAttribute("PowerPoint", 14,15,16)]
 		public object Subscript
 		{
 			get
@@ -441,11 +441,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 14, 15
+		/// SupportByVersion PowerPoint 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj229430.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14,15)]
+		[SupportByVersionAttribute("PowerPoint", 14,15,16)]
 		public object Superscript
 		{
 			get
@@ -470,11 +470,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 14, 15
+		/// SupportByVersion PowerPoint 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746011.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14,15)]
+		[SupportByVersionAttribute("PowerPoint", 14,15,16)]
 		public object Underline
 		{
 			get
@@ -499,11 +499,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 14, 15
+		/// SupportByVersion PowerPoint 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746765.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14,15)]
+		[SupportByVersionAttribute("PowerPoint", 14,15,16)]
 		public Int32 Creator
 		{
 			get
@@ -515,12 +515,12 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 14, 15
+		/// SupportByVersion PowerPoint 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744260.aspx
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14,15)]
+		[SupportByVersionAttribute("PowerPoint", 14,15,16)]
 		public object Parent
 		{
 			get
@@ -533,11 +533,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 14, 15
+		/// SupportByVersion PowerPoint 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746767.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14,15)]
+		[SupportByVersionAttribute("PowerPoint", 14,15,16)]
 		public NetOffice.PowerPointApi.Application Application
 		{
 			get

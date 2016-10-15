@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using NetRuntimeSystem = System;
 using System.Runtime.InteropServices;
 using System.Runtime.CompilerServices;
@@ -10,10 +10,10 @@ namespace NetOffice.ExcelApi
 {
 	///<summary>
 	/// DispatchInterface WorksheetDataConnection 
-	/// SupportByVersion Excel, 15
+	/// SupportByVersion Excel, 15, 16
 	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj227338.aspx
 	///</summary>
-	[SupportByVersionAttribute("Excel", 15)]
+	[SupportByVersionAttribute("Excel", 15, 16)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class WorksheetDataConnection : COMObject
 	{
@@ -93,11 +93,11 @@ namespace NetOffice.ExcelApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion Excel 15
+		/// SupportByVersion Excel 15,16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj230228.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 15)]
+		[SupportByVersionAttribute("Excel", 15, 16)]
 		public NetOffice.ExcelApi.Application Application
 		{
 			get
@@ -110,11 +110,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 15
+		/// SupportByVersion Excel 15,16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj231903.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 15)]
+		[SupportByVersionAttribute("Excel", 15, 16)]
 		public NetOffice.ExcelApi.Enums.XlCreator Creator
 		{
 			get
@@ -127,12 +127,12 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 15
+		/// SupportByVersion Excel 15,16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj230747.aspx
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 15)]
+		[SupportByVersionAttribute("Excel", 15, 16)]
 		public object Parent
 		{
 			get
@@ -145,11 +145,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 15
+		/// SupportByVersion Excel 15,16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj229618.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 15)]
+		[SupportByVersionAttribute("Excel", 15, 16)]
 		public object Connection
 		{
 			get
@@ -169,11 +169,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 15
+		/// SupportByVersion Excel 15,16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj229783.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 15)]
+		[SupportByVersionAttribute("Excel", 15, 16)]
 		public object CommandText
 		{
 			get
@@ -198,11 +198,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 15
+		/// SupportByVersion Excel 15,16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj231082.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 15)]
+		[SupportByVersionAttribute("Excel", 15, 16)]
 		public NetOffice.ExcelApi.Enums.XlCmdType CommandType
 		{
 			get

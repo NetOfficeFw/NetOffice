@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using NetRuntimeSystem = System;
 using System.Runtime.InteropServices;
 using System.Runtime.CompilerServices;
@@ -10,10 +10,10 @@ namespace NetOffice.WordApi
 {
 	///<summary>
 	/// DispatchInterface LinkFormat 
-	/// SupportByVersion Word, 9,10,11,12,14,15
+	/// SupportByVersion Word, 9,10,11,12,14,15,16
 	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838155.aspx
 	///</summary>
-	[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
+	[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class LinkFormat : COMObject
 	{
@@ -93,11 +93,11 @@ namespace NetOffice.WordApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822671.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.Application Application
 		{
 			get
@@ -110,11 +110,11 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838467.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
 		public Int32 Creator
 		{
 			get
@@ -126,12 +126,12 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195988.aspx
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
 		public object Parent
 		{
 			get
@@ -144,11 +144,11 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193734.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
 		public bool AutoUpdate
 		{
 			get
@@ -165,11 +165,11 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff191947.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
 		public string SourceName
 		{
 			get
@@ -181,11 +181,11 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837939.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
 		public string SourcePath
 		{
 			get
@@ -197,11 +197,11 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845741.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
 		public bool Locked
 		{
 			get
@@ -218,11 +218,11 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836043.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.Enums.WdLinkType Type
 		{
 			get
@@ -235,11 +235,11 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835769.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
 		public string SourceFullName
 		{
 			get
@@ -256,11 +256,11 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196519.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
 		public bool SavePictureWithDocument
 		{
 			get
@@ -281,10 +281,10 @@ namespace NetOffice.WordApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff191866.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
 		public void BreakLink()
 		{
 			object[] paramsArray = null;
@@ -292,10 +292,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff841003.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
 		public void Update()
 		{
 			object[] paramsArray = null;

@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using NetOffice;
@@ -39,10 +39,10 @@ namespace NetOffice.AccessApi
 
 	///<summary>
 	/// CoClass Report 
-	/// SupportByVersion Access, 9,10,11,12,14,15
+	/// SupportByVersion Access, 9,10,11,12,14,15,16
 	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195583.aspx
 	///</summary>
-	[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+	[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class Report : _Report3,IEventBinding
 	{
@@ -118,7 +118,7 @@ namespace NetOffice.AccessApi
 		}
 		
 		///<summary>
-        ///creates a new instance of Report 
+        /// Creates a new instance of Report 
         ///</summary>		
 		public Report():base("Access.Report")
 		{
@@ -126,7 +126,7 @@ namespace NetOffice.AccessApi
 		}
 		
 		///<summary>
-        ///creates a new instance of Report
+        /// Creates a new instance of Report
         ///</summary>
         ///<param name="progId">registered ProgID</param>
 		public Report(string progId):base(progId)
@@ -139,12 +139,12 @@ namespace NetOffice.AccessApi
 		#region Static CoClass Methods
 
 		/// <summary>
-        /// returns all running Access.Report objects from the running object table(ROT)
+        /// Returns all running Access.Report objects from the environment/system
         /// </summary>
         /// <returns>an Access.Report array</returns>
 		public static NetOffice.AccessApi.Report[] GetActiveInstances()
 		{		
-			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("Access","Report");
+			IDisposableEnumeration proxyList = NetOffice.ProxyService.GetActiveInstances("Access","Report");
 			NetRuntimeSystem.Collections.Generic.List<NetOffice.AccessApi.Report> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.AccessApi.Report>();
 			foreach(object proxy in proxyList)
 				resultList.Add( new NetOffice.AccessApi.Report(null, proxy) );
@@ -152,12 +152,12 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-        /// returns a running Access.Report object from the running object table(ROT). the method takes the first element from the table
+        /// Returns a running Access.Report object from the environment/system.
         /// </summary>
         /// <returns>an Access.Report object or null</returns>
 		public static NetOffice.AccessApi.Report GetActiveInstance()
 		{
-			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Access","Report", false);
+			object proxy  = NetOffice.ProxyService.GetActiveInstance("Access","Report", false);
 			if(null != proxy)
 				return new NetOffice.AccessApi.Report(null, proxy);
 			else
@@ -165,13 +165,13 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-        /// returns a running Access.Report object from the running object table(ROT).  the method takes the first element from the table
+        /// Returns a running Access.Report object from the environment/system. 
         /// </summary>
 	    /// <param name="throwOnError">throw an exception if no object was found</param>
         /// <returns>an Access.Report object or null</returns>
 		public static NetOffice.AccessApi.Report GetActiveInstance(bool throwOnError)
 		{
-			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Access","Report", throwOnError);
+			object proxy  = NetOffice.ProxyService.GetActiveInstance("Access","Report", throwOnError);
 			if(null != proxy)
 				return new NetOffice.AccessApi.Report(null, proxy);
 			else
@@ -182,15 +182,15 @@ namespace NetOffice.AccessApi
 		#region Events
 
 		/// <summary>
-		/// SupportByVersion Access, 9,10,11,12,14,15
+		/// SupportByVersion Access, 9,10,11,12,14,15,16
 		/// </summary>
 		private event Report_OpenEventHandler _OpenEvent;
 
 		/// <summary>
-		/// SupportByVersion Access 9 10 11 12 14 15
+		/// SupportByVersion Access 9 10 11 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff834749.aspx </remarks>
-		[SupportByVersion("Access", 9,10,11,12,14,15)]
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public event Report_OpenEventHandler OpenEvent
 		{
 			add
@@ -205,15 +205,15 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access, 9,10,11,12,14,15
+		/// SupportByVersion Access, 9,10,11,12,14,15,16
 		/// </summary>
 		private event Report_CloseEventHandler _CloseEvent;
 
 		/// <summary>
-		/// SupportByVersion Access 9 10 11 12 14 15
+		/// SupportByVersion Access 9 10 11 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193942.aspx </remarks>
-		[SupportByVersion("Access", 9,10,11,12,14,15)]
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public event Report_CloseEventHandler CloseEvent
 		{
 			add
@@ -228,15 +228,15 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access, 9,10,11,12,14,15
+		/// SupportByVersion Access, 9,10,11,12,14,15,16
 		/// </summary>
 		private event Report_ActivateEventHandler _ActivateEvent;
 
 		/// <summary>
-		/// SupportByVersion Access 9 10 11 12 14 15
+		/// SupportByVersion Access 9 10 11 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194215.aspx </remarks>
-		[SupportByVersion("Access", 9,10,11,12,14,15)]
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public event Report_ActivateEventHandler ActivateEvent
 		{
 			add
@@ -251,15 +251,15 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access, 9,10,11,12,14,15
+		/// SupportByVersion Access, 9,10,11,12,14,15,16
 		/// </summary>
 		private event Report_DeactivateEventHandler _DeactivateEvent;
 
 		/// <summary>
-		/// SupportByVersion Access 9 10 11 12 14 15
+		/// SupportByVersion Access 9 10 11 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845512.aspx </remarks>
-		[SupportByVersion("Access", 9,10,11,12,14,15)]
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public event Report_DeactivateEventHandler DeactivateEvent
 		{
 			add
@@ -274,15 +274,15 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access, 9,10,11,12,14,15
+		/// SupportByVersion Access, 9,10,11,12,14,15,16
 		/// </summary>
 		private event Report_ErrorEventHandler _ErrorEvent;
 
 		/// <summary>
-		/// SupportByVersion Access 9 10 11 12 14 15
+		/// SupportByVersion Access 9 10 11 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff844940.aspx </remarks>
-		[SupportByVersion("Access", 9,10,11,12,14,15)]
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public event Report_ErrorEventHandler ErrorEvent
 		{
 			add
@@ -297,15 +297,15 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access, 9,10,11,12,14,15
+		/// SupportByVersion Access, 9,10,11,12,14,15,16
 		/// </summary>
 		private event Report_NoDataEventHandler _NoDataEvent;
 
 		/// <summary>
-		/// SupportByVersion Access 9 10 11 12 14 15
+		/// SupportByVersion Access 9 10 11 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837041.aspx </remarks>
-		[SupportByVersion("Access", 9,10,11,12,14,15)]
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public event Report_NoDataEventHandler NoDataEvent
 		{
 			add
@@ -320,15 +320,15 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access, 9,10,11,12,14,15
+		/// SupportByVersion Access, 9,10,11,12,14,15,16
 		/// </summary>
 		private event Report_PageEventHandler _PageEvent;
 
 		/// <summary>
-		/// SupportByVersion Access 9 10 11 12 14 15
+		/// SupportByVersion Access 9 10 11 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff823057.aspx </remarks>
-		[SupportByVersion("Access", 9,10,11,12,14,15)]
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public event Report_PageEventHandler PageEvent
 		{
 			add
@@ -343,15 +343,15 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access, 12,14,15
+		/// SupportByVersion Access, 12,14,15,16
 		/// </summary>
 		private event Report_CurrentEventHandler _CurrentEvent;
 
 		/// <summary>
-		/// SupportByVersion Access 12 14 15
+		/// SupportByVersion Access 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff821736.aspx </remarks>
-		[SupportByVersion("Access", 12,14,15)]
+		[SupportByVersion("Access", 12,14,15,16)]
 		public event Report_CurrentEventHandler CurrentEvent
 		{
 			add
@@ -366,15 +366,15 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access, 12,14,15
+		/// SupportByVersion Access, 12,14,15,16
 		/// </summary>
 		private event Report_LoadEventHandler _LoadEvent;
 
 		/// <summary>
-		/// SupportByVersion Access 12 14 15
+		/// SupportByVersion Access 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197739.aspx </remarks>
-		[SupportByVersion("Access", 12,14,15)]
+		[SupportByVersion("Access", 12,14,15,16)]
 		public event Report_LoadEventHandler LoadEvent
 		{
 			add
@@ -389,15 +389,15 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access, 12,14,15
+		/// SupportByVersion Access, 12,14,15,16
 		/// </summary>
 		private event Report_ResizeEventHandler _ResizeEvent;
 
 		/// <summary>
-		/// SupportByVersion Access 12 14 15
+		/// SupportByVersion Access 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff834460.aspx </remarks>
-		[SupportByVersion("Access", 12,14,15)]
+		[SupportByVersion("Access", 12,14,15,16)]
 		public event Report_ResizeEventHandler ResizeEvent
 		{
 			add
@@ -412,15 +412,15 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access, 12,14,15
+		/// SupportByVersion Access, 12,14,15,16
 		/// </summary>
 		private event Report_UnloadEventHandler _UnloadEvent;
 
 		/// <summary>
-		/// SupportByVersion Access 12 14 15
+		/// SupportByVersion Access 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff844928.aspx </remarks>
-		[SupportByVersion("Access", 12,14,15)]
+		[SupportByVersion("Access", 12,14,15,16)]
 		public event Report_UnloadEventHandler UnloadEvent
 		{
 			add
@@ -435,15 +435,15 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access, 12,14,15
+		/// SupportByVersion Access, 12,14,15,16
 		/// </summary>
 		private event Report_GotFocusEventHandler _GotFocusEvent;
 
 		/// <summary>
-		/// SupportByVersion Access 12 14 15
+		/// SupportByVersion Access 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195218.aspx </remarks>
-		[SupportByVersion("Access", 12,14,15)]
+		[SupportByVersion("Access", 12,14,15,16)]
 		public event Report_GotFocusEventHandler GotFocusEvent
 		{
 			add
@@ -458,15 +458,15 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access, 12,14,15
+		/// SupportByVersion Access, 12,14,15,16
 		/// </summary>
 		private event Report_LostFocusEventHandler _LostFocusEvent;
 
 		/// <summary>
-		/// SupportByVersion Access 12 14 15
+		/// SupportByVersion Access 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197321.aspx </remarks>
-		[SupportByVersion("Access", 12,14,15)]
+		[SupportByVersion("Access", 12,14,15,16)]
 		public event Report_LostFocusEventHandler LostFocusEvent
 		{
 			add
@@ -481,15 +481,15 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access, 12,14,15
+		/// SupportByVersion Access, 12,14,15,16
 		/// </summary>
 		private event Report_ClickEventHandler _ClickEvent;
 
 		/// <summary>
-		/// SupportByVersion Access 12 14 15
+		/// SupportByVersion Access 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192496.aspx </remarks>
-		[SupportByVersion("Access", 12,14,15)]
+		[SupportByVersion("Access", 12,14,15,16)]
 		public event Report_ClickEventHandler ClickEvent
 		{
 			add
@@ -504,15 +504,15 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access, 12,14,15
+		/// SupportByVersion Access, 12,14,15,16
 		/// </summary>
 		private event Report_DblClickEventHandler _DblClickEvent;
 
 		/// <summary>
-		/// SupportByVersion Access 12 14 15
+		/// SupportByVersion Access 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835945.aspx </remarks>
-		[SupportByVersion("Access", 12,14,15)]
+		[SupportByVersion("Access", 12,14,15,16)]
 		public event Report_DblClickEventHandler DblClickEvent
 		{
 			add
@@ -527,15 +527,15 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access, 12,14,15
+		/// SupportByVersion Access, 12,14,15,16
 		/// </summary>
 		private event Report_MouseDownEventHandler _MouseDownEvent;
 
 		/// <summary>
-		/// SupportByVersion Access 12 14 15
+		/// SupportByVersion Access 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837216.aspx </remarks>
-		[SupportByVersion("Access", 12,14,15)]
+		[SupportByVersion("Access", 12,14,15,16)]
 		public event Report_MouseDownEventHandler MouseDownEvent
 		{
 			add
@@ -550,15 +550,15 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access, 12,14,15
+		/// SupportByVersion Access, 12,14,15,16
 		/// </summary>
 		private event Report_MouseMoveEventHandler _MouseMoveEvent;
 
 		/// <summary>
-		/// SupportByVersion Access 12 14 15
+		/// SupportByVersion Access 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822431.aspx </remarks>
-		[SupportByVersion("Access", 12,14,15)]
+		[SupportByVersion("Access", 12,14,15,16)]
 		public event Report_MouseMoveEventHandler MouseMoveEvent
 		{
 			add
@@ -573,15 +573,15 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access, 12,14,15
+		/// SupportByVersion Access, 12,14,15,16
 		/// </summary>
 		private event Report_MouseUpEventHandler _MouseUpEvent;
 
 		/// <summary>
-		/// SupportByVersion Access 12 14 15
+		/// SupportByVersion Access 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836025.aspx </remarks>
-		[SupportByVersion("Access", 12,14,15)]
+		[SupportByVersion("Access", 12,14,15,16)]
 		public event Report_MouseUpEventHandler MouseUpEvent
 		{
 			add
@@ -596,15 +596,15 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access, 12,14,15
+		/// SupportByVersion Access, 12,14,15,16
 		/// </summary>
 		private event Report_KeyDownEventHandler _KeyDownEvent;
 
 		/// <summary>
-		/// SupportByVersion Access 12 14 15
+		/// SupportByVersion Access 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822041.aspx </remarks>
-		[SupportByVersion("Access", 12,14,15)]
+		[SupportByVersion("Access", 12,14,15,16)]
 		public event Report_KeyDownEventHandler KeyDownEvent
 		{
 			add
@@ -619,15 +619,15 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access, 12,14,15
+		/// SupportByVersion Access, 12,14,15,16
 		/// </summary>
 		private event Report_KeyPressEventHandler _KeyPressEvent;
 
 		/// <summary>
-		/// SupportByVersion Access 12 14 15
+		/// SupportByVersion Access 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845166.aspx </remarks>
-		[SupportByVersion("Access", 12,14,15)]
+		[SupportByVersion("Access", 12,14,15,16)]
 		public event Report_KeyPressEventHandler KeyPressEvent
 		{
 			add
@@ -642,15 +642,15 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access, 12,14,15
+		/// SupportByVersion Access, 12,14,15,16
 		/// </summary>
 		private event Report_KeyUpEventHandler _KeyUpEvent;
 
 		/// <summary>
-		/// SupportByVersion Access 12 14 15
+		/// SupportByVersion Access 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194162.aspx </remarks>
-		[SupportByVersion("Access", 12,14,15)]
+		[SupportByVersion("Access", 12,14,15,16)]
 		public event Report_KeyUpEventHandler KeyUpEvent
 		{
 			add
@@ -665,15 +665,15 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access, 12,14,15
+		/// SupportByVersion Access, 12,14,15,16
 		/// </summary>
 		private event Report_TimerEventHandler _TimerEvent;
 
 		/// <summary>
-		/// SupportByVersion Access 12 14 15
+		/// SupportByVersion Access 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193962.aspx </remarks>
-		[SupportByVersion("Access", 12,14,15)]
+		[SupportByVersion("Access", 12,14,15,16)]
 		public event Report_TimerEventHandler TimerEvent
 		{
 			add
@@ -688,15 +688,15 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access, 12,14,15
+		/// SupportByVersion Access, 12,14,15,16
 		/// </summary>
 		private event Report_FilterEventHandler _FilterEvent;
 
 		/// <summary>
-		/// SupportByVersion Access 12 14 15
+		/// SupportByVersion Access 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845429.aspx </remarks>
-		[SupportByVersion("Access", 12,14,15)]
+		[SupportByVersion("Access", 12,14,15,16)]
 		public event Report_FilterEventHandler FilterEvent
 		{
 			add
@@ -711,15 +711,15 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access, 12,14,15
+		/// SupportByVersion Access, 12,14,15,16
 		/// </summary>
 		private event Report_ApplyFilterEventHandler _ApplyFilterEvent;
 
 		/// <summary>
-		/// SupportByVersion Access 12 14 15
+		/// SupportByVersion Access 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193193.aspx </remarks>
-		[SupportByVersion("Access", 12,14,15)]
+		[SupportByVersion("Access", 12,14,15,16)]
 		public event Report_ApplyFilterEventHandler ApplyFilterEvent
 		{
 			add
@@ -734,15 +734,15 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access, 12,14,15
+		/// SupportByVersion Access, 12,14,15,16
 		/// </summary>
 		private event Report_MouseWheelEventHandler _MouseWheelEvent;
 
 		/// <summary>
-		/// SupportByVersion Access 12 14 15
+		/// SupportByVersion Access 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff198093.aspx </remarks>
-		[SupportByVersion("Access", 12,14,15)]
+		[SupportByVersion("Access", 12,14,15,16)]
 		public event Report_MouseWheelEventHandler MouseWheelEvent
 		{
 			add
@@ -761,7 +761,7 @@ namespace NetOffice.AccessApi
 	    #region IEventBinding Member
         
 		/// <summary>
-        /// creates active sink helper
+        /// Creates active sink helper
         /// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public void CreateEventBridge()
@@ -789,6 +789,9 @@ namespace NetOffice.AccessApi
 			} 
         }
 
+        /// <summary>
+        /// The instance use currently an event listener 
+        /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public bool EventBridgeInitialized
         {
@@ -797,7 +800,10 @@ namespace NetOffice.AccessApi
                 return (null != _connectPoint);
             }
         }
-        
+
+        /// <summary>
+        ///  The instance has currently one or more event recipients 
+        /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public bool HasEventRecipients()       
         {
@@ -817,6 +823,9 @@ namespace NetOffice.AccessApi
 			return false;
         }
         
+        /// <summary>
+        /// Target methods from its actual event recipients
+        /// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public Delegate[] GetEventRecipients(string eventName)
         {
@@ -836,7 +845,10 @@ namespace NetOffice.AccessApi
             else
                 return new Delegate[0];
         }
-
+       
+        /// <summary>
+        /// Returns the current count of event recipients
+        /// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public int GetCountOfEventRecipients(string eventName)
         {
@@ -855,8 +867,14 @@ namespace NetOffice.AccessApi
             }
             else
                 return 0;
-        }
-
+           }
+        
+        /// <summary>
+        /// Raise an instance event
+        /// </summary>
+        /// <param name="eventName">name of the event without 'Event' at the end</param>
+        /// <param name="paramsArray">custom arguments for the event</param>
+        /// <returns>count of called event recipients</returns>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public int RaiseCustomEvent(string eventName, ref object[] paramsArray)
 		{
@@ -888,6 +906,9 @@ namespace NetOffice.AccessApi
                 return 0;
 		}
 
+        /// <summary>
+        /// Stop listening events for the instance
+        /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public void DisposeEventBridge()
         {

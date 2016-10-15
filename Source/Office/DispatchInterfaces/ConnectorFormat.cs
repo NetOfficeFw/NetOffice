@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using NetRuntimeSystem = System;
 using System.Runtime.InteropServices;
 using System.Runtime.CompilerServices;
@@ -10,9 +10,9 @@ namespace NetOffice.OfficeApi
 {
 	///<summary>
 	/// DispatchInterface ConnectorFormat 
-	/// SupportByVersion Office, 9,10,11,12,14,15
+	/// SupportByVersion Office, 9,10,11,12,14,15,16
 	///</summary>
-	[SupportByVersionAttribute("Office", 9,10,11,12,14,15)]
+	[SupportByVersionAttribute("Office", 9,10,11,12,14,15,16)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class ConnectorFormat : _IMsoDispObj
 	{
@@ -92,11 +92,11 @@ namespace NetOffice.OfficeApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion Office 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("Office", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Office", 9,10,11,12,14,15,16)]
 		public object Parent
 		{
 			get
@@ -109,10 +109,10 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Office", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Office", 9,10,11,12,14,15,16)]
 		public NetOffice.OfficeApi.Enums.MsoTriState BeginConnected
 		{
 			get
@@ -125,10 +125,10 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Office", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Office", 9,10,11,12,14,15,16)]
 		public NetOffice.OfficeApi.Shape BeginConnectedShape
 		{
 			get
@@ -141,10 +141,10 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Office", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Office", 9,10,11,12,14,15,16)]
 		public Int32 BeginConnectionSite
 		{
 			get
@@ -156,10 +156,10 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Office", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Office", 9,10,11,12,14,15,16)]
 		public NetOffice.OfficeApi.Enums.MsoTriState EndConnected
 		{
 			get
@@ -172,10 +172,10 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Office", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Office", 9,10,11,12,14,15,16)]
 		public NetOffice.OfficeApi.Shape EndConnectedShape
 		{
 			get
@@ -188,10 +188,10 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Office", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Office", 9,10,11,12,14,15,16)]
 		public Int32 EndConnectionSite
 		{
 			get
@@ -203,10 +203,10 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Office", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Office", 9,10,11,12,14,15,16)]
 		public NetOffice.OfficeApi.Enums.MsoConnectorType Type
 		{
 			get
@@ -228,12 +228,12 @@ namespace NetOffice.OfficeApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByVersion Office 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
 		/// 
 		/// </summary>
 		/// <param name="connectedShape">NetOffice.OfficeApi.Shape ConnectedShape</param>
 		/// <param name="connectionSite">Int32 ConnectionSite</param>
-		[SupportByVersionAttribute("Office", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Office", 9,10,11,12,14,15,16)]
 		public void BeginConnect(NetOffice.OfficeApi.Shape connectedShape, Int32 connectionSite)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(connectedShape, connectionSite);
@@ -241,10 +241,10 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
 		/// 
 		/// </summary>
-		[SupportByVersionAttribute("Office", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Office", 9,10,11,12,14,15,16)]
 		public void BeginDisconnect()
 		{
 			object[] paramsArray = null;
@@ -252,12 +252,12 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
 		/// 
 		/// </summary>
 		/// <param name="connectedShape">NetOffice.OfficeApi.Shape ConnectedShape</param>
 		/// <param name="connectionSite">Int32 ConnectionSite</param>
-		[SupportByVersionAttribute("Office", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Office", 9,10,11,12,14,15,16)]
 		public void EndConnect(NetOffice.OfficeApi.Shape connectedShape, Int32 connectionSite)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(connectedShape, connectionSite);
@@ -265,10 +265,10 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
 		/// 
 		/// </summary>
-		[SupportByVersionAttribute("Office", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Office", 9,10,11,12,14,15,16)]
 		public void EndDisconnect()
 		{
 			object[] paramsArray = null;

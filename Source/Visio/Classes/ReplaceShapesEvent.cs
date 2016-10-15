@@ -14,9 +14,9 @@ namespace NetOffice.VisioApi
 
 	///<summary>
 	/// CoClass ReplaceShapesEvent 
-	/// SupportByVersion Visio, 15
+	/// SupportByVersion Visio, 15, 16
 	///</summary>
-	[SupportByVersionAttribute("Visio", 15)]
+	[SupportByVersionAttribute("Visio", 15, 16)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class ReplaceShapesEvent : IVReplaceShapesEvent
 	{
@@ -90,7 +90,7 @@ namespace NetOffice.VisioApi
 		}
 		
 		///<summary>
-        ///creates a new instance of ReplaceShapesEvent 
+        /// Creates a new instance of ReplaceShapesEvent 
         ///</summary>		
 		public ReplaceShapesEvent():base("Visio.ReplaceShapesEvent")
 		{
@@ -98,7 +98,7 @@ namespace NetOffice.VisioApi
 		}
 		
 		///<summary>
-        ///creates a new instance of ReplaceShapesEvent
+        /// Creates a new instance of ReplaceShapesEvent
         ///</summary>
         ///<param name="progId">registered ProgID</param>
 		public ReplaceShapesEvent(string progId):base(progId)
@@ -111,12 +111,12 @@ namespace NetOffice.VisioApi
 		#region Static CoClass Methods
 
 		/// <summary>
-        /// returns all running Visio.ReplaceShapesEvent objects from the running object table(ROT)
+        /// Returns all running Visio.ReplaceShapesEvent objects from the environment/system
         /// </summary>
         /// <returns>an Visio.ReplaceShapesEvent array</returns>
 		public static NetOffice.VisioApi.ReplaceShapesEvent[] GetActiveInstances()
 		{		
-			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("Visio","ReplaceShapesEvent");
+			IDisposableEnumeration proxyList = NetOffice.ProxyService.GetActiveInstances("Visio","ReplaceShapesEvent");
 			NetRuntimeSystem.Collections.Generic.List<NetOffice.VisioApi.ReplaceShapesEvent> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.VisioApi.ReplaceShapesEvent>();
 			foreach(object proxy in proxyList)
 				resultList.Add( new NetOffice.VisioApi.ReplaceShapesEvent(null, proxy) );
@@ -124,12 +124,12 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-        /// returns a running Visio.ReplaceShapesEvent object from the running object table(ROT). the method takes the first element from the table
+        /// Returns a running Visio.ReplaceShapesEvent object from the environment/system.
         /// </summary>
         /// <returns>an Visio.ReplaceShapesEvent object or null</returns>
 		public static NetOffice.VisioApi.ReplaceShapesEvent GetActiveInstance()
 		{
-			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Visio","ReplaceShapesEvent", false);
+			object proxy  = NetOffice.ProxyService.GetActiveInstance("Visio","ReplaceShapesEvent", false);
 			if(null != proxy)
 				return new NetOffice.VisioApi.ReplaceShapesEvent(null, proxy);
 			else
@@ -137,13 +137,13 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-        /// returns a running Visio.ReplaceShapesEvent object from the running object table(ROT).  the method takes the first element from the table
+        /// Returns a running Visio.ReplaceShapesEvent object from the environment/system. 
         /// </summary>
 	    /// <param name="throwOnError">throw an exception if no object was found</param>
         /// <returns>an Visio.ReplaceShapesEvent object or null</returns>
 		public static NetOffice.VisioApi.ReplaceShapesEvent GetActiveInstance(bool throwOnError)
 		{
-			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Visio","ReplaceShapesEvent", throwOnError);
+			object proxy  = NetOffice.ProxyService.GetActiveInstance("Visio","ReplaceShapesEvent", throwOnError);
 			if(null != proxy)
 				return new NetOffice.VisioApi.ReplaceShapesEvent(null, proxy);
 			else
@@ -158,7 +158,7 @@ namespace NetOffice.VisioApi
 	    #region IEventBinding Member
         
 		/// <summary>
-        /// creates active sink helper
+        /// Creates active sink helper
         /// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public void CreateEventBridge()
@@ -175,6 +175,9 @@ namespace NetOffice.VisioApi
  
         }
 
+        /// <summary>
+        /// The instance use currently an event listener 
+        /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public bool EventBridgeInitialized
         {
@@ -183,7 +186,10 @@ namespace NetOffice.VisioApi
                 return (null != _connectPoint);
             }
         }
-        
+
+        /// <summary>
+        ///  The instance has currently one or more event recipients 
+        /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public bool HasEventRecipients()       
         {
@@ -203,6 +209,9 @@ namespace NetOffice.VisioApi
 			return false;
         }
         
+        /// <summary>
+        /// Target methods from its actual event recipients
+        /// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public Delegate[] GetEventRecipients(string eventName)
         {
@@ -222,7 +231,10 @@ namespace NetOffice.VisioApi
             else
                 return new Delegate[0];
         }
-
+       
+        /// <summary>
+        /// Returns the current count of event recipients
+        /// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public int GetCountOfEventRecipients(string eventName)
         {
@@ -241,8 +253,14 @@ namespace NetOffice.VisioApi
             }
             else
                 return 0;
-        }
-
+           }
+        
+        /// <summary>
+        /// Raise an instance event
+        /// </summary>
+        /// <param name="eventName">name of the event without 'Event' at the end</param>
+        /// <param name="paramsArray">custom arguments for the event</param>
+        /// <returns>count of called event recipients</returns>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public int RaiseCustomEvent(string eventName, ref object[] paramsArray)
 		{
@@ -274,6 +292,9 @@ namespace NetOffice.VisioApi
                 return 0;
 		}
 
+        /// <summary>
+        /// Stop listening events for the instance
+        /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public void DisposeEventBridge()
         {

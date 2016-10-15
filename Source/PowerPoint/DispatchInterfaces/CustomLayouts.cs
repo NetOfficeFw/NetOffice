@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using NetRuntimeSystem = System;
 using System.Runtime.InteropServices;
 using System.Runtime.CompilerServices;
@@ -10,10 +10,10 @@ namespace NetOffice.PowerPointApi
 {
 	///<summary>
 	/// DispatchInterface CustomLayouts 
-	/// SupportByVersion PowerPoint, 12,14,15
+	/// SupportByVersion PowerPoint, 12,14,15,16
 	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745764.aspx
 	///</summary>
-	[SupportByVersionAttribute("PowerPoint", 12,14,15)]
+	[SupportByVersionAttribute("PowerPoint", 12,14,15,16)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class CustomLayouts : Collection
 	{
@@ -93,11 +93,11 @@ namespace NetOffice.PowerPointApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 12, 14, 15
+		/// SupportByVersion PowerPoint 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744923.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 12,14,15,16)]
 		public NetOffice.PowerPointApi.Application Application
 		{
 			get
@@ -110,12 +110,12 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 12, 14, 15
+		/// SupportByVersion PowerPoint 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745625.aspx
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 12,14,15,16)]
 		public object Parent
 		{
 			get
@@ -132,11 +132,11 @@ namespace NetOffice.PowerPointApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 12, 14, 15
+		/// SupportByVersion PowerPoint 12, 14, 15, 16
 		/// 
 		/// </summary>
 		/// <param name="index">object Index</param>
-		[SupportByVersionAttribute("PowerPoint", 12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 12,14,15,16)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
 		public NetOffice.PowerPointApi.CustomLayout this[object index]
 		{
@@ -150,11 +150,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 12, 14, 15
+		/// SupportByVersion PowerPoint 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746342.aspx
 		/// </summary>
 		/// <param name="index">Int32 Index</param>
-		[SupportByVersionAttribute("PowerPoint", 12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 12,14,15,16)]
 		public NetOffice.PowerPointApi.CustomLayout Add(Int32 index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
@@ -164,11 +164,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 12, 14, 15
+		/// SupportByVersion PowerPoint 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746369.aspx
 		/// </summary>
 		/// <param name="index">optional Int32 Index = -1</param>
-		[SupportByVersionAttribute("PowerPoint", 12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 12,14,15,16)]
 		public NetOffice.PowerPointApi.CustomLayout Paste(object index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
@@ -178,11 +178,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 12, 14, 15
+		/// SupportByVersion PowerPoint 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746369.aspx
 		/// </summary>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("PowerPoint", 12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 12,14,15,16)]
 		public NetOffice.PowerPointApi.CustomLayout Paste()
 		{
 			object[] paramsArray = null;

@@ -53,31 +53,12 @@
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="NetOffice, Version=1.5.1.0, Culture=neutral, PublicKeyToken=297f57b43ae7c1de, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\Assemblies\Any CPU\NetOffice.dll</HintPath>
-    </Reference>
-    <Reference Include="OfficeApi, Version=1.5.1.0, Culture=neutral, PublicKeyToken=a39beb0835c43c8e, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <EmbedInteropTypes>False</EmbedInteropTypes>
-      <HintPath>..\..\..\..\Assemblies\Any CPU\OfficeApi.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
-    <Reference Include="VBIDEApi, Version=1.5.1.0, Culture=neutral, PublicKeyToken=931cec8882205047, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <EmbedInteropTypes>False</EmbedInteropTypes>
-      <HintPath>..\..\..\..\Assemblies\Any CPU\VBIDEApi.dll</HintPath>
-    </Reference>
-    <Reference Include="WordApi, Version=1.5.1.0, Culture=neutral, PublicKeyToken=f66d74591aaf8089, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <EmbedInteropTypes>False</EmbedInteropTypes>
-      <HintPath>..\..\..\..\Assemblies\Any CPU\WordApi.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Form1.cs">
@@ -128,6 +109,24 @@
       <ProductName>Windows Installer 3.1</ProductName>
       <Install>true</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\Source\NetOffice\NetOffice.csproj">
+      <Project>{65442327-d01f-4ecb-8c39-6d5c7622a80f}</Project>
+      <Name>NetOffice</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Source\Office\OfficeApi.csproj">
+      <Project>{79b19a83-a79f-446c-9b7e-9b595e918e40}</Project>
+      <Name>OfficeApi</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Source\VBIDE\VBIDEApi.csproj">
+      <Project>{acd7db2e-ddb2-4bbb-bdb9-c2fd953585c4}</Project>
+      <Name>VBIDEApi</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Source\Word\WordApi.csproj">
+      <Project>{5c457066-d488-4bc1-b7f8-1e90f2a80648}</Project>
+      <Name>WordApi</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using NetRuntimeSystem = System;
 using System.Runtime.InteropServices;
 using System.Runtime.CompilerServices;
@@ -11,10 +11,10 @@ namespace NetOffice.OfficeApi
 {
 	///<summary>
 	/// DispatchInterface PickerResults 
-	/// SupportByVersion Office, 14,15
+	/// SupportByVersion Office, 14,15,16
 	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff864136.aspx
 	///</summary>
-	[SupportByVersionAttribute("Office", 14,15)]
+	[SupportByVersionAttribute("Office", 14,15,16)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class PickerResults : _IMsoDispObj ,IEnumerable<NetOffice.OfficeApi.PickerResult>
 	{
@@ -94,11 +94,11 @@ namespace NetOffice.OfficeApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion Office 14, 15
+		/// SupportByVersion Office 14, 15, 16
 		/// Get
 		/// </summary>
 		/// <param name="index">Int32 Index</param>
-		[SupportByVersionAttribute("Office", 14,15)]
+		[SupportByVersionAttribute("Office", 14,15,16)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
 		public NetOffice.OfficeApi.PickerResult this[Int32 index]
 		{
@@ -112,11 +112,11 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 14, 15
+		/// SupportByVersion Office 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff865190.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Office", 14,15)]
+		[SupportByVersionAttribute("Office", 14,15,16)]
 		public Int32 Count
 		{
 			get
@@ -132,7 +132,7 @@ namespace NetOffice.OfficeApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByVersion Office 14, 15
+		/// SupportByVersion Office 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff864663.aspx
 		/// </summary>
 		/// <param name="id">string Id</param>
@@ -141,7 +141,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="sIPId">optional string SIPId = </param>
 		/// <param name="itemData">optional object ItemData</param>
 		/// <param name="subItems">optional object SubItems</param>
-		[SupportByVersionAttribute("Office", 14,15)]
+		[SupportByVersionAttribute("Office", 14,15,16)]
 		public NetOffice.OfficeApi.PickerResult Add(string id, string displayName, string type, object sIPId, object itemData, object subItems)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(id, displayName, type, sIPId, itemData, subItems);
@@ -151,14 +151,14 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 14, 15
+		/// SupportByVersion Office 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff864663.aspx
 		/// </summary>
 		/// <param name="id">string Id</param>
 		/// <param name="displayName">string DisplayName</param>
 		/// <param name="type">string Type</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Office", 14,15)]
+		[SupportByVersionAttribute("Office", 14,15,16)]
 		public NetOffice.OfficeApi.PickerResult Add(string id, string displayName, string type)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(id, displayName, type);
@@ -168,7 +168,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 14, 15
+		/// SupportByVersion Office 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff864663.aspx
 		/// </summary>
 		/// <param name="id">string Id</param>
@@ -176,7 +176,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="type">string Type</param>
 		/// <param name="sIPId">optional string SIPId = </param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Office", 14,15)]
+		[SupportByVersionAttribute("Office", 14,15,16)]
 		public NetOffice.OfficeApi.PickerResult Add(string id, string displayName, string type, object sIPId)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(id, displayName, type, sIPId);
@@ -186,7 +186,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 14, 15
+		/// SupportByVersion Office 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff864663.aspx
 		/// </summary>
 		/// <param name="id">string Id</param>
@@ -195,7 +195,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="sIPId">optional string SIPId = </param>
 		/// <param name="itemData">optional object ItemData</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Office", 14,15)]
+		[SupportByVersionAttribute("Office", 14,15,16)]
 		public NetOffice.OfficeApi.PickerResult Add(string id, string displayName, string type, object sIPId, object itemData)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(id, displayName, type, sIPId, itemData);
@@ -209,9 +209,9 @@ namespace NetOffice.OfficeApi
        #region IEnumerable<NetOffice.OfficeApi.PickerResult> Member
         
         /// <summary>
-		/// SupportByVersionAttribute Office, 14,15
+		/// SupportByVersionAttribute Office, 14,15,16
 		/// </summary>
-		[SupportByVersionAttribute("Office", 14,15)]
+		[SupportByVersionAttribute("Office", 14,15,16)]
        public IEnumerator<NetOffice.OfficeApi.PickerResult> GetEnumerator()  
        {
            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
@@ -224,9 +224,9 @@ namespace NetOffice.OfficeApi
 		#region IEnumerable Members
        
 		/// <summary>
-		/// SupportByVersionAttribute Office, 14,15
+		/// SupportByVersionAttribute Office, 14,15,16
 		/// </summary>
-		[SupportByVersionAttribute("Office", 14,15)]
+		[SupportByVersionAttribute("Office", 14,15,16)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
 			return NetOffice.Utils.GetProxyEnumeratorAsProperty(this);

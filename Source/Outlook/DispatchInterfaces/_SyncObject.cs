@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using NetRuntimeSystem = System;
 using System.Runtime.InteropServices;
 using System.Runtime.CompilerServices;
@@ -10,9 +10,9 @@ namespace NetOffice.OutlookApi
 {
 	///<summary>
 	/// DispatchInterface _SyncObject 
-	/// SupportByVersion Outlook, 9,10,11,12,14,15
+	/// SupportByVersion Outlook, 9,10,11,12,14,15,16
 	///</summary>
-	[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15)]
+	[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15,16)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class _SyncObject : COMObject
 	{
@@ -92,11 +92,11 @@ namespace NetOffice.OutlookApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff861938.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15,16)]
 		public NetOffice.OutlookApi._Application Application
 		{
 			get
@@ -109,11 +109,11 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff860311.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15,16)]
 		public NetOffice.OutlookApi.Enums.OlObjectClass Class
 		{
 			get
@@ -126,11 +126,11 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff868017.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15,16)]
 		public NetOffice.OutlookApi._NameSpace Session
 		{
 			get
@@ -143,12 +143,12 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff868226.aspx
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15,16)]
 		public object Parent
 		{
 			get
@@ -161,11 +161,11 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff861283.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15,16)]
 		public string Name
 		{
 			get
@@ -181,10 +181,10 @@ namespace NetOffice.OutlookApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff863925.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15,16)]
 		public void Start()
 		{
 			object[] paramsArray = null;
@@ -192,10 +192,10 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff869169.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15,16)]
 		public void Stop()
 		{
 			object[] paramsArray = null;

@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using NetRuntimeSystem = System;
 using System.Runtime.InteropServices;
 using System.Runtime.CompilerServices;
@@ -11,10 +11,10 @@ namespace NetOffice.ExcelApi
 {
 	///<summary>
 	/// DispatchInterface PivotLineCells 
-	/// SupportByVersion Excel, 12,14,15
+	/// SupportByVersion Excel, 12,14,15,16
 	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839258.aspx
 	///</summary>
-	[SupportByVersionAttribute("Excel", 12,14,15)]
+	[SupportByVersionAttribute("Excel", 12,14,15,16)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class PivotLineCells : COMObject ,IEnumerable<NetOffice.ExcelApi.PivotCell>
 	{
@@ -94,11 +94,11 @@ namespace NetOffice.ExcelApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion Excel 12, 14, 15
+		/// SupportByVersion Excel 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839546.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 12,14,15)]
+		[SupportByVersionAttribute("Excel", 12,14,15,16)]
 		public NetOffice.ExcelApi.Application Application
 		{
 			get
@@ -111,11 +111,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 12, 14, 15
+		/// SupportByVersion Excel 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838828.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 12,14,15)]
+		[SupportByVersionAttribute("Excel", 12,14,15,16)]
 		public NetOffice.ExcelApi.Enums.XlCreator Creator
 		{
 			get
@@ -128,12 +128,12 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 12, 14, 15
+		/// SupportByVersion Excel 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837561.aspx
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 12,14,15)]
+		[SupportByVersionAttribute("Excel", 12,14,15,16)]
 		public object Parent
 		{
 			get
@@ -146,11 +146,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 12, 14, 15
+		/// SupportByVersion Excel 12, 14, 15, 16
 		/// Get
 		/// </summary>
 		/// <param name="index">object Index</param>
-		[SupportByVersionAttribute("Excel", 12,14,15)]
+		[SupportByVersionAttribute("Excel", 12,14,15,16)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
 		public NetOffice.ExcelApi.PivotCell this[object index]
 		{
@@ -164,11 +164,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 12, 14, 15
+		/// SupportByVersion Excel 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838850.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 12,14,15)]
+		[SupportByVersionAttribute("Excel", 12,14,15,16)]
 		public Int32 Count
 		{
 			get
@@ -180,11 +180,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 15
+		/// SupportByVersion Excel 15,16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj229920.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 15)]
+		[SupportByVersionAttribute("Excel", 15, 16)]
 		public bool Full
 		{
 			get
@@ -204,9 +204,9 @@ namespace NetOffice.ExcelApi
        #region IEnumerable<NetOffice.ExcelApi.PivotCell> Member
         
         /// <summary>
-		/// SupportByVersionAttribute Excel, 12,14,15
+		/// SupportByVersionAttribute Excel, 12,14,15,16
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 12,14,15)]
+		[SupportByVersionAttribute("Excel", 12,14,15,16)]
        public IEnumerator<NetOffice.ExcelApi.PivotCell> GetEnumerator()  
        {
            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
@@ -219,9 +219,9 @@ namespace NetOffice.ExcelApi
 		#region IEnumerable Members
        
 		/// <summary>
-		/// SupportByVersionAttribute Excel, 12,14,15
+		/// SupportByVersionAttribute Excel, 12,14,15,16
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 12,14,15)]
+		[SupportByVersionAttribute("Excel", 12,14,15,16)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
 			return NetOffice.Utils.GetProxyEnumeratorAsProperty(this);

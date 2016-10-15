@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using NetRuntimeSystem = System;
 using System.Runtime.InteropServices;
 using System.Runtime.CompilerServices;
@@ -10,9 +10,9 @@ namespace NetOffice.WordApi
 {
 	///<summary>
 	/// DispatchInterface _Font 
-	/// SupportByVersion Word, 9,10,11,12,14,15
+	/// SupportByVersion Word, 9,10,11,12,14,15,16
 	///</summary>
-	[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
+	[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class _Font : COMObject
 	{
@@ -92,11 +92,11 @@ namespace NetOffice.WordApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff198225.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.Application Application
 		{
 			get
@@ -109,11 +109,11 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839537.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
 		public Int32 Creator
 		{
 			get
@@ -125,12 +125,12 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197420.aspx
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
 		public object Parent
 		{
 			get
@@ -143,11 +143,11 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822380.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.Font Duplicate
 		{
 			get
@@ -160,11 +160,11 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822177.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
 		public Int32 Bold
 		{
 			get
@@ -181,11 +181,11 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836352.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
 		public Int32 Italic
 		{
 			get
@@ -202,11 +202,11 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835996.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
 		public Int32 Hidden
 		{
 			get
@@ -223,11 +223,11 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840430.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
 		public Int32 SmallCaps
 		{
 			get
@@ -244,11 +244,11 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840228.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
 		public Int32 AllCaps
 		{
 			get
@@ -265,11 +265,11 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837930.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
 		public Int32 StrikeThrough
 		{
 			get
@@ -286,11 +286,11 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845854.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
 		public Int32 DoubleStrikeThrough
 		{
 			get
@@ -307,11 +307,11 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837918.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.Enums.WdColorIndex ColorIndex
 		{
 			get
@@ -329,11 +329,11 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195668.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
 		public Int32 Subscript
 		{
 			get
@@ -350,11 +350,11 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845184.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
 		public Int32 Superscript
 		{
 			get
@@ -371,11 +371,11 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194284.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.Enums.WdUnderline Underline
 		{
 			get
@@ -393,11 +393,11 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff834545.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
 		public Single Size
 		{
 			get
@@ -414,11 +414,11 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195908.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
 		public string Name
 		{
 			get
@@ -435,11 +435,11 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193398.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
 		public Int32 Position
 		{
 			get
@@ -456,11 +456,11 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195646.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
 		public Single Spacing
 		{
 			get
@@ -477,11 +477,11 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195925.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
 		public Int32 Scaling
 		{
 			get
@@ -498,11 +498,11 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839784.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
 		public Int32 Shadow
 		{
 			get
@@ -519,11 +519,11 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840442.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
 		public Int32 Outline
 		{
 			get
@@ -540,11 +540,11 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836373.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
 		public Int32 Emboss
 		{
 			get
@@ -561,11 +561,11 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192149.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
 		public Single Kerning
 		{
 			get
@@ -582,11 +582,11 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835148.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
 		public Int32 Engrave
 		{
 			get
@@ -603,10 +603,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.Enums.WdAnimation Animation
 		{
 			get
@@ -624,11 +624,11 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835510.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.Borders Borders
 		{
 			get
@@ -646,11 +646,11 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff834890.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.Shading Shading
 		{
 			get
@@ -663,11 +663,11 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff191793.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.Enums.WdEmphasisMark EmphasisMark
 		{
 			get
@@ -685,11 +685,11 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837018.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
 		public bool DisableCharacterSpaceGrid
 		{
 			get
@@ -706,11 +706,11 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822977.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
 		public string NameFarEast
 		{
 			get
@@ -727,11 +727,11 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff834607.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
 		public string NameAscii
 		{
 			get
@@ -748,11 +748,11 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838727.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
 		public string NameOther
 		{
 			get
@@ -769,10 +769,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.Enums.WdColor Color
 		{
 			get
@@ -790,11 +790,11 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff821059.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
 		public Int32 BoldBi
 		{
 			get
@@ -811,11 +811,11 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196202.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
 		public Int32 ItalicBi
 		{
 			get
@@ -832,11 +832,11 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195703.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
 		public Single SizeBi
 		{
 			get
@@ -853,11 +853,11 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194616.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
 		public string NameBi
 		{
 			get
@@ -874,11 +874,11 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838272.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.Enums.WdColorIndex ColorIndexBi
 		{
 			get
@@ -896,11 +896,11 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838275.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.Enums.WdColor DiacriticColor
 		{
 			get
@@ -918,11 +918,11 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840299.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.Enums.WdColor UnderlineColor
 		{
 			get
@@ -940,11 +940,11 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 14, 15
+		/// SupportByVersion Word 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836301.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14,15)]
+		[SupportByVersionAttribute("Word", 14,15,16)]
 		public NetOffice.WordApi.GlowFormat Glow
 		{
 			get
@@ -962,11 +962,11 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 14, 15
+		/// SupportByVersion Word 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835746.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14,15)]
+		[SupportByVersionAttribute("Word", 14,15,16)]
 		public NetOffice.WordApi.ReflectionFormat Reflection
 		{
 			get
@@ -984,11 +984,11 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 14, 15
+		/// SupportByVersion Word 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194468.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14,15)]
+		[SupportByVersionAttribute("Word", 14,15,16)]
 		public NetOffice.WordApi.ShadowFormat TextShadow
 		{
 			get
@@ -1006,11 +1006,11 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 14, 15
+		/// SupportByVersion Word 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837243.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14,15)]
+		[SupportByVersionAttribute("Word", 14,15,16)]
 		public NetOffice.WordApi.FillFormat Fill
 		{
 			get
@@ -1028,11 +1028,11 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 14, 15
+		/// SupportByVersion Word 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193611.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14,15)]
+		[SupportByVersionAttribute("Word", 14,15,16)]
 		public NetOffice.WordApi.LineFormat Line
 		{
 			get
@@ -1050,11 +1050,11 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 14, 15
+		/// SupportByVersion Word 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836007.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14,15)]
+		[SupportByVersionAttribute("Word", 14,15,16)]
 		public NetOffice.WordApi.ThreeDFormat ThreeD
 		{
 			get
@@ -1072,11 +1072,11 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 14, 15
+		/// SupportByVersion Word 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194246.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14,15)]
+		[SupportByVersionAttribute("Word", 14,15,16)]
 		public NetOffice.WordApi.ColorFormat TextColor
 		{
 			get
@@ -1089,11 +1089,11 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 14, 15
+		/// SupportByVersion Word 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840369.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14,15)]
+		[SupportByVersionAttribute("Word", 14,15,16)]
 		public NetOffice.WordApi.Enums.WdLigatures Ligatures
 		{
 			get
@@ -1111,11 +1111,11 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 14, 15
+		/// SupportByVersion Word 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff820804.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14,15)]
+		[SupportByVersionAttribute("Word", 14,15,16)]
 		public NetOffice.WordApi.Enums.WdNumberForm NumberForm
 		{
 			get
@@ -1133,11 +1133,11 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 14, 15
+		/// SupportByVersion Word 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194804.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14,15)]
+		[SupportByVersionAttribute("Word", 14,15,16)]
 		public NetOffice.WordApi.Enums.WdNumberSpacing NumberSpacing
 		{
 			get
@@ -1155,11 +1155,11 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 14, 15
+		/// SupportByVersion Word 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845101.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14,15)]
+		[SupportByVersionAttribute("Word", 14,15,16)]
 		public Int32 ContextualAlternates
 		{
 			get
@@ -1176,11 +1176,11 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 14, 15
+		/// SupportByVersion Word 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839787.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14,15)]
+		[SupportByVersionAttribute("Word", 14,15,16)]
 		public NetOffice.WordApi.Enums.WdStylisticSet StylisticSet
 		{
 			get
@@ -1202,10 +1202,10 @@ namespace NetOffice.WordApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845371.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
 		public void Grow()
 		{
 			object[] paramsArray = null;
@@ -1213,10 +1213,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197751.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
 		public void Shrink()
 		{
 			object[] paramsArray = null;
@@ -1224,10 +1224,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195409.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
 		public void Reset()
 		{
 			object[] paramsArray = null;
@@ -1235,10 +1235,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff834270.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
 		public void SetAsTemplateDefault()
 		{
 			object[] paramsArray = null;

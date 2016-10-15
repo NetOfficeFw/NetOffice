@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using NetRuntimeSystem = System;
 using System.Runtime.InteropServices;
 using System.Runtime.CompilerServices;
@@ -73,13 +73,13 @@ namespace NetOffice.WordApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion Word 14, 15
+		/// SupportByVersion Word 14, 15, 16
 		/// Get
 		/// </summary>
 		/// <param name="start">optional object Start</param>
 		/// <param name="length">optional object Length</param>
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835765.aspx
-		[SupportByVersionAttribute("Word", 14,15)]
+		[SupportByVersionAttribute("Word", 14,15,16)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public NetOffice.WordApi.ChartCharacters get_Characters(object start, object length)
 		{		
@@ -90,25 +90,25 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 14, 15
+		/// SupportByVersion Word 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835765.aspx
 		/// Alias for get_Characters
 		/// </summary>
 		/// <param name="start">optional object Start</param>
 		/// <param name="length">optional object Length</param>
-		[SupportByVersionAttribute("Word", 14,15)]
+		[SupportByVersionAttribute("Word", 14,15,16)]
 		public NetOffice.WordApi.ChartCharacters Characters(object start, object length)
 		{
 			return get_Characters(start, length);
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 14, 15
+		/// SupportByVersion Word 14, 15, 16
 		/// Get
 		/// </summary>
 		/// <param name="start">optional object Start</param>
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835765.aspx
-		[SupportByVersionAttribute("Word", 14,15)]
+		[SupportByVersionAttribute("Word", 14,15,16)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public NetOffice.WordApi.ChartCharacters get_Characters(object start)
 		{		
@@ -119,12 +119,12 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 14, 15
+		/// SupportByVersion Word 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835765.aspx
 		/// Alias for get_Characters
 		/// </summary>
 		/// <param name="start">optional object Start</param>
-		[SupportByVersionAttribute("Word", 14,15)]
+		[SupportByVersionAttribute("Word", 14,15,16)]
 		public NetOffice.WordApi.ChartCharacters Characters(object start)
 		{
 			return get_Characters(start);
@@ -140,10 +140,10 @@ namespace NetOffice.WordApi
 
 	///<summary>
 	/// DispatchInterface AxisTitle 
-	/// SupportByVersion Word, 14,15
+	/// SupportByVersion Word, 14,15,16
 	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840019.aspx
 	///</summary>
-	[SupportByVersionAttribute("Word", 14,15)]
+	[SupportByVersionAttribute("Word", 14,15,16)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class AxisTitle : AxisTitle_
 	{
@@ -223,11 +223,11 @@ namespace NetOffice.WordApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion Word 14, 15
+		/// SupportByVersion Word 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840390.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14,15)]
+		[SupportByVersionAttribute("Word", 14,15,16)]
 		public string Caption
 		{
 			get
@@ -244,11 +244,11 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 14, 15
+		/// SupportByVersion Word 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835765.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14,15)]
+		[SupportByVersionAttribute("Word", 14,15,16)]
 		public NetOffice.WordApi.ChartCharacters Characters
 		{
 			get
@@ -261,10 +261,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 14, 15
+		/// SupportByVersion Word 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14,15)]
+		[SupportByVersionAttribute("Word", 14,15,16)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public NetOffice.WordApi.ChartFont Font
 		{
@@ -278,11 +278,11 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 14, 15
+		/// SupportByVersion Word 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194729.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14,15)]
+		[SupportByVersionAttribute("Word", 14,15,16)]
 		public object HorizontalAlignment
 		{
 			get
@@ -307,11 +307,11 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 14, 15
+		/// SupportByVersion Word 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840391.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14,15)]
+		[SupportByVersionAttribute("Word", 14,15,16)]
 		public Double Left
 		{
 			get
@@ -328,11 +328,11 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 14, 15
+		/// SupportByVersion Word 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822947.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14,15)]
+		[SupportByVersionAttribute("Word", 14,15,16)]
 		public object Orientation
 		{
 			get
@@ -357,11 +357,11 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 14, 15
+		/// SupportByVersion Word 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194418.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14,15)]
+		[SupportByVersionAttribute("Word", 14,15,16)]
 		public bool Shadow
 		{
 			get
@@ -378,11 +378,11 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 14, 15
+		/// SupportByVersion Word 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff191774.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14,15)]
+		[SupportByVersionAttribute("Word", 14,15,16)]
 		public string Text
 		{
 			get
@@ -399,11 +399,11 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 14, 15
+		/// SupportByVersion Word 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839085.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14,15)]
+		[SupportByVersionAttribute("Word", 14,15,16)]
 		public Double Top
 		{
 			get
@@ -420,11 +420,11 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 14, 15
+		/// SupportByVersion Word 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845147.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14,15)]
+		[SupportByVersionAttribute("Word", 14,15,16)]
 		public object VerticalAlignment
 		{
 			get
@@ -449,11 +449,11 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 14, 15
+		/// SupportByVersion Word 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838876.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14,15)]
+		[SupportByVersionAttribute("Word", 14,15,16)]
 		public Int32 ReadingOrder
 		{
 			get
@@ -470,10 +470,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 14, 15
+		/// SupportByVersion Word 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14,15)]
+		[SupportByVersionAttribute("Word", 14,15,16)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public object AutoScaleFont
 		{
@@ -499,10 +499,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 14, 15
+		/// SupportByVersion Word 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14,15)]
+		[SupportByVersionAttribute("Word", 14,15,16)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public NetOffice.WordApi.Interior Interior
 		{
@@ -516,10 +516,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 14, 15
+		/// SupportByVersion Word 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14,15)]
+		[SupportByVersionAttribute("Word", 14,15,16)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public NetOffice.WordApi.ChartFillFormat Fill
 		{
@@ -533,10 +533,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 14, 15
+		/// SupportByVersion Word 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14,15)]
+		[SupportByVersionAttribute("Word", 14,15,16)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public NetOffice.WordApi.ChartBorder Border
 		{
@@ -550,11 +550,11 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 14, 15
+		/// SupportByVersion Word 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838059.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14,15)]
+		[SupportByVersionAttribute("Word", 14,15,16)]
 		public string Name
 		{
 			get
@@ -566,12 +566,12 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 14, 15
+		/// SupportByVersion Word 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff823265.aspx
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14,15)]
+		[SupportByVersionAttribute("Word", 14,15,16)]
 		public object Parent
 		{
 			get
@@ -584,11 +584,11 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 14, 15
+		/// SupportByVersion Word 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837525.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14,15)]
+		[SupportByVersionAttribute("Word", 14,15,16)]
 		public bool IncludeInLayout
 		{
 			get
@@ -605,11 +605,11 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 14, 15
+		/// SupportByVersion Word 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838121.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14,15)]
+		[SupportByVersionAttribute("Word", 14,15,16)]
 		public NetOffice.WordApi.Enums.XlChartElementPosition Position
 		{
 			get
@@ -627,11 +627,11 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 14, 15
+		/// SupportByVersion Word 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822679.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14,15)]
+		[SupportByVersionAttribute("Word", 14,15,16)]
 		public NetOffice.WordApi.ChartFormat Format
 		{
 			get
@@ -644,12 +644,12 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 14, 15
+		/// SupportByVersion Word 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835489.aspx
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14,15)]
+		[SupportByVersionAttribute("Word", 14,15,16)]
 		public object Application
 		{
 			get
@@ -662,11 +662,11 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 14, 15
+		/// SupportByVersion Word 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197566.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14,15)]
+		[SupportByVersionAttribute("Word", 14,15,16)]
 		public Int32 Creator
 		{
 			get
@@ -678,11 +678,11 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 14, 15
+		/// SupportByVersion Word 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194816.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14,15)]
+		[SupportByVersionAttribute("Word", 14,15,16)]
 		public Double Height
 		{
 			get
@@ -694,11 +694,11 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 14, 15
+		/// SupportByVersion Word 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838716.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14,15)]
+		[SupportByVersionAttribute("Word", 14,15,16)]
 		public Double Width
 		{
 			get
@@ -710,11 +710,11 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 14, 15
+		/// SupportByVersion Word 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845408.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14,15)]
+		[SupportByVersionAttribute("Word", 14,15,16)]
 		public string Formula
 		{
 			get
@@ -731,11 +731,11 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 14, 15
+		/// SupportByVersion Word 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845828.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14,15)]
+		[SupportByVersionAttribute("Word", 14,15,16)]
 		public string FormulaR1C1
 		{
 			get
@@ -752,11 +752,11 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 14, 15
+		/// SupportByVersion Word 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845060.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14,15)]
+		[SupportByVersionAttribute("Word", 14,15,16)]
 		public string FormulaLocal
 		{
 			get
@@ -773,11 +773,11 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 14, 15
+		/// SupportByVersion Word 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff821952.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14,15)]
+		[SupportByVersionAttribute("Word", 14,15,16)]
 		public string FormulaR1C1Local
 		{
 			get
@@ -798,10 +798,10 @@ namespace NetOffice.WordApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByVersion Word 14, 15
+		/// SupportByVersion Word 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197989.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14,15)]
+		[SupportByVersionAttribute("Word", 14,15,16)]
 		public object Delete()
 		{
 			object[] paramsArray = null;
@@ -818,10 +818,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 14, 15
+		/// SupportByVersion Word 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836741.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14,15)]
+		[SupportByVersionAttribute("Word", 14,15,16)]
 		public object Select()
 		{
 			object[] paramsArray = null;

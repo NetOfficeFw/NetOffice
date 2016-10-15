@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using NetRuntimeSystem = System;
 using System.Runtime.InteropServices;
 using System.Runtime.CompilerServices;
@@ -10,9 +10,9 @@ namespace NetOffice.OfficeApi
 {
 	///<summary>
 	/// DispatchInterface ILicValidator 
-	/// SupportByVersion Office, 10,11,12,14,15
+	/// SupportByVersion Office, 10,11,12,14,15,16
 	///</summary>
-	[SupportByVersionAttribute("Office", 10,11,12,14,15)]
+	[SupportByVersionAttribute("Office", 10,11,12,14,15,16)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class ILicValidator : COMObject
 	{
@@ -92,10 +92,10 @@ namespace NetOffice.OfficeApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion Office 10, 11, 12, 14, 15
+		/// SupportByVersion Office 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
+		[SupportByVersionAttribute("Office", 10,11,12,14,15,16)]
 		public object Products
 		{
 			get
@@ -115,10 +115,10 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 10, 11, 12, 14, 15
+		/// SupportByVersion Office 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
+		[SupportByVersionAttribute("Office", 10,11,12,14,15,16)]
 		public Int32 Selection
 		{
 			get

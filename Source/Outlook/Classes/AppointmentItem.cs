@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using NetOffice;
@@ -40,10 +40,10 @@ namespace NetOffice.OutlookApi
 
 	///<summary>
 	/// CoClass AppointmentItem 
-	/// SupportByVersion Outlook, 9,10,11,12,14,15
+	/// SupportByVersion Outlook, 9,10,11,12,14,15,16
 	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff862177.aspx
 	///</summary>
-	[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15)]
+	[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15,16)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class AppointmentItem : _AppointmentItem,IEventBinding
 	{
@@ -119,7 +119,7 @@ namespace NetOffice.OutlookApi
 		}
 		
 		///<summary>
-        ///creates a new instance of AppointmentItem 
+        /// Creates a new instance of AppointmentItem 
         ///</summary>		
 		public AppointmentItem():base("Outlook.AppointmentItem")
 		{
@@ -127,7 +127,7 @@ namespace NetOffice.OutlookApi
 		}
 		
 		///<summary>
-        ///creates a new instance of AppointmentItem
+        /// Creates a new instance of AppointmentItem
         ///</summary>
         ///<param name="progId">registered ProgID</param>
 		public AppointmentItem(string progId):base(progId)
@@ -140,12 +140,12 @@ namespace NetOffice.OutlookApi
 		#region Static CoClass Methods
 
 		/// <summary>
-        /// returns all running Outlook.AppointmentItem objects from the running object table(ROT)
+        /// Returns all running Outlook.AppointmentItem objects from the environment/system
         /// </summary>
         /// <returns>an Outlook.AppointmentItem array</returns>
 		public static NetOffice.OutlookApi.AppointmentItem[] GetActiveInstances()
 		{		
-			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("Outlook","AppointmentItem");
+			IDisposableEnumeration proxyList = NetOffice.ProxyService.GetActiveInstances("Outlook","AppointmentItem");
 			NetRuntimeSystem.Collections.Generic.List<NetOffice.OutlookApi.AppointmentItem> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.OutlookApi.AppointmentItem>();
 			foreach(object proxy in proxyList)
 				resultList.Add( new NetOffice.OutlookApi.AppointmentItem(null, proxy) );
@@ -153,12 +153,12 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-        /// returns a running Outlook.AppointmentItem object from the running object table(ROT). the method takes the first element from the table
+        /// Returns a running Outlook.AppointmentItem object from the environment/system.
         /// </summary>
         /// <returns>an Outlook.AppointmentItem object or null</returns>
 		public static NetOffice.OutlookApi.AppointmentItem GetActiveInstance()
 		{
-			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Outlook","AppointmentItem", false);
+			object proxy  = NetOffice.ProxyService.GetActiveInstance("Outlook","AppointmentItem", false);
 			if(null != proxy)
 				return new NetOffice.OutlookApi.AppointmentItem(null, proxy);
 			else
@@ -166,13 +166,13 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-        /// returns a running Outlook.AppointmentItem object from the running object table(ROT).  the method takes the first element from the table
+        /// Returns a running Outlook.AppointmentItem object from the environment/system. 
         /// </summary>
 	    /// <param name="throwOnError">throw an exception if no object was found</param>
         /// <returns>an Outlook.AppointmentItem object or null</returns>
 		public static NetOffice.OutlookApi.AppointmentItem GetActiveInstance(bool throwOnError)
 		{
-			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Outlook","AppointmentItem", throwOnError);
+			object proxy  = NetOffice.ProxyService.GetActiveInstance("Outlook","AppointmentItem", throwOnError);
 			if(null != proxy)
 				return new NetOffice.OutlookApi.AppointmentItem(null, proxy);
 			else
@@ -183,15 +183,15 @@ namespace NetOffice.OutlookApi
 		#region Events
 
 		/// <summary>
-		/// SupportByVersion Outlook, 9,10,11,12,14,15
+		/// SupportByVersion Outlook, 9,10,11,12,14,15,16
 		/// </summary>
 		private event AppointmentItem_OpenEventHandler _OpenEvent;
 
 		/// <summary>
-		/// SupportByVersion Outlook 9 10 11 12 14 15
+		/// SupportByVersion Outlook 9 10 11 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff860682.aspx </remarks>
-		[SupportByVersion("Outlook", 9,10,11,12,14,15)]
+		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
 		public event AppointmentItem_OpenEventHandler OpenEvent
 		{
 			add
@@ -206,15 +206,15 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook, 9,10,11,12,14,15
+		/// SupportByVersion Outlook, 9,10,11,12,14,15,16
 		/// </summary>
 		private event AppointmentItem_CustomActionEventHandler _CustomActionEvent;
 
 		/// <summary>
-		/// SupportByVersion Outlook 9 10 11 12 14 15
+		/// SupportByVersion Outlook 9 10 11 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff868820.aspx </remarks>
-		[SupportByVersion("Outlook", 9,10,11,12,14,15)]
+		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
 		public event AppointmentItem_CustomActionEventHandler CustomActionEvent
 		{
 			add
@@ -229,15 +229,15 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook, 9,10,11,12,14,15
+		/// SupportByVersion Outlook, 9,10,11,12,14,15,16
 		/// </summary>
 		private event AppointmentItem_CustomPropertyChangeEventHandler _CustomPropertyChangeEvent;
 
 		/// <summary>
-		/// SupportByVersion Outlook 9 10 11 12 14 15
+		/// SupportByVersion Outlook 9 10 11 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff869927.aspx </remarks>
-		[SupportByVersion("Outlook", 9,10,11,12,14,15)]
+		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
 		public event AppointmentItem_CustomPropertyChangeEventHandler CustomPropertyChangeEvent
 		{
 			add
@@ -252,15 +252,15 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook, 9,10,11,12,14,15
+		/// SupportByVersion Outlook, 9,10,11,12,14,15,16
 		/// </summary>
 		private event AppointmentItem_ForwardEventHandler _ForwardEvent;
 
 		/// <summary>
-		/// SupportByVersion Outlook 9 10 11 12 14 15
+		/// SupportByVersion Outlook 9 10 11 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff863899.aspx </remarks>
-		[SupportByVersion("Outlook", 9,10,11,12,14,15)]
+		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
 		public event AppointmentItem_ForwardEventHandler ForwardEvent
 		{
 			add
@@ -275,15 +275,15 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook, 9,10,11,12,14,15
+		/// SupportByVersion Outlook, 9,10,11,12,14,15,16
 		/// </summary>
 		private event AppointmentItem_CloseEventHandler _CloseEvent;
 
 		/// <summary>
-		/// SupportByVersion Outlook 9 10 11 12 14 15
+		/// SupportByVersion Outlook 9 10 11 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff861899.aspx </remarks>
-		[SupportByVersion("Outlook", 9,10,11,12,14,15)]
+		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
 		public event AppointmentItem_CloseEventHandler CloseEvent
 		{
 			add
@@ -298,15 +298,15 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook, 9,10,11,12,14,15
+		/// SupportByVersion Outlook, 9,10,11,12,14,15,16
 		/// </summary>
 		private event AppointmentItem_PropertyChangeEventHandler _PropertyChangeEvent;
 
 		/// <summary>
-		/// SupportByVersion Outlook 9 10 11 12 14 15
+		/// SupportByVersion Outlook 9 10 11 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff867180.aspx </remarks>
-		[SupportByVersion("Outlook", 9,10,11,12,14,15)]
+		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
 		public event AppointmentItem_PropertyChangeEventHandler PropertyChangeEvent
 		{
 			add
@@ -321,15 +321,15 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook, 9,10,11,12,14,15
+		/// SupportByVersion Outlook, 9,10,11,12,14,15,16
 		/// </summary>
 		private event AppointmentItem_ReadEventHandler _ReadEvent;
 
 		/// <summary>
-		/// SupportByVersion Outlook 9 10 11 12 14 15
+		/// SupportByVersion Outlook 9 10 11 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff868450.aspx </remarks>
-		[SupportByVersion("Outlook", 9,10,11,12,14,15)]
+		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
 		public event AppointmentItem_ReadEventHandler ReadEvent
 		{
 			add
@@ -344,15 +344,15 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook, 9,10,11,12,14,15
+		/// SupportByVersion Outlook, 9,10,11,12,14,15,16
 		/// </summary>
 		private event AppointmentItem_ReplyEventHandler _ReplyEvent;
 
 		/// <summary>
-		/// SupportByVersion Outlook 9 10 11 12 14 15
+		/// SupportByVersion Outlook 9 10 11 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff868805.aspx </remarks>
-		[SupportByVersion("Outlook", 9,10,11,12,14,15)]
+		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
 		public event AppointmentItem_ReplyEventHandler ReplyEvent
 		{
 			add
@@ -367,15 +367,15 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook, 9,10,11,12,14,15
+		/// SupportByVersion Outlook, 9,10,11,12,14,15,16
 		/// </summary>
 		private event AppointmentItem_ReplyAllEventHandler _ReplyAllEvent;
 
 		/// <summary>
-		/// SupportByVersion Outlook 9 10 11 12 14 15
+		/// SupportByVersion Outlook 9 10 11 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff868971.aspx </remarks>
-		[SupportByVersion("Outlook", 9,10,11,12,14,15)]
+		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
 		public event AppointmentItem_ReplyAllEventHandler ReplyAllEvent
 		{
 			add
@@ -390,15 +390,15 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook, 9,10,11,12,14,15
+		/// SupportByVersion Outlook, 9,10,11,12,14,15,16
 		/// </summary>
 		private event AppointmentItem_SendEventHandler _SendEvent;
 
 		/// <summary>
-		/// SupportByVersion Outlook 9 10 11 12 14 15
+		/// SupportByVersion Outlook 9 10 11 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff865990.aspx </remarks>
-		[SupportByVersion("Outlook", 9,10,11,12,14,15)]
+		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
 		public event AppointmentItem_SendEventHandler SendEvent
 		{
 			add
@@ -413,15 +413,15 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook, 9,10,11,12,14,15
+		/// SupportByVersion Outlook, 9,10,11,12,14,15,16
 		/// </summary>
 		private event AppointmentItem_WriteEventHandler _WriteEvent;
 
 		/// <summary>
-		/// SupportByVersion Outlook 9 10 11 12 14 15
+		/// SupportByVersion Outlook 9 10 11 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff865085.aspx </remarks>
-		[SupportByVersion("Outlook", 9,10,11,12,14,15)]
+		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
 		public event AppointmentItem_WriteEventHandler WriteEvent
 		{
 			add
@@ -436,15 +436,15 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook, 9,10,11,12,14,15
+		/// SupportByVersion Outlook, 9,10,11,12,14,15,16
 		/// </summary>
 		private event AppointmentItem_BeforeCheckNamesEventHandler _BeforeCheckNamesEvent;
 
 		/// <summary>
-		/// SupportByVersion Outlook 9 10 11 12 14 15
+		/// SupportByVersion Outlook 9 10 11 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff869640.aspx </remarks>
-		[SupportByVersion("Outlook", 9,10,11,12,14,15)]
+		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
 		public event AppointmentItem_BeforeCheckNamesEventHandler BeforeCheckNamesEvent
 		{
 			add
@@ -459,15 +459,15 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook, 9,10,11,12,14,15
+		/// SupportByVersion Outlook, 9,10,11,12,14,15,16
 		/// </summary>
 		private event AppointmentItem_AttachmentAddEventHandler _AttachmentAddEvent;
 
 		/// <summary>
-		/// SupportByVersion Outlook 9 10 11 12 14 15
+		/// SupportByVersion Outlook 9 10 11 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff864491.aspx </remarks>
-		[SupportByVersion("Outlook", 9,10,11,12,14,15)]
+		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
 		public event AppointmentItem_AttachmentAddEventHandler AttachmentAddEvent
 		{
 			add
@@ -482,15 +482,15 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook, 9,10,11,12,14,15
+		/// SupportByVersion Outlook, 9,10,11,12,14,15,16
 		/// </summary>
 		private event AppointmentItem_AttachmentReadEventHandler _AttachmentReadEvent;
 
 		/// <summary>
-		/// SupportByVersion Outlook 9 10 11 12 14 15
+		/// SupportByVersion Outlook 9 10 11 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff866077.aspx </remarks>
-		[SupportByVersion("Outlook", 9,10,11,12,14,15)]
+		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
 		public event AppointmentItem_AttachmentReadEventHandler AttachmentReadEvent
 		{
 			add
@@ -505,15 +505,15 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook, 9,10,11,12,14,15
+		/// SupportByVersion Outlook, 9,10,11,12,14,15,16
 		/// </summary>
 		private event AppointmentItem_BeforeAttachmentSaveEventHandler _BeforeAttachmentSaveEvent;
 
 		/// <summary>
-		/// SupportByVersion Outlook 9 10 11 12 14 15
+		/// SupportByVersion Outlook 9 10 11 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff861892.aspx </remarks>
-		[SupportByVersion("Outlook", 9,10,11,12,14,15)]
+		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
 		public event AppointmentItem_BeforeAttachmentSaveEventHandler BeforeAttachmentSaveEvent
 		{
 			add
@@ -528,15 +528,15 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook, 10,11,12,14,15
+		/// SupportByVersion Outlook, 10,11,12,14,15,16
 		/// </summary>
 		private event AppointmentItem_BeforeDeleteEventHandler _BeforeDeleteEvent;
 
 		/// <summary>
-		/// SupportByVersion Outlook 10 11 12 14 15
+		/// SupportByVersion Outlook 10 11 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff869458.aspx </remarks>
-		[SupportByVersion("Outlook", 10,11,12,14,15)]
+		[SupportByVersion("Outlook", 10,11,12,14,15,16)]
 		public event AppointmentItem_BeforeDeleteEventHandler BeforeDeleteEvent
 		{
 			add
@@ -551,15 +551,15 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook, 12,14,15
+		/// SupportByVersion Outlook, 12,14,15,16
 		/// </summary>
 		private event AppointmentItem_AttachmentRemoveEventHandler _AttachmentRemoveEvent;
 
 		/// <summary>
-		/// SupportByVersion Outlook 12 14 15
+		/// SupportByVersion Outlook 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff869436.aspx </remarks>
-		[SupportByVersion("Outlook", 12,14,15)]
+		[SupportByVersion("Outlook", 12,14,15,16)]
 		public event AppointmentItem_AttachmentRemoveEventHandler AttachmentRemoveEvent
 		{
 			add
@@ -574,15 +574,15 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook, 12,14,15
+		/// SupportByVersion Outlook, 12,14,15,16
 		/// </summary>
 		private event AppointmentItem_BeforeAttachmentAddEventHandler _BeforeAttachmentAddEvent;
 
 		/// <summary>
-		/// SupportByVersion Outlook 12 14 15
+		/// SupportByVersion Outlook 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff861568.aspx </remarks>
-		[SupportByVersion("Outlook", 12,14,15)]
+		[SupportByVersion("Outlook", 12,14,15,16)]
 		public event AppointmentItem_BeforeAttachmentAddEventHandler BeforeAttachmentAddEvent
 		{
 			add
@@ -597,15 +597,15 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook, 12,14,15
+		/// SupportByVersion Outlook, 12,14,15,16
 		/// </summary>
 		private event AppointmentItem_BeforeAttachmentPreviewEventHandler _BeforeAttachmentPreviewEvent;
 
 		/// <summary>
-		/// SupportByVersion Outlook 12 14 15
+		/// SupportByVersion Outlook 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff867460.aspx </remarks>
-		[SupportByVersion("Outlook", 12,14,15)]
+		[SupportByVersion("Outlook", 12,14,15,16)]
 		public event AppointmentItem_BeforeAttachmentPreviewEventHandler BeforeAttachmentPreviewEvent
 		{
 			add
@@ -620,15 +620,15 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook, 12,14,15
+		/// SupportByVersion Outlook, 12,14,15,16
 		/// </summary>
 		private event AppointmentItem_BeforeAttachmentReadEventHandler _BeforeAttachmentReadEvent;
 
 		/// <summary>
-		/// SupportByVersion Outlook 12 14 15
+		/// SupportByVersion Outlook 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff869437.aspx </remarks>
-		[SupportByVersion("Outlook", 12,14,15)]
+		[SupportByVersion("Outlook", 12,14,15,16)]
 		public event AppointmentItem_BeforeAttachmentReadEventHandler BeforeAttachmentReadEvent
 		{
 			add
@@ -643,15 +643,15 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook, 12,14,15
+		/// SupportByVersion Outlook, 12,14,15,16
 		/// </summary>
 		private event AppointmentItem_BeforeAttachmentWriteToTempFileEventHandler _BeforeAttachmentWriteToTempFileEvent;
 
 		/// <summary>
-		/// SupportByVersion Outlook 12 14 15
+		/// SupportByVersion Outlook 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff866752.aspx </remarks>
-		[SupportByVersion("Outlook", 12,14,15)]
+		[SupportByVersion("Outlook", 12,14,15,16)]
 		public event AppointmentItem_BeforeAttachmentWriteToTempFileEventHandler BeforeAttachmentWriteToTempFileEvent
 		{
 			add
@@ -666,15 +666,15 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook, 12,14,15
+		/// SupportByVersion Outlook, 12,14,15,16
 		/// </summary>
 		private event AppointmentItem_UnloadEventHandler _UnloadEvent;
 
 		/// <summary>
-		/// SupportByVersion Outlook 12 14 15
+		/// SupportByVersion Outlook 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff867872.aspx </remarks>
-		[SupportByVersion("Outlook", 12,14,15)]
+		[SupportByVersion("Outlook", 12,14,15,16)]
 		public event AppointmentItem_UnloadEventHandler UnloadEvent
 		{
 			add
@@ -689,15 +689,15 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook, 12,14,15
+		/// SupportByVersion Outlook, 12,14,15,16
 		/// </summary>
 		private event AppointmentItem_BeforeAutoSaveEventHandler _BeforeAutoSaveEvent;
 
 		/// <summary>
-		/// SupportByVersion Outlook 12 14 15
+		/// SupportByVersion Outlook 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff868926.aspx </remarks>
-		[SupportByVersion("Outlook", 12,14,15)]
+		[SupportByVersion("Outlook", 12,14,15,16)]
 		public event AppointmentItem_BeforeAutoSaveEventHandler BeforeAutoSaveEvent
 		{
 			add
@@ -712,15 +712,15 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook, 14,15
+		/// SupportByVersion Outlook, 14,15,16
 		/// </summary>
 		private event AppointmentItem_BeforeReadEventHandler _BeforeReadEvent;
 
 		/// <summary>
-		/// SupportByVersion Outlook 14 15
+		/// SupportByVersion Outlook 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff868991.aspx </remarks>
-		[SupportByVersion("Outlook", 14,15)]
+		[SupportByVersion("Outlook", 14,15,16)]
 		public event AppointmentItem_BeforeReadEventHandler BeforeReadEvent
 		{
 			add
@@ -735,15 +735,15 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook, 14,15
+		/// SupportByVersion Outlook, 14,15,16
 		/// </summary>
 		private event AppointmentItem_AfterWriteEventHandler _AfterWriteEvent;
 
 		/// <summary>
-		/// SupportByVersion Outlook 14 15
+		/// SupportByVersion Outlook 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff869638.aspx </remarks>
-		[SupportByVersion("Outlook", 14,15)]
+		[SupportByVersion("Outlook", 14,15,16)]
 		public event AppointmentItem_AfterWriteEventHandler AfterWriteEvent
 		{
 			add
@@ -758,15 +758,15 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook, 15
+		/// SupportByVersion Outlook, 15, 16
 		/// </summary>
 		private event AppointmentItem_ReadCompleteEventHandler _ReadCompleteEvent;
 
 		/// <summary>
-		/// SupportByVersion Outlook 15
+		/// SupportByVersion Outlook 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj229473.aspx </remarks>
-		[SupportByVersion("Outlook", 15)]
+		[SupportByVersion("Outlook", 15, 16)]
 		public event AppointmentItem_ReadCompleteEventHandler ReadCompleteEvent
 		{
 			add
@@ -785,7 +785,7 @@ namespace NetOffice.OutlookApi
 	    #region IEventBinding Member
         
 		/// <summary>
-        /// creates active sink helper
+        /// Creates active sink helper
         /// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public void CreateEventBridge()
@@ -813,6 +813,9 @@ namespace NetOffice.OutlookApi
 			} 
         }
 
+        /// <summary>
+        /// The instance use currently an event listener 
+        /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public bool EventBridgeInitialized
         {
@@ -821,7 +824,10 @@ namespace NetOffice.OutlookApi
                 return (null != _connectPoint);
             }
         }
-        
+
+        /// <summary>
+        ///  The instance has currently one or more event recipients 
+        /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public bool HasEventRecipients()       
         {
@@ -841,6 +847,9 @@ namespace NetOffice.OutlookApi
 			return false;
         }
         
+        /// <summary>
+        /// Target methods from its actual event recipients
+        /// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public Delegate[] GetEventRecipients(string eventName)
         {
@@ -860,7 +869,10 @@ namespace NetOffice.OutlookApi
             else
                 return new Delegate[0];
         }
-
+       
+        /// <summary>
+        /// Returns the current count of event recipients
+        /// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public int GetCountOfEventRecipients(string eventName)
         {
@@ -879,8 +891,14 @@ namespace NetOffice.OutlookApi
             }
             else
                 return 0;
-        }
-
+           }
+        
+        /// <summary>
+        /// Raise an instance event
+        /// </summary>
+        /// <param name="eventName">name of the event without 'Event' at the end</param>
+        /// <param name="paramsArray">custom arguments for the event</param>
+        /// <returns>count of called event recipients</returns>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public int RaiseCustomEvent(string eventName, ref object[] paramsArray)
 		{
@@ -912,6 +930,9 @@ namespace NetOffice.OutlookApi
                 return 0;
 		}
 
+        /// <summary>
+        /// Stop listening events for the instance
+        /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public void DisposeEventBridge()
         {

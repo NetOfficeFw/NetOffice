@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using NetRuntimeSystem = System;
 using System.Runtime.InteropServices;
 using System.Runtime.CompilerServices;
@@ -11,10 +11,10 @@ namespace NetOffice.ExcelApi
 {
 	///<summary>
 	/// DispatchInterface Axes 
-	/// SupportByVersion Excel, 9,10,11,12,14,15
+	/// SupportByVersion Excel, 9,10,11,12,14,15,16
 	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff821055.aspx
 	///</summary>
-	[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
+	[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class Axes : COMObject ,IEnumerable<NetOffice.ExcelApi.Axis>
 	{
@@ -94,11 +94,11 @@ namespace NetOffice.ExcelApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822354.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
 		public NetOffice.ExcelApi.Application Application
 		{
 			get
@@ -111,11 +111,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff834652.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
 		public NetOffice.ExcelApi.Enums.XlCreator Creator
 		{
 			get
@@ -128,12 +128,12 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839580.aspx
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
 		public object Parent
 		{
 			get
@@ -146,11 +146,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822176.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
 		public Int32 Count
 		{
 			get
@@ -166,12 +166,12 @@ namespace NetOffice.ExcelApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByVersion Excel 12, 14, 15
+		/// SupportByVersion Excel 12, 14, 15, 16
 		/// 
 		/// </summary>
 		/// <param name="type">NetOffice.ExcelApi.Enums.XlAxisType Type</param>
 		/// <param name="axisGroup">optional NetOffice.ExcelApi.Enums.XlAxisGroup AxisGroup = 1</param>
-		[SupportByVersionAttribute("Excel", 12,14,15)]
+		[SupportByVersionAttribute("Excel", 12,14,15,16)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
 		public NetOffice.ExcelApi.Axis this[NetOffice.ExcelApi.Enums.XlAxisType type, object axisGroup]
 		{
@@ -189,9 +189,9 @@ namespace NetOffice.ExcelApi
        #region IEnumerable<NetOffice.ExcelApi.Axis> Member
         
         /// <summary>
-		/// SupportByVersionAttribute Excel, 9,10,11,12,14,15
+		/// SupportByVersionAttribute Excel, 9,10,11,12,14,15,16
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
        public IEnumerator<NetOffice.ExcelApi.Axis> GetEnumerator()  
        {
            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
@@ -204,9 +204,9 @@ namespace NetOffice.ExcelApi
 		#region IEnumerable Members
        
 		/// <summary>
-		/// SupportByVersionAttribute Excel, 9,10,11,12,14,15
+		/// SupportByVersionAttribute Excel, 9,10,11,12,14,15,16
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
 			return NetOffice.Utils.GetProxyEnumeratorAsMethod(this);

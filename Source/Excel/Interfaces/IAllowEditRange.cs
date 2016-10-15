@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using NetRuntimeSystem = System;
 using System.Runtime.InteropServices;
 using System.ComponentModel;
@@ -10,9 +10,9 @@ namespace NetOffice.ExcelApi
 {
 	///<summary>
 	/// Interface IAllowEditRange 
-	/// SupportByVersion Excel, 10,11,12,14,15
+	/// SupportByVersion Excel, 10,11,12,14,15,16
 	///</summary>
-	[SupportByVersionAttribute("Excel", 10,11,12,14,15)]
+	[SupportByVersionAttribute("Excel", 10,11,12,14,15,16)]
 	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class IAllowEditRange : COMObject
 	{
@@ -92,10 +92,10 @@ namespace NetOffice.ExcelApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion Excel 10, 11, 12, 14, 15
+		/// SupportByVersion Excel 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 10,11,12,14,15)]
+		[SupportByVersionAttribute("Excel", 10,11,12,14,15,16)]
 		public string Title
 		{
 			get
@@ -112,10 +112,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 10, 11, 12, 14, 15
+		/// SupportByVersion Excel 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 10,11,12,14,15)]
+		[SupportByVersionAttribute("Excel", 10,11,12,14,15,16)]
 		public NetOffice.ExcelApi.Range Range
 		{
 			get
@@ -133,10 +133,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 10, 11, 12, 14, 15
+		/// SupportByVersion Excel 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 10,11,12,14,15)]
+		[SupportByVersionAttribute("Excel", 10,11,12,14,15,16)]
 		public NetOffice.ExcelApi.UserAccessList Users
 		{
 			get
@@ -153,11 +153,11 @@ namespace NetOffice.ExcelApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByVersion Excel 10, 11, 12, 14, 15
+		/// SupportByVersion Excel 10, 11, 12, 14, 15, 16
 		/// 
 		/// </summary>
 		/// <param name="password">string Password</param>
-		[SupportByVersionAttribute("Excel", 10,11,12,14,15)]
+		[SupportByVersionAttribute("Excel", 10,11,12,14,15,16)]
 		public Int32 ChangePassword(string password)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(password);
@@ -166,10 +166,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 10, 11, 12, 14, 15
+		/// SupportByVersion Excel 10, 11, 12, 14, 15, 16
 		/// 
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 10,11,12,14,15)]
+		[SupportByVersionAttribute("Excel", 10,11,12,14,15,16)]
 		public Int32 Delete()
 		{
 			object[] paramsArray = null;
@@ -178,11 +178,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 10, 11, 12, 14, 15
+		/// SupportByVersion Excel 10, 11, 12, 14, 15, 16
 		/// 
 		/// </summary>
 		/// <param name="password">optional object Password</param>
-		[SupportByVersionAttribute("Excel", 10,11,12,14,15)]
+		[SupportByVersionAttribute("Excel", 10,11,12,14,15,16)]
 		public Int32 Unprotect(object password)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(password);
@@ -191,11 +191,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 10, 11, 12, 14, 15
+		/// SupportByVersion Excel 10, 11, 12, 14, 15, 16
 		/// 
 		/// </summary>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 10,11,12,14,15)]
+		[SupportByVersionAttribute("Excel", 10,11,12,14,15,16)]
 		public Int32 Unprotect()
 		{
 			object[] paramsArray = null;

@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using NetRuntimeSystem = System;
 using System.Runtime.InteropServices;
 using System.Runtime.CompilerServices;
@@ -10,10 +10,10 @@ namespace NetOffice.OutlookApi
 {
 	///<summary>
 	/// DispatchInterface Recipient 
-	/// SupportByVersion Outlook, 9,10,11,12,14,15
+	/// SupportByVersion Outlook, 9,10,11,12,14,15,16
 	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff867569.aspx
 	///</summary>
-	[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15)]
+	[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15,16)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class Recipient : COMObject
 	{
@@ -93,11 +93,11 @@ namespace NetOffice.OutlookApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff866062.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15,16)]
 		public NetOffice.OutlookApi._Application Application
 		{
 			get
@@ -110,11 +110,11 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff862107.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15,16)]
 		public NetOffice.OutlookApi.Enums.OlObjectClass Class
 		{
 			get
@@ -127,11 +127,11 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff860648.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15,16)]
 		public NetOffice.OutlookApi._NameSpace Session
 		{
 			get
@@ -144,12 +144,12 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff870083.aspx
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15,16)]
 		public object Parent
 		{
 			get
@@ -162,11 +162,11 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff867602.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15,16)]
 		public string Address
 		{
 			get
@@ -178,11 +178,11 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff863677.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15,16)]
 		public NetOffice.OutlookApi.AddressEntry AddressEntry
 		{
 			get
@@ -200,11 +200,11 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff869442.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15,16)]
 		public string AutoResponse
 		{
 			get
@@ -221,11 +221,11 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff861268.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15,16)]
 		public NetOffice.OutlookApi.Enums.OlDisplayType DisplayType
 		{
 			get
@@ -238,11 +238,11 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff870021.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15,16)]
 		public string EntryID
 		{
 			get
@@ -254,11 +254,11 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff870168.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15,16)]
 		public Int32 Index
 		{
 			get
@@ -270,11 +270,11 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff862677.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15,16)]
 		public NetOffice.OutlookApi.Enums.OlResponseStatus MeetingResponseStatus
 		{
 			get
@@ -287,11 +287,11 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff868965.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15,16)]
 		public string Name
 		{
 			get
@@ -303,11 +303,11 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff860728.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15,16)]
 		public bool Resolved
 		{
 			get
@@ -319,11 +319,11 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff861569.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15,16)]
 		public NetOffice.OutlookApi.Enums.OlTrackingStatus TrackingStatus
 		{
 			get
@@ -341,11 +341,11 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff867647.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15,16)]
 		public DateTime TrackingStatusTime
 		{
 			get
@@ -362,11 +362,11 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff863703.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15,16)]
 		public Int32 Type
 		{
 			get
@@ -383,11 +383,11 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook 12, 14, 15
+		/// SupportByVersion Outlook 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff870167.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Outlook", 12,14,15)]
+		[SupportByVersionAttribute("Outlook", 12,14,15,16)]
 		public NetOffice.OutlookApi.PropertyAccessor PropertyAccessor
 		{
 			get
@@ -400,11 +400,11 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook 14, 15
+		/// SupportByVersion Outlook 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff868773.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Outlook", 14,15)]
+		[SupportByVersionAttribute("Outlook", 14,15,16)]
 		public bool Sendable
 		{
 			get
@@ -425,10 +425,10 @@ namespace NetOffice.OutlookApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff866448.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15,16)]
 		public void Delete()
 		{
 			object[] paramsArray = null;
@@ -436,13 +436,13 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff869807.aspx
 		/// </summary>
 		/// <param name="start">DateTime Start</param>
 		/// <param name="minPerChar">Int32 MinPerChar</param>
 		/// <param name="completeFormat">optional object CompleteFormat</param>
-		[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15,16)]
 		public string FreeBusy(DateTime start, Int32 minPerChar, object completeFormat)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(start, minPerChar, completeFormat);
@@ -451,13 +451,13 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff869807.aspx
 		/// </summary>
 		/// <param name="start">DateTime Start</param>
 		/// <param name="minPerChar">Int32 MinPerChar</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15,16)]
 		public string FreeBusy(DateTime start, Int32 minPerChar)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(start, minPerChar);
@@ -466,10 +466,10 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff862796.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15,16)]
 		public bool Resolve()
 		{
 			object[] paramsArray = null;

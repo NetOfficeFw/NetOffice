@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using NetRuntimeSystem = System;
 using System.Runtime.InteropServices;
 using System.Runtime.CompilerServices;
@@ -11,10 +11,10 @@ namespace NetOffice.PowerPointApi
 {
 	///<summary>
 	/// DispatchInterface SeriesCollection 
-	/// SupportByVersion PowerPoint, 14,15
+	/// SupportByVersion PowerPoint, 14,15,16
 	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745059.aspx
 	///</summary>
-	[SupportByVersionAttribute("PowerPoint", 14,15)]
+	[SupportByVersionAttribute("PowerPoint", 14,15,16)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class SeriesCollection : COMObject ,IEnumerable<NetOffice.PowerPointApi.Series>
 	{
@@ -94,12 +94,12 @@ namespace NetOffice.PowerPointApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 14, 15
+		/// SupportByVersion PowerPoint 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746728.aspx
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14,15)]
+		[SupportByVersionAttribute("PowerPoint", 14,15,16)]
 		public object Parent
 		{
 			get
@@ -112,11 +112,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 14, 15
+		/// SupportByVersion PowerPoint 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744885.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14,15)]
+		[SupportByVersionAttribute("PowerPoint", 14,15,16)]
 		public Int32 Count
 		{
 			get
@@ -128,11 +128,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 14, 15
+		/// SupportByVersion PowerPoint 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff743994.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14,15)]
+		[SupportByVersionAttribute("PowerPoint", 14,15,16)]
 		public Int32 Creator
 		{
 			get
@@ -144,11 +144,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 14, 15
+		/// SupportByVersion PowerPoint 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746247.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14,15)]
+		[SupportByVersionAttribute("PowerPoint", 14,15,16)]
 		public NetOffice.PowerPointApi.Application Application
 		{
 			get
@@ -165,13 +165,13 @@ namespace NetOffice.PowerPointApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 14, 15
+		/// SupportByVersion PowerPoint 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746725.aspx
 		/// </summary>
 		/// <param name="source">object Source</param>
 		/// <param name="rowcol">optional object Rowcol</param>
 		/// <param name="categoryLabels">optional object CategoryLabels</param>
-		[SupportByVersionAttribute("PowerPoint", 14,15)]
+		[SupportByVersionAttribute("PowerPoint", 14,15,16)]
 		public object Extend(object source, object rowcol, object categoryLabels)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(source, rowcol, categoryLabels);
@@ -188,12 +188,12 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 14, 15
+		/// SupportByVersion PowerPoint 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746725.aspx
 		/// </summary>
 		/// <param name="source">object Source</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("PowerPoint", 14,15)]
+		[SupportByVersionAttribute("PowerPoint", 14,15,16)]
 		public object Extend(object source)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(source);
@@ -210,13 +210,13 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 14, 15
+		/// SupportByVersion PowerPoint 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746725.aspx
 		/// </summary>
 		/// <param name="source">object Source</param>
 		/// <param name="rowcol">optional object Rowcol</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("PowerPoint", 14,15)]
+		[SupportByVersionAttribute("PowerPoint", 14,15,16)]
 		public object Extend(object source, object rowcol)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(source, rowcol);
@@ -233,10 +233,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 14, 15
+		/// SupportByVersion PowerPoint 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744556.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14,15)]
+		[SupportByVersionAttribute("PowerPoint", 14,15,16)]
 		public NetOffice.PowerPointApi.Series NewSeries()
 		{
 			object[] paramsArray = null;
@@ -246,7 +246,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 14, 15
+		/// SupportByVersion PowerPoint 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744310.aspx
 		/// </summary>
 		/// <param name="source">object Source</param>
@@ -254,7 +254,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="seriesLabels">optional object SeriesLabels</param>
 		/// <param name="categoryLabels">optional object CategoryLabels</param>
 		/// <param name="replace">optional object Replace</param>
-		[SupportByVersionAttribute("PowerPoint", 14,15)]
+		[SupportByVersionAttribute("PowerPoint", 14,15,16)]
 		public NetOffice.PowerPointApi.Series Add(object source, object rowcol, object seriesLabels, object categoryLabels, object replace)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(source, rowcol, seriesLabels, categoryLabels, replace);
@@ -264,12 +264,12 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 14, 15
+		/// SupportByVersion PowerPoint 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744310.aspx
 		/// </summary>
 		/// <param name="source">object Source</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("PowerPoint", 14,15)]
+		[SupportByVersionAttribute("PowerPoint", 14,15,16)]
 		public NetOffice.PowerPointApi.Series Add(object source)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(source);
@@ -279,13 +279,13 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 14, 15
+		/// SupportByVersion PowerPoint 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744310.aspx
 		/// </summary>
 		/// <param name="source">object Source</param>
 		/// <param name="rowcol">optional NetOffice.PowerPointApi.Enums.XlRowCol Rowcol = -4105</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("PowerPoint", 14,15)]
+		[SupportByVersionAttribute("PowerPoint", 14,15,16)]
 		public NetOffice.PowerPointApi.Series Add(object source, object rowcol)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(source, rowcol);
@@ -295,14 +295,14 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 14, 15
+		/// SupportByVersion PowerPoint 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744310.aspx
 		/// </summary>
 		/// <param name="source">object Source</param>
 		/// <param name="rowcol">optional NetOffice.PowerPointApi.Enums.XlRowCol Rowcol = -4105</param>
 		/// <param name="seriesLabels">optional object SeriesLabels</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("PowerPoint", 14,15)]
+		[SupportByVersionAttribute("PowerPoint", 14,15,16)]
 		public NetOffice.PowerPointApi.Series Add(object source, object rowcol, object seriesLabels)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(source, rowcol, seriesLabels);
@@ -312,7 +312,7 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 14, 15
+		/// SupportByVersion PowerPoint 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744310.aspx
 		/// </summary>
 		/// <param name="source">object Source</param>
@@ -320,7 +320,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="seriesLabels">optional object SeriesLabels</param>
 		/// <param name="categoryLabels">optional object CategoryLabels</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("PowerPoint", 14,15)]
+		[SupportByVersionAttribute("PowerPoint", 14,15,16)]
 		public NetOffice.PowerPointApi.Series Add(object source, object rowcol, object seriesLabels, object categoryLabels)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(source, rowcol, seriesLabels, categoryLabels);
@@ -330,11 +330,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 14, 15
+		/// SupportByVersion PowerPoint 14, 15, 16
 		/// 
 		/// </summary>
 		/// <param name="index">object Index</param>
-		[SupportByVersionAttribute("PowerPoint", 14,15)]
+		[SupportByVersionAttribute("PowerPoint", 14,15,16)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
 		public NetOffice.PowerPointApi.Series this[object index]
 		{
@@ -352,9 +352,9 @@ namespace NetOffice.PowerPointApi
        #region IEnumerable<NetOffice.PowerPointApi.Series> Member
         
         /// <summary>
-		/// SupportByVersionAttribute PowerPoint, 14,15
+		/// SupportByVersionAttribute PowerPoint, 14,15,16
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14,15)]
+		[SupportByVersionAttribute("PowerPoint", 14,15,16)]
        public IEnumerator<NetOffice.PowerPointApi.Series> GetEnumerator()  
        {
            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
@@ -367,9 +367,9 @@ namespace NetOffice.PowerPointApi
 		#region IEnumerable Members
        
 		/// <summary>
-		/// SupportByVersionAttribute PowerPoint, 14,15
+		/// SupportByVersionAttribute PowerPoint, 14,15,16
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14,15)]
+		[SupportByVersionAttribute("PowerPoint", 14,15,16)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
 			return NetOffice.Utils.GetProxyEnumeratorAsMethod(this);

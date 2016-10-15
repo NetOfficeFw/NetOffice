@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using NetRuntimeSystem = System;
 using System.Runtime.InteropServices;
 using System.Runtime.CompilerServices;
@@ -10,10 +10,10 @@ namespace NetOffice.ExcelApi
 {
 	///<summary>
 	/// DispatchInterface LinearGradient 
-	/// SupportByVersion Excel, 12,14,15
+	/// SupportByVersion Excel, 12,14,15,16
 	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839067.aspx
 	///</summary>
-	[SupportByVersionAttribute("Excel", 12,14,15)]
+	[SupportByVersionAttribute("Excel", 12,14,15,16)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class LinearGradient : COMObject
 	{
@@ -93,11 +93,11 @@ namespace NetOffice.ExcelApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion Excel 12, 14, 15
+		/// SupportByVersion Excel 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840615.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 12,14,15)]
+		[SupportByVersionAttribute("Excel", 12,14,15,16)]
 		public NetOffice.ExcelApi.Application Application
 		{
 			get
@@ -110,11 +110,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 12, 14, 15
+		/// SupportByVersion Excel 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196232.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 12,14,15)]
+		[SupportByVersionAttribute("Excel", 12,14,15,16)]
 		public NetOffice.ExcelApi.Enums.XlCreator Creator
 		{
 			get
@@ -127,12 +127,12 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 12, 14, 15
+		/// SupportByVersion Excel 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837816.aspx
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 12,14,15)]
+		[SupportByVersionAttribute("Excel", 12,14,15,16)]
 		public object Parent
 		{
 			get
@@ -145,11 +145,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 12, 14, 15
+		/// SupportByVersion Excel 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836505.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 12,14,15)]
+		[SupportByVersionAttribute("Excel", 12,14,15,16)]
 		public NetOffice.ExcelApi.ColorStops ColorStops
 		{
 			get
@@ -162,11 +162,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 12, 14, 15
+		/// SupportByVersion Excel 12, 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193281.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 12,14,15)]
+		[SupportByVersionAttribute("Excel", 12,14,15,16)]
 		public Double Degree
 		{
 			get

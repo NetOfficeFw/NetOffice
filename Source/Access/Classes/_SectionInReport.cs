@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using NetOffice;
@@ -23,9 +23,9 @@ namespace NetOffice.AccessApi
 
 	///<summary>
 	/// CoClass _SectionInReport 
-	/// SupportByVersion Access, 9,10,11,12,14,15
+	/// SupportByVersion Access, 9,10,11,12,14,15,16
 	///</summary>
-	[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+	[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class _SectionInReport : _Section,IEventBinding
 	{
@@ -101,7 +101,7 @@ namespace NetOffice.AccessApi
 		}
 		
 		///<summary>
-        ///creates a new instance of _SectionInReport 
+        /// Creates a new instance of _SectionInReport 
         ///</summary>		
 		public _SectionInReport():base("Access._SectionInReport")
 		{
@@ -109,7 +109,7 @@ namespace NetOffice.AccessApi
 		}
 		
 		///<summary>
-        ///creates a new instance of _SectionInReport
+        /// Creates a new instance of _SectionInReport
         ///</summary>
         ///<param name="progId">registered ProgID</param>
 		public _SectionInReport(string progId):base(progId)
@@ -122,12 +122,12 @@ namespace NetOffice.AccessApi
 		#region Static CoClass Methods
 
 		/// <summary>
-        /// returns all running Access._SectionInReport objects from the running object table(ROT)
+        /// Returns all running Access._SectionInReport objects from the environment/system
         /// </summary>
         /// <returns>an Access._SectionInReport array</returns>
 		public static NetOffice.AccessApi._SectionInReport[] GetActiveInstances()
 		{		
-			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("Access","_SectionInReport");
+			IDisposableEnumeration proxyList = NetOffice.ProxyService.GetActiveInstances("Access","_SectionInReport");
 			NetRuntimeSystem.Collections.Generic.List<NetOffice.AccessApi._SectionInReport> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.AccessApi._SectionInReport>();
 			foreach(object proxy in proxyList)
 				resultList.Add( new NetOffice.AccessApi._SectionInReport(null, proxy) );
@@ -135,12 +135,12 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-        /// returns a running Access._SectionInReport object from the running object table(ROT). the method takes the first element from the table
+        /// Returns a running Access._SectionInReport object from the environment/system.
         /// </summary>
         /// <returns>an Access._SectionInReport object or null</returns>
 		public static NetOffice.AccessApi._SectionInReport GetActiveInstance()
 		{
-			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Access","_SectionInReport", false);
+			object proxy  = NetOffice.ProxyService.GetActiveInstance("Access","_SectionInReport", false);
 			if(null != proxy)
 				return new NetOffice.AccessApi._SectionInReport(null, proxy);
 			else
@@ -148,13 +148,13 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-        /// returns a running Access._SectionInReport object from the running object table(ROT).  the method takes the first element from the table
+        /// Returns a running Access._SectionInReport object from the environment/system. 
         /// </summary>
 	    /// <param name="throwOnError">throw an exception if no object was found</param>
         /// <returns>an Access._SectionInReport object or null</returns>
 		public static NetOffice.AccessApi._SectionInReport GetActiveInstance(bool throwOnError)
 		{
-			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Access","_SectionInReport", throwOnError);
+			object proxy  = NetOffice.ProxyService.GetActiveInstance("Access","_SectionInReport", throwOnError);
 			if(null != proxy)
 				return new NetOffice.AccessApi._SectionInReport(null, proxy);
 			else
@@ -165,14 +165,14 @@ namespace NetOffice.AccessApi
 		#region Events
 
 		/// <summary>
-		/// SupportByVersion Access, 9,10,11,12,14,15
+		/// SupportByVersion Access, 9,10,11,12,14,15,16
 		/// </summary>
 		private event _SectionInReport_FormatEventHandler _FormatEvent;
 
 		/// <summary>
-		/// SupportByVersion Access 9 10 11 12 14 15
+		/// SupportByVersion Access 9 10 11 12 14 15,16
 		/// </summary>
-		[SupportByVersion("Access", 9,10,11,12,14,15)]
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public event _SectionInReport_FormatEventHandler FormatEvent
 		{
 			add
@@ -187,14 +187,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access, 9,10,11,12,14,15
+		/// SupportByVersion Access, 9,10,11,12,14,15,16
 		/// </summary>
 		private event _SectionInReport_PrintEventHandler _PrintEvent;
 
 		/// <summary>
-		/// SupportByVersion Access 9 10 11 12 14 15
+		/// SupportByVersion Access 9 10 11 12 14 15,16
 		/// </summary>
-		[SupportByVersion("Access", 9,10,11,12,14,15)]
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public event _SectionInReport_PrintEventHandler PrintEvent
 		{
 			add
@@ -209,14 +209,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access, 9,10,11,12,14,15
+		/// SupportByVersion Access, 9,10,11,12,14,15,16
 		/// </summary>
 		private event _SectionInReport_RetreatEventHandler _RetreatEvent;
 
 		/// <summary>
-		/// SupportByVersion Access 9 10 11 12 14 15
+		/// SupportByVersion Access 9 10 11 12 14 15,16
 		/// </summary>
-		[SupportByVersion("Access", 9,10,11,12,14,15)]
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public event _SectionInReport_RetreatEventHandler RetreatEvent
 		{
 			add
@@ -231,14 +231,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access, 12,14,15
+		/// SupportByVersion Access, 12,14,15,16
 		/// </summary>
 		private event _SectionInReport_ClickEventHandler _ClickEvent;
 
 		/// <summary>
-		/// SupportByVersion Access 12 14 15
+		/// SupportByVersion Access 12 14 15,16
 		/// </summary>
-		[SupportByVersion("Access", 12,14,15)]
+		[SupportByVersion("Access", 12,14,15,16)]
 		public event _SectionInReport_ClickEventHandler ClickEvent
 		{
 			add
@@ -253,14 +253,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access, 12,14,15
+		/// SupportByVersion Access, 12,14,15,16
 		/// </summary>
 		private event _SectionInReport_DblClickEventHandler _DblClickEvent;
 
 		/// <summary>
-		/// SupportByVersion Access 12 14 15
+		/// SupportByVersion Access 12 14 15,16
 		/// </summary>
-		[SupportByVersion("Access", 12,14,15)]
+		[SupportByVersion("Access", 12,14,15,16)]
 		public event _SectionInReport_DblClickEventHandler DblClickEvent
 		{
 			add
@@ -275,14 +275,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access, 12,14,15
+		/// SupportByVersion Access, 12,14,15,16
 		/// </summary>
 		private event _SectionInReport_MouseDownEventHandler _MouseDownEvent;
 
 		/// <summary>
-		/// SupportByVersion Access 12 14 15
+		/// SupportByVersion Access 12 14 15,16
 		/// </summary>
-		[SupportByVersion("Access", 12,14,15)]
+		[SupportByVersion("Access", 12,14,15,16)]
 		public event _SectionInReport_MouseDownEventHandler MouseDownEvent
 		{
 			add
@@ -297,14 +297,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access, 12,14,15
+		/// SupportByVersion Access, 12,14,15,16
 		/// </summary>
 		private event _SectionInReport_MouseMoveEventHandler _MouseMoveEvent;
 
 		/// <summary>
-		/// SupportByVersion Access 12 14 15
+		/// SupportByVersion Access 12 14 15,16
 		/// </summary>
-		[SupportByVersion("Access", 12,14,15)]
+		[SupportByVersion("Access", 12,14,15,16)]
 		public event _SectionInReport_MouseMoveEventHandler MouseMoveEvent
 		{
 			add
@@ -319,14 +319,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access, 12,14,15
+		/// SupportByVersion Access, 12,14,15,16
 		/// </summary>
 		private event _SectionInReport_MouseUpEventHandler _MouseUpEvent;
 
 		/// <summary>
-		/// SupportByVersion Access 12 14 15
+		/// SupportByVersion Access 12 14 15,16
 		/// </summary>
-		[SupportByVersion("Access", 12,14,15)]
+		[SupportByVersion("Access", 12,14,15,16)]
 		public event _SectionInReport_MouseUpEventHandler MouseUpEvent
 		{
 			add
@@ -341,14 +341,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access, 12,14,15
+		/// SupportByVersion Access, 12,14,15,16
 		/// </summary>
 		private event _SectionInReport_PaintEventHandler _PaintEvent;
 
 		/// <summary>
-		/// SupportByVersion Access 12 14 15
+		/// SupportByVersion Access 12 14 15,16
 		/// </summary>
-		[SupportByVersion("Access", 12,14,15)]
+		[SupportByVersion("Access", 12,14,15,16)]
 		public event _SectionInReport_PaintEventHandler PaintEvent
 		{
 			add
@@ -367,7 +367,7 @@ namespace NetOffice.AccessApi
 	    #region IEventBinding Member
         
 		/// <summary>
-        /// creates active sink helper
+        /// Creates active sink helper
         /// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public void CreateEventBridge()
@@ -395,6 +395,9 @@ namespace NetOffice.AccessApi
 			} 
         }
 
+        /// <summary>
+        /// The instance use currently an event listener 
+        /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public bool EventBridgeInitialized
         {
@@ -403,7 +406,10 @@ namespace NetOffice.AccessApi
                 return (null != _connectPoint);
             }
         }
-        
+
+        /// <summary>
+        ///  The instance has currently one or more event recipients 
+        /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public bool HasEventRecipients()       
         {
@@ -423,6 +429,9 @@ namespace NetOffice.AccessApi
 			return false;
         }
         
+        /// <summary>
+        /// Target methods from its actual event recipients
+        /// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public Delegate[] GetEventRecipients(string eventName)
         {
@@ -442,7 +451,10 @@ namespace NetOffice.AccessApi
             else
                 return new Delegate[0];
         }
-
+       
+        /// <summary>
+        /// Returns the current count of event recipients
+        /// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public int GetCountOfEventRecipients(string eventName)
         {
@@ -461,8 +473,14 @@ namespace NetOffice.AccessApi
             }
             else
                 return 0;
-        }
-
+           }
+        
+        /// <summary>
+        /// Raise an instance event
+        /// </summary>
+        /// <param name="eventName">name of the event without 'Event' at the end</param>
+        /// <param name="paramsArray">custom arguments for the event</param>
+        /// <returns>count of called event recipients</returns>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public int RaiseCustomEvent(string eventName, ref object[] paramsArray)
 		{
@@ -494,6 +512,9 @@ namespace NetOffice.AccessApi
                 return 0;
 		}
 
+        /// <summary>
+        /// Stop listening events for the instance
+        /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public void DisposeEventBridge()
         {

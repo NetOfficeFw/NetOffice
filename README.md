@@ -29,7 +29,7 @@ You can find more information about [NetOffice Git repository in documentation](
 
 NetOffice source code is licensed under [MIT License](LICENSE.txt).
 
-Copyright (c) 2011-2015 Sebastian Lange
+Copyright (c) 2011-2016 Sebastian Lange
 Copyright (c) 2015-2016 Jozef Izso
 
 

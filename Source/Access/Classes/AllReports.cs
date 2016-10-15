@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using NetOffice;
@@ -14,10 +14,10 @@ namespace NetOffice.AccessApi
 
 	///<summary>
 	/// CoClass AllReports 
-	/// SupportByVersion Access, 9,10,11,12,14,15
+	/// SupportByVersion Access, 9,10,11,12,14,15,16
 	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194322.aspx
 	///</summary>
-	[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+	[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class AllReports : AllObjects
 	{
@@ -91,7 +91,7 @@ namespace NetOffice.AccessApi
 		}
 		
 		///<summary>
-        ///creates a new instance of AllReports 
+        /// Creates a new instance of AllReports 
         ///</summary>		
 		public AllReports():base("Access.AllReports")
 		{
@@ -99,7 +99,7 @@ namespace NetOffice.AccessApi
 		}
 		
 		///<summary>
-        ///creates a new instance of AllReports
+        /// Creates a new instance of AllReports
         ///</summary>
         ///<param name="progId">registered ProgID</param>
 		public AllReports(string progId):base(progId)
@@ -112,12 +112,12 @@ namespace NetOffice.AccessApi
 		#region Static CoClass Methods
 
 		/// <summary>
-        /// returns all running Access.AllReports objects from the running object table(ROT)
+        /// Returns all running Access.AllReports objects from the environment/system
         /// </summary>
         /// <returns>an Access.AllReports array</returns>
 		public static NetOffice.AccessApi.AllReports[] GetActiveInstances()
 		{		
-			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("Access","AllReports");
+			IDisposableEnumeration proxyList = NetOffice.ProxyService.GetActiveInstances("Access","AllReports");
 			NetRuntimeSystem.Collections.Generic.List<NetOffice.AccessApi.AllReports> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.AccessApi.AllReports>();
 			foreach(object proxy in proxyList)
 				resultList.Add( new NetOffice.AccessApi.AllReports(null, proxy) );
@@ -125,12 +125,12 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-        /// returns a running Access.AllReports object from the running object table(ROT). the method takes the first element from the table
+        /// Returns a running Access.AllReports object from the environment/system.
         /// </summary>
         /// <returns>an Access.AllReports object or null</returns>
 		public static NetOffice.AccessApi.AllReports GetActiveInstance()
 		{
-			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Access","AllReports", false);
+			object proxy  = NetOffice.ProxyService.GetActiveInstance("Access","AllReports", false);
 			if(null != proxy)
 				return new NetOffice.AccessApi.AllReports(null, proxy);
 			else
@@ -138,13 +138,13 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-        /// returns a running Access.AllReports object from the running object table(ROT).  the method takes the first element from the table
+        /// Returns a running Access.AllReports object from the environment/system. 
         /// </summary>
 	    /// <param name="throwOnError">throw an exception if no object was found</param>
         /// <returns>an Access.AllReports object or null</returns>
 		public static NetOffice.AccessApi.AllReports GetActiveInstance(bool throwOnError)
 		{
-			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Access","AllReports", throwOnError);
+			object proxy  = NetOffice.ProxyService.GetActiveInstance("Access","AllReports", throwOnError);
 			if(null != proxy)
 				return new NetOffice.AccessApi.AllReports(null, proxy);
 			else
@@ -159,7 +159,7 @@ namespace NetOffice.AccessApi
 	    #region IEventBinding Member
         
 		/// <summary>
-        /// creates active sink helper
+        /// Creates active sink helper
         /// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public void CreateEventBridge()
@@ -176,6 +176,9 @@ namespace NetOffice.AccessApi
  
         }
 
+        /// <summary>
+        /// The instance use currently an event listener 
+        /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public bool EventBridgeInitialized
         {
@@ -184,7 +187,10 @@ namespace NetOffice.AccessApi
                 return (null != _connectPoint);
             }
         }
-        
+
+        /// <summary>
+        ///  The instance has currently one or more event recipients 
+        /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public bool HasEventRecipients()       
         {
@@ -204,6 +210,9 @@ namespace NetOffice.AccessApi
 			return false;
         }
         
+        /// <summary>
+        /// Target methods from its actual event recipients
+        /// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public Delegate[] GetEventRecipients(string eventName)
         {
@@ -223,7 +232,10 @@ namespace NetOffice.AccessApi
             else
                 return new Delegate[0];
         }
-
+       
+        /// <summary>
+        /// Returns the current count of event recipients
+        /// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public int GetCountOfEventRecipients(string eventName)
         {
@@ -242,8 +254,14 @@ namespace NetOffice.AccessApi
             }
             else
                 return 0;
-        }
-
+           }
+        
+        /// <summary>
+        /// Raise an instance event
+        /// </summary>
+        /// <param name="eventName">name of the event without 'Event' at the end</param>
+        /// <param name="paramsArray">custom arguments for the event</param>
+        /// <returns>count of called event recipients</returns>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public int RaiseCustomEvent(string eventName, ref object[] paramsArray)
 		{
@@ -275,6 +293,9 @@ namespace NetOffice.AccessApi
                 return 0;
 		}
 
+        /// <summary>
+        /// Stop listening events for the instance
+        /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public void DisposeEventBridge()
         {

@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using NetRuntimeSystem = System;
 using System.Runtime.InteropServices;
 using System.Runtime.CompilerServices;
@@ -10,10 +10,10 @@ namespace NetOffice.PowerPointApi
 {
 	///<summary>
 	/// DispatchInterface RulerLevel 
-	/// SupportByVersion PowerPoint, 9,10,11,12,14,15
+	/// SupportByVersion PowerPoint, 9,10,11,12,14,15,16
 	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745033.aspx
 	///</summary>
-	[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
+	[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class RulerLevel : COMObject
 	{
@@ -93,11 +93,11 @@ namespace NetOffice.PowerPointApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746552.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
 		public NetOffice.PowerPointApi.Application Application
 		{
 			get
@@ -110,12 +110,12 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746172.aspx
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
 		public object Parent
 		{
 			get
@@ -128,11 +128,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745631.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
 		public Single FirstMargin
 		{
 			get
@@ -149,11 +149,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746612.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
 		public Single LeftMargin
 		{
 			get

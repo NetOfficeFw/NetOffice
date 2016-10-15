@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using NetRuntimeSystem = System;
 using System.Runtime.InteropServices;
 using System.Runtime.CompilerServices;
@@ -11,10 +11,10 @@ namespace NetOffice.ExcelApi
 {
 	///<summary>
 	/// DispatchInterface IconCriteria 
-	/// SupportByVersion Excel, 12,14,15
+	/// SupportByVersion Excel, 12,14,15,16
 	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838790.aspx
 	///</summary>
-	[SupportByVersionAttribute("Excel", 12,14,15)]
+	[SupportByVersionAttribute("Excel", 12,14,15,16)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class IconCriteria : COMObject ,IEnumerable<NetOffice.ExcelApi.IconCriterion>
 	{
@@ -94,11 +94,11 @@ namespace NetOffice.ExcelApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion Excel 12, 14, 15
+		/// SupportByVersion Excel 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194608.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 12,14,15)]
+		[SupportByVersionAttribute("Excel", 12,14,15,16)]
 		public Int32 Count
 		{
 			get
@@ -110,11 +110,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 12, 14, 15
+		/// SupportByVersion Excel 12, 14, 15, 16
 		/// Get
 		/// </summary>
 		/// <param name="index">object Index</param>
-		[SupportByVersionAttribute("Excel", 12,14,15)]
+		[SupportByVersionAttribute("Excel", 12,14,15,16)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
 		public NetOffice.ExcelApi.IconCriterion this[object index]
 		{
@@ -136,9 +136,9 @@ namespace NetOffice.ExcelApi
        #region IEnumerable<NetOffice.ExcelApi.IconCriterion> Member
         
         /// <summary>
-		/// SupportByVersionAttribute Excel, 12,14,15
+		/// SupportByVersionAttribute Excel, 12,14,15,16
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 12,14,15)]
+		[SupportByVersionAttribute("Excel", 12,14,15,16)]
        public IEnumerator<NetOffice.ExcelApi.IconCriterion> GetEnumerator()  
        {
            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
@@ -151,9 +151,9 @@ namespace NetOffice.ExcelApi
 		#region IEnumerable Members
        
 		/// <summary>
-		/// SupportByVersionAttribute Excel, 12,14,15
+		/// SupportByVersionAttribute Excel, 12,14,15,16
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 12,14,15)]
+		[SupportByVersionAttribute("Excel", 12,14,15,16)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
 			return NetOffice.Utils.GetProxyEnumeratorAsProperty(this);

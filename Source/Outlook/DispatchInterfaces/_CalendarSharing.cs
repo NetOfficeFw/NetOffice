@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using NetRuntimeSystem = System;
 using System.Runtime.InteropServices;
 using System.Runtime.CompilerServices;
@@ -10,9 +10,9 @@ namespace NetOffice.OutlookApi
 {
 	///<summary>
 	/// DispatchInterface _CalendarSharing 
-	/// SupportByVersion Outlook, 12,14,15
+	/// SupportByVersion Outlook, 12,14,15,16
 	///</summary>
-	[SupportByVersionAttribute("Outlook", 12,14,15)]
+	[SupportByVersionAttribute("Outlook", 12,14,15,16)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class _CalendarSharing : COMObject
 	{
@@ -92,11 +92,11 @@ namespace NetOffice.OutlookApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion Outlook 12, 14, 15
+		/// SupportByVersion Outlook 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff866903.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Outlook", 12,14,15)]
+		[SupportByVersionAttribute("Outlook", 12,14,15,16)]
 		public NetOffice.OutlookApi._Application Application
 		{
 			get
@@ -109,11 +109,11 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook 12, 14, 15
+		/// SupportByVersion Outlook 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff869711.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Outlook", 12,14,15)]
+		[SupportByVersionAttribute("Outlook", 12,14,15,16)]
 		public NetOffice.OutlookApi.Enums.OlObjectClass Class
 		{
 			get
@@ -126,11 +126,11 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook 12, 14, 15
+		/// SupportByVersion Outlook 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff865365.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Outlook", 12,14,15)]
+		[SupportByVersionAttribute("Outlook", 12,14,15,16)]
 		public NetOffice.OutlookApi._NameSpace Session
 		{
 			get
@@ -143,12 +143,12 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook 12, 14, 15
+		/// SupportByVersion Outlook 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff870166.aspx
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("Outlook", 12,14,15)]
+		[SupportByVersionAttribute("Outlook", 12,14,15,16)]
 		public object Parent
 		{
 			get
@@ -161,11 +161,11 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook 12, 14, 15
+		/// SupportByVersion Outlook 12, 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff869925.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Outlook", 12,14,15)]
+		[SupportByVersionAttribute("Outlook", 12,14,15,16)]
 		public NetOffice.OutlookApi.Enums.OlCalendarDetail CalendarDetail
 		{
 			get
@@ -183,11 +183,11 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook 12, 14, 15
+		/// SupportByVersion Outlook 12, 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff867407.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Outlook", 12,14,15)]
+		[SupportByVersionAttribute("Outlook", 12,14,15,16)]
 		public DateTime EndDate
 		{
 			get
@@ -204,11 +204,11 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook 12, 14, 15
+		/// SupportByVersion Outlook 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff865614.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Outlook", 12,14,15)]
+		[SupportByVersionAttribute("Outlook", 12,14,15,16)]
 		public NetOffice.OutlookApi.MAPIFolder Folder
 		{
 			get
@@ -221,11 +221,11 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook 12, 14, 15
+		/// SupportByVersion Outlook 12, 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff864794.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Outlook", 12,14,15)]
+		[SupportByVersionAttribute("Outlook", 12,14,15,16)]
 		public bool IncludeAttachments
 		{
 			get
@@ -242,11 +242,11 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook 12, 14, 15
+		/// SupportByVersion Outlook 12, 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff868390.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Outlook", 12,14,15)]
+		[SupportByVersionAttribute("Outlook", 12,14,15,16)]
 		public bool IncludePrivateDetails
 		{
 			get
@@ -263,11 +263,11 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook 12, 14, 15
+		/// SupportByVersion Outlook 12, 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff862986.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Outlook", 12,14,15)]
+		[SupportByVersionAttribute("Outlook", 12,14,15,16)]
 		public bool RestrictToWorkingHours
 		{
 			get
@@ -284,11 +284,11 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook 12, 14, 15
+		/// SupportByVersion Outlook 12, 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff862241.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Outlook", 12,14,15)]
+		[SupportByVersionAttribute("Outlook", 12,14,15,16)]
 		public DateTime StartDate
 		{
 			get
@@ -305,11 +305,11 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook 12, 14, 15
+		/// SupportByVersion Outlook 12, 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff866237.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Outlook", 12,14,15)]
+		[SupportByVersionAttribute("Outlook", 12,14,15,16)]
 		public bool IncludeWholeCalendar
 		{
 			get
@@ -330,11 +330,11 @@ namespace NetOffice.OutlookApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByVersion Outlook 12, 14, 15
+		/// SupportByVersion Outlook 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff862395.aspx
 		/// </summary>
 		/// <param name="path">string Path</param>
-		[SupportByVersionAttribute("Outlook", 12,14,15)]
+		[SupportByVersionAttribute("Outlook", 12,14,15,16)]
 		public void SaveAsICal(string path)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(path);
@@ -342,11 +342,11 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook 12, 14, 15
+		/// SupportByVersion Outlook 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff868718.aspx
 		/// </summary>
 		/// <param name="mailFormat">NetOffice.OutlookApi.Enums.OlCalendarMailFormat MailFormat</param>
-		[SupportByVersionAttribute("Outlook", 12,14,15)]
+		[SupportByVersionAttribute("Outlook", 12,14,15,16)]
 		public NetOffice.OutlookApi.MailItem ForwardAsICal(NetOffice.OutlookApi.Enums.OlCalendarMailFormat mailFormat)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(mailFormat);

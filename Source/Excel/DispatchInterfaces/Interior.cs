@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using NetRuntimeSystem = System;
 using System.Runtime.InteropServices;
 using System.Runtime.CompilerServices;
@@ -10,10 +10,10 @@ namespace NetOffice.ExcelApi
 {
 	///<summary>
 	/// DispatchInterface Interior 
-	/// SupportByVersion Excel, 9,10,11,12,14,15
+	/// SupportByVersion Excel, 9,10,11,12,14,15,16
 	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196598.aspx
 	///</summary>
-	[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
+	[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class Interior : COMObject
 	{
@@ -93,11 +93,11 @@ namespace NetOffice.ExcelApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839431.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
 		public NetOffice.ExcelApi.Application Application
 		{
 			get
@@ -110,11 +110,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840138.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
 		public NetOffice.ExcelApi.Enums.XlCreator Creator
 		{
 			get
@@ -127,12 +127,12 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194389.aspx
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
 		public object Parent
 		{
 			get
@@ -145,11 +145,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840499.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
 		public object Color
 		{
 			get
@@ -174,11 +174,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822603.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
 		public object ColorIndex
 		{
 			get
@@ -203,11 +203,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197910.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
 		public object InvertIfNegative
 		{
 			get
@@ -232,11 +232,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835883.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
 		public object Pattern
 		{
 			get
@@ -261,11 +261,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197513.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
 		public object PatternColor
 		{
 			get
@@ -290,11 +290,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840377.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
 		public object PatternColorIndex
 		{
 			get
@@ -319,11 +319,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 12, 14, 15
+		/// SupportByVersion Excel 12, 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff820778.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 12,14,15)]
+		[SupportByVersionAttribute("Excel", 12,14,15,16)]
 		public object ThemeColor
 		{
 			get
@@ -348,11 +348,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 12, 14, 15
+		/// SupportByVersion Excel 12, 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197557.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 12,14,15)]
+		[SupportByVersionAttribute("Excel", 12,14,15,16)]
 		public object TintAndShade
 		{
 			get
@@ -377,11 +377,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 12, 14, 15
+		/// SupportByVersion Excel 12, 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839013.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 12,14,15)]
+		[SupportByVersionAttribute("Excel", 12,14,15,16)]
 		public object PatternThemeColor
 		{
 			get
@@ -406,11 +406,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 12, 14, 15
+		/// SupportByVersion Excel 12, 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192986.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 12,14,15)]
+		[SupportByVersionAttribute("Excel", 12,14,15,16)]
 		public object PatternTintAndShade
 		{
 			get
@@ -435,12 +435,12 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 12, 14, 15
+		/// SupportByVersion Excel 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195190.aspx
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 12,14,15)]
+		[SupportByVersionAttribute("Excel", 12,14,15,16)]
 		public object Gradient
 		{
 			get

@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using NetRuntimeSystem = System;
 using System.Runtime.InteropServices;
 using System.Runtime.CompilerServices;
@@ -10,10 +10,10 @@ namespace NetOffice.PowerPointApi
 {
 	///<summary>
 	/// DispatchInterface ParagraphFormat 
-	/// SupportByVersion PowerPoint, 9,10,11,12,14,15
+	/// SupportByVersion PowerPoint, 9,10,11,12,14,15,16
 	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744084.aspx
 	///</summary>
-	[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
+	[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class ParagraphFormat : COMObject
 	{
@@ -93,11 +93,11 @@ namespace NetOffice.PowerPointApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745303.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
 		public NetOffice.PowerPointApi.Application Application
 		{
 			get
@@ -110,12 +110,12 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744963.aspx
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
 		public object Parent
 		{
 			get
@@ -128,11 +128,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744029.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
 		public NetOffice.PowerPointApi.Enums.PpParagraphAlignment Alignment
 		{
 			get
@@ -150,11 +150,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744331.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
 		public NetOffice.PowerPointApi.BulletFormat Bullet
 		{
 			get
@@ -167,11 +167,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744236.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
 		public NetOffice.OfficeApi.Enums.MsoTriState LineRuleBefore
 		{
 			get
@@ -189,11 +189,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746808.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
 		public NetOffice.OfficeApi.Enums.MsoTriState LineRuleAfter
 		{
 			get
@@ -211,11 +211,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff743974.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
 		public NetOffice.OfficeApi.Enums.MsoTriState LineRuleWithin
 		{
 			get
@@ -233,11 +233,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746133.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
 		public Single SpaceBefore
 		{
 			get
@@ -254,11 +254,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745560.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
 		public Single SpaceAfter
 		{
 			get
@@ -275,11 +275,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744880.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
 		public Single SpaceWithin
 		{
 			get
@@ -296,11 +296,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746010.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
 		public NetOffice.PowerPointApi.Enums.PpBaselineAlignment BaseLineAlignment
 		{
 			get
@@ -318,11 +318,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746835.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
 		public NetOffice.OfficeApi.Enums.MsoTriState FarEastLineBreakControl
 		{
 			get
@@ -340,11 +340,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746424.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
 		public NetOffice.OfficeApi.Enums.MsoTriState WordWrap
 		{
 			get
@@ -362,11 +362,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746578.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
 		public NetOffice.OfficeApi.Enums.MsoTriState HangingPunctuation
 		{
 			get
@@ -384,11 +384,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744711.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
 		public NetOffice.PowerPointApi.Enums.PpDirection TextDirection
 		{
 			get

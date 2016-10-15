@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using NetRuntimeSystem = System;
 using System.Runtime.InteropServices;
 using System.Runtime.CompilerServices;
@@ -11,10 +11,10 @@ namespace NetOffice.ExcelApi
 {
 	///<summary>
 	/// DispatchInterface FormatConditions 
-	/// SupportByVersion Excel, 9,10,11,12,14,15
+	/// SupportByVersion Excel, 9,10,11,12,14,15,16
 	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195304.aspx
 	///</summary>
-	[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
+	[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class FormatConditions : COMObject ,IEnumerable<object>
 	{
@@ -94,11 +94,11 @@ namespace NetOffice.ExcelApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195110.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
 		public NetOffice.ExcelApi.Application Application
 		{
 			get
@@ -111,11 +111,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838998.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
 		public NetOffice.ExcelApi.Enums.XlCreator Creator
 		{
 			get
@@ -128,12 +128,12 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822570.aspx
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
 		public object Parent
 		{
 			get
@@ -146,11 +146,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840014.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
 		public Int32 Count
 		{
 			get
@@ -162,11 +162,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
 		/// <param name="index">object Index</param>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
 		public NetOffice.ExcelApi.FormatCondition this[object index]
 		{
@@ -184,14 +184,14 @@ namespace NetOffice.ExcelApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822801.aspx
 		/// </summary>
 		/// <param name="type">NetOffice.ExcelApi.Enums.XlFormatConditionType Type</param>
 		/// <param name="_operator">optional object Operator</param>
 		/// <param name="formula1">optional object Formula1</param>
 		/// <param name="formula2">optional object Formula2</param>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
 		public NetOffice.ExcelApi.FormatCondition Add(NetOffice.ExcelApi.Enums.XlFormatConditionType type, object _operator, object formula1, object formula2)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, _operator, formula1, formula2);
@@ -201,7 +201,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 12, 14, 15
+		/// SupportByVersion Excel 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822801.aspx
 		/// </summary>
 		/// <param name="type">NetOffice.ExcelApi.Enums.XlFormatConditionType Type</param>
@@ -212,7 +212,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="textOperator">optional object TextOperator</param>
 		/// <param name="dateOperator">optional object DateOperator</param>
 		/// <param name="scopeType">optional object ScopeType</param>
-		[SupportByVersionAttribute("Excel", 12,14,15)]
+		[SupportByVersionAttribute("Excel", 12,14,15,16)]
 		public object Add(NetOffice.ExcelApi.Enums.XlFormatConditionType type, object _operator, object formula1, object formula2, object _string, object textOperator, object dateOperator, object scopeType)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, _operator, formula1, formula2, _string, textOperator, dateOperator, scopeType);
@@ -222,12 +222,12 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822801.aspx
 		/// </summary>
 		/// <param name="type">NetOffice.ExcelApi.Enums.XlFormatConditionType Type</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
 		public NetOffice.ExcelApi.FormatCondition Add(NetOffice.ExcelApi.Enums.XlFormatConditionType type)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type);
@@ -237,13 +237,13 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822801.aspx
 		/// </summary>
 		/// <param name="type">NetOffice.ExcelApi.Enums.XlFormatConditionType Type</param>
 		/// <param name="_operator">optional object Operator</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
 		public NetOffice.ExcelApi.FormatCondition Add(NetOffice.ExcelApi.Enums.XlFormatConditionType type, object _operator)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, _operator);
@@ -253,14 +253,14 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822801.aspx
 		/// </summary>
 		/// <param name="type">NetOffice.ExcelApi.Enums.XlFormatConditionType Type</param>
 		/// <param name="_operator">optional object Operator</param>
 		/// <param name="formula1">optional object Formula1</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
 		public NetOffice.ExcelApi.FormatCondition Add(NetOffice.ExcelApi.Enums.XlFormatConditionType type, object _operator, object formula1)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, _operator, formula1);
@@ -270,7 +270,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 12, 14, 15
+		/// SupportByVersion Excel 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822801.aspx
 		/// </summary>
 		/// <param name="type">NetOffice.ExcelApi.Enums.XlFormatConditionType Type</param>
@@ -279,7 +279,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="formula2">optional object Formula2</param>
 		/// <param name="_string">optional object String</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 12,14,15)]
+		[SupportByVersionAttribute("Excel", 12,14,15,16)]
 		public object Add(NetOffice.ExcelApi.Enums.XlFormatConditionType type, object _operator, object formula1, object formula2, object _string)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, _operator, formula1, formula2, _string);
@@ -289,7 +289,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 12, 14, 15
+		/// SupportByVersion Excel 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822801.aspx
 		/// </summary>
 		/// <param name="type">NetOffice.ExcelApi.Enums.XlFormatConditionType Type</param>
@@ -299,7 +299,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="_string">optional object String</param>
 		/// <param name="textOperator">optional object TextOperator</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 12,14,15)]
+		[SupportByVersionAttribute("Excel", 12,14,15,16)]
 		public object Add(NetOffice.ExcelApi.Enums.XlFormatConditionType type, object _operator, object formula1, object formula2, object _string, object textOperator)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, _operator, formula1, formula2, _string, textOperator);
@@ -309,7 +309,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 12, 14, 15
+		/// SupportByVersion Excel 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822801.aspx
 		/// </summary>
 		/// <param name="type">NetOffice.ExcelApi.Enums.XlFormatConditionType Type</param>
@@ -320,7 +320,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="textOperator">optional object TextOperator</param>
 		/// <param name="dateOperator">optional object DateOperator</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 12,14,15)]
+		[SupportByVersionAttribute("Excel", 12,14,15,16)]
 		public object Add(NetOffice.ExcelApi.Enums.XlFormatConditionType type, object _operator, object formula1, object formula2, object _string, object textOperator, object dateOperator)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, _operator, formula1, formula2, _string, textOperator, dateOperator);
@@ -330,10 +330,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839670.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
 		public void Delete()
 		{
 			object[] paramsArray = null;
@@ -341,11 +341,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 12, 14, 15
+		/// SupportByVersion Excel 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840801.aspx
 		/// </summary>
 		/// <param name="colorScaleType">Int32 ColorScaleType</param>
-		[SupportByVersionAttribute("Excel", 12,14,15)]
+		[SupportByVersionAttribute("Excel", 12,14,15,16)]
 		public object AddColorScale(Int32 colorScaleType)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(colorScaleType);
@@ -355,10 +355,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 12, 14, 15
+		/// SupportByVersion Excel 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff198148.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 12,14,15)]
+		[SupportByVersionAttribute("Excel", 12,14,15,16)]
 		public object AddDatabar()
 		{
 			object[] paramsArray = null;
@@ -368,10 +368,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 12, 14, 15
+		/// SupportByVersion Excel 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840504.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 12,14,15)]
+		[SupportByVersionAttribute("Excel", 12,14,15,16)]
 		public object AddIconSetCondition()
 		{
 			object[] paramsArray = null;
@@ -381,10 +381,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 12, 14, 15
+		/// SupportByVersion Excel 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840329.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 12,14,15)]
+		[SupportByVersionAttribute("Excel", 12,14,15,16)]
 		public object AddTop10()
 		{
 			object[] paramsArray = null;
@@ -394,10 +394,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 12, 14, 15
+		/// SupportByVersion Excel 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839582.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 12,14,15)]
+		[SupportByVersionAttribute("Excel", 12,14,15,16)]
 		public object AddAboveAverage()
 		{
 			object[] paramsArray = null;
@@ -407,10 +407,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 12, 14, 15
+		/// SupportByVersion Excel 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836788.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 12,14,15)]
+		[SupportByVersionAttribute("Excel", 12,14,15,16)]
 		public object AddUniqueValues()
 		{
 			object[] paramsArray = null;
@@ -424,9 +424,9 @@ namespace NetOffice.ExcelApi
        #region IEnumerable<NetOffice.ExcelApi.FormatCondition> Member
         
         /// <summary>
-		/// SupportByVersionAttribute Excel, 9,10,11,12,14,15
+		/// SupportByVersionAttribute Excel, 9,10,11,12,14,15,16
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
        public IEnumerator<object> GetEnumerator()  
        {
            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
@@ -439,9 +439,9 @@ namespace NetOffice.ExcelApi
 		#region IEnumerable Members
        
 		/// <summary>
-		/// SupportByVersionAttribute Excel, 9,10,11,12,14,15
+		/// SupportByVersionAttribute Excel, 9,10,11,12,14,15,16
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
 			return NetOffice.Utils.GetProxyEnumeratorAsProperty(this);

@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using NetRuntimeSystem = System;
 using System.Runtime.InteropServices;
 using System.Runtime.CompilerServices;
@@ -11,9 +11,9 @@ namespace NetOffice.VisioApi
 {
 	///<summary>
 	/// DispatchInterface IVToolbarSets 
-	/// SupportByVersion Visio, 11,12,14,15
+	/// SupportByVersion Visio, 11,12,14,15,16
 	///</summary>
-	[SupportByVersionAttribute("Visio", 11,12,14,15)]
+	[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class IVToolbarSets : COMObject ,IEnumerable<NetOffice.VisioApi.IVToolbarSet>
 	{
@@ -93,11 +93,11 @@ namespace NetOffice.VisioApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion Visio 11, 12, 14, 15
+		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
 		/// <param name="lIndex">Int32 lIndex</param>
-		[SupportByVersionAttribute("Visio", 11,12,14,15)]
+		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
 		public NetOffice.VisioApi.IVToolbarSet this[Int32 lIndex]
 		{
@@ -111,11 +111,11 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio 11, 12, 14, 15
+		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
 		/// <param name="lID">Int32 lID</param>
-		[SupportByVersionAttribute("Visio", 11,12,14,15)]
+		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public NetOffice.VisioApi.IVToolbarSet get_ItemAtID(Int32 lID)
 		{		
@@ -126,21 +126,21 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio 11, 12, 14, 15
+		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// Alias for get_ItemAtID
 		/// </summary>
 		/// <param name="lID">Int32 lID</param>
-		[SupportByVersionAttribute("Visio", 11,12,14,15)]
+		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
 		public NetOffice.VisioApi.IVToolbarSet ItemAtID(Int32 lID)
 		{
 			return get_ItemAtID(lID);
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio 11, 12, 14, 15
+		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 11,12,14,15)]
+		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
 		public Int32 Count
 		{
 			get
@@ -152,10 +152,10 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio 11, 12, 14, 15
+		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 11,12,14,15)]
+		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
 		public NetOffice.VisioApi.IVUIObject Parent
 		{
 			get
@@ -172,10 +172,10 @@ namespace NetOffice.VisioApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByVersion Visio 11, 12, 14, 15
+		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// 
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 11,12,14,15)]
+		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
 		public NetOffice.VisioApi.IVToolbarSet Add()
 		{
 			object[] paramsArray = null;
@@ -185,11 +185,11 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio 11, 12, 14, 15
+		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// 
 		/// </summary>
 		/// <param name="lID">Int32 lID</param>
-		[SupportByVersionAttribute("Visio", 11,12,14,15)]
+		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
 		public NetOffice.VisioApi.IVToolbarSet AddAtID(Int32 lID)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(lID);
@@ -203,9 +203,9 @@ namespace NetOffice.VisioApi
        #region IEnumerable<NetOffice.VisioApi.IVToolbarSet> Member
         
         /// <summary>
-		/// SupportByVersionAttribute Visio, 11,12,14,15
+		/// SupportByVersionAttribute Visio, 11,12,14,15,16
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 11,12,14,15)]
+		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
        public IEnumerator<NetOffice.VisioApi.IVToolbarSet> GetEnumerator()  
        {
            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
@@ -218,9 +218,9 @@ namespace NetOffice.VisioApi
 		#region IEnumerable Members
        
 		/// <summary>
-		/// SupportByVersionAttribute Visio, 11,12,14,15
+		/// SupportByVersionAttribute Visio, 11,12,14,15,16
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 11,12,14,15)]
+		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
 			return NetOffice.Utils.GetProxyEnumeratorAsProperty(this);

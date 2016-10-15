@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using NetRuntimeSystem = System;
 using System.Runtime.InteropServices;
 using System.Runtime.CompilerServices;
@@ -10,9 +10,9 @@ namespace NetOffice.AccessApi
 {
 	///<summary>
 	/// DispatchInterface _AutoCorrect 
-	/// SupportByVersion Access, 11,12,14,15
+	/// SupportByVersion Access, 11,12,14,15,16
 	///</summary>
-	[SupportByVersionAttribute("Access", 11,12,14,15)]
+	[SupportByVersionAttribute("Access", 11,12,14,15,16)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class _AutoCorrect : COMObject
 	{
@@ -92,11 +92,11 @@ namespace NetOffice.AccessApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion Access 11, 12, 14, 15
+		/// SupportByVersion Access 11, 12, 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193224.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Access", 11,12,14,15)]
+		[SupportByVersionAttribute("Access", 11,12,14,15,16)]
 		public bool DisplayAutoCorrectOptions
 		{
 			get
@@ -117,12 +117,12 @@ namespace NetOffice.AccessApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByVersion Access 11, 12, 14, 15
+		/// SupportByVersion Access 11, 12, 14, 15, 16
 		/// 
 		/// </summary>
 		/// <param name="dispid">Int32 dispid</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("Access", 11,12,14,15)]
+		[SupportByVersionAttribute("Access", 11,12,14,15,16)]
 		public bool IsMemberSafe(Int32 dispid)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(dispid);

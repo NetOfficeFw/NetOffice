@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using NetRuntimeSystem = System;
 using System.Runtime.InteropServices;
 using System.Runtime.CompilerServices;
@@ -11,10 +11,10 @@ namespace NetOffice.WordApi
 {
 	///<summary>
 	/// DispatchInterface OMathArgs 
-	/// SupportByVersion Word, 12,14,15
+	/// SupportByVersion Word, 12,14,15,16
 	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196839.aspx
 	///</summary>
-	[SupportByVersionAttribute("Word", 12,14,15)]
+	[SupportByVersionAttribute("Word", 12,14,15,16)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class OMathArgs : COMObject ,IEnumerable<NetOffice.WordApi.OMath>
 	{
@@ -94,11 +94,11 @@ namespace NetOffice.WordApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion Word 12, 14, 15
+		/// SupportByVersion Word 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838280.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 12,14,15)]
+		[SupportByVersionAttribute("Word", 12,14,15,16)]
 		public NetOffice.WordApi.Application Application
 		{
 			get
@@ -111,11 +111,11 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 12, 14, 15
+		/// SupportByVersion Word 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192547.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 12,14,15)]
+		[SupportByVersionAttribute("Word", 12,14,15,16)]
 		public Int32 Creator
 		{
 			get
@@ -127,12 +127,12 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 12, 14, 15
+		/// SupportByVersion Word 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196083.aspx
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("Word", 12,14,15)]
+		[SupportByVersionAttribute("Word", 12,14,15,16)]
 		public object Parent
 		{
 			get
@@ -145,11 +145,11 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 12, 14, 15
+		/// SupportByVersion Word 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835440.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 12,14,15)]
+		[SupportByVersionAttribute("Word", 12,14,15,16)]
 		public Int32 Count
 		{
 			get
@@ -165,11 +165,11 @@ namespace NetOffice.WordApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByVersion Word 12, 14, 15
+		/// SupportByVersion Word 12, 14, 15, 16
 		/// 
 		/// </summary>
 		/// <param name="index">Int32 Index</param>
-		[SupportByVersionAttribute("Word", 12,14,15)]
+		[SupportByVersionAttribute("Word", 12,14,15,16)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
 		public NetOffice.WordApi.OMath this[Int32 index]
 		{
@@ -183,11 +183,11 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 12, 14, 15
+		/// SupportByVersion Word 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836302.aspx
 		/// </summary>
 		/// <param name="beforeArg">optional object BeforeArg</param>
-		[SupportByVersionAttribute("Word", 12,14,15)]
+		[SupportByVersionAttribute("Word", 12,14,15,16)]
 		public NetOffice.WordApi.OMath Add(object beforeArg)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(beforeArg);
@@ -197,11 +197,11 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 12, 14, 15
+		/// SupportByVersion Word 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836302.aspx
 		/// </summary>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 12,14,15)]
+		[SupportByVersionAttribute("Word", 12,14,15,16)]
 		public NetOffice.WordApi.OMath Add()
 		{
 			object[] paramsArray = null;
@@ -214,10 +214,10 @@ namespace NetOffice.WordApi
        #region IEnumerable<NetOffice.WordApi.OMath> Member
         
         /// <summary>
-		/// SupportByVersionAttribute Word, 12,14,15
+		/// SupportByVersionAttribute Word, 12,14,15,16
 		/// This is a custom enumerator from NetOffice
 		/// </summary>
-		[SupportByVersionAttribute("Word", 12,14,15)]
+		[SupportByVersionAttribute("Word", 12,14,15,16)]
         [CustomEnumerator]
        public IEnumerator<NetOffice.WordApi.OMath> GetEnumerator()  
        {
@@ -231,10 +231,10 @@ namespace NetOffice.WordApi
        #region IEnumerable Members
         
        /// <summary>
-		/// SupportByVersionAttribute Word, 12,14,15
+		/// SupportByVersionAttribute Word, 12,14,15,16
 		/// This is a custom enumerator from NetOffice
 		/// </summary>
-		[SupportByVersionAttribute("Word", 12,14,15)]
+		[SupportByVersionAttribute("Word", 12,14,15,16)]
         [CustomEnumerator]
         IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
        {

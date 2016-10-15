@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using NetRuntimeSystem = System;
 using System.Runtime.InteropServices;
 using System.Runtime.CompilerServices;
@@ -10,9 +10,9 @@ namespace NetOffice.OfficeApi
 {
 	///<summary>
 	/// DispatchInterface WebComponentWindowExternal 
-	/// SupportByVersion Office, 10,11,12,14,15
+	/// SupportByVersion Office, 10,11,12,14,15,16
 	///</summary>
-	[SupportByVersionAttribute("Office", 10,11,12,14,15)]
+	[SupportByVersionAttribute("Office", 10,11,12,14,15,16)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class WebComponentWindowExternal : COMObject
 	{
@@ -92,10 +92,10 @@ namespace NetOffice.OfficeApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion Office 10, 11, 12, 14, 15
+		/// SupportByVersion Office 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
+		[SupportByVersionAttribute("Office", 10,11,12,14,15,16)]
 		public Int32 InterfaceVersion
 		{
 			get
@@ -107,10 +107,10 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 10, 11, 12, 14, 15
+		/// SupportByVersion Office 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
+		[SupportByVersionAttribute("Office", 10,11,12,14,15,16)]
 		public string ApplicationName
 		{
 			get
@@ -122,10 +122,10 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 10, 11, 12, 14, 15
+		/// SupportByVersion Office 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
+		[SupportByVersionAttribute("Office", 10,11,12,14,15,16)]
 		public Int32 ApplicationVersion
 		{
 			get
@@ -137,11 +137,11 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 10, 11, 12, 14, 15
+		/// SupportByVersion Office 10, 11, 12, 14, 15, 16
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
+		[SupportByVersionAttribute("Office", 10,11,12,14,15,16)]
 		public object Application
 		{
 			get
@@ -154,10 +154,10 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 10, 11, 12, 14, 15
+		/// SupportByVersion Office 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
+		[SupportByVersionAttribute("Office", 10,11,12,14,15,16)]
 		public NetOffice.OfficeApi.WebComponent WebComponent
 		{
 			get
@@ -174,10 +174,10 @@ namespace NetOffice.OfficeApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByVersion Office 10, 11, 12, 14, 15
+		/// SupportByVersion Office 10, 11, 12, 14, 15, 16
 		/// 
 		/// </summary>
-		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
+		[SupportByVersionAttribute("Office", 10,11,12,14,15,16)]
 		public void CloseWindow()
 		{
 			object[] paramsArray = null;

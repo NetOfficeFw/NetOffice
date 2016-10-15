@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using NetRuntimeSystem = System;
 using System.Runtime.InteropServices;
 using System.Runtime.CompilerServices;
@@ -10,10 +10,10 @@ namespace NetOffice.OfficeApi
 {
 	///<summary>
 	/// DispatchInterface SmartArtNode 
-	/// SupportByVersion Office, 14,15
+	/// SupportByVersion Office, 14,15,16
 	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff861178.aspx
 	///</summary>
-	[SupportByVersionAttribute("Office", 14,15)]
+	[SupportByVersionAttribute("Office", 14,15,16)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class SmartArtNode : _IMsoDispObj
 	{
@@ -93,12 +93,12 @@ namespace NetOffice.OfficeApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion Office 14, 15
+		/// SupportByVersion Office 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff863308.aspx
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("Office", 14,15)]
+		[SupportByVersionAttribute("Office", 14,15,16)]
 		public object Parent
 		{
 			get
@@ -111,11 +111,11 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 14, 15
+		/// SupportByVersion Office 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff860568.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Office", 14,15)]
+		[SupportByVersionAttribute("Office", 14,15,16)]
 		public NetOffice.OfficeApi.Enums.MsoOrgChartLayoutType OrgChartLayout
 		{
 			get
@@ -133,11 +133,11 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 14, 15
+		/// SupportByVersion Office 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff864604.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Office", 14,15)]
+		[SupportByVersionAttribute("Office", 14,15,16)]
 		public NetOffice.OfficeApi.ShapeRange Shapes
 		{
 			get
@@ -150,11 +150,11 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 14, 15
+		/// SupportByVersion Office 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff861779.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Office", 14,15)]
+		[SupportByVersionAttribute("Office", 14,15,16)]
 		public NetOffice.OfficeApi.TextFrame2 TextFrame2
 		{
 			get
@@ -167,11 +167,11 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 14, 15
+		/// SupportByVersion Office 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff862082.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Office", 14,15)]
+		[SupportByVersionAttribute("Office", 14,15,16)]
 		public Int32 Level
 		{
 			get
@@ -183,11 +183,11 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 14, 15
+		/// SupportByVersion Office 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff860275.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Office", 14,15)]
+		[SupportByVersionAttribute("Office", 14,15,16)]
 		public NetOffice.OfficeApi.Enums.MsoTriState Hidden
 		{
 			get
@@ -200,11 +200,11 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 14, 15
+		/// SupportByVersion Office 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff865275.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Office", 14,15)]
+		[SupportByVersionAttribute("Office", 14,15,16)]
 		public NetOffice.OfficeApi.SmartArtNodes Nodes
 		{
 			get
@@ -217,11 +217,11 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 14, 15
+		/// SupportByVersion Office 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff862047.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Office", 14,15)]
+		[SupportByVersionAttribute("Office", 14,15,16)]
 		public NetOffice.OfficeApi.SmartArtNode ParentNode
 		{
 			get
@@ -234,11 +234,11 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 14, 15
+		/// SupportByVersion Office 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff861873.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Office", 14,15)]
+		[SupportByVersionAttribute("Office", 14,15,16)]
 		public NetOffice.OfficeApi.Enums.MsoSmartArtNodeType Type
 		{
 			get
@@ -255,12 +255,12 @@ namespace NetOffice.OfficeApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByVersion Office 14, 15
+		/// SupportByVersion Office 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff865366.aspx
 		/// </summary>
 		/// <param name="position">optional NetOffice.OfficeApi.Enums.MsoSmartArtNodePosition Position = 1</param>
 		/// <param name="type">optional NetOffice.OfficeApi.Enums.MsoSmartArtNodeType Type = 1</param>
-		[SupportByVersionAttribute("Office", 14,15)]
+		[SupportByVersionAttribute("Office", 14,15,16)]
 		public NetOffice.OfficeApi.SmartArtNode AddNode(object position, object type)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(position, type);
@@ -270,11 +270,11 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 14, 15
+		/// SupportByVersion Office 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff865366.aspx
 		/// </summary>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Office", 14,15)]
+		[SupportByVersionAttribute("Office", 14,15,16)]
 		public NetOffice.OfficeApi.SmartArtNode AddNode()
 		{
 			object[] paramsArray = null;
@@ -284,12 +284,12 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 14, 15
+		/// SupportByVersion Office 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff865366.aspx
 		/// </summary>
 		/// <param name="position">optional NetOffice.OfficeApi.Enums.MsoSmartArtNodePosition Position = 1</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Office", 14,15)]
+		[SupportByVersionAttribute("Office", 14,15,16)]
 		public NetOffice.OfficeApi.SmartArtNode AddNode(object position)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(position);
@@ -299,10 +299,10 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 14, 15
+		/// SupportByVersion Office 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff863109.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Office", 14,15)]
+		[SupportByVersionAttribute("Office", 14,15,16)]
 		public void Delete()
 		{
 			object[] paramsArray = null;
@@ -310,10 +310,10 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 14, 15
+		/// SupportByVersion Office 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff862804.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Office", 14,15)]
+		[SupportByVersionAttribute("Office", 14,15,16)]
 		public void Promote()
 		{
 			object[] paramsArray = null;
@@ -321,10 +321,10 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 14, 15
+		/// SupportByVersion Office 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff860258.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Office", 14,15)]
+		[SupportByVersionAttribute("Office", 14,15,16)]
 		public void Demote()
 		{
 			object[] paramsArray = null;
@@ -332,10 +332,10 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 14, 15
+		/// SupportByVersion Office 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff864694.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Office", 14,15)]
+		[SupportByVersionAttribute("Office", 14,15,16)]
 		public void Larger()
 		{
 			object[] paramsArray = null;
@@ -343,10 +343,10 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 14, 15
+		/// SupportByVersion Office 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff863061.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Office", 14,15)]
+		[SupportByVersionAttribute("Office", 14,15,16)]
 		public void Smaller()
 		{
 			object[] paramsArray = null;
@@ -354,10 +354,10 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 14, 15
+		/// SupportByVersion Office 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff863035.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Office", 14,15)]
+		[SupportByVersionAttribute("Office", 14,15,16)]
 		public void ReorderUp()
 		{
 			object[] paramsArray = null;
@@ -365,10 +365,10 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 14, 15
+		/// SupportByVersion Office 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff860343.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Office", 14,15)]
+		[SupportByVersionAttribute("Office", 14,15,16)]
 		public void ReorderDown()
 		{
 			object[] paramsArray = null;

@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using NetRuntimeSystem = System;
 using System.Runtime.InteropServices;
 using System.Runtime.CompilerServices;
@@ -10,9 +10,9 @@ namespace NetOffice.OfficeApi
 {
 	///<summary>
 	/// DispatchInterface ICommandBarsEvents 
-	/// SupportByVersion Office, 9,10,11,12,14,15
+	/// SupportByVersion Office, 9,10,11,12,14,15,16
 	///</summary>
-	[SupportByVersionAttribute("Office", 9,10,11,12,14,15)]
+	[SupportByVersionAttribute("Office", 9,10,11,12,14,15,16)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class ICommandBarsEvents : COMObject
 	{
@@ -96,10 +96,10 @@ namespace NetOffice.OfficeApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByVersion Office 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
 		/// 
 		/// </summary>
-		[SupportByVersionAttribute("Office", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Office", 9,10,11,12,14,15,16)]
 		public void OnUpdate()
 		{
 			object[] paramsArray = null;

@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using NetRuntimeSystem = System;
 using System.Runtime.InteropServices;
 using System.ComponentModel;
@@ -11,10 +11,10 @@ namespace NetOffice.OfficeApi
 {
 	///<summary>
 	/// Interface DocumentProperties 
-	/// SupportByVersion Office, 9,10,11,12,14,15
+	/// SupportByVersion Office, 9,10,11,12,14,15,16
 	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff863102.aspx
 	///</summary>
-	[SupportByVersionAttribute("Office", 9,10,11,12,14,15)]
+	[SupportByVersionAttribute("Office", 9,10,11,12,14,15,16)]
 	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class DocumentProperties : COMObject ,IEnumerable<NetOffice.OfficeApi.DocumentProperty>
 	{
@@ -94,12 +94,12 @@ namespace NetOffice.OfficeApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion Office 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff864976.aspx
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("Office", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Office", 9,10,11,12,14,15,16)]
 		public object Parent
 		{
 			get
@@ -112,11 +112,11 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
 		/// <param name="index">object Index</param>
-		[SupportByVersionAttribute("Office", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Office", 9,10,11,12,14,15,16)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
 		public NetOffice.OfficeApi.DocumentProperty this[object index]
 		{
@@ -130,11 +130,11 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff863076.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Office", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Office", 9,10,11,12,14,15,16)]
 		public Int32 Count
 		{
 			get
@@ -146,12 +146,12 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff864029.aspx
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("Office", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Office", 9,10,11,12,14,15,16)]
 		public object Application
 		{
 			get
@@ -164,11 +164,11 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff861448.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Office", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Office", 9,10,11,12,14,15,16)]
 		public Int32 Creator
 		{
 			get
@@ -184,7 +184,7 @@ namespace NetOffice.OfficeApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByVersion Office 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff862806.aspx
 		/// </summary>
 		/// <param name="name">string Name</param>
@@ -192,7 +192,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="type">optional object Type</param>
 		/// <param name="value">optional object Value</param>
 		/// <param name="linkSource">optional object LinkSource</param>
-		[SupportByVersionAttribute("Office", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Office", 9,10,11,12,14,15,16)]
 		public NetOffice.OfficeApi.DocumentProperty Add(string name, bool linkToContent, object type, object value, object linkSource)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, linkToContent, type, value, linkSource);
@@ -202,13 +202,13 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff862806.aspx
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="linkToContent">bool LinkToContent</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Office", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Office", 9,10,11,12,14,15,16)]
 		public NetOffice.OfficeApi.DocumentProperty Add(string name, bool linkToContent)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, linkToContent);
@@ -218,14 +218,14 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff862806.aspx
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="linkToContent">bool LinkToContent</param>
 		/// <param name="type">optional object Type</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Office", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Office", 9,10,11,12,14,15,16)]
 		public NetOffice.OfficeApi.DocumentProperty Add(string name, bool linkToContent, object type)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, linkToContent, type);
@@ -235,7 +235,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff862806.aspx
 		/// </summary>
 		/// <param name="name">string Name</param>
@@ -243,7 +243,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="type">optional object Type</param>
 		/// <param name="value">optional object Value</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Office", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Office", 9,10,11,12,14,15,16)]
 		public NetOffice.OfficeApi.DocumentProperty Add(string name, bool linkToContent, object type, object value)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, linkToContent, type, value);
@@ -257,9 +257,9 @@ namespace NetOffice.OfficeApi
        #region IEnumerable<NetOffice.OfficeApi.DocumentProperty> Member
         
         /// <summary>
-		/// SupportByVersionAttribute Office, 9,10,11,12,14,15
+		/// SupportByVersionAttribute Office, 9,10,11,12,14,15,16
 		/// </summary>
-		[SupportByVersionAttribute("Office", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Office", 9,10,11,12,14,15,16)]
        public IEnumerator<NetOffice.OfficeApi.DocumentProperty> GetEnumerator()  
        {
            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
@@ -272,9 +272,9 @@ namespace NetOffice.OfficeApi
 		#region IEnumerable Members
        
 		/// <summary>
-		/// SupportByVersionAttribute Office, 9,10,11,12,14,15
+		/// SupportByVersionAttribute Office, 9,10,11,12,14,15,16
 		/// </summary>
-		[SupportByVersionAttribute("Office", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Office", 9,10,11,12,14,15,16)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
 			return NetOffice.Utils.GetProxyEnumeratorAsProperty(this);

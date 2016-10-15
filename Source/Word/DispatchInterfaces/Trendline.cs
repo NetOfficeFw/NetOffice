@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using NetRuntimeSystem = System;
 using System.Runtime.InteropServices;
 using System.Runtime.CompilerServices;
@@ -10,10 +10,10 @@ namespace NetOffice.WordApi
 {
 	///<summary>
 	/// DispatchInterface Trendline 
-	/// SupportByVersion Word, 14,15
+	/// SupportByVersion Word, 14,15,16
 	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff191973.aspx
 	///</summary>
-	[SupportByVersionAttribute("Word", 14,15)]
+	[SupportByVersionAttribute("Word", 14,15,16)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class Trendline : COMObject
 	{
@@ -93,12 +93,12 @@ namespace NetOffice.WordApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion Word 14, 15
+		/// SupportByVersion Word 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839958.aspx
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14,15)]
+		[SupportByVersionAttribute("Word", 14,15,16)]
 		public object Parent
 		{
 			get
@@ -111,10 +111,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 14, 15
+		/// SupportByVersion Word 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14,15)]
+		[SupportByVersionAttribute("Word", 14,15,16)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public Double Backward
 		{
@@ -132,11 +132,11 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 14, 15
+		/// SupportByVersion Word 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194642.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14,15)]
+		[SupportByVersionAttribute("Word", 14,15,16)]
 		public NetOffice.WordApi.ChartBorder Border
 		{
 			get
@@ -149,11 +149,11 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 14, 15
+		/// SupportByVersion Word 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845056.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14,15)]
+		[SupportByVersionAttribute("Word", 14,15,16)]
 		public NetOffice.WordApi.DataLabel DataLabel
 		{
 			get
@@ -166,11 +166,11 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 14, 15
+		/// SupportByVersion Word 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837929.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14,15)]
+		[SupportByVersionAttribute("Word", 14,15,16)]
 		public bool DisplayEquation
 		{
 			get
@@ -187,11 +187,11 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 14, 15
+		/// SupportByVersion Word 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845641.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14,15)]
+		[SupportByVersionAttribute("Word", 14,15,16)]
 		public bool DisplayRSquared
 		{
 			get
@@ -208,10 +208,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 14, 15
+		/// SupportByVersion Word 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14,15)]
+		[SupportByVersionAttribute("Word", 14,15,16)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public Double Forward
 		{
@@ -229,11 +229,11 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 14, 15
+		/// SupportByVersion Word 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845745.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14,15)]
+		[SupportByVersionAttribute("Word", 14,15,16)]
 		public Int32 Index
 		{
 			get
@@ -245,11 +245,11 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 14, 15
+		/// SupportByVersion Word 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838559.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14,15)]
+		[SupportByVersionAttribute("Word", 14,15,16)]
 		public Double Intercept
 		{
 			get
@@ -266,11 +266,11 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 14, 15
+		/// SupportByVersion Word 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff198363.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14,15)]
+		[SupportByVersionAttribute("Word", 14,15,16)]
 		public bool InterceptIsAuto
 		{
 			get
@@ -287,11 +287,11 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 14, 15
+		/// SupportByVersion Word 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822368.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14,15)]
+		[SupportByVersionAttribute("Word", 14,15,16)]
 		public string Name
 		{
 			get
@@ -308,11 +308,11 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 14, 15
+		/// SupportByVersion Word 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822133.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14,15)]
+		[SupportByVersionAttribute("Word", 14,15,16)]
 		public bool NameIsAuto
 		{
 			get
@@ -329,11 +329,11 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 14, 15
+		/// SupportByVersion Word 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff820740.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14,15)]
+		[SupportByVersionAttribute("Word", 14,15,16)]
 		public Int32 Order
 		{
 			get
@@ -350,11 +350,11 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 14, 15
+		/// SupportByVersion Word 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194226.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14,15)]
+		[SupportByVersionAttribute("Word", 14,15,16)]
 		public Int32 Period
 		{
 			get
@@ -371,11 +371,11 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 14, 15
+		/// SupportByVersion Word 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192134.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14,15)]
+		[SupportByVersionAttribute("Word", 14,15,16)]
 		public NetOffice.WordApi.Enums.XlTrendlineType Type
 		{
 			get
@@ -393,11 +393,11 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 14, 15
+		/// SupportByVersion Word 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840168.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14,15)]
+		[SupportByVersionAttribute("Word", 14,15,16)]
 		public NetOffice.WordApi.ChartFormat Format
 		{
 			get
@@ -410,12 +410,12 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 14, 15
+		/// SupportByVersion Word 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837899.aspx
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14,15)]
+		[SupportByVersionAttribute("Word", 14,15,16)]
 		public object Application
 		{
 			get
@@ -428,11 +428,11 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 14, 15
+		/// SupportByVersion Word 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192129.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14,15)]
+		[SupportByVersionAttribute("Word", 14,15,16)]
 		public Int32 Creator
 		{
 			get
@@ -444,11 +444,11 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 14, 15
+		/// SupportByVersion Word 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194385.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14,15)]
+		[SupportByVersionAttribute("Word", 14,15,16)]
 		public Double Backward2
 		{
 			get
@@ -465,11 +465,11 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 14, 15
+		/// SupportByVersion Word 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835458.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14,15)]
+		[SupportByVersionAttribute("Word", 14,15,16)]
 		public Double Forward2
 		{
 			get
@@ -490,10 +490,10 @@ namespace NetOffice.WordApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByVersion Word 14, 15
+		/// SupportByVersion Word 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839116.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14,15)]
+		[SupportByVersionAttribute("Word", 14,15,16)]
 		public object ClearFormats()
 		{
 			object[] paramsArray = null;
@@ -510,10 +510,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 14, 15
+		/// SupportByVersion Word 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837906.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14,15)]
+		[SupportByVersionAttribute("Word", 14,15,16)]
 		public object Delete()
 		{
 			object[] paramsArray = null;
@@ -530,10 +530,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 14, 15
+		/// SupportByVersion Word 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840421.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14,15)]
+		[SupportByVersionAttribute("Word", 14,15,16)]
 		public object Select()
 		{
 			object[] paramsArray = null;

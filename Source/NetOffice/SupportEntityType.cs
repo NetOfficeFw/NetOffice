@@ -1,7 +1,7 @@
 ﻿namespace NetOffice
 {
     /// <summary>
-    /// search parameter for the EntityIsAvailable Method
+    /// Search parameter for the EntityIsAvailable Method
     /// </summary>
     public enum SupportEntityType
     {

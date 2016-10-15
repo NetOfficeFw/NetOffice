@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using NetRuntimeSystem = System;
 using System.Runtime.InteropServices;
 using System.Runtime.CompilerServices;
@@ -11,10 +11,10 @@ namespace NetOffice.WordApi
 {
 	///<summary>
 	/// DispatchInterface ListTemplates 
-	/// SupportByVersion Word, 9,10,11,12,14,15
+	/// SupportByVersion Word, 9,10,11,12,14,15,16
 	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196561.aspx
 	///</summary>
-	[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
+	[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class ListTemplates : COMObject ,IEnumerable<NetOffice.WordApi.ListTemplate>
 	{
@@ -94,11 +94,11 @@ namespace NetOffice.WordApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836423.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
 		public Int32 Count
 		{
 			get
@@ -110,11 +110,11 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff844890.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.Application Application
 		{
 			get
@@ -127,11 +127,11 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822695.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
 		public Int32 Creator
 		{
 			get
@@ -143,12 +143,12 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836987.aspx
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
 		public object Parent
 		{
 			get
@@ -165,11 +165,11 @@ namespace NetOffice.WordApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// 
 		/// </summary>
 		/// <param name="index">object Index</param>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
 		public NetOffice.WordApi.ListTemplate this[object index]
 		{
@@ -183,12 +183,12 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838283.aspx
 		/// </summary>
 		/// <param name="outlineNumbered">optional object OutlineNumbered</param>
 		/// <param name="name">optional object Name</param>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.ListTemplate Add(object outlineNumbered, object name)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(outlineNumbered, name);
@@ -198,11 +198,11 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838283.aspx
 		/// </summary>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.ListTemplate Add()
 		{
 			object[] paramsArray = null;
@@ -212,12 +212,12 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838283.aspx
 		/// </summary>
 		/// <param name="outlineNumbered">optional object OutlineNumbered</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.ListTemplate Add(object outlineNumbered)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(outlineNumbered);
@@ -231,9 +231,9 @@ namespace NetOffice.WordApi
        #region IEnumerable<NetOffice.WordApi.ListTemplate> Member
         
         /// <summary>
-		/// SupportByVersionAttribute Word, 9,10,11,12,14,15
+		/// SupportByVersionAttribute Word, 9,10,11,12,14,15,16
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
        public IEnumerator<NetOffice.WordApi.ListTemplate> GetEnumerator()  
        {
            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
@@ -246,9 +246,9 @@ namespace NetOffice.WordApi
 		#region IEnumerable Members
        
 		/// <summary>
-		/// SupportByVersionAttribute Word, 9,10,11,12,14,15
+		/// SupportByVersionAttribute Word, 9,10,11,12,14,15,16
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
 			return NetOffice.Utils.GetProxyEnumeratorAsProperty(this);

@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using NetRuntimeSystem = System;
 using System.Runtime.InteropServices;
 using System.Runtime.CompilerServices;
@@ -10,10 +10,10 @@ namespace NetOffice.PowerPointApi
 {
 	///<summary>
 	/// DispatchInterface AnimationBehaviors 
-	/// SupportByVersion PowerPoint, 10,11,12,14,15
+	/// SupportByVersion PowerPoint, 10,11,12,14,15,16
 	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744688.aspx
 	///</summary>
-	[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15)]
+	[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15,16)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class AnimationBehaviors : Collection
 	{
@@ -93,11 +93,11 @@ namespace NetOffice.PowerPointApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745278.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15,16)]
 		public NetOffice.PowerPointApi.Application Application
 		{
 			get
@@ -110,12 +110,12 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff743854.aspx
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15,16)]
 		public object Parent
 		{
 			get
@@ -132,11 +132,11 @@ namespace NetOffice.PowerPointApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
 		/// 
 		/// </summary>
 		/// <param name="index">Int32 Index</param>
-		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15,16)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
 		public NetOffice.PowerPointApi.AnimationBehavior this[Int32 index]
 		{
@@ -150,12 +150,12 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744709.aspx
 		/// </summary>
 		/// <param name="type">NetOffice.PowerPointApi.Enums.MsoAnimType Type</param>
 		/// <param name="index">optional Int32 Index = -1</param>
-		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15,16)]
 		public NetOffice.PowerPointApi.AnimationBehavior Add(NetOffice.PowerPointApi.Enums.MsoAnimType type, object index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, index);
@@ -165,12 +165,12 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744709.aspx
 		/// </summary>
 		/// <param name="type">NetOffice.PowerPointApi.Enums.MsoAnimType Type</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15,16)]
 		public NetOffice.PowerPointApi.AnimationBehavior Add(NetOffice.PowerPointApi.Enums.MsoAnimType type)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type);

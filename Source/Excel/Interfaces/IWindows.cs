@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using NetRuntimeSystem = System;
 using System.Runtime.InteropServices;
 using System.ComponentModel;
@@ -11,9 +11,9 @@ namespace NetOffice.ExcelApi
 {
 	///<summary>
 	/// Interface IWindows 
-	/// SupportByVersion Excel, 9,10,11,12,14,15
+	/// SupportByVersion Excel, 9,10,11,12,14,15,16
 	///</summary>
-	[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
+	[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
 	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class IWindows : COMObject ,IEnumerable<NetOffice.ExcelApi.Window>
 	{
@@ -93,10 +93,10 @@ namespace NetOffice.ExcelApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
 		public NetOffice.ExcelApi.Application Application
 		{
 			get
@@ -109,10 +109,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
 		public NetOffice.ExcelApi.Enums.XlCreator Creator
 		{
 			get
@@ -125,11 +125,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
 		public object Parent
 		{
 			get
@@ -142,10 +142,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
 		public Int32 Count
 		{
 			get
@@ -157,11 +157,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
 		/// <param name="index">object Index</param>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
 		public NetOffice.ExcelApi.Window this[object index]
 		{
@@ -175,10 +175,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 11, 12, 14, 15
+		/// SupportByVersion Excel 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 11,12,14,15)]
+		[SupportByVersionAttribute("Excel", 11,12,14,15,16)]
 		public bool SyncScrollingSideBySide
 		{
 			get
@@ -199,14 +199,14 @@ namespace NetOffice.ExcelApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// 
 		/// </summary>
 		/// <param name="arrangeStyle">optional NetOffice.ExcelApi.Enums.XlArrangeStyle ArrangeStyle = 1</param>
 		/// <param name="activeWorkbook">optional object ActiveWorkbook</param>
 		/// <param name="syncHorizontal">optional object SyncHorizontal</param>
 		/// <param name="syncVertical">optional object SyncVertical</param>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
 		public object Arrange(object arrangeStyle, object activeWorkbook, object syncHorizontal, object syncVertical)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arrangeStyle, activeWorkbook, syncHorizontal, syncVertical);
@@ -223,11 +223,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// 
 		/// </summary>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
 		public object Arrange()
 		{
 			object[] paramsArray = null;
@@ -244,12 +244,12 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// 
 		/// </summary>
 		/// <param name="arrangeStyle">optional NetOffice.ExcelApi.Enums.XlArrangeStyle ArrangeStyle = 1</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
 		public object Arrange(object arrangeStyle)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arrangeStyle);
@@ -266,13 +266,13 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// 
 		/// </summary>
 		/// <param name="arrangeStyle">optional NetOffice.ExcelApi.Enums.XlArrangeStyle ArrangeStyle = 1</param>
 		/// <param name="activeWorkbook">optional object ActiveWorkbook</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
 		public object Arrange(object arrangeStyle, object activeWorkbook)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arrangeStyle, activeWorkbook);
@@ -289,14 +289,14 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// 
 		/// </summary>
 		/// <param name="arrangeStyle">optional NetOffice.ExcelApi.Enums.XlArrangeStyle ArrangeStyle = 1</param>
 		/// <param name="activeWorkbook">optional object ActiveWorkbook</param>
 		/// <param name="syncHorizontal">optional object SyncHorizontal</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
 		public object Arrange(object arrangeStyle, object activeWorkbook, object syncHorizontal)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arrangeStyle, activeWorkbook, syncHorizontal);
@@ -313,11 +313,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 11, 12, 14, 15
+		/// SupportByVersion Excel 11, 12, 14, 15, 16
 		/// 
 		/// </summary>
 		/// <param name="windowName">object WindowName</param>
-		[SupportByVersionAttribute("Excel", 11,12,14,15)]
+		[SupportByVersionAttribute("Excel", 11,12,14,15,16)]
 		public bool CompareSideBySideWith(object windowName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(windowName);
@@ -326,10 +326,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 11, 12, 14, 15
+		/// SupportByVersion Excel 11, 12, 14, 15, 16
 		/// 
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 11,12,14,15)]
+		[SupportByVersionAttribute("Excel", 11,12,14,15,16)]
 		public bool BreakSideBySide()
 		{
 			object[] paramsArray = null;
@@ -338,10 +338,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 11, 12, 14, 15
+		/// SupportByVersion Excel 11, 12, 14, 15, 16
 		/// 
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 11,12,14,15)]
+		[SupportByVersionAttribute("Excel", 11,12,14,15,16)]
 		public Int32 ResetPositionsSideBySide()
 		{
 			object[] paramsArray = null;
@@ -354,9 +354,9 @@ namespace NetOffice.ExcelApi
        #region IEnumerable<NetOffice.ExcelApi.Window> Member
         
         /// <summary>
-		/// SupportByVersionAttribute Excel, 9,10,11,12,14,15
+		/// SupportByVersionAttribute Excel, 9,10,11,12,14,15,16
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
        public IEnumerator<NetOffice.ExcelApi.Window> GetEnumerator()  
        {
            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
@@ -369,9 +369,9 @@ namespace NetOffice.ExcelApi
 		#region IEnumerable Members
        
 		/// <summary>
-		/// SupportByVersionAttribute Excel, 9,10,11,12,14,15
+		/// SupportByVersionAttribute Excel, 9,10,11,12,14,15,16
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
 			return NetOffice.Utils.GetProxyEnumeratorAsProperty(this);

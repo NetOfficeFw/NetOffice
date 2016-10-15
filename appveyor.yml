@@ -3,7 +3,7 @@
 # AppVeyor configuration
 #
 
-version: 1.7.1.{build}
+version: 1.7.4.{build}
 
 branches:
   except:
@@ -19,19 +19,22 @@ configuration:
   - Debug
   - Release
 
+before_build:
+  - nuget restore NetOffice.sln
+
 build:
   project: NetOffice.sln
   verbosity: detailed
+
+cache:
+  - packages -> **\packages.config
 
 assembly_info:
   patch: true
   file: AssemblyInfo.*
   assembly_version: "{version}"
   assembly_file_version: "{version}"
-  assembly_informational_version: "{version}"
+  assembly_informational_version: "1.7.4-pre-{build}"
 
 test:
   assemblies:
-
-cache:
-  - packages

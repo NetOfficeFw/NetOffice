@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using NetRuntimeSystem = System;
 using System.Runtime.InteropServices;
 using System.Runtime.CompilerServices;
@@ -10,10 +10,10 @@ namespace NetOffice.OfficeApi
 {
 	///<summary>
 	/// DispatchInterface EffectParameter 
-	/// SupportByVersion Office, 14,15
+	/// SupportByVersion Office, 14,15,16
 	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff863145.aspx
 	///</summary>
-	[SupportByVersionAttribute("Office", 14,15)]
+	[SupportByVersionAttribute("Office", 14,15,16)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class EffectParameter : _IMsoDispObj
 	{
@@ -93,11 +93,11 @@ namespace NetOffice.OfficeApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion Office 14, 15
+		/// SupportByVersion Office 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff862852.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Office", 14,15)]
+		[SupportByVersionAttribute("Office", 14,15,16)]
 		public string Name
 		{
 			get
@@ -109,11 +109,11 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 14, 15
+		/// SupportByVersion Office 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff861425.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Office", 14,15)]
+		[SupportByVersionAttribute("Office", 14,15,16)]
 		public object Value
 		{
 			get

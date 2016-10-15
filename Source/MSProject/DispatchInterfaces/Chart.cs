@@ -153,13 +153,14 @@ namespace NetOffice.MSProjectApi
 			}
 		}
 
-		/// <summary>
-		/// SupportByVersion MSProject 11
-		/// Get/Set
-		/// </summary>
-		/// <param name="axisType">optional object axisType</param>
-		/// <param name="axisGroup">optional object AxisGroup</param>
-		[SupportByVersionAttribute("MSProject", 11)]
+        /// <summary>
+        /// SupportByVersion MSProject 11
+        /// Get/Set
+        /// </summary>
+        /// <param name="axisType">optional object axisType</param>
+        /// <param name="axisGroup">optional object AxisGroup</param>
+        /// <param name="value">optional object value</param>
+        [SupportByVersionAttribute("MSProject", 11)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public void set_HasAxis(object axisType, object axisGroup, object value)
 		{
@@ -201,12 +202,13 @@ namespace NetOffice.MSProjectApi
 			}
 		}
 
-		/// <summary>
-		/// SupportByVersion MSProject 11
-		/// Get/Set
-		/// </summary>
-		/// <param name="axisType">optional object axisType</param>
-		[SupportByVersionAttribute("MSProject", 11)]
+        /// <summary>
+        /// SupportByVersion MSProject 11
+        /// Get/Set
+        /// </summary>
+        /// <param name="axisType">optional object axisType</param>
+        /// <param name="value">optional object value</param>
+        [SupportByVersionAttribute("MSProject", 11)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public void set_HasAxis(object axisType, object value)
 		{

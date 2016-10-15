@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using NetRuntimeSystem = System;
 using System.Runtime.InteropServices;
 using System.ComponentModel;
@@ -10,9 +10,9 @@ namespace NetOffice.ExcelApi
 {
 	///<summary>
 	/// Interface IProtectedViewWindow 
-	/// SupportByVersion Excel, 14,15
+	/// SupportByVersion Excel, 14,15,16
 	///</summary>
-	[SupportByVersionAttribute("Excel", 14,15)]
+	[SupportByVersionAttribute("Excel", 14,15,16)]
 	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class IProtectedViewWindow : COMObject
 	{
@@ -92,10 +92,10 @@ namespace NetOffice.ExcelApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion Excel 14, 15
+		/// SupportByVersion Excel 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 14,15)]
+		[SupportByVersionAttribute("Excel", 14,15,16)]
 		public string _Default
 		{
 			get
@@ -107,10 +107,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 14, 15
+		/// SupportByVersion Excel 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 14,15)]
+		[SupportByVersionAttribute("Excel", 14,15,16)]
 		public string Caption
 		{
 			get
@@ -127,10 +127,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 14, 15
+		/// SupportByVersion Excel 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 14,15)]
+		[SupportByVersionAttribute("Excel", 14,15,16)]
 		public bool EnableResize
 		{
 			get
@@ -147,10 +147,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 14, 15
+		/// SupportByVersion Excel 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 14,15)]
+		[SupportByVersionAttribute("Excel", 14,15,16)]
 		public Double Height
 		{
 			get
@@ -167,10 +167,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 14, 15
+		/// SupportByVersion Excel 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 14,15)]
+		[SupportByVersionAttribute("Excel", 14,15,16)]
 		public Double Left
 		{
 			get
@@ -187,10 +187,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 14, 15
+		/// SupportByVersion Excel 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 14,15)]
+		[SupportByVersionAttribute("Excel", 14,15,16)]
 		public Double Top
 		{
 			get
@@ -207,10 +207,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 14, 15
+		/// SupportByVersion Excel 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 14,15)]
+		[SupportByVersionAttribute("Excel", 14,15,16)]
 		public Double Width
 		{
 			get
@@ -227,10 +227,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 14, 15
+		/// SupportByVersion Excel 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 14,15)]
+		[SupportByVersionAttribute("Excel", 14,15,16)]
 		public bool Visible
 		{
 			get
@@ -247,10 +247,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 14, 15
+		/// SupportByVersion Excel 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 14,15)]
+		[SupportByVersionAttribute("Excel", 14,15,16)]
 		public string SourceName
 		{
 			get
@@ -262,10 +262,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 14, 15
+		/// SupportByVersion Excel 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 14,15)]
+		[SupportByVersionAttribute("Excel", 14,15,16)]
 		public string SourcePath
 		{
 			get
@@ -277,10 +277,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 14, 15
+		/// SupportByVersion Excel 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 14,15)]
+		[SupportByVersionAttribute("Excel", 14,15,16)]
 		public NetOffice.ExcelApi.Enums.XlProtectedViewWindowState WindowState
 		{
 			get
@@ -298,10 +298,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 14, 15
+		/// SupportByVersion Excel 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 14,15)]
+		[SupportByVersionAttribute("Excel", 14,15,16)]
 		public NetOffice.ExcelApi.Workbook Workbook
 		{
 			get
@@ -318,10 +318,10 @@ namespace NetOffice.ExcelApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByVersion Excel 14, 15
+		/// SupportByVersion Excel 14, 15, 16
 		/// 
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 14,15)]
+		[SupportByVersionAttribute("Excel", 14,15,16)]
 		public Int32 Activate()
 		{
 			object[] paramsArray = null;
@@ -330,10 +330,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 14, 15
+		/// SupportByVersion Excel 14, 15, 16
 		/// 
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 14,15)]
+		[SupportByVersionAttribute("Excel", 14,15,16)]
 		public bool Close()
 		{
 			object[] paramsArray = null;
@@ -342,12 +342,12 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 14, 15
+		/// SupportByVersion Excel 14, 15, 16
 		/// 
 		/// </summary>
 		/// <param name="writeResPassword">optional object WriteResPassword</param>
 		/// <param name="updateLinks">optional object UpdateLinks</param>
-		[SupportByVersionAttribute("Excel", 14,15)]
+		[SupportByVersionAttribute("Excel", 14,15,16)]
 		public NetOffice.ExcelApi.Workbook Edit(object writeResPassword, object updateLinks)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(writeResPassword, updateLinks);
@@ -357,11 +357,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 14, 15
+		/// SupportByVersion Excel 14, 15, 16
 		/// 
 		/// </summary>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 14,15)]
+		[SupportByVersionAttribute("Excel", 14,15,16)]
 		public NetOffice.ExcelApi.Workbook Edit()
 		{
 			object[] paramsArray = null;
@@ -371,12 +371,12 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 14, 15
+		/// SupportByVersion Excel 14, 15, 16
 		/// 
 		/// </summary>
 		/// <param name="writeResPassword">optional object WriteResPassword</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 14,15)]
+		[SupportByVersionAttribute("Excel", 14,15,16)]
 		public NetOffice.ExcelApi.Workbook Edit(object writeResPassword)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(writeResPassword);

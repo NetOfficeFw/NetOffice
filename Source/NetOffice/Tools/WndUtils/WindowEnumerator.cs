@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Drawing;
 using System.Collections.Generic;
 using System.Runtime.InteropServices;
 using System.Threading;
@@ -22,28 +23,49 @@ namespace NetOffice.Tools.WndUtils
             ///  Class name must match totaly 
             /// </summary>
             Full = 0,
-            
+
+            /// <summary>
+            /// Class name must match in start
+            /// </summary>
+            Start = 2,
+
+            /// <summary>
+            /// Class name must match in end
+            /// </summary>
+            End = 3,
+
             /// <summary>
             /// Class name must match in start and end of name
             /// </summary>
-            StartEnd = 1
+            StartEnd = 1,
         }
 
         #endregion
 
         #region Imports
 
-        protected delegate bool EnumWindowsProc(IntPtr hWnd, IntPtr lParam);
+        [StructLayout(LayoutKind.Sequential)]
+        private struct RECT
+        {
+            public int Left;
+            public int Top; 
+            public int Right;
+            public int Bottom;
+        }
+
+        [DllImport("user32.dll", SetLastError = true)]
+        private static extern bool GetWindowRect(IntPtr hwnd, out RECT lpRect);
+        private delegate bool EnumWindowsProc(IntPtr hWnd, IntPtr lParam);
         [DllImport("user32.dll", CharSet = CharSet.Unicode)]
-        protected static extern int GetWindowText(IntPtr hWnd, StringBuilder strText, int maxCount);
+        private static extern int GetWindowText(IntPtr hWnd, StringBuilder strText, int maxCount);
         [DllImport("user32.dll", CharSet = CharSet.Unicode)]
-        protected static extern int GetWindowTextLength(IntPtr hWnd);
+        private static extern int GetWindowTextLength(IntPtr hWnd);
         [DllImport("user32.dll")]
-        protected static extern bool EnumWindows(EnumWindowsProc enumProc, IntPtr lParam);
+        private static extern bool EnumWindows(EnumWindowsProc enumProc, IntPtr lParam);
         [DllImport("user32.dll")]
-        protected static extern bool IsWindowVisible(IntPtr hWnd);
+        private static extern bool IsWindowVisible(IntPtr hWnd);
         [DllImport("user32.dll", SetLastError = true, CharSet = CharSet.Auto)]
-        protected static extern int GetClassName(IntPtr hWnd, StringBuilder lpClassName, int nMaxCount);
+        private static extern int GetClassName(IntPtr hWnd, StringBuilder lpClassName, int nMaxCount);
 
         #endregion
 
@@ -64,6 +86,22 @@ namespace NetOffice.Tools.WndUtils
         {
             Mode = FilterMode.Full;
             Filter = filter;
+            StartsWithFilter = filter;
+            EndsWithFilter = filter;
+            Result = new List<IntPtr>();
+        }
+
+        /// <summary>
+        /// Creates an instance of the class
+        /// </summary>
+        /// <param name="filter">optional class name filter or null</param>
+        /// <param name="mode">current filter mode</param>
+        public WindowEnumerator(string filter, FilterMode mode)
+        {
+            Mode = mode;
+            Filter = filter;
+            StartsWithFilter = filter;
+            EndsWithFilter = filter;
             Result = new List<IntPtr>();
         }
 
@@ -75,6 +113,22 @@ namespace NetOffice.Tools.WndUtils
         public WindowEnumerator(string startsWithfilter, string endsWithFilter)
         {
             Mode = FilterMode.StartEnd;
+            Filter = startsWithfilter;
+            StartsWithFilter = startsWithfilter;
+            EndsWithFilter = endsWithFilter;
+            Result = new List<IntPtr>();
+        }
+
+        /// <summary>
+        /// Creates an instance of the class
+        /// </summary>
+        /// <param name="startsWithfilter">starts with class name filter</param>
+        /// <param name="endsWithFilter">ends with class name filter</param>
+        /// <param name="mode">current filter mode</param>
+        public WindowEnumerator(string startsWithfilter, string endsWithFilter, FilterMode mode)
+        {
+            Mode = mode;
+            Filter = startsWithfilter;
             StartsWithFilter = startsWithfilter;
             EndsWithFilter = endsWithFilter;
             Result = new List<IntPtr>();
@@ -109,6 +163,18 @@ namespace NetOffice.Tools.WndUtils
         #endregion
 
         #region Methods
+
+        /// <summary>
+        /// Encapsulate WindowsAPI method GetWindowRect
+        /// </summary>
+        /// <param name="hwnd">target window handle</param>
+        /// <returns>window coordinates dimensions to screen</returns>
+        public static Rectangle GetWindowRect(IntPtr hwnd)
+        {
+            RECT rect = new RECT();
+            GetWindowRect(hwnd, out rect);
+            return new Rectangle(rect.Left, rect.Top, rect.Right - rect.Left, rect.Bottom - rect.Top);
+        }
 
         /// <summary>
         /// Enumerates all top level windows on desktop. WARNING: The method returns null if operation timeout is reached.
@@ -209,16 +275,9 @@ namespace NetOffice.Tools.WndUtils
         {
             switch (instance.Mode)
             {
-                case FilterMode.StartEnd:
-                {
-                    string start = null != instance.StartsWithFilter ? instance.StartsWithFilter.ToLower() : "";
-                    string end = null != instance.EndsWithFilter ? instance.EndsWithFilter.ToLower() : "";
-                    string target = className.ToLower();    
-                    return target.StartsWith(start) && target.EndsWith(end);
-                }
-                default: // Full
-                {
-                    if (null != _currentInstance.Filter)
+                case FilterMode.Full:
+                {                       
+                    if(false == String.IsNullOrEmpty(_currentInstance.Filter))
                     {
                         if (_currentInstance.Filter.Equals(className, StringComparison.InvariantCultureIgnoreCase))
                             return true;
@@ -226,7 +285,30 @@ namespace NetOffice.Tools.WndUtils
                             return false;
                     }
                     else
-                        return false;
+                        return true;                    
+                }
+                case FilterMode.Start:
+                {
+                    string start = null != instance.StartsWithFilter ? instance.StartsWithFilter.ToLower() : "";                    
+                    string target = className.ToLower();
+                    return target.StartsWith(start);
+                }
+                case FilterMode.End:
+                {
+                    string end = null != instance.EndsWithFilter ? instance.EndsWithFilter.ToLower() : "";
+                    string target = className.ToLower();
+                    return target.EndsWith(end);
+                }
+                case FilterMode.StartEnd:
+                {
+                    string start = null != instance.StartsWithFilter ? instance.StartsWithFilter.ToLower() : "";
+                    string end = null != instance.EndsWithFilter ? instance.EndsWithFilter.ToLower() : "";
+                    string target = className.ToLower();    
+                    return target.StartsWith(start) && target.EndsWith(end);
+                }
+                default:
+                {
+                    throw new IndexOutOfRangeException();
                 }
             }           
         }

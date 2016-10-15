@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using NetRuntimeSystem = System;
 using System.Runtime.InteropServices;
 using System.Runtime.CompilerServices;
@@ -10,10 +10,10 @@ namespace NetOffice.PowerPointApi
 {
 	///<summary>
 	/// DispatchInterface ThreeDFormat 
-	/// SupportByVersion PowerPoint, 9,10,11,12,14,15
+	/// SupportByVersion PowerPoint, 9,10,11,12,14,15,16
 	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746386.aspx
 	///</summary>
-	[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
+	[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class ThreeDFormat : COMObject
 	{
@@ -93,12 +93,12 @@ namespace NetOffice.PowerPointApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745680.aspx
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
 		public object Application
 		{
 			get
@@ -111,11 +111,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744768.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
 		public Int32 Creator
 		{
 			get
@@ -127,12 +127,12 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744909.aspx
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
 		public object Parent
 		{
 			get
@@ -145,11 +145,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746679.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
 		public Single Depth
 		{
 			get
@@ -166,11 +166,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745229.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
 		public NetOffice.PowerPointApi.ColorFormat ExtrusionColor
 		{
 			get
@@ -183,11 +183,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744362.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
 		public NetOffice.OfficeApi.Enums.MsoExtrusionColorType ExtrusionColorType
 		{
 			get
@@ -205,11 +205,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744175.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
 		public NetOffice.OfficeApi.Enums.MsoTriState Perspective
 		{
 			get
@@ -227,11 +227,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745754.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
 		public NetOffice.OfficeApi.Enums.MsoPresetExtrusionDirection PresetExtrusionDirection
 		{
 			get
@@ -244,11 +244,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745470.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
 		public NetOffice.OfficeApi.Enums.MsoPresetLightingDirection PresetLightingDirection
 		{
 			get
@@ -266,11 +266,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744358.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
 		public NetOffice.OfficeApi.Enums.MsoPresetLightingSoftness PresetLightingSoftness
 		{
 			get
@@ -288,11 +288,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745247.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
 		public NetOffice.OfficeApi.Enums.MsoPresetMaterial PresetMaterial
 		{
 			get
@@ -310,11 +310,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746804.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
 		public NetOffice.OfficeApi.Enums.MsoPresetThreeDFormat PresetThreeDFormat
 		{
 			get
@@ -327,11 +327,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745568.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
 		public Single RotationX
 		{
 			get
@@ -348,11 +348,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744182.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
 		public Single RotationY
 		{
 			get
@@ -369,11 +369,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744933.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
 		public NetOffice.OfficeApi.Enums.MsoTriState Visible
 		{
 			get
@@ -391,11 +391,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 12, 14, 15
+		/// SupportByVersion PowerPoint 12, 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746052.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 12,14,15,16)]
 		public NetOffice.OfficeApi.Enums.MsoLightRigType PresetLighting
 		{
 			get
@@ -413,11 +413,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 12, 14, 15
+		/// SupportByVersion PowerPoint 12, 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744339.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 12,14,15,16)]
 		public Single Z
 		{
 			get
@@ -434,11 +434,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 12, 14, 15
+		/// SupportByVersion PowerPoint 12, 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744097.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 12,14,15,16)]
 		public NetOffice.OfficeApi.Enums.MsoBevelType BevelTopType
 		{
 			get
@@ -456,11 +456,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 12, 14, 15
+		/// SupportByVersion PowerPoint 12, 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff743907.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 12,14,15,16)]
 		public Single BevelTopInset
 		{
 			get
@@ -477,11 +477,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 12, 14, 15
+		/// SupportByVersion PowerPoint 12, 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746519.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 12,14,15,16)]
 		public Single BevelTopDepth
 		{
 			get
@@ -498,11 +498,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 12, 14, 15
+		/// SupportByVersion PowerPoint 12, 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744622.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 12,14,15,16)]
 		public NetOffice.OfficeApi.Enums.MsoBevelType BevelBottomType
 		{
 			get
@@ -520,11 +520,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 12, 14, 15
+		/// SupportByVersion PowerPoint 12, 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744286.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 12,14,15,16)]
 		public Single BevelBottomInset
 		{
 			get
@@ -541,11 +541,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 12, 14, 15
+		/// SupportByVersion PowerPoint 12, 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744237.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 12,14,15,16)]
 		public Single BevelBottomDepth
 		{
 			get
@@ -562,11 +562,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 12, 14, 15
+		/// SupportByVersion PowerPoint 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745271.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 12,14,15,16)]
 		public NetOffice.OfficeApi.Enums.MsoPresetCamera PresetCamera
 		{
 			get
@@ -579,11 +579,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 12, 14, 15
+		/// SupportByVersion PowerPoint 12, 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746229.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 12,14,15,16)]
 		public Single RotationZ
 		{
 			get
@@ -600,11 +600,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 12, 14, 15
+		/// SupportByVersion PowerPoint 12, 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744007.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 12,14,15,16)]
 		public Single ContourWidth
 		{
 			get
@@ -621,11 +621,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 12, 14, 15
+		/// SupportByVersion PowerPoint 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745788.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 12,14,15,16)]
 		public NetOffice.PowerPointApi.ColorFormat ContourColor
 		{
 			get
@@ -638,11 +638,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 12, 14, 15
+		/// SupportByVersion PowerPoint 12, 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745720.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 12,14,15,16)]
 		public Single FieldOfView
 		{
 			get
@@ -659,11 +659,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 12, 14, 15
+		/// SupportByVersion PowerPoint 12, 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745180.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 12,14,15,16)]
 		public NetOffice.OfficeApi.Enums.MsoTriState ProjectText
 		{
 			get
@@ -681,11 +681,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 12, 14, 15
+		/// SupportByVersion PowerPoint 12, 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745048.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 12,14,15,16)]
 		public Single LightAngle
 		{
 			get
@@ -706,11 +706,11 @@ namespace NetOffice.PowerPointApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744586.aspx
 		/// </summary>
 		/// <param name="increment">Single Increment</param>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
 		public void IncrementRotationX(Single increment)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(increment);
@@ -718,11 +718,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745889.aspx
 		/// </summary>
 		/// <param name="increment">Single Increment</param>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
 		public void IncrementRotationY(Single increment)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(increment);
@@ -730,10 +730,10 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745865.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
 		public void ResetRotation()
 		{
 			object[] paramsArray = null;
@@ -741,11 +741,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745694.aspx
 		/// </summary>
 		/// <param name="presetThreeDFormat">NetOffice.OfficeApi.Enums.MsoPresetThreeDFormat PresetThreeDFormat</param>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
 		public void SetThreeDFormat(NetOffice.OfficeApi.Enums.MsoPresetThreeDFormat presetThreeDFormat)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(presetThreeDFormat);
@@ -753,11 +753,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744624.aspx
 		/// </summary>
 		/// <param name="presetExtrusionDirection">NetOffice.OfficeApi.Enums.MsoPresetExtrusionDirection PresetExtrusionDirection</param>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
 		public void SetExtrusionDirection(NetOffice.OfficeApi.Enums.MsoPresetExtrusionDirection presetExtrusionDirection)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(presetExtrusionDirection);
@@ -765,11 +765,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 12, 14, 15
+		/// SupportByVersion PowerPoint 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746064.aspx
 		/// </summary>
 		/// <param name="presetCamera">NetOffice.OfficeApi.Enums.MsoPresetCamera PresetCamera</param>
-		[SupportByVersionAttribute("PowerPoint", 12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 12,14,15,16)]
 		public void SetPresetCamera(NetOffice.OfficeApi.Enums.MsoPresetCamera presetCamera)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(presetCamera);
@@ -777,11 +777,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 12, 14, 15
+		/// SupportByVersion PowerPoint 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745408.aspx
 		/// </summary>
 		/// <param name="increment">Single Increment</param>
-		[SupportByVersionAttribute("PowerPoint", 12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 12,14,15,16)]
 		public void IncrementRotationZ(Single increment)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(increment);
@@ -789,11 +789,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 12, 14, 15
+		/// SupportByVersion PowerPoint 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745156.aspx
 		/// </summary>
 		/// <param name="increment">Single Increment</param>
-		[SupportByVersionAttribute("PowerPoint", 12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 12,14,15,16)]
 		public void IncrementRotationHorizontal(Single increment)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(increment);
@@ -801,11 +801,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 12, 14, 15
+		/// SupportByVersion PowerPoint 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746353.aspx
 		/// </summary>
 		/// <param name="increment">Single Increment</param>
-		[SupportByVersionAttribute("PowerPoint", 12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 12,14,15,16)]
 		public void IncrementRotationVertical(Single increment)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(increment);

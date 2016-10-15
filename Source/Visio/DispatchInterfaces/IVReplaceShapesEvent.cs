@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using NetRuntimeSystem = System;
 using System.Runtime.InteropServices;
 using System.Runtime.CompilerServices;
@@ -10,9 +10,9 @@ namespace NetOffice.VisioApi
 {
 	///<summary>
 	/// DispatchInterface IVReplaceShapesEvent 
-	/// SupportByVersion Visio, 15
+	/// SupportByVersion Visio, 15, 16
 	///</summary>
-	[SupportByVersionAttribute("Visio", 15)]
+	[SupportByVersionAttribute("Visio", 15, 16)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class IVReplaceShapesEvent : COMObject
 	{
@@ -92,10 +92,10 @@ namespace NetOffice.VisioApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion Visio 15
+		/// SupportByVersion Visio 15,16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 15)]
+		[SupportByVersionAttribute("Visio", 15, 16)]
 		public NetOffice.VisioApi.IVApplication Application
 		{
 			get
@@ -108,10 +108,10 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio 15
+		/// SupportByVersion Visio 15,16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 15)]
+		[SupportByVersionAttribute("Visio", 15, 16)]
 		public Int16 ObjectType
 		{
 			get
@@ -123,11 +123,11 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio 15
+		/// SupportByVersion Visio 15,16
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 15)]
+		[SupportByVersionAttribute("Visio", 15, 16)]
 		public object ReplacementMaster
 		{
 			get
@@ -140,10 +140,10 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio 15
+		/// SupportByVersion Visio 15,16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 15)]
+		[SupportByVersionAttribute("Visio", 15, 16)]
 		public NetOffice.VisioApi.IVSelection SelectionSource
 		{
 			get
@@ -156,10 +156,10 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio 15
+		/// SupportByVersion Visio 15,16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 15)]
+		[SupportByVersionAttribute("Visio", 15, 16)]
 		public Int32 ReplaceFlags
 		{
 			get
@@ -171,10 +171,10 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio 15
+		/// SupportByVersion Visio 15,16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 15)]
+		[SupportByVersionAttribute("Visio", 15, 16)]
 		public Int16 Stat
 		{
 			get

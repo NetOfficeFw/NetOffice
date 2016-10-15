@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using NetRuntimeSystem = System;
 using System.Runtime.InteropServices;
 using System.Runtime.CompilerServices;
@@ -10,10 +10,10 @@ namespace NetOffice.WordApi
 {
 	///<summary>
 	/// DispatchInterface OMathDelim 
-	/// SupportByVersion Word, 12,14,15
+	/// SupportByVersion Word, 12,14,15,16
 	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197886.aspx
 	///</summary>
-	[SupportByVersionAttribute("Word", 12,14,15)]
+	[SupportByVersionAttribute("Word", 12,14,15,16)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class OMathDelim : COMObject
 	{
@@ -93,11 +93,11 @@ namespace NetOffice.WordApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion Word 12, 14, 15
+		/// SupportByVersion Word 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837276.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 12,14,15)]
+		[SupportByVersionAttribute("Word", 12,14,15,16)]
 		public NetOffice.WordApi.Application Application
 		{
 			get
@@ -110,11 +110,11 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 12, 14, 15
+		/// SupportByVersion Word 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838509.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 12,14,15)]
+		[SupportByVersionAttribute("Word", 12,14,15,16)]
 		public Int32 Creator
 		{
 			get
@@ -126,12 +126,12 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 12, 14, 15
+		/// SupportByVersion Word 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839501.aspx
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("Word", 12,14,15)]
+		[SupportByVersionAttribute("Word", 12,14,15,16)]
 		public object Parent
 		{
 			get
@@ -144,11 +144,11 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 12, 14, 15
+		/// SupportByVersion Word 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192593.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 12,14,15)]
+		[SupportByVersionAttribute("Word", 12,14,15,16)]
 		public NetOffice.WordApi.OMathArgs E
 		{
 			get
@@ -161,11 +161,11 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 12, 14, 15
+		/// SupportByVersion Word 12, 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840612.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 12,14,15)]
+		[SupportByVersionAttribute("Word", 12,14,15,16)]
 		public Int16 BegChar
 		{
 			get
@@ -182,11 +182,11 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 12, 14, 15
+		/// SupportByVersion Word 12, 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839757.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 12,14,15)]
+		[SupportByVersionAttribute("Word", 12,14,15,16)]
 		public Int16 SepChar
 		{
 			get
@@ -203,11 +203,11 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 12, 14, 15
+		/// SupportByVersion Word 12, 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845533.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 12,14,15)]
+		[SupportByVersionAttribute("Word", 12,14,15,16)]
 		public Int16 EndChar
 		{
 			get
@@ -224,11 +224,11 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 12, 14, 15
+		/// SupportByVersion Word 12, 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839089.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 12,14,15)]
+		[SupportByVersionAttribute("Word", 12,14,15,16)]
 		public bool Grow
 		{
 			get
@@ -245,11 +245,11 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 12, 14, 15
+		/// SupportByVersion Word 12, 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194993.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 12,14,15)]
+		[SupportByVersionAttribute("Word", 12,14,15,16)]
 		public NetOffice.WordApi.Enums.WdOMathShapeType Shape
 		{
 			get
@@ -267,11 +267,11 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 12, 14, 15
+		/// SupportByVersion Word 12, 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff834525.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 12,14,15)]
+		[SupportByVersionAttribute("Word", 12,14,15,16)]
 		public bool NoLeftChar
 		{
 			get
@@ -288,11 +288,11 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 12, 14, 15
+		/// SupportByVersion Word 12, 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192816.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 12,14,15)]
+		[SupportByVersionAttribute("Word", 12,14,15,16)]
 		public bool NoRightChar
 		{
 			get

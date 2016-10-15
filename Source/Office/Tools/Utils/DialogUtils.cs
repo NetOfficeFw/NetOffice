@@ -641,6 +641,7 @@ namespace NetOffice.OfficeApi.Tools.Utils
         /// <param name="caption">dialog title</param>
         /// <param name="buttons">user selection buttons</param>
         /// <param name="defaultResult">result if its not shown</param>
+        /// <param name="icon">icon to show</param>
         /// <returns>user selection</returns>
         public DialogResult ShowMessageBox(string text, string caption, MessageBoxButtons buttons, MessageBoxIcon icon, DialogResult defaultResult)
         {

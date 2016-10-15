@@ -114,7 +114,7 @@ namespace NetOffice.PowerPointApi.Tools.Utils
         {
             try
             {
-                VTableApplication test = _owner.PowerPointApplication.UnderlyingObject as VTableApplication;
+                VTableApplication test = _owner.OwnerApplication.UnderlyingObject as VTableApplication;
                 return null != test ? test.HWND : 0;
             }
             catch (Exception exception)
@@ -139,7 +139,7 @@ namespace NetOffice.PowerPointApi.Tools.Utils
                     {
                         try
                         {
-                            bool equals = Equal(_owner.PowerPointApplication.UnderlyingObject, proxyApplication);
+                            bool equals = Equal(_owner.OwnerApplication.UnderlyingObject, proxyApplication);
                             if (equals)
                                 result = (int)item;
                             break;

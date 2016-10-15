@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using NetRuntimeSystem = System;
 using System.Runtime.InteropServices;
 using System.Runtime.CompilerServices;
@@ -10,10 +10,10 @@ namespace NetOffice.OfficeApi
 {
 	///<summary>
 	/// DispatchInterface SharedWorkspaceFile 
-	/// SupportByVersion Office, 11,12,14,15
+	/// SupportByVersion Office, 11,12,14,15,16
 	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff861418.aspx
 	///</summary>
-	[SupportByVersionAttribute("Office", 11,12,14,15)]
+	[SupportByVersionAttribute("Office", 11,12,14,15,16)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class SharedWorkspaceFile : _IMsoDispObj
 	{
@@ -93,11 +93,11 @@ namespace NetOffice.OfficeApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion Office 11, 12, 14, 15
+		/// SupportByVersion Office 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff864629.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Office", 11,12,14,15)]
+		[SupportByVersionAttribute("Office", 11,12,14,15,16)]
 		public string URL
 		{
 			get
@@ -109,11 +109,11 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 11, 12, 14, 15
+		/// SupportByVersion Office 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff864979.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Office", 11,12,14,15)]
+		[SupportByVersionAttribute("Office", 11,12,14,15,16)]
 		public string CreatedBy
 		{
 			get
@@ -125,11 +125,11 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 11, 12, 14, 15
+		/// SupportByVersion Office 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff864174.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Office", 11,12,14,15)]
+		[SupportByVersionAttribute("Office", 11,12,14,15,16)]
 		public object CreatedDate
 		{
 			get
@@ -149,11 +149,11 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 11, 12, 14, 15
+		/// SupportByVersion Office 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff864890.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Office", 11,12,14,15)]
+		[SupportByVersionAttribute("Office", 11,12,14,15,16)]
 		public string ModifiedBy
 		{
 			get
@@ -165,11 +165,11 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 11, 12, 14, 15
+		/// SupportByVersion Office 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff864556.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Office", 11,12,14,15)]
+		[SupportByVersionAttribute("Office", 11,12,14,15,16)]
 		public object ModifiedDate
 		{
 			get
@@ -189,12 +189,12 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 11, 12, 14, 15
+		/// SupportByVersion Office 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff862508.aspx
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("Office", 11,12,14,15)]
+		[SupportByVersionAttribute("Office", 11,12,14,15,16)]
 		public object Parent
 		{
 			get
@@ -211,10 +211,10 @@ namespace NetOffice.OfficeApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByVersion Office 11, 12, 14, 15
+		/// SupportByVersion Office 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff863519.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Office", 11,12,14,15)]
+		[SupportByVersionAttribute("Office", 11,12,14,15,16)]
 		public void Delete()
 		{
 			object[] paramsArray = null;

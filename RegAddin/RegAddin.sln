@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RegAddin", "RegAddin\RegAddin.csproj", "{9C4A6ABC-DD1A-47E7-87EA-CCD02529B327}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RegAddinTest", "RegAddinTest\RegAddinTest.csproj", "{606DF92F-6448-423E-9403-C58600EFD29A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9C4A6ABC-DD1A-47E7-87EA-CCD02529B327}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C4A6ABC-DD1A-47E7-87EA-CCD02529B327}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C4A6ABC-DD1A-47E7-87EA-CCD02529B327}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C4A6ABC-DD1A-47E7-87EA-CCD02529B327}.Release|Any CPU.Build.0 = Release|Any CPU
+		{606DF92F-6448-423E-9403-C58600EFD29A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{606DF92F-6448-423E-9403-C58600EFD29A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{606DF92F-6448-423E-9403-C58600EFD29A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{606DF92F-6448-423E-9403-C58600EFD29A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

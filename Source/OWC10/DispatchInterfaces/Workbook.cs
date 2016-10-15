@@ -94,12 +94,13 @@ namespace NetOffice.OWC10Api
 			}
 		}
 
-		/// <summary>
-		/// SupportByVersion OWC10 1
-		/// Get/Set
-		/// </summary>
-		/// <param name="index">optional object Index</param>
-		[SupportByVersionAttribute("OWC10", 1)]
+        /// <summary>
+        /// SupportByVersion OWC10 1
+        /// Get/Set
+        /// </summary>
+        /// <param name="index">optional object Index</param>
+        /// <param name="value">optional object value</param>
+        [SupportByVersionAttribute("OWC10", 1)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public void set_Colors(object index, object value)
 		{

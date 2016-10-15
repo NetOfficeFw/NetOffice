@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using NetOffice;
@@ -17,10 +17,10 @@ namespace NetOffice.OfficeApi
 
 	///<summary>
 	/// CoClass CustomXMLPart 
-	/// SupportByVersion Office, 12,14,15
+	/// SupportByVersion Office, 12,14,15,16
 	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff863497.aspx
 	///</summary>
-	[SupportByVersionAttribute("Office", 12,14,15)]
+	[SupportByVersionAttribute("Office", 12,14,15,16)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class CustomXMLPart : _CustomXMLPart,IEventBinding
 	{
@@ -95,7 +95,7 @@ namespace NetOffice.OfficeApi
 		}
 		
 		///<summary>
-        ///creates a new instance of CustomXMLPart 
+        /// Creates a new instance of CustomXMLPart 
         ///</summary>		
 		public CustomXMLPart():base("Office.CustomXMLPart")
 		{
@@ -103,7 +103,7 @@ namespace NetOffice.OfficeApi
 		}
 		
 		///<summary>
-        ///creates a new instance of CustomXMLPart
+        /// Creates a new instance of CustomXMLPart
         ///</summary>
         ///<param name="progId">registered ProgID</param>
 		public CustomXMLPart(string progId):base(progId)
@@ -116,12 +116,12 @@ namespace NetOffice.OfficeApi
 		#region Static CoClass Methods
 
 		/// <summary>
-        /// returns all running Office.CustomXMLPart objects from the running object table(ROT)
+        /// Returns all running Office.CustomXMLPart objects from the environment/system
         /// </summary>
         /// <returns>an Office.CustomXMLPart array</returns>
 		public static NetOffice.OfficeApi.CustomXMLPart[] GetActiveInstances()
 		{		
-			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("Office","CustomXMLPart");
+			IDisposableEnumeration proxyList = NetOffice.ProxyService.GetActiveInstances("Office","CustomXMLPart");
 			NetRuntimeSystem.Collections.Generic.List<NetOffice.OfficeApi.CustomXMLPart> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.OfficeApi.CustomXMLPart>();
 			foreach(object proxy in proxyList)
 				resultList.Add( new NetOffice.OfficeApi.CustomXMLPart(null, proxy) );
@@ -129,12 +129,12 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-        /// returns a running Office.CustomXMLPart object from the running object table(ROT). the method takes the first element from the table
+        /// Returns a running Office.CustomXMLPart object from the environment/system.
         /// </summary>
         /// <returns>an Office.CustomXMLPart object or null</returns>
 		public static NetOffice.OfficeApi.CustomXMLPart GetActiveInstance()
 		{
-			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Office","CustomXMLPart", false);
+			object proxy  = NetOffice.ProxyService.GetActiveInstance("Office","CustomXMLPart", false);
 			if(null != proxy)
 				return new NetOffice.OfficeApi.CustomXMLPart(null, proxy);
 			else
@@ -142,13 +142,13 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-        /// returns a running Office.CustomXMLPart object from the running object table(ROT).  the method takes the first element from the table
+        /// Returns a running Office.CustomXMLPart object from the environment/system. 
         /// </summary>
 	    /// <param name="throwOnError">throw an exception if no object was found</param>
         /// <returns>an Office.CustomXMLPart object or null</returns>
 		public static NetOffice.OfficeApi.CustomXMLPart GetActiveInstance(bool throwOnError)
 		{
-			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Office","CustomXMLPart", throwOnError);
+			object proxy  = NetOffice.ProxyService.GetActiveInstance("Office","CustomXMLPart", throwOnError);
 			if(null != proxy)
 				return new NetOffice.OfficeApi.CustomXMLPart(null, proxy);
 			else
@@ -159,15 +159,15 @@ namespace NetOffice.OfficeApi
 		#region Events
 
 		/// <summary>
-		/// SupportByVersion Office, 12,14,15
+		/// SupportByVersion Office, 12,14,15,16
 		/// </summary>
 		private event CustomXMLPart_NodeAfterInsertEventHandler _NodeAfterInsertEvent;
 
 		/// <summary>
-		/// SupportByVersion Office 12 14 15
+		/// SupportByVersion Office 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff862780.aspx </remarks>
-		[SupportByVersion("Office", 12,14,15)]
+		[SupportByVersion("Office", 12,14,15,16)]
 		public event CustomXMLPart_NodeAfterInsertEventHandler NodeAfterInsertEvent
 		{
 			add
@@ -182,15 +182,15 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office, 12,14,15
+		/// SupportByVersion Office, 12,14,15,16
 		/// </summary>
 		private event CustomXMLPart_NodeAfterDeleteEventHandler _NodeAfterDeleteEvent;
 
 		/// <summary>
-		/// SupportByVersion Office 12 14 15
+		/// SupportByVersion Office 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff861395.aspx </remarks>
-		[SupportByVersion("Office", 12,14,15)]
+		[SupportByVersion("Office", 12,14,15,16)]
 		public event CustomXMLPart_NodeAfterDeleteEventHandler NodeAfterDeleteEvent
 		{
 			add
@@ -205,15 +205,15 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office, 12,14,15
+		/// SupportByVersion Office, 12,14,15,16
 		/// </summary>
 		private event CustomXMLPart_NodeAfterReplaceEventHandler _NodeAfterReplaceEvent;
 
 		/// <summary>
-		/// SupportByVersion Office 12 14 15
+		/// SupportByVersion Office 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff863732.aspx </remarks>
-		[SupportByVersion("Office", 12,14,15)]
+		[SupportByVersion("Office", 12,14,15,16)]
 		public event CustomXMLPart_NodeAfterReplaceEventHandler NodeAfterReplaceEvent
 		{
 			add
@@ -232,7 +232,7 @@ namespace NetOffice.OfficeApi
 	    #region IEventBinding Member
         
 		/// <summary>
-        /// creates active sink helper
+        /// Creates active sink helper
         /// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public void CreateEventBridge()
@@ -254,6 +254,9 @@ namespace NetOffice.OfficeApi
 			} 
         }
 
+        /// <summary>
+        /// The instance use currently an event listener 
+        /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public bool EventBridgeInitialized
         {
@@ -262,7 +265,10 @@ namespace NetOffice.OfficeApi
                 return (null != _connectPoint);
             }
         }
-        
+
+        /// <summary>
+        ///  The instance has currently one or more event recipients 
+        /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public bool HasEventRecipients()       
         {
@@ -282,6 +288,9 @@ namespace NetOffice.OfficeApi
 			return false;
         }
         
+        /// <summary>
+        /// Target methods from its actual event recipients
+        /// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public Delegate[] GetEventRecipients(string eventName)
         {
@@ -301,7 +310,10 @@ namespace NetOffice.OfficeApi
             else
                 return new Delegate[0];
         }
-
+       
+        /// <summary>
+        /// Returns the current count of event recipients
+        /// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public int GetCountOfEventRecipients(string eventName)
         {
@@ -320,8 +332,14 @@ namespace NetOffice.OfficeApi
             }
             else
                 return 0;
-        }
-
+           }
+        
+        /// <summary>
+        /// Raise an instance event
+        /// </summary>
+        /// <param name="eventName">name of the event without 'Event' at the end</param>
+        /// <param name="paramsArray">custom arguments for the event</param>
+        /// <returns>count of called event recipients</returns>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public int RaiseCustomEvent(string eventName, ref object[] paramsArray)
 		{
@@ -353,6 +371,9 @@ namespace NetOffice.OfficeApi
                 return 0;
 		}
 
+        /// <summary>
+        /// Stop listening events for the instance
+        /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public void DisposeEventBridge()
         {

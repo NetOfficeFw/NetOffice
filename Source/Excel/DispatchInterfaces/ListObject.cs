@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using NetRuntimeSystem = System;
 using System.Runtime.InteropServices;
 using System.Runtime.CompilerServices;
@@ -10,10 +10,10 @@ namespace NetOffice.ExcelApi
 {
 	///<summary>
 	/// DispatchInterface ListObject 
-	/// SupportByVersion Excel, 11,12,14,15
+	/// SupportByVersion Excel, 11,12,14,15,16
 	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197604.aspx
 	///</summary>
-	[SupportByVersionAttribute("Excel", 11,12,14,15)]
+	[SupportByVersionAttribute("Excel", 11,12,14,15,16)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class ListObject : COMObject
 	{
@@ -93,11 +93,11 @@ namespace NetOffice.ExcelApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion Excel 11, 12, 14, 15
+		/// SupportByVersion Excel 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822924.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 11,12,14,15)]
+		[SupportByVersionAttribute("Excel", 11,12,14,15,16)]
 		public NetOffice.ExcelApi.Application Application
 		{
 			get
@@ -110,11 +110,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 11, 12, 14, 15
+		/// SupportByVersion Excel 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196735.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 11,12,14,15)]
+		[SupportByVersionAttribute("Excel", 11,12,14,15,16)]
 		public NetOffice.ExcelApi.Enums.XlCreator Creator
 		{
 			get
@@ -127,12 +127,12 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 11, 12, 14, 15
+		/// SupportByVersion Excel 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840235.aspx
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 11,12,14,15)]
+		[SupportByVersionAttribute("Excel", 11,12,14,15,16)]
 		public object Parent
 		{
 			get
@@ -145,10 +145,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 11, 12, 14, 15
+		/// SupportByVersion Excel 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 11,12,14,15)]
+		[SupportByVersionAttribute("Excel", 11,12,14,15,16)]
 		public string _Default
 		{
 			get
@@ -160,11 +160,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 11, 12, 14, 15
+		/// SupportByVersion Excel 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837647.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 11,12,14,15)]
+		[SupportByVersionAttribute("Excel", 11,12,14,15,16)]
 		public bool Active
 		{
 			get
@@ -176,11 +176,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 11, 12, 14, 15
+		/// SupportByVersion Excel 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff841252.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 11,12,14,15)]
+		[SupportByVersionAttribute("Excel", 11,12,14,15,16)]
 		public NetOffice.ExcelApi.Range DataBodyRange
 		{
 			get
@@ -193,11 +193,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 11, 12, 14, 15
+		/// SupportByVersion Excel 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839725.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 11,12,14,15)]
+		[SupportByVersionAttribute("Excel", 11,12,14,15,16)]
 		public bool DisplayRightToLeft
 		{
 			get
@@ -209,11 +209,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 11, 12, 14, 15
+		/// SupportByVersion Excel 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837854.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 11,12,14,15)]
+		[SupportByVersionAttribute("Excel", 11,12,14,15,16)]
 		public NetOffice.ExcelApi.Range HeaderRowRange
 		{
 			get
@@ -226,11 +226,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 11, 12, 14, 15
+		/// SupportByVersion Excel 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff821198.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 11,12,14,15)]
+		[SupportByVersionAttribute("Excel", 11,12,14,15,16)]
 		public NetOffice.ExcelApi.Range InsertRowRange
 		{
 			get
@@ -243,11 +243,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 11, 12, 14, 15
+		/// SupportByVersion Excel 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff821933.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 11,12,14,15)]
+		[SupportByVersionAttribute("Excel", 11,12,14,15,16)]
 		public NetOffice.ExcelApi.ListColumns ListColumns
 		{
 			get
@@ -260,11 +260,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 11, 12, 14, 15
+		/// SupportByVersion Excel 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff834452.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 11,12,14,15)]
+		[SupportByVersionAttribute("Excel", 11,12,14,15,16)]
 		public NetOffice.ExcelApi.ListRows ListRows
 		{
 			get
@@ -277,11 +277,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 11, 12, 14, 15
+		/// SupportByVersion Excel 11, 12, 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff841184.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 11,12,14,15)]
+		[SupportByVersionAttribute("Excel", 11,12,14,15,16)]
 		public string Name
 		{
 			get
@@ -298,11 +298,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 11, 12, 14, 15
+		/// SupportByVersion Excel 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff841237.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 11,12,14,15)]
+		[SupportByVersionAttribute("Excel", 11,12,14,15,16)]
 		public NetOffice.ExcelApi.QueryTable QueryTable
 		{
 			get
@@ -315,11 +315,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 11, 12, 14, 15
+		/// SupportByVersion Excel 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839404.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 11,12,14,15)]
+		[SupportByVersionAttribute("Excel", 11,12,14,15,16)]
 		public NetOffice.ExcelApi.Range Range
 		{
 			get
@@ -332,11 +332,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 11, 12, 14, 15
+		/// SupportByVersion Excel 11, 12, 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837833.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 11,12,14,15)]
+		[SupportByVersionAttribute("Excel", 11,12,14,15,16)]
 		public bool ShowAutoFilter
 		{
 			get
@@ -353,11 +353,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 11, 12, 14, 15
+		/// SupportByVersion Excel 11, 12, 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836501.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 11,12,14,15)]
+		[SupportByVersionAttribute("Excel", 11,12,14,15,16)]
 		public bool ShowTotals
 		{
 			get
@@ -374,11 +374,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 11, 12, 14, 15
+		/// SupportByVersion Excel 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194428.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 11,12,14,15)]
+		[SupportByVersionAttribute("Excel", 11,12,14,15,16)]
 		public NetOffice.ExcelApi.Enums.XlListObjectSourceType SourceType
 		{
 			get
@@ -391,11 +391,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 11, 12, 14, 15
+		/// SupportByVersion Excel 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff834892.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 11,12,14,15)]
+		[SupportByVersionAttribute("Excel", 11,12,14,15,16)]
 		public NetOffice.ExcelApi.Range TotalsRowRange
 		{
 			get
@@ -408,11 +408,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 11, 12, 14, 15
+		/// SupportByVersion Excel 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837420.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 11,12,14,15)]
+		[SupportByVersionAttribute("Excel", 11,12,14,15,16)]
 		public string SharePointURL
 		{
 			get
@@ -424,11 +424,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 11, 12, 14, 15
+		/// SupportByVersion Excel 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835549.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 11,12,14,15)]
+		[SupportByVersionAttribute("Excel", 11,12,14,15,16)]
 		public NetOffice.ExcelApi.XmlMap XmlMap
 		{
 			get
@@ -441,11 +441,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 12, 14, 15
+		/// SupportByVersion Excel 12, 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193006.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 12,14,15)]
+		[SupportByVersionAttribute("Excel", 12,14,15,16)]
 		public string DisplayName
 		{
 			get
@@ -462,11 +462,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 12, 14, 15
+		/// SupportByVersion Excel 12, 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836536.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 12,14,15)]
+		[SupportByVersionAttribute("Excel", 12,14,15,16)]
 		public bool ShowHeaders
 		{
 			get
@@ -483,11 +483,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 12, 14, 15
+		/// SupportByVersion Excel 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836829.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 12,14,15)]
+		[SupportByVersionAttribute("Excel", 12,14,15,16)]
 		public NetOffice.ExcelApi.AutoFilter AutoFilter
 		{
 			get
@@ -500,11 +500,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 12, 14, 15
+		/// SupportByVersion Excel 12, 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840453.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 12,14,15)]
+		[SupportByVersionAttribute("Excel", 12,14,15,16)]
 		public object TableStyle
 		{
 			get
@@ -529,11 +529,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 12, 14, 15
+		/// SupportByVersion Excel 12, 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194313.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 12,14,15)]
+		[SupportByVersionAttribute("Excel", 12,14,15,16)]
 		public bool ShowTableStyleFirstColumn
 		{
 			get
@@ -550,11 +550,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 12, 14, 15
+		/// SupportByVersion Excel 12, 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff821044.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 12,14,15)]
+		[SupportByVersionAttribute("Excel", 12,14,15,16)]
 		public bool ShowTableStyleLastColumn
 		{
 			get
@@ -571,11 +571,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 12, 14, 15
+		/// SupportByVersion Excel 12, 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840273.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 12,14,15)]
+		[SupportByVersionAttribute("Excel", 12,14,15,16)]
 		public bool ShowTableStyleRowStripes
 		{
 			get
@@ -592,11 +592,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 12, 14, 15
+		/// SupportByVersion Excel 12, 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196162.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 12,14,15)]
+		[SupportByVersionAttribute("Excel", 12,14,15,16)]
 		public bool ShowTableStyleColumnStripes
 		{
 			get
@@ -613,11 +613,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 12, 14, 15
+		/// SupportByVersion Excel 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836133.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 12,14,15)]
+		[SupportByVersionAttribute("Excel", 12,14,15,16)]
 		public NetOffice.ExcelApi.Sort Sort
 		{
 			get
@@ -630,11 +630,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 12, 14, 15
+		/// SupportByVersion Excel 12, 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822164.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 12,14,15)]
+		[SupportByVersionAttribute("Excel", 12,14,15,16)]
 		public string Comment
 		{
 			get
@@ -651,11 +651,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 14, 15
+		/// SupportByVersion Excel 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196537.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 14,15)]
+		[SupportByVersionAttribute("Excel", 14,15,16)]
 		public string AlternativeText
 		{
 			get
@@ -672,11 +672,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 14, 15
+		/// SupportByVersion Excel 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff198268.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 14,15)]
+		[SupportByVersionAttribute("Excel", 14,15,16)]
 		public string Summary
 		{
 			get
@@ -693,11 +693,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 15
+		/// SupportByVersion Excel 15,16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj230775.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 15)]
+		[SupportByVersionAttribute("Excel", 15, 16)]
 		public NetOffice.ExcelApi.TableObject TableObject
 		{
 			get
@@ -710,11 +710,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 15
+		/// SupportByVersion Excel 15,16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj230953.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 15)]
+		[SupportByVersionAttribute("Excel", 15, 16)]
 		public NetOffice.ExcelApi.Slicers Slicers
 		{
 			get
@@ -727,11 +727,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 15
+		/// SupportByVersion Excel 15,16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj231020.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 15)]
+		[SupportByVersionAttribute("Excel", 15, 16)]
 		public bool ShowAutoFilterDropDown
 		{
 			get
@@ -752,10 +752,10 @@ namespace NetOffice.ExcelApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByVersion Excel 11, 12, 14, 15
+		/// SupportByVersion Excel 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839211.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 11,12,14,15)]
+		[SupportByVersionAttribute("Excel", 11,12,14,15,16)]
 		public void Delete()
 		{
 			object[] paramsArray = null;
@@ -763,12 +763,12 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 11, 12, 14, 15
+		/// SupportByVersion Excel 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835538.aspx
 		/// </summary>
 		/// <param name="target">object Target</param>
 		/// <param name="linkSource">bool LinkSource</param>
-		[SupportByVersionAttribute("Excel", 11,12,14,15)]
+		[SupportByVersionAttribute("Excel", 11,12,14,15,16)]
 		public string Publish(object target, bool linkSource)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(target, linkSource);
@@ -777,10 +777,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 11, 12, 14, 15
+		/// SupportByVersion Excel 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff834313.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 11,12,14,15)]
+		[SupportByVersionAttribute("Excel", 11,12,14,15,16)]
 		public void Refresh()
 		{
 			object[] paramsArray = null;
@@ -788,10 +788,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 11, 12, 14, 15
+		/// SupportByVersion Excel 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196609.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 11,12,14,15)]
+		[SupportByVersionAttribute("Excel", 11,12,14,15,16)]
 		public void Unlink()
 		{
 			object[] paramsArray = null;
@@ -799,10 +799,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 11, 12, 14, 15
+		/// SupportByVersion Excel 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193017.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 11,12,14,15)]
+		[SupportByVersionAttribute("Excel", 11,12,14,15,16)]
 		public void Unlist()
 		{
 			object[] paramsArray = null;
@@ -810,11 +810,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 11, 12, 14, 15
+		/// SupportByVersion Excel 11, 12, 14, 15, 16
 		/// 
 		/// </summary>
 		/// <param name="iConflictType">optional NetOffice.ExcelApi.Enums.XlListConflict iConflictType = 0</param>
-		[SupportByVersionAttribute("Excel", 11,12,14,15)]
+		[SupportByVersionAttribute("Excel", 11,12,14,15,16)]
 		public void UpdateChanges(object iConflictType)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(iConflictType);
@@ -822,11 +822,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 11, 12, 14, 15
+		/// SupportByVersion Excel 11, 12, 14, 15, 16
 		/// 
 		/// </summary>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 11,12,14,15)]
+		[SupportByVersionAttribute("Excel", 11,12,14,15,16)]
 		public void UpdateChanges()
 		{
 			object[] paramsArray = null;
@@ -834,11 +834,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 11, 12, 14, 15
+		/// SupportByVersion Excel 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838369.aspx
 		/// </summary>
 		/// <param name="range">NetOffice.ExcelApi.Range Range</param>
-		[SupportByVersionAttribute("Excel", 11,12,14,15)]
+		[SupportByVersionAttribute("Excel", 11,12,14,15,16)]
 		public void Resize(NetOffice.ExcelApi.Range range)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(range);
@@ -846,10 +846,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 12, 14, 15
+		/// SupportByVersion Excel 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196053.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 12,14,15)]
+		[SupportByVersionAttribute("Excel", 12,14,15,16)]
 		public void ExportToVisio()
 		{
 			object[] paramsArray = null;

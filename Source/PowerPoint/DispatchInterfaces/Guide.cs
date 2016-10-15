@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using NetRuntimeSystem = System;
 using System.Runtime.InteropServices;
 using System.Runtime.CompilerServices;
@@ -10,10 +10,10 @@ namespace NetOffice.PowerPointApi
 {
 	///<summary>
 	/// DispatchInterface Guide 
-	/// SupportByVersion PowerPoint, 15
+	/// SupportByVersion PowerPoint, 15, 16
 	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj227239.aspx
 	///</summary>
-	[SupportByVersionAttribute("PowerPoint", 15)]
+	[SupportByVersionAttribute("PowerPoint", 15, 16)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class Guide : COMObject
 	{
@@ -93,11 +93,11 @@ namespace NetOffice.PowerPointApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 15
+		/// SupportByVersion PowerPoint 15,16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj684145.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 15)]
+		[SupportByVersionAttribute("PowerPoint", 15, 16)]
 		public NetOffice.PowerPointApi.Application Application
 		{
 			get
@@ -110,12 +110,12 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 15
+		/// SupportByVersion PowerPoint 15,16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj684268.aspx
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 15)]
+		[SupportByVersionAttribute("PowerPoint", 15, 16)]
 		public object Parent
 		{
 			get
@@ -128,11 +128,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 15
+		/// SupportByVersion PowerPoint 15,16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj229820.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 15)]
+		[SupportByVersionAttribute("PowerPoint", 15, 16)]
 		public NetOffice.PowerPointApi.Enums.PpGuideOrientation Orientation
 		{
 			get
@@ -145,11 +145,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 15
+		/// SupportByVersion PowerPoint 15,16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj227901.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 15)]
+		[SupportByVersionAttribute("PowerPoint", 15, 16)]
 		public Single Position
 		{
 			get
@@ -166,11 +166,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 15
+		/// SupportByVersion PowerPoint 15,16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj228235.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 15)]
+		[SupportByVersionAttribute("PowerPoint", 15, 16)]
 		public NetOffice.PowerPointApi.ColorFormat Color
 		{
 			get
@@ -187,10 +187,10 @@ namespace NetOffice.PowerPointApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 15
+		/// SupportByVersion PowerPoint 15,16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj230354.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 15)]
+		[SupportByVersionAttribute("PowerPoint", 15, 16)]
 		public void Delete()
 		{
 			object[] paramsArray = null;

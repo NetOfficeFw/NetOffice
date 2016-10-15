@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using NetOffice;
@@ -25,10 +25,10 @@ namespace NetOffice.OutlookApi
 
 	///<summary>
 	/// CoClass OlkContactPhoto 
-	/// SupportByVersion Outlook, 12,14,15
+	/// SupportByVersion Outlook, 12,14,15,16
 	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff869806.aspx
 	///</summary>
-	[SupportByVersionAttribute("Outlook", 12,14,15)]
+	[SupportByVersionAttribute("Outlook", 12,14,15,16)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class OlkContactPhoto : _OlkContactPhoto,IEventBinding
 	{
@@ -103,7 +103,7 @@ namespace NetOffice.OutlookApi
 		}
 		
 		///<summary>
-        ///creates a new instance of OlkContactPhoto 
+        /// Creates a new instance of OlkContactPhoto 
         ///</summary>		
 		public OlkContactPhoto():base("Outlook.OlkContactPhoto")
 		{
@@ -111,7 +111,7 @@ namespace NetOffice.OutlookApi
 		}
 		
 		///<summary>
-        ///creates a new instance of OlkContactPhoto
+        /// Creates a new instance of OlkContactPhoto
         ///</summary>
         ///<param name="progId">registered ProgID</param>
 		public OlkContactPhoto(string progId):base(progId)
@@ -124,12 +124,12 @@ namespace NetOffice.OutlookApi
 		#region Static CoClass Methods
 
 		/// <summary>
-        /// returns all running Outlook.OlkContactPhoto objects from the running object table(ROT)
+        /// Returns all running Outlook.OlkContactPhoto objects from the environment/system
         /// </summary>
         /// <returns>an Outlook.OlkContactPhoto array</returns>
 		public static NetOffice.OutlookApi.OlkContactPhoto[] GetActiveInstances()
 		{		
-			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("Outlook","OlkContactPhoto");
+			IDisposableEnumeration proxyList = NetOffice.ProxyService.GetActiveInstances("Outlook","OlkContactPhoto");
 			NetRuntimeSystem.Collections.Generic.List<NetOffice.OutlookApi.OlkContactPhoto> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.OutlookApi.OlkContactPhoto>();
 			foreach(object proxy in proxyList)
 				resultList.Add( new NetOffice.OutlookApi.OlkContactPhoto(null, proxy) );
@@ -137,12 +137,12 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-        /// returns a running Outlook.OlkContactPhoto object from the running object table(ROT). the method takes the first element from the table
+        /// Returns a running Outlook.OlkContactPhoto object from the environment/system.
         /// </summary>
         /// <returns>an Outlook.OlkContactPhoto object or null</returns>
 		public static NetOffice.OutlookApi.OlkContactPhoto GetActiveInstance()
 		{
-			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Outlook","OlkContactPhoto", false);
+			object proxy  = NetOffice.ProxyService.GetActiveInstance("Outlook","OlkContactPhoto", false);
 			if(null != proxy)
 				return new NetOffice.OutlookApi.OlkContactPhoto(null, proxy);
 			else
@@ -150,13 +150,13 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-        /// returns a running Outlook.OlkContactPhoto object from the running object table(ROT).  the method takes the first element from the table
+        /// Returns a running Outlook.OlkContactPhoto object from the environment/system. 
         /// </summary>
 	    /// <param name="throwOnError">throw an exception if no object was found</param>
         /// <returns>an Outlook.OlkContactPhoto object or null</returns>
 		public static NetOffice.OutlookApi.OlkContactPhoto GetActiveInstance(bool throwOnError)
 		{
-			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Outlook","OlkContactPhoto", throwOnError);
+			object proxy  = NetOffice.ProxyService.GetActiveInstance("Outlook","OlkContactPhoto", throwOnError);
 			if(null != proxy)
 				return new NetOffice.OutlookApi.OlkContactPhoto(null, proxy);
 			else
@@ -167,15 +167,15 @@ namespace NetOffice.OutlookApi
 		#region Events
 
 		/// <summary>
-		/// SupportByVersion Outlook, 12,14,15
+		/// SupportByVersion Outlook, 12,14,15,16
 		/// </summary>
 		private event OlkContactPhoto_ClickEventHandler _ClickEvent;
 
 		/// <summary>
-		/// SupportByVersion Outlook 12 14 15
+		/// SupportByVersion Outlook 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff864215.aspx </remarks>
-		[SupportByVersion("Outlook", 12,14,15)]
+		[SupportByVersion("Outlook", 12,14,15,16)]
 		public event OlkContactPhoto_ClickEventHandler ClickEvent
 		{
 			add
@@ -190,15 +190,15 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook, 12,14,15
+		/// SupportByVersion Outlook, 12,14,15,16
 		/// </summary>
 		private event OlkContactPhoto_DoubleClickEventHandler _DoubleClickEvent;
 
 		/// <summary>
-		/// SupportByVersion Outlook 12 14 15
+		/// SupportByVersion Outlook 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff864796.aspx </remarks>
-		[SupportByVersion("Outlook", 12,14,15)]
+		[SupportByVersion("Outlook", 12,14,15,16)]
 		public event OlkContactPhoto_DoubleClickEventHandler DoubleClickEvent
 		{
 			add
@@ -213,15 +213,15 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook, 12,14,15
+		/// SupportByVersion Outlook, 12,14,15,16
 		/// </summary>
 		private event OlkContactPhoto_MouseDownEventHandler _MouseDownEvent;
 
 		/// <summary>
-		/// SupportByVersion Outlook 12 14 15
+		/// SupportByVersion Outlook 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff869332.aspx </remarks>
-		[SupportByVersion("Outlook", 12,14,15)]
+		[SupportByVersion("Outlook", 12,14,15,16)]
 		public event OlkContactPhoto_MouseDownEventHandler MouseDownEvent
 		{
 			add
@@ -236,15 +236,15 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook, 12,14,15
+		/// SupportByVersion Outlook, 12,14,15,16
 		/// </summary>
 		private event OlkContactPhoto_MouseMoveEventHandler _MouseMoveEvent;
 
 		/// <summary>
-		/// SupportByVersion Outlook 12 14 15
+		/// SupportByVersion Outlook 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff869272.aspx </remarks>
-		[SupportByVersion("Outlook", 12,14,15)]
+		[SupportByVersion("Outlook", 12,14,15,16)]
 		public event OlkContactPhoto_MouseMoveEventHandler MouseMoveEvent
 		{
 			add
@@ -259,15 +259,15 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook, 12,14,15
+		/// SupportByVersion Outlook, 12,14,15,16
 		/// </summary>
 		private event OlkContactPhoto_MouseUpEventHandler _MouseUpEvent;
 
 		/// <summary>
-		/// SupportByVersion Outlook 12 14 15
+		/// SupportByVersion Outlook 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff867093.aspx </remarks>
-		[SupportByVersion("Outlook", 12,14,15)]
+		[SupportByVersion("Outlook", 12,14,15,16)]
 		public event OlkContactPhoto_MouseUpEventHandler MouseUpEvent
 		{
 			add
@@ -282,15 +282,15 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook, 12,14,15
+		/// SupportByVersion Outlook, 12,14,15,16
 		/// </summary>
 		private event OlkContactPhoto_EnterEventHandler _EnterEvent;
 
 		/// <summary>
-		/// SupportByVersion Outlook 12 14 15
+		/// SupportByVersion Outlook 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff868566.aspx </remarks>
-		[SupportByVersion("Outlook", 12,14,15)]
+		[SupportByVersion("Outlook", 12,14,15,16)]
 		public event OlkContactPhoto_EnterEventHandler EnterEvent
 		{
 			add
@@ -305,15 +305,15 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook, 12,14,15
+		/// SupportByVersion Outlook, 12,14,15,16
 		/// </summary>
 		private event OlkContactPhoto_ExitEventHandler _ExitEvent;
 
 		/// <summary>
-		/// SupportByVersion Outlook 12 14 15
+		/// SupportByVersion Outlook 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff867520.aspx </remarks>
-		[SupportByVersion("Outlook", 12,14,15)]
+		[SupportByVersion("Outlook", 12,14,15,16)]
 		public event OlkContactPhoto_ExitEventHandler ExitEvent
 		{
 			add
@@ -328,15 +328,15 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook, 12,14,15
+		/// SupportByVersion Outlook, 12,14,15,16
 		/// </summary>
 		private event OlkContactPhoto_KeyDownEventHandler _KeyDownEvent;
 
 		/// <summary>
-		/// SupportByVersion Outlook 12 14 15
+		/// SupportByVersion Outlook 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff865644.aspx </remarks>
-		[SupportByVersion("Outlook", 12,14,15)]
+		[SupportByVersion("Outlook", 12,14,15,16)]
 		public event OlkContactPhoto_KeyDownEventHandler KeyDownEvent
 		{
 			add
@@ -351,15 +351,15 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook, 12,14,15
+		/// SupportByVersion Outlook, 12,14,15,16
 		/// </summary>
 		private event OlkContactPhoto_KeyPressEventHandler _KeyPressEvent;
 
 		/// <summary>
-		/// SupportByVersion Outlook 12 14 15
+		/// SupportByVersion Outlook 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff864241.aspx </remarks>
-		[SupportByVersion("Outlook", 12,14,15)]
+		[SupportByVersion("Outlook", 12,14,15,16)]
 		public event OlkContactPhoto_KeyPressEventHandler KeyPressEvent
 		{
 			add
@@ -374,15 +374,15 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook, 12,14,15
+		/// SupportByVersion Outlook, 12,14,15,16
 		/// </summary>
 		private event OlkContactPhoto_KeyUpEventHandler _KeyUpEvent;
 
 		/// <summary>
-		/// SupportByVersion Outlook 12 14 15
+		/// SupportByVersion Outlook 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff869803.aspx </remarks>
-		[SupportByVersion("Outlook", 12,14,15)]
+		[SupportByVersion("Outlook", 12,14,15,16)]
 		public event OlkContactPhoto_KeyUpEventHandler KeyUpEvent
 		{
 			add
@@ -397,15 +397,15 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Outlook, 12,14,15
+		/// SupportByVersion Outlook, 12,14,15,16
 		/// </summary>
 		private event OlkContactPhoto_ChangeEventHandler _ChangeEvent;
 
 		/// <summary>
-		/// SupportByVersion Outlook 12 14 15
+		/// SupportByVersion Outlook 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff863908.aspx </remarks>
-		[SupportByVersion("Outlook", 12,14,15)]
+		[SupportByVersion("Outlook", 12,14,15,16)]
 		public event OlkContactPhoto_ChangeEventHandler ChangeEvent
 		{
 			add
@@ -424,7 +424,7 @@ namespace NetOffice.OutlookApi
 	    #region IEventBinding Member
         
 		/// <summary>
-        /// creates active sink helper
+        /// Creates active sink helper
         /// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public void CreateEventBridge()
@@ -446,6 +446,9 @@ namespace NetOffice.OutlookApi
 			} 
         }
 
+        /// <summary>
+        /// The instance use currently an event listener 
+        /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public bool EventBridgeInitialized
         {
@@ -454,7 +457,10 @@ namespace NetOffice.OutlookApi
                 return (null != _connectPoint);
             }
         }
-        
+
+        /// <summary>
+        ///  The instance has currently one or more event recipients 
+        /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public bool HasEventRecipients()       
         {
@@ -474,6 +480,9 @@ namespace NetOffice.OutlookApi
 			return false;
         }
         
+        /// <summary>
+        /// Target methods from its actual event recipients
+        /// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public Delegate[] GetEventRecipients(string eventName)
         {
@@ -493,7 +502,10 @@ namespace NetOffice.OutlookApi
             else
                 return new Delegate[0];
         }
-
+       
+        /// <summary>
+        /// Returns the current count of event recipients
+        /// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public int GetCountOfEventRecipients(string eventName)
         {
@@ -512,8 +524,14 @@ namespace NetOffice.OutlookApi
             }
             else
                 return 0;
-        }
-
+           }
+        
+        /// <summary>
+        /// Raise an instance event
+        /// </summary>
+        /// <param name="eventName">name of the event without 'Event' at the end</param>
+        /// <param name="paramsArray">custom arguments for the event</param>
+        /// <returns>count of called event recipients</returns>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public int RaiseCustomEvent(string eventName, ref object[] paramsArray)
 		{
@@ -545,6 +563,9 @@ namespace NetOffice.OutlookApi
                 return 0;
 		}
 
+        /// <summary>
+        /// Stop listening events for the instance
+        /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public void DisposeEventBridge()
         {

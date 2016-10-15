@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using NetRuntimeSystem = System;
 using System.Runtime.InteropServices;
 using System.Runtime.CompilerServices;
@@ -10,10 +10,10 @@ namespace NetOffice.ExcelApi
 {
 	///<summary>
 	/// DispatchInterface ListRow 
-	/// SupportByVersion Excel, 11,12,14,15
+	/// SupportByVersion Excel, 11,12,14,15,16
 	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838377.aspx
 	///</summary>
-	[SupportByVersionAttribute("Excel", 11,12,14,15)]
+	[SupportByVersionAttribute("Excel", 11,12,14,15,16)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class ListRow : COMObject
 	{
@@ -93,11 +93,11 @@ namespace NetOffice.ExcelApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion Excel 11, 12, 14, 15
+		/// SupportByVersion Excel 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837787.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 11,12,14,15)]
+		[SupportByVersionAttribute("Excel", 11,12,14,15,16)]
 		public NetOffice.ExcelApi.Application Application
 		{
 			get
@@ -110,11 +110,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 11, 12, 14, 15
+		/// SupportByVersion Excel 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196909.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 11,12,14,15)]
+		[SupportByVersionAttribute("Excel", 11,12,14,15,16)]
 		public NetOffice.ExcelApi.Enums.XlCreator Creator
 		{
 			get
@@ -127,12 +127,12 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 11, 12, 14, 15
+		/// SupportByVersion Excel 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff841218.aspx
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 11,12,14,15)]
+		[SupportByVersionAttribute("Excel", 11,12,14,15,16)]
 		public object Parent
 		{
 			get
@@ -145,11 +145,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 11, 12, 14, 15
+		/// SupportByVersion Excel 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822799.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 11,12,14,15)]
+		[SupportByVersionAttribute("Excel", 11,12,14,15,16)]
 		public Int32 Index
 		{
 			get
@@ -161,10 +161,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 11, 12, 14, 15
+		/// SupportByVersion Excel 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 11,12,14,15)]
+		[SupportByVersionAttribute("Excel", 11,12,14,15,16)]
 		public bool InvalidData
 		{
 			get
@@ -176,11 +176,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 11, 12, 14, 15
+		/// SupportByVersion Excel 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195372.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 11,12,14,15)]
+		[SupportByVersionAttribute("Excel", 11,12,14,15,16)]
 		public NetOffice.ExcelApi.Range Range
 		{
 			get
@@ -197,10 +197,10 @@ namespace NetOffice.ExcelApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByVersion Excel 11, 12, 14, 15
+		/// SupportByVersion Excel 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff841232.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 11,12,14,15)]
+		[SupportByVersionAttribute("Excel", 11,12,14,15,16)]
 		public void Delete()
 		{
 			object[] paramsArray = null;

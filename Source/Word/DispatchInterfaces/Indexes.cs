@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using NetRuntimeSystem = System;
 using System.Runtime.InteropServices;
 using System.Runtime.CompilerServices;
@@ -11,10 +11,10 @@ namespace NetOffice.WordApi
 {
 	///<summary>
 	/// DispatchInterface Indexes 
-	/// SupportByVersion Word, 9,10,11,12,14,15
+	/// SupportByVersion Word, 9,10,11,12,14,15,16
 	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff844981.aspx
 	///</summary>
-	[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
+	[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class Indexes : COMObject ,IEnumerable<NetOffice.WordApi.Index>
 	{
@@ -94,11 +94,11 @@ namespace NetOffice.WordApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff834289.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.Application Application
 		{
 			get
@@ -111,11 +111,11 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822602.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
 		public Int32 Creator
 		{
 			get
@@ -127,12 +127,12 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195310.aspx
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
 		public object Parent
 		{
 			get
@@ -145,11 +145,11 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839153.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
 		public Int32 Count
 		{
 			get
@@ -161,11 +161,11 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840322.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.Enums.WdIndexFormat Format
 		{
 			get
@@ -187,11 +187,11 @@ namespace NetOffice.WordApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// 
 		/// </summary>
 		/// <param name="index">Int32 Index</param>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
 		public NetOffice.WordApi.Index this[Int32 index]
 		{
@@ -205,7 +205,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// 
 		/// </summary>
 		/// <param name="range">NetOffice.WordApi.Range Range</param>
@@ -215,7 +215,7 @@ namespace NetOffice.WordApi
 		/// <param name="numberOfColumns">optional object NumberOfColumns</param>
 		/// <param name="accentedLetters">optional object AccentedLetters</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.Index AddOld(NetOffice.WordApi.Range range, object headingSeparator, object rightAlignPageNumbers, object type, object numberOfColumns, object accentedLetters)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(range, headingSeparator, rightAlignPageNumbers, type, numberOfColumns, accentedLetters);
@@ -225,13 +225,13 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// 
 		/// </summary>
 		/// <param name="range">NetOffice.WordApi.Range Range</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.Index AddOld(NetOffice.WordApi.Range range)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(range);
@@ -241,14 +241,14 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// 
 		/// </summary>
 		/// <param name="range">NetOffice.WordApi.Range Range</param>
 		/// <param name="headingSeparator">optional object HeadingSeparator</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.Index AddOld(NetOffice.WordApi.Range range, object headingSeparator)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(range, headingSeparator);
@@ -258,7 +258,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// 
 		/// </summary>
 		/// <param name="range">NetOffice.WordApi.Range Range</param>
@@ -266,7 +266,7 @@ namespace NetOffice.WordApi
 		/// <param name="rightAlignPageNumbers">optional object RightAlignPageNumbers</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.Index AddOld(NetOffice.WordApi.Range range, object headingSeparator, object rightAlignPageNumbers)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(range, headingSeparator, rightAlignPageNumbers);
@@ -276,7 +276,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// 
 		/// </summary>
 		/// <param name="range">NetOffice.WordApi.Range Range</param>
@@ -285,7 +285,7 @@ namespace NetOffice.WordApi
 		/// <param name="type">optional object Type</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.Index AddOld(NetOffice.WordApi.Range range, object headingSeparator, object rightAlignPageNumbers, object type)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(range, headingSeparator, rightAlignPageNumbers, type);
@@ -295,7 +295,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// 
 		/// </summary>
 		/// <param name="range">NetOffice.WordApi.Range Range</param>
@@ -305,7 +305,7 @@ namespace NetOffice.WordApi
 		/// <param name="numberOfColumns">optional object NumberOfColumns</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.Index AddOld(NetOffice.WordApi.Range range, object headingSeparator, object rightAlignPageNumbers, object type, object numberOfColumns)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(range, headingSeparator, rightAlignPageNumbers, type, numberOfColumns);
@@ -315,7 +315,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839381.aspx
 		/// </summary>
 		/// <param name="range">NetOffice.WordApi.Range Range</param>
@@ -327,7 +327,7 @@ namespace NetOffice.WordApi
 		/// <param name="bold">optional object Bold</param>
 		/// <param name="italic">optional object Italic</param>
 		/// <param name="reading">optional object Reading</param>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.Field MarkEntry(NetOffice.WordApi.Range range, object entry, object entryAutoText, object crossReference, object crossReferenceAutoText, object bookmarkName, object bold, object italic, object reading)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(range, entry, entryAutoText, crossReference, crossReferenceAutoText, bookmarkName, bold, italic, reading);
@@ -337,12 +337,12 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839381.aspx
 		/// </summary>
 		/// <param name="range">NetOffice.WordApi.Range Range</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.Field MarkEntry(NetOffice.WordApi.Range range)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(range);
@@ -352,13 +352,13 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839381.aspx
 		/// </summary>
 		/// <param name="range">NetOffice.WordApi.Range Range</param>
 		/// <param name="entry">optional object Entry</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.Field MarkEntry(NetOffice.WordApi.Range range, object entry)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(range, entry);
@@ -368,14 +368,14 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839381.aspx
 		/// </summary>
 		/// <param name="range">NetOffice.WordApi.Range Range</param>
 		/// <param name="entry">optional object Entry</param>
 		/// <param name="entryAutoText">optional object EntryAutoText</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.Field MarkEntry(NetOffice.WordApi.Range range, object entry, object entryAutoText)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(range, entry, entryAutoText);
@@ -385,7 +385,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839381.aspx
 		/// </summary>
 		/// <param name="range">NetOffice.WordApi.Range Range</param>
@@ -393,7 +393,7 @@ namespace NetOffice.WordApi
 		/// <param name="entryAutoText">optional object EntryAutoText</param>
 		/// <param name="crossReference">optional object CrossReference</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.Field MarkEntry(NetOffice.WordApi.Range range, object entry, object entryAutoText, object crossReference)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(range, entry, entryAutoText, crossReference);
@@ -403,7 +403,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839381.aspx
 		/// </summary>
 		/// <param name="range">NetOffice.WordApi.Range Range</param>
@@ -412,7 +412,7 @@ namespace NetOffice.WordApi
 		/// <param name="crossReference">optional object CrossReference</param>
 		/// <param name="crossReferenceAutoText">optional object CrossReferenceAutoText</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.Field MarkEntry(NetOffice.WordApi.Range range, object entry, object entryAutoText, object crossReference, object crossReferenceAutoText)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(range, entry, entryAutoText, crossReference, crossReferenceAutoText);
@@ -422,7 +422,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839381.aspx
 		/// </summary>
 		/// <param name="range">NetOffice.WordApi.Range Range</param>
@@ -432,7 +432,7 @@ namespace NetOffice.WordApi
 		/// <param name="crossReferenceAutoText">optional object CrossReferenceAutoText</param>
 		/// <param name="bookmarkName">optional object BookmarkName</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.Field MarkEntry(NetOffice.WordApi.Range range, object entry, object entryAutoText, object crossReference, object crossReferenceAutoText, object bookmarkName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(range, entry, entryAutoText, crossReference, crossReferenceAutoText, bookmarkName);
@@ -442,7 +442,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839381.aspx
 		/// </summary>
 		/// <param name="range">NetOffice.WordApi.Range Range</param>
@@ -453,7 +453,7 @@ namespace NetOffice.WordApi
 		/// <param name="bookmarkName">optional object BookmarkName</param>
 		/// <param name="bold">optional object Bold</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.Field MarkEntry(NetOffice.WordApi.Range range, object entry, object entryAutoText, object crossReference, object crossReferenceAutoText, object bookmarkName, object bold)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(range, entry, entryAutoText, crossReference, crossReferenceAutoText, bookmarkName, bold);
@@ -463,7 +463,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839381.aspx
 		/// </summary>
 		/// <param name="range">NetOffice.WordApi.Range Range</param>
@@ -475,7 +475,7 @@ namespace NetOffice.WordApi
 		/// <param name="bold">optional object Bold</param>
 		/// <param name="italic">optional object Italic</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.Field MarkEntry(NetOffice.WordApi.Range range, object entry, object entryAutoText, object crossReference, object crossReferenceAutoText, object bookmarkName, object bold, object italic)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(range, entry, entryAutoText, crossReference, crossReferenceAutoText, bookmarkName, bold, italic);
@@ -485,7 +485,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837493.aspx
 		/// </summary>
 		/// <param name="range">NetOffice.WordApi.Range Range</param>
@@ -496,7 +496,7 @@ namespace NetOffice.WordApi
 		/// <param name="bookmarkName">optional object BookmarkName</param>
 		/// <param name="bold">optional object Bold</param>
 		/// <param name="italic">optional object Italic</param>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
 		public void MarkAllEntries(NetOffice.WordApi.Range range, object entry, object entryAutoText, object crossReference, object crossReferenceAutoText, object bookmarkName, object bold, object italic)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(range, entry, entryAutoText, crossReference, crossReferenceAutoText, bookmarkName, bold, italic);
@@ -504,12 +504,12 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837493.aspx
 		/// </summary>
 		/// <param name="range">NetOffice.WordApi.Range Range</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
 		public void MarkAllEntries(NetOffice.WordApi.Range range)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(range);
@@ -517,13 +517,13 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837493.aspx
 		/// </summary>
 		/// <param name="range">NetOffice.WordApi.Range Range</param>
 		/// <param name="entry">optional object Entry</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
 		public void MarkAllEntries(NetOffice.WordApi.Range range, object entry)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(range, entry);
@@ -531,14 +531,14 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837493.aspx
 		/// </summary>
 		/// <param name="range">NetOffice.WordApi.Range Range</param>
 		/// <param name="entry">optional object Entry</param>
 		/// <param name="entryAutoText">optional object EntryAutoText</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
 		public void MarkAllEntries(NetOffice.WordApi.Range range, object entry, object entryAutoText)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(range, entry, entryAutoText);
@@ -546,7 +546,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837493.aspx
 		/// </summary>
 		/// <param name="range">NetOffice.WordApi.Range Range</param>
@@ -554,7 +554,7 @@ namespace NetOffice.WordApi
 		/// <param name="entryAutoText">optional object EntryAutoText</param>
 		/// <param name="crossReference">optional object CrossReference</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
 		public void MarkAllEntries(NetOffice.WordApi.Range range, object entry, object entryAutoText, object crossReference)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(range, entry, entryAutoText, crossReference);
@@ -562,7 +562,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837493.aspx
 		/// </summary>
 		/// <param name="range">NetOffice.WordApi.Range Range</param>
@@ -571,7 +571,7 @@ namespace NetOffice.WordApi
 		/// <param name="crossReference">optional object CrossReference</param>
 		/// <param name="crossReferenceAutoText">optional object CrossReferenceAutoText</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
 		public void MarkAllEntries(NetOffice.WordApi.Range range, object entry, object entryAutoText, object crossReference, object crossReferenceAutoText)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(range, entry, entryAutoText, crossReference, crossReferenceAutoText);
@@ -579,7 +579,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837493.aspx
 		/// </summary>
 		/// <param name="range">NetOffice.WordApi.Range Range</param>
@@ -589,7 +589,7 @@ namespace NetOffice.WordApi
 		/// <param name="crossReferenceAutoText">optional object CrossReferenceAutoText</param>
 		/// <param name="bookmarkName">optional object BookmarkName</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
 		public void MarkAllEntries(NetOffice.WordApi.Range range, object entry, object entryAutoText, object crossReference, object crossReferenceAutoText, object bookmarkName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(range, entry, entryAutoText, crossReference, crossReferenceAutoText, bookmarkName);
@@ -597,7 +597,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837493.aspx
 		/// </summary>
 		/// <param name="range">NetOffice.WordApi.Range Range</param>
@@ -608,7 +608,7 @@ namespace NetOffice.WordApi
 		/// <param name="bookmarkName">optional object BookmarkName</param>
 		/// <param name="bold">optional object Bold</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
 		public void MarkAllEntries(NetOffice.WordApi.Range range, object entry, object entryAutoText, object crossReference, object crossReferenceAutoText, object bookmarkName, object bold)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(range, entry, entryAutoText, crossReference, crossReferenceAutoText, bookmarkName, bold);
@@ -616,11 +616,11 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff841043.aspx
 		/// </summary>
 		/// <param name="concordanceFileName">string ConcordanceFileName</param>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
 		public void AutoMarkEntries(string concordanceFileName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(concordanceFileName);
@@ -628,7 +628,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193323.aspx
 		/// </summary>
 		/// <param name="range">NetOffice.WordApi.Range Range</param>
@@ -639,7 +639,7 @@ namespace NetOffice.WordApi
 		/// <param name="accentedLetters">optional object AccentedLetters</param>
 		/// <param name="sortBy">optional object SortBy</param>
 		/// <param name="indexLanguage">optional object IndexLanguage</param>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.Index Add(NetOffice.WordApi.Range range, object headingSeparator, object rightAlignPageNumbers, object type, object numberOfColumns, object accentedLetters, object sortBy, object indexLanguage)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(range, headingSeparator, rightAlignPageNumbers, type, numberOfColumns, accentedLetters, sortBy, indexLanguage);
@@ -649,12 +649,12 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193323.aspx
 		/// </summary>
 		/// <param name="range">NetOffice.WordApi.Range Range</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.Index Add(NetOffice.WordApi.Range range)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(range);
@@ -664,13 +664,13 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193323.aspx
 		/// </summary>
 		/// <param name="range">NetOffice.WordApi.Range Range</param>
 		/// <param name="headingSeparator">optional object HeadingSeparator</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.Index Add(NetOffice.WordApi.Range range, object headingSeparator)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(range, headingSeparator);
@@ -680,14 +680,14 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193323.aspx
 		/// </summary>
 		/// <param name="range">NetOffice.WordApi.Range Range</param>
 		/// <param name="headingSeparator">optional object HeadingSeparator</param>
 		/// <param name="rightAlignPageNumbers">optional object RightAlignPageNumbers</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.Index Add(NetOffice.WordApi.Range range, object headingSeparator, object rightAlignPageNumbers)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(range, headingSeparator, rightAlignPageNumbers);
@@ -697,7 +697,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193323.aspx
 		/// </summary>
 		/// <param name="range">NetOffice.WordApi.Range Range</param>
@@ -705,7 +705,7 @@ namespace NetOffice.WordApi
 		/// <param name="rightAlignPageNumbers">optional object RightAlignPageNumbers</param>
 		/// <param name="type">optional object Type</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.Index Add(NetOffice.WordApi.Range range, object headingSeparator, object rightAlignPageNumbers, object type)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(range, headingSeparator, rightAlignPageNumbers, type);
@@ -715,7 +715,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193323.aspx
 		/// </summary>
 		/// <param name="range">NetOffice.WordApi.Range Range</param>
@@ -724,7 +724,7 @@ namespace NetOffice.WordApi
 		/// <param name="type">optional object Type</param>
 		/// <param name="numberOfColumns">optional object NumberOfColumns</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.Index Add(NetOffice.WordApi.Range range, object headingSeparator, object rightAlignPageNumbers, object type, object numberOfColumns)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(range, headingSeparator, rightAlignPageNumbers, type, numberOfColumns);
@@ -734,7 +734,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193323.aspx
 		/// </summary>
 		/// <param name="range">NetOffice.WordApi.Range Range</param>
@@ -744,7 +744,7 @@ namespace NetOffice.WordApi
 		/// <param name="numberOfColumns">optional object NumberOfColumns</param>
 		/// <param name="accentedLetters">optional object AccentedLetters</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.Index Add(NetOffice.WordApi.Range range, object headingSeparator, object rightAlignPageNumbers, object type, object numberOfColumns, object accentedLetters)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(range, headingSeparator, rightAlignPageNumbers, type, numberOfColumns, accentedLetters);
@@ -754,7 +754,7 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193323.aspx
 		/// </summary>
 		/// <param name="range">NetOffice.WordApi.Range Range</param>
@@ -765,7 +765,7 @@ namespace NetOffice.WordApi
 		/// <param name="accentedLetters">optional object AccentedLetters</param>
 		/// <param name="sortBy">optional object SortBy</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.Index Add(NetOffice.WordApi.Range range, object headingSeparator, object rightAlignPageNumbers, object type, object numberOfColumns, object accentedLetters, object sortBy)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(range, headingSeparator, rightAlignPageNumbers, type, numberOfColumns, accentedLetters, sortBy);
@@ -779,9 +779,9 @@ namespace NetOffice.WordApi
        #region IEnumerable<NetOffice.WordApi.Index> Member
         
         /// <summary>
-		/// SupportByVersionAttribute Word, 9,10,11,12,14,15
+		/// SupportByVersionAttribute Word, 9,10,11,12,14,15,16
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
        public IEnumerator<NetOffice.WordApi.Index> GetEnumerator()  
        {
            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
@@ -794,9 +794,9 @@ namespace NetOffice.WordApi
 		#region IEnumerable Members
        
 		/// <summary>
-		/// SupportByVersionAttribute Word, 9,10,11,12,14,15
+		/// SupportByVersionAttribute Word, 9,10,11,12,14,15,16
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
 			return NetOffice.Utils.GetProxyEnumeratorAsProperty(this);

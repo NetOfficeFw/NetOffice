@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using NetRuntimeSystem = System;
 using System.Runtime.InteropServices;
 using System.Runtime.CompilerServices;
@@ -10,10 +10,10 @@ namespace NetOffice.PowerPointApi
 {
 	///<summary>
 	/// DispatchInterface Timing 
-	/// SupportByVersion PowerPoint, 10,11,12,14,15
+	/// SupportByVersion PowerPoint, 10,11,12,14,15,16
 	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744043.aspx
 	///</summary>
-	[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15)]
+	[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15,16)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class Timing : COMObject
 	{
@@ -93,11 +93,11 @@ namespace NetOffice.PowerPointApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745499.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15,16)]
 		public NetOffice.PowerPointApi.Application Application
 		{
 			get
@@ -110,12 +110,12 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744189.aspx
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15,16)]
 		public object Parent
 		{
 			get
@@ -128,11 +128,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj230137.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15,16)]
 		public Single Duration
 		{
 			get
@@ -149,11 +149,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745878.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15,16)]
 		public NetOffice.PowerPointApi.Enums.MsoAnimTriggerType TriggerType
 		{
 			get
@@ -171,11 +171,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744830.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15,16)]
 		public Single TriggerDelayTime
 		{
 			get
@@ -192,11 +192,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff743967.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15,16)]
 		public NetOffice.PowerPointApi.Shape TriggerShape
 		{
 			get
@@ -214,11 +214,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745242.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15,16)]
 		public Int32 RepeatCount
 		{
 			get
@@ -235,11 +235,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745569.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15,16)]
 		public Single RepeatDuration
 		{
 			get
@@ -256,11 +256,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744836.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15,16)]
 		public Single Speed
 		{
 			get
@@ -277,11 +277,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744638.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15,16)]
 		public Single Accelerate
 		{
 			get
@@ -298,11 +298,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744609.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15,16)]
 		public Single Decelerate
 		{
 			get
@@ -319,11 +319,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745419.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15,16)]
 		public NetOffice.OfficeApi.Enums.MsoTriState AutoReverse
 		{
 			get
@@ -341,11 +341,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745386.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15,16)]
 		public NetOffice.OfficeApi.Enums.MsoTriState SmoothStart
 		{
 			get
@@ -363,11 +363,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744834.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15,16)]
 		public NetOffice.OfficeApi.Enums.MsoTriState SmoothEnd
 		{
 			get
@@ -385,11 +385,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744203.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15,16)]
 		public NetOffice.OfficeApi.Enums.MsoTriState RewindAtEnd
 		{
 			get
@@ -407,11 +407,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff743998.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15,16)]
 		public NetOffice.PowerPointApi.Enums.MsoAnimEffectRestart Restart
 		{
 			get
@@ -429,11 +429,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 14, 15
+		/// SupportByVersion PowerPoint 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745340.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14,15)]
+		[SupportByVersionAttribute("PowerPoint", 14,15,16)]
 		public NetOffice.OfficeApi.Enums.MsoTriState BounceEnd
 		{
 			get
@@ -451,11 +451,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 14, 15
+		/// SupportByVersion PowerPoint 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744115.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14,15)]
+		[SupportByVersionAttribute("PowerPoint", 14,15,16)]
 		public Single BounceEndIntensity
 		{
 			get
@@ -472,11 +472,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 14, 15
+		/// SupportByVersion PowerPoint 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746396.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14,15)]
+		[SupportByVersionAttribute("PowerPoint", 14,15,16)]
 		public string TriggerBookmark
 		{
 			get

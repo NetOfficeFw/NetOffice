@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using NetRuntimeSystem = System;
 using System.Runtime.InteropServices;
 using System.Runtime.CompilerServices;
@@ -10,10 +10,10 @@ namespace NetOffice.PowerPointApi
 {
 	///<summary>
 	/// DispatchInterface MotionEffect 
-	/// SupportByVersion PowerPoint, 10,11,12,14,15
+	/// SupportByVersion PowerPoint, 10,11,12,14,15,16
 	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745317.aspx
 	///</summary>
-	[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15)]
+	[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15,16)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class MotionEffect : COMObject
 	{
@@ -93,11 +93,11 @@ namespace NetOffice.PowerPointApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746244.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15,16)]
 		public NetOffice.PowerPointApi.Application Application
 		{
 			get
@@ -110,12 +110,12 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745186.aspx
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15,16)]
 		public object Parent
 		{
 			get
@@ -128,11 +128,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746347.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15,16)]
 		public Single ByX
 		{
 			get
@@ -149,11 +149,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745130.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15,16)]
 		public Single ByY
 		{
 			get
@@ -170,11 +170,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744184.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15,16)]
 		public Single FromX
 		{
 			get
@@ -191,11 +191,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746598.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15,16)]
 		public Single FromY
 		{
 			get
@@ -212,11 +212,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746810.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15,16)]
 		public Single ToX
 		{
 			get
@@ -233,11 +233,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746567.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15,16)]
 		public Single ToY
 		{
 			get
@@ -254,11 +254,11 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15
+		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745702.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15)]
+		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15,16)]
 		public string Path
 		{
 			get

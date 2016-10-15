@@ -4,6 +4,7 @@ using System.Reflection;
 using System.ComponentModel;
 using System.Runtime.InteropServices;
 using System.Collections.Generic;
+using System.Linq;
 using COMTypes = System.Runtime.InteropServices.ComTypes;
 
 namespace NetOffice
@@ -125,6 +126,7 @@ namespace NetOffice
 
         #region Fields
 
+        private static Core _default;
         private bool _initalized;
         private List<COMObject> _globalObjectList = new List<COMObject>();
         private List<IFactoryInfo> _factoryList = new List<IFactoryInfo>();
@@ -133,10 +135,11 @@ namespace NetOffice
         private Dictionary<Guid, Guid> _hostCache = new Dictionary<Guid, Guid>();
         private Dictionary<string, Dictionary<string, string>> _entitiesListCache = new Dictionary<string, Dictionary<string, string>>();
         private List<DependentAssembly> _dependentAssemblies = new List<DependentAssembly>();
-        private static string[] _knownNetOfficeKeyTokens;
         private Assembly _thisAssembly;
         private CurrentAppDomain _appDomain;
 
+        private static object _checkInitializeLock = new object();
+        private static object _thisAssemblyLock = new object();
         private static object _defaultLock = new object();
         private static object _factoryListLock = new object();
         private static object _comObjectLock = new object();
@@ -144,6 +147,11 @@ namespace NetOffice
 
         private static readonly string _noAssemblyAttributeName = "NetOffice.NetOfficeAssemblyAttribute";
         private static readonly string[] _tryLoadAssemblyNames = new string[] { "ExcelApi.dll", "WordApi.dll", "OutlookApi.dll", "PowerPointApi.dll", "AccessApi.dll", "VisioApi.dll", "MSProjectApi.dll", "MSFormsApi.dll" };
+
+        /// <summary>
+        /// Log output in Initialize method. Older versions use GetType().Assembly.Version. Now changed to increase performance
+        /// </summary>
+        private static string _coreVersion = "1.7.4.0";
 
         #endregion
 
@@ -193,8 +201,11 @@ namespace NetOffice
         {
             get
             {
-                if(null == _thisAssembly)
-                    _thisAssembly = Assembly.GetAssembly(typeof(COMObject));
+                lock (_thisAssemblyLock)
+                {
+                    if (null == _thisAssembly)
+                        _thisAssembly = Assembly.GetAssembly(typeof(COMObject));
+                }              
                 return _thisAssembly;
             }
         }
@@ -225,8 +236,7 @@ namespace NetOffice
                 }
             }
         }
-        private static Core _default;
-
+         
         /// <summary>
         /// Core Settings
         /// </summary>
@@ -248,7 +258,7 @@ namespace NetOffice
         public bool IsDefault { get; private set; }
 
         /// <summary>
-        /// returns an array about currently loaded NetOfficeApi assemblies
+        /// Returns an array about currently loaded NetOfficeApi assemblies
         /// </summary>
         public IFactoryInfo[] Assemblies
         {
@@ -268,6 +278,11 @@ namespace NetOffice
                 return _globalObjectList.Count;
             }
         }
+
+        /// <summary>
+        /// Time that the Initialize method has been used
+        /// </summary>
+        public TimeSpan InitializedTime { get; private set; }
 
         #endregion
 
@@ -314,17 +329,6 @@ namespace NetOffice
             {
                 DebugConsole.Default.WriteException(throwedException);
             }
-
-            try
-            {
-                if (Settings.EnableProxyCountChannel)
-                    this.Console.SendPipeChannelMessage(Settings.ProxyCountChannelName, String.Format("Current Proxy Count:{0}", proxyCount));
-            }
-            catch (Exception throwedException)
-            {
-                DebugConsole.Default.WriteException(throwedException);
-                throw;
-            }
         }
 
         #endregion
@@ -332,7 +336,6 @@ namespace NetOffice
         #region Factory Methods
 
         /// <summary>
-        /// Must be called from client assembly for COMObject Support
         /// Recieve factory infos from all loaded NetOfficeApi Assemblies in current application domain
         /// </summary>
         [Obsolete("Not necessary anymore(self-initializing)")]
@@ -340,7 +343,7 @@ namespace NetOffice
         {
             Initialize(CacheOptions.KeepExistingCacheAlive);
         }
-
+         
         /// <summary>
         /// Must be called from client assembly for COMObject Support
         /// Recieve factory infos from all loaded NetOfficeApi Assemblies in current application domain
@@ -354,10 +357,12 @@ namespace NetOffice
             bool isLocked = false;
             try
             {
+                DateTime startTime = DateTime.Now;
+
                 Monitor.Enter(_factoryListLock);
                 isLocked = true;
 
-                Console.WriteLine("NetOffice Core.Initialize() NO Version:{1} DeepLevel:{0}", Settings.EnableDeepLoading, this.GetType().Assembly.GetName().Version);
+                Console.WriteLine("NetOffice Core.Initialize() NO Version:{1} DeepLevel:{0}", Settings.EnableDeepLoading, _coreVersion);
 
                 foreach (var item in _tryLoadAssemblyNames)
                     TryLoadAssembly(item);
@@ -366,8 +371,10 @@ namespace NetOffice
                 AddNetOfficeAssemblies();
                 AddDependentNetOfficeAssemblies();
 
-                Console.WriteLine("Factory contains {0} assemblies", _factoryList.Count);
-                Console.WriteLine("NetOffice Core.Initialize() passed");
+                InitializedTime = DateTime.Now - startTime;                    
+                    
+                Console.WriteLine("Core contains {0} assemblies", _factoryList.Count);
+                Console.WriteLine("NetOffice Core.Initialize() passed in {0} milliseconds", InitializedTime.TotalMilliseconds);
             }
             catch (Exception throwedException)
             {
@@ -385,10 +392,13 @@ namespace NetOffice
         }
 
         /// <summary>
-        /// analyze assemblies in current appdomain and connect all NetOffice assemblies to the core runtime
+        /// Analyze assemblies in current appdomain and connect all NetOffice assemblies to the core runtime
         /// </summary>
         private void AddNetOfficeAssemblies()
         {
+            var currentAssemblyName = new AssemblyName(this.ThisAssembly.FullName);
+            var netOfficePublicKey = currentAssemblyName.KeyPair.PublicKey;
+
             _dependentAssemblies.Clear();
 
             if (Settings.EnableDeepLoading)
@@ -398,7 +408,7 @@ namespace NetOffice
                 {
                     foreach (AssemblyName itemName in domainAssembly.GetReferencedAssemblies())
                     {
-                        if (ContainsNetOfficePublicKeyToken(itemName))
+                        if (ContainsNetOfficePublicKeyToken(itemName, netOfficePublicKey))
                         {
                             Assembly itemAssembly = _appDomain.Load(itemName);
                             if (null == itemAssembly)
@@ -455,7 +465,7 @@ namespace NetOffice
         }
 
         /// <summary>
-        /// analyze loaded NetOffice assemblies and add dependent assemblies to the runtime if necessary
+        /// Analyze loaded NetOffice assemblies and add dependent assemblies to the runtime if necessary
         /// </summary>
         private void AddDependentNetOfficeAssemblies()
         {
@@ -492,11 +502,10 @@ namespace NetOffice
         }
 
         /// <summary>
-        /// clears proxy/type/wrapper/assembly cache etc.
+        /// Clears proxy/type/wrapper/assembly cache etc.
         /// </summary>
         private void ClearCache()
         {
-            // clear entities cache
             if (CacheOptions.ClearExistingCache == Settings.CacheOptions)
             {
                 _wrapperTypeCache.Clear();
@@ -508,16 +517,23 @@ namespace NetOffice
         }
 
         /// <summary>
-        /// Check for inialize state and call Initialze if its necessary
+        /// Check for initialize state and call Initialize if its necessary
         /// </summary>
         internal void CheckInitialize()
         {
-            if (!_initalized)
-                Initialize();
+            lock (_checkInitializeLock)
+            {
+                if (!_initalized)
+                {
+                    #pragma warning disable
+                    Initialize();
+                    #pragma warning restore
+                }
+            }            
         }
 
         /// <summary>
-        /// clears factory informations List
+        /// Clears factory informations List
         /// </summary>
         public void ClearFactoryInformations()
         {
@@ -545,7 +561,7 @@ namespace NetOffice
         }
 
         /// <summary>
-        /// creates an entity support list for a proxy
+        /// Creates an entity support list for a proxy
         /// </summary>
         /// <param name="comProxy"></param>
         /// <returns></returns>
@@ -622,7 +638,7 @@ namespace NetOffice
         #region Create COMObject Methods
 
         /// <summary>
-        /// creates a new COMObject based on wrapperClassType
+        /// Creates a new COMObject based on wrapperClassType
         /// </summary>
         /// <param name="caller">parent there have created comProxy</param>
         /// <param name="comProxy">new created proxy</param>
@@ -669,7 +685,7 @@ namespace NetOffice
         }
 
         /// <summary>
-        /// creates a new COMObject array based on wrapperClassType
+        /// Creates a new COMObject array based on wrapperClassType
         /// </summary>
         /// <param name="caller">parent there have created comProxy</param>
         /// <param name="comProxyArray">new created proxies</param>
@@ -714,7 +730,7 @@ namespace NetOffice
         }
 
         /// <summary>
-        /// creates a new COMObject based on classType of comProxy 
+        /// Creates a new COMObject based on classType of comProxy 
         /// </summary>
         /// <param name="caller">parent there have created comProxy</param>
         /// <param name="comProxy">new created proxy</param>
@@ -764,7 +780,7 @@ namespace NetOffice
         }
 
         /// <summary>
-        /// creates a new COMObject based on classType of comProxy 
+        /// Creates a new COMObject based on classType of comProxy 
         /// </summary>
         /// <param name="caller">parent there have created comProxy</param>
         /// <param name="comProxy">new created proxy</param>
@@ -809,7 +825,7 @@ namespace NetOffice
         }
 
         /// <summary>
-        /// creates a new COMObject from factoryInfo
+        /// Creates a new COMObject from factoryInfo
         /// </summary>
         /// <param name="factoryInfo">Factory Info from Wrapper Assemblies</param>
         /// <param name="caller">parent there have created comProxy</param>
@@ -840,7 +856,16 @@ namespace NetOffice
                     // create new classType
                     classType = factoryInfo.Assembly.GetType(fullClassName, false, true);
                     if (null == classType)
-                        throw new ArgumentException("Class not exists: " + fullClassName);
+                    {
+                        if(Settings.EnableUnknownProxies)
+                        {
+                            COMObject unkownInstance = new COMObject(caller, comProxy);
+                            unkownInstance = TryReplaceInstance(caller, unkownInstance, comProxyType);
+                            return unkownInstance;
+                        }
+                        else
+                            throw new ArgumentException("Class not exists: " + fullClassName);
+                    }
 
                     _wrapperTypeCache.Add(fullClassName, classType);
                     COMObject newInstance = Activator.CreateInstance(classType, new object[] { caller, comProxy, comProxyType }) as COMObject;
@@ -864,7 +889,7 @@ namespace NetOffice
         }
 
         /// <summary>
-        ///  creates a new COMObject array
+        /// Creates a new COMObject array
         /// </summary>
         /// <param name="caller">parent there have created comProxy</param>
         /// <param name="comProxyArray">new created proxy array</param>
@@ -940,7 +965,7 @@ namespace NetOffice
         #region Object List Methods
 
         /// <summary>
-        /// dispose all open objects
+        /// Dispose all open objects
         /// </summary>
         public void DisposeAllCOMProxies()
         {
@@ -950,7 +975,7 @@ namespace NetOffice
         }
 
         /// <summary>
-        /// add object to global list
+        /// Add object to global list
         /// </summary>
         /// <param name="proxy">com wrapper instance</param>
         internal void AddObjectToList(COMObject proxy)
@@ -980,7 +1005,7 @@ namespace NetOffice
         }
 
         /// <summary>
-        /// remove object from global list
+        /// Remove object from global list
         /// </summary>
         /// <param name="proxy">com wrapper instance</param>
         internal void RemoveObjectFromList(COMObject proxy)
@@ -1014,7 +1039,7 @@ namespace NetOffice
         #region Private Methods
 
         /// <summary>
-        /// returns info the assembly is a NetOffice Api Assembly
+        /// Returns info the assembly is a NetOffice Api Assembly
         /// </summary>
         /// <param name="itemAssembly">assembly informations</param>
         /// <returns>true if NetOffice assembly, otherwise false</returns>
@@ -1040,52 +1065,24 @@ namespace NetOffice
         }
 
         /// <summary>
-        /// returns info the assembly is a NetOffice Api Assembly with known keytoken
+        /// Returns info the assembly is a NetOffice Api Assembly with known keytoken
         /// </summary>
-        /// <param name="itemName">assembly informations</param>
+        /// <param name="itemName">Assembly name to check for equal public key in strong name.</param>
+        /// <param name="netOfficePublicKeyToken">NetOffice public key token.</param>
         /// <returns>true if NetOffice assembly with token, otherwise false</returns>
-        private bool ContainsNetOfficePublicKeyToken(AssemblyName itemName)
+        internal bool ContainsNetOfficePublicKeyToken(AssemblyName itemName, byte[] netOfficePublicKeyToken)
         {
-            try
+            var assemblyToken = itemName.GetPublicKeyToken();
+            if (assemblyToken == null)
             {
-                string targetKeyToken = itemName.FullName.Substring(itemName.FullName.LastIndexOf(" ") + 1);
-                foreach (string item in KnownNetOfficeKeyTokens)
-                {
-                    if (item.EndsWith(targetKeyToken, StringComparison.InvariantCultureIgnoreCase))
-                        return true;
-                }
                 return false;
             }
-            catch (System.IO.FileNotFoundException exception)
-            {
-                Console.WriteException(exception);
-                return false;
-            }
+
+            return netOfficePublicKeyToken.SequenceEqual(assemblyToken);
         }
 
         /// <summary>
-        /// contains a list of all known netoffice 
-        /// </summary>
-        private static string[] KnownNetOfficeKeyTokens
-        {
-            get
-            {
-                if (null == _knownNetOfficeKeyTokens)
-                {
-                    Type thisType = typeof(Core);
-                    System.IO.Stream ressourceStream = thisType.Assembly.GetManifestResourceStream(thisType.Namespace + ".KeyTokens.txt");
-                    System.IO.StreamReader textStreamReader = new System.IO.StreamReader(ressourceStream);
-                    string text = textStreamReader.ReadToEnd();
-                    ressourceStream.Close();
-                    textStreamReader.Close();
-                    _knownNetOfficeKeyTokens = text.Split(new string[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries);
-                }
-                return _knownNetOfficeKeyTokens;
-            }
-        }
-
-        /// <summary>
-        /// check for loaded assembly in factory list
+        /// Check for loaded assembly in factory list
         /// </summary>
         /// <param name="name">name of the assembly</param>
         /// <returns>true if exists, otherwise false</returns>
@@ -1104,7 +1101,7 @@ namespace NetOffice
         }
 
         /// <summary>
-        /// add assembly to list
+        /// Add assembly to list
         /// </summary>
         /// <param name="name">name of the assembly</param>
         /// <param name="itemAssembly">assemmbly to add</param>
@@ -1182,11 +1179,11 @@ namespace NetOffice
         }
 
         /// <summary>
-        /// returns id of an interface
+        /// Returns id of an interface
         /// </summary>
         /// <param name="typeInfo">com type informations</param>
         /// <returns>internface id(iid)</returns>
-        private static Guid GetTypeGuid(COMTypes.ITypeInfo typeInfo)
+        internal static Guid GetTypeGuid(COMTypes.ITypeInfo typeInfo)
         {
             IntPtr attribPtr = IntPtr.Zero;
             typeInfo.GetTypeAttr(out attribPtr);
@@ -1195,9 +1192,9 @@ namespace NetOffice
             typeInfo.ReleaseTypeAttr(attribPtr);
             return typeGuid;
         }
-
+          
         /// <summary>
-        /// get the guid from type lib there is the type defined
+        /// Get the guid from type lib there is the type defined
         /// </summary>
         /// <param name="comProxy">new created proxy</param>
         /// <returns>guid from containing component</returns>
@@ -1232,7 +1229,7 @@ namespace NetOffice
         }
 
         /// <summary>
-        /// get wrapper class factory info 
+        /// Get wrapper class factory info 
         /// </summary>
         /// <param name="comProxy">new created proxy</param>
         /// <returns>factory info from corresponding assembly</returns>
@@ -1322,7 +1319,7 @@ namespace NetOffice
         #region Type
 
         /// <summary>
-        /// returns the Type for comProxy or null if param not set
+        /// Returns the Type for comProxy or null if param not set
         /// </summary>
         /// <param name="comProxy">new created proxy</param>
         /// <returns>type info or null if unkown</returns>

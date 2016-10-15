@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using NetOffice;
@@ -28,9 +28,9 @@ namespace NetOffice.AccessApi
 
 	///<summary>
 	/// CoClass _ToggleButtonInOption 
-	/// SupportByVersion Access, 9,10,11,12,14,15
+	/// SupportByVersion Access, 9,10,11,12,14,15,16
 	///</summary>
-	[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+	[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class _ToggleButtonInOption : _ToggleButton,IEventBinding
 	{
@@ -106,7 +106,7 @@ namespace NetOffice.AccessApi
 		}
 		
 		///<summary>
-        ///creates a new instance of _ToggleButtonInOption 
+        /// Creates a new instance of _ToggleButtonInOption 
         ///</summary>		
 		public _ToggleButtonInOption():base("Access._ToggleButtonInOption")
 		{
@@ -114,7 +114,7 @@ namespace NetOffice.AccessApi
 		}
 		
 		///<summary>
-        ///creates a new instance of _ToggleButtonInOption
+        /// Creates a new instance of _ToggleButtonInOption
         ///</summary>
         ///<param name="progId">registered ProgID</param>
 		public _ToggleButtonInOption(string progId):base(progId)
@@ -127,12 +127,12 @@ namespace NetOffice.AccessApi
 		#region Static CoClass Methods
 
 		/// <summary>
-        /// returns all running Access._ToggleButtonInOption objects from the running object table(ROT)
+        /// Returns all running Access._ToggleButtonInOption objects from the environment/system
         /// </summary>
         /// <returns>an Access._ToggleButtonInOption array</returns>
 		public static NetOffice.AccessApi._ToggleButtonInOption[] GetActiveInstances()
 		{		
-			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("Access","_ToggleButtonInOption");
+			IDisposableEnumeration proxyList = NetOffice.ProxyService.GetActiveInstances("Access","_ToggleButtonInOption");
 			NetRuntimeSystem.Collections.Generic.List<NetOffice.AccessApi._ToggleButtonInOption> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.AccessApi._ToggleButtonInOption>();
 			foreach(object proxy in proxyList)
 				resultList.Add( new NetOffice.AccessApi._ToggleButtonInOption(null, proxy) );
@@ -140,12 +140,12 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-        /// returns a running Access._ToggleButtonInOption object from the running object table(ROT). the method takes the first element from the table
+        /// Returns a running Access._ToggleButtonInOption object from the environment/system.
         /// </summary>
         /// <returns>an Access._ToggleButtonInOption object or null</returns>
 		public static NetOffice.AccessApi._ToggleButtonInOption GetActiveInstance()
 		{
-			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Access","_ToggleButtonInOption", false);
+			object proxy  = NetOffice.ProxyService.GetActiveInstance("Access","_ToggleButtonInOption", false);
 			if(null != proxy)
 				return new NetOffice.AccessApi._ToggleButtonInOption(null, proxy);
 			else
@@ -153,13 +153,13 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-        /// returns a running Access._ToggleButtonInOption object from the running object table(ROT).  the method takes the first element from the table
+        /// Returns a running Access._ToggleButtonInOption object from the environment/system. 
         /// </summary>
 	    /// <param name="throwOnError">throw an exception if no object was found</param>
         /// <returns>an Access._ToggleButtonInOption object or null</returns>
 		public static NetOffice.AccessApi._ToggleButtonInOption GetActiveInstance(bool throwOnError)
 		{
-			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Access","_ToggleButtonInOption", throwOnError);
+			object proxy  = NetOffice.ProxyService.GetActiveInstance("Access","_ToggleButtonInOption", throwOnError);
 			if(null != proxy)
 				return new NetOffice.AccessApi._ToggleButtonInOption(null, proxy);
 			else
@@ -170,14 +170,14 @@ namespace NetOffice.AccessApi
 		#region Events
 
 		/// <summary>
-		/// SupportByVersion Access, 9,10,11,12,14,15
+		/// SupportByVersion Access, 9,10,11,12,14,15,16
 		/// </summary>
 		private event _ToggleButtonInOption_GotFocusEventHandler _GotFocusEvent;
 
 		/// <summary>
-		/// SupportByVersion Access 9 10 11 12 14 15
+		/// SupportByVersion Access 9 10 11 12 14 15,16
 		/// </summary>
-		[SupportByVersion("Access", 9,10,11,12,14,15)]
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public event _ToggleButtonInOption_GotFocusEventHandler GotFocusEvent
 		{
 			add
@@ -192,14 +192,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access, 9,10,11,12,14,15
+		/// SupportByVersion Access, 9,10,11,12,14,15,16
 		/// </summary>
 		private event _ToggleButtonInOption_LostFocusEventHandler _LostFocusEvent;
 
 		/// <summary>
-		/// SupportByVersion Access 9 10 11 12 14 15
+		/// SupportByVersion Access 9 10 11 12 14 15,16
 		/// </summary>
-		[SupportByVersion("Access", 9,10,11,12,14,15)]
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public event _ToggleButtonInOption_LostFocusEventHandler LostFocusEvent
 		{
 			add
@@ -214,14 +214,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access, 9,10,11,12,14,15
+		/// SupportByVersion Access, 9,10,11,12,14,15,16
 		/// </summary>
 		private event _ToggleButtonInOption_MouseDownEventHandler _MouseDownEvent;
 
 		/// <summary>
-		/// SupportByVersion Access 9 10 11 12 14 15
+		/// SupportByVersion Access 9 10 11 12 14 15,16
 		/// </summary>
-		[SupportByVersion("Access", 9,10,11,12,14,15)]
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public event _ToggleButtonInOption_MouseDownEventHandler MouseDownEvent
 		{
 			add
@@ -236,14 +236,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access, 9,10,11,12,14,15
+		/// SupportByVersion Access, 9,10,11,12,14,15,16
 		/// </summary>
 		private event _ToggleButtonInOption_MouseMoveEventHandler _MouseMoveEvent;
 
 		/// <summary>
-		/// SupportByVersion Access 9 10 11 12 14 15
+		/// SupportByVersion Access 9 10 11 12 14 15,16
 		/// </summary>
-		[SupportByVersion("Access", 9,10,11,12,14,15)]
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public event _ToggleButtonInOption_MouseMoveEventHandler MouseMoveEvent
 		{
 			add
@@ -258,14 +258,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access, 9,10,11,12,14,15
+		/// SupportByVersion Access, 9,10,11,12,14,15,16
 		/// </summary>
 		private event _ToggleButtonInOption_MouseUpEventHandler _MouseUpEvent;
 
 		/// <summary>
-		/// SupportByVersion Access 9 10 11 12 14 15
+		/// SupportByVersion Access 9 10 11 12 14 15,16
 		/// </summary>
-		[SupportByVersion("Access", 9,10,11,12,14,15)]
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public event _ToggleButtonInOption_MouseUpEventHandler MouseUpEvent
 		{
 			add
@@ -280,14 +280,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access, 9,10,11,12,14,15
+		/// SupportByVersion Access, 9,10,11,12,14,15,16
 		/// </summary>
 		private event _ToggleButtonInOption_KeyDownEventHandler _KeyDownEvent;
 
 		/// <summary>
-		/// SupportByVersion Access 9 10 11 12 14 15
+		/// SupportByVersion Access 9 10 11 12 14 15,16
 		/// </summary>
-		[SupportByVersion("Access", 9,10,11,12,14,15)]
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public event _ToggleButtonInOption_KeyDownEventHandler KeyDownEvent
 		{
 			add
@@ -302,14 +302,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access, 9,10,11,12,14,15
+		/// SupportByVersion Access, 9,10,11,12,14,15,16
 		/// </summary>
 		private event _ToggleButtonInOption_KeyPressEventHandler _KeyPressEvent;
 
 		/// <summary>
-		/// SupportByVersion Access 9 10 11 12 14 15
+		/// SupportByVersion Access 9 10 11 12 14 15,16
 		/// </summary>
-		[SupportByVersion("Access", 9,10,11,12,14,15)]
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public event _ToggleButtonInOption_KeyPressEventHandler KeyPressEvent
 		{
 			add
@@ -324,14 +324,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access, 9,10,11,12,14,15
+		/// SupportByVersion Access, 9,10,11,12,14,15,16
 		/// </summary>
 		private event _ToggleButtonInOption_KeyUpEventHandler _KeyUpEvent;
 
 		/// <summary>
-		/// SupportByVersion Access 9 10 11 12 14 15
+		/// SupportByVersion Access 9 10 11 12 14 15,16
 		/// </summary>
-		[SupportByVersion("Access", 9,10,11,12,14,15)]
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public event _ToggleButtonInOption_KeyUpEventHandler KeyUpEvent
 		{
 			add
@@ -346,14 +346,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access, 12,14,15
+		/// SupportByVersion Access, 12,14,15,16
 		/// </summary>
 		private event _ToggleButtonInOption_ClickEventHandler _ClickEvent;
 
 		/// <summary>
-		/// SupportByVersion Access 12 14 15
+		/// SupportByVersion Access 12 14 15,16
 		/// </summary>
-		[SupportByVersion("Access", 12,14,15)]
+		[SupportByVersion("Access", 12,14,15,16)]
 		public event _ToggleButtonInOption_ClickEventHandler ClickEvent
 		{
 			add
@@ -368,14 +368,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access, 12,14,15
+		/// SupportByVersion Access, 12,14,15,16
 		/// </summary>
 		private event _ToggleButtonInOption_BeforeUpdateEventHandler _BeforeUpdateEvent;
 
 		/// <summary>
-		/// SupportByVersion Access 12 14 15
+		/// SupportByVersion Access 12 14 15,16
 		/// </summary>
-		[SupportByVersion("Access", 12,14,15)]
+		[SupportByVersion("Access", 12,14,15,16)]
 		public event _ToggleButtonInOption_BeforeUpdateEventHandler BeforeUpdateEvent
 		{
 			add
@@ -390,14 +390,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access, 12,14,15
+		/// SupportByVersion Access, 12,14,15,16
 		/// </summary>
 		private event _ToggleButtonInOption_AfterUpdateEventHandler _AfterUpdateEvent;
 
 		/// <summary>
-		/// SupportByVersion Access 12 14 15
+		/// SupportByVersion Access 12 14 15,16
 		/// </summary>
-		[SupportByVersion("Access", 12,14,15)]
+		[SupportByVersion("Access", 12,14,15,16)]
 		public event _ToggleButtonInOption_AfterUpdateEventHandler AfterUpdateEvent
 		{
 			add
@@ -412,14 +412,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access, 12,14,15
+		/// SupportByVersion Access, 12,14,15,16
 		/// </summary>
 		private event _ToggleButtonInOption_EnterEventHandler _EnterEvent;
 
 		/// <summary>
-		/// SupportByVersion Access 12 14 15
+		/// SupportByVersion Access 12 14 15,16
 		/// </summary>
-		[SupportByVersion("Access", 12,14,15)]
+		[SupportByVersion("Access", 12,14,15,16)]
 		public event _ToggleButtonInOption_EnterEventHandler EnterEvent
 		{
 			add
@@ -434,14 +434,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access, 12,14,15
+		/// SupportByVersion Access, 12,14,15,16
 		/// </summary>
 		private event _ToggleButtonInOption_ExitEventHandler _ExitEvent;
 
 		/// <summary>
-		/// SupportByVersion Access 12 14 15
+		/// SupportByVersion Access 12 14 15,16
 		/// </summary>
-		[SupportByVersion("Access", 12,14,15)]
+		[SupportByVersion("Access", 12,14,15,16)]
 		public event _ToggleButtonInOption_ExitEventHandler ExitEvent
 		{
 			add
@@ -456,14 +456,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access, 12,14,15
+		/// SupportByVersion Access, 12,14,15,16
 		/// </summary>
 		private event _ToggleButtonInOption_DblClickEventHandler _DblClickEvent;
 
 		/// <summary>
-		/// SupportByVersion Access 12 14 15
+		/// SupportByVersion Access 12 14 15,16
 		/// </summary>
-		[SupportByVersion("Access", 12,14,15)]
+		[SupportByVersion("Access", 12,14,15,16)]
 		public event _ToggleButtonInOption_DblClickEventHandler DblClickEvent
 		{
 			add
@@ -482,7 +482,7 @@ namespace NetOffice.AccessApi
 	    #region IEventBinding Member
         
 		/// <summary>
-        /// creates active sink helper
+        /// Creates active sink helper
         /// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public void CreateEventBridge()
@@ -510,6 +510,9 @@ namespace NetOffice.AccessApi
 			} 
         }
 
+        /// <summary>
+        /// The instance use currently an event listener 
+        /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public bool EventBridgeInitialized
         {
@@ -518,7 +521,10 @@ namespace NetOffice.AccessApi
                 return (null != _connectPoint);
             }
         }
-        
+
+        /// <summary>
+        ///  The instance has currently one or more event recipients 
+        /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public bool HasEventRecipients()       
         {
@@ -538,6 +544,9 @@ namespace NetOffice.AccessApi
 			return false;
         }
         
+        /// <summary>
+        /// Target methods from its actual event recipients
+        /// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public Delegate[] GetEventRecipients(string eventName)
         {
@@ -557,7 +566,10 @@ namespace NetOffice.AccessApi
             else
                 return new Delegate[0];
         }
-
+       
+        /// <summary>
+        /// Returns the current count of event recipients
+        /// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public int GetCountOfEventRecipients(string eventName)
         {
@@ -576,8 +588,14 @@ namespace NetOffice.AccessApi
             }
             else
                 return 0;
-        }
-
+           }
+        
+        /// <summary>
+        /// Raise an instance event
+        /// </summary>
+        /// <param name="eventName">name of the event without 'Event' at the end</param>
+        /// <param name="paramsArray">custom arguments for the event</param>
+        /// <returns>count of called event recipients</returns>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public int RaiseCustomEvent(string eventName, ref object[] paramsArray)
 		{
@@ -609,6 +627,9 @@ namespace NetOffice.AccessApi
                 return 0;
 		}
 
+        /// <summary>
+        /// Stop listening events for the instance
+        /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public void DisposeEventBridge()
         {

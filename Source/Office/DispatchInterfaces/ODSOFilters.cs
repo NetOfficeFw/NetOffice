@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using NetRuntimeSystem = System;
 using System.Runtime.InteropServices;
 using System.Runtime.CompilerServices;
@@ -11,10 +11,10 @@ namespace NetOffice.OfficeApi
 {
 	///<summary>
 	/// DispatchInterface ODSOFilters 
-	/// SupportByVersion Office, 10,11,12,14,15
+	/// SupportByVersion Office, 10,11,12,14,15,16
 	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff865224.aspx
 	///</summary>
-	[SupportByVersionAttribute("Office", 10,11,12,14,15)]
+	[SupportByVersionAttribute("Office", 10,11,12,14,15,16)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class ODSOFilters : _IMsoDispObj ,IEnumerable<object>
 	{
@@ -94,11 +94,11 @@ namespace NetOffice.OfficeApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion Office 10, 11, 12, 14, 15
+		/// SupportByVersion Office 10, 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff860835.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
+		[SupportByVersionAttribute("Office", 10,11,12,14,15,16)]
 		public Int32 Count
 		{
 			get
@@ -110,12 +110,12 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 10, 11, 12, 14, 15
+		/// SupportByVersion Office 10, 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff861525.aspx
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
+		[SupportByVersionAttribute("Office", 10,11,12,14,15,16)]
 		public object Parent
 		{
 			get
@@ -132,11 +132,11 @@ namespace NetOffice.OfficeApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByVersion Office 10, 11, 12, 14, 15
+		/// SupportByVersion Office 10, 11, 12, 14, 15, 16
 		/// 
 		/// </summary>
 		/// <param name="index">Int32 Index</param>
-		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
+		[SupportByVersionAttribute("Office", 10,11,12,14,15,16)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
 		public object this[Int32 index]
 		{
@@ -150,7 +150,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 10, 11, 12, 14, 15
+		/// SupportByVersion Office 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff864658.aspx
 		/// </summary>
 		/// <param name="column">string Column</param>
@@ -158,7 +158,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="conjunction">NetOffice.OfficeApi.Enums.MsoFilterConjunction Conjunction</param>
 		/// <param name="bstrCompareTo">optional string bstrCompareTo = </param>
 		/// <param name="deferUpdate">optional bool DeferUpdate = false</param>
-		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
+		[SupportByVersionAttribute("Office", 10,11,12,14,15,16)]
 		public void Add(string column, NetOffice.OfficeApi.Enums.MsoFilterComparison comparison, NetOffice.OfficeApi.Enums.MsoFilterConjunction conjunction, object bstrCompareTo, object deferUpdate)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(column, comparison, conjunction, bstrCompareTo, deferUpdate);
@@ -166,14 +166,14 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 10, 11, 12, 14, 15
+		/// SupportByVersion Office 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff864658.aspx
 		/// </summary>
 		/// <param name="column">string Column</param>
 		/// <param name="comparison">NetOffice.OfficeApi.Enums.MsoFilterComparison Comparison</param>
 		/// <param name="conjunction">NetOffice.OfficeApi.Enums.MsoFilterConjunction Conjunction</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
+		[SupportByVersionAttribute("Office", 10,11,12,14,15,16)]
 		public void Add(string column, NetOffice.OfficeApi.Enums.MsoFilterComparison comparison, NetOffice.OfficeApi.Enums.MsoFilterConjunction conjunction)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(column, comparison, conjunction);
@@ -181,7 +181,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 10, 11, 12, 14, 15
+		/// SupportByVersion Office 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff864658.aspx
 		/// </summary>
 		/// <param name="column">string Column</param>
@@ -189,7 +189,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="conjunction">NetOffice.OfficeApi.Enums.MsoFilterConjunction Conjunction</param>
 		/// <param name="bstrCompareTo">optional string bstrCompareTo = </param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
+		[SupportByVersionAttribute("Office", 10,11,12,14,15,16)]
 		public void Add(string column, NetOffice.OfficeApi.Enums.MsoFilterComparison comparison, NetOffice.OfficeApi.Enums.MsoFilterConjunction conjunction, object bstrCompareTo)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(column, comparison, conjunction, bstrCompareTo);
@@ -197,12 +197,12 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 10, 11, 12, 14, 15
+		/// SupportByVersion Office 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff860318.aspx
 		/// </summary>
 		/// <param name="index">Int32 Index</param>
 		/// <param name="deferUpdate">optional bool DeferUpdate = false</param>
-		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
+		[SupportByVersionAttribute("Office", 10,11,12,14,15,16)]
 		public void Delete(Int32 index, object deferUpdate)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index, deferUpdate);
@@ -210,12 +210,12 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 10, 11, 12, 14, 15
+		/// SupportByVersion Office 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff860318.aspx
 		/// </summary>
 		/// <param name="index">Int32 Index</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
+		[SupportByVersionAttribute("Office", 10,11,12,14,15,16)]
 		public void Delete(Int32 index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
@@ -226,10 +226,10 @@ namespace NetOffice.OfficeApi
        #region IEnumerable<object> Member
         
         /// <summary>
-		/// SupportByVersionAttribute Office, 10,11,12,14,15
+		/// SupportByVersionAttribute Office, 10,11,12,14,15,16
 		/// This is a custom enumerator from NetOffice
 		/// </summary>
-		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
+		[SupportByVersionAttribute("Office", 10,11,12,14,15,16)]
         [CustomEnumerator]
        public IEnumerator<object> GetEnumerator()  
        {
@@ -243,10 +243,10 @@ namespace NetOffice.OfficeApi
        #region IEnumerable Members
         
        /// <summary>
-		/// SupportByVersionAttribute Office, 10,11,12,14,15
+		/// SupportByVersionAttribute Office, 10,11,12,14,15,16
 		/// This is a custom enumerator from NetOffice
 		/// </summary>
-		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
+		[SupportByVersionAttribute("Office", 10,11,12,14,15,16)]
         [CustomEnumerator]
         IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
        {

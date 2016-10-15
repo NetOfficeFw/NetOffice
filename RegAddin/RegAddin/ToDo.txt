@@ -1,0 +1,28 @@
+﻿code diagnose anbieten
+
+netoffice attribute umsetzen auf wunsch so das der call von register/unregister ganz entfallen kann
+
+regfile(unregfile?) mit option ausstatten eine static spezial methode aufzurufen
+
+evtl. doch /unregfile anbieten
+
+nochmal alle regasm optionen überprüfen
+
+syswownode problem
+
+testweise schon mal den einsatz als pre post build  ueberprüfen und wie man
+den output ins command fenster kriegt
+
+den wix einsatz proof of concept prüfen
+
+/reg /regfile müssen auf wunsch auch office einträge vornehmen können
+
+HINWEIS: office einträge vornehmen geht natürlich nur bei NetOffice Addins
+
+
+ROLLBACK Methode für Install ist wichtig !!!
+RegAddin braucht das auch um Aktionen hier wieder rückgängig zu machen
+
+Was ist RegistryView ?
+
+MEtrics MultiRegister attribute doppelte einträge

@@ -149,7 +149,7 @@ namespace NetOffice.MSProjectApi
 		}
 		
 		///<summary>
-        ///creates a new instance of Application 
+        /// Creates a new instance of Application 
         ///</summary>		
 		public Application():base("MSProject.Application")
 		{
@@ -158,7 +158,7 @@ namespace NetOffice.MSProjectApi
 		}
 		
 		///<summary>
-        ///creates a new instance of Application
+        /// Creates a new instance of Application
         ///</summary>
         ///<param name="progId">registered ProgID</param>
 		public Application(string progId):base(progId)
@@ -193,12 +193,12 @@ namespace NetOffice.MSProjectApi
 		#region Static CoClass Methods
 
 		/// <summary>
-        /// returns all running MSProject.Application objects from the running object table(ROT)
+        /// Returns all running MSProject.Application objects from the environment/system
         /// </summary>
         /// <returns>an MSProject.Application array</returns>
 		public static NetOffice.MSProjectApi.Application[] GetActiveInstances()
 		{		
-			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("MSProject","Application");
+			IDisposableEnumeration proxyList = NetOffice.ProxyService.GetActiveInstances("MSProject","Application");
 			NetRuntimeSystem.Collections.Generic.List<NetOffice.MSProjectApi.Application> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.MSProjectApi.Application>();
 			foreach(object proxy in proxyList)
 				resultList.Add( new NetOffice.MSProjectApi.Application(null, proxy) );
@@ -206,12 +206,12 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-        /// returns a running MSProject.Application object from the running object table(ROT). the method takes the first element from the table
+        /// Returns a running MSProject.Application object from the environment/system.
         /// </summary>
         /// <returns>an MSProject.Application object or null</returns>
 		public static NetOffice.MSProjectApi.Application GetActiveInstance()
 		{
-			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("MSProject","Application", false);
+			object proxy  = NetOffice.ProxyService.GetActiveInstance("MSProject","Application", false);
 			if(null != proxy)
 				return new NetOffice.MSProjectApi.Application(null, proxy);
 			else
@@ -219,13 +219,13 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-        /// returns a running MSProject.Application object from the running object table(ROT).  the method takes the first element from the table
+        /// Returns a running MSProject.Application object from the environment/system. 
         /// </summary>
 	    /// <param name="throwOnError">throw an exception if no object was found</param>
         /// <returns>an MSProject.Application object or null</returns>
 		public static NetOffice.MSProjectApi.Application GetActiveInstance(bool throwOnError)
 		{
-			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("MSProject","Application", throwOnError);
+			object proxy  = NetOffice.ProxyService.GetActiveInstance("MSProject","Application", throwOnError);
 			if(null != proxy)
 				return new NetOffice.MSProjectApi.Application(null, proxy);
 			else
@@ -1450,7 +1450,7 @@ namespace NetOffice.MSProjectApi
 	    #region IEventBinding Member
         
 		/// <summary>
-        /// creates active sink helper
+        /// Creates active sink helper
         /// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public void CreateEventBridge()
@@ -1472,6 +1472,9 @@ namespace NetOffice.MSProjectApi
 			} 
         }
 
+        /// <summary>
+        /// The instance use currently an event listener 
+        /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public bool EventBridgeInitialized
         {
@@ -1480,7 +1483,10 @@ namespace NetOffice.MSProjectApi
                 return (null != _connectPoint);
             }
         }
-        
+
+        /// <summary>
+        ///  The instance has currently one or more event recipients 
+        /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public bool HasEventRecipients()       
         {
@@ -1500,6 +1506,9 @@ namespace NetOffice.MSProjectApi
 			return false;
         }
         
+        /// <summary>
+        /// Target methods from its actual event recipients
+        /// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public Delegate[] GetEventRecipients(string eventName)
         {
@@ -1519,7 +1528,10 @@ namespace NetOffice.MSProjectApi
             else
                 return new Delegate[0];
         }
-
+       
+        /// <summary>
+        /// Returns the current count of event recipients
+        /// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public int GetCountOfEventRecipients(string eventName)
         {
@@ -1538,8 +1550,14 @@ namespace NetOffice.MSProjectApi
             }
             else
                 return 0;
-        }
-
+           }
+        
+        /// <summary>
+        /// Raise an instance event
+        /// </summary>
+        /// <param name="eventName">name of the event without 'Event' at the end</param>
+        /// <param name="paramsArray">custom arguments for the event</param>
+        /// <returns>count of called event recipients</returns>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public int RaiseCustomEvent(string eventName, ref object[] paramsArray)
 		{
@@ -1571,6 +1589,9 @@ namespace NetOffice.MSProjectApi
                 return 0;
 		}
 
+        /// <summary>
+        /// Stop listening events for the instance
+        /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public void DisposeEventBridge()
         {

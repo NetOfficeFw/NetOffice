@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using NetRuntimeSystem = System;
 using System.Runtime.InteropServices;
 using System.Runtime.CompilerServices;
@@ -11,10 +11,10 @@ namespace NetOffice.AccessApi
 {
 	///<summary>
 	/// DispatchInterface Modules 
-	/// SupportByVersion Access, 9,10,11,12,14,15
+	/// SupportByVersion Access, 9,10,11,12,14,15,16
 	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836863.aspx
 	///</summary>
-	[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+	[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class Modules : COMObject ,IEnumerable<NetOffice.AccessApi.Module>
 	{
@@ -94,11 +94,11 @@ namespace NetOffice.AccessApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff191832.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
 		public NetOffice.AccessApi.Application Application
 		{
 			get
@@ -111,12 +111,12 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192294.aspx
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
 		public object Parent
 		{
 			get
@@ -129,11 +129,11 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
 		/// <param name="index">object Index</param>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
 		public NetOffice.AccessApi.Module this[object index]
 		{
@@ -147,11 +147,11 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193173.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
 		public Int32 Count
 		{
 			get
@@ -167,12 +167,12 @@ namespace NetOffice.AccessApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByVersion Access 11, 12, 14, 15
+		/// SupportByVersion Access 11, 12, 14, 15, 16
 		/// 
 		/// </summary>
 		/// <param name="dispid">Int32 dispid</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("Access", 11,12,14,15)]
+		[SupportByVersionAttribute("Access", 11,12,14,15,16)]
 		public bool IsMemberSafe(Int32 dispid)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(dispid);
@@ -185,9 +185,9 @@ namespace NetOffice.AccessApi
        #region IEnumerable<NetOffice.AccessApi.Module> Member
         
         /// <summary>
-		/// SupportByVersionAttribute Access, 9,10,11,12,14,15
+		/// SupportByVersionAttribute Access, 9,10,11,12,14,15,16
 		/// </summary>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
        public IEnumerator<NetOffice.AccessApi.Module> GetEnumerator()  
        {
            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
@@ -200,9 +200,9 @@ namespace NetOffice.AccessApi
 		#region IEnumerable Members
        
 		/// <summary>
-		/// SupportByVersionAttribute Access, 9,10,11,12,14,15
+		/// SupportByVersionAttribute Access, 9,10,11,12,14,15,16
 		/// </summary>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
 			return NetOffice.Utils.GetProxyEnumeratorAsMethod(this);

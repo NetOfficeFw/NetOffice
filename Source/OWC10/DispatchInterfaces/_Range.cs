@@ -294,12 +294,13 @@ namespace NetOffice.OWC10Api
 			}
 		}
 
-		/// <summary>
-		/// SupportByVersion OWC10 1
-		/// Get/Set
-		/// </summary>
-		/// <param name="rangeValueDataType">optional object RangeValueDataType</param>
-		[SupportByVersionAttribute("OWC10", 1)]
+        /// <summary>
+        /// SupportByVersion OWC10 1
+        /// Get/Set
+        /// </summary>
+        /// <param name="rangeValueDataType">optional object RangeValueDataType</param>
+        /// <param name="value">optional object value</param>
+        [SupportByVersionAttribute("OWC10", 1)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public void set_Value(object rangeValueDataType, object value)
 		{

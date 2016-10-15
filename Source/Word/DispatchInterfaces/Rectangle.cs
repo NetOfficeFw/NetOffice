@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using NetRuntimeSystem = System;
 using System.Runtime.InteropServices;
 using System.Runtime.CompilerServices;
@@ -10,10 +10,10 @@ namespace NetOffice.WordApi
 {
 	///<summary>
 	/// DispatchInterface Rectangle 
-	/// SupportByVersion Word, 11,12,14,15
+	/// SupportByVersion Word, 11,12,14,15,16
 	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff823250.aspx
 	///</summary>
-	[SupportByVersionAttribute("Word", 11,12,14,15)]
+	[SupportByVersionAttribute("Word", 11,12,14,15,16)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class Rectangle : COMObject
 	{
@@ -93,11 +93,11 @@ namespace NetOffice.WordApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion Word 11, 12, 14, 15
+		/// SupportByVersion Word 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839898.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 11,12,14,15)]
+		[SupportByVersionAttribute("Word", 11,12,14,15,16)]
 		public NetOffice.WordApi.Application Application
 		{
 			get
@@ -110,11 +110,11 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 11, 12, 14, 15
+		/// SupportByVersion Word 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff821655.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 11,12,14,15)]
+		[SupportByVersionAttribute("Word", 11,12,14,15,16)]
 		public Int32 Creator
 		{
 			get
@@ -126,12 +126,12 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 11, 12, 14, 15
+		/// SupportByVersion Word 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839303.aspx
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("Word", 11,12,14,15)]
+		[SupportByVersionAttribute("Word", 11,12,14,15,16)]
 		public object Parent
 		{
 			get
@@ -144,11 +144,11 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 11, 12, 14, 15
+		/// SupportByVersion Word 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845447.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 11,12,14,15)]
+		[SupportByVersionAttribute("Word", 11,12,14,15,16)]
 		public NetOffice.WordApi.Enums.WdRectangleType RectangleType
 		{
 			get
@@ -161,11 +161,11 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 11, 12, 14, 15
+		/// SupportByVersion Word 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193101.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 11,12,14,15)]
+		[SupportByVersionAttribute("Word", 11,12,14,15,16)]
 		public Int32 Left
 		{
 			get
@@ -177,11 +177,11 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 11, 12, 14, 15
+		/// SupportByVersion Word 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845834.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 11,12,14,15)]
+		[SupportByVersionAttribute("Word", 11,12,14,15,16)]
 		public Int32 Top
 		{
 			get
@@ -193,11 +193,11 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 11, 12, 14, 15
+		/// SupportByVersion Word 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840658.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 11,12,14,15)]
+		[SupportByVersionAttribute("Word", 11,12,14,15,16)]
 		public Int32 Width
 		{
 			get
@@ -209,11 +209,11 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 11, 12, 14, 15
+		/// SupportByVersion Word 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193752.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 11,12,14,15)]
+		[SupportByVersionAttribute("Word", 11,12,14,15,16)]
 		public Int32 Height
 		{
 			get
@@ -225,11 +225,11 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 11, 12, 14, 15
+		/// SupportByVersion Word 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835185.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 11,12,14,15)]
+		[SupportByVersionAttribute("Word", 11,12,14,15,16)]
 		public NetOffice.WordApi.Range Range
 		{
 			get
@@ -242,11 +242,11 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 11, 12, 14, 15
+		/// SupportByVersion Word 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff844815.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 11,12,14,15)]
+		[SupportByVersionAttribute("Word", 11,12,14,15,16)]
 		public NetOffice.WordApi.Lines Lines
 		{
 			get

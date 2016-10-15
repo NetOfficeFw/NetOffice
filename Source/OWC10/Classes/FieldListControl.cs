@@ -90,7 +90,7 @@ namespace NetOffice.OWC10Api
 		}
 		
 		///<summary>
-        ///creates a new instance of FieldListControl 
+        /// Creates a new instance of FieldListControl 
         ///</summary>		
 		public FieldListControl():base("OWC10.FieldListControl")
 		{
@@ -98,7 +98,7 @@ namespace NetOffice.OWC10Api
 		}
 		
 		///<summary>
-        ///creates a new instance of FieldListControl
+        /// Creates a new instance of FieldListControl
         ///</summary>
         ///<param name="progId">registered ProgID</param>
 		public FieldListControl(string progId):base(progId)
@@ -111,12 +111,12 @@ namespace NetOffice.OWC10Api
 		#region Static CoClass Methods
 
 		/// <summary>
-        /// returns all running OWC10.FieldListControl objects from the running object table(ROT)
+        /// Returns all running OWC10.FieldListControl objects from the environment/system
         /// </summary>
         /// <returns>an OWC10.FieldListControl array</returns>
 		public static NetOffice.OWC10Api.FieldListControl[] GetActiveInstances()
 		{		
-			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("OWC10","FieldListControl");
+			IDisposableEnumeration proxyList = NetOffice.ProxyService.GetActiveInstances("OWC10","FieldListControl");
 			NetRuntimeSystem.Collections.Generic.List<NetOffice.OWC10Api.FieldListControl> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.OWC10Api.FieldListControl>();
 			foreach(object proxy in proxyList)
 				resultList.Add( new NetOffice.OWC10Api.FieldListControl(null, proxy) );
@@ -124,12 +124,12 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-        /// returns a running OWC10.FieldListControl object from the running object table(ROT). the method takes the first element from the table
+        /// Returns a running OWC10.FieldListControl object from the environment/system.
         /// </summary>
         /// <returns>an OWC10.FieldListControl object or null</returns>
 		public static NetOffice.OWC10Api.FieldListControl GetActiveInstance()
 		{
-			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("OWC10","FieldListControl", false);
+			object proxy  = NetOffice.ProxyService.GetActiveInstance("OWC10","FieldListControl", false);
 			if(null != proxy)
 				return new NetOffice.OWC10Api.FieldListControl(null, proxy);
 			else
@@ -137,13 +137,13 @@ namespace NetOffice.OWC10Api
 		}
 
 		/// <summary>
-        /// returns a running OWC10.FieldListControl object from the running object table(ROT).  the method takes the first element from the table
+        /// Returns a running OWC10.FieldListControl object from the environment/system. 
         /// </summary>
 	    /// <param name="throwOnError">throw an exception if no object was found</param>
         /// <returns>an OWC10.FieldListControl object or null</returns>
 		public static NetOffice.OWC10Api.FieldListControl GetActiveInstance(bool throwOnError)
 		{
-			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("OWC10","FieldListControl", throwOnError);
+			object proxy  = NetOffice.ProxyService.GetActiveInstance("OWC10","FieldListControl", throwOnError);
 			if(null != proxy)
 				return new NetOffice.OWC10Api.FieldListControl(null, proxy);
 			else
@@ -158,7 +158,7 @@ namespace NetOffice.OWC10Api
 	    #region IEventBinding Member
         
 		/// <summary>
-        /// creates active sink helper
+        /// Creates active sink helper
         /// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public void CreateEventBridge()
@@ -175,6 +175,9 @@ namespace NetOffice.OWC10Api
  
         }
 
+        /// <summary>
+        /// The instance use currently an event listener 
+        /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public bool EventBridgeInitialized
         {
@@ -183,7 +186,10 @@ namespace NetOffice.OWC10Api
                 return (null != _connectPoint);
             }
         }
-        
+
+        /// <summary>
+        ///  The instance has currently one or more event recipients 
+        /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public bool HasEventRecipients()       
         {
@@ -203,6 +209,9 @@ namespace NetOffice.OWC10Api
 			return false;
         }
         
+        /// <summary>
+        /// Target methods from its actual event recipients
+        /// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public Delegate[] GetEventRecipients(string eventName)
         {
@@ -222,7 +231,10 @@ namespace NetOffice.OWC10Api
             else
                 return new Delegate[0];
         }
-
+       
+        /// <summary>
+        /// Returns the current count of event recipients
+        /// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public int GetCountOfEventRecipients(string eventName)
         {
@@ -241,8 +253,14 @@ namespace NetOffice.OWC10Api
             }
             else
                 return 0;
-        }
-
+           }
+        
+        /// <summary>
+        /// Raise an instance event
+        /// </summary>
+        /// <param name="eventName">name of the event without 'Event' at the end</param>
+        /// <param name="paramsArray">custom arguments for the event</param>
+        /// <returns>count of called event recipients</returns>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public int RaiseCustomEvent(string eventName, ref object[] paramsArray)
 		{
@@ -274,6 +292,9 @@ namespace NetOffice.OWC10Api
                 return 0;
 		}
 
+        /// <summary>
+        /// Stop listening events for the instance
+        /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public void DisposeEventBridge()
         {

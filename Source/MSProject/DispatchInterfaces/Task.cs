@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using NetRuntimeSystem = System;
 using System.Runtime.InteropServices;
 using System.Runtime.CompilerServices;
@@ -15981,7 +15981,7 @@ namespace NetOffice.MSProjectApi
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public string EnterpriseProjectText15
 		{
-			get
+            get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "EnterpriseProjectText15", paramsArray);

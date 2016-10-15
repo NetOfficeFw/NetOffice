@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetOffice", "..\..\..\Source\NetOffice\NetOffice.csproj", "{65442327-D01F-4ECB-8C39-6D5C7622A80F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VisioApi", "..\..\..\Source\Visio\VisioApi.csproj", "{581B0DB6-8146-4729-9AE6-61B27F53B3E6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Out Parameters2", "Out Parameters2\Out Parameters2.csproj", "{AC066F19-EE0B-4C30-A3AA-3BAAF34EC40F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{65442327-D01F-4ECB-8C39-6D5C7622A80F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{65442327-D01F-4ECB-8C39-6D5C7622A80F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{65442327-D01F-4ECB-8C39-6D5C7622A80F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{65442327-D01F-4ECB-8C39-6D5C7622A80F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{581B0DB6-8146-4729-9AE6-61B27F53B3E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{581B0DB6-8146-4729-9AE6-61B27F53B3E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{581B0DB6-8146-4729-9AE6-61B27F53B3E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{581B0DB6-8146-4729-9AE6-61B27F53B3E6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AC066F19-EE0B-4C30-A3AA-3BAAF34EC40F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC066F19-EE0B-4C30-A3AA-3BAAF34EC40F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC066F19-EE0B-4C30-A3AA-3BAAF34EC40F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC066F19-EE0B-4C30-A3AA-3BAAF34EC40F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using NetRuntimeSystem = System;
 using System.Runtime.InteropServices;
 using System.Runtime.CompilerServices;
@@ -11,10 +11,10 @@ namespace NetOffice.AccessApi
 {
 	///<summary>
 	/// DispatchInterface ImportExportSpecifications 
-	/// SupportByVersion Access, 12,14,15
+	/// SupportByVersion Access, 12,14,15,16
 	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff198252.aspx
 	///</summary>
-	[SupportByVersionAttribute("Access", 12,14,15)]
+	[SupportByVersionAttribute("Access", 12,14,15,16)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class ImportExportSpecifications : COMObject ,IEnumerable<NetOffice.AccessApi.ImportExportSpecification>
 	{
@@ -94,11 +94,11 @@ namespace NetOffice.AccessApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion Access 12, 14, 15
+		/// SupportByVersion Access 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193839.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Access", 12,14,15)]
+		[SupportByVersionAttribute("Access", 12,14,15,16)]
 		public NetOffice.AccessApi.Application Application
 		{
 			get
@@ -111,11 +111,11 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 12, 14, 15
+		/// SupportByVersion Access 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835770.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Access", 12,14,15)]
+		[SupportByVersionAttribute("Access", 12,14,15,16)]
 		public Int32 Count
 		{
 			get
@@ -127,12 +127,12 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 12, 14, 15
+		/// SupportByVersion Access 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845598.aspx
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("Access", 12,14,15)]
+		[SupportByVersionAttribute("Access", 12,14,15,16)]
 		public object Parent
 		{
 			get
@@ -145,11 +145,11 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 12, 14, 15
+		/// SupportByVersion Access 12, 14, 15, 16
 		/// Get
 		/// </summary>
 		/// <param name="index">object Index</param>
-		[SupportByVersionAttribute("Access", 12,14,15)]
+		[SupportByVersionAttribute("Access", 12,14,15,16)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
 		public NetOffice.AccessApi.ImportExportSpecification this[object index]
 		{
@@ -167,12 +167,12 @@ namespace NetOffice.AccessApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByVersion Access 12, 14, 15
+		/// SupportByVersion Access 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822822.aspx
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="specificationDefinition">string SpecificationDefinition</param>
-		[SupportByVersionAttribute("Access", 12,14,15)]
+		[SupportByVersionAttribute("Access", 12,14,15,16)]
 		public NetOffice.AccessApi.ImportExportSpecification Add(string name, string specificationDefinition)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, specificationDefinition);
@@ -182,12 +182,12 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 12, 14, 15
+		/// SupportByVersion Access 12, 14, 15, 16
 		/// 
 		/// </summary>
 		/// <param name="dispid">Int32 dispid</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("Access", 12,14,15)]
+		[SupportByVersionAttribute("Access", 12,14,15,16)]
 		public bool IsMemberSafe(Int32 dispid)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(dispid);
@@ -200,9 +200,9 @@ namespace NetOffice.AccessApi
        #region IEnumerable<NetOffice.AccessApi.ImportExportSpecification> Member
         
         /// <summary>
-		/// SupportByVersionAttribute Access, 12,14,15
+		/// SupportByVersionAttribute Access, 12,14,15,16
 		/// </summary>
-		[SupportByVersionAttribute("Access", 12,14,15)]
+		[SupportByVersionAttribute("Access", 12,14,15,16)]
        public IEnumerator<NetOffice.AccessApi.ImportExportSpecification> GetEnumerator()  
        {
            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
@@ -215,9 +215,9 @@ namespace NetOffice.AccessApi
 		#region IEnumerable Members
        
 		/// <summary>
-		/// SupportByVersionAttribute Access, 12,14,15
+		/// SupportByVersionAttribute Access, 12,14,15,16
 		/// </summary>
-		[SupportByVersionAttribute("Access", 12,14,15)]
+		[SupportByVersionAttribute("Access", 12,14,15,16)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
 			return NetOffice.Utils.GetProxyEnumeratorAsMethod(this);

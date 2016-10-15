@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using NetRuntimeSystem = System;
 using System.Runtime.InteropServices;
 using System.Runtime.CompilerServices;
@@ -10,10 +10,10 @@ namespace NetOffice.WordApi
 {
 	///<summary>
 	/// DispatchInterface Broadcast 
-	/// SupportByVersion Word, 15
+	/// SupportByVersion Word, 15, 16
 	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj229208.aspx
 	///</summary>
-	[SupportByVersionAttribute("Word", 15)]
+	[SupportByVersionAttribute("Word", 15, 16)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class Broadcast : COMObject
 	{
@@ -93,11 +93,11 @@ namespace NetOffice.WordApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion Word 15
+		/// SupportByVersion Word 15,16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj231615.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 15)]
+		[SupportByVersionAttribute("Word", 15, 16)]
 		public NetOffice.WordApi.Application Application
 		{
 			get
@@ -110,12 +110,12 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 15
+		/// SupportByVersion Word 15,16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj231440.aspx
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("Word", 15)]
+		[SupportByVersionAttribute("Word", 15, 16)]
 		public object Parent
 		{
 			get
@@ -128,11 +128,11 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 15
+		/// SupportByVersion Word 15,16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj228838.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 15)]
+		[SupportByVersionAttribute("Word", 15, 16)]
 		public string AttendeeUrl
 		{
 			get
@@ -144,11 +144,11 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 15
+		/// SupportByVersion Word 15,16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj231748.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 15)]
+		[SupportByVersionAttribute("Word", 15, 16)]
 		public NetOffice.OfficeApi.Enums.MsoBroadcastState State
 		{
 			get
@@ -161,11 +161,11 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 15
+		/// SupportByVersion Word 15,16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj230812.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 15)]
+		[SupportByVersionAttribute("Word", 15, 16)]
 		public Int32 Capabilities
 		{
 			get
@@ -177,11 +177,11 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 15
+		/// SupportByVersion Word 15,16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj228473.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 15)]
+		[SupportByVersionAttribute("Word", 15, 16)]
 		public string PresenterServiceUrl
 		{
 			get
@@ -193,11 +193,11 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 15
+		/// SupportByVersion Word 15,16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj230720.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 15)]
+		[SupportByVersionAttribute("Word", 15, 16)]
 		public string SessionID
 		{
 			get
@@ -213,11 +213,11 @@ namespace NetOffice.WordApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByVersion Word 15
+		/// SupportByVersion Word 15,16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj227544.aspx
 		/// </summary>
 		/// <param name="serverUrl">string serverUrl</param>
-		[SupportByVersionAttribute("Word", 15)]
+		[SupportByVersionAttribute("Word", 15, 16)]
 		public void Start(string serverUrl)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(serverUrl);
@@ -225,10 +225,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 15
+		/// SupportByVersion Word 15,16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj228106.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 15)]
+		[SupportByVersionAttribute("Word", 15, 16)]
 		public void Pause()
 		{
 			object[] paramsArray = null;
@@ -236,10 +236,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 15
+		/// SupportByVersion Word 15,16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj230520.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 15)]
+		[SupportByVersionAttribute("Word", 15, 16)]
 		public void Resume()
 		{
 			object[] paramsArray = null;
@@ -247,10 +247,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 15
+		/// SupportByVersion Word 15,16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj232060.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 15)]
+		[SupportByVersionAttribute("Word", 15, 16)]
 		public void End()
 		{
 			object[] paramsArray = null;
@@ -258,12 +258,12 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 15
+		/// SupportByVersion Word 15,16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj232140.aspx
 		/// </summary>
 		/// <param name="notesUrl">string notesUrl</param>
 		/// <param name="notesWacUrl">string notesWacUrl</param>
-		[SupportByVersionAttribute("Word", 15)]
+		[SupportByVersionAttribute("Word", 15, 16)]
 		public void AddMeetingNotes(string notesUrl, string notesWacUrl)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(notesUrl, notesWacUrl);

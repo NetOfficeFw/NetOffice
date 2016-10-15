@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using NetRuntimeSystem = System;
 using System.Runtime.InteropServices;
 using System.Runtime.CompilerServices;
@@ -10,9 +10,9 @@ namespace NetOffice.AccessApi
 {
 	///<summary>
 	/// DispatchInterface _Application 
-	/// SupportByVersion Access, 9,10,11,12,14,15
+	/// SupportByVersion Access, 9,10,11,12,14,15,16
 	///</summary>
-	[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+	[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class _Application : COMObject
 	{
@@ -92,11 +92,11 @@ namespace NetOffice.AccessApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192087.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
 		public NetOffice.AccessApi.Application Application
 		{
 			get
@@ -109,12 +109,12 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836400.aspx
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
 		public object Parent
 		{
 			get
@@ -127,12 +127,12 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822407.aspx
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
 		public object CodeContextObject
 		{
 			get
@@ -145,11 +145,11 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835352.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
 		public string MenuBar
 		{
 			get
@@ -166,11 +166,11 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845319.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
 		public Int32 CurrentObjectType
 		{
 			get
@@ -182,11 +182,11 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196795.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
 		public string CurrentObjectName
 		{
 			get
@@ -198,11 +198,11 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837183.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
 		public NetOffice.AccessApi.Forms Forms
 		{
 			get
@@ -215,11 +215,11 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff834339.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
 		public NetOffice.AccessApi.Reports Reports
 		{
 			get
@@ -232,11 +232,11 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835056.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
 		public NetOffice.AccessApi.Screen Screen
 		{
 			get
@@ -249,11 +249,11 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845564.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
 		public NetOffice.AccessApi.DoCmd DoCmd
 		{
 			get
@@ -266,11 +266,11 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195236.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
 		public string ShortcutMenuBar
 		{
 			get
@@ -287,11 +287,11 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff821493.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
 		public bool Visible
 		{
 			get
@@ -308,11 +308,11 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836033.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
 		public bool UserControl
 		{
 			get
@@ -329,11 +329,11 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff821724.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
 		public NetOffice.DAOApi.DBEngine DBEngine
 		{
 			get
@@ -346,11 +346,11 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff821379.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
 		public NetOffice.OfficeApi.CommandBars CommandBars
 		{
 			get
@@ -363,10 +363,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
 		public NetOffice.OfficeApi.Assistant Assistant
 		{
 			get
@@ -379,11 +379,11 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835326.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
 		public NetOffice.AccessApi.References References
 		{
 			get
@@ -396,11 +396,11 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836265.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
 		public NetOffice.AccessApi.Modules Modules
 		{
 			get
@@ -413,10 +413,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
 		public NetOffice.OfficeApi.FileSearch FileSearch
 		{
 			get
@@ -429,11 +429,11 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff823044.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
 		public bool IsCompiled
 		{
 			get
@@ -445,11 +445,11 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822476.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
 		public NetOffice.VBIDEApi.VBE VBE
 		{
 			get
@@ -462,10 +462,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
 		public NetOffice.AccessApi.DataAccessPages DataAccessPages
 		{
 			get
@@ -478,10 +478,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public string ADOConnectString
 		{
@@ -494,11 +494,11 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193770.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
 		public NetOffice.AccessApi.CurrentProject CurrentProject
 		{
 			get
@@ -511,11 +511,11 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193230.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
 		public NetOffice.AccessApi.CurrentData CurrentData
 		{
 			get
@@ -528,11 +528,11 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197047.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
 		public NetOffice.AccessApi.CodeProject CodeProject
 		{
 			get
@@ -545,11 +545,11 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836912.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
 		public NetOffice.AccessApi.CodeData CodeData
 		{
 			get
@@ -562,10 +562,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public NetOffice.AccessApi.WizHook WizHook
 		{
@@ -579,11 +579,11 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822077.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
 		public string ProductCode
 		{
 			get
@@ -595,11 +595,11 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822463.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
 		public NetOffice.OfficeApi.COMAddIns COMAddIns
 		{
 			get
@@ -612,11 +612,11 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194961.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
 		public string Name
 		{
 			get
@@ -628,10 +628,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
 		public NetOffice.AccessApi.DefaultWebOptions DefaultWebOptions
 		{
 			get
@@ -644,11 +644,11 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836634.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
 		public NetOffice.OfficeApi.LanguageSettings LanguageSettings
 		{
 			get
@@ -661,10 +661,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
 		public NetOffice.OfficeApi.AnswerWizard AnswerWizard
 		{
 			get
@@ -677,11 +677,11 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822721.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
 		public NetOffice.OfficeApi.Enums.MsoFeatureInstall FeatureInstall
 		{
 			get
@@ -699,10 +699,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public object VGXFrameInterval
 		{
@@ -723,12 +723,12 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 10, 11, 12, 14, 15
+		/// SupportByVersion Access 10, 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196794.aspx
 		/// </summary>
 		/// <param name="dialogType">NetOffice.OfficeApi.Enums.MsoFileDialogType dialogType</param>
-		[SupportByVersionAttribute("Access", 10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 10,11,12,14,15,16)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public NetOffice.OfficeApi.FileDialog get_FileDialog(NetOffice.OfficeApi.Enums.MsoFileDialogType dialogType)
 		{		
@@ -739,23 +739,23 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 10, 11, 12, 14, 15
+		/// SupportByVersion Access 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196794.aspx
 		/// Alias for get_FileDialog
 		/// </summary>
 		/// <param name="dialogType">NetOffice.OfficeApi.Enums.MsoFileDialogType dialogType</param>
-		[SupportByVersionAttribute("Access", 10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 10,11,12,14,15,16)]
 		public NetOffice.OfficeApi.FileDialog FileDialog(NetOffice.OfficeApi.Enums.MsoFileDialogType dialogType)
 		{
 			return get_FileDialog(dialogType);
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 10, 11, 12, 14, 15
+		/// SupportByVersion Access 10, 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845884.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Access", 10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 10,11,12,14,15,16)]
 		public bool BrokenReference
 		{
 			get
@@ -767,11 +767,11 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 10, 11, 12, 14, 15
+		/// SupportByVersion Access 10, 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195779.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Access", 10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 10,11,12,14,15,16)]
 		public NetOffice.AccessApi.Printers Printers
 		{
 			get
@@ -784,11 +784,11 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 10, 11, 12, 14, 15
+		/// SupportByVersion Access 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff821394.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Access", 10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 10,11,12,14,15,16)]
 		public NetOffice.AccessApi._Printer Printer
 		{
 			get
@@ -806,10 +806,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 10, 11, 12, 14, 15
+		/// SupportByVersion Access 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Access", 10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 10,11,12,14,15,16)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public NetOffice.OfficeApi.MsoDebugOptions MsoDebugOptions
 		{
@@ -823,11 +823,11 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 10, 11, 12, 14, 15
+		/// SupportByVersion Access 10, 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192859.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Access", 10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 10,11,12,14,15,16)]
 		public string Version
 		{
 			get
@@ -839,11 +839,11 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 10, 11, 12, 14, 15
+		/// SupportByVersion Access 10, 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835096.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Access", 10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 10,11,12,14,15,16)]
 		public Int32 Build
 		{
 			get
@@ -855,11 +855,11 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 10, 11, 12, 14, 15
+		/// SupportByVersion Access 10, 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff191715.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Access", 10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 10,11,12,14,15,16)]
 		public NetOffice.OfficeApi.NewFile NewFileTaskPane
 		{
 			get
@@ -872,11 +872,11 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 11, 12, 14, 15
+		/// SupportByVersion Access 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845345.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Access", 11,12,14,15)]
+		[SupportByVersionAttribute("Access", 11,12,14,15,16)]
 		public NetOffice.AccessApi._AutoCorrect AutoCorrect
 		{
 			get
@@ -889,11 +889,11 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 11, 12, 14, 15
+		/// SupportByVersion Access 11, 12, 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193178.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Access", 11,12,14,15)]
+		[SupportByVersionAttribute("Access", 11,12,14,15,16)]
 		public NetOffice.OfficeApi.Enums.MsoAutomationSecurity AutomationSecurity
 		{
 			get
@@ -911,11 +911,11 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 12, 14, 15
+		/// SupportByVersion Access 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845034.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Access", 12,14,15)]
+		[SupportByVersionAttribute("Access", 12,14,15,16)]
 		public NetOffice.AccessApi.MacroError MacroError
 		{
 			get
@@ -928,11 +928,11 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 12, 14, 15
+		/// SupportByVersion Access 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192459.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Access", 12,14,15)]
+		[SupportByVersionAttribute("Access", 12,14,15,16)]
 		public NetOffice.AccessApi.TempVars TempVars
 		{
 			get
@@ -945,11 +945,11 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 12, 14, 15
+		/// SupportByVersion Access 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192450.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Access", 12,14,15)]
+		[SupportByVersionAttribute("Access", 12,14,15,16)]
 		public NetOffice.OfficeApi.IAssistance Assistance
 		{
 			get
@@ -962,11 +962,11 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 14, 15
+		/// SupportByVersion Access 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837286.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Access", 14,15)]
+		[SupportByVersionAttribute("Access", 14,15,16)]
 		public NetOffice.AccessApi.WebServices WebServices
 		{
 			get
@@ -979,10 +979,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 14, 15
+		/// SupportByVersion Access 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Access", 14,15)]
+		[SupportByVersionAttribute("Access", 14,15,16)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public NetOffice.AccessApi.LocalVars LocalVars
 		{
@@ -996,11 +996,11 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 14, 15
+		/// SupportByVersion Access 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj249062.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Access", 14,15)]
+		[SupportByVersionAttribute("Access", 14,15,16)]
 		public NetOffice.AccessApi.ReturnVars ReturnVars
 		{
 			get
@@ -1017,11 +1017,11 @@ namespace NetOffice.AccessApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195271.aspx
 		/// </summary>
 		/// <param name="filepath">string filepath</param>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
 		public void NewCurrentDatabase(string filepath)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filepath);
@@ -1029,7 +1029,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 12, 14, 15
+		/// SupportByVersion Access 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195271.aspx
 		/// </summary>
 		/// <param name="filepath">string filepath</param>
@@ -1037,7 +1037,7 @@ namespace NetOffice.AccessApi
 		/// <param name="template">optional object Template</param>
 		/// <param name="siteAddress">optional string SiteAddress = </param>
 		/// <param name="listID">optional string ListID = </param>
-		[SupportByVersionAttribute("Access", 12,14,15)]
+		[SupportByVersionAttribute("Access", 12,14,15,16)]
 		public void NewCurrentDatabase(string filepath, object fileFormat, object template, object siteAddress, object listID)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filepath, fileFormat, template, siteAddress, listID);
@@ -1045,13 +1045,13 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 12, 14, 15
+		/// SupportByVersion Access 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195271.aspx
 		/// </summary>
 		/// <param name="filepath">string filepath</param>
 		/// <param name="fileFormat">optional NetOffice.AccessApi.Enums.AcNewDatabaseFormat FileFormat = 0</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 12,14,15)]
+		[SupportByVersionAttribute("Access", 12,14,15,16)]
 		public void NewCurrentDatabase(string filepath, object fileFormat)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filepath, fileFormat);
@@ -1059,14 +1059,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 12, 14, 15
+		/// SupportByVersion Access 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195271.aspx
 		/// </summary>
 		/// <param name="filepath">string filepath</param>
 		/// <param name="fileFormat">optional NetOffice.AccessApi.Enums.AcNewDatabaseFormat FileFormat = 0</param>
 		/// <param name="template">optional object Template</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 12,14,15)]
+		[SupportByVersionAttribute("Access", 12,14,15,16)]
 		public void NewCurrentDatabase(string filepath, object fileFormat, object template)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filepath, fileFormat, template);
@@ -1074,7 +1074,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 12, 14, 15
+		/// SupportByVersion Access 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195271.aspx
 		/// </summary>
 		/// <param name="filepath">string filepath</param>
@@ -1082,7 +1082,7 @@ namespace NetOffice.AccessApi
 		/// <param name="template">optional object Template</param>
 		/// <param name="siteAddress">optional string SiteAddress = </param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 12,14,15)]
+		[SupportByVersionAttribute("Access", 12,14,15,16)]
 		public void NewCurrentDatabase(string filepath, object fileFormat, object template, object siteAddress)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filepath, fileFormat, template, siteAddress);
@@ -1090,12 +1090,12 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837226.aspx
 		/// </summary>
 		/// <param name="filepath">string filepath</param>
 		/// <param name="exclusive">optional bool Exclusive = false</param>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
 		public void OpenCurrentDatabase(string filepath, object exclusive)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filepath, exclusive);
@@ -1103,13 +1103,13 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 10, 11, 12, 14, 15
+		/// SupportByVersion Access 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837226.aspx
 		/// </summary>
 		/// <param name="filepath">string filepath</param>
 		/// <param name="exclusive">optional bool Exclusive = false</param>
 		/// <param name="bstrPassword">optional string bstrPassword = </param>
-		[SupportByVersionAttribute("Access", 10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 10,11,12,14,15,16)]
 		public void OpenCurrentDatabase(string filepath, object exclusive, object bstrPassword)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filepath, exclusive, bstrPassword);
@@ -1117,12 +1117,12 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837226.aspx
 		/// </summary>
 		/// <param name="filepath">string filepath</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
 		public void OpenCurrentDatabase(string filepath)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filepath);
@@ -1130,11 +1130,11 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192308.aspx
 		/// </summary>
 		/// <param name="optionName">string OptionName</param>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
 		public object GetOption(string optionName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(optionName);
@@ -1151,12 +1151,12 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195513.aspx
 		/// </summary>
 		/// <param name="optionName">string OptionName</param>
 		/// <param name="setting">object Setting</param>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
 		public void SetOption(string optionName, object setting)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(optionName, setting);
@@ -1164,12 +1164,12 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff834500.aspx
 		/// </summary>
 		/// <param name="echoOn">Int16 EchoOn</param>
 		/// <param name="bstrStatusBarText">optional string bstrStatusBarText = </param>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
 		public void Echo(Int16 echoOn, object bstrStatusBarText)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(echoOn, bstrStatusBarText);
@@ -1177,12 +1177,12 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff834500.aspx
 		/// </summary>
 		/// <param name="echoOn">Int16 EchoOn</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
 		public void Echo(Int16 echoOn)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(echoOn);
@@ -1190,10 +1190,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836850.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
 		public void CloseCurrentDatabase()
 		{
 			object[] paramsArray = null;
@@ -1201,11 +1201,11 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff844963.aspx
 		/// </summary>
 		/// <param name="option">optional NetOffice.AccessApi.Enums.AcQuitOption Option = 1</param>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
 		public void Quit(object option)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(option);
@@ -1213,11 +1213,11 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff844963.aspx
 		/// </summary>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
 		public void Quit()
 		{
 			object[] paramsArray = null;
@@ -1225,13 +1225,13 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193809.aspx
 		/// </summary>
 		/// <param name="action">NetOffice.AccessApi.Enums.AcSysCmdAction Action</param>
 		/// <param name="argument2">optional object Argument2</param>
 		/// <param name="argument3">optional object Argument3</param>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
 		public object SysCmd(NetOffice.AccessApi.Enums.AcSysCmdAction action, object argument2, object argument3)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(action, argument2, argument3);
@@ -1248,12 +1248,12 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193809.aspx
 		/// </summary>
 		/// <param name="action">NetOffice.AccessApi.Enums.AcSysCmdAction Action</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
 		public object SysCmd(NetOffice.AccessApi.Enums.AcSysCmdAction action)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(action);
@@ -1270,13 +1270,13 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193809.aspx
 		/// </summary>
 		/// <param name="action">NetOffice.AccessApi.Enums.AcSysCmdAction Action</param>
 		/// <param name="argument2">optional object Argument2</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
 		public object SysCmd(NetOffice.AccessApi.Enums.AcSysCmdAction action, object argument2)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(action, argument2);
@@ -1293,12 +1293,12 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845361.aspx
 		/// </summary>
 		/// <param name="database">optional object Database</param>
 		/// <param name="formTemplate">optional object FormTemplate</param>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
 		public NetOffice.AccessApi.Form CreateForm(object database, object formTemplate)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(database, formTemplate);
@@ -1308,11 +1308,11 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845361.aspx
 		/// </summary>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
 		public NetOffice.AccessApi.Form CreateForm()
 		{
 			object[] paramsArray = null;
@@ -1322,12 +1322,12 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845361.aspx
 		/// </summary>
 		/// <param name="database">optional object Database</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
 		public NetOffice.AccessApi.Form CreateForm(object database)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(database);
@@ -1337,12 +1337,12 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193499.aspx
 		/// </summary>
 		/// <param name="database">optional object Database</param>
 		/// <param name="reportTemplate">optional object ReportTemplate</param>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
 		public NetOffice.AccessApi.Report CreateReport(object database, object reportTemplate)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(database, reportTemplate);
@@ -1352,11 +1352,11 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193499.aspx
 		/// </summary>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
 		public NetOffice.AccessApi.Report CreateReport()
 		{
 			object[] paramsArray = null;
@@ -1366,12 +1366,12 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193499.aspx
 		/// </summary>
 		/// <param name="database">optional object Database</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
 		public NetOffice.AccessApi.Report CreateReport(object database)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(database);
@@ -1381,7 +1381,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836740.aspx
 		/// </summary>
 		/// <param name="formName">string FormName</param>
@@ -1393,7 +1393,7 @@ namespace NetOffice.AccessApi
 		/// <param name="top">optional object Top</param>
 		/// <param name="width">optional object Width</param>
 		/// <param name="height">optional object Height</param>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
 		public NetOffice.AccessApi.Control CreateControl(string formName, NetOffice.AccessApi.Enums.AcControlType controlType, object section, object parent, object columnName, object left, object top, object width, object height)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(formName, controlType, section, parent, columnName, left, top, width, height);
@@ -1403,13 +1403,13 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836740.aspx
 		/// </summary>
 		/// <param name="formName">string FormName</param>
 		/// <param name="controlType">NetOffice.AccessApi.Enums.AcControlType ControlType</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
 		public NetOffice.AccessApi.Control CreateControl(string formName, NetOffice.AccessApi.Enums.AcControlType controlType)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(formName, controlType);
@@ -1419,14 +1419,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836740.aspx
 		/// </summary>
 		/// <param name="formName">string FormName</param>
 		/// <param name="controlType">NetOffice.AccessApi.Enums.AcControlType ControlType</param>
 		/// <param name="section">optional NetOffice.AccessApi.Enums.AcSection Section = 0</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
 		public NetOffice.AccessApi.Control CreateControl(string formName, NetOffice.AccessApi.Enums.AcControlType controlType, object section)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(formName, controlType, section);
@@ -1436,7 +1436,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836740.aspx
 		/// </summary>
 		/// <param name="formName">string FormName</param>
@@ -1444,7 +1444,7 @@ namespace NetOffice.AccessApi
 		/// <param name="section">optional NetOffice.AccessApi.Enums.AcSection Section = 0</param>
 		/// <param name="parent">optional object Parent</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
 		public NetOffice.AccessApi.Control CreateControl(string formName, NetOffice.AccessApi.Enums.AcControlType controlType, object section, object parent)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(formName, controlType, section, parent);
@@ -1454,7 +1454,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836740.aspx
 		/// </summary>
 		/// <param name="formName">string FormName</param>
@@ -1463,7 +1463,7 @@ namespace NetOffice.AccessApi
 		/// <param name="parent">optional object Parent</param>
 		/// <param name="columnName">optional object ColumnName</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
 		public NetOffice.AccessApi.Control CreateControl(string formName, NetOffice.AccessApi.Enums.AcControlType controlType, object section, object parent, object columnName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(formName, controlType, section, parent, columnName);
@@ -1473,7 +1473,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836740.aspx
 		/// </summary>
 		/// <param name="formName">string FormName</param>
@@ -1483,7 +1483,7 @@ namespace NetOffice.AccessApi
 		/// <param name="columnName">optional object ColumnName</param>
 		/// <param name="left">optional object Left</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
 		public NetOffice.AccessApi.Control CreateControl(string formName, NetOffice.AccessApi.Enums.AcControlType controlType, object section, object parent, object columnName, object left)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(formName, controlType, section, parent, columnName, left);
@@ -1493,7 +1493,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836740.aspx
 		/// </summary>
 		/// <param name="formName">string FormName</param>
@@ -1504,7 +1504,7 @@ namespace NetOffice.AccessApi
 		/// <param name="left">optional object Left</param>
 		/// <param name="top">optional object Top</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
 		public NetOffice.AccessApi.Control CreateControl(string formName, NetOffice.AccessApi.Enums.AcControlType controlType, object section, object parent, object columnName, object left, object top)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(formName, controlType, section, parent, columnName, left, top);
@@ -1514,7 +1514,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836740.aspx
 		/// </summary>
 		/// <param name="formName">string FormName</param>
@@ -1526,7 +1526,7 @@ namespace NetOffice.AccessApi
 		/// <param name="top">optional object Top</param>
 		/// <param name="width">optional object Width</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
 		public NetOffice.AccessApi.Control CreateControl(string formName, NetOffice.AccessApi.Enums.AcControlType controlType, object section, object parent, object columnName, object left, object top, object width)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(formName, controlType, section, parent, columnName, left, top, width);
@@ -1536,7 +1536,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193518.aspx
 		/// </summary>
 		/// <param name="reportName">string ReportName</param>
@@ -1548,7 +1548,7 @@ namespace NetOffice.AccessApi
 		/// <param name="top">optional object Top</param>
 		/// <param name="width">optional object Width</param>
 		/// <param name="height">optional object Height</param>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
 		public NetOffice.AccessApi.Control CreateReportControl(string reportName, NetOffice.AccessApi.Enums.AcControlType controlType, object section, object parent, object columnName, object left, object top, object width, object height)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(reportName, controlType, section, parent, columnName, left, top, width, height);
@@ -1558,13 +1558,13 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193518.aspx
 		/// </summary>
 		/// <param name="reportName">string ReportName</param>
 		/// <param name="controlType">NetOffice.AccessApi.Enums.AcControlType ControlType</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
 		public NetOffice.AccessApi.Control CreateReportControl(string reportName, NetOffice.AccessApi.Enums.AcControlType controlType)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(reportName, controlType);
@@ -1574,14 +1574,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193518.aspx
 		/// </summary>
 		/// <param name="reportName">string ReportName</param>
 		/// <param name="controlType">NetOffice.AccessApi.Enums.AcControlType ControlType</param>
 		/// <param name="section">optional NetOffice.AccessApi.Enums.AcSection Section = 0</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
 		public NetOffice.AccessApi.Control CreateReportControl(string reportName, NetOffice.AccessApi.Enums.AcControlType controlType, object section)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(reportName, controlType, section);
@@ -1591,7 +1591,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193518.aspx
 		/// </summary>
 		/// <param name="reportName">string ReportName</param>
@@ -1599,7 +1599,7 @@ namespace NetOffice.AccessApi
 		/// <param name="section">optional NetOffice.AccessApi.Enums.AcSection Section = 0</param>
 		/// <param name="parent">optional object Parent</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
 		public NetOffice.AccessApi.Control CreateReportControl(string reportName, NetOffice.AccessApi.Enums.AcControlType controlType, object section, object parent)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(reportName, controlType, section, parent);
@@ -1609,7 +1609,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193518.aspx
 		/// </summary>
 		/// <param name="reportName">string ReportName</param>
@@ -1618,7 +1618,7 @@ namespace NetOffice.AccessApi
 		/// <param name="parent">optional object Parent</param>
 		/// <param name="columnName">optional object ColumnName</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
 		public NetOffice.AccessApi.Control CreateReportControl(string reportName, NetOffice.AccessApi.Enums.AcControlType controlType, object section, object parent, object columnName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(reportName, controlType, section, parent, columnName);
@@ -1628,7 +1628,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193518.aspx
 		/// </summary>
 		/// <param name="reportName">string ReportName</param>
@@ -1638,7 +1638,7 @@ namespace NetOffice.AccessApi
 		/// <param name="columnName">optional object ColumnName</param>
 		/// <param name="left">optional object Left</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
 		public NetOffice.AccessApi.Control CreateReportControl(string reportName, NetOffice.AccessApi.Enums.AcControlType controlType, object section, object parent, object columnName, object left)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(reportName, controlType, section, parent, columnName, left);
@@ -1648,7 +1648,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193518.aspx
 		/// </summary>
 		/// <param name="reportName">string ReportName</param>
@@ -1659,7 +1659,7 @@ namespace NetOffice.AccessApi
 		/// <param name="left">optional object Left</param>
 		/// <param name="top">optional object Top</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
 		public NetOffice.AccessApi.Control CreateReportControl(string reportName, NetOffice.AccessApi.Enums.AcControlType controlType, object section, object parent, object columnName, object left, object top)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(reportName, controlType, section, parent, columnName, left, top);
@@ -1669,7 +1669,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193518.aspx
 		/// </summary>
 		/// <param name="reportName">string ReportName</param>
@@ -1681,7 +1681,7 @@ namespace NetOffice.AccessApi
 		/// <param name="top">optional object Top</param>
 		/// <param name="width">optional object Width</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
 		public NetOffice.AccessApi.Control CreateReportControl(string reportName, NetOffice.AccessApi.Enums.AcControlType controlType, object section, object parent, object columnName, object left, object top, object width)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(reportName, controlType, section, parent, columnName, left, top, width);
@@ -1691,7 +1691,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// 
 		/// </summary>
 		/// <param name="formName">string FormName</param>
@@ -1704,7 +1704,7 @@ namespace NetOffice.AccessApi
 		/// <param name="width">Int32 Width</param>
 		/// <param name="height">Int32 Height</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
 		public NetOffice.AccessApi.Control CreateControlEx(string formName, NetOffice.AccessApi.Enums.AcControlType controlType, NetOffice.AccessApi.Enums.AcSection section, string parent, string controlSource, Int32 left, Int32 top, Int32 width, Int32 height)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(formName, controlType, section, parent, controlSource, left, top, width, height);
@@ -1714,7 +1714,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// 
 		/// </summary>
 		/// <param name="reportName">string ReportName</param>
@@ -1727,7 +1727,7 @@ namespace NetOffice.AccessApi
 		/// <param name="width">Int32 Width</param>
 		/// <param name="height">Int32 Height</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
 		public NetOffice.AccessApi.Control CreateReportControlEx(string reportName, NetOffice.AccessApi.Enums.AcControlType controlType, NetOffice.AccessApi.Enums.AcSection section, string parent, string controlName, Int32 left, Int32 top, Int32 width, Int32 height)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(reportName, controlType, section, parent, controlName, left, top, width, height);
@@ -1737,12 +1737,12 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836733.aspx
 		/// </summary>
 		/// <param name="formName">string FormName</param>
 		/// <param name="controlName">string ControlName</param>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
 		public void DeleteControl(string formName, string controlName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(formName, controlName);
@@ -1750,12 +1750,12 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff191904.aspx
 		/// </summary>
 		/// <param name="reportName">string ReportName</param>
 		/// <param name="controlName">string ControlName</param>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
 		public void DeleteReportControl(string reportName, string controlName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(reportName, controlName);
@@ -1763,14 +1763,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197044.aspx
 		/// </summary>
 		/// <param name="reportName">string ReportName</param>
 		/// <param name="expression">string Expression</param>
 		/// <param name="header">Int16 Header</param>
 		/// <param name="footer">Int16 Footer</param>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
 		public Int32 CreateGroupLevel(string reportName, string expression, Int16 header, Int16 footer)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(reportName, expression, header, footer);
@@ -1779,13 +1779,13 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff834804.aspx
 		/// </summary>
 		/// <param name="expr">string Expr</param>
 		/// <param name="domain">string Domain</param>
 		/// <param name="criteria">optional object Criteria</param>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
 		public object DMin(string expr, string domain, object criteria)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(expr, domain, criteria);
@@ -1802,13 +1802,13 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff834804.aspx
 		/// </summary>
 		/// <param name="expr">string Expr</param>
 		/// <param name="domain">string Domain</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
 		public object DMin(string expr, string domain)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(expr, domain);
@@ -1825,13 +1825,13 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835050.aspx
 		/// </summary>
 		/// <param name="expr">string Expr</param>
 		/// <param name="domain">string Domain</param>
 		/// <param name="criteria">optional object Criteria</param>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
 		public object DMax(string expr, string domain, object criteria)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(expr, domain, criteria);
@@ -1848,13 +1848,13 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835050.aspx
 		/// </summary>
 		/// <param name="expr">string Expr</param>
 		/// <param name="domain">string Domain</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
 		public object DMax(string expr, string domain)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(expr, domain);
@@ -1871,13 +1871,13 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193998.aspx
 		/// </summary>
 		/// <param name="expr">string Expr</param>
 		/// <param name="domain">string Domain</param>
 		/// <param name="criteria">optional object Criteria</param>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
 		public object DSum(string expr, string domain, object criteria)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(expr, domain, criteria);
@@ -1894,13 +1894,13 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193998.aspx
 		/// </summary>
 		/// <param name="expr">string Expr</param>
 		/// <param name="domain">string Domain</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
 		public object DSum(string expr, string domain)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(expr, domain);
@@ -1917,13 +1917,13 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197744.aspx
 		/// </summary>
 		/// <param name="expr">string Expr</param>
 		/// <param name="domain">string Domain</param>
 		/// <param name="criteria">optional object Criteria</param>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
 		public object DAvg(string expr, string domain, object criteria)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(expr, domain, criteria);
@@ -1940,13 +1940,13 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197744.aspx
 		/// </summary>
 		/// <param name="expr">string Expr</param>
 		/// <param name="domain">string Domain</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
 		public object DAvg(string expr, string domain)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(expr, domain);
@@ -1963,13 +1963,13 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff834404.aspx
 		/// </summary>
 		/// <param name="expr">string Expr</param>
 		/// <param name="domain">string Domain</param>
 		/// <param name="criteria">optional object Criteria</param>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
 		public object DLookup(string expr, string domain, object criteria)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(expr, domain, criteria);
@@ -1986,13 +1986,13 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff834404.aspx
 		/// </summary>
 		/// <param name="expr">string Expr</param>
 		/// <param name="domain">string Domain</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
 		public object DLookup(string expr, string domain)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(expr, domain);
@@ -2009,13 +2009,13 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845086.aspx
 		/// </summary>
 		/// <param name="expr">string Expr</param>
 		/// <param name="domain">string Domain</param>
 		/// <param name="criteria">optional object Criteria</param>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
 		public object DLast(string expr, string domain, object criteria)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(expr, domain, criteria);
@@ -2032,13 +2032,13 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845086.aspx
 		/// </summary>
 		/// <param name="expr">string Expr</param>
 		/// <param name="domain">string Domain</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
 		public object DLast(string expr, string domain)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(expr, domain);
@@ -2055,13 +2055,13 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835667.aspx
 		/// </summary>
 		/// <param name="expr">string Expr</param>
 		/// <param name="domain">string Domain</param>
 		/// <param name="criteria">optional object Criteria</param>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
 		public object DVar(string expr, string domain, object criteria)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(expr, domain, criteria);
@@ -2078,13 +2078,13 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835667.aspx
 		/// </summary>
 		/// <param name="expr">string Expr</param>
 		/// <param name="domain">string Domain</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
 		public object DVar(string expr, string domain)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(expr, domain);
@@ -2101,13 +2101,13 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197963.aspx
 		/// </summary>
 		/// <param name="expr">string Expr</param>
 		/// <param name="domain">string Domain</param>
 		/// <param name="criteria">optional object Criteria</param>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
 		public object DVarP(string expr, string domain, object criteria)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(expr, domain, criteria);
@@ -2124,13 +2124,13 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197963.aspx
 		/// </summary>
 		/// <param name="expr">string Expr</param>
 		/// <param name="domain">string Domain</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
 		public object DVarP(string expr, string domain)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(expr, domain);
@@ -2147,13 +2147,13 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192869.aspx
 		/// </summary>
 		/// <param name="expr">string Expr</param>
 		/// <param name="domain">string Domain</param>
 		/// <param name="criteria">optional object Criteria</param>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
 		public object DStDev(string expr, string domain, object criteria)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(expr, domain, criteria);
@@ -2170,13 +2170,13 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192869.aspx
 		/// </summary>
 		/// <param name="expr">string Expr</param>
 		/// <param name="domain">string Domain</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
 		public object DStDev(string expr, string domain)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(expr, domain);
@@ -2193,13 +2193,13 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff834343.aspx
 		/// </summary>
 		/// <param name="expr">string Expr</param>
 		/// <param name="domain">string Domain</param>
 		/// <param name="criteria">optional object Criteria</param>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
 		public object DStDevP(string expr, string domain, object criteria)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(expr, domain, criteria);
@@ -2216,13 +2216,13 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff834343.aspx
 		/// </summary>
 		/// <param name="expr">string Expr</param>
 		/// <param name="domain">string Domain</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
 		public object DStDevP(string expr, string domain)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(expr, domain);
@@ -2239,13 +2239,13 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195230.aspx
 		/// </summary>
 		/// <param name="expr">string Expr</param>
 		/// <param name="domain">string Domain</param>
 		/// <param name="criteria">optional object Criteria</param>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
 		public object DFirst(string expr, string domain, object criteria)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(expr, domain, criteria);
@@ -2262,13 +2262,13 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195230.aspx
 		/// </summary>
 		/// <param name="expr">string Expr</param>
 		/// <param name="domain">string Domain</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
 		public object DFirst(string expr, string domain)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(expr, domain);
@@ -2285,13 +2285,13 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff191865.aspx
 		/// </summary>
 		/// <param name="expr">string Expr</param>
 		/// <param name="domain">string Domain</param>
 		/// <param name="criteria">optional object Criteria</param>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
 		public object DCount(string expr, string domain, object criteria)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(expr, domain, criteria);
@@ -2308,13 +2308,13 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff191865.aspx
 		/// </summary>
 		/// <param name="expr">string Expr</param>
 		/// <param name="domain">string Domain</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
 		public object DCount(string expr, string domain)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(expr, domain);
@@ -2331,11 +2331,11 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff834705.aspx
 		/// </summary>
 		/// <param name="stringExpr">string StringExpr</param>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
 		public object Eval(string stringExpr)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(stringExpr);
@@ -2352,10 +2352,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845778.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
 		public string CurrentUser()
 		{
 			object[] paramsArray = null;
@@ -2364,12 +2364,12 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196189.aspx
 		/// </summary>
 		/// <param name="application">string Application</param>
 		/// <param name="topic">string Topic</param>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
 		public object DDEInitiate(string application, string topic)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(application, topic);
@@ -2386,12 +2386,12 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197936.aspx
 		/// </summary>
 		/// <param name="chanNum">object ChanNum</param>
 		/// <param name="command">string Command</param>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
 		public void DDEExecute(object chanNum, string command)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(chanNum, command);
@@ -2399,13 +2399,13 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194752.aspx
 		/// </summary>
 		/// <param name="chanNum">object ChanNum</param>
 		/// <param name="item">string Item</param>
 		/// <param name="data">string Data</param>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
 		public void DDEPoke(object chanNum, string item, string data)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(chanNum, item, data);
@@ -2413,12 +2413,12 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff823145.aspx
 		/// </summary>
 		/// <param name="chanNum">object ChanNum</param>
 		/// <param name="item">string Item</param>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
 		public string DDERequest(object chanNum, string item)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(chanNum, item);
@@ -2427,11 +2427,11 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197795.aspx
 		/// </summary>
 		/// <param name="chanNum">object ChanNum</param>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
 		public void DDETerminate(object chanNum)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(chanNum);
@@ -2439,10 +2439,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845193.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
 		public void DDETerminateAll()
 		{
 			object[] paramsArray = null;
@@ -2450,10 +2450,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835631.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
 		public NetOffice.DAOApi.Database CurrentDb()
 		{
 			object[] paramsArray = null;
@@ -2463,10 +2463,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196457.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
 		public NetOffice.DAOApi.Database CodeDb()
 		{
 			object[] paramsArray = null;
@@ -2476,12 +2476,12 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// 
 		/// </summary>
 		/// <param name="hwnd">Int32 Hwnd</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
 		public void BeginUndoable(Int32 hwnd)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(hwnd);
@@ -2489,12 +2489,12 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// 
 		/// </summary>
 		/// <param name="yesno">Int16 yesno</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
 		public void SetUndoRecording(Int16 yesno)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(yesno);
@@ -2502,13 +2502,13 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845070.aspx
 		/// </summary>
 		/// <param name="field">string Field</param>
 		/// <param name="fieldType">Int16 FieldType</param>
 		/// <param name="expression">string Expression</param>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
 		public string BuildCriteria(string field, Int16 fieldType, string expression)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(field, fieldType, expression);
@@ -2517,13 +2517,13 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// 
 		/// </summary>
 		/// <param name="text">string Text</param>
 		/// <param name="moduleName">string ModuleName</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
 		public void InsertText(string text, string moduleName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(text, moduleName);
@@ -2531,11 +2531,11 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// 
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
 		public void ReloadAddIns()
 		{
 			object[] paramsArray = null;
@@ -2543,10 +2543,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836901.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
 		public NetOffice.DAOApi.Workspace DefaultWorkspaceClone()
 		{
 			object[] paramsArray = null;
@@ -2556,10 +2556,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197957.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
 		public void RefreshTitleBar()
 		{
 			object[] paramsArray = null;
@@ -2567,13 +2567,13 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// 
 		/// </summary>
 		/// <param name="changeFrom">string ChangeFrom</param>
 		/// <param name="changeTo">string ChangeTo</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
 		public void AddAutoCorrect(string changeFrom, string changeTo)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(changeFrom, changeTo);
@@ -2581,12 +2581,12 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// 
 		/// </summary>
 		/// <param name="changeFrom">string ChangeFrom</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
 		public void DelAutoCorrect(string changeFrom)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(changeFrom);
@@ -2594,10 +2594,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196179.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
 		public Int32 hWndAccessApp()
 		{
 			object[] paramsArray = null;
@@ -2606,7 +2606,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193559.aspx
 		/// </summary>
 		/// <param name="procedure">string Procedure</param>
@@ -2640,7 +2640,7 @@ namespace NetOffice.AccessApi
 		/// <param name="arg28">optional object Arg28</param>
 		/// <param name="arg29">optional object Arg29</param>
 		/// <param name="arg30">optional object Arg30</param>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
 		public object Run(string procedure, object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24, object arg25, object arg26, object arg27, object arg28, object arg29, object arg30)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(procedure, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28, arg29, arg30);
@@ -2657,12 +2657,12 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193559.aspx
 		/// </summary>
 		/// <param name="procedure">string Procedure</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
 		public object Run(string procedure)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(procedure);
@@ -2679,13 +2679,13 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193559.aspx
 		/// </summary>
 		/// <param name="procedure">string Procedure</param>
 		/// <param name="arg1">optional object Arg1</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
 		public object Run(string procedure, object arg1)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(procedure, arg1);
@@ -2702,14 +2702,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193559.aspx
 		/// </summary>
 		/// <param name="procedure">string Procedure</param>
 		/// <param name="arg1">optional object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
 		public object Run(string procedure, object arg1, object arg2)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(procedure, arg1, arg2);
@@ -2726,7 +2726,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193559.aspx
 		/// </summary>
 		/// <param name="procedure">string Procedure</param>
@@ -2734,7 +2734,7 @@ namespace NetOffice.AccessApi
 		/// <param name="arg2">optional object Arg2</param>
 		/// <param name="arg3">optional object Arg3</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
 		public object Run(string procedure, object arg1, object arg2, object arg3)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(procedure, arg1, arg2, arg3);
@@ -2751,7 +2751,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193559.aspx
 		/// </summary>
 		/// <param name="procedure">string Procedure</param>
@@ -2760,7 +2760,7 @@ namespace NetOffice.AccessApi
 		/// <param name="arg3">optional object Arg3</param>
 		/// <param name="arg4">optional object Arg4</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
 		public object Run(string procedure, object arg1, object arg2, object arg3, object arg4)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(procedure, arg1, arg2, arg3, arg4);
@@ -2777,7 +2777,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193559.aspx
 		/// </summary>
 		/// <param name="procedure">string Procedure</param>
@@ -2787,7 +2787,7 @@ namespace NetOffice.AccessApi
 		/// <param name="arg4">optional object Arg4</param>
 		/// <param name="arg5">optional object Arg5</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
 		public object Run(string procedure, object arg1, object arg2, object arg3, object arg4, object arg5)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(procedure, arg1, arg2, arg3, arg4, arg5);
@@ -2804,7 +2804,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193559.aspx
 		/// </summary>
 		/// <param name="procedure">string Procedure</param>
@@ -2815,7 +2815,7 @@ namespace NetOffice.AccessApi
 		/// <param name="arg5">optional object Arg5</param>
 		/// <param name="arg6">optional object Arg6</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
 		public object Run(string procedure, object arg1, object arg2, object arg3, object arg4, object arg5, object arg6)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(procedure, arg1, arg2, arg3, arg4, arg5, arg6);
@@ -2832,7 +2832,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193559.aspx
 		/// </summary>
 		/// <param name="procedure">string Procedure</param>
@@ -2844,7 +2844,7 @@ namespace NetOffice.AccessApi
 		/// <param name="arg6">optional object Arg6</param>
 		/// <param name="arg7">optional object Arg7</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
 		public object Run(string procedure, object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(procedure, arg1, arg2, arg3, arg4, arg5, arg6, arg7);
@@ -2861,7 +2861,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193559.aspx
 		/// </summary>
 		/// <param name="procedure">string Procedure</param>
@@ -2874,7 +2874,7 @@ namespace NetOffice.AccessApi
 		/// <param name="arg7">optional object Arg7</param>
 		/// <param name="arg8">optional object Arg8</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
 		public object Run(string procedure, object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(procedure, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
@@ -2891,7 +2891,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193559.aspx
 		/// </summary>
 		/// <param name="procedure">string Procedure</param>
@@ -2905,7 +2905,7 @@ namespace NetOffice.AccessApi
 		/// <param name="arg8">optional object Arg8</param>
 		/// <param name="arg9">optional object Arg9</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
 		public object Run(string procedure, object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(procedure, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9);
@@ -2922,7 +2922,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193559.aspx
 		/// </summary>
 		/// <param name="procedure">string Procedure</param>
@@ -2937,7 +2937,7 @@ namespace NetOffice.AccessApi
 		/// <param name="arg9">optional object Arg9</param>
 		/// <param name="arg10">optional object Arg10</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
 		public object Run(string procedure, object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(procedure, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10);
@@ -2954,7 +2954,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193559.aspx
 		/// </summary>
 		/// <param name="procedure">string Procedure</param>
@@ -2970,7 +2970,7 @@ namespace NetOffice.AccessApi
 		/// <param name="arg10">optional object Arg10</param>
 		/// <param name="arg11">optional object Arg11</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
 		public object Run(string procedure, object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(procedure, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11);
@@ -2987,7 +2987,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193559.aspx
 		/// </summary>
 		/// <param name="procedure">string Procedure</param>
@@ -3004,7 +3004,7 @@ namespace NetOffice.AccessApi
 		/// <param name="arg11">optional object Arg11</param>
 		/// <param name="arg12">optional object Arg12</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
 		public object Run(string procedure, object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(procedure, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12);
@@ -3021,7 +3021,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193559.aspx
 		/// </summary>
 		/// <param name="procedure">string Procedure</param>
@@ -3039,7 +3039,7 @@ namespace NetOffice.AccessApi
 		/// <param name="arg12">optional object Arg12</param>
 		/// <param name="arg13">optional object Arg13</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
 		public object Run(string procedure, object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(procedure, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13);
@@ -3056,7 +3056,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193559.aspx
 		/// </summary>
 		/// <param name="procedure">string Procedure</param>
@@ -3075,7 +3075,7 @@ namespace NetOffice.AccessApi
 		/// <param name="arg13">optional object Arg13</param>
 		/// <param name="arg14">optional object Arg14</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
 		public object Run(string procedure, object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(procedure, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14);
@@ -3092,7 +3092,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193559.aspx
 		/// </summary>
 		/// <param name="procedure">string Procedure</param>
@@ -3112,7 +3112,7 @@ namespace NetOffice.AccessApi
 		/// <param name="arg14">optional object Arg14</param>
 		/// <param name="arg15">optional object Arg15</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
 		public object Run(string procedure, object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(procedure, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15);
@@ -3129,7 +3129,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193559.aspx
 		/// </summary>
 		/// <param name="procedure">string Procedure</param>
@@ -3150,7 +3150,7 @@ namespace NetOffice.AccessApi
 		/// <param name="arg15">optional object Arg15</param>
 		/// <param name="arg16">optional object Arg16</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
 		public object Run(string procedure, object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(procedure, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16);
@@ -3167,7 +3167,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193559.aspx
 		/// </summary>
 		/// <param name="procedure">string Procedure</param>
@@ -3189,7 +3189,7 @@ namespace NetOffice.AccessApi
 		/// <param name="arg16">optional object Arg16</param>
 		/// <param name="arg17">optional object Arg17</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
 		public object Run(string procedure, object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(procedure, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17);
@@ -3206,7 +3206,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193559.aspx
 		/// </summary>
 		/// <param name="procedure">string Procedure</param>
@@ -3229,7 +3229,7 @@ namespace NetOffice.AccessApi
 		/// <param name="arg17">optional object Arg17</param>
 		/// <param name="arg18">optional object Arg18</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
 		public object Run(string procedure, object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(procedure, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18);
@@ -3246,7 +3246,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193559.aspx
 		/// </summary>
 		/// <param name="procedure">string Procedure</param>
@@ -3270,7 +3270,7 @@ namespace NetOffice.AccessApi
 		/// <param name="arg18">optional object Arg18</param>
 		/// <param name="arg19">optional object Arg19</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
 		public object Run(string procedure, object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(procedure, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19);
@@ -3287,7 +3287,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193559.aspx
 		/// </summary>
 		/// <param name="procedure">string Procedure</param>
@@ -3312,7 +3312,7 @@ namespace NetOffice.AccessApi
 		/// <param name="arg19">optional object Arg19</param>
 		/// <param name="arg20">optional object Arg20</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
 		public object Run(string procedure, object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(procedure, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20);
@@ -3329,7 +3329,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193559.aspx
 		/// </summary>
 		/// <param name="procedure">string Procedure</param>
@@ -3355,7 +3355,7 @@ namespace NetOffice.AccessApi
 		/// <param name="arg20">optional object Arg20</param>
 		/// <param name="arg21">optional object Arg21</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
 		public object Run(string procedure, object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(procedure, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21);
@@ -3372,7 +3372,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193559.aspx
 		/// </summary>
 		/// <param name="procedure">string Procedure</param>
@@ -3399,7 +3399,7 @@ namespace NetOffice.AccessApi
 		/// <param name="arg21">optional object Arg21</param>
 		/// <param name="arg22">optional object Arg22</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
 		public object Run(string procedure, object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(procedure, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22);
@@ -3416,7 +3416,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193559.aspx
 		/// </summary>
 		/// <param name="procedure">string Procedure</param>
@@ -3444,7 +3444,7 @@ namespace NetOffice.AccessApi
 		/// <param name="arg22">optional object Arg22</param>
 		/// <param name="arg23">optional object Arg23</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
 		public object Run(string procedure, object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(procedure, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23);
@@ -3461,7 +3461,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193559.aspx
 		/// </summary>
 		/// <param name="procedure">string Procedure</param>
@@ -3490,7 +3490,7 @@ namespace NetOffice.AccessApi
 		/// <param name="arg23">optional object Arg23</param>
 		/// <param name="arg24">optional object Arg24</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
 		public object Run(string procedure, object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(procedure, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24);
@@ -3507,7 +3507,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193559.aspx
 		/// </summary>
 		/// <param name="procedure">string Procedure</param>
@@ -3537,7 +3537,7 @@ namespace NetOffice.AccessApi
 		/// <param name="arg24">optional object Arg24</param>
 		/// <param name="arg25">optional object Arg25</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
 		public object Run(string procedure, object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24, object arg25)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(procedure, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25);
@@ -3554,7 +3554,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193559.aspx
 		/// </summary>
 		/// <param name="procedure">string Procedure</param>
@@ -3585,7 +3585,7 @@ namespace NetOffice.AccessApi
 		/// <param name="arg25">optional object Arg25</param>
 		/// <param name="arg26">optional object Arg26</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
 		public object Run(string procedure, object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24, object arg25, object arg26)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(procedure, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26);
@@ -3602,7 +3602,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193559.aspx
 		/// </summary>
 		/// <param name="procedure">string Procedure</param>
@@ -3634,7 +3634,7 @@ namespace NetOffice.AccessApi
 		/// <param name="arg26">optional object Arg26</param>
 		/// <param name="arg27">optional object Arg27</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
 		public object Run(string procedure, object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24, object arg25, object arg26, object arg27)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(procedure, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27);
@@ -3651,7 +3651,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193559.aspx
 		/// </summary>
 		/// <param name="procedure">string Procedure</param>
@@ -3684,7 +3684,7 @@ namespace NetOffice.AccessApi
 		/// <param name="arg27">optional object Arg27</param>
 		/// <param name="arg28">optional object Arg28</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
 		public object Run(string procedure, object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24, object arg25, object arg26, object arg27, object arg28)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(procedure, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28);
@@ -3701,7 +3701,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193559.aspx
 		/// </summary>
 		/// <param name="procedure">string Procedure</param>
@@ -3735,7 +3735,7 @@ namespace NetOffice.AccessApi
 		/// <param name="arg28">optional object Arg28</param>
 		/// <param name="arg29">optional object Arg29</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
 		public object Run(string procedure, object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24, object arg25, object arg26, object arg27, object arg28, object arg29)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(procedure, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28, arg29);
@@ -3752,12 +3752,12 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195223.aspx
 		/// </summary>
 		/// <param name="value">object Value</param>
 		/// <param name="valueIfNull">optional object ValueIfNull</param>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
 		public object Nz(object value, object valueIfNull)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(value, valueIfNull);
@@ -3774,12 +3774,12 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195223.aspx
 		/// </summary>
 		/// <param name="value">object Value</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
 		public object Nz(object value)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(value);
@@ -3796,11 +3796,11 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835072.aspx
 		/// </summary>
 		/// <param name="fileName">string FileName</param>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
 		public object LoadPicture(string fileName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName);
@@ -3810,7 +3810,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// 
 		/// </summary>
 		/// <param name="objtyp">Int32 objtyp</param>
@@ -3818,7 +3818,7 @@ namespace NetOffice.AccessApi
 		/// <param name="fileName">string FileName</param>
 		/// <param name="token">Int32 token</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
 		public void ReplaceModule(Int32 objtyp, string moduleName, string fileName, Int32 token)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(objtyp, moduleName, fileName, token);
@@ -3826,11 +3826,11 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196488.aspx
 		/// </summary>
 		/// <param name="errorNumber">object ErrorNumber</param>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
 		public object AccessError(object errorNumber)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(errorNumber);
@@ -3847,11 +3847,11 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// 
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
 		public object BuilderString()
 		{
 			object[] paramsArray = null;
@@ -3868,11 +3868,11 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193935.aspx
 		/// </summary>
 		/// <param name="guid">object Guid</param>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
 		public object StringFromGUID(object guid)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(guid);
@@ -3889,11 +3889,11 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197675.aspx
 		/// </summary>
 		/// <param name="_string">object String</param>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
 		public object GUIDFromString(object _string)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(_string);
@@ -3910,12 +3910,12 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// 
 		/// </summary>
 		/// <param name="id">Int32 id</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
 		public object AppLoadString(Int32 id)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(id);
@@ -3932,7 +3932,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822080.aspx
 		/// </summary>
 		/// <param name="address">string Address</param>
@@ -3942,7 +3942,7 @@ namespace NetOffice.AccessApi
 		/// <param name="extraInfo">optional object ExtraInfo</param>
 		/// <param name="method">optional NetOffice.OfficeApi.Enums.MsoExtraInfoMethod Method = 0</param>
 		/// <param name="headerInfo">optional string HeaderInfo = </param>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
 		public void FollowHyperlink(string address, object subAddress, object newWindow, object addHistory, object extraInfo, object method, object headerInfo)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(address, subAddress, newWindow, addHistory, extraInfo, method, headerInfo);
@@ -3950,12 +3950,12 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822080.aspx
 		/// </summary>
 		/// <param name="address">string Address</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
 		public void FollowHyperlink(string address)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(address);
@@ -3963,13 +3963,13 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822080.aspx
 		/// </summary>
 		/// <param name="address">string Address</param>
 		/// <param name="subAddress">optional string SubAddress = </param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
 		public void FollowHyperlink(string address, object subAddress)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(address, subAddress);
@@ -3977,14 +3977,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822080.aspx
 		/// </summary>
 		/// <param name="address">string Address</param>
 		/// <param name="subAddress">optional string SubAddress = </param>
 		/// <param name="newWindow">optional bool NewWindow = false</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
 		public void FollowHyperlink(string address, object subAddress, object newWindow)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(address, subAddress, newWindow);
@@ -3992,7 +3992,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822080.aspx
 		/// </summary>
 		/// <param name="address">string Address</param>
@@ -4000,7 +4000,7 @@ namespace NetOffice.AccessApi
 		/// <param name="newWindow">optional bool NewWindow = false</param>
 		/// <param name="addHistory">optional bool AddHistory = true</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
 		public void FollowHyperlink(string address, object subAddress, object newWindow, object addHistory)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(address, subAddress, newWindow, addHistory);
@@ -4008,7 +4008,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822080.aspx
 		/// </summary>
 		/// <param name="address">string Address</param>
@@ -4017,7 +4017,7 @@ namespace NetOffice.AccessApi
 		/// <param name="addHistory">optional bool AddHistory = true</param>
 		/// <param name="extraInfo">optional object ExtraInfo</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
 		public void FollowHyperlink(string address, object subAddress, object newWindow, object addHistory, object extraInfo)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(address, subAddress, newWindow, addHistory, extraInfo);
@@ -4025,7 +4025,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822080.aspx
 		/// </summary>
 		/// <param name="address">string Address</param>
@@ -4035,7 +4035,7 @@ namespace NetOffice.AccessApi
 		/// <param name="extraInfo">optional object ExtraInfo</param>
 		/// <param name="method">optional NetOffice.OfficeApi.Enums.MsoExtraInfoMethod Method = 0</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
 		public void FollowHyperlink(string address, object subAddress, object newWindow, object addHistory, object extraInfo, object method)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(address, subAddress, newWindow, addHistory, extraInfo, method);
@@ -4043,14 +4043,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// 
 		/// </summary>
 		/// <param name="objectType">NetOffice.AccessApi.Enums.AcObjectType ObjectType</param>
 		/// <param name="objectName">string ObjectName</param>
 		/// <param name="fileName">string FileName</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
 		public void SaveAsText(NetOffice.AccessApi.Enums.AcObjectType objectType, string objectName, string fileName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(objectType, objectName, fileName);
@@ -4058,14 +4058,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// 
 		/// </summary>
 		/// <param name="objectType">NetOffice.AccessApi.Enums.AcObjectType ObjectType</param>
 		/// <param name="objectName">string ObjectName</param>
 		/// <param name="fileName">string FileName</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
 		public void LoadFromText(NetOffice.AccessApi.Enums.AcObjectType objectType, string objectName, string fileName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(objectType, objectName, fileName);
@@ -4073,10 +4073,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff823011.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
 		public void AddToFavorites()
 		{
 			object[] paramsArray = null;
@@ -4084,10 +4084,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194960.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
 		public void RefreshDatabaseWindow()
 		{
 			object[] paramsArray = null;
@@ -4095,11 +4095,11 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff191909.aspx
 		/// </summary>
 		/// <param name="command">NetOffice.AccessApi.Enums.AcCommand Command</param>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
 		public void RunCommand(NetOffice.AccessApi.Enums.AcCommand command)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(command);
@@ -4107,12 +4107,12 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff844740.aspx
 		/// </summary>
 		/// <param name="hyperlink">object Hyperlink</param>
 		/// <param name="part">optional NetOffice.AccessApi.Enums.AcHyperlinkPart Part = 0</param>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
 		public string HyperlinkPart(object hyperlink, object part)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(hyperlink, part);
@@ -4121,12 +4121,12 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff844740.aspx
 		/// </summary>
 		/// <param name="hyperlink">object Hyperlink</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
 		public string HyperlinkPart(object hyperlink)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(hyperlink);
@@ -4135,12 +4135,12 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff821756.aspx
 		/// </summary>
 		/// <param name="objectType">NetOffice.AccessApi.Enums.AcObjectType ObjectType</param>
 		/// <param name="objectName">string ObjectName</param>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
 		public bool GetHiddenAttribute(NetOffice.AccessApi.Enums.AcObjectType objectType, string objectName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(objectType, objectName);
@@ -4149,13 +4149,13 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822459.aspx
 		/// </summary>
 		/// <param name="objectType">NetOffice.AccessApi.Enums.AcObjectType ObjectType</param>
 		/// <param name="objectName">string ObjectName</param>
 		/// <param name="fHidden">bool fHidden</param>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
 		public void SetHiddenAttribute(NetOffice.AccessApi.Enums.AcObjectType objectType, string objectName, bool fHidden)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(objectType, objectName, fHidden);
@@ -4163,12 +4163,12 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// 
 		/// </summary>
 		/// <param name="fileName">optional object FileName</param>
 		/// <param name="createNewFile">optional bool CreateNewFile = true</param>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
 		public NetOffice.AccessApi.DataAccessPage CreateDataAccessPage(object fileName, object createNewFile)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName, createNewFile);
@@ -4178,11 +4178,11 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// 
 		/// </summary>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
 		public NetOffice.AccessApi.DataAccessPage CreateDataAccessPage()
 		{
 			object[] paramsArray = null;
@@ -4192,12 +4192,12 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// 
 		/// </summary>
 		/// <param name="fileName">optional object FileName</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
 		public NetOffice.AccessApi.DataAccessPage CreateDataAccessPage(object fileName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName);
@@ -4207,12 +4207,12 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835758.aspx
 		/// </summary>
 		/// <param name="filepath">string filepath</param>
 		/// <param name="connect">optional object Connect</param>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
 		public void NewAccessProject(string filepath, object connect)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filepath, connect);
@@ -4220,12 +4220,12 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835758.aspx
 		/// </summary>
 		/// <param name="filepath">string filepath</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
 		public void NewAccessProject(string filepath)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filepath);
@@ -4233,12 +4233,12 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837249.aspx
 		/// </summary>
 		/// <param name="filepath">string filepath</param>
 		/// <param name="exclusive">optional bool Exclusive = false</param>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
 		public void OpenAccessProject(string filepath, object exclusive)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filepath, exclusive);
@@ -4246,12 +4246,12 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837249.aspx
 		/// </summary>
 		/// <param name="filepath">string filepath</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
 		public void OpenAccessProject(string filepath)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filepath);
@@ -4259,12 +4259,12 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195216.aspx
 		/// </summary>
 		/// <param name="filepath">string filepath</param>
 		/// <param name="connect">optional object Connect</param>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
 		public void CreateAccessProject(string filepath, object connect)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filepath, connect);
@@ -4272,12 +4272,12 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195216.aspx
 		/// </summary>
 		/// <param name="filepath">string filepath</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
 		public void CreateAccessProject(string filepath)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filepath);
@@ -4285,7 +4285,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192461.aspx
 		/// </summary>
 		/// <param name="number">Double Number</param>
@@ -4293,7 +4293,7 @@ namespace NetOffice.AccessApi
 		/// <param name="targetCurrency">string TargetCurrency</param>
 		/// <param name="fullPrecision">optional object FullPrecision</param>
 		/// <param name="triangulationPrecision">optional object TriangulationPrecision</param>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
 		public Double EuroConvert(Double number, string sourceCurrency, string targetCurrency, object fullPrecision, object triangulationPrecision)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(number, sourceCurrency, targetCurrency, fullPrecision, triangulationPrecision);
@@ -4302,14 +4302,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192461.aspx
 		/// </summary>
 		/// <param name="number">Double Number</param>
 		/// <param name="sourceCurrency">string SourceCurrency</param>
 		/// <param name="targetCurrency">string TargetCurrency</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
 		public Double EuroConvert(Double number, string sourceCurrency, string targetCurrency)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(number, sourceCurrency, targetCurrency);
@@ -4318,7 +4318,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192461.aspx
 		/// </summary>
 		/// <param name="number">Double Number</param>
@@ -4326,7 +4326,7 @@ namespace NetOffice.AccessApi
 		/// <param name="targetCurrency">string TargetCurrency</param>
 		/// <param name="fullPrecision">optional object FullPrecision</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
 		public Double EuroConvert(Double number, string sourceCurrency, string targetCurrency, object fullPrecision)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(number, sourceCurrency, targetCurrency, fullPrecision);
@@ -4335,13 +4335,13 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 10, 11, 12, 14, 15
+		/// SupportByVersion Access 10, 11, 12, 14, 15, 16
 		/// 
 		/// </summary>
 		/// <param name="filepath">string filepath</param>
 		/// <param name="exclusive">optional bool Exclusive = false</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("Access", 10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 10,11,12,14,15,16)]
 		public void OpenCurrentDatabaseOld(string filepath, object exclusive)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filepath, exclusive);
@@ -4349,13 +4349,13 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 10, 11, 12, 14, 15
+		/// SupportByVersion Access 10, 11, 12, 14, 15, 16
 		/// 
 		/// </summary>
 		/// <param name="filepath">string filepath</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 10,11,12,14,15,16)]
 		public void OpenCurrentDatabaseOld(string filepath)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filepath);
@@ -4363,7 +4363,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 10, 11, 12, 14, 15
+		/// SupportByVersion Access 10, 11, 12, 14, 15, 16
 		/// 
 		/// </summary>
 		/// <param name="path">optional string Path =  </param>
@@ -4371,7 +4371,7 @@ namespace NetOffice.AccessApi
 		/// <param name="company">optional string Company =  </param>
 		/// <param name="workgroupID">optional string WorkgroupID =  </param>
 		/// <param name="replace">optional bool Replace = false</param>
-		[SupportByVersionAttribute("Access", 10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 10,11,12,14,15,16)]
 		public void CreateNewWorkgroupFile(object path, object name, object company, object workgroupID, object replace)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(path, name, company, workgroupID, replace);
@@ -4379,11 +4379,11 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 10, 11, 12, 14, 15
+		/// SupportByVersion Access 10, 11, 12, 14, 15, 16
 		/// 
 		/// </summary>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 10,11,12,14,15,16)]
 		public void CreateNewWorkgroupFile()
 		{
 			object[] paramsArray = null;
@@ -4391,12 +4391,12 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 10, 11, 12, 14, 15
+		/// SupportByVersion Access 10, 11, 12, 14, 15, 16
 		/// 
 		/// </summary>
 		/// <param name="path">optional string Path =  </param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 10,11,12,14,15,16)]
 		public void CreateNewWorkgroupFile(object path)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(path);
@@ -4404,13 +4404,13 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 10, 11, 12, 14, 15
+		/// SupportByVersion Access 10, 11, 12, 14, 15, 16
 		/// 
 		/// </summary>
 		/// <param name="path">optional string Path =  </param>
 		/// <param name="name">optional string Name =  </param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 10,11,12,14,15,16)]
 		public void CreateNewWorkgroupFile(object path, object name)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(path, name);
@@ -4418,14 +4418,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 10, 11, 12, 14, 15
+		/// SupportByVersion Access 10, 11, 12, 14, 15, 16
 		/// 
 		/// </summary>
 		/// <param name="path">optional string Path =  </param>
 		/// <param name="name">optional string Name =  </param>
 		/// <param name="company">optional string Company =  </param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 10,11,12,14,15,16)]
 		public void CreateNewWorkgroupFile(object path, object name, object company)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(path, name, company);
@@ -4433,7 +4433,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 10, 11, 12, 14, 15
+		/// SupportByVersion Access 10, 11, 12, 14, 15, 16
 		/// 
 		/// </summary>
 		/// <param name="path">optional string Path =  </param>
@@ -4441,7 +4441,7 @@ namespace NetOffice.AccessApi
 		/// <param name="company">optional string Company =  </param>
 		/// <param name="workgroupID">optional string WorkgroupID =  </param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 10,11,12,14,15,16)]
 		public void CreateNewWorkgroupFile(object path, object name, object company, object workgroupID)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(path, name, company, workgroupID);
@@ -4449,11 +4449,11 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 10, 11, 12, 14, 15
+		/// SupportByVersion Access 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195103.aspx
 		/// </summary>
 		/// <param name="path">string Path</param>
-		[SupportByVersionAttribute("Access", 10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 10,11,12,14,15,16)]
 		public void SetDefaultWorkgroupFile(string path)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(path);
@@ -4461,13 +4461,13 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 10, 11, 12, 14, 15
+		/// SupportByVersion Access 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193465.aspx
 		/// </summary>
 		/// <param name="sourceFilename">string SourceFilename</param>
 		/// <param name="destinationFilename">string DestinationFilename</param>
 		/// <param name="destinationFileFormat">NetOffice.AccessApi.Enums.AcFileFormat DestinationFileFormat</param>
-		[SupportByVersionAttribute("Access", 10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 10,11,12,14,15,16)]
 		public void ConvertAccessProject(string sourceFilename, string destinationFilename, NetOffice.AccessApi.Enums.AcFileFormat destinationFileFormat)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(sourceFilename, destinationFilename, destinationFileFormat);
@@ -4475,13 +4475,13 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 10, 11, 12, 14, 15
+		/// SupportByVersion Access 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193242.aspx
 		/// </summary>
 		/// <param name="sourceFile">string SourceFile</param>
 		/// <param name="destinationFile">string DestinationFile</param>
 		/// <param name="logFile">optional bool LogFile = false</param>
-		[SupportByVersionAttribute("Access", 10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 10,11,12,14,15,16)]
 		public bool CompactRepair(string sourceFile, string destinationFile, object logFile)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(sourceFile, destinationFile, logFile);
@@ -4490,13 +4490,13 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 10, 11, 12, 14, 15
+		/// SupportByVersion Access 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193242.aspx
 		/// </summary>
 		/// <param name="sourceFile">string SourceFile</param>
 		/// <param name="destinationFile">string DestinationFile</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 10,11,12,14,15,16)]
 		public bool CompactRepair(string sourceFile, string destinationFile)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(sourceFile, destinationFile);
@@ -4505,7 +4505,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 10, 11, 12, 14, 15
+		/// SupportByVersion Access 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193212.aspx
 		/// </summary>
 		/// <param name="objectType">NetOffice.AccessApi.Enums.AcExportXMLObjectType ObjectType</param>
@@ -4516,7 +4516,7 @@ namespace NetOffice.AccessApi
 		/// <param name="imageTarget">optional string ImageTarget = </param>
 		/// <param name="encoding">optional NetOffice.AccessApi.Enums.AcExportXMLEncoding Encoding = 0</param>
 		/// <param name="otherFlags">optional Int32 OtherFlags = 0</param>
-		[SupportByVersionAttribute("Access", 10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 10,11,12,14,15,16)]
 		public void ExportXML(NetOffice.AccessApi.Enums.AcExportXMLObjectType objectType, string dataSource, object dataTarget, object schemaTarget, object presentationTarget, object imageTarget, object encoding, object otherFlags)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(objectType, dataSource, dataTarget, schemaTarget, presentationTarget, imageTarget, encoding, otherFlags);
@@ -4524,7 +4524,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 11, 12, 14, 15
+		/// SupportByVersion Access 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193212.aspx
 		/// </summary>
 		/// <param name="objectType">NetOffice.AccessApi.Enums.AcExportXMLObjectType ObjectType</param>
@@ -4537,7 +4537,7 @@ namespace NetOffice.AccessApi
 		/// <param name="otherFlags">optional NetOffice.AccessApi.Enums.AcExportXMLOtherFlags OtherFlags = 0</param>
 		/// <param name="whereCondition">optional string WhereCondition = </param>
 		/// <param name="additionalData">optional object AdditionalData</param>
-		[SupportByVersionAttribute("Access", 11,12,14,15)]
+		[SupportByVersionAttribute("Access", 11,12,14,15,16)]
 		public void ExportXML(NetOffice.AccessApi.Enums.AcExportXMLObjectType objectType, string dataSource, object dataTarget, object schemaTarget, object presentationTarget, object imageTarget, object encoding, object otherFlags, object whereCondition, object additionalData)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(objectType, dataSource, dataTarget, schemaTarget, presentationTarget, imageTarget, encoding, otherFlags, whereCondition, additionalData);
@@ -4545,13 +4545,13 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 10, 11, 12, 14, 15
+		/// SupportByVersion Access 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193212.aspx
 		/// </summary>
 		/// <param name="objectType">NetOffice.AccessApi.Enums.AcExportXMLObjectType ObjectType</param>
 		/// <param name="dataSource">string DataSource</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 10,11,12,14,15,16)]
 		public void ExportXML(NetOffice.AccessApi.Enums.AcExportXMLObjectType objectType, string dataSource)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(objectType, dataSource);
@@ -4559,14 +4559,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 10, 11, 12, 14, 15
+		/// SupportByVersion Access 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193212.aspx
 		/// </summary>
 		/// <param name="objectType">NetOffice.AccessApi.Enums.AcExportXMLObjectType ObjectType</param>
 		/// <param name="dataSource">string DataSource</param>
 		/// <param name="dataTarget">optional string DataTarget = </param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 10,11,12,14,15,16)]
 		public void ExportXML(NetOffice.AccessApi.Enums.AcExportXMLObjectType objectType, string dataSource, object dataTarget)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(objectType, dataSource, dataTarget);
@@ -4574,7 +4574,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 10, 11, 12, 14, 15
+		/// SupportByVersion Access 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193212.aspx
 		/// </summary>
 		/// <param name="objectType">NetOffice.AccessApi.Enums.AcExportXMLObjectType ObjectType</param>
@@ -4582,7 +4582,7 @@ namespace NetOffice.AccessApi
 		/// <param name="dataTarget">optional string DataTarget = </param>
 		/// <param name="schemaTarget">optional string SchemaTarget = </param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 10,11,12,14,15,16)]
 		public void ExportXML(NetOffice.AccessApi.Enums.AcExportXMLObjectType objectType, string dataSource, object dataTarget, object schemaTarget)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(objectType, dataSource, dataTarget, schemaTarget);
@@ -4590,7 +4590,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 10, 11, 12, 14, 15
+		/// SupportByVersion Access 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193212.aspx
 		/// </summary>
 		/// <param name="objectType">NetOffice.AccessApi.Enums.AcExportXMLObjectType ObjectType</param>
@@ -4599,7 +4599,7 @@ namespace NetOffice.AccessApi
 		/// <param name="schemaTarget">optional string SchemaTarget = </param>
 		/// <param name="presentationTarget">optional string PresentationTarget = </param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 10,11,12,14,15,16)]
 		public void ExportXML(NetOffice.AccessApi.Enums.AcExportXMLObjectType objectType, string dataSource, object dataTarget, object schemaTarget, object presentationTarget)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(objectType, dataSource, dataTarget, schemaTarget, presentationTarget);
@@ -4607,7 +4607,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 10, 11, 12, 14, 15
+		/// SupportByVersion Access 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193212.aspx
 		/// </summary>
 		/// <param name="objectType">NetOffice.AccessApi.Enums.AcExportXMLObjectType ObjectType</param>
@@ -4617,7 +4617,7 @@ namespace NetOffice.AccessApi
 		/// <param name="presentationTarget">optional string PresentationTarget = </param>
 		/// <param name="imageTarget">optional string ImageTarget = </param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 10,11,12,14,15,16)]
 		public void ExportXML(NetOffice.AccessApi.Enums.AcExportXMLObjectType objectType, string dataSource, object dataTarget, object schemaTarget, object presentationTarget, object imageTarget)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(objectType, dataSource, dataTarget, schemaTarget, presentationTarget, imageTarget);
@@ -4625,7 +4625,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 10, 11, 12, 14, 15
+		/// SupportByVersion Access 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193212.aspx
 		/// </summary>
 		/// <param name="objectType">NetOffice.AccessApi.Enums.AcExportXMLObjectType ObjectType</param>
@@ -4636,7 +4636,7 @@ namespace NetOffice.AccessApi
 		/// <param name="imageTarget">optional string ImageTarget = </param>
 		/// <param name="encoding">optional NetOffice.AccessApi.Enums.AcExportXMLEncoding Encoding = 0</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 10,11,12,14,15,16)]
 		public void ExportXML(NetOffice.AccessApi.Enums.AcExportXMLObjectType objectType, string dataSource, object dataTarget, object schemaTarget, object presentationTarget, object imageTarget, object encoding)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(objectType, dataSource, dataTarget, schemaTarget, presentationTarget, imageTarget, encoding);
@@ -4644,7 +4644,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 11, 12, 14, 15
+		/// SupportByVersion Access 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193212.aspx
 		/// </summary>
 		/// <param name="objectType">NetOffice.AccessApi.Enums.AcExportXMLObjectType ObjectType</param>
@@ -4657,7 +4657,7 @@ namespace NetOffice.AccessApi
 		/// <param name="otherFlags">optional NetOffice.AccessApi.Enums.AcExportXMLOtherFlags OtherFlags = 0</param>
 		/// <param name="whereCondition">optional string WhereCondition = </param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 11,12,14,15)]
+		[SupportByVersionAttribute("Access", 11,12,14,15,16)]
 		public void ExportXML(NetOffice.AccessApi.Enums.AcExportXMLObjectType objectType, string dataSource, object dataTarget, object schemaTarget, object presentationTarget, object imageTarget, object encoding, object otherFlags, object whereCondition)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(objectType, dataSource, dataTarget, schemaTarget, presentationTarget, imageTarget, encoding, otherFlags, whereCondition);
@@ -4665,12 +4665,12 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 10, 11, 12, 14, 15
+		/// SupportByVersion Access 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff823157.aspx
 		/// </summary>
 		/// <param name="dataSource">string DataSource</param>
 		/// <param name="importOptions">optional NetOffice.AccessApi.Enums.AcImportXMLOption ImportOptions = 1</param>
-		[SupportByVersionAttribute("Access", 10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 10,11,12,14,15,16)]
 		public void ImportXML(string dataSource, object importOptions)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(dataSource, importOptions);
@@ -4678,12 +4678,12 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 10, 11, 12, 14, 15
+		/// SupportByVersion Access 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff823157.aspx
 		/// </summary>
 		/// <param name="dataSource">string DataSource</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 10,11,12,14,15,16)]
 		public void ImportXML(string dataSource)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(dataSource);
@@ -4691,7 +4691,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 11, 12, 14, 15
+		/// SupportByVersion Access 11, 12, 14, 15, 16
 		/// 
 		/// </summary>
 		/// <param name="objectType">NetOffice.AccessApi.Enums.AcExportXMLObjectType ObjectType</param>
@@ -4703,7 +4703,7 @@ namespace NetOffice.AccessApi
 		/// <param name="encoding">optional NetOffice.AccessApi.Enums.AcExportXMLEncoding Encoding = 0</param>
 		/// <param name="otherFlags">optional Int32 OtherFlags = 0</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("Access", 11,12,14,15)]
+		[SupportByVersionAttribute("Access", 11,12,14,15,16)]
 		public void ExportXMLOld(NetOffice.AccessApi.Enums.AcExportXMLObjectType objectType, string dataSource, object dataTarget, object schemaTarget, object presentationTarget, object imageTarget, object encoding, object otherFlags)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(objectType, dataSource, dataTarget, schemaTarget, presentationTarget, imageTarget, encoding, otherFlags);
@@ -4711,14 +4711,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 11, 12, 14, 15
+		/// SupportByVersion Access 11, 12, 14, 15, 16
 		/// 
 		/// </summary>
 		/// <param name="objectType">NetOffice.AccessApi.Enums.AcExportXMLObjectType ObjectType</param>
 		/// <param name="dataSource">string DataSource</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 11,12,14,15)]
+		[SupportByVersionAttribute("Access", 11,12,14,15,16)]
 		public void ExportXMLOld(NetOffice.AccessApi.Enums.AcExportXMLObjectType objectType, string dataSource)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(objectType, dataSource);
@@ -4726,7 +4726,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 11, 12, 14, 15
+		/// SupportByVersion Access 11, 12, 14, 15, 16
 		/// 
 		/// </summary>
 		/// <param name="objectType">NetOffice.AccessApi.Enums.AcExportXMLObjectType ObjectType</param>
@@ -4734,7 +4734,7 @@ namespace NetOffice.AccessApi
 		/// <param name="dataTarget">optional string DataTarget = </param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 11,12,14,15)]
+		[SupportByVersionAttribute("Access", 11,12,14,15,16)]
 		public void ExportXMLOld(NetOffice.AccessApi.Enums.AcExportXMLObjectType objectType, string dataSource, object dataTarget)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(objectType, dataSource, dataTarget);
@@ -4742,7 +4742,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 11, 12, 14, 15
+		/// SupportByVersion Access 11, 12, 14, 15, 16
 		/// 
 		/// </summary>
 		/// <param name="objectType">NetOffice.AccessApi.Enums.AcExportXMLObjectType ObjectType</param>
@@ -4751,7 +4751,7 @@ namespace NetOffice.AccessApi
 		/// <param name="schemaTarget">optional string SchemaTarget = </param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 11,12,14,15)]
+		[SupportByVersionAttribute("Access", 11,12,14,15,16)]
 		public void ExportXMLOld(NetOffice.AccessApi.Enums.AcExportXMLObjectType objectType, string dataSource, object dataTarget, object schemaTarget)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(objectType, dataSource, dataTarget, schemaTarget);
@@ -4759,7 +4759,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 11, 12, 14, 15
+		/// SupportByVersion Access 11, 12, 14, 15, 16
 		/// 
 		/// </summary>
 		/// <param name="objectType">NetOffice.AccessApi.Enums.AcExportXMLObjectType ObjectType</param>
@@ -4769,7 +4769,7 @@ namespace NetOffice.AccessApi
 		/// <param name="presentationTarget">optional string PresentationTarget = </param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 11,12,14,15)]
+		[SupportByVersionAttribute("Access", 11,12,14,15,16)]
 		public void ExportXMLOld(NetOffice.AccessApi.Enums.AcExportXMLObjectType objectType, string dataSource, object dataTarget, object schemaTarget, object presentationTarget)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(objectType, dataSource, dataTarget, schemaTarget, presentationTarget);
@@ -4777,7 +4777,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 11, 12, 14, 15
+		/// SupportByVersion Access 11, 12, 14, 15, 16
 		/// 
 		/// </summary>
 		/// <param name="objectType">NetOffice.AccessApi.Enums.AcExportXMLObjectType ObjectType</param>
@@ -4788,7 +4788,7 @@ namespace NetOffice.AccessApi
 		/// <param name="imageTarget">optional string ImageTarget = </param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 11,12,14,15)]
+		[SupportByVersionAttribute("Access", 11,12,14,15,16)]
 		public void ExportXMLOld(NetOffice.AccessApi.Enums.AcExportXMLObjectType objectType, string dataSource, object dataTarget, object schemaTarget, object presentationTarget, object imageTarget)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(objectType, dataSource, dataTarget, schemaTarget, presentationTarget, imageTarget);
@@ -4796,7 +4796,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 11, 12, 14, 15
+		/// SupportByVersion Access 11, 12, 14, 15, 16
 		/// 
 		/// </summary>
 		/// <param name="objectType">NetOffice.AccessApi.Enums.AcExportXMLObjectType ObjectType</param>
@@ -4808,7 +4808,7 @@ namespace NetOffice.AccessApi
 		/// <param name="encoding">optional NetOffice.AccessApi.Enums.AcExportXMLEncoding Encoding = 0</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 11,12,14,15)]
+		[SupportByVersionAttribute("Access", 11,12,14,15,16)]
 		public void ExportXMLOld(NetOffice.AccessApi.Enums.AcExportXMLObjectType objectType, string dataSource, object dataTarget, object schemaTarget, object presentationTarget, object imageTarget, object encoding)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(objectType, dataSource, dataTarget, schemaTarget, presentationTarget, imageTarget, encoding);
@@ -4816,7 +4816,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 11, 12, 14, 15
+		/// SupportByVersion Access 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff844810.aspx
 		/// </summary>
 		/// <param name="dataSource">string DataSource</param>
@@ -4824,7 +4824,7 @@ namespace NetOffice.AccessApi
 		/// <param name="outputTarget">string OutputTarget</param>
 		/// <param name="wellFormedXMLOutput">optional bool WellFormedXMLOutput = false</param>
 		/// <param name="scriptOption">optional NetOffice.AccessApi.Enums.AcTransformXMLScriptOption ScriptOption = 1</param>
-		[SupportByVersionAttribute("Access", 11,12,14,15)]
+		[SupportByVersionAttribute("Access", 11,12,14,15,16)]
 		public void TransformXML(string dataSource, string transformSource, string outputTarget, object wellFormedXMLOutput, object scriptOption)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(dataSource, transformSource, outputTarget, wellFormedXMLOutput, scriptOption);
@@ -4832,14 +4832,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 11, 12, 14, 15
+		/// SupportByVersion Access 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff844810.aspx
 		/// </summary>
 		/// <param name="dataSource">string DataSource</param>
 		/// <param name="transformSource">string TransformSource</param>
 		/// <param name="outputTarget">string OutputTarget</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 11,12,14,15)]
+		[SupportByVersionAttribute("Access", 11,12,14,15,16)]
 		public void TransformXML(string dataSource, string transformSource, string outputTarget)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(dataSource, transformSource, outputTarget);
@@ -4847,7 +4847,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 11, 12, 14, 15
+		/// SupportByVersion Access 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff844810.aspx
 		/// </summary>
 		/// <param name="dataSource">string DataSource</param>
@@ -4855,7 +4855,7 @@ namespace NetOffice.AccessApi
 		/// <param name="outputTarget">string OutputTarget</param>
 		/// <param name="wellFormedXMLOutput">optional bool WellFormedXMLOutput = false</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 11,12,14,15)]
+		[SupportByVersionAttribute("Access", 11,12,14,15,16)]
 		public void TransformXML(string dataSource, string transformSource, string outputTarget, object wellFormedXMLOutput)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(dataSource, transformSource, outputTarget, wellFormedXMLOutput);
@@ -4863,10 +4863,10 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 11, 12, 14, 15
+		/// SupportByVersion Access 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff834773.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Access", 11,12,14,15)]
+		[SupportByVersionAttribute("Access", 11,12,14,15,16)]
 		public NetOffice.AccessApi._AdditionalData CreateAdditionalData()
 		{
 			object[] paramsArray = null;
@@ -4876,12 +4876,12 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 11, 12, 14, 15
+		/// SupportByVersion Access 11, 12, 14, 15, 16
 		/// 
 		/// </summary>
 		/// <param name="dispid">Int32 dispid</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("Access", 11,12,14,15)]
+		[SupportByVersionAttribute("Access", 11,12,14,15,16)]
 		public bool IsMemberSafe(Int32 dispid)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(dispid);
@@ -4890,12 +4890,12 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 12, 14, 15
+		/// SupportByVersion Access 12, 14, 15, 16
 		/// 
 		/// </summary>
 		/// <param name="filepath">string filepath</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("Access", 12,14,15)]
+		[SupportByVersionAttribute("Access", 12,14,15,16)]
 		public void NewCurrentDatabaseOld(string filepath)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filepath);
@@ -4903,7 +4903,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 12, 14, 15
+		/// SupportByVersion Access 12, 14, 15, 16
 		/// 
 		/// </summary>
 		/// <param name="formName">string FormName</param>
@@ -4916,7 +4916,7 @@ namespace NetOffice.AccessApi
 		/// <param name="width">optional object Width</param>
 		/// <param name="height">optional object Height</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("Access", 12,14,15)]
+		[SupportByVersionAttribute("Access", 12,14,15,16)]
 		public NetOffice.AccessApi.Control CreateControlOld(string formName, NetOffice.AccessApi.Enums.AcControlType controlType, object section, object parent, object columnName, object left, object top, object width, object height)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(formName, controlType, section, parent, columnName, left, top, width, height);
@@ -4926,14 +4926,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 12, 14, 15
+		/// SupportByVersion Access 12, 14, 15, 16
 		/// 
 		/// </summary>
 		/// <param name="formName">string FormName</param>
 		/// <param name="controlType">NetOffice.AccessApi.Enums.AcControlType ControlType</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 12,14,15)]
+		[SupportByVersionAttribute("Access", 12,14,15,16)]
 		public NetOffice.AccessApi.Control CreateControlOld(string formName, NetOffice.AccessApi.Enums.AcControlType controlType)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(formName, controlType);
@@ -4943,7 +4943,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 12, 14, 15
+		/// SupportByVersion Access 12, 14, 15, 16
 		/// 
 		/// </summary>
 		/// <param name="formName">string FormName</param>
@@ -4951,7 +4951,7 @@ namespace NetOffice.AccessApi
 		/// <param name="section">optional NetOffice.AccessApi.Enums.AcSection Section = 0</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 12,14,15)]
+		[SupportByVersionAttribute("Access", 12,14,15,16)]
 		public NetOffice.AccessApi.Control CreateControlOld(string formName, NetOffice.AccessApi.Enums.AcControlType controlType, object section)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(formName, controlType, section);
@@ -4961,7 +4961,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 12, 14, 15
+		/// SupportByVersion Access 12, 14, 15, 16
 		/// 
 		/// </summary>
 		/// <param name="formName">string FormName</param>
@@ -4970,7 +4970,7 @@ namespace NetOffice.AccessApi
 		/// <param name="parent">optional object Parent</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 12,14,15)]
+		[SupportByVersionAttribute("Access", 12,14,15,16)]
 		public NetOffice.AccessApi.Control CreateControlOld(string formName, NetOffice.AccessApi.Enums.AcControlType controlType, object section, object parent)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(formName, controlType, section, parent);
@@ -4980,7 +4980,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 12, 14, 15
+		/// SupportByVersion Access 12, 14, 15, 16
 		/// 
 		/// </summary>
 		/// <param name="formName">string FormName</param>
@@ -4990,7 +4990,7 @@ namespace NetOffice.AccessApi
 		/// <param name="columnName">optional object ColumnName</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 12,14,15)]
+		[SupportByVersionAttribute("Access", 12,14,15,16)]
 		public NetOffice.AccessApi.Control CreateControlOld(string formName, NetOffice.AccessApi.Enums.AcControlType controlType, object section, object parent, object columnName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(formName, controlType, section, parent, columnName);
@@ -5000,7 +5000,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 12, 14, 15
+		/// SupportByVersion Access 12, 14, 15, 16
 		/// 
 		/// </summary>
 		/// <param name="formName">string FormName</param>
@@ -5011,7 +5011,7 @@ namespace NetOffice.AccessApi
 		/// <param name="left">optional object Left</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 12,14,15)]
+		[SupportByVersionAttribute("Access", 12,14,15,16)]
 		public NetOffice.AccessApi.Control CreateControlOld(string formName, NetOffice.AccessApi.Enums.AcControlType controlType, object section, object parent, object columnName, object left)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(formName, controlType, section, parent, columnName, left);
@@ -5021,7 +5021,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 12, 14, 15
+		/// SupportByVersion Access 12, 14, 15, 16
 		/// 
 		/// </summary>
 		/// <param name="formName">string FormName</param>
@@ -5033,7 +5033,7 @@ namespace NetOffice.AccessApi
 		/// <param name="top">optional object Top</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 12,14,15)]
+		[SupportByVersionAttribute("Access", 12,14,15,16)]
 		public NetOffice.AccessApi.Control CreateControlOld(string formName, NetOffice.AccessApi.Enums.AcControlType controlType, object section, object parent, object columnName, object left, object top)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(formName, controlType, section, parent, columnName, left, top);
@@ -5043,7 +5043,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 12, 14, 15
+		/// SupportByVersion Access 12, 14, 15, 16
 		/// 
 		/// </summary>
 		/// <param name="formName">string FormName</param>
@@ -5056,7 +5056,7 @@ namespace NetOffice.AccessApi
 		/// <param name="width">optional object Width</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 12,14,15)]
+		[SupportByVersionAttribute("Access", 12,14,15,16)]
 		public NetOffice.AccessApi.Control CreateControlOld(string formName, NetOffice.AccessApi.Enums.AcControlType controlType, object section, object parent, object columnName, object left, object top, object width)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(formName, controlType, section, parent, columnName, left, top, width);
@@ -5066,7 +5066,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 12, 14, 15
+		/// SupportByVersion Access 12, 14, 15, 16
 		/// 
 		/// </summary>
 		/// <param name="reportName">string ReportName</param>
@@ -5079,7 +5079,7 @@ namespace NetOffice.AccessApi
 		/// <param name="width">optional object Width</param>
 		/// <param name="height">optional object Height</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("Access", 12,14,15)]
+		[SupportByVersionAttribute("Access", 12,14,15,16)]
 		public NetOffice.AccessApi.Control CreateReportControlOld(string reportName, NetOffice.AccessApi.Enums.AcControlType controlType, object section, object parent, object columnName, object left, object top, object width, object height)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(reportName, controlType, section, parent, columnName, left, top, width, height);
@@ -5089,14 +5089,14 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 12, 14, 15
+		/// SupportByVersion Access 12, 14, 15, 16
 		/// 
 		/// </summary>
 		/// <param name="reportName">string ReportName</param>
 		/// <param name="controlType">NetOffice.AccessApi.Enums.AcControlType ControlType</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 12,14,15)]
+		[SupportByVersionAttribute("Access", 12,14,15,16)]
 		public NetOffice.AccessApi.Control CreateReportControlOld(string reportName, NetOffice.AccessApi.Enums.AcControlType controlType)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(reportName, controlType);
@@ -5106,7 +5106,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 12, 14, 15
+		/// SupportByVersion Access 12, 14, 15, 16
 		/// 
 		/// </summary>
 		/// <param name="reportName">string ReportName</param>
@@ -5114,7 +5114,7 @@ namespace NetOffice.AccessApi
 		/// <param name="section">optional NetOffice.AccessApi.Enums.AcSection Section = 0</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 12,14,15)]
+		[SupportByVersionAttribute("Access", 12,14,15,16)]
 		public NetOffice.AccessApi.Control CreateReportControlOld(string reportName, NetOffice.AccessApi.Enums.AcControlType controlType, object section)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(reportName, controlType, section);
@@ -5124,7 +5124,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 12, 14, 15
+		/// SupportByVersion Access 12, 14, 15, 16
 		/// 
 		/// </summary>
 		/// <param name="reportName">string ReportName</param>
@@ -5133,7 +5133,7 @@ namespace NetOffice.AccessApi
 		/// <param name="parent">optional object Parent</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 12,14,15)]
+		[SupportByVersionAttribute("Access", 12,14,15,16)]
 		public NetOffice.AccessApi.Control CreateReportControlOld(string reportName, NetOffice.AccessApi.Enums.AcControlType controlType, object section, object parent)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(reportName, controlType, section, parent);
@@ -5143,7 +5143,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 12, 14, 15
+		/// SupportByVersion Access 12, 14, 15, 16
 		/// 
 		/// </summary>
 		/// <param name="reportName">string ReportName</param>
@@ -5153,7 +5153,7 @@ namespace NetOffice.AccessApi
 		/// <param name="columnName">optional object ColumnName</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 12,14,15)]
+		[SupportByVersionAttribute("Access", 12,14,15,16)]
 		public NetOffice.AccessApi.Control CreateReportControlOld(string reportName, NetOffice.AccessApi.Enums.AcControlType controlType, object section, object parent, object columnName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(reportName, controlType, section, parent, columnName);
@@ -5163,7 +5163,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 12, 14, 15
+		/// SupportByVersion Access 12, 14, 15, 16
 		/// 
 		/// </summary>
 		/// <param name="reportName">string ReportName</param>
@@ -5174,7 +5174,7 @@ namespace NetOffice.AccessApi
 		/// <param name="left">optional object Left</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 12,14,15)]
+		[SupportByVersionAttribute("Access", 12,14,15,16)]
 		public NetOffice.AccessApi.Control CreateReportControlOld(string reportName, NetOffice.AccessApi.Enums.AcControlType controlType, object section, object parent, object columnName, object left)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(reportName, controlType, section, parent, columnName, left);
@@ -5184,7 +5184,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 12, 14, 15
+		/// SupportByVersion Access 12, 14, 15, 16
 		/// 
 		/// </summary>
 		/// <param name="reportName">string ReportName</param>
@@ -5196,7 +5196,7 @@ namespace NetOffice.AccessApi
 		/// <param name="top">optional object Top</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 12,14,15)]
+		[SupportByVersionAttribute("Access", 12,14,15,16)]
 		public NetOffice.AccessApi.Control CreateReportControlOld(string reportName, NetOffice.AccessApi.Enums.AcControlType controlType, object section, object parent, object columnName, object left, object top)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(reportName, controlType, section, parent, columnName, left, top);
@@ -5206,7 +5206,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 12, 14, 15
+		/// SupportByVersion Access 12, 14, 15, 16
 		/// 
 		/// </summary>
 		/// <param name="reportName">string ReportName</param>
@@ -5219,7 +5219,7 @@ namespace NetOffice.AccessApi
 		/// <param name="width">optional object Width</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 12,14,15)]
+		[SupportByVersionAttribute("Access", 12,14,15,16)]
 		public NetOffice.AccessApi.Control CreateReportControlOld(string reportName, NetOffice.AccessApi.Enums.AcControlType controlType, object section, object parent, object columnName, object left, object top, object width)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(reportName, controlType, section, parent, columnName, left, top, width);
@@ -5229,7 +5229,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 12, 14, 15
+		/// SupportByVersion Access 12, 14, 15, 16
 		/// 
 		/// </summary>
 		/// <param name="formName">string FormName</param>
@@ -5242,7 +5242,7 @@ namespace NetOffice.AccessApi
 		/// <param name="width">Int32 Width</param>
 		/// <param name="height">Int32 Height</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("Access", 12,14,15)]
+		[SupportByVersionAttribute("Access", 12,14,15,16)]
 		public NetOffice.AccessApi.Control CreateControlExOld(string formName, NetOffice.AccessApi.Enums.AcControlType controlType, NetOffice.AccessApi.Enums.AcSection section, string parent, string controlSource, Int32 left, Int32 top, Int32 width, Int32 height)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(formName, controlType, section, parent, controlSource, left, top, width, height);
@@ -5252,7 +5252,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 12, 14, 15
+		/// SupportByVersion Access 12, 14, 15, 16
 		/// 
 		/// </summary>
 		/// <param name="reportName">string ReportName</param>
@@ -5265,7 +5265,7 @@ namespace NetOffice.AccessApi
 		/// <param name="width">Int32 Width</param>
 		/// <param name="height">Int32 Height</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("Access", 12,14,15)]
+		[SupportByVersionAttribute("Access", 12,14,15,16)]
 		public NetOffice.AccessApi.Control CreateReportControlExOld(string reportName, NetOffice.AccessApi.Enums.AcControlType controlType, NetOffice.AccessApi.Enums.AcSection section, string parent, string controlName, Int32 left, Int32 top, Int32 width, Int32 height)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(reportName, controlType, section, parent, controlName, left, top, width, height);
@@ -5275,12 +5275,12 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 12, 14, 15
+		/// SupportByVersion Access 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196012.aspx
 		/// </summary>
 		/// <param name="richText">object RichText</param>
 		/// <param name="length">optional object Length</param>
-		[SupportByVersionAttribute("Access", 12,14,15)]
+		[SupportByVersionAttribute("Access", 12,14,15,16)]
 		public string PlainText(object richText, object length)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(richText, length);
@@ -5289,12 +5289,12 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 12, 14, 15
+		/// SupportByVersion Access 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196012.aspx
 		/// </summary>
 		/// <param name="richText">object RichText</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 12,14,15)]
+		[SupportByVersionAttribute("Access", 12,14,15,16)]
 		public string PlainText(object richText)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(richText);
@@ -5303,12 +5303,12 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 12, 14, 15
+		/// SupportByVersion Access 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192028.aspx
 		/// </summary>
 		/// <param name="plainText">object PlainText</param>
 		/// <param name="length">optional object Length</param>
-		[SupportByVersionAttribute("Access", 12,14,15)]
+		[SupportByVersionAttribute("Access", 12,14,15,16)]
 		public string HtmlEncode(object plainText, object length)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(plainText, length);
@@ -5317,12 +5317,12 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 12, 14, 15
+		/// SupportByVersion Access 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192028.aspx
 		/// </summary>
 		/// <param name="plainText">object PlainText</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 12,14,15)]
+		[SupportByVersionAttribute("Access", 12,14,15,16)]
 		public string HtmlEncode(object plainText)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(plainText);
@@ -5331,12 +5331,12 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 12, 14, 15
+		/// SupportByVersion Access 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194416.aspx
 		/// </summary>
 		/// <param name="customUIName">string CustomUIName</param>
 		/// <param name="customUIXML">string CustomUIXML</param>
-		[SupportByVersionAttribute("Access", 12,14,15)]
+		[SupportByVersionAttribute("Access", 12,14,15,16)]
 		public void LoadCustomUI(string customUIName, string customUIXML)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(customUIName, customUIXML);
@@ -5344,11 +5344,11 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 12, 14, 15
+		/// SupportByVersion Access 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193467.aspx
 		/// </summary>
 		/// <param name="path">string Path</param>
-		[SupportByVersionAttribute("Access", 12,14,15)]
+		[SupportByVersionAttribute("Access", 12,14,15,16)]
 		public void ExportNavigationPane(string path)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(path);
@@ -5356,12 +5356,12 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 12, 14, 15
+		/// SupportByVersion Access 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193985.aspx
 		/// </summary>
 		/// <param name="path">string Path</param>
 		/// <param name="fAppendOnly">optional bool fAppendOnly = false</param>
-		[SupportByVersionAttribute("Access", 12,14,15)]
+		[SupportByVersionAttribute("Access", 12,14,15,16)]
 		public void ImportNavigationPane(string path, object fAppendOnly)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(path, fAppendOnly);
@@ -5369,12 +5369,12 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 12, 14, 15
+		/// SupportByVersion Access 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193985.aspx
 		/// </summary>
 		/// <param name="path">string Path</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 12,14,15)]
+		[SupportByVersionAttribute("Access", 12,14,15,16)]
 		public void ImportNavigationPane(string path)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(path);
@@ -5382,13 +5382,13 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 12, 14, 15
+		/// SupportByVersion Access 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835727.aspx
 		/// </summary>
 		/// <param name="tableName">string TableName</param>
 		/// <param name="columnName">string ColumnName</param>
 		/// <param name="queryString">string queryString</param>
-		[SupportByVersionAttribute("Access", 12,14,15)]
+		[SupportByVersionAttribute("Access", 12,14,15,16)]
 		public string ColumnHistory(string tableName, string columnName, string queryString)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(tableName, columnName, queryString);
@@ -5397,7 +5397,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 12, 14, 15
+		/// SupportByVersion Access 12, 14, 15, 16
 		/// 
 		/// </summary>
 		/// <param name="externalExporter">object ExternalExporter</param>
@@ -5408,7 +5408,7 @@ namespace NetOffice.AccessApi
 		/// <param name="fromPage">optional Int32 FromPage = 1</param>
 		/// <param name="toPage">optional Int32 ToPage = -1</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("Access", 12,14,15)]
+		[SupportByVersionAttribute("Access", 12,14,15,16)]
 		public void ExportCustomFixedFormat(object externalExporter, string outputFileName, string objectName, NetOffice.AccessApi.Enums.AcOutputObjectType objectType, object selectedRecords, object fromPage, object toPage)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(externalExporter, outputFileName, objectName, objectType, selectedRecords, fromPage, toPage);
@@ -5416,7 +5416,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 12, 14, 15
+		/// SupportByVersion Access 12, 14, 15, 16
 		/// 
 		/// </summary>
 		/// <param name="externalExporter">object ExternalExporter</param>
@@ -5425,7 +5425,7 @@ namespace NetOffice.AccessApi
 		/// <param name="objectType">NetOffice.AccessApi.Enums.AcOutputObjectType ObjectType</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 12,14,15)]
+		[SupportByVersionAttribute("Access", 12,14,15,16)]
 		public void ExportCustomFixedFormat(object externalExporter, string outputFileName, string objectName, NetOffice.AccessApi.Enums.AcOutputObjectType objectType)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(externalExporter, outputFileName, objectName, objectType);
@@ -5433,7 +5433,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 12, 14, 15
+		/// SupportByVersion Access 12, 14, 15, 16
 		/// 
 		/// </summary>
 		/// <param name="externalExporter">object ExternalExporter</param>
@@ -5443,7 +5443,7 @@ namespace NetOffice.AccessApi
 		/// <param name="selectedRecords">optional bool SelectedRecords = false</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 12,14,15)]
+		[SupportByVersionAttribute("Access", 12,14,15,16)]
 		public void ExportCustomFixedFormat(object externalExporter, string outputFileName, string objectName, NetOffice.AccessApi.Enums.AcOutputObjectType objectType, object selectedRecords)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(externalExporter, outputFileName, objectName, objectType, selectedRecords);
@@ -5451,7 +5451,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 12, 14, 15
+		/// SupportByVersion Access 12, 14, 15, 16
 		/// 
 		/// </summary>
 		/// <param name="externalExporter">object ExternalExporter</param>
@@ -5462,7 +5462,7 @@ namespace NetOffice.AccessApi
 		/// <param name="fromPage">optional Int32 FromPage = 1</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 12,14,15)]
+		[SupportByVersionAttribute("Access", 12,14,15,16)]
 		public void ExportCustomFixedFormat(object externalExporter, string outputFileName, string objectName, NetOffice.AccessApi.Enums.AcOutputObjectType objectType, object selectedRecords, object fromPage)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(externalExporter, outputFileName, objectName, objectType, selectedRecords, fromPage);
@@ -5470,13 +5470,13 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 14, 15
+		/// SupportByVersion Access 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff821429.aspx
 		/// </summary>
 		/// <param name="objectType">NetOffice.AccessApi.Enums.AcObjectType ObjectType</param>
 		/// <param name="objectName">string ObjectName</param>
 		/// <param name="fileName">string FileName</param>
-		[SupportByVersionAttribute("Access", 14,15)]
+		[SupportByVersionAttribute("Access", 14,15,16)]
 		public void SaveAsAXL(NetOffice.AccessApi.Enums.AcObjectType objectType, string objectName, string fileName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(objectType, objectName, fileName);
@@ -5484,13 +5484,13 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 14, 15
+		/// SupportByVersion Access 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845765.aspx
 		/// </summary>
 		/// <param name="objectType">NetOffice.AccessApi.Enums.AcObjectType ObjectType</param>
 		/// <param name="objectName">string ObjectName</param>
 		/// <param name="fileName">string FileName</param>
-		[SupportByVersionAttribute("Access", 14,15)]
+		[SupportByVersionAttribute("Access", 14,15,16)]
 		public void LoadFromAXL(NetOffice.AccessApi.Enums.AcObjectType objectType, string objectName, string fileName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(objectType, objectName, fileName);
@@ -5498,7 +5498,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 14, 15
+		/// SupportByVersion Access 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192852.aspx
 		/// </summary>
 		/// <param name="path">string Path</param>
@@ -5512,7 +5512,7 @@ namespace NetOffice.AccessApi
 		/// <param name="applicationPart">optional object ApplicationPart</param>
 		/// <param name="includeData">optional object IncludeData</param>
 		/// <param name="variation">optional object Variation</param>
-		[SupportByVersionAttribute("Access", 14,15)]
+		[SupportByVersionAttribute("Access", 14,15,16)]
 		public void SaveAsTemplate(string path, string title, string iconPath, string coreTable, string category, object previewPath, object description, object instantiationForm, object applicationPart, object includeData, object variation)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(path, title, iconPath, coreTable, category, previewPath, description, instantiationForm, applicationPart, includeData, variation);
@@ -5520,7 +5520,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 14, 15
+		/// SupportByVersion Access 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192852.aspx
 		/// </summary>
 		/// <param name="path">string Path</param>
@@ -5529,7 +5529,7 @@ namespace NetOffice.AccessApi
 		/// <param name="coreTable">string CoreTable</param>
 		/// <param name="category">string Category</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 14,15)]
+		[SupportByVersionAttribute("Access", 14,15,16)]
 		public void SaveAsTemplate(string path, string title, string iconPath, string coreTable, string category)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(path, title, iconPath, coreTable, category);
@@ -5537,7 +5537,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 14, 15
+		/// SupportByVersion Access 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192852.aspx
 		/// </summary>
 		/// <param name="path">string Path</param>
@@ -5547,7 +5547,7 @@ namespace NetOffice.AccessApi
 		/// <param name="category">string Category</param>
 		/// <param name="previewPath">optional object PreviewPath</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 14,15)]
+		[SupportByVersionAttribute("Access", 14,15,16)]
 		public void SaveAsTemplate(string path, string title, string iconPath, string coreTable, string category, object previewPath)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(path, title, iconPath, coreTable, category, previewPath);
@@ -5555,7 +5555,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 14, 15
+		/// SupportByVersion Access 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192852.aspx
 		/// </summary>
 		/// <param name="path">string Path</param>
@@ -5566,7 +5566,7 @@ namespace NetOffice.AccessApi
 		/// <param name="previewPath">optional object PreviewPath</param>
 		/// <param name="description">optional object Description</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 14,15)]
+		[SupportByVersionAttribute("Access", 14,15,16)]
 		public void SaveAsTemplate(string path, string title, string iconPath, string coreTable, string category, object previewPath, object description)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(path, title, iconPath, coreTable, category, previewPath, description);
@@ -5574,7 +5574,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 14, 15
+		/// SupportByVersion Access 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192852.aspx
 		/// </summary>
 		/// <param name="path">string Path</param>
@@ -5586,7 +5586,7 @@ namespace NetOffice.AccessApi
 		/// <param name="description">optional object Description</param>
 		/// <param name="instantiationForm">optional object InstantiationForm</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 14,15)]
+		[SupportByVersionAttribute("Access", 14,15,16)]
 		public void SaveAsTemplate(string path, string title, string iconPath, string coreTable, string category, object previewPath, object description, object instantiationForm)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(path, title, iconPath, coreTable, category, previewPath, description, instantiationForm);
@@ -5594,7 +5594,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 14, 15
+		/// SupportByVersion Access 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192852.aspx
 		/// </summary>
 		/// <param name="path">string Path</param>
@@ -5607,7 +5607,7 @@ namespace NetOffice.AccessApi
 		/// <param name="instantiationForm">optional object InstantiationForm</param>
 		/// <param name="applicationPart">optional object ApplicationPart</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 14,15)]
+		[SupportByVersionAttribute("Access", 14,15,16)]
 		public void SaveAsTemplate(string path, string title, string iconPath, string coreTable, string category, object previewPath, object description, object instantiationForm, object applicationPart)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(path, title, iconPath, coreTable, category, previewPath, description, instantiationForm, applicationPart);
@@ -5615,7 +5615,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 14, 15
+		/// SupportByVersion Access 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192852.aspx
 		/// </summary>
 		/// <param name="path">string Path</param>
@@ -5629,7 +5629,7 @@ namespace NetOffice.AccessApi
 		/// <param name="applicationPart">optional object ApplicationPart</param>
 		/// <param name="includeData">optional object IncludeData</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 14,15)]
+		[SupportByVersionAttribute("Access", 14,15,16)]
 		public void SaveAsTemplate(string path, string title, string iconPath, string coreTable, string category, object previewPath, object description, object instantiationForm, object applicationPart, object includeData)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(path, title, iconPath, coreTable, category, previewPath, description, instantiationForm, applicationPart, includeData);
@@ -5637,11 +5637,11 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 14, 15
+		/// SupportByVersion Access 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835421.aspx
 		/// </summary>
 		/// <param name="path">string Path</param>
-		[SupportByVersionAttribute("Access", 14,15)]
+		[SupportByVersionAttribute("Access", 14,15,16)]
 		public void InstantiateTemplate(string path)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(path);
@@ -5649,11 +5649,11 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 14, 15
+		/// SupportByVersion Access 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff834388.aspx
 		/// </summary>
 		/// <param name="displayOption">NetOffice.AccessApi.Enums.AcWebUserDisplay DisplayOption</param>
-		[SupportByVersionAttribute("Access", 14,15)]
+		[SupportByVersionAttribute("Access", 14,15,16)]
 		public object CurrentWebUser(NetOffice.AccessApi.Enums.AcWebUserDisplay displayOption)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(displayOption);
@@ -5670,11 +5670,11 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 14, 15
+		/// SupportByVersion Access 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836539.aspx
 		/// </summary>
 		/// <param name="displayOption">NetOffice.AccessApi.Enums.AcWebUserGroupsDisplay DisplayOption</param>
-		[SupportByVersionAttribute("Access", 14,15)]
+		[SupportByVersionAttribute("Access", 14,15,16)]
 		public object CurrentWebUserGroups(NetOffice.AccessApi.Enums.AcWebUserGroupsDisplay displayOption)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(displayOption);
@@ -5691,11 +5691,11 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 14, 15
+		/// SupportByVersion Access 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193453.aspx
 		/// </summary>
 		/// <param name="groupNameOrID">object GroupNameOrID</param>
-		[SupportByVersionAttribute("Access", 14,15)]
+		[SupportByVersionAttribute("Access", 14,15,16)]
 		public bool IsCurrentWebUserInGroup(object groupNameOrID)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(groupNameOrID);
@@ -5704,12 +5704,12 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 14, 15
+		/// SupportByVersion Access 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff834368.aspx
 		/// </summary>
 		/// <param name="objectType">NetOffice.AccessApi.Enums.AcObjectType ObjectType</param>
 		/// <param name="objectName">string ObjectName</param>
-		[SupportByVersionAttribute("Access", 14,15)]
+		[SupportByVersionAttribute("Access", 14,15,16)]
 		public void DirtyObject(NetOffice.AccessApi.Enums.AcObjectType objectType, string objectName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(objectType, objectName);
@@ -5717,11 +5717,11 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 14, 15
+		/// SupportByVersion Access 14, 15, 16
 		/// 
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("Access", 14,15)]
+		[SupportByVersionAttribute("Access", 14,15,16)]
 		public bool IsClient()
 		{
 			object[] paramsArray = null;

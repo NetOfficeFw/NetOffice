@@ -6,16 +6,8 @@ namespace NetOffice.PowerPointApi.Tools
  	/// <summary>
     /// Task pane UserControl instances can implement these interface in a NetOffice Tools Addin as a special service
     /// </summary>
-    public interface ITaskPane
-    {
-        /// <summary>
-        /// After startup to serve the application instance and custom arguments(if set)
-        /// </summary>
-        /// <param name="application">host application instance</param>
-		/// <param name="parentPane">custom task pane definition </param>
-		/// <param name="customArguments">custom arguments</param>
-        void OnConnection(PowerPoint.Application application, NetOffice.OfficeApi._CustomTaskPane parentPane, object[] customArguments);
-
+    public interface ITaskPane : OfficeApi.Tools.ITaskPaneConnection<PowerPoint.Application>
+    {      
 		/// <summary>
         /// While Excel Application shutdown. The method is not called in case of unexpected termination (may user kill the instance in task manager)
         /// </summary>

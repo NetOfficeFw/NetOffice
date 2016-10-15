@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using NetRuntimeSystem = System;
 using System.Runtime.InteropServices;
 using System.Runtime.CompilerServices;
@@ -11,10 +11,10 @@ namespace NetOffice.OfficeApi
 {
 	///<summary>
 	/// DispatchInterface CommandBarControls 
-	/// SupportByVersion Office, 9,10,11,12,14,15
+	/// SupportByVersion Office, 9,10,11,12,14,15,16
 	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff862747.aspx
 	///</summary>
-	[SupportByVersionAttribute("Office", 9,10,11,12,14,15)]
+	[SupportByVersionAttribute("Office", 9,10,11,12,14,15,16)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class CommandBarControls : _IMsoDispObj ,IEnumerable<NetOffice.OfficeApi.CommandBarControl>
 	{
@@ -94,11 +94,11 @@ namespace NetOffice.OfficeApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion Office 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff860596.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Office", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Office", 9,10,11,12,14,15,16)]
 		public Int32 Count
 		{
 			get
@@ -110,11 +110,11 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
 		/// <param name="index">object Index</param>
-		[SupportByVersionAttribute("Office", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Office", 9,10,11,12,14,15,16)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
 		public NetOffice.OfficeApi.CommandBarControl this[object index]
 		{
@@ -128,11 +128,11 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff860798.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Office", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Office", 9,10,11,12,14,15,16)]
 		public NetOffice.OfficeApi.CommandBar Parent
 		{
 			get
@@ -149,7 +149,7 @@ namespace NetOffice.OfficeApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByVersion Office 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff861771.aspx
 		/// </summary>
 		/// <param name="type">optional object Type</param>
@@ -157,7 +157,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="parameter">optional object Parameter</param>
 		/// <param name="before">optional object Before</param>
 		/// <param name="temporary">optional object Temporary</param>
-		[SupportByVersionAttribute("Office", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Office", 9,10,11,12,14,15,16)]
 		public NetOffice.OfficeApi.CommandBarControl Add(object type, object id, object parameter, object before, object temporary)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, id, parameter, before, temporary);
@@ -167,11 +167,11 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff861771.aspx
 		/// </summary>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Office", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Office", 9,10,11,12,14,15,16)]
 		public NetOffice.OfficeApi.CommandBarControl Add()
 		{
 			object[] paramsArray = null;
@@ -181,12 +181,12 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff861771.aspx
 		/// </summary>
 		/// <param name="type">optional object Type</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Office", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Office", 9,10,11,12,14,15,16)]
 		public NetOffice.OfficeApi.CommandBarControl Add(object type)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type);
@@ -196,13 +196,13 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff861771.aspx
 		/// </summary>
 		/// <param name="type">optional object Type</param>
 		/// <param name="id">optional object Id</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Office", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Office", 9,10,11,12,14,15,16)]
 		public NetOffice.OfficeApi.CommandBarControl Add(object type, object id)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, id);
@@ -212,14 +212,14 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff861771.aspx
 		/// </summary>
 		/// <param name="type">optional object Type</param>
 		/// <param name="id">optional object Id</param>
 		/// <param name="parameter">optional object Parameter</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Office", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Office", 9,10,11,12,14,15,16)]
 		public NetOffice.OfficeApi.CommandBarControl Add(object type, object id, object parameter)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, id, parameter);
@@ -229,7 +229,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff861771.aspx
 		/// </summary>
 		/// <param name="type">optional object Type</param>
@@ -237,7 +237,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="parameter">optional object Parameter</param>
 		/// <param name="before">optional object Before</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Office", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Office", 9,10,11,12,14,15,16)]
 		public NetOffice.OfficeApi.CommandBarControl Add(object type, object id, object parameter, object before)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, id, parameter, before);
@@ -251,9 +251,9 @@ namespace NetOffice.OfficeApi
        #region IEnumerable<NetOffice.OfficeApi.CommandBarControl> Member
         
         /// <summary>
-		/// SupportByVersionAttribute Office, 9,10,11,12,14,15
+		/// SupportByVersionAttribute Office, 9,10,11,12,14,15,16
 		/// </summary>
-		[SupportByVersionAttribute("Office", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Office", 9,10,11,12,14,15,16)]
        public IEnumerator<NetOffice.OfficeApi.CommandBarControl> GetEnumerator()  
        {
            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
@@ -266,9 +266,9 @@ namespace NetOffice.OfficeApi
 		#region IEnumerable Members
        
 		/// <summary>
-		/// SupportByVersionAttribute Office, 9,10,11,12,14,15
+		/// SupportByVersionAttribute Office, 9,10,11,12,14,15,16
 		/// </summary>
-		[SupportByVersionAttribute("Office", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Office", 9,10,11,12,14,15,16)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
 			return NetOffice.Utils.GetProxyEnumeratorAsProperty(this);

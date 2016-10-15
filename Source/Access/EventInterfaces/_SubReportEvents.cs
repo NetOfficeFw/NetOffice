@@ -10,15 +10,15 @@ namespace NetOffice.AccessApi
 	
 	#region SinkPoint Interface
 
-	[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+	[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
 	[ComImport, Guid("BC9E4351-F037-11CD-8701-00AA003F0F07"), InterfaceType(ComInterfaceType.InterfaceIsIDispatch), TypeLibType((short)0x1010)]
 	public interface _SubReportEvents
 	{
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2019)]
 		void Enter();
 
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2075)]
 		void Exit([In] [Out] ref object cancel);
 	}

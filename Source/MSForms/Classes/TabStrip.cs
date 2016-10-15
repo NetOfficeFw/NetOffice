@@ -103,7 +103,7 @@ namespace NetOffice.MSFormsApi
 		}
 		
 		///<summary>
-        ///creates a new instance of TabStrip 
+        /// Creates a new instance of TabStrip 
         ///</summary>		
 		public TabStrip():base("MSForms.TabStrip")
 		{
@@ -111,7 +111,7 @@ namespace NetOffice.MSFormsApi
 		}
 		
 		///<summary>
-        ///creates a new instance of TabStrip
+        /// Creates a new instance of TabStrip
         ///</summary>
         ///<param name="progId">registered ProgID</param>
 		public TabStrip(string progId):base(progId)
@@ -124,12 +124,12 @@ namespace NetOffice.MSFormsApi
 		#region Static CoClass Methods
 
 		/// <summary>
-        /// returns all running MSForms.TabStrip objects from the running object table(ROT)
+        /// Returns all running MSForms.TabStrip objects from the environment/system
         /// </summary>
         /// <returns>an MSForms.TabStrip array</returns>
 		public static NetOffice.MSFormsApi.TabStrip[] GetActiveInstances()
 		{		
-			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("MSForms","TabStrip");
+			IDisposableEnumeration proxyList = NetOffice.ProxyService.GetActiveInstances("MSForms","TabStrip");
 			NetRuntimeSystem.Collections.Generic.List<NetOffice.MSFormsApi.TabStrip> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.MSFormsApi.TabStrip>();
 			foreach(object proxy in proxyList)
 				resultList.Add( new NetOffice.MSFormsApi.TabStrip(null, proxy) );
@@ -137,12 +137,12 @@ namespace NetOffice.MSFormsApi
 		}
 
 		/// <summary>
-        /// returns a running MSForms.TabStrip object from the running object table(ROT). the method takes the first element from the table
+        /// Returns a running MSForms.TabStrip object from the environment/system.
         /// </summary>
         /// <returns>an MSForms.TabStrip object or null</returns>
 		public static NetOffice.MSFormsApi.TabStrip GetActiveInstance()
 		{
-			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("MSForms","TabStrip", false);
+			object proxy  = NetOffice.ProxyService.GetActiveInstance("MSForms","TabStrip", false);
 			if(null != proxy)
 				return new NetOffice.MSFormsApi.TabStrip(null, proxy);
 			else
@@ -150,13 +150,13 @@ namespace NetOffice.MSFormsApi
 		}
 
 		/// <summary>
-        /// returns a running MSForms.TabStrip object from the running object table(ROT).  the method takes the first element from the table
+        /// Returns a running MSForms.TabStrip object from the environment/system. 
         /// </summary>
 	    /// <param name="throwOnError">throw an exception if no object was found</param>
         /// <returns>an MSForms.TabStrip object or null</returns>
 		public static NetOffice.MSFormsApi.TabStrip GetActiveInstance(bool throwOnError)
 		{
-			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("MSForms","TabStrip", throwOnError);
+			object proxy  = NetOffice.ProxyService.GetActiveInstance("MSForms","TabStrip", throwOnError);
 			if(null != proxy)
 				return new NetOffice.MSFormsApi.TabStrip(null, proxy);
 			else
@@ -435,7 +435,7 @@ namespace NetOffice.MSFormsApi
 	    #region IEventBinding Member
         
 		/// <summary>
-        /// creates active sink helper
+        /// Creates active sink helper
         /// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public void CreateEventBridge()
@@ -457,6 +457,9 @@ namespace NetOffice.MSFormsApi
 			} 
         }
 
+        /// <summary>
+        /// The instance use currently an event listener 
+        /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public bool EventBridgeInitialized
         {
@@ -465,7 +468,10 @@ namespace NetOffice.MSFormsApi
                 return (null != _connectPoint);
             }
         }
-        
+
+        /// <summary>
+        ///  The instance has currently one or more event recipients 
+        /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public bool HasEventRecipients()       
         {
@@ -485,6 +491,9 @@ namespace NetOffice.MSFormsApi
 			return false;
         }
         
+        /// <summary>
+        /// Target methods from its actual event recipients
+        /// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public Delegate[] GetEventRecipients(string eventName)
         {
@@ -504,7 +513,10 @@ namespace NetOffice.MSFormsApi
             else
                 return new Delegate[0];
         }
-
+       
+        /// <summary>
+        /// Returns the current count of event recipients
+        /// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public int GetCountOfEventRecipients(string eventName)
         {
@@ -523,8 +535,14 @@ namespace NetOffice.MSFormsApi
             }
             else
                 return 0;
-        }
-
+           }
+        
+        /// <summary>
+        /// Raise an instance event
+        /// </summary>
+        /// <param name="eventName">name of the event without 'Event' at the end</param>
+        /// <param name="paramsArray">custom arguments for the event</param>
+        /// <returns>count of called event recipients</returns>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public int RaiseCustomEvent(string eventName, ref object[] paramsArray)
 		{
@@ -556,6 +574,9 @@ namespace NetOffice.MSFormsApi
                 return 0;
 		}
 
+        /// <summary>
+        /// Stop listening events for the instance
+        /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public void DisposeEventBridge()
         {

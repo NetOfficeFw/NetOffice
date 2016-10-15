@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using NetRuntimeSystem = System;
 using System.Runtime.InteropServices;
 using System.Runtime.CompilerServices;
@@ -73,12 +73,12 @@ namespace NetOffice.WordApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion Word 11, 12, 14, 15
+		/// SupportByVersion Word 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
 		/// <param name="allUsers">optional bool AllUsers</param>
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192802.aspx
-		[SupportByVersionAttribute("Word", 11,12,14,15)]
+		[SupportByVersionAttribute("Word", 11,12,14,15,16)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public string get_Location(object allUsers)
 		{		
@@ -87,12 +87,13 @@ namespace NetOffice.WordApi
 			return NetRuntimeSystem.Convert.ToString(returnItem);
 		}
 
-		/// <summary>
-		/// SupportByVersion Word 11, 12, 14, 15
-		/// Get/Set
-		/// </summary>
-		/// <param name="allUsers">optional bool AllUsers</param>
-		[SupportByVersionAttribute("Word", 11,12,14,15)]
+        /// <summary>
+        /// SupportByVersion Word 11, 12, 14, 15, 16
+        /// Get/Set
+        /// </summary>
+        /// <param name="allUsers">optional bool AllUsers</param>
+        /// <param name="value">optional string value</param>
+        [SupportByVersionAttribute("Word", 11,12,14,15,16)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public void set_Location(object allUsers, string value)
 		{
@@ -101,24 +102,24 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 11, 12, 14, 15
+		/// SupportByVersion Word 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192802.aspx
 		/// Alias for get_Location
 		/// </summary>
 		/// <param name="allUsers">optional bool AllUsers</param>
-		[SupportByVersionAttribute("Word", 11,12,14,15)]
+		[SupportByVersionAttribute("Word", 11,12,14,15,16)]
 		public string Location(object allUsers)
 		{
 			return get_Location(allUsers);
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 11, 12, 14, 15
+		/// SupportByVersion Word 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
 		/// <param name="allUsers">optional bool AllUsers</param>
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194042.aspx
-		[SupportByVersionAttribute("Word", 11,12,14,15)]
+		[SupportByVersionAttribute("Word", 11,12,14,15,16)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public string get_Alias(object allUsers)
 		{		
@@ -127,12 +128,13 @@ namespace NetOffice.WordApi
 			return NetRuntimeSystem.Convert.ToString(returnItem);
 		}
 
-		/// <summary>
-		/// SupportByVersion Word 11, 12, 14, 15
-		/// Get/Set
-		/// </summary>
-		/// <param name="allUsers">optional bool AllUsers</param>
-		[SupportByVersionAttribute("Word", 11,12,14,15)]
+        /// <summary>
+        /// SupportByVersion Word 11, 12, 14, 15, 16
+        /// Get/Set
+        /// </summary>
+        /// <param name="allUsers">optional bool AllUsers</param>
+        /// <param name="value">optional string value</param>
+        [SupportByVersionAttribute("Word", 11,12,14,15,16)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public void set_Alias(object allUsers, string value)
 		{
@@ -141,24 +143,24 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 11, 12, 14, 15
+		/// SupportByVersion Word 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194042.aspx
 		/// Alias for get_Alias
 		/// </summary>
 		/// <param name="allUsers">optional bool AllUsers</param>
-		[SupportByVersionAttribute("Word", 11,12,14,15)]
+		[SupportByVersionAttribute("Word", 11,12,14,15,16)]
 		public string Alias(object allUsers)
 		{
 			return get_Alias(allUsers);
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 11, 12, 14, 15
+		/// SupportByVersion Word 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
 		/// <param name="allUsers">optional bool AllUsers</param>
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835718.aspx
-		[SupportByVersionAttribute("Word", 11,12,14,15)]
+		[SupportByVersionAttribute("Word", 11,12,14,15,16)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public NetOffice.WordApi.XSLTransform get_DefaultTransform(object allUsers)
 		{		
@@ -168,12 +170,13 @@ namespace NetOffice.WordApi
 			return newObject;
 		}
 
-		/// <summary>
-		/// SupportByVersion Word 11, 12, 14, 15
-		/// Get/Set
-		/// </summary>
-		/// <param name="allUsers">optional bool AllUsers</param>
-		[SupportByVersionAttribute("Word", 11,12,14,15)]
+        /// <summary>
+        /// SupportByVersion Word 11, 12, 14, 15, 16
+        /// Get/Set
+        /// </summary>
+        /// <param name="allUsers">optional bool AllUsers</param>
+        /// <param name="value">optional XSLTransform value</param>
+        [SupportByVersionAttribute("Word", 11,12,14,15,16)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public void set_DefaultTransform(object allUsers, NetOffice.WordApi.XSLTransform value)
 		{
@@ -182,12 +185,12 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 11, 12, 14, 15
+		/// SupportByVersion Word 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835718.aspx
 		/// Alias for get_DefaultTransform
 		/// </summary>
 		/// <param name="allUsers">optional bool AllUsers</param>
-		[SupportByVersionAttribute("Word", 11,12,14,15)]
+		[SupportByVersionAttribute("Word", 11,12,14,15,16)]
 		public NetOffice.WordApi.XSLTransform DefaultTransform(object allUsers)
 		{
 			return get_DefaultTransform(allUsers);
@@ -203,10 +206,10 @@ namespace NetOffice.WordApi
 
 	///<summary>
 	/// DispatchInterface XMLNamespace 
-	/// SupportByVersion Word, 11,12,14,15
+	/// SupportByVersion Word, 11,12,14,15,16
 	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835755.aspx
 	///</summary>
-	[SupportByVersionAttribute("Word", 11,12,14,15)]
+	[SupportByVersionAttribute("Word", 11,12,14,15,16)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class XMLNamespace : XMLNamespace_
 	{
@@ -286,11 +289,11 @@ namespace NetOffice.WordApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion Word 11, 12, 14, 15
+		/// SupportByVersion Word 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192056.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 11,12,14,15)]
+		[SupportByVersionAttribute("Word", 11,12,14,15,16)]
 		public NetOffice.WordApi.Application Application
 		{
 			get
@@ -303,11 +306,11 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 11, 12, 14, 15
+		/// SupportByVersion Word 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196231.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 11,12,14,15)]
+		[SupportByVersionAttribute("Word", 11,12,14,15,16)]
 		public Int32 Creator
 		{
 			get
@@ -319,12 +322,12 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 11, 12, 14, 15
+		/// SupportByVersion Word 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193352.aspx
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("Word", 11,12,14,15)]
+		[SupportByVersionAttribute("Word", 11,12,14,15,16)]
 		public object Parent
 		{
 			get
@@ -337,11 +340,11 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 11, 12, 14, 15
+		/// SupportByVersion Word 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195935.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 11,12,14,15)]
+		[SupportByVersionAttribute("Word", 11,12,14,15,16)]
 		public string URI
 		{
 			get
@@ -353,11 +356,11 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 11, 12, 14, 15
+		/// SupportByVersion Word 11, 12, 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192802.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 11,12,14,15)]
+		[SupportByVersionAttribute("Word", 11,12,14,15,16)]
 		public string Location
 		{
 			get
@@ -374,11 +377,11 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 11, 12, 14, 15
+		/// SupportByVersion Word 11, 12, 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194042.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 11,12,14,15)]
+		[SupportByVersionAttribute("Word", 11,12,14,15,16)]
 		public string Alias
 		{
 			get
@@ -395,11 +398,11 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 11, 12, 14, 15
+		/// SupportByVersion Word 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822199.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 11,12,14,15)]
+		[SupportByVersionAttribute("Word", 11,12,14,15,16)]
 		public NetOffice.WordApi.XSLTransforms XSLTransforms
 		{
 			get
@@ -412,11 +415,11 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 11, 12, 14, 15
+		/// SupportByVersion Word 11, 12, 14, 15, 16
 		/// Get/Set
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835718.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 11,12,14,15)]
+		[SupportByVersionAttribute("Word", 11,12,14,15,16)]
 		public NetOffice.WordApi.XSLTransform DefaultTransform
 		{
 			get
@@ -438,11 +441,11 @@ namespace NetOffice.WordApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByVersion Word 11, 12, 14, 15
+		/// SupportByVersion Word 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff191784.aspx
 		/// </summary>
 		/// <param name="document">object Document</param>
-		[SupportByVersionAttribute("Word", 11,12,14,15)]
+		[SupportByVersionAttribute("Word", 11,12,14,15,16)]
 		public void AttachToDocument(object document)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(document);
@@ -450,10 +453,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 11, 12, 14, 15
+		/// SupportByVersion Word 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836059.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 11,12,14,15)]
+		[SupportByVersionAttribute("Word", 11,12,14,15,16)]
 		public void Delete()
 		{
 			object[] paramsArray = null;

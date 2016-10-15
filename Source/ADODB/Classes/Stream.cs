@@ -90,7 +90,7 @@ namespace NetOffice.ADODBApi
 		}
 		
 		///<summary>
-        ///creates a new instance of Stream 
+        /// Creates a new instance of Stream 
         ///</summary>		
 		public Stream():base("ADODB.Stream")
 		{
@@ -98,7 +98,7 @@ namespace NetOffice.ADODBApi
 		}
 		
 		///<summary>
-        ///creates a new instance of Stream
+        /// Creates a new instance of Stream
         ///</summary>
         ///<param name="progId">registered ProgID</param>
 		public Stream(string progId):base(progId)
@@ -111,12 +111,12 @@ namespace NetOffice.ADODBApi
 		#region Static CoClass Methods
 
 		/// <summary>
-        /// returns all running ADODB.Stream objects from the running object table(ROT)
+        /// Returns all running ADODB.Stream objects from the environment/system
         /// </summary>
         /// <returns>an ADODB.Stream array</returns>
 		public static NetOffice.ADODBApi.Stream[] GetActiveInstances()
 		{		
-			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("ADODB","Stream");
+			IDisposableEnumeration proxyList = NetOffice.ProxyService.GetActiveInstances("ADODB","Stream");
 			NetRuntimeSystem.Collections.Generic.List<NetOffice.ADODBApi.Stream> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.ADODBApi.Stream>();
 			foreach(object proxy in proxyList)
 				resultList.Add( new NetOffice.ADODBApi.Stream(null, proxy) );
@@ -124,12 +124,12 @@ namespace NetOffice.ADODBApi
 		}
 
 		/// <summary>
-        /// returns a running ADODB.Stream object from the running object table(ROT). the method takes the first element from the table
+        /// Returns a running ADODB.Stream object from the environment/system.
         /// </summary>
         /// <returns>an ADODB.Stream object or null</returns>
 		public static NetOffice.ADODBApi.Stream GetActiveInstance()
 		{
-			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("ADODB","Stream", false);
+			object proxy  = NetOffice.ProxyService.GetActiveInstance("ADODB","Stream", false);
 			if(null != proxy)
 				return new NetOffice.ADODBApi.Stream(null, proxy);
 			else
@@ -137,13 +137,13 @@ namespace NetOffice.ADODBApi
 		}
 
 		/// <summary>
-        /// returns a running ADODB.Stream object from the running object table(ROT).  the method takes the first element from the table
+        /// Returns a running ADODB.Stream object from the environment/system. 
         /// </summary>
 	    /// <param name="throwOnError">throw an exception if no object was found</param>
         /// <returns>an ADODB.Stream object or null</returns>
 		public static NetOffice.ADODBApi.Stream GetActiveInstance(bool throwOnError)
 		{
-			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("ADODB","Stream", throwOnError);
+			object proxy  = NetOffice.ProxyService.GetActiveInstance("ADODB","Stream", throwOnError);
 			if(null != proxy)
 				return new NetOffice.ADODBApi.Stream(null, proxy);
 			else
@@ -158,7 +158,7 @@ namespace NetOffice.ADODBApi
 	    #region IEventBinding Member
         
 		/// <summary>
-        /// creates active sink helper
+        /// Creates active sink helper
         /// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public void CreateEventBridge()
@@ -175,6 +175,9 @@ namespace NetOffice.ADODBApi
  
         }
 
+        /// <summary>
+        /// The instance use currently an event listener 
+        /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public bool EventBridgeInitialized
         {
@@ -183,7 +186,10 @@ namespace NetOffice.ADODBApi
                 return (null != _connectPoint);
             }
         }
-        
+
+        /// <summary>
+        ///  The instance has currently one or more event recipients 
+        /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public bool HasEventRecipients()       
         {
@@ -203,6 +209,9 @@ namespace NetOffice.ADODBApi
 			return false;
         }
         
+        /// <summary>
+        /// Target methods from its actual event recipients
+        /// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public Delegate[] GetEventRecipients(string eventName)
         {
@@ -222,7 +231,10 @@ namespace NetOffice.ADODBApi
             else
                 return new Delegate[0];
         }
-
+       
+        /// <summary>
+        /// Returns the current count of event recipients
+        /// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public int GetCountOfEventRecipients(string eventName)
         {
@@ -241,8 +253,14 @@ namespace NetOffice.ADODBApi
             }
             else
                 return 0;
-        }
-
+           }
+        
+        /// <summary>
+        /// Raise an instance event
+        /// </summary>
+        /// <param name="eventName">name of the event without 'Event' at the end</param>
+        /// <param name="paramsArray">custom arguments for the event</param>
+        /// <returns>count of called event recipients</returns>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public int RaiseCustomEvent(string eventName, ref object[] paramsArray)
 		{
@@ -274,6 +292,9 @@ namespace NetOffice.ADODBApi
                 return 0;
 		}
 
+        /// <summary>
+        /// Stop listening events for the instance
+        /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public void DisposeEventBridge()
         {

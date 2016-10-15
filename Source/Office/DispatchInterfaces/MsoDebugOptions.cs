@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using NetRuntimeSystem = System;
 using System.Runtime.InteropServices;
 using System.Runtime.CompilerServices;
@@ -10,9 +10,9 @@ namespace NetOffice.OfficeApi
 {
 	///<summary>
 	/// DispatchInterface MsoDebugOptions 
-	/// SupportByVersion Office, 9,10,11,12,14,15
+	/// SupportByVersion Office, 9,10,11,12,14,15,16
 	///</summary>
-	[SupportByVersionAttribute("Office", 9,10,11,12,14,15)]
+	[SupportByVersionAttribute("Office", 9,10,11,12,14,15,16)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class MsoDebugOptions : _IMsoDispObj
 	{
@@ -92,10 +92,10 @@ namespace NetOffice.OfficeApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion Office 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Office", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Office", 9,10,11,12,14,15,16)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public Int32 FeatureReports
 		{
@@ -113,10 +113,10 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 10, 11, 12, 14, 15
+		/// SupportByVersion Office 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
+		[SupportByVersionAttribute("Office", 10,11,12,14,15,16)]
 		public bool OutputToDebugger
 		{
 			get
@@ -133,10 +133,10 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 10, 11, 12, 14, 15
+		/// SupportByVersion Office 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
+		[SupportByVersionAttribute("Office", 10,11,12,14,15,16)]
 		public bool OutputToFile
 		{
 			get
@@ -153,10 +153,10 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 10, 11, 12, 14, 15
+		/// SupportByVersion Office 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
+		[SupportByVersionAttribute("Office", 10,11,12,14,15,16)]
 		public bool OutputToMessageBox
 		{
 			get
@@ -173,11 +173,11 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 12, 14, 15
+		/// SupportByVersion Office 12, 14, 15, 16
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("Office", 12,14,15)]
+		[SupportByVersionAttribute("Office", 12,14,15,16)]
 		public object UnitTestManager
 		{
 			get
@@ -194,11 +194,11 @@ namespace NetOffice.OfficeApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByVersion Office 15
+		/// SupportByVersion Office 15,16
 		/// 
 		/// </summary>
 		/// <param name="bstrTagToIgnore">string bstrTagToIgnore</param>
-		[SupportByVersionAttribute("Office", 15)]
+		[SupportByVersionAttribute("Office", 15, 16)]
 		public void AddIgnoredAssertTag(string bstrTagToIgnore)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrTagToIgnore);
@@ -206,11 +206,11 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 15
+		/// SupportByVersion Office 15,16
 		/// 
 		/// </summary>
 		/// <param name="bstrTagToIgnore">string bstrTagToIgnore</param>
-		[SupportByVersionAttribute("Office", 15)]
+		[SupportByVersionAttribute("Office", 15, 16)]
 		public void RemoveIgnoredAssertTag(string bstrTagToIgnore)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrTagToIgnore);

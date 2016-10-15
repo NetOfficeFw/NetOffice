@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using NetRuntimeSystem = System;
 using System.Runtime.InteropServices;
 using System.Runtime.CompilerServices;
@@ -10,10 +10,10 @@ namespace NetOffice.VisioApi
 {
 	///<summary>
 	/// DispatchInterface IVBUndoUnit 
-	/// SupportByVersion Visio, 11,12,14,15
+	/// SupportByVersion Visio, 11,12,14,15,16
 	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff769307(v=office.14).aspx
 	///</summary>
-	[SupportByVersionAttribute("Visio", 11,12,14,15)]
+	[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class IVBUndoUnit : COMObject
 	{
@@ -93,11 +93,11 @@ namespace NetOffice.VisioApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion Visio 11, 12, 14, 15
+		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff765404(v=office.14).aspx
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 11,12,14,15)]
+		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
 		public string Description
 		{
 			get
@@ -109,11 +109,11 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio 11, 12, 14, 15
+		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff767058(v=office.14).aspx
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 11,12,14,15)]
+		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
 		public string UnitTypeCLSID
 		{
 			get
@@ -125,11 +125,11 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio 11, 12, 14, 15
+		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff766307(v=office.14).aspx
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 11,12,14,15)]
+		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
 		public Int32 UnitTypeLong
 		{
 			get
@@ -141,11 +141,11 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio 11, 12, 14, 15
+		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff766293(v=office.14).aspx
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 11,12,14,15)]
+		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
 		public Int32 UnitSize
 		{
 			get
@@ -161,11 +161,11 @@ namespace NetOffice.VisioApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByVersion Visio 11, 12, 14, 15
+		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff766032(v=office.14).aspx
 		/// </summary>
 		/// <param name="pMgr">NetOffice.VisioApi.IVBUndoManager pMgr</param>
-		[SupportByVersionAttribute("Visio", 11,12,14,15)]
+		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
 		public void Do(NetOffice.VisioApi.IVBUndoManager pMgr)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pMgr);
@@ -173,10 +173,10 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio 11, 12, 14, 15
+		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff767691(v=office.14).aspx
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 11,12,14,15)]
+		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
 		public void OnNextAdd()
 		{
 			object[] paramsArray = null;

@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using NetRuntimeSystem = System;
 using System.Runtime.InteropServices;
 using System.Runtime.CompilerServices;
@@ -10,9 +10,9 @@ namespace NetOffice.WordApi
 {
 	///<summary>
 	/// DispatchInterface Diagram 
-	/// SupportByVersion Word, 10,11,12,14,15
+	/// SupportByVersion Word, 10,11,12,14,15,16
 	///</summary>
-	[SupportByVersionAttribute("Word", 10,11,12,14,15)]
+	[SupportByVersionAttribute("Word", 10,11,12,14,15,16)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class Diagram : COMObject
 	{
@@ -92,10 +92,10 @@ namespace NetOffice.WordApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion Word 10, 11, 12, 14, 15
+		/// SupportByVersion Word 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Word", 10,11,12,14,15)]
+		[SupportByVersionAttribute("Word", 10,11,12,14,15,16)]
 		public NetOffice.WordApi.Application Application
 		{
 			get
@@ -108,10 +108,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 10, 11, 12, 14, 15
+		/// SupportByVersion Word 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Word", 10,11,12,14,15)]
+		[SupportByVersionAttribute("Word", 10,11,12,14,15,16)]
 		public Int32 Creator
 		{
 			get
@@ -123,11 +123,11 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 10, 11, 12, 14, 15
+		/// SupportByVersion Word 10, 11, 12, 14, 15, 16
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("Word", 10,11,12,14,15)]
+		[SupportByVersionAttribute("Word", 10,11,12,14,15,16)]
 		public object Parent
 		{
 			get
@@ -140,10 +140,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 10, 11, 12, 14, 15
+		/// SupportByVersion Word 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Word", 10,11,12,14,15)]
+		[SupportByVersionAttribute("Word", 10,11,12,14,15,16)]
 		public NetOffice.WordApi.DiagramNodes Nodes
 		{
 			get
@@ -156,10 +156,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 10, 11, 12, 14, 15
+		/// SupportByVersion Word 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Word", 10,11,12,14,15)]
+		[SupportByVersionAttribute("Word", 10,11,12,14,15,16)]
 		public NetOffice.OfficeApi.Enums.MsoDiagramType Type
 		{
 			get
@@ -172,10 +172,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 10, 11, 12, 14, 15
+		/// SupportByVersion Word 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Word", 10,11,12,14,15)]
+		[SupportByVersionAttribute("Word", 10,11,12,14,15,16)]
 		public NetOffice.OfficeApi.Enums.MsoTriState AutoLayout
 		{
 			get
@@ -193,10 +193,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 10, 11, 12, 14, 15
+		/// SupportByVersion Word 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Word", 10,11,12,14,15)]
+		[SupportByVersionAttribute("Word", 10,11,12,14,15,16)]
 		public NetOffice.OfficeApi.Enums.MsoTriState Reverse
 		{
 			get
@@ -214,10 +214,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 10, 11, 12, 14, 15
+		/// SupportByVersion Word 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Word", 10,11,12,14,15)]
+		[SupportByVersionAttribute("Word", 10,11,12,14,15,16)]
 		public NetOffice.OfficeApi.Enums.MsoTriState AutoFormat
 		{
 			get
@@ -239,11 +239,11 @@ namespace NetOffice.WordApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByVersion Word 10, 11, 12, 14, 15
+		/// SupportByVersion Word 10, 11, 12, 14, 15, 16
 		/// 
 		/// </summary>
 		/// <param name="type">NetOffice.OfficeApi.Enums.MsoDiagramType Type</param>
-		[SupportByVersionAttribute("Word", 10,11,12,14,15)]
+		[SupportByVersionAttribute("Word", 10,11,12,14,15,16)]
 		public void Convert(NetOffice.OfficeApi.Enums.MsoDiagramType type)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type);
@@ -251,10 +251,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 11, 12, 14, 15
+		/// SupportByVersion Word 11, 12, 14, 15, 16
 		/// 
 		/// </summary>
-		[SupportByVersionAttribute("Word", 11,12,14,15)]
+		[SupportByVersionAttribute("Word", 11,12,14,15,16)]
 		public void FitText()
 		{
 			object[] paramsArray = null;

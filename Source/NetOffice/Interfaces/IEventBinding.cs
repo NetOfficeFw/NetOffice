@@ -8,26 +8,26 @@ namespace NetOffice
     public interface IEventBinding
     {
         /// <summary>
-        /// returns event bridge is advised
+        /// Event bridge is advised
         /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         bool EventBridgeInitialized { get; }
 
         /// <summary>
-        /// retuns instance has one or more event recipients
+        /// Instance has one or more event recipients
         /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         bool HasEventRecipients();
 
         /// <summary>
-        /// returns recipient delegates for an event
+        /// Recipient delegates for an event
         /// </summary>
         /// <param name="eventName">name of the even</param>
         /// <returns>recipients delegates</returns>
         Delegate[] GetEventRecipients(string eventName);
 
         /// <summary>
-        /// retuns instance has one or more event recipients for a specific event
+        /// Instance has one or more event recipients for a specific event
         /// </summary>
         /// <param name="eventName">name of the event</param>
         /// <returns>the count of recipients</returns>
@@ -35,7 +35,7 @@ namespace NetOffice
         int GetCountOfEventRecipients(string eventName);
 
         /// <summary>
-        /// call a specific event for all recipients
+        /// Call a specific event for all recipients
         /// </summary>
         /// <param name="eventName">name of the event</param>
         /// <param name="paramsArray">argument array</param>
@@ -50,7 +50,7 @@ namespace NetOffice
         void CreateEventBridge();
 
         /// <summary>
-        /// Dispose the event eventbridge for the object
+        /// Dispose the event eventbridge for the instance
         /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         void DisposeEventBridge();

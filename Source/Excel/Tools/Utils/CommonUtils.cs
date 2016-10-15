@@ -66,10 +66,22 @@ namespace NetOffice.ExcelApi.Tools.Utils
 
         }
 
+        /// <summary>
+        /// Creates an instance of the class
+        /// </summary>
+        /// <param name="owner">addin owner</param>
+        /// <param name="ownerType">type information from addin owner</param>
+        /// <param name="isAutomation">indicates the host application is currently in automation</param>
+        /// <param name="ownerAssembly">owner application</param>
+        internal CommonUtils(NetOffice.Tools.COMAddinBase owner, Type ownerType, bool isAutomation, Assembly ownerAssembly) : base(owner, ownerType, isAutomation, ownerAssembly)
+        {
+
+        }
+
         #endregion
 
         #region Properties
-        
+
         /// <summary>
         /// File related utils
         /// </summary>
@@ -80,6 +92,17 @@ namespace NetOffice.ExcelApi.Tools.Utils
                 if (null == _fileUtils)
                     _fileUtils = OnCreateFileUtils();
                 return _fileUtils;
+            }
+        }
+
+        /// <summary>
+        /// Encapsulate the owner application to make accessible for child utils
+        /// </summary>
+        public new ExcelApi.Application OwnerApplication
+        {
+            get
+            {
+                return base.OwnerApplication as ExcelApi.Application;
             }
         }
 

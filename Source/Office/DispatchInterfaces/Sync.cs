@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using NetRuntimeSystem = System;
 using System.Runtime.InteropServices;
 using System.Runtime.CompilerServices;
@@ -10,10 +10,10 @@ namespace NetOffice.OfficeApi
 {
 	///<summary>
 	/// DispatchInterface Sync 
-	/// SupportByVersion Office, 11,12,14,15
+	/// SupportByVersion Office, 11,12,14,15,16
 	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff860602.aspx
 	///</summary>
-	[SupportByVersionAttribute("Office", 11,12,14,15)]
+	[SupportByVersionAttribute("Office", 11,12,14,15,16)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class Sync : _IMsoDispObj
 	{
@@ -93,11 +93,11 @@ namespace NetOffice.OfficeApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion Office 11, 12, 14, 15
+		/// SupportByVersion Office 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff865564.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Office", 11,12,14,15)]
+		[SupportByVersionAttribute("Office", 11,12,14,15,16)]
 		public NetOffice.OfficeApi.Enums.MsoSyncStatusType Status
 		{
 			get
@@ -110,11 +110,11 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 11, 12, 14, 15
+		/// SupportByVersion Office 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff865364.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Office", 11,12,14,15)]
+		[SupportByVersionAttribute("Office", 11,12,14,15,16)]
 		public string WorkspaceLastChangedBy
 		{
 			get
@@ -126,11 +126,11 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 11, 12, 14, 15
+		/// SupportByVersion Office 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff864917.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Office", 11,12,14,15)]
+		[SupportByVersionAttribute("Office", 11,12,14,15,16)]
 		public object LastSyncTime
 		{
 			get
@@ -150,11 +150,11 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 11, 12, 14, 15
+		/// SupportByVersion Office 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff862150.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Office", 11,12,14,15)]
+		[SupportByVersionAttribute("Office", 11,12,14,15,16)]
 		public NetOffice.OfficeApi.Enums.MsoSyncErrorType ErrorType
 		{
 			get
@@ -167,12 +167,12 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 11, 12, 14, 15
+		/// SupportByVersion Office 11, 12, 14, 15, 16
 		/// Get
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff860559.aspx
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("Office", 11,12,14,15)]
+		[SupportByVersionAttribute("Office", 11,12,14,15,16)]
 		public object Parent
 		{
 			get
@@ -189,10 +189,10 @@ namespace NetOffice.OfficeApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByVersion Office 11, 12, 14, 15
+		/// SupportByVersion Office 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff863651.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Office", 11,12,14,15)]
+		[SupportByVersionAttribute("Office", 11,12,14,15,16)]
 		public void GetUpdate()
 		{
 			object[] paramsArray = null;
@@ -200,10 +200,10 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 11, 12, 14, 15
+		/// SupportByVersion Office 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff860754.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Office", 11,12,14,15)]
+		[SupportByVersionAttribute("Office", 11,12,14,15,16)]
 		public void PutUpdate()
 		{
 			object[] paramsArray = null;
@@ -211,11 +211,11 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 11, 12, 14, 15
+		/// SupportByVersion Office 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff860783.aspx
 		/// </summary>
 		/// <param name="syncVersionType">NetOffice.OfficeApi.Enums.MsoSyncVersionType SyncVersionType</param>
-		[SupportByVersionAttribute("Office", 11,12,14,15)]
+		[SupportByVersionAttribute("Office", 11,12,14,15,16)]
 		public void OpenVersion(NetOffice.OfficeApi.Enums.MsoSyncVersionType syncVersionType)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(syncVersionType);
@@ -223,11 +223,11 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 11, 12, 14, 15
+		/// SupportByVersion Office 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff864675.aspx
 		/// </summary>
 		/// <param name="syncConflictResolution">NetOffice.OfficeApi.Enums.MsoSyncConflictResolutionType SyncConflictResolution</param>
-		[SupportByVersionAttribute("Office", 11,12,14,15)]
+		[SupportByVersionAttribute("Office", 11,12,14,15,16)]
 		public void ResolveConflict(NetOffice.OfficeApi.Enums.MsoSyncConflictResolutionType syncConflictResolution)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(syncConflictResolution);
@@ -235,10 +235,10 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 11, 12, 14, 15
+		/// SupportByVersion Office 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff861422.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Office", 11,12,14,15)]
+		[SupportByVersionAttribute("Office", 11,12,14,15,16)]
 		public void Unsuspend()
 		{
 			object[] paramsArray = null;

@@ -16,16 +16,22 @@ namespace NetOffice.Tools
     /// <summary>
     /// Indicates in which method the error is occured
     /// </summary>
+    [System.Runtime.InteropServices.Guid("F9A44508-4DC1-4E30-8195-0AFED88288E5")]
     public enum RegisterErrorMethodKind
     {
         /// <summary>
-        /// the error is occured in the Register operation
+        /// The error is occured in the Register operation
         /// </summary>
         Register = 0,
 
         /// <summary>
-        ///  the error is occured in the Unregister operation
+        ///  The error is occured in the Unregister operation
         /// </summary>
         UnRegister = 1,
+
+        /// <summary>
+        /// The error is occured in the Register export operation
+        /// </summary>
+        Export = 2
     }
 }

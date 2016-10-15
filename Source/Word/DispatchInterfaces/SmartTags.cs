@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using NetRuntimeSystem = System;
 using System.Runtime.InteropServices;
 using System.Runtime.CompilerServices;
@@ -11,9 +11,9 @@ namespace NetOffice.WordApi
 {
 	///<summary>
 	/// DispatchInterface SmartTags 
-	/// SupportByVersion Word, 10,11,12,14,15
+	/// SupportByVersion Word, 10,11,12,14,15,16
 	///</summary>
-	[SupportByVersionAttribute("Word", 10,11,12,14,15)]
+	[SupportByVersionAttribute("Word", 10,11,12,14,15,16)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class SmartTags : COMObject ,IEnumerable<NetOffice.WordApi.SmartTag>
 	{
@@ -93,10 +93,10 @@ namespace NetOffice.WordApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion Word 10, 11, 12, 14, 15
+		/// SupportByVersion Word 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Word", 10,11,12,14,15)]
+		[SupportByVersionAttribute("Word", 10,11,12,14,15,16)]
 		public Int32 Count
 		{
 			get
@@ -108,10 +108,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 10, 11, 12, 14, 15
+		/// SupportByVersion Word 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Word", 10,11,12,14,15)]
+		[SupportByVersionAttribute("Word", 10,11,12,14,15,16)]
 		public NetOffice.WordApi.Application Application
 		{
 			get
@@ -124,10 +124,10 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 10, 11, 12, 14, 15
+		/// SupportByVersion Word 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Word", 10,11,12,14,15)]
+		[SupportByVersionAttribute("Word", 10,11,12,14,15,16)]
 		public Int32 Creator
 		{
 			get
@@ -139,11 +139,11 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 10, 11, 12, 14, 15
+		/// SupportByVersion Word 10, 11, 12, 14, 15, 16
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("Word", 10,11,12,14,15)]
+		[SupportByVersionAttribute("Word", 10,11,12,14,15,16)]
 		public object Parent
 		{
 			get
@@ -160,11 +160,11 @@ namespace NetOffice.WordApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByVersion Word 10, 11, 12, 14, 15
+		/// SupportByVersion Word 10, 11, 12, 14, 15, 16
 		/// 
 		/// </summary>
 		/// <param name="index">object Index</param>
-		[SupportByVersionAttribute("Word", 10,11,12,14,15)]
+		[SupportByVersionAttribute("Word", 10,11,12,14,15,16)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
 		public NetOffice.WordApi.SmartTag this[object index]
 		{
@@ -178,13 +178,13 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 10, 11, 12, 14, 15
+		/// SupportByVersion Word 10, 11, 12, 14, 15, 16
 		/// 
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="range">optional object Range</param>
 		/// <param name="properties">optional object Properties</param>
-		[SupportByVersionAttribute("Word", 10,11,12,14,15)]
+		[SupportByVersionAttribute("Word", 10,11,12,14,15,16)]
 		public NetOffice.WordApi.SmartTag Add(string name, object range, object properties)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, range, properties);
@@ -194,12 +194,12 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 10, 11, 12, 14, 15
+		/// SupportByVersion Word 10, 11, 12, 14, 15, 16
 		/// 
 		/// </summary>
 		/// <param name="name">string Name</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 10,11,12,14,15)]
+		[SupportByVersionAttribute("Word", 10,11,12,14,15,16)]
 		public NetOffice.WordApi.SmartTag Add(string name)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name);
@@ -209,13 +209,13 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 10, 11, 12, 14, 15
+		/// SupportByVersion Word 10, 11, 12, 14, 15, 16
 		/// 
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="range">optional object Range</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 10,11,12,14,15)]
+		[SupportByVersionAttribute("Word", 10,11,12,14,15,16)]
 		public NetOffice.WordApi.SmartTag Add(string name, object range)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, range);
@@ -225,11 +225,11 @@ namespace NetOffice.WordApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Word 11, 12, 14, 15
+		/// SupportByVersion Word 11, 12, 14, 15, 16
 		/// 
 		/// </summary>
 		/// <param name="name">string Name</param>
-		[SupportByVersionAttribute("Word", 11,12,14,15)]
+		[SupportByVersionAttribute("Word", 11,12,14,15,16)]
 		public NetOffice.WordApi.SmartTags SmartTagsByType(string name)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name);
@@ -243,9 +243,9 @@ namespace NetOffice.WordApi
        #region IEnumerable<NetOffice.WordApi.SmartTag> Member
         
         /// <summary>
-		/// SupportByVersionAttribute Word, 10,11,12,14,15
+		/// SupportByVersionAttribute Word, 10,11,12,14,15,16
 		/// </summary>
-		[SupportByVersionAttribute("Word", 10,11,12,14,15)]
+		[SupportByVersionAttribute("Word", 10,11,12,14,15,16)]
        public IEnumerator<NetOffice.WordApi.SmartTag> GetEnumerator()  
        {
            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
@@ -258,9 +258,9 @@ namespace NetOffice.WordApi
 		#region IEnumerable Members
        
 		/// <summary>
-		/// SupportByVersionAttribute Word, 10,11,12,14,15
+		/// SupportByVersionAttribute Word, 10,11,12,14,15,16
 		/// </summary>
-		[SupportByVersionAttribute("Word", 10,11,12,14,15)]
+		[SupportByVersionAttribute("Word", 10,11,12,14,15,16)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
 			return NetOffice.Utils.GetProxyEnumeratorAsProperty(this);

@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using NetRuntimeSystem = System;
 using System.Runtime.InteropServices;
 using System.ComponentModel;
@@ -10,9 +10,9 @@ namespace NetOffice.ExcelApi
 {
 	///<summary>
 	/// Interface IAppEvents 
-	/// SupportByVersion Excel, 9,10,11,12,14,15
+	/// SupportByVersion Excel, 9,10,11,12,14,15,16
 	///</summary>
-	[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
+	[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
 	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class IAppEvents : COMObject
 	{
@@ -96,11 +96,11 @@ namespace NetOffice.ExcelApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// 
 		/// </summary>
 		/// <param name="wb">NetOffice.ExcelApi.Workbook Wb</param>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
 		public Int32 NewWorkbook(NetOffice.ExcelApi.Workbook wb)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(wb);
@@ -109,12 +109,12 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// 
 		/// </summary>
 		/// <param name="sh">object Sh</param>
 		/// <param name="target">NetOffice.ExcelApi.Range Target</param>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
 		public Int32 SheetSelectionChange(object sh, NetOffice.ExcelApi.Range target)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(sh, target);
@@ -123,13 +123,13 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// 
 		/// </summary>
 		/// <param name="sh">object Sh</param>
 		/// <param name="target">NetOffice.ExcelApi.Range Target</param>
 		/// <param name="cancel">bool Cancel</param>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
 		public Int32 SheetBeforeDoubleClick(object sh, NetOffice.ExcelApi.Range target, bool cancel)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(sh, target, cancel);
@@ -138,13 +138,13 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// 
 		/// </summary>
 		/// <param name="sh">object Sh</param>
 		/// <param name="target">NetOffice.ExcelApi.Range Target</param>
 		/// <param name="cancel">bool Cancel</param>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
 		public Int32 SheetBeforeRightClick(object sh, NetOffice.ExcelApi.Range target, bool cancel)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(sh, target, cancel);
@@ -153,11 +153,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// 
 		/// </summary>
 		/// <param name="sh">object Sh</param>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
 		public Int32 SheetActivate(object sh)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(sh);
@@ -166,11 +166,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// 
 		/// </summary>
 		/// <param name="sh">object Sh</param>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
 		public Int32 SheetDeactivate(object sh)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(sh);
@@ -179,11 +179,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// 
 		/// </summary>
 		/// <param name="sh">object Sh</param>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
 		public Int32 SheetCalculate(object sh)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(sh);
@@ -192,12 +192,12 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// 
 		/// </summary>
 		/// <param name="sh">object Sh</param>
 		/// <param name="target">NetOffice.ExcelApi.Range Target</param>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
 		public Int32 SheetChange(object sh, NetOffice.ExcelApi.Range target)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(sh, target);
@@ -206,11 +206,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// 
 		/// </summary>
 		/// <param name="wb">NetOffice.ExcelApi.Workbook Wb</param>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
 		public Int32 WorkbookOpen(NetOffice.ExcelApi.Workbook wb)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(wb);
@@ -219,11 +219,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// 
 		/// </summary>
 		/// <param name="wb">NetOffice.ExcelApi.Workbook Wb</param>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
 		public Int32 WorkbookActivate(NetOffice.ExcelApi.Workbook wb)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(wb);
@@ -232,11 +232,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// 
 		/// </summary>
 		/// <param name="wb">NetOffice.ExcelApi.Workbook Wb</param>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
 		public Int32 WorkbookDeactivate(NetOffice.ExcelApi.Workbook wb)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(wb);
@@ -245,12 +245,12 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// 
 		/// </summary>
 		/// <param name="wb">NetOffice.ExcelApi.Workbook Wb</param>
 		/// <param name="cancel">bool Cancel</param>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
 		public Int32 WorkbookBeforeClose(NetOffice.ExcelApi.Workbook wb, bool cancel)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(wb, cancel);
@@ -259,13 +259,13 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// 
 		/// </summary>
 		/// <param name="wb">NetOffice.ExcelApi.Workbook Wb</param>
 		/// <param name="saveAsUI">bool SaveAsUI</param>
 		/// <param name="cancel">bool Cancel</param>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
 		public Int32 WorkbookBeforeSave(NetOffice.ExcelApi.Workbook wb, bool saveAsUI, bool cancel)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(wb, saveAsUI, cancel);
@@ -274,12 +274,12 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// 
 		/// </summary>
 		/// <param name="wb">NetOffice.ExcelApi.Workbook Wb</param>
 		/// <param name="cancel">bool Cancel</param>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
 		public Int32 WorkbookBeforePrint(NetOffice.ExcelApi.Workbook wb, bool cancel)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(wb, cancel);
@@ -288,12 +288,12 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// 
 		/// </summary>
 		/// <param name="wb">NetOffice.ExcelApi.Workbook Wb</param>
 		/// <param name="sh">object Sh</param>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
 		public Int32 WorkbookNewSheet(NetOffice.ExcelApi.Workbook wb, object sh)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(wb, sh);
@@ -302,11 +302,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// 
 		/// </summary>
 		/// <param name="wb">NetOffice.ExcelApi.Workbook Wb</param>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
 		public Int32 WorkbookAddinInstall(NetOffice.ExcelApi.Workbook wb)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(wb);
@@ -315,11 +315,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// 
 		/// </summary>
 		/// <param name="wb">NetOffice.ExcelApi.Workbook Wb</param>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
 		public Int32 WorkbookAddinUninstall(NetOffice.ExcelApi.Workbook wb)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(wb);
@@ -328,12 +328,12 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// 
 		/// </summary>
 		/// <param name="wb">NetOffice.ExcelApi.Workbook Wb</param>
 		/// <param name="wn">NetOffice.ExcelApi.Window Wn</param>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
 		public Int32 WindowResize(NetOffice.ExcelApi.Workbook wb, NetOffice.ExcelApi.Window wn)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(wb, wn);
@@ -342,12 +342,12 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// 
 		/// </summary>
 		/// <param name="wb">NetOffice.ExcelApi.Workbook Wb</param>
 		/// <param name="wn">NetOffice.ExcelApi.Window Wn</param>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
 		public Int32 WindowActivate(NetOffice.ExcelApi.Workbook wb, NetOffice.ExcelApi.Window wn)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(wb, wn);
@@ -356,12 +356,12 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// 
 		/// </summary>
 		/// <param name="wb">NetOffice.ExcelApi.Workbook Wb</param>
 		/// <param name="wn">NetOffice.ExcelApi.Window Wn</param>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
 		public Int32 WindowDeactivate(NetOffice.ExcelApi.Workbook wb, NetOffice.ExcelApi.Window wn)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(wb, wn);
@@ -370,12 +370,12 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// 
 		/// </summary>
 		/// <param name="sh">object Sh</param>
 		/// <param name="target">NetOffice.ExcelApi.Hyperlink Target</param>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
+		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
 		public Int32 SheetFollowHyperlink(object sh, NetOffice.ExcelApi.Hyperlink target)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(sh, target);
@@ -384,12 +384,12 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 10, 11, 12, 14, 15
+		/// SupportByVersion Excel 10, 11, 12, 14, 15, 16
 		/// 
 		/// </summary>
 		/// <param name="sh">object Sh</param>
 		/// <param name="target">NetOffice.ExcelApi.PivotTable Target</param>
-		[SupportByVersionAttribute("Excel", 10,11,12,14,15)]
+		[SupportByVersionAttribute("Excel", 10,11,12,14,15,16)]
 		public Int32 SheetPivotTableUpdate(object sh, NetOffice.ExcelApi.PivotTable target)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(sh, target);
@@ -398,12 +398,12 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 10, 11, 12, 14, 15
+		/// SupportByVersion Excel 10, 11, 12, 14, 15, 16
 		/// 
 		/// </summary>
 		/// <param name="wb">NetOffice.ExcelApi.Workbook Wb</param>
 		/// <param name="target">NetOffice.ExcelApi.PivotTable Target</param>
-		[SupportByVersionAttribute("Excel", 10,11,12,14,15)]
+		[SupportByVersionAttribute("Excel", 10,11,12,14,15,16)]
 		public Int32 WorkbookPivotTableCloseConnection(NetOffice.ExcelApi.Workbook wb, NetOffice.ExcelApi.PivotTable target)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(wb, target);
@@ -412,12 +412,12 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 10, 11, 12, 14, 15
+		/// SupportByVersion Excel 10, 11, 12, 14, 15, 16
 		/// 
 		/// </summary>
 		/// <param name="wb">NetOffice.ExcelApi.Workbook Wb</param>
 		/// <param name="target">NetOffice.ExcelApi.PivotTable Target</param>
-		[SupportByVersionAttribute("Excel", 10,11,12,14,15)]
+		[SupportByVersionAttribute("Excel", 10,11,12,14,15,16)]
 		public Int32 WorkbookPivotTableOpenConnection(NetOffice.ExcelApi.Workbook wb, NetOffice.ExcelApi.PivotTable target)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(wb, target);
@@ -426,12 +426,12 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 11, 12, 14, 15
+		/// SupportByVersion Excel 11, 12, 14, 15, 16
 		/// 
 		/// </summary>
 		/// <param name="wb">NetOffice.ExcelApi.Workbook Wb</param>
 		/// <param name="syncEventType">NetOffice.OfficeApi.Enums.MsoSyncEventType SyncEventType</param>
-		[SupportByVersionAttribute("Excel", 11,12,14,15)]
+		[SupportByVersionAttribute("Excel", 11,12,14,15,16)]
 		public Int32 WorkbookSync(NetOffice.ExcelApi.Workbook wb, NetOffice.OfficeApi.Enums.MsoSyncEventType syncEventType)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(wb, syncEventType);
@@ -440,7 +440,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 11, 12, 14, 15
+		/// SupportByVersion Excel 11, 12, 14, 15, 16
 		/// 
 		/// </summary>
 		/// <param name="wb">NetOffice.ExcelApi.Workbook Wb</param>
@@ -448,7 +448,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="url">string Url</param>
 		/// <param name="isRefresh">bool IsRefresh</param>
 		/// <param name="cancel">bool Cancel</param>
-		[SupportByVersionAttribute("Excel", 11,12,14,15)]
+		[SupportByVersionAttribute("Excel", 11,12,14,15,16)]
 		public Int32 WorkbookBeforeXmlImport(NetOffice.ExcelApi.Workbook wb, NetOffice.ExcelApi.XmlMap map, string url, bool isRefresh, bool cancel)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(wb, map, url, isRefresh, cancel);
@@ -457,14 +457,14 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 11, 12, 14, 15
+		/// SupportByVersion Excel 11, 12, 14, 15, 16
 		/// 
 		/// </summary>
 		/// <param name="wb">NetOffice.ExcelApi.Workbook Wb</param>
 		/// <param name="map">NetOffice.ExcelApi.XmlMap Map</param>
 		/// <param name="isRefresh">bool IsRefresh</param>
 		/// <param name="result">NetOffice.ExcelApi.Enums.XlXmlImportResult Result</param>
-		[SupportByVersionAttribute("Excel", 11,12,14,15)]
+		[SupportByVersionAttribute("Excel", 11,12,14,15,16)]
 		public Int32 WorkbookAfterXmlImport(NetOffice.ExcelApi.Workbook wb, NetOffice.ExcelApi.XmlMap map, bool isRefresh, NetOffice.ExcelApi.Enums.XlXmlImportResult result)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(wb, map, isRefresh, result);
@@ -473,14 +473,14 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 11, 12, 14, 15
+		/// SupportByVersion Excel 11, 12, 14, 15, 16
 		/// 
 		/// </summary>
 		/// <param name="wb">NetOffice.ExcelApi.Workbook Wb</param>
 		/// <param name="map">NetOffice.ExcelApi.XmlMap Map</param>
 		/// <param name="url">string Url</param>
 		/// <param name="cancel">bool Cancel</param>
-		[SupportByVersionAttribute("Excel", 11,12,14,15)]
+		[SupportByVersionAttribute("Excel", 11,12,14,15,16)]
 		public Int32 WorkbookBeforeXmlExport(NetOffice.ExcelApi.Workbook wb, NetOffice.ExcelApi.XmlMap map, string url, bool cancel)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(wb, map, url, cancel);
@@ -489,14 +489,14 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 11, 12, 14, 15
+		/// SupportByVersion Excel 11, 12, 14, 15, 16
 		/// 
 		/// </summary>
 		/// <param name="wb">NetOffice.ExcelApi.Workbook Wb</param>
 		/// <param name="map">NetOffice.ExcelApi.XmlMap Map</param>
 		/// <param name="url">string Url</param>
 		/// <param name="result">NetOffice.ExcelApi.Enums.XlXmlExportResult Result</param>
-		[SupportByVersionAttribute("Excel", 11,12,14,15)]
+		[SupportByVersionAttribute("Excel", 11,12,14,15,16)]
 		public Int32 WorkbookAfterXmlExport(NetOffice.ExcelApi.Workbook wb, NetOffice.ExcelApi.XmlMap map, string url, NetOffice.ExcelApi.Enums.XlXmlExportResult result)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(wb, map, url, result);
@@ -505,14 +505,14 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 12, 14, 15
+		/// SupportByVersion Excel 12, 14, 15, 16
 		/// 
 		/// </summary>
 		/// <param name="wb">NetOffice.ExcelApi.Workbook Wb</param>
 		/// <param name="description">string Description</param>
 		/// <param name="sheet">string Sheet</param>
 		/// <param name="success">bool Success</param>
-		[SupportByVersionAttribute("Excel", 12,14,15)]
+		[SupportByVersionAttribute("Excel", 12,14,15,16)]
 		public Int32 WorkbookRowsetComplete(NetOffice.ExcelApi.Workbook wb, string description, string sheet, bool success)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(wb, description, sheet, success);
@@ -521,10 +521,10 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 12, 14, 15
+		/// SupportByVersion Excel 12, 14, 15, 16
 		/// 
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 12,14,15)]
+		[SupportByVersionAttribute("Excel", 12,14,15,16)]
 		public Int32 AfterCalculate()
 		{
 			object[] paramsArray = null;
@@ -533,13 +533,13 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 14, 15
+		/// SupportByVersion Excel 14, 15, 16
 		/// 
 		/// </summary>
 		/// <param name="sh">object Sh</param>
 		/// <param name="targetPivotTable">NetOffice.ExcelApi.PivotTable TargetPivotTable</param>
 		/// <param name="targetRange">NetOffice.ExcelApi.Range TargetRange</param>
-		[SupportByVersionAttribute("Excel", 14,15)]
+		[SupportByVersionAttribute("Excel", 14,15,16)]
 		public Int32 SheetPivotTableAfterValueChange(object sh, NetOffice.ExcelApi.PivotTable targetPivotTable, NetOffice.ExcelApi.Range targetRange)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(sh, targetPivotTable, targetRange);
@@ -548,7 +548,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 14, 15
+		/// SupportByVersion Excel 14, 15, 16
 		/// 
 		/// </summary>
 		/// <param name="sh">object Sh</param>
@@ -556,7 +556,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="valueChangeStart">Int32 ValueChangeStart</param>
 		/// <param name="valueChangeEnd">Int32 ValueChangeEnd</param>
 		/// <param name="cancel">bool Cancel</param>
-		[SupportByVersionAttribute("Excel", 14,15)]
+		[SupportByVersionAttribute("Excel", 14,15,16)]
 		public Int32 SheetPivotTableBeforeAllocateChanges(object sh, NetOffice.ExcelApi.PivotTable targetPivotTable, Int32 valueChangeStart, Int32 valueChangeEnd, bool cancel)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(sh, targetPivotTable, valueChangeStart, valueChangeEnd, cancel);
@@ -565,7 +565,7 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 14, 15
+		/// SupportByVersion Excel 14, 15, 16
 		/// 
 		/// </summary>
 		/// <param name="sh">object Sh</param>
@@ -573,7 +573,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="valueChangeStart">Int32 ValueChangeStart</param>
 		/// <param name="valueChangeEnd">Int32 ValueChangeEnd</param>
 		/// <param name="cancel">bool Cancel</param>
-		[SupportByVersionAttribute("Excel", 14,15)]
+		[SupportByVersionAttribute("Excel", 14,15,16)]
 		public Int32 SheetPivotTableBeforeCommitChanges(object sh, NetOffice.ExcelApi.PivotTable targetPivotTable, Int32 valueChangeStart, Int32 valueChangeEnd, bool cancel)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(sh, targetPivotTable, valueChangeStart, valueChangeEnd, cancel);
@@ -582,14 +582,14 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 14, 15
+		/// SupportByVersion Excel 14, 15, 16
 		/// 
 		/// </summary>
 		/// <param name="sh">object Sh</param>
 		/// <param name="targetPivotTable">NetOffice.ExcelApi.PivotTable TargetPivotTable</param>
 		/// <param name="valueChangeStart">Int32 ValueChangeStart</param>
 		/// <param name="valueChangeEnd">Int32 ValueChangeEnd</param>
-		[SupportByVersionAttribute("Excel", 14,15)]
+		[SupportByVersionAttribute("Excel", 14,15,16)]
 		public Int32 SheetPivotTableBeforeDiscardChanges(object sh, NetOffice.ExcelApi.PivotTable targetPivotTable, Int32 valueChangeStart, Int32 valueChangeEnd)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(sh, targetPivotTable, valueChangeStart, valueChangeEnd);
@@ -598,11 +598,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 14, 15
+		/// SupportByVersion Excel 14, 15, 16
 		/// 
 		/// </summary>
 		/// <param name="pvw">NetOffice.ExcelApi.ProtectedViewWindow Pvw</param>
-		[SupportByVersionAttribute("Excel", 14,15)]
+		[SupportByVersionAttribute("Excel", 14,15,16)]
 		public Int32 ProtectedViewWindowOpen(NetOffice.ExcelApi.ProtectedViewWindow pvw)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pvw);
@@ -611,12 +611,12 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 14, 15
+		/// SupportByVersion Excel 14, 15, 16
 		/// 
 		/// </summary>
 		/// <param name="pvw">NetOffice.ExcelApi.ProtectedViewWindow Pvw</param>
 		/// <param name="cancel">bool Cancel</param>
-		[SupportByVersionAttribute("Excel", 14,15)]
+		[SupportByVersionAttribute("Excel", 14,15,16)]
 		public Int32 ProtectedViewWindowBeforeEdit(NetOffice.ExcelApi.ProtectedViewWindow pvw, bool cancel)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pvw, cancel);
@@ -625,13 +625,13 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 14, 15
+		/// SupportByVersion Excel 14, 15, 16
 		/// 
 		/// </summary>
 		/// <param name="pvw">NetOffice.ExcelApi.ProtectedViewWindow Pvw</param>
 		/// <param name="reason">NetOffice.ExcelApi.Enums.XlProtectedViewCloseReason Reason</param>
 		/// <param name="cancel">bool Cancel</param>
-		[SupportByVersionAttribute("Excel", 14,15)]
+		[SupportByVersionAttribute("Excel", 14,15,16)]
 		public Int32 ProtectedViewWindowBeforeClose(NetOffice.ExcelApi.ProtectedViewWindow pvw, NetOffice.ExcelApi.Enums.XlProtectedViewCloseReason reason, bool cancel)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pvw, reason, cancel);
@@ -640,11 +640,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 14, 15
+		/// SupportByVersion Excel 14, 15, 16
 		/// 
 		/// </summary>
 		/// <param name="pvw">NetOffice.ExcelApi.ProtectedViewWindow Pvw</param>
-		[SupportByVersionAttribute("Excel", 14,15)]
+		[SupportByVersionAttribute("Excel", 14,15,16)]
 		public Int32 ProtectedViewWindowResize(NetOffice.ExcelApi.ProtectedViewWindow pvw)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pvw);
@@ -653,11 +653,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 14, 15
+		/// SupportByVersion Excel 14, 15, 16
 		/// 
 		/// </summary>
 		/// <param name="pvw">NetOffice.ExcelApi.ProtectedViewWindow Pvw</param>
-		[SupportByVersionAttribute("Excel", 14,15)]
+		[SupportByVersionAttribute("Excel", 14,15,16)]
 		public Int32 ProtectedViewWindowActivate(NetOffice.ExcelApi.ProtectedViewWindow pvw)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pvw);
@@ -666,11 +666,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 14, 15
+		/// SupportByVersion Excel 14, 15, 16
 		/// 
 		/// </summary>
 		/// <param name="pvw">NetOffice.ExcelApi.ProtectedViewWindow Pvw</param>
-		[SupportByVersionAttribute("Excel", 14,15)]
+		[SupportByVersionAttribute("Excel", 14,15,16)]
 		public Int32 ProtectedViewWindowDeactivate(NetOffice.ExcelApi.ProtectedViewWindow pvw)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pvw);
@@ -679,12 +679,12 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 14, 15
+		/// SupportByVersion Excel 14, 15, 16
 		/// 
 		/// </summary>
 		/// <param name="wb">NetOffice.ExcelApi.Workbook Wb</param>
 		/// <param name="success">bool Success</param>
-		[SupportByVersionAttribute("Excel", 14,15)]
+		[SupportByVersionAttribute("Excel", 14,15,16)]
 		public Int32 WorkbookAfterSave(NetOffice.ExcelApi.Workbook wb, bool success)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(wb, success);
@@ -693,12 +693,12 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 14, 15
+		/// SupportByVersion Excel 14, 15, 16
 		/// 
 		/// </summary>
 		/// <param name="wb">NetOffice.ExcelApi.Workbook Wb</param>
 		/// <param name="ch">NetOffice.ExcelApi.Chart Ch</param>
-		[SupportByVersionAttribute("Excel", 14,15)]
+		[SupportByVersionAttribute("Excel", 14,15,16)]
 		public Int32 WorkbookNewChart(NetOffice.ExcelApi.Workbook wb, NetOffice.ExcelApi.Chart ch)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(wb, ch);
@@ -707,11 +707,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 15
+		/// SupportByVersion Excel 15,16
 		/// 
 		/// </summary>
 		/// <param name="sh">object Sh</param>
-		[SupportByVersionAttribute("Excel", 15)]
+		[SupportByVersionAttribute("Excel", 15, 16)]
 		public Int32 SheetLensGalleryRenderComplete(object sh)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(sh);
@@ -720,12 +720,12 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 15
+		/// SupportByVersion Excel 15,16
 		/// 
 		/// </summary>
 		/// <param name="sh">object Sh</param>
 		/// <param name="target">NetOffice.ExcelApi.TableObject Target</param>
-		[SupportByVersionAttribute("Excel", 15)]
+		[SupportByVersionAttribute("Excel", 15, 16)]
 		public Int32 SheetTableUpdate(object sh, NetOffice.ExcelApi.TableObject target)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(sh, target);
@@ -734,12 +734,12 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 15
+		/// SupportByVersion Excel 15,16
 		/// 
 		/// </summary>
 		/// <param name="wb">NetOffice.ExcelApi.Workbook Wb</param>
 		/// <param name="changes">NetOffice.ExcelApi.ModelChanges Changes</param>
-		[SupportByVersionAttribute("Excel", 15)]
+		[SupportByVersionAttribute("Excel", 15, 16)]
 		public Int32 WorkbookModelChange(NetOffice.ExcelApi.Workbook wb, NetOffice.ExcelApi.ModelChanges changes)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(wb, changes);
@@ -748,11 +748,11 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Excel 15
+		/// SupportByVersion Excel 15,16
 		/// 
 		/// </summary>
 		/// <param name="sh">object Sh</param>
-		[SupportByVersionAttribute("Excel", 15)]
+		[SupportByVersionAttribute("Excel", 15, 16)]
 		public Int32 SheetBeforeDelete(object sh)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(sh);
