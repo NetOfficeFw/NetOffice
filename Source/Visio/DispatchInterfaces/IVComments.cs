@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using NetRuntimeSystem = System;
 using System.Runtime.InteropServices;
 using System.Runtime.CompilerServices;
@@ -11,9 +11,9 @@ namespace NetOffice.VisioApi
 {
 	///<summary>
 	/// DispatchInterface IVComments 
-	/// SupportByVersion Visio, 15
+	/// SupportByVersion Visio, 15, 16
 	///</summary>
-	[SupportByVersionAttribute("Visio", 15)]
+	[SupportByVersionAttribute("Visio", 15, 16)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class IVComments : COMObject ,IEnumerable<NetOffice.VisioApi.IVComment>
 	{
@@ -93,10 +93,10 @@ namespace NetOffice.VisioApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion Visio 15
+		/// SupportByVersion Visio 15,16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 15)]
+		[SupportByVersionAttribute("Visio", 15, 16)]
 		public NetOffice.VisioApi.IVApplication Application
 		{
 			get
@@ -109,10 +109,10 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio 15
+		/// SupportByVersion Visio 15,16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 15)]
+		[SupportByVersionAttribute("Visio", 15, 16)]
 		public Int16 Stat
 		{
 			get
@@ -124,10 +124,10 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio 15
+		/// SupportByVersion Visio 15,16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 15)]
+		[SupportByVersionAttribute("Visio", 15, 16)]
 		public NetOffice.VisioApi.IVDocument Document
 		{
 			get
@@ -140,10 +140,10 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio 15
+		/// SupportByVersion Visio 15,16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 15)]
+		[SupportByVersionAttribute("Visio", 15, 16)]
 		public Int16 ObjectType
 		{
 			get
@@ -155,10 +155,10 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio 15
+		/// SupportByVersion Visio 15,16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 15)]
+		[SupportByVersionAttribute("Visio", 15, 16)]
 		public Int32 Count
 		{
 			get
@@ -170,11 +170,11 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio 15
+		/// SupportByVersion Visio 15,16
 		/// Get
 		/// </summary>
 		/// <param name="index">Int32 Index</param>
-		[SupportByVersionAttribute("Visio", 15)]
+		[SupportByVersionAttribute("Visio", 15, 16)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
 		public NetOffice.VisioApi.IVComment this[Int32 index]
 		{
@@ -192,11 +192,11 @@ namespace NetOffice.VisioApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByVersion Visio 15
+		/// SupportByVersion Visio 15,16
 		/// 
 		/// </summary>
 		/// <param name="text">string Text</param>
-		[SupportByVersionAttribute("Visio", 15)]
+		[SupportByVersionAttribute("Visio", 15, 16)]
 		public NetOffice.VisioApi.IVComment Add(string text)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(text);
@@ -206,10 +206,10 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio 15
+		/// SupportByVersion Visio 15,16
 		/// 
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 15)]
+		[SupportByVersionAttribute("Visio", 15, 16)]
 		public void DeleteAll()
 		{
 			object[] paramsArray = null;
@@ -221,9 +221,9 @@ namespace NetOffice.VisioApi
        #region IEnumerable<NetOffice.VisioApi.IVComment> Member
         
         /// <summary>
-		/// SupportByVersionAttribute Visio, 15
+		/// SupportByVersionAttribute Visio, 15, 16
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 15)]
+		[SupportByVersionAttribute("Visio", 15, 16)]
        public IEnumerator<NetOffice.VisioApi.IVComment> GetEnumerator()  
        {
            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
@@ -236,9 +236,9 @@ namespace NetOffice.VisioApi
 		#region IEnumerable Members
        
 		/// <summary>
-		/// SupportByVersionAttribute Visio, 15
+		/// SupportByVersionAttribute Visio, 15, 16
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 15)]
+		[SupportByVersionAttribute("Visio", 15, 16)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
 			return NetOffice.Utils.GetProxyEnumeratorAsProperty(this);

@@ -22,7 +22,7 @@ namespace NetOffice.VisioApi.Tools
         /// <summary>
         /// MS-Visio Registry Path 
         /// </summary>
-        private static readonly string _addinOfficeRegistryKey  = "Software\\Microsoft\\Office\\Visio\\AddIns\\";
+        private static readonly string _addinOfficeRegistryKey  = "Software\\Microsoft\\Office\\Visio\\Addins\\";
 
         #endregion
         
@@ -227,19 +227,6 @@ namespace NetOffice.VisioApi.Tools
         #region ErrorHandler 
         
         /// <summary>
-        /// Checks for a static method, signed with the ErrorHandlerAttribute and call them if its available
-        /// </summary>
-        /// <param name="type">type information for the class wtih static method </param>
-       /// <param name="methodKind">origin method where the error comes from</param>
-        /// <param name="exception">occured exception</param>
-        private static void RaiseStaticErrorHandlerMethod(Type type, RegisterErrorMethodKind methodKind, NetRuntimeSystem.Exception exception)
-        {
-			MethodInfo errorMethod = AttributeHelper.GetRegisterErrorMethod(type);
-            if (null != errorMethod)
-                errorMethod.Invoke(null, new object[] { methodKind, exception });
-        }
-
-        /// <summary>
         /// Custom error handler
         /// </summary>
         /// <param name="methodKind">origin method where the error comes from</param>
@@ -260,70 +247,7 @@ namespace NetOffice.VisioApi.Tools
         [ComRegisterFunctionAttribute, Browsable(false), EditorBrowsable( EditorBrowsableState.Never)]
         public static void RegisterFunction(Type type)
         {
-            try                
-            {
-                MethodInfo registerMethod = null;
-                RegisterFunctionAttribute registerAttribute = null;
-                bool registerMethodPresent = AttributeHelper.GetRegisterAttribute(type, ref registerMethod, ref registerAttribute);
-                if (registerMethodPresent)
-                {
-                    CallDerivedRegisterMethod(type, registerMethod, registerAttribute);
-                    if (registerAttribute.Value == RegisterMode.Replace)
-                        return;
-                }
-
-                GuidAttribute guid = AttributeHelper.GetGuidAttribute(type);
-                ProgIdAttribute progId = AttributeHelper.GetProgIDAttribute(type);
-                RegistryLocationAttribute location = AttributeHelper.GetRegistryLocationAttribute(type);
-				COMAddinAttribute addin = AttributeHelper.GetCOMAddinAttribute(type);
-
-                Assembly thisAssembly = Assembly.GetAssembly(type);
-				string assemblyVersion = thisAssembly.GetName().Version.ToString();
-                RegistryKey key = Registry.ClassesRoot.CreateSubKey("CLSID\\{" + type.GUID.ToString().ToUpper() + "}\\InprocServer32\\" + assemblyVersion);
-                key.SetValue("CodeBase", thisAssembly.CodeBase);
-                key.Close();
-                
-				Registry.ClassesRoot.CreateSubKey(@"CLSID\{" + type.GUID.ToString().ToUpper() + @"}\Programmable");
-				key = Registry.ClassesRoot.OpenSubKey(@"CLSID\{" + type.GUID.ToString().ToUpper() + @"}\InprocServer32", true);
-				key.SetValue("", NetRuntimeSystem.Environment.SystemDirectory + @"\mscoree.dll", RegistryValueKind.String);
-				key.Close();
-
-                // add bypass key
-                // http://support.microsoft.com/kb/948461
-                key = Registry.ClassesRoot.CreateSubKey("Interface\\{000C0601-0000-0000-C000-000000000046}");
-                string defaultValue = key.GetValue("") as string;
-                if (null == defaultValue)
-                    key.SetValue("", "Office .NET Framework Lockback Bypass Key");
-                key.Close();
-
-                // register addin in Visio
-				if(location.Value == RegistrySaveLocation.LocalMachine)
-					Registry.LocalMachine.CreateSubKey(_addinOfficeRegistryKey +  progId.Value);
-				else
-					Registry.CurrentUser.CreateSubKey(_addinOfficeRegistryKey +  progId.Value);
-
-			    RegistryKey regKeyVisio = null;
-                if(location.Value == RegistrySaveLocation.LocalMachine)
-                    regKeyVisio = Registry.LocalMachine.OpenSubKey(_addinOfficeRegistryKey + progId.Value, true);
-                else
-                    regKeyVisio = Registry.CurrentUser.OpenSubKey(_addinOfficeRegistryKey + progId.Value, true);
-
-                regKeyVisio.SetValue("LoadBehavior", addin.LoadBehavior);
-                regKeyVisio.SetValue("FriendlyName", addin.Name);
-                regKeyVisio.SetValue("Description", addin.Description);
-                if(-1 != addin.CommandLineSafe)
-                    regKeyVisio.SetValue("CommandLineSafe", addin.CommandLineSafe);
-
-                regKeyVisio.Close();
-
-                 if( (registerMethodPresent) && (registerAttribute.Value == RegisterMode.CallBeforeAndAfter || registerAttribute.Value == RegisterMode.CallAfter))
-                        registerMethod.Invoke(null, new object[] { type, RegisterCall.CallAfter });
-            }
-            catch (NetRuntimeSystem.Exception exception)
-            {
-				NetOffice.DebugConsole.Default.WriteException(exception);
-                RaiseStaticErrorHandlerMethod(type, RegisterErrorMethodKind.Register, exception);
-            }
+            RegisterHandler.Proceed(type, new string[] { _addinOfficeRegistryKey }, InstallScope.System, OfficeRegisterKeyState.NeedToCreate);
         }
 
         /// <summary>
@@ -333,93 +257,59 @@ namespace NetOffice.VisioApi.Tools
         [ComUnregisterFunctionAttribute, Browsable(false), EditorBrowsable(EditorBrowsableState.Never)]
         public static void UnregisterFunction(Type type)
         {
-            try
-            {
-                MethodInfo registerMethod = null;
-                UnRegisterFunctionAttribute registerAttribute = null;
-                bool registerMethodPresent = AttributeHelper.GetUnRegisterAttribute(type, ref registerMethod, ref registerAttribute);
-                if (registerMethodPresent)
-                {
-                    CallDerivedUnRegisterMethod(type, registerMethod, registerAttribute);
-                    if (registerAttribute.Value == RegisterMode.Replace)
-                        return;
-                }
-
-                ProgIdAttribute progId = AttributeHelper.GetProgIDAttribute(type);
-                RegistryLocationAttribute location = AttributeHelper.GetRegistryLocationAttribute(type);
-
-                // unregister addin
-                Registry.ClassesRoot.DeleteSubKey(@"CLSID\{" + type.GUID.ToString().ToUpper() + @"}\Programmable", false);
-               
-                // unregister addin in office 
-                if (location.Value == RegistrySaveLocation.LocalMachine)
-                    Registry.LocalMachine.DeleteSubKey(_addinOfficeRegistryKey + progId.Value, false);
-                else
-                    Registry.CurrentUser.DeleteSubKey(_addinOfficeRegistryKey + progId.Value, false);
-
-                if ((registerMethodPresent) && (registerAttribute.Value == RegisterMode.CallBeforeAndAfter || registerAttribute.Value == RegisterMode.CallAfter))
-                    registerMethod.Invoke(null, new object[] { type, RegisterCall.CallAfter });
-            }
-            catch (NetRuntimeSystem.Exception exception)
-            {
-				NetOffice.DebugConsole.Default.WriteException(exception);
-                RaiseStaticErrorHandlerMethod(type, RegisterErrorMethodKind.UnRegister, exception);
-            }
+            UnRegisterHandler.Proceed(type, new string[] { _addinOfficeRegistryKey }, InstallScope.System, OfficeUnRegisterKeyState.NeedToDelete);
         }
 
         /// <summary>
-        /// Derived Register Call Helper
+        /// Called from RegAddin while register
         /// </summary>
-        /// <param name="type">type for derived class</param>
-        /// <param name="registerMethod">the method to call</param>
-        /// <param name="registerAttribute">arguments</param>
-        private static void CallDerivedRegisterMethod(Type type, MethodInfo registerMethod, RegisterFunctionAttribute registerAttribute)
+        /// <param name="type">Type information for the class</param>
+        /// <param name="scope">NetOffice.Tools.InstallScope enum value</param>
+        /// <param name="keyState">NetOffice.Tools.OfficeRegisterKeyState enum value</param>
+        [ComRegisterCall]
+        private static void OptimizedRegisterFunction(Type type, int scope, int keyState)
         {
-            if (registerAttribute.Value == RegisterMode.Replace)
-                registerMethod.Invoke(null, new object[] { type, RegisterCall.Replace });
-            else if (registerAttribute.Value == RegisterMode.CallBeforeAndAfter || registerAttribute.Value == RegisterMode.CallBefore)
-                registerMethod.Invoke(null, new object[] { type, RegisterCall.CallBefore });
+            if (null == type)
+                throw new ArgumentNullException("type");
+            InstallScope currentScope = (InstallScope)scope;
+            OfficeRegisterKeyState currentKeyState = (OfficeRegisterKeyState)keyState;
+
+            RegisterHandler.Proceed(type, new string[] { _addinOfficeRegistryKey }, currentScope, currentKeyState);
         }
 
         /// <summary>
-        /// Derived Unregister Call Helper
+        /// Called from RegAddin while unregister
         /// </summary>
-        /// <param name="type">type for derived class</param>
-        /// <param name="registerMethod">the method to call</param>
-        /// <param name="registerAttribute">arguments</param>
-        private static void CallDerivedUnRegisterMethod(Type type, MethodInfo registerMethod, UnRegisterFunctionAttribute registerAttribute)
+        /// <param name="type">Type information for the class</param>
+        /// <param name="scope">NetOffice.Tools.InstallScope enum value</param>
+        /// <param name="keyState">NetOffice.Tools.OfficeUnRegisterKeyState enum value</param>
+        [ComUnregisterCall]
+        private static void OptimizedUnregisterFunction(Type type, int scope, int keyState)
         {
-            if (registerAttribute.Value == RegisterMode.Replace)
-                registerMethod.Invoke(null, new object[] { type, RegisterCall.Replace });
-            else if (registerAttribute.Value == RegisterMode.CallBeforeAndAfter || registerAttribute.Value == RegisterMode.CallBefore)
-                registerMethod.Invoke(null, new object[] { type, RegisterCall.CallBefore });
+            if (null == type)
+                throw new ArgumentNullException("type");
+            InstallScope currentScope = (InstallScope)scope;
+            OfficeUnRegisterKeyState currentKeyState = (OfficeUnRegisterKeyState)keyState;
+
+            UnRegisterHandler.Proceed(type, new string[] { _addinOfficeRegistryKey }, currentScope, currentKeyState);
         }
 
-
-        #endregion
-
-        #region Private Helper Methods
-
         /// <summary>
-        /// reads text file from ressource
+        /// Called from RegAddin while export registry informations 
         /// </summary>
-        /// <param name="fileName">ressourceLocation</param>
-        /// <returns>text content</returns>
-        private string ReadRessourceFile(string fileName)
+        /// <param name="type">Type information for the class</param>
+        /// <param name="scope">NetOffice.Tools.InstallScope enum value</param>
+        /// <param name="keyState">NetOffice.Tools.OfficeRegisterKeyState enum value</param>
+        /// <returns>Registry keys/values to be add in the registry export or null</returns>
+        [ComRegExportCall]
+        private static RegExport RegExportFunction(Type type, int scope, int keyState)
         {
-            Assembly assembly = Type.Assembly;
-            NetRuntimeSystem.IO.Stream ressourceStream = assembly.GetManifestResourceStream(fileName);
-            if (ressourceStream == null)
-                throw (new NetRuntimeSystem.IO.IOException("Error accessing resource Stream."));
+            if (null == type)
+                throw new ArgumentNullException("type");
+            InstallScope currentScope = (InstallScope)scope;
+            OfficeRegisterKeyState currentKeyState = (OfficeRegisterKeyState)keyState;
 
-            NetRuntimeSystem.IO.StreamReader textStreamReader = new NetRuntimeSystem.IO.StreamReader(ressourceStream);
-            if (textStreamReader == null)
-                throw (new NetRuntimeSystem.IO.IOException("Error accessing resource File."));
-
-            string text = textStreamReader.ReadToEnd();
-            ressourceStream.Close();
-            textStreamReader.Close();
-            return text;
+            return RegExportHandler.Proceed(type, new string[] { _addinOfficeRegistryKey }, currentScope, currentKeyState);
         }
 
         #endregion

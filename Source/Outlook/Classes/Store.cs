@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using NetOffice;
@@ -14,10 +14,10 @@ namespace NetOffice.OutlookApi
 
 	///<summary>
 	/// CoClass Store 
-	/// SupportByVersion Outlook, 12,14,15
+	/// SupportByVersion Outlook, 12,14,15,16
 	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff862128.aspx
 	///</summary>
-	[SupportByVersionAttribute("Outlook", 12,14,15)]
+	[SupportByVersionAttribute("Outlook", 12,14,15,16)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class Store : _Store
 	{
@@ -91,7 +91,7 @@ namespace NetOffice.OutlookApi
 		}
 		
 		///<summary>
-        ///creates a new instance of Store 
+        /// Creates a new instance of Store 
         ///</summary>		
 		public Store():base("Outlook.Store")
 		{
@@ -99,7 +99,7 @@ namespace NetOffice.OutlookApi
 		}
 		
 		///<summary>
-        ///creates a new instance of Store
+        /// Creates a new instance of Store
         ///</summary>
         ///<param name="progId">registered ProgID</param>
 		public Store(string progId):base(progId)
@@ -112,12 +112,12 @@ namespace NetOffice.OutlookApi
 		#region Static CoClass Methods
 
 		/// <summary>
-        /// returns all running Outlook.Store objects from the running object table(ROT)
+        /// Returns all running Outlook.Store objects from the environment/system
         /// </summary>
         /// <returns>an Outlook.Store array</returns>
 		public static NetOffice.OutlookApi.Store[] GetActiveInstances()
 		{		
-			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("Outlook","Store");
+			IDisposableEnumeration proxyList = NetOffice.ProxyService.GetActiveInstances("Outlook","Store");
 			NetRuntimeSystem.Collections.Generic.List<NetOffice.OutlookApi.Store> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.OutlookApi.Store>();
 			foreach(object proxy in proxyList)
 				resultList.Add( new NetOffice.OutlookApi.Store(null, proxy) );
@@ -125,12 +125,12 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-        /// returns a running Outlook.Store object from the running object table(ROT). the method takes the first element from the table
+        /// Returns a running Outlook.Store object from the environment/system.
         /// </summary>
         /// <returns>an Outlook.Store object or null</returns>
 		public static NetOffice.OutlookApi.Store GetActiveInstance()
 		{
-			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Outlook","Store", false);
+			object proxy  = NetOffice.ProxyService.GetActiveInstance("Outlook","Store", false);
 			if(null != proxy)
 				return new NetOffice.OutlookApi.Store(null, proxy);
 			else
@@ -138,13 +138,13 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-        /// returns a running Outlook.Store object from the running object table(ROT).  the method takes the first element from the table
+        /// Returns a running Outlook.Store object from the environment/system. 
         /// </summary>
 	    /// <param name="throwOnError">throw an exception if no object was found</param>
         /// <returns>an Outlook.Store object or null</returns>
 		public static NetOffice.OutlookApi.Store GetActiveInstance(bool throwOnError)
 		{
-			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Outlook","Store", throwOnError);
+			object proxy  = NetOffice.ProxyService.GetActiveInstance("Outlook","Store", throwOnError);
 			if(null != proxy)
 				return new NetOffice.OutlookApi.Store(null, proxy);
 			else
@@ -159,7 +159,7 @@ namespace NetOffice.OutlookApi
 	    #region IEventBinding Member
         
 		/// <summary>
-        /// creates active sink helper
+        /// Creates active sink helper
         /// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public void CreateEventBridge()
@@ -176,6 +176,9 @@ namespace NetOffice.OutlookApi
  
         }
 
+        /// <summary>
+        /// The instance use currently an event listener 
+        /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public bool EventBridgeInitialized
         {
@@ -184,7 +187,10 @@ namespace NetOffice.OutlookApi
                 return (null != _connectPoint);
             }
         }
-        
+
+        /// <summary>
+        ///  The instance has currently one or more event recipients 
+        /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public bool HasEventRecipients()       
         {
@@ -204,6 +210,9 @@ namespace NetOffice.OutlookApi
 			return false;
         }
         
+        /// <summary>
+        /// Target methods from its actual event recipients
+        /// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public Delegate[] GetEventRecipients(string eventName)
         {
@@ -223,7 +232,10 @@ namespace NetOffice.OutlookApi
             else
                 return new Delegate[0];
         }
-
+       
+        /// <summary>
+        /// Returns the current count of event recipients
+        /// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public int GetCountOfEventRecipients(string eventName)
         {
@@ -242,8 +254,14 @@ namespace NetOffice.OutlookApi
             }
             else
                 return 0;
-        }
-
+           }
+        
+        /// <summary>
+        /// Raise an instance event
+        /// </summary>
+        /// <param name="eventName">name of the event without 'Event' at the end</param>
+        /// <param name="paramsArray">custom arguments for the event</param>
+        /// <returns>count of called event recipients</returns>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public int RaiseCustomEvent(string eventName, ref object[] paramsArray)
 		{
@@ -275,6 +293,9 @@ namespace NetOffice.OutlookApi
                 return 0;
 		}
 
+        /// <summary>
+        /// Stop listening events for the instance
+        /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public void DisposeEventBridge()
         {

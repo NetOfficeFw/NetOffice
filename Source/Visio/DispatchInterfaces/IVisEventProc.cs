@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using NetRuntimeSystem = System;
 using System.Runtime.InteropServices;
 using System.Runtime.CompilerServices;
@@ -10,10 +10,10 @@ namespace NetOffice.VisioApi
 {
 	///<summary>
 	/// DispatchInterface IVisEventProc 
-	/// SupportByVersion Visio, 11,12,14,15
+	/// SupportByVersion Visio, 11,12,14,15,16
 	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff769310(v=office.14).aspx
 	///</summary>
-	[SupportByVersionAttribute("Visio", 11,12,14,15)]
+	[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class IVisEventProc : COMObject
 	{
@@ -97,7 +97,7 @@ namespace NetOffice.VisioApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByVersion Visio 11, 12, 14, 15
+		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff768483(v=office.14).aspx
 		/// </summary>
 		/// <param name="nEventCode">Int16 nEventCode</param>
@@ -106,7 +106,7 @@ namespace NetOffice.VisioApi
 		/// <param name="nEventSeqNum">Int32 nEventSeqNum</param>
 		/// <param name="pSubjectObj">object pSubjectObj</param>
 		/// <param name="vMoreInfo">object vMoreInfo</param>
-		[SupportByVersionAttribute("Visio", 11,12,14,15)]
+		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
 		public object VisEventProc(Int16 nEventCode, object pSourceObj, Int32 nEventID, Int32 nEventSeqNum, object pSubjectObj, object vMoreInfo)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(nEventCode, pSourceObj, nEventID, nEventSeqNum, pSubjectObj, vMoreInfo);

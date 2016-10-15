@@ -8,7 +8,7 @@ namespace NetOffice.VisioApi.GlobalHelperModules
 	///<summary>
 	/// Module GlobalModule
 	///</summary>
-	[SupportByVersionAttribute("Visio", 11,12,14,15)]
+	[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
 	[EntityTypeAttribute(EntityType.IsModule)]
 	public static class GlobalModule
 	{
@@ -61,10 +61,10 @@ namespace NetOffice.VisioApi.GlobalHelperModules
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion Visio 11, 12, 14, 15
+		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 11,12,14,15)]
+		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
 		public static NetOffice.VisioApi.IVApplication Application
 		{
 			get
@@ -77,10 +77,10 @@ namespace NetOffice.VisioApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio 11, 12, 14, 15
+		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 11,12,14,15)]
+		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
 		public static NetOffice.VisioApi.IVDocument ActiveDocument
 		{
 			get
@@ -93,10 +93,10 @@ namespace NetOffice.VisioApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio 11, 12, 14, 15
+		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 11,12,14,15)]
+		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
 		public static NetOffice.VisioApi.IVPage ActivePage
 		{
 			get
@@ -109,10 +109,10 @@ namespace NetOffice.VisioApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio 11, 12, 14, 15
+		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 11,12,14,15)]
+		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
 		public static NetOffice.VisioApi.IVWindow ActiveWindow
 		{
 			get
@@ -125,10 +125,10 @@ namespace NetOffice.VisioApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio 11, 12, 14, 15
+		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 11,12,14,15)]
+		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
 		public static NetOffice.VisioApi.IVDocuments Documents
 		{
 			get
@@ -141,10 +141,10 @@ namespace NetOffice.VisioApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio 11, 12, 14, 15
+		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 11,12,14,15)]
+		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
 		public static NetOffice.VisioApi.IVWindows Windows
 		{
 			get
@@ -157,10 +157,10 @@ namespace NetOffice.VisioApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio 11, 12, 14, 15
+		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 11,12,14,15)]
+		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
 		public static NetOffice.VisioApi.IVAddons Addons
 		{
 			get
@@ -173,11 +173,11 @@ namespace NetOffice.VisioApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio 11, 12, 14, 15
+		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 11,12,14,15)]
+		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
 		public static object Vbe
 		{
 			get

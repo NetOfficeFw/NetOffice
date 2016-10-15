@@ -24,15 +24,20 @@ namespace NetOffice.WordApi.Tools
         /// <summary>
         /// MS-Word Registry Path 
         /// </summary>
-        private static readonly string _addinOfficeRegistryKey  = "Software\\Microsoft\\Office\\Word\\AddIns\\";
+        private static readonly string _addinOfficeRegistryKey  = "Software\\Microsoft\\Office\\Word\\Addins\\";
 
         /// <summary>
         /// First field in OnConnection custom argument array
         /// </summary>
         private int _automationCode = -1;
 
+        /// <summary>
+        /// Cache field used in IsLoadedFromSystem() method
+        /// </summary>
+        private bool? _isLoadedFromSystem;
+
         #endregion
-        
+
         #region Ctor
 
         /// <summary>
@@ -239,7 +244,8 @@ namespace NetOffice.WordApi.Tools
         {
             try
             {
-                Tweaks.ApplyTweaks(Factory, this, Type, "Word");
+                Tweaks.ApplyTweaks(Factory, this, Type, "Word", IsLoadedFromSystem);
+                LoadingTimeElapsed = (DateTime.Now - _creationTime);
                 RaiseOnStartupComplete(ref custom);
             }
             catch (NetRuntimeSystem.Exception exception)
@@ -378,7 +384,7 @@ namespace NetOffice.WordApi.Tools
         {
             try
             {
-                CustomUIAttribute ribbon = AttributeHelper.GetRibbonAttribute(Type);
+                CustomUIAttribute ribbon = AttributeReflector.GetRibbonAttribute(Type);
                 if (null != ribbon)
                     return Utils.Resource.ReadString(CustomUIAttribute.BuildPath(ribbon.Value, ribbon.UseAssemblyNamespace, Type.Namespace));
                 else
@@ -411,8 +417,9 @@ namespace NetOffice.WordApi.Tools
                     return;
                 }
 
-                ProceedCustomPaneAttributes();
-                CreateCustomPanes(CTPFactoryInst);
+                CustomTaskPaneHandler paneHandler = new CustomTaskPaneHandler();
+                paneHandler.ProceedCustomPaneAttributes(TaskPanes, Type, CallOnCreateTaskPaneInfo, AttributePane_VisibleStateChange, AttributePane_DockPositionStateChange);
+                paneHandler.CreateCustomPanes<ITaskPane, Word.Application>(Factory, CTPFactoryInst, TaskPanes, TaskPaneInstances, OnError, Application);
             }
             catch (NetRuntimeSystem.Exception exception)
             {
@@ -420,142 +427,7 @@ namespace NetOffice.WordApi.Tools
                 OnError(ErrorMethodKind.CTPFactoryAvailable, exception);
             }
         }
-
-        private void ProceedCustomPaneAttributes()
-        {
-            CustomPaneAttribute[] paneAttributes = AttributeHelper.GetCustomPaneAttributes(Type);
-            foreach (CustomPaneAttribute itemPane in paneAttributes)
-            {
-                if (null != itemPane)
-                {
-                    TaskPaneInfo item = TaskPanes.Add(itemPane.PaneType, itemPane.PaneType.Name);
-                    if (!CallOnCreateTaskPaneInfo(item))
-                    {
-                        item.Title = itemPane.Title;
-                        item.Visible = itemPane.Visible;
-                        item.DockPosition = (Office.Enums.MsoCTPDockPosition)Enum.Parse(typeof(Office.Enums.MsoCTPDockPosition), itemPane.DockPosition.ToString());
-                        item.DockPositionRestrict = (Office.Enums.MsoCTPDockPositionRestrict)Enum.Parse(typeof(Office.Enums.MsoCTPDockPositionRestrict), itemPane.DockPositionRestrict.ToString());
-                        item.Width = itemPane.Width;
-                        item.Height = itemPane.Height;
-                        item.Arguments = new object[] { this };
-                    }
-
-                    item.VisibleStateChange += new NetOffice.OfficeApi.CustomTaskPane_VisibleStateChangeEventHandler(AttributePane_VisibleStateChange);
-                    item.DockPositionStateChange += new Office.CustomTaskPane_DockPositionStateChangeEventHandler(AttributePane_DockPositionStateChange);
-                }
-            }
-        }
-
-        private void CreateCustomPanes(object CTPFactoryInst)
-        {
-            TaskPaneFactory = new NetOffice.OfficeApi.ICTPFactory(Factory, null, CTPFactoryInst);
-            foreach (TaskPaneInfo item in TaskPanes)
-            {
-                string title = item.Title;
-                Office.CustomTaskPane taskPane = CreateCTP(item.Type.FullName, title);
-                if (null == taskPane)
-                    continue;
-
-                item.Pane = taskPane;
-                item.AssignEvents();
-                item.IsLoaded = true;
-
-                switch (taskPane.DockPosition)
-                {
-                    case NetOffice.OfficeApi.Enums.MsoCTPDockPosition.msoCTPDockPositionLeft:
-                    case NetOffice.OfficeApi.Enums.MsoCTPDockPosition.msoCTPDockPositionRight:
-                        taskPane.Width = item.Width >= 0 ? item.Width : TaskPaneInfo.DefaultSize;
-                        break;
-                    case NetOffice.OfficeApi.Enums.MsoCTPDockPosition.msoCTPDockPositionTop:
-                    case NetOffice.OfficeApi.Enums.MsoCTPDockPosition.msoCTPDockPositionBottom:
-                        taskPane.Height = item.Height >= 0 ? item.Height : TaskPaneInfo.DefaultSize;
-                        break;
-                    case NetOffice.OfficeApi.Enums.MsoCTPDockPosition.msoCTPDockPositionFloating:
-                        item.Width = item.Width >= 0 ? item.Width : TaskPaneInfo.DefaultSize;
-                        taskPane.Height = item.Height >= 0 ? item.Height : TaskPaneInfo.DefaultSize;
-                        break;
-                    default:
-                        break;
-                }
-
-                ITaskPane pane = taskPane.ContentControl as ITaskPane;
-                if (null != pane)
-                {
-                    TaskPaneInstances.Add(pane);
-                    object[] argumentArray = new object[0];
-
-                    if (item.Arguments != null)
-                        argumentArray = item.Arguments;
-
-                    try
-                    {
-                        pane.OnConnection(Application, taskPane, argumentArray);
-                    }
-                    catch (Exception exception)
-                    {
-                        Factory.Console.WriteException(exception);
-                    }
-                }
-
-                foreach (KeyValuePair<string, object> property in item.ChangedProperties)
-                {
-                    if (property.Key == "Title")
-                        continue;
-
-                    try
-                    {
-                        if (property.Key == "Width") // avoid to set width in top and bottom align
-                        {
-                            object outValue = null;
-                            item.ChangedProperties.TryGetValue("DockPosition", out outValue);
-                            if (null != outValue)
-                            {
-
-                                Office.Enums.MsoCTPDockPosition position = (Office.Enums.MsoCTPDockPosition)Enum.Parse(typeof(Office.Enums.MsoCTPDockPosition), outValue.ToString());
-                                if (position == Office.Enums.MsoCTPDockPosition.msoCTPDockPositionTop || position == Office.Enums.MsoCTPDockPosition.msoCTPDockPositionBottom)
-                                    continue;
-                            }
-                        }
-
-                        if (property.Key == "Height")   // avoid to set height in left and right align
-                        {
-                            object outValue = null;
-                            item.ChangedProperties.TryGetValue("DockPosition", out outValue);
-                            if (null == outValue)
-                                outValue = Office.Enums.MsoCTPDockPosition.msoCTPDockPositionRight; // NetOffice default position if unset
-
-                            Office.Enums.MsoCTPDockPosition position = (Office.Enums.MsoCTPDockPosition)Enum.Parse(typeof(Office.Enums.MsoCTPDockPosition), outValue.ToString());
-                            if (position == Office.Enums.MsoCTPDockPosition.msoCTPDockPositionLeft || position == Office.Enums.MsoCTPDockPosition.msoCTPDockPositionRight)
-                                continue;
-                        }
-
-                        taskPane.GetType().InvokeMember(property.Key, BindingFlags.SetProperty, null, taskPane, new object[] { property.Value });
-                    }
-                    catch
-                    {
-                        Factory.Console.WriteLine("Failed to set TaskPane property {0}", property.Key);
-                    }
-                }
-            }
-        }
-
-        private Office.CustomTaskPane CreateCTP(string fullName, string title)
-        {
-            Office.CustomTaskPane taskPane = null;
-            try
-            {
-                taskPane = TaskPaneFactory.CreateCTP(fullName, title) as Office.CustomTaskPane;
-            }
-            catch (NetRuntimeSystem.Exception exception)
-            {
-                string message = String.Format("Unable to create {0}({1}).", fullName, title);
-                NetRuntimeSystem.Runtime.InteropServices.COMException wrapperException = new NetRuntimeSystem.Runtime.InteropServices.COMException(message, exception);
-                Factory.Console.WriteException(wrapperException);
-                OnError(ErrorMethodKind.CTPFactoryAvailable, wrapperException);
-            }
-            return taskPane;
-        }
-
+        
         /// <summary>
         /// The method is called while the CustomPane attribute is processed
         /// </summary>
@@ -741,42 +613,11 @@ namespace NetOffice.WordApi.Tools
         /// <returns>true if key was created otherwise false</returns>
         protected static bool SetTweakPersistenceEntry(Type addinType, string name, string value, bool throwException)
         {
-            try
-            {
-                if (null == addinType)
-                    return false;
-                RegistryLocationAttribute registry = AttributeHelper.GetRegistryLocationAttribute(addinType);
-                ProgIdAttribute progID = AttributeHelper.GetProgIDAttribute(addinType);
-                if (null == registry)
-                    return false;
-                if (null == progID)
-                    return false;
-                // my current keyboard miss the logical or. thanks LogiLink
-
-                RegistryKey regKeyWord = null;
-                if (registry.Value == RegistrySaveLocation.LocalMachine)
-                    regKeyWord = Registry.LocalMachine.OpenSubKey(_addinOfficeRegistryKey + progID.Value, true);
-                else
-                    regKeyWord = Registry.CurrentUser.OpenSubKey(_addinOfficeRegistryKey + progID.Value, true);
-
-                if (null == regKeyWord)
-                    regKeyWord = Registry.CurrentUser.CreateSubKey(_addinOfficeRegistryKey + progID.Value);
-                if (null == regKeyWord)
-                    return false;
-                regKeyWord.SetValue(name, value);
-                regKeyWord.Close();
-                //regKeyWord.Dispose(); not available in previous .net versions
-                return true;
-
-            }
-            catch (Exception exception)
-            {
-                NetOffice.DebugConsole.Default.WriteException(exception);
-                if (throwException)
-                    throw;
-                else
-                    return false;
-            }
+            return OfficeApi.Tools.COMAddin.SetTweakPersistenceEntry(
+                                                          ApplicationIdentifiers.ApplicationType.Word,
+                                                          addinType,
+                                                          name, value,
+                                                          throwException);
         }
 
         #endregion
@@ -789,7 +630,7 @@ namespace NetOffice.WordApi.Tools
         /// <returns>new ToolsUtils instance</returns>
         protected internal virtual Utils.CommonUtils OnCreateUtils()
         {
-            return new Utils.CommonUtils(this, 3 == _automationCode ? true : false, this.Type.Assembly);
+            return new Utils.CommonUtils(this, Type, 3 == _automationCode ? true : false, this.Type.Assembly);
         }
 
         /// <summary>
@@ -821,20 +662,33 @@ namespace NetOffice.WordApi.Tools
 
         #endregion
 
-        #region ErrorHandler 
-        
+        #region Private Methods
+
         /// <summary>
-        /// Checks for a static method, signed with the ErrorHandlerAttribute and call them if its available
+        /// Try to detect the addin is loaded from system hive key
         /// </summary>
-        /// <param name="type">type information for the class wtih static method </param>
-       /// <param name="methodKind">origin method where the error comes from</param>
-        /// <param name="exception">occured exception</param>
-        private static void RaiseStaticErrorHandlerMethod(Type type, RegisterErrorMethodKind methodKind, NetRuntimeSystem.Exception exception)
+        /// <returns>null if unkown or true/false</returns>
+        private bool? IsLoadedFromSystem()
         {
-			MethodInfo errorMethod = AttributeHelper.GetRegisterErrorMethod(type);
-            if (null != errorMethod)
-                errorMethod.Invoke(null, new object[] { methodKind, exception });
+            if (null != _isLoadedFromSystem)
+                return _isLoadedFromSystem;
+
+            OfficeApi.Tools.Utils.RegistryLocationResult result = OfficeApi.Tools.Utils.CommonUtils.TryFindAddinLoadLocation(Type,
+                    ApplicationIdentifiers.ApplicationType.Excel);
+            switch (result)
+            {
+                case Office.Tools.Utils.RegistryLocationResult.User:
+                    return false;
+                case Office.Tools.Utils.RegistryLocationResult.System:
+                    return true;
+                default:
+                    throw new IndexOutOfRangeException();
+            }
         }
+
+        #endregion
+
+        #region ErrorHandler       
 
         /// <summary>
         /// Custom error handler
@@ -854,73 +708,10 @@ namespace NetOffice.WordApi.Tools
         /// Called from regasm while register 
         /// </summary>
         /// <param name="type">Type information for the class</param>
-        [ComRegisterFunctionAttribute, Browsable(false), EditorBrowsable( EditorBrowsableState.Never)]
+        [ComRegisterFunctionAttribute, Browsable(false), EditorBrowsable(EditorBrowsableState.Never)]
         public static void RegisterFunction(Type type)
         {
-            try                
-            {
-                MethodInfo registerMethod = null;
-                RegisterFunctionAttribute registerAttribute = null;
-                bool registerMethodPresent = AttributeHelper.GetRegisterAttribute(type, ref registerMethod, ref registerAttribute);
-                if (registerMethodPresent)
-                {
-                    CallDerivedRegisterMethod(type, registerMethod, registerAttribute);
-                    if (registerAttribute.Value == RegisterMode.Replace)
-                        return;
-                }
-
-                GuidAttribute guid = AttributeHelper.GetGuidAttribute(type);
-                ProgIdAttribute progId = AttributeHelper.GetProgIDAttribute(type);
-                RegistryLocationAttribute location = AttributeHelper.GetRegistryLocationAttribute(type);
-				COMAddinAttribute addin = AttributeHelper.GetCOMAddinAttribute(type);
-
-                Assembly thisAssembly = Assembly.GetAssembly(type);
-				string assemblyVersion = thisAssembly.GetName().Version.ToString();
-                RegistryKey key = Registry.ClassesRoot.CreateSubKey("CLSID\\{" + type.GUID.ToString().ToUpper() + "}\\InprocServer32\\" + assemblyVersion);
-                key.SetValue("CodeBase", thisAssembly.CodeBase);
-                key.Close();
-                
-				Registry.ClassesRoot.CreateSubKey(@"CLSID\{" + type.GUID.ToString().ToUpper() + @"}\Programmable");
-				key = Registry.ClassesRoot.OpenSubKey(@"CLSID\{" + type.GUID.ToString().ToUpper() + @"}\InprocServer32", true);
-				key.SetValue("", NetRuntimeSystem.Environment.SystemDirectory + @"\mscoree.dll", RegistryValueKind.String);
-				key.Close();
-
-                // add bypass key
-                // http://support.microsoft.com/kb/948461
-                key = Registry.ClassesRoot.CreateSubKey("Interface\\{000C0601-0000-0000-C000-000000000046}");
-                string defaultValue = key.GetValue("") as string;
-                if (null == defaultValue)
-                    key.SetValue("", "Office .NET Framework Lockback Bypass Key");
-                key.Close();
-
-                // register addin in Word
-				if(location.Value == RegistrySaveLocation.LocalMachine)
-					Registry.LocalMachine.CreateSubKey(_addinOfficeRegistryKey +  progId.Value);
-                else
-					Registry.CurrentUser.CreateSubKey(_addinOfficeRegistryKey +  progId.Value);
-
-				RegistryKey regKeyWord = null;
-                if(location.Value == RegistrySaveLocation.LocalMachine)
-                    regKeyWord = Registry.LocalMachine.OpenSubKey(_addinOfficeRegistryKey + progId.Value, true);
-                else
-                    regKeyWord = Registry.CurrentUser.OpenSubKey(_addinOfficeRegistryKey + progId.Value, true);
-
-                regKeyWord.SetValue("LoadBehavior", addin.LoadBehavior);
-                regKeyWord.SetValue("FriendlyName", addin.Name);
-                regKeyWord.SetValue("Description", addin.Description);
-                if(-1 != addin.CommandLineSafe)
-                    regKeyWord.SetValue("CommandLineSafe", addin.CommandLineSafe);
-
-                regKeyWord.Close();
-
-                 if( (registerMethodPresent) && (registerAttribute.Value == RegisterMode.CallBeforeAndAfter || registerAttribute.Value == RegisterMode.CallAfter))
-                        registerMethod.Invoke(null, new object[] { type, RegisterCall.CallAfter });
-            }
-            catch (NetRuntimeSystem.Exception exception)
-            {
-				NetOffice.DebugConsole.Default.WriteException(exception);
-                RaiseStaticErrorHandlerMethod(type, RegisterErrorMethodKind.Register, exception);
-            }
+            RegisterHandler.Proceed(type, new string[] { _addinOfficeRegistryKey }, InstallScope.System, OfficeRegisterKeyState.NeedToCreate);
         }
 
         /// <summary>
@@ -930,68 +721,60 @@ namespace NetOffice.WordApi.Tools
         [ComUnregisterFunctionAttribute, Browsable(false), EditorBrowsable(EditorBrowsableState.Never)]
         public static void UnregisterFunction(Type type)
         {
-            try
-            {
-                MethodInfo registerMethod = null;
-                UnRegisterFunctionAttribute registerAttribute = null;
-                bool registerMethodPresent = AttributeHelper.GetUnRegisterAttribute(type, ref registerMethod, ref registerAttribute);
-                if (registerMethodPresent)
-                {
-                    CallDerivedUnRegisterMethod(type, registerMethod, registerAttribute);
-                    if (registerAttribute.Value == RegisterMode.Replace)
-                        return;
-                }
-
-                ProgIdAttribute progId = AttributeHelper.GetProgIDAttribute(type);
-                RegistryLocationAttribute location = AttributeHelper.GetRegistryLocationAttribute(type);
-
-                // unregister addin
-                Registry.ClassesRoot.DeleteSubKey(@"CLSID\{" + type.GUID.ToString().ToUpper() + @"}\Programmable", false);
-               
-                // unregister addin in office 
-                if (location.Value == RegistrySaveLocation.LocalMachine)
-                    Registry.LocalMachine.DeleteSubKey(_addinOfficeRegistryKey + progId.Value, false);
-                else
-                    Registry.CurrentUser.DeleteSubKey(_addinOfficeRegistryKey + progId.Value, false);
-
-                if ((registerMethodPresent) && (registerAttribute.Value == RegisterMode.CallBeforeAndAfter || registerAttribute.Value == RegisterMode.CallAfter))
-                    registerMethod.Invoke(null, new object[] { type, RegisterCall.CallAfter });
-            }
-            catch (NetRuntimeSystem.Exception exception)
-            {
-				NetOffice.DebugConsole.Default.WriteException(exception);
-                RaiseStaticErrorHandlerMethod(type, RegisterErrorMethodKind.UnRegister, exception);
-            }
+            UnRegisterHandler.Proceed(type, new string[] { _addinOfficeRegistryKey }, InstallScope.System, OfficeUnRegisterKeyState.NeedToDelete);
         }
 
         /// <summary>
-        /// Derived Register Call Helper
+        /// Called from RegAddin while register
         /// </summary>
-        /// <param name="type">type for derived class</param>
-        /// <param name="registerMethod">the method to call</param>
-        /// <param name="registerAttribute">arguments</param>
-        private static void CallDerivedRegisterMethod(Type type, MethodInfo registerMethod, RegisterFunctionAttribute registerAttribute)
+        /// <param name="type">Type information for the class</param>
+        /// <param name="scope">NetOffice.Tools.InstallScope enum value</param>
+        /// <param name="keyState">NetOffice.Tools.OfficeRegisterKeyState enum value</param>
+        [ComRegisterCall]
+        private static void OptimizedRegisterFunction(Type type, int scope, int keyState)
         {
-            if (registerAttribute.Value == RegisterMode.Replace)
-                registerMethod.Invoke(null, new object[] { type, RegisterCall.Replace });
-            else if (registerAttribute.Value == RegisterMode.CallBeforeAndAfter || registerAttribute.Value == RegisterMode.CallBefore)
-                registerMethod.Invoke(null, new object[] { type, RegisterCall.CallBefore });
+            if (null == type)
+                throw new ArgumentNullException("type");
+            InstallScope currentScope = (InstallScope)scope;
+            OfficeRegisterKeyState currentKeyState = (OfficeRegisterKeyState)keyState;
+
+            RegisterHandler.Proceed(type, new string[] { _addinOfficeRegistryKey }, currentScope, currentKeyState);
         }
 
         /// <summary>
-        /// Derived Unregister Call Helper
+        /// Called from RegAddin while unregister
         /// </summary>
-        /// <param name="type">type for derived class</param>
-        /// <param name="registerMethod">the method to call</param>
-        /// <param name="registerAttribute">arguments</param>
-        private static void CallDerivedUnRegisterMethod(Type type, MethodInfo registerMethod, UnRegisterFunctionAttribute registerAttribute)
+        /// <param name="type">Type information for the class</param>
+        /// <param name="scope">NetOffice.Tools.InstallScope enum value</param>
+        /// <param name="keyState">NetOffice.Tools.OfficeUnRegisterKeyState enum value</param>
+        [ComUnregisterCall]
+        private static void OptimizedUnregisterFunction(Type type, int scope, int keyState)
         {
-            if (registerAttribute.Value == RegisterMode.Replace)
-                registerMethod.Invoke(null, new object[] { type, RegisterCall.Replace });
-            else if (registerAttribute.Value == RegisterMode.CallBeforeAndAfter || registerAttribute.Value == RegisterMode.CallBefore)
-                registerMethod.Invoke(null, new object[] { type, RegisterCall.CallBefore });
+            if (null == type)
+                throw new ArgumentNullException("type");
+            InstallScope currentScope = (InstallScope)scope;
+            OfficeUnRegisterKeyState currentKeyState = (OfficeUnRegisterKeyState)keyState;
+
+            UnRegisterHandler.Proceed(type, new string[] { _addinOfficeRegistryKey }, currentScope, currentKeyState);
         }
 
+        /// <summary>
+        /// Called from RegAddin while export registry informations 
+        /// </summary>
+        /// <param name="type">Type information for the class</param>
+        /// <param name="scope">NetOffice.Tools.InstallScope enum value</param>
+        /// <param name="keyState">NetOffice.Tools.OfficeRegisterKeyState enum value</param>
+        /// <returns>Registry keys/values to be add in the registry export or null</returns>
+        [ComRegExportCall]
+        private static RegExport RegExportFunction(Type type, int scope, int keyState)
+        {
+            if (null == type)
+                throw new ArgumentNullException("type");
+            InstallScope currentScope = (InstallScope)scope;
+            OfficeRegisterKeyState currentKeyState = (OfficeRegisterKeyState)keyState;
+
+            return RegExportHandler.Proceed(type, new string[] { _addinOfficeRegistryKey }, currentScope, currentKeyState);
+        }
 
         #endregion
     }

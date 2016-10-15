@@ -27,6 +27,8 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="Tools\ApplicationIdentifiers.cs" />
+    <Compile Include="Tools\CustomTaskPaneHandler.cs" />
     <Compile Include="Tools\Dialogs\AboutDialog.cs">
       <SubType>Form</SubType>
     </Compile>

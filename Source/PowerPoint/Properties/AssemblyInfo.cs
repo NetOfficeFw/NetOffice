@@ -12,7 +12,7 @@ using NetOffice;
 	PowerPoint - Microsoft PowerPoint 12.0 Object Library - 12
 	PowerPoint - <NoDescription> - 14
 	PowerPoint - <NoDescription> - 15
-
+    PowerPoint - <NoDescription> - 16
 */
 
 [assembly: AssemblyTitle("PowerPoint")]
@@ -21,7 +21,7 @@ using NetOffice;
 [assembly: PrimaryInteropAssembly(1, 0)]
 [assembly: ImportedFromTypeLib("PowerPoint")]
 [assembly: Guid("91493440-5A91-11CF-8700-00AA0060263B")]
-[assembly: NetOfficeAssemblyAttribute("1.6.0.0")]
+[assembly: NetOfficeAssemblyAttribute("1.7.4.0")]
 [assembly: Dependency("OfficeApi.dll", LoadHint.Default)]
 [assembly: Dependency("VBIDEApi.dll", LoadHint.Default)]
 [assembly: Dependency("NetOffice.dll", LoadHint.Default)]

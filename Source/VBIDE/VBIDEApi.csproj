@@ -96,13 +96,16 @@
     </COMReference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Office\OfficeApi.csproj">
-      <Project>{79B19A83-A79F-446C-9B7E-9B595E918E40}</Project>
-      <Name>OfficeApi</Name>
-    </ProjectReference>
+    <None Include="VBIDEApi_v4.0.snk" />
+  </ItemGroup>
+  <ItemGroup>
     <ProjectReference Include="..\NetOffice\NetOffice.csproj">
-      <Project>{65442327-D01F-4ECB-8C39-6D5C7622A80F}</Project>
+      <Project>{65442327-d01f-4ecb-8c39-6d5c7622a80f}</Project>
       <Name>NetOffice</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Office\OfficeApi.csproj">
+      <Project>{79b19a83-a79f-446c-9b7e-9b595e918e40}</Project>
+      <Name>OfficeApi</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

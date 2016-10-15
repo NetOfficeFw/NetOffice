@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using NetRuntimeSystem = System;
 using System.Runtime.InteropServices;
 using System.Runtime.CompilerServices;
@@ -10,9 +10,9 @@ namespace NetOffice.AccessApi
 {
 	///<summary>
 	/// DispatchInterface _AddTileUIReceiver 
-	/// SupportByVersion Access, 15
+	/// SupportByVersion Access, 15, 16
 	///</summary>
-	[SupportByVersionAttribute("Access", 15)]
+	[SupportByVersionAttribute("Access", 15, 16)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class _AddTileUIReceiver : COMObject
 	{
@@ -96,11 +96,11 @@ namespace NetOffice.AccessApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByVersion Access 15
+		/// SupportByVersion Access 15,16
 		/// 
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("Access", 15)]
+		[SupportByVersionAttribute("Access", 15, 16)]
 		public string GetClientProtocolVersion()
 		{
 			object[] paramsArray = null;
@@ -109,13 +109,13 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 15
+		/// SupportByVersion Access 15,16
 		/// 
 		/// </summary>
 		/// <param name="bstrTableName">string bstrTableName</param>
 		/// <param name="bstrNounID">string bstrNounID</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("Access", 15)]
+		[SupportByVersionAttribute("Access", 15, 16)]
 		public string CreateCustomTable(string bstrTableName, string bstrNounID)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrTableName, bstrNounID);
@@ -124,11 +124,11 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 15
+		/// SupportByVersion Access 15,16
 		/// 
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("Access", 15)]
+		[SupportByVersionAttribute("Access", 15, 16)]
 		public string GetNounsVersion()
 		{
 			object[] paramsArray = null;
@@ -137,11 +137,11 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 15
+		/// SupportByVersion Access 15,16
 		/// 
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("Access", 15)]
+		[SupportByVersionAttribute("Access", 15, 16)]
 		public string GetNounsMetadata()
 		{
 			object[] paramsArray = null;
@@ -150,12 +150,12 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 15
+		/// SupportByVersion Access 15,16
 		/// 
 		/// </summary>
 		/// <param name="bstrNounID">string bstrNounID</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("Access", 15)]
+		[SupportByVersionAttribute("Access", 15, 16)]
 		public string GetDefinitionOfNounID(string bstrNounID)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrNounID);
@@ -164,13 +164,13 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 15
+		/// SupportByVersion Access 15,16
 		/// 
 		/// </summary>
 		/// <param name="pdispNounDefArray">object pdispNounDefArray</param>
 		/// <param name="pdispFinalNameArray">object pdispFinalNameArray</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("Access", 15)]
+		[SupportByVersionAttribute("Access", 15, 16)]
 		public void CreateObjectFromDefinition(object pdispNounDefArray, object pdispFinalNameArray)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pdispNounDefArray, pdispFinalNameArray);
@@ -178,7 +178,7 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 15
+		/// SupportByVersion Access 15,16
 		/// 
 		/// </summary>
 		/// <param name="bstrLeftTable">string bstrLeftTable</param>
@@ -188,7 +188,7 @@ namespace NetOffice.AccessApi
 		/// <param name="lookupFieldPosition">Int32 lookupFieldPosition</param>
 		/// <param name="iOptions">Int32 iOptions</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("Access", 15)]
+		[SupportByVersionAttribute("Access", 15, 16)]
 		public void CreateRelationship(string bstrLeftTable, string bstrRightTable, string bstrLookupFieldName, string bstrLookupFieldDescription, Int32 lookupFieldPosition, Int32 iOptions)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrLeftTable, bstrRightTable, bstrLookupFieldName, bstrLookupFieldDescription, lookupFieldPosition, iOptions);
@@ -196,12 +196,12 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 15
+		/// SupportByVersion Access 15,16
 		/// 
 		/// </summary>
 		/// <param name="type">Int16 Type</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("Access", 15)]
+		[SupportByVersionAttribute("Access", 15, 16)]
 		public void ImportData(Int16 type)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type);
@@ -209,11 +209,11 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 15
+		/// SupportByVersion Access 15,16
 		/// 
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("Access", 15)]
+		[SupportByVersionAttribute("Access", 15, 16)]
 		public string GetNounTables()
 		{
 			object[] paramsArray = null;
@@ -222,12 +222,12 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 15
+		/// SupportByVersion Access 15,16
 		/// 
 		/// </summary>
 		/// <param name="bstrSearchTerm">string bstrSearchTerm</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("Access", 15)]
+		[SupportByVersionAttribute("Access", 15, 16)]
 		public void RegisterSearchTerm(string bstrSearchTerm)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrSearchTerm);
@@ -235,11 +235,11 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 15
+		/// SupportByVersion Access 15,16
 		/// 
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("Access", 15)]
+		[SupportByVersionAttribute("Access", 15, 16)]
 		public void BeginBatchNounAdd()
 		{
 			object[] paramsArray = null;
@@ -247,11 +247,11 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 15
+		/// SupportByVersion Access 15,16
 		/// 
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("Access", 15)]
+		[SupportByVersionAttribute("Access", 15, 16)]
 		public void FinishBatchNounAdd()
 		{
 			object[] paramsArray = null;
@@ -259,12 +259,12 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 15
+		/// SupportByVersion Access 15,16
 		/// 
 		/// </summary>
 		/// <param name="fVisible">bool fVisible</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("Access", 15)]
+		[SupportByVersionAttribute("Access", 15, 16)]
 		public void NotifyAddTileUIVisibilityChange(bool fVisible)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fVisible);
@@ -272,13 +272,13 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 15
+		/// SupportByVersion Access 15,16
 		/// 
 		/// </summary>
 		/// <param name="type">Int16 Type</param>
 		/// <param name="bstrUrl">string bstrUrl</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("Access", 15)]
+		[SupportByVersionAttribute("Access", 15, 16)]
 		public void LaunchHyperlink(Int16 type, string bstrUrl)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, bstrUrl);
@@ -286,11 +286,11 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 15
+		/// SupportByVersion Access 15,16
 		/// 
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("Access", 15)]
+		[SupportByVersionAttribute("Access", 15, 16)]
 		public void MetadataLoaded()
 		{
 			object[] paramsArray = null;
@@ -298,11 +298,11 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Access 15
+		/// SupportByVersion Access 15,16
 		/// 
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("Access", 15)]
+		[SupportByVersionAttribute("Access", 15, 16)]
 		public bool IsOnlineContentAllowed()
 		{
 			object[] paramsArray = null;

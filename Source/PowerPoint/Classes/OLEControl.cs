@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using NetOffice;
@@ -16,9 +16,9 @@ namespace NetOffice.PowerPointApi
 
 	///<summary>
 	/// CoClass OLEControl 
-	/// SupportByVersion PowerPoint, 9,10,11,12,14,15
+	/// SupportByVersion PowerPoint, 9,10,11,12,14,15,16
 	///</summary>
-	[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
+	[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class OLEControl : OCXExtender,IEventBinding
 	{
@@ -93,7 +93,7 @@ namespace NetOffice.PowerPointApi
 		}
 		
 		///<summary>
-        ///creates a new instance of OLEControl 
+        /// Creates a new instance of OLEControl 
         ///</summary>		
 		public OLEControl():base("PowerPoint.OLEControl")
 		{
@@ -101,7 +101,7 @@ namespace NetOffice.PowerPointApi
 		}
 		
 		///<summary>
-        ///creates a new instance of OLEControl
+        /// Creates a new instance of OLEControl
         ///</summary>
         ///<param name="progId">registered ProgID</param>
 		public OLEControl(string progId):base(progId)
@@ -114,12 +114,12 @@ namespace NetOffice.PowerPointApi
 		#region Static CoClass Methods
 
 		/// <summary>
-        /// returns all running PowerPoint.OLEControl objects from the running object table(ROT)
+        /// Returns all running PowerPoint.OLEControl objects from the environment/system
         /// </summary>
         /// <returns>an PowerPoint.OLEControl array</returns>
 		public static NetOffice.PowerPointApi.OLEControl[] GetActiveInstances()
 		{		
-			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("PowerPoint","OLEControl");
+			IDisposableEnumeration proxyList = NetOffice.ProxyService.GetActiveInstances("PowerPoint","OLEControl");
 			NetRuntimeSystem.Collections.Generic.List<NetOffice.PowerPointApi.OLEControl> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.PowerPointApi.OLEControl>();
 			foreach(object proxy in proxyList)
 				resultList.Add( new NetOffice.PowerPointApi.OLEControl(null, proxy) );
@@ -127,12 +127,12 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-        /// returns a running PowerPoint.OLEControl object from the running object table(ROT). the method takes the first element from the table
+        /// Returns a running PowerPoint.OLEControl object from the environment/system.
         /// </summary>
         /// <returns>an PowerPoint.OLEControl object or null</returns>
 		public static NetOffice.PowerPointApi.OLEControl GetActiveInstance()
 		{
-			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("PowerPoint","OLEControl", false);
+			object proxy  = NetOffice.ProxyService.GetActiveInstance("PowerPoint","OLEControl", false);
 			if(null != proxy)
 				return new NetOffice.PowerPointApi.OLEControl(null, proxy);
 			else
@@ -140,13 +140,13 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-        /// returns a running PowerPoint.OLEControl object from the running object table(ROT).  the method takes the first element from the table
+        /// Returns a running PowerPoint.OLEControl object from the environment/system. 
         /// </summary>
 	    /// <param name="throwOnError">throw an exception if no object was found</param>
         /// <returns>an PowerPoint.OLEControl object or null</returns>
 		public static NetOffice.PowerPointApi.OLEControl GetActiveInstance(bool throwOnError)
 		{
-			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("PowerPoint","OLEControl", throwOnError);
+			object proxy  = NetOffice.ProxyService.GetActiveInstance("PowerPoint","OLEControl", throwOnError);
 			if(null != proxy)
 				return new NetOffice.PowerPointApi.OLEControl(null, proxy);
 			else
@@ -157,14 +157,14 @@ namespace NetOffice.PowerPointApi
 		#region Events
 
 		/// <summary>
-		/// SupportByVersion PowerPoint, 9,10,11,12,14,15
+		/// SupportByVersion PowerPoint, 9,10,11,12,14,15,16
 		/// </summary>
 		private event OLEControl_GotFocusEventHandler _GotFocusEvent;
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 9 10 11 12 14 15
+		/// SupportByVersion PowerPoint 9 10 11 12 14 15,16
 		/// </summary>
-		[SupportByVersion("PowerPoint", 9,10,11,12,14,15)]
+		[SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
 		public event OLEControl_GotFocusEventHandler GotFocusEvent
 		{
 			add
@@ -179,14 +179,14 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
-		/// SupportByVersion PowerPoint, 9,10,11,12,14,15
+		/// SupportByVersion PowerPoint, 9,10,11,12,14,15,16
 		/// </summary>
 		private event OLEControl_LostFocusEventHandler _LostFocusEvent;
 
 		/// <summary>
-		/// SupportByVersion PowerPoint 9 10 11 12 14 15
+		/// SupportByVersion PowerPoint 9 10 11 12 14 15,16
 		/// </summary>
-		[SupportByVersion("PowerPoint", 9,10,11,12,14,15)]
+		[SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
 		public event OLEControl_LostFocusEventHandler LostFocusEvent
 		{
 			add
@@ -205,7 +205,7 @@ namespace NetOffice.PowerPointApi
 	    #region IEventBinding Member
         
 		/// <summary>
-        /// creates active sink helper
+        /// Creates active sink helper
         /// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public void CreateEventBridge()
@@ -227,6 +227,9 @@ namespace NetOffice.PowerPointApi
 			} 
         }
 
+        /// <summary>
+        /// The instance use currently an event listener 
+        /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public bool EventBridgeInitialized
         {
@@ -235,7 +238,10 @@ namespace NetOffice.PowerPointApi
                 return (null != _connectPoint);
             }
         }
-        
+
+        /// <summary>
+        ///  The instance has currently one or more event recipients 
+        /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public bool HasEventRecipients()       
         {
@@ -255,6 +261,9 @@ namespace NetOffice.PowerPointApi
 			return false;
         }
         
+        /// <summary>
+        /// Target methods from its actual event recipients
+        /// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public Delegate[] GetEventRecipients(string eventName)
         {
@@ -274,7 +283,10 @@ namespace NetOffice.PowerPointApi
             else
                 return new Delegate[0];
         }
-
+       
+        /// <summary>
+        /// Returns the current count of event recipients
+        /// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public int GetCountOfEventRecipients(string eventName)
         {
@@ -293,8 +305,14 @@ namespace NetOffice.PowerPointApi
             }
             else
                 return 0;
-        }
-
+           }
+        
+        /// <summary>
+        /// Raise an instance event
+        /// </summary>
+        /// <param name="eventName">name of the event without 'Event' at the end</param>
+        /// <param name="paramsArray">custom arguments for the event</param>
+        /// <returns>count of called event recipients</returns>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public int RaiseCustomEvent(string eventName, ref object[] paramsArray)
 		{
@@ -326,6 +344,9 @@ namespace NetOffice.PowerPointApi
                 return 0;
 		}
 
+        /// <summary>
+        /// Stop listening events for the instance
+        /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public void DisposeEventBridge()
         {

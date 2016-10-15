@@ -9,7 +9,7 @@ using COMTypes = System.Runtime.InteropServices.ComTypes;
 namespace NetOffice
 {
     /// <summary>
-    /// represents a managed COM proxy 
+    /// Represents a managed COM proxy 
     /// </summary>
     [TypeConverter(typeof(COMObjectExpandableObjectConverter))]
     public class COMObject : IDisposable
@@ -1228,5 +1228,13 @@ namespace NetOffice
         }
 
         #endregion
+    }
+
+    /// <summary>
+    /// COMObject ExpandableObjectConverter (for future use)
+    /// </summary>
+    public class COMObjectExpandableObjectConverter : ExpandableObjectConverter
+    {
+
     }
 }

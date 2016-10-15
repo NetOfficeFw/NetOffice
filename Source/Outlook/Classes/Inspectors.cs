@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using NetOffice;
@@ -15,10 +15,10 @@ namespace NetOffice.OutlookApi
 
 	///<summary>
 	/// CoClass Inspectors 
-	/// SupportByVersion Outlook, 9,10,11,12,14,15
+	/// SupportByVersion Outlook, 9,10,11,12,14,15,16
 	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff868697.aspx
 	///</summary>
-	[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15)]
+	[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15,16)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class Inspectors : _Inspectors,IEventBinding
 	{
@@ -93,7 +93,7 @@ namespace NetOffice.OutlookApi
 		}
 		
 		///<summary>
-        ///creates a new instance of Inspectors 
+        /// Creates a new instance of Inspectors 
         ///</summary>		
 		public Inspectors():base("Outlook.Inspectors")
 		{
@@ -101,7 +101,7 @@ namespace NetOffice.OutlookApi
 		}
 		
 		///<summary>
-        ///creates a new instance of Inspectors
+        /// Creates a new instance of Inspectors
         ///</summary>
         ///<param name="progId">registered ProgID</param>
 		public Inspectors(string progId):base(progId)
@@ -114,12 +114,12 @@ namespace NetOffice.OutlookApi
 		#region Static CoClass Methods
 
 		/// <summary>
-        /// returns all running Outlook.Inspectors objects from the running object table(ROT)
+        /// Returns all running Outlook.Inspectors objects from the environment/system
         /// </summary>
         /// <returns>an Outlook.Inspectors array</returns>
 		public static NetOffice.OutlookApi.Inspectors[] GetActiveInstances()
 		{		
-			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("Outlook","Inspectors");
+			IDisposableEnumeration proxyList = NetOffice.ProxyService.GetActiveInstances("Outlook","Inspectors");
 			NetRuntimeSystem.Collections.Generic.List<NetOffice.OutlookApi.Inspectors> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.OutlookApi.Inspectors>();
 			foreach(object proxy in proxyList)
 				resultList.Add( new NetOffice.OutlookApi.Inspectors(null, proxy) );
@@ -127,12 +127,12 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-        /// returns a running Outlook.Inspectors object from the running object table(ROT). the method takes the first element from the table
+        /// Returns a running Outlook.Inspectors object from the environment/system.
         /// </summary>
         /// <returns>an Outlook.Inspectors object or null</returns>
 		public static NetOffice.OutlookApi.Inspectors GetActiveInstance()
 		{
-			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Outlook","Inspectors", false);
+			object proxy  = NetOffice.ProxyService.GetActiveInstance("Outlook","Inspectors", false);
 			if(null != proxy)
 				return new NetOffice.OutlookApi.Inspectors(null, proxy);
 			else
@@ -140,13 +140,13 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-        /// returns a running Outlook.Inspectors object from the running object table(ROT).  the method takes the first element from the table
+        /// Returns a running Outlook.Inspectors object from the environment/system. 
         /// </summary>
 	    /// <param name="throwOnError">throw an exception if no object was found</param>
         /// <returns>an Outlook.Inspectors object or null</returns>
 		public static NetOffice.OutlookApi.Inspectors GetActiveInstance(bool throwOnError)
 		{
-			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Outlook","Inspectors", throwOnError);
+			object proxy  = NetOffice.ProxyService.GetActiveInstance("Outlook","Inspectors", throwOnError);
 			if(null != proxy)
 				return new NetOffice.OutlookApi.Inspectors(null, proxy);
 			else
@@ -157,15 +157,15 @@ namespace NetOffice.OutlookApi
 		#region Events
 
 		/// <summary>
-		/// SupportByVersion Outlook, 9,10,11,12,14,15
+		/// SupportByVersion Outlook, 9,10,11,12,14,15,16
 		/// </summary>
 		private event Inspectors_NewInspectorEventHandler _NewInspectorEvent;
 
 		/// <summary>
-		/// SupportByVersion Outlook 9 10 11 12 14 15
+		/// SupportByVersion Outlook 9 10 11 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff867841.aspx </remarks>
-		[SupportByVersion("Outlook", 9,10,11,12,14,15)]
+		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
 		public event Inspectors_NewInspectorEventHandler NewInspectorEvent
 		{
 			add
@@ -184,7 +184,7 @@ namespace NetOffice.OutlookApi
 	    #region IEventBinding Member
         
 		/// <summary>
-        /// creates active sink helper
+        /// Creates active sink helper
         /// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public void CreateEventBridge()
@@ -206,6 +206,9 @@ namespace NetOffice.OutlookApi
 			} 
         }
 
+        /// <summary>
+        /// The instance use currently an event listener 
+        /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public bool EventBridgeInitialized
         {
@@ -214,7 +217,10 @@ namespace NetOffice.OutlookApi
                 return (null != _connectPoint);
             }
         }
-        
+
+        /// <summary>
+        ///  The instance has currently one or more event recipients 
+        /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public bool HasEventRecipients()       
         {
@@ -234,6 +240,9 @@ namespace NetOffice.OutlookApi
 			return false;
         }
         
+        /// <summary>
+        /// Target methods from its actual event recipients
+        /// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public Delegate[] GetEventRecipients(string eventName)
         {
@@ -253,7 +262,10 @@ namespace NetOffice.OutlookApi
             else
                 return new Delegate[0];
         }
-
+       
+        /// <summary>
+        /// Returns the current count of event recipients
+        /// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public int GetCountOfEventRecipients(string eventName)
         {
@@ -272,8 +284,14 @@ namespace NetOffice.OutlookApi
             }
             else
                 return 0;
-        }
-
+           }
+        
+        /// <summary>
+        /// Raise an instance event
+        /// </summary>
+        /// <param name="eventName">name of the event without 'Event' at the end</param>
+        /// <param name="paramsArray">custom arguments for the event</param>
+        /// <returns>count of called event recipients</returns>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public int RaiseCustomEvent(string eventName, ref object[] paramsArray)
 		{
@@ -305,6 +323,9 @@ namespace NetOffice.OutlookApi
                 return 0;
 		}
 
+        /// <summary>
+        /// Stop listening events for the instance
+        /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public void DisposeEventBridge()
         {

@@ -33,6 +33,7 @@ namespace NetOffice.Tools
     /// <summary>
     /// Parameter for Register/Unregister Methods
     /// </summary>
+    [System.Runtime.InteropServices.Guid("D8FAB9D7-10D1-4AA3-8DBA-D9CCA8C4CE9B")]
     public enum RegisterCall
     {
         /// <summary>

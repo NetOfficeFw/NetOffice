@@ -11,6 +11,27 @@ using NetOffice.OfficeApi.Tools.Informations;
 namespace NetOffice.OfficeApi.Tools.Utils
 {
     /// <summary>
+    /// CommonUtils TryFindLoadLocation Result Value
+    /// </summary>
+    public enum RegistryLocationResult
+    {
+        /// <summary>
+        /// Unable to find load key
+        /// </summary>
+        Unknown = 0,
+
+        /// <summary>
+        /// Addin load key found in HKEY_LOCAL_MACHINE
+        /// </summary>
+        User = 1,
+
+        /// <summary>
+        /// Addin load key found in HKEY_CURRENT_USER
+        /// </summary>
+        System = 2
+    }
+
+    /// <summary>
     /// Various helper for common tasks
     /// </summary>
     public class CommonUtils : IDisposable
@@ -103,15 +124,52 @@ namespace NetOffice.OfficeApi.Tools.Utils
             _infos = new Infos(this);
         }
 
-        #endregion
+        /// <summary>
+        /// Creates an instance of the class
+        /// </summary>
+        /// <param name="owner">addin owner</param>
+        /// <param name="ownerType">type information from addin owner</param>
+        /// <param name="isAutomation">indicates the host application is currently in automation</param>
+        /// <param name="ownerAssembly">owner application</param>
+        protected internal CommonUtils(NetOffice.Tools.COMAddinBase owner, Type ownerType, bool isAutomation, Assembly ownerAssembly)
+        {
+            if (null == owner)
+                throw new ArgumentNullException("owner");
+            if (null == ownerAssembly)
+                throw new ArgumentNullException("ownerAssembly");
+            Owner = owner;
+            _ownerApplication = owner.AppInstance;
+            _ownerAssembly = ownerAssembly;
+            _isAutomation = isAutomation;
+            _headerCaptionLine = _headerCaptionLineDefault;
+            _infos = new Infos(this);
+        }
 
+        #endregion
+          
         #region Properties
 
         /// <summary>
         /// Addin Owner Instance. Can be null if its used in custom application
         /// </summary>
         public NetOffice.Tools.COMAddinBase Owner { get; private set; }
-        
+
+        /// <summary>
+        /// Cached Owner Type Information
+        /// </summary>
+        private Type OwnerType { get; set; }
+
+        /// <summary>
+        /// Host/Office Application
+        /// </summary>
+        public COMObject OwnerApplication
+        {
+            get
+            {
+                return _ownerApplication;
+            }
+        }
+
         /// <summary>
         /// The Office Host Application is in Version 12.00 or higher
         /// </summary>
@@ -306,20 +364,95 @@ namespace NetOffice.OfficeApi.Tools.Utils
             }
         }
 
-        /// <summary>
-        /// Office Owner Application
-        /// </summary>
-        protected internal COMObject OwnerApplication
-        {
-            get
-            {
-                return _ownerApplication;
-            }
-        }
-
         #endregion
 
         #region Methods
+
+        /// <summary>
+        /// Try to detect the registry load location from an addin
+        /// </summary>
+        /// <param name="addinType">addin class type informations</param>
+        /// <param name="applicationType">which office application</param>
+        /// <returns>location or unkown</returns>
+        public static RegistryLocationResult TryFindAddinLoadLocation(Type addinType, ApplicationIdentifiers.ApplicationType applicationType)
+        {
+            try
+            {
+                System.Runtime.InteropServices.ProgIdAttribute progId =
+                  NetOffice.Tools.AttributeReflector.GetProgIDAttribute(addinType, false);
+                if (null == progId)
+                    return RegistryLocationResult.Unknown;
+
+                string path = String.Format("Software\\Office\\{0}\\Addins",
+                    ApplicationIdentifiers.ConvertApplicationType(applicationType));
+
+                Microsoft.Win32.RegistryKey key =
+                    Microsoft.Win32.Registry.CurrentUser.OpenSubKey(path, false);
+                if (null != key)
+                {
+                    key.Close();
+                    return RegistryLocationResult.User;
+                }
+
+                try
+                {
+                    key = Microsoft.Win32.Registry.LocalMachine.OpenSubKey(path, false);
+                    if (null != key)
+                    {
+                        key.Close();
+                        return RegistryLocationResult.System;
+                    }
+                }
+                catch (System.Security.SecurityException)
+                {
+                    return RegistryLocationResult.Unknown;
+                }
+                catch
+                {
+                    throw;
+                }
+
+                return RegistryLocationResult.Unknown;
+            }
+            catch (Exception)
+            {
+                return RegistryLocationResult.Unknown;
+            }
+        }
+
+        /// <summary>
+        /// Try to detect the registry load location from an addin
+        /// </summary>
+        /// <returns>load location or information it is unable to detect</returns>
+        public RegistryLocationResult TryFindAddinLoadLocation()
+        {
+            try
+            {
+                Type addinType = null;
+                if (null != OwnerType)
+                    addinType = OwnerType;
+                else if (null != Owner)
+                    addinType = Owner.GetType();
+                else
+                    return RegistryLocationResult.Unknown;
+
+                System.Runtime.InteropServices.ProgIdAttribute progId =
+                  NetOffice.Tools.AttributeReflector.GetProgIDAttribute(addinType, false);
+                if (null == progId)
+                    return RegistryLocationResult.Unknown;
+
+                ApplicationIdentifiers.ApplicationType applicationType =
+                    ApplicationIdentifiers.IsApplication(OwnerApplication.InstanceType.GUID);
+                if (ApplicationIdentifiers.ApplicationType.None == applicationType)
+                    return RegistryLocationResult.Unknown;
+
+                return CommonUtils.TryFindAddinLoadLocation(addinType, applicationType);
+            }
+            catch
+            {
+                throw;
+            }
+        }
 
         /// <summary>
         /// Creates an instance of DialogUtils

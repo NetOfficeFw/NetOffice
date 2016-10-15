@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using NetOffice;
@@ -14,10 +14,10 @@ namespace NetOffice.OutlookApi
 
 	///<summary>
 	/// CoClass OlkFrameHeader 
-	/// SupportByVersion Outlook, 12,14,15
+	/// SupportByVersion Outlook, 12,14,15,16
 	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff860681.aspx
 	///</summary>
-	[SupportByVersionAttribute("Outlook", 12,14,15)]
+	[SupportByVersionAttribute("Outlook", 12,14,15,16)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class OlkFrameHeader : _OlkFrameHeader,IEventBinding
 	{
@@ -92,7 +92,7 @@ namespace NetOffice.OutlookApi
 		}
 		
 		///<summary>
-        ///creates a new instance of OlkFrameHeader 
+        /// Creates a new instance of OlkFrameHeader 
         ///</summary>		
 		public OlkFrameHeader():base("Outlook.OlkFrameHeader")
 		{
@@ -100,7 +100,7 @@ namespace NetOffice.OutlookApi
 		}
 		
 		///<summary>
-        ///creates a new instance of OlkFrameHeader
+        /// Creates a new instance of OlkFrameHeader
         ///</summary>
         ///<param name="progId">registered ProgID</param>
 		public OlkFrameHeader(string progId):base(progId)
@@ -113,12 +113,12 @@ namespace NetOffice.OutlookApi
 		#region Static CoClass Methods
 
 		/// <summary>
-        /// returns all running Outlook.OlkFrameHeader objects from the running object table(ROT)
+        /// Returns all running Outlook.OlkFrameHeader objects from the environment/system
         /// </summary>
         /// <returns>an Outlook.OlkFrameHeader array</returns>
 		public static NetOffice.OutlookApi.OlkFrameHeader[] GetActiveInstances()
 		{		
-			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("Outlook","OlkFrameHeader");
+			IDisposableEnumeration proxyList = NetOffice.ProxyService.GetActiveInstances("Outlook","OlkFrameHeader");
 			NetRuntimeSystem.Collections.Generic.List<NetOffice.OutlookApi.OlkFrameHeader> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.OutlookApi.OlkFrameHeader>();
 			foreach(object proxy in proxyList)
 				resultList.Add( new NetOffice.OutlookApi.OlkFrameHeader(null, proxy) );
@@ -126,12 +126,12 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-        /// returns a running Outlook.OlkFrameHeader object from the running object table(ROT). the method takes the first element from the table
+        /// Returns a running Outlook.OlkFrameHeader object from the environment/system.
         /// </summary>
         /// <returns>an Outlook.OlkFrameHeader object or null</returns>
 		public static NetOffice.OutlookApi.OlkFrameHeader GetActiveInstance()
 		{
-			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Outlook","OlkFrameHeader", false);
+			object proxy  = NetOffice.ProxyService.GetActiveInstance("Outlook","OlkFrameHeader", false);
 			if(null != proxy)
 				return new NetOffice.OutlookApi.OlkFrameHeader(null, proxy);
 			else
@@ -139,13 +139,13 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
-        /// returns a running Outlook.OlkFrameHeader object from the running object table(ROT).  the method takes the first element from the table
+        /// Returns a running Outlook.OlkFrameHeader object from the environment/system. 
         /// </summary>
 	    /// <param name="throwOnError">throw an exception if no object was found</param>
         /// <returns>an Outlook.OlkFrameHeader object or null</returns>
 		public static NetOffice.OutlookApi.OlkFrameHeader GetActiveInstance(bool throwOnError)
 		{
-			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Outlook","OlkFrameHeader", throwOnError);
+			object proxy  = NetOffice.ProxyService.GetActiveInstance("Outlook","OlkFrameHeader", throwOnError);
 			if(null != proxy)
 				return new NetOffice.OutlookApi.OlkFrameHeader(null, proxy);
 			else
@@ -160,7 +160,7 @@ namespace NetOffice.OutlookApi
 	    #region IEventBinding Member
         
 		/// <summary>
-        /// creates active sink helper
+        /// Creates active sink helper
         /// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public void CreateEventBridge()
@@ -182,6 +182,9 @@ namespace NetOffice.OutlookApi
 			} 
         }
 
+        /// <summary>
+        /// The instance use currently an event listener 
+        /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public bool EventBridgeInitialized
         {
@@ -190,7 +193,10 @@ namespace NetOffice.OutlookApi
                 return (null != _connectPoint);
             }
         }
-        
+
+        /// <summary>
+        ///  The instance has currently one or more event recipients 
+        /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public bool HasEventRecipients()       
         {
@@ -210,6 +216,9 @@ namespace NetOffice.OutlookApi
 			return false;
         }
         
+        /// <summary>
+        /// Target methods from its actual event recipients
+        /// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public Delegate[] GetEventRecipients(string eventName)
         {
@@ -229,7 +238,10 @@ namespace NetOffice.OutlookApi
             else
                 return new Delegate[0];
         }
-
+       
+        /// <summary>
+        /// Returns the current count of event recipients
+        /// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public int GetCountOfEventRecipients(string eventName)
         {
@@ -248,8 +260,14 @@ namespace NetOffice.OutlookApi
             }
             else
                 return 0;
-        }
-
+           }
+        
+        /// <summary>
+        /// Raise an instance event
+        /// </summary>
+        /// <param name="eventName">name of the event without 'Event' at the end</param>
+        /// <param name="paramsArray">custom arguments for the event</param>
+        /// <returns>count of called event recipients</returns>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public int RaiseCustomEvent(string eventName, ref object[] paramsArray)
 		{
@@ -281,6 +299,9 @@ namespace NetOffice.OutlookApi
                 return 0;
 		}
 
+        /// <summary>
+        /// Stop listening events for the instance
+        /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public void DisposeEventBridge()
         {

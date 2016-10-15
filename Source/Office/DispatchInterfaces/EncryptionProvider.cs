@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using NetRuntimeSystem = System;
 using System.Runtime.InteropServices;
 using System.Runtime.CompilerServices;
@@ -10,10 +10,10 @@ namespace NetOffice.OfficeApi
 {
 	///<summary>
 	/// DispatchInterface EncryptionProvider 
-	/// SupportByVersion Office, 12,14,15
+	/// SupportByVersion Office, 12,14,15,16
 	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff863389.aspx
 	///</summary>
-	[SupportByVersionAttribute("Office", 12,14,15)]
+	[SupportByVersionAttribute("Office", 12,14,15,16)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class EncryptionProvider : COMObject
 	{
@@ -97,11 +97,11 @@ namespace NetOffice.OfficeApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByVersion Office 12, 14, 15
+		/// SupportByVersion Office 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff864896.aspx
 		/// </summary>
 		/// <param name="encprovdet">NetOffice.OfficeApi.Enums.EncryptionProviderDetail encprovdet</param>
-		[SupportByVersionAttribute("Office", 12,14,15)]
+		[SupportByVersionAttribute("Office", 12,14,15,16)]
 		public object GetProviderDetail(NetOffice.OfficeApi.Enums.EncryptionProviderDetail encprovdet)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(encprovdet);
@@ -118,11 +118,11 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 12, 14, 15
+		/// SupportByVersion Office 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff864027.aspx
 		/// </summary>
 		/// <param name="parentWindow">object ParentWindow</param>
-		[SupportByVersionAttribute("Office", 12,14,15)]
+		[SupportByVersionAttribute("Office", 12,14,15,16)]
 		public Int32 NewSession(object parentWindow)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(parentWindow);
@@ -131,13 +131,13 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 12, 14, 15
+		/// SupportByVersion Office 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff864627.aspx
 		/// </summary>
 		/// <param name="parentWindow">object ParentWindow</param>
 		/// <param name="encryptionData">object EncryptionData</param>
 		/// <param name="permissionsMask">UIntPtr PermissionsMask</param>
-		[SupportByVersionAttribute("Office", 12,14,15)]
+		[SupportByVersionAttribute("Office", 12,14,15,16)]
 		public Int32 Authenticate(object parentWindow, object encryptionData, out UIntPtr permissionsMask)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,false,true);
@@ -149,11 +149,11 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 12, 14, 15
+		/// SupportByVersion Office 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff864902.aspx
 		/// </summary>
 		/// <param name="sessionHandle">Int32 SessionHandle</param>
-		[SupportByVersionAttribute("Office", 12,14,15)]
+		[SupportByVersionAttribute("Office", 12,14,15,16)]
 		public Int32 CloneSession(Int32 sessionHandle)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(sessionHandle);
@@ -162,11 +162,11 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 12, 14, 15
+		/// SupportByVersion Office 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff864652.aspx
 		/// </summary>
 		/// <param name="sessionHandle">Int32 SessionHandle</param>
-		[SupportByVersionAttribute("Office", 12,14,15)]
+		[SupportByVersionAttribute("Office", 12,14,15,16)]
 		public void EndSession(Int32 sessionHandle)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(sessionHandle);
@@ -174,12 +174,12 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 12, 14, 15
+		/// SupportByVersion Office 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff862766.aspx
 		/// </summary>
 		/// <param name="sessionHandle">Int32 SessionHandle</param>
 		/// <param name="encryptionData">object EncryptionData</param>
-		[SupportByVersionAttribute("Office", 12,14,15)]
+		[SupportByVersionAttribute("Office", 12,14,15,16)]
 		public Int32 Save(Int32 sessionHandle, object encryptionData)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(sessionHandle, encryptionData);
@@ -188,14 +188,14 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 12, 14, 15
+		/// SupportByVersion Office 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff861839.aspx
 		/// </summary>
 		/// <param name="sessionHandle">Int32 SessionHandle</param>
 		/// <param name="streamName">string StreamName</param>
 		/// <param name="unencryptedStream">object UnencryptedStream</param>
 		/// <param name="encryptedStream">object EncryptedStream</param>
-		[SupportByVersionAttribute("Office", 12,14,15)]
+		[SupportByVersionAttribute("Office", 12,14,15,16)]
 		public void EncryptStream(Int32 sessionHandle, string streamName, object unencryptedStream, object encryptedStream)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(sessionHandle, streamName, unencryptedStream, encryptedStream);
@@ -203,14 +203,14 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 12, 14, 15
+		/// SupportByVersion Office 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff864940.aspx
 		/// </summary>
 		/// <param name="sessionHandle">Int32 SessionHandle</param>
 		/// <param name="streamName">string StreamName</param>
 		/// <param name="encryptedStream">object EncryptedStream</param>
 		/// <param name="unencryptedStream">object UnencryptedStream</param>
-		[SupportByVersionAttribute("Office", 12,14,15)]
+		[SupportByVersionAttribute("Office", 12,14,15,16)]
 		public void DecryptStream(Int32 sessionHandle, string streamName, object encryptedStream, object unencryptedStream)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(sessionHandle, streamName, encryptedStream, unencryptedStream);
@@ -218,14 +218,14 @@ namespace NetOffice.OfficeApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Office 12, 14, 15
+		/// SupportByVersion Office 12, 14, 15, 16
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff863378.aspx
 		/// </summary>
 		/// <param name="sessionHandle">Int32 SessionHandle</param>
 		/// <param name="parentWindow">object ParentWindow</param>
 		/// <param name="readOnly">bool ReadOnly</param>
 		/// <param name="remove">bool Remove</param>
-		[SupportByVersionAttribute("Office", 12,14,15)]
+		[SupportByVersionAttribute("Office", 12,14,15,16)]
 		public void ShowSettings(Int32 sessionHandle, object parentWindow, bool readOnly, out bool remove)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,false,false,true);

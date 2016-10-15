@@ -95,13 +95,14 @@ namespace NetOffice.MSFormsApi
 			}
 		}
 
-		/// <summary>
-		/// SupportByVersion MSForms 2
-		/// Get/Set
-		/// </summary>
-		/// <param name="pvargColumn">optional object pvargColumn</param>
-		/// <param name="pvargIndex">optional object pvargIndex</param>
-		[SupportByVersionAttribute("MSForms", 2)]
+        /// <summary>
+        /// SupportByVersion MSForms 2
+        /// Get/Set
+        /// </summary>
+        /// <param name="pvargColumn">optional object pvargColumn</param>
+        /// <param name="pvargIndex">optional object pvargIndex</param>
+        /// <param name="value">optional object value</param>
+        [SupportByVersionAttribute("MSForms", 2)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public void set_Column(object pvargColumn, object pvargIndex, object value)
 		{
@@ -143,12 +144,13 @@ namespace NetOffice.MSFormsApi
 			}
 		}
 
-		/// <summary>
-		/// SupportByVersion MSForms 2
-		/// Get/Set
-		/// </summary>
-		/// <param name="pvargColumn">optional object pvargColumn</param>
-		[SupportByVersionAttribute("MSForms", 2)]
+        /// <summary>
+        /// SupportByVersion MSForms 2
+        /// Get/Set
+        /// </summary>
+        /// <param name="pvargColumn">optional object pvargColumn</param>
+        /// <param name="value">optional object value</param>
+        [SupportByVersionAttribute("MSForms", 2)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public void set_Column(object pvargColumn, object value)
 		{
@@ -190,13 +192,14 @@ namespace NetOffice.MSFormsApi
 			}
 		}
 
-		/// <summary>
-		/// SupportByVersion MSForms 2
-		/// Get/Set
-		/// </summary>
-		/// <param name="pvargIndex">optional object pvargIndex</param>
-		/// <param name="pvargColumn">optional object pvargColumn</param>
-		[SupportByVersionAttribute("MSForms", 2)]
+        /// <summary>
+        /// SupportByVersion MSForms 2
+        /// Get/Set
+        /// </summary>
+        /// <param name="pvargIndex">optional object pvargIndex</param>
+        /// <param name="pvargColumn">optional object pvargColumn</param>
+        /// <param name="value">optional object value</param>
+        [SupportByVersionAttribute("MSForms", 2)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public void set_List(object pvargIndex, object pvargColumn, object value)
 		{
@@ -238,12 +241,13 @@ namespace NetOffice.MSFormsApi
 			}
 		}
 
-		/// <summary>
-		/// SupportByVersion MSForms 2
-		/// Get/Set
-		/// </summary>
-		/// <param name="pvargIndex">optional object pvargIndex</param>
-		[SupportByVersionAttribute("MSForms", 2)]
+        /// <summary>
+        /// SupportByVersion MSForms 2
+        /// Get/Set
+        /// </summary>
+        /// <param name="pvargIndex">optional object pvargIndex</param>
+        /// <param name="value">optional object value</param>
+        [SupportByVersionAttribute("MSForms", 2)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public void set_List(object pvargIndex, object value)
 		{

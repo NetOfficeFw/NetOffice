@@ -11,13 +11,13 @@ namespace NetOffice.Tools.WndUtils
         #region Imports
         
         [DllImport("oleacc.dll")]
-        internal static extern int AccessibleObjectFromWindow(IntPtr hwnd, uint id, ref Guid iid, [In, Out, MarshalAs(UnmanagedType.IUnknown)] ref object ppvObject); 
+        private static extern int AccessibleObjectFromWindow(IntPtr hwnd, uint id, ref Guid iid, [In, Out, MarshalAs(UnmanagedType.IUnknown)] ref object ppvObject); 
 
         [DllImport("user32.dll", SetLastError = true)]
-        static extern IntPtr FindWindowEx(IntPtr hwndParent, IntPtr hwndChildAfter, string lpszClass, string lpszWindow);
+        private static extern IntPtr FindWindowEx(IntPtr hwndParent, IntPtr hwndChildAfter, string lpszClass, string lpszWindow);
 
-        static uint _objectID = 0xFFFFFFF0;
-        static Guid _dispatchID = new Guid("{00020400-0000-0000-C000-000000000046}");
+        private static uint _objectID = 0xFFFFFFF0;
+        private static Guid _dispatchID = new Guid("00020400-0000-0000-C000-000000000046");
       
         #endregion
 
@@ -67,18 +67,19 @@ namespace NetOffice.Tools.WndUtils
         /// </summary>
         /// <param name="hwnds">main window handles</param>
         /// <returns>list of application proxies</returns>
-        internal static List<object> GetApplicationProxiesFromHandle(IntPtr[] hwnds)
+        internal static Misc.DisposableObjectList GetApplicationProxiesFromHandle(IntPtr[] hwnds)
         {
             if (null == hwnds)
                 throw new ArgumentNullException("hwnds");
 
             try
             {
-                List<object> result = new List<object>();
+                Misc.DisposableObjectList result = new Misc.DisposableObjectList();
                 foreach (var item in hwnds)
                 {
                     object app = GetApplicationProxyFromHandle(item);
-                    result.Add(app);
+                    if(null != app)
+                        result.Add(app);
                 }
                 return result;
             }

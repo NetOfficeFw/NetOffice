@@ -154,7 +154,7 @@ namespace NetOffice.MSHTMLApi
 		}
 		
 		///<summary>
-        ///creates a new instance of HTMLHtmlElement 
+        /// Creates a new instance of HTMLHtmlElement 
         ///</summary>		
 		public HTMLHtmlElement():base("MSHTML.HTMLHtmlElement")
 		{
@@ -162,7 +162,7 @@ namespace NetOffice.MSHTMLApi
 		}
 		
 		///<summary>
-        ///creates a new instance of HTMLHtmlElement
+        /// Creates a new instance of HTMLHtmlElement
         ///</summary>
         ///<param name="progId">registered ProgID</param>
 		public HTMLHtmlElement(string progId):base(progId)
@@ -175,12 +175,12 @@ namespace NetOffice.MSHTMLApi
 		#region Static CoClass Methods
 
 		/// <summary>
-        /// returns all running MSHTML.HTMLHtmlElement objects from the running object table(ROT)
+        /// Returns all running MSHTML.HTMLHtmlElement objects from the environment/system
         /// </summary>
         /// <returns>an MSHTML.HTMLHtmlElement array</returns>
 		public static NetOffice.MSHTMLApi.HTMLHtmlElement[] GetActiveInstances()
 		{		
-			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("MSHTML","HTMLHtmlElement");
+			IDisposableEnumeration proxyList = NetOffice.ProxyService.GetActiveInstances("MSHTML","HTMLHtmlElement");
 			NetRuntimeSystem.Collections.Generic.List<NetOffice.MSHTMLApi.HTMLHtmlElement> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.MSHTMLApi.HTMLHtmlElement>();
 			foreach(object proxy in proxyList)
 				resultList.Add( new NetOffice.MSHTMLApi.HTMLHtmlElement(null, proxy) );
@@ -188,12 +188,12 @@ namespace NetOffice.MSHTMLApi
 		}
 
 		/// <summary>
-        /// returns a running MSHTML.HTMLHtmlElement object from the running object table(ROT). the method takes the first element from the table
+        /// Returns a running MSHTML.HTMLHtmlElement object from the environment/system.
         /// </summary>
         /// <returns>an MSHTML.HTMLHtmlElement object or null</returns>
 		public static NetOffice.MSHTMLApi.HTMLHtmlElement GetActiveInstance()
 		{
-			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("MSHTML","HTMLHtmlElement", false);
+			object proxy  = NetOffice.ProxyService.GetActiveInstance("MSHTML","HTMLHtmlElement", false);
 			if(null != proxy)
 				return new NetOffice.MSHTMLApi.HTMLHtmlElement(null, proxy);
 			else
@@ -201,13 +201,13 @@ namespace NetOffice.MSHTMLApi
 		}
 
 		/// <summary>
-        /// returns a running MSHTML.HTMLHtmlElement object from the running object table(ROT).  the method takes the first element from the table
+        /// Returns a running MSHTML.HTMLHtmlElement object from the environment/system. 
         /// </summary>
 	    /// <param name="throwOnError">throw an exception if no object was found</param>
         /// <returns>an MSHTML.HTMLHtmlElement object or null</returns>
 		public static NetOffice.MSHTMLApi.HTMLHtmlElement GetActiveInstance(bool throwOnError)
 		{
-			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("MSHTML","HTMLHtmlElement", throwOnError);
+			object proxy  = NetOffice.ProxyService.GetActiveInstance("MSHTML","HTMLHtmlElement", throwOnError);
 			if(null != proxy)
 				return new NetOffice.MSHTMLApi.HTMLHtmlElement(null, proxy);
 			else
@@ -1608,7 +1608,7 @@ namespace NetOffice.MSHTMLApi
 	    #region IEventBinding Member
         
 		/// <summary>
-        /// creates active sink helper
+        /// Creates active sink helper
         /// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public void CreateEventBridge()
@@ -1630,6 +1630,9 @@ namespace NetOffice.MSHTMLApi
 			} 
         }
 
+        /// <summary>
+        /// The instance use currently an event listener 
+        /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public bool EventBridgeInitialized
         {
@@ -1638,7 +1641,10 @@ namespace NetOffice.MSHTMLApi
                 return (null != _connectPoint);
             }
         }
-        
+
+        /// <summary>
+        ///  The instance has currently one or more event recipients 
+        /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public bool HasEventRecipients()       
         {
@@ -1658,6 +1664,9 @@ namespace NetOffice.MSHTMLApi
 			return false;
         }
         
+        /// <summary>
+        /// Target methods from its actual event recipients
+        /// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public Delegate[] GetEventRecipients(string eventName)
         {
@@ -1677,7 +1686,10 @@ namespace NetOffice.MSHTMLApi
             else
                 return new Delegate[0];
         }
-
+       
+        /// <summary>
+        /// Returns the current count of event recipients
+        /// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public int GetCountOfEventRecipients(string eventName)
         {
@@ -1696,8 +1708,14 @@ namespace NetOffice.MSHTMLApi
             }
             else
                 return 0;
-        }
-
+           }
+        
+        /// <summary>
+        /// Raise an instance event
+        /// </summary>
+        /// <param name="eventName">name of the event without 'Event' at the end</param>
+        /// <param name="paramsArray">custom arguments for the event</param>
+        /// <returns>count of called event recipients</returns>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public int RaiseCustomEvent(string eventName, ref object[] paramsArray)
 		{
@@ -1729,6 +1747,9 @@ namespace NetOffice.MSHTMLApi
                 return 0;
 		}
 
+        /// <summary>
+        /// Stop listening events for the instance
+        /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public void DisposeEventBridge()
         {

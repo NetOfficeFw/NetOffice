@@ -22,25 +22,40 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="COMObjectExpandableObjectConverter.cs" />
+    <Compile Include="Attributes\ComRegExportCallAttribute.cs" />
+    <Compile Include="Attributes\ComRegisterCallAttribute.cs" />
+    <Compile Include="Attributes\ComUnregisterCallAttribute.cs.cs" />
     <Compile Include="Core.cs" />
-    <Compile Include="CurrentAppDomain.cs" />
-    <Compile Include="DebugConsoleMode.cs" />
-    <Compile Include="NamedPipes\ClientPipeConnection.cs" />
-    <Compile Include="NamedPipes\InterProcessConnectionState.cs" />
-    <Compile Include="NamedPipes\NamedPipeNative.cs" />
-    <Compile Include="NamedPipes\NamedPipeWrapper.cs" />
-    <Compile Include="NamedPipes\PipeClient.cs" />
-    <Compile Include="NamedPipes\PipeConnection.cs" />
-    <Compile Include="NamedPipes\PipeHandle.cs" />
-    <Compile Include="PerformanceTrace.cs" />
+    <Compile Include="Loader\CurrentAppDomain.cs" />
+    <Compile Include="Misc\SortableBindingList.cs" />
+    <Compile Include="ProxyInformation.cs" />
+    <Compile Include="ProxyService.cs" />
+    <Compile Include="RunningWindowTable.cs" />
+    <Compile Include="RunningWindowTable.Nested.cs" />
+    <Compile Include="Tools\LockbackAttribute.cs" />
+    <Compile Include="Tools\CodebaseAttribute.cs" />
+    <Compile Include="Tools\OfficeRegisterKeyState.cs" />
+    <Compile Include="Tools\OfficeUnRegisterKeyState.cs" />
+    <Compile Include="Tools\OnErrorHandler.cs" />
+    <Compile Include="Tools\ProgrammableAttribute.cs" />
+    <Compile Include="Tools\RegExport.cs" />
+    <Compile Include="Tools\RegExportFunctionAttribute.cs" />
+    <Compile Include="Tools\RegExportHandler.cs" />
+    <Compile Include="Tools\RegisterErrorHandler.cs" />
+    <Compile Include="Tools\RegisterHandler.cs" />
+    <Compile Include="Tools\InstallScope.cs" />
+    <Compile Include="Tools\UnRegisterHandler.cs" />
+    <Compile Include="Tools\WndUtils\ChildWindowBatchEnumerator.cs" />
+    <Compile Include="Tools\WndUtils\Win32.cs" />
+    <Compile Include="Trace\DebugConsoleMode.cs" />
+    <Compile Include="Misc\IDisposableEnumeration.cs" />
+    <Compile Include="Trace\PerformanceTrace.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="SharedOutputMode.cs" />
-    <Compile Include="Tools\AttributeHelper.cs" />
+    <Compile Include="Tools\AttributeReflector.cs" />
     <Compile Include="Tools\COMAddinAttribute.cs" />
     <Compile Include="Attributes\CustomEnumeratorAttribute.cs" />
     <Compile Include="Attributes\CustomMethodAttribute.cs" />
@@ -55,29 +70,31 @@
     <Compile Include="Tools\TweakAttribute.cs" />
     <Compile Include="Tools\Tweaks.cs" />
     <Compile Include="Tools\UnRegisterFunctionAttribute.cs" />
-    <Compile Include="CacheOptions.cs" />
-    <Compile Include="DebugConsole.cs" />
+    <Compile Include="Settings\CacheOptions.cs" />
+    <Compile Include="Trace\DebugConsole.cs" />
     <Compile Include="Attributes\EntityTypeAttribute.cs" />
-    <Compile Include="DependentAssembly.cs" />
-    <Compile Include="EntityNotSupportedException.cs" />
-    <Compile Include="ExceptionMessageHandling.cs" />
-    <Compile Include="NetOfficeException.cs" />
+    <Compile Include="Loader\DependentAssembly.cs" />
+    <Compile Include="Exceptions\EntityNotSupportedException.cs" />
+    <Compile Include="Settings\ExceptionMessageHandling.cs" />
+    <Compile Include="Exceptions\NetOfficeException.cs" />
     <Compile Include="OnDisposeEventHandler.cs" />
     <Compile Include="COMObject.cs" />
     <Compile Include="Interfaces\IFactoryInfo.cs" />
     <Compile Include="Invoker.cs" />
     <Compile Include="RetryMessageFilter.cs" />
     <Compile Include="RunningObjectTable.cs" />
-    <Compile Include="Settings.cs" />
+    <Compile Include="Settings\Settings.cs" />
     <Compile Include="SinkHelper.cs" />
     <Compile Include="Attributes\SupportByVersionAttribute.cs" />
     <Compile Include="Interfaces\IEventBinding.cs" />
     <Compile Include="SupportEntityType.cs" />
     <Compile Include="Tools\COMAddinEventHandler.cs" />
     <Compile Include="Tools\IDTExtensibility2.cs" />
-    <Compile Include="Utils.cs" />
+    <Compile Include="Tools\WndUtils\ChildWindowEnumerator.cs" />
+    <Compile Include="Misc\Utils.cs" />
     <Compile Include="Tools\WndUtils\WindowEnumerator.cs" />
     <Compile Include="Tools\WndUtils\ExcelApplicationWindow.cs" />
+    <Compile Include="Tools\WndUtils\ProcessElevation.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Properties\Resources.resx">

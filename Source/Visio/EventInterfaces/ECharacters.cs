@@ -10,11 +10,11 @@ namespace NetOffice.VisioApi
 	
 	#region SinkPoint Interface
 
-	[SupportByVersionAttribute("Visio", 11,12,14,15)]
+	[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
 	[ComImport, Guid("000D0B0C-0000-0000-C000-000000000046"), InterfaceType(ComInterfaceType.InterfaceIsIDispatch), TypeLibType((short)0x1010)]
 	public interface ECharacters
 	{
-		[SupportByVersionAttribute("Visio", 11,12,14,15)]
+		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(8320)]
 		void TextChanged([In, MarshalAs(UnmanagedType.IDispatch)] object shape);
 	}

@@ -9,17 +9,17 @@ namespace NetOffice
     public class NetOfficeAssemblyAttribute : System.Attribute
     {
         /// <summary>
-        /// version
+        /// Multiple version string
         /// </summary>
         public readonly string SupportedApiVersion;
 
         /// <summary>
-        /// creates instance
+        /// Creates an instance of the attribute
         /// </summary>
-        /// <param name="apiVersion"></param>
-        public NetOfficeAssemblyAttribute(string apiVersion)
+        /// <param name="supportedApiVersion">multiple version string</param>
+        public NetOfficeAssemblyAttribute(string supportedApiVersion)
         {
-            this.SupportedApiVersion = apiVersion;
+            this.SupportedApiVersion = supportedApiVersion;
         }
     }
 }

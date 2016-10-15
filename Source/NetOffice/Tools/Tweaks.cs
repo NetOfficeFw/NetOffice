@@ -9,14 +9,22 @@ using System.Text;
 using NetOffice.Tools;
 
 namespace NetOffice.Tools
-{ 
+{
+    /// <summary>
+    /// Points to an addin method that try to detect the addin is loaded from HKEY_LOCAL_MACHINE\Software\Office or HKEY_CURRENT_USER\Software\Office
+    /// Each COMAddin base class has a coresponding -cache supported- method for this delegate.
+    /// COMAddin base class want give this method as delegate during the loading process to service methods.
+    /// The service methods want call the delegate only if need because it is potentialy expensive in performance
+    /// which is a problem in a loading process.
+    /// </summary>
+    /// <returns>null if unknown or true/false</returns>
+    public delegate bool? IsLoadedFromSystemKeyDelegate();
+
     /// <summary>
     /// Tweak Handler to customize some settings at runtime (if wanted)
     /// </summary>
     public static class Tweaks
     {
-       
-
         #region Fields
 
         private static string[] _noTweakNames = new string[] { "NOConsoleMode", "NOConsoleShare", "NOExceptionHandling", "NOExceptionMessage", "NOCultureInfo", 
@@ -54,33 +62,33 @@ namespace NetOffice.Tools
         /// <param name="addinInstance">COMAddin instance</param>
         /// <param name="addinType">Type info from COMAddin instance</param>
         /// <param name="registryEndPoint">specific office registry key endpoint</param>
-        public static void ApplyTweaks(Core factory, object addinInstance, Type addinType, string registryEndPoint)
+        /// <param name="useSystemRegistryKey">Try read in HKEY_LOCAL_Machine otherwise HKEY_CURRENT_USER</param>
+        public static void ApplyTweaks(Core factory, object addinInstance, Type addinType, string registryEndPoint, IsLoadedFromSystemKeyDelegate useSystemRegistryKey)
         {
             try
             {
                 if (null == addinInstance)
                     return;
-
                 if (null == factory)
                     factory = Core.Default;
 
-                TweakAttribute tweakAttribute = AttributeHelper.GetTweakAttribute(addinType);
+                TweakAttribute tweakAttribute = AttributeReflector.GetTweakAttribute(addinType);
                 if (null == tweakAttribute || false == tweakAttribute.Enabled)
                     return;
 
-                ProgIdAttribute progIDAttribute = AttributeHelper.GetProgIDAttribute(addinType);
+                ProgIdAttribute progIDAttribute = AttributeReflector.GetProgIDAttribute(addinType, false);
                 if (null == progIDAttribute)
                     return;
 
-                RegistryKey hiveKey = Registry.CurrentUser;
-                RegistryLocationAttribute locationAttribute = AttributeHelper.GetRegistryLocationAttribute(addinType);
-                if (null != locationAttribute && locationAttribute.Value == RegistrySaveLocation.LocalMachine)
-                    hiveKey = Registry.LocalMachine;
+                bool? systemKey = useSystemRegistryKey();
+                if (null == systemKey)
+                    return;
 
+                RegistryKey hiveKey = systemKey == true ? Registry.LocalMachine : Registry.CurrentUser;
+                 
                 RegistryKey key = hiveKey.OpenSubKey("Software\\Microsoft\\Office\\" + registryEndPoint + "\\Addins\\" + progIDAttribute.Value);
                 if (null != key)
                 {
-                    TweakProxyCountChannel(factory, addinInstance, addinType, key);
                     TweakConsoleMode(factory, addinInstance, addinType, key);
                     TweakSharedOutput(factory, addinInstance, addinType, key);
                     TweakAddHocLoading(factory, addinInstance, addinType, key);
@@ -95,10 +103,8 @@ namespace NetOffice.Tools
                     Dictionary<string, string> customTweaks = ApplyCustomTweaks(factory, addinInstance, addinType, key);
                     AddCustomAppliedTweaks(addinInstance.GetHashCode(), customTweaks);
                     key.Close();
-                    // key.Dispose(); not available in previous .net versions (but in fact RegistryKey implements always IDisposable huuu?)
                 }
                 hiveKey.Close();
-                // hiveKey.Dispose();  not available in previous .net versions
             }
             catch (Exception exception)
             {
@@ -249,28 +255,6 @@ namespace NetOffice.Tools
         #endregion
 
         #region NO Tweaks
-
-        private static void TweakProxyCountChannel(Core factory, object addinInstance, Type addinType, RegistryKey key)
-        {
-            string value = key.GetValue("NOEnableProxyCountChannel", null) as string;
-            if (null != value)
-            {
-                bool allow = CallAllowApplyTweak(factory, addinInstance, addinType, "NOEnableProxyCountChannel", value);
-                if (!allow)
-                    return;
-                value = value.ToLower().Trim();
-                if (value.StartsWith("enabled", StringComparison.InvariantCultureIgnoreCase))
-                {
-                    int pos = value.IndexOf(";", StringComparison.InvariantCultureIgnoreCase);
-                    if (pos > -1)
-                    {
-                        string channelName = value.Substring(pos + 1);
-                        factory.Settings.EnableProxyCountChannel = true;
-                        factory.Settings.ProxyCountChannelName = channelName;
-                    }
-                }
-            }
-        }
 
         private static void TweakConsoleMode(Core factory, object addinInstance, Type addinType, RegistryKey key)
         {

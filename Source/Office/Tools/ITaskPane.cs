@@ -4,11 +4,11 @@ using NetOffice.Tools;
 
 namespace NetOffice.OfficeApi.Tools
 {
- 	/// <summary>
-    /// Office TaskPane UserControl classes can implement these interface in a NetOffice Tools Addin(COMAddin) as a special service.
-    /// NetOffice want call ITaskPane members automaticly 
+    /// <summary>
+    /// ITaskPane Connection Part
     /// </summary>
-    public interface ITaskPane
+    /// <typeparam name="T">Office Host Application</typeparam>
+    public interface ITaskPaneConnection<T> where T : COMObject
     {
         /// <summary>
         /// After startup to serve the application instance and custom arguments(if set)
@@ -16,8 +16,15 @@ namespace NetOffice.OfficeApi.Tools
         /// <param name="application">host application instance</param>
 		/// <param name="parentPane">custom task pane definition </param>
 		/// <param name="customArguments">custom arguments</param>
-        void OnConnection(COMObject application, NetOffice.OfficeApi._CustomTaskPane parentPane, object[] customArguments);
+        void OnConnection(T application, NetOffice.OfficeApi._CustomTaskPane parentPane, object[] customArguments);
+    }
 
+    /// <summary>
+    /// Office TaskPane UserControl classes can implement these interface in a NetOffice Tools Addin(COMAddin) as a special service.
+    /// NetOffice want call ITaskPane members automaticly 
+    /// </summary>
+    public interface ITaskPane : OfficeApi.Tools.ITaskPaneConnection<COMObject>
+    {
 		/// <summary>
         /// While Office Application shutdown. The method is not called in case of unexpected termination (may user kills the instance in task manager)
         /// </summary>
