@@ -5,4 +5,4 @@
 
 // This is used for the NuSpec version tag replacement
 // and is combined with nuget-specific rev and release
-[assembly: AssemblyInformationalVersion("1.7.4")]
+[assembly: AssemblyInformationalVersion("1.7.4-dev")]
