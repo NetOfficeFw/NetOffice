@@ -5,7 +5,7 @@
 // associated with an assembly.
 [assembly: AssemblyCompany("NetOfficeFw")]
 [assembly: AssemblyProduct("NetOffice")]
-[assembly: AssemblyCopyright("Copyright © 2011-2015 Sebastian Lange, 2015-2016 Jozef Izso")]
+[assembly: AssemblyCopyright("Copyright © 2011-2016 Sebastian Lange, 2015-2016 Jozef Izso")]
 [assembly: AssemblyTrademark("")]
 
 [assembly: AssemblyCulture("")]
