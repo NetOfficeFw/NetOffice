@@ -22,6 +22,7 @@
     <Reference Include="System" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CurrentAppDomainTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="..\..\.build\SharedAssemblyInfo.cs">
       <Link>Properties\SharedAssemblyInfo.cs</Link>

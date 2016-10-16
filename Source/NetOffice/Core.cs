@@ -284,6 +284,8 @@ namespace NetOffice
         /// </summary>
         public TimeSpan InitializedTime { get; private set; }
 
+        internal CurrentAppDomain CurrentAppDomain { get { return this._appDomain; } }
+
         #endregion
 
         #region Events
@@ -485,7 +487,7 @@ namespace NetOffice
                     {
                         try
                         {
-                            Assembly asssembly = _appDomain.LoadFile(fileName);
+                            Assembly asssembly = _appDomain.LoadFrom(fileName);
                             AddAssembly(asssembly.GetName().Name, asssembly);
                         }
                         catch (Exception exception)
