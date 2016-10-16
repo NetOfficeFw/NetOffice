@@ -77,31 +77,6 @@ namespace NetOffice
         /// <summary>
         /// Try load an assembly
         /// </summary>
-        /// <param name="fileName">full qualified file path</param>
-        /// <returns>Assembly instance or null</returns>
-        internal Assembly Load(string fileName)
-        {
-            try
-            {
-                if (ValidateVersion(fileName))
-                {
-                    if (Owner.Settings.LoadAssembliesUnsafe)
-                        return Assembly.UnsafeLoadFrom(fileName);
-                    else
-                        return Assembly.Load(fileName);
-                }
-                else
-                    return null;
-            }
-            catch
-            {
-                return null;
-            }
-        }
-
-        /// <summary>
-        /// Try load an assembly
-        /// </summary>
         /// <param name="name">assembly reference name</param>
         /// <returns>Assembly instance or null</returns>
         internal Assembly Load(AssemblyName name)
@@ -109,31 +84,6 @@ namespace NetOffice
             try
             {
                 return Assembly.Load(name);
-            }
-            catch
-            {
-                return null;
-            }
-        }
-
-        /// <summary>
-        /// Try load an assembly
-        /// </summary>
-        /// <param name="fileName">full qualified name</param>
-        /// <returns>Assembly instance or null</returns>
-        internal Assembly LoadFile(string fileName)
-        {
-            try
-            {
-                if (ValidateVersion(fileName))
-                {
-                    if (Owner.Settings.LoadAssembliesUnsafe)
-                        return Assembly.UnsafeLoadFrom(fileName);
-                    else
-                        return Assembly.Load(fileName);
-                }
-                else
-                    return null;
             }
             catch
             {
@@ -158,7 +108,7 @@ namespace NetOffice
                     {
                         //  todo: find a #pragma to make a possible exception silent
                         // even the developer want a hard debugger break in all(or match) CLR exception(s)
-                        return Assembly.Load(fileName);
+                        return Assembly.LoadFrom(fileName);
                     }
                 }
                 else
@@ -212,7 +162,7 @@ namespace NetOffice
                 if (System.IO.File.Exists(fullFileName))
                 {
                     Console.WriteLine(string.Format("Try to resolve assembly {0}", args.Name));
-                    Assembly assembly = Load(args.Name);
+                    Assembly assembly = LoadFrom(args.Name);
                     return assembly;
                 }
                 else

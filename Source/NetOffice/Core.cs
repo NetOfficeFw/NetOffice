@@ -485,7 +485,7 @@ namespace NetOffice
                     {
                         try
                         {
-                            Assembly asssembly = _appDomain.LoadFile(fileName);
+                            Assembly asssembly = _appDomain.LoadFrom(fileName);
                             AddAssembly(asssembly.GetName().Name, asssembly);
                         }
                         catch (Exception exception)
