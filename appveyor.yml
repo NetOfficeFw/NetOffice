@@ -24,7 +24,10 @@ before_build:
 
 build:
   project: NetOffice.sln
-  verbosity: detailed
+  verbosity: normal
+
+after_build:
+  - NuGetPack.cmd
 
 cache:
   - packages -> **\packages.config
@@ -38,3 +41,15 @@ assembly_info:
 
 test:
   assemblies:
+
+artifacts:
+  - path: 'out\packages\*.nupkg'
+
+deploy:
+  - provider: NuGet
+    server: https://www.myget.org/F/netofficefw-dev/api/v2/package
+    symbol_server: https://www.myget.org/F/netofficefw-dev/symbols/api/v2/package
+    api_key:
+      secure: Zx2NLrf4MlxmeayBVUFmF+nsdJ8lE+yIkvtdAoPM9ASk/fpWl19FiA3n6e9CSXGl
+    on:
+      configuration: Release

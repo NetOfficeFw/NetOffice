@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>NetOffice.Word</id>
+    <version>$version$</version>
+    <title>NetOffice.Word</title>
+    <authors>Sebastian Lange, Jozef Izso</authors>
+    <owners>Jozef Izso</owners>
+    <licenseUrl>https://raw.githubusercontent.com/NetOfficeFw/NetOffice/master/LICENSE.txt</licenseUrl>
+    <projectUrl>https://github.com/NetOfficeFw/NetOffice</projectUrl>
+    <iconUrl>https://raw.githubusercontent.com/NetOfficeFw/NetOffice-Assets/master/NetOfficeFwLogo_256x256.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Core library for NetOffice, the .NET Wrapper Assemblies for accessing MS Office applications: Office, Word, Word, Outlook, PowerPoint, Access, Project, Visio</description>
+    <summary>NetOffice - MS Office in .NET Core Library</summary>
+    <releaseNotes />
+    <copyright />
+    <tags>netoffice netoffice.core office Word word outlook powerpoint access project visio interop wrapper .net20 .net30 .net35 .net40 .net45 vsto Word-dna</tags>
+    <dependencies>
+      <dependency id="NetOffice.Core" version="$version$" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="..\out\$configuration$\WordApi\WordApi.dll" target="lib\net40" />
+    <file src="..\out\$configuration$\WordApi\WordApi.pdb" target="lib\net40" />
+    <file src="..\out\$configuration$\WordApi\WordApi.xml" target="lib\net40" />
+
+    <file src="tools\NetOffice.Word.install.ps1" target="tools\install.ps1" />
+
+    <file src="..\Source\Word\**\*.cs" target="src" />
+  </files>
+</package>
