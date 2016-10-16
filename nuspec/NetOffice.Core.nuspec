@@ -32,5 +32,7 @@
     <file src="..\Source\NetOffice\**\*.cs" target="src\NetOffice" />
     <file src="..\Source\Office\**\*.cs" target="src\OfficeApi" />
     <file src="..\Source\VBIDE\**\*.cs" target="src\VBIDEApi" />
+
+    <file src="..\LICENSE.txt" target="LICENSE.txt" />
   </files>
 </package>

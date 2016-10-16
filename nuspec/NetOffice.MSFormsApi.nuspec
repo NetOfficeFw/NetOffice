@@ -27,5 +27,7 @@
     <file src="tools\NetOffice.MSForms.install.ps1" target="tools\install.ps1" />
 
     <file src="..\Source\MSForms\**\*.cs" target="src" />
+
+    <file src="..\LICENSE.txt" target="LICENSE.txt" />
   </files>
 </package>

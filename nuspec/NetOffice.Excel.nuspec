@@ -27,5 +27,7 @@
     <file src="tools\NetOffice.Excel.install.ps1" target="tools\install.ps1" />
 
     <file src="..\Source\Excel\**\*.cs" target="src" />
+
+    <file src="..\LICENSE.txt" target="LICENSE.txt" />
   </files>
 </package>

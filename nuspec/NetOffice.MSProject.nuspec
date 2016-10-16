@@ -31,5 +31,7 @@
     <file src="tools\NetOffice.MSProject.install.ps1" target="tools\install.ps1" />
 
     <file src="..\Source\MSProject\**\*.cs" target="src" />
+
+    <file src="..\LICENSE.txt" target="LICENSE.txt" />
   </files>
 </package>

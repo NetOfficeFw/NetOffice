@@ -27,5 +27,7 @@
     <file src="tools\NetOffice.Outlook.install.ps1" target="tools\install.ps1" />
 
     <file src="..\Source\Outlook\**\*.cs" target="src" />
+
+    <file src="..\LICENSE.txt" target="LICENSE.txt" />
   </files>
 </package>

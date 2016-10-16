@@ -47,5 +47,7 @@
     <file src="tools\NetOffice.Access.install.ps1" target="tools\install.ps1" />
 
     <file src="..\Source\Access\**\*.cs" target="src" />
+
+    <file src="..\LICENSE.txt" target="LICENSE.txt" />
   </files>
 </package>
