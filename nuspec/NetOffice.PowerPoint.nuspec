@@ -18,9 +18,10 @@
   </metadata>
   <files>
     <file src="..\out\$configuration$\PowerPointApi\PowerPointApi.dll" target="lib\net40" />
+    <file src="..\out\$configuration$\PowerPointApi\PowerPointApi.pdb" target="lib\net40" />
     <file src="..\out\$configuration$\PowerPointApi\PowerPointApi.xml" target="lib\net40" />
 
-    <file src="tools\NetOffice.Core.install.ps1" target="tools\install.ps1" />
+    <file src="tools\NetOffice.PowerPoint.install.ps1" target="tools\install.ps1" />
 
     <file src="..\Source\PowerPoint\**\*.cs" target="src" />
   </files>

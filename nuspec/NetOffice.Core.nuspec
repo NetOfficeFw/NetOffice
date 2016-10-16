@@ -18,10 +18,13 @@
   </metadata>
   <files>
     <file src="..\out\$configuration$\NetOffice\NetOffice.dll" target="lib\net40" />
+    <file src="..\out\$configuration$\NetOffice\NetOffice.pdb" target="lib\net40" />
     <file src="..\out\$configuration$\NetOffice\NetOffice.xml" target="lib\net40" />
     <file src="..\out\$configuration$\OfficeApi\OfficeApi.dll" target="lib\net40" />
+    <file src="..\out\$configuration$\OfficeApi\OfficeApi.pdb" target="lib\net40" />
     <file src="..\out\$configuration$\OfficeApi\OfficeApi.xml" target="lib\net40" />
     <file src="..\out\$configuration$\VBIDEApi\VBIDEApi.dll" target="lib\net40" />
+    <file src="..\out\$configuration$\VBIDEApi\VBIDEApi.pdb" target="lib\net40" />
     <file src="..\out\$configuration$\VBIDEApi\VBIDEApi.xml" target="lib\net40" />
 
     <file src="tools\NetOffice.Core.install.ps1" target="tools\install.ps1" />

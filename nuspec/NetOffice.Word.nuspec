@@ -18,9 +18,10 @@
   </metadata>
   <files>
     <file src="..\out\$configuration$\WordApi\WordApi.dll" target="lib\net40" />
+    <file src="..\out\$configuration$\WordApi\WordApi.pdb" target="lib\net40" />
     <file src="..\out\$configuration$\WordApi\WordApi.xml" target="lib\net40" />
 
-    <file src="tools\NetOffice.Core.install.ps1" target="tools\install.ps1" />
+    <file src="tools\NetOffice.Word.install.ps1" target="tools\install.ps1" />
 
     <file src="..\Source\Word\**\*.cs" target="src" />
   </files>

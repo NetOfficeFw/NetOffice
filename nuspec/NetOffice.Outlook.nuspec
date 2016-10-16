@@ -18,9 +18,10 @@
   </metadata>
   <files>
     <file src="..\out\$configuration$\OutlookApi\OutlookApi.dll" target="lib\net40" />
+    <file src="..\out\$configuration$\OutlookApi\OutlookApi.pdb" target="lib\net40" />
     <file src="..\out\$configuration$\OutlookApi\OutlookApi.xml" target="lib\net40" />
 
-    <file src="tools\NetOffice.Core.install.ps1" target="tools\install.ps1" />
+    <file src="tools\NetOffice.Outlook.install.ps1" target="tools\install.ps1" />
 
     <file src="..\Source\Outlook\**\*.cs" target="src" />
   </files>
