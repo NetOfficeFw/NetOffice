@@ -15,11 +15,18 @@
     <releaseNotes />
     <copyright />
     <tags>netoffice netoffice.core office MSProject word outlook powerpoint access project visio interop wrapper .net20 .net30 .net35 .net40 .net45 vsto MSProject-dna</tags>
+    <dependencies>
+      <dependency id="NetOffice.Core" version="$version$" />
+    </dependencies>
   </metadata>
   <files>
     <file src="..\out\$configuration$\MSProjectApi\MSProjectApi.dll" target="lib\net40" />
     <file src="..\out\$configuration$\MSProjectApi\MSProjectApi.pdb" target="lib\net40" />
     <file src="..\out\$configuration$\MSProjectApi\MSProjectApi.xml" target="lib\net40" />
+    
+    <file src="..\out\$configuration$\MSHTMLApi\MSHTMLApi.dll" target="lib\net40" />
+    <file src="..\out\$configuration$\MSHTMLApi\MSHTMLApi.pdb" target="lib\net40" />
+    <file src="..\out\$configuration$\MSHTMLApi\MSHTMLApi.xml" target="lib\net40" />
 
     <file src="tools\NetOffice.MSProject.install.ps1" target="tools\install.ps1" />
 

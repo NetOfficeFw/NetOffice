@@ -15,11 +15,34 @@
     <releaseNotes />
     <copyright />
     <tags>netoffice netoffice.core office Access word outlook powerpoint access project visio interop wrapper .net20 .net30 .net35 .net40 .net45 vsto Access-dna</tags>
+    <dependencies>
+      <dependency id="NetOffice.Core" version="$version$" />
+    </dependencies>
   </metadata>
   <files>
     <file src="..\out\$configuration$\AccessApi\AccessApi.dll" target="lib\net40" />
     <file src="..\out\$configuration$\AccessApi\AccessApi.pdb" target="lib\net40" />
     <file src="..\out\$configuration$\AccessApi\AccessApi.xml" target="lib\net40" />
+    
+    <file src="..\out\$configuration$\DAOApi\DAOApi.dll" target="lib\net40" />
+    <file src="..\out\$configuration$\DAOApi\DAOApi.pdb" target="lib\net40" />
+    <file src="..\out\$configuration$\DAOApi\DAOApi.xml" target="lib\net40" />
+
+    <file src="..\out\$configuration$\ADODBApi\ADODBApi.dll" target="lib\net40" />
+    <file src="..\out\$configuration$\ADODBApi\ADODBApi.pdb" target="lib\net40" />
+    <file src="..\out\$configuration$\ADODBApi\ADODBApi.xml" target="lib\net40" />
+
+    <file src="..\out\$configuration$\OWC10Api\OWC10Api.dll" target="lib\net40" />
+    <file src="..\out\$configuration$\OWC10Api\OWC10Api.pdb" target="lib\net40" />
+    <file src="..\out\$configuration$\OWC10Api\OWC10Api.xml" target="lib\net40" />
+
+    <file src="..\out\$configuration$\MSDATASRCApi\MSDATASRCApi.dll" target="lib\net40" />
+    <file src="..\out\$configuration$\MSDATASRCApi\MSDATASRCApi.pdb" target="lib\net40" />
+    <file src="..\out\$configuration$\MSDATASRCApi\MSDATASRCApi.xml" target="lib\net40" />
+
+    <file src="..\out\$configuration$\MSComctlLibApi\MSComctlLibApi.dll" target="lib\net40" />
+    <file src="..\out\$configuration$\MSComctlLibApi\MSComctlLibApi.pdb" target="lib\net40" />
+    <file src="..\out\$configuration$\MSComctlLibApi\MSComctlLibApi.xml" target="lib\net40" />
 
     <file src="tools\NetOffice.Access.install.ps1" target="tools\install.ps1" />
 

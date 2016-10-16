@@ -15,6 +15,9 @@
     <releaseNotes />
     <copyright />
     <tags>netoffice netoffice.core office PowerPoint word outlook powerpoint access project visio interop wrapper .net20 .net30 .net35 .net40 .net45 vsto PowerPoint-dna</tags>
+    <dependencies>
+      <dependency id="NetOffice.Core" version="$version$" />
+    </dependencies>
   </metadata>
   <files>
     <file src="..\out\$configuration$\PowerPointApi\PowerPointApi.dll" target="lib\net40" />

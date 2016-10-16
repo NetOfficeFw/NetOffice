@@ -15,6 +15,9 @@
     <releaseNotes />
     <copyright />
     <tags>netoffice netoffice.core office excel word outlook powerpoint access project visio interop wrapper .net20 .net30 .net35 .net40 .net45 vsto excel-dna</tags>
+    <dependencies>
+      <dependency id="NetOffice.Core" version="$version$" />
+    </dependencies>
   </metadata>
   <files>
     <file src="..\out\$configuration$\ExcelApi\ExcelApi.dll" target="lib\net40" />
