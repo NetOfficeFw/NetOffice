@@ -284,6 +284,8 @@ namespace NetOffice
         /// </summary>
         public TimeSpan InitializedTime { get; private set; }
 
+        internal CurrentAppDomain CurrentAppDomain { get { return this._appDomain; } }
+
         #endregion
 
         #region Events
