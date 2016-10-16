@@ -24,7 +24,8 @@ before_build:
 
 build:
   project: NetOffice.sln
-  verbosity: detailed
+  verbosity: normal
+
 after_build:
   - NuGetPack.cmd
 
