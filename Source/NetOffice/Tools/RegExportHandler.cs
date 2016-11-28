@@ -12,6 +12,17 @@ namespace NetOffice.Tools
     public class RegExportHandler
     {
         /// <summary>
+        /// Do register export process per user
+        /// </summary>
+        /// <param name="type">addin type</param>
+        /// <param name="addinOfficeRegistryKey">office application registry path</param>
+        /// <param name="keyState">the office registry key need to create</param>
+        public static RegExport ProceedUser(Type type, string[] addinOfficeRegistryKey, OfficeRegisterKeyState keyState)
+        {
+            return Proceed(type, addinOfficeRegistryKey, InstallScope.User, keyState);
+        }
+
+        /// <summary>
         /// Do register export process
         /// </summary>
         /// <param name="type">addin type</param>

@@ -1,5 +1,6 @@
-using System;
+﻿using System;
 using NetRuntimeSystem = System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Reflection;
 using Microsoft.Win32;
@@ -15,7 +16,7 @@ namespace NetOffice.VisioApi.Tools
     /// NetOffice MS-Visio COM Addin
     /// </summary>
 	[ComVisible(true), ClassInterface(ClassInterfaceType.AutoDual)]
-    public abstract class COMAddin : IDTExtensibility2
+    public abstract class COMAddin : COMAddinBase, ICOMAddin
     {
         #region Fields
 
@@ -24,8 +25,13 @@ namespace NetOffice.VisioApi.Tools
         /// </summary>
         private static readonly string _addinOfficeRegistryKey  = "Software\\Microsoft\\Office\\Visio\\Addins\\";
 
+        /// <summary>
+        /// Instance factory to avoid trouble with addins in same appdomain
+        /// </summary>
+        private Core _factory;
+
         #endregion
-        
+
         #region Ctor
 
         /// <summary>
@@ -33,7 +39,9 @@ namespace NetOffice.VisioApi.Tools
         /// </summary>
         public COMAddin()
         {
-            Type = this.GetType();
+            _factory = RaiseCreateFactory();
+            if (null == _factory)
+                _factory = Core.Default;
         }
 
         #endregion
@@ -41,16 +49,10 @@ namespace NetOffice.VisioApi.Tools
         #region Properties
 
         /// <summary>
-        /// Type Information of the instance
-        /// </summary>
-        protected Type Type { get; set; }
-
-        /// <summary>
         /// Host Application Instance
         /// </summary>
         protected Visio.Application Application { get; private set; }
         
-
 		/// <summary>
         /// Cached Error Method Delegate
         /// </summary>
@@ -60,6 +62,87 @@ namespace NetOffice.VisioApi.Tools
         /// Cached Register Error Method Delegate
         /// </summary>
 		private static MethodInfo RegisterErrorMethod { get; set; }
+
+        #endregion
+
+        #region COMAddinBase
+
+        /// <summary>
+        /// Generic Host Application Instance
+        /// </summary>
+        [Browsable(false), EditorBrowsable(EditorBrowsableState.Never)]
+        public override ICOMObject AppInstance
+        {
+            get { return Application; }
+        }
+
+        /// <summary>
+        /// The used factory core
+        /// </summary>
+        public override Core Factory
+        {
+            get
+            {
+                return _factory;
+            }
+        }
+
+        /// <summary>
+        /// Instance managed root com objects
+        /// </summary>
+        [Browsable(false), EditorBrowsable(EditorBrowsableState.Never)]
+        public override IEnumerable Roots { get; protected set; }
+
+        /// <summary>
+        /// Returns an enumerable sequence with instance managed com objects on root level
+        /// </summary>
+        /// <returns>ICOMObject enumerator</returns>
+        [Browsable(false), EditorBrowsable(EditorBrowsableState.Never)]
+        protected internal virtual IEnumerable<ICOMObject> OnCreateRoots()
+        {
+            List<ICOMObject> result = new List<ICOMObject>();
+            result.Add(Application);
+
+            return result.ToArray();
+        }
+
+        #endregion
+
+        #region Methods
+
+        /// <summary>
+        /// Create the used factory. The method was called as first in the base ctor
+        /// </summary>
+        /// <returns>new Settings instance</returns>
+        protected virtual Core CreateFactory()
+        {
+            Core core = new Core();
+            ForceInitializeAttribute attribute = AttributeReflector.GetForceInitializeAttribute(Type);
+            if (null != attribute)
+            {
+                core.Settings.EnableDebugOutput = attribute.EnableDebugOutput;
+                core.CheckInitialize();
+            }
+            return core;
+        }
+
+        /// <summary>
+        /// Create the necessary factory and was called in the first line in base ctor
+        /// </summary>
+        /// <returns></returns>
+        private Core RaiseCreateFactory()
+        {
+            try
+            {
+                return CreateFactory();
+            }
+            catch (NetRuntimeSystem.Exception exception)
+            {
+                NetOffice.DebugConsole.Default.WriteException(exception);
+                OnError(ErrorMethodKind.CreateFactory, exception);
+                return null;
+            }
+        }
 
         #endregion
 
@@ -188,13 +271,15 @@ namespace NetOffice.VisioApi.Tools
 
         void IDTExtensibility2.OnStartupComplete(ref Array custom)
         {
+            LoadingTimeElapsed = (DateTime.Now - _creationTime);
+            Roots = OnCreateRoots();
             RaiseOnStartupComplete(ref custom);
         }
 
         void IDTExtensibility2.OnConnection(object Application, ext_ConnectMode ConnectMode, object AddInInst, ref Array custom)
         {
-			this.Application = new Visio.Application(null, Application);
-			RaiseOnConnection(Application, ConnectMode, AddInInst, ref custom);
+			this.Application = new Visio.Application(null, Application);          
+            RaiseOnConnection(this.Application, ConnectMode, AddInInst, ref custom);
         }
 
         void IDTExtensibility2.OnDisconnection(ext_DisconnectMode RemoveMode, ref Array custom)

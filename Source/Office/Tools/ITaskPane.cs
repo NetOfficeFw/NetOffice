@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using NetOffice;
 using NetOffice.Tools;
 
@@ -8,7 +8,7 @@ namespace NetOffice.OfficeApi.Tools
     /// ITaskPane Connection Part
     /// </summary>
     /// <typeparam name="T">Office Host Application</typeparam>
-    public interface ITaskPaneConnection<T> where T : COMObject
+    public interface ITaskPaneConnection<T> where T : ICOMObject
     {
         /// <summary>
         /// After startup to serve the application instance and custom arguments(if set)
@@ -23,7 +23,7 @@ namespace NetOffice.OfficeApi.Tools
     /// Office TaskPane UserControl classes can implement these interface in a NetOffice Tools Addin(COMAddin) as a special service.
     /// NetOffice want call ITaskPane members automaticly 
     /// </summary>
-    public interface ITaskPane : OfficeApi.Tools.ITaskPaneConnection<COMObject>
+    public interface ITaskPane : OfficeApi.Tools.ITaskPaneConnection<ICOMObject>
     {
 		/// <summary>
         /// While Office Application shutdown. The method is not called in case of unexpected termination (may user kills the instance in task manager)

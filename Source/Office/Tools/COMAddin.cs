@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using NetRuntimeSystem = System;
 using System.Collections.Generic;
 using System.Reflection;
@@ -9,6 +9,7 @@ using NetOffice;
 using NetOffice.Tools;
 using NetOffice.OfficeApi.Tools;
 using Office = NetOffice.OfficeApi;
+using System.Collections;
 
 namespace NetOffice.OfficeApi.Tools
 {
@@ -16,7 +17,7 @@ namespace NetOffice.OfficeApi.Tools
     /// NetOffice COM Addin
     /// </summary>
 	[ComVisible(true), ClassInterface(ClassInterfaceType.AutoDual)]
-    public abstract class COMAddin : COMAddinBase, IDTExtensibility2, Office.IRibbonExtensibility, Office.ICustomTaskPaneConsumer
+    public abstract class COMAddin : COMAddinBase, IOfficeCOMAddin
     {
         #region Fields
 
@@ -35,6 +36,11 @@ namespace NetOffice.OfficeApi.Tools
         /// </summary>
         private bool? _isLoadedFromSystem;
 
+        /// <summary>
+        /// Instance factory to avoid trouble with addins in same appdomain
+        /// </summary>
+        private Core _factory;
+
         #endregion
 
         #region Ctor
@@ -44,12 +50,11 @@ namespace NetOffice.OfficeApi.Tools
         /// </summary>
         public COMAddin()
         {
-            Factory = RaiseCreateFactory();
-            if (null == Factory)
-                Factory = Core.Default;
+            _factory = RaiseCreateFactory();
+            if (null == _factory)
+                _factory = Core.Default;
             TaskPanes = new CustomTaskPaneCollection();
 			TaskPaneInstances = new List<ITaskPane>();
-            Type = this.GetType();
         }
 
         #endregion
@@ -62,19 +67,9 @@ namespace NetOffice.OfficeApi.Tools
         public Utils.CommonUtils Utils { get; private set; }
 
         /// <summary>
-        /// The used factory core
-        /// </summary>
-        public Core Factory { get; private set; }
-
-        /// <summary>
-        /// Type Information of the instance
-        /// </summary>
-        protected Type Type { get; set; }
-
-        /// <summary>
         /// Host Application Instance
         /// </summary>
-        protected internal COMObject Application { get; private set; }
+        protected internal ICOMObject Application { get; private set; }
         
         /// <summary>
         /// Collection with all created custom Task Panes
@@ -230,9 +225,41 @@ namespace NetOffice.OfficeApi.Tools
         /// Generic Host Application Instance
         /// </summary>
         [Browsable(false), EditorBrowsable(EditorBrowsableState.Never)]
-        public override COMObject AppInstance
+        public override ICOMObject AppInstance
         {
             get { return Application; }
+        }
+
+        /// <summary>
+        /// The used factory core
+        /// </summary>
+        public override Core Factory
+        {
+            get
+            {
+                return _factory;
+            }
+        }
+
+        /// <summary>
+        /// Instance managed root proxies
+        /// </summary>
+        [Browsable(false), EditorBrowsable(EditorBrowsableState.Never)]
+        public override IEnumerable Roots { get; protected set; }
+
+        /// <summary>
+        /// Returns an enumerable sequence with instance managed com objects on root level
+        /// </summary>
+        /// <returns>ICOMObject enumerator</returns>
+        [Browsable(false), EditorBrowsable(EditorBrowsableState.Never)]
+        protected internal virtual IEnumerable<ICOMObject> OnCreateRoots()
+        {
+            List<ICOMObject> result = new List<ICOMObject>();
+            result.Add(Application);
+            if (null != TaskPaneFactory)
+                result.Add(TaskPaneFactory);
+
+            return result.ToArray();
         }
 
         #endregion
@@ -244,6 +271,7 @@ namespace NetOffice.OfficeApi.Tools
             try
             {
                 LoadingTimeElapsed = (DateTime.Now - _creationTime);
+                Roots = OnCreateRoots();
                 RaiseOnStartupComplete(ref custom);
             }
             catch (NetRuntimeSystem.Exception exception)
@@ -814,7 +842,14 @@ namespace NetOffice.OfficeApi.Tools
         /// <returns>new Settings instance</returns>
         protected virtual Core CreateFactory()
         {
-            return new Core();
+            Core core = new Core();
+            ForceInitializeAttribute attribute = AttributeReflector.GetForceInitializeAttribute(Type);
+            if (null != attribute)
+            {
+                core.Settings.EnableDebugOutput = attribute.EnableDebugOutput;
+                core.CheckInitialize();
+            }
+            return core;
         }
 
         #endregion
@@ -864,7 +899,7 @@ namespace NetOffice.OfficeApi.Tools
                 return _isLoadedFromSystem;
 
             ApplicationIdentifiers.ApplicationType applicationType =
-               ApplicationIdentifiers.IsApplication(Application.InstanceType.GUID);
+               ApplicationIdentifiers.IsApplication(Application.UnderlyingType.GUID);
             if (applicationType == ApplicationIdentifiers.ApplicationType.None)
                 return null;
 
@@ -919,13 +954,20 @@ namespace NetOffice.OfficeApi.Tools
         [ComRegisterFunctionAttribute, Browsable(false), EditorBrowsable(EditorBrowsableState.Never)]
         public static void RegisterFunction(Type type)
         {
-            MultiRegisterAttribute attribute = MultiRegisterAttribute.GetAttribute(type);
+            try
+            {
+                MultiRegisterAttribute attribute = MultiRegisterAttribute.GetAttribute(type);
+                string[] product = new string[attribute.Products.Length];
+                for (int i = 0; i < attribute.Products.Length; i++)
+                    product[i] = String.Format(_addinOfficeRegistryKey, MultiRegisterAttribute.RegistryEntry(attribute.Products[i]));
 
-            string[] product = new string[attribute.Products.Length];
-            for (int i = 0; i < attribute.Products.Length; i++)
-                product[i] = String.Format(_addinOfficeRegistryKey, MultiRegisterAttribute.RegistryEntry(attribute.Products[i]));
-
-            RegisterHandler.Proceed(type, product, InstallScope.System, OfficeRegisterKeyState.NeedToCreate);
+                RegisterHandler.Proceed(type, product, InstallScope.System, OfficeRegisterKeyState.NeedToCreate);
+            }
+            catch (Exception exception)
+            {
+                if (!RegisterErrorHandler.RaiseStaticErrorHandlerMethod(type, RegisterErrorMethodKind.Register, new NetOfficeException(exception.Message, exception)))
+                    throw;
+            }
         }
 
         /// <summary>
@@ -935,13 +977,20 @@ namespace NetOffice.OfficeApi.Tools
         [ComUnregisterFunctionAttribute, Browsable(false), EditorBrowsable(EditorBrowsableState.Never)]
         public static void UnregisterFunction(Type type)
         {
-            MultiRegisterAttribute attribute = MultiRegisterAttribute.GetAttribute(type);
+            try
+            {
+                MultiRegisterAttribute attribute = MultiRegisterAttribute.GetAttribute(type);
+                string[] product = new string[attribute.Products.Length];
+                for (int i = 0; i < attribute.Products.Length; i++)
+                    product[i] = String.Format(_addinOfficeRegistryKey, MultiRegisterAttribute.RegistryEntry(attribute.Products[i]));
 
-            string[] product = new string[attribute.Products.Length];
-            for (int i = 0; i < attribute.Products.Length; i++)
-                product[i] = String.Format(_addinOfficeRegistryKey, MultiRegisterAttribute.RegistryEntry(attribute.Products[i]));
-
-            UnRegisterHandler.Proceed(type, product, InstallScope.System, OfficeUnRegisterKeyState.NeedToDelete);
+                UnRegisterHandler.Proceed(type, product, InstallScope.System, OfficeUnRegisterKeyState.NeedToDelete);
+            }
+            catch (Exception exception)
+            {
+                if (!RegisterErrorHandler.RaiseStaticErrorHandlerMethod(type, RegisterErrorMethodKind.UnRegister, new NetOfficeException(exception.Message, exception)))
+                    throw;
+            }
         }
 
         /// <summary>

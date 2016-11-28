@@ -424,6 +424,10 @@
     </COMReference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\ADODB\ADODBApi.csproj">
+      <Project>{cbf10bd9-cfc5-4f6b-9bc1-374bc7c6db80}</Project>
+      <Name>ADODBApi</Name>
+    </ProjectReference>
     <ProjectReference Include="..\MSDATASRC\MSDATASRCApi.csproj">
       <Project>{9D83E8F2-4EFD-4A2E-88CE-9F5943620DB6}</Project>
       <Name>MSDATASRCApi</Name>
@@ -431,10 +435,6 @@
     <ProjectReference Include="..\MSComctlLib\MSComctlLibApi.csproj">
       <Project>{76A38510-A8E7-4B6F-A90B-10384D845F42}</Project>
       <Name>MSComctlLibApi</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\ADODB\ADODBApi.csproj">
-      <Project>{CBF10BD9-CFC5-4F6B-9BC1-374BC7C6DB80}</Project>
-      <Name>ADODBApi</Name>
     </ProjectReference>
     <ProjectReference Include="..\NetOffice\NetOffice.csproj">
       <Project>{65442327-D01F-4ECB-8C39-6D5C7622A80F}</Project>

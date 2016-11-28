@@ -37,11 +37,11 @@
             this.labelErrorMessage = new System.Windows.Forms.Label();
             this.buttonClipboardCopy = new System.Windows.Forms.Button();
             this.dataGridViewErrors = new System.Windows.Forms.DataGridView();
+            this.buttonShowDetails = new System.Windows.Forms.Button();
+            this.buttonClose = new System.Windows.Forms.Button();
             this.colMessage = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colType = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colSource = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.buttonShowDetails = new System.Windows.Forms.Button();
-            this.buttonClose = new System.Windows.Forms.Button();
             this.panelHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxHeader)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewErrors)).BeginInit();
@@ -49,8 +49,8 @@
             // 
             // panelHeader
             // 
-            this.panelHeader.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelHeader.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panelHeader.BackColor = System.Drawing.Color.White;
             this.panelHeader.Controls.Add(this.labelErrorHeader);
             this.panelHeader.Controls.Add(this.pictureBoxHeader);
@@ -90,8 +90,8 @@
             // 
             // buttonClipboardCopy
             // 
-            this.buttonClipboardCopy.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonClipboardCopy.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonClipboardCopy.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.buttonClipboardCopy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonClipboardCopy.ForeColor = System.Drawing.Color.Blue;
@@ -112,9 +112,9 @@
             this.dataGridViewErrors.AllowUserToDeleteRows = false;
             this.dataGridViewErrors.AllowUserToOrderColumns = true;
             this.dataGridViewErrors.AllowUserToResizeRows = false;
-            this.dataGridViewErrors.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridViewErrors.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridViewErrors.BackgroundColor = System.Drawing.Color.White;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.LightSteelBlue;
@@ -142,30 +142,11 @@
             this.dataGridViewErrors.MultiSelect = false;
             this.dataGridViewErrors.Name = "dataGridViewErrors";
             this.dataGridViewErrors.RowHeadersVisible = false;
+            this.dataGridViewErrors.RowTemplate.DefaultCellStyle.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridViewErrors.Size = new System.Drawing.Size(487, 219);
             this.dataGridViewErrors.TabIndex = 4;
             this.dataGridViewErrors.Visible = false;
             this.dataGridViewErrors.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewErrors_CellDoubleClick);
-            // 
-            // colMessage
-            // 
-            this.colMessage.DataPropertyName = "Message";
-            this.colMessage.HeaderText = "Message";
-            this.colMessage.Name = "colMessage";
-            this.colMessage.Width = 150;
-            // 
-            // colType
-            // 
-            this.colType.DataPropertyName = "Type";
-            this.colType.HeaderText = "Type";
-            this.colType.Name = "colType";
-            // 
-            // colSource
-            // 
-            this.colSource.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.colSource.DataPropertyName = "Source";
-            this.colSource.HeaderText = "Source";
-            this.colSource.Name = "colSource";
             // 
             // buttonShowDetails
             // 
@@ -198,6 +179,26 @@
             this.buttonClose.Text = "Close";
             this.buttonClose.UseVisualStyleBackColor = true;
             this.buttonClose.Click += new System.EventHandler(this.buttonClose_Click);
+            // 
+            // colMessage
+            // 
+            this.colMessage.DataPropertyName = "Message";
+            this.colMessage.HeaderText = "Message";
+            this.colMessage.Name = "colMessage";
+            this.colMessage.Width = 150;
+            // 
+            // colType
+            // 
+            this.colType.DataPropertyName = "Type";
+            this.colType.HeaderText = "Type";
+            this.colType.Name = "colType";
+            // 
+            // colSource
+            // 
+            this.colSource.DataPropertyName = "Source";
+            this.colSource.HeaderText = "Source";
+            this.colSource.Name = "colSource";
+            this.colSource.Width = 234;
             // 
             // ErrorDialog
             // 

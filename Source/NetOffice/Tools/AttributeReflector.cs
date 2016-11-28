@@ -169,6 +169,19 @@ namespace NetOffice.Tools
             }
         }
 
+        /// <summary>
+        /// Looks for the TimestampAttribute
+        /// </summary>
+        /// <param name="type">the type you want looking for the attribute</param>
+        /// <returns>TimestampAttribute or null</returns>
+        public static TimestampAttribute GetTimestampAttribute(Type type)
+        {
+            object[] array = type.GetCustomAttributes(typeof(TimestampAttribute), false);
+            if (array.Length == 0)
+                return null;
+            else
+                return array[0] as TimestampAttribute;
+        }
 
         /// <summary>
         /// Looks for the ProgrammableAttribute
@@ -213,6 +226,20 @@ namespace NetOffice.Tools
                 return new CodebaseAttribute(true);
             else
                 return array[0] as CodebaseAttribute;
+        }
+
+        /// <summary>
+        /// Looks for the ForceInitializeAttribute
+        /// </summary>
+        /// <param name="type">the type you want looking for the attribute</param>
+        /// <returns>ForceInitializeAttribute or null</returns>
+        public static ForceInitializeAttribute GetForceInitializeAttribute(Type type)
+        {
+            object[] array = type.GetCustomAttributes(typeof(ForceInitializeAttribute), false);
+            if (array.Length == 0)
+                return null;
+            else
+                return array[0] as ForceInitializeAttribute;
         }
 
         /// <summary>
@@ -299,6 +326,21 @@ namespace NetOffice.Tools
             object[] array = type.GetCustomAttributes(typeof(COMAddinAttribute), false);
             if (array.Length == 0)
                 throw new ArgumentOutOfRangeException("COMAddinAttribute is missing");
+            else
+                return array[0] as COMAddinAttribute;
+        }
+
+        /// <summary>
+        /// Looks for the COMAddinAttribute.
+        /// </summary>
+        /// <param name="type">the type you want looking for the attribute</param>
+        /// <param name="progID">addin progid</param>
+        /// <returns>COMAddinAttribute</returns>
+        public static COMAddinAttribute GetCOMAddinAttribute(Type type, string progID)
+        {
+            object[] array = type.GetCustomAttributes(typeof(COMAddinAttribute), false);
+            if (array.Length == 0)
+                return new COMAddinAttribute(progID, String.Empty, 3);
             else
                 return array[0] as COMAddinAttribute;
         }

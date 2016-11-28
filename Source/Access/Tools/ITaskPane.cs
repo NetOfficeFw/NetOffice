@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using Access = NetOffice.AccessApi;
 
 namespace NetOffice.AccessApi.Tools

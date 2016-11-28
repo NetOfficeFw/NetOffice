@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using Outlook = NetOffice.OutlookApi;
 
 namespace NetOffice.OutlookApi.Tools

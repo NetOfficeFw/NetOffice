@@ -11,7 +11,18 @@ namespace NetOffice.Tools
     /// </summary>
     public static class RegisterHandler
     {
-        private static string ExceptionMessage = "An error occured while calling register.";
+        private static string _exceptionMessage = "An error occured while calling register.";
+
+        /// <summary>
+        /// Do register process per user installation
+        /// </summary>
+        /// <param name="type">addin type</param>
+        /// <param name="addinOfficeRegistryKey">office application registry path</param>
+        /// <param name="keyState">the office registry key need to create</param>
+        public static void ProceedUser(Type type, string[] addinOfficeRegistryKey, OfficeRegisterKeyState keyState)
+        {
+            Proceed(type, addinOfficeRegistryKey, InstallScope.User, keyState);
+        }
 
         /// <summary>
         /// Do register process 
@@ -22,66 +33,114 @@ namespace NetOffice.Tools
         /// <param name="keyState">the office registry key need to create</param>
         public static void Proceed(Type type, string[] addinOfficeRegistryKey, InstallScope scope, OfficeRegisterKeyState keyState)
         {
+            if (null == type)
+                throw new ArgumentNullException("type");
+            if (null == addinOfficeRegistryKey)
+                throw new ArgumentNullException("addinOfficeRegistryKey");
+
+            int errorBlock = -1;
             try
             {
                 GuidAttribute guid = AttributeReflector.GetGuidAttribute(type);
                 ProgIdAttribute progId = AttributeReflector.GetProgIDAttribute(type);
                 RegistryLocationAttribute location = AttributeReflector.GetRegistryLocationAttribute(type);
-                COMAddinAttribute addin = AttributeReflector.GetCOMAddinAttribute(type);
+                COMAddinAttribute addin = AttributeReflector.GetCOMAddinAttribute(type, progId.Value);
                 CodebaseAttribute codebase = AttributeReflector.GetCodebaseAttribute(type);
                 LockbackAttribute lockBack = AttributeReflector.GetLockbackAttribute(type);
                 ProgrammableAttribute programmable = AttributeReflector.GetProgrammableAttribute(type);
-                bool isSystem = location.IsMachineTarget(scope);
+                TimestampAttribute timestamp = AttributeReflector.GetTimestampAttribute(type);
+                bool isSystemComponent = location.IsMachineComponentTarget(scope);
+                bool isSystemAddin = location.IsMachineAddinTarget(scope);
 
                 MethodInfo registerMethod = null;
                 RegisterFunctionAttribute registerAttribute = null;
-                bool registerMethodPresent = AttributeReflector.GetRegisterAttribute(type, ref registerMethod, ref registerAttribute);
-                if (null != registerAttribute && true == registerMethodPresent &&
-                    registerAttribute.Value == RegisterMode.CallBefore || registerAttribute.Value == RegisterMode.CallBeforeAndAfter)
-                {
-                    if (!CallDerivedRegisterMethod(registerMethod, type, registerAttribute.Value == RegisterMode.Replace ? RegisterCall.Replace : RegisterCall.CallBefore, scope, keyState))
-                        if (!RegisterErrorHandler.RaiseStaticErrorHandlerMethod(type, RegisterErrorMethodKind.Register, new NetOfficeException(ExceptionMessage)))
-                            return;
-                    if (registerAttribute.Value == RegisterMode.Replace)
-                        return;
-                }
+                bool registerMethodPresent = false;
 
+                errorBlock = 0;
+
+                try
+                {
+                    registerMethodPresent = AttributeReflector.GetRegisterAttribute(type, ref registerMethod, ref registerAttribute);
+                    if (null != registerAttribute && true == registerMethodPresent && (registerAttribute.Value == RegisterMode.CallBefore || registerAttribute.Value == RegisterMode.CallBeforeAndAfter))
+                    {
+                        if (!CallDerivedRegisterMethod(registerMethod, type, registerAttribute.Value == RegisterMode.Replace ? RegisterCall.Replace : RegisterCall.CallBefore, scope, keyState))
+                        {
+                            if (!RegisterErrorHandler.RaiseStaticErrorHandlerMethod(type, 
+                                                                                    RegisterErrorMethodKind.Register, 
+                                                                                    new NetOfficeException(_exceptionMessage)))
+                                return;
+                        }
+
+                        if (registerAttribute.Value == RegisterMode.Replace)
+                                return;
+                    }
+                }
+                catch (Exception)
+                {
+                    errorBlock = 1;
+                    throw;
+                }
+                
                 if (null != programmable)
                 {
-                    ProgrammableAttribute.CreateKeys(type.GUID, isSystem);
+                    try
+                    {
+                        ProgrammableAttribute.CreateKeys(type.GUID, isSystemComponent);
+                    }
+                    catch (Exception)
+                    {
+                        errorBlock = 2;
+                        throw;
+                    }                   
                 }
 
                 if (null != codebase && codebase.Value)
                 {
-                    Assembly thisAssembly = Assembly.GetAssembly(type);
-                    string assemblyVersion = thisAssembly.GetName().Version.ToString();
-                    CodebaseAttribute.CreateValue(type.GUID, location.IsMachineTarget(scope), assemblyVersion, thisAssembly.CodeBase);
+                    try
+                    {
+                        Assembly thisAssembly = Assembly.GetAssembly(type);
+                        string assemblyVersion = thisAssembly.GetName().Version.ToString();
+                        CodebaseAttribute.CreateValue(type.GUID, isSystemComponent, assemblyVersion, thisAssembly.CodeBase);
+                    }
+                    catch (Exception)
+                    {
+                        errorBlock = 3;
+                        throw;
+                    }                  
                 }
 
                 if (null != lockBack)
-                {                   
-                    if (!LockbackAttribute.CreateKey(isSystem))
+                {
+                    if (!LockbackAttribute.CreateKey(isSystemComponent))
                         NetOffice.DebugConsole.Default.WriteLine("Unable to create lockback bypass.");
                 }
 
                 if (keyState == OfficeRegisterKeyState.NeedToCreate)
                 {
-                    foreach (string item in addinOfficeRegistryKey)
-                    {                       
-                        RegistryLocationAttribute.CreateApplicationKey(location.IsMachineTarget(scope), item, progId.Value,
-                        addin.LoadBehavior, addin.Name, addin.Description, addin.CommandLineSafe);
-                    }                    
+                    try
+                    {
+                        foreach (string item in addinOfficeRegistryKey)
+                        {                        
+                            RegistryLocationAttribute.CreateApplicationKey(isSystemAddin, item, progId.Value,
+                                                                           addin.LoadBehavior, addin.Name, addin.Description, addin.CommandLineSafe, null != timestamp);
+                        }
+                    }
+                    catch (Exception)
+                    {
+                        errorBlock = 5;
+                        throw;
+                    }                      
                 }
 
-                if (null != registerAttribute && true == registerMethodPresent &&
-                    registerAttribute.Value == RegisterMode.CallAfter || registerAttribute.Value == RegisterMode.CallBeforeAndAfter)
+                if ((null != registerAttribute && true == registerMethodPresent) && (registerAttribute.Value == RegisterMode.CallAfter || registerAttribute.Value == RegisterMode.CallBeforeAndAfter))
                 {
-                    if(!CallDerivedRegisterMethod(registerMethod, type, RegisterCall.CallAfter, scope, keyState))
-                        RegisterErrorHandler.RaiseStaticErrorHandlerMethod(type, RegisterErrorMethodKind.Register, new NetOfficeException(ExceptionMessage));
+                    if (!CallDerivedRegisterMethod(registerMethod, type, RegisterCall.CallAfter, scope, keyState))
+                        RegisterErrorHandler.RaiseStaticErrorHandlerMethod(type, RegisterErrorMethodKind.Register, new NetOfficeException(_exceptionMessage));
                 }
             }
             catch (System.Exception exception)
             {
+                NetOffice.DebugConsole.Default.WriteLine("RegisterHandler Exception.Block:{0}", errorBlock);
                 NetOffice.DebugConsole.Default.WriteException(exception);
                 RegisterErrorHandler.RaiseStaticErrorHandlerMethod(type, RegisterErrorMethodKind.Register, exception);
             }
@@ -95,7 +154,7 @@ namespace NetOffice.Tools
         /// <param name="callType">kind of call, defined in Register attribute</param>
         /// <param name="scope">current register scope</param>
         /// <param name="keyState">office reg key state</param>
-        /// <returns>true if no exception occurs</returns>
+        /// <returns>true if no exception occurs, otherwise false</returns>
         private static bool CallDerivedRegisterMethod(MethodInfo registerMethod, Type type, 
             RegisterCall callType, InstallScope scope, OfficeRegisterKeyState keyState)
         {
@@ -132,7 +191,7 @@ namespace NetOffice.Tools
             }
             catch (Exception)
             {
-                return true;
+                return false;
             }          
         }        
     }

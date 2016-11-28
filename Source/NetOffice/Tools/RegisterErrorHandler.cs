@@ -9,7 +9,7 @@ namespace NetOffice.Tools
     /// <summary>
     /// Handle register errors
     /// </summary>
-    internal static class RegisterErrorHandler
+    public static class RegisterErrorHandler
     {
         /// <summary>
         /// Checks for a static method, signed with the ErrorHandlerAttribute and call them if its available
@@ -18,7 +18,7 @@ namespace NetOffice.Tools
         /// <param name="methodKind">origin method where the error comes from</param>
         /// <param name="exception">occured exception</param>
         /// <returns>true if error is handled by derived method an we can proceed</returns>
-        internal static bool RaiseStaticErrorHandlerMethod(Type type, RegisterErrorMethodKind methodKind, System.Exception exception)
+        public static bool RaiseStaticErrorHandlerMethod(Type type, RegisterErrorMethodKind methodKind, System.Exception exception)
         {
             MethodInfo errorMethod = AttributeReflector.GetRegisterErrorMethod(type);
             if (null != errorMethod)

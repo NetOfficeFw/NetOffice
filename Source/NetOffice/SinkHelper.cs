@@ -16,7 +16,7 @@ namespace NetOffice
         #region Fields
 
         private static List<SinkHelper> _pointList = new List<SinkHelper>();
-        private COMObject _eventClass;
+        private ICOMObject _eventClass;
         private IConnectionPoint _connectionPoint;
         private int _connectionCookie;
 
@@ -28,7 +28,7 @@ namespace NetOffice
         /// Creates an instance of the class
         /// </summary>
         /// <param name="eventClass">target CoClass instance</param>
-        public SinkHelper(COMObject eventClass)
+        public SinkHelper(ICOMObject eventClass)
         {
             if (null == eventClass)
                 throw new ArgumentNullException("eventClass");
@@ -42,7 +42,7 @@ namespace NetOffice
         /// <summary>
         /// Try to find connection point by FindConnectionPoint
         /// </summary>
-        private static string FindConnectionPoint(COMObject comInstance, IConnectionPointContainer connectionPointContainer, ref IConnectionPoint point, params string[] sinkIds)
+        private static string FindConnectionPoint(ICOMObject comInstance, IConnectionPointContainer connectionPointContainer, ref IConnectionPoint point, params string[] sinkIds)
         {
             try
             {
@@ -70,7 +70,7 @@ namespace NetOffice
         /// <summary>
         /// try to find connection point by EnumConnectionPoints
         /// </summary>
-        private static string EnumConnectionPoint(COMObject comInstance, IConnectionPointContainer connectionPointContainer, ref IConnectionPoint point, params string[] sinkIds)
+        private static string EnumConnectionPoint(ICOMObject comInstance, IConnectionPointContainer connectionPointContainer, ref IConnectionPoint point, params string[] sinkIds)
         {
             IConnectionPoint[] points = new IConnectionPoint[1];
             IEnumConnectionPoints enumPoints = null;
@@ -115,7 +115,7 @@ namespace NetOffice
         /// Get supported connection point from comProxy
         /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public static string GetConnectionPoint(COMObject comInstance, ref IConnectionPoint point, params string[] sinkIds)
+        public static string GetConnectionPoint(ICOMObject comInstance, ref IConnectionPoint point, params string[] sinkIds)
         {
             if (null == sinkIds)
                 return null;
@@ -155,7 +155,7 @@ namespace NetOffice
         /// Get supported connection point from comProxy in reverse order to GetConnectionPoint
         /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public static string GetConnectionPoint2(COMObject comInstance, ref IConnectionPoint point, params string[] sinkIds)
+        public static string GetConnectionPoint2(ICOMObject comInstance, ref IConnectionPoint point, params string[] sinkIds)
         {
             if (null == sinkIds)
                 return null;

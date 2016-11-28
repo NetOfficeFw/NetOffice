@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using MSProject = NetOffice.MSProjectApi;
 
 namespace NetOffice.MSProjectApi.Tools

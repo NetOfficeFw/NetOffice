@@ -342,10 +342,6 @@
       <Project>{79B19A83-A79F-446C-9B7E-9B595E918E40}</Project>
       <Name>OfficeApi</Name>
     </ProjectReference>
-    <ProjectReference Include="..\VBIDE\VBIDEApi.csproj">
-      <Project>{ACD7DB2E-DDB2-4BBB-BDB9-C2FD953585C4}</Project>
-      <Name>VBIDEApi</Name>
-    </ProjectReference>
     <ProjectReference Include="..\MSHTML\MSHTMLApi.csproj">
       <Project>{26837F52-660E-424D-80B8-30D0427E00B5}</Project>
       <Name>MSHTMLApi</Name>
@@ -353,6 +349,10 @@
     <ProjectReference Include="..\NetOffice\NetOffice.csproj">
       <Project>{65442327-D01F-4ECB-8C39-6D5C7622A80F}</Project>
       <Name>NetOffice</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\VBIDE\VBIDEApi.csproj">
+      <Project>{acd7db2e-ddb2-4bbb-bdb9-c2fd953585c4}</Project>
+      <Name>VBIDEApi</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

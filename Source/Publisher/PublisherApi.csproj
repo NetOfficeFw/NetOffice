@@ -1,0 +1,323 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{044A2BC3-7F84-4BEC-8B99-9E3432FAD88E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>NetOffice.PublisherApi</RootNamespace>
+    <AssemblyName>PublisherApi</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Release\PublisherApi.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Release\PublisherApi.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>PublisherApi_v4.0.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="Tools\COMAddin.cs" />
+    <Compile Include="Tools\ITaskPane.cs" />
+    <Compile Include="Tools\Utils\CommonUtils.cs" />
+    <Compile Include="Utils\ProjectInfo.cs" />
+    <Compile Include="Enums\PbSchemeColorIndex.cs" />
+    <Compile Include="Enums\PbColorType.cs" />
+    <Compile Include="Enums\PbPlacementType.cs" />
+    <Compile Include="Enums\PbOrientationType.cs" />
+    <Compile Include="Enums\PbUnitType.cs" />
+    <Compile Include="Enums\PbDirectionType.cs" />
+    <Compile Include="Enums\PbSelectionType.cs" />
+    <Compile Include="Enums\PbVerticalPictureLocking.cs" />
+    <Compile Include="Enums\PbHorizontalPictureLocking.cs" />
+    <Compile Include="Enums\PbColorModel.cs" />
+    <Compile Include="Enums\PbImageFormat.cs" />
+    <Compile Include="Enums\PbPictureInsertAs.cs" />
+    <Compile Include="Enums\PbLinkedFileStatus.cs" />
+    <Compile Include="Enums\pbPictureInsertFit.cs" />
+    <Compile Include="Enums\pbPresetWordArt.cs" />
+    <Compile Include="Enums\PbTrackingPresetType.cs" />
+    <Compile Include="Enums\PbUnderlineType.cs" />
+    <Compile Include="Enums\PbFontScriptType.cs" />
+    <Compile Include="Enums\PbNumberStylesType.cs" />
+    <Compile Include="Enums\PbLigaturePresetType.cs" />
+    <Compile Include="Enums\PbCollapseDirection.cs" />
+    <Compile Include="Enums\PbTextUnit.cs" />
+    <Compile Include="Enums\PbParagraphAlignmentType.cs" />
+    <Compile Include="Enums\PbLineSpacingRule.cs" />
+    <Compile Include="Enums\PbTabAlignmentType.cs" />
+    <Compile Include="Enums\PbTabLeaderType.cs" />
+    <Compile Include="Enums\PbTextDirection.cs" />
+    <Compile Include="Enums\PbListType.cs" />
+    <Compile Include="Enums\PbListSeparator.cs" />
+    <Compile Include="Enums\PbDateTimeFormat.cs" />
+    <Compile Include="Enums\PbCalendarType.cs" />
+    <Compile Include="Enums\PbFieldType.cs" />
+    <Compile Include="Enums\PbPhoneticGuideAlignmentType.cs" />
+    <Compile Include="Enums\PbCellDiagonalType.cs" />
+    <Compile Include="Enums\PbVerticalTextAlignmentType.cs" />
+    <Compile Include="Enums\PbTextOrientation.cs" />
+    <Compile Include="Enums\PbTableDirectionType.cs" />
+    <Compile Include="Enums\PbTableAutoFormatType.cs" />
+    <Compile Include="Enums\PbStoryType.cs" />
+    <Compile Include="Enums\PbHlinkTargetType.cs" />
+    <Compile Include="Enums\PbPageNumberType.cs" />
+    <Compile Include="Enums\PbReplaceScope.cs" />
+    <Compile Include="Enums\PbTextAutoFitType.cs" />
+    <Compile Include="Enums\PbShapeType.cs" />
+    <Compile Include="Enums\PbWizardTag.cs" />
+    <Compile Include="Enums\PbSubmitDataRetrievalMethodType.cs" />
+    <Compile Include="Enums\PbSubmitDataFormatType.cs" />
+    <Compile Include="Enums\PbCommandButtonType.cs" />
+    <Compile Include="Enums\PbWrapType.cs" />
+    <Compile Include="Enums\PbWrapSideType.cs" />
+    <Compile Include="Enums\PbInlineAlignment.cs" />
+    <Compile Include="Enums\PbPictureResolution.cs" />
+    <Compile Include="Enums\PbBuildingBlockType.cs" />
+    <Compile Include="Enums\PbBuildingBlockGallery.cs" />
+    <Compile Include="Enums\PbHelpType.cs" />
+    <Compile Include="Enums\PbWizard.cs" />
+    <Compile Include="Enums\PbSaveOptions.cs" />
+    <Compile Include="Enums\PbDriverType.cs" />
+    <Compile Include="Enums\PbPrintMode.cs" />
+    <Compile Include="Enums\PbWebControlType.cs" />
+    <Compile Include="Enums\PbWizardGroup.cs" />
+    <Compile Include="Enums\pbCanvasArrangementType.cs" />
+    <Compile Include="Enums\pbCatalogMergeFieldType.cs" />
+    <Compile Include="Enums\PbPageType.cs" />
+    <Compile Include="Enums\PbRulerGuideType.cs" />
+    <Compile Include="Enums\PbZoom.cs" />
+    <Compile Include="Enums\PbWindowState.cs" />
+    <Compile Include="Enums\PbColorMode.cs" />
+    <Compile Include="Enums\PbMailMergeDataFieldType.cs" />
+    <Compile Include="Enums\PbMailMergeDestination.cs" />
+    <Compile Include="Enums\PbRecipientListFileType.cs" />
+    <Compile Include="Enums\pbEmailMergePriority.cs" />
+    <Compile Include="Enums\PbMergeType.cs" />
+    <Compile Include="Enums\PbWizardPageType.cs" />
+    <Compile Include="Enums\PbPublicationLayout.cs" />
+    <Compile Include="Enums\PbPersonalInfoSet.cs" />
+    <Compile Include="Enums\PbReplaceTint.cs" />
+    <Compile Include="Enums\PbInkName.cs" />
+    <Compile Include="Enums\PbFileFormat.cs" />
+    <Compile Include="Enums\PbPrintGraphics.cs" />
+    <Compile Include="Enums\PbInksToPrint.cs" />
+    <Compile Include="Enums\PbPublicationType.cs" />
+    <Compile Include="Enums\PbPageNumberFormat.cs" />
+    <Compile Include="Enums\PbWizardNavBarDesign.cs" />
+    <Compile Include="Enums\PbWizardNavBarButtonStyle.cs" />
+    <Compile Include="Enums\PbWizardNavBarAlignment.cs" />
+    <Compile Include="Enums\PbNavBarOrientation.cs" />
+    <Compile Include="Enums\PbPrintStyle.cs" />
+    <Compile Include="Enums\PbFixedFormatType.cs" />
+    <Compile Include="Enums\PbFixedFormatIntent.cs" />
+    <Compile Include="Enums\PbMasterPageType.cs" />
+    <Compile Include="Enums\PbSpotColor.cs" />
+    <Compile Include="Enums\PbOriginalFormat.cs" />
+    <Compile Include="Enums\PbColorScheme.cs" />
+    <Compile Include="Enums\PbFontType.cs" />
+    <Compile Include="Enums\PbFontSource.cs" />
+    <Compile Include="Enums\PbFontLicenseLimitations.cs" />
+    <Compile Include="Enums\PbShowDialog.cs" />
+    <Compile Include="Enums\PbMailMergeDataSource.cs" />
+    <Compile Include="Enums\PbFilterComparison.cs" />
+    <Compile Include="Enums\PbFilterConjunction.cs" />
+    <Compile Include="Enums\PbMappedDataFields.cs" />
+    <Compile Include="Enums\PbWizardPageType10.cs" />
+    <Compile Include="Enums\PbWizard10.cs" />
+    <Compile Include="DispatchInterfaces\Documents.cs" />
+    <Compile Include="DispatchInterfaces\_Document.cs" />
+    <Compile Include="DispatchInterfaces\Window.cs" />
+    <Compile Include="DispatchInterfaces\_Application.cs" />
+    <Compile Include="DispatchInterfaces\ColorSchemes.cs" />
+    <Compile Include="DispatchInterfaces\ColorScheme.cs" />
+    <Compile Include="DispatchInterfaces\ColorFormat.cs" />
+    <Compile Include="DispatchInterfaces\ColorCMYK.cs" />
+    <Compile Include="DispatchInterfaces\Options.cs" />
+    <Compile Include="DispatchInterfaces\Selection.cs" />
+    <Compile Include="DispatchInterfaces\ShapeRange.cs" />
+    <Compile Include="DispatchInterfaces\Shape.cs" />
+    <Compile Include="DispatchInterfaces\Adjustments.cs" />
+    <Compile Include="DispatchInterfaces\CalloutFormat.cs" />
+    <Compile Include="DispatchInterfaces\ConnectorFormat.cs" />
+    <Compile Include="DispatchInterfaces\FillFormat.cs" />
+    <Compile Include="DispatchInterfaces\GroupShapes.cs" />
+    <Compile Include="DispatchInterfaces\LineFormat.cs" />
+    <Compile Include="DispatchInterfaces\ShapeNodes.cs" />
+    <Compile Include="DispatchInterfaces\ShapeNode.cs" />
+    <Compile Include="DispatchInterfaces\PictureFormat.cs" />
+    <Compile Include="DispatchInterfaces\ShadowFormat.cs" />
+    <Compile Include="DispatchInterfaces\TextEffectFormat.cs" />
+    <Compile Include="DispatchInterfaces\TextFrame.cs" />
+    <Compile Include="DispatchInterfaces\TextRange.cs" />
+    <Compile Include="DispatchInterfaces\Font.cs" />
+    <Compile Include="DispatchInterfaces\ParagraphFormat.cs" />
+    <Compile Include="DispatchInterfaces\TabStops.cs" />
+    <Compile Include="DispatchInterfaces\TabStop.cs" />
+    <Compile Include="DispatchInterfaces\Fields.cs" />
+    <Compile Include="DispatchInterfaces\Field.cs" />
+    <Compile Include="DispatchInterfaces\PhoneticGuide.cs" />
+    <Compile Include="DispatchInterfaces\Story.cs" />
+    <Compile Include="DispatchInterfaces\Table.cs" />
+    <Compile Include="DispatchInterfaces\Columns.cs" />
+    <Compile Include="DispatchInterfaces\Column.cs" />
+    <Compile Include="DispatchInterfaces\CellRange.cs" />
+    <Compile Include="DispatchInterfaces\Cell.cs" />
+    <Compile Include="DispatchInterfaces\CellBorder.cs" />
+    <Compile Include="DispatchInterfaces\Rows.cs" />
+    <Compile Include="DispatchInterfaces\Row.cs" />
+    <Compile Include="DispatchInterfaces\DropCap.cs" />
+    <Compile Include="DispatchInterfaces\Hyperlinks.cs" />
+    <Compile Include="DispatchInterfaces\Hyperlink.cs" />
+    <Compile Include="DispatchInterfaces\FindReplace.cs" />
+    <Compile Include="DispatchInterfaces\InlineShapes.cs" />
+    <Compile Include="DispatchInterfaces\ThreeDFormat.cs" />
+    <Compile Include="DispatchInterfaces\LinkFormat.cs" />
+    <Compile Include="DispatchInterfaces\OLEFormat.cs" />
+    <Compile Include="DispatchInterfaces\ObjectVerbs.cs" />
+    <Compile Include="DispatchInterfaces\Tags.cs" />
+    <Compile Include="DispatchInterfaces\Tag.cs" />
+    <Compile Include="DispatchInterfaces\WebCommandButton.cs" />
+    <Compile Include="DispatchInterfaces\WebHiddenFields.cs" />
+    <Compile Include="DispatchInterfaces\WebListBox.cs" />
+    <Compile Include="DispatchInterfaces\WebListBoxItems.cs" />
+    <Compile Include="DispatchInterfaces\WebTextBox.cs" />
+    <Compile Include="DispatchInterfaces\WebOptionButton.cs" />
+    <Compile Include="DispatchInterfaces\WebCheckBox.cs" />
+    <Compile Include="DispatchInterfaces\Wizard.cs" />
+    <Compile Include="DispatchInterfaces\WizardProperties.cs" />
+    <Compile Include="DispatchInterfaces\WizardProperty.cs" />
+    <Compile Include="DispatchInterfaces\WizardValues.cs" />
+    <Compile Include="DispatchInterfaces\WizardValue.cs" />
+    <Compile Include="DispatchInterfaces\WrapFormat.cs" />
+    <Compile Include="DispatchInterfaces\BorderArtFormat.cs" />
+    <Compile Include="DispatchInterfaces\CatalogMergeShapes.cs" />
+    <Compile Include="DispatchInterfaces\CaptionStyle.cs" />
+    <Compile Include="DispatchInterfaces\BuildingBlock.cs" />
+    <Compile Include="DispatchInterfaces\WebOptions.cs" />
+    <Compile Include="DispatchInterfaces\InstalledPrinters.cs" />
+    <Compile Include="DispatchInterfaces\Printer.cs" />
+    <Compile Include="DispatchInterfaces\PrintableRect.cs" />
+    <Compile Include="DispatchInterfaces\CaptionStyles.cs" />
+    <Compile Include="DispatchInterfaces\IApplicationEvents.cs" />
+    <Compile Include="DispatchInterfaces\View.cs" />
+    <Compile Include="DispatchInterfaces\Page.cs" />
+    <Compile Include="DispatchInterfaces\Shapes.cs" />
+    <Compile Include="DispatchInterfaces\FreeformBuilder.cs" />
+    <Compile Include="DispatchInterfaces\RulerGuides.cs" />
+    <Compile Include="DispatchInterfaces\RulerGuide.cs" />
+    <Compile Include="DispatchInterfaces\ReaderSpread.cs" />
+    <Compile Include="DispatchInterfaces\HeaderFooter.cs" />
+    <Compile Include="DispatchInterfaces\PageBackground.cs" />
+    <Compile Include="DispatchInterfaces\WebPageOptions.cs" />
+    <Compile Include="DispatchInterfaces\LayoutGuides.cs" />
+    <Compile Include="DispatchInterfaces\MailMerge.cs" />
+    <Compile Include="DispatchInterfaces\MailMergeDataSource.cs" />
+    <Compile Include="DispatchInterfaces\MailMergeDataFields.cs" />
+    <Compile Include="DispatchInterfaces\MailMergeDataField.cs" />
+    <Compile Include="DispatchInterfaces\MailMergeFilters.cs" />
+    <Compile Include="DispatchInterfaces\MailMergeMappedDataFields.cs" />
+    <Compile Include="DispatchInterfaces\MailMergeMappedDataField.cs" />
+    <Compile Include="DispatchInterfaces\MailMergeDataSources.cs" />
+    <Compile Include="DispatchInterfaces\EmailMergeEnvelope.cs" />
+    <Compile Include="DispatchInterfaces\Attachments.cs" />
+    <Compile Include="DispatchInterfaces\Attachment.cs" />
+    <Compile Include="DispatchInterfaces\MasterPages.cs" />
+    <Compile Include="DispatchInterfaces\Pages.cs" />
+    <Compile Include="DispatchInterfaces\PageSetup.cs" />
+    <Compile Include="DispatchInterfaces\Label.cs" />
+    <Compile Include="DispatchInterfaces\Labels.cs" />
+    <Compile Include="DispatchInterfaces\PageSizes.cs" />
+    <Compile Include="DispatchInterfaces\PageSize.cs" />
+    <Compile Include="DispatchInterfaces\Plates.cs" />
+    <Compile Include="DispatchInterfaces\Plate.cs" />
+    <Compile Include="DispatchInterfaces\ScratchArea.cs" />
+    <Compile Include="DispatchInterfaces\Stories.cs" />
+    <Compile Include="DispatchInterfaces\TextStyles.cs" />
+    <Compile Include="DispatchInterfaces\TextStyle.cs" />
+    <Compile Include="DispatchInterfaces\AdvancedPrintOptions.cs" />
+    <Compile Include="DispatchInterfaces\PrintablePlates.cs" />
+    <Compile Include="DispatchInterfaces\PrintablePlate.cs" />
+    <Compile Include="DispatchInterfaces\BorderArts.cs" />
+    <Compile Include="DispatchInterfaces\BorderArt.cs" />
+    <Compile Include="DispatchInterfaces\Sections.cs" />
+    <Compile Include="DispatchInterfaces\Section.cs" />
+    <Compile Include="DispatchInterfaces\WebNavigationBarSets.cs" />
+    <Compile Include="DispatchInterfaces\WebNavigationBarSet.cs" />
+    <Compile Include="DispatchInterfaces\WebNavigationBarHyperlinks.cs" />
+    <Compile Include="DispatchInterfaces\ColorsInUse.cs" />
+    <Compile Include="DispatchInterfaces\BuildingBlocks.cs" />
+    <Compile Include="DispatchInterfaces\IDocumentEvents.cs" />
+    <Compile Include="DispatchInterfaces\MailMergeFilterCriterion.cs" />
+    <Compile Include="DispatchInterfaces\ModalBrowser.cs" />
+    <Compile Include="DispatchInterfaces\ICagNotifySink.cs" />
+    <Compile Include="DispatchInterfaces\GlowFormat.cs" />
+    <Compile Include="DispatchInterfaces\ReflectionFormat.cs" />
+    <Compile Include="DispatchInterfaces\SoftEdgeFormat.cs" />
+    <Compile Include="Classes\Document.cs" />
+    <Compile Include="Classes\Application.cs" />
+    <Compile Include="EventInterfaces\ApplicationEvents.cs" />
+    <Compile Include="EventInterfaces\DocumentEvents.cs" />
+    <Compile Include="Modules\Global.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="stdole">
+      <Guid>{00020430-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Office\OfficeApi.csproj">
+      <Project>{9376FE6C-77BE-407D-8FB3-6B102AE6A131}</Project>
+      <Name>OfficeApi</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NetOffice\NetOffice.csproj">
+      <Project>{65442327-D01F-4ECB-8C39-6D5C7622A80F}</Project>
+      <Name>NetOffice</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="PublisherApi_v4.0.snk" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -12,7 +12,7 @@ namespace NetOffice.Tools.WndUtils
     internal static class Win32
     {
         #region Imports
-
+        
         [DllImport("oleacc.dll")]
         private static extern int AccessibleObjectFromWindow(IntPtr hwnd, uint id, ref Guid iid, [In, Out, MarshalAs(UnmanagedType.IUnknown)] ref object ppvObject);
 

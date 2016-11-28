@@ -16,9 +16,10 @@ namespace NetOffice.OfficeApi.Tools.Dialogs
     {
         #region Fields
 
-        #endregion
-
         private const string _assemblyInfoTemplate = "%AssemblyInfo";
+        private IEnumerable<string> _console;
+
+        #endregion
 
         #region Ctor
 
@@ -34,11 +35,18 @@ namespace NetOffice.OfficeApi.Tools.Dialogs
         ///  Creates an instance of the class
         /// </summary>
         /// <param name="diagnostics">diagnostics to display</param>
-        public DiagnosticsDialog(IEnumerable<DiagnosticPair> diagnostics)
+        /// <param name="console">console content</param>
+        public DiagnosticsDialog(IEnumerable<DiagnosticPair> diagnostics, IEnumerable<string> console)
         {
             InitializeComponent();
             dataGridViewDiagnostics.AutoGenerateColumns = false;
             dataGridViewDiagnostics.DataSource = diagnostics;
+            if (null != console)
+            {
+                _console = console;
+                foreach (string item in console)
+                    dataGridViewConsole.Rows.Add(item);
+            }
         }
 
         #endregion
@@ -57,6 +65,14 @@ namespace NetOffice.OfficeApi.Tools.Dialogs
             else
             {
                 sb.AppendLine("NetOffice Diagnostics:<Empty>");
+            }
+
+
+            if (null != _console)
+            {
+                sb.AppendLine("<Console Messages>");
+                foreach (string item in _console)
+                    sb.AppendLine(item);
             }
 
             return sb.ToString();

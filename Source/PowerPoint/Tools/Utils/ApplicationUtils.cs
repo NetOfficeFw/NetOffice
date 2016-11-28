@@ -84,7 +84,7 @@ namespace NetOffice.PowerPointApi.Tools.Utils
             get
             {
                 if (0 == _hwnd)
-                    _hwnd = TryGetHostApplicationWindowHandle();
+                    _hwnd =  TryGetHostApplicationWindowHandleFromDesktop();
                 return _hwnd;
             }
         }
@@ -93,44 +93,26 @@ namespace NetOffice.PowerPointApi.Tools.Utils
 
         #region Methods
 
-        private bool EnumChildProc(IntPtr hwnd, ref int lParam)
+        /// <summary>
+        /// Try to find the main window handle from application proxy through windows desktop by enumerate window handles.
+        /// The operations fails if more than 1 powerpoint window is open and there is no trust for programaticaly access for VBE.
+        /// </summary>
+        /// <param name="applicationProxy">application proxy</param>
+        /// <returns>main window handle</returns>
+        public static int TryGetHostApplicationWindowHandleFromDesktop(object applicationProxy)
         {
-            StringBuilder windowClass = new StringBuilder(128);
-            GetClassName(hwnd, windowClass, 128);
-            if (windowClass.ToString() == "paneClassDC")
-                lParam = (int)hwnd;
-            return true;
-        }
-     
-        private int TryGetHostApplicationWindowHandle()
-        {
-            int result = TryGetHostApplicationWindowHandleFromVTable();
-            if(0 == result)
-                result = TryGetHostApplicationWindowHandleFromDesktop();
-            return result;
-        }
+            if (null == applicationProxy)
+                throw new ArgumentNullException("applicationProxy");
 
-        private int TryGetHostApplicationWindowHandleFromVTable()        
-        {
-            try
-            {
-                VTableApplication test = _owner.OwnerApplication.UnderlyingObject as VTableApplication;
-                return null != test ? test.HWND : 0;
-            }
-            catch (Exception exception)
-            {
-                NetOffice.Core.Default.Console.WriteException(exception);
-                return 0;
-            }
-        }
-
-        private int TryGetHostApplicationWindowHandleFromDesktop()
-        {
             try
             {
                 int result = 0;
                 NetOffice.Tools.WndUtils.WindowEnumerator enumerator = new NetOffice.Tools.WndUtils.WindowEnumerator("PP", "FrameClass");
                 IntPtr[] handles = enumerator.EnumerateWindows(2000);
+
+                // if we have only one - we dont need to find out more
+                if(null != handles && handles.Length == 1)
+                    return (int)handles[0];
 
                 foreach (IntPtr item in handles)
                 {
@@ -139,7 +121,7 @@ namespace NetOffice.PowerPointApi.Tools.Utils
                     {
                         try
                         {
-                            bool equals = Equal(_owner.OwnerApplication.UnderlyingObject, proxyApplication);
+                            bool equals = Equal(applicationProxy, proxyApplication);
                             if (equals)
                                 result = (int)item;
                             break;
@@ -152,7 +134,7 @@ namespace NetOffice.PowerPointApi.Tools.Utils
                         {
                             Marshal.ReleaseComObject(proxyApplication);
                         }
-                    }                    
+                    }
                 }
 
                 return result;
@@ -164,7 +146,21 @@ namespace NetOffice.PowerPointApi.Tools.Utils
             }
         }
 
-        private object GetAccessibleObject(IntPtr hwnd)
+        private static bool EnumChildProc(IntPtr hwnd, ref int lParam)
+        {
+            StringBuilder windowClass = new StringBuilder(128);
+            GetClassName(hwnd, windowClass, 128);
+            if (windowClass.ToString() == "paneClassDC")
+                lParam = (int)hwnd;
+            return true;
+        }
+
+        private int TryGetHostApplicationWindowHandleFromDesktop()
+        {
+            return TryGetHostApplicationWindowHandleFromDesktop(_owner.OwnerApplication.UnderlyingObject);
+        }
+
+        private static object GetAccessibleObject(IntPtr hwnd)
         {
             if (hwnd != IntPtr.Zero)
             {
@@ -206,7 +202,7 @@ namespace NetOffice.PowerPointApi.Tools.Utils
             }
         }
 
-        private bool Equal(object applicationProxyA, object applicationProxyB)
+        private static bool Equal(object applicationProxyA, object applicationProxyB)
         {
             try
             {

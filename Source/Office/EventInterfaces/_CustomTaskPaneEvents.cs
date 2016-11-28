@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using System.Runtime.InteropServices.ComTypes;
@@ -84,7 +84,7 @@ namespace NetOffice.OfficeApi
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newCustomTaskPaneInst;
 			_eventBinding.RaiseCustomEvent("VisibleStateChange", ref paramsArray);
-		}
+        }
 
 		public void DockPositionStateChange([In, MarshalAs(UnmanagedType.IDispatch)] object customTaskPaneInst)
 		{
@@ -98,8 +98,8 @@ namespace NetOffice.OfficeApi
 			NetOffice.OfficeApi._CustomTaskPane newCustomTaskPaneInst = Factory.CreateObjectFromComProxy(_eventClass, customTaskPaneInst) as NetOffice.OfficeApi._CustomTaskPane;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newCustomTaskPaneInst;
-			_eventBinding.RaiseCustomEvent("DockPositionStateChange", ref paramsArray);
-		}
+            _eventBinding.RaiseCustomEvent("DockPositionStateChange", ref paramsArray);
+        }
 
 		#endregion
 	}

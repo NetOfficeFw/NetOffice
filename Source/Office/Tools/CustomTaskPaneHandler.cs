@@ -67,7 +67,7 @@ namespace NetOffice.OfficeApi.Tools
         /// <param name="taskPaneInstances">create taskpane instances</param>
         /// <param name="onError">Error callback if somthings fails</param>
         /// <param name="application">host application in base definition</param>
-        public void CreateCustomPanes<T,N>(Core factory, object ctpFactoryInst, OfficeApi.Tools.CustomTaskPaneCollection taskPanes,
+        public OfficeApi.ICTPFactory CreateCustomPanes<T,N>(Core factory, object ctpFactoryInst, OfficeApi.Tools.CustomTaskPaneCollection taskPanes,
             List<T> taskPaneInstances,  NetOffice.Tools.OnErrorHandler onError, COMObject application) where T: class where N:COMObject
         { 
             OfficeApi.ICTPFactory TaskPaneFactory = new NetOffice.OfficeApi.ICTPFactory(factory, null, ctpFactoryInst);
@@ -163,18 +163,12 @@ namespace NetOffice.OfficeApi.Tools
                         }
                     }
                 }
+
+                return TaskPaneFactory;
             }
             catch (Exception)
             {
                 throw;
-            }
-            finally
-            {
-                if (null != TaskPaneFactory)
-                { 
-                    TaskPaneFactory.Dispose();
-                    TaskPaneFactory = null;
-                }
             }
         }
 

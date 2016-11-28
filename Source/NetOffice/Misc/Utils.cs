@@ -61,13 +61,13 @@ namespace NetOffice
             else
                 return false;
         }
-
+        
         /// <summary>
-        /// Returns an enumerator with com proxies
+        /// Returns an enumerator with variant items - that means item(s) can be proxy or scalar
         /// </summary>
         /// <param name="comObject">COMObject instance as any</param>
         /// <returns>IEnumerator instance</returns>
-        public static IEnumerator GetProxyEnumeratorAsProperty(COMObject comObject)
+        public static IEnumerator GetVariantEnumeratorAsProperty(ICOMObject comObject)
         {
             if (null == comObject)
                 throw new ArgumentNullException("comObject");
@@ -76,13 +76,79 @@ namespace NetOffice
             {
                 comObject.Factory.CheckInitialize();
                 object enumProxy = comObject.Factory.Invoker.PropertyGet(comObject, "_NewEnum");
-                COMObject enumerator = new COMObject(comObject.Factory, comObject, enumProxy, true);
+                ICOMObject enumerator = new COMObject(comObject.Factory, comObject, enumProxy, true, "Variant Enumerator");
                 comObject.Factory.Invoker.MethodWithoutSafeMode(enumerator, "Reset", null);
                 bool isMoveNextTrue = (bool)comObject.Factory.Invoker.MethodReturnWithoutSafeMode(enumerator, "MoveNext", null);
                 while (true == isMoveNextTrue)
                 {
                     object itemProxy = comObject.Factory.Invoker.PropertyGetWithoutSafeMode(enumerator, "Current", null);
-                    COMObject returnClass = comObject.Factory.CreateObjectFromComProxy(enumerator, itemProxy);
+                    if (itemProxy is MarshalByRefObject)
+                    { 
+                        ICOMObject returnClass = comObject.Factory.CreateObjectFromComProxy(enumerator, itemProxy);
+                        yield return returnClass;
+                    }
+                    else
+                        yield return itemProxy;
+
+                    isMoveNextTrue = (bool)comObject.Factory.Invoker.MethodReturnWithoutSafeMode(enumerator, "MoveNext", null);
+                }
+            }
+        }
+
+        /// <summary>
+        /// Returns an enumerator with com proxies
+        /// </summary>
+        /// <param name="comObject">COMObject instance as any</param>
+        /// <returns>IEnumerator instance</returns>
+        public static IEnumerator GetVariantEnumeratorAsMethod(ICOMObject comObject)
+        {
+            if (null == comObject)
+                throw new ArgumentNullException("comObject");
+
+            lock (_lockUtils)
+            {
+                comObject.Factory.CheckInitialize();
+                object enumProxy = comObject.Factory.Invoker.MethodReturn(comObject, "_NewEnum");
+                ICOMObject enumerator = new COMObject(comObject.Factory, comObject, enumProxy, true, "Variant Enumerator");
+                comObject.Factory.Invoker.MethodWithoutSafeMode(enumerator, "Reset", null);
+                bool isMoveNextTrue = (bool)comObject.Factory.Invoker.MethodReturnWithoutSafeMode(enumerator, "MoveNext", null);
+                while (true == isMoveNextTrue)
+                {
+                    object itemProxy = comObject.Factory.Invoker.PropertyGetWithoutSafeMode(enumerator, "Current", null);
+                    if (itemProxy is MarshalByRefObject)
+                    {
+                        ICOMObject returnClass = comObject.Factory.CreateObjectFromComProxy(enumerator, itemProxy);
+                        yield return returnClass;
+                    }
+                    else
+                        yield return itemProxy;
+
+                    isMoveNextTrue = (bool)comObject.Factory.Invoker.MethodReturnWithoutSafeMode(enumerator, "MoveNext", null);
+                }
+            }
+        }
+
+        /// <summary>
+        /// Returns an enumerator with com proxies
+        /// </summary>
+        /// <param name="comObject">COMObject instance as any</param>
+        /// <returns>IEnumerator instance</returns>
+        public static IEnumerator GetProxyEnumeratorAsProperty(ICOMObject comObject)
+        {
+            if (null == comObject)
+                throw new ArgumentNullException("comObject");
+
+            lock (_lockUtils)
+            {
+                comObject.Factory.CheckInitialize();
+                object enumProxy = comObject.Factory.Invoker.PropertyGet(comObject, "_NewEnum");
+                ICOMObject enumerator = new COMObject(comObject.Factory, comObject, enumProxy, true, "Proxy Enumerator");
+                comObject.Factory.Invoker.MethodWithoutSafeMode(enumerator, "Reset", null);
+                bool isMoveNextTrue = (bool)comObject.Factory.Invoker.MethodReturnWithoutSafeMode(enumerator, "MoveNext", null);
+                while (true == isMoveNextTrue)
+                {
+                    object itemProxy = comObject.Factory.Invoker.PropertyGetWithoutSafeMode(enumerator, "Current", null);
+                    ICOMObject returnClass = comObject.Factory.CreateObjectFromComProxy(enumerator, itemProxy);
                     yield return returnClass;
                     isMoveNextTrue = (bool)comObject.Factory.Invoker.MethodReturnWithoutSafeMode(enumerator, "MoveNext", null);
                 }
@@ -94,7 +160,7 @@ namespace NetOffice
         /// </summary>
         /// <param name="comObject">COMObject instance as any</param>
         /// <returns>IEnumerator instance</returns>
-        public static IEnumerator GetProxyEnumeratorAsMethod(COMObject comObject)
+        public static IEnumerator GetProxyEnumeratorAsMethod(ICOMObject comObject)
         {
             if (null == comObject)
                 throw new ArgumentNullException("comObject");
@@ -103,13 +169,13 @@ namespace NetOffice
             {
                 comObject.Factory.CheckInitialize();
                 object enumProxy = comObject.Factory.Invoker.MethodReturn(comObject, "_NewEnum");
-                COMObject enumerator = new COMObject(comObject.Factory, comObject, enumProxy, true);
+                ICOMObject enumerator = new COMObject(comObject.Factory, comObject, enumProxy, true, "Proxy Enumerator");
                 comObject.Factory.Invoker.MethodWithoutSafeMode(enumerator, "Reset", null);
                 bool isMoveNextTrue = (bool)comObject.Factory.Invoker.MethodReturnWithoutSafeMode(enumerator, "MoveNext", null);
                 while (true == isMoveNextTrue)
                 {
                     object itemProxy = comObject.Factory.Invoker.PropertyGetWithoutSafeMode(enumerator, "Current", null);
-                    COMObject returnClass = comObject.Factory.CreateObjectFromComProxy(enumerator, itemProxy);
+                    ICOMObject returnClass = comObject.Factory.CreateObjectFromComProxy(enumerator, itemProxy);
                     yield return returnClass;
                     isMoveNextTrue = (bool)comObject.Factory.Invoker.MethodReturnWithoutSafeMode(enumerator, "MoveNext", null);
                 }
@@ -121,7 +187,7 @@ namespace NetOffice
         /// </summary>
         /// <param name="comObject">COMObject instance as any</param>
         /// <returns>IEnumerator instance</returns>
-        public static IEnumerator GetScalarEnumeratorAsProperty(COMObject comObject)
+        public static IEnumerator GetScalarEnumeratorAsProperty(ICOMObject comObject)
         {
             if (null == comObject)
                 throw new ArgumentNullException("comObject");
@@ -130,7 +196,7 @@ namespace NetOffice
             {
                 comObject.Factory.CheckInitialize();
                 object enumProxy = comObject.Factory.Invoker.PropertyGet(comObject, "_NewEnum");
-                COMObject enumerator = new COMObject(comObject.Factory, comObject, enumProxy, true);
+                ICOMObject enumerator = new COMObject(comObject.Factory, comObject, enumProxy, true, "Scalar Enumerator");
                 comObject.Factory.Invoker.MethodWithoutSafeMode(enumerator, "Reset", null);
                 bool isMoveNextTrue = (bool)comObject.Factory.Invoker.MethodReturnWithoutSafeMode(enumerator, "MoveNext", null);
                 while (true == isMoveNextTrue)
@@ -147,7 +213,7 @@ namespace NetOffice
         /// </summary>
         /// <param name="comObject">COMObject instance as any</param>
         /// <returns>IEnumerator instance</returns>
-        public static IEnumerator GetScalarEnumeratorAsMethod(COMObject comObject)
+        public static IEnumerator GetScalarEnumeratorAsMethod(ICOMObject comObject)
         {
             if (null == comObject)
                 throw new ArgumentNullException("comObject");
@@ -156,7 +222,7 @@ namespace NetOffice
             {
                 comObject.Factory.CheckInitialize();
                 object enumProxy = comObject.Factory.Invoker.MethodReturn(comObject, "_NewEnum");
-                COMObject enumerator = new COMObject(comObject.Factory, comObject, enumProxy, true);
+                ICOMObject enumerator = new COMObject(comObject.Factory, comObject, enumProxy, true, "Scalar Enumerator");
                 comObject.Factory.Invoker.MethodWithoutSafeMode(enumerator, "Reset", null);
                 bool isMoveNextTrue = (bool)comObject.Factory.Invoker.MethodReturnWithoutSafeMode(enumerator, "MoveNext", null);
                 while (true == isMoveNextTrue)

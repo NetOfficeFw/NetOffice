@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using NetOffice;
 namespace NetOffice.ADODBApi.Enums
 {

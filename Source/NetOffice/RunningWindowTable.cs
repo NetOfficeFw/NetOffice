@@ -6,6 +6,7 @@ using COMTypes = System.Runtime.InteropServices.ComTypes;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using NetOffice.Misc;
 
 namespace NetOffice
 {

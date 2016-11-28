@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using Word = NetOffice.WordApi;
 
 namespace NetOffice.WordApi.Tools

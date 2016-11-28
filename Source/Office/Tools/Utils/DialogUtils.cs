@@ -15,6 +15,139 @@ namespace NetOffice.OfficeApi.Tools.Utils
         #region Embedded Definitions
 
         /// <summary>
+        /// Specifies constants defining which information to display.
+        /// </summary>
+        public enum MessageIcon
+        {
+            /// <summary>
+            /// The message box contain no symbols.
+            /// </summary>
+            None = 0,
+
+            /// <summary>
+            /// The message box contains a symbol consisting of a white X in a circle with a  red background.
+            /// </summary>
+            Hand = 16,
+
+            /// <summary>
+            /// The message box contains a symbol consisting of white X in a circle with a red background.
+            /// </summary>
+            Stop = 16,
+
+            /// <summary>
+            /// The message box contains a symbol consisting of white X in a circle with a red background.
+            /// </summary>
+            Error = 16,
+
+            /// <summary>
+            /// The message box contains a symbol consisting of a question mark in a circle.
+            /// </summary>
+            Question = 32,
+
+            /// <summary>
+            /// The message box contains a symbol consisting of an exclamation point in a triangle with a yellow background.
+            /// </summary>
+            Exclamation = 48,
+
+            /// <summary>
+            /// The message box contains a symbol consisting of an exclamation point in a triangle with a yellow background.
+            /// </summary>
+            Warning = 48,
+
+            /// <summary>
+            /// The message box contains a symbol consisting of a lowercase letter i in a circle.
+            /// </summary>
+            Asterisk = 64,
+
+            /// <summary>
+            /// The message box contains a symbol consisting of a lowercase letter i in a circle.
+            /// </summary>
+            Information = 64
+        }
+
+        /// <summary>
+        /// Specifies constants defining which buttons to display
+        /// </summary>
+        public enum Buttons
+        {
+            /// <summary>
+            /// The message box contains an OK button.
+            /// </summary>
+            OK = 0,
+
+            /// <summary>
+            /// The message box contains OK and Cancel buttons.
+            /// </summary>
+            OKCancel = 1,
+
+            /// <summary>
+            /// The message box contains Abort, Retry, and Ignore buttons.
+            /// </summary>
+            AbortRetryIgnore = 2,
+
+            /// <summary>
+            /// The message box contains Yes, No, and Cancel buttons.
+            /// </summary>
+            YesNoCancel = 3,
+
+            /// <summary>
+            /// The message box contains Yes and No buttons.
+            /// </summary>
+            YesNo = 4,
+
+            /// <summary>
+            /// The message box contains Retry and Cancel buttons.
+            /// </summary>
+            RetryCancel = 5
+        }
+
+        /// <summary>
+        /// Specifies identifiers to indicate the return value of a dialog box.
+        /// </summary>
+        public enum Result
+        {
+            /// <summary>
+            /// Nothing is returned from the dialog box. This means that the modal dialog continues running.
+            /// </summary>
+            None = 0,
+
+            /// <summary>
+            /// The dialog box return value is OK (usually sent from a button labeled OK).
+            /// </summary>
+            OK = 1,
+
+            /// <summary>
+            /// The dialog box return value is Cancel (usually sent from a button labeled Cancel).
+            /// </summary>
+            Cancel = 2,
+
+            /// <summary>
+            /// The dialog box return value is Abort (usually sent from a button labeled Abort).
+            /// </summary>
+            Abort = 3,
+
+            /// <summary>
+            /// The dialog box return value is Retry (usually sent from a button labeled Retry).
+            /// </summary>
+            Retry = 4,
+
+            /// <summary>
+            /// The dialog box return value is Ignore (usually sent from a button labeled Ignore).
+            /// </summary>
+            Ignore = 5,
+
+            /// <summary>
+            /// The dialog box return value is Yes (usually sent from a button labeled Yes).
+            /// </summary>
+            Yes = 6,
+
+            /// <summary>
+            ///  The dialog box return value is No (usually sent from a button labeled No).
+            /// </summary>
+            No = 7
+        }
+
+        /// <summary>
         /// Indicates which kind of dialog is shown
         /// </summary>
         public enum DialogType
@@ -114,13 +247,13 @@ namespace NetOffice.OfficeApi.Tools.Utils
             /// <param name="modal">dialog has shown as modal to its parent</param>
             /// <param name="result">dialog result if set</param>
             /// <param name="arguments">arguments dependent on dialog type</param>
-            internal DialogShownEventArgs(DialogType type, bool suppressed, bool modal, DialogResult result, IEnumerable<KeyValuePair<string, object>> arguments)
+            internal DialogShownEventArgs(DialogType type, bool suppressed, bool modal, Result result, IEnumerable<KeyValuePair<string, object>> arguments)
             {
                 Type = type;
                 Suppressed = suppressed;
                 Modal = modal;
                 Result = result;
-                Arguments = null != arguments ? arguments : new List<KeyValuePair<string, object>>();                
+                Arguments = null != arguments ? arguments : new List<KeyValuePair<string, object>>();
             }
 
             #endregion
@@ -140,7 +273,7 @@ namespace NetOffice.OfficeApi.Tools.Utils
             /// <summary>
             /// Dialog result if set
             /// </summary>
-            public DialogResult Result { get; private set; }
+            public Result Result { get; private set; }
 
             /// <summary>
             /// Shown dialog type
@@ -240,14 +373,14 @@ namespace NetOffice.OfficeApi.Tools.Utils
         /// <summary>
         /// Occurs before a dialog is shown
         /// </summary>
-        public DialogShowEventHandler DialogShow;
+        public event DialogShowEventHandler DialogShow;
 
         /// <summary>
         /// Occurs after a dialog has been closed. 
         /// </summary>
-        public DialogShownEventHandler DialogShown;
+        public event DialogShownEventHandler DialogShown;
 
-        private void RaiseDialogShown(DialogType type, bool suppressed, bool modal, DialogResult result, IEnumerable<KeyValuePair<string, object>> arguments)
+        private void RaiseDialogShown(DialogType type, bool suppressed, bool modal, Result result, IEnumerable<KeyValuePair<string, object>> arguments)
         {
             DialogShownEventArgs args = new DialogShownEventArgs(type, suppressed, modal, result, arguments);
             RaiseDialogShown(args);
@@ -327,32 +460,46 @@ namespace NetOffice.OfficeApi.Tools.Utils
         /// <summary>
         /// Show the NetOffice default diagnostics dialog
         /// </summary>
-        /// <param name="owner">owner window. can be null(Nothing in Visual Basic)</param>
+        /// <param name="modalOwner">owner window. can be null(Nothing in Visual Basic)</param>
         /// <param name="modal">show dialog modal to its owner window</param>
         /// <param name="size">size for the dialog. Size.Empty to use default size</param>
-        public virtual void ShowDiagnostics(IWin32Window owner, bool modal, Size size)
-        {
+        public virtual void ShowDiagnostics(object modalOwner, bool modal, Size size)
+        {            
+            IWin32Window owner = NetOffice.Tools.WndUtils.Win32Window.Create(modalOwner);
+
             bool isCurrentlySuspended = IsCurrentlySuspended();
 
             RaiseDialogShow(DialogType.Diagnostics, isCurrentlySuspended, modal, null);
             if (isCurrentlySuspended)
             {
-                RaiseDialogShown(DialogType.Diagnostics, true, modal, DialogResult.No, null); 
+                RaiseDialogShown(DialogType.Diagnostics, true, modal, Result.No, null);
                 return;
             }
-            
-            Dialogs.DiagnosticsDialog dlg = new DiagnosticsDialog(new Informations.DiagnosticPairCollection(_owner));
+
+            IEnumerable<string> consoleMessages = null;
+            if (null != _owner && null != _owner.Owner && null != _owner.Owner.Factory)
+            {
+                if (!_owner.Owner.Factory.IsInitialized)
+                {
+#pragma warning disable 612, 618
+                    _owner.Owner.Factory.Initialize();
+#pragma warning restore 612, 618
+                }
+                consoleMessages = _owner.Owner.Factory.Console.Messages;
+            }
+
+            Dialogs.DiagnosticsDialog dlg = new DiagnosticsDialog(new Informations.DiagnosticPairCollection(_owner), consoleMessages);
             OnCreateToolsDialog(dlg, "DiagnosticsDialog");
-             
+
             if (null == owner)
-                dlg.StartPosition = FormStartPosition.CenterScreen;            
-            if(Size.Empty != size)
+                dlg.StartPosition = FormStartPosition.CenterScreen;
+            if (Size.Empty != size)
                 dlg.Size = size;
 
             if (modal)
             {
                 dlg.ShowDialog(owner);
-                RaiseDialogShown(DialogType.Diagnostics, false, true, DialogResult.No, null); 
+                RaiseDialogShown(DialogType.Diagnostics, false, true, Result.No, null);
             }
             else
             {
@@ -365,11 +512,11 @@ namespace NetOffice.OfficeApi.Tools.Utils
         /// <summary>
         /// Show the NetOffice default diagnostics dialog
         /// </summary>
-        /// <param name="owner">owner window. can be null(Nothing in Visual Basic)</param>
+        /// <param name="modalOwner">owner window. can be null(Nothing in Visual Basic)</param>
         /// <param name="modal">show dialog modal to its owner window</param>
-        public void ShowDiagnostics(IWin32Window owner, bool modal)
+        public void ShowDiagnostics(object modalOwner, bool modal)
         {
-            ShowDiagnostics(owner, modal, Size.Empty);        
+            ShowDiagnostics(modalOwner, modal, Size.Empty);
         }
 
         /// <summary>
@@ -382,18 +529,28 @@ namespace NetOffice.OfficeApi.Tools.Utils
         }
 
         /// <summary>
+        /// Show the NetOffice default diagnostics dialog
+        /// </summary>
+        public void ShowDiagnostics()
+        {
+            ShowDiagnostics(null, false, Size.Empty);
+        }
+
+        /// <summary>
         /// Show the NetOffice default error dialog
         /// </summary>
-        /// <param name="owner">owner window. can be null(Nothing in Visual Basic)</param>
+        /// <param name="modalOwner">owner window. can be null(Nothing in Visual Basic)</param>
         /// <param name="error">occured error to display</param>
         /// <param name="friendlyErrorDescription">User-friendly error message to explain what happen</param>
         /// <param name="allowDetails">allow user to see exception details</param>
         /// <param name="modal">show dialog modal to its owner window</param>
         /// <param name="size">size for the dialog. Size.Empty to use default size</param>
-        public virtual void ShowError(IWin32Window owner, Exception error, string friendlyErrorDescription, bool allowDetails, bool modal, Size size)
+        public virtual void ShowError(object modalOwner, Exception error, string friendlyErrorDescription, bool allowDetails, bool modal, Size size)
         {
+            IWin32Window owner = NetOffice.Tools.WndUtils.Win32Window.Create(modalOwner);
+
             bool isCurrentlySuspended = IsCurrentlySuspended();
-            
+
             List<KeyValuePair<string, object>> arguments = new List<KeyValuePair<string, object>>();
             arguments.Add(new KeyValuePair<string, object>("Error", error));
             arguments.Add(new KeyValuePair<string, object>("Description", friendlyErrorDescription));
@@ -401,7 +558,7 @@ namespace NetOffice.OfficeApi.Tools.Utils
             RaiseDialogShow(DialogType.Error, isCurrentlySuspended, modal, arguments);
             if (isCurrentlySuspended)
             {
-                RaiseDialogShown(DialogType.Error, true, modal, DialogResult.No, arguments);
+                RaiseDialogShown(DialogType.Error, true, modal, Result.No, arguments);
                 return;
             }
 
@@ -416,7 +573,7 @@ namespace NetOffice.OfficeApi.Tools.Utils
             if (modal)
             {
                 dlg.ShowDialog(owner);
-                RaiseDialogShown(DialogType.Error, false, true, DialogResult.No, arguments);
+                RaiseDialogShown(DialogType.Error, false, true, Result.No, arguments);
             }
             else
             {
@@ -429,12 +586,12 @@ namespace NetOffice.OfficeApi.Tools.Utils
         /// <summary>
         /// Show the NetOffice default error dialog
         /// </summary>
-        /// <param name="owner">owner window. can be null(Nothing in Visual Basic)</param>
+        /// <param name="modalOwner">owner window. can be null(Nothing in Visual Basic)</param>
         /// <param name="error">occured error to display</param>
         /// <param name="friendlyErrorDescription">User-friendly error message to explain what happen</param>
-        public void ShowError(IWin32Window owner, Exception error, string friendlyErrorDescription)
+        public void ShowError(object modalOwner, Exception error, string friendlyErrorDescription)
         {
-            ShowError(owner, error, friendlyErrorDescription, true, true, Size.Empty);
+            ShowError(modalOwner, error, friendlyErrorDescription, true, true, Size.Empty);
         }
 
         /// <summary>
@@ -448,9 +605,106 @@ namespace NetOffice.OfficeApi.Tools.Utils
         }
 
         /// <summary>
+        /// Show the NetOffice default error dialog
+        /// </summary>
+        /// <param name="kind">The method where the error comes from</param>
+        /// <param name="error">occured error to display</param>
+        public void ShowErrorDefault(NetOffice.Tools.ErrorMethodKind kind, Exception error)
+        {
+            ShowError(null, error, kind.ToString(), true, true, Size.Empty);
+        }
+
+        /// <summary>
+        /// Show an (un)register error
+        /// </summary>
+        /// <param name="caption">caption</param>
+        /// <param name="methodKind">The method where the error comes from</param>
+        /// <param name="exception">occured error to display</param>
+        public static void ShowRegisterError(string caption, NetOffice.Tools.RegisterErrorMethodKind methodKind, Exception exception)
+        {
+            if (null == caption || "" == caption)
+                caption = methodKind.ToString() + "  Error";
+            
+            string text = methodKind.ToString() + "  Error" + Environment.NewLine + Environment.NewLine;
+            if (null != exception)
+                text += exception.ToString();
+
+            MessageBox.Show(text, caption, MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+
+        /// <summary>
+        /// Show message box with register values
+        /// </summary>
+        /// <param name="caption">message box caption</param>
+        /// <param name="type">type to register</param>
+        /// <param name="registerCall">call kind</param>
+        /// <param name="scope">current scope</param>
+        /// <param name="keyState">current key state</param>
+        public static void ShowRegister(string caption, Type type, NetOffice.Tools.RegisterCall registerCall, NetOffice.Tools.InstallScope scope, NetOffice.Tools.OfficeRegisterKeyState keyState)
+        {
+            ShowRegister(caption, type, registerCall, scope, keyState, 0);
+        }
+
+        /// <summary>
+        /// Show message box with register values
+        /// </summary>
+        /// <param name="caption">message box caption</param>
+        /// <param name="type">type to register</param>
+        /// <param name="registerCall">call kind</param>
+        /// <param name="scope">current scope</param>
+        /// <param name="keyState">current key state</param>
+        /// <param name="timeoutSeconds">timeout in seconds</param>
+        public static void ShowRegister(string caption, Type type, NetOffice.Tools.RegisterCall registerCall, NetOffice.Tools.InstallScope scope, NetOffice.Tools.OfficeRegisterKeyState keyState, int timeoutSeconds)
+        {
+            string text = String.Format("Type: {0}{4}RegisterCall: {1}{4}Scope:{2}{4}KeyState: {3}{4}",
+                null != type ? type.ToString() : "<Empty>", registerCall, scope, keyState, Environment.NewLine);
+            RichTextDialog dlg = new RichTextDialog("Register " + caption, text, timeoutSeconds, true);
+            dlg.Text = "Register";
+            dlg.TopMost = true;
+            dlg.ShowInTaskbar = true;
+            dlg.StartPosition = FormStartPosition.CenterScreen;
+            dlg.ShowDialog();
+        }
+
+        /// <summary>
+        /// Show message box with unregister values
+        /// </summary>
+        /// <param name="caption">message box caption</param>
+        /// <param name="type">type to register</param>
+        /// <param name="registerCall">call kind</param>
+        /// <param name="scope">current scope</param>
+        /// <param name="keyState">current key state</param>
+        public static void ShowUnregister(string caption, Type type, NetOffice.Tools.RegisterCall registerCall, NetOffice.Tools.InstallScope scope, NetOffice.Tools.OfficeUnRegisterKeyState keyState)
+        {
+            ShowUnregister(caption, type, registerCall, scope, keyState, 0);
+        }
+
+        /// <summary>
+        /// Show message box with unregister values
+        /// </summary>
+        /// <param name="caption">message box caption</param>
+        /// <param name="type">type to register</param>
+        /// <param name="registerCall">call kind</param>
+        /// <param name="scope">current scope</param>
+        /// <param name="keyState">current key state</param>
+        /// <param name="timeoutSeconds">timeout in seconds</param>
+        public static void ShowUnregister(string caption, Type type, NetOffice.Tools.RegisterCall registerCall, NetOffice.Tools.InstallScope scope, NetOffice.Tools.OfficeUnRegisterKeyState keyState, int timeoutSeconds)
+        {
+            string text = String.Format("Type: {0}{4}RegisterCall: {1}{4}Scope: {2}{4}KeyState: {3}{4}",
+                null != type ? type.ToString() : "<Empty>", registerCall, scope, keyState, Environment.NewLine);
+
+            RichTextDialog dlg = new RichTextDialog("Unregister " + caption, text, timeoutSeconds, true);
+            dlg.Text = "Unregister";
+            dlg.TopMost = true;
+            dlg.ShowInTaskbar = true;
+            dlg.StartPosition = FormStartPosition.CenterScreen;
+            dlg.ShowDialog();
+        }
+
+        /// <summary>
         /// Show the NetOffice default about dialog
         /// </summary>
-        /// <param name="owner">owner window. can be null(Nothing in Visual Basic)</param>
+        /// <param name="modalOwner">owner window. can be null(Nothing in Visual Basic)</param>
         /// <param name="modal">show dialog modal to its owner window</param>
         /// <param name="size">size for the dialog. Size.Empty to use default size</param>
         /// <param name="headerCaption">header caption on top</param>
@@ -460,8 +714,10 @@ namespace NetOffice.OfficeApi.Tools.Utils
         /// <param name="companyName">name of the manufactor</param>
         /// <param name="companyUrl">optional url of the manufactor</param>
         /// <param name="licenceText">licence informations</param>
-        public void ShowAbout(IWin32Window owner, bool modal, Size size, string headerCaption, string assemblyTitle, string assemblyVersion, string copyrightHint, string companyName, string companyUrl, string licenceText)
+        public void ShowAbout(object modalOwner, bool modal, Size size, string headerCaption, string assemblyTitle, string assemblyVersion, string copyrightHint, string companyName, string companyUrl, string licenceText)
         {
+            IWin32Window owner = NetOffice.Tools.WndUtils.Win32Window.Create(modalOwner);
+
             bool isCurrentlySuspended = IsCurrentlySuspended();
 
             List<KeyValuePair<string, object>> arguments = new List<KeyValuePair<string, object>>();
@@ -476,7 +732,7 @@ namespace NetOffice.OfficeApi.Tools.Utils
             RaiseDialogShow(DialogType.About, isCurrentlySuspended, modal, arguments);
             if (isCurrentlySuspended)
             {
-                RaiseDialogShown(DialogType.About, true, modal, DialogResult.None, arguments);
+                RaiseDialogShown(DialogType.About, true, modal, Result.None, arguments);
                 return;
             }
 
@@ -491,7 +747,7 @@ namespace NetOffice.OfficeApi.Tools.Utils
             if (modal)
             {
                 dlg.ShowDialog(owner);
-                RaiseDialogShown(DialogType.About, false, true, DialogResult.None, arguments);
+                RaiseDialogShown(DialogType.About, false, true, Result.None, arguments);
             }
             else
             {
@@ -515,30 +771,34 @@ namespace NetOffice.OfficeApi.Tools.Utils
         /// <summary>
         /// Show the NetOffice default about dialog
         /// </summary>
-        /// <param name="owner">owner window. can be null(Nothing in Visual Basic)</param>
+        /// <param name="modalOwner">owner window. can be null(Nothing in Visual Basic)</param>
         /// <param name="modal">show dialog modal to its owner window</param>
         /// <param name="size">size for the dialog. Size.Empty to use default size</param>
         /// <param name="headerCaption">header caption on top</param>
         /// <param name="companyUrl">optional url of the manufactor</param>
         /// <param name="licenceText">licence informations</param>
-        public void ShowAbout(IWin32Window owner, bool modal, Size size, string headerCaption, string companyUrl, string licenceText)
+        public void ShowAbout(object modalOwner, bool modal, Size size, string headerCaption, string companyUrl, string licenceText)
         {
-            ShowAbout(owner, modal, size, headerCaption, _owner.Infos.Assembly.AssemblyTitle, _owner.Infos.Assembly.AssemblyVersion, _owner.Infos.Assembly.AssemblyCopyright, _owner.Infos.Assembly.AssemblyCompany, companyUrl, licenceText);
+            ShowAbout(modalOwner, modal, size, headerCaption, _owner.Infos.Assembly.AssemblyTitle, _owner.Infos.Assembly.AssemblyVersion, _owner.Infos.Assembly.AssemblyCopyright, _owner.Infos.Assembly.AssemblyCompany, companyUrl, licenceText);
         }
 
         /// <summary>
         /// Shows multi-line/rich text to the user
         /// </summary>
-        /// <param name="owner">owner window. can be null(Nothing in Visual Basic)</param>
+        /// <param name="modalOwner">owner window. can be null(Nothing in Visual Basic)</param>
         /// <param name="caption">header caption on top</param>
         /// <param name="text">text to display. rich text is supported</param>
         /// <param name="checkText">additional checkbox want be shown if set. If its true, the checkbox must be checked for result DialogResult.Ok</param>
         /// <param name="modal">show dialog modal to its owner window</param>
         /// <param name="size">size for the dialog. Size.Empty to use default size</param>
         /// <param name="defaultResult">result if its not shown</param>
+        /// <param name="timeoutSeconds">timeout in seconds</param>
+        /// <param name="skipOnUserAction">skip timeout on user action</param>
         /// <returns>DialogResult, always none if not modal</returns>
-        public virtual DialogResult ShowText(IWin32Window owner, string caption, string text, string checkText, bool modal, Size size, DialogResult defaultResult)
+        public virtual Result ShowText(object modalOwner, string caption, string text, string checkText, bool modal, Size size, int timeoutSeconds, bool skipOnUserAction, Result defaultResult)
         {
+            IWin32Window owner = NetOffice.Tools.WndUtils.Win32Window.Create(modalOwner);
+
             bool isCurrentlySuspended = IsCurrentlySuspended();
 
             List<KeyValuePair<string, object>> arguments = new List<KeyValuePair<string, object>>();
@@ -553,7 +813,7 @@ namespace NetOffice.OfficeApi.Tools.Utils
                 return defaultResult;
             }
 
-            Dialogs.RichTextDialog dlg = new RichTextDialog(caption, text, checkText);
+            Dialogs.RichTextDialog dlg = new RichTextDialog(caption, text, checkText, timeoutSeconds, skipOnUserAction);
             OnCreateToolsDialog(dlg, "RichTextDialog");
 
             if (null == owner)
@@ -564,16 +824,33 @@ namespace NetOffice.OfficeApi.Tools.Utils
             if (modal)
             {
                 DialogResult dlgResult = dlg.ShowDialog(owner);
-                RaiseDialogShown(DialogType.Text, false, true, dlgResult, arguments);
-                return dlgResult;
+                RaiseDialogShown(DialogType.Text, false, true, (Result)dlgResult, arguments);
+                return (Result)dlgResult;
             }
             else
             {
                 _openNonModalDialogs.Add(dlg, new NonModalDialogValue(DialogType.Text, arguments));
                 dlg.FormClosed += new FormClosedEventHandler(NonModalDialog_FormClosed);
                 dlg.Show(owner);
-                return DialogResult.None;
+                return Result.None;
             }
+        }
+
+        /// <summary>
+        /// Shows multi-line/rich text to the user
+        /// </summary>
+        /// <param name="modalOwner">owner window. can be null(Nothing in Visual Basic)</param>
+        /// <param name="caption">header caption on top</param>
+        /// <param name="text">text to display. rich text is supported</param>
+        /// <param name="checkText">additional checkbox want be shown if set. If its true, the checkbox must be checked for result DialogResult.Ok</param>
+        /// <param name="modal">show dialog modal to its owner window</param>
+        /// <param name="size">size for the dialog. Size.Empty to use default size</param>
+        /// <param name="defaultResult">result if its not shown</param>
+        /// <returns>Result, always none if not modal</returns>
+        public virtual Result ShowText(object modalOwner, string caption, string text, string checkText, bool modal, Size size, Result defaultResult)
+        {
+            return ShowText(modalOwner, caption, text, checkText, modal, size, 0, false, defaultResult);
+        
         }
 
         /// <summary>
@@ -585,8 +862,8 @@ namespace NetOffice.OfficeApi.Tools.Utils
         /// <param name="modal">show dialog modal to its owner window</param>
         /// <param name="size">size for the dialog. Size.Empty to use default size</param>
         /// <param name="defaultResult">result if its not shown</param>
-        /// <returns>DialogResult, always none if not modal</returns>
-        public virtual DialogResult ShowText(string caption, string text, string checkText, bool modal, Size size, DialogResult defaultResult)
+        /// <returns>Result, always none if not modal</returns>
+        public virtual Result ShowText(string caption, string text, string checkText, bool modal, Size size, Result defaultResult)
         {
             return ShowText(null, caption, text, checkText, modal, size, defaultResult);
         }
@@ -598,24 +875,52 @@ namespace NetOffice.OfficeApi.Tools.Utils
         /// <param name="text">text to display. rich text is supported</param>
         /// <param name="checkText">additional checkbox want be shown if set. If its true, the checkbox must be checked for result DialogResult.Ok</param>
         /// <param name="defaultResult">result if its not shown</param>
-        /// <returns>DialogResult, always none if not modal</returns>
-        public virtual DialogResult ShowText(string caption, string text, string checkText, DialogResult defaultResult)
+        /// <returns>Result, always none if not modal</returns>
+        public virtual Result ShowText(string caption, string text, string checkText, Result defaultResult)
         {
             return ShowText(null, caption, text, checkText, true, Size.Empty, defaultResult);
         }
 
         /// <summary>
+        /// Shows multi-line/rich text to the user
+        /// </summary>
+        /// <param name="caption">header caption on top</param>
+        /// <param name="text">text to display. rich text is supported</param>
+        /// <param name="timeoutSeconds">timeout in seconds</param>
+        /// <param name="skipOnUserAction">skip timeout on user action</param>
+        /// <param name="defaultResult">result if its not shown</param>
+        /// <returns>Result, always none if not modal</returns>
+        public virtual Result ShowText(string caption, string text, int timeoutSeconds, bool skipOnUserAction, Result defaultResult)
+        {
+            return ShowText(null, caption, text, null, true, Size.Empty, timeoutSeconds, skipOnUserAction, defaultResult);
+        }
+        
+        /// <summary>
         /// Show modal Windows.Forms message box to the user
         /// </summary>
-        /// <param name="owner">owner window. can be null(Nothing in Visual Basic)</param>
+        /// <param name="text">text to display</param>
+        /// <param name="arguments">given arguments as any to use like String.Format in text</param>
+        /// <returns>Result.OK</returns>
+        public Result ShowMessageBox(string text, params object[] arguments)
+        {
+            string validatedText = String.Format(text, arguments);
+            return ShowMessageBox(null, validatedText, null, MessageBoxButtons.OK, MessageBoxIcon.None, DialogResult.OK);
+        }
+
+        /// <summary>
+        /// Show modal Windows.Forms message box to the user
+        /// </summary>
+        /// <param name="modalOwner">owner window. can be null(Nothing in Visual Basic)</param>
         /// <param name="text">text to display</param>
         /// <param name="caption">dialog title</param>
         /// <param name="buttons">user selection buttons</param>
         /// <param name="icon">default icon</param>
         /// <param name="defaultResult">result if its not shown</param>
         /// <returns>user selection</returns>
-        public DialogResult ShowMessageBox(IWin32Window owner, string text, string caption, MessageBoxButtons buttons, MessageBoxIcon icon, DialogResult defaultResult)
+        public Result ShowMessageBox(object modalOwner, string text, string caption, Buttons buttons, MessageIcon icon, Result defaultResult)
         {
+            IWin32Window owner = NetOffice.Tools.WndUtils.Win32Window.Create(modalOwner);
+
             bool isCurrentlySuspended = IsCurrentlySuspended();
 
             List<KeyValuePair<string, object>> arguments = new List<KeyValuePair<string, object>>();
@@ -629,9 +934,9 @@ namespace NetOffice.OfficeApi.Tools.Utils
                 return defaultResult;
             }
 
-            DialogResult dlgResult = MessageBox.Show(owner, text, caption, buttons, icon);
-            RaiseDialogShown(DialogType.MessageBox, false, true, dlgResult, arguments);
-            return dlgResult;
+            DialogResult dlgResult = MessageBox.Show(owner, text, caption, (MessageBoxButtons)buttons, (MessageBoxIcon)icon);
+            RaiseDialogShown(DialogType.MessageBox, false, true, (Result)dlgResult, arguments);
+            return (Result)dlgResult;
         }
 
         /// <summary>
@@ -643,9 +948,24 @@ namespace NetOffice.OfficeApi.Tools.Utils
         /// <param name="defaultResult">result if its not shown</param>
         /// <param name="icon">icon to show</param>
         /// <returns>user selection</returns>
-        public DialogResult ShowMessageBox(string text, string caption, MessageBoxButtons buttons, MessageBoxIcon icon, DialogResult defaultResult)
-        {
-            return ShowMessageBox(null, text, caption, buttons, icon, defaultResult);
+        public Result ShowMessageBox(string text, string caption, Buttons buttons, MessageIcon icon, Result defaultResult)
+        {           
+            bool isCurrentlySuspended = IsCurrentlySuspended();
+
+            List<KeyValuePair<string, object>> arguments = new List<KeyValuePair<string, object>>();
+            arguments.Add(new KeyValuePair<string, object>("Caption", caption));
+            arguments.Add(new KeyValuePair<string, object>("Text", text));
+
+            RaiseDialogShow(DialogType.MessageBox, isCurrentlySuspended, true, arguments);
+            if (isCurrentlySuspended)
+            {
+                RaiseDialogShown(DialogType.MessageBox, true, true, defaultResult, arguments);
+                return defaultResult;
+            }
+
+            DialogResult dlgResult = MessageBox.Show(null, text, caption, (MessageBoxButtons)buttons, (MessageBoxIcon)icon);
+            RaiseDialogShown(DialogType.MessageBox, false, true, (Result)dlgResult, arguments);
+            return (Result)dlgResult;
         }
 
         /// <summary>
@@ -655,7 +975,7 @@ namespace NetOffice.OfficeApi.Tools.Utils
         /// <param name="icon">default icon</param>
         /// <param name="defaultResult">result if its not shown</param>
         /// <returns>user selection</returns>
-        public DialogResult ShowMessageBox(string text, MessageBoxIcon icon, DialogResult defaultResult)
+        public Result ShowMessageBox(string text, MessageIcon icon, Result defaultResult)
         {
             return ShowMessageBox(null, text, _owner.Infos.Assembly.AssemblyTitle, MessageBoxButtons.OK, icon, defaultResult);
         }
@@ -668,7 +988,7 @@ namespace NetOffice.OfficeApi.Tools.Utils
         /// <param name="icon">default icon</param>
         /// <param name="defaultResult">result if its not shown</param>
         /// <returns>user selection</returns>
-        public DialogResult ShowMessageBox(string text, string caption, MessageBoxIcon icon, DialogResult defaultResult)
+        public Result ShowMessageBox(string text, string caption, MessageIcon icon, Result defaultResult)
         {
             return ShowMessageBox(null, text, caption, MessageBoxButtons.OK, icon, defaultResult);   
         }
@@ -681,7 +1001,7 @@ namespace NetOffice.OfficeApi.Tools.Utils
         /// <param name="buttons">user selection buttons</param>
         /// <param name="defaultResult">result if its not shown</param>
         /// <returns>user selection</returns>
-        public DialogResult ShowMessageBox(string text, string caption, MessageBoxButtons buttons, DialogResult defaultResult)
+        public Result ShowMessageBox(string text, string caption, Buttons buttons, Result defaultResult)
         {
             return ShowMessageBox(null, text, caption, buttons, MessageBoxIcon.None, defaultResult);
         }
@@ -693,7 +1013,7 @@ namespace NetOffice.OfficeApi.Tools.Utils
         /// <param name="caption">dialog title</param>
         /// <param name="defaultResult">result if its not shown</param>
         /// <returns>user selection</returns>
-        public DialogResult ShowMessageBox(string text, string caption, DialogResult defaultResult)
+        public Result ShowMessageBox(string text, string caption, Result defaultResult)
         {
             return ShowMessageBox(null, text, caption, MessageBoxButtons.OK, MessageBoxIcon.None, defaultResult);
         }
@@ -704,7 +1024,7 @@ namespace NetOffice.OfficeApi.Tools.Utils
         /// <param name="text">text to display</param>
         /// <param name="defaultResult">result if its not shown</param>
         /// <returns>user selection</returns>
-        public DialogResult ShowMessageBox(string text, DialogResult defaultResult)
+        public Result ShowMessageBox(string text, Result defaultResult)
         {
             return ShowMessageBox(null, text, _owner.Infos.Assembly.AssemblyTitle, MessageBoxButtons.OK, MessageBoxIcon.None, defaultResult);
         }
@@ -712,14 +1032,18 @@ namespace NetOffice.OfficeApi.Tools.Utils
         /// <summary>
         /// Show dialog instance
         /// </summary>
-        /// <param name="owner">owner window. can be null(Nothing in Visual Basic)</param>
-        /// <param name="dialog">dialog instance to show</param>
+        /// <param name="modalOwner">owner window. can be null(Nothing in Visual Basic)</param>
+        /// <param name="dialogInstance">dialog instance to show</param>
         /// <param name="modal">show dialog modal to its owner window</param>
         /// <param name="arguments">custom arguments</param>
         /// <param name="defaultResult">result if its not shown</param>
         /// <returns>DialogResult, always none if not modal</returns>
-        public DialogResult ShowDialog(IWin32Window owner, Form dialog, bool modal, IEnumerable<KeyValuePair<string, object>> arguments, DialogResult defaultResult)
+        public Result ShowDialog(object modalOwner, object dialogInstance, bool modal, IEnumerable<KeyValuePair<string, object>> arguments, Result defaultResult)
         {
+            Form dialog = (Form)dialogInstance;
+
+            IWin32Window owner = NetOffice.Tools.WndUtils.Win32Window.Create(modalOwner);
+
             bool isCurrentlySuspended = IsCurrentlySuspended();
 
             if(null == arguments)
@@ -735,29 +1059,41 @@ namespace NetOffice.OfficeApi.Tools.Utils
             if (modal)
             {
                 DialogResult dlgResult = dialog.ShowDialog(owner);
-                RaiseDialogShown(DialogType.Custom, false, true, dlgResult, arguments);
-                return dlgResult;
+                RaiseDialogShown(DialogType.Custom, false, true, (Result)dlgResult, arguments);
+                return (Result)dlgResult;
             }
             else
             {
                 _openNonModalDialogs.Add(dialog, new NonModalDialogValue(DialogType.Custom, arguments));
                 dialog.FormClosed += new FormClosedEventHandler(NonModalDialog_FormClosed);
                 dialog.Show(owner);
-                return DialogResult.None;
+                return Result.None;
             }
         }
 
         /// <summary>
         /// Show dialog instance
         /// </summary>
-        /// <param name="owner">owner window. can be null(Nothing in Visual Basic)</param>
+        /// <param name="modalOwner">owner window. can be null(Nothing in Visual Basic)</param>
+        /// <param name="dialog">dialog instance to show</param>
+        /// <param name="modal">show dialog modal to its owner window</param>
+        /// <returns>DialogResult, always none if not modal</returns>
+        public Result ShowDialog(object modalOwner, object dialog, bool modal)
+        {
+            return ShowDialog(modalOwner, (Form)dialog, modal, null, Result.None);
+        }
+
+        /// <summary>
+        /// Show dialog instance
+        /// </summary>
+        /// <param name="modalOwner">owner window. can be null(Nothing in Visual Basic)</param>
         /// <param name="dialog">dialog instance to show</param>
         /// <param name="modal">show dialog modal to its owner window</param>
         /// <param name="defaultResult">result if its not shown</param>
         /// <returns>DialogResult, always none if not modal</returns>
-        public DialogResult ShowDialog(IWin32Window owner, Form dialog, bool modal, DialogResult defaultResult)
+        public Result ShowDialog(object modalOwner, object dialog, bool modal, Result defaultResult)
         {
-            return ShowDialog(null, dialog, modal, null, defaultResult);
+            return ShowDialog(modalOwner, (Form)dialog, modal, null, defaultResult);
         }
 
         /// <summary>
@@ -768,9 +1104,9 @@ namespace NetOffice.OfficeApi.Tools.Utils
         /// <param name="arguments">custom arguments</param>
         /// <param name="defaultResult">result if its not shown</param>
         /// <returns>DialogResult, always none if not modal</returns>
-        public DialogResult ShowDialog(Form dialog, bool modal, IEnumerable<KeyValuePair<string, object>> arguments, DialogResult defaultResult)
+        public Result ShowDialog(object dialog, bool modal, IEnumerable<KeyValuePair<string, object>> arguments, Result defaultResult)
         {
-            return ShowDialog(null, dialog, modal, arguments, defaultResult);
+            return ShowDialog(null, (Form)dialog, modal, arguments, defaultResult);
         }
 
         /// <summary>
@@ -780,9 +1116,9 @@ namespace NetOffice.OfficeApi.Tools.Utils
         /// <param name="modal">show dialog modal to its owner window</param>
         /// <param name="defaultResult">result if its not shown</param>
         /// <returns>DialogResult, always none if not modal</returns>
-        public DialogResult ShowDialog(Form dialog, bool modal, DialogResult defaultResult)
+        public Result ShowDialog(object dialog, bool modal, Result defaultResult)
         {
-            return ShowDialog(null, dialog, modal, null, defaultResult);
+            return ShowDialog(null, (Form)dialog, modal, null, defaultResult);
         }
 
         /// <summary>
@@ -851,7 +1187,7 @@ namespace NetOffice.OfficeApi.Tools.Utils
                 if (_openNonModalDialogs.ContainsKey(formSender))
                 {
                     NonModalDialogValue formValue = _openNonModalDialogs[formSender];
-                    RaiseDialogShown(formValue.Type, false, false, formSender.DialogResult, formValue.Arguments);
+                    RaiseDialogShown(formValue.Type, false, false, (Result)formSender.DialogResult, formValue.Arguments);
                 }
             }
             catch (Exception exception)

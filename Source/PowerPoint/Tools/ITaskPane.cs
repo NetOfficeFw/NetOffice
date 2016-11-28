@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using PowerPoint = NetOffice.PowerPointApi;
 
 namespace NetOffice.PowerPointApi.Tools

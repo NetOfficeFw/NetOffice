@@ -229,5 +229,18 @@ namespace NetOffice
         }
 
         #endregion
+
+        #region Overrides
+
+        /// <summary>
+        /// Returns a System.String that represents the instance
+        /// </summary>
+        /// <returns>System.String</returns>
+        public override string ToString()
+        {
+            return String.Format("Enabled:{0} Mode:{1}", Enabled, RetryMode);
+        }
+
+        #endregion
     }
 }

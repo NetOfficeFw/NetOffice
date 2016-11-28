@@ -93,8 +93,9 @@ namespace NetOffice
                 else
                     return null;
             }
-            catch
+            catch(Exception exception)
             {
+                Owner.Console.WriteLine("AssemblyLoad Exception<{1}> {0}", Path.GetFileName(fileName), exception.GetType().Name);
                 return null;
             }
         }
@@ -106,12 +107,46 @@ namespace NetOffice
         /// <returns>Assembly instance or null</returns>
         internal Assembly Load(AssemblyName name)
         {
+            string localPath = String.Empty;
             try
             {
-                return Assembly.Load(name);
+                bool versionMatch = false;
+                localPath = false == String.IsNullOrEmpty(name.CodeBase) ? UriConvert.ToLocalPath(name.CodeBase) : null;
+                versionMatch = null == localPath ? ValidateVersion(name) : ValidateVersion(localPath);
+                if (null == localPath)
+                {
+                    string thisLocalPath = UriConvert.ToLocalPath(Owner.ThisAssembly.CodeBase);
+                    string extension = Path.GetExtension(thisLocalPath);
+                    string path = Path.GetDirectoryName(thisLocalPath);
+                    localPath = Path.Combine(path, name.Name + extension);
+                }
+
+                if (!File.Exists(localPath))
+                {
+                    Owner.Console.WriteLine("AssemblyLoad {0} Unable To Find Assembly In Local Directory.", name.Name);
+                    return null;
+                }
+
+                if (versionMatch)
+                {
+                    if (Owner.Settings.LoadAssembliesUnsafe)
+                    {
+                        return Assembly.UnsafeLoadFrom(localPath);
+                    }
+                    else
+                    {
+                        return Assembly.LoadFrom(localPath);
+                    }
+                }
+                else
+                    return null;
             }
-            catch
+            catch(Exception exception)
             {
+                if (localPath != String.Empty && false == String.IsNullOrEmpty(name.CodeBase))
+                    Owner.Console.WriteLine("AssemblyLoad(From Path) Exception<{1}> {0}", Path.GetFileName(localPath), exception.GetType().Name);
+                else
+                    Owner.Console.WriteLine("AssemblyLoad(From Name) Exception<{1}> {0}", name, exception.GetType().Name);
                 return null;
             }
         }
@@ -135,8 +170,9 @@ namespace NetOffice
                 else
                     return null;
             }
-            catch
+            catch(Exception exception)
             {
+                Owner.Console.WriteLine("AssemblyLoad Exception<{1}> {0}", Path.GetFileName(fileName), exception.GetType().Name);
                 return null;
             }
         }
@@ -156,17 +192,17 @@ namespace NetOffice
                         return Assembly.UnsafeLoadFrom(fileName);
                     else
                     {
-                        //  todo: find a #pragma to make a possible exception silent
-                        // even the developer want a hard debugger break in all(or match) CLR exception(s)
+                        // todo: find a #pragma to make a possible exception silent
+                        // even the developer want a hard debugger break in all(or matched) CLR exception(s)
                         return Assembly.Load(fileName);
                     }
                 }
                 else
                     return null;
             }
-            catch
+            catch(Exception exception)
             {
-                Owner.Console.WriteLine("AssemblyLoad Exception {0}", Path.GetFileName(fileName));
+                Owner.Console.WriteLine("AssemblyLoad Exception<{1}> {0}", Path.GetFileName(fileName), exception.GetType().Name);
                 return null;
             }
         }
@@ -174,7 +210,7 @@ namespace NetOffice
         /// <summary>
         /// Try to validate argument file version match with current NO version. The method does nothing if argument file not exists
         /// </summary>
-        /// <param name="fileName">target file to load</param>
+        /// <param name="fileName">target file to load</param>.resources
         /// <returns>true if file exists in current NO version</returns>
         internal bool ValidateVersion(string fileName)
         {
@@ -183,8 +219,28 @@ namespace NetOffice
                 FileVersionInfo info = FileVersionInfo.GetVersionInfo(fileName);
                 if (info.FileVersion == AssemblyVersion.ToString())
                     return true;
+                else
+                    Owner.Console.WriteLine("Invalid Assembly Version {0}", info.FileVersion);
             }
             return false;
+        }
+
+        /// <summary>
+        /// Try to validate argument file version match with current NO version. 
+        /// </summary>
+        /// <param name="name">given assembly specification</param>
+        /// <returns>true if file exists in current NO version</returns>
+        internal bool ValidateVersion(AssemblyName name)
+        {
+            if (name.Version == AssemblyVersion)
+            { 
+                return true;
+            }
+            else
+            { 
+                Owner.Console.WriteLine("Negative Assembly Version {0}", name.Version);
+                return false;
+            }
         }
 
         #endregion
@@ -205,10 +261,20 @@ namespace NetOffice
                 if ((!String.IsNullOrEmpty(args.Name) && args.Name.ToLower().Trim().IndexOf(".resources") > -1))
                     return null;
 
-                string directoryName = Owner.ThisAssembly.CodeBase.Substring(0, Owner.ThisAssembly.CodeBase.LastIndexOf("/"));
-                directoryName = directoryName.Replace("/", "\\").Substring(8);
-                string fileName = args.Name.IndexOf(",") > -1 ? args.Name.Substring(0, args.Name.IndexOf(",")) : Path.GetFileName(args.Name);
-                string fullFileName = System.IO.Path.Combine(directoryName, fileName + ".dll");
+                string thisLocalPath = UriConvert.ToLocalPath(Owner.ThisAssembly.CodeBase);
+                string extension = Path.GetExtension(thisLocalPath);
+                string path = Path.GetDirectoryName(thisLocalPath);
+                string fullFileName = Path.Combine(path, args.Name + extension);
+
+                if (!System.IO.File.Exists(fullFileName))
+                {
+                    // given argument is possibly an assembly string like:
+                    // System.Security, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+                    string[] chars = args.Name.Split(new string[] { "," }, StringSplitOptions.RemoveEmptyEntries);
+                    if (chars != null && chars.Length > 0)
+                        fullFileName = Path.Combine(path, chars[0] + extension);
+                }
+
                 if (System.IO.File.Exists(fullFileName))
                 {
                     Console.WriteLine(string.Format("Try to resolve assembly {0}", args.Name));
@@ -216,7 +282,7 @@ namespace NetOffice
                     return assembly;
                 }
                 else
-                {
+                { 
                     Owner.Console.WriteLine(string.Format("Unable to resolve assembly {0}. The file doesnt exists in current codebase.", args.Name));
                     return null;
                 }

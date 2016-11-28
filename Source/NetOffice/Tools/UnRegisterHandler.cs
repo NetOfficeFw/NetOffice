@@ -11,7 +11,18 @@ namespace NetOffice.Tools
     /// </summary>
     public static class UnRegisterHandler
     {
-        private static string ExceptionMessage = "An error occured while calling unregister.";
+        private static string _exceptionMessage = "An error occured while calling unregister.";
+        
+        /// <summary>
+        /// Do unregister process per user uninstallation
+        /// </summary>
+        /// <param name="type">addin type</param>
+        /// <param name="addinOfficeRegistryKey">office application registry path</param>
+        /// <param name="keyState">the office registry key need to delete</param>
+        public static void ProceedUser(Type type, string[] addinOfficeRegistryKey, OfficeUnRegisterKeyState keyState)
+        {
+            Proceed(type, addinOfficeRegistryKey, InstallScope.User, keyState);
+        }
 
         /// <summary>
         /// Do unregister process 
@@ -27,25 +38,26 @@ namespace NetOffice.Tools
                 MethodInfo registerMethod = null;
                 UnRegisterFunctionAttribute registerAttribute = null;
                 bool registerMethodPresent = AttributeReflector.GetUnRegisterAttribute(type, ref registerMethod, ref registerAttribute);
-                if (null != registerAttribute && true == registerMethodPresent &&
-                   registerAttribute.Value == RegisterMode.CallBefore || registerAttribute.Value == RegisterMode.CallBeforeAndAfter)
+
+                if ((null != registerAttribute && true == registerMethodPresent) && (registerAttribute.Value == RegisterMode.CallBefore || registerAttribute.Value == RegisterMode.CallBeforeAndAfter))
                 {
                     if (!CallDerivedUnRegisterMethod(registerMethod, type, registerAttribute.Value == RegisterMode.Replace ? RegisterCall.Replace : RegisterCall.CallBefore, scope, keyState))
-                        if (!RegisterErrorHandler.RaiseStaticErrorHandlerMethod(type, RegisterErrorMethodKind.UnRegister, new NetOfficeException(ExceptionMessage)))
+                        if (!RegisterErrorHandler.RaiseStaticErrorHandlerMethod(type, RegisterErrorMethodKind.UnRegister, new NetOfficeException(_exceptionMessage)))
                             return;
                     if (registerAttribute.Value == RegisterMode.Replace)
                         return;
                 }
-
+                  
                 ProgIdAttribute progId = AttributeReflector.GetProgIDAttribute(type);
                 RegistryLocationAttribute location = AttributeReflector.GetRegistryLocationAttribute(type);
                 CodebaseAttribute codebase = AttributeReflector.GetCodebaseAttribute(type);
                 ProgrammableAttribute programmable = AttributeReflector.GetProgrammableAttribute(type);
-                bool isSystem = location.IsMachineTarget(scope);
+                bool isSystemComponent = location.IsMachineComponentTarget(scope);
+                bool isSystemAddin = location.IsMachineAddinTarget(scope);
 
                 if (null != programmable)
                 {
-                    if(!ProgrammableAttribute.DeleteKeys(type.GUID, isSystem, false))
+                    if(!ProgrammableAttribute.DeleteKeys(type.GUID, isSystemComponent, false))
                         NetOffice.DebugConsole.Default.WriteLine("Failed to delete programmable.");
                 }
 
@@ -53,7 +65,7 @@ namespace NetOffice.Tools
                 {
                     Assembly thisAssembly = Assembly.GetAssembly(type);
                     string assemblyVersion = thisAssembly.GetName().Version.ToString();
-                    if (!CodebaseAttribute.DeleteValue(type.GUID, isSystem, assemblyVersion, false))
+                    if (!CodebaseAttribute.DeleteValue(type.GUID, isSystemComponent, assemblyVersion, false))
                         NetOffice.DebugConsole.Default.WriteLine("Failed to delete codebase.");
                 }
 
@@ -61,15 +73,14 @@ namespace NetOffice.Tools
                 {                    
                     foreach (string item in addinOfficeRegistryKey)
                     {
-                        RegistryLocationAttribute.DeleteApplicationKey(isSystem, item, progId.Value);
+                        RegistryLocationAttribute.TryDeleteApplicationKey(isSystemAddin, item, progId.Value);
                     }
                 }
 
-                if (null != registerAttribute && true == registerMethodPresent &&
-                    registerAttribute.Value == RegisterMode.CallAfter || registerAttribute.Value == RegisterMode.CallBeforeAndAfter)
+                if ((null != registerAttribute && true == registerMethodPresent) && (registerAttribute.Value == RegisterMode.CallAfter || registerAttribute.Value == RegisterMode.CallBeforeAndAfter))
                 {
                     if (!CallDerivedUnRegisterMethod(registerMethod, type, RegisterCall.CallAfter, scope, keyState))
-                        RegisterErrorHandler.RaiseStaticErrorHandlerMethod(type, RegisterErrorMethodKind.UnRegister, new NetOfficeException(ExceptionMessage));
+                        RegisterErrorHandler.RaiseStaticErrorHandlerMethod(type, RegisterErrorMethodKind.UnRegister, new NetOfficeException(_exceptionMessage));
                 }
             }
             catch (System.Exception exception)
@@ -87,7 +98,7 @@ namespace NetOffice.Tools
         /// <param name="callType">kind of call, defined in Register attribute</param>
         /// <param name="scope">current register scope</param>
         /// <param name="keyState">office reg key state</param>
-        /// <returns>true if no exception occurs</returns>
+        /// <returns>true if no exception occurs, otherwise false</returns>
         private static bool CallDerivedUnRegisterMethod(MethodInfo registerMethod, Type type,
             RegisterCall callType, InstallScope scope, OfficeUnRegisterKeyState keyState)
         {
@@ -124,7 +135,7 @@ namespace NetOffice.Tools
             }
             catch (Exception)
             {
-                return true;
+                return false;
             }
         }
      }
