@@ -37,7 +37,7 @@ assembly_info:
   file: AssemblyInfo.*
   assembly_version: "{version}"
   assembly_file_version: "{version}"
-  assembly_informational_version: "1.7.4-pre-{build}"
+  assembly_informational_version: "1.7.4-alpha-{build}"
 
 test:
   assemblies:

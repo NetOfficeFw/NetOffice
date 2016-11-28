@@ -9,7 +9,7 @@ IF NOT "%1"=="" (
   set _build=%1
 )
 
-set _version=1.7.4-pre-%_build%
+set _version=1.7.4-alpha-%_build%
 set _configuration=Debug
 IF NOT "%CONFIGURATION%"=="" (
   set _configuration=%CONFIGURATION%
