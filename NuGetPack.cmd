@@ -52,6 +52,11 @@ if ERRORLEVEL 1 (
   exit /b 1
 )
 
+nuget pack nuspec\NetOffice.Publisher.nuspec -outputdirectory out\packages -properties Configuration=%_configuration% -version %_version% -symbols -noninteractive
+if ERRORLEVEL 1 (
+  exit /b 1
+)
+
 nuget pack nuspec\NetOffice.Visio.nuspec -outputdirectory out\packages -properties Configuration=%_configuration% -version %_version% -symbols -noninteractive
 if ERRORLEVEL 1 (
   exit /b 1

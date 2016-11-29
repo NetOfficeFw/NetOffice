@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>NetOffice.Publisher</id>
+    <version>$version$</version>
+    <title>NetOffice.Publisher</title>
+    <authors>Sebastian Lange, Jozef Izso</authors>
+    <owners>Jozef Izso</owners>
+    <licenseUrl>https://raw.githubusercontent.com/NetOfficeFw/NetOffice/master/LICENSE.txt</licenseUrl>
+    <projectUrl>https://github.com/NetOfficeFw/NetOffice</projectUrl>
+    <iconUrl>https://raw.githubusercontent.com/NetOfficeFw/NetOffice-Assets/master/NetOfficeFwLogo_256x256.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Core library for NetOffice, the .NET Wrapper Assemblies for accessing MS Office applications: Office, PowerPoint, Word, Outlook, PowerPoint, Access, Project, Visio</description>
+    <summary>NetOffice - MS Office in .NET Core Library</summary>
+    <releaseNotes />
+    <copyright />
+    <tags>netoffice office Publisher interop wrapper net40 net45 vsto</tags>
+    <dependencies>
+      <dependency id="NetOffice.Core" version="$version$" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="..\out\$configuration$\PublisherApi\PublisherApi.dll" target="lib\net40" />
+    <file src="..\out\$configuration$\PublisherApi\PublisherApi.pdb" target="lib\net40" />
+    <file src="..\out\$configuration$\PublisherApi\PublisherApi.xml" target="lib\net40" />
+
+    <file src="tools\NetOffice.Publisher.install.ps1" target="tools\install.ps1" />
+
+    <file src="..\Source\Publisher\**\*.cs" target="src" />
+
+    <file src="..\LICENSE.txt" target="LICENSE.txt" />
+  </files>
+</package>
