@@ -32,7 +32,7 @@ if ERRORLEVEL 1 (
   exit /b 1
 )
 
-nuget pack nuspec\NetOffice.MSFormsApi.nuspec -outputdirectory out\packages -properties Configuration=%_configuration% -version %_version% -symbols -noninteractive
+nuget pack nuspec\NetOffice.MSForms.nuspec -outputdirectory out\packages -properties Configuration=%_configuration% -version %_version% -symbols -noninteractive
 if ERRORLEVEL 1 (
   exit /b 1
 )

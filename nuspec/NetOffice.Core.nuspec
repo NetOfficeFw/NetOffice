@@ -10,19 +10,24 @@
     <projectUrl>https://github.com/NetOfficeFw/NetOffice</projectUrl>
     <iconUrl>https://raw.githubusercontent.com/NetOfficeFw/NetOffice-Assets/master/NetOfficeFwLogo_256x256.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>Core library for NetOffice, the .NET Wrapper Assemblies for accessing MS Office applications: Office, Excel, Word, Outlook, PowerPoint, Access, Project, Visio</description>
-    <summary>NetOffice - MS Office in .NET Core Library</summary>
+    <description>Core library for NetOffice based solutions.
+
+NetOffice is a set of libraries and tools for building add-ins, extending and automating Microsoft Office applications:
+Excel, Word, Outlook, PowerPoint, Access, Project, Visio and Publisher.</description>
+    <summary>NetOffice - build add-ins, extend and automate Microsoft Office applications.</summary>
     <releaseNotes />
-    <copyright />
-    <tags>netoffice netoffice.core office excel word outlook powerpoint access project visio interop wrapper .net20 .net30 .net35 .net40 .net45 vsto excel-dna</tags>
+    <copyright>Copyright © 2011-2016 Sebastian Lange, Copyright (c) 2015-2016 Jozef Izso</copyright>
+    <tags>netoffice office ms-office excel word outlook powerpoint access project publisher visio interop wrapper net40 net45 vsto</tags>
   </metadata>
   <files>
     <file src="..\out\$configuration$\NetOffice\NetOffice.dll" target="lib\net40" />
     <file src="..\out\$configuration$\NetOffice\NetOffice.pdb" target="lib\net40" />
     <file src="..\out\$configuration$\NetOffice\NetOffice.xml" target="lib\net40" />
+
     <file src="..\out\$configuration$\OfficeApi\OfficeApi.dll" target="lib\net40" />
     <file src="..\out\$configuration$\OfficeApi\OfficeApi.pdb" target="lib\net40" />
     <file src="..\out\$configuration$\OfficeApi\OfficeApi.xml" target="lib\net40" />
+
     <file src="..\out\$configuration$\VBIDEApi\VBIDEApi.dll" target="lib\net40" />
     <file src="..\out\$configuration$\VBIDEApi\VBIDEApi.pdb" target="lib\net40" />
     <file src="..\out\$configuration$\VBIDEApi\VBIDEApi.xml" target="lib\net40" />
