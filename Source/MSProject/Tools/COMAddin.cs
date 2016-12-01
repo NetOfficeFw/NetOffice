@@ -283,7 +283,7 @@ namespace NetOffice.MSProjectApi.Tools
             }
         }
 
-        void IDTExtensibility2.OnConnection(object Application, ext_ConnectMode ConnectMode, object AddInInst, ref Array custom)
+        void IDTExtensibility2.OnConnection(object application, ext_ConnectMode ConnectMode, object AddInInst, ref Array custom)
         {
             try
             {
@@ -294,7 +294,7 @@ namespace NetOffice.MSProjectApi.Tools
                     System.Int32.TryParse(tryString, out _automationCode);
                 }
 
-                this.Application = new MSProject.Application(Factory, null, Application);
+                this.Application = new MSProject.Application(Factory, null, application);
                 Utils = OnCreateUtils();
                 RaiseOnConnection(this.Application, ConnectMode, AddInInst, ref custom);
             }

@@ -276,9 +276,9 @@ namespace NetOffice.VisioApi.Tools
             RaiseOnStartupComplete(ref custom);
         }
 
-        void IDTExtensibility2.OnConnection(object Application, ext_ConnectMode ConnectMode, object AddInInst, ref Array custom)
+        void IDTExtensibility2.OnConnection(object application, ext_ConnectMode ConnectMode, object AddInInst, ref Array custom)
         {
-			this.Application = new Visio.Application(null, Application);          
+			this.Application = new Visio.Application(null, application);          
             RaiseOnConnection(this.Application, ConnectMode, AddInInst, ref custom);
         }
 

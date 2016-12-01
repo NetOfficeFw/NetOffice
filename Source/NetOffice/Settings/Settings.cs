@@ -42,7 +42,7 @@ namespace NetOffice
         private CacheOptions _cacheOptions = CacheOptions.KeepExistingCacheAlive;
         private bool _enableOperatorOverlads = true;
         private string _exceptionMessage = "See inner exception(s) for details.";
-        private ExceptionMessageHandling _copyInnerExceptionMessage;
+        private ExceptionMessageHandling _copyInnerExceptionMessage = ExceptionMessageHandling.CopyInnerExceptionMessageToTopLevelException;
         private bool _loadAssembliesUnsafe = true;
         private PerformanceTrace _performanceTrace;
         private static Settings _default;
@@ -125,7 +125,7 @@ namespace NetOffice
         /// NetOffice wrap all thrown exceptions from Office applications in a COMException.
         /// This option can be used to set the top level exception message or copy the innerst message to top.
         /// </summary>
-        [Category("Settings"), Description("Copy inner exception message to outer top exception."), DefaultValue(typeof(ExceptionMessageHandling), "Default")]
+        [Category("Settings"), Description("Copy inner exception message to outer top exception."), DefaultValue(typeof(ExceptionMessageHandling), "CopyInnerExceptionMessageToTopLevelException")]
         public ExceptionMessageHandling UseExceptionMessage
         {
             get

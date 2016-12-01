@@ -71,9 +71,9 @@
             this.ContentPanel.Controls.Add(this.OverlayPanel);
             this.ContentPanel.Controls.Add(this.EnumeratorGrid);
             this.ContentPanel.Controls.Add(this.SingleGrid);
-            this.ContentPanel.Location = new System.Drawing.Point(0, 25);
+            this.ContentPanel.Location = new System.Drawing.Point(0, 33);
             this.ContentPanel.Name = "ContentPanel";
-            this.ContentPanel.Size = new System.Drawing.Size(371, 224);
+            this.ContentPanel.Size = new System.Drawing.Size(485, 287);
             this.ContentPanel.TabIndex = 1;
             // 
             // OptionsGrid
@@ -86,9 +86,9 @@
             this.OptionsGrid.Controls.Add(this.AutoExpandHelpLabel);
             this.OptionsGrid.Controls.Add(this.HighlightCheckBox);
             this.OptionsGrid.Controls.Add(this.AutoExpandCheckBox);
-            this.OptionsGrid.Location = new System.Drawing.Point(48, 3);
+            this.OptionsGrid.Location = new System.Drawing.Point(48, 4);
             this.OptionsGrid.Name = "OptionsGrid";
-            this.OptionsGrid.Size = new System.Drawing.Size(311, 129);
+            this.OptionsGrid.Size = new System.Drawing.Size(434, 206);
             this.OptionsGrid.TabIndex = 4;
             this.OptionsGrid.Visible = false;
             // 
@@ -96,26 +96,28 @@
             // 
             this.label1.AutoSize = true;
             this.label1.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label1.Location = new System.Drawing.Point(191, 86);
+            this.label1.Location = new System.Drawing.Point(254, 120);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(129, 13);
             this.label1.TabIndex = 9;
             this.label1.Text = "Message Kind Information";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label2.Location = new System.Drawing.Point(191, 63);
+            this.label2.Location = new System.Drawing.Point(255, 84);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(131, 13);
             this.label2.TabIndex = 8;
             this.label2.Text = "Message Time Information";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // ShowKindColumnCheckBox
             // 
             this.ShowKindColumnCheckBox.AutoSize = true;
-            this.ShowKindColumnCheckBox.Location = new System.Drawing.Point(24, 85);
+            this.ShowKindColumnCheckBox.Location = new System.Drawing.Point(24, 120);
             this.ShowKindColumnCheckBox.Name = "ShowKindColumnCheckBox";
             this.ShowKindColumnCheckBox.Size = new System.Drawing.Size(156, 17);
             this.ShowKindColumnCheckBox.TabIndex = 7;
@@ -125,7 +127,7 @@
             // ShowTimeColumnCheckBox
             // 
             this.ShowTimeColumnCheckBox.AutoSize = true;
-            this.ShowTimeColumnCheckBox.Location = new System.Drawing.Point(24, 62);
+            this.ShowTimeColumnCheckBox.Location = new System.Drawing.Point(24, 84);
             this.ShowTimeColumnCheckBox.Name = "ShowTimeColumnCheckBox";
             this.ShowTimeColumnCheckBox.Size = new System.Drawing.Size(158, 17);
             this.ShowTimeColumnCheckBox.TabIndex = 6;
@@ -136,28 +138,30 @@
             // 
             this.HighlightHelpLabel.AutoSize = true;
             this.HighlightHelpLabel.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.HighlightHelpLabel.Location = new System.Drawing.Point(191, 39);
+            this.HighlightHelpLabel.Location = new System.Drawing.Point(255, 48);
             this.HighlightHelpLabel.Name = "HighlightHelpLabel";
             this.HighlightHelpLabel.Size = new System.Drawing.Size(110, 13);
             this.HighlightHelpLabel.TabIndex = 5;
             this.HighlightHelpLabel.Text = "Highlight New Proxies";
+            this.HighlightHelpLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // AutoExpandHelpLabel
             // 
             this.AutoExpandHelpLabel.AutoSize = true;
             this.AutoExpandHelpLabel.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.AutoExpandHelpLabel.Location = new System.Drawing.Point(191, 16);
+            this.AutoExpandHelpLabel.Location = new System.Drawing.Point(255, 15);
             this.AutoExpandHelpLabel.Name = "AutoExpandHelpLabel";
             this.AutoExpandHelpLabel.Size = new System.Drawing.Size(105, 13);
             this.AutoExpandHelpLabel.TabIndex = 4;
             this.AutoExpandHelpLabel.Text = "Auto Expand Proxies";
+            this.AutoExpandHelpLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // HighlightCheckBox
             // 
             this.HighlightCheckBox.AutoSize = true;
             this.HighlightCheckBox.Checked = true;
             this.HighlightCheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.HighlightCheckBox.Location = new System.Drawing.Point(24, 38);
+            this.HighlightCheckBox.Location = new System.Drawing.Point(24, 48);
             this.HighlightCheckBox.Name = "HighlightCheckBox";
             this.HighlightCheckBox.Size = new System.Drawing.Size(67, 17);
             this.HighlightCheckBox.TabIndex = 2;
@@ -180,7 +184,7 @@
             // 
             this.HierarchicalGrid.BackColor = System.Drawing.Color.White;
             this.HierarchicalGrid.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.HierarchicalGrid.Location = new System.Drawing.Point(34, 3);
+            this.HierarchicalGrid.Location = new System.Drawing.Point(34, 1);
             this.HierarchicalGrid.Margin = new System.Windows.Forms.Padding(0);
             this.HierarchicalGrid.Name = "HierarchicalGrid";
             this.HierarchicalGrid.Size = new System.Drawing.Size(11, 110);
@@ -191,10 +195,10 @@
             // 
             this.OverlayPanel.Controls.Add(this.OverlayTextBox);
             this.OverlayPanel.Controls.Add(this.CloseOverlayButton);
-            this.OverlayPanel.Location = new System.Drawing.Point(2, 150);
+            this.OverlayPanel.Location = new System.Drawing.Point(2, 213);
             this.OverlayPanel.Margin = new System.Windows.Forms.Padding(0);
             this.OverlayPanel.Name = "OverlayPanel";
-            this.OverlayPanel.Size = new System.Drawing.Size(369, 72);
+            this.OverlayPanel.Size = new System.Drawing.Size(483, 72);
             this.OverlayPanel.TabIndex = 2;
             this.OverlayPanel.Visible = false;
             // 
@@ -211,15 +215,15 @@
             this.OverlayTextBox.Name = "OverlayTextBox";
             this.OverlayTextBox.ReadOnly = true;
             this.OverlayTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.OverlayTextBox.Size = new System.Drawing.Size(367, 21);
+            this.OverlayTextBox.Size = new System.Drawing.Size(481, 21);
             this.OverlayTextBox.TabIndex = 1;
             // 
             // CloseOverlayButton
             // 
             this.CloseOverlayButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.CloseOverlayButton.Location = new System.Drawing.Point(155, 36);
+            this.CloseOverlayButton.Location = new System.Drawing.Point(205, 31);
             this.CloseOverlayButton.Name = "CloseOverlayButton";
-            this.CloseOverlayButton.Size = new System.Drawing.Size(75, 23);
+            this.CloseOverlayButton.Size = new System.Drawing.Size(79, 29);
             this.CloseOverlayButton.TabIndex = 0;
             this.CloseOverlayButton.Text = "Close";
             this.CloseOverlayButton.UseVisualStyleBackColor = true;
@@ -235,7 +239,7 @@
             this.EnumeratorGrid.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.EnumeratorGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.EnumeratorGrid.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-            this.EnumeratorGrid.Location = new System.Drawing.Point(19, 3);
+            this.EnumeratorGrid.Location = new System.Drawing.Point(19, 1);
             this.EnumeratorGrid.Margin = new System.Windows.Forms.Padding(0);
             this.EnumeratorGrid.MultiSelect = false;
             this.EnumeratorGrid.Name = "EnumeratorGrid";
@@ -250,7 +254,7 @@
             // SingleGrid
             // 
             this.SingleGrid.CategoryForeColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.SingleGrid.Location = new System.Drawing.Point(3, 3);
+            this.SingleGrid.Location = new System.Drawing.Point(3, 1);
             this.SingleGrid.Name = "SingleGrid";
             this.SingleGrid.PropertySort = System.Windows.Forms.PropertySort.Alphabetical;
             this.SingleGrid.Size = new System.Drawing.Size(11, 110);
@@ -264,11 +268,11 @@
             this.CoreRadioButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.CoreRadioButton.Location = new System.Drawing.Point(0, 0);
             this.CoreRadioButton.Name = "CoreRadioButton";
-            this.CoreRadioButton.Size = new System.Drawing.Size(61, 23);
+            this.CoreRadioButton.Size = new System.Drawing.Size(80, 30);
             this.CoreRadioButton.TabIndex = 2;
             this.CoreRadioButton.TabStop = true;
             this.CoreRadioButton.Text = "Core";
-            this.CoreRadioButton.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.CoreRadioButton.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.CoreRadioButton.UseVisualStyleBackColor = true;
             this.CoreRadioButton.CheckedChanged += new System.EventHandler(this.HeaderRadioButton_CheckedChanged);
             // 
@@ -276,12 +280,12 @@
             // 
             this.SettingsRadioButton.Appearance = System.Windows.Forms.Appearance.Button;
             this.SettingsRadioButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.SettingsRadioButton.Location = new System.Drawing.Point(62, 0);
+            this.SettingsRadioButton.Location = new System.Drawing.Point(81, 0);
             this.SettingsRadioButton.Name = "SettingsRadioButton";
-            this.SettingsRadioButton.Size = new System.Drawing.Size(61, 23);
+            this.SettingsRadioButton.Size = new System.Drawing.Size(80, 30);
             this.SettingsRadioButton.TabIndex = 3;
             this.SettingsRadioButton.Text = "Settings";
-            this.SettingsRadioButton.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.SettingsRadioButton.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.SettingsRadioButton.UseVisualStyleBackColor = true;
             this.SettingsRadioButton.CheckedChanged += new System.EventHandler(this.HeaderRadioButton_CheckedChanged);
             // 
@@ -289,12 +293,12 @@
             // 
             this.ConsoleRadioButton.Appearance = System.Windows.Forms.Appearance.Button;
             this.ConsoleRadioButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ConsoleRadioButton.Location = new System.Drawing.Point(124, 0);
+            this.ConsoleRadioButton.Location = new System.Drawing.Point(162, 0);
             this.ConsoleRadioButton.Name = "ConsoleRadioButton";
-            this.ConsoleRadioButton.Size = new System.Drawing.Size(61, 23);
+            this.ConsoleRadioButton.Size = new System.Drawing.Size(80, 30);
             this.ConsoleRadioButton.TabIndex = 4;
             this.ConsoleRadioButton.Text = "Console";
-            this.ConsoleRadioButton.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.ConsoleRadioButton.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.ConsoleRadioButton.UseVisualStyleBackColor = true;
             this.ConsoleRadioButton.CheckedChanged += new System.EventHandler(this.HeaderRadioButton_CheckedChanged);
             // 
@@ -302,12 +306,12 @@
             // 
             this.DiagnosticsRadioButton.Appearance = System.Windows.Forms.Appearance.Button;
             this.DiagnosticsRadioButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.DiagnosticsRadioButton.Location = new System.Drawing.Point(186, 0);
+            this.DiagnosticsRadioButton.Location = new System.Drawing.Point(243, 0);
             this.DiagnosticsRadioButton.Name = "DiagnosticsRadioButton";
-            this.DiagnosticsRadioButton.Size = new System.Drawing.Size(61, 23);
+            this.DiagnosticsRadioButton.Size = new System.Drawing.Size(80, 30);
             this.DiagnosticsRadioButton.TabIndex = 5;
             this.DiagnosticsRadioButton.Text = "Diags";
-            this.DiagnosticsRadioButton.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.DiagnosticsRadioButton.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.DiagnosticsRadioButton.UseVisualStyleBackColor = true;
             this.DiagnosticsRadioButton.CheckedChanged += new System.EventHandler(this.HeaderRadioButton_CheckedChanged);
             // 
@@ -315,12 +319,12 @@
             // 
             this.ProxiesRadioButton.Appearance = System.Windows.Forms.Appearance.Button;
             this.ProxiesRadioButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ProxiesRadioButton.Location = new System.Drawing.Point(248, 0);
+            this.ProxiesRadioButton.Location = new System.Drawing.Point(324, 0);
             this.ProxiesRadioButton.Name = "ProxiesRadioButton";
-            this.ProxiesRadioButton.Size = new System.Drawing.Size(61, 23);
+            this.ProxiesRadioButton.Size = new System.Drawing.Size(80, 30);
             this.ProxiesRadioButton.TabIndex = 6;
             this.ProxiesRadioButton.Text = "Proxies";
-            this.ProxiesRadioButton.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.ProxiesRadioButton.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.ProxiesRadioButton.UseVisualStyleBackColor = true;
             this.ProxiesRadioButton.CheckedChanged += new System.EventHandler(this.HeaderRadioButton_CheckedChanged);
             // 
@@ -328,12 +332,12 @@
             // 
             this.OptionsRadioButton.Appearance = System.Windows.Forms.Appearance.Button;
             this.OptionsRadioButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.OptionsRadioButton.Location = new System.Drawing.Point(310, 0);
+            this.OptionsRadioButton.Location = new System.Drawing.Point(405, 0);
             this.OptionsRadioButton.Name = "OptionsRadioButton";
-            this.OptionsRadioButton.Size = new System.Drawing.Size(61, 23);
+            this.OptionsRadioButton.Size = new System.Drawing.Size(80, 30);
             this.OptionsRadioButton.TabIndex = 7;
             this.OptionsRadioButton.Text = "Options";
-            this.OptionsRadioButton.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.OptionsRadioButton.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.OptionsRadioButton.UseVisualStyleBackColor = true;
             this.OptionsRadioButton.CheckedChanged += new System.EventHandler(this.HeaderRadioButton_CheckedChanged);
             // 
@@ -350,7 +354,7 @@
             this.Controls.Add(this.ContentPanel);
             this.Margin = new System.Windows.Forms.Padding(0);
             this.Name = "TrayMenuMonitorItemControl";
-            this.Size = new System.Drawing.Size(373, 250);
+            this.Size = new System.Drawing.Size(485, 320);
             this.ContentPanel.ResumeLayout(false);
             this.OptionsGrid.ResumeLayout(false);
             this.OptionsGrid.PerformLayout();

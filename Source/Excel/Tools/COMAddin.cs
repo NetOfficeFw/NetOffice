@@ -282,7 +282,7 @@ namespace NetOffice.ExcelApi.Tools
             }
         }
 
-        void IDTExtensibility2.OnConnection(object Application, ext_ConnectMode ConnectMode, object AddInInst, ref Array custom)
+        void IDTExtensibility2.OnConnection(object application, ext_ConnectMode ConnectMode, object AddInInst, ref Array custom)
         {
             try
             {
@@ -293,7 +293,7 @@ namespace NetOffice.ExcelApi.Tools
                     System.Int32.TryParse(tryString, out _automationCode);
                 }
 
-                this.Application = new Excel.Application(Factory, null, Application);
+                this.Application = new Excel.Application(Factory, null, application);
                 Utils = OnCreateUtils();
                 RaiseOnConnection(this.Application, ConnectMode, AddInInst, ref custom);
             }
@@ -756,7 +756,7 @@ namespace NetOffice.ExcelApi.Tools
             if (null == type)
                 throw new ArgumentNullException("type");
 
-            object[] array = type.GetCustomAttributes(typeof(DisableRegisterAttribute), false);
+            object[] array = type.GetCustomAttributes(typeof(DontRegisterAddinAttribute), false);
             if (null != array && array.Length == 1)
                 return;
 
@@ -773,7 +773,7 @@ namespace NetOffice.ExcelApi.Tools
             if (null == type)
                 throw new ArgumentNullException("type");
 
-            object[] array = type.GetCustomAttributes(typeof(DisableRegisterAttribute), false);
+            object[] array = type.GetCustomAttributes(typeof(DontRegisterAddinAttribute), false);
             if (null != array && array.Length == 1)
                 return;
 

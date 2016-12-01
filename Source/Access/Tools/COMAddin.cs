@@ -283,7 +283,7 @@ namespace NetOffice.AccessApi.Tools
             }
         }
 
-        void IDTExtensibility2.OnConnection(object Application, ext_ConnectMode ConnectMode, object AddInInst, ref Array custom)
+        void IDTExtensibility2.OnConnection(object application, ext_ConnectMode ConnectMode, object AddInInst, ref Array custom)
         {
             try
             {
@@ -294,7 +294,7 @@ namespace NetOffice.AccessApi.Tools
                     System.Int32.TryParse(tryString, out _automationCode);
                 }
 
-                this.Application = new Access.Application(Factory, null, Application);
+                this.Application = new Access.Application(Factory, null, application);
                 Utils = OnCreateUtils();
                 RaiseOnConnection(this.Application, ConnectMode, AddInInst, ref custom);
             }

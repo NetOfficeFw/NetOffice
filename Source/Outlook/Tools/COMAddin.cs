@@ -283,7 +283,7 @@ namespace NetOffice.OutlookApi.Tools
             }
         }
 
-        void IDTExtensibility2.OnConnection(object Application, ext_ConnectMode ConnectMode, object AddInInst, ref Array custom)
+        void IDTExtensibility2.OnConnection(object application, ext_ConnectMode ConnectMode, object AddInInst, ref Array custom)
         {
             try
             {
@@ -294,7 +294,7 @@ namespace NetOffice.OutlookApi.Tools
                     NetRuntimeSystem.Int32.TryParse(tryString, out _automationCode);
                 }
 
-                this.Application = new Outlook.Application(Factory, null, Application);
+                this.Application = new Outlook.Application(Factory, null, application);
                 Utils = OnCreateUtils();
                 RaiseOnConnection(this.Application, ConnectMode, AddInInst, ref custom);
             }
@@ -405,18 +405,26 @@ namespace NetOffice.OutlookApi.Tools
         /// <summary>
         /// IRibbonExtensibility implementation
         /// </summary>
-        /// <param name="RibbonID">target ribbon id, only used from Outlook and ignored in this standard implementation. overwrite this method if you need a custom behavior</param>
-        /// <returns>XML content oder String.Empty</returns>
+        /// <param name="RibbonID">target ribbon id, use OlCustomUIAttribute for a custom outlook behavior</param>
+        /// <returns>XML content or String.Empty</returns>
         [EditorBrowsable(EditorBrowsableState.Advanced)]
         public virtual string GetCustomUI(string RibbonID)
         {
             try
             {
-                CustomUIAttribute ribbon = AttributeReflector.GetRibbonAttribute(Type);
-                if (null != ribbon)
-                    return Utils.Resource.ReadString(CustomUIAttribute.BuildPath(ribbon.Value, ribbon.UseAssemblyNamespace, Type.Namespace));
+                OlCustomUIAttribute olRibbon = GetOlRibbonAttribute(Type, RibbonID);
+                if (null != olRibbon)
+                {
+                    return Utils.Resource.ReadString(OlCustomUIAttribute.BuildPath(olRibbon.Value, olRibbon.UseAssemblyNamespace, Type.Namespace));
+                }
                 else
-                    return String.Empty;
+                {
+                    CustomUIAttribute ribbon = AttributeReflector.GetRibbonAttribute(Type);
+                    if (null != ribbon)
+                        return Utils.Resource.ReadString(CustomUIAttribute.BuildPath(ribbon.Value, ribbon.UseAssemblyNamespace, Type.Namespace));
+                    else
+                        return String.Empty;
+                }
             }
             catch (NetRuntimeSystem.Exception exception)
             {
@@ -425,7 +433,7 @@ namespace NetOffice.OutlookApi.Tools
                 return String.Empty;
             } 
         }
-
+         
         #endregion
 
         #region ICustomTaskPaneConsumer Member
@@ -699,6 +707,27 @@ namespace NetOffice.OutlookApi.Tools
         #endregion
 
         #region Private Methods
+
+        /// <summary>
+        /// Looks for the CustomUIAttribute
+        /// </summary>
+        /// <param name="type">the type you want looking for the attribute</param>
+        /// <param name="ribbonID">target window id</param>
+        /// <returns>CustomUIAttribute or null</returns>
+        private static OlCustomUIAttribute GetOlRibbonAttribute(Type type, string ribbonID)
+        {
+            object[] array = type.GetCustomAttributes(typeof(OlCustomUIAttribute), false);
+            if (array.Length == 0)
+                return null;
+
+            foreach (OlCustomUIAttribute item in array)
+            {
+                if (item.RibbonID.Equals(ribbonID, StringComparison.InvariantCultureIgnoreCase))
+                    return item;
+            }
+
+            return null;
+        }
 
         /// <summary>
         /// Try to detect the addin is loaded from system hive key
