@@ -1,9 +1,0 @@
-﻿  <Excel    Enabled ="false" />
-  <Winword  Enabled ="false" />
-  <Outlook  Enabled ="false" />
-  <PowerPnt Enabled ="false" />
-  <MsAccess Enabled ="false" />
-  <Project  Enabled ="false" />
-  <Visio    Enabled ="false" />
-  <HotKey   Enabled ="false" Keys="32" Ask="true"/>    
-  <Tray     Enabled ="false" />

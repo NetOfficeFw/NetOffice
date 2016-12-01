@@ -21,6 +21,16 @@ PowerPoint, Access, Project and Visio.
 * No dependencies, no interop assemblies, no need for [VSTO][VSTO]
 * Visual Studio Project Templates and Wizards available [Photo Gallery][NetOffice Photo Gallery]
 
+## Getting Started
+
+Checkout the [NetOffice-Examples](https://github.com/NetOfficeFw/NetOffice-Examples) repository
+to see how to use NetOffice to automate Office applications or create add-ins and extended them.
+
+## Tools
+
+The [NetOffice Toolbox](https://github.com/NetOfficeFw/NetOfficeToolbox) is a comprehensive
+toolset to get started with NetOffice 1.7.3 solutions.
+
 ## Project History
 
 You can find more information about [NetOffice Git repository in documentation](Documentation/History.md).
