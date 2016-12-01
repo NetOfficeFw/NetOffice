@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Threading;
 using System.Runtime.InteropServices;
-using System.Linq;
+using System.Diagnostics;
 using System.Collections.Generic;
 using System.ComponentModel;
 using COMTypes = System.Runtime.InteropServices.ComTypes;
@@ -22,6 +22,7 @@ namespace NetOffice
     /// <summary>
     /// Represents a managed COM proxy with dynamic runtime type informations.
     /// </summary>
+    [DebuggerDisplay("{InstanceFriendlyName}")]
     [TypeConverter(typeof(COMDynamicObjectExpandableObjectConverter))]
     public class COMDynamicObject : DynamicObject, ICOMObject
     {
@@ -102,22 +103,22 @@ namespace NetOffice
         #region Fields
        
         /// <summary>
-        /// the well know IUnknown Interface ID
+        /// The well know IUnknown Interface ID
         /// </summary>
         private static Guid IID_IUnknown = new Guid("00000000-0000-0000-C000-000000000046");
 
         /// <summary>
-        /// child instance List
+        /// Child instance List
         /// </summary>
         protected internal List<ICOMObject> _listChildObjects = new List<ICOMObject>();
 
         /// <summary>
-        /// returns instance is currently in disposing progress
+        /// Returns instance is currently in disposing progress
         /// </summary>
         protected internal volatile bool _isCurrentlyDisposing;
 
         /// <summary>
-        /// returns instance is diposed means unusable
+        /// Returns instance is diposed means unusable
         /// </summary>
         protected internal volatile bool _isDisposed;
 
@@ -127,12 +128,12 @@ namespace NetOffice
         protected internal bool _callQuitInDispose;
 
         /// <summary>
-        /// runtime self description
+        /// Runtime self description
         /// </summary>
         protected internal DynamicObjectEntity[] _entities;
         
         /// <summary>
-        /// list of runtime supported entities
+        /// List of runtime supported entities
         /// </summary>
         private Dictionary<string, string> _listSupportedEntities;
 
@@ -146,33 +147,44 @@ namespace NetOffice
         /// </summary>
         private string _underlyingTypeName;
 
+        /// <summary>
+        /// Name of the proxy hosting component
+        /// </summary>
         private string _underlyingComponentName;
 
         /// <summary>
-        /// monitor lock object for accessing the child list
+        /// Monitor lock object for accessing the child list
         /// </summary>
         private object _childListLock = new object();
 
         /// <summary>
-        /// monitor lock object for the main dispose method
+        /// Monitor lock object for the main dispose method
         /// </summary>
         private object _disposeLock = new object();
 
         /// <summary>
-        /// indicates the instance offers an enumerator
+        /// Indicates the instance offers an enumerator
         /// </summary>
         private EnumeratorSupport _enumerator;
      
         /// <summary>
-        /// indicates the instance offers an default property
+        /// Indicates the instance offers an default property
         /// </summary>
         private DefaultItemSupport _defaultItem;
+
+        /// <summary>
+        /// CheckEntities Monitor Lock
+        /// </summary>
+        private object _entitiesLock = new object();
 
         /// <summary>
         /// Empty arguments dumy
         /// </summary>
         private static object[] _emptyArgs = new object[0];
 
+        /// <summary>
+        /// Self Type Cache
+        /// </summary>
         private static Type _instanceType = typeof(COMDynamicObject);
 
         #endregion
@@ -193,7 +205,6 @@ namespace NetOffice
             UnderlyingObject = comProxy;
             UnderlyingType = comProxy.GetType();
             Factory.AddObjectToList(this);
-            _entities = GetEntities();
             _listChildObjects = new List<ICOMObject>();
         }
 
@@ -219,7 +230,6 @@ namespace NetOffice
                 ParentObject.AddChildObject(this);
 
             Factory.AddObjectToList(this);
-            _entities = GetEntities();
             _listChildObjects = new List<ICOMObject>();
         }
 
@@ -237,7 +247,6 @@ namespace NetOffice
             UnderlyingType = comObject.UnderlyingType;
 
             Factory.AddObjectToList(this);
-            _entities = GetEntities();
             _listChildObjects = new List<ICOMObject>();
         }
 
@@ -261,7 +270,41 @@ namespace NetOffice
                 ParentObject.AddChildObject(this);
 
             Factory.AddObjectToList(this);
-            _entities = GetEntities();
+            _listChildObjects = new List<ICOMObject>();
+        }
+
+        /// <summary>
+        /// Create new instance from given progid
+        /// </summary>
+        /// <param name="factory">used factory core</param>
+        /// <param name="progId"></param>
+        public COMDynamicObject(Core factory, string progId)
+        {
+            if (String.IsNullOrEmpty(progId))
+                throw new ArgumentNullException("progId");
+
+            UnderlyingType = System.Type.GetTypeFromProgID(progId, true);
+            UnderlyingObject = Activator.CreateInstance(UnderlyingType);
+
+            Factory = null != factory ? factory : Core.Default;        
+            Factory.AddObjectToList(this);
+            _listChildObjects = new List<ICOMObject>();
+        }
+
+        /// <summary>
+        /// Create new instance from given progid
+        /// </summary>
+        /// <param name="progId"></param>
+        public COMDynamicObject(string progId)
+        {
+            if (String.IsNullOrEmpty(progId))
+                throw new ArgumentNullException("progId");
+
+            UnderlyingType = System.Type.GetTypeFromProgID(progId, true);
+            UnderlyingObject = Activator.CreateInstance(UnderlyingType);
+
+            Factory = Core.Default;     
+            Factory.AddObjectToList(this);
             _listChildObjects = new List<ICOMObject>();
         }
 
@@ -352,6 +395,18 @@ namespace NetOffice
             return cancelDispose;
         }
 
+        /// <summary>
+        /// Check for GetEntites has been called for the instance and call if not
+        /// </summary>
+        private void CheckEntities()
+        {
+            lock (_entitiesLock)
+            {
+                if (null == _entities)
+                    _entities = GetEntities();
+            }
+        }
+        
         /// <summary>
         /// Recieve self description from UnderlyingObject through IDispatch
         /// </summary>
@@ -481,7 +536,12 @@ namespace NetOffice
         /// <returns>item or null</returns>
         private DynamicObjectEntity FindInCollection(IEnumerable<DynamicObjectEntity> values, string name, DynamicObjectEntity.EntityKind kind)
         {
-            return values.FirstOrDefault(e => e.Name == name && e.Kind == kind);
+            foreach (DynamicObjectEntity item in values)
+            {
+                if (item.Name == name && item.Kind == kind)
+                    return item;
+            }
+            return null;        
         }
 
         /// <summary>
@@ -510,6 +570,8 @@ namespace NetOffice
         /// <returns>IEnumerable instance</returns>
         private System.Collections.IEnumerable InvokeEnumerator()
         {
+            CheckEntities();
+
             switch (_enumerator)
             {
                 case EnumeratorSupport.PropertyEnumerator:
@@ -693,6 +755,7 @@ namespace NetOffice
         /// <returns>a sequence that contains dynamic member names.</returns>
         public override IEnumerable<string> GetDynamicMemberNames()
         {
+            CheckEntities();
             if (null == _entities)
                 return new string[0];
 
@@ -715,6 +778,8 @@ namespace NetOffice
         /// <returns>true if the operation is successful; otherwise, false. </returns>
         public override bool TryConvert(ConvertBinder binder, out object result)
         {
+            CheckEntities();
+
             if (binder.Type == typeof(System.Collections.IEnumerable))
             {
                 result = InvokeEnumerator();
@@ -722,6 +787,8 @@ namespace NetOffice
             }
             else
             {
+                // Todo: NetOffice 1.7.5 
+                // - check target conversion type is available NetOffice wrapper type and convert into
                 result = null;
                 return false;
             }

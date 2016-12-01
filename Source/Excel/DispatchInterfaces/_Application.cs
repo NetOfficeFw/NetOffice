@@ -1034,11 +1034,11 @@ namespace NetOffice.ExcelApi
 		public NetOffice.ExcelApi.Workbooks Workbooks
 		{
 			get
-			{
-				object[] paramsArray = null;
+            {
+                object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Workbooks", paramsArray);
 				NetOffice.ExcelApi.Workbooks newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.Workbooks.LateBindingApiWrapperType) as NetOffice.ExcelApi.Workbooks;
-				return newObject;
+                return newObject;
 			}
 		}
 

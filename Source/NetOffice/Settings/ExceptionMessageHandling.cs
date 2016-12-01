@@ -9,10 +9,10 @@ namespace NetOffice
     /// </summary>
     public enum ExceptionMessageHandling
     {
-        /// <summary>
-        /// The standard message from NetOffice.Settings.Exception
-        /// </summary>
-        Default = 0,
+        ///// <summary>
+        ///// The standard message from NetOffice.Settings.Exception
+        ///// </summary>
+        //Default = 0,
 
         /// <summary>
         /// The message from the source exception

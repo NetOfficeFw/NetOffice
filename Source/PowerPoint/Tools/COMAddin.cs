@@ -283,7 +283,7 @@ namespace NetOffice.PowerPointApi.Tools
             }
         }
 
-        void IDTExtensibility2.OnConnection(object Application, ext_ConnectMode ConnectMode, object AddInInst, ref Array custom)
+        void IDTExtensibility2.OnConnection(object application, ext_ConnectMode ConnectMode, object AddInInst, ref Array custom)
         {
             try
             {
@@ -294,7 +294,7 @@ namespace NetOffice.PowerPointApi.Tools
                     NetRuntimeSystem.Int32.TryParse(tryString, out _automationCode);                    
                 }
 
-                this.Application = new PowerPoint.Application(Factory, null, Application);
+                this.Application = new PowerPoint.Application(Factory, null, application);
                 Utils = OnCreateUtils();
                 RaiseOnConnection(this.Application, ConnectMode, AddInInst, ref custom);
             }

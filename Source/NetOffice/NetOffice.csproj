@@ -78,7 +78,7 @@
     <Compile Include="COMObjectFaults.cs" />
     <Compile Include="InstanceTypeNameResolver.cs" />
     <Compile Include="Misc\SelfDiagnostics.cs" />
-    <Compile Include="Tools\DisableRegisterAttribute.cs" />
+    <Compile Include="Tools\DontRegisterAddinAttribute.cs" />
     <Compile Include="DynamicObjectEntity.cs" />
     <Compile Include="EntityAvailableResolver.cs" />
     <Compile Include="Tools\ForceInitializeAttribute.cs" />

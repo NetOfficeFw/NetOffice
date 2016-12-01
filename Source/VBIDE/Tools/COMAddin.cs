@@ -259,7 +259,7 @@ namespace NetOffice.VBIDEApi.Tools
             }
         }
 
-        void IDTExtensibility2.OnConnection(object Application, ext_ConnectMode ConnectMode, object AddInInst, ref Array custom)
+        void IDTExtensibility2.OnConnection(object application, ext_ConnectMode ConnectMode, object AddInInst, ref Array custom)
         {
             try
             {
@@ -270,7 +270,7 @@ namespace NetOffice.VBIDEApi.Tools
                     System.Int32.TryParse(tryString, out _automationCode);
                 }
 
-                this.Application = new VBE(null, Application);
+                this.Application = new VBE(null, application);
                 RaiseOnConnection(this.Application, ConnectMode, AddInInst, ref custom);
             }
             catch (System.Exception exception)

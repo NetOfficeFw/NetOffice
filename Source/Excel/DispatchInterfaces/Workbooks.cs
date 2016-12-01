@@ -99,17 +99,17 @@ namespace NetOffice.ExcelApi
 		public Workbooks(string progId) : base(progId)
 		{
 		}
-		
-		#endregion
-		
-		#region Properties
 
-		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
-		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195019.aspx
-		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
+        #endregion
+        
+        #region Properties
+
+        /// <summary>
+        /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
+        /// Get
+        /// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195019.aspx
+        /// </summary>
+        [SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
 		public NetOffice.ExcelApi.Application Application
 		{
 			get
@@ -182,11 +182,11 @@ namespace NetOffice.ExcelApi
 		public NetOffice.ExcelApi.Workbook this[object index]
 		{
 			get
-{			
-			object[] paramsArray = Invoker.ValidateParamsArray(index);
-			object returnItem = Invoker.PropertyGet(this, "_Default", paramsArray);
-			NetOffice.ExcelApi.Workbook newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.Workbook.LateBindingApiWrapperType) as NetOffice.ExcelApi.Workbook;
-			return newObject;
+            {			
+			    object[] paramsArray = Invoker.ValidateParamsArray(index);
+			    object returnItem = Invoker.PropertyGet(this, "_Default", paramsArray);
+			    NetOffice.ExcelApi.Workbook newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.Workbook.LateBindingApiWrapperType) as NetOffice.ExcelApi.Workbook;
+			    return newObject;
 			}
 		}
 

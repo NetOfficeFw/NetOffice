@@ -195,15 +195,28 @@ namespace NetOffice
         {
             try
             {
+                object target = null;
+                Type type = null;
+
                 ICOMObject wrapperInstance = comObject as ICOMObject;
-                if(null != wrapperInstance && wrapperInstance.IsDisposed)
+                if (null != wrapperInstance && wrapperInstance.IsDisposed)
                     throw new ObjectDisposedException("COMObject");
+                if (null != wrapperInstance)
+                {
+                    target = wrapperInstance.UnderlyingObject;
+                    type = wrapperInstance.UnderlyingType;
+                }
+                else
+                {
+                    target = comObject;
+                    type = comObject.GetType();
+                }
 
                 bool measureStarted = false;
                 if(null != wrapperInstance)
                     measureStarted = Settings.PerformanceTrace.StartMeasureTime(wrapperInstance.InstanceComponentName, wrapperInstance.InstanceName, name, PerformanceTrace.CallType.Method);
 
-                comObject.GetType().InvokeMember(name, BindingFlags.InvokeMethod, null, comObject, paramsArray, Settings.Default.ThreadCulture);
+                type.InvokeMember(name, BindingFlags.InvokeMethod, null, target, paramsArray, Settings.Default.ThreadCulture);
 
                 if (measureStarted)
                     Settings.PerformanceTrace.StopMeasureTime(wrapperInstance.InstanceComponentName, wrapperInstance.InstanceName, name);
@@ -468,15 +481,28 @@ namespace NetOffice
         {
             try
             {
+                object target = null;
+                Type type = null;
+
                 ICOMObject wrapperInstance = comObject as ICOMObject;
                 if (null != wrapperInstance && wrapperInstance.IsDisposed)
                     throw new ObjectDisposedException("COMObject");
+                if (null != wrapperInstance)
+                {
+                    target = wrapperInstance.UnderlyingObject;
+                    type = wrapperInstance.UnderlyingType;
+                }
+                else
+                {
+                    target = comObject;
+                    type = comObject.GetType();
+                }
 
                 bool measureStarted = false;
                 if (null != wrapperInstance)
                     measureStarted = Settings.PerformanceTrace.StartMeasureTime(wrapperInstance.InstanceComponentName, wrapperInstance.InstanceName, name, PerformanceTrace.CallType.Method);
 
-                comObject.GetType().InvokeMember(name, BindingFlags.InvokeMethod | BindingFlags.GetProperty, null, comObject, paramsArray, Settings.Default.ThreadCulture);
+                type.InvokeMember(name, BindingFlags.InvokeMethod | BindingFlags.GetProperty, null, target, paramsArray, Settings.Default.ThreadCulture);
 
                 if (measureStarted)
                     Settings.PerformanceTrace.StopMeasureTime(wrapperInstance.InstanceComponentName, wrapperInstance.InstanceName, name);
@@ -663,15 +689,28 @@ namespace NetOffice
         {
             try
             {
+                object target = null;
+                Type type = null;
+
                 ICOMObject wrapperInstance = comObject as ICOMObject;
                 if (null != wrapperInstance && wrapperInstance.IsDisposed)
                     throw new ObjectDisposedException("COMObject");
+                if (null != wrapperInstance)
+                {
+                    target = wrapperInstance.UnderlyingObject;
+                    type = wrapperInstance.UnderlyingType;
+                }
+                else
+                {
+                    target = comObject;
+                    type = comObject.GetType();
+                }
 
                 bool measureStarted = false;
                 if (null != wrapperInstance)
                     measureStarted = Settings.PerformanceTrace.StartMeasureTime(wrapperInstance.InstanceComponentName, wrapperInstance.InstanceName, name, PerformanceTrace.CallType.PropertyGet);
 
-                object returnValue = comObject.GetType().InvokeMember(name, BindingFlags.GetProperty, null, comObject, null, Settings.Default.ThreadCulture);
+                object returnValue = type.InvokeMember(name, BindingFlags.GetProperty, null, target, null, Settings.Default.ThreadCulture);
 
                 if (measureStarted)
                     Settings.PerformanceTrace.StopMeasureTime(wrapperInstance.InstanceComponentName, wrapperInstance.InstanceName, name);
@@ -728,15 +767,28 @@ namespace NetOffice
         {
             try
             {
+                object target = null;
+                Type type = null;
+
                 ICOMObject wrapperInstance = comObject as ICOMObject;
                 if (null != wrapperInstance && wrapperInstance.IsDisposed)
                     throw new ObjectDisposedException("COMObject");
+                if(null != wrapperInstance)
+                {
+                    target = wrapperInstance.UnderlyingObject;
+                    type = wrapperInstance.UnderlyingType;
+                }
+                else
+                {
+                    target = comObject;
+                    type = comObject.GetType();
+                }
 
                 bool measureStarted = false;
                 if(null != wrapperInstance)
                     measureStarted = Settings.PerformanceTrace.StartMeasureTime(wrapperInstance.InstanceComponentName, wrapperInstance.InstanceName, name, PerformanceTrace.CallType.PropertyGet);
 
-                object returnValue = comObject.GetType().InvokeMember(name, BindingFlags.GetProperty, null, comObject, paramsArray, Settings.Default.ThreadCulture);
+                object returnValue = type.InvokeMember(name, BindingFlags.GetProperty, null, target, paramsArray, Settings.Default.ThreadCulture);
              
                 if (measureStarted)
                     Settings.PerformanceTrace.StopMeasureTime(wrapperInstance.InstanceComponentName, wrapperInstance.InstanceName, name);
@@ -749,7 +801,7 @@ namespace NetOffice
                 throw new System.Runtime.InteropServices.COMException(GetExceptionMessage(throwedException), throwedException);
             }
         }
-
+        
         /// <summary>
         /// Perform property get as latebind call with return value
         /// </summary>
@@ -1194,10 +1246,6 @@ namespace NetOffice
         {
             switch (Settings.Default.UseExceptionMessage)
             {
-                case ExceptionMessageHandling.Default:
-
-                    return Settings.Default.ExceptionMessage;
-
                 case ExceptionMessageHandling.CopyInnerExceptionMessageToTopLevelException:
 
                     string message = string.Empty;

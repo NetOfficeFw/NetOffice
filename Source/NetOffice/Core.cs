@@ -8,7 +8,7 @@ using COMTypes = System.Runtime.InteropServices.ComTypes;
 
 namespace NetOffice
 {
-    #region IDispatch
+    #region IDispatch - imagine a world without...
 
     /// <summary>
     /// Exposes objects, methods and properties to programming tools and other applications that support Automation. COM components implement the IDispatch interface to enable access by Automation clients, such as Visual Basic.
@@ -890,6 +890,15 @@ namespace NetOffice
                 isLocked = true;
 
                 IFactoryInfo factoryInfo = GetFactoryInfo(comProxy);
+                if (null == factoryInfo)
+                {
+                    Type comProxyType2 = null;
+                    ICOMObject newInstance2 = CreateObjectFromComProxy(factoryInfo, caller, comProxy, comProxyType2, "", "");
+                    newInstance2 = TryReplaceInstance(caller, newInstance2, comProxyType2);
+
+                    return newInstance2;
+                }
+
                 string className = TypeDescriptor.GetClassName(comProxy);
                 string fullClassName = factoryInfo.AssemblyNamespace + "." + className;
 
@@ -941,6 +950,14 @@ namespace NetOffice
                 isLocked = true;
 
                 IFactoryInfo factoryInfo = GetFactoryInfo(comProxy);
+                if (null == factoryInfo)
+                {
+                    Type comProxyType2 = null;
+                    ICOMObject newInstance2 = CreateObjectFromComProxy(factoryInfo, caller, comProxy, comProxyType2, "", "");
+                    newInstance2 = TryReplaceInstance(caller, newInstance2, comProxyType2);
+
+                    return newInstance2;
+                }
 
                 string className = TypeDescriptor.GetClassName(comProxy);
                 string fullClassName = factoryInfo.AssemblyNamespace + "." + className;
@@ -996,7 +1013,7 @@ namespace NetOffice
                 else
                 {
                     // create new classType
-                    classType = factoryInfo.Assembly.GetType(fullClassName, false, true);
+                    classType = null != factoryInfo ? factoryInfo.Assembly.GetType(fullClassName, false, true) : null;
                     if (null == classType)
                     {
                         if (Settings.EnableDynamicObjects)
@@ -1458,10 +1475,7 @@ namespace NetOffice
         private IFactoryInfo GetFactoryInfo(object comProxy)
         {
             if (_factoryList.Count == 0)
-            {
-                string notInitMessage = "Factory is not initialized with NetOffice assemblies.";
-                throw new NetOfficeException(notInitMessage);
-            }
+                return null;
 
             string className = TypeDescriptor.GetClassName(comProxy);
             Guid hostGuid = GetParentLibraryGuid(comProxy);

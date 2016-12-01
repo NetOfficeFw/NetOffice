@@ -121,7 +121,7 @@ namespace NetOffice.Tools
             }
             return false;
         }
-
+        
         /// <summary>
         /// Looks for the CustomUIAttribute
         /// </summary>

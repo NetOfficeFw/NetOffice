@@ -281,7 +281,7 @@ namespace NetOffice.OfficeApi.Tools
             }
         }
 
-        void IDTExtensibility2.OnConnection(object Application, ext_ConnectMode ConnectMode, object AddInInst, ref Array custom)
+        void IDTExtensibility2.OnConnection(object application, ext_ConnectMode ConnectMode, object AddInInst, ref Array custom)
         {
             try
             {
@@ -299,7 +299,7 @@ namespace NetOffice.OfficeApi.Tools
                     System.Int32.TryParse(tryString, out _automationCode);
                 }
 
-                this.Application = Factory.CreateObjectFromComProxy(null, Application);
+                this.Application = Factory.CreateObjectFromComProxy(null, application);
                 Utils = OnCreateUtils();
                 RaiseOnConnection(Application, ConnectMode, AddInInst, ref custom);
             }
