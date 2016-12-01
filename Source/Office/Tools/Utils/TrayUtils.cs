@@ -2,11 +2,15 @@
 using System.ComponentModel;
 using System.Collections.Generic;
 using System.Drawing;
+using System.Reflection;
+using System.Runtime.InteropServices;
 using System.Windows.Forms;
 using System.Text;
+using System.Runtime;
+using System.Collections;
 
 namespace NetOffice.OfficeApi.Tools.Utils
-{
+{       
     /// <summary>
     /// Tray related utils
     /// </summary>
@@ -18,6 +22,8 @@ namespace NetOffice.OfficeApi.Tools.Utils
         private NotifyIcon _icon;
         private Icon _applicationIcon;
         private bool _applicationIconResolved;
+        private bool _visible = true;
+        private bool _suspendOnAutomation = true;
 
         #endregion
 
@@ -32,6 +38,7 @@ namespace NetOffice.OfficeApi.Tools.Utils
             if (null == owner)
                 throw new ArgumentNullException("owner");
             _owner = owner;
+            Menu = new TrayMenu(owner.Owner);             
         }
 
         #endregion
@@ -66,31 +73,54 @@ namespace NetOffice.OfficeApi.Tools.Utils
         /// <summary>
         /// Occurs when the user clicks a NotifyIcon with the mouse
         /// </summary>
-        public event MouseEventHandler MouseClick;
+        public event ToolsMouseEventHandler MouseClick;
         
         /// <summary>
         /// Occurs when the user double-clicks the NotifyIcon with the mouse
         /// </summary>
-        public event MouseEventHandler MouseDoubleClick;
+        public event ToolsMouseEventHandler MouseDoubleClick;
         
         /// <summary>
         /// Occurs when the user presses the mouse button while the pointer is over the icon in the notification area of the taskbar
         /// </summary>
-        public event MouseEventHandler MouseDown;
+        public event ToolsMouseEventHandler MouseDown;
         
         /// <summary>
         /// Occurs when the user moves the mouse while the pointer is over the icon in the notification area of the taskbar
         /// </summary>
-        public event MouseEventHandler MouseMove;
+        public event ToolsMouseEventHandler MouseMove;
 
         /// <summary>
         /// Occurs when the user releases the mouse button while the pointer is over the icon in the notification area of the taskbar
         /// </summary>
-        public event MouseEventHandler MouseUp;
+        public event ToolsMouseEventHandler MouseUp;
 
         #endregion
-
+        
         #region Properties
+
+        /// <summary>
+        /// Tray Item Menu
+        /// </summary>
+        public TrayMenu Menu { get; private set; }
+
+        /// <summary>
+        /// Dont show if the owner application is in automation mode
+        /// </summary>
+        public bool SuspendOnAutomation
+        {
+            get
+            {
+                return _suspendOnAutomation;
+            }
+            set
+            {
+                if (value != _suspendOnAutomation)
+                {
+                    _suspendOnAutomation = value;
+                }
+            }
+        }
 
         /// <summary>
         /// Gets or sets the ToolTip text displayed when the mouse pointer rests on a notification area icon
@@ -152,60 +182,22 @@ namespace NetOffice.OfficeApi.Tools.Utils
         /// <summary>
         /// Gets or sets the icon to display on the balloon tip associated with the NotifyIcon
         /// </summary>
-        public ToolTipIcon BallonTipIcon
+        public TrayToolTipIcon BallonTipIcon
         {
             get
             {
-                return null != _icon ? _icon.BalloonTipIcon : ToolTipIcon.None;
+                return null != _icon ? (TrayToolTipIcon)_icon.BalloonTipIcon : TrayToolTipIcon.None;
             }
             set
             {
-                if (ToolTipIcon.None == value && null == _icon)
+                if (TrayToolTipIcon.None == value && null == _icon)
                     return;
                 if (null == _icon)
                     _icon = CreateConnectTray();
-                _icon.BalloonTipIcon = value;
+                _icon.BalloonTipIcon = (ToolTipIcon)value;
             }
         }
-       
-        /// <summary>
-        /// Gets or sets the shortcut menu associated with the NotifyIcon
-        /// </summary>
-        public ContextMenuStrip ContextMenuStrip
-        {
-            get
-            {
-                return null != _icon ? _icon.ContextMenuStrip : null;
-            }
-            set
-            {
-                if (null == value && null == _icon)
-                    return;
-                if (null == _icon)
-                    _icon = CreateConnectTray();
-                _icon.ContextMenuStrip = value;
-            }
-        }
-
-        /// <summary>
-        /// Gets or sets the shortcut menu for the icon
-        /// </summary>
-        public ContextMenu ContextMenu
-        {
-            get 
-            {
-                return null != _icon ? _icon.ContextMenu : null;
-            }
-            set
-            {
-                if (null == value && null == _icon)
-                    return;
-                if (null == _icon)
-                    _icon = CreateConnectTray();
-                _icon.ContextMenu = value;
-            }
-        }
-       
+         
         /// <summary>
         /// Gets or sets the current icon
         /// </summary>
@@ -217,14 +209,13 @@ namespace NetOffice.OfficeApi.Tools.Utils
             }
             set
             {
-                if (null == value && null == _icon)
-                    return;
-                if (null == _icon)
-                    _icon = CreateConnectTray();
-                _icon.Icon = value;
+                if (null != _icon)
+                    _icon.Icon = value;
+                else
+                    _icon = CreateConnectTray(value);
             }
         }
-        
+         
         /// <summary>
         /// Gets or sets a value indicating whether the icon is visible in the notification area of the taskbar
         /// </summary>
@@ -232,10 +223,11 @@ namespace NetOffice.OfficeApi.Tools.Utils
         {
             get
             {
-                return null != _icon && _icon.Visible == true;
+                return null != _icon ? _visible : false;
             }
             set
             {
+                _visible = value;
                 if (null == _icon && false == value)
                     return;
 
@@ -243,7 +235,6 @@ namespace NetOffice.OfficeApi.Tools.Utils
                 {
                     if(null == _icon)
                         _icon = CreateConnectTray();
-                    _icon.Visible = value;
                 }
                 else
                 {
@@ -253,6 +244,9 @@ namespace NetOffice.OfficeApi.Tools.Utils
                         _icon = null;
                     }
                 }
+
+                if (null != _icon)
+                    _icon.Visible = GetEffectiveVisibility();
             }
         }
 
@@ -287,13 +281,11 @@ namespace NetOffice.OfficeApi.Tools.Utils
         /// </summary>
         /// <param name="visible">tray visibility</param>
         /// <param name="text">shown text</param>
-        /// <param name="contextMenu">shortcut menu</param>
         /// <param name="icon">shown icon</param>
-        public void Setup(bool visible, string text, ContextMenu contextMenu, Icon icon)
+        public void Setup(bool visible, string text, Icon icon)
         {
             Visible = visible;
             Text = text;
-            ContextMenu = contextMenu;
             Icon = icon;
         }
 
@@ -302,24 +294,7 @@ namespace NetOffice.OfficeApi.Tools.Utils
         /// </summary>
         /// <param name="visible">tray visibility</param>
         /// <param name="text">shown text</param>
-        /// <param name="contextMenu">shortcut menu</param>
         /// <param name="iconResource">full qualified icon resource address</param>
-        public void Setup(bool visible, string text, ContextMenu contextMenu, string iconResource)
-        {
-            Visible = visible;
-            Text = text;
-            ContextMenu = contextMenu;
-            System.IO.Stream iconStream = ReadRessource(iconResource);
-            if (null != iconStream)
-                Icon = new System.Drawing.Icon(iconStream);
-        }
-
-        /// <summary>
-        ///  Setup tray as one call
-        /// </summary>
-        /// <param name="visible">tray visibility</param>
-        /// <param name="text">shown text</param>
-        ///  <param name="iconResource">full qualified icon resource address</param>
         public void Setup(bool visible, string text, string iconResource)
         {
             Visible = visible;
@@ -347,11 +322,23 @@ namespace NetOffice.OfficeApi.Tools.Utils
         /// <param name="tipTitle">The title to display on the balloon tip.</param>
         /// <param name="tiptext">The text to display on the balloon tip</param>
         /// <param name="tipIcon">One of the ToolTipIcon values</param>
-        public void ShowBalloonTip(int timeout, string tipTitle, string tiptext, ToolTipIcon tipIcon)
+        public void ShowBalloonTip(int timeout, string tipTitle, string tiptext, TrayToolTipIcon tipIcon)
         {
             if (null == _icon)
                 _icon = CreateConnectTray();
-            _icon.ShowBalloonTip(timeout, tipTitle, tiptext, tipIcon);
+            _icon.ShowBalloonTip(timeout, tipTitle, tiptext, (ToolTipIcon)tipIcon);
+        }
+
+        /// <summary>
+        /// Bring up the menu if exists
+        /// </summary>
+        internal void ShowContextMenu()
+        {
+            if (null != _icon.ContextMenuStrip)
+            {
+                MethodInfo showMethod = typeof(NotifyIcon).GetMethod("ShowContextMenu", BindingFlags.Instance | BindingFlags.NonPublic);
+                showMethod.Invoke(_icon, null);
+            }
         }
 
         /// <summary>
@@ -376,18 +363,32 @@ namespace NetOffice.OfficeApi.Tools.Utils
             else
                 result = new NotifyIcon();
 
-            result.Icon = ApplicationIcon;
+            result.ContextMenuStrip = Menu.GetMenuInternal<ContextMenuStrip>();
+
+            result.Visible = GetEffectiveVisibility();
+            result.Icon = null != Icon ? Icon : ApplicationIcon;
             return result;
         }
 
         /// <summary>
         /// Dispose inner NotifyIcon instance
         /// </summary>
-        /// <param name="icon">inner NotifyIcon instance</param>
-        protected internal virtual void DisposeTray(NotifyIcon icon)
+        protected internal virtual void DisposeTrayIcon()
         {
-            if (null != icon)
-                icon.Dispose();
+            if (null != _icon)
+            {                
+                _icon.Dispose();
+                _icon = null;
+            }
+        }
+
+        /// <summary>
+        /// Dispose inner menu instance
+        /// </summary>
+        protected internal virtual void DisposeMenu()
+        {
+            if (null != Menu && false == Menu.IsDisposed)
+                Menu.Dispose();
         }
 
         /// <summary>
@@ -396,8 +397,15 @@ namespace NetOffice.OfficeApi.Tools.Utils
         internal void DisposeTray()
         {
             DisconnectEvents(_icon);
-            DisposeTray(_icon);
-            _icon = null;
+            DisposeMenu();
+            DisposeTrayIcon();           
+        }
+
+        private NotifyIcon CreateConnectTray(Icon value)
+        {
+            NotifyIcon icon = CreateTray();
+            icon.Icon = value;
+            return icon;
         }
 
         private NotifyIcon CreateConnectTray()
@@ -406,6 +414,14 @@ namespace NetOffice.OfficeApi.Tools.Utils
             if (null != icon)
                 ConnectEvents(icon);
             return icon;
+        }
+
+        private bool GetEffectiveVisibility()
+        {
+            if (SuspendOnAutomation && _owner.IsAutomation)
+                return false;
+            else
+                return _visible;
         }
 
         private void ConnectEvents(NotifyIcon icon)
@@ -465,8 +481,17 @@ namespace NetOffice.OfficeApi.Tools.Utils
 
         private System.IO.Stream ReadRessource(string address)
         {
+            if (null == _owner || null == _owner.Owner || null == _owner.OwnerAssembly)
+                return null;
+
             System.Reflection.Assembly assembly = _owner.OwnerAssembly;
-            return assembly.GetManifestResourceStream(address);
+            System.IO.Stream stream = assembly.GetManifestResourceStream(address);
+            if (null == stream)
+            {
+                string space = _owner.Owner.GetType().Namespace;
+                stream = assembly.GetManifestResourceStream(space + "." + address);
+            }
+            return stream;
         }
 
         #endregion
@@ -478,7 +503,7 @@ namespace NetOffice.OfficeApi.Tools.Utils
             try
             {
                 if (null != MouseUp)
-                    MouseUp(this, e);
+                    MouseUp(this, new ToolsMouseEventArgs((ToolsMouseButtons)e.Button, e.Clicks, e.X, e.Y, e.Delta));
             }
             catch (Exception exception)
             {
@@ -490,9 +515,9 @@ namespace NetOffice.OfficeApi.Tools.Utils
         private void Icon_MouseMove(object sender, MouseEventArgs e)
         {
             try
-            {
+            {                 
                 if (null != MouseMove)
-                    MouseMove(this, e);
+                    MouseMove(this, new ToolsMouseEventArgs((ToolsMouseButtons)e.Button, e.Clicks, e.X, e.Y, e.Delta));
             }
             catch (Exception exception)
             {
@@ -506,7 +531,7 @@ namespace NetOffice.OfficeApi.Tools.Utils
             try
             {
                 if (null != MouseDown)
-                    MouseDown(this, e);
+                    MouseDown(this, new ToolsMouseEventArgs((ToolsMouseButtons)e.Button, e.Clicks, e.X, e.Y, e.Delta));
             }
             catch (Exception exception)
             {
@@ -520,7 +545,7 @@ namespace NetOffice.OfficeApi.Tools.Utils
             try
             {
                 if (null != MouseDoubleClick)
-                    MouseDoubleClick(this, e);
+                    MouseDoubleClick(this, new ToolsMouseEventArgs((ToolsMouseButtons)e.Button, e.Clicks, e.X, e.Y, e.Delta));
             }
             catch (Exception exception)
             {
@@ -534,7 +559,7 @@ namespace NetOffice.OfficeApi.Tools.Utils
             try
             {
                 if (null != MouseClick)
-                    MouseClick(this, e);
+                    MouseClick(this, new ToolsMouseEventArgs((ToolsMouseButtons)e.Button, e.Clicks, e.X, e.Y, e.Delta));
             }
             catch (Exception exception)
             {
@@ -561,6 +586,10 @@ namespace NetOffice.OfficeApi.Tools.Utils
         {
             try
             {
+                MouseEventArgs args = e as MouseEventArgs;
+                if (true == Menu.Enabled && args.Button == MouseButtons.Left && Menu.ClickMode == TrayMenuClickMode.LeftRight)
+                    ShowContextMenu();
+
                 if (null != Click)
                     Click(this, e);
             }

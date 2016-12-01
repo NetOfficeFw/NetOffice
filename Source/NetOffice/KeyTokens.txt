@@ -1,0 +1,90 @@
+﻿; Net 2.0
+AccessApi, Version=1.7.4.0, Culture=neutral, PublicKeyToken=d4f7868a265c6f35
+ADODBApi, Version=1.7.4.0, Culture=neutral, PublicKeyToken=79786e2b2ed00184
+DAOApi, Version=1.7.4.0, Culture=neutral, PublicKeyToken=60c5490ba96218d5
+ExcelApi, Version=1.7.4.0, Culture=neutral, PublicKeyToken=b1d22616f2ea9ad3
+MSComctlLibApi, Version=1.7.4.0, Culture=neutral, PublicKeyToken=7647dcd105bbe5a3
+MSDATASRCApi, Version=1.7.4.0, Culture=neutral, PublicKeyToken=45d1611e447df1ad
+MSHTMLApi, Version=1.7.4.0, Culture=neutral, PublicKeyToken=d42b1e8efab3ab43
+MSProjectApi, Version=1.7.4.0, Culture=neutral, PublicKeyToken=a1cc6066d2a73e1f
+OfficeApi, Version=1.7.4.0, Culture=neutral, PublicKeyToken=0e3d40a252277b73
+OutlookApi, Version=1.7.4.0, Culture=neutral, PublicKeyToken=460328a05e6c843b
+OWC10Api, Version=1.7.4.0, Culture=neutral, PublicKeyToken=d1149e7bfb441e2c
+PowerPointApi, Version=1.7.4.0, Culture=neutral, PublicKeyToken=b20ee04b8e2fa16a
+VBIDEApi, Version=1.7.4.0, Culture=neutral, PublicKeyToken=856d3723dd1af5d0
+VisioApi, Version=1.7.4.0, Culture=neutral, PublicKeyToken=580e821f1f5b357e
+WordApi, Version=1.7.4.0, Culture=neutral, PublicKeyToken=7958c9297f5caeff
+MSFormsApi, Version=1.7.4.0, Culture=neutral, PublicKeyToken=3c9e48e86344ca61
+
+; Net 3.0
+AccessApi, Version=1.7.4.0, Culture=neutral, PublicKeyToken=57b136d5ba296daf
+ADODBApi, Version=1.7.4.0, Culture=neutral, PublicKeyToken=fa20339028ccf214
+DAOApi, Version=1.7.4.0, Culture=neutral, PublicKeyToken=902891a8b288327e
+ExcelApi, Version=1.7.4.0, Culture=neutral, PublicKeyToken=a1fde35d237aac57
+MSComctlLibApi, Version=1.7.4.0, Culture=neutral, PublicKeyToken=1947d19f6334ddb3
+MSDATASRCApi, Version=1.7.4.0, Culture=neutral, PublicKeyToken=6a8f81019d3ee94b
+MSHTMLApi, Version=1.7.4.0, Culture=neutral, PublicKeyToken=35bddb1fa2889706
+MSProjectApi, Version=1.7.4.0, Culture=neutral, PublicKeyToken=c7dc72129a0add75
+OfficeApi, Version=1.7.4.0, Culture=neutral, PublicKeyToken=c715804150f0f632
+OutlookApi, Version=1.7.4.0, Culture=neutral, PublicKeyToken=e403fc9f0fc97a12
+OWC10Api, Version=1.7.4.0, Culture=neutral, PublicKeyToken=802f97d972f5f8ef
+PowerPointApi, Version=1.7.4.0, Culture=neutral, PublicKeyToken=105c37b64ff74c60
+VBIDEApi, Version=1.7.4.0, Culture=neutral, PublicKeyToken=228423eb462131d3
+VisioApi, Version=1.7.4.0, Culture=neutral, PublicKeyToken=34b1c8cb8940fbc3
+WordApi, Version=1.7.4.0, Culture=neutral, PublicKeyToken=1a54e18d08420be8
+MSFormsApi, Version=1.7.4.0, Culture=neutral, PublicKeyToken=8059f716685c40e8
+
+; Net 3.5
+AccessApi, Version=1.7.4.0, Culture=neutral, PublicKeyToken=5b2ef0200570faf8
+ADODBApi, Version=1.7.4.0, Culture=neutral, PublicKeyToken=e10e25b1d6fc5073
+DAOApi, Version=1.7.4.0, Culture=neutral, PublicKeyToken=4a9996466a157d31
+ExcelApi, Version=1.7.4.0, Culture=neutral, PublicKeyToken=0b8d9ba5199d6dcb
+MSComctlLibApi, Version=1.7.4.0, Culture=neutral, PublicKeyToken=d32e2ae3eb0953aa
+MSDATASRCApi, Version=1.7.4.0, Culture=neutral, PublicKeyToken=cb482ff17e1b6deb
+MSHTMLApi, Version=1.7.4.0, Culture=neutral, PublicKeyToken=b547170db0c8d047
+MSProjectApi, Version=1.7.4.0, Culture=neutral, PublicKeyToken=e3b104f28e2168c5
+OfficeApi, Version=1.7.4.0, Culture=neutral, PublicKeyToken=1208423a019d3443
+OutlookApi, Version=1.7.4.0, Culture=neutral, PublicKeyToken=ab91c198d7b96dca
+OWC10Api, Version=1.7.4.0, Culture=neutral, PublicKeyToken=179606fbb8e4a0c1
+PowerPointApi, Version=1.7.4.0, Culture=neutral, PublicKeyToken=e888c77e9ddab5e6
+VBIDEApi, Version=1.7.4.0, Culture=neutral, PublicKeyToken=6040f8ab492f76a1
+VisioApi, Version=1.7.4.0, Culture=neutral, PublicKeyToken=fe4ae256de44f5fc
+WordApi, Version=1.7.4.0, Culture=neutral, PublicKeyToken=4ce962cc9e5644e3
+MSFormsApi, Version=1.7.4.0, Culture=neutral, PublicKeyToken=3792b2943525f42b
+
+; Net 4.0
+AccessApi, Version=1.7.4.0, Culture=neutral, PublicKeyToken=3bfc48da42c3238a
+ADODBApi, Version=1.7.4.0, Culture=neutral, PublicKeyToken=a426381b6dbd993f
+DAOApi, Version=1.7.4.0, Culture=neutral, PublicKeyToken=19cb4234a61cee95
+ExcelApi, Version=1.7.4.0, Culture=neutral, PublicKeyToken=9084b9221296229e
+MSComctlLibApi, Version=1.7.4.0, Culture=neutral, PublicKeyToken=b97b7d9cfa816715
+MSDATASRCApi, Version=1.7.4.0, Culture=neutral, PublicKeyToken=afe692b65e0db609
+MSHTMLApi, Version=1.7.4.0, Culture=neutral, PublicKeyToken=9fe3ce00842d84e9
+MSProjectApi, Version=1.7.4.0, Culture=neutral, PublicKeyToken=b3f793e50f46b653
+OfficeApi, Version=1.7.4.0, Culture=neutral, PublicKeyToken=a39beb0835c43c8e
+OutlookApi, Version=1.7.4.0, Culture=neutral, PublicKeyToken=b118031aaa1097f3
+OWC10Api, Version=1.7.4.0, Culture=neutral, PublicKeyToken=a2b945645f1c78b9
+PowerPointApi, Version=1.7.4.0, Culture=neutral, PublicKeyToken=f3aefb8851e52dd2
+VBIDEApi, Version=1.7.4.0, Culture=neutral, PublicKeyToken=931cec8882205047
+VisioApi, Version=1.7.4.0, Culture=neutral, PublicKeyToken=bfcd37a3a83f1609
+WordApi, Version=1.7.4.0, Culture=neutral, PublicKeyToken=f66d74591aaf8089
+MSFormsApi, Version=1.7.4.0, Culture=neutral, PublicKeyToken=a65c2341212e2d10
+PublisherApi, Version=1.7.4.0, Culture=neutral, PublicKeyToken=2133a4c2cfc56bf6
+
+; Net 4.5
+AccessApi, Version=1.7.4.0, Culture=neutral, PublicKeyToken=85bd60fd6dfed89b
+ADODBApi, Version=1.7.4.0, Culture=neutral, PublicKeyToken=cc99d88d783d7f41
+DAOApi, Version=1.7.4.0, Culture=neutral, PublicKeyToken=3d873987acdf56da
+ExcelApi, Version=1.7.4.0, Culture=neutral, PublicKeyToken=26cf6d85ba68fa54
+MSComctlLibApi, Version=1.7.4.0, Culture=neutral, PublicKeyToken=bba1bf2f2fb1e5f0
+MSDATASRCApi, Version=1.7.4.0, Culture=neutral, PublicKeyToken=a98e294f8fb95dcc
+MSHTMLApi, Version=1.7.4.0, Culture=neutral, PublicKeyToken=dffaea3fe25a73df
+MSProjectApi, Version=1.7.4.0, Culture=neutral, PublicKeyToken=5cc980d735d6a378
+OfficeApi, Version=1.7.4.0, Culture=neutral, PublicKeyToken=7c1c3e9d16cace88
+OutlookApi, Version=1.7.4.0, Culture=neutral, PublicKeyToken=865d86a9c321c488
+OWC10Api, Version=1.7.4.0, Culture=neutral, PublicKeyToken=df8d2bc021e344f5
+PowerPointApi, Version=1.7.4.0, Culture=neutral, PublicKeyToken=2aedeb5ce89d4005
+VBIDEApi, Version=1.7.4.0, Culture=neutral, PublicKeyToken=a3637beacf571e8a
+VisioApi, Version=1.7.4.0, Culture=neutral, PublicKeyToken=172ecde5705465af
+WordApi, Version=1.7.4.0, Culture=neutral, PublicKeyToken=dd9255e6bcd130c8
+MSFormsApi, Version=1.7.4.0, Culture=neutral, PublicKeyToken=54e2ad1925d2151d

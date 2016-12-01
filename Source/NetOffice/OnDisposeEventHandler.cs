@@ -13,7 +13,7 @@ namespace NetOffice
         /// creates a new instance
         /// </summary>
         /// <param name="sender">the target COM object</param>
-        internal OnDisposeEventArgs(COMObject sender)
+        internal OnDisposeEventArgs(ICOMObject sender)
         {
             Sender = sender;
         }
@@ -21,7 +21,7 @@ namespace NetOffice
         /// <summary>
         /// the target COM object
         /// </summary>
-        public COMObject Sender { get; private set; }
+        public ICOMObject Sender { get; private set; }
 
         /// <summary>
         /// Skip flag, you can cancel the operation if you want

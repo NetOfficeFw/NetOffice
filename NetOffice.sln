@@ -50,7 +50,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{06051A8F-2B6
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetOffice.UnitTests", "Tests\NetOffice.UnitTests\NetOffice.UnitTests.csproj", "{0118ABDE-4645-47DB-8C38-748AFD2B35FC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClientAddin", "Source\ClientAddin\ClientAddin.csproj", "{BB59318E-607A-4E20-B659-E6A7DAC76D1E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PublisherApi", "Publisher\PublisherApi.csproj", "{044A2BC3-7F84-4BEC-8B99-9E3432FAD88E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -132,10 +132,10 @@ Global
 		{0118ABDE-4645-47DB-8C38-748AFD2B35FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0118ABDE-4645-47DB-8C38-748AFD2B35FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0118ABDE-4645-47DB-8C38-748AFD2B35FC}.Release|Any CPU.Build.0 = Release|Any CPU
-		{BB59318E-607A-4E20-B659-E6A7DAC76D1E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{BB59318E-607A-4E20-B659-E6A7DAC76D1E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{BB59318E-607A-4E20-B659-E6A7DAC76D1E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{BB59318E-607A-4E20-B659-E6A7DAC76D1E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{044A2BC3-7F84-4BEC-8B99-9E3432FAD88E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{044A2BC3-7F84-4BEC-8B99-9E3432FAD88E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{044A2BC3-7F84-4BEC-8B99-9E3432FAD88E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{044A2BC3-7F84-4BEC-8B99-9E3432FAD88E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

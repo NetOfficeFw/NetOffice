@@ -25,5 +25,13 @@ namespace NetOffice.Tools
         {
             Enabled = enabled;
         }
+
+        /// <summary>
+        /// Creates an instance of the class
+        /// </summary>
+        public TweakAttribute()
+        {
+            Enabled = true;
+        }
     }
 }

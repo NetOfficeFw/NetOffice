@@ -7,23 +7,7 @@ using System.Reflection;
 using System.Collections.Generic;
 using NetOffice;
 namespace NetOffice.PowerPointApi
-{
-    /// <summary>
-    /// This is part of a hotfix because HWND is not available in late binding
-    /// </summary>
-    [Guid("91493442-5A91-11CF-8700-00AA0060263B"), TypeLibType(4288)]
-    [ComImport]
-    internal interface _ApplicationInternal
-    {
-        [DispId(2031)]
-        int HWNDFoo
-        {
-            [DispId(2031), TypeLibFunc(1)]
-            [MethodImpl(MethodImplOptions.InternalCall)]
-            get;
-        }
-    }
-
+{  
     ///<summary>
     /// DispatchInterface _Application 
     /// SupportByVersion PowerPoint, 9,10,11,12,14,15,16
@@ -56,7 +40,7 @@ namespace NetOffice.PowerPointApi
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
-		public _Application(Core factory, COMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
+		public _Application(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
 		{
 			
 		}
@@ -64,7 +48,7 @@ namespace NetOffice.PowerPointApi
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public _Application(COMObject parentObject, object comProxy) : base(parentObject, comProxy)
+		public _Application(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
 		{
 		}
 		
@@ -73,7 +57,7 @@ namespace NetOffice.PowerPointApi
         ///<param name="comProxy">inner wrapped COM proxy</param>
         ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public _Application(Core factory, COMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
+		public _Application(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
 		{
 
 		}
@@ -82,13 +66,13 @@ namespace NetOffice.PowerPointApi
         ///<param name="comProxy">inner wrapped COM proxy</param>
         ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public _Application(COMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
+		public _Application(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
 		{
 		}
 		
 		///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public _Application(COMObject replacedObject) : base(replacedObject)
+		public _Application(ICOMObject replacedObject) : base(replacedObject)
 		{
 		}
 		
@@ -577,20 +561,20 @@ namespace NetOffice.PowerPointApi
         public Int32 HWND
 		{
 			get
-			{
-                // This is a fix because HWND is not available in late binding
-                // This is allowed because power point application use the same interface in any version
-                _ApplicationInternal item = UnderlyingObject as _ApplicationInternal;
-                if (null != item)
+            {
+                try
                 {
-                    return item.HWNDFoo;
+                    // This is a bypass because HWND is not available in late binding
+                    return Tools.Utils.ApplicationUtils.TryGetHostApplicationWindowHandleFromDesktop(UnderlyingObject);
                 }
-                else
-                { 
-				    object[] paramsArray = null;
-				    object returnItem = Invoker.PropertyGet(this, "HWND", paramsArray);
-				    return NetRuntimeSystem.Convert.ToInt32(returnItem);
+                catch (System.Reflection.TargetInvocationException)
+                {
+                    throw new NotImplementedException();
                 }
+                catch (Exception)
+                {
+                    throw;
+                }                
             }
 		}
 
@@ -1258,7 +1242,7 @@ namespace NetOffice.PowerPointApi
 			object returnItem = Invoker.MethodReturn(this, "Run", paramsArray);
 			if((null != returnItem) && (returnItem is MarshalByRefObject))
 			{
-				COMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
+				ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
 				return newObject;
 			}
 			else
@@ -1280,7 +1264,7 @@ namespace NetOffice.PowerPointApi
 			object returnItem = Invoker.MethodReturn(this, "Run", paramsArray);
 			if((null != returnItem) && (returnItem is MarshalByRefObject))
 			{
-				COMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
+				ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
 				return newObject;
 			}
 			else

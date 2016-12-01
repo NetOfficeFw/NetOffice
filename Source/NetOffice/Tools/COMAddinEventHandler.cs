@@ -11,18 +11,18 @@ namespace NetOffice.Tools
     /// <summary>
     /// OnDisconnection Event Handler
     /// </summary>
-    /// <param name="RemoveMode">kind of remove</param>
+    /// <param name="removeMode">kind of remove</param>
     /// <param name="custom">custom arguments</param>
-    public delegate void OnDisconnectionEventHandler(ext_DisconnectMode RemoveMode, ref Array custom);
+    public delegate void OnDisconnectionEventHandler(ext_DisconnectMode removeMode, ref Array custom);
 
     /// <summary>
     /// OnConnection Event Handler
     /// </summary>
-    /// <param name="Application">application host instance</param>
-    /// <param name="ConnectMode">kind of connect</param>
-    /// <param name="AddInInst">addin instance</param>
+    /// <param name="application">application host instance</param>
+    /// <param name="connectMode">kind of connect</param>
+    /// <param name="addInInst">addin instance</param>
     /// <param name="custom">custom arguments</param>
-    public delegate void OnConnectionEventHandler(object Application, ext_ConnectMode ConnectMode, object AddInInst, ref Array custom);
+    public delegate void OnConnectionEventHandler(object application, ext_ConnectMode connectMode, object addInInst, ref Array custom);
 
     /// <summary>
     /// OnAddInsUpdate Event Handler

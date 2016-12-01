@@ -4,13 +4,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace NetOffice
+namespace NetOffice.Misc
 {
     /// <summary>
     /// BindingList with generic sort
     /// </summary>
     /// <typeparam name="T">generic argument</typeparam>
-    internal class SortableBindingList<T> : BindingList<T>, ITypedList where T : class
+    public class SortableBindingList<T> : BindingList<T>, ITypedList where T : class
     {
         #region Fields
 

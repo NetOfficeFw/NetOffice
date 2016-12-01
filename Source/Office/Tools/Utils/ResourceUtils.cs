@@ -55,7 +55,14 @@ namespace NetOffice.OfficeApi.Tools.Utils
         {
             System.IO.Stream resourceStream = assembly.GetManifestResourceStream(resourceAddress);
             if (resourceStream == null)
+            {
+                string target = _owner.Owner.GetType().Namespace + "." + resourceAddress;
+                resourceStream = assembly.GetManifestResourceStream(target);
+            }
+
+            if (resourceStream == null)
                 throw (new System.IO.IOException("Error accessing resource Stream."));
+
             return resourceStream;
         }
 
@@ -128,7 +135,7 @@ namespace NetOffice.OfficeApi.Tools.Utils
         /// <returns>Resource icon</returns>
         public Icon ReadIcon(string resourceAddress, Assembly assembly)
         {
-            Stream resourceStream = ReadStream(resourceAddress, assembly);
+            Stream resourceStream = ReadStream(resourceAddress, assembly);            
             return new Icon(resourceStream);
         }
 

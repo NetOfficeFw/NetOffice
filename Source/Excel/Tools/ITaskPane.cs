@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using Excel = NetOffice.ExcelApi;
 
 namespace NetOffice.ExcelApi.Tools

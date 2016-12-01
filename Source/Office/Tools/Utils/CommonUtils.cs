@@ -43,7 +43,7 @@ namespace NetOffice.OfficeApi.Tools.Utils
 
         private string _headerCaptionLine;
         private Assembly _ownerAssembly;
-        private COMObject _ownerApplication;
+        private ICOMObject _ownerApplication;
         private bool? _applicationIs2007OrHigher;
         private bool? _adminPermissions;
         private bool _isAutomation;
@@ -62,7 +62,7 @@ namespace NetOffice.OfficeApi.Tools.Utils
         /// Creates an instance of the application
         /// </summary>
         /// <param name="application">owner application</param>
-        public CommonUtils(COMObject application)
+        public CommonUtils(ICOMObject application)
         {
             if (null == application)
                 throw new ArgumentNullException("application");
@@ -76,7 +76,7 @@ namespace NetOffice.OfficeApi.Tools.Utils
         /// </summary>
         /// <param name="application">owner application</param>
         /// <param name="ownerAssembly">owner assembly</param>
-        public CommonUtils(COMObject application, Assembly ownerAssembly)
+        public CommonUtils(ICOMObject application, Assembly ownerAssembly)
         {
             if (null == application)
                 throw new ArgumentNullException("application");
@@ -162,7 +162,7 @@ namespace NetOffice.OfficeApi.Tools.Utils
         /// <summary>
         /// Host/Office Application
         /// </summary>
-        public COMObject OwnerApplication
+        public ICOMObject OwnerApplication
         {
             get
             {
@@ -383,7 +383,7 @@ namespace NetOffice.OfficeApi.Tools.Utils
                 if (null == progId)
                     return RegistryLocationResult.Unknown;
 
-                string path = String.Format("Software\\Office\\{0}\\Addins",
+                string path = String.Format("Software\\Microsoft\\Office\\{0}\\Addins",
                     ApplicationIdentifiers.ConvertApplicationType(applicationType));
 
                 Microsoft.Win32.RegistryKey key =
@@ -442,7 +442,7 @@ namespace NetOffice.OfficeApi.Tools.Utils
                     return RegistryLocationResult.Unknown;
 
                 ApplicationIdentifiers.ApplicationType applicationType =
-                    ApplicationIdentifiers.IsApplication(OwnerApplication.InstanceType.GUID);
+                    ApplicationIdentifiers.IsApplication(OwnerApplication.UnderlyingType.GUID);
                 if (ApplicationIdentifiers.ApplicationType.None == applicationType)
                     return RegistryLocationResult.Unknown;
 

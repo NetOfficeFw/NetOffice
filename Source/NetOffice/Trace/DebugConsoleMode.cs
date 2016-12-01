@@ -24,10 +24,11 @@ namespace NetOffice
         /// </summary>
         LogFile = 2,
 
-        /// <summary>
-        /// Hold all debug and exceptions logs in a internal string list
-        /// </summary>
-        MemoryList = 3,
+        /*
+          MemoryList has been removed in NetOffice 1.7.4
+          All messages goes automaticaly to the internal list now, regardless from the mode.
+          Morevoer the message list want contains only 1000 items and remove the oldest automaticaly.
+        */
 
         /// <summary>
         /// Debug log is redirected to System.Diagnostics.Trace

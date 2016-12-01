@@ -255,6 +255,15 @@ namespace NetOffice
             /// Given arguments as any
             /// </summary>
             public string[] Arguments { get; private set; }
+
+            /// <summary>
+            /// Returns a System.String that represents the instance
+            /// </summary>
+            /// <returns>System.String</returns>
+            public override string ToString()
+            {
+                return String.Format("{0} {1} {2}, {3} Milliseconds", ComponentName, EntityName, MethodName, TimeElapsedMS);
+            }
         }
 
         /// <summary>
@@ -431,6 +440,19 @@ namespace NetOffice
                     }
                 }
             }
+        }
+
+        #endregion
+
+        #region Overrides
+
+        /// <summary>
+        /// Returns a System.String that represents the instance
+        /// </summary>
+        /// <returns>System.String</returns>
+        public override string ToString()
+        {
+            return String.Format("{0} Trace(s)", _repository.Count);
         }
 
         #endregion

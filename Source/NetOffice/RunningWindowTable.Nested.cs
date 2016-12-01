@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Runtime.InteropServices;
 using System.Linq;
 using System.Text;
+using NetOffice.Misc;
 
 namespace NetOffice
 {

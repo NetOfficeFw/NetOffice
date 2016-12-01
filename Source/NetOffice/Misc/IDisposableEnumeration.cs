@@ -6,7 +6,7 @@ using System.Text;
 using System.Collections;
 using System.ComponentModel;
 
-namespace NetOffice
+namespace NetOffice.Misc
 {
     /// <summary>
     /// Represents an IEnumerable:T with the service of you can dispose all items with one call.

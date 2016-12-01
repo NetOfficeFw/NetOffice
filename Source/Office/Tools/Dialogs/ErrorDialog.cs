@@ -135,6 +135,7 @@ namespace NetOffice.OfficeApi.Tools.Dialogs
             if (!String.IsNullOrEmpty(errorMessage))
                 labelErrorMessage.Text = errorMessage;
             dataGridViewErrors.DataSource = ErrorDescription.CreateList(exception);
+            Height = _smallHeight;
         }
 
         #endregion
@@ -215,6 +216,8 @@ namespace NetOffice.OfficeApi.Tools.Dialogs
         {
             try
             {
+                buttonShowDetails.Enabled = false;
+                FormBorderStyle = FormBorderStyle.Sizable;             
                 Height = _extendedHeight;
                 MinimumSize = new System.Drawing.Size(_minimumWidth, _extendedHeight);
                 buttonShowDetails.Enabled = false;

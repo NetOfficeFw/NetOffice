@@ -25,13 +25,34 @@
     <Compile Include="Attributes\ComRegExportCallAttribute.cs" />
     <Compile Include="Attributes\ComRegisterCallAttribute.cs" />
     <Compile Include="Attributes\ComUnregisterCallAttribute.cs.cs" />
+    <Compile Include="COMDynamicObject.cs" />
+    <Compile Include="COMDynamicObjectExpandableObjectConverter.cs" />
+    <Compile Include="COMObjectExpandableObjectConverter.cs" />
+    <Compile Include="COMObjectFaults.cs" />
+    <Compile Include="InstanceTypeNameResolver.cs" />
+    <Compile Include="Misc\SelfDiagnostics.cs" />
+    <Compile Include="Tools\DisableRegisterAttribute.cs" />
+    <Compile Include="DynamicObjectEntity.cs" />
+    <Compile Include="EntityAvailableResolver.cs" />
+    <Compile Include="Tools\ForceInitializeAttribute.cs" />
+    <Compile Include="Tools\ICOMAddin.cs" />
+    <Compile Include="Tools\WndUtils\Win32Window.cs" />
+    <Compile Include="UnderlyingTypeNameResolver.cs" />
+    <Compile Include="Interfaces\ICOMObject.cs" />
+    <Compile Include="Interfaces\ICOMObjectDisposable.cs" />
+    <Compile Include="Interfaces\ICOMObjectEvents.cs" />
+    <Compile Include="Interfaces\ICOMObjectProxy.cs" />
+    <Compile Include="Interfaces\ICOMObjectTable.cs" />
+    <Compile Include="Interfaces\ICOMObjectTableDisposable.cs" />
     <Compile Include="Core.cs" />
     <Compile Include="Loader\CurrentAppDomain.cs" />
     <Compile Include="Misc\SortableBindingList.cs" />
     <Compile Include="ProxyInformation.cs" />
     <Compile Include="ProxyService.cs" />
+    <Compile Include="QuitCaller.cs" />
     <Compile Include="RunningWindowTable.cs" />
     <Compile Include="RunningWindowTable.Nested.cs" />
+    <Compile Include="Tools\IDisposableState.cs" />
     <Compile Include="Tools\LockbackAttribute.cs" />
     <Compile Include="Tools\CodebaseAttribute.cs" />
     <Compile Include="Tools\OfficeRegisterKeyState.cs" />
@@ -44,6 +65,7 @@
     <Compile Include="Tools\RegisterErrorHandler.cs" />
     <Compile Include="Tools\RegisterHandler.cs" />
     <Compile Include="Tools\InstallScope.cs" />
+    <Compile Include="Tools\TimestampAttribute.cs" />
     <Compile Include="Tools\UnRegisterHandler.cs" />
     <Compile Include="Tools\WndUtils\ChildWindowBatchEnumerator.cs" />
     <Compile Include="Tools\WndUtils\Win32.cs" />
@@ -95,6 +117,7 @@
     <Compile Include="Tools\WndUtils\WindowEnumerator.cs" />
     <Compile Include="Tools\WndUtils\ExcelApplicationWindow.cs" />
     <Compile Include="Tools\WndUtils\ProcessElevation.cs" />
+    <Compile Include="UriConvert.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Properties\Resources.resx">

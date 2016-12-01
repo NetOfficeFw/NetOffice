@@ -1,5 +1,6 @@
-using System;
+﻿using System;
 using NetRuntimeSystem = System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Reflection;
 using Microsoft.Win32;
@@ -17,7 +18,7 @@ namespace NetOffice.PowerPointApi.Tools
     /// NetOffice MS-PowerPoint COM Addin
     /// </summary>
 	[ComVisible(true), ClassInterface(ClassInterfaceType.AutoDual)]
-    public abstract class COMAddin : COMAddinBase, IDTExtensibility2, Office.IRibbonExtensibility, Office.ICustomTaskPaneConsumer
+    public abstract class COMAddin : COMAddinBase, IOfficeCOMAddin
     {
         #region Fields
 
@@ -35,6 +36,11 @@ namespace NetOffice.PowerPointApi.Tools
         /// Cache field used in IsLoadedFromSystem() method
         /// </summary>
         private bool? _isLoadedFromSystem;
+     
+        /// <summary>
+        /// Instance factory to avoid trouble with addins in same appdomain
+        /// </summary>
+        private Core _factory;
 
         #endregion
 
@@ -45,12 +51,11 @@ namespace NetOffice.PowerPointApi.Tools
         /// </summary>
         public COMAddin()
         {
-            Factory = RaiseCreateFactory();
-            if (null == Factory)
-                Factory = Core.Default;
+            _factory = RaiseCreateFactory();
+            if (null == _factory)
+                _factory = Core.Default;
             TaskPanes = new CustomTaskPaneCollection();
 			TaskPaneInstances = new List<ITaskPane>();
-            Type = this.GetType();
         }
 
         #endregion
@@ -60,17 +65,7 @@ namespace NetOffice.PowerPointApi.Tools
         /// <summary>
         /// Common Tasks Helper. The property is available after the host application has called OnConnection for the instance
         /// </summary>
-        public Utils.CommonUtils Utils { get; private set; }
-
-        /// <summary>
-        /// The used factory core
-        /// </summary>
-        public Core Factory { get; private set; }
-
-        /// <summary>
-        /// Type Information of the instance
-        /// </summary>
-        protected Type Type { get; set; }
+        public Utils.CommonUtils Utils { get; private set; }     
 
         /// <summary>
         /// Host Application Instance
@@ -110,9 +105,41 @@ namespace NetOffice.PowerPointApi.Tools
         /// Generic Host Application Instance
         /// </summary>
         [Browsable(false), EditorBrowsable(EditorBrowsableState.Never)]
-        public override COMObject AppInstance
+        public override ICOMObject AppInstance
         {
             get { return Application; }
+        }
+
+        /// <summary>
+        /// The used factory core
+        /// </summary>
+        public override Core Factory
+        {
+            get
+            {
+                return _factory;
+            }
+        }
+
+        /// <summary>
+        /// Instance managed root com objects
+        /// </summary>
+        [Browsable(false), EditorBrowsable(EditorBrowsableState.Never)]
+        public override IEnumerable Roots { get; protected set; }
+
+        /// <summary>
+        /// Returns an enumerable sequence with instance managed com objects on root level
+        /// </summary>
+        /// <returns>ICOMObject enumerator</returns>
+        [Browsable(false), EditorBrowsable(EditorBrowsableState.Never)]
+        protected internal virtual IEnumerable<ICOMObject> OnCreateRoots()
+        {
+            List<ICOMObject> result = new List<ICOMObject>();
+            result.Add(Application);
+            if (null != TaskPaneFactory)
+                result.Add(TaskPaneFactory);
+
+            return result.ToArray();
         }
 
         #endregion
@@ -246,6 +273,7 @@ namespace NetOffice.PowerPointApi.Tools
             {
                 Tweaks.ApplyTweaks(Factory, this, Type, "PowerPoint", IsLoadedFromSystem);
                 LoadingTimeElapsed = (DateTime.Now - _creationTime);
+                Roots = OnCreateRoots();
                 RaiseOnStartupComplete(ref custom);
             }
             catch (NetRuntimeSystem.Exception exception)
@@ -259,7 +287,7 @@ namespace NetOffice.PowerPointApi.Tools
         {
             try
             {
-                if (custom.Length > 0)
+                if (null != custom && custom.Length > 0)
                 {
                     object firstCustomItem = custom.GetValue(1);
                     string tryString = null != firstCustomItem ? firstCustomItem.ToString() : String.Empty;
@@ -268,7 +296,7 @@ namespace NetOffice.PowerPointApi.Tools
 
                 this.Application = new PowerPoint.Application(Factory, null, Application);
                 Utils = OnCreateUtils();
-                RaiseOnConnection(Application, ConnectMode, AddInInst, ref custom);
+                RaiseOnConnection(this.Application, ConnectMode, AddInInst, ref custom);
             }
             catch (NetRuntimeSystem.Exception exception)
             {
@@ -420,7 +448,7 @@ namespace NetOffice.PowerPointApi.Tools
 
                 CustomTaskPaneHandler paneHandler = new CustomTaskPaneHandler();
                 paneHandler.ProceedCustomPaneAttributes(TaskPanes, Type, CallOnCreateTaskPaneInfo, AttributePane_VisibleStateChange, AttributePane_DockPositionStateChange);
-                paneHandler.CreateCustomPanes<ITaskPane, PowerPoint.Application>(Factory, CTPFactoryInst, TaskPanes, TaskPaneInstances, OnError, Application);
+                TaskPaneFactory = paneHandler.CreateCustomPanes<ITaskPane, PowerPoint.Application>(Factory, CTPFactoryInst, TaskPanes, TaskPaneInstances, OnError, Application);
             }
             catch (NetRuntimeSystem.Exception exception)
             {
@@ -641,7 +669,14 @@ namespace NetOffice.PowerPointApi.Tools
         /// <returns>new Settings instance</returns>
         protected virtual Core CreateFactory()
         {
-            return new Core();
+            Core core = new Core();
+            ForceInitializeAttribute attribute = AttributeReflector.GetForceInitializeAttribute(Type);
+            if (null != attribute)
+            {
+                core.Settings.EnableDebugOutput = attribute.EnableDebugOutput;
+                core.CheckInitialize();
+            }
+            return core;
         }
 
         /// <summary>
@@ -676,16 +711,20 @@ namespace NetOffice.PowerPointApi.Tools
                 return _isLoadedFromSystem;
 
             OfficeApi.Tools.Utils.RegistryLocationResult result = OfficeApi.Tools.Utils.CommonUtils.TryFindAddinLoadLocation(Type,
-                    ApplicationIdentifiers.ApplicationType.Excel);
+                    ApplicationIdentifiers.ApplicationType.PowerPoint);
             switch (result)
             {
                 case Office.Tools.Utils.RegistryLocationResult.User:
-                    return false;
+                    _isLoadedFromSystem = false;
+                    break;
                 case Office.Tools.Utils.RegistryLocationResult.System:
-                    return true;
+                    _isLoadedFromSystem = true;
+                    break;
                 default:
                     throw new IndexOutOfRangeException();
             }
+
+            return _isLoadedFromSystem;
         }
 
         #endregion
@@ -713,7 +752,6 @@ namespace NetOffice.PowerPointApi.Tools
         [ComRegisterFunctionAttribute, Browsable(false), EditorBrowsable( EditorBrowsableState.Never)]
         public static void RegisterFunction(Type type)
         {
-            System.Windows.Forms.MessageBox.Show("TEST REGISTER");
             RegisterHandler.Proceed(type, new string[] { _addinOfficeRegistryKey }, InstallScope.System, OfficeRegisterKeyState.NeedToCreate);
         }
 

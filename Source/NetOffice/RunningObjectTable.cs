@@ -3,6 +3,7 @@ using System.ComponentModel;
 using System.Runtime.InteropServices;
 using System.Runtime.InteropServices.ComTypes;
 using COMTypes = System.Runtime.InteropServices.ComTypes;
+using NetOffice.Misc;
 
 namespace NetOffice
 {

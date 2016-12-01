@@ -30,7 +30,7 @@ namespace NetOffice.Tools
         private static string[] _noTweakNames = new string[] { "NOConsoleMode", "NOConsoleShare", "NOExceptionHandling", "NOExceptionMessage", "NOCultureInfo", 
                                                                "NOMessageFilter", "NOSafeMode", "NOAdHocLoad", "NODeepLoad",
                                                                "NODebugOut", "NODebugOut", "NOEventOut" };
-        private static string[] _addinValueNames = new string[] { "FriendlyName", "Description", "LoadBehavior", "CommandLineSafe" };
+        private static string[] _addinValueNames = new string[] { "FriendlyName", "Description", "LoadBehavior", "CommandLineSafe", "CreatedAt" };
 
         #endregion
 
@@ -68,6 +68,8 @@ namespace NetOffice.Tools
             try
             {
                 if (null == addinInstance)
+                    return;
+                if (null == useSystemRegistryKey)
                     return;
                 if (null == factory)
                     factory = Core.Default;
