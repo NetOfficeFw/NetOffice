@@ -540,7 +540,7 @@ namespace NetOffice
         private void AddNetOfficeAssemblies()
         {
             var currentAssemblyName = new AssemblyName(this.ThisAssembly.FullName);
-            var netOfficePublicKey = currentAssemblyName.KeyPair.PublicKey;
+            var netOfficePublicKey = currentAssemblyName.GetPublicKeyToken();
 
             _dependentAssemblies.Clear();
 
