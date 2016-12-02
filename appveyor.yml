@@ -35,7 +35,7 @@ cache:
 
 assembly_info:
   patch: true
-  file: AssemblyVersionInfo.*
+  file: SharedAssemblyVersionInfo.cs
   assembly_version: "{version}"
   assembly_file_version: "{version}"
   assembly_informational_version: "1.7.4-alpha-{build}"
