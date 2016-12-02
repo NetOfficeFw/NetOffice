@@ -53,4 +53,5 @@ deploy:
     api_key:
       secure: Zx2NLrf4MlxmeayBVUFmF+nsdJ8lE+yIkvtdAoPM9ASk/fpWl19FiA3n6e9CSXGl
     on:
-      configuration: Release
+      branch: develop
+      configuration: Debug
