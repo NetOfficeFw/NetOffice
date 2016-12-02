@@ -12,7 +12,6 @@ using NetOffice;
 
 [assembly: AssemblyTitle("MSHTML")]
 [assembly: AssemblyDescription("NetOffice MSHTML Api")]
-[assembly: AssemblyConfiguration("")]
 [assembly: PrimaryInteropAssembly(1, 0)]
 [assembly: ImportedFromTypeLib("MSHTML")]
 [assembly: Guid("3050F1C5-98B5-11CF-BB82-00AA00BDCE0B")]

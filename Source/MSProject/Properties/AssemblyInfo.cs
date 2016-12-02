@@ -15,7 +15,6 @@ using NetOffice;
 
 [assembly: AssemblyTitle("MSProject")]
 [assembly: AssemblyDescription("NetOffice MSProject Api")]
-[assembly: AssemblyConfiguration("")]
 [assembly: PrimaryInteropAssembly(1, 0)]
 [assembly: ImportedFromTypeLib("MSProject")]
 [assembly: Guid("A7107640-94DF-1068-855E-00DD01075445")]

@@ -13,7 +13,6 @@ using NetOffice;
 
 [assembly: AssemblyTitle("Publisher")]
 [assembly: AssemblyDescription("NetOffice Publisher Api")]
-[assembly: AssemblyConfiguration("")]
 [assembly: PrimaryInteropAssembly(1, 0)]
 [assembly: ImportedFromTypeLib("Publisher")]
 [assembly: Guid("0002123C-0000-0000-C000-000000000046")]

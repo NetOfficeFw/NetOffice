@@ -6,7 +6,6 @@ using System.Runtime.InteropServices;
 // associated with an assembly.
 [assembly: AssemblyTitle("NetOffice.UnitTests")]
 [assembly: AssemblyDescription("")]
-[assembly: AssemblyConfiguration("")]
 
 [assembly: ComVisible(false)]
 [assembly: Guid("0118abde-4645-47db-8c38-748afd2b35fc")]

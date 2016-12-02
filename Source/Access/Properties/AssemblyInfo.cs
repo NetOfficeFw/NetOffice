@@ -17,7 +17,6 @@ using NetOffice;
 
 [assembly: AssemblyTitle("Access")]
 [assembly: AssemblyDescription("NetOffice Access Api")]
-[assembly: AssemblyConfiguration("")]
 [assembly: PrimaryInteropAssembly(1, 0)]
 [assembly: ImportedFromTypeLib("Access")]
 [assembly: Guid("4AFFC9A0-5F99-101B-AF4E-00AA003F0F07")]

@@ -12,7 +12,6 @@ using NetOffice;
 
 [assembly: AssemblyTitle("MSComctlLib")]
 [assembly: AssemblyDescription("NetOffice MSComctlLib Api")]
-[assembly: AssemblyConfiguration("")]
 [assembly: PrimaryInteropAssembly(1, 0)]
 [assembly: ImportedFromTypeLib("MSComctlLib")]
 [assembly: Guid("831FDD16-0C5C-11D2-A9FC-0000F8754DA1")]

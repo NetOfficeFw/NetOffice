@@ -13,7 +13,6 @@ using NetOffice;
 
 [assembly: AssemblyTitle("ADODB")]
 [assembly: AssemblyDescription("NetOffice ADODB Api")]
-[assembly: AssemblyConfiguration("")]
 [assembly: PrimaryInteropAssembly(1, 0)]
 [assembly: ImportedFromTypeLib("ADODB")]
 [assembly: Guid("00000201-0000-0010-8000-00AA006D2EA4")]

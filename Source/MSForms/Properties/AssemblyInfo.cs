@@ -12,7 +12,6 @@ using NetOffice;
 
 [assembly: AssemblyTitle("MSForms")]
 [assembly: AssemblyDescription("NetOffice MSForms Api")]
-[assembly: AssemblyConfiguration("")]
 [assembly: PrimaryInteropAssembly(1, 0)]
 [assembly: ImportedFromTypeLib("MSForms")]
 [assembly: Guid("0D452EE1-E08F-101A-852E-02608C4D0BB4")]

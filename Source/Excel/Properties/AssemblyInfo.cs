@@ -17,7 +17,6 @@ using NetOffice;
 
 [assembly: AssemblyTitle("Excel")]
 [assembly: AssemblyDescription("NetOffice Excel Api")]
-[assembly: AssemblyConfiguration("")]
 [assembly: PrimaryInteropAssembly(1, 0)]
 [assembly: ImportedFromTypeLib("Excel")]
 [assembly: Guid("00020813-0000-0000-C000-000000000046")]

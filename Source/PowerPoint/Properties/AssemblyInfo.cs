@@ -17,7 +17,6 @@ using NetOffice;
 
 [assembly: AssemblyTitle("PowerPoint")]
 [assembly: AssemblyDescription("NetOffice PowerPoint Api")]
-[assembly: AssemblyConfiguration("")]
 [assembly: PrimaryInteropAssembly(1, 0)]
 [assembly: ImportedFromTypeLib("PowerPoint")]
 [assembly: Guid("91493440-5A91-11CF-8700-00AA0060263B")]

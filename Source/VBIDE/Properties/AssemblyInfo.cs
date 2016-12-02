@@ -14,7 +14,6 @@ using NetOffice;
 
 [assembly: AssemblyTitle("VBIDE")]
 [assembly: AssemblyDescription("NetOffice VBIDE Api")]
-[assembly: AssemblyConfiguration("")]
 [assembly: PrimaryInteropAssembly(1, 0)]
 [assembly: ImportedFromTypeLib("VBIDE")]
 [assembly: Guid("0002E157-0000-0000-C000-000000000046")]

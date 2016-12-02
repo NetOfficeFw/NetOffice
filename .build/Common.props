@@ -31,7 +31,7 @@
   <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
-    <DefineConstants>TRACE</DefineConstants>
+    <DefineConstants>RELEASE;TRACE</DefineConstants>
   </PropertyGroup>
 
   <!-- Assembly signing properties -->

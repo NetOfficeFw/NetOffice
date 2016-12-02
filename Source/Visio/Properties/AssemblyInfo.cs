@@ -15,7 +15,6 @@ using NetOffice;
 
 [assembly: AssemblyTitle("Visio")]
 [assembly: AssemblyDescription("NetOffice Visio Api")]
-[assembly: AssemblyConfiguration("")]
 [assembly: PrimaryInteropAssembly(1, 0)]
 [assembly: ImportedFromTypeLib("Visio")]
 [assembly: Guid("00021A98-0000-0000-C000-000000000046")]

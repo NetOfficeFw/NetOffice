@@ -17,7 +17,6 @@ using NetOffice;
 
 [assembly: AssemblyTitle("Word")]
 [assembly: AssemblyDescription("NetOffice Word Api")]
-[assembly: AssemblyConfiguration("")]
 [assembly: PrimaryInteropAssembly(1, 0)]
 [assembly: ImportedFromTypeLib("Word")]
 [assembly: Guid("00020905-0000-0000-C000-000000000046")]

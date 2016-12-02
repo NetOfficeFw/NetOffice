@@ -9,3 +9,9 @@
 [assembly: AssemblyTrademark("")]
 
 [assembly: AssemblyCulture("")]
+
+#if DEBUG
+[assembly: AssemblyConfiguration("Debug")]
+#elif RELEASE
+[assembly: AssemblyConfiguration("Release")]
+#endif
