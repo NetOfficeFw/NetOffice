@@ -1,12 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿    using System;
+    using System.Collections.Generic;
+    using System.ComponentModel;
+    using System.Linq;
+    using System.Text;
 
 namespace NetOffice
 {
     /// <summary>
-    /// Represents a managed/wrapped COM proxy implementation 
+    /// Represents a managed/wrapped COM proxy implementation
     /// </summary>
     public interface ICOMObject : ICOMObjectTable, ICOMObjectProxy, ICOMObjectTableDisposable, ICOMObjectEvents, ICOMObjectDisposable
     {
@@ -24,6 +25,14 @@ namespace NetOffice
         /// <param name="searchType">indicate the kind of pr0operty</param>
         /// <returns>true if available, otherwise false</returns>
         bool EntityIsAvailable(string name, SupportEntityType searchType);
+
+        /// <summary>
+        /// Determines whether two ICOMObject instances are equal.
+        /// </summary>
+        /// <param name="obj">target instance to compare</param>
+        /// <returns>true if equal, otherwise false</returns>
+        [EditorBrowsable(EditorBrowsableState.Advanced)]
+        bool EqualsOnServer(ICOMObject obj);
 
         /// <summary>
         /// The associated console

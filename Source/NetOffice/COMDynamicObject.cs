@@ -101,7 +101,7 @@ namespace NetOffice
         #endregion
 
         #region Fields
-       
+
         /// <summary>
         /// The well know IUnknown Interface ID
         /// </summary>
@@ -131,7 +131,7 @@ namespace NetOffice
         /// Runtime self description
         /// </summary>
         protected internal DynamicObjectEntity[] _entities;
-        
+
         /// <summary>
         /// List of runtime supported entities
         /// </summary>
@@ -166,7 +166,7 @@ namespace NetOffice
         /// Indicates the instance offers an enumerator
         /// </summary>
         private EnumeratorSupport _enumerator;
-     
+
         /// <summary>
         /// Indicates the instance offers an default property
         /// </summary>
@@ -188,7 +188,7 @@ namespace NetOffice
         private static Type _instanceType = typeof(COMDynamicObject);
 
         #endregion
-        
+
         #region Ctor
 
         /// <summary>
@@ -199,7 +199,7 @@ namespace NetOffice
         {
             if (null == comProxy)
                 throw new ArgumentNullException("comProxy");
-            
+
             Factory = Core.Default;
             ParentObject = null;
             UnderlyingObject = comProxy;
@@ -217,7 +217,7 @@ namespace NetOffice
         {
             if (null == comProxy)
                 throw new ArgumentNullException("comProxy");
-            
+
             if (null != parentObject)
                 Factory = parentObject.Factory;
             else
@@ -240,9 +240,9 @@ namespace NetOffice
         public COMDynamicObject(ICOMObject comObject)
         {
             if (null == comObject)
-                throw new ArgumentNullException("comObject");           
+                throw new ArgumentNullException("comObject");
 
-            Factory = comObject.Factory;        
+            Factory = comObject.Factory;
             UnderlyingObject = comObject.UnderlyingObject;
             UnderlyingType = comObject.UnderlyingType;
 
@@ -255,7 +255,7 @@ namespace NetOffice
         /// </summary>
         /// <param name="factory">current factory instance or null for defauslt</param>
         /// <param name="parentObject">the parent instance where you have these instance from</param>
-        /// <param name="comProxy">the now wrapped comProxy instance</param>       
+        /// <param name="comProxy">the now wrapped comProxy instance</param>
         public COMDynamicObject(Core factory, ICOMObject parentObject, object comProxy)
         {
             if (null == factory)
@@ -286,7 +286,7 @@ namespace NetOffice
             UnderlyingType = System.Type.GetTypeFromProgID(progId, true);
             UnderlyingObject = Activator.CreateInstance(UnderlyingType);
 
-            Factory = null != factory ? factory : Core.Default;        
+            Factory = null != factory ? factory : Core.Default;
             Factory.AddObjectToList(this);
             _listChildObjects = new List<ICOMObject>();
         }
@@ -303,7 +303,7 @@ namespace NetOffice
             UnderlyingType = System.Type.GetTypeFromProgID(progId, true);
             UnderlyingObject = Activator.CreateInstance(UnderlyingType);
 
-            Factory = Core.Default;     
+            Factory = Core.Default;
             Factory.AddObjectToList(this);
             _listChildObjects = new List<ICOMObject>();
         }
@@ -311,7 +311,7 @@ namespace NetOffice
         #endregion
 
         #region Methods
-        
+
         /// <summary>
         /// Create a COMDynamicObject shallow copy from COMObject instance.
         /// The shallow copy is a root instance in com proxy management without child instances.
@@ -406,7 +406,7 @@ namespace NetOffice
                     _entities = GetEntities();
             }
         }
-        
+
         /// <summary>
         /// Recieve self description from UnderlyingObject through IDispatch
         /// </summary>
@@ -524,9 +524,9 @@ namespace NetOffice
                         _defaultItem = DefaultItemSupport.PropertyItem;
                         break;
                 }
-            }          
+            }
         }
-        
+
         /// <summary>
         /// Find item in collection. (Wrapper to bypass missing Linq in former .Net runtimes)
         /// </summary>
@@ -541,7 +541,7 @@ namespace NetOffice
                 if (item.Name == name && item.Kind == kind)
                     return item;
             }
-            return null;        
+            return null;
         }
 
         /// <summary>
@@ -728,7 +728,7 @@ namespace NetOffice
         #endregion
 
         #region Overrides
-      
+
         /// <summary>
         /// Serves as a hash function for a particular type.
         /// </summary>
@@ -762,14 +762,14 @@ namespace NetOffice
             int i = 0;
             string[] names = new string[_entities.Length];
             foreach (DynamicObjectEntity item in _entities)
-            { 
+            {
                 names[i] = item.Name;
                 i++;
             }
-            
+
             return names;
         }
-       
+
         /// <summary>
         /// Provides implementation for type conversion operations.
         /// </summary>
@@ -787,7 +787,7 @@ namespace NetOffice
             }
             else
             {
-                // Todo: NetOffice 1.7.5 
+                // Todo: NetOffice 1.7.5
                 // - check target conversion type is available NetOffice wrapper type and convert into
                 result = null;
                 return false;
@@ -818,9 +818,9 @@ namespace NetOffice
                 case DefaultItemSupport.MethodItem:
                     result = InvokeMethod("Item", indexes);
                     return true;
-                default:                       
-                    return false; 
-            }           
+                default:
+                    return false;
+            }
         }
 
         /// <summary>
@@ -858,7 +858,7 @@ namespace NetOffice
         /// <param name="result">The result of the get operation.</param>
         /// <returns>true if the operation is successful; otherwise, false.</returns>
         public override bool TryGetMember(GetMemberBinder binder, out object result)
-        {         
+        {
             if (IsEnumeratorBinder(binder))
             {
                 result = InvokeEnumerator();
@@ -878,7 +878,7 @@ namespace NetOffice
         /// <param name="value">The value to set to the member.</param>
         /// <returns> true if the operation is successful; otherwise, false.</returns>
         public override bool TrySetMember(SetMemberBinder binder, object value)
-        {          
+        {
             InvokePropertySet(binder.Name, new object[] { value });
             return true;
         }
@@ -891,7 +891,7 @@ namespace NetOffice
         /// <param name="result">The result of the member invocation.</param>
         /// <returns>true if the operation is successful; otherwise, false.</returns>
         public override bool TryInvokeMember(InvokeMemberBinder binder, object[] args, out object result)
-        {          
+        {
             if (IsEnumeratorBinder(binder))
             {
                 result = InvokeEnumerator();
@@ -943,10 +943,10 @@ namespace NetOffice
                 return _friendlyTypeName;
             }
         }
-        
+
         /// <summary>
         /// Name of the hosting NetOffice component
-        /// </summary>      
+        /// </summary>
         public string UnderlyingComponentName
         {
             get
@@ -981,7 +981,7 @@ namespace NetOffice
 
         /// <summary>
         /// Friendly Name of the NetOffice Wrapper class
-        /// </summary>       
+        /// </summary>
         public string InstanceFriendlyName
         {
             get
@@ -1030,7 +1030,7 @@ namespace NetOffice
         /// The associated factory
         /// </summary>
         public Core Factory { get; private set; }
-        
+
         /// <summary>
         /// The associated invoker
         /// </summary>
@@ -1170,12 +1170,12 @@ namespace NetOffice
         {
             lock (_disposeLock)
             {
-                // skip check 
+                // skip check
                 bool cancel = RaiseOnDispose();
                 if (cancel)
                     return;
 
-                // in case object export events and 
+                // in case object export events and
                 // disposeEventBinding == true we dont remove the object from parents child list
                 bool removeFromParent = true;
 
@@ -1214,7 +1214,7 @@ namespace NetOffice
                 // call quit automaticly if wanted
                 if (_callQuitInDispose && Settings.EnableAutomaticQuit)
                     new QuitCaller().TryCall(Settings, Invoker, this);
-                
+
                 // release proxy
                 ReleaseCOMProxy(ownerPath);
 
@@ -1223,7 +1223,7 @@ namespace NetOffice
 
                 _isDisposed = true;
                 _isCurrentlyDisposing = false;
-            }        
+            }
         }
 
         /// <summary>
@@ -1250,7 +1250,7 @@ namespace NetOffice
                     itemObject.Dispose(disposeEventBinding);
                 }
                 _listChildObjects.Clear();
-            }         
+            }
         }
 
         /// <summary>
@@ -1304,7 +1304,7 @@ namespace NetOffice
         }
 
         #endregion
-         
+
         #region Operator Overloads
 
         /// <summary>
@@ -1362,44 +1362,6 @@ namespace NetOffice
         /// <param name="objectA"></param>
         /// <param name="objectB"></param>
         /// <returns></returns>
-        public static bool operator ==(COMDynamicObject objectA, COMObject objectB)
-        {
-            if (!Settings.Default.EnableOperatorOverlads)
-                return Object.ReferenceEquals(objectA, objectB);
-
-            if (Object.ReferenceEquals(objectA, null) && Object.ReferenceEquals(objectB, null))
-                return true;
-            else if (!Object.ReferenceEquals(objectA, null))
-                return objectA.EqualsOnServer(objectB);
-            else
-                return false;
-        }
-
-        /// <summary>
-        /// Determines whether two COMObject instances are not equal.
-        /// </summary>
-        /// <param name="objectA">first instance</param>
-        /// <param name="objectB">second instance</param>
-        /// <returns>true if equal, otherwise false</returns>
-        public static bool operator !=(COMDynamicObject objectA, COMObject objectB)
-        {
-            if (!Settings.Default.EnableOperatorOverlads)
-                return Object.ReferenceEquals(objectA, objectB);
-
-            if (Object.ReferenceEquals(objectA, null) && Object.ReferenceEquals(objectB, null))
-                return false;
-            else if (!Object.ReferenceEquals(objectA, null))
-                return !objectA.EqualsOnServer(objectB);
-            else
-                return true;
-        }
-
-        /// <summary>
-        /// Determines whether two COMObject instances are equal.
-        /// </summary>
-        /// <param name="objectA"></param>
-        /// <param name="objectB"></param>
-        /// <returns></returns>
         public static bool operator ==(COMDynamicObject objectA, COMDynamicObject objectB)
         {
             if (!Settings.Default.EnableOperatorOverlads)
@@ -1409,50 +1371,6 @@ namespace NetOffice
                 return true;
             else if (!Object.ReferenceEquals(objectA, null))
                 return objectA.EqualsOnServer(objectB);
-            else
-                return false;
-        }
-
-        /// <summary>
-        /// Determines whether two COMObject instances are equal.
-        /// </summary>
-        /// <param name="objectA"></param>
-        /// <param name="objectB"></param>
-        /// <returns></returns>
-        public static bool operator ==(COMDynamicObject objectA, object objectB)
-        {
-            if (!Settings.Default.EnableOperatorOverlads)
-                return Object.ReferenceEquals(objectA, objectB);
-
-            if (Object.ReferenceEquals(objectA, null) && Object.ReferenceEquals(objectB, null))
-                return true;
-            else if (!Object.ReferenceEquals(objectA, null))
-                return objectA.EqualsOnServer(objectB as COMDynamicObject);
-            else
-                return false;
-        }
-        
-        /// <summary>
-        /// Determines whether two COMObject instances are equal.
-        /// </summary>
-        /// <param name="objectA">first instance</param>
-        /// <param name="objectB">second instance</param>
-        /// <returns>true if equal, otherwise false</returns>
-        public static bool operator ==(object objectA, COMDynamicObject objectB)
-        {
-            if (!Settings.Default.EnableOperatorOverlads)
-                return Object.ReferenceEquals(objectA, objectB);
-
-            if (Object.ReferenceEquals(objectA, null) && Object.ReferenceEquals(objectB, null))
-                return true;
-            else if (!Object.ReferenceEquals(objectA, null))
-            {
-                COMDynamicObject a = (objectA as COMDynamicObject);
-                if (null != a)
-                    return a.EqualsOnServer(objectB);
-                else
-                    return false;
-            }
             else
                 return false;
         }
@@ -1477,6 +1395,25 @@ namespace NetOffice
         }
 
         /// <summary>
+        /// Determines whether two COMObject instances are equal.
+        /// </summary>
+        /// <param name="objectA"></param>
+        /// <param name="objectB"></param>
+        /// <returns></returns>
+        public static bool operator ==(COMDynamicObject objectA, object objectB)
+        {
+            if (!Settings.Default.EnableOperatorOverlads)
+                return Object.ReferenceEquals(objectA, objectB);
+
+            if (Object.ReferenceEquals(objectA, null) && Object.ReferenceEquals(objectB, null))
+                return true;
+            else if (!Object.ReferenceEquals(objectA, null))
+                return objectA.EqualsOnServer(objectB as ICOMObject);
+            else
+                return false;
+        }
+
+        /// <summary>
         /// Determines whether two COMObject instances are not equal.
         /// </summary>
         /// <param name="objectA">first instance</param>
@@ -1490,9 +1427,34 @@ namespace NetOffice
             if (Object.ReferenceEquals(objectA, null) && Object.ReferenceEquals(objectB, null))
                 return false;
             else if (!Object.ReferenceEquals(objectA, null))
-                return !objectA.EqualsOnServer(objectB as COMDynamicObject);
+                return !objectA.EqualsOnServer(objectB as ICOMObject);
             else
                 return true;
+        }
+
+        /// <summary>
+        /// Determines whether two COMObject instances are equal.
+        /// </summary>
+        /// <param name="objectA">first instance</param>
+        /// <param name="objectB">second instance</param>
+        /// <returns>true if equal, otherwise false</returns>
+        public static bool operator ==(object objectA, COMDynamicObject objectB)
+        {
+            if (!Settings.Default.EnableOperatorOverlads)
+                return Object.ReferenceEquals(objectA, objectB);
+
+            if (Object.ReferenceEquals(objectA, null) && Object.ReferenceEquals(objectB, null))
+                return true;
+            else if (!Object.ReferenceEquals(objectA, null))
+            {
+                ICOMObject a = (objectA as ICOMObject);
+                if (null != a)
+                    return a.EqualsOnServer(objectB);
+                else
+                    return false;
+            }
+            else
+                return false;
         }
 
         /// <summary>
@@ -1510,9 +1472,9 @@ namespace NetOffice
                 return false;
             else if (!Object.ReferenceEquals(objectA, null))
             {
-                COMDynamicObject a = objectA as COMDynamicObject;
+                ICOMObject a = objectA as ICOMObject;
                 if (null != a)
-                    return !(objectA as COMDynamicObject).EqualsOnServer(objectB);
+                    return !a.EqualsOnServer(objectB);
                 else
                     return null == objectB ? false : true;
             }
