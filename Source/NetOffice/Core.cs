@@ -15,7 +15,7 @@ namespace NetOffice
     /// Exposes objects, methods and properties to programming tools and other applications that support Automation. COM components implement the IDispatch interface to enable access by Automation clients, such as Visual Basic.
     /// </summary>
     [Guid("00020400-0000-0000-c000-000000000046"),
-    InterfaceType(ComInterfaceType.InterfaceIsIUnknown)]    
+    InterfaceType(ComInterfaceType.InterfaceIsIUnknown)]
     internal interface IDispatch
     {
         /// <summary>
@@ -74,7 +74,7 @@ namespace NetOffice
     }
 
     #endregion
-    
+
     /// <summary>
     /// Creation Factory for COMObject and derived types
     /// </summary>
@@ -157,7 +157,7 @@ namespace NetOffice
 
         private static Core _default;
         private bool _initalized;
-        private List<ICOMObject> _globalObjectList = new List<ICOMObject>();
+        private IList<ICOMObject> _globalObjectList;
         private List<IFactoryInfo> _factoryList = new List<IFactoryInfo>();
         private Dictionary<string, Type> _proxyTypeCache = new Dictionary<string, Type>();
         private Dictionary<string, Type> _wrapperTypeCache = new Dictionary<string, Type>();
@@ -188,6 +188,8 @@ namespace NetOffice
                                                                                 "VBIDEApi.dll",
                                                                                 "MSFormsApi.dll" };
 
+        private ProxyManagementMode _proxyManagementMode;
+
         #endregion
 
         #region Ctor
@@ -201,6 +203,8 @@ namespace NetOffice
             Settings = new Settings();
             Console = new DebugConsole();
             Invoker = new Invoker(this);
+
+            InitializeProxyManagement();
         }
 
         /// <summary>
@@ -223,6 +227,8 @@ namespace NetOffice
                 Console = new DebugConsole();
                 Invoker = new Invoker(this);
             }
+
+            InitializeProxyManagement();
         }
 
         #endregion
@@ -240,7 +246,7 @@ namespace NetOffice
                 {
                     if (null == _thisAssembly)
                         _thisAssembly = Assembly.GetAssembly(typeof(COMObject));
-                }              
+                }
                 return _thisAssembly;
             }
         }
@@ -272,7 +278,7 @@ namespace NetOffice
                 }
             }
         }
-         
+
         /// <summary>
         /// Core Settings
         /// </summary>
@@ -331,6 +337,14 @@ namespace NetOffice
             {
                 return _globalObjectList.Count;
             }
+        }
+
+        /// <summary>
+        /// Gets the proxy management mode.
+        /// </summary>
+        public ProxyManagementMode ProxyManagementMode
+        {
+            get { return _proxyManagementMode; }
         }
 
         /// <summary>
@@ -460,7 +474,7 @@ namespace NetOffice
         #endregion
 
         #region Factory Methods
-        
+
         /// <summary>
         /// Recieve factory infos from all loaded NetOfficeApi Assemblies in current application domain
         /// </summary>
@@ -485,7 +499,7 @@ namespace NetOffice
                 _initalized = true;
                 RaiseIsInitializedChanged();
             }
-                  
+
             bool isLocked = false;
             try
             {
@@ -493,9 +507,9 @@ namespace NetOffice
 
                 Monitor.Enter(_factoryListLock);
                 isLocked = true;
-                
+
                 Console.WriteLine("NetOffice Core.Initialize() Core Version:{0}; Deep Loading:{1}; Load Assemblies Unsafe:{2}; AppDomain:{3}",
-                     ThisAssembly.GetName().Version, Settings.EnableDeepLoading, 
+                     ThisAssembly.GetName().Version, Settings.EnableDeepLoading,
                      Settings.LoadAssembliesUnsafe, AppDomain.CurrentDomain.Id.ToString() + "-" + AppDomain.CurrentDomain.FriendlyName);
 
                 if (Settings.EnableDebugOutput)
@@ -673,7 +687,7 @@ namespace NetOffice
                     Initialize();
                     #pragma warning restore 612, 618
                 }
-            }            
+            }
         }
 
         /// <summary>
@@ -765,7 +779,7 @@ namespace NetOffice
                         bool exists = supportList.TryGetValue("Method-" + strName, out outValue);
                         if (!exists)
                             supportList.Add("Method-" + strName, strDocString);
-                        break;   
+                        break;
                     }
                 }
 
@@ -877,7 +891,7 @@ namespace NetOffice
         }
 
         /// <summary>
-        /// Creates a new COMObject based on classType of comProxy 
+        /// Creates a new COMObject based on classType of comProxy
         /// </summary>
         /// <param name="caller">parent there have created comProxy</param>
         /// <param name="comProxy">new created proxy</param>
@@ -936,7 +950,7 @@ namespace NetOffice
         }
 
         /// <summary>
-        /// Creates a new COMObject based on classType of comProxy 
+        /// Creates a new COMObject based on classType of comProxy
         /// </summary>
         /// <param name="caller">parent there have created comProxy</param>
         /// <param name="comProxy">new created proxy</param>
@@ -1141,7 +1155,7 @@ namespace NetOffice
                 RaiseProxyCleared();
             }
         }
-       
+
         /// <summary>
         /// Add object to global list
         /// </summary>
@@ -1194,7 +1208,7 @@ namespace NetOffice
                 _globalObjectList.Remove(proxy);
 
                 if (HasProxyRemovedRecipients)
-                {                 
+                {
                     RaiseProxyRemoved(ownerPath, proxy);
                 }
 
@@ -1242,6 +1256,19 @@ namespace NetOffice
             }
 
             return result;
+        }
+
+        private void InitializeProxyManagement()
+        {
+            _proxyManagementMode = Settings.ProxyManagementMode;
+            if (_proxyManagementMode == ProxyManagementMode.Default)
+            {
+                _globalObjectList = new DefaultCOMObjectList();
+            }
+            else if (_proxyManagementMode == ProxyManagementMode.Weak)
+            {
+                _globalObjectList = new WeakCOMObjectList();
+            }
         }
 
         #endregion
@@ -1402,7 +1429,7 @@ namespace NetOffice
             typeInfo.ReleaseTypeAttr(attribPtr);
             return typeGuid;
         }
-          
+
         /// <summary>
         /// Get the guid from type lib there is the type defined
         /// </summary>
@@ -1445,7 +1472,7 @@ namespace NetOffice
         }
 
         /// <summary>
-        /// Get wrapper class factory info 
+        /// Get wrapper class factory info
         /// </summary>
         /// <param name="comProxy">new created proxy</param>
         /// <returns>factory info from corresponding assembly</returns>
@@ -1489,14 +1516,14 @@ namespace NetOffice
             try
             {
                 string localAssemblyPath = UriConvert.ToLocalPath(ThisAssembly.CodeBase);
-                string directoryName = System.IO.Path.GetDirectoryName(localAssemblyPath); 
+                string directoryName = System.IO.Path.GetDirectoryName(localAssemblyPath);
                 string fullFileName = System.IO.Path.Combine(directoryName, fileName);
 
                 if (System.IO.File.Exists(fullFileName))
                 {
                     Assembly assembly = _appDomain.LoadFrom(fullFileName);
                     if (null != assembly)
-                    { 
+                    {
                         Type factoryInfoType = assembly.GetType(fileName.Substring(0, fileName.Length - 4) + ".Utils.ProjectInfo", false, false);
                         NetOffice.IFactoryInfo factoryInfo = Activator.CreateInstance(factoryInfoType) as NetOffice.IFactoryInfo;
                         bool exists = false;

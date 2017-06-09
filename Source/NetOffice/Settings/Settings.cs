@@ -63,7 +63,7 @@ namespace NetOffice
         #endregion
 
         #region Properties
-         
+
         /// <summary>
         /// Shared Default Settings
         /// </summary>
@@ -76,6 +76,11 @@ namespace NetOffice
                 return _default;
             }
         }
+
+        /// <summary>
+        /// Gets or sets the proxy management mode.
+        /// </summary>
+        public static ProxyManagementMode ProxyManagementMode { get; set; }
 
         /// <summary>
         /// Performance tracer to see how long its need to call and return all or specific actions
@@ -140,7 +145,7 @@ namespace NetOffice
 
         /// <summary>
         /// NetOffice wrap all thrown exceptions from Office applications in a COMException.
-        /// This is the default message for the top level exception 
+        /// This is the default message for the top level exception
         /// </summary>
         [Category("Settings"), Description("Default exception message text."), DefaultValue("See inner exception(s) for details.")]
         public string ExceptionMessage

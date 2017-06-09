@@ -13,6 +13,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DefaultCOMObjectList.cs" />
+    <Compile Include="Interfaces\ICOMObjectList.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="..\..\.build\SharedAssemblyInfo.cs">
       <Link>Properties\SharedAssemblyInfo.cs</Link>
@@ -20,6 +22,8 @@
     <Compile Include="..\..\.build\SharedAssemblyVersionInfo.cs">
       <Link>Properties\SharedAssemblyVersionInfo.cs</Link>
     </Compile>
+    <Compile Include="Settings\ProxyManagementMode.cs" />
+    <Compile Include="WeakCOMObjectList.cs" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Attributes\ComRegExportCallAttribute.cs" />
