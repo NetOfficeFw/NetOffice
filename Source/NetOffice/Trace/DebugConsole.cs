@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.IO;
@@ -415,7 +415,7 @@ namespace NetOffice
                         // do nothing
                         break;
                     default:
-                        throw new ArgumentOutOfRangeException("Unkown Log Mode.");
+                        throw new ArgumentOutOfRangeException(nameof(Mode), "Unkown Log Mode.");
                 }
 
                 TryWritePipe(output);
@@ -452,7 +452,7 @@ namespace NetOffice
                         // do nothing
                         break;
                     default:
-                        throw new ArgumentOutOfRangeException("Unkown Log Mode.");
+                        throw new ArgumentOutOfRangeException(nameof(Mode), "Unkown Log Mode.");
                 }
 
                 TryWritePipe(output);

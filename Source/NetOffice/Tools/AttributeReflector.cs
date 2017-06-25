@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Reflection;
 using System.Runtime.InteropServices;
 using System.Collections.Generic;
@@ -252,7 +252,7 @@ namespace NetOffice.Tools
 
             object[] array = type.GetCustomAttributes(typeof(GuidAttribute), false);
             if (array.Length == 0)
-                throw new ArgumentOutOfRangeException("GuidAttribute is missing");
+                throw new ArgumentOutOfRangeException(nameof(type), "GuidAttribute is missing");
             return array[0] as GuidAttribute;
         }
 
@@ -265,7 +265,7 @@ namespace NetOffice.Tools
         {
             object[] array = type.GetCustomAttributes(typeof(ProgIdAttribute), false);
             if (array.Length == 0)
-                throw new ArgumentOutOfRangeException("ProgIdAttribute is missing");
+                throw new ArgumentOutOfRangeException(nameof(type), "ProgIdAttribute is missing");
             return array[0] as ProgIdAttribute;
         }
 
@@ -281,7 +281,7 @@ namespace NetOffice.Tools
             if (array.Length == 0)
             {
                 if (throwException)
-                    throw new ArgumentOutOfRangeException("ProgIdAttribute is missing");
+                    throw new ArgumentOutOfRangeException(nameof(type), "ProgIdAttribute is missing");
                 else
                     return null;
             }
@@ -325,7 +325,7 @@ namespace NetOffice.Tools
         {
             object[] array = type.GetCustomAttributes(typeof(COMAddinAttribute), false);
             if (array.Length == 0)
-                throw new ArgumentOutOfRangeException("COMAddinAttribute is missing");
+                throw new ArgumentOutOfRangeException(nameof(type), "COMAddinAttribute is missing");
             else
                 return array[0] as COMAddinAttribute;
         }

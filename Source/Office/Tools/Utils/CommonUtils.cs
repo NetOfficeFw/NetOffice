@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.ComponentModel;
 using System.Reflection;
 using System.Collections.Generic;
@@ -79,9 +79,9 @@ namespace NetOffice.OfficeApi.Tools.Utils
         public CommonUtils(ICOMObject application, Assembly ownerAssembly)
         {
             if (null == application)
-                throw new ArgumentNullException("application");
+                throw new ArgumentNullException(nameof(application));
             if (null == ownerAssembly)
-                throw new ArgumentNullException("ownerAssembbly");
+                throw new ArgumentNullException(nameof(ownerAssembly));
             _ownerApplication = application;
             _ownerAssembly = ownerAssembly;
             _headerCaptionLine = _headerCaptionLineDefault;
