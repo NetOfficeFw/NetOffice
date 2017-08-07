@@ -567,14 +567,10 @@ namespace NetOffice.PowerPointApi
                     // This is a bypass because HWND is not available in late binding
                     return Tools.Utils.ApplicationUtils.TryGetHostApplicationWindowHandleFromDesktop(UnderlyingObject);
                 }
-                catch (System.Reflection.TargetInvocationException)
+                catch (Exception exception)
                 {
-                    throw new NotImplementedException();
-                }
-                catch (Exception)
-                {
-                    throw;
-                }                
+                    throw new COMException(String.Empty, exception);
+                }             
             }
 		}
 

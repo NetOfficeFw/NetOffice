@@ -7,12 +7,14 @@ using System.ComponentModel;
 using COMTypes = System.Runtime.InteropServices.ComTypes;
 using System.Dynamic;
 using System.Collections;
+using System.Linq.Expressions;
+using System.Reflection;
 
 namespace NetOffice
 {
     /*
         This is designed to use as dynamic in C# or as object in visual basic.
-        This allows to use dynamic late-binding with proxy managed service from Netoffice.(best of both worlds)
+        Allows to use dynamic late-binding with proxy managed service from Netoffice.(best of both worlds)
 
         NetOffice.Settings.EnableDynamicObjects(true by default) want enable
         the behavior that Netoffice returns a COMDynamicObject instance if its
@@ -24,7 +26,7 @@ namespace NetOffice
     /// </summary>
     [DebuggerDisplay("{InstanceFriendlyName}")]
     [TypeConverter(typeof(COMDynamicObjectExpandableObjectConverter))]
-    public class COMDynamicObject : DynamicObject, ICOMObject
+    public class COMDynamicObject : DynamicObject, ICOMObject , ICOMProxyShareProvider
     {
         #region Nested
 
@@ -138,6 +140,11 @@ namespace NetOffice
         private Dictionary<string, string> _listSupportedEntities;
 
         /// <summary>
+        /// Returns a shared access wrapper arrount the native wrapped proxy
+        /// </summary>
+        protected internal COMProxyShare _proxy;
+
+        /// <summary>
         /// FriendlyTypeName cache field
         /// </summary>
         private string _friendlyTypeName;
@@ -156,6 +163,11 @@ namespace NetOffice
         /// Monitor lock object for accessing the child list
         /// </summary>
         private object _childListLock = new object();
+
+        /// <summary>
+        /// monitor lock object for accessing the child list
+        /// </summary>
+        private object _disposeChildLock = new object();
 
         /// <summary>
         /// Monitor lock object for the main dispose method
@@ -187,8 +199,18 @@ namespace NetOffice
         /// </summary>
         private static Type _instanceType = typeof(COMDynamicObject);
 
+        /// <summary>
+        /// Given ProgID in ctor or null
+        /// </summary>
+        private string _progId;
+
+        /// <summary>
+        /// Dynamic accessible instance members
+        /// </summary>
+        private static string[] _selfDynamicMemberNames;
+
         #endregion
-        
+
         #region Ctor
 
         /// <summary>
@@ -200,12 +222,13 @@ namespace NetOffice
             if (null == comProxy)
                 throw new ArgumentNullException("comProxy");
             
-            Factory = Core.Default;
+            Factory = Core.Default;          
             ParentObject = null;
-            UnderlyingObject = comProxy;
+            _proxy = new COMProxyShare(comProxy);
             UnderlyingType = comProxy.GetType();
             Factory.AddObjectToList(this);
             _listChildObjects = new List<ICOMObject>();
+            Factory.CheckInitialize();
         }
 
         /// <summary>
@@ -224,13 +247,14 @@ namespace NetOffice
                 Factory = Core.Default;
 
             ParentObject = parentObject;
-            UnderlyingObject = comProxy;
+            _proxy = new COMProxyShare(comProxy);
             UnderlyingType = comProxy.GetType();
             if (Settings.Default.EnableProxyManagement && !Object.ReferenceEquals(parentObject, null))
                 ParentObject.AddChildObject(this);
 
             Factory.AddObjectToList(this);
             _listChildObjects = new List<ICOMObject>();
+            Factory.CheckInitialize();
         }
 
         /// <summary>
@@ -242,12 +266,19 @@ namespace NetOffice
             if (null == comObject)
                 throw new ArgumentNullException("comObject");           
 
-            Factory = comObject.Factory;        
-            UnderlyingObject = comObject.UnderlyingObject;
+            Factory = comObject.Factory;
+
+            ICOMProxyShareProvider shareProvider = comObject as ICOMProxyShareProvider;
+            if (null != shareProvider)
+                _proxy = shareProvider.GetProxyShare();
+            else
+                _proxy = new COMProxyShare(comObject.UnderlyingObject);
+            
             UnderlyingType = comObject.UnderlyingType;
 
             Factory.AddObjectToList(this);
             _listChildObjects = new List<ICOMObject>();
+            Factory.CheckInitialize();
         }
 
         /// <summary>
@@ -263,7 +294,8 @@ namespace NetOffice
             Factory = factory;
 
             ParentObject = parentObject;
-            UnderlyingObject = comProxy;
+            _proxy = new COMProxyShare(comProxy);
+            
             UnderlyingType = comProxy.GetType();
 
             if (Settings.Default.EnableProxyManagement && !Object.ReferenceEquals(parentObject, null))
@@ -271,6 +303,7 @@ namespace NetOffice
 
             Factory.AddObjectToList(this);
             _listChildObjects = new List<ICOMObject>();
+            Factory.CheckInitialize();
         }
 
         /// <summary>
@@ -284,11 +317,16 @@ namespace NetOffice
                 throw new ArgumentNullException("progId");
 
             UnderlyingType = System.Type.GetTypeFromProgID(progId, true);
-            UnderlyingObject = Activator.CreateInstance(UnderlyingType);
+            object underlyingObject = Activator.CreateInstance(UnderlyingType);
+            _proxy = new COMProxyShare(underlyingObject);
 
             Factory = null != factory ? factory : Core.Default;        
             Factory.AddObjectToList(this);
             _listChildObjects = new List<ICOMObject>();
+
+            _progId = progId;
+
+            Factory.CheckInitialize();
         }
 
         /// <summary>
@@ -301,17 +339,54 @@ namespace NetOffice
                 throw new ArgumentNullException("progId");
 
             UnderlyingType = System.Type.GetTypeFromProgID(progId, true);
-            UnderlyingObject = Activator.CreateInstance(UnderlyingType);
+            object underlyingObject = Activator.CreateInstance(UnderlyingType);
+            _proxy = new COMProxyShare(underlyingObject);
 
             Factory = Core.Default;     
             Factory.AddObjectToList(this);
             _listChildObjects = new List<ICOMObject>();
+
+            _progId = progId;
+
+            Factory.CheckInitialize();
         }
 
         #endregion
 
+        #region Properties
+       
+        /// <summary>
+        /// Return Value in TryConvert if no conversion is available.
+        /// False may cause an exception from the current language service,
+        /// otherwise the conversion result is just null(Nothing in Visual Basic)
+        /// Default: false
+        /// </summary>
+        [Browsable(false), EditorBrowsable(EditorBrowsableState.Never)]
+        public static bool TryConvertFailResult { get; set; }
+
+        /// <summary>
+        /// Dynamic accessible instance members
+        /// </summary>
+        private static string[] SelfDynamicMemberNames
+        {
+            get
+            {
+                if (null == _selfDynamicMemberNames)
+                {
+                    List<string> list = new List<string>();
+                    list.Add("Dispose");
+                    list.Add("DisposeChildInstances");
+                    _selfDynamicMemberNames = list.ToArray();
+                }
+                return _selfDynamicMemberNames;
+            }
+        }
+
+
+        #endregion
+
         #region Methods
-        
+
         /// <summary>
         /// Create a COMDynamicObject shallow copy from COMObject instance.
         /// The shallow copy is a root instance in com proxy management without child instances.
@@ -321,55 +396,23 @@ namespace NetOffice
         /// <returns>COMDynamicObject shallow copy</returns>
         public static COMDynamicObject ConvertTo(ICOMObject comObject)
         {
-            return ConvertTo(comObject, true);
-        }
-
-        /// <summary>
-        /// Create a COMDynamicObject shallow copy from COMObject instance.
-        /// The shallow copy is a root instance in com proxy management without child instances.
-        /// Given COMObject instance and shallow copy share the same proxy.
-        /// </summary>
-        /// <param name="comObject">COMObject instance</param>
-        /// <param name="throwException">throw exception if failed to convert</param>
-        /// <returns>COMDynamicObject shallow copy</returns>
-        public static COMDynamicObject ConvertTo(ICOMObject comObject, bool throwException)
-        {
             if (null == comObject)
                 throw new ArgumentNullException("comObject");
 
-            COMObject instance = comObject as COMObject;
-            if (null == instance)
-            {
-                if (throwException)
-                    throw new ArgumentException("COMObject instance required.");
-                else
-                    return null;
-            }
-
-            return new COMDynamicObject(instance);
+            return new COMDynamicObject(comObject.UnderlyingObject);
         }
-
+       
         /// <summary>
         /// Release com proxy
         /// </summary>
         private void ReleaseCOMProxy(IEnumerable<ICOMObject> ownerPath)
         {
-            if (!Object.ReferenceEquals(UnderlyingObject, null))
+            // release himself from COM Runtime System
+            if (!_proxy.Released)
             {
-                ICustomAdapter adapter = UnderlyingObject as ICustomAdapter;
-                if (null != adapter)
-                {
-                    Marshal.ReleaseComObject(adapter.GetUnderlyingObject());
-                    Marshal.ReleaseComObject(UnderlyingObject);
-                }
-                else
-                {
-                    Marshal.ReleaseComObject(UnderlyingObject);
-                }
-
+                _proxy.Release();
                 Factory.RemoveObjectFromList(this, ownerPath);
-                UnderlyingObject = null;
-            }
+            }        
         }
 
         /// <summary>
@@ -582,7 +625,7 @@ namespace NetOffice
                     return null;
             }
         }
-
+        
         /// <summary>
         /// Invoke a proxy method
         /// </summary>
@@ -590,6 +633,9 @@ namespace NetOffice
         /// <returns>return value or null</returns>
         private object InvokeMethod(string name)
         {
+            if (IsSelfDynamicMemberName(name))
+                return InstanceType.InvokeMember(name, System.Reflection.BindingFlags.InvokeMethod, null, this, new object[0]);
+
             object returnItem = Invoker.MethodReturn(this, name);
             if ((null != returnItem) && (returnItem is MarshalByRefObject))
             {
@@ -610,6 +656,9 @@ namespace NetOffice
         /// <returns>return value or null</returns>
         private object InvokeMethod(string name, object[] args)
         {
+            if (IsSelfDynamicMemberName(name))
+                return InstanceType.InvokeMember(name, System.Reflection.BindingFlags.InvokeMethod, null, this, args);
+
             args = Invoker.ValidateParamsArray(args);
             object returnItem = Invoker.MethodReturn(this, name, args);
             if ((null != returnItem) && (returnItem is MarshalByRefObject))
@@ -725,10 +774,42 @@ namespace NetOffice
             Invoker.PropertySet(this, name, args);
         }
 
+        /// <summary>
+        /// DNUL for compatibility
+        /// </summary>
+        /// <param name="name">member name</param>
+        /// <returns>true if name match, otherwise false</returns>
+        private bool IsSelfDynamicMemberName(string name)
+        {
+            foreach (var item in SelfDynamicMemberNames)
+            {
+                if (item == name)
+                    return true;
+            }
+            return false;
+        }
+
+        /// <summary>
+        /// DNUL for compatibility
+        /// </summary>
+        /// <returns>true if proxy has quit method, otherwise false</returns>
+        private bool HasQuitMethod()
+        {
+            CheckEntities();
+            if (null == _entities || _entities.Length == 0)
+                return false;
+            foreach (var item in _entities)
+            {
+                if (item.Kind == DynamicObjectEntity.EntityKind.Method && item.Name == "Quit")
+                    return true;
+            }
+            return false;
+        }
+
         #endregion
 
         #region Overrides
-      
+
         /// <summary>
         /// Serves as a hash function for a particular type.
         /// </summary>
@@ -750,6 +831,21 @@ namespace NetOffice
         }
 
         /// <summary>
+        /// Provides a System.Dynamic.DynamicMetaObject that dispatches to the dynamic virtual
+        /// methods. The object can be encapsulated inside another System.Dynamic.DynamicMetaObject
+        /// to provide custom behavior for individual actions. This method supports the Dynamic
+        /// Language Runtime infrastructure for language implementers and it is not intended
+        ///  to be used directly from your code.
+        /// </summary>
+        /// <param name="parameter">The expression that represents System.Dynamic.DynamicMetaObject to dispatch to the dynamic virtual methods.</param>
+        /// <returns> An object of the System.Dynamic.DynamicMetaObject type.</returns>
+        public override DynamicMetaObject GetMetaObject(Expression parameter)
+        {
+            DynamicMetaObject metaObject = base.GetMetaObject(parameter);
+            return new COMDynamicMetaObject(metaObject);
+        }
+
+        /// <summary>
         /// Returns a sequence of all dynamic member names.
         /// </summary>
         /// <returns>a sequence that contains dynamic member names.</returns>
@@ -759,17 +855,25 @@ namespace NetOffice
             if (null == _entities)
                 return new string[0];
 
+            string[] selfMembers = SelfDynamicMemberNames;
+
             int i = 0;
-            string[] names = new string[_entities.Length];
+            string[] names = new string[_entities.Length + selfMembers.Length];
             foreach (DynamicObjectEntity item in _entities)
             { 
                 names[i] = item.Name;
                 i++;
             }
-            
+
+            foreach (var item in selfMembers)
+            {
+                names[i] = item;
+                i++;
+            }
+
             return names;
         }
-       
+        
         /// <summary>
         /// Provides implementation for type conversion operations.
         /// </summary>
@@ -778,6 +882,11 @@ namespace NetOffice
         /// <returns>true if the operation is successful; otherwise, false. </returns>
         public override bool TryConvert(ConvertBinder binder, out object result)
         {
+            // Good to know:
+            // Confusing stuff about dynamic and implicit/explicit conversions
+            // https://stackoverflow.com/questions/3492955/dynamicobject-tryconvert-not-called-when-casting-to-interface-type
+            // Not sure what means John Skeet here to handle that better with IDynamicMetaObjectProvider 
+
             CheckEntities();
 
             if (binder.Type == typeof(System.Collections.IEnumerable))
@@ -785,12 +894,43 @@ namespace NetOffice
                 result = InvokeEnumerator();
                 return true;
             }
+            else if (binder.Type == typeof(string))
+            {
+                result = InstanceFriendlyName;
+                return true;
+            }
+            else if (binder.Type == typeof(COMObject))
+            {               
+                result = new COMObject(Factory, ParentObject, _proxy);
+                return true;
+            }
             else
             {
-                // Todo: NetOffice 1.7.5 
-                // - check target conversion type is available NetOffice wrapper type and convert into
-                result = null;
-                return false;
+                string className = TypeDescriptor.GetClassName(UnderlyingObject);
+                IFactoryInfo factoryInfo = Factory.GetFactoryInfo(UnderlyingObject, false);
+                if (null != factoryInfo && factoryInfo.Contains(binder.ReturnType))
+                {
+                    string fullClassName = factoryInfo.AssemblyNamespace + "." + className;
+                    if (fullClassName.Equals(binder.ReturnType.FullName))
+                    { 
+                        ICOMObject instance = Activator.CreateInstance(binder.ReturnType, new object[] { Factory, ParentObject, UnderlyingObject }) as ICOMObject;
+                        ICOMProxyShareProvider shareProvider = instance as ICOMProxyShareProvider;
+                        if (null != shareProvider)
+                            shareProvider.SetProxyShare(_proxy);
+                        result = instance;
+                        return true;
+                    }
+                    else
+                    {
+                        result = null;
+                        return TryConvertFailResult;
+                    }
+                }
+                else
+                {
+                    result = null;
+                    return TryConvertFailResult;
+                }
             }
         }
 
@@ -803,6 +943,8 @@ namespace NetOffice
         /// <returns>true if the operation is successful; otherwise, false.</returns>
         public override bool TryGetIndex(GetIndexBinder binder, object[] indexes, out object result)
         {
+            CheckEntities();
+
             result = null;
             switch (_defaultItem)
             {
@@ -832,6 +974,8 @@ namespace NetOffice
         /// <returns>true if the operation is successful; otherwise, false.</returns>
         public override bool TrySetIndex(SetIndexBinder binder, object[] indexes, object value)
         {
+            CheckEntities();
+
             switch (_defaultItem)
             {
                 case DefaultItemSupport.PropertyDefault:
@@ -858,7 +1002,7 @@ namespace NetOffice
         /// <param name="result">The result of the get operation.</param>
         /// <returns>true if the operation is successful; otherwise, false.</returns>
         public override bool TryGetMember(GetMemberBinder binder, out object result)
-        {         
+        {
             if (IsEnumeratorBinder(binder))
             {
                 result = InvokeEnumerator();
@@ -911,7 +1055,13 @@ namespace NetOffice
         /// <summary>
         /// Returns the native wrapped proxy
         /// </summary>
-        public object UnderlyingObject { get; private set; }
+        public object UnderlyingObject
+        {
+            get
+            {
+                return _proxy.Proxy;
+            }
+        }
 
         /// <summary>
         /// Returns Type of native proxy
@@ -924,7 +1074,7 @@ namespace NetOffice
         public string UnderlyingTypeName
         {
             get
-            {
+            {              
                 if (null == _underlyingTypeName)
                     _underlyingTypeName = new UnderlyingTypeNameResolver().GetClassName(this);
                 return _underlyingTypeName;
@@ -986,7 +1136,10 @@ namespace NetOffice
         {
             get
             {
-                return "Dynamic";
+                if(null != _progId)
+                    return "Dynamic(" + _progId + ")";
+                else
+                    return "Dynamic(" + UnderlyingFriendlyTypeName + ")";
             }
         }
 
@@ -1211,10 +1364,12 @@ namespace NetOffice
                     ParentObject = null;
                 }
 
-                // call quit automaticly if wanted
-                if (_callQuitInDispose && Settings.EnableAutomaticQuit)
+                // call quit automatically if wanted
+                CheckEntities();
+                if (Settings.EnableAutomaticQuit && HasQuitMethod())
                     new QuitCaller().TryCall(Settings, Invoker, this);
                 
+
                 // release proxy
                 ReleaseCOMProxy(ownerPath);
 
@@ -1234,7 +1389,7 @@ namespace NetOffice
             DisposeChildInstances(true);
         }
 
-        private object _disposeChildLock = new object();
+      
 
         /// <summary>
         /// Dispose all child instances
@@ -1304,7 +1459,33 @@ namespace NetOffice
         }
 
         #endregion
-         
+        
+        #region ICOMProxyShareProvider
+
+        /// <summary>
+        /// Returns the inner proxy shared access handler
+        /// </summary>
+        /// <returns>shared proxy</returns>
+        public COMProxyShare GetProxyShare()
+        {
+            return _proxy;
+        }
+
+        /// <summary>
+        /// Set the inner proxy shared access handler.
+        /// The method want aquire the share 1x times
+        /// </summary>
+        /// <param name="share">target share</param>
+        public void SetProxyShare(COMProxyShare share)
+        {
+            if (null == share)
+                throw new ArgumentNullException("share");
+            _proxy = share;
+            _proxy.Aquire();
+        }
+
+        #endregion
+
         #region Operator Overloads
 
         /// <summary>

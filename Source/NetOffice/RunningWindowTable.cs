@@ -217,7 +217,6 @@ namespace NetOffice
             return result;
         }
 
-        // don't laughing for missing Linq knowledge because we still want to compile the core in .Net 2.0 
         private static int GetTargetsCount(IEnumerable<AccessibleWindowTarget> targets)
         {   
             if (null == targets)

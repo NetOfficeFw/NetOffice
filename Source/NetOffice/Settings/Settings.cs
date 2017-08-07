@@ -121,6 +121,8 @@ namespace NetOffice
             }
         }
 
+       
+
         /// <summary>
         /// NetOffice wrap all thrown exceptions from Office applications in a COMException.
         /// This option can be used to set the top level exception message or copy the innerst message to top.

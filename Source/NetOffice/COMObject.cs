@@ -12,7 +12,7 @@ namespace NetOffice
     /// </summary>
     [DebuggerDisplay("{InstanceFriendlyName}")]
     [TypeConverter(typeof(COMObjectExpandableObjectConverter))]
-    public class COMObject : ICOMObject
+    public class COMObject : ICOMObject, ICOMProxyShareProvider
     {
         #region Fields
 
@@ -31,10 +31,15 @@ namespace NetOffice
         /// </summary>
         protected internal Type _underlyingType;
 
+        ///// <summary>
+        ///// returns the native wrapped proxy
+        ///// </summary>
+        //protected internal object _underlyingObject;
+
         /// <summary>
-        /// returns the native wrapped proxy
+        /// Returns a shared access wrapper arrount the native wrapped proxy
         /// </summary>
-        protected internal object _underlyingObject;
+        protected internal COMProxyShare _proxy;
 
         /// <summary>
         /// returns instance is an enumerator
@@ -111,6 +116,8 @@ namespace NetOffice
         /// </summary>
         private Type _thisType;
 
+        private object _disposeChildLock = new object();
+
         #endregion
 
         #region Ctor
@@ -130,7 +137,11 @@ namespace NetOffice
             Factory = factory;
 
             // copy proxy
-            _underlyingObject = replacedObject.UnderlyingObject;
+            ICOMProxyShareProvider shareProvider = replacedObject as ICOMProxyShareProvider;
+            if (null != shareProvider)
+                _proxy = shareProvider.GetProxyShare();
+            else
+                _proxy = new COMProxyShare(replacedObject.UnderlyingObject);
             _parentObject = replacedObject.ParentObject;
             _underlyingType = replacedObject.UnderlyingType;
 
@@ -167,9 +178,13 @@ namespace NetOffice
                 Factory = replacedObject.Factory;
             else
                 Factory = Core.Default;
-
+            
             // copy proxy
-            _underlyingObject = replacedObject.UnderlyingObject;
+            ICOMProxyShareProvider shareProvider = replacedObject as ICOMProxyShareProvider;
+            if (null != shareProvider)
+                _proxy = shareProvider.GetProxyShare();
+            else
+                _proxy = new COMProxyShare(replacedObject.UnderlyingObject);
             _parentObject = replacedObject.ParentObject;
             _underlyingType = replacedObject.UnderlyingType;
 
@@ -209,7 +224,7 @@ namespace NetOffice
                 factory = Core.Default;
             Factory = factory;
 
-            _underlyingObject = comProxy;
+            _proxy = new COMProxyShare(comProxy);
             _underlyingType = comProxy.GetType();
 
             Factory.AddObjectToList(this);
@@ -234,7 +249,7 @@ namespace NetOffice
                 Factory = Core.Default;
 
             _parentObject = parentObject;
-            _underlyingObject = comProxy;
+            _proxy = new COMProxyShare(comProxy);
             _underlyingType = comProxy.GetType();
 
             if (Settings.Default.EnableProxyManagement && !Object.ReferenceEquals(parentObject, null))
@@ -258,8 +273,38 @@ namespace NetOffice
             Factory = Core.Default;
 
             _parentObject = null;
-            _underlyingObject = comProxy;
+            _proxy = new COMProxyShare(comProxy);
             _underlyingType = comProxy.GetType();
+
+            Factory.AddObjectToList(this);
+
+            OnCreate();
+        }
+
+        /// <summary>
+        /// creates new instance with given proxy and parent info
+        /// </summary>
+        /// <param name="factory">current factory instance or null for default</param>
+        /// <param name="parentObject">the parent instance where you have these instance from</param>
+        /// <param name="proxy"></param>
+        [EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false)]
+        public COMObject(Core factory, ICOMObject parentObject, COMProxyShare proxy)
+        {
+            if (null == proxy)
+                throw new ArgumentNullException("proxy");
+
+            if (null == factory)
+                factory = Core.Default;
+            Factory = factory;
+
+            _parentObject = parentObject;
+            _proxy = proxy;
+            _underlyingType = _proxy.Proxy.GetType();
+
+            _proxy.Aquire();
+
+            if (Settings.Default.EnableProxyManagement && !Object.ReferenceEquals(parentObject, null))
+                _parentObject.AddChildObject(this);
 
             Factory.AddObjectToList(this);
 
@@ -283,7 +328,7 @@ namespace NetOffice
             Factory = factory;
 
             _parentObject = parentObject;
-            _underlyingObject = comProxy;
+            _proxy = new COMProxyShare(comProxy);
             _underlyingType = comProxy.GetType();
 
             if (Settings.Default.EnableProxyManagement && !Object.ReferenceEquals(parentObject, null))
@@ -313,7 +358,7 @@ namespace NetOffice
             Factory = factory;
 
             _parentObject = parentObject;
-            _underlyingObject = comProxy;
+            _proxy = new COMProxyShare(comProxy, isEnumerator);
             _isEnumerator = isEnumerator;
             _underlyingType = comProxy.GetType();
 
@@ -345,7 +390,7 @@ namespace NetOffice
             Factory = factory;
 
             _parentObject = parentObject;
-            _underlyingObject = comProxy;
+            _proxy = new COMProxyShare(comProxy, isEnumerator);
             _isEnumerator = isEnumerator;
             _underlyingType = comProxy.GetType();
             _instanceName = name;
@@ -377,7 +422,7 @@ namespace NetOffice
             Factory = factory;
 
             _parentObject = parentObject;
-            _underlyingObject = comProxy;
+            _proxy = new COMProxyShare(comProxy);
 
             if (null != comProxyType)
                 _underlyingType = comProxyType;
@@ -411,7 +456,7 @@ namespace NetOffice
                 Factory = Core.Default;
 
             _parentObject = parentObject;
-            _underlyingObject = comProxy;
+            _proxy = new COMProxyShare(comProxy);
 
             if (null != comProxyType)
                 _underlyingType = comProxyType;
@@ -561,7 +606,7 @@ namespace NetOffice
         {
             get
             {
-                return _underlyingObject;
+                return _proxy.Proxy;
             }
         }
 
@@ -804,7 +849,8 @@ namespace NetOffice
         public void CreateFromProgId(string progId)
         {
             _underlyingType = System.Type.GetTypeFromProgID(progId, true);
-            _underlyingObject = Activator.CreateInstance(_underlyingType);
+            object underlyingObject = Activator.CreateInstance(_underlyingType);
+            _proxy = new COMProxyShare(underlyingObject);
         }
 
         /// <summary>
@@ -874,19 +920,10 @@ namespace NetOffice
         private void ReleaseCOMProxy(IEnumerable<ICOMObject> ownerPath)
         {
             // release himself from COM Runtime System
-            if (!Object.ReferenceEquals(_underlyingObject, null))
+            if (!_proxy.Released)
             {
-                if (_isEnumerator)
-                {
-                    ICustomAdapter adapter = _underlyingObject as ICustomAdapter;
-                    Marshal.ReleaseComObject(adapter.GetUnderlyingObject());
-                }
-                else
-                {
-                    Marshal.ReleaseComObject(_underlyingObject);
-                }
+                _proxy.Release();
                 Factory.RemoveObjectFromList(this, ownerPath);
-                _underlyingObject = null;
             }
         }
 
@@ -896,6 +933,32 @@ namespace NetOffice
         protected internal virtual void OnCreate()
         {
 
+        }
+
+        #endregion
+
+        #region ICOMProxyShareProvider
+
+        /// <summary>
+        /// Returns the inner proxy shared access handler
+        /// </summary>
+        /// <returns>shared proxy</returns>
+        public COMProxyShare GetProxyShare()
+        {
+            return _proxy;
+        }
+      
+        /// <summary>
+        /// Set the inner proxy shared access handler.
+        /// The method want aquire the share 1x times
+        /// </summary>
+        /// <param name="share">target share</param>
+        public void SetProxyShare(COMProxyShare share)
+        {
+            if (null == share)
+                throw new ArgumentNullException("share");
+            _proxy = share;
+            _proxy.Aquire();
         }
 
         #endregion
@@ -980,7 +1043,7 @@ namespace NetOffice
                     _parentObject = null;
                 }
 
-                // call quit automaticly if wanted
+                // call quit automatically if wanted
                 if (_callQuitInDispose && Settings.EnableAutomaticQuit)
                     new QuitCaller().TryCall(Settings, Invoker, this);
 
@@ -1002,9 +1065,7 @@ namespace NetOffice
         {
             Dispose(true);
         }
-
-        private object _disposeChildLock = new object();
-
+        
         /// <summary>
         /// NetOffice method: dispose all child instances
         /// </summary>

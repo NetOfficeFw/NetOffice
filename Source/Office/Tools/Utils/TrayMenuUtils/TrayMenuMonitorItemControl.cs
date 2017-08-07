@@ -401,6 +401,8 @@ namespace NetOffice.OfficeApi.Tools.Utils
                 int comObjectHashCode = comObject.GetHashCode();
                 foreach (TreeNode node in nodes)
                 {
+                    if (null == node.Tag)
+                        continue;
                     int nodeHashCode = (int)node.Tag;
                     if (comObjectHashCode == nodeHashCode)
                     {

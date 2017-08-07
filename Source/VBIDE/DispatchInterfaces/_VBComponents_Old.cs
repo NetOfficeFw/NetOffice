@@ -201,29 +201,29 @@ namespace NetOffice.VBIDEApi
 			return newObject;
 		}
 
-		#endregion
+        #endregion
 
-       #region IEnumerable<NetOffice.VBIDEApi.VBComponent> Member
-        
+        #region IEnumerable<NetOffice.VBIDEApi.VBComponent> Member
+
         /// <summary>
-		/// SupportByVersionAttribute VBIDE, 12,14,5.3
-		/// </summary>
-		[SupportByVersionAttribute("VBIDE", 12,14,5.3)]
-       public IEnumerator<NetOffice.VBIDEApi.VBComponent> GetEnumerator()  
-       {
-           NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
-           foreach (NetOffice.VBIDEApi.VBComponent item in innerEnumerator)
-               yield return item;
-       }
+        /// SupportByVersionAttribute VBIDE, 12,14,5.3
+        /// </summary>
+        [SupportByVersionAttribute("VBIDE", 12, 14, 5.3)]
+        public IEnumerator<NetOffice.VBIDEApi.VBComponent> GetEnumerator()
+        {
+            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
+            foreach (NetOffice.VBIDEApi.VBComponent item in innerEnumerator)
+                yield return item;
+        }
 
-       #endregion
-          
-		#region IEnumerable Members
-       
-		/// <summary>
-		/// SupportByVersionAttribute VBIDE, 12,14,5.3
-		/// </summary>
-		[SupportByVersionAttribute("VBIDE", 12,14,5.3)]
+        #endregion
+
+        #region IEnumerable Members
+
+        /// <summary>
+        /// SupportByVersionAttribute VBIDE, 12,14,5.3
+        /// </summary>
+        [SupportByVersionAttribute("VBIDE", 12,14,5.3)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
 			return NetOffice.Utils.GetProxyEnumeratorAsMethod(this);

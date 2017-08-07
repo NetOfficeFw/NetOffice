@@ -29,9 +29,16 @@ namespace NetOffice
         /// <summary>
         /// Returns info a class with given name exists in NetOfficeApi assembly
         /// </summary>
-        /// <param name="className"></param>
-        /// <returns></returns>
+        /// <param name="className">target class name</param>
+        /// <returns>true if exists, otherwise false</returns>
         bool Contains(string className);
+
+        /// <summary>
+        /// Returns info a class with given type exists in NetOfficeApi assembly
+        /// </summary>
+        /// <param name="type">target type</param>
+        /// <returns>true if exists, otherwise false</returns>
+        bool Contains(Type type);
 
         /// <summary>
         /// Returns a name array of dependent NetOfficeApi assemblies

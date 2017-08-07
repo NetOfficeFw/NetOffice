@@ -1186,14 +1186,15 @@ namespace NetOffice
                 Monitor.Enter(_globalObjectList);
                 isLocked = true;
 
-                _globalObjectList.Remove(proxy);
+                bool removed = _globalObjectList.Remove(proxy);
 
                 if (HasProxyRemovedRecipients)
                 {                 
                     RaiseProxyRemoved(ownerPath, proxy);
                 }
 
-                RaiseProxyCountChanged(_globalObjectList.Count);
+                if(removed)
+                    RaiseProxyCountChanged(_globalObjectList.Count);
             }
             catch (Exception throwedException)
             {
@@ -1234,6 +1235,42 @@ namespace NetOffice
                 result[parentCount - 1] = parent;
                 parentCount--;
                 parent = parent.ParentObject;
+            }
+
+            return result;
+        }
+
+        /// <summary>
+        /// Returns all root instances in COM proxy management
+        /// </summary>
+        /// <returns>Enumerable sequence of root instances</returns>
+        [EditorBrowsable(EditorBrowsableState.Advanced)]
+        public IEnumerable<ICOMObject> GetRootInstances()
+        {
+            List<ICOMObject> result = new List<ICOMObject>();
+            bool isLocked = false;
+            try
+            {
+                Monitor.Enter(_globalObjectList);
+                isLocked = true;
+
+                foreach (ICOMObject item in _globalObjectList)
+                {
+                    if (null == item.ParentObject)
+                        result.Add(item);
+                }
+            }
+            catch (Exception throwedException)
+            {
+                Console.WriteException(throwedException);
+            }
+            finally
+            {
+                if (isLocked)
+                {
+                    Monitor.Exit(_globalObjectList);
+                    isLocked = false;
+                }
             }
 
             return result;
@@ -1471,8 +1508,9 @@ namespace NetOffice
         /// Get wrapper class factory info 
         /// </summary>
         /// <param name="comProxy">new created proxy</param>
+        /// <param name="throwException">throw exception if no info found or return null</param>
         /// <returns>factory info from corresponding assembly</returns>
-        private IFactoryInfo GetFactoryInfo(object comProxy)
+        public IFactoryInfo GetFactoryInfo(object comProxy, bool throwException = true)
         {
             if (_factoryList.Count == 0)
                 return null;
@@ -1494,12 +1532,17 @@ namespace NetOffice
                     return item;
             }
 
-            string message = string.Format("Class {0}:{1} not found in loaded NetOffice Assemblies{2}", hostGuid, className, Environment.NewLine);
-            message += string.Format("Currently loaded NetOfficeApi Assemblies{0}", Environment.NewLine);
-            foreach (IFactoryInfo item in _factoryList)
-                message += string.Format("Loaded NetOffice Assembly:{0} {1}{2}", item.ComponentGuid, item.Assembly.FullName, Environment.NewLine);
+            if (throwException)
+            {
+                string message = string.Format("Class {0}:{1} not found in loaded NetOffice Assemblies{2}", hostGuid, className, Environment.NewLine);
+                message += string.Format("Currently loaded NetOfficeApi Assemblies{0}", Environment.NewLine);
+                foreach (IFactoryInfo item in _factoryList)
+                    message += string.Format("Loaded NetOffice Assembly:{0} {1}{2}", item.ComponentGuid, item.Assembly.FullName, Environment.NewLine);
 
-            throw new NetOfficeException(message);
+                throw new NetOfficeException(message);
+            }
+            else
+                return null;
         }
 
         /// <summary>

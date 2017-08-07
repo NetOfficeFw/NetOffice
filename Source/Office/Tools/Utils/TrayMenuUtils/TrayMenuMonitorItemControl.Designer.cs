@@ -86,7 +86,7 @@
             this.OptionsGrid.Controls.Add(this.AutoExpandHelpLabel);
             this.OptionsGrid.Controls.Add(this.HighlightCheckBox);
             this.OptionsGrid.Controls.Add(this.AutoExpandCheckBox);
-            this.OptionsGrid.Location = new System.Drawing.Point(48, 4);
+            this.OptionsGrid.Location = new System.Drawing.Point(48, 81);
             this.OptionsGrid.Name = "OptionsGrid";
             this.OptionsGrid.Size = new System.Drawing.Size(434, 206);
             this.OptionsGrid.TabIndex = 4;

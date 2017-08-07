@@ -6,7 +6,6 @@ using NetOffice.Misc;
 
 namespace NetOffice.ExcelApi
 {
-
 	#region Delegates
 
 	#pragma warning disable

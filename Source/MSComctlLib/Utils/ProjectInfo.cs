@@ -33,7 +33,21 @@ namespace MSComctlLibApi.Utils
 
         #region IFactoryInfo Members
 
-		public bool Contains(string className)
+        public bool Contains(Type type)
+        {
+            if (null == _exportedTypes)
+                _exportedTypes = Assembly.GetExportedTypes();
+
+            foreach (Type item in _exportedTypes)
+            {
+                if (item == type)
+                    return true;
+            }
+
+            return false;
+        }
+
+        public bool Contains(string className)
 		{
 			if(null == _exportedTypes)
 				_exportedTypes = Assembly.GetExportedTypes();

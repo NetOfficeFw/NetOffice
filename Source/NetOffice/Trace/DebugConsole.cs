@@ -377,8 +377,8 @@ namespace NetOffice
         /// <summary>
         /// Write log message
         /// </summary>
-        /// <param name="message"></param>
-        /// <param name="args"></param>
+        /// <param name="message">given message as any</param>
+        /// <param name="args">message arguments</param>
         public void WriteLine(string message, params object[] args)
         {
             lock (_thisLock)
@@ -425,7 +425,17 @@ namespace NetOffice
         /// <summary>
         /// Write log message
         /// </summary>
-        /// <param name="message"></param>
+        /// <param name="any">given object as any</param>
+        public void WriteLine(object any)
+        {
+            string message = null != any ? any.ToString() : "<null>";
+            WriteLine(message);
+        }
+
+        /// <summary>
+        /// Write log message
+        /// </summary>
+        /// <param name="message">given message as any</param>
         public void WriteLine(string message)
         {
             lock (_thisLock)

@@ -74,8 +74,10 @@
     <Compile Include="Attributes\ComUnregisterCallAttribute.cs.cs" />
     <Compile Include="COMDynamicObject.cs" />
     <Compile Include="COMDynamicObjectExpandableObjectConverter.cs" />
+    <Compile Include="COMDynamicMetaObject.cs" />
     <Compile Include="COMObjectExpandableObjectConverter.cs" />
     <Compile Include="COMObjectFaults.cs" />
+    <Compile Include="COMProxyShare.cs" />
     <Compile Include="InstanceTypeNameResolver.cs" />
     <Compile Include="Misc\SelfDiagnostics.cs" />
     <Compile Include="Tools\DontRegisterAddinAttribute.cs" />

@@ -6,7 +6,6 @@ using NetOffice.Misc;
 
 namespace NetOffice.VBIDEApi
 {
-
 	#region Delegates
 
 	#pragma warning disable
