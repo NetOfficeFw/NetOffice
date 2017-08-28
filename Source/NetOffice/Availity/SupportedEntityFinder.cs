@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using NetOffice.Availity;
+using NetOffice.Exceptions;
 
 namespace NetOffice.Availity
 {
@@ -18,52 +18,59 @@ namespace NetOffice.Availity
         /// <param name="proxy">target com proxy</param>
         /// <param name="name">name of the target entity</param>
         /// <returns>true if supported, otherwise false</returns>
+        /// <exception cref="AvailityException">An unexpected error occurs. See inner exception(s) for details.</exception>
         internal bool Find(Core factory, ref Dictionary<string,string> list, SupportedEntityType searchType, object proxy, string name)
         {
-            switch (searchType)
+            try
             {
-                case SupportedEntityType.Method:
-                    {
-                        if (null == list)
+                switch (searchType)
+                {
+                    case SupportedEntityType.Method:
                         {
-                            list = factory.GetSupportedEntities(proxy);
                             if (null == list)
-                                return false;
-                        }
+                            {
+                                list = factory.GetSupportedEntities(proxy);
+                                if (null == list)
+                                    return false;
+                            }
 
-                        string outValue = null;
-                        return list.TryGetValue("Method-" + name, out outValue);
-                    }
-                case SupportedEntityType.Property:
-                    {
-                        if (null == list)
-                        { 
-                            list = factory.GetSupportedEntities(proxy);
-                            if (null == list)
-                                return false;
+                            string outValue = null;
+                            return list.TryGetValue("Method-" + name, out outValue);
                         }
-
-                        string outValue = null;
-                        return list.TryGetValue("Property-" + name, out outValue);
-                    }
-                default:
-                    {
-                        if (null == list)
+                    case SupportedEntityType.Property:
                         {
-                            list = factory.GetSupportedEntities(proxy);
                             if (null == list)
-                                return false;
+                            {
+                                list = factory.GetSupportedEntities(proxy);
+                                if (null == list)
+                                    return false;
+                            }
+
+                            string outValue = null;
+                            return list.TryGetValue("Property-" + name, out outValue);
                         }
+                    default:
+                        {
+                            if (null == list)
+                            {
+                                list = factory.GetSupportedEntities(proxy);
+                                if (null == list)
+                                    return false;
+                            }
 
-                        string outValue = null;
-                        bool result = list.TryGetValue("Property-" + name, out outValue);
-                        if (result)
-                            return true;
+                            string outValue = null;
+                            bool result = list.TryGetValue("Property-" + name, out outValue);
+                            if (result)
+                                return true;
 
-                        return list.TryGetValue("Method-" + name, out outValue);
-                    }
+                            return list.TryGetValue("Method-" + name, out outValue);
+                        }
+                }
             }
-
+            catch (Exception exception)
+            {
+                throw new AvailityException(exception);
+            }            
         }
     }
 }

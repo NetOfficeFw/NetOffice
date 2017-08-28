@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using NetOffice.Attributes;
@@ -44,7 +44,14 @@ namespace NetOffice.PowerPointApi
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public PPControls(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -139,12 +146,13 @@ namespace NetOffice.PowerPointApi
 		/// </summary>
 		/// <param name="index">object index</param>
 		[SupportByVersion("PowerPoint", 9)]
+		[BaseResult]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
 		public NetOffice.PowerPointApi.PPControl this[object index]
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PowerPointApi.PPControl>(this, "Item", NetOffice.PowerPointApi.PPControl.LateBindingApiWrapperType, index);
+				return Factory.ExecuteBaseReferenceMethodGet<NetOffice.PowerPointApi.PPControl>(this, "Item", index);
 			}
 		}
 
@@ -390,6 +398,3 @@ namespace NetOffice.PowerPointApi
 		#pragma warning restore
 	}
 }
-
-
-

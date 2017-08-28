@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using NetOffice.Attributes;
@@ -44,7 +44,14 @@ namespace NetOffice.AccessApi
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public _DependencyInfo(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -121,11 +128,12 @@ namespace NetOffice.AccessApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff836006.aspx </remarks>
 		[SupportByVersion("Access", 11,12,14,15,16)]
+		[BaseResult]
 		public NetOffice.AccessApi._DependencyObjects Dependants
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.AccessApi._DependencyObjects>(this, "Dependants", NetOffice.AccessApi._DependencyObjects.LateBindingApiWrapperType);
+				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.AccessApi._DependencyObjects>(this, "Dependants");
 			}
 		}
 
@@ -135,11 +143,12 @@ namespace NetOffice.AccessApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff192892.aspx </remarks>
 		[SupportByVersion("Access", 11,12,14,15,16)]
+		[BaseResult]
 		public NetOffice.AccessApi._DependencyObjects Dependencies
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.AccessApi._DependencyObjects>(this, "Dependencies", NetOffice.AccessApi._DependencyObjects.LateBindingApiWrapperType);
+				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.AccessApi._DependencyObjects>(this, "Dependencies");
 			}
 		}
 
@@ -149,11 +158,12 @@ namespace NetOffice.AccessApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff192732.aspx </remarks>
 		[SupportByVersion("Access", 11,12,14,15,16)]
+		[BaseResult]
 		public NetOffice.AccessApi._DependencyObjects OutOfDateObjects
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.AccessApi._DependencyObjects>(this, "OutOfDateObjects", NetOffice.AccessApi._DependencyObjects.LateBindingApiWrapperType);
+				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.AccessApi._DependencyObjects>(this, "OutOfDateObjects");
 			}
 		}
 
@@ -163,11 +173,12 @@ namespace NetOffice.AccessApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff822804.aspx </remarks>
 		[SupportByVersion("Access", 11,12,14,15,16)]
+		[BaseResult]
 		public NetOffice.AccessApi._DependencyObjects InsufficientPermissions
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.AccessApi._DependencyObjects>(this, "InsufficientPermissions", NetOffice.AccessApi._DependencyObjects.LateBindingApiWrapperType);
+				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.AccessApi._DependencyObjects>(this, "InsufficientPermissions");
 			}
 		}
 
@@ -177,11 +188,12 @@ namespace NetOffice.AccessApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff197991.aspx </remarks>
 		[SupportByVersion("Access", 11,12,14,15,16)]
+		[BaseResult]
 		public NetOffice.AccessApi._DependencyObjects UnsupportedObjects
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.AccessApi._DependencyObjects>(this, "UnsupportedObjects", NetOffice.AccessApi._DependencyObjects.LateBindingApiWrapperType);
+				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.AccessApi._DependencyObjects>(this, "UnsupportedObjects");
 			}
 		}
 
@@ -205,6 +217,3 @@ namespace NetOffice.AccessApi
 		#pragma warning restore
 	}
 }
-
-
-

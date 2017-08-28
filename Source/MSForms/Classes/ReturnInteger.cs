@@ -280,4 +280,3 @@ namespace NetOffice.MSFormsApi
 		#pragma warning restore
 	}
 }
-

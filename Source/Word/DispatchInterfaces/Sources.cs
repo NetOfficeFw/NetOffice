@@ -14,7 +14,7 @@ namespace NetOffice.WordApi
 	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff834290.aspx </remarks>
 	[SupportByVersion("Word", 12,14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Method, "Item")]
-	public class Sources : COMObject , IEnumerable<NetOffice.WordApi.Source>
+	public class Sources : COMObject, IEnumerable<NetOffice.WordApi.Source>
 	{
 		#pragma warning disable
 
@@ -47,7 +47,14 @@ namespace NetOffice.WordApi
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public Sources(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -189,29 +196,29 @@ namespace NetOffice.WordApi
 			 Factory.ExecuteMethod(this, "Add", data);
 		}
 
-		#endregion
+        #endregion
 
-       #region IEnumerable<NetOffice.WordApi.Source> Member
-        
+        #region IEnumerable<NetOffice.WordApi.Source> Member
+
         /// <summary>
-		/// SupportByVersion Word, 12,14,15,16
-		/// </summary>
-		[SupportByVersion("Word", 12,14,15,16)]
-       public IEnumerator<NetOffice.WordApi.Source> GetEnumerator()  
-       {
-           NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
-           foreach (NetOffice.WordApi.Source item in innerEnumerator)
-               yield return item;
-       }
+        /// SupportByVersion Word, 12,14,15,16
+        /// </summary>
+        [SupportByVersion("Word", 12, 14, 15, 16)]
+        public IEnumerator<NetOffice.WordApi.Source> GetEnumerator()
+        {
+            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
+            foreach (NetOffice.WordApi.Source item in innerEnumerator)
+                yield return item;
+        }
 
-       #endregion
-          
-		#region IEnumerable Members
-       
-		/// <summary>
-		/// SupportByVersion Word, 12,14,15,16
-		/// </summary>
-		[SupportByVersion("Word", 12,14,15,16)]
+        #endregion
+
+        #region IEnumerable Members
+
+        /// <summary>
+        /// SupportByVersion Word, 12,14,15,16
+        /// </summary>
+        [SupportByVersion("Word", 12,14,15,16)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
 			return NetOffice.Utils.GetProxyEnumeratorAsProperty(this);
@@ -222,6 +229,3 @@ namespace NetOffice.WordApi
 		#pragma warning restore
 	}
 }
-
-
-

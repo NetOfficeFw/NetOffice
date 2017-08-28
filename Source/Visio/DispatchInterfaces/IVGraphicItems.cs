@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using System;
 using NetRuntimeSystem = System;
@@ -46,7 +46,14 @@ namespace NetOffice.VisioApi
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public IVGraphicItems(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -107,11 +114,12 @@ namespace NetOffice.VisioApi
 		/// Get
 		/// </summary>
 		[SupportByVersion("Visio", 12,14,15,16)]
+		[BaseResult]
 		public NetOffice.VisioApi.IVApplication Application
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.VisioApi.IVApplication>(this, "Application", NetOffice.VisioApi.IVApplication.LateBindingApiWrapperType);
+				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.VisioApi.IVApplication>(this, "Application");
 			}
 		}
 
@@ -120,11 +128,12 @@ namespace NetOffice.VisioApi
 		/// Get
 		/// </summary>
 		[SupportByVersion("Visio", 12,14,15,16)]
+		[BaseResult]
 		public NetOffice.VisioApi.IVDocument Document
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.VisioApi.IVDocument>(this, "Document", NetOffice.VisioApi.IVDocument.LateBindingApiWrapperType);
+				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.VisioApi.IVDocument>(this, "Document");
 			}
 		}
 
@@ -146,11 +155,12 @@ namespace NetOffice.VisioApi
 		/// Get
 		/// </summary>
 		[SupportByVersion("Visio", 12,14,15,16)]
+		[BaseResult]
 		public NetOffice.VisioApi.IVMaster DataGraphic
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.VisioApi.IVMaster>(this, "DataGraphic", NetOffice.VisioApi.IVMaster.LateBindingApiWrapperType);
+				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.VisioApi.IVMaster>(this, "DataGraphic");
 			}
 		}
 
@@ -173,12 +183,13 @@ namespace NetOffice.VisioApi
 		/// </summary>
 		/// <param name="index">Int32 index</param>
 		[SupportByVersion("Visio", 12,14,15,16)]
+		[BaseResult]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
 		public NetOffice.VisioApi.IVGraphicItem this[Int32 index]
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.VisioApi.IVGraphicItem>(this, "Item", NetOffice.VisioApi.IVGraphicItem.LateBindingApiWrapperType, index);
+				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.VisioApi.IVGraphicItem>(this, "Item", index);
 			}
 		}
 
@@ -227,9 +238,10 @@ namespace NetOffice.VisioApi
 		/// </summary>
 		/// <param name="graphicItem">NetOffice.VisioApi.IVGraphicItem graphicItem</param>
 		[SupportByVersion("Visio", 12,14,15,16)]
+		[BaseResult]
 		public NetOffice.VisioApi.IVGraphicItem AddCopy(NetOffice.VisioApi.IVGraphicItem graphicItem)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.VisioApi.IVGraphicItem>(this, "AddCopy", NetOffice.VisioApi.IVGraphicItem.LateBindingApiWrapperType, graphicItem);
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.VisioApi.IVGraphicItem>(this, "AddCopy", graphicItem);
 		}
 
 		#endregion
@@ -265,6 +277,3 @@ namespace NetOffice.VisioApi
 		#pragma warning restore
 	}
 }
-
-
-

@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using System;
 using NetRuntimeSystem = System;
@@ -46,7 +46,14 @@ namespace NetOffice.VisioApi
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public LPVISIOHYPERLINKS(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -107,11 +114,12 @@ namespace NetOffice.VisioApi
 		/// Get
 		/// </summary>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
+		[BaseResult]
 		public NetOffice.VisioApi.IVApplication Application
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.VisioApi.IVApplication>(this, "Application", NetOffice.VisioApi.IVApplication.LateBindingApiWrapperType);
+				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.VisioApi.IVApplication>(this, "Application");
 			}
 		}
 
@@ -120,11 +128,12 @@ namespace NetOffice.VisioApi
 		/// Get
 		/// </summary>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
+		[BaseResult]
 		public NetOffice.VisioApi.IVShape Shape
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.VisioApi.IVShape>(this, "Shape", NetOffice.VisioApi.IVShape.LateBindingApiWrapperType);
+				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.VisioApi.IVShape>(this, "Shape");
 			}
 		}
 
@@ -160,12 +169,13 @@ namespace NetOffice.VisioApi
 		/// </summary>
 		/// <param name="nameOrIndex">object nameOrIndex</param>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
+		[BaseResult]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
 		public NetOffice.VisioApi.IVHyperlink this[object nameOrIndex]
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.VisioApi.IVHyperlink>(this, "Item", NetOffice.VisioApi.IVHyperlink.LateBindingApiWrapperType, nameOrIndex);
+				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.VisioApi.IVHyperlink>(this, "Item", nameOrIndex);
 			}
 		}
 
@@ -213,9 +223,10 @@ namespace NetOffice.VisioApi
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// </summary>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
+		[BaseResult]
 		public NetOffice.VisioApi.IVHyperlink Add()
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.VisioApi.IVHyperlink>(this, "Add", NetOffice.VisioApi.IVHyperlink.LateBindingApiWrapperType);
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.VisioApi.IVHyperlink>(this, "Add");
 		}
 
 		#endregion
@@ -251,6 +262,3 @@ namespace NetOffice.VisioApi
 		#pragma warning restore
 	}
 }
-
-
-

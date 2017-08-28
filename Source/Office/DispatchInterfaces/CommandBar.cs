@@ -1,4 +1,4 @@
-﻿using System.Reflection;
+using System.Reflection;
 using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
@@ -12,7 +12,14 @@ namespace NetOffice.OfficeApi
 	[SyntaxBypass]
  	public class CommandBar_ : _IMsoOleAccDispObj
 	{
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public CommandBar_(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -329,7 +336,14 @@ namespace NetOffice.OfficeApi
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public CommandBar(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -1148,9 +1162,10 @@ namespace NetOffice.OfficeApi
 		/// <param name="visible">optional object visible</param>
 		/// <param name="recursive">optional object recursive</param>
 		[SupportByVersion("Office", 9,10,11,12,14,15,16)]
+		[BaseResult]
 		public NetOffice.OfficeApi.CommandBarControl FindControl(object type, object id, object tag, object visible, object recursive)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.CommandBarControl>(this, "FindControl", NetOffice.OfficeApi.CommandBarControl.LateBindingApiWrapperType, new object[]{ type, id, tag, visible, recursive });
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.OfficeApi.CommandBarControl>(this, "FindControl", new object[]{ type, id, tag, visible, recursive });
 		}
 
 		/// <summary>
@@ -1158,10 +1173,11 @@ namespace NetOffice.OfficeApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff864884.aspx </remarks>
 		[CustomMethod]
+		[BaseResult]
 		[SupportByVersion("Office", 9,10,11,12,14,15,16)]
 		public NetOffice.OfficeApi.CommandBarControl FindControl()
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.CommandBarControl>(this, "FindControl", NetOffice.OfficeApi.CommandBarControl.LateBindingApiWrapperType);
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.OfficeApi.CommandBarControl>(this, "FindControl");
 		}
 
 		/// <summary>
@@ -1170,10 +1186,11 @@ namespace NetOffice.OfficeApi
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff864884.aspx </remarks>
 		/// <param name="type">optional object type</param>
 		[CustomMethod]
+		[BaseResult]
 		[SupportByVersion("Office", 9,10,11,12,14,15,16)]
 		public NetOffice.OfficeApi.CommandBarControl FindControl(object type)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.CommandBarControl>(this, "FindControl", NetOffice.OfficeApi.CommandBarControl.LateBindingApiWrapperType, type);
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.OfficeApi.CommandBarControl>(this, "FindControl", type);
 		}
 
 		/// <summary>
@@ -1183,10 +1200,11 @@ namespace NetOffice.OfficeApi
 		/// <param name="type">optional object type</param>
 		/// <param name="id">optional object id</param>
 		[CustomMethod]
+		[BaseResult]
 		[SupportByVersion("Office", 9,10,11,12,14,15,16)]
 		public NetOffice.OfficeApi.CommandBarControl FindControl(object type, object id)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.CommandBarControl>(this, "FindControl", NetOffice.OfficeApi.CommandBarControl.LateBindingApiWrapperType, type, id);
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.OfficeApi.CommandBarControl>(this, "FindControl", type, id);
 		}
 
 		/// <summary>
@@ -1197,10 +1215,11 @@ namespace NetOffice.OfficeApi
 		/// <param name="id">optional object id</param>
 		/// <param name="tag">optional object tag</param>
 		[CustomMethod]
+		[BaseResult]
 		[SupportByVersion("Office", 9,10,11,12,14,15,16)]
 		public NetOffice.OfficeApi.CommandBarControl FindControl(object type, object id, object tag)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.CommandBarControl>(this, "FindControl", NetOffice.OfficeApi.CommandBarControl.LateBindingApiWrapperType, type, id, tag);
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.OfficeApi.CommandBarControl>(this, "FindControl", type, id, tag);
 		}
 
 		/// <summary>
@@ -1212,10 +1231,11 @@ namespace NetOffice.OfficeApi
 		/// <param name="tag">optional object tag</param>
 		/// <param name="visible">optional object visible</param>
 		[CustomMethod]
+		[BaseResult]
 		[SupportByVersion("Office", 9,10,11,12,14,15,16)]
 		public NetOffice.OfficeApi.CommandBarControl FindControl(object type, object id, object tag, object visible)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.CommandBarControl>(this, "FindControl", NetOffice.OfficeApi.CommandBarControl.LateBindingApiWrapperType, type, id, tag, visible);
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.OfficeApi.CommandBarControl>(this, "FindControl", type, id, tag, visible);
 		}
 
 		/// <summary>
@@ -1268,6 +1288,3 @@ namespace NetOffice.OfficeApi
 		#pragma warning restore
 	}
 }
-
-
-

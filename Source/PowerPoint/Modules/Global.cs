@@ -307,4 +307,3 @@ namespace NetOffice.PowerPointApi.GlobalHelperModules
 		#endregion
 	}
 }
-

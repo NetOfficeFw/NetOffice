@@ -20,8 +20,8 @@ namespace NetOffice.AccessApi
 	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff821758.aspx </remarks>
 	[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 	[EntityType(EntityType.IsCoClass), ComProgId("Access.Application"), ModuleProvider(typeof(GlobalHelperModules.GlobalModule))]
- 	public class Application : _Application
-	{
+ 	public class Application : _Application, ICloneable<Application>
+    {
 		#pragma warning disable
 
 		#region Fields
@@ -61,7 +61,7 @@ namespace NetOffice.AccessApi
         
         #endregion
         		
-		#region Construction
+		#region Ctor
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -323,10 +323,23 @@ namespace NetOffice.AccessApi
 
 			_connectPoint = null;
 		}
-        
+
         #endregion
 
-		#pragma warning restore
-	}
-}
+        #region ICloneable<Application>
 
+        /// <summary>
+        /// Creates a new Application that is a copy of the current instance
+        /// </summary>
+        /// <returns>A new Application that is a copy of this instance</returns>
+        /// <exception cref="CloneException">An unexpected error occured. See inner exception(s) for details.</exception>
+        public new Application Clone()
+        {
+            return base.Clone() as Application;
+        }
+
+        #endregion
+
+        #pragma warning restore
+    }
+}

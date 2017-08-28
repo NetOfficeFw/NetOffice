@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using System;
 using NetRuntimeSystem = System;
@@ -46,7 +46,14 @@ namespace NetOffice.ADODBApi
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public Parameters(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -121,12 +128,13 @@ namespace NetOffice.ADODBApi
 		/// </summary>
 		/// <param name="index">object index</param>
 		[SupportByVersion("ADODB", 2.1,2.5)]
+		[BaseResult]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
 		public NetOffice.ADODBApi._Parameter this[object index]
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ADODBApi._Parameter>(this, "Item", NetOffice.ADODBApi._Parameter.LateBindingApiWrapperType, index);
+				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.ADODBApi._Parameter>(this, "Item", index);
 			}
 		}
 
@@ -176,6 +184,3 @@ namespace NetOffice.ADODBApi
 		#pragma warning restore
 	}
 }
-
-
-

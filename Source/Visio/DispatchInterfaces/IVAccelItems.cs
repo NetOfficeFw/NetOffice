@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using System;
 using NetRuntimeSystem = System;
@@ -46,7 +46,14 @@ namespace NetOffice.VisioApi
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public IVAccelItems(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -108,12 +115,13 @@ namespace NetOffice.VisioApi
 		/// </summary>
 		/// <param name="lIndex">Int32 lIndex</param>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
+		[BaseResult]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
 		public NetOffice.VisioApi.IVAccelItem this[Int32 lIndex]
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.VisioApi.IVAccelItem>(this, "Item", NetOffice.VisioApi.IVAccelItem.LateBindingApiWrapperType, lIndex);
+				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.VisioApi.IVAccelItem>(this, "Item", lIndex);
 			}
 		}
 
@@ -135,11 +143,12 @@ namespace NetOffice.VisioApi
 		/// Get
 		/// </summary>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
+		[BaseResult]
 		public NetOffice.VisioApi.IVAccelTable Parent
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.VisioApi.IVAccelTable>(this, "Parent", NetOffice.VisioApi.IVAccelTable.LateBindingApiWrapperType);
+				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.VisioApi.IVAccelTable>(this, "Parent");
 			}
 		}
 
@@ -151,9 +160,10 @@ namespace NetOffice.VisioApi
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// </summary>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
+		[BaseResult]
 		public NetOffice.VisioApi.IVAccelItem Add()
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.VisioApi.IVAccelItem>(this, "Add", NetOffice.VisioApi.IVAccelItem.LateBindingApiWrapperType);
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.VisioApi.IVAccelItem>(this, "Add");
 		}
 
 		#endregion
@@ -189,6 +199,3 @@ namespace NetOffice.VisioApi
 		#pragma warning restore
 	}
 }
-
-
-

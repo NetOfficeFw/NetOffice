@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using NetOffice.Attributes;
@@ -44,7 +44,14 @@ namespace NetOffice.MSComctlLibApi
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public IToolbar(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -139,11 +146,12 @@ namespace NetOffice.MSComctlLibApi
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSComctlLib", 6)]
+		[BaseResult]
 		public NetOffice.MSComctlLibApi.IButtons Buttons
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.MSComctlLibApi.IButtons>(this, "Buttons", NetOffice.MSComctlLibApi.IButtons.LateBindingApiWrapperType);
+				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.MSComctlLibApi.IButtons>(this, "Buttons");
 			}
 			set
 			{
@@ -156,11 +164,12 @@ namespace NetOffice.MSComctlLibApi
 		/// Get
 		/// </summary>
 		[SupportByVersion("MSComctlLib", 6)]
+		[BaseResult]
 		public NetOffice.MSComctlLibApi.IControls Controls
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.MSComctlLibApi.IControls>(this, "Controls", NetOffice.MSComctlLibApi.IControls.LateBindingApiWrapperType);
+				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.MSComctlLibApi.IControls>(this, "Controls");
 			}
 		}
 
@@ -531,6 +540,3 @@ namespace NetOffice.MSComctlLibApi
 		#pragma warning restore
 	}
 }
-
-
-

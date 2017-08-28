@@ -293,4 +293,3 @@ namespace NetOffice.PowerPointApi
 		#pragma warning restore
 	}
 }
-

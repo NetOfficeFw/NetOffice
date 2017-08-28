@@ -14,7 +14,7 @@ namespace NetOffice.WordApi
 	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff196427.aspx </remarks>
 	[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Method, "Item")]
-	public class MailMergeFieldNames : COMObject , IEnumerable<NetOffice.WordApi.MailMergeFieldName>
+	public class MailMergeFieldNames : COMObject, IEnumerable<NetOffice.WordApi.MailMergeFieldName>
 	{
 		#pragma warning disable
 
@@ -47,7 +47,14 @@ namespace NetOffice.WordApi
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public MailMergeFieldNames(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -211,5 +218,3 @@ namespace NetOffice.WordApi
 		#pragma warning restore
 	}
 }
-
-

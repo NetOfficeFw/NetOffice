@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using System.Reflection;
 using System;
@@ -47,7 +47,14 @@ namespace NetOffice.VisioApi
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public LPVISIODOCUMENTS(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -108,11 +115,12 @@ namespace NetOffice.VisioApi
 		/// Get
 		/// </summary>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
+		[BaseResult]
 		public NetOffice.VisioApi.IVApplication Application
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.VisioApi.IVApplication>(this, "Application", NetOffice.VisioApi.IVApplication.LateBindingApiWrapperType);
+				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.VisioApi.IVApplication>(this, "Application");
 			}
 		}
 
@@ -135,12 +143,13 @@ namespace NetOffice.VisioApi
 		/// </summary>
 		/// <param name="nameOrIndex">object nameOrIndex</param>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
+		[BaseResult]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
 		public NetOffice.VisioApi.IVDocument this[object nameOrIndex]
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.VisioApi.IVDocument>(this, "Item", NetOffice.VisioApi.IVDocument.LateBindingApiWrapperType, nameOrIndex);
+				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.VisioApi.IVDocument>(this, "Item", nameOrIndex);
 			}
 		}
 
@@ -162,11 +171,12 @@ namespace NetOffice.VisioApi
 		/// Get
 		/// </summary>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
+		[BaseResult]
 		public NetOffice.VisioApi.IVEventList EventList
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.VisioApi.IVEventList>(this, "EventList", NetOffice.VisioApi.IVEventList.LateBindingApiWrapperType);
+				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.VisioApi.IVEventList>(this, "EventList");
 			}
 		}
 
@@ -215,9 +225,10 @@ namespace NetOffice.VisioApi
 		/// </summary>
 		/// <param name="fileName">string fileName</param>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
+		[BaseResult]
 		public NetOffice.VisioApi.IVDocument Add(string fileName)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.VisioApi.IVDocument>(this, "Add", NetOffice.VisioApi.IVDocument.LateBindingApiWrapperType, fileName);
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.VisioApi.IVDocument>(this, "Add", fileName);
 		}
 
 		/// <summary>
@@ -225,9 +236,10 @@ namespace NetOffice.VisioApi
 		/// </summary>
 		/// <param name="fileName">string fileName</param>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
+		[BaseResult]
 		public NetOffice.VisioApi.IVDocument Open(string fileName)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.VisioApi.IVDocument>(this, "Open", NetOffice.VisioApi.IVDocument.LateBindingApiWrapperType, fileName);
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.VisioApi.IVDocument>(this, "Open", fileName);
 		}
 
 		/// <summary>
@@ -236,9 +248,10 @@ namespace NetOffice.VisioApi
 		/// <param name="fileName">string fileName</param>
 		/// <param name="flags">Int16 flags</param>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
+		[BaseResult]
 		public NetOffice.VisioApi.IVDocument OpenEx(string fileName, Int16 flags)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.VisioApi.IVDocument>(this, "OpenEx", NetOffice.VisioApi.IVDocument.LateBindingApiWrapperType, fileName, flags);
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.VisioApi.IVDocument>(this, "OpenEx", fileName, flags);
 		}
 
 		/// <summary>
@@ -283,9 +296,10 @@ namespace NetOffice.VisioApi
 		/// <param name="flags">optional Int32 Flags = 0</param>
 		/// <param name="langID">optional Int32 LangID = 0</param>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
+		[BaseResult]
 		public NetOffice.VisioApi.IVDocument AddEx(string fileName, object measurementSystem, object flags, object langID)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.VisioApi.IVDocument>(this, "AddEx", NetOffice.VisioApi.IVDocument.LateBindingApiWrapperType, fileName, measurementSystem, flags, langID);
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.VisioApi.IVDocument>(this, "AddEx", fileName, measurementSystem, flags, langID);
 		}
 
 		/// <summary>
@@ -293,10 +307,11 @@ namespace NetOffice.VisioApi
 		/// </summary>
 		/// <param name="fileName">string fileName</param>
 		[CustomMethod]
+		[BaseResult]
 		[SupportByVersion("Visio", 11,12,14,15,16)]
 		public NetOffice.VisioApi.IVDocument AddEx(string fileName)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.VisioApi.IVDocument>(this, "AddEx", NetOffice.VisioApi.IVDocument.LateBindingApiWrapperType, fileName);
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.VisioApi.IVDocument>(this, "AddEx", fileName);
 		}
 
 		/// <summary>
@@ -305,10 +320,11 @@ namespace NetOffice.VisioApi
 		/// <param name="fileName">string fileName</param>
 		/// <param name="measurementSystem">optional NetOffice.VisioApi.Enums.VisMeasurementSystem MeasurementSystem = 0</param>
 		[CustomMethod]
+		[BaseResult]
 		[SupportByVersion("Visio", 11,12,14,15,16)]
 		public NetOffice.VisioApi.IVDocument AddEx(string fileName, object measurementSystem)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.VisioApi.IVDocument>(this, "AddEx", NetOffice.VisioApi.IVDocument.LateBindingApiWrapperType, fileName, measurementSystem);
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.VisioApi.IVDocument>(this, "AddEx", fileName, measurementSystem);
 		}
 
 		/// <summary>
@@ -318,10 +334,11 @@ namespace NetOffice.VisioApi
 		/// <param name="measurementSystem">optional NetOffice.VisioApi.Enums.VisMeasurementSystem MeasurementSystem = 0</param>
 		/// <param name="flags">optional Int32 Flags = 0</param>
 		[CustomMethod]
+		[BaseResult]
 		[SupportByVersion("Visio", 11,12,14,15,16)]
 		public NetOffice.VisioApi.IVDocument AddEx(string fileName, object measurementSystem, object flags)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.VisioApi.IVDocument>(this, "AddEx", NetOffice.VisioApi.IVDocument.LateBindingApiWrapperType, fileName, measurementSystem, flags);
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.VisioApi.IVDocument>(this, "AddEx", fileName, measurementSystem, flags);
 		}
 
 		#endregion
@@ -357,6 +374,3 @@ namespace NetOffice.VisioApi
 		#pragma warning restore
 	}
 }
-
-
-

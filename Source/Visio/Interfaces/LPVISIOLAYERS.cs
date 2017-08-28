@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using System;
 using NetRuntimeSystem = System;
@@ -46,7 +46,14 @@ namespace NetOffice.VisioApi
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public LPVISIOLAYERS(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -107,11 +114,12 @@ namespace NetOffice.VisioApi
 		/// Get
 		/// </summary>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
+		[BaseResult]
 		public NetOffice.VisioApi.IVApplication Application
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.VisioApi.IVApplication>(this, "Application", NetOffice.VisioApi.IVApplication.LateBindingApiWrapperType);
+				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.VisioApi.IVApplication>(this, "Application");
 			}
 		}
 
@@ -120,11 +128,12 @@ namespace NetOffice.VisioApi
 		/// Get
 		/// </summary>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
+		[BaseResult]
 		public NetOffice.VisioApi.IVDocument Document
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.VisioApi.IVDocument>(this, "Document", NetOffice.VisioApi.IVDocument.LateBindingApiWrapperType);
+				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.VisioApi.IVDocument>(this, "Document");
 			}
 		}
 
@@ -133,11 +142,12 @@ namespace NetOffice.VisioApi
 		/// Get
 		/// </summary>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
+		[BaseResult]
 		public NetOffice.VisioApi.IVPage Page
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.VisioApi.IVPage>(this, "Page", NetOffice.VisioApi.IVPage.LateBindingApiWrapperType);
+				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.VisioApi.IVPage>(this, "Page");
 			}
 		}
 
@@ -146,11 +156,12 @@ namespace NetOffice.VisioApi
 		/// Get
 		/// </summary>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
+		[BaseResult]
 		public NetOffice.VisioApi.IVMaster Master
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.VisioApi.IVMaster>(this, "Master", NetOffice.VisioApi.IVMaster.LateBindingApiWrapperType);
+				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.VisioApi.IVMaster>(this, "Master");
 			}
 		}
 
@@ -173,12 +184,13 @@ namespace NetOffice.VisioApi
 		/// </summary>
 		/// <param name="nameOrIndex">object nameOrIndex</param>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
+		[BaseResult]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
 		public NetOffice.VisioApi.IVLayer this[object nameOrIndex]
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.VisioApi.IVLayer>(this, "Item", NetOffice.VisioApi.IVLayer.LateBindingApiWrapperType, nameOrIndex);
+				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.VisioApi.IVLayer>(this, "Item", nameOrIndex);
 			}
 		}
 
@@ -213,11 +225,12 @@ namespace NetOffice.VisioApi
 		/// Get
 		/// </summary>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
+		[BaseResult]
 		public NetOffice.VisioApi.IVEventList EventList
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.VisioApi.IVEventList>(this, "EventList", NetOffice.VisioApi.IVEventList.LateBindingApiWrapperType);
+				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.VisioApi.IVEventList>(this, "EventList");
 			}
 		}
 
@@ -266,9 +279,10 @@ namespace NetOffice.VisioApi
 		/// </summary>
 		/// <param name="layerName">string layerName</param>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
+		[BaseResult]
 		public NetOffice.VisioApi.IVLayer Add(string layerName)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.VisioApi.IVLayer>(this, "Add", NetOffice.VisioApi.IVLayer.LateBindingApiWrapperType, layerName);
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.VisioApi.IVLayer>(this, "Add", layerName);
 		}
 
 		#endregion
@@ -304,6 +318,3 @@ namespace NetOffice.VisioApi
 		#pragma warning restore
 	}
 }
-
-
-

@@ -8,14 +8,14 @@ using NetOffice.OfficeApi;
 namespace NetOffice.OfficeApi.Tools
 {
     /// <summary>
-    /// 
+    /// TaskPane OnCreate EventHandler
     /// </summary>
-    /// <param name="paneInfo"></param>
-    /// <returns></returns>
+    /// <param name="paneInfo">new created pane</param>
+    /// <returns>true if should be created, otherwise false</returns>
     public delegate bool CallOnCreateTaskPaneInfoHandler(TaskPaneInfo paneInfo);
 
     /// <summary>
-    /// 
+    /// Manage Taskpane creation process
     /// </summary>
     public class CustomTaskPaneHandler
     {

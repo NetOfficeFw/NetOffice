@@ -13,7 +13,7 @@ namespace NetOffice.VBIDEApi
 	/// </summary>
 	[SupportByVersion("VBIDE", 12,14,5.3)]
 	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Method), HasIndexProperty(IndexInvoke.Method, "Item")]
-	public class _LinkedWindows : COMObject , IEnumerable<NetOffice.VBIDEApi.Window>
+	public class _LinkedWindows : COMObject, IEnumerable<NetOffice.VBIDEApi.Window>
 	{
 		#pragma warning disable
 
@@ -46,7 +46,14 @@ namespace NetOffice.VBIDEApi
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public _LinkedWindows(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -180,29 +187,29 @@ namespace NetOffice.VBIDEApi
 			 Factory.ExecuteMethod(this, "Add", window);
 		}
 
-		#endregion
+        #endregion
 
-       #region IEnumerable<NetOffice.VBIDEApi.Window> Member
-        
+        #region IEnumerable<NetOffice.VBIDEApi.Window> Member
+
         /// <summary>
-		/// SupportByVersion VBIDE, 12,14,5.3
-		/// </summary>
-		[SupportByVersion("VBIDE", 12,14,5.3)]
-       public IEnumerator<NetOffice.VBIDEApi.Window> GetEnumerator()  
-       {
-           NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
-           foreach (NetOffice.VBIDEApi.Window item in innerEnumerator)
-               yield return item;
-       }
+        /// SupportByVersion VBIDE, 12,14,5.3
+        /// </summary>
+        [SupportByVersion("VBIDE", 12, 14, 5.3)]
+        public IEnumerator<NetOffice.VBIDEApi.Window> GetEnumerator()
+        {
+            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
+            foreach (NetOffice.VBIDEApi.Window item in innerEnumerator)
+                yield return item;
+        }
 
-       #endregion
-          
-		#region IEnumerable Members
-       
-		/// <summary>
-		/// SupportByVersion VBIDE, 12,14,5.3
-		/// </summary>
-		[SupportByVersion("VBIDE", 12,14,5.3)]
+        #endregion
+        
+        #region IEnumerable Members
+
+        /// <summary>
+        /// SupportByVersion VBIDE, 12,14,5.3
+        /// </summary>
+        [SupportByVersion("VBIDE", 12,14,5.3)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
 			return NetOffice.Utils.GetProxyEnumeratorAsMethod(this);
@@ -213,6 +220,3 @@ namespace NetOffice.VBIDEApi
 		#pragma warning restore
 	}
 }
-
-
-

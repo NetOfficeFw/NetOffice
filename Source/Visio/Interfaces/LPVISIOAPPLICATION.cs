@@ -1,4 +1,4 @@
-﻿using System.Reflection;
+using System.Reflection;
 using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
@@ -45,7 +45,14 @@ namespace NetOffice.VisioApi
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public LPVISIOAPPLICATION(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -106,11 +113,12 @@ namespace NetOffice.VisioApi
 		/// Get
 		/// </summary>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
+		[BaseResult]
 		public NetOffice.VisioApi.IVDocument ActiveDocument
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.VisioApi.IVDocument>(this, "ActiveDocument", NetOffice.VisioApi.IVDocument.LateBindingApiWrapperType);
+				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.VisioApi.IVDocument>(this, "ActiveDocument");
 			}
 		}
 
@@ -119,11 +127,12 @@ namespace NetOffice.VisioApi
 		/// Get
 		/// </summary>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
+		[BaseResult]
 		public NetOffice.VisioApi.IVPage ActivePage
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.VisioApi.IVPage>(this, "ActivePage", NetOffice.VisioApi.IVPage.LateBindingApiWrapperType);
+				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.VisioApi.IVPage>(this, "ActivePage");
 			}
 		}
 
@@ -132,11 +141,12 @@ namespace NetOffice.VisioApi
 		/// Get
 		/// </summary>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
+		[BaseResult]
 		public NetOffice.VisioApi.IVWindow ActiveWindow
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.VisioApi.IVWindow>(this, "ActiveWindow", NetOffice.VisioApi.IVWindow.LateBindingApiWrapperType);
+				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.VisioApi.IVWindow>(this, "ActiveWindow");
 			}
 		}
 
@@ -145,11 +155,12 @@ namespace NetOffice.VisioApi
 		/// Get
 		/// </summary>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
+		[BaseResult]
 		public NetOffice.VisioApi.IVApplication Application
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.VisioApi.IVApplication>(this, "Application", NetOffice.VisioApi.IVApplication.LateBindingApiWrapperType);
+				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.VisioApi.IVApplication>(this, "Application");
 			}
 		}
 
@@ -158,11 +169,12 @@ namespace NetOffice.VisioApi
 		/// Get
 		/// </summary>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
+		[BaseResult]
 		public NetOffice.VisioApi.IVDocuments Documents
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.VisioApi.IVDocuments>(this, "Documents", NetOffice.VisioApi.IVDocuments.LateBindingApiWrapperType);
+				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.VisioApi.IVDocuments>(this, "Documents");
 			}
 		}
 
@@ -271,11 +283,12 @@ namespace NetOffice.VisioApi
 		/// Get
 		/// </summary>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
+		[BaseResult]
 		public NetOffice.VisioApi.IVWindows Windows
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.VisioApi.IVWindows>(this, "Windows", NetOffice.VisioApi.IVWindows.LateBindingApiWrapperType);
+				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.VisioApi.IVWindows>(this, "Windows");
 			}
 		}
 
@@ -365,11 +378,12 @@ namespace NetOffice.VisioApi
 		/// Get
 		/// </summary>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
+		[BaseResult]
 		public NetOffice.VisioApi.IVUIObject BuiltInMenus
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.VisioApi.IVUIObject>(this, "BuiltInMenus", NetOffice.VisioApi.IVUIObject.LateBindingApiWrapperType);
+				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.VisioApi.IVUIObject>(this, "BuiltInMenus");
 			}
 		}
 
@@ -401,11 +415,12 @@ namespace NetOffice.VisioApi
 		/// Get
 		/// </summary>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
+		[BaseResult]
 		public NetOffice.VisioApi.IVUIObject CustomMenus
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.VisioApi.IVUIObject>(this, "CustomMenus", NetOffice.VisioApi.IVUIObject.LateBindingApiWrapperType);
+				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.VisioApi.IVUIObject>(this, "CustomMenus");
 			}
 		}
 
@@ -431,11 +446,12 @@ namespace NetOffice.VisioApi
 		/// Get
 		/// </summary>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
+		[BaseResult]
 		public NetOffice.VisioApi.IVUIObject CustomToolbars
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.VisioApi.IVUIObject>(this, "CustomToolbars", NetOffice.VisioApi.IVUIObject.LateBindingApiWrapperType);
+				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.VisioApi.IVUIObject>(this, "CustomToolbars");
 			}
 		}
 
@@ -615,11 +631,12 @@ namespace NetOffice.VisioApi
 		/// Get
 		/// </summary>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
+		[BaseResult]
 		public NetOffice.VisioApi.IVAddons Addons
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.VisioApi.IVAddons>(this, "Addons", NetOffice.VisioApi.IVAddons.LateBindingApiWrapperType);
+				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.VisioApi.IVAddons>(this, "Addons");
 			}
 		}
 
@@ -665,11 +682,12 @@ namespace NetOffice.VisioApi
 		/// Get
 		/// </summary>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
+		[BaseResult]
 		public NetOffice.VisioApi.IVEventList EventList
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.VisioApi.IVEventList>(this, "EventList", NetOffice.VisioApi.IVEventList.LateBindingApiWrapperType);
+				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.VisioApi.IVEventList>(this, "EventList");
 			}
 		}
 
@@ -1336,11 +1354,12 @@ namespace NetOffice.VisioApi
 		/// Get
 		/// </summary>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
+		[BaseResult]
 		public NetOffice.VisioApi.IVWindow Window
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.VisioApi.IVWindow>(this, "Window", NetOffice.VisioApi.IVWindow.LateBindingApiWrapperType);
+				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.VisioApi.IVWindow>(this, "Window");
 			}
 		}
 
@@ -1376,11 +1395,12 @@ namespace NetOffice.VisioApi
 		/// Get
 		/// </summary>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
+		[BaseResult]
 		public NetOffice.VisioApi.IVApplicationSettings Settings
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.VisioApi.IVApplicationSettings>(this, "Settings", NetOffice.VisioApi.IVApplicationSettings.LateBindingApiWrapperType);
+				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.VisioApi.IVApplicationSettings>(this, "Settings");
 			}
 		}
 
@@ -1867,6 +1887,3 @@ namespace NetOffice.VisioApi
 		#pragma warning restore
 	}
 }
-
-
-

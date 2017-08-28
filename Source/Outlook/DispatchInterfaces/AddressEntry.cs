@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using NetOffice.Attributes;
@@ -45,7 +45,14 @@ namespace NetOffice.OutlookApi
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public AddressEntry(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -107,11 +114,12 @@ namespace NetOffice.OutlookApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff866732.aspx </remarks>
 		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
+		[BaseResult]
 		public NetOffice.OutlookApi._Application Application
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OutlookApi._Application>(this, "Application", NetOffice.OutlookApi._Application.LateBindingApiWrapperType);
+				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.OutlookApi._Application>(this, "Application");
 			}
 		}
 
@@ -135,11 +143,12 @@ namespace NetOffice.OutlookApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff869587.aspx </remarks>
 		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
+		[BaseResult]
 		public NetOffice.OutlookApi._NameSpace Session
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OutlookApi._NameSpace>(this, "Session", NetOffice.OutlookApi._NameSpace.LateBindingApiWrapperType);
+				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.OutlookApi._NameSpace>(this, "Session");
 			}
 		}
 
@@ -425,9 +434,10 @@ namespace NetOffice.OutlookApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff862409.aspx </remarks>
 		[SupportByVersion("Outlook", 12,14,15,16)]
+		[BaseResult]
 		public NetOffice.OutlookApi._ContactItem GetContact()
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OutlookApi._ContactItem>(this, "GetContact", NetOffice.OutlookApi._ContactItem.LateBindingApiWrapperType);
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.OutlookApi._ContactItem>(this, "GetContact");
 		}
 
 		/// <summary>
@@ -455,6 +465,3 @@ namespace NetOffice.OutlookApi
 		#pragma warning restore
 	}
 }
-
-
-

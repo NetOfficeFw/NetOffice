@@ -177,7 +177,7 @@
     <Compile Include="Enums\OlSolutionScope.cs" />
     <Compile Include="Enums\OlMobileFormat.cs" />
     <Compile Include="Enums\OlAppointmentCopyOptions.cs" />
-    <Compile Include="Interfaces\PropertyPage.cs" />
+    <Compile Include="NativeInterfaces\PropertyPage.cs" />
     <Compile Include="Interfaces\_IRecipientControl.cs" />
     <Compile Include="Interfaces\_IDocSiteControl.cs" />
     <Compile Include="Interfaces\_IPageWrapCtrl.cs" />
@@ -539,9 +539,9 @@
     <Compile Include="Modules\Global.cs" />
     <Compile Include="Tools\COMAddin.cs" />
     <Compile Include="Tools\ITaskPane.cs" />
-    <Compile Include="Tools\Utils\ApplicationUtils.cs" />
-    <Compile Include="Tools\Utils\CommonUtils.cs" />
-    <Compile Include="Tools\Utils\OutlookDialogUtils.cs" />
+    <Compile Include="Tools\Contribution\ApplicationUtils.cs" />
+    <Compile Include="Tools\Contribution\CommonUtils.cs" />
+    <Compile Include="Tools\Contribution\OutlookDialogUtils.cs" />
   </ItemGroup>
   <ItemGroup>
     <COMReference Include="stdole">

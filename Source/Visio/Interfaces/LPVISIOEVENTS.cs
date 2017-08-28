@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using System;
 using NetRuntimeSystem = System;
@@ -46,7 +46,14 @@ namespace NetOffice.VisioApi
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public LPVISIOEVENTS(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -107,11 +114,12 @@ namespace NetOffice.VisioApi
 		/// Get
 		/// </summary>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
+		[BaseResult]
 		public NetOffice.VisioApi.IVApplication Application
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.VisioApi.IVApplication>(this, "Application", NetOffice.VisioApi.IVApplication.LateBindingApiWrapperType);
+				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.VisioApi.IVApplication>(this, "Application");
 			}
 		}
 
@@ -134,12 +142,13 @@ namespace NetOffice.VisioApi
 		/// </summary>
 		/// <param name="index">Int16 index</param>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
+		[BaseResult]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
 		public NetOffice.VisioApi.IVEvent this[Int16 index]
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.VisioApi.IVEvent>(this, "Item", NetOffice.VisioApi.IVEvent.LateBindingApiWrapperType, index);
+				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.VisioApi.IVEvent>(this, "Item", index);
 			}
 		}
 
@@ -191,9 +200,10 @@ namespace NetOffice.VisioApi
 		/// <param name="target">string target</param>
 		/// <param name="targetArgs">string targetArgs</param>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
+		[BaseResult]
 		public NetOffice.VisioApi.IVEvent Add(Int16 eventCode, Int16 action, string target, string targetArgs)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.VisioApi.IVEvent>(this, "Add", NetOffice.VisioApi.IVEvent.LateBindingApiWrapperType, eventCode, action, target, targetArgs);
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.VisioApi.IVEvent>(this, "Add", eventCode, action, target, targetArgs);
 		}
 
 		/// <summary>
@@ -204,9 +214,10 @@ namespace NetOffice.VisioApi
 		/// <param name="iIDSink">string iIDSink</param>
 		/// <param name="targetArgs">string targetArgs</param>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
+		[BaseResult]
 		public NetOffice.VisioApi.IVEvent AddAdvise(Int16 eventCode, object sinkIUnkOrIDisp, string iIDSink, string targetArgs)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.VisioApi.IVEvent>(this, "AddAdvise", NetOffice.VisioApi.IVEvent.LateBindingApiWrapperType, eventCode, sinkIUnkOrIDisp, iIDSink, targetArgs);
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.VisioApi.IVEvent>(this, "AddAdvise", eventCode, sinkIUnkOrIDisp, iIDSink, targetArgs);
 		}
 
 		#endregion
@@ -242,6 +253,3 @@ namespace NetOffice.VisioApi
 		#pragma warning restore
 	}
 }
-
-
-

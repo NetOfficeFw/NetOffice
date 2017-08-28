@@ -1,7 +1,5 @@
 ﻿using System;
-using NetRuntimeSystem = System;
-using System.ComponentModel;
-using NetOffice.Attributes;
+using NetOffice.Exceptions;
 
 namespace NetOffice
 {
@@ -11,16 +9,16 @@ namespace NetOffice
     public interface ICOMObjectTableDisposable
     {
         /// <summary>
-        /// Dispose all child instance
+        /// Dispose all child instances
         /// </summary>
+        /// <exception cref="COMDisposeException">An unexpected error occurs.</exception>
         void DisposeChildInstances();
 
         /// <summary>
-        /// Dispose all child instance
+        /// Dispose all child instances
         /// </summary>
         /// <param name="disposeEventBinding">dispose open event subscriptions</param>
+        /// <exception cref="COMDisposeException">An unexpected error occurs.</exception>
         void DisposeChildInstances(bool disposeEventBinding);
     }
 }
-
-

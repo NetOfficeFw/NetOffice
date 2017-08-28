@@ -890,4 +890,3 @@ namespace NetOffice.OWC10Api
 		#pragma warning restore
 	}
 }
-

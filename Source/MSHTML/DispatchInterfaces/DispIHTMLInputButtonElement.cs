@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using NetOffice.Attributes;
@@ -44,7 +44,14 @@ namespace NetOffice.MSHTMLApi
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public DispIHTMLInputButtonElement(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -152,11 +159,12 @@ namespace NetOffice.MSHTMLApi
 		/// Get
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
+		[BaseResult]
 		public NetOffice.MSHTMLApi.IHTMLElement parentElement
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.MSHTMLApi.IHTMLElement>(this, "parentElement", NetOffice.MSHTMLApi.IHTMLElement.LateBindingApiWrapperType);
+				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.MSHTMLApi.IHTMLElement>(this, "parentElement");
 			}
 		}
 
@@ -165,12 +173,13 @@ namespace NetOffice.MSHTMLApi
 		/// Get
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
+		[BaseResult]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public NetOffice.MSHTMLApi.IHTMLStyle style
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.MSHTMLApi.IHTMLStyle>(this, "style", NetOffice.MSHTMLApi.IHTMLStyle.LateBindingApiWrapperType);
+				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.MSHTMLApi.IHTMLStyle>(this, "style");
 			}
 		}
 
@@ -526,11 +535,12 @@ namespace NetOffice.MSHTMLApi
 		/// Get
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
+		[BaseResult]
 		public NetOffice.MSHTMLApi.IHTMLElement offsetParent
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.MSHTMLApi.IHTMLElement>(this, "offsetParent", NetOffice.MSHTMLApi.IHTMLElement.LateBindingApiWrapperType);
+				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.MSHTMLApi.IHTMLElement>(this, "offsetParent");
 			}
 		}
 
@@ -607,11 +617,12 @@ namespace NetOffice.MSHTMLApi
 		/// Get
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
+		[BaseResult]
 		public NetOffice.MSHTMLApi.IHTMLElement parentTextEdit
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.MSHTMLApi.IHTMLElement>(this, "parentTextEdit", NetOffice.MSHTMLApi.IHTMLElement.LateBindingApiWrapperType);
+				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.MSHTMLApi.IHTMLElement>(this, "parentTextEdit");
 			}
 		}
 
@@ -1062,11 +1073,12 @@ namespace NetOffice.MSHTMLApi
 		/// Get
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
+		[BaseResult]
 		public NetOffice.MSHTMLApi.IHTMLFormElement form
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.MSHTMLApi.IHTMLFormElement>(this, "form", NetOffice.MSHTMLApi.IHTMLFormElement.LateBindingApiWrapperType);
+				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.MSHTMLApi.IHTMLFormElement>(this, "form");
 			}
 		}
 
@@ -1264,6 +1276,3 @@ namespace NetOffice.MSHTMLApi
 		#pragma warning restore
 	}
 }
-
-
-

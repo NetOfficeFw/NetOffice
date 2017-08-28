@@ -14,7 +14,7 @@ namespace NetOffice.WordApi
 	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff837869.aspx </remarks>
 	[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Method, "Item")]
-	public class RecentFiles : COMObject , IEnumerable<NetOffice.WordApi.RecentFile>
+	public class RecentFiles : COMObject, IEnumerable<NetOffice.WordApi.RecentFile>
 	{
 		#pragma warning disable
 
@@ -47,7 +47,14 @@ namespace NetOffice.WordApi
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public RecentFiles(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -220,29 +227,29 @@ namespace NetOffice.WordApi
 			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.RecentFile>(this, "Add", NetOffice.WordApi.RecentFile.LateBindingApiWrapperType, document);
 		}
 
-		#endregion
+        #endregion
 
-       #region IEnumerable<NetOffice.WordApi.RecentFile> Member
-        
+        #region IEnumerable<NetOffice.WordApi.RecentFile> Member
+
         /// <summary>
-		/// SupportByVersion Word, 9,10,11,12,14,15,16
-		/// </summary>
-		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
-       public IEnumerator<NetOffice.WordApi.RecentFile> GetEnumerator()  
-       {
-           NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
-           foreach (NetOffice.WordApi.RecentFile item in innerEnumerator)
-               yield return item;
-       }
+        /// SupportByVersion Word, 9,10,11,12,14,15,16
+        /// </summary>
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
+        public IEnumerator<NetOffice.WordApi.RecentFile> GetEnumerator()
+        {
+            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
+            foreach (NetOffice.WordApi.RecentFile item in innerEnumerator)
+                yield return item;
+        }
 
-       #endregion
-          
-		#region IEnumerable Members
-       
-		/// <summary>
-		/// SupportByVersion Word, 9,10,11,12,14,15,16
-		/// </summary>
-		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        #endregion
+
+        #region IEnumerable Members
+
+        /// <summary>
+        /// SupportByVersion Word, 9,10,11,12,14,15,16
+        /// </summary>
+        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
 			return NetOffice.Utils.GetProxyEnumeratorAsProperty(this);
@@ -253,6 +260,3 @@ namespace NetOffice.WordApi
 		#pragma warning restore
 	}
 }
-
-
-

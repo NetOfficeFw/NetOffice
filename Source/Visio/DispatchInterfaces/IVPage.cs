@@ -1,4 +1,4 @@
-﻿using System.Reflection;
+using System.Reflection;
 using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
@@ -45,7 +45,14 @@ namespace NetOffice.VisioApi
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public IVPage(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -106,11 +113,12 @@ namespace NetOffice.VisioApi
 		/// Get
 		/// </summary>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
+		[BaseResult]
 		public NetOffice.VisioApi.IVDocument Document
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.VisioApi.IVDocument>(this, "Document", NetOffice.VisioApi.IVDocument.LateBindingApiWrapperType);
+				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.VisioApi.IVDocument>(this, "Document");
 			}
 		}
 
@@ -119,11 +127,12 @@ namespace NetOffice.VisioApi
 		/// Get
 		/// </summary>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
+		[BaseResult]
 		public NetOffice.VisioApi.IVApplication Application
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.VisioApi.IVApplication>(this, "Application", NetOffice.VisioApi.IVApplication.LateBindingApiWrapperType);
+				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.VisioApi.IVApplication>(this, "Application");
 			}
 		}
 
@@ -209,11 +218,12 @@ namespace NetOffice.VisioApi
 		/// Get
 		/// </summary>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
+		[BaseResult]
 		public NetOffice.VisioApi.IVShapes Shapes
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.VisioApi.IVShapes>(this, "Shapes", NetOffice.VisioApi.IVShapes.LateBindingApiWrapperType);
+				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.VisioApi.IVShapes>(this, "Shapes");
 			}
 		}
 
@@ -222,12 +232,13 @@ namespace NetOffice.VisioApi
 		/// Get
 		/// </summary>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
+		[BaseResult]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public NetOffice.VisioApi.IVPage BackPageAsObj
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.VisioApi.IVPage>(this, "BackPageAsObj", NetOffice.VisioApi.IVPage.LateBindingApiWrapperType);
+				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.VisioApi.IVPage>(this, "BackPageAsObj");
 			}
 		}
 
@@ -254,11 +265,12 @@ namespace NetOffice.VisioApi
 		/// Get
 		/// </summary>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
+		[BaseResult]
 		public NetOffice.VisioApi.IVLayers Layers
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.VisioApi.IVLayers>(this, "Layers", NetOffice.VisioApi.IVLayers.LateBindingApiWrapperType);
+				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.VisioApi.IVLayers>(this, "Layers");
 			}
 		}
 
@@ -267,11 +279,12 @@ namespace NetOffice.VisioApi
 		/// Get
 		/// </summary>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
+		[BaseResult]
 		public NetOffice.VisioApi.IVShape PageSheet
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.VisioApi.IVShape>(this, "PageSheet", NetOffice.VisioApi.IVShape.LateBindingApiWrapperType);
+				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.VisioApi.IVShape>(this, "PageSheet");
 			}
 		}
 
@@ -280,11 +293,12 @@ namespace NetOffice.VisioApi
 		/// Get
 		/// </summary>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
+		[BaseResult]
 		public NetOffice.VisioApi.IVEventList EventList
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.VisioApi.IVEventList>(this, "EventList", NetOffice.VisioApi.IVEventList.LateBindingApiWrapperType);
+				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.VisioApi.IVEventList>(this, "EventList");
 			}
 		}
 
@@ -306,11 +320,12 @@ namespace NetOffice.VisioApi
 		/// Get
 		/// </summary>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
+		[BaseResult]
 		public NetOffice.VisioApi.IVConnects Connects
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.VisioApi.IVConnects>(this, "Connects", NetOffice.VisioApi.IVConnects.LateBindingApiWrapperType);
+				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.VisioApi.IVConnects>(this, "Connects");
 			}
 		}
 
@@ -350,11 +365,12 @@ namespace NetOffice.VisioApi
 		/// Get
 		/// </summary>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
+		[BaseResult]
 		public NetOffice.VisioApi.IVOLEObjects OLEObjects
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.VisioApi.IVOLEObjects>(this, "OLEObjects", NetOffice.VisioApi.IVOLEObjects.LateBindingApiWrapperType);
+				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.VisioApi.IVOLEObjects>(this, "OLEObjects");
 			}
 		}
 
@@ -479,11 +495,12 @@ namespace NetOffice.VisioApi
 		/// Get
 		/// </summary>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
+		[BaseResult]
 		public NetOffice.VisioApi.IVPage OriginalPage
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.VisioApi.IVPage>(this, "OriginalPage", NetOffice.VisioApi.IVPage.LateBindingApiWrapperType);
+				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.VisioApi.IVPage>(this, "OriginalPage");
 			}
 		}
 
@@ -560,11 +577,12 @@ namespace NetOffice.VisioApi
 		/// Get
 		/// </summary>
 		[SupportByVersion("Visio", 15, 16)]
+		[BaseResult]
 		public NetOffice.VisioApi.IVComments Comments
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.VisioApi.IVComments>(this, "Comments", NetOffice.VisioApi.IVComments.LateBindingApiWrapperType);
+				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.VisioApi.IVComments>(this, "Comments");
 			}
 		}
 
@@ -573,11 +591,12 @@ namespace NetOffice.VisioApi
 		/// Get
 		/// </summary>
 		[SupportByVersion("Visio", 15, 16)]
+		[BaseResult]
 		public NetOffice.VisioApi.IVComments ShapeComments
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.VisioApi.IVComments>(this, "ShapeComments", NetOffice.VisioApi.IVComments.LateBindingApiWrapperType);
+				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.VisioApi.IVComments>(this, "ShapeComments");
 			}
 		}
 
@@ -614,9 +633,10 @@ namespace NetOffice.VisioApi
 		/// <param name="xEnd">Double xEnd</param>
 		/// <param name="yEnd">Double yEnd</param>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
+		[BaseResult]
 		public NetOffice.VisioApi.IVShape DrawLine(Double xBegin, Double yBegin, Double xEnd, Double yEnd)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.VisioApi.IVShape>(this, "DrawLine", NetOffice.VisioApi.IVShape.LateBindingApiWrapperType, xBegin, yBegin, xEnd, yEnd);
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.VisioApi.IVShape>(this, "DrawLine", xBegin, yBegin, xEnd, yEnd);
 		}
 
 		/// <summary>
@@ -627,9 +647,10 @@ namespace NetOffice.VisioApi
 		/// <param name="x2">Double x2</param>
 		/// <param name="y2">Double y2</param>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
+		[BaseResult]
 		public NetOffice.VisioApi.IVShape DrawRectangle(Double x1, Double y1, Double x2, Double y2)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.VisioApi.IVShape>(this, "DrawRectangle", NetOffice.VisioApi.IVShape.LateBindingApiWrapperType, x1, y1, x2, y2);
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.VisioApi.IVShape>(this, "DrawRectangle", x1, y1, x2, y2);
 		}
 
 		/// <summary>
@@ -640,9 +661,10 @@ namespace NetOffice.VisioApi
 		/// <param name="x2">Double x2</param>
 		/// <param name="y2">Double y2</param>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
+		[BaseResult]
 		public NetOffice.VisioApi.IVShape DrawOval(Double x1, Double y1, Double x2, Double y2)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.VisioApi.IVShape>(this, "DrawOval", NetOffice.VisioApi.IVShape.LateBindingApiWrapperType, x1, y1, x2, y2);
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.VisioApi.IVShape>(this, "DrawOval", x1, y1, x2, y2);
 		}
 
 		/// <summary>
@@ -652,9 +674,10 @@ namespace NetOffice.VisioApi
 		/// <param name="xPos">Double xPos</param>
 		/// <param name="yPos">Double yPos</param>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
+		[BaseResult]
 		public NetOffice.VisioApi.IVShape Drop(object objectToDrop, Double xPos, Double yPos)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.VisioApi.IVShape>(this, "Drop", NetOffice.VisioApi.IVShape.LateBindingApiWrapperType, objectToDrop, xPos, yPos);
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.VisioApi.IVShape>(this, "Drop", objectToDrop, xPos, yPos);
 		}
 
 		/// <summary>
@@ -664,9 +687,10 @@ namespace NetOffice.VisioApi
 		/// <param name="xPos">Double xPos</param>
 		/// <param name="yPos">Double yPos</param>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
+		[BaseResult]
 		public NetOffice.VisioApi.IVShape AddGuide(Int16 type, Double xPos, Double yPos)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.VisioApi.IVShape>(this, "AddGuide", NetOffice.VisioApi.IVShape.LateBindingApiWrapperType, type, xPos, yPos);
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.VisioApi.IVShape>(this, "AddGuide", type, xPos, yPos);
 		}
 
 		/// <summary>
@@ -683,9 +707,10 @@ namespace NetOffice.VisioApi
 		/// </summary>
 		/// <param name="fileName">string fileName</param>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
+		[BaseResult]
 		public NetOffice.VisioApi.IVShape Import(string fileName)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.VisioApi.IVShape>(this, "Import", NetOffice.VisioApi.IVShape.LateBindingApiWrapperType, fileName);
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.VisioApi.IVShape>(this, "Import", fileName);
 		}
 
 		/// <summary>
@@ -767,9 +792,10 @@ namespace NetOffice.VisioApi
 		/// <param name="fileName">string fileName</param>
 		/// <param name="flags">Int16 flags</param>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
+		[BaseResult]
 		public NetOffice.VisioApi.IVShape InsertFromFile(string fileName, Int16 flags)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.VisioApi.IVShape>(this, "InsertFromFile", NetOffice.VisioApi.IVShape.LateBindingApiWrapperType, fileName, flags);
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.VisioApi.IVShape>(this, "InsertFromFile", fileName, flags);
 		}
 
 		/// <summary>
@@ -778,18 +804,20 @@ namespace NetOffice.VisioApi
 		/// <param name="classOrProgID">string classOrProgID</param>
 		/// <param name="flags">Int16 flags</param>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
+		[BaseResult]
 		public NetOffice.VisioApi.IVShape InsertObject(string classOrProgID, Int16 flags)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.VisioApi.IVShape>(this, "InsertObject", NetOffice.VisioApi.IVShape.LateBindingApiWrapperType, classOrProgID, flags);
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.VisioApi.IVShape>(this, "InsertObject", classOrProgID, flags);
 		}
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// </summary>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
+		[BaseResult]
 		public NetOffice.VisioApi.IVWindow OpenDrawWindow()
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.VisioApi.IVWindow>(this, "OpenDrawWindow", NetOffice.VisioApi.IVWindow.LateBindingApiWrapperType);
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.VisioApi.IVWindow>(this, "OpenDrawWindow");
 		}
 
 		/// <summary>
@@ -1050,9 +1078,10 @@ namespace NetOffice.VisioApi
 		/// <param name="iterationMode">optional NetOffice.VisioApi.Enums.VisSelectMode IterationMode = 256</param>
 		/// <param name="data">optional object data</param>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
+		[BaseResult]
 		public NetOffice.VisioApi.IVSelection CreateSelection(NetOffice.VisioApi.Enums.VisSelectionTypes selType, object iterationMode, object data)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.VisioApi.IVSelection>(this, "CreateSelection", NetOffice.VisioApi.IVSelection.LateBindingApiWrapperType, selType, iterationMode, data);
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.VisioApi.IVSelection>(this, "CreateSelection", selType, iterationMode, data);
 		}
 
 		/// <summary>
@@ -1060,10 +1089,11 @@ namespace NetOffice.VisioApi
 		/// </summary>
 		/// <param name="selType">NetOffice.VisioApi.Enums.VisSelectionTypes selType</param>
 		[CustomMethod]
+		[BaseResult]
 		[SupportByVersion("Visio", 11,12,14,15,16)]
 		public NetOffice.VisioApi.IVSelection CreateSelection(NetOffice.VisioApi.Enums.VisSelectionTypes selType)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.VisioApi.IVSelection>(this, "CreateSelection", NetOffice.VisioApi.IVSelection.LateBindingApiWrapperType, selType);
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.VisioApi.IVSelection>(this, "CreateSelection", selType);
 		}
 
 		/// <summary>
@@ -1072,10 +1102,11 @@ namespace NetOffice.VisioApi
 		/// <param name="selType">NetOffice.VisioApi.Enums.VisSelectionTypes selType</param>
 		/// <param name="iterationMode">optional NetOffice.VisioApi.Enums.VisSelectMode IterationMode = 256</param>
 		[CustomMethod]
+		[BaseResult]
 		[SupportByVersion("Visio", 11,12,14,15,16)]
 		public NetOffice.VisioApi.IVSelection CreateSelection(NetOffice.VisioApi.Enums.VisSelectionTypes selType, object iterationMode)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.VisioApi.IVSelection>(this, "CreateSelection", NetOffice.VisioApi.IVSelection.LateBindingApiWrapperType, selType, iterationMode);
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.VisioApi.IVSelection>(this, "CreateSelection", selType, iterationMode);
 		}
 
 		/// <summary>
@@ -1088,9 +1119,10 @@ namespace NetOffice.VisioApi
 		/// <param name="xControl">Double xControl</param>
 		/// <param name="yControl">Double yControl</param>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
+		[BaseResult]
 		public NetOffice.VisioApi.IVShape DrawArcByThreePoints(Double xBegin, Double yBegin, Double xEnd, Double yEnd, Double xControl, Double yControl)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.VisioApi.IVShape>(this, "DrawArcByThreePoints", NetOffice.VisioApi.IVShape.LateBindingApiWrapperType, new object[]{ xBegin, yBegin, xEnd, yEnd, xControl, yControl });
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.VisioApi.IVShape>(this, "DrawArcByThreePoints", new object[]{ xBegin, yBegin, xEnd, yEnd, xControl, yControl });
 		}
 
 		/// <summary>
@@ -1102,9 +1134,10 @@ namespace NetOffice.VisioApi
 		/// <param name="yEnd">Double yEnd</param>
 		/// <param name="sweepFlag">NetOffice.VisioApi.Enums.VisArcSweepFlags sweepFlag</param>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
+		[BaseResult]
 		public NetOffice.VisioApi.IVShape DrawQuarterArc(Double xBegin, Double yBegin, Double xEnd, Double yEnd, NetOffice.VisioApi.Enums.VisArcSweepFlags sweepFlag)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.VisioApi.IVShape>(this, "DrawQuarterArc", NetOffice.VisioApi.IVShape.LateBindingApiWrapperType, new object[]{ xBegin, yBegin, xEnd, yEnd, sweepFlag });
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.VisioApi.IVShape>(this, "DrawQuarterArc", new object[]{ xBegin, yBegin, xEnd, yEnd, sweepFlag });
 		}
 
 		/// <summary>
@@ -1116,9 +1149,10 @@ namespace NetOffice.VisioApi
 		/// <param name="startAngle">optional Double StartAngle = 0</param>
 		/// <param name="endAngle">optional Double EndAngle = 3.1415927410125732</param>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
+		[BaseResult]
 		public NetOffice.VisioApi.IVShape DrawCircularArc(Double xCenter, Double yCenter, Double radius, object startAngle, object endAngle)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.VisioApi.IVShape>(this, "DrawCircularArc", NetOffice.VisioApi.IVShape.LateBindingApiWrapperType, new object[]{ xCenter, yCenter, radius, startAngle, endAngle });
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.VisioApi.IVShape>(this, "DrawCircularArc", new object[]{ xCenter, yCenter, radius, startAngle, endAngle });
 		}
 
 		/// <summary>
@@ -1128,10 +1162,11 @@ namespace NetOffice.VisioApi
 		/// <param name="yCenter">Double yCenter</param>
 		/// <param name="radius">Double radius</param>
 		[CustomMethod]
+		[BaseResult]
 		[SupportByVersion("Visio", 11,12,14,15,16)]
 		public NetOffice.VisioApi.IVShape DrawCircularArc(Double xCenter, Double yCenter, Double radius)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.VisioApi.IVShape>(this, "DrawCircularArc", NetOffice.VisioApi.IVShape.LateBindingApiWrapperType, xCenter, yCenter, radius);
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.VisioApi.IVShape>(this, "DrawCircularArc", xCenter, yCenter, radius);
 		}
 
 		/// <summary>
@@ -1142,10 +1177,11 @@ namespace NetOffice.VisioApi
 		/// <param name="radius">Double radius</param>
 		/// <param name="startAngle">optional Double StartAngle = 0</param>
 		[CustomMethod]
+		[BaseResult]
 		[SupportByVersion("Visio", 11,12,14,15,16)]
 		public NetOffice.VisioApi.IVShape DrawCircularArc(Double xCenter, Double yCenter, Double radius, object startAngle)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.VisioApi.IVShape>(this, "DrawCircularArc", NetOffice.VisioApi.IVShape.LateBindingApiWrapperType, xCenter, yCenter, radius, startAngle);
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.VisioApi.IVShape>(this, "DrawCircularArc", xCenter, yCenter, radius, startAngle);
 		}
 
 		/// <summary>
@@ -1248,9 +1284,10 @@ namespace NetOffice.VisioApi
 		/// <param name="dataRowID">Int32 dataRowID</param>
 		/// <param name="applyDataGraphicAfterLink">bool applyDataGraphicAfterLink</param>
 		[SupportByVersion("Visio", 12,14,15,16)]
+		[BaseResult]
 		public NetOffice.VisioApi.IVShape DropLinked(object objectToDrop, Double x, Double y, Int32 dataRecordsetID, Int32 dataRowID, bool applyDataGraphicAfterLink)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.VisioApi.IVShape>(this, "DropLinked", NetOffice.VisioApi.IVShape.LateBindingApiWrapperType, new object[]{ objectToDrop, x, y, dataRecordsetID, dataRowID, applyDataGraphicAfterLink });
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.VisioApi.IVShape>(this, "DropLinked", new object[]{ objectToDrop, x, y, dataRecordsetID, dataRowID, applyDataGraphicAfterLink });
 		}
 
 		/// <summary>
@@ -1281,9 +1318,10 @@ namespace NetOffice.VisioApi
 		/// <param name="placementDir">NetOffice.VisioApi.Enums.VisAutoConnectDir placementDir</param>
 		/// <param name="connector">optional object Connector = null (Nothing in visual basic)</param>
 		[SupportByVersion("Visio", 14,15,16)]
+		[BaseResult]
 		public NetOffice.VisioApi.IVShape DropConnected(object objectToDrop, NetOffice.VisioApi.IVShape targetShape, NetOffice.VisioApi.Enums.VisAutoConnectDir placementDir, object connector)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.VisioApi.IVShape>(this, "DropConnected", NetOffice.VisioApi.IVShape.LateBindingApiWrapperType, objectToDrop, targetShape, placementDir, connector);
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.VisioApi.IVShape>(this, "DropConnected", objectToDrop, targetShape, placementDir, connector);
 		}
 
 		/// <summary>
@@ -1293,10 +1331,11 @@ namespace NetOffice.VisioApi
 		/// <param name="targetShape">NetOffice.VisioApi.IVShape targetShape</param>
 		/// <param name="placementDir">NetOffice.VisioApi.Enums.VisAutoConnectDir placementDir</param>
 		[CustomMethod]
+		[BaseResult]
 		[SupportByVersion("Visio", 14,15,16)]
 		public NetOffice.VisioApi.IVShape DropConnected(object objectToDrop, NetOffice.VisioApi.IVShape targetShape, NetOffice.VisioApi.Enums.VisAutoConnectDir placementDir)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.VisioApi.IVShape>(this, "DropConnected", NetOffice.VisioApi.IVShape.LateBindingApiWrapperType, objectToDrop, targetShape, placementDir);
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.VisioApi.IVShape>(this, "DropConnected", objectToDrop, targetShape, placementDir);
 		}
 
 		/// <summary>
@@ -1333,9 +1372,10 @@ namespace NetOffice.VisioApi
 		/// <param name="objectToDrop">object objectToDrop</param>
 		/// <param name="targetShapes">object targetShapes</param>
 		[SupportByVersion("Visio", 14,15,16)]
+		[BaseResult]
 		public NetOffice.VisioApi.IVShape DropContainer(object objectToDrop, object targetShapes)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.VisioApi.IVShape>(this, "DropContainer", NetOffice.VisioApi.IVShape.LateBindingApiWrapperType, objectToDrop, targetShapes);
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.VisioApi.IVShape>(this, "DropContainer", objectToDrop, targetShapes);
 		}
 
 		/// <summary>
@@ -1378,9 +1418,10 @@ namespace NetOffice.VisioApi
 		/// <param name="connectorToSplit">NetOffice.VisioApi.IVShape connectorToSplit</param>
 		/// <param name="shape">NetOffice.VisioApi.IVShape shape</param>
 		[SupportByVersion("Visio", 14,15,16)]
+		[BaseResult]
 		public NetOffice.VisioApi.IVShape SplitConnector(NetOffice.VisioApi.IVShape connectorToSplit, NetOffice.VisioApi.IVShape shape)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.VisioApi.IVShape>(this, "SplitConnector", NetOffice.VisioApi.IVShape.LateBindingApiWrapperType, connectorToSplit, shape);
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.VisioApi.IVShape>(this, "SplitConnector", connectorToSplit, shape);
 		}
 
 		/// <summary>
@@ -1389,9 +1430,10 @@ namespace NetOffice.VisioApi
 		/// <param name="objectToDrop">object objectToDrop</param>
 		/// <param name="targetShape">NetOffice.VisioApi.IVShape targetShape</param>
 		[SupportByVersion("Visio", 14,15,16)]
+		[BaseResult]
 		public NetOffice.VisioApi.IVShape DropCallout(object objectToDrop, NetOffice.VisioApi.IVShape targetShape)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.VisioApi.IVShape>(this, "DropCallout", NetOffice.VisioApi.IVShape.LateBindingApiWrapperType, objectToDrop, targetShape);
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.VisioApi.IVShape>(this, "DropCallout", objectToDrop, targetShape);
 		}
 
 		/// <summary>
@@ -1437,9 +1479,10 @@ namespace NetOffice.VisioApi
 		/// <param name="innerContainer">object innerContainer</param>
 		/// <param name="populateFlags">NetOffice.VisioApi.Enums.VisLegendFlags populateFlags</param>
 		[SupportByVersion("Visio", 14,15,16)]
+		[BaseResult]
 		public NetOffice.VisioApi.IVShape DropLegend(object outerList, object innerContainer, NetOffice.VisioApi.Enums.VisLegendFlags populateFlags)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.VisioApi.IVShape>(this, "DropLegend", NetOffice.VisioApi.IVShape.LateBindingApiWrapperType, outerList, innerContainer, populateFlags);
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.VisioApi.IVShape>(this, "DropLegend", outerList, innerContainer, populateFlags);
 		}
 
 		/// <summary>
@@ -1449,9 +1492,10 @@ namespace NetOffice.VisioApi
 		/// <param name="targetList">NetOffice.VisioApi.IVShape targetList</param>
 		/// <param name="lPosition">Int32 lPosition</param>
 		[SupportByVersion("Visio", 14,15,16)]
+		[BaseResult]
 		public NetOffice.VisioApi.IVShape DropIntoList(object objectToDrop, NetOffice.VisioApi.IVShape targetList, Int32 lPosition)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.VisioApi.IVShape>(this, "DropIntoList", NetOffice.VisioApi.IVShape.LateBindingApiWrapperType, objectToDrop, targetList, lPosition);
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.VisioApi.IVShape>(this, "DropIntoList", objectToDrop, targetList, lPosition);
 		}
 
 		/// <summary>
@@ -1467,9 +1511,10 @@ namespace NetOffice.VisioApi
 		/// SupportByVersion Visio 15,16
 		/// </summary>
 		[SupportByVersion("Visio", 15, 16)]
+		[BaseResult]
 		public NetOffice.VisioApi.IVPage Duplicate()
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.VisioApi.IVPage>(this, "Duplicate", NetOffice.VisioApi.IVPage.LateBindingApiWrapperType);
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.VisioApi.IVPage>(this, "Duplicate");
 		}
 
 		/// <summary>
@@ -1611,6 +1656,3 @@ namespace NetOffice.VisioApi
 		#pragma warning restore
 	}
 }
-
-
-

@@ -68,13 +68,13 @@ namespace NetOffice.ExcelApi
 	[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 	[EntityType(EntityType.IsCoClass), ComProgId("Excel.Application"), ModuleProvider(typeof(GlobalHelperModules.GlobalModule))]
 	[EventSink(typeof(Events.AppEvents_SinkHelper))]
-	public class Application : _Application, IEventBinding
+	public class Application : _Application, ICloneable<Application>, IEventBinding
 	{
-		#pragma warning disable
+        #pragma warning disable
 
-		#region Fields
-		
-		private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
+        #region Fields
+
+        private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
 		private string _activeSinkId;
 		private NetRuntimeSystem.Type _thisType;
         private Events.AppEvents_SinkHelper _appEvents_SinkHelper;
@@ -110,7 +110,15 @@ namespace NetOffice.ExcelApi
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public Application(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+			_callQuitInDispose = true;
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -1307,7 +1315,7 @@ namespace NetOffice.ExcelApi
 
 		#endregion
         
-	    #region IEventBinding Member
+	    #region IEventBinding
         
 		/// <summary>
         /// Creates active sink helper
@@ -1463,9 +1471,23 @@ namespace NetOffice.ExcelApi
 
 			_connectPoint = null;
 		}
-        
+
         #endregion
 
-		#pragma warning restore
-	}
+        #region ICloneable<Application>
+
+        /// <summary>
+        /// Creates a new Application that is a copy of the current instance
+        /// </summary>
+        /// <returns>A new Application that is a copy of this instance</returns>
+        /// <exception cref="CloneException">An unexpected error occured. See inner exception(s) for details.</exception>
+        public new Application Clone()
+        {
+            return base.Clone() as Application;
+        }
+
+        #endregion
+
+        #pragma warning restore
+    }
 }

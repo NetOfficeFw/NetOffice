@@ -26,5 +26,3 @@ namespace NetOffice
         bool IsWithEventRecipients { get; }
     }
 }
-
-

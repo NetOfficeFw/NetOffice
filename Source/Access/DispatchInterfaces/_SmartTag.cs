@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using NetOffice.Attributes;
@@ -44,7 +44,14 @@ namespace NetOffice.AccessApi
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public _SmartTag(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -149,11 +156,12 @@ namespace NetOffice.AccessApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff834783.aspx </remarks>
 		[SupportByVersion("Access", 11,12,14,15,16)]
+		[BaseResult]
 		public NetOffice.AccessApi._SmartTagProperties Properties
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.AccessApi._SmartTagProperties>(this, "Properties", NetOffice.AccessApi._SmartTagProperties.LateBindingApiWrapperType);
+				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.AccessApi._SmartTagProperties>(this, "Properties");
 			}
 		}
 
@@ -163,11 +171,12 @@ namespace NetOffice.AccessApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff845414.aspx </remarks>
 		[SupportByVersion("Access", 11,12,14,15,16)]
+		[BaseResult]
 		public NetOffice.AccessApi._SmartTagActions SmartTagActions
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.AccessApi._SmartTagActions>(this, "SmartTagActions", NetOffice.AccessApi._SmartTagActions.LateBindingApiWrapperType);
+				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.AccessApi._SmartTagActions>(this, "SmartTagActions");
 			}
 		}
 
@@ -229,6 +238,3 @@ namespace NetOffice.AccessApi
 		#pragma warning restore
 	}
 }
-
-
-

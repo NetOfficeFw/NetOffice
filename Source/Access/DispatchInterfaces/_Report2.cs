@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using System;
 using NetRuntimeSystem = System;
@@ -13,7 +13,7 @@ namespace NetOffice.AccessApi
 	/// </summary>
 	[SupportByVersion("Access", 10,11,12,14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Method)]
-	public class _Report2 : _Report , IEnumerable<object>
+	public class _Report2 : _Report, IEnumerable<object>
 	{
 		#pragma warning disable
 
@@ -46,7 +46,14 @@ namespace NetOffice.AccessApi
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public _Report2(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -2043,11 +2050,12 @@ namespace NetOffice.AccessApi
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("Access", 10,11,12,14,15,16)]
+		[BaseResult]
 		public NetOffice.AccessApi._Printer Printer
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.AccessApi._Printer>(this, "Printer", NetOffice.AccessApi._Printer.LateBindingApiWrapperType);
+				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.AccessApi._Printer>(this, "Printer");
 			}
 			set
 			{
@@ -2346,6 +2354,3 @@ namespace NetOffice.AccessApi
 		#pragma warning restore
 	}
 }
-
-
-

@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using NetOffice.Attributes;
@@ -44,7 +44,14 @@ namespace NetOffice.MSComctlLibApi
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public IVBDataObject(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -105,11 +112,12 @@ namespace NetOffice.MSComctlLibApi
 		/// Get
 		/// </summary>
 		[SupportByVersion("MSComctlLib", 6)]
+		[BaseResult]
 		public NetOffice.MSComctlLibApi.IVBDataObjectFiles Files
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.MSComctlLibApi.IVBDataObjectFiles>(this, "Files", NetOffice.MSComctlLibApi.IVBDataObjectFiles.LateBindingApiWrapperType);
+				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.MSComctlLibApi.IVBDataObjectFiles>(this, "Files");
 			}
 		}
 
@@ -183,6 +191,3 @@ namespace NetOffice.MSComctlLibApi
 		#pragma warning restore
 	}
 }
-
-
-

@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using NetOffice.Attributes;
@@ -44,7 +44,14 @@ namespace NetOffice.OutlookApi
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public MAPIFolder(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -105,11 +112,12 @@ namespace NetOffice.OutlookApi
 		/// Get
 		/// </summary>
 		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
+		[BaseResult]
 		public NetOffice.OutlookApi._Application Application
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OutlookApi._Application>(this, "Application", NetOffice.OutlookApi._Application.LateBindingApiWrapperType);
+				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.OutlookApi._Application>(this, "Application");
 			}
 		}
 
@@ -131,11 +139,12 @@ namespace NetOffice.OutlookApi
 		/// Get
 		/// </summary>
 		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
+		[BaseResult]
 		public NetOffice.OutlookApi._NameSpace Session
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OutlookApi._NameSpace>(this, "Session", NetOffice.OutlookApi._NameSpace.LateBindingApiWrapperType);
+				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.OutlookApi._NameSpace>(this, "Session");
 			}
 		}
 
@@ -214,11 +223,12 @@ namespace NetOffice.OutlookApi
 		/// Get
 		/// </summary>
 		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
+		[BaseResult]
 		public NetOffice.OutlookApi._Folders Folders
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OutlookApi._Folders>(this, "Folders", NetOffice.OutlookApi._Folders.LateBindingApiWrapperType);
+				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.OutlookApi._Folders>(this, "Folders");
 			}
 		}
 
@@ -227,11 +237,12 @@ namespace NetOffice.OutlookApi
 		/// Get
 		/// </summary>
 		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
+		[BaseResult]
 		public NetOffice.OutlookApi._Items Items
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OutlookApi._Items>(this, "Items", NetOffice.OutlookApi._Items.LateBindingApiWrapperType);
+				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.OutlookApi._Items>(this, "Items");
 			}
 		}
 
@@ -443,11 +454,12 @@ namespace NetOffice.OutlookApi
 		/// Get
 		/// </summary>
 		[SupportByVersion("Outlook", 10,11,12,14,15,16)]
+		[BaseResult]
 		public NetOffice.OutlookApi._Views Views
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OutlookApi._Views>(this, "Views", NetOffice.OutlookApi._Views.LateBindingApiWrapperType);
+				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.OutlookApi._Views>(this, "Views");
 			}
 		}
 
@@ -558,9 +570,10 @@ namespace NetOffice.OutlookApi
 		/// </summary>
 		/// <param name="destinationFolder">NetOffice.OutlookApi.MAPIFolder destinationFolder</param>
 		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
+		[BaseResult]
 		public NetOffice.OutlookApi.MAPIFolder CopyTo(NetOffice.OutlookApi.MAPIFolder destinationFolder)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OutlookApi.MAPIFolder>(this, "CopyTo", NetOffice.OutlookApi.MAPIFolder.LateBindingApiWrapperType, destinationFolder);
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.OutlookApi.MAPIFolder>(this, "CopyTo", destinationFolder);
 		}
 
 		/// <summary>
@@ -586,19 +599,21 @@ namespace NetOffice.OutlookApi
 		/// </summary>
 		/// <param name="displayMode">optional object displayMode</param>
 		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
+		[BaseResult]
 		public NetOffice.OutlookApi._Explorer GetExplorer(object displayMode)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OutlookApi._Explorer>(this, "GetExplorer", NetOffice.OutlookApi._Explorer.LateBindingApiWrapperType, displayMode);
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.OutlookApi._Explorer>(this, "GetExplorer", displayMode);
 		}
 
 		/// <summary>
 		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
 		[CustomMethod]
+		[BaseResult]
 		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
 		public NetOffice.OutlookApi._Explorer GetExplorer()
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OutlookApi._Explorer>(this, "GetExplorer", NetOffice.OutlookApi._Explorer.LateBindingApiWrapperType);
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.OutlookApi._Explorer>(this, "GetExplorer");
 		}
 
 		/// <summary>
@@ -659,9 +674,10 @@ namespace NetOffice.OutlookApi
 		/// <param name="storageIdentifier">string storageIdentifier</param>
 		/// <param name="storageIdentifierType">NetOffice.OutlookApi.Enums.OlStorageIdentifierType storageIdentifierType</param>
 		[SupportByVersion("Outlook", 12,14,15,16)]
+		[BaseResult]
 		public NetOffice.OutlookApi._StorageItem GetStorage(string storageIdentifier, NetOffice.OutlookApi.Enums.OlStorageIdentifierType storageIdentifierType)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OutlookApi._StorageItem>(this, "GetStorage", NetOffice.OutlookApi._StorageItem.LateBindingApiWrapperType, storageIdentifier, storageIdentifierType);
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.OutlookApi._StorageItem>(this, "GetStorage", storageIdentifier, storageIdentifierType);
 		}
 
 		/// <summary>
@@ -732,6 +748,3 @@ namespace NetOffice.OutlookApi
 		#pragma warning restore
 	}
 }
-
-
-

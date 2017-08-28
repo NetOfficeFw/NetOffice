@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using System;
 using NetRuntimeSystem = System;
@@ -14,7 +14,7 @@ namespace NetOffice.OutlookApi
 	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff864730.aspx </remarks>
 	[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Custom), HasIndexProperty(IndexInvoke.Method, "Item")]
-	public class Attachments : COMObject , IEnumerable<NetOffice.OutlookApi.Attachment>
+	public class Attachments : COMObject, IEnumerable<NetOffice.OutlookApi.Attachment>
 	{
 		#pragma warning disable
 
@@ -47,7 +47,14 @@ namespace NetOffice.OutlookApi
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public Attachments(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -109,11 +116,12 @@ namespace NetOffice.OutlookApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff864727.aspx </remarks>
 		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
+		[BaseResult]
 		public NetOffice.OutlookApi._Application Application
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OutlookApi._Application>(this, "Application", NetOffice.OutlookApi._Application.LateBindingApiWrapperType);
+				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.OutlookApi._Application>(this, "Application");
 			}
 		}
 
@@ -137,11 +145,12 @@ namespace NetOffice.OutlookApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff868551.aspx </remarks>
 		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
+		[BaseResult]
 		public NetOffice.OutlookApi._NameSpace Session
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OutlookApi._NameSpace>(this, "Session", NetOffice.OutlookApi._NameSpace.LateBindingApiWrapperType);
+				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.OutlookApi._NameSpace>(this, "Session");
 			}
 		}
 
@@ -256,48 +265,46 @@ namespace NetOffice.OutlookApi
 			 Factory.ExecuteMethod(this, "Remove", index);
 		}
 
-		#endregion
-       #region IEnumerable<NetOffice.OutlookApi.Attachment> Member
-        
-        /// <summary>
-		/// SupportByVersion Outlook, 9,10,11,12,14,15,16
-		/// This is a custom enumerator from NetOffice
-		/// </summary>
-		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
-        [CustomEnumerator]
-       public IEnumerator<NetOffice.OutlookApi.Attachment> GetEnumerator()  
-       {
-           NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
-           foreach (NetOffice.OutlookApi.Attachment item in innerEnumerator)
-               yield return item;
-       }
+        #endregion
 
-       #endregion
-   
-       #region IEnumerable Members
-        
-       /// <summary>
-		/// SupportByVersion Outlook, 9,10,11,12,14,15,16
-		/// This is a custom enumerator from NetOffice
-		/// </summary>
-		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
+        #region IEnumerable<NetOffice.OutlookApi.Attachment> Member
+
+        /// <summary>
+        /// SupportByVersion Outlook, 9,10,11,12,14,15,16
+        /// This is a custom enumerator from NetOffice
+        /// </summary>
+        [SupportByVersion("Outlook", 9, 10, 11, 12, 14, 15, 16)]
+        [CustomEnumerator]
+        public IEnumerator<NetOffice.OutlookApi.Attachment> GetEnumerator()
+        {
+            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
+            foreach (NetOffice.OutlookApi.Attachment item in innerEnumerator)
+                yield return item;
+        }
+
+        #endregion
+
+        #region IEnumerable Members
+
+        /// <summary>
+        /// SupportByVersion Outlook, 9,10,11,12,14,15,16
+        /// This is a custom enumerator from NetOffice
+        /// </summary>
+        [SupportByVersion("Outlook", 9, 10, 11, 12, 14, 15, 16)]
         [CustomEnumerator]
         IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
-       {
+        {
             int count = Count;
             object[] enumeratorObjects = new object[count];
             for (int i = 0; i < count; i++)
-                enumeratorObjects[i] = this[i+1];
+                enumeratorObjects[i] = this[i + 1];
 
             foreach (object item in enumeratorObjects)
                 yield return item;
-       }
+        }
 
-       #endregion
+        #endregion
 
-       		#pragma warning restore
-	}
+        #pragma warning restore
+    }
 }
-
-
-

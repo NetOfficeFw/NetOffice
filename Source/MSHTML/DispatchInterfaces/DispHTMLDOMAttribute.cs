@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using NetOffice.Attributes;
@@ -44,7 +44,14 @@ namespace NetOffice.MSHTMLApi
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public DispHTMLDOMAttribute(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -204,11 +211,12 @@ namespace NetOffice.MSHTMLApi
 		/// Get
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
+		[BaseResult]
 		public NetOffice.MSHTMLApi.IHTMLDOMNode parentNode
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.MSHTMLApi.IHTMLDOMNode>(this, "parentNode", NetOffice.MSHTMLApi.IHTMLDOMNode.LateBindingApiWrapperType);
+				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.MSHTMLApi.IHTMLDOMNode>(this, "parentNode");
 			}
 		}
 
@@ -231,11 +239,12 @@ namespace NetOffice.MSHTMLApi
 		/// Get
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
+		[BaseResult]
 		public NetOffice.MSHTMLApi.IHTMLDOMNode firstChild
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.MSHTMLApi.IHTMLDOMNode>(this, "firstChild", NetOffice.MSHTMLApi.IHTMLDOMNode.LateBindingApiWrapperType);
+				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.MSHTMLApi.IHTMLDOMNode>(this, "firstChild");
 			}
 		}
 
@@ -244,11 +253,12 @@ namespace NetOffice.MSHTMLApi
 		/// Get
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
+		[BaseResult]
 		public NetOffice.MSHTMLApi.IHTMLDOMNode lastChild
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.MSHTMLApi.IHTMLDOMNode>(this, "lastChild", NetOffice.MSHTMLApi.IHTMLDOMNode.LateBindingApiWrapperType);
+				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.MSHTMLApi.IHTMLDOMNode>(this, "lastChild");
 			}
 		}
 
@@ -257,11 +267,12 @@ namespace NetOffice.MSHTMLApi
 		/// Get
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
+		[BaseResult]
 		public NetOffice.MSHTMLApi.IHTMLDOMNode previousSibling
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.MSHTMLApi.IHTMLDOMNode>(this, "previousSibling", NetOffice.MSHTMLApi.IHTMLDOMNode.LateBindingApiWrapperType);
+				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.MSHTMLApi.IHTMLDOMNode>(this, "previousSibling");
 			}
 		}
 
@@ -270,11 +281,12 @@ namespace NetOffice.MSHTMLApi
 		/// Get
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
+		[BaseResult]
 		public NetOffice.MSHTMLApi.IHTMLDOMNode nextSibling
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.MSHTMLApi.IHTMLDOMNode>(this, "nextSibling", NetOffice.MSHTMLApi.IHTMLDOMNode.LateBindingApiWrapperType);
+				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.MSHTMLApi.IHTMLDOMNode>(this, "nextSibling");
 			}
 		}
 
@@ -358,11 +370,12 @@ namespace NetOffice.MSHTMLApi
 		/// Get
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
+		[BaseResult]
 		public NetOffice.MSHTMLApi.IHTMLElement2 ownerElement
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.MSHTMLApi.IHTMLElement2>(this, "ownerElement", NetOffice.MSHTMLApi.IHTMLElement2.LateBindingApiWrapperType);
+				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.MSHTMLApi.IHTMLElement2>(this, "ownerElement");
 			}
 		}
 
@@ -391,9 +404,10 @@ namespace NetOffice.MSHTMLApi
 		/// <param name="newChild">NetOffice.MSHTMLApi.IHTMLDOMNode newChild</param>
 		/// <param name="refChild">optional object refChild</param>
 		[SupportByVersion("MSHTML", 4)]
+		[BaseResult]
 		public NetOffice.MSHTMLApi.IHTMLDOMNode insertBefore(NetOffice.MSHTMLApi.IHTMLDOMNode newChild, object refChild)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.MSHTMLApi.IHTMLDOMNode>(this, "insertBefore", NetOffice.MSHTMLApi.IHTMLDOMNode.LateBindingApiWrapperType, newChild, refChild);
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.MSHTMLApi.IHTMLDOMNode>(this, "insertBefore", newChild, refChild);
 		}
 
 		/// <summary>
@@ -401,10 +415,11 @@ namespace NetOffice.MSHTMLApi
 		/// </summary>
 		/// <param name="newChild">NetOffice.MSHTMLApi.IHTMLDOMNode newChild</param>
 		[CustomMethod]
+		[BaseResult]
 		[SupportByVersion("MSHTML", 4)]
 		public NetOffice.MSHTMLApi.IHTMLDOMNode insertBefore(NetOffice.MSHTMLApi.IHTMLDOMNode newChild)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.MSHTMLApi.IHTMLDOMNode>(this, "insertBefore", NetOffice.MSHTMLApi.IHTMLDOMNode.LateBindingApiWrapperType, newChild);
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.MSHTMLApi.IHTMLDOMNode>(this, "insertBefore", newChild);
 		}
 
 		/// <summary>
@@ -413,9 +428,10 @@ namespace NetOffice.MSHTMLApi
 		/// <param name="newChild">NetOffice.MSHTMLApi.IHTMLDOMNode newChild</param>
 		/// <param name="oldChild">NetOffice.MSHTMLApi.IHTMLDOMNode oldChild</param>
 		[SupportByVersion("MSHTML", 4)]
+		[BaseResult]
 		public NetOffice.MSHTMLApi.IHTMLDOMNode replaceChild(NetOffice.MSHTMLApi.IHTMLDOMNode newChild, NetOffice.MSHTMLApi.IHTMLDOMNode oldChild)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.MSHTMLApi.IHTMLDOMNode>(this, "replaceChild", NetOffice.MSHTMLApi.IHTMLDOMNode.LateBindingApiWrapperType, newChild, oldChild);
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.MSHTMLApi.IHTMLDOMNode>(this, "replaceChild", newChild, oldChild);
 		}
 
 		/// <summary>
@@ -423,9 +439,10 @@ namespace NetOffice.MSHTMLApi
 		/// </summary>
 		/// <param name="oldChild">NetOffice.MSHTMLApi.IHTMLDOMNode oldChild</param>
 		[SupportByVersion("MSHTML", 4)]
+		[BaseResult]
 		public NetOffice.MSHTMLApi.IHTMLDOMNode removeChild(NetOffice.MSHTMLApi.IHTMLDOMNode oldChild)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.MSHTMLApi.IHTMLDOMNode>(this, "removeChild", NetOffice.MSHTMLApi.IHTMLDOMNode.LateBindingApiWrapperType, oldChild);
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.MSHTMLApi.IHTMLDOMNode>(this, "removeChild", oldChild);
 		}
 
 		/// <summary>
@@ -433,9 +450,10 @@ namespace NetOffice.MSHTMLApi
 		/// </summary>
 		/// <param name="newChild">NetOffice.MSHTMLApi.IHTMLDOMNode newChild</param>
 		[SupportByVersion("MSHTML", 4)]
+		[BaseResult]
 		public NetOffice.MSHTMLApi.IHTMLDOMNode appendChild(NetOffice.MSHTMLApi.IHTMLDOMNode newChild)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.MSHTMLApi.IHTMLDOMNode>(this, "appendChild", NetOffice.MSHTMLApi.IHTMLDOMNode.LateBindingApiWrapperType, newChild);
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.MSHTMLApi.IHTMLDOMNode>(this, "appendChild", newChild);
 		}
 
 		/// <summary>
@@ -452,9 +470,10 @@ namespace NetOffice.MSHTMLApi
 		/// </summary>
 		/// <param name="fDeep">bool fDeep</param>
 		[SupportByVersion("MSHTML", 4)]
+		[BaseResult]
 		public NetOffice.MSHTMLApi.IHTMLDOMAttribute cloneNode(bool fDeep)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.MSHTMLApi.IHTMLDOMAttribute>(this, "cloneNode", NetOffice.MSHTMLApi.IHTMLDOMAttribute.LateBindingApiWrapperType, fDeep);
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.MSHTMLApi.IHTMLDOMAttribute>(this, "cloneNode", fDeep);
 		}
 
 		#endregion
@@ -462,6 +481,3 @@ namespace NetOffice.MSHTMLApi
 		#pragma warning restore
 	}
 }
-
-
-

@@ -768,7 +768,3 @@ namespace NetOffice.ExcelApi
         #endregion
     }
 }
-
-
-
-

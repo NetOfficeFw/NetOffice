@@ -315,4 +315,3 @@ namespace NetOffice.VBIDEApi
 		#pragma warning restore
 	}
 }
-

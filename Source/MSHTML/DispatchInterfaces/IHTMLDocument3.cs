@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using NetOffice.Attributes;
@@ -44,7 +44,14 @@ namespace NetOffice.MSHTMLApi
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public IHTMLDocument3(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -105,11 +112,12 @@ namespace NetOffice.MSHTMLApi
 		/// Get
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
+		[BaseResult]
 		public NetOffice.MSHTMLApi.IHTMLElement documentElement
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.MSHTMLApi.IHTMLElement>(this, "documentElement", NetOffice.MSHTMLApi.IHTMLElement.LateBindingApiWrapperType);
+				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.MSHTMLApi.IHTMLElement>(this, "documentElement");
 			}
 		}
 
@@ -434,9 +442,10 @@ namespace NetOffice.MSHTMLApi
 		/// </summary>
 		/// <param name="text">string text</param>
 		[SupportByVersion("MSHTML", 4)]
+		[BaseResult]
 		public NetOffice.MSHTMLApi.IHTMLDOMNode createTextNode(string text)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.MSHTMLApi.IHTMLDOMNode>(this, "createTextNode", NetOffice.MSHTMLApi.IHTMLDOMNode.LateBindingApiWrapperType, text);
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.MSHTMLApi.IHTMLDOMNode>(this, "createTextNode", text);
 		}
 
 		/// <summary>
@@ -475,9 +484,10 @@ namespace NetOffice.MSHTMLApi
 		/// </summary>
 		/// <param name="v">string v</param>
 		[SupportByVersion("MSHTML", 4)]
+		[BaseResult]
 		public NetOffice.MSHTMLApi.IHTMLElementCollection getElementsByName(string v)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.MSHTMLApi.IHTMLElementCollection>(this, "getElementsByName", NetOffice.MSHTMLApi.IHTMLElementCollection.LateBindingApiWrapperType, v);
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.MSHTMLApi.IHTMLElementCollection>(this, "getElementsByName", v);
 		}
 
 		/// <summary>
@@ -485,9 +495,10 @@ namespace NetOffice.MSHTMLApi
 		/// </summary>
 		/// <param name="v">string v</param>
 		[SupportByVersion("MSHTML", 4)]
+		[BaseResult]
 		public NetOffice.MSHTMLApi.IHTMLElement getElementById(string v)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.MSHTMLApi.IHTMLElement>(this, "getElementById", NetOffice.MSHTMLApi.IHTMLElement.LateBindingApiWrapperType, v);
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.MSHTMLApi.IHTMLElement>(this, "getElementById", v);
 		}
 
 		/// <summary>
@@ -495,9 +506,10 @@ namespace NetOffice.MSHTMLApi
 		/// </summary>
 		/// <param name="v">string v</param>
 		[SupportByVersion("MSHTML", 4)]
+		[BaseResult]
 		public NetOffice.MSHTMLApi.IHTMLElementCollection getElementsByTagName(string v)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.MSHTMLApi.IHTMLElementCollection>(this, "getElementsByTagName", NetOffice.MSHTMLApi.IHTMLElementCollection.LateBindingApiWrapperType, v);
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.MSHTMLApi.IHTMLElementCollection>(this, "getElementsByTagName", v);
 		}
 
 		#endregion
@@ -505,6 +517,3 @@ namespace NetOffice.MSHTMLApi
 		#pragma warning restore
 	}
 }
-
-
-

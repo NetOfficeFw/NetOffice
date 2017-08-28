@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using System;
 using NetRuntimeSystem = System;
@@ -46,7 +46,14 @@ namespace NetOffice.MSComctlLibApi
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public INodes(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -160,12 +167,13 @@ namespace NetOffice.MSComctlLibApi
 		/// </summary>
 		/// <param name="index">object index</param>
 		[SupportByVersion("MSComctlLib", 6)]
+		[BaseResult]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
 		public NetOffice.MSComctlLibApi.INode this[object index]
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.MSComctlLibApi.INode>(this, "Item", NetOffice.MSComctlLibApi.INode.LateBindingApiWrapperType, index);
+				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.MSComctlLibApi.INode>(this, "Item", index);
 			}
 			set
 			{
@@ -187,19 +195,21 @@ namespace NetOffice.MSComctlLibApi
 		/// <param name="image">optional object image</param>
 		/// <param name="selectedImage">optional object selectedImage</param>
 		[SupportByVersion("MSComctlLib", 6)]
+		[BaseResult]
 		public NetOffice.MSComctlLibApi.INode Add(object relative, object relationship, object key, object text, object image, object selectedImage)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.MSComctlLibApi.INode>(this, "Add", NetOffice.MSComctlLibApi.INode.LateBindingApiWrapperType, new object[]{ relative, relationship, key, text, image, selectedImage });
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.MSComctlLibApi.INode>(this, "Add", new object[]{ relative, relationship, key, text, image, selectedImage });
 		}
 
 		/// <summary>
 		/// SupportByVersion MSComctlLib 6
 		/// </summary>
 		[CustomMethod]
+		[BaseResult]
 		[SupportByVersion("MSComctlLib", 6)]
 		public NetOffice.MSComctlLibApi.INode Add()
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.MSComctlLibApi.INode>(this, "Add", NetOffice.MSComctlLibApi.INode.LateBindingApiWrapperType);
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.MSComctlLibApi.INode>(this, "Add");
 		}
 
 		/// <summary>
@@ -207,10 +217,11 @@ namespace NetOffice.MSComctlLibApi
 		/// </summary>
 		/// <param name="relative">optional object relative</param>
 		[CustomMethod]
+		[BaseResult]
 		[SupportByVersion("MSComctlLib", 6)]
 		public NetOffice.MSComctlLibApi.INode Add(object relative)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.MSComctlLibApi.INode>(this, "Add", NetOffice.MSComctlLibApi.INode.LateBindingApiWrapperType, relative);
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.MSComctlLibApi.INode>(this, "Add", relative);
 		}
 
 		/// <summary>
@@ -219,10 +230,11 @@ namespace NetOffice.MSComctlLibApi
 		/// <param name="relative">optional object relative</param>
 		/// <param name="relationship">optional object relationship</param>
 		[CustomMethod]
+		[BaseResult]
 		[SupportByVersion("MSComctlLib", 6)]
 		public NetOffice.MSComctlLibApi.INode Add(object relative, object relationship)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.MSComctlLibApi.INode>(this, "Add", NetOffice.MSComctlLibApi.INode.LateBindingApiWrapperType, relative, relationship);
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.MSComctlLibApi.INode>(this, "Add", relative, relationship);
 		}
 
 		/// <summary>
@@ -232,10 +244,11 @@ namespace NetOffice.MSComctlLibApi
 		/// <param name="relationship">optional object relationship</param>
 		/// <param name="key">optional object key</param>
 		[CustomMethod]
+		[BaseResult]
 		[SupportByVersion("MSComctlLib", 6)]
 		public NetOffice.MSComctlLibApi.INode Add(object relative, object relationship, object key)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.MSComctlLibApi.INode>(this, "Add", NetOffice.MSComctlLibApi.INode.LateBindingApiWrapperType, relative, relationship, key);
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.MSComctlLibApi.INode>(this, "Add", relative, relationship, key);
 		}
 
 		/// <summary>
@@ -246,10 +259,11 @@ namespace NetOffice.MSComctlLibApi
 		/// <param name="key">optional object key</param>
 		/// <param name="text">optional object text</param>
 		[CustomMethod]
+		[BaseResult]
 		[SupportByVersion("MSComctlLib", 6)]
 		public NetOffice.MSComctlLibApi.INode Add(object relative, object relationship, object key, object text)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.MSComctlLibApi.INode>(this, "Add", NetOffice.MSComctlLibApi.INode.LateBindingApiWrapperType, relative, relationship, key, text);
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.MSComctlLibApi.INode>(this, "Add", relative, relationship, key, text);
 		}
 
 		/// <summary>
@@ -261,10 +275,11 @@ namespace NetOffice.MSComctlLibApi
 		/// <param name="text">optional object text</param>
 		/// <param name="image">optional object image</param>
 		[CustomMethod]
+		[BaseResult]
 		[SupportByVersion("MSComctlLib", 6)]
 		public NetOffice.MSComctlLibApi.INode Add(object relative, object relationship, object key, object text, object image)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.MSComctlLibApi.INode>(this, "Add", NetOffice.MSComctlLibApi.INode.LateBindingApiWrapperType, new object[]{ relative, relationship, key, text, image });
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.MSComctlLibApi.INode>(this, "Add", new object[]{ relative, relationship, key, text, image });
 		}
 
 		/// <summary>
@@ -319,6 +334,3 @@ namespace NetOffice.MSComctlLibApi
 		#pragma warning restore
 	}
 }
-
-
-

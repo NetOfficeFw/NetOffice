@@ -59,5 +59,3 @@ namespace NetOffice
         void DisposeEventBridge();
     }
 }
-
-

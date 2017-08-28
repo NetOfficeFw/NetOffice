@@ -603,4 +603,3 @@ namespace NetOffice.ExcelApi
 		#pragma warning restore
 	}
 }
-

@@ -14,7 +14,7 @@ namespace NetOffice.WordApi
 	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff836978.aspx </remarks>
 	[SupportByVersion("Word", 12,14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Method, "Item")]
-	public class OMathMatCols : COMObject , IEnumerable<NetOffice.WordApi.OMathMatCol>
+	public class OMathMatCols : COMObject, IEnumerable<NetOffice.WordApi.OMathMatCol>
 	{
 		#pragma warning disable
 
@@ -47,7 +47,14 @@ namespace NetOffice.WordApi
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public OMathMatCols(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -200,29 +207,29 @@ namespace NetOffice.WordApi
 			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.OMathMatCol>(this, "Add", NetOffice.WordApi.OMathMatCol.LateBindingApiWrapperType);
 		}
 
-		#endregion
+        #endregion
 
-       #region IEnumerable<NetOffice.WordApi.OMathMatCol> Member
-        
+        #region IEnumerable<NetOffice.WordApi.OMathMatCol> Member
+
         /// <summary>
-		/// SupportByVersion Word, 12,14,15,16
-		/// </summary>
-		[SupportByVersion("Word", 12,14,15,16)]
-       public IEnumerator<NetOffice.WordApi.OMathMatCol> GetEnumerator()  
-       {
-           NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
-           foreach (NetOffice.WordApi.OMathMatCol item in innerEnumerator)
-               yield return item;
-       }
+        /// SupportByVersion Word, 12,14,15,16
+        /// </summary>
+        [SupportByVersion("Word", 12, 14, 15, 16)]
+        public IEnumerator<NetOffice.WordApi.OMathMatCol> GetEnumerator()
+        {
+            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
+            foreach (NetOffice.WordApi.OMathMatCol item in innerEnumerator)
+                yield return item;
+        }
 
-       #endregion
-          
-		#region IEnumerable Members
-       
-		/// <summary>
-		/// SupportByVersion Word, 12,14,15,16
-		/// </summary>
-		[SupportByVersion("Word", 12,14,15,16)]
+        #endregion
+
+        #region IEnumerable Members
+
+        /// <summary>
+        /// SupportByVersion Word, 12,14,15,16
+        /// </summary>
+        [SupportByVersion("Word", 12,14,15,16)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
 			return NetOffice.Utils.GetProxyEnumeratorAsProperty(this);
@@ -233,6 +240,3 @@ namespace NetOffice.WordApi
 		#pragma warning restore
 	}
 }
-
-
-

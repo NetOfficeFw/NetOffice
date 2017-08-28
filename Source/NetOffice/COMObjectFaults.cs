@@ -1,14 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace NetOffice
 {
     /// <summary>
     /// Need to fix one design issue here in order to protect 
     /// the ICOMObject->ParentObject setter from public. (RemoveParent(ICOMObject comObject))
-    /// COMDynamicObject prevent us to use an internal base class because its alread inherites
+    /// COMDynamicObject prevent us to use a common internal base class because its alread inherites
     /// from System.Dynamic.DynamicObject.
     /// </summary>
     internal static class COMObjectFaults

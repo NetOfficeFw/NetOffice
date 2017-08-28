@@ -9,7 +9,7 @@ namespace NetOffice.MSProjectApi.Tools.Utils
     /// <summary>
     /// Various helper for common tasks
     /// </summary>
-    public class CommonUtils : NetOffice.OfficeApi.Tools.Utils.CommonUtils
+    public class CommonUtils : NetOffice.OfficeApi.Tools.Contribution.CommonUtils
     {
         #region Fields
 

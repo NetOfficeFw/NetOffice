@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using System;
 using NetRuntimeSystem = System;
@@ -46,7 +46,14 @@ namespace NetOffice.MSComctlLibApi
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public IButtonMenus(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -160,12 +167,13 @@ namespace NetOffice.MSComctlLibApi
 		/// </summary>
 		/// <param name="index">object index</param>
 		[SupportByVersion("MSComctlLib", 6)]
+		[BaseResult]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
 		public NetOffice.MSComctlLibApi.IButtonMenu this[object index]
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.MSComctlLibApi.IButtonMenu>(this, "Item", NetOffice.MSComctlLibApi.IButtonMenu.LateBindingApiWrapperType, index);
+				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.MSComctlLibApi.IButtonMenu>(this, "Item", index);
 			}
 			set
 			{
@@ -203,19 +211,21 @@ namespace NetOffice.MSComctlLibApi
 		/// <param name="key">optional object key</param>
 		/// <param name="text">optional object text</param>
 		[SupportByVersion("MSComctlLib", 6)]
+		[BaseResult]
 		public NetOffice.MSComctlLibApi.IButtonMenu Add(object index, object key, object text)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.MSComctlLibApi.IButtonMenu>(this, "Add", NetOffice.MSComctlLibApi.IButtonMenu.LateBindingApiWrapperType, index, key, text);
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.MSComctlLibApi.IButtonMenu>(this, "Add", index, key, text);
 		}
 
 		/// <summary>
 		/// SupportByVersion MSComctlLib 6
 		/// </summary>
 		[CustomMethod]
+		[BaseResult]
 		[SupportByVersion("MSComctlLib", 6)]
 		public NetOffice.MSComctlLibApi.IButtonMenu Add()
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.MSComctlLibApi.IButtonMenu>(this, "Add", NetOffice.MSComctlLibApi.IButtonMenu.LateBindingApiWrapperType);
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.MSComctlLibApi.IButtonMenu>(this, "Add");
 		}
 
 		/// <summary>
@@ -223,10 +233,11 @@ namespace NetOffice.MSComctlLibApi
 		/// </summary>
 		/// <param name="index">optional object index</param>
 		[CustomMethod]
+		[BaseResult]
 		[SupportByVersion("MSComctlLib", 6)]
 		public NetOffice.MSComctlLibApi.IButtonMenu Add(object index)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.MSComctlLibApi.IButtonMenu>(this, "Add", NetOffice.MSComctlLibApi.IButtonMenu.LateBindingApiWrapperType, index);
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.MSComctlLibApi.IButtonMenu>(this, "Add", index);
 		}
 
 		/// <summary>
@@ -235,10 +246,11 @@ namespace NetOffice.MSComctlLibApi
 		/// <param name="index">optional object index</param>
 		/// <param name="key">optional object key</param>
 		[CustomMethod]
+		[BaseResult]
 		[SupportByVersion("MSComctlLib", 6)]
 		public NetOffice.MSComctlLibApi.IButtonMenu Add(object index, object key)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.MSComctlLibApi.IButtonMenu>(this, "Add", NetOffice.MSComctlLibApi.IButtonMenu.LateBindingApiWrapperType, index, key);
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.MSComctlLibApi.IButtonMenu>(this, "Add", index, key);
 		}
 
 		#endregion
@@ -274,6 +286,3 @@ namespace NetOffice.MSComctlLibApi
 		#pragma warning restore
 	}
 }
-
-
-

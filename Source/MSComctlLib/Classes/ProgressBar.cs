@@ -522,4 +522,3 @@ namespace NetOffice.MSComctlLibApi
 		#pragma warning restore
 	}
 }
-

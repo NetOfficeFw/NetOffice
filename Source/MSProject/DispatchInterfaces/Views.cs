@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using System;
 using NetRuntimeSystem = System;
@@ -47,7 +47,14 @@ namespace NetOffice.MSProjectApi
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public Views(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -109,12 +116,13 @@ namespace NetOffice.MSProjectApi
 		/// </summary>
 		/// <param name="index">object index</param>
 		[SupportByVersion("MSProject", 11,12,14)]
+		[BaseResult]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
 		public NetOffice.MSProjectApi.View this[object index]
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.MSProjectApi.View>(this, "Item", NetOffice.MSProjectApi.View.LateBindingApiWrapperType, index);
+				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.MSProjectApi.View>(this, "Item", index);
 			}
 		}
 
@@ -167,9 +175,10 @@ namespace NetOffice.MSProjectApi
 		/// <param name="source">object source</param>
 		/// <param name="newName">string newName</param>
 		[SupportByVersion("MSProject", 11,12,14)]
+		[BaseResult]
 		public NetOffice.MSProjectApi.View Copy(object source, string newName)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.MSProjectApi.View>(this, "Copy", NetOffice.MSProjectApi.View.LateBindingApiWrapperType, source, newName);
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.MSProjectApi.View>(this, "Copy", source, newName);
 		}
 
 		#endregion
@@ -205,6 +214,3 @@ namespace NetOffice.MSProjectApi
 		#pragma warning restore
 	}
 }
-
-
-

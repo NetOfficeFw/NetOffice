@@ -40,7 +40,7 @@ namespace NetOffice.OutlookApi
 	[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
 	[EntityType(EntityType.IsCoClass), ComProgId("Outlook.Application"), ModuleProvider(typeof(GlobalHelperModules.GlobalModule))]
 	[EventSink(typeof(Events.ApplicationEvents_SinkHelper), typeof(Events.ApplicationEvents_10_SinkHelper), typeof(Events.ApplicationEvents_11_SinkHelper))]
-	public class Application : _Application, IEventBinding
+	public class Application : _Application, ICloneable<Application>, IEventBinding
 	{
 		#pragma warning disable
 
@@ -808,9 +808,23 @@ namespace NetOffice.OutlookApi
 
 			_connectPoint = null;
 		}
-        
+
         #endregion
 
-		#pragma warning restore
-	}
+        #region ICloneable<Application>
+
+        /// <summary>
+        /// Creates a new Application that is a copy of the current instance
+        /// </summary>
+        /// <returns>A new Application that is a copy of this instance</returns>
+        /// <exception cref="CloneException">An unexpected error occured. See inner exception(s) for details.</exception>
+        public new Application Clone()
+        {
+            return base.Clone() as Application;
+        }
+
+        #endregion
+
+        #pragma warning restore
+    }
 }

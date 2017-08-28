@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using System;
 using NetRuntimeSystem = System;
@@ -46,7 +46,14 @@ namespace NetOffice.MSComctlLibApi
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public IColumnHeaders(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -148,12 +155,13 @@ namespace NetOffice.MSComctlLibApi
 		/// </summary>
 		/// <param name="index">object index</param>
 		[SupportByVersion("MSComctlLib", 6)]
+		[BaseResult]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
 		public NetOffice.MSComctlLibApi.IColumnHeader this[object index]
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.MSComctlLibApi.IColumnHeader>(this, "Item", NetOffice.MSComctlLibApi.IColumnHeader.LateBindingApiWrapperType, index);
+				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.MSComctlLibApi.IColumnHeader>(this, "Item", index);
 			}
 		}
 
@@ -170,21 +178,23 @@ namespace NetOffice.MSComctlLibApi
 		/// <param name="width">optional object width</param>
 		/// <param name="alignment">optional object alignment</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		[BaseResult]
 		[SupportByVersion("MSComctlLib", 6)]
 		public NetOffice.MSComctlLibApi.IColumnHeader Add_PreVB98(object index, object key, object text, object width, object alignment)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.MSComctlLibApi.IColumnHeader>(this, "Add_PreVB98", NetOffice.MSComctlLibApi.IColumnHeader.LateBindingApiWrapperType, new object[]{ index, key, text, width, alignment });
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.MSComctlLibApi.IColumnHeader>(this, "Add_PreVB98", new object[]{ index, key, text, width, alignment });
 		}
 
 		/// <summary>
 		/// SupportByVersion MSComctlLib 6
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		[BaseResult]
 		[CustomMethod]
 		[SupportByVersion("MSComctlLib", 6)]
 		public NetOffice.MSComctlLibApi.IColumnHeader Add_PreVB98()
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.MSComctlLibApi.IColumnHeader>(this, "Add_PreVB98", NetOffice.MSComctlLibApi.IColumnHeader.LateBindingApiWrapperType);
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.MSComctlLibApi.IColumnHeader>(this, "Add_PreVB98");
 		}
 
 		/// <summary>
@@ -192,11 +202,12 @@ namespace NetOffice.MSComctlLibApi
 		/// </summary>
 		/// <param name="index">optional object index</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		[BaseResult]
 		[CustomMethod]
 		[SupportByVersion("MSComctlLib", 6)]
 		public NetOffice.MSComctlLibApi.IColumnHeader Add_PreVB98(object index)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.MSComctlLibApi.IColumnHeader>(this, "Add_PreVB98", NetOffice.MSComctlLibApi.IColumnHeader.LateBindingApiWrapperType, index);
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.MSComctlLibApi.IColumnHeader>(this, "Add_PreVB98", index);
 		}
 
 		/// <summary>
@@ -205,11 +216,12 @@ namespace NetOffice.MSComctlLibApi
 		/// <param name="index">optional object index</param>
 		/// <param name="key">optional object key</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		[BaseResult]
 		[CustomMethod]
 		[SupportByVersion("MSComctlLib", 6)]
 		public NetOffice.MSComctlLibApi.IColumnHeader Add_PreVB98(object index, object key)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.MSComctlLibApi.IColumnHeader>(this, "Add_PreVB98", NetOffice.MSComctlLibApi.IColumnHeader.LateBindingApiWrapperType, index, key);
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.MSComctlLibApi.IColumnHeader>(this, "Add_PreVB98", index, key);
 		}
 
 		/// <summary>
@@ -219,11 +231,12 @@ namespace NetOffice.MSComctlLibApi
 		/// <param name="key">optional object key</param>
 		/// <param name="text">optional object text</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		[BaseResult]
 		[CustomMethod]
 		[SupportByVersion("MSComctlLib", 6)]
 		public NetOffice.MSComctlLibApi.IColumnHeader Add_PreVB98(object index, object key, object text)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.MSComctlLibApi.IColumnHeader>(this, "Add_PreVB98", NetOffice.MSComctlLibApi.IColumnHeader.LateBindingApiWrapperType, index, key, text);
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.MSComctlLibApi.IColumnHeader>(this, "Add_PreVB98", index, key, text);
 		}
 
 		/// <summary>
@@ -234,11 +247,12 @@ namespace NetOffice.MSComctlLibApi
 		/// <param name="text">optional object text</param>
 		/// <param name="width">optional object width</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		[BaseResult]
 		[CustomMethod]
 		[SupportByVersion("MSComctlLib", 6)]
 		public NetOffice.MSComctlLibApi.IColumnHeader Add_PreVB98(object index, object key, object text, object width)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.MSComctlLibApi.IColumnHeader>(this, "Add_PreVB98", NetOffice.MSComctlLibApi.IColumnHeader.LateBindingApiWrapperType, index, key, text, width);
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.MSComctlLibApi.IColumnHeader>(this, "Add_PreVB98", index, key, text, width);
 		}
 
 		/// <summary>
@@ -270,19 +284,21 @@ namespace NetOffice.MSComctlLibApi
 		/// <param name="alignment">optional object alignment</param>
 		/// <param name="icon">optional object icon</param>
 		[SupportByVersion("MSComctlLib", 6)]
+		[BaseResult]
 		public NetOffice.MSComctlLibApi.IColumnHeader Add(object index, object key, object text, object width, object alignment, object icon)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.MSComctlLibApi.IColumnHeader>(this, "Add", NetOffice.MSComctlLibApi.IColumnHeader.LateBindingApiWrapperType, new object[]{ index, key, text, width, alignment, icon });
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.MSComctlLibApi.IColumnHeader>(this, "Add", new object[]{ index, key, text, width, alignment, icon });
 		}
 
 		/// <summary>
 		/// SupportByVersion MSComctlLib 6
 		/// </summary>
 		[CustomMethod]
+		[BaseResult]
 		[SupportByVersion("MSComctlLib", 6)]
 		public NetOffice.MSComctlLibApi.IColumnHeader Add()
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.MSComctlLibApi.IColumnHeader>(this, "Add", NetOffice.MSComctlLibApi.IColumnHeader.LateBindingApiWrapperType);
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.MSComctlLibApi.IColumnHeader>(this, "Add");
 		}
 
 		/// <summary>
@@ -290,10 +306,11 @@ namespace NetOffice.MSComctlLibApi
 		/// </summary>
 		/// <param name="index">optional object index</param>
 		[CustomMethod]
+		[BaseResult]
 		[SupportByVersion("MSComctlLib", 6)]
 		public NetOffice.MSComctlLibApi.IColumnHeader Add(object index)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.MSComctlLibApi.IColumnHeader>(this, "Add", NetOffice.MSComctlLibApi.IColumnHeader.LateBindingApiWrapperType, index);
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.MSComctlLibApi.IColumnHeader>(this, "Add", index);
 		}
 
 		/// <summary>
@@ -302,10 +319,11 @@ namespace NetOffice.MSComctlLibApi
 		/// <param name="index">optional object index</param>
 		/// <param name="key">optional object key</param>
 		[CustomMethod]
+		[BaseResult]
 		[SupportByVersion("MSComctlLib", 6)]
 		public NetOffice.MSComctlLibApi.IColumnHeader Add(object index, object key)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.MSComctlLibApi.IColumnHeader>(this, "Add", NetOffice.MSComctlLibApi.IColumnHeader.LateBindingApiWrapperType, index, key);
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.MSComctlLibApi.IColumnHeader>(this, "Add", index, key);
 		}
 
 		/// <summary>
@@ -315,10 +333,11 @@ namespace NetOffice.MSComctlLibApi
 		/// <param name="key">optional object key</param>
 		/// <param name="text">optional object text</param>
 		[CustomMethod]
+		[BaseResult]
 		[SupportByVersion("MSComctlLib", 6)]
 		public NetOffice.MSComctlLibApi.IColumnHeader Add(object index, object key, object text)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.MSComctlLibApi.IColumnHeader>(this, "Add", NetOffice.MSComctlLibApi.IColumnHeader.LateBindingApiWrapperType, index, key, text);
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.MSComctlLibApi.IColumnHeader>(this, "Add", index, key, text);
 		}
 
 		/// <summary>
@@ -329,10 +348,11 @@ namespace NetOffice.MSComctlLibApi
 		/// <param name="text">optional object text</param>
 		/// <param name="width">optional object width</param>
 		[CustomMethod]
+		[BaseResult]
 		[SupportByVersion("MSComctlLib", 6)]
 		public NetOffice.MSComctlLibApi.IColumnHeader Add(object index, object key, object text, object width)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.MSComctlLibApi.IColumnHeader>(this, "Add", NetOffice.MSComctlLibApi.IColumnHeader.LateBindingApiWrapperType, index, key, text, width);
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.MSComctlLibApi.IColumnHeader>(this, "Add", index, key, text, width);
 		}
 
 		/// <summary>
@@ -344,10 +364,11 @@ namespace NetOffice.MSComctlLibApi
 		/// <param name="width">optional object width</param>
 		/// <param name="alignment">optional object alignment</param>
 		[CustomMethod]
+		[BaseResult]
 		[SupportByVersion("MSComctlLib", 6)]
 		public NetOffice.MSComctlLibApi.IColumnHeader Add(object index, object key, object text, object width, object alignment)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.MSComctlLibApi.IColumnHeader>(this, "Add", NetOffice.MSComctlLibApi.IColumnHeader.LateBindingApiWrapperType, new object[]{ index, key, text, width, alignment });
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.MSComctlLibApi.IColumnHeader>(this, "Add", new object[]{ index, key, text, width, alignment });
 		}
 
 		#endregion
@@ -383,6 +404,3 @@ namespace NetOffice.MSComctlLibApi
 		#pragma warning restore
 	}
 }
-
-
-

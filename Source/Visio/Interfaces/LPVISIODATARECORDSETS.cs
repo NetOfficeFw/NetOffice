@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using System.Reflection;
 using System;
@@ -47,7 +47,14 @@ namespace NetOffice.VisioApi
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public LPVISIODATARECORDSETS(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -108,11 +115,12 @@ namespace NetOffice.VisioApi
 		/// Get
 		/// </summary>
 		[SupportByVersion("Visio", 12,14,15,16)]
+		[BaseResult]
 		public NetOffice.VisioApi.IVApplication Application
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.VisioApi.IVApplication>(this, "Application", NetOffice.VisioApi.IVApplication.LateBindingApiWrapperType);
+				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.VisioApi.IVApplication>(this, "Application");
 			}
 		}
 
@@ -134,11 +142,12 @@ namespace NetOffice.VisioApi
 		/// Get
 		/// </summary>
 		[SupportByVersion("Visio", 12,14,15,16)]
+		[BaseResult]
 		public NetOffice.VisioApi.IVDocument Document
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.VisioApi.IVDocument>(this, "Document", NetOffice.VisioApi.IVDocument.LateBindingApiWrapperType);
+				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.VisioApi.IVDocument>(this, "Document");
 			}
 		}
 
@@ -174,12 +183,13 @@ namespace NetOffice.VisioApi
 		/// </summary>
 		/// <param name="index">Int32 index</param>
 		[SupportByVersion("Visio", 12,14,15,16)]
+		[BaseResult]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
 		public NetOffice.VisioApi.IVDataRecordset this[Int32 index]
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.VisioApi.IVDataRecordset>(this, "Item", NetOffice.VisioApi.IVDataRecordset.LateBindingApiWrapperType, index);
+				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.VisioApi.IVDataRecordset>(this, "Item", index);
 			}
 		}
 
@@ -211,11 +221,12 @@ namespace NetOffice.VisioApi
 		/// Get
 		/// </summary>
 		[SupportByVersion("Visio", 12,14,15,16)]
+		[BaseResult]
 		public NetOffice.VisioApi.IVEventList EventList
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.VisioApi.IVEventList>(this, "EventList", NetOffice.VisioApi.IVEventList.LateBindingApiWrapperType);
+				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.VisioApi.IVEventList>(this, "EventList");
 			}
 		}
 
@@ -231,9 +242,10 @@ namespace NetOffice.VisioApi
 		/// <param name="addOptions">Int32 addOptions</param>
 		/// <param name="name">optional string Name = </param>
 		[SupportByVersion("Visio", 12,14,15,16)]
+		[BaseResult]
 		public NetOffice.VisioApi.IVDataRecordset Add(object connectionIDOrString, string commandString, Int32 addOptions, object name)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.VisioApi.IVDataRecordset>(this, "Add", NetOffice.VisioApi.IVDataRecordset.LateBindingApiWrapperType, connectionIDOrString, commandString, addOptions, name);
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.VisioApi.IVDataRecordset>(this, "Add", connectionIDOrString, commandString, addOptions, name);
 		}
 
 		/// <summary>
@@ -243,10 +255,11 @@ namespace NetOffice.VisioApi
 		/// <param name="commandString">string commandString</param>
 		/// <param name="addOptions">Int32 addOptions</param>
 		[CustomMethod]
+		[BaseResult]
 		[SupportByVersion("Visio", 12,14,15,16)]
 		public NetOffice.VisioApi.IVDataRecordset Add(object connectionIDOrString, string commandString, Int32 addOptions)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.VisioApi.IVDataRecordset>(this, "Add", NetOffice.VisioApi.IVDataRecordset.LateBindingApiWrapperType, connectionIDOrString, commandString, addOptions);
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.VisioApi.IVDataRecordset>(this, "Add", connectionIDOrString, commandString, addOptions);
 		}
 
 		/// <summary>
@@ -256,9 +269,10 @@ namespace NetOffice.VisioApi
 		/// <param name="addOptions">Int32 addOptions</param>
 		/// <param name="name">optional string Name = </param>
 		[SupportByVersion("Visio", 12,14,15,16)]
+		[BaseResult]
 		public NetOffice.VisioApi.IVDataRecordset AddFromXML(string xMLString, Int32 addOptions, object name)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.VisioApi.IVDataRecordset>(this, "AddFromXML", NetOffice.VisioApi.IVDataRecordset.LateBindingApiWrapperType, xMLString, addOptions, name);
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.VisioApi.IVDataRecordset>(this, "AddFromXML", xMLString, addOptions, name);
 		}
 
 		/// <summary>
@@ -267,10 +281,11 @@ namespace NetOffice.VisioApi
 		/// <param name="xMLString">string xMLString</param>
 		/// <param name="addOptions">Int32 addOptions</param>
 		[CustomMethod]
+		[BaseResult]
 		[SupportByVersion("Visio", 12,14,15,16)]
 		public NetOffice.VisioApi.IVDataRecordset AddFromXML(string xMLString, Int32 addOptions)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.VisioApi.IVDataRecordset>(this, "AddFromXML", NetOffice.VisioApi.IVDataRecordset.LateBindingApiWrapperType, xMLString, addOptions);
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.VisioApi.IVDataRecordset>(this, "AddFromXML", xMLString, addOptions);
 		}
 
 		/// <summary>
@@ -280,9 +295,10 @@ namespace NetOffice.VisioApi
 		/// <param name="addOptions">Int32 addOptions</param>
 		/// <param name="name">optional string Name = </param>
 		[SupportByVersion("Visio", 12,14,15,16)]
+		[BaseResult]
 		public NetOffice.VisioApi.IVDataRecordset AddFromConnectionFile(string fileName, Int32 addOptions, object name)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.VisioApi.IVDataRecordset>(this, "AddFromConnectionFile", NetOffice.VisioApi.IVDataRecordset.LateBindingApiWrapperType, fileName, addOptions, name);
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.VisioApi.IVDataRecordset>(this, "AddFromConnectionFile", fileName, addOptions, name);
 		}
 
 		/// <summary>
@@ -291,10 +307,11 @@ namespace NetOffice.VisioApi
 		/// <param name="fileName">string fileName</param>
 		/// <param name="addOptions">Int32 addOptions</param>
 		[CustomMethod]
+		[BaseResult]
 		[SupportByVersion("Visio", 12,14,15,16)]
 		public NetOffice.VisioApi.IVDataRecordset AddFromConnectionFile(string fileName, Int32 addOptions)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.VisioApi.IVDataRecordset>(this, "AddFromConnectionFile", NetOffice.VisioApi.IVDataRecordset.LateBindingApiWrapperType, fileName, addOptions);
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.VisioApi.IVDataRecordset>(this, "AddFromConnectionFile", fileName, addOptions);
 		}
 
 		/// <summary>
@@ -350,6 +367,3 @@ namespace NetOffice.VisioApi
 		#pragma warning restore
 	}
 }
-
-
-

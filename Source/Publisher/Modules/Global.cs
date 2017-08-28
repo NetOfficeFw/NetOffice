@@ -1054,5 +1054,3 @@ namespace NetOffice.PublisherApi.GlobalHelperModules
 		#endregion
 	}
 }
-
-

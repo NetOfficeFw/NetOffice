@@ -13,7 +13,7 @@ namespace NetOffice.AccessApi
 	/// </summary>
 	[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Method)]
-	public class _Form : NetOffice.OfficeApi.IAccessible , IEnumerable<object>
+	public class _Form : NetOffice.OfficeApi.IAccessible, IEnumerable<object>
 	{
 		#pragma warning disable
 
@@ -46,7 +46,14 @@ namespace NetOffice.AccessApi
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public _Form(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -3166,6 +3173,3 @@ namespace NetOffice.AccessApi
 		#pragma warning restore
 	}
 }
-
-
-

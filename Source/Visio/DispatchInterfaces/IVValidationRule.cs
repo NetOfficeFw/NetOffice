@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using NetOffice.Attributes;
@@ -44,7 +44,14 @@ namespace NetOffice.VisioApi
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public IVValidationRule(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -105,11 +112,12 @@ namespace NetOffice.VisioApi
 		/// Get
 		/// </summary>
 		[SupportByVersion("Visio", 14,15,16)]
+		[BaseResult]
 		public NetOffice.VisioApi.IVApplication Application
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.VisioApi.IVApplication>(this, "Application", NetOffice.VisioApi.IVApplication.LateBindingApiWrapperType);
+				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.VisioApi.IVApplication>(this, "Application");
 			}
 		}
 
@@ -131,11 +139,12 @@ namespace NetOffice.VisioApi
 		/// Get
 		/// </summary>
 		[SupportByVersion("Visio", 14,15,16)]
+		[BaseResult]
 		public NetOffice.VisioApi.IVDocument Document
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.VisioApi.IVDocument>(this, "Document", NetOffice.VisioApi.IVDocument.LateBindingApiWrapperType);
+				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.VisioApi.IVDocument>(this, "Document");
 			}
 		}
 
@@ -289,11 +298,12 @@ namespace NetOffice.VisioApi
 		/// Get
 		/// </summary>
 		[SupportByVersion("Visio", 14,15,16)]
+		[BaseResult]
 		public NetOffice.VisioApi.IVValidationRuleSet RuleSet
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.VisioApi.IVValidationRuleSet>(this, "RuleSet", NetOffice.VisioApi.IVValidationRuleSet.LateBindingApiWrapperType);
+				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.VisioApi.IVValidationRuleSet>(this, "RuleSet");
 			}
 		}
 
@@ -316,19 +326,21 @@ namespace NetOffice.VisioApi
 		/// <param name="targetPage">optional NetOffice.VisioApi.IVPage targetPage</param>
 		/// <param name="targetShape">optional NetOffice.VisioApi.IVShape targetShape</param>
 		[SupportByVersion("Visio", 14,15,16)]
+		[BaseResult]
 		public NetOffice.VisioApi.IVValidationIssue AddIssue(object targetPage, object targetShape)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.VisioApi.IVValidationIssue>(this, "AddIssue", NetOffice.VisioApi.IVValidationIssue.LateBindingApiWrapperType, targetPage, targetShape);
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.VisioApi.IVValidationIssue>(this, "AddIssue", targetPage, targetShape);
 		}
 
 		/// <summary>
 		/// SupportByVersion Visio 14, 15, 16
 		/// </summary>
 		[CustomMethod]
+		[BaseResult]
 		[SupportByVersion("Visio", 14,15,16)]
 		public NetOffice.VisioApi.IVValidationIssue AddIssue()
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.VisioApi.IVValidationIssue>(this, "AddIssue", NetOffice.VisioApi.IVValidationIssue.LateBindingApiWrapperType);
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.VisioApi.IVValidationIssue>(this, "AddIssue");
 		}
 
 		/// <summary>
@@ -336,10 +348,11 @@ namespace NetOffice.VisioApi
 		/// </summary>
 		/// <param name="targetPage">optional NetOffice.VisioApi.IVPage targetPage</param>
 		[CustomMethod]
+		[BaseResult]
 		[SupportByVersion("Visio", 14,15,16)]
 		public NetOffice.VisioApi.IVValidationIssue AddIssue(object targetPage)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.VisioApi.IVValidationIssue>(this, "AddIssue", NetOffice.VisioApi.IVValidationIssue.LateBindingApiWrapperType, targetPage);
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.VisioApi.IVValidationIssue>(this, "AddIssue", targetPage);
 		}
 
 		#endregion
@@ -347,6 +360,3 @@ namespace NetOffice.VisioApi
 		#pragma warning restore
 	}
 }
-
-
-

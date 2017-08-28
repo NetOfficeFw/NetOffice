@@ -13,7 +13,7 @@ namespace NetOffice.PowerPointApi
 	/// </summary>
 	[SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property)]
-	public class Collection : COMObject , IEnumerable<object>
+	public class Collection : COMObject, IEnumerable<object>
 	{
 		#pragma warning disable
 
@@ -46,7 +46,14 @@ namespace NetOffice.PowerPointApi
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public Collection(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -129,29 +136,29 @@ namespace NetOffice.PowerPointApi
 			return Factory.ExecuteVariantMethodGet(this, "_Index", index);
 		}
 
-		#endregion
+        #endregion
 
-       #region IEnumerable<object> Member
-        
-       /// <summary>
-	   /// SupportByVersion PowerPoint, 9,10,11,12,14,15,16
-	   /// </summary>
-	   [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
-       public IEnumerator<object> GetEnumerator()  
-       {
-           NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
-           foreach (object item in innerEnumerator)
-               yield return item;
-       }
+        #region IEnumerable<object> Member
 
-       #endregion
-          
-		#region IEnumerable Members
-       
-		/// <summary>
-		/// SupportByVersion PowerPoint, 9,10,11,12,14,15,16
-		/// </summary>
-		[SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        /// <summary>
+        /// SupportByVersion PowerPoint, 9,10,11,12,14,15,16
+        /// </summary>
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
+        public IEnumerator<object> GetEnumerator()
+        {
+            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
+            foreach (object item in innerEnumerator)
+                yield return item;
+        }
+
+        #endregion
+
+        #region IEnumerable Members
+
+        /// <summary>
+        /// SupportByVersion PowerPoint, 9,10,11,12,14,15,16
+        /// </summary>
+        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
 			return NetOffice.Utils.GetProxyEnumeratorAsProperty(this);
@@ -162,6 +169,3 @@ namespace NetOffice.PowerPointApi
 		#pragma warning restore
 	}
 }
-
-
-

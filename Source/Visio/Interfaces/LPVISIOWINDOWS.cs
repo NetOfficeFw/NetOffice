@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using System;
 using NetRuntimeSystem = System;
@@ -46,7 +46,14 @@ namespace NetOffice.VisioApi
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public LPVISIOWINDOWS(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -107,11 +114,12 @@ namespace NetOffice.VisioApi
 		/// Get
 		/// </summary>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
+		[BaseResult]
 		public NetOffice.VisioApi.IVApplication Application
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.VisioApi.IVApplication>(this, "Application", NetOffice.VisioApi.IVApplication.LateBindingApiWrapperType);
+				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.VisioApi.IVApplication>(this, "Application");
 			}
 		}
 
@@ -134,12 +142,13 @@ namespace NetOffice.VisioApi
 		/// </summary>
 		/// <param name="index">Int16 index</param>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
+		[BaseResult]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
 		public NetOffice.VisioApi.IVWindow this[Int16 index]
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.VisioApi.IVWindow>(this, "Item", NetOffice.VisioApi.IVWindow.LateBindingApiWrapperType, index);
+				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.VisioApi.IVWindow>(this, "Item", index);
 			}
 		}
 
@@ -161,11 +170,12 @@ namespace NetOffice.VisioApi
 		/// Get
 		/// </summary>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
+		[BaseResult]
 		public NetOffice.VisioApi.IVEventList EventList
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.VisioApi.IVEventList>(this, "EventList", NetOffice.VisioApi.IVEventList.LateBindingApiWrapperType);
+				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.VisioApi.IVEventList>(this, "EventList");
 			}
 		}
 
@@ -253,21 +263,23 @@ namespace NetOffice.VisioApi
 		/// <param name="nWidth">optional object nWidth</param>
 		/// <param name="nHeight">optional object nHeight</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		[BaseResult]
 		[SupportByVersion("Visio", 11,12,14,15,16)]
 		public NetOffice.VisioApi.IVWindow Add_WithoutMergeArgs(object bstrCaption, object nFlags, object nType, object nLeft, object nTop, object nWidth, object nHeight)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.VisioApi.IVWindow>(this, "Add_WithoutMergeArgs", NetOffice.VisioApi.IVWindow.LateBindingApiWrapperType, new object[]{ bstrCaption, nFlags, nType, nLeft, nTop, nWidth, nHeight });
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.VisioApi.IVWindow>(this, "Add_WithoutMergeArgs", new object[]{ bstrCaption, nFlags, nType, nLeft, nTop, nWidth, nHeight });
 		}
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		[BaseResult]
 		[CustomMethod]
 		[SupportByVersion("Visio", 11,12,14,15,16)]
 		public NetOffice.VisioApi.IVWindow Add_WithoutMergeArgs()
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.VisioApi.IVWindow>(this, "Add_WithoutMergeArgs", NetOffice.VisioApi.IVWindow.LateBindingApiWrapperType);
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.VisioApi.IVWindow>(this, "Add_WithoutMergeArgs");
 		}
 
 		/// <summary>
@@ -275,11 +287,12 @@ namespace NetOffice.VisioApi
 		/// </summary>
 		/// <param name="bstrCaption">optional object bstrCaption</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		[BaseResult]
 		[CustomMethod]
 		[SupportByVersion("Visio", 11,12,14,15,16)]
 		public NetOffice.VisioApi.IVWindow Add_WithoutMergeArgs(object bstrCaption)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.VisioApi.IVWindow>(this, "Add_WithoutMergeArgs", NetOffice.VisioApi.IVWindow.LateBindingApiWrapperType, bstrCaption);
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.VisioApi.IVWindow>(this, "Add_WithoutMergeArgs", bstrCaption);
 		}
 
 		/// <summary>
@@ -288,11 +301,12 @@ namespace NetOffice.VisioApi
 		/// <param name="bstrCaption">optional object bstrCaption</param>
 		/// <param name="nFlags">optional object nFlags</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		[BaseResult]
 		[CustomMethod]
 		[SupportByVersion("Visio", 11,12,14,15,16)]
 		public NetOffice.VisioApi.IVWindow Add_WithoutMergeArgs(object bstrCaption, object nFlags)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.VisioApi.IVWindow>(this, "Add_WithoutMergeArgs", NetOffice.VisioApi.IVWindow.LateBindingApiWrapperType, bstrCaption, nFlags);
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.VisioApi.IVWindow>(this, "Add_WithoutMergeArgs", bstrCaption, nFlags);
 		}
 
 		/// <summary>
@@ -302,11 +316,12 @@ namespace NetOffice.VisioApi
 		/// <param name="nFlags">optional object nFlags</param>
 		/// <param name="nType">optional object nType</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		[BaseResult]
 		[CustomMethod]
 		[SupportByVersion("Visio", 11,12,14,15,16)]
 		public NetOffice.VisioApi.IVWindow Add_WithoutMergeArgs(object bstrCaption, object nFlags, object nType)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.VisioApi.IVWindow>(this, "Add_WithoutMergeArgs", NetOffice.VisioApi.IVWindow.LateBindingApiWrapperType, bstrCaption, nFlags, nType);
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.VisioApi.IVWindow>(this, "Add_WithoutMergeArgs", bstrCaption, nFlags, nType);
 		}
 
 		/// <summary>
@@ -317,11 +332,12 @@ namespace NetOffice.VisioApi
 		/// <param name="nType">optional object nType</param>
 		/// <param name="nLeft">optional object nLeft</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		[BaseResult]
 		[CustomMethod]
 		[SupportByVersion("Visio", 11,12,14,15,16)]
 		public NetOffice.VisioApi.IVWindow Add_WithoutMergeArgs(object bstrCaption, object nFlags, object nType, object nLeft)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.VisioApi.IVWindow>(this, "Add_WithoutMergeArgs", NetOffice.VisioApi.IVWindow.LateBindingApiWrapperType, bstrCaption, nFlags, nType, nLeft);
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.VisioApi.IVWindow>(this, "Add_WithoutMergeArgs", bstrCaption, nFlags, nType, nLeft);
 		}
 
 		/// <summary>
@@ -333,11 +349,12 @@ namespace NetOffice.VisioApi
 		/// <param name="nLeft">optional object nLeft</param>
 		/// <param name="nTop">optional object nTop</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		[BaseResult]
 		[CustomMethod]
 		[SupportByVersion("Visio", 11,12,14,15,16)]
 		public NetOffice.VisioApi.IVWindow Add_WithoutMergeArgs(object bstrCaption, object nFlags, object nType, object nLeft, object nTop)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.VisioApi.IVWindow>(this, "Add_WithoutMergeArgs", NetOffice.VisioApi.IVWindow.LateBindingApiWrapperType, new object[]{ bstrCaption, nFlags, nType, nLeft, nTop });
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.VisioApi.IVWindow>(this, "Add_WithoutMergeArgs", new object[]{ bstrCaption, nFlags, nType, nLeft, nTop });
 		}
 
 		/// <summary>
@@ -350,11 +367,12 @@ namespace NetOffice.VisioApi
 		/// <param name="nTop">optional object nTop</param>
 		/// <param name="nWidth">optional object nWidth</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		[BaseResult]
 		[CustomMethod]
 		[SupportByVersion("Visio", 11,12,14,15,16)]
 		public NetOffice.VisioApi.IVWindow Add_WithoutMergeArgs(object bstrCaption, object nFlags, object nType, object nLeft, object nTop, object nWidth)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.VisioApi.IVWindow>(this, "Add_WithoutMergeArgs", NetOffice.VisioApi.IVWindow.LateBindingApiWrapperType, new object[]{ bstrCaption, nFlags, nType, nLeft, nTop, nWidth });
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.VisioApi.IVWindow>(this, "Add_WithoutMergeArgs", new object[]{ bstrCaption, nFlags, nType, nLeft, nTop, nWidth });
 		}
 
 		/// <summary>
@@ -391,19 +409,21 @@ namespace NetOffice.VisioApi
 		/// <param name="bstrMergeClass">optional object bstrMergeClass</param>
 		/// <param name="nMergePosition">optional object nMergePosition</param>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
+		[BaseResult]
 		public NetOffice.VisioApi.IVWindow Add(object bstrCaption, object nFlags, object nType, object nLeft, object nTop, object nWidth, object nHeight, object bstrMergeID, object bstrMergeClass, object nMergePosition)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.VisioApi.IVWindow>(this, "Add", NetOffice.VisioApi.IVWindow.LateBindingApiWrapperType, new object[]{ bstrCaption, nFlags, nType, nLeft, nTop, nWidth, nHeight, bstrMergeID, bstrMergeClass, nMergePosition });
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.VisioApi.IVWindow>(this, "Add", new object[]{ bstrCaption, nFlags, nType, nLeft, nTop, nWidth, nHeight, bstrMergeID, bstrMergeClass, nMergePosition });
 		}
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// </summary>
 		[CustomMethod]
+		[BaseResult]
 		[SupportByVersion("Visio", 11,12,14,15,16)]
 		public NetOffice.VisioApi.IVWindow Add()
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.VisioApi.IVWindow>(this, "Add", NetOffice.VisioApi.IVWindow.LateBindingApiWrapperType);
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.VisioApi.IVWindow>(this, "Add");
 		}
 
 		/// <summary>
@@ -411,10 +431,11 @@ namespace NetOffice.VisioApi
 		/// </summary>
 		/// <param name="bstrCaption">optional object bstrCaption</param>
 		[CustomMethod]
+		[BaseResult]
 		[SupportByVersion("Visio", 11,12,14,15,16)]
 		public NetOffice.VisioApi.IVWindow Add(object bstrCaption)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.VisioApi.IVWindow>(this, "Add", NetOffice.VisioApi.IVWindow.LateBindingApiWrapperType, bstrCaption);
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.VisioApi.IVWindow>(this, "Add", bstrCaption);
 		}
 
 		/// <summary>
@@ -423,10 +444,11 @@ namespace NetOffice.VisioApi
 		/// <param name="bstrCaption">optional object bstrCaption</param>
 		/// <param name="nFlags">optional object nFlags</param>
 		[CustomMethod]
+		[BaseResult]
 		[SupportByVersion("Visio", 11,12,14,15,16)]
 		public NetOffice.VisioApi.IVWindow Add(object bstrCaption, object nFlags)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.VisioApi.IVWindow>(this, "Add", NetOffice.VisioApi.IVWindow.LateBindingApiWrapperType, bstrCaption, nFlags);
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.VisioApi.IVWindow>(this, "Add", bstrCaption, nFlags);
 		}
 
 		/// <summary>
@@ -436,10 +458,11 @@ namespace NetOffice.VisioApi
 		/// <param name="nFlags">optional object nFlags</param>
 		/// <param name="nType">optional object nType</param>
 		[CustomMethod]
+		[BaseResult]
 		[SupportByVersion("Visio", 11,12,14,15,16)]
 		public NetOffice.VisioApi.IVWindow Add(object bstrCaption, object nFlags, object nType)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.VisioApi.IVWindow>(this, "Add", NetOffice.VisioApi.IVWindow.LateBindingApiWrapperType, bstrCaption, nFlags, nType);
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.VisioApi.IVWindow>(this, "Add", bstrCaption, nFlags, nType);
 		}
 
 		/// <summary>
@@ -450,10 +473,11 @@ namespace NetOffice.VisioApi
 		/// <param name="nType">optional object nType</param>
 		/// <param name="nLeft">optional object nLeft</param>
 		[CustomMethod]
+		[BaseResult]
 		[SupportByVersion("Visio", 11,12,14,15,16)]
 		public NetOffice.VisioApi.IVWindow Add(object bstrCaption, object nFlags, object nType, object nLeft)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.VisioApi.IVWindow>(this, "Add", NetOffice.VisioApi.IVWindow.LateBindingApiWrapperType, bstrCaption, nFlags, nType, nLeft);
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.VisioApi.IVWindow>(this, "Add", bstrCaption, nFlags, nType, nLeft);
 		}
 
 		/// <summary>
@@ -465,10 +489,11 @@ namespace NetOffice.VisioApi
 		/// <param name="nLeft">optional object nLeft</param>
 		/// <param name="nTop">optional object nTop</param>
 		[CustomMethod]
+		[BaseResult]
 		[SupportByVersion("Visio", 11,12,14,15,16)]
 		public NetOffice.VisioApi.IVWindow Add(object bstrCaption, object nFlags, object nType, object nLeft, object nTop)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.VisioApi.IVWindow>(this, "Add", NetOffice.VisioApi.IVWindow.LateBindingApiWrapperType, new object[]{ bstrCaption, nFlags, nType, nLeft, nTop });
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.VisioApi.IVWindow>(this, "Add", new object[]{ bstrCaption, nFlags, nType, nLeft, nTop });
 		}
 
 		/// <summary>
@@ -481,10 +506,11 @@ namespace NetOffice.VisioApi
 		/// <param name="nTop">optional object nTop</param>
 		/// <param name="nWidth">optional object nWidth</param>
 		[CustomMethod]
+		[BaseResult]
 		[SupportByVersion("Visio", 11,12,14,15,16)]
 		public NetOffice.VisioApi.IVWindow Add(object bstrCaption, object nFlags, object nType, object nLeft, object nTop, object nWidth)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.VisioApi.IVWindow>(this, "Add", NetOffice.VisioApi.IVWindow.LateBindingApiWrapperType, new object[]{ bstrCaption, nFlags, nType, nLeft, nTop, nWidth });
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.VisioApi.IVWindow>(this, "Add", new object[]{ bstrCaption, nFlags, nType, nLeft, nTop, nWidth });
 		}
 
 		/// <summary>
@@ -498,10 +524,11 @@ namespace NetOffice.VisioApi
 		/// <param name="nWidth">optional object nWidth</param>
 		/// <param name="nHeight">optional object nHeight</param>
 		[CustomMethod]
+		[BaseResult]
 		[SupportByVersion("Visio", 11,12,14,15,16)]
 		public NetOffice.VisioApi.IVWindow Add(object bstrCaption, object nFlags, object nType, object nLeft, object nTop, object nWidth, object nHeight)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.VisioApi.IVWindow>(this, "Add", NetOffice.VisioApi.IVWindow.LateBindingApiWrapperType, new object[]{ bstrCaption, nFlags, nType, nLeft, nTop, nWidth, nHeight });
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.VisioApi.IVWindow>(this, "Add", new object[]{ bstrCaption, nFlags, nType, nLeft, nTop, nWidth, nHeight });
 		}
 
 		/// <summary>
@@ -516,10 +543,11 @@ namespace NetOffice.VisioApi
 		/// <param name="nHeight">optional object nHeight</param>
 		/// <param name="bstrMergeID">optional object bstrMergeID</param>
 		[CustomMethod]
+		[BaseResult]
 		[SupportByVersion("Visio", 11,12,14,15,16)]
 		public NetOffice.VisioApi.IVWindow Add(object bstrCaption, object nFlags, object nType, object nLeft, object nTop, object nWidth, object nHeight, object bstrMergeID)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.VisioApi.IVWindow>(this, "Add", NetOffice.VisioApi.IVWindow.LateBindingApiWrapperType, new object[]{ bstrCaption, nFlags, nType, nLeft, nTop, nWidth, nHeight, bstrMergeID });
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.VisioApi.IVWindow>(this, "Add", new object[]{ bstrCaption, nFlags, nType, nLeft, nTop, nWidth, nHeight, bstrMergeID });
 		}
 
 		/// <summary>
@@ -535,10 +563,11 @@ namespace NetOffice.VisioApi
 		/// <param name="bstrMergeID">optional object bstrMergeID</param>
 		/// <param name="bstrMergeClass">optional object bstrMergeClass</param>
 		[CustomMethod]
+		[BaseResult]
 		[SupportByVersion("Visio", 11,12,14,15,16)]
 		public NetOffice.VisioApi.IVWindow Add(object bstrCaption, object nFlags, object nType, object nLeft, object nTop, object nWidth, object nHeight, object bstrMergeID, object bstrMergeClass)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.VisioApi.IVWindow>(this, "Add", NetOffice.VisioApi.IVWindow.LateBindingApiWrapperType, new object[]{ bstrCaption, nFlags, nType, nLeft, nTop, nWidth, nHeight, bstrMergeID, bstrMergeClass });
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.VisioApi.IVWindow>(this, "Add", new object[]{ bstrCaption, nFlags, nType, nLeft, nTop, nWidth, nHeight, bstrMergeID, bstrMergeClass });
 		}
 
 		#endregion
@@ -574,6 +603,3 @@ namespace NetOffice.VisioApi
 		#pragma warning restore
 	}
 }
-
-
-

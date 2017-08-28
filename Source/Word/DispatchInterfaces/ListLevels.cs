@@ -47,7 +47,14 @@ namespace NetOffice.WordApi
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public ListLevels(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -178,29 +185,29 @@ namespace NetOffice.WordApi
 			}
 		}
 
-		#endregion
+        #endregion
 
-       #region IEnumerable<NetOffice.WordApi.ListLevel> Member
-        
+        #region IEnumerable<NetOffice.WordApi.ListLevel> Member
+
         /// <summary>
-		/// SupportByVersion Word, 9,10,11,12,14,15,16
-		/// </summary>
-		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
-       public IEnumerator<NetOffice.WordApi.ListLevel> GetEnumerator()  
-       {
-           NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
-           foreach (NetOffice.WordApi.ListLevel item in innerEnumerator)
-               yield return item;
-       }
+        /// SupportByVersion Word, 9,10,11,12,14,15,16
+        /// </summary>
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
+        public IEnumerator<NetOffice.WordApi.ListLevel> GetEnumerator()
+        {
+            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
+            foreach (NetOffice.WordApi.ListLevel item in innerEnumerator)
+                yield return item;
+        }
 
-       #endregion
-          
-		#region IEnumerable Members
-       
-		/// <summary>
-		/// SupportByVersion Word, 9,10,11,12,14,15,16
-		/// </summary>
-		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        #endregion
+
+        #region IEnumerable Members
+
+        /// <summary>
+        /// SupportByVersion Word, 9,10,11,12,14,15,16
+        /// </summary>
+        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
 			return NetOffice.Utils.GetProxyEnumeratorAsProperty(this);
@@ -211,5 +218,3 @@ namespace NetOffice.WordApi
 		#pragma warning restore
 	}
 }
-
-

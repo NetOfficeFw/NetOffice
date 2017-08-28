@@ -196,4 +196,3 @@ namespace NetOffice.VisioApi.GlobalHelperModules
 		#endregion
 	}
 }
-

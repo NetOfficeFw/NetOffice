@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using System;
 using NetRuntimeSystem = System;
@@ -46,7 +46,14 @@ namespace NetOffice.OutlookApi
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public _Explorers(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -108,11 +115,12 @@ namespace NetOffice.OutlookApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff869280.aspx </remarks>
 		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
+		[BaseResult]
 		public NetOffice.OutlookApi._Application Application
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OutlookApi._Application>(this, "Application", NetOffice.OutlookApi._Application.LateBindingApiWrapperType);
+				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.OutlookApi._Application>(this, "Application");
 			}
 		}
 
@@ -136,11 +144,12 @@ namespace NetOffice.OutlookApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff865029.aspx </remarks>
 		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
+		[BaseResult]
 		public NetOffice.OutlookApi._NameSpace Session
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OutlookApi._NameSpace>(this, "Session", NetOffice.OutlookApi._NameSpace.LateBindingApiWrapperType);
+				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.OutlookApi._NameSpace>(this, "Session");
 			}
 		}
 
@@ -198,9 +207,10 @@ namespace NetOffice.OutlookApi
 		/// <param name="folder">object folder</param>
 		/// <param name="displayMode">optional NetOffice.OutlookApi.Enums.OlFolderDisplayMode displayMode</param>
 		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
+		[BaseResult]
 		public NetOffice.OutlookApi._Explorer Add(object folder, object displayMode)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OutlookApi._Explorer>(this, "Add", NetOffice.OutlookApi._Explorer.LateBindingApiWrapperType, folder, displayMode);
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.OutlookApi._Explorer>(this, "Add", folder, displayMode);
 		}
 
 		/// <summary>
@@ -209,10 +219,11 @@ namespace NetOffice.OutlookApi
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff868955.aspx </remarks>
 		/// <param name="folder">object folder</param>
 		[CustomMethod]
+		[BaseResult]
 		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
 		public NetOffice.OutlookApi._Explorer Add(object folder)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OutlookApi._Explorer>(this, "Add", NetOffice.OutlookApi._Explorer.LateBindingApiWrapperType, folder);
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.OutlookApi._Explorer>(this, "Add", folder);
 		}
 
         #endregion
@@ -258,6 +269,3 @@ namespace NetOffice.OutlookApi
         #pragma warning restore
     }
 }
-
-
-

@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Threading;
 using System.Runtime.InteropServices;
 using System.Diagnostics;
 using System.Reflection;
@@ -12,6 +11,7 @@ using System.Linq.Expressions;
 using NetOffice.Resolver;
 using NetOffice.Availity;
 using NetOffice.Dynamics;
+using NetOffice.Exceptions;
 
 namespace NetOffice
 {
@@ -19,7 +19,7 @@ namespace NetOffice
         This is designed to use as dynamic in C# or as object in visual basic.
         Allows to use dynamic late-binding with proxy managed service from Netoffice.(best of both worlds)
 
-        NetOffice.Settings.EnableDynamicObjects(true by default) want enable
+        NetOffice.Settings.EnableDynamicObjects(currently true by default - Netoffice 1.7.4.1 beta) want enable
         the behavior that Netoffice returns a COMDynamicObject instance if its
         failed to resolve a wrapper class for a com proxy.
     */
@@ -145,7 +145,7 @@ namespace NetOffice
         /// <summary>
         /// Returns a shared access wrapper arrount the native wrapped proxy
         /// </summary>
-        protected internal COMProxyShare _proxy;
+        protected internal COMProxyShare _proxyShare;
 
         /// <summary>
         /// FriendlyTypeName cache field
@@ -227,7 +227,7 @@ namespace NetOffice
             
             Factory = Core.Default;          
             ParentObject = null;
-            _proxy = Factory.CreateNewProxyShare(this, comProxy);
+            _proxyShare = Factory.CreateNewProxyShare(this, comProxy);
             UnderlyingType = comProxy.GetType();
             Factory.AddObjectToList(this);
             _listChildObjects = new List<ICOMObject>();
@@ -250,7 +250,7 @@ namespace NetOffice
                 Factory = Core.Default;
 
             ParentObject = parentObject;
-            _proxy = Factory.CreateNewProxyShare(this, comProxy);
+            _proxyShare = Factory.CreateNewProxyShare(this, comProxy);
             UnderlyingType = comProxy.GetType();
             if (Settings.Default.EnableProxyManagement && !Object.ReferenceEquals(parentObject, null))
                 ParentObject.AddChildObject(this);
@@ -273,9 +273,9 @@ namespace NetOffice
 
             ICOMProxyShareProvider shareProvider = comObject as ICOMProxyShareProvider;
             if (null != shareProvider)
-                _proxy = shareProvider.GetProxyShare();
+                _proxyShare = shareProvider.GetProxyShare();
             else
-                _proxy = Factory.CreateNewProxyShare(this, comObject.UnderlyingObject);
+                _proxyShare = Factory.CreateNewProxyShare(this, comObject.UnderlyingObject);
             
             UnderlyingType = comObject.UnderlyingType;
 
@@ -297,7 +297,7 @@ namespace NetOffice
             Factory = factory;
 
             ParentObject = parentObject;
-            _proxy = Factory.CreateNewProxyShare(this, comProxy);
+            _proxyShare = Factory.CreateNewProxyShare(this, comProxy);
             
             UnderlyingType = comProxy.GetType();
 
@@ -308,7 +308,32 @@ namespace NetOffice
             _listChildObjects = new List<ICOMObject>();
             Factory.CheckInitialize();
         }
+        
+        /// <summary>
+        /// Creates new instance with given proxy and parent info
+        /// </summary>
+        /// <param name="factory">current factory instance or null for defauslt</param>
+        /// <param name="parentObject">the parent instance where you have these instance from</param>
+        /// <param name="proxy">proxy share instead of proxy</param>       
+        public COMDynamicObject(Core factory, ICOMObject parentObject, COMProxyShare proxy)
+        {
+            if (null == factory)
+                factory = Core.Default;
+            Factory = factory;
 
+            ParentObject = parentObject;
+            _proxyShare = proxy;
+
+            UnderlyingType = _proxyShare.Proxy.GetType();
+
+            if (Settings.Default.EnableProxyManagement && !Object.ReferenceEquals(parentObject, null))
+                ParentObject.AddChildObject(this);
+
+            Factory.AddObjectToList(this);
+            _listChildObjects = new List<ICOMObject>();
+            Factory.CheckInitialize();
+        }
+        
         /// <summary>
         /// Create new instance from given progid
         /// </summary>
@@ -321,7 +346,7 @@ namespace NetOffice
 
             UnderlyingType = System.Type.GetTypeFromProgID(progId, true);
             object underlyingObject = Activator.CreateInstance(UnderlyingType);
-            _proxy = Factory.CreateNewProxyShare(this, underlyingObject);
+            _proxyShare = Factory.CreateNewProxyShare(this, underlyingObject);
 
             Factory = null != factory ? factory : Core.Default;        
             Factory.AddObjectToList(this);
@@ -343,7 +368,7 @@ namespace NetOffice
 
             UnderlyingType = System.Type.GetTypeFromProgID(progId, true);
             object underlyingObject = Activator.CreateInstance(UnderlyingType);
-            _proxy = Factory.CreateNewProxyShare(this, underlyingObject);
+            _proxyShare = Factory.CreateNewProxyShare(this, underlyingObject);
 
             Factory = Core.Default;     
             Factory.AddObjectToList(this);
@@ -384,8 +409,7 @@ namespace NetOffice
                 return _selfDynamicMemberNames;
             }
         }
-
-
+        
         #endregion
 
         #region Methods
@@ -411,9 +435,9 @@ namespace NetOffice
         private void ReleaseCOMProxy(IEnumerable<ICOMObject> ownerPath)
         {
             // release himself from COM Runtime System
-            if (!_proxy.Released)
+            if (!_proxyShare.Released)
             {
-                _proxy.Release();
+                _proxyShare.Release();
                 Factory.RemoveObjectFromList(this, ownerPath);
             }        
         }
@@ -811,6 +835,500 @@ namespace NetOffice
 
         #endregion
 
+        #region ICOMObject
+
+        /// <summary>
+        /// The associated factory
+        /// </summary>
+        public Core Factory { get; private set; }
+
+        /// <summary>
+        /// The associated invoker
+        /// </summary>
+        public Invoker Invoker
+        {
+            get
+            {
+                if (null != Factory)
+                    return Factory.Invoker;
+                else
+                    return Invoker.Default;
+            }
+        }
+
+        /// <summary>
+        /// The associated console
+        /// </summary>
+        public DebugConsole Console
+        {
+            get
+            {
+                if (null != Factory)
+                    return Factory.Console;
+                else
+                    return DebugConsole.Default;
+            }
+        }
+
+        /// <summary>
+        /// The associated settings
+        /// </summary>
+        public Settings Settings
+        {
+            get
+            {
+                if (null != Factory)
+                    return Factory.Settings;
+                else
+                    return Settings.Default;
+            }
+        }
+
+        #endregion
+
+        #region ICOMObjectProxy
+
+        /// <summary>
+        /// Returns the native wrapped proxy
+        /// </summary>
+        public object UnderlyingObject
+        {
+            get
+            {
+                return _proxyShare.Proxy;
+            }
+        }
+
+        /// <summary>
+        /// Returns Type of native proxy
+        /// </summary>
+        public Type UnderlyingType { get; private set; }
+
+        /// <summary>
+        /// Class name from UnderlyingObject
+        /// </summary>
+        public string UnderlyingTypeName
+        {
+            get
+            {
+                if (null == _underlyingTypeName)
+                    _underlyingTypeName = new UnderlyingTypeNameResolver().GetClassName(this);
+                return _underlyingTypeName;
+            }
+        }
+
+        /// <summary>
+        /// Returns friendly name for the instance type
+        /// </summary>
+        public string UnderlyingFriendlyTypeName
+        {
+            get
+            {
+                if (null == _friendlyTypeName)
+                    _friendlyTypeName = new UnderlyingTypeNameResolver().GetFriendlyClassName(this, _underlyingTypeName);
+                return _friendlyTypeName;
+            }
+        }
+
+        /// <summary>
+        /// Name of the hosting NetOffice component
+        /// </summary>      
+        public string UnderlyingComponentName
+        {
+            get
+            {
+                if (null == _underlyingComponentName)
+                    _underlyingComponentName = new UnderlyingTypeNameResolver().GetComponentName(this);
+                return _underlyingComponentName;
+            }
+        }
+
+        /// <summary>
+        /// Friendly instance name of the NetOffice Wrapper class
+        /// </summary>
+        public string InstanceName
+        {
+            get
+            {
+                return InstanceType.FullName;
+            }
+        }
+
+        /// <summary>
+        /// Friendly Name of the NetOffice Wrapper class
+        /// </summary>       
+        public string InstanceFriendlyName
+        {
+            get
+            {
+                if (null != _progId)
+                    return "Dynamic(" + _progId + ")";
+                else
+                    return "Dynamic(" + UnderlyingFriendlyTypeName + ")";
+            }
+        }
+
+        /// <summary>
+        /// Name of the hosting NetOffice component
+        /// </summary>
+        public string InstanceComponentName
+        {
+            get
+            {
+                return "NetOffice.Core";
+            }
+        }
+
+        /// <summary>
+        /// Type informations from ICOMObject instance
+        /// </summary>
+        public Type InstanceType
+        {
+            get
+            {
+                return _instanceType;
+            }
+        }
+
+        #endregion
+
+        #region ICOMObjectDisposable
+        
+        /// <summary>
+        /// These event was called from Dispose and you can skip the dipose operation here if you want. the event can be helpful for troubleshooting if you dont know why your objects beeing disposed
+        /// </summary>
+        public event OnDisposeEventHandler OnDispose;
+       
+        /// <summary>
+        /// Returns instance is already diposed
+        /// </summary>
+        public bool IsDisposed
+        {
+            get
+            {
+                return _isDisposed;
+            }
+        }
+
+        /// <summary>
+        /// Returns instance is currently in diposing progress
+        /// </summary>
+        public bool IsCurrentlyDisposing
+        {
+            get
+            {
+                return _isCurrentlyDisposing;
+            }
+        }
+
+        /// <summary>
+        /// Dispose instance and all child instances
+        /// </summary>
+        /// <exception cref="COMDisposeException">An unexpected error occurs.</exception>
+        public virtual void Dispose()
+        {
+            Dispose(true);
+        }
+
+        /// <summary>
+        /// Dispose instance and all child instances
+        /// </summary>
+        /// <param name="disposeEventBinding">dispose proxies with events and one or more event recipients</param>
+        /// <exception cref="COMDisposeException">An unexpected error occurs.</exception>
+        public virtual void Dispose(bool disposeEventBinding)
+        {
+            try
+            {
+                lock (_disposeLock)
+                {
+                    // skip check 
+                    bool cancel = RaiseOnDispose();
+                    if (cancel)
+                        return;
+
+                    // in case object export events and 
+                    // disposeEventBinding == true we dont remove the object from parents child list
+                    bool removeFromParent = true;
+
+                    // set disposed flag
+                    _isCurrentlyDisposing = true;
+
+                    // in case of object implements also event binding we dispose them
+                    IEventBinding eventBind = this as IEventBinding;
+                    if (disposeEventBinding)
+                    {
+                        if (!Object.ReferenceEquals(eventBind, null))
+                            eventBind.DisposeEventBridge();
+                    }
+                    else
+                    {
+                        if (!Object.ReferenceEquals(eventBind, null) && (eventBind.EventBridgeInitialized))
+                            removeFromParent = false;
+                    }
+
+                    // child proxy dispose
+                    DisposeChildInstances(disposeEventBinding);
+
+                    IEnumerable<ICOMObject> ownerPath = null;
+                    if (Factory.HasProxyRemovedRecipients)
+                    {
+                        ownerPath = Core.GetOwnerPath(this);
+                    }
+
+                    // remove himself from parent childlist
+                    if ((!Object.ReferenceEquals(ParentObject, null)) && (true == removeFromParent))
+                    {
+                        ParentObject.RemoveChildObject(this);
+                        ParentObject = null;
+                    }
+
+                    // call quit automatically if wanted
+                    //CheckEntities();
+                    if (Settings.EnableAutomaticQuit && HasQuitMethod())
+                        new Callers.QuitCaller().TryCall(Settings, Invoker, this);
+
+
+                    // release proxy
+                    ReleaseCOMProxy(ownerPath);
+
+                    // clear supportList reference
+                    _listSupportedEntities = null;
+
+                    _isDisposed = true;
+                    _isCurrentlyDisposing = false;
+                }
+            }
+            catch (Exception exception)
+            {
+                throw new COMDisposeException("An unexpected error occured while disposing <" +
+                    InstanceName + ">.", exception);
+            }
+        }
+
+        #endregion
+
+        #region ICOMObjectTable
+        
+        /// <summary>
+        /// Returns parent proxy object
+        /// </summary>
+        public ICOMObject ParentObject { get; private set; }
+
+        /// <summary>
+        /// Child instances
+        /// </summary>
+        public IEnumerable<ICOMObject> ChildObjects
+        {
+            get
+            {
+                return _listChildObjects;
+            }
+        }
+
+        /// <summary>
+        /// Add object to child list
+        /// </summary>
+        /// <param name="childObject">>target child instance</param>
+        /// <exception cref="COMChildRelationException">Unexpected error</exception>
+        public void AddChildObject(ICOMObject childObject)
+        {
+            try
+            {
+                lock (_childListLock)
+                {
+                    _listChildObjects.Add(childObject);
+                }
+            }
+            catch (Exception exception)
+            {
+                Console.WriteException(exception);
+                throw new COMChildRelationException("Unexpected error while add child instance.", exception);
+            }
+        }
+
+        /// <summary>
+        /// Remove object from child list
+        /// </summary>
+        /// <param name="childObject">target child instance</param>
+        /// <exception cref="COMChildRelationException">Unexpected error</exception>
+        public bool RemoveChildObject(ICOMObject childObject)
+        {
+            try
+            {
+                lock (_childListLock)
+                {
+                    return _listChildObjects.Remove(childObject);
+                }
+            }
+            catch (Exception exception)
+            {
+                Console.WriteException(exception);
+                throw new COMChildRelationException("Unexpected error while remove child instance.", exception);
+            }
+        }
+
+        #endregion
+
+        #region ICOMObjectTableDisposable
+
+        /// <summary>
+        /// Dispose all child instances
+        /// </summary>
+        /// <exception cref="COMDisposeException">An unexpected error occurs.</exception>
+        public virtual void DisposeChildInstances()
+        {
+            DisposeChildInstances(true);
+        }
+
+        /// <summary>
+        /// Dispose all child instances
+        /// </summary>
+        /// <param name="disposeEventBinding">dispose proxies with events and one or more event recipients</param>
+        /// <exception cref="COMDisposeException">An unexpected error occurs.</exception>
+        public virtual void DisposeChildInstances(bool disposeEventBinding)
+        {
+            try
+            {
+                lock (_disposeChildLock)
+                {
+                    foreach (ICOMObject itemObject in _listChildObjects.ToArray())
+                    {
+                        COMObjectFaults.RemoveParent(itemObject);
+                        itemObject.Dispose(disposeEventBinding);
+                    }
+                    _listChildObjects.Clear();
+                }
+            }
+            catch (Exception exception)
+            {
+                throw new COMDisposeException("Unexpected error while dispose child instances.", exception);
+            }
+        }
+
+        #endregion
+
+        #region ICOMObjectEvents
+
+        /// <summary>
+        /// Unsupported
+        /// </summary>
+        public bool IsEventBinding
+        {
+            get
+            {   // unsupported in dynamics
+                return false;
+            }
+        }
+
+        /// <summary>
+        /// Unsupported
+        /// </summary>
+        public bool IsEventBridgeInitialized
+        {
+            get
+            {   // unsupported in dynamics
+                return false;
+            }
+        }
+
+        /// <summary>
+        /// Unsupported
+        /// </summary>
+        public bool IsWithEventRecipients
+        {
+            get
+            {
+                // unsupported in dynamics
+                return false;
+            }
+        }
+
+        #endregion
+
+        #region ICOMObjectAvaility
+
+        /// <summary>
+        /// NetOffice method: Returns information the proxy provides a method or property.
+        /// Check want be made at runtime through IDispatch interface.
+        /// </summary>
+        /// <param name="name">name of the enitity</param>
+        /// <returns>true if available, otherwise false</returns>
+        /// <exception cref="AvailityException">Unexpected error, see inner exception(s) for details.</exception>
+        public bool EntityIsAvailable(string name)
+        {
+            return EntityIsAvailable(name, SupportedEntityType.Both);
+        }
+
+        /// <summary>
+        /// NetOffice method: Returns information the proxy provides a method or property.
+        /// Check want be made at runtime through IDispatch interface.
+        /// </summary>
+        /// <param name="name">name of the enitity</param>
+        /// <param name="searchType">indicate the kind of enitity the caller is looking for</param>
+        /// <returns>true if available, otherwise false</returns>
+        /// <exception cref="AvailityException">Unexpected error, see inner exception(s) for details.</exception>
+        public bool EntityIsAvailable(string name, SupportedEntityType searchType)
+        {
+            return new SupportedEntityFinder().Find(Factory, ref _listSupportedEntities, searchType, UnderlyingObject, name);
+        }
+
+        #endregion
+
+        #region ICOMProxyShareProvider
+
+        /// <summary>
+        /// NetOffice method: Returns the inner proxy shared access handler
+        /// </summary>
+        /// <returns>shared proxy</returns>
+        [EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false)]
+        COMProxyShare ICOMProxyShareProvider.GetProxyShare()
+        {
+            return _proxyShare;
+        }
+
+        /// <summary>
+        /// NetOffice method: Set the inner proxy shared access handler.
+        /// The method want aquire the share 1x times
+        /// </summary>
+        /// <param name="share">target share</param>
+        /// <exception cref="ArgumentNullException">Throws when given share is null(Nothing in Visual Basic)</exception>
+        [EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false)]
+        void ICOMProxyShareProvider.SetProxyShare(COMProxyShare share)
+        {
+            if (null == share)
+                throw new ArgumentNullException("share");
+            if (null != _proxyShare)
+            {
+                _proxyShare.Release();
+                _proxyShare = null;
+            }
+            _proxyShare = share;
+            _proxyShare.Aquire();
+        }
+
+        #endregion
+
+        #region ICloneable
+
+        /// <summary>
+        /// Creates a new object that is a copy of the current instance.
+        /// </summary>
+        /// <returns>a new object that is a copy of this instance</returns>
+        /// <exception cref="CloneException">An unexpected error occured. See inner exception(s) for details.</exception>
+        public object Clone()
+        {
+            try
+            {
+                return Activator.CreateInstance(InstanceType, new object[] { Factory, ParentObject, _proxyShare });
+            }
+            catch (Exception exception)
+            {
+                throw new CloneException(exception);
+            }
+        }
+
+        #endregion
+
         #region Overrides
 
         /// <summary>
@@ -838,7 +1356,7 @@ namespace NetOffice
         /// methods. The object can be encapsulated inside another System.Dynamic.DynamicMetaObject
         /// to provide custom behavior for individual actions. This method supports the Dynamic
         /// Language Runtime infrastructure for language implementers and it is not intended
-        ///  to be used directly from your code.
+        /// to be used directly from your code.
         /// </summary>
         /// <param name="parameter">The expression that represents System.Dynamic.DynamicMetaObject to dispatch to the dynamic virtual methods.</param>
         /// <returns> An object of the System.Dynamic.DynamicMetaObject type.</returns>
@@ -863,7 +1381,7 @@ namespace NetOffice
             int i = 0;
             string[] names = new string[_entities.Length + selfMembers.Length];
             foreach (DynamicObjectEntity item in _entities)
-            { 
+            {
                 names[i] = item.Name;
                 i++;
             }
@@ -876,7 +1394,7 @@ namespace NetOffice
 
             return names;
         }
-        
+
         /// <summary>
         /// Provides implementation for type conversion operations.
         /// </summary>
@@ -888,7 +1406,7 @@ namespace NetOffice
             // Good to know:
             // Confusing stuff about dynamic and implicit/explicit conversions
             // https://stackoverflow.com/questions/3492955/dynamicobject-tryconvert-not-called-when-casting-to-interface-type
-            // Not sure what means John Skeet here to handle that better with IDynamicMetaObjectProvider 
+            // Not sure what is John Skeet means here to handle that better with IDynamicMetaObjectProvider - i tried his idea and fail
 
             CheckEntities();
 
@@ -903,8 +1421,8 @@ namespace NetOffice
                 return true;
             }
             else if (binder.Type == typeof(COMObject))
-            {               
-                result = new COMObject(Factory, ParentObject, _proxy);
+            {
+                result = new COMObject(Factory, ParentObject, _proxyShare);
                 return true;
             }
             else
@@ -915,11 +1433,11 @@ namespace NetOffice
                 {
                     string fullClassName = factoryInfo.AssemblyNamespace + "." + className;
                     if (fullClassName.Equals(binder.ReturnType.FullName))
-                    { 
+                    {
                         ICOMObject instance = Activator.CreateInstance(binder.ReturnType, new object[] { Factory, ParentObject, UnderlyingObject }) as ICOMObject;
                         ICOMProxyShareProvider shareProvider = instance as ICOMProxyShareProvider;
                         if (null != shareProvider)
-                            shareProvider.SetProxyShare(_proxy);
+                            shareProvider.SetProxyShare(_proxyShare);
                         result = instance;
                         return true;
                     }
@@ -963,9 +1481,9 @@ namespace NetOffice
                 case DefaultItemSupport.MethodItem:
                     result = InvokeMethod("Item", indexes);
                     return true;
-                default:                       
-                    return false; 
-            }           
+                default:
+                    return false;
+            }
         }
 
         /// <summary>
@@ -1025,7 +1543,7 @@ namespace NetOffice
         /// <param name="value">The value to set to the member.</param>
         /// <returns> true if the operation is successful; otherwise, false.</returns>
         public override bool TrySetMember(SetMemberBinder binder, object value)
-        {          
+        {
             InvokePropertySet(binder.Name, new object[] { value });
             return true;
         }
@@ -1049,442 +1567,6 @@ namespace NetOffice
                 result = InvokeMethod(binder.Name, args);
                 return true;
             }
-        }
-
-        #endregion
-
-        #region ICOMObject
-
-        /// <summary>
-        /// Returns the native wrapped proxy
-        /// </summary>
-        public object UnderlyingObject
-        {
-            get
-            {
-                return _proxy.Proxy;
-            }
-        }
-
-        /// <summary>
-        /// Returns Type of native proxy
-        /// </summary>
-        public Type UnderlyingType { get; private set; }
-
-        /// <summary>
-        /// Class name from UnderlyingObject
-        /// </summary>
-        public string UnderlyingTypeName
-        {
-            get
-            {              
-                if (null == _underlyingTypeName)
-                    _underlyingTypeName = new UnderlyingTypeNameResolver().GetClassName(this);
-                return _underlyingTypeName;
-            }
-        }
-
-        /// <summary>
-        /// Returns friendly name for the instance type
-        /// </summary>
-        public string UnderlyingFriendlyTypeName
-        {
-            get
-            {
-                if (null == _friendlyTypeName)
-                    _friendlyTypeName = new UnderlyingTypeNameResolver().GetFriendlyClassName(this, _underlyingTypeName);
-                return _friendlyTypeName;
-            }
-        }
-        
-        /// <summary>
-        /// Name of the hosting NetOffice component
-        /// </summary>      
-        public string UnderlyingComponentName
-        {
-            get
-            {
-                if (null == _underlyingComponentName)
-                    _underlyingComponentName =  new UnderlyingTypeNameResolver().GetComponentName(this);
-                return _underlyingComponentName;
-            }
-        }
-
-        /// <summary>
-        /// Name of the hosting NetOffice component
-        /// </summary>
-        public string InstanceComponentName
-        {
-            get
-            {
-                return "NetOffice.Core";
-            }
-        }
-
-        /// <summary>
-        /// Friendly instance name of the NetOffice Wrapper class
-        /// </summary>
-        public string InstanceName
-        {
-            get
-            {
-                return InstanceType.FullName;
-            }
-        }
-
-        /// <summary>
-        /// Friendly Name of the NetOffice Wrapper class
-        /// </summary>       
-        public string InstanceFriendlyName
-        {
-            get
-            {
-                if(null != _progId)
-                    return "Dynamic(" + _progId + ")";
-                else
-                    return "Dynamic(" + UnderlyingFriendlyTypeName + ")";
-            }
-        }
-
-        /// <summary>
-        /// Type informations from ICOMObject instance
-        /// </summary>
-        public Type InstanceType
-        {
-            get
-            {
-                return _instanceType;
-            }
-        }
-
-        /// <summary>
-        /// Child instances
-        /// </summary>
-        public IEnumerable<ICOMObject> ChildObjects
-        {
-            get
-            {
-                return _listChildObjects;
-            }
-        }
-
-        /// <summary>
-        /// The associated console
-        /// </summary>
-        public DebugConsole Console
-        {
-            get
-            {
-                if (null != Factory)
-                    return Factory.Console;
-                else
-                    return DebugConsole.Default;
-            }
-        }
-
-        /// <summary>
-        /// The associated factory
-        /// </summary>
-        public Core Factory { get; private set; }
-        
-        /// <summary>
-        /// The associated invoker
-        /// </summary>
-        public Invoker Invoker
-        {
-            get
-            {
-                if (null != Factory)
-                    return Factory.Invoker;
-                else
-                    return Invoker.Default;
-            }
-        }
-
-        /// <summary>
-        /// Returns instance is currently in diposing progress
-        /// </summary>
-        public bool IsCurrentlyDisposing
-        {
-            get
-            {
-                return _isCurrentlyDisposing;
-            }
-        }
-
-        /// <summary>
-        /// Returns instance is already diposed
-        /// </summary>
-        public bool IsDisposed
-        {
-            get
-            {
-                return _isDisposed;
-            }
-        }
-
-        /// <summary>
-        /// Returns parent proxy object
-        /// </summary>
-        public ICOMObject ParentObject { get; private set; }
-
-        /// <summary>
-        /// The associated settings
-        /// </summary>
-        public Settings Settings
-        {
-            get
-            {
-                if (null != Factory)
-                    return Factory.Settings;
-                else
-                    return Settings.Default;
-            }
-        }
-
-        /// <summary>
-        /// Unsupported
-        /// </summary>
-        public bool IsEventBinding
-        {
-            get
-            {   // unsupported in dynamics
-                return false;
-            }
-        }
-
-        /// <summary>
-        /// Unsupported
-        /// </summary>
-        public bool IsEventBridgeInitialized
-        {
-            get
-            {   // unsupported in dynamics
-                return false;
-            }
-        }
-
-        /// <summary>
-        /// Unsupported
-        /// </summary>
-        public bool IsWithEventRecipients
-        {
-            get
-            {
-                // unsupported in dynamics
-                return false;
-            }
-        }
-
-        /// <summary>
-        /// These event was called from Dispose and you can skip the dipose operation here if you want. the event can be helpful for troubleshooting if you dont know why your objects beeing disposed
-        /// </summary>
-        public event OnDisposeEventHandler OnDispose;
-
-        /// <summary>
-        /// Add object to child list
-        /// </summary>
-        /// <param name="childObject">>target child instance</param>
-        public void AddChildObject(ICOMObject childObject)
-        {
-            bool isLocked = false;
-            try
-            {
-                Monitor.Enter(_childListLock);
-                isLocked = true;
-
-                _listChildObjects.Add(childObject);
-            }
-            catch (Exception throwedException)
-            {
-                Console.WriteException(throwedException);
-                throw (throwedException);
-            }
-            finally
-            {
-                if (isLocked)
-                {
-                    Monitor.Exit(_childListLock);
-                    isLocked = false;
-                }
-            }
-        }
-
-        /// <summary>
-        /// Dispose instance and all child instances
-        /// </summary>
-        public virtual void Dispose()
-        {
-            Dispose(true);
-        }
-
-        /// <summary>
-        /// Dispose instance and all child instances
-        /// </summary>
-        /// <param name="disposeEventBinding">dispose proxies with events and one or more event recipients</param>
-        public virtual void Dispose(bool disposeEventBinding)
-        {
-            lock (_disposeLock)
-            {
-                // skip check 
-                bool cancel = RaiseOnDispose();
-                if (cancel)
-                    return;
-
-                // in case object export events and 
-                // disposeEventBinding == true we dont remove the object from parents child list
-                bool removeFromParent = true;
-
-                // set disposed flag
-                _isCurrentlyDisposing = true;
-
-                // in case of object implements also event binding we dispose them
-                IEventBinding eventBind = this as IEventBinding;
-                if (disposeEventBinding)
-                {
-                    if (!Object.ReferenceEquals(eventBind, null))
-                        eventBind.DisposeEventBridge();
-                }
-                else
-                {
-                    if (!Object.ReferenceEquals(eventBind, null) && (eventBind.EventBridgeInitialized))
-                        removeFromParent = false;
-                }
-
-                // child proxy dispose
-                DisposeChildInstances(disposeEventBinding);
-
-                IEnumerable<ICOMObject> ownerPath = null;
-                if (Factory.HasProxyRemovedRecipients)
-                {
-                    ownerPath = Core.GetOwnerPath(this);
-                }
-
-                // remove himself from parent childlist
-                if ((!Object.ReferenceEquals(ParentObject, null)) && (true == removeFromParent))
-                {
-                    ParentObject.RemoveChildObject(this);
-                    ParentObject = null;
-                }
-
-                // call quit automatically if wanted
-                //CheckEntities();
-                if (Settings.EnableAutomaticQuit && HasQuitMethod())
-                    new QuitCaller().TryCall(Settings, Invoker, this);
-                
-
-                // release proxy
-                ReleaseCOMProxy(ownerPath);
-
-                // clear supportList reference
-                _listSupportedEntities = null;
-
-                _isDisposed = true;
-                _isCurrentlyDisposing = false;
-            }        
-        }
-
-        /// <summary>
-        /// Dispose all child instances
-        /// </summary>
-        public virtual void DisposeChildInstances()
-        {
-            DisposeChildInstances(true);
-        }
-        
-        /// <summary>
-        /// Dispose all child instances
-        /// </summary>
-        /// <param name="disposeEventBinding">dispose proxies with events and one or more event recipients</param>
-        public virtual void DisposeChildInstances(bool disposeEventBinding)
-        {
-            lock (_disposeChildLock)
-            {
-                foreach (ICOMObject itemObject in _listChildObjects.ToArray())
-                {
-                    //COMObjectFaults.RemoveParent(itemObject);
-                    itemObject.Dispose(disposeEventBinding);
-                }
-                _listChildObjects.Clear();
-            }         
-        }
-
-        /// <summary>
-        /// Returns information the proxy provides a method or property with given name at runtime
-        /// </summary>
-        /// <param name="name">name of the enitity</param>
-        /// <returns>true if available, otherwise false</returns>
-        public bool EntityIsAvailable(string name)
-        {
-            return EntityIsAvailable(name, SupportedEntityType.Both);
-        }
-
-        /// <summary>
-        /// Returns information the proxy provides a method or property with given name at runtime
-        /// </summary>
-        /// <param name="name">name of the enitity</param>
-        /// <param name="searchType">limit searching for method or property</param>
-        /// <returns>true if available, otherwise false</returns>
-        public bool EntityIsAvailable(string name, SupportedEntityType searchType)
-        {
-            return new SupportedEntityFinder().Find(Factory, ref _listSupportedEntities, searchType, UnderlyingObject, name);
-        }
-
-        /// <summary>
-        /// Remove object from child list
-        /// </summary>
-        /// <param name="childObject">target child instance</param>
-        public void RemoveChildObject(ICOMObject childObject)
-        {
-            bool isLocked = false;
-            try
-            {
-                Monitor.Enter(_childListLock);
-                isLocked = true;
-
-                _listChildObjects.Remove(childObject);
-            }
-            catch (Exception throwedException)
-            {
-                Console.WriteException(throwedException);
-                throw (throwedException);
-            }
-            finally
-            {
-                if (isLocked)
-                {
-                    Monitor.Exit(_childListLock);
-                    isLocked = false;
-                }
-            }
-        }
-
-        #endregion
-
-        #region ICOMProxyShareProvider
-
-        /// <summary>
-        /// Returns the inner proxy shared access handler
-        /// </summary>
-        /// <returns>shared proxy</returns>
-        [EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false)]
-        public COMProxyShare GetProxyShare()
-        {
-            return _proxy;
-        }
-
-        /// <summary>
-        /// Set the inner proxy shared access handler.
-        /// The method want aquire the share 1x times
-        /// </summary>
-        /// <param name="share">target share</param>
-        [EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false)]
-        public void SetProxyShare(COMProxyShare share)
-        {
-            if (null == share)
-                throw new ArgumentNullException("share");
-            _proxy = share;
-            _proxy.Aquire();
         }
 
         #endregion

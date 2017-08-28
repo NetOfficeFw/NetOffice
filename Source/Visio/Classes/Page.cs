@@ -1153,4 +1153,3 @@ namespace NetOffice.VisioApi
 		#pragma warning restore
 	}
 }
-

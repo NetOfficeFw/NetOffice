@@ -40806,5 +40806,3 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		#endregion
 	}
 }
-
-

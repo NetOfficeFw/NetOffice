@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using NetOffice.Attributes;
@@ -44,7 +44,14 @@ namespace NetOffice.ADODBApi
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public Recordset15(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -808,10 +815,11 @@ namespace NetOffice.ADODBApi
 		/// SupportByVersion ADODB 2.1, 2.5
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		[BaseResult]
 		[SupportByVersion("ADODB", 2.1,2.5)]
 		public NetOffice.ADODBApi._Recordset _xClone()
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ADODBApi._Recordset>(this, "_xClone", NetOffice.ADODBApi._Recordset.LateBindingApiWrapperType);
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.ADODBApi._Recordset>(this, "_xClone");
 		}
 
 		/// <summary>
@@ -859,19 +867,21 @@ namespace NetOffice.ADODBApi
 		/// </summary>
 		/// <param name="recordsAffected">optional object recordsAffected</param>
 		[SupportByVersion("ADODB", 2.1,2.5)]
+		[BaseResult]
 		public NetOffice.ADODBApi._Recordset NextRecordset(object recordsAffected)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ADODBApi._Recordset>(this, "NextRecordset", NetOffice.ADODBApi._Recordset.LateBindingApiWrapperType, recordsAffected);
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.ADODBApi._Recordset>(this, "NextRecordset", recordsAffected);
 		}
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.1, 2.5
 		/// </summary>
 		[CustomMethod]
+		[BaseResult]
 		[SupportByVersion("ADODB", 2.1,2.5)]
 		public NetOffice.ADODBApi._Recordset NextRecordset()
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ADODBApi._Recordset>(this, "NextRecordset", NetOffice.ADODBApi._Recordset.LateBindingApiWrapperType);
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.ADODBApi._Recordset>(this, "NextRecordset");
 		}
 
 		/// <summary>
@@ -938,6 +948,3 @@ namespace NetOffice.ADODBApi
 		#pragma warning restore
 	}
 }
-
-
-

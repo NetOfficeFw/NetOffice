@@ -2025,5 +2025,3 @@ namespace NetOffice.WordApi.GlobalHelperModules
 		#endregion
 	}
 }
-
-

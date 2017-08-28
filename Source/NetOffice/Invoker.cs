@@ -107,7 +107,7 @@ namespace NetOffice
 
         #endregion
 
-        #region Method
+        #region Method Invokes
         
         /// <summary>
         /// Perform method as latebind call without parameters 
@@ -139,8 +139,7 @@ namespace NetOffice
         {
             try
             {
-                if (comObject.IsDisposed)
-                    throw new ObjectDisposedException("COMObject");
+                ValidateComObjectIsAlive(comObject);
 
                 if ((Settings.EnableSafeMode) && (!comObject.EntityIsAvailable(name, SupportedEntityType.Method)))
                     throw new EntityNotSupportedException(string.Format("Method {0} is not available.", name));
@@ -155,7 +154,7 @@ namespace NetOffice
             catch (Exception throwedException)
             {             
                 Console.WriteException(throwedException);
-                throw new COMException(
+                throw new MethodCOMException(
                     ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.Method, paramsArray), 
                     throwedException);
             }
@@ -172,8 +171,7 @@ namespace NetOffice
         {
             try
             {
-                if (comObject.IsDisposed)
-                    throw new ObjectDisposedException("COMObject");
+                ValidateComObjectIsAlive(comObject);
 
                 if ((Settings.EnableSafeMode) && (!comObject.EntityIsAvailable(name, SupportedEntityType.Property)))
                     throw new EntityNotSupportedException(string.Format("Property {0} is not available.", name));
@@ -193,7 +191,7 @@ namespace NetOffice
             catch (Exception throwedException)
             {
                 Console.WriteException(throwedException);
-                throw new COMException(
+                throw new MethodCOMException(
                     ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.Method, paramsArray),
                     throwedException);
             }
@@ -210,8 +208,7 @@ namespace NetOffice
         {
             try
             {
-                if (comObject.IsDisposed)
-                    throw new ObjectDisposedException("COMObject");
+                ValidateComObjectIsAlive(comObject);
 
                 bool measureStarted = Settings.PerformanceTrace.StartMeasureTime(comObject.InstanceComponentName, comObject.InstanceName, name, PerformanceTrace.CallType.Method);
 
@@ -223,7 +220,7 @@ namespace NetOffice
             catch (Exception throwedException)
             {
                 Console.WriteException(throwedException);
-                throw new COMException(
+                throw new MethodCOMException(
                     ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.Method, paramsArray), 
                     throwedException);
             }
@@ -243,8 +240,9 @@ namespace NetOffice
                 Type type = null;
 
                 ICOMObject wrapperInstance = comObject as ICOMObject;
-                if (null != wrapperInstance && wrapperInstance.IsDisposed)
-                    throw new ObjectDisposedException("COMObject");
+                if (null != wrapperInstance)
+                    ValidateComObjectIsAlive(wrapperInstance);
+
                 if (null != wrapperInstance)
                 {
                     target = wrapperInstance.UnderlyingObject;
@@ -268,7 +266,7 @@ namespace NetOffice
             catch (Exception throwedException)
             {
                 Console.WriteException(throwedException);
-                throw new COMException(
+                throw new MethodCOMException(
                     ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.Method, paramsArray),
                     throwedException);
             }
@@ -285,8 +283,7 @@ namespace NetOffice
         {
             try
             {
-                if (comObject.IsDisposed)
-                    throw new ObjectDisposedException("COMObject");
+                ValidateComObjectIsAlive(comObject);
 
                 if ((Settings.EnableSafeMode) && (!comObject.EntityIsAvailable(name, SupportedEntityType.Method)))
                     throw new EntityNotSupportedException(string.Format("Method {0} is not available.", name));
@@ -301,7 +298,7 @@ namespace NetOffice
             catch (Exception throwedException)
             {
                 Console.WriteException(throwedException);
-                throw new COMException(
+                throw new MethodCOMException(
                     ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.Method, paramsArray),
                     throwedException);
             }
@@ -317,8 +314,7 @@ namespace NetOffice
         {
             try
             {
-                if (comObject.IsDisposed)
-                    throw new ObjectDisposedException("COMObject");
+                ValidateComObjectIsAlive(comObject);
 
                 if ((Settings.EnableSafeMode) && (!comObject.EntityIsAvailable(name, SupportedEntityType.Method)))
                     throw new EntityNotSupportedException(string.Format("Method {0} is not available.", name));
@@ -335,7 +331,7 @@ namespace NetOffice
             catch (Exception throwedException)
             {
                 Console.WriteException(throwedException);
-                throw new COMException(
+                throw new MethodCOMException(
                     ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.Method), 
                     throwedException);
             }
@@ -351,9 +347,8 @@ namespace NetOffice
         public object MethodReturn(ICOMObject comObject, string name, object[] paramsArray)
         {
             try
-            {                
-                if (comObject.IsDisposed)
-                    throw new ObjectDisposedException("COMObject");
+            {
+                ValidateComObjectIsAlive(comObject);
 
                 if ((Settings.EnableSafeMode) && (!comObject.EntityIsAvailable(name, SupportedEntityType.Method)))
                     throw new EntityNotSupportedException(string.Format("Method {0} is not available.", name));
@@ -370,7 +365,7 @@ namespace NetOffice
             catch (Exception throwedException)
             {
                 Console.WriteException(throwedException);
-                throw new COMException(
+                throw new MethodCOMException(
                     ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.Method, paramsArray),
                     throwedException);
             }
@@ -388,8 +383,7 @@ namespace NetOffice
         {
             try
             {
-                if (comObject.IsDisposed)
-                    throw new ObjectDisposedException("COMObject");
+                ValidateComObjectIsAlive(comObject);
 
                 bool measureStarted = Settings.PerformanceTrace.StartMeasureTime(comObject.InstanceComponentName, comObject.InstanceName, name, PerformanceTrace.CallType.Function);
 
@@ -403,7 +397,7 @@ namespace NetOffice
             catch (Exception throwedException)
             {
                 Console.WriteException(throwedException);
-                throw new COMException(
+                throw new MethodCOMException(
                     ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.Method, paramsArray),
                     throwedException);
             }
@@ -421,8 +415,7 @@ namespace NetOffice
         {
             try
             {
-                if (comObject.IsDisposed)
-                    throw new ObjectDisposedException("COMObject");
+                ValidateComObjectIsAlive(comObject);
 
                 if ((Settings.EnableSafeMode) && (!comObject.EntityIsAvailable(name, SupportedEntityType.Method)))
                     throw new EntityNotSupportedException(string.Format("Method {0} is not available.", name));
@@ -439,7 +432,7 @@ namespace NetOffice
             catch (Exception throwedException)
             {
                 Console.WriteException(throwedException);
-                throw new COMException(
+                throw new MethodCOMException(
                     ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.Method, paramsArray),
                     throwedException);
             }
@@ -447,7 +440,7 @@ namespace NetOffice
 
         #endregion
 
-        #region Method (BindingFlags.InvokeMethod)
+        #region Method (BindingFlags.InvokeMethod) Invokes
 
         /// <summary>
         /// Perform method as latebind call without parameters 
@@ -479,8 +472,7 @@ namespace NetOffice
         {
             try
             {
-                if (comObject.IsDisposed)
-                    throw new ObjectDisposedException("COMObject");
+                ValidateComObjectIsAlive(comObject);
 
                 if ((Settings.EnableSafeMode) && (!comObject.EntityIsAvailable(name, SupportedEntityType.Method)))
                     throw new EntityNotSupportedException(string.Format("Method {0} is not available.", name));
@@ -495,7 +487,7 @@ namespace NetOffice
             catch (Exception throwedException)
             {
                 Console.WriteException(throwedException);
-                throw new COMException(
+                throw new MethodCOMException(
                     ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.Method, paramsArray),
                     throwedException);
             }
@@ -512,8 +504,7 @@ namespace NetOffice
         {
             try
             {
-                if (comObject.IsDisposed)
-                    throw new ObjectDisposedException("COMObject");
+                ValidateComObjectIsAlive(comObject);
 
                 bool measureStarted = Settings.PerformanceTrace.StartMeasureTime(comObject.InstanceComponentName, comObject.InstanceName, name, PerformanceTrace.CallType.Method);
 
@@ -525,7 +516,8 @@ namespace NetOffice
             catch (Exception throwedException)
             {
                 Console.WriteException(throwedException);
-                throw new COMException(ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.Method, paramsArray), 
+                throw new MethodCOMException(
+                    ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.Method, paramsArray), 
                     throwedException);
             }
         }
@@ -544,8 +536,9 @@ namespace NetOffice
                 Type type = null;
 
                 ICOMObject wrapperInstance = comObject as ICOMObject;
-                if (null != wrapperInstance && wrapperInstance.IsDisposed)
-                    throw new ObjectDisposedException("COMObject");
+                if (null != wrapperInstance)
+                    ValidateComObjectIsAlive(wrapperInstance);
+
                 if (null != wrapperInstance)
                 {
                     target = wrapperInstance.UnderlyingObject;
@@ -569,7 +562,8 @@ namespace NetOffice
             catch (Exception throwedException)
             {
                 Console.WriteException(throwedException);
-                throw new COMException(ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.Method, paramsArray),
+                throw new MethodCOMException(
+                    ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.Method, paramsArray),
                     throwedException);
             }
         }
@@ -585,8 +579,7 @@ namespace NetOffice
         {
             try
             {
-                if (comObject.IsDisposed)
-                    throw new ObjectDisposedException("COMObject");
+                ValidateComObjectIsAlive(comObject);
 
                 if ((Settings.Default.EnableSafeMode) && (!comObject.EntityIsAvailable(name, SupportedEntityType.Method)))
                     throw new EntityNotSupportedException(string.Format("Method {0} is not available.", name));
@@ -601,7 +594,8 @@ namespace NetOffice
             catch (Exception throwedException)
             {
                 DebugConsole.Default.WriteException(throwedException);
-                throw new COMException(ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.Method, paramsArray),
+                throw new MethodCOMException(
+                    ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.Method, paramsArray),
                     throwedException);
             }
         }
@@ -616,8 +610,7 @@ namespace NetOffice
         {
             try
             {
-                if (comObject.IsDisposed)
-                    throw new ObjectDisposedException("COMObject");
+                ValidateComObjectIsAlive(comObject);
 
                 if ((Settings.EnableSafeMode) && (!comObject.EntityIsAvailable(name, SupportedEntityType.Method)))
                     throw new EntityNotSupportedException(string.Format("Method {0} is not available.", name));
@@ -634,7 +627,8 @@ namespace NetOffice
             catch (Exception throwedException)
             {
                 Console.WriteException(throwedException);
-                throw new COMException(ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.Method),
+                throw new MethodCOMException(
+                    ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.Method),
                     throwedException);
             }
         }
@@ -650,8 +644,7 @@ namespace NetOffice
         {
             try
             {
-                if (comObject.IsDisposed)
-                    throw new ObjectDisposedException("COMObject");
+                ValidateComObjectIsAlive(comObject);
 
                 if ((Settings.EnableSafeMode) && (!comObject.EntityIsAvailable(name, SupportedEntityType.Method)))
                     throw new EntityNotSupportedException(string.Format("Method {0} is not available.", name));
@@ -668,7 +661,8 @@ namespace NetOffice
             catch (Exception throwedException)
             {
                 Console.WriteException(throwedException);
-                throw new COMException(ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.Method, paramsArray),
+                throw new MethodCOMException(
+                    ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.Method, paramsArray),
                     throwedException);
             }
         }
@@ -685,8 +679,7 @@ namespace NetOffice
         {
             try
             {
-                if (comObject.IsDisposed)
-                    throw new ObjectDisposedException("COMObject");
+                ValidateComObjectIsAlive(comObject);
 
                 bool measureStarted = Settings.PerformanceTrace.StartMeasureTime(comObject.InstanceComponentName, comObject.InstanceName, name, PerformanceTrace.CallType.Function);
 
@@ -700,7 +693,7 @@ namespace NetOffice
             catch (Exception throwedException)
             {
                 Console.WriteException(throwedException);
-                throw new COMException(
+                throw new MethodCOMException(
                     ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.Method, paramsArray),
                     throwedException);
             }
@@ -718,8 +711,7 @@ namespace NetOffice
         {
             try
             {
-                if (comObject.IsDisposed)
-                    throw new ObjectDisposedException("COMObject");
+                ValidateComObjectIsAlive(comObject);
 
                 if ((Settings.EnableSafeMode) && (!comObject.EntityIsAvailable(name, SupportedEntityType.Method)))
                     throw new EntityNotSupportedException(string.Format("Method {0} is not available.", name));
@@ -736,7 +728,7 @@ namespace NetOffice
             catch (Exception throwedException)
             {
                 Console.WriteException(throwedException);
-                throw new COMException(
+                throw new MethodCOMException(
                     ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.Method, paramsArray),
                     throwedException);
             }
@@ -744,7 +736,7 @@ namespace NetOffice
 
         #endregion
 
-        #region Property
+        #region Property Invokes
 
         /// <summary>
         /// Perform property get as latebind call with return value
@@ -760,8 +752,9 @@ namespace NetOffice
                 Type type = null;
 
                 ICOMObject wrapperInstance = comObject as ICOMObject;
-                if (null != wrapperInstance && wrapperInstance.IsDisposed)
-                    throw new ObjectDisposedException("COMObject");
+                if (null != wrapperInstance)
+                    ValidateComObjectIsAlive(wrapperInstance);
+
                 if (null != wrapperInstance)
                 {
                     target = wrapperInstance.UnderlyingObject;
@@ -787,7 +780,7 @@ namespace NetOffice
             catch (Exception throwedException)
             {
                 Console.WriteException(throwedException);
-                throw new COMException(
+                throw new PropertyGetCOMException(
                     ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.PropertyGet), 
                     throwedException);
             }
@@ -803,8 +796,7 @@ namespace NetOffice
         {
             try
             {
-                if (comObject.IsDisposed)
-                    throw new ObjectDisposedException("COMObject");
+                ValidateComObjectIsAlive(comObject);
 
                 if ((Settings.EnableSafeMode) && (!comObject.EntityIsAvailable(name, SupportedEntityType.Property)))
                     throw new EntityNotSupportedException(string.Format("Property {0} is not available.", name));
@@ -821,7 +813,7 @@ namespace NetOffice
             catch (Exception throwedException)
             {
                 Console.WriteException(throwedException);
-                throw new COMException(
+                throw new PropertyGetCOMException(
                     ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.PropertyGet), 
                     throwedException);
             }
@@ -842,9 +834,10 @@ namespace NetOffice
                 Type type = null;
 
                 ICOMObject wrapperInstance = comObject as ICOMObject;
-                if (null != wrapperInstance && wrapperInstance.IsDisposed)
-                    throw new ObjectDisposedException("COMObject");
-                if(null != wrapperInstance)
+                if (null != wrapperInstance)
+                    ValidateComObjectIsAlive(wrapperInstance);
+
+                if (null != wrapperInstance)
                 {
                     target = wrapperInstance.UnderlyingObject;
                     type = wrapperInstance.UnderlyingType;
@@ -869,7 +862,7 @@ namespace NetOffice
             catch (Exception throwedException)
             {
                 Console.WriteException(throwedException);
-                throw new COMException(
+                throw new PropertyGetCOMException(
                     ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.PropertyGet),
                     throwedException);
             }
@@ -886,8 +879,7 @@ namespace NetOffice
         {
             try
             {
-                if (comObject.IsDisposed)
-                    throw new ObjectDisposedException("COMObject");
+                ValidateComObjectIsAlive(comObject);
 
                 if ((Settings.EnableSafeMode) && (!comObject.EntityIsAvailable(name, SupportedEntityType.Property)))
                     throw new EntityNotSupportedException(string.Format("Property {0} is not available.", name));
@@ -904,7 +896,7 @@ namespace NetOffice
             catch (Exception throwedException)
             {
                 Console.WriteException(throwedException);
-                throw new COMException(
+                throw new PropertyGetCOMException(
                     ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.PropertyGet, paramsArray),
                     throwedException);
             }
@@ -922,8 +914,7 @@ namespace NetOffice
         {
             try
             {
-                if (comObject.IsDisposed)
-                    throw new ObjectDisposedException("COMObject");
+                ValidateComObjectIsAlive(comObject);
 
                 bool measureStarted = Settings.PerformanceTrace.StartMeasureTime(comObject.InstanceComponentName, comObject.InstanceName, name, PerformanceTrace.CallType.PropertyGet);
 
@@ -937,7 +928,7 @@ namespace NetOffice
             catch (Exception throwedException)
             {
                 Console.WriteException(throwedException);
-                throw new COMException(
+                throw new PropertyGetCOMException(
                     ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.PropertyGet, paramsArray), 
                     throwedException);
             }
@@ -955,8 +946,7 @@ namespace NetOffice
         {
             try
             {
-                if (comObject.IsDisposed)
-                    throw new ObjectDisposedException("COMObject");
+                ValidateComObjectIsAlive(comObject);
 
                 if ((Settings.EnableSafeMode) && (!comObject.EntityIsAvailable(name, SupportedEntityType.Property)))
                     throw new EntityNotSupportedException(string.Format("Property {0} is not available.", name));
@@ -973,7 +963,7 @@ namespace NetOffice
             catch (Exception throwedException)
             {
                 Console.WriteException(throwedException);
-                throw new COMException(
+                throw new PropertyGetCOMException(
                     ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.PropertyGet, paramsArray),
                     throwedException);
             }
@@ -990,8 +980,7 @@ namespace NetOffice
         {
             try
             {
-                if (comObject.IsDisposed)
-                    throw new ObjectDisposedException("COMObject");
+                ValidateComObjectIsAlive(comObject);
 
                 if ((Settings.EnableSafeMode) && (!comObject.EntityIsAvailable(name, SupportedEntityType.Property)))
                     throw new EntityNotSupportedException(string.Format("Property {0} is not available.", name));
@@ -1011,7 +1000,7 @@ namespace NetOffice
             catch (Exception throwedException)
             {
                 Console.WriteException(throwedException);
-                throw new COMException(
+                throw new PropertySetCOMException(
                     ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.PropertySet, paramsArray),
                     throwedException);
             }
@@ -1029,8 +1018,7 @@ namespace NetOffice
         {
             try
             {
-                if (comObject.IsDisposed)
-                    throw new ObjectDisposedException("COMObject");
+                ValidateComObjectIsAlive(comObject);
 
                 if ((Settings.EnableSafeMode) && (!comObject.EntityIsAvailable(name, SupportedEntityType.Property)))
                     throw new EntityNotSupportedException(string.Format("Property {0} is not available.", name));
@@ -1050,7 +1038,7 @@ namespace NetOffice
             catch (Exception throwedException)
             {
                 Console.WriteException(throwedException);
-                throw new COMException(
+                throw new PropertySetCOMException(
                     ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.PropertySet, paramsArray), 
                     throwedException);
             }
@@ -1066,8 +1054,7 @@ namespace NetOffice
         {
             try
             {
-                if (comObject.IsDisposed)
-                    throw new ObjectDisposedException("COMObject");
+                ValidateComObjectIsAlive(comObject);
 
                 if ((Settings.EnableSafeMode) && (!comObject.EntityIsAvailable(name, SupportedEntityType.Property)))
                     throw new EntityNotSupportedException(string.Format("Property {0} is not available.", name));
@@ -1082,7 +1069,7 @@ namespace NetOffice
             catch (Exception throwedException)
             {
                 Console.WriteException(throwedException);
-                throw new COMException(
+                throw new PropertySetCOMException(
                     ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.PropertySet),
                     throwedException);
             }
@@ -1099,8 +1086,7 @@ namespace NetOffice
         {
             try
             {
-                if (comObject.IsDisposed)
-                    throw new ObjectDisposedException("COMObject");
+                ValidateComObjectIsAlive(comObject);
 
                 if ((Settings.EnableSafeMode) && (!comObject.EntityIsAvailable(name, SupportedEntityType.Property)))
                     throw new EntityNotSupportedException(string.Format("Property {0} is not available.", name));
@@ -1115,7 +1101,7 @@ namespace NetOffice
             catch (Exception throwedException)
             {
                 Console.WriteException(throwedException);
-                throw new COMException(
+                throw new PropertySetCOMException(
                     ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.PropertySet), 
                     throwedException);
             }
@@ -1132,8 +1118,7 @@ namespace NetOffice
         {
             try
             {
-                if (comObject.IsDisposed)
-                    throw new ObjectDisposedException("COMObject");
+                ValidateComObjectIsAlive(comObject);
 
                 if ((Settings.EnableSafeMode) && (!comObject.EntityIsAvailable(name, SupportedEntityType.Property)))
                     throw new EntityNotSupportedException(string.Format("Property {0} is not available.", name));
@@ -1148,7 +1133,7 @@ namespace NetOffice
             catch (Exception throwedException)
             {
                 Console.WriteException(throwedException);
-                throw new COMException(
+                throw new PropertySetCOMException(
                     ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.PropertySet), 
                     throwedException);
             }
@@ -1164,8 +1149,7 @@ namespace NetOffice
         {
             try
             {
-                if (comObject.IsDisposed)
-                    throw new ObjectDisposedException("COMObject");
+                ValidateComObjectIsAlive(comObject);
 
                 if ((Settings.EnableSafeMode) && (!comObject.EntityIsAvailable(name, SupportedEntityType.Property)))
                     throw new EntityNotSupportedException(string.Format("Property {0} is not available.", name));
@@ -1180,14 +1164,14 @@ namespace NetOffice
             catch (Exception throwedException)
             {
                 Console.WriteException(throwedException);
-                throw new COMException(
+                throw new PropertySetCOMException(
                     ExceptionMessageBuilder.GetExceptionMessage(throwedException, comObject, name, CallType.PropertySet), 
                     throwedException);
             }
         }
 
         #endregion
-
+        
         #region Parameters
 
         /// <summary>
@@ -1329,6 +1313,20 @@ namespace NetOffice
             }
             else
                 return null;
+        }
+
+        #endregion
+
+        #region Methods
+
+        /// <summary>
+        /// Throws an ObjectDisposedException if given ICOMObject instance is already disposed.
+        /// </summary>
+        /// <param name="comObject">ICOMObject instance as any</param>
+        private static void ValidateComObjectIsAlive(ICOMObject comObject)
+        {
+            if (comObject.IsDisposed || comObject.IsCurrentlyDisposing)
+                throw new ObjectDisposedException("comObject");
         }
 
         #endregion

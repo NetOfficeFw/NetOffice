@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using System;
 using NetRuntimeSystem = System;
@@ -46,7 +46,14 @@ namespace NetOffice.MSComctlLibApi
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public IImages(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -160,12 +167,13 @@ namespace NetOffice.MSComctlLibApi
 		/// </summary>
 		/// <param name="index">object index</param>
 		[SupportByVersion("MSComctlLib", 6)]
+		[BaseResult]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
 		public NetOffice.MSComctlLibApi.IImage this[object index]
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.MSComctlLibApi.IImage>(this, "Item", NetOffice.MSComctlLibApi.IImage.LateBindingApiWrapperType, index);
+				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.MSComctlLibApi.IImage>(this, "Item", index);
 			}
 			set
 			{
@@ -184,19 +192,21 @@ namespace NetOffice.MSComctlLibApi
 		/// <param name="key">optional object key</param>
 		/// <param name="picture">optional object picture</param>
 		[SupportByVersion("MSComctlLib", 6)]
+		[BaseResult]
 		public NetOffice.MSComctlLibApi.IImage Add(object index, object key, object picture)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.MSComctlLibApi.IImage>(this, "Add", NetOffice.MSComctlLibApi.IImage.LateBindingApiWrapperType, index, key, picture);
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.MSComctlLibApi.IImage>(this, "Add", index, key, picture);
 		}
 
 		/// <summary>
 		/// SupportByVersion MSComctlLib 6
 		/// </summary>
 		[CustomMethod]
+		[BaseResult]
 		[SupportByVersion("MSComctlLib", 6)]
 		public NetOffice.MSComctlLibApi.IImage Add()
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.MSComctlLibApi.IImage>(this, "Add", NetOffice.MSComctlLibApi.IImage.LateBindingApiWrapperType);
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.MSComctlLibApi.IImage>(this, "Add");
 		}
 
 		/// <summary>
@@ -204,10 +214,11 @@ namespace NetOffice.MSComctlLibApi
 		/// </summary>
 		/// <param name="index">optional object index</param>
 		[CustomMethod]
+		[BaseResult]
 		[SupportByVersion("MSComctlLib", 6)]
 		public NetOffice.MSComctlLibApi.IImage Add(object index)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.MSComctlLibApi.IImage>(this, "Add", NetOffice.MSComctlLibApi.IImage.LateBindingApiWrapperType, index);
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.MSComctlLibApi.IImage>(this, "Add", index);
 		}
 
 		/// <summary>
@@ -216,10 +227,11 @@ namespace NetOffice.MSComctlLibApi
 		/// <param name="index">optional object index</param>
 		/// <param name="key">optional object key</param>
 		[CustomMethod]
+		[BaseResult]
 		[SupportByVersion("MSComctlLib", 6)]
 		public NetOffice.MSComctlLibApi.IImage Add(object index, object key)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.MSComctlLibApi.IImage>(this, "Add", NetOffice.MSComctlLibApi.IImage.LateBindingApiWrapperType, index, key);
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.MSComctlLibApi.IImage>(this, "Add", index, key);
 		}
 
 		/// <summary>
@@ -274,6 +286,3 @@ namespace NetOffice.MSComctlLibApi
 		#pragma warning restore
 	}
 }
-
-
-

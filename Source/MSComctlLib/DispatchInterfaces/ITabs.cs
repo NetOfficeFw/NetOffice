@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using System;
 using NetRuntimeSystem = System;
@@ -46,7 +46,14 @@ namespace NetOffice.MSComctlLibApi
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public ITabs(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -160,12 +167,13 @@ namespace NetOffice.MSComctlLibApi
 		/// </summary>
 		/// <param name="pvIndex">object pvIndex</param>
 		[SupportByVersion("MSComctlLib", 6)]
+		[BaseResult]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
 		public NetOffice.MSComctlLibApi.ITab this[object pvIndex]
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.MSComctlLibApi.ITab>(this, "Item", NetOffice.MSComctlLibApi.ITab.LateBindingApiWrapperType, pvIndex);
+				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.MSComctlLibApi.ITab>(this, "Item", pvIndex);
 			}
 			set
 			{
@@ -204,19 +212,21 @@ namespace NetOffice.MSComctlLibApi
 		/// <param name="pvCaption">optional object pvCaption</param>
 		/// <param name="pvImage">optional object pvImage</param>
 		[SupportByVersion("MSComctlLib", 6)]
+		[BaseResult]
 		public NetOffice.MSComctlLibApi.ITab Add(object pvIndex, object pvKey, object pvCaption, object pvImage)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.MSComctlLibApi.ITab>(this, "Add", NetOffice.MSComctlLibApi.ITab.LateBindingApiWrapperType, pvIndex, pvKey, pvCaption, pvImage);
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.MSComctlLibApi.ITab>(this, "Add", pvIndex, pvKey, pvCaption, pvImage);
 		}
 
 		/// <summary>
 		/// SupportByVersion MSComctlLib 6
 		/// </summary>
 		[CustomMethod]
+		[BaseResult]
 		[SupportByVersion("MSComctlLib", 6)]
 		public NetOffice.MSComctlLibApi.ITab Add()
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.MSComctlLibApi.ITab>(this, "Add", NetOffice.MSComctlLibApi.ITab.LateBindingApiWrapperType);
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.MSComctlLibApi.ITab>(this, "Add");
 		}
 
 		/// <summary>
@@ -224,10 +234,11 @@ namespace NetOffice.MSComctlLibApi
 		/// </summary>
 		/// <param name="pvIndex">optional object pvIndex</param>
 		[CustomMethod]
+		[BaseResult]
 		[SupportByVersion("MSComctlLib", 6)]
 		public NetOffice.MSComctlLibApi.ITab Add(object pvIndex)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.MSComctlLibApi.ITab>(this, "Add", NetOffice.MSComctlLibApi.ITab.LateBindingApiWrapperType, pvIndex);
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.MSComctlLibApi.ITab>(this, "Add", pvIndex);
 		}
 
 		/// <summary>
@@ -236,10 +247,11 @@ namespace NetOffice.MSComctlLibApi
 		/// <param name="pvIndex">optional object pvIndex</param>
 		/// <param name="pvKey">optional object pvKey</param>
 		[CustomMethod]
+		[BaseResult]
 		[SupportByVersion("MSComctlLib", 6)]
 		public NetOffice.MSComctlLibApi.ITab Add(object pvIndex, object pvKey)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.MSComctlLibApi.ITab>(this, "Add", NetOffice.MSComctlLibApi.ITab.LateBindingApiWrapperType, pvIndex, pvKey);
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.MSComctlLibApi.ITab>(this, "Add", pvIndex, pvKey);
 		}
 
 		/// <summary>
@@ -249,10 +261,11 @@ namespace NetOffice.MSComctlLibApi
 		/// <param name="pvKey">optional object pvKey</param>
 		/// <param name="pvCaption">optional object pvCaption</param>
 		[CustomMethod]
+		[BaseResult]
 		[SupportByVersion("MSComctlLib", 6)]
 		public NetOffice.MSComctlLibApi.ITab Add(object pvIndex, object pvKey, object pvCaption)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.MSComctlLibApi.ITab>(this, "Add", NetOffice.MSComctlLibApi.ITab.LateBindingApiWrapperType, pvIndex, pvKey, pvCaption);
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.MSComctlLibApi.ITab>(this, "Add", pvIndex, pvKey, pvCaption);
 		}
 
 		#endregion
@@ -288,6 +301,3 @@ namespace NetOffice.MSComctlLibApi
 		#pragma warning restore
 	}
 }
-
-
-

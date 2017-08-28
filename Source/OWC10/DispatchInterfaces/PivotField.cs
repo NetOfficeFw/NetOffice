@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using NetOffice.Attributes;
@@ -44,7 +44,14 @@ namespace NetOffice.OWC10Api
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public PivotField(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -1050,9 +1057,10 @@ namespace NetOffice.OWC10Api
 		/// <param name="varChildMembers">object varChildMembers</param>
 		/// <param name="bstrCaption">optional string bstrCaption = </param>
 		[SupportByVersion("OWC10", 1)]
+		[BaseResult]
 		public NetOffice.OWC10Api.PivotMember AddCustomGroupMember(object parent, object varChildMembers, object bstrCaption)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OWC10Api.PivotMember>(this, "AddCustomGroupMember", NetOffice.OWC10Api.PivotMember.LateBindingApiWrapperType, parent, varChildMembers, bstrCaption);
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.OWC10Api.PivotMember>(this, "AddCustomGroupMember", parent, varChildMembers, bstrCaption);
 		}
 
 		/// <summary>
@@ -1061,10 +1069,11 @@ namespace NetOffice.OWC10Api
 		/// <param name="parent">object parent</param>
 		/// <param name="varChildMembers">object varChildMembers</param>
 		[CustomMethod]
+		[BaseResult]
 		[SupportByVersion("OWC10", 1)]
 		public NetOffice.OWC10Api.PivotMember AddCustomGroupMember(object parent, object varChildMembers)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OWC10Api.PivotMember>(this, "AddCustomGroupMember", NetOffice.OWC10Api.PivotMember.LateBindingApiWrapperType, parent, varChildMembers);
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.OWC10Api.PivotMember>(this, "AddCustomGroupMember", parent, varChildMembers);
 		}
 
 		/// <summary>
@@ -1082,6 +1091,3 @@ namespace NetOffice.OWC10Api
 		#pragma warning restore
 	}
 }
-
-
-

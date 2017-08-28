@@ -1,4 +1,4 @@
-﻿using System.Reflection;
+using System.Reflection;
 using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
@@ -45,7 +45,14 @@ namespace NetOffice.MSFormsApi
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public IOptionFrame(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -277,12 +284,13 @@ namespace NetOffice.MSFormsApi
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSForms", 2)]
+		[BaseResult]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public NetOffice.MSFormsApi.Font _Font_Reserved
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.MSFormsApi.Font>(this, "_Font_Reserved", NetOffice.MSFormsApi.Font.LateBindingApiWrapperType);
+				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.MSFormsApi.Font>(this, "_Font_Reserved");
 			}
 			set
 			{
@@ -295,11 +303,12 @@ namespace NetOffice.MSFormsApi
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSForms", 2)]
+		[BaseResult]
 		public NetOffice.MSFormsApi.Font Font
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.MSFormsApi.Font>(this, "Font", NetOffice.MSFormsApi.Font.LateBindingApiWrapperType);
+				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.MSFormsApi.Font>(this, "Font");
 			}
 			set
 			{
@@ -1012,6 +1021,3 @@ namespace NetOffice.MSFormsApi
 		#pragma warning restore
 	}
 }
-
-
-

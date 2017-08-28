@@ -249,7 +249,7 @@ namespace NetOffice
         /// <summary>
         /// Creates an instance of the class
         /// </summary>
-        /// <param name="isDefault">Mark this instance as default instance</param>
+        /// <param name="isDefault">mark this instance as default instance</param>
         private Core(bool isDefault)
         {
             _appDomain = new CurrentAppDomain(this);
@@ -267,138 +267,6 @@ namespace NetOffice
                 Invoker = new Invoker(this);
             }
         }
-
-        #endregion
-
-        #region Properties
-
-        /// <summary>
-        /// Duck Type Cache
-        /// T1 is interface
-        /// T2 is its implementation
-        /// </summary>
-        private Dictionary<Type, Type> DuckingCache
-        {
-            get
-            {
-                lock (_thisAssemblyLock)
-                {
-                    if (null == _duckingCache)
-                        _duckingCache = new Dictionary<Type, Type>();
-                }
-                return _duckingCache;
-            }
-        }
-
-        /// <summary>
-        /// Current NetOffice Core Assembly
-        /// </summary>
-        internal Assembly ThisAssembly
-        {
-            get
-            {
-                lock (_thisAssemblyLock)
-                {
-                    if (null == _thisAssembly)
-                        _thisAssembly = Assembly.GetAssembly(typeof(COMObject));
-                }              
-                return _thisAssembly;
-            }
-        }
-
-        /// <summary>
-        /// Returns info about intialized state
-        /// </summary>
-        [Category("Core"), Description("The core is already initialized")]
-        public bool IsInitialized
-        {
-            get
-            {
-                return _initalized;
-            }
-        }
-
-        /// <summary>
-        /// Shared Default Core
-        /// </summary>
-        public static Core Default
-        {
-            get
-            {
-                lock (_defaultLock)
-                {
-                    if (null == _default)
-                        _default = new Core(true);
-                    return _default;
-                }
-            }
-        }
-         
-        /// <summary>
-        /// Core Settings
-        /// </summary>
-        [Browsable(false)]
-        public Settings Settings { get; internal set; }
-
-        /// <summary>
-        /// Core Console
-        /// </summary>
-        [Browsable(false)]
-        public DebugConsole Console { get; internal set; }     
-        
-        /// <summary>
-        /// Core Invoker
-        /// </summary>
-        [Browsable(false)]
-        public Invoker Invoker { get; internal set; }
-
-        /// <summary>
-        /// Returns information about the instance is the shared default core
-        /// </summary>
-        [Category("Core"), Description("The core is also the shared default core")]
-        public bool IsDefault { get; private set; }
-
-        /// <summary>
-        /// The count of loaded NetOffice Assemblies
-        /// </summary>
-        [Category("Core"), Description("The count of loaded NetOffice Assemblies"), DisplayName("Assemblies")]
-        public int AssemblyCount
-        {
-            get
-            {
-                return _factoryList.Count;
-            }
-        }
-
-        /// <summary>
-        /// Returns an array about currently loaded NetOffice API assemblies
-        /// </summary>
-        [Browsable(false)]
-        public IEnumerable<IFactoryInfo> Assemblies
-        {
-            get
-            {
-                return _factoryList.ToArray();
-            }
-        }
-
-        /// <summary>
-        /// Returns current count of open proxies
-        /// </summary>
-        [Category("Core"), Description("Current count of open proxies")]
-        public int ProxyCount
-        {
-            get
-            {
-                return _globalObjectList.Count;
-            }
-        }
-
-        /// <summary>
-        /// Time that the initialize process has been used to pass
-        /// </summary>
-        [Category("Core"), Description("Time that the initialize process has been used to pass")]
-        public TimeSpan InitializedTime { get; private set; }
 
         #endregion
 
@@ -541,6 +409,138 @@ namespace NetOffice
 
         #endregion
 
+        #region Properties
+
+        /// <summary>
+        /// Returns info about intialized state
+        /// </summary>
+        [Category("Core"), Description("The core is already initialized")]
+        public bool IsInitialized
+        {
+            get
+            {
+                return _initalized;
+            }
+        }
+
+        /// <summary>
+        /// Shared Default Core
+        /// </summary>
+        public static Core Default
+        {
+            get
+            {
+                lock (_defaultLock)
+                {
+                    if (null == _default)
+                        _default = new Core(true);
+                    return _default;
+                }
+            }
+        }
+         
+        /// <summary>
+        /// Core Settings
+        /// </summary>
+        [Browsable(false)]
+        public Settings Settings { get; internal set; }
+
+        /// <summary>
+        /// Core Console
+        /// </summary>
+        [Browsable(false)]
+        public DebugConsole Console { get; internal set; }     
+        
+        /// <summary>
+        /// Core Invoker
+        /// </summary>
+        [Browsable(false)]
+        public Invoker Invoker { get; internal set; }
+
+        /// <summary>
+        /// Returns information about the instance is the shared default core
+        /// </summary>
+        [Category("Core"), Description("The core is also the shared default core")]
+        public bool IsDefault { get; private set; }
+
+        /// <summary>
+        /// The count of loaded NetOffice Assemblies
+        /// </summary>
+        [Category("Core"), Description("The count of loaded NetOffice Assemblies"), DisplayName("Assemblies")]
+        public int AssemblyCount
+        {
+            get
+            {
+                return _factoryList.Count;
+            }
+        }
+
+        /// <summary>
+        /// Returns an array about currently loaded NetOffice API assemblies
+        /// </summary>
+        [Browsable(false)]
+        public IEnumerable<IFactoryInfo> Assemblies
+        {
+            get
+            {
+                return _factoryList.ToArray();
+            }
+        }
+
+        /// <summary>
+        /// Returns current count of open proxies
+        /// </summary>
+        [Category("Core"), Description("Current count of open proxies")]
+        public int ProxyCount
+        {
+            get
+            {
+                return _globalObjectList.Count;
+            }
+        }
+
+        /// <summary>
+        /// Time that the initialize process has been used to pass
+        /// </summary>
+        [Category("Core"), Description("Time that the initialize process has been used to pass")]
+        public TimeSpan InitializedTime { get; private set; }
+
+        /// <summary>
+        /// Current NetOffice Core Assembly
+        /// </summary>
+        internal Assembly ThisAssembly
+        {
+            get
+            {
+                lock (_thisAssemblyLock)
+                {
+                    if (null == _thisAssembly)
+                        _thisAssembly = Assembly.GetAssembly(typeof(COMObject));
+                }
+                return _thisAssembly;
+            }
+        }
+
+        /// <summary>
+        /// Duck Type Cache
+        /// T1 is interface
+        /// T2 is its implementation
+        /// </summary>
+        private Dictionary<Type, Type> DuckingCache
+        {
+            get
+            {
+                lock (_thisAssemblyLock)
+                {
+                    if (null == _duckingCache)
+                        _duckingCache = new Dictionary<Type, Type>();
+                }
+                return _duckingCache;
+            }
+        }
+
+        #endregion
+        
         #region Factory Methods
 
         /// <summary>
@@ -735,7 +735,7 @@ namespace NetOffice
                     {
                         try
                         {
-                            Assembly asssembly = _appDomain.LoadFile(fileName);
+                            Assembly asssembly = _appDomain.Load(fileName);
                             AddAssembly(asssembly.GetName().Name, asssembly);
                         }
                         catch (Exception exception)
@@ -815,76 +815,84 @@ namespace NetOffice
         /// Creates an entity support list for a proxy
         /// </summary>
         /// <param name="comProxy"></param>
-        /// <returns></returns>
+        /// <returns>supported methods and properties as name/kind dictionary</returns>
+        /// <exception cref="COMException">Throws generaly if any exception occurs. See inner exception(s) for details</exception>
         internal Dictionary<string, string> GetSupportedEntities(object comProxy)
         {
-            Guid parentLibraryGuid = GetParentLibraryGuid(comProxy);
-            if (Guid.Empty == parentLibraryGuid)
-                return null;
-
-            string className = TypeDescriptor.GetClassName(comProxy);
-            string key = (parentLibraryGuid.ToString() + className).ToLower();
-
-            Dictionary<string, string> supportList = null;
-
-            if (_entitiesListCache.TryGetValue(key, out supportList))
-                return supportList;
-
-            supportList = new Dictionary<string, string>();
-            IDispatch dispatch = comProxy as IDispatch;
-            if (null == dispatch)
-                throw new COMException("Unable to cast underlying proxy to IDispatch.");
-
-            COMTypes.ITypeInfo typeInfo = dispatch.GetTypeInfo(0, 0);
-            if (null == typeInfo)
-                throw new COMException("GetTypeInfo returns null.");
-
-            IntPtr typeAttrPointer = IntPtr.Zero;
-            typeInfo.GetTypeAttr(out typeAttrPointer);
-
-            COMTypes.TYPEATTR typeAttr = (COMTypes.TYPEATTR)Marshal.PtrToStructure(typeAttrPointer, typeof(COMTypes.TYPEATTR));
-            for (int i = 0; i < typeAttr.cFuncs; i++)
+            try
             {
-                string strName, strDocString, strHelpFile;
-                int dwHelpContext;
-                IntPtr funcDescPointer = IntPtr.Zero;
-                COMTypes.FUNCDESC funcDesc;
-                typeInfo.GetFuncDesc(i, out funcDescPointer);
-                funcDesc = (COMTypes.FUNCDESC)Marshal.PtrToStructure(funcDescPointer, typeof(COMTypes.FUNCDESC));
+                Guid parentLibraryGuid = GetParentLibraryGuid(comProxy);
+                if (Guid.Empty == parentLibraryGuid)
+                    return null;
 
-                switch (funcDesc.invkind)
+                string className = TypeDescriptor.GetClassName(comProxy);
+                string key = (parentLibraryGuid.ToString() + className).ToLower();
+
+                Dictionary<string, string> supportList = null;
+
+                if (_entitiesListCache.TryGetValue(key, out supportList))
+                    return supportList;
+
+                supportList = new Dictionary<string, string>();
+                IDispatch dispatch = comProxy as IDispatch;
+                if (null == dispatch)
+                    throw new COMException("Unable to cast underlying proxy to IDispatch.");
+
+                COMTypes.ITypeInfo typeInfo = dispatch.GetTypeInfo(0, 0);
+                if (null == typeInfo)
+                    throw new COMException("GetTypeInfo returns null.");
+
+                IntPtr typeAttrPointer = IntPtr.Zero;
+                typeInfo.GetTypeAttr(out typeAttrPointer);
+
+                COMTypes.TYPEATTR typeAttr = (COMTypes.TYPEATTR)Marshal.PtrToStructure(typeAttrPointer, typeof(COMTypes.TYPEATTR));
+                for (int i = 0; i < typeAttr.cFuncs; i++)
                 {
-                    case COMTypes.INVOKEKIND.INVOKE_PROPERTYGET:
-                    case COMTypes.INVOKEKIND.INVOKE_PROPERTYPUT:
-                    case COMTypes.INVOKEKIND.INVOKE_PROPERTYPUTREF:
+                    string strName, strDocString, strHelpFile;
+                    int dwHelpContext;
+                    IntPtr funcDescPointer = IntPtr.Zero;
+                    COMTypes.FUNCDESC funcDesc;
+                    typeInfo.GetFuncDesc(i, out funcDescPointer);
+                    funcDesc = (COMTypes.FUNCDESC)Marshal.PtrToStructure(funcDescPointer, typeof(COMTypes.FUNCDESC));
+
+                    switch (funcDesc.invkind)
                     {
-                        typeInfo.GetDocumentation(funcDesc.memid, out strName, out strDocString, out dwHelpContext, out strHelpFile);
-                        string outValue = "";
-                        bool exists = supportList.TryGetValue("Property-" + strName, out outValue);
-                        if (!exists)
-                            supportList.Add("Property-" + strName, strDocString);
-                        break;
+                        case COMTypes.INVOKEKIND.INVOKE_PROPERTYGET:
+                        case COMTypes.INVOKEKIND.INVOKE_PROPERTYPUT:
+                        case COMTypes.INVOKEKIND.INVOKE_PROPERTYPUTREF:
+                            {
+                                typeInfo.GetDocumentation(funcDesc.memid, out strName, out strDocString, out dwHelpContext, out strHelpFile);
+                                string outValue = "";
+                                bool exists = supportList.TryGetValue("Property-" + strName, out outValue);
+                                if (!exists)
+                                    supportList.Add("Property-" + strName, strDocString);
+                                break;
+                            }
+                        case COMTypes.INVOKEKIND.INVOKE_FUNC:
+                            {
+                                typeInfo.GetDocumentation(funcDesc.memid, out strName, out strDocString, out dwHelpContext, out strHelpFile);
+                                string outValue = "";
+                                bool exists = supportList.TryGetValue("Method-" + strName, out outValue);
+                                if (!exists)
+                                    supportList.Add("Method-" + strName, strDocString);
+                                break;
+                            }
                     }
-                    case COMTypes.INVOKEKIND.INVOKE_FUNC:
-                    {
-                        typeInfo.GetDocumentation(funcDesc.memid, out strName, out strDocString, out dwHelpContext, out strHelpFile);
-                        string outValue = "";
-                        bool exists = supportList.TryGetValue("Method-" + strName, out outValue);
-                        if (!exists)
-                            supportList.Add("Method-" + strName, strDocString);
-                        break;   
-                    }
+
+                    typeInfo.ReleaseFuncDesc(funcDescPointer);
                 }
 
-                typeInfo.ReleaseFuncDesc(funcDescPointer);
+                typeInfo.ReleaseTypeAttr(typeAttrPointer);
+                Marshal.ReleaseComObject(typeInfo);
+
+                _entitiesListCache.Add(key, supportList);
+
+                return supportList;
             }
-
-            typeInfo.ReleaseTypeAttr(typeAttrPointer);
-            Marshal.ReleaseComObject(typeInfo);
-
-            _entitiesListCache.Add(key, supportList);
-
-            return supportList;
+            catch (Exception exception)
+            {
+                throw new COMException("An unexpected error occurs.", exception);
+            }
         }
 
         #endregion
@@ -1939,7 +1947,7 @@ namespace NetOffice
 
                 if (System.IO.File.Exists(fullFileName))
                 {
-                    Assembly assembly = _appDomain.LoadFrom(fullFileName);
+                    Assembly assembly = _appDomain.Load(fullFileName);
                     if (null != assembly)
                     { 
                         Type factoryInfoType = assembly.GetType(fileName.Substring(0, fileName.Length - 4) + ".Utils.ProjectInfo", false, false);

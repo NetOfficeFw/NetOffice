@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using NetOffice.Attributes;
@@ -44,7 +44,14 @@ namespace NetOffice.DAOApi
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public Recordset(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -726,19 +733,21 @@ namespace NetOffice.DAOApi
 		/// <param name="type">optional object type</param>
 		/// <param name="options">optional object options</param>
 		[SupportByVersion("DAO", 3.6,12.0)]
+		[BaseResult]
 		public NetOffice.DAOApi.Recordset OpenRecordset(object type, object options)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.DAOApi.Recordset>(this, "OpenRecordset", NetOffice.DAOApi.Recordset.LateBindingApiWrapperType, type, options);
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.DAOApi.Recordset>(this, "OpenRecordset", type, options);
 		}
 
 		/// <summary>
 		/// SupportByVersion DAO 3.6, 12.0
 		/// </summary>
 		[CustomMethod]
+		[BaseResult]
 		[SupportByVersion("DAO", 3.6,12.0)]
 		public NetOffice.DAOApi.Recordset OpenRecordset()
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.DAOApi.Recordset>(this, "OpenRecordset", NetOffice.DAOApi.Recordset.LateBindingApiWrapperType);
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.DAOApi.Recordset>(this, "OpenRecordset");
 		}
 
 		/// <summary>
@@ -746,10 +755,11 @@ namespace NetOffice.DAOApi
 		/// </summary>
 		/// <param name="type">optional object type</param>
 		[CustomMethod]
+		[BaseResult]
 		[SupportByVersion("DAO", 3.6,12.0)]
 		public NetOffice.DAOApi.Recordset OpenRecordset(object type)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.DAOApi.Recordset>(this, "OpenRecordset", NetOffice.DAOApi.Recordset.LateBindingApiWrapperType, type);
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.DAOApi.Recordset>(this, "OpenRecordset", type);
 		}
 
 		/// <summary>
@@ -1092,9 +1102,10 @@ namespace NetOffice.DAOApi
 		/// SupportByVersion DAO 3.6, 12.0
 		/// </summary>
 		[SupportByVersion("DAO", 3.6,12.0)]
+		[BaseResult]
 		public NetOffice.DAOApi.Recordset Clone()
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.DAOApi.Recordset>(this, "Clone", NetOffice.DAOApi.Recordset.LateBindingApiWrapperType);
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.DAOApi.Recordset>(this, "Clone");
 		}
 
 		/// <summary>
@@ -1177,19 +1188,21 @@ namespace NetOffice.DAOApi
 		/// <param name="options">optional object options</param>
 		/// <param name="inconsistent">optional object inconsistent</param>
 		[SupportByVersion("DAO", 3.6,12.0)]
+		[BaseResult]
 		public NetOffice.DAOApi.Recordset CreateDynaset(object options, object inconsistent)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.DAOApi.Recordset>(this, "CreateDynaset", NetOffice.DAOApi.Recordset.LateBindingApiWrapperType, options, inconsistent);
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.DAOApi.Recordset>(this, "CreateDynaset", options, inconsistent);
 		}
 
 		/// <summary>
 		/// SupportByVersion DAO 3.6, 12.0
 		/// </summary>
 		[CustomMethod]
+		[BaseResult]
 		[SupportByVersion("DAO", 3.6,12.0)]
 		public NetOffice.DAOApi.Recordset CreateDynaset()
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.DAOApi.Recordset>(this, "CreateDynaset", NetOffice.DAOApi.Recordset.LateBindingApiWrapperType);
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.DAOApi.Recordset>(this, "CreateDynaset");
 		}
 
 		/// <summary>
@@ -1197,10 +1210,11 @@ namespace NetOffice.DAOApi
 		/// </summary>
 		/// <param name="options">optional object options</param>
 		[CustomMethod]
+		[BaseResult]
 		[SupportByVersion("DAO", 3.6,12.0)]
 		public NetOffice.DAOApi.Recordset CreateDynaset(object options)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.DAOApi.Recordset>(this, "CreateDynaset", NetOffice.DAOApi.Recordset.LateBindingApiWrapperType, options);
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.DAOApi.Recordset>(this, "CreateDynaset", options);
 		}
 
 		/// <summary>
@@ -1208,19 +1222,21 @@ namespace NetOffice.DAOApi
 		/// </summary>
 		/// <param name="options">optional object options</param>
 		[SupportByVersion("DAO", 3.6,12.0)]
+		[BaseResult]
 		public NetOffice.DAOApi.Recordset CreateSnapshot(object options)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.DAOApi.Recordset>(this, "CreateSnapshot", NetOffice.DAOApi.Recordset.LateBindingApiWrapperType, options);
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.DAOApi.Recordset>(this, "CreateSnapshot", options);
 		}
 
 		/// <summary>
 		/// SupportByVersion DAO 3.6, 12.0
 		/// </summary>
 		[CustomMethod]
+		[BaseResult]
 		[SupportByVersion("DAO", 3.6,12.0)]
 		public NetOffice.DAOApi.Recordset CreateSnapshot()
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.DAOApi.Recordset>(this, "CreateSnapshot", NetOffice.DAOApi.Recordset.LateBindingApiWrapperType);
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.DAOApi.Recordset>(this, "CreateSnapshot");
 		}
 
 		/// <summary>
@@ -1236,18 +1252,20 @@ namespace NetOffice.DAOApi
 		/// SupportByVersion DAO 3.6, 12.0
 		/// </summary>
 		[SupportByVersion("DAO", 3.6,12.0)]
+		[BaseResult]
 		public NetOffice.DAOApi.Recordset ListFields()
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.DAOApi.Recordset>(this, "ListFields", NetOffice.DAOApi.Recordset.LateBindingApiWrapperType);
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.DAOApi.Recordset>(this, "ListFields");
 		}
 
 		/// <summary>
 		/// SupportByVersion DAO 3.6, 12.0
 		/// </summary>
 		[SupportByVersion("DAO", 3.6,12.0)]
+		[BaseResult]
 		public NetOffice.DAOApi.Recordset ListIndexes()
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.DAOApi.Recordset>(this, "ListIndexes", NetOffice.DAOApi.Recordset.LateBindingApiWrapperType);
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.DAOApi.Recordset>(this, "ListIndexes");
 		}
 
 		/// <summary>
@@ -1365,6 +1383,3 @@ namespace NetOffice.DAOApi
 		#pragma warning restore
 	}
 }
-
-
-

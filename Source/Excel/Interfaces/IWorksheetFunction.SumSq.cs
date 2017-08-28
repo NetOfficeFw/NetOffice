@@ -779,7 +779,3 @@ namespace NetOffice.ExcelApi.Interfaces
         #endregion
     }
 }
-
-
-
-

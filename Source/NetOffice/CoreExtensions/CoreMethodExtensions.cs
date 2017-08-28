@@ -1803,8 +1803,170 @@ namespace NetOffice
 
         #endregion
 
-        #region ExecuteKnownReferenceMethodGet
+        #region ExecuteBaseReferenceMethodGet
+
+        /// <summary>
+        /// Execute a method with unknown reference return value
+        /// </summary>
+        /// <param name="value">core invoker</param>
+        /// <param name="caller">calling instance</param>
+        /// <param name="name">method name</param>
+        public static T ExecuteBaseReferenceMethodGet<T>(this Core value, ICOMObject caller, string name) where T : class, ICOMObject
+        {
+            return ExecuteBaseReferenceMethodGet<T>(value, caller, name, _emptyParams);
+        }
+
+        /// <summary>
+        /// Execute a method with unknown reference return value
+        /// </summary>
+        /// <param name="value">core invoker</param>
+        /// <param name="caller">calling instance</param>
+        /// <param name="name">method name</param>
+        /// <param name="argument">argument as any</param>
+        public static T ExecuteBaseReferenceMethodGet<T>(this Core value, ICOMObject caller, string name, object argument) where T : class, ICOMObject
+        {
+            return ExecuteBaseReferenceMethodGet<T>(value, caller, name, new object[] { argument });
+        }
+
+        /// <summary>
+        /// Execute a method with unknown reference return value
+        /// </summary>
+        /// <param name="value">core invoker</param>
+        /// <param name="caller">calling instance</param>
+        /// <param name="name">method name</param>
+        /// <param name="argument1">argument as any</param>
+        /// <param name="argument2">argument as any</param>
+        public static T ExecuteBaseReferenceMethodGet<T>(this Core value, ICOMObject caller, string name, object argument1, object argument2) where T : class, ICOMObject
+        {
+            return ExecuteBaseReferenceMethodGet<T>(value, caller, name, new object[] { argument1, argument2 });
+        }
+
+        /// <summary>
+        /// Execute a method with unknown reference return value
+        /// </summary>
+        /// <param name="value">core invoker</param>
+        /// <param name="caller">calling instance</param>
+        /// <param name="name">method name</param>
+        /// <param name="argument1">argument as any</param>
+        /// <param name="argument2">argument as any</param>
+        /// <param name="argument3">argument as any</param>
+        public static T ExecuteBaseReferenceMethodGet<T>(this Core value, ICOMObject caller, string name, object argument1, object argument2, object argument3) where T : class, ICOMObject
+        {
+            return ExecuteBaseReferenceMethodGet<T>(value, caller, name, new object[] { argument1, argument2, argument3 });
+        }
+
+        /// <summary>
+        /// Execute a method with unknown reference return value
+        /// </summary>
+        /// <param name="value">core invoker</param>
+        /// <param name="caller">calling instance</param>
+        /// <param name="name">method name</param>
+        /// <param name="argument1">argument as any</param>
+        /// <param name="argument2">argument as any</param>
+        /// <param name="argument3">argument as any</param>
+        /// <param name="argument4">argument as any</param>
+        public static T ExecuteBaseReferenceMethodGet<T>(this Core value, ICOMObject caller, string name, object argument1, object argument2, object argument3, object argument4) where T : class, ICOMObject
+        {
+            return ExecuteBaseReferenceMethodGet<T>(value, caller, name, new object[] { argument1, argument2, argument3, argument4 });
+        }
+
+        /// <summary>
+        /// Execute a method with unknown reference return value
+        /// </summary>
+        /// <param name="value">core invoker</param>
+        /// <param name="caller">calling instance</param>
+        /// <param name="name">method name</param>
+        /// <param name="argument1">argument as any</param>
+        /// <param name="argument2">argument as any</param>
+        /// <param name="argument3">argument as any</param>
+        /// <param name="argument4">argument as any</param>
+        /// <param name="argument5">argument as any</param>
+        public static T ExecuteBaseReferenceMethodGet<T>(this Core value, ICOMObject caller, string name, object argument1, object argument2, object argument3, object argument4,
+            object argument5) where T : class, ICOMObject
+        {
+            return ExecuteBaseReferenceMethodGet<T>(value, caller, name, new object[] { argument1, argument2, argument3, argument4,
+                argument5 });
+        }
+
+        /// <summary>
+        /// Execute a method with unknown reference return value
+        /// </summary>
+        /// <param name="value">core invoker</param>
+        /// <param name="caller">calling instance</param>
+        /// <param name="name">method name</param>
+        /// <param name="argument1">argument as any</param>
+        /// <param name="argument2">argument as any</param>
+        /// <param name="argument3">argument as any</param>
+        /// <param name="argument4">argument as any</param>
+        /// <param name="argument5">argument as any</param>
+        /// <param name="argument6">argument as any</param>
+        public static T ExecuteBaseReferenceMethodGet<T>(this Core value, ICOMObject caller, string name, object argument1, object argument2, object argument3, object argument4,
+            object argument5, object argument6) where T : class, ICOMObject
+        {
+            return ExecuteBaseReferenceMethodGet<T>(value, caller, name, new object[] { argument1, argument2, argument3, argument4,
+                argument5, argument6 });
+        }
+
+        /// <summary>
+        /// Execute a method with unknown reference return value
+        /// </summary>
+        /// <param name="value">core invoker</param>
+        /// <param name="caller">calling instance</param>
+        /// <param name="name">method name</param>
+        /// <param name="argument1">argument as any</param>
+        /// <param name="argument2">argument as any</param>
+        /// <param name="argument3">argument as any</param>
+        /// <param name="argument4">argument as any</param>
+        /// <param name="argument5">argument as any</param>
+        /// <param name="argument6">argument as any</param>
+        /// <param name="argument7">argument as any</param>
+        public static T ExecuteBaseReferenceMethodGet<T>(this Core value, ICOMObject caller, string name, object argument1, object argument2, object argument3, object argument4,
+            object argument5, object argument6, object argument7) where T : class, ICOMObject
+        {
+            return ExecuteBaseReferenceMethodGet<T>(value, caller, name, new object[] { argument1, argument2, argument3, argument4,
+                argument5, argument6, argument7 });
+        }
+
+        /// <summary>
+        /// Execute a method with unknown reference return value
+        /// </summary>
+        /// <param name="value">core invoker</param>
+        /// <param name="caller">calling instance</param>
+        /// <param name="name">method name</param>
+        /// <param name="argument1">argument as any</param>
+        /// <param name="argument2">argument as any</param>
+        /// <param name="argument3">argument as any</param>
+        /// <param name="argument4">argument as any</param>
+        /// <param name="argument5">argument as any</param>
+        /// <param name="argument6">argument as any</param>
+        /// <param name="argument7">argument as any</param>
+        /// <param name="argument8">argument as any</param>
+        public static T ExecuteBaseReferenceMethodGet<T>(this Core value, ICOMObject caller, string name, object argument1, object argument2, object argument3, object argument4,
+            object argument5, object argument6, object argument7, object argument8) where T : class, ICOMObject
+        {
+            return ExecuteBaseReferenceMethodGet<T>(value, caller, name, new object[] { argument1, argument2, argument3, argument4,
+                argument5, argument6, argument7, argument8 });
+        }
+
+        /// <summary>
+        /// Execute a method with unknown reference return value
+        /// </summary>
+        /// <param name="value">core invoker</param>
+        /// <param name="caller">calling instance</param>
+        /// <param name="name">method name</param>
+        /// <param name="paramsArray">arguments as any</param>
+        public static T ExecuteBaseReferenceMethodGet<T>(this Core value, ICOMObject caller, string name, object[] paramsArray) where T : class, ICOMObject
+        {
+            object[] args = Invoker.ValidateParamsArray(paramsArray);
+            object returnItem = value.Invoker.MethodReturn(caller, name, args);
+            T newObject = value.CreateObjectFromComProxy(caller, returnItem) as T;
+            return newObject;
+        }
+
+        #endregion
         
+        #region ExecuteKnownReferenceMethodGet
+
         /// <summary>
         /// Execute a method with known reference return value
         /// </summary>
@@ -1969,8 +2131,7 @@ namespace NetOffice
         {
             object[] args = Invoker.ValidateParamsArray(paramsArray);
             object returnItem = value.Invoker.MethodReturn(caller, name, args);
-            T newObject = value.CreateKnownObjectFromComProxy(caller, returnItem, knownType) as T;
-            return newObject;
+            return value.CreateKnownObjectFromComProxy(caller, returnItem, knownType) as T;
         }
 
         #endregion

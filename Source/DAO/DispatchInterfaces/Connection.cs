@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using NetOffice.Attributes;
@@ -44,7 +44,14 @@ namespace NetOffice.DAOApi
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public Connection(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -332,9 +339,10 @@ namespace NetOffice.DAOApi
 		/// <param name="options">optional object options</param>
 		/// <param name="lockEdit">optional object lockEdit</param>
 		[SupportByVersion("DAO", 3.6,12.0)]
+		[BaseResult]
 		public NetOffice.DAOApi.Recordset OpenRecordset(string name, object type, object options, object lockEdit)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.DAOApi.Recordset>(this, "OpenRecordset", NetOffice.DAOApi.Recordset.LateBindingApiWrapperType, name, type, options, lockEdit);
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.DAOApi.Recordset>(this, "OpenRecordset", name, type, options, lockEdit);
 		}
 
 		/// <summary>
@@ -342,10 +350,11 @@ namespace NetOffice.DAOApi
 		/// </summary>
 		/// <param name="name">string name</param>
 		[CustomMethod]
+		[BaseResult]
 		[SupportByVersion("DAO", 3.6,12.0)]
 		public NetOffice.DAOApi.Recordset OpenRecordset(string name)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.DAOApi.Recordset>(this, "OpenRecordset", NetOffice.DAOApi.Recordset.LateBindingApiWrapperType, name);
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.DAOApi.Recordset>(this, "OpenRecordset", name);
 		}
 
 		/// <summary>
@@ -354,10 +363,11 @@ namespace NetOffice.DAOApi
 		/// <param name="name">string name</param>
 		/// <param name="type">optional object type</param>
 		[CustomMethod]
+		[BaseResult]
 		[SupportByVersion("DAO", 3.6,12.0)]
 		public NetOffice.DAOApi.Recordset OpenRecordset(string name, object type)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.DAOApi.Recordset>(this, "OpenRecordset", NetOffice.DAOApi.Recordset.LateBindingApiWrapperType, name, type);
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.DAOApi.Recordset>(this, "OpenRecordset", name, type);
 		}
 
 		/// <summary>
@@ -367,10 +377,11 @@ namespace NetOffice.DAOApi
 		/// <param name="type">optional object type</param>
 		/// <param name="options">optional object options</param>
 		[CustomMethod]
+		[BaseResult]
 		[SupportByVersion("DAO", 3.6,12.0)]
 		public NetOffice.DAOApi.Recordset OpenRecordset(string name, object type, object options)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.DAOApi.Recordset>(this, "OpenRecordset", NetOffice.DAOApi.Recordset.LateBindingApiWrapperType, name, type, options);
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.DAOApi.Recordset>(this, "OpenRecordset", name, type, options);
 		}
 
 		#endregion
@@ -378,6 +389,3 @@ namespace NetOffice.DAOApi
 		#pragma warning restore
 	}
 }
-
-
-

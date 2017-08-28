@@ -1,14 +1,11 @@
-﻿using System.Collections;
+﻿using System;
 using System.Collections.Generic;
-using System;
-using NetRuntimeSystem = System;
-using System.ComponentModel;
-using NetOffice.Attributes;
+using NetOffice.Exceptions;
 
 namespace NetOffice
 {
     /// <summary>
-    /// Represents a Parent/Child relation 
+    /// Represents an ICOMObject Parent/Child relation in NetOffice proxy management
     /// </summary>
     public interface ICOMObjectTable
     {
@@ -26,15 +23,15 @@ namespace NetOffice
         /// Add a new child to the instance
         /// </summary>
         /// <param name="childObject">new child instance</param>
+        /// <exception cref="COMChildRelationException">Unexpected error</exception>
         void AddChildObject(ICOMObject childObject);
 
         /// <summary>
         /// Remove a child from the instance
         /// </summary>
         /// <param name="childObject">child instance</param>
-        void RemoveChildObject(ICOMObject childObject);
+        /// <returns>true if childObject has been removed, otherwise false</returns>
+        /// <exception cref="COMChildRelationException">Unexpected error</exception>
+        bool RemoveChildObject(ICOMObject childObject);
     }
-
 }
-
-

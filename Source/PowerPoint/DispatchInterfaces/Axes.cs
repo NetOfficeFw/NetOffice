@@ -14,7 +14,7 @@ namespace NetOffice.PowerPointApi
 	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff745246.aspx </remarks>
 	[SupportByVersion("PowerPoint", 14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Method), HasIndexProperty(IndexInvoke.Method, "_Default")]
-	public class Axes : COMObject , IEnumerable<NetOffice.PowerPointApi.Axis>
+	public class Axes : COMObject, IEnumerable<NetOffice.PowerPointApi.Axis>
 	{
 		#pragma warning disable
 
@@ -47,7 +47,14 @@ namespace NetOffice.PowerPointApi
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public Axes(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -227,5 +234,3 @@ namespace NetOffice.PowerPointApi
 		#pragma warning restore
 	}
 }
-
-

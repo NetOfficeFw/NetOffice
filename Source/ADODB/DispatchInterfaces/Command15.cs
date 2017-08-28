@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using NetOffice.Attributes;
@@ -44,7 +44,14 @@ namespace NetOffice.ADODBApi
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public Command15(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -105,11 +112,12 @@ namespace NetOffice.ADODBApi
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("ADODB", 2.1,2.5)]
+		[BaseResult]
 		public NetOffice.ADODBApi._Connection ActiveConnection
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ADODBApi._Connection>(this, "ActiveConnection", NetOffice.ADODBApi._Connection.LateBindingApiWrapperType);
+				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.ADODBApi._Connection>(this, "ActiveConnection");
 			}
 			set
 			{
@@ -226,9 +234,10 @@ namespace NetOffice.ADODBApi
 		/// <param name="parameters">optional object parameters</param>
 		/// <param name="options">optional Int32 Options = -1</param>
 		[SupportByVersion("ADODB", 2.1,2.5)]
+		[BaseResult]
 		public NetOffice.ADODBApi._Recordset Execute(object recordsAffected, object parameters, object options)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ADODBApi._Recordset>(this, "Execute", NetOffice.ADODBApi._Recordset.LateBindingApiWrapperType, recordsAffected, parameters, options);
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.ADODBApi._Recordset>(this, "Execute", recordsAffected, parameters, options);
 		}
 
 		/// <summary>
@@ -236,10 +245,11 @@ namespace NetOffice.ADODBApi
 		/// </summary>
 		/// <param name="recordsAffected">object recordsAffected</param>
 		[CustomMethod]
+		[BaseResult]
 		[SupportByVersion("ADODB", 2.1,2.5)]
 		public NetOffice.ADODBApi._Recordset Execute(object recordsAffected)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ADODBApi._Recordset>(this, "Execute", NetOffice.ADODBApi._Recordset.LateBindingApiWrapperType, recordsAffected);
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.ADODBApi._Recordset>(this, "Execute", recordsAffected);
 		}
 
 		/// <summary>
@@ -248,10 +258,11 @@ namespace NetOffice.ADODBApi
 		/// <param name="recordsAffected">object recordsAffected</param>
 		/// <param name="parameters">optional object parameters</param>
 		[CustomMethod]
+		[BaseResult]
 		[SupportByVersion("ADODB", 2.1,2.5)]
 		public NetOffice.ADODBApi._Recordset Execute(object recordsAffected, object parameters)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ADODBApi._Recordset>(this, "Execute", NetOffice.ADODBApi._Recordset.LateBindingApiWrapperType, recordsAffected, parameters);
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.ADODBApi._Recordset>(this, "Execute", recordsAffected, parameters);
 		}
 
 		/// <summary>
@@ -263,19 +274,21 @@ namespace NetOffice.ADODBApi
 		/// <param name="size">optional Int32 Size = 0</param>
 		/// <param name="value">optional object value</param>
 		[SupportByVersion("ADODB", 2.1,2.5)]
+		[BaseResult]
 		public NetOffice.ADODBApi._Parameter CreateParameter(object name, object type, object direction, object size, object value)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ADODBApi._Parameter>(this, "CreateParameter", NetOffice.ADODBApi._Parameter.LateBindingApiWrapperType, new object[]{ name, type, direction, size, value });
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.ADODBApi._Parameter>(this, "CreateParameter", new object[]{ name, type, direction, size, value });
 		}
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.1, 2.5
 		/// </summary>
 		[CustomMethod]
+		[BaseResult]
 		[SupportByVersion("ADODB", 2.1,2.5)]
 		public NetOffice.ADODBApi._Parameter CreateParameter()
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ADODBApi._Parameter>(this, "CreateParameter", NetOffice.ADODBApi._Parameter.LateBindingApiWrapperType);
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.ADODBApi._Parameter>(this, "CreateParameter");
 		}
 
 		/// <summary>
@@ -283,10 +296,11 @@ namespace NetOffice.ADODBApi
 		/// </summary>
 		/// <param name="name">optional string Name = </param>
 		[CustomMethod]
+		[BaseResult]
 		[SupportByVersion("ADODB", 2.1,2.5)]
 		public NetOffice.ADODBApi._Parameter CreateParameter(object name)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ADODBApi._Parameter>(this, "CreateParameter", NetOffice.ADODBApi._Parameter.LateBindingApiWrapperType, name);
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.ADODBApi._Parameter>(this, "CreateParameter", name);
 		}
 
 		/// <summary>
@@ -295,10 +309,11 @@ namespace NetOffice.ADODBApi
 		/// <param name="name">optional string Name = </param>
 		/// <param name="type">optional NetOffice.ADODBApi.Enums.DataTypeEnum Type = 0</param>
 		[CustomMethod]
+		[BaseResult]
 		[SupportByVersion("ADODB", 2.1,2.5)]
 		public NetOffice.ADODBApi._Parameter CreateParameter(object name, object type)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ADODBApi._Parameter>(this, "CreateParameter", NetOffice.ADODBApi._Parameter.LateBindingApiWrapperType, name, type);
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.ADODBApi._Parameter>(this, "CreateParameter", name, type);
 		}
 
 		/// <summary>
@@ -308,10 +323,11 @@ namespace NetOffice.ADODBApi
 		/// <param name="type">optional NetOffice.ADODBApi.Enums.DataTypeEnum Type = 0</param>
 		/// <param name="direction">optional NetOffice.ADODBApi.Enums.ParameterDirectionEnum Direction = 1</param>
 		[CustomMethod]
+		[BaseResult]
 		[SupportByVersion("ADODB", 2.1,2.5)]
 		public NetOffice.ADODBApi._Parameter CreateParameter(object name, object type, object direction)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ADODBApi._Parameter>(this, "CreateParameter", NetOffice.ADODBApi._Parameter.LateBindingApiWrapperType, name, type, direction);
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.ADODBApi._Parameter>(this, "CreateParameter", name, type, direction);
 		}
 
 		/// <summary>
@@ -322,10 +338,11 @@ namespace NetOffice.ADODBApi
 		/// <param name="direction">optional NetOffice.ADODBApi.Enums.ParameterDirectionEnum Direction = 1</param>
 		/// <param name="size">optional Int32 Size = 0</param>
 		[CustomMethod]
+		[BaseResult]
 		[SupportByVersion("ADODB", 2.1,2.5)]
 		public NetOffice.ADODBApi._Parameter CreateParameter(object name, object type, object direction, object size)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ADODBApi._Parameter>(this, "CreateParameter", NetOffice.ADODBApi._Parameter.LateBindingApiWrapperType, name, type, direction, size);
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.ADODBApi._Parameter>(this, "CreateParameter", name, type, direction, size);
 		}
 
 		#endregion
@@ -333,6 +350,3 @@ namespace NetOffice.ADODBApi
 		#pragma warning restore
 	}
 }
-
-
-

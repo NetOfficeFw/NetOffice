@@ -4827,6 +4827,3 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		#endregion
 	}
 }
-
-
-

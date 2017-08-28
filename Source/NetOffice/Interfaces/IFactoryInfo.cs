@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Reflection;
-using NetRuntimeSystem = System;
-using System.ComponentModel;
-using NetOffice.Attributes;
 
 namespace NetOffice
 {
@@ -51,5 +48,3 @@ namespace NetOffice
         bool IsDuck { get; }
     }
 }
-
-

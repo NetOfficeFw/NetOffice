@@ -654,4 +654,3 @@ namespace NetOffice.DAOApi.GlobalHelperModules
 		#endregion
 	}
 }
-

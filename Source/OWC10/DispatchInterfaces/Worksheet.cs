@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using NetOffice.Attributes;
@@ -44,7 +44,14 @@ namespace NetOffice.OWC10Api
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public Worksheet(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -105,11 +112,12 @@ namespace NetOffice.OWC10Api
 		/// Get
 		/// </summary>
 		[SupportByVersion("OWC10", 1)]
+		[BaseResult]
 		public NetOffice.OWC10Api.ISpreadsheet Application
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OWC10Api.ISpreadsheet>(this, "Application", NetOffice.OWC10Api.ISpreadsheet.LateBindingApiWrapperType);
+				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.OWC10Api.ISpreadsheet>(this, "Application");
 			}
 		}
 
@@ -148,11 +156,12 @@ namespace NetOffice.OWC10Api
 		/// Get
 		/// </summary>
 		[SupportByVersion("OWC10", 1)]
+		[BaseResult]
 		public NetOffice.OWC10Api._Range Cells
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OWC10Api._Range>(this, "Cells", NetOffice.OWC10Api._Range.LateBindingApiWrapperType);
+				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.OWC10Api._Range>(this, "Cells");
 			}
 		}
 
@@ -161,11 +170,12 @@ namespace NetOffice.OWC10Api
 		/// Get
 		/// </summary>
 		[SupportByVersion("OWC10", 1)]
+		[BaseResult]
 		public NetOffice.OWC10Api._Range Columns
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OWC10Api._Range>(this, "Columns", NetOffice.OWC10Api._Range.LateBindingApiWrapperType);
+				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.OWC10Api._Range>(this, "Columns");
 			}
 		}
 
@@ -441,11 +451,12 @@ namespace NetOffice.OWC10Api
 		/// Get
 		/// </summary>
 		[SupportByVersion("OWC10", 1)]
+		[BaseResult]
 		public NetOffice.OWC10Api._Range Rows
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OWC10Api._Range>(this, "Rows", NetOffice.OWC10Api._Range.LateBindingApiWrapperType);
+				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.OWC10Api._Range>(this, "Rows");
 			}
 		}
 
@@ -497,11 +508,12 @@ namespace NetOffice.OWC10Api
 		/// Get
 		/// </summary>
 		[SupportByVersion("OWC10", 1)]
+		[BaseResult]
 		public NetOffice.OWC10Api._Range UsedRange
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OWC10Api._Range>(this, "UsedRange", NetOffice.OWC10Api._Range.LateBindingApiWrapperType);
+				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.OWC10Api._Range>(this, "UsedRange");
 			}
 		}
 
@@ -1048,6 +1060,3 @@ namespace NetOffice.OWC10Api
 		#pragma warning restore
 	}
 }
-
-
-

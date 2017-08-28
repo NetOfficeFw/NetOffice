@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using NetOffice.Attributes;
@@ -44,7 +44,14 @@ namespace NetOffice.MSHTMLApi
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public IHTMLElement4(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -186,9 +193,10 @@ namespace NetOffice.MSHTMLApi
 		/// </summary>
 		/// <param name="bstrName">string bstrName</param>
 		[SupportByVersion("MSHTML", 4)]
+		[BaseResult]
 		public NetOffice.MSHTMLApi.IHTMLDOMAttribute getAttributeNode(string bstrName)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.MSHTMLApi.IHTMLDOMAttribute>(this, "getAttributeNode", NetOffice.MSHTMLApi.IHTMLDOMAttribute.LateBindingApiWrapperType, bstrName);
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.MSHTMLApi.IHTMLDOMAttribute>(this, "getAttributeNode", bstrName);
 		}
 
 		/// <summary>
@@ -196,9 +204,10 @@ namespace NetOffice.MSHTMLApi
 		/// </summary>
 		/// <param name="pattr">NetOffice.MSHTMLApi.IHTMLDOMAttribute pattr</param>
 		[SupportByVersion("MSHTML", 4)]
+		[BaseResult]
 		public NetOffice.MSHTMLApi.IHTMLDOMAttribute setAttributeNode(NetOffice.MSHTMLApi.IHTMLDOMAttribute pattr)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.MSHTMLApi.IHTMLDOMAttribute>(this, "setAttributeNode", NetOffice.MSHTMLApi.IHTMLDOMAttribute.LateBindingApiWrapperType, pattr);
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.MSHTMLApi.IHTMLDOMAttribute>(this, "setAttributeNode", pattr);
 		}
 
 		/// <summary>
@@ -206,9 +215,10 @@ namespace NetOffice.MSHTMLApi
 		/// </summary>
 		/// <param name="pattr">NetOffice.MSHTMLApi.IHTMLDOMAttribute pattr</param>
 		[SupportByVersion("MSHTML", 4)]
+		[BaseResult]
 		public NetOffice.MSHTMLApi.IHTMLDOMAttribute removeAttributeNode(NetOffice.MSHTMLApi.IHTMLDOMAttribute pattr)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.MSHTMLApi.IHTMLDOMAttribute>(this, "removeAttributeNode", NetOffice.MSHTMLApi.IHTMLDOMAttribute.LateBindingApiWrapperType, pattr);
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.MSHTMLApi.IHTMLDOMAttribute>(this, "removeAttributeNode", pattr);
 		}
 
 		#endregion
@@ -216,6 +226,3 @@ namespace NetOffice.MSHTMLApi
 		#pragma warning restore
 	}
 }
-
-
-

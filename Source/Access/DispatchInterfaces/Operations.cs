@@ -14,7 +14,7 @@ namespace NetOffice.AccessApi
 	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff192091.aspx </remarks>
 	[SupportByVersion("Access", 14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Method), HasIndexProperty(IndexInvoke.Property, "Item")]
-	public class Operations : COMObject , IEnumerable<NetOffice.AccessApi.Operation>
+	public class Operations : COMObject, IEnumerable<NetOffice.AccessApi.Operation>
 	{
 		#pragma warning disable
 
@@ -47,7 +47,14 @@ namespace NetOffice.AccessApi
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public Operations(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -162,29 +169,29 @@ namespace NetOffice.AccessApi
 			return Factory.ExecuteBoolMethodGet(this, "IsMemberSafe", dispid);
 		}
 
-		#endregion
+        #endregion
 
-       #region IEnumerable<NetOffice.AccessApi.Operation> Member
-        
+        #region IEnumerable<NetOffice.AccessApi.Operation> Member
+
         /// <summary>
-		/// SupportByVersion Access, 14,15,16
-		/// </summary>
-		[SupportByVersion("Access", 14,15,16)]
-       public IEnumerator<NetOffice.AccessApi.Operation> GetEnumerator()  
-       {
-           NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
-           foreach (NetOffice.AccessApi.Operation item in innerEnumerator)
-               yield return item;
-       }
+        /// SupportByVersion Access, 14,15,16
+        /// </summary>
+        [SupportByVersion("Access", 14, 15, 16)]
+        public IEnumerator<NetOffice.AccessApi.Operation> GetEnumerator()
+        {
+            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
+            foreach (NetOffice.AccessApi.Operation item in innerEnumerator)
+                yield return item;
+        }
 
-       #endregion
-          
-		#region IEnumerable Members
-       
-		/// <summary>
-		/// SupportByVersion Access, 14,15,16
-		/// </summary>
-		[SupportByVersion("Access", 14,15,16)]
+        #endregion
+
+        #region IEnumerable Members
+
+        /// <summary>
+        /// SupportByVersion Access, 14,15,16
+        /// </summary>
+        [SupportByVersion("Access", 14,15,16)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
 			return NetOffice.Utils.GetProxyEnumeratorAsMethod(this);
@@ -195,6 +202,3 @@ namespace NetOffice.AccessApi
 		#pragma warning restore
 	}
 }
-
-
-

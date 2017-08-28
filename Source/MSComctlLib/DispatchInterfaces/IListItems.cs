@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using System;
 using NetRuntimeSystem = System;
@@ -46,7 +46,14 @@ namespace NetOffice.MSComctlLibApi
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public IListItems(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -148,12 +155,13 @@ namespace NetOffice.MSComctlLibApi
 		/// </summary>
 		/// <param name="index">object index</param>
 		[SupportByVersion("MSComctlLib", 6)]
+		[BaseResult]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
 		public NetOffice.MSComctlLibApi.IListItem this[object index]
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.MSComctlLibApi.IListItem>(this, "Item", NetOffice.MSComctlLibApi.IListItem.LateBindingApiWrapperType, index);
+				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.MSComctlLibApi.IListItem>(this, "Item", index);
 			}
 		}
 
@@ -170,19 +178,21 @@ namespace NetOffice.MSComctlLibApi
 		/// <param name="icon">optional object icon</param>
 		/// <param name="smallIcon">optional object smallIcon</param>
 		[SupportByVersion("MSComctlLib", 6)]
+		[BaseResult]
 		public NetOffice.MSComctlLibApi.IListItem Add(object index, object key, object text, object icon, object smallIcon)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.MSComctlLibApi.IListItem>(this, "Add", NetOffice.MSComctlLibApi.IListItem.LateBindingApiWrapperType, new object[]{ index, key, text, icon, smallIcon });
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.MSComctlLibApi.IListItem>(this, "Add", new object[]{ index, key, text, icon, smallIcon });
 		}
 
 		/// <summary>
 		/// SupportByVersion MSComctlLib 6
 		/// </summary>
 		[CustomMethod]
+		[BaseResult]
 		[SupportByVersion("MSComctlLib", 6)]
 		public NetOffice.MSComctlLibApi.IListItem Add()
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.MSComctlLibApi.IListItem>(this, "Add", NetOffice.MSComctlLibApi.IListItem.LateBindingApiWrapperType);
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.MSComctlLibApi.IListItem>(this, "Add");
 		}
 
 		/// <summary>
@@ -190,10 +200,11 @@ namespace NetOffice.MSComctlLibApi
 		/// </summary>
 		/// <param name="index">optional object index</param>
 		[CustomMethod]
+		[BaseResult]
 		[SupportByVersion("MSComctlLib", 6)]
 		public NetOffice.MSComctlLibApi.IListItem Add(object index)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.MSComctlLibApi.IListItem>(this, "Add", NetOffice.MSComctlLibApi.IListItem.LateBindingApiWrapperType, index);
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.MSComctlLibApi.IListItem>(this, "Add", index);
 		}
 
 		/// <summary>
@@ -202,10 +213,11 @@ namespace NetOffice.MSComctlLibApi
 		/// <param name="index">optional object index</param>
 		/// <param name="key">optional object key</param>
 		[CustomMethod]
+		[BaseResult]
 		[SupportByVersion("MSComctlLib", 6)]
 		public NetOffice.MSComctlLibApi.IListItem Add(object index, object key)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.MSComctlLibApi.IListItem>(this, "Add", NetOffice.MSComctlLibApi.IListItem.LateBindingApiWrapperType, index, key);
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.MSComctlLibApi.IListItem>(this, "Add", index, key);
 		}
 
 		/// <summary>
@@ -215,10 +227,11 @@ namespace NetOffice.MSComctlLibApi
 		/// <param name="key">optional object key</param>
 		/// <param name="text">optional object text</param>
 		[CustomMethod]
+		[BaseResult]
 		[SupportByVersion("MSComctlLib", 6)]
 		public NetOffice.MSComctlLibApi.IListItem Add(object index, object key, object text)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.MSComctlLibApi.IListItem>(this, "Add", NetOffice.MSComctlLibApi.IListItem.LateBindingApiWrapperType, index, key, text);
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.MSComctlLibApi.IListItem>(this, "Add", index, key, text);
 		}
 
 		/// <summary>
@@ -229,10 +242,11 @@ namespace NetOffice.MSComctlLibApi
 		/// <param name="text">optional object text</param>
 		/// <param name="icon">optional object icon</param>
 		[CustomMethod]
+		[BaseResult]
 		[SupportByVersion("MSComctlLib", 6)]
 		public NetOffice.MSComctlLibApi.IListItem Add(object index, object key, object text, object icon)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.MSComctlLibApi.IListItem>(this, "Add", NetOffice.MSComctlLibApi.IListItem.LateBindingApiWrapperType, index, key, text, icon);
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.MSComctlLibApi.IListItem>(this, "Add", index, key, text, icon);
 		}
 
 		/// <summary>
@@ -287,6 +301,3 @@ namespace NetOffice.MSComctlLibApi
 		#pragma warning restore
 	}
 }
-
-
-

@@ -66,7 +66,7 @@ namespace NetOffice.MSProjectApi.Tools
         /// <summary>
         /// Common Tasks Helper. The property is available after the host application has called OnConnection for the instance
         /// </summary>
-        public Office.Tools.Utils.CommonUtils Utils { get; private set; }
+        public Office.Tools.Contribution.CommonUtils Utils { get; private set; }
 
         /// <summary>
         /// Host Application Instance
@@ -711,14 +711,14 @@ namespace NetOffice.MSProjectApi.Tools
             if (null != _isLoadedFromSystem)
                 return _isLoadedFromSystem;
 
-            OfficeApi.Tools.Utils.RegistryLocationResult result = OfficeApi.Tools.Utils.CommonUtils.TryFindAddinLoadLocation(Type,
+            OfficeApi.Tools.Contribution.RegistryLocationResult result = OfficeApi.Tools.Contribution.CommonUtils.TryFindAddinLoadLocation(Type,
                     ApplicationIdentifiers.ApplicationType.MS_Project);
             switch (result)
             {
-                case Office.Tools.Utils.RegistryLocationResult.User:
+                case Office.Tools.Contribution.RegistryLocationResult.User:
                     _isLoadedFromSystem = false;
                     break;
-                case Office.Tools.Utils.RegistryLocationResult.System:
+                case Office.Tools.Contribution.RegistryLocationResult.System:
                     _isLoadedFromSystem = true;
                     break;
                 default:

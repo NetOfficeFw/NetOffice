@@ -1423,6 +1423,94 @@ namespace NetOffice
 
         #endregion
 
+        #region ExecuteBaseReferencePropertyGet<T>
+
+        /// <summary>
+        /// Execute a property get with COM reference type return value
+        /// </summary>
+        /// <param name="value">core invoker</param>
+        /// <param name="caller">calling instance</param>
+        /// <param name="name">property name</param>
+        public static T ExecuteBaseReferencePropertyGet<T>(this Core value, ICOMObject caller, string name) where T : class, ICOMObject
+        {
+            return ExecuteBaseReferencePropertyGet<T>(value, caller, name, _emptyParams);
+        }
+
+        /// <summary>
+        /// Execute a property get with COM reference type return value
+        /// </summary>
+        /// <param name="value">core invoker</param>
+        /// <param name="caller">calling instance</param>
+        /// <param name="name">property name</param>
+        /// <param name="argument">argument as any</param>
+        public static T ExecuteBaseReferencePropertyGet<T>(this Core value, ICOMObject caller, string name, object argument) where T : class, ICOMObject
+        {
+            object[] args = Invoker.ValidateParamsArray(argument);
+            return ExecuteBaseReferencePropertyGet<T>(value, caller, name, args);
+        }
+
+        /// <summary>
+        /// Execute a property get with COM reference type return value
+        /// </summary>
+        /// <param name="value">core invoker</param>
+        /// <param name="caller">calling instance</param>
+        /// <param name="name">property name</param>
+        /// <param name="argument1">argument as any</param>
+        /// <param name="argument2">argument as any</param>
+        public static T ExecuteBaseReferencePropertyGet<T>(this Core value, ICOMObject caller, string name, object argument1, object argument2) where T : class, ICOMObject
+        {
+            object[] args = Invoker.ValidateParamsArray(argument1, argument2);
+            return ExecuteBaseReferencePropertyGet<T>(value, caller, name, args);
+        }
+
+        /// <summary>
+        /// Execute a property get with COM reference type return value
+        /// </summary>
+        /// <param name="value">core invoker</param>
+        /// <param name="caller">calling instance</param>
+        /// <param name="name">property name</param>
+        /// <param name="argument1">argument as any</param>
+        /// <param name="argument2">argument as any</param>
+        /// <param name="argument3">argument as any</param>
+        public static T ExecuteBaseReferencePropertyGet<T>(this Core value, ICOMObject caller, string name, object argument1, object argument2, object argument3) where T : class, ICOMObject
+        {
+            object[] args = Invoker.ValidateParamsArray(argument1, argument2, argument3);
+            return ExecuteBaseReferencePropertyGet<T>(value, caller, name, args);
+        }
+
+        /// <summary>
+        /// Execute a property get with COM reference type return value
+        /// </summary>
+        /// <param name="value">core invoker</param>
+        /// <param name="caller">calling instance</param>
+        /// <param name="name">property name</param>
+        /// <param name="argument1">argument as any</param>
+        /// <param name="argument2">argument as any</param>
+        /// <param name="argument3">argument as any</param>
+        /// <param name="argument4">argument as any</param>
+        public static T ExecuteBaseReferencePropertyGet<T>(this Core value, ICOMObject caller, string name, object argument1, object argument2, object argument3, object argument4) where T : class, ICOMObject
+        {
+            object[] args = Invoker.ValidateParamsArray(argument1, argument2, argument3, argument4);
+            return ExecuteBaseReferencePropertyGet<T>(value, caller, name, args);
+        }
+
+        /// <summary>
+        /// Execute a property get with COM reference type return value
+        /// </summary>
+        /// <param name="value">core invoker</param>
+        /// <param name="caller">calling instance</param>
+        /// <param name="name">property name</param>
+        /// <param name="paramsArray">arguments as any</param>
+        public static T ExecuteBaseReferencePropertyGet<T>(this Core value, ICOMObject caller, string name, object[] paramsArray) where T : class, ICOMObject
+        {
+            object[] args = Invoker.ValidateParamsArray(paramsArray);
+            object returnItem = value.Invoker.PropertyGet(caller, name, args);
+            T newObject = value.CreateObjectFromComProxy(caller, returnItem) as T;
+            return newObject;
+        }
+
+        #endregion
+        
         #region ExecuteKnownReferencePropertyGet<T>
 
         /// <summary>
@@ -1511,8 +1599,7 @@ namespace NetOffice
         {
             object[] args = Invoker.ValidateParamsArray(paramsArray);
             object returnItem = value.Invoker.PropertyGet(caller, name, args);
-            T newObject = value.CreateKnownObjectFromComProxy(caller, returnItem, knownType) as T;
-            return newObject;
+            return value.CreateKnownObjectFromComProxy(caller, returnItem, knownType) as T;
         }
 
         #endregion

@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using NetOffice.Attributes;
@@ -45,7 +45,14 @@ namespace NetOffice.MSProjectApi
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public Pane(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -167,9 +174,10 @@ namespace NetOffice.MSProjectApi
 		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		[SupportByVersion("MSProject", 11,12,14)]
+		[BaseResult]
 		public NetOffice.MSProjectApi.View View()
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.MSProjectApi.View>(this, "View", NetOffice.MSProjectApi.View.LateBindingApiWrapperType);
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.MSProjectApi.View>(this, "View");
 		}
 
 		#endregion
@@ -177,6 +185,3 @@ namespace NetOffice.MSProjectApi
 		#pragma warning restore
 	}
 }
-
-
-

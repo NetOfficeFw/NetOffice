@@ -29,8 +29,7 @@ namespace NetOffice
             AppDomainFriendlyName = AppDomain.CurrentDomain.FriendlyName;
             AppDomainIsDefault = AppDomain.CurrentDomain.IsDefaultAppDomain();
         }
-
-
+        
         /// <summary>
         /// Current app domain is default app domain
         /// </summary>

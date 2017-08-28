@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using System;
 using NetRuntimeSystem = System;
@@ -13,7 +13,7 @@ namespace NetOffice.VBIDEApi
 	/// </summary>
 	[SupportByVersion("VBIDE", 12,14,5.3)]
 	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Method), HasIndexProperty(IndexInvoke.Method, "Item")]
-	public class _Properties : COMObject , IEnumerable<NetOffice.VBIDEApi.Property>
+	public class _Properties : COMObject, IEnumerable<NetOffice.VBIDEApi.Property>
 	{
 		#pragma warning disable
 
@@ -46,7 +46,14 @@ namespace NetOffice.VBIDEApi
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public _Properties(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -107,12 +114,13 @@ namespace NetOffice.VBIDEApi
 		/// Get
 		/// </summary>
 		[SupportByVersion("VBIDE", 12,14,5.3)]
+		[BaseResult]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public NetOffice.VBIDEApi.Application Application
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.VBIDEApi.Application>(this, "Application", NetOffice.VBIDEApi.Application.LateBindingApiWrapperType);
+				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.VBIDEApi.Application>(this, "Application");
 			}
 		}
 
@@ -174,29 +182,29 @@ namespace NetOffice.VBIDEApi
 			}
 		}
 
-		#endregion
+        #endregion
 
-       #region IEnumerable<NetOffice.VBIDEApi.Property> Member
-        
+        #region IEnumerable<NetOffice.VBIDEApi.Property> Member
+
         /// <summary>
-		/// SupportByVersion VBIDE, 12,14,5.3
-		/// </summary>
-		[SupportByVersion("VBIDE", 12,14,5.3)]
-       public IEnumerator<NetOffice.VBIDEApi.Property> GetEnumerator()  
-       {
-           NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
-           foreach (NetOffice.VBIDEApi.Property item in innerEnumerator)
-               yield return item;
-       }
+        /// SupportByVersion VBIDE, 12,14,5.3
+        /// </summary>
+        [SupportByVersion("VBIDE", 12, 14, 5.3)]
+        public IEnumerator<NetOffice.VBIDEApi.Property> GetEnumerator()
+        {
+            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
+            foreach (NetOffice.VBIDEApi.Property item in innerEnumerator)
+                yield return item;
+        }
 
-       #endregion
-          
-		#region IEnumerable Members
-       
-		/// <summary>
-		/// SupportByVersion VBIDE, 12,14,5.3
-		/// </summary>
-		[SupportByVersion("VBIDE", 12,14,5.3)]
+        #endregion
+
+        #region IEnumerable Members
+
+        /// <summary>
+        /// SupportByVersion VBIDE, 12,14,5.3
+        /// </summary>
+        [SupportByVersion("VBIDE", 12,14,5.3)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
 			return NetOffice.Utils.GetProxyEnumeratorAsMethod(this);
@@ -207,5 +215,3 @@ namespace NetOffice.VBIDEApi
 		#pragma warning restore
 	}
 }
-
-

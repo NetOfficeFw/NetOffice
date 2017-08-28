@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using System;
 using NetRuntimeSystem = System;
@@ -46,7 +46,14 @@ namespace NetOffice.OWC10Api
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public ChSeriesCollection(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -148,11 +155,12 @@ namespace NetOffice.OWC10Api
 		/// Get
 		/// </summary>
 		[SupportByVersion("OWC10", 1)]
+		[BaseResult]
 		public NetOffice.OWC10Api.PivotResultGroupAxis PivotAxis
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OWC10Api.PivotResultGroupAxis>(this, "PivotAxis", NetOffice.OWC10Api.PivotResultGroupAxis.LateBindingApiWrapperType);
+				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.OWC10Api.PivotResultGroupAxis>(this, "PivotAxis");
 			}
 		}
 
@@ -223,6 +231,3 @@ namespace NetOffice.OWC10Api
 		#pragma warning restore
 	}
 }
-
-
-

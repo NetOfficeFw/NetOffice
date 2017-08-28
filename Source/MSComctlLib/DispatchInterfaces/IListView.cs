@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using NetOffice.Attributes;
@@ -44,7 +44,14 @@ namespace NetOffice.MSComctlLibApi
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public IListView(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -122,11 +129,12 @@ namespace NetOffice.MSComctlLibApi
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSComctlLib", 6)]
+		[BaseResult]
 		public NetOffice.MSComctlLibApi.IColumnHeaders ColumnHeaders
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.MSComctlLibApi.IColumnHeaders>(this, "ColumnHeaders", NetOffice.MSComctlLibApi.IColumnHeaders.LateBindingApiWrapperType);
+				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.MSComctlLibApi.IColumnHeaders>(this, "ColumnHeaders");
 			}
 			set
 			{
@@ -139,12 +147,13 @@ namespace NetOffice.MSComctlLibApi
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSComctlLib", 6)]
+		[BaseResult]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public NetOffice.MSComctlLibApi.IListItem DropHighlight
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.MSComctlLibApi.IListItem>(this, "DropHighlight", NetOffice.MSComctlLibApi.IListItem.LateBindingApiWrapperType);
+				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.MSComctlLibApi.IListItem>(this, "DropHighlight");
 			}
 			set
 			{
@@ -209,12 +218,13 @@ namespace NetOffice.MSComctlLibApi
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSComctlLib", 6)]
+		[BaseResult]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public NetOffice.MSComctlLibApi.IListItems ListItems
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.MSComctlLibApi.IListItems>(this, "ListItems", NetOffice.MSComctlLibApi.IListItems.LateBindingApiWrapperType);
+				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.MSComctlLibApi.IListItems>(this, "ListItems");
 			}
 			set
 			{
@@ -316,12 +326,13 @@ namespace NetOffice.MSComctlLibApi
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSComctlLib", 6)]
+		[BaseResult]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public NetOffice.MSComctlLibApi.IListItem SelectedItem
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.MSComctlLibApi.IListItem>(this, "SelectedItem", NetOffice.MSComctlLibApi.IListItem.LateBindingApiWrapperType);
+				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.MSComctlLibApi.IListItem>(this, "SelectedItem");
 			}
 			set
 			{
@@ -777,9 +788,10 @@ namespace NetOffice.MSComctlLibApi
 		/// <param name="index">optional object index</param>
 		/// <param name="fPartial">optional object fPartial</param>
 		[SupportByVersion("MSComctlLib", 6)]
+		[BaseResult]
 		public NetOffice.MSComctlLibApi.IListItem FindItem(string sz, object where, object index, object fPartial)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.MSComctlLibApi.IListItem>(this, "FindItem", NetOffice.MSComctlLibApi.IListItem.LateBindingApiWrapperType, sz, where, index, fPartial);
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.MSComctlLibApi.IListItem>(this, "FindItem", sz, where, index, fPartial);
 		}
 
 		/// <summary>
@@ -787,10 +799,11 @@ namespace NetOffice.MSComctlLibApi
 		/// </summary>
 		/// <param name="sz">string sz</param>
 		[CustomMethod]
+		[BaseResult]
 		[SupportByVersion("MSComctlLib", 6)]
 		public NetOffice.MSComctlLibApi.IListItem FindItem(string sz)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.MSComctlLibApi.IListItem>(this, "FindItem", NetOffice.MSComctlLibApi.IListItem.LateBindingApiWrapperType, sz);
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.MSComctlLibApi.IListItem>(this, "FindItem", sz);
 		}
 
 		/// <summary>
@@ -799,10 +812,11 @@ namespace NetOffice.MSComctlLibApi
 		/// <param name="sz">string sz</param>
 		/// <param name="where">optional object where</param>
 		[CustomMethod]
+		[BaseResult]
 		[SupportByVersion("MSComctlLib", 6)]
 		public NetOffice.MSComctlLibApi.IListItem FindItem(string sz, object where)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.MSComctlLibApi.IListItem>(this, "FindItem", NetOffice.MSComctlLibApi.IListItem.LateBindingApiWrapperType, sz, where);
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.MSComctlLibApi.IListItem>(this, "FindItem", sz, where);
 		}
 
 		/// <summary>
@@ -812,19 +826,21 @@ namespace NetOffice.MSComctlLibApi
 		/// <param name="where">optional object where</param>
 		/// <param name="index">optional object index</param>
 		[CustomMethod]
+		[BaseResult]
 		[SupportByVersion("MSComctlLib", 6)]
 		public NetOffice.MSComctlLibApi.IListItem FindItem(string sz, object where, object index)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.MSComctlLibApi.IListItem>(this, "FindItem", NetOffice.MSComctlLibApi.IListItem.LateBindingApiWrapperType, sz, where, index);
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.MSComctlLibApi.IListItem>(this, "FindItem", sz, where, index);
 		}
 
 		/// <summary>
 		/// SupportByVersion MSComctlLib 6
 		/// </summary>
 		[SupportByVersion("MSComctlLib", 6)]
+		[BaseResult]
 		public NetOffice.MSComctlLibApi.IListItem GetFirstVisible()
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.MSComctlLibApi.IListItem>(this, "GetFirstVisible", NetOffice.MSComctlLibApi.IListItem.LateBindingApiWrapperType);
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.MSComctlLibApi.IListItem>(this, "GetFirstVisible");
 		}
 
 		/// <summary>
@@ -833,10 +849,11 @@ namespace NetOffice.MSComctlLibApi
 		/// <param name="x">Single x</param>
 		/// <param name="y">Single y</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		[BaseResult]
 		[SupportByVersion("MSComctlLib", 6)]
 		public NetOffice.MSComctlLibApi.IListItem HitTest(Single x, Single y)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.MSComctlLibApi.IListItem>(this, "HitTest", NetOffice.MSComctlLibApi.IListItem.LateBindingApiWrapperType, x, y);
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.MSComctlLibApi.IListItem>(this, "HitTest", x, y);
 		}
 
 		/// <summary>
@@ -881,6 +898,3 @@ namespace NetOffice.MSComctlLibApi
 		#pragma warning restore
 	}
 }
-
-
-

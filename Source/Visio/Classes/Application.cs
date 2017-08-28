@@ -127,7 +127,7 @@ namespace NetOffice.VisioApi
 	[SupportByVersion("Visio", 11,12,14,15,16)]
 	[EntityType(EntityType.IsCoClass), ComProgId("Visio.Application"), ModuleProvider(typeof(GlobalHelperModules.GlobalModule))]
 	[EventSink(typeof(Events.EApplication_SinkHelper))]
-	public class Application : IVApplication, IEventBinding
+	public class Application : IVApplication, ICloneable<Application>, IEventBinding
 	{
 		#pragma warning disable
 
@@ -171,20 +171,26 @@ namespace NetOffice.VisioApi
         		
 		#region Ctor
 
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public Application(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+			_callQuitInDispose = true;
+		}
+
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
 		public Application(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
-		{
-			
+		{			
 			GlobalHelperModules.GlobalModule.Instance = this;
 		}
 
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
 		public Application(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
-		{
-			
+		{			
 			GlobalHelperModules.GlobalModule.Instance = this;
 		}
 
@@ -2873,10 +2879,23 @@ namespace NetOffice.VisioApi
 
 			_connectPoint = null;
 		}
-        
+
         #endregion
 
-		#pragma warning restore
-	}
-}
+        #region ICloneable<Application>
 
+        /// <summary>
+        /// Creates a new Application that is a copy of the current instance
+        /// </summary>
+        /// <returns>A new Application that is a copy of this instance</returns>
+        /// <exception cref="CloneException">An unexpected error occured. See inner exception(s) for details.</exception>
+        public new Application Clone()
+        {
+            return base.Clone() as Application;
+        }
+
+        #endregion
+
+        #pragma warning restore
+    }
+}

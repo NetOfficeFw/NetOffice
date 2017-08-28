@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using NetOffice.Attributes;
@@ -44,7 +44,14 @@ namespace NetOffice.VBIDEApi
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public _ProjectTemplate(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -105,12 +112,13 @@ namespace NetOffice.VBIDEApi
 		/// Get
 		/// </summary>
 		[SupportByVersion("VBIDE", 12,14,5.3)]
+		[BaseResult]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public NetOffice.VBIDEApi.Application Application
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.VBIDEApi.Application>(this, "Application", NetOffice.VBIDEApi.Application.LateBindingApiWrapperType);
+				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.VBIDEApi.Application>(this, "Application");
 			}
 		}
 
@@ -119,12 +127,13 @@ namespace NetOffice.VBIDEApi
 		/// Get
 		/// </summary>
 		[SupportByVersion("VBIDE", 12,14,5.3)]
+		[BaseResult]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public NetOffice.VBIDEApi.Application Parent
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.VBIDEApi.Application>(this, "Parent", NetOffice.VBIDEApi.Application.LateBindingApiWrapperType);
+				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.VBIDEApi.Application>(this, "Parent");
 			}
 		}
 
@@ -137,5 +146,3 @@ namespace NetOffice.VBIDEApi
 		#pragma warning restore
 	}
 }
-
-

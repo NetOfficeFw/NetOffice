@@ -1,7 +1,5 @@
 ﻿using System;
-using NetRuntimeSystem = System;
-using System.ComponentModel;
-using NetOffice.Attributes;
+using NetOffice.Exceptions;
 
 namespace NetOffice
 {
@@ -33,7 +31,7 @@ namespace NetOffice
     /// <summary>
     /// EventHandler delegate for ICOMObjectDisposable.OnDispose
     /// </summary>
-    /// <param name="eventArgs"></param>
+    /// <param name="eventArgs">dispose arguments</param>
     public delegate void OnDisposeEventHandler(OnDisposeEventArgs eventArgs);
 
     /// <summary>
@@ -60,8 +58,7 @@ namespace NetOffice
         /// Dispose the instance and all child instances
         /// </summary>
         /// <param name="disposeEventBinding">dispose open event subscriptions</param>
+        /// <exception cref="COMDisposeException">An unexpected error occurs.</exception>
         void Dispose(bool disposeEventBinding);
     }
 }
-
-

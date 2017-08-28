@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using System;
 using NetRuntimeSystem = System;
@@ -13,7 +13,14 @@ namespace NetOffice.OWC10Api
 	[SyntaxBypass]
  	public class _Range_ : COMObject
 	{
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public _Range_(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -338,7 +345,14 @@ namespace NetOffice.OWC10Api
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public _Range(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -451,11 +465,12 @@ namespace NetOffice.OWC10Api
 		/// Get
 		/// </summary>
 		[SupportByVersion("OWC10", 1)]
+		[BaseResult]
 		public NetOffice.OWC10Api.ISpreadsheet Application
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OWC10Api.ISpreadsheet>(this, "Application", NetOffice.OWC10Api.ISpreadsheet.LateBindingApiWrapperType);
+				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.OWC10Api.ISpreadsheet>(this, "Application");
 			}
 		}
 
@@ -477,11 +492,12 @@ namespace NetOffice.OWC10Api
 		/// Get
 		/// </summary>
 		[SupportByVersion("OWC10", 1)]
+		[BaseResult]
 		public NetOffice.OWC10Api._Range Cells
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OWC10Api._Range>(this, "Cells", NetOffice.OWC10Api._Range.LateBindingApiWrapperType);
+				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.OWC10Api._Range>(this, "Cells");
 			}
 		}
 
@@ -503,11 +519,12 @@ namespace NetOffice.OWC10Api
 		/// Get
 		/// </summary>
 		[SupportByVersion("OWC10", 1)]
+		[BaseResult]
 		public NetOffice.OWC10Api._Range Columns
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OWC10Api._Range>(this, "Columns", NetOffice.OWC10Api._Range.LateBindingApiWrapperType);
+				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.OWC10Api._Range>(this, "Columns");
 			}
 		}
 
@@ -546,11 +563,12 @@ namespace NetOffice.OWC10Api
 		/// Get
 		/// </summary>
 		[SupportByVersion("OWC10", 1)]
+		[BaseResult]
 		public NetOffice.OWC10Api._Range CurrentArray
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OWC10Api._Range>(this, "CurrentArray", NetOffice.OWC10Api._Range.LateBindingApiWrapperType);
+				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.OWC10Api._Range>(this, "CurrentArray");
 			}
 		}
 
@@ -559,11 +577,12 @@ namespace NetOffice.OWC10Api
 		/// Get
 		/// </summary>
 		[SupportByVersion("OWC10", 1)]
+		[BaseResult]
 		public NetOffice.OWC10Api._Range CurrentRegion
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OWC10Api._Range>(this, "CurrentRegion", NetOffice.OWC10Api._Range.LateBindingApiWrapperType);
+				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.OWC10Api._Range>(this, "CurrentRegion");
 			}
 		}
 
@@ -595,11 +614,12 @@ namespace NetOffice.OWC10Api
 		/// Get
 		/// </summary>
 		[SupportByVersion("OWC10", 1)]
+		[BaseResult]
 		public NetOffice.OWC10Api._Range EntireColumn
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OWC10Api._Range>(this, "EntireColumn", NetOffice.OWC10Api._Range.LateBindingApiWrapperType);
+				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.OWC10Api._Range>(this, "EntireColumn");
 			}
 		}
 
@@ -608,11 +628,12 @@ namespace NetOffice.OWC10Api
 		/// Get
 		/// </summary>
 		[SupportByVersion("OWC10", 1)]
+		[BaseResult]
 		public NetOffice.OWC10Api._Range EntireRow
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OWC10Api._Range>(this, "EntireRow", NetOffice.OWC10Api._Range.LateBindingApiWrapperType);
+				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.OWC10Api._Range>(this, "EntireRow");
 			}
 		}
 
@@ -828,11 +849,12 @@ namespace NetOffice.OWC10Api
 		/// Get
 		/// </summary>
 		[SupportByVersion("OWC10", 1)]
+		[BaseResult]
 		public NetOffice.OWC10Api._Range MergeArea
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OWC10Api._Range>(this, "MergeArea", NetOffice.OWC10Api._Range.LateBindingApiWrapperType);
+				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.OWC10Api._Range>(this, "MergeArea");
 			}
 		}
 
@@ -875,11 +897,12 @@ namespace NetOffice.OWC10Api
 		/// Get
 		/// </summary>
 		[SupportByVersion("OWC10", 1)]
+		[BaseResult]
 		public NetOffice.OWC10Api._Range Next
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OWC10Api._Range>(this, "Next", NetOffice.OWC10Api._Range.LateBindingApiWrapperType);
+				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.OWC10Api._Range>(this, "Next");
 			}
 		}
 
@@ -905,11 +928,12 @@ namespace NetOffice.OWC10Api
 		/// Get
 		/// </summary>
 		[SupportByVersion("OWC10", 1)]
+		[BaseResult]
 		public NetOffice.OWC10Api._Range Offset
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OWC10Api._Range>(this, "Offset", NetOffice.OWC10Api._Range.LateBindingApiWrapperType);
+				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.OWC10Api._Range>(this, "Offset");
 			}
 		}
 
@@ -944,11 +968,12 @@ namespace NetOffice.OWC10Api
 		/// Get
 		/// </summary>
 		[SupportByVersion("OWC10", 1)]
+		[BaseResult]
 		public NetOffice.OWC10Api._Range Previous
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OWC10Api._Range>(this, "Previous", NetOffice.OWC10Api._Range.LateBindingApiWrapperType);
+				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.OWC10Api._Range>(this, "Previous");
 			}
 		}
 
@@ -1052,11 +1077,12 @@ namespace NetOffice.OWC10Api
 		/// Get
 		/// </summary>
 		[SupportByVersion("OWC10", 1)]
+		[BaseResult]
 		public NetOffice.OWC10Api._Range Rows
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OWC10Api._Range>(this, "Rows", NetOffice.OWC10Api._Range.LateBindingApiWrapperType);
+				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.OWC10Api._Range>(this, "Rows");
 			}
 		}
 
@@ -1514,9 +1540,10 @@ namespace NetOffice.OWC10Api
 		/// <param name="matchCase">optional object matchCase</param>
 		/// <param name="matchByte">optional object matchByte</param>
 		[SupportByVersion("OWC10", 1)]
+		[BaseResult]
 		public NetOffice.OWC10Api._Range Find(object what, object after, object lookIn, object lookAt, object searchOrder, object searchDirection, object matchCase, object matchByte)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OWC10Api._Range>(this, "Find", NetOffice.OWC10Api._Range.LateBindingApiWrapperType, new object[]{ what, after, lookIn, lookAt, searchOrder, searchDirection, matchCase, matchByte });
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.OWC10Api._Range>(this, "Find", new object[]{ what, after, lookIn, lookAt, searchOrder, searchDirection, matchCase, matchByte });
 		}
 
 		/// <summary>
@@ -1524,10 +1551,11 @@ namespace NetOffice.OWC10Api
 		/// </summary>
 		/// <param name="what">object what</param>
 		[CustomMethod]
+		[BaseResult]
 		[SupportByVersion("OWC10", 1)]
 		public NetOffice.OWC10Api._Range Find(object what)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OWC10Api._Range>(this, "Find", NetOffice.OWC10Api._Range.LateBindingApiWrapperType, what);
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.OWC10Api._Range>(this, "Find", what);
 		}
 
 		/// <summary>
@@ -1536,10 +1564,11 @@ namespace NetOffice.OWC10Api
 		/// <param name="what">object what</param>
 		/// <param name="after">optional object after</param>
 		[CustomMethod]
+		[BaseResult]
 		[SupportByVersion("OWC10", 1)]
 		public NetOffice.OWC10Api._Range Find(object what, object after)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OWC10Api._Range>(this, "Find", NetOffice.OWC10Api._Range.LateBindingApiWrapperType, what, after);
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.OWC10Api._Range>(this, "Find", what, after);
 		}
 
 		/// <summary>
@@ -1549,10 +1578,11 @@ namespace NetOffice.OWC10Api
 		/// <param name="after">optional object after</param>
 		/// <param name="lookIn">optional object lookIn</param>
 		[CustomMethod]
+		[BaseResult]
 		[SupportByVersion("OWC10", 1)]
 		public NetOffice.OWC10Api._Range Find(object what, object after, object lookIn)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OWC10Api._Range>(this, "Find", NetOffice.OWC10Api._Range.LateBindingApiWrapperType, what, after, lookIn);
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.OWC10Api._Range>(this, "Find", what, after, lookIn);
 		}
 
 		/// <summary>
@@ -1563,10 +1593,11 @@ namespace NetOffice.OWC10Api
 		/// <param name="lookIn">optional object lookIn</param>
 		/// <param name="lookAt">optional object lookAt</param>
 		[CustomMethod]
+		[BaseResult]
 		[SupportByVersion("OWC10", 1)]
 		public NetOffice.OWC10Api._Range Find(object what, object after, object lookIn, object lookAt)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OWC10Api._Range>(this, "Find", NetOffice.OWC10Api._Range.LateBindingApiWrapperType, what, after, lookIn, lookAt);
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.OWC10Api._Range>(this, "Find", what, after, lookIn, lookAt);
 		}
 
 		/// <summary>
@@ -1578,10 +1609,11 @@ namespace NetOffice.OWC10Api
 		/// <param name="lookAt">optional object lookAt</param>
 		/// <param name="searchOrder">optional object searchOrder</param>
 		[CustomMethod]
+		[BaseResult]
 		[SupportByVersion("OWC10", 1)]
 		public NetOffice.OWC10Api._Range Find(object what, object after, object lookIn, object lookAt, object searchOrder)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OWC10Api._Range>(this, "Find", NetOffice.OWC10Api._Range.LateBindingApiWrapperType, new object[]{ what, after, lookIn, lookAt, searchOrder });
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.OWC10Api._Range>(this, "Find", new object[]{ what, after, lookIn, lookAt, searchOrder });
 		}
 
 		/// <summary>
@@ -1594,10 +1626,11 @@ namespace NetOffice.OWC10Api
 		/// <param name="searchOrder">optional object searchOrder</param>
 		/// <param name="searchDirection">optional NetOffice.OWC10Api.Enums.XlSearchDirection SearchDirection = 1</param>
 		[CustomMethod]
+		[BaseResult]
 		[SupportByVersion("OWC10", 1)]
 		public NetOffice.OWC10Api._Range Find(object what, object after, object lookIn, object lookAt, object searchOrder, object searchDirection)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OWC10Api._Range>(this, "Find", NetOffice.OWC10Api._Range.LateBindingApiWrapperType, new object[]{ what, after, lookIn, lookAt, searchOrder, searchDirection });
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.OWC10Api._Range>(this, "Find", new object[]{ what, after, lookIn, lookAt, searchOrder, searchDirection });
 		}
 
 		/// <summary>
@@ -1611,10 +1644,11 @@ namespace NetOffice.OWC10Api
 		/// <param name="searchDirection">optional NetOffice.OWC10Api.Enums.XlSearchDirection SearchDirection = 1</param>
 		/// <param name="matchCase">optional object matchCase</param>
 		[CustomMethod]
+		[BaseResult]
 		[SupportByVersion("OWC10", 1)]
 		public NetOffice.OWC10Api._Range Find(object what, object after, object lookIn, object lookAt, object searchOrder, object searchDirection, object matchCase)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OWC10Api._Range>(this, "Find", NetOffice.OWC10Api._Range.LateBindingApiWrapperType, new object[]{ what, after, lookIn, lookAt, searchOrder, searchDirection, matchCase });
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.OWC10Api._Range>(this, "Find", new object[]{ what, after, lookIn, lookAt, searchOrder, searchDirection, matchCase });
 		}
 
 		/// <summary>
@@ -1622,19 +1656,21 @@ namespace NetOffice.OWC10Api
 		/// </summary>
 		/// <param name="after">optional object after</param>
 		[SupportByVersion("OWC10", 1)]
+		[BaseResult]
 		public NetOffice.OWC10Api._Range FindNext(object after)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OWC10Api._Range>(this, "FindNext", NetOffice.OWC10Api._Range.LateBindingApiWrapperType, after);
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.OWC10Api._Range>(this, "FindNext", after);
 		}
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
 		/// </summary>
 		[CustomMethod]
+		[BaseResult]
 		[SupportByVersion("OWC10", 1)]
 		public NetOffice.OWC10Api._Range FindNext()
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OWC10Api._Range>(this, "FindNext", NetOffice.OWC10Api._Range.LateBindingApiWrapperType);
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.OWC10Api._Range>(this, "FindNext");
 		}
 
 		/// <summary>
@@ -1642,19 +1678,21 @@ namespace NetOffice.OWC10Api
 		/// </summary>
 		/// <param name="after">optional object after</param>
 		[SupportByVersion("OWC10", 1)]
+		[BaseResult]
 		public NetOffice.OWC10Api._Range FindPrevious(object after)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OWC10Api._Range>(this, "FindPrevious", NetOffice.OWC10Api._Range.LateBindingApiWrapperType, after);
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.OWC10Api._Range>(this, "FindPrevious", after);
 		}
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
 		/// </summary>
 		[CustomMethod]
+		[BaseResult]
 		[SupportByVersion("OWC10", 1)]
 		public NetOffice.OWC10Api._Range FindPrevious()
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OWC10Api._Range>(this, "FindPrevious", NetOffice.OWC10Api._Range.LateBindingApiWrapperType);
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.OWC10Api._Range>(this, "FindPrevious");
 		}
 
 		/// <summary>
@@ -1909,6 +1947,3 @@ namespace NetOffice.OWC10Api
 		#pragma warning restore
 	}
 }
-
-
-

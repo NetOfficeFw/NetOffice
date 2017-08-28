@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using NetOffice.Attributes;
@@ -44,7 +44,14 @@ namespace NetOffice.ADODBApi
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public Connection15(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -312,9 +319,10 @@ namespace NetOffice.ADODBApi
 		/// <param name="recordsAffected">object recordsAffected</param>
 		/// <param name="options">optional Int32 Options = -1</param>
 		[SupportByVersion("ADODB", 2.1,2.5)]
+		[BaseResult]
 		public NetOffice.ADODBApi._Recordset Execute(string commandText, object recordsAffected, object options)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ADODBApi._Recordset>(this, "Execute", NetOffice.ADODBApi._Recordset.LateBindingApiWrapperType, commandText, recordsAffected, options);
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.ADODBApi._Recordset>(this, "Execute", commandText, recordsAffected, options);
 		}
 
 		/// <summary>
@@ -323,10 +331,11 @@ namespace NetOffice.ADODBApi
 		/// <param name="commandText">string commandText</param>
 		/// <param name="recordsAffected">object recordsAffected</param>
 		[CustomMethod]
+		[BaseResult]
 		[SupportByVersion("ADODB", 2.1,2.5)]
 		public NetOffice.ADODBApi._Recordset Execute(string commandText, object recordsAffected)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ADODBApi._Recordset>(this, "Execute", NetOffice.ADODBApi._Recordset.LateBindingApiWrapperType, commandText, recordsAffected);
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.ADODBApi._Recordset>(this, "Execute", commandText, recordsAffected);
 		}
 
 		/// <summary>
@@ -422,9 +431,10 @@ namespace NetOffice.ADODBApi
 		/// <param name="restrictions">optional object restrictions</param>
 		/// <param name="schemaID">optional object schemaID</param>
 		[SupportByVersion("ADODB", 2.1,2.5)]
+		[BaseResult]
 		public NetOffice.ADODBApi._Recordset OpenSchema(NetOffice.ADODBApi.Enums.SchemaEnum schema, object restrictions, object schemaID)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ADODBApi._Recordset>(this, "OpenSchema", NetOffice.ADODBApi._Recordset.LateBindingApiWrapperType, schema, restrictions, schemaID);
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.ADODBApi._Recordset>(this, "OpenSchema", schema, restrictions, schemaID);
 		}
 
 		/// <summary>
@@ -432,10 +442,11 @@ namespace NetOffice.ADODBApi
 		/// </summary>
 		/// <param name="schema">NetOffice.ADODBApi.Enums.SchemaEnum schema</param>
 		[CustomMethod]
+		[BaseResult]
 		[SupportByVersion("ADODB", 2.1,2.5)]
 		public NetOffice.ADODBApi._Recordset OpenSchema(NetOffice.ADODBApi.Enums.SchemaEnum schema)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ADODBApi._Recordset>(this, "OpenSchema", NetOffice.ADODBApi._Recordset.LateBindingApiWrapperType, schema);
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.ADODBApi._Recordset>(this, "OpenSchema", schema);
 		}
 
 		/// <summary>
@@ -444,10 +455,11 @@ namespace NetOffice.ADODBApi
 		/// <param name="schema">NetOffice.ADODBApi.Enums.SchemaEnum schema</param>
 		/// <param name="restrictions">optional object restrictions</param>
 		[CustomMethod]
+		[BaseResult]
 		[SupportByVersion("ADODB", 2.1,2.5)]
 		public NetOffice.ADODBApi._Recordset OpenSchema(NetOffice.ADODBApi.Enums.SchemaEnum schema, object restrictions)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ADODBApi._Recordset>(this, "OpenSchema", NetOffice.ADODBApi._Recordset.LateBindingApiWrapperType, schema, restrictions);
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.ADODBApi._Recordset>(this, "OpenSchema", schema, restrictions);
 		}
 
 		#endregion
@@ -455,6 +467,3 @@ namespace NetOffice.ADODBApi
 		#pragma warning restore
 	}
 }
-
-
-

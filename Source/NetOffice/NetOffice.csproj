@@ -69,6 +69,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Attributes\BaseResultAttribute.cs" />
     <Compile Include="Attributes\ComRegExportCallAttribute.cs" />
     <Compile Include="Attributes\ComRegisterCallAttribute.cs" />
     <Compile Include="Attributes\ComUnregisterCallAttribute.cs.cs" />
@@ -83,13 +84,13 @@
     <Compile Include="CoreExtensions\CorePropertyGetExtensions.cs" />
     <Compile Include="CoreExtensions\CorePropertySetExtensions.cs" />
     <Compile Include="Diagnostics\DiagnosticItem.cs" />
-    <Compile Include="Duck\DuckTypeClassGenerator.cs" />
-    <Compile Include="Duck\DuckTypeEnumeratorGenerator.cs" />
-    <Compile Include="Duck\DuckTypeEventsGenerator.cs" />
-    <Compile Include="Duck\DuckTypeIndexerGenerator.cs" />
-    <Compile Include="Duck\DuckTypeIssueClassGenerator.cs" />
-    <Compile Include="Duck\DuckTypeMethodsGenerator.cs" />
-    <Compile Include="Duck\DuckTypePropertiesGenerator.cs" />
+    <Compile Include="DuckTales\DuckTypeClassGenerator.cs" />
+    <Compile Include="DuckTales\DuckTypeEnumeratorGenerator.cs" />
+    <Compile Include="DuckTales\DuckTypeEventsGenerator.cs" />
+    <Compile Include="DuckTales\DuckTypeIndexerGenerator.cs" />
+    <Compile Include="DuckTales\DuckTypeIssueClassGenerator.cs" />
+    <Compile Include="DuckTales\DuckTypeMethodsGenerator.cs" />
+    <Compile Include="DuckTales\DuckTypePropertiesGenerator.cs" />
     <Compile Include="Attributes\EnumeratorAttribute.cs" />
     <Compile Include="Attributes\EventSinkAttribute.cs" />
     <Compile Include="Attributes\IndexPropertyAttribute.cs" />
@@ -100,23 +101,34 @@
     <Compile Include="Converter\COMObjectExpandableObjectConverter.cs" />
     <Compile Include="COMObjectFaults.cs" />
     <Compile Include="COMProxyShare.cs" />
-    <Compile Include="Duck\DuckInterface.cs" />
-    <Compile Include="Duck\DuckTypeGenerator.cs" />
+    <Compile Include="DuckTales\DuckInterface.cs" />
+    <Compile Include="DuckTales\DuckTypeGenerator.cs" />
     <Compile Include="Attributes\InternalNameAttribute.cs" />
     <Compile Include="Attributes\ComProgIdAttribute.cs" />
     <Compile Include="Attributes\RedirectAttribute.cs" />
-    <Compile Include="Duck\Resources.cs" />
+    <Compile Include="DuckTales\Resources.cs" />
     <Compile Include="Attributes\SyntaxBypassAttribute.cs" />
-    <Compile Include="Duck\VisibleAttribute.cs" />
+    <Compile Include="DuckTales\VisibleAttribute.cs" />
+    <Compile Include="Exceptions\AvailityException.cs" />
+    <Compile Include="Exceptions\CloneException.cs" />
+    <Compile Include="Exceptions\COMChildRelationException.cs" />
+    <Compile Include="Exceptions\COMDisposeException.cs" />
     <Compile Include="Exceptions\CreateCOMProxyShareException.cs" />
     <Compile Include="Exceptions\CreateInstanceException.cs" />
     <Compile Include="Exceptions\DuckException.cs" />
     <Compile Include="Exceptions\ExceptionMessageBuilder.cs" />
     <Compile Include="Exceptions\FactoryException.cs" />
+    <Compile Include="Exceptions\InvokerCOMException.cs" />
+    <Compile Include="Exceptions\MethodCOMException.cs" />
+    <Compile Include="Exceptions\NetOfficeCOMException.cs" />
+    <Compile Include="Exceptions\PropertyGetCOMException.cs" />
+    <Compile Include="Exceptions\PropertySetCOMException.cs" />
     <Compile Include="Filtering\IMessageFilter.cs" />
     <Compile Include="Filtering\INTERFACEINFO.cs" />
     <Compile Include="Filtering\RetryMessageFilterLogMode.cs" />
     <Compile Include="Filtering\RetryMessageFilterMode.cs" />
+    <Compile Include="Interfaces\ICloneable.cs" />
+    <Compile Include="Interfaces\ICOMObjectAvaility.cs" />
     <Compile Include="Interfaces\ICOMProxyShareProvider.cs" />
     <Compile Include="Resolver\InstanceTypeNameResolver.cs" />
     <Compile Include="Diagnostics\SelfDiagnostics.cs" />
@@ -238,7 +250,7 @@
     <None Include="NetOffice_v4.0.snk" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Duck\EventBinding.txt" />
+    <EmbeddedResource Include="DuckTales\EventBinding.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

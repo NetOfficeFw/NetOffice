@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using NetOffice.Attributes;
@@ -44,7 +44,14 @@ namespace NetOffice.MSComctlLibApi
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public ITreeView(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -105,12 +112,13 @@ namespace NetOffice.MSComctlLibApi
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSComctlLib", 6)]
+		[BaseResult]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public NetOffice.MSComctlLibApi.INode DropHighlight
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.MSComctlLibApi.INode>(this, "DropHighlight", NetOffice.MSComctlLibApi.INode.LateBindingApiWrapperType);
+				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.MSComctlLibApi.INode>(this, "DropHighlight");
 			}
 			set
 			{
@@ -247,12 +255,13 @@ namespace NetOffice.MSComctlLibApi
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSComctlLib", 6)]
+		[BaseResult]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public NetOffice.MSComctlLibApi.INodes Nodes
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.MSComctlLibApi.INodes>(this, "Nodes", NetOffice.MSComctlLibApi.INodes.LateBindingApiWrapperType);
+				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.MSComctlLibApi.INodes>(this, "Nodes");
 			}
 			set
 			{
@@ -282,12 +291,13 @@ namespace NetOffice.MSComctlLibApi
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSComctlLib", 6)]
+		[BaseResult]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public NetOffice.MSComctlLibApi.INode SelectedItem
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.MSComctlLibApi.INode>(this, "SelectedItem", NetOffice.MSComctlLibApi.INode.LateBindingApiWrapperType);
+				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.MSComctlLibApi.INode>(this, "SelectedItem");
 			}
 			set
 			{
@@ -548,10 +558,11 @@ namespace NetOffice.MSComctlLibApi
 		/// <param name="x">Single x</param>
 		/// <param name="y">Single y</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		[BaseResult]
 		[SupportByVersion("MSComctlLib", 6)]
 		public NetOffice.MSComctlLibApi.INode HitTest(Single x, Single y)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.MSComctlLibApi.INode>(this, "HitTest", NetOffice.MSComctlLibApi.INode.LateBindingApiWrapperType, x, y);
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.MSComctlLibApi.INode>(this, "HitTest", x, y);
 		}
 
 		/// <summary>
@@ -606,6 +617,3 @@ namespace NetOffice.MSComctlLibApi
 		#pragma warning restore
 	}
 }
-
-
-

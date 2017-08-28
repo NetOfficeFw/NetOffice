@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using NetOffice.Attributes;
@@ -44,7 +44,14 @@ namespace NetOffice.OutlookApi
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public _MobileItem(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -105,11 +112,12 @@ namespace NetOffice.OutlookApi
 		/// Get
 		/// </summary>
 		[SupportByVersion("Outlook", 14,15,16)]
+		[BaseResult]
 		public NetOffice.OutlookApi._Application Application
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OutlookApi._Application>(this, "Application", NetOffice.OutlookApi._Application.LateBindingApiWrapperType);
+				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.OutlookApi._Application>(this, "Application");
 			}
 		}
 
@@ -131,11 +139,12 @@ namespace NetOffice.OutlookApi
 		/// Get
 		/// </summary>
 		[SupportByVersion("Outlook", 14,15,16)]
+		[BaseResult]
 		public NetOffice.OutlookApi._NameSpace Session
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OutlookApi._NameSpace>(this, "Session", NetOffice.OutlookApi._NameSpace.LateBindingApiWrapperType);
+				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.OutlookApi._NameSpace>(this, "Session");
 			}
 		}
 
@@ -317,11 +326,12 @@ namespace NetOffice.OutlookApi
 		/// Get
 		/// </summary>
 		[SupportByVersion("Outlook", 14,15,16)]
+		[BaseResult]
 		public NetOffice.OutlookApi._Inspector GetInspector
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OutlookApi._Inspector>(this, "GetInspector", NetOffice.OutlookApi._Inspector.LateBindingApiWrapperType);
+				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.OutlookApi._Inspector>(this, "GetInspector");
 			}
 		}
 
@@ -957,6 +967,3 @@ namespace NetOffice.OutlookApi
 		#pragma warning restore
 	}
 }
-
-
-

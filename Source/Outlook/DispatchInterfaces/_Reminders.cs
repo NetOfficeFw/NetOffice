@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using System;
 using NetRuntimeSystem = System;
@@ -13,7 +13,7 @@ namespace NetOffice.OutlookApi
 	/// </summary>
 	[SupportByVersion("Outlook", 10,11,12,14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Method), HasIndexProperty(IndexInvoke.Method, "Item")]
-	public class _Reminders : COMObject , IEnumerable<NetOffice.OutlookApi._Reminder>
+	public class _Reminders : COMObject, IEnumerable<NetOffice.OutlookApi._Reminder>
 	{
 		#pragma warning disable
 
@@ -46,7 +46,14 @@ namespace NetOffice.OutlookApi
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public _Reminders(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -108,11 +115,12 @@ namespace NetOffice.OutlookApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860986.aspx </remarks>
 		[SupportByVersion("Outlook", 10,11,12,14,15,16)]
+		[BaseResult]
 		public NetOffice.OutlookApi._Application Application
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OutlookApi._Application>(this, "Application", NetOffice.OutlookApi._Application.LateBindingApiWrapperType);
+				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.OutlookApi._Application>(this, "Application");
 			}
 		}
 
@@ -136,11 +144,12 @@ namespace NetOffice.OutlookApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860289.aspx </remarks>
 		[SupportByVersion("Outlook", 10,11,12,14,15,16)]
+		[BaseResult]
 		public NetOffice.OutlookApi._NameSpace Session
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OutlookApi._NameSpace>(this, "Session", NetOffice.OutlookApi._NameSpace.LateBindingApiWrapperType);
+				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.OutlookApi._NameSpace>(this, "Session");
 			}
 		}
 
@@ -182,12 +191,13 @@ namespace NetOffice.OutlookApi
 		/// </summary>
 		/// <param name="index">object index</param>
 		[SupportByVersion("Outlook", 10,11,12,14,15,16)]
+		[BaseResult]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
 		public NetOffice.OutlookApi._Reminder this[object index]
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OutlookApi._Reminder>(this, "Item", NetOffice.OutlookApi._Reminder.LateBindingApiWrapperType, index);
+				return Factory.ExecuteBaseReferenceMethodGet<NetOffice.OutlookApi._Reminder>(this, "Item", index);
 			}
 		}
 
@@ -202,29 +212,29 @@ namespace NetOffice.OutlookApi
 			 Factory.ExecuteMethod(this, "Remove", index);
 		}
 
-		#endregion
+        #endregion
 
-       #region IEnumerable<NetOffice.OutlookApi._Reminder> Member
-        
+        #region IEnumerable<NetOffice.OutlookApi._Reminder> Member
+
         /// <summary>
-		/// SupportByVersion Outlook, 10,11,12,14,15,16
-		/// </summary>
-		[SupportByVersion("Outlook", 10,11,12,14,15,16)]
-       public IEnumerator<NetOffice.OutlookApi._Reminder> GetEnumerator()  
-       {
-           NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
-           foreach (NetOffice.OutlookApi._Reminder item in innerEnumerator)
-               yield return item;
-       }
+        /// SupportByVersion Outlook, 10,11,12,14,15,16
+        /// </summary>
+        [SupportByVersion("Outlook", 10, 11, 12, 14, 15, 16)]
+        public IEnumerator<NetOffice.OutlookApi._Reminder> GetEnumerator()
+        {
+            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
+            foreach (NetOffice.OutlookApi._Reminder item in innerEnumerator)
+                yield return item;
+        }
 
-       #endregion
-          
-		#region IEnumerable Members
-       
-		/// <summary>
-		/// SupportByVersion Outlook, 10,11,12,14,15,16
-		/// </summary>
-		[SupportByVersion("Outlook", 10,11,12,14,15,16)]
+        #endregion
+
+        #region IEnumerable Members
+
+        /// <summary>
+        /// SupportByVersion Outlook, 10,11,12,14,15,16
+        /// </summary>
+        [SupportByVersion("Outlook", 10,11,12,14,15,16)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
 			return NetOffice.Utils.GetProxyEnumeratorAsMethod(this);
@@ -235,6 +245,3 @@ namespace NetOffice.OutlookApi
 		#pragma warning restore
 	}
 }
-
-
-

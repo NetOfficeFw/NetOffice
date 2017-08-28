@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using System;
 using NetRuntimeSystem = System;
@@ -14,7 +14,7 @@ namespace NetOffice.AccessApi
 	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff845092.aspx </remarks>
 	[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Method), HasIndexProperty(IndexInvoke.Property, "Item")]
-	public class FormatConditions : COMObject , IEnumerable<NetOffice.AccessApi._FormatCondition>
+	public class FormatConditions : COMObject, IEnumerable<NetOffice.AccessApi._FormatCondition>
 	{
 		#pragma warning disable
 
@@ -47,7 +47,14 @@ namespace NetOffice.AccessApi
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public FormatConditions(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -138,12 +145,13 @@ namespace NetOffice.AccessApi
 		/// </summary>
 		/// <param name="index">object index</param>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
+		[BaseResult]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
 		public NetOffice.AccessApi._FormatCondition this[object index]
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.AccessApi._FormatCondition>(this, "Item", NetOffice.AccessApi._FormatCondition.LateBindingApiWrapperType, index);
+				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.AccessApi._FormatCondition>(this, "Item", index);
 			}
 		}
 
@@ -170,13 +178,14 @@ namespace NetOffice.AccessApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194814.aspx </remarks>
 		/// <param name="type">NetOffice.AccessApi.Enums.AcFormatConditionType type</param>
-		/// <param name="_operator">optional NetOffice.AccessApi.Enums.AcFormatConditionOperator Operator = 0</param>
+		/// <param name="_operator">optional NetOffice.AccessApi.Enums.AcFormatConditionOperator operator = 0</param>
 		/// <param name="expression1">optional object expression1</param>
 		/// <param name="expression2">optional object expression2</param>
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
+		[BaseResult]
 		public NetOffice.AccessApi._FormatCondition Add(NetOffice.AccessApi.Enums.AcFormatConditionType type, object _operator, object expression1, object expression2)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.AccessApi._FormatCondition>(this, "Add", NetOffice.AccessApi._FormatCondition.LateBindingApiWrapperType, type, _operator, expression1, expression2);
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.AccessApi._FormatCondition>(this, "Add", type, _operator, expression1, expression2);
 		}
 
 		/// <summary>
@@ -185,10 +194,11 @@ namespace NetOffice.AccessApi
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194814.aspx </remarks>
 		/// <param name="type">NetOffice.AccessApi.Enums.AcFormatConditionType type</param>
 		[CustomMethod]
+		[BaseResult]
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public NetOffice.AccessApi._FormatCondition Add(NetOffice.AccessApi.Enums.AcFormatConditionType type)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.AccessApi._FormatCondition>(this, "Add", NetOffice.AccessApi._FormatCondition.LateBindingApiWrapperType, type);
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.AccessApi._FormatCondition>(this, "Add", type);
 		}
 
 		/// <summary>
@@ -198,10 +208,11 @@ namespace NetOffice.AccessApi
 		/// <param name="type">NetOffice.AccessApi.Enums.AcFormatConditionType type</param>
 		/// <param name="_operator">optional NetOffice.AccessApi.Enums.AcFormatConditionOperator Operator = 0</param>
 		[CustomMethod]
+		[BaseResult]
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public NetOffice.AccessApi._FormatCondition Add(NetOffice.AccessApi.Enums.AcFormatConditionType type, object _operator)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.AccessApi._FormatCondition>(this, "Add", NetOffice.AccessApi._FormatCondition.LateBindingApiWrapperType, type, _operator);
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.AccessApi._FormatCondition>(this, "Add", type, _operator);
 		}
 
 		/// <summary>
@@ -212,10 +223,11 @@ namespace NetOffice.AccessApi
 		/// <param name="_operator">optional NetOffice.AccessApi.Enums.AcFormatConditionOperator Operator = 0</param>
 		/// <param name="expression1">optional object expression1</param>
 		[CustomMethod]
+		[BaseResult]
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public NetOffice.AccessApi._FormatCondition Add(NetOffice.AccessApi.Enums.AcFormatConditionType type, object _operator, object expression1)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.AccessApi._FormatCondition>(this, "Add", NetOffice.AccessApi._FormatCondition.LateBindingApiWrapperType, type, _operator, expression1);
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.AccessApi._FormatCondition>(this, "Add", type, _operator, expression1);
 		}
 
 		/// <summary>
@@ -239,29 +251,29 @@ namespace NetOffice.AccessApi
 			return Factory.ExecuteBoolMethodGet(this, "IsMemberSafe", dispid);
 		}
 
-		#endregion
+        #endregion
 
-       #region IEnumerable<NetOffice.AccessApi._FormatCondition> Member
-        
+        #region IEnumerable<NetOffice.AccessApi._FormatCondition> Member
+
         /// <summary>
-		/// SupportByVersion Access, 9,10,11,12,14,15,16
-		/// </summary>
-		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-       public IEnumerator<NetOffice.AccessApi._FormatCondition> GetEnumerator()  
-       {
-           NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
-           foreach (NetOffice.AccessApi._FormatCondition item in innerEnumerator)
-               yield return item;
-       }
+        /// SupportByVersion Access, 9,10,11,12,14,15,16
+        /// </summary>
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
+        public IEnumerator<NetOffice.AccessApi._FormatCondition> GetEnumerator()
+        {
+            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
+            foreach (NetOffice.AccessApi._FormatCondition item in innerEnumerator)
+                yield return item;
+        }
 
-       #endregion
-          
-		#region IEnumerable Members
-       
-		/// <summary>
-		/// SupportByVersion Access, 9,10,11,12,14,15,16
-		/// </summary>
-		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        #endregion
+
+        #region IEnumerable Members
+
+        /// <summary>
+        /// SupportByVersion Access, 9,10,11,12,14,15,16
+        /// </summary>
+        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
 			return NetOffice.Utils.GetProxyEnumeratorAsMethod(this);
@@ -272,6 +284,3 @@ namespace NetOffice.AccessApi
 		#pragma warning restore
 	}
 }
-
-
-

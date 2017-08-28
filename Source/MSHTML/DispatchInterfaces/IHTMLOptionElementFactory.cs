@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using NetOffice.Attributes;
@@ -44,7 +44,14 @@ namespace NetOffice.MSHTMLApi
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public IHTMLOptionElementFactory(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -112,19 +119,21 @@ namespace NetOffice.MSHTMLApi
 		/// <param name="defaultSelected">optional object defaultSelected</param>
 		/// <param name="selected">optional object selected</param>
 		[SupportByVersion("MSHTML", 4)]
+		[BaseResult]
 		public NetOffice.MSHTMLApi.IHTMLOptionElement create(object text, object value, object defaultSelected, object selected)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.MSHTMLApi.IHTMLOptionElement>(this, "create", NetOffice.MSHTMLApi.IHTMLOptionElement.LateBindingApiWrapperType, text, value, defaultSelected, selected);
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.MSHTMLApi.IHTMLOptionElement>(this, "create", text, value, defaultSelected, selected);
 		}
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// </summary>
 		[CustomMethod]
+		[BaseResult]
 		[SupportByVersion("MSHTML", 4)]
 		public NetOffice.MSHTMLApi.IHTMLOptionElement create()
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.MSHTMLApi.IHTMLOptionElement>(this, "create", NetOffice.MSHTMLApi.IHTMLOptionElement.LateBindingApiWrapperType);
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.MSHTMLApi.IHTMLOptionElement>(this, "create");
 		}
 
 		/// <summary>
@@ -132,10 +141,11 @@ namespace NetOffice.MSHTMLApi
 		/// </summary>
 		/// <param name="text">optional object text</param>
 		[CustomMethod]
+		[BaseResult]
 		[SupportByVersion("MSHTML", 4)]
 		public NetOffice.MSHTMLApi.IHTMLOptionElement create(object text)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.MSHTMLApi.IHTMLOptionElement>(this, "create", NetOffice.MSHTMLApi.IHTMLOptionElement.LateBindingApiWrapperType, text);
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.MSHTMLApi.IHTMLOptionElement>(this, "create", text);
 		}
 
 		/// <summary>
@@ -144,10 +154,11 @@ namespace NetOffice.MSHTMLApi
 		/// <param name="text">optional object text</param>
 		/// <param name="value">optional object value</param>
 		[CustomMethod]
+		[BaseResult]
 		[SupportByVersion("MSHTML", 4)]
 		public NetOffice.MSHTMLApi.IHTMLOptionElement create(object text, object value)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.MSHTMLApi.IHTMLOptionElement>(this, "create", NetOffice.MSHTMLApi.IHTMLOptionElement.LateBindingApiWrapperType, text, value);
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.MSHTMLApi.IHTMLOptionElement>(this, "create", text, value);
 		}
 
 		/// <summary>
@@ -157,10 +168,11 @@ namespace NetOffice.MSHTMLApi
 		/// <param name="value">optional object value</param>
 		/// <param name="defaultSelected">optional object defaultSelected</param>
 		[CustomMethod]
+		[BaseResult]
 		[SupportByVersion("MSHTML", 4)]
 		public NetOffice.MSHTMLApi.IHTMLOptionElement create(object text, object value, object defaultSelected)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.MSHTMLApi.IHTMLOptionElement>(this, "create", NetOffice.MSHTMLApi.IHTMLOptionElement.LateBindingApiWrapperType, text, value, defaultSelected);
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.MSHTMLApi.IHTMLOptionElement>(this, "create", text, value, defaultSelected);
 		}
 
 		#endregion
@@ -168,6 +180,3 @@ namespace NetOffice.MSHTMLApi
 		#pragma warning restore
 	}
 }
-
-
-

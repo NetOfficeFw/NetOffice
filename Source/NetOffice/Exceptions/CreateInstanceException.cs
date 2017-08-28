@@ -8,7 +8,7 @@ namespace NetOffice.Exceptions
     /// <summary>
     /// Indicates NetOffice.Core failed to create an instance
     /// </summary>
-    public class CreateInstanceException : NetOfficeException
+    public class CreateInstanceException : NetOfficeCOMException
     {
         /// <summary>
         /// Creates an instance of the class

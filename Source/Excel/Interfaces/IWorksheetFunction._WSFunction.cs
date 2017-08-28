@@ -820,7 +820,3 @@ namespace NetOffice.ExcelApi
         #endregion
     }
 }
-
-
-
-

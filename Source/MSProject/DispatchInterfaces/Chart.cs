@@ -1,4 +1,4 @@
-﻿using System.Reflection;
+using System.Reflection;
 using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
@@ -12,7 +12,14 @@ namespace NetOffice.MSProjectApi
 	[SyntaxBypass]
  	public class Chart_ : COMObject
 	{
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public Chart_(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -268,7 +275,14 @@ namespace NetOffice.MSProjectApi
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public Chart(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -360,11 +374,12 @@ namespace NetOffice.MSProjectApi
 		/// Get
 		/// </summary>
 		[SupportByVersion("MSProject", 11)]
+		[BaseResult]
 		public NetOffice.OfficeApi.IMsoChartTitle ChartTitle
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.IMsoChartTitle>(this, "ChartTitle", NetOffice.OfficeApi.IMsoChartTitle.LateBindingApiWrapperType);
+				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.OfficeApi.IMsoChartTitle>(this, "ChartTitle");
 			}
 		}
 
@@ -2519,6 +2534,3 @@ namespace NetOffice.MSProjectApi
 		#pragma warning restore
 	}
 }
-
-
-

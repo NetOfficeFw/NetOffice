@@ -1,4 +1,4 @@
-﻿using System.Reflection;
+using System.Reflection;
 using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
@@ -12,7 +12,14 @@ namespace NetOffice.OfficeApi
 	[SyntaxBypass]
  	public class CommandBarControl_ : _IMsoOleAccDispObj
 	{
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public CommandBarControl_(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -329,7 +336,14 @@ namespace NetOffice.OfficeApi
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public CommandBarControl(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -1199,9 +1213,10 @@ namespace NetOffice.OfficeApi
 		/// <param name="bar">optional object bar</param>
 		/// <param name="before">optional object before</param>
 		[SupportByVersion("Office", 9,10,11,12,14,15,16)]
+		[BaseResult]
 		public NetOffice.OfficeApi.CommandBarControl Copy(object bar, object before)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.CommandBarControl>(this, "Copy", NetOffice.OfficeApi.CommandBarControl.LateBindingApiWrapperType, bar, before);
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.OfficeApi.CommandBarControl>(this, "Copy", bar, before);
 		}
 
 		/// <summary>
@@ -1209,10 +1224,11 @@ namespace NetOffice.OfficeApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff861397.aspx </remarks>
 		[CustomMethod]
+		[BaseResult]
 		[SupportByVersion("Office", 9,10,11,12,14,15,16)]
 		public NetOffice.OfficeApi.CommandBarControl Copy()
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.CommandBarControl>(this, "Copy", NetOffice.OfficeApi.CommandBarControl.LateBindingApiWrapperType);
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.OfficeApi.CommandBarControl>(this, "Copy");
 		}
 
 		/// <summary>
@@ -1221,10 +1237,11 @@ namespace NetOffice.OfficeApi
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff861397.aspx </remarks>
 		/// <param name="bar">optional object bar</param>
 		[CustomMethod]
+		[BaseResult]
 		[SupportByVersion("Office", 9,10,11,12,14,15,16)]
 		public NetOffice.OfficeApi.CommandBarControl Copy(object bar)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.CommandBarControl>(this, "Copy", NetOffice.OfficeApi.CommandBarControl.LateBindingApiWrapperType, bar);
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.OfficeApi.CommandBarControl>(this, "Copy", bar);
 		}
 
 		/// <summary>
@@ -1266,9 +1283,10 @@ namespace NetOffice.OfficeApi
 		/// <param name="bar">optional object bar</param>
 		/// <param name="before">optional object before</param>
 		[SupportByVersion("Office", 9,10,11,12,14,15,16)]
+		[BaseResult]
 		public NetOffice.OfficeApi.CommandBarControl Move(object bar, object before)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.CommandBarControl>(this, "Move", NetOffice.OfficeApi.CommandBarControl.LateBindingApiWrapperType, bar, before);
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.OfficeApi.CommandBarControl>(this, "Move", bar, before);
 		}
 
 		/// <summary>
@@ -1276,10 +1294,11 @@ namespace NetOffice.OfficeApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff863114.aspx </remarks>
 		[CustomMethod]
+		[BaseResult]
 		[SupportByVersion("Office", 9,10,11,12,14,15,16)]
 		public NetOffice.OfficeApi.CommandBarControl Move()
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.CommandBarControl>(this, "Move", NetOffice.OfficeApi.CommandBarControl.LateBindingApiWrapperType);
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.OfficeApi.CommandBarControl>(this, "Move");
 		}
 
 		/// <summary>
@@ -1288,10 +1307,11 @@ namespace NetOffice.OfficeApi
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff863114.aspx </remarks>
 		/// <param name="bar">optional object bar</param>
 		[CustomMethod]
+		[BaseResult]
 		[SupportByVersion("Office", 9,10,11,12,14,15,16)]
 		public NetOffice.OfficeApi.CommandBarControl Move(object bar)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.CommandBarControl>(this, "Move", NetOffice.OfficeApi.CommandBarControl.LateBindingApiWrapperType, bar);
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.OfficeApi.CommandBarControl>(this, "Move", bar);
 		}
 
 		/// <summary>
@@ -1389,6 +1409,3 @@ namespace NetOffice.OfficeApi
 		#pragma warning restore
 	}
 }
-
-
-

@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using System;
 using NetRuntimeSystem = System;
@@ -46,7 +46,14 @@ namespace NetOffice.OWC10Api
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public SchemaFields(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -121,12 +128,13 @@ namespace NetOffice.OWC10Api
 		/// </summary>
 		/// <param name="index">object index</param>
 		[SupportByVersion("OWC10", 1)]
+		[BaseResult]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
 		public NetOffice.OWC10Api.SchemaField this[object index]
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OWC10Api.SchemaField>(this, "Item", NetOffice.OWC10Api.SchemaField.LateBindingApiWrapperType, index);
+				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.OWC10Api.SchemaField>(this, "Item", index);
 			}
 		}
 
@@ -141,9 +149,10 @@ namespace NetOffice.OWC10Api
 		/// <param name="dataType">NetOffice.ADODBApi.Enums.DataTypeEnum dataType</param>
 		/// <param name="length">optional object length</param>
 		[SupportByVersion("OWC10", 1)]
+		[BaseResult]
 		public NetOffice.OWC10Api.SchemaField Add(string name, NetOffice.ADODBApi.Enums.DataTypeEnum dataType, object length)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OWC10Api.SchemaField>(this, "Add", NetOffice.OWC10Api.SchemaField.LateBindingApiWrapperType, name, dataType, length);
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.OWC10Api.SchemaField>(this, "Add", name, dataType, length);
 		}
 
 		/// <summary>
@@ -152,10 +161,11 @@ namespace NetOffice.OWC10Api
 		/// <param name="name">string name</param>
 		/// <param name="dataType">NetOffice.ADODBApi.Enums.DataTypeEnum dataType</param>
 		[CustomMethod]
+		[BaseResult]
 		[SupportByVersion("OWC10", 1)]
 		public NetOffice.OWC10Api.SchemaField Add(string name, NetOffice.ADODBApi.Enums.DataTypeEnum dataType)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OWC10Api.SchemaField>(this, "Add", NetOffice.OWC10Api.SchemaField.LateBindingApiWrapperType, name, dataType);
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.OWC10Api.SchemaField>(this, "Add", name, dataType);
 		}
 
 		/// <summary>
@@ -201,6 +211,3 @@ namespace NetOffice.OWC10Api
 		#pragma warning restore
 	}
 }
-
-
-

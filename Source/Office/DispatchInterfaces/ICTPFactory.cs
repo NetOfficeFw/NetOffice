@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using NetOffice.Attributes;
@@ -45,7 +45,14 @@ namespace NetOffice.OfficeApi
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public ICTPFactory(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -98,10 +105,6 @@ namespace NetOffice.OfficeApi
 		}
 		
 		#endregion
-		
-		#region Properties
-
-		#endregion
 
 		#region Methods
 
@@ -113,9 +116,10 @@ namespace NetOffice.OfficeApi
 		/// <param name="cTPTitle">string cTPTitle</param>
 		/// <param name="cTPParentWindow">optional object cTPParentWindow</param>
 		[SupportByVersion("Office", 12,14,15,16)]
+		[BaseResult]
 		public NetOffice.OfficeApi._CustomTaskPane CreateCTP(string cTPAxID, string cTPTitle, object cTPParentWindow)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi._CustomTaskPane>(this, "CreateCTP", NetOffice.OfficeApi._CustomTaskPane.LateBindingApiWrapperType, cTPAxID, cTPTitle, cTPParentWindow);
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.OfficeApi._CustomTaskPane>(this, "CreateCTP", cTPAxID, cTPTitle, cTPParentWindow);
 		}
 
 		/// <summary>
@@ -125,10 +129,11 @@ namespace NetOffice.OfficeApi
 		/// <param name="cTPAxID">string cTPAxID</param>
 		/// <param name="cTPTitle">string cTPTitle</param>
 		[CustomMethod]
+		[BaseResult]
 		[SupportByVersion("Office", 12,14,15,16)]
 		public NetOffice.OfficeApi._CustomTaskPane CreateCTP(string cTPAxID, string cTPTitle)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi._CustomTaskPane>(this, "CreateCTP", NetOffice.OfficeApi._CustomTaskPane.LateBindingApiWrapperType, cTPAxID, cTPTitle);
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.OfficeApi._CustomTaskPane>(this, "CreateCTP", cTPAxID, cTPTitle);
 		}
 
 		#endregion
@@ -136,6 +141,3 @@ namespace NetOffice.OfficeApi
 		#pragma warning restore
 	}
 }
-
-
-

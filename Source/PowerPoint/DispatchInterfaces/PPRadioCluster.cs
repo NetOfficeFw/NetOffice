@@ -13,7 +13,7 @@ namespace NetOffice.PowerPointApi
 	/// </summary>
 	[SupportByVersion("PowerPoint", 9)]
 	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Custom), HasIndexProperty(IndexInvoke.Method, "Item")]
-	public class PPRadioCluster : PPControl , IEnumerable<NetOffice.PowerPointApi.PPRadioButton>
+	public class PPRadioCluster : PPControl, IEnumerable<NetOffice.PowerPointApi.PPRadioButton>
 	{
 		#pragma warning disable
 
@@ -46,7 +46,14 @@ namespace NetOffice.PowerPointApi
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public PPRadioCluster(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -176,48 +183,46 @@ namespace NetOffice.PowerPointApi
 			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PowerPointApi.PPRadioButton>(this, "Add", NetOffice.PowerPointApi.PPRadioButton.LateBindingApiWrapperType, left, top, width, height);
 		}
 
-		#endregion
-       #region IEnumerable<NetOffice.PowerPointApi.PPRadioButton> Member
+        #endregion
         
-        /// <summary>
-		/// SupportByVersion PowerPoint, 9
-		/// This is a custom enumerator from NetOffice
-		/// </summary>
-		[SupportByVersion("PowerPoint", 9)]
-        [CustomEnumerator]
-       public IEnumerator<NetOffice.PowerPointApi.PPRadioButton> GetEnumerator()  
-       {
-           NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
-           foreach (NetOffice.PowerPointApi.PPRadioButton item in innerEnumerator)
-               yield return item;
-       }
+        #region IEnumerable<NetOffice.PowerPointApi.PPRadioButton> Member
 
-       #endregion
-   
-       #region IEnumerable Members
-        
-       /// <summary>
-		/// SupportByVersion PowerPoint, 9
-		/// This is a custom enumerator from NetOffice
-		/// </summary>
-		[SupportByVersion("PowerPoint", 9)]
+        /// <summary>
+        /// SupportByVersion PowerPoint, 9
+        /// This is a custom enumerator from NetOffice
+        /// </summary>
+        [SupportByVersion("PowerPoint", 9)]
+        [CustomEnumerator]
+        public IEnumerator<NetOffice.PowerPointApi.PPRadioButton> GetEnumerator()
+        {
+            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
+            foreach (NetOffice.PowerPointApi.PPRadioButton item in innerEnumerator)
+                yield return item;
+        }
+
+        #endregion
+
+        #region IEnumerable Members
+
+        /// <summary>
+        /// SupportByVersion PowerPoint, 9
+        /// This is a custom enumerator from NetOffice
+        /// </summary>
+        [SupportByVersion("PowerPoint", 9)]
         [CustomEnumerator]
         IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
-       {
+        {
             int count = Count;
             object[] enumeratorObjects = new object[count];
             for (int i = 0; i < count; i++)
-                enumeratorObjects[i] = this[i+1];
+                enumeratorObjects[i] = this[i + 1];
 
             foreach (object item in enumeratorObjects)
                 yield return item;
-       }
+        }
 
-       #endregion
+        #endregion
 
-       		#pragma warning restore
-	}
+        #pragma warning restore
+    }
 }
-
-
-

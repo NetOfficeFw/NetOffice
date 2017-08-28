@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace NetOffice
+namespace NetOffice.Callers
 {
     /// <summary>
     /// ICOMObject Quit method caller

@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using System;
 using NetRuntimeSystem = System;
@@ -14,7 +14,7 @@ namespace NetOffice.OfficeApi
 	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff862747.aspx </remarks>
 	[SupportByVersion("Office", 9,10,11,12,14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "Item")]
-	public class CommandBarControls : _IMsoDispObj , IEnumerable<NetOffice.OfficeApi.CommandBarControl>
+	public class CommandBarControls : _IMsoDispObj, IEnumerable<NetOffice.OfficeApi.CommandBarControl>
 	{
 		#pragma warning disable
 
@@ -47,7 +47,14 @@ namespace NetOffice.OfficeApi
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public CommandBarControls(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -123,12 +130,13 @@ namespace NetOffice.OfficeApi
 		/// </summary>
 		/// <param name="index">object index</param>
 		[SupportByVersion("Office", 9,10,11,12,14,15,16)]
+		[BaseResult]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
 		public NetOffice.OfficeApi.CommandBarControl this[object index]
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.CommandBarControl>(this, "Item", NetOffice.OfficeApi.CommandBarControl.LateBindingApiWrapperType, index);
+				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.OfficeApi.CommandBarControl>(this, "Item", index);
 			}
 		}
 
@@ -160,9 +168,10 @@ namespace NetOffice.OfficeApi
 		/// <param name="before">optional object before</param>
 		/// <param name="temporary">optional object temporary</param>
 		[SupportByVersion("Office", 9,10,11,12,14,15,16)]
+		[BaseResult]
 		public NetOffice.OfficeApi.CommandBarControl Add(object type, object id, object parameter, object before, object temporary)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.CommandBarControl>(this, "Add", NetOffice.OfficeApi.CommandBarControl.LateBindingApiWrapperType, new object[]{ type, id, parameter, before, temporary });
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.OfficeApi.CommandBarControl>(this, "Add", new object[]{ type, id, parameter, before, temporary });
 		}
 
 		/// <summary>
@@ -170,10 +179,11 @@ namespace NetOffice.OfficeApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff861771.aspx </remarks>
 		[CustomMethod]
+		[BaseResult]
 		[SupportByVersion("Office", 9,10,11,12,14,15,16)]
 		public NetOffice.OfficeApi.CommandBarControl Add()
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.CommandBarControl>(this, "Add", NetOffice.OfficeApi.CommandBarControl.LateBindingApiWrapperType);
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.OfficeApi.CommandBarControl>(this, "Add");
 		}
 
 		/// <summary>
@@ -182,10 +192,11 @@ namespace NetOffice.OfficeApi
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff861771.aspx </remarks>
 		/// <param name="type">optional object type</param>
 		[CustomMethod]
+		[BaseResult]
 		[SupportByVersion("Office", 9,10,11,12,14,15,16)]
 		public NetOffice.OfficeApi.CommandBarControl Add(object type)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.CommandBarControl>(this, "Add", NetOffice.OfficeApi.CommandBarControl.LateBindingApiWrapperType, type);
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.OfficeApi.CommandBarControl>(this, "Add", type);
 		}
 
 		/// <summary>
@@ -195,10 +206,11 @@ namespace NetOffice.OfficeApi
 		/// <param name="type">optional object type</param>
 		/// <param name="id">optional object id</param>
 		[CustomMethod]
+		[BaseResult]
 		[SupportByVersion("Office", 9,10,11,12,14,15,16)]
 		public NetOffice.OfficeApi.CommandBarControl Add(object type, object id)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.CommandBarControl>(this, "Add", NetOffice.OfficeApi.CommandBarControl.LateBindingApiWrapperType, type, id);
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.OfficeApi.CommandBarControl>(this, "Add", type, id);
 		}
 
 		/// <summary>
@@ -209,10 +221,11 @@ namespace NetOffice.OfficeApi
 		/// <param name="id">optional object id</param>
 		/// <param name="parameter">optional object parameter</param>
 		[CustomMethod]
+		[BaseResult]
 		[SupportByVersion("Office", 9,10,11,12,14,15,16)]
 		public NetOffice.OfficeApi.CommandBarControl Add(object type, object id, object parameter)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.CommandBarControl>(this, "Add", NetOffice.OfficeApi.CommandBarControl.LateBindingApiWrapperType, type, id, parameter);
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.OfficeApi.CommandBarControl>(this, "Add", type, id, parameter);
 		}
 
 		/// <summary>
@@ -224,35 +237,36 @@ namespace NetOffice.OfficeApi
 		/// <param name="parameter">optional object parameter</param>
 		/// <param name="before">optional object before</param>
 		[CustomMethod]
+		[BaseResult]
 		[SupportByVersion("Office", 9,10,11,12,14,15,16)]
 		public NetOffice.OfficeApi.CommandBarControl Add(object type, object id, object parameter, object before)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.CommandBarControl>(this, "Add", NetOffice.OfficeApi.CommandBarControl.LateBindingApiWrapperType, type, id, parameter, before);
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.OfficeApi.CommandBarControl>(this, "Add", type, id, parameter, before);
 		}
 
-		#endregion
+        #endregion
 
-       #region IEnumerable<NetOffice.OfficeApi.CommandBarControl> Member
-        
+        #region IEnumerable<NetOffice.OfficeApi.CommandBarControl> Member
+
         /// <summary>
-		/// SupportByVersion Office, 9,10,11,12,14,15,16
-		/// </summary>
-		[SupportByVersion("Office", 9,10,11,12,14,15,16)]
-       public IEnumerator<NetOffice.OfficeApi.CommandBarControl> GetEnumerator()  
-       {
-           NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
-           foreach (NetOffice.OfficeApi.CommandBarControl item in innerEnumerator)
-               yield return item;
-       }
+        /// SupportByVersion Office, 9,10,11,12,14,15,16
+        /// </summary>
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
+        public IEnumerator<NetOffice.OfficeApi.CommandBarControl> GetEnumerator()
+        {
+            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
+            foreach (NetOffice.OfficeApi.CommandBarControl item in innerEnumerator)
+                yield return item;
+        }
 
-       #endregion
-          
-		#region IEnumerable Members
-       
-		/// <summary>
-		/// SupportByVersion Office, 9,10,11,12,14,15,16
-		/// </summary>
-		[SupportByVersion("Office", 9,10,11,12,14,15,16)]
+        #endregion
+
+        #region IEnumerable Members
+
+        /// <summary>
+        /// SupportByVersion Office, 9,10,11,12,14,15,16
+        /// </summary>
+        [SupportByVersion("Office", 9,10,11,12,14,15,16)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
 			return NetOffice.Utils.GetProxyEnumeratorAsProperty(this);
@@ -263,6 +277,3 @@ namespace NetOffice.OfficeApi
 		#pragma warning restore
 	}
 }
-
-
-

@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using NetOffice.Attributes;
@@ -45,7 +45,14 @@ namespace NetOffice.AccessApi
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public AccessObject(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -295,9 +302,10 @@ namespace NetOffice.AccessApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff192442.aspx </remarks>
 		[SupportByVersion("Access", 11,12,14,15,16)]
+		[BaseResult]
 		public NetOffice.AccessApi._DependencyInfo GetDependencyInfo()
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.AccessApi._DependencyInfo>(this, "GetDependencyInfo", NetOffice.AccessApi._DependencyInfo.LateBindingApiWrapperType);
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.AccessApi._DependencyInfo>(this, "GetDependencyInfo");
 		}
 
 		/// <summary>
@@ -316,6 +324,3 @@ namespace NetOffice.AccessApi
 		#pragma warning restore
 	}
 }
-
-
-

@@ -809,7 +809,3 @@ namespace NetOffice.ExcelApi
         #endregion
     }
 }
-
-
-
-

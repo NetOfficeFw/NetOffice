@@ -14,7 +14,7 @@ namespace NetOffice.OfficeApi
 	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860224.aspx </remarks>
 	[SupportByVersion("Office", 12,14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Method, "Item")]
-	public class RulerLevels2 : _IMsoDispObj , IEnumerable<NetOffice.OfficeApi.RulerLevel2>
+	public class RulerLevels2 : _IMsoDispObj, IEnumerable<NetOffice.OfficeApi.RulerLevel2>
 	{
 		#pragma warning disable
 
@@ -47,7 +47,14 @@ namespace NetOffice.OfficeApi
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public RulerLevels2(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -150,29 +157,29 @@ namespace NetOffice.OfficeApi
 			}
 		}
 
-		#endregion
+        #endregion
 
-       #region IEnumerable<NetOffice.OfficeApi.RulerLevel2> Member
-        
+        #region IEnumerable<NetOffice.OfficeApi.RulerLevel2> Member
+
         /// <summary>
-		/// SupportByVersion Office, 12,14,15,16
-		/// </summary>
-		[SupportByVersion("Office", 12,14,15,16)]
-       public IEnumerator<NetOffice.OfficeApi.RulerLevel2> GetEnumerator()  
-       {
-           NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
-           foreach (NetOffice.OfficeApi.RulerLevel2 item in innerEnumerator)
-               yield return item;
-       }
+        /// SupportByVersion Office, 12,14,15,16
+        /// </summary>
+        [SupportByVersion("Office", 12, 14, 15, 16)]
+        public IEnumerator<NetOffice.OfficeApi.RulerLevel2> GetEnumerator()
+        {
+            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
+            foreach (NetOffice.OfficeApi.RulerLevel2 item in innerEnumerator)
+                yield return item;
+        }
 
-       #endregion
-          
-		#region IEnumerable Members
-       
-		/// <summary>
-		/// SupportByVersion Office, 12,14,15,16
-		/// </summary>
-		[SupportByVersion("Office", 12,14,15,16)]
+        #endregion
+
+        #region IEnumerable Members
+
+        /// <summary>
+        /// SupportByVersion Office, 12,14,15,16
+        /// </summary>
+        [SupportByVersion("Office", 12,14,15,16)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
 			return NetOffice.Utils.GetProxyEnumeratorAsProperty(this);
@@ -183,5 +190,3 @@ namespace NetOffice.OfficeApi
 		#pragma warning restore
 	}
 }
-
-

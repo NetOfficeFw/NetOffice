@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using NetOffice.Attributes;
@@ -44,7 +44,14 @@ namespace NetOffice.MSComctlLibApi
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public IImageCombo(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -247,11 +254,12 @@ namespace NetOffice.MSComctlLibApi
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSComctlLib", 6)]
+		[BaseResult]
 		public NetOffice.MSComctlLibApi.IComboItems ComboItems
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.MSComctlLibApi.IComboItems>(this, "ComboItems", NetOffice.MSComctlLibApi.IComboItems.LateBindingApiWrapperType);
+				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.MSComctlLibApi.IComboItems>(this, "ComboItems");
 			}
 			set
 			{
@@ -353,11 +361,12 @@ namespace NetOffice.MSComctlLibApi
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSComctlLib", 6)]
+		[BaseResult]
 		public NetOffice.MSComctlLibApi.IComboItem SelectedItem
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.MSComctlLibApi.IComboItem>(this, "SelectedItem", NetOffice.MSComctlLibApi.IComboItem.LateBindingApiWrapperType);
+				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.MSComctlLibApi.IComboItem>(this, "SelectedItem");
 			}
 			set
 			{
@@ -473,9 +482,10 @@ namespace NetOffice.MSComctlLibApi
 		/// SupportByVersion MSComctlLib 6
 		/// </summary>
 		[SupportByVersion("MSComctlLib", 6)]
+		[BaseResult]
 		public NetOffice.MSComctlLibApi.IComboItem GetFirstVisible()
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.MSComctlLibApi.IComboItem>(this, "GetFirstVisible", NetOffice.MSComctlLibApi.IComboItem.LateBindingApiWrapperType);
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.MSComctlLibApi.IComboItem>(this, "GetFirstVisible");
 		}
 
 		/// <summary>
@@ -501,6 +511,3 @@ namespace NetOffice.MSComctlLibApi
 		#pragma warning restore
 	}
 }
-
-
-

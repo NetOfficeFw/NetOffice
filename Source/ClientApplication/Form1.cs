@@ -1,17 +1,7 @@
 ﻿using System;
-using System.Reflection;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Text;
 using System.Windows.Forms;
 using NetOffice;
-using NetOffice.Attributes;
-using Excel = NetOffice.ExcelApi;
-using Office = NetOffice.OfficeApi;
-//using Point = NetOffice.PowerPointApi;
-using VBIDE = NetOffice.VBIDEApi;
-using NOTools = NetOffice.OfficeApi.Tools;
-  
+
 namespace ClientApplication
 {
     public class Form1 : System.Windows.Forms.Form
@@ -24,12 +14,9 @@ namespace ClientApplication
         public Form1()
         {
             InitializeComponent();
-
             try
             {
-                //new RunExcel01().Run();
-                new RunWord01().Run();
-                ////new RunExcel02().Run();
+                new RunExcel01().Run();
             }
             catch (Exception exception)
             {
@@ -40,22 +27,6 @@ namespace ClientApplication
         private void PerformanceTrace_Alert(PerformanceTrace sender, PerformanceTrace.PerformanceAlertEventArgs args)
         {
             Console.WriteLine(args);
-        }
-
-        private void Form1_Shown(object sender, EventArgs e)
-        {          
-            try
-            {
-                //new MultiRegisterClient().Test();
-            }
-            catch (Exception exception)
-            {
-                Console.WriteLine(exception.ToString());
-            }
-            finally
-            {
-                Close();
-            }
         }
 
         /// <summary>

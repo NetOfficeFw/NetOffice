@@ -14,7 +14,7 @@ namespace NetOffice.PowerPointApi
 	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff746714.aspx </remarks>
 	[SupportByVersion("PowerPoint", 14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Method), HasIndexProperty(IndexInvoke.Method, "_Default")]
-	public class Points : COMObject , IEnumerable<NetOffice.PowerPointApi.Point>
+	public class Points : COMObject, IEnumerable<NetOffice.PowerPointApi.Point>
 	{
 		#pragma warning disable
 
@@ -47,7 +47,14 @@ namespace NetOffice.PowerPointApi
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public Points(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -178,29 +185,29 @@ namespace NetOffice.PowerPointApi
 			}
 		}
 
-		#endregion
+        #endregion
 
-       #region IEnumerable<NetOffice.PowerPointApi.Point> Member
-        
+        #region IEnumerable<NetOffice.PowerPointApi.Point> Member
+
         /// <summary>
-		/// SupportByVersion PowerPoint, 14,15,16
-		/// </summary>
-		[SupportByVersion("PowerPoint", 14,15,16)]
-       public IEnumerator<NetOffice.PowerPointApi.Point> GetEnumerator()  
-       {
-           NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
-           foreach (NetOffice.PowerPointApi.Point item in innerEnumerator)
-               yield return item;
-       }
+        /// SupportByVersion PowerPoint, 14,15,16
+        /// </summary>
+        [SupportByVersion("PowerPoint", 14, 15, 16)]
+        public IEnumerator<NetOffice.PowerPointApi.Point> GetEnumerator()
+        {
+            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
+            foreach (NetOffice.PowerPointApi.Point item in innerEnumerator)
+                yield return item;
+        }
 
-       #endregion
-          
-		#region IEnumerable Members
-       
-		/// <summary>
-		/// SupportByVersion PowerPoint, 14,15,16
-		/// </summary>
-		[SupportByVersion("PowerPoint", 14,15,16)]
+        #endregion
+
+        #region IEnumerable Members
+
+        /// <summary>
+        /// SupportByVersion PowerPoint, 14,15,16
+        /// </summary>
+        [SupportByVersion("PowerPoint", 14,15,16)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
 			return NetOffice.Utils.GetProxyEnumeratorAsMethod(this);
@@ -211,5 +218,3 @@ namespace NetOffice.PowerPointApi
 		#pragma warning restore
 	}
 }
-
-

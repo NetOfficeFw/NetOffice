@@ -5642,5 +5642,3 @@ namespace NetOffice.AccessApi.GlobalHelperModules
 		#endregion
 	}
 }
-
-

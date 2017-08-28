@@ -432,4 +432,3 @@ namespace NetOffice.PublisherApi
 		#pragma warning restore
 	}
 }
-

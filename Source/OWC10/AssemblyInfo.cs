@@ -24,7 +24,7 @@ using NetOffice.Attributes;
 [assembly: PrimaryInteropAssembly(1, 0)]
 [assembly: ImportedFromTypeLib("OWC10")]
 [assembly: Guid("0002E550-0000-0000-C000-000000000046")]
-[assembly: NetOfficeAssemblyAttribute("1.7.4.0")]
+[assembly: NetOfficeAssemblyAttribute("1.7.4.1")]
 [assembly: Dependency("MSDATASRCApi.dll", LoadHint.Default)]
 [assembly: Dependency("MSComctlLibApi.dll", LoadHint.Default)]
 [assembly: Dependency("ADODBApi.dll", LoadHint.Default)]

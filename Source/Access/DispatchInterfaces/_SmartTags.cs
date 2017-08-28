@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using System;
 using NetRuntimeSystem = System;
@@ -13,7 +13,7 @@ namespace NetOffice.AccessApi
 	/// </summary>
 	[SupportByVersion("Access", 11,12,14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Method), HasIndexProperty(IndexInvoke.Property, "Item")]
-	public class _SmartTags : COMObject , IEnumerable<NetOffice.AccessApi._SmartTag>
+	public class _SmartTags : COMObject, IEnumerable<NetOffice.AccessApi._SmartTag>
 	{
 		#pragma warning disable
 
@@ -46,7 +46,14 @@ namespace NetOffice.AccessApi
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public _SmartTags(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -137,12 +144,13 @@ namespace NetOffice.AccessApi
 		/// </summary>
 		/// <param name="index">object index</param>
 		[SupportByVersion("Access", 11,12,14,15,16)]
+		[BaseResult]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
 		public NetOffice.AccessApi._SmartTag this[object index]
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.AccessApi._SmartTag>(this, "Item", NetOffice.AccessApi._SmartTag.LateBindingApiWrapperType, index);
+				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.AccessApi._SmartTag>(this, "Item", index);
 			}
 		}
 
@@ -170,9 +178,10 @@ namespace NetOffice.AccessApi
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff197045.aspx </remarks>
 		/// <param name="name">string name</param>
 		[SupportByVersion("Access", 11,12,14,15,16)]
+		[BaseResult]
 		public NetOffice.AccessApi._SmartTag Add(string name)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.AccessApi._SmartTag>(this, "Add", NetOffice.AccessApi._SmartTag.LateBindingApiWrapperType, name);
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.AccessApi._SmartTag>(this, "Add", name);
 		}
 
 		/// <summary>
@@ -186,29 +195,29 @@ namespace NetOffice.AccessApi
 			return Factory.ExecuteBoolMethodGet(this, "IsMemberSafe", dispid);
 		}
 
-		#endregion
+        #endregion
 
-       #region IEnumerable<NetOffice.AccessApi._SmartTag> Member
-        
+        #region IEnumerable<NetOffice.AccessApi._SmartTag> Member
+
         /// <summary>
-		/// SupportByVersion Access, 11,12,14,15,16
-		/// </summary>
-		[SupportByVersion("Access", 11,12,14,15,16)]
-       public IEnumerator<NetOffice.AccessApi._SmartTag> GetEnumerator()  
-       {
-           NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
-           foreach (NetOffice.AccessApi._SmartTag item in innerEnumerator)
-               yield return item;
-       }
+        /// SupportByVersion Access, 11,12,14,15,16
+        /// </summary>
+        [SupportByVersion("Access", 11, 12, 14, 15, 16)]
+        public IEnumerator<NetOffice.AccessApi._SmartTag> GetEnumerator()
+        {
+            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
+            foreach (NetOffice.AccessApi._SmartTag item in innerEnumerator)
+                yield return item;
+        }
 
-       #endregion
-          
-		#region IEnumerable Members
-       
-		/// <summary>
-		/// SupportByVersion Access, 11,12,14,15,16
-		/// </summary>
-		[SupportByVersion("Access", 11,12,14,15,16)]
+        #endregion
+
+        #region IEnumerable Members
+
+        /// <summary>
+        /// SupportByVersion Access, 11,12,14,15,16
+        /// </summary>
+        [SupportByVersion("Access", 11,12,14,15,16)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
 			return NetOffice.Utils.GetProxyEnumeratorAsMethod(this);
@@ -219,6 +228,3 @@ namespace NetOffice.AccessApi
 		#pragma warning restore
 	}
 }
-
-
-

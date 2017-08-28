@@ -629,4 +629,3 @@ namespace NetOffice.OutlookApi
 		#pragma warning restore
 	}
 }
-

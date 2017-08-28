@@ -545,4 +545,3 @@ namespace NetOffice.ADODBApi
 		#pragma warning restore
 	}
 }
-

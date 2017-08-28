@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using NetOffice.Attributes;
@@ -44,7 +44,14 @@ namespace NetOffice.OutlookApi
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public _NameSpace(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -106,11 +113,12 @@ namespace NetOffice.OutlookApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff869036.aspx </remarks>
 		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
+		[BaseResult]
 		public NetOffice.OutlookApi._Application Application
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OutlookApi._Application>(this, "Application", NetOffice.OutlookApi._Application.LateBindingApiWrapperType);
+				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.OutlookApi._Application>(this, "Application");
 			}
 		}
 
@@ -134,11 +142,12 @@ namespace NetOffice.OutlookApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff867831.aspx </remarks>
 		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
+		[BaseResult]
 		public NetOffice.OutlookApi._NameSpace Session
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OutlookApi._NameSpace>(this, "Session", NetOffice.OutlookApi._NameSpace.LateBindingApiWrapperType);
+				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.OutlookApi._NameSpace>(this, "Session");
 			}
 		}
 
@@ -177,11 +186,12 @@ namespace NetOffice.OutlookApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff868379.aspx </remarks>
 		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
+		[BaseResult]
 		public NetOffice.OutlookApi._Folders Folders
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OutlookApi._Folders>(this, "Folders", NetOffice.OutlookApi._Folders.LateBindingApiWrapperType);
+				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.OutlookApi._Folders>(this, "Folders");
 			}
 		}
 
@@ -417,9 +427,10 @@ namespace NetOffice.OutlookApi
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff866724.aspx </remarks>
 		/// <param name="folderType">NetOffice.OutlookApi.Enums.OlDefaultFolders folderType</param>
 		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
+		[BaseResult]
 		public NetOffice.OutlookApi.MAPIFolder GetDefaultFolder(NetOffice.OutlookApi.Enums.OlDefaultFolders folderType)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OutlookApi.MAPIFolder>(this, "GetDefaultFolder", NetOffice.OutlookApi.MAPIFolder.LateBindingApiWrapperType, folderType);
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.OutlookApi.MAPIFolder>(this, "GetDefaultFolder", folderType);
 		}
 
 		/// <summary>
@@ -429,9 +440,10 @@ namespace NetOffice.OutlookApi
 		/// <param name="entryIDFolder">string entryIDFolder</param>
 		/// <param name="entryIDStore">optional object entryIDStore</param>
 		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
+		[BaseResult]
 		public NetOffice.OutlookApi.MAPIFolder GetFolderFromID(string entryIDFolder, object entryIDStore)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OutlookApi.MAPIFolder>(this, "GetFolderFromID", NetOffice.OutlookApi.MAPIFolder.LateBindingApiWrapperType, entryIDFolder, entryIDStore);
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.OutlookApi.MAPIFolder>(this, "GetFolderFromID", entryIDFolder, entryIDStore);
 		}
 
 		/// <summary>
@@ -440,10 +452,11 @@ namespace NetOffice.OutlookApi
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff861238.aspx </remarks>
 		/// <param name="entryIDFolder">string entryIDFolder</param>
 		[CustomMethod]
+		[BaseResult]
 		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
 		public NetOffice.OutlookApi.MAPIFolder GetFolderFromID(string entryIDFolder)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OutlookApi.MAPIFolder>(this, "GetFolderFromID", NetOffice.OutlookApi.MAPIFolder.LateBindingApiWrapperType, entryIDFolder);
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.OutlookApi.MAPIFolder>(this, "GetFolderFromID", entryIDFolder);
 		}
 
 		/// <summary>
@@ -488,9 +501,10 @@ namespace NetOffice.OutlookApi
 		/// <param name="recipient">NetOffice.OutlookApi.Recipient recipient</param>
 		/// <param name="folderType">NetOffice.OutlookApi.Enums.OlDefaultFolders folderType</param>
 		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
+		[BaseResult]
 		public NetOffice.OutlookApi.MAPIFolder GetSharedDefaultFolder(NetOffice.OutlookApi.Recipient recipient, NetOffice.OutlookApi.Enums.OlDefaultFolders folderType)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OutlookApi.MAPIFolder>(this, "GetSharedDefaultFolder", NetOffice.OutlookApi.MAPIFolder.LateBindingApiWrapperType, recipient, folderType);
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.OutlookApi.MAPIFolder>(this, "GetSharedDefaultFolder", recipient, folderType);
 		}
 
 		/// <summary>
@@ -572,9 +586,10 @@ namespace NetOffice.OutlookApi
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff869969.aspx </remarks>
 		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
+		[BaseResult]
 		public NetOffice.OutlookApi.MAPIFolder PickFolder()
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OutlookApi.MAPIFolder>(this, "PickFolder", NetOffice.OutlookApi.MAPIFolder.LateBindingApiWrapperType);
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.OutlookApi.MAPIFolder>(this, "PickFolder");
 		}
 
 		/// <summary>
@@ -706,9 +721,10 @@ namespace NetOffice.OutlookApi
 		/// <param name="downloadAttachments">optional object downloadAttachments</param>
 		/// <param name="useTTL">optional object useTTL</param>
 		[SupportByVersion("Outlook", 12,14,15,16)]
+		[BaseResult]
 		public NetOffice.OutlookApi.MAPIFolder OpenSharedFolder(string path, object name, object downloadAttachments, object useTTL)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OutlookApi.MAPIFolder>(this, "OpenSharedFolder", NetOffice.OutlookApi.MAPIFolder.LateBindingApiWrapperType, path, name, downloadAttachments, useTTL);
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.OutlookApi.MAPIFolder>(this, "OpenSharedFolder", path, name, downloadAttachments, useTTL);
 		}
 
 		/// <summary>
@@ -717,10 +733,11 @@ namespace NetOffice.OutlookApi
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff867648.aspx </remarks>
 		/// <param name="path">string path</param>
 		[CustomMethod]
+		[BaseResult]
 		[SupportByVersion("Outlook", 12,14,15,16)]
 		public NetOffice.OutlookApi.MAPIFolder OpenSharedFolder(string path)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OutlookApi.MAPIFolder>(this, "OpenSharedFolder", NetOffice.OutlookApi.MAPIFolder.LateBindingApiWrapperType, path);
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.OutlookApi.MAPIFolder>(this, "OpenSharedFolder", path);
 		}
 
 		/// <summary>
@@ -730,10 +747,11 @@ namespace NetOffice.OutlookApi
 		/// <param name="path">string path</param>
 		/// <param name="name">optional object name</param>
 		[CustomMethod]
+		[BaseResult]
 		[SupportByVersion("Outlook", 12,14,15,16)]
 		public NetOffice.OutlookApi.MAPIFolder OpenSharedFolder(string path, object name)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OutlookApi.MAPIFolder>(this, "OpenSharedFolder", NetOffice.OutlookApi.MAPIFolder.LateBindingApiWrapperType, path, name);
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.OutlookApi.MAPIFolder>(this, "OpenSharedFolder", path, name);
 		}
 
 		/// <summary>
@@ -744,10 +762,11 @@ namespace NetOffice.OutlookApi
 		/// <param name="name">optional object name</param>
 		/// <param name="downloadAttachments">optional object downloadAttachments</param>
 		[CustomMethod]
+		[BaseResult]
 		[SupportByVersion("Outlook", 12,14,15,16)]
 		public NetOffice.OutlookApi.MAPIFolder OpenSharedFolder(string path, object name, object downloadAttachments)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OutlookApi.MAPIFolder>(this, "OpenSharedFolder", NetOffice.OutlookApi.MAPIFolder.LateBindingApiWrapperType, path, name, downloadAttachments);
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.OutlookApi.MAPIFolder>(this, "OpenSharedFolder", path, name, downloadAttachments);
 		}
 
 		/// <summary>
@@ -813,6 +832,3 @@ namespace NetOffice.OutlookApi
 		#pragma warning restore
 	}
 }
-
-
-

@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using System;
 using NetRuntimeSystem = System;
@@ -46,7 +46,14 @@ namespace NetOffice.VisioApi
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public LPVISIOMENUS(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -108,12 +115,13 @@ namespace NetOffice.VisioApi
 		/// </summary>
 		/// <param name="lIndex">Int32 lIndex</param>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
+		[BaseResult]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
 		public NetOffice.VisioApi.IVMenu this[Int32 lIndex]
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.VisioApi.IVMenu>(this, "Item", NetOffice.VisioApi.IVMenu.LateBindingApiWrapperType, lIndex);
+				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.VisioApi.IVMenu>(this, "Item", lIndex);
 			}
 		}
 
@@ -135,11 +143,12 @@ namespace NetOffice.VisioApi
 		/// Get
 		/// </summary>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
+		[BaseResult]
 		public NetOffice.VisioApi.IVMenuSet Parent
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.VisioApi.IVMenuSet>(this, "Parent", NetOffice.VisioApi.IVMenuSet.LateBindingApiWrapperType);
+				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.VisioApi.IVMenuSet>(this, "Parent");
 			}
 		}
 
@@ -151,9 +160,10 @@ namespace NetOffice.VisioApi
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// </summary>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
+		[BaseResult]
 		public NetOffice.VisioApi.IVMenu Add()
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.VisioApi.IVMenu>(this, "Add", NetOffice.VisioApi.IVMenu.LateBindingApiWrapperType);
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.VisioApi.IVMenu>(this, "Add");
 		}
 
 		/// <summary>
@@ -161,9 +171,10 @@ namespace NetOffice.VisioApi
 		/// </summary>
 		/// <param name="lIndex">Int32 lIndex</param>
 		[SupportByVersion("Visio", 11,12,14,15,16)]
+		[BaseResult]
 		public NetOffice.VisioApi.IVMenu AddAt(Int32 lIndex)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.VisioApi.IVMenu>(this, "AddAt", NetOffice.VisioApi.IVMenu.LateBindingApiWrapperType, lIndex);
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.VisioApi.IVMenu>(this, "AddAt", lIndex);
 		}
 
 		#endregion
@@ -199,6 +210,3 @@ namespace NetOffice.VisioApi
 		#pragma warning restore
 	}
 }
-
-
-

@@ -660,4 +660,3 @@ namespace NetOffice.OutlookApi.GlobalHelperModules
 		#endregion
 	}
 }
-

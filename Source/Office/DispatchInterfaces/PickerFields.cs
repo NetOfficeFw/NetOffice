@@ -14,7 +14,7 @@ namespace NetOffice.OfficeApi
 	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff862500.aspx </remarks>
 	[SupportByVersion("Office", 14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "Item")]
-	public class PickerFields : _IMsoDispObj , IEnumerable<NetOffice.OfficeApi.PickerField>
+	public class PickerFields : _IMsoDispObj, IEnumerable<NetOffice.OfficeApi.PickerField>
 	{
 		#pragma warning disable
 
@@ -47,7 +47,14 @@ namespace NetOffice.OfficeApi
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public PickerFields(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -132,33 +139,33 @@ namespace NetOffice.OfficeApi
 			}
 		}
 
-		#endregion
+        #endregion
 
-		#region Methods
+        #region Methods
 
-		#endregion
+        #endregion
 
-       #region IEnumerable<NetOffice.OfficeApi.PickerField> Member
-        
+        #region IEnumerable<NetOffice.OfficeApi.PickerField> Member
+
         /// <summary>
-		/// SupportByVersion Office, 14,15,16
-		/// </summary>
-		[SupportByVersion("Office", 14,15,16)]
-       public IEnumerator<NetOffice.OfficeApi.PickerField> GetEnumerator()  
-       {
-           NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
-           foreach (NetOffice.OfficeApi.PickerField item in innerEnumerator)
-               yield return item;
-       }
+        /// SupportByVersion Office, 14,15,16
+        /// </summary>
+        [SupportByVersion("Office", 14, 15, 16)]
+        public IEnumerator<NetOffice.OfficeApi.PickerField> GetEnumerator()
+        {
+            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
+            foreach (NetOffice.OfficeApi.PickerField item in innerEnumerator)
+                yield return item;
+        }
 
-       #endregion
-          
-		#region IEnumerable Members
-       
-		/// <summary>
-		/// SupportByVersion Office, 14,15,16
-		/// </summary>
-		[SupportByVersion("Office", 14,15,16)]
+        #endregion
+
+        #region IEnumerable Members
+
+        /// <summary>
+        /// SupportByVersion Office, 14,15,16
+        /// </summary>
+        [SupportByVersion("Office", 14,15,16)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
 			return NetOffice.Utils.GetProxyEnumeratorAsProperty(this);
@@ -169,5 +176,3 @@ namespace NetOffice.OfficeApi
 		#pragma warning restore
 	}
 }
-
-

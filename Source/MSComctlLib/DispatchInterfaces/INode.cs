@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using NetOffice.Attributes;
@@ -44,7 +44,14 @@ namespace NetOffice.MSComctlLibApi
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public INode(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -122,11 +129,12 @@ namespace NetOffice.MSComctlLibApi
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSComctlLib", 6)]
+		[BaseResult]
 		public NetOffice.MSComctlLibApi.INode Child
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.MSComctlLibApi.INode>(this, "Child", NetOffice.MSComctlLibApi.INode.LateBindingApiWrapperType);
+				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.MSComctlLibApi.INode>(this, "Child");
 			}
 			set
 			{
@@ -190,11 +198,12 @@ namespace NetOffice.MSComctlLibApi
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSComctlLib", 6)]
+		[BaseResult]
 		public NetOffice.MSComctlLibApi.INode FirstSibling
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.MSComctlLibApi.INode>(this, "FirstSibling", NetOffice.MSComctlLibApi.INode.LateBindingApiWrapperType);
+				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.MSComctlLibApi.INode>(this, "FirstSibling");
 			}
 			set
 			{
@@ -275,11 +284,12 @@ namespace NetOffice.MSComctlLibApi
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSComctlLib", 6)]
+		[BaseResult]
 		public NetOffice.MSComctlLibApi.INode LastSibling
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.MSComctlLibApi.INode>(this, "LastSibling", NetOffice.MSComctlLibApi.INode.LateBindingApiWrapperType);
+				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.MSComctlLibApi.INode>(this, "LastSibling");
 			}
 			set
 			{
@@ -292,11 +302,12 @@ namespace NetOffice.MSComctlLibApi
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSComctlLib", 6)]
+		[BaseResult]
 		public NetOffice.MSComctlLibApi.INode Next
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.MSComctlLibApi.INode>(this, "Next", NetOffice.MSComctlLibApi.INode.LateBindingApiWrapperType);
+				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.MSComctlLibApi.INode>(this, "Next");
 			}
 			set
 			{
@@ -309,11 +320,12 @@ namespace NetOffice.MSComctlLibApi
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSComctlLib", 6)]
+		[BaseResult]
 		public NetOffice.MSComctlLibApi.INode Parent
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.MSComctlLibApi.INode>(this, "Parent", NetOffice.MSComctlLibApi.INode.LateBindingApiWrapperType);
+				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.MSComctlLibApi.INode>(this, "Parent");
 			}
 			set
 			{
@@ -326,11 +338,12 @@ namespace NetOffice.MSComctlLibApi
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSComctlLib", 6)]
+		[BaseResult]
 		public NetOffice.MSComctlLibApi.INode Previous
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.MSComctlLibApi.INode>(this, "Previous", NetOffice.MSComctlLibApi.INode.LateBindingApiWrapperType);
+				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.MSComctlLibApi.INode>(this, "Previous");
 			}
 			set
 			{
@@ -343,11 +356,12 @@ namespace NetOffice.MSComctlLibApi
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSComctlLib", 6)]
+		[BaseResult]
 		public NetOffice.MSComctlLibApi.INode Root
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.MSComctlLibApi.INode>(this, "Root", NetOffice.MSComctlLibApi.INode.LateBindingApiWrapperType);
+				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.MSComctlLibApi.INode>(this, "Root");
 			}
 			set
 			{
@@ -555,6 +569,3 @@ namespace NetOffice.MSComctlLibApi
 		#pragma warning restore
 	}
 }
-
-
-

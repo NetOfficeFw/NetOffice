@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
 using NetOffice.Attributes;
@@ -44,7 +44,14 @@ namespace NetOffice.MSHTMLApi
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public IHTMLElement2(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -356,12 +363,13 @@ namespace NetOffice.MSHTMLApi
 		/// Get
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
+		[BaseResult]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public NetOffice.MSHTMLApi.IHTMLCurrentStyle currentStyle
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.MSHTMLApi.IHTMLCurrentStyle>(this, "currentStyle", NetOffice.MSHTMLApi.IHTMLCurrentStyle.LateBindingApiWrapperType);
+				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.MSHTMLApi.IHTMLCurrentStyle>(this, "currentStyle");
 			}
 		}
 
@@ -712,12 +720,13 @@ namespace NetOffice.MSHTMLApi
 		/// Get
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
+		[BaseResult]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public NetOffice.MSHTMLApi.IHTMLStyle runtimeStyle
 		{
 			get
 			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.MSHTMLApi.IHTMLStyle>(this, "runtimeStyle", NetOffice.MSHTMLApi.IHTMLStyle.LateBindingApiWrapperType);
+				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.MSHTMLApi.IHTMLStyle>(this, "runtimeStyle");
 			}
 		}
 
@@ -1003,9 +1012,10 @@ namespace NetOffice.MSHTMLApi
 		/// <param name="where">string where</param>
 		/// <param name="insertedElement">NetOffice.MSHTMLApi.IHTMLElement insertedElement</param>
 		[SupportByVersion("MSHTML", 4)]
+		[BaseResult]
 		public NetOffice.MSHTMLApi.IHTMLElement insertAdjacentElement(string where, NetOffice.MSHTMLApi.IHTMLElement insertedElement)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.MSHTMLApi.IHTMLElement>(this, "insertAdjacentElement", NetOffice.MSHTMLApi.IHTMLElement.LateBindingApiWrapperType, where, insertedElement);
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.MSHTMLApi.IHTMLElement>(this, "insertAdjacentElement", where, insertedElement);
 		}
 
 		/// <summary>
@@ -1014,9 +1024,10 @@ namespace NetOffice.MSHTMLApi
 		/// <param name="apply">NetOffice.MSHTMLApi.IHTMLElement apply</param>
 		/// <param name="where">string where</param>
 		[SupportByVersion("MSHTML", 4)]
+		[BaseResult]
 		public NetOffice.MSHTMLApi.IHTMLElement applyElement(NetOffice.MSHTMLApi.IHTMLElement apply, string where)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.MSHTMLApi.IHTMLElement>(this, "applyElement", NetOffice.MSHTMLApi.IHTMLElement.LateBindingApiWrapperType, apply, where);
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.MSHTMLApi.IHTMLElement>(this, "applyElement", apply, where);
 		}
 
 		/// <summary>
@@ -1077,9 +1088,10 @@ namespace NetOffice.MSHTMLApi
 		/// </summary>
 		/// <param name="v">string v</param>
 		[SupportByVersion("MSHTML", 4)]
+		[BaseResult]
 		public NetOffice.MSHTMLApi.IHTMLElementCollection getElementsByTagName(string v)
 		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.MSHTMLApi.IHTMLElementCollection>(this, "getElementsByTagName", NetOffice.MSHTMLApi.IHTMLElementCollection.LateBindingApiWrapperType, v);
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.MSHTMLApi.IHTMLElementCollection>(this, "getElementsByTagName", v);
 		}
 
 		#endregion
@@ -1087,6 +1099,3 @@ namespace NetOffice.MSHTMLApi
 		#pragma warning restore
 	}
 }
-
-
-

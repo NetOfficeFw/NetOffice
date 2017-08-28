@@ -477,4 +477,3 @@ namespace NetOffice.MSProjectApi
 		#pragma warning restore
 	}
 }
-

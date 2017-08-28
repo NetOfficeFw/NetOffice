@@ -8,39 +8,44 @@ namespace NetOffice.Attributes
     public enum EntityType
     {
         /// <summary>
-        /// entity is class
+        /// Entity is class
         /// </summary>
         IsCoClass = 0,
 
         /// <summary>
-        /// entity is dispatch interface
+        /// Entity is dispatch interface
         /// </summary>
         IsDispatchInterface = 1,
 
         /// <summary>
-        /// entity is interface
+        /// Entity is interface
         /// </summary>
         IsInterface = 2,
 
         /// <summary>
-        /// entity is module
+        /// Entity is module
         /// </summary>
         IsModule = 3,
 
         /// <summary>
-        /// entity is enum
+        /// Entity is enum
         /// </summary>
         IsEnum = 4,
 
         /// <summary>
-        /// entity is struct
+        /// Entity is struct
         /// </summary>
         IsStruct = 5,
 
         /// <summary>
-        /// entity is const module
+        /// Entity is const module
         /// </summary>
-        IsConstants = 6
+        IsConstants = 6,
+
+        /// <summary>
+        /// Entity is native COMImport interface
+        /// </summary>
+        IsNativeInterface = 7
     }
 
     /// <summary>
