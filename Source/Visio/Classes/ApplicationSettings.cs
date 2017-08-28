@@ -1,12 +1,10 @@
 ﻿using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
-using NetOffice;
-using NetOffice.Misc;
+using NetOffice.Attributes;
 
 namespace NetOffice.VisioApi
 {
-
 	#region Delegates
 
 	#pragma warning disable
@@ -14,16 +12,17 @@ namespace NetOffice.VisioApi
 
 	#endregion
 
-	///<summary>
+	/// <summary>
 	/// CoClass ApplicationSettings 
 	/// SupportByVersion Visio, 11,12,14,15,16
-	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff769225(v=office.14).aspx
-	///</summary>
-	[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
-	[EntityTypeAttribute(EntityType.IsCoClass)]
-	public class ApplicationSettings : IVApplicationSettings
+	/// </summary>
+	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/ff769225(v=office.14).aspx </remarks>
+	[SupportByVersion("Visio", 11,12,14,15,16)]
+	[EntityType(EntityType.IsCoClass)]
+ 	public class ApplicationSettings : IVApplicationSettings
 	{
 		#pragma warning disable
+
 		#region Fields
 		
 		private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
@@ -37,6 +36,7 @@ namespace NetOffice.VisioApi
         /// <summary>
         /// Instance Type
         /// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
         public override Type InstanceType
         {
             get
@@ -103,17 +103,17 @@ namespace NetOffice.VisioApi
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of ApplicationSettings 
-        ///</summary>		
+        /// </summary>		
 		public ApplicationSettings():base("Visio.ApplicationSettings")
 		{
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of ApplicationSettings
-        ///</summary>
+        /// </summary>
         ///<param name="progId">registered ProgID</param>
 		public ApplicationSettings(string progId):base(progId)
 		{
@@ -123,46 +123,6 @@ namespace NetOffice.VisioApi
 		#endregion
 
 		#region Static CoClass Methods
-
-		/// <summary>
-        /// Returns all running Visio.ApplicationSettings objects from the environment/system
-        /// </summary>
-        /// <returns>an Visio.ApplicationSettings array</returns>
-		public static NetOffice.VisioApi.ApplicationSettings[] GetActiveInstances()
-		{		
-			IDisposableEnumeration proxyList = NetOffice.ProxyService.GetActiveInstances("Visio","ApplicationSettings");
-			NetRuntimeSystem.Collections.Generic.List<NetOffice.VisioApi.ApplicationSettings> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.VisioApi.ApplicationSettings>();
-			foreach(object proxy in proxyList)
-				resultList.Add( new NetOffice.VisioApi.ApplicationSettings(null, proxy) );
-			return resultList.ToArray();
-		}
-
-		/// <summary>
-        /// Returns a running Visio.ApplicationSettings object from the environment/system.
-        /// </summary>
-        /// <returns>an Visio.ApplicationSettings object or null</returns>
-		public static NetOffice.VisioApi.ApplicationSettings GetActiveInstance()
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Visio","ApplicationSettings", false);
-			if(null != proxy)
-				return new NetOffice.VisioApi.ApplicationSettings(null, proxy);
-			else
-				return null;
-		}
-
-		/// <summary>
-        /// Returns a running Visio.ApplicationSettings object from the environment/system. 
-        /// </summary>
-	    /// <param name="throwOnError">throw an exception if no object was found</param>
-        /// <returns>an Visio.ApplicationSettings object or null</returns>
-		public static NetOffice.VisioApi.ApplicationSettings GetActiveInstance(bool throwOnError)
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Visio","ApplicationSettings", throwOnError);
-			if(null != proxy)
-				return new NetOffice.VisioApi.ApplicationSettings(null, proxy);
-			else
-				return null;
-		}
 		#endregion
 
 		#region Events
@@ -321,3 +281,4 @@ namespace NetOffice.VisioApi
 		#pragma warning restore
 	}
 }
+

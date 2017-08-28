@@ -1,12 +1,10 @@
 ﻿using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
-using NetOffice;
-using NetOffice.Misc;
+using NetOffice.Attributes;
 
 namespace NetOffice.WordApi
 {
-
 	#region Delegates
 
 	#pragma warning disable
@@ -16,21 +14,23 @@ namespace NetOffice.WordApi
 
 	#endregion
 
-	///<summary>
+	/// <summary>
 	/// CoClass OLEControl 
 	/// SupportByVersion Word, 9,10,11,12,14,15,16
-	///</summary>
-	[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
-	[EntityTypeAttribute(EntityType.IsCoClass)]
-	public class OLEControl : _OLEControl,IEventBinding
+	/// </summary>
+	[SupportByVersion("Word", 9,10,11,12,14,15,16)]
+	[EntityType(EntityType.IsCoClass)]
+	[EventSink(typeof(Events.OCXEvents_SinkHelper))]
+	public class OLEControl : _OLEControl, IEventBinding
 	{
 		#pragma warning disable
+
 		#region Fields
 		
 		private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
 		private string _activeSinkId;
 		private NetRuntimeSystem.Type _thisType;
-		OCXEvents_SinkHelper _oCXEvents_SinkHelper;
+		private Events.OCXEvents_SinkHelper _oCXEvents_SinkHelper;
 	
 		#endregion
 
@@ -39,6 +39,7 @@ namespace NetOffice.WordApi
         /// <summary>
         /// Instance Type
         /// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
         public override Type InstanceType
         {
             get
@@ -105,17 +106,17 @@ namespace NetOffice.WordApi
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of OLEControl 
-        ///</summary>		
+        /// </summary>		
 		public OLEControl():base("Word.OLEControl")
 		{
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of OLEControl
-        ///</summary>
+        /// </summary>
         ///<param name="progId">registered ProgID</param>
 		public OLEControl(string progId):base(progId)
 		{
@@ -125,46 +126,6 @@ namespace NetOffice.WordApi
 		#endregion
 
 		#region Static CoClass Methods
-
-		/// <summary>
-        /// Returns all running Word.OLEControl objects from the environment/system
-        /// </summary>
-        /// <returns>an Word.OLEControl array</returns>
-		public static NetOffice.WordApi.OLEControl[] GetActiveInstances()
-		{		
-			IDisposableEnumeration proxyList = NetOffice.ProxyService.GetActiveInstances("Word","OLEControl");
-			NetRuntimeSystem.Collections.Generic.List<NetOffice.WordApi.OLEControl> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.WordApi.OLEControl>();
-			foreach(object proxy in proxyList)
-				resultList.Add( new NetOffice.WordApi.OLEControl(null, proxy) );
-			return resultList.ToArray();
-		}
-
-		/// <summary>
-        /// Returns a running Word.OLEControl object from the environment/system.
-        /// </summary>
-        /// <returns>an Word.OLEControl object or null</returns>
-		public static NetOffice.WordApi.OLEControl GetActiveInstance()
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Word","OLEControl", false);
-			if(null != proxy)
-				return new NetOffice.WordApi.OLEControl(null, proxy);
-			else
-				return null;
-		}
-
-		/// <summary>
-        /// Returns a running Word.OLEControl object from the environment/system. 
-        /// </summary>
-	    /// <param name="throwOnError">throw an exception if no object was found</param>
-        /// <returns>an Word.OLEControl object or null</returns>
-		public static NetOffice.WordApi.OLEControl GetActiveInstance(bool throwOnError)
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Word","OLEControl", throwOnError);
-			if(null != proxy)
-				return new NetOffice.WordApi.OLEControl(null, proxy);
-			else
-				return null;
-		}
 		#endregion
 
 		#region Events
@@ -230,12 +191,12 @@ namespace NetOffice.WordApi
 				return;
 	
             if (null == _activeSinkId)
-				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, OCXEvents_SinkHelper.Id);
+				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, Events.OCXEvents_SinkHelper.Id);
 
 
-			if(OCXEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
+			if(Events.OCXEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
 			{
-				_oCXEvents_SinkHelper = new OCXEvents_SinkHelper(this, _connectPoint);
+				_oCXEvents_SinkHelper = new Events.OCXEvents_SinkHelper(this, _connectPoint);
 				return;
 			} 
         }
@@ -377,3 +338,4 @@ namespace NetOffice.WordApi
 		#pragma warning restore
 	}
 }
+

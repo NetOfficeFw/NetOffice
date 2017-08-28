@@ -1,47 +1,47 @@
 ﻿using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
-using NetOffice;
-using NetOffice.Misc;
+using NetOffice.Attributes;
 
 namespace NetOffice.OutlookApi
 {
-
 	#region Delegates
 
 	#pragma warning disable
 	public delegate void OlkCommandButton_ClickEventHandler();
 	public delegate void OlkCommandButton_DoubleClickEventHandler();
-	public delegate void OlkCommandButton_MouseDownEventHandler(NetOffice.OutlookApi.Enums.OlMouseButton Button, NetOffice.OutlookApi.Enums.OlShiftState Shift, Single X, Single Y);
-	public delegate void OlkCommandButton_MouseMoveEventHandler(NetOffice.OutlookApi.Enums.OlMouseButton Button, NetOffice.OutlookApi.Enums.OlShiftState Shift, Single X, Single Y);
-	public delegate void OlkCommandButton_MouseUpEventHandler(NetOffice.OutlookApi.Enums.OlMouseButton Button, NetOffice.OutlookApi.Enums.OlShiftState Shift, Single X, Single Y);
+	public delegate void OlkCommandButton_MouseDownEventHandler(NetOffice.OutlookApi.Enums.OlMouseButton button, NetOffice.OutlookApi.Enums.OlShiftState shift, Single x, Single y);
+	public delegate void OlkCommandButton_MouseMoveEventHandler(NetOffice.OutlookApi.Enums.OlMouseButton button, NetOffice.OutlookApi.Enums.OlShiftState shift, Single x, Single y);
+	public delegate void OlkCommandButton_MouseUpEventHandler(NetOffice.OutlookApi.Enums.OlMouseButton button, NetOffice.OutlookApi.Enums.OlShiftState shift, Single x, Single y);
 	public delegate void OlkCommandButton_EnterEventHandler();
-	public delegate void OlkCommandButton_ExitEventHandler(ref bool Cancel);
-	public delegate void OlkCommandButton_KeyDownEventHandler(ref Int32 KeyCode, NetOffice.OutlookApi.Enums.OlShiftState Shift);
-	public delegate void OlkCommandButton_KeyPressEventHandler(ref Int32 KeyAscii);
-	public delegate void OlkCommandButton_KeyUpEventHandler(ref Int32 KeyCode, NetOffice.OutlookApi.Enums.OlShiftState Shift);
+	public delegate void OlkCommandButton_ExitEventHandler(ref bool cancel);
+	public delegate void OlkCommandButton_KeyDownEventHandler(ref Int32 keyCode, NetOffice.OutlookApi.Enums.OlShiftState shift);
+	public delegate void OlkCommandButton_KeyPressEventHandler(ref Int32 keyAscii);
+	public delegate void OlkCommandButton_KeyUpEventHandler(ref Int32 keyCode, NetOffice.OutlookApi.Enums.OlShiftState shift);
 	public delegate void OlkCommandButton_AfterUpdateEventHandler();
-	public delegate void OlkCommandButton_BeforeUpdateEventHandler(ref bool Cancel);
+	public delegate void OlkCommandButton_BeforeUpdateEventHandler(ref bool cancel);
 	#pragma warning restore
 
 	#endregion
 
-	///<summary>
+	/// <summary>
 	/// CoClass OlkCommandButton 
 	/// SupportByVersion Outlook, 12,14,15,16
-	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff868781.aspx
-	///</summary>
-	[SupportByVersionAttribute("Outlook", 12,14,15,16)]
-	[EntityTypeAttribute(EntityType.IsCoClass)]
-	public class OlkCommandButton : _OlkCommandButton,IEventBinding
+	/// </summary>
+	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff868781.aspx </remarks>
+	[SupportByVersion("Outlook", 12,14,15,16)]
+	[EntityType(EntityType.IsCoClass)]
+	[EventSink(typeof(Events.OlkCommandButtonEvents_SinkHelper))]
+	public class OlkCommandButton : _OlkCommandButton, IEventBinding
 	{
 		#pragma warning disable
+
 		#region Fields
 		
 		private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
 		private string _activeSinkId;
 		private NetRuntimeSystem.Type _thisType;
-		OlkCommandButtonEvents_SinkHelper _olkCommandButtonEvents_SinkHelper;
+		private Events.OlkCommandButtonEvents_SinkHelper _olkCommandButtonEvents_SinkHelper;
 	
 		#endregion
 
@@ -50,6 +50,7 @@ namespace NetOffice.OutlookApi
         /// <summary>
         /// Instance Type
         /// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
         public override Type InstanceType
         {
             get
@@ -116,17 +117,17 @@ namespace NetOffice.OutlookApi
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of OlkCommandButton 
-        ///</summary>		
+        /// </summary>		
 		public OlkCommandButton():base("Outlook.OlkCommandButton")
 		{
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of OlkCommandButton
-        ///</summary>
+        /// </summary>
         ///<param name="progId">registered ProgID</param>
 		public OlkCommandButton(string progId):base(progId)
 		{
@@ -136,46 +137,6 @@ namespace NetOffice.OutlookApi
 		#endregion
 
 		#region Static CoClass Methods
-
-		/// <summary>
-        /// Returns all running Outlook.OlkCommandButton objects from the environment/system
-        /// </summary>
-        /// <returns>an Outlook.OlkCommandButton array</returns>
-		public static NetOffice.OutlookApi.OlkCommandButton[] GetActiveInstances()
-		{		
-			IDisposableEnumeration proxyList = NetOffice.ProxyService.GetActiveInstances("Outlook","OlkCommandButton");
-			NetRuntimeSystem.Collections.Generic.List<NetOffice.OutlookApi.OlkCommandButton> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.OutlookApi.OlkCommandButton>();
-			foreach(object proxy in proxyList)
-				resultList.Add( new NetOffice.OutlookApi.OlkCommandButton(null, proxy) );
-			return resultList.ToArray();
-		}
-
-		/// <summary>
-        /// Returns a running Outlook.OlkCommandButton object from the environment/system.
-        /// </summary>
-        /// <returns>an Outlook.OlkCommandButton object or null</returns>
-		public static NetOffice.OutlookApi.OlkCommandButton GetActiveInstance()
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Outlook","OlkCommandButton", false);
-			if(null != proxy)
-				return new NetOffice.OutlookApi.OlkCommandButton(null, proxy);
-			else
-				return null;
-		}
-
-		/// <summary>
-        /// Returns a running Outlook.OlkCommandButton object from the environment/system. 
-        /// </summary>
-	    /// <param name="throwOnError">throw an exception if no object was found</param>
-        /// <returns>an Outlook.OlkCommandButton object or null</returns>
-		public static NetOffice.OutlookApi.OlkCommandButton GetActiveInstance(bool throwOnError)
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Outlook","OlkCommandButton", throwOnError);
-			if(null != proxy)
-				return new NetOffice.OutlookApi.OlkCommandButton(null, proxy);
-			else
-				return null;
-		}
 		#endregion
 
 		#region Events
@@ -473,12 +434,12 @@ namespace NetOffice.OutlookApi
 				return;
 	
             if (null == _activeSinkId)
-				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, OlkCommandButtonEvents_SinkHelper.Id);
+				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, Events.OlkCommandButtonEvents_SinkHelper.Id);
 
 
-			if(OlkCommandButtonEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
+			if(Events.OlkCommandButtonEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
 			{
-				_olkCommandButtonEvents_SinkHelper = new OlkCommandButtonEvents_SinkHelper(this, _connectPoint);
+				_olkCommandButtonEvents_SinkHelper = new Events.OlkCommandButtonEvents_SinkHelper(this, _connectPoint);
 				return;
 			} 
         }
@@ -620,3 +581,4 @@ namespace NetOffice.OutlookApi
 		#pragma warning restore
 	}
 }
+

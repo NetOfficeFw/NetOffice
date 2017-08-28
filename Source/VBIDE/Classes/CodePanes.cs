@@ -1,12 +1,10 @@
 ﻿using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
-using NetOffice;
-using NetOffice.Misc;
+using NetOffice.Attributes;
 
 namespace NetOffice.VBIDEApi
 {
-
 	#region Delegates
 
 	#pragma warning disable
@@ -14,15 +12,16 @@ namespace NetOffice.VBIDEApi
 
 	#endregion
 
-	///<summary>
+	/// <summary>
 	/// CoClass CodePanes 
 	/// SupportByVersion VBIDE, 12,14,5.3
-	///</summary>
-	[SupportByVersionAttribute("VBIDE", 12,14,5.3)]
-	[EntityTypeAttribute(EntityType.IsCoClass)]
-	public class CodePanes : _CodePanes
+	/// </summary>
+	[SupportByVersion("VBIDE", 12,14,5.3)]
+	[EntityType(EntityType.IsCoClass)]
+ 	public class CodePanes : _CodePanes
 	{
 		#pragma warning disable
+
 		#region Fields
 		
 		private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
@@ -36,6 +35,7 @@ namespace NetOffice.VBIDEApi
         /// <summary>
         /// Instance Type
         /// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
         public override Type InstanceType
         {
             get
@@ -102,17 +102,17 @@ namespace NetOffice.VBIDEApi
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of CodePanes 
-        ///</summary>		
+        /// </summary>		
 		public CodePanes():base("VBIDE.CodePanes")
 		{
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of CodePanes
-        ///</summary>
+        /// </summary>
         ///<param name="progId">registered ProgID</param>
 		public CodePanes(string progId):base(progId)
 		{
@@ -122,46 +122,6 @@ namespace NetOffice.VBIDEApi
 		#endregion
 
 		#region Static CoClass Methods
-
-		/// <summary>
-        /// Returns all running VBIDE.CodePanes objects from the environment/system
-        /// </summary>
-        /// <returns>an VBIDE.CodePanes array</returns>
-		public static NetOffice.VBIDEApi.CodePanes[] GetActiveInstances()
-		{		
-			IDisposableEnumeration proxyList = NetOffice.ProxyService.GetActiveInstances("VBIDE","CodePanes");
-			NetRuntimeSystem.Collections.Generic.List<NetOffice.VBIDEApi.CodePanes> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.VBIDEApi.CodePanes>();
-			foreach(object proxy in proxyList)
-				resultList.Add( new NetOffice.VBIDEApi.CodePanes(null, proxy) );
-			return resultList.ToArray();
-		}
-
-		/// <summary>
-        /// Returns a running VBIDE.CodePanes object from the environment/system.
-        /// </summary>
-        /// <returns>an VBIDE.CodePanes object or null</returns>
-		public static NetOffice.VBIDEApi.CodePanes GetActiveInstance()
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("VBIDE","CodePanes", false);
-			if(null != proxy)
-				return new NetOffice.VBIDEApi.CodePanes(null, proxy);
-			else
-				return null;
-		}
-
-		/// <summary>
-        /// Returns a running VBIDE.CodePanes object from the environment/system. 
-        /// </summary>
-	    /// <param name="throwOnError">throw an exception if no object was found</param>
-        /// <returns>an VBIDE.CodePanes object or null</returns>
-		public static NetOffice.VBIDEApi.CodePanes GetActiveInstance(bool throwOnError)
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("VBIDE","CodePanes", throwOnError);
-			if(null != proxy)
-				return new NetOffice.VBIDEApi.CodePanes(null, proxy);
-			else
-				return null;
-		}
 		#endregion
 
 		#region Events
@@ -320,3 +280,4 @@ namespace NetOffice.VBIDEApi
 		#pragma warning restore
 	}
 }
+

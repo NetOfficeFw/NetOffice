@@ -1,49 +1,49 @@
 ﻿using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
-using NetOffice;
-using NetOffice.Misc;
+using NetOffice.Attributes;
 
 namespace NetOffice.AccessApi
 {
-
 	#region Delegates
 
 	#pragma warning disable
 	public delegate void _ToggleButtonInOption_GotFocusEventHandler();
 	public delegate void _ToggleButtonInOption_LostFocusEventHandler();
-	public delegate void _ToggleButtonInOption_MouseDownEventHandler(ref Int16 Button, ref Int16 Shift, ref Single X, ref Single Y);
-	public delegate void _ToggleButtonInOption_MouseMoveEventHandler(ref Int16 Button, ref Int16 Shift, ref Single X, ref Single Y);
-	public delegate void _ToggleButtonInOption_MouseUpEventHandler(ref Int16 Button, ref Int16 Shift, ref Single X, ref Single Y);
-	public delegate void _ToggleButtonInOption_KeyDownEventHandler(ref Int16 KeyCode, ref Int16 Shift);
-	public delegate void _ToggleButtonInOption_KeyPressEventHandler(ref Int16 KeyAscii);
-	public delegate void _ToggleButtonInOption_KeyUpEventHandler(ref Int16 KeyCode, ref Int16 Shift);
+	public delegate void _ToggleButtonInOption_MouseDownEventHandler(ref Int16 button, ref Int16 shift, ref Single x, ref Single y);
+	public delegate void _ToggleButtonInOption_MouseMoveEventHandler(ref Int16 button, ref Int16 shift, ref Single x, ref Single y);
+	public delegate void _ToggleButtonInOption_MouseUpEventHandler(ref Int16 button, ref Int16 shift, ref Single x, ref Single y);
+	public delegate void _ToggleButtonInOption_KeyDownEventHandler(ref Int16 keyCode, ref Int16 shift);
+	public delegate void _ToggleButtonInOption_KeyPressEventHandler(ref Int16 keyAscii);
+	public delegate void _ToggleButtonInOption_KeyUpEventHandler(ref Int16 keyCode, ref Int16 shift);
 	public delegate void _ToggleButtonInOption_ClickEventHandler();
-	public delegate void _ToggleButtonInOption_BeforeUpdateEventHandler(ref Int16 Cancel);
+	public delegate void _ToggleButtonInOption_BeforeUpdateEventHandler(ref Int16 cancel);
 	public delegate void _ToggleButtonInOption_AfterUpdateEventHandler();
 	public delegate void _ToggleButtonInOption_EnterEventHandler();
-	public delegate void _ToggleButtonInOption_ExitEventHandler(ref Int16 Cancel);
-	public delegate void _ToggleButtonInOption_DblClickEventHandler(ref Int16 Cancel);
+	public delegate void _ToggleButtonInOption_ExitEventHandler(ref Int16 cancel);
+	public delegate void _ToggleButtonInOption_DblClickEventHandler(ref Int16 cancel);
 	#pragma warning restore
 
 	#endregion
 
-	///<summary>
+	/// <summary>
 	/// CoClass _ToggleButtonInOption 
 	/// SupportByVersion Access, 9,10,11,12,14,15,16
-	///</summary>
-	[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
-	[EntityTypeAttribute(EntityType.IsCoClass)]
-	public class _ToggleButtonInOption : _ToggleButton,IEventBinding
+	/// </summary>
+	[SupportByVersion("Access", 9,10,11,12,14,15,16)]
+	[EntityType(EntityType.IsCoClass)]
+    [EventSink(typeof(Events._ToggleButtonInOptionEvents_SinkHelper), typeof(Events.DispToggleButtonEvents_SinkHelper))]
+    public class _ToggleButtonInOption : _ToggleButton, IEventBinding
 	{
 		#pragma warning disable
+
 		#region Fields
 		
 		private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
 		private string _activeSinkId;
 		private NetRuntimeSystem.Type _thisType;
-		_ToggleButtonInOptionEvents_SinkHelper __ToggleButtonInOptionEvents_SinkHelper;
-		DispToggleButtonEvents_SinkHelper _dispToggleButtonEvents_SinkHelper;
+		private Events._ToggleButtonInOptionEvents_SinkHelper __ToggleButtonInOptionEvents_SinkHelper;
+		private Events.DispToggleButtonEvents_SinkHelper _dispToggleButtonEvents_SinkHelper;
 	
 		#endregion
 
@@ -52,6 +52,7 @@ namespace NetOffice.AccessApi
         /// <summary>
         /// Instance Type
         /// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
         public override Type InstanceType
         {
             get
@@ -118,17 +119,17 @@ namespace NetOffice.AccessApi
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of _ToggleButtonInOption 
-        ///</summary>		
+        /// </summary>		
 		public _ToggleButtonInOption():base("Access._ToggleButtonInOption")
 		{
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of _ToggleButtonInOption
-        ///</summary>
+        /// </summary>
         ///<param name="progId">registered ProgID</param>
 		public _ToggleButtonInOption(string progId):base(progId)
 		{
@@ -138,46 +139,6 @@ namespace NetOffice.AccessApi
 		#endregion
 
 		#region Static CoClass Methods
-
-		/// <summary>
-        /// Returns all running Access._ToggleButtonInOption objects from the environment/system
-        /// </summary>
-        /// <returns>an Access._ToggleButtonInOption array</returns>
-		public static NetOffice.AccessApi._ToggleButtonInOption[] GetActiveInstances()
-		{		
-			IDisposableEnumeration proxyList = NetOffice.ProxyService.GetActiveInstances("Access","_ToggleButtonInOption");
-			NetRuntimeSystem.Collections.Generic.List<NetOffice.AccessApi._ToggleButtonInOption> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.AccessApi._ToggleButtonInOption>();
-			foreach(object proxy in proxyList)
-				resultList.Add( new NetOffice.AccessApi._ToggleButtonInOption(null, proxy) );
-			return resultList.ToArray();
-		}
-
-		/// <summary>
-        /// Returns a running Access._ToggleButtonInOption object from the environment/system.
-        /// </summary>
-        /// <returns>an Access._ToggleButtonInOption object or null</returns>
-		public static NetOffice.AccessApi._ToggleButtonInOption GetActiveInstance()
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Access","_ToggleButtonInOption", false);
-			if(null != proxy)
-				return new NetOffice.AccessApi._ToggleButtonInOption(null, proxy);
-			else
-				return null;
-		}
-
-		/// <summary>
-        /// Returns a running Access._ToggleButtonInOption object from the environment/system. 
-        /// </summary>
-	    /// <param name="throwOnError">throw an exception if no object was found</param>
-        /// <returns>an Access._ToggleButtonInOption object or null</returns>
-		public static NetOffice.AccessApi._ToggleButtonInOption GetActiveInstance(bool throwOnError)
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Access","_ToggleButtonInOption", throwOnError);
-			if(null != proxy)
-				return new NetOffice.AccessApi._ToggleButtonInOption(null, proxy);
-			else
-				return null;
-		}
 		#endregion
 
 		#region Events
@@ -507,18 +468,18 @@ namespace NetOffice.AccessApi
 				return;
 	
             if (null == _activeSinkId)
-				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, _ToggleButtonInOptionEvents_SinkHelper.Id,DispToggleButtonEvents_SinkHelper.Id);
+				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, Events._ToggleButtonInOptionEvents_SinkHelper.Id, Events.DispToggleButtonEvents_SinkHelper.Id);
 
 
-			if(_ToggleButtonInOptionEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
+			if(Events._ToggleButtonInOptionEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
 			{
-				__ToggleButtonInOptionEvents_SinkHelper = new _ToggleButtonInOptionEvents_SinkHelper(this, _connectPoint);
+				__ToggleButtonInOptionEvents_SinkHelper = new Events._ToggleButtonInOptionEvents_SinkHelper(this, _connectPoint);
 				return;
 			}
 
-			if(DispToggleButtonEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
+			if(Events.DispToggleButtonEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
 			{
-				_dispToggleButtonEvents_SinkHelper = new DispToggleButtonEvents_SinkHelper(this, _connectPoint);
+				_dispToggleButtonEvents_SinkHelper = new Events.DispToggleButtonEvents_SinkHelper(this, _connectPoint);
 				return;
 			} 
         }
@@ -665,3 +626,4 @@ namespace NetOffice.AccessApi
 		#pragma warning restore
 	}
 }
+

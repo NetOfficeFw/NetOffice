@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using NetOffice;
+using NetOffice.Attributes;
 using Office = NetOffice.OfficeApi;
 using NetOffice.OfficeApi.Enums;
 
@@ -111,7 +112,7 @@ namespace NetOffice.OfficeApi.Tools
         /// SupportByVersion Office 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersionAttribute("Office", 12, 14, 15, 16)]
+        [SupportByVersion("Office", 12, 14, 15, 16)]
         public bool Visible 
         { 
             get
@@ -142,7 +143,7 @@ namespace NetOffice.OfficeApi.Tools
         /// SupportByVersion Office 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersionAttribute("Office", 12, 14, 15, 16)]
+        [SupportByVersion("Office", 12, 14, 15, 16)]
         public int Width
         { 
             get
@@ -173,7 +174,7 @@ namespace NetOffice.OfficeApi.Tools
         /// SupportByVersion Office 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersionAttribute("Office", 12, 14, 15, 16)]
+        [SupportByVersion("Office", 12, 14, 15, 16)]
         public int Height
         { 
             get
@@ -204,7 +205,7 @@ namespace NetOffice.OfficeApi.Tools
         /// SupportByVersion Office 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersionAttribute("Office", 12, 14, 15, 16)]
+        [SupportByVersion("Office", 12, 14, 15, 16)]
         public string Title
         {
             get
@@ -232,7 +233,7 @@ namespace NetOffice.OfficeApi.Tools
         /// SupportByVersion Office 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersionAttribute("Office", 12, 14, 15, 16)]
+        [SupportByVersion("Office", 12, 14, 15, 16)]
         public MsoCTPDockPosition DockPosition
         {
             get
@@ -263,7 +264,7 @@ namespace NetOffice.OfficeApi.Tools
         /// SupportByVersion Office 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersionAttribute("Office", 12, 14, 15, 16)]
+        [SupportByVersion("Office", 12, 14, 15, 16)]
         public MsoCTPDockPositionRestrict DockPositionRestrict
         {
             get

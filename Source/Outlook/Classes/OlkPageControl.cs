@@ -1,12 +1,10 @@
 ﻿using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
-using NetOffice;
-using NetOffice.Misc;
+using NetOffice.Attributes;
 
 namespace NetOffice.OutlookApi
 {
-
 	#region Delegates
 
 	#pragma warning disable
@@ -14,22 +12,24 @@ namespace NetOffice.OutlookApi
 
 	#endregion
 
-	///<summary>
+	/// <summary>
 	/// CoClass OlkPageControl 
 	/// SupportByVersion Outlook, 12,14,15,16
-	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff869006.aspx
-	///</summary>
-	[SupportByVersionAttribute("Outlook", 12,14,15,16)]
-	[EntityTypeAttribute(EntityType.IsCoClass)]
-	public class OlkPageControl : _OlkPageControl,IEventBinding
+	/// </summary>
+	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff869006.aspx </remarks>
+	[SupportByVersion("Outlook", 12,14,15,16)]
+	[EntityType(EntityType.IsCoClass)]
+	[EventSink(typeof(Events.OlkPageControlEvents_SinkHelper))]
+	public class OlkPageControl : _OlkPageControl, IEventBinding
 	{
 		#pragma warning disable
+
 		#region Fields
 		
 		private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
 		private string _activeSinkId;
 		private NetRuntimeSystem.Type _thisType;
-		OlkPageControlEvents_SinkHelper _olkPageControlEvents_SinkHelper;
+		private Events.OlkPageControlEvents_SinkHelper _olkPageControlEvents_SinkHelper;
 	
 		#endregion
 
@@ -38,6 +38,7 @@ namespace NetOffice.OutlookApi
         /// <summary>
         /// Instance Type
         /// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
         public override Type InstanceType
         {
             get
@@ -104,17 +105,17 @@ namespace NetOffice.OutlookApi
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of OlkPageControl 
-        ///</summary>		
+        /// </summary>		
 		public OlkPageControl():base("Outlook.OlkPageControl")
 		{
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of OlkPageControl
-        ///</summary>
+        /// </summary>
         ///<param name="progId">registered ProgID</param>
 		public OlkPageControl(string progId):base(progId)
 		{
@@ -124,46 +125,6 @@ namespace NetOffice.OutlookApi
 		#endregion
 
 		#region Static CoClass Methods
-
-		/// <summary>
-        /// Returns all running Outlook.OlkPageControl objects from the environment/system
-        /// </summary>
-        /// <returns>an Outlook.OlkPageControl array</returns>
-		public static NetOffice.OutlookApi.OlkPageControl[] GetActiveInstances()
-		{		
-			IDisposableEnumeration proxyList = NetOffice.ProxyService.GetActiveInstances("Outlook","OlkPageControl");
-			NetRuntimeSystem.Collections.Generic.List<NetOffice.OutlookApi.OlkPageControl> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.OutlookApi.OlkPageControl>();
-			foreach(object proxy in proxyList)
-				resultList.Add( new NetOffice.OutlookApi.OlkPageControl(null, proxy) );
-			return resultList.ToArray();
-		}
-
-		/// <summary>
-        /// Returns a running Outlook.OlkPageControl object from the environment/system.
-        /// </summary>
-        /// <returns>an Outlook.OlkPageControl object or null</returns>
-		public static NetOffice.OutlookApi.OlkPageControl GetActiveInstance()
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Outlook","OlkPageControl", false);
-			if(null != proxy)
-				return new NetOffice.OutlookApi.OlkPageControl(null, proxy);
-			else
-				return null;
-		}
-
-		/// <summary>
-        /// Returns a running Outlook.OlkPageControl object from the environment/system. 
-        /// </summary>
-	    /// <param name="throwOnError">throw an exception if no object was found</param>
-        /// <returns>an Outlook.OlkPageControl object or null</returns>
-		public static NetOffice.OutlookApi.OlkPageControl GetActiveInstance(bool throwOnError)
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Outlook","OlkPageControl", throwOnError);
-			if(null != proxy)
-				return new NetOffice.OutlookApi.OlkPageControl(null, proxy);
-			else
-				return null;
-		}
 		#endregion
 
 		#region Events
@@ -185,12 +146,12 @@ namespace NetOffice.OutlookApi
 				return;
 	
             if (null == _activeSinkId)
-				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, OlkPageControlEvents_SinkHelper.Id);
+				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, Events.OlkPageControlEvents_SinkHelper.Id);
 
 
-			if(OlkPageControlEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
+			if(Events.OlkPageControlEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
 			{
-				_olkPageControlEvents_SinkHelper = new OlkPageControlEvents_SinkHelper(this, _connectPoint);
+				_olkPageControlEvents_SinkHelper = new Events.OlkPageControlEvents_SinkHelper(this, _connectPoint);
 				return;
 			} 
         }
@@ -332,3 +293,4 @@ namespace NetOffice.OutlookApi
 		#pragma warning restore
 	}
 }
+

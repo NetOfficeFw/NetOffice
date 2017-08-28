@@ -1,23 +1,33 @@
 ﻿using System;
 using NetRuntimeSystem = System;
-using System.Runtime.InteropServices;
 using System.ComponentModel;
-using System.Runtime.CompilerServices;
-using System.Reflection;
-using System.Collections.Generic;
-using NetOffice;
+using NetOffice.Attributes;
+
 namespace NetOffice.ADODBApi
 {
-	///<summary>
+	/// <summary>
 	/// Interface ADORecordsetConstruction 
 	/// SupportByVersion ADODB, 2.1,2.5
-	///</summary>
-	[SupportByVersionAttribute("ADODB", 2.1,2.5)]
-	[EntityTypeAttribute(EntityType.IsInterface)]
-	public class ADORecordsetConstruction : COMObject
+	/// </summary>
+	[SupportByVersion("ADODB", 2.1,2.5)]
+	[EntityType(EntityType.IsInterface)]
+ 	public class ADORecordsetConstruction : COMObject
 	{
 		#pragma warning disable
+
 		#region Type Information
+
+		/// <summary>
+		/// Instance Type
+		/// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
+		public override Type InstanceType
+		{
+			get
+			{
+				return LateBindingApiWrapperType;
+			}
+		}
 
         private static Type _type;
 
@@ -28,7 +38,6 @@ namespace NetOffice.ADODBApi
             {
                 if (null == _type)
                     _type = typeof(ADORecordsetConstruction);
-                    
                 return _type;
             }
         }
@@ -81,7 +90,7 @@ namespace NetOffice.ADODBApi
 		{
 		}
 		
-		/// <param name="progId">registered ProgID</param>
+		/// <param name="progId">registered progID</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public ADORecordsetConstruction(string progId) : base(progId)
 		{
@@ -96,20 +105,16 @@ namespace NetOffice.ADODBApi
 		/// Get/Set
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("ADODB", 2.1,2.5)]
+		[SupportByVersion("ADODB", 2.1,2.5), ProxyResult]
 		public object Rowset
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Rowset", paramsArray);
-				ICOMObject newObject = Factory.CreateObjectFromComProxy(this,returnItem);
-				return newObject;
+				return Factory.ExecuteReferencePropertyGet(this, "Rowset");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "Rowset", paramsArray);
+				Factory.ExecuteReferencePropertySet(this, "Rowset", value);
 			}
 		}
 
@@ -117,19 +122,16 @@ namespace NetOffice.ADODBApi
 		/// SupportByVersion ADODB 2.1, 2.5
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("ADODB", 2.1,2.5)]
+		[SupportByVersion("ADODB", 2.1,2.5)]
 		public Int32 Chapter
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Chapter", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "Chapter");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "Chapter", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "Chapter", value);
 			}
 		}
 
@@ -138,20 +140,16 @@ namespace NetOffice.ADODBApi
 		/// Get/Set
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("ADODB", 2.1,2.5)]
+		[SupportByVersion("ADODB", 2.1,2.5), ProxyResult]
 		public object RowPosition
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "RowPosition", paramsArray);
-				ICOMObject newObject = Factory.CreateObjectFromComProxy(this,returnItem);
-				return newObject;
+				return Factory.ExecuteReferencePropertyGet(this, "RowPosition");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "RowPosition", paramsArray);
+				Factory.ExecuteReferencePropertySet(this, "RowPosition", value);
 			}
 		}
 
@@ -160,6 +158,9 @@ namespace NetOffice.ADODBApi
 		#region Methods
 
 		#endregion
+
 		#pragma warning restore
 	}
 }
+
+

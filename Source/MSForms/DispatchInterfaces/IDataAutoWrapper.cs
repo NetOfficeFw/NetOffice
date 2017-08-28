@@ -1,23 +1,33 @@
 ﻿using System;
 using NetRuntimeSystem = System;
-using System.Runtime.InteropServices;
-using System.Runtime.CompilerServices;
 using System.ComponentModel;
-using System.Reflection;
-using System.Collections.Generic;
-using NetOffice;
+using NetOffice.Attributes;
+
 namespace NetOffice.MSFormsApi
 {
-	///<summary>
+	/// <summary>
 	/// DispatchInterface IDataAutoWrapper 
 	/// SupportByVersion MSForms, 2
-	///</summary>
-	[SupportByVersionAttribute("MSForms", 2)]
-	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
-	public class IDataAutoWrapper : COMObject
+	/// </summary>
+	[SupportByVersion("MSForms", 2)]
+	[EntityType(EntityType.IsDispatchInterface)]
+ 	public class IDataAutoWrapper : COMObject
 	{
 		#pragma warning disable
+
 		#region Type Information
+
+		/// <summary>
+		/// Instance Type
+		/// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
+		public override Type InstanceType
+		{
+			get
+			{
+				return LateBindingApiWrapperType;
+			}
+		}
 
         private static Type _type;
 
@@ -28,7 +38,6 @@ namespace NetOffice.MSFormsApi
             {
                 if (null == _type)
                     _type = typeof(IDataAutoWrapper);
-                    
                 return _type;
             }
         }
@@ -81,7 +90,7 @@ namespace NetOffice.MSFormsApi
 		{
 		}
 		
-		/// <param name="progId">registered ProgID</param>
+		/// <param name="progId">registered progID</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public IDataAutoWrapper(string progId) : base(progId)
 		{
@@ -97,131 +106,108 @@ namespace NetOffice.MSFormsApi
 
 		/// <summary>
 		/// SupportByVersion MSForms 2
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("MSForms", 2)]
+		[SupportByVersion("MSForms", 2)]
 		public void Clear()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "Clear", paramsArray);
+			 Factory.ExecuteMethod(this, "Clear");
 		}
 
 		/// <summary>
 		/// SupportByVersion MSForms 2
-		/// 
 		/// </summary>
-		/// <param name="format">object Format</param>
-		[SupportByVersionAttribute("MSForms", 2)]
+		/// <param name="format">object format</param>
+		[SupportByVersion("MSForms", 2)]
 		public bool GetFormat(object format)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(format);
-			object returnItem = Invoker.MethodReturn(this, "GetFormat", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return Factory.ExecuteBoolMethodGet(this, "GetFormat", format);
 		}
 
 		/// <summary>
 		/// SupportByVersion MSForms 2
-		/// 
 		/// </summary>
-		/// <param name="format">optional object Format</param>
-		[SupportByVersionAttribute("MSForms", 2)]
+		/// <param name="format">optional object format</param>
+		[SupportByVersion("MSForms", 2)]
 		public string GetText(object format)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(format);
-			object returnItem = Invoker.MethodReturn(this, "GetText", paramsArray);
-			return NetRuntimeSystem.Convert.ToString(returnItem);
+			return Factory.ExecuteStringMethodGet(this, "GetText", format);
 		}
 
 		/// <summary>
 		/// SupportByVersion MSForms 2
-		/// 
 		/// </summary>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSForms", 2)]
+		[CustomMethod]
+		[SupportByVersion("MSForms", 2)]
 		public string GetText()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "GetText", paramsArray);
-			return NetRuntimeSystem.Convert.ToString(returnItem);
+			return Factory.ExecuteStringMethodGet(this, "GetText");
 		}
 
 		/// <summary>
 		/// SupportByVersion MSForms 2
-		/// 
 		/// </summary>
-		/// <param name="text">string Text</param>
-		/// <param name="format">optional object Format</param>
-		[SupportByVersionAttribute("MSForms", 2)]
+		/// <param name="text">string text</param>
+		/// <param name="format">optional object format</param>
+		[SupportByVersion("MSForms", 2)]
 		public void SetText(string text, object format)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(text, format);
-			Invoker.Method(this, "SetText", paramsArray);
+			 Factory.ExecuteMethod(this, "SetText", text, format);
 		}
 
 		/// <summary>
 		/// SupportByVersion MSForms 2
-		/// 
 		/// </summary>
-		/// <param name="text">string Text</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSForms", 2)]
+		/// <param name="text">string text</param>
+		[CustomMethod]
+		[SupportByVersion("MSForms", 2)]
 		public void SetText(string text)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(text);
-			Invoker.Method(this, "SetText", paramsArray);
+			 Factory.ExecuteMethod(this, "SetText", text);
 		}
 
 		/// <summary>
 		/// SupportByVersion MSForms 2
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("MSForms", 2)]
+		[SupportByVersion("MSForms", 2)]
 		public void PutInClipboard()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "PutInClipboard", paramsArray);
+			 Factory.ExecuteMethod(this, "PutInClipboard");
 		}
 
 		/// <summary>
 		/// SupportByVersion MSForms 2
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("MSForms", 2)]
+		[SupportByVersion("MSForms", 2)]
 		public void GetFromClipboard()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "GetFromClipboard", paramsArray);
+			 Factory.ExecuteMethod(this, "GetFromClipboard");
 		}
 
 		/// <summary>
 		/// SupportByVersion MSForms 2
-		/// 
 		/// </summary>
-		/// <param name="oKEffect">optional object OKEffect</param>
-		[SupportByVersionAttribute("MSForms", 2)]
+		/// <param name="oKEffect">optional object oKEffect</param>
+		[SupportByVersion("MSForms", 2)]
 		public NetOffice.MSFormsApi.Enums.fmDropEffect StartDrag(object oKEffect)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(oKEffect);
-			object returnItem = Invoker.MethodReturn(this, "StartDrag", paramsArray);
-			int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-			return (NetOffice.MSFormsApi.Enums.fmDropEffect)intReturnItem;
+			return Factory.ExecuteEnumMethodGet<NetOffice.MSFormsApi.Enums.fmDropEffect>(this, "StartDrag", oKEffect);
 		}
 
 		/// <summary>
 		/// SupportByVersion MSForms 2
-		/// 
 		/// </summary>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSForms", 2)]
+		[CustomMethod]
+		[SupportByVersion("MSForms", 2)]
 		public NetOffice.MSFormsApi.Enums.fmDropEffect StartDrag()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "StartDrag", paramsArray);
-			int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-			return (NetOffice.MSFormsApi.Enums.fmDropEffect)intReturnItem;
+			return Factory.ExecuteEnumMethodGet<NetOffice.MSFormsApi.Enums.fmDropEffect>(this, "StartDrag");
 		}
 
 		#endregion
+
 		#pragma warning restore
 	}
 }
+
+
+

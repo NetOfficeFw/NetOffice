@@ -1,41 +1,41 @@
 ﻿using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
-using NetOffice;
-using NetOffice.Misc;
+using NetOffice.Attributes;
 
 namespace NetOffice.AccessApi
 {
-
 	#region Delegates
 
 	#pragma warning disable
-	public delegate void CustomControl_UpdatedEventHandler(ref Int16 Code);
+	public delegate void CustomControl_UpdatedEventHandler(ref Int16 code);
 	public delegate void CustomControl_EnterEventHandler();
-	public delegate void CustomControl_ExitEventHandler(ref Int16 Cancel);
+	public delegate void CustomControl_ExitEventHandler(ref Int16 cancel);
 	public delegate void CustomControl_GotFocusEventHandler();
 	public delegate void CustomControl_LostFocusEventHandler();
 	#pragma warning restore
 
 	#endregion
 
-	///<summary>
+	/// <summary>
 	/// CoClass CustomControl 
 	/// SupportByVersion Access, 9,10,11,12,14,15,16
-	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff821191.aspx
-	///</summary>
-	[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
-	[EntityTypeAttribute(EntityType.IsCoClass)]
-	public class CustomControl : _CustomControl,IEventBinding
+	/// </summary>
+	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff821191.aspx </remarks>
+	[SupportByVersion("Access", 9,10,11,12,14,15,16)]
+	[EntityType(EntityType.IsCoClass)]
+    [EventSink(typeof(Events._CustomControlEvents_SinkHelper), typeof(Events.DispCustomControlEvents_SinkHelper))]
+    public class CustomControl : _CustomControl, IEventBinding
 	{
 		#pragma warning disable
+
 		#region Fields
 		
 		private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
 		private string _activeSinkId;
 		private NetRuntimeSystem.Type _thisType;
-		_CustomControlEvents_SinkHelper __CustomControlEvents_SinkHelper;
-		DispCustomControlEvents_SinkHelper _dispCustomControlEvents_SinkHelper;
+		private Events._CustomControlEvents_SinkHelper __CustomControlEvents_SinkHelper;
+		private Events.DispCustomControlEvents_SinkHelper _dispCustomControlEvents_SinkHelper;
 	
 		#endregion
 
@@ -44,6 +44,7 @@ namespace NetOffice.AccessApi
         /// <summary>
         /// Instance Type
         /// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
         public override Type InstanceType
         {
             get
@@ -110,17 +111,17 @@ namespace NetOffice.AccessApi
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of CustomControl 
-        ///</summary>		
+        /// </summary>		
 		public CustomControl():base("Access.CustomControl")
 		{
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of CustomControl
-        ///</summary>
+        /// </summary>
         ///<param name="progId">registered ProgID</param>
 		public CustomControl(string progId):base(progId)
 		{
@@ -130,46 +131,6 @@ namespace NetOffice.AccessApi
 		#endregion
 
 		#region Static CoClass Methods
-
-		/// <summary>
-        /// Returns all running Access.CustomControl objects from the environment/system
-        /// </summary>
-        /// <returns>an Access.CustomControl array</returns>
-		public static NetOffice.AccessApi.CustomControl[] GetActiveInstances()
-		{		
-			IDisposableEnumeration proxyList = NetOffice.ProxyService.GetActiveInstances("Access","CustomControl");
-			NetRuntimeSystem.Collections.Generic.List<NetOffice.AccessApi.CustomControl> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.AccessApi.CustomControl>();
-			foreach(object proxy in proxyList)
-				resultList.Add( new NetOffice.AccessApi.CustomControl(null, proxy) );
-			return resultList.ToArray();
-		}
-
-		/// <summary>
-        /// Returns a running Access.CustomControl object from the environment/system.
-        /// </summary>
-        /// <returns>an Access.CustomControl object or null</returns>
-		public static NetOffice.AccessApi.CustomControl GetActiveInstance()
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Access","CustomControl", false);
-			if(null != proxy)
-				return new NetOffice.AccessApi.CustomControl(null, proxy);
-			else
-				return null;
-		}
-
-		/// <summary>
-        /// Returns a running Access.CustomControl object from the environment/system. 
-        /// </summary>
-	    /// <param name="throwOnError">throw an exception if no object was found</param>
-        /// <returns>an Access.CustomControl object or null</returns>
-		public static NetOffice.AccessApi.CustomControl GetActiveInstance(bool throwOnError)
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Access","CustomControl", throwOnError);
-			if(null != proxy)
-				return new NetOffice.AccessApi.CustomControl(null, proxy);
-			else
-				return null;
-		}
 		#endregion
 
 		#region Events
@@ -306,18 +267,18 @@ namespace NetOffice.AccessApi
 				return;
 	
             if (null == _activeSinkId)
-				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, _CustomControlEvents_SinkHelper.Id,DispCustomControlEvents_SinkHelper.Id);
+				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, Events._CustomControlEvents_SinkHelper.Id, Events.DispCustomControlEvents_SinkHelper.Id);
 
 
-			if(_CustomControlEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
+			if(Events._CustomControlEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
 			{
-				__CustomControlEvents_SinkHelper = new _CustomControlEvents_SinkHelper(this, _connectPoint);
+				__CustomControlEvents_SinkHelper = new Events._CustomControlEvents_SinkHelper(this, _connectPoint);
 				return;
 			}
 
-			if(DispCustomControlEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
+			if(Events.DispCustomControlEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
 			{
-				_dispCustomControlEvents_SinkHelper = new DispCustomControlEvents_SinkHelper(this, _connectPoint);
+				_dispCustomControlEvents_SinkHelper = new Events.DispCustomControlEvents_SinkHelper(this, _connectPoint);
 				return;
 			} 
         }
@@ -464,3 +425,4 @@ namespace NetOffice.AccessApi
 		#pragma warning restore
 	}
 }
+

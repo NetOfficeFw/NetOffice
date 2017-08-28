@@ -1,48 +1,48 @@
 ﻿using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
-using NetOffice;
-using NetOffice.Misc;
+using NetOffice.Attributes;
 
 namespace NetOffice.OutlookApi
 {
-
 	#region Delegates
 
 	#pragma warning disable
 	public delegate void OlkListBox_ClickEventHandler();
 	public delegate void OlkListBox_DoubleClickEventHandler();
-	public delegate void OlkListBox_MouseDownEventHandler(NetOffice.OutlookApi.Enums.OlMouseButton Button, NetOffice.OutlookApi.Enums.OlShiftState Shift, Single X, Single Y);
-	public delegate void OlkListBox_MouseMoveEventHandler(NetOffice.OutlookApi.Enums.OlMouseButton Button, NetOffice.OutlookApi.Enums.OlShiftState Shift, Single X, Single Y);
-	public delegate void OlkListBox_MouseUpEventHandler(NetOffice.OutlookApi.Enums.OlMouseButton Button, NetOffice.OutlookApi.Enums.OlShiftState Shift, Single X, Single Y);
+	public delegate void OlkListBox_MouseDownEventHandler(NetOffice.OutlookApi.Enums.OlMouseButton button, NetOffice.OutlookApi.Enums.OlShiftState shift, Single x, Single y);
+	public delegate void OlkListBox_MouseMoveEventHandler(NetOffice.OutlookApi.Enums.OlMouseButton button, NetOffice.OutlookApi.Enums.OlShiftState shift, Single x, Single y);
+	public delegate void OlkListBox_MouseUpEventHandler(NetOffice.OutlookApi.Enums.OlMouseButton button, NetOffice.OutlookApi.Enums.OlShiftState shift, Single x, Single y);
 	public delegate void OlkListBox_EnterEventHandler();
-	public delegate void OlkListBox_ExitEventHandler(ref bool Cancel);
-	public delegate void OlkListBox_KeyDownEventHandler(ref Int32 KeyCode, NetOffice.OutlookApi.Enums.OlShiftState Shift);
-	public delegate void OlkListBox_KeyPressEventHandler(ref Int32 KeyAscii);
-	public delegate void OlkListBox_KeyUpEventHandler(ref Int32 KeyCode, NetOffice.OutlookApi.Enums.OlShiftState Shift);
+	public delegate void OlkListBox_ExitEventHandler(ref bool cancel);
+	public delegate void OlkListBox_KeyDownEventHandler(ref Int32 keyCode, NetOffice.OutlookApi.Enums.OlShiftState shift);
+	public delegate void OlkListBox_KeyPressEventHandler(ref Int32 keyAscii);
+	public delegate void OlkListBox_KeyUpEventHandler(ref Int32 keyCode, NetOffice.OutlookApi.Enums.OlShiftState shift);
 	public delegate void OlkListBox_ChangeEventHandler();
 	public delegate void OlkListBox_AfterUpdateEventHandler();
-	public delegate void OlkListBox_BeforeUpdateEventHandler(ref bool Cancel);
+	public delegate void OlkListBox_BeforeUpdateEventHandler(ref bool cancel);
 	#pragma warning restore
 
 	#endregion
 
-	///<summary>
+	/// <summary>
 	/// CoClass OlkListBox 
 	/// SupportByVersion Outlook, 12,14,15,16
-	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff863585.aspx
-	///</summary>
-	[SupportByVersionAttribute("Outlook", 12,14,15,16)]
-	[EntityTypeAttribute(EntityType.IsCoClass)]
-	public class OlkListBox : _OlkListBox,IEventBinding
+	/// </summary>
+	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff863585.aspx </remarks>
+	[SupportByVersion("Outlook", 12,14,15,16)]
+	[EntityType(EntityType.IsCoClass)]
+	[EventSink(typeof(Events.OlkListBoxEvents_SinkHelper))]
+	public class OlkListBox : _OlkListBox, IEventBinding
 	{
 		#pragma warning disable
+
 		#region Fields
 		
 		private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
 		private string _activeSinkId;
 		private NetRuntimeSystem.Type _thisType;
-		OlkListBoxEvents_SinkHelper _olkListBoxEvents_SinkHelper;
+		private Events.OlkListBoxEvents_SinkHelper _olkListBoxEvents_SinkHelper;
 	
 		#endregion
 
@@ -51,6 +51,7 @@ namespace NetOffice.OutlookApi
         /// <summary>
         /// Instance Type
         /// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
         public override Type InstanceType
         {
             get
@@ -117,17 +118,17 @@ namespace NetOffice.OutlookApi
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of OlkListBox 
-        ///</summary>		
+        /// </summary>		
 		public OlkListBox():base("Outlook.OlkListBox")
 		{
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of OlkListBox
-        ///</summary>
+        /// </summary>
         ///<param name="progId">registered ProgID</param>
 		public OlkListBox(string progId):base(progId)
 		{
@@ -137,46 +138,6 @@ namespace NetOffice.OutlookApi
 		#endregion
 
 		#region Static CoClass Methods
-
-		/// <summary>
-        /// Returns all running Outlook.OlkListBox objects from the environment/system
-        /// </summary>
-        /// <returns>an Outlook.OlkListBox array</returns>
-		public static NetOffice.OutlookApi.OlkListBox[] GetActiveInstances()
-		{		
-			IDisposableEnumeration proxyList = NetOffice.ProxyService.GetActiveInstances("Outlook","OlkListBox");
-			NetRuntimeSystem.Collections.Generic.List<NetOffice.OutlookApi.OlkListBox> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.OutlookApi.OlkListBox>();
-			foreach(object proxy in proxyList)
-				resultList.Add( new NetOffice.OutlookApi.OlkListBox(null, proxy) );
-			return resultList.ToArray();
-		}
-
-		/// <summary>
-        /// Returns a running Outlook.OlkListBox object from the environment/system.
-        /// </summary>
-        /// <returns>an Outlook.OlkListBox object or null</returns>
-		public static NetOffice.OutlookApi.OlkListBox GetActiveInstance()
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Outlook","OlkListBox", false);
-			if(null != proxy)
-				return new NetOffice.OutlookApi.OlkListBox(null, proxy);
-			else
-				return null;
-		}
-
-		/// <summary>
-        /// Returns a running Outlook.OlkListBox object from the environment/system. 
-        /// </summary>
-	    /// <param name="throwOnError">throw an exception if no object was found</param>
-        /// <returns>an Outlook.OlkListBox object or null</returns>
-		public static NetOffice.OutlookApi.OlkListBox GetActiveInstance(bool throwOnError)
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Outlook","OlkListBox", throwOnError);
-			if(null != proxy)
-				return new NetOffice.OutlookApi.OlkListBox(null, proxy);
-			else
-				return null;
-		}
 		#endregion
 
 		#region Events
@@ -497,12 +458,12 @@ namespace NetOffice.OutlookApi
 				return;
 	
             if (null == _activeSinkId)
-				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, OlkListBoxEvents_SinkHelper.Id);
+				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, Events.OlkListBoxEvents_SinkHelper.Id);
 
 
-			if(OlkListBoxEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
+			if(Events.OlkListBoxEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
 			{
-				_olkListBoxEvents_SinkHelper = new OlkListBoxEvents_SinkHelper(this, _connectPoint);
+				_olkListBoxEvents_SinkHelper = new Events.OlkListBoxEvents_SinkHelper(this, _connectPoint);
 				return;
 			} 
         }
@@ -644,3 +605,4 @@ namespace NetOffice.OutlookApi
 		#pragma warning restore
 	}
 }
+

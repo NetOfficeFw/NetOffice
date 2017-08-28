@@ -1,23 +1,33 @@
 ﻿using System;
 using NetRuntimeSystem = System;
-using System.Runtime.InteropServices;
-using System.Runtime.CompilerServices;
 using System.ComponentModel;
-using System.Reflection;
-using System.Collections.Generic;
-using NetOffice;
+using NetOffice.Attributes;
+
 namespace NetOffice.OutlookApi
 {
-	///<summary>
+	/// <summary>
 	/// DispatchInterface DDataSourceObject 
 	/// SupportByVersion Outlook, 10
-	///</summary>
-	[SupportByVersionAttribute("Outlook", 10)]
-	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
-	public class DDataSourceObject : COMObject
+	/// </summary>
+	[SupportByVersion("Outlook", 10)]
+	[EntityType(EntityType.IsDispatchInterface)]
+ 	public class DDataSourceObject : COMObject
 	{
 		#pragma warning disable
+
 		#region Type Information
+
+		/// <summary>
+		/// Instance Type
+		/// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
+		public override Type InstanceType
+		{
+			get
+			{
+				return LateBindingApiWrapperType;
+			}
+		}
 
         private static Type _type;
 
@@ -28,7 +38,6 @@ namespace NetOffice.OutlookApi
             {
                 if (null == _type)
                     _type = typeof(DDataSourceObject);
-                    
                 return _type;
             }
         }
@@ -81,7 +90,7 @@ namespace NetOffice.OutlookApi
 		{
 		}
 		
-		/// <param name="progId">registered ProgID</param>
+		/// <param name="progId">registered progID</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public DDataSourceObject(string progId) : base(progId)
 		{
@@ -96,20 +105,16 @@ namespace NetOffice.OutlookApi
 		/// Get/Set
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("Outlook", 10)]
+		[SupportByVersion("Outlook", 10), ProxyResult]
 		public object OutlookItem
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "OutlookItem", paramsArray);
-				ICOMObject newObject = Factory.CreateObjectFromComProxy(this,returnItem);
-				return newObject;
+				return Factory.ExecuteReferencePropertyGet(this, "OutlookItem");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "OutlookItem", paramsArray);
+				Factory.ExecuteReferencePropertySet(this, "OutlookItem", value);
 			}
 		}
 
@@ -118,6 +123,9 @@ namespace NetOffice.OutlookApi
 		#region Methods
 
 		#endregion
+
 		#pragma warning restore
 	}
 }
+
+

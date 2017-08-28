@@ -1,12 +1,10 @@
 ﻿using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
-using NetOffice;
-using NetOffice.Misc;
+using NetOffice.Attributes;
 
 namespace NetOffice.OutlookApi
 {
-
 	#region Delegates
 
 	#pragma warning disable
@@ -14,16 +12,17 @@ namespace NetOffice.OutlookApi
 
 	#endregion
 
-	///<summary>
+	/// <summary>
 	/// CoClass MarkAsTaskRuleAction 
 	/// SupportByVersion Outlook, 12,14,15,16
-	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff865843.aspx
-	///</summary>
-	[SupportByVersionAttribute("Outlook", 12,14,15,16)]
-	[EntityTypeAttribute(EntityType.IsCoClass)]
-	public class MarkAsTaskRuleAction : _MarkAsTaskRuleAction
+	/// </summary>
+	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff865843.aspx </remarks>
+	[SupportByVersion("Outlook", 12,14,15,16)]
+	[EntityType(EntityType.IsCoClass)]
+ 	public class MarkAsTaskRuleAction : _MarkAsTaskRuleAction
 	{
 		#pragma warning disable
+
 		#region Fields
 		
 		private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
@@ -37,6 +36,7 @@ namespace NetOffice.OutlookApi
         /// <summary>
         /// Instance Type
         /// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
         public override Type InstanceType
         {
             get
@@ -103,17 +103,17 @@ namespace NetOffice.OutlookApi
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of MarkAsTaskRuleAction 
-        ///</summary>		
+        /// </summary>		
 		public MarkAsTaskRuleAction():base("Outlook.MarkAsTaskRuleAction")
 		{
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of MarkAsTaskRuleAction
-        ///</summary>
+        /// </summary>
         ///<param name="progId">registered ProgID</param>
 		public MarkAsTaskRuleAction(string progId):base(progId)
 		{
@@ -123,46 +123,6 @@ namespace NetOffice.OutlookApi
 		#endregion
 
 		#region Static CoClass Methods
-
-		/// <summary>
-        /// Returns all running Outlook.MarkAsTaskRuleAction objects from the environment/system
-        /// </summary>
-        /// <returns>an Outlook.MarkAsTaskRuleAction array</returns>
-		public static NetOffice.OutlookApi.MarkAsTaskRuleAction[] GetActiveInstances()
-		{		
-			IDisposableEnumeration proxyList = NetOffice.ProxyService.GetActiveInstances("Outlook","MarkAsTaskRuleAction");
-			NetRuntimeSystem.Collections.Generic.List<NetOffice.OutlookApi.MarkAsTaskRuleAction> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.OutlookApi.MarkAsTaskRuleAction>();
-			foreach(object proxy in proxyList)
-				resultList.Add( new NetOffice.OutlookApi.MarkAsTaskRuleAction(null, proxy) );
-			return resultList.ToArray();
-		}
-
-		/// <summary>
-        /// Returns a running Outlook.MarkAsTaskRuleAction object from the environment/system.
-        /// </summary>
-        /// <returns>an Outlook.MarkAsTaskRuleAction object or null</returns>
-		public static NetOffice.OutlookApi.MarkAsTaskRuleAction GetActiveInstance()
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Outlook","MarkAsTaskRuleAction", false);
-			if(null != proxy)
-				return new NetOffice.OutlookApi.MarkAsTaskRuleAction(null, proxy);
-			else
-				return null;
-		}
-
-		/// <summary>
-        /// Returns a running Outlook.MarkAsTaskRuleAction object from the environment/system. 
-        /// </summary>
-	    /// <param name="throwOnError">throw an exception if no object was found</param>
-        /// <returns>an Outlook.MarkAsTaskRuleAction object or null</returns>
-		public static NetOffice.OutlookApi.MarkAsTaskRuleAction GetActiveInstance(bool throwOnError)
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Outlook","MarkAsTaskRuleAction", throwOnError);
-			if(null != proxy)
-				return new NetOffice.OutlookApi.MarkAsTaskRuleAction(null, proxy);
-			else
-				return null;
-		}
 		#endregion
 
 		#region Events
@@ -321,3 +281,4 @@ namespace NetOffice.OutlookApi
 		#pragma warning restore
 	}
 }
+

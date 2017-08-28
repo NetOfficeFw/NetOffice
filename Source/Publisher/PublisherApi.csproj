@@ -284,8 +284,8 @@
     <Compile Include="DispatchInterfaces\SoftEdgeFormat.cs" />
     <Compile Include="Classes\Document.cs" />
     <Compile Include="Classes\Application.cs" />
-    <Compile Include="EventInterfaces\ApplicationEvents.cs" />
-    <Compile Include="EventInterfaces\DocumentEvents.cs" />
+    <Compile Include="Events\ApplicationEvents.cs" />
+    <Compile Include="Events\DocumentEvents.cs" />
     <Compile Include="Modules\Global.cs" />
   </ItemGroup>
   <ItemGroup>

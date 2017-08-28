@@ -1,23 +1,33 @@
 ﻿using System;
 using NetRuntimeSystem = System;
-using System.Runtime.InteropServices;
-using System.Runtime.CompilerServices;
 using System.ComponentModel;
-using System.Reflection;
-using System.Collections.Generic;
-using NetOffice;
+using NetOffice.Attributes;
+
 namespace NetOffice.OWC10Api
 {
-	///<summary>
+	/// <summary>
 	/// DispatchInterface OWCLanguageSettings 
 	/// SupportByVersion OWC10, 1
-	///</summary>
-	[SupportByVersionAttribute("OWC10", 1)]
-	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
-	public class OWCLanguageSettings : COMObject
+	/// </summary>
+	[SupportByVersion("OWC10", 1)]
+	[EntityType(EntityType.IsDispatchInterface)]
+ 	public class OWCLanguageSettings : COMObject
 	{
 		#pragma warning disable
+
 		#region Type Information
+
+		/// <summary>
+		/// Instance Type
+		/// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
+		public override Type InstanceType
+		{
+			get
+			{
+				return LateBindingApiWrapperType;
+			}
+		}
 
         private static Type _type;
 
@@ -28,7 +38,6 @@ namespace NetOffice.OWC10Api
             {
                 if (null == _type)
                     _type = typeof(OWCLanguageSettings);
-                    
                 return _type;
             }
         }
@@ -81,7 +90,7 @@ namespace NetOffice.OWC10Api
 		{
 		}
 		
-		/// <param name="progId">registered ProgID</param>
+		/// <param name="progId">registered progID</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public OWCLanguageSettings(string progId) : base(progId)
 		{
@@ -96,15 +105,12 @@ namespace NetOffice.OWC10Api
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("OWC10", 1)]
+		[SupportByVersion("OWC10", 1), ProxyResult]
 		public object Application
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				ICOMObject newObject = Factory.CreateObjectFromComProxy(this,returnItem);
-				return newObject;
+				return Factory.ExecuteReferencePropertyGet(this, "Application");
 			}
 		}
 
@@ -113,13 +119,11 @@ namespace NetOffice.OWC10Api
 		/// Get
 		/// </summary>
 		/// <param name="id">NetOffice.OWC10Api.Enums.MsoAppLanguageID id</param>
-		[SupportByVersionAttribute("OWC10", 1)]
+		[SupportByVersion("OWC10", 1)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public Int32 get_LanguageID(NetOffice.OWC10Api.Enums.MsoAppLanguageID id)
-		{		
-			object[] paramsArray = Invoker.ValidateParamsArray(id);
-			object returnItem = Invoker.PropertyGet(this, "LanguageID", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+		{
+			return Factory.ExecuteInt32PropertyGet(this, "LanguageID", id);
 		}
 
 		/// <summary>
@@ -127,7 +131,7 @@ namespace NetOffice.OWC10Api
 		/// Alias for get_LanguageID
 		/// </summary>
 		/// <param name="id">NetOffice.OWC10Api.Enums.MsoAppLanguageID id</param>
-		[SupportByVersionAttribute("OWC10", 1)]
+		[SupportByVersion("OWC10", 1), Redirect("get_LanguageID")]
 		public Int32 LanguageID(NetOffice.OWC10Api.Enums.MsoAppLanguageID id)
 		{
 			return get_LanguageID(id);
@@ -138,13 +142,11 @@ namespace NetOffice.OWC10Api
 		/// Get
 		/// </summary>
 		/// <param name="lid">NetOffice.OWC10Api.Enums.MsoLanguageID lid</param>
-		[SupportByVersionAttribute("OWC10", 1)]
+		[SupportByVersion("OWC10", 1)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public bool get_LanguagePreferredForEditing(NetOffice.OWC10Api.Enums.MsoLanguageID lid)
-		{		
-			object[] paramsArray = Invoker.ValidateParamsArray(lid);
-			object returnItem = Invoker.PropertyGet(this, "LanguagePreferredForEditing", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+		{
+			return Factory.ExecuteBoolPropertyGet(this, "LanguagePreferredForEditing", lid);
 		}
 
 		/// <summary>
@@ -152,7 +154,7 @@ namespace NetOffice.OWC10Api
 		/// Alias for get_LanguagePreferredForEditing
 		/// </summary>
 		/// <param name="lid">NetOffice.OWC10Api.Enums.MsoLanguageID lid</param>
-		[SupportByVersionAttribute("OWC10", 1)]
+		[SupportByVersion("OWC10", 1), Redirect("get_LanguagePreferredForEditing")]
 		public bool LanguagePreferredForEditing(NetOffice.OWC10Api.Enums.MsoLanguageID lid)
 		{
 			return get_LanguagePreferredForEditing(lid);
@@ -163,6 +165,9 @@ namespace NetOffice.OWC10Api
 		#region Methods
 
 		#endregion
+
 		#pragma warning restore
 	}
 }
+
+

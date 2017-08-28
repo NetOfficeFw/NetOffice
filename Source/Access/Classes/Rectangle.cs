@@ -1,41 +1,41 @@
 ﻿using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
-using NetOffice;
-using NetOffice.Misc;
+using NetOffice.Attributes;
 
 namespace NetOffice.AccessApi
 {
-
 	#region Delegates
 
 	#pragma warning disable
 	public delegate void Rectangle_ClickEventHandler();
-	public delegate void Rectangle_DblClickEventHandler(ref Int16 Cancel);
-	public delegate void Rectangle_MouseDownEventHandler(ref Int16 Button, ref Int16 Shift, ref Single X, ref Single Y);
-	public delegate void Rectangle_MouseMoveEventHandler(ref Int16 Button, ref Int16 Shift, ref Single X, ref Single Y);
-	public delegate void Rectangle_MouseUpEventHandler(ref Int16 Button, ref Int16 Shift, ref Single X, ref Single Y);
+	public delegate void Rectangle_DblClickEventHandler(ref Int16 cancel);
+	public delegate void Rectangle_MouseDownEventHandler(ref Int16 button, ref Int16 shift, ref Single x, ref Single y);
+	public delegate void Rectangle_MouseMoveEventHandler(ref Int16 button, ref Int16 shift, ref Single x, ref Single y);
+	public delegate void Rectangle_MouseUpEventHandler(ref Int16 button, ref Int16 shift, ref Single x, ref Single y);
 	#pragma warning restore
 
 	#endregion
 
-	///<summary>
+	/// <summary>
 	/// CoClass Rectangle 
 	/// SupportByVersion Access, 9,10,11,12,14,15,16
-	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836237.aspx
-	///</summary>
-	[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
-	[EntityTypeAttribute(EntityType.IsCoClass)]
-	public class Rectangle : _Rectangle,IEventBinding
+	/// </summary>
+	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff836237.aspx </remarks>
+	[SupportByVersion("Access", 9,10,11,12,14,15,16)]
+	[EntityType(EntityType.IsCoClass)]
+    [EventSink(typeof(Events._RectangleEvents_SinkHelper), typeof(Events.DispRectangleEvents_SinkHelper))]
+    public class Rectangle : _Rectangle, IEventBinding
 	{
 		#pragma warning disable
+
 		#region Fields
 		
 		private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
 		private string _activeSinkId;
 		private NetRuntimeSystem.Type _thisType;
-		_RectangleEvents_SinkHelper __RectangleEvents_SinkHelper;
-		DispRectangleEvents_SinkHelper _dispRectangleEvents_SinkHelper;
+		private Events._RectangleEvents_SinkHelper __RectangleEvents_SinkHelper;
+		private Events.DispRectangleEvents_SinkHelper _dispRectangleEvents_SinkHelper;
 	
 		#endregion
 
@@ -44,6 +44,7 @@ namespace NetOffice.AccessApi
         /// <summary>
         /// Instance Type
         /// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
         public override Type InstanceType
         {
             get
@@ -110,17 +111,17 @@ namespace NetOffice.AccessApi
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of Rectangle 
-        ///</summary>		
+        /// </summary>		
 		public Rectangle():base("Access.Rectangle")
 		{
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of Rectangle
-        ///</summary>
+        /// </summary>
         ///<param name="progId">registered ProgID</param>
 		public Rectangle(string progId):base(progId)
 		{
@@ -130,46 +131,6 @@ namespace NetOffice.AccessApi
 		#endregion
 
 		#region Static CoClass Methods
-
-		/// <summary>
-        /// Returns all running Access.Rectangle objects from the environment/system
-        /// </summary>
-        /// <returns>an Access.Rectangle array</returns>
-		public static NetOffice.AccessApi.Rectangle[] GetActiveInstances()
-		{		
-			IDisposableEnumeration proxyList = NetOffice.ProxyService.GetActiveInstances("Access","Rectangle");
-			NetRuntimeSystem.Collections.Generic.List<NetOffice.AccessApi.Rectangle> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.AccessApi.Rectangle>();
-			foreach(object proxy in proxyList)
-				resultList.Add( new NetOffice.AccessApi.Rectangle(null, proxy) );
-			return resultList.ToArray();
-		}
-
-		/// <summary>
-        /// Returns a running Access.Rectangle object from the environment/system.
-        /// </summary>
-        /// <returns>an Access.Rectangle object or null</returns>
-		public static NetOffice.AccessApi.Rectangle GetActiveInstance()
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Access","Rectangle", false);
-			if(null != proxy)
-				return new NetOffice.AccessApi.Rectangle(null, proxy);
-			else
-				return null;
-		}
-
-		/// <summary>
-        /// Returns a running Access.Rectangle object from the environment/system. 
-        /// </summary>
-	    /// <param name="throwOnError">throw an exception if no object was found</param>
-        /// <returns>an Access.Rectangle object or null</returns>
-		public static NetOffice.AccessApi.Rectangle GetActiveInstance(bool throwOnError)
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Access","Rectangle", throwOnError);
-			if(null != proxy)
-				return new NetOffice.AccessApi.Rectangle(null, proxy);
-			else
-				return null;
-		}
 		#endregion
 
 		#region Events
@@ -306,18 +267,18 @@ namespace NetOffice.AccessApi
 				return;
 	
             if (null == _activeSinkId)
-				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, _RectangleEvents_SinkHelper.Id,DispRectangleEvents_SinkHelper.Id);
+				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, Events._RectangleEvents_SinkHelper.Id, Events.DispRectangleEvents_SinkHelper.Id);
 
 
-			if(_RectangleEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
+			if(Events._RectangleEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
 			{
-				__RectangleEvents_SinkHelper = new _RectangleEvents_SinkHelper(this, _connectPoint);
+				__RectangleEvents_SinkHelper = new Events._RectangleEvents_SinkHelper(this, _connectPoint);
 				return;
 			}
 
-			if(DispRectangleEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
+			if(Events.DispRectangleEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
 			{
-				_dispRectangleEvents_SinkHelper = new DispRectangleEvents_SinkHelper(this, _connectPoint);
+				_dispRectangleEvents_SinkHelper = new Events.DispRectangleEvents_SinkHelper(this, _connectPoint);
 				return;
 			} 
         }
@@ -464,3 +425,4 @@ namespace NetOffice.AccessApi
 		#pragma warning restore
 	}
 }
+

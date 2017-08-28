@@ -1,12 +1,10 @@
 ﻿using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
-using NetOffice;
-using NetOffice.Misc;
+using NetOffice.Attributes;
 
 namespace NetOffice.MSFormsApi
 {
-
 	#region Delegates
 
 	#pragma warning disable
@@ -15,21 +13,23 @@ namespace NetOffice.MSFormsApi
 
 	#endregion
 
-	///<summary>
+	/// <summary>
 	/// CoClass HTMLPassword 
 	/// SupportByVersion MSForms, 2
-	///</summary>
-	[SupportByVersionAttribute("MSForms", 2)]
-	[EntityTypeAttribute(EntityType.IsCoClass)]
-	public class HTMLPassword : IWHTMLPassword,IEventBinding
+	/// </summary>
+	[SupportByVersion("MSForms", 2)]
+	[EntityType(EntityType.IsCoClass)]
+	[EventSink(typeof(Events.WHTMLControlEvents7_SinkHelper))]
+	public class HTMLPassword : IWHTMLPassword, IEventBinding
 	{
 		#pragma warning disable
+
 		#region Fields
 		
 		private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
 		private string _activeSinkId;
 		private NetRuntimeSystem.Type _thisType;
-		WHTMLControlEvents7_SinkHelper _wHTMLControlEvents7_SinkHelper;
+		private Events.WHTMLControlEvents7_SinkHelper _wHTMLControlEvents7_SinkHelper;
 	
 		#endregion
 
@@ -38,6 +38,7 @@ namespace NetOffice.MSFormsApi
         /// <summary>
         /// Instance Type
         /// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
         public override Type InstanceType
         {
             get
@@ -104,17 +105,17 @@ namespace NetOffice.MSFormsApi
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of HTMLPassword 
-        ///</summary>		
+        /// </summary>		
 		public HTMLPassword():base("MSForms.HTMLPassword")
 		{
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of HTMLPassword
-        ///</summary>
+        /// </summary>
         ///<param name="progId">registered ProgID</param>
 		public HTMLPassword(string progId):base(progId)
 		{
@@ -124,46 +125,6 @@ namespace NetOffice.MSFormsApi
 		#endregion
 
 		#region Static CoClass Methods
-
-		/// <summary>
-        /// Returns all running MSForms.HTMLPassword objects from the environment/system
-        /// </summary>
-        /// <returns>an MSForms.HTMLPassword array</returns>
-		public static NetOffice.MSFormsApi.HTMLPassword[] GetActiveInstances()
-		{		
-			IDisposableEnumeration proxyList = NetOffice.ProxyService.GetActiveInstances("MSForms","HTMLPassword");
-			NetRuntimeSystem.Collections.Generic.List<NetOffice.MSFormsApi.HTMLPassword> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.MSFormsApi.HTMLPassword>();
-			foreach(object proxy in proxyList)
-				resultList.Add( new NetOffice.MSFormsApi.HTMLPassword(null, proxy) );
-			return resultList.ToArray();
-		}
-
-		/// <summary>
-        /// Returns a running MSForms.HTMLPassword object from the environment/system.
-        /// </summary>
-        /// <returns>an MSForms.HTMLPassword object or null</returns>
-		public static NetOffice.MSFormsApi.HTMLPassword GetActiveInstance()
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("MSForms","HTMLPassword", false);
-			if(null != proxy)
-				return new NetOffice.MSFormsApi.HTMLPassword(null, proxy);
-			else
-				return null;
-		}
-
-		/// <summary>
-        /// Returns a running MSForms.HTMLPassword object from the environment/system. 
-        /// </summary>
-	    /// <param name="throwOnError">throw an exception if no object was found</param>
-        /// <returns>an MSForms.HTMLPassword object or null</returns>
-		public static NetOffice.MSFormsApi.HTMLPassword GetActiveInstance(bool throwOnError)
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("MSForms","HTMLPassword", throwOnError);
-			if(null != proxy)
-				return new NetOffice.MSFormsApi.HTMLPassword(null, proxy);
-			else
-				return null;
-		}
 		#endregion
 
 		#region Events
@@ -207,12 +168,12 @@ namespace NetOffice.MSFormsApi
 				return;
 	
             if (null == _activeSinkId)
-				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, WHTMLControlEvents7_SinkHelper.Id);
+				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, Events.WHTMLControlEvents7_SinkHelper.Id);
 
 
-			if(WHTMLControlEvents7_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
+			if(Events.WHTMLControlEvents7_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
 			{
-				_wHTMLControlEvents7_SinkHelper = new WHTMLControlEvents7_SinkHelper(this, _connectPoint);
+				_wHTMLControlEvents7_SinkHelper = new Events.WHTMLControlEvents7_SinkHelper(this, _connectPoint);
 				return;
 			} 
         }
@@ -354,3 +315,4 @@ namespace NetOffice.MSFormsApi
 		#pragma warning restore
 	}
 }
+

@@ -1,24 +1,35 @@
-﻿using System;
-using NetRuntimeSystem = System;
-using System.Runtime.InteropServices;
-using System.Runtime.CompilerServices;
-using System.ComponentModel;
-using System.Reflection;
+﻿using System.Collections;
 using System.Collections.Generic;
-using System.Collections;
-using NetOffice;
+using System;
+using NetRuntimeSystem = System;
+using System.ComponentModel;
+using NetOffice.Attributes;
+
 namespace NetOffice.MSComctlLibApi
 {
-	///<summary>
+	/// <summary>
 	/// DispatchInterface IImages 
 	/// SupportByVersion MSComctlLib, 6
-	///</summary>
-	[SupportByVersionAttribute("MSComctlLib", 6)]
-	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
-	public class IImages : COMObject ,IEnumerable<NetOffice.MSComctlLibApi.IImage>
+	/// </summary>
+	[SupportByVersion("MSComctlLib", 6)]
+	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Method), HasIndexProperty(IndexInvoke.Property, "Item")]
+	public class IImages : COMObject , IEnumerable<NetOffice.MSComctlLibApi.IImage>
 	{
 		#pragma warning disable
+
 		#region Type Information
+
+		/// <summary>
+		/// Instance Type
+		/// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
+		public override Type InstanceType
+		{
+			get
+			{
+				return LateBindingApiWrapperType;
+			}
+		}
 
         private static Type _type;
 
@@ -29,7 +40,6 @@ namespace NetOffice.MSComctlLibApi
             {
                 if (null == _type)
                     _type = typeof(IImages);
-                    
                 return _type;
             }
         }
@@ -82,7 +92,7 @@ namespace NetOffice.MSComctlLibApi
 		{
 		}
 		
-		/// <param name="progId">registered ProgID</param>
+		/// <param name="progId">registered progID</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public IImages(string progId) : base(progId)
 		{
@@ -96,19 +106,16 @@ namespace NetOffice.MSComctlLibApi
 		/// SupportByVersion MSComctlLib 6
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSComctlLib", 6)]
+		[SupportByVersion("MSComctlLib", 6)]
 		public Int16 Count
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Count", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt16(returnItem);
+				return Factory.ExecuteInt16PropertyGet(this, "Count");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "Count", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "Count", value);
 			}
 		}
 
@@ -116,36 +123,32 @@ namespace NetOffice.MSComctlLibApi
 		/// SupportByVersion MSComctlLib 6
 		/// Get/Set
 		/// </summary>
-		/// <param name="index">object Index</param>
-		[SupportByVersionAttribute("MSComctlLib", 6)]
+		/// <param name="index">object index</param>
+		[SupportByVersion("MSComctlLib", 6)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public NetOffice.MSComctlLibApi.IImage get_ControlDefault(object index)
-		{		
-			object[] paramsArray = Invoker.ValidateParamsArray(index);
-			object returnItem = Invoker.PropertyGet(this, "ControlDefault", paramsArray);
-			NetOffice.MSComctlLibApi.IImage newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSComctlLibApi.IImage;
-			return newObject;
+		{
+			return Factory.ExecuteKnownReferencePropertyGet<NetOffice.MSComctlLibApi.IImage>(this, "ControlDefault", NetOffice.MSComctlLibApi.IImage.LateBindingApiWrapperType, index);
 		}
 
 		/// <summary>
 		/// SupportByVersion MSComctlLib 6
 		/// Get/Set
 		/// </summary>
-		/// <param name="index">object Index</param>
-		[SupportByVersionAttribute("MSComctlLib", 6)]
+		/// <param name="index">object index</param>
+		[SupportByVersion("MSComctlLib", 6)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public void set_ControlDefault(object index, NetOffice.MSComctlLibApi.IImage value)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(index);
-			Invoker.PropertySet(this, "ControlDefault", paramsArray, value);
+			Factory.ExecutePropertySet(this, "ControlDefault", index, value);
 		}
 
 		/// <summary>
 		/// SupportByVersion MSComctlLib 6
 		/// Alias for get_ControlDefault
 		/// </summary>
-		/// <param name="index">object Index</param>
-		[SupportByVersionAttribute("MSComctlLib", 6)]
+		/// <param name="index">object index</param>
+		[SupportByVersion("MSComctlLib", 6), Redirect("get_ControlDefault")]
 		public NetOffice.MSComctlLibApi.IImage ControlDefault(object index)
 		{
 			return get_ControlDefault(index);
@@ -155,22 +158,18 @@ namespace NetOffice.MSComctlLibApi
 		/// SupportByVersion MSComctlLib 6
 		/// Get/Set
 		/// </summary>
-		/// <param name="index">object Index</param>
-		[SupportByVersionAttribute("MSComctlLib", 6)]
-		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
+		/// <param name="index">object index</param>
+		[SupportByVersion("MSComctlLib", 6)]
+		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
 		public NetOffice.MSComctlLibApi.IImage this[object index]
 		{
 			get
 			{
-			object[] paramsArray = Invoker.ValidateParamsArray(index);
-			object returnItem = Invoker.PropertyGet(this, "Item", paramsArray);
-			NetOffice.MSComctlLibApi.IImage newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSComctlLibApi.IImage;
-			return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.MSComctlLibApi.IImage>(this, "Item", NetOffice.MSComctlLibApi.IImage.LateBindingApiWrapperType, index);
 			}
 			set
 			{
-			object[] paramsArray = Invoker.ValidateParamsArray(index);
-			Invoker.PropertySet(this, "Item", paramsArray, value);
+				Factory.ExecuteReferencePropertySet(this, "Item", value, index);
 			}
 		}
 
@@ -180,86 +179,66 @@ namespace NetOffice.MSComctlLibApi
 
 		/// <summary>
 		/// SupportByVersion MSComctlLib 6
-		/// 
 		/// </summary>
-		/// <param name="index">optional object Index</param>
-		/// <param name="key">optional object Key</param>
-		/// <param name="picture">optional object Picture</param>
-		[SupportByVersionAttribute("MSComctlLib", 6)]
+		/// <param name="index">optional object index</param>
+		/// <param name="key">optional object key</param>
+		/// <param name="picture">optional object picture</param>
+		[SupportByVersion("MSComctlLib", 6)]
 		public NetOffice.MSComctlLibApi.IImage Add(object index, object key, object picture)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(index, key, picture);
-			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.MSComctlLibApi.IImage newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSComctlLibApi.IImage;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.MSComctlLibApi.IImage>(this, "Add", NetOffice.MSComctlLibApi.IImage.LateBindingApiWrapperType, index, key, picture);
 		}
 
 		/// <summary>
 		/// SupportByVersion MSComctlLib 6
-		/// 
 		/// </summary>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSComctlLib", 6)]
+		[CustomMethod]
+		[SupportByVersion("MSComctlLib", 6)]
 		public NetOffice.MSComctlLibApi.IImage Add()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.MSComctlLibApi.IImage newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSComctlLibApi.IImage;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.MSComctlLibApi.IImage>(this, "Add", NetOffice.MSComctlLibApi.IImage.LateBindingApiWrapperType);
 		}
 
 		/// <summary>
 		/// SupportByVersion MSComctlLib 6
-		/// 
 		/// </summary>
-		/// <param name="index">optional object Index</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSComctlLib", 6)]
+		/// <param name="index">optional object index</param>
+		[CustomMethod]
+		[SupportByVersion("MSComctlLib", 6)]
 		public NetOffice.MSComctlLibApi.IImage Add(object index)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(index);
-			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.MSComctlLibApi.IImage newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSComctlLibApi.IImage;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.MSComctlLibApi.IImage>(this, "Add", NetOffice.MSComctlLibApi.IImage.LateBindingApiWrapperType, index);
 		}
 
 		/// <summary>
 		/// SupportByVersion MSComctlLib 6
-		/// 
 		/// </summary>
-		/// <param name="index">optional object Index</param>
-		/// <param name="key">optional object Key</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSComctlLib", 6)]
+		/// <param name="index">optional object index</param>
+		/// <param name="key">optional object key</param>
+		[CustomMethod]
+		[SupportByVersion("MSComctlLib", 6)]
 		public NetOffice.MSComctlLibApi.IImage Add(object index, object key)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(index, key);
-			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.MSComctlLibApi.IImage newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSComctlLibApi.IImage;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.MSComctlLibApi.IImage>(this, "Add", NetOffice.MSComctlLibApi.IImage.LateBindingApiWrapperType, index, key);
 		}
 
 		/// <summary>
 		/// SupportByVersion MSComctlLib 6
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("MSComctlLib", 6)]
+		[SupportByVersion("MSComctlLib", 6)]
 		public void Clear()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "Clear", paramsArray);
+			 Factory.ExecuteMethod(this, "Clear");
 		}
 
 		/// <summary>
 		/// SupportByVersion MSComctlLib 6
-		/// 
 		/// </summary>
-		/// <param name="index">object Index</param>
-		[SupportByVersionAttribute("MSComctlLib", 6)]
+		/// <param name="index">object index</param>
+		[SupportByVersion("MSComctlLib", 6)]
 		public void Remove(object index)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(index);
-			Invoker.Method(this, "Remove", paramsArray);
+			 Factory.ExecuteMethod(this, "Remove", index);
 		}
 
 		#endregion
@@ -267,9 +246,9 @@ namespace NetOffice.MSComctlLibApi
        #region IEnumerable<NetOffice.MSComctlLibApi.IImage> Member
         
         /// <summary>
-		/// SupportByVersionAttribute MSComctlLib, 6
+		/// SupportByVersion MSComctlLib, 6
 		/// </summary>
-		[SupportByVersionAttribute("MSComctlLib", 6)]
+		[SupportByVersion("MSComctlLib", 6)]
        public IEnumerator<NetOffice.MSComctlLibApi.IImage> GetEnumerator()  
        {
            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
@@ -282,15 +261,19 @@ namespace NetOffice.MSComctlLibApi
 		#region IEnumerable Members
        
 		/// <summary>
-		/// SupportByVersionAttribute MSComctlLib, 6
+		/// SupportByVersion MSComctlLib, 6
 		/// </summary>
-		[SupportByVersionAttribute("MSComctlLib", 6)]
+		[SupportByVersion("MSComctlLib", 6)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
 			return NetOffice.Utils.GetProxyEnumeratorAsMethod(this);
 		}
 
 		#endregion
+
 		#pragma warning restore
 	}
 }
+
+
+

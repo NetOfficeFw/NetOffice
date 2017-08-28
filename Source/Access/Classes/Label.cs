@@ -1,41 +1,41 @@
 ﻿using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
-using NetOffice;
-using NetOffice.Misc;
+using NetOffice.Attributes;
 
 namespace NetOffice.AccessApi
 {
-
 	#region Delegates
 
 	#pragma warning disable
 	public delegate void Label_ClickEventHandler();
-	public delegate void Label_DblClickEventHandler(ref Int16 Cancel);
-	public delegate void Label_MouseDownEventHandler(ref Int16 Button, ref Int16 Shift, ref Single X, ref Single Y);
-	public delegate void Label_MouseMoveEventHandler(ref Int16 Button, ref Int16 Shift, ref Single X, ref Single Y);
-	public delegate void Label_MouseUpEventHandler(ref Int16 Button, ref Int16 Shift, ref Single X, ref Single Y);
+	public delegate void Label_DblClickEventHandler(ref Int16 cancel);
+	public delegate void Label_MouseDownEventHandler(ref Int16 button, ref Int16 shift, ref Single x, ref Single y);
+	public delegate void Label_MouseMoveEventHandler(ref Int16 button, ref Int16 shift, ref Single x, ref Single y);
+	public delegate void Label_MouseUpEventHandler(ref Int16 button, ref Int16 shift, ref Single x, ref Single y);
 	#pragma warning restore
 
 	#endregion
 
-	///<summary>
+	/// <summary>
 	/// CoClass Label 
 	/// SupportByVersion Access, 9,10,11,12,14,15,16
-	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192712.aspx
-	///</summary>
-	[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
-	[EntityTypeAttribute(EntityType.IsCoClass)]
-	public class Label : _Label,IEventBinding
+	/// </summary>
+	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff192712.aspx </remarks>
+	[SupportByVersion("Access", 9,10,11,12,14,15,16)]
+	[EntityType(EntityType.IsCoClass)]
+    [EventSink(typeof(Events._LabelEvents_SinkHelper), typeof(Events.DispLabelEvents_SinkHelper))]
+    public class Label : _Label, IEventBinding
 	{
 		#pragma warning disable
+
 		#region Fields
 		
 		private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
 		private string _activeSinkId;
 		private NetRuntimeSystem.Type _thisType;
-		_LabelEvents_SinkHelper __LabelEvents_SinkHelper;
-		DispLabelEvents_SinkHelper _dispLabelEvents_SinkHelper;
+		private Events._LabelEvents_SinkHelper __LabelEvents_SinkHelper;
+		private Events.DispLabelEvents_SinkHelper _dispLabelEvents_SinkHelper;
 	
 		#endregion
 
@@ -44,6 +44,7 @@ namespace NetOffice.AccessApi
         /// <summary>
         /// Instance Type
         /// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
         public override Type InstanceType
         {
             get
@@ -110,17 +111,17 @@ namespace NetOffice.AccessApi
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of Label 
-        ///</summary>		
+        /// </summary>		
 		public Label():base("Access.Label")
 		{
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of Label
-        ///</summary>
+        /// </summary>
         ///<param name="progId">registered ProgID</param>
 		public Label(string progId):base(progId)
 		{
@@ -130,46 +131,6 @@ namespace NetOffice.AccessApi
 		#endregion
 
 		#region Static CoClass Methods
-
-		/// <summary>
-        /// Returns all running Access.Label objects from the environment/system
-        /// </summary>
-        /// <returns>an Access.Label array</returns>
-		public static NetOffice.AccessApi.Label[] GetActiveInstances()
-		{		
-			IDisposableEnumeration proxyList = NetOffice.ProxyService.GetActiveInstances("Access","Label");
-			NetRuntimeSystem.Collections.Generic.List<NetOffice.AccessApi.Label> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.AccessApi.Label>();
-			foreach(object proxy in proxyList)
-				resultList.Add( new NetOffice.AccessApi.Label(null, proxy) );
-			return resultList.ToArray();
-		}
-
-		/// <summary>
-        /// Returns a running Access.Label object from the environment/system.
-        /// </summary>
-        /// <returns>an Access.Label object or null</returns>
-		public static NetOffice.AccessApi.Label GetActiveInstance()
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Access","Label", false);
-			if(null != proxy)
-				return new NetOffice.AccessApi.Label(null, proxy);
-			else
-				return null;
-		}
-
-		/// <summary>
-        /// Returns a running Access.Label object from the environment/system. 
-        /// </summary>
-	    /// <param name="throwOnError">throw an exception if no object was found</param>
-        /// <returns>an Access.Label object or null</returns>
-		public static NetOffice.AccessApi.Label GetActiveInstance(bool throwOnError)
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Access","Label", throwOnError);
-			if(null != proxy)
-				return new NetOffice.AccessApi.Label(null, proxy);
-			else
-				return null;
-		}
 		#endregion
 
 		#region Events
@@ -306,18 +267,18 @@ namespace NetOffice.AccessApi
 				return;
 	
             if (null == _activeSinkId)
-				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, _LabelEvents_SinkHelper.Id,DispLabelEvents_SinkHelper.Id);
+				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, Events._LabelEvents_SinkHelper.Id, Events.DispLabelEvents_SinkHelper.Id);
 
 
-			if(_LabelEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
+			if(Events._LabelEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
 			{
-				__LabelEvents_SinkHelper = new _LabelEvents_SinkHelper(this, _connectPoint);
+				__LabelEvents_SinkHelper = new Events._LabelEvents_SinkHelper(this, _connectPoint);
 				return;
 			}
 
-			if(DispLabelEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
+			if(Events.DispLabelEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
 			{
-				_dispLabelEvents_SinkHelper = new DispLabelEvents_SinkHelper(this, _connectPoint);
+				_dispLabelEvents_SinkHelper = new Events.DispLabelEvents_SinkHelper(this, _connectPoint);
 				return;
 			} 
         }
@@ -464,3 +425,4 @@ namespace NetOffice.AccessApi
 		#pragma warning restore
 	}
 }
+

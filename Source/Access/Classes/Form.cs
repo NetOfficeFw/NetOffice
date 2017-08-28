@@ -1,94 +1,94 @@
 ﻿using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
-using NetOffice;
-using NetOffice.Misc;
+using NetOffice.Attributes;
 
 namespace NetOffice.AccessApi
 {
-
 	#region Delegates
 
 	#pragma warning disable
 	public delegate void Form_LoadEventHandler();
 	public delegate void Form_CurrentEventHandler();
-	public delegate void Form_BeforeInsertEventHandler(ref Int16 Cancel);
+	public delegate void Form_BeforeInsertEventHandler(ref Int16 cancel);
 	public delegate void Form_AfterInsertEventHandler();
-	public delegate void Form_BeforeUpdateEventHandler(ref Int16 Cancel);
+	public delegate void Form_BeforeUpdateEventHandler(ref Int16 cancel);
 	public delegate void Form_AfterUpdateEventHandler();
-	public delegate void Form_DeleteEventHandler(ref Int16 Cancel);
-	public delegate void Form_BeforeDelConfirmEventHandler(ref Int16 Cancel, ref Int16 Response);
-	public delegate void Form_AfterDelConfirmEventHandler(ref Int16 Status);
-	public delegate void Form_OpenEventHandler(ref Int16 Cancel);
+	public delegate void Form_DeleteEventHandler(ref Int16 cancel);
+	public delegate void Form_BeforeDelConfirmEventHandler(ref Int16 cancel, ref Int16 response);
+	public delegate void Form_AfterDelConfirmEventHandler(ref Int16 status);
+	public delegate void Form_OpenEventHandler(ref Int16 cancel);
 	public delegate void Form_ResizeEventHandler();
-	public delegate void Form_UnloadEventHandler(ref Int16 Cancel);
+	public delegate void Form_UnloadEventHandler(ref Int16 cancel);
 	public delegate void Form_CloseEventHandler();
 	public delegate void Form_ActivateEventHandler();
 	public delegate void Form_DeactivateEventHandler();
 	public delegate void Form_GotFocusEventHandler();
 	public delegate void Form_LostFocusEventHandler();
 	public delegate void Form_ClickEventHandler();
-	public delegate void Form_DblClickEventHandler(ref Int16 Cancel);
-	public delegate void Form_MouseDownEventHandler(ref Int16 Button, ref Int16 Shift, ref Single X, ref Single Y);
-	public delegate void Form_MouseMoveEventHandler(ref Int16 Button, ref Int16 Shift, ref Single X, ref Single Y);
-	public delegate void Form_MouseUpEventHandler(ref Int16 Button, ref Int16 Shift, ref Single X, ref Single Y);
-	public delegate void Form_KeyDownEventHandler(ref Int16 KeyCode, ref Int16 Shift);
+	public delegate void Form_DblClickEventHandler(ref Int16 cancel);
+	public delegate void Form_MouseDownEventHandler(ref Int16 button, ref Int16 shift, ref Single x, ref Single y);
+	public delegate void Form_MouseMoveEventHandler(ref Int16 button, ref Int16 shift, ref Single x, ref Single y);
+	public delegate void Form_MouseUpEventHandler(ref Int16 button, ref Int16 shift, ref Single x, ref Single y);
+	public delegate void Form_KeyDownEventHandler(ref Int16 keyCode, ref Int16 shift);
 	public delegate void Form_KeyPressEventHandler(ref Int16 KeyAscii);
-	public delegate void Form_KeyUpEventHandler(ref Int16 KeyCode, ref Int16 Shift);
-	public delegate void Form_ErrorEventHandler(ref Int16 DataErr, ref Int16 Response);
+	public delegate void Form_KeyUpEventHandler(ref Int16 keyCode, ref Int16 shift);
+	public delegate void Form_ErrorEventHandler(ref Int16 dataErr, ref Int16 response);
 	public delegate void Form_TimerEventHandler();
-	public delegate void Form_FilterEventHandler(ref Int16 Cancel, ref Int16 FilterType);
-	public delegate void Form_ApplyFilterEventHandler(ref Int16 Cancel, ref Int16 ApplyType);
-	public delegate void Form_DirtyEventHandler(ref Int16 Cancel);
-	public delegate void Form_UndoEventHandler(ref Int16 Cancel);
-	public delegate void Form_RecordExitEventHandler(ref Int16 Cancel);
-	public delegate void Form_BeginBatchEditEventHandler(ref Int16 Cancel);
-	public delegate void Form_UndoBatchEditEventHandler(ref Int16 Cancel);
-	public delegate void Form_BeforeBeginTransactionEventHandler(ref Int16 Cancel, ref NetOffice.ADODBApi.Connection Connection);
-	public delegate void Form_AfterBeginTransactionEventHandler(ref NetOffice.ADODBApi.Connection Connection);
-	public delegate void Form_BeforeCommitTransactionEventHandler(ref Int16 Cancel, ref NetOffice.ADODBApi.Connection Connection);
-	public delegate void Form_AfterCommitTransactionEventHandler(ref NetOffice.ADODBApi.Connection Connection);
-	public delegate void Form_RollbackTransactionEventHandler(ref NetOffice.ADODBApi.Connection Connection);
+	public delegate void Form_FilterEventHandler(ref Int16 cancel, ref Int16 filterType);
+	public delegate void Form_ApplyFilterEventHandler(ref Int16 cancel, ref Int16 applyType);
+	public delegate void Form_DirtyEventHandler(ref Int16 cancel);
+	public delegate void Form_UndoEventHandler(ref Int16 cancel);
+	public delegate void Form_RecordExitEventHandler(ref Int16 cancel);
+	public delegate void Form_BeginBatchEditEventHandler(ref Int16 cancel);
+	public delegate void Form_UndoBatchEditEventHandler(ref Int16 cancel);
+	public delegate void Form_BeforeBeginTransactionEventHandler(ref Int16 cancel, ref NetOffice.ADODBApi.Connection connection);
+	public delegate void Form_AfterBeginTransactionEventHandler(ref NetOffice.ADODBApi.Connection connection);
+	public delegate void Form_BeforeCommitTransactionEventHandler(ref Int16 Cancel, ref NetOffice.ADODBApi.Connection connection);
+	public delegate void Form_AfterCommitTransactionEventHandler(ref NetOffice.ADODBApi.Connection connection);
+	public delegate void Form_RollbackTransactionEventHandler(ref NetOffice.ADODBApi.Connection connection);
 	public delegate void Form_OnConnectEventHandler();
 	public delegate void Form_OnDisconnectEventHandler();
-	public delegate void Form_PivotTableChangeEventHandler(Int32 Reason);
+	public delegate void Form_PivotTableChangeEventHandler(Int32 reason);
 	public delegate void Form_QueryEventHandler();
 	public delegate void Form_BeforeQueryEventHandler();
 	public delegate void Form_SelectionChangeEventHandler();
-	public delegate void Form_CommandBeforeExecuteEventHandler(object Command, COMObject Cancel);
-	public delegate void Form_CommandCheckedEventHandler(object Command, COMObject Checked);
-	public delegate void Form_CommandEnabledEventHandler(object Command, COMObject Enabled);
-	public delegate void Form_CommandExecuteEventHandler(object Command);
+	public delegate void Form_CommandBeforeExecuteEventHandler(object command, ICOMObject cancel);
+	public delegate void Form_CommandCheckedEventHandler(object command, ICOMObject Checked);
+	public delegate void Form_CommandEnabledEventHandler(object command, ICOMObject Enabled);
+	public delegate void Form_CommandExecuteEventHandler(object command);
 	public delegate void Form_DataSetChangeEventHandler();
-	public delegate void Form_BeforeScreenTipEventHandler(COMObject ScreenTipText, COMObject SourceObject);
-	public delegate void Form_BeforeRenderEventHandler(COMObject drawObject, COMObject chartObject, COMObject Cancel);
-	public delegate void Form_AfterRenderEventHandler(COMObject drawObject, COMObject chartObject);
-	public delegate void Form_AfterFinalRenderEventHandler(COMObject drawObject);
-	public delegate void Form_AfterLayoutEventHandler(COMObject drawObject);
-	public delegate void Form_MouseWheelEventHandler(bool Page, Int32 Count);
-	public delegate void Form_ViewChangeEventHandler(Int32 Reason);
-	public delegate void Form_DataChangeEventHandler(Int32 Reason);
+	public delegate void Form_BeforeScreenTipEventHandler(ICOMObject screenTipText, ICOMObject sourceObject);
+	public delegate void Form_BeforeRenderEventHandler(ICOMObject drawObject, ICOMObject chartObject, ICOMObject cancel);
+	public delegate void Form_AfterRenderEventHandler(ICOMObject drawObject, ICOMObject chartObject);
+	public delegate void Form_AfterFinalRenderEventHandler(ICOMObject drawObject);
+	public delegate void Form_AfterLayoutEventHandler(ICOMObject drawObject);
+	public delegate void Form_MouseWheelEventHandler(bool page, Int32 count);
+	public delegate void Form_ViewChangeEventHandler(Int32 reason);
+	public delegate void Form_DataChangeEventHandler(Int32 reason);
 	#pragma warning restore
 
 	#endregion
 
-	///<summary>
+	/// <summary>
 	/// CoClass Form 
 	/// SupportByVersion Access, 9,10,11,12,14,15,16
-	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195841.aspx
-	///</summary>
-	[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
-	[EntityTypeAttribute(EntityType.IsCoClass)]
-	public class Form : _Form3,IEventBinding
+	/// </summary>
+	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff195841.aspx </remarks>
+	[SupportByVersion("Access", 9,10,11,12,14,15,16)]
+	[EntityType(EntityType.IsCoClass)]
+    [EventSink(typeof(Events._FormEvents_SinkHelper), typeof(Events._FormEvents2_SinkHelper))]
+    public class Form : _Form3, IEventBinding
 	{
 		#pragma warning disable
+
 		#region Fields
 		
 		private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
 		private string _activeSinkId;
 		private NetRuntimeSystem.Type _thisType;
-		_FormEvents_SinkHelper __FormEvents_SinkHelper;
-		_FormEvents2_SinkHelper __FormEvents2_SinkHelper;
+		private Events._FormEvents_SinkHelper __FormEvents_SinkHelper;
+		private Events._FormEvents2_SinkHelper __FormEvents2_SinkHelper;
 	
 		#endregion
 
@@ -97,6 +97,7 @@ namespace NetOffice.AccessApi
         /// <summary>
         /// Instance Type
         /// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
         public override Type InstanceType
         {
             get
@@ -163,17 +164,17 @@ namespace NetOffice.AccessApi
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of Form 
-        ///</summary>		
+        /// </summary>		
 		public Form():base("Access.Form")
 		{
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of Form
-        ///</summary>
+        /// </summary>
         ///<param name="progId">registered ProgID</param>
 		public Form(string progId):base(progId)
 		{
@@ -183,46 +184,6 @@ namespace NetOffice.AccessApi
 		#endregion
 
 		#region Static CoClass Methods
-
-		/// <summary>
-        /// Returns all running Access.Form objects from the environment/system
-        /// </summary>
-        /// <returns>an Access.Form array</returns>
-		public static NetOffice.AccessApi.Form[] GetActiveInstances()
-		{		
-			IDisposableEnumeration proxyList = NetOffice.ProxyService.GetActiveInstances("Access","Form");
-			NetRuntimeSystem.Collections.Generic.List<NetOffice.AccessApi.Form> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.AccessApi.Form>();
-			foreach(object proxy in proxyList)
-				resultList.Add( new NetOffice.AccessApi.Form(null, proxy) );
-			return resultList.ToArray();
-		}
-
-		/// <summary>
-        /// Returns a running Access.Form object from the environment/system.
-        /// </summary>
-        /// <returns>an Access.Form object or null</returns>
-		public static NetOffice.AccessApi.Form GetActiveInstance()
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Access","Form", false);
-			if(null != proxy)
-				return new NetOffice.AccessApi.Form(null, proxy);
-			else
-				return null;
-		}
-
-		/// <summary>
-        /// Returns a running Access.Form object from the environment/system. 
-        /// </summary>
-	    /// <param name="throwOnError">throw an exception if no object was found</param>
-        /// <returns>an Access.Form object or null</returns>
-		public static NetOffice.AccessApi.Form GetActiveInstance(bool throwOnError)
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Access","Form", throwOnError);
-			if(null != proxy)
-				return new NetOffice.AccessApi.Form(null, proxy);
-			else
-				return null;
-		}
 		#endregion
 
 		#region Events
@@ -1570,18 +1531,18 @@ namespace NetOffice.AccessApi
 				return;
 	
             if (null == _activeSinkId)
-				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, _FormEvents_SinkHelper.Id,_FormEvents2_SinkHelper.Id);
+				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, Events._FormEvents_SinkHelper.Id, Events._FormEvents2_SinkHelper.Id);
 
 
-			if(_FormEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
+			if(Events._FormEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
 			{
-				__FormEvents_SinkHelper = new _FormEvents_SinkHelper(this, _connectPoint);
+				__FormEvents_SinkHelper = new Events._FormEvents_SinkHelper(this, _connectPoint);
 				return;
 			}
 
-			if(_FormEvents2_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
+			if(Events._FormEvents2_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
 			{
-				__FormEvents2_SinkHelper = new _FormEvents2_SinkHelper(this, _connectPoint);
+				__FormEvents2_SinkHelper = new Events._FormEvents2_SinkHelper(this, _connectPoint);
 				return;
 			} 
         }
@@ -1728,3 +1689,4 @@ namespace NetOffice.AccessApi
 		#pragma warning restore
 	}
 }
+

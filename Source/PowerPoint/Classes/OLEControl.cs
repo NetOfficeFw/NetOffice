@@ -1,12 +1,10 @@
 ﻿using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
-using NetOffice;
-using NetOffice.Misc;
+using NetOffice.Attributes;
 
 namespace NetOffice.PowerPointApi
 {
-
 	#region Delegates
 
 	#pragma warning disable
@@ -16,21 +14,23 @@ namespace NetOffice.PowerPointApi
 
 	#endregion
 
-	///<summary>
+	/// <summary>
 	/// CoClass OLEControl 
 	/// SupportByVersion PowerPoint, 9,10,11,12,14,15,16
-	///</summary>
-	[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
-	[EntityTypeAttribute(EntityType.IsCoClass)]
-	public class OLEControl : OCXExtender,IEventBinding
+	/// </summary>
+	[SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+	[EntityType(EntityType.IsCoClass)]
+	[EventSink(typeof(Events.OCXExtenderEvents_SinkHelper))]
+	public class OLEControl : OCXExtender, IEventBinding
 	{
 		#pragma warning disable
+
 		#region Fields
 		
 		private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
 		private string _activeSinkId;
 		private NetRuntimeSystem.Type _thisType;
-		OCXExtenderEvents_SinkHelper _oCXExtenderEvents_SinkHelper;
+		private Events.OCXExtenderEvents_SinkHelper _oCXExtenderEvents_SinkHelper;
 	
 		#endregion
 
@@ -39,6 +39,7 @@ namespace NetOffice.PowerPointApi
         /// <summary>
         /// Instance Type
         /// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
         public override Type InstanceType
         {
             get
@@ -105,17 +106,17 @@ namespace NetOffice.PowerPointApi
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of OLEControl 
-        ///</summary>		
+        /// </summary>		
 		public OLEControl():base("PowerPoint.OLEControl")
 		{
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of OLEControl
-        ///</summary>
+        /// </summary>
         ///<param name="progId">registered ProgID</param>
 		public OLEControl(string progId):base(progId)
 		{
@@ -125,46 +126,6 @@ namespace NetOffice.PowerPointApi
 		#endregion
 
 		#region Static CoClass Methods
-
-		/// <summary>
-        /// Returns all running PowerPoint.OLEControl objects from the environment/system
-        /// </summary>
-        /// <returns>an PowerPoint.OLEControl array</returns>
-		public static NetOffice.PowerPointApi.OLEControl[] GetActiveInstances()
-		{		
-			IDisposableEnumeration proxyList = NetOffice.ProxyService.GetActiveInstances("PowerPoint","OLEControl");
-			NetRuntimeSystem.Collections.Generic.List<NetOffice.PowerPointApi.OLEControl> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.PowerPointApi.OLEControl>();
-			foreach(object proxy in proxyList)
-				resultList.Add( new NetOffice.PowerPointApi.OLEControl(null, proxy) );
-			return resultList.ToArray();
-		}
-
-		/// <summary>
-        /// Returns a running PowerPoint.OLEControl object from the environment/system.
-        /// </summary>
-        /// <returns>an PowerPoint.OLEControl object or null</returns>
-		public static NetOffice.PowerPointApi.OLEControl GetActiveInstance()
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("PowerPoint","OLEControl", false);
-			if(null != proxy)
-				return new NetOffice.PowerPointApi.OLEControl(null, proxy);
-			else
-				return null;
-		}
-
-		/// <summary>
-        /// Returns a running PowerPoint.OLEControl object from the environment/system. 
-        /// </summary>
-	    /// <param name="throwOnError">throw an exception if no object was found</param>
-        /// <returns>an PowerPoint.OLEControl object or null</returns>
-		public static NetOffice.PowerPointApi.OLEControl GetActiveInstance(bool throwOnError)
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("PowerPoint","OLEControl", throwOnError);
-			if(null != proxy)
-				return new NetOffice.PowerPointApi.OLEControl(null, proxy);
-			else
-				return null;
-		}
 		#endregion
 
 		#region Events
@@ -230,12 +191,12 @@ namespace NetOffice.PowerPointApi
 				return;
 	
             if (null == _activeSinkId)
-				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, OCXExtenderEvents_SinkHelper.Id);
+				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, Events.OCXExtenderEvents_SinkHelper.Id);
 
 
-			if(OCXExtenderEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
+			if(Events.OCXExtenderEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
 			{
-				_oCXExtenderEvents_SinkHelper = new OCXExtenderEvents_SinkHelper(this, _connectPoint);
+				_oCXExtenderEvents_SinkHelper = new Events.OCXExtenderEvents_SinkHelper(this, _connectPoint);
 				return;
 			} 
         }
@@ -377,3 +338,4 @@ namespace NetOffice.PowerPointApi
 		#pragma warning restore
 	}
 }
+

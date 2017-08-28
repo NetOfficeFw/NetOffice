@@ -1,17 +1,16 @@
-﻿using System;
+﻿using System.Reflection;
+using System;
 using NetRuntimeSystem = System;
-using System.Runtime.InteropServices;
-using System.Runtime.CompilerServices;
 using System.ComponentModel;
-using System.Reflection;
-using System.Collections.Generic;
-using NetOffice;
+using NetOffice.Attributes;
+
 namespace NetOffice.OWC10Api
 {
-	///<summary>
+	/// <summary>
 	/// IDataSourceControl
-	///</summary>
-	public class IDataSourceControl_ : COMObject
+	/// </summary>
+	[SyntaxBypass]
+ 	public class IDataSourceControl_ : COMObject
 	{
 		#region Construction
 
@@ -62,7 +61,7 @@ namespace NetOffice.OWC10Api
 		{
 		}
 		
-		/// <param name="progId">registered ProgID</param>
+		/// <param name="progId">registered progID</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public IDataSourceControl_(string progId) : base(progId)
 		{
@@ -76,23 +75,20 @@ namespace NetOffice.OWC10Api
 		/// SupportByVersion OWC10 1
 		/// Get
 		/// </summary>
-		/// <param name="dataMember">optional object DataMember</param>
-		[SupportByVersionAttribute("OWC10", 1)]
+		/// <param name="dataMember">optional object dataMember</param>
+		[SupportByVersion("OWC10", 1)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public NetOffice.OWC10Api.Enums.ProviderType get_ProviderType(object dataMember)
-		{		
-			object[] paramsArray = Invoker.ValidateParamsArray(dataMember);
-			object returnItem = Invoker.PropertyGet(this, "ProviderType", paramsArray);
-			int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-			return (NetOffice.OWC10Api.Enums.ProviderType)intReturnItem;
+		{
+			return Factory.ExecuteEnumPropertyGet<NetOffice.OWC10Api.Enums.ProviderType>(this, "ProviderType", dataMember);
 		}
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
 		/// Alias for get_ProviderType
 		/// </summary>
-		/// <param name="dataMember">optional object DataMember</param>
-		[SupportByVersionAttribute("OWC10", 1)]
+		/// <param name="dataMember">optional object dataMember</param>
+		[SupportByVersion("OWC10", 1), Redirect("get_ProviderType")]
 		public NetOffice.OWC10Api.Enums.ProviderType ProviderType(object dataMember)
 		{
 			return get_ProviderType(dataMember);
@@ -106,16 +102,29 @@ namespace NetOffice.OWC10Api
 
 	}
 
-	///<summary>
+	/// <summary>
 	/// DispatchInterface IDataSourceControl 
 	/// SupportByVersion OWC10, 1
-	///</summary>
-	[SupportByVersionAttribute("OWC10", 1)]
-	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
-	public class IDataSourceControl : IDataSourceControl_
+	/// </summary>
+	[SupportByVersion("OWC10", 1)]
+	[EntityType(EntityType.IsDispatchInterface)]
+ 	public class IDataSourceControl : IDataSourceControl_
 	{
 		#pragma warning disable
+
 		#region Type Information
+
+		/// <summary>
+		/// Instance Type
+		/// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
+		public override Type InstanceType
+		{
+			get
+			{
+				return LateBindingApiWrapperType;
+			}
+		}
 
         private static Type _type;
 
@@ -126,7 +135,6 @@ namespace NetOffice.OWC10Api
             {
                 if (null == _type)
                     _type = typeof(IDataSourceControl);
-                    
                 return _type;
             }
         }
@@ -179,7 +187,7 @@ namespace NetOffice.OWC10Api
 		{
 		}
 		
-		/// <param name="progId">registered ProgID</param>
+		/// <param name="progId">registered progID</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public IDataSourceControl(string progId) : base(progId)
 		{
@@ -193,19 +201,16 @@ namespace NetOffice.OWC10Api
 		/// SupportByVersion OWC10 1
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("OWC10", 1)]
+		[SupportByVersion("OWC10", 1)]
 		public string ConnectionString
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "ConnectionString", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "ConnectionString");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "ConnectionString", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "ConnectionString", value);
 			}
 		}
 
@@ -213,15 +218,13 @@ namespace NetOffice.OWC10Api
 		/// SupportByVersion OWC10 1
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("OWC10", 1)]
+		[SupportByVersion("OWC10", 1)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public string CurrentDirectory
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "CurrentDirectory", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "CurrentDirectory");
 			}
 		}
 
@@ -229,19 +232,16 @@ namespace NetOffice.OWC10Api
 		/// SupportByVersion OWC10 1
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("OWC10", 1)]
+		[SupportByVersion("OWC10", 1)]
 		public bool UseRemoteProvider
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "UseRemoteProvider", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "UseRemoteProvider");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "UseRemoteProvider", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "UseRemoteProvider", value);
 			}
 		}
 
@@ -249,15 +249,12 @@ namespace NetOffice.OWC10Api
 		/// SupportByVersion OWC10 1
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("OWC10", 1)]
+		[SupportByVersion("OWC10", 1)]
 		public NetOffice.ADODBApi.Connection Connection
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Connection", paramsArray);
-				NetOffice.ADODBApi.Connection newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ADODBApi.Connection.LateBindingApiWrapperType) as NetOffice.ADODBApi.Connection;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ADODBApi.Connection>(this, "Connection", NetOffice.ADODBApi.Connection.LateBindingApiWrapperType);
 			}
 		}
 
@@ -265,19 +262,16 @@ namespace NetOffice.OWC10Api
 		/// SupportByVersion OWC10 1
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("OWC10", 1)]
+		[SupportByVersion("OWC10", 1)]
 		public bool DataEntry
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "DataEntry", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "DataEntry");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "DataEntry", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "DataEntry", value);
 			}
 		}
 
@@ -285,19 +279,16 @@ namespace NetOffice.OWC10Api
 		/// SupportByVersion OWC10 1
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("OWC10", 1)]
+		[SupportByVersion("OWC10", 1)]
 		public Int32 MaxRecords
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "MaxRecords", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "MaxRecords");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "MaxRecords", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "MaxRecords", value);
 			}
 		}
 
@@ -305,15 +296,12 @@ namespace NetOffice.OWC10Api
 		/// SupportByVersion OWC10 1
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("OWC10", 1)]
+		[SupportByVersion("OWC10", 1)]
 		public NetOffice.ADODBApi.Recordset DefaultRecordset
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "DefaultRecordset", paramsArray);
-				NetOffice.ADODBApi.Recordset newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ADODBApi.Recordset.LateBindingApiWrapperType) as NetOffice.ADODBApi.Recordset;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ADODBApi.Recordset>(this, "DefaultRecordset", NetOffice.ADODBApi.Recordset.LateBindingApiWrapperType);
 			}
 		}
 
@@ -321,15 +309,12 @@ namespace NetOffice.OWC10Api
 		/// SupportByVersion OWC10 1
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("OWC10", 1)]
+		[SupportByVersion("OWC10", 1)]
 		public NetOffice.OWC10Api.SchemaRowsources SchemaRowsources
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "SchemaRowsources", paramsArray);
-				NetOffice.OWC10Api.SchemaRowsources newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OWC10Api.SchemaRowsources.LateBindingApiWrapperType) as NetOffice.OWC10Api.SchemaRowsources;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OWC10Api.SchemaRowsources>(this, "SchemaRowsources", NetOffice.OWC10Api.SchemaRowsources.LateBindingApiWrapperType);
 			}
 		}
 
@@ -337,15 +322,12 @@ namespace NetOffice.OWC10Api
 		/// SupportByVersion OWC10 1
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("OWC10", 1)]
+		[SupportByVersion("OWC10", 1)]
 		public NetOffice.OWC10Api.SchemaRelationships SchemaRelationships
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "SchemaRelationships", paramsArray);
-				NetOffice.OWC10Api.SchemaRelationships newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OWC10Api.SchemaRelationships.LateBindingApiWrapperType) as NetOffice.OWC10Api.SchemaRelationships;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OWC10Api.SchemaRelationships>(this, "SchemaRelationships", NetOffice.OWC10Api.SchemaRelationships.LateBindingApiWrapperType);
 			}
 		}
 
@@ -353,16 +335,13 @@ namespace NetOffice.OWC10Api
 		/// SupportByVersion OWC10 1
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("OWC10", 1)]
+		[SupportByVersion("OWC10", 1)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public NetOffice.OWC10Api.PageRowsources PageRowsources
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "PageRowsources", paramsArray);
-				NetOffice.OWC10Api.PageRowsources newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OWC10Api.PageRowsources.LateBindingApiWrapperType) as NetOffice.OWC10Api.PageRowsources;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OWC10Api.PageRowsources>(this, "PageRowsources", NetOffice.OWC10Api.PageRowsources.LateBindingApiWrapperType);
 			}
 		}
 
@@ -370,15 +349,12 @@ namespace NetOffice.OWC10Api
 		/// SupportByVersion OWC10 1
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("OWC10", 1)]
+		[SupportByVersion("OWC10", 1)]
 		public NetOffice.OWC10Api.RecordsetDefs RecordsetDefs
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "RecordsetDefs", paramsArray);
-				NetOffice.OWC10Api.RecordsetDefs newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OWC10Api.RecordsetDefs.LateBindingApiWrapperType) as NetOffice.OWC10Api.RecordsetDefs;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OWC10Api.RecordsetDefs>(this, "RecordsetDefs", NetOffice.OWC10Api.RecordsetDefs.LateBindingApiWrapperType);
 			}
 		}
 
@@ -386,16 +362,13 @@ namespace NetOffice.OWC10Api
 		/// SupportByVersion OWC10 1
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("OWC10", 1)]
+		[SupportByVersion("OWC10", 1)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public NetOffice.OWC10Api.RecordsetDefs RootRecordsetDefs
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "RootRecordsetDefs", paramsArray);
-				NetOffice.OWC10Api.RecordsetDefs newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OWC10Api.RecordsetDefs.LateBindingApiWrapperType) as NetOffice.OWC10Api.RecordsetDefs;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OWC10Api.RecordsetDefs>(this, "RootRecordsetDefs", NetOffice.OWC10Api.RecordsetDefs.LateBindingApiWrapperType);
 			}
 		}
 
@@ -404,16 +377,13 @@ namespace NetOffice.OWC10Api
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("OWC10", 1)]
+		[SupportByVersion("OWC10", 1), ProxyResult]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public object PivotDefs
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "PivotDefs", paramsArray);
-				ICOMObject newObject = Factory.CreateObjectFromComProxy(this,returnItem);
-				return newObject;
+				return Factory.ExecuteReferencePropertyGet(this, "PivotDefs");
 			}
 		}
 
@@ -421,20 +391,17 @@ namespace NetOffice.OWC10Api
 		/// SupportByVersion OWC10 1
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("OWC10", 1)]
+		[SupportByVersion("OWC10", 1)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public string DefaultRecordsetName
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "DefaultRecordsetName", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "DefaultRecordsetName");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "DefaultRecordsetName", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "DefaultRecordsetName", value);
 			}
 		}
 
@@ -442,20 +409,17 @@ namespace NetOffice.OWC10Api
 		/// SupportByVersion OWC10 1
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("OWC10", 1)]
+		[SupportByVersion("OWC10", 1)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public string XMLData
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "XMLData", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "XMLData");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "XMLData", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "XMLData", value);
 			}
 		}
 
@@ -463,15 +427,12 @@ namespace NetOffice.OWC10Api
 		/// SupportByVersion OWC10 1
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("OWC10", 1)]
+		[SupportByVersion("OWC10", 1)]
 		public NetOffice.OWC10Api.GroupLevels GroupLevels
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "GroupLevels", paramsArray);
-				NetOffice.OWC10Api.GroupLevels newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OWC10Api.GroupLevels.LateBindingApiWrapperType) as NetOffice.OWC10Api.GroupLevels;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OWC10Api.GroupLevels>(this, "GroupLevels", NetOffice.OWC10Api.GroupLevels.LateBindingApiWrapperType);
 			}
 		}
 
@@ -480,16 +441,13 @@ namespace NetOffice.OWC10Api
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("OWC10", 1)]
+		[SupportByVersion("OWC10", 1), ProxyResult]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public object Constants
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Constants", paramsArray);
-				ICOMObject newObject = Factory.CreateObjectFromComProxy(this,returnItem);
-				return newObject;
+				return Factory.ExecuteReferencePropertyGet(this, "Constants");
 			}
 		}
 
@@ -497,15 +455,12 @@ namespace NetOffice.OWC10Api
 		/// SupportByVersion OWC10 1
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("OWC10", 1)]
+		[SupportByVersion("OWC10", 1)]
 		public NetOffice.OWC10Api.ElementExtensions ElementExtensions
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "ElementExtensions", paramsArray);
-				NetOffice.OWC10Api.ElementExtensions newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OWC10Api.ElementExtensions.LateBindingApiWrapperType) as NetOffice.OWC10Api.ElementExtensions;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OWC10Api.ElementExtensions>(this, "ElementExtensions", NetOffice.OWC10Api.ElementExtensions.LateBindingApiWrapperType);
 			}
 		}
 
@@ -513,20 +468,17 @@ namespace NetOffice.OWC10Api
 		/// SupportByVersion OWC10 1
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("OWC10", 1)]
+		[SupportByVersion("OWC10", 1)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public bool IsNew
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "IsNew", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "IsNew");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "IsNew", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "IsNew", value);
 			}
 		}
 
@@ -534,20 +486,16 @@ namespace NetOffice.OWC10Api
 		/// SupportByVersion OWC10 1
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("OWC10", 1)]
+		[SupportByVersion("OWC10", 1)]
 		public NetOffice.OWC10Api.Enums.DscRecordsetTypeEnum RecordsetType
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "RecordsetType", paramsArray);
-				int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-				return (NetOffice.OWC10Api.Enums.DscRecordsetTypeEnum)intReturnItem;
+				return Factory.ExecuteEnumPropertyGet<NetOffice.OWC10Api.Enums.DscRecordsetTypeEnum>(this, "RecordsetType");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "RecordsetType", paramsArray);
+				Factory.ExecuteEnumPropertySet(this, "RecordsetType", value);
 			}
 		}
 
@@ -555,15 +503,12 @@ namespace NetOffice.OWC10Api
 		/// SupportByVersion OWC10 1
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("OWC10", 1)]
+		[SupportByVersion("OWC10", 1)]
 		public NetOffice.OWC10Api.AllPageFields AllPageFields
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "AllPageFields", paramsArray);
-				NetOffice.OWC10Api.AllPageFields newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OWC10Api.AllPageFields.LateBindingApiWrapperType) as NetOffice.OWC10Api.AllPageFields;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OWC10Api.AllPageFields>(this, "AllPageFields", NetOffice.OWC10Api.AllPageFields.LateBindingApiWrapperType);
 			}
 		}
 
@@ -571,15 +516,12 @@ namespace NetOffice.OWC10Api
 		/// SupportByVersion OWC10 1
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("OWC10", 1)]
+		[SupportByVersion("OWC10", 1)]
 		public NetOffice.OWC10Api.Section CurrentSection
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "CurrentSection", paramsArray);
-				NetOffice.OWC10Api.Section newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OWC10Api.Section.LateBindingApiWrapperType) as NetOffice.OWC10Api.Section;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OWC10Api.Section>(this, "CurrentSection", NetOffice.OWC10Api.Section.LateBindingApiWrapperType);
 			}
 		}
 
@@ -587,16 +529,13 @@ namespace NetOffice.OWC10Api
 		/// SupportByVersion OWC10 1
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("OWC10", 1)]
+		[SupportByVersion("OWC10", 1)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public NetOffice.OWC10Api.Enums.ProviderType ProviderType
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "ProviderType", paramsArray);
-				int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-				return (NetOffice.OWC10Api.Enums.ProviderType)intReturnItem;
+				return Factory.ExecuteEnumPropertyGet<NetOffice.OWC10Api.Enums.ProviderType>(this, "ProviderType");
 			}
 		}
 
@@ -604,15 +543,12 @@ namespace NetOffice.OWC10Api
 		/// SupportByVersion OWC10 1
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("OWC10", 1)]
+		[SupportByVersion("OWC10", 1)]
 		public NetOffice.OWC10Api.AllGroupingDefs AllGroupingDefs
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "AllGroupingDefs", paramsArray);
-				NetOffice.OWC10Api.AllGroupingDefs newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OWC10Api.AllGroupingDefs.LateBindingApiWrapperType) as NetOffice.OWC10Api.AllGroupingDefs;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OWC10Api.AllGroupingDefs>(this, "AllGroupingDefs", NetOffice.OWC10Api.AllGroupingDefs.LateBindingApiWrapperType);
 			}
 		}
 
@@ -620,19 +556,16 @@ namespace NetOffice.OWC10Api
 		/// SupportByVersion OWC10 1
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("OWC10", 1)]
+		[SupportByVersion("OWC10", 1)]
 		public bool DisplayAlerts
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "DisplayAlerts", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "DisplayAlerts");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "DisplayAlerts", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "DisplayAlerts", value);
 			}
 		}
 
@@ -640,15 +573,12 @@ namespace NetOffice.OWC10Api
 		/// SupportByVersion OWC10 1
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("OWC10", 1)]
+		[SupportByVersion("OWC10", 1)]
 		public NetOffice.OWC10Api.DataPages DataPages
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "DataPages", paramsArray);
-				NetOffice.OWC10Api.DataPages newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OWC10Api.DataPages.LateBindingApiWrapperType) as NetOffice.OWC10Api.DataPages;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OWC10Api.DataPages>(this, "DataPages", NetOffice.OWC10Api.DataPages.LateBindingApiWrapperType);
 			}
 		}
 
@@ -656,19 +586,16 @@ namespace NetOffice.OWC10Api
 		/// SupportByVersion OWC10 1
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("OWC10", 1)]
+		[SupportByVersion("OWC10", 1)]
 		public Int32 GridX
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "GridX", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "GridX");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "GridX", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "GridX", value);
 			}
 		}
 
@@ -676,19 +603,16 @@ namespace NetOffice.OWC10Api
 		/// SupportByVersion OWC10 1
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("OWC10", 1)]
+		[SupportByVersion("OWC10", 1)]
 		public Int32 GridY
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "GridY", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "GridY");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "GridY", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "GridY", value);
 			}
 		}
 
@@ -696,15 +620,13 @@ namespace NetOffice.OWC10Api
 		/// SupportByVersion OWC10 1
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("OWC10", 1)]
+		[SupportByVersion("OWC10", 1)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public Int32 LoadError
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "LoadError", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "LoadError");
 			}
 		}
 
@@ -712,20 +634,16 @@ namespace NetOffice.OWC10Api
 		/// SupportByVersion OWC10 1
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("OWC10", 1)]
+		[SupportByVersion("OWC10", 1)]
 		public NetOffice.OWC10Api.Enums.DefaultControlTypeEnum DefaultControlType
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "DefaultControlType", paramsArray);
-				int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-				return (NetOffice.OWC10Api.Enums.DefaultControlTypeEnum)intReturnItem;
+				return Factory.ExecuteEnumPropertyGet<NetOffice.OWC10Api.Enums.DefaultControlTypeEnum>(this, "DefaultControlType");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "DefaultControlType", paramsArray);
+				Factory.ExecuteEnumPropertySet(this, "DefaultControlType", value);
 			}
 		}
 
@@ -733,20 +651,17 @@ namespace NetOffice.OWC10Api
 		/// SupportByVersion OWC10 1
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("OWC10", 1)]
+		[SupportByVersion("OWC10", 1)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public bool IsDirty
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "IsDirty", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "IsDirty");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "IsDirty", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "IsDirty", value);
 			}
 		}
 
@@ -754,15 +669,13 @@ namespace NetOffice.OWC10Api
 		/// SupportByVersion OWC10 1
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("OWC10", 1)]
+		[SupportByVersion("OWC10", 1)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public bool Busy
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Busy", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "Busy");
 			}
 		}
 
@@ -770,14 +683,12 @@ namespace NetOffice.OWC10Api
 		/// SupportByVersion OWC10 1
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("OWC10", 1)]
+		[SupportByVersion("OWC10", 1)]
 		public string Version
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Version", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "Version");
 			}
 		}
 
@@ -785,14 +696,12 @@ namespace NetOffice.OWC10Api
 		/// SupportByVersion OWC10 1
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("OWC10", 1)]
+		[SupportByVersion("OWC10", 1)]
 		public Int32 MajorVersion
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "MajorVersion", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "MajorVersion");
 			}
 		}
 
@@ -800,14 +709,12 @@ namespace NetOffice.OWC10Api
 		/// SupportByVersion OWC10 1
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("OWC10", 1)]
+		[SupportByVersion("OWC10", 1)]
 		public string MinorVersion
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "MinorVersion", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "MinorVersion");
 			}
 		}
 
@@ -815,14 +722,12 @@ namespace NetOffice.OWC10Api
 		/// SupportByVersion OWC10 1
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("OWC10", 1)]
+		[SupportByVersion("OWC10", 1)]
 		public string BuildNumber
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "BuildNumber", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "BuildNumber");
 			}
 		}
 
@@ -830,14 +735,12 @@ namespace NetOffice.OWC10Api
 		/// SupportByVersion OWC10 1
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("OWC10", 1)]
+		[SupportByVersion("OWC10", 1)]
 		public string RevisionNumber
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "RevisionNumber", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "RevisionNumber");
 			}
 		}
 
@@ -845,20 +748,17 @@ namespace NetOffice.OWC10Api
 		/// SupportByVersion OWC10 1
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("OWC10", 1)]
+		[SupportByVersion("OWC10", 1)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public bool IsDataModelDirty
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "IsDataModelDirty", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "IsDataModelDirty");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "IsDataModelDirty", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "IsDataModelDirty", value);
 			}
 		}
 
@@ -866,20 +766,16 @@ namespace NetOffice.OWC10Api
 		/// SupportByVersion OWC10 1
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("OWC10", 1)]
+		[SupportByVersion("OWC10", 1)]
 		public NetOffice.OWC10Api.Enums.DscOfflineTypeEnum OfflineType
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "OfflineType", paramsArray);
-				int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-				return (NetOffice.OWC10Api.Enums.DscOfflineTypeEnum)intReturnItem;
+				return Factory.ExecuteEnumPropertyGet<NetOffice.OWC10Api.Enums.DscOfflineTypeEnum>(this, "OfflineType");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "OfflineType", paramsArray);
+				Factory.ExecuteEnumPropertySet(this, "OfflineType", value);
 			}
 		}
 
@@ -887,19 +783,16 @@ namespace NetOffice.OWC10Api
 		/// SupportByVersion OWC10 1
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("OWC10", 1)]
+		[SupportByVersion("OWC10", 1)]
 		public string OfflinePublication
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "OfflinePublication", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "OfflinePublication");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "OfflinePublication", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "OfflinePublication", value);
 			}
 		}
 
@@ -907,14 +800,12 @@ namespace NetOffice.OWC10Api
 		/// SupportByVersion OWC10 1
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("OWC10", 1)]
+		[SupportByVersion("OWC10", 1)]
 		public bool Offline
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Offline", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "Offline");
 			}
 		}
 
@@ -922,19 +813,16 @@ namespace NetOffice.OWC10Api
 		/// SupportByVersion OWC10 1
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("OWC10", 1)]
+		[SupportByVersion("OWC10", 1)]
 		public string OfflineSource
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "OfflineSource", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "OfflineSource");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "OfflineSource", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "OfflineSource", value);
 			}
 		}
 
@@ -942,20 +830,16 @@ namespace NetOffice.OWC10Api
 		/// SupportByVersion OWC10 1
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("OWC10", 1)]
+		[SupportByVersion("OWC10", 1)]
 		public NetOffice.OWC10Api.Enums.DscXMLLocationEnum XMLLocation
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "XMLLocation", paramsArray);
-				int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-				return (NetOffice.OWC10Api.Enums.DscXMLLocationEnum)intReturnItem;
+				return Factory.ExecuteEnumPropertyGet<NetOffice.OWC10Api.Enums.DscXMLLocationEnum>(this, "XMLLocation");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "XMLLocation", paramsArray);
+				Factory.ExecuteEnumPropertySet(this, "XMLLocation", value);
 			}
 		}
 
@@ -963,19 +847,16 @@ namespace NetOffice.OWC10Api
 		/// SupportByVersion OWC10 1
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("OWC10", 1)]
+		[SupportByVersion("OWC10", 1)]
 		public bool UseXMLData
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "UseXMLData", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "UseXMLData");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "UseXMLData", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "UseXMLData", value);
 			}
 		}
 
@@ -983,19 +864,16 @@ namespace NetOffice.OWC10Api
 		/// SupportByVersion OWC10 1
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("OWC10", 1)]
+		[SupportByVersion("OWC10", 1)]
 		public string XMLDataTarget
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "XMLDataTarget", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "XMLDataTarget");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "XMLDataTarget", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "XMLDataTarget", value);
 			}
 		}
 
@@ -1003,19 +881,16 @@ namespace NetOffice.OWC10Api
 		/// SupportByVersion OWC10 1
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("OWC10", 1)]
+		[SupportByVersion("OWC10", 1)]
 		public string ConnectionFile
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "ConnectionFile", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "ConnectionFile");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "ConnectionFile", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "ConnectionFile", value);
 			}
 		}
 
@@ -1023,15 +898,13 @@ namespace NetOffice.OWC10Api
 		/// SupportByVersion OWC10 1
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("OWC10", 1)]
+		[SupportByVersion("OWC10", 1)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public string DefaultRecordsetDefName
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "DefaultRecordsetDefName", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "DefaultRecordsetDefName");
 			}
 		}
 
@@ -1039,15 +912,13 @@ namespace NetOffice.OWC10Api
 		/// SupportByVersion OWC10 1
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("OWC10", 1)]
+		[SupportByVersion("OWC10", 1)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public string ConnectionStringFullPath
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "ConnectionStringFullPath", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "ConnectionStringFullPath");
 			}
 		}
 
@@ -1055,16 +926,13 @@ namespace NetOffice.OWC10Api
 		/// SupportByVersion OWC10 1
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("OWC10", 1)]
+		[SupportByVersion("OWC10", 1)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public NetOffice.OWC10Api.SchemaDiagrams SchemaDiagrams
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "SchemaDiagrams", paramsArray);
-				NetOffice.OWC10Api.SchemaDiagrams newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OWC10Api.SchemaDiagrams.LateBindingApiWrapperType) as NetOffice.OWC10Api.SchemaDiagrams;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OWC10Api.SchemaDiagrams>(this, "SchemaDiagrams", NetOffice.OWC10Api.SchemaDiagrams.LateBindingApiWrapperType);
 			}
 		}
 
@@ -1072,15 +940,13 @@ namespace NetOffice.OWC10Api
 		/// SupportByVersion OWC10 1
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("OWC10", 1)]
+		[SupportByVersion("OWC10", 1)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public string DBNSOwnerName
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "DBNSOwnerName", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "DBNSOwnerName");
 			}
 		}
 
@@ -1090,158 +956,131 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
-		/// 
 		/// </summary>
-		/// <param name="recordsetName">string RecordsetName</param>
+		/// <param name="recordsetName">string recordsetName</param>
 		/// <param name="executeOption">optional NetOffice.ADODBApi.Enums.ExecuteOptionEnum ExecuteOption = -1</param>
 		/// <param name="fetchType">optional NetOffice.OWC10Api.Enums.DscFetchTypeEnum FetchType = 2</param>
-		[SupportByVersionAttribute("OWC10", 1)]
+		[SupportByVersion("OWC10", 1)]
 		public NetOffice.ADODBApi.Recordset Execute(string recordsetName, object executeOption, object fetchType)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(recordsetName, executeOption, fetchType);
-			object returnItem = Invoker.MethodReturn(this, "Execute", paramsArray);
-			NetOffice.ADODBApi.Recordset newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ADODBApi.Recordset.LateBindingApiWrapperType) as NetOffice.ADODBApi.Recordset;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ADODBApi.Recordset>(this, "Execute", NetOffice.ADODBApi.Recordset.LateBindingApiWrapperType, recordsetName, executeOption, fetchType);
 		}
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
-		/// 
 		/// </summary>
-		/// <param name="recordsetName">string RecordsetName</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("OWC10", 1)]
+		/// <param name="recordsetName">string recordsetName</param>
+		[CustomMethod]
+		[SupportByVersion("OWC10", 1)]
 		public NetOffice.ADODBApi.Recordset Execute(string recordsetName)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(recordsetName);
-			object returnItem = Invoker.MethodReturn(this, "Execute", paramsArray);
-			NetOffice.ADODBApi.Recordset newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ADODBApi.Recordset.LateBindingApiWrapperType) as NetOffice.ADODBApi.Recordset;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ADODBApi.Recordset>(this, "Execute", NetOffice.ADODBApi.Recordset.LateBindingApiWrapperType, recordsetName);
 		}
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
-		/// 
 		/// </summary>
-		/// <param name="recordsetName">string RecordsetName</param>
+		/// <param name="recordsetName">string recordsetName</param>
 		/// <param name="executeOption">optional NetOffice.ADODBApi.Enums.ExecuteOptionEnum ExecuteOption = -1</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("OWC10", 1)]
+		[CustomMethod]
+		[SupportByVersion("OWC10", 1)]
 		public NetOffice.ADODBApi.Recordset Execute(string recordsetName, object executeOption)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(recordsetName, executeOption);
-			object returnItem = Invoker.MethodReturn(this, "Execute", paramsArray);
-			NetOffice.ADODBApi.Recordset newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ADODBApi.Recordset.LateBindingApiWrapperType) as NetOffice.ADODBApi.Recordset;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ADODBApi.Recordset>(this, "Execute", NetOffice.ADODBApi.Recordset.LateBindingApiWrapperType, recordsetName, executeOption);
 		}
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
-		/// 
 		/// </summary>
-		/// <param name="dataAssistant">object DataAssistant</param>
+		/// <param name="dataAssistant">object dataAssistant</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("OWC10", 1)]
+		[SupportByVersion("OWC10", 1)]
 		public void SetDataAssistant(object dataAssistant)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(dataAssistant);
-			Invoker.Method(this, "SetDataAssistant", paramsArray);
+			 Factory.ExecuteMethod(this, "SetDataAssistant", dataAssistant);
 		}
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
-		/// 
 		/// </summary>
-		/// <param name="advise">object Advise</param>
-		/// <param name="sinkName">string SinkName</param>
+		/// <param name="advise">object advise</param>
+		/// <param name="sinkName">string sinkName</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("OWC10", 1)]
+		[SupportByVersion("OWC10", 1)]
 		public void DesignAdvise(object advise, string sinkName)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(advise, sinkName);
-			Invoker.Method(this, "DesignAdvise", paramsArray);
+			 Factory.ExecuteMethod(this, "DesignAdvise", advise, sinkName);
 		}
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
-		/// 
 		/// </summary>
-		/// <param name="sinkName">string SinkName</param>
+		/// <param name="sinkName">string sinkName</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("OWC10", 1)]
+		[SupportByVersion("OWC10", 1)]
 		public void DesignUnAdvise(string sinkName)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(sinkName);
-			Invoker.Method(this, "DesignUnAdvise", paramsArray);
+			 Factory.ExecuteMethod(this, "DesignUnAdvise", sinkName);
 		}
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
-		/// 
 		/// </summary>
 		/// <param name="pUnknownDropGoo">object pUnknownDropGoo</param>
 		/// <param name="bstrRecordSetDefName">string bstrRecordSetDefName</param>
 		/// <param name="dl">NetOffice.OWC10Api.Enums.DscDropLocationEnum dl</param>
 		/// <param name="dt">NetOffice.OWC10Api.Enums.DscDropTypeEnum dt</param>
-		/// <param name="pageRowsource">string PageRowsource</param>
-		/// <param name="schemaRelationship">string SchemaRelationship</param>
+		/// <param name="pageRowsource">string pageRowsource</param>
+		/// <param name="schemaRelationship">string schemaRelationship</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("OWC10", 1)]
+		[SupportByVersion("OWC10", 1)]
 		public void ProcessDrop(object pUnknownDropGoo, string bstrRecordSetDefName, NetOffice.OWC10Api.Enums.DscDropLocationEnum dl, NetOffice.OWC10Api.Enums.DscDropTypeEnum dt, string pageRowsource, string schemaRelationship)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(pUnknownDropGoo, bstrRecordSetDefName, dl, dt, pageRowsource, schemaRelationship);
-			Invoker.Method(this, "ProcessDrop", paramsArray);
+			 Factory.ExecuteMethod(this, "ProcessDrop", new object[]{ pUnknownDropGoo, bstrRecordSetDefName, dl, dt, pageRowsource, schemaRelationship });
 		}
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
-		/// 
 		/// </summary>
-		/// <param name="rowsources">object Rowsources</param>
-		/// <param name="relationships">object Relationships</param>
-		/// <param name="fields">object Fields</param>
+		/// <param name="rowsources">object rowsources</param>
+		/// <param name="relationships">object relationships</param>
+		/// <param name="fields">object fields</param>
 		/// <param name="bstrRecordSetDefName">string bstrRecordSetDefName</param>
 		/// <param name="dl">NetOffice.OWC10Api.Enums.DscDropLocationEnum dl</param>
 		/// <param name="dt">NetOffice.OWC10Api.Enums.DscDropTypeEnum dt</param>
-		/// <param name="pageRowsource">string PageRowsource</param>
-		/// <param name="schemaRelationship">string SchemaRelationship</param>
+		/// <param name="pageRowsource">string pageRowsource</param>
+		/// <param name="schemaRelationship">string schemaRelationship</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("OWC10", 1)]
+		[SupportByVersion("OWC10", 1)]
 		public void ScriptDrop(object rowsources, object relationships, object fields, string bstrRecordSetDefName, NetOffice.OWC10Api.Enums.DscDropLocationEnum dl, NetOffice.OWC10Api.Enums.DscDropTypeEnum dt, string pageRowsource, string schemaRelationship)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(rowsources, relationships, fields, bstrRecordSetDefName, dl, dt, pageRowsource, schemaRelationship);
-			Invoker.Method(this, "ScriptDrop", paramsArray);
+			 Factory.ExecuteMethod(this, "ScriptDrop", new object[]{ rowsources, relationships, fields, bstrRecordSetDefName, dl, dt, pageRowsource, schemaRelationship });
 		}
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
-		/// 
 		/// </summary>
-		/// <param name="element">object Element</param>
-		[SupportByVersionAttribute("OWC10", 1)]
+		/// <param name="element">object element</param>
+		[SupportByVersion("OWC10", 1)]
 		public NetOffice.OWC10Api.Section GetContainingSection(object element)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(element);
-			object returnItem = Invoker.MethodReturn(this, "GetContainingSection", paramsArray);
-			NetOffice.OWC10Api.Section newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OWC10Api.Section.LateBindingApiWrapperType) as NetOffice.OWC10Api.Section;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OWC10Api.Section>(this, "GetContainingSection", NetOffice.OWC10Api.Section.LateBindingApiWrapperType, element);
 		}
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
-		/// 
 		/// </summary>
-		/// <param name="rowsources">object Rowsources</param>
-		/// <param name="relationships">object Relationships</param>
-		/// <param name="fields">object Fields</param>
-		/// <param name="recordsetDef">string RecordsetDef</param>
+		/// <param name="rowsources">object rowsources</param>
+		/// <param name="relationships">object relationships</param>
+		/// <param name="fields">object fields</param>
+		/// <param name="recordsetDef">string recordsetDef</param>
 		/// <param name="dl">NetOffice.OWC10Api.Enums.DscDropLocationEnum dl</param>
 		/// <param name="dt">NetOffice.OWC10Api.Enums.DscDropTypeEnum dt</param>
-		/// <param name="dropRowsource">string DropRowsource</param>
-		/// <param name="rowsourcesOut">object RowsourcesOut</param>
-		/// <param name="relationshipsOut">object RelationshipsOut</param>
+		/// <param name="dropRowsource">string dropRowsource</param>
+		/// <param name="rowsourcesOut">object rowsourcesOut</param>
+		/// <param name="relationshipsOut">object relationshipsOut</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("OWC10", 1)]
+		[SupportByVersion("OWC10", 1)]
 		public void ScriptValidate(object rowsources, object relationships, object fields, string recordsetDef, NetOffice.OWC10Api.Enums.DscDropLocationEnum dl, NetOffice.OWC10Api.Enums.DscDropTypeEnum dt, out string dropRowsource, out object rowsourcesOut, out object relationshipsOut)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,false,false,false,false,false,true,true,true);
@@ -1250,25 +1089,24 @@ namespace NetOffice.OWC10Api
 			relationshipsOut = null;
 			object[] paramsArray = Invoker.ValidateParamsArray(rowsources, relationships, fields, recordsetDef, dl, dt, dropRowsource, rowsourcesOut, relationshipsOut);
 			Invoker.Method(this, "ScriptValidate", paramsArray, modifiers);
-			dropRowsource = (string)paramsArray[6];
+			dropRowsource = paramsArray[6] as string;
 			rowsourcesOut = (object)paramsArray[7];
 			relationshipsOut = (object)paramsArray[8];
 		}
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
-		/// 
 		/// </summary>
-		/// <param name="unknownDropGoo">object UnknownDropGoo</param>
-		/// <param name="recordSetDefName">string RecordSetDefName</param>
-		/// <param name="location">NetOffice.OWC10Api.Enums.DscDropLocationEnum Location</param>
-		/// <param name="type">NetOffice.OWC10Api.Enums.DscDropTypeEnum Type</param>
-		/// <param name="dropRowsource">string DropRowsource</param>
-		/// <param name="rowsourcesOut">object RowsourcesOut</param>
-		/// <param name="relationshipsOut">object RelationshipsOut</param>
-		/// <param name="numberOfDrops">Int32 NumberOfDrops</param>
+		/// <param name="unknownDropGoo">object unknownDropGoo</param>
+		/// <param name="recordSetDefName">string recordSetDefName</param>
+		/// <param name="location">NetOffice.OWC10Api.Enums.DscDropLocationEnum location</param>
+		/// <param name="type">NetOffice.OWC10Api.Enums.DscDropTypeEnum type</param>
+		/// <param name="dropRowsource">string dropRowsource</param>
+		/// <param name="rowsourcesOut">object rowsourcesOut</param>
+		/// <param name="relationshipsOut">object relationshipsOut</param>
+		/// <param name="numberOfDrops">Int32 numberOfDrops</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("OWC10", 1)]
+		[SupportByVersion("OWC10", 1)]
 		public void ValidateDrop(object unknownDropGoo, string recordSetDefName, NetOffice.OWC10Api.Enums.DscDropLocationEnum location, NetOffice.OWC10Api.Enums.DscDropTypeEnum type, out string dropRowsource, out object rowsourcesOut, out object relationshipsOut, out Int32 numberOfDrops)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,false,false,false,true,true,true,true);
@@ -1278,7 +1116,7 @@ namespace NetOffice.OWC10Api
 			numberOfDrops = 0;
 			object[] paramsArray = Invoker.ValidateParamsArray(unknownDropGoo, recordSetDefName, location, type, dropRowsource, rowsourcesOut, relationshipsOut, numberOfDrops);
 			Invoker.Method(this, "ValidateDrop", paramsArray, modifiers);
-			dropRowsource = (string)paramsArray[4];
+			dropRowsource = paramsArray[4] as string;
 			rowsourcesOut = (object)paramsArray[5];
 			relationshipsOut = (object)paramsArray[6];
 			numberOfDrops = (Int32)paramsArray[7];
@@ -1286,94 +1124,78 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
-		/// 
 		/// </summary>
-		/// <param name="hyperlink">object Hyperlink</param>
-		/// <param name="part">NetOffice.OWC10Api.Enums.DscHyperlinkPartEnum Part</param>
+		/// <param name="hyperlink">object hyperlink</param>
+		/// <param name="part">NetOffice.OWC10Api.Enums.DscHyperlinkPartEnum part</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("OWC10", 1)]
+		[SupportByVersion("OWC10", 1)]
 		public string HyperlinkPart(object hyperlink, NetOffice.OWC10Api.Enums.DscHyperlinkPartEnum part)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(hyperlink, part);
-			object returnItem = Invoker.MethodReturn(this, "HyperlinkPart", paramsArray);
-			return NetRuntimeSystem.Convert.ToString(returnItem);
+			return Factory.ExecuteStringMethodGet(this, "HyperlinkPart", hyperlink, part);
 		}
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
-		/// 
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("OWC10", 1)]
+		[SupportByVersion("OWC10", 1)]
 		public void SchemaRefresh()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "SchemaRefresh", paramsArray);
+			 Factory.ExecuteMethod(this, "SchemaRefresh");
 		}
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
-		/// 
 		/// </summary>
-		/// <param name="oldID">string OldID</param>
-		/// <param name="newID">string NewID</param>
+		/// <param name="oldID">string oldID</param>
+		/// <param name="newID">string newID</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("OWC10", 1)]
+		[SupportByVersion("OWC10", 1)]
 		public void UpdateElementID(string oldID, string newID)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(oldID, newID);
-			Invoker.Method(this, "UpdateElementID", paramsArray);
+			 Factory.ExecuteMethod(this, "UpdateElementID", oldID, newID);
 		}
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
-		/// 
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("OWC10", 1)]
+		[SupportByVersion("OWC10", 1)]
 		public void Reset()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "Reset", paramsArray);
+			 Factory.ExecuteMethod(this, "Reset");
 		}
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
-		/// 
 		/// </summary>
 		/// <param name="lIndex">Int32 lIndex</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("OWC10", 1)]
+		[SupportByVersion("OWC10", 1)]
 		public string getDataMemberName(Int32 lIndex)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(lIndex);
-			object returnItem = Invoker.MethodReturn(this, "getDataMemberName", paramsArray);
-			return NetRuntimeSystem.Convert.ToString(returnItem);
+			return Factory.ExecuteStringMethodGet(this, "getDataMemberName", lIndex);
 		}
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
-		/// 
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("OWC10", 1)]
+		[SupportByVersion("OWC10", 1)]
 		public Int32 getDataMemberCount()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "getDataMemberCount", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return Factory.ExecuteInt32MethodGet(this, "getDataMemberCount");
 		}
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
-		/// 
 		/// </summary>
-		/// <param name="sectionElement">object SectionElement</param>
-		/// <param name="recordSource">string RecordSource</param>
-		/// <param name="sectionType">NetOffice.OWC10Api.Enums.SectTypeEnum SectionType</param>
-		/// <param name="groupLevel">NetOffice.OWC10Api.GroupLevel GroupLevel</param>
+		/// <param name="sectionElement">object sectionElement</param>
+		/// <param name="recordSource">string recordSource</param>
+		/// <param name="sectionType">NetOffice.OWC10Api.Enums.SectTypeEnum sectionType</param>
+		/// <param name="groupLevel">NetOffice.OWC10Api.GroupLevel groupLevel</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("OWC10", 1)]
+		[SupportByVersion("OWC10", 1)]
 		public void GetSectionInfo(object sectionElement, out string recordSource, out NetOffice.OWC10Api.Enums.SectTypeEnum sectionType, out NetOffice.OWC10Api.GroupLevel groupLevel)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,true,true,true);
@@ -1382,114 +1204,103 @@ namespace NetOffice.OWC10Api
 			groupLevel = null;
 			object[] paramsArray = Invoker.ValidateParamsArray(sectionElement, recordSource, sectionType, groupLevel);
 			Invoker.Method(this, "GetSectionInfo", paramsArray, modifiers);
-			recordSource = (string)paramsArray[1];
+			recordSource = paramsArray[1] as string;
 			sectionType = (NetOffice.OWC10Api.Enums.SectTypeEnum)paramsArray[2];
-			groupLevel = (NetOffice.OWC10Api.GroupLevel)paramsArray[3];
+            if (paramsArray[3] is MarshalByRefObject)
+                groupLevel = new NetOffice.OWC10Api.GroupLevel(this, paramsArray[3]);
+            else
+                groupLevel = null;
 		}
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
-		/// 
 		/// </summary>
-		/// <param name="recordSource">string RecordSource</param>
+		/// <param name="recordSource">string recordSource</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("OWC10", 1)]
+		[SupportByVersion("OWC10", 1)]
 		public void DeleteRecordSourceIfUnused(string recordSource)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(recordSource);
-			Invoker.Method(this, "DeleteRecordSourceIfUnused", paramsArray);
+			 Factory.ExecuteMethod(this, "DeleteRecordSourceIfUnused", recordSource);
 		}
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
-		/// 
 		/// </summary>
-		/// <param name="recordSource">string RecordSource</param>
-		/// <param name="pageField">string PageField</param>
+		/// <param name="recordSource">string recordSource</param>
+		/// <param name="pageField">string pageField</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("OWC10", 1)]
+		[SupportByVersion("OWC10", 1)]
 		public void DeletePageFieldIfUnused(string recordSource, string pageField)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(recordSource, pageField);
-			Invoker.Method(this, "DeletePageFieldIfUnused", paramsArray);
+			 Factory.ExecuteMethod(this, "DeletePageFieldIfUnused", recordSource, pageField);
 		}
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
-		/// 
 		/// </summary>
 		/// <param name="bstrRecordset">string bstrRecordset</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("OWC10", 1)]
+		[SupportByVersion("OWC10", 1)]
 		public void ResetRecordset(string bstrRecordset)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(bstrRecordset);
-			Invoker.Method(this, "ResetRecordset", paramsArray);
+			 Factory.ExecuteMethod(this, "ResetRecordset", bstrRecordset);
 		}
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
-		/// 
 		/// </summary>
-		/// <param name="exportType">NetOffice.OWC10Api.Enums.ExportableConnectStringEnum ExportType</param>
-		/// <param name="connectString">string ConnectString</param>
+		/// <param name="exportType">NetOffice.OWC10Api.Enums.ExportableConnectStringEnum exportType</param>
+		/// <param name="connectString">string connectString</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("OWC10", 1)]
+		[SupportByVersion("OWC10", 1)]
 		public void GetExportableConnectString(NetOffice.OWC10Api.Enums.ExportableConnectStringEnum exportType, out string connectString)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,true);
 			connectString = string.Empty;
 			object[] paramsArray = Invoker.ValidateParamsArray(exportType, connectString);
 			Invoker.Method(this, "GetExportableConnectString", paramsArray, modifiers);
-			connectString = (string)paramsArray[1];
+			connectString = paramsArray[1] as string;
 		}
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
-		/// 
 		/// </summary>
 		/// <param name="eEncoding">optional NetOffice.OWC10Api.Enums.DscEncodingEnum eEncoding = 0</param>
-		[SupportByVersionAttribute("OWC10", 1)]
+		[SupportByVersion("OWC10", 1)]
 		public void ExportXML(object eEncoding)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(eEncoding);
-			Invoker.Method(this, "ExportXML", paramsArray);
+			 Factory.ExecuteMethod(this, "ExportXML", eEncoding);
 		}
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
-		/// 
 		/// </summary>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("OWC10", 1)]
+		[CustomMethod]
+		[SupportByVersion("OWC10", 1)]
 		public void ExportXML()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "ExportXML", paramsArray);
+			 Factory.ExecuteMethod(this, "ExportXML");
 		}
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
-		/// 
 		/// </summary>
-		/// <param name="recordsetName">string RecordsetName</param>
-		/// <param name="recordset">NetOffice.ADODBApi.Recordset Recordset</param>
-		[SupportByVersionAttribute("OWC10", 1)]
+		/// <param name="recordsetName">string recordsetName</param>
+		/// <param name="recordset">NetOffice.ADODBApi.Recordset recordset</param>
+		[SupportByVersion("OWC10", 1)]
 		public void SetRootRecordset(string recordsetName, NetOffice.ADODBApi.Recordset recordset)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(recordsetName, recordset);
-			Invoker.Method(this, "SetRootRecordset", paramsArray);
+			 Factory.ExecuteMethod(this, "SetRootRecordset", recordsetName, recordset);
 		}
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
-		/// 
 		/// </summary>
-		/// <param name="onlineServer">string OnlineServer</param>
-		/// <param name="onlineDatabase">string OnlineDatabase</param>
-		/// <param name="offlineServer">string OfflineServer</param>
-		/// <param name="offlineDatabase">string OfflineDatabase</param>
-		[SupportByVersionAttribute("OWC10", 1)]
+		/// <param name="onlineServer">string onlineServer</param>
+		/// <param name="onlineDatabase">string onlineDatabase</param>
+		/// <param name="offlineServer">string offlineServer</param>
+		/// <param name="offlineDatabase">string offlineDatabase</param>
+		[SupportByVersion("OWC10", 1)]
 		public void GetOfflineDisplayInfo(out string onlineServer, out string onlineDatabase, out string offlineServer, out string offlineDatabase)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true,true,true,true);
@@ -1499,164 +1310,143 @@ namespace NetOffice.OWC10Api
 			offlineDatabase = string.Empty;
 			object[] paramsArray = Invoker.ValidateParamsArray(onlineServer, onlineDatabase, offlineServer, offlineDatabase);
 			Invoker.Method(this, "GetOfflineDisplayInfo", paramsArray, modifiers);
-			onlineServer = (string)paramsArray[0];
-			onlineDatabase = (string)paramsArray[1];
-			offlineServer = (string)paramsArray[2];
-			offlineDatabase = (string)paramsArray[3];
+			onlineServer = paramsArray[0] as string;
+			onlineDatabase = paramsArray[1] as string;
+			offlineServer = paramsArray[2] as string;
+			offlineDatabase = paramsArray[3] as string;
 		}
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
-		/// 
 		/// </summary>
 		/// <param name="refreshType">optional NetOffice.OWC10Api.Enums.RefreshType RefreshType = 1</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("OWC10", 1)]
+		[SupportByVersion("OWC10", 1)]
 		public void Refresh(object refreshType)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(refreshType);
-			Invoker.Method(this, "Refresh", paramsArray);
+			 Factory.ExecuteMethod(this, "Refresh", refreshType);
 		}
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
-		/// 
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("OWC10", 1)]
+		[CustomMethod]
+		[SupportByVersion("OWC10", 1)]
 		public void Refresh()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "Refresh", paramsArray);
+			 Factory.ExecuteMethod(this, "Refresh");
 		}
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
-		/// 
 		/// </summary>
 		/// <param name="pGroupLevel">NetOffice.OWC10Api.GroupLevel pGroupLevel</param>
 		/// <param name="fChild">Int32 fChild</param>
 		/// <param name="ppGrouplevel">NetOffice.OWC10Api.GroupLevel ppGrouplevel</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("OWC10", 1)]
+		[SupportByVersion("OWC10", 1)]
 		public void FindRelatedGroupLevel(NetOffice.OWC10Api.GroupLevel pGroupLevel, Int32 fChild, out NetOffice.OWC10Api.GroupLevel ppGrouplevel)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,false,true);
 			ppGrouplevel = null;
 			object[] paramsArray = Invoker.ValidateParamsArray(pGroupLevel, fChild, ppGrouplevel);
 			Invoker.Method(this, "FindRelatedGroupLevel", paramsArray, modifiers);
-			ppGrouplevel = (NetOffice.OWC10Api.GroupLevel)paramsArray[2];
+            if (paramsArray[2] is MarshalByRefObject)
+                ppGrouplevel = new NetOffice.OWC10Api.GroupLevel(this, paramsArray[2]);
+            else
+                ppGrouplevel = null;
 		}
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
-		/// 
 		/// </summary>
-		/// <param name="notification">NetOffice.OWC10Api.Enums.NotificationType Notification</param>
+		/// <param name="notification">NetOffice.OWC10Api.Enums.NotificationType notification</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("OWC10", 1)]
+		[SupportByVersion("OWC10", 1)]
 		public void DllNotification(NetOffice.OWC10Api.Enums.NotificationType notification)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(notification);
-			Invoker.Method(this, "DllNotification", paramsArray);
+			 Factory.ExecuteMethod(this, "DllNotification", notification);
 		}
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
-		/// 
 		/// </summary>
-		/// <param name="suspend">bool Suspend</param>
+		/// <param name="suspend">bool suspend</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("OWC10", 1)]
+		[SupportByVersion("OWC10", 1)]
 		public void SuspendUndo(bool suspend)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(suspend);
-			Invoker.Method(this, "SuspendUndo", paramsArray);
+			 Factory.ExecuteMethod(this, "SuspendUndo", suspend);
 		}
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
-		/// 
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("OWC10", 1)]
+		[SupportByVersion("OWC10", 1)]
 		public void UpdateFocus()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "UpdateFocus", paramsArray);
+			 Factory.ExecuteMethod(this, "UpdateFocus");
 		}
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
-		/// 
 		/// </summary>
-		/// <param name="connectionString">string ConnectionString</param>
+		/// <param name="connectionString">string connectionString</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("OWC10", 1)]
+		[SupportByVersion("OWC10", 1)]
 		public bool IsValidDAPProvider(string connectionString)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(connectionString);
-			object returnItem = Invoker.MethodReturn(this, "IsValidDAPProvider", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return Factory.ExecuteBoolMethodGet(this, "IsValidDAPProvider", connectionString);
 		}
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
-		/// 
 		/// </summary>
-		/// <param name="number">Double Number</param>
-		/// <param name="sourceCurrency">string SourceCurrency</param>
-		/// <param name="targetCurrency">string TargetCurrency</param>
-		/// <param name="fullPrecision">optional object FullPrecision</param>
-		/// <param name="triangulationPrecision">optional object TriangulationPrecision</param>
-		[SupportByVersionAttribute("OWC10", 1)]
+		/// <param name="number">Double number</param>
+		/// <param name="sourceCurrency">string sourceCurrency</param>
+		/// <param name="targetCurrency">string targetCurrency</param>
+		/// <param name="fullPrecision">optional object fullPrecision</param>
+		/// <param name="triangulationPrecision">optional object triangulationPrecision</param>
+		[SupportByVersion("OWC10", 1)]
 		public Double EuroConvert(Double number, string sourceCurrency, string targetCurrency, object fullPrecision, object triangulationPrecision)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(number, sourceCurrency, targetCurrency, fullPrecision, triangulationPrecision);
-			object returnItem = Invoker.MethodReturn(this, "EuroConvert", paramsArray);
-			return NetRuntimeSystem.Convert.ToDouble(returnItem);
+			return Factory.ExecuteDoubleMethodGet(this, "EuroConvert", new object[]{ number, sourceCurrency, targetCurrency, fullPrecision, triangulationPrecision });
 		}
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
-		/// 
 		/// </summary>
-		/// <param name="number">Double Number</param>
-		/// <param name="sourceCurrency">string SourceCurrency</param>
-		/// <param name="targetCurrency">string TargetCurrency</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("OWC10", 1)]
+		/// <param name="number">Double number</param>
+		/// <param name="sourceCurrency">string sourceCurrency</param>
+		/// <param name="targetCurrency">string targetCurrency</param>
+		[CustomMethod]
+		[SupportByVersion("OWC10", 1)]
 		public Double EuroConvert(Double number, string sourceCurrency, string targetCurrency)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(number, sourceCurrency, targetCurrency);
-			object returnItem = Invoker.MethodReturn(this, "EuroConvert", paramsArray);
-			return NetRuntimeSystem.Convert.ToDouble(returnItem);
+			return Factory.ExecuteDoubleMethodGet(this, "EuroConvert", number, sourceCurrency, targetCurrency);
 		}
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
-		/// 
 		/// </summary>
-		/// <param name="number">Double Number</param>
-		/// <param name="sourceCurrency">string SourceCurrency</param>
-		/// <param name="targetCurrency">string TargetCurrency</param>
-		/// <param name="fullPrecision">optional object FullPrecision</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("OWC10", 1)]
+		/// <param name="number">Double number</param>
+		/// <param name="sourceCurrency">string sourceCurrency</param>
+		/// <param name="targetCurrency">string targetCurrency</param>
+		/// <param name="fullPrecision">optional object fullPrecision</param>
+		[CustomMethod]
+		[SupportByVersion("OWC10", 1)]
 		public Double EuroConvert(Double number, string sourceCurrency, string targetCurrency, object fullPrecision)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(number, sourceCurrency, targetCurrency, fullPrecision);
-			object returnItem = Invoker.MethodReturn(this, "EuroConvert", paramsArray);
-			return NetRuntimeSystem.Convert.ToDouble(returnItem);
+			return Factory.ExecuteDoubleMethodGet(this, "EuroConvert", number, sourceCurrency, targetCurrency, fullPrecision);
 		}
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
-		/// 
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("OWC10", 1)]
+		[SupportByVersion("OWC10", 1)]
 		public String[] GetDAPProviders()
 		{
 			object[] paramsArray = null;
@@ -1666,124 +1456,94 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
-		/// 
 		/// </summary>
-		/// <param name="synchronizing">bool Synchronizing</param>
+		/// <param name="synchronizing">bool synchronizing</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("OWC10", 1)]
+		[SupportByVersion("OWC10", 1)]
 		public void SetSynchronizing(bool synchronizing)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(synchronizing);
-			Invoker.Method(this, "SetSynchronizing", paramsArray);
+			 Factory.ExecuteMethod(this, "SetSynchronizing", synchronizing);
 		}
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
-		/// 
 		/// </summary>
-		/// <param name="displayError">bool DisplayError</param>
+		/// <param name="displayError">bool displayError</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("OWC10", 1)]
+		[SupportByVersion("OWC10", 1)]
 		public void SetDisplayError(bool displayError)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(displayError);
-			Invoker.Method(this, "SetDisplayError", paramsArray);
+			 Factory.ExecuteMethod(this, "SetDisplayError", displayError);
 		}
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
-		/// 
 		/// </summary>
-		/// <param name="suspend">bool Suspend</param>
+		/// <param name="suspend">bool suspend</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("OWC10", 1)]
+		[SupportByVersion("OWC10", 1)]
 		public void SuspendXMLReExecute(bool suspend)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(suspend);
-			Invoker.Method(this, "SuspendXMLReExecute", paramsArray);
+			 Factory.ExecuteMethod(this, "SuspendXMLReExecute", suspend);
 		}
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
-		/// 
 		/// </summary>
-		/// <param name="firePropChange">bool FirePropChange</param>
+		/// <param name="firePropChange">bool firePropChange</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("OWC10", 1)]
+		[SupportByVersion("OWC10", 1)]
 		public void SetFirePropChange(bool firePropChange)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(firePropChange);
-			Invoker.Method(this, "SetFirePropChange", paramsArray);
+			 Factory.ExecuteMethod(this, "SetFirePropChange", firePropChange);
 		}
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
-		/// 
 		/// </summary>
-		/// <param name="value">object Value</param>
-		/// <param name="valueIfNull">optional object ValueIfNull</param>
-		[SupportByVersionAttribute("OWC10", 1)]
+		/// <param name="value">object value</param>
+		/// <param name="valueIfNull">optional object valueIfNull</param>
+		[SupportByVersion("OWC10", 1)]
 		public object Nz(object value, object valueIfNull)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(value, valueIfNull);
-			object returnItem = Invoker.MethodReturn(this, "Nz", paramsArray);
-			if((null != returnItem) && (returnItem is MarshalByRefObject))
-			{
-				ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
-				return newObject;
-			}
-			else
-			{
-				return  returnItem;
-			}
+			return Factory.ExecuteVariantMethodGet(this, "Nz", value, valueIfNull);
 		}
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
-		/// 
 		/// </summary>
-		/// <param name="value">object Value</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("OWC10", 1)]
+		/// <param name="value">object value</param>
+		[CustomMethod]
+		[SupportByVersion("OWC10", 1)]
 		public object Nz(object value)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(value);
-			object returnItem = Invoker.MethodReturn(this, "Nz", paramsArray);
-			if((null != returnItem) && (returnItem is MarshalByRefObject))
-			{
-				ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
-				return newObject;
-			}
-			else
-			{
-				return  returnItem;
-			}
+			return Factory.ExecuteVariantMethodGet(this, "Nz", value);
 		}
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("OWC10", 1)]
+		[SupportByVersion("OWC10", 1)]
 		public void RefreshJetCache()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "RefreshJetCache", paramsArray);
+			 Factory.ExecuteMethod(this, "RefreshJetCache");
 		}
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
-		/// 
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("OWC10", 1)]
+		[SupportByVersion("OWC10", 1)]
 		public void AutoRefreshOfflineSource()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "AutoRefreshOfflineSource", paramsArray);
+			 Factory.ExecuteMethod(this, "AutoRefreshOfflineSource");
 		}
 
 		#endregion
+
 		#pragma warning restore
 	}
 }
+
+
+

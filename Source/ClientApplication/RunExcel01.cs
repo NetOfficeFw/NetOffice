@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Text;
 using NetOffice;
+using NetOffice.Attributes;
 using Excel = NetOffice.ExcelApi;
 using Office = NetOffice.OfficeApi;
 using Utils = NetOffice.OfficeApi.Tools.Utils;
@@ -22,6 +23,7 @@ namespace ClientApplication
                 Settings.Default.PerformanceTrace["ExcelApi"].IntervalMS = 0;
 
                 app = new Excel.Application();
+                app.Visible = true;
                 Utils.CommonUtils utils = new Utils.CommonUtils(app, typeof(Form1).Assembly);
                 app.DisplayAlerts = false;
                 Excel.Workbook book = app.Workbooks.Add();

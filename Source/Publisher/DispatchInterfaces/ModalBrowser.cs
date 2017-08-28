@@ -1,23 +1,33 @@
 ﻿using System;
 using NetRuntimeSystem = System;
-using System.Runtime.InteropServices;
-using System.Runtime.CompilerServices;
 using System.ComponentModel;
-using System.Reflection;
-using System.Collections.Generic;
-using NetOffice;
+using NetOffice.Attributes;
+
 namespace NetOffice.PublisherApi
 {
-	///<summary>
+	/// <summary>
 	/// DispatchInterface ModalBrowser 
 	/// SupportByVersion Publisher, 14,15,16
-	///</summary>
-	[SupportByVersionAttribute("Publisher", 14,15,16)]
-	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
-	public class ModalBrowser : COMObject
+	/// </summary>
+	[SupportByVersion("Publisher", 14,15,16)]
+	[EntityType(EntityType.IsDispatchInterface)]
+ 	public class ModalBrowser : COMObject
 	{
 		#pragma warning disable
+
 		#region Type Information
+
+		/// <summary>
+		/// Instance Type
+		/// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
+		public override Type InstanceType
+		{
+			get
+			{
+				return LateBindingApiWrapperType;
+			}
+		}
 
         private static Type _type;
 
@@ -28,7 +38,6 @@ namespace NetOffice.PublisherApi
             {
                 if (null == _type)
                     _type = typeof(ModalBrowser);
-                    
                 return _type;
             }
         }
@@ -81,7 +90,7 @@ namespace NetOffice.PublisherApi
 		{
 		}
 		
-		/// <param name="progId">registered ProgID</param>
+		/// <param name="progId">registered progID</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public ModalBrowser(string progId) : base(progId)
 		{
@@ -97,42 +106,40 @@ namespace NetOffice.PublisherApi
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		[SupportByVersion("Publisher", 14,15,16)]
 		public void TaskCompleted()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "TaskCompleted", paramsArray);
+			 Factory.ExecuteMethod(this, "TaskCompleted");
 		}
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
-		/// 
 		/// </summary>
 		/// <param name="lWidth">Int32 lWidth</param>
 		/// <param name="lHeight">Int32 lHeight</param>
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		[SupportByVersion("Publisher", 14,15,16)]
 		public void ResizeTo(Int32 lWidth, Int32 lHeight)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(lWidth, lHeight);
-			Invoker.Method(this, "ResizeTo", paramsArray);
+			 Factory.ExecuteMethod(this, "ResizeTo", lWidth, lHeight);
 		}
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
-		/// 
 		/// </summary>
 		/// <param name="lx">Int32 lx</param>
 		/// <param name="ly">Int32 ly</param>
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		[SupportByVersion("Publisher", 14,15,16)]
 		public void MoveTo(Int32 lx, Int32 ly)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(lx, ly);
-			Invoker.Method(this, "MoveTo", paramsArray);
+			 Factory.ExecuteMethod(this, "MoveTo", lx, ly);
 		}
 
 		#endregion
+
 		#pragma warning restore
 	}
 }
+
+
+

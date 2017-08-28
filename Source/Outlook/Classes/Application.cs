@@ -1,55 +1,57 @@
 ﻿using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
-using NetOffice;
-using NetOffice.Misc;
+using NetOffice.Attributes;
+using NetOffice.Contribution.CollectionsGeneric;
 
 namespace NetOffice.OutlookApi
 {
 	#region Delegates
 
 	#pragma warning disable
-	public delegate void Application_ItemSendEventHandler(COMObject Item, ref bool Cancel);
+	public delegate void Application_ItemSendEventHandler(ICOMObject item, ref bool cancel);
 	public delegate void Application_NewMailEventHandler();
-	public delegate void Application_ReminderEventHandler(COMObject Item);
-	public delegate void Application_OptionsPagesAddEventHandler(NetOffice.OutlookApi.PropertyPages Pages);
+	public delegate void Application_ReminderEventHandler(ICOMObject item);
+	public delegate void Application_OptionsPagesAddEventHandler(NetOffice.OutlookApi.PropertyPages pages);
 	public delegate void Application_StartupEventHandler();
 	public delegate void Application_QuitEventHandler();
-	public delegate void Application_AdvancedSearchCompleteEventHandler(NetOffice.OutlookApi.Search SearchObject);
-	public delegate void Application_AdvancedSearchStoppedEventHandler(NetOffice.OutlookApi.Search SearchObject);
+	public delegate void Application_AdvancedSearchCompleteEventHandler(NetOffice.OutlookApi.Search searchObject);
+	public delegate void Application_AdvancedSearchStoppedEventHandler(NetOffice.OutlookApi.Search searchObject);
 	public delegate void Application_MAPILogonCompleteEventHandler();
-	public delegate void Application_NewMailExEventHandler(string EntryIDCollection);
-	public delegate void Application_AttachmentContextMenuDisplayEventHandler(NetOffice.OfficeApi.CommandBar CommandBar, NetOffice.OutlookApi.AttachmentSelection Attachments);
-	public delegate void Application_FolderContextMenuDisplayEventHandler(NetOffice.OfficeApi.CommandBar CommandBar, NetOffice.OutlookApi.Folder Folder);
-	public delegate void Application_StoreContextMenuDisplayEventHandler(NetOffice.OfficeApi.CommandBar CommandBar, NetOffice.OutlookApi.Store Store);
-	public delegate void Application_ShortcutContextMenuDisplayEventHandler(NetOffice.OfficeApi.CommandBar CommandBar, NetOffice.OutlookApi.OutlookBarShortcut Shortcut);
-	public delegate void Application_ViewContextMenuDisplayEventHandler(NetOffice.OfficeApi.CommandBar CommandBar, NetOffice.OutlookApi.View View);
-	public delegate void Application_ItemContextMenuDisplayEventHandler(NetOffice.OfficeApi.CommandBar CommandBar, NetOffice.OutlookApi.Selection Selection);
-	public delegate void Application_ContextMenuCloseEventHandler(NetOffice.OutlookApi.Enums.OlContextMenu ContextMenu);
-	public delegate void Application_ItemLoadEventHandler(COMObject Item);
-	public delegate void Application_BeforeFolderSharingDialogEventHandler(NetOffice.OutlookApi.MAPIFolder FolderToShare, ref bool Cancel);
+	public delegate void Application_NewMailExEventHandler(string entryIDCollection);
+	public delegate void Application_AttachmentContextMenuDisplayEventHandler(NetOffice.OfficeApi.CommandBar commandBar, NetOffice.OutlookApi.AttachmentSelection attachments);
+	public delegate void Application_FolderContextMenuDisplayEventHandler(NetOffice.OfficeApi.CommandBar commandBar, NetOffice.OutlookApi.Folder folder);
+	public delegate void Application_StoreContextMenuDisplayEventHandler(NetOffice.OfficeApi.CommandBar commandBar, NetOffice.OutlookApi.Store store);
+	public delegate void Application_ShortcutContextMenuDisplayEventHandler(NetOffice.OfficeApi.CommandBar commandBar, NetOffice.OutlookApi.OutlookBarShortcut shortcut);
+	public delegate void Application_ViewContextMenuDisplayEventHandler(NetOffice.OfficeApi.CommandBar commandBar, NetOffice.OutlookApi.View view);
+	public delegate void Application_ItemContextMenuDisplayEventHandler(NetOffice.OfficeApi.CommandBar commandBar, NetOffice.OutlookApi.Selection selection);
+	public delegate void Application_ContextMenuCloseEventHandler(NetOffice.OutlookApi.Enums.OlContextMenu contextMenu);
+	public delegate void Application_ItemLoadEventHandler(ICOMObject item);
+	public delegate void Application_BeforeFolderSharingDialogEventHandler(NetOffice.OutlookApi.MAPIFolder folderToShare, ref bool cancel);
 	#pragma warning restore
 
 	#endregion
 
-	///<summary>
+	/// <summary>
 	/// CoClass Application 
 	/// SupportByVersion Outlook, 9,10,11,12,14,15,16
-	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff866895.aspx
-	///</summary>
-	[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15,16)]
-	[EntityTypeAttribute(EntityType.IsCoClass)]
-	public class Application : _Application,IEventBinding
+	/// </summary>
+	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff866895.aspx </remarks>
+	[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
+	[EntityType(EntityType.IsCoClass), ComProgId("Outlook.Application"), ModuleProvider(typeof(GlobalHelperModules.GlobalModule))]
+	[EventSink(typeof(Events.ApplicationEvents_SinkHelper), typeof(Events.ApplicationEvents_10_SinkHelper), typeof(Events.ApplicationEvents_11_SinkHelper))]
+	public class Application : _Application, IEventBinding
 	{
 		#pragma warning disable
+
 		#region Fields
 		
 		private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
 		private string _activeSinkId;
 		private NetRuntimeSystem.Type _thisType;
-		ApplicationEvents_SinkHelper _applicationEvents_SinkHelper;
-		ApplicationEvents_10_SinkHelper _applicationEvents_10_SinkHelper;
-		ApplicationEvents_11_SinkHelper _applicationEvents_11_SinkHelper;
+		private Events.ApplicationEvents_SinkHelper _applicationEvents_SinkHelper;
+        private Events.ApplicationEvents_10_SinkHelper _applicationEvents_10_SinkHelper;
+        private Events.ApplicationEvents_11_SinkHelper _applicationEvents_11_SinkHelper;
 	
 		#endregion
 
@@ -58,6 +60,7 @@ namespace NetOffice.OutlookApi
         /// <summary>
         /// Instance Type
         /// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
         public override Type InstanceType
         {
             get
@@ -126,18 +129,18 @@ namespace NetOffice.OutlookApi
 			_callQuitInDispose = true;
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of Application 
-        ///</summary>		
+        /// </summary>		
 		public Application():base("Outlook.Application")
 		{
 			_callQuitInDispose = true;
 			GlobalHelperModules.GlobalModule.Instance = this;
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of Application
-        ///</summary>
+        /// </summary>
         ///<param name="progId">registered ProgID</param>
 		public Application(string progId):base(progId)
 		{
@@ -149,6 +152,7 @@ namespace NetOffice.OutlookApi
 		/// NetOffice method: dispose instance and all child instances
 		/// </summary>
 		/// <param name="disposeEventBinding">dispose event exported proxies with one or more event recipients</param>
+		[Category("NetOffice"), CoreOverridden]
 		public override void Dispose(bool disposeEventBinding)
 		{
 			if(this.Equals(GlobalHelperModules.GlobalModule.Instance))
@@ -159,6 +163,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// NetOffice method: dispose instance and all child instances
 		/// </summary>
+		[Category("NetOffice"), CoreOverridden]
 		public override void Dispose()
 		{
 			if(this.Equals(GlobalHelperModules.GlobalModule.Instance))
@@ -166,57 +171,37 @@ namespace NetOffice.OutlookApi
 			base.Dispose();
 		}
 
-		#endregion
+        #endregion
 
-		#region Static CoClass Methods
+        #region Static CoClass Methods
 
-		/// <summary>
-        /// Returns all running Outlook.Application objects from the environment/system
+        /// <summary>
+        /// Returns all running Outlook.Application instances from the environment/system
         /// </summary>
-        /// <returns>an Outlook.Application array</returns>
-		public static NetOffice.OutlookApi.Application[] GetActiveInstances()
-		{		
-			IDisposableEnumeration proxyList = NetOffice.ProxyService.GetActiveInstances("Outlook","Application");
-			NetRuntimeSystem.Collections.Generic.List<NetOffice.OutlookApi.Application> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.OutlookApi.Application>();
-			foreach(object proxy in proxyList)
-				resultList.Add( new NetOffice.OutlookApi.Application(null, proxy) );
-			return resultList.ToArray();
-		}
+        /// <returns>Outlook.Application sequence</returns>
+        public static IDisposableSequence<Application> GetActiveInstances()
+        {
+            return Running.ProxyService.GetActiveInstances<Application>("Outlook", "Application");
+        }
 
-		/// <summary>
-        /// Returns a running Outlook.Application object from the environment/system.
+        /// <summary>
+        /// Returns a running Outlook.Application instance from the environment/system
         /// </summary>
-        /// <returns>an Outlook.Application object or null</returns>
-		public static NetOffice.OutlookApi.Application GetActiveInstance()
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Outlook","Application", false);
-			if(null != proxy)
-				return new NetOffice.OutlookApi.Application(null, proxy);
-			else
-				return null;
-		}
+        /// <param name="throwExceptionIfNotFound">throw exception if unable to find an instance</param>
+        /// <returns>Outlook.Application instance or null</returns>
+        public static Application GetActiveInstance(bool throwExceptionIfNotFound = false)
+        {
+            return Running.ProxyService.GetActiveInstance<Application>("Outlook", "Application", throwExceptionIfNotFound);
+        }
 
-		/// <summary>
-        /// Returns a running Outlook.Application object from the environment/system. 
+        #endregion
+
+        #region Events
+
+        /// <summary>
+        /// SupportByVersion Outlook, 9,10,11,12,14,15,16
         /// </summary>
-	    /// <param name="throwOnError">throw an exception if no object was found</param>
-        /// <returns>an Outlook.Application object or null</returns>
-		public static NetOffice.OutlookApi.Application GetActiveInstance(bool throwOnError)
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Outlook","Application", throwOnError);
-			if(null != proxy)
-				return new NetOffice.OutlookApi.Application(null, proxy);
-			else
-				return null;
-		}
-		#endregion
-
-		#region Events
-
-		/// <summary>
-		/// SupportByVersion Outlook, 9,10,11,12,14,15,16
-		/// </summary>
-		private event Application_ItemSendEventHandler _ItemSendEvent;
+        private event Application_ItemSendEventHandler _ItemSendEvent;
 
 		/// <summary>
 		/// SupportByVersion Outlook 9 10 11 12 14 15,16
@@ -660,24 +645,24 @@ namespace NetOffice.OutlookApi
 				return;
 	
             if (null == _activeSinkId)
-				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, ApplicationEvents_SinkHelper.Id,ApplicationEvents_10_SinkHelper.Id,ApplicationEvents_11_SinkHelper.Id);
+				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, Events.ApplicationEvents_SinkHelper.Id, Events.ApplicationEvents_10_SinkHelper.Id, Events.ApplicationEvents_11_SinkHelper.Id);
 
 
-			if(ApplicationEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
+			if(Events.ApplicationEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
 			{
-				_applicationEvents_SinkHelper = new ApplicationEvents_SinkHelper(this, _connectPoint);
+				_applicationEvents_SinkHelper = new Events.ApplicationEvents_SinkHelper(this, _connectPoint);
 				return;
 			}
 
-			if(ApplicationEvents_10_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
+			if(Events.ApplicationEvents_10_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
 			{
-				_applicationEvents_10_SinkHelper = new ApplicationEvents_10_SinkHelper(this, _connectPoint);
+				_applicationEvents_10_SinkHelper = new Events.ApplicationEvents_10_SinkHelper(this, _connectPoint);
 				return;
 			}
 
-			if(ApplicationEvents_11_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
+			if(Events.ApplicationEvents_11_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
 			{
-				_applicationEvents_11_SinkHelper = new ApplicationEvents_11_SinkHelper(this, _connectPoint);
+				_applicationEvents_11_SinkHelper = new Events.ApplicationEvents_11_SinkHelper(this, _connectPoint);
 				return;
 			} 
         }

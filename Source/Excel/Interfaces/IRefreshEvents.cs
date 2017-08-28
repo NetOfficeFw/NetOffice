@@ -1,27 +1,26 @@
 ﻿using System;
 using NetRuntimeSystem = System;
-using System.Runtime.InteropServices;
 using System.ComponentModel;
-using System.Runtime.CompilerServices;
-using System.Reflection;
-using System.Collections.Generic;
-using NetOffice;
+using NetOffice.Attributes;
+
 namespace NetOffice.ExcelApi
 {
-	///<summary>
+	/// <summary>
 	/// Interface IRefreshEvents 
 	/// SupportByVersion Excel, 9,10,11,12,14,15,16
-	///</summary>
-	[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
-	[EntityTypeAttribute(EntityType.IsInterface)]
-	public class IRefreshEvents : COMObject
+	/// </summary>
+	[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+	[EntityType(EntityType.IsInterface)]
+ 	public class IRefreshEvents : COMObject
 	{
 		#pragma warning disable
+
 		#region Type Information
 
         /// <summary>
         /// Instance Type
         /// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
         public override Type InstanceType
         {
             get
@@ -39,7 +38,6 @@ namespace NetOffice.ExcelApi
             {
                 if (null == _type)
                     _type = typeof(IRefreshEvents);
-                    
                 return _type;
             }
         }
@@ -92,7 +90,7 @@ namespace NetOffice.ExcelApi
 		{
 		}
 		
-		/// <param name="progId">registered ProgID</param>
+		/// <param name="progId">registered progID</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public IRefreshEvents(string progId) : base(progId)
 		{
@@ -108,31 +106,30 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="cancel">bool Cancel</param>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
+		/// <param name="cancel">bool cancel</param>
+		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public Int32 BeforeRefresh(bool cancel)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(cancel);
-			object returnItem = Invoker.MethodReturn(this, "BeforeRefresh", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return Factory.ExecuteInt32MethodGet(this, "BeforeRefresh", cancel);
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="success">bool Success</param>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
+		/// <param name="success">bool success</param>
+		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public Int32 AfterRefresh(bool success)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(success);
-			object returnItem = Invoker.MethodReturn(this, "AfterRefresh", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return Factory.ExecuteInt32MethodGet(this, "AfterRefresh", success);
 		}
 
 		#endregion
+
 		#pragma warning restore
 	}
 }
+
+
+
+

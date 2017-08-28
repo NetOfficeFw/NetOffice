@@ -422,11 +422,11 @@
     <Compile Include="Classes\OLEControl.cs" />
     <Compile Include="Classes\Master.cs" />
     <Compile Include="Classes\PowerRex.cs" />
-    <Compile Include="EventInterfaces\PresEvents.cs" />
-    <Compile Include="EventInterfaces\SldEvents.cs" />
-    <Compile Include="EventInterfaces\OCXExtenderEvents.cs" />
-    <Compile Include="EventInterfaces\EApplication.cs" />
-    <Compile Include="EventInterfaces\MasterEvents.cs" />
+    <Compile Include="Events\PresEvents.cs" />
+    <Compile Include="Events\SldEvents.cs" />
+    <Compile Include="Events\OCXExtenderEvents.cs" />
+    <Compile Include="Events\EApplication.cs" />
+    <Compile Include="Events\MasterEvents.cs" />
     <Compile Include="Modules\Global.cs" />
     <Compile Include="Tools\COMAddin.cs" />
     <Compile Include="Tools\ITaskPane.cs" />

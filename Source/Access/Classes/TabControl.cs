@@ -1,45 +1,45 @@
 ﻿using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
-using NetOffice;
-using NetOffice.Misc;
+using NetOffice.Attributes;
 
 namespace NetOffice.AccessApi
 {
-
 	#region Delegates
 
 	#pragma warning disable
 	public delegate void TabControl_ClickEventHandler();
-	public delegate void TabControl_DblClickEventHandler(ref Int16 Cancel);
-	public delegate void TabControl_MouseDownEventHandler(ref Int16 Button, ref Int16 Shift, ref Single X, ref Single Y);
-	public delegate void TabControl_MouseMoveEventHandler(ref Int16 Button, ref Int16 Shift, ref Single X, ref Single Y);
-	public delegate void TabControl_MouseUpEventHandler(ref Int16 Button, ref Int16 Shift, ref Single X, ref Single Y);
-	public delegate void TabControl_KeyDownEventHandler(ref Int16 KeyCode, ref Int16 Shift);
-	public delegate void TabControl_KeyPressEventHandler(ref Int16 KeyAscii);
-	public delegate void TabControl_KeyUpEventHandler(ref Int16 KeyCode, ref Int16 Shift);
+	public delegate void TabControl_DblClickEventHandler(ref Int16 cancel);
+	public delegate void TabControl_MouseDownEventHandler(ref Int16 button, ref Int16 shift, ref Single x, ref Single y);
+	public delegate void TabControl_MouseMoveEventHandler(ref Int16 button, ref Int16 shift, ref Single x, ref Single y);
+	public delegate void TabControl_MouseUpEventHandler(ref Int16 button, ref Int16 shift, ref Single x, ref Single y);
+	public delegate void TabControl_KeyDownEventHandler(ref Int16 keyCode, ref Int16 shift);
+	public delegate void TabControl_KeyPressEventHandler(ref Int16 keyAscii);
+	public delegate void TabControl_KeyUpEventHandler(ref Int16 keyCode, ref Int16 shift);
 	public delegate void TabControl_ChangeEventHandler();
 	#pragma warning restore
 
 	#endregion
 
-	///<summary>
+	/// <summary>
 	/// CoClass TabControl 
 	/// SupportByVersion Access, 9,10,11,12,14,15,16
-	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff844930.aspx
-	///</summary>
-	[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
-	[EntityTypeAttribute(EntityType.IsCoClass)]
-	public class TabControl : _TabControl,IEventBinding
+	/// </summary>
+	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff844930.aspx </remarks>
+	[SupportByVersion("Access", 9,10,11,12,14,15,16)]
+	[EntityType(EntityType.IsCoClass)]
+    [EventSink(typeof(Events._TabControlEvents_SinkHelper), typeof(Events.DispTabControlEvents_SinkHelper))]
+    public class TabControl : _TabControl, IEventBinding
 	{
 		#pragma warning disable
+
 		#region Fields
 		
 		private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
 		private string _activeSinkId;
 		private NetRuntimeSystem.Type _thisType;
-		_TabControlEvents_SinkHelper __TabControlEvents_SinkHelper;
-		DispTabControlEvents_SinkHelper _dispTabControlEvents_SinkHelper;
+		private Events._TabControlEvents_SinkHelper __TabControlEvents_SinkHelper;
+		private Events.DispTabControlEvents_SinkHelper _dispTabControlEvents_SinkHelper;
 	
 		#endregion
 
@@ -48,6 +48,7 @@ namespace NetOffice.AccessApi
         /// <summary>
         /// Instance Type
         /// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
         public override Type InstanceType
         {
             get
@@ -114,17 +115,17 @@ namespace NetOffice.AccessApi
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of TabControl 
-        ///</summary>		
+        /// </summary>		
 		public TabControl():base("Access.TabControl")
 		{
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of TabControl
-        ///</summary>
+        /// </summary>
         ///<param name="progId">registered ProgID</param>
 		public TabControl(string progId):base(progId)
 		{
@@ -134,46 +135,6 @@ namespace NetOffice.AccessApi
 		#endregion
 
 		#region Static CoClass Methods
-
-		/// <summary>
-        /// Returns all running Access.TabControl objects from the environment/system
-        /// </summary>
-        /// <returns>an Access.TabControl array</returns>
-		public static NetOffice.AccessApi.TabControl[] GetActiveInstances()
-		{		
-			IDisposableEnumeration proxyList = NetOffice.ProxyService.GetActiveInstances("Access","TabControl");
-			NetRuntimeSystem.Collections.Generic.List<NetOffice.AccessApi.TabControl> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.AccessApi.TabControl>();
-			foreach(object proxy in proxyList)
-				resultList.Add( new NetOffice.AccessApi.TabControl(null, proxy) );
-			return resultList.ToArray();
-		}
-
-		/// <summary>
-        /// Returns a running Access.TabControl object from the environment/system.
-        /// </summary>
-        /// <returns>an Access.TabControl object or null</returns>
-		public static NetOffice.AccessApi.TabControl GetActiveInstance()
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Access","TabControl", false);
-			if(null != proxy)
-				return new NetOffice.AccessApi.TabControl(null, proxy);
-			else
-				return null;
-		}
-
-		/// <summary>
-        /// Returns a running Access.TabControl object from the environment/system. 
-        /// </summary>
-	    /// <param name="throwOnError">throw an exception if no object was found</param>
-        /// <returns>an Access.TabControl object or null</returns>
-		public static NetOffice.AccessApi.TabControl GetActiveInstance(bool throwOnError)
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Access","TabControl", throwOnError);
-			if(null != proxy)
-				return new NetOffice.AccessApi.TabControl(null, proxy);
-			else
-				return null;
-		}
 		#endregion
 
 		#region Events
@@ -402,18 +363,18 @@ namespace NetOffice.AccessApi
 				return;
 	
             if (null == _activeSinkId)
-				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, _TabControlEvents_SinkHelper.Id,DispTabControlEvents_SinkHelper.Id);
+				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, Events._TabControlEvents_SinkHelper.Id, Events.DispTabControlEvents_SinkHelper.Id);
 
 
-			if(_TabControlEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
+			if(Events._TabControlEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
 			{
-				__TabControlEvents_SinkHelper = new _TabControlEvents_SinkHelper(this, _connectPoint);
+				__TabControlEvents_SinkHelper = new Events._TabControlEvents_SinkHelper(this, _connectPoint);
 				return;
 			}
 
-			if(DispTabControlEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
+			if(Events.DispTabControlEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
 			{
-				_dispTabControlEvents_SinkHelper = new DispTabControlEvents_SinkHelper(this, _connectPoint);
+				_dispTabControlEvents_SinkHelper = new Events.DispTabControlEvents_SinkHelper(this, _connectPoint);
 				return;
 			} 
         }
@@ -560,3 +521,4 @@ namespace NetOffice.AccessApi
 		#pragma warning restore
 	}
 }
+

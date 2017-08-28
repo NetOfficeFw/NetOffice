@@ -3,6 +3,7 @@ using System.Reflection;
 using System.ComponentModel;
 using System.Collections.Generic;
 using NetOffice;
+using NetOffice.Attributes;
 
 namespace ExcelApi.Utils
 {
@@ -14,11 +15,11 @@ namespace ExcelApi.Utils
     {
         #region Fields
 
-        private string   _namespace     = "NetOffice.ExcelApi";
+        private string    _namespace     = "NetOffice.ExcelApi";
         private Guid[]    _componentGuid = new Guid[]{new Guid("00020813-0000-0000-C000-000000000046")};
-        private Assembly _assembly;
-		private Type[]	 _exportedTypes;
-		private string[] _dependents;
+        private Assembly  _assembly;
+		private Type[]	  _exportedTypes;
+		private string[]  _dependents;
 		
         #endregion
 
@@ -94,7 +95,15 @@ namespace ExcelApi.Utils
                 return _dependents;
             }
         }
-        
+
+        public bool IsDuck
+        {
+            get
+            {
+                return false;
+            }
+        }
+
         #endregion
     }
     #pragma warning restore

@@ -1,62 +1,62 @@
 ﻿using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
-using NetOffice;
-using NetOffice.Misc;
+using NetOffice.Attributes;
 
 namespace NetOffice.VisioApi
 {
-
 	#region Delegates
 
 	#pragma warning disable
-	public delegate void Masters_MasterAddedEventHandler(NetOffice.VisioApi.IVMaster Master);
-	public delegate void Masters_MasterChangedEventHandler(NetOffice.VisioApi.IVMaster Master);
-	public delegate void Masters_BeforeMasterDeleteEventHandler(NetOffice.VisioApi.IVMaster Master);
-	public delegate void Masters_ShapeAddedEventHandler(NetOffice.VisioApi.IVShape Shape);
-	public delegate void Masters_BeforeSelectionDeleteEventHandler(NetOffice.VisioApi.IVSelection Selection);
-	public delegate void Masters_ShapeChangedEventHandler(NetOffice.VisioApi.IVShape Shape);
-	public delegate void Masters_SelectionAddedEventHandler(NetOffice.VisioApi.IVSelection Selection);
-	public delegate void Masters_BeforeShapeDeleteEventHandler(NetOffice.VisioApi.IVShape Shape);
-	public delegate void Masters_TextChangedEventHandler(NetOffice.VisioApi.IVShape Shape);
-	public delegate void Masters_CellChangedEventHandler(NetOffice.VisioApi.IVCell Cell);
-	public delegate void Masters_FormulaChangedEventHandler(NetOffice.VisioApi.IVCell Cell);
-	public delegate void Masters_ConnectionsAddedEventHandler(NetOffice.VisioApi.IVConnects Connects);
-	public delegate void Masters_ConnectionsDeletedEventHandler(NetOffice.VisioApi.IVConnects Connects);
-	public delegate void Masters_QueryCancelMasterDeleteEventHandler(NetOffice.VisioApi.IVMaster Master);
-	public delegate void Masters_MasterDeleteCanceledEventHandler(NetOffice.VisioApi.IVMaster Master);
-	public delegate void Masters_ShapeParentChangedEventHandler(NetOffice.VisioApi.IVShape Shape);
-	public delegate void Masters_BeforeShapeTextEditEventHandler(NetOffice.VisioApi.IVShape Shape);
-	public delegate void Masters_ShapeExitedTextEditEventHandler(NetOffice.VisioApi.IVShape Shape);
-	public delegate void Masters_QueryCancelSelectionDeleteEventHandler(NetOffice.VisioApi.IVSelection Selection);
-	public delegate void Masters_SelectionDeleteCanceledEventHandler(NetOffice.VisioApi.IVSelection Selection);
-	public delegate void Masters_QueryCancelUngroupEventHandler(NetOffice.VisioApi.IVSelection Selection);
-	public delegate void Masters_UngroupCanceledEventHandler(NetOffice.VisioApi.IVSelection Selection);
-	public delegate void Masters_QueryCancelConvertToGroupEventHandler(NetOffice.VisioApi.IVSelection Selection);
-	public delegate void Masters_ConvertToGroupCanceledEventHandler(NetOffice.VisioApi.IVSelection Selection);
-	public delegate void Masters_QueryCancelGroupEventHandler(NetOffice.VisioApi.IVSelection Selection);
-	public delegate void Masters_GroupCanceledEventHandler(NetOffice.VisioApi.IVSelection Selection);
-	public delegate void Masters_ShapeDataGraphicChangedEventHandler(NetOffice.VisioApi.IVShape Shape);
+	public delegate void Masters_MasterAddedEventHandler(NetOffice.VisioApi.IVMaster master);
+	public delegate void Masters_MasterChangedEventHandler(NetOffice.VisioApi.IVMaster master);
+	public delegate void Masters_BeforeMasterDeleteEventHandler(NetOffice.VisioApi.IVMaster master);
+	public delegate void Masters_ShapeAddedEventHandler(NetOffice.VisioApi.IVShape shape);
+	public delegate void Masters_BeforeSelectionDeleteEventHandler(NetOffice.VisioApi.IVSelection selection);
+	public delegate void Masters_ShapeChangedEventHandler(NetOffice.VisioApi.IVShape shape);
+	public delegate void Masters_SelectionAddedEventHandler(NetOffice.VisioApi.IVSelection selection);
+	public delegate void Masters_BeforeShapeDeleteEventHandler(NetOffice.VisioApi.IVShape shape);
+	public delegate void Masters_TextChangedEventHandler(NetOffice.VisioApi.IVShape shape);
+	public delegate void Masters_CellChangedEventHandler(NetOffice.VisioApi.IVCell cell);
+	public delegate void Masters_FormulaChangedEventHandler(NetOffice.VisioApi.IVCell cell);
+	public delegate void Masters_ConnectionsAddedEventHandler(NetOffice.VisioApi.IVConnects connects);
+	public delegate void Masters_ConnectionsDeletedEventHandler(NetOffice.VisioApi.IVConnects connects);
+	public delegate void Masters_QueryCancelMasterDeleteEventHandler(NetOffice.VisioApi.IVMaster master);
+	public delegate void Masters_MasterDeleteCanceledEventHandler(NetOffice.VisioApi.IVMaster master);
+	public delegate void Masters_ShapeParentChangedEventHandler(NetOffice.VisioApi.IVShape shape);
+	public delegate void Masters_BeforeShapeTextEditEventHandler(NetOffice.VisioApi.IVShape shape);
+	public delegate void Masters_ShapeExitedTextEditEventHandler(NetOffice.VisioApi.IVShape shape);
+	public delegate void Masters_QueryCancelSelectionDeleteEventHandler(NetOffice.VisioApi.IVSelection selection);
+	public delegate void Masters_SelectionDeleteCanceledEventHandler(NetOffice.VisioApi.IVSelection selection);
+	public delegate void Masters_QueryCancelUngroupEventHandler(NetOffice.VisioApi.IVSelection selection);
+	public delegate void Masters_UngroupCanceledEventHandler(NetOffice.VisioApi.IVSelection selection);
+	public delegate void Masters_QueryCancelConvertToGroupEventHandler(NetOffice.VisioApi.IVSelection selection);
+	public delegate void Masters_ConvertToGroupCanceledEventHandler(NetOffice.VisioApi.IVSelection selection);
+	public delegate void Masters_QueryCancelGroupEventHandler(NetOffice.VisioApi.IVSelection delection);
+	public delegate void Masters_GroupCanceledEventHandler(NetOffice.VisioApi.IVSelection selection);
+	public delegate void Masters_ShapeDataGraphicChangedEventHandler(NetOffice.VisioApi.IVShape dhape);
 	#pragma warning restore
 
 	#endregion
 
-	///<summary>
+	/// <summary>
 	/// CoClass Masters 
 	/// SupportByVersion Visio, 11,12,14,15,16
-	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff769324(v=office.14).aspx
-	///</summary>
-	[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
-	[EntityTypeAttribute(EntityType.IsCoClass)]
-	public class Masters : IVMasters,IEventBinding
+	/// </summary>
+	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/ff769324(v=office.14).aspx </remarks>
+	[SupportByVersion("Visio", 11,12,14,15,16)]
+	[EntityType(EntityType.IsCoClass)]
+	[EventSink(typeof(Events.EMasters_SinkHelper))]
+	public class Masters : IVMasters, IEventBinding
 	{
 		#pragma warning disable
+
 		#region Fields
 		
 		private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
 		private string _activeSinkId;
 		private NetRuntimeSystem.Type _thisType;
-		EMasters_SinkHelper _eMasters_SinkHelper;
+		private Events.EMasters_SinkHelper _eMasters_SinkHelper;
 	
 		#endregion
 
@@ -65,6 +65,7 @@ namespace NetOffice.VisioApi
         /// <summary>
         /// Instance Type
         /// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
         public override Type InstanceType
         {
             get
@@ -131,17 +132,17 @@ namespace NetOffice.VisioApi
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of Masters 
-        ///</summary>		
+        /// </summary>		
 		public Masters():base("Visio.Masters")
 		{
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of Masters
-        ///</summary>
+        /// </summary>
         ///<param name="progId">registered ProgID</param>
 		public Masters(string progId):base(progId)
 		{
@@ -151,46 +152,6 @@ namespace NetOffice.VisioApi
 		#endregion
 
 		#region Static CoClass Methods
-
-		/// <summary>
-        /// Returns all running Visio.Masters objects from the environment/system
-        /// </summary>
-        /// <returns>an Visio.Masters array</returns>
-		public static NetOffice.VisioApi.Masters[] GetActiveInstances()
-		{		
-			IDisposableEnumeration proxyList = NetOffice.ProxyService.GetActiveInstances("Visio","Masters");
-			NetRuntimeSystem.Collections.Generic.List<NetOffice.VisioApi.Masters> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.VisioApi.Masters>();
-			foreach(object proxy in proxyList)
-				resultList.Add( new NetOffice.VisioApi.Masters(null, proxy) );
-			return resultList.ToArray();
-		}
-
-		/// <summary>
-        /// Returns a running Visio.Masters object from the environment/system.
-        /// </summary>
-        /// <returns>an Visio.Masters object or null</returns>
-		public static NetOffice.VisioApi.Masters GetActiveInstance()
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Visio","Masters", false);
-			if(null != proxy)
-				return new NetOffice.VisioApi.Masters(null, proxy);
-			else
-				return null;
-		}
-
-		/// <summary>
-        /// Returns a running Visio.Masters object from the environment/system. 
-        /// </summary>
-	    /// <param name="throwOnError">throw an exception if no object was found</param>
-        /// <returns>an Visio.Masters object or null</returns>
-		public static NetOffice.VisioApi.Masters GetActiveInstance(bool throwOnError)
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Visio","Masters", throwOnError);
-			if(null != proxy)
-				return new NetOffice.VisioApi.Masters(null, proxy);
-			else
-				return null;
-		}
 		#endregion
 
 		#region Events
@@ -833,12 +794,12 @@ namespace NetOffice.VisioApi
 				return;
 	
             if (null == _activeSinkId)
-				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, EMasters_SinkHelper.Id);
+				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, Events.EMasters_SinkHelper.Id);
 
 
-			if(EMasters_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
+			if(Events.EMasters_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
 			{
-				_eMasters_SinkHelper = new EMasters_SinkHelper(this, _connectPoint);
+				_eMasters_SinkHelper = new Events.EMasters_SinkHelper(this, _connectPoint);
 				return;
 			} 
         }
@@ -980,3 +941,4 @@ namespace NetOffice.VisioApi
 		#pragma warning restore
 	}
 }
+

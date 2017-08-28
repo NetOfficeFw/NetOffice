@@ -1,12 +1,10 @@
 ﻿using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
-using NetOffice;
-using NetOffice.Misc;
+using NetOffice.Attributes;
 
 namespace NetOffice.OutlookApi
 {
-
 	#region Delegates
 
 	#pragma warning disable
@@ -14,15 +12,16 @@ namespace NetOffice.OutlookApi
 
 	#endregion
 
-	///<summary>
+	/// <summary>
 	/// CoClass _DpxCtrl 
 	/// SupportByVersion Outlook, 10
-	///</summary>
-	[SupportByVersionAttribute("Outlook", 10)]
-	[EntityTypeAttribute(EntityType.IsCoClass)]
-	public class _DpxCtrl : _IDpxCtrl
+	/// </summary>
+	[SupportByVersion("Outlook", 10)]
+	[EntityType(EntityType.IsCoClass)]
+ 	public class _DpxCtrl : _IDpxCtrl
 	{
 		#pragma warning disable
+
 		#region Fields
 		
 		private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
@@ -36,6 +35,7 @@ namespace NetOffice.OutlookApi
         /// <summary>
         /// Instance Type
         /// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
         public override Type InstanceType
         {
             get
@@ -102,17 +102,17 @@ namespace NetOffice.OutlookApi
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of _DpxCtrl 
-        ///</summary>		
+        /// </summary>		
 		public _DpxCtrl():base("Outlook._DpxCtrl")
 		{
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of _DpxCtrl
-        ///</summary>
+        /// </summary>
         ///<param name="progId">registered ProgID</param>
 		public _DpxCtrl(string progId):base(progId)
 		{
@@ -122,46 +122,6 @@ namespace NetOffice.OutlookApi
 		#endregion
 
 		#region Static CoClass Methods
-
-		/// <summary>
-        /// Returns all running Outlook._DpxCtrl objects from the environment/system
-        /// </summary>
-        /// <returns>an Outlook._DpxCtrl array</returns>
-		public static NetOffice.OutlookApi._DpxCtrl[] GetActiveInstances()
-		{		
-			IDisposableEnumeration proxyList = NetOffice.ProxyService.GetActiveInstances("Outlook","_DpxCtrl");
-			NetRuntimeSystem.Collections.Generic.List<NetOffice.OutlookApi._DpxCtrl> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.OutlookApi._DpxCtrl>();
-			foreach(object proxy in proxyList)
-				resultList.Add( new NetOffice.OutlookApi._DpxCtrl(null, proxy) );
-			return resultList.ToArray();
-		}
-
-		/// <summary>
-        /// Returns a running Outlook._DpxCtrl object from the environment/system.
-        /// </summary>
-        /// <returns>an Outlook._DpxCtrl object or null</returns>
-		public static NetOffice.OutlookApi._DpxCtrl GetActiveInstance()
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Outlook","_DpxCtrl", false);
-			if(null != proxy)
-				return new NetOffice.OutlookApi._DpxCtrl(null, proxy);
-			else
-				return null;
-		}
-
-		/// <summary>
-        /// Returns a running Outlook._DpxCtrl object from the environment/system. 
-        /// </summary>
-	    /// <param name="throwOnError">throw an exception if no object was found</param>
-        /// <returns>an Outlook._DpxCtrl object or null</returns>
-		public static NetOffice.OutlookApi._DpxCtrl GetActiveInstance(bool throwOnError)
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Outlook","_DpxCtrl", throwOnError);
-			if(null != proxy)
-				return new NetOffice.OutlookApi._DpxCtrl(null, proxy);
-			else
-				return null;
-		}
 		#endregion
 
 		#region Events
@@ -320,3 +280,4 @@ namespace NetOffice.OutlookApi
 		#pragma warning restore
 	}
 }
+

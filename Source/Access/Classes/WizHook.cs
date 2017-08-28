@@ -1,12 +1,10 @@
 ﻿using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
-using NetOffice;
-using NetOffice.Misc;
+using NetOffice.Attributes;
 
 namespace NetOffice.AccessApi
 {
-
 	#region Delegates
 
 	#pragma warning disable
@@ -14,15 +12,16 @@ namespace NetOffice.AccessApi
 
 	#endregion
 
-	///<summary>
+	/// <summary>
 	/// CoClass WizHook 
 	/// SupportByVersion Access, 9,10,11,12,14,15,16
-	///</summary>
-	[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
-	[EntityTypeAttribute(EntityType.IsCoClass)]
-	public class WizHook : _WizHook
+	/// </summary>
+	[SupportByVersion("Access", 9,10,11,12,14,15,16)]
+	[EntityType(EntityType.IsCoClass)]
+ 	public class WizHook : _WizHook
 	{
 		#pragma warning disable
+
 		#region Fields
 		
 		private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
@@ -36,6 +35,7 @@ namespace NetOffice.AccessApi
         /// <summary>
         /// Instance Type
         /// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
         public override Type InstanceType
         {
             get
@@ -102,17 +102,17 @@ namespace NetOffice.AccessApi
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of WizHook 
-        ///</summary>		
+        /// </summary>		
 		public WizHook():base("Access.WizHook")
 		{
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of WizHook
-        ///</summary>
+        /// </summary>
         ///<param name="progId">registered ProgID</param>
 		public WizHook(string progId):base(progId)
 		{
@@ -122,46 +122,6 @@ namespace NetOffice.AccessApi
 		#endregion
 
 		#region Static CoClass Methods
-
-		/// <summary>
-        /// Returns all running Access.WizHook objects from the environment/system
-        /// </summary>
-        /// <returns>an Access.WizHook array</returns>
-		public static NetOffice.AccessApi.WizHook[] GetActiveInstances()
-		{		
-			IDisposableEnumeration proxyList = NetOffice.ProxyService.GetActiveInstances("Access","WizHook");
-			NetRuntimeSystem.Collections.Generic.List<NetOffice.AccessApi.WizHook> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.AccessApi.WizHook>();
-			foreach(object proxy in proxyList)
-				resultList.Add( new NetOffice.AccessApi.WizHook(null, proxy) );
-			return resultList.ToArray();
-		}
-
-		/// <summary>
-        /// Returns a running Access.WizHook object from the environment/system.
-        /// </summary>
-        /// <returns>an Access.WizHook object or null</returns>
-		public static NetOffice.AccessApi.WizHook GetActiveInstance()
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Access","WizHook", false);
-			if(null != proxy)
-				return new NetOffice.AccessApi.WizHook(null, proxy);
-			else
-				return null;
-		}
-
-		/// <summary>
-        /// Returns a running Access.WizHook object from the environment/system. 
-        /// </summary>
-	    /// <param name="throwOnError">throw an exception if no object was found</param>
-        /// <returns>an Access.WizHook object or null</returns>
-		public static NetOffice.AccessApi.WizHook GetActiveInstance(bool throwOnError)
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Access","WizHook", throwOnError);
-			if(null != proxy)
-				return new NetOffice.AccessApi.WizHook(null, proxy);
-			else
-				return null;
-		}
 		#endregion
 
 		#region Events
@@ -320,3 +280,4 @@ namespace NetOffice.AccessApi
 		#pragma warning restore
 	}
 }
+

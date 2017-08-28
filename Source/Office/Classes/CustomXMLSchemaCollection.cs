@@ -1,12 +1,10 @@
 ﻿using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
-using NetOffice;
-using NetOffice.Misc;
+using NetOffice.Attributes;
 
 namespace NetOffice.OfficeApi
 {
-
 	#region Delegates
 
 	#pragma warning disable
@@ -14,16 +12,17 @@ namespace NetOffice.OfficeApi
 
 	#endregion
 
-	///<summary>
+	/// <summary>
 	/// CoClass CustomXMLSchemaCollection 
 	/// SupportByVersion Office, 12,14,15,16
-	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff860324.aspx
-	///</summary>
-	[SupportByVersionAttribute("Office", 12,14,15,16)]
-	[EntityTypeAttribute(EntityType.IsCoClass)]
-	public class CustomXMLSchemaCollection : _CustomXMLSchemaCollection
+	/// </summary>
+	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860324.aspx </remarks>
+	[SupportByVersion("Office", 12,14,15,16)]
+	[EntityType(EntityType.IsCoClass)]
+ 	public class CustomXMLSchemaCollection : _CustomXMLSchemaCollection
 	{
 		#pragma warning disable
+
 		#region Fields
 		
 		private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
@@ -37,6 +36,7 @@ namespace NetOffice.OfficeApi
         /// <summary>
         /// Instance Type
         /// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
         public override Type InstanceType
         {
             get
@@ -103,17 +103,17 @@ namespace NetOffice.OfficeApi
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of CustomXMLSchemaCollection 
-        ///</summary>		
+        /// </summary>		
 		public CustomXMLSchemaCollection():base("Office.CustomXMLSchemaCollection")
 		{
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of CustomXMLSchemaCollection
-        ///</summary>
+        /// </summary>
         ///<param name="progId">registered ProgID</param>
 		public CustomXMLSchemaCollection(string progId):base(progId)
 		{
@@ -123,46 +123,6 @@ namespace NetOffice.OfficeApi
 		#endregion
 
 		#region Static CoClass Methods
-
-		/// <summary>
-        /// Returns all running Office.CustomXMLSchemaCollection objects from the environment/system
-        /// </summary>
-        /// <returns>an Office.CustomXMLSchemaCollection array</returns>
-		public static NetOffice.OfficeApi.CustomXMLSchemaCollection[] GetActiveInstances()
-		{		
-			IDisposableEnumeration proxyList = NetOffice.ProxyService.GetActiveInstances("Office","CustomXMLSchemaCollection");
-			NetRuntimeSystem.Collections.Generic.List<NetOffice.OfficeApi.CustomXMLSchemaCollection> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.OfficeApi.CustomXMLSchemaCollection>();
-			foreach(object proxy in proxyList)
-				resultList.Add( new NetOffice.OfficeApi.CustomXMLSchemaCollection(null, proxy) );
-			return resultList.ToArray();
-		}
-
-		/// <summary>
-        /// Returns a running Office.CustomXMLSchemaCollection object from the environment/system.
-        /// </summary>
-        /// <returns>an Office.CustomXMLSchemaCollection object or null</returns>
-		public static NetOffice.OfficeApi.CustomXMLSchemaCollection GetActiveInstance()
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Office","CustomXMLSchemaCollection", false);
-			if(null != proxy)
-				return new NetOffice.OfficeApi.CustomXMLSchemaCollection(null, proxy);
-			else
-				return null;
-		}
-
-		/// <summary>
-        /// Returns a running Office.CustomXMLSchemaCollection object from the environment/system. 
-        /// </summary>
-	    /// <param name="throwOnError">throw an exception if no object was found</param>
-        /// <returns>an Office.CustomXMLSchemaCollection object or null</returns>
-		public static NetOffice.OfficeApi.CustomXMLSchemaCollection GetActiveInstance(bool throwOnError)
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Office","CustomXMLSchemaCollection", throwOnError);
-			if(null != proxy)
-				return new NetOffice.OfficeApi.CustomXMLSchemaCollection(null, proxy);
-			else
-				return null;
-		}
 		#endregion
 
 		#region Events
@@ -321,3 +281,4 @@ namespace NetOffice.OfficeApi
 		#pragma warning restore
 	}
 }
+

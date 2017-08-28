@@ -1,12 +1,10 @@
 ﻿using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
-using NetOffice;
-using NetOffice.Misc;
+using NetOffice.Attributes;
 
 namespace NetOffice.MSHTMLApi
 {
-
 	#region Delegates
 
 	#pragma warning disable
@@ -25,21 +23,23 @@ namespace NetOffice.MSHTMLApi
 
 	#endregion
 
-	///<summary>
+	/// <summary>
 	/// CoClass HTMLWindowProxy 
 	/// SupportByVersion MSHTML, 4
-	///</summary>
-	[SupportByVersionAttribute("MSHTML", 4)]
-	[EntityTypeAttribute(EntityType.IsCoClass)]
-	public class HTMLWindowProxy : DispHTMLWindowProxy,IEventBinding
+	/// </summary>
+	[SupportByVersion("MSHTML", 4)]
+	[EntityType(EntityType.IsCoClass)]
+	[EventSink(typeof(Events.HTMLWindowEvents_SinkHelper))]
+	public class HTMLWindowProxy : DispHTMLWindowProxy, IEventBinding
 	{
 		#pragma warning disable
+
 		#region Fields
 		
 		private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
 		private string _activeSinkId;
 		private NetRuntimeSystem.Type _thisType;
-		HTMLWindowEvents_SinkHelper _hTMLWindowEvents_SinkHelper;
+		private Events.HTMLWindowEvents_SinkHelper _hTMLWindowEvents_SinkHelper;
 	
 		#endregion
 
@@ -48,6 +48,7 @@ namespace NetOffice.MSHTMLApi
         /// <summary>
         /// Instance Type
         /// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
         public override Type InstanceType
         {
             get
@@ -114,17 +115,17 @@ namespace NetOffice.MSHTMLApi
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of HTMLWindowProxy 
-        ///</summary>		
+        /// </summary>		
 		public HTMLWindowProxy():base("MSHTML.HTMLWindowProxy")
 		{
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of HTMLWindowProxy
-        ///</summary>
+        /// </summary>
         ///<param name="progId">registered ProgID</param>
 		public HTMLWindowProxy(string progId):base(progId)
 		{
@@ -134,46 +135,6 @@ namespace NetOffice.MSHTMLApi
 		#endregion
 
 		#region Static CoClass Methods
-
-		/// <summary>
-        /// Returns all running MSHTML.HTMLWindowProxy objects from the environment/system
-        /// </summary>
-        /// <returns>an MSHTML.HTMLWindowProxy array</returns>
-		public static NetOffice.MSHTMLApi.HTMLWindowProxy[] GetActiveInstances()
-		{		
-			IDisposableEnumeration proxyList = NetOffice.ProxyService.GetActiveInstances("MSHTML","HTMLWindowProxy");
-			NetRuntimeSystem.Collections.Generic.List<NetOffice.MSHTMLApi.HTMLWindowProxy> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.MSHTMLApi.HTMLWindowProxy>();
-			foreach(object proxy in proxyList)
-				resultList.Add( new NetOffice.MSHTMLApi.HTMLWindowProxy(null, proxy) );
-			return resultList.ToArray();
-		}
-
-		/// <summary>
-        /// Returns a running MSHTML.HTMLWindowProxy object from the environment/system.
-        /// </summary>
-        /// <returns>an MSHTML.HTMLWindowProxy object or null</returns>
-		public static NetOffice.MSHTMLApi.HTMLWindowProxy GetActiveInstance()
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("MSHTML","HTMLWindowProxy", false);
-			if(null != proxy)
-				return new NetOffice.MSHTMLApi.HTMLWindowProxy(null, proxy);
-			else
-				return null;
-		}
-
-		/// <summary>
-        /// Returns a running MSHTML.HTMLWindowProxy object from the environment/system. 
-        /// </summary>
-	    /// <param name="throwOnError">throw an exception if no object was found</param>
-        /// <returns>an MSHTML.HTMLWindowProxy object or null</returns>
-		public static NetOffice.MSHTMLApi.HTMLWindowProxy GetActiveInstance(bool throwOnError)
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("MSHTML","HTMLWindowProxy", throwOnError);
-			if(null != proxy)
-				return new NetOffice.MSHTMLApi.HTMLWindowProxy(null, proxy);
-			else
-				return null;
-		}
 		#endregion
 
 		#region Events
@@ -437,12 +398,12 @@ namespace NetOffice.MSHTMLApi
 				return;
 	
             if (null == _activeSinkId)
-				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, HTMLWindowEvents_SinkHelper.Id);
+				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, Events.HTMLWindowEvents_SinkHelper.Id);
 
 
-			if(HTMLWindowEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
+			if(Events.HTMLWindowEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
 			{
-				_hTMLWindowEvents_SinkHelper = new HTMLWindowEvents_SinkHelper(this, _connectPoint);
+				_hTMLWindowEvents_SinkHelper = new Events.HTMLWindowEvents_SinkHelper(this, _connectPoint);
 				return;
 			} 
         }
@@ -584,3 +545,4 @@ namespace NetOffice.MSHTMLApi
 		#pragma warning restore
 	}
 }
+

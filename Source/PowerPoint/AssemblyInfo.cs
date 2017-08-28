@@ -2,6 +2,7 @@
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using NetOffice;
+using NetOffice.Attributes;
 
 /*
     Contains the following Type Libraries:
@@ -16,15 +17,15 @@ using NetOffice;
 */
 
 [assembly: AssemblyTitle("PowerPoint")]
-[assembly: AssemblyDescription("NetOffice PowerPoint Api")]
+[assembly: AssemblyDescription("Netoffice PowerPoint Api")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("netoffice.codeplex.com")]
-[assembly: AssemblyProduct("NetOffice")]
+[assembly: AssemblyProduct("Netoffice")]
 [assembly: AssemblyCopyright("Sebastian Lange")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
-[assembly: AssemblyVersion("1.7.4.0")]
-[assembly: AssemblyFileVersion("1.7.4.0")]
+[assembly: AssemblyVersion("1.7.4.1")]
+[assembly: AssemblyFileVersion("1.7.4.1")]
 [assembly: PrimaryInteropAssembly(1, 0)]
 [assembly: ImportedFromTypeLib("PowerPoint")]
 [assembly: Guid("91493440-5A91-11CF-8700-00AA0060263B")]

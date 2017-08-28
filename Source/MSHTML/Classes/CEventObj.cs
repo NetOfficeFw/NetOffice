@@ -1,12 +1,10 @@
 ﻿using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
-using NetOffice;
-using NetOffice.Misc;
+using NetOffice.Attributes;
 
 namespace NetOffice.MSHTMLApi
 {
-
 	#region Delegates
 
 	#pragma warning disable
@@ -14,15 +12,16 @@ namespace NetOffice.MSHTMLApi
 
 	#endregion
 
-	///<summary>
+	/// <summary>
 	/// CoClass CEventObj 
 	/// SupportByVersion MSHTML, 4
-	///</summary>
-	[SupportByVersionAttribute("MSHTML", 4)]
-	[EntityTypeAttribute(EntityType.IsCoClass)]
-	public class CEventObj : DispCEventObj
+	/// </summary>
+	[SupportByVersion("MSHTML", 4)]
+	[EntityType(EntityType.IsCoClass)]
+ 	public class CEventObj : DispCEventObj
 	{
 		#pragma warning disable
+
 		#region Fields
 		
 		private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
@@ -36,6 +35,7 @@ namespace NetOffice.MSHTMLApi
         /// <summary>
         /// Instance Type
         /// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
         public override Type InstanceType
         {
             get
@@ -102,17 +102,17 @@ namespace NetOffice.MSHTMLApi
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of CEventObj 
-        ///</summary>		
+        /// </summary>		
 		public CEventObj():base("MSHTML.CEventObj")
 		{
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of CEventObj
-        ///</summary>
+        /// </summary>
         ///<param name="progId">registered ProgID</param>
 		public CEventObj(string progId):base(progId)
 		{
@@ -122,46 +122,6 @@ namespace NetOffice.MSHTMLApi
 		#endregion
 
 		#region Static CoClass Methods
-
-		/// <summary>
-        /// Returns all running MSHTML.CEventObj objects from the environment/system
-        /// </summary>
-        /// <returns>an MSHTML.CEventObj array</returns>
-		public static NetOffice.MSHTMLApi.CEventObj[] GetActiveInstances()
-		{		
-			IDisposableEnumeration proxyList = NetOffice.ProxyService.GetActiveInstances("MSHTML","CEventObj");
-			NetRuntimeSystem.Collections.Generic.List<NetOffice.MSHTMLApi.CEventObj> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.MSHTMLApi.CEventObj>();
-			foreach(object proxy in proxyList)
-				resultList.Add( new NetOffice.MSHTMLApi.CEventObj(null, proxy) );
-			return resultList.ToArray();
-		}
-
-		/// <summary>
-        /// Returns a running MSHTML.CEventObj object from the environment/system.
-        /// </summary>
-        /// <returns>an MSHTML.CEventObj object or null</returns>
-		public static NetOffice.MSHTMLApi.CEventObj GetActiveInstance()
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("MSHTML","CEventObj", false);
-			if(null != proxy)
-				return new NetOffice.MSHTMLApi.CEventObj(null, proxy);
-			else
-				return null;
-		}
-
-		/// <summary>
-        /// Returns a running MSHTML.CEventObj object from the environment/system. 
-        /// </summary>
-	    /// <param name="throwOnError">throw an exception if no object was found</param>
-        /// <returns>an MSHTML.CEventObj object or null</returns>
-		public static NetOffice.MSHTMLApi.CEventObj GetActiveInstance(bool throwOnError)
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("MSHTML","CEventObj", throwOnError);
-			if(null != proxy)
-				return new NetOffice.MSHTMLApi.CEventObj(null, proxy);
-			else
-				return null;
-		}
 		#endregion
 
 		#region Events
@@ -320,3 +280,4 @@ namespace NetOffice.MSHTMLApi
 		#pragma warning restore
 	}
 }
+

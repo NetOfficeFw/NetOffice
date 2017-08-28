@@ -1,26 +1,27 @@
 ﻿using System;
 using NetOffice;
+using NetOffice.Attributes;
 namespace NetOffice.VBIDEApi.Enums
 {
 	 /// <summary>
 	 /// SupportByVersion VBIDE 12, 14, 5.3
 	 /// </summary>
-	[SupportByVersionAttribute("VBIDE", 12,14,5.3)]
-	[EntityTypeAttribute(EntityType.IsEnum)]
+	[SupportByVersion("VBIDE", 12,14,5.3)]
+	[EntityType(EntityType.IsEnum)]
 	public enum vbext_CodePaneview
 	{
 		 /// <summary>
 		 /// SupportByVersion VBIDE 12, 14, 5.3
 		 /// </summary>
 		 /// <remarks>0</remarks>
-		 [SupportByVersionAttribute("VBIDE", 12,14,5.3)]
+		 [SupportByVersion("VBIDE", 12,14,5.3)]
 		 vbext_cv_ProcedureView = 0,
 
 		 /// <summary>
 		 /// SupportByVersion VBIDE 12, 14, 5.3
 		 /// </summary>
 		 /// <remarks>1</remarks>
-		 [SupportByVersionAttribute("VBIDE", 12,14,5.3)]
+		 [SupportByVersion("VBIDE", 12,14,5.3)]
 		 vbext_cv_FullModuleView = 1
 	}
 }

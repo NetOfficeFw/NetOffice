@@ -158,8 +158,8 @@
     <Compile Include="Classes\Parameter.cs" />
     <Compile Include="Classes\Record.cs" />
     <Compile Include="Classes\Stream.cs" />
-    <Compile Include="EventInterfaces\ConnectionEvents.cs" />
-    <Compile Include="EventInterfaces\RecordsetEvents.cs" />
+    <Compile Include="Events\ConnectionEvents.cs" />
+    <Compile Include="Events\RecordsetEvents.cs" />
   </ItemGroup>
   <ItemGroup>
     <COMReference Include="stdole">

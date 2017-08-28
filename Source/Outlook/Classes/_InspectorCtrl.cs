@@ -1,12 +1,10 @@
 ﻿using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
-using NetOffice;
-using NetOffice.Misc;
+using NetOffice.Attributes;
 
 namespace NetOffice.OutlookApi
 {
-
 	#region Delegates
 
 	#pragma warning disable
@@ -14,21 +12,23 @@ namespace NetOffice.OutlookApi
 
 	#endregion
 
-	///<summary>
+	/// <summary>
 	/// CoClass _InspectorCtrl 
 	/// SupportByVersion Outlook, 10
-	///</summary>
-	[SupportByVersionAttribute("Outlook", 10)]
-	[EntityTypeAttribute(EntityType.IsCoClass)]
-	public class _InspectorCtrl : _DInspectorCtrl,IEventBinding
+	/// </summary>
+	[SupportByVersion("Outlook", 10)]
+	[EntityType(EntityType.IsCoClass)]
+	[EventSink(typeof(Events._DInspectorEvents_SinkHelper))]
+	public class _InspectorCtrl : _DInspectorCtrl, IEventBinding
 	{
 		#pragma warning disable
+
 		#region Fields
 		
 		private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
 		private string _activeSinkId;
 		private NetRuntimeSystem.Type _thisType;
-		_DInspectorEvents_SinkHelper __DInspectorEvents_SinkHelper;
+		private Events._DInspectorEvents_SinkHelper __DInspectorEvents_SinkHelper;
 	
 		#endregion
 
@@ -37,6 +37,7 @@ namespace NetOffice.OutlookApi
         /// <summary>
         /// Instance Type
         /// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
         public override Type InstanceType
         {
             get
@@ -103,17 +104,17 @@ namespace NetOffice.OutlookApi
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of _InspectorCtrl 
-        ///</summary>		
+        /// </summary>		
 		public _InspectorCtrl():base("Outlook._InspectorCtrl")
 		{
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of _InspectorCtrl
-        ///</summary>
+        /// </summary>
         ///<param name="progId">registered ProgID</param>
 		public _InspectorCtrl(string progId):base(progId)
 		{
@@ -123,46 +124,6 @@ namespace NetOffice.OutlookApi
 		#endregion
 
 		#region Static CoClass Methods
-
-		/// <summary>
-        /// Returns all running Outlook._InspectorCtrl objects from the environment/system
-        /// </summary>
-        /// <returns>an Outlook._InspectorCtrl array</returns>
-		public static NetOffice.OutlookApi._InspectorCtrl[] GetActiveInstances()
-		{		
-			IDisposableEnumeration proxyList = NetOffice.ProxyService.GetActiveInstances("Outlook","_InspectorCtrl");
-			NetRuntimeSystem.Collections.Generic.List<NetOffice.OutlookApi._InspectorCtrl> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.OutlookApi._InspectorCtrl>();
-			foreach(object proxy in proxyList)
-				resultList.Add( new NetOffice.OutlookApi._InspectorCtrl(null, proxy) );
-			return resultList.ToArray();
-		}
-
-		/// <summary>
-        /// Returns a running Outlook._InspectorCtrl object from the environment/system.
-        /// </summary>
-        /// <returns>an Outlook._InspectorCtrl object or null</returns>
-		public static NetOffice.OutlookApi._InspectorCtrl GetActiveInstance()
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Outlook","_InspectorCtrl", false);
-			if(null != proxy)
-				return new NetOffice.OutlookApi._InspectorCtrl(null, proxy);
-			else
-				return null;
-		}
-
-		/// <summary>
-        /// Returns a running Outlook._InspectorCtrl object from the environment/system. 
-        /// </summary>
-	    /// <param name="throwOnError">throw an exception if no object was found</param>
-        /// <returns>an Outlook._InspectorCtrl object or null</returns>
-		public static NetOffice.OutlookApi._InspectorCtrl GetActiveInstance(bool throwOnError)
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Outlook","_InspectorCtrl", throwOnError);
-			if(null != proxy)
-				return new NetOffice.OutlookApi._InspectorCtrl(null, proxy);
-			else
-				return null;
-		}
 		#endregion
 
 		#region Events
@@ -184,12 +145,12 @@ namespace NetOffice.OutlookApi
 				return;
 	
             if (null == _activeSinkId)
-				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, _DInspectorEvents_SinkHelper.Id);
+				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, Events._DInspectorEvents_SinkHelper.Id);
 
 
-			if(_DInspectorEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
+			if(Events._DInspectorEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
 			{
-				__DInspectorEvents_SinkHelper = new _DInspectorEvents_SinkHelper(this, _connectPoint);
+				__DInspectorEvents_SinkHelper = new Events._DInspectorEvents_SinkHelper(this, _connectPoint);
 				return;
 			} 
         }
@@ -331,3 +292,4 @@ namespace NetOffice.OutlookApi
 		#pragma warning restore
 	}
 }
+

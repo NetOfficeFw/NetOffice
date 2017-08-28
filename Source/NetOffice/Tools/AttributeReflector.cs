@@ -99,7 +99,6 @@ namespace NetOffice.Tools
             return false;
         }
         
-
         /// <summary>
         /// Looks for a method with the UnRegisterFunctionAttribute
         /// </summary>

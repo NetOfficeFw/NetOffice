@@ -1,23 +1,33 @@
 ﻿using System;
 using NetRuntimeSystem = System;
-using System.Runtime.InteropServices;
 using System.ComponentModel;
-using System.Runtime.CompilerServices;
-using System.Reflection;
-using System.Collections.Generic;
-using NetOffice;
+using NetOffice.Attributes;
+
 namespace NetOffice.MSDATASRCApi
 {
-	///<summary>
+	/// <summary>
 	/// Interface DataSource 
 	/// SupportByVersion MSDATASRC, 4
-	///</summary>
-	[SupportByVersionAttribute("MSDATASRC", 4)]
-	[EntityTypeAttribute(EntityType.IsInterface)]
-	public class DataSource : COMObject
+	/// </summary>
+	[SupportByVersion("MSDATASRC", 4)]
+	[EntityType(EntityType.IsInterface)]
+ 	public class DataSource : COMObject
 	{
 		#pragma warning disable
+
 		#region Type Information
+
+		/// <summary>
+		/// Instance Type
+		/// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
+		public override Type InstanceType
+		{
+			get
+			{
+				return LateBindingApiWrapperType;
+			}
+		}
 
         private static Type _type;
 
@@ -28,7 +38,6 @@ namespace NetOffice.MSDATASRCApi
             {
                 if (null == _type)
                     _type = typeof(DataSource);
-                    
                 return _type;
             }
         }
@@ -81,7 +90,7 @@ namespace NetOffice.MSDATASRCApi
 		{
 		}
 		
-		/// <param name="progId">registered ProgID</param>
+		/// <param name="progId">registered progID</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public DataSource(string progId) : base(progId)
 		{
@@ -97,76 +106,64 @@ namespace NetOffice.MSDATASRCApi
 
 		/// <summary>
 		/// SupportByVersion MSDATASRC 4
-		/// 
 		/// </summary>
 		/// <param name="bstrDM">string bstrDM</param>
 		/// <param name="riid">Guid riid</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("MSDATASRC", 4)]
+		[SupportByVersion("MSDATASRC", 4)]
 		public object getDataMember(string bstrDM, Guid riid)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(bstrDM, riid);
-			object returnItem = Invoker.MethodReturn(this, "getDataMember", paramsArray);
-			object newObject = Factory.CreateObjectFromComProxy(this,returnItem);
-			return newObject;
+			return Factory.ExecuteVariantMethodGet(this, "getDataMember", bstrDM, riid);
 		}
 
 		/// <summary>
 		/// SupportByVersion MSDATASRC 4
-		/// 
 		/// </summary>
 		/// <param name="lIndex">Int32 lIndex</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("MSDATASRC", 4)]
+		[SupportByVersion("MSDATASRC", 4)]
 		public string getDataMemberName(Int32 lIndex)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(lIndex);
-			object returnItem = Invoker.MethodReturn(this, "getDataMemberName", paramsArray);
-			return NetRuntimeSystem.Convert.ToString(returnItem);
+			return Factory.ExecuteStringMethodGet(this, "getDataMemberName", lIndex);
 		}
 
 		/// <summary>
 		/// SupportByVersion MSDATASRC 4
-		/// 
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("MSDATASRC", 4)]
+		[SupportByVersion("MSDATASRC", 4)]
 		public Int32 getDataMemberCount()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "getDataMemberCount", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return Factory.ExecuteInt32MethodGet(this, "getDataMemberCount");
 		}
 
 		/// <summary>
 		/// SupportByVersion MSDATASRC 4
-		/// 
 		/// </summary>
 		/// <param name="pDSL">NetOffice.MSDATASRCApi.DataSourceListener pDSL</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("MSDATASRC", 4)]
+		[SupportByVersion("MSDATASRC", 4)]
 		public Int32 addDataSourceListener(NetOffice.MSDATASRCApi.DataSourceListener pDSL)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(pDSL);
-			object returnItem = Invoker.MethodReturn(this, "addDataSourceListener", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return Factory.ExecuteInt32MethodGet(this, "addDataSourceListener", pDSL);
 		}
 
 		/// <summary>
 		/// SupportByVersion MSDATASRC 4
-		/// 
 		/// </summary>
 		/// <param name="pDSL">NetOffice.MSDATASRCApi.DataSourceListener pDSL</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("MSDATASRC", 4)]
+		[SupportByVersion("MSDATASRC", 4)]
 		public Int32 removeDataSourceListener(NetOffice.MSDATASRCApi.DataSourceListener pDSL)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(pDSL);
-			object returnItem = Invoker.MethodReturn(this, "removeDataSourceListener", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return Factory.ExecuteInt32MethodGet(this, "removeDataSourceListener", pDSL);
 		}
 
 		#endregion
+
 		#pragma warning restore
 	}
 }
+
+
+

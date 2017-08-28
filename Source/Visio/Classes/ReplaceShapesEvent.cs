@@ -1,12 +1,10 @@
 ﻿using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
-using NetOffice;
-using NetOffice.Misc;
+using NetOffice.Attributes;
 
 namespace NetOffice.VisioApi
 {
-
 	#region Delegates
 
 	#pragma warning disable
@@ -14,15 +12,16 @@ namespace NetOffice.VisioApi
 
 	#endregion
 
-	///<summary>
+	/// <summary>
 	/// CoClass ReplaceShapesEvent 
 	/// SupportByVersion Visio, 15, 16
-	///</summary>
-	[SupportByVersionAttribute("Visio", 15, 16)]
-	[EntityTypeAttribute(EntityType.IsCoClass)]
-	public class ReplaceShapesEvent : IVReplaceShapesEvent
+	/// </summary>
+	[SupportByVersion("Visio", 15, 16)]
+	[EntityType(EntityType.IsCoClass)]
+ 	public class ReplaceShapesEvent : IVReplaceShapesEvent
 	{
 		#pragma warning disable
+
 		#region Fields
 		
 		private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
@@ -36,6 +35,7 @@ namespace NetOffice.VisioApi
         /// <summary>
         /// Instance Type
         /// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
         public override Type InstanceType
         {
             get
@@ -102,17 +102,17 @@ namespace NetOffice.VisioApi
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of ReplaceShapesEvent 
-        ///</summary>		
+        /// </summary>		
 		public ReplaceShapesEvent():base("Visio.ReplaceShapesEvent")
 		{
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of ReplaceShapesEvent
-        ///</summary>
+        /// </summary>
         ///<param name="progId">registered ProgID</param>
 		public ReplaceShapesEvent(string progId):base(progId)
 		{
@@ -122,46 +122,6 @@ namespace NetOffice.VisioApi
 		#endregion
 
 		#region Static CoClass Methods
-
-		/// <summary>
-        /// Returns all running Visio.ReplaceShapesEvent objects from the environment/system
-        /// </summary>
-        /// <returns>an Visio.ReplaceShapesEvent array</returns>
-		public static NetOffice.VisioApi.ReplaceShapesEvent[] GetActiveInstances()
-		{		
-			IDisposableEnumeration proxyList = NetOffice.ProxyService.GetActiveInstances("Visio","ReplaceShapesEvent");
-			NetRuntimeSystem.Collections.Generic.List<NetOffice.VisioApi.ReplaceShapesEvent> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.VisioApi.ReplaceShapesEvent>();
-			foreach(object proxy in proxyList)
-				resultList.Add( new NetOffice.VisioApi.ReplaceShapesEvent(null, proxy) );
-			return resultList.ToArray();
-		}
-
-		/// <summary>
-        /// Returns a running Visio.ReplaceShapesEvent object from the environment/system.
-        /// </summary>
-        /// <returns>an Visio.ReplaceShapesEvent object or null</returns>
-		public static NetOffice.VisioApi.ReplaceShapesEvent GetActiveInstance()
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Visio","ReplaceShapesEvent", false);
-			if(null != proxy)
-				return new NetOffice.VisioApi.ReplaceShapesEvent(null, proxy);
-			else
-				return null;
-		}
-
-		/// <summary>
-        /// Returns a running Visio.ReplaceShapesEvent object from the environment/system. 
-        /// </summary>
-	    /// <param name="throwOnError">throw an exception if no object was found</param>
-        /// <returns>an Visio.ReplaceShapesEvent object or null</returns>
-		public static NetOffice.VisioApi.ReplaceShapesEvent GetActiveInstance(bool throwOnError)
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Visio","ReplaceShapesEvent", throwOnError);
-			if(null != proxy)
-				return new NetOffice.VisioApi.ReplaceShapesEvent(null, proxy);
-			else
-				return null;
-		}
 		#endregion
 
 		#region Events
@@ -320,3 +280,4 @@ namespace NetOffice.VisioApi
 		#pragma warning restore
 	}
 }
+

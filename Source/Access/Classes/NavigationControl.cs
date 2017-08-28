@@ -1,52 +1,52 @@
 ﻿using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
-using NetOffice;
-using NetOffice.Misc;
+using NetOffice.Attributes;
 
 namespace NetOffice.AccessApi
 {
-
 	#region Delegates
 
 	#pragma warning disable
-	public delegate void NavigationControl_BeforeUpdateEventHandler(ref Int16 Cancel);
+	public delegate void NavigationControl_BeforeUpdateEventHandler(ref Int16 cancel);
 	public delegate void NavigationControl_AfterUpdateEventHandler();
 	public delegate void NavigationControl_ChangeEventHandler();
 	public delegate void NavigationControl_EnterEventHandler();
-	public delegate void NavigationControl_ExitEventHandler(ref Int16 Cancel);
+	public delegate void NavigationControl_ExitEventHandler(ref Int16 cancel);
 	public delegate void NavigationControl_GotFocusEventHandler();
 	public delegate void NavigationControl_LostFocusEventHandler();
 	public delegate void NavigationControl_ClickEventHandler();
-	public delegate void NavigationControl_DblClickEventHandler(ref Int16 Cancel);
-	public delegate void NavigationControl_MouseDownEventHandler(ref Int16 Button, ref Int16 Shift, ref Single X, ref Single Y);
-	public delegate void NavigationControl_MouseMoveEventHandler(ref Int16 Button, ref Int16 Shift, ref Single X, ref Single Y);
-	public delegate void NavigationControl_MouseUpEventHandler(ref Int16 Button, ref Int16 Shift, ref Single X, ref Single Y);
-	public delegate void NavigationControl_KeyDownEventHandler(ref Int16 KeyCode, ref Int16 Shift);
-	public delegate void NavigationControl_KeyPressEventHandler(ref Int16 KeyAscii);
-	public delegate void NavigationControl_KeyUpEventHandler(ref Int16 KeyCode, ref Int16 Shift);
-	public delegate void NavigationControl_DirtyEventHandler(ref Int16 Cancel);
-	public delegate void NavigationControl_UndoEventHandler(ref Int16 Cancel);
+	public delegate void NavigationControl_DblClickEventHandler(ref Int16 cancel);
+	public delegate void NavigationControl_MouseDownEventHandler(ref Int16 button, ref Int16 shift, ref Single x, ref Single y);
+	public delegate void NavigationControl_MouseMoveEventHandler(ref Int16 button, ref Int16 shift, ref Single x, ref Single y);
+	public delegate void NavigationControl_MouseUpEventHandler(ref Int16 button, ref Int16 shift, ref Single x, ref Single y);
+	public delegate void NavigationControl_KeyDownEventHandler(ref Int16 keyCode, ref Int16 shift);
+	public delegate void NavigationControl_KeyPressEventHandler(ref Int16 keyAscii);
+	public delegate void NavigationControl_KeyUpEventHandler(ref Int16 keyCode, ref Int16 shift);
+	public delegate void NavigationControl_DirtyEventHandler(ref Int16 cancel);
+	public delegate void NavigationControl_UndoEventHandler(ref Int16 cancel);
 	#pragma warning restore
 
 	#endregion
 
-	///<summary>
+	/// <summary>
 	/// CoClass NavigationControl 
 	/// SupportByVersion Access, 14,15,16
-	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff821468.aspx
-	///</summary>
-	[SupportByVersionAttribute("Access", 14,15,16)]
-	[EntityTypeAttribute(EntityType.IsCoClass)]
-	public class NavigationControl : _NavigationControl,IEventBinding
+	/// </summary>
+	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff821468.aspx </remarks>
+	[SupportByVersion("Access", 14,15,16)]
+	[EntityType(EntityType.IsCoClass)]
+    [EventSink(typeof(Events.DispNavigationControlEvents_SinkHelper))]
+    public class NavigationControl : _NavigationControl, IEventBinding
 	{
 		#pragma warning disable
+
 		#region Fields
 		
 		private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
 		private string _activeSinkId;
 		private NetRuntimeSystem.Type _thisType;
-		DispNavigationControlEvents_SinkHelper _dispNavigationControlEvents_SinkHelper;
+		private Events.DispNavigationControlEvents_SinkHelper _dispNavigationControlEvents_SinkHelper;
 	
 		#endregion
 
@@ -55,6 +55,7 @@ namespace NetOffice.AccessApi
         /// <summary>
         /// Instance Type
         /// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
         public override Type InstanceType
         {
             get
@@ -121,17 +122,17 @@ namespace NetOffice.AccessApi
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of NavigationControl 
-        ///</summary>		
+        /// </summary>		
 		public NavigationControl():base("Access.NavigationControl")
 		{
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of NavigationControl
-        ///</summary>
+        /// </summary>
         ///<param name="progId">registered ProgID</param>
 		public NavigationControl(string progId):base(progId)
 		{
@@ -141,46 +142,6 @@ namespace NetOffice.AccessApi
 		#endregion
 
 		#region Static CoClass Methods
-
-		/// <summary>
-        /// Returns all running Access.NavigationControl objects from the environment/system
-        /// </summary>
-        /// <returns>an Access.NavigationControl array</returns>
-		public static NetOffice.AccessApi.NavigationControl[] GetActiveInstances()
-		{		
-			IDisposableEnumeration proxyList = NetOffice.ProxyService.GetActiveInstances("Access","NavigationControl");
-			NetRuntimeSystem.Collections.Generic.List<NetOffice.AccessApi.NavigationControl> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.AccessApi.NavigationControl>();
-			foreach(object proxy in proxyList)
-				resultList.Add( new NetOffice.AccessApi.NavigationControl(null, proxy) );
-			return resultList.ToArray();
-		}
-
-		/// <summary>
-        /// Returns a running Access.NavigationControl object from the environment/system.
-        /// </summary>
-        /// <returns>an Access.NavigationControl object or null</returns>
-		public static NetOffice.AccessApi.NavigationControl GetActiveInstance()
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Access","NavigationControl", false);
-			if(null != proxy)
-				return new NetOffice.AccessApi.NavigationControl(null, proxy);
-			else
-				return null;
-		}
-
-		/// <summary>
-        /// Returns a running Access.NavigationControl object from the environment/system. 
-        /// </summary>
-	    /// <param name="throwOnError">throw an exception if no object was found</param>
-        /// <returns>an Access.NavigationControl object or null</returns>
-		public static NetOffice.AccessApi.NavigationControl GetActiveInstance(bool throwOnError)
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Access","NavigationControl", throwOnError);
-			if(null != proxy)
-				return new NetOffice.AccessApi.NavigationControl(null, proxy);
-			else
-				return null;
-		}
 		#endregion
 
 		#region Events
@@ -593,12 +554,12 @@ namespace NetOffice.AccessApi
 				return;
 	
             if (null == _activeSinkId)
-				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, DispNavigationControlEvents_SinkHelper.Id);
+				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, Events.DispNavigationControlEvents_SinkHelper.Id);
 
 
-			if(DispNavigationControlEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
+			if(Events.DispNavigationControlEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
 			{
-				_dispNavigationControlEvents_SinkHelper = new DispNavigationControlEvents_SinkHelper(this, _connectPoint);
+				_dispNavigationControlEvents_SinkHelper = new Events.DispNavigationControlEvents_SinkHelper(this, _connectPoint);
 				return;
 			} 
         }
@@ -740,3 +701,4 @@ namespace NetOffice.AccessApi
 		#pragma warning restore
 	}
 }
+

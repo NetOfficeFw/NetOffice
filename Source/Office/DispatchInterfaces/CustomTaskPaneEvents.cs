@@ -1,23 +1,33 @@
 ﻿using System;
 using NetRuntimeSystem = System;
-using System.Runtime.InteropServices;
-using System.Runtime.CompilerServices;
 using System.ComponentModel;
-using System.Reflection;
-using System.Collections.Generic;
-using NetOffice;
+using NetOffice.Attributes;
+
 namespace NetOffice.OfficeApi
 {
-	///<summary>
+	/// <summary>
 	/// DispatchInterface CustomTaskPaneEvents 
 	/// SupportByVersion Office, 12,14,15,16
-	///</summary>
-	[SupportByVersionAttribute("Office", 12,14,15,16)]
-	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
-	public class CustomTaskPaneEvents : COMObject
+	/// </summary>
+	[SupportByVersion("Office", 12,14,15,16)]
+	[EntityType(EntityType.IsDispatchInterface)]
+ 	public class CustomTaskPaneEvents : COMObject
 	{
 		#pragma warning disable
+
 		#region Type Information
+
+		/// <summary>
+		/// Instance Type
+		/// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
+		public override Type InstanceType
+		{
+			get
+			{
+				return LateBindingApiWrapperType;
+			}
+		}
 
         private static Type _type;
 
@@ -28,7 +38,6 @@ namespace NetOffice.OfficeApi
             {
                 if (null == _type)
                     _type = typeof(CustomTaskPaneEvents);
-                    
                 return _type;
             }
         }
@@ -81,7 +90,7 @@ namespace NetOffice.OfficeApi
 		{
 		}
 		
-		/// <param name="progId">registered ProgID</param>
+		/// <param name="progId">registered progID</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public CustomTaskPaneEvents(string progId) : base(progId)
 		{
@@ -97,29 +106,29 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="customTaskPaneInst">NetOffice.OfficeApi._CustomTaskPane CustomTaskPaneInst</param>
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		/// <param name="customTaskPaneInst">NetOffice.OfficeApi._CustomTaskPane customTaskPaneInst</param>
+		[SupportByVersion("Office", 12,14,15,16)]
 		public void VisibleStateChange(NetOffice.OfficeApi._CustomTaskPane customTaskPaneInst)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(customTaskPaneInst);
-			Invoker.Method(this, "VisibleStateChange", paramsArray);
+			 Factory.ExecuteMethod(this, "VisibleStateChange", customTaskPaneInst);
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="customTaskPaneInst">NetOffice.OfficeApi._CustomTaskPane CustomTaskPaneInst</param>
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		/// <param name="customTaskPaneInst">NetOffice.OfficeApi._CustomTaskPane customTaskPaneInst</param>
+		[SupportByVersion("Office", 12,14,15,16)]
 		public void DockPositionStateChange(NetOffice.OfficeApi._CustomTaskPane customTaskPaneInst)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(customTaskPaneInst);
-			Invoker.Method(this, "DockPositionStateChange", paramsArray);
+			 Factory.ExecuteMethod(this, "DockPositionStateChange", customTaskPaneInst);
 		}
 
 		#endregion
+
 		#pragma warning restore
 	}
 }
+
+
+

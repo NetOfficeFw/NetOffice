@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using NetOffice;
+using NetOffice.Attributes;
 using Word = NetOffice.WordApi;
 using VBE = NetOffice.VBIDEApi;
 

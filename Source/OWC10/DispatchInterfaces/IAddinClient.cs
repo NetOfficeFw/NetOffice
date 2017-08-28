@@ -1,23 +1,33 @@
 ﻿using System;
 using NetRuntimeSystem = System;
-using System.Runtime.InteropServices;
-using System.Runtime.CompilerServices;
 using System.ComponentModel;
-using System.Reflection;
-using System.Collections.Generic;
-using NetOffice;
+using NetOffice.Attributes;
+
 namespace NetOffice.OWC10Api
 {
-	///<summary>
+	/// <summary>
 	/// DispatchInterface IAddinClient 
 	/// SupportByVersion OWC10, 1
-	///</summary>
-	[SupportByVersionAttribute("OWC10", 1)]
-	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
-	public class IAddinClient : COMObject
+	/// </summary>
+	[SupportByVersion("OWC10", 1)]
+	[EntityType(EntityType.IsDispatchInterface)]
+ 	public class IAddinClient : COMObject
 	{
 		#pragma warning disable
+
 		#region Type Information
+
+		/// <summary>
+		/// Instance Type
+		/// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
+		public override Type InstanceType
+		{
+			get
+			{
+				return LateBindingApiWrapperType;
+			}
+		}
 
         private static Type _type;
 
@@ -28,7 +38,6 @@ namespace NetOffice.OWC10Api
             {
                 if (null == _type)
                     _type = typeof(IAddinClient);
-                    
                 return _type;
             }
         }
@@ -81,7 +90,7 @@ namespace NetOffice.OWC10Api
 		{
 		}
 		
-		/// <param name="progId">registered ProgID</param>
+		/// <param name="progId">registered progID</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public IAddinClient(string progId) : base(progId)
 		{
@@ -97,41 +106,39 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
-		/// 
 		/// </summary>
 		/// <param name="vardisp">object vardisp</param>
-		[SupportByVersionAttribute("OWC10", 1)]
+		[SupportByVersion("OWC10", 1)]
 		public void GrantAddinHost(object vardisp)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(vardisp);
-			Invoker.Method(this, "GrantAddinHost", paramsArray);
+			 Factory.ExecuteMethod(this, "GrantAddinHost", vardisp);
 		}
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("OWC10", 1)]
+		[SupportByVersion("OWC10", 1)]
 		public void RemoveAddinHost()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "RemoveAddinHost", paramsArray);
+			 Factory.ExecuteMethod(this, "RemoveAddinHost");
 		}
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
-		/// 
 		/// </summary>
 		/// <param name="dispid">Int32 dispid</param>
-		/// <param name="semiCalced">bool SemiCalced</param>
-		[SupportByVersionAttribute("OWC10", 1)]
+		/// <param name="semiCalced">bool semiCalced</param>
+		[SupportByVersion("OWC10", 1)]
 		public void IsSemiCalced(Int32 dispid, bool semiCalced)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(dispid, semiCalced);
-			Invoker.Method(this, "IsSemiCalced", paramsArray);
+			 Factory.ExecuteMethod(this, "IsSemiCalced", dispid, semiCalced);
 		}
 
 		#endregion
+
 		#pragma warning restore
 	}
 }
+
+
+

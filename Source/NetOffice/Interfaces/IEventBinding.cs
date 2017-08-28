@@ -1,5 +1,8 @@
 ﻿using System;
+using NetRuntimeSystem = System;
 using System.ComponentModel;
+using NetOffice.Attributes;
+
 namespace NetOffice
 {
     /// <summary>
@@ -56,3 +59,5 @@ namespace NetOffice
         void DisposeEventBridge();
     }
 }
+
+

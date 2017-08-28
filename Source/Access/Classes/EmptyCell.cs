@@ -1,12 +1,10 @@
 ﻿using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
-using NetOffice;
-using NetOffice.Misc;
+using NetOffice.Attributes;
 
 namespace NetOffice.AccessApi
 {
-
 	#region Delegates
 
 	#pragma warning disable
@@ -14,22 +12,24 @@ namespace NetOffice.AccessApi
 
 	#endregion
 
-	///<summary>
+	/// <summary>
 	/// CoClass EmptyCell 
 	/// SupportByVersion Access, 14,15,16
-	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194884.aspx
-	///</summary>
-	[SupportByVersionAttribute("Access", 14,15,16)]
-	[EntityTypeAttribute(EntityType.IsCoClass)]
-	public class EmptyCell : _EmptyCell,IEventBinding
+	/// </summary>
+	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194884.aspx </remarks>
+	[SupportByVersion("Access", 14,15,16)]
+	[EntityType(EntityType.IsCoClass)]
+    [EventSink(typeof(Events.DispEmptyCellEvents_SinkHelper))]
+    public class EmptyCell : _EmptyCell, IEventBinding
 	{
 		#pragma warning disable
+
 		#region Fields
 		
 		private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
 		private string _activeSinkId;
 		private NetRuntimeSystem.Type _thisType;
-		DispEmptyCellEvents_SinkHelper _dispEmptyCellEvents_SinkHelper;
+		private Events.DispEmptyCellEvents_SinkHelper _dispEmptyCellEvents_SinkHelper;
 	
 		#endregion
 
@@ -38,6 +38,7 @@ namespace NetOffice.AccessApi
         /// <summary>
         /// Instance Type
         /// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
         public override Type InstanceType
         {
             get
@@ -104,17 +105,17 @@ namespace NetOffice.AccessApi
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of EmptyCell 
-        ///</summary>		
+        /// </summary>		
 		public EmptyCell():base("Access.EmptyCell")
 		{
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of EmptyCell
-        ///</summary>
+        /// </summary>
         ///<param name="progId">registered ProgID</param>
 		public EmptyCell(string progId):base(progId)
 		{
@@ -124,46 +125,6 @@ namespace NetOffice.AccessApi
 		#endregion
 
 		#region Static CoClass Methods
-
-		/// <summary>
-        /// Returns all running Access.EmptyCell objects from the environment/system
-        /// </summary>
-        /// <returns>an Access.EmptyCell array</returns>
-		public static NetOffice.AccessApi.EmptyCell[] GetActiveInstances()
-		{		
-			IDisposableEnumeration proxyList = NetOffice.ProxyService.GetActiveInstances("Access","EmptyCell");
-			NetRuntimeSystem.Collections.Generic.List<NetOffice.AccessApi.EmptyCell> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.AccessApi.EmptyCell>();
-			foreach(object proxy in proxyList)
-				resultList.Add( new NetOffice.AccessApi.EmptyCell(null, proxy) );
-			return resultList.ToArray();
-		}
-
-		/// <summary>
-        /// Returns a running Access.EmptyCell object from the environment/system.
-        /// </summary>
-        /// <returns>an Access.EmptyCell object or null</returns>
-		public static NetOffice.AccessApi.EmptyCell GetActiveInstance()
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Access","EmptyCell", false);
-			if(null != proxy)
-				return new NetOffice.AccessApi.EmptyCell(null, proxy);
-			else
-				return null;
-		}
-
-		/// <summary>
-        /// Returns a running Access.EmptyCell object from the environment/system. 
-        /// </summary>
-	    /// <param name="throwOnError">throw an exception if no object was found</param>
-        /// <returns>an Access.EmptyCell object or null</returns>
-		public static NetOffice.AccessApi.EmptyCell GetActiveInstance(bool throwOnError)
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Access","EmptyCell", throwOnError);
-			if(null != proxy)
-				return new NetOffice.AccessApi.EmptyCell(null, proxy);
-			else
-				return null;
-		}
 		#endregion
 
 		#region Events
@@ -185,12 +146,12 @@ namespace NetOffice.AccessApi
 				return;
 	
             if (null == _activeSinkId)
-				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, DispEmptyCellEvents_SinkHelper.Id);
+				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, Events.DispEmptyCellEvents_SinkHelper.Id);
 
 
-			if(DispEmptyCellEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
+			if(Events.DispEmptyCellEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
 			{
-				_dispEmptyCellEvents_SinkHelper = new DispEmptyCellEvents_SinkHelper(this, _connectPoint);
+				_dispEmptyCellEvents_SinkHelper = new Events.DispEmptyCellEvents_SinkHelper(this, _connectPoint);
 				return;
 			} 
         }
@@ -332,3 +293,4 @@ namespace NetOffice.AccessApi
 		#pragma warning restore
 	}
 }
+

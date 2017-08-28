@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Text;
 using System.Windows.Forms;
 using NetOffice;
+using NetOffice.Attributes;
 using Excel = NetOffice.ExcelApi;
 using Office = NetOffice.OfficeApi;
 //using Point = NetOffice.PowerPointApi;
@@ -23,8 +24,17 @@ namespace ClientApplication
         public Form1()
         {
             InitializeComponent();
-            //new RunWord01().Run();
-            new RunExcel02().Run();
+
+            try
+            {
+                //new RunExcel01().Run();
+                new RunWord01().Run();
+                ////new RunExcel02().Run();
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message);
+            }
         }
 
         private void PerformanceTrace_Alert(PerformanceTrace sender, PerformanceTrace.PerformanceAlertEventArgs args)

@@ -1,23 +1,33 @@
 ﻿using System;
 using NetRuntimeSystem = System;
-using System.Runtime.InteropServices;
 using System.ComponentModel;
-using System.Runtime.CompilerServices;
-using System.Reflection;
-using System.Collections.Generic;
-using NetOffice;
+using NetOffice.Attributes;
+
 namespace NetOffice.OWC10Api
 {
-	///<summary>
+	/// <summary>
 	/// Interface IOfflineInfo 
 	/// SupportByVersion OWC10, 1
-	///</summary>
-	[SupportByVersionAttribute("OWC10", 1)]
-	[EntityTypeAttribute(EntityType.IsInterface)]
-	public class IOfflineInfo : COMObject
+	/// </summary>
+	[SupportByVersion("OWC10", 1)]
+	[EntityType(EntityType.IsInterface)]
+ 	public class IOfflineInfo : COMObject
 	{
 		#pragma warning disable
+
 		#region Type Information
+
+		/// <summary>
+		/// Instance Type
+		/// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
+		public override Type InstanceType
+		{
+			get
+			{
+				return LateBindingApiWrapperType;
+			}
+		}
 
         private static Type _type;
 
@@ -28,7 +38,6 @@ namespace NetOffice.OWC10Api
             {
                 if (null == _type)
                     _type = typeof(IOfflineInfo);
-                    
                 return _type;
             }
         }
@@ -81,7 +90,7 @@ namespace NetOffice.OWC10Api
 		{
 		}
 		
-		/// <param name="progId">registered ProgID</param>
+		/// <param name="progId">registered progID</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public IOfflineInfo(string progId) : base(progId)
 		{
@@ -97,64 +106,56 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
-		/// 
 		/// </summary>
 		/// <param name="pwzUrl">string pwzUrl</param>
 		/// <param name="pwzServerFilter">string pwzServerFilter</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("OWC10", 1)]
+		[SupportByVersion("OWC10", 1)]
 		public Int32 PutServerFilter(string pwzUrl, string pwzServerFilter)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(pwzUrl, pwzServerFilter);
-			object returnItem = Invoker.MethodReturn(this, "PutServerFilter", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return Factory.ExecuteInt32MethodGet(this, "PutServerFilter", pwzUrl, pwzServerFilter);
 		}
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
-		/// 
 		/// </summary>
 		/// <param name="pwzUrl">string pwzUrl</param>
 		/// <param name="pwzServerFilter">string pwzServerFilter</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("OWC10", 1)]
+		[SupportByVersion("OWC10", 1)]
 		public Int32 GetServerFilter(string pwzUrl, string pwzServerFilter)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(pwzUrl, pwzServerFilter);
-			object returnItem = Invoker.MethodReturn(this, "GetServerFilter", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return Factory.ExecuteInt32MethodGet(this, "GetServerFilter", pwzUrl, pwzServerFilter);
 		}
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
-		/// 
 		/// </summary>
 		/// <param name="pwzUrl">string pwzUrl</param>
 		/// <param name="pfSubscribed">Int32 pfSubscribed</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("OWC10", 1)]
+		[SupportByVersion("OWC10", 1)]
 		public Int32 GetIsPageSubscribed(string pwzUrl, Int32 pfSubscribed)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(pwzUrl, pfSubscribed);
-			object returnItem = Invoker.MethodReturn(this, "GetIsPageSubscribed", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return Factory.ExecuteInt32MethodGet(this, "GetIsPageSubscribed", pwzUrl, pfSubscribed);
 		}
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
-		/// 
 		/// </summary>
 		/// <param name="pbstrPath">string pbstrPath</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("OWC10", 1)]
+		[SupportByVersion("OWC10", 1)]
 		public Int32 GetOfflineXMLFileLocation(string pbstrPath)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(pbstrPath);
-			object returnItem = Invoker.MethodReturn(this, "GetOfflineXMLFileLocation", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return Factory.ExecuteInt32MethodGet(this, "GetOfflineXMLFileLocation", pbstrPath);
 		}
 
 		#endregion
+
 		#pragma warning restore
 	}
 }
+
+
+

@@ -1,12 +1,10 @@
 ﻿using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
-using NetOffice;
-using NetOffice.Misc;
+using NetOffice.Attributes;
 
 namespace NetOffice.AccessApi
 {
-
 	#region Delegates
 
 	#pragma warning disable
@@ -14,23 +12,25 @@ namespace NetOffice.AccessApi
 
 	#endregion
 
-	///<summary>
+	/// <summary>
 	/// CoClass PageBreak 
 	/// SupportByVersion Access, 9,10,11,12,14,15,16
-	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff844738.aspx
-	///</summary>
-	[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
-	[EntityTypeAttribute(EntityType.IsCoClass)]
-	public class PageBreak : _PageBreak,IEventBinding
+	/// </summary>
+	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff844738.aspx </remarks>
+	[SupportByVersion("Access", 9,10,11,12,14,15,16)]
+	[EntityType(EntityType.IsCoClass)]
+    [EventSink(typeof(Events._PageBreakEvents_SinkHelper), typeof(Events.DispPageBreakEvents_SinkHelper))]
+    public class PageBreak : _PageBreak, IEventBinding
 	{
 		#pragma warning disable
+
 		#region Fields
 		
 		private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
 		private string _activeSinkId;
 		private NetRuntimeSystem.Type _thisType;
-		_PageBreakEvents_SinkHelper __PageBreakEvents_SinkHelper;
-		DispPageBreakEvents_SinkHelper _dispPageBreakEvents_SinkHelper;
+		private Events._PageBreakEvents_SinkHelper __PageBreakEvents_SinkHelper;
+		private Events.DispPageBreakEvents_SinkHelper _dispPageBreakEvents_SinkHelper;
 	
 		#endregion
 
@@ -39,6 +39,7 @@ namespace NetOffice.AccessApi
         /// <summary>
         /// Instance Type
         /// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
         public override Type InstanceType
         {
             get
@@ -105,17 +106,17 @@ namespace NetOffice.AccessApi
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of PageBreak 
-        ///</summary>		
+        /// </summary>		
 		public PageBreak():base("Access.PageBreak")
 		{
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of PageBreak
-        ///</summary>
+        /// </summary>
         ///<param name="progId">registered ProgID</param>
 		public PageBreak(string progId):base(progId)
 		{
@@ -125,46 +126,6 @@ namespace NetOffice.AccessApi
 		#endregion
 
 		#region Static CoClass Methods
-
-		/// <summary>
-        /// Returns all running Access.PageBreak objects from the environment/system
-        /// </summary>
-        /// <returns>an Access.PageBreak array</returns>
-		public static NetOffice.AccessApi.PageBreak[] GetActiveInstances()
-		{		
-			IDisposableEnumeration proxyList = NetOffice.ProxyService.GetActiveInstances("Access","PageBreak");
-			NetRuntimeSystem.Collections.Generic.List<NetOffice.AccessApi.PageBreak> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.AccessApi.PageBreak>();
-			foreach(object proxy in proxyList)
-				resultList.Add( new NetOffice.AccessApi.PageBreak(null, proxy) );
-			return resultList.ToArray();
-		}
-
-		/// <summary>
-        /// Returns a running Access.PageBreak object from the environment/system.
-        /// </summary>
-        /// <returns>an Access.PageBreak object or null</returns>
-		public static NetOffice.AccessApi.PageBreak GetActiveInstance()
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Access","PageBreak", false);
-			if(null != proxy)
-				return new NetOffice.AccessApi.PageBreak(null, proxy);
-			else
-				return null;
-		}
-
-		/// <summary>
-        /// Returns a running Access.PageBreak object from the environment/system. 
-        /// </summary>
-	    /// <param name="throwOnError">throw an exception if no object was found</param>
-        /// <returns>an Access.PageBreak object or null</returns>
-		public static NetOffice.AccessApi.PageBreak GetActiveInstance(bool throwOnError)
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Access","PageBreak", throwOnError);
-			if(null != proxy)
-				return new NetOffice.AccessApi.PageBreak(null, proxy);
-			else
-				return null;
-		}
 		#endregion
 
 		#region Events
@@ -186,18 +147,18 @@ namespace NetOffice.AccessApi
 				return;
 	
             if (null == _activeSinkId)
-				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, _PageBreakEvents_SinkHelper.Id,DispPageBreakEvents_SinkHelper.Id);
+				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, Events._PageBreakEvents_SinkHelper.Id, Events.DispPageBreakEvents_SinkHelper.Id);
 
 
-			if(_PageBreakEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
+			if(Events._PageBreakEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
 			{
-				__PageBreakEvents_SinkHelper = new _PageBreakEvents_SinkHelper(this, _connectPoint);
+				__PageBreakEvents_SinkHelper = new Events._PageBreakEvents_SinkHelper(this, _connectPoint);
 				return;
 			}
 
-			if(DispPageBreakEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
+			if(Events.DispPageBreakEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
 			{
-				_dispPageBreakEvents_SinkHelper = new DispPageBreakEvents_SinkHelper(this, _connectPoint);
+				_dispPageBreakEvents_SinkHelper = new Events.DispPageBreakEvents_SinkHelper(this, _connectPoint);
 				return;
 			} 
         }
@@ -344,3 +305,4 @@ namespace NetOffice.AccessApi
 		#pragma warning restore
 	}
 }
+

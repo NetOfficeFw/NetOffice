@@ -1,12 +1,10 @@
 ﻿using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
-using NetOffice;
-using NetOffice.Misc;
+using NetOffice.Attributes;
 
 namespace NetOffice.DAOApi
 {
-
 	#region Delegates
 
 	#pragma warning disable
@@ -14,15 +12,16 @@ namespace NetOffice.DAOApi
 
 	#endregion
 
-	///<summary>
+	/// <summary>
 	/// CoClass Index 
 	/// SupportByVersion DAO, 3.6,12.0
-	///</summary>
-	[SupportByVersionAttribute("DAO", 3.6,12.0)]
-	[EntityTypeAttribute(EntityType.IsCoClass)]
-	public class Index : _Index
+	/// </summary>
+	[SupportByVersion("DAO", 3.6,12.0)]
+	[EntityType(EntityType.IsCoClass)]
+ 	public class Index : _Index
 	{
 		#pragma warning disable
+
 		#region Fields
 		
 		private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
@@ -36,6 +35,7 @@ namespace NetOffice.DAOApi
         /// <summary>
         /// Instance Type
         /// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
         public override Type InstanceType
         {
             get
@@ -102,17 +102,17 @@ namespace NetOffice.DAOApi
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of Index 
-        ///</summary>		
+        /// </summary>		
 		public Index():base("DAO.Index")
 		{
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of Index
-        ///</summary>
+        /// </summary>
         ///<param name="progId">registered ProgID</param>
 		public Index(string progId):base(progId)
 		{
@@ -122,46 +122,6 @@ namespace NetOffice.DAOApi
 		#endregion
 
 		#region Static CoClass Methods
-
-		/// <summary>
-        /// Returns all running DAO.Index objects from the environment/system
-        /// </summary>
-        /// <returns>an DAO.Index array</returns>
-		public static NetOffice.DAOApi.Index[] GetActiveInstances()
-		{		
-			IDisposableEnumeration proxyList = NetOffice.ProxyService.GetActiveInstances("DAO","Index");
-			NetRuntimeSystem.Collections.Generic.List<NetOffice.DAOApi.Index> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.DAOApi.Index>();
-			foreach(object proxy in proxyList)
-				resultList.Add( new NetOffice.DAOApi.Index(null, proxy) );
-			return resultList.ToArray();
-		}
-
-		/// <summary>
-        /// Returns a running DAO.Index object from the environment/system.
-        /// </summary>
-        /// <returns>an DAO.Index object or null</returns>
-		public static NetOffice.DAOApi.Index GetActiveInstance()
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("DAO","Index", false);
-			if(null != proxy)
-				return new NetOffice.DAOApi.Index(null, proxy);
-			else
-				return null;
-		}
-
-		/// <summary>
-        /// Returns a running DAO.Index object from the environment/system. 
-        /// </summary>
-	    /// <param name="throwOnError">throw an exception if no object was found</param>
-        /// <returns>an DAO.Index object or null</returns>
-		public static NetOffice.DAOApi.Index GetActiveInstance(bool throwOnError)
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("DAO","Index", throwOnError);
-			if(null != proxy)
-				return new NetOffice.DAOApi.Index(null, proxy);
-			else
-				return null;
-		}
 		#endregion
 
 		#region Events
@@ -320,3 +280,4 @@ namespace NetOffice.DAOApi
 		#pragma warning restore
 	}
 }
+

@@ -1,24 +1,35 @@
-﻿using System;
-using NetRuntimeSystem = System;
-using System.Runtime.InteropServices;
-using System.Runtime.CompilerServices;
-using System.ComponentModel;
-using System.Reflection;
+﻿using System.Collections;
 using System.Collections.Generic;
-using System.Collections;
-using NetOffice;
+using System;
+using NetRuntimeSystem = System;
+using System.ComponentModel;
+using NetOffice.Attributes;
+
 namespace NetOffice.PublisherApi
 {
-	///<summary>
+	/// <summary>
 	/// DispatchInterface WebNavigationBarSets 
 	/// SupportByVersion Publisher, 14,15,16
-	///</summary>
-	[SupportByVersionAttribute("Publisher", 14,15,16)]
-	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
-	public class WebNavigationBarSets : COMObject ,IEnumerable<NetOffice.PublisherApi.WebNavigationBarSet>
+	/// </summary>
+	[SupportByVersion("Publisher", 14,15,16)]
+	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Method, "Item")]
+	public class WebNavigationBarSets : COMObject , IEnumerable<NetOffice.PublisherApi.WebNavigationBarSet>
 	{
 		#pragma warning disable
+
 		#region Type Information
+
+		/// <summary>
+		/// Instance Type
+		/// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
+		public override Type InstanceType
+		{
+			get
+			{
+				return LateBindingApiWrapperType;
+			}
+		}
 
         private static Type _type;
 
@@ -29,7 +40,6 @@ namespace NetOffice.PublisherApi
             {
                 if (null == _type)
                     _type = typeof(WebNavigationBarSets);
-                    
                 return _type;
             }
         }
@@ -82,7 +92,7 @@ namespace NetOffice.PublisherApi
 		{
 		}
 		
-		/// <param name="progId">registered ProgID</param>
+		/// <param name="progId">registered progID</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public WebNavigationBarSets(string progId) : base(progId)
 		{
@@ -96,15 +106,12 @@ namespace NetOffice.PublisherApi
 		/// SupportByVersion Publisher 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		[SupportByVersion("Publisher", 14,15,16)]
 		public NetOffice.PublisherApi.Application Application
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				NetOffice.PublisherApi.Application newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.PublisherApi.Application.LateBindingApiWrapperType) as NetOffice.PublisherApi.Application;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.PublisherApi.Application>(this, "Application", NetOffice.PublisherApi.Application.LateBindingApiWrapperType);
 			}
 		}
 
@@ -113,15 +120,12 @@ namespace NetOffice.PublisherApi
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		[SupportByVersion("Publisher", 14,15,16), ProxyResult]
 		public object Parent
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Parent", paramsArray);
-				ICOMObject newObject = Factory.CreateObjectFromComProxy(this,returnItem);
-				return newObject;
+				return Factory.ExecuteReferencePropertyGet(this, "Parent");
 			}
 		}
 
@@ -129,14 +133,12 @@ namespace NetOffice.PublisherApi
 		/// SupportByVersion Publisher 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		[SupportByVersion("Publisher", 14,15,16)]
 		public Int32 Count
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Count", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "Count");
 			}
 		}
 
@@ -146,67 +148,51 @@ namespace NetOffice.PublisherApi
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="index">object Index</param>
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
-		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
+		/// <param name="index">object index</param>
+		[SupportByVersion("Publisher", 14,15,16)]
+		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
 		public NetOffice.PublisherApi.WebNavigationBarSet this[object index]
 		{
 			get
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(index);
-				object returnItem = Invoker.MethodReturn(this, "Item", paramsArray);
-				NetOffice.PublisherApi.WebNavigationBarSet newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PublisherApi.WebNavigationBarSet.LateBindingApiWrapperType) as NetOffice.PublisherApi.WebNavigationBarSet;
-				return newObject;
+				return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PublisherApi.WebNavigationBarSet>(this, "Item", NetOffice.PublisherApi.WebNavigationBarSet.LateBindingApiWrapperType, index);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="name">string Name</param>
+		/// <param name="name">string name</param>
 		/// <param name="design">optional NetOffice.PublisherApi.Enums.PbWizardNavBarDesign Design = 1</param>
 		/// <param name="autoUpdate">optional bool AutoUpdate = true</param>
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		[SupportByVersion("Publisher", 14,15,16)]
 		public NetOffice.PublisherApi.WebNavigationBarSet AddSet(string name, object design, object autoUpdate)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(name, design, autoUpdate);
-			object returnItem = Invoker.MethodReturn(this, "AddSet", paramsArray);
-			NetOffice.PublisherApi.WebNavigationBarSet newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PublisherApi.WebNavigationBarSet.LateBindingApiWrapperType) as NetOffice.PublisherApi.WebNavigationBarSet;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PublisherApi.WebNavigationBarSet>(this, "AddSet", NetOffice.PublisherApi.WebNavigationBarSet.LateBindingApiWrapperType, name, design, autoUpdate);
 		}
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="name">string Name</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		/// <param name="name">string name</param>
+		[CustomMethod]
+		[SupportByVersion("Publisher", 14,15,16)]
 		public NetOffice.PublisherApi.WebNavigationBarSet AddSet(string name)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(name);
-			object returnItem = Invoker.MethodReturn(this, "AddSet", paramsArray);
-			NetOffice.PublisherApi.WebNavigationBarSet newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PublisherApi.WebNavigationBarSet.LateBindingApiWrapperType) as NetOffice.PublisherApi.WebNavigationBarSet;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PublisherApi.WebNavigationBarSet>(this, "AddSet", NetOffice.PublisherApi.WebNavigationBarSet.LateBindingApiWrapperType, name);
 		}
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="name">string Name</param>
+		/// <param name="name">string name</param>
 		/// <param name="design">optional NetOffice.PublisherApi.Enums.PbWizardNavBarDesign Design = 1</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Publisher", 14,15,16)]
 		public NetOffice.PublisherApi.WebNavigationBarSet AddSet(string name, object design)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(name, design);
-			object returnItem = Invoker.MethodReturn(this, "AddSet", paramsArray);
-			NetOffice.PublisherApi.WebNavigationBarSet newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PublisherApi.WebNavigationBarSet.LateBindingApiWrapperType) as NetOffice.PublisherApi.WebNavigationBarSet;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PublisherApi.WebNavigationBarSet>(this, "AddSet", NetOffice.PublisherApi.WebNavigationBarSet.LateBindingApiWrapperType, name, design);
 		}
 
 		#endregion
@@ -214,9 +200,9 @@ namespace NetOffice.PublisherApi
        #region IEnumerable<NetOffice.PublisherApi.WebNavigationBarSet> Member
         
         /// <summary>
-		/// SupportByVersionAttribute Publisher, 14,15,16
+		/// SupportByVersion Publisher, 14,15,16
 		/// </summary>
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		[SupportByVersion("Publisher", 14,15,16)]
        public IEnumerator<NetOffice.PublisherApi.WebNavigationBarSet> GetEnumerator()  
        {
            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
@@ -229,15 +215,19 @@ namespace NetOffice.PublisherApi
 		#region IEnumerable Members
        
 		/// <summary>
-		/// SupportByVersionAttribute Publisher, 14,15,16
+		/// SupportByVersion Publisher, 14,15,16
 		/// </summary>
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		[SupportByVersion("Publisher", 14,15,16)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
 			return NetOffice.Utils.GetProxyEnumeratorAsProperty(this);
 		}
 
 		#endregion
+
 		#pragma warning restore
 	}
 }
+
+
+

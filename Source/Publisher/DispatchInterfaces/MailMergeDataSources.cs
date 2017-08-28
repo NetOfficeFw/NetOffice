@@ -1,24 +1,35 @@
-﻿using System;
-using NetRuntimeSystem = System;
-using System.Runtime.InteropServices;
-using System.Runtime.CompilerServices;
-using System.ComponentModel;
-using System.Reflection;
+﻿using System.Collections;
 using System.Collections.Generic;
-using System.Collections;
-using NetOffice;
+using System;
+using NetRuntimeSystem = System;
+using System.ComponentModel;
+using NetOffice.Attributes;
+
 namespace NetOffice.PublisherApi
 {
-	///<summary>
+	/// <summary>
 	/// DispatchInterface MailMergeDataSources 
 	/// SupportByVersion Publisher, 14,15,16
-	///</summary>
-	[SupportByVersionAttribute("Publisher", 14,15,16)]
-	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
-	public class MailMergeDataSources : NetOffice.OfficeApi._IMsoDispObj ,IEnumerable<NetOffice.PublisherApi.MailMergeDataSource>
+	/// </summary>
+	[SupportByVersion("Publisher", 14,15,16)]
+	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Custom), HasIndexProperty(IndexInvoke.Method, "Item")]
+	public class MailMergeDataSources : NetOffice.OfficeApi._IMsoDispObj , IEnumerable<NetOffice.PublisherApi.MailMergeDataSource>
 	{
 		#pragma warning disable
+
 		#region Type Information
+
+		/// <summary>
+		/// Instance Type
+		/// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
+		public override Type InstanceType
+		{
+			get
+			{
+				return LateBindingApiWrapperType;
+			}
+		}
 
         private static Type _type;
 
@@ -29,7 +40,6 @@ namespace NetOffice.PublisherApi
             {
                 if (null == _type)
                     _type = typeof(MailMergeDataSources);
-                    
                 return _type;
             }
         }
@@ -82,7 +92,7 @@ namespace NetOffice.PublisherApi
 		{
 		}
 		
-		/// <param name="progId">registered ProgID</param>
+		/// <param name="progId">registered progID</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public MailMergeDataSources(string progId) : base(progId)
 		{
@@ -96,14 +106,12 @@ namespace NetOffice.PublisherApi
 		/// SupportByVersion Publisher 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		[SupportByVersion("Publisher", 14,15,16)]
 		public Int32 Count
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Count", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "Count");
 			}
 		}
 
@@ -112,15 +120,12 @@ namespace NetOffice.PublisherApi
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		[SupportByVersion("Publisher", 14,15,16), ProxyResult]
 		public object Parent
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Parent", paramsArray);
-				ICOMObject newObject = Factory.CreateObjectFromComProxy(this,returnItem);
-				return newObject;
+				return Factory.ExecuteReferencePropertyGet(this, "Parent");
 			}
 		}
 
@@ -130,19 +135,15 @@ namespace NetOffice.PublisherApi
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
-		/// 
 		/// </summary>
 		/// <param name="varIndex">object varIndex</param>
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
-		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
+		[SupportByVersion("Publisher", 14,15,16)]
+		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
 		public NetOffice.PublisherApi.MailMergeDataSource this[object varIndex]
 		{
 			get
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(varIndex);
-				object returnItem = Invoker.MethodReturn(this, "Item", paramsArray);
-				NetOffice.PublisherApi.MailMergeDataSource newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PublisherApi.MailMergeDataSource.LateBindingApiWrapperType) as NetOffice.PublisherApi.MailMergeDataSource;
-				return newObject;
+				return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PublisherApi.MailMergeDataSource>(this, "Item", NetOffice.PublisherApi.MailMergeDataSource.LateBindingApiWrapperType, varIndex);
 			}
 		}
 
@@ -150,10 +151,10 @@ namespace NetOffice.PublisherApi
        #region IEnumerable<NetOffice.PublisherApi.MailMergeDataSource> Member
         
         /// <summary>
-		/// SupportByVersionAttribute Publisher, 14,15,16
+		/// SupportByVersion Publisher, 14,15,16
 		/// This is a custom enumerator from NetOffice
 		/// </summary>
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		[SupportByVersion("Publisher", 14,15,16)]
         [CustomEnumerator]
        public IEnumerator<NetOffice.PublisherApi.MailMergeDataSource> GetEnumerator()  
        {
@@ -167,10 +168,10 @@ namespace NetOffice.PublisherApi
        #region IEnumerable Members
         
        /// <summary>
-		/// SupportByVersionAttribute Publisher, 14,15,16
+		/// SupportByVersion Publisher, 14,15,16
 		/// This is a custom enumerator from NetOffice
 		/// </summary>
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		[SupportByVersion("Publisher", 14,15,16)]
         [CustomEnumerator]
         IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
        {
@@ -184,6 +185,9 @@ namespace NetOffice.PublisherApi
        }
 
        #endregion
+
        		#pragma warning restore
 	}
 }
+
+

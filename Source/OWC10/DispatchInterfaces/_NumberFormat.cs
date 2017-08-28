@@ -1,23 +1,33 @@
 ﻿using System;
 using NetRuntimeSystem = System;
-using System.Runtime.InteropServices;
-using System.Runtime.CompilerServices;
 using System.ComponentModel;
-using System.Reflection;
-using System.Collections.Generic;
-using NetOffice;
+using NetOffice.Attributes;
+
 namespace NetOffice.OWC10Api
 {
-	///<summary>
+	/// <summary>
 	/// DispatchInterface _NumberFormat 
 	/// SupportByVersion OWC10, 1
-	///</summary>
-	[SupportByVersionAttribute("OWC10", 1)]
-	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
-	public class _NumberFormat : COMObject
+	/// </summary>
+	[SupportByVersion("OWC10", 1)]
+	[EntityType(EntityType.IsDispatchInterface)]
+ 	public class _NumberFormat : COMObject
 	{
 		#pragma warning disable
+
 		#region Type Information
+
+		/// <summary>
+		/// Instance Type
+		/// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
+		public override Type InstanceType
+		{
+			get
+			{
+				return LateBindingApiWrapperType;
+			}
+		}
 
         private static Type _type;
 
@@ -28,7 +38,6 @@ namespace NetOffice.OWC10Api
             {
                 if (null == _type)
                     _type = typeof(_NumberFormat);
-                    
                 return _type;
             }
         }
@@ -81,7 +90,7 @@ namespace NetOffice.OWC10Api
 		{
 		}
 		
-		/// <param name="progId">registered ProgID</param>
+		/// <param name="progId">registered progID</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public _NumberFormat(string progId) : base(progId)
 		{
@@ -95,19 +104,16 @@ namespace NetOffice.OWC10Api
 		/// SupportByVersion OWC10 1
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("OWC10", 1)]
+		[SupportByVersion("OWC10", 1)]
 		public string Name
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Name", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "Name");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "Name", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "Name", value);
 			}
 		}
 
@@ -115,19 +121,16 @@ namespace NetOffice.OWC10Api
 		/// SupportByVersion OWC10 1
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("OWC10", 1)]
+		[SupportByVersion("OWC10", 1)]
 		public string Code
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Code", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "Code");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "Code", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "Code", value);
 			}
 		}
 
@@ -135,24 +138,22 @@ namespace NetOffice.OWC10Api
 		/// SupportByVersion OWC10 1
 		/// Get
 		/// </summary>
-		/// <param name="value">object Value</param>
-		/// <param name="count">optional Int32 Count</param>
-		[SupportByVersionAttribute("OWC10", 1)]
+		/// <param name="value">object value</param>
+		/// <param name="count">optional Int32 count</param>
+		[SupportByVersion("OWC10", 1)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public string get_Format(object value, object count)
-		{		
-			object[] paramsArray = Invoker.ValidateParamsArray(value, count);
-			object returnItem = Invoker.PropertyGet(this, "Format", paramsArray);
-			return NetRuntimeSystem.Convert.ToString(returnItem);
+		{
+			return Factory.ExecuteStringPropertyGet(this, "Format", value, count);
 		}
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
 		/// Alias for get_Format
 		/// </summary>
-		/// <param name="value">object Value</param>
-		/// <param name="count">optional Int32 Count</param>
-		[SupportByVersionAttribute("OWC10", 1)]
+		/// <param name="value">object value</param>
+		/// <param name="count">optional Int32 count</param>
+		[SupportByVersion("OWC10", 1), Redirect("get_Format")]
 		public string Format(object value, object count)
 		{
 			return get_Format(value, count);
@@ -162,22 +163,20 @@ namespace NetOffice.OWC10Api
 		/// SupportByVersion OWC10 1
 		/// Get
 		/// </summary>
-		/// <param name="value">object Value</param>
-		[SupportByVersionAttribute("OWC10", 1)]
+		/// <param name="value">object value</param>
+		[SupportByVersion("OWC10", 1)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public string get_Format(object value)
-		{		
-			object[] paramsArray = Invoker.ValidateParamsArray(value);
-			object returnItem = Invoker.PropertyGet(this, "Format", paramsArray);
-			return NetRuntimeSystem.Convert.ToString(returnItem);
+		{
+			return Factory.ExecuteStringPropertyGet(this, "Format", value);
 		}
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
 		/// Alias for get_Format
 		/// </summary>
-		/// <param name="value">object Value</param>
-		[SupportByVersionAttribute("OWC10", 1)]
+		/// <param name="value">object value</param>
+		[SupportByVersion("OWC10", 1), Redirect("get_Format")]
 		public string Format(object value)
 		{
 			return get_Format(value);
@@ -188,14 +187,12 @@ namespace NetOffice.OWC10Api
 		/// Get
 		/// </summary>
 		/// <param name="hDC">Int32 hDC</param>
-		/// <param name="value">object Value</param>
-		[SupportByVersionAttribute("OWC10", 1)]
+		/// <param name="value">object value</param>
+		[SupportByVersion("OWC10", 1)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public Int32 get_Width(Int32 hDC, object value)
-		{		
-			object[] paramsArray = Invoker.ValidateParamsArray(hDC, value);
-			object returnItem = Invoker.PropertyGet(this, "Width", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+		{
+			return Factory.ExecuteInt32PropertyGet(this, "Width", hDC, value);
 		}
 
 		/// <summary>
@@ -203,8 +200,8 @@ namespace NetOffice.OWC10Api
 		/// Alias for get_Width
 		/// </summary>
 		/// <param name="hDC">Int32 hDC</param>
-		/// <param name="value">object Value</param>
-		[SupportByVersionAttribute("OWC10", 1)]
+		/// <param name="value">object value</param>
+		[SupportByVersion("OWC10", 1), Redirect("get_Width")]
 		public Int32 Width(Int32 hDC, object value)
 		{
 			return get_Width(hDC, value);
@@ -215,14 +212,12 @@ namespace NetOffice.OWC10Api
 		/// Get
 		/// </summary>
 		/// <param name="hDC">Int32 hDC</param>
-		/// <param name="value">object Value</param>
-		[SupportByVersionAttribute("OWC10", 1)]
+		/// <param name="value">object value</param>
+		[SupportByVersion("OWC10", 1)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public Int32 get_Height(Int32 hDC, object value)
-		{		
-			object[] paramsArray = Invoker.ValidateParamsArray(hDC, value);
-			object returnItem = Invoker.PropertyGet(this, "Height", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+		{
+			return Factory.ExecuteInt32PropertyGet(this, "Height", hDC, value);
 		}
 
 		/// <summary>
@@ -230,8 +225,8 @@ namespace NetOffice.OWC10Api
 		/// Alias for get_Height
 		/// </summary>
 		/// <param name="hDC">Int32 hDC</param>
-		/// <param name="value">object Value</param>
-		[SupportByVersionAttribute("OWC10", 1)]
+		/// <param name="value">object value</param>
+		[SupportByVersion("OWC10", 1), Redirect("get_Height")]
 		public Int32 Height(Int32 hDC, object value)
 		{
 			return get_Height(hDC, value);
@@ -243,7 +238,6 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
-		/// 
 		/// </summary>
 		/// <param name="hDC">Int32 hDC</param>
 		/// <param name="hDCInfo">Int32 hDCInfo</param>
@@ -251,21 +245,24 @@ namespace NetOffice.OWC10Api
 		/// <param name="cy1">Int32 cy1</param>
 		/// <param name="cx2">Int32 cx2</param>
 		/// <param name="cy2">Int32 cy2</param>
-		/// <param name="left">Int32 Left</param>
-		/// <param name="top">Int32 Top</param>
-		/// <param name="width">Int32 Width</param>
-		/// <param name="height">Int32 Height</param>
-		/// <param name="horizontalAlignment">Int32 HorizontalAlignment</param>
-		/// <param name="verticalAlignment">Int32 VerticalAlignment</param>
-		/// <param name="value">object Value</param>
-		[SupportByVersionAttribute("OWC10", 1)]
+		/// <param name="left">Int32 left</param>
+		/// <param name="top">Int32 top</param>
+		/// <param name="width">Int32 width</param>
+		/// <param name="height">Int32 height</param>
+		/// <param name="horizontalAlignment">Int32 horizontalAlignment</param>
+		/// <param name="verticalAlignment">Int32 verticalAlignment</param>
+		/// <param name="value">object value</param>
+		[SupportByVersion("OWC10", 1)]
 		public void Render(Int32 hDC, Int32 hDCInfo, Int32 cx1, Int32 cy1, Int32 cx2, Int32 cy2, Int32 left, Int32 top, Int32 width, Int32 height, Int32 horizontalAlignment, Int32 verticalAlignment, object value)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(hDC, hDCInfo, cx1, cy1, cx2, cy2, left, top, width, height, horizontalAlignment, verticalAlignment, value);
-			Invoker.Method(this, "Render", paramsArray);
+			 Factory.ExecuteMethod(this, "Render", new object[]{ hDC, hDCInfo, cx1, cy1, cx2, cy2, left, top, width, height, horizontalAlignment, verticalAlignment, value });
 		}
 
 		#endregion
+
 		#pragma warning restore
 	}
 }
+
+
+

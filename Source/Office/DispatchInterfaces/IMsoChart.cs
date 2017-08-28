@@ -1,17 +1,16 @@
-﻿using System;
+﻿using System.Reflection;
+using System;
 using NetRuntimeSystem = System;
-using System.Runtime.InteropServices;
-using System.Runtime.CompilerServices;
 using System.ComponentModel;
-using System.Reflection;
-using System.Collections.Generic;
-using NetOffice;
+using NetOffice.Attributes;
+
 namespace NetOffice.OfficeApi
 {
-	///<summary>
+	/// <summary>
 	/// IMsoChart
-	///</summary>
-	public class IMsoChart_ : COMObject
+	/// </summary>
+	[SyntaxBypass]
+ 	public class IMsoChart_ : COMObject
 	{
 		#region Construction
 
@@ -62,7 +61,7 @@ namespace NetOffice.OfficeApi
 		{
 		}
 		
-		/// <param name="progId">registered ProgID</param>
+		/// <param name="progId">registered progID</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public IMsoChart_(string progId) : base(progId)
 		{
@@ -79,14 +78,11 @@ namespace NetOffice.OfficeApi
 		/// </summary>
 		/// <param name="pvarIndex">optional object pvarIndex</param>
 		/// <param name="varIgallery">optional object varIgallery</param>
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		[SupportByVersion("Office", 12,14,15,16), ProxyResult]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public object get_ChartGroups(object pvarIndex, object varIgallery)
-		{		
-			object[] paramsArray = Invoker.ValidateParamsArray(pvarIndex, varIgallery);
-			object returnItem = Invoker.PropertyGet(this, "ChartGroups", paramsArray);
-			ICOMObject newObject = Factory.CreateObjectFromComProxy(this,returnItem);
-			return newObject;
+		{
+			return Factory.ExecuteReferencePropertyGet(this, "ChartGroups", pvarIndex, varIgallery);
 		}
 
 		/// <summary>
@@ -96,7 +92,7 @@ namespace NetOffice.OfficeApi
 		/// </summary>
 		/// <param name="pvarIndex">optional object pvarIndex</param>
 		/// <param name="varIgallery">optional object varIgallery</param>
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		[SupportByVersion("Office", 12,14,15,16), ProxyResult, Redirect("get_ChartGroups")]
 		public object ChartGroups(object pvarIndex, object varIgallery)
 		{
 			return get_ChartGroups(pvarIndex, varIgallery);
@@ -108,14 +104,11 @@ namespace NetOffice.OfficeApi
 		/// Unknown COM Proxy
 		/// </summary>
 		/// <param name="pvarIndex">optional object pvarIndex</param>
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		[SupportByVersion("Office", 12,14,15,16), ProxyResult]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public object get_ChartGroups(object pvarIndex)
-		{		
-			object[] paramsArray = Invoker.ValidateParamsArray(pvarIndex);
-			object returnItem = Invoker.PropertyGet(this, "ChartGroups", paramsArray);
-			ICOMObject newObject = Factory.CreateObjectFromComProxy(this,returnItem);
-			return newObject;
+		{
+			return Factory.ExecuteReferencePropertyGet(this, "ChartGroups", pvarIndex);
 		}
 
 		/// <summary>
@@ -124,7 +117,7 @@ namespace NetOffice.OfficeApi
 		/// Unknown COM Proxy
 		/// </summary>
 		/// <param name="pvarIndex">optional object pvarIndex</param>
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		[SupportByVersion("Office", 12,14,15,16), ProxyResult, Redirect("get_ChartGroups")]
 		public object ChartGroups(object pvarIndex)
 		{
 			return get_ChartGroups(pvarIndex);
@@ -135,22 +128,12 @@ namespace NetOffice.OfficeApi
 		/// Get/Set
 		/// </summary>
 		/// <param name="axisType">optional object axisType</param>
-		/// <param name="axisGroup">optional object AxisGroup</param>
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		/// <param name="axisGroup">optional object axisGroup</param>
+		[SupportByVersion("Office", 12,14,15,16)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public object get_HasAxis(object axisType, object axisGroup)
-		{		
-			object[] paramsArray = Invoker.ValidateParamsArray(axisType, axisGroup);
-			object returnItem = Invoker.PropertyGet(this, "HasAxis", paramsArray);
-			if((null != returnItem) && (returnItem is MarshalByRefObject))
-			{
-				ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
-				return newObject;
-			}
-			else
-			{
-				return  returnItem;
-			}
+		{
+			return Factory.ExecuteVariantPropertyGet(this, "HasAxis", axisType, axisGroup);
 		}
 
         /// <summary>
@@ -158,14 +141,13 @@ namespace NetOffice.OfficeApi
         /// Get/Set
         /// </summary>
         /// <param name="axisType">optional object axisType</param>
-        /// <param name="axisGroup">optional object AxisGroup</param>
+        /// <param name="axisGroup">optional object axisGroup</param>
         /// <param name="value">optional object value</param>
-        [SupportByVersionAttribute("Office", 12,14,15,16)]
+        [SupportByVersion("Office", 12,14,15,16)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public void set_HasAxis(object axisType, object axisGroup, object value)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(axisType, axisGroup);
-			Invoker.PropertySet(this, "HasAxis", paramsArray, value);
+			Factory.ExecutePropertySet(this, "HasAxis", axisType, axisGroup, value);
 		}
 
 		/// <summary>
@@ -173,8 +155,8 @@ namespace NetOffice.OfficeApi
 		/// Alias for get_HasAxis
 		/// </summary>
 		/// <param name="axisType">optional object axisType</param>
-		/// <param name="axisGroup">optional object AxisGroup</param>
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		/// <param name="axisGroup">optional object axisGroup</param>
+		[SupportByVersion("Office", 12,14,15,16), Redirect("get_HasAxis")]
 		public object HasAxis(object axisType, object axisGroup)
 		{
 			return get_HasAxis(axisType, axisGroup);
@@ -185,21 +167,11 @@ namespace NetOffice.OfficeApi
 		/// Get/Set
 		/// </summary>
 		/// <param name="axisType">optional object axisType</param>
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		[SupportByVersion("Office", 12,14,15,16)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public object get_HasAxis(object axisType)
-		{		
-			object[] paramsArray = Invoker.ValidateParamsArray(axisType);
-			object returnItem = Invoker.PropertyGet(this, "HasAxis", paramsArray);
-			if((null != returnItem) && (returnItem is MarshalByRefObject))
-			{
-				ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
-				return newObject;
-			}
-			else
-			{
-				return  returnItem;
-			}
+		{
+			return Factory.ExecuteVariantPropertyGet(this, "HasAxis", axisType);
 		}
 
         /// <summary>
@@ -208,12 +180,11 @@ namespace NetOffice.OfficeApi
         /// </summary>
         /// <param name="axisType">optional object axisType</param>
         /// <param name="value">optional object value</param>
-        [SupportByVersionAttribute("Office", 12,14,15,16)]
+        [SupportByVersion("Office", 12,14,15,16)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public void set_HasAxis(object axisType, object value)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(axisType);
-			Invoker.PropertySet(this, "HasAxis", paramsArray, value);
+			Factory.ExecutePropertySet(this, "HasAxis", axisType, value);
 		}
 
 		/// <summary>
@@ -221,7 +192,7 @@ namespace NetOffice.OfficeApi
 		/// Alias for get_HasAxis
 		/// </summary>
 		/// <param name="axisType">optional object axisType</param>
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		[SupportByVersion("Office", 12,14,15,16), Redirect("get_HasAxis")]
 		public object HasAxis(object axisType)
 		{
 			return get_HasAxis(axisType);
@@ -232,14 +203,11 @@ namespace NetOffice.OfficeApi
 		/// Get
 		/// </summary>
 		/// <param name="fBackWall">optional bool fBackWall</param>
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		[SupportByVersion("Office", 12,14,15,16)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public NetOffice.OfficeApi.IMsoWalls get_Walls(object fBackWall)
-		{		
-			object[] paramsArray = Invoker.ValidateParamsArray(fBackWall);
-			object returnItem = Invoker.PropertyGet(this, "Walls", paramsArray);
-			NetOffice.OfficeApi.IMsoWalls newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.IMsoWalls.LateBindingApiWrapperType) as NetOffice.OfficeApi.IMsoWalls;
-			return newObject;
+		{
+			return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.IMsoWalls>(this, "Walls", NetOffice.OfficeApi.IMsoWalls.LateBindingApiWrapperType, fBackWall);
 		}
 
 		/// <summary>
@@ -247,7 +215,7 @@ namespace NetOffice.OfficeApi
 		/// Alias for get_Walls
 		/// </summary>
 		/// <param name="fBackWall">optional bool fBackWall</param>
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		[SupportByVersion("Office", 12,14,15,16), Redirect("get_Walls")]
 		public NetOffice.OfficeApi.IMsoWalls Walls(object fBackWall)
 		{
 			return get_Walls(fBackWall);
@@ -261,16 +229,29 @@ namespace NetOffice.OfficeApi
 
 	}
 
-	///<summary>
+	/// <summary>
 	/// DispatchInterface IMsoChart 
 	/// SupportByVersion Office, 12,14,15,16
-	///</summary>
-	[SupportByVersionAttribute("Office", 12,14,15,16)]
-	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
-	public class IMsoChart : IMsoChart_
+	/// </summary>
+	[SupportByVersion("Office", 12,14,15,16)]
+	[EntityType(EntityType.IsDispatchInterface)]
+ 	public class IMsoChart : IMsoChart_
 	{
 		#pragma warning disable
+
 		#region Type Information
+
+		/// <summary>
+		/// Instance Type
+		/// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
+		public override Type InstanceType
+		{
+			get
+			{
+				return LateBindingApiWrapperType;
+			}
+		}
 
         private static Type _type;
 
@@ -281,7 +262,6 @@ namespace NetOffice.OfficeApi
             {
                 if (null == _type)
                     _type = typeof(IMsoChart);
-                    
                 return _type;
             }
         }
@@ -334,7 +314,7 @@ namespace NetOffice.OfficeApi
 		{
 		}
 		
-		/// <param name="progId">registered ProgID</param>
+		/// <param name="progId">registered progID</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public IMsoChart(string progId) : base(progId)
 		{
@@ -349,15 +329,12 @@ namespace NetOffice.OfficeApi
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		[SupportByVersion("Office", 12,14,15,16), ProxyResult]
 		public object Parent
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Parent", paramsArray);
-				ICOMObject newObject = Factory.CreateObjectFromComProxy(this,returnItem);
-				return newObject;
+				return Factory.ExecuteReferencePropertyGet(this, "Parent");
 			}
 		}
 
@@ -365,19 +342,16 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		[SupportByVersion("Office", 12,14,15,16)]
 		public bool HasTitle
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "HasTitle", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "HasTitle");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "HasTitle", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "HasTitle", value);
 			}
 		}
 
@@ -385,15 +359,12 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		[SupportByVersion("Office", 12,14,15,16)]
 		public NetOffice.OfficeApi.IMsoChartTitle ChartTitle
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "ChartTitle", paramsArray);
-				NetOffice.OfficeApi.IMsoChartTitle newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OfficeApi.IMsoChartTitle;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.IMsoChartTitle>(this, "ChartTitle", NetOffice.OfficeApi.IMsoChartTitle.LateBindingApiWrapperType);
 			}
 		}
 
@@ -401,19 +372,16 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		[SupportByVersion("Office", 12,14,15,16)]
 		public Int32 DepthPercent
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "DepthPercent", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "DepthPercent");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "DepthPercent", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "DepthPercent", value);
 			}
 		}
 
@@ -421,19 +389,16 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		[SupportByVersion("Office", 12,14,15,16)]
 		public Int32 Elevation
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Elevation", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "Elevation");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "Elevation", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "Elevation", value);
 			}
 		}
 
@@ -441,19 +406,16 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		[SupportByVersion("Office", 12,14,15,16)]
 		public Int32 GapDepth
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "GapDepth", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "GapDepth");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "GapDepth", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "GapDepth", value);
 			}
 		}
 
@@ -461,19 +423,16 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		[SupportByVersion("Office", 12,14,15,16)]
 		public Int32 HeightPercent
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "HeightPercent", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "HeightPercent");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "HeightPercent", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "HeightPercent", value);
 			}
 		}
 
@@ -481,19 +440,16 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		[SupportByVersion("Office", 12,14,15,16)]
 		public Int32 Perspective
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Perspective", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "Perspective");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "Perspective", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "Perspective", value);
 			}
 		}
 
@@ -501,27 +457,16 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		[SupportByVersion("Office", 12,14,15,16)]
 		public object RightAngleAxes
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "RightAngleAxes", paramsArray);
-				if((null != returnItem) && (returnItem is MarshalByRefObject))
-				{
-					ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
-					return newObject;
-				}
-				else
-				{
-					return  returnItem;
-				}
+				return Factory.ExecuteVariantPropertyGet(this, "RightAngleAxes");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "RightAngleAxes", paramsArray);
+				Factory.ExecuteVariantPropertySet(this, "RightAngleAxes", value);
 			}
 		}
 
@@ -529,27 +474,16 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		[SupportByVersion("Office", 12,14,15,16)]
 		public object Rotation
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Rotation", paramsArray);
-				if((null != returnItem) && (returnItem is MarshalByRefObject))
-				{
-					ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
-					return newObject;
-				}
-				else
-				{
-					return  returnItem;
-				}
+				return Factory.ExecuteVariantPropertyGet(this, "Rotation");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "Rotation", paramsArray);
+				Factory.ExecuteVariantPropertySet(this, "Rotation", value);
 			}
 		}
 
@@ -557,20 +491,16 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		[SupportByVersion("Office", 12,14,15,16)]
 		public NetOffice.OfficeApi.Enums.XlDisplayBlanksAs DisplayBlanksAs
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "DisplayBlanksAs", paramsArray);
-				int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-				return (NetOffice.OfficeApi.Enums.XlDisplayBlanksAs)intReturnItem;
+				return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.XlDisplayBlanksAs>(this, "DisplayBlanksAs");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "DisplayBlanksAs", paramsArray);
+				Factory.ExecuteEnumPropertySet(this, "DisplayBlanksAs", value);
 			}
 		}
 
@@ -578,19 +508,16 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		[SupportByVersion("Office", 12,14,15,16)]
 		public bool ProtectData
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "ProtectData", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "ProtectData");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "ProtectData", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "ProtectData", value);
 			}
 		}
 
@@ -598,19 +525,16 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		[SupportByVersion("Office", 12,14,15,16)]
 		public bool ProtectFormatting
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "ProtectFormatting", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "ProtectFormatting");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "ProtectFormatting", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "ProtectFormatting", value);
 			}
 		}
 
@@ -618,19 +542,16 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		[SupportByVersion("Office", 12,14,15,16)]
 		public bool ProtectGoalSeek
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "ProtectGoalSeek", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "ProtectGoalSeek");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "ProtectGoalSeek", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "ProtectGoalSeek", value);
 			}
 		}
 
@@ -638,19 +559,16 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		[SupportByVersion("Office", 12,14,15,16)]
 		public bool ProtectSelection
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "ProtectSelection", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "ProtectSelection");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "ProtectSelection", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "ProtectSelection", value);
 			}
 		}
 
@@ -658,19 +576,16 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		[SupportByVersion("Office", 12,14,15,16)]
 		public bool ProtectChartObjects
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "ProtectChartObjects", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "ProtectChartObjects");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "ProtectChartObjects", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "ProtectChartObjects", value);
 			}
 		}
 
@@ -679,15 +594,12 @@ namespace NetOffice.OfficeApi
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		[SupportByVersion("Office", 12,14,15,16), ProxyResult]
 		public object ChartGroups
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "ChartGroups", paramsArray);
-				ICOMObject newObject = Factory.CreateObjectFromComProxy(this,returnItem);
-				return newObject;
+				return Factory.ExecuteReferencePropertyGet(this, "ChartGroups");
 			}
 		}
 
@@ -695,20 +607,17 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		[SupportByVersion("Office", 12,14,15,16)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public Int32 SubType
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "SubType", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "SubType");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "SubType", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "SubType", value);
 			}
 		}
 
@@ -716,20 +625,17 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		[SupportByVersion("Office", 12,14,15,16)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public Int32 Type
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Type", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "Type");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "Type", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "Type", value);
 			}
 		}
 
@@ -737,16 +643,13 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		[SupportByVersion("Office", 12,14,15,16)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public NetOffice.OfficeApi.IMsoCorners Corners
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Corners", paramsArray);
-				NetOffice.OfficeApi.IMsoCorners newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.IMsoCorners.LateBindingApiWrapperType) as NetOffice.OfficeApi.IMsoCorners;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.IMsoCorners>(this, "Corners", NetOffice.OfficeApi.IMsoCorners.LateBindingApiWrapperType);
 			}
 		}
 
@@ -754,20 +657,16 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		[SupportByVersion("Office", 12,14,15,16)]
 		public NetOffice.OfficeApi.Enums.XlChartType ChartType
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "ChartType", paramsArray);
-				int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-				return (NetOffice.OfficeApi.Enums.XlChartType)intReturnItem;
+				return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.XlChartType>(this, "ChartType");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "ChartType", paramsArray);
+				Factory.ExecuteEnumPropertySet(this, "ChartType", value);
 			}
 		}
 
@@ -775,19 +674,16 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		[SupportByVersion("Office", 12,14,15,16)]
 		public bool HasDataTable
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "HasDataTable", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "HasDataTable");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "HasDataTable", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "HasDataTable", value);
 			}
 		}
 
@@ -795,20 +691,16 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		[SupportByVersion("Office", 12,14,15,16)]
 		public NetOffice.OfficeApi.Enums.XlRowCol PlotBy
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "PlotBy", paramsArray);
-				int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-				return (NetOffice.OfficeApi.Enums.XlRowCol)intReturnItem;
+				return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.XlRowCol>(this, "PlotBy");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "PlotBy", paramsArray);
+				Factory.ExecuteEnumPropertySet(this, "PlotBy", value);
 			}
 		}
 
@@ -816,19 +708,16 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		[SupportByVersion("Office", 12,14,15,16)]
 		public bool HasLegend
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "HasLegend", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "HasLegend");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "HasLegend", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "HasLegend", value);
 			}
 		}
 
@@ -836,15 +725,12 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		[SupportByVersion("Office", 12,14,15,16)]
 		public NetOffice.OfficeApi.IMsoLegend Legend
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Legend", paramsArray);
-				NetOffice.OfficeApi.IMsoLegend newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.IMsoLegend.LateBindingApiWrapperType) as NetOffice.OfficeApi.IMsoLegend;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.IMsoLegend>(this, "Legend", NetOffice.OfficeApi.IMsoLegend.LateBindingApiWrapperType);
 			}
 		}
 
@@ -852,27 +738,16 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		[SupportByVersion("Office", 12,14,15,16)]
 		public object HasAxis
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "HasAxis", paramsArray);
-				if((null != returnItem) && (returnItem is MarshalByRefObject))
-				{
-					ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
-					return newObject;
-				}
-				else
-				{
-					return  returnItem;
-				}
+				return Factory.ExecuteVariantPropertyGet(this, "HasAxis");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "HasAxis", paramsArray);
+				Factory.ExecuteVariantPropertySet(this, "HasAxis", value);
 			}
 		}
 
@@ -880,15 +755,12 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		[SupportByVersion("Office", 12,14,15,16)]
 		public NetOffice.OfficeApi.IMsoWalls Walls
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Walls", paramsArray);
-				NetOffice.OfficeApi.IMsoWalls newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.IMsoWalls.LateBindingApiWrapperType) as NetOffice.OfficeApi.IMsoWalls;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.IMsoWalls>(this, "Walls", NetOffice.OfficeApi.IMsoWalls.LateBindingApiWrapperType);
 			}
 		}
 
@@ -896,15 +768,12 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		[SupportByVersion("Office", 12,14,15,16)]
 		public NetOffice.OfficeApi.IMsoFloor Floor
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Floor", paramsArray);
-				NetOffice.OfficeApi.IMsoFloor newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.IMsoFloor.LateBindingApiWrapperType) as NetOffice.OfficeApi.IMsoFloor;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.IMsoFloor>(this, "Floor", NetOffice.OfficeApi.IMsoFloor.LateBindingApiWrapperType);
 			}
 		}
 
@@ -912,15 +781,12 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		[SupportByVersion("Office", 12,14,15,16)]
 		public NetOffice.OfficeApi.IMsoPlotArea PlotArea
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "PlotArea", paramsArray);
-				NetOffice.OfficeApi.IMsoPlotArea newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.IMsoPlotArea.LateBindingApiWrapperType) as NetOffice.OfficeApi.IMsoPlotArea;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.IMsoPlotArea>(this, "PlotArea", NetOffice.OfficeApi.IMsoPlotArea.LateBindingApiWrapperType);
 			}
 		}
 
@@ -928,19 +794,16 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		[SupportByVersion("Office", 12,14,15,16)]
 		public bool PlotVisibleOnly
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "PlotVisibleOnly", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "PlotVisibleOnly");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "PlotVisibleOnly", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "PlotVisibleOnly", value);
 			}
 		}
 
@@ -948,15 +811,12 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		[SupportByVersion("Office", 12,14,15,16)]
 		public NetOffice.OfficeApi.IMsoChartArea ChartArea
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "ChartArea", paramsArray);
-				NetOffice.OfficeApi.IMsoChartArea newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.IMsoChartArea.LateBindingApiWrapperType) as NetOffice.OfficeApi.IMsoChartArea;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.IMsoChartArea>(this, "ChartArea", NetOffice.OfficeApi.IMsoChartArea.LateBindingApiWrapperType);
 			}
 		}
 
@@ -964,19 +824,16 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		[SupportByVersion("Office", 12,14,15,16)]
 		public bool AutoScaling
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "AutoScaling", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "AutoScaling");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "AutoScaling", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "AutoScaling", value);
 			}
 		}
 
@@ -984,15 +841,12 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		[SupportByVersion("Office", 12,14,15,16)]
 		public NetOffice.OfficeApi.IMsoDataTable DataTable
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "DataTable", paramsArray);
-				NetOffice.OfficeApi.IMsoDataTable newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.IMsoDataTable.LateBindingApiWrapperType) as NetOffice.OfficeApi.IMsoDataTable;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.IMsoDataTable>(this, "DataTable", NetOffice.OfficeApi.IMsoDataTable.LateBindingApiWrapperType);
 			}
 		}
 
@@ -1000,20 +854,16 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		[SupportByVersion("Office", 12,14,15,16)]
 		public NetOffice.OfficeApi.Enums.XlBarShape BarShape
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "BarShape", paramsArray);
-				int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-				return (NetOffice.OfficeApi.Enums.XlBarShape)intReturnItem;
+				return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.XlBarShape>(this, "BarShape");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "BarShape", paramsArray);
+				Factory.ExecuteEnumPropertySet(this, "BarShape", value);
 			}
 		}
 
@@ -1021,15 +871,12 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		[SupportByVersion("Office", 12,14,15,16)]
 		public NetOffice.OfficeApi.IMsoWalls SideWall
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "SideWall", paramsArray);
-				NetOffice.OfficeApi.IMsoWalls newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.IMsoWalls.LateBindingApiWrapperType) as NetOffice.OfficeApi.IMsoWalls;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.IMsoWalls>(this, "SideWall", NetOffice.OfficeApi.IMsoWalls.LateBindingApiWrapperType);
 			}
 		}
 
@@ -1037,15 +884,12 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		[SupportByVersion("Office", 12,14,15,16)]
 		public NetOffice.OfficeApi.IMsoWalls BackWall
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "BackWall", paramsArray);
-				NetOffice.OfficeApi.IMsoWalls newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.IMsoWalls.LateBindingApiWrapperType) as NetOffice.OfficeApi.IMsoWalls;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.IMsoWalls>(this, "BackWall", NetOffice.OfficeApi.IMsoWalls.LateBindingApiWrapperType);
 			}
 		}
 
@@ -1053,27 +897,16 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		[SupportByVersion("Office", 12,14,15,16)]
 		public object ChartStyle
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "ChartStyle", paramsArray);
-				if((null != returnItem) && (returnItem is MarshalByRefObject))
-				{
-					ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
-					return newObject;
-				}
-				else
-				{
-					return  returnItem;
-				}
+				return Factory.ExecuteVariantPropertyGet(this, "ChartStyle");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "ChartStyle", paramsArray);
+				Factory.ExecuteVariantPropertySet(this, "ChartStyle", value);
 			}
 		}
 
@@ -1082,15 +915,12 @@ namespace NetOffice.OfficeApi
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		[SupportByVersion("Office", 12,14,15,16), ProxyResult]
 		public object PivotLayout
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "PivotLayout", paramsArray);
-				ICOMObject newObject = Factory.CreateObjectFromComProxy(this,returnItem);
-				return newObject;
+				return Factory.ExecuteReferencePropertyGet(this, "PivotLayout");
 			}
 		}
 
@@ -1098,20 +928,17 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		[SupportByVersion("Office", 12,14,15,16)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public bool HasPivotFields
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "HasPivotFields", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "HasPivotFields");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "HasPivotFields", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "HasPivotFields", value);
 			}
 		}
 
@@ -1119,19 +946,16 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		[SupportByVersion("Office", 12,14,15,16)]
 		public bool ShowDataLabelsOverMaximum
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "ShowDataLabelsOverMaximum", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "ShowDataLabelsOverMaximum");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "ShowDataLabelsOverMaximum", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "ShowDataLabelsOverMaximum", value);
 			}
 		}
 
@@ -1140,15 +964,12 @@ namespace NetOffice.OfficeApi
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		[SupportByVersion("Office", 12,14,15,16), ProxyResult]
 		public object Selection
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Selection", paramsArray);
-				ICOMObject newObject = Factory.CreateObjectFromComProxy(this,returnItem);
-				return newObject;
+				return Factory.ExecuteReferencePropertyGet(this, "Selection");
 			}
 		}
 
@@ -1156,15 +977,12 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		[SupportByVersion("Office", 12,14,15,16)]
 		public NetOffice.OfficeApi.IMsoChartData ChartData
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "ChartData", paramsArray);
-				NetOffice.OfficeApi.IMsoChartData newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.IMsoChartData.LateBindingApiWrapperType) as NetOffice.OfficeApi.IMsoChartData;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.IMsoChartData>(this, "ChartData", NetOffice.OfficeApi.IMsoChartData.LateBindingApiWrapperType);
 			}
 		}
 
@@ -1172,15 +990,12 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		[SupportByVersion("Office", 12,14,15,16)]
 		public NetOffice.OfficeApi.IMsoChartFormat Format
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Format", paramsArray);
-				NetOffice.OfficeApi.IMsoChartFormat newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.IMsoChartFormat.LateBindingApiWrapperType) as NetOffice.OfficeApi.IMsoChartFormat;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.IMsoChartFormat>(this, "Format", NetOffice.OfficeApi.IMsoChartFormat.LateBindingApiWrapperType);
 			}
 		}
 
@@ -1188,15 +1003,12 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		[SupportByVersion("Office", 12,14,15,16)]
 		public NetOffice.OfficeApi.Shapes Shapes
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Shapes", paramsArray);
-				NetOffice.OfficeApi.Shapes newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.Shapes.LateBindingApiWrapperType) as NetOffice.OfficeApi.Shapes;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.Shapes>(this, "Shapes", NetOffice.OfficeApi.Shapes.LateBindingApiWrapperType);
 			}
 		}
 
@@ -1205,15 +1017,12 @@ namespace NetOffice.OfficeApi
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("Office", 14,15,16)]
+		[SupportByVersion("Office", 14,15,16), ProxyResult]
 		public object Application
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				ICOMObject newObject = Factory.CreateObjectFromComProxy(this,returnItem);
-				return newObject;
+				return Factory.ExecuteReferencePropertyGet(this, "Application");
 			}
 		}
 
@@ -1221,14 +1030,12 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Office", 14,15,16)]
+		[SupportByVersion("Office", 14,15,16)]
 		public Int32 Creator
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Creator", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "Creator");
 			}
 		}
 
@@ -1236,16 +1043,13 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Office", 14,15,16)]
+		[SupportByVersion("Office", 14,15,16)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public NetOffice.OfficeApi.IMsoChartGroup Area3DGroup
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Area3DGroup", paramsArray);
-				NetOffice.OfficeApi.IMsoChartGroup newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.IMsoChartGroup.LateBindingApiWrapperType) as NetOffice.OfficeApi.IMsoChartGroup;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.IMsoChartGroup>(this, "Area3DGroup", NetOffice.OfficeApi.IMsoChartGroup.LateBindingApiWrapperType);
 			}
 		}
 
@@ -1253,16 +1057,13 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Office", 14,15,16)]
+		[SupportByVersion("Office", 14,15,16)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public NetOffice.OfficeApi.IMsoChartGroup Bar3DGroup
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Bar3DGroup", paramsArray);
-				NetOffice.OfficeApi.IMsoChartGroup newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.IMsoChartGroup.LateBindingApiWrapperType) as NetOffice.OfficeApi.IMsoChartGroup;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.IMsoChartGroup>(this, "Bar3DGroup", NetOffice.OfficeApi.IMsoChartGroup.LateBindingApiWrapperType);
 			}
 		}
 
@@ -1270,16 +1071,13 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Office", 14,15,16)]
+		[SupportByVersion("Office", 14,15,16)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public NetOffice.OfficeApi.IMsoChartGroup Column3DGroup
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Column3DGroup", paramsArray);
-				NetOffice.OfficeApi.IMsoChartGroup newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.IMsoChartGroup.LateBindingApiWrapperType) as NetOffice.OfficeApi.IMsoChartGroup;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.IMsoChartGroup>(this, "Column3DGroup", NetOffice.OfficeApi.IMsoChartGroup.LateBindingApiWrapperType);
 			}
 		}
 
@@ -1287,16 +1085,13 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Office", 14,15,16)]
+		[SupportByVersion("Office", 14,15,16)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public NetOffice.OfficeApi.IMsoChartGroup Line3DGroup
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Line3DGroup", paramsArray);
-				NetOffice.OfficeApi.IMsoChartGroup newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.IMsoChartGroup.LateBindingApiWrapperType) as NetOffice.OfficeApi.IMsoChartGroup;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.IMsoChartGroup>(this, "Line3DGroup", NetOffice.OfficeApi.IMsoChartGroup.LateBindingApiWrapperType);
 			}
 		}
 
@@ -1304,16 +1099,13 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Office", 14,15,16)]
+		[SupportByVersion("Office", 14,15,16)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public NetOffice.OfficeApi.IMsoChartGroup Pie3DGroup
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Pie3DGroup", paramsArray);
-				NetOffice.OfficeApi.IMsoChartGroup newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.IMsoChartGroup.LateBindingApiWrapperType) as NetOffice.OfficeApi.IMsoChartGroup;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.IMsoChartGroup>(this, "Pie3DGroup", NetOffice.OfficeApi.IMsoChartGroup.LateBindingApiWrapperType);
 			}
 		}
 
@@ -1321,16 +1113,13 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Office", 14,15,16)]
+		[SupportByVersion("Office", 14,15,16)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public NetOffice.OfficeApi.IMsoChartGroup SurfaceGroup
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "SurfaceGroup", paramsArray);
-				NetOffice.OfficeApi.IMsoChartGroup newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.IMsoChartGroup.LateBindingApiWrapperType) as NetOffice.OfficeApi.IMsoChartGroup;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.IMsoChartGroup>(this, "SurfaceGroup", NetOffice.OfficeApi.IMsoChartGroup.LateBindingApiWrapperType);
 			}
 		}
 
@@ -1338,19 +1127,16 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Office", 14,15,16)]
+		[SupportByVersion("Office", 14,15,16)]
 		public bool ShowReportFilterFieldButtons
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "ShowReportFilterFieldButtons", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "ShowReportFilterFieldButtons");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "ShowReportFilterFieldButtons", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "ShowReportFilterFieldButtons", value);
 			}
 		}
 
@@ -1358,19 +1144,16 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Office", 14,15,16)]
+		[SupportByVersion("Office", 14,15,16)]
 		public bool ShowLegendFieldButtons
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "ShowLegendFieldButtons", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "ShowLegendFieldButtons");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "ShowLegendFieldButtons", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "ShowLegendFieldButtons", value);
 			}
 		}
 
@@ -1378,19 +1161,16 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Office", 14,15,16)]
+		[SupportByVersion("Office", 14,15,16)]
 		public bool ShowAxisFieldButtons
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "ShowAxisFieldButtons", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "ShowAxisFieldButtons");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "ShowAxisFieldButtons", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "ShowAxisFieldButtons", value);
 			}
 		}
 
@@ -1398,19 +1178,16 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Office", 14,15,16)]
+		[SupportByVersion("Office", 14,15,16)]
 		public bool ShowValueFieldButtons
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "ShowValueFieldButtons", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "ShowValueFieldButtons");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "ShowValueFieldButtons", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "ShowValueFieldButtons", value);
 			}
 		}
 
@@ -1418,19 +1195,16 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Office", 14,15,16)]
+		[SupportByVersion("Office", 14,15,16)]
 		public bool ShowAllFieldButtons
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "ShowAllFieldButtons", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "ShowAllFieldButtons");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "ShowAllFieldButtons", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "ShowAllFieldButtons", value);
 			}
 		}
 
@@ -1438,19 +1212,16 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 15,16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Office", 15, 16)]
+		[SupportByVersion("Office", 15, 16)]
 		public bool ProtectChartSheetFormatting
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "ProtectChartSheetFormatting", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "ProtectChartSheetFormatting");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "ProtectChartSheetFormatting", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "ProtectChartSheetFormatting", value);
 			}
 		}
 
@@ -1458,20 +1229,16 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 15,16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Office", 15, 16)]
+		[SupportByVersion("Office", 15, 16)]
 		public NetOffice.OfficeApi.Enums.XlCategoryLabelLevel CategoryLabelLevel
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "CategoryLabelLevel", paramsArray);
-				int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-				return (NetOffice.OfficeApi.Enums.XlCategoryLabelLevel)intReturnItem;
+				return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.XlCategoryLabelLevel>(this, "CategoryLabelLevel");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "CategoryLabelLevel", paramsArray);
+				Factory.ExecuteEnumPropertySet(this, "CategoryLabelLevel", value);
 			}
 		}
 
@@ -1479,20 +1246,16 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 15,16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Office", 15, 16)]
+		[SupportByVersion("Office", 15, 16)]
 		public NetOffice.OfficeApi.Enums.XlSeriesNameLevel SeriesNameLevel
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "SeriesNameLevel", paramsArray);
-				int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-				return (NetOffice.OfficeApi.Enums.XlSeriesNameLevel)intReturnItem;
+				return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.XlSeriesNameLevel>(this, "SeriesNameLevel");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "SeriesNameLevel", paramsArray);
+				Factory.ExecuteEnumPropertySet(this, "SeriesNameLevel", value);
 			}
 		}
 
@@ -1500,15 +1263,13 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 15,16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Office", 15, 16)]
+		[SupportByVersion("Office", 15, 16)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public bool HasHiddenContent
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "HasHiddenContent", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "HasHiddenContent");
 			}
 		}
 
@@ -1516,27 +1277,16 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 15,16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Office", 15, 16)]
+		[SupportByVersion("Office", 15, 16)]
 		public object ChartColor
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "ChartColor", paramsArray);
-				if((null != returnItem) && (returnItem is MarshalByRefObject))
-				{
-					ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
-					return newObject;
-				}
-				else
-				{
-					return  returnItem;
-				}
+				return Factory.ExecuteVariantPropertyGet(this, "ChartColor");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "ChartColor", paramsArray);
+				Factory.ExecuteVariantPropertySet(this, "ChartColor", value);
 			}
 		}
 
@@ -1546,555 +1296,470 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="password">optional object Password</param>
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		/// <param name="password">optional object password</param>
+		[SupportByVersion("Office", 12,14,15,16)]
 		public void UnProtect(object password)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(password);
-			Invoker.Method(this, "UnProtect", paramsArray);
+			 Factory.ExecuteMethod(this, "UnProtect", password);
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15, 16
-		/// 
 		/// </summary>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Office", 12,14,15,16)]
 		public void UnProtect()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "UnProtect", paramsArray);
+			 Factory.ExecuteMethod(this, "UnProtect");
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="password">optional object Password</param>
-		/// <param name="drawingObjects">optional object DrawingObjects</param>
-		/// <param name="contents">optional object Contents</param>
-		/// <param name="scenarios">optional object Scenarios</param>
-		/// <param name="userInterfaceOnly">optional object UserInterfaceOnly</param>
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		/// <param name="password">optional object password</param>
+		/// <param name="drawingObjects">optional object drawingObjects</param>
+		/// <param name="contents">optional object contents</param>
+		/// <param name="scenarios">optional object scenarios</param>
+		/// <param name="userInterfaceOnly">optional object userInterfaceOnly</param>
+		[SupportByVersion("Office", 12,14,15,16)]
 		public void Protect(object password, object drawingObjects, object contents, object scenarios, object userInterfaceOnly)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(password, drawingObjects, contents, scenarios, userInterfaceOnly);
-			Invoker.Method(this, "Protect", paramsArray);
+			 Factory.ExecuteMethod(this, "Protect", new object[]{ password, drawingObjects, contents, scenarios, userInterfaceOnly });
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15, 16
-		/// 
 		/// </summary>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Office", 12,14,15,16)]
 		public void Protect()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "Protect", paramsArray);
+			 Factory.ExecuteMethod(this, "Protect");
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="password">optional object Password</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		/// <param name="password">optional object password</param>
+		[CustomMethod]
+		[SupportByVersion("Office", 12,14,15,16)]
 		public void Protect(object password)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(password);
-			Invoker.Method(this, "Protect", paramsArray);
+			 Factory.ExecuteMethod(this, "Protect", password);
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="password">optional object Password</param>
-		/// <param name="drawingObjects">optional object DrawingObjects</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		/// <param name="password">optional object password</param>
+		/// <param name="drawingObjects">optional object drawingObjects</param>
+		[CustomMethod]
+		[SupportByVersion("Office", 12,14,15,16)]
 		public void Protect(object password, object drawingObjects)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(password, drawingObjects);
-			Invoker.Method(this, "Protect", paramsArray);
+			 Factory.ExecuteMethod(this, "Protect", password, drawingObjects);
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="password">optional object Password</param>
-		/// <param name="drawingObjects">optional object DrawingObjects</param>
-		/// <param name="contents">optional object Contents</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		/// <param name="password">optional object password</param>
+		/// <param name="drawingObjects">optional object drawingObjects</param>
+		/// <param name="contents">optional object contents</param>
+		[CustomMethod]
+		[SupportByVersion("Office", 12,14,15,16)]
 		public void Protect(object password, object drawingObjects, object contents)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(password, drawingObjects, contents);
-			Invoker.Method(this, "Protect", paramsArray);
+			 Factory.ExecuteMethod(this, "Protect", password, drawingObjects, contents);
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="password">optional object Password</param>
-		/// <param name="drawingObjects">optional object DrawingObjects</param>
-		/// <param name="contents">optional object Contents</param>
-		/// <param name="scenarios">optional object Scenarios</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		/// <param name="password">optional object password</param>
+		/// <param name="drawingObjects">optional object drawingObjects</param>
+		/// <param name="contents">optional object contents</param>
+		/// <param name="scenarios">optional object scenarios</param>
+		[CustomMethod]
+		[SupportByVersion("Office", 12,14,15,16)]
 		public void Protect(object password, object drawingObjects, object contents, object scenarios)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(password, drawingObjects, contents, scenarios);
-			Invoker.Method(this, "Protect", paramsArray);
+			 Factory.ExecuteMethod(this, "Protect", password, drawingObjects, contents, scenarios);
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="index">optional object Index</param>
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		/// <param name="index">optional object index</param>
+		[SupportByVersion("Office", 12,14,15,16)]
 		public object SeriesCollection(object index)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(index);
-			object returnItem = Invoker.MethodReturn(this, "SeriesCollection", paramsArray);
-			object newObject = Factory.CreateObjectFromComProxy(this,returnItem);
-			return newObject;
+			return Factory.ExecuteVariantMethodGet(this, "SeriesCollection", index);
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15, 16
-		/// 
 		/// </summary>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Office", 12,14,15,16)]
 		public object SeriesCollection()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "SeriesCollection", paramsArray);
-			object newObject = Factory.CreateObjectFromComProxy(this,returnItem);
-			return newObject;
+			return Factory.ExecuteVariantMethodGet(this, "SeriesCollection");
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15, 16
-		/// 
 		/// </summary>
 		/// <param name="type">optional NetOffice.OfficeApi.Enums.XlDataLabelsType Type = 2</param>
-		/// <param name="iMsoLegendKey">optional object IMsoLegendKey</param>
-		/// <param name="autoText">optional object AutoText</param>
-		/// <param name="hasLeaderLines">optional object HasLeaderLines</param>
+		/// <param name="iMsoLegendKey">optional object iMsoLegendKey</param>
+		/// <param name="autoText">optional object autoText</param>
+		/// <param name="hasLeaderLines">optional object hasLeaderLines</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		[SupportByVersion("Office", 12,14,15,16)]
 		public void _ApplyDataLabels(object type, object iMsoLegendKey, object autoText, object hasLeaderLines)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(type, iMsoLegendKey, autoText, hasLeaderLines);
-			Invoker.Method(this, "_ApplyDataLabels", paramsArray);
+			 Factory.ExecuteMethod(this, "_ApplyDataLabels", type, iMsoLegendKey, autoText, hasLeaderLines);
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15, 16
-		/// 
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Office", 12,14,15,16)]
 		public void _ApplyDataLabels()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "_ApplyDataLabels", paramsArray);
+			 Factory.ExecuteMethod(this, "_ApplyDataLabels");
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15, 16
-		/// 
 		/// </summary>
 		/// <param name="type">optional NetOffice.OfficeApi.Enums.XlDataLabelsType Type = 2</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Office", 12,14,15,16)]
 		public void _ApplyDataLabels(object type)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(type);
-			Invoker.Method(this, "_ApplyDataLabels", paramsArray);
+			 Factory.ExecuteMethod(this, "_ApplyDataLabels", type);
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15, 16
-		/// 
 		/// </summary>
 		/// <param name="type">optional NetOffice.OfficeApi.Enums.XlDataLabelsType Type = 2</param>
-		/// <param name="iMsoLegendKey">optional object IMsoLegendKey</param>
+		/// <param name="iMsoLegendKey">optional object iMsoLegendKey</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Office", 12,14,15,16)]
 		public void _ApplyDataLabels(object type, object iMsoLegendKey)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(type, iMsoLegendKey);
-			Invoker.Method(this, "_ApplyDataLabels", paramsArray);
+			 Factory.ExecuteMethod(this, "_ApplyDataLabels", type, iMsoLegendKey);
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15, 16
-		/// 
 		/// </summary>
 		/// <param name="type">optional NetOffice.OfficeApi.Enums.XlDataLabelsType Type = 2</param>
-		/// <param name="iMsoLegendKey">optional object IMsoLegendKey</param>
-		/// <param name="autoText">optional object AutoText</param>
+		/// <param name="iMsoLegendKey">optional object iMsoLegendKey</param>
+		/// <param name="autoText">optional object autoText</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Office", 12,14,15,16)]
 		public void _ApplyDataLabels(object type, object iMsoLegendKey, object autoText)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(type, iMsoLegendKey, autoText);
-			Invoker.Method(this, "_ApplyDataLabels", paramsArray);
+			 Factory.ExecuteMethod(this, "_ApplyDataLabels", type, iMsoLegendKey, autoText);
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15, 16
-		/// 
 		/// </summary>
 		/// <param name="type">optional NetOffice.OfficeApi.Enums.XlDataLabelsType Type = 2</param>
-		/// <param name="iMsoLegendKey">optional object IMsoLegendKey</param>
-		/// <param name="autoText">optional object AutoText</param>
-		/// <param name="hasLeaderLines">optional object HasLeaderLines</param>
-		/// <param name="showSeriesName">optional object ShowSeriesName</param>
-		/// <param name="showCategoryName">optional object ShowCategoryName</param>
-		/// <param name="showValue">optional object ShowValue</param>
-		/// <param name="showPercentage">optional object ShowPercentage</param>
-		/// <param name="showBubbleSize">optional object ShowBubbleSize</param>
-		/// <param name="separator">optional object Separator</param>
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		/// <param name="iMsoLegendKey">optional object iMsoLegendKey</param>
+		/// <param name="autoText">optional object autoText</param>
+		/// <param name="hasLeaderLines">optional object hasLeaderLines</param>
+		/// <param name="showSeriesName">optional object showSeriesName</param>
+		/// <param name="showCategoryName">optional object showCategoryName</param>
+		/// <param name="showValue">optional object showValue</param>
+		/// <param name="showPercentage">optional object showPercentage</param>
+		/// <param name="showBubbleSize">optional object showBubbleSize</param>
+		/// <param name="separator">optional object separator</param>
+		[SupportByVersion("Office", 12,14,15,16)]
 		public void ApplyDataLabels(object type, object iMsoLegendKey, object autoText, object hasLeaderLines, object showSeriesName, object showCategoryName, object showValue, object showPercentage, object showBubbleSize, object separator)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(type, iMsoLegendKey, autoText, hasLeaderLines, showSeriesName, showCategoryName, showValue, showPercentage, showBubbleSize, separator);
-			Invoker.Method(this, "ApplyDataLabels", paramsArray);
+			 Factory.ExecuteMethod(this, "ApplyDataLabels", new object[]{ type, iMsoLegendKey, autoText, hasLeaderLines, showSeriesName, showCategoryName, showValue, showPercentage, showBubbleSize, separator });
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15, 16
-		/// 
 		/// </summary>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Office", 12,14,15,16)]
 		public void ApplyDataLabels()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "ApplyDataLabels", paramsArray);
+			 Factory.ExecuteMethod(this, "ApplyDataLabels");
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15, 16
-		/// 
 		/// </summary>
 		/// <param name="type">optional NetOffice.OfficeApi.Enums.XlDataLabelsType Type = 2</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Office", 12,14,15,16)]
 		public void ApplyDataLabels(object type)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(type);
-			Invoker.Method(this, "ApplyDataLabels", paramsArray);
+			 Factory.ExecuteMethod(this, "ApplyDataLabels", type);
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15, 16
-		/// 
 		/// </summary>
 		/// <param name="type">optional NetOffice.OfficeApi.Enums.XlDataLabelsType Type = 2</param>
-		/// <param name="iMsoLegendKey">optional object IMsoLegendKey</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		/// <param name="iMsoLegendKey">optional object iMsoLegendKey</param>
+		[CustomMethod]
+		[SupportByVersion("Office", 12,14,15,16)]
 		public void ApplyDataLabels(object type, object iMsoLegendKey)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(type, iMsoLegendKey);
-			Invoker.Method(this, "ApplyDataLabels", paramsArray);
+			 Factory.ExecuteMethod(this, "ApplyDataLabels", type, iMsoLegendKey);
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15, 16
-		/// 
 		/// </summary>
 		/// <param name="type">optional NetOffice.OfficeApi.Enums.XlDataLabelsType Type = 2</param>
-		/// <param name="iMsoLegendKey">optional object IMsoLegendKey</param>
-		/// <param name="autoText">optional object AutoText</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		/// <param name="iMsoLegendKey">optional object iMsoLegendKey</param>
+		/// <param name="autoText">optional object autoText</param>
+		[CustomMethod]
+		[SupportByVersion("Office", 12,14,15,16)]
 		public void ApplyDataLabels(object type, object iMsoLegendKey, object autoText)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(type, iMsoLegendKey, autoText);
-			Invoker.Method(this, "ApplyDataLabels", paramsArray);
+			 Factory.ExecuteMethod(this, "ApplyDataLabels", type, iMsoLegendKey, autoText);
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15, 16
-		/// 
 		/// </summary>
 		/// <param name="type">optional NetOffice.OfficeApi.Enums.XlDataLabelsType Type = 2</param>
-		/// <param name="iMsoLegendKey">optional object IMsoLegendKey</param>
-		/// <param name="autoText">optional object AutoText</param>
-		/// <param name="hasLeaderLines">optional object HasLeaderLines</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		/// <param name="iMsoLegendKey">optional object iMsoLegendKey</param>
+		/// <param name="autoText">optional object autoText</param>
+		/// <param name="hasLeaderLines">optional object hasLeaderLines</param>
+		[CustomMethod]
+		[SupportByVersion("Office", 12,14,15,16)]
 		public void ApplyDataLabels(object type, object iMsoLegendKey, object autoText, object hasLeaderLines)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(type, iMsoLegendKey, autoText, hasLeaderLines);
-			Invoker.Method(this, "ApplyDataLabels", paramsArray);
+			 Factory.ExecuteMethod(this, "ApplyDataLabels", type, iMsoLegendKey, autoText, hasLeaderLines);
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15, 16
-		/// 
 		/// </summary>
 		/// <param name="type">optional NetOffice.OfficeApi.Enums.XlDataLabelsType Type = 2</param>
-		/// <param name="iMsoLegendKey">optional object IMsoLegendKey</param>
-		/// <param name="autoText">optional object AutoText</param>
-		/// <param name="hasLeaderLines">optional object HasLeaderLines</param>
-		/// <param name="showSeriesName">optional object ShowSeriesName</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		/// <param name="iMsoLegendKey">optional object iMsoLegendKey</param>
+		/// <param name="autoText">optional object autoText</param>
+		/// <param name="hasLeaderLines">optional object hasLeaderLines</param>
+		/// <param name="showSeriesName">optional object showSeriesName</param>
+		[CustomMethod]
+		[SupportByVersion("Office", 12,14,15,16)]
 		public void ApplyDataLabels(object type, object iMsoLegendKey, object autoText, object hasLeaderLines, object showSeriesName)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(type, iMsoLegendKey, autoText, hasLeaderLines, showSeriesName);
-			Invoker.Method(this, "ApplyDataLabels", paramsArray);
+			 Factory.ExecuteMethod(this, "ApplyDataLabels", new object[]{ type, iMsoLegendKey, autoText, hasLeaderLines, showSeriesName });
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15, 16
-		/// 
 		/// </summary>
 		/// <param name="type">optional NetOffice.OfficeApi.Enums.XlDataLabelsType Type = 2</param>
-		/// <param name="iMsoLegendKey">optional object IMsoLegendKey</param>
-		/// <param name="autoText">optional object AutoText</param>
-		/// <param name="hasLeaderLines">optional object HasLeaderLines</param>
-		/// <param name="showSeriesName">optional object ShowSeriesName</param>
-		/// <param name="showCategoryName">optional object ShowCategoryName</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		/// <param name="iMsoLegendKey">optional object iMsoLegendKey</param>
+		/// <param name="autoText">optional object autoText</param>
+		/// <param name="hasLeaderLines">optional object hasLeaderLines</param>
+		/// <param name="showSeriesName">optional object showSeriesName</param>
+		/// <param name="showCategoryName">optional object showCategoryName</param>
+		[CustomMethod]
+		[SupportByVersion("Office", 12,14,15,16)]
 		public void ApplyDataLabels(object type, object iMsoLegendKey, object autoText, object hasLeaderLines, object showSeriesName, object showCategoryName)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(type, iMsoLegendKey, autoText, hasLeaderLines, showSeriesName, showCategoryName);
-			Invoker.Method(this, "ApplyDataLabels", paramsArray);
+			 Factory.ExecuteMethod(this, "ApplyDataLabels", new object[]{ type, iMsoLegendKey, autoText, hasLeaderLines, showSeriesName, showCategoryName });
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15, 16
-		/// 
 		/// </summary>
 		/// <param name="type">optional NetOffice.OfficeApi.Enums.XlDataLabelsType Type = 2</param>
-		/// <param name="iMsoLegendKey">optional object IMsoLegendKey</param>
-		/// <param name="autoText">optional object AutoText</param>
-		/// <param name="hasLeaderLines">optional object HasLeaderLines</param>
-		/// <param name="showSeriesName">optional object ShowSeriesName</param>
-		/// <param name="showCategoryName">optional object ShowCategoryName</param>
-		/// <param name="showValue">optional object ShowValue</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		/// <param name="iMsoLegendKey">optional object iMsoLegendKey</param>
+		/// <param name="autoText">optional object autoText</param>
+		/// <param name="hasLeaderLines">optional object hasLeaderLines</param>
+		/// <param name="showSeriesName">optional object showSeriesName</param>
+		/// <param name="showCategoryName">optional object showCategoryName</param>
+		/// <param name="showValue">optional object showValue</param>
+		[CustomMethod]
+		[SupportByVersion("Office", 12,14,15,16)]
 		public void ApplyDataLabels(object type, object iMsoLegendKey, object autoText, object hasLeaderLines, object showSeriesName, object showCategoryName, object showValue)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(type, iMsoLegendKey, autoText, hasLeaderLines, showSeriesName, showCategoryName, showValue);
-			Invoker.Method(this, "ApplyDataLabels", paramsArray);
+			 Factory.ExecuteMethod(this, "ApplyDataLabels", new object[]{ type, iMsoLegendKey, autoText, hasLeaderLines, showSeriesName, showCategoryName, showValue });
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15, 16
-		/// 
 		/// </summary>
 		/// <param name="type">optional NetOffice.OfficeApi.Enums.XlDataLabelsType Type = 2</param>
-		/// <param name="iMsoLegendKey">optional object IMsoLegendKey</param>
-		/// <param name="autoText">optional object AutoText</param>
-		/// <param name="hasLeaderLines">optional object HasLeaderLines</param>
-		/// <param name="showSeriesName">optional object ShowSeriesName</param>
-		/// <param name="showCategoryName">optional object ShowCategoryName</param>
-		/// <param name="showValue">optional object ShowValue</param>
-		/// <param name="showPercentage">optional object ShowPercentage</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		/// <param name="iMsoLegendKey">optional object iMsoLegendKey</param>
+		/// <param name="autoText">optional object autoText</param>
+		/// <param name="hasLeaderLines">optional object hasLeaderLines</param>
+		/// <param name="showSeriesName">optional object showSeriesName</param>
+		/// <param name="showCategoryName">optional object showCategoryName</param>
+		/// <param name="showValue">optional object showValue</param>
+		/// <param name="showPercentage">optional object showPercentage</param>
+		[CustomMethod]
+		[SupportByVersion("Office", 12,14,15,16)]
 		public void ApplyDataLabels(object type, object iMsoLegendKey, object autoText, object hasLeaderLines, object showSeriesName, object showCategoryName, object showValue, object showPercentage)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(type, iMsoLegendKey, autoText, hasLeaderLines, showSeriesName, showCategoryName, showValue, showPercentage);
-			Invoker.Method(this, "ApplyDataLabels", paramsArray);
+			 Factory.ExecuteMethod(this, "ApplyDataLabels", new object[]{ type, iMsoLegendKey, autoText, hasLeaderLines, showSeriesName, showCategoryName, showValue, showPercentage });
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15, 16
-		/// 
 		/// </summary>
 		/// <param name="type">optional NetOffice.OfficeApi.Enums.XlDataLabelsType Type = 2</param>
-		/// <param name="iMsoLegendKey">optional object IMsoLegendKey</param>
-		/// <param name="autoText">optional object AutoText</param>
-		/// <param name="hasLeaderLines">optional object HasLeaderLines</param>
-		/// <param name="showSeriesName">optional object ShowSeriesName</param>
-		/// <param name="showCategoryName">optional object ShowCategoryName</param>
-		/// <param name="showValue">optional object ShowValue</param>
-		/// <param name="showPercentage">optional object ShowPercentage</param>
-		/// <param name="showBubbleSize">optional object ShowBubbleSize</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		/// <param name="iMsoLegendKey">optional object iMsoLegendKey</param>
+		/// <param name="autoText">optional object autoText</param>
+		/// <param name="hasLeaderLines">optional object hasLeaderLines</param>
+		/// <param name="showSeriesName">optional object showSeriesName</param>
+		/// <param name="showCategoryName">optional object showCategoryName</param>
+		/// <param name="showValue">optional object showValue</param>
+		/// <param name="showPercentage">optional object showPercentage</param>
+		/// <param name="showBubbleSize">optional object showBubbleSize</param>
+		[CustomMethod]
+		[SupportByVersion("Office", 12,14,15,16)]
 		public void ApplyDataLabels(object type, object iMsoLegendKey, object autoText, object hasLeaderLines, object showSeriesName, object showCategoryName, object showValue, object showPercentage, object showBubbleSize)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(type, iMsoLegendKey, autoText, hasLeaderLines, showSeriesName, showCategoryName, showValue, showPercentage, showBubbleSize);
-			Invoker.Method(this, "ApplyDataLabels", paramsArray);
+			 Factory.ExecuteMethod(this, "ApplyDataLabels", new object[]{ type, iMsoLegendKey, autoText, hasLeaderLines, showSeriesName, showCategoryName, showValue, showPercentage, showBubbleSize });
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="chartType">NetOffice.OfficeApi.Enums.XlChartType ChartType</param>
-		/// <param name="typeName">optional object TypeName</param>
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		/// <param name="chartType">NetOffice.OfficeApi.Enums.XlChartType chartType</param>
+		/// <param name="typeName">optional object typeName</param>
+		[SupportByVersion("Office", 12,14,15,16)]
 		public void ApplyCustomType(NetOffice.OfficeApi.Enums.XlChartType chartType, object typeName)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(chartType, typeName);
-			Invoker.Method(this, "ApplyCustomType", paramsArray);
+			 Factory.ExecuteMethod(this, "ApplyCustomType", chartType, typeName);
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="chartType">NetOffice.OfficeApi.Enums.XlChartType ChartType</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		/// <param name="chartType">NetOffice.OfficeApi.Enums.XlChartType chartType</param>
+		[CustomMethod]
+		[SupportByVersion("Office", 12,14,15,16)]
 		public void ApplyCustomType(NetOffice.OfficeApi.Enums.XlChartType chartType)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(chartType);
-			Invoker.Method(this, "ApplyCustomType", paramsArray);
+			 Factory.ExecuteMethod(this, "ApplyCustomType", chartType);
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15, 16
-		/// 
 		/// </summary>
 		/// <param name="x">Int32 x</param>
 		/// <param name="y">Int32 y</param>
-		/// <param name="elementID">Int32 ElementID</param>
-		/// <param name="arg1">Int32 Arg1</param>
-		/// <param name="arg2">Int32 Arg2</param>
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		/// <param name="elementID">Int32 elementID</param>
+		/// <param name="arg1">Int32 arg1</param>
+		/// <param name="arg2">Int32 arg2</param>
+		[SupportByVersion("Office", 12,14,15,16)]
 		public void GetChartElement(Int32 x, Int32 y, Int32 elementID, Int32 arg1, Int32 arg2)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(x, y, elementID, arg1, arg2);
-			Invoker.Method(this, "GetChartElement", paramsArray);
+			 Factory.ExecuteMethod(this, "GetChartElement", new object[]{ x, y, elementID, arg1, arg2 });
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="source">string Source</param>
-		/// <param name="plotBy">optional object PlotBy</param>
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		/// <param name="source">string source</param>
+		/// <param name="plotBy">optional object plotBy</param>
+		[SupportByVersion("Office", 12,14,15,16)]
 		public void SetSourceData(string source, object plotBy)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(source, plotBy);
-			Invoker.Method(this, "SetSourceData", paramsArray);
+			 Factory.ExecuteMethod(this, "SetSourceData", source, plotBy);
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="source">string Source</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		/// <param name="source">string source</param>
+		[CustomMethod]
+		[SupportByVersion("Office", 12,14,15,16)]
 		public void SetSourceData(string source)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(source);
-			Invoker.Method(this, "SetSourceData", paramsArray);
+			 Factory.ExecuteMethod(this, "SetSourceData", source);
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="type">optional object Type</param>
+		/// <param name="type">optional object type</param>
 		/// <param name="axisGroup">optional NetOffice.OfficeApi.Enums.XlAxisGroup AxisGroup = 1</param>
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		[SupportByVersion("Office", 12,14,15,16)]
 		public object Axes(object type, object axisGroup)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(type, axisGroup);
-			object returnItem = Invoker.MethodReturn(this, "Axes", paramsArray);
-			object newObject = Factory.CreateObjectFromComProxy(this,returnItem);
-			return newObject;
+			return Factory.ExecuteVariantMethodGet(this, "Axes", type, axisGroup);
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15, 16
-		/// 
 		/// </summary>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Office", 12,14,15,16)]
 		public object Axes()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "Axes", paramsArray);
-			object newObject = Factory.CreateObjectFromComProxy(this,returnItem);
-			return newObject;
+			return Factory.ExecuteVariantMethodGet(this, "Axes");
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="type">optional object Type</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		/// <param name="type">optional object type</param>
+		[CustomMethod]
+		[SupportByVersion("Office", 12,14,15,16)]
 		public object Axes(object type)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(type);
-			object returnItem = Invoker.MethodReturn(this, "Axes", paramsArray);
-			object newObject = Factory.CreateObjectFromComProxy(this,returnItem);
-			return newObject;
+			return Factory.ExecuteVariantMethodGet(this, "Axes", type);
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15, 16
-		/// 
 		/// </summary>
 		/// <param name="rGallery">Int32 rGallery</param>
 		/// <param name="varFormat">optional object varFormat</param>
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		[SupportByVersion("Office", 12,14,15,16)]
 		public void AutoFormat(Int32 rGallery, object varFormat)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(rGallery, varFormat);
-			Invoker.Method(this, "AutoFormat", paramsArray);
+			 Factory.ExecuteMethod(this, "AutoFormat", rGallery, varFormat);
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15, 16
-		/// 
 		/// </summary>
 		/// <param name="rGallery">Int32 rGallery</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Office", 12,14,15,16)]
 		public void AutoFormat(Int32 rGallery)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(rGallery);
-			Invoker.Method(this, "AutoFormat", paramsArray);
+			 Factory.ExecuteMethod(this, "AutoFormat", rGallery);
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15, 16
-		/// 
 		/// </summary>
 		/// <param name="bstr">string bstr</param>
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		[SupportByVersion("Office", 12,14,15,16)]
 		public void SetBackgroundPicture(string bstr)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(bstr);
-			Invoker.Method(this, "SetBackgroundPicture", paramsArray);
+			 Factory.ExecuteMethod(this, "SetBackgroundPicture", bstr);
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15, 16
-		/// 
 		/// </summary>
 		/// <param name="varSource">optional object varSource</param>
 		/// <param name="varGallery">optional object varGallery</param>
@@ -2107,103 +1772,89 @@ namespace NetOffice.OfficeApi
 		/// <param name="varCategoryTitle">optional object varCategoryTitle</param>
 		/// <param name="varValueTitle">optional object varValueTitle</param>
 		/// <param name="varExtraTitle">optional object varExtraTitle</param>
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		[SupportByVersion("Office", 12,14,15,16)]
 		public void ChartWizard(object varSource, object varGallery, object varFormat, object varPlotBy, object varCategoryLabels, object varSeriesLabels, object varHasLegend, object varTitle, object varCategoryTitle, object varValueTitle, object varExtraTitle)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(varSource, varGallery, varFormat, varPlotBy, varCategoryLabels, varSeriesLabels, varHasLegend, varTitle, varCategoryTitle, varValueTitle, varExtraTitle);
-			Invoker.Method(this, "ChartWizard", paramsArray);
+			 Factory.ExecuteMethod(this, "ChartWizard", new object[]{ varSource, varGallery, varFormat, varPlotBy, varCategoryLabels, varSeriesLabels, varHasLegend, varTitle, varCategoryTitle, varValueTitle, varExtraTitle });
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15, 16
-		/// 
 		/// </summary>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Office", 12,14,15,16)]
 		public void ChartWizard()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "ChartWizard", paramsArray);
+			 Factory.ExecuteMethod(this, "ChartWizard");
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15, 16
-		/// 
 		/// </summary>
 		/// <param name="varSource">optional object varSource</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Office", 12,14,15,16)]
 		public void ChartWizard(object varSource)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(varSource);
-			Invoker.Method(this, "ChartWizard", paramsArray);
+			 Factory.ExecuteMethod(this, "ChartWizard", varSource);
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15, 16
-		/// 
 		/// </summary>
 		/// <param name="varSource">optional object varSource</param>
 		/// <param name="varGallery">optional object varGallery</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Office", 12,14,15,16)]
 		public void ChartWizard(object varSource, object varGallery)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(varSource, varGallery);
-			Invoker.Method(this, "ChartWizard", paramsArray);
+			 Factory.ExecuteMethod(this, "ChartWizard", varSource, varGallery);
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15, 16
-		/// 
 		/// </summary>
 		/// <param name="varSource">optional object varSource</param>
 		/// <param name="varGallery">optional object varGallery</param>
 		/// <param name="varFormat">optional object varFormat</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Office", 12,14,15,16)]
 		public void ChartWizard(object varSource, object varGallery, object varFormat)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(varSource, varGallery, varFormat);
-			Invoker.Method(this, "ChartWizard", paramsArray);
+			 Factory.ExecuteMethod(this, "ChartWizard", varSource, varGallery, varFormat);
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15, 16
-		/// 
 		/// </summary>
 		/// <param name="varSource">optional object varSource</param>
 		/// <param name="varGallery">optional object varGallery</param>
 		/// <param name="varFormat">optional object varFormat</param>
 		/// <param name="varPlotBy">optional object varPlotBy</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Office", 12,14,15,16)]
 		public void ChartWizard(object varSource, object varGallery, object varFormat, object varPlotBy)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(varSource, varGallery, varFormat, varPlotBy);
-			Invoker.Method(this, "ChartWizard", paramsArray);
+			 Factory.ExecuteMethod(this, "ChartWizard", varSource, varGallery, varFormat, varPlotBy);
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15, 16
-		/// 
 		/// </summary>
 		/// <param name="varSource">optional object varSource</param>
 		/// <param name="varGallery">optional object varGallery</param>
 		/// <param name="varFormat">optional object varFormat</param>
 		/// <param name="varPlotBy">optional object varPlotBy</param>
 		/// <param name="varCategoryLabels">optional object varCategoryLabels</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Office", 12,14,15,16)]
 		public void ChartWizard(object varSource, object varGallery, object varFormat, object varPlotBy, object varCategoryLabels)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(varSource, varGallery, varFormat, varPlotBy, varCategoryLabels);
-			Invoker.Method(this, "ChartWizard", paramsArray);
+			 Factory.ExecuteMethod(this, "ChartWizard", new object[]{ varSource, varGallery, varFormat, varPlotBy, varCategoryLabels });
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15, 16
-		/// 
 		/// </summary>
 		/// <param name="varSource">optional object varSource</param>
 		/// <param name="varGallery">optional object varGallery</param>
@@ -2211,17 +1862,15 @@ namespace NetOffice.OfficeApi
 		/// <param name="varPlotBy">optional object varPlotBy</param>
 		/// <param name="varCategoryLabels">optional object varCategoryLabels</param>
 		/// <param name="varSeriesLabels">optional object varSeriesLabels</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Office", 12,14,15,16)]
 		public void ChartWizard(object varSource, object varGallery, object varFormat, object varPlotBy, object varCategoryLabels, object varSeriesLabels)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(varSource, varGallery, varFormat, varPlotBy, varCategoryLabels, varSeriesLabels);
-			Invoker.Method(this, "ChartWizard", paramsArray);
+			 Factory.ExecuteMethod(this, "ChartWizard", new object[]{ varSource, varGallery, varFormat, varPlotBy, varCategoryLabels, varSeriesLabels });
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15, 16
-		/// 
 		/// </summary>
 		/// <param name="varSource">optional object varSource</param>
 		/// <param name="varGallery">optional object varGallery</param>
@@ -2230,17 +1879,15 @@ namespace NetOffice.OfficeApi
 		/// <param name="varCategoryLabels">optional object varCategoryLabels</param>
 		/// <param name="varSeriesLabels">optional object varSeriesLabels</param>
 		/// <param name="varHasLegend">optional object varHasLegend</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Office", 12,14,15,16)]
 		public void ChartWizard(object varSource, object varGallery, object varFormat, object varPlotBy, object varCategoryLabels, object varSeriesLabels, object varHasLegend)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(varSource, varGallery, varFormat, varPlotBy, varCategoryLabels, varSeriesLabels, varHasLegend);
-			Invoker.Method(this, "ChartWizard", paramsArray);
+			 Factory.ExecuteMethod(this, "ChartWizard", new object[]{ varSource, varGallery, varFormat, varPlotBy, varCategoryLabels, varSeriesLabels, varHasLegend });
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15, 16
-		/// 
 		/// </summary>
 		/// <param name="varSource">optional object varSource</param>
 		/// <param name="varGallery">optional object varGallery</param>
@@ -2250,17 +1897,15 @@ namespace NetOffice.OfficeApi
 		/// <param name="varSeriesLabels">optional object varSeriesLabels</param>
 		/// <param name="varHasLegend">optional object varHasLegend</param>
 		/// <param name="varTitle">optional object varTitle</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Office", 12,14,15,16)]
 		public void ChartWizard(object varSource, object varGallery, object varFormat, object varPlotBy, object varCategoryLabels, object varSeriesLabels, object varHasLegend, object varTitle)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(varSource, varGallery, varFormat, varPlotBy, varCategoryLabels, varSeriesLabels, varHasLegend, varTitle);
-			Invoker.Method(this, "ChartWizard", paramsArray);
+			 Factory.ExecuteMethod(this, "ChartWizard", new object[]{ varSource, varGallery, varFormat, varPlotBy, varCategoryLabels, varSeriesLabels, varHasLegend, varTitle });
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15, 16
-		/// 
 		/// </summary>
 		/// <param name="varSource">optional object varSource</param>
 		/// <param name="varGallery">optional object varGallery</param>
@@ -2271,17 +1916,15 @@ namespace NetOffice.OfficeApi
 		/// <param name="varHasLegend">optional object varHasLegend</param>
 		/// <param name="varTitle">optional object varTitle</param>
 		/// <param name="varCategoryTitle">optional object varCategoryTitle</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Office", 12,14,15,16)]
 		public void ChartWizard(object varSource, object varGallery, object varFormat, object varPlotBy, object varCategoryLabels, object varSeriesLabels, object varHasLegend, object varTitle, object varCategoryTitle)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(varSource, varGallery, varFormat, varPlotBy, varCategoryLabels, varSeriesLabels, varHasLegend, varTitle, varCategoryTitle);
-			Invoker.Method(this, "ChartWizard", paramsArray);
+			 Factory.ExecuteMethod(this, "ChartWizard", new object[]{ varSource, varGallery, varFormat, varPlotBy, varCategoryLabels, varSeriesLabels, varHasLegend, varTitle, varCategoryTitle });
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15, 16
-		/// 
 		/// </summary>
 		/// <param name="varSource">optional object varSource</param>
 		/// <param name="varGallery">optional object varGallery</param>
@@ -2293,75 +1936,65 @@ namespace NetOffice.OfficeApi
 		/// <param name="varTitle">optional object varTitle</param>
 		/// <param name="varCategoryTitle">optional object varCategoryTitle</param>
 		/// <param name="varValueTitle">optional object varValueTitle</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Office", 12,14,15,16)]
 		public void ChartWizard(object varSource, object varGallery, object varFormat, object varPlotBy, object varCategoryLabels, object varSeriesLabels, object varHasLegend, object varTitle, object varCategoryTitle, object varValueTitle)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(varSource, varGallery, varFormat, varPlotBy, varCategoryLabels, varSeriesLabels, varHasLegend, varTitle, varCategoryTitle, varValueTitle);
-			Invoker.Method(this, "ChartWizard", paramsArray);
+			 Factory.ExecuteMethod(this, "ChartWizard", new object[]{ varSource, varGallery, varFormat, varPlotBy, varCategoryLabels, varSeriesLabels, varHasLegend, varTitle, varCategoryTitle, varValueTitle });
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15, 16
-		/// 
 		/// </summary>
 		/// <param name="appearance">optional Int32 Appearance = 1</param>
 		/// <param name="format">optional Int32 Format = -4147</param>
 		/// <param name="size">optional Int32 Size = 2</param>
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		[SupportByVersion("Office", 12,14,15,16)]
 		public void CopyPicture(object appearance, object format, object size)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(appearance, format, size);
-			Invoker.Method(this, "CopyPicture", paramsArray);
+			 Factory.ExecuteMethod(this, "CopyPicture", appearance, format, size);
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15, 16
-		/// 
 		/// </summary>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Office", 12,14,15,16)]
 		public void CopyPicture()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "CopyPicture", paramsArray);
+			 Factory.ExecuteMethod(this, "CopyPicture");
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15, 16
-		/// 
 		/// </summary>
 		/// <param name="appearance">optional Int32 Appearance = 1</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Office", 12,14,15,16)]
 		public void CopyPicture(object appearance)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(appearance);
-			Invoker.Method(this, "CopyPicture", paramsArray);
+			 Factory.ExecuteMethod(this, "CopyPicture", appearance);
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15, 16
-		/// 
 		/// </summary>
 		/// <param name="appearance">optional Int32 Appearance = 1</param>
 		/// <param name="format">optional Int32 Format = -4147</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Office", 12,14,15,16)]
 		public void CopyPicture(object appearance, object format)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(appearance, format);
-			Invoker.Method(this, "CopyPicture", paramsArray);
+			 Factory.ExecuteMethod(this, "CopyPicture", appearance, format);
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15, 16
-		/// 
 		/// </summary>
 		/// <param name="varName">object varName</param>
-		/// <param name="localeID">Int32 LocaleID</param>
-		/// <param name="objType">Int32 ObjType</param>
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		/// <param name="localeID">Int32 localeID</param>
+		/// <param name="objType">Int32 objType</param>
+		[SupportByVersion("Office", 12,14,15,16)]
 		public object Evaluate(object varName, Int32 localeID, out Int32 objType)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,false,true);
@@ -2372,587 +2005,429 @@ namespace NetOffice.OfficeApi
 			{
 				ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
 				objType = (Int32)paramsArray[2];
-			return newObject;
+			    return newObject;
 			}
 			else
 			{
 				objType = (Int32)paramsArray[2];
-			return  returnItem;
+			    return  returnItem;
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15, 16
-		/// 
 		/// </summary>
 		/// <param name="varName">object varName</param>
-		/// <param name="localeID">Int32 LocaleID</param>
+		/// <param name="localeID">Int32 localeID</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		[SupportByVersion("Office", 12,14,15,16)]
 		public object _Evaluate(object varName, Int32 localeID)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(varName, localeID);
-			object returnItem = Invoker.MethodReturn(this, "_Evaluate", paramsArray);
-			if((null != returnItem) && (returnItem is MarshalByRefObject))
-			{
-				ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
-				return newObject;
-			}
-			else
-			{
-				return  returnItem;
-			}
+			return Factory.ExecuteVariantMethodGet(this, "_Evaluate", varName, localeID);
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15, 16
-		/// 
 		/// </summary>
 		/// <param name="varType">optional object varType</param>
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		[SupportByVersion("Office", 12,14,15,16)]
 		public void Paste(object varType)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(varType);
-			Invoker.Method(this, "Paste", paramsArray);
+			 Factory.ExecuteMethod(this, "Paste", varType);
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15, 16
-		/// 
 		/// </summary>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Office", 12,14,15,16)]
 		public void Paste()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "Paste", paramsArray);
+			 Factory.ExecuteMethod(this, "Paste");
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15, 16
-		/// 
 		/// </summary>
 		/// <param name="bstr">string bstr</param>
 		/// <param name="varFilterName">optional object varFilterName</param>
 		/// <param name="varInteractive">optional object varInteractive</param>
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		[SupportByVersion("Office", 12,14,15,16)]
 		public bool Export(string bstr, object varFilterName, object varInteractive)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(bstr, varFilterName, varInteractive);
-			object returnItem = Invoker.MethodReturn(this, "Export", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return Factory.ExecuteBoolMethodGet(this, "Export", bstr, varFilterName, varInteractive);
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15, 16
-		/// 
 		/// </summary>
 		/// <param name="bstr">string bstr</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Office", 12,14,15,16)]
 		public bool Export(string bstr)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(bstr);
-			object returnItem = Invoker.MethodReturn(this, "Export", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return Factory.ExecuteBoolMethodGet(this, "Export", bstr);
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15, 16
-		/// 
 		/// </summary>
 		/// <param name="bstr">string bstr</param>
 		/// <param name="varFilterName">optional object varFilterName</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Office", 12,14,15,16)]
 		public bool Export(string bstr, object varFilterName)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(bstr, varFilterName);
-			object returnItem = Invoker.MethodReturn(this, "Export", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return Factory.ExecuteBoolMethodGet(this, "Export", bstr, varFilterName);
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15, 16
-		/// 
 		/// </summary>
 		/// <param name="varName">object varName</param>
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		[SupportByVersion("Office", 12,14,15,16)]
 		public void SetDefaultChart(object varName)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(varName);
-			Invoker.Method(this, "SetDefaultChart", paramsArray);
+			 Factory.ExecuteMethod(this, "SetDefaultChart", varName);
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15, 16
-		/// 
 		/// </summary>
 		/// <param name="bstrFileName">string bstrFileName</param>
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		[SupportByVersion("Office", 12,14,15,16)]
 		public void ApplyChartTemplate(string bstrFileName)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(bstrFileName);
-			Invoker.Method(this, "ApplyChartTemplate", paramsArray);
+			 Factory.ExecuteMethod(this, "ApplyChartTemplate", bstrFileName);
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15, 16
-		/// 
 		/// </summary>
 		/// <param name="bstrFileName">string bstrFileName</param>
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		[SupportByVersion("Office", 12,14,15,16)]
 		public void SaveChartTemplate(string bstrFileName)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(bstrFileName);
-			Invoker.Method(this, "SaveChartTemplate", paramsArray);
+			 Factory.ExecuteMethod(this, "SaveChartTemplate", bstrFileName);
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15, 16
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		[SupportByVersion("Office", 12,14,15,16)]
 		public void ClearToMatchStyle()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "ClearToMatchStyle", paramsArray);
+			 Factory.ExecuteMethod(this, "ClearToMatchStyle");
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15, 16
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		[SupportByVersion("Office", 12,14,15,16)]
 		public void RefreshPivotTable()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "RefreshPivotTable", paramsArray);
+			 Factory.ExecuteMethod(this, "RefreshPivotTable");
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="layout">Int32 Layout</param>
+		/// <param name="layout">Int32 layout</param>
 		/// <param name="varChartType">optional object varChartType</param>
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		[SupportByVersion("Office", 12,14,15,16)]
 		public void ApplyLayout(Int32 layout, object varChartType)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(layout, varChartType);
-			Invoker.Method(this, "ApplyLayout", paramsArray);
+			 Factory.ExecuteMethod(this, "ApplyLayout", layout, varChartType);
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="layout">Int32 Layout</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		/// <param name="layout">Int32 layout</param>
+		[CustomMethod]
+		[SupportByVersion("Office", 12,14,15,16)]
 		public void ApplyLayout(Int32 layout)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(layout);
-			Invoker.Method(this, "ApplyLayout", paramsArray);
+			 Factory.ExecuteMethod(this, "ApplyLayout", layout);
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15, 16
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		[SupportByVersion("Office", 12,14,15,16)]
 		public void Refresh()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "Refresh", paramsArray);
+			 Factory.ExecuteMethod(this, "Refresh");
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="rHS">NetOffice.OfficeApi.Enums.MsoChartElementType RHS</param>
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		/// <param name="rHS">NetOffice.OfficeApi.Enums.MsoChartElementType rHS</param>
+		[SupportByVersion("Office", 12,14,15,16)]
 		public void SetElement(NetOffice.OfficeApi.Enums.MsoChartElementType rHS)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(rHS);
-			Invoker.Method(this, "SetElement", paramsArray);
+			 Factory.ExecuteMethod(this, "SetElement", rHS);
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="index">optional object Index</param>
+		/// <param name="index">optional object index</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("Office", 14,15,16)]
+		[SupportByVersion("Office", 14,15,16)]
 		public object AreaGroups(object index)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(index);
-			object returnItem = Invoker.MethodReturn(this, "AreaGroups", paramsArray);
-			object newObject = Factory.CreateObjectFromComProxy(this,returnItem);
-			return newObject;
+			return Factory.ExecuteVariantMethodGet(this, "AreaGroups", index);
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 14, 15, 16
-		/// 
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Office", 14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Office", 14,15,16)]
 		public object AreaGroups()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "AreaGroups", paramsArray);
-			object newObject = Factory.CreateObjectFromComProxy(this,returnItem);
-			return newObject;
+			return Factory.ExecuteVariantMethodGet(this, "AreaGroups");
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="index">optional object Index</param>
+		/// <param name="index">optional object index</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("Office", 14,15,16)]
+		[SupportByVersion("Office", 14,15,16)]
 		public object BarGroups(object index)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(index);
-			object returnItem = Invoker.MethodReturn(this, "BarGroups", paramsArray);
-			object newObject = Factory.CreateObjectFromComProxy(this,returnItem);
-			return newObject;
+			return Factory.ExecuteVariantMethodGet(this, "BarGroups", index);
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 14, 15, 16
-		/// 
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Office", 14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Office", 14,15,16)]
 		public object BarGroups()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "BarGroups", paramsArray);
-			object newObject = Factory.CreateObjectFromComProxy(this,returnItem);
-			return newObject;
+			return Factory.ExecuteVariantMethodGet(this, "BarGroups");
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="index">optional object Index</param>
+		/// <param name="index">optional object index</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("Office", 14,15,16)]
+		[SupportByVersion("Office", 14,15,16)]
 		public object ColumnGroups(object index)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(index);
-			object returnItem = Invoker.MethodReturn(this, "ColumnGroups", paramsArray);
-			object newObject = Factory.CreateObjectFromComProxy(this,returnItem);
-			return newObject;
+			return Factory.ExecuteVariantMethodGet(this, "ColumnGroups", index);
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 14, 15, 16
-		/// 
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Office", 14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Office", 14,15,16)]
 		public object ColumnGroups()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "ColumnGroups", paramsArray);
-			object newObject = Factory.CreateObjectFromComProxy(this,returnItem);
-			return newObject;
+			return Factory.ExecuteVariantMethodGet(this, "ColumnGroups");
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="index">optional object Index</param>
+		/// <param name="index">optional object index</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("Office", 14,15,16)]
+		[SupportByVersion("Office", 14,15,16)]
 		public object LineGroups(object index)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(index);
-			object returnItem = Invoker.MethodReturn(this, "LineGroups", paramsArray);
-			object newObject = Factory.CreateObjectFromComProxy(this,returnItem);
-			return newObject;
+			return Factory.ExecuteVariantMethodGet(this, "LineGroups", index);
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 14, 15, 16
-		/// 
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Office", 14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Office", 14,15,16)]
 		public object LineGroups()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "LineGroups", paramsArray);
-			object newObject = Factory.CreateObjectFromComProxy(this,returnItem);
-			return newObject;
+			return Factory.ExecuteVariantMethodGet(this, "LineGroups");
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="index">optional object Index</param>
+		/// <param name="index">optional object index</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("Office", 14,15,16)]
+		[SupportByVersion("Office", 14,15,16)]
 		public object PieGroups(object index)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(index);
-			object returnItem = Invoker.MethodReturn(this, "PieGroups", paramsArray);
-			object newObject = Factory.CreateObjectFromComProxy(this,returnItem);
-			return newObject;
+			return Factory.ExecuteVariantMethodGet(this, "PieGroups", index);
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 14, 15, 16
-		/// 
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Office", 14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Office", 14,15,16)]
 		public object PieGroups()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "PieGroups", paramsArray);
-			object newObject = Factory.CreateObjectFromComProxy(this,returnItem);
-			return newObject;
+			return Factory.ExecuteVariantMethodGet(this, "PieGroups");
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="index">optional object Index</param>
+		/// <param name="index">optional object index</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("Office", 14,15,16)]
+		[SupportByVersion("Office", 14,15,16)]
 		public object DoughnutGroups(object index)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(index);
-			object returnItem = Invoker.MethodReturn(this, "DoughnutGroups", paramsArray);
-			object newObject = Factory.CreateObjectFromComProxy(this,returnItem);
-			return newObject;
+			return Factory.ExecuteVariantMethodGet(this, "DoughnutGroups", index);
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 14, 15, 16
-		/// 
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Office", 14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Office", 14,15,16)]
 		public object DoughnutGroups()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "DoughnutGroups", paramsArray);
-			object newObject = Factory.CreateObjectFromComProxy(this,returnItem);
-			return newObject;
+			return Factory.ExecuteVariantMethodGet(this, "DoughnutGroups");
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="index">optional object Index</param>
+		/// <param name="index">optional object index</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("Office", 14,15,16)]
+		[SupportByVersion("Office", 14,15,16)]
 		public object RadarGroups(object index)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(index);
-			object returnItem = Invoker.MethodReturn(this, "RadarGroups", paramsArray);
-			object newObject = Factory.CreateObjectFromComProxy(this,returnItem);
-			return newObject;
+			return Factory.ExecuteVariantMethodGet(this, "RadarGroups", index);
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 14, 15, 16
-		/// 
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Office", 14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Office", 14,15,16)]
 		public object RadarGroups()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "RadarGroups", paramsArray);
-			object newObject = Factory.CreateObjectFromComProxy(this,returnItem);
-			return newObject;
+			return Factory.ExecuteVariantMethodGet(this, "RadarGroups");
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="index">optional object Index</param>
+		/// <param name="index">optional object index</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("Office", 14,15,16)]
+		[SupportByVersion("Office", 14,15,16)]
 		public object XYGroups(object index)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(index);
-			object returnItem = Invoker.MethodReturn(this, "XYGroups", paramsArray);
-			object newObject = Factory.CreateObjectFromComProxy(this,returnItem);
-			return newObject;
+			return Factory.ExecuteVariantMethodGet(this, "XYGroups", index);
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 14, 15, 16
-		/// 
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Office", 14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Office", 14,15,16)]
 		public object XYGroups()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "XYGroups", paramsArray);
-			object newObject = Factory.CreateObjectFromComProxy(this,returnItem);
-			return newObject;
+			return Factory.ExecuteVariantMethodGet(this, "XYGroups");
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 14, 15, 16
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("Office", 14,15,16)]
+		[SupportByVersion("Office", 14,15,16)]
 		public object Delete()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "Delete", paramsArray);
-			if((null != returnItem) && (returnItem is MarshalByRefObject))
-			{
-				ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
-				return newObject;
-			}
-			else
-			{
-				return  returnItem;
-			}
+			return Factory.ExecuteVariantMethodGet(this, "Delete");
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 14, 15, 16
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("Office", 14,15,16)]
+		[SupportByVersion("Office", 14,15,16)]
 		public object Copy()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "Copy", paramsArray);
-			if((null != returnItem) && (returnItem is MarshalByRefObject))
-			{
-				ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
-				return newObject;
-			}
-			else
-			{
-				return  returnItem;
-			}
+			return Factory.ExecuteVariantMethodGet(this, "Copy");
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="replace">optional object Replace</param>
-		[SupportByVersionAttribute("Office", 14,15,16)]
+		/// <param name="replace">optional object replace</param>
+		[SupportByVersion("Office", 14,15,16)]
 		public object Select(object replace)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(replace);
-			object returnItem = Invoker.MethodReturn(this, "Select", paramsArray);
-			if((null != returnItem) && (returnItem is MarshalByRefObject))
-			{
-				ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
-				return newObject;
-			}
-			else
-			{
-				return  returnItem;
-			}
+			return Factory.ExecuteVariantMethodGet(this, "Select", replace);
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 14, 15, 16
-		/// 
 		/// </summary>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Office", 14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Office", 14,15,16)]
 		public object Select()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "Select", paramsArray);
-			if((null != returnItem) && (returnItem is MarshalByRefObject))
-			{
-				ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
-				return newObject;
-			}
-			else
-			{
-				return  returnItem;
-			}
+			return Factory.ExecuteVariantMethodGet(this, "Select");
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 15,16
-		/// 
 		/// </summary>
-		/// <param name="index">optional object Index</param>
-		[SupportByVersionAttribute("Office", 15, 16)]
+		/// <param name="index">optional object index</param>
+		[SupportByVersion("Office", 15, 16)]
 		public object FullSeriesCollection(object index)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(index);
-			object returnItem = Invoker.MethodReturn(this, "FullSeriesCollection", paramsArray);
-			object newObject = Factory.CreateObjectFromComProxy(this,returnItem);
-			return newObject;
+			return Factory.ExecuteVariantMethodGet(this, "FullSeriesCollection", index);
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 15,16
-		/// 
 		/// </summary>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Office", 15, 16)]
+		[CustomMethod]
+		[SupportByVersion("Office", 15, 16)]
 		public object FullSeriesCollection()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "FullSeriesCollection", paramsArray);
-			object newObject = Factory.CreateObjectFromComProxy(this,returnItem);
-			return newObject;
+			return Factory.ExecuteVariantMethodGet(this, "FullSeriesCollection");
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 15,16
-		/// 
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("Office", 15, 16)]
+		[SupportByVersion("Office", 15, 16)]
 		public void DeleteHiddenContent()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "DeleteHiddenContent", paramsArray);
+			 Factory.ExecuteMethod(this, "DeleteHiddenContent");
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 15,16
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("Office", 15, 16)]
+		[SupportByVersion("Office", 15, 16)]
 		public void ClearToMatchColorStyle()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "ClearToMatchColorStyle", paramsArray);
+			 Factory.ExecuteMethod(this, "ClearToMatchColorStyle");
 		}
 
 		#endregion
+
 		#pragma warning restore
 	}
 }
+
+
+

@@ -1,48 +1,48 @@
 ﻿using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
-using NetOffice;
-using NetOffice.Misc;
+using NetOffice.Attributes;
 
 namespace NetOffice.MSComctlLibApi
 {
-
 	#region Delegates
 
 	#pragma warning disable
 	public delegate void TabStrip_ClickEventHandler();
-	public delegate void TabStrip_KeyDownEventHandler(ref Int16 KeyCode, Int16 Shift);
-	public delegate void TabStrip_KeyPressEventHandler(ref Int16 KeyAscii);
-	public delegate void TabStrip_KeyUpEventHandler(ref Int16 KeyCode, Int16 Shift);
-	public delegate void TabStrip_MouseDownEventHandler(Int16 Button, Int16 Shift, Int32 x, Int32 y);
-	public delegate void TabStrip_MouseMoveEventHandler(Int16 Button, Int16 Shift, Int32 x, Int32 y);
-	public delegate void TabStrip_MouseUpEventHandler(Int16 Button, Int16 Shift, Int32 x, Int32 y);
-	public delegate void TabStrip_BeforeClickEventHandler(ref Int16 Cancel);
-	public delegate void TabStrip_OLEStartDragEventHandler(ref NetOffice.MSComctlLibApi.DataObject Data, ref Int32 AllowedEffects);
-	public delegate void TabStrip_OLEGiveFeedbackEventHandler(ref Int32 Effect, ref bool DefaultCursors);
-	public delegate void TabStrip_OLESetDataEventHandler(ref NetOffice.MSComctlLibApi.DataObject Data, ref Int16 DataFormat);
-	public delegate void TabStrip_OLECompleteDragEventHandler(ref Int32 Effect);
-	public delegate void TabStrip_OLEDragOverEventHandler(ref NetOffice.MSComctlLibApi.DataObject Data, ref Int32 Effect, ref Int16 Button, ref Int16 Shift, ref Single x, ref Single y, ref Int16 State);
-	public delegate void TabStrip_OLEDragDropEventHandler(ref NetOffice.MSComctlLibApi.DataObject Data, ref Int32 Effect, ref Int16 Button, ref Int16 Shift, ref Single x, ref Single y);
+	public delegate void TabStrip_KeyDownEventHandler(ref Int16 keyCode, Int16 shift);
+	public delegate void TabStrip_KeyPressEventHandler(ref Int16 keyAscii);
+	public delegate void TabStrip_KeyUpEventHandler(ref Int16 keyCode, Int16 shift);
+	public delegate void TabStrip_MouseDownEventHandler(Int16 button, Int16 shift, Int32 x, Int32 y);
+	public delegate void TabStrip_MouseMoveEventHandler(Int16 button, Int16 shift, Int32 x, Int32 y);
+	public delegate void TabStrip_MouseUpEventHandler(Int16 button, Int16 shift, Int32 x, Int32 y);
+	public delegate void TabStrip_BeforeClickEventHandler(ref Int16 cancel);
+	public delegate void TabStrip_OLEStartDragEventHandler(ref NetOffice.MSComctlLibApi.DataObject data, ref Int32 allowedEffects);
+	public delegate void TabStrip_OLEGiveFeedbackEventHandler(ref Int32 effect, ref bool defaultCursors);
+	public delegate void TabStrip_OLESetDataEventHandler(ref NetOffice.MSComctlLibApi.DataObject Data, ref Int16 dataFormat);
+	public delegate void TabStrip_OLECompleteDragEventHandler(ref Int32 effect);
+	public delegate void TabStrip_OLEDragOverEventHandler(ref NetOffice.MSComctlLibApi.DataObject data, ref Int32 effect, ref Int16 button, ref Int16 shift, ref Single x, ref Single y, ref Int16 state);
+	public delegate void TabStrip_OLEDragDropEventHandler(ref NetOffice.MSComctlLibApi.DataObject data, ref Int32 effect, ref Int16 button, ref Int16 shift, ref Single x, ref Single y);
 	#pragma warning restore
 
 	#endregion
 
-	///<summary>
+	/// <summary>
 	/// CoClass TabStrip 
 	/// SupportByVersion MSComctlLib, 6
-	///</summary>
-	[SupportByVersionAttribute("MSComctlLib", 6)]
-	[EntityTypeAttribute(EntityType.IsCoClass)]
-	public class TabStrip : ITabStrip,IEventBinding
+	/// </summary>
+	[SupportByVersion("MSComctlLib", 6)]
+	[EntityType(EntityType.IsCoClass)]
+	[EventSink(typeof(Events.ITabStripEvents_SinkHelper))]
+	public class TabStrip : ITabStrip, IEventBinding
 	{
 		#pragma warning disable
+
 		#region Fields
 		
 		private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
 		private string _activeSinkId;
 		private NetRuntimeSystem.Type _thisType;
-		ITabStripEvents_SinkHelper _iTabStripEvents_SinkHelper;
+		private Events.ITabStripEvents_SinkHelper _iTabStripEvents_SinkHelper;
 	
 		#endregion
 
@@ -51,6 +51,7 @@ namespace NetOffice.MSComctlLibApi
         /// <summary>
         /// Instance Type
         /// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
         public override Type InstanceType
         {
             get
@@ -117,17 +118,17 @@ namespace NetOffice.MSComctlLibApi
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of TabStrip 
-        ///</summary>		
+        /// </summary>		
 		public TabStrip():base("MSComctlLib.TabStrip")
 		{
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of TabStrip
-        ///</summary>
+        /// </summary>
         ///<param name="progId">registered ProgID</param>
 		public TabStrip(string progId):base(progId)
 		{
@@ -137,46 +138,6 @@ namespace NetOffice.MSComctlLibApi
 		#endregion
 
 		#region Static CoClass Methods
-
-		/// <summary>
-        /// Returns all running MSComctlLib.TabStrip objects from the environment/system
-        /// </summary>
-        /// <returns>an MSComctlLib.TabStrip array</returns>
-		public static NetOffice.MSComctlLibApi.TabStrip[] GetActiveInstances()
-		{		
-			IDisposableEnumeration proxyList = NetOffice.ProxyService.GetActiveInstances("MSComctlLib","TabStrip");
-			NetRuntimeSystem.Collections.Generic.List<NetOffice.MSComctlLibApi.TabStrip> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.MSComctlLibApi.TabStrip>();
-			foreach(object proxy in proxyList)
-				resultList.Add( new NetOffice.MSComctlLibApi.TabStrip(null, proxy) );
-			return resultList.ToArray();
-		}
-
-		/// <summary>
-        /// Returns a running MSComctlLib.TabStrip object from the environment/system.
-        /// </summary>
-        /// <returns>an MSComctlLib.TabStrip object or null</returns>
-		public static NetOffice.MSComctlLibApi.TabStrip GetActiveInstance()
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("MSComctlLib","TabStrip", false);
-			if(null != proxy)
-				return new NetOffice.MSComctlLibApi.TabStrip(null, proxy);
-			else
-				return null;
-		}
-
-		/// <summary>
-        /// Returns a running MSComctlLib.TabStrip object from the environment/system. 
-        /// </summary>
-	    /// <param name="throwOnError">throw an exception if no object was found</param>
-        /// <returns>an MSComctlLib.TabStrip object or null</returns>
-		public static NetOffice.MSComctlLibApi.TabStrip GetActiveInstance(bool throwOnError)
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("MSComctlLib","TabStrip", throwOnError);
-			if(null != proxy)
-				return new NetOffice.MSComctlLibApi.TabStrip(null, proxy);
-			else
-				return null;
-		}
 		#endregion
 
 		#region Events
@@ -506,12 +467,12 @@ namespace NetOffice.MSComctlLibApi
 				return;
 	
             if (null == _activeSinkId)
-				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, ITabStripEvents_SinkHelper.Id);
+				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, Events.ITabStripEvents_SinkHelper.Id);
 
 
-			if(ITabStripEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
+			if(Events.ITabStripEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
 			{
-				_iTabStripEvents_SinkHelper = new ITabStripEvents_SinkHelper(this, _connectPoint);
+				_iTabStripEvents_SinkHelper = new Events.ITabStripEvents_SinkHelper(this, _connectPoint);
 				return;
 			} 
         }
@@ -653,3 +614,4 @@ namespace NetOffice.MSComctlLibApi
 		#pragma warning restore
 	}
 }
+

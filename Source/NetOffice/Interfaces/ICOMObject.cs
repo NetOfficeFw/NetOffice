@@ -1,7 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+using NetRuntimeSystem = System;
+using System.ComponentModel;
+using NetOffice.Attributes;
 
 namespace NetOffice
 {
@@ -23,7 +23,7 @@ namespace NetOffice
         /// <param name="name">name of the enitity</param>
         /// <param name="searchType">indicate the kind of pr0operty</param>
         /// <returns>true if available, otherwise false</returns>
-        bool EntityIsAvailable(string name, SupportEntityType searchType);
+        bool EntityIsAvailable(string name, Availity.SupportedEntityType searchType);
 
         /// <summary>
         /// The associated console
@@ -46,3 +46,5 @@ namespace NetOffice
         Settings Settings { get; }
     }
 }
+
+

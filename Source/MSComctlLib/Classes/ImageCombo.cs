@@ -1,46 +1,46 @@
 ﻿using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
-using NetOffice;
-using NetOffice.Misc;
+using NetOffice.Attributes;
 
 namespace NetOffice.MSComctlLibApi
 {
-
 	#region Delegates
 
 	#pragma warning disable
 	public delegate void ImageCombo_ChangeEventHandler();
 	public delegate void ImageCombo_DropdownEventHandler();
 	public delegate void ImageCombo_ClickEventHandler();
-	public delegate void ImageCombo_KeyDownEventHandler(Int16 KeyCode, Int16 Shift);
-	public delegate void ImageCombo_KeyUpEventHandler(Int16 KeyCode, Int16 Shift);
-	public delegate void ImageCombo_KeyPressEventHandler(ref Int16 KeyAscii);
-	public delegate void ImageCombo_OLEStartDragEventHandler(ref NetOffice.MSComctlLibApi.DataObject Data, ref Int32 AllowedEffects);
-	public delegate void ImageCombo_OLEGiveFeedbackEventHandler(ref Int32 Effect, ref bool DefaultCursors);
-	public delegate void ImageCombo_OLESetDataEventHandler(ref NetOffice.MSComctlLibApi.DataObject Data, ref Int16 DataFormat);
-	public delegate void ImageCombo_OLECompleteDragEventHandler(ref Int32 Effect);
-	public delegate void ImageCombo_OLEDragOverEventHandler(ref NetOffice.MSComctlLibApi.DataObject Data, ref Int32 Effect, ref Int16 Button, ref Int16 Shift, ref Single x, ref Single y, ref Int16 State);
-	public delegate void ImageCombo_OLEDragDropEventHandler(ref NetOffice.MSComctlLibApi.DataObject Data, ref Int32 Effect, ref Int16 Button, ref Int16 Shift, ref Single x, ref Single y);
+	public delegate void ImageCombo_KeyDownEventHandler(Int16 keyCode, Int16 shift);
+	public delegate void ImageCombo_KeyUpEventHandler(Int16 keyCode, Int16 shift);
+	public delegate void ImageCombo_KeyPressEventHandler(ref Int16 keyAscii);
+	public delegate void ImageCombo_OLEStartDragEventHandler(ref NetOffice.MSComctlLibApi.DataObject data, ref Int32 allowedEffects);
+	public delegate void ImageCombo_OLEGiveFeedbackEventHandler(ref Int32 effect, ref bool defaultCursors);
+	public delegate void ImageCombo_OLESetDataEventHandler(ref NetOffice.MSComctlLibApi.DataObject data, ref Int16 dataFormat);
+	public delegate void ImageCombo_OLECompleteDragEventHandler(ref Int32 effect);
+	public delegate void ImageCombo_OLEDragOverEventHandler(ref NetOffice.MSComctlLibApi.DataObject data, ref Int32 effect, ref Int16 button, ref Int16 shift, ref Single x, ref Single y, ref Int16 state);
+	public delegate void ImageCombo_OLEDragDropEventHandler(ref NetOffice.MSComctlLibApi.DataObject data, ref Int32 effect, ref Int16 button, ref Int16 shift, ref Single x, ref Single y);
 	#pragma warning restore
 
 	#endregion
 
-	///<summary>
+	/// <summary>
 	/// CoClass ImageCombo 
 	/// SupportByVersion MSComctlLib, 6
-	///</summary>
-	[SupportByVersionAttribute("MSComctlLib", 6)]
-	[EntityTypeAttribute(EntityType.IsCoClass)]
-	public class ImageCombo : IImageCombo,IEventBinding
+	/// </summary>
+	[SupportByVersion("MSComctlLib", 6)]
+	[EntityType(EntityType.IsCoClass)]
+	[EventSink(typeof(Events.DImageComboEvents_SinkHelper))]
+	public class ImageCombo : IImageCombo, IEventBinding
 	{
 		#pragma warning disable
+
 		#region Fields
 		
 		private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
 		private string _activeSinkId;
 		private NetRuntimeSystem.Type _thisType;
-		DImageComboEvents_SinkHelper _dImageComboEvents_SinkHelper;
+		private Events.DImageComboEvents_SinkHelper _dImageComboEvents_SinkHelper;
 	
 		#endregion
 
@@ -49,6 +49,7 @@ namespace NetOffice.MSComctlLibApi
         /// <summary>
         /// Instance Type
         /// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
         public override Type InstanceType
         {
             get
@@ -115,17 +116,17 @@ namespace NetOffice.MSComctlLibApi
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of ImageCombo 
-        ///</summary>		
+        /// </summary>		
 		public ImageCombo():base("MSComctlLib.ImageCombo")
 		{
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of ImageCombo
-        ///</summary>
+        /// </summary>
         ///<param name="progId">registered ProgID</param>
 		public ImageCombo(string progId):base(progId)
 		{
@@ -135,46 +136,6 @@ namespace NetOffice.MSComctlLibApi
 		#endregion
 
 		#region Static CoClass Methods
-
-		/// <summary>
-        /// Returns all running MSComctlLib.ImageCombo objects from the environment/system
-        /// </summary>
-        /// <returns>an MSComctlLib.ImageCombo array</returns>
-		public static NetOffice.MSComctlLibApi.ImageCombo[] GetActiveInstances()
-		{		
-			IDisposableEnumeration proxyList = NetOffice.ProxyService.GetActiveInstances("MSComctlLib","ImageCombo");
-			NetRuntimeSystem.Collections.Generic.List<NetOffice.MSComctlLibApi.ImageCombo> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.MSComctlLibApi.ImageCombo>();
-			foreach(object proxy in proxyList)
-				resultList.Add( new NetOffice.MSComctlLibApi.ImageCombo(null, proxy) );
-			return resultList.ToArray();
-		}
-
-		/// <summary>
-        /// Returns a running MSComctlLib.ImageCombo object from the environment/system.
-        /// </summary>
-        /// <returns>an MSComctlLib.ImageCombo object or null</returns>
-		public static NetOffice.MSComctlLibApi.ImageCombo GetActiveInstance()
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("MSComctlLib","ImageCombo", false);
-			if(null != proxy)
-				return new NetOffice.MSComctlLibApi.ImageCombo(null, proxy);
-			else
-				return null;
-		}
-
-		/// <summary>
-        /// Returns a running MSComctlLib.ImageCombo object from the environment/system. 
-        /// </summary>
-	    /// <param name="throwOnError">throw an exception if no object was found</param>
-        /// <returns>an MSComctlLib.ImageCombo object or null</returns>
-		public static NetOffice.MSComctlLibApi.ImageCombo GetActiveInstance(bool throwOnError)
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("MSComctlLib","ImageCombo", throwOnError);
-			if(null != proxy)
-				return new NetOffice.MSComctlLibApi.ImageCombo(null, proxy);
-			else
-				return null;
-		}
 		#endregion
 
 		#region Events
@@ -460,12 +421,12 @@ namespace NetOffice.MSComctlLibApi
 				return;
 	
             if (null == _activeSinkId)
-				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, DImageComboEvents_SinkHelper.Id);
+				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, Events.DImageComboEvents_SinkHelper.Id);
 
 
-			if(DImageComboEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
+			if(Events.DImageComboEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
 			{
-				_dImageComboEvents_SinkHelper = new DImageComboEvents_SinkHelper(this, _connectPoint);
+				_dImageComboEvents_SinkHelper = new Events.DImageComboEvents_SinkHelper(this, _connectPoint);
 				return;
 			} 
         }
@@ -607,3 +568,4 @@ namespace NetOffice.MSComctlLibApi
 		#pragma warning restore
 	}
 }
+

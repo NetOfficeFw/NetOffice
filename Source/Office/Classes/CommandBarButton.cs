@@ -1,36 +1,36 @@
 ﻿using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
-using NetOffice;
-using NetOffice.Misc;
+using NetOffice.Attributes;
 
 namespace NetOffice.OfficeApi
 {
-
 	#region Delegates
 
 	#pragma warning disable
-	public delegate void CommandBarButton_ClickEventHandler(NetOffice.OfficeApi.CommandBarButton Ctrl, ref bool CancelDefault);
+	public delegate void CommandBarButton_ClickEventHandler(NetOffice.OfficeApi.CommandBarButton ctrl, ref bool cancelDefault);
 	#pragma warning restore
 
 	#endregion
 
-	///<summary>
+	/// <summary>
 	/// CoClass CommandBarButton 
 	/// SupportByVersion Office, 9,10,11,12,14,15,16
-	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff865221.aspx
-	///</summary>
-	[SupportByVersionAttribute("Office", 9,10,11,12,14,15,16)]
-	[EntityTypeAttribute(EntityType.IsCoClass)]
-	public class CommandBarButton : _CommandBarButton,IEventBinding
+	/// </summary>
+	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff865221.aspx </remarks>
+	[SupportByVersion("Office", 9,10,11,12,14,15,16)]
+	[EntityType(EntityType.IsCoClass)]
+	[EventSink(typeof(Events._CommandBarButtonEvents_SinkHelper))]
+	public class CommandBarButton : _CommandBarButton, IEventBinding
 	{
 		#pragma warning disable
+
 		#region Fields
 		
 		private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
 		private string _activeSinkId;
 		private NetRuntimeSystem.Type _thisType;
-		_CommandBarButtonEvents_SinkHelper __CommandBarButtonEvents_SinkHelper;
+		private Events._CommandBarButtonEvents_SinkHelper __CommandBarButtonEvents_SinkHelper;
 	
 		#endregion
 
@@ -39,6 +39,7 @@ namespace NetOffice.OfficeApi
         /// <summary>
         /// Instance Type
         /// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
         public override Type InstanceType
         {
             get
@@ -105,17 +106,17 @@ namespace NetOffice.OfficeApi
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of CommandBarButton 
-        ///</summary>		
+        /// </summary>		
 		public CommandBarButton():base("Office.CommandBarButton")
 		{
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of CommandBarButton
-        ///</summary>
+        /// </summary>
         ///<param name="progId">registered ProgID</param>
 		public CommandBarButton(string progId):base(progId)
 		{
@@ -125,46 +126,6 @@ namespace NetOffice.OfficeApi
 		#endregion
 
 		#region Static CoClass Methods
-
-		/// <summary>
-        /// Returns all running Office.CommandBarButton objects from the environment/system
-        /// </summary>
-        /// <returns>an Office.CommandBarButton array</returns>
-		public static NetOffice.OfficeApi.CommandBarButton[] GetActiveInstances()
-		{		
-			IDisposableEnumeration proxyList = NetOffice.ProxyService.GetActiveInstances("Office","CommandBarButton");
-			NetRuntimeSystem.Collections.Generic.List<NetOffice.OfficeApi.CommandBarButton> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.OfficeApi.CommandBarButton>();
-			foreach(object proxy in proxyList)
-				resultList.Add( new NetOffice.OfficeApi.CommandBarButton(null, proxy) );
-			return resultList.ToArray();
-		}
-
-		/// <summary>
-        /// Returns a running Office.CommandBarButton object from the environment/system.
-        /// </summary>
-        /// <returns>an Office.CommandBarButton object or null</returns>
-		public static NetOffice.OfficeApi.CommandBarButton GetActiveInstance()
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Office","CommandBarButton", false);
-			if(null != proxy)
-				return new NetOffice.OfficeApi.CommandBarButton(null, proxy);
-			else
-				return null;
-		}
-
-		/// <summary>
-        /// Returns a running Office.CommandBarButton object from the environment/system. 
-        /// </summary>
-	    /// <param name="throwOnError">throw an exception if no object was found</param>
-        /// <returns>an Office.CommandBarButton object or null</returns>
-		public static NetOffice.OfficeApi.CommandBarButton GetActiveInstance(bool throwOnError)
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Office","CommandBarButton", throwOnError);
-			if(null != proxy)
-				return new NetOffice.OfficeApi.CommandBarButton(null, proxy);
-			else
-				return null;
-		}
 		#endregion
 
 		#region Events
@@ -209,12 +170,12 @@ namespace NetOffice.OfficeApi
 				return;
 	
             if (null == _activeSinkId)
-				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, _CommandBarButtonEvents_SinkHelper.Id);
+				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, Events._CommandBarButtonEvents_SinkHelper.Id);
 
 
-			if(_CommandBarButtonEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
+			if(Events._CommandBarButtonEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
 			{
-				__CommandBarButtonEvents_SinkHelper = new _CommandBarButtonEvents_SinkHelper(this, _connectPoint);
+				__CommandBarButtonEvents_SinkHelper = new Events._CommandBarButtonEvents_SinkHelper(this, _connectPoint);
 				return;
 			} 
         }
@@ -356,3 +317,4 @@ namespace NetOffice.OfficeApi
 		#pragma warning restore
 	}
 }
+

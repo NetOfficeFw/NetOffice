@@ -465,7 +465,7 @@ namespace NetOffice.OfficeApi.Tools.Utils
         /// <param name="size">size for the dialog. Size.Empty to use default size</param>
         public virtual void ShowDiagnostics(object modalOwner, bool modal, Size size)
         {            
-            IWin32Window owner = NetOffice.Tools.WndUtils.Win32Window.Create(modalOwner);
+            IWin32Window owner = Running.Win32Window.Create(modalOwner);
 
             bool isCurrentlySuspended = IsCurrentlySuspended();
 
@@ -547,7 +547,7 @@ namespace NetOffice.OfficeApi.Tools.Utils
         /// <param name="size">size for the dialog. Size.Empty to use default size</param>
         public virtual void ShowError(object modalOwner, Exception error, string friendlyErrorDescription, bool allowDetails, bool modal, Size size)
         {
-            IWin32Window owner = NetOffice.Tools.WndUtils.Win32Window.Create(modalOwner);
+            IWin32Window owner = Running.Win32Window.Create(modalOwner);
 
             bool isCurrentlySuspended = IsCurrentlySuspended();
 
@@ -716,7 +716,7 @@ namespace NetOffice.OfficeApi.Tools.Utils
         /// <param name="licenceText">licence informations</param>
         public void ShowAbout(object modalOwner, bool modal, Size size, string headerCaption, string assemblyTitle, string assemblyVersion, string copyrightHint, string companyName, string companyUrl, string licenceText)
         {
-            IWin32Window owner = NetOffice.Tools.WndUtils.Win32Window.Create(modalOwner);
+            IWin32Window owner = Running.Win32Window.Create(modalOwner);
 
             bool isCurrentlySuspended = IsCurrentlySuspended();
 
@@ -797,7 +797,7 @@ namespace NetOffice.OfficeApi.Tools.Utils
         /// <returns>DialogResult, always none if not modal</returns>
         public virtual Result ShowText(object modalOwner, string caption, string text, string checkText, bool modal, Size size, int timeoutSeconds, bool skipOnUserAction, Result defaultResult)
         {
-            IWin32Window owner = NetOffice.Tools.WndUtils.Win32Window.Create(modalOwner);
+            IWin32Window owner = Running.Win32Window.Create(modalOwner);
 
             bool isCurrentlySuspended = IsCurrentlySuspended();
 
@@ -919,7 +919,7 @@ namespace NetOffice.OfficeApi.Tools.Utils
         /// <returns>user selection</returns>
         public Result ShowMessageBox(object modalOwner, string text, string caption, Buttons buttons, MessageIcon icon, Result defaultResult)
         {
-            IWin32Window owner = NetOffice.Tools.WndUtils.Win32Window.Create(modalOwner);
+            IWin32Window owner = Running.Win32Window.Create(modalOwner);
 
             bool isCurrentlySuspended = IsCurrentlySuspended();
 
@@ -1042,7 +1042,7 @@ namespace NetOffice.OfficeApi.Tools.Utils
         {
             Form dialog = (Form)dialogInstance;
 
-            IWin32Window owner = NetOffice.Tools.WndUtils.Win32Window.Create(modalOwner);
+            IWin32Window owner = Running.Win32Window.Create(modalOwner);
 
             bool isCurrentlySuspended = IsCurrentlySuspended();
 

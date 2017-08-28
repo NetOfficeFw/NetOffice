@@ -76,11 +76,11 @@ namespace NetOffice.WordApi.Tools.Utils
                     return false;                
             }
 
-            NetOffice.Tools.WndUtils.ChildWindowEnumerator childEnumerator = new NetOffice.Tools.WndUtils.ChildWindowEnumerator(new IntPtr(handle), "Ribbon");
+            Running.ChildWindowEnumerator childEnumerator = new Running.ChildWindowEnumerator(new IntPtr(handle), "Ribbon");
             IntPtr[] handles = childEnumerator.EnumerateWindows(2000);
             if (null != handles && handles.Length > 0)
             {
-                NetRuntimeSystem.Drawing.Rectangle rect = NetOffice.Tools.WndUtils.WindowEnumerator.GetWindowRect(handles[0]);
+                NetRuntimeSystem.Drawing.Rectangle rect = Running.WindowEnumerator.GetWindowRect(handles[0]);
                 return rect.Height >= _ribbonHeightExpandedLimit;
             }
             else
@@ -116,7 +116,7 @@ namespace NetOffice.WordApi.Tools.Utils
             try
             {
                 int result = 0;
-                NetOffice.Tools.WndUtils.WindowEnumerator enumerator = new NetOffice.Tools.WndUtils.WindowEnumerator("OpusApp");
+                Running.WindowEnumerator enumerator = new Running.WindowEnumerator("OpusApp");
                 IntPtr[] handles = enumerator.EnumerateWindows(2000);
              
                 foreach (IntPtr item in handles)

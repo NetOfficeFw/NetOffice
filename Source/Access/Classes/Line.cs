@@ -1,12 +1,10 @@
 ﻿using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
-using NetOffice;
-using NetOffice.Misc;
+using NetOffice.Attributes;
 
 namespace NetOffice.AccessApi
 {
-
 	#region Delegates
 
 	#pragma warning disable
@@ -14,23 +12,25 @@ namespace NetOffice.AccessApi
 
 	#endregion
 
-	///<summary>
+	/// <summary>
 	/// CoClass Line 
 	/// SupportByVersion Access, 9,10,11,12,14,15,16
-	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822072.aspx
-	///</summary>
-	[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
-	[EntityTypeAttribute(EntityType.IsCoClass)]
-	public class Line : _Line,IEventBinding
+	/// </summary>
+	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff822072.aspx </remarks>
+	[SupportByVersion("Access", 9,10,11,12,14,15,16)]
+	[EntityType(EntityType.IsCoClass)]
+    [EventSink(typeof(Events._LineEvents_SinkHelper), typeof(Events.DispLineEvents_SinkHelper))]
+    public class Line : _Line, IEventBinding
 	{
 		#pragma warning disable
+
 		#region Fields
 		
 		private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
 		private string _activeSinkId;
 		private NetRuntimeSystem.Type _thisType;
-		_LineEvents_SinkHelper __LineEvents_SinkHelper;
-		DispLineEvents_SinkHelper _dispLineEvents_SinkHelper;
+		private Events._LineEvents_SinkHelper __LineEvents_SinkHelper;
+		private Events.DispLineEvents_SinkHelper _dispLineEvents_SinkHelper;
 	
 		#endregion
 
@@ -39,6 +39,7 @@ namespace NetOffice.AccessApi
         /// <summary>
         /// Instance Type
         /// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
         public override Type InstanceType
         {
             get
@@ -105,17 +106,17 @@ namespace NetOffice.AccessApi
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of Line 
-        ///</summary>		
+        /// </summary>		
 		public Line():base("Access.Line")
 		{
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of Line
-        ///</summary>
+        /// </summary>
         ///<param name="progId">registered ProgID</param>
 		public Line(string progId):base(progId)
 		{
@@ -125,46 +126,6 @@ namespace NetOffice.AccessApi
 		#endregion
 
 		#region Static CoClass Methods
-
-		/// <summary>
-        /// Returns all running Access.Line objects from the environment/system
-        /// </summary>
-        /// <returns>an Access.Line array</returns>
-		public static NetOffice.AccessApi.Line[] GetActiveInstances()
-		{		
-			IDisposableEnumeration proxyList = NetOffice.ProxyService.GetActiveInstances("Access","Line");
-			NetRuntimeSystem.Collections.Generic.List<NetOffice.AccessApi.Line> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.AccessApi.Line>();
-			foreach(object proxy in proxyList)
-				resultList.Add( new NetOffice.AccessApi.Line(null, proxy) );
-			return resultList.ToArray();
-		}
-
-		/// <summary>
-        /// Returns a running Access.Line object from the environment/system.
-        /// </summary>
-        /// <returns>an Access.Line object or null</returns>
-		public static NetOffice.AccessApi.Line GetActiveInstance()
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Access","Line", false);
-			if(null != proxy)
-				return new NetOffice.AccessApi.Line(null, proxy);
-			else
-				return null;
-		}
-
-		/// <summary>
-        /// Returns a running Access.Line object from the environment/system. 
-        /// </summary>
-	    /// <param name="throwOnError">throw an exception if no object was found</param>
-        /// <returns>an Access.Line object or null</returns>
-		public static NetOffice.AccessApi.Line GetActiveInstance(bool throwOnError)
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Access","Line", throwOnError);
-			if(null != proxy)
-				return new NetOffice.AccessApi.Line(null, proxy);
-			else
-				return null;
-		}
 		#endregion
 
 		#region Events
@@ -186,18 +147,18 @@ namespace NetOffice.AccessApi
 				return;
 	
             if (null == _activeSinkId)
-				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, _LineEvents_SinkHelper.Id,DispLineEvents_SinkHelper.Id);
+				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, Events._LineEvents_SinkHelper.Id, Events.DispLineEvents_SinkHelper.Id);
 
 
-			if(_LineEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
+			if(Events._LineEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
 			{
-				__LineEvents_SinkHelper = new _LineEvents_SinkHelper(this, _connectPoint);
+				__LineEvents_SinkHelper = new Events._LineEvents_SinkHelper(this, _connectPoint);
 				return;
 			}
 
-			if(DispLineEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
+			if(Events.DispLineEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
 			{
-				_dispLineEvents_SinkHelper = new DispLineEvents_SinkHelper(this, _connectPoint);
+				_dispLineEvents_SinkHelper = new Events.DispLineEvents_SinkHelper(this, _connectPoint);
 				return;
 			} 
         }
@@ -344,3 +305,4 @@ namespace NetOffice.AccessApi
 		#pragma warning restore
 	}
 }
+

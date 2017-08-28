@@ -1,12 +1,10 @@
 ﻿using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
-using NetOffice;
-using NetOffice.Misc;
+using NetOffice.Attributes;
 
 namespace NetOffice.AccessApi
 {
-
 	#region Delegates
 
 	#pragma warning disable
@@ -14,16 +12,17 @@ namespace NetOffice.AccessApi
 
 	#endregion
 
-	///<summary>
+	/// <summary>
 	/// CoClass Control 
 	/// SupportByVersion Access, 9,10,11,12,14,15,16
-	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff834491.aspx
-	///</summary>
-	[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
-	[EntityTypeAttribute(EntityType.IsCoClass)]
-	public class Control : _Control
+	/// </summary>
+	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff834491.aspx </remarks>
+	[SupportByVersion("Access", 9,10,11,12,14,15,16)]
+	[EntityType(EntityType.IsCoClass)]
+ 	public class Control : _Control
 	{
 		#pragma warning disable
+
 		#region Fields
 		
 		private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
@@ -37,6 +36,7 @@ namespace NetOffice.AccessApi
         /// <summary>
         /// Instance Type
         /// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
         public override Type InstanceType
         {
             get
@@ -103,17 +103,17 @@ namespace NetOffice.AccessApi
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of Control 
-        ///</summary>		
+        /// </summary>		
 		public Control():base("Access.Control")
 		{
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of Control
-        ///</summary>
+        /// </summary>
         ///<param name="progId">registered ProgID</param>
 		public Control(string progId):base(progId)
 		{
@@ -123,46 +123,6 @@ namespace NetOffice.AccessApi
 		#endregion
 
 		#region Static CoClass Methods
-
-		/// <summary>
-        /// Returns all running Access.Control objects from the environment/system
-        /// </summary>
-        /// <returns>an Access.Control array</returns>
-		public static NetOffice.AccessApi.Control[] GetActiveInstances()
-		{		
-			IDisposableEnumeration proxyList = NetOffice.ProxyService.GetActiveInstances("Access","Control");
-			NetRuntimeSystem.Collections.Generic.List<NetOffice.AccessApi.Control> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.AccessApi.Control>();
-			foreach(object proxy in proxyList)
-				resultList.Add( new NetOffice.AccessApi.Control(null, proxy) );
-			return resultList.ToArray();
-		}
-
-		/// <summary>
-        /// Returns a running Access.Control object from the environment/system.
-        /// </summary>
-        /// <returns>an Access.Control object or null</returns>
-		public static NetOffice.AccessApi.Control GetActiveInstance()
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Access","Control", false);
-			if(null != proxy)
-				return new NetOffice.AccessApi.Control(null, proxy);
-			else
-				return null;
-		}
-
-		/// <summary>
-        /// Returns a running Access.Control object from the environment/system. 
-        /// </summary>
-	    /// <param name="throwOnError">throw an exception if no object was found</param>
-        /// <returns>an Access.Control object or null</returns>
-		public static NetOffice.AccessApi.Control GetActiveInstance(bool throwOnError)
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Access","Control", throwOnError);
-			if(null != proxy)
-				return new NetOffice.AccessApi.Control(null, proxy);
-			else
-				return null;
-		}
 		#endregion
 
 		#region Events
@@ -321,3 +281,4 @@ namespace NetOffice.AccessApi
 		#pragma warning restore
 	}
 }
+

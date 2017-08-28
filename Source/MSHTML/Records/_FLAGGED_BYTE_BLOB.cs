@@ -2,32 +2,33 @@
 using System;
 using System.Runtime.InteropServices;
 using NetOffice;
+using NetOffice.Attributes;
 namespace NetOffice.MSHTMLApi
 {
 	 /// <summary>
 	 /// SupportByVersion MSHTML 4
 	 /// </summary>
-	[SupportByVersionAttribute("MSHTML", 4)]
+	[SupportByVersion("MSHTML", 4)]
 	[StructLayout(LayoutKind.Sequential, Pack=4), Guid("00000000-0000-0000-0000-000000000000")]
-	[EntityTypeAttribute(EntityType.IsStruct)]
+	[EntityType(EntityType.IsStruct)]
 	public struct _FLAGGED_BYTE_BLOB
 	{
 		 /// <summary>
 		 /// SupportByVersion MSHTML 4
 		 /// </summary>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[SupportByVersion("MSHTML", 4)]
 		public Int32 fFlags;
 
 		 /// <summary>
 		 /// SupportByVersion MSHTML 4
 		 /// </summary>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[SupportByVersion("MSHTML", 4)]
 		public Int32 clSize;
 
 		 /// <summary>
 		 /// SupportByVersion MSHTML 4
 		 /// </summary>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[SupportByVersion("MSHTML", 4)]
 		public byte abData;
 	}
 }

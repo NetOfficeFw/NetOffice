@@ -5,15 +5,14 @@ using System.Text;
 
 namespace NetOffice
 {
+    /// <summary>
+    /// Need to fix one design issue here in order to protect 
+    /// the ICOMObject->ParentObject setter from public. (RemoveParent(ICOMObject comObject))
+    /// COMDynamicObject prevent us to use an internal base class because its alread inherites
+    /// from System.Dynamic.DynamicObject.
+    /// </summary>
     internal static class COMObjectFaults
     {
-        /*
-            RemoveParent(ICOMObject comObject):
-            Need to make one design fail here in order to protect 
-            the ICOMObject->ParentObject setter from public.
-            (COMDynamicObject prevent us to use an internal base class because its alread inherites
-            from System.Dynamic.DynamicObject)
-        */
         /// <summary>
         /// Remove parent object from ICOMObject instance
         /// </summary>
@@ -33,7 +32,9 @@ namespace NetOffice
                 instance1.ParentObject = null;
                 return;
             }
-            
+
+            // Todo: Check COMDuckObject here when its finished
+
             throw new ArgumentException("Unknown Instance Type " + comObject.GetType().FullName);
         }
     }

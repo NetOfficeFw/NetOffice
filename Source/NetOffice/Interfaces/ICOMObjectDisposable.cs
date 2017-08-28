@@ -1,10 +1,41 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+using NetRuntimeSystem = System;
+using System.ComponentModel;
+using NetOffice.Attributes;
 
 namespace NetOffice
 {
+    /// <summary>
+    /// OnDispose Event Arguments
+    /// </summary>
+    public class OnDisposeEventArgs : EventArgs
+    {
+        /// <summary>
+        /// Creates a new instance of the class
+        /// </summary>
+        /// <param name="sender">the target COM object</param>
+        internal OnDisposeEventArgs(ICOMObject sender)
+        {
+            Sender = sender;
+        }
+
+        /// <summary>
+        /// Target COM object
+        /// </summary>
+        public ICOMObject Sender { get; private set; }
+
+        /// <summary>
+        /// Skip flag, you can cancel the operation if you want
+        /// </summary>
+        public bool Cancel { get; set; }
+    }
+
+    /// <summary>
+    /// EventHandler delegate for ICOMObjectDisposable.OnDispose
+    /// </summary>
+    /// <param name="eventArgs"></param>
+    public delegate void OnDisposeEventHandler(OnDisposeEventArgs eventArgs);
+
     /// <summary>
     /// Represents various dispose possibilities
     /// </summary>
@@ -32,3 +63,5 @@ namespace NetOffice
         void Dispose(bool disposeEventBinding);
     }
 }
+
+

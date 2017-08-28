@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace NetOffice.Tools
+namespace NetOffice.Attributes
 {
     /// <summary>
     /// Indicates a static method is to call from RegAddin while register addin

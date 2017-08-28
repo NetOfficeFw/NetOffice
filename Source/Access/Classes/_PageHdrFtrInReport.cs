@@ -1,43 +1,43 @@
 ﻿using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
-using NetOffice;
-using NetOffice.Misc;
+using NetOffice.Attributes;
 
 namespace NetOffice.AccessApi
 {
-
 	#region Delegates
 
 	#pragma warning disable
-	public delegate void _PageHdrFtrInReport_FormatEventHandler(ref Int16 Cancel, ref Int16 FormatCount);
-	public delegate void _PageHdrFtrInReport_PrintEventHandler(ref Int16 Cancel, ref Int16 PrintCount);
+	public delegate void _PageHdrFtrInReport_FormatEventHandler(ref Int16 cancel, ref Int16 formatCount);
+	public delegate void _PageHdrFtrInReport_PrintEventHandler(ref Int16 cancel, ref Int16 printCount);
 	public delegate void _PageHdrFtrInReport_ClickEventHandler();
-	public delegate void _PageHdrFtrInReport_DblClickEventHandler(ref Int16 Cancel);
-	public delegate void _PageHdrFtrInReport_MouseDownEventHandler(ref Int16 Button, ref Int16 Shift, ref Single X, ref Single Y);
-	public delegate void _PageHdrFtrInReport_MouseMoveEventHandler(ref Int16 Button, ref Int16 Shift, ref Single X, ref Single Y);
-	public delegate void _PageHdrFtrInReport_MouseUpEventHandler(ref Int16 Button, ref Int16 Shift, ref Single X, ref Single Y);
+	public delegate void _PageHdrFtrInReport_DblClickEventHandler(ref Int16 cancel);
+	public delegate void _PageHdrFtrInReport_MouseDownEventHandler(ref Int16 button, ref Int16 shift, ref Single x, ref Single y);
+	public delegate void _PageHdrFtrInReport_MouseMoveEventHandler(ref Int16 button, ref Int16 shift, ref Single x, ref Single y);
+	public delegate void _PageHdrFtrInReport_MouseUpEventHandler(ref Int16 button, ref Int16 shift, ref Single x, ref Single y);
 	public delegate void _PageHdrFtrInReport_PaintEventHandler();
 	#pragma warning restore
 
 	#endregion
 
-	///<summary>
+	/// <summary>
 	/// CoClass _PageHdrFtrInReport 
 	/// SupportByVersion Access, 9,10,11,12,14,15,16
-	///</summary>
-	[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
-	[EntityTypeAttribute(EntityType.IsCoClass)]
-	public class _PageHdrFtrInReport : _Section,IEventBinding
+	/// </summary>
+	[SupportByVersion("Access", 9,10,11,12,14,15,16)]
+	[EntityType(EntityType.IsCoClass)]
+    [EventSink(typeof(Events._PageHdrFtrInReportEvents_SinkHelper), typeof(Events.DispPageHdrFtrInReportEvents_SinkHelper))]
+    public class _PageHdrFtrInReport : _Section, IEventBinding
 	{
 		#pragma warning disable
+
 		#region Fields
 		
 		private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
 		private string _activeSinkId;
 		private NetRuntimeSystem.Type _thisType;
-		_PageHdrFtrInReportEvents_SinkHelper __PageHdrFtrInReportEvents_SinkHelper;
-		DispPageHdrFtrInReportEvents_SinkHelper _dispPageHdrFtrInReportEvents_SinkHelper;
+		private Events._PageHdrFtrInReportEvents_SinkHelper __PageHdrFtrInReportEvents_SinkHelper;
+		private Events.DispPageHdrFtrInReportEvents_SinkHelper _dispPageHdrFtrInReportEvents_SinkHelper;
 	
 		#endregion
 
@@ -46,6 +46,7 @@ namespace NetOffice.AccessApi
         /// <summary>
         /// Instance Type
         /// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
         public override Type InstanceType
         {
             get
@@ -112,17 +113,17 @@ namespace NetOffice.AccessApi
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of _PageHdrFtrInReport 
-        ///</summary>		
+        /// </summary>		
 		public _PageHdrFtrInReport():base("Access._PageHdrFtrInReport")
 		{
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of _PageHdrFtrInReport
-        ///</summary>
+        /// </summary>
         ///<param name="progId">registered ProgID</param>
 		public _PageHdrFtrInReport(string progId):base(progId)
 		{
@@ -132,46 +133,6 @@ namespace NetOffice.AccessApi
 		#endregion
 
 		#region Static CoClass Methods
-
-		/// <summary>
-        /// Returns all running Access._PageHdrFtrInReport objects from the environment/system
-        /// </summary>
-        /// <returns>an Access._PageHdrFtrInReport array</returns>
-		public static NetOffice.AccessApi._PageHdrFtrInReport[] GetActiveInstances()
-		{		
-			IDisposableEnumeration proxyList = NetOffice.ProxyService.GetActiveInstances("Access","_PageHdrFtrInReport");
-			NetRuntimeSystem.Collections.Generic.List<NetOffice.AccessApi._PageHdrFtrInReport> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.AccessApi._PageHdrFtrInReport>();
-			foreach(object proxy in proxyList)
-				resultList.Add( new NetOffice.AccessApi._PageHdrFtrInReport(null, proxy) );
-			return resultList.ToArray();
-		}
-
-		/// <summary>
-        /// Returns a running Access._PageHdrFtrInReport object from the environment/system.
-        /// </summary>
-        /// <returns>an Access._PageHdrFtrInReport object or null</returns>
-		public static NetOffice.AccessApi._PageHdrFtrInReport GetActiveInstance()
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Access","_PageHdrFtrInReport", false);
-			if(null != proxy)
-				return new NetOffice.AccessApi._PageHdrFtrInReport(null, proxy);
-			else
-				return null;
-		}
-
-		/// <summary>
-        /// Returns a running Access._PageHdrFtrInReport object from the environment/system. 
-        /// </summary>
-	    /// <param name="throwOnError">throw an exception if no object was found</param>
-        /// <returns>an Access._PageHdrFtrInReport object or null</returns>
-		public static NetOffice.AccessApi._PageHdrFtrInReport GetActiveInstance(bool throwOnError)
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Access","_PageHdrFtrInReport", throwOnError);
-			if(null != proxy)
-				return new NetOffice.AccessApi._PageHdrFtrInReport(null, proxy);
-			else
-				return null;
-		}
 		#endregion
 
 		#region Events
@@ -369,18 +330,18 @@ namespace NetOffice.AccessApi
 				return;
 	
             if (null == _activeSinkId)
-				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, _PageHdrFtrInReportEvents_SinkHelper.Id,DispPageHdrFtrInReportEvents_SinkHelper.Id);
+				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, Events._PageHdrFtrInReportEvents_SinkHelper.Id, Events.DispPageHdrFtrInReportEvents_SinkHelper.Id);
 
 
-			if(_PageHdrFtrInReportEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
+			if(Events._PageHdrFtrInReportEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
 			{
-				__PageHdrFtrInReportEvents_SinkHelper = new _PageHdrFtrInReportEvents_SinkHelper(this, _connectPoint);
+				__PageHdrFtrInReportEvents_SinkHelper = new Events._PageHdrFtrInReportEvents_SinkHelper(this, _connectPoint);
 				return;
 			}
 
-			if(DispPageHdrFtrInReportEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
+			if(Events.DispPageHdrFtrInReportEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
 			{
-				_dispPageHdrFtrInReportEvents_SinkHelper = new DispPageHdrFtrInReportEvents_SinkHelper(this, _connectPoint);
+				_dispPageHdrFtrInReportEvents_SinkHelper = new Events.DispPageHdrFtrInReportEvents_SinkHelper(this, _connectPoint);
 				return;
 			} 
         }
@@ -527,3 +488,4 @@ namespace NetOffice.AccessApi
 		#pragma warning restore
 	}
 }
+

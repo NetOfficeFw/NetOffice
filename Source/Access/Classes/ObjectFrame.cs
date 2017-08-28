@@ -1,46 +1,46 @@
 ﻿using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
-using NetOffice;
-using NetOffice.Misc;
+using NetOffice.Attributes;
 
 namespace NetOffice.AccessApi
 {
-
 	#region Delegates
 
 	#pragma warning disable
-	public delegate void ObjectFrame_UpdatedEventHandler(ref Int16 Code);
+	public delegate void ObjectFrame_UpdatedEventHandler(ref Int16 code);
 	public delegate void ObjectFrame_EnterEventHandler();
-	public delegate void ObjectFrame_ExitEventHandler(ref Int16 Cancel);
+	public delegate void ObjectFrame_ExitEventHandler(ref Int16 cancel);
 	public delegate void ObjectFrame_GotFocusEventHandler();
 	public delegate void ObjectFrame_LostFocusEventHandler();
 	public delegate void ObjectFrame_ClickEventHandler();
-	public delegate void ObjectFrame_DblClickEventHandler(ref Int16 Cancel);
-	public delegate void ObjectFrame_MouseDownEventHandler(ref Int16 Button, ref Int16 Shift, ref Single X, ref Single Y);
-	public delegate void ObjectFrame_MouseMoveEventHandler(ref Int16 Button, ref Int16 Shift, ref Single X, ref Single Y);
-	public delegate void ObjectFrame_MouseUpEventHandler(ref Int16 Button, ref Int16 Shift, ref Single X, ref Single Y);
+	public delegate void ObjectFrame_DblClickEventHandler(ref Int16 cancel);
+	public delegate void ObjectFrame_MouseDownEventHandler(ref Int16 button, ref Int16 shift, ref Single x, ref Single y);
+	public delegate void ObjectFrame_MouseMoveEventHandler(ref Int16 button, ref Int16 shift, ref Single x, ref Single y);
+	public delegate void ObjectFrame_MouseUpEventHandler(ref Int16 button, ref Int16 shift, ref Single x, ref Single y);
 	#pragma warning restore
 
 	#endregion
 
-	///<summary>
+	/// <summary>
 	/// CoClass ObjectFrame 
 	/// SupportByVersion Access, 9,10,11,12,14,15,16
-	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845258.aspx
-	///</summary>
-	[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
-	[EntityTypeAttribute(EntityType.IsCoClass)]
-	public class ObjectFrame : _ObjectFrame,IEventBinding
+	/// </summary>
+	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff845258.aspx </remarks>
+	[SupportByVersion("Access", 9,10,11,12,14,15,16)]
+	[EntityType(EntityType.IsCoClass)]
+    [EventSink(typeof(Events._ObjectFrameEvents_SinkHelper), typeof(Events.DispObjectFrameEvents_SinkHelper))]
+    public class ObjectFrame : _ObjectFrame, IEventBinding
 	{
 		#pragma warning disable
+
 		#region Fields
 		
 		private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
 		private string _activeSinkId;
 		private NetRuntimeSystem.Type _thisType;
-		_ObjectFrameEvents_SinkHelper __ObjectFrameEvents_SinkHelper;
-		DispObjectFrameEvents_SinkHelper _dispObjectFrameEvents_SinkHelper;
+		private Events._ObjectFrameEvents_SinkHelper __ObjectFrameEvents_SinkHelper;
+		private Events.DispObjectFrameEvents_SinkHelper _dispObjectFrameEvents_SinkHelper;
 	
 		#endregion
 
@@ -49,6 +49,7 @@ namespace NetOffice.AccessApi
         /// <summary>
         /// Instance Type
         /// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
         public override Type InstanceType
         {
             get
@@ -115,17 +116,17 @@ namespace NetOffice.AccessApi
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of ObjectFrame 
-        ///</summary>		
+        /// </summary>		
 		public ObjectFrame():base("Access.ObjectFrame")
 		{
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of ObjectFrame
-        ///</summary>
+        /// </summary>
         ///<param name="progId">registered ProgID</param>
 		public ObjectFrame(string progId):base(progId)
 		{
@@ -135,46 +136,6 @@ namespace NetOffice.AccessApi
 		#endregion
 
 		#region Static CoClass Methods
-
-		/// <summary>
-        /// Returns all running Access.ObjectFrame objects from the environment/system
-        /// </summary>
-        /// <returns>an Access.ObjectFrame array</returns>
-		public static NetOffice.AccessApi.ObjectFrame[] GetActiveInstances()
-		{		
-			IDisposableEnumeration proxyList = NetOffice.ProxyService.GetActiveInstances("Access","ObjectFrame");
-			NetRuntimeSystem.Collections.Generic.List<NetOffice.AccessApi.ObjectFrame> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.AccessApi.ObjectFrame>();
-			foreach(object proxy in proxyList)
-				resultList.Add( new NetOffice.AccessApi.ObjectFrame(null, proxy) );
-			return resultList.ToArray();
-		}
-
-		/// <summary>
-        /// Returns a running Access.ObjectFrame object from the environment/system.
-        /// </summary>
-        /// <returns>an Access.ObjectFrame object or null</returns>
-		public static NetOffice.AccessApi.ObjectFrame GetActiveInstance()
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Access","ObjectFrame", false);
-			if(null != proxy)
-				return new NetOffice.AccessApi.ObjectFrame(null, proxy);
-			else
-				return null;
-		}
-
-		/// <summary>
-        /// Returns a running Access.ObjectFrame object from the environment/system. 
-        /// </summary>
-	    /// <param name="throwOnError">throw an exception if no object was found</param>
-        /// <returns>an Access.ObjectFrame object or null</returns>
-		public static NetOffice.AccessApi.ObjectFrame GetActiveInstance(bool throwOnError)
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Access","ObjectFrame", throwOnError);
-			if(null != proxy)
-				return new NetOffice.AccessApi.ObjectFrame(null, proxy);
-			else
-				return null;
-		}
 		#endregion
 
 		#region Events
@@ -426,18 +387,18 @@ namespace NetOffice.AccessApi
 				return;
 	
             if (null == _activeSinkId)
-				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, _ObjectFrameEvents_SinkHelper.Id,DispObjectFrameEvents_SinkHelper.Id);
+				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, Events._ObjectFrameEvents_SinkHelper.Id, Events.DispObjectFrameEvents_SinkHelper.Id);
 
 
-			if(_ObjectFrameEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
+			if(Events._ObjectFrameEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
 			{
-				__ObjectFrameEvents_SinkHelper = new _ObjectFrameEvents_SinkHelper(this, _connectPoint);
+				__ObjectFrameEvents_SinkHelper = new Events._ObjectFrameEvents_SinkHelper(this, _connectPoint);
 				return;
 			}
 
-			if(DispObjectFrameEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
+			if(Events.DispObjectFrameEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
 			{
-				_dispObjectFrameEvents_SinkHelper = new DispObjectFrameEvents_SinkHelper(this, _connectPoint);
+				_dispObjectFrameEvents_SinkHelper = new Events.DispObjectFrameEvents_SinkHelper(this, _connectPoint);
 				return;
 			} 
         }
@@ -584,3 +545,4 @@ namespace NetOffice.AccessApi
 		#pragma warning restore
 	}
 }
+

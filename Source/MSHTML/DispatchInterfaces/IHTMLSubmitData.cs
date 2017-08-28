@@ -1,23 +1,33 @@
 ﻿using System;
 using NetRuntimeSystem = System;
-using System.Runtime.InteropServices;
-using System.Runtime.CompilerServices;
 using System.ComponentModel;
-using System.Reflection;
-using System.Collections.Generic;
-using NetOffice;
+using NetOffice.Attributes;
+
 namespace NetOffice.MSHTMLApi
 {
-	///<summary>
+	/// <summary>
 	/// DispatchInterface IHTMLSubmitData 
 	/// SupportByVersion MSHTML, 4
-	///</summary>
-	[SupportByVersionAttribute("MSHTML", 4)]
-	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
-	public class IHTMLSubmitData : IHTMLFormElement3
+	/// </summary>
+	[SupportByVersion("MSHTML", 4)]
+	[EntityType(EntityType.IsDispatchInterface)]
+ 	public class IHTMLSubmitData : IHTMLFormElement3
 	{
 		#pragma warning disable
+
 		#region Type Information
+
+		/// <summary>
+		/// Instance Type
+		/// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
+		public override Type InstanceType
+		{
+			get
+			{
+				return LateBindingApiWrapperType;
+			}
+		}
 
         private static Type _type;
 
@@ -28,7 +38,6 @@ namespace NetOffice.MSHTMLApi
             {
                 if (null == _type)
                     _type = typeof(IHTMLSubmitData);
-                    
                 return _type;
             }
         }
@@ -81,7 +90,7 @@ namespace NetOffice.MSHTMLApi
 		{
 		}
 		
-		/// <param name="progId">registered ProgID</param>
+		/// <param name="progId">registered progID</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public IHTMLSubmitData(string progId) : base(progId)
 		{
@@ -97,92 +106,82 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
-		/// 
 		/// </summary>
 		/// <param name="name">optional string name = </param>
 		/// <param name="value">optional string value = </param>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[SupportByVersion("MSHTML", 4)]
 		public void appendNameValuePair(object name, object value)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(name, value);
-			Invoker.Method(this, "appendNameValuePair", paramsArray);
+			 Factory.ExecuteMethod(this, "appendNameValuePair", name, value);
 		}
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
-		/// 
 		/// </summary>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[CustomMethod]
+		[SupportByVersion("MSHTML", 4)]
 		public void appendNameValuePair()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "appendNameValuePair", paramsArray);
+			 Factory.ExecuteMethod(this, "appendNameValuePair");
 		}
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
-		/// 
 		/// </summary>
 		/// <param name="name">optional string name = </param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[CustomMethod]
+		[SupportByVersion("MSHTML", 4)]
 		public void appendNameValuePair(object name)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(name);
-			Invoker.Method(this, "appendNameValuePair", paramsArray);
+			 Factory.ExecuteMethod(this, "appendNameValuePair", name);
 		}
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
-		/// 
 		/// </summary>
 		/// <param name="name">optional string name = </param>
 		/// <param name="filename">optional string filename = </param>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[SupportByVersion("MSHTML", 4)]
 		public void appendNameFilePair(object name, object filename)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(name, filename);
-			Invoker.Method(this, "appendNameFilePair", paramsArray);
+			 Factory.ExecuteMethod(this, "appendNameFilePair", name, filename);
 		}
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
-		/// 
 		/// </summary>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[CustomMethod]
+		[SupportByVersion("MSHTML", 4)]
 		public void appendNameFilePair()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "appendNameFilePair", paramsArray);
+			 Factory.ExecuteMethod(this, "appendNameFilePair");
 		}
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
-		/// 
 		/// </summary>
 		/// <param name="name">optional string name = </param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[CustomMethod]
+		[SupportByVersion("MSHTML", 4)]
 		public void appendNameFilePair(object name)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(name);
-			Invoker.Method(this, "appendNameFilePair", paramsArray);
+			 Factory.ExecuteMethod(this, "appendNameFilePair", name);
 		}
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[SupportByVersion("MSHTML", 4)]
 		public void appendItemSeparator()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "appendItemSeparator", paramsArray);
+			 Factory.ExecuteMethod(this, "appendItemSeparator");
 		}
 
 		#endregion
+
 		#pragma warning restore
 	}
 }
+
+
+

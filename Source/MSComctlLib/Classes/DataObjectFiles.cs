@@ -1,12 +1,10 @@
 ﻿using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
-using NetOffice;
-using NetOffice.Misc;
+using NetOffice.Attributes;
 
 namespace NetOffice.MSComctlLibApi
 {
-
 	#region Delegates
 
 	#pragma warning disable
@@ -14,15 +12,16 @@ namespace NetOffice.MSComctlLibApi
 
 	#endregion
 
-	///<summary>
+	/// <summary>
 	/// CoClass DataObjectFiles 
 	/// SupportByVersion MSComctlLib, 6
-	///</summary>
-	[SupportByVersionAttribute("MSComctlLib", 6)]
-	[EntityTypeAttribute(EntityType.IsCoClass)]
-	public class DataObjectFiles : IVBDataObjectFiles
+	/// </summary>
+	[SupportByVersion("MSComctlLib", 6)]
+	[EntityType(EntityType.IsCoClass)]
+ 	public class DataObjectFiles : IVBDataObjectFiles
 	{
 		#pragma warning disable
+
 		#region Fields
 		
 		private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
@@ -36,6 +35,7 @@ namespace NetOffice.MSComctlLibApi
         /// <summary>
         /// Instance Type
         /// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
         public override Type InstanceType
         {
             get
@@ -102,17 +102,17 @@ namespace NetOffice.MSComctlLibApi
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of DataObjectFiles 
-        ///</summary>		
+        /// </summary>		
 		public DataObjectFiles():base("MSComctlLib.DataObjectFiles")
 		{
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of DataObjectFiles
-        ///</summary>
+        /// </summary>
         ///<param name="progId">registered ProgID</param>
 		public DataObjectFiles(string progId):base(progId)
 		{
@@ -122,46 +122,6 @@ namespace NetOffice.MSComctlLibApi
 		#endregion
 
 		#region Static CoClass Methods
-
-		/// <summary>
-        /// Returns all running MSComctlLib.DataObjectFiles objects from the environment/system
-        /// </summary>
-        /// <returns>an MSComctlLib.DataObjectFiles array</returns>
-		public static NetOffice.MSComctlLibApi.DataObjectFiles[] GetActiveInstances()
-		{		
-			IDisposableEnumeration proxyList = NetOffice.ProxyService.GetActiveInstances("MSComctlLib","DataObjectFiles");
-			NetRuntimeSystem.Collections.Generic.List<NetOffice.MSComctlLibApi.DataObjectFiles> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.MSComctlLibApi.DataObjectFiles>();
-			foreach(object proxy in proxyList)
-				resultList.Add( new NetOffice.MSComctlLibApi.DataObjectFiles(null, proxy) );
-			return resultList.ToArray();
-		}
-
-		/// <summary>
-        /// Returns a running MSComctlLib.DataObjectFiles object from the environment/system.
-        /// </summary>
-        /// <returns>an MSComctlLib.DataObjectFiles object or null</returns>
-		public static NetOffice.MSComctlLibApi.DataObjectFiles GetActiveInstance()
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("MSComctlLib","DataObjectFiles", false);
-			if(null != proxy)
-				return new NetOffice.MSComctlLibApi.DataObjectFiles(null, proxy);
-			else
-				return null;
-		}
-
-		/// <summary>
-        /// Returns a running MSComctlLib.DataObjectFiles object from the environment/system. 
-        /// </summary>
-	    /// <param name="throwOnError">throw an exception if no object was found</param>
-        /// <returns>an MSComctlLib.DataObjectFiles object or null</returns>
-		public static NetOffice.MSComctlLibApi.DataObjectFiles GetActiveInstance(bool throwOnError)
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("MSComctlLib","DataObjectFiles", throwOnError);
-			if(null != proxy)
-				return new NetOffice.MSComctlLibApi.DataObjectFiles(null, proxy);
-			else
-				return null;
-		}
 		#endregion
 
 		#region Events
@@ -320,3 +280,4 @@ namespace NetOffice.MSComctlLibApi
 		#pragma warning restore
 	}
 }
+

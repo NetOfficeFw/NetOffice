@@ -1,41 +1,41 @@
 ﻿using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
-using NetOffice;
-using NetOffice.Misc;
+using NetOffice.Attributes;
 
 namespace NetOffice.AccessApi
 {
-
 	#region Delegates
 
 	#pragma warning disable
 	public delegate void Page_ClickEventHandler();
-	public delegate void Page_DblClickEventHandler(ref Int16 Cancel);
-	public delegate void Page_MouseDownEventHandler(ref Int16 Button, ref Int16 Shift, ref Single X, ref Single Y);
-	public delegate void Page_MouseMoveEventHandler(ref Int16 Button, ref Int16 Shift, ref Single X, ref Single Y);
-	public delegate void Page_MouseUpEventHandler(ref Int16 Button, ref Int16 Shift, ref Single X, ref Single Y);
+	public delegate void Page_DblClickEventHandler(ref Int16 cancel);
+	public delegate void Page_MouseDownEventHandler(ref Int16 button, ref Int16 shift, ref Single x, ref Single y);
+	public delegate void Page_MouseMoveEventHandler(ref Int16 button, ref Int16 shift, ref Single x, ref Single y);
+	public delegate void Page_MouseUpEventHandler(ref Int16 button, ref Int16 shift, ref Single x, ref Single y);
 	#pragma warning restore
 
 	#endregion
 
-	///<summary>
+	/// <summary>
 	/// CoClass Page 
 	/// SupportByVersion Access, 9,10,11,12,14,15,16
-	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194955.aspx
-	///</summary>
-	[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
-	[EntityTypeAttribute(EntityType.IsCoClass)]
-	public class Page : _Page,IEventBinding
+	/// </summary>
+	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194955.aspx </remarks>
+	[SupportByVersion("Access", 9,10,11,12,14,15,16)]
+	[EntityType(EntityType.IsCoClass)]
+    [EventSink(typeof(Events._PageEvents_SinkHelper), typeof(Events.DispPageEvents_SinkHelper))]
+    public class Page : _Page, IEventBinding
 	{
 		#pragma warning disable
+
 		#region Fields
 		
 		private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
 		private string _activeSinkId;
 		private NetRuntimeSystem.Type _thisType;
-		_PageEvents_SinkHelper __PageEvents_SinkHelper;
-		DispPageEvents_SinkHelper _dispPageEvents_SinkHelper;
+		private Events._PageEvents_SinkHelper __PageEvents_SinkHelper;
+		private Events.DispPageEvents_SinkHelper _dispPageEvents_SinkHelper;
 	
 		#endregion
 
@@ -44,6 +44,7 @@ namespace NetOffice.AccessApi
         /// <summary>
         /// Instance Type
         /// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
         public override Type InstanceType
         {
             get
@@ -110,17 +111,17 @@ namespace NetOffice.AccessApi
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of Page 
-        ///</summary>		
+        /// </summary>		
 		public Page():base("Access.Page")
 		{
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of Page
-        ///</summary>
+        /// </summary>
         ///<param name="progId">registered ProgID</param>
 		public Page(string progId):base(progId)
 		{
@@ -130,46 +131,6 @@ namespace NetOffice.AccessApi
 		#endregion
 
 		#region Static CoClass Methods
-
-		/// <summary>
-        /// Returns all running Access.Page objects from the environment/system
-        /// </summary>
-        /// <returns>an Access.Page array</returns>
-		public static NetOffice.AccessApi.Page[] GetActiveInstances()
-		{		
-			IDisposableEnumeration proxyList = NetOffice.ProxyService.GetActiveInstances("Access","Page");
-			NetRuntimeSystem.Collections.Generic.List<NetOffice.AccessApi.Page> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.AccessApi.Page>();
-			foreach(object proxy in proxyList)
-				resultList.Add( new NetOffice.AccessApi.Page(null, proxy) );
-			return resultList.ToArray();
-		}
-
-		/// <summary>
-        /// Returns a running Access.Page object from the environment/system.
-        /// </summary>
-        /// <returns>an Access.Page object or null</returns>
-		public static NetOffice.AccessApi.Page GetActiveInstance()
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Access","Page", false);
-			if(null != proxy)
-				return new NetOffice.AccessApi.Page(null, proxy);
-			else
-				return null;
-		}
-
-		/// <summary>
-        /// Returns a running Access.Page object from the environment/system. 
-        /// </summary>
-	    /// <param name="throwOnError">throw an exception if no object was found</param>
-        /// <returns>an Access.Page object or null</returns>
-		public static NetOffice.AccessApi.Page GetActiveInstance(bool throwOnError)
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Access","Page", throwOnError);
-			if(null != proxy)
-				return new NetOffice.AccessApi.Page(null, proxy);
-			else
-				return null;
-		}
 		#endregion
 
 		#region Events
@@ -306,18 +267,18 @@ namespace NetOffice.AccessApi
 				return;
 	
             if (null == _activeSinkId)
-				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, _PageEvents_SinkHelper.Id,DispPageEvents_SinkHelper.Id);
+				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, Events._PageEvents_SinkHelper.Id, Events.DispPageEvents_SinkHelper.Id);
 
 
-			if(_PageEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
+			if(Events._PageEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
 			{
-				__PageEvents_SinkHelper = new _PageEvents_SinkHelper(this, _connectPoint);
+				__PageEvents_SinkHelper = new Events._PageEvents_SinkHelper(this, _connectPoint);
 				return;
 			}
 
-			if(DispPageEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
+			if(Events.DispPageEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
 			{
-				_dispPageEvents_SinkHelper = new DispPageEvents_SinkHelper(this, _connectPoint);
+				_dispPageEvents_SinkHelper = new Events.DispPageEvents_SinkHelper(this, _connectPoint);
 				return;
 			} 
         }
@@ -464,3 +425,4 @@ namespace NetOffice.AccessApi
 		#pragma warning restore
 	}
 }
+

@@ -1,24 +1,35 @@
-﻿using System;
-using NetRuntimeSystem = System;
-using System.Runtime.InteropServices;
-using System.Runtime.CompilerServices;
-using System.ComponentModel;
-using System.Reflection;
+﻿using System.Collections;
 using System.Collections.Generic;
-using System.Collections;
-using NetOffice;
+using System;
+using NetRuntimeSystem = System;
+using System.ComponentModel;
+using NetOffice.Attributes;
+
 namespace NetOffice.MSComctlLibApi
 {
-	///<summary>
+	/// <summary>
 	/// DispatchInterface IComboItems 
 	/// SupportByVersion MSComctlLib, 6
-	///</summary>
-	[SupportByVersionAttribute("MSComctlLib", 6)]
-	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
-	public class IComboItems : COMObject ,IEnumerable<NetOffice.MSComctlLibApi.IComboItem>
+	/// </summary>
+	[SupportByVersion("MSComctlLib", 6)]
+	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Method), HasIndexProperty(IndexInvoke.Property, "Item")]
+	public class IComboItems : COMObject , IEnumerable<NetOffice.MSComctlLibApi.IComboItem>
 	{
 		#pragma warning disable
+
 		#region Type Information
+
+		/// <summary>
+		/// Instance Type
+		/// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
+		public override Type InstanceType
+		{
+			get
+			{
+				return LateBindingApiWrapperType;
+			}
+		}
 
         private static Type _type;
 
@@ -29,7 +40,6 @@ namespace NetOffice.MSComctlLibApi
             {
                 if (null == _type)
                     _type = typeof(IComboItems);
-                    
                 return _type;
             }
         }
@@ -82,7 +92,7 @@ namespace NetOffice.MSComctlLibApi
 		{
 		}
 		
-		/// <param name="progId">registered ProgID</param>
+		/// <param name="progId">registered progID</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public IComboItems(string progId) : base(progId)
 		{
@@ -96,36 +106,32 @@ namespace NetOffice.MSComctlLibApi
 		/// SupportByVersion MSComctlLib 6
 		/// Get/Set
 		/// </summary>
-		/// <param name="index">object Index</param>
-		[SupportByVersionAttribute("MSComctlLib", 6)]
+		/// <param name="index">object index</param>
+		[SupportByVersion("MSComctlLib", 6)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public NetOffice.MSComctlLibApi.IComboItem get__CollectionDefault(object index)
-		{		
-			object[] paramsArray = Invoker.ValidateParamsArray(index);
-			object returnItem = Invoker.PropertyGet(this, "_CollectionDefault", paramsArray);
-			NetOffice.MSComctlLibApi.IComboItem newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSComctlLibApi.IComboItem;
-			return newObject;
+		{
+			return Factory.ExecuteKnownReferencePropertyGet<NetOffice.MSComctlLibApi.IComboItem>(this, "_CollectionDefault", NetOffice.MSComctlLibApi.IComboItem.LateBindingApiWrapperType, index);
 		}
 
 		/// <summary>
 		/// SupportByVersion MSComctlLib 6
 		/// Get/Set
 		/// </summary>
-		/// <param name="index">object Index</param>
-		[SupportByVersionAttribute("MSComctlLib", 6)]
+		/// <param name="index">object index</param>
+		[SupportByVersion("MSComctlLib", 6)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public void set__CollectionDefault(object index, NetOffice.MSComctlLibApi.IComboItem value)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(index);
-			Invoker.PropertySet(this, "_CollectionDefault", paramsArray, value);
+			Factory.ExecutePropertySet(this, "_CollectionDefault", index, value);
 		}
 
 		/// <summary>
 		/// SupportByVersion MSComctlLib 6
 		/// Alias for get__CollectionDefault
 		/// </summary>
-		/// <param name="index">object Index</param>
-		[SupportByVersionAttribute("MSComctlLib", 6)]
+		/// <param name="index">object index</param>
+		[SupportByVersion("MSComctlLib", 6), Redirect("get__CollectionDefault")]
 		public NetOffice.MSComctlLibApi.IComboItem _CollectionDefault(object index)
 		{
 			return get__CollectionDefault(index);
@@ -135,19 +141,16 @@ namespace NetOffice.MSComctlLibApi
 		/// SupportByVersion MSComctlLib 6
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSComctlLib", 6)]
+		[SupportByVersion("MSComctlLib", 6)]
 		public Int32 Count
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Count", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "Count");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "Count", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "Count", value);
 			}
 		}
 
@@ -155,23 +158,19 @@ namespace NetOffice.MSComctlLibApi
 		/// SupportByVersion MSComctlLib 6
 		/// Get/Set
 		/// </summary>
-		/// <param name="index">object Index</param>
-		[SupportByVersionAttribute("MSComctlLib", 6)]
+		/// <param name="index">object index</param>
+		[SupportByVersion("MSComctlLib", 6)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
+		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
 		public NetOffice.MSComctlLibApi.IComboItem this[object index]
 		{
 			get
 			{
-			object[] paramsArray = Invoker.ValidateParamsArray(index);
-			object returnItem = Invoker.PropertyGet(this, "Item", paramsArray);
-			NetOffice.MSComctlLibApi.IComboItem newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSComctlLibApi.IComboItem;
-			return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.MSComctlLibApi.IComboItem>(this, "Item", NetOffice.MSComctlLibApi.IComboItem.LateBindingApiWrapperType, index);
 			}
 			set
 			{
-			object[] paramsArray = Invoker.ValidateParamsArray(index);
-			Invoker.PropertySet(this, "Item", paramsArray, value);
+				Factory.ExecuteReferencePropertySet(this, "Item", value, index);
 			}
 		}
 
@@ -181,143 +180,111 @@ namespace NetOffice.MSComctlLibApi
 
 		/// <summary>
 		/// SupportByVersion MSComctlLib 6
-		/// 
 		/// </summary>
-		/// <param name="index">optional object Index</param>
-		/// <param name="key">optional object Key</param>
-		/// <param name="text">optional object Text</param>
-		/// <param name="image">optional object Image</param>
-		/// <param name="selImage">optional object SelImage</param>
-		/// <param name="indentation">optional object Indentation</param>
-		[SupportByVersionAttribute("MSComctlLib", 6)]
+		/// <param name="index">optional object index</param>
+		/// <param name="key">optional object key</param>
+		/// <param name="text">optional object text</param>
+		/// <param name="image">optional object image</param>
+		/// <param name="selImage">optional object selImage</param>
+		/// <param name="indentation">optional object indentation</param>
+		[SupportByVersion("MSComctlLib", 6)]
 		public NetOffice.MSComctlLibApi.IComboItem Add(object index, object key, object text, object image, object selImage, object indentation)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(index, key, text, image, selImage, indentation);
-			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.MSComctlLibApi.IComboItem newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSComctlLibApi.IComboItem;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.MSComctlLibApi.IComboItem>(this, "Add", NetOffice.MSComctlLibApi.IComboItem.LateBindingApiWrapperType, new object[]{ index, key, text, image, selImage, indentation });
 		}
 
 		/// <summary>
 		/// SupportByVersion MSComctlLib 6
-		/// 
 		/// </summary>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSComctlLib", 6)]
+		[CustomMethod]
+		[SupportByVersion("MSComctlLib", 6)]
 		public NetOffice.MSComctlLibApi.IComboItem Add()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.MSComctlLibApi.IComboItem newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSComctlLibApi.IComboItem;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.MSComctlLibApi.IComboItem>(this, "Add", NetOffice.MSComctlLibApi.IComboItem.LateBindingApiWrapperType);
 		}
 
 		/// <summary>
 		/// SupportByVersion MSComctlLib 6
-		/// 
 		/// </summary>
-		/// <param name="index">optional object Index</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSComctlLib", 6)]
+		/// <param name="index">optional object index</param>
+		[CustomMethod]
+		[SupportByVersion("MSComctlLib", 6)]
 		public NetOffice.MSComctlLibApi.IComboItem Add(object index)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(index);
-			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.MSComctlLibApi.IComboItem newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSComctlLibApi.IComboItem;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.MSComctlLibApi.IComboItem>(this, "Add", NetOffice.MSComctlLibApi.IComboItem.LateBindingApiWrapperType, index);
 		}
 
 		/// <summary>
 		/// SupportByVersion MSComctlLib 6
-		/// 
 		/// </summary>
-		/// <param name="index">optional object Index</param>
-		/// <param name="key">optional object Key</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSComctlLib", 6)]
+		/// <param name="index">optional object index</param>
+		/// <param name="key">optional object key</param>
+		[CustomMethod]
+		[SupportByVersion("MSComctlLib", 6)]
 		public NetOffice.MSComctlLibApi.IComboItem Add(object index, object key)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(index, key);
-			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.MSComctlLibApi.IComboItem newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSComctlLibApi.IComboItem;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.MSComctlLibApi.IComboItem>(this, "Add", NetOffice.MSComctlLibApi.IComboItem.LateBindingApiWrapperType, index, key);
 		}
 
 		/// <summary>
 		/// SupportByVersion MSComctlLib 6
-		/// 
 		/// </summary>
-		/// <param name="index">optional object Index</param>
-		/// <param name="key">optional object Key</param>
-		/// <param name="text">optional object Text</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSComctlLib", 6)]
+		/// <param name="index">optional object index</param>
+		/// <param name="key">optional object key</param>
+		/// <param name="text">optional object text</param>
+		[CustomMethod]
+		[SupportByVersion("MSComctlLib", 6)]
 		public NetOffice.MSComctlLibApi.IComboItem Add(object index, object key, object text)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(index, key, text);
-			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.MSComctlLibApi.IComboItem newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSComctlLibApi.IComboItem;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.MSComctlLibApi.IComboItem>(this, "Add", NetOffice.MSComctlLibApi.IComboItem.LateBindingApiWrapperType, index, key, text);
 		}
 
 		/// <summary>
 		/// SupportByVersion MSComctlLib 6
-		/// 
 		/// </summary>
-		/// <param name="index">optional object Index</param>
-		/// <param name="key">optional object Key</param>
-		/// <param name="text">optional object Text</param>
-		/// <param name="image">optional object Image</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSComctlLib", 6)]
+		/// <param name="index">optional object index</param>
+		/// <param name="key">optional object key</param>
+		/// <param name="text">optional object text</param>
+		/// <param name="image">optional object image</param>
+		[CustomMethod]
+		[SupportByVersion("MSComctlLib", 6)]
 		public NetOffice.MSComctlLibApi.IComboItem Add(object index, object key, object text, object image)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(index, key, text, image);
-			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.MSComctlLibApi.IComboItem newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSComctlLibApi.IComboItem;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.MSComctlLibApi.IComboItem>(this, "Add", NetOffice.MSComctlLibApi.IComboItem.LateBindingApiWrapperType, index, key, text, image);
 		}
 
 		/// <summary>
 		/// SupportByVersion MSComctlLib 6
-		/// 
 		/// </summary>
-		/// <param name="index">optional object Index</param>
-		/// <param name="key">optional object Key</param>
-		/// <param name="text">optional object Text</param>
-		/// <param name="image">optional object Image</param>
-		/// <param name="selImage">optional object SelImage</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSComctlLib", 6)]
+		/// <param name="index">optional object index</param>
+		/// <param name="key">optional object key</param>
+		/// <param name="text">optional object text</param>
+		/// <param name="image">optional object image</param>
+		/// <param name="selImage">optional object selImage</param>
+		[CustomMethod]
+		[SupportByVersion("MSComctlLib", 6)]
 		public NetOffice.MSComctlLibApi.IComboItem Add(object index, object key, object text, object image, object selImage)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(index, key, text, image, selImage);
-			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.MSComctlLibApi.IComboItem newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSComctlLibApi.IComboItem;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.MSComctlLibApi.IComboItem>(this, "Add", NetOffice.MSComctlLibApi.IComboItem.LateBindingApiWrapperType, new object[]{ index, key, text, image, selImage });
 		}
 
 		/// <summary>
 		/// SupportByVersion MSComctlLib 6
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("MSComctlLib", 6)]
+		[SupportByVersion("MSComctlLib", 6)]
 		public void Clear()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "Clear", paramsArray);
+			 Factory.ExecuteMethod(this, "Clear");
 		}
 
 		/// <summary>
 		/// SupportByVersion MSComctlLib 6
-		/// 
 		/// </summary>
-		/// <param name="index">object Index</param>
-		[SupportByVersionAttribute("MSComctlLib", 6)]
+		/// <param name="index">object index</param>
+		[SupportByVersion("MSComctlLib", 6)]
 		public void Remove(object index)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(index);
-			Invoker.Method(this, "Remove", paramsArray);
+			 Factory.ExecuteMethod(this, "Remove", index);
 		}
 
 		#endregion
@@ -325,9 +292,9 @@ namespace NetOffice.MSComctlLibApi
        #region IEnumerable<NetOffice.MSComctlLibApi.IComboItem> Member
         
         /// <summary>
-		/// SupportByVersionAttribute MSComctlLib, 6
+		/// SupportByVersion MSComctlLib, 6
 		/// </summary>
-		[SupportByVersionAttribute("MSComctlLib", 6)]
+		[SupportByVersion("MSComctlLib", 6)]
        public IEnumerator<NetOffice.MSComctlLibApi.IComboItem> GetEnumerator()  
        {
            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
@@ -340,15 +307,19 @@ namespace NetOffice.MSComctlLibApi
 		#region IEnumerable Members
        
 		/// <summary>
-		/// SupportByVersionAttribute MSComctlLib, 6
+		/// SupportByVersion MSComctlLib, 6
 		/// </summary>
-		[SupportByVersionAttribute("MSComctlLib", 6)]
+		[SupportByVersion("MSComctlLib", 6)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
 			return NetOffice.Utils.GetProxyEnumeratorAsMethod(this);
 		}
 
 		#endregion
+
 		#pragma warning restore
 	}
 }
+
+
+

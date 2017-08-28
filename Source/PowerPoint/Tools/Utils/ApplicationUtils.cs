@@ -107,7 +107,7 @@ namespace NetOffice.PowerPointApi.Tools.Utils
             try
             {
                 int result = 0;
-                NetOffice.Tools.WndUtils.WindowEnumerator enumerator = new NetOffice.Tools.WndUtils.WindowEnumerator("PP", "FrameClass");
+                Running.WindowEnumerator enumerator = new Running.WindowEnumerator("PP", "FrameClass");
                 IntPtr[] handles = enumerator.EnumerateWindows(2000);
 
                 // if we have only one - we dont need to find out more

@@ -1,37 +1,37 @@
 ﻿using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
-using NetOffice;
-using NetOffice.Misc;
+using NetOffice.Attributes;
 
 namespace NetOffice.OutlookApi
 {
-
 	#region Delegates
 
 	#pragma warning disable
-	public delegate void Folder_BeforeFolderMoveEventHandler(NetOffice.OutlookApi.MAPIFolder MoveTo, ref bool Cancel);
-	public delegate void Folder_BeforeItemMoveEventHandler(COMObject Item, NetOffice.OutlookApi.MAPIFolder MoveTo, ref bool Cancel);
+	public delegate void Folder_BeforeFolderMoveEventHandler(NetOffice.OutlookApi.MAPIFolder moveTo, ref bool cancel);
+	public delegate void Folder_BeforeItemMoveEventHandler(ICOMObject item, NetOffice.OutlookApi.MAPIFolder moveTo, ref bool cancel);
 	#pragma warning restore
 
 	#endregion
 
-	///<summary>
+	/// <summary>
 	/// CoClass Folder 
 	/// SupportByVersion Outlook, 12,14,15,16
-	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff863890.aspx
-	///</summary>
-	[SupportByVersionAttribute("Outlook", 12,14,15,16)]
-	[EntityTypeAttribute(EntityType.IsCoClass)]
-	public class Folder : MAPIFolder,IEventBinding
+	/// </summary>
+	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff863890.aspx </remarks>
+	[SupportByVersion("Outlook", 12,14,15,16)]
+	[EntityType(EntityType.IsCoClass)]
+	[EventSink(typeof(Events.MAPIFolderEvents_12_SinkHelper))]
+	public class Folder : MAPIFolder, IEventBinding
 	{
 		#pragma warning disable
+
 		#region Fields
 		
 		private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
 		private string _activeSinkId;
 		private NetRuntimeSystem.Type _thisType;
-		MAPIFolderEvents_12_SinkHelper _mAPIFolderEvents_12_SinkHelper;
+		private Events.MAPIFolderEvents_12_SinkHelper _mAPIFolderEvents_12_SinkHelper;
 	
 		#endregion
 
@@ -40,6 +40,7 @@ namespace NetOffice.OutlookApi
         /// <summary>
         /// Instance Type
         /// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
         public override Type InstanceType
         {
             get
@@ -106,17 +107,17 @@ namespace NetOffice.OutlookApi
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of Folder 
-        ///</summary>		
+        /// </summary>		
 		public Folder():base("Outlook.Folder")
 		{
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of Folder
-        ///</summary>
+        /// </summary>
         ///<param name="progId">registered ProgID</param>
 		public Folder(string progId):base(progId)
 		{
@@ -126,46 +127,6 @@ namespace NetOffice.OutlookApi
 		#endregion
 
 		#region Static CoClass Methods
-
-		/// <summary>
-        /// Returns all running Outlook.Folder objects from the environment/system
-        /// </summary>
-        /// <returns>an Outlook.Folder array</returns>
-		public static NetOffice.OutlookApi.Folder[] GetActiveInstances()
-		{		
-			IDisposableEnumeration proxyList = NetOffice.ProxyService.GetActiveInstances("Outlook","Folder");
-			NetRuntimeSystem.Collections.Generic.List<NetOffice.OutlookApi.Folder> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.OutlookApi.Folder>();
-			foreach(object proxy in proxyList)
-				resultList.Add( new NetOffice.OutlookApi.Folder(null, proxy) );
-			return resultList.ToArray();
-		}
-
-		/// <summary>
-        /// Returns a running Outlook.Folder object from the environment/system.
-        /// </summary>
-        /// <returns>an Outlook.Folder object or null</returns>
-		public static NetOffice.OutlookApi.Folder GetActiveInstance()
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Outlook","Folder", false);
-			if(null != proxy)
-				return new NetOffice.OutlookApi.Folder(null, proxy);
-			else
-				return null;
-		}
-
-		/// <summary>
-        /// Returns a running Outlook.Folder object from the environment/system. 
-        /// </summary>
-	    /// <param name="throwOnError">throw an exception if no object was found</param>
-        /// <returns>an Outlook.Folder object or null</returns>
-		public static NetOffice.OutlookApi.Folder GetActiveInstance(bool throwOnError)
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Outlook","Folder", throwOnError);
-			if(null != proxy)
-				return new NetOffice.OutlookApi.Folder(null, proxy);
-			else
-				return null;
-		}
 		#endregion
 
 		#region Events
@@ -233,12 +194,12 @@ namespace NetOffice.OutlookApi
 				return;
 	
             if (null == _activeSinkId)
-				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, MAPIFolderEvents_12_SinkHelper.Id);
+				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, Events.MAPIFolderEvents_12_SinkHelper.Id);
 
 
-			if(MAPIFolderEvents_12_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
+			if(Events.MAPIFolderEvents_12_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
 			{
-				_mAPIFolderEvents_12_SinkHelper = new MAPIFolderEvents_12_SinkHelper(this, _connectPoint);
+				_mAPIFolderEvents_12_SinkHelper = new Events.MAPIFolderEvents_12_SinkHelper(this, _connectPoint);
 				return;
 			} 
         }
@@ -380,3 +341,4 @@ namespace NetOffice.OutlookApi
 		#pragma warning restore
 	}
 }
+

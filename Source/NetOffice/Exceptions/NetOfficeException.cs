@@ -3,12 +3,12 @@
 namespace NetOffice
 {
     /// <summary>
-    /// signals an exception occured in NetOffice.dll, not in corresonding NetOffice assembly
+    /// Indicates an exception occured in NetOffice.dll, not in corresonding NetOffice dependency assembly
     /// </summary>
     public class NetOfficeException : Exception
     {
         /// <summary>
-        /// creates instance
+        /// Creates an instance of the class
         /// </summary>
         /// <param name="message">given exception info</param>
         public NetOfficeException(string message) : base(message)
@@ -19,7 +19,7 @@ namespace NetOffice
         }
 
         /// <summary>
-        /// creates instance
+        /// Creates an instance of the class
         /// </summary>
         /// <param name="message">given exception info</param>
         /// <param name="innerException">inner exception</param>

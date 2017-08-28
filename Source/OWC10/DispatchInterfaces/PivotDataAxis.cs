@@ -1,23 +1,33 @@
 ﻿using System;
 using NetRuntimeSystem = System;
-using System.Runtime.InteropServices;
-using System.Runtime.CompilerServices;
 using System.ComponentModel;
-using System.Reflection;
-using System.Collections.Generic;
-using NetOffice;
+using NetOffice.Attributes;
+
 namespace NetOffice.OWC10Api
 {
-	///<summary>
+	/// <summary>
 	/// DispatchInterface PivotDataAxis 
 	/// SupportByVersion OWC10, 1
-	///</summary>
-	[SupportByVersionAttribute("OWC10", 1)]
-	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
-	public class PivotDataAxis : PivotAxis
+	/// </summary>
+	[SupportByVersion("OWC10", 1)]
+	[EntityType(EntityType.IsDispatchInterface)]
+ 	public class PivotDataAxis : PivotAxis
 	{
 		#pragma warning disable
+
 		#region Type Information
+
+		/// <summary>
+		/// Instance Type
+		/// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
+		public override Type InstanceType
+		{
+			get
+			{
+				return LateBindingApiWrapperType;
+			}
+		}
 
         private static Type _type;
 
@@ -28,7 +38,6 @@ namespace NetOffice.OWC10Api
             {
                 if (null == _type)
                     _type = typeof(PivotDataAxis);
-                    
                 return _type;
             }
         }
@@ -81,7 +90,7 @@ namespace NetOffice.OWC10Api
 		{
 		}
 		
-		/// <param name="progId">registered ProgID</param>
+		/// <param name="progId">registered progID</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public PivotDataAxis(string progId) : base(progId)
 		{
@@ -95,15 +104,12 @@ namespace NetOffice.OWC10Api
 		/// SupportByVersion OWC10 1
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("OWC10", 1)]
+		[SupportByVersion("OWC10", 1)]
 		public NetOffice.OWC10Api.PivotTotals Totals
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Totals", paramsArray);
-				NetOffice.OWC10Api.PivotTotals newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OWC10Api.PivotTotals.LateBindingApiWrapperType) as NetOffice.OWC10Api.PivotTotals;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OWC10Api.PivotTotals>(this, "Totals", NetOffice.OWC10Api.PivotTotals.LateBindingApiWrapperType);
 			}
 		}
 
@@ -113,43 +119,41 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
-		/// 
 		/// </summary>
-		/// <param name="total">NetOffice.OWC10Api.PivotTotal Total</param>
-		/// <param name="before">optional object Before</param>
-		[SupportByVersionAttribute("OWC10", 1)]
+		/// <param name="total">NetOffice.OWC10Api.PivotTotal total</param>
+		/// <param name="before">optional object before</param>
+		[SupportByVersion("OWC10", 1)]
 		public void InsertTotal(NetOffice.OWC10Api.PivotTotal total, object before)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(total, before);
-			Invoker.Method(this, "InsertTotal", paramsArray);
+			 Factory.ExecuteMethod(this, "InsertTotal", total, before);
 		}
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
-		/// 
 		/// </summary>
-		/// <param name="total">NetOffice.OWC10Api.PivotTotal Total</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("OWC10", 1)]
+		/// <param name="total">NetOffice.OWC10Api.PivotTotal total</param>
+		[CustomMethod]
+		[SupportByVersion("OWC10", 1)]
 		public void InsertTotal(NetOffice.OWC10Api.PivotTotal total)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(total);
-			Invoker.Method(this, "InsertTotal", paramsArray);
+			 Factory.ExecuteMethod(this, "InsertTotal", total);
 		}
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
-		/// 
 		/// </summary>
-		/// <param name="total">object Total</param>
-		[SupportByVersionAttribute("OWC10", 1)]
+		/// <param name="total">object total</param>
+		[SupportByVersion("OWC10", 1)]
 		public void RemoveTotal(object total)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(total);
-			Invoker.Method(this, "RemoveTotal", paramsArray);
+			 Factory.ExecuteMethod(this, "RemoveTotal", total);
 		}
 
 		#endregion
+
 		#pragma warning restore
 	}
 }
+
+
+

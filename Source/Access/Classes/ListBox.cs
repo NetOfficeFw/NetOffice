@@ -1,50 +1,50 @@
 ﻿using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
-using NetOffice;
-using NetOffice.Misc;
+using NetOffice.Attributes;
 
 namespace NetOffice.AccessApi
 {
-
 	#region Delegates
 
 	#pragma warning disable
-	public delegate void ListBox_BeforeUpdateEventHandler(ref Int16 Cancel);
+	public delegate void ListBox_BeforeUpdateEventHandler(ref Int16 cancel);
 	public delegate void ListBox_AfterUpdateEventHandler();
 	public delegate void ListBox_EnterEventHandler();
-	public delegate void ListBox_ExitEventHandler(ref Int16 Cancel);
+	public delegate void ListBox_ExitEventHandler(ref Int16 cancel);
 	public delegate void ListBox_GotFocusEventHandler();
 	public delegate void ListBox_LostFocusEventHandler();
 	public delegate void ListBox_ClickEventHandler();
-	public delegate void ListBox_DblClickEventHandler(ref Int16 Cancel);
-	public delegate void ListBox_MouseDownEventHandler(ref Int16 Button, ref Int16 Shift, ref Single X, ref Single Y);
-	public delegate void ListBox_MouseMoveEventHandler(ref Int16 Button, ref Int16 Shift, ref Single X, ref Single Y);
-	public delegate void ListBox_MouseUpEventHandler(ref Int16 Button, ref Int16 Shift, ref Single X, ref Single Y);
-	public delegate void ListBox_KeyDownEventHandler(ref Int16 KeyCode, ref Int16 Shift);
-	public delegate void ListBox_KeyPressEventHandler(ref Int16 KeyAscii);
-	public delegate void ListBox_KeyUpEventHandler(ref Int16 KeyCode, ref Int16 Shift);
+	public delegate void ListBox_DblClickEventHandler(ref Int16 cancel);
+	public delegate void ListBox_MouseDownEventHandler(ref Int16 button, ref Int16 shift, ref Single x, ref Single y);
+	public delegate void ListBox_MouseMoveEventHandler(ref Int16 button, ref Int16 shift, ref Single x, ref Single y);
+	public delegate void ListBox_MouseUpEventHandler(ref Int16 button, ref Int16 shift, ref Single x, ref Single y);
+	public delegate void ListBox_KeyDownEventHandler(ref Int16 keyCode, ref Int16 shift);
+	public delegate void ListBox_KeyPressEventHandler(ref Int16 keyAscii);
+	public delegate void ListBox_KeyUpEventHandler(ref Int16 keyCode, ref Int16 shift);
 	#pragma warning restore
 
 	#endregion
 
-	///<summary>
+	/// <summary>
 	/// CoClass ListBox 
 	/// SupportByVersion Access, 9,10,11,12,14,15,16
-	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195480.aspx
-	///</summary>
-	[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
-	[EntityTypeAttribute(EntityType.IsCoClass)]
-	public class ListBox : _ListBox,IEventBinding
+	/// </summary>
+	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff195480.aspx </remarks>
+	[SupportByVersion("Access", 9,10,11,12,14,15,16)]
+	[EntityType(EntityType.IsCoClass)]
+    [EventSink(typeof(Events._ListBoxEvents_SinkHelper), typeof(Events.DispListBoxEvents_SinkHelper))]
+    public class ListBox : _ListBox, IEventBinding
 	{
 		#pragma warning disable
+
 		#region Fields
 		
 		private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
 		private string _activeSinkId;
 		private NetRuntimeSystem.Type _thisType;
-		_ListBoxEvents_SinkHelper __ListBoxEvents_SinkHelper;
-		DispListBoxEvents_SinkHelper _dispListBoxEvents_SinkHelper;
+		private Events._ListBoxEvents_SinkHelper __ListBoxEvents_SinkHelper;
+		private Events.DispListBoxEvents_SinkHelper _dispListBoxEvents_SinkHelper;
 	
 		#endregion
 
@@ -53,6 +53,7 @@ namespace NetOffice.AccessApi
         /// <summary>
         /// Instance Type
         /// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
         public override Type InstanceType
         {
             get
@@ -119,17 +120,17 @@ namespace NetOffice.AccessApi
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of ListBox 
-        ///</summary>		
+        /// </summary>		
 		public ListBox():base("Access.ListBox")
 		{
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of ListBox
-        ///</summary>
+        /// </summary>
         ///<param name="progId">registered ProgID</param>
 		public ListBox(string progId):base(progId)
 		{
@@ -139,46 +140,6 @@ namespace NetOffice.AccessApi
 		#endregion
 
 		#region Static CoClass Methods
-
-		/// <summary>
-        /// Returns all running Access.ListBox objects from the environment/system
-        /// </summary>
-        /// <returns>an Access.ListBox array</returns>
-		public static NetOffice.AccessApi.ListBox[] GetActiveInstances()
-		{		
-			IDisposableEnumeration proxyList = NetOffice.ProxyService.GetActiveInstances("Access","ListBox");
-			NetRuntimeSystem.Collections.Generic.List<NetOffice.AccessApi.ListBox> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.AccessApi.ListBox>();
-			foreach(object proxy in proxyList)
-				resultList.Add( new NetOffice.AccessApi.ListBox(null, proxy) );
-			return resultList.ToArray();
-		}
-
-		/// <summary>
-        /// Returns a running Access.ListBox object from the environment/system.
-        /// </summary>
-        /// <returns>an Access.ListBox object or null</returns>
-		public static NetOffice.AccessApi.ListBox GetActiveInstance()
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Access","ListBox", false);
-			if(null != proxy)
-				return new NetOffice.AccessApi.ListBox(null, proxy);
-			else
-				return null;
-		}
-
-		/// <summary>
-        /// Returns a running Access.ListBox object from the environment/system. 
-        /// </summary>
-	    /// <param name="throwOnError">throw an exception if no object was found</param>
-        /// <returns>an Access.ListBox object or null</returns>
-		public static NetOffice.AccessApi.ListBox GetActiveInstance(bool throwOnError)
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Access","ListBox", throwOnError);
-			if(null != proxy)
-				return new NetOffice.AccessApi.ListBox(null, proxy);
-			else
-				return null;
-		}
 		#endregion
 
 		#region Events
@@ -522,18 +483,18 @@ namespace NetOffice.AccessApi
 				return;
 	
             if (null == _activeSinkId)
-				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, _ListBoxEvents_SinkHelper.Id,DispListBoxEvents_SinkHelper.Id);
+				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, Events._ListBoxEvents_SinkHelper.Id, Events.DispListBoxEvents_SinkHelper.Id);
 
 
-			if(_ListBoxEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
+			if(Events._ListBoxEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
 			{
-				__ListBoxEvents_SinkHelper = new _ListBoxEvents_SinkHelper(this, _connectPoint);
+				__ListBoxEvents_SinkHelper = new Events._ListBoxEvents_SinkHelper(this, _connectPoint);
 				return;
 			}
 
-			if(DispListBoxEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
+			if(Events.DispListBoxEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
 			{
-				_dispListBoxEvents_SinkHelper = new DispListBoxEvents_SinkHelper(this, _connectPoint);
+				_dispListBoxEvents_SinkHelper = new Events.DispListBoxEvents_SinkHelper(this, _connectPoint);
 				return;
 			} 
         }
@@ -680,3 +641,4 @@ namespace NetOffice.AccessApi
 		#pragma warning restore
 	}
 }
+

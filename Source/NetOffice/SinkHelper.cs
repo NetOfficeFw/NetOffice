@@ -1,10 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using System.Runtime.InteropServices.ComTypes;
-using ComTypes = System.Runtime.InteropServices.ComTypes;
 
 namespace NetOffice
 {
@@ -22,7 +20,7 @@ namespace NetOffice
 
         #endregion
 
-        #region Construction
+        #region Ctor
 
         /// <summary>
         /// Creates an instance of the class
@@ -273,7 +271,7 @@ namespace NetOffice
         /// <summary>
         /// Remove event binding
         /// </summary>
-        public void Dispose()
+        public virtual void Dispose()
         {
             RemoveEventBinding();
         }

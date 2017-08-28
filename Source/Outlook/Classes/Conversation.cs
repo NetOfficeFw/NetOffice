@@ -1,12 +1,10 @@
 ﻿using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
-using NetOffice;
-using NetOffice.Misc;
+using NetOffice.Attributes;
 
 namespace NetOffice.OutlookApi
 {
-
 	#region Delegates
 
 	#pragma warning disable
@@ -14,16 +12,17 @@ namespace NetOffice.OutlookApi
 
 	#endregion
 
-	///<summary>
+	/// <summary>
 	/// CoClass Conversation 
 	/// SupportByVersion Outlook, 14,15,16
-	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff862527.aspx
-	///</summary>
-	[SupportByVersionAttribute("Outlook", 14,15,16)]
-	[EntityTypeAttribute(EntityType.IsCoClass)]
-	public class Conversation : _Conversation
+	/// </summary>
+	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff862527.aspx </remarks>
+	[SupportByVersion("Outlook", 14,15,16)]
+	[EntityType(EntityType.IsCoClass)]
+ 	public class Conversation : _Conversation
 	{
 		#pragma warning disable
+
 		#region Fields
 		
 		private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
@@ -37,6 +36,7 @@ namespace NetOffice.OutlookApi
         /// <summary>
         /// Instance Type
         /// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
         public override Type InstanceType
         {
             get
@@ -103,17 +103,17 @@ namespace NetOffice.OutlookApi
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of Conversation 
-        ///</summary>		
+        /// </summary>		
 		public Conversation():base("Outlook.Conversation")
 		{
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of Conversation
-        ///</summary>
+        /// </summary>
         ///<param name="progId">registered ProgID</param>
 		public Conversation(string progId):base(progId)
 		{
@@ -123,46 +123,6 @@ namespace NetOffice.OutlookApi
 		#endregion
 
 		#region Static CoClass Methods
-
-		/// <summary>
-        /// Returns all running Outlook.Conversation objects from the environment/system
-        /// </summary>
-        /// <returns>an Outlook.Conversation array</returns>
-		public static NetOffice.OutlookApi.Conversation[] GetActiveInstances()
-		{		
-			IDisposableEnumeration proxyList = NetOffice.ProxyService.GetActiveInstances("Outlook","Conversation");
-			NetRuntimeSystem.Collections.Generic.List<NetOffice.OutlookApi.Conversation> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.OutlookApi.Conversation>();
-			foreach(object proxy in proxyList)
-				resultList.Add( new NetOffice.OutlookApi.Conversation(null, proxy) );
-			return resultList.ToArray();
-		}
-
-		/// <summary>
-        /// Returns a running Outlook.Conversation object from the environment/system.
-        /// </summary>
-        /// <returns>an Outlook.Conversation object or null</returns>
-		public static NetOffice.OutlookApi.Conversation GetActiveInstance()
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Outlook","Conversation", false);
-			if(null != proxy)
-				return new NetOffice.OutlookApi.Conversation(null, proxy);
-			else
-				return null;
-		}
-
-		/// <summary>
-        /// Returns a running Outlook.Conversation object from the environment/system. 
-        /// </summary>
-	    /// <param name="throwOnError">throw an exception if no object was found</param>
-        /// <returns>an Outlook.Conversation object or null</returns>
-		public static NetOffice.OutlookApi.Conversation GetActiveInstance(bool throwOnError)
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Outlook","Conversation", throwOnError);
-			if(null != proxy)
-				return new NetOffice.OutlookApi.Conversation(null, proxy);
-			else
-				return null;
-		}
 		#endregion
 
 		#region Events
@@ -321,3 +281,4 @@ namespace NetOffice.OutlookApi
 		#pragma warning restore
 	}
 }
+

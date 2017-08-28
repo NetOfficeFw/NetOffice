@@ -1,23 +1,33 @@
 ﻿using System;
 using NetRuntimeSystem = System;
-using System.Runtime.InteropServices;
-using System.Runtime.CompilerServices;
 using System.ComponentModel;
-using System.Reflection;
-using System.Collections.Generic;
-using NetOffice;
+using NetOffice.Attributes;
+
 namespace NetOffice.MSHTMLApi
 {
-	///<summary>
+	/// <summary>
 	/// DispatchInterface HTMLFrameSiteEvents 
 	/// SupportByVersion MSHTML, 4
-	///</summary>
-	[SupportByVersionAttribute("MSHTML", 4)]
-	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
-	public class HTMLFrameSiteEvents : COMObject
+	/// </summary>
+	[SupportByVersion("MSHTML", 4)]
+	[EntityType(EntityType.IsDispatchInterface)]
+ 	public class HTMLFrameSiteEvents : COMObject
 	{
 		#pragma warning disable
+
 		#region Type Information
+
+		/// <summary>
+		/// Instance Type
+		/// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
+		public override Type InstanceType
+		{
+			get
+			{
+				return LateBindingApiWrapperType;
+			}
+		}
 
         private static Type _type;
 
@@ -28,7 +38,6 @@ namespace NetOffice.MSHTMLApi
             {
                 if (null == _type)
                     _type = typeof(HTMLFrameSiteEvents);
-                    
                 return _type;
             }
         }
@@ -81,7 +90,7 @@ namespace NetOffice.MSHTMLApi
 		{
 		}
 		
-		/// <param name="progId">registered ProgID</param>
+		/// <param name="progId">registered progID</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public HTMLFrameSiteEvents(string progId) : base(progId)
 		{
@@ -97,735 +106,585 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[SupportByVersion("MSHTML", 4)]
 		public bool onhelp()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "onhelp", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return Factory.ExecuteBoolMethodGet(this, "onhelp");
 		}
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[SupportByVersion("MSHTML", 4)]
 		public bool onclick()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "onclick", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return Factory.ExecuteBoolMethodGet(this, "onclick");
 		}
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[SupportByVersion("MSHTML", 4)]
 		public bool ondblclick()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "ondblclick", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return Factory.ExecuteBoolMethodGet(this, "ondblclick");
 		}
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[SupportByVersion("MSHTML", 4)]
 		public bool onkeypress()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "onkeypress", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return Factory.ExecuteBoolMethodGet(this, "onkeypress");
 		}
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[SupportByVersion("MSHTML", 4)]
 		public void onkeydown()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "onkeydown", paramsArray);
+			 Factory.ExecuteMethod(this, "onkeydown");
 		}
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[SupportByVersion("MSHTML", 4)]
 		public void onkeyup()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "onkeyup", paramsArray);
+			 Factory.ExecuteMethod(this, "onkeyup");
 		}
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[SupportByVersion("MSHTML", 4)]
 		public void onmouseout()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "onmouseout", paramsArray);
+			 Factory.ExecuteMethod(this, "onmouseout");
 		}
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[SupportByVersion("MSHTML", 4)]
 		public void onmouseover()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "onmouseover", paramsArray);
+			 Factory.ExecuteMethod(this, "onmouseover");
 		}
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[SupportByVersion("MSHTML", 4)]
 		public void onmousemove()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "onmousemove", paramsArray);
+			 Factory.ExecuteMethod(this, "onmousemove");
 		}
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[SupportByVersion("MSHTML", 4)]
 		public void onmousedown()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "onmousedown", paramsArray);
+			 Factory.ExecuteMethod(this, "onmousedown");
 		}
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[SupportByVersion("MSHTML", 4)]
 		public void onmouseup()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "onmouseup", paramsArray);
+			 Factory.ExecuteMethod(this, "onmouseup");
 		}
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[SupportByVersion("MSHTML", 4)]
 		public bool onselectstart()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "onselectstart", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return Factory.ExecuteBoolMethodGet(this, "onselectstart");
 		}
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[SupportByVersion("MSHTML", 4)]
 		public void onfilterchange()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "onfilterchange", paramsArray);
+			 Factory.ExecuteMethod(this, "onfilterchange");
 		}
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[SupportByVersion("MSHTML", 4)]
 		public bool ondragstart()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "ondragstart", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return Factory.ExecuteBoolMethodGet(this, "ondragstart");
 		}
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[SupportByVersion("MSHTML", 4)]
 		public bool onbeforeupdate()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "onbeforeupdate", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return Factory.ExecuteBoolMethodGet(this, "onbeforeupdate");
 		}
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[SupportByVersion("MSHTML", 4)]
 		public void onafterupdate()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "onafterupdate", paramsArray);
+			 Factory.ExecuteMethod(this, "onafterupdate");
 		}
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[SupportByVersion("MSHTML", 4)]
 		public bool onerrorupdate()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "onerrorupdate", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return Factory.ExecuteBoolMethodGet(this, "onerrorupdate");
 		}
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[SupportByVersion("MSHTML", 4)]
 		public bool onrowexit()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "onrowexit", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return Factory.ExecuteBoolMethodGet(this, "onrowexit");
 		}
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[SupportByVersion("MSHTML", 4)]
 		public void onrowenter()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "onrowenter", paramsArray);
+			 Factory.ExecuteMethod(this, "onrowenter");
 		}
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[SupportByVersion("MSHTML", 4)]
 		public void ondatasetchanged()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "ondatasetchanged", paramsArray);
+			 Factory.ExecuteMethod(this, "ondatasetchanged");
 		}
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[SupportByVersion("MSHTML", 4)]
 		public void ondataavailable()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "ondataavailable", paramsArray);
+			 Factory.ExecuteMethod(this, "ondataavailable");
 		}
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[SupportByVersion("MSHTML", 4)]
 		public void ondatasetcomplete()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "ondatasetcomplete", paramsArray);
+			 Factory.ExecuteMethod(this, "ondatasetcomplete");
 		}
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[SupportByVersion("MSHTML", 4)]
 		public void onlosecapture()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "onlosecapture", paramsArray);
+			 Factory.ExecuteMethod(this, "onlosecapture");
 		}
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[SupportByVersion("MSHTML", 4)]
 		public void onpropertychange()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "onpropertychange", paramsArray);
+			 Factory.ExecuteMethod(this, "onpropertychange");
 		}
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[SupportByVersion("MSHTML", 4)]
 		public void onscroll()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "onscroll", paramsArray);
+			 Factory.ExecuteMethod(this, "onscroll");
 		}
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[SupportByVersion("MSHTML", 4)]
 		public void onfocus()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "onfocus", paramsArray);
+			 Factory.ExecuteMethod(this, "onfocus");
 		}
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[SupportByVersion("MSHTML", 4)]
 		public void onblur()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "onblur", paramsArray);
+			 Factory.ExecuteMethod(this, "onblur");
 		}
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[SupportByVersion("MSHTML", 4)]
 		public void onresize()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "onresize", paramsArray);
+			 Factory.ExecuteMethod(this, "onresize");
 		}
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[SupportByVersion("MSHTML", 4)]
 		public bool ondrag()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "ondrag", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return Factory.ExecuteBoolMethodGet(this, "ondrag");
 		}
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[SupportByVersion("MSHTML", 4)]
 		public void ondragend()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "ondragend", paramsArray);
+			 Factory.ExecuteMethod(this, "ondragend");
 		}
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[SupportByVersion("MSHTML", 4)]
 		public bool ondragenter()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "ondragenter", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return Factory.ExecuteBoolMethodGet(this, "ondragenter");
 		}
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[SupportByVersion("MSHTML", 4)]
 		public bool ondragover()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "ondragover", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return Factory.ExecuteBoolMethodGet(this, "ondragover");
 		}
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[SupportByVersion("MSHTML", 4)]
 		public void ondragleave()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "ondragleave", paramsArray);
+			 Factory.ExecuteMethod(this, "ondragleave");
 		}
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[SupportByVersion("MSHTML", 4)]
 		public bool ondrop()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "ondrop", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return Factory.ExecuteBoolMethodGet(this, "ondrop");
 		}
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[SupportByVersion("MSHTML", 4)]
 		public bool onbeforecut()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "onbeforecut", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return Factory.ExecuteBoolMethodGet(this, "onbeforecut");
 		}
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[SupportByVersion("MSHTML", 4)]
 		public bool oncut()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "oncut", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return Factory.ExecuteBoolMethodGet(this, "oncut");
 		}
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[SupportByVersion("MSHTML", 4)]
 		public bool onbeforecopy()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "onbeforecopy", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return Factory.ExecuteBoolMethodGet(this, "onbeforecopy");
 		}
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[SupportByVersion("MSHTML", 4)]
 		public bool oncopy()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "oncopy", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return Factory.ExecuteBoolMethodGet(this, "oncopy");
 		}
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[SupportByVersion("MSHTML", 4)]
 		public bool onbeforepaste()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "onbeforepaste", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return Factory.ExecuteBoolMethodGet(this, "onbeforepaste");
 		}
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[SupportByVersion("MSHTML", 4)]
 		public bool onpaste()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "onpaste", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return Factory.ExecuteBoolMethodGet(this, "onpaste");
 		}
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[SupportByVersion("MSHTML", 4)]
 		public bool oncontextmenu()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "oncontextmenu", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return Factory.ExecuteBoolMethodGet(this, "oncontextmenu");
 		}
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[SupportByVersion("MSHTML", 4)]
 		public void onrowsdelete()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "onrowsdelete", paramsArray);
+			 Factory.ExecuteMethod(this, "onrowsdelete");
 		}
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[SupportByVersion("MSHTML", 4)]
 		public void onrowsinserted()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "onrowsinserted", paramsArray);
+			 Factory.ExecuteMethod(this, "onrowsinserted");
 		}
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[SupportByVersion("MSHTML", 4)]
 		public void oncellchange()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "oncellchange", paramsArray);
+			 Factory.ExecuteMethod(this, "oncellchange");
 		}
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[SupportByVersion("MSHTML", 4)]
 		public void onreadystatechange()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "onreadystatechange", paramsArray);
+			 Factory.ExecuteMethod(this, "onreadystatechange");
 		}
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[SupportByVersion("MSHTML", 4)]
 		public void onbeforeeditfocus()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "onbeforeeditfocus", paramsArray);
+			 Factory.ExecuteMethod(this, "onbeforeeditfocus");
 		}
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[SupportByVersion("MSHTML", 4)]
 		public void onlayoutcomplete()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "onlayoutcomplete", paramsArray);
+			 Factory.ExecuteMethod(this, "onlayoutcomplete");
 		}
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[SupportByVersion("MSHTML", 4)]
 		public void onpage()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "onpage", paramsArray);
+			 Factory.ExecuteMethod(this, "onpage");
 		}
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[SupportByVersion("MSHTML", 4)]
 		public bool onbeforedeactivate()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "onbeforedeactivate", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return Factory.ExecuteBoolMethodGet(this, "onbeforedeactivate");
 		}
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[SupportByVersion("MSHTML", 4)]
 		public bool onbeforeactivate()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "onbeforeactivate", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return Factory.ExecuteBoolMethodGet(this, "onbeforeactivate");
 		}
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[SupportByVersion("MSHTML", 4)]
 		public void onmove()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "onmove", paramsArray);
+			 Factory.ExecuteMethod(this, "onmove");
 		}
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[SupportByVersion("MSHTML", 4)]
 		public bool oncontrolselect()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "oncontrolselect", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return Factory.ExecuteBoolMethodGet(this, "oncontrolselect");
 		}
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[SupportByVersion("MSHTML", 4)]
 		public bool onmovestart()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "onmovestart", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return Factory.ExecuteBoolMethodGet(this, "onmovestart");
 		}
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[SupportByVersion("MSHTML", 4)]
 		public void onmoveend()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "onmoveend", paramsArray);
+			 Factory.ExecuteMethod(this, "onmoveend");
 		}
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[SupportByVersion("MSHTML", 4)]
 		public bool onresizestart()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "onresizestart", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return Factory.ExecuteBoolMethodGet(this, "onresizestart");
 		}
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[SupportByVersion("MSHTML", 4)]
 		public void onresizeend()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "onresizeend", paramsArray);
+			 Factory.ExecuteMethod(this, "onresizeend");
 		}
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[SupportByVersion("MSHTML", 4)]
 		public void onmouseenter()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "onmouseenter", paramsArray);
+			 Factory.ExecuteMethod(this, "onmouseenter");
 		}
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[SupportByVersion("MSHTML", 4)]
 		public void onmouseleave()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "onmouseleave", paramsArray);
+			 Factory.ExecuteMethod(this, "onmouseleave");
 		}
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[SupportByVersion("MSHTML", 4)]
 		public bool onmousewheel()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "onmousewheel", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return Factory.ExecuteBoolMethodGet(this, "onmousewheel");
 		}
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[SupportByVersion("MSHTML", 4)]
 		public void onactivate()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "onactivate", paramsArray);
+			 Factory.ExecuteMethod(this, "onactivate");
 		}
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[SupportByVersion("MSHTML", 4)]
 		public void ondeactivate()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "ondeactivate", paramsArray);
+			 Factory.ExecuteMethod(this, "ondeactivate");
 		}
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[SupportByVersion("MSHTML", 4)]
 		public void onfocusin()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "onfocusin", paramsArray);
+			 Factory.ExecuteMethod(this, "onfocusin");
 		}
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[SupportByVersion("MSHTML", 4)]
 		public void onfocusout()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "onfocusout", paramsArray);
+			 Factory.ExecuteMethod(this, "onfocusout");
 		}
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[SupportByVersion("MSHTML", 4)]
 		public void onload()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "onload", paramsArray);
+			 Factory.ExecuteMethod(this, "onload");
 		}
 
 		#endregion
+
 		#pragma warning restore
 	}
 }
+
+
+

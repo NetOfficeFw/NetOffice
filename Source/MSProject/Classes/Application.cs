@@ -1,90 +1,91 @@
 ﻿using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
-using NetOffice;
-using NetOffice.Misc;
+using NetOffice.Attributes;
+using NetOffice.Contribution.CollectionsGeneric;
 
 namespace NetOffice.MSProjectApi
 {
-
 	#region Delegates
 
 	#pragma warning disable
 	public delegate void Application_NewProjectEventHandler(NetOffice.MSProjectApi.Project pj);
-	public delegate void Application_ProjectBeforeTaskDeleteEventHandler(NetOffice.MSProjectApi.Task tsk, ref bool Cancel);
-	public delegate void Application_ProjectBeforeResourceDeleteEventHandler(NetOffice.MSProjectApi.Resource res, ref bool Cancel);
-	public delegate void Application_ProjectBeforeAssignmentDeleteEventHandler(NetOffice.MSProjectApi.Assignment asg, ref bool Cancel);
-	public delegate void Application_ProjectBeforeTaskChangeEventHandler(NetOffice.MSProjectApi.Task tsk, NetOffice.MSProjectApi.Enums.PjField Field, object NewVal, ref bool Cancel);
-	public delegate void Application_ProjectBeforeResourceChangeEventHandler(NetOffice.MSProjectApi.Resource res, NetOffice.MSProjectApi.Enums.PjField Field, object NewVal, ref bool Cancel);
-	public delegate void Application_ProjectBeforeAssignmentChangeEventHandler(NetOffice.MSProjectApi.Assignment asg, NetOffice.MSProjectApi.Enums.PjAssignmentField Field, object NewVal, ref bool Cancel);
-	public delegate void Application_ProjectBeforeTaskNewEventHandler(NetOffice.MSProjectApi.Project pj, ref bool Cancel);
-	public delegate void Application_ProjectBeforeResourceNewEventHandler(NetOffice.MSProjectApi.Project pj, ref bool Cancel);
-	public delegate void Application_ProjectBeforeAssignmentNewEventHandler(NetOffice.MSProjectApi.Project pj, ref bool Cancel);
-	public delegate void Application_ProjectBeforeCloseEventHandler(NetOffice.MSProjectApi.Project pj, ref bool Cancel);
-	public delegate void Application_ProjectBeforePrintEventHandler(NetOffice.MSProjectApi.Project pj, ref bool Cancel);
-	public delegate void Application_ProjectBeforeSaveEventHandler(NetOffice.MSProjectApi.Project pj, bool SaveAsUi, ref bool Cancel);
+	public delegate void Application_ProjectBeforeTaskDeleteEventHandler(NetOffice.MSProjectApi.Task tsk, ref bool cancel);
+	public delegate void Application_ProjectBeforeResourceDeleteEventHandler(NetOffice.MSProjectApi.Resource res, ref bool cancel);
+	public delegate void Application_ProjectBeforeAssignmentDeleteEventHandler(NetOffice.MSProjectApi.Assignment asg, ref bool cancel);
+	public delegate void Application_ProjectBeforeTaskChangeEventHandler(NetOffice.MSProjectApi.Task tsk, NetOffice.MSProjectApi.Enums.PjField field, object newVal, ref bool cancel);
+	public delegate void Application_ProjectBeforeResourceChangeEventHandler(NetOffice.MSProjectApi.Resource res, NetOffice.MSProjectApi.Enums.PjField field, object newVal, ref bool cancel);
+	public delegate void Application_ProjectBeforeAssignmentChangeEventHandler(NetOffice.MSProjectApi.Assignment asg, NetOffice.MSProjectApi.Enums.PjAssignmentField field, object newVal, ref bool cancel);
+	public delegate void Application_ProjectBeforeTaskNewEventHandler(NetOffice.MSProjectApi.Project pj, ref bool cancel);
+	public delegate void Application_ProjectBeforeResourceNewEventHandler(NetOffice.MSProjectApi.Project pj, ref bool cancel);
+	public delegate void Application_ProjectBeforeAssignmentNewEventHandler(NetOffice.MSProjectApi.Project pj, ref bool cancel);
+	public delegate void Application_ProjectBeforeCloseEventHandler(NetOffice.MSProjectApi.Project pj, ref bool cancel);
+	public delegate void Application_ProjectBeforePrintEventHandler(NetOffice.MSProjectApi.Project pj, ref bool cancel);
+	public delegate void Application_ProjectBeforeSaveEventHandler(NetOffice.MSProjectApi.Project pj, bool saveAsUi, ref bool cancel);
 	public delegate void Application_ProjectCalculateEventHandler(NetOffice.MSProjectApi.Project pj);
-	public delegate void Application_WindowGoalAreaChangeEventHandler(NetOffice.MSProjectApi.Window Window, Int32 goalArea);
-	public delegate void Application_WindowSelectionChangeEventHandler(NetOffice.MSProjectApi.Window Window, NetOffice.MSProjectApi.Selection sel, object selType);
-	public delegate void Application_WindowBeforeViewChangeEventHandler(NetOffice.MSProjectApi.Window Window, NetOffice.MSProjectApi.View prevView, NetOffice.MSProjectApi.View newView, bool projectHasViewWindow, NetOffice.MSProjectApi.EventInfo Info);
-	public delegate void Application_WindowViewChangeEventHandler(NetOffice.MSProjectApi.Window Window, NetOffice.MSProjectApi.View prevView, NetOffice.MSProjectApi.View newView, bool success);
+	public delegate void Application_WindowGoalAreaChangeEventHandler(NetOffice.MSProjectApi.Window window, Int32 goalArea);
+	public delegate void Application_WindowSelectionChangeEventHandler(NetOffice.MSProjectApi.Window window, NetOffice.MSProjectApi.Selection sel, object selType);
+	public delegate void Application_WindowBeforeViewChangeEventHandler(NetOffice.MSProjectApi.Window window, NetOffice.MSProjectApi.View prevView, NetOffice.MSProjectApi.View newView, bool projectHasViewWindow, NetOffice.MSProjectApi.EventInfo info);
+	public delegate void Application_WindowViewChangeEventHandler(NetOffice.MSProjectApi.Window window, NetOffice.MSProjectApi.View prevView, NetOffice.MSProjectApi.View newView, bool success);
 	public delegate void Application_WindowActivateEventHandler(NetOffice.MSProjectApi.Window activatedWindow);
 	public delegate void Application_WindowDeactivateEventHandler(NetOffice.MSProjectApi.Window deactivatedWindow);
-	public delegate void Application_WindowSidepaneDisplayChangeEventHandler(NetOffice.MSProjectApi.Window Window, bool Close);
-	public delegate void Application_WindowSidepaneTaskChangeEventHandler(NetOffice.MSProjectApi.Window Window, Int32 ID, bool IsGoalArea);
-	public delegate void Application_WorkpaneDisplayChangeEventHandler(bool DisplayState);
-	public delegate void Application_LoadWebPageEventHandler(NetOffice.MSProjectApi.Window Window, ref string TargetPage);
+	public delegate void Application_WindowSidepaneDisplayChangeEventHandler(NetOffice.MSProjectApi.Window Window, bool close);
+	public delegate void Application_WindowSidepaneTaskChangeEventHandler(NetOffice.MSProjectApi.Window window, Int32 id, bool isGoalArea);
+	public delegate void Application_WorkpaneDisplayChangeEventHandler(bool displayState);
+	public delegate void Application_LoadWebPageEventHandler(NetOffice.MSProjectApi.Window window, ref string targetPage);
 	public delegate void Application_ProjectAfterSaveEventHandler();
-	public delegate void Application_ProjectTaskNewEventHandler(NetOffice.MSProjectApi.Project pj, Int32 ID);
-	public delegate void Application_ProjectResourceNewEventHandler(NetOffice.MSProjectApi.Project pj, Int32 ID);
+	public delegate void Application_ProjectTaskNewEventHandler(NetOffice.MSProjectApi.Project pj, Int32 id);
+	public delegate void Application_ProjectResourceNewEventHandler(NetOffice.MSProjectApi.Project pj, Int32 id);
 	public delegate void Application_ProjectAssignmentNewEventHandler(NetOffice.MSProjectApi.Project pj, Int32 ID);
-	public delegate void Application_ProjectBeforeSaveBaselineEventHandler(NetOffice.MSProjectApi.Project pj, bool Interim, NetOffice.MSProjectApi.Enums.PjBaselines bl, NetOffice.MSProjectApi.Enums.PjSaveBaselineFrom InterimCopy, NetOffice.MSProjectApi.Enums.PjSaveBaselineTo InterimInto, bool AllTasks, bool RollupToSummaryTasks, bool RollupFromSubtasks, NetOffice.MSProjectApi.EventInfo Info);
-	public delegate void Application_ProjectBeforeClearBaselineEventHandler(NetOffice.MSProjectApi.Project pj, bool Interim, NetOffice.MSProjectApi.Enums.PjBaselines bl, NetOffice.MSProjectApi.Enums.PjSaveBaselineTo InterimFrom, bool AllTasks, NetOffice.MSProjectApi.EventInfo Info);
-	public delegate void Application_ProjectBeforeClose2EventHandler(NetOffice.MSProjectApi.Project pj, NetOffice.MSProjectApi.EventInfo Info);
-	public delegate void Application_ProjectBeforePrint2EventHandler(NetOffice.MSProjectApi.Project pj, NetOffice.MSProjectApi.EventInfo Info);
-	public delegate void Application_ProjectBeforeSave2EventHandler(NetOffice.MSProjectApi.Project pj, bool SaveAsUi, NetOffice.MSProjectApi.EventInfo Info);
-	public delegate void Application_ProjectBeforeTaskDelete2EventHandler(NetOffice.MSProjectApi.Task tsk, NetOffice.MSProjectApi.EventInfo Info);
-	public delegate void Application_ProjectBeforeResourceDelete2EventHandler(NetOffice.MSProjectApi.Resource res, NetOffice.MSProjectApi.EventInfo Info);
-	public delegate void Application_ProjectBeforeAssignmentDelete2EventHandler(NetOffice.MSProjectApi.Assignment asg, NetOffice.MSProjectApi.EventInfo Info);
-	public delegate void Application_ProjectBeforeTaskChange2EventHandler(NetOffice.MSProjectApi.Task tsk, NetOffice.MSProjectApi.Enums.PjField Field, object NewVal, NetOffice.MSProjectApi.EventInfo Info);
-	public delegate void Application_ProjectBeforeResourceChange2EventHandler(NetOffice.MSProjectApi.Resource res, NetOffice.MSProjectApi.Enums.PjField Field, object NewVal, NetOffice.MSProjectApi.EventInfo Info);
-	public delegate void Application_ProjectBeforeAssignmentChange2EventHandler(NetOffice.MSProjectApi.Assignment asg, NetOffice.MSProjectApi.Enums.PjAssignmentField Field, object NewVal, NetOffice.MSProjectApi.EventInfo Info);
-	public delegate void Application_ProjectBeforeTaskNew2EventHandler(NetOffice.MSProjectApi.Project pj, NetOffice.MSProjectApi.EventInfo Info);
-	public delegate void Application_ProjectBeforeResourceNew2EventHandler(NetOffice.MSProjectApi.Project pj, NetOffice.MSProjectApi.EventInfo Info);
-	public delegate void Application_ProjectBeforeAssignmentNew2EventHandler(NetOffice.MSProjectApi.Project pj, NetOffice.MSProjectApi.EventInfo Info);
-	public delegate void Application_ApplicationBeforeCloseEventHandler(NetOffice.MSProjectApi.EventInfo Info);
+	public delegate void Application_ProjectBeforeSaveBaselineEventHandler(NetOffice.MSProjectApi.Project pj, bool interim, NetOffice.MSProjectApi.Enums.PjBaselines bl, NetOffice.MSProjectApi.Enums.PjSaveBaselineFrom InterimCopy, NetOffice.MSProjectApi.Enums.PjSaveBaselineTo InterimInto, bool AllTasks, bool RollupToSummaryTasks, bool RollupFromSubtasks, NetOffice.MSProjectApi.EventInfo Info);
+	public delegate void Application_ProjectBeforeClearBaselineEventHandler(NetOffice.MSProjectApi.Project pj, bool interim, NetOffice.MSProjectApi.Enums.PjBaselines bl, NetOffice.MSProjectApi.Enums.PjSaveBaselineTo InterimFrom, bool AllTasks, NetOffice.MSProjectApi.EventInfo Info);
+	public delegate void Application_ProjectBeforeClose2EventHandler(NetOffice.MSProjectApi.Project pj, NetOffice.MSProjectApi.EventInfo info);
+	public delegate void Application_ProjectBeforePrint2EventHandler(NetOffice.MSProjectApi.Project pj, NetOffice.MSProjectApi.EventInfo info);
+	public delegate void Application_ProjectBeforeSave2EventHandler(NetOffice.MSProjectApi.Project pj, bool SaveAsUi, NetOffice.MSProjectApi.EventInfo info);
+	public delegate void Application_ProjectBeforeTaskDelete2EventHandler(NetOffice.MSProjectApi.Task tsk, NetOffice.MSProjectApi.EventInfo info);
+	public delegate void Application_ProjectBeforeResourceDelete2EventHandler(NetOffice.MSProjectApi.Resource res, NetOffice.MSProjectApi.EventInfo info);
+	public delegate void Application_ProjectBeforeAssignmentDelete2EventHandler(NetOffice.MSProjectApi.Assignment asg, NetOffice.MSProjectApi.EventInfo info);
+	public delegate void Application_ProjectBeforeTaskChange2EventHandler(NetOffice.MSProjectApi.Task tsk, NetOffice.MSProjectApi.Enums.PjField Field, object newVal, NetOffice.MSProjectApi.EventInfo info);
+	public delegate void Application_ProjectBeforeResourceChange2EventHandler(NetOffice.MSProjectApi.Resource res, NetOffice.MSProjectApi.Enums.PjField field, object newVal, NetOffice.MSProjectApi.EventInfo info);
+	public delegate void Application_ProjectBeforeAssignmentChange2EventHandler(NetOffice.MSProjectApi.Assignment asg, NetOffice.MSProjectApi.Enums.PjAssignmentField Field, object newVal, NetOffice.MSProjectApi.EventInfo info);
+	public delegate void Application_ProjectBeforeTaskNew2EventHandler(NetOffice.MSProjectApi.Project pj, NetOffice.MSProjectApi.EventInfo info);
+	public delegate void Application_ProjectBeforeResourceNew2EventHandler(NetOffice.MSProjectApi.Project pj, NetOffice.MSProjectApi.EventInfo info);
+	public delegate void Application_ProjectBeforeAssignmentNew2EventHandler(NetOffice.MSProjectApi.Project pj, NetOffice.MSProjectApi.EventInfo info);
+	public delegate void Application_ApplicationBeforeCloseEventHandler(NetOffice.MSProjectApi.EventInfo info);
 	public delegate void Application_OnUndoOrRedoEventHandler(string bstrLabel, string bstrGUID, bool fUndo);
-	public delegate void Application_AfterCubeBuiltEventHandler(ref string CubeFileName);
-	public delegate void Application_LoadWebPaneEventHandler(NetOffice.MSProjectApi.Window Window, ref string TargetPage);
+	public delegate void Application_AfterCubeBuiltEventHandler(ref string cubeFileName);
+	public delegate void Application_LoadWebPaneEventHandler(NetOffice.MSProjectApi.Window window, ref string targetPage);
 	public delegate void Application_JobStartEventHandler(string bstrName, string bstrprojGuid, string bstrjobGuid, Int32 jobType, Int32 lResult);
 	public delegate void Application_JobCompletedEventHandler(string bstrName, string bstrprojGuid, string bstrjobGuid, Int32 jobType, Int32 lResult);
 	public delegate void Application_SaveStartingToServerEventHandler(string bstrName, string bstrprojGuid);
 	public delegate void Application_SaveCompletedToServerEventHandler(string bstrName, string bstrprojGuid);
-	public delegate void Application_ProjectBeforePublishEventHandler(NetOffice.MSProjectApi.Project pj, ref bool Cancel);
+	public delegate void Application_ProjectBeforePublishEventHandler(NetOffice.MSProjectApi.Project pj, ref bool cancel);
 	public delegate void Application_PaneActivateEventHandler();
 	public delegate void Application_SecondaryViewChangeEventHandler(NetOffice.MSProjectApi.Window Window, NetOffice.MSProjectApi.View prevView, NetOffice.MSProjectApi.View newView, bool success);
-	public delegate void Application_IsFunctionalitySupportedEventHandler(string bstrFunctionality, NetOffice.MSProjectApi.EventInfo Info);
+	public delegate void Application_IsFunctionalitySupportedEventHandler(string bstrFunctionality, NetOffice.MSProjectApi.EventInfo info);
 	public delegate void Application_ConnectionStatusChangedEventHandler(bool online);
 	#pragma warning restore
 
 	#endregion
 
-	///<summary>
+	/// <summary>
 	/// CoClass Application 
 	/// SupportByVersion MSProject, 11,12,14
-	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff920542(v=office.14).aspx
-	///</summary>
-	[SupportByVersionAttribute("MSProject", 11,12,14)]
-	[EntityTypeAttribute(EntityType.IsCoClass)]
-	public class Application : _MSProject,IEventBinding
+	/// </summary>
+	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff920542(v=office.14).aspx </remarks>
+	[SupportByVersion("MSProject", 11,12,14)]
+	[EntityType(EntityType.IsCoClass), ComProgId("MSProject.Application"), ModuleProvider(typeof(GlobalHelperModules.GlobalModule))]
+	[EventSink(typeof(Events._EProjectApp2_SinkHelper))]
+	public class Application : _MSProject, IEventBinding
 	{
 		#pragma warning disable
+
 		#region Fields
 		
 		private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
 		private string _activeSinkId;
 		private NetRuntimeSystem.Type _thisType;
-		_EProjectApp2_SinkHelper __EProjectApp2_SinkHelper;
+		private Events._EProjectApp2_SinkHelper __EProjectApp2_SinkHelper;
 	
 		#endregion
 
@@ -93,6 +94,7 @@ namespace NetOffice.MSProjectApi
         /// <summary>
         /// Instance Type
         /// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
         public override Type InstanceType
         {
             get
@@ -122,16 +124,14 @@ namespace NetOffice.MSProjectApi
 		///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
 		public Application(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
-		{
-			
+		{			
 			GlobalHelperModules.GlobalModule.Instance = this;
 		}
 
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
 		public Application(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
-		{
-			
+		{			
 			GlobalHelperModules.GlobalModule.Instance = this;
 		}
 
@@ -161,18 +161,17 @@ namespace NetOffice.MSProjectApi
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of Application 
-        ///</summary>		
+        /// </summary>		
 		public Application():base("MSProject.Application")
 		{
-			
 			GlobalHelperModules.GlobalModule.Instance = this;
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of Application
-        ///</summary>
+        /// </summary>
         ///<param name="progId">registered ProgID</param>
 		public Application(string progId):base(progId)
 		{
@@ -180,10 +179,11 @@ namespace NetOffice.MSProjectApi
 			GlobalHelperModules.GlobalModule.Instance = this;
 		}
 		
-/// <summary>
+        /// <summary>
 		/// NetOffice method: dispose instance and all child instances
 		/// </summary>
 		/// <param name="disposeEventBinding">dispose event exported proxies with one or more event recipients</param>
+		[Category("NetOffice"), CoreOverridden]
 		public override void Dispose(bool disposeEventBinding)
 		{
 			if(this.Equals(GlobalHelperModules.GlobalModule.Instance))
@@ -194,6 +194,7 @@ namespace NetOffice.MSProjectApi
 		/// <summary>
 		/// NetOffice method: dispose instance and all child instances
 		/// </summary>
+		[Category("NetOffice"), CoreOverridden]
 		public override void Dispose()
 		{
 			if(this.Equals(GlobalHelperModules.GlobalModule.Instance))
@@ -201,57 +202,37 @@ namespace NetOffice.MSProjectApi
 			base.Dispose();
 		}
 
-		#endregion
+        #endregion
 
-		#region Static CoClass Methods
+        #region Static CoClass Methods
 
-		/// <summary>
-        /// Returns all running MSProject.Application objects from the environment/system
+        /// <summary>
+        /// Returns all running MSProject.Application instances from the environment/system
         /// </summary>
-        /// <returns>an MSProject.Application array</returns>
-		public static NetOffice.MSProjectApi.Application[] GetActiveInstances()
-		{		
-			IDisposableEnumeration proxyList = NetOffice.ProxyService.GetActiveInstances("MSProject","Application");
-			NetRuntimeSystem.Collections.Generic.List<NetOffice.MSProjectApi.Application> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.MSProjectApi.Application>();
-			foreach(object proxy in proxyList)
-				resultList.Add( new NetOffice.MSProjectApi.Application(null, proxy) );
-			return resultList.ToArray();
-		}
+        /// <returns>MSProject.Application sequence</returns>
+        public static IDisposableSequence<Application> GetActiveInstances()
+        {
+            return Running.ProxyService.GetActiveInstances<Application>("MSProject", "Application");
+        }
 
-		/// <summary>
-        /// Returns a running MSProject.Application object from the environment/system.
+        /// <summary>
+        /// Returns a running MSProject.Application instance from the environment/system
         /// </summary>
-        /// <returns>an MSProject.Application object or null</returns>
-		public static NetOffice.MSProjectApi.Application GetActiveInstance()
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("MSProject","Application", false);
-			if(null != proxy)
-				return new NetOffice.MSProjectApi.Application(null, proxy);
-			else
-				return null;
-		}
+        /// <param name="throwExceptionIfNotFound">throw exception if unable to find an instance</param>
+        /// <returns>MSProject.Application instance or null</returns>
+        public static Application GetActiveInstance(bool throwExceptionIfNotFound = false)
+        {
+            return Running.ProxyService.GetActiveInstance<Application>("MSProject", "Application", throwExceptionIfNotFound);
+        }
 
-		/// <summary>
-        /// Returns a running MSProject.Application object from the environment/system. 
+        #endregion
+
+        #region Events
+
+        /// <summary>
+        /// SupportByVersion MSProject, 11,12,14
         /// </summary>
-	    /// <param name="throwOnError">throw an exception if no object was found</param>
-        /// <returns>an MSProject.Application object or null</returns>
-		public static NetOffice.MSProjectApi.Application GetActiveInstance(bool throwOnError)
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("MSProject","Application", throwOnError);
-			if(null != proxy)
-				return new NetOffice.MSProjectApi.Application(null, proxy);
-			else
-				return null;
-		}
-		#endregion
-
-		#region Events
-
-		/// <summary>
-		/// SupportByVersion MSProject, 11,12,14
-		/// </summary>
-		private event Application_NewProjectEventHandler _NewProjectEvent;
+        private event Application_NewProjectEventHandler _NewProjectEvent;
 
 		/// <summary>
 		/// SupportByVersion MSProject 11 12 14
@@ -1475,12 +1456,12 @@ namespace NetOffice.MSProjectApi
 				return;
 	
             if (null == _activeSinkId)
-				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, _EProjectApp2_SinkHelper.Id);
+				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, Events._EProjectApp2_SinkHelper.Id);
 
 
-			if(_EProjectApp2_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
+			if(Events._EProjectApp2_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
 			{
-				__EProjectApp2_SinkHelper = new _EProjectApp2_SinkHelper(this, _connectPoint);
+				__EProjectApp2_SinkHelper = new Events._EProjectApp2_SinkHelper(this, _connectPoint);
 				return;
 			} 
         }
@@ -1622,3 +1603,4 @@ namespace NetOffice.MSProjectApi
 		#pragma warning restore
 	}
 }
+

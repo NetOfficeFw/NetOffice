@@ -2,13 +2,16 @@
 using System.Threading;
 using System.Runtime.InteropServices;
 using System.Diagnostics;
+using System.Reflection;
 using System.Collections.Generic;
 using System.ComponentModel;
 using COMTypes = System.Runtime.InteropServices.ComTypes;
 using System.Dynamic;
 using System.Collections;
 using System.Linq.Expressions;
-using System.Reflection;
+using NetOffice.Resolver;
+using NetOffice.Availity;
+using NetOffice.Dynamics;
 
 namespace NetOffice
 {
@@ -25,8 +28,8 @@ namespace NetOffice
     /// Represents a managed COM proxy with dynamic runtime type informations.
     /// </summary>
     [DebuggerDisplay("{InstanceFriendlyName}")]
-    [TypeConverter(typeof(COMDynamicObjectExpandableObjectConverter))]
-    public class COMDynamicObject : DynamicObject, ICOMObject , ICOMProxyShareProvider
+    [TypeConverter(typeof(Converter.COMDynamicObjectExpandableObjectConverter))]
+    public class COMDynamicObject : DynamicObject, ICOMObject, ICOMProxyShareProvider
     {
         #region Nested
 
@@ -224,7 +227,7 @@ namespace NetOffice
             
             Factory = Core.Default;          
             ParentObject = null;
-            _proxy = new COMProxyShare(comProxy);
+            _proxy = Factory.CreateNewProxyShare(this, comProxy);
             UnderlyingType = comProxy.GetType();
             Factory.AddObjectToList(this);
             _listChildObjects = new List<ICOMObject>();
@@ -247,7 +250,7 @@ namespace NetOffice
                 Factory = Core.Default;
 
             ParentObject = parentObject;
-            _proxy = new COMProxyShare(comProxy);
+            _proxy = Factory.CreateNewProxyShare(this, comProxy);
             UnderlyingType = comProxy.GetType();
             if (Settings.Default.EnableProxyManagement && !Object.ReferenceEquals(parentObject, null))
                 ParentObject.AddChildObject(this);
@@ -272,7 +275,7 @@ namespace NetOffice
             if (null != shareProvider)
                 _proxy = shareProvider.GetProxyShare();
             else
-                _proxy = new COMProxyShare(comObject.UnderlyingObject);
+                _proxy = Factory.CreateNewProxyShare(this, comObject.UnderlyingObject);
             
             UnderlyingType = comObject.UnderlyingType;
 
@@ -294,7 +297,7 @@ namespace NetOffice
             Factory = factory;
 
             ParentObject = parentObject;
-            _proxy = new COMProxyShare(comProxy);
+            _proxy = Factory.CreateNewProxyShare(this, comProxy);
             
             UnderlyingType = comProxy.GetType();
 
@@ -318,7 +321,7 @@ namespace NetOffice
 
             UnderlyingType = System.Type.GetTypeFromProgID(progId, true);
             object underlyingObject = Activator.CreateInstance(UnderlyingType);
-            _proxy = new COMProxyShare(underlyingObject);
+            _proxy = Factory.CreateNewProxyShare(this, underlyingObject);
 
             Factory = null != factory ? factory : Core.Default;        
             Factory.AddObjectToList(this);
@@ -340,7 +343,7 @@ namespace NetOffice
 
             UnderlyingType = System.Type.GetTypeFromProgID(progId, true);
             object underlyingObject = Activator.CreateInstance(UnderlyingType);
-            _proxy = new COMProxyShare(underlyingObject);
+            _proxy = Factory.CreateNewProxyShare(this, underlyingObject);
 
             Factory = Core.Default;     
             Factory.AddObjectToList(this);
@@ -658,7 +661,7 @@ namespace NetOffice
         {
             if (IsSelfDynamicMemberName(name))
                 return InstanceType.InvokeMember(name, System.Reflection.BindingFlags.InvokeMethod, null, this, args);
-
+           
             args = Invoker.ValidateParamsArray(args);
             object returnItem = Invoker.MethodReturn(this, name, args);
             if ((null != returnItem) && (returnItem is MarshalByRefObject))
@@ -907,7 +910,7 @@ namespace NetOffice
             else
             {
                 string className = TypeDescriptor.GetClassName(UnderlyingObject);
-                IFactoryInfo factoryInfo = Factory.GetFactoryInfo(UnderlyingObject, false);
+                IFactoryInfo factoryInfo = Factory.GetInstanceFactoryInfo(UnderlyingObject, false);
                 if (null != factoryInfo && factoryInfo.Contains(binder.ReturnType))
                 {
                     string fullClassName = factoryInfo.AssemblyNamespace + "." + className;
@@ -1035,7 +1038,7 @@ namespace NetOffice
         /// <param name="result">The result of the member invocation.</param>
         /// <returns>true if the operation is successful; otherwise, false.</returns>
         public override bool TryInvokeMember(InvokeMemberBinder binder, object[] args, out object result)
-        {          
+        {
             if (IsEnumeratorBinder(binder))
             {
                 result = InvokeEnumerator();
@@ -1365,7 +1368,7 @@ namespace NetOffice
                 }
 
                 // call quit automatically if wanted
-                CheckEntities();
+                //CheckEntities();
                 if (Settings.EnableAutomaticQuit && HasQuitMethod())
                     new QuitCaller().TryCall(Settings, Invoker, this);
                 
@@ -1388,9 +1391,7 @@ namespace NetOffice
         {
             DisposeChildInstances(true);
         }
-
-      
-
+        
         /// <summary>
         /// Dispose all child instances
         /// </summary>
@@ -1415,7 +1416,7 @@ namespace NetOffice
         /// <returns>true if available, otherwise false</returns>
         public bool EntityIsAvailable(string name)
         {
-            return EntityIsAvailable(name, SupportEntityType.Both);
+            return EntityIsAvailable(name, SupportedEntityType.Both);
         }
 
         /// <summary>
@@ -1424,9 +1425,9 @@ namespace NetOffice
         /// <param name="name">name of the enitity</param>
         /// <param name="searchType">limit searching for method or property</param>
         /// <returns>true if available, otherwise false</returns>
-        public bool EntityIsAvailable(string name, SupportEntityType searchType)
+        public bool EntityIsAvailable(string name, SupportedEntityType searchType)
         {
-            return new EntityAvailableResolver().Resolve(Factory, ref _listSupportedEntities, searchType, UnderlyingObject, name);
+            return new SupportedEntityFinder().Find(Factory, ref _listSupportedEntities, searchType, UnderlyingObject, name);
         }
 
         /// <summary>
@@ -1459,13 +1460,14 @@ namespace NetOffice
         }
 
         #endregion
-        
+
         #region ICOMProxyShareProvider
 
         /// <summary>
         /// Returns the inner proxy shared access handler
         /// </summary>
         /// <returns>shared proxy</returns>
+        [EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false)]
         public COMProxyShare GetProxyShare()
         {
             return _proxy;
@@ -1476,6 +1478,7 @@ namespace NetOffice
         /// The method want aquire the share 1x times
         /// </summary>
         /// <param name="share">target share</param>
+        [EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false)]
         public void SetProxyShare(COMProxyShare share)
         {
             if (null == share)

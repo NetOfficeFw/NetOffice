@@ -1,8 +1,7 @@
 ﻿using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
-using NetOffice;
-using NetOffice.Misc;
+using NetOffice.Attributes;
 
 namespace NetOffice.OutlookApi
 {
@@ -13,16 +12,17 @@ namespace NetOffice.OutlookApi
 
 	#endregion
 
-	///<summary>
+	/// <summary>
 	/// CoClass AddressRuleCondition 
 	/// SupportByVersion Outlook, 12,14,15,16
-	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff867572.aspx
-	///</summary>
-	[SupportByVersionAttribute("Outlook", 12,14,15,16)]
-	[EntityTypeAttribute(EntityType.IsCoClass)]
-	public class AddressRuleCondition : _AddressRuleCondition
+	/// </summary>
+	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff867572.aspx </remarks>
+	[SupportByVersion("Outlook", 12,14,15,16)]
+	[EntityType(EntityType.IsCoClass)]
+ 	public class AddressRuleCondition : _AddressRuleCondition
 	{
 		#pragma warning disable
+
 		#region Fields
 		
 		private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
@@ -36,6 +36,7 @@ namespace NetOffice.OutlookApi
         /// <summary>
         /// Instance Type
         /// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
         public override Type InstanceType
         {
             get
@@ -102,17 +103,17 @@ namespace NetOffice.OutlookApi
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of AddressRuleCondition 
-        ///</summary>		
+        /// </summary>		
 		public AddressRuleCondition():base("Outlook.AddressRuleCondition")
 		{
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of AddressRuleCondition
-        ///</summary>
+        /// </summary>
         ///<param name="progId">registered ProgID</param>
 		public AddressRuleCondition(string progId):base(progId)
 		{
@@ -122,46 +123,6 @@ namespace NetOffice.OutlookApi
 		#endregion
 
 		#region Static CoClass Methods
-
-		/// <summary>
-        /// Returns all running Outlook.AddressRuleCondition objects from the environment/system
-        /// </summary>
-        /// <returns>an Outlook.AddressRuleCondition array</returns>
-		public static NetOffice.OutlookApi.AddressRuleCondition[] GetActiveInstances()
-		{		
-			IDisposableEnumeration proxyList = NetOffice.ProxyService.GetActiveInstances("Outlook","AddressRuleCondition");
-			NetRuntimeSystem.Collections.Generic.List<NetOffice.OutlookApi.AddressRuleCondition> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.OutlookApi.AddressRuleCondition>();
-			foreach(object proxy in proxyList)
-				resultList.Add( new NetOffice.OutlookApi.AddressRuleCondition(null, proxy) );
-			return resultList.ToArray();
-		}
-
-		/// <summary>
-        /// Returns a running Outlook.AddressRuleCondition object from the environment/system.
-        /// </summary>
-        /// <returns>an Outlook.AddressRuleCondition object or null</returns>
-		public static NetOffice.OutlookApi.AddressRuleCondition GetActiveInstance()
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Outlook","AddressRuleCondition", false);
-			if(null != proxy)
-				return new NetOffice.OutlookApi.AddressRuleCondition(null, proxy);
-			else
-				return null;
-		}
-
-		/// <summary>
-        /// Returns a running Outlook.AddressRuleCondition object from the environment/system. 
-        /// </summary>
-	    /// <param name="throwOnError">throw an exception if no object was found</param>
-        /// <returns>an Outlook.AddressRuleCondition object or null</returns>
-		public static NetOffice.OutlookApi.AddressRuleCondition GetActiveInstance(bool throwOnError)
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Outlook","AddressRuleCondition", throwOnError);
-			if(null != proxy)
-				return new NetOffice.OutlookApi.AddressRuleCondition(null, proxy);
-			else
-				return null;
-		}
 		#endregion
 
 		#region Events
@@ -320,3 +281,4 @@ namespace NetOffice.OutlookApi
 		#pragma warning restore
 	}
 }
+

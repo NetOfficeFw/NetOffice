@@ -1,25 +1,36 @@
-﻿using System;
-using NetRuntimeSystem = System;
-using System.Runtime.InteropServices;
-using System.Runtime.CompilerServices;
-using System.ComponentModel;
-using System.Reflection;
+﻿using System.Collections;
 using System.Collections.Generic;
-using System.Collections;
-using NetOffice;
+using System;
+using NetRuntimeSystem = System;
+using System.ComponentModel;
+using NetOffice.Attributes;
+
 namespace NetOffice.WordApi
 {
-	///<summary>
+	/// <summary>
 	/// DispatchInterface TablesOfAuthorities 
 	/// SupportByVersion Word, 9,10,11,12,14,15,16
-	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837712.aspx
-	///</summary>
-	[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
-	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
-	public class TablesOfAuthorities : COMObject ,IEnumerable<NetOffice.WordApi.TableOfAuthorities>
+	/// </summary>
+	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff837712.aspx </remarks>
+	[SupportByVersion("Word", 9,10,11,12,14,15,16)]
+	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Method, "Item")]
+	public class TablesOfAuthorities : COMObject , IEnumerable<NetOffice.WordApi.TableOfAuthorities>
 	{
 		#pragma warning disable
+
 		#region Type Information
+
+		/// <summary>
+		/// Instance Type
+		/// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
+		public override Type InstanceType
+		{
+			get
+			{
+				return LateBindingApiWrapperType;
+			}
+		}
 
         private static Type _type;
 
@@ -30,7 +41,6 @@ namespace NetOffice.WordApi
             {
                 if (null == _type)
                     _type = typeof(TablesOfAuthorities);
-                    
                 return _type;
             }
         }
@@ -83,7 +93,7 @@ namespace NetOffice.WordApi
 		{
 		}
 		
-		/// <param name="progId">registered ProgID</param>
+		/// <param name="progId">registered progID</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public TablesOfAuthorities(string progId) : base(progId)
 		{
@@ -96,89 +106,75 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff820743.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff820743.aspx </remarks>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.Application Application
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				NetOffice.WordApi.Application newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.Application.LateBindingApiWrapperType) as NetOffice.WordApi.Application;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.Application>(this, "Application", NetOffice.WordApi.Application.LateBindingApiWrapperType);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845059.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff845059.aspx </remarks>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public Int32 Creator
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Creator", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "Creator");
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838690.aspx
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff838690.aspx </remarks>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16), ProxyResult]
 		public object Parent
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Parent", paramsArray);
-				ICOMObject newObject = Factory.CreateObjectFromComProxy(this,returnItem);
-				return newObject;
+				return Factory.ExecuteReferencePropertyGet(this, "Parent");
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837691.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff837691.aspx </remarks>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public Int32 Count
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Count", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "Count");
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839360.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff839360.aspx </remarks>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.Enums.WdToaFormat Format
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Format", paramsArray);
-				int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-				return (NetOffice.WordApi.Enums.WdToaFormat)intReturnItem;
+				return Factory.ExecuteEnumPropertyGet<NetOffice.WordApi.Enums.WdToaFormat>(this, "Format");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "Format", paramsArray);
+				Factory.ExecuteEnumPropertySet(this, "Format", value);
 			}
 		}
 
@@ -188,377 +184,323 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="index">Int32 Index</param>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
-		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
+		/// <param name="index">Int32 index</param>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
+		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
 		public NetOffice.WordApi.TableOfAuthorities this[Int32 index]
 		{
 			get
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(index);
-				object returnItem = Invoker.MethodReturn(this, "Item", paramsArray);
-				NetOffice.WordApi.TableOfAuthorities newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.TableOfAuthorities.LateBindingApiWrapperType) as NetOffice.WordApi.TableOfAuthorities;
-				return newObject;
+				return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.TableOfAuthorities>(this, "Item", NetOffice.WordApi.TableOfAuthorities.LateBindingApiWrapperType, index);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822964.aspx
 		/// </summary>
-		/// <param name="range">NetOffice.WordApi.Range Range</param>
-		/// <param name="category">optional object Category</param>
-		/// <param name="bookmark">optional object Bookmark</param>
-		/// <param name="passim">optional object Passim</param>
-		/// <param name="keepEntryFormatting">optional object KeepEntryFormatting</param>
-		/// <param name="separator">optional object Separator</param>
-		/// <param name="includeSequenceName">optional object IncludeSequenceName</param>
-		/// <param name="entrySeparator">optional object EntrySeparator</param>
-		/// <param name="pageRangeSeparator">optional object PageRangeSeparator</param>
-		/// <param name="includeCategoryHeader">optional object IncludeCategoryHeader</param>
-		/// <param name="pageNumberSeparator">optional object PageNumberSeparator</param>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff822964.aspx </remarks>
+		/// <param name="range">NetOffice.WordApi.Range range</param>
+		/// <param name="category">optional object category</param>
+		/// <param name="bookmark">optional object bookmark</param>
+		/// <param name="passim">optional object passim</param>
+		/// <param name="keepEntryFormatting">optional object keepEntryFormatting</param>
+		/// <param name="separator">optional object separator</param>
+		/// <param name="includeSequenceName">optional object includeSequenceName</param>
+		/// <param name="entrySeparator">optional object entrySeparator</param>
+		/// <param name="pageRangeSeparator">optional object pageRangeSeparator</param>
+		/// <param name="includeCategoryHeader">optional object includeCategoryHeader</param>
+		/// <param name="pageNumberSeparator">optional object pageNumberSeparator</param>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.TableOfAuthorities Add(NetOffice.WordApi.Range range, object category, object bookmark, object passim, object keepEntryFormatting, object separator, object includeSequenceName, object entrySeparator, object pageRangeSeparator, object includeCategoryHeader, object pageNumberSeparator)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(range, category, bookmark, passim, keepEntryFormatting, separator, includeSequenceName, entrySeparator, pageRangeSeparator, includeCategoryHeader, pageNumberSeparator);
-			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.WordApi.TableOfAuthorities newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.TableOfAuthorities.LateBindingApiWrapperType) as NetOffice.WordApi.TableOfAuthorities;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.TableOfAuthorities>(this, "Add", NetOffice.WordApi.TableOfAuthorities.LateBindingApiWrapperType, new object[]{ range, category, bookmark, passim, keepEntryFormatting, separator, includeSequenceName, entrySeparator, pageRangeSeparator, includeCategoryHeader, pageNumberSeparator });
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822964.aspx
 		/// </summary>
-		/// <param name="range">NetOffice.WordApi.Range Range</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff822964.aspx </remarks>
+		/// <param name="range">NetOffice.WordApi.Range range</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.TableOfAuthorities Add(NetOffice.WordApi.Range range)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(range);
-			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.WordApi.TableOfAuthorities newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.TableOfAuthorities.LateBindingApiWrapperType) as NetOffice.WordApi.TableOfAuthorities;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.TableOfAuthorities>(this, "Add", NetOffice.WordApi.TableOfAuthorities.LateBindingApiWrapperType, range);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822964.aspx
 		/// </summary>
-		/// <param name="range">NetOffice.WordApi.Range Range</param>
-		/// <param name="category">optional object Category</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff822964.aspx </remarks>
+		/// <param name="range">NetOffice.WordApi.Range range</param>
+		/// <param name="category">optional object category</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.TableOfAuthorities Add(NetOffice.WordApi.Range range, object category)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(range, category);
-			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.WordApi.TableOfAuthorities newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.TableOfAuthorities.LateBindingApiWrapperType) as NetOffice.WordApi.TableOfAuthorities;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.TableOfAuthorities>(this, "Add", NetOffice.WordApi.TableOfAuthorities.LateBindingApiWrapperType, range, category);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822964.aspx
 		/// </summary>
-		/// <param name="range">NetOffice.WordApi.Range Range</param>
-		/// <param name="category">optional object Category</param>
-		/// <param name="bookmark">optional object Bookmark</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff822964.aspx </remarks>
+		/// <param name="range">NetOffice.WordApi.Range range</param>
+		/// <param name="category">optional object category</param>
+		/// <param name="bookmark">optional object bookmark</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.TableOfAuthorities Add(NetOffice.WordApi.Range range, object category, object bookmark)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(range, category, bookmark);
-			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.WordApi.TableOfAuthorities newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.TableOfAuthorities.LateBindingApiWrapperType) as NetOffice.WordApi.TableOfAuthorities;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.TableOfAuthorities>(this, "Add", NetOffice.WordApi.TableOfAuthorities.LateBindingApiWrapperType, range, category, bookmark);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822964.aspx
 		/// </summary>
-		/// <param name="range">NetOffice.WordApi.Range Range</param>
-		/// <param name="category">optional object Category</param>
-		/// <param name="bookmark">optional object Bookmark</param>
-		/// <param name="passim">optional object Passim</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff822964.aspx </remarks>
+		/// <param name="range">NetOffice.WordApi.Range range</param>
+		/// <param name="category">optional object category</param>
+		/// <param name="bookmark">optional object bookmark</param>
+		/// <param name="passim">optional object passim</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.TableOfAuthorities Add(NetOffice.WordApi.Range range, object category, object bookmark, object passim)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(range, category, bookmark, passim);
-			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.WordApi.TableOfAuthorities newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.TableOfAuthorities.LateBindingApiWrapperType) as NetOffice.WordApi.TableOfAuthorities;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.TableOfAuthorities>(this, "Add", NetOffice.WordApi.TableOfAuthorities.LateBindingApiWrapperType, range, category, bookmark, passim);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822964.aspx
 		/// </summary>
-		/// <param name="range">NetOffice.WordApi.Range Range</param>
-		/// <param name="category">optional object Category</param>
-		/// <param name="bookmark">optional object Bookmark</param>
-		/// <param name="passim">optional object Passim</param>
-		/// <param name="keepEntryFormatting">optional object KeepEntryFormatting</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff822964.aspx </remarks>
+		/// <param name="range">NetOffice.WordApi.Range range</param>
+		/// <param name="category">optional object category</param>
+		/// <param name="bookmark">optional object bookmark</param>
+		/// <param name="passim">optional object passim</param>
+		/// <param name="keepEntryFormatting">optional object keepEntryFormatting</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.TableOfAuthorities Add(NetOffice.WordApi.Range range, object category, object bookmark, object passim, object keepEntryFormatting)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(range, category, bookmark, passim, keepEntryFormatting);
-			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.WordApi.TableOfAuthorities newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.TableOfAuthorities.LateBindingApiWrapperType) as NetOffice.WordApi.TableOfAuthorities;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.TableOfAuthorities>(this, "Add", NetOffice.WordApi.TableOfAuthorities.LateBindingApiWrapperType, new object[]{ range, category, bookmark, passim, keepEntryFormatting });
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822964.aspx
 		/// </summary>
-		/// <param name="range">NetOffice.WordApi.Range Range</param>
-		/// <param name="category">optional object Category</param>
-		/// <param name="bookmark">optional object Bookmark</param>
-		/// <param name="passim">optional object Passim</param>
-		/// <param name="keepEntryFormatting">optional object KeepEntryFormatting</param>
-		/// <param name="separator">optional object Separator</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff822964.aspx </remarks>
+		/// <param name="range">NetOffice.WordApi.Range range</param>
+		/// <param name="category">optional object category</param>
+		/// <param name="bookmark">optional object bookmark</param>
+		/// <param name="passim">optional object passim</param>
+		/// <param name="keepEntryFormatting">optional object keepEntryFormatting</param>
+		/// <param name="separator">optional object separator</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.TableOfAuthorities Add(NetOffice.WordApi.Range range, object category, object bookmark, object passim, object keepEntryFormatting, object separator)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(range, category, bookmark, passim, keepEntryFormatting, separator);
-			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.WordApi.TableOfAuthorities newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.TableOfAuthorities.LateBindingApiWrapperType) as NetOffice.WordApi.TableOfAuthorities;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.TableOfAuthorities>(this, "Add", NetOffice.WordApi.TableOfAuthorities.LateBindingApiWrapperType, new object[]{ range, category, bookmark, passim, keepEntryFormatting, separator });
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822964.aspx
 		/// </summary>
-		/// <param name="range">NetOffice.WordApi.Range Range</param>
-		/// <param name="category">optional object Category</param>
-		/// <param name="bookmark">optional object Bookmark</param>
-		/// <param name="passim">optional object Passim</param>
-		/// <param name="keepEntryFormatting">optional object KeepEntryFormatting</param>
-		/// <param name="separator">optional object Separator</param>
-		/// <param name="includeSequenceName">optional object IncludeSequenceName</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff822964.aspx </remarks>
+		/// <param name="range">NetOffice.WordApi.Range range</param>
+		/// <param name="category">optional object category</param>
+		/// <param name="bookmark">optional object bookmark</param>
+		/// <param name="passim">optional object passim</param>
+		/// <param name="keepEntryFormatting">optional object keepEntryFormatting</param>
+		/// <param name="separator">optional object separator</param>
+		/// <param name="includeSequenceName">optional object includeSequenceName</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.TableOfAuthorities Add(NetOffice.WordApi.Range range, object category, object bookmark, object passim, object keepEntryFormatting, object separator, object includeSequenceName)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(range, category, bookmark, passim, keepEntryFormatting, separator, includeSequenceName);
-			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.WordApi.TableOfAuthorities newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.TableOfAuthorities.LateBindingApiWrapperType) as NetOffice.WordApi.TableOfAuthorities;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.TableOfAuthorities>(this, "Add", NetOffice.WordApi.TableOfAuthorities.LateBindingApiWrapperType, new object[]{ range, category, bookmark, passim, keepEntryFormatting, separator, includeSequenceName });
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822964.aspx
 		/// </summary>
-		/// <param name="range">NetOffice.WordApi.Range Range</param>
-		/// <param name="category">optional object Category</param>
-		/// <param name="bookmark">optional object Bookmark</param>
-		/// <param name="passim">optional object Passim</param>
-		/// <param name="keepEntryFormatting">optional object KeepEntryFormatting</param>
-		/// <param name="separator">optional object Separator</param>
-		/// <param name="includeSequenceName">optional object IncludeSequenceName</param>
-		/// <param name="entrySeparator">optional object EntrySeparator</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff822964.aspx </remarks>
+		/// <param name="range">NetOffice.WordApi.Range range</param>
+		/// <param name="category">optional object category</param>
+		/// <param name="bookmark">optional object bookmark</param>
+		/// <param name="passim">optional object passim</param>
+		/// <param name="keepEntryFormatting">optional object keepEntryFormatting</param>
+		/// <param name="separator">optional object separator</param>
+		/// <param name="includeSequenceName">optional object includeSequenceName</param>
+		/// <param name="entrySeparator">optional object entrySeparator</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.TableOfAuthorities Add(NetOffice.WordApi.Range range, object category, object bookmark, object passim, object keepEntryFormatting, object separator, object includeSequenceName, object entrySeparator)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(range, category, bookmark, passim, keepEntryFormatting, separator, includeSequenceName, entrySeparator);
-			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.WordApi.TableOfAuthorities newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.TableOfAuthorities.LateBindingApiWrapperType) as NetOffice.WordApi.TableOfAuthorities;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.TableOfAuthorities>(this, "Add", NetOffice.WordApi.TableOfAuthorities.LateBindingApiWrapperType, new object[]{ range, category, bookmark, passim, keepEntryFormatting, separator, includeSequenceName, entrySeparator });
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822964.aspx
 		/// </summary>
-		/// <param name="range">NetOffice.WordApi.Range Range</param>
-		/// <param name="category">optional object Category</param>
-		/// <param name="bookmark">optional object Bookmark</param>
-		/// <param name="passim">optional object Passim</param>
-		/// <param name="keepEntryFormatting">optional object KeepEntryFormatting</param>
-		/// <param name="separator">optional object Separator</param>
-		/// <param name="includeSequenceName">optional object IncludeSequenceName</param>
-		/// <param name="entrySeparator">optional object EntrySeparator</param>
-		/// <param name="pageRangeSeparator">optional object PageRangeSeparator</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff822964.aspx </remarks>
+		/// <param name="range">NetOffice.WordApi.Range range</param>
+		/// <param name="category">optional object category</param>
+		/// <param name="bookmark">optional object bookmark</param>
+		/// <param name="passim">optional object passim</param>
+		/// <param name="keepEntryFormatting">optional object keepEntryFormatting</param>
+		/// <param name="separator">optional object separator</param>
+		/// <param name="includeSequenceName">optional object includeSequenceName</param>
+		/// <param name="entrySeparator">optional object entrySeparator</param>
+		/// <param name="pageRangeSeparator">optional object pageRangeSeparator</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.TableOfAuthorities Add(NetOffice.WordApi.Range range, object category, object bookmark, object passim, object keepEntryFormatting, object separator, object includeSequenceName, object entrySeparator, object pageRangeSeparator)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(range, category, bookmark, passim, keepEntryFormatting, separator, includeSequenceName, entrySeparator, pageRangeSeparator);
-			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.WordApi.TableOfAuthorities newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.TableOfAuthorities.LateBindingApiWrapperType) as NetOffice.WordApi.TableOfAuthorities;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.TableOfAuthorities>(this, "Add", NetOffice.WordApi.TableOfAuthorities.LateBindingApiWrapperType, new object[]{ range, category, bookmark, passim, keepEntryFormatting, separator, includeSequenceName, entrySeparator, pageRangeSeparator });
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822964.aspx
 		/// </summary>
-		/// <param name="range">NetOffice.WordApi.Range Range</param>
-		/// <param name="category">optional object Category</param>
-		/// <param name="bookmark">optional object Bookmark</param>
-		/// <param name="passim">optional object Passim</param>
-		/// <param name="keepEntryFormatting">optional object KeepEntryFormatting</param>
-		/// <param name="separator">optional object Separator</param>
-		/// <param name="includeSequenceName">optional object IncludeSequenceName</param>
-		/// <param name="entrySeparator">optional object EntrySeparator</param>
-		/// <param name="pageRangeSeparator">optional object PageRangeSeparator</param>
-		/// <param name="includeCategoryHeader">optional object IncludeCategoryHeader</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff822964.aspx </remarks>
+		/// <param name="range">NetOffice.WordApi.Range range</param>
+		/// <param name="category">optional object category</param>
+		/// <param name="bookmark">optional object bookmark</param>
+		/// <param name="passim">optional object passim</param>
+		/// <param name="keepEntryFormatting">optional object keepEntryFormatting</param>
+		/// <param name="separator">optional object separator</param>
+		/// <param name="includeSequenceName">optional object includeSequenceName</param>
+		/// <param name="entrySeparator">optional object entrySeparator</param>
+		/// <param name="pageRangeSeparator">optional object pageRangeSeparator</param>
+		/// <param name="includeCategoryHeader">optional object includeCategoryHeader</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.TableOfAuthorities Add(NetOffice.WordApi.Range range, object category, object bookmark, object passim, object keepEntryFormatting, object separator, object includeSequenceName, object entrySeparator, object pageRangeSeparator, object includeCategoryHeader)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(range, category, bookmark, passim, keepEntryFormatting, separator, includeSequenceName, entrySeparator, pageRangeSeparator, includeCategoryHeader);
-			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.WordApi.TableOfAuthorities newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.TableOfAuthorities.LateBindingApiWrapperType) as NetOffice.WordApi.TableOfAuthorities;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.TableOfAuthorities>(this, "Add", NetOffice.WordApi.TableOfAuthorities.LateBindingApiWrapperType, new object[]{ range, category, bookmark, passim, keepEntryFormatting, separator, includeSequenceName, entrySeparator, pageRangeSeparator, includeCategoryHeader });
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837703.aspx
 		/// </summary>
-		/// <param name="shortCitation">string ShortCitation</param>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff837703.aspx </remarks>
+		/// <param name="shortCitation">string shortCitation</param>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void NextCitation(string shortCitation)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(shortCitation);
-			Invoker.Method(this, "NextCitation", paramsArray);
+			 Factory.ExecuteMethod(this, "NextCitation", shortCitation);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff198045.aspx
 		/// </summary>
-		/// <param name="range">NetOffice.WordApi.Range Range</param>
-		/// <param name="shortCitation">string ShortCitation</param>
-		/// <param name="longCitation">optional object LongCitation</param>
-		/// <param name="longCitationAutoText">optional object LongCitationAutoText</param>
-		/// <param name="category">optional object Category</param>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff198045.aspx </remarks>
+		/// <param name="range">NetOffice.WordApi.Range range</param>
+		/// <param name="shortCitation">string shortCitation</param>
+		/// <param name="longCitation">optional object longCitation</param>
+		/// <param name="longCitationAutoText">optional object longCitationAutoText</param>
+		/// <param name="category">optional object category</param>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.Field MarkCitation(NetOffice.WordApi.Range range, string shortCitation, object longCitation, object longCitationAutoText, object category)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(range, shortCitation, longCitation, longCitationAutoText, category);
-			object returnItem = Invoker.MethodReturn(this, "MarkCitation", paramsArray);
-			NetOffice.WordApi.Field newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Field.LateBindingApiWrapperType) as NetOffice.WordApi.Field;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Field>(this, "MarkCitation", NetOffice.WordApi.Field.LateBindingApiWrapperType, new object[]{ range, shortCitation, longCitation, longCitationAutoText, category });
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff198045.aspx
 		/// </summary>
-		/// <param name="range">NetOffice.WordApi.Range Range</param>
-		/// <param name="shortCitation">string ShortCitation</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff198045.aspx </remarks>
+		/// <param name="range">NetOffice.WordApi.Range range</param>
+		/// <param name="shortCitation">string shortCitation</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.Field MarkCitation(NetOffice.WordApi.Range range, string shortCitation)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(range, shortCitation);
-			object returnItem = Invoker.MethodReturn(this, "MarkCitation", paramsArray);
-			NetOffice.WordApi.Field newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Field.LateBindingApiWrapperType) as NetOffice.WordApi.Field;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Field>(this, "MarkCitation", NetOffice.WordApi.Field.LateBindingApiWrapperType, range, shortCitation);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff198045.aspx
 		/// </summary>
-		/// <param name="range">NetOffice.WordApi.Range Range</param>
-		/// <param name="shortCitation">string ShortCitation</param>
-		/// <param name="longCitation">optional object LongCitation</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff198045.aspx </remarks>
+		/// <param name="range">NetOffice.WordApi.Range range</param>
+		/// <param name="shortCitation">string shortCitation</param>
+		/// <param name="longCitation">optional object longCitation</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.Field MarkCitation(NetOffice.WordApi.Range range, string shortCitation, object longCitation)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(range, shortCitation, longCitation);
-			object returnItem = Invoker.MethodReturn(this, "MarkCitation", paramsArray);
-			NetOffice.WordApi.Field newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Field.LateBindingApiWrapperType) as NetOffice.WordApi.Field;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Field>(this, "MarkCitation", NetOffice.WordApi.Field.LateBindingApiWrapperType, range, shortCitation, longCitation);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff198045.aspx
 		/// </summary>
-		/// <param name="range">NetOffice.WordApi.Range Range</param>
-		/// <param name="shortCitation">string ShortCitation</param>
-		/// <param name="longCitation">optional object LongCitation</param>
-		/// <param name="longCitationAutoText">optional object LongCitationAutoText</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff198045.aspx </remarks>
+		/// <param name="range">NetOffice.WordApi.Range range</param>
+		/// <param name="shortCitation">string shortCitation</param>
+		/// <param name="longCitation">optional object longCitation</param>
+		/// <param name="longCitationAutoText">optional object longCitationAutoText</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.Field MarkCitation(NetOffice.WordApi.Range range, string shortCitation, object longCitation, object longCitationAutoText)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(range, shortCitation, longCitation, longCitationAutoText);
-			object returnItem = Invoker.MethodReturn(this, "MarkCitation", paramsArray);
-			NetOffice.WordApi.Field newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Field.LateBindingApiWrapperType) as NetOffice.WordApi.Field;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Field>(this, "MarkCitation", NetOffice.WordApi.Field.LateBindingApiWrapperType, range, shortCitation, longCitation, longCitationAutoText);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196874.aspx
 		/// </summary>
-		/// <param name="shortCitation">string ShortCitation</param>
-		/// <param name="longCitation">optional object LongCitation</param>
-		/// <param name="longCitationAutoText">optional object LongCitationAutoText</param>
-		/// <param name="category">optional object Category</param>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff196874.aspx </remarks>
+		/// <param name="shortCitation">string shortCitation</param>
+		/// <param name="longCitation">optional object longCitation</param>
+		/// <param name="longCitationAutoText">optional object longCitationAutoText</param>
+		/// <param name="category">optional object category</param>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void MarkAllCitations(string shortCitation, object longCitation, object longCitationAutoText, object category)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(shortCitation, longCitation, longCitationAutoText, category);
-			Invoker.Method(this, "MarkAllCitations", paramsArray);
+			 Factory.ExecuteMethod(this, "MarkAllCitations", shortCitation, longCitation, longCitationAutoText, category);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196874.aspx
 		/// </summary>
-		/// <param name="shortCitation">string ShortCitation</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff196874.aspx </remarks>
+		/// <param name="shortCitation">string shortCitation</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void MarkAllCitations(string shortCitation)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(shortCitation);
-			Invoker.Method(this, "MarkAllCitations", paramsArray);
+			 Factory.ExecuteMethod(this, "MarkAllCitations", shortCitation);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196874.aspx
 		/// </summary>
-		/// <param name="shortCitation">string ShortCitation</param>
-		/// <param name="longCitation">optional object LongCitation</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff196874.aspx </remarks>
+		/// <param name="shortCitation">string shortCitation</param>
+		/// <param name="longCitation">optional object longCitation</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void MarkAllCitations(string shortCitation, object longCitation)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(shortCitation, longCitation);
-			Invoker.Method(this, "MarkAllCitations", paramsArray);
+			 Factory.ExecuteMethod(this, "MarkAllCitations", shortCitation, longCitation);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196874.aspx
 		/// </summary>
-		/// <param name="shortCitation">string ShortCitation</param>
-		/// <param name="longCitation">optional object LongCitation</param>
-		/// <param name="longCitationAutoText">optional object LongCitationAutoText</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff196874.aspx </remarks>
+		/// <param name="shortCitation">string shortCitation</param>
+		/// <param name="longCitation">optional object longCitation</param>
+		/// <param name="longCitationAutoText">optional object longCitationAutoText</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void MarkAllCitations(string shortCitation, object longCitation, object longCitationAutoText)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(shortCitation, longCitation, longCitationAutoText);
-			Invoker.Method(this, "MarkAllCitations", paramsArray);
+			 Factory.ExecuteMethod(this, "MarkAllCitations", shortCitation, longCitation, longCitationAutoText);
 		}
 
 		#endregion
@@ -566,9 +508,9 @@ namespace NetOffice.WordApi
        #region IEnumerable<NetOffice.WordApi.TableOfAuthorities> Member
         
         /// <summary>
-		/// SupportByVersionAttribute Word, 9,10,11,12,14,15,16
+		/// SupportByVersion Word, 9,10,11,12,14,15,16
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
        public IEnumerator<NetOffice.WordApi.TableOfAuthorities> GetEnumerator()  
        {
            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
@@ -581,15 +523,19 @@ namespace NetOffice.WordApi
 		#region IEnumerable Members
        
 		/// <summary>
-		/// SupportByVersionAttribute Word, 9,10,11,12,14,15,16
+		/// SupportByVersion Word, 9,10,11,12,14,15,16
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
 			return NetOffice.Utils.GetProxyEnumeratorAsProperty(this);
 		}
 
 		#endregion
+
 		#pragma warning restore
 	}
 }
+
+
+

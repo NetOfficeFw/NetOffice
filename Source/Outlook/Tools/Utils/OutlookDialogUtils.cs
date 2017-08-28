@@ -49,7 +49,7 @@ namespace NetOffice.OutlookApi.Tools.Utils
         {
             try
             {
-                NetOffice.Tools.WndUtils.WindowEnumerator enumerator = new NetOffice.Tools.WndUtils.WindowEnumerator("rctrl_renwnd32");
+                Running.WindowEnumerator enumerator = new Running.WindowEnumerator("rctrl_renwnd32");
                 IntPtr[] handles = enumerator.EnumerateWindows(2000);
                 if (null != handles)
                 {

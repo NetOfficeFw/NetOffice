@@ -1,28 +1,28 @@
-﻿using System;
-using NetRuntimeSystem = System;
-using System.Runtime.InteropServices;
-using System.ComponentModel;
-using System.Runtime.CompilerServices;
-using System.Reflection;
+﻿using System.Collections;
 using System.Collections.Generic;
-using System.Collections;
-using NetOffice;
+using System;
+using NetRuntimeSystem = System;
+using System.ComponentModel;
+using NetOffice.Attributes;
+
 namespace NetOffice.ExcelApi
 {
-	///<summary>
+	/// <summary>
 	/// Interface IProtectedViewWindows 
 	/// SupportByVersion Excel, 14,15,16
-	///</summary>
-	[SupportByVersionAttribute("Excel", 14,15,16)]
-	[EntityTypeAttribute(EntityType.IsInterface)]
-	public class IProtectedViewWindows : COMObject ,IEnumerable<NetOffice.ExcelApi.ProtectedViewWindow>
+	/// </summary>
+	[SupportByVersion("Excel", 14,15,16)]
+	[EntityType(EntityType.IsInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "_Default")]
+	public class IProtectedViewWindows : COMObject , IEnumerable<NetOffice.ExcelApi.ProtectedViewWindow>
 	{
 		#pragma warning disable
+
 		#region Type Information
 
         /// <summary>
         /// Instance Type
         /// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
         public override Type InstanceType
         {
             get
@@ -40,7 +40,6 @@ namespace NetOffice.ExcelApi
             {
                 if (null == _type)
                     _type = typeof(IProtectedViewWindows);
-                    
                 return _type;
             }
         }
@@ -93,7 +92,7 @@ namespace NetOffice.ExcelApi
 		{
 		}
 		
-		/// <param name="progId">registered ProgID</param>
+		/// <param name="progId">registered progID</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public IProtectedViewWindows(string progId) : base(progId)
 		{
@@ -107,15 +106,12 @@ namespace NetOffice.ExcelApi
 		/// SupportByVersion Excel 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 14,15,16)]
+		[SupportByVersion("Excel", 14,15,16)]
 		public NetOffice.ExcelApi.Application Application
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				NetOffice.ExcelApi.Application newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.Application.LateBindingApiWrapperType) as NetOffice.ExcelApi.Application;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Application>(this, "Application", NetOffice.ExcelApi.Application.LateBindingApiWrapperType);
 			}
 		}
 
@@ -123,15 +119,12 @@ namespace NetOffice.ExcelApi
 		/// SupportByVersion Excel 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 14,15,16)]
+		[SupportByVersion("Excel", 14,15,16)]
 		public NetOffice.ExcelApi.Enums.XlCreator Creator
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Creator", paramsArray);
-				int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-				return (NetOffice.ExcelApi.Enums.XlCreator)intReturnItem;
+				return Factory.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlCreator>(this, "Creator");
 			}
 		}
 
@@ -140,15 +133,12 @@ namespace NetOffice.ExcelApi
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 14,15,16)]
+		[SupportByVersion("Excel", 14,15,16), ProxyResult]
 		public object Parent
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Parent", paramsArray);
-				ICOMObject newObject = Factory.CreateObjectFromComProxy(this,returnItem);
-				return newObject;
+				return Factory.ExecuteReferencePropertyGet(this, "Parent");
 			}
 		}
 
@@ -156,14 +146,12 @@ namespace NetOffice.ExcelApi
 		/// SupportByVersion Excel 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 14,15,16)]
+		[SupportByVersion("Excel", 14,15,16)]
 		public Int32 Count
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Count", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "Count");
 			}
 		}
 
@@ -171,17 +159,14 @@ namespace NetOffice.ExcelApi
 		/// SupportByVersion Excel 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <param name="index">object Index</param>
-		[SupportByVersionAttribute("Excel", 14,15,16)]
-		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
+		/// <param name="index">object index</param>
+		[SupportByVersion("Excel", 14,15,16)]
+		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
 		public NetOffice.ExcelApi.ProtectedViewWindow this[object index]
 		{
 			get
-{			
-			object[] paramsArray = Invoker.ValidateParamsArray(index);
-			object returnItem = Invoker.PropertyGet(this, "_Default", paramsArray);
-			NetOffice.ExcelApi.ProtectedViewWindow newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.ProtectedViewWindow.LateBindingApiWrapperType) as NetOffice.ExcelApi.ProtectedViewWindow;
-			return newObject;
+			{
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.ProtectedViewWindow>(this, "_Default", NetOffice.ExcelApi.ProtectedViewWindow.LateBindingApiWrapperType, index);
 			}
 		}
 
@@ -191,67 +176,51 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="filename">string Filename</param>
-		/// <param name="password">optional object Password</param>
-		/// <param name="addToMru">optional object AddToMru</param>
-		/// <param name="repairMode">optional object RepairMode</param>
-		[SupportByVersionAttribute("Excel", 14,15,16)]
+		/// <param name="filename">string filename</param>
+		/// <param name="password">optional object password</param>
+		/// <param name="addToMru">optional object addToMru</param>
+		/// <param name="repairMode">optional object repairMode</param>
+		[SupportByVersion("Excel", 14,15,16)]
 		public NetOffice.ExcelApi.ProtectedViewWindow Open(string filename, object password, object addToMru, object repairMode)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(filename, password, addToMru, repairMode);
-			object returnItem = Invoker.MethodReturn(this, "Open", paramsArray);
-			NetOffice.ExcelApi.ProtectedViewWindow newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.ProtectedViewWindow.LateBindingApiWrapperType) as NetOffice.ExcelApi.ProtectedViewWindow;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.ProtectedViewWindow>(this, "Open", NetOffice.ExcelApi.ProtectedViewWindow.LateBindingApiWrapperType, filename, password, addToMru, repairMode);
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="filename">string Filename</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 14,15,16)]
+		/// <param name="filename">string filename</param>
+		[CustomMethod]
+		[SupportByVersion("Excel", 14,15,16)]
 		public NetOffice.ExcelApi.ProtectedViewWindow Open(string filename)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(filename);
-			object returnItem = Invoker.MethodReturn(this, "Open", paramsArray);
-			NetOffice.ExcelApi.ProtectedViewWindow newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.ProtectedViewWindow.LateBindingApiWrapperType) as NetOffice.ExcelApi.ProtectedViewWindow;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.ProtectedViewWindow>(this, "Open", NetOffice.ExcelApi.ProtectedViewWindow.LateBindingApiWrapperType, filename);
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="filename">string Filename</param>
-		/// <param name="password">optional object Password</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 14,15,16)]
+		/// <param name="filename">string filename</param>
+		/// <param name="password">optional object password</param>
+		[CustomMethod]
+		[SupportByVersion("Excel", 14,15,16)]
 		public NetOffice.ExcelApi.ProtectedViewWindow Open(string filename, object password)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(filename, password);
-			object returnItem = Invoker.MethodReturn(this, "Open", paramsArray);
-			NetOffice.ExcelApi.ProtectedViewWindow newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.ProtectedViewWindow.LateBindingApiWrapperType) as NetOffice.ExcelApi.ProtectedViewWindow;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.ProtectedViewWindow>(this, "Open", NetOffice.ExcelApi.ProtectedViewWindow.LateBindingApiWrapperType, filename, password);
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="filename">string Filename</param>
-		/// <param name="password">optional object Password</param>
-		/// <param name="addToMru">optional object AddToMru</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 14,15,16)]
+		/// <param name="filename">string filename</param>
+		/// <param name="password">optional object password</param>
+		/// <param name="addToMru">optional object addToMru</param>
+		[CustomMethod]
+		[SupportByVersion("Excel", 14,15,16)]
 		public NetOffice.ExcelApi.ProtectedViewWindow Open(string filename, object password, object addToMru)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(filename, password, addToMru);
-			object returnItem = Invoker.MethodReturn(this, "Open", paramsArray);
-			NetOffice.ExcelApi.ProtectedViewWindow newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.ProtectedViewWindow.LateBindingApiWrapperType) as NetOffice.ExcelApi.ProtectedViewWindow;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.ProtectedViewWindow>(this, "Open", NetOffice.ExcelApi.ProtectedViewWindow.LateBindingApiWrapperType, filename, password, addToMru);
 		}
 
 		#endregion
@@ -259,9 +228,9 @@ namespace NetOffice.ExcelApi
        #region IEnumerable<NetOffice.ExcelApi.ProtectedViewWindow> Member
         
         /// <summary>
-		/// SupportByVersionAttribute Excel, 14,15,16
+		/// SupportByVersion Excel, 14,15,16
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 14,15,16)]
+		[SupportByVersion("Excel", 14,15,16)]
        public IEnumerator<NetOffice.ExcelApi.ProtectedViewWindow> GetEnumerator()  
        {
            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
@@ -274,15 +243,20 @@ namespace NetOffice.ExcelApi
 		#region IEnumerable Members
        
 		/// <summary>
-		/// SupportByVersionAttribute Excel, 14,15,16
+		/// SupportByVersion Excel, 14,15,16
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 14,15,16)]
+		[SupportByVersion("Excel", 14,15,16)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
 			return NetOffice.Utils.GetProxyEnumeratorAsProperty(this);
 		}
 
 		#endregion
+
 		#pragma warning restore
 	}
 }
+
+
+
+

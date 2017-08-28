@@ -1,24 +1,35 @@
-﻿using System;
-using NetRuntimeSystem = System;
-using System.Runtime.InteropServices;
-using System.Runtime.CompilerServices;
-using System.ComponentModel;
-using System.Reflection;
+﻿using System.Collections;
 using System.Collections.Generic;
-using System.Collections;
-using NetOffice;
+using System;
+using NetRuntimeSystem = System;
+using System.ComponentModel;
+using NetOffice.Attributes;
+
 namespace NetOffice.ADODBApi
 {
-	///<summary>
+	/// <summary>
 	/// DispatchInterface _Collection 
 	/// SupportByVersion ADODB, 2.1,2.5
-	///</summary>
-	[SupportByVersionAttribute("ADODB", 2.1,2.5)]
-	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
-	public class _Collection : COMObject ,IEnumerable<object>
+	/// </summary>
+	[SupportByVersion("ADODB", 2.1,2.5)]
+	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Method)]
+	public class _Collection : COMObject , IEnumerable<object>
 	{
 		#pragma warning disable
+
 		#region Type Information
+
+		/// <summary>
+		/// Instance Type
+		/// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
+		public override Type InstanceType
+		{
+			get
+			{
+				return LateBindingApiWrapperType;
+			}
+		}
 
         private static Type _type;
 
@@ -29,7 +40,6 @@ namespace NetOffice.ADODBApi
             {
                 if (null == _type)
                     _type = typeof(_Collection);
-                    
                 return _type;
             }
         }
@@ -82,7 +92,7 @@ namespace NetOffice.ADODBApi
 		{
 		}
 		
-		/// <param name="progId">registered ProgID</param>
+		/// <param name="progId">registered progID</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public _Collection(string progId) : base(progId)
 		{
@@ -96,14 +106,12 @@ namespace NetOffice.ADODBApi
 		/// SupportByVersion ADODB 2.1, 2.5
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("ADODB", 2.1,2.5)]
+		[SupportByVersion("ADODB", 2.1,2.5)]
 		public Int32 Count
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Count", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "Count");
 			}
 		}
 
@@ -113,13 +121,11 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.1, 2.5
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("ADODB", 2.1,2.5)]
+		[SupportByVersion("ADODB", 2.1,2.5)]
 		public void Refresh()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "Refresh", paramsArray);
+			 Factory.ExecuteMethod(this, "Refresh");
 		}
 
 		#endregion
@@ -127,9 +133,9 @@ namespace NetOffice.ADODBApi
        #region IEnumerable<object> Member
         
         /// <summary>
-		/// SupportByVersionAttribute ADODB, 2.1,2.5
+		/// SupportByVersion ADODB, 2.1,2.5
 		/// </summary>
-		[SupportByVersionAttribute("ADODB", 2.1,2.5)]
+		[SupportByVersion("ADODB", 2.1,2.5)]
        public IEnumerator<object> GetEnumerator()  
        {
            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
@@ -142,15 +148,19 @@ namespace NetOffice.ADODBApi
 		#region IEnumerable Members
        
 		/// <summary>
-		/// SupportByVersionAttribute ADODB, 2.1,2.5
+		/// SupportByVersion ADODB, 2.1,2.5
 		/// </summary>
-		[SupportByVersionAttribute("ADODB", 2.1,2.5)]
+		[SupportByVersion("ADODB", 2.1,2.5)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
 			return NetOffice.Utils.GetProxyEnumeratorAsMethod(this);
 		}
 
 		#endregion
+
 		#pragma warning restore
 	}
 }
+
+
+

@@ -1,37 +1,37 @@
 ﻿using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
-using NetOffice;
-using NetOffice.Misc;
+using NetOffice.Attributes;
 
 namespace NetOffice.OutlookApi
 {
-
 	#region Delegates
 
 	#pragma warning disable
-	public delegate void NameSpace_OptionsPagesAddEventHandler(NetOffice.OutlookApi.PropertyPages Pages, NetOffice.OutlookApi.MAPIFolder Folder);
+	public delegate void NameSpace_OptionsPagesAddEventHandler(NetOffice.OutlookApi.PropertyPages pages, NetOffice.OutlookApi.MAPIFolder folder);
 	public delegate void NameSpace_AutoDiscoverCompleteEventHandler();
 	#pragma warning restore
 
 	#endregion
 
-	///<summary>
+	/// <summary>
 	/// CoClass NameSpace 
 	/// SupportByVersion Outlook, 9,10,11,12,14,15,16
-	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff869848.aspx
-	///</summary>
-	[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15,16)]
-	[EntityTypeAttribute(EntityType.IsCoClass)]
-	public class NameSpace : _NameSpace,IEventBinding
+	/// </summary>
+	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff869848.aspx </remarks>
+	[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
+	[EntityType(EntityType.IsCoClass)]
+	[EventSink(typeof(Events.NameSpaceEvents_SinkHelper))]
+	public class NameSpace : _NameSpace, IEventBinding
 	{
 		#pragma warning disable
+
 		#region Fields
 		
 		private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
 		private string _activeSinkId;
 		private NetRuntimeSystem.Type _thisType;
-		NameSpaceEvents_SinkHelper _nameSpaceEvents_SinkHelper;
+		private Events.NameSpaceEvents_SinkHelper _nameSpaceEvents_SinkHelper;
 	
 		#endregion
 
@@ -40,6 +40,7 @@ namespace NetOffice.OutlookApi
         /// <summary>
         /// Instance Type
         /// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
         public override Type InstanceType
         {
             get
@@ -106,17 +107,17 @@ namespace NetOffice.OutlookApi
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of NameSpace 
-        ///</summary>		
+        /// </summary>		
 		public NameSpace():base("Outlook.NameSpace")
 		{
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of NameSpace
-        ///</summary>
+        /// </summary>
         ///<param name="progId">registered ProgID</param>
 		public NameSpace(string progId):base(progId)
 		{
@@ -126,46 +127,6 @@ namespace NetOffice.OutlookApi
 		#endregion
 
 		#region Static CoClass Methods
-
-		/// <summary>
-        /// Returns all running Outlook.NameSpace objects from the environment/system
-        /// </summary>
-        /// <returns>an Outlook.NameSpace array</returns>
-		public static NetOffice.OutlookApi.NameSpace[] GetActiveInstances()
-		{		
-			IDisposableEnumeration proxyList = NetOffice.ProxyService.GetActiveInstances("Outlook","NameSpace");
-			NetRuntimeSystem.Collections.Generic.List<NetOffice.OutlookApi.NameSpace> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.OutlookApi.NameSpace>();
-			foreach(object proxy in proxyList)
-				resultList.Add( new NetOffice.OutlookApi.NameSpace(null, proxy) );
-			return resultList.ToArray();
-		}
-
-		/// <summary>
-        /// Returns a running Outlook.NameSpace object from the environment/system.
-        /// </summary>
-        /// <returns>an Outlook.NameSpace object or null</returns>
-		public static NetOffice.OutlookApi.NameSpace GetActiveInstance()
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Outlook","NameSpace", false);
-			if(null != proxy)
-				return new NetOffice.OutlookApi.NameSpace(null, proxy);
-			else
-				return null;
-		}
-
-		/// <summary>
-        /// Returns a running Outlook.NameSpace object from the environment/system. 
-        /// </summary>
-	    /// <param name="throwOnError">throw an exception if no object was found</param>
-        /// <returns>an Outlook.NameSpace object or null</returns>
-		public static NetOffice.OutlookApi.NameSpace GetActiveInstance(bool throwOnError)
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Outlook","NameSpace", throwOnError);
-			if(null != proxy)
-				return new NetOffice.OutlookApi.NameSpace(null, proxy);
-			else
-				return null;
-		}
 		#endregion
 
 		#region Events
@@ -233,12 +194,12 @@ namespace NetOffice.OutlookApi
 				return;
 	
             if (null == _activeSinkId)
-				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, NameSpaceEvents_SinkHelper.Id);
+				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, Events.NameSpaceEvents_SinkHelper.Id);
 
 
-			if(NameSpaceEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
+			if(Events.NameSpaceEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
 			{
-				_nameSpaceEvents_SinkHelper = new NameSpaceEvents_SinkHelper(this, _connectPoint);
+				_nameSpaceEvents_SinkHelper = new Events.NameSpaceEvents_SinkHelper(this, _connectPoint);
 				return;
 			} 
         }
@@ -380,3 +341,4 @@ namespace NetOffice.OutlookApi
 		#pragma warning restore
 	}
 }
+

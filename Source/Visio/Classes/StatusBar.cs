@@ -1,12 +1,10 @@
 ﻿using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
-using NetOffice;
-using NetOffice.Misc;
+using NetOffice.Attributes;
 
 namespace NetOffice.VisioApi
 {
-
 	#region Delegates
 
 	#pragma warning disable
@@ -14,15 +12,16 @@ namespace NetOffice.VisioApi
 
 	#endregion
 
-	///<summary>
+	/// <summary>
 	/// CoClass StatusBar 
 	/// SupportByVersion Visio, 11,12,14,15,16
-	///</summary>
-	[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
-	[EntityTypeAttribute(EntityType.IsCoClass)]
-	public class StatusBar : IVStatusBar
+	/// </summary>
+	[SupportByVersion("Visio", 11,12,14,15,16)]
+	[EntityType(EntityType.IsCoClass)]
+ 	public class StatusBar : IVStatusBar
 	{
 		#pragma warning disable
+
 		#region Fields
 		
 		private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
@@ -36,6 +35,7 @@ namespace NetOffice.VisioApi
         /// <summary>
         /// Instance Type
         /// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
         public override Type InstanceType
         {
             get
@@ -102,17 +102,17 @@ namespace NetOffice.VisioApi
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of StatusBar 
-        ///</summary>		
+        /// </summary>		
 		public StatusBar():base("Visio.StatusBar")
 		{
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of StatusBar
-        ///</summary>
+        /// </summary>
         ///<param name="progId">registered ProgID</param>
 		public StatusBar(string progId):base(progId)
 		{
@@ -122,46 +122,6 @@ namespace NetOffice.VisioApi
 		#endregion
 
 		#region Static CoClass Methods
-
-		/// <summary>
-        /// Returns all running Visio.StatusBar objects from the environment/system
-        /// </summary>
-        /// <returns>an Visio.StatusBar array</returns>
-		public static NetOffice.VisioApi.StatusBar[] GetActiveInstances()
-		{		
-			IDisposableEnumeration proxyList = NetOffice.ProxyService.GetActiveInstances("Visio","StatusBar");
-			NetRuntimeSystem.Collections.Generic.List<NetOffice.VisioApi.StatusBar> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.VisioApi.StatusBar>();
-			foreach(object proxy in proxyList)
-				resultList.Add( new NetOffice.VisioApi.StatusBar(null, proxy) );
-			return resultList.ToArray();
-		}
-
-		/// <summary>
-        /// Returns a running Visio.StatusBar object from the environment/system.
-        /// </summary>
-        /// <returns>an Visio.StatusBar object or null</returns>
-		public static NetOffice.VisioApi.StatusBar GetActiveInstance()
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Visio","StatusBar", false);
-			if(null != proxy)
-				return new NetOffice.VisioApi.StatusBar(null, proxy);
-			else
-				return null;
-		}
-
-		/// <summary>
-        /// Returns a running Visio.StatusBar object from the environment/system. 
-        /// </summary>
-	    /// <param name="throwOnError">throw an exception if no object was found</param>
-        /// <returns>an Visio.StatusBar object or null</returns>
-		public static NetOffice.VisioApi.StatusBar GetActiveInstance(bool throwOnError)
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Visio","StatusBar", throwOnError);
-			if(null != proxy)
-				return new NetOffice.VisioApi.StatusBar(null, proxy);
-			else
-				return null;
-		}
 		#endregion
 
 		#region Events
@@ -320,3 +280,4 @@ namespace NetOffice.VisioApi
 		#pragma warning restore
 	}
 }
+

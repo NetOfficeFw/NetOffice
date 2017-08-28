@@ -1,25 +1,24 @@
-﻿using System;
-using NetRuntimeSystem = System;
+﻿using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
-using System.Runtime.CompilerServices;
+using System;
+using NetRuntimeSystem = System;
 using System.ComponentModel;
-using System.Reflection;
-using System.Collections.Generic;
-using NetOffice;
+using NetOffice.Attributes;
+
 namespace NetOffice.OfficeApi
 {
 	#pragma warning disable
-	///<summary>
+	/// <summary>
 	/// DispatchInterface IRibbonExtensibility SupportByVersionAttribute Office, 12,14,15,16
-	///</summary>
-	[SupportByVersionAttribute("Office", 12,14,15,16)]
+	/// </summary>
+	[SupportByVersion("Office", 12,14,15,16)]
 	[ComImport, ComVisible(true), Guid("000C0396-0000-0000-C000-000000000046"), TypeLibType((short) 4160)]
-	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
+	[EntityType(EntityType.IsDispatchInterface)]
 	public interface IRibbonExtensibility
 	{
 		#region Methods
 
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		[SupportByVersion("Office", 12,14,15,16)]
 		[return: MarshalAs(UnmanagedType.BStr)]
 		[MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(1)]
 		string GetCustomUI([In, MarshalAs(UnmanagedType.BStr)]string RibbonID);
@@ -32,3 +31,5 @@ namespace NetOffice.OfficeApi
 	}
 }
 	#pragma warning restore
+
+

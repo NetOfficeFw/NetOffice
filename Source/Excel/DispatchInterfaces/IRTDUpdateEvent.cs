@@ -1,29 +1,29 @@
-﻿using System;
-using NetRuntimeSystem = System;
+﻿using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
-using System.Runtime.CompilerServices;
+using System;
+using NetRuntimeSystem = System;
 using System.ComponentModel;
-using System.Reflection;
-using System.Collections.Generic;
-using NetOffice;
+using NetOffice.Attributes;
+
 namespace NetOffice.ExcelApi
 {
 	#pragma warning disable
-	///<summary>
-	/// DispatchInterface IRTDUpdateEvent SupportByVersionAttribute Excel, 10,11,12,14,15,16
-	///</summary>
-	[SupportByVersionAttribute("Excel", 10,11,12,14,15,16)]
+	/// <summary>
+	/// DispatchInterface IRTDUpdateEvent 
+    /// SupportByVersion Excel, 10,11,12,14,15,16
+	/// </summary>
+	[SupportByVersion("Excel", 10,11,12,14,15,16)]
 	[ComImport, ComVisible(true), Guid("A43788C1-D91B-11D3-8F39-00C04F3651B8"), TypeLibType((short) 4160)]
-	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
+	[EntityType(EntityType.IsDispatchInterface)]
 	public interface IRTDUpdateEvent
 	{
 		#region Methods
 
-		[SupportByVersionAttribute("Excel", 10,11,12,14,15,16)]
+		[SupportByVersion("Excel", 10,11,12,14,15,16)]
 		[MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(10)]
 		void UpdateNotify();
 
-		[SupportByVersionAttribute("Excel", 10,11,12,14,15,16)]
+		[SupportByVersion("Excel", 10,11,12,14,15,16)]
 		[MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(12)]
 		void Disconnect();
 
@@ -31,7 +31,7 @@ namespace NetOffice.ExcelApi
 
 		#region Properties
 
-		[SupportByVersionAttribute("Excel", 10,11,12,14,15,16)]
+		[SupportByVersion("Excel", 10,11,12,14,15,16)]
 		[DispId(11)]
 		Int32 HeartbeatInterval{[MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(11)] get;}
 
@@ -39,3 +39,6 @@ namespace NetOffice.ExcelApi
 	}
 }
 	#pragma warning restore
+
+
+

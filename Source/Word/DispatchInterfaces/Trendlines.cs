@@ -1,25 +1,36 @@
-﻿using System;
-using NetRuntimeSystem = System;
-using System.Runtime.InteropServices;
-using System.Runtime.CompilerServices;
-using System.ComponentModel;
-using System.Reflection;
+﻿using System.Collections;
 using System.Collections.Generic;
-using System.Collections;
-using NetOffice;
+using System;
+using NetRuntimeSystem = System;
+using System.ComponentModel;
+using NetOffice.Attributes;
+
 namespace NetOffice.WordApi
 {
-	///<summary>
+	/// <summary>
 	/// DispatchInterface Trendlines 
 	/// SupportByVersion Word, 14,15,16
-	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845131.aspx
-	///</summary>
-	[SupportByVersionAttribute("Word", 14,15,16)]
-	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
-	public class Trendlines : COMObject ,IEnumerable<NetOffice.WordApi.Trendline>
+	/// </summary>
+	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff845131.aspx </remarks>
+	[SupportByVersion("Word", 14,15,16)]
+	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Method), HasIndexProperty(IndexInvoke.Method, "_Default")]
+	public class Trendlines : COMObject , IEnumerable<NetOffice.WordApi.Trendline>
 	{
 		#pragma warning disable
+
 		#region Type Information
+
+		/// <summary>
+		/// Instance Type
+		/// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
+		public override Type InstanceType
+		{
+			get
+			{
+				return LateBindingApiWrapperType;
+			}
+		}
 
         private static Type _type;
 
@@ -30,7 +41,6 @@ namespace NetOffice.WordApi
             {
                 if (null == _type)
                     _type = typeof(Trendlines);
-                    
                 return _type;
             }
         }
@@ -83,7 +93,7 @@ namespace NetOffice.WordApi
 		{
 		}
 		
-		/// <param name="progId">registered ProgID</param>
+		/// <param name="progId">registered progID</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public Trendlines(string progId) : base(progId)
 		{
@@ -96,68 +106,58 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff823212.aspx
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff823212.aspx </remarks>
+		[SupportByVersion("Word", 14,15,16), ProxyResult]
 		public object Parent
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Parent", paramsArray);
-				ICOMObject newObject = Factory.CreateObjectFromComProxy(this,returnItem);
-				return newObject;
+				return Factory.ExecuteReferencePropertyGet(this, "Parent");
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff821991.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff821991.aspx </remarks>
+		[SupportByVersion("Word", 14,15,16)]
 		public Int32 Count
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Count", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "Count");
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822618.aspx
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff822618.aspx </remarks>
+		[SupportByVersion("Word", 14,15,16), ProxyResult]
 		public object Application
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				ICOMObject newObject = Factory.CreateObjectFromComProxy(this,returnItem);
-				return newObject;
+				return Factory.ExecuteReferencePropertyGet(this, "Application");
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192418.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff192418.aspx </remarks>
+		[SupportByVersion("Word", 14,15,16)]
 		public Int32 Creator
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Creator", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "Creator");
 			}
 		}
 
@@ -167,204 +167,170 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff820757.aspx
 		/// </summary>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff820757.aspx </remarks>
 		/// <param name="type">optional NetOffice.WordApi.Enums.XlTrendlineType Type = -4132</param>
-		/// <param name="order">optional object Order</param>
-		/// <param name="period">optional object Period</param>
-		/// <param name="forward">optional object Forward</param>
-		/// <param name="backward">optional object Backward</param>
-		/// <param name="intercept">optional object Intercept</param>
-		/// <param name="displayEquation">optional object DisplayEquation</param>
-		/// <param name="displayRSquared">optional object DisplayRSquared</param>
-		/// <param name="name">optional object Name</param>
-		[SupportByVersionAttribute("Word", 14,15,16)]
+		/// <param name="order">optional object order</param>
+		/// <param name="period">optional object period</param>
+		/// <param name="forward">optional object forward</param>
+		/// <param name="backward">optional object backward</param>
+		/// <param name="intercept">optional object intercept</param>
+		/// <param name="displayEquation">optional object displayEquation</param>
+		/// <param name="displayRSquared">optional object displayRSquared</param>
+		/// <param name="name">optional object name</param>
+		[SupportByVersion("Word", 14,15,16)]
 		public NetOffice.WordApi.Trendline Add(object type, object order, object period, object forward, object backward, object intercept, object displayEquation, object displayRSquared, object name)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(type, order, period, forward, backward, intercept, displayEquation, displayRSquared, name);
-			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.WordApi.Trendline newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Trendline.LateBindingApiWrapperType) as NetOffice.WordApi.Trendline;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Trendline>(this, "Add", NetOffice.WordApi.Trendline.LateBindingApiWrapperType, new object[]{ type, order, period, forward, backward, intercept, displayEquation, displayRSquared, name });
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff820757.aspx
 		/// </summary>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff820757.aspx </remarks>
+		[CustomMethod]
+		[SupportByVersion("Word", 14,15,16)]
 		public NetOffice.WordApi.Trendline Add()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.WordApi.Trendline newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Trendline.LateBindingApiWrapperType) as NetOffice.WordApi.Trendline;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Trendline>(this, "Add", NetOffice.WordApi.Trendline.LateBindingApiWrapperType);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff820757.aspx
 		/// </summary>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff820757.aspx </remarks>
 		/// <param name="type">optional NetOffice.WordApi.Enums.XlTrendlineType Type = -4132</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Word", 14,15,16)]
 		public NetOffice.WordApi.Trendline Add(object type)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(type);
-			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.WordApi.Trendline newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Trendline.LateBindingApiWrapperType) as NetOffice.WordApi.Trendline;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Trendline>(this, "Add", NetOffice.WordApi.Trendline.LateBindingApiWrapperType, type);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff820757.aspx
 		/// </summary>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff820757.aspx </remarks>
 		/// <param name="type">optional NetOffice.WordApi.Enums.XlTrendlineType Type = -4132</param>
-		/// <param name="order">optional object Order</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 14,15,16)]
+		/// <param name="order">optional object order</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 14,15,16)]
 		public NetOffice.WordApi.Trendline Add(object type, object order)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(type, order);
-			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.WordApi.Trendline newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Trendline.LateBindingApiWrapperType) as NetOffice.WordApi.Trendline;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Trendline>(this, "Add", NetOffice.WordApi.Trendline.LateBindingApiWrapperType, type, order);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff820757.aspx
 		/// </summary>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff820757.aspx </remarks>
 		/// <param name="type">optional NetOffice.WordApi.Enums.XlTrendlineType Type = -4132</param>
-		/// <param name="order">optional object Order</param>
-		/// <param name="period">optional object Period</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 14,15,16)]
+		/// <param name="order">optional object order</param>
+		/// <param name="period">optional object period</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 14,15,16)]
 		public NetOffice.WordApi.Trendline Add(object type, object order, object period)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(type, order, period);
-			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.WordApi.Trendline newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Trendline.LateBindingApiWrapperType) as NetOffice.WordApi.Trendline;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Trendline>(this, "Add", NetOffice.WordApi.Trendline.LateBindingApiWrapperType, type, order, period);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff820757.aspx
 		/// </summary>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff820757.aspx </remarks>
 		/// <param name="type">optional NetOffice.WordApi.Enums.XlTrendlineType Type = -4132</param>
-		/// <param name="order">optional object Order</param>
-		/// <param name="period">optional object Period</param>
-		/// <param name="forward">optional object Forward</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 14,15,16)]
+		/// <param name="order">optional object order</param>
+		/// <param name="period">optional object period</param>
+		/// <param name="forward">optional object forward</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 14,15,16)]
 		public NetOffice.WordApi.Trendline Add(object type, object order, object period, object forward)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(type, order, period, forward);
-			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.WordApi.Trendline newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Trendline.LateBindingApiWrapperType) as NetOffice.WordApi.Trendline;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Trendline>(this, "Add", NetOffice.WordApi.Trendline.LateBindingApiWrapperType, type, order, period, forward);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff820757.aspx
 		/// </summary>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff820757.aspx </remarks>
 		/// <param name="type">optional NetOffice.WordApi.Enums.XlTrendlineType Type = -4132</param>
-		/// <param name="order">optional object Order</param>
-		/// <param name="period">optional object Period</param>
-		/// <param name="forward">optional object Forward</param>
-		/// <param name="backward">optional object Backward</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 14,15,16)]
+		/// <param name="order">optional object order</param>
+		/// <param name="period">optional object period</param>
+		/// <param name="forward">optional object forward</param>
+		/// <param name="backward">optional object backward</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 14,15,16)]
 		public NetOffice.WordApi.Trendline Add(object type, object order, object period, object forward, object backward)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(type, order, period, forward, backward);
-			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.WordApi.Trendline newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Trendline.LateBindingApiWrapperType) as NetOffice.WordApi.Trendline;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Trendline>(this, "Add", NetOffice.WordApi.Trendline.LateBindingApiWrapperType, new object[]{ type, order, period, forward, backward });
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff820757.aspx
 		/// </summary>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff820757.aspx </remarks>
 		/// <param name="type">optional NetOffice.WordApi.Enums.XlTrendlineType Type = -4132</param>
-		/// <param name="order">optional object Order</param>
-		/// <param name="period">optional object Period</param>
-		/// <param name="forward">optional object Forward</param>
-		/// <param name="backward">optional object Backward</param>
-		/// <param name="intercept">optional object Intercept</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 14,15,16)]
+		/// <param name="order">optional object order</param>
+		/// <param name="period">optional object period</param>
+		/// <param name="forward">optional object forward</param>
+		/// <param name="backward">optional object backward</param>
+		/// <param name="intercept">optional object intercept</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 14,15,16)]
 		public NetOffice.WordApi.Trendline Add(object type, object order, object period, object forward, object backward, object intercept)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(type, order, period, forward, backward, intercept);
-			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.WordApi.Trendline newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Trendline.LateBindingApiWrapperType) as NetOffice.WordApi.Trendline;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Trendline>(this, "Add", NetOffice.WordApi.Trendline.LateBindingApiWrapperType, new object[]{ type, order, period, forward, backward, intercept });
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff820757.aspx
 		/// </summary>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff820757.aspx </remarks>
 		/// <param name="type">optional NetOffice.WordApi.Enums.XlTrendlineType Type = -4132</param>
-		/// <param name="order">optional object Order</param>
-		/// <param name="period">optional object Period</param>
-		/// <param name="forward">optional object Forward</param>
-		/// <param name="backward">optional object Backward</param>
-		/// <param name="intercept">optional object Intercept</param>
-		/// <param name="displayEquation">optional object DisplayEquation</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 14,15,16)]
+		/// <param name="order">optional object order</param>
+		/// <param name="period">optional object period</param>
+		/// <param name="forward">optional object forward</param>
+		/// <param name="backward">optional object backward</param>
+		/// <param name="intercept">optional object intercept</param>
+		/// <param name="displayEquation">optional object displayEquation</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 14,15,16)]
 		public NetOffice.WordApi.Trendline Add(object type, object order, object period, object forward, object backward, object intercept, object displayEquation)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(type, order, period, forward, backward, intercept, displayEquation);
-			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.WordApi.Trendline newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Trendline.LateBindingApiWrapperType) as NetOffice.WordApi.Trendline;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Trendline>(this, "Add", NetOffice.WordApi.Trendline.LateBindingApiWrapperType, new object[]{ type, order, period, forward, backward, intercept, displayEquation });
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff820757.aspx
 		/// </summary>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff820757.aspx </remarks>
 		/// <param name="type">optional NetOffice.WordApi.Enums.XlTrendlineType Type = -4132</param>
-		/// <param name="order">optional object Order</param>
-		/// <param name="period">optional object Period</param>
-		/// <param name="forward">optional object Forward</param>
-		/// <param name="backward">optional object Backward</param>
-		/// <param name="intercept">optional object Intercept</param>
-		/// <param name="displayEquation">optional object DisplayEquation</param>
-		/// <param name="displayRSquared">optional object DisplayRSquared</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 14,15,16)]
+		/// <param name="order">optional object order</param>
+		/// <param name="period">optional object period</param>
+		/// <param name="forward">optional object forward</param>
+		/// <param name="backward">optional object backward</param>
+		/// <param name="intercept">optional object intercept</param>
+		/// <param name="displayEquation">optional object displayEquation</param>
+		/// <param name="displayRSquared">optional object displayRSquared</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 14,15,16)]
 		public NetOffice.WordApi.Trendline Add(object type, object order, object period, object forward, object backward, object intercept, object displayEquation, object displayRSquared)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(type, order, period, forward, backward, intercept, displayEquation, displayRSquared);
-			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.WordApi.Trendline newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Trendline.LateBindingApiWrapperType) as NetOffice.WordApi.Trendline;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Trendline>(this, "Add", NetOffice.WordApi.Trendline.LateBindingApiWrapperType, new object[]{ type, order, period, forward, backward, intercept, displayEquation, displayRSquared });
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="index">optional object Index</param>
+		/// <param name="index">optional object index</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("Word", 14,15,16)]
-		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
+		[SupportByVersion("Word", 14,15,16)]
+		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
 		public NetOffice.WordApi.Trendline this[object index]
 		{
 			get
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(index);
-				object returnItem = Invoker.MethodReturn(this, "_Default", paramsArray);
-				NetOffice.WordApi.Trendline newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Trendline.LateBindingApiWrapperType) as NetOffice.WordApi.Trendline;
-				return newObject;
+				return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Trendline>(this, "_Default", NetOffice.WordApi.Trendline.LateBindingApiWrapperType, index);
 			}
 		}
 
@@ -373,9 +339,9 @@ namespace NetOffice.WordApi
        #region IEnumerable<NetOffice.WordApi.Trendline> Member
         
         /// <summary>
-		/// SupportByVersionAttribute Word, 14,15,16
+		/// SupportByVersion Word, 14,15,16
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14,15,16)]
+		[SupportByVersion("Word", 14,15,16)]
        public IEnumerator<NetOffice.WordApi.Trendline> GetEnumerator()  
        {
            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
@@ -388,15 +354,19 @@ namespace NetOffice.WordApi
 		#region IEnumerable Members
        
 		/// <summary>
-		/// SupportByVersionAttribute Word, 14,15,16
+		/// SupportByVersion Word, 14,15,16
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14,15,16)]
+		[SupportByVersion("Word", 14,15,16)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
 			return NetOffice.Utils.GetProxyEnumeratorAsMethod(this);
 		}
 
 		#endregion
+
 		#pragma warning restore
 	}
 }
+
+
+

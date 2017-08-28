@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace NetOffice
+namespace NetOffice.Exceptions
 {
     /// <summary>
     /// Signals the target method or property is not supported from the COM proxy in the current version
@@ -14,6 +14,8 @@ namespace NetOffice
         /// </summary>
         /// <param name="message"></param>
         public EntityNotSupportedException(string message): base(message)
-        { }
+        {
+
+        }
     }
 }

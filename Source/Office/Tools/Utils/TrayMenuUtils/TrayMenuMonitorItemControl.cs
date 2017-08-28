@@ -9,8 +9,9 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using NetOffice;
+using NetOffice.Attributes;
 using NetOffice.Tools;
-using NetOffice.Misc;
+using NetOffice.Contribution.CollectionsGeneric;
 
 namespace NetOffice.OfficeApi.Tools.Utils
 {
@@ -56,7 +57,7 @@ namespace NetOffice.OfficeApi.Tools.Utils
             ShownItems.Add(CoreRadioButton, Addin.Factory);
             ShownItems.Add(SettingsRadioButton, Addin.Factory.Settings);
             ShownItems.Add(ConsoleRadioButton, Messages);
-            ShownItems.Add(DiagnosticsRadioButton, new NetOffice.Misc.SelfDiagnostics(comAddin));
+            ShownItems.Add(DiagnosticsRadioButton, new NetOffice.Diagnostics.SelfDiagnostics(comAddin));
             ShownItems.Add(ProxiesRadioButton, comAddin.Roots);
             ShownItems.Add(OptionsRadioButton, ViewOptions);
 

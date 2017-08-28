@@ -1,24 +1,35 @@
-﻿using System;
-using NetRuntimeSystem = System;
-using System.Runtime.InteropServices;
-using System.Runtime.CompilerServices;
-using System.ComponentModel;
-using System.Reflection;
+﻿using System.Collections;
 using System.Collections.Generic;
-using System.Collections;
-using NetOffice;
+using System;
+using NetRuntimeSystem = System;
+using System.ComponentModel;
+using NetOffice.Attributes;
+
 namespace NetOffice.OWC10Api
 {
-	///<summary>
+	/// <summary>
 	/// DispatchInterface PageFields 
 	/// SupportByVersion OWC10, 1
-	///</summary>
-	[SupportByVersionAttribute("OWC10", 1)]
-	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
-	public class PageFields : COMObject ,IEnumerable<NetOffice.OWC10Api.PageField>
+	/// </summary>
+	[SupportByVersion("OWC10", 1)]
+	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "Item")]
+	public class PageFields : COMObject , IEnumerable<NetOffice.OWC10Api.PageField>
 	{
 		#pragma warning disable
+
 		#region Type Information
+
+		/// <summary>
+		/// Instance Type
+		/// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
+		public override Type InstanceType
+		{
+			get
+			{
+				return LateBindingApiWrapperType;
+			}
+		}
 
         private static Type _type;
 
@@ -29,7 +40,6 @@ namespace NetOffice.OWC10Api
             {
                 if (null == _type)
                     _type = typeof(PageFields);
-                    
                 return _type;
             }
         }
@@ -82,7 +92,7 @@ namespace NetOffice.OWC10Api
 		{
 		}
 		
-		/// <param name="progId">registered ProgID</param>
+		/// <param name="progId">registered progID</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public PageFields(string progId) : base(progId)
 		{
@@ -96,17 +106,14 @@ namespace NetOffice.OWC10Api
 		/// SupportByVersion OWC10 1
 		/// Get
 		/// </summary>
-		/// <param name="index">object Index</param>
-		[SupportByVersionAttribute("OWC10", 1)]
-		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
+		/// <param name="index">object index</param>
+		[SupportByVersion("OWC10", 1)]
+		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
 		public NetOffice.OWC10Api.PageField this[object index]
 		{
 			get
-{			
-			object[] paramsArray = Invoker.ValidateParamsArray(index);
-			object returnItem = Invoker.PropertyGet(this, "Item", paramsArray);
-			NetOffice.OWC10Api.PageField newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OWC10Api.PageField.LateBindingApiWrapperType) as NetOffice.OWC10Api.PageField;
-			return newObject;
+			{
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OWC10Api.PageField>(this, "Item", NetOffice.OWC10Api.PageField.LateBindingApiWrapperType, index);
 			}
 		}
 
@@ -114,14 +121,12 @@ namespace NetOffice.OWC10Api
 		/// SupportByVersion OWC10 1
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("OWC10", 1)]
+		[SupportByVersion("OWC10", 1)]
 		public Int32 Count
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Count", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "Count");
 			}
 		}
 
@@ -131,187 +136,145 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
-		/// 
 		/// </summary>
-		/// <param name="index">object Index</param>
-		[SupportByVersionAttribute("OWC10", 1)]
+		/// <param name="index">object index</param>
+		[SupportByVersion("OWC10", 1)]
 		public void Delete(object index)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(index);
-			Invoker.Method(this, "Delete", paramsArray);
+			 Factory.ExecuteMethod(this, "Delete", index);
 		}
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
-		/// 
 		/// </summary>
-		/// <param name="source">object Source</param>
-		/// <param name="fieldType">optional object FieldType</param>
-		/// <param name="name">optional object Name</param>
+		/// <param name="source">object source</param>
+		/// <param name="fieldType">optional object fieldType</param>
+		/// <param name="name">optional object name</param>
 		/// <param name="totalType">optional NetOffice.OWC10Api.Enums.DscTotalTypeEnum TotalType = 0</param>
-		/// <param name="index">optional object Index</param>
-		[SupportByVersionAttribute("OWC10", 1)]
+		/// <param name="index">optional object index</param>
+		[SupportByVersion("OWC10", 1)]
 		public NetOffice.OWC10Api.PageField Add(object source, object fieldType, object name, object totalType, object index)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(source, fieldType, name, totalType, index);
-			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.OWC10Api.PageField newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OWC10Api.PageField.LateBindingApiWrapperType) as NetOffice.OWC10Api.PageField;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OWC10Api.PageField>(this, "Add", NetOffice.OWC10Api.PageField.LateBindingApiWrapperType, new object[]{ source, fieldType, name, totalType, index });
 		}
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
-		/// 
 		/// </summary>
-		/// <param name="source">object Source</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("OWC10", 1)]
+		/// <param name="source">object source</param>
+		[CustomMethod]
+		[SupportByVersion("OWC10", 1)]
 		public NetOffice.OWC10Api.PageField Add(object source)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(source);
-			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.OWC10Api.PageField newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OWC10Api.PageField.LateBindingApiWrapperType) as NetOffice.OWC10Api.PageField;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OWC10Api.PageField>(this, "Add", NetOffice.OWC10Api.PageField.LateBindingApiWrapperType, source);
 		}
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
-		/// 
 		/// </summary>
-		/// <param name="source">object Source</param>
-		/// <param name="fieldType">optional object FieldType</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("OWC10", 1)]
+		/// <param name="source">object source</param>
+		/// <param name="fieldType">optional object fieldType</param>
+		[CustomMethod]
+		[SupportByVersion("OWC10", 1)]
 		public NetOffice.OWC10Api.PageField Add(object source, object fieldType)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(source, fieldType);
-			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.OWC10Api.PageField newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OWC10Api.PageField.LateBindingApiWrapperType) as NetOffice.OWC10Api.PageField;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OWC10Api.PageField>(this, "Add", NetOffice.OWC10Api.PageField.LateBindingApiWrapperType, source, fieldType);
 		}
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
-		/// 
 		/// </summary>
-		/// <param name="source">object Source</param>
-		/// <param name="fieldType">optional object FieldType</param>
-		/// <param name="name">optional object Name</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("OWC10", 1)]
+		/// <param name="source">object source</param>
+		/// <param name="fieldType">optional object fieldType</param>
+		/// <param name="name">optional object name</param>
+		[CustomMethod]
+		[SupportByVersion("OWC10", 1)]
 		public NetOffice.OWC10Api.PageField Add(object source, object fieldType, object name)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(source, fieldType, name);
-			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.OWC10Api.PageField newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OWC10Api.PageField.LateBindingApiWrapperType) as NetOffice.OWC10Api.PageField;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OWC10Api.PageField>(this, "Add", NetOffice.OWC10Api.PageField.LateBindingApiWrapperType, source, fieldType, name);
 		}
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
-		/// 
 		/// </summary>
-		/// <param name="source">object Source</param>
-		/// <param name="fieldType">optional object FieldType</param>
-		/// <param name="name">optional object Name</param>
+		/// <param name="source">object source</param>
+		/// <param name="fieldType">optional object fieldType</param>
+		/// <param name="name">optional object name</param>
 		/// <param name="totalType">optional NetOffice.OWC10Api.Enums.DscTotalTypeEnum TotalType = 0</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("OWC10", 1)]
+		[CustomMethod]
+		[SupportByVersion("OWC10", 1)]
 		public NetOffice.OWC10Api.PageField Add(object source, object fieldType, object name, object totalType)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(source, fieldType, name, totalType);
-			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.OWC10Api.PageField newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OWC10Api.PageField.LateBindingApiWrapperType) as NetOffice.OWC10Api.PageField;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OWC10Api.PageField>(this, "Add", NetOffice.OWC10Api.PageField.LateBindingApiWrapperType, source, fieldType, name, totalType);
 		}
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
-		/// 
 		/// </summary>
-		/// <param name="source">object Source</param>
-		/// <param name="fieldType">optional object FieldType</param>
-		/// <param name="name">optional object Name</param>
+		/// <param name="source">object source</param>
+		/// <param name="fieldType">optional object fieldType</param>
+		/// <param name="name">optional object name</param>
 		/// <param name="totalType">optional NetOffice.OWC10Api.Enums.DscTotalTypeEnum TotalType = 0</param>
-		/// <param name="index">optional object Index</param>
+		/// <param name="index">optional object index</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("OWC10", 1)]
+		[SupportByVersion("OWC10", 1)]
 		public NetOffice.OWC10Api.PageField AddBroken(object source, object fieldType, object name, object totalType, object index)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(source, fieldType, name, totalType, index);
-			object returnItem = Invoker.MethodReturn(this, "AddBroken", paramsArray);
-			NetOffice.OWC10Api.PageField newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OWC10Api.PageField.LateBindingApiWrapperType) as NetOffice.OWC10Api.PageField;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OWC10Api.PageField>(this, "AddBroken", NetOffice.OWC10Api.PageField.LateBindingApiWrapperType, new object[]{ source, fieldType, name, totalType, index });
 		}
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
-		/// 
 		/// </summary>
-		/// <param name="source">object Source</param>
+		/// <param name="source">object source</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("OWC10", 1)]
+		[CustomMethod]
+		[SupportByVersion("OWC10", 1)]
 		public NetOffice.OWC10Api.PageField AddBroken(object source)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(source);
-			object returnItem = Invoker.MethodReturn(this, "AddBroken", paramsArray);
-			NetOffice.OWC10Api.PageField newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OWC10Api.PageField.LateBindingApiWrapperType) as NetOffice.OWC10Api.PageField;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OWC10Api.PageField>(this, "AddBroken", NetOffice.OWC10Api.PageField.LateBindingApiWrapperType, source);
 		}
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
-		/// 
 		/// </summary>
-		/// <param name="source">object Source</param>
-		/// <param name="fieldType">optional object FieldType</param>
+		/// <param name="source">object source</param>
+		/// <param name="fieldType">optional object fieldType</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("OWC10", 1)]
+		[CustomMethod]
+		[SupportByVersion("OWC10", 1)]
 		public NetOffice.OWC10Api.PageField AddBroken(object source, object fieldType)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(source, fieldType);
-			object returnItem = Invoker.MethodReturn(this, "AddBroken", paramsArray);
-			NetOffice.OWC10Api.PageField newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OWC10Api.PageField.LateBindingApiWrapperType) as NetOffice.OWC10Api.PageField;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OWC10Api.PageField>(this, "AddBroken", NetOffice.OWC10Api.PageField.LateBindingApiWrapperType, source, fieldType);
 		}
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
-		/// 
 		/// </summary>
-		/// <param name="source">object Source</param>
-		/// <param name="fieldType">optional object FieldType</param>
-		/// <param name="name">optional object Name</param>
+		/// <param name="source">object source</param>
+		/// <param name="fieldType">optional object fieldType</param>
+		/// <param name="name">optional object name</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("OWC10", 1)]
+		[CustomMethod]
+		[SupportByVersion("OWC10", 1)]
 		public NetOffice.OWC10Api.PageField AddBroken(object source, object fieldType, object name)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(source, fieldType, name);
-			object returnItem = Invoker.MethodReturn(this, "AddBroken", paramsArray);
-			NetOffice.OWC10Api.PageField newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OWC10Api.PageField.LateBindingApiWrapperType) as NetOffice.OWC10Api.PageField;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OWC10Api.PageField>(this, "AddBroken", NetOffice.OWC10Api.PageField.LateBindingApiWrapperType, source, fieldType, name);
 		}
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
-		/// 
 		/// </summary>
-		/// <param name="source">object Source</param>
-		/// <param name="fieldType">optional object FieldType</param>
-		/// <param name="name">optional object Name</param>
+		/// <param name="source">object source</param>
+		/// <param name="fieldType">optional object fieldType</param>
+		/// <param name="name">optional object name</param>
 		/// <param name="totalType">optional NetOffice.OWC10Api.Enums.DscTotalTypeEnum TotalType = 0</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("OWC10", 1)]
+		[CustomMethod]
+		[SupportByVersion("OWC10", 1)]
 		public NetOffice.OWC10Api.PageField AddBroken(object source, object fieldType, object name, object totalType)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(source, fieldType, name, totalType);
-			object returnItem = Invoker.MethodReturn(this, "AddBroken", paramsArray);
-			NetOffice.OWC10Api.PageField newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OWC10Api.PageField.LateBindingApiWrapperType) as NetOffice.OWC10Api.PageField;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OWC10Api.PageField>(this, "AddBroken", NetOffice.OWC10Api.PageField.LateBindingApiWrapperType, source, fieldType, name, totalType);
 		}
 
 		#endregion
@@ -319,9 +282,9 @@ namespace NetOffice.OWC10Api
        #region IEnumerable<NetOffice.OWC10Api.PageField> Member
         
         /// <summary>
-		/// SupportByVersionAttribute OWC10, 1
+		/// SupportByVersion OWC10, 1
 		/// </summary>
-		[SupportByVersionAttribute("OWC10", 1)]
+		[SupportByVersion("OWC10", 1)]
        public IEnumerator<NetOffice.OWC10Api.PageField> GetEnumerator()  
        {
            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
@@ -334,15 +297,19 @@ namespace NetOffice.OWC10Api
 		#region IEnumerable Members
        
 		/// <summary>
-		/// SupportByVersionAttribute OWC10, 1
+		/// SupportByVersion OWC10, 1
 		/// </summary>
-		[SupportByVersionAttribute("OWC10", 1)]
+		[SupportByVersion("OWC10", 1)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
 			return NetOffice.Utils.GetProxyEnumeratorAsProperty(this);
 		}
 
 		#endregion
+
 		#pragma warning restore
 	}
 }
+
+
+

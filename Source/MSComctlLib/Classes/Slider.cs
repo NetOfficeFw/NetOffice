@@ -1,49 +1,49 @@
 ﻿using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
-using NetOffice;
-using NetOffice.Misc;
+using NetOffice.Attributes;
 
 namespace NetOffice.MSComctlLibApi
 {
-
 	#region Delegates
 
 	#pragma warning disable
 	public delegate void Slider_ClickEventHandler();
-	public delegate void Slider_KeyDownEventHandler(ref Int16 KeyCode, Int16 Shift);
-	public delegate void Slider_KeyPressEventHandler(ref Int16 KeyAscii);
-	public delegate void Slider_KeyUpEventHandler(ref Int16 KeyCode, Int16 Shift);
-	public delegate void Slider_MouseDownEventHandler(Int16 Button, Int16 Shift, Int32 x, Int32 y);
-	public delegate void Slider_MouseMoveEventHandler(Int16 Button, Int16 Shift, Int32 x, Int32 y);
-	public delegate void Slider_MouseUpEventHandler(Int16 Button, Int16 Shift, Int32 x, Int32 y);
+	public delegate void Slider_KeyDownEventHandler(ref Int16 keyCode, Int16 shift);
+	public delegate void Slider_KeyPressEventHandler(ref Int16 keyAscii);
+	public delegate void Slider_KeyUpEventHandler(ref Int16 keyCode, Int16 shift);
+	public delegate void Slider_MouseDownEventHandler(Int16 button, Int16 shift, Int32 x, Int32 y);
+	public delegate void Slider_MouseMoveEventHandler(Int16 button, Int16 shift, Int32 x, Int32 y);
+	public delegate void Slider_MouseUpEventHandler(Int16 button, Int16 shift, Int32 x, Int32 y);
 	public delegate void Slider_ScrollEventHandler();
 	public delegate void Slider_ChangeEventHandler();
-	public delegate void Slider_OLEStartDragEventHandler(ref NetOffice.MSComctlLibApi.DataObject Data, ref Int32 AllowedEffects);
-	public delegate void Slider_OLEGiveFeedbackEventHandler(ref Int32 Effect, ref bool DefaultCursors);
-	public delegate void Slider_OLESetDataEventHandler(ref NetOffice.MSComctlLibApi.DataObject Data, ref Int16 DataFormat);
-	public delegate void Slider_OLECompleteDragEventHandler(ref Int32 Effect);
-	public delegate void Slider_OLEDragOverEventHandler(ref NetOffice.MSComctlLibApi.DataObject Data, ref Int32 Effect, ref Int16 Button, ref Int16 Shift, ref Single x, ref Single y, ref Int16 State);
-	public delegate void Slider_OLEDragDropEventHandler(ref NetOffice.MSComctlLibApi.DataObject Data, ref Int32 Effect, ref Int16 Button, ref Int16 Shift, ref Single x, ref Single y);
+	public delegate void Slider_OLEStartDragEventHandler(ref NetOffice.MSComctlLibApi.DataObject data, ref Int32 allowedEffects);
+	public delegate void Slider_OLEGiveFeedbackEventHandler(ref Int32 effect, ref bool DefaultCursors);
+	public delegate void Slider_OLESetDataEventHandler(ref NetOffice.MSComctlLibApi.DataObject data, ref Int16 dataFormat);
+	public delegate void Slider_OLECompleteDragEventHandler(ref Int32 effect);
+	public delegate void Slider_OLEDragOverEventHandler(ref NetOffice.MSComctlLibApi.DataObject data, ref Int32 effect, ref Int16 button, ref Int16 shift, ref Single x, ref Single y, ref Int16 state);
+	public delegate void Slider_OLEDragDropEventHandler(ref NetOffice.MSComctlLibApi.DataObject data, ref Int32 effect, ref Int16 button, ref Int16 shift, ref Single x, ref Single y);
 	#pragma warning restore
 
 	#endregion
 
-	///<summary>
+	/// <summary>
 	/// CoClass Slider 
 	/// SupportByVersion MSComctlLib, 6
-	///</summary>
-	[SupportByVersionAttribute("MSComctlLib", 6)]
-	[EntityTypeAttribute(EntityType.IsCoClass)]
-	public class Slider : ISlider,IEventBinding
+	/// </summary>
+	[SupportByVersion("MSComctlLib", 6)]
+	[EntityType(EntityType.IsCoClass)]
+	[EventSink(typeof(Events.ISliderEvents_SinkHelper))]
+	public class Slider : ISlider, IEventBinding
 	{
 		#pragma warning disable
+
 		#region Fields
 		
 		private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
 		private string _activeSinkId;
 		private NetRuntimeSystem.Type _thisType;
-		ISliderEvents_SinkHelper _iSliderEvents_SinkHelper;
+		private Events.ISliderEvents_SinkHelper _iSliderEvents_SinkHelper;
 	
 		#endregion
 
@@ -52,6 +52,7 @@ namespace NetOffice.MSComctlLibApi
         /// <summary>
         /// Instance Type
         /// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
         public override Type InstanceType
         {
             get
@@ -118,17 +119,17 @@ namespace NetOffice.MSComctlLibApi
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of Slider 
-        ///</summary>		
+        /// </summary>		
 		public Slider():base("MSComctlLib.Slider")
 		{
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of Slider
-        ///</summary>
+        /// </summary>
         ///<param name="progId">registered ProgID</param>
 		public Slider(string progId):base(progId)
 		{
@@ -138,46 +139,6 @@ namespace NetOffice.MSComctlLibApi
 		#endregion
 
 		#region Static CoClass Methods
-
-		/// <summary>
-        /// Returns all running MSComctlLib.Slider objects from the environment/system
-        /// </summary>
-        /// <returns>an MSComctlLib.Slider array</returns>
-		public static NetOffice.MSComctlLibApi.Slider[] GetActiveInstances()
-		{		
-			IDisposableEnumeration proxyList = NetOffice.ProxyService.GetActiveInstances("MSComctlLib","Slider");
-			NetRuntimeSystem.Collections.Generic.List<NetOffice.MSComctlLibApi.Slider> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.MSComctlLibApi.Slider>();
-			foreach(object proxy in proxyList)
-				resultList.Add( new NetOffice.MSComctlLibApi.Slider(null, proxy) );
-			return resultList.ToArray();
-		}
-
-		/// <summary>
-        /// Returns a running MSComctlLib.Slider object from the environment/system.
-        /// </summary>
-        /// <returns>an MSComctlLib.Slider object or null</returns>
-		public static NetOffice.MSComctlLibApi.Slider GetActiveInstance()
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("MSComctlLib","Slider", false);
-			if(null != proxy)
-				return new NetOffice.MSComctlLibApi.Slider(null, proxy);
-			else
-				return null;
-		}
-
-		/// <summary>
-        /// Returns a running MSComctlLib.Slider object from the environment/system. 
-        /// </summary>
-	    /// <param name="throwOnError">throw an exception if no object was found</param>
-        /// <returns>an MSComctlLib.Slider object or null</returns>
-		public static NetOffice.MSComctlLibApi.Slider GetActiveInstance(bool throwOnError)
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("MSComctlLib","Slider", throwOnError);
-			if(null != proxy)
-				return new NetOffice.MSComctlLibApi.Slider(null, proxy);
-			else
-				return null;
-		}
 		#endregion
 
 		#region Events
@@ -529,12 +490,12 @@ namespace NetOffice.MSComctlLibApi
 				return;
 	
             if (null == _activeSinkId)
-				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, ISliderEvents_SinkHelper.Id);
+				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, Events.ISliderEvents_SinkHelper.Id);
 
 
-			if(ISliderEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
+			if(Events.ISliderEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
 			{
-				_iSliderEvents_SinkHelper = new ISliderEvents_SinkHelper(this, _connectPoint);
+				_iSliderEvents_SinkHelper = new Events.ISliderEvents_SinkHelper(this, _connectPoint);
 				return;
 			} 
         }
@@ -676,3 +637,4 @@ namespace NetOffice.MSComctlLibApi
 		#pragma warning restore
 	}
 }
+

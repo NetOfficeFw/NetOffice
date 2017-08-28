@@ -2,6 +2,7 @@
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using NetOffice;
+using NetOffice.Attributes;
 
 /*
     Contains the following Type Libraries:
@@ -14,15 +15,15 @@ using NetOffice;
 */
 
 [assembly: AssemblyTitle("MSProject")]
-[assembly: AssemblyDescription("NetOffice MSProject Api")]
+[assembly: AssemblyDescription("Netoffice MSProject Api")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("netoffice.codeplex.com")]
-[assembly: AssemblyProduct("NetOffice")]
+[assembly: AssemblyProduct("Netoffice")]
 [assembly: AssemblyCopyright("Sebastian Lange")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
-[assembly: AssemblyVersion("1.7.4.0")]
-[assembly: AssemblyFileVersion("1.7.4.0")]
+[assembly: AssemblyVersion("1.7.4.1")]
+[assembly: AssemblyFileVersion("1.7.4.1")]
 [assembly: PrimaryInteropAssembly(1, 0)]
 [assembly: ImportedFromTypeLib("MSProject")]
 [assembly: Guid("A7107640-94DF-1068-855E-00DD01075445")]

@@ -1,62 +1,62 @@
 ﻿using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
-using NetOffice;
-using NetOffice.Misc;
+using NetOffice.Attributes;
 
 namespace NetOffice.OutlookApi
 {
-
 	#region Delegates
 
 	#pragma warning disable
-	public delegate void TaskItem_OpenEventHandler(ref bool Cancel);
-	public delegate void TaskItem_CustomActionEventHandler(COMObject Action, COMObject Response, ref bool Cancel);
-	public delegate void TaskItem_CustomPropertyChangeEventHandler(string Name);
-	public delegate void TaskItem_ForwardEventHandler(COMObject Forward, ref bool Cancel);
-	public delegate void TaskItem_CloseEventHandler(ref bool Cancel);
+	public delegate void TaskItem_OpenEventHandler(ref bool cancel);
+	public delegate void TaskItem_CustomActionEventHandler(ICOMObject action, ICOMObject response, ref bool cancel);
+	public delegate void TaskItem_CustomPropertyChangeEventHandler(string name);
+	public delegate void TaskItem_ForwardEventHandler(ICOMObject forward, ref bool cancel);
+	public delegate void TaskItem_CloseEventHandler(ref bool cancel);
 	public delegate void TaskItem_PropertyChangeEventHandler(string Name);
 	public delegate void TaskItem_ReadEventHandler();
-	public delegate void TaskItem_ReplyEventHandler(COMObject Response, ref bool Cancel);
-	public delegate void TaskItem_ReplyAllEventHandler(COMObject Response, ref bool Cancel);
-	public delegate void TaskItem_SendEventHandler(ref bool Cancel);
-	public delegate void TaskItem_WriteEventHandler(ref bool Cancel);
-	public delegate void TaskItem_BeforeCheckNamesEventHandler(ref bool Cancel);
-	public delegate void TaskItem_AttachmentAddEventHandler(NetOffice.OutlookApi.Attachment Attachment);
-	public delegate void TaskItem_AttachmentReadEventHandler(NetOffice.OutlookApi.Attachment Attachment);
-	public delegate void TaskItem_BeforeAttachmentSaveEventHandler(NetOffice.OutlookApi.Attachment Attachment, ref bool Cancel);
-	public delegate void TaskItem_BeforeDeleteEventHandler(COMObject Item, ref bool Cancel);
-	public delegate void TaskItem_AttachmentRemoveEventHandler(NetOffice.OutlookApi.Attachment Attachment);
-	public delegate void TaskItem_BeforeAttachmentAddEventHandler(NetOffice.OutlookApi.Attachment Attachment, ref bool Cancel);
-	public delegate void TaskItem_BeforeAttachmentPreviewEventHandler(NetOffice.OutlookApi.Attachment Attachment, ref bool Cancel);
-	public delegate void TaskItem_BeforeAttachmentReadEventHandler(NetOffice.OutlookApi.Attachment Attachment, ref bool Cancel);
-	public delegate void TaskItem_BeforeAttachmentWriteToTempFileEventHandler(NetOffice.OutlookApi.Attachment Attachment, ref bool Cancel);
+	public delegate void TaskItem_ReplyEventHandler(ICOMObject response, ref bool cancel);
+	public delegate void TaskItem_ReplyAllEventHandler(ICOMObject response, ref bool cancel);
+	public delegate void TaskItem_SendEventHandler(ref bool cancel);
+	public delegate void TaskItem_WriteEventHandler(ref bool cancel);
+	public delegate void TaskItem_BeforeCheckNamesEventHandler(ref bool cancel);
+	public delegate void TaskItem_AttachmentAddEventHandler(NetOffice.OutlookApi.Attachment attachment);
+	public delegate void TaskItem_AttachmentReadEventHandler(NetOffice.OutlookApi.Attachment attachment);
+	public delegate void TaskItem_BeforeAttachmentSaveEventHandler(NetOffice.OutlookApi.Attachment attachment, ref bool cancel);
+	public delegate void TaskItem_BeforeDeleteEventHandler(ICOMObject item, ref bool cancel);
+	public delegate void TaskItem_AttachmentRemoveEventHandler(NetOffice.OutlookApi.Attachment attachment);
+	public delegate void TaskItem_BeforeAttachmentAddEventHandler(NetOffice.OutlookApi.Attachment attachment, ref bool cancel);
+	public delegate void TaskItem_BeforeAttachmentPreviewEventHandler(NetOffice.OutlookApi.Attachment attachment, ref bool cancel);
+	public delegate void TaskItem_BeforeAttachmentReadEventHandler(NetOffice.OutlookApi.Attachment attachment, ref bool cancel);
+	public delegate void TaskItem_BeforeAttachmentWriteToTempFileEventHandler(NetOffice.OutlookApi.Attachment attachment, ref bool cancel);
 	public delegate void TaskItem_UnloadEventHandler();
-	public delegate void TaskItem_BeforeAutoSaveEventHandler(ref bool Cancel);
+	public delegate void TaskItem_BeforeAutoSaveEventHandler(ref bool cancel);
 	public delegate void TaskItem_BeforeReadEventHandler();
 	public delegate void TaskItem_AfterWriteEventHandler();
-	public delegate void TaskItem_ReadCompleteEventHandler(ref bool Cancel);
+	public delegate void TaskItem_ReadCompleteEventHandler(ref bool cancel);
 	#pragma warning restore
 
 	#endregion
 
-	///<summary>
+	/// <summary>
 	/// CoClass TaskItem 
 	/// SupportByVersion Outlook, 9,10,11,12,14,15,16
-	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff865624.aspx
-	///</summary>
-	[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15,16)]
-	[EntityTypeAttribute(EntityType.IsCoClass)]
-	public class TaskItem : _TaskItem,IEventBinding
+	/// </summary>
+	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff865624.aspx </remarks>
+	[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
+	[EntityType(EntityType.IsCoClass)]
+	[EventSink(typeof(Events.ItemEvents_SinkHelper), typeof(Events.ItemEvents_10_SinkHelper))]
+	public class TaskItem : _TaskItem, IEventBinding
 	{
 		#pragma warning disable
+
 		#region Fields
 		
 		private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
 		private string _activeSinkId;
 		private NetRuntimeSystem.Type _thisType;
-		ItemEvents_SinkHelper _itemEvents_SinkHelper;
-		ItemEvents_10_SinkHelper _itemEvents_10_SinkHelper;
+		private Events.ItemEvents_SinkHelper _itemEvents_SinkHelper;
+		private Events.ItemEvents_10_SinkHelper _itemEvents_10_SinkHelper;
 	
 		#endregion
 
@@ -65,6 +65,7 @@ namespace NetOffice.OutlookApi
         /// <summary>
         /// Instance Type
         /// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
         public override Type InstanceType
         {
             get
@@ -131,17 +132,17 @@ namespace NetOffice.OutlookApi
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of TaskItem 
-        ///</summary>		
+        /// </summary>		
 		public TaskItem():base("Outlook.TaskItem")
 		{
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of TaskItem
-        ///</summary>
+        /// </summary>
         ///<param name="progId">registered ProgID</param>
 		public TaskItem(string progId):base(progId)
 		{
@@ -151,46 +152,6 @@ namespace NetOffice.OutlookApi
 		#endregion
 
 		#region Static CoClass Methods
-
-		/// <summary>
-        /// Returns all running Outlook.TaskItem objects from the environment/system
-        /// </summary>
-        /// <returns>an Outlook.TaskItem array</returns>
-		public static NetOffice.OutlookApi.TaskItem[] GetActiveInstances()
-		{		
-			IDisposableEnumeration proxyList = NetOffice.ProxyService.GetActiveInstances("Outlook","TaskItem");
-			NetRuntimeSystem.Collections.Generic.List<NetOffice.OutlookApi.TaskItem> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.OutlookApi.TaskItem>();
-			foreach(object proxy in proxyList)
-				resultList.Add( new NetOffice.OutlookApi.TaskItem(null, proxy) );
-			return resultList.ToArray();
-		}
-
-		/// <summary>
-        /// Returns a running Outlook.TaskItem object from the environment/system.
-        /// </summary>
-        /// <returns>an Outlook.TaskItem object or null</returns>
-		public static NetOffice.OutlookApi.TaskItem GetActiveInstance()
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Outlook","TaskItem", false);
-			if(null != proxy)
-				return new NetOffice.OutlookApi.TaskItem(null, proxy);
-			else
-				return null;
-		}
-
-		/// <summary>
-        /// Returns a running Outlook.TaskItem object from the environment/system. 
-        /// </summary>
-	    /// <param name="throwOnError">throw an exception if no object was found</param>
-        /// <returns>an Outlook.TaskItem object or null</returns>
-		public static NetOffice.OutlookApi.TaskItem GetActiveInstance(bool throwOnError)
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Outlook","TaskItem", throwOnError);
-			if(null != proxy)
-				return new NetOffice.OutlookApi.TaskItem(null, proxy);
-			else
-				return null;
-		}
 		#endregion
 
 		#region Events
@@ -810,18 +771,18 @@ namespace NetOffice.OutlookApi
 				return;
 	
             if (null == _activeSinkId)
-				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, ItemEvents_SinkHelper.Id,ItemEvents_10_SinkHelper.Id);
+				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, Events.ItemEvents_SinkHelper.Id, Events.ItemEvents_10_SinkHelper.Id);
 
 
-			if(ItemEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
+			if(Events.ItemEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
 			{
-				_itemEvents_SinkHelper = new ItemEvents_SinkHelper(this, _connectPoint);
+				_itemEvents_SinkHelper = new Events.ItemEvents_SinkHelper(this, _connectPoint);
 				return;
 			}
 
-			if(ItemEvents_10_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
+			if(Events.ItemEvents_10_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
 			{
-				_itemEvents_10_SinkHelper = new ItemEvents_10_SinkHelper(this, _connectPoint);
+				_itemEvents_10_SinkHelper = new Events.ItemEvents_10_SinkHelper(this, _connectPoint);
 				return;
 			} 
         }
@@ -968,3 +929,4 @@ namespace NetOffice.OutlookApi
 		#pragma warning restore
 	}
 }
+

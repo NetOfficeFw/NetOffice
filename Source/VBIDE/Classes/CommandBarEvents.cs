@@ -1,35 +1,35 @@
 ﻿using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
-using NetOffice;
-using NetOffice.Misc;
+using NetOffice.Attributes;
 
 namespace NetOffice.VBIDEApi
 {
-
 	#region Delegates
 
 	#pragma warning disable
-	public delegate void CommandBarEvents_ClickEventHandler(COMObject CommandBarControl, ref bool handled, ref bool CancelDefault);
+	public delegate void CommandBarEvents_ClickEventHandler(ICOMObject commandBarControl, ref bool handled, ref bool cancelDefault);
 	#pragma warning restore
 
 	#endregion
 
-	///<summary>
+	/// <summary>
 	/// CoClass CommandBarEvents 
 	/// SupportByVersion VBIDE, 12,14,5.3
-	///</summary>
-	[SupportByVersionAttribute("VBIDE", 12,14,5.3)]
-	[EntityTypeAttribute(EntityType.IsCoClass)]
-	public class CommandBarEvents : _CommandBarControlEvents,IEventBinding
+	/// </summary>
+	[SupportByVersion("VBIDE", 12,14,5.3)]
+	[EntityType(EntityType.IsCoClass)]
+    [EventSink(typeof(EventInterfaces._dispCommandBarControlEvents_SinkHelper))]
+	public class CommandBarEvents : _CommandBarControlEvents, IEventBinding
 	{
 		#pragma warning disable
+
 		#region Fields
 		
 		private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
 		private string _activeSinkId;
 		private NetRuntimeSystem.Type _thisType;
-		_dispCommandBarControlEvents_SinkHelper __dispCommandBarControlEvents_SinkHelper;
+		private EventInterfaces._dispCommandBarControlEvents_SinkHelper __dispCommandBarControlEvents_SinkHelper;
 	
 		#endregion
 
@@ -38,6 +38,7 @@ namespace NetOffice.VBIDEApi
         /// <summary>
         /// Instance Type
         /// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
         public override Type InstanceType
         {
             get
@@ -104,17 +105,17 @@ namespace NetOffice.VBIDEApi
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of CommandBarEvents 
-        ///</summary>		
+        /// </summary>		
 		public CommandBarEvents():base("VBIDE.CommandBarEvents")
 		{
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of CommandBarEvents
-        ///</summary>
+        /// </summary>
         ///<param name="progId">registered ProgID</param>
 		public CommandBarEvents(string progId):base(progId)
 		{
@@ -124,46 +125,6 @@ namespace NetOffice.VBIDEApi
 		#endregion
 
 		#region Static CoClass Methods
-
-		/// <summary>
-        /// Returns all running VBIDE.CommandBarEvents objects from the environment/system
-        /// </summary>
-        /// <returns>an VBIDE.CommandBarEvents array</returns>
-		public static NetOffice.VBIDEApi.CommandBarEvents[] GetActiveInstances()
-		{		
-			IDisposableEnumeration proxyList = NetOffice.ProxyService.GetActiveInstances("VBIDE","CommandBarEvents");
-			NetRuntimeSystem.Collections.Generic.List<NetOffice.VBIDEApi.CommandBarEvents> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.VBIDEApi.CommandBarEvents>();
-			foreach(object proxy in proxyList)
-				resultList.Add( new NetOffice.VBIDEApi.CommandBarEvents(null, proxy) );
-			return resultList.ToArray();
-		}
-
-		/// <summary>
-        /// Returns a running VBIDE.CommandBarEvents object from the environment/system.
-        /// </summary>
-        /// <returns>an VBIDE.CommandBarEvents object or null</returns>
-		public static NetOffice.VBIDEApi.CommandBarEvents GetActiveInstance()
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("VBIDE","CommandBarEvents", false);
-			if(null != proxy)
-				return new NetOffice.VBIDEApi.CommandBarEvents(null, proxy);
-			else
-				return null;
-		}
-
-		/// <summary>
-        /// Returns a running VBIDE.CommandBarEvents object from the environment/system. 
-        /// </summary>
-	    /// <param name="throwOnError">throw an exception if no object was found</param>
-        /// <returns>an VBIDE.CommandBarEvents object or null</returns>
-		public static NetOffice.VBIDEApi.CommandBarEvents GetActiveInstance(bool throwOnError)
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("VBIDE","CommandBarEvents", throwOnError);
-			if(null != proxy)
-				return new NetOffice.VBIDEApi.CommandBarEvents(null, proxy);
-			else
-				return null;
-		}
 		#endregion
 
 		#region Events
@@ -207,12 +168,12 @@ namespace NetOffice.VBIDEApi
 				return;
 	
             if (null == _activeSinkId)
-				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, _dispCommandBarControlEvents_SinkHelper.Id);
+				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, EventInterfaces._dispCommandBarControlEvents_SinkHelper.Id);
 
 
-			if(_dispCommandBarControlEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
+			if(EventInterfaces._dispCommandBarControlEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
 			{
-				__dispCommandBarControlEvents_SinkHelper = new _dispCommandBarControlEvents_SinkHelper(this, _connectPoint);
+				__dispCommandBarControlEvents_SinkHelper = new EventInterfaces._dispCommandBarControlEvents_SinkHelper(this, _connectPoint);
 				return;
 			} 
         }
@@ -354,3 +315,4 @@ namespace NetOffice.VBIDEApi
 		#pragma warning restore
 	}
 }
+

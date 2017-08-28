@@ -1,23 +1,33 @@
 ﻿using System;
 using NetRuntimeSystem = System;
-using System.Runtime.InteropServices;
-using System.Runtime.CompilerServices;
 using System.ComponentModel;
-using System.Reflection;
-using System.Collections.Generic;
-using NetOffice;
+using NetOffice.Attributes;
+
 namespace NetOffice.OutlookApi
 {
-	///<summary>
+	/// <summary>
 	/// DispatchInterface _DInspectorCtrl 
 	/// SupportByVersion Outlook, 10
-	///</summary>
-	[SupportByVersionAttribute("Outlook", 10)]
-	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
-	public class _DInspectorCtrl : COMObject
+	/// </summary>
+	[SupportByVersion("Outlook", 10)]
+	[EntityType(EntityType.IsDispatchInterface)]
+ 	public class _DInspectorCtrl : COMObject
 	{
 		#pragma warning disable
+
 		#region Type Information
+
+		/// <summary>
+		/// Instance Type
+		/// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
+		public override Type InstanceType
+		{
+			get
+			{
+				return LateBindingApiWrapperType;
+			}
+		}
 
         private static Type _type;
 
@@ -28,7 +38,6 @@ namespace NetOffice.OutlookApi
             {
                 if (null == _type)
                     _type = typeof(_DInspectorCtrl);
-                    
                 return _type;
             }
         }
@@ -81,7 +90,7 @@ namespace NetOffice.OutlookApi
 		{
 		}
 		
-		/// <param name="progId">registered ProgID</param>
+		/// <param name="progId">registered progID</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public _DInspectorCtrl(string progId) : base(progId)
 		{
@@ -95,19 +104,16 @@ namespace NetOffice.OutlookApi
 		/// SupportByVersion Outlook 10
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Outlook", 10)]
+		[SupportByVersion("Outlook", 10)]
 		public string URL
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "URL", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "URL");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "URL", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "URL", value);
 			}
 		}
 
@@ -116,15 +122,12 @@ namespace NetOffice.OutlookApi
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("Outlook", 10)]
+		[SupportByVersion("Outlook", 10), ProxyResult]
 		public object Item
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Item", paramsArray);
-				ICOMObject newObject = Factory.CreateObjectFromComProxy(this,returnItem);
-				return newObject;
+				return Factory.ExecuteReferencePropertyGet(this, "Item");
 			}
 		}
 
@@ -134,17 +137,19 @@ namespace NetOffice.OutlookApi
 
 		/// <summary>
 		/// SupportByVersion Outlook 10
-		/// 
 		/// </summary>
 		/// <param name="pdispItem">object pdispItem</param>
-		[SupportByVersionAttribute("Outlook", 10)]
+		[SupportByVersion("Outlook", 10)]
 		public void OnItemChange(object pdispItem)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(pdispItem);
-			Invoker.Method(this, "OnItemChange", paramsArray);
+			 Factory.ExecuteMethod(this, "OnItemChange", pdispItem);
 		}
 
 		#endregion
+
 		#pragma warning restore
 	}
 }
+
+
+

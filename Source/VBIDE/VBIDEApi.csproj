@@ -104,9 +104,9 @@
     <Compile Include="Classes\CodePanes.cs" />
     <Compile Include="Classes\CodePane.cs" />
     <Compile Include="Classes\References.cs" />
-    <Compile Include="EventInterfaces\_dispReferencesEvents.cs" />
-    <Compile Include="EventInterfaces\_dispCommandBarControlEvents.cs" />
-    <Compile Include="EventInterfaces\_dispReferences_Events.cs" />
+    <Compile Include="Events\_dispReferencesEvents.cs" />
+    <Compile Include="Events\_dispCommandBarControlEvents.cs" />
+    <Compile Include="Events\_dispReferences_Events.cs" />
   </ItemGroup>
   <ItemGroup>
     <COMReference Include="stdole">

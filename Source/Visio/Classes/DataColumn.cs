@@ -1,12 +1,10 @@
 ﻿using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
-using NetOffice;
-using NetOffice.Misc;
+using NetOffice.Attributes;
 
 namespace NetOffice.VisioApi
 {
-
 	#region Delegates
 
 	#pragma warning disable
@@ -14,16 +12,17 @@ namespace NetOffice.VisioApi
 
 	#endregion
 
-	///<summary>
+	/// <summary>
 	/// CoClass DataColumn 
 	/// SupportByVersion Visio, 12,14,15,16
-	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff769250(v=office.14).aspx
-	///</summary>
-	[SupportByVersionAttribute("Visio", 12,14,15,16)]
-	[EntityTypeAttribute(EntityType.IsCoClass)]
-	public class DataColumn : IVDataColumn
+	/// </summary>
+	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/ff769250(v=office.14).aspx </remarks>
+	[SupportByVersion("Visio", 12,14,15,16)]
+	[EntityType(EntityType.IsCoClass)]
+ 	public class DataColumn : IVDataColumn
 	{
 		#pragma warning disable
+
 		#region Fields
 		
 		private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
@@ -37,6 +36,7 @@ namespace NetOffice.VisioApi
         /// <summary>
         /// Instance Type
         /// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
         public override Type InstanceType
         {
             get
@@ -103,17 +103,17 @@ namespace NetOffice.VisioApi
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of DataColumn 
-        ///</summary>		
+        /// </summary>		
 		public DataColumn():base("Visio.DataColumn")
 		{
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of DataColumn
-        ///</summary>
+        /// </summary>
         ///<param name="progId">registered ProgID</param>
 		public DataColumn(string progId):base(progId)
 		{
@@ -123,46 +123,6 @@ namespace NetOffice.VisioApi
 		#endregion
 
 		#region Static CoClass Methods
-
-		/// <summary>
-        /// Returns all running Visio.DataColumn objects from the environment/system
-        /// </summary>
-        /// <returns>an Visio.DataColumn array</returns>
-		public static NetOffice.VisioApi.DataColumn[] GetActiveInstances()
-		{		
-			IDisposableEnumeration proxyList = NetOffice.ProxyService.GetActiveInstances("Visio","DataColumn");
-			NetRuntimeSystem.Collections.Generic.List<NetOffice.VisioApi.DataColumn> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.VisioApi.DataColumn>();
-			foreach(object proxy in proxyList)
-				resultList.Add( new NetOffice.VisioApi.DataColumn(null, proxy) );
-			return resultList.ToArray();
-		}
-
-		/// <summary>
-        /// Returns a running Visio.DataColumn object from the environment/system.
-        /// </summary>
-        /// <returns>an Visio.DataColumn object or null</returns>
-		public static NetOffice.VisioApi.DataColumn GetActiveInstance()
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Visio","DataColumn", false);
-			if(null != proxy)
-				return new NetOffice.VisioApi.DataColumn(null, proxy);
-			else
-				return null;
-		}
-
-		/// <summary>
-        /// Returns a running Visio.DataColumn object from the environment/system. 
-        /// </summary>
-	    /// <param name="throwOnError">throw an exception if no object was found</param>
-        /// <returns>an Visio.DataColumn object or null</returns>
-		public static NetOffice.VisioApi.DataColumn GetActiveInstance(bool throwOnError)
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Visio","DataColumn", throwOnError);
-			if(null != proxy)
-				return new NetOffice.VisioApi.DataColumn(null, proxy);
-			else
-				return null;
-		}
 		#endregion
 
 		#region Events
@@ -321,3 +281,4 @@ namespace NetOffice.VisioApi
 		#pragma warning restore
 	}
 }
+

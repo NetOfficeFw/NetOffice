@@ -1,23 +1,33 @@
 ﻿using System;
 using NetRuntimeSystem = System;
-using System.Runtime.InteropServices;
-using System.Runtime.CompilerServices;
 using System.ComponentModel;
-using System.Reflection;
-using System.Collections.Generic;
-using NetOffice;
+using NetOffice.Attributes;
+
 namespace NetOffice.OutlookApi
 {
-	///<summary>
+	/// <summary>
 	/// DispatchInterface _Conversation 
 	/// SupportByVersion Outlook, 14,15,16
-	///</summary>
-	[SupportByVersionAttribute("Outlook", 14,15,16)]
-	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
-	public class _Conversation : COMObject
+	/// </summary>
+	[SupportByVersion("Outlook", 14,15,16)]
+	[EntityType(EntityType.IsDispatchInterface)]
+ 	public class _Conversation : COMObject
 	{
 		#pragma warning disable
+
 		#region Type Information
+
+		/// <summary>
+		/// Instance Type
+		/// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
+		public override Type InstanceType
+		{
+			get
+			{
+				return LateBindingApiWrapperType;
+			}
+		}
 
         private static Type _type;
 
@@ -28,7 +38,6 @@ namespace NetOffice.OutlookApi
             {
                 if (null == _type)
                     _type = typeof(_Conversation);
-                    
                 return _type;
             }
         }
@@ -81,7 +90,7 @@ namespace NetOffice.OutlookApi
 		{
 		}
 		
-		/// <param name="progId">registered ProgID</param>
+		/// <param name="progId">registered progID</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public _Conversation(string progId) : base(progId)
 		{
@@ -94,85 +103,71 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff869259.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Outlook", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff869259.aspx </remarks>
+		[SupportByVersion("Outlook", 14,15,16)]
 		public NetOffice.OutlookApi._Application Application
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				NetOffice.OutlookApi._Application newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OutlookApi._Application;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OutlookApi._Application>(this, "Application", NetOffice.OutlookApi._Application.LateBindingApiWrapperType);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Outlook 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff868054.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Outlook", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff868054.aspx </remarks>
+		[SupportByVersion("Outlook", 14,15,16)]
 		public NetOffice.OutlookApi.Enums.OlObjectClass Class
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Class", paramsArray);
-				int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-				return (NetOffice.OutlookApi.Enums.OlObjectClass)intReturnItem;
+				return Factory.ExecuteEnumPropertyGet<NetOffice.OutlookApi.Enums.OlObjectClass>(this, "Class");
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Outlook 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff866390.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Outlook", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff866390.aspx </remarks>
+		[SupportByVersion("Outlook", 14,15,16)]
 		public NetOffice.OutlookApi._NameSpace Session
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Session", paramsArray);
-				NetOffice.OutlookApi._NameSpace newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OutlookApi._NameSpace;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OutlookApi._NameSpace>(this, "Session", NetOffice.OutlookApi._NameSpace.LateBindingApiWrapperType);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Outlook 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff869565.aspx
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("Outlook", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff869565.aspx </remarks>
+		[SupportByVersion("Outlook", 14,15,16), ProxyResult]
 		public object Parent
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Parent", paramsArray);
-				ICOMObject newObject = Factory.CreateObjectFromComProxy(this,returnItem);
-				return newObject;
+				return Factory.ExecuteReferencePropertyGet(this, "Parent");
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Outlook 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff869792.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Outlook", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff869792.aspx </remarks>
+		[SupportByVersion("Outlook", 14,15,16)]
 		public string ConversationID
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "ConversationID", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "ConversationID");
 			}
 		}
 
@@ -182,197 +177,173 @@ namespace NetOffice.OutlookApi
 
 		/// <summary>
 		/// SupportByVersion Outlook 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff866231.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Outlook", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff866231.aspx </remarks>
+		[SupportByVersion("Outlook", 14,15,16)]
 		public NetOffice.OutlookApi.Table GetTable()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "GetTable", paramsArray);
-			NetOffice.OutlookApi.Table newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OutlookApi.Table.LateBindingApiWrapperType) as NetOffice.OutlookApi.Table;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OutlookApi.Table>(this, "GetTable", NetOffice.OutlookApi.Table.LateBindingApiWrapperType);
 		}
 
 		/// <summary>
 		/// SupportByVersion Outlook 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff868807.aspx
 		/// </summary>
-		/// <param name="item">object Item</param>
-		[SupportByVersionAttribute("Outlook", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff868807.aspx </remarks>
+		/// <param name="item">object item</param>
+		[SupportByVersion("Outlook", 14,15,16)]
 		public NetOffice.OutlookApi.SimpleItems GetChildren(object item)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(item);
-			object returnItem = Invoker.MethodReturn(this, "GetChildren", paramsArray);
-			NetOffice.OutlookApi.SimpleItems newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OutlookApi.SimpleItems.LateBindingApiWrapperType) as NetOffice.OutlookApi.SimpleItems;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OutlookApi.SimpleItems>(this, "GetChildren", NetOffice.OutlookApi.SimpleItems.LateBindingApiWrapperType, item);
 		}
 
 		/// <summary>
 		/// SupportByVersion Outlook 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff869780.aspx
 		/// </summary>
-		/// <param name="item">object Item</param>
-		[SupportByVersionAttribute("Outlook", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff869780.aspx </remarks>
+		/// <param name="item">object item</param>
+		[SupportByVersion("Outlook", 14,15,16)]
 		public object GetParent(object item)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(item);
-			object returnItem = Invoker.MethodReturn(this, "GetParent", paramsArray);
-			object newObject = Factory.CreateObjectFromComProxy(this,returnItem);
-			return newObject;
+			return Factory.ExecuteVariantMethodGet(this, "GetParent", item);
 		}
 
 		/// <summary>
 		/// SupportByVersion Outlook 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff866457.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Outlook", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff866457.aspx </remarks>
+		[SupportByVersion("Outlook", 14,15,16)]
 		public NetOffice.OutlookApi.SimpleItems GetRootItems()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "GetRootItems", paramsArray);
-			NetOffice.OutlookApi.SimpleItems newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OutlookApi.SimpleItems.LateBindingApiWrapperType) as NetOffice.OutlookApi.SimpleItems;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OutlookApi.SimpleItems>(this, "GetRootItems", NetOffice.OutlookApi.SimpleItems.LateBindingApiWrapperType);
 		}
 
 		/// <summary>
 		/// SupportByVersion Outlook 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff869225.aspx
 		/// </summary>
-		/// <param name="store">NetOffice.OutlookApi._Store Store</param>
-		[SupportByVersionAttribute("Outlook", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff869225.aspx </remarks>
+		/// <param name="store">NetOffice.OutlookApi._Store store</param>
+		[SupportByVersion("Outlook", 14,15,16)]
 		public string GetAlwaysAssignCategories(NetOffice.OutlookApi._Store store)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(store);
-			object returnItem = Invoker.MethodReturn(this, "GetAlwaysAssignCategories", paramsArray);
-			return NetRuntimeSystem.Convert.ToString(returnItem);
+			return Factory.ExecuteStringMethodGet(this, "GetAlwaysAssignCategories", store);
 		}
 
 		/// <summary>
 		/// SupportByVersion Outlook 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff867861.aspx
 		/// </summary>
-		/// <param name="store">NetOffice.OutlookApi._Store Store</param>
-		[SupportByVersionAttribute("Outlook", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff867861.aspx </remarks>
+		/// <param name="store">NetOffice.OutlookApi._Store store</param>
+		[SupportByVersion("Outlook", 14,15,16)]
 		public NetOffice.OutlookApi.Enums.OlAlwaysDeleteConversation GetAlwaysDelete(NetOffice.OutlookApi._Store store)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(store);
-			object returnItem = Invoker.MethodReturn(this, "GetAlwaysDelete", paramsArray);
-			int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-			return (NetOffice.OutlookApi.Enums.OlAlwaysDeleteConversation)intReturnItem;
+			return Factory.ExecuteEnumMethodGet<NetOffice.OutlookApi.Enums.OlAlwaysDeleteConversation>(this, "GetAlwaysDelete", store);
 		}
 
 		/// <summary>
 		/// SupportByVersion Outlook 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff869753.aspx
 		/// </summary>
-		/// <param name="store">NetOffice.OutlookApi._Store Store</param>
-		[SupportByVersionAttribute("Outlook", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff869753.aspx </remarks>
+		/// <param name="store">NetOffice.OutlookApi._Store store</param>
+		[SupportByVersion("Outlook", 14,15,16)]
 		public NetOffice.OutlookApi.MAPIFolder GetAlwaysMoveToFolder(NetOffice.OutlookApi._Store store)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(store);
-			object returnItem = Invoker.MethodReturn(this, "GetAlwaysMoveToFolder", paramsArray);
-			NetOffice.OutlookApi.MAPIFolder newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OutlookApi.MAPIFolder;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OutlookApi.MAPIFolder>(this, "GetAlwaysMoveToFolder", NetOffice.OutlookApi.MAPIFolder.LateBindingApiWrapperType, store);
 		}
 
 		/// <summary>
 		/// SupportByVersion Outlook 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff867852.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Outlook", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff867852.aspx </remarks>
+		[SupportByVersion("Outlook", 14,15,16)]
 		public void MarkAsRead()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "MarkAsRead", paramsArray);
+			 Factory.ExecuteMethod(this, "MarkAsRead");
 		}
 
 		/// <summary>
 		/// SupportByVersion Outlook 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff868412.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Outlook", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff868412.aspx </remarks>
+		[SupportByVersion("Outlook", 14,15,16)]
 		public void MarkAsUnread()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "MarkAsUnread", paramsArray);
+			 Factory.ExecuteMethod(this, "MarkAsUnread");
 		}
 
 		/// <summary>
 		/// SupportByVersion Outlook 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff868084.aspx
 		/// </summary>
-		/// <param name="categories">string Categories</param>
-		/// <param name="store">NetOffice.OutlookApi._Store Store</param>
-		[SupportByVersionAttribute("Outlook", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff868084.aspx </remarks>
+		/// <param name="categories">string categories</param>
+		/// <param name="store">NetOffice.OutlookApi._Store store</param>
+		[SupportByVersion("Outlook", 14,15,16)]
 		public void SetAlwaysAssignCategories(string categories, NetOffice.OutlookApi._Store store)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(categories, store);
-			Invoker.Method(this, "SetAlwaysAssignCategories", paramsArray);
+			 Factory.ExecuteMethod(this, "SetAlwaysAssignCategories", categories, store);
 		}
 
 		/// <summary>
 		/// SupportByVersion Outlook 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff869857.aspx
 		/// </summary>
-		/// <param name="alwaysDelete">NetOffice.OutlookApi.Enums.OlAlwaysDeleteConversation AlwaysDelete</param>
-		/// <param name="store">NetOffice.OutlookApi._Store Store</param>
-		[SupportByVersionAttribute("Outlook", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff869857.aspx </remarks>
+		/// <param name="alwaysDelete">NetOffice.OutlookApi.Enums.OlAlwaysDeleteConversation alwaysDelete</param>
+		/// <param name="store">NetOffice.OutlookApi._Store store</param>
+		[SupportByVersion("Outlook", 14,15,16)]
 		public void SetAlwaysDelete(NetOffice.OutlookApi.Enums.OlAlwaysDeleteConversation alwaysDelete, NetOffice.OutlookApi._Store store)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(alwaysDelete, store);
-			Invoker.Method(this, "SetAlwaysDelete", paramsArray);
+			 Factory.ExecuteMethod(this, "SetAlwaysDelete", alwaysDelete, store);
 		}
 
 		/// <summary>
 		/// SupportByVersion Outlook 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff865038.aspx
 		/// </summary>
-		/// <param name="moveToFolder">NetOffice.OutlookApi.MAPIFolder MoveToFolder</param>
-		/// <param name="store">NetOffice.OutlookApi._Store Store</param>
-		[SupportByVersionAttribute("Outlook", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff865038.aspx </remarks>
+		/// <param name="moveToFolder">NetOffice.OutlookApi.MAPIFolder moveToFolder</param>
+		/// <param name="store">NetOffice.OutlookApi._Store store</param>
+		[SupportByVersion("Outlook", 14,15,16)]
 		public void SetAlwaysMoveToFolder(NetOffice.OutlookApi.MAPIFolder moveToFolder, NetOffice.OutlookApi._Store store)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(moveToFolder, store);
-			Invoker.Method(this, "SetAlwaysMoveToFolder", paramsArray);
+			 Factory.ExecuteMethod(this, "SetAlwaysMoveToFolder", moveToFolder, store);
 		}
 
 		/// <summary>
 		/// SupportByVersion Outlook 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff860425.aspx
 		/// </summary>
-		/// <param name="store">NetOffice.OutlookApi._Store Store</param>
-		[SupportByVersionAttribute("Outlook", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860425.aspx </remarks>
+		/// <param name="store">NetOffice.OutlookApi._Store store</param>
+		[SupportByVersion("Outlook", 14,15,16)]
 		public void ClearAlwaysAssignCategories(NetOffice.OutlookApi._Store store)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(store);
-			Invoker.Method(this, "ClearAlwaysAssignCategories", paramsArray);
+			 Factory.ExecuteMethod(this, "ClearAlwaysAssignCategories", store);
 		}
 
 		/// <summary>
 		/// SupportByVersion Outlook 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff869032.aspx
 		/// </summary>
-		/// <param name="store">NetOffice.OutlookApi._Store Store</param>
-		[SupportByVersionAttribute("Outlook", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff869032.aspx </remarks>
+		/// <param name="store">NetOffice.OutlookApi._Store store</param>
+		[SupportByVersion("Outlook", 14,15,16)]
 		public void StopAlwaysDelete(NetOffice.OutlookApi._Store store)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(store);
-			Invoker.Method(this, "StopAlwaysDelete", paramsArray);
+			 Factory.ExecuteMethod(this, "StopAlwaysDelete", store);
 		}
 
 		/// <summary>
 		/// SupportByVersion Outlook 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff863707.aspx
 		/// </summary>
-		/// <param name="store">NetOffice.OutlookApi._Store Store</param>
-		[SupportByVersionAttribute("Outlook", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff863707.aspx </remarks>
+		/// <param name="store">NetOffice.OutlookApi._Store store</param>
+		[SupportByVersion("Outlook", 14,15,16)]
 		public void StopAlwaysMoveToFolder(NetOffice.OutlookApi._Store store)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(store);
-			Invoker.Method(this, "StopAlwaysMoveToFolder", paramsArray);
+			 Factory.ExecuteMethod(this, "StopAlwaysMoveToFolder", store);
 		}
 
 		#endregion
+
 		#pragma warning restore
 	}
 }
+
+
+

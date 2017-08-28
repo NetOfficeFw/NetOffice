@@ -1,23 +1,33 @@
 ﻿using System;
 using NetRuntimeSystem = System;
-using System.Runtime.InteropServices;
-using System.Runtime.CompilerServices;
 using System.ComponentModel;
-using System.Reflection;
-using System.Collections.Generic;
-using NetOffice;
+using NetOffice.Attributes;
+
 namespace NetOffice.DAOApi
 {
-	///<summary>
+	/// <summary>
 	/// DispatchInterface ComplexType 
 	/// SupportByVersion DAO, 12.0
-	///</summary>
-	[SupportByVersionAttribute("DAO", 12.0)]
-	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
-	public class ComplexType : COMObject
+	/// </summary>
+	[SupportByVersion("DAO", 12.0)]
+	[EntityType(EntityType.IsDispatchInterface)]
+ 	public class ComplexType : COMObject
 	{
 		#pragma warning disable
+
 		#region Type Information
+
+		/// <summary>
+		/// Instance Type
+		/// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
+		public override Type InstanceType
+		{
+			get
+			{
+				return LateBindingApiWrapperType;
+			}
+		}
 
         private static Type _type;
 
@@ -28,7 +38,6 @@ namespace NetOffice.DAOApi
             {
                 if (null == _type)
                     _type = typeof(ComplexType);
-                    
                 return _type;
             }
         }
@@ -81,7 +90,7 @@ namespace NetOffice.DAOApi
 		{
 		}
 		
-		/// <param name="progId">registered ProgID</param>
+		/// <param name="progId">registered progID</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public ComplexType(string progId) : base(progId)
 		{
@@ -95,15 +104,12 @@ namespace NetOffice.DAOApi
 		/// SupportByVersion DAO 12.0
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("DAO", 12.0)]
+		[SupportByVersion("DAO", 12.0)]
 		public NetOffice.DAOApi.Fields Fields
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Fields", paramsArray);
-				NetOffice.DAOApi.Fields newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.DAOApi.Fields.LateBindingApiWrapperType) as NetOffice.DAOApi.Fields;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.DAOApi.Fields>(this, "Fields", NetOffice.DAOApi.Fields.LateBindingApiWrapperType);
 			}
 		}
 
@@ -112,6 +118,9 @@ namespace NetOffice.DAOApi
 		#region Methods
 
 		#endregion
+
 		#pragma warning restore
 	}
 }
+
+

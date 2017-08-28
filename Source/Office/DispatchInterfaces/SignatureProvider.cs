@@ -1,24 +1,34 @@
 ﻿using System;
 using NetRuntimeSystem = System;
-using System.Runtime.InteropServices;
-using System.Runtime.CompilerServices;
 using System.ComponentModel;
-using System.Reflection;
-using System.Collections.Generic;
-using NetOffice;
+using NetOffice.Attributes;
+
 namespace NetOffice.OfficeApi
 {
-	///<summary>
+	/// <summary>
 	/// DispatchInterface SignatureProvider 
 	/// SupportByVersion Office, 12,14,15,16
-	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff861225.aspx
-	///</summary>
-	[SupportByVersionAttribute("Office", 12,14,15,16)]
-	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
-	public class SignatureProvider : COMObject
+	/// </summary>
+	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff861225.aspx </remarks>
+	[SupportByVersion("Office", 12,14,15,16)]
+	[EntityType(EntityType.IsDispatchInterface)]
+ 	public class SignatureProvider : COMObject
 	{
 		#pragma warning disable
+
 		#region Type Information
+
+		/// <summary>
+		/// Instance Type
+		/// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
+		public override Type InstanceType
+		{
+			get
+			{
+				return LateBindingApiWrapperType;
+			}
+		}
 
         private static Type _type;
 
@@ -29,7 +39,6 @@ namespace NetOffice.OfficeApi
             {
                 if (null == _type)
                     _type = typeof(SignatureProvider);
-                    
                 return _type;
             }
         }
@@ -82,7 +91,7 @@ namespace NetOffice.OfficeApi
 		{
 		}
 		
-		/// <param name="progId">registered ProgID</param>
+		/// <param name="progId">registered progID</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public SignatureProvider(string progId) : base(progId)
 		{
@@ -98,13 +107,13 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff861157.aspx
 		/// </summary>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff861157.aspx </remarks>
 		/// <param name="siglnimg">NetOffice.OfficeApi.Enums.SignatureLineImage siglnimg</param>
 		/// <param name="psigsetup">NetOffice.OfficeApi.SignatureSetup psigsetup</param>
 		/// <param name="psiginfo">NetOffice.OfficeApi.SignatureInfo psiginfo</param>
-		/// <param name="xmlDsigStream">object XmlDsigStream</param>
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		/// <param name="xmlDsigStream">object xmlDsigStream</param>
+		[SupportByVersion("Office", 12,14,15,16)]
 		public stdole.Picture GenerateSignatureLineImage(NetOffice.OfficeApi.Enums.SignatureLineImage siglnimg, NetOffice.OfficeApi.SignatureSetup psigsetup, NetOffice.OfficeApi.SignatureInfo psiginfo, object xmlDsigStream)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(siglnimg, psigsetup, psiginfo, xmlDsigStream);
@@ -115,122 +124,106 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff861424.aspx
 		/// </summary>
-		/// <param name="parentWindow">object ParentWindow</param>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff861424.aspx </remarks>
+		/// <param name="parentWindow">object parentWindow</param>
 		/// <param name="psigsetup">NetOffice.OfficeApi.SignatureSetup psigsetup</param>
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		[SupportByVersion("Office", 12,14,15,16)]
 		public void ShowSignatureSetup(object parentWindow, NetOffice.OfficeApi.SignatureSetup psigsetup)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(parentWindow, psigsetup);
-			Invoker.Method(this, "ShowSignatureSetup", paramsArray);
+			 Factory.ExecuteMethod(this, "ShowSignatureSetup", parentWindow, psigsetup);
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff864670.aspx
 		/// </summary>
-		/// <param name="parentWindow">object ParentWindow</param>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff864670.aspx </remarks>
+		/// <param name="parentWindow">object parentWindow</param>
 		/// <param name="psigsetup">NetOffice.OfficeApi.SignatureSetup psigsetup</param>
 		/// <param name="psiginfo">NetOffice.OfficeApi.SignatureInfo psiginfo</param>
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		[SupportByVersion("Office", 12,14,15,16)]
 		public void ShowSigningCeremony(object parentWindow, NetOffice.OfficeApi.SignatureSetup psigsetup, NetOffice.OfficeApi.SignatureInfo psiginfo)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(parentWindow, psigsetup, psiginfo);
-			Invoker.Method(this, "ShowSigningCeremony", paramsArray);
+			 Factory.ExecuteMethod(this, "ShowSigningCeremony", parentWindow, psigsetup, psiginfo);
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff864683.aspx
 		/// </summary>
-		/// <param name="queryContinue">object QueryContinue</param>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff864683.aspx </remarks>
+		/// <param name="queryContinue">object queryContinue</param>
 		/// <param name="psigsetup">NetOffice.OfficeApi.SignatureSetup psigsetup</param>
 		/// <param name="psiginfo">NetOffice.OfficeApi.SignatureInfo psiginfo</param>
-		/// <param name="xmlDsigStream">object XmlDsigStream</param>
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		/// <param name="xmlDsigStream">object xmlDsigStream</param>
+		[SupportByVersion("Office", 12,14,15,16)]
 		public void SignXmlDsig(object queryContinue, NetOffice.OfficeApi.SignatureSetup psigsetup, NetOffice.OfficeApi.SignatureInfo psiginfo, object xmlDsigStream)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(queryContinue, psigsetup, psiginfo, xmlDsigStream);
-			Invoker.Method(this, "SignXmlDsig", paramsArray);
+			 Factory.ExecuteMethod(this, "SignXmlDsig", queryContinue, psigsetup, psiginfo, xmlDsigStream);
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff860266.aspx
 		/// </summary>
-		/// <param name="parentWindow">object ParentWindow</param>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860266.aspx </remarks>
+		/// <param name="parentWindow">object parentWindow</param>
 		/// <param name="psigsetup">NetOffice.OfficeApi.SignatureSetup psigsetup</param>
 		/// <param name="psiginfo">NetOffice.OfficeApi.SignatureInfo psiginfo</param>
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		[SupportByVersion("Office", 12,14,15,16)]
 		public void NotifySignatureAdded(object parentWindow, NetOffice.OfficeApi.SignatureSetup psigsetup, NetOffice.OfficeApi.SignatureInfo psiginfo)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(parentWindow, psigsetup, psiginfo);
-			Invoker.Method(this, "NotifySignatureAdded", paramsArray);
+			 Factory.ExecuteMethod(this, "NotifySignatureAdded", parentWindow, psigsetup, psiginfo);
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff863028.aspx
 		/// </summary>
-		/// <param name="queryContinue">object QueryContinue</param>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff863028.aspx </remarks>
+		/// <param name="queryContinue">object queryContinue</param>
 		/// <param name="psigsetup">NetOffice.OfficeApi.SignatureSetup psigsetup</param>
 		/// <param name="psiginfo">NetOffice.OfficeApi.SignatureInfo psiginfo</param>
-		/// <param name="xmlDsigStream">object XmlDsigStream</param>
+		/// <param name="xmlDsigStream">object xmlDsigStream</param>
 		/// <param name="pcontverres">NetOffice.OfficeApi.Enums.ContentVerificationResults pcontverres</param>
 		/// <param name="pcertverres">NetOffice.OfficeApi.Enums.CertificateVerificationResults pcertverres</param>
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		[SupportByVersion("Office", 12,14,15,16)]
 		public void VerifyXmlDsig(object queryContinue, NetOffice.OfficeApi.SignatureSetup psigsetup, NetOffice.OfficeApi.SignatureInfo psiginfo, object xmlDsigStream, NetOffice.OfficeApi.Enums.ContentVerificationResults pcontverres, NetOffice.OfficeApi.Enums.CertificateVerificationResults pcertverres)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(queryContinue, psigsetup, psiginfo, xmlDsigStream, pcontverres, pcertverres);
-			Invoker.Method(this, "VerifyXmlDsig", paramsArray);
+			 Factory.ExecuteMethod(this, "VerifyXmlDsig", new object[]{ queryContinue, psigsetup, psiginfo, xmlDsigStream, pcontverres, pcertverres });
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff865248.aspx
 		/// </summary>
-		/// <param name="parentWindow">object ParentWindow</param>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff865248.aspx </remarks>
+		/// <param name="parentWindow">object parentWindow</param>
 		/// <param name="psigsetup">NetOffice.OfficeApi.SignatureSetup psigsetup</param>
 		/// <param name="psiginfo">NetOffice.OfficeApi.SignatureInfo psiginfo</param>
-		/// <param name="xmlDsigStream">object XmlDsigStream</param>
+		/// <param name="xmlDsigStream">object xmlDsigStream</param>
 		/// <param name="pcontverres">NetOffice.OfficeApi.Enums.ContentVerificationResults pcontverres</param>
 		/// <param name="pcertverres">NetOffice.OfficeApi.Enums.CertificateVerificationResults pcertverres</param>
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		[SupportByVersion("Office", 12,14,15,16)]
 		public void ShowSignatureDetails(object parentWindow, NetOffice.OfficeApi.SignatureSetup psigsetup, NetOffice.OfficeApi.SignatureInfo psiginfo, object xmlDsigStream, NetOffice.OfficeApi.Enums.ContentVerificationResults pcontverres, NetOffice.OfficeApi.Enums.CertificateVerificationResults pcertverres)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(parentWindow, psigsetup, psiginfo, xmlDsigStream, pcontverres, pcertverres);
-			Invoker.Method(this, "ShowSignatureDetails", paramsArray);
+			 Factory.ExecuteMethod(this, "ShowSignatureDetails", new object[]{ parentWindow, psigsetup, psiginfo, xmlDsigStream, pcontverres, pcertverres });
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff863646.aspx
 		/// </summary>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff863646.aspx </remarks>
 		/// <param name="sigprovdet">NetOffice.OfficeApi.Enums.SignatureProviderDetail sigprovdet</param>
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		[SupportByVersion("Office", 12,14,15,16)]
 		public object GetProviderDetail(NetOffice.OfficeApi.Enums.SignatureProviderDetail sigprovdet)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(sigprovdet);
-			object returnItem = Invoker.MethodReturn(this, "GetProviderDetail", paramsArray);
-			if((null != returnItem) && (returnItem is MarshalByRefObject))
-			{
-				ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
-				return newObject;
-			}
-			else
-			{
-				return  returnItem;
-			}
+			return Factory.ExecuteVariantMethodGet(this, "GetProviderDetail", sigprovdet);
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff862104.aspx
 		/// </summary>
-		/// <param name="queryContinue">object QueryContinue</param>
-		/// <param name="stream">object Stream</param>
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff862104.aspx </remarks>
+		/// <param name="queryContinue">object queryContinue</param>
+		/// <param name="stream">object stream</param>
+		[SupportByVersion("Office", 12,14,15,16)]
 		public byte[] HashStream(object queryContinue, object stream)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(queryContinue, stream);
@@ -239,6 +232,10 @@ namespace NetOffice.OfficeApi
 		}
 
 		#endregion
+
 		#pragma warning restore
 	}
 }
+
+
+

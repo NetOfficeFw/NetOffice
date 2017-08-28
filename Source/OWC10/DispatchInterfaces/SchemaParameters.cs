@@ -1,24 +1,35 @@
-﻿using System;
-using NetRuntimeSystem = System;
-using System.Runtime.InteropServices;
-using System.Runtime.CompilerServices;
-using System.ComponentModel;
-using System.Reflection;
+﻿using System.Collections;
 using System.Collections.Generic;
-using System.Collections;
-using NetOffice;
+using System;
+using NetRuntimeSystem = System;
+using System.ComponentModel;
+using NetOffice.Attributes;
+
 namespace NetOffice.OWC10Api
 {
-	///<summary>
+	/// <summary>
 	/// DispatchInterface SchemaParameters 
 	/// SupportByVersion OWC10, 1
-	///</summary>
-	[SupportByVersionAttribute("OWC10", 1)]
-	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
-	public class SchemaParameters : COMObject ,IEnumerable<NetOffice.OWC10Api.SchemaParameter>
+	/// </summary>
+	[SupportByVersion("OWC10", 1)]
+	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "Item")]
+	public class SchemaParameters : COMObject , IEnumerable<NetOffice.OWC10Api.SchemaParameter>
 	{
 		#pragma warning disable
+
 		#region Type Information
+
+		/// <summary>
+		/// Instance Type
+		/// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
+		public override Type InstanceType
+		{
+			get
+			{
+				return LateBindingApiWrapperType;
+			}
+		}
 
         private static Type _type;
 
@@ -29,7 +40,6 @@ namespace NetOffice.OWC10Api
             {
                 if (null == _type)
                     _type = typeof(SchemaParameters);
-                    
                 return _type;
             }
         }
@@ -82,7 +92,7 @@ namespace NetOffice.OWC10Api
 		{
 		}
 		
-		/// <param name="progId">registered ProgID</param>
+		/// <param name="progId">registered progID</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public SchemaParameters(string progId) : base(progId)
 		{
@@ -96,17 +106,14 @@ namespace NetOffice.OWC10Api
 		/// SupportByVersion OWC10 1
 		/// Get
 		/// </summary>
-		/// <param name="index">object Index</param>
-		[SupportByVersionAttribute("OWC10", 1)]
-		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
+		/// <param name="index">object index</param>
+		[SupportByVersion("OWC10", 1)]
+		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
 		public NetOffice.OWC10Api.SchemaParameter this[object index]
 		{
 			get
-{			
-			object[] paramsArray = Invoker.ValidateParamsArray(index);
-			object returnItem = Invoker.PropertyGet(this, "Item", paramsArray);
-			NetOffice.OWC10Api.SchemaParameter newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OWC10Api.SchemaParameter.LateBindingApiWrapperType) as NetOffice.OWC10Api.SchemaParameter;
-			return newObject;
+			{
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OWC10Api.SchemaParameter>(this, "Item", NetOffice.OWC10Api.SchemaParameter.LateBindingApiWrapperType, index);
 			}
 		}
 
@@ -114,14 +121,12 @@ namespace NetOffice.OWC10Api
 		/// SupportByVersion OWC10 1
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("OWC10", 1)]
+		[SupportByVersion("OWC10", 1)]
 		public Int32 Count
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Count", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "Count");
 			}
 		}
 
@@ -131,106 +136,82 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
-		/// 
 		/// </summary>
-		/// <param name="name">string Name</param>
-		/// <param name="dataType">optional object DataType</param>
-		/// <param name="size">optional object Size</param>
-		/// <param name="scale">optional object Scale</param>
-		/// <param name="precision">optional object Precision</param>
-		/// <param name="direction">optional object Direction</param>
-		[SupportByVersionAttribute("OWC10", 1)]
+		/// <param name="name">string name</param>
+		/// <param name="dataType">optional object dataType</param>
+		/// <param name="size">optional object size</param>
+		/// <param name="scale">optional object scale</param>
+		/// <param name="precision">optional object precision</param>
+		/// <param name="direction">optional object direction</param>
+		[SupportByVersion("OWC10", 1)]
 		public NetOffice.OWC10Api.SchemaParameter Add(string name, object dataType, object size, object scale, object precision, object direction)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(name, dataType, size, scale, precision, direction);
-			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.OWC10Api.SchemaParameter newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OWC10Api.SchemaParameter.LateBindingApiWrapperType) as NetOffice.OWC10Api.SchemaParameter;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OWC10Api.SchemaParameter>(this, "Add", NetOffice.OWC10Api.SchemaParameter.LateBindingApiWrapperType, new object[]{ name, dataType, size, scale, precision, direction });
 		}
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
-		/// 
 		/// </summary>
-		/// <param name="name">string Name</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("OWC10", 1)]
+		/// <param name="name">string name</param>
+		[CustomMethod]
+		[SupportByVersion("OWC10", 1)]
 		public NetOffice.OWC10Api.SchemaParameter Add(string name)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(name);
-			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.OWC10Api.SchemaParameter newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OWC10Api.SchemaParameter.LateBindingApiWrapperType) as NetOffice.OWC10Api.SchemaParameter;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OWC10Api.SchemaParameter>(this, "Add", NetOffice.OWC10Api.SchemaParameter.LateBindingApiWrapperType, name);
 		}
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
-		/// 
 		/// </summary>
-		/// <param name="name">string Name</param>
-		/// <param name="dataType">optional object DataType</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("OWC10", 1)]
+		/// <param name="name">string name</param>
+		/// <param name="dataType">optional object dataType</param>
+		[CustomMethod]
+		[SupportByVersion("OWC10", 1)]
 		public NetOffice.OWC10Api.SchemaParameter Add(string name, object dataType)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(name, dataType);
-			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.OWC10Api.SchemaParameter newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OWC10Api.SchemaParameter.LateBindingApiWrapperType) as NetOffice.OWC10Api.SchemaParameter;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OWC10Api.SchemaParameter>(this, "Add", NetOffice.OWC10Api.SchemaParameter.LateBindingApiWrapperType, name, dataType);
 		}
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
-		/// 
 		/// </summary>
-		/// <param name="name">string Name</param>
-		/// <param name="dataType">optional object DataType</param>
-		/// <param name="size">optional object Size</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("OWC10", 1)]
+		/// <param name="name">string name</param>
+		/// <param name="dataType">optional object dataType</param>
+		/// <param name="size">optional object size</param>
+		[CustomMethod]
+		[SupportByVersion("OWC10", 1)]
 		public NetOffice.OWC10Api.SchemaParameter Add(string name, object dataType, object size)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(name, dataType, size);
-			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.OWC10Api.SchemaParameter newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OWC10Api.SchemaParameter.LateBindingApiWrapperType) as NetOffice.OWC10Api.SchemaParameter;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OWC10Api.SchemaParameter>(this, "Add", NetOffice.OWC10Api.SchemaParameter.LateBindingApiWrapperType, name, dataType, size);
 		}
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
-		/// 
 		/// </summary>
-		/// <param name="name">string Name</param>
-		/// <param name="dataType">optional object DataType</param>
-		/// <param name="size">optional object Size</param>
-		/// <param name="scale">optional object Scale</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("OWC10", 1)]
+		/// <param name="name">string name</param>
+		/// <param name="dataType">optional object dataType</param>
+		/// <param name="size">optional object size</param>
+		/// <param name="scale">optional object scale</param>
+		[CustomMethod]
+		[SupportByVersion("OWC10", 1)]
 		public NetOffice.OWC10Api.SchemaParameter Add(string name, object dataType, object size, object scale)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(name, dataType, size, scale);
-			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.OWC10Api.SchemaParameter newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OWC10Api.SchemaParameter.LateBindingApiWrapperType) as NetOffice.OWC10Api.SchemaParameter;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OWC10Api.SchemaParameter>(this, "Add", NetOffice.OWC10Api.SchemaParameter.LateBindingApiWrapperType, name, dataType, size, scale);
 		}
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
-		/// 
 		/// </summary>
-		/// <param name="name">string Name</param>
-		/// <param name="dataType">optional object DataType</param>
-		/// <param name="size">optional object Size</param>
-		/// <param name="scale">optional object Scale</param>
-		/// <param name="precision">optional object Precision</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("OWC10", 1)]
+		/// <param name="name">string name</param>
+		/// <param name="dataType">optional object dataType</param>
+		/// <param name="size">optional object size</param>
+		/// <param name="scale">optional object scale</param>
+		/// <param name="precision">optional object precision</param>
+		[CustomMethod]
+		[SupportByVersion("OWC10", 1)]
 		public NetOffice.OWC10Api.SchemaParameter Add(string name, object dataType, object size, object scale, object precision)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(name, dataType, size, scale, precision);
-			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.OWC10Api.SchemaParameter newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OWC10Api.SchemaParameter.LateBindingApiWrapperType) as NetOffice.OWC10Api.SchemaParameter;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OWC10Api.SchemaParameter>(this, "Add", NetOffice.OWC10Api.SchemaParameter.LateBindingApiWrapperType, new object[]{ name, dataType, size, scale, precision });
 		}
 
 		#endregion
@@ -238,9 +219,9 @@ namespace NetOffice.OWC10Api
        #region IEnumerable<NetOffice.OWC10Api.SchemaParameter> Member
         
         /// <summary>
-		/// SupportByVersionAttribute OWC10, 1
+		/// SupportByVersion OWC10, 1
 		/// </summary>
-		[SupportByVersionAttribute("OWC10", 1)]
+		[SupportByVersion("OWC10", 1)]
        public IEnumerator<NetOffice.OWC10Api.SchemaParameter> GetEnumerator()  
        {
            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
@@ -253,15 +234,19 @@ namespace NetOffice.OWC10Api
 		#region IEnumerable Members
        
 		/// <summary>
-		/// SupportByVersionAttribute OWC10, 1
+		/// SupportByVersion OWC10, 1
 		/// </summary>
-		[SupportByVersionAttribute("OWC10", 1)]
+		[SupportByVersion("OWC10", 1)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
 			return NetOffice.Utils.GetProxyEnumeratorAsProperty(this);
 		}
 
 		#endregion
+
 		#pragma warning restore
 	}
 }
+
+
+

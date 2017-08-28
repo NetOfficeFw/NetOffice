@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Reflection;
 using System.Text;
 
-namespace NetOffice
+namespace NetOffice.Loader
 {
     /// <summary>
     /// Encapsulate current appdomain with exception tolerant methods
@@ -111,11 +111,11 @@ namespace NetOffice
             try
             {
                 bool versionMatch = false;
-                localPath = false == String.IsNullOrEmpty(name.CodeBase) ? UriConvert.ToLocalPath(name.CodeBase) : null;
+                localPath = false == String.IsNullOrEmpty(name.CodeBase) ? Resolver.UriResolver.ResolveLocalPath(name.CodeBase) : null;
                 versionMatch = null == localPath ? ValidateVersion(name) : ValidateVersion(localPath);
                 if (null == localPath)
                 {
-                    string thisLocalPath = UriConvert.ToLocalPath(Owner.ThisAssembly.CodeBase);
+                    string thisLocalPath = Resolver.UriResolver.ResolveLocalPath(Owner.ThisAssembly.CodeBase);
                     string extension = Path.GetExtension(thisLocalPath);
                     string path = Path.GetDirectoryName(thisLocalPath);
                     localPath = Path.Combine(path, name.Name + extension);
@@ -261,7 +261,7 @@ namespace NetOffice
                 if ((!String.IsNullOrEmpty(args.Name) && args.Name.ToLower().Trim().IndexOf(".resources") > -1))
                     return null;
 
-                string thisLocalPath = UriConvert.ToLocalPath(Owner.ThisAssembly.CodeBase);
+                string thisLocalPath = Resolver.UriResolver.ResolveLocalPath(Owner.ThisAssembly.CodeBase);
                 string extension = Path.GetExtension(thisLocalPath);
                 string path = Path.GetDirectoryName(thisLocalPath);
                 string fullFileName = Path.Combine(path, args.Name + extension);

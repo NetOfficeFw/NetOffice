@@ -1,24 +1,34 @@
 ﻿using System;
 using NetRuntimeSystem = System;
-using System.Runtime.InteropServices;
-using System.Runtime.CompilerServices;
 using System.ComponentModel;
-using System.Reflection;
-using System.Collections.Generic;
-using NetOffice;
+using NetOffice.Attributes;
+
 namespace NetOffice.OfficeApi
 {
-	///<summary>
+	/// <summary>
 	/// DispatchInterface ICTPFactory 
 	/// SupportByVersion Office, 12,14,15,16
-	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff864938.aspx
-	///</summary>
-	[SupportByVersionAttribute("Office", 12,14,15,16)]
-	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
-	public class ICTPFactory : COMObject
+	/// </summary>
+	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff864938.aspx </remarks>
+	[SupportByVersion("Office", 12,14,15,16)]
+	[EntityType(EntityType.IsDispatchInterface)]
+ 	public class ICTPFactory : COMObject
 	{
 		#pragma warning disable
+
 		#region Type Information
+
+		/// <summary>
+		/// Instance Type
+		/// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
+		public override Type InstanceType
+		{
+			get
+			{
+				return LateBindingApiWrapperType;
+			}
+		}
 
         private static Type _type;
 
@@ -29,7 +39,6 @@ namespace NetOffice.OfficeApi
             {
                 if (null == _type)
                     _type = typeof(ICTPFactory);
-                    
                 return _type;
             }
         }
@@ -82,7 +91,7 @@ namespace NetOffice.OfficeApi
 		{
 		}
 		
-		/// <param name="progId">registered ProgID</param>
+		/// <param name="progId">registered progID</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public ICTPFactory(string progId) : base(progId)
 		{
@@ -98,37 +107,35 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff860563.aspx
 		/// </summary>
-		/// <param name="cTPAxID">string CTPAxID</param>
-		/// <param name="cTPTitle">string CTPTitle</param>
-		/// <param name="cTPParentWindow">optional object CTPParentWindow</param>
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860563.aspx </remarks>
+		/// <param name="cTPAxID">string cTPAxID</param>
+		/// <param name="cTPTitle">string cTPTitle</param>
+		/// <param name="cTPParentWindow">optional object cTPParentWindow</param>
+		[SupportByVersion("Office", 12,14,15,16)]
 		public NetOffice.OfficeApi._CustomTaskPane CreateCTP(string cTPAxID, string cTPTitle, object cTPParentWindow)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(cTPAxID, cTPTitle, cTPParentWindow);
-			object returnItem = Invoker.MethodReturn(this, "CreateCTP", paramsArray);
-			NetOffice.OfficeApi._CustomTaskPane newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OfficeApi._CustomTaskPane;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi._CustomTaskPane>(this, "CreateCTP", NetOffice.OfficeApi._CustomTaskPane.LateBindingApiWrapperType, cTPAxID, cTPTitle, cTPParentWindow);
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff860563.aspx
 		/// </summary>
-		/// <param name="cTPAxID">string CTPAxID</param>
-		/// <param name="cTPTitle">string CTPTitle</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860563.aspx </remarks>
+		/// <param name="cTPAxID">string cTPAxID</param>
+		/// <param name="cTPTitle">string cTPTitle</param>
+		[CustomMethod]
+		[SupportByVersion("Office", 12,14,15,16)]
 		public NetOffice.OfficeApi._CustomTaskPane CreateCTP(string cTPAxID, string cTPTitle)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(cTPAxID, cTPTitle);
-			object returnItem = Invoker.MethodReturn(this, "CreateCTP", paramsArray);
-			NetOffice.OfficeApi._CustomTaskPane newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OfficeApi._CustomTaskPane;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi._CustomTaskPane>(this, "CreateCTP", NetOffice.OfficeApi._CustomTaskPane.LateBindingApiWrapperType, cTPAxID, cTPTitle);
 		}
 
 		#endregion
+
 		#pragma warning restore
 	}
 }
+
+
+

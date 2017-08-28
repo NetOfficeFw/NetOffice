@@ -1,12 +1,10 @@
 ﻿using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
-using NetOffice;
-using NetOffice.Misc;
+using NetOffice.Attributes;
 
 namespace NetOffice.MSHTMLApi
 {
-
 	#region Delegates
 
 	#pragma warning disable
@@ -79,21 +77,23 @@ namespace NetOffice.MSHTMLApi
 
 	#endregion
 
-	///<summary>
+	/// <summary>
 	/// CoClass HTMLTableCaption 
 	/// SupportByVersion MSHTML, 4
-	///</summary>
-	[SupportByVersionAttribute("MSHTML", 4)]
-	[EntityTypeAttribute(EntityType.IsCoClass)]
-	public class HTMLTableCaption : DispHTMLTableCaption,IEventBinding
+	/// </summary>
+	[SupportByVersion("MSHTML", 4)]
+	[EntityType(EntityType.IsCoClass)]
+	[EventSink(typeof(Events.HTMLTextContainerEvents_SinkHelper))]
+	public class HTMLTableCaption : DispHTMLTableCaption, IEventBinding
 	{
 		#pragma warning disable
+
 		#region Fields
 		
 		private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
 		private string _activeSinkId;
 		private NetRuntimeSystem.Type _thisType;
-		HTMLTextContainerEvents_SinkHelper _hTMLTextContainerEvents_SinkHelper;
+		private Events.HTMLTextContainerEvents_SinkHelper _hTMLTextContainerEvents_SinkHelper;
 	
 		#endregion
 
@@ -102,6 +102,7 @@ namespace NetOffice.MSHTMLApi
         /// <summary>
         /// Instance Type
         /// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
         public override Type InstanceType
         {
             get
@@ -168,17 +169,17 @@ namespace NetOffice.MSHTMLApi
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of HTMLTableCaption 
-        ///</summary>		
+        /// </summary>		
 		public HTMLTableCaption():base("MSHTML.HTMLTableCaption")
 		{
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of HTMLTableCaption
-        ///</summary>
+        /// </summary>
         ///<param name="progId">registered ProgID</param>
 		public HTMLTableCaption(string progId):base(progId)
 		{
@@ -188,46 +189,6 @@ namespace NetOffice.MSHTMLApi
 		#endregion
 
 		#region Static CoClass Methods
-
-		/// <summary>
-        /// Returns all running MSHTML.HTMLTableCaption objects from the environment/system
-        /// </summary>
-        /// <returns>an MSHTML.HTMLTableCaption array</returns>
-		public static NetOffice.MSHTMLApi.HTMLTableCaption[] GetActiveInstances()
-		{		
-			IDisposableEnumeration proxyList = NetOffice.ProxyService.GetActiveInstances("MSHTML","HTMLTableCaption");
-			NetRuntimeSystem.Collections.Generic.List<NetOffice.MSHTMLApi.HTMLTableCaption> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.MSHTMLApi.HTMLTableCaption>();
-			foreach(object proxy in proxyList)
-				resultList.Add( new NetOffice.MSHTMLApi.HTMLTableCaption(null, proxy) );
-			return resultList.ToArray();
-		}
-
-		/// <summary>
-        /// Returns a running MSHTML.HTMLTableCaption object from the environment/system.
-        /// </summary>
-        /// <returns>an MSHTML.HTMLTableCaption object or null</returns>
-		public static NetOffice.MSHTMLApi.HTMLTableCaption GetActiveInstance()
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("MSHTML","HTMLTableCaption", false);
-			if(null != proxy)
-				return new NetOffice.MSHTMLApi.HTMLTableCaption(null, proxy);
-			else
-				return null;
-		}
-
-		/// <summary>
-        /// Returns a running MSHTML.HTMLTableCaption object from the environment/system. 
-        /// </summary>
-	    /// <param name="throwOnError">throw an exception if no object was found</param>
-        /// <returns>an MSHTML.HTMLTableCaption object or null</returns>
-		public static NetOffice.MSHTMLApi.HTMLTableCaption GetActiveInstance(bool throwOnError)
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("MSHTML","HTMLTableCaption", throwOnError);
-			if(null != proxy)
-				return new NetOffice.MSHTMLApi.HTMLTableCaption(null, proxy);
-			else
-				return null;
-		}
 		#endregion
 
 		#region Events
@@ -1679,12 +1640,12 @@ namespace NetOffice.MSHTMLApi
 				return;
 	
             if (null == _activeSinkId)
-				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, HTMLTextContainerEvents_SinkHelper.Id);
+				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, Events.HTMLTextContainerEvents_SinkHelper.Id);
 
 
-			if(HTMLTextContainerEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
+			if(Events.HTMLTextContainerEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
 			{
-				_hTMLTextContainerEvents_SinkHelper = new HTMLTextContainerEvents_SinkHelper(this, _connectPoint);
+				_hTMLTextContainerEvents_SinkHelper = new Events.HTMLTextContainerEvents_SinkHelper(this, _connectPoint);
 				return;
 			} 
         }
@@ -1826,3 +1787,4 @@ namespace NetOffice.MSHTMLApi
 		#pragma warning restore
 	}
 }
+

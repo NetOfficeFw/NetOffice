@@ -1,49 +1,49 @@
 ﻿using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
-using NetOffice;
-using NetOffice.Misc;
+using NetOffice.Attributes;
 
 namespace NetOffice.OutlookApi
 {
-
 	#region Delegates
 
 	#pragma warning disable
 	public delegate void OlkTimeZoneControl_ClickEventHandler();
 	public delegate void OlkTimeZoneControl_DoubleClickEventHandler();
-	public delegate void OlkTimeZoneControl_MouseDownEventHandler(NetOffice.OutlookApi.Enums.OlMouseButton Button, NetOffice.OutlookApi.Enums.OlShiftState Shift, Single X, Single Y);
-	public delegate void OlkTimeZoneControl_MouseMoveEventHandler(NetOffice.OutlookApi.Enums.OlMouseButton Button, NetOffice.OutlookApi.Enums.OlShiftState Shift, Single X, Single Y);
-	public delegate void OlkTimeZoneControl_MouseUpEventHandler(NetOffice.OutlookApi.Enums.OlMouseButton Button, NetOffice.OutlookApi.Enums.OlShiftState Shift, Single X, Single Y);
+	public delegate void OlkTimeZoneControl_MouseDownEventHandler(NetOffice.OutlookApi.Enums.OlMouseButton button, NetOffice.OutlookApi.Enums.OlShiftState shift, Single x, Single y);
+	public delegate void OlkTimeZoneControl_MouseMoveEventHandler(NetOffice.OutlookApi.Enums.OlMouseButton button, NetOffice.OutlookApi.Enums.OlShiftState shift, Single x, Single y);
+	public delegate void OlkTimeZoneControl_MouseUpEventHandler(NetOffice.OutlookApi.Enums.OlMouseButton button, NetOffice.OutlookApi.Enums.OlShiftState shift, Single x, Single y);
 	public delegate void OlkTimeZoneControl_EnterEventHandler();
-	public delegate void OlkTimeZoneControl_ExitEventHandler(ref bool Cancel);
-	public delegate void OlkTimeZoneControl_KeyDownEventHandler(ref Int32 KeyCode, NetOffice.OutlookApi.Enums.OlShiftState Shift);
-	public delegate void OlkTimeZoneControl_KeyPressEventHandler(ref Int32 KeyAscii);
-	public delegate void OlkTimeZoneControl_KeyUpEventHandler(ref Int32 KeyCode, NetOffice.OutlookApi.Enums.OlShiftState Shift);
+	public delegate void OlkTimeZoneControl_ExitEventHandler(ref bool cancel);
+	public delegate void OlkTimeZoneControl_KeyDownEventHandler(ref Int32 keyCode, NetOffice.OutlookApi.Enums.OlShiftState shift);
+	public delegate void OlkTimeZoneControl_KeyPressEventHandler(ref Int32 keyAscii);
+	public delegate void OlkTimeZoneControl_KeyUpEventHandler(ref Int32 keyCode, NetOffice.OutlookApi.Enums.OlShiftState shift);
 	public delegate void OlkTimeZoneControl_ChangeEventHandler();
 	public delegate void OlkTimeZoneControl_DropButtonClickEventHandler();
 	public delegate void OlkTimeZoneControl_AfterUpdateEventHandler();
-	public delegate void OlkTimeZoneControl_BeforeUpdateEventHandler(ref bool Cancel);
+	public delegate void OlkTimeZoneControl_BeforeUpdateEventHandler(ref bool cancel);
 	#pragma warning restore
 
 	#endregion
 
-	///<summary>
+	/// <summary>
 	/// CoClass OlkTimeZoneControl 
 	/// SupportByVersion Outlook, 12,14,15,16
-	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff862219.aspx
-	///</summary>
-	[SupportByVersionAttribute("Outlook", 12,14,15,16)]
-	[EntityTypeAttribute(EntityType.IsCoClass)]
-	public class OlkTimeZoneControl : _OlkTimeZoneControl,IEventBinding
+	/// </summary>
+	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff862219.aspx </remarks>
+	[SupportByVersion("Outlook", 12,14,15,16)]
+	[EntityType(EntityType.IsCoClass)]
+	[EventSink(typeof(Events.OlkTimeZoneControlEvents_SinkHelper))]
+	public class OlkTimeZoneControl : _OlkTimeZoneControl, IEventBinding
 	{
 		#pragma warning disable
+
 		#region Fields
 		
 		private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
 		private string _activeSinkId;
 		private NetRuntimeSystem.Type _thisType;
-		OlkTimeZoneControlEvents_SinkHelper _olkTimeZoneControlEvents_SinkHelper;
+		private Events.OlkTimeZoneControlEvents_SinkHelper _olkTimeZoneControlEvents_SinkHelper;
 	
 		#endregion
 
@@ -52,6 +52,7 @@ namespace NetOffice.OutlookApi
         /// <summary>
         /// Instance Type
         /// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
         public override Type InstanceType
         {
             get
@@ -118,17 +119,17 @@ namespace NetOffice.OutlookApi
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of OlkTimeZoneControl 
-        ///</summary>		
+        /// </summary>		
 		public OlkTimeZoneControl():base("Outlook.OlkTimeZoneControl")
 		{
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of OlkTimeZoneControl
-        ///</summary>
+        /// </summary>
         ///<param name="progId">registered ProgID</param>
 		public OlkTimeZoneControl(string progId):base(progId)
 		{
@@ -138,46 +139,6 @@ namespace NetOffice.OutlookApi
 		#endregion
 
 		#region Static CoClass Methods
-
-		/// <summary>
-        /// Returns all running Outlook.OlkTimeZoneControl objects from the environment/system
-        /// </summary>
-        /// <returns>an Outlook.OlkTimeZoneControl array</returns>
-		public static NetOffice.OutlookApi.OlkTimeZoneControl[] GetActiveInstances()
-		{		
-			IDisposableEnumeration proxyList = NetOffice.ProxyService.GetActiveInstances("Outlook","OlkTimeZoneControl");
-			NetRuntimeSystem.Collections.Generic.List<NetOffice.OutlookApi.OlkTimeZoneControl> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.OutlookApi.OlkTimeZoneControl>();
-			foreach(object proxy in proxyList)
-				resultList.Add( new NetOffice.OutlookApi.OlkTimeZoneControl(null, proxy) );
-			return resultList.ToArray();
-		}
-
-		/// <summary>
-        /// Returns a running Outlook.OlkTimeZoneControl object from the environment/system.
-        /// </summary>
-        /// <returns>an Outlook.OlkTimeZoneControl object or null</returns>
-		public static NetOffice.OutlookApi.OlkTimeZoneControl GetActiveInstance()
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Outlook","OlkTimeZoneControl", false);
-			if(null != proxy)
-				return new NetOffice.OutlookApi.OlkTimeZoneControl(null, proxy);
-			else
-				return null;
-		}
-
-		/// <summary>
-        /// Returns a running Outlook.OlkTimeZoneControl object from the environment/system. 
-        /// </summary>
-	    /// <param name="throwOnError">throw an exception if no object was found</param>
-        /// <returns>an Outlook.OlkTimeZoneControl object or null</returns>
-		public static NetOffice.OutlookApi.OlkTimeZoneControl GetActiveInstance(bool throwOnError)
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Outlook","OlkTimeZoneControl", throwOnError);
-			if(null != proxy)
-				return new NetOffice.OutlookApi.OlkTimeZoneControl(null, proxy);
-			else
-				return null;
-		}
 		#endregion
 
 		#region Events
@@ -521,12 +482,12 @@ namespace NetOffice.OutlookApi
 				return;
 	
             if (null == _activeSinkId)
-				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, OlkTimeZoneControlEvents_SinkHelper.Id);
+				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, Events.OlkTimeZoneControlEvents_SinkHelper.Id);
 
 
-			if(OlkTimeZoneControlEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
+			if(Events.OlkTimeZoneControlEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
 			{
-				_olkTimeZoneControlEvents_SinkHelper = new OlkTimeZoneControlEvents_SinkHelper(this, _connectPoint);
+				_olkTimeZoneControlEvents_SinkHelper = new Events.OlkTimeZoneControlEvents_SinkHelper(this, _connectPoint);
 				return;
 			} 
         }
@@ -668,3 +629,4 @@ namespace NetOffice.OutlookApi
 		#pragma warning restore
 	}
 }
+

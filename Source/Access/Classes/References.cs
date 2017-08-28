@@ -1,37 +1,37 @@
 ﻿using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
-using NetOffice;
-using NetOffice.Misc;
+using NetOffice.Attributes;
 
 namespace NetOffice.AccessApi
 {
-
 	#region Delegates
 
 	#pragma warning disable
-	public delegate void References_ItemAddedEventHandler(NetOffice.AccessApi.Reference Reference);
-	public delegate void References_ItemRemovedEventHandler(NetOffice.AccessApi.Reference Reference);
+	public delegate void References_ItemAddedEventHandler(NetOffice.AccessApi.Reference reference);
+	public delegate void References_ItemRemovedEventHandler(NetOffice.AccessApi.Reference reference);
 	#pragma warning restore
 
 	#endregion
 
-	///<summary>
+	/// <summary>
 	/// CoClass References 
 	/// SupportByVersion Access, 9,10,11,12,14,15,16
-	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff821489.aspx
-	///</summary>
-	[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
-	[EntityTypeAttribute(EntityType.IsCoClass)]
-	public class References : _References,IEventBinding
+	/// </summary>
+	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff821489.aspx </remarks>
+	[SupportByVersion("Access", 9,10,11,12,14,15,16)]
+	[EntityType(EntityType.IsCoClass)]
+    [EventSink(typeof(Events._References_Events_SinkHelper))]
+    public class References : _References, IEventBinding
 	{
 		#pragma warning disable
+
 		#region Fields
 		
 		private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
 		private string _activeSinkId;
 		private NetRuntimeSystem.Type _thisType;
-		_References_Events_SinkHelper __References_Events_SinkHelper;
+		private Events._References_Events_SinkHelper __References_Events_SinkHelper;
 	
 		#endregion
 
@@ -40,6 +40,7 @@ namespace NetOffice.AccessApi
         /// <summary>
         /// Instance Type
         /// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
         public override Type InstanceType
         {
             get
@@ -106,17 +107,17 @@ namespace NetOffice.AccessApi
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of References 
-        ///</summary>		
+        /// </summary>		
 		public References():base("Access.References")
 		{
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of References
-        ///</summary>
+        /// </summary>
         ///<param name="progId">registered ProgID</param>
 		public References(string progId):base(progId)
 		{
@@ -126,46 +127,6 @@ namespace NetOffice.AccessApi
 		#endregion
 
 		#region Static CoClass Methods
-
-		/// <summary>
-        /// Returns all running Access.References objects from the environment/system
-        /// </summary>
-        /// <returns>an Access.References array</returns>
-		public static NetOffice.AccessApi.References[] GetActiveInstances()
-		{		
-			IDisposableEnumeration proxyList = NetOffice.ProxyService.GetActiveInstances("Access","References");
-			NetRuntimeSystem.Collections.Generic.List<NetOffice.AccessApi.References> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.AccessApi.References>();
-			foreach(object proxy in proxyList)
-				resultList.Add( new NetOffice.AccessApi.References(null, proxy) );
-			return resultList.ToArray();
-		}
-
-		/// <summary>
-        /// Returns a running Access.References object from the environment/system.
-        /// </summary>
-        /// <returns>an Access.References object or null</returns>
-		public static NetOffice.AccessApi.References GetActiveInstance()
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Access","References", false);
-			if(null != proxy)
-				return new NetOffice.AccessApi.References(null, proxy);
-			else
-				return null;
-		}
-
-		/// <summary>
-        /// Returns a running Access.References object from the environment/system. 
-        /// </summary>
-	    /// <param name="throwOnError">throw an exception if no object was found</param>
-        /// <returns>an Access.References object or null</returns>
-		public static NetOffice.AccessApi.References GetActiveInstance(bool throwOnError)
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Access","References", throwOnError);
-			if(null != proxy)
-				return new NetOffice.AccessApi.References(null, proxy);
-			else
-				return null;
-		}
 		#endregion
 
 		#region Events
@@ -233,12 +194,12 @@ namespace NetOffice.AccessApi
 				return;
 	
             if (null == _activeSinkId)
-				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, _References_Events_SinkHelper.Id);
+				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, Events._References_Events_SinkHelper.Id);
 
 
-			if(_References_Events_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
+			if(Events._References_Events_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
 			{
-				__References_Events_SinkHelper = new _References_Events_SinkHelper(this, _connectPoint);
+				__References_Events_SinkHelper = new Events._References_Events_SinkHelper(this, _connectPoint);
 				return;
 			} 
         }
@@ -380,3 +341,4 @@ namespace NetOffice.AccessApi
 		#pragma warning restore
 	}
 }
+

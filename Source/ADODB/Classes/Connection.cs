@@ -1,43 +1,43 @@
 ﻿using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
-using NetOffice;
-using NetOffice.Misc;
+using NetOffice.Attributes;
 
 namespace NetOffice.ADODBApi
 {
-
 	#region Delegates
 
 	#pragma warning disable
 	public delegate void Connection_InfoMessageEventHandler(NetOffice.ADODBApi.Error pError, NetOffice.ADODBApi.Enums.EventStatusEnum adStatus, NetOffice.ADODBApi._Connection pConnection);
-	public delegate void Connection_BeginTransCompleteEventHandler(Int32 TransactionLevel, NetOffice.ADODBApi.Error pError, NetOffice.ADODBApi.Enums.EventStatusEnum adStatus, NetOffice.ADODBApi._Connection pConnection);
+	public delegate void Connection_BeginTransCompleteEventHandler(Int32 transactionLevel, NetOffice.ADODBApi.Error pError, NetOffice.ADODBApi.Enums.EventStatusEnum adStatus, NetOffice.ADODBApi._Connection pConnection);
 	public delegate void Connection_CommitTransCompleteEventHandler(NetOffice.ADODBApi.Error pError, NetOffice.ADODBApi.Enums.EventStatusEnum adStatus, NetOffice.ADODBApi._Connection pConnection);
 	public delegate void Connection_RollbackTransCompleteEventHandler(NetOffice.ADODBApi.Error pError, NetOffice.ADODBApi.Enums.EventStatusEnum adStatus, NetOffice.ADODBApi._Connection pConnection);
-	public delegate void Connection_WillExecuteEventHandler(ref string Source, NetOffice.ADODBApi.Enums.CursorTypeEnum CursorType, NetOffice.ADODBApi.Enums.LockTypeEnum LockType, ref Int32 Options, NetOffice.ADODBApi.Enums.EventStatusEnum adStatus, NetOffice.ADODBApi._Command pCommand, NetOffice.ADODBApi._Recordset pRecordset, NetOffice.ADODBApi._Connection pConnection);
-	public delegate void Connection_ExecuteCompleteEventHandler(Int32 RecordsAffected, NetOffice.ADODBApi.Error pError, NetOffice.ADODBApi.Enums.EventStatusEnum adStatus, NetOffice.ADODBApi._Command pCommand, NetOffice.ADODBApi._Recordset pRecordset, NetOffice.ADODBApi._Connection pConnection);
-	public delegate void Connection_WillConnectEventHandler(ref string ConnectionString, ref string UserID, ref string Password, ref Int32 Options, NetOffice.ADODBApi.Enums.EventStatusEnum adStatus, NetOffice.ADODBApi._Connection pConnection);
+	public delegate void Connection_WillExecuteEventHandler(ref string source, NetOffice.ADODBApi.Enums.CursorTypeEnum cursorType, NetOffice.ADODBApi.Enums.LockTypeEnum lockType, ref Int32 options, NetOffice.ADODBApi.Enums.EventStatusEnum adStatus, NetOffice.ADODBApi._Command pCommand, NetOffice.ADODBApi._Recordset pRecordset, NetOffice.ADODBApi._Connection pConnection);
+	public delegate void Connection_ExecuteCompleteEventHandler(Int32 recordsAffected, NetOffice.ADODBApi.Error pError, NetOffice.ADODBApi.Enums.EventStatusEnum adStatus, NetOffice.ADODBApi._Command pCommand, NetOffice.ADODBApi._Recordset pRecordset, NetOffice.ADODBApi._Connection pConnection);
+	public delegate void Connection_WillConnectEventHandler(ref string connectionString, ref string userID, ref string password, ref Int32 options, NetOffice.ADODBApi.Enums.EventStatusEnum adStatus, NetOffice.ADODBApi._Connection pConnection);
 	public delegate void Connection_ConnectCompleteEventHandler(NetOffice.ADODBApi.Error pError, NetOffice.ADODBApi.Enums.EventStatusEnum adStatus, NetOffice.ADODBApi._Connection pConnection);
 	public delegate void Connection_DisconnectEventHandler(NetOffice.ADODBApi.Enums.EventStatusEnum adStatus, NetOffice.ADODBApi._Connection pConnection);
 	#pragma warning restore
 
 	#endregion
 
-	///<summary>
+	/// <summary>
 	/// CoClass Connection 
 	/// SupportByVersion ADODB, 2.1,2.5
-	///</summary>
-	[SupportByVersionAttribute("ADODB", 2.1,2.5)]
-	[EntityTypeAttribute(EntityType.IsCoClass)]
-	public class Connection : _Connection,IEventBinding
+	/// </summary>
+	[SupportByVersion("ADODB", 2.1,2.5)]
+	[EntityType(EntityType.IsCoClass)]
+	[EventSink(typeof(Events.ConnectionEvents_SinkHelper))]
+	public class Connection : _Connection, IEventBinding
 	{
 		#pragma warning disable
+
 		#region Fields
 		
 		private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
 		private string _activeSinkId;
 		private NetRuntimeSystem.Type _thisType;
-		ConnectionEvents_SinkHelper _connectionEvents_SinkHelper;
+		private Events.ConnectionEvents_SinkHelper _connectionEvents_SinkHelper;
 	
 		#endregion
 
@@ -46,6 +46,7 @@ namespace NetOffice.ADODBApi
         /// <summary>
         /// Instance Type
         /// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
         public override Type InstanceType
         {
             get
@@ -112,17 +113,17 @@ namespace NetOffice.ADODBApi
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of Connection 
-        ///</summary>		
+        /// </summary>		
 		public Connection():base("ADODB.Connection")
 		{
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of Connection
-        ///</summary>
+        /// </summary>
         ///<param name="progId">registered ProgID</param>
 		public Connection(string progId):base(progId)
 		{
@@ -132,46 +133,6 @@ namespace NetOffice.ADODBApi
 		#endregion
 
 		#region Static CoClass Methods
-
-		/// <summary>
-        /// Returns all running ADODB.Connection objects from the environment/system
-        /// </summary>
-        /// <returns>an ADODB.Connection array</returns>
-		public static NetOffice.ADODBApi.Connection[] GetActiveInstances()
-		{		
-			IDisposableEnumeration proxyList = NetOffice.ProxyService.GetActiveInstances("ADODB","Connection");
-			NetRuntimeSystem.Collections.Generic.List<NetOffice.ADODBApi.Connection> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.ADODBApi.Connection>();
-			foreach(object proxy in proxyList)
-				resultList.Add( new NetOffice.ADODBApi.Connection(null, proxy) );
-			return resultList.ToArray();
-		}
-
-		/// <summary>
-        /// Returns a running ADODB.Connection object from the environment/system.
-        /// </summary>
-        /// <returns>an ADODB.Connection object or null</returns>
-		public static NetOffice.ADODBApi.Connection GetActiveInstance()
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("ADODB","Connection", false);
-			if(null != proxy)
-				return new NetOffice.ADODBApi.Connection(null, proxy);
-			else
-				return null;
-		}
-
-		/// <summary>
-        /// Returns a running ADODB.Connection object from the environment/system. 
-        /// </summary>
-	    /// <param name="throwOnError">throw an exception if no object was found</param>
-        /// <returns>an ADODB.Connection object or null</returns>
-		public static NetOffice.ADODBApi.Connection GetActiveInstance(bool throwOnError)
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("ADODB","Connection", throwOnError);
-			if(null != proxy)
-				return new NetOffice.ADODBApi.Connection(null, proxy);
-			else
-				return null;
-		}
 		#endregion
 
 		#region Events
@@ -391,12 +352,12 @@ namespace NetOffice.ADODBApi
 				return;
 	
             if (null == _activeSinkId)
-				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, ConnectionEvents_SinkHelper.Id);
+				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, Events.ConnectionEvents_SinkHelper.Id);
 
 
-			if(ConnectionEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
+			if(Events.ConnectionEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
 			{
-				_connectionEvents_SinkHelper = new ConnectionEvents_SinkHelper(this, _connectPoint);
+				_connectionEvents_SinkHelper = new Events.ConnectionEvents_SinkHelper(this, _connectPoint);
 				return;
 			} 
         }
@@ -538,3 +499,4 @@ namespace NetOffice.ADODBApi
 		#pragma warning restore
 	}
 }
+

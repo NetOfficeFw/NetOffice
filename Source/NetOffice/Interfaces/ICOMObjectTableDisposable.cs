@@ -1,7 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+using NetRuntimeSystem = System;
+using System.ComponentModel;
+using NetOffice.Attributes;
 
 namespace NetOffice
 {
@@ -15,7 +15,6 @@ namespace NetOffice
         /// </summary>
         void DisposeChildInstances();
 
-
         /// <summary>
         /// Dispose all child instance
         /// </summary>
@@ -23,3 +22,5 @@ namespace NetOffice
         void DisposeChildInstances(bool disposeEventBinding);
     }
 }
+
+

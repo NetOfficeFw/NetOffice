@@ -1,0 +1,141 @@
+﻿		public void CreateEventBridge()
+		{
+			if(false == Factory.Settings.EnableEvents)
+				return;
+	
+			if (null != _connectPoint)
+				return;
+	
+			if (null == _activeSinkId)
+				_activeSinkId = SinkHelper.GetConnectionPoint2(this, ref _connectPoint, GetSinkIds());
+
+			foreach(var item in _sinks)
+			{
+				if(item.Key.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
+				{
+					_activeSink = Activator.CreateInstance(item.Value, new object[]{this, _connectPoint}) as SinkHelper;
+					return;
+				}
+			}
+		}
+
+		public bool EventBridgeInitialized
+		{
+			get 
+			{
+				return (null != _connectPoint);
+			}
+		}
+
+		public bool HasEventRecipients()       
+		{
+			if(null == _thisType)
+				_thisType = this.GetType();
+					
+			foreach (NetRuntimeSystem.Reflection.EventInfo item in _thisType.GetEvents())
+			{
+				System.Reflection.FieldInfo field = _thisType.GetType().GetField(item.Name, NetRuntimeSystem.Reflection.BindingFlags.Instance | NetRuntimeSystem.Reflection.BindingFlags.NonPublic);
+				if(null == field)
+					continue;
+				MulticastDelegate eventDelegate = field.GetValue(this) as MulticastDelegate;					
+				if( (null != eventDelegate) && (eventDelegate.GetInvocationList().Length > 0) )
+					return false;
+			}
+				
+			return false;
+		}
+        
+		public Delegate[] GetEventRecipients(string eventName)
+		{
+			if(null == _thisType)
+				_thisType = this.GetType();
+            
+			eventName = eventName.Substring(0,1).ToLower() + eventName.Substring(1); 
+			System.Reflection.FieldInfo field = _thisType.GetField("_" + eventName + "Event", NetRuntimeSystem.Reflection.BindingFlags.Instance | NetRuntimeSystem.Reflection.BindingFlags.NonPublic);
+			if(null == field)
+				return new Delegate[0];
+			MulticastDelegate eventDelegate = field.GetValue(this) as MulticastDelegate;
+
+			if (null != eventDelegate)
+			{
+				Delegate[] delegates = eventDelegate.GetInvocationList();
+				return delegates;
+			}
+			else
+				return new Delegate[0];
+		}
+       
+		public int GetCountOfEventRecipients(string eventName)
+		{
+			if(null == _thisType)
+				_thisType = this.GetType();
+
+			eventName = eventName.Substring(0,1).ToLower() + eventName.Substring(1);
+			System.Reflection.FieldInfo field = _thisType.GetField("_" + eventName + "Event", NetRuntimeSystem.Reflection.BindingFlags.Instance | NetRuntimeSystem.Reflection.BindingFlags.NonPublic);
+			if(null == field)
+				return 0;
+			MulticastDelegate eventDelegate = field.GetValue(this) as MulticastDelegate;
+
+			if (null != eventDelegate)
+			{
+				Delegate[] delegates = eventDelegate.GetInvocationList();
+				return delegates.Length;
+			}
+			else
+				return 0;
+		}
+        
+		public int RaiseCustomEvent(string eventName, ref object[] paramsArray)
+		{
+			if(null == _thisType)
+				_thisType = this.GetType();
+             
+			eventName = eventName.Substring(0,1).ToLower() + eventName.Substring(1);
+			System.Reflection.FieldInfo field = _thisType.GetField("_" + eventName + "Event", NetRuntimeSystem.Reflection.BindingFlags.Instance | NetRuntimeSystem.Reflection.BindingFlags.NonPublic);
+			if(null == field)
+				return 0;
+			MulticastDelegate eventDelegate = field.GetValue(this) as MulticastDelegate;
+
+			if (null != eventDelegate)
+			{
+				Delegate[] delegates = eventDelegate.GetInvocationList();
+				foreach (var item in delegates)
+				{
+					try
+					{
+						item.Method.Invoke(item.Target, paramsArray);
+					}
+					catch (NetRuntimeSystem.Exception exception)
+					{
+						Factory.Console.WriteException(exception);
+					}
+				}
+				return delegates.Length;
+			}
+			else
+				return 0;
+		}
+
+		public void DisposeEventBridge()
+		{
+			if(null != _activeSink)
+			{
+				_activeSink.Dispose();
+				_activeSink = null;
+			}
+			_connectPoint = null;
+		}
+
+		private string[] GetSinkIds()
+		{
+			if(null == _sinks)
+				return new string[0];
+
+			string[] result = new string[_sinks.Length];
+			for(int i = 0; i < _sinks.Length; i++)
+			{
+				result[i] = _sinks[i].Key;
+			}
+
+			return result;
+		}

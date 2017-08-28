@@ -1,12 +1,10 @@
 ﻿using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
-using NetOffice;
-using NetOffice.Misc;
+using NetOffice.Attributes;
 
 namespace NetOffice.MSHTMLApi
 {
-
 	#region Delegates
 
 	#pragma warning disable
@@ -82,21 +80,23 @@ namespace NetOffice.MSHTMLApi
 
 	#endregion
 
-	///<summary>
+	/// <summary>
 	/// CoClass HTMLInputFileElement 
 	/// SupportByVersion MSHTML, 4
-	///</summary>
-	[SupportByVersionAttribute("MSHTML", 4)]
-	[EntityTypeAttribute(EntityType.IsCoClass)]
-	public class HTMLInputFileElement : DispIHTMLInputFileElement,IEventBinding
+	/// </summary>
+	[SupportByVersion("MSHTML", 4)]
+	[EntityType(EntityType.IsCoClass)]
+	[EventSink(typeof(Events.HTMLInputFileElementEvents_SinkHelper))]
+	public class HTMLInputFileElement : DispIHTMLInputFileElement, IEventBinding
 	{
 		#pragma warning disable
+
 		#region Fields
 		
 		private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
 		private string _activeSinkId;
 		private NetRuntimeSystem.Type _thisType;
-		HTMLInputFileElementEvents_SinkHelper _hTMLInputFileElementEvents_SinkHelper;
+		private Events.HTMLInputFileElementEvents_SinkHelper _hTMLInputFileElementEvents_SinkHelper;
 	
 		#endregion
 
@@ -105,6 +105,7 @@ namespace NetOffice.MSHTMLApi
         /// <summary>
         /// Instance Type
         /// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
         public override Type InstanceType
         {
             get
@@ -171,17 +172,17 @@ namespace NetOffice.MSHTMLApi
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of HTMLInputFileElement 
-        ///</summary>		
+        /// </summary>		
 		public HTMLInputFileElement():base("MSHTML.HTMLInputFileElement")
 		{
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of HTMLInputFileElement
-        ///</summary>
+        /// </summary>
         ///<param name="progId">registered ProgID</param>
 		public HTMLInputFileElement(string progId):base(progId)
 		{
@@ -191,46 +192,6 @@ namespace NetOffice.MSHTMLApi
 		#endregion
 
 		#region Static CoClass Methods
-
-		/// <summary>
-        /// Returns all running MSHTML.HTMLInputFileElement objects from the environment/system
-        /// </summary>
-        /// <returns>an MSHTML.HTMLInputFileElement array</returns>
-		public static NetOffice.MSHTMLApi.HTMLInputFileElement[] GetActiveInstances()
-		{		
-			IDisposableEnumeration proxyList = NetOffice.ProxyService.GetActiveInstances("MSHTML","HTMLInputFileElement");
-			NetRuntimeSystem.Collections.Generic.List<NetOffice.MSHTMLApi.HTMLInputFileElement> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.MSHTMLApi.HTMLInputFileElement>();
-			foreach(object proxy in proxyList)
-				resultList.Add( new NetOffice.MSHTMLApi.HTMLInputFileElement(null, proxy) );
-			return resultList.ToArray();
-		}
-
-		/// <summary>
-        /// Returns a running MSHTML.HTMLInputFileElement object from the environment/system.
-        /// </summary>
-        /// <returns>an MSHTML.HTMLInputFileElement object or null</returns>
-		public static NetOffice.MSHTMLApi.HTMLInputFileElement GetActiveInstance()
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("MSHTML","HTMLInputFileElement", false);
-			if(null != proxy)
-				return new NetOffice.MSHTMLApi.HTMLInputFileElement(null, proxy);
-			else
-				return null;
-		}
-
-		/// <summary>
-        /// Returns a running MSHTML.HTMLInputFileElement object from the environment/system. 
-        /// </summary>
-	    /// <param name="throwOnError">throw an exception if no object was found</param>
-        /// <returns>an MSHTML.HTMLInputFileElement object or null</returns>
-		public static NetOffice.MSHTMLApi.HTMLInputFileElement GetActiveInstance(bool throwOnError)
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("MSHTML","HTMLInputFileElement", throwOnError);
-			if(null != proxy)
-				return new NetOffice.MSHTMLApi.HTMLInputFileElement(null, proxy);
-			else
-				return null;
-		}
 		#endregion
 
 		#region Events
@@ -1748,12 +1709,12 @@ namespace NetOffice.MSHTMLApi
 				return;
 	
             if (null == _activeSinkId)
-				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, HTMLInputFileElementEvents_SinkHelper.Id);
+				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, Events.HTMLInputFileElementEvents_SinkHelper.Id);
 
 
-			if(HTMLInputFileElementEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
+			if(Events.HTMLInputFileElementEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
 			{
-				_hTMLInputFileElementEvents_SinkHelper = new HTMLInputFileElementEvents_SinkHelper(this, _connectPoint);
+				_hTMLInputFileElementEvents_SinkHelper = new Events.HTMLInputFileElementEvents_SinkHelper(this, _connectPoint);
 				return;
 			} 
         }
@@ -1895,3 +1856,4 @@ namespace NetOffice.MSHTMLApi
 		#pragma warning restore
 	}
 }
+

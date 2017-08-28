@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace NetOffice
+namespace NetOffice.Attributes
 {
     /// <summary>
     /// Indicates original type of entity

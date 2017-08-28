@@ -1,18 +1,17 @@
-﻿using System;
-using NetRuntimeSystem = System;
-using System.Runtime.InteropServices;
-using System.Runtime.CompilerServices;
-using System.ComponentModel;
-using System.Reflection;
+﻿using System.Collections;
 using System.Collections.Generic;
-using System.Collections;
-using NetOffice;
+using System;
+using NetRuntimeSystem = System;
+using System.ComponentModel;
+using NetOffice.Attributes;
+
 namespace NetOffice.OWC10Api
 {
-	///<summary>
+	/// <summary>
 	/// ChCategoryLabels
-	///</summary>
-	public class ChCategoryLabels_ : COMObject
+	/// </summary>
+	[SyntaxBypass]
+ 	public class ChCategoryLabels_ : COMObject
 	{
 		#region Construction
 
@@ -63,7 +62,7 @@ namespace NetOffice.OWC10Api
 		{
 		}
 		
-		/// <param name="progId">registered ProgID</param>
+		/// <param name="progId">registered progID</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public ChCategoryLabels_(string progId) : base(progId)
 		{
@@ -77,22 +76,20 @@ namespace NetOffice.OWC10Api
 		/// SupportByVersion OWC10 1
 		/// Get
 		/// </summary>
-		/// <param name="level">optional Int32 Level</param>
-		[SupportByVersionAttribute("OWC10", 1)]
+		/// <param name="level">optional Int32 level</param>
+		[SupportByVersion("OWC10", 1)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public Int32 get_ItemCount(object level)
-		{		
-			object[] paramsArray = Invoker.ValidateParamsArray(level);
-			object returnItem = Invoker.PropertyGet(this, "ItemCount", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+		{
+			return Factory.ExecuteInt32PropertyGet(this, "ItemCount", level);
 		}
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
 		/// Alias for get_ItemCount
 		/// </summary>
-		/// <param name="level">optional Int32 Level</param>
-		[SupportByVersionAttribute("OWC10", 1)]
+		/// <param name="level">optional Int32 level</param>
+		[SupportByVersion("OWC10", 1), Redirect("get_ItemCount")]
 		public Int32 ItemCount(object level)
 		{
 			return get_ItemCount(level);
@@ -106,16 +103,29 @@ namespace NetOffice.OWC10Api
 
 	}
 
-	///<summary>
+	/// <summary>
 	/// DispatchInterface ChCategoryLabels 
 	/// SupportByVersion OWC10, 1
-	///</summary>
-	[SupportByVersionAttribute("OWC10", 1)]
-	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
-	public class ChCategoryLabels : ChCategoryLabels_ ,IEnumerable<NetOffice.OWC10Api.ChCategoryLabel>
+	/// </summary>
+	[SupportByVersion("OWC10", 1)]
+	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "Item")]
+	public class ChCategoryLabels : ChCategoryLabels_ , IEnumerable<NetOffice.OWC10Api.ChCategoryLabel>
 	{
 		#pragma warning disable
+
 		#region Type Information
+
+		/// <summary>
+		/// Instance Type
+		/// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
+		public override Type InstanceType
+		{
+			get
+			{
+				return LateBindingApiWrapperType;
+			}
+		}
 
         private static Type _type;
 
@@ -126,7 +136,6 @@ namespace NetOffice.OWC10Api
             {
                 if (null == _type)
                     _type = typeof(ChCategoryLabels);
-                    
                 return _type;
             }
         }
@@ -179,7 +188,7 @@ namespace NetOffice.OWC10Api
 		{
 		}
 		
-		/// <param name="progId">registered ProgID</param>
+		/// <param name="progId">registered progID</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public ChCategoryLabels(string progId) : base(progId)
 		{
@@ -193,14 +202,12 @@ namespace NetOffice.OWC10Api
 		/// SupportByVersion OWC10 1
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("OWC10", 1)]
+		[SupportByVersion("OWC10", 1)]
 		public Int32 LevelCount
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "LevelCount", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "LevelCount");
 			}
 		}
 
@@ -208,14 +215,12 @@ namespace NetOffice.OWC10Api
 		/// SupportByVersion OWC10 1
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("OWC10", 1)]
+		[SupportByVersion("OWC10", 1)]
 		public Int32 ItemCount
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "ItemCount", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "ItemCount");
 			}
 		}
 
@@ -223,104 +228,96 @@ namespace NetOffice.OWC10Api
 		/// SupportByVersion OWC10 1
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("OWC10", 1)]
+		[SupportByVersion("OWC10", 1)]
 		public NetOffice.OWC10Api.ChAxis Parent
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Parent", paramsArray);
-				NetOffice.OWC10Api.ChAxis newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OWC10Api.ChAxis.LateBindingApiWrapperType) as NetOffice.OWC10Api.ChAxis;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OWC10Api.ChAxis>(this, "Parent", NetOffice.OWC10Api.ChAxis.LateBindingApiWrapperType);
 			}
 		}
 
-		/// <summary>
-		/// SupportByVersion OWC10 1
-		/// Get
-		/// </summary>
-		/// <param name="index">object Index</param>
-		/// <param name="level">optional Int32 Level</param>
-		[SupportByVersionAttribute("OWC10", 1)]
-		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
+        /// <summary>
+        /// SupportByVersion OWC10 1
+        /// Get
+        /// Custom Indexer
+        /// </summary>
+        /// <param name="index">object index</param>
+        [SupportByVersion("OWC10", 1)]
+        [NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty, CustomIndexer]
+        public NetOffice.OWC10Api.ChCategoryLabel this[object index]
+		{
+			get
+			{
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OWC10Api.ChCategoryLabel>(this, "Item", NetOffice.OWC10Api.ChCategoryLabel.LateBindingApiWrapperType, index);
+			}
+		}
+
+        /// <summary>
+        /// SupportByVersion OWC10 1
+        /// Get
+        /// </summary>
+        /// <param name="index">object index</param>
+        /// <param name="level">optional Int32 level</param>
+        [SupportByVersion("OWC10", 1)]
+		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
 		public NetOffice.OWC10Api.ChCategoryLabel this[object index, object level]
 		{
 			get
-{			
-			object[] paramsArray = Invoker.ValidateParamsArray(index, level);
-			object returnItem = Invoker.PropertyGet(this, "Item", paramsArray);
-			NetOffice.OWC10Api.ChCategoryLabel newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OWC10Api.ChCategoryLabel.LateBindingApiWrapperType) as NetOffice.OWC10Api.ChCategoryLabel;
-			return newObject;
+			{
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OWC10Api.ChCategoryLabel>(this, "Item", NetOffice.OWC10Api.ChCategoryLabel.LateBindingApiWrapperType, index, level);
 			}
 		}
-
+        
 		/// <summary>
 		/// SupportByVersion OWC10 1
 		/// Get
 		/// </summary>
-		/// <param name="index">object Index</param>
-		[SupportByVersionAttribute("OWC10", 1)]
-		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
-		public NetOffice.OWC10Api.ChCategoryLabel this[object index]
-		{
-			get
-{			
-			object[] paramsArray = Invoker.ValidateParamsArray(index);
-			object returnItem = Invoker.PropertyGet(this, "Item", paramsArray);
-			NetOffice.OWC10Api.ChCategoryLabel newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OWC10Api.ChCategoryLabel.LateBindingApiWrapperType) as NetOffice.OWC10Api.ChCategoryLabel;
-			return newObject;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion OWC10 1
-		/// Get
-		/// </summary>
-		[SupportByVersionAttribute("OWC10", 1)]
+		[SupportByVersion("OWC10", 1)]
 		public NetOffice.OWC10Api.PivotResultGroupAxis PivotAxis
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "PivotAxis", paramsArray);
-				NetOffice.OWC10Api.PivotResultGroupAxis newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OWC10Api.PivotResultGroupAxis;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OWC10Api.PivotResultGroupAxis>(this, "PivotAxis", NetOffice.OWC10Api.PivotResultGroupAxis.LateBindingApiWrapperType);
 			}
 		}
 
-		#endregion
+        #endregion
 
-		#region Methods
+        #region Methods
 
-		#endregion
+        #endregion
 
-       #region IEnumerable<NetOffice.OWC10Api.ChCategoryLabel> Member
-        
+        #region IEnumerable<NetOffice.OWC10Api.ChCategoryLabel> Member
+
         /// <summary>
-		/// SupportByVersionAttribute OWC10, 1
-		/// </summary>
-		[SupportByVersionAttribute("OWC10", 1)]
-       public IEnumerator<NetOffice.OWC10Api.ChCategoryLabel> GetEnumerator()  
-       {
-           NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
-           foreach (NetOffice.OWC10Api.ChCategoryLabel item in innerEnumerator)
-               yield return item;
-       }
+        /// SupportByVersion OWC10, 1
+        /// </summary>
+        [SupportByVersion("OWC10", 1)]
+        public IEnumerator<NetOffice.OWC10Api.ChCategoryLabel> GetEnumerator()
+        {
+            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
+            foreach (NetOffice.OWC10Api.ChCategoryLabel item in innerEnumerator)
+                yield return item;
+        }
 
-       #endregion
-          
-		#region IEnumerable Members
-       
-		/// <summary>
-		/// SupportByVersionAttribute OWC10, 1
-		/// </summary>
-		[SupportByVersionAttribute("OWC10", 1)]
+        #endregion
+
+        #region IEnumerable Members
+
+        /// <summary>
+        /// SupportByVersion OWC10, 1
+        /// </summary>
+        [SupportByVersion("OWC10", 1)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
 			return NetOffice.Utils.GetProxyEnumeratorAsProperty(this);
 		}
 
 		#endregion
+
 		#pragma warning restore
 	}
 }
+
+

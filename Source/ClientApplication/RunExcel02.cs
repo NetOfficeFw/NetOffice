@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Text;
 using NetOffice;
+using NetOffice.Attributes;
 
 namespace ClientApplication
 {

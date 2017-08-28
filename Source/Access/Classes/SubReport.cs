@@ -1,37 +1,37 @@
 ﻿using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
-using NetOffice;
-using NetOffice.Misc;
+using NetOffice.Attributes;
 
 namespace NetOffice.AccessApi
 {
-
 	#region Delegates
 
 	#pragma warning disable
 	public delegate void SubReport_EnterEventHandler();
-	public delegate void SubReport_ExitEventHandler(ref Int16 Cancel);
+	public delegate void SubReport_ExitEventHandler(ref Int16 cancel);
 	#pragma warning restore
 
 	#endregion
 
-	///<summary>
+	/// <summary>
 	/// CoClass SubReport 
 	/// SupportByVersion Access, 9,10,11,12,14,15,16
-	///</summary>
-	[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
-	[EntityTypeAttribute(EntityType.IsCoClass)]
-	public class SubReport : _SubReport,IEventBinding
+	/// </summary>
+	[SupportByVersion("Access", 9,10,11,12,14,15,16)]
+	[EntityType(EntityType.IsCoClass)]
+    [EventSink(typeof(Events._SubReportEvents_SinkHelper), typeof(Events.DispSubReportEvents_SinkHelper))]
+    public class SubReport : _SubReport, IEventBinding
 	{
 		#pragma warning disable
+
 		#region Fields
 		
 		private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
 		private string _activeSinkId;
 		private NetRuntimeSystem.Type _thisType;
-		_SubReportEvents_SinkHelper __SubReportEvents_SinkHelper;
-		DispSubReportEvents_SinkHelper _dispSubReportEvents_SinkHelper;
+		private Events._SubReportEvents_SinkHelper __SubReportEvents_SinkHelper;
+		private Events.DispSubReportEvents_SinkHelper _dispSubReportEvents_SinkHelper;
 	
 		#endregion
 
@@ -40,6 +40,7 @@ namespace NetOffice.AccessApi
         /// <summary>
         /// Instance Type
         /// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
         public override Type InstanceType
         {
             get
@@ -106,17 +107,17 @@ namespace NetOffice.AccessApi
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of SubReport 
-        ///</summary>		
+        /// </summary>		
 		public SubReport():base("Access.SubReport")
 		{
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of SubReport
-        ///</summary>
+        /// </summary>
         ///<param name="progId">registered ProgID</param>
 		public SubReport(string progId):base(progId)
 		{
@@ -126,46 +127,6 @@ namespace NetOffice.AccessApi
 		#endregion
 
 		#region Static CoClass Methods
-
-		/// <summary>
-        /// Returns all running Access.SubReport objects from the environment/system
-        /// </summary>
-        /// <returns>an Access.SubReport array</returns>
-		public static NetOffice.AccessApi.SubReport[] GetActiveInstances()
-		{		
-			IDisposableEnumeration proxyList = NetOffice.ProxyService.GetActiveInstances("Access","SubReport");
-			NetRuntimeSystem.Collections.Generic.List<NetOffice.AccessApi.SubReport> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.AccessApi.SubReport>();
-			foreach(object proxy in proxyList)
-				resultList.Add( new NetOffice.AccessApi.SubReport(null, proxy) );
-			return resultList.ToArray();
-		}
-
-		/// <summary>
-        /// Returns a running Access.SubReport object from the environment/system.
-        /// </summary>
-        /// <returns>an Access.SubReport object or null</returns>
-		public static NetOffice.AccessApi.SubReport GetActiveInstance()
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Access","SubReport", false);
-			if(null != proxy)
-				return new NetOffice.AccessApi.SubReport(null, proxy);
-			else
-				return null;
-		}
-
-		/// <summary>
-        /// Returns a running Access.SubReport object from the environment/system. 
-        /// </summary>
-	    /// <param name="throwOnError">throw an exception if no object was found</param>
-        /// <returns>an Access.SubReport object or null</returns>
-		public static NetOffice.AccessApi.SubReport GetActiveInstance(bool throwOnError)
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Access","SubReport", throwOnError);
-			if(null != proxy)
-				return new NetOffice.AccessApi.SubReport(null, proxy);
-			else
-				return null;
-		}
 		#endregion
 
 		#region Events
@@ -231,18 +192,18 @@ namespace NetOffice.AccessApi
 				return;
 	
             if (null == _activeSinkId)
-				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, _SubReportEvents_SinkHelper.Id,DispSubReportEvents_SinkHelper.Id);
+				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, Events._SubReportEvents_SinkHelper.Id, Events.DispSubReportEvents_SinkHelper.Id);
 
 
-			if(_SubReportEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
+			if(Events._SubReportEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
 			{
-				__SubReportEvents_SinkHelper = new _SubReportEvents_SinkHelper(this, _connectPoint);
+				__SubReportEvents_SinkHelper = new Events._SubReportEvents_SinkHelper(this, _connectPoint);
 				return;
 			}
 
-			if(DispSubReportEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
+			if(Events.DispSubReportEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
 			{
-				_dispSubReportEvents_SinkHelper = new DispSubReportEvents_SinkHelper(this, _connectPoint);
+				_dispSubReportEvents_SinkHelper = new Events.DispSubReportEvents_SinkHelper(this, _connectPoint);
 				return;
 			} 
         }
@@ -389,3 +350,4 @@ namespace NetOffice.AccessApi
 		#pragma warning restore
 	}
 }
+

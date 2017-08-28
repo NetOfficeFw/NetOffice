@@ -1,12 +1,10 @@
 ﻿using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
-using NetOffice;
-using NetOffice.Misc;
+using NetOffice.Attributes;
 
 namespace NetOffice.OWC10Api
 {
-
 	#region Delegates
 
 	#pragma warning disable
@@ -14,15 +12,16 @@ namespace NetOffice.OWC10Api
 
 	#endregion
 
-	///<summary>
+	/// <summary>
 	/// CoClass NumberFormat 
 	/// SupportByVersion OWC10, 1
-	///</summary>
-	[SupportByVersionAttribute("OWC10", 1)]
-	[EntityTypeAttribute(EntityType.IsCoClass)]
-	public class NumberFormat : _NumberFormat
+	/// </summary>
+	[SupportByVersion("OWC10", 1)]
+	[EntityType(EntityType.IsCoClass)]
+ 	public class NumberFormat : _NumberFormat
 	{
 		#pragma warning disable
+
 		#region Fields
 		
 		private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
@@ -36,6 +35,7 @@ namespace NetOffice.OWC10Api
         /// <summary>
         /// Instance Type
         /// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
         public override Type InstanceType
         {
             get
@@ -102,17 +102,17 @@ namespace NetOffice.OWC10Api
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of NumberFormat 
-        ///</summary>		
+        /// </summary>		
 		public NumberFormat():base("OWC10.NumberFormat")
 		{
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of NumberFormat
-        ///</summary>
+        /// </summary>
         ///<param name="progId">registered ProgID</param>
 		public NumberFormat(string progId):base(progId)
 		{
@@ -122,46 +122,6 @@ namespace NetOffice.OWC10Api
 		#endregion
 
 		#region Static CoClass Methods
-
-		/// <summary>
-        /// Returns all running OWC10.NumberFormat objects from the environment/system
-        /// </summary>
-        /// <returns>an OWC10.NumberFormat array</returns>
-		public static NetOffice.OWC10Api.NumberFormat[] GetActiveInstances()
-		{		
-			IDisposableEnumeration proxyList = NetOffice.ProxyService.GetActiveInstances("OWC10","NumberFormat");
-			NetRuntimeSystem.Collections.Generic.List<NetOffice.OWC10Api.NumberFormat> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.OWC10Api.NumberFormat>();
-			foreach(object proxy in proxyList)
-				resultList.Add( new NetOffice.OWC10Api.NumberFormat(null, proxy) );
-			return resultList.ToArray();
-		}
-
-		/// <summary>
-        /// Returns a running OWC10.NumberFormat object from the environment/system.
-        /// </summary>
-        /// <returns>an OWC10.NumberFormat object or null</returns>
-		public static NetOffice.OWC10Api.NumberFormat GetActiveInstance()
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("OWC10","NumberFormat", false);
-			if(null != proxy)
-				return new NetOffice.OWC10Api.NumberFormat(null, proxy);
-			else
-				return null;
-		}
-
-		/// <summary>
-        /// Returns a running OWC10.NumberFormat object from the environment/system. 
-        /// </summary>
-	    /// <param name="throwOnError">throw an exception if no object was found</param>
-        /// <returns>an OWC10.NumberFormat object or null</returns>
-		public static NetOffice.OWC10Api.NumberFormat GetActiveInstance(bool throwOnError)
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("OWC10","NumberFormat", throwOnError);
-			if(null != proxy)
-				return new NetOffice.OWC10Api.NumberFormat(null, proxy);
-			else
-				return null;
-		}
 		#endregion
 
 		#region Events
@@ -320,3 +280,4 @@ namespace NetOffice.OWC10Api
 		#pragma warning restore
 	}
 }
+

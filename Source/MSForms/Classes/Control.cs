@@ -1,38 +1,38 @@
 ﻿using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
-using NetOffice;
-using NetOffice.Misc;
+using NetOffice.Attributes;
 
 namespace NetOffice.MSFormsApi
 {
-
 	#region Delegates
 
 	#pragma warning disable
 	public delegate void Control_EnterEventHandler();
-	public delegate void Control_ExitEventHandler(NetOffice.MSFormsApi.ReturnBoolean Cancel);
-	public delegate void Control_BeforeUpdateEventHandler(NetOffice.MSFormsApi.ReturnBoolean Cancel);
+	public delegate void Control_ExitEventHandler(NetOffice.MSFormsApi.ReturnBoolean cancel);
+	public delegate void Control_BeforeUpdateEventHandler(NetOffice.MSFormsApi.ReturnBoolean cancel);
 	public delegate void Control_AfterUpdateEventHandler();
 	#pragma warning restore
 
 	#endregion
 
-	///<summary>
+	/// <summary>
 	/// CoClass Control 
 	/// SupportByVersion MSForms, 2
-	///</summary>
-	[SupportByVersionAttribute("MSForms", 2)]
-	[EntityTypeAttribute(EntityType.IsCoClass)]
-	public class Control : IControl,IEventBinding
+	/// </summary>
+	[SupportByVersion("MSForms", 2)]
+	[EntityType(EntityType.IsCoClass)]
+	[EventSink(typeof(Events.ControlEvents_SinkHelper))]
+	public class Control : IControl, IEventBinding
 	{
 		#pragma warning disable
+
 		#region Fields
 		
 		private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
 		private string _activeSinkId;
 		private NetRuntimeSystem.Type _thisType;
-		ControlEvents_SinkHelper _controlEvents_SinkHelper;
+		private Events.ControlEvents_SinkHelper _controlEvents_SinkHelper;
 	
 		#endregion
 
@@ -41,6 +41,7 @@ namespace NetOffice.MSFormsApi
         /// <summary>
         /// Instance Type
         /// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
         public override Type InstanceType
         {
             get
@@ -107,17 +108,17 @@ namespace NetOffice.MSFormsApi
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of Control 
-        ///</summary>		
+        /// </summary>		
 		public Control():base("MSForms.Control")
 		{
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of Control
-        ///</summary>
+        /// </summary>
         ///<param name="progId">registered ProgID</param>
 		public Control(string progId):base(progId)
 		{
@@ -127,46 +128,6 @@ namespace NetOffice.MSFormsApi
 		#endregion
 
 		#region Static CoClass Methods
-
-		/// <summary>
-        /// Returns all running MSForms.Control objects from the environment/system
-        /// </summary>
-        /// <returns>an MSForms.Control array</returns>
-		public static NetOffice.MSFormsApi.Control[] GetActiveInstances()
-		{		
-			IDisposableEnumeration proxyList = NetOffice.ProxyService.GetActiveInstances("MSForms","Control");
-			NetRuntimeSystem.Collections.Generic.List<NetOffice.MSFormsApi.Control> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.MSFormsApi.Control>();
-			foreach(object proxy in proxyList)
-				resultList.Add( new NetOffice.MSFormsApi.Control(null, proxy) );
-			return resultList.ToArray();
-		}
-
-		/// <summary>
-        /// Returns a running MSForms.Control object from the environment/system.
-        /// </summary>
-        /// <returns>an MSForms.Control object or null</returns>
-		public static NetOffice.MSFormsApi.Control GetActiveInstance()
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("MSForms","Control", false);
-			if(null != proxy)
-				return new NetOffice.MSFormsApi.Control(null, proxy);
-			else
-				return null;
-		}
-
-		/// <summary>
-        /// Returns a running MSForms.Control object from the environment/system. 
-        /// </summary>
-	    /// <param name="throwOnError">throw an exception if no object was found</param>
-        /// <returns>an MSForms.Control object or null</returns>
-		public static NetOffice.MSFormsApi.Control GetActiveInstance(bool throwOnError)
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("MSForms","Control", throwOnError);
-			if(null != proxy)
-				return new NetOffice.MSFormsApi.Control(null, proxy);
-			else
-				return null;
-		}
 		#endregion
 
 		#region Events
@@ -276,12 +237,12 @@ namespace NetOffice.MSFormsApi
 				return;
 	
             if (null == _activeSinkId)
-				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, ControlEvents_SinkHelper.Id);
+				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, Events.ControlEvents_SinkHelper.Id);
 
 
-			if(ControlEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
+			if(Events.ControlEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
 			{
-				_controlEvents_SinkHelper = new ControlEvents_SinkHelper(this, _connectPoint);
+				_controlEvents_SinkHelper = new Events.ControlEvents_SinkHelper(this, _connectPoint);
 				return;
 			} 
         }
@@ -423,3 +384,4 @@ namespace NetOffice.MSFormsApi
 		#pragma warning restore
 	}
 }
+

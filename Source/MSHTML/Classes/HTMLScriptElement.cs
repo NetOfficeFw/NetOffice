@@ -1,12 +1,10 @@
 ﻿using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
-using NetOffice;
-using NetOffice.Misc;
+using NetOffice.Attributes;
 
 namespace NetOffice.MSHTMLApi
 {
-
 	#region Delegates
 
 	#pragma warning disable
@@ -78,21 +76,23 @@ namespace NetOffice.MSHTMLApi
 
 	#endregion
 
-	///<summary>
+	/// <summary>
 	/// CoClass HTMLScriptElement 
 	/// SupportByVersion MSHTML, 4
-	///</summary>
-	[SupportByVersionAttribute("MSHTML", 4)]
-	[EntityTypeAttribute(EntityType.IsCoClass)]
-	public class HTMLScriptElement : DispHTMLScriptElement,IEventBinding
+	/// </summary>
+	[SupportByVersion("MSHTML", 4)]
+	[EntityType(EntityType.IsCoClass)]
+	[EventSink(typeof(Events.HTMLScriptEvents_SinkHelper))]
+	public class HTMLScriptElement : DispHTMLScriptElement, IEventBinding
 	{
 		#pragma warning disable
+
 		#region Fields
 		
 		private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
 		private string _activeSinkId;
 		private NetRuntimeSystem.Type _thisType;
-		HTMLScriptEvents_SinkHelper _hTMLScriptEvents_SinkHelper;
+		private Events.HTMLScriptEvents_SinkHelper _hTMLScriptEvents_SinkHelper;
 	
 		#endregion
 
@@ -101,6 +101,7 @@ namespace NetOffice.MSHTMLApi
         /// <summary>
         /// Instance Type
         /// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
         public override Type InstanceType
         {
             get
@@ -167,17 +168,17 @@ namespace NetOffice.MSHTMLApi
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of HTMLScriptElement 
-        ///</summary>		
+        /// </summary>		
 		public HTMLScriptElement():base("MSHTML.HTMLScriptElement")
 		{
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of HTMLScriptElement
-        ///</summary>
+        /// </summary>
         ///<param name="progId">registered ProgID</param>
 		public HTMLScriptElement(string progId):base(progId)
 		{
@@ -187,46 +188,6 @@ namespace NetOffice.MSHTMLApi
 		#endregion
 
 		#region Static CoClass Methods
-
-		/// <summary>
-        /// Returns all running MSHTML.HTMLScriptElement objects from the environment/system
-        /// </summary>
-        /// <returns>an MSHTML.HTMLScriptElement array</returns>
-		public static NetOffice.MSHTMLApi.HTMLScriptElement[] GetActiveInstances()
-		{		
-			IDisposableEnumeration proxyList = NetOffice.ProxyService.GetActiveInstances("MSHTML","HTMLScriptElement");
-			NetRuntimeSystem.Collections.Generic.List<NetOffice.MSHTMLApi.HTMLScriptElement> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.MSHTMLApi.HTMLScriptElement>();
-			foreach(object proxy in proxyList)
-				resultList.Add( new NetOffice.MSHTMLApi.HTMLScriptElement(null, proxy) );
-			return resultList.ToArray();
-		}
-
-		/// <summary>
-        /// Returns a running MSHTML.HTMLScriptElement object from the environment/system.
-        /// </summary>
-        /// <returns>an MSHTML.HTMLScriptElement object or null</returns>
-		public static NetOffice.MSHTMLApi.HTMLScriptElement GetActiveInstance()
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("MSHTML","HTMLScriptElement", false);
-			if(null != proxy)
-				return new NetOffice.MSHTMLApi.HTMLScriptElement(null, proxy);
-			else
-				return null;
-		}
-
-		/// <summary>
-        /// Returns a running MSHTML.HTMLScriptElement object from the environment/system. 
-        /// </summary>
-	    /// <param name="throwOnError">throw an exception if no object was found</param>
-        /// <returns>an MSHTML.HTMLScriptElement object or null</returns>
-		public static NetOffice.MSHTMLApi.HTMLScriptElement GetActiveInstance(bool throwOnError)
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("MSHTML","HTMLScriptElement", throwOnError);
-			if(null != proxy)
-				return new NetOffice.MSHTMLApi.HTMLScriptElement(null, proxy);
-			else
-				return null;
-		}
 		#endregion
 
 		#region Events
@@ -1656,12 +1617,12 @@ namespace NetOffice.MSHTMLApi
 				return;
 	
             if (null == _activeSinkId)
-				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, HTMLScriptEvents_SinkHelper.Id);
+				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, Events.HTMLScriptEvents_SinkHelper.Id);
 
 
-			if(HTMLScriptEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
+			if(Events.HTMLScriptEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
 			{
-				_hTMLScriptEvents_SinkHelper = new HTMLScriptEvents_SinkHelper(this, _connectPoint);
+				_hTMLScriptEvents_SinkHelper = new Events.HTMLScriptEvents_SinkHelper(this, _connectPoint);
 				return;
 			} 
         }
@@ -1803,3 +1764,4 @@ namespace NetOffice.MSHTMLApi
 		#pragma warning restore
 	}
 }
+

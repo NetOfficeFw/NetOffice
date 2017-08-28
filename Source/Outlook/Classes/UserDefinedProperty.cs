@@ -1,12 +1,10 @@
 ﻿using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
-using NetOffice;
-using NetOffice.Misc;
+using NetOffice.Attributes;
 
 namespace NetOffice.OutlookApi
 {
-
 	#region Delegates
 
 	#pragma warning disable
@@ -14,16 +12,17 @@ namespace NetOffice.OutlookApi
 
 	#endregion
 
-	///<summary>
+	/// <summary>
 	/// CoClass UserDefinedProperty 
 	/// SupportByVersion Outlook, 12,14,15,16
-	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff868543.aspx
-	///</summary>
-	[SupportByVersionAttribute("Outlook", 12,14,15,16)]
-	[EntityTypeAttribute(EntityType.IsCoClass)]
-	public class UserDefinedProperty : _UserDefinedProperty
+	/// </summary>
+	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff868543.aspx </remarks>
+	[SupportByVersion("Outlook", 12,14,15,16)]
+	[EntityType(EntityType.IsCoClass)]
+ 	public class UserDefinedProperty : _UserDefinedProperty
 	{
 		#pragma warning disable
+
 		#region Fields
 		
 		private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
@@ -37,6 +36,7 @@ namespace NetOffice.OutlookApi
         /// <summary>
         /// Instance Type
         /// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
         public override Type InstanceType
         {
             get
@@ -103,17 +103,17 @@ namespace NetOffice.OutlookApi
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of UserDefinedProperty 
-        ///</summary>		
+        /// </summary>		
 		public UserDefinedProperty():base("Outlook.UserDefinedProperty")
 		{
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of UserDefinedProperty
-        ///</summary>
+        /// </summary>
         ///<param name="progId">registered ProgID</param>
 		public UserDefinedProperty(string progId):base(progId)
 		{
@@ -123,46 +123,6 @@ namespace NetOffice.OutlookApi
 		#endregion
 
 		#region Static CoClass Methods
-
-		/// <summary>
-        /// Returns all running Outlook.UserDefinedProperty objects from the environment/system
-        /// </summary>
-        /// <returns>an Outlook.UserDefinedProperty array</returns>
-		public static NetOffice.OutlookApi.UserDefinedProperty[] GetActiveInstances()
-		{		
-			IDisposableEnumeration proxyList = NetOffice.ProxyService.GetActiveInstances("Outlook","UserDefinedProperty");
-			NetRuntimeSystem.Collections.Generic.List<NetOffice.OutlookApi.UserDefinedProperty> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.OutlookApi.UserDefinedProperty>();
-			foreach(object proxy in proxyList)
-				resultList.Add( new NetOffice.OutlookApi.UserDefinedProperty(null, proxy) );
-			return resultList.ToArray();
-		}
-
-		/// <summary>
-        /// Returns a running Outlook.UserDefinedProperty object from the environment/system.
-        /// </summary>
-        /// <returns>an Outlook.UserDefinedProperty object or null</returns>
-		public static NetOffice.OutlookApi.UserDefinedProperty GetActiveInstance()
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Outlook","UserDefinedProperty", false);
-			if(null != proxy)
-				return new NetOffice.OutlookApi.UserDefinedProperty(null, proxy);
-			else
-				return null;
-		}
-
-		/// <summary>
-        /// Returns a running Outlook.UserDefinedProperty object from the environment/system. 
-        /// </summary>
-	    /// <param name="throwOnError">throw an exception if no object was found</param>
-        /// <returns>an Outlook.UserDefinedProperty object or null</returns>
-		public static NetOffice.OutlookApi.UserDefinedProperty GetActiveInstance(bool throwOnError)
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Outlook","UserDefinedProperty", throwOnError);
-			if(null != proxy)
-				return new NetOffice.OutlookApi.UserDefinedProperty(null, proxy);
-			else
-				return null;
-		}
 		#endregion
 
 		#region Events
@@ -321,3 +281,4 @@ namespace NetOffice.OutlookApi
 		#pragma warning restore
 	}
 }
+

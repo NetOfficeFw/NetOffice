@@ -1,37 +1,37 @@
 ﻿using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
-using NetOffice;
-using NetOffice.Misc;
+using NetOffice.Attributes;
 
 namespace NetOffice.ExcelApi
 {
-
 	#region Delegates
 
 	#pragma warning disable
-	public delegate void QueryTable_BeforeRefreshEventHandler(ref bool Cancel);
-	public delegate void QueryTable_AfterRefreshEventHandler(bool Success);
+	public delegate void QueryTable_BeforeRefreshEventHandler(ref bool cancel);
+	public delegate void QueryTable_AfterRefreshEventHandler(bool success);
 	#pragma warning restore
 
 	#endregion
 
-	///<summary>
+	/// <summary>
 	/// CoClass QueryTable 
 	/// SupportByVersion Excel, 9,10,11,12,14,15,16
-	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff198271.aspx
-	///</summary>
-	[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
-	[EntityTypeAttribute(EntityType.IsCoClass)]
-	public class QueryTable : _QueryTable,IEventBinding
+	/// </summary>
+	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff198271.aspx </remarks>
+	[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+	[EntityType(EntityType.IsCoClass)]
+	[EventSink(typeof(Events.RefreshEvents_SinkHelper))]
+	public class QueryTable : _QueryTable, IEventBinding
 	{
 		#pragma warning disable
+
 		#region Fields
 		
 		private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
 		private string _activeSinkId;
 		private NetRuntimeSystem.Type _thisType;
-		RefreshEvents_SinkHelper _refreshEvents_SinkHelper;
+        private Events.RefreshEvents_SinkHelper _refreshEvents_SinkHelper;
 	
 		#endregion
 
@@ -40,6 +40,7 @@ namespace NetOffice.ExcelApi
         /// <summary>
         /// Instance Type
         /// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
         public override Type InstanceType
         {
             get
@@ -106,17 +107,17 @@ namespace NetOffice.ExcelApi
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of QueryTable 
-        ///</summary>		
+        /// </summary>		
 		public QueryTable():base("Excel.QueryTable")
 		{
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of QueryTable
-        ///</summary>
+        /// </summary>
         ///<param name="progId">registered ProgID</param>
 		public QueryTable(string progId):base(progId)
 		{
@@ -126,46 +127,6 @@ namespace NetOffice.ExcelApi
 		#endregion
 
 		#region Static CoClass Methods
-
-		/// <summary>
-        /// Returns all running Excel.QueryTable objects from the environment/system
-        /// </summary>
-        /// <returns>an Excel.QueryTable array</returns>
-		public static NetOffice.ExcelApi.QueryTable[] GetActiveInstances()
-		{		
-			IDisposableEnumeration proxyList = NetOffice.ProxyService.GetActiveInstances("Excel","QueryTable");
-			NetRuntimeSystem.Collections.Generic.List<NetOffice.ExcelApi.QueryTable> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.ExcelApi.QueryTable>();
-			foreach(object proxy in proxyList)
-				resultList.Add( new NetOffice.ExcelApi.QueryTable(null, proxy) );
-			return resultList.ToArray();
-		}
-
-		/// <summary>
-        /// Returns a running Excel.QueryTable object from the environment/system.
-        /// </summary>
-        /// <returns>an Excel.QueryTable object or null</returns>
-		public static NetOffice.ExcelApi.QueryTable GetActiveInstance()
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Excel","QueryTable", false);
-			if(null != proxy)
-				return new NetOffice.ExcelApi.QueryTable(null, proxy);
-			else
-				return null;
-		}
-
-		/// <summary>
-        /// Returns a running Excel.QueryTable object from the environment/system. 
-        /// </summary>
-	    /// <param name="throwOnError">throw an exception if no object was found</param>
-        /// <returns>an Excel.QueryTable object or null</returns>
-		public static NetOffice.ExcelApi.QueryTable GetActiveInstance(bool throwOnError)
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Excel","QueryTable", throwOnError);
-			if(null != proxy)
-				return new NetOffice.ExcelApi.QueryTable(null, proxy);
-			else
-				return null;
-		}
 		#endregion
 
 		#region Events
@@ -233,12 +194,12 @@ namespace NetOffice.ExcelApi
 				return;
 	
             if (null == _activeSinkId)
-				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, RefreshEvents_SinkHelper.Id);
+				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, Events.RefreshEvents_SinkHelper.Id);
 
 
-			if(RefreshEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
+			if(Events.RefreshEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
 			{
-				_refreshEvents_SinkHelper = new RefreshEvents_SinkHelper(this, _connectPoint);
+				_refreshEvents_SinkHelper = new Events.RefreshEvents_SinkHelper(this, _connectPoint);
 				return;
 			} 
         }
@@ -380,3 +341,4 @@ namespace NetOffice.ExcelApi
 		#pragma warning restore
 	}
 }
+

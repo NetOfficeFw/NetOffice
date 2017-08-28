@@ -1,36 +1,36 @@
 ﻿using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
-using NetOffice;
-using NetOffice.Misc;
+using NetOffice.Attributes;
 
 namespace NetOffice.OutlookApi
 {
-
 	#region Delegates
 
 	#pragma warning disable
-	public delegate void NavigationPane_ModuleSwitchEventHandler(NetOffice.OutlookApi.NavigationModule CurrentModule);
+	public delegate void NavigationPane_ModuleSwitchEventHandler(NetOffice.OutlookApi.NavigationModule currentModule);
 	#pragma warning restore
 
 	#endregion
 
-	///<summary>
+	/// <summary>
 	/// CoClass NavigationPane 
 	/// SupportByVersion Outlook, 12,14,15,16
-	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff868696.aspx
-	///</summary>
-	[SupportByVersionAttribute("Outlook", 12,14,15,16)]
-	[EntityTypeAttribute(EntityType.IsCoClass)]
-	public class NavigationPane : _NavigationPane,IEventBinding
+	/// </summary>
+	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff868696.aspx </remarks>
+	[SupportByVersion("Outlook", 12,14,15,16)]
+	[EntityType(EntityType.IsCoClass)]
+	[EventSink(typeof(Events.NavigationPaneEvents_12_SinkHelper))]
+	public class NavigationPane : _NavigationPane, IEventBinding
 	{
 		#pragma warning disable
+
 		#region Fields
 		
 		private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
 		private string _activeSinkId;
 		private NetRuntimeSystem.Type _thisType;
-		NavigationPaneEvents_12_SinkHelper _navigationPaneEvents_12_SinkHelper;
+		private Events.NavigationPaneEvents_12_SinkHelper _navigationPaneEvents_12_SinkHelper;
 	
 		#endregion
 
@@ -39,6 +39,7 @@ namespace NetOffice.OutlookApi
         /// <summary>
         /// Instance Type
         /// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
         public override Type InstanceType
         {
             get
@@ -105,17 +106,17 @@ namespace NetOffice.OutlookApi
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of NavigationPane 
-        ///</summary>		
+        /// </summary>		
 		public NavigationPane():base("Outlook.NavigationPane")
 		{
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of NavigationPane
-        ///</summary>
+        /// </summary>
         ///<param name="progId">registered ProgID</param>
 		public NavigationPane(string progId):base(progId)
 		{
@@ -125,46 +126,6 @@ namespace NetOffice.OutlookApi
 		#endregion
 
 		#region Static CoClass Methods
-
-		/// <summary>
-        /// Returns all running Outlook.NavigationPane objects from the environment/system
-        /// </summary>
-        /// <returns>an Outlook.NavigationPane array</returns>
-		public static NetOffice.OutlookApi.NavigationPane[] GetActiveInstances()
-		{		
-			IDisposableEnumeration proxyList = NetOffice.ProxyService.GetActiveInstances("Outlook","NavigationPane");
-			NetRuntimeSystem.Collections.Generic.List<NetOffice.OutlookApi.NavigationPane> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.OutlookApi.NavigationPane>();
-			foreach(object proxy in proxyList)
-				resultList.Add( new NetOffice.OutlookApi.NavigationPane(null, proxy) );
-			return resultList.ToArray();
-		}
-
-		/// <summary>
-        /// Returns a running Outlook.NavigationPane object from the environment/system.
-        /// </summary>
-        /// <returns>an Outlook.NavigationPane object or null</returns>
-		public static NetOffice.OutlookApi.NavigationPane GetActiveInstance()
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Outlook","NavigationPane", false);
-			if(null != proxy)
-				return new NetOffice.OutlookApi.NavigationPane(null, proxy);
-			else
-				return null;
-		}
-
-		/// <summary>
-        /// Returns a running Outlook.NavigationPane object from the environment/system. 
-        /// </summary>
-	    /// <param name="throwOnError">throw an exception if no object was found</param>
-        /// <returns>an Outlook.NavigationPane object or null</returns>
-		public static NetOffice.OutlookApi.NavigationPane GetActiveInstance(bool throwOnError)
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Outlook","NavigationPane", throwOnError);
-			if(null != proxy)
-				return new NetOffice.OutlookApi.NavigationPane(null, proxy);
-			else
-				return null;
-		}
 		#endregion
 
 		#region Events
@@ -209,12 +170,12 @@ namespace NetOffice.OutlookApi
 				return;
 	
             if (null == _activeSinkId)
-				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, NavigationPaneEvents_12_SinkHelper.Id);
+				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, Events.NavigationPaneEvents_12_SinkHelper.Id);
 
 
-			if(NavigationPaneEvents_12_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
+			if(Events.NavigationPaneEvents_12_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
 			{
-				_navigationPaneEvents_12_SinkHelper = new NavigationPaneEvents_12_SinkHelper(this, _connectPoint);
+				_navigationPaneEvents_12_SinkHelper = new Events.NavigationPaneEvents_12_SinkHelper(this, _connectPoint);
 				return;
 			} 
         }
@@ -356,3 +317,4 @@ namespace NetOffice.OutlookApi
 		#pragma warning restore
 	}
 }
+

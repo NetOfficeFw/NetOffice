@@ -1,46 +1,46 @@
 ﻿using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
-using NetOffice;
-using NetOffice.Misc;
+using NetOffice.Attributes;
 
 namespace NetOffice.MSFormsApi
 {
-
 	#region Delegates
 
 	#pragma warning disable
-	public delegate void ListBox_BeforeDragOverEventHandler(NetOffice.MSFormsApi.ReturnBoolean Cancel, NetOffice.MSFormsApi.DataObject Data, Single X, Single Y, NetOffice.MSFormsApi.Enums.fmDragState DragState, NetOffice.MSFormsApi.ReturnEffect Effect, Int16 Shift);
-	public delegate void ListBox_BeforeDropOrPasteEventHandler(NetOffice.MSFormsApi.ReturnBoolean Cancel, NetOffice.MSFormsApi.Enums.fmAction Action, NetOffice.MSFormsApi.DataObject Data, Single X, Single Y, NetOffice.MSFormsApi.ReturnEffect Effect, Int16 Shift);
+	public delegate void ListBox_BeforeDragOverEventHandler(NetOffice.MSFormsApi.ReturnBoolean cancel, NetOffice.MSFormsApi.DataObject data, Single x, Single y, NetOffice.MSFormsApi.Enums.fmDragState dragState, NetOffice.MSFormsApi.ReturnEffect effect, Int16 shift);
+	public delegate void ListBox_BeforeDropOrPasteEventHandler(NetOffice.MSFormsApi.ReturnBoolean cancel, NetOffice.MSFormsApi.Enums.fmAction action, NetOffice.MSFormsApi.DataObject data, Single x, Single y, NetOffice.MSFormsApi.ReturnEffect effect, Int16 shift);
 	public delegate void ListBox_ChangeEventHandler();
 	public delegate void ListBox_ClickEventHandler();
-	public delegate void ListBox_DblClickEventHandler(NetOffice.MSFormsApi.ReturnBoolean Cancel);
-	public delegate void ListBox_ErrorEventHandler(Int16 Number, NetOffice.MSFormsApi.ReturnString Description, Int32 SCode, string Source, string HelpFile, Int32 HelpContext, NetOffice.MSFormsApi.ReturnBoolean CancelDisplay);
-	public delegate void ListBox_KeyDownEventHandler(NetOffice.MSFormsApi.ReturnInteger KeyCode, Int16 Shift);
-	public delegate void ListBox_KeyPressEventHandler(NetOffice.MSFormsApi.ReturnInteger KeyAscii);
-	public delegate void ListBox_KeyUpEventHandler(NetOffice.MSFormsApi.ReturnInteger KeyCode, Int16 Shift);
-	public delegate void ListBox_MouseDownEventHandler(Int16 Button, Int16 Shift, Single X, Single Y);
-	public delegate void ListBox_MouseMoveEventHandler(Int16 Button, Int16 Shift, Single X, Single Y);
-	public delegate void ListBox_MouseUpEventHandler(Int16 Button, Int16 Shift, Single X, Single Y);
+	public delegate void ListBox_DblClickEventHandler(NetOffice.MSFormsApi.ReturnBoolean cancel);
+	public delegate void ListBox_ErrorEventHandler(Int16 number, NetOffice.MSFormsApi.ReturnString description, Int32 sCode, string source, string helpFile, Int32 helpContext, NetOffice.MSFormsApi.ReturnBoolean cancelDisplay);
+	public delegate void ListBox_KeyDownEventHandler(NetOffice.MSFormsApi.ReturnInteger keyCode, Int16 shift);
+	public delegate void ListBox_KeyPressEventHandler(NetOffice.MSFormsApi.ReturnInteger keyAscii);
+	public delegate void ListBox_KeyUpEventHandler(NetOffice.MSFormsApi.ReturnInteger keyCode, Int16 shift);
+	public delegate void ListBox_MouseDownEventHandler(Int16 button, Int16 shift, Single x, Single y);
+	public delegate void ListBox_MouseMoveEventHandler(Int16 button, Int16 shift, Single x, Single y);
+	public delegate void ListBox_MouseUpEventHandler(Int16 button, Int16 shift, Single x, Single y);
 	#pragma warning restore
 
 	#endregion
 
-	///<summary>
+	/// <summary>
 	/// CoClass ListBox 
 	/// SupportByVersion MSForms, 2
-	///</summary>
-	[SupportByVersionAttribute("MSForms", 2)]
-	[EntityTypeAttribute(EntityType.IsCoClass)]
-	public class ListBox : IMdcList,IEventBinding
+	/// </summary>
+	[SupportByVersion("MSForms", 2)]
+	[EntityType(EntityType.IsCoClass)]
+	[EventSink(typeof(Events.MdcListEvents_SinkHelper))]
+	public class ListBox : IMdcList, IEventBinding
 	{
 		#pragma warning disable
+
 		#region Fields
 		
 		private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
 		private string _activeSinkId;
 		private NetRuntimeSystem.Type _thisType;
-		MdcListEvents_SinkHelper _mdcListEvents_SinkHelper;
+		private Events.MdcListEvents_SinkHelper _mdcListEvents_SinkHelper;
 	
 		#endregion
 
@@ -49,6 +49,7 @@ namespace NetOffice.MSFormsApi
         /// <summary>
         /// Instance Type
         /// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
         public override Type InstanceType
         {
             get
@@ -115,17 +116,17 @@ namespace NetOffice.MSFormsApi
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of ListBox 
-        ///</summary>		
+        /// </summary>		
 		public ListBox():base("MSForms.ListBox")
 		{
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of ListBox
-        ///</summary>
+        /// </summary>
         ///<param name="progId">registered ProgID</param>
 		public ListBox(string progId):base(progId)
 		{
@@ -135,46 +136,6 @@ namespace NetOffice.MSFormsApi
 		#endregion
 
 		#region Static CoClass Methods
-
-		/// <summary>
-        /// Returns all running MSForms.ListBox objects from the environment/system
-        /// </summary>
-        /// <returns>an MSForms.ListBox array</returns>
-		public static NetOffice.MSFormsApi.ListBox[] GetActiveInstances()
-		{		
-			IDisposableEnumeration proxyList = NetOffice.ProxyService.GetActiveInstances("MSForms","ListBox");
-			NetRuntimeSystem.Collections.Generic.List<NetOffice.MSFormsApi.ListBox> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.MSFormsApi.ListBox>();
-			foreach(object proxy in proxyList)
-				resultList.Add( new NetOffice.MSFormsApi.ListBox(null, proxy) );
-			return resultList.ToArray();
-		}
-
-		/// <summary>
-        /// Returns a running MSForms.ListBox object from the environment/system.
-        /// </summary>
-        /// <returns>an MSForms.ListBox object or null</returns>
-		public static NetOffice.MSFormsApi.ListBox GetActiveInstance()
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("MSForms","ListBox", false);
-			if(null != proxy)
-				return new NetOffice.MSFormsApi.ListBox(null, proxy);
-			else
-				return null;
-		}
-
-		/// <summary>
-        /// Returns a running MSForms.ListBox object from the environment/system. 
-        /// </summary>
-	    /// <param name="throwOnError">throw an exception if no object was found</param>
-        /// <returns>an MSForms.ListBox object or null</returns>
-		public static NetOffice.MSFormsApi.ListBox GetActiveInstance(bool throwOnError)
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("MSForms","ListBox", throwOnError);
-			if(null != proxy)
-				return new NetOffice.MSFormsApi.ListBox(null, proxy);
-			else
-				return null;
-		}
 		#endregion
 
 		#region Events
@@ -460,12 +421,12 @@ namespace NetOffice.MSFormsApi
 				return;
 	
             if (null == _activeSinkId)
-				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, MdcListEvents_SinkHelper.Id);
+				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, Events.MdcListEvents_SinkHelper.Id);
 
 
-			if(MdcListEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
+			if(Events.MdcListEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
 			{
-				_mdcListEvents_SinkHelper = new MdcListEvents_SinkHelper(this, _connectPoint);
+				_mdcListEvents_SinkHelper = new Events.MdcListEvents_SinkHelper(this, _connectPoint);
 				return;
 			} 
         }
@@ -607,3 +568,4 @@ namespace NetOffice.MSFormsApi
 		#pragma warning restore
 	}
 }
+

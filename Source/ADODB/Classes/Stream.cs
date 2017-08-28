@@ -1,12 +1,10 @@
 ﻿using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
-using NetOffice;
-using NetOffice.Misc;
+using NetOffice.Attributes;
 
 namespace NetOffice.ADODBApi
 {
-
 	#region Delegates
 
 	#pragma warning disable
@@ -14,15 +12,16 @@ namespace NetOffice.ADODBApi
 
 	#endregion
 
-	///<summary>
+	/// <summary>
 	/// CoClass Stream 
 	/// SupportByVersion ADODB, 2.5
-	///</summary>
-	[SupportByVersionAttribute("ADODB", 2.5)]
-	[EntityTypeAttribute(EntityType.IsCoClass)]
-	public class Stream : _Stream
+	/// </summary>
+	[SupportByVersion("ADODB", 2.5)]
+	[EntityType(EntityType.IsCoClass)]
+ 	public class Stream : _Stream
 	{
 		#pragma warning disable
+
 		#region Fields
 		
 		private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
@@ -36,6 +35,7 @@ namespace NetOffice.ADODBApi
         /// <summary>
         /// Instance Type
         /// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
         public override Type InstanceType
         {
             get
@@ -102,17 +102,17 @@ namespace NetOffice.ADODBApi
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of Stream 
-        ///</summary>		
+        /// </summary>		
 		public Stream():base("ADODB.Stream")
 		{
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of Stream
-        ///</summary>
+        /// </summary>
         ///<param name="progId">registered ProgID</param>
 		public Stream(string progId):base(progId)
 		{
@@ -122,46 +122,6 @@ namespace NetOffice.ADODBApi
 		#endregion
 
 		#region Static CoClass Methods
-
-		/// <summary>
-        /// Returns all running ADODB.Stream objects from the environment/system
-        /// </summary>
-        /// <returns>an ADODB.Stream array</returns>
-		public static NetOffice.ADODBApi.Stream[] GetActiveInstances()
-		{		
-			IDisposableEnumeration proxyList = NetOffice.ProxyService.GetActiveInstances("ADODB","Stream");
-			NetRuntimeSystem.Collections.Generic.List<NetOffice.ADODBApi.Stream> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.ADODBApi.Stream>();
-			foreach(object proxy in proxyList)
-				resultList.Add( new NetOffice.ADODBApi.Stream(null, proxy) );
-			return resultList.ToArray();
-		}
-
-		/// <summary>
-        /// Returns a running ADODB.Stream object from the environment/system.
-        /// </summary>
-        /// <returns>an ADODB.Stream object or null</returns>
-		public static NetOffice.ADODBApi.Stream GetActiveInstance()
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("ADODB","Stream", false);
-			if(null != proxy)
-				return new NetOffice.ADODBApi.Stream(null, proxy);
-			else
-				return null;
-		}
-
-		/// <summary>
-        /// Returns a running ADODB.Stream object from the environment/system. 
-        /// </summary>
-	    /// <param name="throwOnError">throw an exception if no object was found</param>
-        /// <returns>an ADODB.Stream object or null</returns>
-		public static NetOffice.ADODBApi.Stream GetActiveInstance(bool throwOnError)
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("ADODB","Stream", throwOnError);
-			if(null != proxy)
-				return new NetOffice.ADODBApi.Stream(null, proxy);
-			else
-				return null;
-		}
 		#endregion
 
 		#region Events
@@ -320,3 +280,4 @@ namespace NetOffice.ADODBApi
 		#pragma warning restore
 	}
 }
+

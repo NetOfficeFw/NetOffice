@@ -1,12 +1,10 @@
 ﻿using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
-using NetOffice;
-using NetOffice.Misc;
+using NetOffice.Attributes;
 
 namespace NetOffice.MSProjectApi
 {
-
 	#region Delegates
 
 	#pragma warning disable
@@ -22,22 +20,24 @@ namespace NetOffice.MSProjectApi
 
 	#endregion
 
-	///<summary>
+	/// <summary>
 	/// CoClass Project 
 	/// SupportByVersion MSProject, 11,12,14
-	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff920664(v=office.14).aspx
-	///</summary>
-	[SupportByVersionAttribute("MSProject", 11,12,14)]
-	[EntityTypeAttribute(EntityType.IsCoClass)]
-	public class Project : _IProjectDoc,IEventBinding
+	/// </summary>
+	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff920664(v=office.14).aspx </remarks>
+	[SupportByVersion("MSProject", 11,12,14)]
+	[EntityType(EntityType.IsCoClass)]
+	[EventSink(typeof(Events._EProjectDoc_SinkHelper))]
+	public class Project : _IProjectDoc, IEventBinding
 	{
 		#pragma warning disable
+
 		#region Fields
 		
 		private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
 		private string _activeSinkId;
 		private NetRuntimeSystem.Type _thisType;
-		_EProjectDoc_SinkHelper __EProjectDoc_SinkHelper;
+		private Events._EProjectDoc_SinkHelper __EProjectDoc_SinkHelper;
 	
 		#endregion
 
@@ -46,6 +46,7 @@ namespace NetOffice.MSProjectApi
         /// <summary>
         /// Instance Type
         /// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
         public override Type InstanceType
         {
             get
@@ -112,17 +113,17 @@ namespace NetOffice.MSProjectApi
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of Project 
-        ///</summary>		
+        /// </summary>		
 		public Project():base("MSProject.Project")
 		{
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of Project
-        ///</summary>
+        /// </summary>
         ///<param name="progId">registered ProgID</param>
 		public Project(string progId):base(progId)
 		{
@@ -132,46 +133,6 @@ namespace NetOffice.MSProjectApi
 		#endregion
 
 		#region Static CoClass Methods
-
-		/// <summary>
-        /// Returns all running MSProject.Project objects from the environment/system
-        /// </summary>
-        /// <returns>an MSProject.Project array</returns>
-		public static NetOffice.MSProjectApi.Project[] GetActiveInstances()
-		{		
-			IDisposableEnumeration proxyList = NetOffice.ProxyService.GetActiveInstances("MSProject","Project");
-			NetRuntimeSystem.Collections.Generic.List<NetOffice.MSProjectApi.Project> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.MSProjectApi.Project>();
-			foreach(object proxy in proxyList)
-				resultList.Add( new NetOffice.MSProjectApi.Project(null, proxy) );
-			return resultList.ToArray();
-		}
-
-		/// <summary>
-        /// Returns a running MSProject.Project object from the environment/system.
-        /// </summary>
-        /// <returns>an MSProject.Project object or null</returns>
-		public static NetOffice.MSProjectApi.Project GetActiveInstance()
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("MSProject","Project", false);
-			if(null != proxy)
-				return new NetOffice.MSProjectApi.Project(null, proxy);
-			else
-				return null;
-		}
-
-		/// <summary>
-        /// Returns a running MSProject.Project object from the environment/system. 
-        /// </summary>
-	    /// <param name="throwOnError">throw an exception if no object was found</param>
-        /// <returns>an MSProject.Project object or null</returns>
-		public static NetOffice.MSProjectApi.Project GetActiveInstance(bool throwOnError)
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("MSProject","Project", throwOnError);
-			if(null != proxy)
-				return new NetOffice.MSProjectApi.Project(null, proxy);
-			else
-				return null;
-		}
 		#endregion
 
 		#region Events
@@ -369,12 +330,12 @@ namespace NetOffice.MSProjectApi
 				return;
 	
             if (null == _activeSinkId)
-				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, _EProjectDoc_SinkHelper.Id);
+				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, Events._EProjectDoc_SinkHelper.Id);
 
 
-			if(_EProjectDoc_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
+			if(Events._EProjectDoc_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
 			{
-				__EProjectDoc_SinkHelper = new _EProjectDoc_SinkHelper(this, _connectPoint);
+				__EProjectDoc_SinkHelper = new Events._EProjectDoc_SinkHelper(this, _connectPoint);
 				return;
 			} 
         }
@@ -516,3 +477,4 @@ namespace NetOffice.MSProjectApi
 		#pragma warning restore
 	}
 }
+

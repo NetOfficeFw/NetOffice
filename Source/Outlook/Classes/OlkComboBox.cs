@@ -1,49 +1,49 @@
 ﻿using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
-using NetOffice;
-using NetOffice.Misc;
+using NetOffice.Attributes;
 
 namespace NetOffice.OutlookApi
 {
-
 	#region Delegates
 
 	#pragma warning disable
 	public delegate void OlkComboBox_ClickEventHandler();
 	public delegate void OlkComboBox_DoubleClickEventHandler();
-	public delegate void OlkComboBox_MouseDownEventHandler(NetOffice.OutlookApi.Enums.OlMouseButton Button, NetOffice.OutlookApi.Enums.OlShiftState Shift, Single X, Single Y);
-	public delegate void OlkComboBox_MouseMoveEventHandler(NetOffice.OutlookApi.Enums.OlMouseButton Button, NetOffice.OutlookApi.Enums.OlShiftState Shift, Single X, Single Y);
-	public delegate void OlkComboBox_MouseUpEventHandler(NetOffice.OutlookApi.Enums.OlMouseButton Button, NetOffice.OutlookApi.Enums.OlShiftState Shift, Single X, Single Y);
+	public delegate void OlkComboBox_MouseDownEventHandler(NetOffice.OutlookApi.Enums.OlMouseButton button, NetOffice.OutlookApi.Enums.OlShiftState shift, Single x, Single y);
+	public delegate void OlkComboBox_MouseMoveEventHandler(NetOffice.OutlookApi.Enums.OlMouseButton button, NetOffice.OutlookApi.Enums.OlShiftState shift, Single x, Single y);
+	public delegate void OlkComboBox_MouseUpEventHandler(NetOffice.OutlookApi.Enums.OlMouseButton button, NetOffice.OutlookApi.Enums.OlShiftState shift, Single x, Single y);
 	public delegate void OlkComboBox_EnterEventHandler();
-	public delegate void OlkComboBox_ExitEventHandler(ref bool Cancel);
-	public delegate void OlkComboBox_KeyDownEventHandler(ref Int32 KeyCode, NetOffice.OutlookApi.Enums.OlShiftState Shift);
-	public delegate void OlkComboBox_KeyPressEventHandler(ref Int32 KeyAscii);
-	public delegate void OlkComboBox_KeyUpEventHandler(ref Int32 KeyCode, NetOffice.OutlookApi.Enums.OlShiftState Shift);
+	public delegate void OlkComboBox_ExitEventHandler(ref bool cancel);
+	public delegate void OlkComboBox_KeyDownEventHandler(ref Int32 keyCode, NetOffice.OutlookApi.Enums.OlShiftState shift);
+	public delegate void OlkComboBox_KeyPressEventHandler(ref Int32 keyAscii);
+	public delegate void OlkComboBox_KeyUpEventHandler(ref Int32 keyCode, NetOffice.OutlookApi.Enums.OlShiftState shift);
 	public delegate void OlkComboBox_ChangeEventHandler();
 	public delegate void OlkComboBox_DropButtonClickEventHandler();
 	public delegate void OlkComboBox_AfterUpdateEventHandler();
-	public delegate void OlkComboBox_BeforeUpdateEventHandler(ref bool Cancel);
+	public delegate void OlkComboBox_BeforeUpdateEventHandler(ref bool cancel);
 	#pragma warning restore
 
 	#endregion
 
-	///<summary>
+	/// <summary>
 	/// CoClass OlkComboBox 
 	/// SupportByVersion Outlook, 12,14,15,16
-	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff867596.aspx
-	///</summary>
-	[SupportByVersionAttribute("Outlook", 12,14,15,16)]
-	[EntityTypeAttribute(EntityType.IsCoClass)]
-	public class OlkComboBox : _OlkComboBox,IEventBinding
+	/// </summary>
+	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff867596.aspx </remarks>
+	[SupportByVersion("Outlook", 12,14,15,16)]
+	[EntityType(EntityType.IsCoClass)]
+	[EventSink(typeof(Events.OlkComboBoxEvents_SinkHelper))]
+	public class OlkComboBox : _OlkComboBox, IEventBinding
 	{
 		#pragma warning disable
+
 		#region Fields
 		
 		private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
 		private string _activeSinkId;
 		private NetRuntimeSystem.Type _thisType;
-		OlkComboBoxEvents_SinkHelper _olkComboBoxEvents_SinkHelper;
+		private Events.OlkComboBoxEvents_SinkHelper _olkComboBoxEvents_SinkHelper;
 	
 		#endregion
 
@@ -52,6 +52,7 @@ namespace NetOffice.OutlookApi
         /// <summary>
         /// Instance Type
         /// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
         public override Type InstanceType
         {
             get
@@ -118,17 +119,17 @@ namespace NetOffice.OutlookApi
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of OlkComboBox 
-        ///</summary>		
+        /// </summary>		
 		public OlkComboBox():base("Outlook.OlkComboBox")
 		{
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of OlkComboBox
-        ///</summary>
+        /// </summary>
         ///<param name="progId">registered ProgID</param>
 		public OlkComboBox(string progId):base(progId)
 		{
@@ -138,46 +139,6 @@ namespace NetOffice.OutlookApi
 		#endregion
 
 		#region Static CoClass Methods
-
-		/// <summary>
-        /// Returns all running Outlook.OlkComboBox objects from the environment/system
-        /// </summary>
-        /// <returns>an Outlook.OlkComboBox array</returns>
-		public static NetOffice.OutlookApi.OlkComboBox[] GetActiveInstances()
-		{		
-			IDisposableEnumeration proxyList = NetOffice.ProxyService.GetActiveInstances("Outlook","OlkComboBox");
-			NetRuntimeSystem.Collections.Generic.List<NetOffice.OutlookApi.OlkComboBox> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.OutlookApi.OlkComboBox>();
-			foreach(object proxy in proxyList)
-				resultList.Add( new NetOffice.OutlookApi.OlkComboBox(null, proxy) );
-			return resultList.ToArray();
-		}
-
-		/// <summary>
-        /// Returns a running Outlook.OlkComboBox object from the environment/system.
-        /// </summary>
-        /// <returns>an Outlook.OlkComboBox object or null</returns>
-		public static NetOffice.OutlookApi.OlkComboBox GetActiveInstance()
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Outlook","OlkComboBox", false);
-			if(null != proxy)
-				return new NetOffice.OutlookApi.OlkComboBox(null, proxy);
-			else
-				return null;
-		}
-
-		/// <summary>
-        /// Returns a running Outlook.OlkComboBox object from the environment/system. 
-        /// </summary>
-	    /// <param name="throwOnError">throw an exception if no object was found</param>
-        /// <returns>an Outlook.OlkComboBox object or null</returns>
-		public static NetOffice.OutlookApi.OlkComboBox GetActiveInstance(bool throwOnError)
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Outlook","OlkComboBox", throwOnError);
-			if(null != proxy)
-				return new NetOffice.OutlookApi.OlkComboBox(null, proxy);
-			else
-				return null;
-		}
 		#endregion
 
 		#region Events
@@ -521,12 +482,12 @@ namespace NetOffice.OutlookApi
 				return;
 	
             if (null == _activeSinkId)
-				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, OlkComboBoxEvents_SinkHelper.Id);
+				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, Events.OlkComboBoxEvents_SinkHelper.Id);
 
 
-			if(OlkComboBoxEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
+			if(Events.OlkComboBoxEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
 			{
-				_olkComboBoxEvents_SinkHelper = new OlkComboBoxEvents_SinkHelper(this, _connectPoint);
+				_olkComboBoxEvents_SinkHelper = new Events.OlkComboBoxEvents_SinkHelper(this, _connectPoint);
 				return;
 			} 
         }
@@ -668,3 +629,4 @@ namespace NetOffice.OutlookApi
 		#pragma warning restore
 	}
 }
+
