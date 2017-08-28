@@ -1,24 +1,34 @@
 ﻿using System;
 using NetRuntimeSystem = System;
-using System.Runtime.InteropServices;
-using System.Runtime.CompilerServices;
 using System.ComponentModel;
-using System.Reflection;
-using System.Collections.Generic;
-using NetOffice;
+using NetOffice.Attributes;
+
 namespace NetOffice.WordApi
 {
-	///<summary>
+	/// <summary>
 	/// DispatchInterface Index 
 	/// SupportByVersion Word, 9,10,11,12,14,15,16
-	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197742.aspx
-	///</summary>
-	[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
-	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
-	public class Index : COMObject
+	/// </summary>
+	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff197742.aspx </remarks>
+	[SupportByVersion("Word", 9,10,11,12,14,15,16)]
+	[EntityType(EntityType.IsDispatchInterface)]
+ 	public class Index : COMObject
 	{
 		#pragma warning disable
+
 		#region Type Information
+
+		/// <summary>
+		/// Instance Type
+		/// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
+		public override Type InstanceType
+		{
+			get
+			{
+				return LateBindingApiWrapperType;
+			}
+		}
 
         private static Type _type;
 
@@ -29,14 +39,20 @@ namespace NetOffice.WordApi
             {
                 if (null == _type)
                     _type = typeof(Index);
-                    
                 return _type;
             }
         }
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public Index(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -82,7 +98,7 @@ namespace NetOffice.WordApi
 		{
 		}
 		
-		/// <param name="progId">registered ProgID</param>
+		/// <param name="progId">registered progID</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public Index(string progId) : base(progId)
 		{
@@ -95,263 +111,219 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836599.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff836599.aspx </remarks>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.Application Application
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				NetOffice.WordApi.Application newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.Application.LateBindingApiWrapperType) as NetOffice.WordApi.Application;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.Application>(this, "Application", NetOffice.WordApi.Application.LateBindingApiWrapperType);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845252.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff845252.aspx </remarks>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public Int32 Creator
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Creator", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "Creator");
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196831.aspx
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff196831.aspx </remarks>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16), ProxyResult]
 		public object Parent
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Parent", paramsArray);
-				ICOMObject newObject = Factory.CreateObjectFromComProxy(this,returnItem);
-				return newObject;
+				return Factory.ExecuteReferencePropertyGet(this, "Parent");
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840819.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff840819.aspx </remarks>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.Enums.WdHeadingSeparator HeadingSeparator
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "HeadingSeparator", paramsArray);
-				int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-				return (NetOffice.WordApi.Enums.WdHeadingSeparator)intReturnItem;
+				return Factory.ExecuteEnumPropertyGet<NetOffice.WordApi.Enums.WdHeadingSeparator>(this, "HeadingSeparator");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "HeadingSeparator", paramsArray);
+				Factory.ExecuteEnumPropertySet(this, "HeadingSeparator", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192781.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff192781.aspx </remarks>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public bool RightAlignPageNumbers
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "RightAlignPageNumbers", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "RightAlignPageNumbers");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "RightAlignPageNumbers", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "RightAlignPageNumbers", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837745.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff837745.aspx </remarks>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.Enums.WdIndexType Type
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Type", paramsArray);
-				int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-				return (NetOffice.WordApi.Enums.WdIndexType)intReturnItem;
+				return Factory.ExecuteEnumPropertyGet<NetOffice.WordApi.Enums.WdIndexType>(this, "Type");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "Type", paramsArray);
+				Factory.ExecuteEnumPropertySet(this, "Type", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839695.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff839695.aspx </remarks>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public Int32 NumberOfColumns
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "NumberOfColumns", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "NumberOfColumns");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "NumberOfColumns", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "NumberOfColumns", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836639.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff836639.aspx </remarks>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.Range Range
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Range", paramsArray);
-				NetOffice.WordApi.Range newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.Range.LateBindingApiWrapperType) as NetOffice.WordApi.Range;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.Range>(this, "Range", NetOffice.WordApi.Range.LateBindingApiWrapperType);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff821985.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff821985.aspx </remarks>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.Enums.WdTabLeader TabLeader
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "TabLeader", paramsArray);
-				int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-				return (NetOffice.WordApi.Enums.WdTabLeader)intReturnItem;
+				return Factory.ExecuteEnumPropertyGet<NetOffice.WordApi.Enums.WdTabLeader>(this, "TabLeader");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "TabLeader", paramsArray);
+				Factory.ExecuteEnumPropertySet(this, "TabLeader", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff820831.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff820831.aspx </remarks>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public bool AccentedLetters
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "AccentedLetters", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "AccentedLetters");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "AccentedLetters", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "AccentedLetters", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193707.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff193707.aspx </remarks>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.Enums.WdIndexSortBy SortBy
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "SortBy", paramsArray);
-				int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-				return (NetOffice.WordApi.Enums.WdIndexSortBy)intReturnItem;
+				return Factory.ExecuteEnumPropertyGet<NetOffice.WordApi.Enums.WdIndexSortBy>(this, "SortBy");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "SortBy", paramsArray);
+				Factory.ExecuteEnumPropertySet(this, "SortBy", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822536.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff822536.aspx </remarks>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.Enums.WdIndexFilter Filter
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Filter", paramsArray);
-				int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-				return (NetOffice.WordApi.Enums.WdIndexFilter)intReturnItem;
+				return Factory.ExecuteEnumPropertyGet<NetOffice.WordApi.Enums.WdIndexFilter>(this, "Filter");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "Filter", paramsArray);
+				Factory.ExecuteEnumPropertySet(this, "Filter", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192145.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff192145.aspx </remarks>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.Enums.WdLanguageID IndexLanguage
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "IndexLanguage", paramsArray);
-				int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-				return (NetOffice.WordApi.Enums.WdLanguageID)intReturnItem;
+				return Factory.ExecuteEnumPropertyGet<NetOffice.WordApi.Enums.WdLanguageID>(this, "IndexLanguage");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "IndexLanguage", paramsArray);
+				Factory.ExecuteEnumPropertySet(this, "IndexLanguage", value);
 			}
 		}
 
@@ -361,27 +333,26 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845311.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff845311.aspx </remarks>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void Delete()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "Delete", paramsArray);
+			 Factory.ExecuteMethod(this, "Delete");
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838064.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff838064.aspx </remarks>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void Update()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "Update", paramsArray);
+			 Factory.ExecuteMethod(this, "Update");
 		}
 
 		#endregion
+
 		#pragma warning restore
 	}
 }

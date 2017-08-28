@@ -1,23 +1,33 @@
 ﻿using System;
 using NetRuntimeSystem = System;
-using System.Runtime.InteropServices;
-using System.Runtime.CompilerServices;
 using System.ComponentModel;
-using System.Reflection;
-using System.Collections.Generic;
-using NetOffice;
+using NetOffice.Attributes;
+
 namespace NetOffice.VBIDEApi
 {
-	///<summary>
+	/// <summary>
 	/// DispatchInterface _VBComponents 
 	/// SupportByVersion VBIDE, 12,14,5.3
-	///</summary>
-	[SupportByVersionAttribute("VBIDE", 12,14,5.3)]
-	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
-	public class _VBComponents : _VBComponents_Old
+	/// </summary>
+	[SupportByVersion("VBIDE", 12,14,5.3)]
+	[EntityType(EntityType.IsDispatchInterface)]
+ 	public class _VBComponents : _VBComponents_Old
 	{
 		#pragma warning disable
+
 		#region Type Information
+
+		/// <summary>
+		/// Instance Type
+		/// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
+		public override Type InstanceType
+		{
+			get
+			{
+				return LateBindingApiWrapperType;
+			}
+		}
 
         private static Type _type;
 
@@ -28,14 +38,20 @@ namespace NetOffice.VBIDEApi
             {
                 if (null == _type)
                     _type = typeof(_VBComponents);
-                    
                 return _type;
             }
         }
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public _VBComponents(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -81,7 +97,7 @@ namespace NetOffice.VBIDEApi
 		{
 		}
 		
-		/// <param name="progId">registered ProgID</param>
+		/// <param name="progId">registered progID</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public _VBComponents(string progId) : base(progId)
 		{
@@ -97,49 +113,38 @@ namespace NetOffice.VBIDEApi
 
 		/// <summary>
 		/// SupportByVersion VBIDE 12, 14, 5.3
-		/// 
 		/// </summary>
-		/// <param name="progId">string ProgId</param>
-		[SupportByVersionAttribute("VBIDE", 12,14,5.3)]
+		/// <param name="progId">string progId</param>
+		[SupportByVersion("VBIDE", 12,14,5.3)]
 		public NetOffice.VBIDEApi.VBComponent AddCustom(string progId)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(progId);
-			object returnItem = Invoker.MethodReturn(this, "AddCustom", paramsArray);
-			NetOffice.VBIDEApi.VBComponent newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.VBIDEApi.VBComponent.LateBindingApiWrapperType) as NetOffice.VBIDEApi.VBComponent;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.VBIDEApi.VBComponent>(this, "AddCustom", NetOffice.VBIDEApi.VBComponent.LateBindingApiWrapperType, progId);
 		}
 
 		/// <summary>
 		/// SupportByVersion VBIDE 12, 14, 5.3
-		/// 
 		/// </summary>
 		/// <param name="index">optional Int32 index = 0</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("VBIDE", 12,14,5.3)]
+		[SupportByVersion("VBIDE", 12,14,5.3)]
 		public NetOffice.VBIDEApi.VBComponent AddMTDesigner(object index)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(index);
-			object returnItem = Invoker.MethodReturn(this, "AddMTDesigner", paramsArray);
-			NetOffice.VBIDEApi.VBComponent newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.VBIDEApi.VBComponent.LateBindingApiWrapperType) as NetOffice.VBIDEApi.VBComponent;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.VBIDEApi.VBComponent>(this, "AddMTDesigner", NetOffice.VBIDEApi.VBComponent.LateBindingApiWrapperType, index);
 		}
 
 		/// <summary>
 		/// SupportByVersion VBIDE 12, 14, 5.3
-		/// 
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("VBIDE", 12,14,5.3)]
+		[CustomMethod]
+		[SupportByVersion("VBIDE", 12,14,5.3)]
 		public NetOffice.VBIDEApi.VBComponent AddMTDesigner()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "AddMTDesigner", paramsArray);
-			NetOffice.VBIDEApi.VBComponent newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.VBIDEApi.VBComponent.LateBindingApiWrapperType) as NetOffice.VBIDEApi.VBComponent;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.VBIDEApi.VBComponent>(this, "AddMTDesigner", NetOffice.VBIDEApi.VBComponent.LateBindingApiWrapperType);
 		}
 
 		#endregion
+
 		#pragma warning restore
 	}
 }

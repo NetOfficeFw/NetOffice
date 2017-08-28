@@ -1,40 +1,40 @@
 ﻿using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
-using NetOffice;
-using NetOffice.Misc;
+using NetOffice.Attributes;
 
 namespace NetOffice.OutlookApi
 {
-
 	#region Delegates
 
 	#pragma warning disable
 	public delegate void OlkBusinessCardControl_ClickEventHandler();
 	public delegate void OlkBusinessCardControl_DoubleClickEventHandler();
-	public delegate void OlkBusinessCardControl_MouseDownEventHandler(NetOffice.OutlookApi.Enums.OlMouseButton Button, NetOffice.OutlookApi.Enums.OlShiftState Shift, Single X, Single Y);
-	public delegate void OlkBusinessCardControl_MouseMoveEventHandler(NetOffice.OutlookApi.Enums.OlMouseButton Button, NetOffice.OutlookApi.Enums.OlShiftState Shift, Single X, Single Y);
-	public delegate void OlkBusinessCardControl_MouseUpEventHandler(NetOffice.OutlookApi.Enums.OlMouseButton Button, NetOffice.OutlookApi.Enums.OlShiftState Shift, Single X, Single Y);
+	public delegate void OlkBusinessCardControl_MouseDownEventHandler(NetOffice.OutlookApi.Enums.OlMouseButton button, NetOffice.OutlookApi.Enums.OlShiftState shift, Single x, Single y);
+	public delegate void OlkBusinessCardControl_MouseMoveEventHandler(NetOffice.OutlookApi.Enums.OlMouseButton button, NetOffice.OutlookApi.Enums.OlShiftState shift, Single x, Single y);
+	public delegate void OlkBusinessCardControl_MouseUpEventHandler(NetOffice.OutlookApi.Enums.OlMouseButton button, NetOffice.OutlookApi.Enums.OlShiftState shift, Single x, Single y);
 	#pragma warning restore
 
 	#endregion
 
-	///<summary>
+	/// <summary>
 	/// CoClass OlkBusinessCardControl 
 	/// SupportByVersion Outlook, 12,14,15,16
-	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff868063.aspx
-	///</summary>
-	[SupportByVersionAttribute("Outlook", 12,14,15,16)]
-	[EntityTypeAttribute(EntityType.IsCoClass)]
-	public class OlkBusinessCardControl : _OlkBusinessCardControl,IEventBinding
+	/// </summary>
+	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff868063.aspx </remarks>
+	[SupportByVersion("Outlook", 12,14,15,16)]
+	[EntityType(EntityType.IsCoClass)]
+	[EventSink(typeof(Events.OlkBusinessCardControlEvents_SinkHelper))]
+	public class OlkBusinessCardControl : _OlkBusinessCardControl, IEventBinding
 	{
 		#pragma warning disable
+
 		#region Fields
 		
 		private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
 		private string _activeSinkId;
 		private NetRuntimeSystem.Type _thisType;
-		OlkBusinessCardControlEvents_SinkHelper _olkBusinessCardControlEvents_SinkHelper;
+		private Events.OlkBusinessCardControlEvents_SinkHelper _olkBusinessCardControlEvents_SinkHelper;
 	
 		#endregion
 
@@ -43,6 +43,7 @@ namespace NetOffice.OutlookApi
         /// <summary>
         /// Instance Type
         /// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
         public override Type InstanceType
         {
             get
@@ -109,17 +110,17 @@ namespace NetOffice.OutlookApi
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of OlkBusinessCardControl 
-        ///</summary>		
+        /// </summary>		
 		public OlkBusinessCardControl():base("Outlook.OlkBusinessCardControl")
 		{
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of OlkBusinessCardControl
-        ///</summary>
+        /// </summary>
         ///<param name="progId">registered ProgID</param>
 		public OlkBusinessCardControl(string progId):base(progId)
 		{
@@ -129,46 +130,6 @@ namespace NetOffice.OutlookApi
 		#endregion
 
 		#region Static CoClass Methods
-
-		/// <summary>
-        /// Returns all running Outlook.OlkBusinessCardControl objects from the environment/system
-        /// </summary>
-        /// <returns>an Outlook.OlkBusinessCardControl array</returns>
-		public static NetOffice.OutlookApi.OlkBusinessCardControl[] GetActiveInstances()
-		{		
-			IDisposableEnumeration proxyList = NetOffice.ProxyService.GetActiveInstances("Outlook","OlkBusinessCardControl");
-			NetRuntimeSystem.Collections.Generic.List<NetOffice.OutlookApi.OlkBusinessCardControl> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.OutlookApi.OlkBusinessCardControl>();
-			foreach(object proxy in proxyList)
-				resultList.Add( new NetOffice.OutlookApi.OlkBusinessCardControl(null, proxy) );
-			return resultList.ToArray();
-		}
-
-		/// <summary>
-        /// Returns a running Outlook.OlkBusinessCardControl object from the environment/system.
-        /// </summary>
-        /// <returns>an Outlook.OlkBusinessCardControl object or null</returns>
-		public static NetOffice.OutlookApi.OlkBusinessCardControl GetActiveInstance()
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Outlook","OlkBusinessCardControl", false);
-			if(null != proxy)
-				return new NetOffice.OutlookApi.OlkBusinessCardControl(null, proxy);
-			else
-				return null;
-		}
-
-		/// <summary>
-        /// Returns a running Outlook.OlkBusinessCardControl object from the environment/system. 
-        /// </summary>
-	    /// <param name="throwOnError">throw an exception if no object was found</param>
-        /// <returns>an Outlook.OlkBusinessCardControl object or null</returns>
-		public static NetOffice.OutlookApi.OlkBusinessCardControl GetActiveInstance(bool throwOnError)
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Outlook","OlkBusinessCardControl", throwOnError);
-			if(null != proxy)
-				return new NetOffice.OutlookApi.OlkBusinessCardControl(null, proxy);
-			else
-				return null;
-		}
 		#endregion
 
 		#region Events
@@ -305,12 +266,12 @@ namespace NetOffice.OutlookApi
 				return;
 	
             if (null == _activeSinkId)
-				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, OlkBusinessCardControlEvents_SinkHelper.Id);
+				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, Events.OlkBusinessCardControlEvents_SinkHelper.Id);
 
 
-			if(OlkBusinessCardControlEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
+			if(Events.OlkBusinessCardControlEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
 			{
-				_olkBusinessCardControlEvents_SinkHelper = new OlkBusinessCardControlEvents_SinkHelper(this, _connectPoint);
+				_olkBusinessCardControlEvents_SinkHelper = new Events.OlkBusinessCardControlEvents_SinkHelper(this, _connectPoint);
 				return;
 			} 
         }

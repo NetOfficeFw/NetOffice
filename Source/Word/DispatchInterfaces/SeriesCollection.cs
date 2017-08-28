@@ -1,25 +1,36 @@
-﻿using System;
-using NetRuntimeSystem = System;
-using System.Runtime.InteropServices;
-using System.Runtime.CompilerServices;
-using System.ComponentModel;
-using System.Reflection;
+﻿using System.Collections;
 using System.Collections.Generic;
-using System.Collections;
-using NetOffice;
+using System;
+using NetRuntimeSystem = System;
+using System.ComponentModel;
+using NetOffice.Attributes;
+
 namespace NetOffice.WordApi
 {
-	///<summary>
+	/// <summary>
 	/// DispatchInterface SeriesCollection 
 	/// SupportByVersion Word, 14,15,16
-	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff821223.aspx
-	///</summary>
-	[SupportByVersionAttribute("Word", 14,15,16)]
-	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
-	public class SeriesCollection : COMObject ,IEnumerable<NetOffice.WordApi.Series>
+	/// </summary>
+	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff821223.aspx </remarks>
+	[SupportByVersion("Word", 14,15,16)]
+	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Method), HasIndexProperty(IndexInvoke.Method, "_Default")]
+	public class SeriesCollection : COMObject, IEnumerable<NetOffice.WordApi.Series>
 	{
 		#pragma warning disable
+
 		#region Type Information
+
+		/// <summary>
+		/// Instance Type
+		/// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
+		public override Type InstanceType
+		{
+			get
+			{
+				return LateBindingApiWrapperType;
+			}
+		}
 
         private static Type _type;
 
@@ -30,14 +41,20 @@ namespace NetOffice.WordApi
             {
                 if (null == _type)
                     _type = typeof(SeriesCollection);
-                    
                 return _type;
             }
         }
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public SeriesCollection(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -83,7 +100,7 @@ namespace NetOffice.WordApi
 		{
 		}
 		
-		/// <param name="progId">registered ProgID</param>
+		/// <param name="progId">registered progID</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public SeriesCollection(string progId) : base(progId)
 		{
@@ -96,68 +113,58 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839574.aspx
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff839574.aspx </remarks>
+		[SupportByVersion("Word", 14,15,16), ProxyResult]
 		public object Parent
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Parent", paramsArray);
-				ICOMObject newObject = Factory.CreateObjectFromComProxy(this,returnItem);
-				return newObject;
+				return Factory.ExecuteReferencePropertyGet(this, "Parent");
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff834899.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff834899.aspx </remarks>
+		[SupportByVersion("Word", 14,15,16)]
 		public Int32 Count
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Count", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "Count");
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836348.aspx
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff836348.aspx </remarks>
+		[SupportByVersion("Word", 14,15,16), ProxyResult]
 		public object Application
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				ICOMObject newObject = Factory.CreateObjectFromComProxy(this,returnItem);
-				return newObject;
+				return Factory.ExecuteReferencePropertyGet(this, "Application");
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845293.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff845293.aspx </remarks>
+		[SupportByVersion("Word", 14,15,16)]
 		public Int32 Creator
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Creator", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "Creator");
 			}
 		}
 
@@ -167,217 +174,166 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192549.aspx
 		/// </summary>
-		/// <param name="source">object Source</param>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff192549.aspx </remarks>
+		/// <param name="source">object source</param>
 		/// <param name="rowcol">optional NetOffice.WordApi.Enums.XlRowCol Rowcol = 2</param>
-		/// <param name="seriesLabels">optional object SeriesLabels</param>
-		/// <param name="categoryLabels">optional object CategoryLabels</param>
-		/// <param name="replace">optional object Replace</param>
-		[SupportByVersionAttribute("Word", 14,15,16)]
+		/// <param name="seriesLabels">optional object seriesLabels</param>
+		/// <param name="categoryLabels">optional object categoryLabels</param>
+		/// <param name="replace">optional object replace</param>
+		[SupportByVersion("Word", 14,15,16)]
 		public NetOffice.WordApi.Series Add(object source, object rowcol, object seriesLabels, object categoryLabels, object replace)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(source, rowcol, seriesLabels, categoryLabels, replace);
-			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.WordApi.Series newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Series.LateBindingApiWrapperType) as NetOffice.WordApi.Series;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Series>(this, "Add", NetOffice.WordApi.Series.LateBindingApiWrapperType, new object[]{ source, rowcol, seriesLabels, categoryLabels, replace });
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192549.aspx
 		/// </summary>
-		/// <param name="source">object Source</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff192549.aspx </remarks>
+		/// <param name="source">object source</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 14,15,16)]
 		public NetOffice.WordApi.Series Add(object source)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(source);
-			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.WordApi.Series newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Series.LateBindingApiWrapperType) as NetOffice.WordApi.Series;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Series>(this, "Add", NetOffice.WordApi.Series.LateBindingApiWrapperType, source);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192549.aspx
 		/// </summary>
-		/// <param name="source">object Source</param>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff192549.aspx </remarks>
+		/// <param name="source">object source</param>
 		/// <param name="rowcol">optional NetOffice.WordApi.Enums.XlRowCol Rowcol = 2</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Word", 14,15,16)]
 		public NetOffice.WordApi.Series Add(object source, object rowcol)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(source, rowcol);
-			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.WordApi.Series newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Series.LateBindingApiWrapperType) as NetOffice.WordApi.Series;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Series>(this, "Add", NetOffice.WordApi.Series.LateBindingApiWrapperType, source, rowcol);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192549.aspx
 		/// </summary>
-		/// <param name="source">object Source</param>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff192549.aspx </remarks>
+		/// <param name="source">object source</param>
 		/// <param name="rowcol">optional NetOffice.WordApi.Enums.XlRowCol Rowcol = 2</param>
-		/// <param name="seriesLabels">optional object SeriesLabels</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 14,15,16)]
+		/// <param name="seriesLabels">optional object seriesLabels</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 14,15,16)]
 		public NetOffice.WordApi.Series Add(object source, object rowcol, object seriesLabels)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(source, rowcol, seriesLabels);
-			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.WordApi.Series newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Series.LateBindingApiWrapperType) as NetOffice.WordApi.Series;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Series>(this, "Add", NetOffice.WordApi.Series.LateBindingApiWrapperType, source, rowcol, seriesLabels);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192549.aspx
 		/// </summary>
-		/// <param name="source">object Source</param>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff192549.aspx </remarks>
+		/// <param name="source">object source</param>
 		/// <param name="rowcol">optional NetOffice.WordApi.Enums.XlRowCol Rowcol = 2</param>
-		/// <param name="seriesLabels">optional object SeriesLabels</param>
-		/// <param name="categoryLabels">optional object CategoryLabels</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 14,15,16)]
+		/// <param name="seriesLabels">optional object seriesLabels</param>
+		/// <param name="categoryLabels">optional object categoryLabels</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 14,15,16)]
 		public NetOffice.WordApi.Series Add(object source, object rowcol, object seriesLabels, object categoryLabels)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(source, rowcol, seriesLabels, categoryLabels);
-			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.WordApi.Series newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Series.LateBindingApiWrapperType) as NetOffice.WordApi.Series;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Series>(this, "Add", NetOffice.WordApi.Series.LateBindingApiWrapperType, source, rowcol, seriesLabels, categoryLabels);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197201.aspx
 		/// </summary>
-		/// <param name="source">object Source</param>
-		/// <param name="rowcol">optional object Rowcol</param>
-		/// <param name="categoryLabels">optional object CategoryLabels</param>
-		[SupportByVersionAttribute("Word", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff197201.aspx </remarks>
+		/// <param name="source">object source</param>
+		/// <param name="rowcol">optional object rowcol</param>
+		/// <param name="categoryLabels">optional object categoryLabels</param>
+		[SupportByVersion("Word", 14,15,16)]
 		public object Extend(object source, object rowcol, object categoryLabels)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(source, rowcol, categoryLabels);
-			object returnItem = Invoker.MethodReturn(this, "Extend", paramsArray);
-			if((null != returnItem) && (returnItem is MarshalByRefObject))
-			{
-				ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
-				return newObject;
-			}
-			else
-			{
-				return  returnItem;
-			}
+			return Factory.ExecuteVariantMethodGet(this, "Extend", source, rowcol, categoryLabels);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197201.aspx
 		/// </summary>
-		/// <param name="source">object Source</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff197201.aspx </remarks>
+		/// <param name="source">object source</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 14,15,16)]
 		public object Extend(object source)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(source);
-			object returnItem = Invoker.MethodReturn(this, "Extend", paramsArray);
-			if((null != returnItem) && (returnItem is MarshalByRefObject))
-			{
-				ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
-				return newObject;
-			}
-			else
-			{
-				return  returnItem;
-			}
+			return Factory.ExecuteVariantMethodGet(this, "Extend", source);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197201.aspx
 		/// </summary>
-		/// <param name="source">object Source</param>
-		/// <param name="rowcol">optional object Rowcol</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff197201.aspx </remarks>
+		/// <param name="source">object source</param>
+		/// <param name="rowcol">optional object rowcol</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 14,15,16)]
 		public object Extend(object source, object rowcol)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(source, rowcol);
-			object returnItem = Invoker.MethodReturn(this, "Extend", paramsArray);
-			if((null != returnItem) && (returnItem is MarshalByRefObject))
-			{
-				ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
-				return newObject;
-			}
-			else
-			{
-				return  returnItem;
-			}
+			return Factory.ExecuteVariantMethodGet(this, "Extend", source, rowcol);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840883.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff840883.aspx </remarks>
+		[SupportByVersion("Word", 14,15,16)]
 		public NetOffice.WordApi.Series NewSeries()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "NewSeries", paramsArray);
-			NetOffice.WordApi.Series newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Series.LateBindingApiWrapperType) as NetOffice.WordApi.Series;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Series>(this, "NewSeries", NetOffice.WordApi.Series.LateBindingApiWrapperType);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="index">object Index</param>
+		/// <param name="index">object index</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("Word", 14,15,16)]
-		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
+		[SupportByVersion("Word", 14,15,16)]
+		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
 		public NetOffice.WordApi.Series this[object index]
 		{
 			get
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(index);
-				object returnItem = Invoker.MethodReturn(this, "_Default", paramsArray);
-				NetOffice.WordApi.Series newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Series.LateBindingApiWrapperType) as NetOffice.WordApi.Series;
-				return newObject;
+				return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Series>(this, "_Default", NetOffice.WordApi.Series.LateBindingApiWrapperType, index);
 			}
 		}
 
-		#endregion
+        #endregion
 
-       #region IEnumerable<NetOffice.WordApi.Series> Member
-        
+        #region IEnumerable<NetOffice.WordApi.Series> Member
+
         /// <summary>
-		/// SupportByVersionAttribute Word, 14,15,16
-		/// </summary>
-		[SupportByVersionAttribute("Word", 14,15,16)]
-       public IEnumerator<NetOffice.WordApi.Series> GetEnumerator()  
-       {
-           NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
-           foreach (NetOffice.WordApi.Series item in innerEnumerator)
-               yield return item;
-       }
+        /// SupportByVersion Word, 14,15,16
+        /// </summary>
+        [SupportByVersion("Word", 14, 15, 16)]
+        public IEnumerator<NetOffice.WordApi.Series> GetEnumerator()
+        {
+            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
+            foreach (NetOffice.WordApi.Series item in innerEnumerator)
+                yield return item;
+        }
 
-       #endregion
-          
-		#region IEnumerable Members
-       
-		/// <summary>
-		/// SupportByVersionAttribute Word, 14,15,16
-		/// </summary>
-		[SupportByVersionAttribute("Word", 14,15,16)]
+        #endregion
+
+        #region IEnumerable Members
+
+        /// <summary>
+        /// SupportByVersion Word, 14,15,16
+        /// </summary>
+        [SupportByVersion("Word", 14,15,16)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
 			return NetOffice.Utils.GetProxyEnumeratorAsMethod(this);
 		}
 
 		#endregion
+
 		#pragma warning restore
 	}
 }

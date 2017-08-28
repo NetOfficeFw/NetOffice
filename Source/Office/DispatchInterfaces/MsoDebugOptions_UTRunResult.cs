@@ -1,23 +1,33 @@
 ﻿using System;
 using NetRuntimeSystem = System;
-using System.Runtime.InteropServices;
-using System.Runtime.CompilerServices;
 using System.ComponentModel;
-using System.Reflection;
-using System.Collections.Generic;
-using NetOffice;
+using NetOffice.Attributes;
+
 namespace NetOffice.OfficeApi
 {
-	///<summary>
+	/// <summary>
 	/// DispatchInterface MsoDebugOptions_UTRunResult 
 	/// SupportByVersion Office, 12,14,15,16
-	///</summary>
-	[SupportByVersionAttribute("Office", 12,14,15,16)]
-	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
-	public class MsoDebugOptions_UTRunResult : _IMsoDispObj
+	/// </summary>
+	[SupportByVersion("Office", 12,14,15,16)]
+	[EntityType(EntityType.IsDispatchInterface)]
+ 	public class MsoDebugOptions_UTRunResult : _IMsoDispObj
 	{
 		#pragma warning disable
+
 		#region Type Information
+
+		/// <summary>
+		/// Instance Type
+		/// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
+		public override Type InstanceType
+		{
+			get
+			{
+				return LateBindingApiWrapperType;
+			}
+		}
 
         private static Type _type;
 
@@ -28,14 +38,20 @@ namespace NetOffice.OfficeApi
             {
                 if (null == _type)
                     _type = typeof(MsoDebugOptions_UTRunResult);
-                    
                 return _type;
             }
         }
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public MsoDebugOptions_UTRunResult(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -81,7 +97,7 @@ namespace NetOffice.OfficeApi
 		{
 		}
 		
-		/// <param name="progId">registered ProgID</param>
+		/// <param name="progId">registered progID</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public MsoDebugOptions_UTRunResult(string progId) : base(progId)
 		{
@@ -95,14 +111,12 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		[SupportByVersion("Office", 12,14,15,16)]
 		public bool Passed
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Passed", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "Passed");
 			}
 		}
 
@@ -110,14 +124,12 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		[SupportByVersion("Office", 12,14,15,16)]
 		public string ErrorString
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "ErrorString", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "ErrorString");
 			}
 		}
 
@@ -126,6 +138,7 @@ namespace NetOffice.OfficeApi
 		#region Methods
 
 		#endregion
+
 		#pragma warning restore
 	}
 }

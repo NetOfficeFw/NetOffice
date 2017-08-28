@@ -1,25 +1,36 @@
-﻿using System;
-using NetRuntimeSystem = System;
-using System.Runtime.InteropServices;
-using System.Runtime.CompilerServices;
-using System.ComponentModel;
-using System.Reflection;
+﻿using System.Collections;
 using System.Collections.Generic;
-using System.Collections;
-using NetOffice;
+using System;
+using NetRuntimeSystem = System;
+using System.ComponentModel;
+using NetOffice.Attributes;
+
 namespace NetOffice.OfficeApi
 {
-	///<summary>
+	/// <summary>
 	/// DispatchInterface PickerProperties 
 	/// SupportByVersion Office, 14,15,16
-	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff861162.aspx
-	///</summary>
-	[SupportByVersionAttribute("Office", 14,15,16)]
-	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
-	public class PickerProperties : _IMsoDispObj ,IEnumerable<NetOffice.OfficeApi.PickerProperty>
+	/// </summary>
+	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff861162.aspx </remarks>
+	[SupportByVersion("Office", 14,15,16)]
+	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "Item")]
+	public class PickerProperties : _IMsoDispObj, IEnumerable<NetOffice.OfficeApi.PickerProperty>
 	{
 		#pragma warning disable
+
 		#region Type Information
+
+		/// <summary>
+		/// Instance Type
+		/// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
+		public override Type InstanceType
+		{
+			get
+			{
+				return LateBindingApiWrapperType;
+			}
+		}
 
         private static Type _type;
 
@@ -30,14 +41,20 @@ namespace NetOffice.OfficeApi
             {
                 if (null == _type)
                     _type = typeof(PickerProperties);
-                    
                 return _type;
             }
         }
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public PickerProperties(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -83,7 +100,7 @@ namespace NetOffice.OfficeApi
 		{
 		}
 		
-		/// <param name="progId">registered ProgID</param>
+		/// <param name="progId">registered progID</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public PickerProperties(string progId) : base(progId)
 		{
@@ -97,33 +114,28 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <param name="index">Int32 Index</param>
-		[SupportByVersionAttribute("Office", 14,15,16)]
-		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
+		/// <param name="index">Int32 index</param>
+		[SupportByVersion("Office", 14,15,16)]
+		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
 		public NetOffice.OfficeApi.PickerProperty this[Int32 index]
 		{
 			get
-{			
-			object[] paramsArray = Invoker.ValidateParamsArray(index);
-			object returnItem = Invoker.PropertyGet(this, "Item", paramsArray);
-			NetOffice.OfficeApi.PickerProperty newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.PickerProperty.LateBindingApiWrapperType) as NetOffice.OfficeApi.PickerProperty;
-			return newObject;
+			{
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.PickerProperty>(this, "Item", NetOffice.OfficeApi.PickerProperty.LateBindingApiWrapperType, index);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff861123.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Office", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff861123.aspx </remarks>
+		[SupportByVersion("Office", 14,15,16)]
 		public Int32 Count
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Count", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "Count");
 			}
 		}
 
@@ -133,61 +145,58 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff863501.aspx
 		/// </summary>
-		/// <param name="id">string Id</param>
-		/// <param name="value">string Value</param>
-		/// <param name="type">NetOffice.OfficeApi.Enums.MsoPickerField Type</param>
-		[SupportByVersionAttribute("Office", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff863501.aspx </remarks>
+		/// <param name="id">string id</param>
+		/// <param name="value">string value</param>
+		/// <param name="type">NetOffice.OfficeApi.Enums.MsoPickerField type</param>
+		[SupportByVersion("Office", 14,15,16)]
 		public NetOffice.OfficeApi.PickerProperty Add(string id, string value, NetOffice.OfficeApi.Enums.MsoPickerField type)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(id, value, type);
-			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.OfficeApi.PickerProperty newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.PickerProperty.LateBindingApiWrapperType) as NetOffice.OfficeApi.PickerProperty;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.PickerProperty>(this, "Add", NetOffice.OfficeApi.PickerProperty.LateBindingApiWrapperType, id, value, type);
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff863845.aspx
 		/// </summary>
-		/// <param name="id">string Id</param>
-		[SupportByVersionAttribute("Office", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff863845.aspx </remarks>
+		/// <param name="id">string id</param>
+		[SupportByVersion("Office", 14,15,16)]
 		public void Remove(string id)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(id);
-			Invoker.Method(this, "Remove", paramsArray);
+			 Factory.ExecuteMethod(this, "Remove", id);
 		}
 
-		#endregion
+        #endregion
 
-       #region IEnumerable<NetOffice.OfficeApi.PickerProperty> Member
-        
+        #region IEnumerable<NetOffice.OfficeApi.PickerProperty> Member
+
         /// <summary>
-		/// SupportByVersionAttribute Office, 14,15,16
-		/// </summary>
-		[SupportByVersionAttribute("Office", 14,15,16)]
-       public IEnumerator<NetOffice.OfficeApi.PickerProperty> GetEnumerator()  
-       {
-           NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
-           foreach (NetOffice.OfficeApi.PickerProperty item in innerEnumerator)
-               yield return item;
-       }
+        /// SupportByVersion Office, 14,15,16
+        /// </summary>
+        [SupportByVersion("Office", 14, 15, 16)]
+        public IEnumerator<NetOffice.OfficeApi.PickerProperty> GetEnumerator()
+        {
+            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
+            foreach (NetOffice.OfficeApi.PickerProperty item in innerEnumerator)
+                yield return item;
+        }
 
-       #endregion
-          
-		#region IEnumerable Members
-       
-		/// <summary>
-		/// SupportByVersionAttribute Office, 14,15,16
-		/// </summary>
-		[SupportByVersionAttribute("Office", 14,15,16)]
+        #endregion
+
+        #region IEnumerable Members
+
+        /// <summary>
+        /// SupportByVersion Office, 14,15,16
+        /// </summary>
+        [SupportByVersion("Office", 14,15,16)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
 			return NetOffice.Utils.GetProxyEnumeratorAsProperty(this);
 		}
 
 		#endregion
+
 		#pragma warning restore
 	}
 }

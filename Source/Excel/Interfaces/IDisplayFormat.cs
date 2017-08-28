@@ -1,19 +1,24 @@
 ﻿using System;
 using NetRuntimeSystem = System;
-using System.Runtime.InteropServices;
 using System.ComponentModel;
-using System.Runtime.CompilerServices;
-using System.Reflection;
-using System.Collections.Generic;
-using NetOffice;
+using NetOffice.Attributes;
+
 namespace NetOffice.ExcelApi
 {
-	///<summary>
+	/// <summary>
 	/// IDisplayFormat
-	///</summary>
-	public class IDisplayFormat_ : COMObject
+	/// </summary>
+	[SyntaxBypass]
+ 	public class IDisplayFormat_ : COMObject
 	{
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public IDisplayFormat_(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -62,7 +67,7 @@ namespace NetOffice.ExcelApi
 		{
 		}
 		
-		/// <param name="progId">registered ProgID</param>
+		/// <param name="progId">registered progID</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public IDisplayFormat_(string progId) : base(progId)
 		{
@@ -76,25 +81,22 @@ namespace NetOffice.ExcelApi
 		/// SupportByVersion Excel 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <param name="start">optional object Start</param>
-		/// <param name="length">optional object Length</param>
-		[SupportByVersionAttribute("Excel", 14,15,16)]
+		/// <param name="start">optional object start</param>
+		/// <param name="length">optional object length</param>
+		[SupportByVersion("Excel", 14,15,16)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public NetOffice.ExcelApi.Characters get_Characters(object start, object length)
-		{		
-			object[] paramsArray = Invoker.ValidateParamsArray(start, length);
-			object returnItem = Invoker.PropertyGet(this, "Characters", paramsArray);
-			NetOffice.ExcelApi.Characters newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.Characters.LateBindingApiWrapperType) as NetOffice.ExcelApi.Characters;
-			return newObject;
+		{
+			return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Characters>(this, "Characters", NetOffice.ExcelApi.Characters.LateBindingApiWrapperType, start, length);
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15, 16
 		/// Alias for get_Characters
 		/// </summary>
-		/// <param name="start">optional object Start</param>
-		/// <param name="length">optional object Length</param>
-		[SupportByVersionAttribute("Excel", 14,15,16)]
+		/// <param name="start">optional object start</param>
+		/// <param name="length">optional object length</param>
+		[SupportByVersion("Excel", 14,15,16), Redirect("get_Characters")]
 		public NetOffice.ExcelApi.Characters Characters(object start, object length)
 		{
 			return get_Characters(start, length);
@@ -104,23 +106,20 @@ namespace NetOffice.ExcelApi
 		/// SupportByVersion Excel 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <param name="start">optional object Start</param>
-		[SupportByVersionAttribute("Excel", 14,15,16)]
+		/// <param name="start">optional object start</param>
+		[SupportByVersion("Excel", 14,15,16)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public NetOffice.ExcelApi.Characters get_Characters(object start)
-		{		
-			object[] paramsArray = Invoker.ValidateParamsArray(start);
-			object returnItem = Invoker.PropertyGet(this, "Characters", paramsArray);
-			NetOffice.ExcelApi.Characters newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.Characters.LateBindingApiWrapperType) as NetOffice.ExcelApi.Characters;
-			return newObject;
+		{
+			return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Characters>(this, "Characters", NetOffice.ExcelApi.Characters.LateBindingApiWrapperType, start);
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15, 16
 		/// Alias for get_Characters
 		/// </summary>
-		/// <param name="start">optional object Start</param>
-		[SupportByVersionAttribute("Excel", 14,15,16)]
+		/// <param name="start">optional object start</param>
+		[SupportByVersion("Excel", 14,15,16), Redirect("get_Characters")]
 		public NetOffice.ExcelApi.Characters Characters(object start)
 		{
 			return get_Characters(start);
@@ -134,20 +133,22 @@ namespace NetOffice.ExcelApi
 
 	}
 
-	///<summary>
+	/// <summary>
 	/// Interface IDisplayFormat 
 	/// SupportByVersion Excel, 14,15,16
-	///</summary>
-	[SupportByVersionAttribute("Excel", 14,15,16)]
-	[EntityTypeAttribute(EntityType.IsInterface)]
-	public class IDisplayFormat : COMObject
+	/// </summary>
+	[SupportByVersion("Excel", 14,15,16)]
+	[EntityType(EntityType.IsInterface)]
+ 	public class IDisplayFormat : COMObject
 	{
 		#pragma warning disable
+
 		#region Type Information
 
         /// <summary>
         /// Instance Type
         /// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
         public override Type InstanceType
         {
             get
@@ -165,14 +166,20 @@ namespace NetOffice.ExcelApi
             {
                 if (null == _type)
                     _type = typeof(IDisplayFormat);
-                    
                 return _type;
             }
         }
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public IDisplayFormat(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -218,7 +225,7 @@ namespace NetOffice.ExcelApi
 		{
 		}
 		
-		/// <param name="progId">registered ProgID</param>
+		/// <param name="progId">registered progID</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public IDisplayFormat(string progId) : base(progId)
 		{
@@ -232,15 +239,12 @@ namespace NetOffice.ExcelApi
 		/// SupportByVersion Excel 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 14,15,16)]
+		[SupportByVersion("Excel", 14,15,16)]
 		public NetOffice.ExcelApi.Application Application
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				NetOffice.ExcelApi.Application newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.Application.LateBindingApiWrapperType) as NetOffice.ExcelApi.Application;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Application>(this, "Application", NetOffice.ExcelApi.Application.LateBindingApiWrapperType);
 			}
 		}
 
@@ -248,15 +252,12 @@ namespace NetOffice.ExcelApi
 		/// SupportByVersion Excel 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 14,15,16)]
+		[SupportByVersion("Excel", 14,15,16)]
 		public NetOffice.ExcelApi.Enums.XlCreator Creator
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Creator", paramsArray);
-				int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-				return (NetOffice.ExcelApi.Enums.XlCreator)intReturnItem;
+				return Factory.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlCreator>(this, "Creator");
 			}
 		}
 
@@ -265,15 +266,12 @@ namespace NetOffice.ExcelApi
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 14,15,16)]
+		[SupportByVersion("Excel", 14,15,16), ProxyResult]
 		public object Parent
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Parent", paramsArray);
-				ICOMObject newObject = Factory.CreateObjectFromComProxy(this,returnItem);
-				return newObject;
+				return Factory.ExecuteReferencePropertyGet(this, "Parent");
 			}
 		}
 
@@ -281,15 +279,12 @@ namespace NetOffice.ExcelApi
 		/// SupportByVersion Excel 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 14,15,16)]
+		[SupportByVersion("Excel", 14,15,16)]
 		public NetOffice.ExcelApi.Borders Borders
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Borders", paramsArray);
-				NetOffice.ExcelApi.Borders newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.Borders.LateBindingApiWrapperType) as NetOffice.ExcelApi.Borders;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Borders>(this, "Borders", NetOffice.ExcelApi.Borders.LateBindingApiWrapperType);
 			}
 		}
 
@@ -297,15 +292,12 @@ namespace NetOffice.ExcelApi
 		/// SupportByVersion Excel 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 14,15,16)]
+		[SupportByVersion("Excel", 14,15,16)]
 		public NetOffice.ExcelApi.Characters Characters
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Characters", paramsArray);
-				NetOffice.ExcelApi.Characters newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.Characters.LateBindingApiWrapperType) as NetOffice.ExcelApi.Characters;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Characters>(this, "Characters", NetOffice.ExcelApi.Characters.LateBindingApiWrapperType);
 			}
 		}
 
@@ -313,15 +305,12 @@ namespace NetOffice.ExcelApi
 		/// SupportByVersion Excel 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 14,15,16)]
+		[SupportByVersion("Excel", 14,15,16)]
 		public NetOffice.ExcelApi.Font Font
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Font", paramsArray);
-				NetOffice.ExcelApi.Font newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.Font.LateBindingApiWrapperType) as NetOffice.ExcelApi.Font;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Font>(this, "Font", NetOffice.ExcelApi.Font.LateBindingApiWrapperType);
 			}
 		}
 
@@ -329,22 +318,12 @@ namespace NetOffice.ExcelApi
 		/// SupportByVersion Excel 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 14,15,16)]
+		[SupportByVersion("Excel", 14,15,16)]
 		public object Style
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Style", paramsArray);
-				if((null != returnItem) && (returnItem is MarshalByRefObject))
-				{
-					ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
-					return newObject;
-				}
-				else
-				{
-					return  returnItem;
-				}
+				return Factory.ExecuteVariantPropertyGet(this, "Style");
 			}
 		}
 
@@ -352,22 +331,12 @@ namespace NetOffice.ExcelApi
 		/// SupportByVersion Excel 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 14,15,16)]
+		[SupportByVersion("Excel", 14,15,16)]
 		public object AddIndent
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "AddIndent", paramsArray);
-				if((null != returnItem) && (returnItem is MarshalByRefObject))
-				{
-					ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
-					return newObject;
-				}
-				else
-				{
-					return  returnItem;
-				}
+				return Factory.ExecuteVariantPropertyGet(this, "AddIndent");
 			}
 		}
 
@@ -375,22 +344,12 @@ namespace NetOffice.ExcelApi
 		/// SupportByVersion Excel 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 14,15,16)]
+		[SupportByVersion("Excel", 14,15,16)]
 		public object FormulaHidden
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "FormulaHidden", paramsArray);
-				if((null != returnItem) && (returnItem is MarshalByRefObject))
-				{
-					ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
-					return newObject;
-				}
-				else
-				{
-					return  returnItem;
-				}
+				return Factory.ExecuteVariantPropertyGet(this, "FormulaHidden");
 			}
 		}
 
@@ -398,22 +357,12 @@ namespace NetOffice.ExcelApi
 		/// SupportByVersion Excel 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 14,15,16)]
+		[SupportByVersion("Excel", 14,15,16)]
 		public object HorizontalAlignment
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "HorizontalAlignment", paramsArray);
-				if((null != returnItem) && (returnItem is MarshalByRefObject))
-				{
-					ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
-					return newObject;
-				}
-				else
-				{
-					return  returnItem;
-				}
+				return Factory.ExecuteVariantPropertyGet(this, "HorizontalAlignment");
 			}
 		}
 
@@ -421,22 +370,12 @@ namespace NetOffice.ExcelApi
 		/// SupportByVersion Excel 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 14,15,16)]
+		[SupportByVersion("Excel", 14,15,16)]
 		public object IndentLevel
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "IndentLevel", paramsArray);
-				if((null != returnItem) && (returnItem is MarshalByRefObject))
-				{
-					ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
-					return newObject;
-				}
-				else
-				{
-					return  returnItem;
-				}
+				return Factory.ExecuteVariantPropertyGet(this, "IndentLevel");
 			}
 		}
 
@@ -444,15 +383,12 @@ namespace NetOffice.ExcelApi
 		/// SupportByVersion Excel 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 14,15,16)]
+		[SupportByVersion("Excel", 14,15,16)]
 		public NetOffice.ExcelApi.Interior Interior
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Interior", paramsArray);
-				NetOffice.ExcelApi.Interior newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.Interior.LateBindingApiWrapperType) as NetOffice.ExcelApi.Interior;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Interior>(this, "Interior", NetOffice.ExcelApi.Interior.LateBindingApiWrapperType);
 			}
 		}
 
@@ -460,22 +396,12 @@ namespace NetOffice.ExcelApi
 		/// SupportByVersion Excel 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 14,15,16)]
+		[SupportByVersion("Excel", 14,15,16)]
 		public object Locked
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Locked", paramsArray);
-				if((null != returnItem) && (returnItem is MarshalByRefObject))
-				{
-					ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
-					return newObject;
-				}
-				else
-				{
-					return  returnItem;
-				}
+				return Factory.ExecuteVariantPropertyGet(this, "Locked");
 			}
 		}
 
@@ -483,22 +409,12 @@ namespace NetOffice.ExcelApi
 		/// SupportByVersion Excel 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 14,15,16)]
+		[SupportByVersion("Excel", 14,15,16)]
 		public object MergeCells
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "MergeCells", paramsArray);
-				if((null != returnItem) && (returnItem is MarshalByRefObject))
-				{
-					ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
-					return newObject;
-				}
-				else
-				{
-					return  returnItem;
-				}
+				return Factory.ExecuteVariantPropertyGet(this, "MergeCells");
 			}
 		}
 
@@ -506,22 +422,12 @@ namespace NetOffice.ExcelApi
 		/// SupportByVersion Excel 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 14,15,16)]
+		[SupportByVersion("Excel", 14,15,16)]
 		public object NumberFormat
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "NumberFormat", paramsArray);
-				if((null != returnItem) && (returnItem is MarshalByRefObject))
-				{
-					ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
-					return newObject;
-				}
-				else
-				{
-					return  returnItem;
-				}
+				return Factory.ExecuteVariantPropertyGet(this, "NumberFormat");
 			}
 		}
 
@@ -529,22 +435,12 @@ namespace NetOffice.ExcelApi
 		/// SupportByVersion Excel 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 14,15,16)]
+		[SupportByVersion("Excel", 14,15,16)]
 		public object NumberFormatLocal
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "NumberFormatLocal", paramsArray);
-				if((null != returnItem) && (returnItem is MarshalByRefObject))
-				{
-					ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
-					return newObject;
-				}
-				else
-				{
-					return  returnItem;
-				}
+				return Factory.ExecuteVariantPropertyGet(this, "NumberFormatLocal");
 			}
 		}
 
@@ -552,22 +448,12 @@ namespace NetOffice.ExcelApi
 		/// SupportByVersion Excel 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 14,15,16)]
+		[SupportByVersion("Excel", 14,15,16)]
 		public object Orientation
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Orientation", paramsArray);
-				if((null != returnItem) && (returnItem is MarshalByRefObject))
-				{
-					ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
-					return newObject;
-				}
-				else
-				{
-					return  returnItem;
-				}
+				return Factory.ExecuteVariantPropertyGet(this, "Orientation");
 			}
 		}
 
@@ -575,14 +461,12 @@ namespace NetOffice.ExcelApi
 		/// SupportByVersion Excel 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 14,15,16)]
+		[SupportByVersion("Excel", 14,15,16)]
 		public Int32 ReadingOrder
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "ReadingOrder", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "ReadingOrder");
 			}
 		}
 
@@ -590,22 +474,12 @@ namespace NetOffice.ExcelApi
 		/// SupportByVersion Excel 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 14,15,16)]
+		[SupportByVersion("Excel", 14,15,16)]
 		public object ShrinkToFit
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "ShrinkToFit", paramsArray);
-				if((null != returnItem) && (returnItem is MarshalByRefObject))
-				{
-					ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
-					return newObject;
-				}
-				else
-				{
-					return  returnItem;
-				}
+				return Factory.ExecuteVariantPropertyGet(this, "ShrinkToFit");
 			}
 		}
 
@@ -613,22 +487,12 @@ namespace NetOffice.ExcelApi
 		/// SupportByVersion Excel 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 14,15,16)]
+		[SupportByVersion("Excel", 14,15,16)]
 		public object VerticalAlignment
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "VerticalAlignment", paramsArray);
-				if((null != returnItem) && (returnItem is MarshalByRefObject))
-				{
-					ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
-					return newObject;
-				}
-				else
-				{
-					return  returnItem;
-				}
+				return Factory.ExecuteVariantPropertyGet(this, "VerticalAlignment");
 			}
 		}
 
@@ -636,22 +500,12 @@ namespace NetOffice.ExcelApi
 		/// SupportByVersion Excel 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 14,15,16)]
+		[SupportByVersion("Excel", 14,15,16)]
 		public object WrapText
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "WrapText", paramsArray);
-				if((null != returnItem) && (returnItem is MarshalByRefObject))
-				{
-					ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
-					return newObject;
-				}
-				else
-				{
-					return  returnItem;
-				}
+				return Factory.ExecuteVariantPropertyGet(this, "WrapText");
 			}
 		}
 
@@ -660,6 +514,7 @@ namespace NetOffice.ExcelApi
 		#region Methods
 
 		#endregion
+
 		#pragma warning restore
 	}
 }

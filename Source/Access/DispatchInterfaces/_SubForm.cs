@@ -1,23 +1,33 @@
 ﻿using System;
 using NetRuntimeSystem = System;
-using System.Runtime.InteropServices;
-using System.Runtime.CompilerServices;
 using System.ComponentModel;
-using System.Reflection;
-using System.Collections.Generic;
-using NetOffice;
+using NetOffice.Attributes;
+
 namespace NetOffice.AccessApi
 {
-	///<summary>
+	/// <summary>
 	/// DispatchInterface _SubForm 
 	/// SupportByVersion Access, 9,10,11,12,14,15,16
-	///</summary>
-	[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
-	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
-	public class _SubForm : NetOffice.OfficeApi.IAccessible
+	/// </summary>
+	[SupportByVersion("Access", 9,10,11,12,14,15,16)]
+	[EntityType(EntityType.IsDispatchInterface)]
+ 	public class _SubForm : NetOffice.OfficeApi.IAccessible
 	{
 		#pragma warning disable
+
 		#region Type Information
+
+		/// <summary>
+		/// Instance Type
+		/// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
+		public override Type InstanceType
+		{
+			get
+			{
+				return LateBindingApiWrapperType;
+			}
+		}
 
         private static Type _type;
 
@@ -28,14 +38,20 @@ namespace NetOffice.AccessApi
             {
                 if (null == _type)
                     _type = typeof(_SubForm);
-                    
                 return _type;
             }
         }
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public _SubForm(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -81,7 +97,7 @@ namespace NetOffice.AccessApi
 		{
 		}
 		
-		/// <param name="progId">registered ProgID</param>
+		/// <param name="progId">registered progID</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public _SubForm(string progId) : base(progId)
 		{
@@ -94,124 +110,103 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192071.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff192071.aspx </remarks>
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public NetOffice.AccessApi.Application Application
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				NetOffice.AccessApi.Application newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.AccessApi.Application.LateBindingApiWrapperType) as NetOffice.AccessApi.Application;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.AccessApi.Application>(this, "Application", NetOffice.AccessApi.Application.LateBindingApiWrapperType);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195532.aspx
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff195532.aspx </remarks>
+		[SupportByVersion("Access", 9,10,11,12,14,15,16), ProxyResult]
 		public object Parent
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Parent", paramsArray);
-				ICOMObject newObject = Factory.CreateObjectFromComProxy(this,returnItem);
-				return newObject;
+				return Factory.ExecuteReferencePropertyGet(this, "Parent");
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837017.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff837017.aspx </remarks>
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public NetOffice.AccessApi.Form Form
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Form", paramsArray);
-				NetOffice.AccessApi.Form newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.AccessApi.Form.LateBindingApiWrapperType) as NetOffice.AccessApi.Form;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.AccessApi.Form>(this, "Form", NetOffice.AccessApi.Form.LateBindingApiWrapperType);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff823159.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff823159.aspx </remarks>
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public NetOffice.AccessApi.Report Report
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Report", paramsArray);
-				NetOffice.AccessApi.Report newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.AccessApi.Report.LateBindingApiWrapperType) as NetOffice.AccessApi.Report;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.AccessApi.Report>(this, "Report", NetOffice.AccessApi.Report.LateBindingApiWrapperType);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff821725.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff821725.aspx </remarks>
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public NetOffice.AccessApi.Properties Properties
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Properties", paramsArray);
-				NetOffice.AccessApi.Properties newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.AccessApi.Properties.LateBindingApiWrapperType) as NetOffice.AccessApi.Properties;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.AccessApi.Properties>(this, "Properties", NetOffice.AccessApi.Properties.LateBindingApiWrapperType);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845833.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff845833.aspx </remarks>
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public NetOffice.AccessApi.Controls Controls
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Controls", paramsArray);
-				NetOffice.AccessApi.Controls newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.AccessApi.Controls.LateBindingApiWrapperType) as NetOffice.AccessApi.Controls;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.AccessApi.Controls>(this, "Controls", NetOffice.AccessApi.Controls.LateBindingApiWrapperType);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192322.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff192322.aspx </remarks>
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public string EventProcPrefix
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "EventProcPrefix", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "EventProcPrefix");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "EventProcPrefix", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "EventProcPrefix", value);
 			}
 		}
 
@@ -219,461 +214,395 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public string _Name
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "_Name", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "_Name");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "_Name", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "_Name", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192906.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff192906.aspx </remarks>
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public byte ControlType
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "ControlType", paramsArray);
-				return NetRuntimeSystem.Convert.ToByte(returnItem);
+				return Factory.ExecuteBytePropertyGet(this, "ControlType");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "ControlType", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "ControlType", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822769.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff822769.aspx </remarks>
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public string SourceObject
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "SourceObject", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "SourceObject");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "SourceObject", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "SourceObject", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195880.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff195880.aspx </remarks>
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public string LinkChildFields
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "LinkChildFields", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "LinkChildFields");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "LinkChildFields", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "LinkChildFields", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822089.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff822089.aspx </remarks>
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public string LinkMasterFields
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "LinkMasterFields", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "LinkMasterFields");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "LinkMasterFields", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "LinkMasterFields", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195484.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff195484.aspx </remarks>
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public string StatusBarText
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "StatusBarText", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "StatusBarText");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "StatusBarText", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "StatusBarText", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195147.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff195147.aspx </remarks>
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public bool Visible
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Visible", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "Visible");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "Visible", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "Visible", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195577.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff195577.aspx </remarks>
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public byte DisplayWhen
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "DisplayWhen", paramsArray);
-				return NetRuntimeSystem.Convert.ToByte(returnItem);
+				return Factory.ExecuteBytePropertyGet(this, "DisplayWhen");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "DisplayWhen", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "DisplayWhen", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194931.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194931.aspx </remarks>
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public bool Enabled
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Enabled", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "Enabled");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "Enabled", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "Enabled", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192278.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff192278.aspx </remarks>
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public bool Locked
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Locked", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "Locked");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "Locked", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "Locked", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845696.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff845696.aspx </remarks>
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public bool TabStop
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "TabStop", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "TabStop");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "TabStop", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "TabStop", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff834744.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff834744.aspx </remarks>
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public Int16 TabIndex
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "TabIndex", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt16(returnItem);
+				return Factory.ExecuteInt16PropertyGet(this, "TabIndex");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "TabIndex", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "TabIndex", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835078.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835078.aspx </remarks>
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public bool CanGrow
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "CanGrow", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "CanGrow");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "CanGrow", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "CanGrow", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194152.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194152.aspx </remarks>
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public bool CanShrink
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "CanShrink", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "CanShrink");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "CanShrink", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "CanShrink", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197328.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff197328.aspx </remarks>
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public Int16 Left
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Left", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt16(returnItem);
+				return Factory.ExecuteInt16PropertyGet(this, "Left");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "Left", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "Left", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff823127.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff823127.aspx </remarks>
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public Int16 Top
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Top", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt16(returnItem);
+				return Factory.ExecuteInt16PropertyGet(this, "Top");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "Top", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "Top", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835115.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835115.aspx </remarks>
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public Int16 Width
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Width", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt16(returnItem);
+				return Factory.ExecuteInt16PropertyGet(this, "Width");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "Width", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "Width", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835961.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835961.aspx </remarks>
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public Int16 Height
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Height", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt16(returnItem);
+				return Factory.ExecuteInt16PropertyGet(this, "Height");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "Height", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "Height", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822028.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff822028.aspx </remarks>
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public byte SpecialEffect
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "SpecialEffect", paramsArray);
-				return NetRuntimeSystem.Convert.ToByte(returnItem);
+				return Factory.ExecuteBytePropertyGet(this, "SpecialEffect");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "SpecialEffect", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "SpecialEffect", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff834797.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff834797.aspx </remarks>
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public byte BorderStyle
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "BorderStyle", paramsArray);
-				return NetRuntimeSystem.Convert.ToByte(returnItem);
+				return Factory.ExecuteBytePropertyGet(this, "BorderStyle");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "BorderStyle", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "BorderStyle", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845759.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff845759.aspx </remarks>
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public byte OldBorderStyle
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "OldBorderStyle", paramsArray);
-				return NetRuntimeSystem.Convert.ToByte(returnItem);
+				return Factory.ExecuteBytePropertyGet(this, "OldBorderStyle");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "OldBorderStyle", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "OldBorderStyle", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845027.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff845027.aspx </remarks>
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public byte BorderWidth
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "BorderWidth", paramsArray);
-				return NetRuntimeSystem.Convert.ToByte(returnItem);
+				return Factory.ExecuteBytePropertyGet(this, "BorderWidth");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "BorderWidth", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "BorderWidth", value);
 			}
 		}
 
@@ -681,167 +610,143 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public byte BorderLineStyle
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "BorderLineStyle", paramsArray);
-				return NetRuntimeSystem.Convert.ToByte(returnItem);
+				return Factory.ExecuteBytePropertyGet(this, "BorderLineStyle");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "BorderLineStyle", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "BorderLineStyle", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192271.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff192271.aspx </remarks>
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public Int32 BorderColor
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "BorderColor", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "BorderColor");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "BorderColor", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "BorderColor", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193522.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff193522.aspx </remarks>
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public bool AutoLabel
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "AutoLabel", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "AutoLabel");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "AutoLabel", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "AutoLabel", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197652.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff197652.aspx </remarks>
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public bool AddColon
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "AddColon", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "AddColon");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "AddColon", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "AddColon", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835370.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835370.aspx </remarks>
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public Int16 LabelX
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "LabelX", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt16(returnItem);
+				return Factory.ExecuteInt16PropertyGet(this, "LabelX");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "LabelX", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "LabelX", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193592.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff193592.aspx </remarks>
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public Int16 LabelY
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "LabelY", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt16(returnItem);
+				return Factory.ExecuteInt16PropertyGet(this, "LabelY");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "LabelY", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "LabelY", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff821796.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff821796.aspx </remarks>
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public byte LabelAlign
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "LabelAlign", paramsArray);
-				return NetRuntimeSystem.Convert.ToByte(returnItem);
+				return Factory.ExecuteBytePropertyGet(this, "LabelAlign");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "LabelAlign", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "LabelAlign", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845132.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff845132.aspx </remarks>
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public Int16 Section
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Section", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt16(returnItem);
+				return Factory.ExecuteInt16PropertyGet(this, "Section");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "Section", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "Section", value);
 			}
 		}
 
@@ -849,147 +754,126 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public string ControlName
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "ControlName", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "ControlName");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "ControlName", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "ControlName", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196484.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff196484.aspx </remarks>
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public string Tag
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Tag", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "Tag");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "Tag", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "Tag", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff823059.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff823059.aspx </remarks>
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public bool IsVisible
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "IsVisible", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "IsVisible");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "IsVisible", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "IsVisible", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845866.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff845866.aspx </remarks>
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public bool InSelection
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "InSelection", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "InSelection");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "InSelection", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "InSelection", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192506.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff192506.aspx </remarks>
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public string OnEnter
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "OnEnter", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "OnEnter");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "OnEnter", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "OnEnter", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195452.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff195452.aspx </remarks>
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public string OnExit
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "OnExit", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "OnExit");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "OnExit", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "OnExit", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835347.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835347.aspx </remarks>
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public string Name
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Name", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "Name");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "Name", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "Name", value);
 			}
 		}
 
@@ -997,20 +881,17 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Access", 12,14,15,16)]
+		[SupportByVersion("Access", 12,14,15,16)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public string OnEnterMacro
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "OnEnterMacro", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "OnEnterMacro");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "OnEnterMacro", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "OnEnterMacro", value);
 			}
 		}
 
@@ -1018,517 +899,441 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Access", 12,14,15,16)]
+		[SupportByVersion("Access", 12,14,15,16)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public string OnExitMacro
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "OnExitMacro", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "OnExitMacro");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "OnExitMacro", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "OnExitMacro", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196990.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Access", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff196990.aspx </remarks>
+		[SupportByVersion("Access", 12,14,15,16)]
 		public NetOffice.AccessApi.Enums.AcLayoutType Layout
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Layout", paramsArray);
-				int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-				return (NetOffice.AccessApi.Enums.AcLayoutType)intReturnItem;
+				return Factory.ExecuteEnumPropertyGet<NetOffice.AccessApi.Enums.AcLayoutType>(this, "Layout");
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194013.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Access", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194013.aspx </remarks>
+		[SupportByVersion("Access", 12,14,15,16)]
 		public Int16 LeftPadding
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "LeftPadding", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt16(returnItem);
+				return Factory.ExecuteInt16PropertyGet(this, "LeftPadding");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "LeftPadding", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "LeftPadding", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197093.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Access", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff197093.aspx </remarks>
+		[SupportByVersion("Access", 12,14,15,16)]
 		public Int16 TopPadding
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "TopPadding", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt16(returnItem);
+				return Factory.ExecuteInt16PropertyGet(this, "TopPadding");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "TopPadding", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "TopPadding", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845580.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Access", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff845580.aspx </remarks>
+		[SupportByVersion("Access", 12,14,15,16)]
 		public Int16 RightPadding
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "RightPadding", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt16(returnItem);
+				return Factory.ExecuteInt16PropertyGet(this, "RightPadding");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "RightPadding", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "RightPadding", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff834763.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Access", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff834763.aspx </remarks>
+		[SupportByVersion("Access", 12,14,15,16)]
 		public Int16 BottomPadding
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "BottomPadding", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt16(returnItem);
+				return Factory.ExecuteInt16PropertyGet(this, "BottomPadding");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "BottomPadding", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "BottomPadding", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192707.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Access", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff192707.aspx </remarks>
+		[SupportByVersion("Access", 12,14,15,16)]
 		public byte GridlineStyleLeft
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "GridlineStyleLeft", paramsArray);
-				return NetRuntimeSystem.Convert.ToByte(returnItem);
+				return Factory.ExecuteBytePropertyGet(this, "GridlineStyleLeft");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "GridlineStyleLeft", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "GridlineStyleLeft", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193157.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Access", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff193157.aspx </remarks>
+		[SupportByVersion("Access", 12,14,15,16)]
 		public byte GridlineStyleTop
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "GridlineStyleTop", paramsArray);
-				return NetRuntimeSystem.Convert.ToByte(returnItem);
+				return Factory.ExecuteBytePropertyGet(this, "GridlineStyleTop");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "GridlineStyleTop", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "GridlineStyleTop", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195997.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Access", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff195997.aspx </remarks>
+		[SupportByVersion("Access", 12,14,15,16)]
 		public byte GridlineStyleRight
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "GridlineStyleRight", paramsArray);
-				return NetRuntimeSystem.Convert.ToByte(returnItem);
+				return Factory.ExecuteBytePropertyGet(this, "GridlineStyleRight");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "GridlineStyleRight", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "GridlineStyleRight", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845063.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Access", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff845063.aspx </remarks>
+		[SupportByVersion("Access", 12,14,15,16)]
 		public byte GridlineStyleBottom
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "GridlineStyleBottom", paramsArray);
-				return NetRuntimeSystem.Convert.ToByte(returnItem);
+				return Factory.ExecuteBytePropertyGet(this, "GridlineStyleBottom");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "GridlineStyleBottom", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "GridlineStyleBottom", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192013.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Access", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff192013.aspx </remarks>
+		[SupportByVersion("Access", 12,14,15,16)]
 		public byte GridlineWidthLeft
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "GridlineWidthLeft", paramsArray);
-				return NetRuntimeSystem.Convert.ToByte(returnItem);
+				return Factory.ExecuteBytePropertyGet(this, "GridlineWidthLeft");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "GridlineWidthLeft", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "GridlineWidthLeft", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822763.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Access", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff822763.aspx </remarks>
+		[SupportByVersion("Access", 12,14,15,16)]
 		public byte GridlineWidthTop
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "GridlineWidthTop", paramsArray);
-				return NetRuntimeSystem.Convert.ToByte(returnItem);
+				return Factory.ExecuteBytePropertyGet(this, "GridlineWidthTop");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "GridlineWidthTop", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "GridlineWidthTop", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192287.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Access", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff192287.aspx </remarks>
+		[SupportByVersion("Access", 12,14,15,16)]
 		public byte GridlineWidthRight
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "GridlineWidthRight", paramsArray);
-				return NetRuntimeSystem.Convert.ToByte(returnItem);
+				return Factory.ExecuteBytePropertyGet(this, "GridlineWidthRight");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "GridlineWidthRight", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "GridlineWidthRight", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845205.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Access", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff845205.aspx </remarks>
+		[SupportByVersion("Access", 12,14,15,16)]
 		public byte GridlineWidthBottom
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "GridlineWidthBottom", paramsArray);
-				return NetRuntimeSystem.Convert.ToByte(returnItem);
+				return Factory.ExecuteBytePropertyGet(this, "GridlineWidthBottom");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "GridlineWidthBottom", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "GridlineWidthBottom", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193507.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Access", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff193507.aspx </remarks>
+		[SupportByVersion("Access", 12,14,15,16)]
 		public Int32 GridlineColor
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "GridlineColor", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "GridlineColor");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "GridlineColor", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "GridlineColor", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193956.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Access", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff193956.aspx </remarks>
+		[SupportByVersion("Access", 12,14,15,16)]
 		public NetOffice.AccessApi.Enums.AcHorizontalAnchor HorizontalAnchor
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "HorizontalAnchor", paramsArray);
-				int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-				return (NetOffice.AccessApi.Enums.AcHorizontalAnchor)intReturnItem;
+				return Factory.ExecuteEnumPropertyGet<NetOffice.AccessApi.Enums.AcHorizontalAnchor>(this, "HorizontalAnchor");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "HorizontalAnchor", paramsArray);
+				Factory.ExecuteEnumPropertySet(this, "HorizontalAnchor", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff834806.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Access", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff834806.aspx </remarks>
+		[SupportByVersion("Access", 12,14,15,16)]
 		public NetOffice.AccessApi.Enums.AcVerticalAnchor VerticalAnchor
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "VerticalAnchor", paramsArray);
-				int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-				return (NetOffice.AccessApi.Enums.AcVerticalAnchor)intReturnItem;
+				return Factory.ExecuteEnumPropertyGet<NetOffice.AccessApi.Enums.AcVerticalAnchor>(this, "VerticalAnchor");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "VerticalAnchor", paramsArray);
+				Factory.ExecuteEnumPropertySet(this, "VerticalAnchor", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194776.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Access", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194776.aspx </remarks>
+		[SupportByVersion("Access", 12,14,15,16)]
 		public bool FilterOnEmptyMaster
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "FilterOnEmptyMaster", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "FilterOnEmptyMaster");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "FilterOnEmptyMaster", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "FilterOnEmptyMaster", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836307.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Access", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff836307.aspx </remarks>
+		[SupportByVersion("Access", 12,14,15,16)]
 		public Int32 LayoutID
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "LayoutID", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "LayoutID");
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195235.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Access", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff195235.aspx </remarks>
+		[SupportByVersion("Access", 14,15,16)]
 		public Int32 BorderThemeColorIndex
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "BorderThemeColorIndex", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "BorderThemeColorIndex");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "BorderThemeColorIndex", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "BorderThemeColorIndex", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196778.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Access", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff196778.aspx </remarks>
+		[SupportByVersion("Access", 14,15,16)]
 		public Single BorderTint
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "BorderTint", paramsArray);
-				return NetRuntimeSystem.Convert.ToSingle(returnItem);
+				return Factory.ExecuteSinglePropertyGet(this, "BorderTint");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "BorderTint", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "BorderTint", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195228.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Access", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff195228.aspx </remarks>
+		[SupportByVersion("Access", 14,15,16)]
 		public Single BorderShade
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "BorderShade", paramsArray);
-				return NetRuntimeSystem.Convert.ToSingle(returnItem);
+				return Factory.ExecuteSinglePropertyGet(this, "BorderShade");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "BorderShade", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "BorderShade", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff821715.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Access", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff821715.aspx </remarks>
+		[SupportByVersion("Access", 14,15,16)]
 		public Int32 GridlineThemeColorIndex
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "GridlineThemeColorIndex", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "GridlineThemeColorIndex");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "GridlineThemeColorIndex", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "GridlineThemeColorIndex", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196422.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Access", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff196422.aspx </remarks>
+		[SupportByVersion("Access", 14,15,16)]
 		public Single GridlineTint
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "GridlineTint", paramsArray);
-				return NetRuntimeSystem.Convert.ToSingle(returnItem);
+				return Factory.ExecuteSinglePropertyGet(this, "GridlineTint");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "GridlineTint", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "GridlineTint", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192870.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Access", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff192870.aspx </remarks>
+		[SupportByVersion("Access", 14,15,16)]
 		public Single GridlineShade
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "GridlineShade", paramsArray);
-				return NetRuntimeSystem.Convert.ToSingle(returnItem);
+				return Factory.ExecuteSinglePropertyGet(this, "GridlineShade");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "GridlineShade", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "GridlineShade", value);
 			}
 		}
 
@@ -1538,167 +1343,144 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197017.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff197017.aspx </remarks>
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public void SizeToFit()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "SizeToFit", paramsArray);
+			 Factory.ExecuteMethod(this, "SizeToFit");
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
 		/// <param name="bstrExpr">string bstrExpr</param>
 		/// <param name="ppsa">optional object[] ppsa</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public object _Evaluate(string bstrExpr, object[] ppsa)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(bstrExpr, (object)ppsa);
-			object returnItem = Invoker.MethodReturn(this, "_Evaluate", paramsArray);
-			if((null != returnItem) && (returnItem is MarshalByRefObject))
-			{
-				ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
-				return newObject;
-			}
-			else
-			{
-				return  returnItem;
-			}
-		}
+            object[] paramsArray = Invoker.ValidateParamsArray(bstrExpr, (object)ppsa);
+            object returnItem = Invoker.MethodReturn(this, "_Evaluate", paramsArray);
+            if ((null != returnItem) && (returnItem is MarshalByRefObject))
+            {
+                ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
+                return newObject;
+            }
+            else
+            {
+                return returnItem;
+            }
+        }
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
 		/// <param name="bstrExpr">string bstrExpr</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public object _Evaluate(string bstrExpr)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(bstrExpr);
-			object returnItem = Invoker.MethodReturn(this, "_Evaluate", paramsArray);
-			if((null != returnItem) && (returnItem is MarshalByRefObject))
-			{
-				ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
-				return newObject;
-			}
-			else
-			{
-				return  returnItem;
-			}
+			return Factory.ExecuteVariantMethodGet(this, "_Evaluate", bstrExpr);
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public void Goto()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "Goto", paramsArray);
+			 Factory.ExecuteMethod(this, "Goto");
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836374.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff836374.aspx </remarks>
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public void SetFocus()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "SetFocus", paramsArray);
+			 Factory.ExecuteMethod(this, "SetFocus");
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff834409.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff834409.aspx </remarks>
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public void Requery()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "Requery", paramsArray);
+			 Factory.ExecuteMethod(this, "Requery");
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194833.aspx
 		/// </summary>
-		/// <param name="left">object Left</param>
-		/// <param name="top">optional object Top</param>
-		/// <param name="width">optional object Width</param>
-		/// <param name="height">optional object Height</param>
-		[SupportByVersionAttribute("Access", 10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194833.aspx </remarks>
+		/// <param name="left">object left</param>
+		/// <param name="top">optional object top</param>
+		/// <param name="width">optional object width</param>
+		/// <param name="height">optional object height</param>
+		[SupportByVersion("Access", 10,11,12,14,15,16)]
 		public void Move(object left, object top, object width, object height)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(left, top, width, height);
-			Invoker.Method(this, "Move", paramsArray);
+			 Factory.ExecuteMethod(this, "Move", left, top, width, height);
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194833.aspx
 		/// </summary>
-		/// <param name="left">object Left</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194833.aspx </remarks>
+		/// <param name="left">object left</param>
+		[CustomMethod]
+		[SupportByVersion("Access", 10,11,12,14,15,16)]
 		public void Move(object left)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(left);
-			Invoker.Method(this, "Move", paramsArray);
+			 Factory.ExecuteMethod(this, "Move", left);
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194833.aspx
 		/// </summary>
-		/// <param name="left">object Left</param>
-		/// <param name="top">optional object Top</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194833.aspx </remarks>
+		/// <param name="left">object left</param>
+		/// <param name="top">optional object top</param>
+		[CustomMethod]
+		[SupportByVersion("Access", 10,11,12,14,15,16)]
 		public void Move(object left, object top)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(left, top);
-			Invoker.Method(this, "Move", paramsArray);
+			 Factory.ExecuteMethod(this, "Move", left, top);
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194833.aspx
 		/// </summary>
-		/// <param name="left">object Left</param>
-		/// <param name="top">optional object Top</param>
-		/// <param name="width">optional object Width</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194833.aspx </remarks>
+		/// <param name="left">object left</param>
+		/// <param name="top">optional object top</param>
+		/// <param name="width">optional object width</param>
+		[CustomMethod]
+		[SupportByVersion("Access", 10,11,12,14,15,16)]
 		public void Move(object left, object top, object width)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(left, top, width);
-			Invoker.Method(this, "Move", paramsArray);
+			 Factory.ExecuteMethod(this, "Move", left, top, width);
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
 		/// <param name="dispid">Int32 dispid</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("Access", 11,12,14,15,16)]
+		[SupportByVersion("Access", 11,12,14,15,16)]
 		public bool IsMemberSafe(Int32 dispid)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(dispid);
-			object returnItem = Invoker.MethodReturn(this, "IsMemberSafe", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return Factory.ExecuteBoolMethodGet(this, "IsMemberSafe", dispid);
 		}
 
 		#endregion
+
 		#pragma warning restore
 	}
 }

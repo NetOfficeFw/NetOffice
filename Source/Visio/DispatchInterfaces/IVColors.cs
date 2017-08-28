@@ -1,24 +1,35 @@
-﻿using System;
-using NetRuntimeSystem = System;
-using System.Runtime.InteropServices;
-using System.Runtime.CompilerServices;
-using System.ComponentModel;
-using System.Reflection;
-using System.Collections.Generic;
 using System.Collections;
-using NetOffice;
+using System.Collections.Generic;
+using System;
+using NetRuntimeSystem = System;
+using System.ComponentModel;
+using NetOffice.Attributes;
+
 namespace NetOffice.VisioApi
 {
-	///<summary>
+	/// <summary>
 	/// DispatchInterface IVColors 
 	/// SupportByVersion Visio, 11,12,14,15,16
-	///</summary>
-	[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
-	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
-	public class IVColors : COMObject ,IEnumerable<NetOffice.VisioApi.IVColor>
+	/// </summary>
+	[SupportByVersion("Visio", 11,12,14,15,16)]
+	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "Item")]
+	public class IVColors : COMObject , IEnumerable<NetOffice.VisioApi.IVColor>
 	{
 		#pragma warning disable
+
 		#region Type Information
+
+		/// <summary>
+		/// Instance Type
+		/// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
+		public override Type InstanceType
+		{
+			get
+			{
+				return LateBindingApiWrapperType;
+			}
+		}
 
         private static Type _type;
 
@@ -29,14 +40,20 @@ namespace NetOffice.VisioApi
             {
                 if (null == _type)
                     _type = typeof(IVColors);
-                    
                 return _type;
             }
         }
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public IVColors(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -82,7 +99,7 @@ namespace NetOffice.VisioApi
 		{
 		}
 		
-		/// <param name="progId">registered ProgID</param>
+		/// <param name="progId">registered progID</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public IVColors(string progId) : base(progId)
 		{
@@ -96,15 +113,13 @@ namespace NetOffice.VisioApi
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
+		[SupportByVersion("Visio", 11,12,14,15,16)]
+		[BaseResult]
 		public NetOffice.VisioApi.IVApplication Application
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				NetOffice.VisioApi.IVApplication newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVApplication;
-				return newObject;
+				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.VisioApi.IVApplication>(this, "Application");
 			}
 		}
 
@@ -112,15 +127,13 @@ namespace NetOffice.VisioApi
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
+		[SupportByVersion("Visio", 11,12,14,15,16)]
+		[BaseResult]
 		public NetOffice.VisioApi.IVDocument Document
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Document", paramsArray);
-				NetOffice.VisioApi.IVDocument newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVDocument;
-				return newObject;
+				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.VisioApi.IVDocument>(this, "Document");
 			}
 		}
 
@@ -128,15 +141,13 @@ namespace NetOffice.VisioApi
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
+		[SupportByVersion("Visio", 11,12,14,15,16)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public Int16 Count16
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Count16", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt16(returnItem);
+				return Factory.ExecuteInt16PropertyGet(this, "Count16");
 			}
 		}
 
@@ -144,23 +155,20 @@ namespace NetOffice.VisioApi
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <param name="index">Int16 Index</param>
-		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
+		/// <param name="index">Int16 index</param>
+		[SupportByVersion("Visio", 11,12,14,15,16)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public NetOffice.VisioApi.IVColor get_Item16(Int16 index)
-		{		
-			object[] paramsArray = Invoker.ValidateParamsArray(index);
-			object returnItem = Invoker.PropertyGet(this, "Item16", paramsArray);
-			NetOffice.VisioApi.IVColor newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVColor;
-			return newObject;
+		{
+			return Factory.ExecuteKnownReferencePropertyGet<NetOffice.VisioApi.IVColor>(this, "Item16", NetOffice.VisioApi.IVColor.LateBindingApiWrapperType, index);
 		}
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// Alias for get_Item16
 		/// </summary>
-		/// <param name="index">Int16 Index</param>
-		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
+		/// <param name="index">Int16 index</param>
+		[SupportByVersion("Visio", 11,12,14,15,16), Redirect("get_Item16")]
 		public NetOffice.VisioApi.IVColor Item16(Int16 index)
 		{
 			return get_Item16(index);
@@ -170,14 +178,12 @@ namespace NetOffice.VisioApi
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
+		[SupportByVersion("Visio", 11,12,14,15,16)]
 		public Int16 ObjectType
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "ObjectType", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt16(returnItem);
+				return Factory.ExecuteInt16PropertyGet(this, "ObjectType");
 			}
 		}
 
@@ -185,14 +191,12 @@ namespace NetOffice.VisioApi
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
+		[SupportByVersion("Visio", 11,12,14,15,16)]
 		public Int16 Stat
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Stat", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt16(returnItem);
+				return Factory.ExecuteInt16PropertyGet(this, "Stat");
 			}
 		}
 
@@ -200,17 +204,15 @@ namespace NetOffice.VisioApi
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <param name="index">Int32 Index</param>
-		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
-		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
+		/// <param name="index">Int32 index</param>
+		[SupportByVersion("Visio", 11,12,14,15,16)]
+		[BaseResult]
+		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
 		public NetOffice.VisioApi.IVColor this[Int32 index]
 		{
 			get
-{			
-			object[] paramsArray = Invoker.ValidateParamsArray(index);
-			object returnItem = Invoker.PropertyGet(this, "Item", paramsArray);
-			NetOffice.VisioApi.IVColor newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVColor;
-			return newObject;
+			{
+				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.VisioApi.IVColor>(this, "Item", index);
 			}
 		}
 
@@ -218,50 +220,49 @@ namespace NetOffice.VisioApi
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
+		[SupportByVersion("Visio", 11,12,14,15,16)]
 		public Int32 Count
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Count", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "Count");
 			}
 		}
 
-		#endregion
+        #endregion
 
-		#region Methods
+        #region Methods
 
-		#endregion
+        #endregion
 
-       #region IEnumerable<NetOffice.VisioApi.IVColor> Member
-        
+        #region IEnumerable<NetOffice.VisioApi.IVColor> Member
+
         /// <summary>
-		/// SupportByVersionAttribute Visio, 11,12,14,15,16
-		/// </summary>
-		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
-       public IEnumerator<NetOffice.VisioApi.IVColor> GetEnumerator()  
-       {
-           NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
-           foreach (NetOffice.VisioApi.IVColor item in innerEnumerator)
-               yield return item;
-       }
+        /// SupportByVersion Visio, 11,12,14,15,16
+        /// </summary>
+        [SupportByVersion("Visio", 11, 12, 14, 15, 16)]
+        public IEnumerator<NetOffice.VisioApi.IVColor> GetEnumerator()
+        {
+            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
+            foreach (NetOffice.VisioApi.IVColor item in innerEnumerator)
+                yield return item;
+        }
 
-       #endregion
-          
-		#region IEnumerable Members
-       
-		/// <summary>
-		/// SupportByVersionAttribute Visio, 11,12,14,15,16
-		/// </summary>
-		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
+        #endregion
+
+        #region IEnumerable Members
+
+        /// <summary>
+        /// SupportByVersion Visio, 11,12,14,15,16
+        /// </summary>
+        [SupportByVersion("Visio", 11,12,14,15,16)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
 			return NetOffice.Utils.GetProxyEnumeratorAsProperty(this);
 		}
 
 		#endregion
+
 		#pragma warning restore
 	}
 }

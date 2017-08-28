@@ -1,23 +1,33 @@
 ﻿using System;
 using NetRuntimeSystem = System;
-using System.Runtime.InteropServices;
-using System.Runtime.CompilerServices;
 using System.ComponentModel;
-using System.Reflection;
-using System.Collections.Generic;
-using NetOffice;
+using NetOffice.Attributes;
+
 namespace NetOffice.PublisherApi
 {
-	///<summary>
+	/// <summary>
 	/// DispatchInterface MailMergeDataSource 
 	/// SupportByVersion Publisher, 14,15,16
-	///</summary>
-	[SupportByVersionAttribute("Publisher", 14,15,16)]
-	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
-	public class MailMergeDataSource : COMObject
+	/// </summary>
+	[SupportByVersion("Publisher", 14,15,16)]
+	[EntityType(EntityType.IsDispatchInterface)]
+ 	public class MailMergeDataSource : COMObject
 	{
 		#pragma warning disable
+
 		#region Type Information
+
+		/// <summary>
+		/// Instance Type
+		/// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
+		public override Type InstanceType
+		{
+			get
+			{
+				return LateBindingApiWrapperType;
+			}
+		}
 
         private static Type _type;
 
@@ -28,14 +38,20 @@ namespace NetOffice.PublisherApi
             {
                 if (null == _type)
                     _type = typeof(MailMergeDataSource);
-                    
                 return _type;
             }
         }
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public MailMergeDataSource(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -81,7 +97,7 @@ namespace NetOffice.PublisherApi
 		{
 		}
 		
-		/// <param name="progId">registered ProgID</param>
+		/// <param name="progId">registered progID</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public MailMergeDataSource(string progId) : base(progId)
 		{
@@ -95,15 +111,12 @@ namespace NetOffice.PublisherApi
 		/// SupportByVersion Publisher 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		[SupportByVersion("Publisher", 14,15,16)]
 		public NetOffice.PublisherApi.Application Application
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				NetOffice.PublisherApi.Application newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.PublisherApi.Application.LateBindingApiWrapperType) as NetOffice.PublisherApi.Application;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.PublisherApi.Application>(this, "Application", NetOffice.PublisherApi.Application.LateBindingApiWrapperType);
 			}
 		}
 
@@ -112,15 +125,12 @@ namespace NetOffice.PublisherApi
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		[SupportByVersion("Publisher", 14,15,16), ProxyResult]
 		public object Parent
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Parent", paramsArray);
-				ICOMObject newObject = Factory.CreateObjectFromComProxy(this,returnItem);
-				return newObject;
+				return Factory.ExecuteReferencePropertyGet(this, "Parent");
 			}
 		}
 
@@ -128,19 +138,16 @@ namespace NetOffice.PublisherApi
 		/// SupportByVersion Publisher 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		[SupportByVersion("Publisher", 14,15,16)]
 		public Int32 ActiveRecord
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "ActiveRecord", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "ActiveRecord");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "ActiveRecord", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "ActiveRecord", value);
 			}
 		}
 
@@ -148,14 +155,12 @@ namespace NetOffice.PublisherApi
 		/// SupportByVersion Publisher 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		[SupportByVersion("Publisher", 14,15,16)]
 		public string ConnectString
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "ConnectString", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "ConnectString");
 			}
 		}
 
@@ -163,15 +168,12 @@ namespace NetOffice.PublisherApi
 		/// SupportByVersion Publisher 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		[SupportByVersion("Publisher", 14,15,16)]
 		public NetOffice.PublisherApi.MailMergeDataFields DataFields
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "DataFields", paramsArray);
-				NetOffice.PublisherApi.MailMergeDataFields newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.PublisherApi.MailMergeDataFields.LateBindingApiWrapperType) as NetOffice.PublisherApi.MailMergeDataFields;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.PublisherApi.MailMergeDataFields>(this, "DataFields", NetOffice.PublisherApi.MailMergeDataFields.LateBindingApiWrapperType);
 			}
 		}
 
@@ -179,15 +181,12 @@ namespace NetOffice.PublisherApi
 		/// SupportByVersion Publisher 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		[SupportByVersion("Publisher", 14,15,16)]
 		public NetOffice.PublisherApi.MailMergeFilters Filters
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Filters", paramsArray);
-				NetOffice.PublisherApi.MailMergeFilters newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.PublisherApi.MailMergeFilters.LateBindingApiWrapperType) as NetOffice.PublisherApi.MailMergeFilters;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.PublisherApi.MailMergeFilters>(this, "Filters", NetOffice.PublisherApi.MailMergeFilters.LateBindingApiWrapperType);
 			}
 		}
 
@@ -195,19 +194,16 @@ namespace NetOffice.PublisherApi
 		/// SupportByVersion Publisher 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		[SupportByVersion("Publisher", 14,15,16)]
 		public Int32 FirstRecord
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "FirstRecord", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "FirstRecord");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "FirstRecord", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "FirstRecord", value);
 			}
 		}
 
@@ -215,19 +211,16 @@ namespace NetOffice.PublisherApi
 		/// SupportByVersion Publisher 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		[SupportByVersion("Publisher", 14,15,16)]
 		public bool Included
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Included", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "Included");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "Included", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "Included", value);
 			}
 		}
 
@@ -235,19 +228,16 @@ namespace NetOffice.PublisherApi
 		/// SupportByVersion Publisher 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		[SupportByVersion("Publisher", 14,15,16)]
 		public bool InvalidAddress
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "InvalidAddress", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "InvalidAddress");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "InvalidAddress", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "InvalidAddress", value);
 			}
 		}
 
@@ -255,19 +245,16 @@ namespace NetOffice.PublisherApi
 		/// SupportByVersion Publisher 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		[SupportByVersion("Publisher", 14,15,16)]
 		public string InvalidComments
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "InvalidComments", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "InvalidComments");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "InvalidComments", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "InvalidComments", value);
 			}
 		}
 
@@ -275,19 +262,16 @@ namespace NetOffice.PublisherApi
 		/// SupportByVersion Publisher 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		[SupportByVersion("Publisher", 14,15,16)]
 		public Int32 LastRecord
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "LastRecord", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "LastRecord");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "LastRecord", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "LastRecord", value);
 			}
 		}
 
@@ -295,15 +279,12 @@ namespace NetOffice.PublisherApi
 		/// SupportByVersion Publisher 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		[SupportByVersion("Publisher", 14,15,16)]
 		public NetOffice.PublisherApi.MailMergeMappedDataFields MappedDataFields
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "MappedDataFields", paramsArray);
-				NetOffice.PublisherApi.MailMergeMappedDataFields newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.PublisherApi.MailMergeMappedDataFields.LateBindingApiWrapperType) as NetOffice.PublisherApi.MailMergeMappedDataFields;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.PublisherApi.MailMergeMappedDataFields>(this, "MappedDataFields", NetOffice.PublisherApi.MailMergeMappedDataFields.LateBindingApiWrapperType);
 			}
 		}
 
@@ -311,14 +292,12 @@ namespace NetOffice.PublisherApi
 		/// SupportByVersion Publisher 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		[SupportByVersion("Publisher", 14,15,16)]
 		public string Name
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Name", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "Name");
 			}
 		}
 
@@ -326,14 +305,12 @@ namespace NetOffice.PublisherApi
 		/// SupportByVersion Publisher 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		[SupportByVersion("Publisher", 14,15,16)]
 		public Int32 RecordCount
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "RecordCount", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "RecordCount");
 			}
 		}
 
@@ -341,14 +318,12 @@ namespace NetOffice.PublisherApi
 		/// SupportByVersion Publisher 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		[SupportByVersion("Publisher", 14,15,16)]
 		public Int32 Type
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Type", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "Type");
 			}
 		}
 
@@ -356,14 +331,12 @@ namespace NetOffice.PublisherApi
 		/// SupportByVersion Publisher 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		[SupportByVersion("Publisher", 14,15,16)]
 		public string TableName
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "TableName", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "TableName");
 			}
 		}
 
@@ -371,15 +344,12 @@ namespace NetOffice.PublisherApi
 		/// SupportByVersion Publisher 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		[SupportByVersion("Publisher", 14,15,16)]
 		public NetOffice.PublisherApi.MailMergeDataSources DataSources
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "DataSources", paramsArray);
-				NetOffice.PublisherApi.MailMergeDataSources newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.PublisherApi.MailMergeDataSources.LateBindingApiWrapperType) as NetOffice.PublisherApi.MailMergeDataSources;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.PublisherApi.MailMergeDataSources>(this, "DataSources", NetOffice.PublisherApi.MailMergeDataSources.LateBindingApiWrapperType);
 			}
 		}
 
@@ -387,14 +357,12 @@ namespace NetOffice.PublisherApi
 		/// SupportByVersion Publisher 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		[SupportByVersion("Publisher", 14,15,16)]
 		public bool IsMaster
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "IsMaster", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "IsMaster");
 			}
 		}
 
@@ -402,19 +370,16 @@ namespace NetOffice.PublisherApi
 		/// SupportByVersion Publisher 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		[SupportByVersion("Publisher", 14,15,16)]
 		public bool EverValidated
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "EverValidated", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "EverValidated");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "EverValidated", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "EverValidated", value);
 			}
 		}
 
@@ -422,19 +387,16 @@ namespace NetOffice.PublisherApi
 		/// SupportByVersion Publisher 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		[SupportByVersion("Publisher", 14,15,16)]
 		public bool ValidatedClean
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "ValidatedClean", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "ValidatedClean");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "ValidatedClean", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "ValidatedClean", value);
 			}
 		}
 
@@ -444,73 +406,60 @@ namespace NetOffice.PublisherApi
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="findText">string FindText</param>
+		/// <param name="findText">string findText</param>
 		/// <param name="field">optional string Field = </param>
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		[SupportByVersion("Publisher", 14,15,16)]
 		public bool FindRecord(string findText, object field)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(findText, field);
-			object returnItem = Invoker.MethodReturn(this, "FindRecord", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return Factory.ExecuteBoolMethodGet(this, "FindRecord", findText, field);
 		}
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="findText">string FindText</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		/// <param name="findText">string findText</param>
+		[CustomMethod]
+		[SupportByVersion("Publisher", 14,15,16)]
 		public bool FindRecord(string findText)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(findText);
-			object returnItem = Invoker.MethodReturn(this, "FindRecord", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return Factory.ExecuteBoolMethodGet(this, "FindRecord", findText);
 		}
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="included">bool Included</param>
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		/// <param name="included">bool included</param>
+		[SupportByVersion("Publisher", 14,15,16)]
 		public void SetAllIncludedFlags(bool included)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(included);
-			Invoker.Method(this, "SetAllIncludedFlags", paramsArray);
+			 Factory.ExecuteMethod(this, "SetAllIncludedFlags", included);
 		}
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="invalid">bool Invalid</param>
+		/// <param name="invalid">bool invalid</param>
 		/// <param name="invalidComment">optional string InvalidComment = </param>
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		[SupportByVersion("Publisher", 14,15,16)]
 		public void SetAllErrorFlags(bool invalid, object invalidComment)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(invalid, invalidComment);
-			Invoker.Method(this, "SetAllErrorFlags", paramsArray);
+			 Factory.ExecuteMethod(this, "SetAllErrorFlags", invalid, invalidComment);
 		}
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="invalid">bool Invalid</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		/// <param name="invalid">bool invalid</param>
+		[CustomMethod]
+		[SupportByVersion("Publisher", 14,15,16)]
 		public void SetAllErrorFlags(bool invalid)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(invalid);
-			Invoker.Method(this, "SetAllErrorFlags", paramsArray);
+			 Factory.ExecuteMethod(this, "SetAllErrorFlags", invalid);
 		}
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
-		/// 
 		/// </summary>
 		/// <param name="sortField1">optional string SortField1 = </param>
 		/// <param name="sortAscending1">optional bool SortAscending1 = true</param>
@@ -518,148 +467,128 @@ namespace NetOffice.PublisherApi
 		/// <param name="sortAscending2">optional bool SortAscending2 = true</param>
 		/// <param name="sortField3">optional string SortField3 = </param>
 		/// <param name="sortAscending3">optional bool SortAscending3 = true</param>
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		[SupportByVersion("Publisher", 14,15,16)]
 		public void SetSortOrder(object sortField1, object sortAscending1, object sortField2, object sortAscending2, object sortField3, object sortAscending3)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(sortField1, sortAscending1, sortField2, sortAscending2, sortField3, sortAscending3);
-			Invoker.Method(this, "SetSortOrder", paramsArray);
+			 Factory.ExecuteMethod(this, "SetSortOrder", new object[]{ sortField1, sortAscending1, sortField2, sortAscending2, sortField3, sortAscending3 });
 		}
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
-		/// 
 		/// </summary>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Publisher", 14,15,16)]
 		public void SetSortOrder()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "SetSortOrder", paramsArray);
+			 Factory.ExecuteMethod(this, "SetSortOrder");
 		}
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
-		/// 
 		/// </summary>
 		/// <param name="sortField1">optional string SortField1 = </param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Publisher", 14,15,16)]
 		public void SetSortOrder(object sortField1)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(sortField1);
-			Invoker.Method(this, "SetSortOrder", paramsArray);
+			 Factory.ExecuteMethod(this, "SetSortOrder", sortField1);
 		}
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
-		/// 
 		/// </summary>
 		/// <param name="sortField1">optional string SortField1 = </param>
 		/// <param name="sortAscending1">optional bool SortAscending1 = true</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Publisher", 14,15,16)]
 		public void SetSortOrder(object sortField1, object sortAscending1)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(sortField1, sortAscending1);
-			Invoker.Method(this, "SetSortOrder", paramsArray);
+			 Factory.ExecuteMethod(this, "SetSortOrder", sortField1, sortAscending1);
 		}
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
-		/// 
 		/// </summary>
 		/// <param name="sortField1">optional string SortField1 = </param>
 		/// <param name="sortAscending1">optional bool SortAscending1 = true</param>
 		/// <param name="sortField2">optional string SortField2 = </param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Publisher", 14,15,16)]
 		public void SetSortOrder(object sortField1, object sortAscending1, object sortField2)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(sortField1, sortAscending1, sortField2);
-			Invoker.Method(this, "SetSortOrder", paramsArray);
+			 Factory.ExecuteMethod(this, "SetSortOrder", sortField1, sortAscending1, sortField2);
 		}
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
-		/// 
 		/// </summary>
 		/// <param name="sortField1">optional string SortField1 = </param>
 		/// <param name="sortAscending1">optional bool SortAscending1 = true</param>
 		/// <param name="sortField2">optional string SortField2 = </param>
 		/// <param name="sortAscending2">optional bool SortAscending2 = true</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Publisher", 14,15,16)]
 		public void SetSortOrder(object sortField1, object sortAscending1, object sortField2, object sortAscending2)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(sortField1, sortAscending1, sortField2, sortAscending2);
-			Invoker.Method(this, "SetSortOrder", paramsArray);
+			 Factory.ExecuteMethod(this, "SetSortOrder", sortField1, sortAscending1, sortField2, sortAscending2);
 		}
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
-		/// 
 		/// </summary>
 		/// <param name="sortField1">optional string SortField1 = </param>
 		/// <param name="sortAscending1">optional bool SortAscending1 = true</param>
 		/// <param name="sortField2">optional string SortField2 = </param>
 		/// <param name="sortAscending2">optional bool SortAscending2 = true</param>
 		/// <param name="sortField3">optional string SortField3 = </param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Publisher", 14,15,16)]
 		public void SetSortOrder(object sortField1, object sortAscending1, object sortField2, object sortAscending2, object sortField3)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(sortField1, sortAscending1, sortField2, sortAscending2, sortField3);
-			Invoker.Method(this, "SetSortOrder", paramsArray);
+			 Factory.ExecuteMethod(this, "SetSortOrder", new object[]{ sortField1, sortAscending1, sortField2, sortAscending2, sortField3 });
 		}
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		[SupportByVersion("Publisher", 14,15,16)]
 		public void OpenRecipientsDialog()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "OpenRecipientsDialog", paramsArray);
+			 Factory.ExecuteMethod(this, "OpenRecipientsDialog");
 		}
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		[SupportByVersion("Publisher", 14,15,16)]
 		public void ApplyFilter()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "ApplyFilter", paramsArray);
+			 Factory.ExecuteMethod(this, "ApplyFilter");
 		}
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		[SupportByVersion("Publisher", 14,15,16)]
 		public void Close()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "Close", paramsArray);
+			 Factory.ExecuteMethod(this, "Close");
 		}
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
-		/// 
 		/// </summary>
 		/// <param name="lRec">Int32 lRec</param>
 		/// <param name="varField">object varField</param>
-		/// <param name="value">object Value</param>
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		/// <param name="value">object value</param>
+		[SupportByVersion("Publisher", 14,15,16)]
 		public void EditRecord(Int32 lRec, object varField, object value)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(lRec, varField, value);
-			Invoker.Method(this, "EditRecord", paramsArray);
+			 Factory.ExecuteMethod(this, "EditRecord", lRec, varField, value);
 		}
 
 		#endregion
+
 		#pragma warning restore
 	}
 }

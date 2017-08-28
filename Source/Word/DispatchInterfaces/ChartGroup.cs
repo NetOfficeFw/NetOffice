@@ -1,24 +1,34 @@
 ﻿using System;
 using NetRuntimeSystem = System;
-using System.Runtime.InteropServices;
-using System.Runtime.CompilerServices;
 using System.ComponentModel;
-using System.Reflection;
-using System.Collections.Generic;
-using NetOffice;
+using NetOffice.Attributes;
+
 namespace NetOffice.WordApi
 {
-	///<summary>
+	/// <summary>
 	/// DispatchInterface ChartGroup 
 	/// SupportByVersion Word, 14,15,16
-	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839899.aspx
-	///</summary>
-	[SupportByVersionAttribute("Word", 14,15,16)]
-	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
-	public class ChartGroup : COMObject
+	/// </summary>
+	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff839899.aspx </remarks>
+	[SupportByVersion("Word", 14,15,16)]
+	[EntityType(EntityType.IsDispatchInterface)]
+ 	public class ChartGroup : COMObject
 	{
 		#pragma warning disable
+
 		#region Type Information
+
+		/// <summary>
+		/// Instance Type
+		/// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
+		public override Type InstanceType
+		{
+			get
+			{
+				return LateBindingApiWrapperType;
+			}
+		}
 
         private static Type _type;
 
@@ -29,14 +39,20 @@ namespace NetOffice.WordApi
             {
                 if (null == _type)
                     _type = typeof(ChartGroup);
-                    
                 return _type;
             }
         }
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public ChartGroup(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -82,7 +98,7 @@ namespace NetOffice.WordApi
 		{
 		}
 		
-		/// <param name="progId">registered ProgID</param>
+		/// <param name="progId">registered progID</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public ChartGroup(string progId) : base(progId)
 		{
@@ -95,312 +111,264 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194719.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194719.aspx </remarks>
+		[SupportByVersion("Word", 14,15,16)]
 		public NetOffice.WordApi.Enums.XlAxisGroup AxisGroup
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "AxisGroup", paramsArray);
-				int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-				return (NetOffice.WordApi.Enums.XlAxisGroup)intReturnItem;
+				return Factory.ExecuteEnumPropertyGet<NetOffice.WordApi.Enums.XlAxisGroup>(this, "AxisGroup");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "AxisGroup", paramsArray);
+				Factory.ExecuteEnumPropertySet(this, "AxisGroup", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196894.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff196894.aspx </remarks>
+		[SupportByVersion("Word", 14,15,16)]
 		public Int32 DoughnutHoleSize
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "DoughnutHoleSize", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "DoughnutHoleSize");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "DoughnutHoleSize", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "DoughnutHoleSize", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840158.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff840158.aspx </remarks>
+		[SupportByVersion("Word", 14,15,16)]
 		public NetOffice.WordApi.DownBars DownBars
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "DownBars", paramsArray);
-				NetOffice.WordApi.DownBars newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.DownBars.LateBindingApiWrapperType) as NetOffice.WordApi.DownBars;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.DownBars>(this, "DownBars", NetOffice.WordApi.DownBars.LateBindingApiWrapperType);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840186.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff840186.aspx </remarks>
+		[SupportByVersion("Word", 14,15,16)]
 		public NetOffice.WordApi.DropLines DropLines
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "DropLines", paramsArray);
-				NetOffice.WordApi.DropLines newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.DropLines.LateBindingApiWrapperType) as NetOffice.WordApi.DropLines;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.DropLines>(this, "DropLines", NetOffice.WordApi.DropLines.LateBindingApiWrapperType);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845348.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff845348.aspx </remarks>
+		[SupportByVersion("Word", 14,15,16)]
 		public Int32 FirstSliceAngle
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "FirstSliceAngle", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "FirstSliceAngle");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "FirstSliceAngle", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "FirstSliceAngle", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff821814.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff821814.aspx </remarks>
+		[SupportByVersion("Word", 14,15,16)]
 		public Int32 GapWidth
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "GapWidth", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "GapWidth");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "GapWidth", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "GapWidth", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193397.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff193397.aspx </remarks>
+		[SupportByVersion("Word", 14,15,16)]
 		public bool HasDropLines
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "HasDropLines", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "HasDropLines");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "HasDropLines", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "HasDropLines", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196210.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff196210.aspx </remarks>
+		[SupportByVersion("Word", 14,15,16)]
 		public bool HasHiLoLines
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "HasHiLoLines", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "HasHiLoLines");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "HasHiLoLines", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "HasHiLoLines", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845339.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff845339.aspx </remarks>
+		[SupportByVersion("Word", 14,15,16)]
 		public bool HasRadarAxisLabels
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "HasRadarAxisLabels", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "HasRadarAxisLabels");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "HasRadarAxisLabels", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "HasRadarAxisLabels", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196206.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff196206.aspx </remarks>
+		[SupportByVersion("Word", 14,15,16)]
 		public bool HasSeriesLines
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "HasSeriesLines", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "HasSeriesLines");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "HasSeriesLines", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "HasSeriesLines", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835129.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835129.aspx </remarks>
+		[SupportByVersion("Word", 14,15,16)]
 		public bool HasUpDownBars
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "HasUpDownBars", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "HasUpDownBars");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "HasUpDownBars", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "HasUpDownBars", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194711.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194711.aspx </remarks>
+		[SupportByVersion("Word", 14,15,16)]
 		public NetOffice.WordApi.HiLoLines HiLoLines
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "HiLoLines", paramsArray);
-				NetOffice.WordApi.HiLoLines newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.HiLoLines.LateBindingApiWrapperType) as NetOffice.WordApi.HiLoLines;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.HiLoLines>(this, "HiLoLines", NetOffice.WordApi.HiLoLines.LateBindingApiWrapperType);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838335.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff838335.aspx </remarks>
+		[SupportByVersion("Word", 14,15,16)]
 		public Int32 Index
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Index", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "Index");
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839506.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff839506.aspx </remarks>
+		[SupportByVersion("Word", 14,15,16)]
 		public Int32 Overlap
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Overlap", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "Overlap");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "Overlap", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "Overlap", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193104.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff193104.aspx </remarks>
+		[SupportByVersion("Word", 14,15,16)]
 		public NetOffice.WordApi.TickLabels RadarAxisLabels
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "RadarAxisLabels", paramsArray);
-				NetOffice.WordApi.TickLabels newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.TickLabels.LateBindingApiWrapperType) as NetOffice.WordApi.TickLabels;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.TickLabels>(this, "RadarAxisLabels", NetOffice.WordApi.TickLabels.LateBindingApiWrapperType);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192379.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff192379.aspx </remarks>
+		[SupportByVersion("Word", 14,15,16)]
 		public NetOffice.WordApi.SeriesLines SeriesLines
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "SeriesLines", paramsArray);
-				NetOffice.WordApi.SeriesLines newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.SeriesLines.LateBindingApiWrapperType) as NetOffice.WordApi.SeriesLines;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.SeriesLines>(this, "SeriesLines", NetOffice.WordApi.SeriesLines.LateBindingApiWrapperType);
 			}
 		}
 
@@ -408,20 +376,17 @@ namespace NetOffice.WordApi
 		/// SupportByVersion Word 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14,15,16)]
+		[SupportByVersion("Word", 14,15,16)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public Int32 SubType
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "SubType", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "SubType");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "SubType", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "SubType", value);
 			}
 		}
 
@@ -429,267 +394,219 @@ namespace NetOffice.WordApi
 		/// SupportByVersion Word 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14,15,16)]
+		[SupportByVersion("Word", 14,15,16)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public Int32 Type
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Type", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "Type");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "Type", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "Type", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822317.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff822317.aspx </remarks>
+		[SupportByVersion("Word", 14,15,16)]
 		public NetOffice.WordApi.UpBars UpBars
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "UpBars", paramsArray);
-				NetOffice.WordApi.UpBars newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.UpBars.LateBindingApiWrapperType) as NetOffice.WordApi.UpBars;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.UpBars>(this, "UpBars", NetOffice.WordApi.UpBars.LateBindingApiWrapperType);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839773.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff839773.aspx </remarks>
+		[SupportByVersion("Word", 14,15,16)]
 		public bool VaryByCategories
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "VaryByCategories", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "VaryByCategories");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "VaryByCategories", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "VaryByCategories", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff834578.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff834578.aspx </remarks>
+		[SupportByVersion("Word", 14,15,16)]
 		public NetOffice.WordApi.Enums.XlSizeRepresents SizeRepresents
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "SizeRepresents", paramsArray);
-				int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-				return (NetOffice.WordApi.Enums.XlSizeRepresents)intReturnItem;
+				return Factory.ExecuteEnumPropertyGet<NetOffice.WordApi.Enums.XlSizeRepresents>(this, "SizeRepresents");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "SizeRepresents", paramsArray);
+				Factory.ExecuteEnumPropertySet(this, "SizeRepresents", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194890.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194890.aspx </remarks>
+		[SupportByVersion("Word", 14,15,16)]
 		public Int32 BubbleScale
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "BubbleScale", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "BubbleScale");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "BubbleScale", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "BubbleScale", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196972.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff196972.aspx </remarks>
+		[SupportByVersion("Word", 14,15,16)]
 		public bool ShowNegativeBubbles
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "ShowNegativeBubbles", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "ShowNegativeBubbles");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "ShowNegativeBubbles", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "ShowNegativeBubbles", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845381.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff845381.aspx </remarks>
+		[SupportByVersion("Word", 14,15,16)]
 		public NetOffice.WordApi.Enums.XlChartSplitType SplitType
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "SplitType", paramsArray);
-				int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-				return (NetOffice.WordApi.Enums.XlChartSplitType)intReturnItem;
+				return Factory.ExecuteEnumPropertyGet<NetOffice.WordApi.Enums.XlChartSplitType>(this, "SplitType");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "SplitType", paramsArray);
+				Factory.ExecuteEnumPropertySet(this, "SplitType", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845603.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff845603.aspx </remarks>
+		[SupportByVersion("Word", 14,15,16)]
 		public object SplitValue
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "SplitValue", paramsArray);
-				if((null != returnItem) && (returnItem is MarshalByRefObject))
-				{
-					ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
-					return newObject;
-				}
-				else
-				{
-					return  returnItem;
-				}
+				return Factory.ExecuteVariantPropertyGet(this, "SplitValue");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "SplitValue", paramsArray);
+				Factory.ExecuteVariantPropertySet(this, "SplitValue", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197605.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff197605.aspx </remarks>
+		[SupportByVersion("Word", 14,15,16)]
 		public Int32 SecondPlotSize
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "SecondPlotSize", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "SecondPlotSize");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "SecondPlotSize", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "SecondPlotSize", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845262.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff845262.aspx </remarks>
+		[SupportByVersion("Word", 14,15,16)]
 		public bool Has3DShading
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Has3DShading", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "Has3DShading");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "Has3DShading", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "Has3DShading", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193638.aspx
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff193638.aspx </remarks>
+		[SupportByVersion("Word", 14,15,16), ProxyResult]
 		public object Application
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				ICOMObject newObject = Factory.CreateObjectFromComProxy(this,returnItem);
-				return newObject;
+				return Factory.ExecuteReferencePropertyGet(this, "Application");
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197880.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff197880.aspx </remarks>
+		[SupportByVersion("Word", 14,15,16)]
 		public Int32 Creator
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Creator", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "Creator");
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193074.aspx
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff193074.aspx </remarks>
+		[SupportByVersion("Word", 14,15,16), ProxyResult]
 		public object Parent
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Parent", paramsArray);
-				ICOMObject newObject = Factory.CreateObjectFromComProxy(this,returnItem);
-				return newObject;
+				return Factory.ExecuteReferencePropertyGet(this, "Parent");
 			}
 		}
 
@@ -699,89 +616,72 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195291.aspx
 		/// </summary>
-		/// <param name="index">optional object Index</param>
-		[SupportByVersionAttribute("Word", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff195291.aspx </remarks>
+		/// <param name="index">optional object index</param>
+		[SupportByVersion("Word", 14,15,16)]
 		public object SeriesCollection(object index)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(index);
-			object returnItem = Invoker.MethodReturn(this, "SeriesCollection", paramsArray);
-			object newObject = Factory.CreateObjectFromComProxy(this,returnItem);
-			return newObject;
+			return Factory.ExecuteVariantMethodGet(this, "SeriesCollection", index);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195291.aspx
 		/// </summary>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff195291.aspx </remarks>
+		[CustomMethod]
+		[SupportByVersion("Word", 14,15,16)]
 		public object SeriesCollection()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "SeriesCollection", paramsArray);
-			object newObject = Factory.CreateObjectFromComProxy(this,returnItem);
-			return newObject;
+			return Factory.ExecuteVariantMethodGet(this, "SeriesCollection");
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 15,16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj229936.aspx
 		/// </summary>
-		/// <param name="index">optional object Index</param>
-		[SupportByVersionAttribute("Word", 15, 16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/jj229936.aspx </remarks>
+		/// <param name="index">optional object index</param>
+		[SupportByVersion("Word", 15, 16)]
 		public object CategoryCollection(object index)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(index);
-			object returnItem = Invoker.MethodReturn(this, "CategoryCollection", paramsArray);
-			object newObject = Factory.CreateObjectFromComProxy(this,returnItem);
-			return newObject;
+			return Factory.ExecuteVariantMethodGet(this, "CategoryCollection", index);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 15,16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj229936.aspx
 		/// </summary>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 15, 16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/jj229936.aspx </remarks>
+		[CustomMethod]
+		[SupportByVersion("Word", 15, 16)]
 		public object CategoryCollection()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "CategoryCollection", paramsArray);
-			object newObject = Factory.CreateObjectFromComProxy(this,returnItem);
-			return newObject;
+			return Factory.ExecuteVariantMethodGet(this, "CategoryCollection");
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 15,16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj231622.aspx
 		/// </summary>
-		/// <param name="index">optional object Index</param>
-		[SupportByVersionAttribute("Word", 15, 16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/jj231622.aspx </remarks>
+		/// <param name="index">optional object index</param>
+		[SupportByVersion("Word", 15, 16)]
 		public object FullCategoryCollection(object index)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(index);
-			object returnItem = Invoker.MethodReturn(this, "FullCategoryCollection", paramsArray);
-			object newObject = Factory.CreateObjectFromComProxy(this,returnItem);
-			return newObject;
+			return Factory.ExecuteVariantMethodGet(this, "FullCategoryCollection", index);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 15,16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj231622.aspx
 		/// </summary>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 15, 16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/jj231622.aspx </remarks>
+		[CustomMethod]
+		[SupportByVersion("Word", 15, 16)]
 		public object FullCategoryCollection()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "FullCategoryCollection", paramsArray);
-			object newObject = Factory.CreateObjectFromComProxy(this,returnItem);
-			return newObject;
+			return Factory.ExecuteVariantMethodGet(this, "FullCategoryCollection");
 		}
 
 		#endregion
+
 		#pragma warning restore
 	}
 }

@@ -1,23 +1,33 @@
 ﻿using System;
 using NetRuntimeSystem = System;
-using System.Runtime.InteropServices;
-using System.Runtime.CompilerServices;
 using System.ComponentModel;
-using System.Reflection;
-using System.Collections.Generic;
-using NetOffice;
+using NetOffice.Attributes;
+
 namespace NetOffice.OfficeApi
 {
-	///<summary>
+	/// <summary>
 	/// DispatchInterface MsoDebugOptions 
 	/// SupportByVersion Office, 9,10,11,12,14,15,16
-	///</summary>
-	[SupportByVersionAttribute("Office", 9,10,11,12,14,15,16)]
-	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
-	public class MsoDebugOptions : _IMsoDispObj
+	/// </summary>
+	[SupportByVersion("Office", 9,10,11,12,14,15,16)]
+	[EntityType(EntityType.IsDispatchInterface)]
+ 	public class MsoDebugOptions : _IMsoDispObj
 	{
 		#pragma warning disable
+
 		#region Type Information
+
+		/// <summary>
+		/// Instance Type
+		/// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
+		public override Type InstanceType
+		{
+			get
+			{
+				return LateBindingApiWrapperType;
+			}
+		}
 
         private static Type _type;
 
@@ -28,14 +38,20 @@ namespace NetOffice.OfficeApi
             {
                 if (null == _type)
                     _type = typeof(MsoDebugOptions);
-                    
                 return _type;
             }
         }
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public MsoDebugOptions(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -81,7 +97,7 @@ namespace NetOffice.OfficeApi
 		{
 		}
 		
-		/// <param name="progId">registered ProgID</param>
+		/// <param name="progId">registered progID</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public MsoDebugOptions(string progId) : base(progId)
 		{
@@ -95,20 +111,17 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Office", 9,10,11,12,14,15,16)]
+		[SupportByVersion("Office", 9,10,11,12,14,15,16)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public Int32 FeatureReports
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "FeatureReports", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "FeatureReports");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "FeatureReports", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "FeatureReports", value);
 			}
 		}
 
@@ -116,19 +129,16 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Office", 10,11,12,14,15,16)]
+		[SupportByVersion("Office", 10,11,12,14,15,16)]
 		public bool OutputToDebugger
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "OutputToDebugger", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "OutputToDebugger");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "OutputToDebugger", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "OutputToDebugger", value);
 			}
 		}
 
@@ -136,19 +146,16 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Office", 10,11,12,14,15,16)]
+		[SupportByVersion("Office", 10,11,12,14,15,16)]
 		public bool OutputToFile
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "OutputToFile", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "OutputToFile");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "OutputToFile", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "OutputToFile", value);
 			}
 		}
 
@@ -156,19 +163,16 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Office", 10,11,12,14,15,16)]
+		[SupportByVersion("Office", 10,11,12,14,15,16)]
 		public bool OutputToMessageBox
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "OutputToMessageBox", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "OutputToMessageBox");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "OutputToMessageBox", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "OutputToMessageBox", value);
 			}
 		}
 
@@ -177,15 +181,12 @@ namespace NetOffice.OfficeApi
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		[SupportByVersion("Office", 12,14,15,16), ProxyResult]
 		public object UnitTestManager
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "UnitTestManager", paramsArray);
-				ICOMObject newObject = Factory.CreateObjectFromComProxy(this,returnItem);
-				return newObject;
+				return Factory.ExecuteReferencePropertyGet(this, "UnitTestManager");
 			}
 		}
 
@@ -195,29 +196,26 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 15,16
-		/// 
 		/// </summary>
 		/// <param name="bstrTagToIgnore">string bstrTagToIgnore</param>
-		[SupportByVersionAttribute("Office", 15, 16)]
+		[SupportByVersion("Office", 15, 16)]
 		public void AddIgnoredAssertTag(string bstrTagToIgnore)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(bstrTagToIgnore);
-			Invoker.Method(this, "AddIgnoredAssertTag", paramsArray);
+			 Factory.ExecuteMethod(this, "AddIgnoredAssertTag", bstrTagToIgnore);
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 15,16
-		/// 
 		/// </summary>
 		/// <param name="bstrTagToIgnore">string bstrTagToIgnore</param>
-		[SupportByVersionAttribute("Office", 15, 16)]
+		[SupportByVersion("Office", 15, 16)]
 		public void RemoveIgnoredAssertTag(string bstrTagToIgnore)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(bstrTagToIgnore);
-			Invoker.Method(this, "RemoveIgnoredAssertTag", paramsArray);
+			 Factory.ExecuteMethod(this, "RemoveIgnoredAssertTag", bstrTagToIgnore);
 		}
 
 		#endregion
+
 		#pragma warning restore
 	}
 }

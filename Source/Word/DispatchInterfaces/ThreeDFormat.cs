@@ -1,24 +1,34 @@
 ﻿using System;
 using NetRuntimeSystem = System;
-using System.Runtime.InteropServices;
-using System.Runtime.CompilerServices;
 using System.ComponentModel;
-using System.Reflection;
-using System.Collections.Generic;
-using NetOffice;
+using NetOffice.Attributes;
+
 namespace NetOffice.WordApi
 {
-	///<summary>
+	/// <summary>
 	/// DispatchInterface ThreeDFormat 
 	/// SupportByVersion Word, 9,10,11,12,14,15,16
-	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838722.aspx
-	///</summary>
-	[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
-	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
-	public class ThreeDFormat : COMObject
+	/// </summary>
+	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff838722.aspx </remarks>
+	[SupportByVersion("Word", 9,10,11,12,14,15,16)]
+	[EntityType(EntityType.IsDispatchInterface)]
+ 	public class ThreeDFormat : COMObject
 	{
 		#pragma warning disable
+
 		#region Type Information
+
+		/// <summary>
+		/// Instance Type
+		/// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
+		public override Type InstanceType
+		{
+			get
+			{
+				return LateBindingApiWrapperType;
+			}
+		}
 
         private static Type _type;
 
@@ -29,14 +39,20 @@ namespace NetOffice.WordApi
             {
                 if (null == _type)
                     _type = typeof(ThreeDFormat);
-                    
                 return _type;
             }
         }
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public ThreeDFormat(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -82,7 +98,7 @@ namespace NetOffice.WordApi
 		{
 		}
 		
-		/// <param name="progId">registered ProgID</param>
+		/// <param name="progId">registered progID</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public ThreeDFormat(string progId) : base(progId)
 		{
@@ -95,608 +111,509 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845302.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff845302.aspx </remarks>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.Application Application
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				NetOffice.WordApi.Application newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.Application.LateBindingApiWrapperType) as NetOffice.WordApi.Application;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.Application>(this, "Application", NetOffice.WordApi.Application.LateBindingApiWrapperType);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff834258.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff834258.aspx </remarks>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public Int32 Creator
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Creator", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "Creator");
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193094.aspx
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff193094.aspx </remarks>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16), ProxyResult]
 		public object Parent
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Parent", paramsArray);
-				ICOMObject newObject = Factory.CreateObjectFromComProxy(this,returnItem);
-				return newObject;
+				return Factory.ExecuteReferencePropertyGet(this, "Parent");
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194766.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194766.aspx </remarks>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public Single Depth
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Depth", paramsArray);
-				return NetRuntimeSystem.Convert.ToSingle(returnItem);
+				return Factory.ExecuteSinglePropertyGet(this, "Depth");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "Depth", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "Depth", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196965.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff196965.aspx </remarks>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.ColorFormat ExtrusionColor
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "ExtrusionColor", paramsArray);
-				NetOffice.WordApi.ColorFormat newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.ColorFormat.LateBindingApiWrapperType) as NetOffice.WordApi.ColorFormat;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.ColorFormat>(this, "ExtrusionColor", NetOffice.WordApi.ColorFormat.LateBindingApiWrapperType);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838338.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff838338.aspx </remarks>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.OfficeApi.Enums.MsoExtrusionColorType ExtrusionColorType
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "ExtrusionColorType", paramsArray);
-				int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-				return (NetOffice.OfficeApi.Enums.MsoExtrusionColorType)intReturnItem;
+				return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoExtrusionColorType>(this, "ExtrusionColorType");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "ExtrusionColorType", paramsArray);
+				Factory.ExecuteEnumPropertySet(this, "ExtrusionColorType", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822641.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff822641.aspx </remarks>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.OfficeApi.Enums.MsoTriState Perspective
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Perspective", paramsArray);
-				int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-				return (NetOffice.OfficeApi.Enums.MsoTriState)intReturnItem;
+				return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoTriState>(this, "Perspective");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "Perspective", paramsArray);
+				Factory.ExecuteEnumPropertySet(this, "Perspective", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff823226.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff823226.aspx </remarks>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.OfficeApi.Enums.MsoPresetExtrusionDirection PresetExtrusionDirection
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "PresetExtrusionDirection", paramsArray);
-				int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-				return (NetOffice.OfficeApi.Enums.MsoPresetExtrusionDirection)intReturnItem;
+				return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoPresetExtrusionDirection>(this, "PresetExtrusionDirection");
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196342.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff196342.aspx </remarks>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.OfficeApi.Enums.MsoPresetLightingDirection PresetLightingDirection
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "PresetLightingDirection", paramsArray);
-				int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-				return (NetOffice.OfficeApi.Enums.MsoPresetLightingDirection)intReturnItem;
+				return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoPresetLightingDirection>(this, "PresetLightingDirection");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "PresetLightingDirection", paramsArray);
+				Factory.ExecuteEnumPropertySet(this, "PresetLightingDirection", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194256.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194256.aspx </remarks>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.OfficeApi.Enums.MsoPresetLightingSoftness PresetLightingSoftness
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "PresetLightingSoftness", paramsArray);
-				int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-				return (NetOffice.OfficeApi.Enums.MsoPresetLightingSoftness)intReturnItem;
+				return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoPresetLightingSoftness>(this, "PresetLightingSoftness");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "PresetLightingSoftness", paramsArray);
+				Factory.ExecuteEnumPropertySet(this, "PresetLightingSoftness", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff834567.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff834567.aspx </remarks>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.OfficeApi.Enums.MsoPresetMaterial PresetMaterial
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "PresetMaterial", paramsArray);
-				int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-				return (NetOffice.OfficeApi.Enums.MsoPresetMaterial)intReturnItem;
+				return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoPresetMaterial>(this, "PresetMaterial");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "PresetMaterial", paramsArray);
+				Factory.ExecuteEnumPropertySet(this, "PresetMaterial", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff191720.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff191720.aspx </remarks>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.OfficeApi.Enums.MsoPresetThreeDFormat PresetThreeDFormat
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "PresetThreeDFormat", paramsArray);
-				int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-				return (NetOffice.OfficeApi.Enums.MsoPresetThreeDFormat)intReturnItem;
+				return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoPresetThreeDFormat>(this, "PresetThreeDFormat");
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff823002.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff823002.aspx </remarks>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public Single RotationX
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "RotationX", paramsArray);
-				return NetRuntimeSystem.Convert.ToSingle(returnItem);
+				return Factory.ExecuteSinglePropertyGet(this, "RotationX");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "RotationX", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "RotationX", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197278.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff197278.aspx </remarks>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public Single RotationY
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "RotationY", paramsArray);
-				return NetRuntimeSystem.Convert.ToSingle(returnItem);
+				return Factory.ExecuteSinglePropertyGet(this, "RotationY");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "RotationY", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "RotationY", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff198095.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff198095.aspx </remarks>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.OfficeApi.Enums.MsoTriState Visible
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Visible", paramsArray);
-				int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-				return (NetOffice.OfficeApi.Enums.MsoTriState)intReturnItem;
+				return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoTriState>(this, "Visible");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "Visible", paramsArray);
+				Factory.ExecuteEnumPropertySet(this, "Visible", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195914.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff195914.aspx </remarks>
+		[SupportByVersion("Word", 12,14,15,16)]
 		public NetOffice.OfficeApi.Enums.MsoLightRigType PresetLighting
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "PresetLighting", paramsArray);
-				int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-				return (NetOffice.OfficeApi.Enums.MsoLightRigType)intReturnItem;
+				return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoLightRigType>(this, "PresetLighting");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "PresetLighting", paramsArray);
+				Factory.ExecuteEnumPropertySet(this, "PresetLighting", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845035.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff845035.aspx </remarks>
+		[SupportByVersion("Word", 12,14,15,16)]
 		public Single Z
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Z", paramsArray);
-				return NetRuntimeSystem.Convert.ToSingle(returnItem);
+				return Factory.ExecuteSinglePropertyGet(this, "Z");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "Z", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "Z", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192181.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff192181.aspx </remarks>
+		[SupportByVersion("Word", 12,14,15,16)]
 		public NetOffice.OfficeApi.Enums.MsoBevelType BevelTopType
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "BevelTopType", paramsArray);
-				int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-				return (NetOffice.OfficeApi.Enums.MsoBevelType)intReturnItem;
+				return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoBevelType>(this, "BevelTopType");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "BevelTopType", paramsArray);
+				Factory.ExecuteEnumPropertySet(this, "BevelTopType", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192783.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff192783.aspx </remarks>
+		[SupportByVersion("Word", 12,14,15,16)]
 		public Single BevelTopInset
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "BevelTopInset", paramsArray);
-				return NetRuntimeSystem.Convert.ToSingle(returnItem);
+				return Factory.ExecuteSinglePropertyGet(this, "BevelTopInset");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "BevelTopInset", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "BevelTopInset", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff820993.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff820993.aspx </remarks>
+		[SupportByVersion("Word", 12,14,15,16)]
 		public Single BevelTopDepth
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "BevelTopDepth", paramsArray);
-				return NetRuntimeSystem.Convert.ToSingle(returnItem);
+				return Factory.ExecuteSinglePropertyGet(this, "BevelTopDepth");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "BevelTopDepth", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "BevelTopDepth", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff821038.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff821038.aspx </remarks>
+		[SupportByVersion("Word", 12,14,15,16)]
 		public NetOffice.OfficeApi.Enums.MsoBevelType BevelBottomType
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "BevelBottomType", paramsArray);
-				int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-				return (NetOffice.OfficeApi.Enums.MsoBevelType)intReturnItem;
+				return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoBevelType>(this, "BevelBottomType");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "BevelBottomType", paramsArray);
+				Factory.ExecuteEnumPropertySet(this, "BevelBottomType", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff834872.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff834872.aspx </remarks>
+		[SupportByVersion("Word", 12,14,15,16)]
 		public Single BevelBottomInset
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "BevelBottomInset", paramsArray);
-				return NetRuntimeSystem.Convert.ToSingle(returnItem);
+				return Factory.ExecuteSinglePropertyGet(this, "BevelBottomInset");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "BevelBottomInset", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "BevelBottomInset", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835172.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835172.aspx </remarks>
+		[SupportByVersion("Word", 12,14,15,16)]
 		public Single BevelBottomDepth
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "BevelBottomDepth", paramsArray);
-				return NetRuntimeSystem.Convert.ToSingle(returnItem);
+				return Factory.ExecuteSinglePropertyGet(this, "BevelBottomDepth");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "BevelBottomDepth", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "BevelBottomDepth", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838956.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff838956.aspx </remarks>
+		[SupportByVersion("Word", 12,14,15,16)]
 		public NetOffice.OfficeApi.Enums.MsoPresetCamera PresetCamera
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "PresetCamera", paramsArray);
-				int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-				return (NetOffice.OfficeApi.Enums.MsoPresetCamera)intReturnItem;
+				return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoPresetCamera>(this, "PresetCamera");
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840616.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff840616.aspx </remarks>
+		[SupportByVersion("Word", 12,14,15,16)]
 		public Single RotationZ
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "RotationZ", paramsArray);
-				return NetRuntimeSystem.Convert.ToSingle(returnItem);
+				return Factory.ExecuteSinglePropertyGet(this, "RotationZ");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "RotationZ", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "RotationZ", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195952.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff195952.aspx </remarks>
+		[SupportByVersion("Word", 12,14,15,16)]
 		public Single ContourWidth
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "ContourWidth", paramsArray);
-				return NetRuntimeSystem.Convert.ToSingle(returnItem);
+				return Factory.ExecuteSinglePropertyGet(this, "ContourWidth");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "ContourWidth", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "ContourWidth", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837705.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff837705.aspx </remarks>
+		[SupportByVersion("Word", 12,14,15,16)]
 		public NetOffice.WordApi.ColorFormat ContourColor
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "ContourColor", paramsArray);
-				NetOffice.WordApi.ColorFormat newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.ColorFormat.LateBindingApiWrapperType) as NetOffice.WordApi.ColorFormat;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.ColorFormat>(this, "ContourColor", NetOffice.WordApi.ColorFormat.LateBindingApiWrapperType);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194739.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194739.aspx </remarks>
+		[SupportByVersion("Word", 12,14,15,16)]
 		public Single FieldOfView
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "FieldOfView", paramsArray);
-				return NetRuntimeSystem.Convert.ToSingle(returnItem);
+				return Factory.ExecuteSinglePropertyGet(this, "FieldOfView");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "FieldOfView", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "FieldOfView", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff844886.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff844886.aspx </remarks>
+		[SupportByVersion("Word", 12,14,15,16)]
 		public NetOffice.OfficeApi.Enums.MsoTriState ProjectText
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "ProjectText", paramsArray);
-				int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-				return (NetOffice.OfficeApi.Enums.MsoTriState)intReturnItem;
+				return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoTriState>(this, "ProjectText");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "ProjectText", paramsArray);
+				Factory.ExecuteEnumPropertySet(this, "ProjectText", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196975.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff196975.aspx </remarks>
+		[SupportByVersion("Word", 12,14,15,16)]
 		public Single LightAngle
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "LightAngle", paramsArray);
-				return NetRuntimeSystem.Convert.ToSingle(returnItem);
+				return Factory.ExecuteSinglePropertyGet(this, "LightAngle");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "LightAngle", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "LightAngle", value);
 			}
 		}
 
@@ -706,112 +623,104 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196299.aspx
 		/// </summary>
-		/// <param name="increment">Single Increment</param>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff196299.aspx </remarks>
+		/// <param name="increment">Single increment</param>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void IncrementRotationX(Single increment)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(increment);
-			Invoker.Method(this, "IncrementRotationX", paramsArray);
+			 Factory.ExecuteMethod(this, "IncrementRotationX", increment);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff834279.aspx
 		/// </summary>
-		/// <param name="increment">Single Increment</param>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff834279.aspx </remarks>
+		/// <param name="increment">Single increment</param>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void IncrementRotationY(Single increment)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(increment);
-			Invoker.Method(this, "IncrementRotationY", paramsArray);
+			 Factory.ExecuteMethod(this, "IncrementRotationY", increment);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836117.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff836117.aspx </remarks>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void ResetRotation()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "ResetRotation", paramsArray);
+			 Factory.ExecuteMethod(this, "ResetRotation");
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197289.aspx
 		/// </summary>
-		/// <param name="presetExtrusionDirection">NetOffice.OfficeApi.Enums.MsoPresetExtrusionDirection PresetExtrusionDirection</param>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff197289.aspx </remarks>
+		/// <param name="presetExtrusionDirection">NetOffice.OfficeApi.Enums.MsoPresetExtrusionDirection presetExtrusionDirection</param>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void SetExtrusionDirection(NetOffice.OfficeApi.Enums.MsoPresetExtrusionDirection presetExtrusionDirection)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(presetExtrusionDirection);
-			Invoker.Method(this, "SetExtrusionDirection", paramsArray);
+			 Factory.ExecuteMethod(this, "SetExtrusionDirection", presetExtrusionDirection);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192153.aspx
 		/// </summary>
-		/// <param name="presetThreeDFormat">NetOffice.OfficeApi.Enums.MsoPresetThreeDFormat PresetThreeDFormat</param>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff192153.aspx </remarks>
+		/// <param name="presetThreeDFormat">NetOffice.OfficeApi.Enums.MsoPresetThreeDFormat presetThreeDFormat</param>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void SetThreeDFormat(NetOffice.OfficeApi.Enums.MsoPresetThreeDFormat presetThreeDFormat)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(presetThreeDFormat);
-			Invoker.Method(this, "SetThreeDFormat", paramsArray);
+			 Factory.ExecuteMethod(this, "SetThreeDFormat", presetThreeDFormat);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835171.aspx
 		/// </summary>
-		/// <param name="presetCamera">NetOffice.OfficeApi.Enums.MsoPresetCamera PresetCamera</param>
-		[SupportByVersionAttribute("Word", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835171.aspx </remarks>
+		/// <param name="presetCamera">NetOffice.OfficeApi.Enums.MsoPresetCamera presetCamera</param>
+		[SupportByVersion("Word", 12,14,15,16)]
 		public void SetPresetCamera(NetOffice.OfficeApi.Enums.MsoPresetCamera presetCamera)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(presetCamera);
-			Invoker.Method(this, "SetPresetCamera", paramsArray);
+			 Factory.ExecuteMethod(this, "SetPresetCamera", presetCamera);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837274.aspx
 		/// </summary>
-		/// <param name="increment">Single Increment</param>
-		[SupportByVersionAttribute("Word", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff837274.aspx </remarks>
+		/// <param name="increment">Single increment</param>
+		[SupportByVersion("Word", 12,14,15,16)]
 		public void IncrementRotationZ(Single increment)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(increment);
-			Invoker.Method(this, "IncrementRotationZ", paramsArray);
+			 Factory.ExecuteMethod(this, "IncrementRotationZ", increment);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845346.aspx
 		/// </summary>
-		/// <param name="increment">Single Increment</param>
-		[SupportByVersionAttribute("Word", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff845346.aspx </remarks>
+		/// <param name="increment">Single increment</param>
+		[SupportByVersion("Word", 12,14,15,16)]
 		public void IncrementRotationHorizontal(Single increment)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(increment);
-			Invoker.Method(this, "IncrementRotationHorizontal", paramsArray);
+			 Factory.ExecuteMethod(this, "IncrementRotationHorizontal", increment);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840687.aspx
 		/// </summary>
-		/// <param name="increment">Single Increment</param>
-		[SupportByVersionAttribute("Word", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff840687.aspx </remarks>
+		/// <param name="increment">Single increment</param>
+		[SupportByVersion("Word", 12,14,15,16)]
 		public void IncrementRotationVertical(Single increment)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(increment);
-			Invoker.Method(this, "IncrementRotationVertical", paramsArray);
+			 Factory.ExecuteMethod(this, "IncrementRotationVertical", increment);
 		}
 
 		#endregion
+
 		#pragma warning restore
 	}
 }

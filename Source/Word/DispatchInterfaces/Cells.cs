@@ -1,25 +1,36 @@
-﻿using System;
-using NetRuntimeSystem = System;
-using System.Runtime.InteropServices;
-using System.Runtime.CompilerServices;
-using System.ComponentModel;
-using System.Reflection;
+﻿using System.Collections;
 using System.Collections.Generic;
-using System.Collections;
-using NetOffice;
+using System;
+using NetRuntimeSystem = System;
+using System.ComponentModel;
+using NetOffice.Attributes;
+
 namespace NetOffice.WordApi
 {
-	///<summary>
+	/// <summary>
 	/// DispatchInterface Cells 
 	/// SupportByVersion Word, 9,10,11,12,14,15,16
-	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838362.aspx
-	///</summary>
-	[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
-	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
-	public class Cells : COMObject ,IEnumerable<NetOffice.WordApi.Cell>
+	/// </summary>
+	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff838362.aspx </remarks>
+	[SupportByVersion("Word", 9,10,11,12,14,15,16)]
+	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Method, "Item")]
+	public class Cells : COMObject, IEnumerable<NetOffice.WordApi.Cell>
 	{
 		#pragma warning disable
+
 		#region Type Information
+
+		/// <summary>
+		/// Instance Type
+		/// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
+		public override Type InstanceType
+		{
+			get
+			{
+				return LateBindingApiWrapperType;
+			}
+		}
 
         private static Type _type;
 
@@ -30,14 +41,20 @@ namespace NetOffice.WordApi
             {
                 if (null == _type)
                     _type = typeof(Cells);
-                    
                 return _type;
             }
         }
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public Cells(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -83,7 +100,7 @@ namespace NetOffice.WordApi
 		{
 		}
 		
-		/// <param name="progId">registered ProgID</param>
+		/// <param name="progId">registered progID</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public Cells(string progId) : base(progId)
 		{
@@ -96,251 +113,211 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194041.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194041.aspx </remarks>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public Int32 Count
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Count", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "Count");
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837528.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff837528.aspx </remarks>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.Application Application
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				NetOffice.WordApi.Application newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.Application.LateBindingApiWrapperType) as NetOffice.WordApi.Application;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.Application>(this, "Application", NetOffice.WordApi.Application.LateBindingApiWrapperType);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195663.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff195663.aspx </remarks>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public Int32 Creator
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Creator", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "Creator");
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197728.aspx
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff197728.aspx </remarks>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16), ProxyResult]
 		public object Parent
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Parent", paramsArray);
-				ICOMObject newObject = Factory.CreateObjectFromComProxy(this,returnItem);
-				return newObject;
+				return Factory.ExecuteReferencePropertyGet(this, "Parent");
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839571.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff839571.aspx </remarks>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public Single Width
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Width", paramsArray);
-				return NetRuntimeSystem.Convert.ToSingle(returnItem);
+				return Factory.ExecuteSinglePropertyGet(this, "Width");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "Width", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "Width", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195954.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff195954.aspx </remarks>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public Single Height
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Height", paramsArray);
-				return NetRuntimeSystem.Convert.ToSingle(returnItem);
+				return Factory.ExecuteSinglePropertyGet(this, "Height");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "Height", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "Height", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838136.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff838136.aspx </remarks>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.Enums.WdRowHeightRule HeightRule
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "HeightRule", paramsArray);
-				int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-				return (NetOffice.WordApi.Enums.WdRowHeightRule)intReturnItem;
+				return Factory.ExecuteEnumPropertyGet<NetOffice.WordApi.Enums.WdRowHeightRule>(this, "HeightRule");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "HeightRule", paramsArray);
+				Factory.ExecuteEnumPropertySet(this, "HeightRule", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837947.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff837947.aspx </remarks>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.Enums.WdCellVerticalAlignment VerticalAlignment
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "VerticalAlignment", paramsArray);
-				int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-				return (NetOffice.WordApi.Enums.WdCellVerticalAlignment)intReturnItem;
+				return Factory.ExecuteEnumPropertyGet<NetOffice.WordApi.Enums.WdCellVerticalAlignment>(this, "VerticalAlignment");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "VerticalAlignment", paramsArray);
+				Factory.ExecuteEnumPropertySet(this, "VerticalAlignment", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839345.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff839345.aspx </remarks>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.Borders Borders
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Borders", paramsArray);
-				NetOffice.WordApi.Borders newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.Borders.LateBindingApiWrapperType) as NetOffice.WordApi.Borders;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.Borders>(this, "Borders", NetOffice.WordApi.Borders.LateBindingApiWrapperType);
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "Borders", paramsArray);
+				Factory.ExecuteReferencePropertySet(this, "Borders", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839906.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff839906.aspx </remarks>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.Shading Shading
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Shading", paramsArray);
-				NetOffice.WordApi.Shading newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.Shading.LateBindingApiWrapperType) as NetOffice.WordApi.Shading;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.Shading>(this, "Shading", NetOffice.WordApi.Shading.LateBindingApiWrapperType);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192398.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff192398.aspx </remarks>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public Int32 NestingLevel
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "NestingLevel", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "NestingLevel");
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194263.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194263.aspx </remarks>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public Single PreferredWidth
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "PreferredWidth", paramsArray);
-				return NetRuntimeSystem.Convert.ToSingle(returnItem);
+				return Factory.ExecuteSinglePropertyGet(this, "PreferredWidth");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "PreferredWidth", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "PreferredWidth", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197433.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff197433.aspx </remarks>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.Enums.WdPreferredWidthType PreferredWidthType
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "PreferredWidthType", paramsArray);
-				int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-				return (NetOffice.WordApi.Enums.WdPreferredWidthType)intReturnItem;
+				return Factory.ExecuteEnumPropertyGet<NetOffice.WordApi.Enums.WdPreferredWidthType>(this, "PreferredWidthType");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "PreferredWidthType", paramsArray);
+				Factory.ExecuteEnumPropertySet(this, "PreferredWidthType", value);
 			}
 		}
 
@@ -350,226 +327,205 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="index">Int32 Index</param>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
-		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
+		/// <param name="index">Int32 index</param>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
+		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
 		public NetOffice.WordApi.Cell this[Int32 index]
 		{
 			get
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(index);
-				object returnItem = Invoker.MethodReturn(this, "Item", paramsArray);
-				NetOffice.WordApi.Cell newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Cell.LateBindingApiWrapperType) as NetOffice.WordApi.Cell;
-				return newObject;
+				return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Cell>(this, "Item", NetOffice.WordApi.Cell.LateBindingApiWrapperType, index);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff834526.aspx
 		/// </summary>
-		/// <param name="beforeCell">optional object BeforeCell</param>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff834526.aspx </remarks>
+		/// <param name="beforeCell">optional object beforeCell</param>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.Cell Add(object beforeCell)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(beforeCell);
-			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.WordApi.Cell newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Cell.LateBindingApiWrapperType) as NetOffice.WordApi.Cell;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Cell>(this, "Add", NetOffice.WordApi.Cell.LateBindingApiWrapperType, beforeCell);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff834526.aspx
 		/// </summary>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff834526.aspx </remarks>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.Cell Add()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.WordApi.Cell newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Cell.LateBindingApiWrapperType) as NetOffice.WordApi.Cell;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Cell>(this, "Add", NetOffice.WordApi.Cell.LateBindingApiWrapperType);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822611.aspx
 		/// </summary>
-		/// <param name="shiftCells">optional object ShiftCells</param>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff822611.aspx </remarks>
+		/// <param name="shiftCells">optional object shiftCells</param>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void Delete(object shiftCells)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(shiftCells);
-			Invoker.Method(this, "Delete", paramsArray);
+			 Factory.ExecuteMethod(this, "Delete", shiftCells);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822611.aspx
 		/// </summary>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff822611.aspx </remarks>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void Delete()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "Delete", paramsArray);
+			 Factory.ExecuteMethod(this, "Delete");
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845480.aspx
 		/// </summary>
-		/// <param name="columnWidth">Single ColumnWidth</param>
-		/// <param name="rulerStyle">NetOffice.WordApi.Enums.WdRulerStyle RulerStyle</param>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff845480.aspx </remarks>
+		/// <param name="columnWidth">Single columnWidth</param>
+		/// <param name="rulerStyle">NetOffice.WordApi.Enums.WdRulerStyle rulerStyle</param>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void SetWidth(Single columnWidth, NetOffice.WordApi.Enums.WdRulerStyle rulerStyle)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(columnWidth, rulerStyle);
-			Invoker.Method(this, "SetWidth", paramsArray);
+			 Factory.ExecuteMethod(this, "SetWidth", columnWidth, rulerStyle);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845669.aspx
 		/// </summary>
-		/// <param name="rowHeight">object RowHeight</param>
-		/// <param name="heightRule">NetOffice.WordApi.Enums.WdRowHeightRule HeightRule</param>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff845669.aspx </remarks>
+		/// <param name="rowHeight">object rowHeight</param>
+		/// <param name="heightRule">NetOffice.WordApi.Enums.WdRowHeightRule heightRule</param>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void SetHeight(object rowHeight, NetOffice.WordApi.Enums.WdRowHeightRule heightRule)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(rowHeight, heightRule);
-			Invoker.Method(this, "SetHeight", paramsArray);
+			 Factory.ExecuteMethod(this, "SetHeight", rowHeight, heightRule);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845099.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff845099.aspx </remarks>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void Merge()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "Merge", paramsArray);
+			 Factory.ExecuteMethod(this, "Merge");
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840070.aspx
 		/// </summary>
-		/// <param name="numRows">optional object NumRows</param>
-		/// <param name="numColumns">optional object NumColumns</param>
-		/// <param name="mergeBeforeSplit">optional object MergeBeforeSplit</param>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff840070.aspx </remarks>
+		/// <param name="numRows">optional object numRows</param>
+		/// <param name="numColumns">optional object numColumns</param>
+		/// <param name="mergeBeforeSplit">optional object mergeBeforeSplit</param>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void Split(object numRows, object numColumns, object mergeBeforeSplit)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(numRows, numColumns, mergeBeforeSplit);
-			Invoker.Method(this, "Split", paramsArray);
+			 Factory.ExecuteMethod(this, "Split", numRows, numColumns, mergeBeforeSplit);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840070.aspx
 		/// </summary>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff840070.aspx </remarks>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void Split()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "Split", paramsArray);
+			 Factory.ExecuteMethod(this, "Split");
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840070.aspx
 		/// </summary>
-		/// <param name="numRows">optional object NumRows</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff840070.aspx </remarks>
+		/// <param name="numRows">optional object numRows</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void Split(object numRows)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(numRows);
-			Invoker.Method(this, "Split", paramsArray);
+			 Factory.ExecuteMethod(this, "Split", numRows);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840070.aspx
 		/// </summary>
-		/// <param name="numRows">optional object NumRows</param>
-		/// <param name="numColumns">optional object NumColumns</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff840070.aspx </remarks>
+		/// <param name="numRows">optional object numRows</param>
+		/// <param name="numColumns">optional object numColumns</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void Split(object numRows, object numColumns)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(numRows, numColumns);
-			Invoker.Method(this, "Split", paramsArray);
+			 Factory.ExecuteMethod(this, "Split", numRows, numColumns);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845331.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff845331.aspx </remarks>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void DistributeHeight()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "DistributeHeight", paramsArray);
+			 Factory.ExecuteMethod(this, "DistributeHeight");
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837022.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff837022.aspx </remarks>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void DistributeWidth()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "DistributeWidth", paramsArray);
+			 Factory.ExecuteMethod(this, "DistributeWidth");
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837476.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff837476.aspx </remarks>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void AutoFit()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "AutoFit", paramsArray);
+			 Factory.ExecuteMethod(this, "AutoFit");
 		}
 
-		#endregion
+        #endregion
 
-       #region IEnumerable<NetOffice.WordApi.Cell> Member
-        
+        #region IEnumerable<NetOffice.WordApi.Cell> Member
+
         /// <summary>
-		/// SupportByVersionAttribute Word, 9,10,11,12,14,15,16
-		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
-       public IEnumerator<NetOffice.WordApi.Cell> GetEnumerator()  
-       {
-           NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
-           foreach (NetOffice.WordApi.Cell item in innerEnumerator)
-               yield return item;
-       }
+        /// SupportByVersion Word, 9,10,11,12,14,15,16
+        /// </summary>
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
+        public IEnumerator<NetOffice.WordApi.Cell> GetEnumerator()
+        {
+            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
+            foreach (NetOffice.WordApi.Cell item in innerEnumerator)
+                yield return item;
+        }
 
-       #endregion
-          
-		#region IEnumerable Members
-       
-		/// <summary>
-		/// SupportByVersionAttribute Word, 9,10,11,12,14,15,16
-		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+        #endregion
+
+        #region IEnumerable Members
+
+        /// <summary>
+        /// SupportByVersion Word, 9,10,11,12,14,15,16
+        /// </summary>
+        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
 			return NetOffice.Utils.GetProxyEnumeratorAsProperty(this);
 		}
 
 		#endregion
+
 		#pragma warning restore
 	}
 }

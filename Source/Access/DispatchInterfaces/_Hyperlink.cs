@@ -1,23 +1,33 @@
 ﻿using System;
 using NetRuntimeSystem = System;
-using System.Runtime.InteropServices;
-using System.Runtime.CompilerServices;
 using System.ComponentModel;
-using System.Reflection;
-using System.Collections.Generic;
-using NetOffice;
+using NetOffice.Attributes;
+
 namespace NetOffice.AccessApi
 {
-	///<summary>
+	/// <summary>
 	/// DispatchInterface _Hyperlink 
 	/// SupportByVersion Access, 9,10,11,12,14,15,16
-	///</summary>
-	[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
-	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
-	public class _Hyperlink : COMObject
+	/// </summary>
+	[SupportByVersion("Access", 9,10,11,12,14,15,16)]
+	[EntityType(EntityType.IsDispatchInterface)]
+ 	public class _Hyperlink : COMObject
 	{
 		#pragma warning disable
+
 		#region Type Information
+
+		/// <summary>
+		/// Instance Type
+		/// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
+		public override Type InstanceType
+		{
+			get
+			{
+				return LateBindingApiWrapperType;
+			}
+		}
 
         private static Type _type;
 
@@ -28,14 +38,20 @@ namespace NetOffice.AccessApi
             {
                 if (null == _type)
                     _type = typeof(_Hyperlink);
-                    
                 return _type;
             }
         }
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public _Hyperlink(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -81,7 +97,7 @@ namespace NetOffice.AccessApi
 		{
 		}
 		
-		/// <param name="progId">registered ProgID</param>
+		/// <param name="progId">registered progID</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public _Hyperlink(string progId) : base(progId)
 		{
@@ -94,105 +110,90 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822025.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff822025.aspx </remarks>
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public string SubAddress
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "SubAddress", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "SubAddress");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "SubAddress", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "SubAddress", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195258.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff195258.aspx </remarks>
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public string Address
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Address", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "Address");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "Address", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "Address", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835717.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835717.aspx </remarks>
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public string EmailSubject
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "EmailSubject", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "EmailSubject");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "EmailSubject", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "EmailSubject", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822461.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff822461.aspx </remarks>
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public string ScreenTip
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "ScreenTip", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "ScreenTip");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "ScreenTip", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "ScreenTip", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194871.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194871.aspx </remarks>
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public string TextToDisplay
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "TextToDisplay", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "TextToDisplay");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "TextToDisplay", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "TextToDisplay", value);
 			}
 		}
 
@@ -202,130 +203,120 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192921.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff192921.aspx </remarks>
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public void AddToFavorites()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "AddToFavorites", paramsArray);
+			 Factory.ExecuteMethod(this, "AddToFavorites");
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196761.aspx
 		/// </summary>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff196761.aspx </remarks>
 		/// <param name="newWindow">optional bool NewWindow = false</param>
 		/// <param name="addHistory">optional bool AddHistory = true</param>
-		/// <param name="extraInfo">optional object ExtraInfo</param>
+		/// <param name="extraInfo">optional object extraInfo</param>
 		/// <param name="method">optional NetOffice.OfficeApi.Enums.MsoExtraInfoMethod Method = 0</param>
 		/// <param name="headerInfo">optional string HeaderInfo = </param>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public void Follow(object newWindow, object addHistory, object extraInfo, object method, object headerInfo)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(newWindow, addHistory, extraInfo, method, headerInfo);
-			Invoker.Method(this, "Follow", paramsArray);
+			 Factory.ExecuteMethod(this, "Follow", new object[]{ newWindow, addHistory, extraInfo, method, headerInfo });
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196761.aspx
 		/// </summary>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff196761.aspx </remarks>
+		[CustomMethod]
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public void Follow()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "Follow", paramsArray);
+			 Factory.ExecuteMethod(this, "Follow");
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196761.aspx
 		/// </summary>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff196761.aspx </remarks>
 		/// <param name="newWindow">optional bool NewWindow = false</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public void Follow(object newWindow)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(newWindow);
-			Invoker.Method(this, "Follow", paramsArray);
+			 Factory.ExecuteMethod(this, "Follow", newWindow);
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196761.aspx
 		/// </summary>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff196761.aspx </remarks>
 		/// <param name="newWindow">optional bool NewWindow = false</param>
 		/// <param name="addHistory">optional bool AddHistory = true</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public void Follow(object newWindow, object addHistory)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(newWindow, addHistory);
-			Invoker.Method(this, "Follow", paramsArray);
+			 Factory.ExecuteMethod(this, "Follow", newWindow, addHistory);
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196761.aspx
 		/// </summary>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff196761.aspx </remarks>
 		/// <param name="newWindow">optional bool NewWindow = false</param>
 		/// <param name="addHistory">optional bool AddHistory = true</param>
-		/// <param name="extraInfo">optional object ExtraInfo</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		/// <param name="extraInfo">optional object extraInfo</param>
+		[CustomMethod]
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public void Follow(object newWindow, object addHistory, object extraInfo)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(newWindow, addHistory, extraInfo);
-			Invoker.Method(this, "Follow", paramsArray);
+			 Factory.ExecuteMethod(this, "Follow", newWindow, addHistory, extraInfo);
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196761.aspx
 		/// </summary>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff196761.aspx </remarks>
 		/// <param name="newWindow">optional bool NewWindow = false</param>
 		/// <param name="addHistory">optional bool AddHistory = true</param>
-		/// <param name="extraInfo">optional object ExtraInfo</param>
+		/// <param name="extraInfo">optional object extraInfo</param>
 		/// <param name="method">optional NetOffice.OfficeApi.Enums.MsoExtraInfoMethod Method = 0</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public void Follow(object newWindow, object addHistory, object extraInfo, object method)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(newWindow, addHistory, extraInfo, method);
-			Invoker.Method(this, "Follow", paramsArray);
+			 Factory.ExecuteMethod(this, "Follow", newWindow, addHistory, extraInfo, method);
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822725.aspx
 		/// </summary>
-		/// <param name="fileName">string FileName</param>
-		/// <param name="editNow">bool EditNow</param>
-		/// <param name="overwrite">bool Overwrite</param>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff822725.aspx </remarks>
+		/// <param name="fileName">string fileName</param>
+		/// <param name="editNow">bool editNow</param>
+		/// <param name="overwrite">bool overwrite</param>
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public void CreateNewDocument(string fileName, bool editNow, bool overwrite)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(fileName, editNow, overwrite);
-			Invoker.Method(this, "CreateNewDocument", paramsArray);
+			 Factory.ExecuteMethod(this, "CreateNewDocument", fileName, editNow, overwrite);
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
 		/// <param name="dispid">Int32 dispid</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("Access", 11,12,14,15,16)]
+		[SupportByVersion("Access", 11,12,14,15,16)]
 		public bool IsMemberSafe(Int32 dispid)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(dispid);
-			object returnItem = Invoker.MethodReturn(this, "IsMemberSafe", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return Factory.ExecuteBoolMethodGet(this, "IsMemberSafe", dispid);
 		}
 
 		#endregion
+
 		#pragma warning restore
 	}
 }

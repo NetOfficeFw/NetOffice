@@ -320,8 +320,8 @@
     <Compile Include="DispatchInterfaces\ReportTable.cs" />
     <Compile Include="Classes\Project.cs" />
     <Compile Include="Classes\Application.cs" />
-    <Compile Include="EventInterfaces\_EProjectDoc.cs" />
-    <Compile Include="EventInterfaces\_EProjectApp2.cs" />
+    <Compile Include="Events\_EProjectDoc.cs" />
+    <Compile Include="Events\_EProjectApp2.cs" />
     <Compile Include="Modules\Global.cs" />
     <Compile Include="Tools\COMAddin.cs" />
     <Compile Include="Tools\ITaskPane.cs" />

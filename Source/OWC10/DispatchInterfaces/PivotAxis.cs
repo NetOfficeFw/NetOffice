@@ -1,23 +1,33 @@
 ﻿using System;
 using NetRuntimeSystem = System;
-using System.Runtime.InteropServices;
-using System.Runtime.CompilerServices;
 using System.ComponentModel;
-using System.Reflection;
-using System.Collections.Generic;
-using NetOffice;
+using NetOffice.Attributes;
+
 namespace NetOffice.OWC10Api
 {
-	///<summary>
+	/// <summary>
 	/// DispatchInterface PivotAxis 
 	/// SupportByVersion OWC10, 1
-	///</summary>
-	[SupportByVersionAttribute("OWC10", 1)]
-	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
-	public class PivotAxis : COMObject
+	/// </summary>
+	[SupportByVersion("OWC10", 1)]
+	[EntityType(EntityType.IsDispatchInterface)]
+ 	public class PivotAxis : COMObject
 	{
 		#pragma warning disable
+
 		#region Type Information
+
+		/// <summary>
+		/// Instance Type
+		/// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
+		public override Type InstanceType
+		{
+			get
+			{
+				return LateBindingApiWrapperType;
+			}
+		}
 
         private static Type _type;
 
@@ -28,14 +38,20 @@ namespace NetOffice.OWC10Api
             {
                 if (null == _type)
                     _type = typeof(PivotAxis);
-                    
                 return _type;
             }
         }
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public PivotAxis(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -81,7 +97,7 @@ namespace NetOffice.OWC10Api
 		{
 		}
 		
-		/// <param name="progId">registered ProgID</param>
+		/// <param name="progId">registered progID</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public PivotAxis(string progId) : base(progId)
 		{
@@ -95,15 +111,12 @@ namespace NetOffice.OWC10Api
 		/// SupportByVersion OWC10 1
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("OWC10", 1)]
+		[SupportByVersion("OWC10", 1)]
 		public NetOffice.OWC10Api.PivotView View
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "View", paramsArray);
-				NetOffice.OWC10Api.PivotView newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OWC10Api.PivotView.LateBindingApiWrapperType) as NetOffice.OWC10Api.PivotView;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OWC10Api.PivotView>(this, "View", NetOffice.OWC10Api.PivotView.LateBindingApiWrapperType);
 			}
 		}
 
@@ -111,15 +124,12 @@ namespace NetOffice.OWC10Api
 		/// SupportByVersion OWC10 1
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("OWC10", 1)]
+		[SupportByVersion("OWC10", 1)]
 		public NetOffice.OWC10Api.PivotFieldSets FieldSets
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "FieldSets", paramsArray);
-				NetOffice.OWC10Api.PivotFieldSets newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OWC10Api.PivotFieldSets.LateBindingApiWrapperType) as NetOffice.OWC10Api.PivotFieldSets;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OWC10Api.PivotFieldSets>(this, "FieldSets", NetOffice.OWC10Api.PivotFieldSets.LateBindingApiWrapperType);
 			}
 		}
 
@@ -127,15 +137,12 @@ namespace NetOffice.OWC10Api
 		/// SupportByVersion OWC10 1
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("OWC10", 1)]
+		[SupportByVersion("OWC10", 1)]
 		public NetOffice.OWC10Api.PivotLabel Label
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Label", paramsArray);
-				NetOffice.OWC10Api.PivotLabel newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OWC10Api.PivotLabel.LateBindingApiWrapperType) as NetOffice.OWC10Api.PivotLabel;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OWC10Api.PivotLabel>(this, "Label", NetOffice.OWC10Api.PivotLabel.LateBindingApiWrapperType);
 			}
 		}
 
@@ -145,58 +152,51 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
-		/// 
 		/// </summary>
-		/// <param name="fieldSet">NetOffice.OWC10Api.PivotFieldSet FieldSet</param>
-		/// <param name="before">optional object Before</param>
+		/// <param name="fieldSet">NetOffice.OWC10Api.PivotFieldSet fieldSet</param>
+		/// <param name="before">optional object before</param>
 		/// <param name="remove">optional bool Remove = true</param>
-		[SupportByVersionAttribute("OWC10", 1)]
+		[SupportByVersion("OWC10", 1)]
 		public void InsertFieldSet(NetOffice.OWC10Api.PivotFieldSet fieldSet, object before, object remove)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(fieldSet, before, remove);
-			Invoker.Method(this, "InsertFieldSet", paramsArray);
+			 Factory.ExecuteMethod(this, "InsertFieldSet", fieldSet, before, remove);
 		}
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
-		/// 
 		/// </summary>
-		/// <param name="fieldSet">NetOffice.OWC10Api.PivotFieldSet FieldSet</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("OWC10", 1)]
+		/// <param name="fieldSet">NetOffice.OWC10Api.PivotFieldSet fieldSet</param>
+		[CustomMethod]
+		[SupportByVersion("OWC10", 1)]
 		public void InsertFieldSet(NetOffice.OWC10Api.PivotFieldSet fieldSet)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(fieldSet);
-			Invoker.Method(this, "InsertFieldSet", paramsArray);
+			 Factory.ExecuteMethod(this, "InsertFieldSet", fieldSet);
 		}
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
-		/// 
 		/// </summary>
-		/// <param name="fieldSet">NetOffice.OWC10Api.PivotFieldSet FieldSet</param>
-		/// <param name="before">optional object Before</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("OWC10", 1)]
+		/// <param name="fieldSet">NetOffice.OWC10Api.PivotFieldSet fieldSet</param>
+		/// <param name="before">optional object before</param>
+		[CustomMethod]
+		[SupportByVersion("OWC10", 1)]
 		public void InsertFieldSet(NetOffice.OWC10Api.PivotFieldSet fieldSet, object before)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(fieldSet, before);
-			Invoker.Method(this, "InsertFieldSet", paramsArray);
+			 Factory.ExecuteMethod(this, "InsertFieldSet", fieldSet, before);
 		}
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
-		/// 
 		/// </summary>
-		/// <param name="fieldSet">object FieldSet</param>
-		[SupportByVersionAttribute("OWC10", 1)]
+		/// <param name="fieldSet">object fieldSet</param>
+		[SupportByVersion("OWC10", 1)]
 		public void RemoveFieldSet(object fieldSet)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(fieldSet);
-			Invoker.Method(this, "RemoveFieldSet", paramsArray);
+			 Factory.ExecuteMethod(this, "RemoveFieldSet", fieldSet);
 		}
 
 		#endregion
+
 		#pragma warning restore
 	}
 }

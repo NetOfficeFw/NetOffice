@@ -1,23 +1,33 @@
 ﻿using System;
 using NetRuntimeSystem = System;
-using System.Runtime.InteropServices;
-using System.Runtime.CompilerServices;
 using System.ComponentModel;
-using System.Reflection;
-using System.Collections.Generic;
-using NetOffice;
+using NetOffice.Attributes;
+
 namespace NetOffice.PublisherApi
 {
-	///<summary>
+	/// <summary>
 	/// DispatchInterface MailMergeDataField 
 	/// SupportByVersion Publisher, 14,15,16
-	///</summary>
-	[SupportByVersionAttribute("Publisher", 14,15,16)]
-	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
-	public class MailMergeDataField : NetOffice.OfficeApi._IMsoDispObj
+	/// </summary>
+	[SupportByVersion("Publisher", 14,15,16)]
+	[EntityType(EntityType.IsDispatchInterface)]
+ 	public class MailMergeDataField : NetOffice.OfficeApi._IMsoDispObj
 	{
 		#pragma warning disable
+
 		#region Type Information
+
+		/// <summary>
+		/// Instance Type
+		/// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
+		public override Type InstanceType
+		{
+			get
+			{
+				return LateBindingApiWrapperType;
+			}
+		}
 
         private static Type _type;
 
@@ -28,14 +38,20 @@ namespace NetOffice.PublisherApi
             {
                 if (null == _type)
                     _type = typeof(MailMergeDataField);
-                    
                 return _type;
             }
         }
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public MailMergeDataField(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -81,7 +97,7 @@ namespace NetOffice.PublisherApi
 		{
 		}
 		
-		/// <param name="progId">registered ProgID</param>
+		/// <param name="progId">registered progID</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public MailMergeDataField(string progId) : base(progId)
 		{
@@ -95,14 +111,12 @@ namespace NetOffice.PublisherApi
 		/// SupportByVersion Publisher 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		[SupportByVersion("Publisher", 14,15,16)]
 		public Int32 Index
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Index", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "Index");
 			}
 		}
 
@@ -110,14 +124,12 @@ namespace NetOffice.PublisherApi
 		/// SupportByVersion Publisher 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		[SupportByVersion("Publisher", 14,15,16)]
 		public string Name
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Name", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "Name");
 			}
 		}
 
@@ -126,15 +138,12 @@ namespace NetOffice.PublisherApi
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		[SupportByVersion("Publisher", 14,15,16), ProxyResult]
 		public object Parent
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Parent", paramsArray);
-				ICOMObject newObject = Factory.CreateObjectFromComProxy(this,returnItem);
-				return newObject;
+				return Factory.ExecuteReferencePropertyGet(this, "Parent");
 			}
 		}
 
@@ -142,14 +151,12 @@ namespace NetOffice.PublisherApi
 		/// SupportByVersion Publisher 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		[SupportByVersion("Publisher", 14,15,16)]
 		public string Value
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Value", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "Value");
 			}
 		}
 
@@ -157,20 +164,16 @@ namespace NetOffice.PublisherApi
 		/// SupportByVersion Publisher 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		[SupportByVersion("Publisher", 14,15,16)]
 		public NetOffice.PublisherApi.Enums.PbMailMergeDataFieldType FieldType
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "FieldType", paramsArray);
-				int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-				return (NetOffice.PublisherApi.Enums.PbMailMergeDataFieldType)intReturnItem;
+				return Factory.ExecuteEnumPropertyGet<NetOffice.PublisherApi.Enums.PbMailMergeDataFieldType>(this, "FieldType");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "FieldType", paramsArray);
+				Factory.ExecuteEnumPropertySet(this, "FieldType", value);
 			}
 		}
 
@@ -178,14 +181,12 @@ namespace NetOffice.PublisherApi
 		/// SupportByVersion Publisher 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		[SupportByVersion("Publisher", 14,15,16)]
 		public bool IsMapped
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "IsMapped", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "IsMapped");
 			}
 		}
 
@@ -193,14 +194,12 @@ namespace NetOffice.PublisherApi
 		/// SupportByVersion Publisher 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		[SupportByVersion("Publisher", 14,15,16)]
 		public string MappedTo
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "MappedTo", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "MappedTo");
 			}
 		}
 
@@ -210,79 +209,64 @@ namespace NetOffice.PublisherApi
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="range">optional NetOffice.PublisherApi.TextRange Range</param>
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		/// <param name="range">optional NetOffice.PublisherApi.TextRange range</param>
+		[SupportByVersion("Publisher", 14,15,16)]
 		public NetOffice.PublisherApi.Shape Insert(object range)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(range);
-			object returnItem = Invoker.MethodReturn(this, "Insert", paramsArray);
-			NetOffice.PublisherApi.Shape newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PublisherApi.Shape.LateBindingApiWrapperType) as NetOffice.PublisherApi.Shape;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PublisherApi.Shape>(this, "Insert", NetOffice.PublisherApi.Shape.LateBindingApiWrapperType, range);
 		}
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
-		/// 
 		/// </summary>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Publisher", 14,15,16)]
 		public NetOffice.PublisherApi.Shape Insert()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "Insert", paramsArray);
-			NetOffice.PublisherApi.Shape newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PublisherApi.Shape.LateBindingApiWrapperType) as NetOffice.PublisherApi.Shape;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PublisherApi.Shape>(this, "Insert", NetOffice.PublisherApi.Shape.LateBindingApiWrapperType);
 		}
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		[SupportByVersion("Publisher", 14,15,16)]
 		public void AddToRecipientFields()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "AddToRecipientFields", paramsArray);
+			 Factory.ExecuteMethod(this, "AddToRecipientFields");
 		}
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
-		/// 
 		/// </summary>
 		/// <param name="bstrValue">optional string bstrValue</param>
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		[SupportByVersion("Publisher", 14,15,16)]
 		public void MapToRecipientField(object bstrValue)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(bstrValue);
-			Invoker.Method(this, "MapToRecipientField", paramsArray);
+			 Factory.ExecuteMethod(this, "MapToRecipientField", bstrValue);
 		}
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
-		/// 
 		/// </summary>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Publisher", 14,15,16)]
 		public void MapToRecipientField()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "MapToRecipientField", paramsArray);
+			 Factory.ExecuteMethod(this, "MapToRecipientField");
 		}
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		[SupportByVersion("Publisher", 14,15,16)]
 		public void UnMapRecipientField()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "UnMapRecipientField", paramsArray);
+			 Factory.ExecuteMethod(this, "UnMapRecipientField");
 		}
 
 		#endregion
+
 		#pragma warning restore
 	}
 }

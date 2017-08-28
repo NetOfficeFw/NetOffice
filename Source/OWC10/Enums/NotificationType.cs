@@ -1,26 +1,27 @@
 ﻿using System;
 using NetOffice;
+using NetOffice.Attributes;
 namespace NetOffice.OWC10Api.Enums
 {
 	 /// <summary>
 	 /// SupportByVersion OWC10 1
 	 /// </summary>
-	[SupportByVersionAttribute("OWC10", 1)]
-	[EntityTypeAttribute(EntityType.IsEnum)]
+	[SupportByVersion("OWC10", 1)]
+	[EntityType(EntityType.IsEnum)]
 	public enum NotificationType
 	{
 		 /// <summary>
 		 /// SupportByVersion OWC10 1
 		 /// </summary>
 		 /// <remarks>0</remarks>
-		 [SupportByVersionAttribute("OWC10", 1)]
+		 [SupportByVersion("OWC10", 1)]
 		 dscConnectionReset = 0,
 
 		 /// <summary>
 		 /// SupportByVersion OWC10 1
 		 /// </summary>
 		 /// <remarks>1</remarks>
-		 [SupportByVersionAttribute("OWC10", 1)]
+		 [SupportByVersion("OWC10", 1)]
 		 dscDataReset = 1
 	}
 }

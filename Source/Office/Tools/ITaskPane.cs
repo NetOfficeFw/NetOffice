@@ -1,5 +1,6 @@
 ﻿using System;
 using NetOffice;
+using NetOffice.Attributes;
 using NetOffice.Tools;
 
 namespace NetOffice.OfficeApi.Tools

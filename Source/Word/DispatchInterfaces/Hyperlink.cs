@@ -1,24 +1,34 @@
 ﻿using System;
 using NetRuntimeSystem = System;
-using System.Runtime.InteropServices;
-using System.Runtime.CompilerServices;
 using System.ComponentModel;
-using System.Reflection;
-using System.Collections.Generic;
-using NetOffice;
+using NetOffice.Attributes;
+
 namespace NetOffice.WordApi
 {
-	///<summary>
+	/// <summary>
 	/// DispatchInterface Hyperlink 
 	/// SupportByVersion Word, 9,10,11,12,14,15,16
-	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836455.aspx
-	///</summary>
-	[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
-	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
-	public class Hyperlink : COMObject
+	/// </summary>
+	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff836455.aspx </remarks>
+	[SupportByVersion("Word", 9,10,11,12,14,15,16)]
+	[EntityType(EntityType.IsDispatchInterface)]
+ 	public class Hyperlink : COMObject
 	{
 		#pragma warning disable
+
 		#region Type Information
+
+		/// <summary>
+		/// Instance Type
+		/// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
+		public override Type InstanceType
+		{
+			get
+			{
+				return LateBindingApiWrapperType;
+			}
+		}
 
         private static Type _type;
 
@@ -29,14 +39,20 @@ namespace NetOffice.WordApi
             {
                 if (null == _type)
                     _type = typeof(Hyperlink);
-                    
                 return _type;
             }
         }
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public Hyperlink(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -82,7 +98,7 @@ namespace NetOffice.WordApi
 		{
 		}
 		
-		/// <param name="progId">registered ProgID</param>
+		/// <param name="progId">registered progID</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public Hyperlink(string progId) : base(progId)
 		{
@@ -95,67 +111,57 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192552.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff192552.aspx </remarks>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.Application Application
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				NetOffice.WordApi.Application newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.Application.LateBindingApiWrapperType) as NetOffice.WordApi.Application;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.Application>(this, "Application", NetOffice.WordApi.Application.LateBindingApiWrapperType);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837667.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff837667.aspx </remarks>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public Int32 Creator
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Creator", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "Creator");
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192179.aspx
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff192179.aspx </remarks>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16), ProxyResult]
 		public object Parent
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Parent", paramsArray);
-				ICOMObject newObject = Factory.CreateObjectFromComProxy(this,returnItem);
-				return newObject;
+				return Factory.ExecuteReferencePropertyGet(this, "Parent");
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839577.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff839577.aspx </remarks>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public string Name
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Name", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "Name");
 			}
 		}
 
@@ -163,66 +169,55 @@ namespace NetOffice.WordApi
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public string AddressOld
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "AddressOld", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "AddressOld");
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff823007.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff823007.aspx </remarks>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.OfficeApi.Enums.MsoHyperlinkType Type
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Type", paramsArray);
-				int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-				return (NetOffice.OfficeApi.Enums.MsoHyperlinkType)intReturnItem;
+				return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoHyperlinkType>(this, "Type");
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194349.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194349.aspx </remarks>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.Range Range
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Range", paramsArray);
-				NetOffice.WordApi.Range newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.Range.LateBindingApiWrapperType) as NetOffice.WordApi.Range;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.Range>(this, "Range", NetOffice.WordApi.Range.LateBindingApiWrapperType);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837544.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff837544.aspx </remarks>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.Shape Shape
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Shape", paramsArray);
-				NetOffice.WordApi.Shape newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.Shape.LateBindingApiWrapperType) as NetOffice.WordApi.Shape;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.Shape>(this, "Shape", NetOffice.WordApi.Shape.LateBindingApiWrapperType);
 			}
 		}
 
@@ -230,157 +225,135 @@ namespace NetOffice.WordApi
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public string SubAddressOld
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "SubAddressOld", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "SubAddressOld");
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845113.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff845113.aspx </remarks>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public bool ExtraInfoRequired
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "ExtraInfoRequired", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "ExtraInfoRequired");
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840764.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff840764.aspx </remarks>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public string Address
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Address", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "Address");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "Address", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "Address", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835173.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835173.aspx </remarks>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public string SubAddress
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "SubAddress", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "SubAddress");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "SubAddress", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "SubAddress", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822697.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff822697.aspx </remarks>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public string EmailSubject
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "EmailSubject", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "EmailSubject");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "EmailSubject", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "EmailSubject", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196393.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff196393.aspx </remarks>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public string ScreenTip
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "ScreenTip", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "ScreenTip");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "ScreenTip", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "ScreenTip", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835120.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835120.aspx </remarks>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public string TextToDisplay
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "TextToDisplay", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "TextToDisplay");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "TextToDisplay", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "TextToDisplay", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192731.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff192731.aspx </remarks>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public string Target
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Target", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "Target");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "Target", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "Target", value);
 			}
 		}
 
@@ -390,127 +363,119 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838489.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff838489.aspx </remarks>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void Delete()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "Delete", paramsArray);
+			 Factory.ExecuteMethod(this, "Delete");
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff841075.aspx
 		/// </summary>
-		/// <param name="newWindow">optional object NewWindow</param>
-		/// <param name="addHistory">optional object AddHistory</param>
-		/// <param name="extraInfo">optional object ExtraInfo</param>
-		/// <param name="method">optional object Method</param>
-		/// <param name="headerInfo">optional object HeaderInfo</param>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff841075.aspx </remarks>
+		/// <param name="newWindow">optional object newWindow</param>
+		/// <param name="addHistory">optional object addHistory</param>
+		/// <param name="extraInfo">optional object extraInfo</param>
+		/// <param name="method">optional object method</param>
+		/// <param name="headerInfo">optional object headerInfo</param>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void Follow(object newWindow, object addHistory, object extraInfo, object method, object headerInfo)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(newWindow, addHistory, extraInfo, method, headerInfo);
-			Invoker.Method(this, "Follow", paramsArray);
+			 Factory.ExecuteMethod(this, "Follow", new object[]{ newWindow, addHistory, extraInfo, method, headerInfo });
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff841075.aspx
 		/// </summary>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff841075.aspx </remarks>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void Follow()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "Follow", paramsArray);
+			 Factory.ExecuteMethod(this, "Follow");
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff841075.aspx
 		/// </summary>
-		/// <param name="newWindow">optional object NewWindow</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff841075.aspx </remarks>
+		/// <param name="newWindow">optional object newWindow</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void Follow(object newWindow)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(newWindow);
-			Invoker.Method(this, "Follow", paramsArray);
+			 Factory.ExecuteMethod(this, "Follow", newWindow);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff841075.aspx
 		/// </summary>
-		/// <param name="newWindow">optional object NewWindow</param>
-		/// <param name="addHistory">optional object AddHistory</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff841075.aspx </remarks>
+		/// <param name="newWindow">optional object newWindow</param>
+		/// <param name="addHistory">optional object addHistory</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void Follow(object newWindow, object addHistory)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(newWindow, addHistory);
-			Invoker.Method(this, "Follow", paramsArray);
+			 Factory.ExecuteMethod(this, "Follow", newWindow, addHistory);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff841075.aspx
 		/// </summary>
-		/// <param name="newWindow">optional object NewWindow</param>
-		/// <param name="addHistory">optional object AddHistory</param>
-		/// <param name="extraInfo">optional object ExtraInfo</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff841075.aspx </remarks>
+		/// <param name="newWindow">optional object newWindow</param>
+		/// <param name="addHistory">optional object addHistory</param>
+		/// <param name="extraInfo">optional object extraInfo</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void Follow(object newWindow, object addHistory, object extraInfo)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(newWindow, addHistory, extraInfo);
-			Invoker.Method(this, "Follow", paramsArray);
+			 Factory.ExecuteMethod(this, "Follow", newWindow, addHistory, extraInfo);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff841075.aspx
 		/// </summary>
-		/// <param name="newWindow">optional object NewWindow</param>
-		/// <param name="addHistory">optional object AddHistory</param>
-		/// <param name="extraInfo">optional object ExtraInfo</param>
-		/// <param name="method">optional object Method</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff841075.aspx </remarks>
+		/// <param name="newWindow">optional object newWindow</param>
+		/// <param name="addHistory">optional object addHistory</param>
+		/// <param name="extraInfo">optional object extraInfo</param>
+		/// <param name="method">optional object method</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void Follow(object newWindow, object addHistory, object extraInfo, object method)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(newWindow, addHistory, extraInfo, method);
-			Invoker.Method(this, "Follow", paramsArray);
+			 Factory.ExecuteMethod(this, "Follow", newWindow, addHistory, extraInfo, method);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192543.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff192543.aspx </remarks>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void AddToFavorites()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "AddToFavorites", paramsArray);
+			 Factory.ExecuteMethod(this, "AddToFavorites");
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839513.aspx
 		/// </summary>
-		/// <param name="fileName">string FileName</param>
-		/// <param name="editNow">bool EditNow</param>
-		/// <param name="overwrite">bool Overwrite</param>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff839513.aspx </remarks>
+		/// <param name="fileName">string fileName</param>
+		/// <param name="editNow">bool editNow</param>
+		/// <param name="overwrite">bool overwrite</param>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void CreateNewDocument(string fileName, bool editNow, bool overwrite)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(fileName, editNow, overwrite);
-			Invoker.Method(this, "CreateNewDocument", paramsArray);
+			 Factory.ExecuteMethod(this, "CreateNewDocument", fileName, editNow, overwrite);
 		}
 
 		#endregion
+
 		#pragma warning restore
 	}
 }

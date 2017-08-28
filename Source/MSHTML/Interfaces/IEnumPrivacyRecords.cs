@@ -1,23 +1,34 @@
-﻿using System;
+﻿using System.Reflection;
+using System;
 using NetRuntimeSystem = System;
-using System.Runtime.InteropServices;
 using System.ComponentModel;
-using System.Runtime.CompilerServices;
-using System.Reflection;
-using System.Collections.Generic;
-using NetOffice;
+using NetOffice.Attributes;
+
 namespace NetOffice.MSHTMLApi
 {
-	///<summary>
+	/// <summary>
 	/// Interface IEnumPrivacyRecords 
 	/// SupportByVersion MSHTML, 4
-	///</summary>
-	[SupportByVersionAttribute("MSHTML", 4)]
-	[EntityTypeAttribute(EntityType.IsInterface)]
-	public class IEnumPrivacyRecords : COMObject
+	/// </summary>
+	[SupportByVersion("MSHTML", 4)]
+	[EntityType(EntityType.IsInterface)]
+ 	public class IEnumPrivacyRecords : COMObject
 	{
 		#pragma warning disable
+
 		#region Type Information
+
+		/// <summary>
+		/// Instance Type
+		/// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
+		public override Type InstanceType
+		{
+			get
+			{
+				return LateBindingApiWrapperType;
+			}
+		}
 
         private static Type _type;
 
@@ -28,14 +39,20 @@ namespace NetOffice.MSHTMLApi
             {
                 if (null == _type)
                     _type = typeof(IEnumPrivacyRecords);
-                    
                 return _type;
             }
         }
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public IEnumPrivacyRecords(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -81,7 +98,7 @@ namespace NetOffice.MSHTMLApi
 		{
 		}
 		
-		/// <param name="progId">registered ProgID</param>
+		/// <param name="progId">registered progID</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public IEnumPrivacyRecords(string progId) : base(progId)
 		{
@@ -97,57 +114,51 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[SupportByVersion("MSHTML", 4)]
 		public Int32 reset()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "reset", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return Factory.ExecuteInt32MethodGet(this, "reset");
 		}
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
-		/// 
 		/// </summary>
 		/// <param name="pSize">Int32 pSize</param>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[SupportByVersion("MSHTML", 4)]
 		public Int32 GetSize(out Int32 pSize)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
 			pSize = 0;
 			object[] paramsArray = Invoker.ValidateParamsArray(pSize);
-			object returnItem = Invoker.MethodReturn(this, "GetSize", paramsArray);
+			object returnItem = Invoker.MethodReturn(this, "GetSize", paramsArray, modifiers);
 			pSize = (Int32)paramsArray[0];
 			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
-		/// 
 		/// </summary>
 		/// <param name="pState">Int32 pState</param>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[SupportByVersion("MSHTML", 4)]
 		public Int32 GetPrivacyImpacted(out Int32 pState)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
 			pState = 0;
 			object[] paramsArray = Invoker.ValidateParamsArray(pState);
-			object returnItem = Invoker.MethodReturn(this, "GetPrivacyImpacted", paramsArray);
+			object returnItem = Invoker.MethodReturn(this, "GetPrivacyImpacted", paramsArray, modifiers);
 			pState = (Int32)paramsArray[0];
 			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
-		/// 
 		/// </summary>
 		/// <param name="pbstrUrl">string pbstrUrl</param>
 		/// <param name="pbstrPolicyRef">string pbstrPolicyRef</param>
 		/// <param name="pdwReserved">Int32 pdwReserved</param>
 		/// <param name="pdwPrivacyFlags">Int32 pdwPrivacyFlags</param>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[SupportByVersion("MSHTML", 4)]
 		public Int32 Next(out string pbstrUrl, out string pbstrPolicyRef, out Int32 pdwReserved, out Int32 pdwPrivacyFlags)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true,true,true,true);
@@ -156,15 +167,16 @@ namespace NetOffice.MSHTMLApi
 			pdwReserved = 0;
 			pdwPrivacyFlags = 0;
 			object[] paramsArray = Invoker.ValidateParamsArray(pbstrUrl, pbstrPolicyRef, pdwReserved, pdwPrivacyFlags);
-			object returnItem = Invoker.MethodReturn(this, "Next", paramsArray);
-			pbstrUrl = (string)paramsArray[0];
-			pbstrPolicyRef = (string)paramsArray[1];
+			object returnItem = Invoker.MethodReturn(this, "Next", paramsArray, modifiers);
+			pbstrUrl = paramsArray[0] as string;
+			pbstrPolicyRef = paramsArray[1] as string;
 			pdwReserved = (Int32)paramsArray[2];
 			pdwPrivacyFlags = (Int32)paramsArray[3];
 			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		#endregion
+
 		#pragma warning restore
 	}
 }

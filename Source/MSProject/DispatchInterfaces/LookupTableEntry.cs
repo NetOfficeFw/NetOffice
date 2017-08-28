@@ -1,24 +1,34 @@
 ﻿using System;
 using NetRuntimeSystem = System;
-using System.Runtime.InteropServices;
-using System.Runtime.CompilerServices;
 using System.ComponentModel;
-using System.Reflection;
-using System.Collections.Generic;
-using NetOffice;
+using NetOffice.Attributes;
+
 namespace NetOffice.MSProjectApi
 {
-	///<summary>
+	/// <summary>
 	/// DispatchInterface LookupTableEntry 
 	/// SupportByVersion MSProject, 11,12,14
-	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff920628(v=office.14).aspx
-	///</summary>
-	[SupportByVersionAttribute("MSProject", 11,12,14)]
-	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
-	public class LookupTableEntry : COMObject
+	/// </summary>
+	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff920628(v=office.14).aspx </remarks>
+	[SupportByVersion("MSProject", 11,12,14)]
+	[EntityType(EntityType.IsDispatchInterface)]
+ 	public class LookupTableEntry : COMObject
 	{
 		#pragma warning disable
+
 		#region Type Information
+
+		/// <summary>
+		/// Instance Type
+		/// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
+		public override Type InstanceType
+		{
+			get
+			{
+				return LateBindingApiWrapperType;
+			}
+		}
 
         private static Type _type;
 
@@ -29,14 +39,20 @@ namespace NetOffice.MSProjectApi
             {
                 if (null == _type)
                     _type = typeof(LookupTableEntry);
-                    
                 return _type;
             }
         }
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public LookupTableEntry(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -82,7 +98,7 @@ namespace NetOffice.MSProjectApi
 		{
 		}
 		
-		/// <param name="progId">registered ProgID</param>
+		/// <param name="progId">registered progID</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public LookupTableEntry(string progId) : base(progId)
 		{
@@ -96,15 +112,12 @@ namespace NetOffice.MSProjectApi
 		/// SupportByVersion MSProject 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		[SupportByVersion("MSProject", 11,12,14)]
 		public NetOffice.MSProjectApi.Application Application
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				NetOffice.MSProjectApi.Application newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.MSProjectApi.Application.LateBindingApiWrapperType) as NetOffice.MSProjectApi.Application;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.MSProjectApi.Application>(this, "Application", NetOffice.MSProjectApi.Application.LateBindingApiWrapperType);
 			}
 		}
 
@@ -112,19 +125,16 @@ namespace NetOffice.MSProjectApi
 		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		[SupportByVersion("MSProject", 11,12,14)]
 		public string Name
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Name", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "Name");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "Name", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "Name", value);
 			}
 		}
 
@@ -132,15 +142,12 @@ namespace NetOffice.MSProjectApi
 		/// SupportByVersion MSProject 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		[SupportByVersion("MSProject", 11,12,14)]
 		public NetOffice.MSProjectApi.OutlineCode Parent
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Parent", paramsArray);
-				NetOffice.MSProjectApi.OutlineCode newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.MSProjectApi.OutlineCode.LateBindingApiWrapperType) as NetOffice.MSProjectApi.OutlineCode;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.MSProjectApi.OutlineCode>(this, "Parent", NetOffice.MSProjectApi.OutlineCode.LateBindingApiWrapperType);
 			}
 		}
 
@@ -148,15 +155,12 @@ namespace NetOffice.MSProjectApi
 		/// SupportByVersion MSProject 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		[SupportByVersion("MSProject", 11,12,14)]
 		public NetOffice.MSProjectApi.LookupTableEntry ParentEntry
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "ParentEntry", paramsArray);
-				NetOffice.MSProjectApi.LookupTableEntry newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.MSProjectApi.LookupTableEntry.LateBindingApiWrapperType) as NetOffice.MSProjectApi.LookupTableEntry;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.MSProjectApi.LookupTableEntry>(this, "ParentEntry", NetOffice.MSProjectApi.LookupTableEntry.LateBindingApiWrapperType);
 			}
 		}
 
@@ -164,19 +168,16 @@ namespace NetOffice.MSProjectApi
 		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		[SupportByVersion("MSProject", 11,12,14)]
 		public Int32 Level
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Level", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "Level");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "Level", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "Level", value);
 			}
 		}
 
@@ -184,14 +185,12 @@ namespace NetOffice.MSProjectApi
 		/// SupportByVersion MSProject 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		[SupportByVersion("MSProject", 11,12,14)]
 		public Int32 UniqueID
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "UniqueID", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "UniqueID");
 			}
 		}
 
@@ -199,14 +198,12 @@ namespace NetOffice.MSProjectApi
 		/// SupportByVersion MSProject 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		[SupportByVersion("MSProject", 11,12,14)]
 		public Int32 Index
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Index", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "Index");
 			}
 		}
 
@@ -214,19 +211,16 @@ namespace NetOffice.MSProjectApi
 		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		[SupportByVersion("MSProject", 11,12,14)]
 		public string Description
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Description", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "Description");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "Description", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "Description", value);
 			}
 		}
 
@@ -234,14 +228,12 @@ namespace NetOffice.MSProjectApi
 		/// SupportByVersion MSProject 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		[SupportByVersion("MSProject", 11,12,14)]
 		public bool IsValid
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "IsValid", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "IsValid");
 			}
 		}
 
@@ -249,14 +241,12 @@ namespace NetOffice.MSProjectApi
 		/// SupportByVersion MSProject 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		[SupportByVersion("MSProject", 11,12,14)]
 		public string FullName
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "FullName", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "FullName");
 			}
 		}
 
@@ -264,14 +254,12 @@ namespace NetOffice.MSProjectApi
 		/// SupportByVersion MSProject 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		[SupportByVersion("MSProject", 11,12,14)]
 		public string Cookie
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Cookie", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "Cookie");
 			}
 		}
 
@@ -279,14 +267,12 @@ namespace NetOffice.MSProjectApi
 		/// SupportByVersion MSProject 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		[SupportByVersion("MSProject", 11,12,14)]
 		public string LocalizedCookie
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "LocalizedCookie", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "LocalizedCookie");
 			}
 		}
 
@@ -296,16 +282,15 @@ namespace NetOffice.MSProjectApi
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		[SupportByVersion("MSProject", 11,12,14)]
 		public void Delete()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "Delete", paramsArray);
+			 Factory.ExecuteMethod(this, "Delete");
 		}
 
 		#endregion
+
 		#pragma warning restore
 	}
 }

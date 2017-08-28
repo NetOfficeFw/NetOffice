@@ -1,24 +1,35 @@
-﻿using System;
-using NetRuntimeSystem = System;
-using System.Runtime.InteropServices;
-using System.Runtime.CompilerServices;
-using System.ComponentModel;
-using System.Reflection;
+﻿using System.Collections;
 using System.Collections.Generic;
-using System.Collections;
-using NetOffice;
+using System;
+using NetRuntimeSystem = System;
+using System.ComponentModel;
+using NetOffice.Attributes;
+
 namespace NetOffice.OWC10Api
 {
-	///<summary>
+	/// <summary>
 	/// DispatchInterface SublistRelationships 
 	/// SupportByVersion OWC10, 1
-	///</summary>
-	[SupportByVersionAttribute("OWC10", 1)]
-	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
-	public class SublistRelationships : COMObject ,IEnumerable<NetOffice.OWC10Api.PageRelationship>
+	/// </summary>
+	[SupportByVersion("OWC10", 1)]
+	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "Item")]
+	public class SublistRelationships : COMObject , IEnumerable<NetOffice.OWC10Api.PageRelationship>
 	{
 		#pragma warning disable
+
 		#region Type Information
+
+		/// <summary>
+		/// Instance Type
+		/// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
+		public override Type InstanceType
+		{
+			get
+			{
+				return LateBindingApiWrapperType;
+			}
+		}
 
         private static Type _type;
 
@@ -29,14 +40,20 @@ namespace NetOffice.OWC10Api
             {
                 if (null == _type)
                     _type = typeof(SublistRelationships);
-                    
                 return _type;
             }
         }
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public SublistRelationships(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -82,7 +99,7 @@ namespace NetOffice.OWC10Api
 		{
 		}
 		
-		/// <param name="progId">registered ProgID</param>
+		/// <param name="progId">registered progID</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public SublistRelationships(string progId) : base(progId)
 		{
@@ -96,14 +113,12 @@ namespace NetOffice.OWC10Api
 		/// SupportByVersion OWC10 1
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("OWC10", 1)]
+		[SupportByVersion("OWC10", 1)]
 		public Int32 Count
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Count", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "Count");
 			}
 		}
 
@@ -111,17 +126,14 @@ namespace NetOffice.OWC10Api
 		/// SupportByVersion OWC10 1
 		/// Get
 		/// </summary>
-		/// <param name="index">object Index</param>
-		[SupportByVersionAttribute("OWC10", 1)]
-		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
+		/// <param name="index">object index</param>
+		[SupportByVersion("OWC10", 1)]
+		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
 		public NetOffice.OWC10Api.PageRelationship this[object index]
 		{
 			get
-{			
-			object[] paramsArray = Invoker.ValidateParamsArray(index);
-			object returnItem = Invoker.PropertyGet(this, "Item", paramsArray);
-			NetOffice.OWC10Api.PageRelationship newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OWC10Api.PageRelationship.LateBindingApiWrapperType) as NetOffice.OWC10Api.PageRelationship;
-			return newObject;
+			{
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OWC10Api.PageRelationship>(this, "Item", NetOffice.OWC10Api.PageRelationship.LateBindingApiWrapperType, index);
 			}
 		}
 
@@ -131,29 +143,23 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
-		/// 
 		/// </summary>
-		/// <param name="pageRowsource">NetOffice.OWC10Api.PageRowsource PageRowsource</param>
-		/// <param name="schemaRelationship">NetOffice.OWC10Api.SchemaRelationship SchemaRelationship</param>
-		[SupportByVersionAttribute("OWC10", 1)]
+		/// <param name="pageRowsource">NetOffice.OWC10Api.PageRowsource pageRowsource</param>
+		/// <param name="schemaRelationship">NetOffice.OWC10Api.SchemaRelationship schemaRelationship</param>
+		[SupportByVersion("OWC10", 1)]
 		public NetOffice.OWC10Api.PageRelationship Add(NetOffice.OWC10Api.PageRowsource pageRowsource, NetOffice.OWC10Api.SchemaRelationship schemaRelationship)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(pageRowsource, schemaRelationship);
-			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.OWC10Api.PageRelationship newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OWC10Api.PageRelationship.LateBindingApiWrapperType) as NetOffice.OWC10Api.PageRelationship;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OWC10Api.PageRelationship>(this, "Add", NetOffice.OWC10Api.PageRelationship.LateBindingApiWrapperType, pageRowsource, schemaRelationship);
 		}
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
-		/// 
 		/// </summary>
-		/// <param name="index">object Index</param>
-		[SupportByVersionAttribute("OWC10", 1)]
+		/// <param name="index">object index</param>
+		[SupportByVersion("OWC10", 1)]
 		public void Delete(object index)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(index);
-			Invoker.Method(this, "Delete", paramsArray);
+			 Factory.ExecuteMethod(this, "Delete", index);
 		}
 
 		#endregion
@@ -161,9 +167,9 @@ namespace NetOffice.OWC10Api
        #region IEnumerable<NetOffice.OWC10Api.PageRelationship> Member
         
         /// <summary>
-		/// SupportByVersionAttribute OWC10, 1
+		/// SupportByVersion OWC10, 1
 		/// </summary>
-		[SupportByVersionAttribute("OWC10", 1)]
+		[SupportByVersion("OWC10", 1)]
        public IEnumerator<NetOffice.OWC10Api.PageRelationship> GetEnumerator()  
        {
            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
@@ -176,15 +182,16 @@ namespace NetOffice.OWC10Api
 		#region IEnumerable Members
        
 		/// <summary>
-		/// SupportByVersionAttribute OWC10, 1
+		/// SupportByVersion OWC10, 1
 		/// </summary>
-		[SupportByVersionAttribute("OWC10", 1)]
+		[SupportByVersion("OWC10", 1)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
 			return NetOffice.Utils.GetProxyEnumeratorAsProperty(this);
 		}
 
 		#endregion
+
 		#pragma warning restore
 	}
 }

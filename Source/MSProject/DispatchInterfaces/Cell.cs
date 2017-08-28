@@ -1,24 +1,34 @@
 ﻿using System;
 using NetRuntimeSystem = System;
-using System.Runtime.InteropServices;
-using System.Runtime.CompilerServices;
 using System.ComponentModel;
-using System.Reflection;
-using System.Collections.Generic;
-using NetOffice;
+using NetOffice.Attributes;
+
 namespace NetOffice.MSProjectApi
 {
-	///<summary>
+	/// <summary>
 	/// DispatchInterface Cell 
 	/// SupportByVersion MSProject, 11,12,14
-	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff920566(v=office.14).aspx
-	///</summary>
-	[SupportByVersionAttribute("MSProject", 11,12,14)]
-	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
-	public class Cell : COMObject
+	/// </summary>
+	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff920566(v=office.14).aspx </remarks>
+	[SupportByVersion("MSProject", 11,12,14)]
+	[EntityType(EntityType.IsDispatchInterface)]
+ 	public class Cell : COMObject
 	{
 		#pragma warning disable
+
 		#region Type Information
+
+		/// <summary>
+		/// Instance Type
+		/// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
+		public override Type InstanceType
+		{
+			get
+			{
+				return LateBindingApiWrapperType;
+			}
+		}
 
         private static Type _type;
 
@@ -29,14 +39,20 @@ namespace NetOffice.MSProjectApi
             {
                 if (null == _type)
                     _type = typeof(Cell);
-                    
                 return _type;
             }
         }
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public Cell(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -82,7 +98,7 @@ namespace NetOffice.MSProjectApi
 		{
 		}
 		
-		/// <param name="progId">registered ProgID</param>
+		/// <param name="progId">registered progID</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public Cell(string progId) : base(progId)
 		{
@@ -96,15 +112,12 @@ namespace NetOffice.MSProjectApi
 		/// SupportByVersion MSProject 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		[SupportByVersion("MSProject", 11,12,14)]
 		public NetOffice.MSProjectApi.Application Application
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				NetOffice.MSProjectApi.Application newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.MSProjectApi.Application.LateBindingApiWrapperType) as NetOffice.MSProjectApi.Application;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.MSProjectApi.Application>(this, "Application", NetOffice.MSProjectApi.Application.LateBindingApiWrapperType);
 			}
 		}
 
@@ -113,15 +126,12 @@ namespace NetOffice.MSProjectApi
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		[SupportByVersion("MSProject", 11,12,14), ProxyResult]
 		public object Parent
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Parent", paramsArray);
-				ICOMObject newObject = Factory.CreateObjectFromComProxy(this,returnItem);
-				return newObject;
+				return Factory.ExecuteReferencePropertyGet(this, "Parent");
 			}
 		}
 
@@ -129,15 +139,12 @@ namespace NetOffice.MSProjectApi
 		/// SupportByVersion MSProject 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		[SupportByVersion("MSProject", 11,12,14)]
 		public NetOffice.MSProjectApi.Task Task
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Task", paramsArray);
-				NetOffice.MSProjectApi.Task newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.MSProjectApi.Task.LateBindingApiWrapperType) as NetOffice.MSProjectApi.Task;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.MSProjectApi.Task>(this, "Task", NetOffice.MSProjectApi.Task.LateBindingApiWrapperType);
 			}
 		}
 
@@ -145,15 +152,12 @@ namespace NetOffice.MSProjectApi
 		/// SupportByVersion MSProject 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		[SupportByVersion("MSProject", 11,12,14)]
 		public NetOffice.MSProjectApi.Resource Resource
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Resource", paramsArray);
-				NetOffice.MSProjectApi.Resource newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.MSProjectApi.Resource.LateBindingApiWrapperType) as NetOffice.MSProjectApi.Resource;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.MSProjectApi.Resource>(this, "Resource", NetOffice.MSProjectApi.Resource.LateBindingApiWrapperType);
 			}
 		}
 
@@ -161,14 +165,12 @@ namespace NetOffice.MSProjectApi
 		/// SupportByVersion MSProject 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		[SupportByVersion("MSProject", 11,12,14)]
 		public string FieldName
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "FieldName", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "FieldName");
 			}
 		}
 
@@ -176,15 +178,12 @@ namespace NetOffice.MSProjectApi
 		/// SupportByVersion MSProject 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		[SupportByVersion("MSProject", 11,12,14)]
 		public NetOffice.MSProjectApi.Enums.PjField FieldID
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "FieldID", paramsArray);
-				int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-				return (NetOffice.MSProjectApi.Enums.PjField)intReturnItem;
+				return Factory.ExecuteEnumPropertyGet<NetOffice.MSProjectApi.Enums.PjField>(this, "FieldID");
 			}
 		}
 
@@ -192,14 +191,12 @@ namespace NetOffice.MSProjectApi
 		/// SupportByVersion MSProject 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		[SupportByVersion("MSProject", 11,12,14)]
 		public string Text
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Text", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "Text");
 			}
 		}
 
@@ -207,20 +204,16 @@ namespace NetOffice.MSProjectApi
 		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		[SupportByVersion("MSProject", 11,12,14)]
 		public NetOffice.MSProjectApi.Enums.PjColor CellColor
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "CellColor", paramsArray);
-				int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-				return (NetOffice.MSProjectApi.Enums.PjColor)intReturnItem;
+				return Factory.ExecuteEnumPropertyGet<NetOffice.MSProjectApi.Enums.PjColor>(this, "CellColor");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "CellColor", paramsArray);
+				Factory.ExecuteEnumPropertySet(this, "CellColor", value);
 			}
 		}
 
@@ -228,20 +221,16 @@ namespace NetOffice.MSProjectApi
 		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		[SupportByVersion("MSProject", 11,12,14)]
 		public NetOffice.MSProjectApi.Enums.PjColor FontColor
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "FontColor", paramsArray);
-				int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-				return (NetOffice.MSProjectApi.Enums.PjColor)intReturnItem;
+				return Factory.ExecuteEnumPropertyGet<NetOffice.MSProjectApi.Enums.PjColor>(this, "FontColor");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "FontColor", paramsArray);
+				Factory.ExecuteEnumPropertySet(this, "FontColor", value);
 			}
 		}
 
@@ -249,20 +238,16 @@ namespace NetOffice.MSProjectApi
 		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		[SupportByVersion("MSProject", 11,12,14)]
 		public NetOffice.MSProjectApi.Enums.PjBackgroundPattern Pattern
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Pattern", paramsArray);
-				int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-				return (NetOffice.MSProjectApi.Enums.PjBackgroundPattern)intReturnItem;
+				return Factory.ExecuteEnumPropertyGet<NetOffice.MSProjectApi.Enums.PjBackgroundPattern>(this, "Pattern");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "Pattern", paramsArray);
+				Factory.ExecuteEnumPropertySet(this, "Pattern", value);
 			}
 		}
 
@@ -270,19 +255,16 @@ namespace NetOffice.MSProjectApi
 		/// SupportByVersion MSProject 11, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 11,14)]
+		[SupportByVersion("MSProject", 11,14)]
 		public Int32 CellColorEx
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "CellColorEx", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "CellColorEx");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "CellColorEx", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "CellColorEx", value);
 			}
 		}
 
@@ -290,19 +272,16 @@ namespace NetOffice.MSProjectApi
 		/// SupportByVersion MSProject 11, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 11,14)]
+		[SupportByVersion("MSProject", 11,14)]
 		public Int32 FontColorEx
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "FontColorEx", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "FontColorEx");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "FontColorEx", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "FontColorEx", value);
 			}
 		}
 
@@ -310,15 +289,12 @@ namespace NetOffice.MSProjectApi
 		/// SupportByVersion MSProject 11, 14
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 11,14)]
+		[SupportByVersion("MSProject", 11,14)]
 		public NetOffice.MSProjectApi.Assignment Assignment
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Assignment", paramsArray);
-				NetOffice.MSProjectApi.Assignment newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.MSProjectApi.Assignment.LateBindingApiWrapperType) as NetOffice.MSProjectApi.Assignment;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.MSProjectApi.Assignment>(this, "Assignment", NetOffice.MSProjectApi.Assignment.LateBindingApiWrapperType);
 			}
 		}
 
@@ -327,6 +303,7 @@ namespace NetOffice.MSProjectApi
 		#region Methods
 
 		#endregion
+
 		#pragma warning restore
 	}
 }

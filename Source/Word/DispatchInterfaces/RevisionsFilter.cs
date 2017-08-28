@@ -1,24 +1,34 @@
 ﻿using System;
 using NetRuntimeSystem = System;
-using System.Runtime.InteropServices;
-using System.Runtime.CompilerServices;
 using System.ComponentModel;
-using System.Reflection;
-using System.Collections.Generic;
-using NetOffice;
+using NetOffice.Attributes;
+
 namespace NetOffice.WordApi
 {
-	///<summary>
+	/// <summary>
 	/// DispatchInterface RevisionsFilter 
 	/// SupportByVersion Word, 15, 16
-	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj228191.aspx
-	///</summary>
-	[SupportByVersionAttribute("Word", 15, 16)]
-	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
-	public class RevisionsFilter : COMObject
+	/// </summary>
+	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/jj228191.aspx </remarks>
+	[SupportByVersion("Word", 15, 16)]
+	[EntityType(EntityType.IsDispatchInterface)]
+ 	public class RevisionsFilter : COMObject
 	{
 		#pragma warning disable
+
 		#region Type Information
+
+		/// <summary>
+		/// Instance Type
+		/// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
+		public override Type InstanceType
+		{
+			get
+			{
+				return LateBindingApiWrapperType;
+			}
+		}
 
         private static Type _type;
 
@@ -29,14 +39,20 @@ namespace NetOffice.WordApi
             {
                 if (null == _type)
                     _type = typeof(RevisionsFilter);
-                    
                 return _type;
             }
         }
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public RevisionsFilter(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -82,7 +98,7 @@ namespace NetOffice.WordApi
 		{
 		}
 		
-		/// <param name="progId">registered ProgID</param>
+		/// <param name="progId">registered progID</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public RevisionsFilter(string progId) : base(progId)
 		{
@@ -95,61 +111,50 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 15,16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj231521.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 15, 16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/jj231521.aspx </remarks>
+		[SupportByVersion("Word", 15, 16)]
 		public NetOffice.WordApi.Enums.WdRevisionsView View
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "View", paramsArray);
-				int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-				return (NetOffice.WordApi.Enums.WdRevisionsView)intReturnItem;
+				return Factory.ExecuteEnumPropertyGet<NetOffice.WordApi.Enums.WdRevisionsView>(this, "View");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "View", paramsArray);
+				Factory.ExecuteEnumPropertySet(this, "View", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 15,16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj230964.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 15, 16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/jj230964.aspx </remarks>
+		[SupportByVersion("Word", 15, 16)]
 		public NetOffice.WordApi.Enums.WdRevisionsMarkup Markup
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Markup", paramsArray);
-				int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-				return (NetOffice.WordApi.Enums.WdRevisionsMarkup)intReturnItem;
+				return Factory.ExecuteEnumPropertyGet<NetOffice.WordApi.Enums.WdRevisionsMarkup>(this, "Markup");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "Markup", paramsArray);
+				Factory.ExecuteEnumPropertySet(this, "Markup", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 15,16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj231708.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 15, 16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/jj231708.aspx </remarks>
+		[SupportByVersion("Word", 15, 16)]
 		public NetOffice.WordApi.Reviewers Reviewers
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Reviewers", paramsArray);
-				NetOffice.WordApi.Reviewers newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.Reviewers.LateBindingApiWrapperType) as NetOffice.WordApi.Reviewers;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.Reviewers>(this, "Reviewers", NetOffice.WordApi.Reviewers.LateBindingApiWrapperType);
 			}
 		}
 
@@ -159,16 +164,16 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 15,16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj227337.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 15, 16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/jj227337.aspx </remarks>
+		[SupportByVersion("Word", 15, 16)]
 		public void ToggleShowAllReviewers()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "ToggleShowAllReviewers", paramsArray);
+			 Factory.ExecuteMethod(this, "ToggleShowAllReviewers");
 		}
 
 		#endregion
+
 		#pragma warning restore
 	}
 }

@@ -1,24 +1,34 @@
 ﻿using System;
 using NetRuntimeSystem = System;
-using System.Runtime.InteropServices;
-using System.Runtime.CompilerServices;
 using System.ComponentModel;
-using System.Reflection;
-using System.Collections.Generic;
-using NetOffice;
+using NetOffice.Attributes;
+
 namespace NetOffice.PowerPointApi
 {
-	///<summary>
+	/// <summary>
 	/// DispatchInterface Axis 
 	/// SupportByVersion PowerPoint, 14,15,16
-	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744572.aspx
-	///</summary>
-	[SupportByVersionAttribute("PowerPoint", 14,15,16)]
-	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
-	public class Axis : COMObject
+	/// </summary>
+	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff744572.aspx </remarks>
+	[SupportByVersion("PowerPoint", 14,15,16)]
+	[EntityType(EntityType.IsDispatchInterface)]
+ 	public class Axis : COMObject
 	{
 		#pragma warning disable
+
 		#region Type Information
+
+		/// <summary>
+		/// Instance Type
+		/// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
+		public override Type InstanceType
+		{
+			get
+			{
+				return LateBindingApiWrapperType;
+			}
+		}
 
         private static Type _type;
 
@@ -29,14 +39,20 @@ namespace NetOffice.PowerPointApi
             {
                 if (null == _type)
                     _type = typeof(Axis);
-                    
                 return _type;
             }
         }
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public Axis(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -82,7 +98,7 @@ namespace NetOffice.PowerPointApi
 		{
 		}
 		
-		/// <param name="progId">registered ProgID</param>
+		/// <param name="progId">registered progID</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public Axis(string progId) : base(progId)
 		{
@@ -95,963 +111,805 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745589.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff745589.aspx </remarks>
+		[SupportByVersion("PowerPoint", 14,15,16)]
 		public bool AxisBetweenCategories
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "AxisBetweenCategories", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "AxisBetweenCategories");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "AxisBetweenCategories", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "AxisBetweenCategories", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744123.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff744123.aspx </remarks>
+		[SupportByVersion("PowerPoint", 14,15,16)]
 		public NetOffice.PowerPointApi.Enums.XlAxisGroup AxisGroup
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "AxisGroup", paramsArray);
-				int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-				return (NetOffice.PowerPointApi.Enums.XlAxisGroup)intReturnItem;
+				return Factory.ExecuteEnumPropertyGet<NetOffice.PowerPointApi.Enums.XlAxisGroup>(this, "AxisGroup");
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746159.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff746159.aspx </remarks>
+		[SupportByVersion("PowerPoint", 14,15,16)]
 		public NetOffice.PowerPointApi.AxisTitle AxisTitle
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "AxisTitle", paramsArray);
-				NetOffice.PowerPointApi.AxisTitle newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.PowerPointApi.AxisTitle.LateBindingApiWrapperType) as NetOffice.PowerPointApi.AxisTitle;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.PowerPointApi.AxisTitle>(this, "AxisTitle", NetOffice.PowerPointApi.AxisTitle.LateBindingApiWrapperType);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746687.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff746687.aspx </remarks>
+		[SupportByVersion("PowerPoint", 14,15,16)]
 		public object CategoryNames
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "CategoryNames", paramsArray);
-				if((null != returnItem) && (returnItem is MarshalByRefObject))
-				{
-					ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
-					return newObject;
-				}
-				else
-				{
-					return  returnItem;
-				}
+				return Factory.ExecuteVariantPropertyGet(this, "CategoryNames");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "CategoryNames", paramsArray);
+				Factory.ExecuteVariantPropertySet(this, "CategoryNames", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745651.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff745651.aspx </remarks>
+		[SupportByVersion("PowerPoint", 14,15,16)]
 		public NetOffice.PowerPointApi.Enums.XlAxisCrosses Crosses
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Crosses", paramsArray);
-				int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-				return (NetOffice.PowerPointApi.Enums.XlAxisCrosses)intReturnItem;
+				return Factory.ExecuteEnumPropertyGet<NetOffice.PowerPointApi.Enums.XlAxisCrosses>(this, "Crosses");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "Crosses", paramsArray);
+				Factory.ExecuteEnumPropertySet(this, "Crosses", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746282.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff746282.aspx </remarks>
+		[SupportByVersion("PowerPoint", 14,15,16)]
 		public Double CrossesAt
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "CrossesAt", paramsArray);
-				return NetRuntimeSystem.Convert.ToDouble(returnItem);
+				return Factory.ExecuteDoublePropertyGet(this, "CrossesAt");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "CrossesAt", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "CrossesAt", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745884.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff745884.aspx </remarks>
+		[SupportByVersion("PowerPoint", 14,15,16)]
 		public bool HasMajorGridlines
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "HasMajorGridlines", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "HasMajorGridlines");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "HasMajorGridlines", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "HasMajorGridlines", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744847.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff744847.aspx </remarks>
+		[SupportByVersion("PowerPoint", 14,15,16)]
 		public bool HasMinorGridlines
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "HasMinorGridlines", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "HasMinorGridlines");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "HasMinorGridlines", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "HasMinorGridlines", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff743898.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff743898.aspx </remarks>
+		[SupportByVersion("PowerPoint", 14,15,16)]
 		public bool HasTitle
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "HasTitle", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "HasTitle");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "HasTitle", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "HasTitle", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746330.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff746330.aspx </remarks>
+		[SupportByVersion("PowerPoint", 14,15,16)]
 		public NetOffice.PowerPointApi.Gridlines MajorGridlines
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "MajorGridlines", paramsArray);
-				NetOffice.PowerPointApi.Gridlines newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.PowerPointApi.Gridlines.LateBindingApiWrapperType) as NetOffice.PowerPointApi.Gridlines;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.PowerPointApi.Gridlines>(this, "MajorGridlines", NetOffice.PowerPointApi.Gridlines.LateBindingApiWrapperType);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745421.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff745421.aspx </remarks>
+		[SupportByVersion("PowerPoint", 14,15,16)]
 		public NetOffice.PowerPointApi.Enums.XlTickMark MajorTickMark
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "MajorTickMark", paramsArray);
-				int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-				return (NetOffice.PowerPointApi.Enums.XlTickMark)intReturnItem;
+				return Factory.ExecuteEnumPropertyGet<NetOffice.PowerPointApi.Enums.XlTickMark>(this, "MajorTickMark");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "MajorTickMark", paramsArray);
+				Factory.ExecuteEnumPropertySet(this, "MajorTickMark", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745026.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff745026.aspx </remarks>
+		[SupportByVersion("PowerPoint", 14,15,16)]
 		public Double MajorUnit
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "MajorUnit", paramsArray);
-				return NetRuntimeSystem.Convert.ToDouble(returnItem);
+				return Factory.ExecuteDoublePropertyGet(this, "MajorUnit");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "MajorUnit", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "MajorUnit", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746487.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff746487.aspx </remarks>
+		[SupportByVersion("PowerPoint", 14,15,16)]
 		public Double LogBase
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "LogBase", paramsArray);
-				return NetRuntimeSystem.Convert.ToDouble(returnItem);
+				return Factory.ExecuteDoublePropertyGet(this, "LogBase");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "LogBase", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "LogBase", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746691.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff746691.aspx </remarks>
+		[SupportByVersion("PowerPoint", 14,15,16)]
 		public bool TickLabelSpacingIsAuto
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "TickLabelSpacingIsAuto", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "TickLabelSpacingIsAuto");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "TickLabelSpacingIsAuto", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "TickLabelSpacingIsAuto", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746838.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff746838.aspx </remarks>
+		[SupportByVersion("PowerPoint", 14,15,16)]
 		public bool MajorUnitIsAuto
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "MajorUnitIsAuto", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "MajorUnitIsAuto");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "MajorUnitIsAuto", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "MajorUnitIsAuto", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746268.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff746268.aspx </remarks>
+		[SupportByVersion("PowerPoint", 14,15,16)]
 		public Double MaximumScale
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "MaximumScale", paramsArray);
-				return NetRuntimeSystem.Convert.ToDouble(returnItem);
+				return Factory.ExecuteDoublePropertyGet(this, "MaximumScale");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "MaximumScale", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "MaximumScale", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746704.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff746704.aspx </remarks>
+		[SupportByVersion("PowerPoint", 14,15,16)]
 		public bool MaximumScaleIsAuto
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "MaximumScaleIsAuto", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "MaximumScaleIsAuto");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "MaximumScaleIsAuto", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "MaximumScaleIsAuto", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745624.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff745624.aspx </remarks>
+		[SupportByVersion("PowerPoint", 14,15,16)]
 		public Double MinimumScale
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "MinimumScale", paramsArray);
-				return NetRuntimeSystem.Convert.ToDouble(returnItem);
+				return Factory.ExecuteDoublePropertyGet(this, "MinimumScale");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "MinimumScale", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "MinimumScale", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745391.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff745391.aspx </remarks>
+		[SupportByVersion("PowerPoint", 14,15,16)]
 		public bool MinimumScaleIsAuto
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "MinimumScaleIsAuto", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "MinimumScaleIsAuto");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "MinimumScaleIsAuto", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "MinimumScaleIsAuto", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746773.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff746773.aspx </remarks>
+		[SupportByVersion("PowerPoint", 14,15,16)]
 		public NetOffice.PowerPointApi.Gridlines MinorGridlines
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "MinorGridlines", paramsArray);
-				NetOffice.PowerPointApi.Gridlines newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.PowerPointApi.Gridlines.LateBindingApiWrapperType) as NetOffice.PowerPointApi.Gridlines;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.PowerPointApi.Gridlines>(this, "MinorGridlines", NetOffice.PowerPointApi.Gridlines.LateBindingApiWrapperType);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744253.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff744253.aspx </remarks>
+		[SupportByVersion("PowerPoint", 14,15,16)]
 		public NetOffice.PowerPointApi.Enums.XlTickMark MinorTickMark
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "MinorTickMark", paramsArray);
-				int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-				return (NetOffice.PowerPointApi.Enums.XlTickMark)intReturnItem;
+				return Factory.ExecuteEnumPropertyGet<NetOffice.PowerPointApi.Enums.XlTickMark>(this, "MinorTickMark");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "MinorTickMark", paramsArray);
+				Factory.ExecuteEnumPropertySet(this, "MinorTickMark", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746830.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff746830.aspx </remarks>
+		[SupportByVersion("PowerPoint", 14,15,16)]
 		public Double MinorUnit
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "MinorUnit", paramsArray);
-				return NetRuntimeSystem.Convert.ToDouble(returnItem);
+				return Factory.ExecuteDoublePropertyGet(this, "MinorUnit");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "MinorUnit", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "MinorUnit", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744117.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff744117.aspx </remarks>
+		[SupportByVersion("PowerPoint", 14,15,16)]
 		public bool MinorUnitIsAuto
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "MinorUnitIsAuto", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "MinorUnitIsAuto");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "MinorUnitIsAuto", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "MinorUnitIsAuto", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745065.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff745065.aspx </remarks>
+		[SupportByVersion("PowerPoint", 14,15,16)]
 		public bool ReversePlotOrder
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "ReversePlotOrder", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "ReversePlotOrder");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "ReversePlotOrder", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "ReversePlotOrder", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746084.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff746084.aspx </remarks>
+		[SupportByVersion("PowerPoint", 14,15,16)]
 		public NetOffice.PowerPointApi.Enums.XlScaleType ScaleType
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "ScaleType", paramsArray);
-				int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-				return (NetOffice.PowerPointApi.Enums.XlScaleType)intReturnItem;
+				return Factory.ExecuteEnumPropertyGet<NetOffice.PowerPointApi.Enums.XlScaleType>(this, "ScaleType");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "ScaleType", paramsArray);
+				Factory.ExecuteEnumPropertySet(this, "ScaleType", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744718.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff744718.aspx </remarks>
+		[SupportByVersion("PowerPoint", 14,15,16)]
 		public NetOffice.PowerPointApi.Enums.XlTickLabelPosition TickLabelPosition
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "TickLabelPosition", paramsArray);
-				int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-				return (NetOffice.PowerPointApi.Enums.XlTickLabelPosition)intReturnItem;
+				return Factory.ExecuteEnumPropertyGet<NetOffice.PowerPointApi.Enums.XlTickLabelPosition>(this, "TickLabelPosition");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "TickLabelPosition", paramsArray);
+				Factory.ExecuteEnumPropertySet(this, "TickLabelPosition", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745407.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff745407.aspx </remarks>
+		[SupportByVersion("PowerPoint", 14,15,16)]
 		public NetOffice.PowerPointApi.TickLabels TickLabels
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "TickLabels", paramsArray);
-				NetOffice.PowerPointApi.TickLabels newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.PowerPointApi.TickLabels.LateBindingApiWrapperType) as NetOffice.PowerPointApi.TickLabels;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.PowerPointApi.TickLabels>(this, "TickLabels", NetOffice.PowerPointApi.TickLabels.LateBindingApiWrapperType);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745736.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff745736.aspx </remarks>
+		[SupportByVersion("PowerPoint", 14,15,16)]
 		public Int32 TickLabelSpacing
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "TickLabelSpacing", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "TickLabelSpacing");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "TickLabelSpacing", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "TickLabelSpacing", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745472.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff745472.aspx </remarks>
+		[SupportByVersion("PowerPoint", 14,15,16)]
 		public Int32 TickMarkSpacing
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "TickMarkSpacing", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "TickMarkSpacing");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "TickMarkSpacing", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "TickMarkSpacing", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746690.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff746690.aspx </remarks>
+		[SupportByVersion("PowerPoint", 14,15,16)]
 		public NetOffice.PowerPointApi.Enums.XlAxisType Type
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Type", paramsArray);
-				int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-				return (NetOffice.PowerPointApi.Enums.XlAxisType)intReturnItem;
+				return Factory.ExecuteEnumPropertyGet<NetOffice.PowerPointApi.Enums.XlAxisType>(this, "Type");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "Type", paramsArray);
+				Factory.ExecuteEnumPropertySet(this, "Type", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745843.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff745843.aspx </remarks>
+		[SupportByVersion("PowerPoint", 14,15,16)]
 		public NetOffice.PowerPointApi.Enums.XlTimeUnit BaseUnit
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "BaseUnit", paramsArray);
-				int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-				return (NetOffice.PowerPointApi.Enums.XlTimeUnit)intReturnItem;
+				return Factory.ExecuteEnumPropertyGet<NetOffice.PowerPointApi.Enums.XlTimeUnit>(this, "BaseUnit");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "BaseUnit", paramsArray);
+				Factory.ExecuteEnumPropertySet(this, "BaseUnit", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744623.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff744623.aspx </remarks>
+		[SupportByVersion("PowerPoint", 14,15,16)]
 		public bool BaseUnitIsAuto
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "BaseUnitIsAuto", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "BaseUnitIsAuto");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "BaseUnitIsAuto", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "BaseUnitIsAuto", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744714.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff744714.aspx </remarks>
+		[SupportByVersion("PowerPoint", 14,15,16)]
 		public NetOffice.PowerPointApi.Enums.XlTimeUnit MajorUnitScale
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "MajorUnitScale", paramsArray);
-				int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-				return (NetOffice.PowerPointApi.Enums.XlTimeUnit)intReturnItem;
+				return Factory.ExecuteEnumPropertyGet<NetOffice.PowerPointApi.Enums.XlTimeUnit>(this, "MajorUnitScale");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "MajorUnitScale", paramsArray);
+				Factory.ExecuteEnumPropertySet(this, "MajorUnitScale", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744083.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff744083.aspx </remarks>
+		[SupportByVersion("PowerPoint", 14,15,16)]
 		public NetOffice.PowerPointApi.Enums.XlTimeUnit MinorUnitScale
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "MinorUnitScale", paramsArray);
-				int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-				return (NetOffice.PowerPointApi.Enums.XlTimeUnit)intReturnItem;
+				return Factory.ExecuteEnumPropertyGet<NetOffice.PowerPointApi.Enums.XlTimeUnit>(this, "MinorUnitScale");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "MinorUnitScale", paramsArray);
+				Factory.ExecuteEnumPropertySet(this, "MinorUnitScale", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746102.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff746102.aspx </remarks>
+		[SupportByVersion("PowerPoint", 14,15,16)]
 		public NetOffice.PowerPointApi.Enums.XlCategoryType CategoryType
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "CategoryType", paramsArray);
-				int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-				return (NetOffice.PowerPointApi.Enums.XlCategoryType)intReturnItem;
+				return Factory.ExecuteEnumPropertyGet<NetOffice.PowerPointApi.Enums.XlCategoryType>(this, "CategoryType");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "CategoryType", paramsArray);
+				Factory.ExecuteEnumPropertySet(this, "CategoryType", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746324.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff746324.aspx </remarks>
+		[SupportByVersion("PowerPoint", 14,15,16)]
 		public Double Left
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Left", paramsArray);
-				return NetRuntimeSystem.Convert.ToDouble(returnItem);
+				return Factory.ExecuteDoublePropertyGet(this, "Left");
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff743906.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff743906.aspx </remarks>
+		[SupportByVersion("PowerPoint", 14,15,16)]
 		public Double Top
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Top", paramsArray);
-				return NetRuntimeSystem.Convert.ToDouble(returnItem);
+				return Factory.ExecuteDoublePropertyGet(this, "Top");
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745897.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff745897.aspx </remarks>
+		[SupportByVersion("PowerPoint", 14,15,16)]
 		public Double Width
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Width", paramsArray);
-				return NetRuntimeSystem.Convert.ToDouble(returnItem);
+				return Factory.ExecuteDoublePropertyGet(this, "Width");
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746380.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff746380.aspx </remarks>
+		[SupportByVersion("PowerPoint", 14,15,16)]
 		public Double Height
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Height", paramsArray);
-				return NetRuntimeSystem.Convert.ToDouble(returnItem);
+				return Factory.ExecuteDoublePropertyGet(this, "Height");
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745098.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff745098.aspx </remarks>
+		[SupportByVersion("PowerPoint", 14,15,16)]
 		public NetOffice.PowerPointApi.Enums.XlDisplayUnit DisplayUnit
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "DisplayUnit", paramsArray);
-				int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-				return (NetOffice.PowerPointApi.Enums.XlDisplayUnit)intReturnItem;
+				return Factory.ExecuteEnumPropertyGet<NetOffice.PowerPointApi.Enums.XlDisplayUnit>(this, "DisplayUnit");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "DisplayUnit", paramsArray);
+				Factory.ExecuteEnumPropertySet(this, "DisplayUnit", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746148.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff746148.aspx </remarks>
+		[SupportByVersion("PowerPoint", 14,15,16)]
 		public Double DisplayUnitCustom
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "DisplayUnitCustom", paramsArray);
-				return NetRuntimeSystem.Convert.ToDouble(returnItem);
+				return Factory.ExecuteDoublePropertyGet(this, "DisplayUnitCustom");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "DisplayUnitCustom", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "DisplayUnitCustom", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745935.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff745935.aspx </remarks>
+		[SupportByVersion("PowerPoint", 14,15,16)]
 		public bool HasDisplayUnitLabel
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "HasDisplayUnitLabel", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "HasDisplayUnitLabel");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "HasDisplayUnitLabel", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "HasDisplayUnitLabel", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745287.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff745287.aspx </remarks>
+		[SupportByVersion("PowerPoint", 14,15,16)]
 		public NetOffice.PowerPointApi.DisplayUnitLabel DisplayUnitLabel
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "DisplayUnitLabel", paramsArray);
-				NetOffice.PowerPointApi.DisplayUnitLabel newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.PowerPointApi.DisplayUnitLabel.LateBindingApiWrapperType) as NetOffice.PowerPointApi.DisplayUnitLabel;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.PowerPointApi.DisplayUnitLabel>(this, "DisplayUnitLabel", NetOffice.PowerPointApi.DisplayUnitLabel.LateBindingApiWrapperType);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746825.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff746825.aspx </remarks>
+		[SupportByVersion("PowerPoint", 14,15,16)]
 		public NetOffice.PowerPointApi.ChartBorder Border
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Border", paramsArray);
-				NetOffice.PowerPointApi.ChartBorder newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.PowerPointApi.ChartBorder.LateBindingApiWrapperType) as NetOffice.PowerPointApi.ChartBorder;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.PowerPointApi.ChartBorder>(this, "Border", NetOffice.PowerPointApi.ChartBorder.LateBindingApiWrapperType);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746150.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff746150.aspx </remarks>
+		[SupportByVersion("PowerPoint", 14,15,16)]
 		public NetOffice.PowerPointApi.ChartFormat Format
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Format", paramsArray);
-				NetOffice.PowerPointApi.ChartFormat newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.PowerPointApi.ChartFormat.LateBindingApiWrapperType) as NetOffice.PowerPointApi.ChartFormat;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.PowerPointApi.ChartFormat>(this, "Format", NetOffice.PowerPointApi.ChartFormat.LateBindingApiWrapperType);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745944.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff745944.aspx </remarks>
+		[SupportByVersion("PowerPoint", 14,15,16)]
 		public Int32 Creator
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Creator", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "Creator");
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744067.aspx
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff744067.aspx </remarks>
+		[SupportByVersion("PowerPoint", 14,15,16), ProxyResult]
 		public object Parent
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Parent", paramsArray);
-				ICOMObject newObject = Factory.CreateObjectFromComProxy(this,returnItem);
-				return newObject;
+				return Factory.ExecuteReferencePropertyGet(this, "Parent");
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746674.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff746674.aspx </remarks>
+		[SupportByVersion("PowerPoint", 14,15,16)]
 		public NetOffice.PowerPointApi.Application Application
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				NetOffice.PowerPointApi.Application newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.PowerPointApi.Application.LateBindingApiWrapperType) as NetOffice.PowerPointApi.Application;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.PowerPointApi.Application>(this, "Application", NetOffice.PowerPointApi.Application.LateBindingApiWrapperType);
 			}
 		}
 
@@ -1061,45 +919,26 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746130.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff746130.aspx </remarks>
+		[SupportByVersion("PowerPoint", 14,15,16)]
 		public object Delete()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "Delete", paramsArray);
-			if((null != returnItem) && (returnItem is MarshalByRefObject))
-			{
-				ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
-				return newObject;
-			}
-			else
-			{
-				return  returnItem;
-			}
+			return Factory.ExecuteVariantMethodGet(this, "Delete");
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744150.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff744150.aspx </remarks>
+		[SupportByVersion("PowerPoint", 14,15,16)]
 		public object Select()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "Select", paramsArray);
-			if((null != returnItem) && (returnItem is MarshalByRefObject))
-			{
-				ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
-				return newObject;
-			}
-			else
-			{
-				return  returnItem;
-			}
+			return Factory.ExecuteVariantMethodGet(this, "Select");
 		}
 
 		#endregion
+
 		#pragma warning restore
 	}
 }

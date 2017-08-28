@@ -1,28 +1,28 @@
-﻿using System;
-using NetRuntimeSystem = System;
-using System.Runtime.InteropServices;
-using System.ComponentModel;
-using System.Runtime.CompilerServices;
-using System.Reflection;
+﻿using System.Collections;
 using System.Collections.Generic;
-using System.Collections;
-using NetOffice;
+using System;
+using NetRuntimeSystem = System;
+using System.ComponentModel;
+using NetOffice.Attributes;
+
 namespace NetOffice.ExcelApi
 {
-	///<summary>
+	/// <summary>
 	/// Interface IPivotCaches 
 	/// SupportByVersion Excel, 9,10,11,12,14,15,16
-	///</summary>
-	[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
-	[EntityTypeAttribute(EntityType.IsInterface)]
-	public class IPivotCaches : COMObject ,IEnumerable<NetOffice.ExcelApi.PivotCache>
+	/// </summary>
+	[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+	[EntityType(EntityType.IsInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Method), HasIndexProperty(IndexInvoke.Property, "_Default")]
+	public class IPivotCaches : COMObject , IEnumerable<NetOffice.ExcelApi.PivotCache>
 	{
 		#pragma warning disable
+
 		#region Type Information
 
         /// <summary>
         /// Instance Type
         /// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
         public override Type InstanceType
         {
             get
@@ -40,14 +40,20 @@ namespace NetOffice.ExcelApi
             {
                 if (null == _type)
                     _type = typeof(IPivotCaches);
-                    
                 return _type;
             }
         }
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public IPivotCaches(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -93,7 +99,7 @@ namespace NetOffice.ExcelApi
 		{
 		}
 		
-		/// <param name="progId">registered ProgID</param>
+		/// <param name="progId">registered progID</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public IPivotCaches(string progId) : base(progId)
 		{
@@ -107,15 +113,12 @@ namespace NetOffice.ExcelApi
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
+		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public NetOffice.ExcelApi.Application Application
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				NetOffice.ExcelApi.Application newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.Application.LateBindingApiWrapperType) as NetOffice.ExcelApi.Application;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Application>(this, "Application", NetOffice.ExcelApi.Application.LateBindingApiWrapperType);
 			}
 		}
 
@@ -123,15 +126,12 @@ namespace NetOffice.ExcelApi
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
+		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public NetOffice.ExcelApi.Enums.XlCreator Creator
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Creator", paramsArray);
-				int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-				return (NetOffice.ExcelApi.Enums.XlCreator)intReturnItem;
+				return Factory.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlCreator>(this, "Creator");
 			}
 		}
 
@@ -140,15 +140,12 @@ namespace NetOffice.ExcelApi
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
+		[SupportByVersion("Excel", 9,10,11,12,14,15,16), ProxyResult]
 		public object Parent
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Parent", paramsArray);
-				ICOMObject newObject = Factory.CreateObjectFromComProxy(this,returnItem);
-				return newObject;
+				return Factory.ExecuteReferencePropertyGet(this, "Parent");
 			}
 		}
 
@@ -156,14 +153,12 @@ namespace NetOffice.ExcelApi
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
+		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public Int32 Count
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Count", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "Count");
 			}
 		}
 
@@ -171,17 +166,14 @@ namespace NetOffice.ExcelApi
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <param name="index">object Index</param>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
-		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
+		/// <param name="index">object index</param>
+		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
 		public NetOffice.ExcelApi.PivotCache this[object index]
 		{
 			get
-{			
-			object[] paramsArray = Invoker.ValidateParamsArray(index);
-			object returnItem = Invoker.PropertyGet(this, "_Default", paramsArray);
-			NetOffice.ExcelApi.PivotCache newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.PivotCache.LateBindingApiWrapperType) as NetOffice.ExcelApi.PivotCache;
-			return newObject;
+			{
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.PivotCache>(this, "_Default", NetOffice.ExcelApi.PivotCache.LateBindingApiWrapperType, index);
 			}
 		}
 
@@ -191,79 +183,59 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="sourceType">NetOffice.ExcelApi.Enums.XlPivotTableSourceType SourceType</param>
-		/// <param name="sourceData">optional object SourceData</param>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
+		/// <param name="sourceType">NetOffice.ExcelApi.Enums.XlPivotTableSourceType sourceType</param>
+		/// <param name="sourceData">optional object sourceData</param>
+		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public NetOffice.ExcelApi.PivotCache Add(NetOffice.ExcelApi.Enums.XlPivotTableSourceType sourceType, object sourceData)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(sourceType, sourceData);
-			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.ExcelApi.PivotCache newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.PivotCache.LateBindingApiWrapperType) as NetOffice.ExcelApi.PivotCache;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.PivotCache>(this, "Add", NetOffice.ExcelApi.PivotCache.LateBindingApiWrapperType, sourceType, sourceData);
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="sourceType">NetOffice.ExcelApi.Enums.XlPivotTableSourceType SourceType</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
+		/// <param name="sourceType">NetOffice.ExcelApi.Enums.XlPivotTableSourceType sourceType</param>
+		[CustomMethod]
+		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public NetOffice.ExcelApi.PivotCache Add(NetOffice.ExcelApi.Enums.XlPivotTableSourceType sourceType)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(sourceType);
-			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.ExcelApi.PivotCache newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.PivotCache.LateBindingApiWrapperType) as NetOffice.ExcelApi.PivotCache;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.PivotCache>(this, "Add", NetOffice.ExcelApi.PivotCache.LateBindingApiWrapperType, sourceType);
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="sourceType">NetOffice.ExcelApi.Enums.XlPivotTableSourceType SourceType</param>
-		/// <param name="sourceData">optional object SourceData</param>
-		/// <param name="version">optional object Version</param>
-		[SupportByVersionAttribute("Excel", 12,14,15,16)]
+		/// <param name="sourceType">NetOffice.ExcelApi.Enums.XlPivotTableSourceType sourceType</param>
+		/// <param name="sourceData">optional object sourceData</param>
+		/// <param name="version">optional object version</param>
+		[SupportByVersion("Excel", 12,14,15,16)]
 		public NetOffice.ExcelApi.PivotCache Create(NetOffice.ExcelApi.Enums.XlPivotTableSourceType sourceType, object sourceData, object version)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(sourceType, sourceData, version);
-			object returnItem = Invoker.MethodReturn(this, "Create", paramsArray);
-			NetOffice.ExcelApi.PivotCache newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.PivotCache.LateBindingApiWrapperType) as NetOffice.ExcelApi.PivotCache;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.PivotCache>(this, "Create", NetOffice.ExcelApi.PivotCache.LateBindingApiWrapperType, sourceType, sourceData, version);
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="sourceType">NetOffice.ExcelApi.Enums.XlPivotTableSourceType SourceType</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 12,14,15,16)]
+		/// <param name="sourceType">NetOffice.ExcelApi.Enums.XlPivotTableSourceType sourceType</param>
+		[CustomMethod]
+		[SupportByVersion("Excel", 12,14,15,16)]
 		public NetOffice.ExcelApi.PivotCache Create(NetOffice.ExcelApi.Enums.XlPivotTableSourceType sourceType)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(sourceType);
-			object returnItem = Invoker.MethodReturn(this, "Create", paramsArray);
-			NetOffice.ExcelApi.PivotCache newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.PivotCache.LateBindingApiWrapperType) as NetOffice.ExcelApi.PivotCache;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.PivotCache>(this, "Create", NetOffice.ExcelApi.PivotCache.LateBindingApiWrapperType, sourceType);
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="sourceType">NetOffice.ExcelApi.Enums.XlPivotTableSourceType SourceType</param>
-		/// <param name="sourceData">optional object SourceData</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 12,14,15,16)]
+		/// <param name="sourceType">NetOffice.ExcelApi.Enums.XlPivotTableSourceType sourceType</param>
+		/// <param name="sourceData">optional object sourceData</param>
+		[CustomMethod]
+		[SupportByVersion("Excel", 12,14,15,16)]
 		public NetOffice.ExcelApi.PivotCache Create(NetOffice.ExcelApi.Enums.XlPivotTableSourceType sourceType, object sourceData)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(sourceType, sourceData);
-			object returnItem = Invoker.MethodReturn(this, "Create", paramsArray);
-			NetOffice.ExcelApi.PivotCache newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.PivotCache.LateBindingApiWrapperType) as NetOffice.ExcelApi.PivotCache;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.PivotCache>(this, "Create", NetOffice.ExcelApi.PivotCache.LateBindingApiWrapperType, sourceType, sourceData);
 		}
 
 		#endregion
@@ -271,9 +243,9 @@ namespace NetOffice.ExcelApi
        #region IEnumerable<NetOffice.ExcelApi.PivotCache> Member
         
         /// <summary>
-		/// SupportByVersionAttribute Excel, 9,10,11,12,14,15,16
+		/// SupportByVersion Excel, 9,10,11,12,14,15,16
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
+		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
        public IEnumerator<NetOffice.ExcelApi.PivotCache> GetEnumerator()  
        {
            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
@@ -286,15 +258,16 @@ namespace NetOffice.ExcelApi
 		#region IEnumerable Members
        
 		/// <summary>
-		/// SupportByVersionAttribute Excel, 9,10,11,12,14,15,16
+		/// SupportByVersion Excel, 9,10,11,12,14,15,16
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
+		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
 			return NetOffice.Utils.GetProxyEnumeratorAsMethod(this);
 		}
 
 		#endregion
+
 		#pragma warning restore
 	}
 }

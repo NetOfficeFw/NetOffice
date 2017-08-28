@@ -1,24 +1,34 @@
 ﻿using System;
 using NetRuntimeSystem = System;
-using System.Runtime.InteropServices;
-using System.Runtime.CompilerServices;
 using System.ComponentModel;
-using System.Reflection;
-using System.Collections.Generic;
-using NetOffice;
+using NetOffice.Attributes;
+
 namespace NetOffice.OfficeApi
 {
-	///<summary>
+	/// <summary>
 	/// DispatchInterface ContactCard 
 	/// SupportByVersion Office, 14,15,16
-	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff860545.aspx
-	///</summary>
-	[SupportByVersionAttribute("Office", 14,15,16)]
-	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
-	public class ContactCard : _IMsoDispObj
+	/// </summary>
+	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860545.aspx </remarks>
+	[SupportByVersion("Office", 14,15,16)]
+	[EntityType(EntityType.IsDispatchInterface)]
+ 	public class ContactCard : _IMsoDispObj
 	{
 		#pragma warning disable
+
 		#region Type Information
+
+		/// <summary>
+		/// Instance Type
+		/// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
+		public override Type InstanceType
+		{
+			get
+			{
+				return LateBindingApiWrapperType;
+			}
+		}
 
         private static Type _type;
 
@@ -29,14 +39,20 @@ namespace NetOffice.OfficeApi
             {
                 if (null == _type)
                     _type = typeof(ContactCard);
-                    
                 return _type;
             }
         }
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public ContactCard(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -82,7 +98,7 @@ namespace NetOffice.OfficeApi
 		{
 		}
 		
-		/// <param name="progId">registered ProgID</param>
+		/// <param name="progId">registered progID</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public ContactCard(string progId) : base(progId)
 		{
@@ -98,52 +114,50 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff863157.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Office", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff863157.aspx </remarks>
+		[SupportByVersion("Office", 14,15,16)]
 		public void Close()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "Close", paramsArray);
+			 Factory.ExecuteMethod(this, "Close");
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff861819.aspx
 		/// </summary>
-		/// <param name="cardStyle">NetOffice.OfficeApi.Enums.MsoContactCardStyle CardStyle</param>
-		/// <param name="rectangleLeft">Int32 RectangleLeft</param>
-		/// <param name="rectangleRight">Int32 RectangleRight</param>
-		/// <param name="rectangleTop">Int32 RectangleTop</param>
-		/// <param name="rectangleBottom">Int32 RectangleBottom</param>
-		/// <param name="horizontalPosition">Int32 HorizontalPosition</param>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff861819.aspx </remarks>
+		/// <param name="cardStyle">NetOffice.OfficeApi.Enums.MsoContactCardStyle cardStyle</param>
+		/// <param name="rectangleLeft">Int32 rectangleLeft</param>
+		/// <param name="rectangleRight">Int32 rectangleRight</param>
+		/// <param name="rectangleTop">Int32 rectangleTop</param>
+		/// <param name="rectangleBottom">Int32 rectangleBottom</param>
+		/// <param name="horizontalPosition">Int32 horizontalPosition</param>
 		/// <param name="showWithDelay">optional bool ShowWithDelay = false</param>
-		[SupportByVersionAttribute("Office", 14,15,16)]
+		[SupportByVersion("Office", 14,15,16)]
 		public void Show(NetOffice.OfficeApi.Enums.MsoContactCardStyle cardStyle, Int32 rectangleLeft, Int32 rectangleRight, Int32 rectangleTop, Int32 rectangleBottom, Int32 horizontalPosition, object showWithDelay)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(cardStyle, rectangleLeft, rectangleRight, rectangleTop, rectangleBottom, horizontalPosition, showWithDelay);
-			Invoker.Method(this, "Show", paramsArray);
+			 Factory.ExecuteMethod(this, "Show", new object[]{ cardStyle, rectangleLeft, rectangleRight, rectangleTop, rectangleBottom, horizontalPosition, showWithDelay });
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff861819.aspx
 		/// </summary>
-		/// <param name="cardStyle">NetOffice.OfficeApi.Enums.MsoContactCardStyle CardStyle</param>
-		/// <param name="rectangleLeft">Int32 RectangleLeft</param>
-		/// <param name="rectangleRight">Int32 RectangleRight</param>
-		/// <param name="rectangleTop">Int32 RectangleTop</param>
-		/// <param name="rectangleBottom">Int32 RectangleBottom</param>
-		/// <param name="horizontalPosition">Int32 HorizontalPosition</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Office", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff861819.aspx </remarks>
+		/// <param name="cardStyle">NetOffice.OfficeApi.Enums.MsoContactCardStyle cardStyle</param>
+		/// <param name="rectangleLeft">Int32 rectangleLeft</param>
+		/// <param name="rectangleRight">Int32 rectangleRight</param>
+		/// <param name="rectangleTop">Int32 rectangleTop</param>
+		/// <param name="rectangleBottom">Int32 rectangleBottom</param>
+		/// <param name="horizontalPosition">Int32 horizontalPosition</param>
+		[CustomMethod]
+		[SupportByVersion("Office", 14,15,16)]
 		public void Show(NetOffice.OfficeApi.Enums.MsoContactCardStyle cardStyle, Int32 rectangleLeft, Int32 rectangleRight, Int32 rectangleTop, Int32 rectangleBottom, Int32 horizontalPosition)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(cardStyle, rectangleLeft, rectangleRight, rectangleTop, rectangleBottom, horizontalPosition);
-			Invoker.Method(this, "Show", paramsArray);
+			 Factory.ExecuteMethod(this, "Show", new object[]{ cardStyle, rectangleLeft, rectangleRight, rectangleTop, rectangleBottom, horizontalPosition });
 		}
 
 		#endregion
+
 		#pragma warning restore
 	}
 }

@@ -1,23 +1,33 @@
 ﻿using System;
 using NetRuntimeSystem = System;
-using System.Runtime.InteropServices;
-using System.Runtime.CompilerServices;
 using System.ComponentModel;
-using System.Reflection;
-using System.Collections.Generic;
-using NetOffice;
+using NetOffice.Attributes;
+
 namespace NetOffice.MSHTMLApi
 {
-	///<summary>
+	/// <summary>
 	/// DispatchInterface IHTMLBodyElement 
 	/// SupportByVersion MSHTML, 4
-	///</summary>
-	[SupportByVersionAttribute("MSHTML", 4)]
-	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
-	public class IHTMLBodyElement : IHTMLTextContainer
+	/// </summary>
+	[SupportByVersion("MSHTML", 4)]
+	[EntityType(EntityType.IsDispatchInterface)]
+ 	public class IHTMLBodyElement : IHTMLTextContainer
 	{
 		#pragma warning disable
+
 		#region Type Information
+
+		/// <summary>
+		/// Instance Type
+		/// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
+		public override Type InstanceType
+		{
+			get
+			{
+				return LateBindingApiWrapperType;
+			}
+		}
 
         private static Type _type;
 
@@ -28,14 +38,20 @@ namespace NetOffice.MSHTMLApi
             {
                 if (null == _type)
                     _type = typeof(IHTMLBodyElement);
-                    
                 return _type;
             }
         }
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public IHTMLBodyElement(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -81,7 +97,7 @@ namespace NetOffice.MSHTMLApi
 		{
 		}
 		
-		/// <param name="progId">registered ProgID</param>
+		/// <param name="progId">registered progID</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public IHTMLBodyElement(string progId) : base(progId)
 		{
@@ -95,19 +111,16 @@ namespace NetOffice.MSHTMLApi
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[SupportByVersion("MSHTML", 4)]
 		public string background
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "background", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "background");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "background", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "background", value);
 			}
 		}
 
@@ -115,19 +128,16 @@ namespace NetOffice.MSHTMLApi
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[SupportByVersion("MSHTML", 4)]
 		public string bgProperties
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "bgProperties", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "bgProperties");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "bgProperties", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "bgProperties", value);
 			}
 		}
 
@@ -135,27 +145,16 @@ namespace NetOffice.MSHTMLApi
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[SupportByVersion("MSHTML", 4)]
 		public object leftMargin
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "leftMargin", paramsArray);
-				if((null != returnItem) && (returnItem is MarshalByRefObject))
-				{
-					ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
-					return newObject;
-				}
-				else
-				{
-					return  returnItem;
-				}
+				return Factory.ExecuteVariantPropertyGet(this, "leftMargin");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "leftMargin", paramsArray);
+				Factory.ExecuteVariantPropertySet(this, "leftMargin", value);
 			}
 		}
 
@@ -163,27 +162,16 @@ namespace NetOffice.MSHTMLApi
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[SupportByVersion("MSHTML", 4)]
 		public object topMargin
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "topMargin", paramsArray);
-				if((null != returnItem) && (returnItem is MarshalByRefObject))
-				{
-					ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
-					return newObject;
-				}
-				else
-				{
-					return  returnItem;
-				}
+				return Factory.ExecuteVariantPropertyGet(this, "topMargin");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "topMargin", paramsArray);
+				Factory.ExecuteVariantPropertySet(this, "topMargin", value);
 			}
 		}
 
@@ -191,27 +179,16 @@ namespace NetOffice.MSHTMLApi
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[SupportByVersion("MSHTML", 4)]
 		public object rightMargin
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "rightMargin", paramsArray);
-				if((null != returnItem) && (returnItem is MarshalByRefObject))
-				{
-					ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
-					return newObject;
-				}
-				else
-				{
-					return  returnItem;
-				}
+				return Factory.ExecuteVariantPropertyGet(this, "rightMargin");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "rightMargin", paramsArray);
+				Factory.ExecuteVariantPropertySet(this, "rightMargin", value);
 			}
 		}
 
@@ -219,27 +196,16 @@ namespace NetOffice.MSHTMLApi
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[SupportByVersion("MSHTML", 4)]
 		public object bottomMargin
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "bottomMargin", paramsArray);
-				if((null != returnItem) && (returnItem is MarshalByRefObject))
-				{
-					ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
-					return newObject;
-				}
-				else
-				{
-					return  returnItem;
-				}
+				return Factory.ExecuteVariantPropertyGet(this, "bottomMargin");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "bottomMargin", paramsArray);
+				Factory.ExecuteVariantPropertySet(this, "bottomMargin", value);
 			}
 		}
 
@@ -247,19 +213,16 @@ namespace NetOffice.MSHTMLApi
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[SupportByVersion("MSHTML", 4)]
 		public bool noWrap
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "noWrap", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "noWrap");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "noWrap", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "noWrap", value);
 			}
 		}
 
@@ -267,27 +230,16 @@ namespace NetOffice.MSHTMLApi
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[SupportByVersion("MSHTML", 4)]
 		public object bgColor
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "bgColor", paramsArray);
-				if((null != returnItem) && (returnItem is MarshalByRefObject))
-				{
-					ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
-					return newObject;
-				}
-				else
-				{
-					return  returnItem;
-				}
+				return Factory.ExecuteVariantPropertyGet(this, "bgColor");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "bgColor", paramsArray);
+				Factory.ExecuteVariantPropertySet(this, "bgColor", value);
 			}
 		}
 
@@ -295,27 +247,16 @@ namespace NetOffice.MSHTMLApi
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[SupportByVersion("MSHTML", 4)]
 		public object text
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "text", paramsArray);
-				if((null != returnItem) && (returnItem is MarshalByRefObject))
-				{
-					ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
-					return newObject;
-				}
-				else
-				{
-					return  returnItem;
-				}
+				return Factory.ExecuteVariantPropertyGet(this, "text");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "text", paramsArray);
+				Factory.ExecuteVariantPropertySet(this, "text", value);
 			}
 		}
 
@@ -323,27 +264,16 @@ namespace NetOffice.MSHTMLApi
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[SupportByVersion("MSHTML", 4)]
 		public object link
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "link", paramsArray);
-				if((null != returnItem) && (returnItem is MarshalByRefObject))
-				{
-					ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
-					return newObject;
-				}
-				else
-				{
-					return  returnItem;
-				}
+				return Factory.ExecuteVariantPropertyGet(this, "link");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "link", paramsArray);
+				Factory.ExecuteVariantPropertySet(this, "link", value);
 			}
 		}
 
@@ -351,27 +281,16 @@ namespace NetOffice.MSHTMLApi
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[SupportByVersion("MSHTML", 4)]
 		public object vLink
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "vLink", paramsArray);
-				if((null != returnItem) && (returnItem is MarshalByRefObject))
-				{
-					ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
-					return newObject;
-				}
-				else
-				{
-					return  returnItem;
-				}
+				return Factory.ExecuteVariantPropertyGet(this, "vLink");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "vLink", paramsArray);
+				Factory.ExecuteVariantPropertySet(this, "vLink", value);
 			}
 		}
 
@@ -379,27 +298,16 @@ namespace NetOffice.MSHTMLApi
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[SupportByVersion("MSHTML", 4)]
 		public object aLink
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "aLink", paramsArray);
-				if((null != returnItem) && (returnItem is MarshalByRefObject))
-				{
-					ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
-					return newObject;
-				}
-				else
-				{
-					return  returnItem;
-				}
+				return Factory.ExecuteVariantPropertyGet(this, "aLink");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "aLink", paramsArray);
+				Factory.ExecuteVariantPropertySet(this, "aLink", value);
 			}
 		}
 
@@ -407,27 +315,16 @@ namespace NetOffice.MSHTMLApi
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[SupportByVersion("MSHTML", 4)]
 		public object onload
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "onload", paramsArray);
-				if((null != returnItem) && (returnItem is MarshalByRefObject))
-				{
-					ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
-					return newObject;
-				}
-				else
-				{
-					return  returnItem;
-				}
+				return Factory.ExecuteVariantPropertyGet(this, "onload");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "onload", paramsArray);
+				Factory.ExecuteVariantPropertySet(this, "onload", value);
 			}
 		}
 
@@ -435,27 +332,16 @@ namespace NetOffice.MSHTMLApi
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[SupportByVersion("MSHTML", 4)]
 		public object onunload
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "onunload", paramsArray);
-				if((null != returnItem) && (returnItem is MarshalByRefObject))
-				{
-					ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
-					return newObject;
-				}
-				else
-				{
-					return  returnItem;
-				}
+				return Factory.ExecuteVariantPropertyGet(this, "onunload");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "onunload", paramsArray);
+				Factory.ExecuteVariantPropertySet(this, "onunload", value);
 			}
 		}
 
@@ -463,19 +349,16 @@ namespace NetOffice.MSHTMLApi
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[SupportByVersion("MSHTML", 4)]
 		public string scroll
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "scroll", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "scroll");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "scroll", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "scroll", value);
 			}
 		}
 
@@ -483,27 +366,16 @@ namespace NetOffice.MSHTMLApi
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[SupportByVersion("MSHTML", 4)]
 		public object onselect
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "onselect", paramsArray);
-				if((null != returnItem) && (returnItem is MarshalByRefObject))
-				{
-					ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
-					return newObject;
-				}
-				else
-				{
-					return  returnItem;
-				}
+				return Factory.ExecuteVariantPropertyGet(this, "onselect");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "onselect", paramsArray);
+				Factory.ExecuteVariantPropertySet(this, "onselect", value);
 			}
 		}
 
@@ -511,27 +383,16 @@ namespace NetOffice.MSHTMLApi
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[SupportByVersion("MSHTML", 4)]
 		public object onbeforeunload
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "onbeforeunload", paramsArray);
-				if((null != returnItem) && (returnItem is MarshalByRefObject))
-				{
-					ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
-					return newObject;
-				}
-				else
-				{
-					return  returnItem;
-				}
+				return Factory.ExecuteVariantPropertyGet(this, "onbeforeunload");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "onbeforeunload", paramsArray);
+				Factory.ExecuteVariantPropertySet(this, "onbeforeunload", value);
 			}
 		}
 
@@ -541,18 +402,15 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[SupportByVersion("MSHTML", 4)]
 		public NetOffice.MSHTMLApi.IHTMLTxtRange createTextRange()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "createTextRange", paramsArray);
-			NetOffice.MSHTMLApi.IHTMLTxtRange newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.MSHTMLApi.IHTMLTxtRange.LateBindingApiWrapperType) as NetOffice.MSHTMLApi.IHTMLTxtRange;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.MSHTMLApi.IHTMLTxtRange>(this, "createTextRange", NetOffice.MSHTMLApi.IHTMLTxtRange.LateBindingApiWrapperType);
 		}
 
 		#endregion
+
 		#pragma warning restore
 	}
 }

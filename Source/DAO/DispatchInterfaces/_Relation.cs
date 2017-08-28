@@ -1,23 +1,33 @@
 ﻿using System;
 using NetRuntimeSystem = System;
-using System.Runtime.InteropServices;
-using System.Runtime.CompilerServices;
 using System.ComponentModel;
-using System.Reflection;
-using System.Collections.Generic;
-using NetOffice;
+using NetOffice.Attributes;
+
 namespace NetOffice.DAOApi
 {
-	///<summary>
+	/// <summary>
 	/// DispatchInterface _Relation 
 	/// SupportByVersion DAO, 3.6,12.0
-	///</summary>
-	[SupportByVersionAttribute("DAO", 3.6,12.0)]
-	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
-	public class _Relation : _DAO
+	/// </summary>
+	[SupportByVersion("DAO", 3.6,12.0)]
+	[EntityType(EntityType.IsDispatchInterface)]
+ 	public class _Relation : _DAO
 	{
 		#pragma warning disable
+
 		#region Type Information
+
+		/// <summary>
+		/// Instance Type
+		/// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
+		public override Type InstanceType
+		{
+			get
+			{
+				return LateBindingApiWrapperType;
+			}
+		}
 
         private static Type _type;
 
@@ -28,14 +38,20 @@ namespace NetOffice.DAOApi
             {
                 if (null == _type)
                     _type = typeof(_Relation);
-                    
                 return _type;
             }
         }
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public _Relation(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -81,7 +97,7 @@ namespace NetOffice.DAOApi
 		{
 		}
 		
-		/// <param name="progId">registered ProgID</param>
+		/// <param name="progId">registered progID</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public _Relation(string progId) : base(progId)
 		{
@@ -95,19 +111,16 @@ namespace NetOffice.DAOApi
 		/// SupportByVersion DAO 3.6, 12.0
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("DAO", 3.6,12.0)]
+		[SupportByVersion("DAO", 3.6,12.0)]
 		public string Name
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Name", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "Name");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "Name", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "Name", value);
 			}
 		}
 
@@ -115,19 +128,16 @@ namespace NetOffice.DAOApi
 		/// SupportByVersion DAO 3.6, 12.0
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("DAO", 3.6,12.0)]
+		[SupportByVersion("DAO", 3.6,12.0)]
 		public string Table
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Table", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "Table");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "Table", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "Table", value);
 			}
 		}
 
@@ -135,19 +145,16 @@ namespace NetOffice.DAOApi
 		/// SupportByVersion DAO 3.6, 12.0
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("DAO", 3.6,12.0)]
+		[SupportByVersion("DAO", 3.6,12.0)]
 		public string ForeignTable
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "ForeignTable", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "ForeignTable");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "ForeignTable", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "ForeignTable", value);
 			}
 		}
 
@@ -155,19 +162,16 @@ namespace NetOffice.DAOApi
 		/// SupportByVersion DAO 3.6, 12.0
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("DAO", 3.6,12.0)]
+		[SupportByVersion("DAO", 3.6,12.0)]
 		public Int32 Attributes
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Attributes", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "Attributes");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "Attributes", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "Attributes", value);
 			}
 		}
 
@@ -175,15 +179,12 @@ namespace NetOffice.DAOApi
 		/// SupportByVersion DAO 3.6, 12.0
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("DAO", 3.6,12.0)]
+		[SupportByVersion("DAO", 3.6,12.0)]
 		public NetOffice.DAOApi.Fields Fields
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Fields", paramsArray);
-				NetOffice.DAOApi.Fields newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.DAOApi.Fields.LateBindingApiWrapperType) as NetOffice.DAOApi.Fields;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.DAOApi.Fields>(this, "Fields", NetOffice.DAOApi.Fields.LateBindingApiWrapperType);
 			}
 		}
 
@@ -191,19 +192,16 @@ namespace NetOffice.DAOApi
 		/// SupportByVersion DAO 3.6, 12.0
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("DAO", 3.6,12.0)]
+		[SupportByVersion("DAO", 3.6,12.0)]
 		public bool PartialReplica
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "PartialReplica", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "PartialReplica");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "PartialReplica", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "PartialReplica", value);
 			}
 		}
 
@@ -213,66 +211,51 @@ namespace NetOffice.DAOApi
 
 		/// <summary>
 		/// SupportByVersion DAO 3.6, 12.0
-		/// 
 		/// </summary>
-		/// <param name="name">optional object Name</param>
-		/// <param name="type">optional object Type</param>
-		/// <param name="size">optional object Size</param>
-		[SupportByVersionAttribute("DAO", 3.6,12.0)]
+		/// <param name="name">optional object name</param>
+		/// <param name="type">optional object type</param>
+		/// <param name="size">optional object size</param>
+		[SupportByVersion("DAO", 3.6,12.0)]
 		public NetOffice.DAOApi.Field CreateField(object name, object type, object size)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(name, type, size);
-			object returnItem = Invoker.MethodReturn(this, "CreateField", paramsArray);
-			NetOffice.DAOApi.Field newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.DAOApi.Field.LateBindingApiWrapperType) as NetOffice.DAOApi.Field;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.DAOApi.Field>(this, "CreateField", NetOffice.DAOApi.Field.LateBindingApiWrapperType, name, type, size);
 		}
 
 		/// <summary>
 		/// SupportByVersion DAO 3.6, 12.0
-		/// 
 		/// </summary>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("DAO", 3.6,12.0)]
+		[CustomMethod]
+		[SupportByVersion("DAO", 3.6,12.0)]
 		public NetOffice.DAOApi.Field CreateField()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "CreateField", paramsArray);
-			NetOffice.DAOApi.Field newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.DAOApi.Field.LateBindingApiWrapperType) as NetOffice.DAOApi.Field;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.DAOApi.Field>(this, "CreateField", NetOffice.DAOApi.Field.LateBindingApiWrapperType);
 		}
 
 		/// <summary>
 		/// SupportByVersion DAO 3.6, 12.0
-		/// 
 		/// </summary>
-		/// <param name="name">optional object Name</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("DAO", 3.6,12.0)]
+		/// <param name="name">optional object name</param>
+		[CustomMethod]
+		[SupportByVersion("DAO", 3.6,12.0)]
 		public NetOffice.DAOApi.Field CreateField(object name)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(name);
-			object returnItem = Invoker.MethodReturn(this, "CreateField", paramsArray);
-			NetOffice.DAOApi.Field newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.DAOApi.Field.LateBindingApiWrapperType) as NetOffice.DAOApi.Field;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.DAOApi.Field>(this, "CreateField", NetOffice.DAOApi.Field.LateBindingApiWrapperType, name);
 		}
 
 		/// <summary>
 		/// SupportByVersion DAO 3.6, 12.0
-		/// 
 		/// </summary>
-		/// <param name="name">optional object Name</param>
-		/// <param name="type">optional object Type</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("DAO", 3.6,12.0)]
+		/// <param name="name">optional object name</param>
+		/// <param name="type">optional object type</param>
+		[CustomMethod]
+		[SupportByVersion("DAO", 3.6,12.0)]
 		public NetOffice.DAOApi.Field CreateField(object name, object type)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(name, type);
-			object returnItem = Invoker.MethodReturn(this, "CreateField", paramsArray);
-			NetOffice.DAOApi.Field newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.DAOApi.Field.LateBindingApiWrapperType) as NetOffice.DAOApi.Field;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.DAOApi.Field>(this, "CreateField", NetOffice.DAOApi.Field.LateBindingApiWrapperType, name, type);
 		}
 
 		#endregion
+
 		#pragma warning restore
 	}
 }

@@ -1,28 +1,27 @@
 ﻿using System;
 using NetRuntimeSystem = System;
-using System.Runtime.InteropServices;
-using System.Runtime.CompilerServices;
 using System.ComponentModel;
-using System.Reflection;
-using System.Collections.Generic;
-using NetOffice;
+using NetOffice.Attributes;
+
 namespace NetOffice.ExcelApi
 {
-	///<summary>
+	/// <summary>
 	/// DispatchInterface CubeField 
 	/// SupportByVersion Excel, 9,10,11,12,14,15,16
-	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822619.aspx
-	///</summary>
-	[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
-	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
-	public class CubeField : COMObject
+	/// </summary>
+	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff822619.aspx </remarks>
+	[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+	[EntityType(EntityType.IsDispatchInterface)]
+ 	public class CubeField : COMObject
 	{
 		#pragma warning disable
+
 		#region Type Information
 
         /// <summary>
         /// Instance Type
         /// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
         public override Type InstanceType
         {
             get
@@ -40,14 +39,20 @@ namespace NetOffice.ExcelApi
             {
                 if (null == _type)
                     _type = typeof(CubeField);
-                    
                 return _type;
             }
         }
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public CubeField(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -93,7 +98,7 @@ namespace NetOffice.ExcelApi
 		{
 		}
 		
-		/// <param name="progId">registered ProgID</param>
+		/// <param name="progId">registered progID</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public CubeField(string progId) : base(progId)
 		{
@@ -106,287 +111,243 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838570.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff838570.aspx </remarks>
+		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public NetOffice.ExcelApi.Application Application
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				NetOffice.ExcelApi.Application newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.Application.LateBindingApiWrapperType) as NetOffice.ExcelApi.Application;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Application>(this, "Application", NetOffice.ExcelApi.Application.LateBindingApiWrapperType);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195332.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff195332.aspx </remarks>
+		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public NetOffice.ExcelApi.Enums.XlCreator Creator
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Creator", paramsArray);
-				int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-				return (NetOffice.ExcelApi.Enums.XlCreator)intReturnItem;
+				return Factory.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlCreator>(this, "Creator");
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822639.aspx
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff822639.aspx </remarks>
+		[SupportByVersion("Excel", 9,10,11,12,14,15,16), ProxyResult]
 		public object Parent
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Parent", paramsArray);
-				ICOMObject newObject = Factory.CreateObjectFromComProxy(this,returnItem);
-				return newObject;
+				return Factory.ExecuteReferencePropertyGet(this, "Parent");
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835244.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835244.aspx </remarks>
+		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public NetOffice.ExcelApi.Enums.XlCubeFieldType CubeFieldType
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "CubeFieldType", paramsArray);
-				int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-				return (NetOffice.ExcelApi.Enums.XlCubeFieldType)intReturnItem;
+				return Factory.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlCubeFieldType>(this, "CubeFieldType");
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196833.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff196833.aspx </remarks>
+		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public string Caption
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Caption", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "Caption");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "Caption", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "Caption", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837351.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff837351.aspx </remarks>
+		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public string Name
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Name", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "Name");
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff198103.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff198103.aspx </remarks>
+		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public string Value
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Value", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "Value");
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837998.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff837998.aspx </remarks>
+		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public NetOffice.ExcelApi.Enums.XlPivotFieldOrientation Orientation
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Orientation", paramsArray);
-				int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-				return (NetOffice.ExcelApi.Enums.XlPivotFieldOrientation)intReturnItem;
+				return Factory.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlPivotFieldOrientation>(this, "Orientation");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "Orientation", paramsArray);
+				Factory.ExecuteEnumPropertySet(this, "Orientation", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff841272.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff841272.aspx </remarks>
+		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public Int32 Position
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Position", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "Position");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "Position", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "Position", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff820886.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff820886.aspx </remarks>
+		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public NetOffice.ExcelApi.TreeviewControl TreeviewControl
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "TreeviewControl", paramsArray);
-				NetOffice.ExcelApi.TreeviewControl newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.TreeviewControl.LateBindingApiWrapperType) as NetOffice.ExcelApi.TreeviewControl;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.TreeviewControl>(this, "TreeviewControl", NetOffice.ExcelApi.TreeviewControl.LateBindingApiWrapperType);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194397.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194397.aspx </remarks>
+		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public bool DragToColumn
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "DragToColumn", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "DragToColumn");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "DragToColumn", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "DragToColumn", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff820897.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff820897.aspx </remarks>
+		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public bool DragToHide
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "DragToHide", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "DragToHide");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "DragToHide", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "DragToHide", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836521.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff836521.aspx </remarks>
+		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public bool DragToPage
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "DragToPage", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "DragToPage");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "DragToPage", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "DragToPage", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193981.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff193981.aspx </remarks>
+		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public bool DragToRow
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "DragToRow", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "DragToRow");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "DragToRow", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "DragToRow", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff198094.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff198094.aspx </remarks>
+		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public bool DragToData
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "DragToData", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "DragToData");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "DragToData", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "DragToData", value);
 			}
 		}
 
@@ -394,138 +355,116 @@ namespace NetOffice.ExcelApi
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
+		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public Int32 HiddenLevels
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "HiddenLevels", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "HiddenLevels");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "HiddenLevels", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "HiddenLevels", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838439.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff838439.aspx </remarks>
+		[SupportByVersion("Excel", 10,11,12,14,15,16)]
 		public bool HasMemberProperties
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "HasMemberProperties", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "HasMemberProperties");
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837592.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff837592.aspx </remarks>
+		[SupportByVersion("Excel", 10,11,12,14,15,16)]
 		public NetOffice.ExcelApi.Enums.XlLayoutFormType LayoutForm
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "LayoutForm", paramsArray);
-				int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-				return (NetOffice.ExcelApi.Enums.XlLayoutFormType)intReturnItem;
+				return Factory.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlLayoutFormType>(this, "LayoutForm");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "LayoutForm", paramsArray);
+				Factory.ExecuteEnumPropertySet(this, "LayoutForm", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839474.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff839474.aspx </remarks>
+		[SupportByVersion("Excel", 10,11,12,14,15,16)]
 		public NetOffice.ExcelApi.PivotFields PivotFields
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "PivotFields", paramsArray);
-				NetOffice.ExcelApi.PivotFields newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.PivotFields.LateBindingApiWrapperType) as NetOffice.ExcelApi.PivotFields;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.PivotFields>(this, "PivotFields", NetOffice.ExcelApi.PivotFields.LateBindingApiWrapperType);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835260.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835260.aspx </remarks>
+		[SupportByVersion("Excel", 10,11,12,14,15,16)]
 		public bool EnableMultiplePageItems
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "EnableMultiplePageItems", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "EnableMultiplePageItems");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "EnableMultiplePageItems", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "EnableMultiplePageItems", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838068.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff838068.aspx </remarks>
+		[SupportByVersion("Excel", 10,11,12,14,15,16)]
 		public NetOffice.ExcelApi.Enums.xLSubtototalLocationType LayoutSubtotalLocation
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "LayoutSubtotalLocation", paramsArray);
-				int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-				return (NetOffice.ExcelApi.Enums.xLSubtototalLocationType)intReturnItem;
+				return Factory.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.xLSubtototalLocationType>(this, "LayoutSubtotalLocation");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "LayoutSubtotalLocation", paramsArray);
+				Factory.ExecuteEnumPropertySet(this, "LayoutSubtotalLocation", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836523.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff836523.aspx </remarks>
+		[SupportByVersion("Excel", 10,11,12,14,15,16)]
 		public bool ShowInFieldList
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "ShowInFieldList", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "ShowInFieldList");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "ShowInFieldList", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "ShowInFieldList", value);
 			}
 		}
 
@@ -533,148 +472,127 @@ namespace NetOffice.ExcelApi
 		/// SupportByVersion Excel 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 12,14,15,16)]
+		[SupportByVersion("Excel", 12,14,15,16)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public string _Caption
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "_Caption", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "_Caption");
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff834624.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff834624.aspx </remarks>
+		[SupportByVersion("Excel", 12,14,15,16)]
 		public bool IncludeNewItemsInFilter
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "IncludeNewItemsInFilter", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "IncludeNewItemsInFilter");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "IncludeNewItemsInFilter", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "IncludeNewItemsInFilter", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839077.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff839077.aspx </remarks>
+		[SupportByVersion("Excel", 12,14,15,16)]
 		public NetOffice.ExcelApi.Enums.XlCubeFieldSubType CubeFieldSubType
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "CubeFieldSubType", paramsArray);
-				int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-				return (NetOffice.ExcelApi.Enums.XlCubeFieldSubType)intReturnItem;
+				return Factory.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlCubeFieldSubType>(this, "CubeFieldSubType");
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836450.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff836450.aspx </remarks>
+		[SupportByVersion("Excel", 12,14,15,16)]
 		public bool AllItemsVisible
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "AllItemsVisible", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "AllItemsVisible");
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff841249.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff841249.aspx </remarks>
+		[SupportByVersion("Excel", 12,14,15,16)]
 		public string CurrentPageName
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "CurrentPageName", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "CurrentPageName");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "CurrentPageName", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "CurrentPageName", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193506.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff193506.aspx </remarks>
+		[SupportByVersion("Excel", 12,14,15,16)]
 		public bool IsDate
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "IsDate", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "IsDate");
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838407.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff838407.aspx </remarks>
+		[SupportByVersion("Excel", 14,15,16)]
 		public bool FlattenHierarchies
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "FlattenHierarchies", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "FlattenHierarchies");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "FlattenHierarchies", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "FlattenHierarchies", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822855.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff822855.aspx </remarks>
+		[SupportByVersion("Excel", 14,15,16)]
 		public bool HierarchizeDistinct
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "HierarchizeDistinct", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "HierarchizeDistinct");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "HierarchizeDistinct", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "HierarchizeDistinct", value);
 			}
 		}
 
@@ -684,106 +602,97 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822896.aspx
 		/// </summary>
-		/// <param name="property">string Property</param>
-		/// <param name="propertyOrder">optional object PropertyOrder</param>
-		[SupportByVersionAttribute("Excel", 10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff822896.aspx </remarks>
+		/// <param name="property">string property</param>
+		/// <param name="propertyOrder">optional object propertyOrder</param>
+		[SupportByVersion("Excel", 10,11,12,14,15,16)]
 		public void AddMemberPropertyField(string property, object propertyOrder)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(property, propertyOrder);
-			Invoker.Method(this, "AddMemberPropertyField", paramsArray);
+			 Factory.ExecuteMethod(this, "AddMemberPropertyField", property, propertyOrder);
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822896.aspx
 		/// </summary>
-		/// <param name="property">string Property</param>
-		/// <param name="propertyOrder">optional object PropertyOrder</param>
-		/// <param name="propertyDisplayedIn">optional object PropertyDisplayedIn</param>
-		[SupportByVersionAttribute("Excel", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff822896.aspx </remarks>
+		/// <param name="property">string property</param>
+		/// <param name="propertyOrder">optional object propertyOrder</param>
+		/// <param name="propertyDisplayedIn">optional object propertyDisplayedIn</param>
+		[SupportByVersion("Excel", 12,14,15,16)]
 		public void AddMemberPropertyField(string property, object propertyOrder, object propertyDisplayedIn)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(property, propertyOrder, propertyDisplayedIn);
-			Invoker.Method(this, "AddMemberPropertyField", paramsArray);
+			 Factory.ExecuteMethod(this, "AddMemberPropertyField", property, propertyOrder, propertyDisplayedIn);
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822896.aspx
 		/// </summary>
-		/// <param name="property">string Property</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff822896.aspx </remarks>
+		/// <param name="property">string property</param>
+		[CustomMethod]
+		[SupportByVersion("Excel", 10,11,12,14,15,16)]
 		public void AddMemberPropertyField(string property)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(property);
-			Invoker.Method(this, "AddMemberPropertyField", paramsArray);
+			 Factory.ExecuteMethod(this, "AddMemberPropertyField", property);
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838430.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff838430.aspx </remarks>
+		[SupportByVersion("Excel", 10,11,12,14,15,16)]
 		public void Delete()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "Delete", paramsArray);
+			 Factory.ExecuteMethod(this, "Delete");
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="property">string Property</param>
-		/// <param name="propertyOrder">optional object PropertyOrder</param>
+		/// <param name="property">string property</param>
+		/// <param name="propertyOrder">optional object propertyOrder</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("Excel", 12,14,15,16)]
+		[SupportByVersion("Excel", 12,14,15,16)]
 		public void _AddMemberPropertyField(string property, object propertyOrder)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(property, propertyOrder);
-			Invoker.Method(this, "_AddMemberPropertyField", paramsArray);
+			 Factory.ExecuteMethod(this, "_AddMemberPropertyField", property, propertyOrder);
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="property">string Property</param>
+		/// <param name="property">string property</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Excel", 12,14,15,16)]
 		public void _AddMemberPropertyField(string property)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(property);
-			Invoker.Method(this, "_AddMemberPropertyField", paramsArray);
+			 Factory.ExecuteMethod(this, "_AddMemberPropertyField", property);
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195930.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff195930.aspx </remarks>
+		[SupportByVersion("Excel", 12,14,15,16)]
 		public void ClearManualFilter()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "ClearManualFilter", paramsArray);
+			 Factory.ExecuteMethod(this, "ClearManualFilter");
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835266.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835266.aspx </remarks>
+		[SupportByVersion("Excel", 12,14,15,16)]
 		public void CreatePivotFields()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "CreatePivotFields", paramsArray);
+			 Factory.ExecuteMethod(this, "CreatePivotFields");
 		}
 
 		#endregion
+
 		#pragma warning restore
 	}
 }

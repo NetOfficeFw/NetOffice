@@ -1,61 +1,61 @@
 ﻿using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
-using NetOffice;
-using NetOffice.Misc;
+using NetOffice.Attributes;
 
 namespace NetOffice.OutlookApi
 {
-
 	#region Delegates
 
 	#pragma warning disable
-	public delegate void SharingItem_OpenEventHandler(ref bool Cancel);
-	public delegate void SharingItem_CustomActionEventHandler(COMObject Action, COMObject Response, ref bool Cancel);
+	public delegate void SharingItem_OpenEventHandler(ref bool cancel);
+	public delegate void SharingItem_CustomActionEventHandler(ICOMObject action, ICOMObject response, ref bool cancel);
 	public delegate void SharingItem_CustomPropertyChangeEventHandler(string Name);
-	public delegate void SharingItem_ForwardEventHandler(COMObject Forward, ref bool Cancel);
-	public delegate void SharingItem_CloseEventHandler(ref bool Cancel);
+	public delegate void SharingItem_ForwardEventHandler(ICOMObject forward, ref bool cancel);
+	public delegate void SharingItem_CloseEventHandler(ref bool cancel);
 	public delegate void SharingItem_PropertyChangeEventHandler(string Name);
 	public delegate void SharingItem_ReadEventHandler();
-	public delegate void SharingItem_ReplyEventHandler(COMObject Response, ref bool Cancel);
-	public delegate void SharingItem_ReplyAllEventHandler(COMObject Response, ref bool Cancel);
-	public delegate void SharingItem_SendEventHandler(ref bool Cancel);
-	public delegate void SharingItem_WriteEventHandler(ref bool Cancel);
-	public delegate void SharingItem_BeforeCheckNamesEventHandler(ref bool Cancel);
-	public delegate void SharingItem_AttachmentAddEventHandler(NetOffice.OutlookApi.Attachment Attachment);
-	public delegate void SharingItem_AttachmentReadEventHandler(NetOffice.OutlookApi.Attachment Attachment);
-	public delegate void SharingItem_BeforeAttachmentSaveEventHandler(NetOffice.OutlookApi.Attachment Attachment, ref bool Cancel);
-	public delegate void SharingItem_BeforeDeleteEventHandler(COMObject Item, ref bool Cancel);
-	public delegate void SharingItem_AttachmentRemoveEventHandler(NetOffice.OutlookApi.Attachment Attachment);
-	public delegate void SharingItem_BeforeAttachmentAddEventHandler(NetOffice.OutlookApi.Attachment Attachment, ref bool Cancel);
-	public delegate void SharingItem_BeforeAttachmentPreviewEventHandler(NetOffice.OutlookApi.Attachment Attachment, ref bool Cancel);
-	public delegate void SharingItem_BeforeAttachmentReadEventHandler(NetOffice.OutlookApi.Attachment Attachment, ref bool Cancel);
-	public delegate void SharingItem_BeforeAttachmentWriteToTempFileEventHandler(NetOffice.OutlookApi.Attachment Attachment, ref bool Cancel);
+	public delegate void SharingItem_ReplyEventHandler(ICOMObject response, ref bool cancel);
+	public delegate void SharingItem_ReplyAllEventHandler(ICOMObject response, ref bool cancel);
+	public delegate void SharingItem_SendEventHandler(ref bool cancel);
+	public delegate void SharingItem_WriteEventHandler(ref bool cancel);
+	public delegate void SharingItem_BeforeCheckNamesEventHandler(ref bool cancel);
+	public delegate void SharingItem_AttachmentAddEventHandler(NetOffice.OutlookApi.Attachment attachment);
+	public delegate void SharingItem_AttachmentReadEventHandler(NetOffice.OutlookApi.Attachment attachment);
+	public delegate void SharingItem_BeforeAttachmentSaveEventHandler(NetOffice.OutlookApi.Attachment attachment, ref bool cancel);
+	public delegate void SharingItem_BeforeDeleteEventHandler(ICOMObject item, ref bool cancel);
+	public delegate void SharingItem_AttachmentRemoveEventHandler(NetOffice.OutlookApi.Attachment attachment);
+	public delegate void SharingItem_BeforeAttachmentAddEventHandler(NetOffice.OutlookApi.Attachment attachment, ref bool cancel);
+	public delegate void SharingItem_BeforeAttachmentPreviewEventHandler(NetOffice.OutlookApi.Attachment attachment, ref bool cancel);
+	public delegate void SharingItem_BeforeAttachmentReadEventHandler(NetOffice.OutlookApi.Attachment attachment, ref bool cancel);
+	public delegate void SharingItem_BeforeAttachmentWriteToTempFileEventHandler(NetOffice.OutlookApi.Attachment attachment, ref bool cancel);
 	public delegate void SharingItem_UnloadEventHandler();
-	public delegate void SharingItem_BeforeAutoSaveEventHandler(ref bool Cancel);
+	public delegate void SharingItem_BeforeAutoSaveEventHandler(ref bool cancel);
 	public delegate void SharingItem_BeforeReadEventHandler();
 	public delegate void SharingItem_AfterWriteEventHandler();
-	public delegate void SharingItem_ReadCompleteEventHandler(ref bool Cancel);
+	public delegate void SharingItem_ReadCompleteEventHandler(ref bool cancel);
 	#pragma warning restore
 
 	#endregion
 
-	///<summary>
+	/// <summary>
 	/// CoClass SharingItem 
 	/// SupportByVersion Outlook, 12,14,15,16
-	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff865852.aspx
-	///</summary>
-	[SupportByVersionAttribute("Outlook", 12,14,15,16)]
-	[EntityTypeAttribute(EntityType.IsCoClass)]
-	public class SharingItem : _SharingItem,IEventBinding
+	/// </summary>
+	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff865852.aspx </remarks>
+	[SupportByVersion("Outlook", 12,14,15,16)]
+	[EntityType(EntityType.IsCoClass)]
+	[EventSink(typeof(Events.ItemEvents_10_SinkHelper))]
+	public class SharingItem : _SharingItem, IEventBinding
 	{
 		#pragma warning disable
+
 		#region Fields
 		
 		private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
 		private string _activeSinkId;
 		private NetRuntimeSystem.Type _thisType;
-		ItemEvents_10_SinkHelper _itemEvents_10_SinkHelper;
+		private Events.ItemEvents_10_SinkHelper _itemEvents_10_SinkHelper;
 	
 		#endregion
 
@@ -64,6 +64,7 @@ namespace NetOffice.OutlookApi
         /// <summary>
         /// Instance Type
         /// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
         public override Type InstanceType
         {
             get
@@ -130,17 +131,17 @@ namespace NetOffice.OutlookApi
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of SharingItem 
-        ///</summary>		
+        /// </summary>		
 		public SharingItem():base("Outlook.SharingItem")
 		{
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of SharingItem
-        ///</summary>
+        /// </summary>
         ///<param name="progId">registered ProgID</param>
 		public SharingItem(string progId):base(progId)
 		{
@@ -150,46 +151,6 @@ namespace NetOffice.OutlookApi
 		#endregion
 
 		#region Static CoClass Methods
-
-		/// <summary>
-        /// Returns all running Outlook.SharingItem objects from the environment/system
-        /// </summary>
-        /// <returns>an Outlook.SharingItem array</returns>
-		public static NetOffice.OutlookApi.SharingItem[] GetActiveInstances()
-		{		
-			IDisposableEnumeration proxyList = NetOffice.ProxyService.GetActiveInstances("Outlook","SharingItem");
-			NetRuntimeSystem.Collections.Generic.List<NetOffice.OutlookApi.SharingItem> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.OutlookApi.SharingItem>();
-			foreach(object proxy in proxyList)
-				resultList.Add( new NetOffice.OutlookApi.SharingItem(null, proxy) );
-			return resultList.ToArray();
-		}
-
-		/// <summary>
-        /// Returns a running Outlook.SharingItem object from the environment/system.
-        /// </summary>
-        /// <returns>an Outlook.SharingItem object or null</returns>
-		public static NetOffice.OutlookApi.SharingItem GetActiveInstance()
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Outlook","SharingItem", false);
-			if(null != proxy)
-				return new NetOffice.OutlookApi.SharingItem(null, proxy);
-			else
-				return null;
-		}
-
-		/// <summary>
-        /// Returns a running Outlook.SharingItem object from the environment/system. 
-        /// </summary>
-	    /// <param name="throwOnError">throw an exception if no object was found</param>
-        /// <returns>an Outlook.SharingItem object or null</returns>
-		public static NetOffice.OutlookApi.SharingItem GetActiveInstance(bool throwOnError)
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Outlook","SharingItem", throwOnError);
-			if(null != proxy)
-				return new NetOffice.OutlookApi.SharingItem(null, proxy);
-			else
-				return null;
-		}
 		#endregion
 
 		#region Events
@@ -809,12 +770,12 @@ namespace NetOffice.OutlookApi
 				return;
 	
             if (null == _activeSinkId)
-				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, ItemEvents_10_SinkHelper.Id);
+				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, Events.ItemEvents_10_SinkHelper.Id);
 
 
-			if(ItemEvents_10_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
+			if(Events.ItemEvents_10_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
 			{
-				_itemEvents_10_SinkHelper = new ItemEvents_10_SinkHelper(this, _connectPoint);
+				_itemEvents_10_SinkHelper = new Events.ItemEvents_10_SinkHelper(this, _connectPoint);
 				return;
 			} 
         }

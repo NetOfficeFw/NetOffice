@@ -1,23 +1,33 @@
-﻿using System;
+using System;
 using NetRuntimeSystem = System;
-using System.Runtime.InteropServices;
-using System.Runtime.CompilerServices;
 using System.ComponentModel;
-using System.Reflection;
-using System.Collections.Generic;
-using NetOffice;
+using NetOffice.Attributes;
+
 namespace NetOffice.VBIDEApi
 {
-	///<summary>
+	/// <summary>
 	/// DispatchInterface Property 
 	/// SupportByVersion VBIDE, 12,14,5.3
-	///</summary>
-	[SupportByVersionAttribute("VBIDE", 12,14,5.3)]
-	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
-	public class Property : COMObject
+	/// </summary>
+	[SupportByVersion("VBIDE", 12,14,5.3)]
+	[EntityType(EntityType.IsDispatchInterface)]
+ 	public class Property : COMObject
 	{
 		#pragma warning disable
+
 		#region Type Information
+
+		/// <summary>
+		/// Instance Type
+		/// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
+		public override Type InstanceType
+		{
+			get
+			{
+				return LateBindingApiWrapperType;
+			}
+		}
 
         private static Type _type;
 
@@ -28,14 +38,20 @@ namespace NetOffice.VBIDEApi
             {
                 if (null == _type)
                     _type = typeof(Property);
-                    
                 return _type;
             }
         }
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public Property(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -81,7 +97,7 @@ namespace NetOffice.VBIDEApi
 		{
 		}
 		
-		/// <param name="progId">registered ProgID</param>
+		/// <param name="progId">registered progID</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public Property(string progId) : base(progId)
 		{
@@ -95,27 +111,16 @@ namespace NetOffice.VBIDEApi
 		/// SupportByVersion VBIDE 12, 14, 5.3
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("VBIDE", 12,14,5.3)]
+		[SupportByVersion("VBIDE", 12,14,5.3)]
 		public object Value
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Value", paramsArray);
-				if((null != returnItem) && (returnItem is MarshalByRefObject))
-				{
-					ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
-					return newObject;
-				}
-				else
-				{
-					return  returnItem;
-				}
+				return Factory.ExecuteVariantPropertyGet(this, "Value");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "Value", paramsArray);
+				Factory.ExecuteVariantPropertySet(this, "Value", value);
 			}
 		}
 
@@ -123,52 +128,41 @@ namespace NetOffice.VBIDEApi
 		/// SupportByVersion VBIDE 12, 14, 5.3
 		/// Get/Set
 		/// </summary>
-		/// <param name="index1">object Index1</param>
-		/// <param name="index2">optional object Index2</param>
-		/// <param name="index3">optional object Index3</param>
-		/// <param name="index4">optional object Index4</param>
-		[SupportByVersionAttribute("VBIDE", 12,14,5.3)]
+		/// <param name="index1">object index1</param>
+		/// <param name="index2">optional object index2</param>
+		/// <param name="index3">optional object index3</param>
+		/// <param name="index4">optional object index4</param>
+		[SupportByVersion("VBIDE", 12,14,5.3)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public object get_IndexedValue(object index1, object index2, object index3, object index4)
-		{		
-			object[] paramsArray = Invoker.ValidateParamsArray(index1, index2, index3, index4);
-			object returnItem = Invoker.PropertyGet(this, "IndexedValue", paramsArray);
-			if((null != returnItem) && (returnItem is MarshalByRefObject))
-			{
-				ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
-				return newObject;
-			}
-			else
-			{
-				return  returnItem;
-			}
+		{
+			return Factory.ExecuteVariantPropertyGet(this, "IndexedValue", index1, index2, index3, index4);
 		}
 
 		/// <summary>
 		/// SupportByVersion VBIDE 12, 14, 5.3
 		/// Get/Set
 		/// </summary>
-		/// <param name="index1">object Index1</param>
-		/// <param name="index2">optional object Index2</param>
-		/// <param name="index3">optional object Index3</param>
-		/// <param name="index4">optional object Index4</param>
-		[SupportByVersionAttribute("VBIDE", 12,14,5.3)]
+		/// <param name="index1">object index1</param>
+		/// <param name="index2">optional object index2</param>
+		/// <param name="index3">optional object index3</param>
+		/// <param name="index4">optional object index4</param>
+		[SupportByVersion("VBIDE", 12,14,5.3)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public void set_IndexedValue(object index1, object index2, object index3, object index4, object value)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(index1, index2, index3, index4);
-			Invoker.PropertySet(this, "IndexedValue", paramsArray, value);
+			Factory.ExecutePropertySet(this, "IndexedValue", new object[]{ index1, index2, index3, index4, value });
 		}
 
 		/// <summary>
 		/// SupportByVersion VBIDE 12, 14, 5.3
 		/// Alias for get_IndexedValue
 		/// </summary>
-		/// <param name="index1">object Index1</param>
-		/// <param name="index2">optional object Index2</param>
-		/// <param name="index3">optional object Index3</param>
-		/// <param name="index4">optional object Index4</param>
-		[SupportByVersionAttribute("VBIDE", 12,14,5.3)]
+		/// <param name="index1">object index1</param>
+		/// <param name="index2">optional object index2</param>
+		/// <param name="index3">optional object index3</param>
+		/// <param name="index4">optional object index4</param>
+		[SupportByVersion("VBIDE", 12,14,5.3), Redirect("get_IndexedValue")]
 		public object IndexedValue(object index1, object index2, object index3, object index4)
 		{
 			return get_IndexedValue(index1, index2, index3, index4);
@@ -178,43 +172,32 @@ namespace NetOffice.VBIDEApi
 		/// SupportByVersion VBIDE 12, 14, 5.3
 		/// Get/Set
 		/// </summary>
-		/// <param name="index1">object Index1</param>
-		[SupportByVersionAttribute("VBIDE", 12,14,5.3)]
+		/// <param name="index1">object index1</param>
+		[SupportByVersion("VBIDE", 12,14,5.3)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public object get_IndexedValue(object index1)
-		{		
-			object[] paramsArray = Invoker.ValidateParamsArray(index1);
-			object returnItem = Invoker.PropertyGet(this, "IndexedValue", paramsArray);
-			if((null != returnItem) && (returnItem is MarshalByRefObject))
-			{
-				ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
-				return newObject;
-			}
-			else
-			{
-				return  returnItem;
-			}
+		{
+			return Factory.ExecuteVariantPropertyGet(this, "IndexedValue", index1);
 		}
 
 		/// <summary>
 		/// SupportByVersion VBIDE 12, 14, 5.3
 		/// Get/Set
 		/// </summary>
-		/// <param name="index1">object Index1</param>
-		[SupportByVersionAttribute("VBIDE", 12,14,5.3)]
+		/// <param name="index1">object index1</param>
+		[SupportByVersion("VBIDE", 12,14,5.3)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public void set_IndexedValue(object index1, object value)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(index1);
-			Invoker.PropertySet(this, "IndexedValue", paramsArray, value);
+			Factory.ExecutePropertySet(this, "IndexedValue", index1, value);
 		}
 
 		/// <summary>
 		/// SupportByVersion VBIDE 12, 14, 5.3
 		/// Alias for get_IndexedValue
 		/// </summary>
-		/// <param name="index1">object Index1</param>
-		[SupportByVersionAttribute("VBIDE", 12,14,5.3)]
+		/// <param name="index1">object index1</param>
+		[SupportByVersion("VBIDE", 12,14,5.3), Redirect("get_IndexedValue")]
 		public object IndexedValue(object index1)
 		{
 			return get_IndexedValue(index1);
@@ -224,46 +207,35 @@ namespace NetOffice.VBIDEApi
 		/// SupportByVersion VBIDE 12, 14, 5.3
 		/// Get/Set
 		/// </summary>
-		/// <param name="index1">object Index1</param>
-		/// <param name="index2">optional object Index2</param>
-		[SupportByVersionAttribute("VBIDE", 12,14,5.3)]
+		/// <param name="index1">object index1</param>
+		/// <param name="index2">optional object index2</param>
+		[SupportByVersion("VBIDE", 12,14,5.3)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public object get_IndexedValue(object index1, object index2)
-		{		
-			object[] paramsArray = Invoker.ValidateParamsArray(index1, index2);
-			object returnItem = Invoker.PropertyGet(this, "IndexedValue", paramsArray);
-			if((null != returnItem) && (returnItem is MarshalByRefObject))
-			{
-				ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
-				return newObject;
-			}
-			else
-			{
-				return  returnItem;
-			}
+		{
+			return Factory.ExecuteVariantPropertyGet(this, "IndexedValue", index1, index2);
 		}
 
 		/// <summary>
 		/// SupportByVersion VBIDE 12, 14, 5.3
 		/// Get/Set
 		/// </summary>
-		/// <param name="index1">object Index1</param>
-		/// <param name="index2">optional object Index2</param>
-		[SupportByVersionAttribute("VBIDE", 12,14,5.3)]
+		/// <param name="index1">object index1</param>
+		/// <param name="index2">optional object index2</param>
+		[SupportByVersion("VBIDE", 12,14,5.3)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public void set_IndexedValue(object index1, object index2, object value)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(index1, index2);
-			Invoker.PropertySet(this, "IndexedValue", paramsArray, value);
+			Factory.ExecutePropertySet(this, "IndexedValue", index1, index2, value);
 		}
 
 		/// <summary>
 		/// SupportByVersion VBIDE 12, 14, 5.3
 		/// Alias for get_IndexedValue
 		/// </summary>
-		/// <param name="index1">object Index1</param>
-		/// <param name="index2">optional object Index2</param>
-		[SupportByVersionAttribute("VBIDE", 12,14,5.3)]
+		/// <param name="index1">object index1</param>
+		/// <param name="index2">optional object index2</param>
+		[SupportByVersion("VBIDE", 12,14,5.3), Redirect("get_IndexedValue")]
 		public object IndexedValue(object index1, object index2)
 		{
 			return get_IndexedValue(index1, index2);
@@ -273,49 +245,38 @@ namespace NetOffice.VBIDEApi
 		/// SupportByVersion VBIDE 12, 14, 5.3
 		/// Get/Set
 		/// </summary>
-		/// <param name="index1">object Index1</param>
-		/// <param name="index2">optional object Index2</param>
-		/// <param name="index3">optional object Index3</param>
-		[SupportByVersionAttribute("VBIDE", 12,14,5.3)]
+		/// <param name="index1">object index1</param>
+		/// <param name="index2">optional object index2</param>
+		/// <param name="index3">optional object index3</param>
+		[SupportByVersion("VBIDE", 12,14,5.3)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public object get_IndexedValue(object index1, object index2, object index3)
-		{		
-			object[] paramsArray = Invoker.ValidateParamsArray(index1, index2, index3);
-			object returnItem = Invoker.PropertyGet(this, "IndexedValue", paramsArray);
-			if((null != returnItem) && (returnItem is MarshalByRefObject))
-			{
-				ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
-				return newObject;
-			}
-			else
-			{
-				return  returnItem;
-			}
+		{
+			return Factory.ExecuteVariantPropertyGet(this, "IndexedValue", index1, index2, index3);
 		}
 
 		/// <summary>
 		/// SupportByVersion VBIDE 12, 14, 5.3
 		/// Get/Set
 		/// </summary>
-		/// <param name="index1">object Index1</param>
-		/// <param name="index2">optional object Index2</param>
-		/// <param name="index3">optional object Index3</param>
-		[SupportByVersionAttribute("VBIDE", 12,14,5.3)]
+		/// <param name="index1">object index1</param>
+		/// <param name="index2">optional object index2</param>
+		/// <param name="index3">optional object index3</param>
+		[SupportByVersion("VBIDE", 12,14,5.3)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public void set_IndexedValue(object index1, object index2, object index3, object value)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(index1, index2, index3);
-			Invoker.PropertySet(this, "IndexedValue", paramsArray, value);
+			Factory.ExecutePropertySet(this, "IndexedValue", index1, index2, index3, value);
 		}
 
 		/// <summary>
 		/// SupportByVersion VBIDE 12, 14, 5.3
 		/// Alias for get_IndexedValue
 		/// </summary>
-		/// <param name="index1">object Index1</param>
-		/// <param name="index2">optional object Index2</param>
-		/// <param name="index3">optional object Index3</param>
-		[SupportByVersionAttribute("VBIDE", 12,14,5.3)]
+		/// <param name="index1">object index1</param>
+		/// <param name="index2">optional object index2</param>
+		/// <param name="index3">optional object index3</param>
+		[SupportByVersion("VBIDE", 12,14,5.3), Redirect("get_IndexedValue")]
 		public object IndexedValue(object index1, object index2, object index3)
 		{
 			return get_IndexedValue(index1, index2, index3);
@@ -325,14 +286,12 @@ namespace NetOffice.VBIDEApi
 		/// SupportByVersion VBIDE 12, 14, 5.3
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("VBIDE", 12,14,5.3)]
+		[SupportByVersion("VBIDE", 12,14,5.3)]
 		public Int16 NumIndices
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "NumIndices", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt16(returnItem);
+				return Factory.ExecuteInt16PropertyGet(this, "NumIndices");
 			}
 		}
 
@@ -340,16 +299,14 @@ namespace NetOffice.VBIDEApi
 		/// SupportByVersion VBIDE 12, 14, 5.3
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("VBIDE", 12,14,5.3)]
+		[SupportByVersion("VBIDE", 12,14,5.3)]
+		[BaseResult]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public NetOffice.VBIDEApi.Application Application
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				NetOffice.VBIDEApi.Application newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VBIDEApi.Application;
-				return newObject;
+				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.VBIDEApi.Application>(this, "Application");
 			}
 		}
 
@@ -357,16 +314,13 @@ namespace NetOffice.VBIDEApi
 		/// SupportByVersion VBIDE 12, 14, 5.3
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("VBIDE", 12,14,5.3)]
+		[SupportByVersion("VBIDE", 12,14,5.3)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public NetOffice.VBIDEApi.Properties Parent
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Parent", paramsArray);
-				NetOffice.VBIDEApi.Properties newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.VBIDEApi.Properties.LateBindingApiWrapperType) as NetOffice.VBIDEApi.Properties;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.VBIDEApi.Properties>(this, "Parent", NetOffice.VBIDEApi.Properties.LateBindingApiWrapperType);
 			}
 		}
 
@@ -374,14 +328,12 @@ namespace NetOffice.VBIDEApi
 		/// SupportByVersion VBIDE 12, 14, 5.3
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("VBIDE", 12,14,5.3)]
+		[SupportByVersion("VBIDE", 12,14,5.3)]
 		public string Name
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Name", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "Name");
 			}
 		}
 
@@ -389,15 +341,12 @@ namespace NetOffice.VBIDEApi
 		/// SupportByVersion VBIDE 12, 14, 5.3
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("VBIDE", 12,14,5.3)]
+		[SupportByVersion("VBIDE", 12,14,5.3)]
 		public NetOffice.VBIDEApi.VBE VBE
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "VBE", paramsArray);
-				NetOffice.VBIDEApi.VBE newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.VBIDEApi.VBE.LateBindingApiWrapperType) as NetOffice.VBIDEApi.VBE;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.VBIDEApi.VBE>(this, "VBE", NetOffice.VBIDEApi.VBE.LateBindingApiWrapperType);
 			}
 		}
 
@@ -405,15 +354,12 @@ namespace NetOffice.VBIDEApi
 		/// SupportByVersion VBIDE 12, 14, 5.3
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("VBIDE", 12,14,5.3)]
+		[SupportByVersion("VBIDE", 12,14,5.3)]
 		public NetOffice.VBIDEApi.Properties Collection
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Collection", paramsArray);
-				NetOffice.VBIDEApi.Properties newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.VBIDEApi.Properties.LateBindingApiWrapperType) as NetOffice.VBIDEApi.Properties;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.VBIDEApi.Properties>(this, "Collection", NetOffice.VBIDEApi.Properties.LateBindingApiWrapperType);
 			}
 		}
 
@@ -422,20 +368,16 @@ namespace NetOffice.VBIDEApi
 		/// Get/Set
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("VBIDE", 12,14,5.3)]
+		[SupportByVersion("VBIDE", 12,14,5.3), ProxyResult]
 		public object Object
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Object", paramsArray);
-				ICOMObject newObject = Factory.CreateObjectFromComProxy(this,returnItem);
-				return newObject;
+				return Factory.ExecuteReferencePropertyGet(this, "Object");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "Object", paramsArray);
+				Factory.ExecuteReferencePropertySet(this, "Object", value);
 			}
 		}
 
@@ -444,6 +386,7 @@ namespace NetOffice.VBIDEApi
 		#region Methods
 
 		#endregion
+
 		#pragma warning restore
 	}
 }

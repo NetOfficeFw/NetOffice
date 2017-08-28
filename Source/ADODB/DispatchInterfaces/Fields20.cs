@@ -1,24 +1,35 @@
-﻿using System;
-using NetRuntimeSystem = System;
-using System.Runtime.InteropServices;
-using System.Runtime.CompilerServices;
-using System.ComponentModel;
-using System.Reflection;
+﻿using System.Collections;
 using System.Collections.Generic;
-using System.Collections;
-using NetOffice;
+using System;
+using NetRuntimeSystem = System;
+using System.ComponentModel;
+using NetOffice.Attributes;
+
 namespace NetOffice.ADODBApi
 {
-	///<summary>
+	/// <summary>
 	/// DispatchInterface Fields20 
 	/// SupportByVersion ADODB, 2.5
-	///</summary>
-	[SupportByVersionAttribute("ADODB", 2.5)]
-	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
-	public class Fields20 : Fields15 ,IEnumerable<object>
+	/// </summary>
+	[SupportByVersion("ADODB", 2.5)]
+	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Method)]
+	public class Fields20 : Fields15 , IEnumerable<object>
 	{
 		#pragma warning disable
+
 		#region Type Information
+
+		/// <summary>
+		/// Instance Type
+		/// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
+		public override Type InstanceType
+		{
+			get
+			{
+				return LateBindingApiWrapperType;
+			}
+		}
 
         private static Type _type;
 
@@ -29,14 +40,20 @@ namespace NetOffice.ADODBApi
             {
                 if (null == _type)
                     _type = typeof(Fields20);
-                    
                 return _type;
             }
         }
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public Fields20(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -82,7 +99,7 @@ namespace NetOffice.ADODBApi
 		{
 		}
 		
-		/// <param name="progId">registered ProgID</param>
+		/// <param name="progId">registered progID</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public Fields20(string progId) : base(progId)
 		{
@@ -96,14 +113,12 @@ namespace NetOffice.ADODBApi
 		/// SupportByVersion ADODB 2.5
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("ADODB", 2.5)]
+		[SupportByVersion("ADODB", 2.5)]
 		public Int32 Count
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Count", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "Count");
 			}
 		}
 
@@ -113,72 +128,62 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.5
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("ADODB", 2.5)]
+		[SupportByVersion("ADODB", 2.5)]
 		public void Refresh()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "Refresh", paramsArray);
+			 Factory.ExecuteMethod(this, "Refresh");
 		}
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.5
-		/// 
 		/// </summary>
-		/// <param name="name">string Name</param>
-		/// <param name="type">NetOffice.ADODBApi.Enums.DataTypeEnum Type</param>
+		/// <param name="name">string name</param>
+		/// <param name="type">NetOffice.ADODBApi.Enums.DataTypeEnum type</param>
 		/// <param name="definedSize">optional Int32 DefinedSize = 0</param>
 		/// <param name="attrib">optional NetOffice.ADODBApi.Enums.FieldAttributeEnum Attrib = -1</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("ADODB", 2.5)]
+		[SupportByVersion("ADODB", 2.5)]
 		public void _Append(string name, NetOffice.ADODBApi.Enums.DataTypeEnum type, object definedSize, object attrib)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(name, type, definedSize, attrib);
-			Invoker.Method(this, "_Append", paramsArray);
+			 Factory.ExecuteMethod(this, "_Append", name, type, definedSize, attrib);
 		}
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.5
-		/// 
 		/// </summary>
-		/// <param name="name">string Name</param>
-		/// <param name="type">NetOffice.ADODBApi.Enums.DataTypeEnum Type</param>
+		/// <param name="name">string name</param>
+		/// <param name="type">NetOffice.ADODBApi.Enums.DataTypeEnum type</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("ADODB", 2.5)]
+		[CustomMethod]
+		[SupportByVersion("ADODB", 2.5)]
 		public void _Append(string name, NetOffice.ADODBApi.Enums.DataTypeEnum type)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(name, type);
-			Invoker.Method(this, "_Append", paramsArray);
+			 Factory.ExecuteMethod(this, "_Append", name, type);
 		}
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.5
-		/// 
 		/// </summary>
-		/// <param name="name">string Name</param>
-		/// <param name="type">NetOffice.ADODBApi.Enums.DataTypeEnum Type</param>
+		/// <param name="name">string name</param>
+		/// <param name="type">NetOffice.ADODBApi.Enums.DataTypeEnum type</param>
 		/// <param name="definedSize">optional Int32 DefinedSize = 0</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("ADODB", 2.5)]
+		[CustomMethod]
+		[SupportByVersion("ADODB", 2.5)]
 		public void _Append(string name, NetOffice.ADODBApi.Enums.DataTypeEnum type, object definedSize)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(name, type, definedSize);
-			Invoker.Method(this, "_Append", paramsArray);
+			 Factory.ExecuteMethod(this, "_Append", name, type, definedSize);
 		}
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.5
-		/// 
 		/// </summary>
-		/// <param name="index">object Index</param>
-		[SupportByVersionAttribute("ADODB", 2.5)]
+		/// <param name="index">object index</param>
+		[SupportByVersion("ADODB", 2.5)]
 		public void Delete(object index)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(index);
-			Invoker.Method(this, "Delete", paramsArray);
+			 Factory.ExecuteMethod(this, "Delete", index);
 		}
 
 		#endregion
@@ -186,9 +191,9 @@ namespace NetOffice.ADODBApi
        #region IEnumerable<object> Member
         
         /// <summary>
-		/// SupportByVersionAttribute ADODB, 2.5
+		/// SupportByVersion ADODB, 2.5
 		/// </summary>
-		[SupportByVersionAttribute("ADODB", 2.5)]
+		[SupportByVersion("ADODB", 2.5)]
        public IEnumerator<object> GetEnumerator()  
        {
            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
@@ -201,15 +206,16 @@ namespace NetOffice.ADODBApi
 		#region IEnumerable Members
        
 		/// <summary>
-		/// SupportByVersionAttribute ADODB, 2.5
+		/// SupportByVersion ADODB, 2.5
 		/// </summary>
-		[SupportByVersionAttribute("ADODB", 2.5)]
+		[SupportByVersion("ADODB", 2.5)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
 			return NetOffice.Utils.GetProxyEnumeratorAsMethod(this);
 		}
 
 		#endregion
+
 		#pragma warning restore
 	}
 }

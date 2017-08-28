@@ -1,24 +1,35 @@
-﻿using System;
-using NetRuntimeSystem = System;
-using System.Runtime.InteropServices;
-using System.Runtime.CompilerServices;
-using System.ComponentModel;
-using System.Reflection;
+﻿using System.Collections;
 using System.Collections.Generic;
-using System.Collections;
-using NetOffice;
+using System;
+using NetRuntimeSystem = System;
+using System.ComponentModel;
+using NetOffice.Attributes;
+
 namespace NetOffice.OfficeApi
 {
-	///<summary>
+	/// <summary>
 	/// DispatchInterface PropertyTests 
 	/// SupportByVersion Office, 9,10,11,12,14,15,16
-	///</summary>
-	[SupportByVersionAttribute("Office", 9,10,11,12,14,15,16)]
-	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
-	public class PropertyTests : _IMsoDispObj ,IEnumerable<NetOffice.OfficeApi.PropertyTest>
+	/// </summary>
+	[SupportByVersion("Office", 9,10,11,12,14,15,16)]
+	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "Item")]
+	public class PropertyTests : _IMsoDispObj, IEnumerable<NetOffice.OfficeApi.PropertyTest>
 	{
 		#pragma warning disable
+
 		#region Type Information
+
+		/// <summary>
+		/// Instance Type
+		/// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
+		public override Type InstanceType
+		{
+			get
+			{
+				return LateBindingApiWrapperType;
+			}
+		}
 
         private static Type _type;
 
@@ -29,14 +40,20 @@ namespace NetOffice.OfficeApi
             {
                 if (null == _type)
                     _type = typeof(PropertyTests);
-                    
                 return _type;
             }
         }
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public PropertyTests(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -82,7 +99,7 @@ namespace NetOffice.OfficeApi
 		{
 		}
 		
-		/// <param name="progId">registered ProgID</param>
+		/// <param name="progId">registered progID</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public PropertyTests(string progId) : base(progId)
 		{
@@ -96,17 +113,14 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <param name="index">Int32 Index</param>
-		[SupportByVersionAttribute("Office", 9,10,11,12,14,15,16)]
-		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
+		/// <param name="index">Int32 index</param>
+		[SupportByVersion("Office", 9,10,11,12,14,15,16)]
+		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
 		public NetOffice.OfficeApi.PropertyTest this[Int32 index]
 		{
 			get
-{			
-			object[] paramsArray = Invoker.ValidateParamsArray(index);
-			object returnItem = Invoker.PropertyGet(this, "Item", paramsArray);
-			NetOffice.OfficeApi.PropertyTest newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.PropertyTest.LateBindingApiWrapperType) as NetOffice.OfficeApi.PropertyTest;
-			return newObject;
+			{
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.PropertyTest>(this, "Item", NetOffice.OfficeApi.PropertyTest.LateBindingApiWrapperType, index);
 			}
 		}
 
@@ -114,14 +128,12 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Office", 9,10,11,12,14,15,16)]
+		[SupportByVersion("Office", 9,10,11,12,14,15,16)]
 		public Int32 Count
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Count", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "Count");
 			}
 		}
 
@@ -131,106 +143,97 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="name">string Name</param>
-		/// <param name="condition">NetOffice.OfficeApi.Enums.MsoCondition Condition</param>
-		/// <param name="value">optional object Value</param>
-		/// <param name="secondValue">optional object SecondValue</param>
+		/// <param name="name">string name</param>
+		/// <param name="condition">NetOffice.OfficeApi.Enums.MsoCondition condition</param>
+		/// <param name="value">optional object value</param>
+		/// <param name="secondValue">optional object secondValue</param>
 		/// <param name="connector">optional NetOffice.OfficeApi.Enums.MsoConnector Connector = 1</param>
-		[SupportByVersionAttribute("Office", 9,10,11,12,14,15,16)]
+		[SupportByVersion("Office", 9,10,11,12,14,15,16)]
 		public void Add(string name, NetOffice.OfficeApi.Enums.MsoCondition condition, object value, object secondValue, object connector)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(name, condition, value, secondValue, connector);
-			Invoker.Method(this, "Add", paramsArray);
+			 Factory.ExecuteMethod(this, "Add", new object[]{ name, condition, value, secondValue, connector });
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="name">string Name</param>
-		/// <param name="condition">NetOffice.OfficeApi.Enums.MsoCondition Condition</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Office", 9,10,11,12,14,15,16)]
+		/// <param name="name">string name</param>
+		/// <param name="condition">NetOffice.OfficeApi.Enums.MsoCondition condition</param>
+		[CustomMethod]
+		[SupportByVersion("Office", 9,10,11,12,14,15,16)]
 		public void Add(string name, NetOffice.OfficeApi.Enums.MsoCondition condition)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(name, condition);
-			Invoker.Method(this, "Add", paramsArray);
+			 Factory.ExecuteMethod(this, "Add", name, condition);
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="name">string Name</param>
-		/// <param name="condition">NetOffice.OfficeApi.Enums.MsoCondition Condition</param>
-		/// <param name="value">optional object Value</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Office", 9,10,11,12,14,15,16)]
+		/// <param name="name">string name</param>
+		/// <param name="condition">NetOffice.OfficeApi.Enums.MsoCondition condition</param>
+		/// <param name="value">optional object value</param>
+		[CustomMethod]
+		[SupportByVersion("Office", 9,10,11,12,14,15,16)]
 		public void Add(string name, NetOffice.OfficeApi.Enums.MsoCondition condition, object value)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(name, condition, value);
-			Invoker.Method(this, "Add", paramsArray);
+			 Factory.ExecuteMethod(this, "Add", name, condition, value);
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="name">string Name</param>
-		/// <param name="condition">NetOffice.OfficeApi.Enums.MsoCondition Condition</param>
-		/// <param name="value">optional object Value</param>
-		/// <param name="secondValue">optional object SecondValue</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Office", 9,10,11,12,14,15,16)]
+		/// <param name="name">string name</param>
+		/// <param name="condition">NetOffice.OfficeApi.Enums.MsoCondition condition</param>
+		/// <param name="value">optional object value</param>
+		/// <param name="secondValue">optional object secondValue</param>
+		[CustomMethod]
+		[SupportByVersion("Office", 9,10,11,12,14,15,16)]
 		public void Add(string name, NetOffice.OfficeApi.Enums.MsoCondition condition, object value, object secondValue)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(name, condition, value, secondValue);
-			Invoker.Method(this, "Add", paramsArray);
+			 Factory.ExecuteMethod(this, "Add", name, condition, value, secondValue);
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="index">Int32 Index</param>
-		[SupportByVersionAttribute("Office", 9,10,11,12,14,15,16)]
+		/// <param name="index">Int32 index</param>
+		[SupportByVersion("Office", 9,10,11,12,14,15,16)]
 		public void Remove(Int32 index)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(index);
-			Invoker.Method(this, "Remove", paramsArray);
+			 Factory.ExecuteMethod(this, "Remove", index);
 		}
 
-		#endregion
+        #endregion
 
-       #region IEnumerable<NetOffice.OfficeApi.PropertyTest> Member
-        
+        #region IEnumerable<NetOffice.OfficeApi.PropertyTest> Member
+
         /// <summary>
-		/// SupportByVersionAttribute Office, 9,10,11,12,14,15,16
-		/// </summary>
-		[SupportByVersionAttribute("Office", 9,10,11,12,14,15,16)]
-       public IEnumerator<NetOffice.OfficeApi.PropertyTest> GetEnumerator()  
-       {
-           NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
-           foreach (NetOffice.OfficeApi.PropertyTest item in innerEnumerator)
-               yield return item;
-       }
+        /// SupportByVersion Office, 9,10,11,12,14,15,16
+        /// </summary>
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
+        public IEnumerator<NetOffice.OfficeApi.PropertyTest> GetEnumerator()
+        {
+            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
+            foreach (NetOffice.OfficeApi.PropertyTest item in innerEnumerator)
+                yield return item;
+        }
 
-       #endregion
-          
-		#region IEnumerable Members
-       
-		/// <summary>
-		/// SupportByVersionAttribute Office, 9,10,11,12,14,15,16
-		/// </summary>
-		[SupportByVersionAttribute("Office", 9,10,11,12,14,15,16)]
+        #endregion
+
+        #region IEnumerable Members
+
+        /// <summary>
+        /// SupportByVersion Office, 9,10,11,12,14,15,16
+        /// </summary>
+        [SupportByVersion("Office", 9,10,11,12,14,15,16)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
 			return NetOffice.Utils.GetProxyEnumeratorAsProperty(this);
 		}
 
 		#endregion
+
 		#pragma warning restore
 	}
 }

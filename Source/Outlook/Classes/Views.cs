@@ -1,37 +1,37 @@
 ﻿using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
-using NetOffice;
-using NetOffice.Misc;
+using NetOffice.Attributes;
 
 namespace NetOffice.OutlookApi
 {
-
 	#region Delegates
 
 	#pragma warning disable
-	public delegate void Views_ViewAddEventHandler(NetOffice.OutlookApi.View View);
-	public delegate void Views_ViewRemoveEventHandler(NetOffice.OutlookApi.View View);
+	public delegate void Views_ViewAddEventHandler(NetOffice.OutlookApi.View view);
+	public delegate void Views_ViewRemoveEventHandler(NetOffice.OutlookApi.View view);
 	#pragma warning restore
 
 	#endregion
 
-	///<summary>
+	/// <summary>
 	/// CoClass Views 
 	/// SupportByVersion Outlook, 10,11,12,14,15,16
-	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff865619.aspx
-	///</summary>
-	[SupportByVersionAttribute("Outlook", 10,11,12,14,15,16)]
-	[EntityTypeAttribute(EntityType.IsCoClass)]
-	public class Views : _Views,IEventBinding
+	/// </summary>
+	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff865619.aspx </remarks>
+	[SupportByVersion("Outlook", 10,11,12,14,15,16)]
+	[EntityType(EntityType.IsCoClass)]
+	[EventSink(typeof(Events._ViewsEvents_SinkHelper))]
+	public class Views : _Views, IEventBinding
 	{
 		#pragma warning disable
+
 		#region Fields
 		
 		private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
 		private string _activeSinkId;
 		private NetRuntimeSystem.Type _thisType;
-		_ViewsEvents_SinkHelper __ViewsEvents_SinkHelper;
+		private Events._ViewsEvents_SinkHelper __ViewsEvents_SinkHelper;
 	
 		#endregion
 
@@ -40,6 +40,7 @@ namespace NetOffice.OutlookApi
         /// <summary>
         /// Instance Type
         /// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
         public override Type InstanceType
         {
             get
@@ -106,17 +107,17 @@ namespace NetOffice.OutlookApi
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of Views 
-        ///</summary>		
+        /// </summary>		
 		public Views():base("Outlook.Views")
 		{
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of Views
-        ///</summary>
+        /// </summary>
         ///<param name="progId">registered ProgID</param>
 		public Views(string progId):base(progId)
 		{
@@ -126,46 +127,6 @@ namespace NetOffice.OutlookApi
 		#endregion
 
 		#region Static CoClass Methods
-
-		/// <summary>
-        /// Returns all running Outlook.Views objects from the environment/system
-        /// </summary>
-        /// <returns>an Outlook.Views array</returns>
-		public static NetOffice.OutlookApi.Views[] GetActiveInstances()
-		{		
-			IDisposableEnumeration proxyList = NetOffice.ProxyService.GetActiveInstances("Outlook","Views");
-			NetRuntimeSystem.Collections.Generic.List<NetOffice.OutlookApi.Views> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.OutlookApi.Views>();
-			foreach(object proxy in proxyList)
-				resultList.Add( new NetOffice.OutlookApi.Views(null, proxy) );
-			return resultList.ToArray();
-		}
-
-		/// <summary>
-        /// Returns a running Outlook.Views object from the environment/system.
-        /// </summary>
-        /// <returns>an Outlook.Views object or null</returns>
-		public static NetOffice.OutlookApi.Views GetActiveInstance()
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Outlook","Views", false);
-			if(null != proxy)
-				return new NetOffice.OutlookApi.Views(null, proxy);
-			else
-				return null;
-		}
-
-		/// <summary>
-        /// Returns a running Outlook.Views object from the environment/system. 
-        /// </summary>
-	    /// <param name="throwOnError">throw an exception if no object was found</param>
-        /// <returns>an Outlook.Views object or null</returns>
-		public static NetOffice.OutlookApi.Views GetActiveInstance(bool throwOnError)
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Outlook","Views", throwOnError);
-			if(null != proxy)
-				return new NetOffice.OutlookApi.Views(null, proxy);
-			else
-				return null;
-		}
 		#endregion
 
 		#region Events
@@ -233,12 +194,12 @@ namespace NetOffice.OutlookApi
 				return;
 	
             if (null == _activeSinkId)
-				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, _ViewsEvents_SinkHelper.Id);
+				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, Events._ViewsEvents_SinkHelper.Id);
 
 
-			if(_ViewsEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
+			if(Events._ViewsEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
 			{
-				__ViewsEvents_SinkHelper = new _ViewsEvents_SinkHelper(this, _connectPoint);
+				__ViewsEvents_SinkHelper = new Events._ViewsEvents_SinkHelper(this, _connectPoint);
 				return;
 			} 
         }

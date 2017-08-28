@@ -1,23 +1,33 @@
 ﻿using System;
 using NetRuntimeSystem = System;
-using System.Runtime.InteropServices;
-using System.Runtime.CompilerServices;
 using System.ComponentModel;
-using System.Reflection;
-using System.Collections.Generic;
-using NetOffice;
+using NetOffice.Attributes;
+
 namespace NetOffice.PowerPointApi
 {
-	///<summary>
+	/// <summary>
 	/// DispatchInterface Effect 
 	/// SupportByVersion PowerPoint, 10,11,12,14,15,16
-	///</summary>
-	[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15,16)]
-	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
-	public class Effect : COMObject
+	/// </summary>
+	[SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
+	[EntityType(EntityType.IsDispatchInterface)]
+ 	public class Effect : COMObject
 	{
 		#pragma warning disable
+
 		#region Type Information
+
+		/// <summary>
+		/// Instance Type
+		/// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
+		public override Type InstanceType
+		{
+			get
+			{
+				return LateBindingApiWrapperType;
+			}
+		}
 
         private static Type _type;
 
@@ -28,14 +38,20 @@ namespace NetOffice.PowerPointApi
             {
                 if (null == _type)
                     _type = typeof(Effect);
-                    
                 return _type;
             }
         }
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public Effect(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -81,7 +97,7 @@ namespace NetOffice.PowerPointApi
 		{
 		}
 		
-		/// <param name="progId">registered ProgID</param>
+		/// <param name="progId">registered progID</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public Effect(string progId) : base(progId)
 		{
@@ -95,15 +111,12 @@ namespace NetOffice.PowerPointApi
 		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15,16)]
+		[SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
 		public NetOffice.PowerPointApi.Application Application
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				NetOffice.PowerPointApi.Application newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.PowerPointApi.Application.LateBindingApiWrapperType) as NetOffice.PowerPointApi.Application;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.PowerPointApi.Application>(this, "Application", NetOffice.PowerPointApi.Application.LateBindingApiWrapperType);
 			}
 		}
 
@@ -112,15 +125,12 @@ namespace NetOffice.PowerPointApi
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15,16)]
+		[SupportByVersion("PowerPoint", 10,11,12,14,15,16), ProxyResult]
 		public object Parent
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Parent", paramsArray);
-				ICOMObject newObject = Factory.CreateObjectFromComProxy(this,returnItem);
-				return newObject;
+				return Factory.ExecuteReferencePropertyGet(this, "Parent");
 			}
 		}
 
@@ -128,20 +138,16 @@ namespace NetOffice.PowerPointApi
 		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15,16)]
+		[SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
 		public NetOffice.PowerPointApi.Shape Shape
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Shape", paramsArray);
-				NetOffice.PowerPointApi.Shape newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.PowerPointApi.Shape.LateBindingApiWrapperType) as NetOffice.PowerPointApi.Shape;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.PowerPointApi.Shape>(this, "Shape", NetOffice.PowerPointApi.Shape.LateBindingApiWrapperType);
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "Shape", paramsArray);
+				Factory.ExecuteReferencePropertySet(this, "Shape", value);
 			}
 		}
 
@@ -149,14 +155,12 @@ namespace NetOffice.PowerPointApi
 		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15,16)]
+		[SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
 		public Int32 Index
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Index", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "Index");
 			}
 		}
 
@@ -164,15 +168,12 @@ namespace NetOffice.PowerPointApi
 		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15,16)]
+		[SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
 		public NetOffice.PowerPointApi.Timing Timing
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Timing", paramsArray);
-				NetOffice.PowerPointApi.Timing newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.PowerPointApi.Timing.LateBindingApiWrapperType) as NetOffice.PowerPointApi.Timing;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.PowerPointApi.Timing>(this, "Timing", NetOffice.PowerPointApi.Timing.LateBindingApiWrapperType);
 			}
 		}
 
@@ -180,20 +181,16 @@ namespace NetOffice.PowerPointApi
 		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15,16)]
+		[SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
 		public NetOffice.PowerPointApi.Enums.MsoAnimEffect EffectType
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "EffectType", paramsArray);
-				int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-				return (NetOffice.PowerPointApi.Enums.MsoAnimEffect)intReturnItem;
+				return Factory.ExecuteEnumPropertyGet<NetOffice.PowerPointApi.Enums.MsoAnimEffect>(this, "EffectType");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "EffectType", paramsArray);
+				Factory.ExecuteEnumPropertySet(this, "EffectType", value);
 			}
 		}
 
@@ -201,15 +198,12 @@ namespace NetOffice.PowerPointApi
 		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15,16)]
+		[SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
 		public NetOffice.PowerPointApi.EffectParameters EffectParameters
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "EffectParameters", paramsArray);
-				NetOffice.PowerPointApi.EffectParameters newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.PowerPointApi.EffectParameters.LateBindingApiWrapperType) as NetOffice.PowerPointApi.EffectParameters;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.PowerPointApi.EffectParameters>(this, "EffectParameters", NetOffice.PowerPointApi.EffectParameters.LateBindingApiWrapperType);
 			}
 		}
 
@@ -217,14 +211,12 @@ namespace NetOffice.PowerPointApi
 		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15,16)]
+		[SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
 		public Int32 TextRangeStart
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "TextRangeStart", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "TextRangeStart");
 			}
 		}
 
@@ -232,14 +224,12 @@ namespace NetOffice.PowerPointApi
 		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15,16)]
+		[SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
 		public Int32 TextRangeLength
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "TextRangeLength", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "TextRangeLength");
 			}
 		}
 
@@ -247,19 +237,16 @@ namespace NetOffice.PowerPointApi
 		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15,16)]
+		[SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
 		public Int32 Paragraph
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Paragraph", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "Paragraph");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "Paragraph", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "Paragraph", value);
 			}
 		}
 
@@ -267,14 +254,12 @@ namespace NetOffice.PowerPointApi
 		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15,16)]
+		[SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
 		public string DisplayName
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "DisplayName", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "DisplayName");
 			}
 		}
 
@@ -282,20 +267,16 @@ namespace NetOffice.PowerPointApi
 		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15,16)]
+		[SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
 		public NetOffice.OfficeApi.Enums.MsoTriState Exit
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Exit", paramsArray);
-				int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-				return (NetOffice.OfficeApi.Enums.MsoTriState)intReturnItem;
+				return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoTriState>(this, "Exit");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "Exit", paramsArray);
+				Factory.ExecuteEnumPropertySet(this, "Exit", value);
 			}
 		}
 
@@ -303,15 +284,12 @@ namespace NetOffice.PowerPointApi
 		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15,16)]
+		[SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
 		public NetOffice.PowerPointApi.AnimationBehaviors Behaviors
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Behaviors", paramsArray);
-				NetOffice.PowerPointApi.AnimationBehaviors newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.PowerPointApi.AnimationBehaviors.LateBindingApiWrapperType) as NetOffice.PowerPointApi.AnimationBehaviors;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.PowerPointApi.AnimationBehaviors>(this, "Behaviors", NetOffice.PowerPointApi.AnimationBehaviors.LateBindingApiWrapperType);
 			}
 		}
 
@@ -319,15 +297,12 @@ namespace NetOffice.PowerPointApi
 		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15,16)]
+		[SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
 		public NetOffice.PowerPointApi.EffectInformation EffectInformation
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "EffectInformation", paramsArray);
-				NetOffice.PowerPointApi.EffectInformation newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.PowerPointApi.EffectInformation.LateBindingApiWrapperType) as NetOffice.PowerPointApi.EffectInformation;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.PowerPointApi.EffectInformation>(this, "EffectInformation", NetOffice.PowerPointApi.EffectInformation.LateBindingApiWrapperType);
 			}
 		}
 
@@ -337,52 +312,45 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
 		/// <param name="toPos">Int32 toPos</param>
-		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15,16)]
+		[SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
 		public void MoveTo(Int32 toPos)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(toPos);
-			Invoker.Method(this, "MoveTo", paramsArray);
+			 Factory.ExecuteMethod(this, "MoveTo", toPos);
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="effect">NetOffice.PowerPointApi.Effect Effect</param>
-		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15,16)]
+		/// <param name="effect">NetOffice.PowerPointApi.Effect effect</param>
+		[SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
 		public void MoveBefore(NetOffice.PowerPointApi.Effect effect)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(effect);
-			Invoker.Method(this, "MoveBefore", paramsArray);
+			 Factory.ExecuteMethod(this, "MoveBefore", effect);
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="effect">NetOffice.PowerPointApi.Effect Effect</param>
-		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15,16)]
+		/// <param name="effect">NetOffice.PowerPointApi.Effect effect</param>
+		[SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
 		public void MoveAfter(NetOffice.PowerPointApi.Effect effect)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(effect);
-			Invoker.Method(this, "MoveAfter", paramsArray);
+			 Factory.ExecuteMethod(this, "MoveAfter", effect);
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15,16)]
+		[SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
 		public void Delete()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "Delete", paramsArray);
+			 Factory.ExecuteMethod(this, "Delete");
 		}
 
 		#endregion
+
 		#pragma warning restore
 	}
 }

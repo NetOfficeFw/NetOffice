@@ -1,24 +1,34 @@
 ﻿using System;
 using NetRuntimeSystem = System;
-using System.Runtime.InteropServices;
-using System.Runtime.CompilerServices;
 using System.ComponentModel;
-using System.Reflection;
-using System.Collections.Generic;
-using NetOffice;
+using NetOffice.Attributes;
+
 namespace NetOffice.OfficeApi
 {
-	///<summary>
+	/// <summary>
 	/// DispatchInterface SharedWorkspaceTask 
 	/// SupportByVersion Office, 11,12,14,15,16
-	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff865531.aspx
-	///</summary>
-	[SupportByVersionAttribute("Office", 11,12,14,15,16)]
-	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
-	public class SharedWorkspaceTask : _IMsoDispObj
+	/// </summary>
+	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff865531.aspx </remarks>
+	[SupportByVersion("Office", 11,12,14,15,16)]
+	[EntityType(EntityType.IsDispatchInterface)]
+ 	public class SharedWorkspaceTask : _IMsoDispObj
 	{
 		#pragma warning disable
+
 		#region Type Information
+
+		/// <summary>
+		/// Instance Type
+		/// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
+		public override Type InstanceType
+		{
+			get
+			{
+				return LateBindingApiWrapperType;
+			}
+		}
 
         private static Type _type;
 
@@ -29,14 +39,20 @@ namespace NetOffice.OfficeApi
             {
                 if (null == _type)
                     _type = typeof(SharedWorkspaceTask);
-                    
                 return _type;
             }
         }
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public SharedWorkspaceTask(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -82,7 +98,7 @@ namespace NetOffice.OfficeApi
 		{
 		}
 		
-		/// <param name="progId">registered ProgID</param>
+		/// <param name="progId">registered progID</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public SharedWorkspaceTask(string progId) : base(progId)
 		{
@@ -95,234 +111,179 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 11, 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff860234.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Office", 11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860234.aspx </remarks>
+		[SupportByVersion("Office", 11,12,14,15,16)]
 		public string Title
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Title", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "Title");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "Title", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "Title", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 11, 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff861531.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Office", 11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff861531.aspx </remarks>
+		[SupportByVersion("Office", 11,12,14,15,16)]
 		public string AssignedTo
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "AssignedTo", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "AssignedTo");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "AssignedTo", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "AssignedTo", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 11, 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff864957.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Office", 11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff864957.aspx </remarks>
+		[SupportByVersion("Office", 11,12,14,15,16)]
 		public NetOffice.OfficeApi.Enums.MsoSharedWorkspaceTaskStatus Status
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Status", paramsArray);
-				int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-				return (NetOffice.OfficeApi.Enums.MsoSharedWorkspaceTaskStatus)intReturnItem;
+				return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoSharedWorkspaceTaskStatus>(this, "Status");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "Status", paramsArray);
+				Factory.ExecuteEnumPropertySet(this, "Status", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 11, 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff863054.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Office", 11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff863054.aspx </remarks>
+		[SupportByVersion("Office", 11,12,14,15,16)]
 		public NetOffice.OfficeApi.Enums.MsoSharedWorkspaceTaskPriority Priority
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Priority", paramsArray);
-				int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-				return (NetOffice.OfficeApi.Enums.MsoSharedWorkspaceTaskPriority)intReturnItem;
+				return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoSharedWorkspaceTaskPriority>(this, "Priority");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "Priority", paramsArray);
+				Factory.ExecuteEnumPropertySet(this, "Priority", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 11, 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff860514.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Office", 11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860514.aspx </remarks>
+		[SupportByVersion("Office", 11,12,14,15,16)]
 		public string Description
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Description", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "Description");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "Description", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "Description", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 11, 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff862835.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Office", 11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff862835.aspx </remarks>
+		[SupportByVersion("Office", 11,12,14,15,16)]
 		public object DueDate
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "DueDate", paramsArray);
-				if((null != returnItem) && (returnItem is MarshalByRefObject))
-				{
-					ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
-					return newObject;
-				}
-				else
-				{
-					return  returnItem;
-				}
+				return Factory.ExecuteVariantPropertyGet(this, "DueDate");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "DueDate", paramsArray);
+				Factory.ExecuteVariantPropertySet(this, "DueDate", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff864667.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Office", 11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff864667.aspx </remarks>
+		[SupportByVersion("Office", 11,12,14,15,16)]
 		public string CreatedBy
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "CreatedBy", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "CreatedBy");
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff862213.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Office", 11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff862213.aspx </remarks>
+		[SupportByVersion("Office", 11,12,14,15,16)]
 		public object CreatedDate
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "CreatedDate", paramsArray);
-				if((null != returnItem) && (returnItem is MarshalByRefObject))
-				{
-					ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
-					return newObject;
-				}
-				else
-				{
-					return  returnItem;
-				}
+				return Factory.ExecuteVariantPropertyGet(this, "CreatedDate");
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff864980.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Office", 11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff864980.aspx </remarks>
+		[SupportByVersion("Office", 11,12,14,15,16)]
 		public string ModifiedBy
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "ModifiedBy", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "ModifiedBy");
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff860842.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Office", 11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860842.aspx </remarks>
+		[SupportByVersion("Office", 11,12,14,15,16)]
 		public object ModifiedDate
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "ModifiedDate", paramsArray);
-				if((null != returnItem) && (returnItem is MarshalByRefObject))
-				{
-					ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
-					return newObject;
-				}
-				else
-				{
-					return  returnItem;
-				}
+				return Factory.ExecuteVariantPropertyGet(this, "ModifiedDate");
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff862819.aspx
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("Office", 11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff862819.aspx </remarks>
+		[SupportByVersion("Office", 11,12,14,15,16), ProxyResult]
 		public object Parent
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Parent", paramsArray);
-				ICOMObject newObject = Factory.CreateObjectFromComProxy(this,returnItem);
-				return newObject;
+				return Factory.ExecuteReferencePropertyGet(this, "Parent");
 			}
 		}
 
@@ -332,27 +293,26 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff865262.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Office", 11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff865262.aspx </remarks>
+		[SupportByVersion("Office", 11,12,14,15,16)]
 		public void Save()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "Save", paramsArray);
+			 Factory.ExecuteMethod(this, "Save");
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff862097.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Office", 11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff862097.aspx </remarks>
+		[SupportByVersion("Office", 11,12,14,15,16)]
 		public void Delete()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "Delete", paramsArray);
+			 Factory.ExecuteMethod(this, "Delete");
 		}
 
 		#endregion
+
 		#pragma warning restore
 	}
 }

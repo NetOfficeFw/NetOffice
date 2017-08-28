@@ -1,12 +1,10 @@
 ﻿using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
-using NetOffice;
-using NetOffice.Misc;
+using NetOffice.Attributes;
 
 namespace NetOffice.AccessApi
 {
-
 	#region Delegates
 
 	#pragma warning disable
@@ -14,16 +12,17 @@ namespace NetOffice.AccessApi
 
 	#endregion
 
-	///<summary>
+	/// <summary>
 	/// CoClass CurrentProject 
 	/// SupportByVersion Access, 9,10,11,12,14,15,16
-	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835979.aspx
-	///</summary>
-	[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
-	[EntityTypeAttribute(EntityType.IsCoClass)]
-	public class CurrentProject : _CurrentProject
+	/// </summary>
+	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835979.aspx </remarks>
+	[SupportByVersion("Access", 9,10,11,12,14,15,16)]
+	[EntityType(EntityType.IsCoClass)]
+ 	public class CurrentProject : _CurrentProject
 	{
 		#pragma warning disable
+
 		#region Fields
 		
 		private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
@@ -37,6 +36,7 @@ namespace NetOffice.AccessApi
         /// <summary>
         /// Instance Type
         /// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
         public override Type InstanceType
         {
             get
@@ -103,17 +103,17 @@ namespace NetOffice.AccessApi
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of CurrentProject 
-        ///</summary>		
+        /// </summary>		
 		public CurrentProject():base("Access.CurrentProject")
 		{
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of CurrentProject
-        ///</summary>
+        /// </summary>
         ///<param name="progId">registered ProgID</param>
 		public CurrentProject(string progId):base(progId)
 		{
@@ -123,46 +123,6 @@ namespace NetOffice.AccessApi
 		#endregion
 
 		#region Static CoClass Methods
-
-		/// <summary>
-        /// Returns all running Access.CurrentProject objects from the environment/system
-        /// </summary>
-        /// <returns>an Access.CurrentProject array</returns>
-		public static NetOffice.AccessApi.CurrentProject[] GetActiveInstances()
-		{		
-			IDisposableEnumeration proxyList = NetOffice.ProxyService.GetActiveInstances("Access","CurrentProject");
-			NetRuntimeSystem.Collections.Generic.List<NetOffice.AccessApi.CurrentProject> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.AccessApi.CurrentProject>();
-			foreach(object proxy in proxyList)
-				resultList.Add( new NetOffice.AccessApi.CurrentProject(null, proxy) );
-			return resultList.ToArray();
-		}
-
-		/// <summary>
-        /// Returns a running Access.CurrentProject object from the environment/system.
-        /// </summary>
-        /// <returns>an Access.CurrentProject object or null</returns>
-		public static NetOffice.AccessApi.CurrentProject GetActiveInstance()
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Access","CurrentProject", false);
-			if(null != proxy)
-				return new NetOffice.AccessApi.CurrentProject(null, proxy);
-			else
-				return null;
-		}
-
-		/// <summary>
-        /// Returns a running Access.CurrentProject object from the environment/system. 
-        /// </summary>
-	    /// <param name="throwOnError">throw an exception if no object was found</param>
-        /// <returns>an Access.CurrentProject object or null</returns>
-		public static NetOffice.AccessApi.CurrentProject GetActiveInstance(bool throwOnError)
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Access","CurrentProject", throwOnError);
-			if(null != proxy)
-				return new NetOffice.AccessApi.CurrentProject(null, proxy);
-			else
-				return null;
-		}
 		#endregion
 
 		#region Events

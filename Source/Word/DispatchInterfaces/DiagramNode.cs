@@ -1,23 +1,34 @@
-﻿using System;
+﻿using System.Reflection;
+using System;
 using NetRuntimeSystem = System;
-using System.Runtime.InteropServices;
-using System.Runtime.CompilerServices;
 using System.ComponentModel;
-using System.Reflection;
-using System.Collections.Generic;
-using NetOffice;
+using NetOffice.Attributes;
+
 namespace NetOffice.WordApi
 {
-	///<summary>
+	/// <summary>
 	/// DispatchInterface DiagramNode 
 	/// SupportByVersion Word, 10,11,12,14,15,16
-	///</summary>
-	[SupportByVersionAttribute("Word", 10,11,12,14,15,16)]
-	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
-	public class DiagramNode : COMObject
+	/// </summary>
+	[SupportByVersion("Word", 10,11,12,14,15,16)]
+	[EntityType(EntityType.IsDispatchInterface)]
+ 	public class DiagramNode : COMObject
 	{
 		#pragma warning disable
+
 		#region Type Information
+
+		/// <summary>
+		/// Instance Type
+		/// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
+		public override Type InstanceType
+		{
+			get
+			{
+				return LateBindingApiWrapperType;
+			}
+		}
 
         private static Type _type;
 
@@ -28,14 +39,20 @@ namespace NetOffice.WordApi
             {
                 if (null == _type)
                     _type = typeof(DiagramNode);
-                    
                 return _type;
             }
         }
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public DiagramNode(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -81,7 +98,7 @@ namespace NetOffice.WordApi
 		{
 		}
 		
-		/// <param name="progId">registered ProgID</param>
+		/// <param name="progId">registered progID</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public DiagramNode(string progId) : base(progId)
 		{
@@ -95,15 +112,12 @@ namespace NetOffice.WordApi
 		/// SupportByVersion Word 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Word", 10,11,12,14,15,16)]
+		[SupportByVersion("Word", 10,11,12,14,15,16)]
 		public NetOffice.WordApi.Application Application
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				NetOffice.WordApi.Application newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.Application.LateBindingApiWrapperType) as NetOffice.WordApi.Application;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.Application>(this, "Application", NetOffice.WordApi.Application.LateBindingApiWrapperType);
 			}
 		}
 
@@ -111,14 +125,12 @@ namespace NetOffice.WordApi
 		/// SupportByVersion Word 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Word", 10,11,12,14,15,16)]
+		[SupportByVersion("Word", 10,11,12,14,15,16)]
 		public Int32 Creator
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Creator", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "Creator");
 			}
 		}
 
@@ -127,15 +139,12 @@ namespace NetOffice.WordApi
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("Word", 10,11,12,14,15,16)]
+		[SupportByVersion("Word", 10,11,12,14,15,16), ProxyResult]
 		public object Parent
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Parent", paramsArray);
-				ICOMObject newObject = Factory.CreateObjectFromComProxy(this,returnItem);
-				return newObject;
+				return Factory.ExecuteReferencePropertyGet(this, "Parent");
 			}
 		}
 
@@ -143,15 +152,12 @@ namespace NetOffice.WordApi
 		/// SupportByVersion Word 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Word", 10,11,12,14,15,16)]
+		[SupportByVersion("Word", 10,11,12,14,15,16)]
 		public NetOffice.WordApi.DiagramNodeChildren Children
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Children", paramsArray);
-				NetOffice.WordApi.DiagramNodeChildren newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.DiagramNodeChildren.LateBindingApiWrapperType) as NetOffice.WordApi.DiagramNodeChildren;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.DiagramNodeChildren>(this, "Children", NetOffice.WordApi.DiagramNodeChildren.LateBindingApiWrapperType);
 			}
 		}
 
@@ -159,15 +165,12 @@ namespace NetOffice.WordApi
 		/// SupportByVersion Word 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Word", 10,11,12,14,15,16)]
+		[SupportByVersion("Word", 10,11,12,14,15,16)]
 		public NetOffice.WordApi.Shape Shape
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Shape", paramsArray);
-				NetOffice.WordApi.Shape newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.Shape.LateBindingApiWrapperType) as NetOffice.WordApi.Shape;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.Shape>(this, "Shape", NetOffice.WordApi.Shape.LateBindingApiWrapperType);
 			}
 		}
 
@@ -175,15 +178,12 @@ namespace NetOffice.WordApi
 		/// SupportByVersion Word 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Word", 10,11,12,14,15,16)]
+		[SupportByVersion("Word", 10,11,12,14,15,16)]
 		public NetOffice.WordApi.DiagramNode Root
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Root", paramsArray);
-				NetOffice.WordApi.DiagramNode newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.DiagramNode.LateBindingApiWrapperType) as NetOffice.WordApi.DiagramNode;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.DiagramNode>(this, "Root", NetOffice.WordApi.DiagramNode.LateBindingApiWrapperType);
 			}
 		}
 
@@ -191,15 +191,12 @@ namespace NetOffice.WordApi
 		/// SupportByVersion Word 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Word", 10,11,12,14,15,16)]
+		[SupportByVersion("Word", 10,11,12,14,15,16)]
 		public NetOffice.WordApi.Diagram Diagram
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Diagram", paramsArray);
-				NetOffice.WordApi.Diagram newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.Diagram.LateBindingApiWrapperType) as NetOffice.WordApi.Diagram;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.Diagram>(this, "Diagram", NetOffice.WordApi.Diagram.LateBindingApiWrapperType);
 			}
 		}
 
@@ -207,20 +204,16 @@ namespace NetOffice.WordApi
 		/// SupportByVersion Word 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Word", 10,11,12,14,15,16)]
+		[SupportByVersion("Word", 10,11,12,14,15,16)]
 		public NetOffice.OfficeApi.Enums.MsoOrgChartLayoutType Layout
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Layout", paramsArray);
-				int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-				return (NetOffice.OfficeApi.Enums.MsoOrgChartLayoutType)intReturnItem;
+				return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoOrgChartLayoutType>(this, "Layout");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "Layout", paramsArray);
+				Factory.ExecuteEnumPropertySet(this, "Layout", value);
 			}
 		}
 
@@ -228,15 +221,12 @@ namespace NetOffice.WordApi
 		/// SupportByVersion Word 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Word", 10,11,12,14,15,16)]
+		[SupportByVersion("Word", 10,11,12,14,15,16)]
 		public NetOffice.WordApi.Shape TextShape
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "TextShape", paramsArray);
-				NetOffice.WordApi.Shape newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.Shape.LateBindingApiWrapperType) as NetOffice.WordApi.Shape;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.Shape>(this, "TextShape", NetOffice.WordApi.Shape.LateBindingApiWrapperType);
 			}
 		}
 
@@ -246,175 +236,156 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
 		/// <param name="pos">optional NetOffice.OfficeApi.Enums.MsoRelativeNodePosition Pos = 2</param>
 		/// <param name="nodeType">optional NetOffice.OfficeApi.Enums.MsoDiagramNodeType NodeType = 1</param>
-		[SupportByVersionAttribute("Word", 10,11,12,14,15,16)]
+		[SupportByVersion("Word", 10,11,12,14,15,16)]
 		public NetOffice.WordApi.DiagramNode AddNode(object pos, object nodeType)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(pos, nodeType);
-			object returnItem = Invoker.MethodReturn(this, "AddNode", paramsArray);
-			NetOffice.WordApi.DiagramNode newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.DiagramNode.LateBindingApiWrapperType) as NetOffice.WordApi.DiagramNode;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.DiagramNode>(this, "AddNode", NetOffice.WordApi.DiagramNode.LateBindingApiWrapperType, pos, nodeType);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 10,11,12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Word", 10,11,12,14,15,16)]
 		public NetOffice.WordApi.DiagramNode AddNode()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "AddNode", paramsArray);
-			NetOffice.WordApi.DiagramNode newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.DiagramNode.LateBindingApiWrapperType) as NetOffice.WordApi.DiagramNode;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.DiagramNode>(this, "AddNode", NetOffice.WordApi.DiagramNode.LateBindingApiWrapperType);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
 		/// <param name="pos">optional NetOffice.OfficeApi.Enums.MsoRelativeNodePosition Pos = 2</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 10,11,12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Word", 10,11,12,14,15,16)]
 		public NetOffice.WordApi.DiagramNode AddNode(object pos)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(pos);
-			object returnItem = Invoker.MethodReturn(this, "AddNode", paramsArray);
-			NetOffice.WordApi.DiagramNode newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.DiagramNode.LateBindingApiWrapperType) as NetOffice.WordApi.DiagramNode;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.DiagramNode>(this, "AddNode", NetOffice.WordApi.DiagramNode.LateBindingApiWrapperType, pos);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("Word", 10,11,12,14,15,16)]
+		[SupportByVersion("Word", 10,11,12,14,15,16)]
 		public void Delete()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "Delete", paramsArray);
+			 Factory.ExecuteMethod(this, "Delete");
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="targetNode">NetOffice.WordApi.DiagramNode TargetNode</param>
-		/// <param name="pos">NetOffice.OfficeApi.Enums.MsoRelativeNodePosition Pos</param>
-		[SupportByVersionAttribute("Word", 10,11,12,14,15,16)]
+		/// <param name="targetNode">NetOffice.WordApi.DiagramNode targetNode</param>
+		/// <param name="pos">NetOffice.OfficeApi.Enums.MsoRelativeNodePosition pos</param>
+		[SupportByVersion("Word", 10,11,12,14,15,16)]
 		public void MoveNode(out NetOffice.WordApi.DiagramNode targetNode, NetOffice.OfficeApi.Enums.MsoRelativeNodePosition pos)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true,false);
 			targetNode = null;
 			object[] paramsArray = Invoker.ValidateParamsArray(targetNode, pos);
 			Invoker.Method(this, "MoveNode", paramsArray, modifiers);
-			targetNode = (NetOffice.WordApi.DiagramNode)paramsArray[0];
+            if (paramsArray[0] is MarshalByRefObject)
+                targetNode = new NetOffice.WordApi.DiagramNode(this, paramsArray[0]);
+            else
+                targetNode = null;
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="targetNode">NetOffice.WordApi.DiagramNode TargetNode</param>
-		[SupportByVersionAttribute("Word", 10,11,12,14,15,16)]
+		/// <param name="targetNode">NetOffice.WordApi.DiagramNode targetNode</param>
+		[SupportByVersion("Word", 10,11,12,14,15,16)]
 		public void ReplaceNode(out NetOffice.WordApi.DiagramNode targetNode)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
 			targetNode = null;
 			object[] paramsArray = Invoker.ValidateParamsArray(targetNode);
 			Invoker.Method(this, "ReplaceNode", paramsArray, modifiers);
-			targetNode = (NetOffice.WordApi.DiagramNode)paramsArray[0];
+            if (paramsArray[0] is MarshalByRefObject)
+                targetNode = new NetOffice.WordApi.DiagramNode(this, paramsArray[0]);
+            else
+                targetNode = null;
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="targetNode">NetOffice.WordApi.DiagramNode TargetNode</param>
+		/// <param name="targetNode">NetOffice.WordApi.DiagramNode targetNode</param>
 		/// <param name="pos">optional NetOffice.OfficeApi.Enums.MsoRelativeNodePosition Pos = -1</param>
-		[SupportByVersionAttribute("Word", 10,11,12,14,15,16)]
+		[SupportByVersion("Word", 10,11,12,14,15,16)]
 		public void SwapNode(out NetOffice.WordApi.DiagramNode targetNode, object pos)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true,false);
 			targetNode = null;
 			object[] paramsArray = Invoker.ValidateParamsArray(targetNode, pos);
 			Invoker.Method(this, "SwapNode", paramsArray, modifiers);
-			targetNode = (NetOffice.WordApi.DiagramNode)paramsArray[0];
-		}
+            if (paramsArray[0] is MarshalByRefObject)
+                targetNode = new NetOffice.WordApi.DiagramNode(this, paramsArray[0]);
+            else
+                targetNode = null;
+        }
 
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="targetNode">NetOffice.WordApi.DiagramNode TargetNode</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 10,11,12,14,15,16)]
+		/// <param name="targetNode">NetOffice.WordApi.DiagramNode targetNode</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 10,11,12,14,15,16)]
 		public void SwapNode(out NetOffice.WordApi.DiagramNode targetNode)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
 			targetNode = null;
 			object[] paramsArray = Invoker.ValidateParamsArray(targetNode);
 			Invoker.Method(this, "SwapNode", paramsArray, modifiers);
-			targetNode = (NetOffice.WordApi.DiagramNode)paramsArray[0];
-		}
+            if (paramsArray[0] is MarshalByRefObject)
+                targetNode = new NetOffice.WordApi.DiagramNode(this, paramsArray[0]);
+            else
+                targetNode = null;
+        }
 
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
 		/// <param name="copyChildren">bool copyChildren</param>
 		/// <param name="targetNode">optional NetOffice.WordApi.DiagramNode TargetNode = 0</param>
 		/// <param name="pos">optional NetOffice.OfficeApi.Enums.MsoRelativeNodePosition Pos = 2</param>
-		[SupportByVersionAttribute("Word", 10,11,12,14,15,16)]
+		[SupportByVersion("Word", 10,11,12,14,15,16)]
 		public NetOffice.WordApi.DiagramNode CloneNode(bool copyChildren, object targetNode, object pos)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(copyChildren, targetNode, pos);
-			object returnItem = Invoker.MethodReturn(this, "CloneNode", paramsArray);
-			NetOffice.WordApi.DiagramNode newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.DiagramNode.LateBindingApiWrapperType) as NetOffice.WordApi.DiagramNode;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.DiagramNode>(this, "CloneNode", NetOffice.WordApi.DiagramNode.LateBindingApiWrapperType, copyChildren, targetNode, pos);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
 		/// <param name="copyChildren">bool copyChildren</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 10,11,12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Word", 10,11,12,14,15,16)]
 		public NetOffice.WordApi.DiagramNode CloneNode(bool copyChildren)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(copyChildren);
-			object returnItem = Invoker.MethodReturn(this, "CloneNode", paramsArray);
-			NetOffice.WordApi.DiagramNode newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.DiagramNode.LateBindingApiWrapperType) as NetOffice.WordApi.DiagramNode;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.DiagramNode>(this, "CloneNode", NetOffice.WordApi.DiagramNode.LateBindingApiWrapperType, copyChildren);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
 		/// <param name="copyChildren">bool copyChildren</param>
 		/// <param name="targetNode">optional NetOffice.WordApi.DiagramNode TargetNode = 0</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 10,11,12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Word", 10,11,12,14,15,16)]
 		public NetOffice.WordApi.DiagramNode CloneNode(bool copyChildren, object targetNode)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(copyChildren, targetNode);
-			object returnItem = Invoker.MethodReturn(this, "CloneNode", paramsArray);
-			NetOffice.WordApi.DiagramNode newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.DiagramNode.LateBindingApiWrapperType) as NetOffice.WordApi.DiagramNode;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.DiagramNode>(this, "CloneNode", NetOffice.WordApi.DiagramNode.LateBindingApiWrapperType, copyChildren, targetNode);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="receivingNode">NetOffice.WordApi.DiagramNode ReceivingNode</param>
-		[SupportByVersionAttribute("Word", 10,11,12,14,15,16)]
+		/// <param name="receivingNode">NetOffice.WordApi.DiagramNode receivingNode</param>
+		[SupportByVersion("Word", 10,11,12,14,15,16)]
 		public void TransferChildren(out NetOffice.WordApi.DiagramNode receivingNode)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
@@ -422,35 +393,32 @@ namespace NetOffice.WordApi
 			object[] paramsArray = Invoker.ValidateParamsArray(receivingNode);
 			Invoker.Method(this, "TransferChildren", paramsArray, modifiers);
 			receivingNode = (NetOffice.WordApi.DiagramNode)paramsArray[0];
-		}
+            if (paramsArray[0] is MarshalByRefObject)
+                receivingNode = new NetOffice.WordApi.DiagramNode(this, paramsArray[0]);
+            else
+                receivingNode = null;
+        }
 
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("Word", 10,11,12,14,15,16)]
+		[SupportByVersion("Word", 10,11,12,14,15,16)]
 		public NetOffice.WordApi.DiagramNode NextNode()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "NextNode", paramsArray);
-			NetOffice.WordApi.DiagramNode newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.DiagramNode.LateBindingApiWrapperType) as NetOffice.WordApi.DiagramNode;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.DiagramNode>(this, "NextNode", NetOffice.WordApi.DiagramNode.LateBindingApiWrapperType);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("Word", 10,11,12,14,15,16)]
+		[SupportByVersion("Word", 10,11,12,14,15,16)]
 		public NetOffice.WordApi.DiagramNode PrevNode()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "PrevNode", paramsArray);
-			NetOffice.WordApi.DiagramNode newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.DiagramNode.LateBindingApiWrapperType) as NetOffice.WordApi.DiagramNode;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.DiagramNode>(this, "PrevNode", NetOffice.WordApi.DiagramNode.LateBindingApiWrapperType);
 		}
 
 		#endregion
+
 		#pragma warning restore
 	}
 }

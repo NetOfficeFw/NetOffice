@@ -1,12 +1,10 @@
 ﻿using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
-using NetOffice;
-using NetOffice.Misc;
+using NetOffice.Attributes;
 
 namespace NetOffice.AccessApi
 {
-
 	#region Delegates
 
 	#pragma warning disable
@@ -14,15 +12,16 @@ namespace NetOffice.AccessApi
 
 	#endregion
 
-	///<summary>
+	/// <summary>
 	/// CoClass AccessField 
 	/// SupportByVersion Access, 9,10,11,12,14,15,16
-	///</summary>
-	[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
-	[EntityTypeAttribute(EntityType.IsCoClass)]
-	public class AccessField : _AccessField
+	/// </summary>
+	[SupportByVersion("Access", 9,10,11,12,14,15,16)]
+	[EntityType(EntityType.IsCoClass)]
+ 	public class AccessField : _AccessField
 	{
 		#pragma warning disable
+
 		#region Fields
 		
 		private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
@@ -36,6 +35,7 @@ namespace NetOffice.AccessApi
         /// <summary>
         /// Instance Type
         /// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
         public override Type InstanceType
         {
             get
@@ -102,17 +102,17 @@ namespace NetOffice.AccessApi
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of AccessField 
-        ///</summary>		
+        /// </summary>		
 		public AccessField():base("Access.AccessField")
 		{
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of AccessField
-        ///</summary>
+        /// </summary>
         ///<param name="progId">registered ProgID</param>
 		public AccessField(string progId):base(progId)
 		{
@@ -122,46 +122,6 @@ namespace NetOffice.AccessApi
 		#endregion
 
 		#region Static CoClass Methods
-
-		/// <summary>
-        /// Returns all running Access.AccessField objects from the environment/system
-        /// </summary>
-        /// <returns>an Access.AccessField array</returns>
-		public static NetOffice.AccessApi.AccessField[] GetActiveInstances()
-		{		
-			IDisposableEnumeration proxyList = NetOffice.ProxyService.GetActiveInstances("Access","AccessField");
-			NetRuntimeSystem.Collections.Generic.List<NetOffice.AccessApi.AccessField> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.AccessApi.AccessField>();
-			foreach(object proxy in proxyList)
-				resultList.Add( new NetOffice.AccessApi.AccessField(null, proxy) );
-			return resultList.ToArray();
-		}
-
-		/// <summary>
-        /// Returns a running Access.AccessField object from the environment/system.
-        /// </summary>
-        /// <returns>an Access.AccessField object or null</returns>
-		public static NetOffice.AccessApi.AccessField GetActiveInstance()
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Access","AccessField", false);
-			if(null != proxy)
-				return new NetOffice.AccessApi.AccessField(null, proxy);
-			else
-				return null;
-		}
-
-		/// <summary>
-        /// Returns a running Access.AccessField object from the environment/system. 
-        /// </summary>
-	    /// <param name="throwOnError">throw an exception if no object was found</param>
-        /// <returns>an Access.AccessField object or null</returns>
-		public static NetOffice.AccessApi.AccessField GetActiveInstance(bool throwOnError)
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Access","AccessField", throwOnError);
-			if(null != proxy)
-				return new NetOffice.AccessApi.AccessField(null, proxy);
-			else
-				return null;
-		}
 		#endregion
 
 		#region Events

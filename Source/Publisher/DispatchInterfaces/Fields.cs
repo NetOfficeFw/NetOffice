@@ -1,24 +1,35 @@
-﻿using System;
-using NetRuntimeSystem = System;
-using System.Runtime.InteropServices;
-using System.Runtime.CompilerServices;
-using System.ComponentModel;
-using System.Reflection;
+﻿using System.Collections;
 using System.Collections.Generic;
-using System.Collections;
-using NetOffice;
+using System;
+using NetRuntimeSystem = System;
+using System.ComponentModel;
+using NetOffice.Attributes;
+
 namespace NetOffice.PublisherApi
 {
-	///<summary>
+	/// <summary>
 	/// DispatchInterface Fields 
 	/// SupportByVersion Publisher, 14,15,16
-	///</summary>
-	[SupportByVersionAttribute("Publisher", 14,15,16)]
-	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
-	public class Fields : COMObject ,IEnumerable<NetOffice.PublisherApi.Field>
+	/// </summary>
+	[SupportByVersion("Publisher", 14,15,16)]
+	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Custom), HasIndexProperty(IndexInvoke.Method, "Item")]
+	public class Fields : COMObject , IEnumerable<NetOffice.PublisherApi.Field>
 	{
 		#pragma warning disable
+
 		#region Type Information
+
+		/// <summary>
+		/// Instance Type
+		/// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
+		public override Type InstanceType
+		{
+			get
+			{
+				return LateBindingApiWrapperType;
+			}
+		}
 
         private static Type _type;
 
@@ -29,14 +40,20 @@ namespace NetOffice.PublisherApi
             {
                 if (null == _type)
                     _type = typeof(Fields);
-                    
                 return _type;
             }
         }
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public Fields(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -82,7 +99,7 @@ namespace NetOffice.PublisherApi
 		{
 		}
 		
-		/// <param name="progId">registered ProgID</param>
+		/// <param name="progId">registered progID</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public Fields(string progId) : base(progId)
 		{
@@ -96,15 +113,12 @@ namespace NetOffice.PublisherApi
 		/// SupportByVersion Publisher 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		[SupportByVersion("Publisher", 14,15,16)]
 		public NetOffice.PublisherApi.Application Application
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				NetOffice.PublisherApi.Application newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.PublisherApi.Application.LateBindingApiWrapperType) as NetOffice.PublisherApi.Application;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.PublisherApi.Application>(this, "Application", NetOffice.PublisherApi.Application.LateBindingApiWrapperType);
 			}
 		}
 
@@ -113,15 +127,12 @@ namespace NetOffice.PublisherApi
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		[SupportByVersion("Publisher", 14,15,16), ProxyResult]
 		public object Parent
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Parent", paramsArray);
-				ICOMObject newObject = Factory.CreateObjectFromComProxy(this,returnItem);
-				return newObject;
+				return Factory.ExecuteReferencePropertyGet(this, "Parent");
 			}
 		}
 
@@ -129,14 +140,12 @@ namespace NetOffice.PublisherApi
 		/// SupportByVersion Publisher 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		[SupportByVersion("Publisher", 14,15,16)]
 		public Int32 Count
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Count", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "Count");
 			}
 		}
 
@@ -146,145 +155,115 @@ namespace NetOffice.PublisherApi
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="index">Int32 Index</param>
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
-		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
+		/// <param name="index">Int32 index</param>
+		[SupportByVersion("Publisher", 14,15,16)]
+		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
 		public NetOffice.PublisherApi.Field this[Int32 index]
 		{
 			get
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(index);
-				object returnItem = Invoker.MethodReturn(this, "Item", paramsArray);
-				NetOffice.PublisherApi.Field newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PublisherApi.Field.LateBindingApiWrapperType) as NetOffice.PublisherApi.Field;
-				return newObject;
+				return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PublisherApi.Field>(this, "Item", NetOffice.PublisherApi.Field.LateBindingApiWrapperType, index);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		[SupportByVersion("Publisher", 14,15,16)]
 		public void Unlink()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "Unlink", paramsArray);
+			 Factory.ExecuteMethod(this, "Unlink");
 		}
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="range">NetOffice.PublisherApi.TextRange Range</param>
-		/// <param name="text">string Text</param>
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		/// <param name="range">NetOffice.PublisherApi.TextRange range</param>
+		/// <param name="text">string text</param>
+		[SupportByVersion("Publisher", 14,15,16)]
 		public NetOffice.PublisherApi.Field AddHorizontalInVertical(NetOffice.PublisherApi.TextRange range, string text)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(range, text);
-			object returnItem = Invoker.MethodReturn(this, "AddHorizontalInVertical", paramsArray);
-			NetOffice.PublisherApi.Field newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PublisherApi.Field.LateBindingApiWrapperType) as NetOffice.PublisherApi.Field;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PublisherApi.Field>(this, "AddHorizontalInVertical", NetOffice.PublisherApi.Field.LateBindingApiWrapperType, range, text);
 		}
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="range">NetOffice.PublisherApi.TextRange Range</param>
-		/// <param name="text">string Text</param>
+		/// <param name="range">NetOffice.PublisherApi.TextRange range</param>
+		/// <param name="text">string text</param>
 		/// <param name="alignment">optional NetOffice.PublisherApi.Enums.PbPhoneticGuideAlignmentType Alignment = 0</param>
 		/// <param name="raise">optional object Raise = 0</param>
 		/// <param name="fontName">optional string FontName = </param>
 		/// <param name="fontSize">optional object FontSize = 10</param>
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		[SupportByVersion("Publisher", 14,15,16)]
 		public NetOffice.PublisherApi.Field AddPhoneticGuide(NetOffice.PublisherApi.TextRange range, string text, object alignment, object raise, object fontName, object fontSize)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(range, text, alignment, raise, fontName, fontSize);
-			object returnItem = Invoker.MethodReturn(this, "AddPhoneticGuide", paramsArray);
-			NetOffice.PublisherApi.Field newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PublisherApi.Field.LateBindingApiWrapperType) as NetOffice.PublisherApi.Field;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PublisherApi.Field>(this, "AddPhoneticGuide", NetOffice.PublisherApi.Field.LateBindingApiWrapperType, new object[]{ range, text, alignment, raise, fontName, fontSize });
 		}
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="range">NetOffice.PublisherApi.TextRange Range</param>
-		/// <param name="text">string Text</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		/// <param name="range">NetOffice.PublisherApi.TextRange range</param>
+		/// <param name="text">string text</param>
+		[CustomMethod]
+		[SupportByVersion("Publisher", 14,15,16)]
 		public NetOffice.PublisherApi.Field AddPhoneticGuide(NetOffice.PublisherApi.TextRange range, string text)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(range, text);
-			object returnItem = Invoker.MethodReturn(this, "AddPhoneticGuide", paramsArray);
-			NetOffice.PublisherApi.Field newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PublisherApi.Field.LateBindingApiWrapperType) as NetOffice.PublisherApi.Field;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PublisherApi.Field>(this, "AddPhoneticGuide", NetOffice.PublisherApi.Field.LateBindingApiWrapperType, range, text);
 		}
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="range">NetOffice.PublisherApi.TextRange Range</param>
-		/// <param name="text">string Text</param>
+		/// <param name="range">NetOffice.PublisherApi.TextRange range</param>
+		/// <param name="text">string text</param>
 		/// <param name="alignment">optional NetOffice.PublisherApi.Enums.PbPhoneticGuideAlignmentType Alignment = 0</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Publisher", 14,15,16)]
 		public NetOffice.PublisherApi.Field AddPhoneticGuide(NetOffice.PublisherApi.TextRange range, string text, object alignment)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(range, text, alignment);
-			object returnItem = Invoker.MethodReturn(this, "AddPhoneticGuide", paramsArray);
-			NetOffice.PublisherApi.Field newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PublisherApi.Field.LateBindingApiWrapperType) as NetOffice.PublisherApi.Field;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PublisherApi.Field>(this, "AddPhoneticGuide", NetOffice.PublisherApi.Field.LateBindingApiWrapperType, range, text, alignment);
 		}
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="range">NetOffice.PublisherApi.TextRange Range</param>
-		/// <param name="text">string Text</param>
+		/// <param name="range">NetOffice.PublisherApi.TextRange range</param>
+		/// <param name="text">string text</param>
 		/// <param name="alignment">optional NetOffice.PublisherApi.Enums.PbPhoneticGuideAlignmentType Alignment = 0</param>
 		/// <param name="raise">optional object Raise = 0</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Publisher", 14,15,16)]
 		public NetOffice.PublisherApi.Field AddPhoneticGuide(NetOffice.PublisherApi.TextRange range, string text, object alignment, object raise)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(range, text, alignment, raise);
-			object returnItem = Invoker.MethodReturn(this, "AddPhoneticGuide", paramsArray);
-			NetOffice.PublisherApi.Field newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PublisherApi.Field.LateBindingApiWrapperType) as NetOffice.PublisherApi.Field;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PublisherApi.Field>(this, "AddPhoneticGuide", NetOffice.PublisherApi.Field.LateBindingApiWrapperType, range, text, alignment, raise);
 		}
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="range">NetOffice.PublisherApi.TextRange Range</param>
-		/// <param name="text">string Text</param>
+		/// <param name="range">NetOffice.PublisherApi.TextRange range</param>
+		/// <param name="text">string text</param>
 		/// <param name="alignment">optional NetOffice.PublisherApi.Enums.PbPhoneticGuideAlignmentType Alignment = 0</param>
 		/// <param name="raise">optional object Raise = 0</param>
 		/// <param name="fontName">optional string FontName = </param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Publisher", 14,15,16)]
 		public NetOffice.PublisherApi.Field AddPhoneticGuide(NetOffice.PublisherApi.TextRange range, string text, object alignment, object raise, object fontName)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(range, text, alignment, raise, fontName);
-			object returnItem = Invoker.MethodReturn(this, "AddPhoneticGuide", paramsArray);
-			NetOffice.PublisherApi.Field newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PublisherApi.Field.LateBindingApiWrapperType) as NetOffice.PublisherApi.Field;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PublisherApi.Field>(this, "AddPhoneticGuide", NetOffice.PublisherApi.Field.LateBindingApiWrapperType, new object[]{ range, text, alignment, raise, fontName });
 		}
 
 		#endregion
        #region IEnumerable<NetOffice.PublisherApi.Field> Member
         
         /// <summary>
-		/// SupportByVersionAttribute Publisher, 14,15,16
+		/// SupportByVersion Publisher, 14,15,16
 		/// This is a custom enumerator from NetOffice
 		/// </summary>
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		[SupportByVersion("Publisher", 14,15,16)]
         [CustomEnumerator]
        public IEnumerator<NetOffice.PublisherApi.Field> GetEnumerator()  
        {
@@ -298,10 +277,10 @@ namespace NetOffice.PublisherApi
        #region IEnumerable Members
         
        /// <summary>
-		/// SupportByVersionAttribute Publisher, 14,15,16
+		/// SupportByVersion Publisher, 14,15,16
 		/// This is a custom enumerator from NetOffice
 		/// </summary>
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		[SupportByVersion("Publisher", 14,15,16)]
         [CustomEnumerator]
         IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
        {
@@ -315,6 +294,7 @@ namespace NetOffice.PublisherApi
        }
 
        #endregion
+
        		#pragma warning restore
 	}
 }

@@ -1,19 +1,24 @@
 ﻿using System;
 using NetRuntimeSystem = System;
-using System.Runtime.InteropServices;
-using System.Runtime.CompilerServices;
 using System.ComponentModel;
-using System.Reflection;
-using System.Collections.Generic;
-using NetOffice;
+using NetOffice.Attributes;
+
 namespace NetOffice.ExcelApi
 {
-	///<summary>
+	/// <summary>
 	/// PivotTable
-	///</summary>
-	public class PivotTable_ : COMObject
+	/// </summary>
+	[SyntaxBypass]
+ 	public class PivotTable_ : COMObject
 	{
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public PivotTable_(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -62,7 +67,7 @@ namespace NetOffice.ExcelApi
 		{
 		}
 		
-		/// <param name="progId">registered ProgID</param>
+		/// <param name="progId">registered progID</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public PivotTable_(string progId) : base(progId)
 		{
@@ -77,16 +82,13 @@ namespace NetOffice.ExcelApi
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		/// <param name="index">optional object Index</param>
+		/// <param name="index">optional object index</param>
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839050.aspx
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
+		[SupportByVersion("Excel", 9,10,11,12,14,15,16), ProxyResult]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public object get_ColumnFields(object index)
-		{		
-			object[] paramsArray = Invoker.ValidateParamsArray(index);
-			object returnItem = Invoker.PropertyGet(this, "ColumnFields", paramsArray);
-			ICOMObject newObject = Factory.CreateObjectFromComProxy(this,returnItem);
-			return newObject;
+		{
+			return Factory.ExecuteReferencePropertyGet(this, "ColumnFields", index);
 		}
 
 		/// <summary>
@@ -95,8 +97,8 @@ namespace NetOffice.ExcelApi
 		/// Alias for get_ColumnFields
 		/// Unknown COM Proxy
 		/// </summary>
-		/// <param name="index">optional object Index</param>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
+		/// <param name="index">optional object index</param>
+		[SupportByVersion("Excel", 9,10,11,12,14,15,16), ProxyResult, Redirect("get_ColumnFields")]
 		public object ColumnFields(object index)
 		{
 			return get_ColumnFields(index);
@@ -107,16 +109,13 @@ namespace NetOffice.ExcelApi
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		/// <param name="index">optional object Index</param>
+		/// <param name="index">optional object index</param>
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196291.aspx
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
+		[SupportByVersion("Excel", 9,10,11,12,14,15,16), ProxyResult]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public object get_DataFields(object index)
-		{		
-			object[] paramsArray = Invoker.ValidateParamsArray(index);
-			object returnItem = Invoker.PropertyGet(this, "DataFields", paramsArray);
-			ICOMObject newObject = Factory.CreateObjectFromComProxy(this,returnItem);
-			return newObject;
+		{
+			return Factory.ExecuteReferencePropertyGet(this, "DataFields", index);
 		}
 
 		/// <summary>
@@ -125,8 +124,8 @@ namespace NetOffice.ExcelApi
 		/// Alias for get_DataFields
 		/// Unknown COM Proxy
 		/// </summary>
-		/// <param name="index">optional object Index</param>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
+		/// <param name="index">optional object index</param>
+		[SupportByVersion("Excel", 9,10,11,12,14,15,16), ProxyResult, Redirect("get_DataFields")]
 		public object DataFields(object index)
 		{
 			return get_DataFields(index);
@@ -137,16 +136,13 @@ namespace NetOffice.ExcelApi
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		/// <param name="index">optional object Index</param>
+		/// <param name="index">optional object index</param>
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff841004.aspx
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
+		[SupportByVersion("Excel", 9,10,11,12,14,15,16), ProxyResult]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public object get_HiddenFields(object index)
-		{		
-			object[] paramsArray = Invoker.ValidateParamsArray(index);
-			object returnItem = Invoker.PropertyGet(this, "HiddenFields", paramsArray);
-			ICOMObject newObject = Factory.CreateObjectFromComProxy(this,returnItem);
-			return newObject;
+		{
+			return Factory.ExecuteReferencePropertyGet(this, "HiddenFields", index);
 		}
 
 		/// <summary>
@@ -155,8 +151,8 @@ namespace NetOffice.ExcelApi
 		/// Alias for get_HiddenFields
 		/// Unknown COM Proxy
 		/// </summary>
-		/// <param name="index">optional object Index</param>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
+		/// <param name="index">optional object index</param>
+		[SupportByVersion("Excel", 9,10,11,12,14,15,16), ProxyResult, Redirect("get_HiddenFields")]
 		public object HiddenFields(object index)
 		{
 			return get_HiddenFields(index);
@@ -167,16 +163,13 @@ namespace NetOffice.ExcelApi
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		/// <param name="index">optional object Index</param>
+		/// <param name="index">optional object index</param>
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840731.aspx
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
+		[SupportByVersion("Excel", 9,10,11,12,14,15,16), ProxyResult]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public object get_PageFields(object index)
-		{		
-			object[] paramsArray = Invoker.ValidateParamsArray(index);
-			object returnItem = Invoker.PropertyGet(this, "PageFields", paramsArray);
-			ICOMObject newObject = Factory.CreateObjectFromComProxy(this,returnItem);
-			return newObject;
+		{
+			return Factory.ExecuteReferencePropertyGet(this, "PageFields", index);
 		}
 
 		/// <summary>
@@ -185,8 +178,8 @@ namespace NetOffice.ExcelApi
 		/// Alias for get_PageFields
 		/// Unknown COM Proxy
 		/// </summary>
-		/// <param name="index">optional object Index</param>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
+		/// <param name="index">optional object index</param>
+		[SupportByVersion("Excel", 9,10,11,12,14,15,16), ProxyResult, Redirect("get_PageFields")]
 		public object PageFields(object index)
 		{
 			return get_PageFields(index);
@@ -197,16 +190,13 @@ namespace NetOffice.ExcelApi
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		/// <param name="index">optional object Index</param>
+		/// <param name="index">optional object index</param>
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196706.aspx
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
+		[SupportByVersion("Excel", 9,10,11,12,14,15,16), ProxyResult]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public object get_RowFields(object index)
-		{		
-			object[] paramsArray = Invoker.ValidateParamsArray(index);
-			object returnItem = Invoker.PropertyGet(this, "RowFields", paramsArray);
-			ICOMObject newObject = Factory.CreateObjectFromComProxy(this,returnItem);
-			return newObject;
+		{
+			return Factory.ExecuteReferencePropertyGet(this, "RowFields", index);
 		}
 
 		/// <summary>
@@ -215,8 +205,8 @@ namespace NetOffice.ExcelApi
 		/// Alias for get_RowFields
 		/// Unknown COM Proxy
 		/// </summary>
-		/// <param name="index">optional object Index</param>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
+		/// <param name="index">optional object index</param>
+		[SupportByVersion("Excel", 9,10,11,12,14,15,16), ProxyResult, Redirect("get_RowFields")]
 		public object RowFields(object index)
 		{
 			return get_RowFields(index);
@@ -227,16 +217,13 @@ namespace NetOffice.ExcelApi
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		/// <param name="index">optional object Index</param>
+		/// <param name="index">optional object index</param>
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192982.aspx
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
+		[SupportByVersion("Excel", 9,10,11,12,14,15,16), ProxyResult]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public object get_VisibleFields(object index)
-		{		
-			object[] paramsArray = Invoker.ValidateParamsArray(index);
-			object returnItem = Invoker.PropertyGet(this, "VisibleFields", paramsArray);
-			ICOMObject newObject = Factory.CreateObjectFromComProxy(this,returnItem);
-			return newObject;
+		{
+			return Factory.ExecuteReferencePropertyGet(this, "VisibleFields", index);
 		}
 
 		/// <summary>
@@ -245,8 +232,8 @@ namespace NetOffice.ExcelApi
 		/// Alias for get_VisibleFields
 		/// Unknown COM Proxy
 		/// </summary>
-		/// <param name="index">optional object Index</param>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
+		/// <param name="index">optional object index</param>
+		[SupportByVersion("Excel", 9,10,11,12,14,15,16), ProxyResult, Redirect("get_VisibleFields")]
 		public object VisibleFields(object index)
 		{
 			return get_VisibleFields(index);
@@ -260,21 +247,23 @@ namespace NetOffice.ExcelApi
 
 	}
 
-	///<summary>
+	/// <summary>
 	/// DispatchInterface PivotTable 
 	/// SupportByVersion Excel, 9,10,11,12,14,15,16
-	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837611.aspx
-	///</summary>
-	[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
-	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
-	public class PivotTable : PivotTable_
+	/// </summary>
+	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff837611.aspx </remarks>
+	[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+	[EntityType(EntityType.IsDispatchInterface)]
+ 	public class PivotTable : PivotTable_
 	{
 		#pragma warning disable
+
 		#region Type Information
 
         /// <summary>
         /// Instance Type
         /// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
         public override Type InstanceType
         {
             get
@@ -292,14 +281,20 @@ namespace NetOffice.ExcelApi
             {
                 if (null == _type)
                     _type = typeof(PivotTable);
-                    
                 return _type;
             }
         }
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public PivotTable(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -345,7 +340,7 @@ namespace NetOffice.ExcelApi
 		{
 		}
 		
-		/// <param name="progId">registered ProgID</param>
+		/// <param name="progId">registered progID</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public PivotTable(string progId) : base(progId)
 		{
@@ -358,160 +353,133 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836434.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff836434.aspx </remarks>
+		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public NetOffice.ExcelApi.Application Application
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				NetOffice.ExcelApi.Application newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.Application.LateBindingApiWrapperType) as NetOffice.ExcelApi.Application;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Application>(this, "Application", NetOffice.ExcelApi.Application.LateBindingApiWrapperType);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822808.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff822808.aspx </remarks>
+		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public NetOffice.ExcelApi.Enums.XlCreator Creator
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Creator", paramsArray);
-				int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-				return (NetOffice.ExcelApi.Enums.XlCreator)intReturnItem;
+				return Factory.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlCreator>(this, "Creator");
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194991.aspx
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194991.aspx </remarks>
+		[SupportByVersion("Excel", 9,10,11,12,14,15,16), ProxyResult]
 		public object Parent
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Parent", paramsArray);
-				ICOMObject newObject = Factory.CreateObjectFromComProxy(this,returnItem);
-				return newObject;
+				return Factory.ExecuteReferencePropertyGet(this, "Parent");
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839050.aspx
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff839050.aspx </remarks>
+		[SupportByVersion("Excel", 9,10,11,12,14,15,16), ProxyResult]
 		public object ColumnFields
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "ColumnFields", paramsArray);
-				ICOMObject newObject = Factory.CreateObjectFromComProxy(this,returnItem);
-				return newObject;
+				return Factory.ExecuteReferencePropertyGet(this, "ColumnFields");
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837615.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff837615.aspx </remarks>
+		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public bool ColumnGrand
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "ColumnGrand", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "ColumnGrand");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "ColumnGrand", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "ColumnGrand", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff834700.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff834700.aspx </remarks>
+		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public NetOffice.ExcelApi.Range ColumnRange
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "ColumnRange", paramsArray);
-				NetOffice.ExcelApi.Range newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.Range.LateBindingApiWrapperType) as NetOffice.ExcelApi.Range;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Range>(this, "ColumnRange", NetOffice.ExcelApi.Range.LateBindingApiWrapperType);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837966.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff837966.aspx </remarks>
+		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public NetOffice.ExcelApi.Range DataBodyRange
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "DataBodyRange", paramsArray);
-				NetOffice.ExcelApi.Range newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.Range.LateBindingApiWrapperType) as NetOffice.ExcelApi.Range;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Range>(this, "DataBodyRange", NetOffice.ExcelApi.Range.LateBindingApiWrapperType);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196291.aspx
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff196291.aspx </remarks>
+		[SupportByVersion("Excel", 9,10,11,12,14,15,16), ProxyResult]
 		public object DataFields
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "DataFields", paramsArray);
-				ICOMObject newObject = Factory.CreateObjectFromComProxy(this,returnItem);
-				return newObject;
+				return Factory.ExecuteReferencePropertyGet(this, "DataFields");
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836518.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff836518.aspx </remarks>
+		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public NetOffice.ExcelApi.Range DataLabelRange
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "DataLabelRange", paramsArray);
-				NetOffice.ExcelApi.Range newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.Range.LateBindingApiWrapperType) as NetOffice.ExcelApi.Range;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Range>(this, "DataLabelRange", NetOffice.ExcelApi.Range.LateBindingApiWrapperType);
 			}
 		}
 
@@ -519,19 +487,16 @@ namespace NetOffice.ExcelApi
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
+		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public string _Default
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "_Default", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "_Default");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "_Default", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "_Default", value);
 			}
 		}
 
@@ -539,717 +504,602 @@ namespace NetOffice.ExcelApi
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
+		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public bool HasAutoFormat
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "HasAutoFormat", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "HasAutoFormat");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "HasAutoFormat", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "HasAutoFormat", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff841004.aspx
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff841004.aspx </remarks>
+		[SupportByVersion("Excel", 9,10,11,12,14,15,16), ProxyResult]
 		public object HiddenFields
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "HiddenFields", paramsArray);
-				ICOMObject newObject = Factory.CreateObjectFromComProxy(this,returnItem);
-				return newObject;
+				return Factory.ExecuteReferencePropertyGet(this, "HiddenFields");
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196630.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff196630.aspx </remarks>
+		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public string InnerDetail
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "InnerDetail", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "InnerDetail");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "InnerDetail", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "InnerDetail", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff834372.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff834372.aspx </remarks>
+		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public string Name
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Name", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "Name");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "Name", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "Name", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840731.aspx
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff840731.aspx </remarks>
+		[SupportByVersion("Excel", 9,10,11,12,14,15,16), ProxyResult]
 		public object PageFields
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "PageFields", paramsArray);
-				ICOMObject newObject = Factory.CreateObjectFromComProxy(this,returnItem);
-				return newObject;
+				return Factory.ExecuteReferencePropertyGet(this, "PageFields");
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193268.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff193268.aspx </remarks>
+		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public NetOffice.ExcelApi.Range PageRange
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "PageRange", paramsArray);
-				NetOffice.ExcelApi.Range newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.Range.LateBindingApiWrapperType) as NetOffice.ExcelApi.Range;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Range>(this, "PageRange", NetOffice.ExcelApi.Range.LateBindingApiWrapperType);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194754.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194754.aspx </remarks>
+		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public NetOffice.ExcelApi.Range PageRangeCells
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "PageRangeCells", paramsArray);
-				NetOffice.ExcelApi.Range newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.Range.LateBindingApiWrapperType) as NetOffice.ExcelApi.Range;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Range>(this, "PageRangeCells", NetOffice.ExcelApi.Range.LateBindingApiWrapperType);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff834610.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff834610.aspx </remarks>
+		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public DateTime RefreshDate
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "RefreshDate", paramsArray);
-				return NetRuntimeSystem.Convert.ToDateTime(returnItem);
+				return Factory.ExecuteDateTimePropertyGet(this, "RefreshDate");
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197789.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff197789.aspx </remarks>
+		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public string RefreshName
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "RefreshName", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "RefreshName");
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196706.aspx
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff196706.aspx </remarks>
+		[SupportByVersion("Excel", 9,10,11,12,14,15,16), ProxyResult]
 		public object RowFields
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "RowFields", paramsArray);
-				ICOMObject newObject = Factory.CreateObjectFromComProxy(this,returnItem);
-				return newObject;
+				return Factory.ExecuteReferencePropertyGet(this, "RowFields");
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836789.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff836789.aspx </remarks>
+		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public bool RowGrand
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "RowGrand", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "RowGrand");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "RowGrand", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "RowGrand", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196897.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff196897.aspx </remarks>
+		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public NetOffice.ExcelApi.Range RowRange
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "RowRange", paramsArray);
-				NetOffice.ExcelApi.Range newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.Range.LateBindingApiWrapperType) as NetOffice.ExcelApi.Range;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Range>(this, "RowRange", NetOffice.ExcelApi.Range.LateBindingApiWrapperType);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff841136.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff841136.aspx </remarks>
+		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public bool SaveData
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "SaveData", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "SaveData");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "SaveData", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "SaveData", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193521.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff193521.aspx </remarks>
+		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public object SourceData
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "SourceData", paramsArray);
-				if((null != returnItem) && (returnItem is MarshalByRefObject))
-				{
-					ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
-					return newObject;
-				}
-				else
-				{
-					return  returnItem;
-				}
+				return Factory.ExecuteVariantPropertyGet(this, "SourceData");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "SourceData", paramsArray);
+				Factory.ExecuteVariantPropertySet(this, "SourceData", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff198140.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff198140.aspx </remarks>
+		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public NetOffice.ExcelApi.Range TableRange1
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "TableRange1", paramsArray);
-				NetOffice.ExcelApi.Range newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.Range.LateBindingApiWrapperType) as NetOffice.ExcelApi.Range;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Range>(this, "TableRange1", NetOffice.ExcelApi.Range.LateBindingApiWrapperType);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff834378.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff834378.aspx </remarks>
+		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public NetOffice.ExcelApi.Range TableRange2
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "TableRange2", paramsArray);
-				NetOffice.ExcelApi.Range newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.Range.LateBindingApiWrapperType) as NetOffice.ExcelApi.Range;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Range>(this, "TableRange2", NetOffice.ExcelApi.Range.LateBindingApiWrapperType);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837601.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff837601.aspx </remarks>
+		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public string Value
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Value", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "Value");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "Value", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "Value", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192982.aspx
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff192982.aspx </remarks>
+		[SupportByVersion("Excel", 9,10,11,12,14,15,16), ProxyResult]
 		public object VisibleFields
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "VisibleFields", paramsArray);
-				ICOMObject newObject = Factory.CreateObjectFromComProxy(this,returnItem);
-				return newObject;
+				return Factory.ExecuteReferencePropertyGet(this, "VisibleFields");
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff841243.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff841243.aspx </remarks>
+		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public Int32 CacheIndex
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "CacheIndex", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "CacheIndex");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "CacheIndex", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "CacheIndex", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff821032.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff821032.aspx </remarks>
+		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public bool DisplayErrorString
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "DisplayErrorString", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "DisplayErrorString");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "DisplayErrorString", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "DisplayErrorString", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837793.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff837793.aspx </remarks>
+		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public bool DisplayNullString
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "DisplayNullString", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "DisplayNullString");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "DisplayNullString", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "DisplayNullString", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196269.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff196269.aspx </remarks>
+		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public bool EnableDrilldown
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "EnableDrilldown", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "EnableDrilldown");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "EnableDrilldown", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "EnableDrilldown", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197903.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff197903.aspx </remarks>
+		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public bool EnableFieldDialog
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "EnableFieldDialog", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "EnableFieldDialog");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "EnableFieldDialog", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "EnableFieldDialog", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197150.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff197150.aspx </remarks>
+		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public bool EnableWizard
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "EnableWizard", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "EnableWizard");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "EnableWizard", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "EnableWizard", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff834682.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff834682.aspx </remarks>
+		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public string ErrorString
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "ErrorString", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "ErrorString");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "ErrorString", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "ErrorString", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff823168.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff823168.aspx </remarks>
+		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public bool ManualUpdate
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "ManualUpdate", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "ManualUpdate");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "ManualUpdate", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "ManualUpdate", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195828.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff195828.aspx </remarks>
+		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public bool MergeLabels
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "MergeLabels", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "MergeLabels");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "MergeLabels", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "MergeLabels", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff841149.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff841149.aspx </remarks>
+		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public string NullString
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "NullString", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "NullString");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "NullString", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "NullString", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff841207.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff841207.aspx </remarks>
+		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public NetOffice.ExcelApi.PivotFormulas PivotFormulas
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "PivotFormulas", paramsArray);
-				NetOffice.ExcelApi.PivotFormulas newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.PivotFormulas.LateBindingApiWrapperType) as NetOffice.ExcelApi.PivotFormulas;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.PivotFormulas>(this, "PivotFormulas", NetOffice.ExcelApi.PivotFormulas.LateBindingApiWrapperType);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838394.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff838394.aspx </remarks>
+		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public bool SubtotalHiddenPageItems
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "SubtotalHiddenPageItems", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "SubtotalHiddenPageItems");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "SubtotalHiddenPageItems", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "SubtotalHiddenPageItems", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193671.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff193671.aspx </remarks>
+		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public Int32 PageFieldOrder
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "PageFieldOrder", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "PageFieldOrder");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "PageFieldOrder", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "PageFieldOrder", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835276.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835276.aspx </remarks>
+		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public string PageFieldStyle
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "PageFieldStyle", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "PageFieldStyle");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "PageFieldStyle", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "PageFieldStyle", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836150.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff836150.aspx </remarks>
+		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public Int32 PageFieldWrapCount
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "PageFieldWrapCount", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "PageFieldWrapCount");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "PageFieldWrapCount", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "PageFieldWrapCount", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839462.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff839462.aspx </remarks>
+		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public bool PreserveFormatting
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "PreserveFormatting", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "PreserveFormatting");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "PreserveFormatting", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "PreserveFormatting", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840724.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff840724.aspx </remarks>
+		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public string PivotSelection
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "PivotSelection", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "PivotSelection");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "PivotSelection", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "PivotSelection", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822334.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff822334.aspx </remarks>
+		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public NetOffice.ExcelApi.Enums.XlPTSelectionMode SelectionMode
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "SelectionMode", paramsArray);
-				int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-				return (NetOffice.ExcelApi.Enums.XlPTSelectionMode)intReturnItem;
+				return Factory.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlPTSelectionMode>(this, "SelectionMode");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "SelectionMode", paramsArray);
+				Factory.ExecuteEnumPropertySet(this, "SelectionMode", value);
 			}
 		}
 
@@ -1257,439 +1107,374 @@ namespace NetOffice.ExcelApi
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
+		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public string TableStyle
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "TableStyle", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "TableStyle");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "TableStyle", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "TableStyle", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff834680.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff834680.aspx </remarks>
+		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public string Tag
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Tag", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "Tag");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "Tag", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "Tag", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836190.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff836190.aspx </remarks>
+		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public string VacatedStyle
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "VacatedStyle", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "VacatedStyle");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "VacatedStyle", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "VacatedStyle", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837570.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff837570.aspx </remarks>
+		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public bool PrintTitles
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "PrintTitles", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "PrintTitles");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "PrintTitles", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "PrintTitles", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193066.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff193066.aspx </remarks>
+		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public NetOffice.ExcelApi.CubeFields CubeFields
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "CubeFields", paramsArray);
-				NetOffice.ExcelApi.CubeFields newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.CubeFields.LateBindingApiWrapperType) as NetOffice.ExcelApi.CubeFields;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.CubeFields>(this, "CubeFields", NetOffice.ExcelApi.CubeFields.LateBindingApiWrapperType);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff834419.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff834419.aspx </remarks>
+		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public string GrandTotalName
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "GrandTotalName", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "GrandTotalName");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "GrandTotalName", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "GrandTotalName", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837814.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff837814.aspx </remarks>
+		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public bool SmallGrid
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "SmallGrid", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "SmallGrid");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "SmallGrid", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "SmallGrid", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836232.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff836232.aspx </remarks>
+		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public bool RepeatItemsOnEachPrintedPage
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "RepeatItemsOnEachPrintedPage", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "RepeatItemsOnEachPrintedPage");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "RepeatItemsOnEachPrintedPage", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "RepeatItemsOnEachPrintedPage", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839225.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff839225.aspx </remarks>
+		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public bool TotalsAnnotation
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "TotalsAnnotation", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "TotalsAnnotation");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "TotalsAnnotation", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "TotalsAnnotation", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822897.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff822897.aspx </remarks>
+		[SupportByVersion("Excel", 10,11,12,14,15,16)]
 		public string PivotSelectionStandard
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "PivotSelectionStandard", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "PivotSelectionStandard");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "PivotSelectionStandard", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "PivotSelectionStandard", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192958.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff192958.aspx </remarks>
+		[SupportByVersion("Excel", 10,11,12,14,15,16)]
 		public NetOffice.ExcelApi.PivotField DataPivotField
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "DataPivotField", paramsArray);
-				NetOffice.ExcelApi.PivotField newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.PivotField.LateBindingApiWrapperType) as NetOffice.ExcelApi.PivotField;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.PivotField>(this, "DataPivotField", NetOffice.ExcelApi.PivotField.LateBindingApiWrapperType);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff821016.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff821016.aspx </remarks>
+		[SupportByVersion("Excel", 10,11,12,14,15,16)]
 		public bool EnableDataValueEditing
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "EnableDataValueEditing", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "EnableDataValueEditing");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "EnableDataValueEditing", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "EnableDataValueEditing", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff198299.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff198299.aspx </remarks>
+		[SupportByVersion("Excel", 10,11,12,14,15,16)]
 		public string MDX
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "MDX", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "MDX");
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195847.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff195847.aspx </remarks>
+		[SupportByVersion("Excel", 10,11,12,14,15,16)]
 		public bool ViewCalculatedMembers
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "ViewCalculatedMembers", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "ViewCalculatedMembers");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "ViewCalculatedMembers", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "ViewCalculatedMembers", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff821979.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff821979.aspx </remarks>
+		[SupportByVersion("Excel", 10,11,12,14,15,16)]
 		public NetOffice.ExcelApi.CalculatedMembers CalculatedMembers
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "CalculatedMembers", paramsArray);
-				NetOffice.ExcelApi.CalculatedMembers newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.CalculatedMembers.LateBindingApiWrapperType) as NetOffice.ExcelApi.CalculatedMembers;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.CalculatedMembers>(this, "CalculatedMembers", NetOffice.ExcelApi.CalculatedMembers.LateBindingApiWrapperType);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff834347.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff834347.aspx </remarks>
+		[SupportByVersion("Excel", 10,11,12,14,15,16)]
 		public bool DisplayImmediateItems
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "DisplayImmediateItems", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "DisplayImmediateItems");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "DisplayImmediateItems", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "DisplayImmediateItems", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197173.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff197173.aspx </remarks>
+		[SupportByVersion("Excel", 10,11,12,14,15,16)]
 		public bool EnableFieldList
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "EnableFieldList", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "EnableFieldList");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "EnableFieldList", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "EnableFieldList", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195800.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff195800.aspx </remarks>
+		[SupportByVersion("Excel", 10,11,12,14,15,16)]
 		public bool VisualTotals
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "VisualTotals", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "VisualTotals");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "VisualTotals", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "VisualTotals", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196070.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff196070.aspx </remarks>
+		[SupportByVersion("Excel", 10,11,12,14,15,16)]
 		public bool ShowPageMultipleItemLabel
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "ShowPageMultipleItemLabel", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "ShowPageMultipleItemLabel");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "ShowPageMultipleItemLabel", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "ShowPageMultipleItemLabel", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822343.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff822343.aspx </remarks>
+		[SupportByVersion("Excel", 10,11,12,14,15,16)]
 		public NetOffice.ExcelApi.Enums.XlPivotTableVersionList Version
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Version", paramsArray);
-				int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-				return (NetOffice.ExcelApi.Enums.XlPivotTableVersionList)intReturnItem;
+				return Factory.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlPivotTableVersionList>(this, "Version");
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838653.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff838653.aspx </remarks>
+		[SupportByVersion("Excel", 10,11,12,14,15,16)]
 		public bool DisplayEmptyRow
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "DisplayEmptyRow", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "DisplayEmptyRow");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "DisplayEmptyRow", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "DisplayEmptyRow", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff821107.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff821107.aspx </remarks>
+		[SupportByVersion("Excel", 10,11,12,14,15,16)]
 		public bool DisplayEmptyColumn
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "DisplayEmptyColumn", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "DisplayEmptyColumn");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "DisplayEmptyColumn", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "DisplayEmptyColumn", value);
 			}
 		}
 
@@ -1697,268 +1482,220 @@ namespace NetOffice.ExcelApi
 		/// SupportByVersion Excel 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 10,11,12,14,15,16)]
+		[SupportByVersion("Excel", 10,11,12,14,15,16)]
 		public bool ShowCellBackgroundFromOLAP
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "ShowCellBackgroundFromOLAP", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "ShowCellBackgroundFromOLAP");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "ShowCellBackgroundFromOLAP", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "ShowCellBackgroundFromOLAP", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193536.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff193536.aspx </remarks>
+		[SupportByVersion("Excel", 12,14,15,16)]
 		public NetOffice.ExcelApi.PivotAxis PivotColumnAxis
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "PivotColumnAxis", paramsArray);
-				NetOffice.ExcelApi.PivotAxis newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.PivotAxis.LateBindingApiWrapperType) as NetOffice.ExcelApi.PivotAxis;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.PivotAxis>(this, "PivotColumnAxis", NetOffice.ExcelApi.PivotAxis.LateBindingApiWrapperType);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195054.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff195054.aspx </remarks>
+		[SupportByVersion("Excel", 12,14,15,16)]
 		public NetOffice.ExcelApi.PivotAxis PivotRowAxis
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "PivotRowAxis", paramsArray);
-				NetOffice.ExcelApi.PivotAxis newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.PivotAxis.LateBindingApiWrapperType) as NetOffice.ExcelApi.PivotAxis;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.PivotAxis>(this, "PivotRowAxis", NetOffice.ExcelApi.PivotAxis.LateBindingApiWrapperType);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff823075.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff823075.aspx </remarks>
+		[SupportByVersion("Excel", 12,14,15,16)]
 		public bool ShowDrillIndicators
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "ShowDrillIndicators", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "ShowDrillIndicators");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "ShowDrillIndicators", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "ShowDrillIndicators", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839363.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff839363.aspx </remarks>
+		[SupportByVersion("Excel", 12,14,15,16)]
 		public bool PrintDrillIndicators
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "PrintDrillIndicators", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "PrintDrillIndicators");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "PrintDrillIndicators", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "PrintDrillIndicators", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839027.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff839027.aspx </remarks>
+		[SupportByVersion("Excel", 12,14,15,16)]
 		public bool DisplayMemberPropertyTooltips
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "DisplayMemberPropertyTooltips", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "DisplayMemberPropertyTooltips");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "DisplayMemberPropertyTooltips", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "DisplayMemberPropertyTooltips", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839074.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff839074.aspx </remarks>
+		[SupportByVersion("Excel", 12,14,15,16)]
 		public bool DisplayContextTooltips
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "DisplayContextTooltips", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "DisplayContextTooltips");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "DisplayContextTooltips", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "DisplayContextTooltips", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194525.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194525.aspx </remarks>
+		[SupportByVersion("Excel", 12,14,15,16)]
 		public Int32 CompactRowIndent
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "CompactRowIndent", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "CompactRowIndent");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "CompactRowIndent", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "CompactRowIndent", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840601.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff840601.aspx </remarks>
+		[SupportByVersion("Excel", 12,14,15,16)]
 		public NetOffice.ExcelApi.Enums.XlLayoutRowType LayoutRowDefault
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "LayoutRowDefault", paramsArray);
-				int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-				return (NetOffice.ExcelApi.Enums.XlLayoutRowType)intReturnItem;
+				return Factory.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlLayoutRowType>(this, "LayoutRowDefault");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "LayoutRowDefault", paramsArray);
+				Factory.ExecuteEnumPropertySet(this, "LayoutRowDefault", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837102.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff837102.aspx </remarks>
+		[SupportByVersion("Excel", 12,14,15,16)]
 		public bool DisplayFieldCaptions
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "DisplayFieldCaptions", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "DisplayFieldCaptions");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "DisplayFieldCaptions", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "DisplayFieldCaptions", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196553.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff196553.aspx </remarks>
+		[SupportByVersion("Excel", 12,14,15,16)]
 		public NetOffice.ExcelApi.PivotFilters ActiveFilters
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "ActiveFilters", paramsArray);
-				NetOffice.ExcelApi.PivotFilters newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.PivotFilters.LateBindingApiWrapperType) as NetOffice.ExcelApi.PivotFilters;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.PivotFilters>(this, "ActiveFilters", NetOffice.ExcelApi.PivotFilters.LateBindingApiWrapperType);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197576.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff197576.aspx </remarks>
+		[SupportByVersion("Excel", 12,14,15,16)]
 		public bool InGridDropZones
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "InGridDropZones", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "InGridDropZones");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "InGridDropZones", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "InGridDropZones", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839448.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff839448.aspx </remarks>
+		[SupportByVersion("Excel", 12,14,15,16)]
 		public object TableStyle2
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "TableStyle2", paramsArray);
-				if((null != returnItem) && (returnItem is MarshalByRefObject))
-				{
-					ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
-					return newObject;
-				}
-				else
-				{
-					return  returnItem;
-				}
+				return Factory.ExecuteVariantPropertyGet(this, "TableStyle2");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "TableStyle2", paramsArray);
+				Factory.ExecuteVariantPropertySet(this, "TableStyle2", value);
 			}
 		}
 
@@ -1966,509 +1703,432 @@ namespace NetOffice.ExcelApi
 		/// SupportByVersion Excel 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 12,14,15,16)]
+		[SupportByVersion("Excel", 12,14,15,16)]
 		public bool ShowTableStyleLastColumn
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "ShowTableStyleLastColumn", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "ShowTableStyleLastColumn");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "ShowTableStyleLastColumn", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "ShowTableStyleLastColumn", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff821205.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff821205.aspx </remarks>
+		[SupportByVersion("Excel", 12,14,15,16)]
 		public bool ShowTableStyleRowStripes
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "ShowTableStyleRowStripes", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "ShowTableStyleRowStripes");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "ShowTableStyleRowStripes", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "ShowTableStyleRowStripes", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff841089.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff841089.aspx </remarks>
+		[SupportByVersion("Excel", 12,14,15,16)]
 		public bool ShowTableStyleColumnStripes
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "ShowTableStyleColumnStripes", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "ShowTableStyleColumnStripes");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "ShowTableStyleColumnStripes", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "ShowTableStyleColumnStripes", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195083.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff195083.aspx </remarks>
+		[SupportByVersion("Excel", 12,14,15,16)]
 		public bool ShowTableStyleRowHeaders
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "ShowTableStyleRowHeaders", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "ShowTableStyleRowHeaders");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "ShowTableStyleRowHeaders", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "ShowTableStyleRowHeaders", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194144.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194144.aspx </remarks>
+		[SupportByVersion("Excel", 12,14,15,16)]
 		public bool ShowTableStyleColumnHeaders
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "ShowTableStyleColumnHeaders", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "ShowTableStyleColumnHeaders");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "ShowTableStyleColumnHeaders", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "ShowTableStyleColumnHeaders", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840341.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff840341.aspx </remarks>
+		[SupportByVersion("Excel", 12,14,15,16)]
 		public bool AllowMultipleFilters
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "AllowMultipleFilters", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "AllowMultipleFilters");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "AllowMultipleFilters", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "AllowMultipleFilters", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836831.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff836831.aspx </remarks>
+		[SupportByVersion("Excel", 12,14,15,16)]
 		public string CompactLayoutRowHeader
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "CompactLayoutRowHeader", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "CompactLayoutRowHeader");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "CompactLayoutRowHeader", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "CompactLayoutRowHeader", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff821896.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff821896.aspx </remarks>
+		[SupportByVersion("Excel", 12,14,15,16)]
 		public string CompactLayoutColumnHeader
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "CompactLayoutColumnHeader", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "CompactLayoutColumnHeader");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "CompactLayoutColumnHeader", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "CompactLayoutColumnHeader", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839635.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff839635.aspx </remarks>
+		[SupportByVersion("Excel", 12,14,15,16)]
 		public bool FieldListSortAscending
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "FieldListSortAscending", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "FieldListSortAscending");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "FieldListSortAscending", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "FieldListSortAscending", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff841270.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff841270.aspx </remarks>
+		[SupportByVersion("Excel", 12,14,15,16)]
 		public bool SortUsingCustomLists
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "SortUsingCustomLists", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "SortUsingCustomLists");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "SortUsingCustomLists", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "SortUsingCustomLists", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff820853.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff820853.aspx </remarks>
+		[SupportByVersion("Excel", 12,14,15,16)]
 		public string Location
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Location", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "Location");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "Location", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "Location", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839386.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff839386.aspx </remarks>
+		[SupportByVersion("Excel", 14,15,16)]
 		public bool EnableWriteback
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "EnableWriteback", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "EnableWriteback");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "EnableWriteback", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "EnableWriteback", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837766.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff837766.aspx </remarks>
+		[SupportByVersion("Excel", 14,15,16)]
 		public NetOffice.ExcelApi.Enums.XlAllocation Allocation
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Allocation", paramsArray);
-				int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-				return (NetOffice.ExcelApi.Enums.XlAllocation)intReturnItem;
+				return Factory.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlAllocation>(this, "Allocation");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "Allocation", paramsArray);
+				Factory.ExecuteEnumPropertySet(this, "Allocation", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838849.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff838849.aspx </remarks>
+		[SupportByVersion("Excel", 14,15,16)]
 		public NetOffice.ExcelApi.Enums.XlAllocationValue AllocationValue
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "AllocationValue", paramsArray);
-				int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-				return (NetOffice.ExcelApi.Enums.XlAllocationValue)intReturnItem;
+				return Factory.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlAllocationValue>(this, "AllocationValue");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "AllocationValue", paramsArray);
+				Factory.ExecuteEnumPropertySet(this, "AllocationValue", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822906.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff822906.aspx </remarks>
+		[SupportByVersion("Excel", 14,15,16)]
 		public NetOffice.ExcelApi.Enums.XlAllocationMethod AllocationMethod
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "AllocationMethod", paramsArray);
-				int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-				return (NetOffice.ExcelApi.Enums.XlAllocationMethod)intReturnItem;
+				return Factory.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlAllocationMethod>(this, "AllocationMethod");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "AllocationMethod", paramsArray);
+				Factory.ExecuteEnumPropertySet(this, "AllocationMethod", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836470.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff836470.aspx </remarks>
+		[SupportByVersion("Excel", 14,15,16)]
 		public string AllocationWeightExpression
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "AllocationWeightExpression", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "AllocationWeightExpression");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "AllocationWeightExpression", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "AllocationWeightExpression", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195057.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff195057.aspx </remarks>
+		[SupportByVersion("Excel", 14,15,16)]
 		public NetOffice.ExcelApi.PivotTableChangeList ChangeList
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "ChangeList", paramsArray);
-				NetOffice.ExcelApi.PivotTableChangeList newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.PivotTableChangeList.LateBindingApiWrapperType) as NetOffice.ExcelApi.PivotTableChangeList;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.PivotTableChangeList>(this, "ChangeList", NetOffice.ExcelApi.PivotTableChangeList.LateBindingApiWrapperType);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839681.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff839681.aspx </remarks>
+		[SupportByVersion("Excel", 14,15,16)]
 		public NetOffice.ExcelApi.Slicers Slicers
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Slicers", paramsArray);
-				NetOffice.ExcelApi.Slicers newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.Slicers.LateBindingApiWrapperType) as NetOffice.ExcelApi.Slicers;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Slicers>(this, "Slicers", NetOffice.ExcelApi.Slicers.LateBindingApiWrapperType);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838986.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff838986.aspx </remarks>
+		[SupportByVersion("Excel", 14,15,16)]
 		public string AlternativeText
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "AlternativeText", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "AlternativeText");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "AlternativeText", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "AlternativeText", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff198197.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff198197.aspx </remarks>
+		[SupportByVersion("Excel", 14,15,16)]
 		public string Summary
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Summary", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "Summary");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "Summary", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "Summary", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838806.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff838806.aspx </remarks>
+		[SupportByVersion("Excel", 14,15,16)]
 		public bool VisualTotalsForSets
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "VisualTotalsForSets", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "VisualTotalsForSets");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "VisualTotalsForSets", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "VisualTotalsForSets", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835567.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835567.aspx </remarks>
+		[SupportByVersion("Excel", 14,15,16)]
 		public bool ShowValuesRow
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "ShowValuesRow", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "ShowValuesRow");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "ShowValuesRow", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "ShowValuesRow", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194933.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194933.aspx </remarks>
+		[SupportByVersion("Excel", 14,15,16)]
 		public bool CalculatedMembersInFilters
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "CalculatedMembersInFilters", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "CalculatedMembersInFilters");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "CalculatedMembersInFilters", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "CalculatedMembersInFilters", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 15,16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj231466.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 15, 16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/jj231466.aspx </remarks>
+		[SupportByVersion("Excel", 15, 16)]
 		public bool Hidden
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Hidden", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "Hidden");
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 15,16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj227930.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 15, 16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/jj227930.aspx </remarks>
+		[SupportByVersion("Excel", 15, 16)]
 		public NetOffice.ExcelApi.Shape PivotChart
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "PivotChart", paramsArray);
-				NetOffice.ExcelApi.Shape newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.Shape.LateBindingApiWrapperType) as NetOffice.ExcelApi.Shape;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Shape>(this, "PivotChart", NetOffice.ExcelApi.Shape.LateBindingApiWrapperType);
 			}
 		}
 
@@ -2478,3159 +2138,2535 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837987.aspx
 		/// </summary>
-		/// <param name="rowFields">optional object RowFields</param>
-		/// <param name="columnFields">optional object ColumnFields</param>
-		/// <param name="pageFields">optional object PageFields</param>
-		/// <param name="addToTable">optional object AddToTable</param>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff837987.aspx </remarks>
+		/// <param name="rowFields">optional object rowFields</param>
+		/// <param name="columnFields">optional object columnFields</param>
+		/// <param name="pageFields">optional object pageFields</param>
+		/// <param name="addToTable">optional object addToTable</param>
+		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public object AddFields(object rowFields, object columnFields, object pageFields, object addToTable)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(rowFields, columnFields, pageFields, addToTable);
-			object returnItem = Invoker.MethodReturn(this, "AddFields", paramsArray);
-			if((null != returnItem) && (returnItem is MarshalByRefObject))
-			{
-				ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
-				return newObject;
-			}
-			else
-			{
-				return  returnItem;
-			}
+			return Factory.ExecuteVariantMethodGet(this, "AddFields", rowFields, columnFields, pageFields, addToTable);
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837987.aspx
 		/// </summary>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff837987.aspx </remarks>
+		[CustomMethod]
+		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public object AddFields()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "AddFields", paramsArray);
-			if((null != returnItem) && (returnItem is MarshalByRefObject))
-			{
-				ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
-				return newObject;
-			}
-			else
-			{
-				return  returnItem;
-			}
+			return Factory.ExecuteVariantMethodGet(this, "AddFields");
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837987.aspx
 		/// </summary>
-		/// <param name="rowFields">optional object RowFields</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff837987.aspx </remarks>
+		/// <param name="rowFields">optional object rowFields</param>
+		[CustomMethod]
+		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public object AddFields(object rowFields)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(rowFields);
-			object returnItem = Invoker.MethodReturn(this, "AddFields", paramsArray);
-			if((null != returnItem) && (returnItem is MarshalByRefObject))
-			{
-				ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
-				return newObject;
-			}
-			else
-			{
-				return  returnItem;
-			}
+			return Factory.ExecuteVariantMethodGet(this, "AddFields", rowFields);
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837987.aspx
 		/// </summary>
-		/// <param name="rowFields">optional object RowFields</param>
-		/// <param name="columnFields">optional object ColumnFields</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff837987.aspx </remarks>
+		/// <param name="rowFields">optional object rowFields</param>
+		/// <param name="columnFields">optional object columnFields</param>
+		[CustomMethod]
+		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public object AddFields(object rowFields, object columnFields)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(rowFields, columnFields);
-			object returnItem = Invoker.MethodReturn(this, "AddFields", paramsArray);
-			if((null != returnItem) && (returnItem is MarshalByRefObject))
-			{
-				ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
-				return newObject;
-			}
-			else
-			{
-				return  returnItem;
-			}
+			return Factory.ExecuteVariantMethodGet(this, "AddFields", rowFields, columnFields);
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837987.aspx
 		/// </summary>
-		/// <param name="rowFields">optional object RowFields</param>
-		/// <param name="columnFields">optional object ColumnFields</param>
-		/// <param name="pageFields">optional object PageFields</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff837987.aspx </remarks>
+		/// <param name="rowFields">optional object rowFields</param>
+		/// <param name="columnFields">optional object columnFields</param>
+		/// <param name="pageFields">optional object pageFields</param>
+		[CustomMethod]
+		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public object AddFields(object rowFields, object columnFields, object pageFields)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(rowFields, columnFields, pageFields);
-			object returnItem = Invoker.MethodReturn(this, "AddFields", paramsArray);
-			if((null != returnItem) && (returnItem is MarshalByRefObject))
-			{
-				ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
-				return newObject;
-			}
-			else
-			{
-				return  returnItem;
-			}
+			return Factory.ExecuteVariantMethodGet(this, "AddFields", rowFields, columnFields, pageFields);
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff834670.aspx
 		/// </summary>
-		/// <param name="pageField">optional object PageField</param>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff834670.aspx </remarks>
+		/// <param name="pageField">optional object pageField</param>
+		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public object ShowPages(object pageField)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(pageField);
-			object returnItem = Invoker.MethodReturn(this, "ShowPages", paramsArray);
-			if((null != returnItem) && (returnItem is MarshalByRefObject))
-			{
-				ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
-				return newObject;
-			}
-			else
-			{
-				return  returnItem;
-			}
+			return Factory.ExecuteVariantMethodGet(this, "ShowPages", pageField);
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff834670.aspx
 		/// </summary>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff834670.aspx </remarks>
+		[CustomMethod]
+		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public object ShowPages()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "ShowPages", paramsArray);
-			if((null != returnItem) && (returnItem is MarshalByRefObject))
-			{
-				ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
-				return newObject;
-			}
-			else
-			{
-				return  returnItem;
-			}
+			return Factory.ExecuteVariantMethodGet(this, "ShowPages");
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195453.aspx
 		/// </summary>
-		/// <param name="index">optional object Index</param>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff195453.aspx </remarks>
+		/// <param name="index">optional object index</param>
+		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public object PivotFields(object index)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(index);
-			object returnItem = Invoker.MethodReturn(this, "PivotFields", paramsArray);
-			object newObject = Factory.CreateObjectFromComProxy(this,returnItem);
-			return newObject;
+			return Factory.ExecuteVariantMethodGet(this, "PivotFields", index);
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195453.aspx
 		/// </summary>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff195453.aspx </remarks>
+		[CustomMethod]
+		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public object PivotFields()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "PivotFields", paramsArray);
-			object newObject = Factory.CreateObjectFromComProxy(this,returnItem);
-			return newObject;
+			return Factory.ExecuteVariantMethodGet(this, "PivotFields");
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff834300.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff834300.aspx </remarks>
+		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public bool RefreshTable()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "RefreshTable", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return Factory.ExecuteBoolMethodGet(this, "RefreshTable");
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835843.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835843.aspx </remarks>
+		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public NetOffice.ExcelApi.CalculatedFields CalculatedFields()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "CalculatedFields", paramsArray);
-			NetOffice.ExcelApi.CalculatedFields newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.CalculatedFields.LateBindingApiWrapperType) as NetOffice.ExcelApi.CalculatedFields;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.CalculatedFields>(this, "CalculatedFields", NetOffice.ExcelApi.CalculatedFields.LateBindingApiWrapperType);
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838792.aspx
 		/// </summary>
-		/// <param name="name">string Name</param>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff838792.aspx </remarks>
+		/// <param name="name">string name</param>
+		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public Double GetData(string name)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(name);
-			object returnItem = Invoker.MethodReturn(this, "GetData", paramsArray);
-			return NetRuntimeSystem.Convert.ToDouble(returnItem);
+			return Factory.ExecuteDoubleMethodGet(this, "GetData", name);
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197802.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff197802.aspx </remarks>
+		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public void ListFormulas()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "ListFormulas", paramsArray);
+			 Factory.ExecuteMethod(this, "ListFormulas");
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff834938.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff834938.aspx </remarks>
+		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public NetOffice.ExcelApi.PivotCache PivotCache()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "PivotCache", paramsArray);
-			NetOffice.ExcelApi.PivotCache newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.PivotCache.LateBindingApiWrapperType) as NetOffice.ExcelApi.PivotCache;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.PivotCache>(this, "PivotCache", NetOffice.ExcelApi.PivotCache.LateBindingApiWrapperType);
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff821973.aspx
 		/// </summary>
-		/// <param name="sourceType">optional object SourceType</param>
-		/// <param name="sourceData">optional object SourceData</param>
-		/// <param name="tableDestination">optional object TableDestination</param>
-		/// <param name="tableName">optional object TableName</param>
-		/// <param name="rowGrand">optional object RowGrand</param>
-		/// <param name="columnGrand">optional object ColumnGrand</param>
-		/// <param name="saveData">optional object SaveData</param>
-		/// <param name="hasAutoFormat">optional object HasAutoFormat</param>
-		/// <param name="autoPage">optional object AutoPage</param>
-		/// <param name="reserved">optional object Reserved</param>
-		/// <param name="backgroundQuery">optional object BackgroundQuery</param>
-		/// <param name="optimizeCache">optional object OptimizeCache</param>
-		/// <param name="pageFieldOrder">optional object PageFieldOrder</param>
-		/// <param name="pageFieldWrapCount">optional object PageFieldWrapCount</param>
-		/// <param name="readData">optional object ReadData</param>
-		/// <param name="connection">optional object Connection</param>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff821973.aspx </remarks>
+		/// <param name="sourceType">optional object sourceType</param>
+		/// <param name="sourceData">optional object sourceData</param>
+		/// <param name="tableDestination">optional object tableDestination</param>
+		/// <param name="tableName">optional object tableName</param>
+		/// <param name="rowGrand">optional object rowGrand</param>
+		/// <param name="columnGrand">optional object columnGrand</param>
+		/// <param name="saveData">optional object saveData</param>
+		/// <param name="hasAutoFormat">optional object hasAutoFormat</param>
+		/// <param name="autoPage">optional object autoPage</param>
+		/// <param name="reserved">optional object reserved</param>
+		/// <param name="backgroundQuery">optional object backgroundQuery</param>
+		/// <param name="optimizeCache">optional object optimizeCache</param>
+		/// <param name="pageFieldOrder">optional object pageFieldOrder</param>
+		/// <param name="pageFieldWrapCount">optional object pageFieldWrapCount</param>
+		/// <param name="readData">optional object readData</param>
+		/// <param name="connection">optional object connection</param>
+		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public void PivotTableWizard(object sourceType, object sourceData, object tableDestination, object tableName, object rowGrand, object columnGrand, object saveData, object hasAutoFormat, object autoPage, object reserved, object backgroundQuery, object optimizeCache, object pageFieldOrder, object pageFieldWrapCount, object readData, object connection)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(sourceType, sourceData, tableDestination, tableName, rowGrand, columnGrand, saveData, hasAutoFormat, autoPage, reserved, backgroundQuery, optimizeCache, pageFieldOrder, pageFieldWrapCount, readData, connection);
-			Invoker.Method(this, "PivotTableWizard", paramsArray);
+			 Factory.ExecuteMethod(this, "PivotTableWizard", new object[]{ sourceType, sourceData, tableDestination, tableName, rowGrand, columnGrand, saveData, hasAutoFormat, autoPage, reserved, backgroundQuery, optimizeCache, pageFieldOrder, pageFieldWrapCount, readData, connection });
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff821973.aspx
 		/// </summary>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff821973.aspx </remarks>
+		[CustomMethod]
+		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public void PivotTableWizard()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "PivotTableWizard", paramsArray);
+			 Factory.ExecuteMethod(this, "PivotTableWizard");
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff821973.aspx
 		/// </summary>
-		/// <param name="sourceType">optional object SourceType</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff821973.aspx </remarks>
+		/// <param name="sourceType">optional object sourceType</param>
+		[CustomMethod]
+		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public void PivotTableWizard(object sourceType)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(sourceType);
-			Invoker.Method(this, "PivotTableWizard", paramsArray);
+			 Factory.ExecuteMethod(this, "PivotTableWizard", sourceType);
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff821973.aspx
 		/// </summary>
-		/// <param name="sourceType">optional object SourceType</param>
-		/// <param name="sourceData">optional object SourceData</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff821973.aspx </remarks>
+		/// <param name="sourceType">optional object sourceType</param>
+		/// <param name="sourceData">optional object sourceData</param>
+		[CustomMethod]
+		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public void PivotTableWizard(object sourceType, object sourceData)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(sourceType, sourceData);
-			Invoker.Method(this, "PivotTableWizard", paramsArray);
+			 Factory.ExecuteMethod(this, "PivotTableWizard", sourceType, sourceData);
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff821973.aspx
 		/// </summary>
-		/// <param name="sourceType">optional object SourceType</param>
-		/// <param name="sourceData">optional object SourceData</param>
-		/// <param name="tableDestination">optional object TableDestination</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff821973.aspx </remarks>
+		/// <param name="sourceType">optional object sourceType</param>
+		/// <param name="sourceData">optional object sourceData</param>
+		/// <param name="tableDestination">optional object tableDestination</param>
+		[CustomMethod]
+		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public void PivotTableWizard(object sourceType, object sourceData, object tableDestination)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(sourceType, sourceData, tableDestination);
-			Invoker.Method(this, "PivotTableWizard", paramsArray);
+			 Factory.ExecuteMethod(this, "PivotTableWizard", sourceType, sourceData, tableDestination);
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff821973.aspx
 		/// </summary>
-		/// <param name="sourceType">optional object SourceType</param>
-		/// <param name="sourceData">optional object SourceData</param>
-		/// <param name="tableDestination">optional object TableDestination</param>
-		/// <param name="tableName">optional object TableName</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff821973.aspx </remarks>
+		/// <param name="sourceType">optional object sourceType</param>
+		/// <param name="sourceData">optional object sourceData</param>
+		/// <param name="tableDestination">optional object tableDestination</param>
+		/// <param name="tableName">optional object tableName</param>
+		[CustomMethod]
+		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public void PivotTableWizard(object sourceType, object sourceData, object tableDestination, object tableName)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(sourceType, sourceData, tableDestination, tableName);
-			Invoker.Method(this, "PivotTableWizard", paramsArray);
+			 Factory.ExecuteMethod(this, "PivotTableWizard", sourceType, sourceData, tableDestination, tableName);
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff821973.aspx
 		/// </summary>
-		/// <param name="sourceType">optional object SourceType</param>
-		/// <param name="sourceData">optional object SourceData</param>
-		/// <param name="tableDestination">optional object TableDestination</param>
-		/// <param name="tableName">optional object TableName</param>
-		/// <param name="rowGrand">optional object RowGrand</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff821973.aspx </remarks>
+		/// <param name="sourceType">optional object sourceType</param>
+		/// <param name="sourceData">optional object sourceData</param>
+		/// <param name="tableDestination">optional object tableDestination</param>
+		/// <param name="tableName">optional object tableName</param>
+		/// <param name="rowGrand">optional object rowGrand</param>
+		[CustomMethod]
+		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public void PivotTableWizard(object sourceType, object sourceData, object tableDestination, object tableName, object rowGrand)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(sourceType, sourceData, tableDestination, tableName, rowGrand);
-			Invoker.Method(this, "PivotTableWizard", paramsArray);
+			 Factory.ExecuteMethod(this, "PivotTableWizard", new object[]{ sourceType, sourceData, tableDestination, tableName, rowGrand });
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff821973.aspx
 		/// </summary>
-		/// <param name="sourceType">optional object SourceType</param>
-		/// <param name="sourceData">optional object SourceData</param>
-		/// <param name="tableDestination">optional object TableDestination</param>
-		/// <param name="tableName">optional object TableName</param>
-		/// <param name="rowGrand">optional object RowGrand</param>
-		/// <param name="columnGrand">optional object ColumnGrand</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff821973.aspx </remarks>
+		/// <param name="sourceType">optional object sourceType</param>
+		/// <param name="sourceData">optional object sourceData</param>
+		/// <param name="tableDestination">optional object tableDestination</param>
+		/// <param name="tableName">optional object tableName</param>
+		/// <param name="rowGrand">optional object rowGrand</param>
+		/// <param name="columnGrand">optional object columnGrand</param>
+		[CustomMethod]
+		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public void PivotTableWizard(object sourceType, object sourceData, object tableDestination, object tableName, object rowGrand, object columnGrand)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(sourceType, sourceData, tableDestination, tableName, rowGrand, columnGrand);
-			Invoker.Method(this, "PivotTableWizard", paramsArray);
+			 Factory.ExecuteMethod(this, "PivotTableWizard", new object[]{ sourceType, sourceData, tableDestination, tableName, rowGrand, columnGrand });
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff821973.aspx
 		/// </summary>
-		/// <param name="sourceType">optional object SourceType</param>
-		/// <param name="sourceData">optional object SourceData</param>
-		/// <param name="tableDestination">optional object TableDestination</param>
-		/// <param name="tableName">optional object TableName</param>
-		/// <param name="rowGrand">optional object RowGrand</param>
-		/// <param name="columnGrand">optional object ColumnGrand</param>
-		/// <param name="saveData">optional object SaveData</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff821973.aspx </remarks>
+		/// <param name="sourceType">optional object sourceType</param>
+		/// <param name="sourceData">optional object sourceData</param>
+		/// <param name="tableDestination">optional object tableDestination</param>
+		/// <param name="tableName">optional object tableName</param>
+		/// <param name="rowGrand">optional object rowGrand</param>
+		/// <param name="columnGrand">optional object columnGrand</param>
+		/// <param name="saveData">optional object saveData</param>
+		[CustomMethod]
+		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public void PivotTableWizard(object sourceType, object sourceData, object tableDestination, object tableName, object rowGrand, object columnGrand, object saveData)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(sourceType, sourceData, tableDestination, tableName, rowGrand, columnGrand, saveData);
-			Invoker.Method(this, "PivotTableWizard", paramsArray);
+			 Factory.ExecuteMethod(this, "PivotTableWizard", new object[]{ sourceType, sourceData, tableDestination, tableName, rowGrand, columnGrand, saveData });
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff821973.aspx
 		/// </summary>
-		/// <param name="sourceType">optional object SourceType</param>
-		/// <param name="sourceData">optional object SourceData</param>
-		/// <param name="tableDestination">optional object TableDestination</param>
-		/// <param name="tableName">optional object TableName</param>
-		/// <param name="rowGrand">optional object RowGrand</param>
-		/// <param name="columnGrand">optional object ColumnGrand</param>
-		/// <param name="saveData">optional object SaveData</param>
-		/// <param name="hasAutoFormat">optional object HasAutoFormat</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff821973.aspx </remarks>
+		/// <param name="sourceType">optional object sourceType</param>
+		/// <param name="sourceData">optional object sourceData</param>
+		/// <param name="tableDestination">optional object tableDestination</param>
+		/// <param name="tableName">optional object tableName</param>
+		/// <param name="rowGrand">optional object rowGrand</param>
+		/// <param name="columnGrand">optional object columnGrand</param>
+		/// <param name="saveData">optional object saveData</param>
+		/// <param name="hasAutoFormat">optional object hasAutoFormat</param>
+		[CustomMethod]
+		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public void PivotTableWizard(object sourceType, object sourceData, object tableDestination, object tableName, object rowGrand, object columnGrand, object saveData, object hasAutoFormat)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(sourceType, sourceData, tableDestination, tableName, rowGrand, columnGrand, saveData, hasAutoFormat);
-			Invoker.Method(this, "PivotTableWizard", paramsArray);
+			 Factory.ExecuteMethod(this, "PivotTableWizard", new object[]{ sourceType, sourceData, tableDestination, tableName, rowGrand, columnGrand, saveData, hasAutoFormat });
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff821973.aspx
 		/// </summary>
-		/// <param name="sourceType">optional object SourceType</param>
-		/// <param name="sourceData">optional object SourceData</param>
-		/// <param name="tableDestination">optional object TableDestination</param>
-		/// <param name="tableName">optional object TableName</param>
-		/// <param name="rowGrand">optional object RowGrand</param>
-		/// <param name="columnGrand">optional object ColumnGrand</param>
-		/// <param name="saveData">optional object SaveData</param>
-		/// <param name="hasAutoFormat">optional object HasAutoFormat</param>
-		/// <param name="autoPage">optional object AutoPage</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff821973.aspx </remarks>
+		/// <param name="sourceType">optional object sourceType</param>
+		/// <param name="sourceData">optional object sourceData</param>
+		/// <param name="tableDestination">optional object tableDestination</param>
+		/// <param name="tableName">optional object tableName</param>
+		/// <param name="rowGrand">optional object rowGrand</param>
+		/// <param name="columnGrand">optional object columnGrand</param>
+		/// <param name="saveData">optional object saveData</param>
+		/// <param name="hasAutoFormat">optional object hasAutoFormat</param>
+		/// <param name="autoPage">optional object autoPage</param>
+		[CustomMethod]
+		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public void PivotTableWizard(object sourceType, object sourceData, object tableDestination, object tableName, object rowGrand, object columnGrand, object saveData, object hasAutoFormat, object autoPage)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(sourceType, sourceData, tableDestination, tableName, rowGrand, columnGrand, saveData, hasAutoFormat, autoPage);
-			Invoker.Method(this, "PivotTableWizard", paramsArray);
+			 Factory.ExecuteMethod(this, "PivotTableWizard", new object[]{ sourceType, sourceData, tableDestination, tableName, rowGrand, columnGrand, saveData, hasAutoFormat, autoPage });
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff821973.aspx
 		/// </summary>
-		/// <param name="sourceType">optional object SourceType</param>
-		/// <param name="sourceData">optional object SourceData</param>
-		/// <param name="tableDestination">optional object TableDestination</param>
-		/// <param name="tableName">optional object TableName</param>
-		/// <param name="rowGrand">optional object RowGrand</param>
-		/// <param name="columnGrand">optional object ColumnGrand</param>
-		/// <param name="saveData">optional object SaveData</param>
-		/// <param name="hasAutoFormat">optional object HasAutoFormat</param>
-		/// <param name="autoPage">optional object AutoPage</param>
-		/// <param name="reserved">optional object Reserved</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff821973.aspx </remarks>
+		/// <param name="sourceType">optional object sourceType</param>
+		/// <param name="sourceData">optional object sourceData</param>
+		/// <param name="tableDestination">optional object tableDestination</param>
+		/// <param name="tableName">optional object tableName</param>
+		/// <param name="rowGrand">optional object rowGrand</param>
+		/// <param name="columnGrand">optional object columnGrand</param>
+		/// <param name="saveData">optional object saveData</param>
+		/// <param name="hasAutoFormat">optional object hasAutoFormat</param>
+		/// <param name="autoPage">optional object autoPage</param>
+		/// <param name="reserved">optional object reserved</param>
+		[CustomMethod]
+		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public void PivotTableWizard(object sourceType, object sourceData, object tableDestination, object tableName, object rowGrand, object columnGrand, object saveData, object hasAutoFormat, object autoPage, object reserved)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(sourceType, sourceData, tableDestination, tableName, rowGrand, columnGrand, saveData, hasAutoFormat, autoPage, reserved);
-			Invoker.Method(this, "PivotTableWizard", paramsArray);
+			 Factory.ExecuteMethod(this, "PivotTableWizard", new object[]{ sourceType, sourceData, tableDestination, tableName, rowGrand, columnGrand, saveData, hasAutoFormat, autoPage, reserved });
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff821973.aspx
 		/// </summary>
-		/// <param name="sourceType">optional object SourceType</param>
-		/// <param name="sourceData">optional object SourceData</param>
-		/// <param name="tableDestination">optional object TableDestination</param>
-		/// <param name="tableName">optional object TableName</param>
-		/// <param name="rowGrand">optional object RowGrand</param>
-		/// <param name="columnGrand">optional object ColumnGrand</param>
-		/// <param name="saveData">optional object SaveData</param>
-		/// <param name="hasAutoFormat">optional object HasAutoFormat</param>
-		/// <param name="autoPage">optional object AutoPage</param>
-		/// <param name="reserved">optional object Reserved</param>
-		/// <param name="backgroundQuery">optional object BackgroundQuery</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff821973.aspx </remarks>
+		/// <param name="sourceType">optional object sourceType</param>
+		/// <param name="sourceData">optional object sourceData</param>
+		/// <param name="tableDestination">optional object tableDestination</param>
+		/// <param name="tableName">optional object tableName</param>
+		/// <param name="rowGrand">optional object rowGrand</param>
+		/// <param name="columnGrand">optional object columnGrand</param>
+		/// <param name="saveData">optional object saveData</param>
+		/// <param name="hasAutoFormat">optional object hasAutoFormat</param>
+		/// <param name="autoPage">optional object autoPage</param>
+		/// <param name="reserved">optional object reserved</param>
+		/// <param name="backgroundQuery">optional object backgroundQuery</param>
+		[CustomMethod]
+		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public void PivotTableWizard(object sourceType, object sourceData, object tableDestination, object tableName, object rowGrand, object columnGrand, object saveData, object hasAutoFormat, object autoPage, object reserved, object backgroundQuery)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(sourceType, sourceData, tableDestination, tableName, rowGrand, columnGrand, saveData, hasAutoFormat, autoPage, reserved, backgroundQuery);
-			Invoker.Method(this, "PivotTableWizard", paramsArray);
+			 Factory.ExecuteMethod(this, "PivotTableWizard", new object[]{ sourceType, sourceData, tableDestination, tableName, rowGrand, columnGrand, saveData, hasAutoFormat, autoPage, reserved, backgroundQuery });
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff821973.aspx
 		/// </summary>
-		/// <param name="sourceType">optional object SourceType</param>
-		/// <param name="sourceData">optional object SourceData</param>
-		/// <param name="tableDestination">optional object TableDestination</param>
-		/// <param name="tableName">optional object TableName</param>
-		/// <param name="rowGrand">optional object RowGrand</param>
-		/// <param name="columnGrand">optional object ColumnGrand</param>
-		/// <param name="saveData">optional object SaveData</param>
-		/// <param name="hasAutoFormat">optional object HasAutoFormat</param>
-		/// <param name="autoPage">optional object AutoPage</param>
-		/// <param name="reserved">optional object Reserved</param>
-		/// <param name="backgroundQuery">optional object BackgroundQuery</param>
-		/// <param name="optimizeCache">optional object OptimizeCache</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff821973.aspx </remarks>
+		/// <param name="sourceType">optional object sourceType</param>
+		/// <param name="sourceData">optional object sourceData</param>
+		/// <param name="tableDestination">optional object tableDestination</param>
+		/// <param name="tableName">optional object tableName</param>
+		/// <param name="rowGrand">optional object rowGrand</param>
+		/// <param name="columnGrand">optional object columnGrand</param>
+		/// <param name="saveData">optional object saveData</param>
+		/// <param name="hasAutoFormat">optional object hasAutoFormat</param>
+		/// <param name="autoPage">optional object autoPage</param>
+		/// <param name="reserved">optional object reserved</param>
+		/// <param name="backgroundQuery">optional object backgroundQuery</param>
+		/// <param name="optimizeCache">optional object optimizeCache</param>
+		[CustomMethod]
+		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public void PivotTableWizard(object sourceType, object sourceData, object tableDestination, object tableName, object rowGrand, object columnGrand, object saveData, object hasAutoFormat, object autoPage, object reserved, object backgroundQuery, object optimizeCache)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(sourceType, sourceData, tableDestination, tableName, rowGrand, columnGrand, saveData, hasAutoFormat, autoPage, reserved, backgroundQuery, optimizeCache);
-			Invoker.Method(this, "PivotTableWizard", paramsArray);
+			 Factory.ExecuteMethod(this, "PivotTableWizard", new object[]{ sourceType, sourceData, tableDestination, tableName, rowGrand, columnGrand, saveData, hasAutoFormat, autoPage, reserved, backgroundQuery, optimizeCache });
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff821973.aspx
 		/// </summary>
-		/// <param name="sourceType">optional object SourceType</param>
-		/// <param name="sourceData">optional object SourceData</param>
-		/// <param name="tableDestination">optional object TableDestination</param>
-		/// <param name="tableName">optional object TableName</param>
-		/// <param name="rowGrand">optional object RowGrand</param>
-		/// <param name="columnGrand">optional object ColumnGrand</param>
-		/// <param name="saveData">optional object SaveData</param>
-		/// <param name="hasAutoFormat">optional object HasAutoFormat</param>
-		/// <param name="autoPage">optional object AutoPage</param>
-		/// <param name="reserved">optional object Reserved</param>
-		/// <param name="backgroundQuery">optional object BackgroundQuery</param>
-		/// <param name="optimizeCache">optional object OptimizeCache</param>
-		/// <param name="pageFieldOrder">optional object PageFieldOrder</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff821973.aspx </remarks>
+		/// <param name="sourceType">optional object sourceType</param>
+		/// <param name="sourceData">optional object sourceData</param>
+		/// <param name="tableDestination">optional object tableDestination</param>
+		/// <param name="tableName">optional object tableName</param>
+		/// <param name="rowGrand">optional object rowGrand</param>
+		/// <param name="columnGrand">optional object columnGrand</param>
+		/// <param name="saveData">optional object saveData</param>
+		/// <param name="hasAutoFormat">optional object hasAutoFormat</param>
+		/// <param name="autoPage">optional object autoPage</param>
+		/// <param name="reserved">optional object reserved</param>
+		/// <param name="backgroundQuery">optional object backgroundQuery</param>
+		/// <param name="optimizeCache">optional object optimizeCache</param>
+		/// <param name="pageFieldOrder">optional object pageFieldOrder</param>
+		[CustomMethod]
+		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public void PivotTableWizard(object sourceType, object sourceData, object tableDestination, object tableName, object rowGrand, object columnGrand, object saveData, object hasAutoFormat, object autoPage, object reserved, object backgroundQuery, object optimizeCache, object pageFieldOrder)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(sourceType, sourceData, tableDestination, tableName, rowGrand, columnGrand, saveData, hasAutoFormat, autoPage, reserved, backgroundQuery, optimizeCache, pageFieldOrder);
-			Invoker.Method(this, "PivotTableWizard", paramsArray);
+			 Factory.ExecuteMethod(this, "PivotTableWizard", new object[]{ sourceType, sourceData, tableDestination, tableName, rowGrand, columnGrand, saveData, hasAutoFormat, autoPage, reserved, backgroundQuery, optimizeCache, pageFieldOrder });
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff821973.aspx
 		/// </summary>
-		/// <param name="sourceType">optional object SourceType</param>
-		/// <param name="sourceData">optional object SourceData</param>
-		/// <param name="tableDestination">optional object TableDestination</param>
-		/// <param name="tableName">optional object TableName</param>
-		/// <param name="rowGrand">optional object RowGrand</param>
-		/// <param name="columnGrand">optional object ColumnGrand</param>
-		/// <param name="saveData">optional object SaveData</param>
-		/// <param name="hasAutoFormat">optional object HasAutoFormat</param>
-		/// <param name="autoPage">optional object AutoPage</param>
-		/// <param name="reserved">optional object Reserved</param>
-		/// <param name="backgroundQuery">optional object BackgroundQuery</param>
-		/// <param name="optimizeCache">optional object OptimizeCache</param>
-		/// <param name="pageFieldOrder">optional object PageFieldOrder</param>
-		/// <param name="pageFieldWrapCount">optional object PageFieldWrapCount</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff821973.aspx </remarks>
+		/// <param name="sourceType">optional object sourceType</param>
+		/// <param name="sourceData">optional object sourceData</param>
+		/// <param name="tableDestination">optional object tableDestination</param>
+		/// <param name="tableName">optional object tableName</param>
+		/// <param name="rowGrand">optional object rowGrand</param>
+		/// <param name="columnGrand">optional object columnGrand</param>
+		/// <param name="saveData">optional object saveData</param>
+		/// <param name="hasAutoFormat">optional object hasAutoFormat</param>
+		/// <param name="autoPage">optional object autoPage</param>
+		/// <param name="reserved">optional object reserved</param>
+		/// <param name="backgroundQuery">optional object backgroundQuery</param>
+		/// <param name="optimizeCache">optional object optimizeCache</param>
+		/// <param name="pageFieldOrder">optional object pageFieldOrder</param>
+		/// <param name="pageFieldWrapCount">optional object pageFieldWrapCount</param>
+		[CustomMethod]
+		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public void PivotTableWizard(object sourceType, object sourceData, object tableDestination, object tableName, object rowGrand, object columnGrand, object saveData, object hasAutoFormat, object autoPage, object reserved, object backgroundQuery, object optimizeCache, object pageFieldOrder, object pageFieldWrapCount)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(sourceType, sourceData, tableDestination, tableName, rowGrand, columnGrand, saveData, hasAutoFormat, autoPage, reserved, backgroundQuery, optimizeCache, pageFieldOrder, pageFieldWrapCount);
-			Invoker.Method(this, "PivotTableWizard", paramsArray);
+			 Factory.ExecuteMethod(this, "PivotTableWizard", new object[]{ sourceType, sourceData, tableDestination, tableName, rowGrand, columnGrand, saveData, hasAutoFormat, autoPage, reserved, backgroundQuery, optimizeCache, pageFieldOrder, pageFieldWrapCount });
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff821973.aspx
 		/// </summary>
-		/// <param name="sourceType">optional object SourceType</param>
-		/// <param name="sourceData">optional object SourceData</param>
-		/// <param name="tableDestination">optional object TableDestination</param>
-		/// <param name="tableName">optional object TableName</param>
-		/// <param name="rowGrand">optional object RowGrand</param>
-		/// <param name="columnGrand">optional object ColumnGrand</param>
-		/// <param name="saveData">optional object SaveData</param>
-		/// <param name="hasAutoFormat">optional object HasAutoFormat</param>
-		/// <param name="autoPage">optional object AutoPage</param>
-		/// <param name="reserved">optional object Reserved</param>
-		/// <param name="backgroundQuery">optional object BackgroundQuery</param>
-		/// <param name="optimizeCache">optional object OptimizeCache</param>
-		/// <param name="pageFieldOrder">optional object PageFieldOrder</param>
-		/// <param name="pageFieldWrapCount">optional object PageFieldWrapCount</param>
-		/// <param name="readData">optional object ReadData</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff821973.aspx </remarks>
+		/// <param name="sourceType">optional object sourceType</param>
+		/// <param name="sourceData">optional object sourceData</param>
+		/// <param name="tableDestination">optional object tableDestination</param>
+		/// <param name="tableName">optional object tableName</param>
+		/// <param name="rowGrand">optional object rowGrand</param>
+		/// <param name="columnGrand">optional object columnGrand</param>
+		/// <param name="saveData">optional object saveData</param>
+		/// <param name="hasAutoFormat">optional object hasAutoFormat</param>
+		/// <param name="autoPage">optional object autoPage</param>
+		/// <param name="reserved">optional object reserved</param>
+		/// <param name="backgroundQuery">optional object backgroundQuery</param>
+		/// <param name="optimizeCache">optional object optimizeCache</param>
+		/// <param name="pageFieldOrder">optional object pageFieldOrder</param>
+		/// <param name="pageFieldWrapCount">optional object pageFieldWrapCount</param>
+		/// <param name="readData">optional object readData</param>
+		[CustomMethod]
+		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public void PivotTableWizard(object sourceType, object sourceData, object tableDestination, object tableName, object rowGrand, object columnGrand, object saveData, object hasAutoFormat, object autoPage, object reserved, object backgroundQuery, object optimizeCache, object pageFieldOrder, object pageFieldWrapCount, object readData)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(sourceType, sourceData, tableDestination, tableName, rowGrand, columnGrand, saveData, hasAutoFormat, autoPage, reserved, backgroundQuery, optimizeCache, pageFieldOrder, pageFieldWrapCount, readData);
-			Invoker.Method(this, "PivotTableWizard", paramsArray);
+			 Factory.ExecuteMethod(this, "PivotTableWizard", new object[]{ sourceType, sourceData, tableDestination, tableName, rowGrand, columnGrand, saveData, hasAutoFormat, autoPage, reserved, backgroundQuery, optimizeCache, pageFieldOrder, pageFieldWrapCount, readData });
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840451.aspx
 		/// </summary>
-		/// <param name="name">string Name</param>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff840451.aspx </remarks>
+		/// <param name="name">string name</param>
 		/// <param name="mode">optional NetOffice.ExcelApi.Enums.XlPTSelectionMode Mode = 0</param>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
+		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public void PivotSelect(string name, object mode)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(name, mode);
-			Invoker.Method(this, "PivotSelect", paramsArray);
+			 Factory.ExecuteMethod(this, "PivotSelect", name, mode);
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840451.aspx
 		/// </summary>
-		/// <param name="name">string Name</param>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff840451.aspx </remarks>
+		/// <param name="name">string name</param>
 		/// <param name="mode">optional NetOffice.ExcelApi.Enums.XlPTSelectionMode Mode = 0</param>
-		/// <param name="useStandardName">optional object UseStandardName</param>
-		[SupportByVersionAttribute("Excel", 10,11,12,14,15,16)]
+		/// <param name="useStandardName">optional object useStandardName</param>
+		[SupportByVersion("Excel", 10,11,12,14,15,16)]
 		public void PivotSelect(string name, object mode, object useStandardName)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(name, mode, useStandardName);
-			Invoker.Method(this, "PivotSelect", paramsArray);
+			 Factory.ExecuteMethod(this, "PivotSelect", name, mode, useStandardName);
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840451.aspx
 		/// </summary>
-		/// <param name="name">string Name</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff840451.aspx </remarks>
+		/// <param name="name">string name</param>
+		[CustomMethod]
+		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public void PivotSelect(string name)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(name);
-			Invoker.Method(this, "PivotSelect", paramsArray);
+			 Factory.ExecuteMethod(this, "PivotSelect", name);
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196581.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff196581.aspx </remarks>
+		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public void Update()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "Update", paramsArray);
+			 Factory.ExecuteMethod(this, "Update");
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="format">NetOffice.ExcelApi.Enums.xlPivotFormatType Format</param>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
+		/// <param name="format">NetOffice.ExcelApi.Enums.xlPivotFormatType format</param>
+		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public void Format(NetOffice.ExcelApi.Enums.xlPivotFormatType format)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(format);
-			Invoker.Method(this, "Format", paramsArray);
+			 Factory.ExecuteMethod(this, "Format", format);
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="name">string Name</param>
+		/// <param name="name">string name</param>
 		/// <param name="mode">optional NetOffice.ExcelApi.Enums.XlPTSelectionMode Mode = 0</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("Excel", 10,11,12,14,15,16)]
+		[SupportByVersion("Excel", 10,11,12,14,15,16)]
 		public void _PivotSelect(string name, object mode)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(name, mode);
-			Invoker.Method(this, "_PivotSelect", paramsArray);
+			 Factory.ExecuteMethod(this, "_PivotSelect", name, mode);
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="name">string Name</param>
+		/// <param name="name">string name</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 10,11,12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Excel", 10,11,12,14,15,16)]
 		public void _PivotSelect(string name)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(name);
-			Invoker.Method(this, "_PivotSelect", paramsArray);
+			 Factory.ExecuteMethod(this, "_PivotSelect", name);
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195919.aspx
 		/// </summary>
-		/// <param name="dataField">optional object DataField</param>
-		/// <param name="field1">optional object Field1</param>
-		/// <param name="item1">optional object Item1</param>
-		/// <param name="field2">optional object Field2</param>
-		/// <param name="item2">optional object Item2</param>
-		/// <param name="field3">optional object Field3</param>
-		/// <param name="item3">optional object Item3</param>
-		/// <param name="field4">optional object Field4</param>
-		/// <param name="item4">optional object Item4</param>
-		/// <param name="field5">optional object Field5</param>
-		/// <param name="item5">optional object Item5</param>
-		/// <param name="field6">optional object Field6</param>
-		/// <param name="item6">optional object Item6</param>
-		/// <param name="field7">optional object Field7</param>
-		/// <param name="item7">optional object Item7</param>
-		/// <param name="field8">optional object Field8</param>
-		/// <param name="item8">optional object Item8</param>
-		/// <param name="field9">optional object Field9</param>
-		/// <param name="item9">optional object Item9</param>
-		/// <param name="field10">optional object Field10</param>
-		/// <param name="item10">optional object Item10</param>
-		/// <param name="field11">optional object Field11</param>
-		/// <param name="item11">optional object Item11</param>
-		/// <param name="field12">optional object Field12</param>
-		/// <param name="item12">optional object Item12</param>
-		/// <param name="field13">optional object Field13</param>
-		/// <param name="item13">optional object Item13</param>
-		/// <param name="field14">optional object Field14</param>
-		/// <param name="item14">optional object Item14</param>
-		[SupportByVersionAttribute("Excel", 10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff195919.aspx </remarks>
+		/// <param name="dataField">optional object dataField</param>
+		/// <param name="field1">optional object field1</param>
+		/// <param name="item1">optional object item1</param>
+		/// <param name="field2">optional object field2</param>
+		/// <param name="item2">optional object item2</param>
+		/// <param name="field3">optional object field3</param>
+		/// <param name="item3">optional object item3</param>
+		/// <param name="field4">optional object field4</param>
+		/// <param name="item4">optional object item4</param>
+		/// <param name="field5">optional object field5</param>
+		/// <param name="item5">optional object item5</param>
+		/// <param name="field6">optional object field6</param>
+		/// <param name="item6">optional object item6</param>
+		/// <param name="field7">optional object field7</param>
+		/// <param name="item7">optional object item7</param>
+		/// <param name="field8">optional object field8</param>
+		/// <param name="item8">optional object item8</param>
+		/// <param name="field9">optional object field9</param>
+		/// <param name="item9">optional object item9</param>
+		/// <param name="field10">optional object field10</param>
+		/// <param name="item10">optional object item10</param>
+		/// <param name="field11">optional object field11</param>
+		/// <param name="item11">optional object item11</param>
+		/// <param name="field12">optional object field12</param>
+		/// <param name="item12">optional object item12</param>
+		/// <param name="field13">optional object field13</param>
+		/// <param name="item13">optional object item13</param>
+		/// <param name="field14">optional object field14</param>
+		/// <param name="item14">optional object item14</param>
+		[SupportByVersion("Excel", 10,11,12,14,15,16)]
 		public NetOffice.ExcelApi.Range GetPivotData(object dataField, object field1, object item1, object field2, object item2, object field3, object item3, object field4, object item4, object field5, object item5, object field6, object item6, object field7, object item7, object field8, object item8, object field9, object item9, object field10, object item10, object field11, object item11, object field12, object item12, object field13, object item13, object field14, object item14)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(dataField, field1, item1, field2, item2, field3, item3, field4, item4, field5, item5, field6, item6, field7, item7, field8, item8, field9, item9, field10, item10, field11, item11, field12, item12, field13, item13, field14, item14);
-			object returnItem = Invoker.MethodReturn(this, "GetPivotData", paramsArray);
-			NetOffice.ExcelApi.Range newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.Range.LateBindingApiWrapperType) as NetOffice.ExcelApi.Range;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(this, "GetPivotData", NetOffice.ExcelApi.Range.LateBindingApiWrapperType, new object[]{ dataField, field1, item1, field2, item2, field3, item3, field4, item4, field5, item5, field6, item6, field7, item7, field8, item8, field9, item9, field10, item10, field11, item11, field12, item12, field13, item13, field14, item14 });
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195919.aspx
 		/// </summary>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff195919.aspx </remarks>
+		[CustomMethod]
+		[SupportByVersion("Excel", 10,11,12,14,15,16)]
 		public NetOffice.ExcelApi.Range GetPivotData()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "GetPivotData", paramsArray);
-			NetOffice.ExcelApi.Range newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.Range.LateBindingApiWrapperType) as NetOffice.ExcelApi.Range;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(this, "GetPivotData", NetOffice.ExcelApi.Range.LateBindingApiWrapperType);
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195919.aspx
 		/// </summary>
-		/// <param name="dataField">optional object DataField</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff195919.aspx </remarks>
+		/// <param name="dataField">optional object dataField</param>
+		[CustomMethod]
+		[SupportByVersion("Excel", 10,11,12,14,15,16)]
 		public NetOffice.ExcelApi.Range GetPivotData(object dataField)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(dataField);
-			object returnItem = Invoker.MethodReturn(this, "GetPivotData", paramsArray);
-			NetOffice.ExcelApi.Range newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.Range.LateBindingApiWrapperType) as NetOffice.ExcelApi.Range;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(this, "GetPivotData", NetOffice.ExcelApi.Range.LateBindingApiWrapperType, dataField);
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195919.aspx
 		/// </summary>
-		/// <param name="dataField">optional object DataField</param>
-		/// <param name="field1">optional object Field1</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff195919.aspx </remarks>
+		/// <param name="dataField">optional object dataField</param>
+		/// <param name="field1">optional object field1</param>
+		[CustomMethod]
+		[SupportByVersion("Excel", 10,11,12,14,15,16)]
 		public NetOffice.ExcelApi.Range GetPivotData(object dataField, object field1)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(dataField, field1);
-			object returnItem = Invoker.MethodReturn(this, "GetPivotData", paramsArray);
-			NetOffice.ExcelApi.Range newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.Range.LateBindingApiWrapperType) as NetOffice.ExcelApi.Range;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(this, "GetPivotData", NetOffice.ExcelApi.Range.LateBindingApiWrapperType, dataField, field1);
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195919.aspx
 		/// </summary>
-		/// <param name="dataField">optional object DataField</param>
-		/// <param name="field1">optional object Field1</param>
-		/// <param name="item1">optional object Item1</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff195919.aspx </remarks>
+		/// <param name="dataField">optional object dataField</param>
+		/// <param name="field1">optional object field1</param>
+		/// <param name="item1">optional object item1</param>
+		[CustomMethod]
+		[SupportByVersion("Excel", 10,11,12,14,15,16)]
 		public NetOffice.ExcelApi.Range GetPivotData(object dataField, object field1, object item1)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(dataField, field1, item1);
-			object returnItem = Invoker.MethodReturn(this, "GetPivotData", paramsArray);
-			NetOffice.ExcelApi.Range newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.Range.LateBindingApiWrapperType) as NetOffice.ExcelApi.Range;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(this, "GetPivotData", NetOffice.ExcelApi.Range.LateBindingApiWrapperType, dataField, field1, item1);
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195919.aspx
 		/// </summary>
-		/// <param name="dataField">optional object DataField</param>
-		/// <param name="field1">optional object Field1</param>
-		/// <param name="item1">optional object Item1</param>
-		/// <param name="field2">optional object Field2</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff195919.aspx </remarks>
+		/// <param name="dataField">optional object dataField</param>
+		/// <param name="field1">optional object field1</param>
+		/// <param name="item1">optional object item1</param>
+		/// <param name="field2">optional object field2</param>
+		[CustomMethod]
+		[SupportByVersion("Excel", 10,11,12,14,15,16)]
 		public NetOffice.ExcelApi.Range GetPivotData(object dataField, object field1, object item1, object field2)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(dataField, field1, item1, field2);
-			object returnItem = Invoker.MethodReturn(this, "GetPivotData", paramsArray);
-			NetOffice.ExcelApi.Range newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.Range.LateBindingApiWrapperType) as NetOffice.ExcelApi.Range;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(this, "GetPivotData", NetOffice.ExcelApi.Range.LateBindingApiWrapperType, dataField, field1, item1, field2);
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195919.aspx
 		/// </summary>
-		/// <param name="dataField">optional object DataField</param>
-		/// <param name="field1">optional object Field1</param>
-		/// <param name="item1">optional object Item1</param>
-		/// <param name="field2">optional object Field2</param>
-		/// <param name="item2">optional object Item2</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff195919.aspx </remarks>
+		/// <param name="dataField">optional object dataField</param>
+		/// <param name="field1">optional object field1</param>
+		/// <param name="item1">optional object item1</param>
+		/// <param name="field2">optional object field2</param>
+		/// <param name="item2">optional object item2</param>
+		[CustomMethod]
+		[SupportByVersion("Excel", 10,11,12,14,15,16)]
 		public NetOffice.ExcelApi.Range GetPivotData(object dataField, object field1, object item1, object field2, object item2)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(dataField, field1, item1, field2, item2);
-			object returnItem = Invoker.MethodReturn(this, "GetPivotData", paramsArray);
-			NetOffice.ExcelApi.Range newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.Range.LateBindingApiWrapperType) as NetOffice.ExcelApi.Range;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(this, "GetPivotData", NetOffice.ExcelApi.Range.LateBindingApiWrapperType, new object[]{ dataField, field1, item1, field2, item2 });
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195919.aspx
 		/// </summary>
-		/// <param name="dataField">optional object DataField</param>
-		/// <param name="field1">optional object Field1</param>
-		/// <param name="item1">optional object Item1</param>
-		/// <param name="field2">optional object Field2</param>
-		/// <param name="item2">optional object Item2</param>
-		/// <param name="field3">optional object Field3</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff195919.aspx </remarks>
+		/// <param name="dataField">optional object dataField</param>
+		/// <param name="field1">optional object field1</param>
+		/// <param name="item1">optional object item1</param>
+		/// <param name="field2">optional object field2</param>
+		/// <param name="item2">optional object item2</param>
+		/// <param name="field3">optional object field3</param>
+		[CustomMethod]
+		[SupportByVersion("Excel", 10,11,12,14,15,16)]
 		public NetOffice.ExcelApi.Range GetPivotData(object dataField, object field1, object item1, object field2, object item2, object field3)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(dataField, field1, item1, field2, item2, field3);
-			object returnItem = Invoker.MethodReturn(this, "GetPivotData", paramsArray);
-			NetOffice.ExcelApi.Range newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.Range.LateBindingApiWrapperType) as NetOffice.ExcelApi.Range;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(this, "GetPivotData", NetOffice.ExcelApi.Range.LateBindingApiWrapperType, new object[]{ dataField, field1, item1, field2, item2, field3 });
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195919.aspx
 		/// </summary>
-		/// <param name="dataField">optional object DataField</param>
-		/// <param name="field1">optional object Field1</param>
-		/// <param name="item1">optional object Item1</param>
-		/// <param name="field2">optional object Field2</param>
-		/// <param name="item2">optional object Item2</param>
-		/// <param name="field3">optional object Field3</param>
-		/// <param name="item3">optional object Item3</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff195919.aspx </remarks>
+		/// <param name="dataField">optional object dataField</param>
+		/// <param name="field1">optional object field1</param>
+		/// <param name="item1">optional object item1</param>
+		/// <param name="field2">optional object field2</param>
+		/// <param name="item2">optional object item2</param>
+		/// <param name="field3">optional object field3</param>
+		/// <param name="item3">optional object item3</param>
+		[CustomMethod]
+		[SupportByVersion("Excel", 10,11,12,14,15,16)]
 		public NetOffice.ExcelApi.Range GetPivotData(object dataField, object field1, object item1, object field2, object item2, object field3, object item3)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(dataField, field1, item1, field2, item2, field3, item3);
-			object returnItem = Invoker.MethodReturn(this, "GetPivotData", paramsArray);
-			NetOffice.ExcelApi.Range newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.Range.LateBindingApiWrapperType) as NetOffice.ExcelApi.Range;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(this, "GetPivotData", NetOffice.ExcelApi.Range.LateBindingApiWrapperType, new object[]{ dataField, field1, item1, field2, item2, field3, item3 });
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195919.aspx
 		/// </summary>
-		/// <param name="dataField">optional object DataField</param>
-		/// <param name="field1">optional object Field1</param>
-		/// <param name="item1">optional object Item1</param>
-		/// <param name="field2">optional object Field2</param>
-		/// <param name="item2">optional object Item2</param>
-		/// <param name="field3">optional object Field3</param>
-		/// <param name="item3">optional object Item3</param>
-		/// <param name="field4">optional object Field4</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff195919.aspx </remarks>
+		/// <param name="dataField">optional object dataField</param>
+		/// <param name="field1">optional object field1</param>
+		/// <param name="item1">optional object item1</param>
+		/// <param name="field2">optional object field2</param>
+		/// <param name="item2">optional object item2</param>
+		/// <param name="field3">optional object field3</param>
+		/// <param name="item3">optional object item3</param>
+		/// <param name="field4">optional object field4</param>
+		[CustomMethod]
+		[SupportByVersion("Excel", 10,11,12,14,15,16)]
 		public NetOffice.ExcelApi.Range GetPivotData(object dataField, object field1, object item1, object field2, object item2, object field3, object item3, object field4)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(dataField, field1, item1, field2, item2, field3, item3, field4);
-			object returnItem = Invoker.MethodReturn(this, "GetPivotData", paramsArray);
-			NetOffice.ExcelApi.Range newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.Range.LateBindingApiWrapperType) as NetOffice.ExcelApi.Range;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(this, "GetPivotData", NetOffice.ExcelApi.Range.LateBindingApiWrapperType, new object[]{ dataField, field1, item1, field2, item2, field3, item3, field4 });
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195919.aspx
 		/// </summary>
-		/// <param name="dataField">optional object DataField</param>
-		/// <param name="field1">optional object Field1</param>
-		/// <param name="item1">optional object Item1</param>
-		/// <param name="field2">optional object Field2</param>
-		/// <param name="item2">optional object Item2</param>
-		/// <param name="field3">optional object Field3</param>
-		/// <param name="item3">optional object Item3</param>
-		/// <param name="field4">optional object Field4</param>
-		/// <param name="item4">optional object Item4</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff195919.aspx </remarks>
+		/// <param name="dataField">optional object dataField</param>
+		/// <param name="field1">optional object field1</param>
+		/// <param name="item1">optional object item1</param>
+		/// <param name="field2">optional object field2</param>
+		/// <param name="item2">optional object item2</param>
+		/// <param name="field3">optional object field3</param>
+		/// <param name="item3">optional object item3</param>
+		/// <param name="field4">optional object field4</param>
+		/// <param name="item4">optional object item4</param>
+		[CustomMethod]
+		[SupportByVersion("Excel", 10,11,12,14,15,16)]
 		public NetOffice.ExcelApi.Range GetPivotData(object dataField, object field1, object item1, object field2, object item2, object field3, object item3, object field4, object item4)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(dataField, field1, item1, field2, item2, field3, item3, field4, item4);
-			object returnItem = Invoker.MethodReturn(this, "GetPivotData", paramsArray);
-			NetOffice.ExcelApi.Range newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.Range.LateBindingApiWrapperType) as NetOffice.ExcelApi.Range;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(this, "GetPivotData", NetOffice.ExcelApi.Range.LateBindingApiWrapperType, new object[]{ dataField, field1, item1, field2, item2, field3, item3, field4, item4 });
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195919.aspx
 		/// </summary>
-		/// <param name="dataField">optional object DataField</param>
-		/// <param name="field1">optional object Field1</param>
-		/// <param name="item1">optional object Item1</param>
-		/// <param name="field2">optional object Field2</param>
-		/// <param name="item2">optional object Item2</param>
-		/// <param name="field3">optional object Field3</param>
-		/// <param name="item3">optional object Item3</param>
-		/// <param name="field4">optional object Field4</param>
-		/// <param name="item4">optional object Item4</param>
-		/// <param name="field5">optional object Field5</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff195919.aspx </remarks>
+		/// <param name="dataField">optional object dataField</param>
+		/// <param name="field1">optional object field1</param>
+		/// <param name="item1">optional object item1</param>
+		/// <param name="field2">optional object field2</param>
+		/// <param name="item2">optional object item2</param>
+		/// <param name="field3">optional object field3</param>
+		/// <param name="item3">optional object item3</param>
+		/// <param name="field4">optional object field4</param>
+		/// <param name="item4">optional object item4</param>
+		/// <param name="field5">optional object field5</param>
+		[CustomMethod]
+		[SupportByVersion("Excel", 10,11,12,14,15,16)]
 		public NetOffice.ExcelApi.Range GetPivotData(object dataField, object field1, object item1, object field2, object item2, object field3, object item3, object field4, object item4, object field5)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(dataField, field1, item1, field2, item2, field3, item3, field4, item4, field5);
-			object returnItem = Invoker.MethodReturn(this, "GetPivotData", paramsArray);
-			NetOffice.ExcelApi.Range newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.Range.LateBindingApiWrapperType) as NetOffice.ExcelApi.Range;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(this, "GetPivotData", NetOffice.ExcelApi.Range.LateBindingApiWrapperType, new object[]{ dataField, field1, item1, field2, item2, field3, item3, field4, item4, field5 });
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195919.aspx
 		/// </summary>
-		/// <param name="dataField">optional object DataField</param>
-		/// <param name="field1">optional object Field1</param>
-		/// <param name="item1">optional object Item1</param>
-		/// <param name="field2">optional object Field2</param>
-		/// <param name="item2">optional object Item2</param>
-		/// <param name="field3">optional object Field3</param>
-		/// <param name="item3">optional object Item3</param>
-		/// <param name="field4">optional object Field4</param>
-		/// <param name="item4">optional object Item4</param>
-		/// <param name="field5">optional object Field5</param>
-		/// <param name="item5">optional object Item5</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff195919.aspx </remarks>
+		/// <param name="dataField">optional object dataField</param>
+		/// <param name="field1">optional object field1</param>
+		/// <param name="item1">optional object item1</param>
+		/// <param name="field2">optional object field2</param>
+		/// <param name="item2">optional object item2</param>
+		/// <param name="field3">optional object field3</param>
+		/// <param name="item3">optional object item3</param>
+		/// <param name="field4">optional object field4</param>
+		/// <param name="item4">optional object item4</param>
+		/// <param name="field5">optional object field5</param>
+		/// <param name="item5">optional object item5</param>
+		[CustomMethod]
+		[SupportByVersion("Excel", 10,11,12,14,15,16)]
 		public NetOffice.ExcelApi.Range GetPivotData(object dataField, object field1, object item1, object field2, object item2, object field3, object item3, object field4, object item4, object field5, object item5)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(dataField, field1, item1, field2, item2, field3, item3, field4, item4, field5, item5);
-			object returnItem = Invoker.MethodReturn(this, "GetPivotData", paramsArray);
-			NetOffice.ExcelApi.Range newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.Range.LateBindingApiWrapperType) as NetOffice.ExcelApi.Range;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(this, "GetPivotData", NetOffice.ExcelApi.Range.LateBindingApiWrapperType, new object[]{ dataField, field1, item1, field2, item2, field3, item3, field4, item4, field5, item5 });
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195919.aspx
 		/// </summary>
-		/// <param name="dataField">optional object DataField</param>
-		/// <param name="field1">optional object Field1</param>
-		/// <param name="item1">optional object Item1</param>
-		/// <param name="field2">optional object Field2</param>
-		/// <param name="item2">optional object Item2</param>
-		/// <param name="field3">optional object Field3</param>
-		/// <param name="item3">optional object Item3</param>
-		/// <param name="field4">optional object Field4</param>
-		/// <param name="item4">optional object Item4</param>
-		/// <param name="field5">optional object Field5</param>
-		/// <param name="item5">optional object Item5</param>
-		/// <param name="field6">optional object Field6</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff195919.aspx </remarks>
+		/// <param name="dataField">optional object dataField</param>
+		/// <param name="field1">optional object field1</param>
+		/// <param name="item1">optional object item1</param>
+		/// <param name="field2">optional object field2</param>
+		/// <param name="item2">optional object item2</param>
+		/// <param name="field3">optional object field3</param>
+		/// <param name="item3">optional object item3</param>
+		/// <param name="field4">optional object field4</param>
+		/// <param name="item4">optional object item4</param>
+		/// <param name="field5">optional object field5</param>
+		/// <param name="item5">optional object item5</param>
+		/// <param name="field6">optional object field6</param>
+		[CustomMethod]
+		[SupportByVersion("Excel", 10,11,12,14,15,16)]
 		public NetOffice.ExcelApi.Range GetPivotData(object dataField, object field1, object item1, object field2, object item2, object field3, object item3, object field4, object item4, object field5, object item5, object field6)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(dataField, field1, item1, field2, item2, field3, item3, field4, item4, field5, item5, field6);
-			object returnItem = Invoker.MethodReturn(this, "GetPivotData", paramsArray);
-			NetOffice.ExcelApi.Range newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.Range.LateBindingApiWrapperType) as NetOffice.ExcelApi.Range;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(this, "GetPivotData", NetOffice.ExcelApi.Range.LateBindingApiWrapperType, new object[]{ dataField, field1, item1, field2, item2, field3, item3, field4, item4, field5, item5, field6 });
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195919.aspx
 		/// </summary>
-		/// <param name="dataField">optional object DataField</param>
-		/// <param name="field1">optional object Field1</param>
-		/// <param name="item1">optional object Item1</param>
-		/// <param name="field2">optional object Field2</param>
-		/// <param name="item2">optional object Item2</param>
-		/// <param name="field3">optional object Field3</param>
-		/// <param name="item3">optional object Item3</param>
-		/// <param name="field4">optional object Field4</param>
-		/// <param name="item4">optional object Item4</param>
-		/// <param name="field5">optional object Field5</param>
-		/// <param name="item5">optional object Item5</param>
-		/// <param name="field6">optional object Field6</param>
-		/// <param name="item6">optional object Item6</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff195919.aspx </remarks>
+		/// <param name="dataField">optional object dataField</param>
+		/// <param name="field1">optional object field1</param>
+		/// <param name="item1">optional object item1</param>
+		/// <param name="field2">optional object field2</param>
+		/// <param name="item2">optional object item2</param>
+		/// <param name="field3">optional object field3</param>
+		/// <param name="item3">optional object item3</param>
+		/// <param name="field4">optional object field4</param>
+		/// <param name="item4">optional object item4</param>
+		/// <param name="field5">optional object field5</param>
+		/// <param name="item5">optional object item5</param>
+		/// <param name="field6">optional object field6</param>
+		/// <param name="item6">optional object item6</param>
+		[CustomMethod]
+		[SupportByVersion("Excel", 10,11,12,14,15,16)]
 		public NetOffice.ExcelApi.Range GetPivotData(object dataField, object field1, object item1, object field2, object item2, object field3, object item3, object field4, object item4, object field5, object item5, object field6, object item6)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(dataField, field1, item1, field2, item2, field3, item3, field4, item4, field5, item5, field6, item6);
-			object returnItem = Invoker.MethodReturn(this, "GetPivotData", paramsArray);
-			NetOffice.ExcelApi.Range newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.Range.LateBindingApiWrapperType) as NetOffice.ExcelApi.Range;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(this, "GetPivotData", NetOffice.ExcelApi.Range.LateBindingApiWrapperType, new object[]{ dataField, field1, item1, field2, item2, field3, item3, field4, item4, field5, item5, field6, item6 });
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195919.aspx
 		/// </summary>
-		/// <param name="dataField">optional object DataField</param>
-		/// <param name="field1">optional object Field1</param>
-		/// <param name="item1">optional object Item1</param>
-		/// <param name="field2">optional object Field2</param>
-		/// <param name="item2">optional object Item2</param>
-		/// <param name="field3">optional object Field3</param>
-		/// <param name="item3">optional object Item3</param>
-		/// <param name="field4">optional object Field4</param>
-		/// <param name="item4">optional object Item4</param>
-		/// <param name="field5">optional object Field5</param>
-		/// <param name="item5">optional object Item5</param>
-		/// <param name="field6">optional object Field6</param>
-		/// <param name="item6">optional object Item6</param>
-		/// <param name="field7">optional object Field7</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff195919.aspx </remarks>
+		/// <param name="dataField">optional object dataField</param>
+		/// <param name="field1">optional object field1</param>
+		/// <param name="item1">optional object item1</param>
+		/// <param name="field2">optional object field2</param>
+		/// <param name="item2">optional object item2</param>
+		/// <param name="field3">optional object field3</param>
+		/// <param name="item3">optional object item3</param>
+		/// <param name="field4">optional object field4</param>
+		/// <param name="item4">optional object item4</param>
+		/// <param name="field5">optional object field5</param>
+		/// <param name="item5">optional object item5</param>
+		/// <param name="field6">optional object field6</param>
+		/// <param name="item6">optional object item6</param>
+		/// <param name="field7">optional object field7</param>
+		[CustomMethod]
+		[SupportByVersion("Excel", 10,11,12,14,15,16)]
 		public NetOffice.ExcelApi.Range GetPivotData(object dataField, object field1, object item1, object field2, object item2, object field3, object item3, object field4, object item4, object field5, object item5, object field6, object item6, object field7)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(dataField, field1, item1, field2, item2, field3, item3, field4, item4, field5, item5, field6, item6, field7);
-			object returnItem = Invoker.MethodReturn(this, "GetPivotData", paramsArray);
-			NetOffice.ExcelApi.Range newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.Range.LateBindingApiWrapperType) as NetOffice.ExcelApi.Range;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(this, "GetPivotData", NetOffice.ExcelApi.Range.LateBindingApiWrapperType, new object[]{ dataField, field1, item1, field2, item2, field3, item3, field4, item4, field5, item5, field6, item6, field7 });
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195919.aspx
 		/// </summary>
-		/// <param name="dataField">optional object DataField</param>
-		/// <param name="field1">optional object Field1</param>
-		/// <param name="item1">optional object Item1</param>
-		/// <param name="field2">optional object Field2</param>
-		/// <param name="item2">optional object Item2</param>
-		/// <param name="field3">optional object Field3</param>
-		/// <param name="item3">optional object Item3</param>
-		/// <param name="field4">optional object Field4</param>
-		/// <param name="item4">optional object Item4</param>
-		/// <param name="field5">optional object Field5</param>
-		/// <param name="item5">optional object Item5</param>
-		/// <param name="field6">optional object Field6</param>
-		/// <param name="item6">optional object Item6</param>
-		/// <param name="field7">optional object Field7</param>
-		/// <param name="item7">optional object Item7</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff195919.aspx </remarks>
+		/// <param name="dataField">optional object dataField</param>
+		/// <param name="field1">optional object field1</param>
+		/// <param name="item1">optional object item1</param>
+		/// <param name="field2">optional object field2</param>
+		/// <param name="item2">optional object item2</param>
+		/// <param name="field3">optional object field3</param>
+		/// <param name="item3">optional object item3</param>
+		/// <param name="field4">optional object field4</param>
+		/// <param name="item4">optional object item4</param>
+		/// <param name="field5">optional object field5</param>
+		/// <param name="item5">optional object item5</param>
+		/// <param name="field6">optional object field6</param>
+		/// <param name="item6">optional object item6</param>
+		/// <param name="field7">optional object field7</param>
+		/// <param name="item7">optional object item7</param>
+		[CustomMethod]
+		[SupportByVersion("Excel", 10,11,12,14,15,16)]
 		public NetOffice.ExcelApi.Range GetPivotData(object dataField, object field1, object item1, object field2, object item2, object field3, object item3, object field4, object item4, object field5, object item5, object field6, object item6, object field7, object item7)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(dataField, field1, item1, field2, item2, field3, item3, field4, item4, field5, item5, field6, item6, field7, item7);
-			object returnItem = Invoker.MethodReturn(this, "GetPivotData", paramsArray);
-			NetOffice.ExcelApi.Range newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.Range.LateBindingApiWrapperType) as NetOffice.ExcelApi.Range;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(this, "GetPivotData", NetOffice.ExcelApi.Range.LateBindingApiWrapperType, new object[]{ dataField, field1, item1, field2, item2, field3, item3, field4, item4, field5, item5, field6, item6, field7, item7 });
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195919.aspx
 		/// </summary>
-		/// <param name="dataField">optional object DataField</param>
-		/// <param name="field1">optional object Field1</param>
-		/// <param name="item1">optional object Item1</param>
-		/// <param name="field2">optional object Field2</param>
-		/// <param name="item2">optional object Item2</param>
-		/// <param name="field3">optional object Field3</param>
-		/// <param name="item3">optional object Item3</param>
-		/// <param name="field4">optional object Field4</param>
-		/// <param name="item4">optional object Item4</param>
-		/// <param name="field5">optional object Field5</param>
-		/// <param name="item5">optional object Item5</param>
-		/// <param name="field6">optional object Field6</param>
-		/// <param name="item6">optional object Item6</param>
-		/// <param name="field7">optional object Field7</param>
-		/// <param name="item7">optional object Item7</param>
-		/// <param name="field8">optional object Field8</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff195919.aspx </remarks>
+		/// <param name="dataField">optional object dataField</param>
+		/// <param name="field1">optional object field1</param>
+		/// <param name="item1">optional object item1</param>
+		/// <param name="field2">optional object field2</param>
+		/// <param name="item2">optional object item2</param>
+		/// <param name="field3">optional object field3</param>
+		/// <param name="item3">optional object item3</param>
+		/// <param name="field4">optional object field4</param>
+		/// <param name="item4">optional object item4</param>
+		/// <param name="field5">optional object field5</param>
+		/// <param name="item5">optional object item5</param>
+		/// <param name="field6">optional object field6</param>
+		/// <param name="item6">optional object item6</param>
+		/// <param name="field7">optional object field7</param>
+		/// <param name="item7">optional object item7</param>
+		/// <param name="field8">optional object field8</param>
+		[CustomMethod]
+		[SupportByVersion("Excel", 10,11,12,14,15,16)]
 		public NetOffice.ExcelApi.Range GetPivotData(object dataField, object field1, object item1, object field2, object item2, object field3, object item3, object field4, object item4, object field5, object item5, object field6, object item6, object field7, object item7, object field8)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(dataField, field1, item1, field2, item2, field3, item3, field4, item4, field5, item5, field6, item6, field7, item7, field8);
-			object returnItem = Invoker.MethodReturn(this, "GetPivotData", paramsArray);
-			NetOffice.ExcelApi.Range newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.Range.LateBindingApiWrapperType) as NetOffice.ExcelApi.Range;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(this, "GetPivotData", NetOffice.ExcelApi.Range.LateBindingApiWrapperType, new object[]{ dataField, field1, item1, field2, item2, field3, item3, field4, item4, field5, item5, field6, item6, field7, item7, field8 });
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195919.aspx
 		/// </summary>
-		/// <param name="dataField">optional object DataField</param>
-		/// <param name="field1">optional object Field1</param>
-		/// <param name="item1">optional object Item1</param>
-		/// <param name="field2">optional object Field2</param>
-		/// <param name="item2">optional object Item2</param>
-		/// <param name="field3">optional object Field3</param>
-		/// <param name="item3">optional object Item3</param>
-		/// <param name="field4">optional object Field4</param>
-		/// <param name="item4">optional object Item4</param>
-		/// <param name="field5">optional object Field5</param>
-		/// <param name="item5">optional object Item5</param>
-		/// <param name="field6">optional object Field6</param>
-		/// <param name="item6">optional object Item6</param>
-		/// <param name="field7">optional object Field7</param>
-		/// <param name="item7">optional object Item7</param>
-		/// <param name="field8">optional object Field8</param>
-		/// <param name="item8">optional object Item8</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff195919.aspx </remarks>
+		/// <param name="dataField">optional object dataField</param>
+		/// <param name="field1">optional object field1</param>
+		/// <param name="item1">optional object item1</param>
+		/// <param name="field2">optional object field2</param>
+		/// <param name="item2">optional object item2</param>
+		/// <param name="field3">optional object field3</param>
+		/// <param name="item3">optional object item3</param>
+		/// <param name="field4">optional object field4</param>
+		/// <param name="item4">optional object item4</param>
+		/// <param name="field5">optional object field5</param>
+		/// <param name="item5">optional object item5</param>
+		/// <param name="field6">optional object field6</param>
+		/// <param name="item6">optional object item6</param>
+		/// <param name="field7">optional object field7</param>
+		/// <param name="item7">optional object item7</param>
+		/// <param name="field8">optional object field8</param>
+		/// <param name="item8">optional object item8</param>
+		[CustomMethod]
+		[SupportByVersion("Excel", 10,11,12,14,15,16)]
 		public NetOffice.ExcelApi.Range GetPivotData(object dataField, object field1, object item1, object field2, object item2, object field3, object item3, object field4, object item4, object field5, object item5, object field6, object item6, object field7, object item7, object field8, object item8)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(dataField, field1, item1, field2, item2, field3, item3, field4, item4, field5, item5, field6, item6, field7, item7, field8, item8);
-			object returnItem = Invoker.MethodReturn(this, "GetPivotData", paramsArray);
-			NetOffice.ExcelApi.Range newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.Range.LateBindingApiWrapperType) as NetOffice.ExcelApi.Range;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(this, "GetPivotData", NetOffice.ExcelApi.Range.LateBindingApiWrapperType, new object[]{ dataField, field1, item1, field2, item2, field3, item3, field4, item4, field5, item5, field6, item6, field7, item7, field8, item8 });
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195919.aspx
 		/// </summary>
-		/// <param name="dataField">optional object DataField</param>
-		/// <param name="field1">optional object Field1</param>
-		/// <param name="item1">optional object Item1</param>
-		/// <param name="field2">optional object Field2</param>
-		/// <param name="item2">optional object Item2</param>
-		/// <param name="field3">optional object Field3</param>
-		/// <param name="item3">optional object Item3</param>
-		/// <param name="field4">optional object Field4</param>
-		/// <param name="item4">optional object Item4</param>
-		/// <param name="field5">optional object Field5</param>
-		/// <param name="item5">optional object Item5</param>
-		/// <param name="field6">optional object Field6</param>
-		/// <param name="item6">optional object Item6</param>
-		/// <param name="field7">optional object Field7</param>
-		/// <param name="item7">optional object Item7</param>
-		/// <param name="field8">optional object Field8</param>
-		/// <param name="item8">optional object Item8</param>
-		/// <param name="field9">optional object Field9</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff195919.aspx </remarks>
+		/// <param name="dataField">optional object dataField</param>
+		/// <param name="field1">optional object field1</param>
+		/// <param name="item1">optional object item1</param>
+		/// <param name="field2">optional object field2</param>
+		/// <param name="item2">optional object item2</param>
+		/// <param name="field3">optional object field3</param>
+		/// <param name="item3">optional object item3</param>
+		/// <param name="field4">optional object field4</param>
+		/// <param name="item4">optional object item4</param>
+		/// <param name="field5">optional object field5</param>
+		/// <param name="item5">optional object item5</param>
+		/// <param name="field6">optional object field6</param>
+		/// <param name="item6">optional object item6</param>
+		/// <param name="field7">optional object field7</param>
+		/// <param name="item7">optional object item7</param>
+		/// <param name="field8">optional object field8</param>
+		/// <param name="item8">optional object item8</param>
+		/// <param name="field9">optional object field9</param>
+		[CustomMethod]
+		[SupportByVersion("Excel", 10,11,12,14,15,16)]
 		public NetOffice.ExcelApi.Range GetPivotData(object dataField, object field1, object item1, object field2, object item2, object field3, object item3, object field4, object item4, object field5, object item5, object field6, object item6, object field7, object item7, object field8, object item8, object field9)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(dataField, field1, item1, field2, item2, field3, item3, field4, item4, field5, item5, field6, item6, field7, item7, field8, item8, field9);
-			object returnItem = Invoker.MethodReturn(this, "GetPivotData", paramsArray);
-			NetOffice.ExcelApi.Range newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.Range.LateBindingApiWrapperType) as NetOffice.ExcelApi.Range;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(this, "GetPivotData", NetOffice.ExcelApi.Range.LateBindingApiWrapperType, new object[]{ dataField, field1, item1, field2, item2, field3, item3, field4, item4, field5, item5, field6, item6, field7, item7, field8, item8, field9 });
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195919.aspx
 		/// </summary>
-		/// <param name="dataField">optional object DataField</param>
-		/// <param name="field1">optional object Field1</param>
-		/// <param name="item1">optional object Item1</param>
-		/// <param name="field2">optional object Field2</param>
-		/// <param name="item2">optional object Item2</param>
-		/// <param name="field3">optional object Field3</param>
-		/// <param name="item3">optional object Item3</param>
-		/// <param name="field4">optional object Field4</param>
-		/// <param name="item4">optional object Item4</param>
-		/// <param name="field5">optional object Field5</param>
-		/// <param name="item5">optional object Item5</param>
-		/// <param name="field6">optional object Field6</param>
-		/// <param name="item6">optional object Item6</param>
-		/// <param name="field7">optional object Field7</param>
-		/// <param name="item7">optional object Item7</param>
-		/// <param name="field8">optional object Field8</param>
-		/// <param name="item8">optional object Item8</param>
-		/// <param name="field9">optional object Field9</param>
-		/// <param name="item9">optional object Item9</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff195919.aspx </remarks>
+		/// <param name="dataField">optional object dataField</param>
+		/// <param name="field1">optional object field1</param>
+		/// <param name="item1">optional object item1</param>
+		/// <param name="field2">optional object field2</param>
+		/// <param name="item2">optional object item2</param>
+		/// <param name="field3">optional object field3</param>
+		/// <param name="item3">optional object item3</param>
+		/// <param name="field4">optional object field4</param>
+		/// <param name="item4">optional object item4</param>
+		/// <param name="field5">optional object field5</param>
+		/// <param name="item5">optional object item5</param>
+		/// <param name="field6">optional object field6</param>
+		/// <param name="item6">optional object item6</param>
+		/// <param name="field7">optional object field7</param>
+		/// <param name="item7">optional object item7</param>
+		/// <param name="field8">optional object field8</param>
+		/// <param name="item8">optional object item8</param>
+		/// <param name="field9">optional object field9</param>
+		/// <param name="item9">optional object item9</param>
+		[CustomMethod]
+		[SupportByVersion("Excel", 10,11,12,14,15,16)]
 		public NetOffice.ExcelApi.Range GetPivotData(object dataField, object field1, object item1, object field2, object item2, object field3, object item3, object field4, object item4, object field5, object item5, object field6, object item6, object field7, object item7, object field8, object item8, object field9, object item9)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(dataField, field1, item1, field2, item2, field3, item3, field4, item4, field5, item5, field6, item6, field7, item7, field8, item8, field9, item9);
-			object returnItem = Invoker.MethodReturn(this, "GetPivotData", paramsArray);
-			NetOffice.ExcelApi.Range newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.Range.LateBindingApiWrapperType) as NetOffice.ExcelApi.Range;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(this, "GetPivotData", NetOffice.ExcelApi.Range.LateBindingApiWrapperType, new object[]{ dataField, field1, item1, field2, item2, field3, item3, field4, item4, field5, item5, field6, item6, field7, item7, field8, item8, field9, item9 });
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195919.aspx
 		/// </summary>
-		/// <param name="dataField">optional object DataField</param>
-		/// <param name="field1">optional object Field1</param>
-		/// <param name="item1">optional object Item1</param>
-		/// <param name="field2">optional object Field2</param>
-		/// <param name="item2">optional object Item2</param>
-		/// <param name="field3">optional object Field3</param>
-		/// <param name="item3">optional object Item3</param>
-		/// <param name="field4">optional object Field4</param>
-		/// <param name="item4">optional object Item4</param>
-		/// <param name="field5">optional object Field5</param>
-		/// <param name="item5">optional object Item5</param>
-		/// <param name="field6">optional object Field6</param>
-		/// <param name="item6">optional object Item6</param>
-		/// <param name="field7">optional object Field7</param>
-		/// <param name="item7">optional object Item7</param>
-		/// <param name="field8">optional object Field8</param>
-		/// <param name="item8">optional object Item8</param>
-		/// <param name="field9">optional object Field9</param>
-		/// <param name="item9">optional object Item9</param>
-		/// <param name="field10">optional object Field10</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff195919.aspx </remarks>
+		/// <param name="dataField">optional object dataField</param>
+		/// <param name="field1">optional object field1</param>
+		/// <param name="item1">optional object item1</param>
+		/// <param name="field2">optional object field2</param>
+		/// <param name="item2">optional object item2</param>
+		/// <param name="field3">optional object field3</param>
+		/// <param name="item3">optional object item3</param>
+		/// <param name="field4">optional object field4</param>
+		/// <param name="item4">optional object item4</param>
+		/// <param name="field5">optional object field5</param>
+		/// <param name="item5">optional object item5</param>
+		/// <param name="field6">optional object field6</param>
+		/// <param name="item6">optional object item6</param>
+		/// <param name="field7">optional object field7</param>
+		/// <param name="item7">optional object item7</param>
+		/// <param name="field8">optional object field8</param>
+		/// <param name="item8">optional object item8</param>
+		/// <param name="field9">optional object field9</param>
+		/// <param name="item9">optional object item9</param>
+		/// <param name="field10">optional object field10</param>
+		[CustomMethod]
+		[SupportByVersion("Excel", 10,11,12,14,15,16)]
 		public NetOffice.ExcelApi.Range GetPivotData(object dataField, object field1, object item1, object field2, object item2, object field3, object item3, object field4, object item4, object field5, object item5, object field6, object item6, object field7, object item7, object field8, object item8, object field9, object item9, object field10)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(dataField, field1, item1, field2, item2, field3, item3, field4, item4, field5, item5, field6, item6, field7, item7, field8, item8, field9, item9, field10);
-			object returnItem = Invoker.MethodReturn(this, "GetPivotData", paramsArray);
-			NetOffice.ExcelApi.Range newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.Range.LateBindingApiWrapperType) as NetOffice.ExcelApi.Range;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(this, "GetPivotData", NetOffice.ExcelApi.Range.LateBindingApiWrapperType, new object[]{ dataField, field1, item1, field2, item2, field3, item3, field4, item4, field5, item5, field6, item6, field7, item7, field8, item8, field9, item9, field10 });
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195919.aspx
 		/// </summary>
-		/// <param name="dataField">optional object DataField</param>
-		/// <param name="field1">optional object Field1</param>
-		/// <param name="item1">optional object Item1</param>
-		/// <param name="field2">optional object Field2</param>
-		/// <param name="item2">optional object Item2</param>
-		/// <param name="field3">optional object Field3</param>
-		/// <param name="item3">optional object Item3</param>
-		/// <param name="field4">optional object Field4</param>
-		/// <param name="item4">optional object Item4</param>
-		/// <param name="field5">optional object Field5</param>
-		/// <param name="item5">optional object Item5</param>
-		/// <param name="field6">optional object Field6</param>
-		/// <param name="item6">optional object Item6</param>
-		/// <param name="field7">optional object Field7</param>
-		/// <param name="item7">optional object Item7</param>
-		/// <param name="field8">optional object Field8</param>
-		/// <param name="item8">optional object Item8</param>
-		/// <param name="field9">optional object Field9</param>
-		/// <param name="item9">optional object Item9</param>
-		/// <param name="field10">optional object Field10</param>
-		/// <param name="item10">optional object Item10</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff195919.aspx </remarks>
+		/// <param name="dataField">optional object dataField</param>
+		/// <param name="field1">optional object field1</param>
+		/// <param name="item1">optional object item1</param>
+		/// <param name="field2">optional object field2</param>
+		/// <param name="item2">optional object item2</param>
+		/// <param name="field3">optional object field3</param>
+		/// <param name="item3">optional object item3</param>
+		/// <param name="field4">optional object field4</param>
+		/// <param name="item4">optional object item4</param>
+		/// <param name="field5">optional object field5</param>
+		/// <param name="item5">optional object item5</param>
+		/// <param name="field6">optional object field6</param>
+		/// <param name="item6">optional object item6</param>
+		/// <param name="field7">optional object field7</param>
+		/// <param name="item7">optional object item7</param>
+		/// <param name="field8">optional object field8</param>
+		/// <param name="item8">optional object item8</param>
+		/// <param name="field9">optional object field9</param>
+		/// <param name="item9">optional object item9</param>
+		/// <param name="field10">optional object field10</param>
+		/// <param name="item10">optional object item10</param>
+		[CustomMethod]
+		[SupportByVersion("Excel", 10,11,12,14,15,16)]
 		public NetOffice.ExcelApi.Range GetPivotData(object dataField, object field1, object item1, object field2, object item2, object field3, object item3, object field4, object item4, object field5, object item5, object field6, object item6, object field7, object item7, object field8, object item8, object field9, object item9, object field10, object item10)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(dataField, field1, item1, field2, item2, field3, item3, field4, item4, field5, item5, field6, item6, field7, item7, field8, item8, field9, item9, field10, item10);
-			object returnItem = Invoker.MethodReturn(this, "GetPivotData", paramsArray);
-			NetOffice.ExcelApi.Range newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.Range.LateBindingApiWrapperType) as NetOffice.ExcelApi.Range;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(this, "GetPivotData", NetOffice.ExcelApi.Range.LateBindingApiWrapperType, new object[]{ dataField, field1, item1, field2, item2, field3, item3, field4, item4, field5, item5, field6, item6, field7, item7, field8, item8, field9, item9, field10, item10 });
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195919.aspx
 		/// </summary>
-		/// <param name="dataField">optional object DataField</param>
-		/// <param name="field1">optional object Field1</param>
-		/// <param name="item1">optional object Item1</param>
-		/// <param name="field2">optional object Field2</param>
-		/// <param name="item2">optional object Item2</param>
-		/// <param name="field3">optional object Field3</param>
-		/// <param name="item3">optional object Item3</param>
-		/// <param name="field4">optional object Field4</param>
-		/// <param name="item4">optional object Item4</param>
-		/// <param name="field5">optional object Field5</param>
-		/// <param name="item5">optional object Item5</param>
-		/// <param name="field6">optional object Field6</param>
-		/// <param name="item6">optional object Item6</param>
-		/// <param name="field7">optional object Field7</param>
-		/// <param name="item7">optional object Item7</param>
-		/// <param name="field8">optional object Field8</param>
-		/// <param name="item8">optional object Item8</param>
-		/// <param name="field9">optional object Field9</param>
-		/// <param name="item9">optional object Item9</param>
-		/// <param name="field10">optional object Field10</param>
-		/// <param name="item10">optional object Item10</param>
-		/// <param name="field11">optional object Field11</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff195919.aspx </remarks>
+		/// <param name="dataField">optional object dataField</param>
+		/// <param name="field1">optional object field1</param>
+		/// <param name="item1">optional object item1</param>
+		/// <param name="field2">optional object field2</param>
+		/// <param name="item2">optional object item2</param>
+		/// <param name="field3">optional object field3</param>
+		/// <param name="item3">optional object item3</param>
+		/// <param name="field4">optional object field4</param>
+		/// <param name="item4">optional object item4</param>
+		/// <param name="field5">optional object field5</param>
+		/// <param name="item5">optional object item5</param>
+		/// <param name="field6">optional object field6</param>
+		/// <param name="item6">optional object item6</param>
+		/// <param name="field7">optional object field7</param>
+		/// <param name="item7">optional object item7</param>
+		/// <param name="field8">optional object field8</param>
+		/// <param name="item8">optional object item8</param>
+		/// <param name="field9">optional object field9</param>
+		/// <param name="item9">optional object item9</param>
+		/// <param name="field10">optional object field10</param>
+		/// <param name="item10">optional object item10</param>
+		/// <param name="field11">optional object field11</param>
+		[CustomMethod]
+		[SupportByVersion("Excel", 10,11,12,14,15,16)]
 		public NetOffice.ExcelApi.Range GetPivotData(object dataField, object field1, object item1, object field2, object item2, object field3, object item3, object field4, object item4, object field5, object item5, object field6, object item6, object field7, object item7, object field8, object item8, object field9, object item9, object field10, object item10, object field11)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(dataField, field1, item1, field2, item2, field3, item3, field4, item4, field5, item5, field6, item6, field7, item7, field8, item8, field9, item9, field10, item10, field11);
-			object returnItem = Invoker.MethodReturn(this, "GetPivotData", paramsArray);
-			NetOffice.ExcelApi.Range newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.Range.LateBindingApiWrapperType) as NetOffice.ExcelApi.Range;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(this, "GetPivotData", NetOffice.ExcelApi.Range.LateBindingApiWrapperType, new object[]{ dataField, field1, item1, field2, item2, field3, item3, field4, item4, field5, item5, field6, item6, field7, item7, field8, item8, field9, item9, field10, item10, field11 });
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195919.aspx
 		/// </summary>
-		/// <param name="dataField">optional object DataField</param>
-		/// <param name="field1">optional object Field1</param>
-		/// <param name="item1">optional object Item1</param>
-		/// <param name="field2">optional object Field2</param>
-		/// <param name="item2">optional object Item2</param>
-		/// <param name="field3">optional object Field3</param>
-		/// <param name="item3">optional object Item3</param>
-		/// <param name="field4">optional object Field4</param>
-		/// <param name="item4">optional object Item4</param>
-		/// <param name="field5">optional object Field5</param>
-		/// <param name="item5">optional object Item5</param>
-		/// <param name="field6">optional object Field6</param>
-		/// <param name="item6">optional object Item6</param>
-		/// <param name="field7">optional object Field7</param>
-		/// <param name="item7">optional object Item7</param>
-		/// <param name="field8">optional object Field8</param>
-		/// <param name="item8">optional object Item8</param>
-		/// <param name="field9">optional object Field9</param>
-		/// <param name="item9">optional object Item9</param>
-		/// <param name="field10">optional object Field10</param>
-		/// <param name="item10">optional object Item10</param>
-		/// <param name="field11">optional object Field11</param>
-		/// <param name="item11">optional object Item11</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff195919.aspx </remarks>
+		/// <param name="dataField">optional object dataField</param>
+		/// <param name="field1">optional object field1</param>
+		/// <param name="item1">optional object item1</param>
+		/// <param name="field2">optional object field2</param>
+		/// <param name="item2">optional object item2</param>
+		/// <param name="field3">optional object field3</param>
+		/// <param name="item3">optional object item3</param>
+		/// <param name="field4">optional object field4</param>
+		/// <param name="item4">optional object item4</param>
+		/// <param name="field5">optional object field5</param>
+		/// <param name="item5">optional object item5</param>
+		/// <param name="field6">optional object field6</param>
+		/// <param name="item6">optional object item6</param>
+		/// <param name="field7">optional object field7</param>
+		/// <param name="item7">optional object item7</param>
+		/// <param name="field8">optional object field8</param>
+		/// <param name="item8">optional object item8</param>
+		/// <param name="field9">optional object field9</param>
+		/// <param name="item9">optional object item9</param>
+		/// <param name="field10">optional object field10</param>
+		/// <param name="item10">optional object item10</param>
+		/// <param name="field11">optional object field11</param>
+		/// <param name="item11">optional object item11</param>
+		[CustomMethod]
+		[SupportByVersion("Excel", 10,11,12,14,15,16)]
 		public NetOffice.ExcelApi.Range GetPivotData(object dataField, object field1, object item1, object field2, object item2, object field3, object item3, object field4, object item4, object field5, object item5, object field6, object item6, object field7, object item7, object field8, object item8, object field9, object item9, object field10, object item10, object field11, object item11)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(dataField, field1, item1, field2, item2, field3, item3, field4, item4, field5, item5, field6, item6, field7, item7, field8, item8, field9, item9, field10, item10, field11, item11);
-			object returnItem = Invoker.MethodReturn(this, "GetPivotData", paramsArray);
-			NetOffice.ExcelApi.Range newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.Range.LateBindingApiWrapperType) as NetOffice.ExcelApi.Range;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(this, "GetPivotData", NetOffice.ExcelApi.Range.LateBindingApiWrapperType, new object[]{ dataField, field1, item1, field2, item2, field3, item3, field4, item4, field5, item5, field6, item6, field7, item7, field8, item8, field9, item9, field10, item10, field11, item11 });
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195919.aspx
 		/// </summary>
-		/// <param name="dataField">optional object DataField</param>
-		/// <param name="field1">optional object Field1</param>
-		/// <param name="item1">optional object Item1</param>
-		/// <param name="field2">optional object Field2</param>
-		/// <param name="item2">optional object Item2</param>
-		/// <param name="field3">optional object Field3</param>
-		/// <param name="item3">optional object Item3</param>
-		/// <param name="field4">optional object Field4</param>
-		/// <param name="item4">optional object Item4</param>
-		/// <param name="field5">optional object Field5</param>
-		/// <param name="item5">optional object Item5</param>
-		/// <param name="field6">optional object Field6</param>
-		/// <param name="item6">optional object Item6</param>
-		/// <param name="field7">optional object Field7</param>
-		/// <param name="item7">optional object Item7</param>
-		/// <param name="field8">optional object Field8</param>
-		/// <param name="item8">optional object Item8</param>
-		/// <param name="field9">optional object Field9</param>
-		/// <param name="item9">optional object Item9</param>
-		/// <param name="field10">optional object Field10</param>
-		/// <param name="item10">optional object Item10</param>
-		/// <param name="field11">optional object Field11</param>
-		/// <param name="item11">optional object Item11</param>
-		/// <param name="field12">optional object Field12</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff195919.aspx </remarks>
+		/// <param name="dataField">optional object dataField</param>
+		/// <param name="field1">optional object field1</param>
+		/// <param name="item1">optional object item1</param>
+		/// <param name="field2">optional object field2</param>
+		/// <param name="item2">optional object item2</param>
+		/// <param name="field3">optional object field3</param>
+		/// <param name="item3">optional object item3</param>
+		/// <param name="field4">optional object field4</param>
+		/// <param name="item4">optional object item4</param>
+		/// <param name="field5">optional object field5</param>
+		/// <param name="item5">optional object item5</param>
+		/// <param name="field6">optional object field6</param>
+		/// <param name="item6">optional object item6</param>
+		/// <param name="field7">optional object field7</param>
+		/// <param name="item7">optional object item7</param>
+		/// <param name="field8">optional object field8</param>
+		/// <param name="item8">optional object item8</param>
+		/// <param name="field9">optional object field9</param>
+		/// <param name="item9">optional object item9</param>
+		/// <param name="field10">optional object field10</param>
+		/// <param name="item10">optional object item10</param>
+		/// <param name="field11">optional object field11</param>
+		/// <param name="item11">optional object item11</param>
+		/// <param name="field12">optional object field12</param>
+		[CustomMethod]
+		[SupportByVersion("Excel", 10,11,12,14,15,16)]
 		public NetOffice.ExcelApi.Range GetPivotData(object dataField, object field1, object item1, object field2, object item2, object field3, object item3, object field4, object item4, object field5, object item5, object field6, object item6, object field7, object item7, object field8, object item8, object field9, object item9, object field10, object item10, object field11, object item11, object field12)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(dataField, field1, item1, field2, item2, field3, item3, field4, item4, field5, item5, field6, item6, field7, item7, field8, item8, field9, item9, field10, item10, field11, item11, field12);
-			object returnItem = Invoker.MethodReturn(this, "GetPivotData", paramsArray);
-			NetOffice.ExcelApi.Range newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.Range.LateBindingApiWrapperType) as NetOffice.ExcelApi.Range;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(this, "GetPivotData", NetOffice.ExcelApi.Range.LateBindingApiWrapperType, new object[]{ dataField, field1, item1, field2, item2, field3, item3, field4, item4, field5, item5, field6, item6, field7, item7, field8, item8, field9, item9, field10, item10, field11, item11, field12 });
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195919.aspx
 		/// </summary>
-		/// <param name="dataField">optional object DataField</param>
-		/// <param name="field1">optional object Field1</param>
-		/// <param name="item1">optional object Item1</param>
-		/// <param name="field2">optional object Field2</param>
-		/// <param name="item2">optional object Item2</param>
-		/// <param name="field3">optional object Field3</param>
-		/// <param name="item3">optional object Item3</param>
-		/// <param name="field4">optional object Field4</param>
-		/// <param name="item4">optional object Item4</param>
-		/// <param name="field5">optional object Field5</param>
-		/// <param name="item5">optional object Item5</param>
-		/// <param name="field6">optional object Field6</param>
-		/// <param name="item6">optional object Item6</param>
-		/// <param name="field7">optional object Field7</param>
-		/// <param name="item7">optional object Item7</param>
-		/// <param name="field8">optional object Field8</param>
-		/// <param name="item8">optional object Item8</param>
-		/// <param name="field9">optional object Field9</param>
-		/// <param name="item9">optional object Item9</param>
-		/// <param name="field10">optional object Field10</param>
-		/// <param name="item10">optional object Item10</param>
-		/// <param name="field11">optional object Field11</param>
-		/// <param name="item11">optional object Item11</param>
-		/// <param name="field12">optional object Field12</param>
-		/// <param name="item12">optional object Item12</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff195919.aspx </remarks>
+		/// <param name="dataField">optional object dataField</param>
+		/// <param name="field1">optional object field1</param>
+		/// <param name="item1">optional object item1</param>
+		/// <param name="field2">optional object field2</param>
+		/// <param name="item2">optional object item2</param>
+		/// <param name="field3">optional object field3</param>
+		/// <param name="item3">optional object item3</param>
+		/// <param name="field4">optional object field4</param>
+		/// <param name="item4">optional object item4</param>
+		/// <param name="field5">optional object field5</param>
+		/// <param name="item5">optional object item5</param>
+		/// <param name="field6">optional object field6</param>
+		/// <param name="item6">optional object item6</param>
+		/// <param name="field7">optional object field7</param>
+		/// <param name="item7">optional object item7</param>
+		/// <param name="field8">optional object field8</param>
+		/// <param name="item8">optional object item8</param>
+		/// <param name="field9">optional object field9</param>
+		/// <param name="item9">optional object item9</param>
+		/// <param name="field10">optional object field10</param>
+		/// <param name="item10">optional object item10</param>
+		/// <param name="field11">optional object field11</param>
+		/// <param name="item11">optional object item11</param>
+		/// <param name="field12">optional object field12</param>
+		/// <param name="item12">optional object item12</param>
+		[CustomMethod]
+		[SupportByVersion("Excel", 10,11,12,14,15,16)]
 		public NetOffice.ExcelApi.Range GetPivotData(object dataField, object field1, object item1, object field2, object item2, object field3, object item3, object field4, object item4, object field5, object item5, object field6, object item6, object field7, object item7, object field8, object item8, object field9, object item9, object field10, object item10, object field11, object item11, object field12, object item12)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(dataField, field1, item1, field2, item2, field3, item3, field4, item4, field5, item5, field6, item6, field7, item7, field8, item8, field9, item9, field10, item10, field11, item11, field12, item12);
-			object returnItem = Invoker.MethodReturn(this, "GetPivotData", paramsArray);
-			NetOffice.ExcelApi.Range newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.Range.LateBindingApiWrapperType) as NetOffice.ExcelApi.Range;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(this, "GetPivotData", NetOffice.ExcelApi.Range.LateBindingApiWrapperType, new object[]{ dataField, field1, item1, field2, item2, field3, item3, field4, item4, field5, item5, field6, item6, field7, item7, field8, item8, field9, item9, field10, item10, field11, item11, field12, item12 });
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195919.aspx
 		/// </summary>
-		/// <param name="dataField">optional object DataField</param>
-		/// <param name="field1">optional object Field1</param>
-		/// <param name="item1">optional object Item1</param>
-		/// <param name="field2">optional object Field2</param>
-		/// <param name="item2">optional object Item2</param>
-		/// <param name="field3">optional object Field3</param>
-		/// <param name="item3">optional object Item3</param>
-		/// <param name="field4">optional object Field4</param>
-		/// <param name="item4">optional object Item4</param>
-		/// <param name="field5">optional object Field5</param>
-		/// <param name="item5">optional object Item5</param>
-		/// <param name="field6">optional object Field6</param>
-		/// <param name="item6">optional object Item6</param>
-		/// <param name="field7">optional object Field7</param>
-		/// <param name="item7">optional object Item7</param>
-		/// <param name="field8">optional object Field8</param>
-		/// <param name="item8">optional object Item8</param>
-		/// <param name="field9">optional object Field9</param>
-		/// <param name="item9">optional object Item9</param>
-		/// <param name="field10">optional object Field10</param>
-		/// <param name="item10">optional object Item10</param>
-		/// <param name="field11">optional object Field11</param>
-		/// <param name="item11">optional object Item11</param>
-		/// <param name="field12">optional object Field12</param>
-		/// <param name="item12">optional object Item12</param>
-		/// <param name="field13">optional object Field13</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff195919.aspx </remarks>
+		/// <param name="dataField">optional object dataField</param>
+		/// <param name="field1">optional object field1</param>
+		/// <param name="item1">optional object item1</param>
+		/// <param name="field2">optional object field2</param>
+		/// <param name="item2">optional object item2</param>
+		/// <param name="field3">optional object field3</param>
+		/// <param name="item3">optional object item3</param>
+		/// <param name="field4">optional object field4</param>
+		/// <param name="item4">optional object item4</param>
+		/// <param name="field5">optional object field5</param>
+		/// <param name="item5">optional object item5</param>
+		/// <param name="field6">optional object field6</param>
+		/// <param name="item6">optional object item6</param>
+		/// <param name="field7">optional object field7</param>
+		/// <param name="item7">optional object item7</param>
+		/// <param name="field8">optional object field8</param>
+		/// <param name="item8">optional object item8</param>
+		/// <param name="field9">optional object field9</param>
+		/// <param name="item9">optional object item9</param>
+		/// <param name="field10">optional object field10</param>
+		/// <param name="item10">optional object item10</param>
+		/// <param name="field11">optional object field11</param>
+		/// <param name="item11">optional object item11</param>
+		/// <param name="field12">optional object field12</param>
+		/// <param name="item12">optional object item12</param>
+		/// <param name="field13">optional object field13</param>
+		[CustomMethod]
+		[SupportByVersion("Excel", 10,11,12,14,15,16)]
 		public NetOffice.ExcelApi.Range GetPivotData(object dataField, object field1, object item1, object field2, object item2, object field3, object item3, object field4, object item4, object field5, object item5, object field6, object item6, object field7, object item7, object field8, object item8, object field9, object item9, object field10, object item10, object field11, object item11, object field12, object item12, object field13)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(dataField, field1, item1, field2, item2, field3, item3, field4, item4, field5, item5, field6, item6, field7, item7, field8, item8, field9, item9, field10, item10, field11, item11, field12, item12, field13);
-			object returnItem = Invoker.MethodReturn(this, "GetPivotData", paramsArray);
-			NetOffice.ExcelApi.Range newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.Range.LateBindingApiWrapperType) as NetOffice.ExcelApi.Range;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(this, "GetPivotData", NetOffice.ExcelApi.Range.LateBindingApiWrapperType, new object[]{ dataField, field1, item1, field2, item2, field3, item3, field4, item4, field5, item5, field6, item6, field7, item7, field8, item8, field9, item9, field10, item10, field11, item11, field12, item12, field13 });
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195919.aspx
 		/// </summary>
-		/// <param name="dataField">optional object DataField</param>
-		/// <param name="field1">optional object Field1</param>
-		/// <param name="item1">optional object Item1</param>
-		/// <param name="field2">optional object Field2</param>
-		/// <param name="item2">optional object Item2</param>
-		/// <param name="field3">optional object Field3</param>
-		/// <param name="item3">optional object Item3</param>
-		/// <param name="field4">optional object Field4</param>
-		/// <param name="item4">optional object Item4</param>
-		/// <param name="field5">optional object Field5</param>
-		/// <param name="item5">optional object Item5</param>
-		/// <param name="field6">optional object Field6</param>
-		/// <param name="item6">optional object Item6</param>
-		/// <param name="field7">optional object Field7</param>
-		/// <param name="item7">optional object Item7</param>
-		/// <param name="field8">optional object Field8</param>
-		/// <param name="item8">optional object Item8</param>
-		/// <param name="field9">optional object Field9</param>
-		/// <param name="item9">optional object Item9</param>
-		/// <param name="field10">optional object Field10</param>
-		/// <param name="item10">optional object Item10</param>
-		/// <param name="field11">optional object Field11</param>
-		/// <param name="item11">optional object Item11</param>
-		/// <param name="field12">optional object Field12</param>
-		/// <param name="item12">optional object Item12</param>
-		/// <param name="field13">optional object Field13</param>
-		/// <param name="item13">optional object Item13</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff195919.aspx </remarks>
+		/// <param name="dataField">optional object dataField</param>
+		/// <param name="field1">optional object field1</param>
+		/// <param name="item1">optional object item1</param>
+		/// <param name="field2">optional object field2</param>
+		/// <param name="item2">optional object item2</param>
+		/// <param name="field3">optional object field3</param>
+		/// <param name="item3">optional object item3</param>
+		/// <param name="field4">optional object field4</param>
+		/// <param name="item4">optional object item4</param>
+		/// <param name="field5">optional object field5</param>
+		/// <param name="item5">optional object item5</param>
+		/// <param name="field6">optional object field6</param>
+		/// <param name="item6">optional object item6</param>
+		/// <param name="field7">optional object field7</param>
+		/// <param name="item7">optional object item7</param>
+		/// <param name="field8">optional object field8</param>
+		/// <param name="item8">optional object item8</param>
+		/// <param name="field9">optional object field9</param>
+		/// <param name="item9">optional object item9</param>
+		/// <param name="field10">optional object field10</param>
+		/// <param name="item10">optional object item10</param>
+		/// <param name="field11">optional object field11</param>
+		/// <param name="item11">optional object item11</param>
+		/// <param name="field12">optional object field12</param>
+		/// <param name="item12">optional object item12</param>
+		/// <param name="field13">optional object field13</param>
+		/// <param name="item13">optional object item13</param>
+		[CustomMethod]
+		[SupportByVersion("Excel", 10,11,12,14,15,16)]
 		public NetOffice.ExcelApi.Range GetPivotData(object dataField, object field1, object item1, object field2, object item2, object field3, object item3, object field4, object item4, object field5, object item5, object field6, object item6, object field7, object item7, object field8, object item8, object field9, object item9, object field10, object item10, object field11, object item11, object field12, object item12, object field13, object item13)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(dataField, field1, item1, field2, item2, field3, item3, field4, item4, field5, item5, field6, item6, field7, item7, field8, item8, field9, item9, field10, item10, field11, item11, field12, item12, field13, item13);
-			object returnItem = Invoker.MethodReturn(this, "GetPivotData", paramsArray);
-			NetOffice.ExcelApi.Range newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.Range.LateBindingApiWrapperType) as NetOffice.ExcelApi.Range;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(this, "GetPivotData", NetOffice.ExcelApi.Range.LateBindingApiWrapperType, new object[]{ dataField, field1, item1, field2, item2, field3, item3, field4, item4, field5, item5, field6, item6, field7, item7, field8, item8, field9, item9, field10, item10, field11, item11, field12, item12, field13, item13 });
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195919.aspx
 		/// </summary>
-		/// <param name="dataField">optional object DataField</param>
-		/// <param name="field1">optional object Field1</param>
-		/// <param name="item1">optional object Item1</param>
-		/// <param name="field2">optional object Field2</param>
-		/// <param name="item2">optional object Item2</param>
-		/// <param name="field3">optional object Field3</param>
-		/// <param name="item3">optional object Item3</param>
-		/// <param name="field4">optional object Field4</param>
-		/// <param name="item4">optional object Item4</param>
-		/// <param name="field5">optional object Field5</param>
-		/// <param name="item5">optional object Item5</param>
-		/// <param name="field6">optional object Field6</param>
-		/// <param name="item6">optional object Item6</param>
-		/// <param name="field7">optional object Field7</param>
-		/// <param name="item7">optional object Item7</param>
-		/// <param name="field8">optional object Field8</param>
-		/// <param name="item8">optional object Item8</param>
-		/// <param name="field9">optional object Field9</param>
-		/// <param name="item9">optional object Item9</param>
-		/// <param name="field10">optional object Field10</param>
-		/// <param name="item10">optional object Item10</param>
-		/// <param name="field11">optional object Field11</param>
-		/// <param name="item11">optional object Item11</param>
-		/// <param name="field12">optional object Field12</param>
-		/// <param name="item12">optional object Item12</param>
-		/// <param name="field13">optional object Field13</param>
-		/// <param name="item13">optional object Item13</param>
-		/// <param name="field14">optional object Field14</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff195919.aspx </remarks>
+		/// <param name="dataField">optional object dataField</param>
+		/// <param name="field1">optional object field1</param>
+		/// <param name="item1">optional object item1</param>
+		/// <param name="field2">optional object field2</param>
+		/// <param name="item2">optional object item2</param>
+		/// <param name="field3">optional object field3</param>
+		/// <param name="item3">optional object item3</param>
+		/// <param name="field4">optional object field4</param>
+		/// <param name="item4">optional object item4</param>
+		/// <param name="field5">optional object field5</param>
+		/// <param name="item5">optional object item5</param>
+		/// <param name="field6">optional object field6</param>
+		/// <param name="item6">optional object item6</param>
+		/// <param name="field7">optional object field7</param>
+		/// <param name="item7">optional object item7</param>
+		/// <param name="field8">optional object field8</param>
+		/// <param name="item8">optional object item8</param>
+		/// <param name="field9">optional object field9</param>
+		/// <param name="item9">optional object item9</param>
+		/// <param name="field10">optional object field10</param>
+		/// <param name="item10">optional object item10</param>
+		/// <param name="field11">optional object field11</param>
+		/// <param name="item11">optional object item11</param>
+		/// <param name="field12">optional object field12</param>
+		/// <param name="item12">optional object item12</param>
+		/// <param name="field13">optional object field13</param>
+		/// <param name="item13">optional object item13</param>
+		/// <param name="field14">optional object field14</param>
+		[CustomMethod]
+		[SupportByVersion("Excel", 10,11,12,14,15,16)]
 		public NetOffice.ExcelApi.Range GetPivotData(object dataField, object field1, object item1, object field2, object item2, object field3, object item3, object field4, object item4, object field5, object item5, object field6, object item6, object field7, object item7, object field8, object item8, object field9, object item9, object field10, object item10, object field11, object item11, object field12, object item12, object field13, object item13, object field14)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(dataField, field1, item1, field2, item2, field3, item3, field4, item4, field5, item5, field6, item6, field7, item7, field8, item8, field9, item9, field10, item10, field11, item11, field12, item12, field13, item13, field14);
-			object returnItem = Invoker.MethodReturn(this, "GetPivotData", paramsArray);
-			NetOffice.ExcelApi.Range newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.Range.LateBindingApiWrapperType) as NetOffice.ExcelApi.Range;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(this, "GetPivotData", NetOffice.ExcelApi.Range.LateBindingApiWrapperType, new object[]{ dataField, field1, item1, field2, item2, field3, item3, field4, item4, field5, item5, field6, item6, field7, item7, field8, item8, field9, item9, field10, item10, field11, item11, field12, item12, field13, item13, field14 });
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff823171.aspx
 		/// </summary>
-		/// <param name="field">object Field</param>
-		/// <param name="caption">optional object Caption</param>
-		/// <param name="function">optional object Function</param>
-		[SupportByVersionAttribute("Excel", 10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff823171.aspx </remarks>
+		/// <param name="field">object field</param>
+		/// <param name="caption">optional object caption</param>
+		/// <param name="function">optional object function</param>
+		[SupportByVersion("Excel", 10,11,12,14,15,16)]
 		public NetOffice.ExcelApi.PivotField AddDataField(object field, object caption, object function)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(field, caption, function);
-			object returnItem = Invoker.MethodReturn(this, "AddDataField", paramsArray);
-			NetOffice.ExcelApi.PivotField newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.PivotField.LateBindingApiWrapperType) as NetOffice.ExcelApi.PivotField;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.PivotField>(this, "AddDataField", NetOffice.ExcelApi.PivotField.LateBindingApiWrapperType, field, caption, function);
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff823171.aspx
 		/// </summary>
-		/// <param name="field">object Field</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff823171.aspx </remarks>
+		/// <param name="field">object field</param>
+		[CustomMethod]
+		[SupportByVersion("Excel", 10,11,12,14,15,16)]
 		public NetOffice.ExcelApi.PivotField AddDataField(object field)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(field);
-			object returnItem = Invoker.MethodReturn(this, "AddDataField", paramsArray);
-			NetOffice.ExcelApi.PivotField newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.PivotField.LateBindingApiWrapperType) as NetOffice.ExcelApi.PivotField;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.PivotField>(this, "AddDataField", NetOffice.ExcelApi.PivotField.LateBindingApiWrapperType, field);
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff823171.aspx
 		/// </summary>
-		/// <param name="field">object Field</param>
-		/// <param name="caption">optional object Caption</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff823171.aspx </remarks>
+		/// <param name="field">object field</param>
+		/// <param name="caption">optional object caption</param>
+		[CustomMethod]
+		[SupportByVersion("Excel", 10,11,12,14,15,16)]
 		public NetOffice.ExcelApi.PivotField AddDataField(object field, object caption)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(field, caption);
-			object returnItem = Invoker.MethodReturn(this, "AddDataField", paramsArray);
-			NetOffice.ExcelApi.PivotField newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.PivotField.LateBindingApiWrapperType) as NetOffice.ExcelApi.PivotField;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.PivotField>(this, "AddDataField", NetOffice.ExcelApi.PivotField.LateBindingApiWrapperType, field, caption);
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="arg1">object Arg1</param>
-		/// <param name="arg2">optional object Arg2</param>
-		/// <param name="arg3">optional object Arg3</param>
-		/// <param name="arg4">optional object Arg4</param>
-		/// <param name="arg5">optional object Arg5</param>
-		/// <param name="arg6">optional object Arg6</param>
-		/// <param name="arg7">optional object Arg7</param>
-		/// <param name="arg8">optional object Arg8</param>
-		/// <param name="arg9">optional object Arg9</param>
-		/// <param name="arg10">optional object Arg10</param>
-		/// <param name="arg11">optional object Arg11</param>
-		/// <param name="arg12">optional object Arg12</param>
-		/// <param name="arg13">optional object Arg13</param>
-		/// <param name="arg14">optional object Arg14</param>
-		/// <param name="arg15">optional object Arg15</param>
-		/// <param name="arg16">optional object Arg16</param>
-		/// <param name="arg17">optional object Arg17</param>
-		/// <param name="arg18">optional object Arg18</param>
-		/// <param name="arg19">optional object Arg19</param>
-		/// <param name="arg20">optional object Arg20</param>
-		/// <param name="arg21">optional object Arg21</param>
-		/// <param name="arg22">optional object Arg22</param>
-		/// <param name="arg23">optional object Arg23</param>
-		/// <param name="arg24">optional object Arg24</param>
-		/// <param name="arg25">optional object Arg25</param>
-		/// <param name="arg26">optional object Arg26</param>
-		/// <param name="arg27">optional object Arg27</param>
-		/// <param name="arg28">optional object Arg28</param>
-		/// <param name="arg29">optional object Arg29</param>
-		/// <param name="arg30">optional object Arg30</param>
+		/// <param name="arg1">object arg1</param>
+		/// <param name="arg2">optional object arg2</param>
+		/// <param name="arg3">optional object arg3</param>
+		/// <param name="arg4">optional object arg4</param>
+		/// <param name="arg5">optional object arg5</param>
+		/// <param name="arg6">optional object arg6</param>
+		/// <param name="arg7">optional object arg7</param>
+		/// <param name="arg8">optional object arg8</param>
+		/// <param name="arg9">optional object arg9</param>
+		/// <param name="arg10">optional object arg10</param>
+		/// <param name="arg11">optional object arg11</param>
+		/// <param name="arg12">optional object arg12</param>
+		/// <param name="arg13">optional object arg13</param>
+		/// <param name="arg14">optional object arg14</param>
+		/// <param name="arg15">optional object arg15</param>
+		/// <param name="arg16">optional object arg16</param>
+		/// <param name="arg17">optional object arg17</param>
+		/// <param name="arg18">optional object arg18</param>
+		/// <param name="arg19">optional object arg19</param>
+		/// <param name="arg20">optional object arg20</param>
+		/// <param name="arg21">optional object arg21</param>
+		/// <param name="arg22">optional object arg22</param>
+		/// <param name="arg23">optional object arg23</param>
+		/// <param name="arg24">optional object arg24</param>
+		/// <param name="arg25">optional object arg25</param>
+		/// <param name="arg26">optional object arg26</param>
+		/// <param name="arg27">optional object arg27</param>
+		/// <param name="arg28">optional object arg28</param>
+		/// <param name="arg29">optional object arg29</param>
+		/// <param name="arg30">optional object arg30</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("Excel", 10,11,12,14,15,16)]
+		[SupportByVersion("Excel", 10,11,12,14,15,16)]
 		public object Dummy15(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24, object arg25, object arg26, object arg27, object arg28, object arg29, object arg30)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28, arg29, arg30);
-			object returnItem = Invoker.MethodReturn(this, "Dummy15", paramsArray);
-			if((null != returnItem) && (returnItem is MarshalByRefObject))
-			{
-				ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
-				return newObject;
-			}
-			else
-			{
-				return  returnItem;
-			}
+			return Factory.ExecuteVariantMethodGet(this, "Dummy15", new object[]{ arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28, arg29, arg30 });
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="arg1">object Arg1</param>
+		/// <param name="arg1">object arg1</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 10,11,12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Excel", 10,11,12,14,15,16)]
 		public object Dummy15(object arg1)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
-			object returnItem = Invoker.MethodReturn(this, "Dummy15", paramsArray);
-			if((null != returnItem) && (returnItem is MarshalByRefObject))
-			{
-				ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
-				return newObject;
-			}
-			else
-			{
-				return  returnItem;
-			}
+			return Factory.ExecuteVariantMethodGet(this, "Dummy15", arg1);
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="arg1">object Arg1</param>
-		/// <param name="arg2">optional object Arg2</param>
+		/// <param name="arg1">object arg1</param>
+		/// <param name="arg2">optional object arg2</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 10,11,12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Excel", 10,11,12,14,15,16)]
 		public object Dummy15(object arg1, object arg2)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
-			object returnItem = Invoker.MethodReturn(this, "Dummy15", paramsArray);
-			if((null != returnItem) && (returnItem is MarshalByRefObject))
-			{
-				ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
-				return newObject;
-			}
-			else
-			{
-				return  returnItem;
-			}
+			return Factory.ExecuteVariantMethodGet(this, "Dummy15", arg1, arg2);
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="arg1">object Arg1</param>
-		/// <param name="arg2">optional object Arg2</param>
-		/// <param name="arg3">optional object Arg3</param>
+		/// <param name="arg1">object arg1</param>
+		/// <param name="arg2">optional object arg2</param>
+		/// <param name="arg3">optional object arg3</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 10,11,12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Excel", 10,11,12,14,15,16)]
 		public object Dummy15(object arg1, object arg2, object arg3)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
-			object returnItem = Invoker.MethodReturn(this, "Dummy15", paramsArray);
-			if((null != returnItem) && (returnItem is MarshalByRefObject))
-			{
-				ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
-				return newObject;
-			}
-			else
-			{
-				return  returnItem;
-			}
+			return Factory.ExecuteVariantMethodGet(this, "Dummy15", arg1, arg2, arg3);
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="arg1">object Arg1</param>
-		/// <param name="arg2">optional object Arg2</param>
-		/// <param name="arg3">optional object Arg3</param>
-		/// <param name="arg4">optional object Arg4</param>
+		/// <param name="arg1">object arg1</param>
+		/// <param name="arg2">optional object arg2</param>
+		/// <param name="arg3">optional object arg3</param>
+		/// <param name="arg4">optional object arg4</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 10,11,12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Excel", 10,11,12,14,15,16)]
 		public object Dummy15(object arg1, object arg2, object arg3, object arg4)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4);
-			object returnItem = Invoker.MethodReturn(this, "Dummy15", paramsArray);
-			if((null != returnItem) && (returnItem is MarshalByRefObject))
-			{
-				ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
-				return newObject;
-			}
-			else
-			{
-				return  returnItem;
-			}
+			return Factory.ExecuteVariantMethodGet(this, "Dummy15", arg1, arg2, arg3, arg4);
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="arg1">object Arg1</param>
-		/// <param name="arg2">optional object Arg2</param>
-		/// <param name="arg3">optional object Arg3</param>
-		/// <param name="arg4">optional object Arg4</param>
-		/// <param name="arg5">optional object Arg5</param>
+		/// <param name="arg1">object arg1</param>
+		/// <param name="arg2">optional object arg2</param>
+		/// <param name="arg3">optional object arg3</param>
+		/// <param name="arg4">optional object arg4</param>
+		/// <param name="arg5">optional object arg5</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 10,11,12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Excel", 10,11,12,14,15,16)]
 		public object Dummy15(object arg1, object arg2, object arg3, object arg4, object arg5)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5);
-			object returnItem = Invoker.MethodReturn(this, "Dummy15", paramsArray);
-			if((null != returnItem) && (returnItem is MarshalByRefObject))
-			{
-				ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
-				return newObject;
-			}
-			else
-			{
-				return  returnItem;
-			}
+			return Factory.ExecuteVariantMethodGet(this, "Dummy15", new object[]{ arg1, arg2, arg3, arg4, arg5 });
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="arg1">object Arg1</param>
-		/// <param name="arg2">optional object Arg2</param>
-		/// <param name="arg3">optional object Arg3</param>
-		/// <param name="arg4">optional object Arg4</param>
-		/// <param name="arg5">optional object Arg5</param>
-		/// <param name="arg6">optional object Arg6</param>
+		/// <param name="arg1">object arg1</param>
+		/// <param name="arg2">optional object arg2</param>
+		/// <param name="arg3">optional object arg3</param>
+		/// <param name="arg4">optional object arg4</param>
+		/// <param name="arg5">optional object arg5</param>
+		/// <param name="arg6">optional object arg6</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 10,11,12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Excel", 10,11,12,14,15,16)]
 		public object Dummy15(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6);
-			object returnItem = Invoker.MethodReturn(this, "Dummy15", paramsArray);
-			if((null != returnItem) && (returnItem is MarshalByRefObject))
-			{
-				ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
-				return newObject;
-			}
-			else
-			{
-				return  returnItem;
-			}
+			return Factory.ExecuteVariantMethodGet(this, "Dummy15", new object[]{ arg1, arg2, arg3, arg4, arg5, arg6 });
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="arg1">object Arg1</param>
-		/// <param name="arg2">optional object Arg2</param>
-		/// <param name="arg3">optional object Arg3</param>
-		/// <param name="arg4">optional object Arg4</param>
-		/// <param name="arg5">optional object Arg5</param>
-		/// <param name="arg6">optional object Arg6</param>
-		/// <param name="arg7">optional object Arg7</param>
+		/// <param name="arg1">object arg1</param>
+		/// <param name="arg2">optional object arg2</param>
+		/// <param name="arg3">optional object arg3</param>
+		/// <param name="arg4">optional object arg4</param>
+		/// <param name="arg5">optional object arg5</param>
+		/// <param name="arg6">optional object arg6</param>
+		/// <param name="arg7">optional object arg7</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 10,11,12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Excel", 10,11,12,14,15,16)]
 		public object Dummy15(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
-			object returnItem = Invoker.MethodReturn(this, "Dummy15", paramsArray);
-			if((null != returnItem) && (returnItem is MarshalByRefObject))
-			{
-				ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
-				return newObject;
-			}
-			else
-			{
-				return  returnItem;
-			}
+			return Factory.ExecuteVariantMethodGet(this, "Dummy15", new object[]{ arg1, arg2, arg3, arg4, arg5, arg6, arg7 });
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="arg1">object Arg1</param>
-		/// <param name="arg2">optional object Arg2</param>
-		/// <param name="arg3">optional object Arg3</param>
-		/// <param name="arg4">optional object Arg4</param>
-		/// <param name="arg5">optional object Arg5</param>
-		/// <param name="arg6">optional object Arg6</param>
-		/// <param name="arg7">optional object Arg7</param>
-		/// <param name="arg8">optional object Arg8</param>
+		/// <param name="arg1">object arg1</param>
+		/// <param name="arg2">optional object arg2</param>
+		/// <param name="arg3">optional object arg3</param>
+		/// <param name="arg4">optional object arg4</param>
+		/// <param name="arg5">optional object arg5</param>
+		/// <param name="arg6">optional object arg6</param>
+		/// <param name="arg7">optional object arg7</param>
+		/// <param name="arg8">optional object arg8</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 10,11,12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Excel", 10,11,12,14,15,16)]
 		public object Dummy15(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
-			object returnItem = Invoker.MethodReturn(this, "Dummy15", paramsArray);
-			if((null != returnItem) && (returnItem is MarshalByRefObject))
-			{
-				ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
-				return newObject;
-			}
-			else
-			{
-				return  returnItem;
-			}
+			return Factory.ExecuteVariantMethodGet(this, "Dummy15", new object[]{ arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8 });
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="arg1">object Arg1</param>
-		/// <param name="arg2">optional object Arg2</param>
-		/// <param name="arg3">optional object Arg3</param>
-		/// <param name="arg4">optional object Arg4</param>
-		/// <param name="arg5">optional object Arg5</param>
-		/// <param name="arg6">optional object Arg6</param>
-		/// <param name="arg7">optional object Arg7</param>
-		/// <param name="arg8">optional object Arg8</param>
-		/// <param name="arg9">optional object Arg9</param>
+		/// <param name="arg1">object arg1</param>
+		/// <param name="arg2">optional object arg2</param>
+		/// <param name="arg3">optional object arg3</param>
+		/// <param name="arg4">optional object arg4</param>
+		/// <param name="arg5">optional object arg5</param>
+		/// <param name="arg6">optional object arg6</param>
+		/// <param name="arg7">optional object arg7</param>
+		/// <param name="arg8">optional object arg8</param>
+		/// <param name="arg9">optional object arg9</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 10,11,12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Excel", 10,11,12,14,15,16)]
 		public object Dummy15(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9);
-			object returnItem = Invoker.MethodReturn(this, "Dummy15", paramsArray);
-			if((null != returnItem) && (returnItem is MarshalByRefObject))
-			{
-				ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
-				return newObject;
-			}
-			else
-			{
-				return  returnItem;
-			}
+			return Factory.ExecuteVariantMethodGet(this, "Dummy15", new object[]{ arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9 });
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="arg1">object Arg1</param>
-		/// <param name="arg2">optional object Arg2</param>
-		/// <param name="arg3">optional object Arg3</param>
-		/// <param name="arg4">optional object Arg4</param>
-		/// <param name="arg5">optional object Arg5</param>
-		/// <param name="arg6">optional object Arg6</param>
-		/// <param name="arg7">optional object Arg7</param>
-		/// <param name="arg8">optional object Arg8</param>
-		/// <param name="arg9">optional object Arg9</param>
-		/// <param name="arg10">optional object Arg10</param>
+		/// <param name="arg1">object arg1</param>
+		/// <param name="arg2">optional object arg2</param>
+		/// <param name="arg3">optional object arg3</param>
+		/// <param name="arg4">optional object arg4</param>
+		/// <param name="arg5">optional object arg5</param>
+		/// <param name="arg6">optional object arg6</param>
+		/// <param name="arg7">optional object arg7</param>
+		/// <param name="arg8">optional object arg8</param>
+		/// <param name="arg9">optional object arg9</param>
+		/// <param name="arg10">optional object arg10</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 10,11,12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Excel", 10,11,12,14,15,16)]
 		public object Dummy15(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10);
-			object returnItem = Invoker.MethodReturn(this, "Dummy15", paramsArray);
-			if((null != returnItem) && (returnItem is MarshalByRefObject))
-			{
-				ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
-				return newObject;
-			}
-			else
-			{
-				return  returnItem;
-			}
+			return Factory.ExecuteVariantMethodGet(this, "Dummy15", new object[]{ arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10 });
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="arg1">object Arg1</param>
-		/// <param name="arg2">optional object Arg2</param>
-		/// <param name="arg3">optional object Arg3</param>
-		/// <param name="arg4">optional object Arg4</param>
-		/// <param name="arg5">optional object Arg5</param>
-		/// <param name="arg6">optional object Arg6</param>
-		/// <param name="arg7">optional object Arg7</param>
-		/// <param name="arg8">optional object Arg8</param>
-		/// <param name="arg9">optional object Arg9</param>
-		/// <param name="arg10">optional object Arg10</param>
-		/// <param name="arg11">optional object Arg11</param>
+		/// <param name="arg1">object arg1</param>
+		/// <param name="arg2">optional object arg2</param>
+		/// <param name="arg3">optional object arg3</param>
+		/// <param name="arg4">optional object arg4</param>
+		/// <param name="arg5">optional object arg5</param>
+		/// <param name="arg6">optional object arg6</param>
+		/// <param name="arg7">optional object arg7</param>
+		/// <param name="arg8">optional object arg8</param>
+		/// <param name="arg9">optional object arg9</param>
+		/// <param name="arg10">optional object arg10</param>
+		/// <param name="arg11">optional object arg11</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 10,11,12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Excel", 10,11,12,14,15,16)]
 		public object Dummy15(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11);
-			object returnItem = Invoker.MethodReturn(this, "Dummy15", paramsArray);
-			if((null != returnItem) && (returnItem is MarshalByRefObject))
-			{
-				ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
-				return newObject;
-			}
-			else
-			{
-				return  returnItem;
-			}
+			return Factory.ExecuteVariantMethodGet(this, "Dummy15", new object[]{ arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11 });
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="arg1">object Arg1</param>
-		/// <param name="arg2">optional object Arg2</param>
-		/// <param name="arg3">optional object Arg3</param>
-		/// <param name="arg4">optional object Arg4</param>
-		/// <param name="arg5">optional object Arg5</param>
-		/// <param name="arg6">optional object Arg6</param>
-		/// <param name="arg7">optional object Arg7</param>
-		/// <param name="arg8">optional object Arg8</param>
-		/// <param name="arg9">optional object Arg9</param>
-		/// <param name="arg10">optional object Arg10</param>
-		/// <param name="arg11">optional object Arg11</param>
-		/// <param name="arg12">optional object Arg12</param>
+		/// <param name="arg1">object arg1</param>
+		/// <param name="arg2">optional object arg2</param>
+		/// <param name="arg3">optional object arg3</param>
+		/// <param name="arg4">optional object arg4</param>
+		/// <param name="arg5">optional object arg5</param>
+		/// <param name="arg6">optional object arg6</param>
+		/// <param name="arg7">optional object arg7</param>
+		/// <param name="arg8">optional object arg8</param>
+		/// <param name="arg9">optional object arg9</param>
+		/// <param name="arg10">optional object arg10</param>
+		/// <param name="arg11">optional object arg11</param>
+		/// <param name="arg12">optional object arg12</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 10,11,12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Excel", 10,11,12,14,15,16)]
 		public object Dummy15(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12);
-			object returnItem = Invoker.MethodReturn(this, "Dummy15", paramsArray);
-			if((null != returnItem) && (returnItem is MarshalByRefObject))
-			{
-				ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
-				return newObject;
-			}
-			else
-			{
-				return  returnItem;
-			}
+			return Factory.ExecuteVariantMethodGet(this, "Dummy15", new object[]{ arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12 });
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="arg1">object Arg1</param>
-		/// <param name="arg2">optional object Arg2</param>
-		/// <param name="arg3">optional object Arg3</param>
-		/// <param name="arg4">optional object Arg4</param>
-		/// <param name="arg5">optional object Arg5</param>
-		/// <param name="arg6">optional object Arg6</param>
-		/// <param name="arg7">optional object Arg7</param>
-		/// <param name="arg8">optional object Arg8</param>
-		/// <param name="arg9">optional object Arg9</param>
-		/// <param name="arg10">optional object Arg10</param>
-		/// <param name="arg11">optional object Arg11</param>
-		/// <param name="arg12">optional object Arg12</param>
-		/// <param name="arg13">optional object Arg13</param>
+		/// <param name="arg1">object arg1</param>
+		/// <param name="arg2">optional object arg2</param>
+		/// <param name="arg3">optional object arg3</param>
+		/// <param name="arg4">optional object arg4</param>
+		/// <param name="arg5">optional object arg5</param>
+		/// <param name="arg6">optional object arg6</param>
+		/// <param name="arg7">optional object arg7</param>
+		/// <param name="arg8">optional object arg8</param>
+		/// <param name="arg9">optional object arg9</param>
+		/// <param name="arg10">optional object arg10</param>
+		/// <param name="arg11">optional object arg11</param>
+		/// <param name="arg12">optional object arg12</param>
+		/// <param name="arg13">optional object arg13</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 10,11,12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Excel", 10,11,12,14,15,16)]
 		public object Dummy15(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13);
-			object returnItem = Invoker.MethodReturn(this, "Dummy15", paramsArray);
-			if((null != returnItem) && (returnItem is MarshalByRefObject))
-			{
-				ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
-				return newObject;
-			}
-			else
-			{
-				return  returnItem;
-			}
+			return Factory.ExecuteVariantMethodGet(this, "Dummy15", new object[]{ arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13 });
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="arg1">object Arg1</param>
-		/// <param name="arg2">optional object Arg2</param>
-		/// <param name="arg3">optional object Arg3</param>
-		/// <param name="arg4">optional object Arg4</param>
-		/// <param name="arg5">optional object Arg5</param>
-		/// <param name="arg6">optional object Arg6</param>
-		/// <param name="arg7">optional object Arg7</param>
-		/// <param name="arg8">optional object Arg8</param>
-		/// <param name="arg9">optional object Arg9</param>
-		/// <param name="arg10">optional object Arg10</param>
-		/// <param name="arg11">optional object Arg11</param>
-		/// <param name="arg12">optional object Arg12</param>
-		/// <param name="arg13">optional object Arg13</param>
-		/// <param name="arg14">optional object Arg14</param>
+		/// <param name="arg1">object arg1</param>
+		/// <param name="arg2">optional object arg2</param>
+		/// <param name="arg3">optional object arg3</param>
+		/// <param name="arg4">optional object arg4</param>
+		/// <param name="arg5">optional object arg5</param>
+		/// <param name="arg6">optional object arg6</param>
+		/// <param name="arg7">optional object arg7</param>
+		/// <param name="arg8">optional object arg8</param>
+		/// <param name="arg9">optional object arg9</param>
+		/// <param name="arg10">optional object arg10</param>
+		/// <param name="arg11">optional object arg11</param>
+		/// <param name="arg12">optional object arg12</param>
+		/// <param name="arg13">optional object arg13</param>
+		/// <param name="arg14">optional object arg14</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 10,11,12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Excel", 10,11,12,14,15,16)]
 		public object Dummy15(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14);
-			object returnItem = Invoker.MethodReturn(this, "Dummy15", paramsArray);
-			if((null != returnItem) && (returnItem is MarshalByRefObject))
-			{
-				ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
-				return newObject;
-			}
-			else
-			{
-				return  returnItem;
-			}
+			return Factory.ExecuteVariantMethodGet(this, "Dummy15", new object[]{ arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14 });
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="arg1">object Arg1</param>
-		/// <param name="arg2">optional object Arg2</param>
-		/// <param name="arg3">optional object Arg3</param>
-		/// <param name="arg4">optional object Arg4</param>
-		/// <param name="arg5">optional object Arg5</param>
-		/// <param name="arg6">optional object Arg6</param>
-		/// <param name="arg7">optional object Arg7</param>
-		/// <param name="arg8">optional object Arg8</param>
-		/// <param name="arg9">optional object Arg9</param>
-		/// <param name="arg10">optional object Arg10</param>
-		/// <param name="arg11">optional object Arg11</param>
-		/// <param name="arg12">optional object Arg12</param>
-		/// <param name="arg13">optional object Arg13</param>
-		/// <param name="arg14">optional object Arg14</param>
-		/// <param name="arg15">optional object Arg15</param>
+		/// <param name="arg1">object arg1</param>
+		/// <param name="arg2">optional object arg2</param>
+		/// <param name="arg3">optional object arg3</param>
+		/// <param name="arg4">optional object arg4</param>
+		/// <param name="arg5">optional object arg5</param>
+		/// <param name="arg6">optional object arg6</param>
+		/// <param name="arg7">optional object arg7</param>
+		/// <param name="arg8">optional object arg8</param>
+		/// <param name="arg9">optional object arg9</param>
+		/// <param name="arg10">optional object arg10</param>
+		/// <param name="arg11">optional object arg11</param>
+		/// <param name="arg12">optional object arg12</param>
+		/// <param name="arg13">optional object arg13</param>
+		/// <param name="arg14">optional object arg14</param>
+		/// <param name="arg15">optional object arg15</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 10,11,12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Excel", 10,11,12,14,15,16)]
 		public object Dummy15(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15);
-			object returnItem = Invoker.MethodReturn(this, "Dummy15", paramsArray);
-			if((null != returnItem) && (returnItem is MarshalByRefObject))
-			{
-				ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
-				return newObject;
-			}
-			else
-			{
-				return  returnItem;
-			}
+			return Factory.ExecuteVariantMethodGet(this, "Dummy15", new object[]{ arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15 });
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="arg1">object Arg1</param>
-		/// <param name="arg2">optional object Arg2</param>
-		/// <param name="arg3">optional object Arg3</param>
-		/// <param name="arg4">optional object Arg4</param>
-		/// <param name="arg5">optional object Arg5</param>
-		/// <param name="arg6">optional object Arg6</param>
-		/// <param name="arg7">optional object Arg7</param>
-		/// <param name="arg8">optional object Arg8</param>
-		/// <param name="arg9">optional object Arg9</param>
-		/// <param name="arg10">optional object Arg10</param>
-		/// <param name="arg11">optional object Arg11</param>
-		/// <param name="arg12">optional object Arg12</param>
-		/// <param name="arg13">optional object Arg13</param>
-		/// <param name="arg14">optional object Arg14</param>
-		/// <param name="arg15">optional object Arg15</param>
-		/// <param name="arg16">optional object Arg16</param>
+		/// <param name="arg1">object arg1</param>
+		/// <param name="arg2">optional object arg2</param>
+		/// <param name="arg3">optional object arg3</param>
+		/// <param name="arg4">optional object arg4</param>
+		/// <param name="arg5">optional object arg5</param>
+		/// <param name="arg6">optional object arg6</param>
+		/// <param name="arg7">optional object arg7</param>
+		/// <param name="arg8">optional object arg8</param>
+		/// <param name="arg9">optional object arg9</param>
+		/// <param name="arg10">optional object arg10</param>
+		/// <param name="arg11">optional object arg11</param>
+		/// <param name="arg12">optional object arg12</param>
+		/// <param name="arg13">optional object arg13</param>
+		/// <param name="arg14">optional object arg14</param>
+		/// <param name="arg15">optional object arg15</param>
+		/// <param name="arg16">optional object arg16</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 10,11,12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Excel", 10,11,12,14,15,16)]
 		public object Dummy15(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16);
-			object returnItem = Invoker.MethodReturn(this, "Dummy15", paramsArray);
-			if((null != returnItem) && (returnItem is MarshalByRefObject))
-			{
-				ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
-				return newObject;
-			}
-			else
-			{
-				return  returnItem;
-			}
+			return Factory.ExecuteVariantMethodGet(this, "Dummy15", new object[]{ arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16 });
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="arg1">object Arg1</param>
-		/// <param name="arg2">optional object Arg2</param>
-		/// <param name="arg3">optional object Arg3</param>
-		/// <param name="arg4">optional object Arg4</param>
-		/// <param name="arg5">optional object Arg5</param>
-		/// <param name="arg6">optional object Arg6</param>
-		/// <param name="arg7">optional object Arg7</param>
-		/// <param name="arg8">optional object Arg8</param>
-		/// <param name="arg9">optional object Arg9</param>
-		/// <param name="arg10">optional object Arg10</param>
-		/// <param name="arg11">optional object Arg11</param>
-		/// <param name="arg12">optional object Arg12</param>
-		/// <param name="arg13">optional object Arg13</param>
-		/// <param name="arg14">optional object Arg14</param>
-		/// <param name="arg15">optional object Arg15</param>
-		/// <param name="arg16">optional object Arg16</param>
-		/// <param name="arg17">optional object Arg17</param>
+		/// <param name="arg1">object arg1</param>
+		/// <param name="arg2">optional object arg2</param>
+		/// <param name="arg3">optional object arg3</param>
+		/// <param name="arg4">optional object arg4</param>
+		/// <param name="arg5">optional object arg5</param>
+		/// <param name="arg6">optional object arg6</param>
+		/// <param name="arg7">optional object arg7</param>
+		/// <param name="arg8">optional object arg8</param>
+		/// <param name="arg9">optional object arg9</param>
+		/// <param name="arg10">optional object arg10</param>
+		/// <param name="arg11">optional object arg11</param>
+		/// <param name="arg12">optional object arg12</param>
+		/// <param name="arg13">optional object arg13</param>
+		/// <param name="arg14">optional object arg14</param>
+		/// <param name="arg15">optional object arg15</param>
+		/// <param name="arg16">optional object arg16</param>
+		/// <param name="arg17">optional object arg17</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 10,11,12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Excel", 10,11,12,14,15,16)]
 		public object Dummy15(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17);
-			object returnItem = Invoker.MethodReturn(this, "Dummy15", paramsArray);
-			if((null != returnItem) && (returnItem is MarshalByRefObject))
-			{
-				ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
-				return newObject;
-			}
-			else
-			{
-				return  returnItem;
-			}
+			return Factory.ExecuteVariantMethodGet(this, "Dummy15", new object[]{ arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17 });
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="arg1">object Arg1</param>
-		/// <param name="arg2">optional object Arg2</param>
-		/// <param name="arg3">optional object Arg3</param>
-		/// <param name="arg4">optional object Arg4</param>
-		/// <param name="arg5">optional object Arg5</param>
-		/// <param name="arg6">optional object Arg6</param>
-		/// <param name="arg7">optional object Arg7</param>
-		/// <param name="arg8">optional object Arg8</param>
-		/// <param name="arg9">optional object Arg9</param>
-		/// <param name="arg10">optional object Arg10</param>
-		/// <param name="arg11">optional object Arg11</param>
-		/// <param name="arg12">optional object Arg12</param>
-		/// <param name="arg13">optional object Arg13</param>
-		/// <param name="arg14">optional object Arg14</param>
-		/// <param name="arg15">optional object Arg15</param>
-		/// <param name="arg16">optional object Arg16</param>
-		/// <param name="arg17">optional object Arg17</param>
-		/// <param name="arg18">optional object Arg18</param>
+		/// <param name="arg1">object arg1</param>
+		/// <param name="arg2">optional object arg2</param>
+		/// <param name="arg3">optional object arg3</param>
+		/// <param name="arg4">optional object arg4</param>
+		/// <param name="arg5">optional object arg5</param>
+		/// <param name="arg6">optional object arg6</param>
+		/// <param name="arg7">optional object arg7</param>
+		/// <param name="arg8">optional object arg8</param>
+		/// <param name="arg9">optional object arg9</param>
+		/// <param name="arg10">optional object arg10</param>
+		/// <param name="arg11">optional object arg11</param>
+		/// <param name="arg12">optional object arg12</param>
+		/// <param name="arg13">optional object arg13</param>
+		/// <param name="arg14">optional object arg14</param>
+		/// <param name="arg15">optional object arg15</param>
+		/// <param name="arg16">optional object arg16</param>
+		/// <param name="arg17">optional object arg17</param>
+		/// <param name="arg18">optional object arg18</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 10,11,12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Excel", 10,11,12,14,15,16)]
 		public object Dummy15(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18);
-			object returnItem = Invoker.MethodReturn(this, "Dummy15", paramsArray);
-			if((null != returnItem) && (returnItem is MarshalByRefObject))
-			{
-				ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
-				return newObject;
-			}
-			else
-			{
-				return  returnItem;
-			}
+			return Factory.ExecuteVariantMethodGet(this, "Dummy15", new object[]{ arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18 });
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="arg1">object Arg1</param>
-		/// <param name="arg2">optional object Arg2</param>
-		/// <param name="arg3">optional object Arg3</param>
-		/// <param name="arg4">optional object Arg4</param>
-		/// <param name="arg5">optional object Arg5</param>
-		/// <param name="arg6">optional object Arg6</param>
-		/// <param name="arg7">optional object Arg7</param>
-		/// <param name="arg8">optional object Arg8</param>
-		/// <param name="arg9">optional object Arg9</param>
-		/// <param name="arg10">optional object Arg10</param>
-		/// <param name="arg11">optional object Arg11</param>
-		/// <param name="arg12">optional object Arg12</param>
-		/// <param name="arg13">optional object Arg13</param>
-		/// <param name="arg14">optional object Arg14</param>
-		/// <param name="arg15">optional object Arg15</param>
-		/// <param name="arg16">optional object Arg16</param>
-		/// <param name="arg17">optional object Arg17</param>
-		/// <param name="arg18">optional object Arg18</param>
-		/// <param name="arg19">optional object Arg19</param>
+		/// <param name="arg1">object arg1</param>
+		/// <param name="arg2">optional object arg2</param>
+		/// <param name="arg3">optional object arg3</param>
+		/// <param name="arg4">optional object arg4</param>
+		/// <param name="arg5">optional object arg5</param>
+		/// <param name="arg6">optional object arg6</param>
+		/// <param name="arg7">optional object arg7</param>
+		/// <param name="arg8">optional object arg8</param>
+		/// <param name="arg9">optional object arg9</param>
+		/// <param name="arg10">optional object arg10</param>
+		/// <param name="arg11">optional object arg11</param>
+		/// <param name="arg12">optional object arg12</param>
+		/// <param name="arg13">optional object arg13</param>
+		/// <param name="arg14">optional object arg14</param>
+		/// <param name="arg15">optional object arg15</param>
+		/// <param name="arg16">optional object arg16</param>
+		/// <param name="arg17">optional object arg17</param>
+		/// <param name="arg18">optional object arg18</param>
+		/// <param name="arg19">optional object arg19</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 10,11,12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Excel", 10,11,12,14,15,16)]
 		public object Dummy15(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19);
-			object returnItem = Invoker.MethodReturn(this, "Dummy15", paramsArray);
-			if((null != returnItem) && (returnItem is MarshalByRefObject))
-			{
-				ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
-				return newObject;
-			}
-			else
-			{
-				return  returnItem;
-			}
+			return Factory.ExecuteVariantMethodGet(this, "Dummy15", new object[]{ arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19 });
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="arg1">object Arg1</param>
-		/// <param name="arg2">optional object Arg2</param>
-		/// <param name="arg3">optional object Arg3</param>
-		/// <param name="arg4">optional object Arg4</param>
-		/// <param name="arg5">optional object Arg5</param>
-		/// <param name="arg6">optional object Arg6</param>
-		/// <param name="arg7">optional object Arg7</param>
-		/// <param name="arg8">optional object Arg8</param>
-		/// <param name="arg9">optional object Arg9</param>
-		/// <param name="arg10">optional object Arg10</param>
-		/// <param name="arg11">optional object Arg11</param>
-		/// <param name="arg12">optional object Arg12</param>
-		/// <param name="arg13">optional object Arg13</param>
-		/// <param name="arg14">optional object Arg14</param>
-		/// <param name="arg15">optional object Arg15</param>
-		/// <param name="arg16">optional object Arg16</param>
-		/// <param name="arg17">optional object Arg17</param>
-		/// <param name="arg18">optional object Arg18</param>
-		/// <param name="arg19">optional object Arg19</param>
-		/// <param name="arg20">optional object Arg20</param>
+		/// <param name="arg1">object arg1</param>
+		/// <param name="arg2">optional object arg2</param>
+		/// <param name="arg3">optional object arg3</param>
+		/// <param name="arg4">optional object arg4</param>
+		/// <param name="arg5">optional object arg5</param>
+		/// <param name="arg6">optional object arg6</param>
+		/// <param name="arg7">optional object arg7</param>
+		/// <param name="arg8">optional object arg8</param>
+		/// <param name="arg9">optional object arg9</param>
+		/// <param name="arg10">optional object arg10</param>
+		/// <param name="arg11">optional object arg11</param>
+		/// <param name="arg12">optional object arg12</param>
+		/// <param name="arg13">optional object arg13</param>
+		/// <param name="arg14">optional object arg14</param>
+		/// <param name="arg15">optional object arg15</param>
+		/// <param name="arg16">optional object arg16</param>
+		/// <param name="arg17">optional object arg17</param>
+		/// <param name="arg18">optional object arg18</param>
+		/// <param name="arg19">optional object arg19</param>
+		/// <param name="arg20">optional object arg20</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 10,11,12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Excel", 10,11,12,14,15,16)]
 		public object Dummy15(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20);
-			object returnItem = Invoker.MethodReturn(this, "Dummy15", paramsArray);
-			if((null != returnItem) && (returnItem is MarshalByRefObject))
-			{
-				ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
-				return newObject;
-			}
-			else
-			{
-				return  returnItem;
-			}
+			return Factory.ExecuteVariantMethodGet(this, "Dummy15", new object[]{ arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20 });
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="arg1">object Arg1</param>
-		/// <param name="arg2">optional object Arg2</param>
-		/// <param name="arg3">optional object Arg3</param>
-		/// <param name="arg4">optional object Arg4</param>
-		/// <param name="arg5">optional object Arg5</param>
-		/// <param name="arg6">optional object Arg6</param>
-		/// <param name="arg7">optional object Arg7</param>
-		/// <param name="arg8">optional object Arg8</param>
-		/// <param name="arg9">optional object Arg9</param>
-		/// <param name="arg10">optional object Arg10</param>
-		/// <param name="arg11">optional object Arg11</param>
-		/// <param name="arg12">optional object Arg12</param>
-		/// <param name="arg13">optional object Arg13</param>
-		/// <param name="arg14">optional object Arg14</param>
-		/// <param name="arg15">optional object Arg15</param>
-		/// <param name="arg16">optional object Arg16</param>
-		/// <param name="arg17">optional object Arg17</param>
-		/// <param name="arg18">optional object Arg18</param>
-		/// <param name="arg19">optional object Arg19</param>
-		/// <param name="arg20">optional object Arg20</param>
-		/// <param name="arg21">optional object Arg21</param>
+		/// <param name="arg1">object arg1</param>
+		/// <param name="arg2">optional object arg2</param>
+		/// <param name="arg3">optional object arg3</param>
+		/// <param name="arg4">optional object arg4</param>
+		/// <param name="arg5">optional object arg5</param>
+		/// <param name="arg6">optional object arg6</param>
+		/// <param name="arg7">optional object arg7</param>
+		/// <param name="arg8">optional object arg8</param>
+		/// <param name="arg9">optional object arg9</param>
+		/// <param name="arg10">optional object arg10</param>
+		/// <param name="arg11">optional object arg11</param>
+		/// <param name="arg12">optional object arg12</param>
+		/// <param name="arg13">optional object arg13</param>
+		/// <param name="arg14">optional object arg14</param>
+		/// <param name="arg15">optional object arg15</param>
+		/// <param name="arg16">optional object arg16</param>
+		/// <param name="arg17">optional object arg17</param>
+		/// <param name="arg18">optional object arg18</param>
+		/// <param name="arg19">optional object arg19</param>
+		/// <param name="arg20">optional object arg20</param>
+		/// <param name="arg21">optional object arg21</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 10,11,12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Excel", 10,11,12,14,15,16)]
 		public object Dummy15(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21);
-			object returnItem = Invoker.MethodReturn(this, "Dummy15", paramsArray);
-			if((null != returnItem) && (returnItem is MarshalByRefObject))
-			{
-				ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
-				return newObject;
-			}
-			else
-			{
-				return  returnItem;
-			}
+			return Factory.ExecuteVariantMethodGet(this, "Dummy15", new object[]{ arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21 });
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="arg1">object Arg1</param>
-		/// <param name="arg2">optional object Arg2</param>
-		/// <param name="arg3">optional object Arg3</param>
-		/// <param name="arg4">optional object Arg4</param>
-		/// <param name="arg5">optional object Arg5</param>
-		/// <param name="arg6">optional object Arg6</param>
-		/// <param name="arg7">optional object Arg7</param>
-		/// <param name="arg8">optional object Arg8</param>
-		/// <param name="arg9">optional object Arg9</param>
-		/// <param name="arg10">optional object Arg10</param>
-		/// <param name="arg11">optional object Arg11</param>
-		/// <param name="arg12">optional object Arg12</param>
-		/// <param name="arg13">optional object Arg13</param>
-		/// <param name="arg14">optional object Arg14</param>
-		/// <param name="arg15">optional object Arg15</param>
-		/// <param name="arg16">optional object Arg16</param>
-		/// <param name="arg17">optional object Arg17</param>
-		/// <param name="arg18">optional object Arg18</param>
-		/// <param name="arg19">optional object Arg19</param>
-		/// <param name="arg20">optional object Arg20</param>
-		/// <param name="arg21">optional object Arg21</param>
-		/// <param name="arg22">optional object Arg22</param>
+		/// <param name="arg1">object arg1</param>
+		/// <param name="arg2">optional object arg2</param>
+		/// <param name="arg3">optional object arg3</param>
+		/// <param name="arg4">optional object arg4</param>
+		/// <param name="arg5">optional object arg5</param>
+		/// <param name="arg6">optional object arg6</param>
+		/// <param name="arg7">optional object arg7</param>
+		/// <param name="arg8">optional object arg8</param>
+		/// <param name="arg9">optional object arg9</param>
+		/// <param name="arg10">optional object arg10</param>
+		/// <param name="arg11">optional object arg11</param>
+		/// <param name="arg12">optional object arg12</param>
+		/// <param name="arg13">optional object arg13</param>
+		/// <param name="arg14">optional object arg14</param>
+		/// <param name="arg15">optional object arg15</param>
+		/// <param name="arg16">optional object arg16</param>
+		/// <param name="arg17">optional object arg17</param>
+		/// <param name="arg18">optional object arg18</param>
+		/// <param name="arg19">optional object arg19</param>
+		/// <param name="arg20">optional object arg20</param>
+		/// <param name="arg21">optional object arg21</param>
+		/// <param name="arg22">optional object arg22</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 10,11,12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Excel", 10,11,12,14,15,16)]
 		public object Dummy15(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22);
-			object returnItem = Invoker.MethodReturn(this, "Dummy15", paramsArray);
-			if((null != returnItem) && (returnItem is MarshalByRefObject))
-			{
-				ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
-				return newObject;
-			}
-			else
-			{
-				return  returnItem;
-			}
+			return Factory.ExecuteVariantMethodGet(this, "Dummy15", new object[]{ arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22 });
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="arg1">object Arg1</param>
-		/// <param name="arg2">optional object Arg2</param>
-		/// <param name="arg3">optional object Arg3</param>
-		/// <param name="arg4">optional object Arg4</param>
-		/// <param name="arg5">optional object Arg5</param>
-		/// <param name="arg6">optional object Arg6</param>
-		/// <param name="arg7">optional object Arg7</param>
-		/// <param name="arg8">optional object Arg8</param>
-		/// <param name="arg9">optional object Arg9</param>
-		/// <param name="arg10">optional object Arg10</param>
-		/// <param name="arg11">optional object Arg11</param>
-		/// <param name="arg12">optional object Arg12</param>
-		/// <param name="arg13">optional object Arg13</param>
-		/// <param name="arg14">optional object Arg14</param>
-		/// <param name="arg15">optional object Arg15</param>
-		/// <param name="arg16">optional object Arg16</param>
-		/// <param name="arg17">optional object Arg17</param>
-		/// <param name="arg18">optional object Arg18</param>
-		/// <param name="arg19">optional object Arg19</param>
-		/// <param name="arg20">optional object Arg20</param>
-		/// <param name="arg21">optional object Arg21</param>
-		/// <param name="arg22">optional object Arg22</param>
-		/// <param name="arg23">optional object Arg23</param>
+		/// <param name="arg1">object arg1</param>
+		/// <param name="arg2">optional object arg2</param>
+		/// <param name="arg3">optional object arg3</param>
+		/// <param name="arg4">optional object arg4</param>
+		/// <param name="arg5">optional object arg5</param>
+		/// <param name="arg6">optional object arg6</param>
+		/// <param name="arg7">optional object arg7</param>
+		/// <param name="arg8">optional object arg8</param>
+		/// <param name="arg9">optional object arg9</param>
+		/// <param name="arg10">optional object arg10</param>
+		/// <param name="arg11">optional object arg11</param>
+		/// <param name="arg12">optional object arg12</param>
+		/// <param name="arg13">optional object arg13</param>
+		/// <param name="arg14">optional object arg14</param>
+		/// <param name="arg15">optional object arg15</param>
+		/// <param name="arg16">optional object arg16</param>
+		/// <param name="arg17">optional object arg17</param>
+		/// <param name="arg18">optional object arg18</param>
+		/// <param name="arg19">optional object arg19</param>
+		/// <param name="arg20">optional object arg20</param>
+		/// <param name="arg21">optional object arg21</param>
+		/// <param name="arg22">optional object arg22</param>
+		/// <param name="arg23">optional object arg23</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 10,11,12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Excel", 10,11,12,14,15,16)]
 		public object Dummy15(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23);
-			object returnItem = Invoker.MethodReturn(this, "Dummy15", paramsArray);
-			if((null != returnItem) && (returnItem is MarshalByRefObject))
-			{
-				ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
-				return newObject;
-			}
-			else
-			{
-				return  returnItem;
-			}
+			return Factory.ExecuteVariantMethodGet(this, "Dummy15", new object[]{ arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23 });
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="arg1">object Arg1</param>
-		/// <param name="arg2">optional object Arg2</param>
-		/// <param name="arg3">optional object Arg3</param>
-		/// <param name="arg4">optional object Arg4</param>
-		/// <param name="arg5">optional object Arg5</param>
-		/// <param name="arg6">optional object Arg6</param>
-		/// <param name="arg7">optional object Arg7</param>
-		/// <param name="arg8">optional object Arg8</param>
-		/// <param name="arg9">optional object Arg9</param>
-		/// <param name="arg10">optional object Arg10</param>
-		/// <param name="arg11">optional object Arg11</param>
-		/// <param name="arg12">optional object Arg12</param>
-		/// <param name="arg13">optional object Arg13</param>
-		/// <param name="arg14">optional object Arg14</param>
-		/// <param name="arg15">optional object Arg15</param>
-		/// <param name="arg16">optional object Arg16</param>
-		/// <param name="arg17">optional object Arg17</param>
-		/// <param name="arg18">optional object Arg18</param>
-		/// <param name="arg19">optional object Arg19</param>
-		/// <param name="arg20">optional object Arg20</param>
-		/// <param name="arg21">optional object Arg21</param>
-		/// <param name="arg22">optional object Arg22</param>
-		/// <param name="arg23">optional object Arg23</param>
-		/// <param name="arg24">optional object Arg24</param>
+		/// <param name="arg1">object arg1</param>
+		/// <param name="arg2">optional object arg2</param>
+		/// <param name="arg3">optional object arg3</param>
+		/// <param name="arg4">optional object arg4</param>
+		/// <param name="arg5">optional object arg5</param>
+		/// <param name="arg6">optional object arg6</param>
+		/// <param name="arg7">optional object arg7</param>
+		/// <param name="arg8">optional object arg8</param>
+		/// <param name="arg9">optional object arg9</param>
+		/// <param name="arg10">optional object arg10</param>
+		/// <param name="arg11">optional object arg11</param>
+		/// <param name="arg12">optional object arg12</param>
+		/// <param name="arg13">optional object arg13</param>
+		/// <param name="arg14">optional object arg14</param>
+		/// <param name="arg15">optional object arg15</param>
+		/// <param name="arg16">optional object arg16</param>
+		/// <param name="arg17">optional object arg17</param>
+		/// <param name="arg18">optional object arg18</param>
+		/// <param name="arg19">optional object arg19</param>
+		/// <param name="arg20">optional object arg20</param>
+		/// <param name="arg21">optional object arg21</param>
+		/// <param name="arg22">optional object arg22</param>
+		/// <param name="arg23">optional object arg23</param>
+		/// <param name="arg24">optional object arg24</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 10,11,12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Excel", 10,11,12,14,15,16)]
 		public object Dummy15(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24);
-			object returnItem = Invoker.MethodReturn(this, "Dummy15", paramsArray);
-			if((null != returnItem) && (returnItem is MarshalByRefObject))
-			{
-				ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
-				return newObject;
-			}
-			else
-			{
-				return  returnItem;
-			}
+			return Factory.ExecuteVariantMethodGet(this, "Dummy15", new object[]{ arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24 });
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="arg1">object Arg1</param>
-		/// <param name="arg2">optional object Arg2</param>
-		/// <param name="arg3">optional object Arg3</param>
-		/// <param name="arg4">optional object Arg4</param>
-		/// <param name="arg5">optional object Arg5</param>
-		/// <param name="arg6">optional object Arg6</param>
-		/// <param name="arg7">optional object Arg7</param>
-		/// <param name="arg8">optional object Arg8</param>
-		/// <param name="arg9">optional object Arg9</param>
-		/// <param name="arg10">optional object Arg10</param>
-		/// <param name="arg11">optional object Arg11</param>
-		/// <param name="arg12">optional object Arg12</param>
-		/// <param name="arg13">optional object Arg13</param>
-		/// <param name="arg14">optional object Arg14</param>
-		/// <param name="arg15">optional object Arg15</param>
-		/// <param name="arg16">optional object Arg16</param>
-		/// <param name="arg17">optional object Arg17</param>
-		/// <param name="arg18">optional object Arg18</param>
-		/// <param name="arg19">optional object Arg19</param>
-		/// <param name="arg20">optional object Arg20</param>
-		/// <param name="arg21">optional object Arg21</param>
-		/// <param name="arg22">optional object Arg22</param>
-		/// <param name="arg23">optional object Arg23</param>
-		/// <param name="arg24">optional object Arg24</param>
-		/// <param name="arg25">optional object Arg25</param>
+		/// <param name="arg1">object arg1</param>
+		/// <param name="arg2">optional object arg2</param>
+		/// <param name="arg3">optional object arg3</param>
+		/// <param name="arg4">optional object arg4</param>
+		/// <param name="arg5">optional object arg5</param>
+		/// <param name="arg6">optional object arg6</param>
+		/// <param name="arg7">optional object arg7</param>
+		/// <param name="arg8">optional object arg8</param>
+		/// <param name="arg9">optional object arg9</param>
+		/// <param name="arg10">optional object arg10</param>
+		/// <param name="arg11">optional object arg11</param>
+		/// <param name="arg12">optional object arg12</param>
+		/// <param name="arg13">optional object arg13</param>
+		/// <param name="arg14">optional object arg14</param>
+		/// <param name="arg15">optional object arg15</param>
+		/// <param name="arg16">optional object arg16</param>
+		/// <param name="arg17">optional object arg17</param>
+		/// <param name="arg18">optional object arg18</param>
+		/// <param name="arg19">optional object arg19</param>
+		/// <param name="arg20">optional object arg20</param>
+		/// <param name="arg21">optional object arg21</param>
+		/// <param name="arg22">optional object arg22</param>
+		/// <param name="arg23">optional object arg23</param>
+		/// <param name="arg24">optional object arg24</param>
+		/// <param name="arg25">optional object arg25</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 10,11,12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Excel", 10,11,12,14,15,16)]
 		public object Dummy15(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24, object arg25)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25);
-			object returnItem = Invoker.MethodReturn(this, "Dummy15", paramsArray);
-			if((null != returnItem) && (returnItem is MarshalByRefObject))
-			{
-				ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
-				return newObject;
-			}
-			else
-			{
-				return  returnItem;
-			}
+			return Factory.ExecuteVariantMethodGet(this, "Dummy15", new object[]{ arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25 });
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="arg1">object Arg1</param>
-		/// <param name="arg2">optional object Arg2</param>
-		/// <param name="arg3">optional object Arg3</param>
-		/// <param name="arg4">optional object Arg4</param>
-		/// <param name="arg5">optional object Arg5</param>
-		/// <param name="arg6">optional object Arg6</param>
-		/// <param name="arg7">optional object Arg7</param>
-		/// <param name="arg8">optional object Arg8</param>
-		/// <param name="arg9">optional object Arg9</param>
-		/// <param name="arg10">optional object Arg10</param>
-		/// <param name="arg11">optional object Arg11</param>
-		/// <param name="arg12">optional object Arg12</param>
-		/// <param name="arg13">optional object Arg13</param>
-		/// <param name="arg14">optional object Arg14</param>
-		/// <param name="arg15">optional object Arg15</param>
-		/// <param name="arg16">optional object Arg16</param>
-		/// <param name="arg17">optional object Arg17</param>
-		/// <param name="arg18">optional object Arg18</param>
-		/// <param name="arg19">optional object Arg19</param>
-		/// <param name="arg20">optional object Arg20</param>
-		/// <param name="arg21">optional object Arg21</param>
-		/// <param name="arg22">optional object Arg22</param>
-		/// <param name="arg23">optional object Arg23</param>
-		/// <param name="arg24">optional object Arg24</param>
-		/// <param name="arg25">optional object Arg25</param>
-		/// <param name="arg26">optional object Arg26</param>
+		/// <param name="arg1">object arg1</param>
+		/// <param name="arg2">optional object arg2</param>
+		/// <param name="arg3">optional object arg3</param>
+		/// <param name="arg4">optional object arg4</param>
+		/// <param name="arg5">optional object arg5</param>
+		/// <param name="arg6">optional object arg6</param>
+		/// <param name="arg7">optional object arg7</param>
+		/// <param name="arg8">optional object arg8</param>
+		/// <param name="arg9">optional object arg9</param>
+		/// <param name="arg10">optional object arg10</param>
+		/// <param name="arg11">optional object arg11</param>
+		/// <param name="arg12">optional object arg12</param>
+		/// <param name="arg13">optional object arg13</param>
+		/// <param name="arg14">optional object arg14</param>
+		/// <param name="arg15">optional object arg15</param>
+		/// <param name="arg16">optional object arg16</param>
+		/// <param name="arg17">optional object arg17</param>
+		/// <param name="arg18">optional object arg18</param>
+		/// <param name="arg19">optional object arg19</param>
+		/// <param name="arg20">optional object arg20</param>
+		/// <param name="arg21">optional object arg21</param>
+		/// <param name="arg22">optional object arg22</param>
+		/// <param name="arg23">optional object arg23</param>
+		/// <param name="arg24">optional object arg24</param>
+		/// <param name="arg25">optional object arg25</param>
+		/// <param name="arg26">optional object arg26</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 10,11,12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Excel", 10,11,12,14,15,16)]
 		public object Dummy15(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24, object arg25, object arg26)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26);
-			object returnItem = Invoker.MethodReturn(this, "Dummy15", paramsArray);
-			if((null != returnItem) && (returnItem is MarshalByRefObject))
-			{
-				ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
-				return newObject;
-			}
-			else
-			{
-				return  returnItem;
-			}
+			return Factory.ExecuteVariantMethodGet(this, "Dummy15", new object[]{ arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26 });
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="arg1">object Arg1</param>
-		/// <param name="arg2">optional object Arg2</param>
-		/// <param name="arg3">optional object Arg3</param>
-		/// <param name="arg4">optional object Arg4</param>
-		/// <param name="arg5">optional object Arg5</param>
-		/// <param name="arg6">optional object Arg6</param>
-		/// <param name="arg7">optional object Arg7</param>
-		/// <param name="arg8">optional object Arg8</param>
-		/// <param name="arg9">optional object Arg9</param>
-		/// <param name="arg10">optional object Arg10</param>
-		/// <param name="arg11">optional object Arg11</param>
-		/// <param name="arg12">optional object Arg12</param>
-		/// <param name="arg13">optional object Arg13</param>
-		/// <param name="arg14">optional object Arg14</param>
-		/// <param name="arg15">optional object Arg15</param>
-		/// <param name="arg16">optional object Arg16</param>
-		/// <param name="arg17">optional object Arg17</param>
-		/// <param name="arg18">optional object Arg18</param>
-		/// <param name="arg19">optional object Arg19</param>
-		/// <param name="arg20">optional object Arg20</param>
-		/// <param name="arg21">optional object Arg21</param>
-		/// <param name="arg22">optional object Arg22</param>
-		/// <param name="arg23">optional object Arg23</param>
-		/// <param name="arg24">optional object Arg24</param>
-		/// <param name="arg25">optional object Arg25</param>
-		/// <param name="arg26">optional object Arg26</param>
-		/// <param name="arg27">optional object Arg27</param>
+		/// <param name="arg1">object arg1</param>
+		/// <param name="arg2">optional object arg2</param>
+		/// <param name="arg3">optional object arg3</param>
+		/// <param name="arg4">optional object arg4</param>
+		/// <param name="arg5">optional object arg5</param>
+		/// <param name="arg6">optional object arg6</param>
+		/// <param name="arg7">optional object arg7</param>
+		/// <param name="arg8">optional object arg8</param>
+		/// <param name="arg9">optional object arg9</param>
+		/// <param name="arg10">optional object arg10</param>
+		/// <param name="arg11">optional object arg11</param>
+		/// <param name="arg12">optional object arg12</param>
+		/// <param name="arg13">optional object arg13</param>
+		/// <param name="arg14">optional object arg14</param>
+		/// <param name="arg15">optional object arg15</param>
+		/// <param name="arg16">optional object arg16</param>
+		/// <param name="arg17">optional object arg17</param>
+		/// <param name="arg18">optional object arg18</param>
+		/// <param name="arg19">optional object arg19</param>
+		/// <param name="arg20">optional object arg20</param>
+		/// <param name="arg21">optional object arg21</param>
+		/// <param name="arg22">optional object arg22</param>
+		/// <param name="arg23">optional object arg23</param>
+		/// <param name="arg24">optional object arg24</param>
+		/// <param name="arg25">optional object arg25</param>
+		/// <param name="arg26">optional object arg26</param>
+		/// <param name="arg27">optional object arg27</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 10,11,12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Excel", 10,11,12,14,15,16)]
 		public object Dummy15(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24, object arg25, object arg26, object arg27)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27);
-			object returnItem = Invoker.MethodReturn(this, "Dummy15", paramsArray);
-			if((null != returnItem) && (returnItem is MarshalByRefObject))
-			{
-				ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
-				return newObject;
-			}
-			else
-			{
-				return  returnItem;
-			}
+			return Factory.ExecuteVariantMethodGet(this, "Dummy15", new object[]{ arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27 });
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="arg1">object Arg1</param>
-		/// <param name="arg2">optional object Arg2</param>
-		/// <param name="arg3">optional object Arg3</param>
-		/// <param name="arg4">optional object Arg4</param>
-		/// <param name="arg5">optional object Arg5</param>
-		/// <param name="arg6">optional object Arg6</param>
-		/// <param name="arg7">optional object Arg7</param>
-		/// <param name="arg8">optional object Arg8</param>
-		/// <param name="arg9">optional object Arg9</param>
-		/// <param name="arg10">optional object Arg10</param>
-		/// <param name="arg11">optional object Arg11</param>
-		/// <param name="arg12">optional object Arg12</param>
-		/// <param name="arg13">optional object Arg13</param>
-		/// <param name="arg14">optional object Arg14</param>
-		/// <param name="arg15">optional object Arg15</param>
-		/// <param name="arg16">optional object Arg16</param>
-		/// <param name="arg17">optional object Arg17</param>
-		/// <param name="arg18">optional object Arg18</param>
-		/// <param name="arg19">optional object Arg19</param>
-		/// <param name="arg20">optional object Arg20</param>
-		/// <param name="arg21">optional object Arg21</param>
-		/// <param name="arg22">optional object Arg22</param>
-		/// <param name="arg23">optional object Arg23</param>
-		/// <param name="arg24">optional object Arg24</param>
-		/// <param name="arg25">optional object Arg25</param>
-		/// <param name="arg26">optional object Arg26</param>
-		/// <param name="arg27">optional object Arg27</param>
-		/// <param name="arg28">optional object Arg28</param>
+		/// <param name="arg1">object arg1</param>
+		/// <param name="arg2">optional object arg2</param>
+		/// <param name="arg3">optional object arg3</param>
+		/// <param name="arg4">optional object arg4</param>
+		/// <param name="arg5">optional object arg5</param>
+		/// <param name="arg6">optional object arg6</param>
+		/// <param name="arg7">optional object arg7</param>
+		/// <param name="arg8">optional object arg8</param>
+		/// <param name="arg9">optional object arg9</param>
+		/// <param name="arg10">optional object arg10</param>
+		/// <param name="arg11">optional object arg11</param>
+		/// <param name="arg12">optional object arg12</param>
+		/// <param name="arg13">optional object arg13</param>
+		/// <param name="arg14">optional object arg14</param>
+		/// <param name="arg15">optional object arg15</param>
+		/// <param name="arg16">optional object arg16</param>
+		/// <param name="arg17">optional object arg17</param>
+		/// <param name="arg18">optional object arg18</param>
+		/// <param name="arg19">optional object arg19</param>
+		/// <param name="arg20">optional object arg20</param>
+		/// <param name="arg21">optional object arg21</param>
+		/// <param name="arg22">optional object arg22</param>
+		/// <param name="arg23">optional object arg23</param>
+		/// <param name="arg24">optional object arg24</param>
+		/// <param name="arg25">optional object arg25</param>
+		/// <param name="arg26">optional object arg26</param>
+		/// <param name="arg27">optional object arg27</param>
+		/// <param name="arg28">optional object arg28</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 10,11,12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Excel", 10,11,12,14,15,16)]
 		public object Dummy15(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24, object arg25, object arg26, object arg27, object arg28)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28);
-			object returnItem = Invoker.MethodReturn(this, "Dummy15", paramsArray);
-			if((null != returnItem) && (returnItem is MarshalByRefObject))
-			{
-				ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
-				return newObject;
-			}
-			else
-			{
-				return  returnItem;
-			}
+			return Factory.ExecuteVariantMethodGet(this, "Dummy15", new object[]{ arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28 });
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="arg1">object Arg1</param>
-		/// <param name="arg2">optional object Arg2</param>
-		/// <param name="arg3">optional object Arg3</param>
-		/// <param name="arg4">optional object Arg4</param>
-		/// <param name="arg5">optional object Arg5</param>
-		/// <param name="arg6">optional object Arg6</param>
-		/// <param name="arg7">optional object Arg7</param>
-		/// <param name="arg8">optional object Arg8</param>
-		/// <param name="arg9">optional object Arg9</param>
-		/// <param name="arg10">optional object Arg10</param>
-		/// <param name="arg11">optional object Arg11</param>
-		/// <param name="arg12">optional object Arg12</param>
-		/// <param name="arg13">optional object Arg13</param>
-		/// <param name="arg14">optional object Arg14</param>
-		/// <param name="arg15">optional object Arg15</param>
-		/// <param name="arg16">optional object Arg16</param>
-		/// <param name="arg17">optional object Arg17</param>
-		/// <param name="arg18">optional object Arg18</param>
-		/// <param name="arg19">optional object Arg19</param>
-		/// <param name="arg20">optional object Arg20</param>
-		/// <param name="arg21">optional object Arg21</param>
-		/// <param name="arg22">optional object Arg22</param>
-		/// <param name="arg23">optional object Arg23</param>
-		/// <param name="arg24">optional object Arg24</param>
-		/// <param name="arg25">optional object Arg25</param>
-		/// <param name="arg26">optional object Arg26</param>
-		/// <param name="arg27">optional object Arg27</param>
-		/// <param name="arg28">optional object Arg28</param>
-		/// <param name="arg29">optional object Arg29</param>
+		/// <param name="arg1">object arg1</param>
+		/// <param name="arg2">optional object arg2</param>
+		/// <param name="arg3">optional object arg3</param>
+		/// <param name="arg4">optional object arg4</param>
+		/// <param name="arg5">optional object arg5</param>
+		/// <param name="arg6">optional object arg6</param>
+		/// <param name="arg7">optional object arg7</param>
+		/// <param name="arg8">optional object arg8</param>
+		/// <param name="arg9">optional object arg9</param>
+		/// <param name="arg10">optional object arg10</param>
+		/// <param name="arg11">optional object arg11</param>
+		/// <param name="arg12">optional object arg12</param>
+		/// <param name="arg13">optional object arg13</param>
+		/// <param name="arg14">optional object arg14</param>
+		/// <param name="arg15">optional object arg15</param>
+		/// <param name="arg16">optional object arg16</param>
+		/// <param name="arg17">optional object arg17</param>
+		/// <param name="arg18">optional object arg18</param>
+		/// <param name="arg19">optional object arg19</param>
+		/// <param name="arg20">optional object arg20</param>
+		/// <param name="arg21">optional object arg21</param>
+		/// <param name="arg22">optional object arg22</param>
+		/// <param name="arg23">optional object arg23</param>
+		/// <param name="arg24">optional object arg24</param>
+		/// <param name="arg25">optional object arg25</param>
+		/// <param name="arg26">optional object arg26</param>
+		/// <param name="arg27">optional object arg27</param>
+		/// <param name="arg28">optional object arg28</param>
+		/// <param name="arg29">optional object arg29</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 10,11,12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Excel", 10,11,12,14,15,16)]
 		public object Dummy15(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24, object arg25, object arg26, object arg27, object arg28, object arg29)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28, arg29);
-			object returnItem = Invoker.MethodReturn(this, "Dummy15", paramsArray);
-			if((null != returnItem) && (returnItem is MarshalByRefObject))
-			{
-				ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
-				return newObject;
-			}
-			else
-			{
-				return  returnItem;
-			}
+			return Factory.ExecuteVariantMethodGet(this, "Dummy15", new object[]{ arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28, arg29 });
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff821072.aspx
 		/// </summary>
-		/// <param name="file">string File</param>
-		/// <param name="measures">optional object Measures</param>
-		/// <param name="levels">optional object Levels</param>
-		/// <param name="members">optional object Members</param>
-		/// <param name="properties">optional object Properties</param>
-		[SupportByVersionAttribute("Excel", 10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff821072.aspx </remarks>
+		/// <param name="file">string file</param>
+		/// <param name="measures">optional object measures</param>
+		/// <param name="levels">optional object levels</param>
+		/// <param name="members">optional object members</param>
+		/// <param name="properties">optional object properties</param>
+		[SupportByVersion("Excel", 10,11,12,14,15,16)]
 		public string CreateCubeFile(string file, object measures, object levels, object members, object properties)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(file, measures, levels, members, properties);
-			object returnItem = Invoker.MethodReturn(this, "CreateCubeFile", paramsArray);
-			return NetRuntimeSystem.Convert.ToString(returnItem);
+			return Factory.ExecuteStringMethodGet(this, "CreateCubeFile", new object[]{ file, measures, levels, members, properties });
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff821072.aspx
 		/// </summary>
-		/// <param name="file">string File</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff821072.aspx </remarks>
+		/// <param name="file">string file</param>
+		[CustomMethod]
+		[SupportByVersion("Excel", 10,11,12,14,15,16)]
 		public string CreateCubeFile(string file)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(file);
-			object returnItem = Invoker.MethodReturn(this, "CreateCubeFile", paramsArray);
-			return NetRuntimeSystem.Convert.ToString(returnItem);
+			return Factory.ExecuteStringMethodGet(this, "CreateCubeFile", file);
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff821072.aspx
 		/// </summary>
-		/// <param name="file">string File</param>
-		/// <param name="measures">optional object Measures</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff821072.aspx </remarks>
+		/// <param name="file">string file</param>
+		/// <param name="measures">optional object measures</param>
+		[CustomMethod]
+		[SupportByVersion("Excel", 10,11,12,14,15,16)]
 		public string CreateCubeFile(string file, object measures)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(file, measures);
-			object returnItem = Invoker.MethodReturn(this, "CreateCubeFile", paramsArray);
-			return NetRuntimeSystem.Convert.ToString(returnItem);
+			return Factory.ExecuteStringMethodGet(this, "CreateCubeFile", file, measures);
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff821072.aspx
 		/// </summary>
-		/// <param name="file">string File</param>
-		/// <param name="measures">optional object Measures</param>
-		/// <param name="levels">optional object Levels</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff821072.aspx </remarks>
+		/// <param name="file">string file</param>
+		/// <param name="measures">optional object measures</param>
+		/// <param name="levels">optional object levels</param>
+		[CustomMethod]
+		[SupportByVersion("Excel", 10,11,12,14,15,16)]
 		public string CreateCubeFile(string file, object measures, object levels)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(file, measures, levels);
-			object returnItem = Invoker.MethodReturn(this, "CreateCubeFile", paramsArray);
-			return NetRuntimeSystem.Convert.ToString(returnItem);
+			return Factory.ExecuteStringMethodGet(this, "CreateCubeFile", file, measures, levels);
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff821072.aspx
 		/// </summary>
-		/// <param name="file">string File</param>
-		/// <param name="measures">optional object Measures</param>
-		/// <param name="levels">optional object Levels</param>
-		/// <param name="members">optional object Members</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff821072.aspx </remarks>
+		/// <param name="file">string file</param>
+		/// <param name="measures">optional object measures</param>
+		/// <param name="levels">optional object levels</param>
+		/// <param name="members">optional object members</param>
+		[CustomMethod]
+		[SupportByVersion("Excel", 10,11,12,14,15,16)]
 		public string CreateCubeFile(string file, object measures, object levels, object members)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(file, measures, levels, members);
-			object returnItem = Invoker.MethodReturn(this, "CreateCubeFile", paramsArray);
-			return NetRuntimeSystem.Convert.ToString(returnItem);
+			return Factory.ExecuteStringMethodGet(this, "CreateCubeFile", file, measures, levels, members);
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194097.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194097.aspx </remarks>
+		[SupportByVersion("Excel", 12,14,15,16)]
 		public void ClearTable()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "ClearTable", paramsArray);
+			 Factory.ExecuteMethod(this, "ClearTable");
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197262.aspx
 		/// </summary>
-		/// <param name="rowLayout">NetOffice.ExcelApi.Enums.XlLayoutRowType RowLayout</param>
-		[SupportByVersionAttribute("Excel", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff197262.aspx </remarks>
+		/// <param name="rowLayout">NetOffice.ExcelApi.Enums.XlLayoutRowType rowLayout</param>
+		[SupportByVersion("Excel", 12,14,15,16)]
 		public void RowAxisLayout(NetOffice.ExcelApi.Enums.XlLayoutRowType rowLayout)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(rowLayout);
-			Invoker.Method(this, "RowAxisLayout", paramsArray);
+			 Factory.ExecuteMethod(this, "RowAxisLayout", rowLayout);
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840038.aspx
 		/// </summary>
-		/// <param name="location">NetOffice.ExcelApi.Enums.xLSubtototalLocationType Location</param>
-		[SupportByVersionAttribute("Excel", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff840038.aspx </remarks>
+		/// <param name="location">NetOffice.ExcelApi.Enums.xLSubtototalLocationType location</param>
+		[SupportByVersion("Excel", 12,14,15,16)]
 		public void SubtotalLocation(NetOffice.ExcelApi.Enums.xLSubtototalLocationType location)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(location);
-			Invoker.Method(this, "SubtotalLocation", paramsArray);
+			 Factory.ExecuteMethod(this, "SubtotalLocation", location);
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840098.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff840098.aspx </remarks>
+		[SupportByVersion("Excel", 12,14,15,16)]
 		public void ClearAllFilters()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "ClearAllFilters", paramsArray);
+			 Factory.ExecuteMethod(this, "ClearAllFilters");
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835232.aspx
 		/// </summary>
-		/// <param name="convertFilters">bool ConvertFilters</param>
-		[SupportByVersionAttribute("Excel", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835232.aspx </remarks>
+		/// <param name="convertFilters">bool convertFilters</param>
+		[SupportByVersion("Excel", 12,14,15,16)]
 		public void ConvertToFormulas(bool convertFilters)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(convertFilters);
-			Invoker.Method(this, "ConvertToFormulas", paramsArray);
+			 Factory.ExecuteMethod(this, "ConvertToFormulas", convertFilters);
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194492.aspx
 		/// </summary>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194492.aspx </remarks>
 		/// <param name="conn">NetOffice.ExcelApi.WorkbookConnection conn</param>
-		[SupportByVersionAttribute("Excel", 12,14,15,16)]
+		[SupportByVersion("Excel", 12,14,15,16)]
 		public void ChangeConnection(NetOffice.ExcelApi.WorkbookConnection conn)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(conn);
-			Invoker.Method(this, "ChangeConnection", paramsArray);
+			 Factory.ExecuteMethod(this, "ChangeConnection", conn);
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194688.aspx
 		/// </summary>
-		/// <param name="pivotCache">object PivotCache</param>
-		[SupportByVersionAttribute("Excel", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194688.aspx </remarks>
+		/// <param name="pivotCache">object pivotCache</param>
+		[SupportByVersion("Excel", 12,14,15,16)]
 		public void ChangePivotCache(object pivotCache)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(pivotCache);
-			Invoker.Method(this, "ChangePivotCache", paramsArray);
+			 Factory.ExecuteMethod(this, "ChangePivotCache", pivotCache);
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822662.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff822662.aspx </remarks>
+		[SupportByVersion("Excel", 14,15,16)]
 		public void AllocateChanges()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "AllocateChanges", paramsArray);
+			 Factory.ExecuteMethod(this, "AllocateChanges");
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff841032.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff841032.aspx </remarks>
+		[SupportByVersion("Excel", 14,15,16)]
 		public void CommitChanges()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "CommitChanges", paramsArray);
+			 Factory.ExecuteMethod(this, "CommitChanges");
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837043.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff837043.aspx </remarks>
+		[SupportByVersion("Excel", 14,15,16)]
 		public void DiscardChanges()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "DiscardChanges", paramsArray);
+			 Factory.ExecuteMethod(this, "DiscardChanges");
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197450.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff197450.aspx </remarks>
+		[SupportByVersion("Excel", 14,15,16)]
 		public void RefreshDataSourceValues()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "RefreshDataSourceValues", paramsArray);
+			 Factory.ExecuteMethod(this, "RefreshDataSourceValues");
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff198076.aspx
 		/// </summary>
-		/// <param name="repeat">NetOffice.ExcelApi.Enums.XlPivotFieldRepeatLabels Repeat</param>
-		[SupportByVersionAttribute("Excel", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff198076.aspx </remarks>
+		/// <param name="repeat">NetOffice.ExcelApi.Enums.XlPivotFieldRepeatLabels repeat</param>
+		[SupportByVersion("Excel", 14,15,16)]
 		public void RepeatAllLabels(NetOffice.ExcelApi.Enums.XlPivotFieldRepeatLabels repeat)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(repeat);
-			Invoker.Method(this, "RepeatAllLabels", paramsArray);
+			 Factory.ExecuteMethod(this, "RepeatAllLabels", repeat);
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 15,16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj230950.aspx
 		/// </summary>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/jj230950.aspx </remarks>
 		/// <param name="rowline">optional object rowline</param>
 		/// <param name="columnline">optional object columnline</param>
-		[SupportByVersionAttribute("Excel", 15, 16)]
+		[SupportByVersion("Excel", 15, 16)]
 		public NetOffice.ExcelApi.PivotValueCell PivotValueCell(object rowline, object columnline)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(rowline, columnline);
-			object returnItem = Invoker.MethodReturn(this, "PivotValueCell", paramsArray);
-			NetOffice.ExcelApi.PivotValueCell newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.PivotValueCell.LateBindingApiWrapperType) as NetOffice.ExcelApi.PivotValueCell;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.PivotValueCell>(this, "PivotValueCell", NetOffice.ExcelApi.PivotValueCell.LateBindingApiWrapperType, rowline, columnline);
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 15,16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj230950.aspx
 		/// </summary>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 15, 16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/jj230950.aspx </remarks>
+		[CustomMethod]
+		[SupportByVersion("Excel", 15, 16)]
 		public NetOffice.ExcelApi.PivotValueCell PivotValueCell()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "PivotValueCell", paramsArray);
-			NetOffice.ExcelApi.PivotValueCell newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.PivotValueCell.LateBindingApiWrapperType) as NetOffice.ExcelApi.PivotValueCell;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.PivotValueCell>(this, "PivotValueCell", NetOffice.ExcelApi.PivotValueCell.LateBindingApiWrapperType);
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 15,16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj230950.aspx
 		/// </summary>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/jj230950.aspx </remarks>
 		/// <param name="rowline">optional object rowline</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 15, 16)]
+		[CustomMethod]
+		[SupportByVersion("Excel", 15, 16)]
 		public NetOffice.ExcelApi.PivotValueCell PivotValueCell(object rowline)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(rowline);
-			object returnItem = Invoker.MethodReturn(this, "PivotValueCell", paramsArray);
-			NetOffice.ExcelApi.PivotValueCell newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.PivotValueCell.LateBindingApiWrapperType) as NetOffice.ExcelApi.PivotValueCell;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.PivotValueCell>(this, "PivotValueCell", NetOffice.ExcelApi.PivotValueCell.LateBindingApiWrapperType, rowline);
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 15,16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj227250.aspx
 		/// </summary>
-		/// <param name="pivotItem">NetOffice.ExcelApi.PivotItem PivotItem</param>
-		/// <param name="pivotLine">optional object PivotLine</param>
-		[SupportByVersionAttribute("Excel", 15, 16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/jj227250.aspx </remarks>
+		/// <param name="pivotItem">NetOffice.ExcelApi.PivotItem pivotItem</param>
+		/// <param name="pivotLine">optional object pivotLine</param>
+		[SupportByVersion("Excel", 15, 16)]
 		public void DrillDown(NetOffice.ExcelApi.PivotItem pivotItem, object pivotLine)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(pivotItem, pivotLine);
-			Invoker.Method(this, "DrillDown", paramsArray);
+			 Factory.ExecuteMethod(this, "DrillDown", pivotItem, pivotLine);
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 15,16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj227250.aspx
 		/// </summary>
-		/// <param name="pivotItem">NetOffice.ExcelApi.PivotItem PivotItem</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 15, 16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/jj227250.aspx </remarks>
+		/// <param name="pivotItem">NetOffice.ExcelApi.PivotItem pivotItem</param>
+		[CustomMethod]
+		[SupportByVersion("Excel", 15, 16)]
 		public void DrillDown(NetOffice.ExcelApi.PivotItem pivotItem)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(pivotItem);
-			Invoker.Method(this, "DrillDown", paramsArray);
+			 Factory.ExecuteMethod(this, "DrillDown", pivotItem);
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 15,16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj227808.aspx
 		/// </summary>
-		/// <param name="pivotItem">NetOffice.ExcelApi.PivotItem PivotItem</param>
-		/// <param name="pivotLine">optional object PivotLine</param>
-		/// <param name="levelUniqueName">optional object LevelUniqueName</param>
-		[SupportByVersionAttribute("Excel", 15, 16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/jj227808.aspx </remarks>
+		/// <param name="pivotItem">NetOffice.ExcelApi.PivotItem pivotItem</param>
+		/// <param name="pivotLine">optional object pivotLine</param>
+		/// <param name="levelUniqueName">optional object levelUniqueName</param>
+		[SupportByVersion("Excel", 15, 16)]
 		public void DrillUp(NetOffice.ExcelApi.PivotItem pivotItem, object pivotLine, object levelUniqueName)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(pivotItem, pivotLine, levelUniqueName);
-			Invoker.Method(this, "DrillUp", paramsArray);
+			 Factory.ExecuteMethod(this, "DrillUp", pivotItem, pivotLine, levelUniqueName);
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 15,16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj227808.aspx
 		/// </summary>
-		/// <param name="pivotItem">NetOffice.ExcelApi.PivotItem PivotItem</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 15, 16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/jj227808.aspx </remarks>
+		/// <param name="pivotItem">NetOffice.ExcelApi.PivotItem pivotItem</param>
+		[CustomMethod]
+		[SupportByVersion("Excel", 15, 16)]
 		public void DrillUp(NetOffice.ExcelApi.PivotItem pivotItem)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(pivotItem);
-			Invoker.Method(this, "DrillUp", paramsArray);
+			 Factory.ExecuteMethod(this, "DrillUp", pivotItem);
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 15,16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj227808.aspx
 		/// </summary>
-		/// <param name="pivotItem">NetOffice.ExcelApi.PivotItem PivotItem</param>
-		/// <param name="pivotLine">optional object PivotLine</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 15, 16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/jj227808.aspx </remarks>
+		/// <param name="pivotItem">NetOffice.ExcelApi.PivotItem pivotItem</param>
+		/// <param name="pivotLine">optional object pivotLine</param>
+		[CustomMethod]
+		[SupportByVersion("Excel", 15, 16)]
 		public void DrillUp(NetOffice.ExcelApi.PivotItem pivotItem, object pivotLine)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(pivotItem, pivotLine);
-			Invoker.Method(this, "DrillUp", paramsArray);
+			 Factory.ExecuteMethod(this, "DrillUp", pivotItem, pivotLine);
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 15,16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj230955.aspx
 		/// </summary>
-		/// <param name="pivotItem">NetOffice.ExcelApi.PivotItem PivotItem</param>
-		/// <param name="cubeField">NetOffice.ExcelApi.CubeField CubeField</param>
-		/// <param name="pivotLine">optional object PivotLine</param>
-		[SupportByVersionAttribute("Excel", 15, 16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/jj230955.aspx </remarks>
+		/// <param name="pivotItem">NetOffice.ExcelApi.PivotItem pivotItem</param>
+		/// <param name="cubeField">NetOffice.ExcelApi.CubeField cubeField</param>
+		/// <param name="pivotLine">optional object pivotLine</param>
+		[SupportByVersion("Excel", 15, 16)]
 		public void DrillTo(NetOffice.ExcelApi.PivotItem pivotItem, NetOffice.ExcelApi.CubeField cubeField, object pivotLine)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(pivotItem, cubeField, pivotLine);
-			Invoker.Method(this, "DrillTo", paramsArray);
+			 Factory.ExecuteMethod(this, "DrillTo", pivotItem, cubeField, pivotLine);
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 15,16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj230955.aspx
 		/// </summary>
-		/// <param name="pivotItem">NetOffice.ExcelApi.PivotItem PivotItem</param>
-		/// <param name="cubeField">NetOffice.ExcelApi.CubeField CubeField</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 15, 16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/jj230955.aspx </remarks>
+		/// <param name="pivotItem">NetOffice.ExcelApi.PivotItem pivotItem</param>
+		/// <param name="cubeField">NetOffice.ExcelApi.CubeField cubeField</param>
+		[CustomMethod]
+		[SupportByVersion("Excel", 15, 16)]
 		public void DrillTo(NetOffice.ExcelApi.PivotItem pivotItem, NetOffice.ExcelApi.CubeField cubeField)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(pivotItem, cubeField);
-			Invoker.Method(this, "DrillTo", paramsArray);
+			 Factory.ExecuteMethod(this, "DrillTo", pivotItem, cubeField);
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 15,16
-		/// 
 		/// </summary>
-		/// <param name="arg1">object Arg1</param>
-		/// <param name="arg2">optional object Arg2</param>
-		/// <param name="arg3">optional object Arg3</param>
-		/// <param name="arg4">optional object Arg4</param>
+		/// <param name="arg1">object arg1</param>
+		/// <param name="arg2">optional object arg2</param>
+		/// <param name="arg3">optional object arg3</param>
+		/// <param name="arg4">optional object arg4</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("Excel", 15, 16)]
+		[SupportByVersion("Excel", 15, 16)]
 		public object Dummy2(object arg1, object arg2, object arg3, object arg4)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4);
-			object returnItem = Invoker.MethodReturn(this, "Dummy2", paramsArray);
-			if((null != returnItem) && (returnItem is MarshalByRefObject))
-			{
-				ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
-				return newObject;
-			}
-			else
-			{
-				return  returnItem;
-			}
+			return Factory.ExecuteVariantMethodGet(this, "Dummy2", arg1, arg2, arg3, arg4);
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 15,16
-		/// 
 		/// </summary>
-		/// <param name="arg1">object Arg1</param>
+		/// <param name="arg1">object arg1</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 15, 16)]
+		[CustomMethod]
+		[SupportByVersion("Excel", 15, 16)]
 		public object Dummy2(object arg1)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
-			object returnItem = Invoker.MethodReturn(this, "Dummy2", paramsArray);
-			if((null != returnItem) && (returnItem is MarshalByRefObject))
-			{
-				ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
-				return newObject;
-			}
-			else
-			{
-				return  returnItem;
-			}
+			return Factory.ExecuteVariantMethodGet(this, "Dummy2", arg1);
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 15,16
-		/// 
 		/// </summary>
-		/// <param name="arg1">object Arg1</param>
-		/// <param name="arg2">optional object Arg2</param>
+		/// <param name="arg1">object arg1</param>
+		/// <param name="arg2">optional object arg2</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 15, 16)]
+		[CustomMethod]
+		[SupportByVersion("Excel", 15, 16)]
 		public object Dummy2(object arg1, object arg2)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
-			object returnItem = Invoker.MethodReturn(this, "Dummy2", paramsArray);
-			if((null != returnItem) && (returnItem is MarshalByRefObject))
-			{
-				ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
-				return newObject;
-			}
-			else
-			{
-				return  returnItem;
-			}
+			return Factory.ExecuteVariantMethodGet(this, "Dummy2", arg1, arg2);
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 15,16
-		/// 
 		/// </summary>
-		/// <param name="arg1">object Arg1</param>
-		/// <param name="arg2">optional object Arg2</param>
-		/// <param name="arg3">optional object Arg3</param>
+		/// <param name="arg1">object arg1</param>
+		/// <param name="arg2">optional object arg2</param>
+		/// <param name="arg3">optional object arg3</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 15, 16)]
+		[CustomMethod]
+		[SupportByVersion("Excel", 15, 16)]
 		public object Dummy2(object arg1, object arg2, object arg3)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
-			object returnItem = Invoker.MethodReturn(this, "Dummy2", paramsArray);
-			if((null != returnItem) && (returnItem is MarshalByRefObject))
-			{
-				ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
-				return newObject;
-			}
-			else
-			{
-				return  returnItem;
-			}
+			return Factory.ExecuteVariantMethodGet(this, "Dummy2", arg1, arg2, arg3);
 		}
 
 		#endregion
+
 		#pragma warning restore
 	}
 }

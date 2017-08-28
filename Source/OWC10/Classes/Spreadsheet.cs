@@ -1,65 +1,65 @@
 ﻿using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
-using NetOffice;
-using NetOffice.Misc;
+using NetOffice.Attributes;
 
 namespace NetOffice.OWC10Api
 {
-
 	#region Delegates
 
 	#pragma warning disable
-	public delegate void Spreadsheet_BeforeContextMenuEventHandler(Int32 x, Int32 y, NetOffice.OWC10Api.ByRef Menu, NetOffice.OWC10Api.ByRef Cancel);
-	public delegate void Spreadsheet_BeforeKeyDownEventHandler(Int32 KeyCode, Int32 Shift, NetOffice.OWC10Api.ByRef Cancel);
-	public delegate void Spreadsheet_BeforeKeyPressEventHandler(Int32 KeyAscii, NetOffice.OWC10Api.ByRef Cancel);
-	public delegate void Spreadsheet_BeforeKeyUpEventHandler(Int32 KeyCode, Int32 Shift, NetOffice.OWC10Api.ByRef Cancel);
+	public delegate void Spreadsheet_BeforeContextMenuEventHandler(Int32 x, Int32 y, NetOffice.OWC10Api.ByRef menu, NetOffice.OWC10Api.ByRef cancel);
+	public delegate void Spreadsheet_BeforeKeyDownEventHandler(Int32 keyCode, Int32 shift, NetOffice.OWC10Api.ByRef cancel);
+	public delegate void Spreadsheet_BeforeKeyPressEventHandler(Int32 keyAscii, NetOffice.OWC10Api.ByRef cancel);
+	public delegate void Spreadsheet_BeforeKeyUpEventHandler(Int32 keyCode, Int32 shift, NetOffice.OWC10Api.ByRef cancel);
 	public delegate void Spreadsheet_ClickEventHandler();
-	public delegate void Spreadsheet_CommandEnabledEventHandler(object Command, NetOffice.OWC10Api.ByRef Enabled);
-	public delegate void Spreadsheet_CommandCheckedEventHandler(object Command, NetOffice.OWC10Api.ByRef Checked);
-	public delegate void Spreadsheet_CommandTipTextEventHandler(object Command, NetOffice.OWC10Api.ByRef Caption);
-	public delegate void Spreadsheet_CommandBeforeExecuteEventHandler(object Command, NetOffice.OWC10Api.ByRef Cancel);
-	public delegate void Spreadsheet_CommandExecuteEventHandler(object Command, bool Succeeded);
+	public delegate void Spreadsheet_CommandEnabledEventHandler(object command, NetOffice.OWC10Api.ByRef enabled);
+	public delegate void Spreadsheet_CommandCheckedEventHandler(object command, NetOffice.OWC10Api.ByRef Checked);
+	public delegate void Spreadsheet_CommandTipTextEventHandler(object command, NetOffice.OWC10Api.ByRef caption);
+	public delegate void Spreadsheet_CommandBeforeExecuteEventHandler(object command, NetOffice.OWC10Api.ByRef cancel);
+	public delegate void Spreadsheet_CommandExecuteEventHandler(object command, bool succeeded);
 	public delegate void Spreadsheet_DblClickEventHandler();
-	public delegate void Spreadsheet_EndEditEventHandler(bool Accept, NetOffice.OWC10Api.ByRef FinalValue, NetOffice.OWC10Api.ByRef Cancel, NetOffice.OWC10Api.ByRef ErrorDescription);
+	public delegate void Spreadsheet_EndEditEventHandler(bool accept, NetOffice.OWC10Api.ByRef finalValue, NetOffice.OWC10Api.ByRef cancel, NetOffice.OWC10Api.ByRef errorDescription);
 	public delegate void Spreadsheet_InitializeEventHandler();
-	public delegate void Spreadsheet_KeyDownEventHandler(Int32 KeyCode, Int32 Shift);
-	public delegate void Spreadsheet_KeyPressEventHandler(Int32 KeyAscii);
-	public delegate void Spreadsheet_KeyUpEventHandler(Int32 KeyCode, Int32 Shift);
+	public delegate void Spreadsheet_KeyDownEventHandler(Int32 keyCode, Int32 shift);
+	public delegate void Spreadsheet_KeyPressEventHandler(Int32 keyAscii);
+	public delegate void Spreadsheet_KeyUpEventHandler(Int32 keyCode, Int32 shift);
 	public delegate void Spreadsheet_LoadCompletedEventHandler();
-	public delegate void Spreadsheet_MouseDownEventHandler(Int32 Button, Int32 Shift, Int32 x, Int32 y);
-	public delegate void Spreadsheet_MouseOutEventHandler(Int32 Button, Int32 Shift, NetOffice.OWC10Api._Range Target);
-	public delegate void Spreadsheet_MouseOverEventHandler(Int32 Button, Int32 Shift, NetOffice.OWC10Api._Range Target);
-	public delegate void Spreadsheet_MouseUpEventHandler(Int32 Button, Int32 Shift, Int32 x, Int32 y);
-	public delegate void Spreadsheet_MouseWheelEventHandler(bool Page, Int32 Count);
+	public delegate void Spreadsheet_MouseDownEventHandler(Int32 button, Int32 shift, Int32 x, Int32 y);
+	public delegate void Spreadsheet_MouseOutEventHandler(Int32 button, Int32 shift, NetOffice.OWC10Api._Range target);
+	public delegate void Spreadsheet_MouseOverEventHandler(Int32 button, Int32 shift, NetOffice.OWC10Api._Range target);
+	public delegate void Spreadsheet_MouseUpEventHandler(Int32 button, Int32 shift, Int32 x, Int32 y);
+	public delegate void Spreadsheet_MouseWheelEventHandler(bool page, Int32 count);
 	public delegate void Spreadsheet_SelectionChangeEventHandler();
-	public delegate void Spreadsheet_SelectionChangingEventHandler(NetOffice.OWC10Api._Range Range);
-	public delegate void Spreadsheet_SheetActivateEventHandler(NetOffice.OWC10Api.Worksheet Sh);
-	public delegate void Spreadsheet_SheetCalculateEventHandler(NetOffice.OWC10Api.Worksheet Sh);
-	public delegate void Spreadsheet_SheetChangeEventHandler(NetOffice.OWC10Api.Worksheet Sh, NetOffice.OWC10Api._Range Target);
-	public delegate void Spreadsheet_SheetDeactivateEventHandler(NetOffice.OWC10Api.Worksheet Sh);
-	public delegate void Spreadsheet_SheetFollowHyperlinkEventHandler(NetOffice.OWC10Api.Worksheet Sh, NetOffice.OWC10Api.Hyperlink Target);
-	public delegate void Spreadsheet_StartEditEventHandler(COMObject Selection, NetOffice.OWC10Api.ByRef InitialValue, NetOffice.OWC10Api.ByRef Cancel, NetOffice.OWC10Api.ByRef ErrorDescription);
-	public delegate void Spreadsheet_ViewChangeEventHandler(NetOffice.OWC10Api._Range Target);
+	public delegate void Spreadsheet_SelectionChangingEventHandler(NetOffice.OWC10Api._Range range);
+	public delegate void Spreadsheet_SheetActivateEventHandler(NetOffice.OWC10Api.Worksheet sh);
+	public delegate void Spreadsheet_SheetCalculateEventHandler(NetOffice.OWC10Api.Worksheet sh);
+	public delegate void Spreadsheet_SheetChangeEventHandler(NetOffice.OWC10Api.Worksheet sh, NetOffice.OWC10Api._Range target);
+	public delegate void Spreadsheet_SheetDeactivateEventHandler(NetOffice.OWC10Api.Worksheet sh);
+	public delegate void Spreadsheet_SheetFollowHyperlinkEventHandler(NetOffice.OWC10Api.Worksheet sh, NetOffice.OWC10Api.Hyperlink target);
+	public delegate void Spreadsheet_StartEditEventHandler(ICOMObject selection, NetOffice.OWC10Api.ByRef initialValue, NetOffice.OWC10Api.ByRef cancel, NetOffice.OWC10Api.ByRef errorDescription);
+	public delegate void Spreadsheet_ViewChangeEventHandler(NetOffice.OWC10Api._Range target);
 	#pragma warning restore
 
 	#endregion
 
-	///<summary>
+	/// <summary>
 	/// CoClass Spreadsheet 
 	/// SupportByVersion OWC10, 1
-	///</summary>
-	[SupportByVersionAttribute("OWC10", 1)]
-	[EntityTypeAttribute(EntityType.IsCoClass)]
-	public class Spreadsheet : ISpreadsheet,IEventBinding
+	/// </summary>
+	[SupportByVersion("OWC10", 1)]
+	[EntityType(EntityType.IsCoClass)]
+	[EventSink(typeof(Events.ISpreadsheetEventSink_SinkHelper))]
+	public class Spreadsheet : ISpreadsheet, IEventBinding
 	{
 		#pragma warning disable
+
 		#region Fields
 		
 		private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
 		private string _activeSinkId;
 		private NetRuntimeSystem.Type _thisType;
-		ISpreadsheetEventSink_SinkHelper _iSpreadsheetEventSink_SinkHelper;
+		private Events.ISpreadsheetEventSink_SinkHelper _iSpreadsheetEventSink_SinkHelper;
 	
 		#endregion
 
@@ -68,6 +68,7 @@ namespace NetOffice.OWC10Api
         /// <summary>
         /// Instance Type
         /// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
         public override Type InstanceType
         {
             get
@@ -134,17 +135,17 @@ namespace NetOffice.OWC10Api
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of Spreadsheet 
-        ///</summary>		
+        /// </summary>		
 		public Spreadsheet():base("OWC10.Spreadsheet")
 		{
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of Spreadsheet
-        ///</summary>
+        /// </summary>
         ///<param name="progId">registered ProgID</param>
 		public Spreadsheet(string progId):base(progId)
 		{
@@ -154,46 +155,6 @@ namespace NetOffice.OWC10Api
 		#endregion
 
 		#region Static CoClass Methods
-
-		/// <summary>
-        /// Returns all running OWC10.Spreadsheet objects from the environment/system
-        /// </summary>
-        /// <returns>an OWC10.Spreadsheet array</returns>
-		public static NetOffice.OWC10Api.Spreadsheet[] GetActiveInstances()
-		{		
-			IDisposableEnumeration proxyList = NetOffice.ProxyService.GetActiveInstances("OWC10","Spreadsheet");
-			NetRuntimeSystem.Collections.Generic.List<NetOffice.OWC10Api.Spreadsheet> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.OWC10Api.Spreadsheet>();
-			foreach(object proxy in proxyList)
-				resultList.Add( new NetOffice.OWC10Api.Spreadsheet(null, proxy) );
-			return resultList.ToArray();
-		}
-
-		/// <summary>
-        /// Returns a running OWC10.Spreadsheet object from the environment/system.
-        /// </summary>
-        /// <returns>an OWC10.Spreadsheet object or null</returns>
-		public static NetOffice.OWC10Api.Spreadsheet GetActiveInstance()
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("OWC10","Spreadsheet", false);
-			if(null != proxy)
-				return new NetOffice.OWC10Api.Spreadsheet(null, proxy);
-			else
-				return null;
-		}
-
-		/// <summary>
-        /// Returns a running OWC10.Spreadsheet object from the environment/system. 
-        /// </summary>
-	    /// <param name="throwOnError">throw an exception if no object was found</param>
-        /// <returns>an OWC10.Spreadsheet object or null</returns>
-		public static NetOffice.OWC10Api.Spreadsheet GetActiveInstance(bool throwOnError)
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("OWC10","Spreadsheet", throwOnError);
-			if(null != proxy)
-				return new NetOffice.OWC10Api.Spreadsheet(null, proxy);
-			else
-				return null;
-		}
 		#endregion
 
 		#region Events
@@ -897,12 +858,12 @@ namespace NetOffice.OWC10Api
 				return;
 	
             if (null == _activeSinkId)
-				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, ISpreadsheetEventSink_SinkHelper.Id);
+				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, Events.ISpreadsheetEventSink_SinkHelper.Id);
 
 
-			if(ISpreadsheetEventSink_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
+			if(Events.ISpreadsheetEventSink_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
 			{
-				_iSpreadsheetEventSink_SinkHelper = new ISpreadsheetEventSink_SinkHelper(this, _connectPoint);
+				_iSpreadsheetEventSink_SinkHelper = new Events.ISpreadsheetEventSink_SinkHelper(this, _connectPoint);
 				return;
 			} 
         }

@@ -1,12 +1,10 @@
 ﻿using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
-using NetOffice;
-using NetOffice.Misc;
+using NetOffice.Attributes;
 
 namespace NetOffice.MSFormsApi
 {
-
 	#region Delegates
 
 	#pragma warning disable
@@ -15,21 +13,23 @@ namespace NetOffice.MSFormsApi
 
 	#endregion
 
-	///<summary>
+	/// <summary>
 	/// CoClass HTMLText 
 	/// SupportByVersion MSForms, 2
-	///</summary>
-	[SupportByVersionAttribute("MSForms", 2)]
-	[EntityTypeAttribute(EntityType.IsCoClass)]
-	public class HTMLText : IWHTMLText,IEventBinding
+	/// </summary>
+	[SupportByVersion("MSForms", 2)]
+	[EntityType(EntityType.IsCoClass)]
+	[EventSink(typeof(Events.WHTMLControlEvents5_SinkHelper))]
+	public class HTMLText : IWHTMLText, IEventBinding
 	{
 		#pragma warning disable
+
 		#region Fields
 		
 		private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
 		private string _activeSinkId;
 		private NetRuntimeSystem.Type _thisType;
-		WHTMLControlEvents5_SinkHelper _wHTMLControlEvents5_SinkHelper;
+		private Events.WHTMLControlEvents5_SinkHelper _wHTMLControlEvents5_SinkHelper;
 	
 		#endregion
 
@@ -38,6 +38,7 @@ namespace NetOffice.MSFormsApi
         /// <summary>
         /// Instance Type
         /// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
         public override Type InstanceType
         {
             get
@@ -104,17 +105,17 @@ namespace NetOffice.MSFormsApi
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of HTMLText 
-        ///</summary>		
+        /// </summary>		
 		public HTMLText():base("MSForms.HTMLText")
 		{
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of HTMLText
-        ///</summary>
+        /// </summary>
         ///<param name="progId">registered ProgID</param>
 		public HTMLText(string progId):base(progId)
 		{
@@ -124,46 +125,6 @@ namespace NetOffice.MSFormsApi
 		#endregion
 
 		#region Static CoClass Methods
-
-		/// <summary>
-        /// Returns all running MSForms.HTMLText objects from the environment/system
-        /// </summary>
-        /// <returns>an MSForms.HTMLText array</returns>
-		public static NetOffice.MSFormsApi.HTMLText[] GetActiveInstances()
-		{		
-			IDisposableEnumeration proxyList = NetOffice.ProxyService.GetActiveInstances("MSForms","HTMLText");
-			NetRuntimeSystem.Collections.Generic.List<NetOffice.MSFormsApi.HTMLText> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.MSFormsApi.HTMLText>();
-			foreach(object proxy in proxyList)
-				resultList.Add( new NetOffice.MSFormsApi.HTMLText(null, proxy) );
-			return resultList.ToArray();
-		}
-
-		/// <summary>
-        /// Returns a running MSForms.HTMLText object from the environment/system.
-        /// </summary>
-        /// <returns>an MSForms.HTMLText object or null</returns>
-		public static NetOffice.MSFormsApi.HTMLText GetActiveInstance()
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("MSForms","HTMLText", false);
-			if(null != proxy)
-				return new NetOffice.MSFormsApi.HTMLText(null, proxy);
-			else
-				return null;
-		}
-
-		/// <summary>
-        /// Returns a running MSForms.HTMLText object from the environment/system. 
-        /// </summary>
-	    /// <param name="throwOnError">throw an exception if no object was found</param>
-        /// <returns>an MSForms.HTMLText object or null</returns>
-		public static NetOffice.MSFormsApi.HTMLText GetActiveInstance(bool throwOnError)
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("MSForms","HTMLText", throwOnError);
-			if(null != proxy)
-				return new NetOffice.MSFormsApi.HTMLText(null, proxy);
-			else
-				return null;
-		}
 		#endregion
 
 		#region Events
@@ -207,12 +168,12 @@ namespace NetOffice.MSFormsApi
 				return;
 	
             if (null == _activeSinkId)
-				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, WHTMLControlEvents5_SinkHelper.Id);
+				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, Events.WHTMLControlEvents5_SinkHelper.Id);
 
 
-			if(WHTMLControlEvents5_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
+			if(Events.WHTMLControlEvents5_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
 			{
-				_wHTMLControlEvents5_SinkHelper = new WHTMLControlEvents5_SinkHelper(this, _connectPoint);
+				_wHTMLControlEvents5_SinkHelper = new Events.WHTMLControlEvents5_SinkHelper(this, _connectPoint);
 				return;
 			} 
         }

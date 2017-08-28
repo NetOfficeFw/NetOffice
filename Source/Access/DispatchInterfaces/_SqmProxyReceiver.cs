@@ -1,23 +1,33 @@
 ﻿using System;
 using NetRuntimeSystem = System;
-using System.Runtime.InteropServices;
-using System.Runtime.CompilerServices;
 using System.ComponentModel;
-using System.Reflection;
-using System.Collections.Generic;
-using NetOffice;
+using NetOffice.Attributes;
+
 namespace NetOffice.AccessApi
 {
-	///<summary>
+	/// <summary>
 	/// DispatchInterface _SqmProxyReceiver 
 	/// SupportByVersion Access, 15, 16
-	///</summary>
-	[SupportByVersionAttribute("Access", 15, 16)]
-	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
-	public class _SqmProxyReceiver : COMObject
+	/// </summary>
+	[SupportByVersion("Access", 15, 16)]
+	[EntityType(EntityType.IsDispatchInterface)]
+ 	public class _SqmProxyReceiver : COMObject
 	{
 		#pragma warning disable
+
 		#region Type Information
+
+		/// <summary>
+		/// Instance Type
+		/// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
+		public override Type InstanceType
+		{
+			get
+			{
+				return LateBindingApiWrapperType;
+			}
+		}
 
         private static Type _type;
 
@@ -28,14 +38,20 @@ namespace NetOffice.AccessApi
             {
                 if (null == _type)
                     _type = typeof(_SqmProxyReceiver);
-                    
                 return _type;
             }
         }
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public _SqmProxyReceiver(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -81,7 +97,7 @@ namespace NetOffice.AccessApi
 		{
 		}
 		
-		/// <param name="progId">registered ProgID</param>
+		/// <param name="progId">registered progID</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public _SqmProxyReceiver(string progId) : base(progId)
 		{
@@ -97,94 +113,81 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 15,16
-		/// 
 		/// </summary>
 		/// <param name="id">UIntPtr id</param>
 		/// <param name="dwValue">UIntPtr dwValue</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("Access", 15, 16)]
+		[SupportByVersion("Access", 15, 16)]
 		public void SetDataPoint(UIntPtr id, UIntPtr dwValue)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(id, dwValue);
-			Invoker.Method(this, "SetDataPoint", paramsArray);
+			 Factory.ExecuteMethod(this, "SetDataPoint", id, dwValue);
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 15,16
-		/// 
 		/// </summary>
 		/// <param name="id">UIntPtr id</param>
 		/// <param name="dwValue">UIntPtr dwValue</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("Access", 15, 16)]
+		[SupportByVersion("Access", 15, 16)]
 		public void SetDataPointMax(UIntPtr id, UIntPtr dwValue)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(id, dwValue);
-			Invoker.Method(this, "SetDataPointMax", paramsArray);
+			 Factory.ExecuteMethod(this, "SetDataPointMax", id, dwValue);
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 15,16
-		/// 
 		/// </summary>
 		/// <param name="id">UIntPtr id</param>
 		/// <param name="dwValue">UIntPtr dwValue</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("Access", 15, 16)]
+		[SupportByVersion("Access", 15, 16)]
 		public void SetDataPointMin(UIntPtr id, UIntPtr dwValue)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(id, dwValue);
-			Invoker.Method(this, "SetDataPointMin", paramsArray);
+			 Factory.ExecuteMethod(this, "SetDataPointMin", id, dwValue);
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 15,16
-		/// 
 		/// </summary>
 		/// <param name="id">UIntPtr id</param>
-		/// <param name="type">UIntPtr Type</param>
-		/// <param name="width">UIntPtr Width</param>
+		/// <param name="type">UIntPtr type</param>
+		/// <param name="width">UIntPtr width</param>
 		/// <param name="maxRows">UIntPtr maxRows</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("Access", 15, 16)]
+		[SupportByVersion("Access", 15, 16)]
 		public void CreateStream(UIntPtr id, UIntPtr type, UIntPtr width, UIntPtr maxRows)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(id, type, width, maxRows);
-			Invoker.Method(this, "CreateStream", paramsArray);
+			 Factory.ExecuteMethod(this, "CreateStream", id, type, width, maxRows);
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 15,16
-		/// 
 		/// </summary>
 		/// <param name="id">UIntPtr id</param>
 		/// <param name="dw1">UIntPtr dw1</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("Access", 15, 16)]
+		[SupportByVersion("Access", 15, 16)]
 		public void AddStreamData1(UIntPtr id, UIntPtr dw1)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(id, dw1);
-			Invoker.Method(this, "AddStreamData1", paramsArray);
+			 Factory.ExecuteMethod(this, "AddStreamData1", id, dw1);
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 15,16
-		/// 
 		/// </summary>
 		/// <param name="id">UIntPtr id</param>
 		/// <param name="dw1">UIntPtr dw1</param>
 		/// <param name="dw2">UIntPtr dw2</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("Access", 15, 16)]
+		[SupportByVersion("Access", 15, 16)]
 		public void AddStreamData2(UIntPtr id, UIntPtr dw1, UIntPtr dw2)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(id, dw1, dw2);
-			Invoker.Method(this, "AddStreamData2", paramsArray);
+			 Factory.ExecuteMethod(this, "AddStreamData2", id, dw1, dw2);
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 15,16
-		/// 
 		/// </summary>
 		/// <param name="id">UIntPtr id</param>
 		/// <param name="dw1">UIntPtr dw1</param>
@@ -196,14 +199,14 @@ namespace NetOffice.AccessApi
 		/// <param name="dw7">UIntPtr dw7</param>
 		/// <param name="dw8">UIntPtr dw8</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("Access", 15, 16)]
+		[SupportByVersion("Access", 15, 16)]
 		public void AddStreamData8(UIntPtr id, UIntPtr dw1, UIntPtr dw2, UIntPtr dw3, UIntPtr dw4, UIntPtr dw5, UIntPtr dw6, UIntPtr dw7, UIntPtr dw8)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(id, dw1, dw2, dw3, dw4, dw5, dw6, dw7, dw8);
-			Invoker.Method(this, "AddStreamData8", paramsArray);
+			 Factory.ExecuteMethod(this, "AddStreamData8", new object[]{ id, dw1, dw2, dw3, dw4, dw5, dw6, dw7, dw8 });
 		}
 
 		#endregion
+
 		#pragma warning restore
 	}
 }

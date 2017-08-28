@@ -1,12 +1,10 @@
 ﻿using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
-using NetOffice;
-using NetOffice.Misc;
+using NetOffice.Attributes;
 
 namespace NetOffice.OutlookApi
 {
-
 	#region Delegates
 
 	#pragma warning disable
@@ -14,16 +12,17 @@ namespace NetOffice.OutlookApi
 
 	#endregion
 
-	///<summary>
+	/// <summary>
 	/// CoClass SimpleItems 
 	/// SupportByVersion Outlook, 14,15,16
-	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff868750.aspx
-	///</summary>
-	[SupportByVersionAttribute("Outlook", 14,15,16)]
-	[EntityTypeAttribute(EntityType.IsCoClass)]
-	public class SimpleItems : _SimpleItems
+	/// </summary>
+	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff868750.aspx </remarks>
+	[SupportByVersion("Outlook", 14,15,16)]
+	[EntityType(EntityType.IsCoClass)]
+ 	public class SimpleItems : _SimpleItems
 	{
 		#pragma warning disable
+
 		#region Fields
 		
 		private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
@@ -37,6 +36,7 @@ namespace NetOffice.OutlookApi
         /// <summary>
         /// Instance Type
         /// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
         public override Type InstanceType
         {
             get
@@ -103,17 +103,17 @@ namespace NetOffice.OutlookApi
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of SimpleItems 
-        ///</summary>		
+        /// </summary>		
 		public SimpleItems():base("Outlook.SimpleItems")
 		{
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of SimpleItems
-        ///</summary>
+        /// </summary>
         ///<param name="progId">registered ProgID</param>
 		public SimpleItems(string progId):base(progId)
 		{
@@ -123,46 +123,6 @@ namespace NetOffice.OutlookApi
 		#endregion
 
 		#region Static CoClass Methods
-
-		/// <summary>
-        /// Returns all running Outlook.SimpleItems objects from the environment/system
-        /// </summary>
-        /// <returns>an Outlook.SimpleItems array</returns>
-		public static NetOffice.OutlookApi.SimpleItems[] GetActiveInstances()
-		{		
-			IDisposableEnumeration proxyList = NetOffice.ProxyService.GetActiveInstances("Outlook","SimpleItems");
-			NetRuntimeSystem.Collections.Generic.List<NetOffice.OutlookApi.SimpleItems> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.OutlookApi.SimpleItems>();
-			foreach(object proxy in proxyList)
-				resultList.Add( new NetOffice.OutlookApi.SimpleItems(null, proxy) );
-			return resultList.ToArray();
-		}
-
-		/// <summary>
-        /// Returns a running Outlook.SimpleItems object from the environment/system.
-        /// </summary>
-        /// <returns>an Outlook.SimpleItems object or null</returns>
-		public static NetOffice.OutlookApi.SimpleItems GetActiveInstance()
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Outlook","SimpleItems", false);
-			if(null != proxy)
-				return new NetOffice.OutlookApi.SimpleItems(null, proxy);
-			else
-				return null;
-		}
-
-		/// <summary>
-        /// Returns a running Outlook.SimpleItems object from the environment/system. 
-        /// </summary>
-	    /// <param name="throwOnError">throw an exception if no object was found</param>
-        /// <returns>an Outlook.SimpleItems object or null</returns>
-		public static NetOffice.OutlookApi.SimpleItems GetActiveInstance(bool throwOnError)
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Outlook","SimpleItems", throwOnError);
-			if(null != proxy)
-				return new NetOffice.OutlookApi.SimpleItems(null, proxy);
-			else
-				return null;
-		}
 		#endregion
 
 		#region Events

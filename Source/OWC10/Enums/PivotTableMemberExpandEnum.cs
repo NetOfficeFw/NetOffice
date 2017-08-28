@@ -1,33 +1,34 @@
 ﻿using System;
 using NetOffice;
+using NetOffice.Attributes;
 namespace NetOffice.OWC10Api.Enums
 {
 	 /// <summary>
 	 /// SupportByVersion OWC10 1
 	 /// </summary>
-	[SupportByVersionAttribute("OWC10", 1)]
-	[EntityTypeAttribute(EntityType.IsEnum)]
+	[SupportByVersion("OWC10", 1)]
+	[EntityType(EntityType.IsEnum)]
 	public enum PivotTableMemberExpandEnum
 	{
 		 /// <summary>
 		 /// SupportByVersion OWC10 1
 		 /// </summary>
 		 /// <remarks>0</remarks>
-		 [SupportByVersionAttribute("OWC10", 1)]
+		 [SupportByVersion("OWC10", 1)]
 		 plMemberExpandAutomatic = 0,
 
 		 /// <summary>
 		 /// SupportByVersion OWC10 1
 		 /// </summary>
 		 /// <remarks>1</remarks>
-		 [SupportByVersionAttribute("OWC10", 1)]
+		 [SupportByVersion("OWC10", 1)]
 		 plMemberExpandAlways = 1,
 
 		 /// <summary>
 		 /// SupportByVersion OWC10 1
 		 /// </summary>
 		 /// <remarks>2</remarks>
-		 [SupportByVersionAttribute("OWC10", 1)]
+		 [SupportByVersion("OWC10", 1)]
 		 plMemberExpandNever = 2
 	}
 }

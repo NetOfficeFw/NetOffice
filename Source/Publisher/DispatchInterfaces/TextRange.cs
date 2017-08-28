@@ -1,23 +1,33 @@
 ﻿using System;
 using NetRuntimeSystem = System;
-using System.Runtime.InteropServices;
-using System.Runtime.CompilerServices;
 using System.ComponentModel;
-using System.Reflection;
-using System.Collections.Generic;
-using NetOffice;
+using NetOffice.Attributes;
+
 namespace NetOffice.PublisherApi
 {
-	///<summary>
+	/// <summary>
 	/// DispatchInterface TextRange 
 	/// SupportByVersion Publisher, 14,15,16
-	///</summary>
-	[SupportByVersionAttribute("Publisher", 14,15,16)]
-	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
-	public class TextRange : COMObject
+	/// </summary>
+	[SupportByVersion("Publisher", 14,15,16)]
+	[EntityType(EntityType.IsDispatchInterface)]
+ 	public class TextRange : COMObject
 	{
 		#pragma warning disable
+
 		#region Type Information
+
+		/// <summary>
+		/// Instance Type
+		/// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
+		public override Type InstanceType
+		{
+			get
+			{
+				return LateBindingApiWrapperType;
+			}
+		}
 
         private static Type _type;
 
@@ -28,14 +38,20 @@ namespace NetOffice.PublisherApi
             {
                 if (null == _type)
                     _type = typeof(TextRange);
-                    
                 return _type;
             }
         }
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public TextRange(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -81,7 +97,7 @@ namespace NetOffice.PublisherApi
 		{
 		}
 		
-		/// <param name="progId">registered ProgID</param>
+		/// <param name="progId">registered progID</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public TextRange(string progId) : base(progId)
 		{
@@ -95,19 +111,16 @@ namespace NetOffice.PublisherApi
 		/// SupportByVersion Publisher 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		[SupportByVersion("Publisher", 14,15,16)]
 		public string Text
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Text", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "Text");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "Text", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "Text", value);
 			}
 		}
 
@@ -115,15 +128,12 @@ namespace NetOffice.PublisherApi
 		/// SupportByVersion Publisher 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		[SupportByVersion("Publisher", 14,15,16)]
 		public NetOffice.PublisherApi.Application Application
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				NetOffice.PublisherApi.Application newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.PublisherApi.Application.LateBindingApiWrapperType) as NetOffice.PublisherApi.Application;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.PublisherApi.Application>(this, "Application", NetOffice.PublisherApi.Application.LateBindingApiWrapperType);
 			}
 		}
 
@@ -132,15 +142,12 @@ namespace NetOffice.PublisherApi
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		[SupportByVersion("Publisher", 14,15,16), ProxyResult]
 		public object Parent
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Parent", paramsArray);
-				ICOMObject newObject = Factory.CreateObjectFromComProxy(this,returnItem);
-				return newObject;
+				return Factory.ExecuteReferencePropertyGet(this, "Parent");
 			}
 		}
 
@@ -148,20 +155,16 @@ namespace NetOffice.PublisherApi
 		/// SupportByVersion Publisher 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		[SupportByVersion("Publisher", 14,15,16)]
 		public NetOffice.PublisherApi.Font Font
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Font", paramsArray);
-				NetOffice.PublisherApi.Font newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.PublisherApi.Font.LateBindingApiWrapperType) as NetOffice.PublisherApi.Font;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.PublisherApi.Font>(this, "Font", NetOffice.PublisherApi.Font.LateBindingApiWrapperType);
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "Font", paramsArray);
+				Factory.ExecuteReferencePropertySet(this, "Font", value);
 			}
 		}
 
@@ -169,14 +172,12 @@ namespace NetOffice.PublisherApi
 		/// SupportByVersion Publisher 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		[SupportByVersion("Publisher", 14,15,16)]
 		public Int32 Length
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Length", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "Length");
 			}
 		}
 
@@ -184,19 +185,16 @@ namespace NetOffice.PublisherApi
 		/// SupportByVersion Publisher 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		[SupportByVersion("Publisher", 14,15,16)]
 		public Int32 Start
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Start", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "Start");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "Start", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "Start", value);
 			}
 		}
 
@@ -204,19 +202,16 @@ namespace NetOffice.PublisherApi
 		/// SupportByVersion Publisher 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		[SupportByVersion("Publisher", 14,15,16)]
 		public Int32 End
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "End", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "End");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "End", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "End", value);
 			}
 		}
 
@@ -224,14 +219,12 @@ namespace NetOffice.PublisherApi
 		/// SupportByVersion Publisher 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		[SupportByVersion("Publisher", 14,15,16)]
 		public Single BoundLeft
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "BoundLeft", paramsArray);
-				return NetRuntimeSystem.Convert.ToSingle(returnItem);
+				return Factory.ExecuteSinglePropertyGet(this, "BoundLeft");
 			}
 		}
 
@@ -239,14 +232,12 @@ namespace NetOffice.PublisherApi
 		/// SupportByVersion Publisher 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		[SupportByVersion("Publisher", 14,15,16)]
 		public Single BoundHeight
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "BoundHeight", paramsArray);
-				return NetRuntimeSystem.Convert.ToSingle(returnItem);
+				return Factory.ExecuteSinglePropertyGet(this, "BoundHeight");
 			}
 		}
 
@@ -254,14 +245,12 @@ namespace NetOffice.PublisherApi
 		/// SupportByVersion Publisher 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		[SupportByVersion("Publisher", 14,15,16)]
 		public Single BoundTop
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "BoundTop", paramsArray);
-				return NetRuntimeSystem.Convert.ToSingle(returnItem);
+				return Factory.ExecuteSinglePropertyGet(this, "BoundTop");
 			}
 		}
 
@@ -269,14 +258,12 @@ namespace NetOffice.PublisherApi
 		/// SupportByVersion Publisher 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		[SupportByVersion("Publisher", 14,15,16)]
 		public Single BoundWidth
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "BoundWidth", paramsArray);
-				return NetRuntimeSystem.Convert.ToSingle(returnItem);
+				return Factory.ExecuteSinglePropertyGet(this, "BoundWidth");
 			}
 		}
 
@@ -284,20 +271,16 @@ namespace NetOffice.PublisherApi
 		/// SupportByVersion Publisher 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		[SupportByVersion("Publisher", 14,15,16)]
 		public NetOffice.PublisherApi.ParagraphFormat ParagraphFormat
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "ParagraphFormat", paramsArray);
-				NetOffice.PublisherApi.ParagraphFormat newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.PublisherApi.ParagraphFormat.LateBindingApiWrapperType) as NetOffice.PublisherApi.ParagraphFormat;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.PublisherApi.ParagraphFormat>(this, "ParagraphFormat", NetOffice.PublisherApi.ParagraphFormat.LateBindingApiWrapperType);
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "ParagraphFormat", paramsArray);
+				Factory.ExecuteReferencePropertySet(this, "ParagraphFormat", value);
 			}
 		}
 
@@ -306,15 +289,12 @@ namespace NetOffice.PublisherApi
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		[SupportByVersion("Publisher", 14,15,16), ProxyResult]
 		public object ContainingObject
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "ContainingObject", paramsArray);
-				ICOMObject newObject = Factory.CreateObjectFromComProxy(this,returnItem);
-				return newObject;
+				return Factory.ExecuteReferencePropertyGet(this, "ContainingObject");
 			}
 		}
 
@@ -322,15 +302,12 @@ namespace NetOffice.PublisherApi
 		/// SupportByVersion Publisher 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		[SupportByVersion("Publisher", 14,15,16)]
 		public NetOffice.PublisherApi.TextRange Duplicate
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Duplicate", paramsArray);
-				NetOffice.PublisherApi.TextRange newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.PublisherApi.TextRange.LateBindingApiWrapperType) as NetOffice.PublisherApi.TextRange;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.PublisherApi.TextRange>(this, "Duplicate", NetOffice.PublisherApi.TextRange.LateBindingApiWrapperType);
 			}
 		}
 
@@ -338,15 +315,12 @@ namespace NetOffice.PublisherApi
 		/// SupportByVersion Publisher 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		[SupportByVersion("Publisher", 14,15,16)]
 		public NetOffice.PublisherApi.Font MajorityFont
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "MajorityFont", paramsArray);
-				NetOffice.PublisherApi.Font newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.PublisherApi.Font.LateBindingApiWrapperType) as NetOffice.PublisherApi.Font;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.PublisherApi.Font>(this, "MajorityFont", NetOffice.PublisherApi.Font.LateBindingApiWrapperType);
 			}
 		}
 
@@ -354,15 +328,12 @@ namespace NetOffice.PublisherApi
 		/// SupportByVersion Publisher 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		[SupportByVersion("Publisher", 14,15,16)]
 		public NetOffice.PublisherApi.ParagraphFormat MajorityParagraphFormat
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "MajorityParagraphFormat", paramsArray);
-				NetOffice.PublisherApi.ParagraphFormat newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.PublisherApi.ParagraphFormat.LateBindingApiWrapperType) as NetOffice.PublisherApi.ParagraphFormat;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.PublisherApi.ParagraphFormat>(this, "MajorityParagraphFormat", NetOffice.PublisherApi.ParagraphFormat.LateBindingApiWrapperType);
 			}
 		}
 
@@ -370,15 +341,12 @@ namespace NetOffice.PublisherApi
 		/// SupportByVersion Publisher 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		[SupportByVersion("Publisher", 14,15,16)]
 		public NetOffice.PublisherApi.Fields Fields
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Fields", paramsArray);
-				NetOffice.PublisherApi.Fields newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.PublisherApi.Fields.LateBindingApiWrapperType) as NetOffice.PublisherApi.Fields;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.PublisherApi.Fields>(this, "Fields", NetOffice.PublisherApi.Fields.LateBindingApiWrapperType);
 			}
 		}
 
@@ -386,15 +354,12 @@ namespace NetOffice.PublisherApi
 		/// SupportByVersion Publisher 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		[SupportByVersion("Publisher", 14,15,16)]
 		public NetOffice.PublisherApi.Story Story
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Story", paramsArray);
-				NetOffice.PublisherApi.Story newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.PublisherApi.Story.LateBindingApiWrapperType) as NetOffice.PublisherApi.Story;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.PublisherApi.Story>(this, "Story", NetOffice.PublisherApi.Story.LateBindingApiWrapperType);
 			}
 		}
 
@@ -402,20 +367,16 @@ namespace NetOffice.PublisherApi
 		/// SupportByVersion Publisher 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		[SupportByVersion("Publisher", 14,15,16)]
 		public NetOffice.OfficeApi.Enums.MsoLanguageID LanguageID
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "LanguageID", paramsArray);
-				int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-				return (NetOffice.OfficeApi.Enums.MsoLanguageID)intReturnItem;
+				return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoLanguageID>(this, "LanguageID");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "LanguageID", paramsArray);
+				Factory.ExecuteEnumPropertySet(this, "LanguageID", value);
 			}
 		}
 
@@ -423,15 +384,12 @@ namespace NetOffice.PublisherApi
 		/// SupportByVersion Publisher 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		[SupportByVersion("Publisher", 14,15,16)]
 		public NetOffice.PublisherApi.DropCap DropCap
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "DropCap", paramsArray);
-				NetOffice.PublisherApi.DropCap newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.PublisherApi.DropCap.LateBindingApiWrapperType) as NetOffice.PublisherApi.DropCap;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.PublisherApi.DropCap>(this, "DropCap", NetOffice.PublisherApi.DropCap.LateBindingApiWrapperType);
 			}
 		}
 
@@ -439,15 +397,12 @@ namespace NetOffice.PublisherApi
 		/// SupportByVersion Publisher 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		[SupportByVersion("Publisher", 14,15,16)]
 		public NetOffice.PublisherApi.Enums.PbFontScriptType Script
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Script", paramsArray);
-				int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-				return (NetOffice.PublisherApi.Enums.PbFontScriptType)intReturnItem;
+				return Factory.ExecuteEnumPropertyGet<NetOffice.PublisherApi.Enums.PbFontScriptType>(this, "Script");
 			}
 		}
 
@@ -455,15 +410,12 @@ namespace NetOffice.PublisherApi
 		/// SupportByVersion Publisher 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		[SupportByVersion("Publisher", 14,15,16)]
 		public NetOffice.PublisherApi.Hyperlinks Hyperlinks
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Hyperlinks", paramsArray);
-				NetOffice.PublisherApi.Hyperlinks newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.PublisherApi.Hyperlinks.LateBindingApiWrapperType) as NetOffice.PublisherApi.Hyperlinks;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.PublisherApi.Hyperlinks>(this, "Hyperlinks", NetOffice.PublisherApi.Hyperlinks.LateBindingApiWrapperType);
 			}
 		}
 
@@ -471,15 +423,12 @@ namespace NetOffice.PublisherApi
 		/// SupportByVersion Publisher 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		[SupportByVersion("Publisher", 14,15,16)]
 		public NetOffice.PublisherApi.FindReplace Find
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Find", paramsArray);
-				NetOffice.PublisherApi.FindReplace newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.PublisherApi.FindReplace.LateBindingApiWrapperType) as NetOffice.PublisherApi.FindReplace;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.PublisherApi.FindReplace>(this, "Find", NetOffice.PublisherApi.FindReplace.LateBindingApiWrapperType);
 			}
 		}
 
@@ -487,15 +436,12 @@ namespace NetOffice.PublisherApi
 		/// SupportByVersion Publisher 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		[SupportByVersion("Publisher", 14,15,16)]
 		public NetOffice.PublisherApi.InlineShapes InlineShapes
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "InlineShapes", paramsArray);
-				NetOffice.PublisherApi.InlineShapes newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.PublisherApi.InlineShapes.LateBindingApiWrapperType) as NetOffice.PublisherApi.InlineShapes;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.PublisherApi.InlineShapes>(this, "InlineShapes", NetOffice.PublisherApi.InlineShapes.LateBindingApiWrapperType);
 			}
 		}
 
@@ -503,14 +449,12 @@ namespace NetOffice.PublisherApi
 		/// SupportByVersion Publisher 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		[SupportByVersion("Publisher", 14,15,16)]
 		public Int32 WordsCount
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "WordsCount", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "WordsCount");
 			}
 		}
 
@@ -518,14 +462,12 @@ namespace NetOffice.PublisherApi
 		/// SupportByVersion Publisher 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		[SupportByVersion("Publisher", 14,15,16)]
 		public Int32 LinesCount
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "LinesCount", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "LinesCount");
 			}
 		}
 
@@ -533,14 +475,12 @@ namespace NetOffice.PublisherApi
 		/// SupportByVersion Publisher 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		[SupportByVersion("Publisher", 14,15,16)]
 		public Int32 ParagraphsCount
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "ParagraphsCount", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "ParagraphsCount");
 			}
 		}
 
@@ -550,431 +490,326 @@ namespace NetOffice.PublisherApi
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="direction">NetOffice.PublisherApi.Enums.PbCollapseDirection Direction</param>
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		/// <param name="direction">NetOffice.PublisherApi.Enums.PbCollapseDirection direction</param>
+		[SupportByVersion("Publisher", 14,15,16)]
 		public void Collapse(NetOffice.PublisherApi.Enums.PbCollapseDirection direction)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(direction);
-			Invoker.Method(this, "Collapse", paramsArray);
+			 Factory.ExecuteMethod(this, "Collapse", direction);
 		}
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="unit">NetOffice.PublisherApi.Enums.PbTextUnit Unit</param>
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		/// <param name="unit">NetOffice.PublisherApi.Enums.PbTextUnit unit</param>
+		[SupportByVersion("Publisher", 14,15,16)]
 		public Int32 Expand(NetOffice.PublisherApi.Enums.PbTextUnit unit)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(unit);
-			object returnItem = Invoker.MethodReturn(this, "Expand", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return Factory.ExecuteInt32MethodGet(this, "Expand", unit);
 		}
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="unit">NetOffice.PublisherApi.Enums.PbTextUnit Unit</param>
-		/// <param name="size">Int32 Size</param>
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		/// <param name="unit">NetOffice.PublisherApi.Enums.PbTextUnit unit</param>
+		/// <param name="size">Int32 size</param>
+		[SupportByVersion("Publisher", 14,15,16)]
 		public Int32 Move(NetOffice.PublisherApi.Enums.PbTextUnit unit, Int32 size)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(unit, size);
-			object returnItem = Invoker.MethodReturn(this, "Move", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return Factory.ExecuteInt32MethodGet(this, "Move", unit, size);
 		}
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="unit">NetOffice.PublisherApi.Enums.PbTextUnit Unit</param>
-		/// <param name="size">Int32 Size</param>
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		/// <param name="unit">NetOffice.PublisherApi.Enums.PbTextUnit unit</param>
+		/// <param name="size">Int32 size</param>
+		[SupportByVersion("Publisher", 14,15,16)]
 		public Int32 MoveStart(NetOffice.PublisherApi.Enums.PbTextUnit unit, Int32 size)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(unit, size);
-			object returnItem = Invoker.MethodReturn(this, "MoveStart", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return Factory.ExecuteInt32MethodGet(this, "MoveStart", unit, size);
 		}
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="unit">NetOffice.PublisherApi.Enums.PbTextUnit Unit</param>
-		/// <param name="size">Int32 Size</param>
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		/// <param name="unit">NetOffice.PublisherApi.Enums.PbTextUnit unit</param>
+		/// <param name="size">Int32 size</param>
+		[SupportByVersion("Publisher", 14,15,16)]
 		public Int32 MoveEnd(NetOffice.PublisherApi.Enums.PbTextUnit unit, Int32 size)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(unit, size);
-			object returnItem = Invoker.MethodReturn(this, "MoveEnd", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return Factory.ExecuteInt32MethodGet(this, "MoveEnd", unit, size);
 		}
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="start">Int32 Start</param>
+		/// <param name="start">Int32 start</param>
 		/// <param name="length">optional Int32 Length = 1</param>
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		[SupportByVersion("Publisher", 14,15,16)]
 		public NetOffice.PublisherApi.TextRange Characters(Int32 start, object length)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(start, length);
-			object returnItem = Invoker.MethodReturn(this, "Characters", paramsArray);
-			NetOffice.PublisherApi.TextRange newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PublisherApi.TextRange.LateBindingApiWrapperType) as NetOffice.PublisherApi.TextRange;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PublisherApi.TextRange>(this, "Characters", NetOffice.PublisherApi.TextRange.LateBindingApiWrapperType, start, length);
 		}
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="start">Int32 Start</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		/// <param name="start">Int32 start</param>
+		[CustomMethod]
+		[SupportByVersion("Publisher", 14,15,16)]
 		public NetOffice.PublisherApi.TextRange Characters(Int32 start)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(start);
-			object returnItem = Invoker.MethodReturn(this, "Characters", paramsArray);
-			NetOffice.PublisherApi.TextRange newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PublisherApi.TextRange.LateBindingApiWrapperType) as NetOffice.PublisherApi.TextRange;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PublisherApi.TextRange>(this, "Characters", NetOffice.PublisherApi.TextRange.LateBindingApiWrapperType, start);
 		}
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="newText">string NewText</param>
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		/// <param name="newText">string newText</param>
+		[SupportByVersion("Publisher", 14,15,16)]
 		public NetOffice.PublisherApi.TextRange InsertAfter(string newText)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(newText);
-			object returnItem = Invoker.MethodReturn(this, "InsertAfter", paramsArray);
-			NetOffice.PublisherApi.TextRange newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PublisherApi.TextRange.LateBindingApiWrapperType) as NetOffice.PublisherApi.TextRange;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PublisherApi.TextRange>(this, "InsertAfter", NetOffice.PublisherApi.TextRange.LateBindingApiWrapperType, newText);
 		}
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="newText">string NewText</param>
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		/// <param name="newText">string newText</param>
+		[SupportByVersion("Publisher", 14,15,16)]
 		public NetOffice.PublisherApi.TextRange InsertBefore(string newText)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(newText);
-			object returnItem = Invoker.MethodReturn(this, "InsertBefore", paramsArray);
-			NetOffice.PublisherApi.TextRange newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PublisherApi.TextRange.LateBindingApiWrapperType) as NetOffice.PublisherApi.TextRange;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PublisherApi.TextRange>(this, "InsertBefore", NetOffice.PublisherApi.TextRange.LateBindingApiWrapperType, newText);
 		}
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="fontName">string FontName</param>
-		/// <param name="charIndex">Int32 CharIndex</param>
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		/// <param name="fontName">string fontName</param>
+		/// <param name="charIndex">Int32 charIndex</param>
+		[SupportByVersion("Publisher", 14,15,16)]
 		public NetOffice.PublisherApi.TextRange InsertSymbol(string fontName, Int32 charIndex)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(fontName, charIndex);
-			object returnItem = Invoker.MethodReturn(this, "InsertSymbol", paramsArray);
-			NetOffice.PublisherApi.TextRange newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PublisherApi.TextRange.LateBindingApiWrapperType) as NetOffice.PublisherApi.TextRange;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PublisherApi.TextRange>(this, "InsertSymbol", NetOffice.PublisherApi.TextRange.LateBindingApiWrapperType, fontName, charIndex);
 		}
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="format">NetOffice.PublisherApi.Enums.PbDateTimeFormat Format</param>
+		/// <param name="format">NetOffice.PublisherApi.Enums.PbDateTimeFormat format</param>
 		/// <param name="insertAsField">optional bool InsertAsField = false</param>
 		/// <param name="insertAsFullWidth">optional bool InsertAsFullWidth = false</param>
 		/// <param name="language">optional NetOffice.OfficeApi.Enums.MsoLanguageID Language = 0</param>
 		/// <param name="calendar">optional NetOffice.PublisherApi.Enums.PbCalendarType Calendar = 0</param>
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		[SupportByVersion("Publisher", 14,15,16)]
 		public NetOffice.PublisherApi.TextRange InsertDateTime(NetOffice.PublisherApi.Enums.PbDateTimeFormat format, object insertAsField, object insertAsFullWidth, object language, object calendar)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(format, insertAsField, insertAsFullWidth, language, calendar);
-			object returnItem = Invoker.MethodReturn(this, "InsertDateTime", paramsArray);
-			NetOffice.PublisherApi.TextRange newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PublisherApi.TextRange.LateBindingApiWrapperType) as NetOffice.PublisherApi.TextRange;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PublisherApi.TextRange>(this, "InsertDateTime", NetOffice.PublisherApi.TextRange.LateBindingApiWrapperType, new object[]{ format, insertAsField, insertAsFullWidth, language, calendar });
 		}
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="format">NetOffice.PublisherApi.Enums.PbDateTimeFormat Format</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		/// <param name="format">NetOffice.PublisherApi.Enums.PbDateTimeFormat format</param>
+		[CustomMethod]
+		[SupportByVersion("Publisher", 14,15,16)]
 		public NetOffice.PublisherApi.TextRange InsertDateTime(NetOffice.PublisherApi.Enums.PbDateTimeFormat format)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(format);
-			object returnItem = Invoker.MethodReturn(this, "InsertDateTime", paramsArray);
-			NetOffice.PublisherApi.TextRange newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PublisherApi.TextRange.LateBindingApiWrapperType) as NetOffice.PublisherApi.TextRange;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PublisherApi.TextRange>(this, "InsertDateTime", NetOffice.PublisherApi.TextRange.LateBindingApiWrapperType, format);
 		}
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="format">NetOffice.PublisherApi.Enums.PbDateTimeFormat Format</param>
+		/// <param name="format">NetOffice.PublisherApi.Enums.PbDateTimeFormat format</param>
 		/// <param name="insertAsField">optional bool InsertAsField = false</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Publisher", 14,15,16)]
 		public NetOffice.PublisherApi.TextRange InsertDateTime(NetOffice.PublisherApi.Enums.PbDateTimeFormat format, object insertAsField)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(format, insertAsField);
-			object returnItem = Invoker.MethodReturn(this, "InsertDateTime", paramsArray);
-			NetOffice.PublisherApi.TextRange newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PublisherApi.TextRange.LateBindingApiWrapperType) as NetOffice.PublisherApi.TextRange;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PublisherApi.TextRange>(this, "InsertDateTime", NetOffice.PublisherApi.TextRange.LateBindingApiWrapperType, format, insertAsField);
 		}
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="format">NetOffice.PublisherApi.Enums.PbDateTimeFormat Format</param>
+		/// <param name="format">NetOffice.PublisherApi.Enums.PbDateTimeFormat format</param>
 		/// <param name="insertAsField">optional bool InsertAsField = false</param>
 		/// <param name="insertAsFullWidth">optional bool InsertAsFullWidth = false</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Publisher", 14,15,16)]
 		public NetOffice.PublisherApi.TextRange InsertDateTime(NetOffice.PublisherApi.Enums.PbDateTimeFormat format, object insertAsField, object insertAsFullWidth)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(format, insertAsField, insertAsFullWidth);
-			object returnItem = Invoker.MethodReturn(this, "InsertDateTime", paramsArray);
-			NetOffice.PublisherApi.TextRange newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PublisherApi.TextRange.LateBindingApiWrapperType) as NetOffice.PublisherApi.TextRange;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PublisherApi.TextRange>(this, "InsertDateTime", NetOffice.PublisherApi.TextRange.LateBindingApiWrapperType, format, insertAsField, insertAsFullWidth);
 		}
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="format">NetOffice.PublisherApi.Enums.PbDateTimeFormat Format</param>
+		/// <param name="format">NetOffice.PublisherApi.Enums.PbDateTimeFormat format</param>
 		/// <param name="insertAsField">optional bool InsertAsField = false</param>
 		/// <param name="insertAsFullWidth">optional bool InsertAsFullWidth = false</param>
 		/// <param name="language">optional NetOffice.OfficeApi.Enums.MsoLanguageID Language = 0</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Publisher", 14,15,16)]
 		public NetOffice.PublisherApi.TextRange InsertDateTime(NetOffice.PublisherApi.Enums.PbDateTimeFormat format, object insertAsField, object insertAsFullWidth, object language)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(format, insertAsField, insertAsFullWidth, language);
-			object returnItem = Invoker.MethodReturn(this, "InsertDateTime", paramsArray);
-			NetOffice.PublisherApi.TextRange newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PublisherApi.TextRange.LateBindingApiWrapperType) as NetOffice.PublisherApi.TextRange;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PublisherApi.TextRange>(this, "InsertDateTime", NetOffice.PublisherApi.TextRange.LateBindingApiWrapperType, format, insertAsField, insertAsFullWidth, language);
 		}
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="start">Int32 Start</param>
+		/// <param name="start">Int32 start</param>
 		/// <param name="length">optional Int32 Length = 1</param>
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		[SupportByVersion("Publisher", 14,15,16)]
 		public NetOffice.PublisherApi.TextRange Paragraphs(Int32 start, object length)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(start, length);
-			object returnItem = Invoker.MethodReturn(this, "Paragraphs", paramsArray);
-			NetOffice.PublisherApi.TextRange newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PublisherApi.TextRange.LateBindingApiWrapperType) as NetOffice.PublisherApi.TextRange;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PublisherApi.TextRange>(this, "Paragraphs", NetOffice.PublisherApi.TextRange.LateBindingApiWrapperType, start, length);
 		}
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="start">Int32 Start</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		/// <param name="start">Int32 start</param>
+		[CustomMethod]
+		[SupportByVersion("Publisher", 14,15,16)]
 		public NetOffice.PublisherApi.TextRange Paragraphs(Int32 start)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(start);
-			object returnItem = Invoker.MethodReturn(this, "Paragraphs", paramsArray);
-			NetOffice.PublisherApi.TextRange newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PublisherApi.TextRange.LateBindingApiWrapperType) as NetOffice.PublisherApi.TextRange;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PublisherApi.TextRange>(this, "Paragraphs", NetOffice.PublisherApi.TextRange.LateBindingApiWrapperType, start);
 		}
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="start">Int32 Start</param>
+		/// <param name="start">Int32 start</param>
 		/// <param name="length">optional Int32 Length = 1</param>
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		[SupportByVersion("Publisher", 14,15,16)]
 		public NetOffice.PublisherApi.TextRange Lines(Int32 start, object length)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(start, length);
-			object returnItem = Invoker.MethodReturn(this, "Lines", paramsArray);
-			NetOffice.PublisherApi.TextRange newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PublisherApi.TextRange.LateBindingApiWrapperType) as NetOffice.PublisherApi.TextRange;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PublisherApi.TextRange>(this, "Lines", NetOffice.PublisherApi.TextRange.LateBindingApiWrapperType, start, length);
 		}
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="start">Int32 Start</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		/// <param name="start">Int32 start</param>
+		[CustomMethod]
+		[SupportByVersion("Publisher", 14,15,16)]
 		public NetOffice.PublisherApi.TextRange Lines(Int32 start)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(start);
-			object returnItem = Invoker.MethodReturn(this, "Lines", paramsArray);
-			NetOffice.PublisherApi.TextRange newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PublisherApi.TextRange.LateBindingApiWrapperType) as NetOffice.PublisherApi.TextRange;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PublisherApi.TextRange>(this, "Lines", NetOffice.PublisherApi.TextRange.LateBindingApiWrapperType, start);
 		}
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="start">Int32 Start</param>
+		/// <param name="start">Int32 start</param>
 		/// <param name="length">optional Int32 Length = 1</param>
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		[SupportByVersion("Publisher", 14,15,16)]
 		public NetOffice.PublisherApi.TextRange Words(Int32 start, object length)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(start, length);
-			object returnItem = Invoker.MethodReturn(this, "Words", paramsArray);
-			NetOffice.PublisherApi.TextRange newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PublisherApi.TextRange.LateBindingApiWrapperType) as NetOffice.PublisherApi.TextRange;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PublisherApi.TextRange>(this, "Words", NetOffice.PublisherApi.TextRange.LateBindingApiWrapperType, start, length);
 		}
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="start">Int32 Start</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		/// <param name="start">Int32 start</param>
+		[CustomMethod]
+		[SupportByVersion("Publisher", 14,15,16)]
 		public NetOffice.PublisherApi.TextRange Words(Int32 start)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(start);
-			object returnItem = Invoker.MethodReturn(this, "Words", paramsArray);
-			NetOffice.PublisherApi.TextRange newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PublisherApi.TextRange.LateBindingApiWrapperType) as NetOffice.PublisherApi.TextRange;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PublisherApi.TextRange>(this, "Words", NetOffice.PublisherApi.TextRange.LateBindingApiWrapperType, start);
 		}
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		[SupportByVersion("Publisher", 14,15,16)]
 		public void Select()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "Select", paramsArray);
+			 Factory.ExecuteMethod(this, "Select");
 		}
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		[SupportByVersion("Publisher", 14,15,16)]
 		public void Cut()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "Cut", paramsArray);
+			 Factory.ExecuteMethod(this, "Cut");
 		}
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		[SupportByVersion("Publisher", 14,15,16)]
 		public void Copy()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "Copy", paramsArray);
+			 Factory.ExecuteMethod(this, "Copy");
 		}
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		[SupportByVersion("Publisher", 14,15,16)]
 		public void Delete()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "Delete", paramsArray);
+			 Factory.ExecuteMethod(this, "Delete");
 		}
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		[SupportByVersion("Publisher", 14,15,16)]
 		public NetOffice.PublisherApi.TextRange Paste()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "Paste", paramsArray);
-			NetOffice.PublisherApi.TextRange newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PublisherApi.TextRange.LateBindingApiWrapperType) as NetOffice.PublisherApi.TextRange;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PublisherApi.TextRange>(this, "Paste", NetOffice.PublisherApi.TextRange.LateBindingApiWrapperType);
 		}
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
-		/// 
 		/// </summary>
 		/// <param name="varIndex">object varIndex</param>
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		[SupportByVersion("Publisher", 14,15,16)]
 		public NetOffice.PublisherApi.TextRange InsertMailMergeField(object varIndex)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(varIndex);
-			object returnItem = Invoker.MethodReturn(this, "InsertMailMergeField", paramsArray);
-			NetOffice.PublisherApi.TextRange newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PublisherApi.TextRange.LateBindingApiWrapperType) as NetOffice.PublisherApi.TextRange;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PublisherApi.TextRange>(this, "InsertMailMergeField", NetOffice.PublisherApi.TextRange.LateBindingApiWrapperType, varIndex);
 		}
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
-		/// 
 		/// </summary>
 		/// <param name="type">optional NetOffice.PublisherApi.Enums.PbPageNumberType Type = 1</param>
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		[SupportByVersion("Publisher", 14,15,16)]
 		public NetOffice.PublisherApi.TextRange InsertPageNumber(object type)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(type);
-			object returnItem = Invoker.MethodReturn(this, "InsertPageNumber", paramsArray);
-			NetOffice.PublisherApi.TextRange newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PublisherApi.TextRange.LateBindingApiWrapperType) as NetOffice.PublisherApi.TextRange;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PublisherApi.TextRange>(this, "InsertPageNumber", NetOffice.PublisherApi.TextRange.LateBindingApiWrapperType, type);
 		}
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
-		/// 
 		/// </summary>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Publisher", 14,15,16)]
 		public NetOffice.PublisherApi.TextRange InsertPageNumber()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "InsertPageNumber", paramsArray);
-			NetOffice.PublisherApi.TextRange newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PublisherApi.TextRange.LateBindingApiWrapperType) as NetOffice.PublisherApi.TextRange;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PublisherApi.TextRange>(this, "InsertPageNumber", NetOffice.PublisherApi.TextRange.LateBindingApiWrapperType);
 		}
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		[SupportByVersion("Publisher", 14,15,16)]
 		public NetOffice.PublisherApi.TextRange InsertBarcode()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "InsertBarcode", paramsArray);
-			NetOffice.PublisherApi.TextRange newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PublisherApi.TextRange.LateBindingApiWrapperType) as NetOffice.PublisherApi.TextRange;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PublisherApi.TextRange>(this, "InsertBarcode", NetOffice.PublisherApi.TextRange.LateBindingApiWrapperType);
 		}
 
 		#endregion
+
 		#pragma warning restore
 	}
 }

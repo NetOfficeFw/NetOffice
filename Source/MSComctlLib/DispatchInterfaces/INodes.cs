@@ -1,24 +1,35 @@
-﻿using System;
-using NetRuntimeSystem = System;
-using System.Runtime.InteropServices;
-using System.Runtime.CompilerServices;
-using System.ComponentModel;
-using System.Reflection;
-using System.Collections.Generic;
 using System.Collections;
-using NetOffice;
+using System.Collections.Generic;
+using System;
+using NetRuntimeSystem = System;
+using System.ComponentModel;
+using NetOffice.Attributes;
+
 namespace NetOffice.MSComctlLibApi
 {
-	///<summary>
+	/// <summary>
 	/// DispatchInterface INodes 
 	/// SupportByVersion MSComctlLib, 6
-	///</summary>
-	[SupportByVersionAttribute("MSComctlLib", 6)]
-	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
-	public class INodes : COMObject ,IEnumerable<NetOffice.MSComctlLibApi.INode>
+	/// </summary>
+	[SupportByVersion("MSComctlLib", 6)]
+	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Method), HasIndexProperty(IndexInvoke.Property, "Item")]
+	public class INodes : COMObject , IEnumerable<NetOffice.MSComctlLibApi.INode>
 	{
 		#pragma warning disable
+
 		#region Type Information
+
+		/// <summary>
+		/// Instance Type
+		/// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
+		public override Type InstanceType
+		{
+			get
+			{
+				return LateBindingApiWrapperType;
+			}
+		}
 
         private static Type _type;
 
@@ -29,14 +40,20 @@ namespace NetOffice.MSComctlLibApi
             {
                 if (null == _type)
                     _type = typeof(INodes);
-                    
                 return _type;
             }
         }
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public INodes(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -82,7 +99,7 @@ namespace NetOffice.MSComctlLibApi
 		{
 		}
 		
-		/// <param name="progId">registered ProgID</param>
+		/// <param name="progId">registered progID</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public INodes(string progId) : base(progId)
 		{
@@ -96,19 +113,16 @@ namespace NetOffice.MSComctlLibApi
 		/// SupportByVersion MSComctlLib 6
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSComctlLib", 6)]
+		[SupportByVersion("MSComctlLib", 6)]
 		public Int16 Count
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Count", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt16(returnItem);
+				return Factory.ExecuteInt16PropertyGet(this, "Count");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "Count", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "Count", value);
 			}
 		}
 
@@ -116,36 +130,32 @@ namespace NetOffice.MSComctlLibApi
 		/// SupportByVersion MSComctlLib 6
 		/// Get/Set
 		/// </summary>
-		/// <param name="index">object Index</param>
-		[SupportByVersionAttribute("MSComctlLib", 6)]
+		/// <param name="index">object index</param>
+		[SupportByVersion("MSComctlLib", 6)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public NetOffice.MSComctlLibApi.INode get_ControlDefault(object index)
-		{		
-			object[] paramsArray = Invoker.ValidateParamsArray(index);
-			object returnItem = Invoker.PropertyGet(this, "ControlDefault", paramsArray);
-			NetOffice.MSComctlLibApi.INode newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSComctlLibApi.INode;
-			return newObject;
+		{
+			return Factory.ExecuteKnownReferencePropertyGet<NetOffice.MSComctlLibApi.INode>(this, "ControlDefault", NetOffice.MSComctlLibApi.INode.LateBindingApiWrapperType, index);
 		}
 
 		/// <summary>
 		/// SupportByVersion MSComctlLib 6
 		/// Get/Set
 		/// </summary>
-		/// <param name="index">object Index</param>
-		[SupportByVersionAttribute("MSComctlLib", 6)]
+		/// <param name="index">object index</param>
+		[SupportByVersion("MSComctlLib", 6)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public void set_ControlDefault(object index, NetOffice.MSComctlLibApi.INode value)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(index);
-			Invoker.PropertySet(this, "ControlDefault", paramsArray, value);
+			Factory.ExecutePropertySet(this, "ControlDefault", index, value);
 		}
 
 		/// <summary>
 		/// SupportByVersion MSComctlLib 6
 		/// Alias for get_ControlDefault
 		/// </summary>
-		/// <param name="index">object Index</param>
-		[SupportByVersionAttribute("MSComctlLib", 6)]
+		/// <param name="index">object index</param>
+		[SupportByVersion("MSComctlLib", 6), Redirect("get_ControlDefault")]
 		public NetOffice.MSComctlLibApi.INode ControlDefault(object index)
 		{
 			return get_ControlDefault(index);
@@ -155,22 +165,19 @@ namespace NetOffice.MSComctlLibApi
 		/// SupportByVersion MSComctlLib 6
 		/// Get/Set
 		/// </summary>
-		/// <param name="index">object Index</param>
-		[SupportByVersionAttribute("MSComctlLib", 6)]
-		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
+		/// <param name="index">object index</param>
+		[SupportByVersion("MSComctlLib", 6)]
+		[BaseResult]
+		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
 		public NetOffice.MSComctlLibApi.INode this[object index]
 		{
 			get
 			{
-			object[] paramsArray = Invoker.ValidateParamsArray(index);
-			object returnItem = Invoker.PropertyGet(this, "Item", paramsArray);
-			NetOffice.MSComctlLibApi.INode newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSComctlLibApi.INode;
-			return newObject;
+				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.MSComctlLibApi.INode>(this, "Item", index);
 			}
 			set
 			{
-			object[] paramsArray = Invoker.ValidateParamsArray(index);
-			Invoker.PropertySet(this, "Item", paramsArray, value);
+				Factory.ExecuteReferencePropertySet(this, "Item", value, index);
 			}
 		}
 
@@ -180,143 +187,118 @@ namespace NetOffice.MSComctlLibApi
 
 		/// <summary>
 		/// SupportByVersion MSComctlLib 6
-		/// 
 		/// </summary>
-		/// <param name="relative">optional object Relative</param>
-		/// <param name="relationship">optional object Relationship</param>
-		/// <param name="key">optional object Key</param>
-		/// <param name="text">optional object Text</param>
-		/// <param name="image">optional object Image</param>
-		/// <param name="selectedImage">optional object SelectedImage</param>
-		[SupportByVersionAttribute("MSComctlLib", 6)]
+		/// <param name="relative">optional object relative</param>
+		/// <param name="relationship">optional object relationship</param>
+		/// <param name="key">optional object key</param>
+		/// <param name="text">optional object text</param>
+		/// <param name="image">optional object image</param>
+		/// <param name="selectedImage">optional object selectedImage</param>
+		[SupportByVersion("MSComctlLib", 6)]
+		[BaseResult]
 		public NetOffice.MSComctlLibApi.INode Add(object relative, object relationship, object key, object text, object image, object selectedImage)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(relative, relationship, key, text, image, selectedImage);
-			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.MSComctlLibApi.INode newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSComctlLibApi.INode;
-			return newObject;
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.MSComctlLibApi.INode>(this, "Add", new object[]{ relative, relationship, key, text, image, selectedImage });
 		}
 
 		/// <summary>
 		/// SupportByVersion MSComctlLib 6
-		/// 
 		/// </summary>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSComctlLib", 6)]
+		[CustomMethod]
+		[BaseResult]
+		[SupportByVersion("MSComctlLib", 6)]
 		public NetOffice.MSComctlLibApi.INode Add()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.MSComctlLibApi.INode newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSComctlLibApi.INode;
-			return newObject;
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.MSComctlLibApi.INode>(this, "Add");
 		}
 
 		/// <summary>
 		/// SupportByVersion MSComctlLib 6
-		/// 
 		/// </summary>
-		/// <param name="relative">optional object Relative</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSComctlLib", 6)]
+		/// <param name="relative">optional object relative</param>
+		[CustomMethod]
+		[BaseResult]
+		[SupportByVersion("MSComctlLib", 6)]
 		public NetOffice.MSComctlLibApi.INode Add(object relative)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(relative);
-			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.MSComctlLibApi.INode newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSComctlLibApi.INode;
-			return newObject;
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.MSComctlLibApi.INode>(this, "Add", relative);
 		}
 
 		/// <summary>
 		/// SupportByVersion MSComctlLib 6
-		/// 
 		/// </summary>
-		/// <param name="relative">optional object Relative</param>
-		/// <param name="relationship">optional object Relationship</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSComctlLib", 6)]
+		/// <param name="relative">optional object relative</param>
+		/// <param name="relationship">optional object relationship</param>
+		[CustomMethod]
+		[BaseResult]
+		[SupportByVersion("MSComctlLib", 6)]
 		public NetOffice.MSComctlLibApi.INode Add(object relative, object relationship)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(relative, relationship);
-			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.MSComctlLibApi.INode newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSComctlLibApi.INode;
-			return newObject;
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.MSComctlLibApi.INode>(this, "Add", relative, relationship);
 		}
 
 		/// <summary>
 		/// SupportByVersion MSComctlLib 6
-		/// 
 		/// </summary>
-		/// <param name="relative">optional object Relative</param>
-		/// <param name="relationship">optional object Relationship</param>
-		/// <param name="key">optional object Key</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSComctlLib", 6)]
+		/// <param name="relative">optional object relative</param>
+		/// <param name="relationship">optional object relationship</param>
+		/// <param name="key">optional object key</param>
+		[CustomMethod]
+		[BaseResult]
+		[SupportByVersion("MSComctlLib", 6)]
 		public NetOffice.MSComctlLibApi.INode Add(object relative, object relationship, object key)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(relative, relationship, key);
-			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.MSComctlLibApi.INode newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSComctlLibApi.INode;
-			return newObject;
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.MSComctlLibApi.INode>(this, "Add", relative, relationship, key);
 		}
 
 		/// <summary>
 		/// SupportByVersion MSComctlLib 6
-		/// 
 		/// </summary>
-		/// <param name="relative">optional object Relative</param>
-		/// <param name="relationship">optional object Relationship</param>
-		/// <param name="key">optional object Key</param>
-		/// <param name="text">optional object Text</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSComctlLib", 6)]
+		/// <param name="relative">optional object relative</param>
+		/// <param name="relationship">optional object relationship</param>
+		/// <param name="key">optional object key</param>
+		/// <param name="text">optional object text</param>
+		[CustomMethod]
+		[BaseResult]
+		[SupportByVersion("MSComctlLib", 6)]
 		public NetOffice.MSComctlLibApi.INode Add(object relative, object relationship, object key, object text)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(relative, relationship, key, text);
-			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.MSComctlLibApi.INode newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSComctlLibApi.INode;
-			return newObject;
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.MSComctlLibApi.INode>(this, "Add", relative, relationship, key, text);
 		}
 
 		/// <summary>
 		/// SupportByVersion MSComctlLib 6
-		/// 
 		/// </summary>
-		/// <param name="relative">optional object Relative</param>
-		/// <param name="relationship">optional object Relationship</param>
-		/// <param name="key">optional object Key</param>
-		/// <param name="text">optional object Text</param>
-		/// <param name="image">optional object Image</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSComctlLib", 6)]
+		/// <param name="relative">optional object relative</param>
+		/// <param name="relationship">optional object relationship</param>
+		/// <param name="key">optional object key</param>
+		/// <param name="text">optional object text</param>
+		/// <param name="image">optional object image</param>
+		[CustomMethod]
+		[BaseResult]
+		[SupportByVersion("MSComctlLib", 6)]
 		public NetOffice.MSComctlLibApi.INode Add(object relative, object relationship, object key, object text, object image)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(relative, relationship, key, text, image);
-			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.MSComctlLibApi.INode newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSComctlLibApi.INode;
-			return newObject;
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.MSComctlLibApi.INode>(this, "Add", new object[]{ relative, relationship, key, text, image });
 		}
 
 		/// <summary>
 		/// SupportByVersion MSComctlLib 6
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("MSComctlLib", 6)]
+		[SupportByVersion("MSComctlLib", 6)]
 		public void Clear()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "Clear", paramsArray);
+			 Factory.ExecuteMethod(this, "Clear");
 		}
 
 		/// <summary>
 		/// SupportByVersion MSComctlLib 6
-		/// 
 		/// </summary>
-		/// <param name="index">object Index</param>
-		[SupportByVersionAttribute("MSComctlLib", 6)]
+		/// <param name="index">object index</param>
+		[SupportByVersion("MSComctlLib", 6)]
 		public void Remove(object index)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(index);
-			Invoker.Method(this, "Remove", paramsArray);
+			 Factory.ExecuteMethod(this, "Remove", index);
 		}
 
 		#endregion
@@ -324,9 +306,9 @@ namespace NetOffice.MSComctlLibApi
        #region IEnumerable<NetOffice.MSComctlLibApi.INode> Member
         
         /// <summary>
-		/// SupportByVersionAttribute MSComctlLib, 6
+		/// SupportByVersion MSComctlLib, 6
 		/// </summary>
-		[SupportByVersionAttribute("MSComctlLib", 6)]
+		[SupportByVersion("MSComctlLib", 6)]
        public IEnumerator<NetOffice.MSComctlLibApi.INode> GetEnumerator()  
        {
            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
@@ -339,15 +321,16 @@ namespace NetOffice.MSComctlLibApi
 		#region IEnumerable Members
        
 		/// <summary>
-		/// SupportByVersionAttribute MSComctlLib, 6
+		/// SupportByVersion MSComctlLib, 6
 		/// </summary>
-		[SupportByVersionAttribute("MSComctlLib", 6)]
+		[SupportByVersion("MSComctlLib", 6)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
 			return NetOffice.Utils.GetProxyEnumeratorAsMethod(this);
 		}
 
 		#endregion
+
 		#pragma warning restore
 	}
 }

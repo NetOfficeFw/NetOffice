@@ -1,23 +1,33 @@
 ﻿using System;
 using NetRuntimeSystem = System;
-using System.Runtime.InteropServices;
-using System.Runtime.CompilerServices;
 using System.ComponentModel;
-using System.Reflection;
-using System.Collections.Generic;
-using NetOffice;
+using NetOffice.Attributes;
+
 namespace NetOffice.OfficeApi
 {
-	///<summary>
+	/// <summary>
 	/// DispatchInterface IMsoChartGroup 
 	/// SupportByVersion Office, 12,14,15,16
-	///</summary>
-	[SupportByVersionAttribute("Office", 12,14,15,16)]
-	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
-	public class IMsoChartGroup : COMObject
+	/// </summary>
+	[SupportByVersion("Office", 12,14,15,16)]
+	[EntityType(EntityType.IsDispatchInterface)]
+ 	public class IMsoChartGroup : COMObject
 	{
 		#pragma warning disable
+
 		#region Type Information
+
+		/// <summary>
+		/// Instance Type
+		/// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
+		public override Type InstanceType
+		{
+			get
+			{
+				return LateBindingApiWrapperType;
+			}
+		}
 
         private static Type _type;
 
@@ -28,14 +38,20 @@ namespace NetOffice.OfficeApi
             {
                 if (null == _type)
                     _type = typeof(IMsoChartGroup);
-                    
                 return _type;
             }
         }
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public IMsoChartGroup(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -81,7 +97,7 @@ namespace NetOffice.OfficeApi
 		{
 		}
 		
-		/// <param name="progId">registered ProgID</param>
+		/// <param name="progId">registered progID</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public IMsoChartGroup(string progId) : base(progId)
 		{
@@ -95,19 +111,16 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		[SupportByVersion("Office", 12,14,15,16)]
 		public Int32 AxisGroup
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "AxisGroup", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "AxisGroup");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "AxisGroup", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "AxisGroup", value);
 			}
 		}
 
@@ -115,19 +128,16 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		[SupportByVersion("Office", 12,14,15,16)]
 		public Int32 DoughnutHoleSize
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "DoughnutHoleSize", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "DoughnutHoleSize");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "DoughnutHoleSize", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "DoughnutHoleSize", value);
 			}
 		}
 
@@ -135,15 +145,12 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		[SupportByVersion("Office", 12,14,15,16)]
 		public NetOffice.OfficeApi.IMsoDownBars DownBars
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "DownBars", paramsArray);
-				NetOffice.OfficeApi.IMsoDownBars newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.IMsoDownBars.LateBindingApiWrapperType) as NetOffice.OfficeApi.IMsoDownBars;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.IMsoDownBars>(this, "DownBars", NetOffice.OfficeApi.IMsoDownBars.LateBindingApiWrapperType);
 			}
 		}
 
@@ -151,15 +158,12 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		[SupportByVersion("Office", 12,14,15,16)]
 		public NetOffice.OfficeApi.IMsoDropLines DropLines
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "DropLines", paramsArray);
-				NetOffice.OfficeApi.IMsoDropLines newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.IMsoDropLines.LateBindingApiWrapperType) as NetOffice.OfficeApi.IMsoDropLines;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.IMsoDropLines>(this, "DropLines", NetOffice.OfficeApi.IMsoDropLines.LateBindingApiWrapperType);
 			}
 		}
 
@@ -167,19 +171,16 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		[SupportByVersion("Office", 12,14,15,16)]
 		public Int32 FirstSliceAngle
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "FirstSliceAngle", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "FirstSliceAngle");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "FirstSliceAngle", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "FirstSliceAngle", value);
 			}
 		}
 
@@ -187,19 +188,16 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		[SupportByVersion("Office", 12,14,15,16)]
 		public Int32 GapWidth
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "GapWidth", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "GapWidth");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "GapWidth", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "GapWidth", value);
 			}
 		}
 
@@ -207,19 +205,16 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		[SupportByVersion("Office", 12,14,15,16)]
 		public bool HasDropLines
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "HasDropLines", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "HasDropLines");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "HasDropLines", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "HasDropLines", value);
 			}
 		}
 
@@ -227,19 +222,16 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		[SupportByVersion("Office", 12,14,15,16)]
 		public bool HasHiLoLines
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "HasHiLoLines", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "HasHiLoLines");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "HasHiLoLines", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "HasHiLoLines", value);
 			}
 		}
 
@@ -247,19 +239,16 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		[SupportByVersion("Office", 12,14,15,16)]
 		public bool HasRadarAxisLabels
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "HasRadarAxisLabels", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "HasRadarAxisLabels");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "HasRadarAxisLabels", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "HasRadarAxisLabels", value);
 			}
 		}
 
@@ -267,19 +256,16 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		[SupportByVersion("Office", 12,14,15,16)]
 		public bool HasSeriesLines
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "HasSeriesLines", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "HasSeriesLines");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "HasSeriesLines", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "HasSeriesLines", value);
 			}
 		}
 
@@ -287,19 +273,16 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		[SupportByVersion("Office", 12,14,15,16)]
 		public bool HasUpDownBars
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "HasUpDownBars", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "HasUpDownBars");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "HasUpDownBars", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "HasUpDownBars", value);
 			}
 		}
 
@@ -307,15 +290,12 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		[SupportByVersion("Office", 12,14,15,16)]
 		public NetOffice.OfficeApi.IMsoHiLoLines HiLoLines
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "HiLoLines", paramsArray);
-				NetOffice.OfficeApi.IMsoHiLoLines newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.IMsoHiLoLines.LateBindingApiWrapperType) as NetOffice.OfficeApi.IMsoHiLoLines;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.IMsoHiLoLines>(this, "HiLoLines", NetOffice.OfficeApi.IMsoHiLoLines.LateBindingApiWrapperType);
 			}
 		}
 
@@ -323,14 +303,12 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		[SupportByVersion("Office", 12,14,15,16)]
 		public Int32 Index
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Index", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "Index");
 			}
 		}
 
@@ -338,19 +316,16 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		[SupportByVersion("Office", 12,14,15,16)]
 		public Int32 Overlap
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Overlap", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "Overlap");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "Overlap", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "Overlap", value);
 			}
 		}
 
@@ -359,15 +334,12 @@ namespace NetOffice.OfficeApi
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		[SupportByVersion("Office", 12,14,15,16), ProxyResult]
 		public object RadarAxisLabels
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "RadarAxisLabels", paramsArray);
-				ICOMObject newObject = Factory.CreateObjectFromComProxy(this,returnItem);
-				return newObject;
+				return Factory.ExecuteReferencePropertyGet(this, "RadarAxisLabels");
 			}
 		}
 
@@ -375,15 +347,12 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		[SupportByVersion("Office", 12,14,15,16)]
 		public NetOffice.OfficeApi.IMsoSeriesLines SeriesLines
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "SeriesLines", paramsArray);
-				NetOffice.OfficeApi.IMsoSeriesLines newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.IMsoSeriesLines.LateBindingApiWrapperType) as NetOffice.OfficeApi.IMsoSeriesLines;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.IMsoSeriesLines>(this, "SeriesLines", NetOffice.OfficeApi.IMsoSeriesLines.LateBindingApiWrapperType);
 			}
 		}
 
@@ -391,20 +360,17 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		[SupportByVersion("Office", 12,14,15,16)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public Int32 SubType
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "SubType", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "SubType");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "SubType", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "SubType", value);
 			}
 		}
 
@@ -412,20 +378,17 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		[SupportByVersion("Office", 12,14,15,16)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public Int32 Type
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Type", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "Type");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "Type", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "Type", value);
 			}
 		}
 
@@ -433,15 +396,12 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		[SupportByVersion("Office", 12,14,15,16)]
 		public NetOffice.OfficeApi.IMsoUpBars UpBars
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "UpBars", paramsArray);
-				NetOffice.OfficeApi.IMsoUpBars newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.IMsoUpBars.LateBindingApiWrapperType) as NetOffice.OfficeApi.IMsoUpBars;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.IMsoUpBars>(this, "UpBars", NetOffice.OfficeApi.IMsoUpBars.LateBindingApiWrapperType);
 			}
 		}
 
@@ -449,19 +409,16 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		[SupportByVersion("Office", 12,14,15,16)]
 		public bool VaryByCategories
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "VaryByCategories", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "VaryByCategories");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "VaryByCategories", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "VaryByCategories", value);
 			}
 		}
 
@@ -469,20 +426,16 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		[SupportByVersion("Office", 12,14,15,16)]
 		public NetOffice.OfficeApi.Enums.XlSizeRepresents SizeRepresents
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "SizeRepresents", paramsArray);
-				int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-				return (NetOffice.OfficeApi.Enums.XlSizeRepresents)intReturnItem;
+				return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.XlSizeRepresents>(this, "SizeRepresents");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "SizeRepresents", paramsArray);
+				Factory.ExecuteEnumPropertySet(this, "SizeRepresents", value);
 			}
 		}
 
@@ -490,19 +443,16 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		[SupportByVersion("Office", 12,14,15,16)]
 		public Int32 BubbleScale
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "BubbleScale", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "BubbleScale");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "BubbleScale", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "BubbleScale", value);
 			}
 		}
 
@@ -510,19 +460,16 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		[SupportByVersion("Office", 12,14,15,16)]
 		public bool ShowNegativeBubbles
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "ShowNegativeBubbles", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "ShowNegativeBubbles");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "ShowNegativeBubbles", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "ShowNegativeBubbles", value);
 			}
 		}
 
@@ -530,20 +477,16 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		[SupportByVersion("Office", 12,14,15,16)]
 		public NetOffice.OfficeApi.Enums.XlChartSplitType SplitType
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "SplitType", paramsArray);
-				int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-				return (NetOffice.OfficeApi.Enums.XlChartSplitType)intReturnItem;
+				return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.XlChartSplitType>(this, "SplitType");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "SplitType", paramsArray);
+				Factory.ExecuteEnumPropertySet(this, "SplitType", value);
 			}
 		}
 
@@ -551,27 +494,16 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		[SupportByVersion("Office", 12,14,15,16)]
 		public object SplitValue
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "SplitValue", paramsArray);
-				if((null != returnItem) && (returnItem is MarshalByRefObject))
-				{
-					ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
-					return newObject;
-				}
-				else
-				{
-					return  returnItem;
-				}
+				return Factory.ExecuteVariantPropertyGet(this, "SplitValue");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "SplitValue", paramsArray);
+				Factory.ExecuteVariantPropertySet(this, "SplitValue", value);
 			}
 		}
 
@@ -579,19 +511,16 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		[SupportByVersion("Office", 12,14,15,16)]
 		public Int32 SecondPlotSize
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "SecondPlotSize", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "SecondPlotSize");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "SecondPlotSize", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "SecondPlotSize", value);
 			}
 		}
 
@@ -599,19 +528,16 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		[SupportByVersion("Office", 12,14,15,16)]
 		public bool Has3DShading
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Has3DShading", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "Has3DShading");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "Has3DShading", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "Has3DShading", value);
 			}
 		}
 
@@ -620,15 +546,12 @@ namespace NetOffice.OfficeApi
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("Office", 14,15,16)]
+		[SupportByVersion("Office", 14,15,16), ProxyResult]
 		public object Application
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				ICOMObject newObject = Factory.CreateObjectFromComProxy(this,returnItem);
-				return newObject;
+				return Factory.ExecuteReferencePropertyGet(this, "Application");
 			}
 		}
 
@@ -636,14 +559,12 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Office", 14,15,16)]
+		[SupportByVersion("Office", 14,15,16)]
 		public Int32 Creator
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Creator", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "Creator");
 			}
 		}
 
@@ -652,15 +573,12 @@ namespace NetOffice.OfficeApi
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("Office", 14,15,16)]
+		[SupportByVersion("Office", 14,15,16), ProxyResult]
 		public object Parent
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Parent", paramsArray);
-				ICOMObject newObject = Factory.CreateObjectFromComProxy(this,returnItem);
-				return newObject;
+				return Factory.ExecuteReferencePropertyGet(this, "Parent");
 			}
 		}
 
@@ -670,89 +588,66 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="index">optional object Index</param>
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		/// <param name="index">optional object index</param>
+		[SupportByVersion("Office", 12,14,15,16)]
 		public object SeriesCollection(object index)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(index);
-			object returnItem = Invoker.MethodReturn(this, "SeriesCollection", paramsArray);
-			object newObject = Factory.CreateObjectFromComProxy(this,returnItem);
-			return newObject;
+			return Factory.ExecuteVariantMethodGet(this, "SeriesCollection", index);
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15, 16
-		/// 
 		/// </summary>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Office", 12,14,15,16)]
 		public object SeriesCollection()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "SeriesCollection", paramsArray);
-			object newObject = Factory.CreateObjectFromComProxy(this,returnItem);
-			return newObject;
+			return Factory.ExecuteVariantMethodGet(this, "SeriesCollection");
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 15,16
-		/// 
 		/// </summary>
-		/// <param name="index">optional object Index</param>
-		[SupportByVersionAttribute("Office", 15, 16)]
+		/// <param name="index">optional object index</param>
+		[SupportByVersion("Office", 15, 16)]
 		public object CategoryCollection(object index)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(index);
-			object returnItem = Invoker.MethodReturn(this, "CategoryCollection", paramsArray);
-			object newObject = Factory.CreateObjectFromComProxy(this,returnItem);
-			return newObject;
+			return Factory.ExecuteVariantMethodGet(this, "CategoryCollection", index);
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 15,16
-		/// 
 		/// </summary>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Office", 15, 16)]
+		[CustomMethod]
+		[SupportByVersion("Office", 15, 16)]
 		public object CategoryCollection()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "CategoryCollection", paramsArray);
-			object newObject = Factory.CreateObjectFromComProxy(this,returnItem);
-			return newObject;
+			return Factory.ExecuteVariantMethodGet(this, "CategoryCollection");
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 15,16
-		/// 
 		/// </summary>
-		/// <param name="index">optional object Index</param>
-		[SupportByVersionAttribute("Office", 15, 16)]
+		/// <param name="index">optional object index</param>
+		[SupportByVersion("Office", 15, 16)]
 		public object FullCategoryCollection(object index)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(index);
-			object returnItem = Invoker.MethodReturn(this, "FullCategoryCollection", paramsArray);
-			object newObject = Factory.CreateObjectFromComProxy(this,returnItem);
-			return newObject;
+			return Factory.ExecuteVariantMethodGet(this, "FullCategoryCollection", index);
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 15,16
-		/// 
 		/// </summary>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Office", 15, 16)]
+		[CustomMethod]
+		[SupportByVersion("Office", 15, 16)]
 		public object FullCategoryCollection()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "FullCategoryCollection", paramsArray);
-			object newObject = Factory.CreateObjectFromComProxy(this,returnItem);
-			return newObject;
+			return Factory.ExecuteVariantMethodGet(this, "FullCategoryCollection");
 		}
 
 		#endregion
+
 		#pragma warning restore
 	}
 }

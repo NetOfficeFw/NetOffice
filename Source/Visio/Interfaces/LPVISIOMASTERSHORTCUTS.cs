@@ -1,24 +1,36 @@
-﻿using System;
-using NetRuntimeSystem = System;
-using System.Runtime.InteropServices;
-using System.ComponentModel;
-using System.Runtime.CompilerServices;
-using System.Reflection;
-using System.Collections.Generic;
 using System.Collections;
-using NetOffice;
+using System.Collections.Generic;
+using System.Reflection;
+using System;
+using NetRuntimeSystem = System;
+using System.ComponentModel;
+using NetOffice.Attributes;
+
 namespace NetOffice.VisioApi
 {
-	///<summary>
+	/// <summary>
 	/// Interface LPVISIOMASTERSHORTCUTS 
 	/// SupportByVersion Visio, 11,12,14,15,16
-	///</summary>
-	[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
-	[EntityTypeAttribute(EntityType.IsInterface)]
-	public class LPVISIOMASTERSHORTCUTS : COMObject ,IEnumerable<NetOffice.VisioApi.IVMasterShortcut>
+	/// </summary>
+	[SupportByVersion("Visio", 11,12,14,15,16)]
+	[EntityType(EntityType.IsInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "Item")]
+	public class LPVISIOMASTERSHORTCUTS : COMObject , IEnumerable<NetOffice.VisioApi.IVMasterShortcut>
 	{
 		#pragma warning disable
+
 		#region Type Information
+
+		/// <summary>
+		/// Instance Type
+		/// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
+		public override Type InstanceType
+		{
+			get
+			{
+				return LateBindingApiWrapperType;
+			}
+		}
 
         private static Type _type;
 
@@ -29,14 +41,20 @@ namespace NetOffice.VisioApi
             {
                 if (null == _type)
                     _type = typeof(LPVISIOMASTERSHORTCUTS);
-                    
                 return _type;
             }
         }
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public LPVISIOMASTERSHORTCUTS(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -82,7 +100,7 @@ namespace NetOffice.VisioApi
 		{
 		}
 		
-		/// <param name="progId">registered ProgID</param>
+		/// <param name="progId">registered progID</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public LPVISIOMASTERSHORTCUTS(string progId) : base(progId)
 		{
@@ -96,15 +114,13 @@ namespace NetOffice.VisioApi
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
+		[SupportByVersion("Visio", 11,12,14,15,16)]
+		[BaseResult]
 		public NetOffice.VisioApi.IVApplication Application
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				NetOffice.VisioApi.IVApplication newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVApplication;
-				return newObject;
+				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.VisioApi.IVApplication>(this, "Application");
 			}
 		}
 
@@ -112,15 +128,13 @@ namespace NetOffice.VisioApi
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
+		[SupportByVersion("Visio", 11,12,14,15,16)]
+		[BaseResult]
 		public NetOffice.VisioApi.IVDocument Document
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Document", paramsArray);
-				NetOffice.VisioApi.IVDocument newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVDocument;
-				return newObject;
+				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.VisioApi.IVDocument>(this, "Document");
 			}
 		}
 
@@ -128,14 +142,12 @@ namespace NetOffice.VisioApi
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
+		[SupportByVersion("Visio", 11,12,14,15,16)]
 		public Int16 ObjectType
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "ObjectType", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt16(returnItem);
+				return Factory.ExecuteInt16PropertyGet(this, "ObjectType");
 			}
 		}
 
@@ -143,14 +155,12 @@ namespace NetOffice.VisioApi
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
+		[SupportByVersion("Visio", 11,12,14,15,16)]
 		public Int16 Stat
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Stat", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt16(returnItem);
+				return Factory.ExecuteInt16PropertyGet(this, "Stat");
 			}
 		}
 
@@ -158,17 +168,15 @@ namespace NetOffice.VisioApi
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <param name="nameOrIndex">object NameOrIndex</param>
-		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
-		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
+		/// <param name="nameOrIndex">object nameOrIndex</param>
+		[SupportByVersion("Visio", 11,12,14,15,16)]
+		[BaseResult]
+		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
 		public NetOffice.VisioApi.IVMasterShortcut this[object nameOrIndex]
 		{
 			get
-{			
-			object[] paramsArray = Invoker.ValidateParamsArray(nameOrIndex);
-			object returnItem = Invoker.PropertyGet(this, "Item", paramsArray);
-			NetOffice.VisioApi.IVMasterShortcut newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVMasterShortcut;
-			return newObject;
+			{
+				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.VisioApi.IVMasterShortcut>(this, "Item", nameOrIndex);
 			}
 		}
 
@@ -176,14 +184,12 @@ namespace NetOffice.VisioApi
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
+		[SupportByVersion("Visio", 11,12,14,15,16)]
 		public Int16 Count
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Count", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt16(returnItem);
+				return Factory.ExecuteInt16PropertyGet(this, "Count");
 			}
 		}
 
@@ -191,23 +197,20 @@ namespace NetOffice.VisioApi
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <param name="nameOrIndex">object NameOrIndex</param>
-		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
+		/// <param name="nameOrIndex">object nameOrIndex</param>
+		[SupportByVersion("Visio", 11,12,14,15,16)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public NetOffice.VisioApi.IVMasterShortcut get_ItemU(object nameOrIndex)
-		{		
-			object[] paramsArray = Invoker.ValidateParamsArray(nameOrIndex);
-			object returnItem = Invoker.PropertyGet(this, "ItemU", paramsArray);
-			NetOffice.VisioApi.IVMasterShortcut newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVMasterShortcut;
-			return newObject;
+		{
+			return Factory.ExecuteKnownReferencePropertyGet<NetOffice.VisioApi.IVMasterShortcut>(this, "ItemU", NetOffice.VisioApi.IVMasterShortcut.LateBindingApiWrapperType, nameOrIndex);
 		}
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// Alias for get_ItemU
 		/// </summary>
-		/// <param name="nameOrIndex">object NameOrIndex</param>
-		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
+		/// <param name="nameOrIndex">object nameOrIndex</param>
+		[SupportByVersion("Visio", 11,12,14,15,16), Redirect("get_ItemU")]
 		public NetOffice.VisioApi.IVMasterShortcut ItemU(object nameOrIndex)
 		{
 			return get_ItemU(nameOrIndex);
@@ -218,14 +221,11 @@ namespace NetOffice.VisioApi
 		/// Get
 		/// </summary>
 		/// <param name="nID">Int32 nID</param>
-		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
+		[SupportByVersion("Visio", 11,12,14,15,16)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public NetOffice.VisioApi.IVMasterShortcut get_ItemFromID(Int32 nID)
-		{		
-			object[] paramsArray = Invoker.ValidateParamsArray(nID);
-			object returnItem = Invoker.PropertyGet(this, "ItemFromID", paramsArray);
-			NetOffice.VisioApi.IVMasterShortcut newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVMasterShortcut;
-			return newObject;
+		{
+			return Factory.ExecuteKnownReferencePropertyGet<NetOffice.VisioApi.IVMasterShortcut>(this, "ItemFromID", NetOffice.VisioApi.IVMasterShortcut.LateBindingApiWrapperType, nID);
 		}
 
 		/// <summary>
@@ -233,7 +233,7 @@ namespace NetOffice.VisioApi
 		/// Alias for get_ItemFromID
 		/// </summary>
 		/// <param name="nID">Int32 nID</param>
-		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
+		[SupportByVersion("Visio", 11,12,14,15,16), Redirect("get_ItemFromID")]
 		public NetOffice.VisioApi.IVMasterShortcut ItemFromID(Int32 nID)
 		{
 			return get_ItemFromID(nID);
@@ -245,10 +245,9 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
 		/// <param name="localeSpecificNameArray">String[] localeSpecificNameArray</param>
-		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
+		[SupportByVersion("Visio", 11,12,14,15,16)]
 		public void GetNames(out String[] localeSpecificNameArray)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
@@ -260,26 +259,22 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="objectToDrop">object ObjectToDrop</param>
+		/// <param name="objectToDrop">object objectToDrop</param>
 		/// <param name="xPos">Int16 xPos</param>
 		/// <param name="yPos">Int16 yPos</param>
-		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
+		[SupportByVersion("Visio", 11,12,14,15,16)]
+		[BaseResult]
 		public NetOffice.VisioApi.IVMasterShortcut Drop(object objectToDrop, Int16 xPos, Int16 yPos)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(objectToDrop, xPos, yPos);
-			object returnItem = Invoker.MethodReturn(this, "Drop", paramsArray);
-			NetOffice.VisioApi.IVMasterShortcut newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVMasterShortcut;
-			return newObject;
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.VisioApi.IVMasterShortcut>(this, "Drop", objectToDrop, xPos, yPos);
 		}
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
 		/// <param name="localeIndependentNameArray">String[] localeIndependentNameArray</param>
-		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
+		[SupportByVersion("Visio", 11,12,14,15,16)]
 		public void GetNamesU(out String[] localeIndependentNameArray)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
@@ -291,26 +286,22 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="flags">optional object Flags</param>
-		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
+		/// <param name="flags">optional object flags</param>
+		[SupportByVersion("Visio", 11,12,14,15,16)]
 		public void Paste(object flags)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(flags);
-			Invoker.Method(this, "Paste", paramsArray);
+			 Factory.ExecuteMethod(this, "Paste", flags);
 		}
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Visio", 11,12,14,15,16)]
 		public void Paste()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "Paste", paramsArray);
+			 Factory.ExecuteMethod(this, "Paste");
 		}
 
 		#endregion
@@ -318,9 +309,9 @@ namespace NetOffice.VisioApi
        #region IEnumerable<NetOffice.VisioApi.IVMasterShortcut> Member
         
         /// <summary>
-		/// SupportByVersionAttribute Visio, 11,12,14,15,16
+		/// SupportByVersion Visio, 11,12,14,15,16
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
+		[SupportByVersion("Visio", 11,12,14,15,16)]
        public IEnumerator<NetOffice.VisioApi.IVMasterShortcut> GetEnumerator()  
        {
            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
@@ -333,15 +324,16 @@ namespace NetOffice.VisioApi
 		#region IEnumerable Members
        
 		/// <summary>
-		/// SupportByVersionAttribute Visio, 11,12,14,15,16
+		/// SupportByVersion Visio, 11,12,14,15,16
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
+		[SupportByVersion("Visio", 11,12,14,15,16)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
 			return NetOffice.Utils.GetProxyEnumeratorAsProperty(this);
 		}
 
 		#endregion
+
 		#pragma warning restore
 	}
 }

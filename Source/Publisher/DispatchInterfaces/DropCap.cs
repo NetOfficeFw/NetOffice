@@ -1,23 +1,33 @@
 ﻿using System;
 using NetRuntimeSystem = System;
-using System.Runtime.InteropServices;
-using System.Runtime.CompilerServices;
 using System.ComponentModel;
-using System.Reflection;
-using System.Collections.Generic;
-using NetOffice;
+using NetOffice.Attributes;
+
 namespace NetOffice.PublisherApi
 {
-	///<summary>
+	/// <summary>
 	/// DispatchInterface DropCap 
 	/// SupportByVersion Publisher, 14,15,16
-	///</summary>
-	[SupportByVersionAttribute("Publisher", 14,15,16)]
-	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
-	public class DropCap : COMObject
+	/// </summary>
+	[SupportByVersion("Publisher", 14,15,16)]
+	[EntityType(EntityType.IsDispatchInterface)]
+ 	public class DropCap : COMObject
 	{
 		#pragma warning disable
+
 		#region Type Information
+
+		/// <summary>
+		/// Instance Type
+		/// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
+		public override Type InstanceType
+		{
+			get
+			{
+				return LateBindingApiWrapperType;
+			}
+		}
 
         private static Type _type;
 
@@ -28,14 +38,20 @@ namespace NetOffice.PublisherApi
             {
                 if (null == _type)
                     _type = typeof(DropCap);
-                    
                 return _type;
             }
         }
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public DropCap(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -81,7 +97,7 @@ namespace NetOffice.PublisherApi
 		{
 		}
 		
-		/// <param name="progId">registered ProgID</param>
+		/// <param name="progId">registered progID</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public DropCap(string progId) : base(progId)
 		{
@@ -95,15 +111,12 @@ namespace NetOffice.PublisherApi
 		/// SupportByVersion Publisher 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		[SupportByVersion("Publisher", 14,15,16)]
 		public NetOffice.PublisherApi.Application Application
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				NetOffice.PublisherApi.Application newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.PublisherApi.Application.LateBindingApiWrapperType) as NetOffice.PublisherApi.Application;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.PublisherApi.Application>(this, "Application", NetOffice.PublisherApi.Application.LateBindingApiWrapperType);
 			}
 		}
 
@@ -112,15 +125,12 @@ namespace NetOffice.PublisherApi
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		[SupportByVersion("Publisher", 14,15,16), ProxyResult]
 		public object Parent
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Parent", paramsArray);
-				ICOMObject newObject = Factory.CreateObjectFromComProxy(this,returnItem);
-				return newObject;
+				return Factory.ExecuteReferencePropertyGet(this, "Parent");
 			}
 		}
 
@@ -128,19 +138,16 @@ namespace NetOffice.PublisherApi
 		/// SupportByVersion Publisher 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		[SupportByVersion("Publisher", 14,15,16)]
 		public string FontName
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "FontName", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "FontName");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "FontName", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "FontName", value);
 			}
 		}
 
@@ -148,15 +155,12 @@ namespace NetOffice.PublisherApi
 		/// SupportByVersion Publisher 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		[SupportByVersion("Publisher", 14,15,16)]
 		public NetOffice.PublisherApi.ColorFormat FontColor
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "FontColor", paramsArray);
-				NetOffice.PublisherApi.ColorFormat newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.PublisherApi.ColorFormat.LateBindingApiWrapperType) as NetOffice.PublisherApi.ColorFormat;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.PublisherApi.ColorFormat>(this, "FontColor", NetOffice.PublisherApi.ColorFormat.LateBindingApiWrapperType);
 			}
 		}
 
@@ -164,20 +168,16 @@ namespace NetOffice.PublisherApi
 		/// SupportByVersion Publisher 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		[SupportByVersion("Publisher", 14,15,16)]
 		public NetOffice.OfficeApi.Enums.MsoTriState FontBold
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "FontBold", paramsArray);
-				int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-				return (NetOffice.OfficeApi.Enums.MsoTriState)intReturnItem;
+				return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoTriState>(this, "FontBold");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "FontBold", paramsArray);
+				Factory.ExecuteEnumPropertySet(this, "FontBold", value);
 			}
 		}
 
@@ -185,20 +185,16 @@ namespace NetOffice.PublisherApi
 		/// SupportByVersion Publisher 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		[SupportByVersion("Publisher", 14,15,16)]
 		public NetOffice.OfficeApi.Enums.MsoTriState FontItalic
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "FontItalic", paramsArray);
-				int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-				return (NetOffice.OfficeApi.Enums.MsoTriState)intReturnItem;
+				return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoTriState>(this, "FontItalic");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "FontItalic", paramsArray);
+				Factory.ExecuteEnumPropertySet(this, "FontItalic", value);
 			}
 		}
 
@@ -206,19 +202,16 @@ namespace NetOffice.PublisherApi
 		/// SupportByVersion Publisher 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		[SupportByVersion("Publisher", 14,15,16)]
 		public Int32 LinesUp
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "LinesUp", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "LinesUp");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "LinesUp", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "LinesUp", value);
 			}
 		}
 
@@ -226,19 +219,16 @@ namespace NetOffice.PublisherApi
 		/// SupportByVersion Publisher 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		[SupportByVersion("Publisher", 14,15,16)]
 		public Int32 Size
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Size", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "Size");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "Size", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "Size", value);
 			}
 		}
 
@@ -246,19 +236,16 @@ namespace NetOffice.PublisherApi
 		/// SupportByVersion Publisher 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		[SupportByVersion("Publisher", 14,15,16)]
 		public Int32 Span
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Span", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "Span");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "Span", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "Span", value);
 			}
 		}
 
@@ -268,7 +255,6 @@ namespace NetOffice.PublisherApi
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
-		/// 
 		/// </summary>
 		/// <param name="linesUp">optional Int32 LinesUp = 0</param>
 		/// <param name="size">optional Int32 Size = 5</param>
@@ -276,112 +262,98 @@ namespace NetOffice.PublisherApi
 		/// <param name="fontName">optional string FontName = </param>
 		/// <param name="bold">optional bool Bold = false</param>
 		/// <param name="italic">optional bool Italic = false</param>
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		[SupportByVersion("Publisher", 14,15,16)]
 		public void ApplyCustomDropCap(object linesUp, object size, object span, object fontName, object bold, object italic)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(linesUp, size, span, fontName, bold, italic);
-			Invoker.Method(this, "ApplyCustomDropCap", paramsArray);
+			 Factory.ExecuteMethod(this, "ApplyCustomDropCap", new object[]{ linesUp, size, span, fontName, bold, italic });
 		}
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
-		/// 
 		/// </summary>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Publisher", 14,15,16)]
 		public void ApplyCustomDropCap()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "ApplyCustomDropCap", paramsArray);
+			 Factory.ExecuteMethod(this, "ApplyCustomDropCap");
 		}
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
-		/// 
 		/// </summary>
 		/// <param name="linesUp">optional Int32 LinesUp = 0</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Publisher", 14,15,16)]
 		public void ApplyCustomDropCap(object linesUp)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(linesUp);
-			Invoker.Method(this, "ApplyCustomDropCap", paramsArray);
+			 Factory.ExecuteMethod(this, "ApplyCustomDropCap", linesUp);
 		}
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
-		/// 
 		/// </summary>
 		/// <param name="linesUp">optional Int32 LinesUp = 0</param>
 		/// <param name="size">optional Int32 Size = 5</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Publisher", 14,15,16)]
 		public void ApplyCustomDropCap(object linesUp, object size)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(linesUp, size);
-			Invoker.Method(this, "ApplyCustomDropCap", paramsArray);
+			 Factory.ExecuteMethod(this, "ApplyCustomDropCap", linesUp, size);
 		}
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
-		/// 
 		/// </summary>
 		/// <param name="linesUp">optional Int32 LinesUp = 0</param>
 		/// <param name="size">optional Int32 Size = 5</param>
 		/// <param name="span">optional Int32 Span = 1</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Publisher", 14,15,16)]
 		public void ApplyCustomDropCap(object linesUp, object size, object span)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(linesUp, size, span);
-			Invoker.Method(this, "ApplyCustomDropCap", paramsArray);
+			 Factory.ExecuteMethod(this, "ApplyCustomDropCap", linesUp, size, span);
 		}
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
-		/// 
 		/// </summary>
 		/// <param name="linesUp">optional Int32 LinesUp = 0</param>
 		/// <param name="size">optional Int32 Size = 5</param>
 		/// <param name="span">optional Int32 Span = 1</param>
 		/// <param name="fontName">optional string FontName = </param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Publisher", 14,15,16)]
 		public void ApplyCustomDropCap(object linesUp, object size, object span, object fontName)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(linesUp, size, span, fontName);
-			Invoker.Method(this, "ApplyCustomDropCap", paramsArray);
+			 Factory.ExecuteMethod(this, "ApplyCustomDropCap", linesUp, size, span, fontName);
 		}
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
-		/// 
 		/// </summary>
 		/// <param name="linesUp">optional Int32 LinesUp = 0</param>
 		/// <param name="size">optional Int32 Size = 5</param>
 		/// <param name="span">optional Int32 Span = 1</param>
 		/// <param name="fontName">optional string FontName = </param>
 		/// <param name="bold">optional bool Bold = false</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Publisher", 14,15,16)]
 		public void ApplyCustomDropCap(object linesUp, object size, object span, object fontName, object bold)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(linesUp, size, span, fontName, bold);
-			Invoker.Method(this, "ApplyCustomDropCap", paramsArray);
+			 Factory.ExecuteMethod(this, "ApplyCustomDropCap", new object[]{ linesUp, size, span, fontName, bold });
 		}
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		[SupportByVersion("Publisher", 14,15,16)]
 		public void Clear()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "Clear", paramsArray);
+			 Factory.ExecuteMethod(this, "Clear");
 		}
 
 		#endregion
+
 		#pragma warning restore
 	}
 }

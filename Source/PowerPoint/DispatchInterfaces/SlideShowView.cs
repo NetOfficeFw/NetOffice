@@ -1,24 +1,34 @@
 ﻿using System;
 using NetRuntimeSystem = System;
-using System.Runtime.InteropServices;
-using System.Runtime.CompilerServices;
 using System.ComponentModel;
-using System.Reflection;
-using System.Collections.Generic;
-using NetOffice;
+using NetOffice.Attributes;
+
 namespace NetOffice.PowerPointApi
 {
-	///<summary>
+	/// <summary>
 	/// DispatchInterface SlideShowView 
 	/// SupportByVersion PowerPoint, 9,10,11,12,14,15,16
-	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744675.aspx
-	///</summary>
-	[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
-	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
-	public class SlideShowView : COMObject
+	/// </summary>
+	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff744675.aspx </remarks>
+	[SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+	[EntityType(EntityType.IsDispatchInterface)]
+ 	public class SlideShowView : COMObject
 	{
 		#pragma warning disable
+
 		#region Type Information
+
+		/// <summary>
+		/// Instance Type
+		/// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
+		public override Type InstanceType
+		{
+			get
+			{
+				return LateBindingApiWrapperType;
+			}
+		}
 
         private static Type _type;
 
@@ -29,14 +39,20 @@ namespace NetOffice.PowerPointApi
             {
                 if (null == _type)
                     _type = typeof(SlideShowView);
-                    
                 return _type;
             }
         }
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public SlideShowView(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -82,7 +98,7 @@ namespace NetOffice.PowerPointApi
 		{
 		}
 		
-		/// <param name="progId">registered ProgID</param>
+		/// <param name="progId">registered progID</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public SlideShowView(string progId) : base(progId)
 		{
@@ -95,352 +111,297 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746127.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff746127.aspx </remarks>
+		[SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
 		public NetOffice.PowerPointApi.Application Application
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				NetOffice.PowerPointApi.Application newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.PowerPointApi.Application.LateBindingApiWrapperType) as NetOffice.PowerPointApi.Application;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.PowerPointApi.Application>(this, "Application", NetOffice.PowerPointApi.Application.LateBindingApiWrapperType);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744005.aspx
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff744005.aspx </remarks>
+		[SupportByVersion("PowerPoint", 9,10,11,12,14,15,16), ProxyResult]
 		public object Parent
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Parent", paramsArray);
-				ICOMObject newObject = Factory.CreateObjectFromComProxy(this,returnItem);
-				return newObject;
+				return Factory.ExecuteReferencePropertyGet(this, "Parent");
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745645.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff745645.aspx </remarks>
+		[SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
 		public Int32 Zoom
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Zoom", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "Zoom");
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744856.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff744856.aspx </remarks>
+		[SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
 		public NetOffice.PowerPointApi.Slide Slide
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Slide", paramsArray);
-				NetOffice.PowerPointApi.Slide newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.PowerPointApi.Slide.LateBindingApiWrapperType) as NetOffice.PowerPointApi.Slide;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.PowerPointApi.Slide>(this, "Slide", NetOffice.PowerPointApi.Slide.LateBindingApiWrapperType);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744941.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff744941.aspx </remarks>
+		[SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
 		public NetOffice.PowerPointApi.Enums.PpSlideShowPointerType PointerType
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "PointerType", paramsArray);
-				int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-				return (NetOffice.PowerPointApi.Enums.PpSlideShowPointerType)intReturnItem;
+				return Factory.ExecuteEnumPropertyGet<NetOffice.PowerPointApi.Enums.PpSlideShowPointerType>(this, "PointerType");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "PointerType", paramsArray);
+				Factory.ExecuteEnumPropertySet(this, "PointerType", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745272.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff745272.aspx </remarks>
+		[SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
 		public NetOffice.PowerPointApi.Enums.PpSlideShowState State
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "State", paramsArray);
-				int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-				return (NetOffice.PowerPointApi.Enums.PpSlideShowState)intReturnItem;
+				return Factory.ExecuteEnumPropertyGet<NetOffice.PowerPointApi.Enums.PpSlideShowState>(this, "State");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "State", paramsArray);
+				Factory.ExecuteEnumPropertySet(this, "State", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff743896.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff743896.aspx </remarks>
+		[SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
 		public NetOffice.OfficeApi.Enums.MsoTriState AcceleratorsEnabled
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "AcceleratorsEnabled", paramsArray);
-				int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-				return (NetOffice.OfficeApi.Enums.MsoTriState)intReturnItem;
+				return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoTriState>(this, "AcceleratorsEnabled");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "AcceleratorsEnabled", paramsArray);
+				Factory.ExecuteEnumPropertySet(this, "AcceleratorsEnabled", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745215.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff745215.aspx </remarks>
+		[SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
 		public Single PresentationElapsedTime
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "PresentationElapsedTime", paramsArray);
-				return NetRuntimeSystem.Convert.ToSingle(returnItem);
+				return Factory.ExecuteSinglePropertyGet(this, "PresentationElapsedTime");
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746593.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff746593.aspx </remarks>
+		[SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
 		public Single SlideElapsedTime
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "SlideElapsedTime", paramsArray);
-				return NetRuntimeSystem.Convert.ToSingle(returnItem);
+				return Factory.ExecuteSinglePropertyGet(this, "SlideElapsedTime");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "SlideElapsedTime", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "SlideElapsedTime", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744761.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff744761.aspx </remarks>
+		[SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
 		public NetOffice.PowerPointApi.Slide LastSlideViewed
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "LastSlideViewed", paramsArray);
-				NetOffice.PowerPointApi.Slide newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.PowerPointApi.Slide.LateBindingApiWrapperType) as NetOffice.PowerPointApi.Slide;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.PowerPointApi.Slide>(this, "LastSlideViewed", NetOffice.PowerPointApi.Slide.LateBindingApiWrapperType);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746290.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff746290.aspx </remarks>
+		[SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
 		public NetOffice.PowerPointApi.Enums.PpSlideShowAdvanceMode AdvanceMode
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "AdvanceMode", paramsArray);
-				int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-				return (NetOffice.PowerPointApi.Enums.PpSlideShowAdvanceMode)intReturnItem;
+				return Factory.ExecuteEnumPropertyGet<NetOffice.PowerPointApi.Enums.PpSlideShowAdvanceMode>(this, "AdvanceMode");
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744312.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff744312.aspx </remarks>
+		[SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
 		public NetOffice.PowerPointApi.ColorFormat PointerColor
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "PointerColor", paramsArray);
-				NetOffice.PowerPointApi.ColorFormat newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.PowerPointApi.ColorFormat.LateBindingApiWrapperType) as NetOffice.PowerPointApi.ColorFormat;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.PowerPointApi.ColorFormat>(this, "PointerColor", NetOffice.PowerPointApi.ColorFormat.LateBindingApiWrapperType);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745856.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff745856.aspx </remarks>
+		[SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
 		public NetOffice.OfficeApi.Enums.MsoTriState IsNamedShow
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "IsNamedShow", paramsArray);
-				int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-				return (NetOffice.OfficeApi.Enums.MsoTriState)intReturnItem;
+				return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoTriState>(this, "IsNamedShow");
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745076.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff745076.aspx </remarks>
+		[SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
 		public string SlideShowName
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "SlideShowName", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "SlideShowName");
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744575.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff744575.aspx </remarks>
+		[SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
 		public Int32 CurrentShowPosition
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "CurrentShowPosition", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "CurrentShowPosition");
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff743996.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff743996.aspx </remarks>
+		[SupportByVersion("PowerPoint", 14,15,16)]
 		public NetOffice.OfficeApi.Enums.MsoTriState MediaControlsVisible
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "MediaControlsVisible", paramsArray);
-				int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-				return (NetOffice.OfficeApi.Enums.MsoTriState)intReturnItem;
+				return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoTriState>(this, "MediaControlsVisible");
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744165.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff744165.aspx </remarks>
+		[SupportByVersion("PowerPoint", 14,15,16)]
 		public Single MediaControlsLeft
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "MediaControlsLeft", paramsArray);
-				return NetRuntimeSystem.Convert.ToSingle(returnItem);
+				return Factory.ExecuteSinglePropertyGet(this, "MediaControlsLeft");
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746549.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff746549.aspx </remarks>
+		[SupportByVersion("PowerPoint", 14,15,16)]
 		public Single MediaControlsTop
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "MediaControlsTop", paramsArray);
-				return NetRuntimeSystem.Convert.ToSingle(returnItem);
+				return Factory.ExecuteSinglePropertyGet(this, "MediaControlsTop");
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff743865.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff743865.aspx </remarks>
+		[SupportByVersion("PowerPoint", 14,15,16)]
 		public Single MediaControlsWidth
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "MediaControlsWidth", paramsArray);
-				return NetRuntimeSystem.Convert.ToSingle(returnItem);
+				return Factory.ExecuteSinglePropertyGet(this, "MediaControlsWidth");
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744879.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff744879.aspx </remarks>
+		[SupportByVersion("PowerPoint", 14,15,16)]
 		public Single MediaControlsHeight
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "MediaControlsHeight", paramsArray);
-				return NetRuntimeSystem.Convert.ToSingle(returnItem);
+				return Factory.ExecuteSinglePropertyGet(this, "MediaControlsHeight");
 			}
 		}
 
@@ -450,222 +411,199 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746368.aspx
 		/// </summary>
-		/// <param name="beginX">Single BeginX</param>
-		/// <param name="beginY">Single BeginY</param>
-		/// <param name="endX">Single EndX</param>
-		/// <param name="endY">Single EndY</param>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff746368.aspx </remarks>
+		/// <param name="beginX">Single beginX</param>
+		/// <param name="beginY">Single beginY</param>
+		/// <param name="endX">Single endX</param>
+		/// <param name="endY">Single endY</param>
+		[SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
 		public void DrawLine(Single beginX, Single beginY, Single endX, Single endY)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(beginX, beginY, endX, endY);
-			Invoker.Method(this, "DrawLine", paramsArray);
+			 Factory.ExecuteMethod(this, "DrawLine", beginX, beginY, endX, endY);
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746340.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff746340.aspx </remarks>
+		[SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
 		public void EraseDrawing()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "EraseDrawing", paramsArray);
+			 Factory.ExecuteMethod(this, "EraseDrawing");
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745022.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff745022.aspx </remarks>
+		[SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
 		public void First()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "First", paramsArray);
+			 Factory.ExecuteMethod(this, "First");
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744036.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff744036.aspx </remarks>
+		[SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
 		public void Last()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "Last", paramsArray);
+			 Factory.ExecuteMethod(this, "Last");
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746314.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff746314.aspx </remarks>
+		[SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
 		public void Next()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "Next", paramsArray);
+			 Factory.ExecuteMethod(this, "Next");
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745842.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff745842.aspx </remarks>
+		[SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
 		public void Previous()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "Previous", paramsArray);
+			 Factory.ExecuteMethod(this, "Previous");
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746743.aspx
 		/// </summary>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff746743.aspx </remarks>
 		/// <param name="index">Int32 index</param>
 		/// <param name="resetSlide">optional NetOffice.OfficeApi.Enums.MsoTriState ResetSlide = -1</param>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
+		[SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
 		public void GotoSlide(Int32 index, object resetSlide)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(index, resetSlide);
-			Invoker.Method(this, "GotoSlide", paramsArray);
+			 Factory.ExecuteMethod(this, "GotoSlide", index, resetSlide);
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746743.aspx
 		/// </summary>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff746743.aspx </remarks>
 		/// <param name="index">Int32 index</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
 		public void GotoSlide(Int32 index)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(index);
-			Invoker.Method(this, "GotoSlide", paramsArray);
+			 Factory.ExecuteMethod(this, "GotoSlide", index);
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745384.aspx
 		/// </summary>
-		/// <param name="slideShowName">string SlideShowName</param>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff745384.aspx </remarks>
+		/// <param name="slideShowName">string slideShowName</param>
+		[SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
 		public void GotoNamedShow(string slideShowName)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(slideShowName);
-			Invoker.Method(this, "GotoNamedShow", paramsArray);
+			 Factory.ExecuteMethod(this, "GotoNamedShow", slideShowName);
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744143.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff744143.aspx </remarks>
+		[SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
 		public void EndNamedShow()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "EndNamedShow", paramsArray);
+			 Factory.ExecuteMethod(this, "EndNamedShow");
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745898.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff745898.aspx </remarks>
+		[SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
 		public void ResetSlideTime()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "ResetSlideTime", paramsArray);
+			 Factory.ExecuteMethod(this, "ResetSlideTime");
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745742.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff745742.aspx </remarks>
+		[SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
 		public void Exit()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "Exit", paramsArray);
+			 Factory.ExecuteMethod(this, "Exit");
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
 		/// <param name="pTracker">NetOffice.PowerPointApi.MouseTracker pTracker</param>
-		/// <param name="presenter">NetOffice.OfficeApi.Enums.MsoTriState Presenter</param>
+		/// <param name="presenter">NetOffice.OfficeApi.Enums.MsoTriState presenter</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
+		[SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
 		public void InstallTracker(NetOffice.PowerPointApi.MouseTracker pTracker, NetOffice.OfficeApi.Enums.MsoTriState presenter)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(pTracker, presenter);
-			Invoker.Method(this, "InstallTracker", paramsArray);
+			 Factory.ExecuteMethod(this, "InstallTracker", pTracker, presenter);
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745994.aspx
 		/// </summary>
-		/// <param name="index">Int32 Index</param>
-		[SupportByVersionAttribute("PowerPoint", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff745994.aspx </remarks>
+		/// <param name="index">Int32 index</param>
+		[SupportByVersion("PowerPoint", 12,14,15,16)]
 		public void GotoClick(Int32 index)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(index);
-			Invoker.Method(this, "GotoClick", paramsArray);
+			 Factory.ExecuteMethod(this, "GotoClick", index);
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745129.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff745129.aspx </remarks>
+		[SupportByVersion("PowerPoint", 12,14,15,16)]
 		public Int32 GetClickIndex()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "GetClickIndex", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return Factory.ExecuteInt32MethodGet(this, "GetClickIndex");
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744635.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff744635.aspx </remarks>
+		[SupportByVersion("PowerPoint", 12,14,15,16)]
 		public Int32 GetClickCount()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "GetClickCount", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return Factory.ExecuteInt32MethodGet(this, "GetClickCount");
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745143.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff745143.aspx </remarks>
+		[SupportByVersion("PowerPoint", 12,14,15,16)]
 		public bool FirstAnimationIsAutomatic()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "FirstAnimationIsAutomatic", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return Factory.ExecuteBoolMethodGet(this, "FirstAnimationIsAutomatic");
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746401.aspx
 		/// </summary>
-		/// <param name="shapeId">object ShapeId</param>
-		[SupportByVersionAttribute("PowerPoint", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff746401.aspx </remarks>
+		/// <param name="shapeId">object shapeId</param>
+		[SupportByVersion("PowerPoint", 14,15,16)]
 		public NetOffice.PowerPointApi.Player Player(object shapeId)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(shapeId);
-			object returnItem = Invoker.MethodReturn(this, "Player", paramsArray);
-			NetOffice.PowerPointApi.Player newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PowerPointApi.Player.LateBindingApiWrapperType) as NetOffice.PowerPointApi.Player;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PowerPointApi.Player>(this, "Player", NetOffice.PowerPointApi.Player.LateBindingApiWrapperType, shapeId);
 		}
 
 		#endregion
+
 		#pragma warning restore
 	}
 }

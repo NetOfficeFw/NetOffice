@@ -1,19 +1,25 @@
-﻿using System;
+﻿using System.Reflection;
+using System;
 using NetRuntimeSystem = System;
-using System.Runtime.InteropServices;
-using System.Runtime.CompilerServices;
 using System.ComponentModel;
-using System.Reflection;
-using System.Collections.Generic;
-using NetOffice;
+using NetOffice.Attributes;
+
 namespace NetOffice.WordApi
 {
-	///<summary>
+	/// <summary>
 	/// Chart
-	///</summary>
-	public class Chart_ : COMObject
+	/// </summary>
+	[SyntaxBypass]
+ 	public class Chart_ : COMObject
 	{
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public Chart_(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -62,7 +68,7 @@ namespace NetOffice.WordApi
 		{
 		}
 		
-		/// <param name="progId">registered ProgID</param>
+		/// <param name="progId">registered progID</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public Chart_(string progId) : base(progId)
 		{
@@ -77,16 +83,13 @@ namespace NetOffice.WordApi
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		/// <param name="index">optional object Index</param>
+		/// <param name="index">optional object index</param>
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836391.aspx
-		[SupportByVersionAttribute("Word", 14,15,16)]
+		[SupportByVersion("Word", 14,15,16), ProxyResult]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public object get_ChartGroups(object index)
-		{		
-			object[] paramsArray = Invoker.ValidateParamsArray(index);
-			object returnItem = Invoker.PropertyGet(this, "ChartGroups", paramsArray);
-			ICOMObject newObject = Factory.CreateObjectFromComProxy(this,returnItem);
-			return newObject;
+		{
+			return Factory.ExecuteReferencePropertyGet(this, "ChartGroups", index);
 		}
 
 		/// <summary>
@@ -95,8 +98,8 @@ namespace NetOffice.WordApi
 		/// Alias for get_ChartGroups
 		/// Unknown COM Proxy
 		/// </summary>
-		/// <param name="index">optional object Index</param>
-		[SupportByVersionAttribute("Word", 14,15,16)]
+		/// <param name="index">optional object index</param>
+		[SupportByVersion("Word", 14,15,16), ProxyResult, Redirect("get_ChartGroups")]
 		public object ChartGroups(object index)
 		{
 			return get_ChartGroups(index);
@@ -106,49 +109,38 @@ namespace NetOffice.WordApi
 		/// SupportByVersion Word 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <param name="index1">optional object Index1</param>
-		/// <param name="index2">optional object Index2</param>
+		/// <param name="index1">optional object index1</param>
+		/// <param name="index2">optional object index2</param>
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836998.aspx
-		[SupportByVersionAttribute("Word", 14,15,16)]
+		[SupportByVersion("Word", 14,15,16)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public object get_HasAxis(object index1, object index2)
-		{		
-			object[] paramsArray = Invoker.ValidateParamsArray(index1, index2);
-			object returnItem = Invoker.PropertyGet(this, "HasAxis", paramsArray);
-			if((null != returnItem) && (returnItem is MarshalByRefObject))
-			{
-				ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
-				return newObject;
-			}
-			else
-			{
-				return  returnItem;
-			}
+		{
+			return Factory.ExecuteVariantPropertyGet(this, "HasAxis", index1, index2);
 		}
 
         /// <summary>
         /// SupportByVersion Word 14, 15, 16
         /// Get/Set
         /// </summary>
-        /// <param name="index1">optional object Index1</param>
-        /// <param name="index2">optional object Index2</param>
+        /// <param name="index1">optional object index1</param>
+        /// <param name="index2">optional object index2</param>
         /// <param name="value">optional object value</param>
-        [SupportByVersionAttribute("Word", 14,15,16)]
+        [SupportByVersion("Word", 14,15,16)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public void set_HasAxis(object index1, object index2, object value)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(index1, index2);
-			Invoker.PropertySet(this, "HasAxis", paramsArray, value);
+			Factory.ExecutePropertySet(this, "HasAxis", index1, index2, value);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836998.aspx
 		/// Alias for get_HasAxis
 		/// </summary>
-		/// <param name="index1">optional object Index1</param>
-		/// <param name="index2">optional object Index2</param>
-		[SupportByVersionAttribute("Word", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff836998.aspx </remarks>
+		/// <param name="index1">optional object index1</param>
+		/// <param name="index2">optional object index2</param>
+		[SupportByVersion("Word", 14,15,16), Redirect("get_HasAxis")]
 		public object HasAxis(object index1, object index2)
 		{
 			return get_HasAxis(index1, index2);
@@ -158,46 +150,35 @@ namespace NetOffice.WordApi
 		/// SupportByVersion Word 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		/// <param name="index1">optional object Index1</param>
+		/// <param name="index1">optional object index1</param>
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836998.aspx
-		[SupportByVersionAttribute("Word", 14,15,16)]
+		[SupportByVersion("Word", 14,15,16)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public object get_HasAxis(object index1)
-		{		
-			object[] paramsArray = Invoker.ValidateParamsArray(index1);
-			object returnItem = Invoker.PropertyGet(this, "HasAxis", paramsArray);
-			if((null != returnItem) && (returnItem is MarshalByRefObject))
-			{
-				ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
-				return newObject;
-			}
-			else
-			{
-				return  returnItem;
-			}
+		{
+			return Factory.ExecuteVariantPropertyGet(this, "HasAxis", index1);
 		}
 
         /// <summary>
         /// SupportByVersion Word 14, 15, 16
         /// Get/Set
         /// </summary>
-        /// <param name="index1">optional object Index1</param>
+        /// <param name="index1">optional object index1</param>
         /// <param name="value">optional object value</param>
-        [SupportByVersionAttribute("Word", 14,15,16)]
+        [SupportByVersion("Word", 14,15,16)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public void set_HasAxis(object index1, object value)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(index1);
-			Invoker.PropertySet(this, "HasAxis", paramsArray, value);
+			Factory.ExecutePropertySet(this, "HasAxis", index1, value);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836998.aspx
 		/// Alias for get_HasAxis
 		/// </summary>
-		/// <param name="index1">optional object Index1</param>
-		[SupportByVersionAttribute("Word", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff836998.aspx </remarks>
+		/// <param name="index1">optional object index1</param>
+		[SupportByVersion("Word", 14,15,16), Redirect("get_HasAxis")]
 		public object HasAxis(object index1)
 		{
 			return get_HasAxis(index1);
@@ -211,17 +192,30 @@ namespace NetOffice.WordApi
 
 	}
 
-	///<summary>
+	/// <summary>
 	/// DispatchInterface Chart 
 	/// SupportByVersion Word, 14,15,16
-	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193446.aspx
-	///</summary>
-	[SupportByVersionAttribute("Word", 14,15,16)]
-	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
-	public class Chart : Chart_
+	/// </summary>
+	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff193446.aspx </remarks>
+	[SupportByVersion("Word", 14,15,16)]
+	[EntityType(EntityType.IsDispatchInterface)]
+ 	public class Chart : Chart_
 	{
 		#pragma warning disable
+
 		#region Type Information
+
+		/// <summary>
+		/// Instance Type
+		/// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
+		public override Type InstanceType
+		{
+			get
+			{
+				return LateBindingApiWrapperType;
+			}
+		}
 
         private static Type _type;
 
@@ -232,14 +226,20 @@ namespace NetOffice.WordApi
             {
                 if (null == _type)
                     _type = typeof(Chart);
-                    
                 return _type;
             }
         }
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public Chart(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -285,7 +285,7 @@ namespace NetOffice.WordApi
 		{
 		}
 		
-		/// <param name="progId">registered ProgID</param>
+		/// <param name="progId">registered progID</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public Chart(string progId) : base(progId)
 		{
@@ -298,259 +298,206 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff191738.aspx
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff191738.aspx </remarks>
+		[SupportByVersion("Word", 14,15,16), ProxyResult]
 		public object Parent
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Parent", paramsArray);
-				ICOMObject newObject = Factory.CreateObjectFromComProxy(this,returnItem);
-				return newObject;
+				return Factory.ExecuteReferencePropertyGet(this, "Parent");
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196350.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff196350.aspx </remarks>
+		[SupportByVersion("Word", 14,15,16)]
 		public bool HasTitle
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "HasTitle", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "HasTitle");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "HasTitle", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "HasTitle", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff191751.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff191751.aspx </remarks>
+		[SupportByVersion("Word", 14,15,16)]
 		public NetOffice.WordApi.ChartTitle ChartTitle
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "ChartTitle", paramsArray);
-				NetOffice.WordApi.ChartTitle newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.ChartTitle.LateBindingApiWrapperType) as NetOffice.WordApi.ChartTitle;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.ChartTitle>(this, "ChartTitle", NetOffice.WordApi.ChartTitle.LateBindingApiWrapperType);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840907.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff840907.aspx </remarks>
+		[SupportByVersion("Word", 14,15,16)]
 		public Int32 DepthPercent
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "DepthPercent", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "DepthPercent");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "DepthPercent", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "DepthPercent", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192611.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff192611.aspx </remarks>
+		[SupportByVersion("Word", 14,15,16)]
 		public Int32 Elevation
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Elevation", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "Elevation");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "Elevation", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "Elevation", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845244.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff845244.aspx </remarks>
+		[SupportByVersion("Word", 14,15,16)]
 		public Int32 GapDepth
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "GapDepth", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "GapDepth");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "GapDepth", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "GapDepth", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836594.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff836594.aspx </remarks>
+		[SupportByVersion("Word", 14,15,16)]
 		public Int32 HeightPercent
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "HeightPercent", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "HeightPercent");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "HeightPercent", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "HeightPercent", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838954.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff838954.aspx </remarks>
+		[SupportByVersion("Word", 14,15,16)]
 		public Int32 Perspective
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Perspective", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "Perspective");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "Perspective", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "Perspective", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838938.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff838938.aspx </remarks>
+		[SupportByVersion("Word", 14,15,16)]
 		public object RightAngleAxes
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "RightAngleAxes", paramsArray);
-				if((null != returnItem) && (returnItem is MarshalByRefObject))
-				{
-					ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
-					return newObject;
-				}
-				else
-				{
-					return  returnItem;
-				}
+				return Factory.ExecuteVariantPropertyGet(this, "RightAngleAxes");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "RightAngleAxes", paramsArray);
+				Factory.ExecuteVariantPropertySet(this, "RightAngleAxes", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835465.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835465.aspx </remarks>
+		[SupportByVersion("Word", 14,15,16)]
 		public object Rotation
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Rotation", paramsArray);
-				if((null != returnItem) && (returnItem is MarshalByRefObject))
-				{
-					ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
-					return newObject;
-				}
-				else
-				{
-					return  returnItem;
-				}
+				return Factory.ExecuteVariantPropertyGet(this, "Rotation");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "Rotation", paramsArray);
+				Factory.ExecuteVariantPropertySet(this, "Rotation", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196216.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff196216.aspx </remarks>
+		[SupportByVersion("Word", 14,15,16)]
 		public NetOffice.WordApi.Enums.XlDisplayBlanksAs DisplayBlanksAs
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "DisplayBlanksAs", paramsArray);
-				int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-				return (NetOffice.WordApi.Enums.XlDisplayBlanksAs)intReturnItem;
+				return Factory.ExecuteEnumPropertyGet<NetOffice.WordApi.Enums.XlDisplayBlanksAs>(this, "DisplayBlanksAs");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "DisplayBlanksAs", paramsArray);
+				Factory.ExecuteEnumPropertySet(this, "DisplayBlanksAs", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836391.aspx
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff836391.aspx </remarks>
+		[SupportByVersion("Word", 14,15,16), ProxyResult]
 		public object ChartGroups
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "ChartGroups", paramsArray);
-				ICOMObject newObject = Factory.CreateObjectFromComProxy(this,returnItem);
-				return newObject;
+				return Factory.ExecuteReferencePropertyGet(this, "ChartGroups");
 			}
 		}
 
@@ -558,20 +505,17 @@ namespace NetOffice.WordApi
 		/// SupportByVersion Word 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14,15,16)]
+		[SupportByVersion("Word", 14,15,16)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public Int32 SubType
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "SubType", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "SubType");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "SubType", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "SubType", value);
 			}
 		}
 
@@ -579,20 +523,17 @@ namespace NetOffice.WordApi
 		/// SupportByVersion Word 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14,15,16)]
+		[SupportByVersion("Word", 14,15,16)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public Int32 Type
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Type", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "Type");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "Type", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "Type", value);
 			}
 		}
 
@@ -600,378 +541,302 @@ namespace NetOffice.WordApi
 		/// SupportByVersion Word 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14,15,16)]
+		[SupportByVersion("Word", 14,15,16)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public NetOffice.WordApi.Corners Corners
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Corners", paramsArray);
-				NetOffice.WordApi.Corners newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.Corners.LateBindingApiWrapperType) as NetOffice.WordApi.Corners;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.Corners>(this, "Corners", NetOffice.WordApi.Corners.LateBindingApiWrapperType);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836334.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff836334.aspx </remarks>
+		[SupportByVersion("Word", 14,15,16)]
 		public NetOffice.OfficeApi.Enums.XlChartType ChartType
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "ChartType", paramsArray);
-				int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-				return (NetOffice.OfficeApi.Enums.XlChartType)intReturnItem;
+				return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.XlChartType>(this, "ChartType");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "ChartType", paramsArray);
+				Factory.ExecuteEnumPropertySet(this, "ChartType", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197158.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff197158.aspx </remarks>
+		[SupportByVersion("Word", 14,15,16)]
 		public bool HasDataTable
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "HasDataTable", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "HasDataTable");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "HasDataTable", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "HasDataTable", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836380.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff836380.aspx </remarks>
+		[SupportByVersion("Word", 14,15,16)]
 		public NetOffice.WordApi.Enums.XlRowCol PlotBy
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "PlotBy", paramsArray);
-				int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-				return (NetOffice.WordApi.Enums.XlRowCol)intReturnItem;
+				return Factory.ExecuteEnumPropertyGet<NetOffice.WordApi.Enums.XlRowCol>(this, "PlotBy");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "PlotBy", paramsArray);
+				Factory.ExecuteEnumPropertySet(this, "PlotBy", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845054.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff845054.aspx </remarks>
+		[SupportByVersion("Word", 14,15,16)]
 		public bool HasLegend
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "HasLegend", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "HasLegend");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "HasLegend", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "HasLegend", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836685.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff836685.aspx </remarks>
+		[SupportByVersion("Word", 14,15,16)]
 		public NetOffice.WordApi.Legend Legend
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Legend", paramsArray);
-				NetOffice.WordApi.Legend newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.Legend.LateBindingApiWrapperType) as NetOffice.WordApi.Legend;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.Legend>(this, "Legend", NetOffice.WordApi.Legend.LateBindingApiWrapperType);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836998.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff836998.aspx </remarks>
+		[SupportByVersion("Word", 14,15,16)]
 		public object HasAxis
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "HasAxis", paramsArray);
-				if((null != returnItem) && (returnItem is MarshalByRefObject))
-				{
-					ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
-					return newObject;
-				}
-				else
-				{
-					return  returnItem;
-				}
+				return Factory.ExecuteVariantPropertyGet(this, "HasAxis");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "HasAxis", paramsArray);
+				Factory.ExecuteVariantPropertySet(this, "HasAxis", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840511.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff840511.aspx </remarks>
+		[SupportByVersion("Word", 14,15,16)]
 		public NetOffice.WordApi.Walls Walls
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Walls", paramsArray);
-				NetOffice.WordApi.Walls newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.Walls.LateBindingApiWrapperType) as NetOffice.WordApi.Walls;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.Walls>(this, "Walls", NetOffice.WordApi.Walls.LateBindingApiWrapperType);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845855.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff845855.aspx </remarks>
+		[SupportByVersion("Word", 14,15,16)]
 		public NetOffice.WordApi.Floor Floor
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Floor", paramsArray);
-				NetOffice.WordApi.Floor newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.Floor.LateBindingApiWrapperType) as NetOffice.WordApi.Floor;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.Floor>(this, "Floor", NetOffice.WordApi.Floor.LateBindingApiWrapperType);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194655.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194655.aspx </remarks>
+		[SupportByVersion("Word", 14,15,16)]
 		public NetOffice.WordApi.PlotArea PlotArea
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "PlotArea", paramsArray);
-				NetOffice.WordApi.PlotArea newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.PlotArea.LateBindingApiWrapperType) as NetOffice.WordApi.PlotArea;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.PlotArea>(this, "PlotArea", NetOffice.WordApi.PlotArea.LateBindingApiWrapperType);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196388.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff196388.aspx </remarks>
+		[SupportByVersion("Word", 14,15,16)]
 		public bool PlotVisibleOnly
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "PlotVisibleOnly", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "PlotVisibleOnly");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "PlotVisibleOnly", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "PlotVisibleOnly", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836658.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff836658.aspx </remarks>
+		[SupportByVersion("Word", 14,15,16)]
 		public NetOffice.WordApi.ChartArea ChartArea
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "ChartArea", paramsArray);
-				NetOffice.WordApi.ChartArea newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.ChartArea.LateBindingApiWrapperType) as NetOffice.WordApi.ChartArea;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.ChartArea>(this, "ChartArea", NetOffice.WordApi.ChartArea.LateBindingApiWrapperType);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff823268.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff823268.aspx </remarks>
+		[SupportByVersion("Word", 14,15,16)]
 		public bool AutoScaling
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "AutoScaling", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "AutoScaling");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "AutoScaling", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "AutoScaling", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff191967.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff191967.aspx </remarks>
+		[SupportByVersion("Word", 14,15,16)]
 		public NetOffice.WordApi.DataTable DataTable
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "DataTable", paramsArray);
-				NetOffice.WordApi.DataTable newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.DataTable.LateBindingApiWrapperType) as NetOffice.WordApi.DataTable;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.DataTable>(this, "DataTable", NetOffice.WordApi.DataTable.LateBindingApiWrapperType);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839500.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff839500.aspx </remarks>
+		[SupportByVersion("Word", 14,15,16)]
 		public NetOffice.WordApi.Enums.XlBarShape BarShape
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "BarShape", paramsArray);
-				int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-				return (NetOffice.WordApi.Enums.XlBarShape)intReturnItem;
+				return Factory.ExecuteEnumPropertyGet<NetOffice.WordApi.Enums.XlBarShape>(this, "BarShape");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "BarShape", paramsArray);
+				Factory.ExecuteEnumPropertySet(this, "BarShape", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839285.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff839285.aspx </remarks>
+		[SupportByVersion("Word", 14,15,16)]
 		public NetOffice.WordApi.Walls SideWall
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "SideWall", paramsArray);
-				NetOffice.WordApi.Walls newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.Walls.LateBindingApiWrapperType) as NetOffice.WordApi.Walls;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.Walls>(this, "SideWall", NetOffice.WordApi.Walls.LateBindingApiWrapperType);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193753.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff193753.aspx </remarks>
+		[SupportByVersion("Word", 14,15,16)]
 		public NetOffice.WordApi.Walls BackWall
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "BackWall", paramsArray);
-				NetOffice.WordApi.Walls newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.Walls.LateBindingApiWrapperType) as NetOffice.WordApi.Walls;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.Walls>(this, "BackWall", NetOffice.WordApi.Walls.LateBindingApiWrapperType);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195916.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff195916.aspx </remarks>
+		[SupportByVersion("Word", 14,15,16)]
 		public object ChartStyle
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "ChartStyle", paramsArray);
-				if((null != returnItem) && (returnItem is MarshalByRefObject))
-				{
-					ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
-					return newObject;
-				}
-				else
-				{
-					return  returnItem;
-				}
+				return Factory.ExecuteVariantPropertyGet(this, "ChartStyle");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "ChartStyle", paramsArray);
+				Factory.ExecuteVariantPropertySet(this, "ChartStyle", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836370.aspx
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff836370.aspx </remarks>
+		[SupportByVersion("Word", 14,15,16), ProxyResult]
 		public object PivotLayout
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "PivotLayout", paramsArray);
-				ICOMObject newObject = Factory.CreateObjectFromComProxy(this,returnItem);
-				return newObject;
+				return Factory.ExecuteReferencePropertyGet(this, "PivotLayout");
 			}
 		}
 
@@ -979,110 +844,93 @@ namespace NetOffice.WordApi
 		/// SupportByVersion Word 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14,15,16)]
+		[SupportByVersion("Word", 14,15,16)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public bool HasPivotFields
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "HasPivotFields", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "HasPivotFields");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "HasPivotFields", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "HasPivotFields", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193871.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff193871.aspx </remarks>
+		[SupportByVersion("Word", 14,15,16)]
 		public bool ShowDataLabelsOverMaximum
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "ShowDataLabelsOverMaximum", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "ShowDataLabelsOverMaximum");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "ShowDataLabelsOverMaximum", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "ShowDataLabelsOverMaximum", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838941.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff838941.aspx </remarks>
+		[SupportByVersion("Word", 14,15,16)]
 		public NetOffice.WordApi.ChartData ChartData
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "ChartData", paramsArray);
-				NetOffice.WordApi.ChartData newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.ChartData.LateBindingApiWrapperType) as NetOffice.WordApi.ChartData;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.ChartData>(this, "ChartData", NetOffice.WordApi.ChartData.LateBindingApiWrapperType);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837462.aspx
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff837462.aspx </remarks>
+		[SupportByVersion("Word", 14,15,16), ProxyResult]
 		public object Shapes
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Shapes", paramsArray);
-				ICOMObject newObject = Factory.CreateObjectFromComProxy(this,returnItem);
-				return newObject;
+				return Factory.ExecuteReferencePropertyGet(this, "Shapes");
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835828.aspx
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835828.aspx </remarks>
+		[SupportByVersion("Word", 14,15,16), ProxyResult]
 		public object Application
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				ICOMObject newObject = Factory.CreateObjectFromComProxy(this,returnItem);
-				return newObject;
+				return Factory.ExecuteReferencePropertyGet(this, "Application");
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192382.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff192382.aspx </remarks>
+		[SupportByVersion("Word", 14,15,16)]
 		public Int32 Creator
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Creator", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "Creator");
 			}
 		}
 
@@ -1090,16 +938,13 @@ namespace NetOffice.WordApi
 		/// SupportByVersion Word 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14,15,16)]
+		[SupportByVersion("Word", 14,15,16)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public NetOffice.WordApi.ChartGroup Area3DGroup
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Area3DGroup", paramsArray);
-				NetOffice.WordApi.ChartGroup newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.ChartGroup.LateBindingApiWrapperType) as NetOffice.WordApi.ChartGroup;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.ChartGroup>(this, "Area3DGroup", NetOffice.WordApi.ChartGroup.LateBindingApiWrapperType);
 			}
 		}
 
@@ -1107,16 +952,13 @@ namespace NetOffice.WordApi
 		/// SupportByVersion Word 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14,15,16)]
+		[SupportByVersion("Word", 14,15,16)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public NetOffice.WordApi.ChartGroup Bar3DGroup
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Bar3DGroup", paramsArray);
-				NetOffice.WordApi.ChartGroup newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.ChartGroup.LateBindingApiWrapperType) as NetOffice.WordApi.ChartGroup;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.ChartGroup>(this, "Bar3DGroup", NetOffice.WordApi.ChartGroup.LateBindingApiWrapperType);
 			}
 		}
 
@@ -1124,16 +966,13 @@ namespace NetOffice.WordApi
 		/// SupportByVersion Word 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14,15,16)]
+		[SupportByVersion("Word", 14,15,16)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public NetOffice.WordApi.ChartGroup Column3DGroup
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Column3DGroup", paramsArray);
-				NetOffice.WordApi.ChartGroup newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.ChartGroup.LateBindingApiWrapperType) as NetOffice.WordApi.ChartGroup;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.ChartGroup>(this, "Column3DGroup", NetOffice.WordApi.ChartGroup.LateBindingApiWrapperType);
 			}
 		}
 
@@ -1141,16 +980,13 @@ namespace NetOffice.WordApi
 		/// SupportByVersion Word 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14,15,16)]
+		[SupportByVersion("Word", 14,15,16)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public NetOffice.WordApi.ChartGroup Line3DGroup
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Line3DGroup", paramsArray);
-				NetOffice.WordApi.ChartGroup newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.ChartGroup.LateBindingApiWrapperType) as NetOffice.WordApi.ChartGroup;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.ChartGroup>(this, "Line3DGroup", NetOffice.WordApi.ChartGroup.LateBindingApiWrapperType);
 			}
 		}
 
@@ -1158,16 +994,13 @@ namespace NetOffice.WordApi
 		/// SupportByVersion Word 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14,15,16)]
+		[SupportByVersion("Word", 14,15,16)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public NetOffice.WordApi.ChartGroup Pie3DGroup
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Pie3DGroup", paramsArray);
-				NetOffice.WordApi.ChartGroup newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.ChartGroup.LateBindingApiWrapperType) as NetOffice.WordApi.ChartGroup;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.ChartGroup>(this, "Pie3DGroup", NetOffice.WordApi.ChartGroup.LateBindingApiWrapperType);
 			}
 		}
 
@@ -1175,165 +1008,139 @@ namespace NetOffice.WordApi
 		/// SupportByVersion Word 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14,15,16)]
+		[SupportByVersion("Word", 14,15,16)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public NetOffice.WordApi.ChartGroup SurfaceGroup
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "SurfaceGroup", paramsArray);
-				NetOffice.WordApi.ChartGroup newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.ChartGroup.LateBindingApiWrapperType) as NetOffice.WordApi.ChartGroup;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.ChartGroup>(this, "SurfaceGroup", NetOffice.WordApi.ChartGroup.LateBindingApiWrapperType);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff198336.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff198336.aspx </remarks>
+		[SupportByVersion("Word", 14,15,16)]
 		public bool ShowReportFilterFieldButtons
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "ShowReportFilterFieldButtons", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "ShowReportFilterFieldButtons");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "ShowReportFilterFieldButtons", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "ShowReportFilterFieldButtons", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839101.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff839101.aspx </remarks>
+		[SupportByVersion("Word", 14,15,16)]
 		public bool ShowLegendFieldButtons
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "ShowLegendFieldButtons", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "ShowLegendFieldButtons");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "ShowLegendFieldButtons", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "ShowLegendFieldButtons", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845234.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff845234.aspx </remarks>
+		[SupportByVersion("Word", 14,15,16)]
 		public bool ShowAxisFieldButtons
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "ShowAxisFieldButtons", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "ShowAxisFieldButtons");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "ShowAxisFieldButtons", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "ShowAxisFieldButtons", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff834948.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff834948.aspx </remarks>
+		[SupportByVersion("Word", 14,15,16)]
 		public bool ShowValueFieldButtons
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "ShowValueFieldButtons", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "ShowValueFieldButtons");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "ShowValueFieldButtons", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "ShowValueFieldButtons", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff834564.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff834564.aspx </remarks>
+		[SupportByVersion("Word", 14,15,16)]
 		public bool ShowAllFieldButtons
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "ShowAllFieldButtons", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "ShowAllFieldButtons");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "ShowAllFieldButtons", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "ShowAllFieldButtons", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 15,16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj230485.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 15, 16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/jj230485.aspx </remarks>
+		[SupportByVersion("Word", 15, 16)]
 		public NetOffice.WordApi.Enums.XlCategoryLabelLevel CategoryLabelLevel
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "CategoryLabelLevel", paramsArray);
-				int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-				return (NetOffice.WordApi.Enums.XlCategoryLabelLevel)intReturnItem;
+				return Factory.ExecuteEnumPropertyGet<NetOffice.WordApi.Enums.XlCategoryLabelLevel>(this, "CategoryLabelLevel");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "CategoryLabelLevel", paramsArray);
+				Factory.ExecuteEnumPropertySet(this, "CategoryLabelLevel", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 15,16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj232218.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 15, 16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/jj232218.aspx </remarks>
+		[SupportByVersion("Word", 15, 16)]
 		public NetOffice.WordApi.Enums.XlSeriesNameLevel SeriesNameLevel
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "SeriesNameLevel", paramsArray);
-				int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-				return (NetOffice.WordApi.Enums.XlSeriesNameLevel)intReturnItem;
+				return Factory.ExecuteEnumPropertyGet<NetOffice.WordApi.Enums.XlSeriesNameLevel>(this, "SeriesNameLevel");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "SeriesNameLevel", paramsArray);
+				Factory.ExecuteEnumPropertySet(this, "SeriesNameLevel", value);
 			}
 		}
 
@@ -1341,44 +1148,31 @@ namespace NetOffice.WordApi
 		/// SupportByVersion Word 15,16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Word", 15, 16)]
+		[SupportByVersion("Word", 15, 16)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public bool HasHiddenContent
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "HasHiddenContent", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "HasHiddenContent");
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 15,16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj231924.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 15, 16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/jj231924.aspx </remarks>
+		[SupportByVersion("Word", 15, 16)]
 		public object ChartColor
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "ChartColor", paramsArray);
-				if((null != returnItem) && (returnItem is MarshalByRefObject))
-				{
-					ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
-					return newObject;
-				}
-				else
-				{
-					return  returnItem;
-				}
+				return Factory.ExecuteVariantPropertyGet(this, "ChartColor");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "ChartColor", paramsArray);
+				Factory.ExecuteVariantPropertySet(this, "ChartColor", value);
 			}
 		}
 
@@ -1388,256 +1182,235 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837270.aspx
 		/// </summary>
-		/// <param name="index">optional object Index</param>
-		[SupportByVersionAttribute("Word", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff837270.aspx </remarks>
+		/// <param name="index">optional object index</param>
+		[SupportByVersion("Word", 14,15,16)]
 		public object SeriesCollection(object index)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(index);
-			object returnItem = Invoker.MethodReturn(this, "SeriesCollection", paramsArray);
-			object newObject = Factory.CreateObjectFromComProxy(this,returnItem);
-			return newObject;
+			return Factory.ExecuteVariantMethodGet(this, "SeriesCollection", index);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837270.aspx
 		/// </summary>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff837270.aspx </remarks>
+		[CustomMethod]
+		[SupportByVersion("Word", 14,15,16)]
 		public object SeriesCollection()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "SeriesCollection", paramsArray);
-			object newObject = Factory.CreateObjectFromComProxy(this,returnItem);
-			return newObject;
+			return Factory.ExecuteVariantMethodGet(this, "SeriesCollection");
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194055.aspx
 		/// </summary>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194055.aspx </remarks>
 		/// <param name="type">optional NetOffice.WordApi.Enums.XlDataLabelsType Type = 2</param>
-		/// <param name="legendKey">optional object LegendKey</param>
-		/// <param name="autoText">optional object AutoText</param>
-		/// <param name="hasLeaderLines">optional object HasLeaderLines</param>
-		/// <param name="showSeriesName">optional object ShowSeriesName</param>
-		/// <param name="showCategoryName">optional object ShowCategoryName</param>
-		/// <param name="showValue">optional object ShowValue</param>
-		/// <param name="showPercentage">optional object ShowPercentage</param>
-		/// <param name="showBubbleSize">optional object ShowBubbleSize</param>
-		/// <param name="separator">optional object Separator</param>
-		[SupportByVersionAttribute("Word", 14,15,16)]
+		/// <param name="legendKey">optional object legendKey</param>
+		/// <param name="autoText">optional object autoText</param>
+		/// <param name="hasLeaderLines">optional object hasLeaderLines</param>
+		/// <param name="showSeriesName">optional object showSeriesName</param>
+		/// <param name="showCategoryName">optional object showCategoryName</param>
+		/// <param name="showValue">optional object showValue</param>
+		/// <param name="showPercentage">optional object showPercentage</param>
+		/// <param name="showBubbleSize">optional object showBubbleSize</param>
+		/// <param name="separator">optional object separator</param>
+		[SupportByVersion("Word", 14,15,16)]
 		public void ApplyDataLabels(object type, object legendKey, object autoText, object hasLeaderLines, object showSeriesName, object showCategoryName, object showValue, object showPercentage, object showBubbleSize, object separator)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(type, legendKey, autoText, hasLeaderLines, showSeriesName, showCategoryName, showValue, showPercentage, showBubbleSize, separator);
-			Invoker.Method(this, "ApplyDataLabels", paramsArray);
+			 Factory.ExecuteMethod(this, "ApplyDataLabels", new object[]{ type, legendKey, autoText, hasLeaderLines, showSeriesName, showCategoryName, showValue, showPercentage, showBubbleSize, separator });
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194055.aspx
 		/// </summary>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194055.aspx </remarks>
+		[CustomMethod]
+		[SupportByVersion("Word", 14,15,16)]
 		public void ApplyDataLabels()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "ApplyDataLabels", paramsArray);
+			 Factory.ExecuteMethod(this, "ApplyDataLabels");
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194055.aspx
 		/// </summary>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194055.aspx </remarks>
 		/// <param name="type">optional NetOffice.WordApi.Enums.XlDataLabelsType Type = 2</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Word", 14,15,16)]
 		public void ApplyDataLabels(object type)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(type);
-			Invoker.Method(this, "ApplyDataLabels", paramsArray);
+			 Factory.ExecuteMethod(this, "ApplyDataLabels", type);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194055.aspx
 		/// </summary>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194055.aspx </remarks>
 		/// <param name="type">optional NetOffice.WordApi.Enums.XlDataLabelsType Type = 2</param>
-		/// <param name="legendKey">optional object LegendKey</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 14,15,16)]
+		/// <param name="legendKey">optional object legendKey</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 14,15,16)]
 		public void ApplyDataLabels(object type, object legendKey)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(type, legendKey);
-			Invoker.Method(this, "ApplyDataLabels", paramsArray);
+			 Factory.ExecuteMethod(this, "ApplyDataLabels", type, legendKey);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194055.aspx
 		/// </summary>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194055.aspx </remarks>
 		/// <param name="type">optional NetOffice.WordApi.Enums.XlDataLabelsType Type = 2</param>
-		/// <param name="legendKey">optional object LegendKey</param>
-		/// <param name="autoText">optional object AutoText</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 14,15,16)]
+		/// <param name="legendKey">optional object legendKey</param>
+		/// <param name="autoText">optional object autoText</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 14,15,16)]
 		public void ApplyDataLabels(object type, object legendKey, object autoText)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(type, legendKey, autoText);
-			Invoker.Method(this, "ApplyDataLabels", paramsArray);
+			 Factory.ExecuteMethod(this, "ApplyDataLabels", type, legendKey, autoText);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194055.aspx
 		/// </summary>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194055.aspx </remarks>
 		/// <param name="type">optional NetOffice.WordApi.Enums.XlDataLabelsType Type = 2</param>
-		/// <param name="legendKey">optional object LegendKey</param>
-		/// <param name="autoText">optional object AutoText</param>
-		/// <param name="hasLeaderLines">optional object HasLeaderLines</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 14,15,16)]
+		/// <param name="legendKey">optional object legendKey</param>
+		/// <param name="autoText">optional object autoText</param>
+		/// <param name="hasLeaderLines">optional object hasLeaderLines</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 14,15,16)]
 		public void ApplyDataLabels(object type, object legendKey, object autoText, object hasLeaderLines)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(type, legendKey, autoText, hasLeaderLines);
-			Invoker.Method(this, "ApplyDataLabels", paramsArray);
+			 Factory.ExecuteMethod(this, "ApplyDataLabels", type, legendKey, autoText, hasLeaderLines);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194055.aspx
 		/// </summary>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194055.aspx </remarks>
 		/// <param name="type">optional NetOffice.WordApi.Enums.XlDataLabelsType Type = 2</param>
-		/// <param name="legendKey">optional object LegendKey</param>
-		/// <param name="autoText">optional object AutoText</param>
-		/// <param name="hasLeaderLines">optional object HasLeaderLines</param>
-		/// <param name="showSeriesName">optional object ShowSeriesName</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 14,15,16)]
+		/// <param name="legendKey">optional object legendKey</param>
+		/// <param name="autoText">optional object autoText</param>
+		/// <param name="hasLeaderLines">optional object hasLeaderLines</param>
+		/// <param name="showSeriesName">optional object showSeriesName</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 14,15,16)]
 		public void ApplyDataLabels(object type, object legendKey, object autoText, object hasLeaderLines, object showSeriesName)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(type, legendKey, autoText, hasLeaderLines, showSeriesName);
-			Invoker.Method(this, "ApplyDataLabels", paramsArray);
+			 Factory.ExecuteMethod(this, "ApplyDataLabels", new object[]{ type, legendKey, autoText, hasLeaderLines, showSeriesName });
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194055.aspx
 		/// </summary>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194055.aspx </remarks>
 		/// <param name="type">optional NetOffice.WordApi.Enums.XlDataLabelsType Type = 2</param>
-		/// <param name="legendKey">optional object LegendKey</param>
-		/// <param name="autoText">optional object AutoText</param>
-		/// <param name="hasLeaderLines">optional object HasLeaderLines</param>
-		/// <param name="showSeriesName">optional object ShowSeriesName</param>
-		/// <param name="showCategoryName">optional object ShowCategoryName</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 14,15,16)]
+		/// <param name="legendKey">optional object legendKey</param>
+		/// <param name="autoText">optional object autoText</param>
+		/// <param name="hasLeaderLines">optional object hasLeaderLines</param>
+		/// <param name="showSeriesName">optional object showSeriesName</param>
+		/// <param name="showCategoryName">optional object showCategoryName</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 14,15,16)]
 		public void ApplyDataLabels(object type, object legendKey, object autoText, object hasLeaderLines, object showSeriesName, object showCategoryName)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(type, legendKey, autoText, hasLeaderLines, showSeriesName, showCategoryName);
-			Invoker.Method(this, "ApplyDataLabels", paramsArray);
+			 Factory.ExecuteMethod(this, "ApplyDataLabels", new object[]{ type, legendKey, autoText, hasLeaderLines, showSeriesName, showCategoryName });
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194055.aspx
 		/// </summary>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194055.aspx </remarks>
 		/// <param name="type">optional NetOffice.WordApi.Enums.XlDataLabelsType Type = 2</param>
-		/// <param name="legendKey">optional object LegendKey</param>
-		/// <param name="autoText">optional object AutoText</param>
-		/// <param name="hasLeaderLines">optional object HasLeaderLines</param>
-		/// <param name="showSeriesName">optional object ShowSeriesName</param>
-		/// <param name="showCategoryName">optional object ShowCategoryName</param>
-		/// <param name="showValue">optional object ShowValue</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 14,15,16)]
+		/// <param name="legendKey">optional object legendKey</param>
+		/// <param name="autoText">optional object autoText</param>
+		/// <param name="hasLeaderLines">optional object hasLeaderLines</param>
+		/// <param name="showSeriesName">optional object showSeriesName</param>
+		/// <param name="showCategoryName">optional object showCategoryName</param>
+		/// <param name="showValue">optional object showValue</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 14,15,16)]
 		public void ApplyDataLabels(object type, object legendKey, object autoText, object hasLeaderLines, object showSeriesName, object showCategoryName, object showValue)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(type, legendKey, autoText, hasLeaderLines, showSeriesName, showCategoryName, showValue);
-			Invoker.Method(this, "ApplyDataLabels", paramsArray);
+			 Factory.ExecuteMethod(this, "ApplyDataLabels", new object[]{ type, legendKey, autoText, hasLeaderLines, showSeriesName, showCategoryName, showValue });
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194055.aspx
 		/// </summary>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194055.aspx </remarks>
 		/// <param name="type">optional NetOffice.WordApi.Enums.XlDataLabelsType Type = 2</param>
-		/// <param name="legendKey">optional object LegendKey</param>
-		/// <param name="autoText">optional object AutoText</param>
-		/// <param name="hasLeaderLines">optional object HasLeaderLines</param>
-		/// <param name="showSeriesName">optional object ShowSeriesName</param>
-		/// <param name="showCategoryName">optional object ShowCategoryName</param>
-		/// <param name="showValue">optional object ShowValue</param>
-		/// <param name="showPercentage">optional object ShowPercentage</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 14,15,16)]
+		/// <param name="legendKey">optional object legendKey</param>
+		/// <param name="autoText">optional object autoText</param>
+		/// <param name="hasLeaderLines">optional object hasLeaderLines</param>
+		/// <param name="showSeriesName">optional object showSeriesName</param>
+		/// <param name="showCategoryName">optional object showCategoryName</param>
+		/// <param name="showValue">optional object showValue</param>
+		/// <param name="showPercentage">optional object showPercentage</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 14,15,16)]
 		public void ApplyDataLabels(object type, object legendKey, object autoText, object hasLeaderLines, object showSeriesName, object showCategoryName, object showValue, object showPercentage)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(type, legendKey, autoText, hasLeaderLines, showSeriesName, showCategoryName, showValue, showPercentage);
-			Invoker.Method(this, "ApplyDataLabels", paramsArray);
+			 Factory.ExecuteMethod(this, "ApplyDataLabels", new object[]{ type, legendKey, autoText, hasLeaderLines, showSeriesName, showCategoryName, showValue, showPercentage });
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194055.aspx
 		/// </summary>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194055.aspx </remarks>
 		/// <param name="type">optional NetOffice.WordApi.Enums.XlDataLabelsType Type = 2</param>
-		/// <param name="legendKey">optional object LegendKey</param>
-		/// <param name="autoText">optional object AutoText</param>
-		/// <param name="hasLeaderLines">optional object HasLeaderLines</param>
-		/// <param name="showSeriesName">optional object ShowSeriesName</param>
-		/// <param name="showCategoryName">optional object ShowCategoryName</param>
-		/// <param name="showValue">optional object ShowValue</param>
-		/// <param name="showPercentage">optional object ShowPercentage</param>
-		/// <param name="showBubbleSize">optional object ShowBubbleSize</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 14,15,16)]
+		/// <param name="legendKey">optional object legendKey</param>
+		/// <param name="autoText">optional object autoText</param>
+		/// <param name="hasLeaderLines">optional object hasLeaderLines</param>
+		/// <param name="showSeriesName">optional object showSeriesName</param>
+		/// <param name="showCategoryName">optional object showCategoryName</param>
+		/// <param name="showValue">optional object showValue</param>
+		/// <param name="showPercentage">optional object showPercentage</param>
+		/// <param name="showBubbleSize">optional object showBubbleSize</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 14,15,16)]
 		public void ApplyDataLabels(object type, object legendKey, object autoText, object hasLeaderLines, object showSeriesName, object showCategoryName, object showValue, object showPercentage, object showBubbleSize)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(type, legendKey, autoText, hasLeaderLines, showSeriesName, showCategoryName, showValue, showPercentage, showBubbleSize);
-			Invoker.Method(this, "ApplyDataLabels", paramsArray);
+			 Factory.ExecuteMethod(this, "ApplyDataLabels", new object[]{ type, legendKey, autoText, hasLeaderLines, showSeriesName, showCategoryName, showValue, showPercentage, showBubbleSize });
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="chartType">NetOffice.OfficeApi.Enums.XlChartType ChartType</param>
-		/// <param name="typeName">optional object TypeName</param>
+		/// <param name="chartType">NetOffice.OfficeApi.Enums.XlChartType chartType</param>
+		/// <param name="typeName">optional object typeName</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("Word", 14,15,16)]
+		[SupportByVersion("Word", 14,15,16)]
 		public void ApplyCustomType(NetOffice.OfficeApi.Enums.XlChartType chartType, object typeName)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(chartType, typeName);
-			Invoker.Method(this, "ApplyCustomType", paramsArray);
+			 Factory.ExecuteMethod(this, "ApplyCustomType", chartType, typeName);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="chartType">NetOffice.OfficeApi.Enums.XlChartType ChartType</param>
+		/// <param name="chartType">NetOffice.OfficeApi.Enums.XlChartType chartType</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Word", 14,15,16)]
 		public void ApplyCustomType(NetOffice.OfficeApi.Enums.XlChartType chartType)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(chartType);
-			Invoker.Method(this, "ApplyCustomType", paramsArray);
+			 Factory.ExecuteMethod(this, "ApplyCustomType", chartType);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839889.aspx
 		/// </summary>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff839889.aspx </remarks>
 		/// <param name="x">Int32 x</param>
 		/// <param name="y">Int32 y</param>
-		/// <param name="elementID">Int32 ElementID</param>
-		/// <param name="arg1">Int32 Arg1</param>
-		/// <param name="arg2">Int32 Arg2</param>
-		[SupportByVersionAttribute("Word", 14,15,16)]
+		/// <param name="elementID">Int32 elementID</param>
+		/// <param name="arg1">Int32 arg1</param>
+		/// <param name="arg2">Int32 arg2</param>
+		[SupportByVersion("Word", 14,15,16)]
 		public void GetChartElement(Int32 x, Int32 y, out Int32 elementID, out Int32 arg1, out Int32 arg2)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,false,true,true,true);
@@ -1653,932 +1426,779 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822921.aspx
 		/// </summary>
-		/// <param name="source">string Source</param>
-		/// <param name="plotBy">optional object PlotBy</param>
-		[SupportByVersionAttribute("Word", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff822921.aspx </remarks>
+		/// <param name="source">string source</param>
+		/// <param name="plotBy">optional object plotBy</param>
+		[SupportByVersion("Word", 14,15,16)]
 		public void SetSourceData(string source, object plotBy)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(source, plotBy);
-			Invoker.Method(this, "SetSourceData", paramsArray);
+			 Factory.ExecuteMethod(this, "SetSourceData", source, plotBy);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822921.aspx
 		/// </summary>
-		/// <param name="source">string Source</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff822921.aspx </remarks>
+		/// <param name="source">string source</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 14,15,16)]
 		public void SetSourceData(string source)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(source);
-			Invoker.Method(this, "SetSourceData", paramsArray);
+			 Factory.ExecuteMethod(this, "SetSourceData", source);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193697.aspx
 		/// </summary>
-		/// <param name="type">optional object Type</param>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff193697.aspx </remarks>
+		/// <param name="type">optional object type</param>
 		/// <param name="axisGroup">optional NetOffice.WordApi.Enums.XlAxisGroup AxisGroup = 1</param>
-		[SupportByVersionAttribute("Word", 14,15,16)]
+		[SupportByVersion("Word", 14,15,16)]
 		public object Axes(object type, object axisGroup)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(type, axisGroup);
-			object returnItem = Invoker.MethodReturn(this, "Axes", paramsArray);
-			object newObject = Factory.CreateObjectFromComProxy(this,returnItem);
-			return newObject;
+			return Factory.ExecuteVariantMethodGet(this, "Axes", type, axisGroup);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193697.aspx
 		/// </summary>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff193697.aspx </remarks>
+		[CustomMethod]
+		[SupportByVersion("Word", 14,15,16)]
 		public object Axes()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "Axes", paramsArray);
-			object newObject = Factory.CreateObjectFromComProxy(this,returnItem);
-			return newObject;
+			return Factory.ExecuteVariantMethodGet(this, "Axes");
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193697.aspx
 		/// </summary>
-		/// <param name="type">optional object Type</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff193697.aspx </remarks>
+		/// <param name="type">optional object type</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 14,15,16)]
 		public object Axes(object type)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(type);
-			object returnItem = Invoker.MethodReturn(this, "Axes", paramsArray);
-			object newObject = Factory.CreateObjectFromComProxy(this,returnItem);
-			return newObject;
+			return Factory.ExecuteVariantMethodGet(this, "Axes", type);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="gallery">Int32 Gallery</param>
-		/// <param name="format">optional object Format</param>
+		/// <param name="gallery">Int32 gallery</param>
+		/// <param name="format">optional object format</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("Word", 14,15,16)]
+		[SupportByVersion("Word", 14,15,16)]
 		public void AutoFormat(Int32 gallery, object format)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(gallery, format);
-			Invoker.Method(this, "AutoFormat", paramsArray);
+			 Factory.ExecuteMethod(this, "AutoFormat", gallery, format);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="gallery">Int32 Gallery</param>
+		/// <param name="gallery">Int32 gallery</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Word", 14,15,16)]
 		public void AutoFormat(Int32 gallery)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(gallery);
-			Invoker.Method(this, "AutoFormat", paramsArray);
+			 Factory.ExecuteMethod(this, "AutoFormat", gallery);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197864.aspx
 		/// </summary>
-		/// <param name="fileName">string FileName</param>
-		[SupportByVersionAttribute("Word", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff197864.aspx </remarks>
+		/// <param name="fileName">string fileName</param>
+		[SupportByVersion("Word", 14,15,16)]
 		public void SetBackgroundPicture(string fileName)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(fileName);
-			Invoker.Method(this, "SetBackgroundPicture", paramsArray);
+			 Factory.ExecuteMethod(this, "SetBackgroundPicture", fileName);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196615.aspx
 		/// </summary>
-		/// <param name="source">optional object Source</param>
-		/// <param name="gallery">optional object Gallery</param>
-		/// <param name="format">optional object Format</param>
-		/// <param name="plotBy">optional object PlotBy</param>
-		/// <param name="categoryLabels">optional object CategoryLabels</param>
-		/// <param name="seriesLabels">optional object SeriesLabels</param>
-		/// <param name="hasLegend">optional object HasLegend</param>
-		/// <param name="title">optional object Title</param>
-		/// <param name="categoryTitle">optional object CategoryTitle</param>
-		/// <param name="valueTitle">optional object ValueTitle</param>
-		/// <param name="extraTitle">optional object ExtraTitle</param>
-		[SupportByVersionAttribute("Word", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff196615.aspx </remarks>
+		/// <param name="source">optional object source</param>
+		/// <param name="gallery">optional object gallery</param>
+		/// <param name="format">optional object format</param>
+		/// <param name="plotBy">optional object plotBy</param>
+		/// <param name="categoryLabels">optional object categoryLabels</param>
+		/// <param name="seriesLabels">optional object seriesLabels</param>
+		/// <param name="hasLegend">optional object hasLegend</param>
+		/// <param name="title">optional object title</param>
+		/// <param name="categoryTitle">optional object categoryTitle</param>
+		/// <param name="valueTitle">optional object valueTitle</param>
+		/// <param name="extraTitle">optional object extraTitle</param>
+		[SupportByVersion("Word", 14,15,16)]
 		public void ChartWizard(object source, object gallery, object format, object plotBy, object categoryLabels, object seriesLabels, object hasLegend, object title, object categoryTitle, object valueTitle, object extraTitle)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(source, gallery, format, plotBy, categoryLabels, seriesLabels, hasLegend, title, categoryTitle, valueTitle, extraTitle);
-			Invoker.Method(this, "ChartWizard", paramsArray);
+			 Factory.ExecuteMethod(this, "ChartWizard", new object[]{ source, gallery, format, plotBy, categoryLabels, seriesLabels, hasLegend, title, categoryTitle, valueTitle, extraTitle });
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196615.aspx
 		/// </summary>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff196615.aspx </remarks>
+		[CustomMethod]
+		[SupportByVersion("Word", 14,15,16)]
 		public void ChartWizard()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "ChartWizard", paramsArray);
+			 Factory.ExecuteMethod(this, "ChartWizard");
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196615.aspx
 		/// </summary>
-		/// <param name="source">optional object Source</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff196615.aspx </remarks>
+		/// <param name="source">optional object source</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 14,15,16)]
 		public void ChartWizard(object source)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(source);
-			Invoker.Method(this, "ChartWizard", paramsArray);
+			 Factory.ExecuteMethod(this, "ChartWizard", source);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196615.aspx
 		/// </summary>
-		/// <param name="source">optional object Source</param>
-		/// <param name="gallery">optional object Gallery</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff196615.aspx </remarks>
+		/// <param name="source">optional object source</param>
+		/// <param name="gallery">optional object gallery</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 14,15,16)]
 		public void ChartWizard(object source, object gallery)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(source, gallery);
-			Invoker.Method(this, "ChartWizard", paramsArray);
+			 Factory.ExecuteMethod(this, "ChartWizard", source, gallery);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196615.aspx
 		/// </summary>
-		/// <param name="source">optional object Source</param>
-		/// <param name="gallery">optional object Gallery</param>
-		/// <param name="format">optional object Format</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff196615.aspx </remarks>
+		/// <param name="source">optional object source</param>
+		/// <param name="gallery">optional object gallery</param>
+		/// <param name="format">optional object format</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 14,15,16)]
 		public void ChartWizard(object source, object gallery, object format)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(source, gallery, format);
-			Invoker.Method(this, "ChartWizard", paramsArray);
+			 Factory.ExecuteMethod(this, "ChartWizard", source, gallery, format);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196615.aspx
 		/// </summary>
-		/// <param name="source">optional object Source</param>
-		/// <param name="gallery">optional object Gallery</param>
-		/// <param name="format">optional object Format</param>
-		/// <param name="plotBy">optional object PlotBy</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff196615.aspx </remarks>
+		/// <param name="source">optional object source</param>
+		/// <param name="gallery">optional object gallery</param>
+		/// <param name="format">optional object format</param>
+		/// <param name="plotBy">optional object plotBy</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 14,15,16)]
 		public void ChartWizard(object source, object gallery, object format, object plotBy)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(source, gallery, format, plotBy);
-			Invoker.Method(this, "ChartWizard", paramsArray);
+			 Factory.ExecuteMethod(this, "ChartWizard", source, gallery, format, plotBy);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196615.aspx
 		/// </summary>
-		/// <param name="source">optional object Source</param>
-		/// <param name="gallery">optional object Gallery</param>
-		/// <param name="format">optional object Format</param>
-		/// <param name="plotBy">optional object PlotBy</param>
-		/// <param name="categoryLabels">optional object CategoryLabels</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff196615.aspx </remarks>
+		/// <param name="source">optional object source</param>
+		/// <param name="gallery">optional object gallery</param>
+		/// <param name="format">optional object format</param>
+		/// <param name="plotBy">optional object plotBy</param>
+		/// <param name="categoryLabels">optional object categoryLabels</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 14,15,16)]
 		public void ChartWizard(object source, object gallery, object format, object plotBy, object categoryLabels)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(source, gallery, format, plotBy, categoryLabels);
-			Invoker.Method(this, "ChartWizard", paramsArray);
+			 Factory.ExecuteMethod(this, "ChartWizard", new object[]{ source, gallery, format, plotBy, categoryLabels });
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196615.aspx
 		/// </summary>
-		/// <param name="source">optional object Source</param>
-		/// <param name="gallery">optional object Gallery</param>
-		/// <param name="format">optional object Format</param>
-		/// <param name="plotBy">optional object PlotBy</param>
-		/// <param name="categoryLabels">optional object CategoryLabels</param>
-		/// <param name="seriesLabels">optional object SeriesLabels</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff196615.aspx </remarks>
+		/// <param name="source">optional object source</param>
+		/// <param name="gallery">optional object gallery</param>
+		/// <param name="format">optional object format</param>
+		/// <param name="plotBy">optional object plotBy</param>
+		/// <param name="categoryLabels">optional object categoryLabels</param>
+		/// <param name="seriesLabels">optional object seriesLabels</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 14,15,16)]
 		public void ChartWizard(object source, object gallery, object format, object plotBy, object categoryLabels, object seriesLabels)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(source, gallery, format, plotBy, categoryLabels, seriesLabels);
-			Invoker.Method(this, "ChartWizard", paramsArray);
+			 Factory.ExecuteMethod(this, "ChartWizard", new object[]{ source, gallery, format, plotBy, categoryLabels, seriesLabels });
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196615.aspx
 		/// </summary>
-		/// <param name="source">optional object Source</param>
-		/// <param name="gallery">optional object Gallery</param>
-		/// <param name="format">optional object Format</param>
-		/// <param name="plotBy">optional object PlotBy</param>
-		/// <param name="categoryLabels">optional object CategoryLabels</param>
-		/// <param name="seriesLabels">optional object SeriesLabels</param>
-		/// <param name="hasLegend">optional object HasLegend</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff196615.aspx </remarks>
+		/// <param name="source">optional object source</param>
+		/// <param name="gallery">optional object gallery</param>
+		/// <param name="format">optional object format</param>
+		/// <param name="plotBy">optional object plotBy</param>
+		/// <param name="categoryLabels">optional object categoryLabels</param>
+		/// <param name="seriesLabels">optional object seriesLabels</param>
+		/// <param name="hasLegend">optional object hasLegend</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 14,15,16)]
 		public void ChartWizard(object source, object gallery, object format, object plotBy, object categoryLabels, object seriesLabels, object hasLegend)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(source, gallery, format, plotBy, categoryLabels, seriesLabels, hasLegend);
-			Invoker.Method(this, "ChartWizard", paramsArray);
+			 Factory.ExecuteMethod(this, "ChartWizard", new object[]{ source, gallery, format, plotBy, categoryLabels, seriesLabels, hasLegend });
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196615.aspx
 		/// </summary>
-		/// <param name="source">optional object Source</param>
-		/// <param name="gallery">optional object Gallery</param>
-		/// <param name="format">optional object Format</param>
-		/// <param name="plotBy">optional object PlotBy</param>
-		/// <param name="categoryLabels">optional object CategoryLabels</param>
-		/// <param name="seriesLabels">optional object SeriesLabels</param>
-		/// <param name="hasLegend">optional object HasLegend</param>
-		/// <param name="title">optional object Title</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff196615.aspx </remarks>
+		/// <param name="source">optional object source</param>
+		/// <param name="gallery">optional object gallery</param>
+		/// <param name="format">optional object format</param>
+		/// <param name="plotBy">optional object plotBy</param>
+		/// <param name="categoryLabels">optional object categoryLabels</param>
+		/// <param name="seriesLabels">optional object seriesLabels</param>
+		/// <param name="hasLegend">optional object hasLegend</param>
+		/// <param name="title">optional object title</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 14,15,16)]
 		public void ChartWizard(object source, object gallery, object format, object plotBy, object categoryLabels, object seriesLabels, object hasLegend, object title)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(source, gallery, format, plotBy, categoryLabels, seriesLabels, hasLegend, title);
-			Invoker.Method(this, "ChartWizard", paramsArray);
+			 Factory.ExecuteMethod(this, "ChartWizard", new object[]{ source, gallery, format, plotBy, categoryLabels, seriesLabels, hasLegend, title });
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196615.aspx
 		/// </summary>
-		/// <param name="source">optional object Source</param>
-		/// <param name="gallery">optional object Gallery</param>
-		/// <param name="format">optional object Format</param>
-		/// <param name="plotBy">optional object PlotBy</param>
-		/// <param name="categoryLabels">optional object CategoryLabels</param>
-		/// <param name="seriesLabels">optional object SeriesLabels</param>
-		/// <param name="hasLegend">optional object HasLegend</param>
-		/// <param name="title">optional object Title</param>
-		/// <param name="categoryTitle">optional object CategoryTitle</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff196615.aspx </remarks>
+		/// <param name="source">optional object source</param>
+		/// <param name="gallery">optional object gallery</param>
+		/// <param name="format">optional object format</param>
+		/// <param name="plotBy">optional object plotBy</param>
+		/// <param name="categoryLabels">optional object categoryLabels</param>
+		/// <param name="seriesLabels">optional object seriesLabels</param>
+		/// <param name="hasLegend">optional object hasLegend</param>
+		/// <param name="title">optional object title</param>
+		/// <param name="categoryTitle">optional object categoryTitle</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 14,15,16)]
 		public void ChartWizard(object source, object gallery, object format, object plotBy, object categoryLabels, object seriesLabels, object hasLegend, object title, object categoryTitle)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(source, gallery, format, plotBy, categoryLabels, seriesLabels, hasLegend, title, categoryTitle);
-			Invoker.Method(this, "ChartWizard", paramsArray);
+			 Factory.ExecuteMethod(this, "ChartWizard", new object[]{ source, gallery, format, plotBy, categoryLabels, seriesLabels, hasLegend, title, categoryTitle });
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196615.aspx
 		/// </summary>
-		/// <param name="source">optional object Source</param>
-		/// <param name="gallery">optional object Gallery</param>
-		/// <param name="format">optional object Format</param>
-		/// <param name="plotBy">optional object PlotBy</param>
-		/// <param name="categoryLabels">optional object CategoryLabels</param>
-		/// <param name="seriesLabels">optional object SeriesLabels</param>
-		/// <param name="hasLegend">optional object HasLegend</param>
-		/// <param name="title">optional object Title</param>
-		/// <param name="categoryTitle">optional object CategoryTitle</param>
-		/// <param name="valueTitle">optional object ValueTitle</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff196615.aspx </remarks>
+		/// <param name="source">optional object source</param>
+		/// <param name="gallery">optional object gallery</param>
+		/// <param name="format">optional object format</param>
+		/// <param name="plotBy">optional object plotBy</param>
+		/// <param name="categoryLabels">optional object categoryLabels</param>
+		/// <param name="seriesLabels">optional object seriesLabels</param>
+		/// <param name="hasLegend">optional object hasLegend</param>
+		/// <param name="title">optional object title</param>
+		/// <param name="categoryTitle">optional object categoryTitle</param>
+		/// <param name="valueTitle">optional object valueTitle</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 14,15,16)]
 		public void ChartWizard(object source, object gallery, object format, object plotBy, object categoryLabels, object seriesLabels, object hasLegend, object title, object categoryTitle, object valueTitle)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(source, gallery, format, plotBy, categoryLabels, seriesLabels, hasLegend, title, categoryTitle, valueTitle);
-			Invoker.Method(this, "ChartWizard", paramsArray);
+			 Factory.ExecuteMethod(this, "ChartWizard", new object[]{ source, gallery, format, plotBy, categoryLabels, seriesLabels, hasLegend, title, categoryTitle, valueTitle });
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff823258.aspx
 		/// </summary>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff823258.aspx </remarks>
 		/// <param name="appearance">optional NetOffice.WordApi.Enums.XlPictureAppearance Appearance = 1</param>
 		/// <param name="format">optional NetOffice.WordApi.Enums.XlCopyPictureFormat Format = -4147</param>
 		/// <param name="size">optional NetOffice.WordApi.Enums.XlPictureAppearance Size = 2</param>
-		[SupportByVersionAttribute("Word", 14,15,16)]
+		[SupportByVersion("Word", 14,15,16)]
 		public void CopyPicture(object appearance, object format, object size)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(appearance, format, size);
-			Invoker.Method(this, "CopyPicture", paramsArray);
+			 Factory.ExecuteMethod(this, "CopyPicture", appearance, format, size);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff823258.aspx
 		/// </summary>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff823258.aspx </remarks>
+		[CustomMethod]
+		[SupportByVersion("Word", 14,15,16)]
 		public void CopyPicture()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "CopyPicture", paramsArray);
+			 Factory.ExecuteMethod(this, "CopyPicture");
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff823258.aspx
 		/// </summary>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff823258.aspx </remarks>
 		/// <param name="appearance">optional NetOffice.WordApi.Enums.XlPictureAppearance Appearance = 1</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Word", 14,15,16)]
 		public void CopyPicture(object appearance)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(appearance);
-			Invoker.Method(this, "CopyPicture", paramsArray);
+			 Factory.ExecuteMethod(this, "CopyPicture", appearance);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff823258.aspx
 		/// </summary>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff823258.aspx </remarks>
 		/// <param name="appearance">optional NetOffice.WordApi.Enums.XlPictureAppearance Appearance = 1</param>
 		/// <param name="format">optional NetOffice.WordApi.Enums.XlCopyPictureFormat Format = -4147</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Word", 14,15,16)]
 		public void CopyPicture(object appearance, object format)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(appearance, format);
-			Invoker.Method(this, "CopyPicture", paramsArray);
+			 Factory.ExecuteMethod(this, "CopyPicture", appearance, format);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839410.aspx
 		/// </summary>
-		/// <param name="type">optional object Type</param>
-		[SupportByVersionAttribute("Word", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff839410.aspx </remarks>
+		/// <param name="type">optional object type</param>
+		[SupportByVersion("Word", 14,15,16)]
 		public void Paste(object type)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(type);
-			Invoker.Method(this, "Paste", paramsArray);
+			 Factory.ExecuteMethod(this, "Paste", type);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839410.aspx
 		/// </summary>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff839410.aspx </remarks>
+		[CustomMethod]
+		[SupportByVersion("Word", 14,15,16)]
 		public void Paste()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "Paste", paramsArray);
+			 Factory.ExecuteMethod(this, "Paste");
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195106.aspx
 		/// </summary>
-		/// <param name="fileName">string FileName</param>
-		/// <param name="filterName">optional object FilterName</param>
-		/// <param name="interactive">optional object Interactive</param>
-		[SupportByVersionAttribute("Word", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff195106.aspx </remarks>
+		/// <param name="fileName">string fileName</param>
+		/// <param name="filterName">optional object filterName</param>
+		/// <param name="interactive">optional object interactive</param>
+		[SupportByVersion("Word", 14,15,16)]
 		public bool Export(string fileName, object filterName, object interactive)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(fileName, filterName, interactive);
-			object returnItem = Invoker.MethodReturn(this, "Export", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return Factory.ExecuteBoolMethodGet(this, "Export", fileName, filterName, interactive);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195106.aspx
 		/// </summary>
-		/// <param name="fileName">string FileName</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff195106.aspx </remarks>
+		/// <param name="fileName">string fileName</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 14,15,16)]
 		public bool Export(string fileName)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(fileName);
-			object returnItem = Invoker.MethodReturn(this, "Export", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return Factory.ExecuteBoolMethodGet(this, "Export", fileName);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195106.aspx
 		/// </summary>
-		/// <param name="fileName">string FileName</param>
-		/// <param name="filterName">optional object FilterName</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff195106.aspx </remarks>
+		/// <param name="fileName">string fileName</param>
+		/// <param name="filterName">optional object filterName</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 14,15,16)]
 		public bool Export(string fileName, object filterName)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(fileName, filterName);
-			object returnItem = Invoker.MethodReturn(this, "Export", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return Factory.ExecuteBoolMethodGet(this, "Export", fileName, filterName);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839841.aspx
 		/// </summary>
-		/// <param name="name">object Name</param>
-		[SupportByVersionAttribute("Word", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff839841.aspx </remarks>
+		/// <param name="name">object name</param>
+		[SupportByVersion("Word", 14,15,16)]
 		public void SetDefaultChart(object name)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(name);
-			Invoker.Method(this, "SetDefaultChart", paramsArray);
+			 Factory.ExecuteMethod(this, "SetDefaultChart", name);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845631.aspx
 		/// </summary>
-		/// <param name="fileName">string FileName</param>
-		[SupportByVersionAttribute("Word", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff845631.aspx </remarks>
+		/// <param name="fileName">string fileName</param>
+		[SupportByVersion("Word", 14,15,16)]
 		public void ApplyChartTemplate(string fileName)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(fileName);
-			Invoker.Method(this, "ApplyChartTemplate", paramsArray);
+			 Factory.ExecuteMethod(this, "ApplyChartTemplate", fileName);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839083.aspx
 		/// </summary>
-		/// <param name="fileName">string FileName</param>
-		[SupportByVersionAttribute("Word", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff839083.aspx </remarks>
+		/// <param name="fileName">string fileName</param>
+		[SupportByVersion("Word", 14,15,16)]
 		public void SaveChartTemplate(string fileName)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(fileName);
-			Invoker.Method(this, "SaveChartTemplate", paramsArray);
+			 Factory.ExecuteMethod(this, "SaveChartTemplate", fileName);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193390.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff193390.aspx </remarks>
+		[SupportByVersion("Word", 14,15,16)]
 		public void ClearToMatchStyle()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "ClearToMatchStyle", paramsArray);
+			 Factory.ExecuteMethod(this, "ClearToMatchStyle");
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840397.aspx
 		/// </summary>
-		/// <param name="layout">Int32 Layout</param>
-		/// <param name="chartType">optional object ChartType</param>
-		[SupportByVersionAttribute("Word", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff840397.aspx </remarks>
+		/// <param name="layout">Int32 layout</param>
+		/// <param name="chartType">optional object chartType</param>
+		[SupportByVersion("Word", 14,15,16)]
 		public void ApplyLayout(Int32 layout, object chartType)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(layout, chartType);
-			Invoker.Method(this, "ApplyLayout", paramsArray);
+			 Factory.ExecuteMethod(this, "ApplyLayout", layout, chartType);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840397.aspx
 		/// </summary>
-		/// <param name="layout">Int32 Layout</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff840397.aspx </remarks>
+		/// <param name="layout">Int32 layout</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 14,15,16)]
 		public void ApplyLayout(Int32 layout)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(layout);
-			Invoker.Method(this, "ApplyLayout", paramsArray);
+			 Factory.ExecuteMethod(this, "ApplyLayout", layout);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192135.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff192135.aspx </remarks>
+		[SupportByVersion("Word", 14,15,16)]
 		public void Refresh()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "Refresh", paramsArray);
+			 Factory.ExecuteMethod(this, "Refresh");
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838552.aspx
 		/// </summary>
-		/// <param name="element">NetOffice.OfficeApi.Enums.MsoChartElementType Element</param>
-		[SupportByVersionAttribute("Word", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff838552.aspx </remarks>
+		/// <param name="element">NetOffice.OfficeApi.Enums.MsoChartElementType element</param>
+		[SupportByVersion("Word", 14,15,16)]
 		public void SetElement(NetOffice.OfficeApi.Enums.MsoChartElementType element)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(element);
-			Invoker.Method(this, "SetElement", paramsArray);
+			 Factory.ExecuteMethod(this, "SetElement", element);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="index">optional object Index</param>
+		/// <param name="index">optional object index</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("Word", 14,15,16)]
+		[SupportByVersion("Word", 14,15,16)]
 		public object AreaGroups(object index)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(index);
-			object returnItem = Invoker.MethodReturn(this, "AreaGroups", paramsArray);
-			object newObject = Factory.CreateObjectFromComProxy(this,returnItem);
-			return newObject;
+			return Factory.ExecuteVariantMethodGet(this, "AreaGroups", index);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
-		/// 
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Word", 14,15,16)]
 		public object AreaGroups()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "AreaGroups", paramsArray);
-			object newObject = Factory.CreateObjectFromComProxy(this,returnItem);
-			return newObject;
+			return Factory.ExecuteVariantMethodGet(this, "AreaGroups");
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="index">optional object Index</param>
+		/// <param name="index">optional object index</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("Word", 14,15,16)]
+		[SupportByVersion("Word", 14,15,16)]
 		public object BarGroups(object index)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(index);
-			object returnItem = Invoker.MethodReturn(this, "BarGroups", paramsArray);
-			object newObject = Factory.CreateObjectFromComProxy(this,returnItem);
-			return newObject;
+			return Factory.ExecuteVariantMethodGet(this, "BarGroups", index);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
-		/// 
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Word", 14,15,16)]
 		public object BarGroups()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "BarGroups", paramsArray);
-			object newObject = Factory.CreateObjectFromComProxy(this,returnItem);
-			return newObject;
+			return Factory.ExecuteVariantMethodGet(this, "BarGroups");
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="index">optional object Index</param>
+		/// <param name="index">optional object index</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("Word", 14,15,16)]
+		[SupportByVersion("Word", 14,15,16)]
 		public object ColumnGroups(object index)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(index);
-			object returnItem = Invoker.MethodReturn(this, "ColumnGroups", paramsArray);
-			object newObject = Factory.CreateObjectFromComProxy(this,returnItem);
-			return newObject;
+			return Factory.ExecuteVariantMethodGet(this, "ColumnGroups", index);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
-		/// 
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Word", 14,15,16)]
 		public object ColumnGroups()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "ColumnGroups", paramsArray);
-			object newObject = Factory.CreateObjectFromComProxy(this,returnItem);
-			return newObject;
+			return Factory.ExecuteVariantMethodGet(this, "ColumnGroups");
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="index">optional object Index</param>
+		/// <param name="index">optional object index</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("Word", 14,15,16)]
+		[SupportByVersion("Word", 14,15,16)]
 		public object LineGroups(object index)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(index);
-			object returnItem = Invoker.MethodReturn(this, "LineGroups", paramsArray);
-			object newObject = Factory.CreateObjectFromComProxy(this,returnItem);
-			return newObject;
+			return Factory.ExecuteVariantMethodGet(this, "LineGroups", index);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
-		/// 
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Word", 14,15,16)]
 		public object LineGroups()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "LineGroups", paramsArray);
-			object newObject = Factory.CreateObjectFromComProxy(this,returnItem);
-			return newObject;
+			return Factory.ExecuteVariantMethodGet(this, "LineGroups");
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="index">optional object Index</param>
+		/// <param name="index">optional object index</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("Word", 14,15,16)]
+		[SupportByVersion("Word", 14,15,16)]
 		public object PieGroups(object index)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(index);
-			object returnItem = Invoker.MethodReturn(this, "PieGroups", paramsArray);
-			object newObject = Factory.CreateObjectFromComProxy(this,returnItem);
-			return newObject;
+			return Factory.ExecuteVariantMethodGet(this, "PieGroups", index);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
-		/// 
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Word", 14,15,16)]
 		public object PieGroups()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "PieGroups", paramsArray);
-			object newObject = Factory.CreateObjectFromComProxy(this,returnItem);
-			return newObject;
+			return Factory.ExecuteVariantMethodGet(this, "PieGroups");
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="index">optional object Index</param>
+		/// <param name="index">optional object index</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("Word", 14,15,16)]
+		[SupportByVersion("Word", 14,15,16)]
 		public object DoughnutGroups(object index)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(index);
-			object returnItem = Invoker.MethodReturn(this, "DoughnutGroups", paramsArray);
-			object newObject = Factory.CreateObjectFromComProxy(this,returnItem);
-			return newObject;
+			return Factory.ExecuteVariantMethodGet(this, "DoughnutGroups", index);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
-		/// 
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Word", 14,15,16)]
 		public object DoughnutGroups()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "DoughnutGroups", paramsArray);
-			object newObject = Factory.CreateObjectFromComProxy(this,returnItem);
-			return newObject;
+			return Factory.ExecuteVariantMethodGet(this, "DoughnutGroups");
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="index">optional object Index</param>
+		/// <param name="index">optional object index</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("Word", 14,15,16)]
+		[SupportByVersion("Word", 14,15,16)]
 		public object RadarGroups(object index)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(index);
-			object returnItem = Invoker.MethodReturn(this, "RadarGroups", paramsArray);
-			object newObject = Factory.CreateObjectFromComProxy(this,returnItem);
-			return newObject;
+			return Factory.ExecuteVariantMethodGet(this, "RadarGroups", index);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
-		/// 
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Word", 14,15,16)]
 		public object RadarGroups()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "RadarGroups", paramsArray);
-			object newObject = Factory.CreateObjectFromComProxy(this,returnItem);
-			return newObject;
+			return Factory.ExecuteVariantMethodGet(this, "RadarGroups");
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="index">optional object Index</param>
+		/// <param name="index">optional object index</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("Word", 14,15,16)]
+		[SupportByVersion("Word", 14,15,16)]
 		public object XYGroups(object index)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(index);
-			object returnItem = Invoker.MethodReturn(this, "XYGroups", paramsArray);
-			object newObject = Factory.CreateObjectFromComProxy(this,returnItem);
-			return newObject;
+			return Factory.ExecuteVariantMethodGet(this, "XYGroups", index);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
-		/// 
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Word", 14,15,16)]
 		public object XYGroups()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "XYGroups", paramsArray);
-			object newObject = Factory.CreateObjectFromComProxy(this,returnItem);
-			return newObject;
+			return Factory.ExecuteVariantMethodGet(this, "XYGroups");
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840074.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff840074.aspx </remarks>
+		[SupportByVersion("Word", 14,15,16)]
 		public object Delete()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "Delete", paramsArray);
-			if((null != returnItem) && (returnItem is MarshalByRefObject))
-			{
-				ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
-				return newObject;
-			}
-			else
-			{
-				return  returnItem;
-			}
+			return Factory.ExecuteVariantMethodGet(this, "Delete");
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192354.aspx
 		/// </summary>
-		/// <param name="before">optional object Before</param>
-		/// <param name="after">optional object After</param>
-		[SupportByVersionAttribute("Word", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff192354.aspx </remarks>
+		/// <param name="before">optional object before</param>
+		/// <param name="after">optional object after</param>
+		[SupportByVersion("Word", 14,15,16)]
 		public void Copy(object before, object after)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(before, after);
-			Invoker.Method(this, "Copy", paramsArray);
+			 Factory.ExecuteMethod(this, "Copy", before, after);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192354.aspx
 		/// </summary>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff192354.aspx </remarks>
+		[CustomMethod]
+		[SupportByVersion("Word", 14,15,16)]
 		public void Copy()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "Copy", paramsArray);
+			 Factory.ExecuteMethod(this, "Copy");
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192354.aspx
 		/// </summary>
-		/// <param name="before">optional object Before</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff192354.aspx </remarks>
+		/// <param name="before">optional object before</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 14,15,16)]
 		public void Copy(object before)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(before);
-			Invoker.Method(this, "Copy", paramsArray);
+			 Factory.ExecuteMethod(this, "Copy", before);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff191928.aspx
 		/// </summary>
-		/// <param name="replace">optional object Replace</param>
-		[SupportByVersionAttribute("Word", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff191928.aspx </remarks>
+		/// <param name="replace">optional object replace</param>
+		[SupportByVersion("Word", 14,15,16)]
 		public object Select(object replace)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(replace);
-			object returnItem = Invoker.MethodReturn(this, "Select", paramsArray);
-			if((null != returnItem) && (returnItem is MarshalByRefObject))
-			{
-				ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
-				return newObject;
-			}
-			else
-			{
-				return  returnItem;
-			}
+			return Factory.ExecuteVariantMethodGet(this, "Select", replace);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff191928.aspx
 		/// </summary>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff191928.aspx </remarks>
+		[CustomMethod]
+		[SupportByVersion("Word", 14,15,16)]
 		public object Select()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "Select", paramsArray);
-			if((null != returnItem) && (returnItem is MarshalByRefObject))
-			{
-				ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
-				return newObject;
-			}
-			else
-			{
-				return  returnItem;
-			}
+			return Factory.ExecuteVariantMethodGet(this, "Select");
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 15,16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj229848.aspx
 		/// </summary>
-		/// <param name="index">optional object Index</param>
-		[SupportByVersionAttribute("Word", 15, 16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/jj229848.aspx </remarks>
+		/// <param name="index">optional object index</param>
+		[SupportByVersion("Word", 15, 16)]
 		public object FullSeriesCollection(object index)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(index);
-			object returnItem = Invoker.MethodReturn(this, "FullSeriesCollection", paramsArray);
-			object newObject = Factory.CreateObjectFromComProxy(this,returnItem);
-			return newObject;
+			return Factory.ExecuteVariantMethodGet(this, "FullSeriesCollection", index);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 15,16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj229848.aspx
 		/// </summary>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 15, 16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/jj229848.aspx </remarks>
+		[CustomMethod]
+		[SupportByVersion("Word", 15, 16)]
 		public object FullSeriesCollection()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "FullSeriesCollection", paramsArray);
-			object newObject = Factory.CreateObjectFromComProxy(this,returnItem);
-			return newObject;
+			return Factory.ExecuteVariantMethodGet(this, "FullSeriesCollection");
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 15,16
-		/// 
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("Word", 15, 16)]
+		[SupportByVersion("Word", 15, 16)]
 		public void DeleteHiddenContent()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "DeleteHiddenContent", paramsArray);
+			 Factory.ExecuteMethod(this, "DeleteHiddenContent");
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 15,16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj230203.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 15, 16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/jj230203.aspx </remarks>
+		[SupportByVersion("Word", 15, 16)]
 		public void ClearToMatchColorStyle()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "ClearToMatchColorStyle", paramsArray);
+			 Factory.ExecuteMethod(this, "ClearToMatchColorStyle");
 		}
 
 		#endregion
+
 		#pragma warning restore
 	}
 }

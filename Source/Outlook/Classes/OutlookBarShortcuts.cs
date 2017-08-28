@@ -1,38 +1,38 @@
 ﻿using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
-using NetOffice;
-using NetOffice.Misc;
+using NetOffice.Attributes;
 
 namespace NetOffice.OutlookApi
 {
-
 	#region Delegates
 
 	#pragma warning disable
-	public delegate void OutlookBarShortcuts_ShortcutAddEventHandler(NetOffice.OutlookApi.OutlookBarShortcut NewShortcut);
-	public delegate void OutlookBarShortcuts_BeforeShortcutAddEventHandler(ref bool Cancel);
-	public delegate void OutlookBarShortcuts_BeforeShortcutRemoveEventHandler(NetOffice.OutlookApi.OutlookBarShortcut Shortcut, ref bool Cancel);
+	public delegate void OutlookBarShortcuts_ShortcutAddEventHandler(NetOffice.OutlookApi.OutlookBarShortcut newShortcut);
+	public delegate void OutlookBarShortcuts_BeforeShortcutAddEventHandler(ref bool cancel);
+	public delegate void OutlookBarShortcuts_BeforeShortcutRemoveEventHandler(NetOffice.OutlookApi.OutlookBarShortcut shortcut, ref bool cancel);
 	#pragma warning restore
 
 	#endregion
 
-	///<summary>
+	/// <summary>
 	/// CoClass OutlookBarShortcuts 
 	/// SupportByVersion Outlook, 9,10,11,12,14,15,16
-	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff865646.aspx
-	///</summary>
-	[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15,16)]
-	[EntityTypeAttribute(EntityType.IsCoClass)]
-	public class OutlookBarShortcuts : _OutlookBarShortcuts,IEventBinding
+	/// </summary>
+	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff865646.aspx </remarks>
+	[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
+	[EntityType(EntityType.IsCoClass)]
+	[EventSink(typeof(Events.OutlookBarShortcutsEvents_SinkHelper))]
+	public class OutlookBarShortcuts : _OutlookBarShortcuts, IEventBinding
 	{
 		#pragma warning disable
+
 		#region Fields
 		
 		private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
 		private string _activeSinkId;
 		private NetRuntimeSystem.Type _thisType;
-		OutlookBarShortcutsEvents_SinkHelper _outlookBarShortcutsEvents_SinkHelper;
+		private Events.OutlookBarShortcutsEvents_SinkHelper _outlookBarShortcutsEvents_SinkHelper;
 	
 		#endregion
 
@@ -41,6 +41,7 @@ namespace NetOffice.OutlookApi
         /// <summary>
         /// Instance Type
         /// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
         public override Type InstanceType
         {
             get
@@ -107,17 +108,17 @@ namespace NetOffice.OutlookApi
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of OutlookBarShortcuts 
-        ///</summary>		
+        /// </summary>		
 		public OutlookBarShortcuts():base("Outlook.OutlookBarShortcuts")
 		{
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of OutlookBarShortcuts
-        ///</summary>
+        /// </summary>
         ///<param name="progId">registered ProgID</param>
 		public OutlookBarShortcuts(string progId):base(progId)
 		{
@@ -127,46 +128,6 @@ namespace NetOffice.OutlookApi
 		#endregion
 
 		#region Static CoClass Methods
-
-		/// <summary>
-        /// Returns all running Outlook.OutlookBarShortcuts objects from the environment/system
-        /// </summary>
-        /// <returns>an Outlook.OutlookBarShortcuts array</returns>
-		public static NetOffice.OutlookApi.OutlookBarShortcuts[] GetActiveInstances()
-		{		
-			IDisposableEnumeration proxyList = NetOffice.ProxyService.GetActiveInstances("Outlook","OutlookBarShortcuts");
-			NetRuntimeSystem.Collections.Generic.List<NetOffice.OutlookApi.OutlookBarShortcuts> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.OutlookApi.OutlookBarShortcuts>();
-			foreach(object proxy in proxyList)
-				resultList.Add( new NetOffice.OutlookApi.OutlookBarShortcuts(null, proxy) );
-			return resultList.ToArray();
-		}
-
-		/// <summary>
-        /// Returns a running Outlook.OutlookBarShortcuts object from the environment/system.
-        /// </summary>
-        /// <returns>an Outlook.OutlookBarShortcuts object or null</returns>
-		public static NetOffice.OutlookApi.OutlookBarShortcuts GetActiveInstance()
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Outlook","OutlookBarShortcuts", false);
-			if(null != proxy)
-				return new NetOffice.OutlookApi.OutlookBarShortcuts(null, proxy);
-			else
-				return null;
-		}
-
-		/// <summary>
-        /// Returns a running Outlook.OutlookBarShortcuts object from the environment/system. 
-        /// </summary>
-	    /// <param name="throwOnError">throw an exception if no object was found</param>
-        /// <returns>an Outlook.OutlookBarShortcuts object or null</returns>
-		public static NetOffice.OutlookApi.OutlookBarShortcuts GetActiveInstance(bool throwOnError)
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Outlook","OutlookBarShortcuts", throwOnError);
-			if(null != proxy)
-				return new NetOffice.OutlookApi.OutlookBarShortcuts(null, proxy);
-			else
-				return null;
-		}
 		#endregion
 
 		#region Events
@@ -257,12 +218,12 @@ namespace NetOffice.OutlookApi
 				return;
 	
             if (null == _activeSinkId)
-				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, OutlookBarShortcutsEvents_SinkHelper.Id);
+				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, Events.OutlookBarShortcutsEvents_SinkHelper.Id);
 
 
-			if(OutlookBarShortcutsEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
+			if(Events.OutlookBarShortcutsEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
 			{
-				_outlookBarShortcutsEvents_SinkHelper = new OutlookBarShortcutsEvents_SinkHelper(this, _connectPoint);
+				_outlookBarShortcutsEvents_SinkHelper = new Events.OutlookBarShortcutsEvents_SinkHelper(this, _connectPoint);
 				return;
 			} 
         }

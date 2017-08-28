@@ -1,37 +1,37 @@
 ﻿using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
-using NetOffice;
-using NetOffice.Misc;
+using NetOffice.Attributes;
 
 namespace NetOffice.OfficeApi
 {
-
 	#region Delegates
 
 	#pragma warning disable
-	public delegate void CustomTaskPane_VisibleStateChangeEventHandler(NetOffice.OfficeApi._CustomTaskPane CustomTaskPaneInst);
-	public delegate void CustomTaskPane_DockPositionStateChangeEventHandler(NetOffice.OfficeApi._CustomTaskPane CustomTaskPaneInst);
+	public delegate void CustomTaskPane_VisibleStateChangeEventHandler(NetOffice.OfficeApi._CustomTaskPane customTaskPaneInst);
+	public delegate void CustomTaskPane_DockPositionStateChangeEventHandler(NetOffice.OfficeApi._CustomTaskPane customTaskPaneInst);
 	#pragma warning restore
 
 	#endregion
 
-	///<summary>
+	/// <summary>
 	/// CoClass CustomTaskPane 
 	/// SupportByVersion Office, 12,14,15,16
-	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff862782.aspx
-	///</summary>
-	[SupportByVersionAttribute("Office", 12,14,15,16)]
-	[EntityTypeAttribute(EntityType.IsCoClass)]
-	public class CustomTaskPane : _CustomTaskPane,IEventBinding
+	/// </summary>
+	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff862782.aspx </remarks>
+	[SupportByVersion("Office", 12,14,15,16)]
+	[EntityType(EntityType.IsCoClass)]
+	[EventSink(typeof(Events._CustomTaskPaneEvents_SinkHelper))]
+	public class CustomTaskPane : _CustomTaskPane, IEventBinding
 	{
 		#pragma warning disable
+
 		#region Fields
 		
 		private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
 		private string _activeSinkId;
 		private NetRuntimeSystem.Type _thisType;
-		_CustomTaskPaneEvents_SinkHelper __CustomTaskPaneEvents_SinkHelper;
+		private Events._CustomTaskPaneEvents_SinkHelper __CustomTaskPaneEvents_SinkHelper;
 	
 		#endregion
 
@@ -40,6 +40,7 @@ namespace NetOffice.OfficeApi
         /// <summary>
         /// Instance Type
         /// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
         public override Type InstanceType
         {
             get
@@ -106,17 +107,17 @@ namespace NetOffice.OfficeApi
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of CustomTaskPane 
-        ///</summary>		
+        /// </summary>		
 		public CustomTaskPane():base("Office.CustomTaskPane")
 		{
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of CustomTaskPane
-        ///</summary>
+        /// </summary>
         ///<param name="progId">registered ProgID</param>
 		public CustomTaskPane(string progId):base(progId)
 		{
@@ -126,46 +127,6 @@ namespace NetOffice.OfficeApi
 		#endregion
 
 		#region Static CoClass Methods
-
-		/// <summary>
-        /// Returns all running Office.CustomTaskPane objects from the environment/system
-        /// </summary>
-        /// <returns>an Office.CustomTaskPane array</returns>
-		public static NetOffice.OfficeApi.CustomTaskPane[] GetActiveInstances()
-		{		
-			IDisposableEnumeration proxyList = NetOffice.ProxyService.GetActiveInstances("Office","CustomTaskPane");
-			NetRuntimeSystem.Collections.Generic.List<NetOffice.OfficeApi.CustomTaskPane> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.OfficeApi.CustomTaskPane>();
-			foreach(object proxy in proxyList)
-				resultList.Add( new NetOffice.OfficeApi.CustomTaskPane(null, proxy) );
-			return resultList.ToArray();
-		}
-
-		/// <summary>
-        /// Returns a running Office.CustomTaskPane object from the environment/system.
-        /// </summary>
-        /// <returns>an Office.CustomTaskPane object or null</returns>
-		public static NetOffice.OfficeApi.CustomTaskPane GetActiveInstance()
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Office","CustomTaskPane", false);
-			if(null != proxy)
-				return new NetOffice.OfficeApi.CustomTaskPane(null, proxy);
-			else
-				return null;
-		}
-
-		/// <summary>
-        /// Returns a running Office.CustomTaskPane object from the environment/system. 
-        /// </summary>
-	    /// <param name="throwOnError">throw an exception if no object was found</param>
-        /// <returns>an Office.CustomTaskPane object or null</returns>
-		public static NetOffice.OfficeApi.CustomTaskPane GetActiveInstance(bool throwOnError)
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Office","CustomTaskPane", throwOnError);
-			if(null != proxy)
-				return new NetOffice.OfficeApi.CustomTaskPane(null, proxy);
-			else
-				return null;
-		}
 		#endregion
 
 		#region Events
@@ -233,12 +194,12 @@ namespace NetOffice.OfficeApi
 				return;
 	
             if (null == _activeSinkId)
-				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, _CustomTaskPaneEvents_SinkHelper.Id);
+				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, Events._CustomTaskPaneEvents_SinkHelper.Id);
 
 
-			if(_CustomTaskPaneEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
+			if(Events._CustomTaskPaneEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
 			{
-				__CustomTaskPaneEvents_SinkHelper = new _CustomTaskPaneEvents_SinkHelper(this, _connectPoint);
+				__CustomTaskPaneEvents_SinkHelper = new Events._CustomTaskPaneEvents_SinkHelper(this, _connectPoint);
 				return;
 			} 
         }

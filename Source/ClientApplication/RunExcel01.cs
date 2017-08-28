@@ -1,12 +1,7 @@
 ﻿using System;
-using System.Reflection;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Text;
 using NetOffice;
 using Excel = NetOffice.ExcelApi;
-using Office = NetOffice.OfficeApi;
-using Utils = NetOffice.OfficeApi.Tools.Utils;
+using Contribution = NetOffice.OfficeApi.Tools.Contribution;
 
 namespace ClientApplication
 {
@@ -22,7 +17,8 @@ namespace ClientApplication
                 Settings.Default.PerformanceTrace["ExcelApi"].IntervalMS = 0;
 
                 app = new Excel.Application();
-                Utils.CommonUtils utils = new Utils.CommonUtils(app, typeof(Form1).Assembly);
+                app.Visible = true;
+                Contribution.CommonUtils utils = new Contribution.CommonUtils(app, typeof(Form1).Assembly);
                 app.DisplayAlerts = false;
                 Excel.Workbook book = app.Workbooks.Add();
                 Excel.Worksheet sheet = book.Sheets[1] as Excel.Worksheet;

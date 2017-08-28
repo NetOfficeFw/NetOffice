@@ -1,23 +1,33 @@
 ﻿using System;
 using NetRuntimeSystem = System;
-using System.Runtime.InteropServices;
-using System.Runtime.CompilerServices;
 using System.ComponentModel;
-using System.Reflection;
-using System.Collections.Generic;
-using NetOffice;
+using NetOffice.Attributes;
+
 namespace NetOffice.MSHTMLApi
 {
-	///<summary>
+	/// <summary>
 	/// DispatchInterface IHTMLRuleStyle 
 	/// SupportByVersion MSHTML, 4
-	///</summary>
-	[SupportByVersionAttribute("MSHTML", 4)]
-	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
-	public class IHTMLRuleStyle : DispHTMLRuleStyle
+	/// </summary>
+	[SupportByVersion("MSHTML", 4)]
+	[EntityType(EntityType.IsDispatchInterface)]
+ 	public class IHTMLRuleStyle : DispHTMLRuleStyle
 	{
 		#pragma warning disable
+
 		#region Type Information
+
+		/// <summary>
+		/// Instance Type
+		/// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
+		public override Type InstanceType
+		{
+			get
+			{
+				return LateBindingApiWrapperType;
+			}
+		}
 
         private static Type _type;
 
@@ -28,14 +38,20 @@ namespace NetOffice.MSHTMLApi
             {
                 if (null == _type)
                     _type = typeof(IHTMLRuleStyle);
-                    
                 return _type;
             }
         }
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public IHTMLRuleStyle(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -81,7 +97,7 @@ namespace NetOffice.MSHTMLApi
 		{
 		}
 		
-		/// <param name="progId">registered ProgID</param>
+		/// <param name="progId">registered progID</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public IHTMLRuleStyle(string progId) : base(progId)
 		{
@@ -95,19 +111,16 @@ namespace NetOffice.MSHTMLApi
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[SupportByVersion("MSHTML", 4)]
 		public string fontFamily
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "fontFamily", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "fontFamily");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "fontFamily", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "fontFamily", value);
 			}
 		}
 
@@ -115,19 +128,16 @@ namespace NetOffice.MSHTMLApi
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[SupportByVersion("MSHTML", 4)]
 		public string fontStyle
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "fontStyle", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "fontStyle");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "fontStyle", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "fontStyle", value);
 			}
 		}
 
@@ -135,19 +145,16 @@ namespace NetOffice.MSHTMLApi
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[SupportByVersion("MSHTML", 4)]
 		public string fontVariant
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "fontVariant", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "fontVariant");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "fontVariant", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "fontVariant", value);
 			}
 		}
 
@@ -155,19 +162,16 @@ namespace NetOffice.MSHTMLApi
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[SupportByVersion("MSHTML", 4)]
 		public string fontWeight
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "fontWeight", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "fontWeight");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "fontWeight", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "fontWeight", value);
 			}
 		}
 
@@ -175,27 +179,16 @@ namespace NetOffice.MSHTMLApi
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[SupportByVersion("MSHTML", 4)]
 		public object fontSize
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "fontSize", paramsArray);
-				if((null != returnItem) && (returnItem is MarshalByRefObject))
-				{
-					ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
-					return newObject;
-				}
-				else
-				{
-					return  returnItem;
-				}
+				return Factory.ExecuteVariantPropertyGet(this, "fontSize");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "fontSize", paramsArray);
+				Factory.ExecuteVariantPropertySet(this, "fontSize", value);
 			}
 		}
 
@@ -203,20 +196,17 @@ namespace NetOffice.MSHTMLApi
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[SupportByVersion("MSHTML", 4)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public string font
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "font", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "font");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "font", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "font", value);
 			}
 		}
 
@@ -224,27 +214,16 @@ namespace NetOffice.MSHTMLApi
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[SupportByVersion("MSHTML", 4)]
 		public object color
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "color", paramsArray);
-				if((null != returnItem) && (returnItem is MarshalByRefObject))
-				{
-					ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
-					return newObject;
-				}
-				else
-				{
-					return  returnItem;
-				}
+				return Factory.ExecuteVariantPropertyGet(this, "color");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "color", paramsArray);
+				Factory.ExecuteVariantPropertySet(this, "color", value);
 			}
 		}
 
@@ -252,20 +231,17 @@ namespace NetOffice.MSHTMLApi
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[SupportByVersion("MSHTML", 4)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public string background
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "background", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "background");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "background", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "background", value);
 			}
 		}
 
@@ -273,27 +249,16 @@ namespace NetOffice.MSHTMLApi
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[SupportByVersion("MSHTML", 4)]
 		public object backgroundColor
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "backgroundColor", paramsArray);
-				if((null != returnItem) && (returnItem is MarshalByRefObject))
-				{
-					ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
-					return newObject;
-				}
-				else
-				{
-					return  returnItem;
-				}
+				return Factory.ExecuteVariantPropertyGet(this, "backgroundColor");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "backgroundColor", paramsArray);
+				Factory.ExecuteVariantPropertySet(this, "backgroundColor", value);
 			}
 		}
 
@@ -301,19 +266,16 @@ namespace NetOffice.MSHTMLApi
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[SupportByVersion("MSHTML", 4)]
 		public string backgroundImage
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "backgroundImage", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "backgroundImage");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "backgroundImage", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "backgroundImage", value);
 			}
 		}
 
@@ -321,19 +283,16 @@ namespace NetOffice.MSHTMLApi
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[SupportByVersion("MSHTML", 4)]
 		public string backgroundRepeat
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "backgroundRepeat", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "backgroundRepeat");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "backgroundRepeat", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "backgroundRepeat", value);
 			}
 		}
 
@@ -341,19 +300,16 @@ namespace NetOffice.MSHTMLApi
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[SupportByVersion("MSHTML", 4)]
 		public string backgroundAttachment
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "backgroundAttachment", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "backgroundAttachment");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "backgroundAttachment", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "backgroundAttachment", value);
 			}
 		}
 
@@ -361,20 +317,17 @@ namespace NetOffice.MSHTMLApi
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[SupportByVersion("MSHTML", 4)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public string backgroundPosition
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "backgroundPosition", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "backgroundPosition");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "backgroundPosition", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "backgroundPosition", value);
 			}
 		}
 
@@ -382,27 +335,16 @@ namespace NetOffice.MSHTMLApi
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[SupportByVersion("MSHTML", 4)]
 		public object backgroundPositionX
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "backgroundPositionX", paramsArray);
-				if((null != returnItem) && (returnItem is MarshalByRefObject))
-				{
-					ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
-					return newObject;
-				}
-				else
-				{
-					return  returnItem;
-				}
+				return Factory.ExecuteVariantPropertyGet(this, "backgroundPositionX");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "backgroundPositionX", paramsArray);
+				Factory.ExecuteVariantPropertySet(this, "backgroundPositionX", value);
 			}
 		}
 
@@ -410,27 +352,16 @@ namespace NetOffice.MSHTMLApi
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[SupportByVersion("MSHTML", 4)]
 		public object backgroundPositionY
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "backgroundPositionY", paramsArray);
-				if((null != returnItem) && (returnItem is MarshalByRefObject))
-				{
-					ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
-					return newObject;
-				}
-				else
-				{
-					return  returnItem;
-				}
+				return Factory.ExecuteVariantPropertyGet(this, "backgroundPositionY");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "backgroundPositionY", paramsArray);
+				Factory.ExecuteVariantPropertySet(this, "backgroundPositionY", value);
 			}
 		}
 
@@ -438,27 +369,16 @@ namespace NetOffice.MSHTMLApi
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[SupportByVersion("MSHTML", 4)]
 		public object wordSpacing
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "wordSpacing", paramsArray);
-				if((null != returnItem) && (returnItem is MarshalByRefObject))
-				{
-					ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
-					return newObject;
-				}
-				else
-				{
-					return  returnItem;
-				}
+				return Factory.ExecuteVariantPropertyGet(this, "wordSpacing");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "wordSpacing", paramsArray);
+				Factory.ExecuteVariantPropertySet(this, "wordSpacing", value);
 			}
 		}
 
@@ -466,27 +386,16 @@ namespace NetOffice.MSHTMLApi
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[SupportByVersion("MSHTML", 4)]
 		public object letterSpacing
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "letterSpacing", paramsArray);
-				if((null != returnItem) && (returnItem is MarshalByRefObject))
-				{
-					ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
-					return newObject;
-				}
-				else
-				{
-					return  returnItem;
-				}
+				return Factory.ExecuteVariantPropertyGet(this, "letterSpacing");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "letterSpacing", paramsArray);
+				Factory.ExecuteVariantPropertySet(this, "letterSpacing", value);
 			}
 		}
 
@@ -494,19 +403,16 @@ namespace NetOffice.MSHTMLApi
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[SupportByVersion("MSHTML", 4)]
 		public string textDecoration
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "textDecoration", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "textDecoration");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "textDecoration", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "textDecoration", value);
 			}
 		}
 
@@ -514,19 +420,16 @@ namespace NetOffice.MSHTMLApi
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[SupportByVersion("MSHTML", 4)]
 		public bool textDecorationNone
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "textDecorationNone", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "textDecorationNone");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "textDecorationNone", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "textDecorationNone", value);
 			}
 		}
 
@@ -534,19 +437,16 @@ namespace NetOffice.MSHTMLApi
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[SupportByVersion("MSHTML", 4)]
 		public bool textDecorationUnderline
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "textDecorationUnderline", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "textDecorationUnderline");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "textDecorationUnderline", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "textDecorationUnderline", value);
 			}
 		}
 
@@ -554,19 +454,16 @@ namespace NetOffice.MSHTMLApi
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[SupportByVersion("MSHTML", 4)]
 		public bool textDecorationOverline
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "textDecorationOverline", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "textDecorationOverline");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "textDecorationOverline", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "textDecorationOverline", value);
 			}
 		}
 
@@ -574,19 +471,16 @@ namespace NetOffice.MSHTMLApi
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[SupportByVersion("MSHTML", 4)]
 		public bool textDecorationLineThrough
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "textDecorationLineThrough", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "textDecorationLineThrough");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "textDecorationLineThrough", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "textDecorationLineThrough", value);
 			}
 		}
 
@@ -594,19 +488,16 @@ namespace NetOffice.MSHTMLApi
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[SupportByVersion("MSHTML", 4)]
 		public bool textDecorationBlink
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "textDecorationBlink", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "textDecorationBlink");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "textDecorationBlink", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "textDecorationBlink", value);
 			}
 		}
 
@@ -614,27 +505,16 @@ namespace NetOffice.MSHTMLApi
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[SupportByVersion("MSHTML", 4)]
 		public object verticalAlign
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "verticalAlign", paramsArray);
-				if((null != returnItem) && (returnItem is MarshalByRefObject))
-				{
-					ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
-					return newObject;
-				}
-				else
-				{
-					return  returnItem;
-				}
+				return Factory.ExecuteVariantPropertyGet(this, "verticalAlign");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "verticalAlign", paramsArray);
+				Factory.ExecuteVariantPropertySet(this, "verticalAlign", value);
 			}
 		}
 
@@ -642,19 +522,16 @@ namespace NetOffice.MSHTMLApi
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[SupportByVersion("MSHTML", 4)]
 		public string textTransform
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "textTransform", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "textTransform");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "textTransform", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "textTransform", value);
 			}
 		}
 
@@ -662,19 +539,16 @@ namespace NetOffice.MSHTMLApi
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[SupportByVersion("MSHTML", 4)]
 		public string textAlign
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "textAlign", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "textAlign");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "textAlign", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "textAlign", value);
 			}
 		}
 
@@ -682,27 +556,16 @@ namespace NetOffice.MSHTMLApi
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[SupportByVersion("MSHTML", 4)]
 		public object textIndent
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "textIndent", paramsArray);
-				if((null != returnItem) && (returnItem is MarshalByRefObject))
-				{
-					ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
-					return newObject;
-				}
-				else
-				{
-					return  returnItem;
-				}
+				return Factory.ExecuteVariantPropertyGet(this, "textIndent");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "textIndent", paramsArray);
+				Factory.ExecuteVariantPropertySet(this, "textIndent", value);
 			}
 		}
 
@@ -710,27 +573,16 @@ namespace NetOffice.MSHTMLApi
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[SupportByVersion("MSHTML", 4)]
 		public object lineHeight
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "lineHeight", paramsArray);
-				if((null != returnItem) && (returnItem is MarshalByRefObject))
-				{
-					ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
-					return newObject;
-				}
-				else
-				{
-					return  returnItem;
-				}
+				return Factory.ExecuteVariantPropertyGet(this, "lineHeight");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "lineHeight", paramsArray);
+				Factory.ExecuteVariantPropertySet(this, "lineHeight", value);
 			}
 		}
 
@@ -738,27 +590,16 @@ namespace NetOffice.MSHTMLApi
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[SupportByVersion("MSHTML", 4)]
 		public object marginTop
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "marginTop", paramsArray);
-				if((null != returnItem) && (returnItem is MarshalByRefObject))
-				{
-					ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
-					return newObject;
-				}
-				else
-				{
-					return  returnItem;
-				}
+				return Factory.ExecuteVariantPropertyGet(this, "marginTop");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "marginTop", paramsArray);
+				Factory.ExecuteVariantPropertySet(this, "marginTop", value);
 			}
 		}
 
@@ -766,27 +607,16 @@ namespace NetOffice.MSHTMLApi
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[SupportByVersion("MSHTML", 4)]
 		public object marginRight
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "marginRight", paramsArray);
-				if((null != returnItem) && (returnItem is MarshalByRefObject))
-				{
-					ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
-					return newObject;
-				}
-				else
-				{
-					return  returnItem;
-				}
+				return Factory.ExecuteVariantPropertyGet(this, "marginRight");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "marginRight", paramsArray);
+				Factory.ExecuteVariantPropertySet(this, "marginRight", value);
 			}
 		}
 
@@ -794,27 +624,16 @@ namespace NetOffice.MSHTMLApi
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[SupportByVersion("MSHTML", 4)]
 		public object marginBottom
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "marginBottom", paramsArray);
-				if((null != returnItem) && (returnItem is MarshalByRefObject))
-				{
-					ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
-					return newObject;
-				}
-				else
-				{
-					return  returnItem;
-				}
+				return Factory.ExecuteVariantPropertyGet(this, "marginBottom");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "marginBottom", paramsArray);
+				Factory.ExecuteVariantPropertySet(this, "marginBottom", value);
 			}
 		}
 
@@ -822,27 +641,16 @@ namespace NetOffice.MSHTMLApi
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[SupportByVersion("MSHTML", 4)]
 		public object marginLeft
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "marginLeft", paramsArray);
-				if((null != returnItem) && (returnItem is MarshalByRefObject))
-				{
-					ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
-					return newObject;
-				}
-				else
-				{
-					return  returnItem;
-				}
+				return Factory.ExecuteVariantPropertyGet(this, "marginLeft");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "marginLeft", paramsArray);
+				Factory.ExecuteVariantPropertySet(this, "marginLeft", value);
 			}
 		}
 
@@ -850,20 +658,17 @@ namespace NetOffice.MSHTMLApi
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[SupportByVersion("MSHTML", 4)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public string margin
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "margin", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "margin");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "margin", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "margin", value);
 			}
 		}
 
@@ -871,27 +676,16 @@ namespace NetOffice.MSHTMLApi
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[SupportByVersion("MSHTML", 4)]
 		public object paddingTop
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "paddingTop", paramsArray);
-				if((null != returnItem) && (returnItem is MarshalByRefObject))
-				{
-					ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
-					return newObject;
-				}
-				else
-				{
-					return  returnItem;
-				}
+				return Factory.ExecuteVariantPropertyGet(this, "paddingTop");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "paddingTop", paramsArray);
+				Factory.ExecuteVariantPropertySet(this, "paddingTop", value);
 			}
 		}
 
@@ -899,27 +693,16 @@ namespace NetOffice.MSHTMLApi
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[SupportByVersion("MSHTML", 4)]
 		public object paddingRight
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "paddingRight", paramsArray);
-				if((null != returnItem) && (returnItem is MarshalByRefObject))
-				{
-					ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
-					return newObject;
-				}
-				else
-				{
-					return  returnItem;
-				}
+				return Factory.ExecuteVariantPropertyGet(this, "paddingRight");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "paddingRight", paramsArray);
+				Factory.ExecuteVariantPropertySet(this, "paddingRight", value);
 			}
 		}
 
@@ -927,27 +710,16 @@ namespace NetOffice.MSHTMLApi
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[SupportByVersion("MSHTML", 4)]
 		public object paddingBottom
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "paddingBottom", paramsArray);
-				if((null != returnItem) && (returnItem is MarshalByRefObject))
-				{
-					ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
-					return newObject;
-				}
-				else
-				{
-					return  returnItem;
-				}
+				return Factory.ExecuteVariantPropertyGet(this, "paddingBottom");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "paddingBottom", paramsArray);
+				Factory.ExecuteVariantPropertySet(this, "paddingBottom", value);
 			}
 		}
 
@@ -955,27 +727,16 @@ namespace NetOffice.MSHTMLApi
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[SupportByVersion("MSHTML", 4)]
 		public object paddingLeft
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "paddingLeft", paramsArray);
-				if((null != returnItem) && (returnItem is MarshalByRefObject))
-				{
-					ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
-					return newObject;
-				}
-				else
-				{
-					return  returnItem;
-				}
+				return Factory.ExecuteVariantPropertyGet(this, "paddingLeft");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "paddingLeft", paramsArray);
+				Factory.ExecuteVariantPropertySet(this, "paddingLeft", value);
 			}
 		}
 
@@ -983,20 +744,17 @@ namespace NetOffice.MSHTMLApi
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[SupportByVersion("MSHTML", 4)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public string padding
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "padding", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "padding");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "padding", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "padding", value);
 			}
 		}
 
@@ -1004,20 +762,17 @@ namespace NetOffice.MSHTMLApi
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[SupportByVersion("MSHTML", 4)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public string border
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "border", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "border");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "border", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "border", value);
 			}
 		}
 
@@ -1025,19 +780,16 @@ namespace NetOffice.MSHTMLApi
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[SupportByVersion("MSHTML", 4)]
 		public string borderTop
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "borderTop", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "borderTop");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "borderTop", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "borderTop", value);
 			}
 		}
 
@@ -1045,19 +797,16 @@ namespace NetOffice.MSHTMLApi
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[SupportByVersion("MSHTML", 4)]
 		public string borderRight
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "borderRight", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "borderRight");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "borderRight", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "borderRight", value);
 			}
 		}
 
@@ -1065,19 +814,16 @@ namespace NetOffice.MSHTMLApi
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[SupportByVersion("MSHTML", 4)]
 		public string borderBottom
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "borderBottom", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "borderBottom");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "borderBottom", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "borderBottom", value);
 			}
 		}
 
@@ -1085,19 +831,16 @@ namespace NetOffice.MSHTMLApi
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[SupportByVersion("MSHTML", 4)]
 		public string borderLeft
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "borderLeft", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "borderLeft");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "borderLeft", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "borderLeft", value);
 			}
 		}
 
@@ -1105,19 +848,16 @@ namespace NetOffice.MSHTMLApi
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[SupportByVersion("MSHTML", 4)]
 		public string borderColor
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "borderColor", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "borderColor");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "borderColor", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "borderColor", value);
 			}
 		}
 
@@ -1125,27 +865,16 @@ namespace NetOffice.MSHTMLApi
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[SupportByVersion("MSHTML", 4)]
 		public object borderTopColor
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "borderTopColor", paramsArray);
-				if((null != returnItem) && (returnItem is MarshalByRefObject))
-				{
-					ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
-					return newObject;
-				}
-				else
-				{
-					return  returnItem;
-				}
+				return Factory.ExecuteVariantPropertyGet(this, "borderTopColor");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "borderTopColor", paramsArray);
+				Factory.ExecuteVariantPropertySet(this, "borderTopColor", value);
 			}
 		}
 
@@ -1153,27 +882,16 @@ namespace NetOffice.MSHTMLApi
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[SupportByVersion("MSHTML", 4)]
 		public object borderRightColor
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "borderRightColor", paramsArray);
-				if((null != returnItem) && (returnItem is MarshalByRefObject))
-				{
-					ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
-					return newObject;
-				}
-				else
-				{
-					return  returnItem;
-				}
+				return Factory.ExecuteVariantPropertyGet(this, "borderRightColor");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "borderRightColor", paramsArray);
+				Factory.ExecuteVariantPropertySet(this, "borderRightColor", value);
 			}
 		}
 
@@ -1181,27 +899,16 @@ namespace NetOffice.MSHTMLApi
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[SupportByVersion("MSHTML", 4)]
 		public object borderBottomColor
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "borderBottomColor", paramsArray);
-				if((null != returnItem) && (returnItem is MarshalByRefObject))
-				{
-					ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
-					return newObject;
-				}
-				else
-				{
-					return  returnItem;
-				}
+				return Factory.ExecuteVariantPropertyGet(this, "borderBottomColor");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "borderBottomColor", paramsArray);
+				Factory.ExecuteVariantPropertySet(this, "borderBottomColor", value);
 			}
 		}
 
@@ -1209,27 +916,16 @@ namespace NetOffice.MSHTMLApi
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[SupportByVersion("MSHTML", 4)]
 		public object borderLeftColor
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "borderLeftColor", paramsArray);
-				if((null != returnItem) && (returnItem is MarshalByRefObject))
-				{
-					ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
-					return newObject;
-				}
-				else
-				{
-					return  returnItem;
-				}
+				return Factory.ExecuteVariantPropertyGet(this, "borderLeftColor");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "borderLeftColor", paramsArray);
+				Factory.ExecuteVariantPropertySet(this, "borderLeftColor", value);
 			}
 		}
 
@@ -1237,19 +933,16 @@ namespace NetOffice.MSHTMLApi
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[SupportByVersion("MSHTML", 4)]
 		public string borderWidth
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "borderWidth", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "borderWidth");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "borderWidth", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "borderWidth", value);
 			}
 		}
 
@@ -1257,27 +950,16 @@ namespace NetOffice.MSHTMLApi
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[SupportByVersion("MSHTML", 4)]
 		public object borderTopWidth
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "borderTopWidth", paramsArray);
-				if((null != returnItem) && (returnItem is MarshalByRefObject))
-				{
-					ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
-					return newObject;
-				}
-				else
-				{
-					return  returnItem;
-				}
+				return Factory.ExecuteVariantPropertyGet(this, "borderTopWidth");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "borderTopWidth", paramsArray);
+				Factory.ExecuteVariantPropertySet(this, "borderTopWidth", value);
 			}
 		}
 
@@ -1285,27 +967,16 @@ namespace NetOffice.MSHTMLApi
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[SupportByVersion("MSHTML", 4)]
 		public object borderRightWidth
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "borderRightWidth", paramsArray);
-				if((null != returnItem) && (returnItem is MarshalByRefObject))
-				{
-					ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
-					return newObject;
-				}
-				else
-				{
-					return  returnItem;
-				}
+				return Factory.ExecuteVariantPropertyGet(this, "borderRightWidth");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "borderRightWidth", paramsArray);
+				Factory.ExecuteVariantPropertySet(this, "borderRightWidth", value);
 			}
 		}
 
@@ -1313,27 +984,16 @@ namespace NetOffice.MSHTMLApi
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[SupportByVersion("MSHTML", 4)]
 		public object borderBottomWidth
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "borderBottomWidth", paramsArray);
-				if((null != returnItem) && (returnItem is MarshalByRefObject))
-				{
-					ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
-					return newObject;
-				}
-				else
-				{
-					return  returnItem;
-				}
+				return Factory.ExecuteVariantPropertyGet(this, "borderBottomWidth");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "borderBottomWidth", paramsArray);
+				Factory.ExecuteVariantPropertySet(this, "borderBottomWidth", value);
 			}
 		}
 
@@ -1341,27 +1001,16 @@ namespace NetOffice.MSHTMLApi
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[SupportByVersion("MSHTML", 4)]
 		public object borderLeftWidth
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "borderLeftWidth", paramsArray);
-				if((null != returnItem) && (returnItem is MarshalByRefObject))
-				{
-					ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
-					return newObject;
-				}
-				else
-				{
-					return  returnItem;
-				}
+				return Factory.ExecuteVariantPropertyGet(this, "borderLeftWidth");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "borderLeftWidth", paramsArray);
+				Factory.ExecuteVariantPropertySet(this, "borderLeftWidth", value);
 			}
 		}
 
@@ -1369,19 +1018,16 @@ namespace NetOffice.MSHTMLApi
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[SupportByVersion("MSHTML", 4)]
 		public string borderStyle
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "borderStyle", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "borderStyle");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "borderStyle", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "borderStyle", value);
 			}
 		}
 
@@ -1389,19 +1035,16 @@ namespace NetOffice.MSHTMLApi
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[SupportByVersion("MSHTML", 4)]
 		public string borderTopStyle
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "borderTopStyle", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "borderTopStyle");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "borderTopStyle", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "borderTopStyle", value);
 			}
 		}
 
@@ -1409,19 +1052,16 @@ namespace NetOffice.MSHTMLApi
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[SupportByVersion("MSHTML", 4)]
 		public string borderRightStyle
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "borderRightStyle", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "borderRightStyle");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "borderRightStyle", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "borderRightStyle", value);
 			}
 		}
 
@@ -1429,19 +1069,16 @@ namespace NetOffice.MSHTMLApi
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[SupportByVersion("MSHTML", 4)]
 		public string borderBottomStyle
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "borderBottomStyle", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "borderBottomStyle");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "borderBottomStyle", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "borderBottomStyle", value);
 			}
 		}
 
@@ -1449,19 +1086,16 @@ namespace NetOffice.MSHTMLApi
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[SupportByVersion("MSHTML", 4)]
 		public string borderLeftStyle
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "borderLeftStyle", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "borderLeftStyle");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "borderLeftStyle", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "borderLeftStyle", value);
 			}
 		}
 
@@ -1469,27 +1103,16 @@ namespace NetOffice.MSHTMLApi
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[SupportByVersion("MSHTML", 4)]
 		public object width
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "width", paramsArray);
-				if((null != returnItem) && (returnItem is MarshalByRefObject))
-				{
-					ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
-					return newObject;
-				}
-				else
-				{
-					return  returnItem;
-				}
+				return Factory.ExecuteVariantPropertyGet(this, "width");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "width", paramsArray);
+				Factory.ExecuteVariantPropertySet(this, "width", value);
 			}
 		}
 
@@ -1497,27 +1120,16 @@ namespace NetOffice.MSHTMLApi
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[SupportByVersion("MSHTML", 4)]
 		public object height
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "height", paramsArray);
-				if((null != returnItem) && (returnItem is MarshalByRefObject))
-				{
-					ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
-					return newObject;
-				}
-				else
-				{
-					return  returnItem;
-				}
+				return Factory.ExecuteVariantPropertyGet(this, "height");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "height", paramsArray);
+				Factory.ExecuteVariantPropertySet(this, "height", value);
 			}
 		}
 
@@ -1525,19 +1137,16 @@ namespace NetOffice.MSHTMLApi
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[SupportByVersion("MSHTML", 4)]
 		public string styleFloat
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "styleFloat", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "styleFloat");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "styleFloat", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "styleFloat", value);
 			}
 		}
 
@@ -1545,19 +1154,16 @@ namespace NetOffice.MSHTMLApi
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[SupportByVersion("MSHTML", 4)]
 		public string clear
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "clear", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "clear");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "clear", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "clear", value);
 			}
 		}
 
@@ -1565,19 +1171,16 @@ namespace NetOffice.MSHTMLApi
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[SupportByVersion("MSHTML", 4)]
 		public string display
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "display", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "display");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "display", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "display", value);
 			}
 		}
 
@@ -1585,19 +1188,16 @@ namespace NetOffice.MSHTMLApi
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[SupportByVersion("MSHTML", 4)]
 		public string visibility
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "visibility", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "visibility");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "visibility", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "visibility", value);
 			}
 		}
 
@@ -1605,19 +1205,16 @@ namespace NetOffice.MSHTMLApi
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[SupportByVersion("MSHTML", 4)]
 		public string listStyleType
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "listStyleType", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "listStyleType");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "listStyleType", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "listStyleType", value);
 			}
 		}
 
@@ -1625,19 +1222,16 @@ namespace NetOffice.MSHTMLApi
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[SupportByVersion("MSHTML", 4)]
 		public string listStylePosition
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "listStylePosition", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "listStylePosition");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "listStylePosition", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "listStylePosition", value);
 			}
 		}
 
@@ -1645,19 +1239,16 @@ namespace NetOffice.MSHTMLApi
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[SupportByVersion("MSHTML", 4)]
 		public string listStyleImage
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "listStyleImage", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "listStyleImage");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "listStyleImage", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "listStyleImage", value);
 			}
 		}
 
@@ -1665,20 +1256,17 @@ namespace NetOffice.MSHTMLApi
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[SupportByVersion("MSHTML", 4)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public string listStyle
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "listStyle", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "listStyle");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "listStyle", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "listStyle", value);
 			}
 		}
 
@@ -1686,19 +1274,16 @@ namespace NetOffice.MSHTMLApi
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[SupportByVersion("MSHTML", 4)]
 		public string whiteSpace
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "whiteSpace", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "whiteSpace");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "whiteSpace", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "whiteSpace", value);
 			}
 		}
 
@@ -1706,27 +1291,16 @@ namespace NetOffice.MSHTMLApi
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[SupportByVersion("MSHTML", 4)]
 		public object top
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "top", paramsArray);
-				if((null != returnItem) && (returnItem is MarshalByRefObject))
-				{
-					ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
-					return newObject;
-				}
-				else
-				{
-					return  returnItem;
-				}
+				return Factory.ExecuteVariantPropertyGet(this, "top");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "top", paramsArray);
+				Factory.ExecuteVariantPropertySet(this, "top", value);
 			}
 		}
 
@@ -1734,27 +1308,16 @@ namespace NetOffice.MSHTMLApi
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[SupportByVersion("MSHTML", 4)]
 		public object left
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "left", paramsArray);
-				if((null != returnItem) && (returnItem is MarshalByRefObject))
-				{
-					ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
-					return newObject;
-				}
-				else
-				{
-					return  returnItem;
-				}
+				return Factory.ExecuteVariantPropertyGet(this, "left");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "left", paramsArray);
+				Factory.ExecuteVariantPropertySet(this, "left", value);
 			}
 		}
 
@@ -1762,14 +1325,12 @@ namespace NetOffice.MSHTMLApi
 		/// SupportByVersion MSHTML 4
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[SupportByVersion("MSHTML", 4)]
 		public string position
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "position", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "position");
 			}
 		}
 
@@ -1777,27 +1338,16 @@ namespace NetOffice.MSHTMLApi
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[SupportByVersion("MSHTML", 4)]
 		public object zIndex
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "zIndex", paramsArray);
-				if((null != returnItem) && (returnItem is MarshalByRefObject))
-				{
-					ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
-					return newObject;
-				}
-				else
-				{
-					return  returnItem;
-				}
+				return Factory.ExecuteVariantPropertyGet(this, "zIndex");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "zIndex", paramsArray);
+				Factory.ExecuteVariantPropertySet(this, "zIndex", value);
 			}
 		}
 
@@ -1805,19 +1355,16 @@ namespace NetOffice.MSHTMLApi
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[SupportByVersion("MSHTML", 4)]
 		public string overflow
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "overflow", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "overflow");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "overflow", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "overflow", value);
 			}
 		}
 
@@ -1825,19 +1372,16 @@ namespace NetOffice.MSHTMLApi
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[SupportByVersion("MSHTML", 4)]
 		public string pageBreakBefore
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "pageBreakBefore", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "pageBreakBefore");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "pageBreakBefore", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "pageBreakBefore", value);
 			}
 		}
 
@@ -1845,19 +1389,16 @@ namespace NetOffice.MSHTMLApi
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[SupportByVersion("MSHTML", 4)]
 		public string pageBreakAfter
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "pageBreakAfter", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "pageBreakAfter");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "pageBreakAfter", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "pageBreakAfter", value);
 			}
 		}
 
@@ -1865,20 +1406,17 @@ namespace NetOffice.MSHTMLApi
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[SupportByVersion("MSHTML", 4)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public string cssText
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "cssText", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "cssText");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "cssText", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "cssText", value);
 			}
 		}
 
@@ -1886,19 +1424,16 @@ namespace NetOffice.MSHTMLApi
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[SupportByVersion("MSHTML", 4)]
 		public string cursor
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "cursor", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "cursor");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "cursor", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "cursor", value);
 			}
 		}
 
@@ -1906,19 +1441,16 @@ namespace NetOffice.MSHTMLApi
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[SupportByVersion("MSHTML", 4)]
 		public string clip
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "clip", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "clip");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "clip", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "clip", value);
 			}
 		}
 
@@ -1926,19 +1458,16 @@ namespace NetOffice.MSHTMLApi
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[SupportByVersion("MSHTML", 4)]
 		public string filter
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "filter", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "filter");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "filter", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "filter", value);
 			}
 		}
 
@@ -1948,105 +1477,74 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
-		/// 
 		/// </summary>
 		/// <param name="strAttributeName">string strAttributeName</param>
-		/// <param name="attributeValue">object AttributeValue</param>
+		/// <param name="attributeValue">object attributeValue</param>
 		/// <param name="lFlags">optional Int32 lFlags = 1</param>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[SupportByVersion("MSHTML", 4)]
 		public void setAttribute(string strAttributeName, object attributeValue, object lFlags)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(strAttributeName, attributeValue, lFlags);
-			Invoker.Method(this, "setAttribute", paramsArray);
+			 Factory.ExecuteMethod(this, "setAttribute", strAttributeName, attributeValue, lFlags);
 		}
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
-		/// 
 		/// </summary>
 		/// <param name="strAttributeName">string strAttributeName</param>
-		/// <param name="attributeValue">object AttributeValue</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSHTML", 4)]
+		/// <param name="attributeValue">object attributeValue</param>
+		[CustomMethod]
+		[SupportByVersion("MSHTML", 4)]
 		public void setAttribute(string strAttributeName, object attributeValue)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(strAttributeName, attributeValue);
-			Invoker.Method(this, "setAttribute", paramsArray);
+			 Factory.ExecuteMethod(this, "setAttribute", strAttributeName, attributeValue);
 		}
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
-		/// 
 		/// </summary>
 		/// <param name="strAttributeName">string strAttributeName</param>
 		/// <param name="lFlags">optional Int32 lFlags = 0</param>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[SupportByVersion("MSHTML", 4)]
 		public object getAttribute(string strAttributeName, object lFlags)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(strAttributeName, lFlags);
-			object returnItem = Invoker.MethodReturn(this, "getAttribute", paramsArray);
-			if((null != returnItem) && (returnItem is MarshalByRefObject))
-			{
-				ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
-				return newObject;
-			}
-			else
-			{
-				return  returnItem;
-			}
+			return Factory.ExecuteVariantMethodGet(this, "getAttribute", strAttributeName, lFlags);
 		}
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
-		/// 
 		/// </summary>
 		/// <param name="strAttributeName">string strAttributeName</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[CustomMethod]
+		[SupportByVersion("MSHTML", 4)]
 		public object getAttribute(string strAttributeName)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(strAttributeName);
-			object returnItem = Invoker.MethodReturn(this, "getAttribute", paramsArray);
-			if((null != returnItem) && (returnItem is MarshalByRefObject))
-			{
-				ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
-				return newObject;
-			}
-			else
-			{
-				return  returnItem;
-			}
+			return Factory.ExecuteVariantMethodGet(this, "getAttribute", strAttributeName);
 		}
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
-		/// 
 		/// </summary>
 		/// <param name="strAttributeName">string strAttributeName</param>
 		/// <param name="lFlags">optional Int32 lFlags = 1</param>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[SupportByVersion("MSHTML", 4)]
 		public bool removeAttribute(string strAttributeName, object lFlags)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(strAttributeName, lFlags);
-			object returnItem = Invoker.MethodReturn(this, "removeAttribute", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return Factory.ExecuteBoolMethodGet(this, "removeAttribute", strAttributeName, lFlags);
 		}
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
-		/// 
 		/// </summary>
 		/// <param name="strAttributeName">string strAttributeName</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[CustomMethod]
+		[SupportByVersion("MSHTML", 4)]
 		public bool removeAttribute(string strAttributeName)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(strAttributeName);
-			object returnItem = Invoker.MethodReturn(this, "removeAttribute", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return Factory.ExecuteBoolMethodGet(this, "removeAttribute", strAttributeName);
 		}
 
 		#endregion
+
 		#pragma warning restore
 	}
 }

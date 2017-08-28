@@ -1,23 +1,33 @@
 ﻿using System;
 using NetRuntimeSystem = System;
-using System.Runtime.InteropServices;
-using System.Runtime.CompilerServices;
 using System.ComponentModel;
-using System.Reflection;
-using System.Collections.Generic;
-using NetOffice;
+using NetOffice.Attributes;
+
 namespace NetOffice.PowerPointApi
 {
-	///<summary>
+	/// <summary>
 	/// DispatchInterface PPDialogs 
 	/// SupportByVersion PowerPoint, 9
-	///</summary>
-	[SupportByVersionAttribute("PowerPoint", 9)]
-	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
-	public class PPDialogs : Collection
+	/// </summary>
+	[SupportByVersion("PowerPoint", 9)]
+	[EntityType(EntityType.IsDispatchInterface), HasIndexProperty(IndexInvoke.Method, "Item")]
+ 	public class PPDialogs : Collection
 	{
 		#pragma warning disable
+
 		#region Type Information
+
+		/// <summary>
+		/// Instance Type
+		/// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
+		public override Type InstanceType
+		{
+			get
+			{
+				return LateBindingApiWrapperType;
+			}
+		}
 
         private static Type _type;
 
@@ -28,14 +38,20 @@ namespace NetOffice.PowerPointApi
             {
                 if (null == _type)
                     _type = typeof(PPDialogs);
-                    
                 return _type;
             }
         }
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public PPDialogs(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -81,7 +97,7 @@ namespace NetOffice.PowerPointApi
 		{
 		}
 		
-		/// <param name="progId">registered ProgID</param>
+		/// <param name="progId">registered progID</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public PPDialogs(string progId) : base(progId)
 		{
@@ -95,15 +111,12 @@ namespace NetOffice.PowerPointApi
 		/// SupportByVersion PowerPoint 9
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 9)]
+		[SupportByVersion("PowerPoint", 9)]
 		public NetOffice.PowerPointApi.Application Application
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				NetOffice.PowerPointApi.Application newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.PowerPointApi.Application.LateBindingApiWrapperType) as NetOffice.PowerPointApi.Application;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.PowerPointApi.Application>(this, "Application", NetOffice.PowerPointApi.Application.LateBindingApiWrapperType);
 			}
 		}
 
@@ -111,15 +124,12 @@ namespace NetOffice.PowerPointApi
 		/// SupportByVersion PowerPoint 9
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 9)]
+		[SupportByVersion("PowerPoint", 9)]
 		public NetOffice.PowerPointApi.Tags Tags
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Tags", paramsArray);
-				NetOffice.PowerPointApi.Tags newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.PowerPointApi.Tags.LateBindingApiWrapperType) as NetOffice.PowerPointApi.Tags;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.PowerPointApi.Tags>(this, "Tags", NetOffice.PowerPointApi.Tags.LateBindingApiWrapperType);
 			}
 		}
 
@@ -127,19 +137,16 @@ namespace NetOffice.PowerPointApi
 		/// SupportByVersion PowerPoint 9
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 9)]
+		[SupportByVersion("PowerPoint", 9)]
 		public string Name
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Name", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "Name");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "Name", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "Name", value);
 			}
 		}
 
@@ -149,337 +156,266 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 9
-		/// 
 		/// </summary>
 		/// <param name="index">object index</param>
-		[SupportByVersionAttribute("PowerPoint", 9)]
-		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
+		[SupportByVersion("PowerPoint", 9)]
+		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
 		public NetOffice.PowerPointApi.PPDialog this[object index]
 		{
 			get
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(index);
-				object returnItem = Invoker.MethodReturn(this, "Item", paramsArray);
-				NetOffice.PowerPointApi.PPDialog newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PowerPointApi.PPDialog.LateBindingApiWrapperType) as NetOffice.PowerPointApi.PPDialog;
-				return newObject;
+				return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PowerPointApi.PPDialog>(this, "Item", NetOffice.PowerPointApi.PPDialog.LateBindingApiWrapperType, index);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 9
-		/// 
 		/// </summary>
-		/// <param name="left">Single Left</param>
-		/// <param name="top">Single Top</param>
-		/// <param name="width">Single Width</param>
-		/// <param name="height">Single Height</param>
+		/// <param name="left">Single left</param>
+		/// <param name="top">Single top</param>
+		/// <param name="width">Single width</param>
+		/// <param name="height">Single height</param>
 		/// <param name="modal">optional NetOffice.OfficeApi.Enums.MsoTriState Modal = -1</param>
 		/// <param name="parentWindow">optional object ParentWindow = null (Nothing in visual basic)</param>
 		/// <param name="position">optional NetOffice.PowerPointApi.Enums.PpDialogPositioning Position = 1</param>
 		/// <param name="displayHelp">optional NetOffice.OfficeApi.Enums.MsoTriState DisplayHelp = -1</param>
-		[SupportByVersionAttribute("PowerPoint", 9)]
+		[SupportByVersion("PowerPoint", 9)]
 		public NetOffice.PowerPointApi.PPDialog AddDialog(Single left, Single top, Single width, Single height, object modal, object parentWindow, object position, object displayHelp)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(left, top, width, height, modal, parentWindow, position, displayHelp);
-			object returnItem = Invoker.MethodReturn(this, "AddDialog", paramsArray);
-			NetOffice.PowerPointApi.PPDialog newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PowerPointApi.PPDialog.LateBindingApiWrapperType) as NetOffice.PowerPointApi.PPDialog;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PowerPointApi.PPDialog>(this, "AddDialog", NetOffice.PowerPointApi.PPDialog.LateBindingApiWrapperType, new object[]{ left, top, width, height, modal, parentWindow, position, displayHelp });
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 9
-		/// 
 		/// </summary>
-		/// <param name="left">Single Left</param>
-		/// <param name="top">Single Top</param>
-		/// <param name="width">Single Width</param>
-		/// <param name="height">Single Height</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("PowerPoint", 9)]
+		/// <param name="left">Single left</param>
+		/// <param name="top">Single top</param>
+		/// <param name="width">Single width</param>
+		/// <param name="height">Single height</param>
+		[CustomMethod]
+		[SupportByVersion("PowerPoint", 9)]
 		public NetOffice.PowerPointApi.PPDialog AddDialog(Single left, Single top, Single width, Single height)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(left, top, width, height);
-			object returnItem = Invoker.MethodReturn(this, "AddDialog", paramsArray);
-			NetOffice.PowerPointApi.PPDialog newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PowerPointApi.PPDialog.LateBindingApiWrapperType) as NetOffice.PowerPointApi.PPDialog;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PowerPointApi.PPDialog>(this, "AddDialog", NetOffice.PowerPointApi.PPDialog.LateBindingApiWrapperType, left, top, width, height);
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 9
-		/// 
 		/// </summary>
-		/// <param name="left">Single Left</param>
-		/// <param name="top">Single Top</param>
-		/// <param name="width">Single Width</param>
-		/// <param name="height">Single Height</param>
+		/// <param name="left">Single left</param>
+		/// <param name="top">Single top</param>
+		/// <param name="width">Single width</param>
+		/// <param name="height">Single height</param>
 		/// <param name="modal">optional NetOffice.OfficeApi.Enums.MsoTriState Modal = -1</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("PowerPoint", 9)]
+		[CustomMethod]
+		[SupportByVersion("PowerPoint", 9)]
 		public NetOffice.PowerPointApi.PPDialog AddDialog(Single left, Single top, Single width, Single height, object modal)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(left, top, width, height, modal);
-			object returnItem = Invoker.MethodReturn(this, "AddDialog", paramsArray);
-			NetOffice.PowerPointApi.PPDialog newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PowerPointApi.PPDialog.LateBindingApiWrapperType) as NetOffice.PowerPointApi.PPDialog;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PowerPointApi.PPDialog>(this, "AddDialog", NetOffice.PowerPointApi.PPDialog.LateBindingApiWrapperType, new object[]{ left, top, width, height, modal });
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 9
-		/// 
 		/// </summary>
-		/// <param name="left">Single Left</param>
-		/// <param name="top">Single Top</param>
-		/// <param name="width">Single Width</param>
-		/// <param name="height">Single Height</param>
+		/// <param name="left">Single left</param>
+		/// <param name="top">Single top</param>
+		/// <param name="width">Single width</param>
+		/// <param name="height">Single height</param>
 		/// <param name="modal">optional NetOffice.OfficeApi.Enums.MsoTriState Modal = -1</param>
 		/// <param name="parentWindow">optional object ParentWindow = null (Nothing in visual basic)</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("PowerPoint", 9)]
+		[CustomMethod]
+		[SupportByVersion("PowerPoint", 9)]
 		public NetOffice.PowerPointApi.PPDialog AddDialog(Single left, Single top, Single width, Single height, object modal, object parentWindow)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(left, top, width, height, modal, parentWindow);
-			object returnItem = Invoker.MethodReturn(this, "AddDialog", paramsArray);
-			NetOffice.PowerPointApi.PPDialog newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PowerPointApi.PPDialog.LateBindingApiWrapperType) as NetOffice.PowerPointApi.PPDialog;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PowerPointApi.PPDialog>(this, "AddDialog", NetOffice.PowerPointApi.PPDialog.LateBindingApiWrapperType, new object[]{ left, top, width, height, modal, parentWindow });
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 9
-		/// 
 		/// </summary>
-		/// <param name="left">Single Left</param>
-		/// <param name="top">Single Top</param>
-		/// <param name="width">Single Width</param>
-		/// <param name="height">Single Height</param>
+		/// <param name="left">Single left</param>
+		/// <param name="top">Single top</param>
+		/// <param name="width">Single width</param>
+		/// <param name="height">Single height</param>
 		/// <param name="modal">optional NetOffice.OfficeApi.Enums.MsoTriState Modal = -1</param>
 		/// <param name="parentWindow">optional object ParentWindow = null (Nothing in visual basic)</param>
 		/// <param name="position">optional NetOffice.PowerPointApi.Enums.PpDialogPositioning Position = 1</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("PowerPoint", 9)]
+		[CustomMethod]
+		[SupportByVersion("PowerPoint", 9)]
 		public NetOffice.PowerPointApi.PPDialog AddDialog(Single left, Single top, Single width, Single height, object modal, object parentWindow, object position)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(left, top, width, height, modal, parentWindow, position);
-			object returnItem = Invoker.MethodReturn(this, "AddDialog", paramsArray);
-			NetOffice.PowerPointApi.PPDialog newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PowerPointApi.PPDialog.LateBindingApiWrapperType) as NetOffice.PowerPointApi.PPDialog;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PowerPointApi.PPDialog>(this, "AddDialog", NetOffice.PowerPointApi.PPDialog.LateBindingApiWrapperType, new object[]{ left, top, width, height, modal, parentWindow, position });
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 9
-		/// 
 		/// </summary>
-		/// <param name="left">Single Left</param>
-		/// <param name="top">Single Top</param>
-		/// <param name="width">Single Width</param>
-		/// <param name="height">Single Height</param>
+		/// <param name="left">Single left</param>
+		/// <param name="top">Single top</param>
+		/// <param name="width">Single width</param>
+		/// <param name="height">Single height</param>
 		/// <param name="modal">optional NetOffice.OfficeApi.Enums.MsoTriState Modal = -1</param>
 		/// <param name="parentWindow">optional object ParentWindow = null (Nothing in visual basic)</param>
 		/// <param name="position">optional NetOffice.PowerPointApi.Enums.PpDialogPositioning Position = 1</param>
 		/// <param name="displayHelp">optional NetOffice.OfficeApi.Enums.MsoTriState DisplayHelp = -1</param>
-		[SupportByVersionAttribute("PowerPoint", 9)]
+		[SupportByVersion("PowerPoint", 9)]
 		public NetOffice.PowerPointApi.PPDialog AddTabDialog(Single left, Single top, Single width, Single height, object modal, object parentWindow, object position, object displayHelp)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(left, top, width, height, modal, parentWindow, position, displayHelp);
-			object returnItem = Invoker.MethodReturn(this, "AddTabDialog", paramsArray);
-			NetOffice.PowerPointApi.PPDialog newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PowerPointApi.PPDialog.LateBindingApiWrapperType) as NetOffice.PowerPointApi.PPDialog;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PowerPointApi.PPDialog>(this, "AddTabDialog", NetOffice.PowerPointApi.PPDialog.LateBindingApiWrapperType, new object[]{ left, top, width, height, modal, parentWindow, position, displayHelp });
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 9
-		/// 
 		/// </summary>
-		/// <param name="left">Single Left</param>
-		/// <param name="top">Single Top</param>
-		/// <param name="width">Single Width</param>
-		/// <param name="height">Single Height</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("PowerPoint", 9)]
+		/// <param name="left">Single left</param>
+		/// <param name="top">Single top</param>
+		/// <param name="width">Single width</param>
+		/// <param name="height">Single height</param>
+		[CustomMethod]
+		[SupportByVersion("PowerPoint", 9)]
 		public NetOffice.PowerPointApi.PPDialog AddTabDialog(Single left, Single top, Single width, Single height)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(left, top, width, height);
-			object returnItem = Invoker.MethodReturn(this, "AddTabDialog", paramsArray);
-			NetOffice.PowerPointApi.PPDialog newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PowerPointApi.PPDialog.LateBindingApiWrapperType) as NetOffice.PowerPointApi.PPDialog;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PowerPointApi.PPDialog>(this, "AddTabDialog", NetOffice.PowerPointApi.PPDialog.LateBindingApiWrapperType, left, top, width, height);
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 9
-		/// 
 		/// </summary>
-		/// <param name="left">Single Left</param>
-		/// <param name="top">Single Top</param>
-		/// <param name="width">Single Width</param>
-		/// <param name="height">Single Height</param>
+		/// <param name="left">Single left</param>
+		/// <param name="top">Single top</param>
+		/// <param name="width">Single width</param>
+		/// <param name="height">Single height</param>
 		/// <param name="modal">optional NetOffice.OfficeApi.Enums.MsoTriState Modal = -1</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("PowerPoint", 9)]
+		[CustomMethod]
+		[SupportByVersion("PowerPoint", 9)]
 		public NetOffice.PowerPointApi.PPDialog AddTabDialog(Single left, Single top, Single width, Single height, object modal)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(left, top, width, height, modal);
-			object returnItem = Invoker.MethodReturn(this, "AddTabDialog", paramsArray);
-			NetOffice.PowerPointApi.PPDialog newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PowerPointApi.PPDialog.LateBindingApiWrapperType) as NetOffice.PowerPointApi.PPDialog;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PowerPointApi.PPDialog>(this, "AddTabDialog", NetOffice.PowerPointApi.PPDialog.LateBindingApiWrapperType, new object[]{ left, top, width, height, modal });
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 9
-		/// 
 		/// </summary>
-		/// <param name="left">Single Left</param>
-		/// <param name="top">Single Top</param>
-		/// <param name="width">Single Width</param>
-		/// <param name="height">Single Height</param>
+		/// <param name="left">Single left</param>
+		/// <param name="top">Single top</param>
+		/// <param name="width">Single width</param>
+		/// <param name="height">Single height</param>
 		/// <param name="modal">optional NetOffice.OfficeApi.Enums.MsoTriState Modal = -1</param>
 		/// <param name="parentWindow">optional object ParentWindow = null (Nothing in visual basic)</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("PowerPoint", 9)]
+		[CustomMethod]
+		[SupportByVersion("PowerPoint", 9)]
 		public NetOffice.PowerPointApi.PPDialog AddTabDialog(Single left, Single top, Single width, Single height, object modal, object parentWindow)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(left, top, width, height, modal, parentWindow);
-			object returnItem = Invoker.MethodReturn(this, "AddTabDialog", paramsArray);
-			NetOffice.PowerPointApi.PPDialog newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PowerPointApi.PPDialog.LateBindingApiWrapperType) as NetOffice.PowerPointApi.PPDialog;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PowerPointApi.PPDialog>(this, "AddTabDialog", NetOffice.PowerPointApi.PPDialog.LateBindingApiWrapperType, new object[]{ left, top, width, height, modal, parentWindow });
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 9
-		/// 
 		/// </summary>
-		/// <param name="left">Single Left</param>
-		/// <param name="top">Single Top</param>
-		/// <param name="width">Single Width</param>
-		/// <param name="height">Single Height</param>
+		/// <param name="left">Single left</param>
+		/// <param name="top">Single top</param>
+		/// <param name="width">Single width</param>
+		/// <param name="height">Single height</param>
 		/// <param name="modal">optional NetOffice.OfficeApi.Enums.MsoTriState Modal = -1</param>
 		/// <param name="parentWindow">optional object ParentWindow = null (Nothing in visual basic)</param>
 		/// <param name="position">optional NetOffice.PowerPointApi.Enums.PpDialogPositioning Position = 1</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("PowerPoint", 9)]
+		[CustomMethod]
+		[SupportByVersion("PowerPoint", 9)]
 		public NetOffice.PowerPointApi.PPDialog AddTabDialog(Single left, Single top, Single width, Single height, object modal, object parentWindow, object position)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(left, top, width, height, modal, parentWindow, position);
-			object returnItem = Invoker.MethodReturn(this, "AddTabDialog", paramsArray);
-			NetOffice.PowerPointApi.PPDialog newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PowerPointApi.PPDialog.LateBindingApiWrapperType) as NetOffice.PowerPointApi.PPDialog;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PowerPointApi.PPDialog>(this, "AddTabDialog", NetOffice.PowerPointApi.PPDialog.LateBindingApiWrapperType, new object[]{ left, top, width, height, modal, parentWindow, position });
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 9
-		/// 
 		/// </summary>
 		/// <param name="resourceDLL">string resourceDLL</param>
 		/// <param name="nResID">Int32 nResID</param>
 		/// <param name="bModal">optional NetOffice.OfficeApi.Enums.MsoTriState bModal = -1</param>
 		/// <param name="parentWindow">optional object ParentWindow = null (Nothing in visual basic)</param>
 		/// <param name="position">optional NetOffice.PowerPointApi.Enums.PpDialogPositioning Position = 1</param>
-		[SupportByVersionAttribute("PowerPoint", 9)]
+		[SupportByVersion("PowerPoint", 9)]
 		public NetOffice.PowerPointApi.PPDialog LoadDialog(string resourceDLL, Int32 nResID, object bModal, object parentWindow, object position)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(resourceDLL, nResID, bModal, parentWindow, position);
-			object returnItem = Invoker.MethodReturn(this, "LoadDialog", paramsArray);
-			NetOffice.PowerPointApi.PPDialog newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PowerPointApi.PPDialog.LateBindingApiWrapperType) as NetOffice.PowerPointApi.PPDialog;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PowerPointApi.PPDialog>(this, "LoadDialog", NetOffice.PowerPointApi.PPDialog.LateBindingApiWrapperType, new object[]{ resourceDLL, nResID, bModal, parentWindow, position });
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 9
-		/// 
 		/// </summary>
 		/// <param name="resourceDLL">string resourceDLL</param>
 		/// <param name="nResID">Int32 nResID</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("PowerPoint", 9)]
+		[CustomMethod]
+		[SupportByVersion("PowerPoint", 9)]
 		public NetOffice.PowerPointApi.PPDialog LoadDialog(string resourceDLL, Int32 nResID)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(resourceDLL, nResID);
-			object returnItem = Invoker.MethodReturn(this, "LoadDialog", paramsArray);
-			NetOffice.PowerPointApi.PPDialog newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PowerPointApi.PPDialog.LateBindingApiWrapperType) as NetOffice.PowerPointApi.PPDialog;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PowerPointApi.PPDialog>(this, "LoadDialog", NetOffice.PowerPointApi.PPDialog.LateBindingApiWrapperType, resourceDLL, nResID);
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 9
-		/// 
 		/// </summary>
 		/// <param name="resourceDLL">string resourceDLL</param>
 		/// <param name="nResID">Int32 nResID</param>
 		/// <param name="bModal">optional NetOffice.OfficeApi.Enums.MsoTriState bModal = -1</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("PowerPoint", 9)]
+		[CustomMethod]
+		[SupportByVersion("PowerPoint", 9)]
 		public NetOffice.PowerPointApi.PPDialog LoadDialog(string resourceDLL, Int32 nResID, object bModal)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(resourceDLL, nResID, bModal);
-			object returnItem = Invoker.MethodReturn(this, "LoadDialog", paramsArray);
-			NetOffice.PowerPointApi.PPDialog newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PowerPointApi.PPDialog.LateBindingApiWrapperType) as NetOffice.PowerPointApi.PPDialog;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PowerPointApi.PPDialog>(this, "LoadDialog", NetOffice.PowerPointApi.PPDialog.LateBindingApiWrapperType, resourceDLL, nResID, bModal);
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 9
-		/// 
 		/// </summary>
 		/// <param name="resourceDLL">string resourceDLL</param>
 		/// <param name="nResID">Int32 nResID</param>
 		/// <param name="bModal">optional NetOffice.OfficeApi.Enums.MsoTriState bModal = -1</param>
 		/// <param name="parentWindow">optional object ParentWindow = null (Nothing in visual basic)</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("PowerPoint", 9)]
+		[CustomMethod]
+		[SupportByVersion("PowerPoint", 9)]
 		public NetOffice.PowerPointApi.PPDialog LoadDialog(string resourceDLL, Int32 nResID, object bModal, object parentWindow)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(resourceDLL, nResID, bModal, parentWindow);
-			object returnItem = Invoker.MethodReturn(this, "LoadDialog", paramsArray);
-			NetOffice.PowerPointApi.PPDialog newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PowerPointApi.PPDialog.LateBindingApiWrapperType) as NetOffice.PowerPointApi.PPDialog;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PowerPointApi.PPDialog>(this, "LoadDialog", NetOffice.PowerPointApi.PPDialog.LateBindingApiWrapperType, resourceDLL, nResID, bModal, parentWindow);
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 9
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 9)]
+		[SupportByVersion("PowerPoint", 9)]
 		public NetOffice.PowerPointApi.PPAlert AddAlert()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "AddAlert", paramsArray);
-			NetOffice.PowerPointApi.PPAlert newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PowerPointApi.PPAlert.LateBindingApiWrapperType) as NetOffice.PowerPointApi.PPAlert;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PowerPointApi.PPAlert>(this, "AddAlert", NetOffice.PowerPointApi.PPAlert.LateBindingApiWrapperType);
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 9
-		/// 
 		/// </summary>
-		/// <param name="text">string Text</param>
-		/// <param name="type">NetOffice.PowerPointApi.Enums.PpAlertType Type</param>
+		/// <param name="text">string text</param>
+		/// <param name="type">NetOffice.PowerPointApi.Enums.PpAlertType type</param>
 		/// <param name="icon">NetOffice.PowerPointApi.Enums.PpAlertIcon icon</param>
 		/// <param name="parentWindow">optional object ParentWindow = null (Nothing in visual basic)</param>
-		[SupportByVersionAttribute("PowerPoint", 9)]
+		[SupportByVersion("PowerPoint", 9)]
 		public NetOffice.PowerPointApi.Enums.PpAlertButton RunCharacterAlert(string text, NetOffice.PowerPointApi.Enums.PpAlertType type, NetOffice.PowerPointApi.Enums.PpAlertIcon icon, object parentWindow)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(text, type, icon, parentWindow);
-			object returnItem = Invoker.MethodReturn(this, "RunCharacterAlert", paramsArray);
-			int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-			return (NetOffice.PowerPointApi.Enums.PpAlertButton)intReturnItem;
+			return Factory.ExecuteEnumMethodGet<NetOffice.PowerPointApi.Enums.PpAlertButton>(this, "RunCharacterAlert", text, type, icon, parentWindow);
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 9
-		/// 
 		/// </summary>
-		/// <param name="text">string Text</param>
-		/// <param name="type">NetOffice.PowerPointApi.Enums.PpAlertType Type</param>
+		/// <param name="text">string text</param>
+		/// <param name="type">NetOffice.PowerPointApi.Enums.PpAlertType type</param>
 		/// <param name="icon">NetOffice.PowerPointApi.Enums.PpAlertIcon icon</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("PowerPoint", 9)]
+		[CustomMethod]
+		[SupportByVersion("PowerPoint", 9)]
 		public NetOffice.PowerPointApi.Enums.PpAlertButton RunCharacterAlert(string text, NetOffice.PowerPointApi.Enums.PpAlertType type, NetOffice.PowerPointApi.Enums.PpAlertIcon icon)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(text, type, icon);
-			object returnItem = Invoker.MethodReturn(this, "RunCharacterAlert", paramsArray);
-			int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-			return (NetOffice.PowerPointApi.Enums.PpAlertButton)intReturnItem;
+			return Factory.ExecuteEnumMethodGet<NetOffice.PowerPointApi.Enums.PpAlertButton>(this, "RunCharacterAlert", text, type, icon);
 		}
 
 		#endregion
+
 		#pragma warning restore
 	}
 }

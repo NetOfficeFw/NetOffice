@@ -1,48 +1,48 @@
 ﻿using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
-using NetOffice;
-using NetOffice.Misc;
+using NetOffice.Attributes;
 
 namespace NetOffice.ExcelApi
 {
-
 	#region Delegates
 
 	#pragma warning disable
 	public delegate void Chart_ActivateEventHandler();
 	public delegate void Chart_DeactivateEventHandler();
 	public delegate void Chart_ResizeEventHandler();
-	public delegate void Chart_MouseDownEventHandler(Int32 Button, Int32 Shift, Int32 x, Int32 y);
-	public delegate void Chart_MouseUpEventHandler(Int32 Button, Int32 Shift, Int32 x, Int32 y);
-	public delegate void Chart_MouseMoveEventHandler(Int32 Button, Int32 Shift, Int32 x, Int32 y);
-	public delegate void Chart_BeforeRightClickEventHandler(ref bool Cancel);
+	public delegate void Chart_MouseDownEventHandler(Int32 button, Int32 shift, Int32 x, Int32 y);
+	public delegate void Chart_MouseUpEventHandler(Int32 button, Int32 shift, Int32 x, Int32 y);
+	public delegate void Chart_MouseMoveEventHandler(Int32 button, Int32 shift, Int32 x, Int32 y);
+	public delegate void Chart_BeforeRightClickEventHandler(ref bool cancel);
 	public delegate void Chart_DragPlotEventHandler();
 	public delegate void Chart_DragOverEventHandler();
-	public delegate void Chart_BeforeDoubleClickEventHandler(Int32 ElementID, Int32 Arg1, Int32 Arg2, ref bool Cancel);
-	public delegate void Chart_SelectEventHandler(Int32 ElementID, Int32 Arg1, Int32 Arg2);
-	public delegate void Chart_SeriesChangeEventHandler(Int32 SeriesIndex, Int32 PointIndex);
+	public delegate void Chart_BeforeDoubleClickEventHandler(Int32 elementID, Int32 arg1, Int32 arg2, ref bool cancel);
+	public delegate void Chart_SelectEventHandler(Int32 elementID, Int32 arg1, Int32 arg2);
+	public delegate void Chart_SeriesChangeEventHandler(Int32 seriesIndex, Int32 pointIndex);
 	public delegate void Chart_CalculateEventHandler();
 	#pragma warning restore
 
 	#endregion
 
-	///<summary>
+	/// <summary>
 	/// CoClass Chart 
 	/// SupportByVersion Excel, 9,10,11,12,14,15,16
-	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194426.aspx
-	///</summary>
-	[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
-	[EntityTypeAttribute(EntityType.IsCoClass)]
-	public class Chart : _Chart,IEventBinding
+	/// </summary>
+	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194426.aspx </remarks>
+	[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+	[EntityType(EntityType.IsCoClass)]
+	[EventSink(typeof(Events.ChartEvents_SinkHelper))]
+	public class Chart : _Chart, IEventBinding
 	{
 		#pragma warning disable
+
 		#region Fields
 		
 		private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
 		private string _activeSinkId;
 		private NetRuntimeSystem.Type _thisType;
-		ChartEvents_SinkHelper _chartEvents_SinkHelper;
+        private Events.ChartEvents_SinkHelper _chartEvents_SinkHelper;
 	
 		#endregion
 
@@ -51,6 +51,7 @@ namespace NetOffice.ExcelApi
         /// <summary>
         /// Instance Type
         /// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
         public override Type InstanceType
         {
             get
@@ -117,17 +118,17 @@ namespace NetOffice.ExcelApi
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of Chart 
-        ///</summary>		
+        /// </summary>		
 		public Chart():base("Excel.Chart")
 		{
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of Chart
-        ///</summary>
+        /// </summary>
         ///<param name="progId">registered ProgID</param>
 		public Chart(string progId):base(progId)
 		{
@@ -137,46 +138,6 @@ namespace NetOffice.ExcelApi
 		#endregion
 
 		#region Static CoClass Methods
-
-		/// <summary>
-        /// Returns all running Excel.Chart objects from the environment/system
-        /// </summary>
-        /// <returns>an Excel.Chart array</returns>
-		public static NetOffice.ExcelApi.Chart[] GetActiveInstances()
-		{		
-			IDisposableEnumeration proxyList = NetOffice.ProxyService.GetActiveInstances("Excel","Chart");
-			NetRuntimeSystem.Collections.Generic.List<NetOffice.ExcelApi.Chart> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.ExcelApi.Chart>();
-			foreach(object proxy in proxyList)
-				resultList.Add( new NetOffice.ExcelApi.Chart(null, proxy) );
-			return resultList.ToArray();
-		}
-
-		/// <summary>
-        /// Returns a running Excel.Chart object from the environment/system.
-        /// </summary>
-        /// <returns>an Excel.Chart object or null</returns>
-		public static NetOffice.ExcelApi.Chart GetActiveInstance()
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Excel","Chart", false);
-			if(null != proxy)
-				return new NetOffice.ExcelApi.Chart(null, proxy);
-			else
-				return null;
-		}
-
-		/// <summary>
-        /// Returns a running Excel.Chart object from the environment/system. 
-        /// </summary>
-	    /// <param name="throwOnError">throw an exception if no object was found</param>
-        /// <returns>an Excel.Chart object or null</returns>
-		public static NetOffice.ExcelApi.Chart GetActiveInstance(bool throwOnError)
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Excel","Chart", throwOnError);
-			if(null != proxy)
-				return new NetOffice.ExcelApi.Chart(null, proxy);
-			else
-				return null;
-		}
 		#endregion
 
 		#region Events
@@ -495,12 +456,12 @@ namespace NetOffice.ExcelApi
 				return;
 	
             if (null == _activeSinkId)
-				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, ChartEvents_SinkHelper.Id);
+				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, Events.ChartEvents_SinkHelper.Id);
 
 
-			if(ChartEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
+			if(Events.ChartEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
 			{
-				_chartEvents_SinkHelper = new ChartEvents_SinkHelper(this, _connectPoint);
+				_chartEvents_SinkHelper = new Events.ChartEvents_SinkHelper(this, _connectPoint);
 				return;
 			} 
         }

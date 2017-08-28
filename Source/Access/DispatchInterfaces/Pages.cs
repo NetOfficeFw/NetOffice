@@ -1,25 +1,36 @@
-﻿using System;
-using NetRuntimeSystem = System;
-using System.Runtime.InteropServices;
-using System.Runtime.CompilerServices;
-using System.ComponentModel;
-using System.Reflection;
+﻿using System.Collections;
 using System.Collections.Generic;
-using System.Collections;
-using NetOffice;
+using System;
+using NetRuntimeSystem = System;
+using System.ComponentModel;
+using NetOffice.Attributes;
+
 namespace NetOffice.AccessApi
 {
-	///<summary>
+	/// <summary>
 	/// DispatchInterface Pages 
 	/// SupportByVersion Access, 9,10,11,12,14,15,16
-	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836015.aspx
-	///</summary>
-	[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
-	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
-	public class Pages : COMObject ,IEnumerable<NetOffice.AccessApi.Page>
+	/// </summary>
+	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff836015.aspx </remarks>
+	[SupportByVersion("Access", 9,10,11,12,14,15,16)]
+	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Method), HasIndexProperty(IndexInvoke.Property, "Item")]
+	public class Pages : COMObject , IEnumerable<NetOffice.AccessApi.Page>
 	{
 		#pragma warning disable
+
 		#region Type Information
+
+		/// <summary>
+		/// Instance Type
+		/// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
+		public override Type InstanceType
+		{
+			get
+			{
+				return LateBindingApiWrapperType;
+			}
+		}
 
         private static Type _type;
 
@@ -30,14 +41,20 @@ namespace NetOffice.AccessApi
             {
                 if (null == _type)
                     _type = typeof(Pages);
-                    
                 return _type;
             }
         }
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public Pages(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -83,7 +100,7 @@ namespace NetOffice.AccessApi
 		{
 		}
 		
-		/// <param name="progId">registered ProgID</param>
+		/// <param name="progId">registered progID</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public Pages(string progId) : base(progId)
 		{
@@ -97,33 +114,28 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <param name="index">object Index</param>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
-		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
+		/// <param name="index">object index</param>
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
+		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
 		public NetOffice.AccessApi.Page this[object index]
 		{
 			get
-{			
-			object[] paramsArray = Invoker.ValidateParamsArray(index);
-			object returnItem = Invoker.PropertyGet(this, "Item", paramsArray);
-			NetOffice.AccessApi.Page newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.AccessApi.Page.LateBindingApiWrapperType) as NetOffice.AccessApi.Page;
-			return newObject;
+			{
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.AccessApi.Page>(this, "Item", NetOffice.AccessApi.Page.LateBindingApiWrapperType, index);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195488.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff195488.aspx </remarks>
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public Int32 Count
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Count", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "Count");
 			}
 		}
 
@@ -133,68 +145,57 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836899.aspx
 		/// </summary>
-		/// <param name="before">optional object Before</param>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff836899.aspx </remarks>
+		/// <param name="before">optional object before</param>
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public NetOffice.AccessApi.Page Add(object before)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(before);
-			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.AccessApi.Page newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.AccessApi.Page.LateBindingApiWrapperType) as NetOffice.AccessApi.Page;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.AccessApi.Page>(this, "Add", NetOffice.AccessApi.Page.LateBindingApiWrapperType, before);
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836899.aspx
 		/// </summary>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff836899.aspx </remarks>
+		[CustomMethod]
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public NetOffice.AccessApi.Page Add()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.AccessApi.Page newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.AccessApi.Page.LateBindingApiWrapperType) as NetOffice.AccessApi.Page;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.AccessApi.Page>(this, "Add", NetOffice.AccessApi.Page.LateBindingApiWrapperType);
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff191846.aspx
 		/// </summary>
-		/// <param name="item">optional object Item</param>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff191846.aspx </remarks>
+		/// <param name="item">optional object item</param>
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public void Remove(object item)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(item);
-			Invoker.Method(this, "Remove", paramsArray);
+			 Factory.ExecuteMethod(this, "Remove", item);
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff191846.aspx
 		/// </summary>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff191846.aspx </remarks>
+		[CustomMethod]
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public void Remove()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "Remove", paramsArray);
+			 Factory.ExecuteMethod(this, "Remove");
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
 		/// <param name="dispid">Int32 dispid</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("Access", 11,12,14,15,16)]
+		[SupportByVersion("Access", 11,12,14,15,16)]
 		public bool IsMemberSafe(Int32 dispid)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(dispid);
-			object returnItem = Invoker.MethodReturn(this, "IsMemberSafe", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return Factory.ExecuteBoolMethodGet(this, "IsMemberSafe", dispid);
 		}
 
 		#endregion
@@ -202,9 +203,9 @@ namespace NetOffice.AccessApi
        #region IEnumerable<NetOffice.AccessApi.Page> Member
         
         /// <summary>
-		/// SupportByVersionAttribute Access, 9,10,11,12,14,15,16
+		/// SupportByVersion Access, 9,10,11,12,14,15,16
 		/// </summary>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
        public IEnumerator<NetOffice.AccessApi.Page> GetEnumerator()  
        {
            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
@@ -217,15 +218,16 @@ namespace NetOffice.AccessApi
 		#region IEnumerable Members
        
 		/// <summary>
-		/// SupportByVersionAttribute Access, 9,10,11,12,14,15,16
+		/// SupportByVersion Access, 9,10,11,12,14,15,16
 		/// </summary>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
 			return NetOffice.Utils.GetProxyEnumeratorAsMethod(this);
 		}
 
 		#endregion
+
 		#pragma warning restore
 	}
 }

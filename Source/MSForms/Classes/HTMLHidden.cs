@@ -1,12 +1,10 @@
 ﻿using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
-using NetOffice;
-using NetOffice.Misc;
+using NetOffice.Attributes;
 
 namespace NetOffice.MSFormsApi
 {
-
 	#region Delegates
 
 	#pragma warning disable
@@ -15,21 +13,23 @@ namespace NetOffice.MSFormsApi
 
 	#endregion
 
-	///<summary>
+	/// <summary>
 	/// CoClass HTMLHidden 
 	/// SupportByVersion MSForms, 2
-	///</summary>
-	[SupportByVersionAttribute("MSForms", 2)]
-	[EntityTypeAttribute(EntityType.IsCoClass)]
-	public class HTMLHidden : IWHTMLHidden,IEventBinding
+	/// </summary>
+	[SupportByVersion("MSForms", 2)]
+	[EntityType(EntityType.IsCoClass)]
+	[EventSink(typeof(Events.WHTMLControlEvents6_SinkHelper))]
+	public class HTMLHidden : IWHTMLHidden, IEventBinding
 	{
 		#pragma warning disable
+
 		#region Fields
 		
 		private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
 		private string _activeSinkId;
 		private NetRuntimeSystem.Type _thisType;
-		WHTMLControlEvents6_SinkHelper _wHTMLControlEvents6_SinkHelper;
+		private Events.WHTMLControlEvents6_SinkHelper _wHTMLControlEvents6_SinkHelper;
 	
 		#endregion
 
@@ -38,6 +38,7 @@ namespace NetOffice.MSFormsApi
         /// <summary>
         /// Instance Type
         /// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
         public override Type InstanceType
         {
             get
@@ -104,17 +105,17 @@ namespace NetOffice.MSFormsApi
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of HTMLHidden 
-        ///</summary>		
+        /// </summary>		
 		public HTMLHidden():base("MSForms.HTMLHidden")
 		{
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of HTMLHidden
-        ///</summary>
+        /// </summary>
         ///<param name="progId">registered ProgID</param>
 		public HTMLHidden(string progId):base(progId)
 		{
@@ -124,46 +125,6 @@ namespace NetOffice.MSFormsApi
 		#endregion
 
 		#region Static CoClass Methods
-
-		/// <summary>
-        /// Returns all running MSForms.HTMLHidden objects from the environment/system
-        /// </summary>
-        /// <returns>an MSForms.HTMLHidden array</returns>
-		public static NetOffice.MSFormsApi.HTMLHidden[] GetActiveInstances()
-		{		
-			IDisposableEnumeration proxyList = NetOffice.ProxyService.GetActiveInstances("MSForms","HTMLHidden");
-			NetRuntimeSystem.Collections.Generic.List<NetOffice.MSFormsApi.HTMLHidden> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.MSFormsApi.HTMLHidden>();
-			foreach(object proxy in proxyList)
-				resultList.Add( new NetOffice.MSFormsApi.HTMLHidden(null, proxy) );
-			return resultList.ToArray();
-		}
-
-		/// <summary>
-        /// Returns a running MSForms.HTMLHidden object from the environment/system.
-        /// </summary>
-        /// <returns>an MSForms.HTMLHidden object or null</returns>
-		public static NetOffice.MSFormsApi.HTMLHidden GetActiveInstance()
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("MSForms","HTMLHidden", false);
-			if(null != proxy)
-				return new NetOffice.MSFormsApi.HTMLHidden(null, proxy);
-			else
-				return null;
-		}
-
-		/// <summary>
-        /// Returns a running MSForms.HTMLHidden object from the environment/system. 
-        /// </summary>
-	    /// <param name="throwOnError">throw an exception if no object was found</param>
-        /// <returns>an MSForms.HTMLHidden object or null</returns>
-		public static NetOffice.MSFormsApi.HTMLHidden GetActiveInstance(bool throwOnError)
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("MSForms","HTMLHidden", throwOnError);
-			if(null != proxy)
-				return new NetOffice.MSFormsApi.HTMLHidden(null, proxy);
-			else
-				return null;
-		}
 		#endregion
 
 		#region Events
@@ -207,12 +168,12 @@ namespace NetOffice.MSFormsApi
 				return;
 	
             if (null == _activeSinkId)
-				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, WHTMLControlEvents6_SinkHelper.Id);
+				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, Events.WHTMLControlEvents6_SinkHelper.Id);
 
 
-			if(WHTMLControlEvents6_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
+			if(Events.WHTMLControlEvents6_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
 			{
-				_wHTMLControlEvents6_SinkHelper = new WHTMLControlEvents6_SinkHelper(this, _connectPoint);
+				_wHTMLControlEvents6_SinkHelper = new Events.WHTMLControlEvents6_SinkHelper(this, _connectPoint);
 				return;
 			} 
         }

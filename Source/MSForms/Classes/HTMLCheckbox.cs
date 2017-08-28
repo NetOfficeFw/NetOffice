@@ -1,12 +1,10 @@
 ﻿using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
-using NetOffice;
-using NetOffice.Misc;
+using NetOffice.Attributes;
 
 namespace NetOffice.MSFormsApi
 {
-
 	#region Delegates
 
 	#pragma warning disable
@@ -15,21 +13,23 @@ namespace NetOffice.MSFormsApi
 
 	#endregion
 
-	///<summary>
+	/// <summary>
 	/// CoClass HTMLCheckbox 
 	/// SupportByVersion MSForms, 2
-	///</summary>
-	[SupportByVersionAttribute("MSForms", 2)]
-	[EntityTypeAttribute(EntityType.IsCoClass)]
-	public class HTMLCheckbox : IWHTMLCheckbox,IEventBinding
+	/// </summary>
+	[SupportByVersion("MSForms", 2)]
+	[EntityType(EntityType.IsCoClass)]
+	[EventSink(typeof(Events.WHTMLControlEvents3_SinkHelper))]
+	public class HTMLCheckbox : IWHTMLCheckbox, IEventBinding
 	{
 		#pragma warning disable
+
 		#region Fields
 		
 		private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
 		private string _activeSinkId;
 		private NetRuntimeSystem.Type _thisType;
-		WHTMLControlEvents3_SinkHelper _wHTMLControlEvents3_SinkHelper;
+		private Events.WHTMLControlEvents3_SinkHelper _wHTMLControlEvents3_SinkHelper;
 	
 		#endregion
 
@@ -38,6 +38,7 @@ namespace NetOffice.MSFormsApi
         /// <summary>
         /// Instance Type
         /// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
         public override Type InstanceType
         {
             get
@@ -104,17 +105,17 @@ namespace NetOffice.MSFormsApi
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of HTMLCheckbox 
-        ///</summary>		
+        /// </summary>		
 		public HTMLCheckbox():base("MSForms.HTMLCheckbox")
 		{
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of HTMLCheckbox
-        ///</summary>
+        /// </summary>
         ///<param name="progId">registered ProgID</param>
 		public HTMLCheckbox(string progId):base(progId)
 		{
@@ -124,46 +125,6 @@ namespace NetOffice.MSFormsApi
 		#endregion
 
 		#region Static CoClass Methods
-
-		/// <summary>
-        /// Returns all running MSForms.HTMLCheckbox objects from the environment/system
-        /// </summary>
-        /// <returns>an MSForms.HTMLCheckbox array</returns>
-		public static NetOffice.MSFormsApi.HTMLCheckbox[] GetActiveInstances()
-		{		
-			IDisposableEnumeration proxyList = NetOffice.ProxyService.GetActiveInstances("MSForms","HTMLCheckbox");
-			NetRuntimeSystem.Collections.Generic.List<NetOffice.MSFormsApi.HTMLCheckbox> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.MSFormsApi.HTMLCheckbox>();
-			foreach(object proxy in proxyList)
-				resultList.Add( new NetOffice.MSFormsApi.HTMLCheckbox(null, proxy) );
-			return resultList.ToArray();
-		}
-
-		/// <summary>
-        /// Returns a running MSForms.HTMLCheckbox object from the environment/system.
-        /// </summary>
-        /// <returns>an MSForms.HTMLCheckbox object or null</returns>
-		public static NetOffice.MSFormsApi.HTMLCheckbox GetActiveInstance()
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("MSForms","HTMLCheckbox", false);
-			if(null != proxy)
-				return new NetOffice.MSFormsApi.HTMLCheckbox(null, proxy);
-			else
-				return null;
-		}
-
-		/// <summary>
-        /// Returns a running MSForms.HTMLCheckbox object from the environment/system. 
-        /// </summary>
-	    /// <param name="throwOnError">throw an exception if no object was found</param>
-        /// <returns>an MSForms.HTMLCheckbox object or null</returns>
-		public static NetOffice.MSFormsApi.HTMLCheckbox GetActiveInstance(bool throwOnError)
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("MSForms","HTMLCheckbox", throwOnError);
-			if(null != proxy)
-				return new NetOffice.MSFormsApi.HTMLCheckbox(null, proxy);
-			else
-				return null;
-		}
 		#endregion
 
 		#region Events
@@ -207,12 +168,12 @@ namespace NetOffice.MSFormsApi
 				return;
 	
             if (null == _activeSinkId)
-				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, WHTMLControlEvents3_SinkHelper.Id);
+				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, Events.WHTMLControlEvents3_SinkHelper.Id);
 
 
-			if(WHTMLControlEvents3_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
+			if(Events.WHTMLControlEvents3_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
 			{
-				_wHTMLControlEvents3_SinkHelper = new WHTMLControlEvents3_SinkHelper(this, _connectPoint);
+				_wHTMLControlEvents3_SinkHelper = new Events.WHTMLControlEvents3_SinkHelper(this, _connectPoint);
 				return;
 			} 
         }

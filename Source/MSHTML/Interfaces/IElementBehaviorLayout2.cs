@@ -1,23 +1,34 @@
-﻿using System;
+﻿using System.Reflection;
+using System;
 using NetRuntimeSystem = System;
-using System.Runtime.InteropServices;
 using System.ComponentModel;
-using System.Runtime.CompilerServices;
-using System.Reflection;
-using System.Collections.Generic;
-using NetOffice;
+using NetOffice.Attributes;
+
 namespace NetOffice.MSHTMLApi
 {
-	///<summary>
+	/// <summary>
 	/// Interface IElementBehaviorLayout2 
 	/// SupportByVersion MSHTML, 4
-	///</summary>
-	[SupportByVersionAttribute("MSHTML", 4)]
-	[EntityTypeAttribute(EntityType.IsInterface)]
-	public class IElementBehaviorLayout2 : COMObject
+	/// </summary>
+	[SupportByVersion("MSHTML", 4)]
+	[EntityType(EntityType.IsInterface)]
+ 	public class IElementBehaviorLayout2 : COMObject
 	{
 		#pragma warning disable
+
 		#region Type Information
+
+		/// <summary>
+		/// Instance Type
+		/// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
+		public override Type InstanceType
+		{
+			get
+			{
+				return LateBindingApiWrapperType;
+			}
+		}
 
         private static Type _type;
 
@@ -28,14 +39,20 @@ namespace NetOffice.MSHTMLApi
             {
                 if (null == _type)
                     _type = typeof(IElementBehaviorLayout2);
-                    
                 return _type;
             }
         }
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public IElementBehaviorLayout2(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -81,7 +98,7 @@ namespace NetOffice.MSHTMLApi
 		{
 		}
 		
-		/// <param name="progId">registered ProgID</param>
+		/// <param name="progId">registered progID</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public IElementBehaviorLayout2(string progId) : base(progId)
 		{
@@ -97,21 +114,21 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
-		/// 
 		/// </summary>
 		/// <param name="plDescent">Int32 plDescent</param>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[SupportByVersion("MSHTML", 4)]
 		public Int32 GetTextDescent(out Int32 plDescent)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
 			plDescent = 0;
 			object[] paramsArray = Invoker.ValidateParamsArray(plDescent);
-			object returnItem = Invoker.MethodReturn(this, "GetTextDescent", paramsArray);
+			object returnItem = Invoker.MethodReturn(this, "GetTextDescent", paramsArray, modifiers);
 			plDescent = (Int32)paramsArray[0];
 			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		#endregion
+
 		#pragma warning restore
 	}
 }

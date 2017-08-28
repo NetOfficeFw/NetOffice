@@ -1,23 +1,33 @@
-﻿using System;
+using System;
 using NetRuntimeSystem = System;
-using System.Runtime.InteropServices;
-using System.Runtime.CompilerServices;
 using System.ComponentModel;
-using System.Reflection;
-using System.Collections.Generic;
-using NetOffice;
+using NetOffice.Attributes;
+
 namespace NetOffice.OutlookApi
 {
-	///<summary>
+	/// <summary>
 	/// DispatchInterface _TableView 
 	/// SupportByVersion Outlook, 12,14,15,16
-	///</summary>
-	[SupportByVersionAttribute("Outlook", 12,14,15,16)]
-	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
-	public class _TableView : COMObject
+	/// </summary>
+	[SupportByVersion("Outlook", 12,14,15,16)]
+	[EntityType(EntityType.IsDispatchInterface)]
+ 	public class _TableView : COMObject
 	{
 		#pragma warning disable
+
 		#region Type Information
+
+		/// <summary>
+		/// Instance Type
+		/// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
+		public override Type InstanceType
+		{
+			get
+			{
+				return LateBindingApiWrapperType;
+			}
+		}
 
         private static Type _type;
 
@@ -28,14 +38,20 @@ namespace NetOffice.OutlookApi
             {
                 if (null == _type)
                     _type = typeof(_TableView);
-                    
                 return _type;
             }
         }
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public _TableView(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -81,7 +97,7 @@ namespace NetOffice.OutlookApi
 		{
 		}
 		
-		/// <param name="progId">registered ProgID</param>
+		/// <param name="progId">registered progID</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public _TableView(string progId) : base(progId)
 		{
@@ -94,530 +110,449 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff868175.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Outlook", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff868175.aspx </remarks>
+		[SupportByVersion("Outlook", 12,14,15,16)]
+		[BaseResult]
 		public NetOffice.OutlookApi._Application Application
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				NetOffice.OutlookApi._Application newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OutlookApi._Application;
-				return newObject;
+				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.OutlookApi._Application>(this, "Application");
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff867307.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Outlook", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff867307.aspx </remarks>
+		[SupportByVersion("Outlook", 12,14,15,16)]
 		public NetOffice.OutlookApi.Enums.OlObjectClass Class
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Class", paramsArray);
-				int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-				return (NetOffice.OutlookApi.Enums.OlObjectClass)intReturnItem;
+				return Factory.ExecuteEnumPropertyGet<NetOffice.OutlookApi.Enums.OlObjectClass>(this, "Class");
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff865859.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Outlook", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff865859.aspx </remarks>
+		[SupportByVersion("Outlook", 12,14,15,16)]
+		[BaseResult]
 		public NetOffice.OutlookApi._NameSpace Session
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Session", paramsArray);
-				NetOffice.OutlookApi._NameSpace newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OutlookApi._NameSpace;
-				return newObject;
+				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.OutlookApi._NameSpace>(this, "Session");
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff860760.aspx
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("Outlook", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860760.aspx </remarks>
+		[SupportByVersion("Outlook", 12,14,15,16), ProxyResult]
 		public object Parent
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Parent", paramsArray);
-				ICOMObject newObject = Factory.CreateObjectFromComProxy(this,returnItem);
-				return newObject;
+				return Factory.ExecuteReferencePropertyGet(this, "Parent");
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff869144.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Outlook", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff869144.aspx </remarks>
+		[SupportByVersion("Outlook", 12,14,15,16)]
 		public string Language
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Language", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "Language");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "Language", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "Language", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff863896.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Outlook", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff863896.aspx </remarks>
+		[SupportByVersion("Outlook", 12,14,15,16)]
 		public bool LockUserChanges
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "LockUserChanges", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "LockUserChanges");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "LockUserChanges", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "LockUserChanges", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff860646.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Outlook", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860646.aspx </remarks>
+		[SupportByVersion("Outlook", 12,14,15,16)]
 		public string Name
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Name", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "Name");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "Name", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "Name", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff869483.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Outlook", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff869483.aspx </remarks>
+		[SupportByVersion("Outlook", 12,14,15,16)]
 		public NetOffice.OutlookApi.Enums.OlViewSaveOption SaveOption
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "SaveOption", paramsArray);
-				int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-				return (NetOffice.OutlookApi.Enums.OlViewSaveOption)intReturnItem;
+				return Factory.ExecuteEnumPropertyGet<NetOffice.OutlookApi.Enums.OlViewSaveOption>(this, "SaveOption");
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff868517.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Outlook", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff868517.aspx </remarks>
+		[SupportByVersion("Outlook", 12,14,15,16)]
 		public bool Standard
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Standard", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "Standard");
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff863381.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Outlook", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff863381.aspx </remarks>
+		[SupportByVersion("Outlook", 12,14,15,16)]
 		public NetOffice.OutlookApi.Enums.OlViewType ViewType
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "ViewType", paramsArray);
-				int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-				return (NetOffice.OutlookApi.Enums.OlViewType)intReturnItem;
+				return Factory.ExecuteEnumPropertyGet<NetOffice.OutlookApi.Enums.OlViewType>(this, "ViewType");
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff861032.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Outlook", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff861032.aspx </remarks>
+		[SupportByVersion("Outlook", 12,14,15,16)]
 		public string XML
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "XML", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "XML");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "XML", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "XML", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff867097.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Outlook", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff867097.aspx </remarks>
+		[SupportByVersion("Outlook", 12,14,15,16)]
 		public string Filter
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Filter", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "Filter");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "Filter", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "Filter", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff868977.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Outlook", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff868977.aspx </remarks>
+		[SupportByVersion("Outlook", 12,14,15,16)]
 		public NetOffice.OutlookApi.ViewFields ViewFields
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "ViewFields", paramsArray);
-				NetOffice.OutlookApi.ViewFields newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OutlookApi.ViewFields.LateBindingApiWrapperType) as NetOffice.OutlookApi.ViewFields;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OutlookApi.ViewFields>(this, "ViewFields", NetOffice.OutlookApi.ViewFields.LateBindingApiWrapperType);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff864190.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Outlook", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff864190.aspx </remarks>
+		[SupportByVersion("Outlook", 12,14,15,16)]
 		public NetOffice.OutlookApi.OrderFields GroupByFields
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "GroupByFields", paramsArray);
-				NetOffice.OutlookApi.OrderFields newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OutlookApi.OrderFields.LateBindingApiWrapperType) as NetOffice.OutlookApi.OrderFields;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OutlookApi.OrderFields>(this, "GroupByFields", NetOffice.OutlookApi.OrderFields.LateBindingApiWrapperType);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff860931.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Outlook", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860931.aspx </remarks>
+		[SupportByVersion("Outlook", 12,14,15,16)]
 		public NetOffice.OutlookApi.OrderFields SortFields
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "SortFields", paramsArray);
-				NetOffice.OutlookApi.OrderFields newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OutlookApi.OrderFields.LateBindingApiWrapperType) as NetOffice.OutlookApi.OrderFields;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OutlookApi.OrderFields>(this, "SortFields", NetOffice.OutlookApi.OrderFields.LateBindingApiWrapperType);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff869693.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Outlook", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff869693.aspx </remarks>
+		[SupportByVersion("Outlook", 12,14,15,16)]
 		public Int32 MaxLinesInMultiLineView
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "MaxLinesInMultiLineView", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "MaxLinesInMultiLineView");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "MaxLinesInMultiLineView", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "MaxLinesInMultiLineView", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff863027.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Outlook", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff863027.aspx </remarks>
+		[SupportByVersion("Outlook", 12,14,15,16)]
 		public bool AutomaticGrouping
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "AutomaticGrouping", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "AutomaticGrouping");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "AutomaticGrouping", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "AutomaticGrouping", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff861600.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Outlook", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff861600.aspx </remarks>
+		[SupportByVersion("Outlook", 12,14,15,16)]
 		public NetOffice.OutlookApi.Enums.OlDefaultExpandCollapseSetting DefaultExpandCollapseSetting
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "DefaultExpandCollapseSetting", paramsArray);
-				int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-				return (NetOffice.OutlookApi.Enums.OlDefaultExpandCollapseSetting)intReturnItem;
+				return Factory.ExecuteEnumPropertyGet<NetOffice.OutlookApi.Enums.OlDefaultExpandCollapseSetting>(this, "DefaultExpandCollapseSetting");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "DefaultExpandCollapseSetting", paramsArray);
+				Factory.ExecuteEnumPropertySet(this, "DefaultExpandCollapseSetting", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff868685.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Outlook", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff868685.aspx </remarks>
+		[SupportByVersion("Outlook", 12,14,15,16)]
 		public bool AutomaticColumnSizing
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "AutomaticColumnSizing", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "AutomaticColumnSizing");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "AutomaticColumnSizing", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "AutomaticColumnSizing", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff866466.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Outlook", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff866466.aspx </remarks>
+		[SupportByVersion("Outlook", 12,14,15,16)]
 		public NetOffice.OutlookApi.Enums.OlMultiLine MultiLine
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "MultiLine", paramsArray);
-				int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-				return (NetOffice.OutlookApi.Enums.OlMultiLine)intReturnItem;
+				return Factory.ExecuteEnumPropertyGet<NetOffice.OutlookApi.Enums.OlMultiLine>(this, "MultiLine");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "MultiLine", paramsArray);
+				Factory.ExecuteEnumPropertySet(this, "MultiLine", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff864698.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Outlook", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff864698.aspx </remarks>
+		[SupportByVersion("Outlook", 12,14,15,16)]
 		public Int32 MultiLineWidth
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "MultiLineWidth", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "MultiLineWidth");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "MultiLineWidth", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "MultiLineWidth", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff869460.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Outlook", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff869460.aspx </remarks>
+		[SupportByVersion("Outlook", 12,14,15,16)]
 		public bool AllowInCellEditing
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "AllowInCellEditing", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "AllowInCellEditing");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "AllowInCellEditing", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "AllowInCellEditing", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff863002.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Outlook", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff863002.aspx </remarks>
+		[SupportByVersion("Outlook", 12,14,15,16)]
 		public bool ShowNewItemRow
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "ShowNewItemRow", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "ShowNewItemRow");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "ShowNewItemRow", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "ShowNewItemRow", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff868644.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Outlook", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff868644.aspx </remarks>
+		[SupportByVersion("Outlook", 12,14,15,16)]
 		public NetOffice.OutlookApi.Enums.OlGridLineStyle GridLineStyle
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "GridLineStyle", paramsArray);
-				int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-				return (NetOffice.OutlookApi.Enums.OlGridLineStyle)intReturnItem;
+				return Factory.ExecuteEnumPropertyGet<NetOffice.OutlookApi.Enums.OlGridLineStyle>(this, "GridLineStyle");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "GridLineStyle", paramsArray);
+				Factory.ExecuteEnumPropertySet(this, "GridLineStyle", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff868669.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Outlook", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff868669.aspx </remarks>
+		[SupportByVersion("Outlook", 12,14,15,16)]
 		public bool ShowItemsInGroups
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "ShowItemsInGroups", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "ShowItemsInGroups");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "ShowItemsInGroups", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "ShowItemsInGroups", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff864735.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Outlook", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff864735.aspx </remarks>
+		[SupportByVersion("Outlook", 12,14,15,16)]
 		public bool ShowReadingPane
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "ShowReadingPane", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "ShowReadingPane");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "ShowReadingPane", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "ShowReadingPane", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff861817.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Outlook", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff861817.aspx </remarks>
+		[SupportByVersion("Outlook", 12,14,15,16)]
 		public bool HideReadingPaneHeaderInfo
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "HideReadingPaneHeaderInfo", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "HideReadingPaneHeaderInfo");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "HideReadingPaneHeaderInfo", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "HideReadingPaneHeaderInfo", value);
 			}
 		}
 
@@ -625,193 +560,162 @@ namespace NetOffice.OutlookApi
 		/// SupportByVersion Outlook 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Outlook", 12,14,15,16)]
+		[SupportByVersion("Outlook", 12,14,15,16)]
 		public bool ShowUnreadAndFlaggedMessages
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "ShowUnreadAndFlaggedMessages", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "ShowUnreadAndFlaggedMessages");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "ShowUnreadAndFlaggedMessages", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "ShowUnreadAndFlaggedMessages", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff866057.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Outlook", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff866057.aspx </remarks>
+		[SupportByVersion("Outlook", 12,14,15,16)]
 		public NetOffice.OutlookApi.ViewFont RowFont
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "RowFont", paramsArray);
-				NetOffice.OutlookApi.ViewFont newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OutlookApi.ViewFont.LateBindingApiWrapperType) as NetOffice.OutlookApi.ViewFont;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OutlookApi.ViewFont>(this, "RowFont", NetOffice.OutlookApi.ViewFont.LateBindingApiWrapperType);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff870013.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Outlook", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff870013.aspx </remarks>
+		[SupportByVersion("Outlook", 12,14,15,16)]
 		public NetOffice.OutlookApi.ViewFont ColumnFont
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "ColumnFont", paramsArray);
-				NetOffice.OutlookApi.ViewFont newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OutlookApi.ViewFont.LateBindingApiWrapperType) as NetOffice.OutlookApi.ViewFont;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OutlookApi.ViewFont>(this, "ColumnFont", NetOffice.OutlookApi.ViewFont.LateBindingApiWrapperType);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff868021.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Outlook", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff868021.aspx </remarks>
+		[SupportByVersion("Outlook", 12,14,15,16)]
 		public NetOffice.OutlookApi.ViewFont AutoPreviewFont
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "AutoPreviewFont", paramsArray);
-				NetOffice.OutlookApi.ViewFont newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OutlookApi.ViewFont.LateBindingApiWrapperType) as NetOffice.OutlookApi.ViewFont;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OutlookApi.ViewFont>(this, "AutoPreviewFont", NetOffice.OutlookApi.ViewFont.LateBindingApiWrapperType);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff865028.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Outlook", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff865028.aspx </remarks>
+		[SupportByVersion("Outlook", 12,14,15,16)]
 		public NetOffice.OutlookApi.Enums.OlAutoPreview AutoPreview
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "AutoPreview", paramsArray);
-				int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-				return (NetOffice.OutlookApi.Enums.OlAutoPreview)intReturnItem;
+				return Factory.ExecuteEnumPropertyGet<NetOffice.OutlookApi.Enums.OlAutoPreview>(this, "AutoPreview");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "AutoPreview", paramsArray);
+				Factory.ExecuteEnumPropertySet(this, "AutoPreview", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff868223.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Outlook", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff868223.aspx </remarks>
+		[SupportByVersion("Outlook", 12,14,15,16)]
 		public NetOffice.OutlookApi.AutoFormatRules AutoFormatRules
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "AutoFormatRules", paramsArray);
-				NetOffice.OutlookApi.AutoFormatRules newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OutlookApi.AutoFormatRules.LateBindingApiWrapperType) as NetOffice.OutlookApi.AutoFormatRules;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OutlookApi.AutoFormatRules>(this, "AutoFormatRules", NetOffice.OutlookApi.AutoFormatRules.LateBindingApiWrapperType);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Outlook 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff868682.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Outlook", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff868682.aspx </remarks>
+		[SupportByVersion("Outlook", 14,15,16)]
 		public bool ShowConversationByDate
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "ShowConversationByDate", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "ShowConversationByDate");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "ShowConversationByDate", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "ShowConversationByDate", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Outlook 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff861298.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Outlook", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff861298.aspx </remarks>
+		[SupportByVersion("Outlook", 14,15,16)]
 		public bool ShowFullConversations
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "ShowFullConversations", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "ShowFullConversations");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "ShowFullConversations", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "ShowFullConversations", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Outlook 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff868052.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Outlook", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff868052.aspx </remarks>
+		[SupportByVersion("Outlook", 14,15,16)]
 		public bool AlwaysExpandConversation
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "AlwaysExpandConversation", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "AlwaysExpandConversation");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "AlwaysExpandConversation", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "AlwaysExpandConversation", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Outlook 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff870093.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Outlook", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff870093.aspx </remarks>
+		[SupportByVersion("Outlook", 14,15,16)]
 		public bool ShowConversationSendersAboveSubject
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "ShowConversationSendersAboveSubject", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "ShowConversationSendersAboveSubject");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "ShowConversationSendersAboveSubject", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "ShowConversationSendersAboveSubject", value);
 			}
 		}
 
@@ -821,104 +725,91 @@ namespace NetOffice.OutlookApi
 
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff868946.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Outlook", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff868946.aspx </remarks>
+		[SupportByVersion("Outlook", 12,14,15,16)]
 		public void Apply()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "Apply", paramsArray);
+			 Factory.ExecuteMethod(this, "Apply");
 		}
 
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff868018.aspx
 		/// </summary>
-		/// <param name="name">string Name</param>
-		/// <param name="saveOption">optional NetOffice.OutlookApi.Enums.OlViewSaveOption SaveOption</param>
-		[SupportByVersionAttribute("Outlook", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff868018.aspx </remarks>
+		/// <param name="name">string name</param>
+		/// <param name="saveOption">optional NetOffice.OutlookApi.Enums.OlViewSaveOption saveOption</param>
+		[SupportByVersion("Outlook", 12,14,15,16)]
 		public NetOffice.OutlookApi.View Copy(string name, object saveOption)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(name, saveOption);
-			object returnItem = Invoker.MethodReturn(this, "Copy", paramsArray);
-			NetOffice.OutlookApi.View newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OutlookApi.View.LateBindingApiWrapperType) as NetOffice.OutlookApi.View;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OutlookApi.View>(this, "Copy", NetOffice.OutlookApi.View.LateBindingApiWrapperType, name, saveOption);
 		}
 
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff868018.aspx
 		/// </summary>
-		/// <param name="name">string Name</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Outlook", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff868018.aspx </remarks>
+		/// <param name="name">string name</param>
+		[CustomMethod]
+		[SupportByVersion("Outlook", 12,14,15,16)]
 		public NetOffice.OutlookApi.View Copy(string name)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(name);
-			object returnItem = Invoker.MethodReturn(this, "Copy", paramsArray);
-			NetOffice.OutlookApi.View newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OutlookApi.View.LateBindingApiWrapperType) as NetOffice.OutlookApi.View;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OutlookApi.View>(this, "Copy", NetOffice.OutlookApi.View.LateBindingApiWrapperType, name);
 		}
 
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff861628.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Outlook", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff861628.aspx </remarks>
+		[SupportByVersion("Outlook", 12,14,15,16)]
 		public void Delete()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "Delete", paramsArray);
+			 Factory.ExecuteMethod(this, "Delete");
 		}
 
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff868782.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Outlook", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff868782.aspx </remarks>
+		[SupportByVersion("Outlook", 12,14,15,16)]
 		public void Reset()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "Reset", paramsArray);
+			 Factory.ExecuteMethod(this, "Reset");
 		}
 
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff866454.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Outlook", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff866454.aspx </remarks>
+		[SupportByVersion("Outlook", 12,14,15,16)]
 		public void Save()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "Save", paramsArray);
+			 Factory.ExecuteMethod(this, "Save");
 		}
 
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff869508.aspx
 		/// </summary>
-		/// <param name="date">DateTime Date</param>
-		[SupportByVersionAttribute("Outlook", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff869508.aspx </remarks>
+		/// <param name="date">DateTime date</param>
+		[SupportByVersion("Outlook", 12,14,15,16)]
 		public void GoToDate(DateTime date)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(date);
-			Invoker.Method(this, "GoToDate", paramsArray);
+			 Factory.ExecuteMethod(this, "GoToDate", date);
 		}
 
 		/// <summary>
 		/// SupportByVersion Outlook 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff864774.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Outlook", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff864774.aspx </remarks>
+		[SupportByVersion("Outlook", 14,15,16)]
 		public NetOffice.OutlookApi.Table GetTable()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "GetTable", paramsArray);
-			NetOffice.OutlookApi.Table newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OutlookApi.Table.LateBindingApiWrapperType) as NetOffice.OutlookApi.Table;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OutlookApi.Table>(this, "GetTable", NetOffice.OutlookApi.Table.LateBindingApiWrapperType);
 		}
 
 		#endregion
+
 		#pragma warning restore
 	}
 }

@@ -1,23 +1,33 @@
 ﻿using System;
 using NetRuntimeSystem = System;
-using System.Runtime.InteropServices;
-using System.Runtime.CompilerServices;
 using System.ComponentModel;
-using System.Reflection;
-using System.Collections.Generic;
-using NetOffice;
+using NetOffice.Attributes;
+
 namespace NetOffice.OfficeApi
 {
-	///<summary>
+	/// <summary>
 	/// DispatchInterface Balloon 
 	/// SupportByVersion Office, 9,10,11,12,14,15,16
-	///</summary>
-	[SupportByVersionAttribute("Office", 9,10,11,12,14,15,16)]
-	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
-	public class Balloon : _IMsoDispObj
+	/// </summary>
+	[SupportByVersion("Office", 9,10,11,12,14,15,16)]
+	[EntityType(EntityType.IsDispatchInterface)]
+ 	public class Balloon : _IMsoDispObj
 	{
 		#pragma warning disable
+
 		#region Type Information
+
+		/// <summary>
+		/// Instance Type
+		/// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
+		public override Type InstanceType
+		{
+			get
+			{
+				return LateBindingApiWrapperType;
+			}
+		}
 
         private static Type _type;
 
@@ -28,14 +38,20 @@ namespace NetOffice.OfficeApi
             {
                 if (null == _type)
                     _type = typeof(Balloon);
-                    
                 return _type;
             }
         }
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public Balloon(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -81,7 +97,7 @@ namespace NetOffice.OfficeApi
 		{
 		}
 		
-		/// <param name="progId">registered ProgID</param>
+		/// <param name="progId">registered progID</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public Balloon(string progId) : base(progId)
 		{
@@ -96,15 +112,12 @@ namespace NetOffice.OfficeApi
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("Office", 9,10,11,12,14,15,16)]
+		[SupportByVersion("Office", 9,10,11,12,14,15,16), ProxyResult]
 		public object Parent
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Parent", paramsArray);
-				ICOMObject newObject = Factory.CreateObjectFromComProxy(this,returnItem);
-				return newObject;
+				return Factory.ExecuteReferencePropertyGet(this, "Parent");
 			}
 		}
 
@@ -113,15 +126,12 @@ namespace NetOffice.OfficeApi
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("Office", 9,10,11,12,14,15,16)]
+		[SupportByVersion("Office", 9,10,11,12,14,15,16), ProxyResult]
 		public object Checkboxes
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Checkboxes", paramsArray);
-				ICOMObject newObject = Factory.CreateObjectFromComProxy(this,returnItem);
-				return newObject;
+				return Factory.ExecuteReferencePropertyGet(this, "Checkboxes");
 			}
 		}
 
@@ -130,15 +140,12 @@ namespace NetOffice.OfficeApi
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("Office", 9,10,11,12,14,15,16)]
+		[SupportByVersion("Office", 9,10,11,12,14,15,16), ProxyResult]
 		public object Labels
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Labels", paramsArray);
-				ICOMObject newObject = Factory.CreateObjectFromComProxy(this,returnItem);
-				return newObject;
+				return Factory.ExecuteReferencePropertyGet(this, "Labels");
 			}
 		}
 
@@ -146,20 +153,16 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Office", 9,10,11,12,14,15,16)]
+		[SupportByVersion("Office", 9,10,11,12,14,15,16)]
 		public NetOffice.OfficeApi.Enums.MsoBalloonType BalloonType
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "BalloonType", paramsArray);
-				int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-				return (NetOffice.OfficeApi.Enums.MsoBalloonType)intReturnItem;
+				return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoBalloonType>(this, "BalloonType");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "BalloonType", paramsArray);
+				Factory.ExecuteEnumPropertySet(this, "BalloonType", value);
 			}
 		}
 
@@ -167,20 +170,16 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Office", 9,10,11,12,14,15,16)]
+		[SupportByVersion("Office", 9,10,11,12,14,15,16)]
 		public NetOffice.OfficeApi.Enums.MsoIconType Icon
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Icon", paramsArray);
-				int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-				return (NetOffice.OfficeApi.Enums.MsoIconType)intReturnItem;
+				return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoIconType>(this, "Icon");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "Icon", paramsArray);
+				Factory.ExecuteEnumPropertySet(this, "Icon", value);
 			}
 		}
 
@@ -188,19 +187,16 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Office", 9,10,11,12,14,15,16)]
+		[SupportByVersion("Office", 9,10,11,12,14,15,16)]
 		public string Heading
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Heading", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "Heading");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "Heading", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "Heading", value);
 			}
 		}
 
@@ -208,19 +204,16 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Office", 9,10,11,12,14,15,16)]
+		[SupportByVersion("Office", 9,10,11,12,14,15,16)]
 		public string Text
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Text", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "Text");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "Text", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "Text", value);
 			}
 		}
 
@@ -228,20 +221,16 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Office", 9,10,11,12,14,15,16)]
+		[SupportByVersion("Office", 9,10,11,12,14,15,16)]
 		public NetOffice.OfficeApi.Enums.MsoModeType Mode
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Mode", paramsArray);
-				int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-				return (NetOffice.OfficeApi.Enums.MsoModeType)intReturnItem;
+				return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoModeType>(this, "Mode");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "Mode", paramsArray);
+				Factory.ExecuteEnumPropertySet(this, "Mode", value);
 			}
 		}
 
@@ -249,20 +238,16 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Office", 9,10,11,12,14,15,16)]
+		[SupportByVersion("Office", 9,10,11,12,14,15,16)]
 		public NetOffice.OfficeApi.Enums.MsoAnimationType Animation
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Animation", paramsArray);
-				int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-				return (NetOffice.OfficeApi.Enums.MsoAnimationType)intReturnItem;
+				return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoAnimationType>(this, "Animation");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "Animation", paramsArray);
+				Factory.ExecuteEnumPropertySet(this, "Animation", value);
 			}
 		}
 
@@ -270,20 +255,16 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Office", 9,10,11,12,14,15,16)]
+		[SupportByVersion("Office", 9,10,11,12,14,15,16)]
 		public NetOffice.OfficeApi.Enums.MsoButtonSetType Button
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Button", paramsArray);
-				int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-				return (NetOffice.OfficeApi.Enums.MsoButtonSetType)intReturnItem;
+				return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoButtonSetType>(this, "Button");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "Button", paramsArray);
+				Factory.ExecuteEnumPropertySet(this, "Button", value);
 			}
 		}
 
@@ -291,19 +272,16 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Office", 9,10,11,12,14,15,16)]
+		[SupportByVersion("Office", 9,10,11,12,14,15,16)]
 		public string Callback
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Callback", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "Callback");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "Callback", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "Callback", value);
 			}
 		}
 
@@ -311,19 +289,16 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Office", 9,10,11,12,14,15,16)]
+		[SupportByVersion("Office", 9,10,11,12,14,15,16)]
 		public Int32 Private
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Private", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "Private");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "Private", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "Private", value);
 			}
 		}
 
@@ -331,14 +306,12 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Office", 9,10,11,12,14,15,16)]
+		[SupportByVersion("Office", 9,10,11,12,14,15,16)]
 		public string Name
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Name", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "Name");
 			}
 		}
 
@@ -348,44 +321,37 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="left">Int32 Left</param>
-		/// <param name="top">Int32 Top</param>
-		/// <param name="right">Int32 Right</param>
-		/// <param name="bottom">Int32 Bottom</param>
-		[SupportByVersionAttribute("Office", 9,10,11,12,14,15,16)]
+		/// <param name="left">Int32 left</param>
+		/// <param name="top">Int32 top</param>
+		/// <param name="right">Int32 right</param>
+		/// <param name="bottom">Int32 bottom</param>
+		[SupportByVersion("Office", 9,10,11,12,14,15,16)]
 		public void SetAvoidRectangle(Int32 left, Int32 top, Int32 right, Int32 bottom)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(left, top, right, bottom);
-			Invoker.Method(this, "SetAvoidRectangle", paramsArray);
+			 Factory.ExecuteMethod(this, "SetAvoidRectangle", left, top, right, bottom);
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("Office", 9,10,11,12,14,15,16)]
+		[SupportByVersion("Office", 9,10,11,12,14,15,16)]
 		public NetOffice.OfficeApi.Enums.MsoBalloonButtonType Show()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "Show", paramsArray);
-			int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-			return (NetOffice.OfficeApi.Enums.MsoBalloonButtonType)intReturnItem;
+			return Factory.ExecuteEnumMethodGet<NetOffice.OfficeApi.Enums.MsoBalloonButtonType>(this, "Show");
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("Office", 9,10,11,12,14,15,16)]
+		[SupportByVersion("Office", 9,10,11,12,14,15,16)]
 		public void Close()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "Close", paramsArray);
+			 Factory.ExecuteMethod(this, "Close");
 		}
 
 		#endregion
+
 		#pragma warning restore
 	}
 }

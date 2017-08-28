@@ -1,24 +1,34 @@
 ﻿using System;
 using NetRuntimeSystem = System;
-using System.Runtime.InteropServices;
-using System.Runtime.CompilerServices;
 using System.ComponentModel;
-using System.Reflection;
-using System.Collections.Generic;
-using NetOffice;
+using NetOffice.Attributes;
+
 namespace NetOffice.PowerPointApi
 {
-	///<summary>
+	/// <summary>
 	/// DispatchInterface SectionProperties 
 	/// SupportByVersion PowerPoint, 14,15,16
-	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff743911.aspx
-	///</summary>
-	[SupportByVersionAttribute("PowerPoint", 14,15,16)]
-	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
-	public class SectionProperties : COMObject
+	/// </summary>
+	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff743911.aspx </remarks>
+	[SupportByVersion("PowerPoint", 14,15,16)]
+	[EntityType(EntityType.IsDispatchInterface)]
+ 	public class SectionProperties : COMObject
 	{
 		#pragma warning disable
+
 		#region Type Information
+
+		/// <summary>
+		/// Instance Type
+		/// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
+		public override Type InstanceType
+		{
+			get
+			{
+				return LateBindingApiWrapperType;
+			}
+		}
 
         private static Type _type;
 
@@ -29,14 +39,20 @@ namespace NetOffice.PowerPointApi
             {
                 if (null == _type)
                     _type = typeof(SectionProperties);
-                    
                 return _type;
             }
         }
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public SectionProperties(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -82,7 +98,7 @@ namespace NetOffice.PowerPointApi
 		{
 		}
 		
-		/// <param name="progId">registered ProgID</param>
+		/// <param name="progId">registered progID</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public SectionProperties(string progId) : base(progId)
 		{
@@ -95,51 +111,43 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745766.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff745766.aspx </remarks>
+		[SupportByVersion("PowerPoint", 14,15,16)]
 		public NetOffice.PowerPointApi.Application Application
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				NetOffice.PowerPointApi.Application newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.PowerPointApi.Application.LateBindingApiWrapperType) as NetOffice.PowerPointApi.Application;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.PowerPointApi.Application>(this, "Application", NetOffice.PowerPointApi.Application.LateBindingApiWrapperType);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744295.aspx
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff744295.aspx </remarks>
+		[SupportByVersion("PowerPoint", 14,15,16), ProxyResult]
 		public object Parent
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Parent", paramsArray);
-				ICOMObject newObject = Factory.CreateObjectFromComProxy(this,returnItem);
-				return newObject;
+				return Factory.ExecuteReferencePropertyGet(this, "Parent");
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744380.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff744380.aspx </remarks>
+		[SupportByVersion("PowerPoint", 14,15,16)]
 		public Int32 Count
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Count", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "Count");
 			}
 		}
 
@@ -149,138 +157,122 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746414.aspx
 		/// </summary>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff746414.aspx </remarks>
 		/// <param name="sectionIndex">Int32 sectionIndex</param>
-		[SupportByVersionAttribute("PowerPoint", 14,15,16)]
+		[SupportByVersion("PowerPoint", 14,15,16)]
 		public string Name(Int32 sectionIndex)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(sectionIndex);
-			object returnItem = Invoker.MethodReturn(this, "Name", paramsArray);
-			return NetRuntimeSystem.Convert.ToString(returnItem);
+			return Factory.ExecuteStringMethodGet(this, "Name", sectionIndex);
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745975.aspx
 		/// </summary>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff745975.aspx </remarks>
 		/// <param name="sectionIndex">Int32 sectionIndex</param>
 		/// <param name="sectionName">string sectionName</param>
-		[SupportByVersionAttribute("PowerPoint", 14,15,16)]
+		[SupportByVersion("PowerPoint", 14,15,16)]
 		public void Rename(Int32 sectionIndex, string sectionName)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(sectionIndex, sectionName);
-			Invoker.Method(this, "Rename", paramsArray);
+			 Factory.ExecuteMethod(this, "Rename", sectionIndex, sectionName);
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745367.aspx
 		/// </summary>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff745367.aspx </remarks>
 		/// <param name="sectionIndex">Int32 sectionIndex</param>
-		[SupportByVersionAttribute("PowerPoint", 14,15,16)]
+		[SupportByVersion("PowerPoint", 14,15,16)]
 		public Int32 SlidesCount(Int32 sectionIndex)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(sectionIndex);
-			object returnItem = Invoker.MethodReturn(this, "SlidesCount", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return Factory.ExecuteInt32MethodGet(this, "SlidesCount", sectionIndex);
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744059.aspx
 		/// </summary>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff744059.aspx </remarks>
 		/// <param name="sectionIndex">Int32 sectionIndex</param>
-		[SupportByVersionAttribute("PowerPoint", 14,15,16)]
+		[SupportByVersion("PowerPoint", 14,15,16)]
 		public Int32 FirstSlide(Int32 sectionIndex)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(sectionIndex);
-			object returnItem = Invoker.MethodReturn(this, "FirstSlide", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return Factory.ExecuteInt32MethodGet(this, "FirstSlide", sectionIndex);
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745926.aspx
 		/// </summary>
-		/// <param name="slideIndex">Int32 SlideIndex</param>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff745926.aspx </remarks>
+		/// <param name="slideIndex">Int32 slideIndex</param>
 		/// <param name="sectionName">string sectionName</param>
-		[SupportByVersionAttribute("PowerPoint", 14,15,16)]
+		[SupportByVersion("PowerPoint", 14,15,16)]
 		public Int32 AddBeforeSlide(Int32 slideIndex, string sectionName)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(slideIndex, sectionName);
-			object returnItem = Invoker.MethodReturn(this, "AddBeforeSlide", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return Factory.ExecuteInt32MethodGet(this, "AddBeforeSlide", slideIndex, sectionName);
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746122.aspx
 		/// </summary>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff746122.aspx </remarks>
 		/// <param name="sectionIndex">Int32 sectionIndex</param>
 		/// <param name="sectionName">optional object sectionName</param>
-		[SupportByVersionAttribute("PowerPoint", 14,15,16)]
+		[SupportByVersion("PowerPoint", 14,15,16)]
 		public Int32 AddSection(Int32 sectionIndex, object sectionName)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(sectionIndex, sectionName);
-			object returnItem = Invoker.MethodReturn(this, "AddSection", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return Factory.ExecuteInt32MethodGet(this, "AddSection", sectionIndex, sectionName);
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746122.aspx
 		/// </summary>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff746122.aspx </remarks>
 		/// <param name="sectionIndex">Int32 sectionIndex</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("PowerPoint", 14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("PowerPoint", 14,15,16)]
 		public Int32 AddSection(Int32 sectionIndex)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(sectionIndex);
-			object returnItem = Invoker.MethodReturn(this, "AddSection", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return Factory.ExecuteInt32MethodGet(this, "AddSection", sectionIndex);
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746717.aspx
 		/// </summary>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff746717.aspx </remarks>
 		/// <param name="sectionIndex">Int32 sectionIndex</param>
 		/// <param name="toPos">Int32 toPos</param>
-		[SupportByVersionAttribute("PowerPoint", 14,15,16)]
+		[SupportByVersion("PowerPoint", 14,15,16)]
 		public void Move(Int32 sectionIndex, Int32 toPos)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(sectionIndex, toPos);
-			Invoker.Method(this, "Move", paramsArray);
+			 Factory.ExecuteMethod(this, "Move", sectionIndex, toPos);
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744948.aspx
 		/// </summary>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff744948.aspx </remarks>
 		/// <param name="sectionIndex">Int32 sectionIndex</param>
 		/// <param name="deleteSlides">bool deleteSlides</param>
-		[SupportByVersionAttribute("PowerPoint", 14,15,16)]
+		[SupportByVersion("PowerPoint", 14,15,16)]
 		public void Delete(Int32 sectionIndex, bool deleteSlides)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(sectionIndex, deleteSlides);
-			Invoker.Method(this, "Delete", paramsArray);
+			 Factory.ExecuteMethod(this, "Delete", sectionIndex, deleteSlides);
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746673.aspx
 		/// </summary>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff746673.aspx </remarks>
 		/// <param name="sectionIndex">Int32 sectionIndex</param>
-		[SupportByVersionAttribute("PowerPoint", 14,15,16)]
+		[SupportByVersion("PowerPoint", 14,15,16)]
 		public string SectionID(Int32 sectionIndex)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(sectionIndex);
-			object returnItem = Invoker.MethodReturn(this, "SectionID", paramsArray);
-			return NetRuntimeSystem.Convert.ToString(returnItem);
+			return Factory.ExecuteStringMethodGet(this, "SectionID", sectionIndex);
 		}
 
 		#endregion
+
 		#pragma warning restore
 	}
 }

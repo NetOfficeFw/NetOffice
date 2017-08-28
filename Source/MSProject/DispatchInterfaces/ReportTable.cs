@@ -1,23 +1,33 @@
 ﻿using System;
 using NetRuntimeSystem = System;
-using System.Runtime.InteropServices;
-using System.Runtime.CompilerServices;
 using System.ComponentModel;
-using System.Reflection;
-using System.Collections.Generic;
-using NetOffice;
+using NetOffice.Attributes;
+
 namespace NetOffice.MSProjectApi
 {
-	///<summary>
+	/// <summary>
 	/// DispatchInterface ReportTable 
 	/// SupportByVersion MSProject, 11
-	///</summary>
-	[SupportByVersionAttribute("MSProject", 11)]
-	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
-	public class ReportTable : COMObject
+	/// </summary>
+	[SupportByVersion("MSProject", 11)]
+	[EntityType(EntityType.IsDispatchInterface)]
+ 	public class ReportTable : COMObject
 	{
 		#pragma warning disable
+
 		#region Type Information
+
+		/// <summary>
+		/// Instance Type
+		/// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
+		public override Type InstanceType
+		{
+			get
+			{
+				return LateBindingApiWrapperType;
+			}
+		}
 
         private static Type _type;
 
@@ -28,14 +38,20 @@ namespace NetOffice.MSProjectApi
             {
                 if (null == _type)
                     _type = typeof(ReportTable);
-                    
                 return _type;
             }
         }
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public ReportTable(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -81,7 +97,7 @@ namespace NetOffice.MSProjectApi
 		{
 		}
 		
-		/// <param name="progId">registered ProgID</param>
+		/// <param name="progId">registered progID</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public ReportTable(string progId) : base(progId)
 		{
@@ -95,14 +111,12 @@ namespace NetOffice.MSProjectApi
 		/// SupportByVersion MSProject 11
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 11)]
+		[SupportByVersion("MSProject", 11)]
 		public Int32 RowsCount
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "RowsCount", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "RowsCount");
 			}
 		}
 
@@ -110,14 +124,12 @@ namespace NetOffice.MSProjectApi
 		/// SupportByVersion MSProject 11
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 11)]
+		[SupportByVersion("MSProject", 11)]
 		public Int32 ColumnsCount
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "ColumnsCount", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "ColumnsCount");
 			}
 		}
 
@@ -127,93 +139,81 @@ namespace NetOffice.MSProjectApi
 
 		/// <summary>
 		/// SupportByVersion MSProject 11
-		/// 
 		/// </summary>
-		/// <param name="task">bool Task</param>
+		/// <param name="task">bool task</param>
 		/// <param name="groupName">optional string GroupName = </param>
 		/// <param name="filterName">optional string FilterName = </param>
 		/// <param name="outlineLevel">optional Int32 OutlineLevel = -1</param>
-		/// <param name="safeArrayOfPjField">optional object SafeArrayOfPjField</param>
-		[SupportByVersionAttribute("MSProject", 11)]
+		/// <param name="safeArrayOfPjField">optional object safeArrayOfPjField</param>
+		[SupportByVersion("MSProject", 11)]
 		public void UpdateTableData(bool task, object groupName, object filterName, object outlineLevel, object safeArrayOfPjField)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(task, groupName, filterName, outlineLevel, safeArrayOfPjField);
-			Invoker.Method(this, "UpdateTableData", paramsArray);
+			 Factory.ExecuteMethod(this, "UpdateTableData", new object[]{ task, groupName, filterName, outlineLevel, safeArrayOfPjField });
 		}
 
 		/// <summary>
 		/// SupportByVersion MSProject 11
-		/// 
 		/// </summary>
-		/// <param name="task">bool Task</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 11)]
+		/// <param name="task">bool task</param>
+		[CustomMethod]
+		[SupportByVersion("MSProject", 11)]
 		public void UpdateTableData(bool task)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(task);
-			Invoker.Method(this, "UpdateTableData", paramsArray);
+			 Factory.ExecuteMethod(this, "UpdateTableData", task);
 		}
 
 		/// <summary>
 		/// SupportByVersion MSProject 11
-		/// 
 		/// </summary>
-		/// <param name="task">bool Task</param>
+		/// <param name="task">bool task</param>
 		/// <param name="groupName">optional string GroupName = </param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 11)]
+		[CustomMethod]
+		[SupportByVersion("MSProject", 11)]
 		public void UpdateTableData(bool task, object groupName)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(task, groupName);
-			Invoker.Method(this, "UpdateTableData", paramsArray);
+			 Factory.ExecuteMethod(this, "UpdateTableData", task, groupName);
 		}
 
 		/// <summary>
 		/// SupportByVersion MSProject 11
-		/// 
 		/// </summary>
-		/// <param name="task">bool Task</param>
+		/// <param name="task">bool task</param>
 		/// <param name="groupName">optional string GroupName = </param>
 		/// <param name="filterName">optional string FilterName = </param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 11)]
+		[CustomMethod]
+		[SupportByVersion("MSProject", 11)]
 		public void UpdateTableData(bool task, object groupName, object filterName)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(task, groupName, filterName);
-			Invoker.Method(this, "UpdateTableData", paramsArray);
+			 Factory.ExecuteMethod(this, "UpdateTableData", task, groupName, filterName);
 		}
 
 		/// <summary>
 		/// SupportByVersion MSProject 11
-		/// 
 		/// </summary>
-		/// <param name="task">bool Task</param>
+		/// <param name="task">bool task</param>
 		/// <param name="groupName">optional string GroupName = </param>
 		/// <param name="filterName">optional string FilterName = </param>
 		/// <param name="outlineLevel">optional Int32 OutlineLevel = -1</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 11)]
+		[CustomMethod]
+		[SupportByVersion("MSProject", 11)]
 		public void UpdateTableData(bool task, object groupName, object filterName, object outlineLevel)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(task, groupName, filterName, outlineLevel);
-			Invoker.Method(this, "UpdateTableData", paramsArray);
+			 Factory.ExecuteMethod(this, "UpdateTableData", task, groupName, filterName, outlineLevel);
 		}
 
 		/// <summary>
 		/// SupportByVersion MSProject 11
-		/// 
 		/// </summary>
-		/// <param name="row">Int32 Row</param>
-		/// <param name="col">Int32 Col</param>
-		[SupportByVersionAttribute("MSProject", 11)]
+		/// <param name="row">Int32 row</param>
+		/// <param name="col">Int32 col</param>
+		[SupportByVersion("MSProject", 11)]
 		public string GetCellText(Int32 row, Int32 col)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(row, col);
-			object returnItem = Invoker.MethodReturn(this, "GetCellText", paramsArray);
-			return NetRuntimeSystem.Convert.ToString(returnItem);
+			return Factory.ExecuteStringMethodGet(this, "GetCellText", row, col);
 		}
 
 		#endregion
+
 		#pragma warning restore
 	}
 }

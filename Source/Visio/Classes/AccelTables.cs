@@ -1,12 +1,10 @@
 ﻿using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
-using NetOffice;
-using NetOffice.Misc;
+using NetOffice.Attributes;
 
 namespace NetOffice.VisioApi
 {
-
 	#region Delegates
 
 	#pragma warning disable
@@ -14,16 +12,17 @@ namespace NetOffice.VisioApi
 
 	#endregion
 
-	///<summary>
+	/// <summary>
 	/// CoClass AccelTables 
 	/// SupportByVersion Visio, 11,12,14,15,16
-	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff769211(v=office.14).aspx
-	///</summary>
-	[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
-	[EntityTypeAttribute(EntityType.IsCoClass)]
-	public class AccelTables : IVAccelTables
+	/// </summary>
+	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/ff769211(v=office.14).aspx </remarks>
+	[SupportByVersion("Visio", 11,12,14,15,16)]
+	[EntityType(EntityType.IsCoClass)]
+ 	public class AccelTables : IVAccelTables
 	{
 		#pragma warning disable
+
 		#region Fields
 		
 		private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
@@ -37,6 +36,7 @@ namespace NetOffice.VisioApi
         /// <summary>
         /// Instance Type
         /// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
         public override Type InstanceType
         {
             get
@@ -103,17 +103,17 @@ namespace NetOffice.VisioApi
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of AccelTables 
-        ///</summary>		
+        /// </summary>		
 		public AccelTables():base("Visio.AccelTables")
 		{
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of AccelTables
-        ///</summary>
+        /// </summary>
         ///<param name="progId">registered ProgID</param>
 		public AccelTables(string progId):base(progId)
 		{
@@ -123,46 +123,6 @@ namespace NetOffice.VisioApi
 		#endregion
 
 		#region Static CoClass Methods
-
-		/// <summary>
-        /// Returns all running Visio.AccelTables objects from the environment/system
-        /// </summary>
-        /// <returns>an Visio.AccelTables array</returns>
-		public static NetOffice.VisioApi.AccelTables[] GetActiveInstances()
-		{		
-			IDisposableEnumeration proxyList = NetOffice.ProxyService.GetActiveInstances("Visio","AccelTables");
-			NetRuntimeSystem.Collections.Generic.List<NetOffice.VisioApi.AccelTables> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.VisioApi.AccelTables>();
-			foreach(object proxy in proxyList)
-				resultList.Add( new NetOffice.VisioApi.AccelTables(null, proxy) );
-			return resultList.ToArray();
-		}
-
-		/// <summary>
-        /// Returns a running Visio.AccelTables object from the environment/system.
-        /// </summary>
-        /// <returns>an Visio.AccelTables object or null</returns>
-		public static NetOffice.VisioApi.AccelTables GetActiveInstance()
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Visio","AccelTables", false);
-			if(null != proxy)
-				return new NetOffice.VisioApi.AccelTables(null, proxy);
-			else
-				return null;
-		}
-
-		/// <summary>
-        /// Returns a running Visio.AccelTables object from the environment/system. 
-        /// </summary>
-	    /// <param name="throwOnError">throw an exception if no object was found</param>
-        /// <returns>an Visio.AccelTables object or null</returns>
-		public static NetOffice.VisioApi.AccelTables GetActiveInstance(bool throwOnError)
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Visio","AccelTables", throwOnError);
-			if(null != proxy)
-				return new NetOffice.VisioApi.AccelTables(null, proxy);
-			else
-				return null;
-		}
 		#endregion
 
 		#region Events

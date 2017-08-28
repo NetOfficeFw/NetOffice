@@ -1,41 +1,41 @@
 ﻿using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
-using NetOffice;
-using NetOffice.Misc;
+using NetOffice.Attributes;
 
 namespace NetOffice.OutlookApi
 {
-
 	#region Delegates
 
 	#pragma warning disable
-	public delegate void Reminders_BeforeReminderShowEventHandler(ref bool Cancel);
-	public delegate void Reminders_ReminderAddEventHandler(NetOffice.OutlookApi._Reminder ReminderObject);
-	public delegate void Reminders_ReminderChangeEventHandler(NetOffice.OutlookApi._Reminder ReminderObject);
-	public delegate void Reminders_ReminderFireEventHandler(NetOffice.OutlookApi._Reminder ReminderObject);
+	public delegate void Reminders_BeforeReminderShowEventHandler(ref bool cancel);
+	public delegate void Reminders_ReminderAddEventHandler(NetOffice.OutlookApi._Reminder reminderObject);
+	public delegate void Reminders_ReminderChangeEventHandler(NetOffice.OutlookApi._Reminder reminderObject);
+	public delegate void Reminders_ReminderFireEventHandler(NetOffice.OutlookApi._Reminder reminderObject);
 	public delegate void Reminders_ReminderRemoveEventHandler();
-	public delegate void Reminders_SnoozeEventHandler(NetOffice.OutlookApi._Reminder ReminderObject);
+	public delegate void Reminders_SnoozeEventHandler(NetOffice.OutlookApi._Reminder reminderObject);
 	#pragma warning restore
 
 	#endregion
 
-	///<summary>
+	/// <summary>
 	/// CoClass Reminders 
 	/// SupportByVersion Outlook, 10,11,12,14,15,16
-	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff866017.aspx
-	///</summary>
-	[SupportByVersionAttribute("Outlook", 10,11,12,14,15,16)]
-	[EntityTypeAttribute(EntityType.IsCoClass)]
-	public class Reminders : _Reminders,IEventBinding
+	/// </summary>
+	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff866017.aspx </remarks>
+	[SupportByVersion("Outlook", 10,11,12,14,15,16)]
+	[EntityType(EntityType.IsCoClass)]
+	[EventSink(typeof(Events.ReminderCollectionEvents_SinkHelper))]
+	public class Reminders : _Reminders, IEventBinding
 	{
 		#pragma warning disable
+
 		#region Fields
 		
 		private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
 		private string _activeSinkId;
 		private NetRuntimeSystem.Type _thisType;
-		ReminderCollectionEvents_SinkHelper _reminderCollectionEvents_SinkHelper;
+		private Events.ReminderCollectionEvents_SinkHelper _reminderCollectionEvents_SinkHelper;
 	
 		#endregion
 
@@ -44,6 +44,7 @@ namespace NetOffice.OutlookApi
         /// <summary>
         /// Instance Type
         /// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
         public override Type InstanceType
         {
             get
@@ -110,17 +111,17 @@ namespace NetOffice.OutlookApi
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of Reminders 
-        ///</summary>		
+        /// </summary>		
 		public Reminders():base("Outlook.Reminders")
 		{
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of Reminders
-        ///</summary>
+        /// </summary>
         ///<param name="progId">registered ProgID</param>
 		public Reminders(string progId):base(progId)
 		{
@@ -130,46 +131,6 @@ namespace NetOffice.OutlookApi
 		#endregion
 
 		#region Static CoClass Methods
-
-		/// <summary>
-        /// Returns all running Outlook.Reminders objects from the environment/system
-        /// </summary>
-        /// <returns>an Outlook.Reminders array</returns>
-		public static NetOffice.OutlookApi.Reminders[] GetActiveInstances()
-		{		
-			IDisposableEnumeration proxyList = NetOffice.ProxyService.GetActiveInstances("Outlook","Reminders");
-			NetRuntimeSystem.Collections.Generic.List<NetOffice.OutlookApi.Reminders> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.OutlookApi.Reminders>();
-			foreach(object proxy in proxyList)
-				resultList.Add( new NetOffice.OutlookApi.Reminders(null, proxy) );
-			return resultList.ToArray();
-		}
-
-		/// <summary>
-        /// Returns a running Outlook.Reminders object from the environment/system.
-        /// </summary>
-        /// <returns>an Outlook.Reminders object or null</returns>
-		public static NetOffice.OutlookApi.Reminders GetActiveInstance()
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Outlook","Reminders", false);
-			if(null != proxy)
-				return new NetOffice.OutlookApi.Reminders(null, proxy);
-			else
-				return null;
-		}
-
-		/// <summary>
-        /// Returns a running Outlook.Reminders object from the environment/system. 
-        /// </summary>
-	    /// <param name="throwOnError">throw an exception if no object was found</param>
-        /// <returns>an Outlook.Reminders object or null</returns>
-		public static NetOffice.OutlookApi.Reminders GetActiveInstance(bool throwOnError)
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Outlook","Reminders", throwOnError);
-			if(null != proxy)
-				return new NetOffice.OutlookApi.Reminders(null, proxy);
-			else
-				return null;
-		}
 		#endregion
 
 		#region Events
@@ -329,12 +290,12 @@ namespace NetOffice.OutlookApi
 				return;
 	
             if (null == _activeSinkId)
-				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, ReminderCollectionEvents_SinkHelper.Id);
+				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, Events.ReminderCollectionEvents_SinkHelper.Id);
 
 
-			if(ReminderCollectionEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
+			if(Events.ReminderCollectionEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
 			{
-				_reminderCollectionEvents_SinkHelper = new ReminderCollectionEvents_SinkHelper(this, _connectPoint);
+				_reminderCollectionEvents_SinkHelper = new Events.ReminderCollectionEvents_SinkHelper(this, _connectPoint);
 				return;
 			} 
         }

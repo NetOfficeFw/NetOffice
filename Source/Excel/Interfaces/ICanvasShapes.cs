@@ -1,27 +1,26 @@
 ﻿using System;
 using NetRuntimeSystem = System;
-using System.Runtime.InteropServices;
 using System.ComponentModel;
-using System.Runtime.CompilerServices;
-using System.Reflection;
-using System.Collections.Generic;
-using NetOffice;
+using NetOffice.Attributes;
+
 namespace NetOffice.ExcelApi
 {
-	///<summary>
+	/// <summary>
 	/// Interface ICanvasShapes 
 	/// SupportByVersion Excel, 10,11,12,14,15,16
-	///</summary>
-	[SupportByVersionAttribute("Excel", 10,11,12,14,15,16)]
-	[EntityTypeAttribute(EntityType.IsInterface)]
-	public class ICanvasShapes : COMObject
+	/// </summary>
+	[SupportByVersion("Excel", 10,11,12,14,15,16)]
+	[EntityType(EntityType.IsInterface)]
+ 	public class ICanvasShapes : COMObject
 	{
 		#pragma warning disable
+
 		#region Type Information
 
         /// <summary>
         /// Instance Type
         /// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
         public override Type InstanceType
         {
             get
@@ -39,14 +38,20 @@ namespace NetOffice.ExcelApi
             {
                 if (null == _type)
                     _type = typeof(ICanvasShapes);
-                    
                 return _type;
             }
         }
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public ICanvasShapes(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -92,7 +97,7 @@ namespace NetOffice.ExcelApi
 		{
 		}
 		
-		/// <param name="progId">registered ProgID</param>
+		/// <param name="progId">registered progID</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public ICanvasShapes(string progId) : base(progId)
 		{
@@ -107,6 +112,7 @@ namespace NetOffice.ExcelApi
 		#region Methods
 
 		#endregion
+
 		#pragma warning restore
 	}
 }

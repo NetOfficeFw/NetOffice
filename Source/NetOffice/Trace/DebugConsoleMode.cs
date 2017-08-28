@@ -27,7 +27,7 @@ namespace NetOffice
         /*
           MemoryList has been removed in NetOffice 1.7.4
           All messages goes automaticaly to the internal list now, regardless from the mode.
-          Morevoer the message list want contains only 1000 items and remove the oldest automaticaly.
+          Morevoer the message list want contains only 100 items and remove the oldest automaticaly.
         */
 
         /// <summary>

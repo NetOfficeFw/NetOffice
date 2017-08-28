@@ -1,23 +1,33 @@
 ﻿using System;
 using NetRuntimeSystem = System;
-using System.Runtime.InteropServices;
-using System.Runtime.CompilerServices;
 using System.ComponentModel;
-using System.Reflection;
-using System.Collections.Generic;
-using NetOffice;
+using NetOffice.Attributes;
+
 namespace NetOffice.OWC10Api
 {
-	///<summary>
+	/// <summary>
 	/// DispatchInterface PivotClassFactory 
 	/// SupportByVersion OWC10, 1
-	///</summary>
-	[SupportByVersionAttribute("OWC10", 1)]
-	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
-	public class PivotClassFactory : COMObject
+	/// </summary>
+	[SupportByVersion("OWC10", 1)]
+	[EntityType(EntityType.IsDispatchInterface)]
+ 	public class PivotClassFactory : COMObject
 	{
 		#pragma warning disable
+
 		#region Type Information
+
+		/// <summary>
+		/// Instance Type
+		/// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
+		public override Type InstanceType
+		{
+			get
+			{
+				return LateBindingApiWrapperType;
+			}
+		}
 
         private static Type _type;
 
@@ -28,14 +38,20 @@ namespace NetOffice.OWC10Api
             {
                 if (null == _type)
                     _type = typeof(PivotClassFactory);
-                    
                 return _type;
             }
         }
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public PivotClassFactory(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -81,7 +97,7 @@ namespace NetOffice.OWC10Api
 		{
 		}
 		
-		/// <param name="progId">registered ProgID</param>
+		/// <param name="progId">registered progID</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public PivotClassFactory(string progId) : base(progId)
 		{
@@ -96,15 +112,12 @@ namespace NetOffice.OWC10Api
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		/// <param name="detailCell">NetOffice.OWC10Api.PivotDetailCell DetailCell</param>
-		[SupportByVersionAttribute("OWC10", 1)]
+		/// <param name="detailCell">NetOffice.OWC10Api.PivotDetailCell detailCell</param>
+		[SupportByVersion("OWC10", 1), ProxyResult]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public object get_NewDetailCell(NetOffice.OWC10Api.PivotDetailCell detailCell)
-		{		
-			object[] paramsArray = Invoker.ValidateParamsArray(detailCell);
-			object returnItem = Invoker.PropertyGet(this, "NewDetailCell", paramsArray);
-			ICOMObject newObject = Factory.CreateObjectFromComProxy(this,returnItem);
-			return newObject;
+		{
+			return Factory.ExecuteReferencePropertyGet(this, "NewDetailCell", detailCell);
 		}
 
 		/// <summary>
@@ -112,8 +125,8 @@ namespace NetOffice.OWC10Api
 		/// Alias for get_NewDetailCell
 		/// Unknown COM Proxy
 		/// </summary>
-		/// <param name="detailCell">NetOffice.OWC10Api.PivotDetailCell DetailCell</param>
-		[SupportByVersionAttribute("OWC10", 1)]
+		/// <param name="detailCell">NetOffice.OWC10Api.PivotDetailCell detailCell</param>
+		[SupportByVersion("OWC10", 1), ProxyResult, Redirect("get_NewDetailCell")]
 		public object NewDetailCell(NetOffice.OWC10Api.PivotDetailCell detailCell)
 		{
 			return get_NewDetailCell(detailCell);
@@ -124,15 +137,12 @@ namespace NetOffice.OWC10Api
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		/// <param name="aggregate">NetOffice.OWC10Api.PivotAggregate Aggregate</param>
-		[SupportByVersionAttribute("OWC10", 1)]
+		/// <param name="aggregate">NetOffice.OWC10Api.PivotAggregate aggregate</param>
+		[SupportByVersion("OWC10", 1), ProxyResult]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public object get_NewAggregate(NetOffice.OWC10Api.PivotAggregate aggregate)
-		{		
-			object[] paramsArray = Invoker.ValidateParamsArray(aggregate);
-			object returnItem = Invoker.PropertyGet(this, "NewAggregate", paramsArray);
-			ICOMObject newObject = Factory.CreateObjectFromComProxy(this,returnItem);
-			return newObject;
+		{
+			return Factory.ExecuteReferencePropertyGet(this, "NewAggregate", aggregate);
 		}
 
 		/// <summary>
@@ -140,8 +150,8 @@ namespace NetOffice.OWC10Api
 		/// Alias for get_NewAggregate
 		/// Unknown COM Proxy
 		/// </summary>
-		/// <param name="aggregate">NetOffice.OWC10Api.PivotAggregate Aggregate</param>
-		[SupportByVersionAttribute("OWC10", 1)]
+		/// <param name="aggregate">NetOffice.OWC10Api.PivotAggregate aggregate</param>
+		[SupportByVersion("OWC10", 1), ProxyResult, Redirect("get_NewAggregate")]
 		public object NewAggregate(NetOffice.OWC10Api.PivotAggregate aggregate)
 		{
 			return get_NewAggregate(aggregate);
@@ -152,15 +162,12 @@ namespace NetOffice.OWC10Api
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		/// <param name="rowMember">NetOffice.OWC10Api.PivotRowMember RowMember</param>
-		[SupportByVersionAttribute("OWC10", 1)]
+		/// <param name="rowMember">NetOffice.OWC10Api.PivotRowMember rowMember</param>
+		[SupportByVersion("OWC10", 1), ProxyResult]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public object get_NewRowMember(NetOffice.OWC10Api.PivotRowMember rowMember)
-		{		
-			object[] paramsArray = Invoker.ValidateParamsArray(rowMember);
-			object returnItem = Invoker.PropertyGet(this, "NewRowMember", paramsArray);
-			ICOMObject newObject = Factory.CreateObjectFromComProxy(this,returnItem);
-			return newObject;
+		{
+			return Factory.ExecuteReferencePropertyGet(this, "NewRowMember", rowMember);
 		}
 
 		/// <summary>
@@ -168,8 +175,8 @@ namespace NetOffice.OWC10Api
 		/// Alias for get_NewRowMember
 		/// Unknown COM Proxy
 		/// </summary>
-		/// <param name="rowMember">NetOffice.OWC10Api.PivotRowMember RowMember</param>
-		[SupportByVersionAttribute("OWC10", 1)]
+		/// <param name="rowMember">NetOffice.OWC10Api.PivotRowMember rowMember</param>
+		[SupportByVersion("OWC10", 1), ProxyResult, Redirect("get_NewRowMember")]
 		public object NewRowMember(NetOffice.OWC10Api.PivotRowMember rowMember)
 		{
 			return get_NewRowMember(rowMember);
@@ -180,15 +187,12 @@ namespace NetOffice.OWC10Api
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		/// <param name="columnMember">NetOffice.OWC10Api.PivotColumnMember ColumnMember</param>
-		[SupportByVersionAttribute("OWC10", 1)]
+		/// <param name="columnMember">NetOffice.OWC10Api.PivotColumnMember columnMember</param>
+		[SupportByVersion("OWC10", 1), ProxyResult]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public object get_NewColumnMember(NetOffice.OWC10Api.PivotColumnMember columnMember)
-		{		
-			object[] paramsArray = Invoker.ValidateParamsArray(columnMember);
-			object returnItem = Invoker.PropertyGet(this, "NewColumnMember", paramsArray);
-			ICOMObject newObject = Factory.CreateObjectFromComProxy(this,returnItem);
-			return newObject;
+		{
+			return Factory.ExecuteReferencePropertyGet(this, "NewColumnMember", columnMember);
 		}
 
 		/// <summary>
@@ -196,8 +200,8 @@ namespace NetOffice.OWC10Api
 		/// Alias for get_NewColumnMember
 		/// Unknown COM Proxy
 		/// </summary>
-		/// <param name="columnMember">NetOffice.OWC10Api.PivotColumnMember ColumnMember</param>
-		[SupportByVersionAttribute("OWC10", 1)]
+		/// <param name="columnMember">NetOffice.OWC10Api.PivotColumnMember columnMember</param>
+		[SupportByVersion("OWC10", 1), ProxyResult, Redirect("get_NewColumnMember")]
 		public object NewColumnMember(NetOffice.OWC10Api.PivotColumnMember columnMember)
 		{
 			return get_NewColumnMember(columnMember);
@@ -208,15 +212,12 @@ namespace NetOffice.OWC10Api
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		/// <param name="cell">NetOffice.OWC10Api.PivotCell Cell</param>
-		[SupportByVersionAttribute("OWC10", 1)]
+		/// <param name="cell">NetOffice.OWC10Api.PivotCell cell</param>
+		[SupportByVersion("OWC10", 1), ProxyResult]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public object get_NewCell(NetOffice.OWC10Api.PivotCell cell)
-		{		
-			object[] paramsArray = Invoker.ValidateParamsArray(cell);
-			object returnItem = Invoker.PropertyGet(this, "NewCell", paramsArray);
-			ICOMObject newObject = Factory.CreateObjectFromComProxy(this,returnItem);
-			return newObject;
+		{
+			return Factory.ExecuteReferencePropertyGet(this, "NewCell", cell);
 		}
 
 		/// <summary>
@@ -224,8 +225,8 @@ namespace NetOffice.OWC10Api
 		/// Alias for get_NewCell
 		/// Unknown COM Proxy
 		/// </summary>
-		/// <param name="cell">NetOffice.OWC10Api.PivotCell Cell</param>
-		[SupportByVersionAttribute("OWC10", 1)]
+		/// <param name="cell">NetOffice.OWC10Api.PivotCell cell</param>
+		[SupportByVersion("OWC10", 1), ProxyResult, Redirect("get_NewCell")]
 		public object NewCell(NetOffice.OWC10Api.PivotCell cell)
 		{
 			return get_NewCell(cell);
@@ -236,6 +237,7 @@ namespace NetOffice.OWC10Api
 		#region Methods
 
 		#endregion
+
 		#pragma warning restore
 	}
 }

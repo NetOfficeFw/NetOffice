@@ -1,23 +1,33 @@
-﻿using System;
+using System;
 using NetRuntimeSystem = System;
-using System.Runtime.InteropServices;
-using System.Runtime.CompilerServices;
 using System.ComponentModel;
-using System.Reflection;
-using System.Collections.Generic;
-using NetOffice;
+using NetOffice.Attributes;
+
 namespace NetOffice.OutlookApi
 {
-	///<summary>
+	/// <summary>
 	/// DispatchInterface _NavigationPane 
 	/// SupportByVersion Outlook, 12,14,15,16
-	///</summary>
-	[SupportByVersionAttribute("Outlook", 12,14,15,16)]
-	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
-	public class _NavigationPane : COMObject
+	/// </summary>
+	[SupportByVersion("Outlook", 12,14,15,16)]
+	[EntityType(EntityType.IsDispatchInterface)]
+ 	public class _NavigationPane : COMObject
 	{
 		#pragma warning disable
+
 		#region Type Information
+
+		/// <summary>
+		/// Instance Type
+		/// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
+		public override Type InstanceType
+		{
+			get
+			{
+				return LateBindingApiWrapperType;
+			}
+		}
 
         private static Type _type;
 
@@ -28,14 +38,20 @@ namespace NetOffice.OutlookApi
             {
                 if (null == _type)
                     _type = typeof(_NavigationPane);
-                    
                 return _type;
             }
         }
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public _NavigationPane(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -81,7 +97,7 @@ namespace NetOffice.OutlookApi
 		{
 		}
 		
-		/// <param name="progId">registered ProgID</param>
+		/// <param name="progId">registered progID</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public _NavigationPane(string progId) : base(progId)
 		{
@@ -94,150 +110,127 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff860426.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Outlook", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860426.aspx </remarks>
+		[SupportByVersion("Outlook", 12,14,15,16)]
+		[BaseResult]
 		public NetOffice.OutlookApi._Application Application
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				NetOffice.OutlookApi._Application newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OutlookApi._Application;
-				return newObject;
+				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.OutlookApi._Application>(this, "Application");
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff862768.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Outlook", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff862768.aspx </remarks>
+		[SupportByVersion("Outlook", 12,14,15,16)]
 		public NetOffice.OutlookApi.Enums.OlObjectClass Class
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Class", paramsArray);
-				int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-				return (NetOffice.OutlookApi.Enums.OlObjectClass)intReturnItem;
+				return Factory.ExecuteEnumPropertyGet<NetOffice.OutlookApi.Enums.OlObjectClass>(this, "Class");
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff860385.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Outlook", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860385.aspx </remarks>
+		[SupportByVersion("Outlook", 12,14,15,16)]
+		[BaseResult]
 		public NetOffice.OutlookApi._NameSpace Session
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Session", paramsArray);
-				NetOffice.OutlookApi._NameSpace newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OutlookApi._NameSpace;
-				return newObject;
+				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.OutlookApi._NameSpace>(this, "Session");
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff867096.aspx
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("Outlook", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff867096.aspx </remarks>
+		[SupportByVersion("Outlook", 12,14,15,16), ProxyResult]
 		public object Parent
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Parent", paramsArray);
-				ICOMObject newObject = Factory.CreateObjectFromComProxy(this,returnItem);
-				return newObject;
+				return Factory.ExecuteReferencePropertyGet(this, "Parent");
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff860366.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Outlook", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860366.aspx </remarks>
+		[SupportByVersion("Outlook", 12,14,15,16)]
 		public bool IsCollapsed
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "IsCollapsed", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "IsCollapsed");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "IsCollapsed", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "IsCollapsed", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff869527.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Outlook", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff869527.aspx </remarks>
+		[SupportByVersion("Outlook", 12,14,15,16)]
 		public NetOffice.OutlookApi.NavigationModule CurrentModule
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "CurrentModule", paramsArray);
-				NetOffice.OutlookApi.NavigationModule newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OutlookApi.NavigationModule.LateBindingApiWrapperType) as NetOffice.OutlookApi.NavigationModule;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OutlookApi.NavigationModule>(this, "CurrentModule", NetOffice.OutlookApi.NavigationModule.LateBindingApiWrapperType);
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "CurrentModule", paramsArray);
+				Factory.ExecuteReferencePropertySet(this, "CurrentModule", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff870070.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Outlook", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff870070.aspx </remarks>
+		[SupportByVersion("Outlook", 12,14,15,16)]
 		public Int32 DisplayedModuleCount
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "DisplayedModuleCount", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "DisplayedModuleCount");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "DisplayedModuleCount", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "DisplayedModuleCount", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff870024.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Outlook", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff870024.aspx </remarks>
+		[SupportByVersion("Outlook", 12,14,15,16)]
 		public NetOffice.OutlookApi.NavigationModules Modules
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Modules", paramsArray);
-				NetOffice.OutlookApi.NavigationModules newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OutlookApi.NavigationModules.LateBindingApiWrapperType) as NetOffice.OutlookApi.NavigationModules;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OutlookApi.NavigationModules>(this, "Modules", NetOffice.OutlookApi.NavigationModules.LateBindingApiWrapperType);
 			}
 		}
 
@@ -246,6 +239,7 @@ namespace NetOffice.OutlookApi
 		#region Methods
 
 		#endregion
+
 		#pragma warning restore
 	}
 }

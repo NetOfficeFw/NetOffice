@@ -1,24 +1,35 @@
-﻿using System;
+﻿using System.Reflection;
+using System;
 using NetRuntimeSystem = System;
-using System.Runtime.InteropServices;
-using System.Runtime.CompilerServices;
 using System.ComponentModel;
-using System.Reflection;
-using System.Collections.Generic;
-using NetOffice;
+using NetOffice.Attributes;
+
 namespace NetOffice.PowerPointApi
 {
-	///<summary>
+	/// <summary>
 	/// DispatchInterface TextRange 
 	/// SupportByVersion PowerPoint, 9,10,11,12,14,15,16
-	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745366.aspx
-	///</summary>
-	[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
-	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
-	public class TextRange : Collection
+	/// </summary>
+	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff745366.aspx </remarks>
+	[SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+	[EntityType(EntityType.IsDispatchInterface)]
+ 	public class TextRange : Collection
 	{
 		#pragma warning disable
+
 		#region Type Information
+
+		/// <summary>
+		/// Instance Type
+		/// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
+		public override Type InstanceType
+		{
+			get
+			{
+				return LateBindingApiWrapperType;
+			}
+		}
 
         private static Type _type;
 
@@ -29,14 +40,20 @@ namespace NetOffice.PowerPointApi
             {
                 if (null == _type)
                     _type = typeof(TextRange);
-                    
                 return _type;
             }
         }
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public TextRange(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -82,7 +99,7 @@ namespace NetOffice.PowerPointApi
 		{
 		}
 		
-		/// <param name="progId">registered ProgID</param>
+		/// <param name="progId">registered progID</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public TextRange(string progId) : base(progId)
 		{
@@ -95,246 +112,209 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744897.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff744897.aspx </remarks>
+		[SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
 		public NetOffice.PowerPointApi.Application Application
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				NetOffice.PowerPointApi.Application newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.PowerPointApi.Application.LateBindingApiWrapperType) as NetOffice.PowerPointApi.Application;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.PowerPointApi.Application>(this, "Application", NetOffice.PowerPointApi.Application.LateBindingApiWrapperType);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744386.aspx
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff744386.aspx </remarks>
+		[SupportByVersion("PowerPoint", 9,10,11,12,14,15,16), ProxyResult]
 		public object Parent
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Parent", paramsArray);
-				ICOMObject newObject = Factory.CreateObjectFromComProxy(this,returnItem);
-				return newObject;
+				return Factory.ExecuteReferencePropertyGet(this, "Parent");
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745346.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff745346.aspx </remarks>
+		[SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
 		public NetOffice.PowerPointApi.ActionSettings ActionSettings
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "ActionSettings", paramsArray);
-				NetOffice.PowerPointApi.ActionSettings newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.PowerPointApi.ActionSettings.LateBindingApiWrapperType) as NetOffice.PowerPointApi.ActionSettings;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.PowerPointApi.ActionSettings>(this, "ActionSettings", NetOffice.PowerPointApi.ActionSettings.LateBindingApiWrapperType);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744180.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff744180.aspx </remarks>
+		[SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
 		public Int32 Start
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Start", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "Start");
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744845.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff744845.aspx </remarks>
+		[SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
 		public Int32 Length
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Length", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "Length");
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744266.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff744266.aspx </remarks>
+		[SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
 		public Single BoundLeft
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "BoundLeft", paramsArray);
-				return NetRuntimeSystem.Convert.ToSingle(returnItem);
+				return Factory.ExecuteSinglePropertyGet(this, "BoundLeft");
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746319.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff746319.aspx </remarks>
+		[SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
 		public Single BoundTop
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "BoundTop", paramsArray);
-				return NetRuntimeSystem.Convert.ToSingle(returnItem);
+				return Factory.ExecuteSinglePropertyGet(this, "BoundTop");
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744683.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff744683.aspx </remarks>
+		[SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
 		public Single BoundWidth
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "BoundWidth", paramsArray);
-				return NetRuntimeSystem.Convert.ToSingle(returnItem);
+				return Factory.ExecuteSinglePropertyGet(this, "BoundWidth");
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745606.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff745606.aspx </remarks>
+		[SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
 		public Single BoundHeight
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "BoundHeight", paramsArray);
-				return NetRuntimeSystem.Convert.ToSingle(returnItem);
+				return Factory.ExecuteSinglePropertyGet(this, "BoundHeight");
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746239.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff746239.aspx </remarks>
+		[SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
 		public string Text
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Text", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "Text");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "Text", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "Text", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744240.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff744240.aspx </remarks>
+		[SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
 		public NetOffice.PowerPointApi.Font Font
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Font", paramsArray);
-				NetOffice.PowerPointApi.Font newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.PowerPointApi.Font.LateBindingApiWrapperType) as NetOffice.PowerPointApi.Font;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.PowerPointApi.Font>(this, "Font", NetOffice.PowerPointApi.Font.LateBindingApiWrapperType);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744700.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff744700.aspx </remarks>
+		[SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
 		public NetOffice.PowerPointApi.ParagraphFormat ParagraphFormat
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "ParagraphFormat", paramsArray);
-				NetOffice.PowerPointApi.ParagraphFormat newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.PowerPointApi.ParagraphFormat.LateBindingApiWrapperType) as NetOffice.PowerPointApi.ParagraphFormat;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.PowerPointApi.ParagraphFormat>(this, "ParagraphFormat", NetOffice.PowerPointApi.ParagraphFormat.LateBindingApiWrapperType);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744603.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff744603.aspx </remarks>
+		[SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
 		public Int32 IndentLevel
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "IndentLevel", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "IndentLevel");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "IndentLevel", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "IndentLevel", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746734.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff746734.aspx </remarks>
+		[SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
 		public NetOffice.OfficeApi.Enums.MsoLanguageID LanguageID
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "LanguageID", paramsArray);
-				int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-				return (NetOffice.OfficeApi.Enums.MsoLanguageID)intReturnItem;
+				return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoLanguageID>(this, "LanguageID");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "LanguageID", paramsArray);
+				Factory.ExecuteEnumPropertySet(this, "LanguageID", value);
 			}
 		}
 
@@ -344,650 +324,532 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744863.aspx
 		/// </summary>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff744863.aspx </remarks>
 		/// <param name="start">optional Int32 Start = -1</param>
 		/// <param name="length">optional Int32 Length = -1</param>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
+		[SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
 		public NetOffice.PowerPointApi.TextRange Paragraphs(object start, object length)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(start, length);
-			object returnItem = Invoker.MethodReturn(this, "Paragraphs", paramsArray);
-			NetOffice.PowerPointApi.TextRange newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PowerPointApi.TextRange.LateBindingApiWrapperType) as NetOffice.PowerPointApi.TextRange;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PowerPointApi.TextRange>(this, "Paragraphs", NetOffice.PowerPointApi.TextRange.LateBindingApiWrapperType, start, length);
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744863.aspx
 		/// </summary>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff744863.aspx </remarks>
+		[CustomMethod]
+		[SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
 		public NetOffice.PowerPointApi.TextRange Paragraphs()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "Paragraphs", paramsArray);
-			NetOffice.PowerPointApi.TextRange newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PowerPointApi.TextRange.LateBindingApiWrapperType) as NetOffice.PowerPointApi.TextRange;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PowerPointApi.TextRange>(this, "Paragraphs", NetOffice.PowerPointApi.TextRange.LateBindingApiWrapperType);
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744863.aspx
 		/// </summary>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff744863.aspx </remarks>
 		/// <param name="start">optional Int32 Start = -1</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
 		public NetOffice.PowerPointApi.TextRange Paragraphs(object start)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(start);
-			object returnItem = Invoker.MethodReturn(this, "Paragraphs", paramsArray);
-			NetOffice.PowerPointApi.TextRange newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PowerPointApi.TextRange.LateBindingApiWrapperType) as NetOffice.PowerPointApi.TextRange;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PowerPointApi.TextRange>(this, "Paragraphs", NetOffice.PowerPointApi.TextRange.LateBindingApiWrapperType, start);
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746189.aspx
 		/// </summary>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff746189.aspx </remarks>
 		/// <param name="start">optional Int32 Start = -1</param>
 		/// <param name="length">optional Int32 Length = -1</param>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
+		[SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
 		public NetOffice.PowerPointApi.TextRange Sentences(object start, object length)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(start, length);
-			object returnItem = Invoker.MethodReturn(this, "Sentences", paramsArray);
-			NetOffice.PowerPointApi.TextRange newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PowerPointApi.TextRange.LateBindingApiWrapperType) as NetOffice.PowerPointApi.TextRange;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PowerPointApi.TextRange>(this, "Sentences", NetOffice.PowerPointApi.TextRange.LateBindingApiWrapperType, start, length);
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746189.aspx
 		/// </summary>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff746189.aspx </remarks>
+		[CustomMethod]
+		[SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
 		public NetOffice.PowerPointApi.TextRange Sentences()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "Sentences", paramsArray);
-			NetOffice.PowerPointApi.TextRange newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PowerPointApi.TextRange.LateBindingApiWrapperType) as NetOffice.PowerPointApi.TextRange;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PowerPointApi.TextRange>(this, "Sentences", NetOffice.PowerPointApi.TextRange.LateBindingApiWrapperType);
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746189.aspx
 		/// </summary>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff746189.aspx </remarks>
 		/// <param name="start">optional Int32 Start = -1</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
 		public NetOffice.PowerPointApi.TextRange Sentences(object start)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(start);
-			object returnItem = Invoker.MethodReturn(this, "Sentences", paramsArray);
-			NetOffice.PowerPointApi.TextRange newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PowerPointApi.TextRange.LateBindingApiWrapperType) as NetOffice.PowerPointApi.TextRange;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PowerPointApi.TextRange>(this, "Sentences", NetOffice.PowerPointApi.TextRange.LateBindingApiWrapperType, start);
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746049.aspx
 		/// </summary>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff746049.aspx </remarks>
 		/// <param name="start">optional Int32 Start = -1</param>
 		/// <param name="length">optional Int32 Length = -1</param>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
+		[SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
 		public NetOffice.PowerPointApi.TextRange Words(object start, object length)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(start, length);
-			object returnItem = Invoker.MethodReturn(this, "Words", paramsArray);
-			NetOffice.PowerPointApi.TextRange newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PowerPointApi.TextRange.LateBindingApiWrapperType) as NetOffice.PowerPointApi.TextRange;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PowerPointApi.TextRange>(this, "Words", NetOffice.PowerPointApi.TextRange.LateBindingApiWrapperType, start, length);
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746049.aspx
 		/// </summary>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff746049.aspx </remarks>
+		[CustomMethod]
+		[SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
 		public NetOffice.PowerPointApi.TextRange Words()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "Words", paramsArray);
-			NetOffice.PowerPointApi.TextRange newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PowerPointApi.TextRange.LateBindingApiWrapperType) as NetOffice.PowerPointApi.TextRange;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PowerPointApi.TextRange>(this, "Words", NetOffice.PowerPointApi.TextRange.LateBindingApiWrapperType);
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746049.aspx
 		/// </summary>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff746049.aspx </remarks>
 		/// <param name="start">optional Int32 Start = -1</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
 		public NetOffice.PowerPointApi.TextRange Words(object start)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(start);
-			object returnItem = Invoker.MethodReturn(this, "Words", paramsArray);
-			NetOffice.PowerPointApi.TextRange newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PowerPointApi.TextRange.LateBindingApiWrapperType) as NetOffice.PowerPointApi.TextRange;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PowerPointApi.TextRange>(this, "Words", NetOffice.PowerPointApi.TextRange.LateBindingApiWrapperType, start);
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff743845.aspx
 		/// </summary>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff743845.aspx </remarks>
 		/// <param name="start">optional Int32 Start = -1</param>
 		/// <param name="length">optional Int32 Length = -1</param>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
+		[SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
 		public NetOffice.PowerPointApi.TextRange Characters(object start, object length)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(start, length);
-			object returnItem = Invoker.MethodReturn(this, "Characters", paramsArray);
-			NetOffice.PowerPointApi.TextRange newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PowerPointApi.TextRange.LateBindingApiWrapperType) as NetOffice.PowerPointApi.TextRange;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PowerPointApi.TextRange>(this, "Characters", NetOffice.PowerPointApi.TextRange.LateBindingApiWrapperType, start, length);
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff743845.aspx
 		/// </summary>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff743845.aspx </remarks>
+		[CustomMethod]
+		[SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
 		public NetOffice.PowerPointApi.TextRange Characters()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "Characters", paramsArray);
-			NetOffice.PowerPointApi.TextRange newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PowerPointApi.TextRange.LateBindingApiWrapperType) as NetOffice.PowerPointApi.TextRange;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PowerPointApi.TextRange>(this, "Characters", NetOffice.PowerPointApi.TextRange.LateBindingApiWrapperType);
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff743845.aspx
 		/// </summary>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff743845.aspx </remarks>
 		/// <param name="start">optional Int32 Start = -1</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
 		public NetOffice.PowerPointApi.TextRange Characters(object start)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(start);
-			object returnItem = Invoker.MethodReturn(this, "Characters", paramsArray);
-			NetOffice.PowerPointApi.TextRange newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PowerPointApi.TextRange.LateBindingApiWrapperType) as NetOffice.PowerPointApi.TextRange;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PowerPointApi.TextRange>(this, "Characters", NetOffice.PowerPointApi.TextRange.LateBindingApiWrapperType, start);
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745593.aspx
 		/// </summary>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff745593.aspx </remarks>
 		/// <param name="start">optional Int32 Start = -1</param>
 		/// <param name="length">optional Int32 Length = -1</param>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
+		[SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
 		public NetOffice.PowerPointApi.TextRange Lines(object start, object length)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(start, length);
-			object returnItem = Invoker.MethodReturn(this, "Lines", paramsArray);
-			NetOffice.PowerPointApi.TextRange newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PowerPointApi.TextRange.LateBindingApiWrapperType) as NetOffice.PowerPointApi.TextRange;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PowerPointApi.TextRange>(this, "Lines", NetOffice.PowerPointApi.TextRange.LateBindingApiWrapperType, start, length);
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745593.aspx
 		/// </summary>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff745593.aspx </remarks>
+		[CustomMethod]
+		[SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
 		public NetOffice.PowerPointApi.TextRange Lines()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "Lines", paramsArray);
-			NetOffice.PowerPointApi.TextRange newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PowerPointApi.TextRange.LateBindingApiWrapperType) as NetOffice.PowerPointApi.TextRange;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PowerPointApi.TextRange>(this, "Lines", NetOffice.PowerPointApi.TextRange.LateBindingApiWrapperType);
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745593.aspx
 		/// </summary>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff745593.aspx </remarks>
 		/// <param name="start">optional Int32 Start = -1</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
 		public NetOffice.PowerPointApi.TextRange Lines(object start)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(start);
-			object returnItem = Invoker.MethodReturn(this, "Lines", paramsArray);
-			NetOffice.PowerPointApi.TextRange newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PowerPointApi.TextRange.LateBindingApiWrapperType) as NetOffice.PowerPointApi.TextRange;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PowerPointApi.TextRange>(this, "Lines", NetOffice.PowerPointApi.TextRange.LateBindingApiWrapperType, start);
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff743973.aspx
 		/// </summary>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff743973.aspx </remarks>
 		/// <param name="start">optional Int32 Start = -1</param>
 		/// <param name="length">optional Int32 Length = -1</param>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
+		[SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
 		public NetOffice.PowerPointApi.TextRange Runs(object start, object length)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(start, length);
-			object returnItem = Invoker.MethodReturn(this, "Runs", paramsArray);
-			NetOffice.PowerPointApi.TextRange newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PowerPointApi.TextRange.LateBindingApiWrapperType) as NetOffice.PowerPointApi.TextRange;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PowerPointApi.TextRange>(this, "Runs", NetOffice.PowerPointApi.TextRange.LateBindingApiWrapperType, start, length);
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff743973.aspx
 		/// </summary>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff743973.aspx </remarks>
+		[CustomMethod]
+		[SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
 		public NetOffice.PowerPointApi.TextRange Runs()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "Runs", paramsArray);
-			NetOffice.PowerPointApi.TextRange newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PowerPointApi.TextRange.LateBindingApiWrapperType) as NetOffice.PowerPointApi.TextRange;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PowerPointApi.TextRange>(this, "Runs", NetOffice.PowerPointApi.TextRange.LateBindingApiWrapperType);
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff743973.aspx
 		/// </summary>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff743973.aspx </remarks>
 		/// <param name="start">optional Int32 Start = -1</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
 		public NetOffice.PowerPointApi.TextRange Runs(object start)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(start);
-			object returnItem = Invoker.MethodReturn(this, "Runs", paramsArray);
-			NetOffice.PowerPointApi.TextRange newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PowerPointApi.TextRange.LateBindingApiWrapperType) as NetOffice.PowerPointApi.TextRange;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PowerPointApi.TextRange>(this, "Runs", NetOffice.PowerPointApi.TextRange.LateBindingApiWrapperType, start);
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745464.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff745464.aspx </remarks>
+		[SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
 		public NetOffice.PowerPointApi.TextRange TrimText()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "TrimText", paramsArray);
-			NetOffice.PowerPointApi.TextRange newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PowerPointApi.TextRange.LateBindingApiWrapperType) as NetOffice.PowerPointApi.TextRange;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PowerPointApi.TextRange>(this, "TrimText", NetOffice.PowerPointApi.TextRange.LateBindingApiWrapperType);
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744323.aspx
 		/// </summary>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff744323.aspx </remarks>
 		/// <param name="newText">optional string NewText = </param>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
+		[SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
 		public NetOffice.PowerPointApi.TextRange InsertAfter(object newText)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(newText);
-			object returnItem = Invoker.MethodReturn(this, "InsertAfter", paramsArray);
-			NetOffice.PowerPointApi.TextRange newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PowerPointApi.TextRange.LateBindingApiWrapperType) as NetOffice.PowerPointApi.TextRange;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PowerPointApi.TextRange>(this, "InsertAfter", NetOffice.PowerPointApi.TextRange.LateBindingApiWrapperType, newText);
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744323.aspx
 		/// </summary>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff744323.aspx </remarks>
+		[CustomMethod]
+		[SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
 		public NetOffice.PowerPointApi.TextRange InsertAfter()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "InsertAfter", paramsArray);
-			NetOffice.PowerPointApi.TextRange newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PowerPointApi.TextRange.LateBindingApiWrapperType) as NetOffice.PowerPointApi.TextRange;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PowerPointApi.TextRange>(this, "InsertAfter", NetOffice.PowerPointApi.TextRange.LateBindingApiWrapperType);
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746793.aspx
 		/// </summary>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff746793.aspx </remarks>
 		/// <param name="newText">optional string NewText = </param>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
+		[SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
 		public NetOffice.PowerPointApi.TextRange InsertBefore(object newText)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(newText);
-			object returnItem = Invoker.MethodReturn(this, "InsertBefore", paramsArray);
-			NetOffice.PowerPointApi.TextRange newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PowerPointApi.TextRange.LateBindingApiWrapperType) as NetOffice.PowerPointApi.TextRange;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PowerPointApi.TextRange>(this, "InsertBefore", NetOffice.PowerPointApi.TextRange.LateBindingApiWrapperType, newText);
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746793.aspx
 		/// </summary>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff746793.aspx </remarks>
+		[CustomMethod]
+		[SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
 		public NetOffice.PowerPointApi.TextRange InsertBefore()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "InsertBefore", paramsArray);
-			NetOffice.PowerPointApi.TextRange newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PowerPointApi.TextRange.LateBindingApiWrapperType) as NetOffice.PowerPointApi.TextRange;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PowerPointApi.TextRange>(this, "InsertBefore", NetOffice.PowerPointApi.TextRange.LateBindingApiWrapperType);
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745977.aspx
 		/// </summary>
-		/// <param name="dateTimeFormat">NetOffice.PowerPointApi.Enums.PpDateTimeFormat DateTimeFormat</param>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff745977.aspx </remarks>
+		/// <param name="dateTimeFormat">NetOffice.PowerPointApi.Enums.PpDateTimeFormat dateTimeFormat</param>
 		/// <param name="insertAsField">optional NetOffice.OfficeApi.Enums.MsoTriState InsertAsField = 0</param>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
+		[SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
 		public NetOffice.PowerPointApi.TextRange InsertDateTime(NetOffice.PowerPointApi.Enums.PpDateTimeFormat dateTimeFormat, object insertAsField)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(dateTimeFormat, insertAsField);
-			object returnItem = Invoker.MethodReturn(this, "InsertDateTime", paramsArray);
-			NetOffice.PowerPointApi.TextRange newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PowerPointApi.TextRange.LateBindingApiWrapperType) as NetOffice.PowerPointApi.TextRange;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PowerPointApi.TextRange>(this, "InsertDateTime", NetOffice.PowerPointApi.TextRange.LateBindingApiWrapperType, dateTimeFormat, insertAsField);
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745977.aspx
 		/// </summary>
-		/// <param name="dateTimeFormat">NetOffice.PowerPointApi.Enums.PpDateTimeFormat DateTimeFormat</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff745977.aspx </remarks>
+		/// <param name="dateTimeFormat">NetOffice.PowerPointApi.Enums.PpDateTimeFormat dateTimeFormat</param>
+		[CustomMethod]
+		[SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
 		public NetOffice.PowerPointApi.TextRange InsertDateTime(NetOffice.PowerPointApi.Enums.PpDateTimeFormat dateTimeFormat)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(dateTimeFormat);
-			object returnItem = Invoker.MethodReturn(this, "InsertDateTime", paramsArray);
-			NetOffice.PowerPointApi.TextRange newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PowerPointApi.TextRange.LateBindingApiWrapperType) as NetOffice.PowerPointApi.TextRange;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PowerPointApi.TextRange>(this, "InsertDateTime", NetOffice.PowerPointApi.TextRange.LateBindingApiWrapperType, dateTimeFormat);
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff743923.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff743923.aspx </remarks>
+		[SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
 		public NetOffice.PowerPointApi.TextRange InsertSlideNumber()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "InsertSlideNumber", paramsArray);
-			NetOffice.PowerPointApi.TextRange newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PowerPointApi.TextRange.LateBindingApiWrapperType) as NetOffice.PowerPointApi.TextRange;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PowerPointApi.TextRange>(this, "InsertSlideNumber", NetOffice.PowerPointApi.TextRange.LateBindingApiWrapperType);
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745835.aspx
 		/// </summary>
-		/// <param name="fontName">string FontName</param>
-		/// <param name="charNumber">Int32 CharNumber</param>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff745835.aspx </remarks>
+		/// <param name="fontName">string fontName</param>
+		/// <param name="charNumber">Int32 charNumber</param>
 		/// <param name="unicode">optional NetOffice.OfficeApi.Enums.MsoTriState Unicode = 0</param>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
+		[SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
 		public NetOffice.PowerPointApi.TextRange InsertSymbol(string fontName, Int32 charNumber, object unicode)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(fontName, charNumber, unicode);
-			object returnItem = Invoker.MethodReturn(this, "InsertSymbol", paramsArray);
-			NetOffice.PowerPointApi.TextRange newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PowerPointApi.TextRange.LateBindingApiWrapperType) as NetOffice.PowerPointApi.TextRange;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PowerPointApi.TextRange>(this, "InsertSymbol", NetOffice.PowerPointApi.TextRange.LateBindingApiWrapperType, fontName, charNumber, unicode);
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745835.aspx
 		/// </summary>
-		/// <param name="fontName">string FontName</param>
-		/// <param name="charNumber">Int32 CharNumber</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff745835.aspx </remarks>
+		/// <param name="fontName">string fontName</param>
+		/// <param name="charNumber">Int32 charNumber</param>
+		[CustomMethod]
+		[SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
 		public NetOffice.PowerPointApi.TextRange InsertSymbol(string fontName, Int32 charNumber)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(fontName, charNumber);
-			object returnItem = Invoker.MethodReturn(this, "InsertSymbol", paramsArray);
-			NetOffice.PowerPointApi.TextRange newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PowerPointApi.TextRange.LateBindingApiWrapperType) as NetOffice.PowerPointApi.TextRange;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PowerPointApi.TextRange>(this, "InsertSymbol", NetOffice.PowerPointApi.TextRange.LateBindingApiWrapperType, fontName, charNumber);
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746287.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff746287.aspx </remarks>
+		[SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
 		public void Select()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "Select", paramsArray);
+			 Factory.ExecuteMethod(this, "Select");
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745756.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff745756.aspx </remarks>
+		[SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
 		public void Cut()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "Cut", paramsArray);
+			 Factory.ExecuteMethod(this, "Cut");
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746251.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff746251.aspx </remarks>
+		[SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
 		public void Copy()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "Copy", paramsArray);
+			 Factory.ExecuteMethod(this, "Copy");
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744334.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff744334.aspx </remarks>
+		[SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
 		public void Delete()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "Delete", paramsArray);
+			 Factory.ExecuteMethod(this, "Delete");
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744812.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff744812.aspx </remarks>
+		[SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
 		public NetOffice.PowerPointApi.TextRange Paste()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "Paste", paramsArray);
-			NetOffice.PowerPointApi.TextRange newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PowerPointApi.TextRange.LateBindingApiWrapperType) as NetOffice.PowerPointApi.TextRange;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PowerPointApi.TextRange>(this, "Paste", NetOffice.PowerPointApi.TextRange.LateBindingApiWrapperType);
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745812.aspx
 		/// </summary>
-		/// <param name="type">NetOffice.PowerPointApi.Enums.PpChangeCase Type</param>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff745812.aspx </remarks>
+		/// <param name="type">NetOffice.PowerPointApi.Enums.PpChangeCase type</param>
+		[SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
 		public void ChangeCase(NetOffice.PowerPointApi.Enums.PpChangeCase type)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(type);
-			Invoker.Method(this, "ChangeCase", paramsArray);
+			 Factory.ExecuteMethod(this, "ChangeCase", type);
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744944.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff744944.aspx </remarks>
+		[SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
 		public void AddPeriods()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "AddPeriods", paramsArray);
+			 Factory.ExecuteMethod(this, "AddPeriods");
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745113.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff745113.aspx </remarks>
+		[SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
 		public void RemovePeriods()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "RemovePeriods", paramsArray);
+			 Factory.ExecuteMethod(this, "RemovePeriods");
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744247.aspx
 		/// </summary>
-		/// <param name="findWhat">string FindWhat</param>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff744247.aspx </remarks>
+		/// <param name="findWhat">string findWhat</param>
 		/// <param name="after">optional Int32 After = 0</param>
 		/// <param name="matchCase">optional NetOffice.OfficeApi.Enums.MsoTriState MatchCase = 0</param>
 		/// <param name="wholeWords">optional NetOffice.OfficeApi.Enums.MsoTriState WholeWords = 0</param>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
+		[SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
 		public NetOffice.PowerPointApi.TextRange Find(string findWhat, object after, object matchCase, object wholeWords)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(findWhat, after, matchCase, wholeWords);
-			object returnItem = Invoker.MethodReturn(this, "Find", paramsArray);
-			NetOffice.PowerPointApi.TextRange newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PowerPointApi.TextRange.LateBindingApiWrapperType) as NetOffice.PowerPointApi.TextRange;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PowerPointApi.TextRange>(this, "Find", NetOffice.PowerPointApi.TextRange.LateBindingApiWrapperType, findWhat, after, matchCase, wholeWords);
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744247.aspx
 		/// </summary>
-		/// <param name="findWhat">string FindWhat</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff744247.aspx </remarks>
+		/// <param name="findWhat">string findWhat</param>
+		[CustomMethod]
+		[SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
 		public NetOffice.PowerPointApi.TextRange Find(string findWhat)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(findWhat);
-			object returnItem = Invoker.MethodReturn(this, "Find", paramsArray);
-			NetOffice.PowerPointApi.TextRange newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PowerPointApi.TextRange.LateBindingApiWrapperType) as NetOffice.PowerPointApi.TextRange;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PowerPointApi.TextRange>(this, "Find", NetOffice.PowerPointApi.TextRange.LateBindingApiWrapperType, findWhat);
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744247.aspx
 		/// </summary>
-		/// <param name="findWhat">string FindWhat</param>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff744247.aspx </remarks>
+		/// <param name="findWhat">string findWhat</param>
 		/// <param name="after">optional Int32 After = 0</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
 		public NetOffice.PowerPointApi.TextRange Find(string findWhat, object after)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(findWhat, after);
-			object returnItem = Invoker.MethodReturn(this, "Find", paramsArray);
-			NetOffice.PowerPointApi.TextRange newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PowerPointApi.TextRange.LateBindingApiWrapperType) as NetOffice.PowerPointApi.TextRange;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PowerPointApi.TextRange>(this, "Find", NetOffice.PowerPointApi.TextRange.LateBindingApiWrapperType, findWhat, after);
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744247.aspx
 		/// </summary>
-		/// <param name="findWhat">string FindWhat</param>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff744247.aspx </remarks>
+		/// <param name="findWhat">string findWhat</param>
 		/// <param name="after">optional Int32 After = 0</param>
 		/// <param name="matchCase">optional NetOffice.OfficeApi.Enums.MsoTriState MatchCase = 0</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
 		public NetOffice.PowerPointApi.TextRange Find(string findWhat, object after, object matchCase)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(findWhat, after, matchCase);
-			object returnItem = Invoker.MethodReturn(this, "Find", paramsArray);
-			NetOffice.PowerPointApi.TextRange newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PowerPointApi.TextRange.LateBindingApiWrapperType) as NetOffice.PowerPointApi.TextRange;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PowerPointApi.TextRange>(this, "Find", NetOffice.PowerPointApi.TextRange.LateBindingApiWrapperType, findWhat, after, matchCase);
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff743889.aspx
 		/// </summary>
-		/// <param name="findWhat">string FindWhat</param>
-		/// <param name="replaceWhat">string ReplaceWhat</param>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff743889.aspx </remarks>
+		/// <param name="findWhat">string findWhat</param>
+		/// <param name="replaceWhat">string replaceWhat</param>
 		/// <param name="after">optional Int32 After = 0</param>
 		/// <param name="matchCase">optional NetOffice.OfficeApi.Enums.MsoTriState MatchCase = 0</param>
 		/// <param name="wholeWords">optional NetOffice.OfficeApi.Enums.MsoTriState WholeWords = 0</param>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
+		[SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
 		public NetOffice.PowerPointApi.TextRange Replace(string findWhat, string replaceWhat, object after, object matchCase, object wholeWords)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(findWhat, replaceWhat, after, matchCase, wholeWords);
-			object returnItem = Invoker.MethodReturn(this, "Replace", paramsArray);
-			NetOffice.PowerPointApi.TextRange newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PowerPointApi.TextRange.LateBindingApiWrapperType) as NetOffice.PowerPointApi.TextRange;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PowerPointApi.TextRange>(this, "Replace", NetOffice.PowerPointApi.TextRange.LateBindingApiWrapperType, new object[]{ findWhat, replaceWhat, after, matchCase, wholeWords });
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff743889.aspx
 		/// </summary>
-		/// <param name="findWhat">string FindWhat</param>
-		/// <param name="replaceWhat">string ReplaceWhat</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff743889.aspx </remarks>
+		/// <param name="findWhat">string findWhat</param>
+		/// <param name="replaceWhat">string replaceWhat</param>
+		[CustomMethod]
+		[SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
 		public NetOffice.PowerPointApi.TextRange Replace(string findWhat, string replaceWhat)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(findWhat, replaceWhat);
-			object returnItem = Invoker.MethodReturn(this, "Replace", paramsArray);
-			NetOffice.PowerPointApi.TextRange newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PowerPointApi.TextRange.LateBindingApiWrapperType) as NetOffice.PowerPointApi.TextRange;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PowerPointApi.TextRange>(this, "Replace", NetOffice.PowerPointApi.TextRange.LateBindingApiWrapperType, findWhat, replaceWhat);
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff743889.aspx
 		/// </summary>
-		/// <param name="findWhat">string FindWhat</param>
-		/// <param name="replaceWhat">string ReplaceWhat</param>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff743889.aspx </remarks>
+		/// <param name="findWhat">string findWhat</param>
+		/// <param name="replaceWhat">string replaceWhat</param>
 		/// <param name="after">optional Int32 After = 0</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
 		public NetOffice.PowerPointApi.TextRange Replace(string findWhat, string replaceWhat, object after)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(findWhat, replaceWhat, after);
-			object returnItem = Invoker.MethodReturn(this, "Replace", paramsArray);
-			NetOffice.PowerPointApi.TextRange newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PowerPointApi.TextRange.LateBindingApiWrapperType) as NetOffice.PowerPointApi.TextRange;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PowerPointApi.TextRange>(this, "Replace", NetOffice.PowerPointApi.TextRange.LateBindingApiWrapperType, findWhat, replaceWhat, after);
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff743889.aspx
 		/// </summary>
-		/// <param name="findWhat">string FindWhat</param>
-		/// <param name="replaceWhat">string ReplaceWhat</param>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff743889.aspx </remarks>
+		/// <param name="findWhat">string findWhat</param>
+		/// <param name="replaceWhat">string replaceWhat</param>
 		/// <param name="after">optional Int32 After = 0</param>
 		/// <param name="matchCase">optional NetOffice.OfficeApi.Enums.MsoTriState MatchCase = 0</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
 		public NetOffice.PowerPointApi.TextRange Replace(string findWhat, string replaceWhat, object after, object matchCase)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(findWhat, replaceWhat, after, matchCase);
-			object returnItem = Invoker.MethodReturn(this, "Replace", paramsArray);
-			NetOffice.PowerPointApi.TextRange newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PowerPointApi.TextRange.LateBindingApiWrapperType) as NetOffice.PowerPointApi.TextRange;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PowerPointApi.TextRange>(this, "Replace", NetOffice.PowerPointApi.TextRange.LateBindingApiWrapperType, findWhat, replaceWhat, after, matchCase);
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744523.aspx
 		/// </summary>
-		/// <param name="x1">Single X1</param>
-		/// <param name="y1">Single Y1</param>
-		/// <param name="x2">Single X2</param>
-		/// <param name="y2">Single Y2</param>
-		/// <param name="x3">Single X3</param>
-		/// <param name="y3">Single Y3</param>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff744523.aspx </remarks>
+		/// <param name="x1">Single x1</param>
+		/// <param name="y1">Single y1</param>
+		/// <param name="x2">Single x2</param>
+		/// <param name="y2">Single y2</param>
+		/// <param name="x3">Single x3</param>
+		/// <param name="y3">Single y3</param>
 		/// <param name="x4">Single x4</param>
 		/// <param name="y4">Single y4</param>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
+		[SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
 		public void RotatedBounds(out Single x1, out Single y1, out Single x2, out Single y2, out Single x3, out Single y3, out Single x4, out Single y4)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true,true,true,true,true,true,true,true);
@@ -1013,145 +875,123 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746623.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff746623.aspx </remarks>
+		[SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
 		public void RtlRun()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "RtlRun", paramsArray);
+			 Factory.ExecuteMethod(this, "RtlRun");
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744980.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff744980.aspx </remarks>
+		[SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
 		public void LtrRun()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "LtrRun", paramsArray);
+			 Factory.ExecuteMethod(this, "LtrRun");
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745706.aspx
 		/// </summary>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff745706.aspx </remarks>
 		/// <param name="dataType">optional NetOffice.PowerPointApi.Enums.PpPasteDataType DataType = 0</param>
 		/// <param name="displayAsIcon">optional NetOffice.OfficeApi.Enums.MsoTriState DisplayAsIcon = 0</param>
 		/// <param name="iconFileName">optional string IconFileName = </param>
 		/// <param name="iconIndex">optional Int32 IconIndex = 0</param>
 		/// <param name="iconLabel">optional string IconLabel = </param>
 		/// <param name="link">optional NetOffice.OfficeApi.Enums.MsoTriState Link = 0</param>
-		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15,16)]
+		[SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
 		public NetOffice.PowerPointApi.TextRange PasteSpecial(object dataType, object displayAsIcon, object iconFileName, object iconIndex, object iconLabel, object link)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(dataType, displayAsIcon, iconFileName, iconIndex, iconLabel, link);
-			object returnItem = Invoker.MethodReturn(this, "PasteSpecial", paramsArray);
-			NetOffice.PowerPointApi.TextRange newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PowerPointApi.TextRange.LateBindingApiWrapperType) as NetOffice.PowerPointApi.TextRange;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PowerPointApi.TextRange>(this, "PasteSpecial", NetOffice.PowerPointApi.TextRange.LateBindingApiWrapperType, new object[]{ dataType, displayAsIcon, iconFileName, iconIndex, iconLabel, link });
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745706.aspx
 		/// </summary>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff745706.aspx </remarks>
+		[CustomMethod]
+		[SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
 		public NetOffice.PowerPointApi.TextRange PasteSpecial()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "PasteSpecial", paramsArray);
-			NetOffice.PowerPointApi.TextRange newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PowerPointApi.TextRange.LateBindingApiWrapperType) as NetOffice.PowerPointApi.TextRange;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PowerPointApi.TextRange>(this, "PasteSpecial", NetOffice.PowerPointApi.TextRange.LateBindingApiWrapperType);
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745706.aspx
 		/// </summary>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff745706.aspx </remarks>
 		/// <param name="dataType">optional NetOffice.PowerPointApi.Enums.PpPasteDataType DataType = 0</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
 		public NetOffice.PowerPointApi.TextRange PasteSpecial(object dataType)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(dataType);
-			object returnItem = Invoker.MethodReturn(this, "PasteSpecial", paramsArray);
-			NetOffice.PowerPointApi.TextRange newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PowerPointApi.TextRange.LateBindingApiWrapperType) as NetOffice.PowerPointApi.TextRange;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PowerPointApi.TextRange>(this, "PasteSpecial", NetOffice.PowerPointApi.TextRange.LateBindingApiWrapperType, dataType);
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745706.aspx
 		/// </summary>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff745706.aspx </remarks>
 		/// <param name="dataType">optional NetOffice.PowerPointApi.Enums.PpPasteDataType DataType = 0</param>
 		/// <param name="displayAsIcon">optional NetOffice.OfficeApi.Enums.MsoTriState DisplayAsIcon = 0</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
 		public NetOffice.PowerPointApi.TextRange PasteSpecial(object dataType, object displayAsIcon)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(dataType, displayAsIcon);
-			object returnItem = Invoker.MethodReturn(this, "PasteSpecial", paramsArray);
-			NetOffice.PowerPointApi.TextRange newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PowerPointApi.TextRange.LateBindingApiWrapperType) as NetOffice.PowerPointApi.TextRange;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PowerPointApi.TextRange>(this, "PasteSpecial", NetOffice.PowerPointApi.TextRange.LateBindingApiWrapperType, dataType, displayAsIcon);
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745706.aspx
 		/// </summary>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff745706.aspx </remarks>
 		/// <param name="dataType">optional NetOffice.PowerPointApi.Enums.PpPasteDataType DataType = 0</param>
 		/// <param name="displayAsIcon">optional NetOffice.OfficeApi.Enums.MsoTriState DisplayAsIcon = 0</param>
 		/// <param name="iconFileName">optional string IconFileName = </param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
 		public NetOffice.PowerPointApi.TextRange PasteSpecial(object dataType, object displayAsIcon, object iconFileName)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(dataType, displayAsIcon, iconFileName);
-			object returnItem = Invoker.MethodReturn(this, "PasteSpecial", paramsArray);
-			NetOffice.PowerPointApi.TextRange newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PowerPointApi.TextRange.LateBindingApiWrapperType) as NetOffice.PowerPointApi.TextRange;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PowerPointApi.TextRange>(this, "PasteSpecial", NetOffice.PowerPointApi.TextRange.LateBindingApiWrapperType, dataType, displayAsIcon, iconFileName);
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745706.aspx
 		/// </summary>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff745706.aspx </remarks>
 		/// <param name="dataType">optional NetOffice.PowerPointApi.Enums.PpPasteDataType DataType = 0</param>
 		/// <param name="displayAsIcon">optional NetOffice.OfficeApi.Enums.MsoTriState DisplayAsIcon = 0</param>
 		/// <param name="iconFileName">optional string IconFileName = </param>
 		/// <param name="iconIndex">optional Int32 IconIndex = 0</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
 		public NetOffice.PowerPointApi.TextRange PasteSpecial(object dataType, object displayAsIcon, object iconFileName, object iconIndex)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(dataType, displayAsIcon, iconFileName, iconIndex);
-			object returnItem = Invoker.MethodReturn(this, "PasteSpecial", paramsArray);
-			NetOffice.PowerPointApi.TextRange newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PowerPointApi.TextRange.LateBindingApiWrapperType) as NetOffice.PowerPointApi.TextRange;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PowerPointApi.TextRange>(this, "PasteSpecial", NetOffice.PowerPointApi.TextRange.LateBindingApiWrapperType, dataType, displayAsIcon, iconFileName, iconIndex);
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745706.aspx
 		/// </summary>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff745706.aspx </remarks>
 		/// <param name="dataType">optional NetOffice.PowerPointApi.Enums.PpPasteDataType DataType = 0</param>
 		/// <param name="displayAsIcon">optional NetOffice.OfficeApi.Enums.MsoTriState DisplayAsIcon = 0</param>
 		/// <param name="iconFileName">optional string IconFileName = </param>
 		/// <param name="iconIndex">optional Int32 IconIndex = 0</param>
 		/// <param name="iconLabel">optional string IconLabel = </param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
 		public NetOffice.PowerPointApi.TextRange PasteSpecial(object dataType, object displayAsIcon, object iconFileName, object iconIndex, object iconLabel)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(dataType, displayAsIcon, iconFileName, iconIndex, iconLabel);
-			object returnItem = Invoker.MethodReturn(this, "PasteSpecial", paramsArray);
-			NetOffice.PowerPointApi.TextRange newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PowerPointApi.TextRange.LateBindingApiWrapperType) as NetOffice.PowerPointApi.TextRange;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PowerPointApi.TextRange>(this, "PasteSpecial", NetOffice.PowerPointApi.TextRange.LateBindingApiWrapperType, new object[]{ dataType, displayAsIcon, iconFileName, iconIndex, iconLabel });
 		}
 
 		#endregion
+
 		#pragma warning restore
 	}
 }

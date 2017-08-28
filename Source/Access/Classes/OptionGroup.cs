@@ -1,45 +1,45 @@
 ﻿using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
-using NetOffice;
-using NetOffice.Misc;
+using NetOffice.Attributes;
 
 namespace NetOffice.AccessApi
 {
-
 	#region Delegates
 
 	#pragma warning disable
-	public delegate void OptionGroup_BeforeUpdateEventHandler(ref Int16 Cancel);
+	public delegate void OptionGroup_BeforeUpdateEventHandler(ref Int16 cancel);
 	public delegate void OptionGroup_AfterUpdateEventHandler();
 	public delegate void OptionGroup_EnterEventHandler();
-	public delegate void OptionGroup_ExitEventHandler(ref Int16 Cancel);
+	public delegate void OptionGroup_ExitEventHandler(ref Int16 cancel);
 	public delegate void OptionGroup_ClickEventHandler();
-	public delegate void OptionGroup_DblClickEventHandler(ref Int16 Cancel);
-	public delegate void OptionGroup_MouseDownEventHandler(ref Int16 Button, ref Int16 Shift, ref Single X, ref Single Y);
-	public delegate void OptionGroup_MouseMoveEventHandler(ref Int16 Button, ref Int16 Shift, ref Single X, ref Single Y);
-	public delegate void OptionGroup_MouseUpEventHandler(ref Int16 Button, ref Int16 Shift, ref Single X, ref Single Y);
+	public delegate void OptionGroup_DblClickEventHandler(ref Int16 cancel);
+	public delegate void OptionGroup_MouseDownEventHandler(ref Int16 button, ref Int16 shift, ref Single x, ref Single y);
+	public delegate void OptionGroup_MouseMoveEventHandler(ref Int16 button, ref Int16 shift, ref Single x, ref Single y);
+	public delegate void OptionGroup_MouseUpEventHandler(ref Int16 button, ref Int16 shift, ref Single x, ref Single y);
 	#pragma warning restore
 
 	#endregion
 
-	///<summary>
+	/// <summary>
 	/// CoClass OptionGroup 
 	/// SupportByVersion Access, 9,10,11,12,14,15,16
-	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff821461.aspx
-	///</summary>
-	[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
-	[EntityTypeAttribute(EntityType.IsCoClass)]
-	public class OptionGroup : _OptionGroup,IEventBinding
+	/// </summary>
+	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff821461.aspx </remarks>
+	[SupportByVersion("Access", 9,10,11,12,14,15,16)]
+	[EntityType(EntityType.IsCoClass)]
+    [EventSink(typeof(Events._OptionGroupEvents_SinkHelper), typeof(Events.DispOptionGroupEvents_SinkHelper))]
+    public class OptionGroup : _OptionGroup, IEventBinding
 	{
 		#pragma warning disable
+
 		#region Fields
 		
 		private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
 		private string _activeSinkId;
 		private NetRuntimeSystem.Type _thisType;
-		_OptionGroupEvents_SinkHelper __OptionGroupEvents_SinkHelper;
-		DispOptionGroupEvents_SinkHelper _dispOptionGroupEvents_SinkHelper;
+		private Events._OptionGroupEvents_SinkHelper __OptionGroupEvents_SinkHelper;
+		private Events.DispOptionGroupEvents_SinkHelper _dispOptionGroupEvents_SinkHelper;
 	
 		#endregion
 
@@ -48,6 +48,7 @@ namespace NetOffice.AccessApi
         /// <summary>
         /// Instance Type
         /// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
         public override Type InstanceType
         {
             get
@@ -114,17 +115,17 @@ namespace NetOffice.AccessApi
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of OptionGroup 
-        ///</summary>		
+        /// </summary>		
 		public OptionGroup():base("Access.OptionGroup")
 		{
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of OptionGroup
-        ///</summary>
+        /// </summary>
         ///<param name="progId">registered ProgID</param>
 		public OptionGroup(string progId):base(progId)
 		{
@@ -134,46 +135,6 @@ namespace NetOffice.AccessApi
 		#endregion
 
 		#region Static CoClass Methods
-
-		/// <summary>
-        /// Returns all running Access.OptionGroup objects from the environment/system
-        /// </summary>
-        /// <returns>an Access.OptionGroup array</returns>
-		public static NetOffice.AccessApi.OptionGroup[] GetActiveInstances()
-		{		
-			IDisposableEnumeration proxyList = NetOffice.ProxyService.GetActiveInstances("Access","OptionGroup");
-			NetRuntimeSystem.Collections.Generic.List<NetOffice.AccessApi.OptionGroup> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.AccessApi.OptionGroup>();
-			foreach(object proxy in proxyList)
-				resultList.Add( new NetOffice.AccessApi.OptionGroup(null, proxy) );
-			return resultList.ToArray();
-		}
-
-		/// <summary>
-        /// Returns a running Access.OptionGroup object from the environment/system.
-        /// </summary>
-        /// <returns>an Access.OptionGroup object or null</returns>
-		public static NetOffice.AccessApi.OptionGroup GetActiveInstance()
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Access","OptionGroup", false);
-			if(null != proxy)
-				return new NetOffice.AccessApi.OptionGroup(null, proxy);
-			else
-				return null;
-		}
-
-		/// <summary>
-        /// Returns a running Access.OptionGroup object from the environment/system. 
-        /// </summary>
-	    /// <param name="throwOnError">throw an exception if no object was found</param>
-        /// <returns>an Access.OptionGroup object or null</returns>
-		public static NetOffice.AccessApi.OptionGroup GetActiveInstance(bool throwOnError)
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Access","OptionGroup", throwOnError);
-			if(null != proxy)
-				return new NetOffice.AccessApi.OptionGroup(null, proxy);
-			else
-				return null;
-		}
 		#endregion
 
 		#region Events
@@ -402,18 +363,18 @@ namespace NetOffice.AccessApi
 				return;
 	
             if (null == _activeSinkId)
-				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, _OptionGroupEvents_SinkHelper.Id,DispOptionGroupEvents_SinkHelper.Id);
+				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, Events._OptionGroupEvents_SinkHelper.Id, Events.DispOptionGroupEvents_SinkHelper.Id);
 
 
-			if(_OptionGroupEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
+			if(Events._OptionGroupEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
 			{
-				__OptionGroupEvents_SinkHelper = new _OptionGroupEvents_SinkHelper(this, _connectPoint);
+				__OptionGroupEvents_SinkHelper = new Events._OptionGroupEvents_SinkHelper(this, _connectPoint);
 				return;
 			}
 
-			if(DispOptionGroupEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
+			if(Events.DispOptionGroupEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
 			{
-				_dispOptionGroupEvents_SinkHelper = new DispOptionGroupEvents_SinkHelper(this, _connectPoint);
+				_dispOptionGroupEvents_SinkHelper = new Events.DispOptionGroupEvents_SinkHelper(this, _connectPoint);
 				return;
 			} 
         }

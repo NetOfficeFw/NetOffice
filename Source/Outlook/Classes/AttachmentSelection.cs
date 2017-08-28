@@ -1,12 +1,10 @@
 ﻿using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
-using NetOffice;
-using NetOffice.Misc;
+using NetOffice.Attributes;
 
 namespace NetOffice.OutlookApi
 {
-
 	#region Delegates
 
 	#pragma warning disable
@@ -14,16 +12,17 @@ namespace NetOffice.OutlookApi
 
 	#endregion
 
-	///<summary>
+	/// <summary>
 	/// CoClass AttachmentSelection 
 	/// SupportByVersion Outlook, 12,14,15,16
-	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff863628.aspx
-	///</summary>
-	[SupportByVersionAttribute("Outlook", 12,14,15,16)]
-	[EntityTypeAttribute(EntityType.IsCoClass)]
-	public class AttachmentSelection : _AttachmentSelection
+	/// </summary>
+	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff863628.aspx </remarks>
+	[SupportByVersion("Outlook", 12,14,15,16)]
+	[EntityType(EntityType.IsCoClass)]
+ 	public class AttachmentSelection : _AttachmentSelection
 	{
 		#pragma warning disable
+
 		#region Fields
 		
 		private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
@@ -37,6 +36,7 @@ namespace NetOffice.OutlookApi
         /// <summary>
         /// Instance Type
         /// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
         public override Type InstanceType
         {
             get
@@ -103,17 +103,17 @@ namespace NetOffice.OutlookApi
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of AttachmentSelection 
-        ///</summary>		
+        /// </summary>		
 		public AttachmentSelection():base("Outlook.AttachmentSelection")
 		{
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of AttachmentSelection
-        ///</summary>
+        /// </summary>
         ///<param name="progId">registered ProgID</param>
 		public AttachmentSelection(string progId):base(progId)
 		{
@@ -123,46 +123,6 @@ namespace NetOffice.OutlookApi
 		#endregion
 
 		#region Static CoClass Methods
-
-		/// <summary>
-        /// Returns all running Outlook.AttachmentSelection objects from the environment/system
-        /// </summary>
-        /// <returns>an Outlook.AttachmentSelection array</returns>
-		public static NetOffice.OutlookApi.AttachmentSelection[] GetActiveInstances()
-		{		
-			IDisposableEnumeration proxyList = NetOffice.ProxyService.GetActiveInstances("Outlook","AttachmentSelection");
-			NetRuntimeSystem.Collections.Generic.List<NetOffice.OutlookApi.AttachmentSelection> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.OutlookApi.AttachmentSelection>();
-			foreach(object proxy in proxyList)
-				resultList.Add( new NetOffice.OutlookApi.AttachmentSelection(null, proxy) );
-			return resultList.ToArray();
-		}
-
-		/// <summary>
-        /// Returns a running Outlook.AttachmentSelection object from the environment/system.
-        /// </summary>
-        /// <returns>an Outlook.AttachmentSelection object or null</returns>
-		public static NetOffice.OutlookApi.AttachmentSelection GetActiveInstance()
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Outlook","AttachmentSelection", false);
-			if(null != proxy)
-				return new NetOffice.OutlookApi.AttachmentSelection(null, proxy);
-			else
-				return null;
-		}
-
-		/// <summary>
-        /// Returns a running Outlook.AttachmentSelection object from the environment/system. 
-        /// </summary>
-	    /// <param name="throwOnError">throw an exception if no object was found</param>
-        /// <returns>an Outlook.AttachmentSelection object or null</returns>
-		public static NetOffice.OutlookApi.AttachmentSelection GetActiveInstance(bool throwOnError)
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Outlook","AttachmentSelection", throwOnError);
-			if(null != proxy)
-				return new NetOffice.OutlookApi.AttachmentSelection(null, proxy);
-			else
-				return null;
-		}
 		#endregion
 
 		#region Events

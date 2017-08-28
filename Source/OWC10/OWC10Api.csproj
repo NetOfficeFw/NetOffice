@@ -406,12 +406,12 @@
     <Compile Include="Classes\OfflineInfo.cs" />
     <Compile Include="Classes\Range.cs" />
     <Compile Include="Classes\PivotTable.cs" />
-    <Compile Include="EventInterfaces\IChartEvents.cs" />
-    <Compile Include="EventInterfaces\ISpreadsheetEventSink.cs" />
-    <Compile Include="EventInterfaces\_DataSourceControlEvent.cs" />
-    <Compile Include="EventInterfaces\_NavigationEvent.cs" />
-    <Compile Include="EventInterfaces\IRangeEvents.cs" />
-    <Compile Include="EventInterfaces\IPivotControlEvents.cs" />
+    <Compile Include="Events\IChartEvents.cs" />
+    <Compile Include="Events\ISpreadsheetEventSink.cs" />
+    <Compile Include="Events\_DataSourceControlEvent.cs" />
+    <Compile Include="Events\_NavigationEvent.cs" />
+    <Compile Include="Events\IRangeEvents.cs" />
+    <Compile Include="Events\IPivotControlEvents.cs" />
   </ItemGroup>
   <ItemGroup>
     <COMReference Include="stdole">

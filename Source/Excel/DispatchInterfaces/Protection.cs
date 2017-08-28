@@ -1,28 +1,27 @@
 ﻿using System;
 using NetRuntimeSystem = System;
-using System.Runtime.InteropServices;
-using System.Runtime.CompilerServices;
 using System.ComponentModel;
-using System.Reflection;
-using System.Collections.Generic;
-using NetOffice;
+using NetOffice.Attributes;
+
 namespace NetOffice.ExcelApi
 {
-	///<summary>
+	/// <summary>
 	/// DispatchInterface Protection 
 	/// SupportByVersion Excel, 10,11,12,14,15,16
-	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839872.aspx
-	///</summary>
-	[SupportByVersionAttribute("Excel", 10,11,12,14,15,16)]
-	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
-	public class Protection : COMObject
+	/// </summary>
+	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff839872.aspx </remarks>
+	[SupportByVersion("Excel", 10,11,12,14,15,16)]
+	[EntityType(EntityType.IsDispatchInterface)]
+ 	public class Protection : COMObject
 	{
 		#pragma warning disable
+
 		#region Type Information
 
         /// <summary>
         /// Instance Type
         /// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
         public override Type InstanceType
         {
             get
@@ -40,14 +39,20 @@ namespace NetOffice.ExcelApi
             {
                 if (null == _type)
                     _type = typeof(Protection);
-                    
                 return _type;
             }
         }
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public Protection(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -93,7 +98,7 @@ namespace NetOffice.ExcelApi
 		{
 		}
 		
-		/// <param name="progId">registered ProgID</param>
+		/// <param name="progId">registered progID</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public Protection(string progId) : base(progId)
 		{
@@ -106,193 +111,168 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822646.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff822646.aspx </remarks>
+		[SupportByVersion("Excel", 10,11,12,14,15,16)]
 		public bool AllowFormattingCells
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "AllowFormattingCells", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "AllowFormattingCells");
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194806.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194806.aspx </remarks>
+		[SupportByVersion("Excel", 10,11,12,14,15,16)]
 		public bool AllowFormattingColumns
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "AllowFormattingColumns", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "AllowFormattingColumns");
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838830.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff838830.aspx </remarks>
+		[SupportByVersion("Excel", 10,11,12,14,15,16)]
 		public bool AllowFormattingRows
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "AllowFormattingRows", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "AllowFormattingRows");
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835264.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835264.aspx </remarks>
+		[SupportByVersion("Excel", 10,11,12,14,15,16)]
 		public bool AllowInsertingColumns
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "AllowInsertingColumns", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "AllowInsertingColumns");
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197743.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff197743.aspx </remarks>
+		[SupportByVersion("Excel", 10,11,12,14,15,16)]
 		public bool AllowInsertingRows
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "AllowInsertingRows", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "AllowInsertingRows");
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840705.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff840705.aspx </remarks>
+		[SupportByVersion("Excel", 10,11,12,14,15,16)]
 		public bool AllowInsertingHyperlinks
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "AllowInsertingHyperlinks", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "AllowInsertingHyperlinks");
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff821624.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff821624.aspx </remarks>
+		[SupportByVersion("Excel", 10,11,12,14,15,16)]
 		public bool AllowDeletingColumns
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "AllowDeletingColumns", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "AllowDeletingColumns");
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839800.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff839800.aspx </remarks>
+		[SupportByVersion("Excel", 10,11,12,14,15,16)]
 		public bool AllowDeletingRows
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "AllowDeletingRows", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "AllowDeletingRows");
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839266.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff839266.aspx </remarks>
+		[SupportByVersion("Excel", 10,11,12,14,15,16)]
 		public bool AllowSorting
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "AllowSorting", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "AllowSorting");
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839866.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff839866.aspx </remarks>
+		[SupportByVersion("Excel", 10,11,12,14,15,16)]
 		public bool AllowFiltering
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "AllowFiltering", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "AllowFiltering");
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197311.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff197311.aspx </remarks>
+		[SupportByVersion("Excel", 10,11,12,14,15,16)]
 		public bool AllowUsingPivotTables
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "AllowUsingPivotTables", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "AllowUsingPivotTables");
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff834945.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff834945.aspx </remarks>
+		[SupportByVersion("Excel", 10,11,12,14,15,16)]
 		public NetOffice.ExcelApi.AllowEditRanges AllowEditRanges
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "AllowEditRanges", paramsArray);
-				NetOffice.ExcelApi.AllowEditRanges newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.AllowEditRanges.LateBindingApiWrapperType) as NetOffice.ExcelApi.AllowEditRanges;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.AllowEditRanges>(this, "AllowEditRanges", NetOffice.ExcelApi.AllowEditRanges.LateBindingApiWrapperType);
 			}
 		}
 
@@ -301,6 +281,7 @@ namespace NetOffice.ExcelApi
 		#region Methods
 
 		#endregion
+
 		#pragma warning restore
 	}
 }

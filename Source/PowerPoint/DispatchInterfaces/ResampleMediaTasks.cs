@@ -1,24 +1,34 @@
 ﻿using System;
 using NetRuntimeSystem = System;
-using System.Runtime.InteropServices;
-using System.Runtime.CompilerServices;
 using System.ComponentModel;
-using System.Reflection;
-using System.Collections.Generic;
-using NetOffice;
+using NetOffice.Attributes;
+
 namespace NetOffice.PowerPointApi
 {
-	///<summary>
+	/// <summary>
 	/// DispatchInterface ResampleMediaTasks 
 	/// SupportByVersion PowerPoint, 14,15,16
-	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746115.aspx
-	///</summary>
-	[SupportByVersionAttribute("PowerPoint", 14,15,16)]
-	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
-	public class ResampleMediaTasks : Collection
+	/// </summary>
+	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff746115.aspx </remarks>
+	[SupportByVersion("PowerPoint", 14,15,16)]
+	[EntityType(EntityType.IsDispatchInterface), HasIndexProperty(IndexInvoke.Method, "Item")]
+ 	public class ResampleMediaTasks : Collection
 	{
 		#pragma warning disable
+
 		#region Type Information
+
+		/// <summary>
+		/// Instance Type
+		/// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
+		public override Type InstanceType
+		{
+			get
+			{
+				return LateBindingApiWrapperType;
+			}
+		}
 
         private static Type _type;
 
@@ -29,14 +39,20 @@ namespace NetOffice.PowerPointApi
             {
                 if (null == _type)
                     _type = typeof(ResampleMediaTasks);
-                    
                 return _type;
             }
         }
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public ResampleMediaTasks(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -82,7 +98,7 @@ namespace NetOffice.PowerPointApi
 		{
 		}
 		
-		/// <param name="progId">registered ProgID</param>
+		/// <param name="progId">registered progID</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public ResampleMediaTasks(string progId) : base(progId)
 		{
@@ -95,16 +111,14 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745739.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff745739.aspx </remarks>
+		[SupportByVersion("PowerPoint", 14,15,16)]
 		public Int32 PercentComplete
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "PercentComplete", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "PercentComplete");
 			}
 		}
 
@@ -114,56 +128,50 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="index">Int32 Index</param>
-		[SupportByVersionAttribute("PowerPoint", 14,15,16)]
-		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
+		/// <param name="index">Int32 index</param>
+		[SupportByVersion("PowerPoint", 14,15,16)]
+		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
 		public NetOffice.PowerPointApi.ResampleMediaTask this[Int32 index]
 		{
 			get
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(index);
-				object returnItem = Invoker.MethodReturn(this, "Item", paramsArray);
-				NetOffice.PowerPointApi.ResampleMediaTask newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PowerPointApi.ResampleMediaTask.LateBindingApiWrapperType) as NetOffice.PowerPointApi.ResampleMediaTask;
-				return newObject;
+				return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PowerPointApi.ResampleMediaTask>(this, "Item", NetOffice.PowerPointApi.ResampleMediaTask.LateBindingApiWrapperType, index);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744352.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff744352.aspx </remarks>
+		[SupportByVersion("PowerPoint", 14,15,16)]
 		public void Pause()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "Pause", paramsArray);
+			 Factory.ExecuteMethod(this, "Pause");
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745763.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff745763.aspx </remarks>
+		[SupportByVersion("PowerPoint", 14,15,16)]
 		public void Cancel()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "Cancel", paramsArray);
+			 Factory.ExecuteMethod(this, "Cancel");
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746374.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff746374.aspx </remarks>
+		[SupportByVersion("PowerPoint", 14,15,16)]
 		public void Resume()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "Resume", paramsArray);
+			 Factory.ExecuteMethod(this, "Resume");
 		}
 
 		#endregion
+
 		#pragma warning restore
 	}
 }

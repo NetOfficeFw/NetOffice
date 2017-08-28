@@ -1,12 +1,10 @@
 ﻿using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
-using NetOffice;
-using NetOffice.Misc;
+using NetOffice.Attributes;
 
 namespace NetOffice.AccessApi
 {
-
 	#region Delegates
 
 	#pragma warning disable
@@ -14,16 +12,17 @@ namespace NetOffice.AccessApi
 
 	#endregion
 
-	///<summary>
+	/// <summary>
 	/// CoClass AllStoredProcedures 
 	/// SupportByVersion Access, 9,10,11,12,14,15,16
-	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197075.aspx
-	///</summary>
-	[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
-	[EntityTypeAttribute(EntityType.IsCoClass)]
-	public class AllStoredProcedures : AllObjects
+	/// </summary>
+	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff197075.aspx </remarks>
+	[SupportByVersion("Access", 9,10,11,12,14,15,16)]
+	[EntityType(EntityType.IsCoClass)]
+ 	public class AllStoredProcedures : AllObjects
 	{
 		#pragma warning disable
+
 		#region Fields
 		
 		private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
@@ -37,6 +36,7 @@ namespace NetOffice.AccessApi
         /// <summary>
         /// Instance Type
         /// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
         public override Type InstanceType
         {
             get
@@ -103,17 +103,17 @@ namespace NetOffice.AccessApi
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of AllStoredProcedures 
-        ///</summary>		
+        /// </summary>		
 		public AllStoredProcedures():base("Access.AllStoredProcedures")
 		{
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of AllStoredProcedures
-        ///</summary>
+        /// </summary>
         ///<param name="progId">registered ProgID</param>
 		public AllStoredProcedures(string progId):base(progId)
 		{
@@ -123,46 +123,6 @@ namespace NetOffice.AccessApi
 		#endregion
 
 		#region Static CoClass Methods
-
-		/// <summary>
-        /// Returns all running Access.AllStoredProcedures objects from the environment/system
-        /// </summary>
-        /// <returns>an Access.AllStoredProcedures array</returns>
-		public static NetOffice.AccessApi.AllStoredProcedures[] GetActiveInstances()
-		{		
-			IDisposableEnumeration proxyList = NetOffice.ProxyService.GetActiveInstances("Access","AllStoredProcedures");
-			NetRuntimeSystem.Collections.Generic.List<NetOffice.AccessApi.AllStoredProcedures> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.AccessApi.AllStoredProcedures>();
-			foreach(object proxy in proxyList)
-				resultList.Add( new NetOffice.AccessApi.AllStoredProcedures(null, proxy) );
-			return resultList.ToArray();
-		}
-
-		/// <summary>
-        /// Returns a running Access.AllStoredProcedures object from the environment/system.
-        /// </summary>
-        /// <returns>an Access.AllStoredProcedures object or null</returns>
-		public static NetOffice.AccessApi.AllStoredProcedures GetActiveInstance()
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Access","AllStoredProcedures", false);
-			if(null != proxy)
-				return new NetOffice.AccessApi.AllStoredProcedures(null, proxy);
-			else
-				return null;
-		}
-
-		/// <summary>
-        /// Returns a running Access.AllStoredProcedures object from the environment/system. 
-        /// </summary>
-	    /// <param name="throwOnError">throw an exception if no object was found</param>
-        /// <returns>an Access.AllStoredProcedures object or null</returns>
-		public static NetOffice.AccessApi.AllStoredProcedures GetActiveInstance(bool throwOnError)
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Access","AllStoredProcedures", throwOnError);
-			if(null != proxy)
-				return new NetOffice.AccessApi.AllStoredProcedures(null, proxy);
-			else
-				return null;
-		}
 		#endregion
 
 		#region Events

@@ -1,62 +1,62 @@
 ﻿using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
-using NetOffice;
-using NetOffice.Misc;
+using NetOffice.Attributes;
 
 namespace NetOffice.OutlookApi
 {
-
 	#region Delegates
 
 	#pragma warning disable
-	public delegate void ContactItem_OpenEventHandler(ref bool Cancel);
-	public delegate void ContactItem_CustomActionEventHandler(COMObject Action, COMObject Response, ref bool Cancel);
-	public delegate void ContactItem_CustomPropertyChangeEventHandler(string Name);
-	public delegate void ContactItem_ForwardEventHandler(COMObject Forward, ref bool Cancel);
-	public delegate void ContactItem_CloseEventHandler(ref bool Cancel);
-	public delegate void ContactItem_PropertyChangeEventHandler(string Name);
+	public delegate void ContactItem_OpenEventHandler(ref bool cancel);
+	public delegate void ContactItem_CustomActionEventHandler(ICOMObject action, ICOMObject response, ref bool cancel);
+	public delegate void ContactItem_CustomPropertyChangeEventHandler(string name);
+	public delegate void ContactItem_ForwardEventHandler(ICOMObject forward, ref bool cancel);
+	public delegate void ContactItem_CloseEventHandler(ref bool cancel);
+	public delegate void ContactItem_PropertyChangeEventHandler(string name);
 	public delegate void ContactItem_ReadEventHandler();
-	public delegate void ContactItem_ReplyEventHandler(COMObject Response, ref bool Cancel);
-	public delegate void ContactItem_ReplyAllEventHandler(COMObject Response, ref bool Cancel);
-	public delegate void ContactItem_SendEventHandler(ref bool Cancel);
-	public delegate void ContactItem_WriteEventHandler(ref bool Cancel);
-	public delegate void ContactItem_BeforeCheckNamesEventHandler(ref bool Cancel);
-	public delegate void ContactItem_AttachmentAddEventHandler(NetOffice.OutlookApi.Attachment Attachment);
-	public delegate void ContactItem_AttachmentReadEventHandler(NetOffice.OutlookApi.Attachment Attachment);
-	public delegate void ContactItem_BeforeAttachmentSaveEventHandler(NetOffice.OutlookApi.Attachment Attachment, ref bool Cancel);
-	public delegate void ContactItem_BeforeDeleteEventHandler(COMObject Item, ref bool Cancel);
-	public delegate void ContactItem_AttachmentRemoveEventHandler(NetOffice.OutlookApi.Attachment Attachment);
-	public delegate void ContactItem_BeforeAttachmentAddEventHandler(NetOffice.OutlookApi.Attachment Attachment, ref bool Cancel);
-	public delegate void ContactItem_BeforeAttachmentPreviewEventHandler(NetOffice.OutlookApi.Attachment Attachment, ref bool Cancel);
-	public delegate void ContactItem_BeforeAttachmentReadEventHandler(NetOffice.OutlookApi.Attachment Attachment, ref bool Cancel);
-	public delegate void ContactItem_BeforeAttachmentWriteToTempFileEventHandler(NetOffice.OutlookApi.Attachment Attachment, ref bool Cancel);
+	public delegate void ContactItem_ReplyEventHandler(ICOMObject response, ref bool cancel);
+	public delegate void ContactItem_ReplyAllEventHandler(ICOMObject response, ref bool cancel);
+	public delegate void ContactItem_SendEventHandler(ref bool cancel);
+	public delegate void ContactItem_WriteEventHandler(ref bool cancel);
+	public delegate void ContactItem_BeforeCheckNamesEventHandler(ref bool cancel);
+	public delegate void ContactItem_AttachmentAddEventHandler(NetOffice.OutlookApi.Attachment attachment);
+	public delegate void ContactItem_AttachmentReadEventHandler(NetOffice.OutlookApi.Attachment attachment);
+	public delegate void ContactItem_BeforeAttachmentSaveEventHandler(NetOffice.OutlookApi.Attachment attachment, ref bool cancel);
+	public delegate void ContactItem_BeforeDeleteEventHandler(ICOMObject item, ref bool cancel);
+	public delegate void ContactItem_AttachmentRemoveEventHandler(NetOffice.OutlookApi.Attachment attachment);
+	public delegate void ContactItem_BeforeAttachmentAddEventHandler(NetOffice.OutlookApi.Attachment attachment, ref bool cancel);
+	public delegate void ContactItem_BeforeAttachmentPreviewEventHandler(NetOffice.OutlookApi.Attachment attachment, ref bool cancel);
+	public delegate void ContactItem_BeforeAttachmentReadEventHandler(NetOffice.OutlookApi.Attachment attachment, ref bool cancel);
+	public delegate void ContactItem_BeforeAttachmentWriteToTempFileEventHandler(NetOffice.OutlookApi.Attachment attachment, ref bool cancel);
 	public delegate void ContactItem_UnloadEventHandler();
-	public delegate void ContactItem_BeforeAutoSaveEventHandler(ref bool Cancel);
+	public delegate void ContactItem_BeforeAutoSaveEventHandler(ref bool cancel);
 	public delegate void ContactItem_BeforeReadEventHandler();
 	public delegate void ContactItem_AfterWriteEventHandler();
-	public delegate void ContactItem_ReadCompleteEventHandler(ref bool Cancel);
+	public delegate void ContactItem_ReadCompleteEventHandler(ref bool cancel);
 	#pragma warning restore
 
 	#endregion
 
-	///<summary>
+	/// <summary>
 	/// CoClass ContactItem 
 	/// SupportByVersion Outlook, 9,10,11,12,14,15,16
-	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff867603.aspx
-	///</summary>
-	[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15,16)]
-	[EntityTypeAttribute(EntityType.IsCoClass)]
-	public class ContactItem : _ContactItem,IEventBinding
+	/// </summary>
+	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff867603.aspx </remarks>
+	[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
+	[EntityType(EntityType.IsCoClass)]
+	[EventSink(typeof(Events.ItemEvents_SinkHelper), typeof(Events.ItemEvents_10_SinkHelper))]
+	public class ContactItem : _ContactItem, IEventBinding
 	{
 		#pragma warning disable
+
 		#region Fields
 		
 		private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
 		private string _activeSinkId;
 		private NetRuntimeSystem.Type _thisType;
-		ItemEvents_SinkHelper _itemEvents_SinkHelper;
-		ItemEvents_10_SinkHelper _itemEvents_10_SinkHelper;
+		private Events.ItemEvents_SinkHelper _itemEvents_SinkHelper;
+		private Events.ItemEvents_10_SinkHelper _itemEvents_10_SinkHelper;
 	
 		#endregion
 
@@ -65,6 +65,7 @@ namespace NetOffice.OutlookApi
         /// <summary>
         /// Instance Type
         /// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
         public override Type InstanceType
         {
             get
@@ -131,17 +132,17 @@ namespace NetOffice.OutlookApi
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of ContactItem 
-        ///</summary>		
+        /// </summary>		
 		public ContactItem():base("Outlook.ContactItem")
 		{
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of ContactItem
-        ///</summary>
+        /// </summary>
         ///<param name="progId">registered ProgID</param>
 		public ContactItem(string progId):base(progId)
 		{
@@ -151,46 +152,6 @@ namespace NetOffice.OutlookApi
 		#endregion
 
 		#region Static CoClass Methods
-
-		/// <summary>
-        /// Returns all running Outlook.ContactItem objects from the environment/system
-        /// </summary>
-        /// <returns>an Outlook.ContactItem array</returns>
-		public static NetOffice.OutlookApi.ContactItem[] GetActiveInstances()
-		{		
-			IDisposableEnumeration proxyList = NetOffice.ProxyService.GetActiveInstances("Outlook","ContactItem");
-			NetRuntimeSystem.Collections.Generic.List<NetOffice.OutlookApi.ContactItem> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.OutlookApi.ContactItem>();
-			foreach(object proxy in proxyList)
-				resultList.Add( new NetOffice.OutlookApi.ContactItem(null, proxy) );
-			return resultList.ToArray();
-		}
-
-		/// <summary>
-        /// Returns a running Outlook.ContactItem object from the environment/system.
-        /// </summary>
-        /// <returns>an Outlook.ContactItem object or null</returns>
-		public static NetOffice.OutlookApi.ContactItem GetActiveInstance()
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Outlook","ContactItem", false);
-			if(null != proxy)
-				return new NetOffice.OutlookApi.ContactItem(null, proxy);
-			else
-				return null;
-		}
-
-		/// <summary>
-        /// Returns a running Outlook.ContactItem object from the environment/system. 
-        /// </summary>
-	    /// <param name="throwOnError">throw an exception if no object was found</param>
-        /// <returns>an Outlook.ContactItem object or null</returns>
-		public static NetOffice.OutlookApi.ContactItem GetActiveInstance(bool throwOnError)
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Outlook","ContactItem", throwOnError);
-			if(null != proxy)
-				return new NetOffice.OutlookApi.ContactItem(null, proxy);
-			else
-				return null;
-		}
 		#endregion
 
 		#region Events
@@ -810,18 +771,18 @@ namespace NetOffice.OutlookApi
 				return;
 	
             if (null == _activeSinkId)
-				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, ItemEvents_SinkHelper.Id,ItemEvents_10_SinkHelper.Id);
+				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, Events.ItemEvents_SinkHelper.Id, Events.ItemEvents_10_SinkHelper.Id);
 
 
-			if(ItemEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
+			if(Events.ItemEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
 			{
-				_itemEvents_SinkHelper = new ItemEvents_SinkHelper(this, _connectPoint);
+				_itemEvents_SinkHelper = new Events.ItemEvents_SinkHelper(this, _connectPoint);
 				return;
 			}
 
-			if(ItemEvents_10_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
+			if(Events.ItemEvents_10_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
 			{
-				_itemEvents_10_SinkHelper = new ItemEvents_10_SinkHelper(this, _connectPoint);
+				_itemEvents_10_SinkHelper = new Events.ItemEvents_10_SinkHelper(this, _connectPoint);
 				return;
 			} 
         }

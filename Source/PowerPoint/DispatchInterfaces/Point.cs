@@ -1,24 +1,34 @@
 ﻿using System;
 using NetRuntimeSystem = System;
-using System.Runtime.InteropServices;
-using System.Runtime.CompilerServices;
 using System.ComponentModel;
-using System.Reflection;
-using System.Collections.Generic;
-using NetOffice;
+using NetOffice.Attributes;
+
 namespace NetOffice.PowerPointApi
 {
-	///<summary>
+	/// <summary>
 	/// DispatchInterface Point 
 	/// SupportByVersion PowerPoint, 14,15,16
-	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746485.aspx
-	///</summary>
-	[SupportByVersionAttribute("PowerPoint", 14,15,16)]
-	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
-	public class Point : COMObject
+	/// </summary>
+	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff746485.aspx </remarks>
+	[SupportByVersion("PowerPoint", 14,15,16)]
+	[EntityType(EntityType.IsDispatchInterface)]
+ 	public class Point : COMObject
 	{
 		#pragma warning disable
+
 		#region Type Information
+
+		/// <summary>
+		/// Instance Type
+		/// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
+		public override Type InstanceType
+		{
+			get
+			{
+				return LateBindingApiWrapperType;
+			}
+		}
 
         private static Type _type;
 
@@ -29,14 +39,20 @@ namespace NetOffice.PowerPointApi
             {
                 if (null == _type)
                     _type = typeof(Point);
-                    
                 return _type;
             }
         }
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public Point(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -82,7 +98,7 @@ namespace NetOffice.PowerPointApi
 		{
 		}
 		
-		/// <param name="progId">registered ProgID</param>
+		/// <param name="progId">registered progID</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public Point(string progId) : base(progId)
 		{
@@ -95,18 +111,15 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744178.aspx
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff744178.aspx </remarks>
+		[SupportByVersion("PowerPoint", 14,15,16), ProxyResult]
 		public object Parent
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Parent", paramsArray);
-				ICOMObject newObject = Factory.CreateObjectFromComProxy(this,returnItem);
-				return newObject;
+				return Factory.ExecuteReferencePropertyGet(this, "Parent");
 			}
 		}
 
@@ -114,75 +127,63 @@ namespace NetOffice.PowerPointApi
 		/// SupportByVersion PowerPoint 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14,15,16)]
+		[SupportByVersion("PowerPoint", 14,15,16)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public NetOffice.PowerPointApi.ChartBorder Border
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Border", paramsArray);
-				NetOffice.PowerPointApi.ChartBorder newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.PowerPointApi.ChartBorder.LateBindingApiWrapperType) as NetOffice.PowerPointApi.ChartBorder;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.PowerPointApi.ChartBorder>(this, "Border", NetOffice.PowerPointApi.ChartBorder.LateBindingApiWrapperType);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744019.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff744019.aspx </remarks>
+		[SupportByVersion("PowerPoint", 14,15,16)]
 		public NetOffice.PowerPointApi.DataLabel DataLabel
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "DataLabel", paramsArray);
-				NetOffice.PowerPointApi.DataLabel newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.PowerPointApi.DataLabel.LateBindingApiWrapperType) as NetOffice.PowerPointApi.DataLabel;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.PowerPointApi.DataLabel>(this, "DataLabel", NetOffice.PowerPointApi.DataLabel.LateBindingApiWrapperType);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746471.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff746471.aspx </remarks>
+		[SupportByVersion("PowerPoint", 14,15,16)]
 		public Int32 Explosion
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Explosion", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "Explosion");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "Explosion", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "Explosion", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746085.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff746085.aspx </remarks>
+		[SupportByVersion("PowerPoint", 14,15,16)]
 		public bool HasDataLabel
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "HasDataLabel", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "HasDataLabel");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "HasDataLabel", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "HasDataLabel", value);
 			}
 		}
 
@@ -190,293 +191,247 @@ namespace NetOffice.PowerPointApi
 		/// SupportByVersion PowerPoint 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14,15,16)]
+		[SupportByVersion("PowerPoint", 14,15,16)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public NetOffice.PowerPointApi.Interior Interior
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Interior", paramsArray);
-				NetOffice.PowerPointApi.Interior newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.PowerPointApi.Interior.LateBindingApiWrapperType) as NetOffice.PowerPointApi.Interior;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.PowerPointApi.Interior>(this, "Interior", NetOffice.PowerPointApi.Interior.LateBindingApiWrapperType);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746619.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff746619.aspx </remarks>
+		[SupportByVersion("PowerPoint", 14,15,16)]
 		public bool InvertIfNegative
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "InvertIfNegative", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "InvertIfNegative");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "InvertIfNegative", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "InvertIfNegative", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745956.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff745956.aspx </remarks>
+		[SupportByVersion("PowerPoint", 14,15,16)]
 		public Int32 MarkerBackgroundColor
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "MarkerBackgroundColor", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "MarkerBackgroundColor");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "MarkerBackgroundColor", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "MarkerBackgroundColor", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744536.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff744536.aspx </remarks>
+		[SupportByVersion("PowerPoint", 14,15,16)]
 		public NetOffice.PowerPointApi.Enums.XlColorIndex MarkerBackgroundColorIndex
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "MarkerBackgroundColorIndex", paramsArray);
-				int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-				return (NetOffice.PowerPointApi.Enums.XlColorIndex)intReturnItem;
+				return Factory.ExecuteEnumPropertyGet<NetOffice.PowerPointApi.Enums.XlColorIndex>(this, "MarkerBackgroundColorIndex");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "MarkerBackgroundColorIndex", paramsArray);
+				Factory.ExecuteEnumPropertySet(this, "MarkerBackgroundColorIndex", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746305.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff746305.aspx </remarks>
+		[SupportByVersion("PowerPoint", 14,15,16)]
 		public Int32 MarkerForegroundColor
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "MarkerForegroundColor", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "MarkerForegroundColor");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "MarkerForegroundColor", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "MarkerForegroundColor", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745795.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff745795.aspx </remarks>
+		[SupportByVersion("PowerPoint", 14,15,16)]
 		public NetOffice.PowerPointApi.Enums.XlColorIndex MarkerForegroundColorIndex
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "MarkerForegroundColorIndex", paramsArray);
-				int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-				return (NetOffice.PowerPointApi.Enums.XlColorIndex)intReturnItem;
+				return Factory.ExecuteEnumPropertyGet<NetOffice.PowerPointApi.Enums.XlColorIndex>(this, "MarkerForegroundColorIndex");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "MarkerForegroundColorIndex", paramsArray);
+				Factory.ExecuteEnumPropertySet(this, "MarkerForegroundColorIndex", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746591.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff746591.aspx </remarks>
+		[SupportByVersion("PowerPoint", 14,15,16)]
 		public Int32 MarkerSize
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "MarkerSize", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "MarkerSize");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "MarkerSize", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "MarkerSize", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745307.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff745307.aspx </remarks>
+		[SupportByVersion("PowerPoint", 14,15,16)]
 		public NetOffice.PowerPointApi.Enums.XlMarkerStyle MarkerStyle
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "MarkerStyle", paramsArray);
-				int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-				return (NetOffice.PowerPointApi.Enums.XlMarkerStyle)intReturnItem;
+				return Factory.ExecuteEnumPropertyGet<NetOffice.PowerPointApi.Enums.XlMarkerStyle>(this, "MarkerStyle");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "MarkerStyle", paramsArray);
+				Factory.ExecuteEnumPropertySet(this, "MarkerStyle", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746203.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff746203.aspx </remarks>
+		[SupportByVersion("PowerPoint", 14,15,16)]
 		public NetOffice.PowerPointApi.Enums.XlChartPictureType PictureType
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "PictureType", paramsArray);
-				int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-				return (NetOffice.PowerPointApi.Enums.XlChartPictureType)intReturnItem;
+				return Factory.ExecuteEnumPropertyGet<NetOffice.PowerPointApi.Enums.XlChartPictureType>(this, "PictureType");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "PictureType", paramsArray);
+				Factory.ExecuteEnumPropertySet(this, "PictureType", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff743971.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff743971.aspx </remarks>
+		[SupportByVersion("PowerPoint", 14,15,16)]
 		public bool ApplyPictToSides
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "ApplyPictToSides", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "ApplyPictToSides");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "ApplyPictToSides", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "ApplyPictToSides", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746249.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff746249.aspx </remarks>
+		[SupportByVersion("PowerPoint", 14,15,16)]
 		public bool ApplyPictToFront
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "ApplyPictToFront", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "ApplyPictToFront");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "ApplyPictToFront", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "ApplyPictToFront", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744961.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff744961.aspx </remarks>
+		[SupportByVersion("PowerPoint", 14,15,16)]
 		public bool ApplyPictToEnd
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "ApplyPictToEnd", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "ApplyPictToEnd");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "ApplyPictToEnd", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "ApplyPictToEnd", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746193.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff746193.aspx </remarks>
+		[SupportByVersion("PowerPoint", 14,15,16)]
 		public bool Shadow
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Shadow", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "Shadow");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "Shadow", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "Shadow", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744557.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff744557.aspx </remarks>
+		[SupportByVersion("PowerPoint", 14,15,16)]
 		public bool SecondaryPlot
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "SecondaryPlot", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "SecondaryPlot");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "SecondaryPlot", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "SecondaryPlot", value);
 			}
 		}
 
@@ -484,108 +439,91 @@ namespace NetOffice.PowerPointApi
 		/// SupportByVersion PowerPoint 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14,15,16)]
+		[SupportByVersion("PowerPoint", 14,15,16)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public NetOffice.PowerPointApi.ChartFillFormat Fill
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Fill", paramsArray);
-				NetOffice.PowerPointApi.ChartFillFormat newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.PowerPointApi.ChartFillFormat.LateBindingApiWrapperType) as NetOffice.PowerPointApi.ChartFillFormat;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.PowerPointApi.ChartFillFormat>(this, "Fill", NetOffice.PowerPointApi.ChartFillFormat.LateBindingApiWrapperType);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745088.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff745088.aspx </remarks>
+		[SupportByVersion("PowerPoint", 14,15,16)]
 		public bool Has3DEffect
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Has3DEffect", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "Has3DEffect");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "Has3DEffect", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "Has3DEffect", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746579.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff746579.aspx </remarks>
+		[SupportByVersion("PowerPoint", 14,15,16)]
 		public NetOffice.PowerPointApi.ChartFormat Format
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Format", paramsArray);
-				NetOffice.PowerPointApi.ChartFormat newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.PowerPointApi.ChartFormat.LateBindingApiWrapperType) as NetOffice.PowerPointApi.ChartFormat;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.PowerPointApi.ChartFormat>(this, "Format", NetOffice.PowerPointApi.ChartFormat.LateBindingApiWrapperType);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745042.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff745042.aspx </remarks>
+		[SupportByVersion("PowerPoint", 14,15,16)]
 		public Int32 Creator
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Creator", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "Creator");
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744641.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff744641.aspx </remarks>
+		[SupportByVersion("PowerPoint", 14,15,16)]
 		public Double PictureUnit2
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "PictureUnit2", paramsArray);
-				return NetRuntimeSystem.Convert.ToDouble(returnItem);
+				return Factory.ExecuteDoublePropertyGet(this, "PictureUnit2");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "PictureUnit2", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "PictureUnit2", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746434.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff746434.aspx </remarks>
+		[SupportByVersion("PowerPoint", 14,15,16)]
 		public NetOffice.PowerPointApi.Application Application
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				NetOffice.PowerPointApi.Application newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.PowerPointApi.Application.LateBindingApiWrapperType) as NetOffice.PowerPointApi.Application;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.PowerPointApi.Application>(this, "Application", NetOffice.PowerPointApi.Application.LateBindingApiWrapperType);
 			}
 		}
 
@@ -593,100 +531,87 @@ namespace NetOffice.PowerPointApi
 		/// SupportByVersion PowerPoint 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14,15,16)]
+		[SupportByVersion("PowerPoint", 14,15,16)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public Int32 PictureUnit
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "PictureUnit", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "PictureUnit");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "PictureUnit", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "PictureUnit", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744044.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff744044.aspx </remarks>
+		[SupportByVersion("PowerPoint", 14,15,16)]
 		public string Name
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Name", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "Name");
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746558.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff746558.aspx </remarks>
+		[SupportByVersion("PowerPoint", 14,15,16)]
 		public Double Height
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Height", paramsArray);
-				return NetRuntimeSystem.Convert.ToDouble(returnItem);
+				return Factory.ExecuteDoublePropertyGet(this, "Height");
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745481.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff745481.aspx </remarks>
+		[SupportByVersion("PowerPoint", 14,15,16)]
 		public Double Width
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Width", paramsArray);
-				return NetRuntimeSystem.Convert.ToDouble(returnItem);
+				return Factory.ExecuteDoublePropertyGet(this, "Width");
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744053.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff744053.aspx </remarks>
+		[SupportByVersion("PowerPoint", 14,15,16)]
 		public Double Left
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Left", paramsArray);
-				return NetRuntimeSystem.Convert.ToDouble(returnItem);
+				return Factory.ExecuteDoublePropertyGet(this, "Left");
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745378.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff745378.aspx </remarks>
+		[SupportByVersion("PowerPoint", 14,15,16)]
 		public Double Top
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Top", paramsArray);
-				return NetRuntimeSystem.Convert.ToDouble(returnItem);
+				return Factory.ExecuteDoublePropertyGet(this, "Top");
 			}
 		}
 
@@ -696,537 +621,319 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff743866.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff743866.aspx </remarks>
+		[SupportByVersion("PowerPoint", 14,15,16)]
 		public object ClearFormats()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "ClearFormats", paramsArray);
-			if((null != returnItem) && (returnItem is MarshalByRefObject))
-			{
-				ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
-				return newObject;
-			}
-			else
-			{
-				return  returnItem;
-			}
+			return Factory.ExecuteVariantMethodGet(this, "ClearFormats");
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745471.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff745471.aspx </remarks>
+		[SupportByVersion("PowerPoint", 14,15,16)]
 		public object Copy()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "Copy", paramsArray);
-			if((null != returnItem) && (returnItem is MarshalByRefObject))
-			{
-				ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
-				return newObject;
-			}
-			else
-			{
-				return  returnItem;
-			}
+			return Factory.ExecuteVariantMethodGet(this, "Copy");
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745005.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff745005.aspx </remarks>
+		[SupportByVersion("PowerPoint", 14,15,16)]
 		public object Delete()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "Delete", paramsArray);
-			if((null != returnItem) && (returnItem is MarshalByRefObject))
-			{
-				ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
-				return newObject;
-			}
-			else
-			{
-				return  returnItem;
-			}
+			return Factory.ExecuteVariantMethodGet(this, "Delete");
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744851.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff744851.aspx </remarks>
+		[SupportByVersion("PowerPoint", 14,15,16)]
 		public object Paste()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "Paste", paramsArray);
-			if((null != returnItem) && (returnItem is MarshalByRefObject))
-			{
-				ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
-				return newObject;
-			}
-			else
-			{
-				return  returnItem;
-			}
+			return Factory.ExecuteVariantMethodGet(this, "Paste");
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745423.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff745423.aspx </remarks>
+		[SupportByVersion("PowerPoint", 14,15,16)]
 		public object Select()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "Select", paramsArray);
-			if((null != returnItem) && (returnItem is MarshalByRefObject))
-			{
-				ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
-				return newObject;
-			}
-			else
-			{
-				return  returnItem;
-			}
+			return Factory.ExecuteVariantMethodGet(this, "Select");
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15, 16
-		/// 
 		/// </summary>
 		/// <param name="type">optional NetOffice.PowerPointApi.Enums.XlDataLabelsType Type = 2</param>
-		/// <param name="legendKey">optional object LegendKey</param>
-		/// <param name="autoText">optional object AutoText</param>
-		/// <param name="hasLeaderLines">optional object HasLeaderLines</param>
+		/// <param name="legendKey">optional object legendKey</param>
+		/// <param name="autoText">optional object autoText</param>
+		/// <param name="hasLeaderLines">optional object hasLeaderLines</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("PowerPoint", 14,15,16)]
+		[SupportByVersion("PowerPoint", 14,15,16)]
 		public object _ApplyDataLabels(object type, object legendKey, object autoText, object hasLeaderLines)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(type, legendKey, autoText, hasLeaderLines);
-			object returnItem = Invoker.MethodReturn(this, "_ApplyDataLabels", paramsArray);
-			if((null != returnItem) && (returnItem is MarshalByRefObject))
-			{
-				ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
-				return newObject;
-			}
-			else
-			{
-				return  returnItem;
-			}
+			return Factory.ExecuteVariantMethodGet(this, "_ApplyDataLabels", type, legendKey, autoText, hasLeaderLines);
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15, 16
-		/// 
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("PowerPoint", 14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("PowerPoint", 14,15,16)]
 		public object _ApplyDataLabels()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "_ApplyDataLabels", paramsArray);
-			if((null != returnItem) && (returnItem is MarshalByRefObject))
-			{
-				ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
-				return newObject;
-			}
-			else
-			{
-				return  returnItem;
-			}
+			return Factory.ExecuteVariantMethodGet(this, "_ApplyDataLabels");
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15, 16
-		/// 
 		/// </summary>
 		/// <param name="type">optional NetOffice.PowerPointApi.Enums.XlDataLabelsType Type = 2</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("PowerPoint", 14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("PowerPoint", 14,15,16)]
 		public object _ApplyDataLabels(object type)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(type);
-			object returnItem = Invoker.MethodReturn(this, "_ApplyDataLabels", paramsArray);
-			if((null != returnItem) && (returnItem is MarshalByRefObject))
-			{
-				ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
-				return newObject;
-			}
-			else
-			{
-				return  returnItem;
-			}
+			return Factory.ExecuteVariantMethodGet(this, "_ApplyDataLabels", type);
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15, 16
-		/// 
 		/// </summary>
 		/// <param name="type">optional NetOffice.PowerPointApi.Enums.XlDataLabelsType Type = 2</param>
-		/// <param name="legendKey">optional object LegendKey</param>
+		/// <param name="legendKey">optional object legendKey</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("PowerPoint", 14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("PowerPoint", 14,15,16)]
 		public object _ApplyDataLabels(object type, object legendKey)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(type, legendKey);
-			object returnItem = Invoker.MethodReturn(this, "_ApplyDataLabels", paramsArray);
-			if((null != returnItem) && (returnItem is MarshalByRefObject))
-			{
-				ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
-				return newObject;
-			}
-			else
-			{
-				return  returnItem;
-			}
+			return Factory.ExecuteVariantMethodGet(this, "_ApplyDataLabels", type, legendKey);
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15, 16
-		/// 
 		/// </summary>
 		/// <param name="type">optional NetOffice.PowerPointApi.Enums.XlDataLabelsType Type = 2</param>
-		/// <param name="legendKey">optional object LegendKey</param>
-		/// <param name="autoText">optional object AutoText</param>
+		/// <param name="legendKey">optional object legendKey</param>
+		/// <param name="autoText">optional object autoText</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("PowerPoint", 14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("PowerPoint", 14,15,16)]
 		public object _ApplyDataLabels(object type, object legendKey, object autoText)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(type, legendKey, autoText);
-			object returnItem = Invoker.MethodReturn(this, "_ApplyDataLabels", paramsArray);
-			if((null != returnItem) && (returnItem is MarshalByRefObject))
-			{
-				ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
-				return newObject;
-			}
-			else
-			{
-				return  returnItem;
-			}
+			return Factory.ExecuteVariantMethodGet(this, "_ApplyDataLabels", type, legendKey, autoText);
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744786.aspx
 		/// </summary>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff744786.aspx </remarks>
 		/// <param name="type">optional NetOffice.PowerPointApi.Enums.XlDataLabelsType Type = 2</param>
-		/// <param name="legendKey">optional object LegendKey</param>
-		/// <param name="autoText">optional object AutoText</param>
-		/// <param name="hasLeaderLines">optional object HasLeaderLines</param>
-		/// <param name="showSeriesName">optional object ShowSeriesName</param>
-		/// <param name="showCategoryName">optional object ShowCategoryName</param>
-		/// <param name="showValue">optional object ShowValue</param>
-		/// <param name="showPercentage">optional object ShowPercentage</param>
-		/// <param name="showBubbleSize">optional object ShowBubbleSize</param>
-		/// <param name="separator">optional object Separator</param>
-		[SupportByVersionAttribute("PowerPoint", 14,15,16)]
+		/// <param name="legendKey">optional object legendKey</param>
+		/// <param name="autoText">optional object autoText</param>
+		/// <param name="hasLeaderLines">optional object hasLeaderLines</param>
+		/// <param name="showSeriesName">optional object showSeriesName</param>
+		/// <param name="showCategoryName">optional object showCategoryName</param>
+		/// <param name="showValue">optional object showValue</param>
+		/// <param name="showPercentage">optional object showPercentage</param>
+		/// <param name="showBubbleSize">optional object showBubbleSize</param>
+		/// <param name="separator">optional object separator</param>
+		[SupportByVersion("PowerPoint", 14,15,16)]
 		public object ApplyDataLabels(object type, object legendKey, object autoText, object hasLeaderLines, object showSeriesName, object showCategoryName, object showValue, object showPercentage, object showBubbleSize, object separator)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(type, legendKey, autoText, hasLeaderLines, showSeriesName, showCategoryName, showValue, showPercentage, showBubbleSize, separator);
-			object returnItem = Invoker.MethodReturn(this, "ApplyDataLabels", paramsArray);
-			if((null != returnItem) && (returnItem is MarshalByRefObject))
-			{
-				ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
-				return newObject;
-			}
-			else
-			{
-				return  returnItem;
-			}
+			return Factory.ExecuteVariantMethodGet(this, "ApplyDataLabels", new object[]{ type, legendKey, autoText, hasLeaderLines, showSeriesName, showCategoryName, showValue, showPercentage, showBubbleSize, separator });
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744786.aspx
 		/// </summary>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("PowerPoint", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff744786.aspx </remarks>
+		[CustomMethod]
+		[SupportByVersion("PowerPoint", 14,15,16)]
 		public object ApplyDataLabels()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "ApplyDataLabels", paramsArray);
-			if((null != returnItem) && (returnItem is MarshalByRefObject))
-			{
-				ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
-				return newObject;
-			}
-			else
-			{
-				return  returnItem;
-			}
+			return Factory.ExecuteVariantMethodGet(this, "ApplyDataLabels");
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744786.aspx
 		/// </summary>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff744786.aspx </remarks>
 		/// <param name="type">optional NetOffice.PowerPointApi.Enums.XlDataLabelsType Type = 2</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("PowerPoint", 14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("PowerPoint", 14,15,16)]
 		public object ApplyDataLabels(object type)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(type);
-			object returnItem = Invoker.MethodReturn(this, "ApplyDataLabels", paramsArray);
-			if((null != returnItem) && (returnItem is MarshalByRefObject))
-			{
-				ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
-				return newObject;
-			}
-			else
-			{
-				return  returnItem;
-			}
+			return Factory.ExecuteVariantMethodGet(this, "ApplyDataLabels", type);
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744786.aspx
 		/// </summary>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff744786.aspx </remarks>
 		/// <param name="type">optional NetOffice.PowerPointApi.Enums.XlDataLabelsType Type = 2</param>
-		/// <param name="legendKey">optional object LegendKey</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("PowerPoint", 14,15,16)]
+		/// <param name="legendKey">optional object legendKey</param>
+		[CustomMethod]
+		[SupportByVersion("PowerPoint", 14,15,16)]
 		public object ApplyDataLabels(object type, object legendKey)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(type, legendKey);
-			object returnItem = Invoker.MethodReturn(this, "ApplyDataLabels", paramsArray);
-			if((null != returnItem) && (returnItem is MarshalByRefObject))
-			{
-				ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
-				return newObject;
-			}
-			else
-			{
-				return  returnItem;
-			}
+			return Factory.ExecuteVariantMethodGet(this, "ApplyDataLabels", type, legendKey);
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744786.aspx
 		/// </summary>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff744786.aspx </remarks>
 		/// <param name="type">optional NetOffice.PowerPointApi.Enums.XlDataLabelsType Type = 2</param>
-		/// <param name="legendKey">optional object LegendKey</param>
-		/// <param name="autoText">optional object AutoText</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("PowerPoint", 14,15,16)]
+		/// <param name="legendKey">optional object legendKey</param>
+		/// <param name="autoText">optional object autoText</param>
+		[CustomMethod]
+		[SupportByVersion("PowerPoint", 14,15,16)]
 		public object ApplyDataLabels(object type, object legendKey, object autoText)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(type, legendKey, autoText);
-			object returnItem = Invoker.MethodReturn(this, "ApplyDataLabels", paramsArray);
-			if((null != returnItem) && (returnItem is MarshalByRefObject))
-			{
-				ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
-				return newObject;
-			}
-			else
-			{
-				return  returnItem;
-			}
+			return Factory.ExecuteVariantMethodGet(this, "ApplyDataLabels", type, legendKey, autoText);
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744786.aspx
 		/// </summary>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff744786.aspx </remarks>
 		/// <param name="type">optional NetOffice.PowerPointApi.Enums.XlDataLabelsType Type = 2</param>
-		/// <param name="legendKey">optional object LegendKey</param>
-		/// <param name="autoText">optional object AutoText</param>
-		/// <param name="hasLeaderLines">optional object HasLeaderLines</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("PowerPoint", 14,15,16)]
+		/// <param name="legendKey">optional object legendKey</param>
+		/// <param name="autoText">optional object autoText</param>
+		/// <param name="hasLeaderLines">optional object hasLeaderLines</param>
+		[CustomMethod]
+		[SupportByVersion("PowerPoint", 14,15,16)]
 		public object ApplyDataLabels(object type, object legendKey, object autoText, object hasLeaderLines)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(type, legendKey, autoText, hasLeaderLines);
-			object returnItem = Invoker.MethodReturn(this, "ApplyDataLabels", paramsArray);
-			if((null != returnItem) && (returnItem is MarshalByRefObject))
-			{
-				ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
-				return newObject;
-			}
-			else
-			{
-				return  returnItem;
-			}
+			return Factory.ExecuteVariantMethodGet(this, "ApplyDataLabels", type, legendKey, autoText, hasLeaderLines);
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744786.aspx
 		/// </summary>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff744786.aspx </remarks>
 		/// <param name="type">optional NetOffice.PowerPointApi.Enums.XlDataLabelsType Type = 2</param>
-		/// <param name="legendKey">optional object LegendKey</param>
-		/// <param name="autoText">optional object AutoText</param>
-		/// <param name="hasLeaderLines">optional object HasLeaderLines</param>
-		/// <param name="showSeriesName">optional object ShowSeriesName</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("PowerPoint", 14,15,16)]
+		/// <param name="legendKey">optional object legendKey</param>
+		/// <param name="autoText">optional object autoText</param>
+		/// <param name="hasLeaderLines">optional object hasLeaderLines</param>
+		/// <param name="showSeriesName">optional object showSeriesName</param>
+		[CustomMethod]
+		[SupportByVersion("PowerPoint", 14,15,16)]
 		public object ApplyDataLabels(object type, object legendKey, object autoText, object hasLeaderLines, object showSeriesName)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(type, legendKey, autoText, hasLeaderLines, showSeriesName);
-			object returnItem = Invoker.MethodReturn(this, "ApplyDataLabels", paramsArray);
-			if((null != returnItem) && (returnItem is MarshalByRefObject))
-			{
-				ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
-				return newObject;
-			}
-			else
-			{
-				return  returnItem;
-			}
+			return Factory.ExecuteVariantMethodGet(this, "ApplyDataLabels", new object[]{ type, legendKey, autoText, hasLeaderLines, showSeriesName });
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744786.aspx
 		/// </summary>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff744786.aspx </remarks>
 		/// <param name="type">optional NetOffice.PowerPointApi.Enums.XlDataLabelsType Type = 2</param>
-		/// <param name="legendKey">optional object LegendKey</param>
-		/// <param name="autoText">optional object AutoText</param>
-		/// <param name="hasLeaderLines">optional object HasLeaderLines</param>
-		/// <param name="showSeriesName">optional object ShowSeriesName</param>
-		/// <param name="showCategoryName">optional object ShowCategoryName</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("PowerPoint", 14,15,16)]
+		/// <param name="legendKey">optional object legendKey</param>
+		/// <param name="autoText">optional object autoText</param>
+		/// <param name="hasLeaderLines">optional object hasLeaderLines</param>
+		/// <param name="showSeriesName">optional object showSeriesName</param>
+		/// <param name="showCategoryName">optional object showCategoryName</param>
+		[CustomMethod]
+		[SupportByVersion("PowerPoint", 14,15,16)]
 		public object ApplyDataLabels(object type, object legendKey, object autoText, object hasLeaderLines, object showSeriesName, object showCategoryName)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(type, legendKey, autoText, hasLeaderLines, showSeriesName, showCategoryName);
-			object returnItem = Invoker.MethodReturn(this, "ApplyDataLabels", paramsArray);
-			if((null != returnItem) && (returnItem is MarshalByRefObject))
-			{
-				ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
-				return newObject;
-			}
-			else
-			{
-				return  returnItem;
-			}
+			return Factory.ExecuteVariantMethodGet(this, "ApplyDataLabels", new object[]{ type, legendKey, autoText, hasLeaderLines, showSeriesName, showCategoryName });
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744786.aspx
 		/// </summary>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff744786.aspx </remarks>
 		/// <param name="type">optional NetOffice.PowerPointApi.Enums.XlDataLabelsType Type = 2</param>
-		/// <param name="legendKey">optional object LegendKey</param>
-		/// <param name="autoText">optional object AutoText</param>
-		/// <param name="hasLeaderLines">optional object HasLeaderLines</param>
-		/// <param name="showSeriesName">optional object ShowSeriesName</param>
-		/// <param name="showCategoryName">optional object ShowCategoryName</param>
-		/// <param name="showValue">optional object ShowValue</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("PowerPoint", 14,15,16)]
+		/// <param name="legendKey">optional object legendKey</param>
+		/// <param name="autoText">optional object autoText</param>
+		/// <param name="hasLeaderLines">optional object hasLeaderLines</param>
+		/// <param name="showSeriesName">optional object showSeriesName</param>
+		/// <param name="showCategoryName">optional object showCategoryName</param>
+		/// <param name="showValue">optional object showValue</param>
+		[CustomMethod]
+		[SupportByVersion("PowerPoint", 14,15,16)]
 		public object ApplyDataLabels(object type, object legendKey, object autoText, object hasLeaderLines, object showSeriesName, object showCategoryName, object showValue)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(type, legendKey, autoText, hasLeaderLines, showSeriesName, showCategoryName, showValue);
-			object returnItem = Invoker.MethodReturn(this, "ApplyDataLabels", paramsArray);
-			if((null != returnItem) && (returnItem is MarshalByRefObject))
-			{
-				ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
-				return newObject;
-			}
-			else
-			{
-				return  returnItem;
-			}
+			return Factory.ExecuteVariantMethodGet(this, "ApplyDataLabels", new object[]{ type, legendKey, autoText, hasLeaderLines, showSeriesName, showCategoryName, showValue });
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744786.aspx
 		/// </summary>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff744786.aspx </remarks>
 		/// <param name="type">optional NetOffice.PowerPointApi.Enums.XlDataLabelsType Type = 2</param>
-		/// <param name="legendKey">optional object LegendKey</param>
-		/// <param name="autoText">optional object AutoText</param>
-		/// <param name="hasLeaderLines">optional object HasLeaderLines</param>
-		/// <param name="showSeriesName">optional object ShowSeriesName</param>
-		/// <param name="showCategoryName">optional object ShowCategoryName</param>
-		/// <param name="showValue">optional object ShowValue</param>
-		/// <param name="showPercentage">optional object ShowPercentage</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("PowerPoint", 14,15,16)]
+		/// <param name="legendKey">optional object legendKey</param>
+		/// <param name="autoText">optional object autoText</param>
+		/// <param name="hasLeaderLines">optional object hasLeaderLines</param>
+		/// <param name="showSeriesName">optional object showSeriesName</param>
+		/// <param name="showCategoryName">optional object showCategoryName</param>
+		/// <param name="showValue">optional object showValue</param>
+		/// <param name="showPercentage">optional object showPercentage</param>
+		[CustomMethod]
+		[SupportByVersion("PowerPoint", 14,15,16)]
 		public object ApplyDataLabels(object type, object legendKey, object autoText, object hasLeaderLines, object showSeriesName, object showCategoryName, object showValue, object showPercentage)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(type, legendKey, autoText, hasLeaderLines, showSeriesName, showCategoryName, showValue, showPercentage);
-			object returnItem = Invoker.MethodReturn(this, "ApplyDataLabels", paramsArray);
-			if((null != returnItem) && (returnItem is MarshalByRefObject))
-			{
-				ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
-				return newObject;
-			}
-			else
-			{
-				return  returnItem;
-			}
+			return Factory.ExecuteVariantMethodGet(this, "ApplyDataLabels", new object[]{ type, legendKey, autoText, hasLeaderLines, showSeriesName, showCategoryName, showValue, showPercentage });
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744786.aspx
 		/// </summary>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff744786.aspx </remarks>
 		/// <param name="type">optional NetOffice.PowerPointApi.Enums.XlDataLabelsType Type = 2</param>
-		/// <param name="legendKey">optional object LegendKey</param>
-		/// <param name="autoText">optional object AutoText</param>
-		/// <param name="hasLeaderLines">optional object HasLeaderLines</param>
-		/// <param name="showSeriesName">optional object ShowSeriesName</param>
-		/// <param name="showCategoryName">optional object ShowCategoryName</param>
-		/// <param name="showValue">optional object ShowValue</param>
-		/// <param name="showPercentage">optional object ShowPercentage</param>
-		/// <param name="showBubbleSize">optional object ShowBubbleSize</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("PowerPoint", 14,15,16)]
+		/// <param name="legendKey">optional object legendKey</param>
+		/// <param name="autoText">optional object autoText</param>
+		/// <param name="hasLeaderLines">optional object hasLeaderLines</param>
+		/// <param name="showSeriesName">optional object showSeriesName</param>
+		/// <param name="showCategoryName">optional object showCategoryName</param>
+		/// <param name="showValue">optional object showValue</param>
+		/// <param name="showPercentage">optional object showPercentage</param>
+		/// <param name="showBubbleSize">optional object showBubbleSize</param>
+		[CustomMethod]
+		[SupportByVersion("PowerPoint", 14,15,16)]
 		public object ApplyDataLabels(object type, object legendKey, object autoText, object hasLeaderLines, object showSeriesName, object showCategoryName, object showValue, object showPercentage, object showBubbleSize)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(type, legendKey, autoText, hasLeaderLines, showSeriesName, showCategoryName, showValue, showPercentage, showBubbleSize);
-			object returnItem = Invoker.MethodReturn(this, "ApplyDataLabels", paramsArray);
-			if((null != returnItem) && (returnItem is MarshalByRefObject))
-			{
-				ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
-				return newObject;
-			}
-			else
-			{
-				return  returnItem;
-			}
+			return Factory.ExecuteVariantMethodGet(this, "ApplyDataLabels", new object[]{ type, legendKey, autoText, hasLeaderLines, showSeriesName, showCategoryName, showValue, showPercentage, showBubbleSize });
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745743.aspx
 		/// </summary>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff745743.aspx </remarks>
 		/// <param name="loc">NetOffice.PowerPointApi.Enums.XlPieSliceLocation loc</param>
 		/// <param name="index">optional NetOffice.PowerPointApi.Enums.XlPieSliceIndex Index = 2</param>
-		[SupportByVersionAttribute("PowerPoint", 14,15,16)]
+		[SupportByVersion("PowerPoint", 14,15,16)]
 		public Double PieSliceLocation(NetOffice.PowerPointApi.Enums.XlPieSliceLocation loc, object index)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(loc, index);
-			object returnItem = Invoker.MethodReturn(this, "PieSliceLocation", paramsArray);
-			return NetRuntimeSystem.Convert.ToDouble(returnItem);
+			return Factory.ExecuteDoubleMethodGet(this, "PieSliceLocation", loc, index);
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745743.aspx
 		/// </summary>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff745743.aspx </remarks>
 		/// <param name="loc">NetOffice.PowerPointApi.Enums.XlPieSliceLocation loc</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("PowerPoint", 14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("PowerPoint", 14,15,16)]
 		public Double PieSliceLocation(NetOffice.PowerPointApi.Enums.XlPieSliceLocation loc)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(loc);
-			object returnItem = Invoker.MethodReturn(this, "PieSliceLocation", paramsArray);
-			return NetRuntimeSystem.Convert.ToDouble(returnItem);
+			return Factory.ExecuteDoubleMethodGet(this, "PieSliceLocation", loc);
 		}
 
 		#endregion
+
 		#pragma warning restore
 	}
 }

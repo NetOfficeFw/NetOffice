@@ -1,8 +1,7 @@
 ﻿using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
-using NetOffice;
-using NetOffice.Misc;
+using NetOffice.Attributes;
 
 namespace NetOffice.MSHTMLApi
 {
@@ -13,15 +12,16 @@ namespace NetOffice.MSHTMLApi
 
 	#endregion
 
-	///<summary>
+	/// <summary>
 	/// CoClass COpsProfile 
 	/// SupportByVersion MSHTML, 4
-	///</summary>
-	[SupportByVersionAttribute("MSHTML", 4)]
-	[EntityTypeAttribute(EntityType.IsCoClass)]
-	public class COpsProfile : IHTMLOpsProfile
+	/// </summary>
+	[SupportByVersion("MSHTML", 4)]
+	[EntityType(EntityType.IsCoClass)]
+ 	public class COpsProfile : IHTMLOpsProfile
 	{
 		#pragma warning disable
+
 		#region Fields
 		
 		private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
@@ -35,6 +35,7 @@ namespace NetOffice.MSHTMLApi
         /// <summary>
         /// Instance Type
         /// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
         public override Type InstanceType
         {
             get
@@ -101,17 +102,17 @@ namespace NetOffice.MSHTMLApi
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of COpsProfile 
-        ///</summary>		
+        /// </summary>		
 		public COpsProfile():base("MSHTML.COpsProfile")
 		{
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of COpsProfile
-        ///</summary>
+        /// </summary>
         ///<param name="progId">registered ProgID</param>
 		public COpsProfile(string progId):base(progId)
 		{
@@ -121,46 +122,6 @@ namespace NetOffice.MSHTMLApi
 		#endregion
 
 		#region Static CoClass Methods
-
-		/// <summary>
-        /// Returns all running MSHTML.COpsProfile objects from the environment/system
-        /// </summary>
-        /// <returns>an MSHTML.COpsProfile array</returns>
-		public static NetOffice.MSHTMLApi.COpsProfile[] GetActiveInstances()
-		{		
-			IDisposableEnumeration proxyList = NetOffice.ProxyService.GetActiveInstances("MSHTML","COpsProfile");
-			NetRuntimeSystem.Collections.Generic.List<NetOffice.MSHTMLApi.COpsProfile> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.MSHTMLApi.COpsProfile>();
-			foreach(object proxy in proxyList)
-				resultList.Add( new NetOffice.MSHTMLApi.COpsProfile(null, proxy) );
-			return resultList.ToArray();
-		}
-
-		/// <summary>
-        /// Returns a running MSHTML.COpsProfile object from the environment/system.
-        /// </summary>
-        /// <returns>an MSHTML.COpsProfile object or null</returns>
-		public static NetOffice.MSHTMLApi.COpsProfile GetActiveInstance()
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("MSHTML","COpsProfile", false);
-			if(null != proxy)
-				return new NetOffice.MSHTMLApi.COpsProfile(null, proxy);
-			else
-				return null;
-		}
-
-		/// <summary>
-        /// Returns a running MSHTML.COpsProfile object from the environment/system. 
-        /// </summary>
-	    /// <param name="throwOnError">throw an exception if no object was found</param>
-        /// <returns>an MSHTML.COpsProfile object or null</returns>
-		public static NetOffice.MSHTMLApi.COpsProfile GetActiveInstance(bool throwOnError)
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("MSHTML","COpsProfile", throwOnError);
-			if(null != proxy)
-				return new NetOffice.MSHTMLApi.COpsProfile(null, proxy);
-			else
-				return null;
-		}
 		#endregion
 
 		#region Events

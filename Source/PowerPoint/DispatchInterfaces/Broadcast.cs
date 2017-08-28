@@ -1,24 +1,34 @@
 ﻿using System;
 using NetRuntimeSystem = System;
-using System.Runtime.InteropServices;
-using System.Runtime.CompilerServices;
 using System.ComponentModel;
-using System.Reflection;
-using System.Collections.Generic;
-using NetOffice;
+using NetOffice.Attributes;
+
 namespace NetOffice.PowerPointApi
 {
-	///<summary>
+	/// <summary>
 	/// DispatchInterface Broadcast 
 	/// SupportByVersion PowerPoint, 14,15,16
-	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745427.aspx
-	///</summary>
-	[SupportByVersionAttribute("PowerPoint", 14,15,16)]
-	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
-	public class Broadcast : COMObject
+	/// </summary>
+	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff745427.aspx </remarks>
+	[SupportByVersion("PowerPoint", 14,15,16)]
+	[EntityType(EntityType.IsDispatchInterface)]
+ 	public class Broadcast : COMObject
 	{
 		#pragma warning disable
+
 		#region Type Information
+
+		/// <summary>
+		/// Instance Type
+		/// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
+		public override Type InstanceType
+		{
+			get
+			{
+				return LateBindingApiWrapperType;
+			}
+		}
 
         private static Type _type;
 
@@ -29,14 +39,20 @@ namespace NetOffice.PowerPointApi
             {
                 if (null == _type)
                     _type = typeof(Broadcast);
-                    
                 return _type;
             }
         }
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public Broadcast(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -82,7 +98,7 @@ namespace NetOffice.PowerPointApi
 		{
 		}
 		
-		/// <param name="progId">registered ProgID</param>
+		/// <param name="progId">registered progID</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public Broadcast(string progId) : base(progId)
 		{
@@ -95,132 +111,113 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746713.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff746713.aspx </remarks>
+		[SupportByVersion("PowerPoint", 14,15,16)]
 		public NetOffice.PowerPointApi.Application Application
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				NetOffice.PowerPointApi.Application newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.PowerPointApi.Application.LateBindingApiWrapperType) as NetOffice.PowerPointApi.Application;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.PowerPointApi.Application>(this, "Application", NetOffice.PowerPointApi.Application.LateBindingApiWrapperType);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744882.aspx
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff744882.aspx </remarks>
+		[SupportByVersion("PowerPoint", 14,15,16), ProxyResult]
 		public object Parent
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Parent", paramsArray);
-				ICOMObject newObject = Factory.CreateObjectFromComProxy(this,returnItem);
-				return newObject;
+				return Factory.ExecuteReferencePropertyGet(this, "Parent");
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744687.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff744687.aspx </remarks>
+		[SupportByVersion("PowerPoint", 14,15,16)]
 		public string AttendeeUrl
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "AttendeeUrl", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "AttendeeUrl");
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744210.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff744210.aspx </remarks>
+		[SupportByVersion("PowerPoint", 14,15,16)]
 		public bool IsBroadcasting
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "IsBroadcasting", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "IsBroadcasting");
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 15,16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj230343.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 15, 16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/jj230343.aspx </remarks>
+		[SupportByVersion("PowerPoint", 15, 16)]
 		public NetOffice.OfficeApi.Enums.MsoBroadcastState State
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "State", paramsArray);
-				int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-				return (NetOffice.OfficeApi.Enums.MsoBroadcastState)intReturnItem;
+				return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoBroadcastState>(this, "State");
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 15,16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj229261.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 15, 16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/jj229261.aspx </remarks>
+		[SupportByVersion("PowerPoint", 15, 16)]
 		public Int32 Capabilities
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Capabilities", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "Capabilities");
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 15,16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj230327.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 15, 16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/jj230327.aspx </remarks>
+		[SupportByVersion("PowerPoint", 15, 16)]
 		public string SessionID
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "SessionID", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "SessionID");
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 15,16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj227435.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 15, 16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/jj227435.aspx </remarks>
+		[SupportByVersion("PowerPoint", 15, 16)]
 		public string PresenterServiceUrl
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "PresenterServiceUrl", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "PresenterServiceUrl");
 			}
 		}
 
@@ -230,63 +227,59 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746118.aspx
 		/// </summary>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff746118.aspx </remarks>
 		/// <param name="serverUrl">string serverUrl</param>
-		[SupportByVersionAttribute("PowerPoint", 14,15,16)]
+		[SupportByVersion("PowerPoint", 14,15,16)]
 		public void Start(string serverUrl)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(serverUrl);
-			Invoker.Method(this, "Start", paramsArray);
+			 Factory.ExecuteMethod(this, "Start", serverUrl);
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746003.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff746003.aspx </remarks>
+		[SupportByVersion("PowerPoint", 14,15,16)]
 		public void End()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "End", paramsArray);
+			 Factory.ExecuteMethod(this, "End");
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 15,16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj230158.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 15, 16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/jj230158.aspx </remarks>
+		[SupportByVersion("PowerPoint", 15, 16)]
 		public void Pause()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "Pause", paramsArray);
+			 Factory.ExecuteMethod(this, "Pause");
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 15,16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj229921.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 15, 16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/jj229921.aspx </remarks>
+		[SupportByVersion("PowerPoint", 15, 16)]
 		public void Resume()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "Resume", paramsArray);
+			 Factory.ExecuteMethod(this, "Resume");
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 15,16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj229798.aspx
 		/// </summary>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/jj229798.aspx </remarks>
 		/// <param name="notesUrl">string notesUrl</param>
 		/// <param name="notesWacUrl">string notesWacUrl</param>
-		[SupportByVersionAttribute("PowerPoint", 15, 16)]
+		[SupportByVersion("PowerPoint", 15, 16)]
 		public void AddMeetingNotes(string notesUrl, string notesWacUrl)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(notesUrl, notesWacUrl);
-			Invoker.Method(this, "AddMeetingNotes", paramsArray);
+			 Factory.ExecuteMethod(this, "AddMeetingNotes", notesUrl, notesWacUrl);
 		}
 
 		#endregion
+
 		#pragma warning restore
 	}
 }

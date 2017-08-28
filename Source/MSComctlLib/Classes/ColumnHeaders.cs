@@ -1,12 +1,10 @@
 ﻿using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
-using NetOffice;
-using NetOffice.Misc;
+using NetOffice.Attributes;
 
 namespace NetOffice.MSComctlLibApi
 {
-
 	#region Delegates
 
 	#pragma warning disable
@@ -14,15 +12,16 @@ namespace NetOffice.MSComctlLibApi
 
 	#endregion
 
-	///<summary>
+	/// <summary>
 	/// CoClass ColumnHeaders 
 	/// SupportByVersion MSComctlLib, 6
-	///</summary>
-	[SupportByVersionAttribute("MSComctlLib", 6)]
-	[EntityTypeAttribute(EntityType.IsCoClass)]
-	public class ColumnHeaders : IColumnHeaders
+	/// </summary>
+	[SupportByVersion("MSComctlLib", 6)]
+	[EntityType(EntityType.IsCoClass)]
+ 	public class ColumnHeaders : IColumnHeaders
 	{
 		#pragma warning disable
+
 		#region Fields
 		
 		private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
@@ -36,6 +35,7 @@ namespace NetOffice.MSComctlLibApi
         /// <summary>
         /// Instance Type
         /// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
         public override Type InstanceType
         {
             get
@@ -102,17 +102,17 @@ namespace NetOffice.MSComctlLibApi
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of ColumnHeaders 
-        ///</summary>		
+        /// </summary>		
 		public ColumnHeaders():base("MSComctlLib.ColumnHeaders")
 		{
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of ColumnHeaders
-        ///</summary>
+        /// </summary>
         ///<param name="progId">registered ProgID</param>
 		public ColumnHeaders(string progId):base(progId)
 		{
@@ -122,46 +122,6 @@ namespace NetOffice.MSComctlLibApi
 		#endregion
 
 		#region Static CoClass Methods
-
-		/// <summary>
-        /// Returns all running MSComctlLib.ColumnHeaders objects from the environment/system
-        /// </summary>
-        /// <returns>an MSComctlLib.ColumnHeaders array</returns>
-		public static NetOffice.MSComctlLibApi.ColumnHeaders[] GetActiveInstances()
-		{		
-			IDisposableEnumeration proxyList = NetOffice.ProxyService.GetActiveInstances("MSComctlLib","ColumnHeaders");
-			NetRuntimeSystem.Collections.Generic.List<NetOffice.MSComctlLibApi.ColumnHeaders> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.MSComctlLibApi.ColumnHeaders>();
-			foreach(object proxy in proxyList)
-				resultList.Add( new NetOffice.MSComctlLibApi.ColumnHeaders(null, proxy) );
-			return resultList.ToArray();
-		}
-
-		/// <summary>
-        /// Returns a running MSComctlLib.ColumnHeaders object from the environment/system.
-        /// </summary>
-        /// <returns>an MSComctlLib.ColumnHeaders object or null</returns>
-		public static NetOffice.MSComctlLibApi.ColumnHeaders GetActiveInstance()
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("MSComctlLib","ColumnHeaders", false);
-			if(null != proxy)
-				return new NetOffice.MSComctlLibApi.ColumnHeaders(null, proxy);
-			else
-				return null;
-		}
-
-		/// <summary>
-        /// Returns a running MSComctlLib.ColumnHeaders object from the environment/system. 
-        /// </summary>
-	    /// <param name="throwOnError">throw an exception if no object was found</param>
-        /// <returns>an MSComctlLib.ColumnHeaders object or null</returns>
-		public static NetOffice.MSComctlLibApi.ColumnHeaders GetActiveInstance(bool throwOnError)
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("MSComctlLib","ColumnHeaders", throwOnError);
-			if(null != proxy)
-				return new NetOffice.MSComctlLibApi.ColumnHeaders(null, proxy);
-			else
-				return null;
-		}
 		#endregion
 
 		#region Events

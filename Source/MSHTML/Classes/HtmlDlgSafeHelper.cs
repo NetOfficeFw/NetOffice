@@ -1,12 +1,10 @@
 ﻿using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
-using NetOffice;
-using NetOffice.Misc;
+using NetOffice.Attributes;
 
 namespace NetOffice.MSHTMLApi
 {
-
 	#region Delegates
 
 	#pragma warning disable
@@ -14,15 +12,16 @@ namespace NetOffice.MSHTMLApi
 
 	#endregion
 
-	///<summary>
+	/// <summary>
 	/// CoClass HtmlDlgSafeHelper 
 	/// SupportByVersion MSHTML, 4
-	///</summary>
-	[SupportByVersionAttribute("MSHTML", 4)]
-	[EntityTypeAttribute(EntityType.IsCoClass)]
-	public class HtmlDlgSafeHelper : IHtmlDlgSafeHelper
+	/// </summary>
+	[SupportByVersion("MSHTML", 4)]
+	[EntityType(EntityType.IsCoClass)]
+ 	public class HtmlDlgSafeHelper : IHtmlDlgSafeHelper
 	{
 		#pragma warning disable
+
 		#region Fields
 		
 		private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
@@ -36,6 +35,7 @@ namespace NetOffice.MSHTMLApi
         /// <summary>
         /// Instance Type
         /// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
         public override Type InstanceType
         {
             get
@@ -102,17 +102,17 @@ namespace NetOffice.MSHTMLApi
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of HtmlDlgSafeHelper 
-        ///</summary>		
+        /// </summary>		
 		public HtmlDlgSafeHelper():base("MSHTML.HtmlDlgSafeHelper")
 		{
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of HtmlDlgSafeHelper
-        ///</summary>
+        /// </summary>
         ///<param name="progId">registered ProgID</param>
 		public HtmlDlgSafeHelper(string progId):base(progId)
 		{
@@ -122,46 +122,6 @@ namespace NetOffice.MSHTMLApi
 		#endregion
 
 		#region Static CoClass Methods
-
-		/// <summary>
-        /// Returns all running MSHTML.HtmlDlgSafeHelper objects from the environment/system
-        /// </summary>
-        /// <returns>an MSHTML.HtmlDlgSafeHelper array</returns>
-		public static NetOffice.MSHTMLApi.HtmlDlgSafeHelper[] GetActiveInstances()
-		{		
-			IDisposableEnumeration proxyList = NetOffice.ProxyService.GetActiveInstances("MSHTML","HtmlDlgSafeHelper");
-			NetRuntimeSystem.Collections.Generic.List<NetOffice.MSHTMLApi.HtmlDlgSafeHelper> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.MSHTMLApi.HtmlDlgSafeHelper>();
-			foreach(object proxy in proxyList)
-				resultList.Add( new NetOffice.MSHTMLApi.HtmlDlgSafeHelper(null, proxy) );
-			return resultList.ToArray();
-		}
-
-		/// <summary>
-        /// Returns a running MSHTML.HtmlDlgSafeHelper object from the environment/system.
-        /// </summary>
-        /// <returns>an MSHTML.HtmlDlgSafeHelper object or null</returns>
-		public static NetOffice.MSHTMLApi.HtmlDlgSafeHelper GetActiveInstance()
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("MSHTML","HtmlDlgSafeHelper", false);
-			if(null != proxy)
-				return new NetOffice.MSHTMLApi.HtmlDlgSafeHelper(null, proxy);
-			else
-				return null;
-		}
-
-		/// <summary>
-        /// Returns a running MSHTML.HtmlDlgSafeHelper object from the environment/system. 
-        /// </summary>
-	    /// <param name="throwOnError">throw an exception if no object was found</param>
-        /// <returns>an MSHTML.HtmlDlgSafeHelper object or null</returns>
-		public static NetOffice.MSHTMLApi.HtmlDlgSafeHelper GetActiveInstance(bool throwOnError)
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("MSHTML","HtmlDlgSafeHelper", throwOnError);
-			if(null != proxy)
-				return new NetOffice.MSHTMLApi.HtmlDlgSafeHelper(null, proxy);
-			else
-				return null;
-		}
 		#endregion
 
 		#region Events

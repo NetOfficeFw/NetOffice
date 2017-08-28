@@ -1,23 +1,33 @@
-﻿using System;
+using System;
 using NetRuntimeSystem = System;
-using System.Runtime.InteropServices;
-using System.Runtime.CompilerServices;
 using System.ComponentModel;
-using System.Reflection;
-using System.Collections.Generic;
-using NetOffice;
+using NetOffice.Attributes;
+
 namespace NetOffice.DAOApi
 {
-	///<summary>
+	/// <summary>
 	/// DispatchInterface Recordset 
 	/// SupportByVersion DAO, 3.6,12.0
-	///</summary>
-	[SupportByVersionAttribute("DAO", 3.6,12.0)]
-	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
-	public class Recordset : _DAO
+	/// </summary>
+	[SupportByVersion("DAO", 3.6,12.0)]
+	[EntityType(EntityType.IsDispatchInterface)]
+ 	public class Recordset : _DAO
 	{
 		#pragma warning disable
+
 		#region Type Information
+
+		/// <summary>
+		/// Instance Type
+		/// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
+		public override Type InstanceType
+		{
+			get
+			{
+				return LateBindingApiWrapperType;
+			}
+		}
 
         private static Type _type;
 
@@ -28,14 +38,20 @@ namespace NetOffice.DAOApi
             {
                 if (null == _type)
                     _type = typeof(Recordset);
-                    
                 return _type;
             }
         }
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public Recordset(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -81,7 +97,7 @@ namespace NetOffice.DAOApi
 		{
 		}
 		
-		/// <param name="progId">registered ProgID</param>
+		/// <param name="progId">registered progID</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public Recordset(string progId) : base(progId)
 		{
@@ -95,14 +111,12 @@ namespace NetOffice.DAOApi
 		/// SupportByVersion DAO 3.6, 12.0
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("DAO", 3.6,12.0)]
+		[SupportByVersion("DAO", 3.6,12.0)]
 		public bool BOF
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "BOF", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "BOF");
 			}
 		}
 
@@ -110,7 +124,7 @@ namespace NetOffice.DAOApi
 		/// SupportByVersion DAO 3.6, 12.0
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("DAO", 3.6,12.0)]
+		[SupportByVersion("DAO", 3.6,12.0)]
 		public byte[] Bookmark
 		{
 			get
@@ -130,14 +144,12 @@ namespace NetOffice.DAOApi
 		/// SupportByVersion DAO 3.6, 12.0
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("DAO", 3.6,12.0)]
+		[SupportByVersion("DAO", 3.6,12.0)]
 		public bool Bookmarkable
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Bookmarkable", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "Bookmarkable");
 			}
 		}
 
@@ -145,22 +157,12 @@ namespace NetOffice.DAOApi
 		/// SupportByVersion DAO 3.6, 12.0
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("DAO", 3.6,12.0)]
+		[SupportByVersion("DAO", 3.6,12.0)]
 		public object DateCreated
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "DateCreated", paramsArray);
-				if((null != returnItem) && (returnItem is MarshalByRefObject))
-				{
-					ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
-					return newObject;
-				}
-				else
-				{
-					return  returnItem;
-				}
+				return Factory.ExecuteVariantPropertyGet(this, "DateCreated");
 			}
 		}
 
@@ -168,14 +170,12 @@ namespace NetOffice.DAOApi
 		/// SupportByVersion DAO 3.6, 12.0
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("DAO", 3.6,12.0)]
+		[SupportByVersion("DAO", 3.6,12.0)]
 		public bool EOF
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "EOF", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "EOF");
 			}
 		}
 
@@ -183,19 +183,16 @@ namespace NetOffice.DAOApi
 		/// SupportByVersion DAO 3.6, 12.0
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("DAO", 3.6,12.0)]
+		[SupportByVersion("DAO", 3.6,12.0)]
 		public string Filter
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Filter", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "Filter");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "Filter", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "Filter", value);
 			}
 		}
 
@@ -203,19 +200,16 @@ namespace NetOffice.DAOApi
 		/// SupportByVersion DAO 3.6, 12.0
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("DAO", 3.6,12.0)]
+		[SupportByVersion("DAO", 3.6,12.0)]
 		public string Index
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Index", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "Index");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "Index", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "Index", value);
 			}
 		}
 
@@ -223,7 +217,7 @@ namespace NetOffice.DAOApi
 		/// SupportByVersion DAO 3.6, 12.0
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("DAO", 3.6,12.0)]
+		[SupportByVersion("DAO", 3.6,12.0)]
 		public byte[] LastModified
 		{
 			get
@@ -238,22 +232,12 @@ namespace NetOffice.DAOApi
 		/// SupportByVersion DAO 3.6, 12.0
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("DAO", 3.6,12.0)]
+		[SupportByVersion("DAO", 3.6,12.0)]
 		public object LastUpdated
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "LastUpdated", paramsArray);
-				if((null != returnItem) && (returnItem is MarshalByRefObject))
-				{
-					ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
-					return newObject;
-				}
-				else
-				{
-					return  returnItem;
-				}
+				return Factory.ExecuteVariantPropertyGet(this, "LastUpdated");
 			}
 		}
 
@@ -261,19 +245,16 @@ namespace NetOffice.DAOApi
 		/// SupportByVersion DAO 3.6, 12.0
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("DAO", 3.6,12.0)]
+		[SupportByVersion("DAO", 3.6,12.0)]
 		public bool LockEdits
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "LockEdits", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "LockEdits");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "LockEdits", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "LockEdits", value);
 			}
 		}
 
@@ -281,14 +262,12 @@ namespace NetOffice.DAOApi
 		/// SupportByVersion DAO 3.6, 12.0
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("DAO", 3.6,12.0)]
+		[SupportByVersion("DAO", 3.6,12.0)]
 		public string Name
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Name", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "Name");
 			}
 		}
 
@@ -296,14 +275,12 @@ namespace NetOffice.DAOApi
 		/// SupportByVersion DAO 3.6, 12.0
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("DAO", 3.6,12.0)]
+		[SupportByVersion("DAO", 3.6,12.0)]
 		public bool NoMatch
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "NoMatch", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "NoMatch");
 			}
 		}
 
@@ -311,19 +288,16 @@ namespace NetOffice.DAOApi
 		/// SupportByVersion DAO 3.6, 12.0
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("DAO", 3.6,12.0)]
+		[SupportByVersion("DAO", 3.6,12.0)]
 		public string Sort
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Sort", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "Sort");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "Sort", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "Sort", value);
 			}
 		}
 
@@ -331,14 +305,12 @@ namespace NetOffice.DAOApi
 		/// SupportByVersion DAO 3.6, 12.0
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("DAO", 3.6,12.0)]
+		[SupportByVersion("DAO", 3.6,12.0)]
 		public bool Transactions
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Transactions", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "Transactions");
 			}
 		}
 
@@ -346,14 +318,12 @@ namespace NetOffice.DAOApi
 		/// SupportByVersion DAO 3.6, 12.0
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("DAO", 3.6,12.0)]
+		[SupportByVersion("DAO", 3.6,12.0)]
 		public Int16 Type
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Type", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt16(returnItem);
+				return Factory.ExecuteInt16PropertyGet(this, "Type");
 			}
 		}
 
@@ -361,14 +331,12 @@ namespace NetOffice.DAOApi
 		/// SupportByVersion DAO 3.6, 12.0
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("DAO", 3.6,12.0)]
+		[SupportByVersion("DAO", 3.6,12.0)]
 		public Int32 RecordCount
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "RecordCount", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "RecordCount");
 			}
 		}
 
@@ -376,14 +344,12 @@ namespace NetOffice.DAOApi
 		/// SupportByVersion DAO 3.6, 12.0
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("DAO", 3.6,12.0)]
+		[SupportByVersion("DAO", 3.6,12.0)]
 		public bool Updatable
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Updatable", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "Updatable");
 			}
 		}
 
@@ -391,14 +357,12 @@ namespace NetOffice.DAOApi
 		/// SupportByVersion DAO 3.6, 12.0
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("DAO", 3.6,12.0)]
+		[SupportByVersion("DAO", 3.6,12.0)]
 		public bool Restartable
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Restartable", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "Restartable");
 			}
 		}
 
@@ -406,14 +370,12 @@ namespace NetOffice.DAOApi
 		/// SupportByVersion DAO 3.6, 12.0
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("DAO", 3.6,12.0)]
+		[SupportByVersion("DAO", 3.6,12.0)]
 		public string ValidationText
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "ValidationText", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "ValidationText");
 			}
 		}
 
@@ -421,14 +383,12 @@ namespace NetOffice.DAOApi
 		/// SupportByVersion DAO 3.6, 12.0
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("DAO", 3.6,12.0)]
+		[SupportByVersion("DAO", 3.6,12.0)]
 		public string ValidationRule
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "ValidationRule", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "ValidationRule");
 			}
 		}
 
@@ -436,7 +396,7 @@ namespace NetOffice.DAOApi
 		/// SupportByVersion DAO 3.6, 12.0
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("DAO", 3.6,12.0)]
+		[SupportByVersion("DAO", 3.6,12.0)]
 		public byte[] CacheStart
 		{
 			get
@@ -456,19 +416,16 @@ namespace NetOffice.DAOApi
 		/// SupportByVersion DAO 3.6, 12.0
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("DAO", 3.6,12.0)]
+		[SupportByVersion("DAO", 3.6,12.0)]
 		public Int32 CacheSize
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "CacheSize", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "CacheSize");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "CacheSize", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "CacheSize", value);
 			}
 		}
 
@@ -476,19 +433,16 @@ namespace NetOffice.DAOApi
 		/// SupportByVersion DAO 3.6, 12.0
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("DAO", 3.6,12.0)]
+		[SupportByVersion("DAO", 3.6,12.0)]
 		public Single PercentPosition
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "PercentPosition", paramsArray);
-				return NetRuntimeSystem.Convert.ToSingle(returnItem);
+				return Factory.ExecuteSinglePropertyGet(this, "PercentPosition");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "PercentPosition", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "PercentPosition", value);
 			}
 		}
 
@@ -496,19 +450,16 @@ namespace NetOffice.DAOApi
 		/// SupportByVersion DAO 3.6, 12.0
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("DAO", 3.6,12.0)]
+		[SupportByVersion("DAO", 3.6,12.0)]
 		public Int32 AbsolutePosition
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "AbsolutePosition", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "AbsolutePosition");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "AbsolutePosition", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "AbsolutePosition", value);
 			}
 		}
 
@@ -516,14 +467,12 @@ namespace NetOffice.DAOApi
 		/// SupportByVersion DAO 3.6, 12.0
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("DAO", 3.6,12.0)]
+		[SupportByVersion("DAO", 3.6,12.0)]
 		public Int16 EditMode
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "EditMode", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt16(returnItem);
+				return Factory.ExecuteInt16PropertyGet(this, "EditMode");
 			}
 		}
 
@@ -531,15 +480,13 @@ namespace NetOffice.DAOApi
 		/// SupportByVersion DAO 3.6, 12.0
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("DAO", 3.6,12.0)]
+		[SupportByVersion("DAO", 3.6,12.0)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public Int32 ODBCFetchCount
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "ODBCFetchCount", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "ODBCFetchCount");
 			}
 		}
 
@@ -547,15 +494,13 @@ namespace NetOffice.DAOApi
 		/// SupportByVersion DAO 3.6, 12.0
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("DAO", 3.6,12.0)]
+		[SupportByVersion("DAO", 3.6,12.0)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public Int32 ODBCFetchDelay
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "ODBCFetchDelay", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "ODBCFetchDelay");
 			}
 		}
 
@@ -563,16 +508,13 @@ namespace NetOffice.DAOApi
 		/// SupportByVersion DAO 3.6, 12.0
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("DAO", 3.6,12.0)]
+		[SupportByVersion("DAO", 3.6,12.0)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public NetOffice.DAOApi.Database Parent
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Parent", paramsArray);
-				NetOffice.DAOApi.Database newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.DAOApi.Database.LateBindingApiWrapperType) as NetOffice.DAOApi.Database;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.DAOApi.Database>(this, "Parent", NetOffice.DAOApi.Database.LateBindingApiWrapperType);
 			}
 		}
 
@@ -580,15 +522,12 @@ namespace NetOffice.DAOApi
 		/// SupportByVersion DAO 3.6, 12.0
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("DAO", 3.6,12.0)]
+		[SupportByVersion("DAO", 3.6,12.0)]
 		public NetOffice.DAOApi.Fields Fields
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Fields", paramsArray);
-				NetOffice.DAOApi.Fields newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.DAOApi.Fields.LateBindingApiWrapperType) as NetOffice.DAOApi.Fields;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.DAOApi.Fields>(this, "Fields", NetOffice.DAOApi.Fields.LateBindingApiWrapperType);
 			}
 		}
 
@@ -596,15 +535,12 @@ namespace NetOffice.DAOApi
 		/// SupportByVersion DAO 3.6, 12.0
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("DAO", 3.6,12.0)]
+		[SupportByVersion("DAO", 3.6,12.0)]
 		public NetOffice.DAOApi.Indexes Indexes
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Indexes", paramsArray);
-				NetOffice.DAOApi.Indexes newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.DAOApi.Indexes.LateBindingApiWrapperType) as NetOffice.DAOApi.Indexes;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.DAOApi.Indexes>(this, "Indexes", NetOffice.DAOApi.Indexes.LateBindingApiWrapperType);
 			}
 		}
 
@@ -612,43 +548,32 @@ namespace NetOffice.DAOApi
 		/// SupportByVersion DAO 3.6, 12.0
 		/// Get/Set
 		/// </summary>
-		/// <param name="item">object Item</param>
-		[SupportByVersionAttribute("DAO", 3.6,12.0)]
+		/// <param name="item">object item</param>
+		[SupportByVersion("DAO", 3.6,12.0)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public object get_Collect(object item)
-		{		
-			object[] paramsArray = Invoker.ValidateParamsArray(item);
-			object returnItem = Invoker.PropertyGet(this, "Collect", paramsArray);
-			if((null != returnItem) && (returnItem is MarshalByRefObject))
-			{
-				ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
-				return newObject;
-			}
-			else
-			{
-				return  returnItem;
-			}
+		{
+			return Factory.ExecuteVariantPropertyGet(this, "Collect", item);
 		}
 
 		/// <summary>
 		/// SupportByVersion DAO 3.6, 12.0
 		/// Get/Set
 		/// </summary>
-		/// <param name="item">object Item</param>
-		[SupportByVersionAttribute("DAO", 3.6,12.0)]
+		/// <param name="item">object item</param>
+		[SupportByVersion("DAO", 3.6,12.0)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public void set_Collect(object item, object value)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(item);
-			Invoker.PropertySet(this, "Collect", paramsArray, value);
+			Factory.ExecutePropertySet(this, "Collect", item, value);
 		}
 
 		/// <summary>
 		/// SupportByVersion DAO 3.6, 12.0
 		/// Alias for get_Collect
 		/// </summary>
-		/// <param name="item">object Item</param>
-		[SupportByVersionAttribute("DAO", 3.6,12.0)]
+		/// <param name="item">object item</param>
+		[SupportByVersion("DAO", 3.6,12.0), Redirect("get_Collect")]
 		public object Collect(object item)
 		{
 			return get_Collect(item);
@@ -658,15 +583,13 @@ namespace NetOffice.DAOApi
 		/// SupportByVersion DAO 3.6, 12.0
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("DAO", 3.6,12.0)]
+		[SupportByVersion("DAO", 3.6,12.0)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public Int32 hStmt
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "hStmt", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "hStmt");
 			}
 		}
 
@@ -674,14 +597,12 @@ namespace NetOffice.DAOApi
 		/// SupportByVersion DAO 3.6, 12.0
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("DAO", 3.6,12.0)]
+		[SupportByVersion("DAO", 3.6,12.0)]
 		public bool StillExecuting
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "StillExecuting", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "StillExecuting");
 			}
 		}
 
@@ -689,19 +610,16 @@ namespace NetOffice.DAOApi
 		/// SupportByVersion DAO 3.6, 12.0
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("DAO", 3.6,12.0)]
+		[SupportByVersion("DAO", 3.6,12.0)]
 		public Int32 BatchSize
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "BatchSize", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "BatchSize");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "BatchSize", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "BatchSize", value);
 			}
 		}
 
@@ -709,14 +627,12 @@ namespace NetOffice.DAOApi
 		/// SupportByVersion DAO 3.6, 12.0
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("DAO", 3.6,12.0)]
+		[SupportByVersion("DAO", 3.6,12.0)]
 		public Int32 BatchCollisionCount
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "BatchCollisionCount", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "BatchCollisionCount");
 			}
 		}
 
@@ -724,22 +640,12 @@ namespace NetOffice.DAOApi
 		/// SupportByVersion DAO 3.6, 12.0
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("DAO", 3.6,12.0)]
+		[SupportByVersion("DAO", 3.6,12.0)]
 		public object BatchCollisions
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "BatchCollisions", paramsArray);
-				if((null != returnItem) && (returnItem is MarshalByRefObject))
-				{
-					ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
-					return newObject;
-				}
-				else
-				{
-					return  returnItem;
-				}
+				return Factory.ExecuteVariantPropertyGet(this, "BatchCollisions");
 			}
 		}
 
@@ -747,20 +653,16 @@ namespace NetOffice.DAOApi
 		/// SupportByVersion DAO 3.6, 12.0
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("DAO", 3.6,12.0)]
+		[SupportByVersion("DAO", 3.6,12.0)]
 		public NetOffice.DAOApi.Connection Connection
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Connection", paramsArray);
-				NetOffice.DAOApi.Connection newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.DAOApi.Connection.LateBindingApiWrapperType) as NetOffice.DAOApi.Connection;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.DAOApi.Connection>(this, "Connection", NetOffice.DAOApi.Connection.LateBindingApiWrapperType);
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "Connection", paramsArray);
+				Factory.ExecuteReferencePropertySet(this, "Connection", value);
 			}
 		}
 
@@ -768,14 +670,12 @@ namespace NetOffice.DAOApi
 		/// SupportByVersion DAO 3.6, 12.0
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("DAO", 3.6,12.0)]
+		[SupportByVersion("DAO", 3.6,12.0)]
 		public Int16 RecordStatus
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "RecordStatus", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt16(returnItem);
+				return Factory.ExecuteInt16PropertyGet(this, "RecordStatus");
 			}
 		}
 
@@ -783,19 +683,16 @@ namespace NetOffice.DAOApi
 		/// SupportByVersion DAO 3.6, 12.0
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("DAO", 3.6,12.0)]
+		[SupportByVersion("DAO", 3.6,12.0)]
 		public Int32 UpdateOptions
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "UpdateOptions", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "UpdateOptions");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "UpdateOptions", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "UpdateOptions", value);
 			}
 		}
 
@@ -805,829 +702,684 @@ namespace NetOffice.DAOApi
 
 		/// <summary>
 		/// SupportByVersion DAO 3.6, 12.0
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("DAO", 3.6,12.0)]
+		[SupportByVersion("DAO", 3.6,12.0)]
 		public void _30_CancelUpdate()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "_30_CancelUpdate", paramsArray);
+			 Factory.ExecuteMethod(this, "_30_CancelUpdate");
 		}
 
 		/// <summary>
 		/// SupportByVersion DAO 3.6, 12.0
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("DAO", 3.6,12.0)]
+		[SupportByVersion("DAO", 3.6,12.0)]
 		public void AddNew()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "AddNew", paramsArray);
+			 Factory.ExecuteMethod(this, "AddNew");
 		}
 
 		/// <summary>
 		/// SupportByVersion DAO 3.6, 12.0
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("DAO", 3.6,12.0)]
+		[SupportByVersion("DAO", 3.6,12.0)]
 		public void Close()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "Close", paramsArray);
+			 Factory.ExecuteMethod(this, "Close");
 		}
 
 		/// <summary>
 		/// SupportByVersion DAO 3.6, 12.0
-		/// 
 		/// </summary>
-		/// <param name="type">optional object Type</param>
-		/// <param name="options">optional object Options</param>
-		[SupportByVersionAttribute("DAO", 3.6,12.0)]
+		/// <param name="type">optional object type</param>
+		/// <param name="options">optional object options</param>
+		[SupportByVersion("DAO", 3.6,12.0)]
+		[BaseResult]
 		public NetOffice.DAOApi.Recordset OpenRecordset(object type, object options)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(type, options);
-			object returnItem = Invoker.MethodReturn(this, "OpenRecordset", paramsArray);
-			NetOffice.DAOApi.Recordset newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.DAOApi.Recordset;
-			return newObject;
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.DAOApi.Recordset>(this, "OpenRecordset", type, options);
 		}
 
 		/// <summary>
 		/// SupportByVersion DAO 3.6, 12.0
-		/// 
 		/// </summary>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("DAO", 3.6,12.0)]
+		[CustomMethod]
+		[BaseResult]
+		[SupportByVersion("DAO", 3.6,12.0)]
 		public NetOffice.DAOApi.Recordset OpenRecordset()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "OpenRecordset", paramsArray);
-			NetOffice.DAOApi.Recordset newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.DAOApi.Recordset;
-			return newObject;
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.DAOApi.Recordset>(this, "OpenRecordset");
 		}
 
 		/// <summary>
 		/// SupportByVersion DAO 3.6, 12.0
-		/// 
 		/// </summary>
-		/// <param name="type">optional object Type</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("DAO", 3.6,12.0)]
+		/// <param name="type">optional object type</param>
+		[CustomMethod]
+		[BaseResult]
+		[SupportByVersion("DAO", 3.6,12.0)]
 		public NetOffice.DAOApi.Recordset OpenRecordset(object type)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(type);
-			object returnItem = Invoker.MethodReturn(this, "OpenRecordset", paramsArray);
-			NetOffice.DAOApi.Recordset newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.DAOApi.Recordset;
-			return newObject;
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.DAOApi.Recordset>(this, "OpenRecordset", type);
 		}
 
 		/// <summary>
 		/// SupportByVersion DAO 3.6, 12.0
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("DAO", 3.6,12.0)]
+		[SupportByVersion("DAO", 3.6,12.0)]
 		public void Delete()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "Delete", paramsArray);
+			 Factory.ExecuteMethod(this, "Delete");
 		}
 
 		/// <summary>
 		/// SupportByVersion DAO 3.6, 12.0
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("DAO", 3.6,12.0)]
+		[SupportByVersion("DAO", 3.6,12.0)]
 		public void Edit()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "Edit", paramsArray);
+			 Factory.ExecuteMethod(this, "Edit");
 		}
 
 		/// <summary>
 		/// SupportByVersion DAO 3.6, 12.0
-		/// 
 		/// </summary>
-		/// <param name="criteria">string Criteria</param>
-		[SupportByVersionAttribute("DAO", 3.6,12.0)]
+		/// <param name="criteria">string criteria</param>
+		[SupportByVersion("DAO", 3.6,12.0)]
 		public void FindFirst(string criteria)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(criteria);
-			Invoker.Method(this, "FindFirst", paramsArray);
+			 Factory.ExecuteMethod(this, "FindFirst", criteria);
 		}
 
 		/// <summary>
 		/// SupportByVersion DAO 3.6, 12.0
-		/// 
 		/// </summary>
-		/// <param name="criteria">string Criteria</param>
-		[SupportByVersionAttribute("DAO", 3.6,12.0)]
+		/// <param name="criteria">string criteria</param>
+		[SupportByVersion("DAO", 3.6,12.0)]
 		public void FindLast(string criteria)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(criteria);
-			Invoker.Method(this, "FindLast", paramsArray);
+			 Factory.ExecuteMethod(this, "FindLast", criteria);
 		}
 
 		/// <summary>
 		/// SupportByVersion DAO 3.6, 12.0
-		/// 
 		/// </summary>
-		/// <param name="criteria">string Criteria</param>
-		[SupportByVersionAttribute("DAO", 3.6,12.0)]
+		/// <param name="criteria">string criteria</param>
+		[SupportByVersion("DAO", 3.6,12.0)]
 		public void FindNext(string criteria)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(criteria);
-			Invoker.Method(this, "FindNext", paramsArray);
+			 Factory.ExecuteMethod(this, "FindNext", criteria);
 		}
 
 		/// <summary>
 		/// SupportByVersion DAO 3.6, 12.0
-		/// 
 		/// </summary>
-		/// <param name="criteria">string Criteria</param>
-		[SupportByVersionAttribute("DAO", 3.6,12.0)]
+		/// <param name="criteria">string criteria</param>
+		[SupportByVersion("DAO", 3.6,12.0)]
 		public void FindPrevious(string criteria)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(criteria);
-			Invoker.Method(this, "FindPrevious", paramsArray);
+			 Factory.ExecuteMethod(this, "FindPrevious", criteria);
 		}
 
 		/// <summary>
 		/// SupportByVersion DAO 3.6, 12.0
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("DAO", 3.6,12.0)]
+		[SupportByVersion("DAO", 3.6,12.0)]
 		public void MoveFirst()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "MoveFirst", paramsArray);
+			 Factory.ExecuteMethod(this, "MoveFirst");
 		}
 
 		/// <summary>
 		/// SupportByVersion DAO 3.6, 12.0
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("DAO", 3.6,12.0)]
+		[SupportByVersion("DAO", 3.6,12.0)]
 		public void _30_MoveLast()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "_30_MoveLast", paramsArray);
+			 Factory.ExecuteMethod(this, "_30_MoveLast");
 		}
 
 		/// <summary>
 		/// SupportByVersion DAO 3.6, 12.0
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("DAO", 3.6,12.0)]
+		[SupportByVersion("DAO", 3.6,12.0)]
 		public void MoveNext()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "MoveNext", paramsArray);
+			 Factory.ExecuteMethod(this, "MoveNext");
 		}
 
 		/// <summary>
 		/// SupportByVersion DAO 3.6, 12.0
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("DAO", 3.6,12.0)]
+		[SupportByVersion("DAO", 3.6,12.0)]
 		public void MovePrevious()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "MovePrevious", paramsArray);
+			 Factory.ExecuteMethod(this, "MovePrevious");
 		}
 
 		/// <summary>
 		/// SupportByVersion DAO 3.6, 12.0
-		/// 
 		/// </summary>
-		/// <param name="comparison">string Comparison</param>
-		/// <param name="key1">object Key1</param>
-		/// <param name="key2">optional object Key2</param>
-		/// <param name="key3">optional object Key3</param>
-		/// <param name="key4">optional object Key4</param>
-		/// <param name="key5">optional object Key5</param>
-		/// <param name="key6">optional object Key6</param>
-		/// <param name="key7">optional object Key7</param>
-		/// <param name="key8">optional object Key8</param>
-		/// <param name="key9">optional object Key9</param>
-		/// <param name="key10">optional object Key10</param>
-		/// <param name="key11">optional object Key11</param>
-		/// <param name="key12">optional object Key12</param>
-		/// <param name="key13">optional object Key13</param>
-		[SupportByVersionAttribute("DAO", 3.6,12.0)]
+		/// <param name="comparison">string comparison</param>
+		/// <param name="key1">object key1</param>
+		/// <param name="key2">optional object key2</param>
+		/// <param name="key3">optional object key3</param>
+		/// <param name="key4">optional object key4</param>
+		/// <param name="key5">optional object key5</param>
+		/// <param name="key6">optional object key6</param>
+		/// <param name="key7">optional object key7</param>
+		/// <param name="key8">optional object key8</param>
+		/// <param name="key9">optional object key9</param>
+		/// <param name="key10">optional object key10</param>
+		/// <param name="key11">optional object key11</param>
+		/// <param name="key12">optional object key12</param>
+		/// <param name="key13">optional object key13</param>
+		[SupportByVersion("DAO", 3.6,12.0)]
 		public void Seek(string comparison, object key1, object key2, object key3, object key4, object key5, object key6, object key7, object key8, object key9, object key10, object key11, object key12, object key13)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(comparison, key1, key2, key3, key4, key5, key6, key7, key8, key9, key10, key11, key12, key13);
-			Invoker.Method(this, "Seek", paramsArray);
+			 Factory.ExecuteMethod(this, "Seek", new object[]{ comparison, key1, key2, key3, key4, key5, key6, key7, key8, key9, key10, key11, key12, key13 });
 		}
 
 		/// <summary>
 		/// SupportByVersion DAO 3.6, 12.0
-		/// 
 		/// </summary>
-		/// <param name="comparison">string Comparison</param>
-		/// <param name="key1">object Key1</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("DAO", 3.6,12.0)]
+		/// <param name="comparison">string comparison</param>
+		/// <param name="key1">object key1</param>
+		[CustomMethod]
+		[SupportByVersion("DAO", 3.6,12.0)]
 		public void Seek(string comparison, object key1)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(comparison, key1);
-			Invoker.Method(this, "Seek", paramsArray);
+			 Factory.ExecuteMethod(this, "Seek", comparison, key1);
 		}
 
 		/// <summary>
 		/// SupportByVersion DAO 3.6, 12.0
-		/// 
 		/// </summary>
-		/// <param name="comparison">string Comparison</param>
-		/// <param name="key1">object Key1</param>
-		/// <param name="key2">optional object Key2</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("DAO", 3.6,12.0)]
+		/// <param name="comparison">string comparison</param>
+		/// <param name="key1">object key1</param>
+		/// <param name="key2">optional object key2</param>
+		[CustomMethod]
+		[SupportByVersion("DAO", 3.6,12.0)]
 		public void Seek(string comparison, object key1, object key2)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(comparison, key1, key2);
-			Invoker.Method(this, "Seek", paramsArray);
+			 Factory.ExecuteMethod(this, "Seek", comparison, key1, key2);
 		}
 
 		/// <summary>
 		/// SupportByVersion DAO 3.6, 12.0
-		/// 
 		/// </summary>
-		/// <param name="comparison">string Comparison</param>
-		/// <param name="key1">object Key1</param>
-		/// <param name="key2">optional object Key2</param>
-		/// <param name="key3">optional object Key3</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("DAO", 3.6,12.0)]
+		/// <param name="comparison">string comparison</param>
+		/// <param name="key1">object key1</param>
+		/// <param name="key2">optional object key2</param>
+		/// <param name="key3">optional object key3</param>
+		[CustomMethod]
+		[SupportByVersion("DAO", 3.6,12.0)]
 		public void Seek(string comparison, object key1, object key2, object key3)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(comparison, key1, key2, key3);
-			Invoker.Method(this, "Seek", paramsArray);
+			 Factory.ExecuteMethod(this, "Seek", comparison, key1, key2, key3);
 		}
 
 		/// <summary>
 		/// SupportByVersion DAO 3.6, 12.0
-		/// 
 		/// </summary>
-		/// <param name="comparison">string Comparison</param>
-		/// <param name="key1">object Key1</param>
-		/// <param name="key2">optional object Key2</param>
-		/// <param name="key3">optional object Key3</param>
-		/// <param name="key4">optional object Key4</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("DAO", 3.6,12.0)]
+		/// <param name="comparison">string comparison</param>
+		/// <param name="key1">object key1</param>
+		/// <param name="key2">optional object key2</param>
+		/// <param name="key3">optional object key3</param>
+		/// <param name="key4">optional object key4</param>
+		[CustomMethod]
+		[SupportByVersion("DAO", 3.6,12.0)]
 		public void Seek(string comparison, object key1, object key2, object key3, object key4)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(comparison, key1, key2, key3, key4);
-			Invoker.Method(this, "Seek", paramsArray);
+			 Factory.ExecuteMethod(this, "Seek", new object[]{ comparison, key1, key2, key3, key4 });
 		}
 
 		/// <summary>
 		/// SupportByVersion DAO 3.6, 12.0
-		/// 
 		/// </summary>
-		/// <param name="comparison">string Comparison</param>
-		/// <param name="key1">object Key1</param>
-		/// <param name="key2">optional object Key2</param>
-		/// <param name="key3">optional object Key3</param>
-		/// <param name="key4">optional object Key4</param>
-		/// <param name="key5">optional object Key5</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("DAO", 3.6,12.0)]
+		/// <param name="comparison">string comparison</param>
+		/// <param name="key1">object key1</param>
+		/// <param name="key2">optional object key2</param>
+		/// <param name="key3">optional object key3</param>
+		/// <param name="key4">optional object key4</param>
+		/// <param name="key5">optional object key5</param>
+		[CustomMethod]
+		[SupportByVersion("DAO", 3.6,12.0)]
 		public void Seek(string comparison, object key1, object key2, object key3, object key4, object key5)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(comparison, key1, key2, key3, key4, key5);
-			Invoker.Method(this, "Seek", paramsArray);
+			 Factory.ExecuteMethod(this, "Seek", new object[]{ comparison, key1, key2, key3, key4, key5 });
 		}
 
 		/// <summary>
 		/// SupportByVersion DAO 3.6, 12.0
-		/// 
 		/// </summary>
-		/// <param name="comparison">string Comparison</param>
-		/// <param name="key1">object Key1</param>
-		/// <param name="key2">optional object Key2</param>
-		/// <param name="key3">optional object Key3</param>
-		/// <param name="key4">optional object Key4</param>
-		/// <param name="key5">optional object Key5</param>
-		/// <param name="key6">optional object Key6</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("DAO", 3.6,12.0)]
+		/// <param name="comparison">string comparison</param>
+		/// <param name="key1">object key1</param>
+		/// <param name="key2">optional object key2</param>
+		/// <param name="key3">optional object key3</param>
+		/// <param name="key4">optional object key4</param>
+		/// <param name="key5">optional object key5</param>
+		/// <param name="key6">optional object key6</param>
+		[CustomMethod]
+		[SupportByVersion("DAO", 3.6,12.0)]
 		public void Seek(string comparison, object key1, object key2, object key3, object key4, object key5, object key6)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(comparison, key1, key2, key3, key4, key5, key6);
-			Invoker.Method(this, "Seek", paramsArray);
+			 Factory.ExecuteMethod(this, "Seek", new object[]{ comparison, key1, key2, key3, key4, key5, key6 });
 		}
 
 		/// <summary>
 		/// SupportByVersion DAO 3.6, 12.0
-		/// 
 		/// </summary>
-		/// <param name="comparison">string Comparison</param>
-		/// <param name="key1">object Key1</param>
-		/// <param name="key2">optional object Key2</param>
-		/// <param name="key3">optional object Key3</param>
-		/// <param name="key4">optional object Key4</param>
-		/// <param name="key5">optional object Key5</param>
-		/// <param name="key6">optional object Key6</param>
-		/// <param name="key7">optional object Key7</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("DAO", 3.6,12.0)]
+		/// <param name="comparison">string comparison</param>
+		/// <param name="key1">object key1</param>
+		/// <param name="key2">optional object key2</param>
+		/// <param name="key3">optional object key3</param>
+		/// <param name="key4">optional object key4</param>
+		/// <param name="key5">optional object key5</param>
+		/// <param name="key6">optional object key6</param>
+		/// <param name="key7">optional object key7</param>
+		[CustomMethod]
+		[SupportByVersion("DAO", 3.6,12.0)]
 		public void Seek(string comparison, object key1, object key2, object key3, object key4, object key5, object key6, object key7)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(comparison, key1, key2, key3, key4, key5, key6, key7);
-			Invoker.Method(this, "Seek", paramsArray);
+			 Factory.ExecuteMethod(this, "Seek", new object[]{ comparison, key1, key2, key3, key4, key5, key6, key7 });
 		}
 
 		/// <summary>
 		/// SupportByVersion DAO 3.6, 12.0
-		/// 
 		/// </summary>
-		/// <param name="comparison">string Comparison</param>
-		/// <param name="key1">object Key1</param>
-		/// <param name="key2">optional object Key2</param>
-		/// <param name="key3">optional object Key3</param>
-		/// <param name="key4">optional object Key4</param>
-		/// <param name="key5">optional object Key5</param>
-		/// <param name="key6">optional object Key6</param>
-		/// <param name="key7">optional object Key7</param>
-		/// <param name="key8">optional object Key8</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("DAO", 3.6,12.0)]
+		/// <param name="comparison">string comparison</param>
+		/// <param name="key1">object key1</param>
+		/// <param name="key2">optional object key2</param>
+		/// <param name="key3">optional object key3</param>
+		/// <param name="key4">optional object key4</param>
+		/// <param name="key5">optional object key5</param>
+		/// <param name="key6">optional object key6</param>
+		/// <param name="key7">optional object key7</param>
+		/// <param name="key8">optional object key8</param>
+		[CustomMethod]
+		[SupportByVersion("DAO", 3.6,12.0)]
 		public void Seek(string comparison, object key1, object key2, object key3, object key4, object key5, object key6, object key7, object key8)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(comparison, key1, key2, key3, key4, key5, key6, key7, key8);
-			Invoker.Method(this, "Seek", paramsArray);
+			 Factory.ExecuteMethod(this, "Seek", new object[]{ comparison, key1, key2, key3, key4, key5, key6, key7, key8 });
 		}
 
 		/// <summary>
 		/// SupportByVersion DAO 3.6, 12.0
-		/// 
 		/// </summary>
-		/// <param name="comparison">string Comparison</param>
-		/// <param name="key1">object Key1</param>
-		/// <param name="key2">optional object Key2</param>
-		/// <param name="key3">optional object Key3</param>
-		/// <param name="key4">optional object Key4</param>
-		/// <param name="key5">optional object Key5</param>
-		/// <param name="key6">optional object Key6</param>
-		/// <param name="key7">optional object Key7</param>
-		/// <param name="key8">optional object Key8</param>
-		/// <param name="key9">optional object Key9</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("DAO", 3.6,12.0)]
+		/// <param name="comparison">string comparison</param>
+		/// <param name="key1">object key1</param>
+		/// <param name="key2">optional object key2</param>
+		/// <param name="key3">optional object key3</param>
+		/// <param name="key4">optional object key4</param>
+		/// <param name="key5">optional object key5</param>
+		/// <param name="key6">optional object key6</param>
+		/// <param name="key7">optional object key7</param>
+		/// <param name="key8">optional object key8</param>
+		/// <param name="key9">optional object key9</param>
+		[CustomMethod]
+		[SupportByVersion("DAO", 3.6,12.0)]
 		public void Seek(string comparison, object key1, object key2, object key3, object key4, object key5, object key6, object key7, object key8, object key9)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(comparison, key1, key2, key3, key4, key5, key6, key7, key8, key9);
-			Invoker.Method(this, "Seek", paramsArray);
+			 Factory.ExecuteMethod(this, "Seek", new object[]{ comparison, key1, key2, key3, key4, key5, key6, key7, key8, key9 });
 		}
 
 		/// <summary>
 		/// SupportByVersion DAO 3.6, 12.0
-		/// 
 		/// </summary>
-		/// <param name="comparison">string Comparison</param>
-		/// <param name="key1">object Key1</param>
-		/// <param name="key2">optional object Key2</param>
-		/// <param name="key3">optional object Key3</param>
-		/// <param name="key4">optional object Key4</param>
-		/// <param name="key5">optional object Key5</param>
-		/// <param name="key6">optional object Key6</param>
-		/// <param name="key7">optional object Key7</param>
-		/// <param name="key8">optional object Key8</param>
-		/// <param name="key9">optional object Key9</param>
-		/// <param name="key10">optional object Key10</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("DAO", 3.6,12.0)]
+		/// <param name="comparison">string comparison</param>
+		/// <param name="key1">object key1</param>
+		/// <param name="key2">optional object key2</param>
+		/// <param name="key3">optional object key3</param>
+		/// <param name="key4">optional object key4</param>
+		/// <param name="key5">optional object key5</param>
+		/// <param name="key6">optional object key6</param>
+		/// <param name="key7">optional object key7</param>
+		/// <param name="key8">optional object key8</param>
+		/// <param name="key9">optional object key9</param>
+		/// <param name="key10">optional object key10</param>
+		[CustomMethod]
+		[SupportByVersion("DAO", 3.6,12.0)]
 		public void Seek(string comparison, object key1, object key2, object key3, object key4, object key5, object key6, object key7, object key8, object key9, object key10)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(comparison, key1, key2, key3, key4, key5, key6, key7, key8, key9, key10);
-			Invoker.Method(this, "Seek", paramsArray);
+			 Factory.ExecuteMethod(this, "Seek", new object[]{ comparison, key1, key2, key3, key4, key5, key6, key7, key8, key9, key10 });
 		}
 
 		/// <summary>
 		/// SupportByVersion DAO 3.6, 12.0
-		/// 
 		/// </summary>
-		/// <param name="comparison">string Comparison</param>
-		/// <param name="key1">object Key1</param>
-		/// <param name="key2">optional object Key2</param>
-		/// <param name="key3">optional object Key3</param>
-		/// <param name="key4">optional object Key4</param>
-		/// <param name="key5">optional object Key5</param>
-		/// <param name="key6">optional object Key6</param>
-		/// <param name="key7">optional object Key7</param>
-		/// <param name="key8">optional object Key8</param>
-		/// <param name="key9">optional object Key9</param>
-		/// <param name="key10">optional object Key10</param>
-		/// <param name="key11">optional object Key11</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("DAO", 3.6,12.0)]
+		/// <param name="comparison">string comparison</param>
+		/// <param name="key1">object key1</param>
+		/// <param name="key2">optional object key2</param>
+		/// <param name="key3">optional object key3</param>
+		/// <param name="key4">optional object key4</param>
+		/// <param name="key5">optional object key5</param>
+		/// <param name="key6">optional object key6</param>
+		/// <param name="key7">optional object key7</param>
+		/// <param name="key8">optional object key8</param>
+		/// <param name="key9">optional object key9</param>
+		/// <param name="key10">optional object key10</param>
+		/// <param name="key11">optional object key11</param>
+		[CustomMethod]
+		[SupportByVersion("DAO", 3.6,12.0)]
 		public void Seek(string comparison, object key1, object key2, object key3, object key4, object key5, object key6, object key7, object key8, object key9, object key10, object key11)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(comparison, key1, key2, key3, key4, key5, key6, key7, key8, key9, key10, key11);
-			Invoker.Method(this, "Seek", paramsArray);
+			 Factory.ExecuteMethod(this, "Seek", new object[]{ comparison, key1, key2, key3, key4, key5, key6, key7, key8, key9, key10, key11 });
 		}
 
 		/// <summary>
 		/// SupportByVersion DAO 3.6, 12.0
-		/// 
 		/// </summary>
-		/// <param name="comparison">string Comparison</param>
-		/// <param name="key1">object Key1</param>
-		/// <param name="key2">optional object Key2</param>
-		/// <param name="key3">optional object Key3</param>
-		/// <param name="key4">optional object Key4</param>
-		/// <param name="key5">optional object Key5</param>
-		/// <param name="key6">optional object Key6</param>
-		/// <param name="key7">optional object Key7</param>
-		/// <param name="key8">optional object Key8</param>
-		/// <param name="key9">optional object Key9</param>
-		/// <param name="key10">optional object Key10</param>
-		/// <param name="key11">optional object Key11</param>
-		/// <param name="key12">optional object Key12</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("DAO", 3.6,12.0)]
+		/// <param name="comparison">string comparison</param>
+		/// <param name="key1">object key1</param>
+		/// <param name="key2">optional object key2</param>
+		/// <param name="key3">optional object key3</param>
+		/// <param name="key4">optional object key4</param>
+		/// <param name="key5">optional object key5</param>
+		/// <param name="key6">optional object key6</param>
+		/// <param name="key7">optional object key7</param>
+		/// <param name="key8">optional object key8</param>
+		/// <param name="key9">optional object key9</param>
+		/// <param name="key10">optional object key10</param>
+		/// <param name="key11">optional object key11</param>
+		/// <param name="key12">optional object key12</param>
+		[CustomMethod]
+		[SupportByVersion("DAO", 3.6,12.0)]
 		public void Seek(string comparison, object key1, object key2, object key3, object key4, object key5, object key6, object key7, object key8, object key9, object key10, object key11, object key12)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(comparison, key1, key2, key3, key4, key5, key6, key7, key8, key9, key10, key11, key12);
-			Invoker.Method(this, "Seek", paramsArray);
+			 Factory.ExecuteMethod(this, "Seek", new object[]{ comparison, key1, key2, key3, key4, key5, key6, key7, key8, key9, key10, key11, key12 });
 		}
 
 		/// <summary>
 		/// SupportByVersion DAO 3.6, 12.0
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("DAO", 3.6,12.0)]
+		[SupportByVersion("DAO", 3.6,12.0)]
 		public void _30_Update()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "_30_Update", paramsArray);
+			 Factory.ExecuteMethod(this, "_30_Update");
 		}
 
 		/// <summary>
 		/// SupportByVersion DAO 3.6, 12.0
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("DAO", 3.6,12.0)]
+		[SupportByVersion("DAO", 3.6,12.0)]
+		[BaseResult]
 		public NetOffice.DAOApi.Recordset Clone()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "Clone", paramsArray);
-			NetOffice.DAOApi.Recordset newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.DAOApi.Recordset;
-			return newObject;
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.DAOApi.Recordset>(this, "Clone");
 		}
 
 		/// <summary>
 		/// SupportByVersion DAO 3.6, 12.0
-		/// 
 		/// </summary>
-		/// <param name="newQueryDef">optional object NewQueryDef</param>
-		[SupportByVersionAttribute("DAO", 3.6,12.0)]
+		/// <param name="newQueryDef">optional object newQueryDef</param>
+		[SupportByVersion("DAO", 3.6,12.0)]
 		public void Requery(object newQueryDef)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(newQueryDef);
-			Invoker.Method(this, "Requery", paramsArray);
+			 Factory.ExecuteMethod(this, "Requery", newQueryDef);
 		}
 
 		/// <summary>
 		/// SupportByVersion DAO 3.6, 12.0
-		/// 
 		/// </summary>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("DAO", 3.6,12.0)]
+		[CustomMethod]
+		[SupportByVersion("DAO", 3.6,12.0)]
 		public void Requery()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "Requery", paramsArray);
+			 Factory.ExecuteMethod(this, "Requery");
 		}
 
 		/// <summary>
 		/// SupportByVersion DAO 3.6, 12.0
-		/// 
 		/// </summary>
-		/// <param name="rows">Int32 Rows</param>
-		/// <param name="startBookmark">optional object StartBookmark</param>
-		[SupportByVersionAttribute("DAO", 3.6,12.0)]
+		/// <param name="rows">Int32 rows</param>
+		/// <param name="startBookmark">optional object startBookmark</param>
+		[SupportByVersion("DAO", 3.6,12.0)]
 		public void Move(Int32 rows, object startBookmark)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(rows, startBookmark);
-			Invoker.Method(this, "Move", paramsArray);
+			 Factory.ExecuteMethod(this, "Move", rows, startBookmark);
 		}
 
 		/// <summary>
 		/// SupportByVersion DAO 3.6, 12.0
-		/// 
 		/// </summary>
-		/// <param name="rows">Int32 Rows</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("DAO", 3.6,12.0)]
+		/// <param name="rows">Int32 rows</param>
+		[CustomMethod]
+		[SupportByVersion("DAO", 3.6,12.0)]
 		public void Move(Int32 rows)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(rows);
-			Invoker.Method(this, "Move", paramsArray);
+			 Factory.ExecuteMethod(this, "Move", rows);
 		}
 
 		/// <summary>
 		/// SupportByVersion DAO 3.6, 12.0
-		/// 
 		/// </summary>
-		/// <param name="rows">optional object Rows</param>
-		/// <param name="startBookmark">optional object StartBookmark</param>
-		[SupportByVersionAttribute("DAO", 3.6,12.0)]
+		/// <param name="rows">optional object rows</param>
+		/// <param name="startBookmark">optional object startBookmark</param>
+		[SupportByVersion("DAO", 3.6,12.0)]
 		public void FillCache(object rows, object startBookmark)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(rows, startBookmark);
-			Invoker.Method(this, "FillCache", paramsArray);
+			 Factory.ExecuteMethod(this, "FillCache", rows, startBookmark);
 		}
 
 		/// <summary>
 		/// SupportByVersion DAO 3.6, 12.0
-		/// 
 		/// </summary>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("DAO", 3.6,12.0)]
+		[CustomMethod]
+		[SupportByVersion("DAO", 3.6,12.0)]
 		public void FillCache()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "FillCache", paramsArray);
+			 Factory.ExecuteMethod(this, "FillCache");
 		}
 
 		/// <summary>
 		/// SupportByVersion DAO 3.6, 12.0
-		/// 
 		/// </summary>
-		/// <param name="rows">optional object Rows</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("DAO", 3.6,12.0)]
+		/// <param name="rows">optional object rows</param>
+		[CustomMethod]
+		[SupportByVersion("DAO", 3.6,12.0)]
 		public void FillCache(object rows)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(rows);
-			Invoker.Method(this, "FillCache", paramsArray);
+			 Factory.ExecuteMethod(this, "FillCache", rows);
 		}
 
 		/// <summary>
 		/// SupportByVersion DAO 3.6, 12.0
-		/// 
 		/// </summary>
-		/// <param name="options">optional object Options</param>
-		/// <param name="inconsistent">optional object Inconsistent</param>
-		[SupportByVersionAttribute("DAO", 3.6,12.0)]
+		/// <param name="options">optional object options</param>
+		/// <param name="inconsistent">optional object inconsistent</param>
+		[SupportByVersion("DAO", 3.6,12.0)]
+		[BaseResult]
 		public NetOffice.DAOApi.Recordset CreateDynaset(object options, object inconsistent)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(options, inconsistent);
-			object returnItem = Invoker.MethodReturn(this, "CreateDynaset", paramsArray);
-			NetOffice.DAOApi.Recordset newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.DAOApi.Recordset;
-			return newObject;
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.DAOApi.Recordset>(this, "CreateDynaset", options, inconsistent);
 		}
 
 		/// <summary>
 		/// SupportByVersion DAO 3.6, 12.0
-		/// 
 		/// </summary>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("DAO", 3.6,12.0)]
+		[CustomMethod]
+		[BaseResult]
+		[SupportByVersion("DAO", 3.6,12.0)]
 		public NetOffice.DAOApi.Recordset CreateDynaset()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "CreateDynaset", paramsArray);
-			NetOffice.DAOApi.Recordset newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.DAOApi.Recordset;
-			return newObject;
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.DAOApi.Recordset>(this, "CreateDynaset");
 		}
 
 		/// <summary>
 		/// SupportByVersion DAO 3.6, 12.0
-		/// 
 		/// </summary>
-		/// <param name="options">optional object Options</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("DAO", 3.6,12.0)]
+		/// <param name="options">optional object options</param>
+		[CustomMethod]
+		[BaseResult]
+		[SupportByVersion("DAO", 3.6,12.0)]
 		public NetOffice.DAOApi.Recordset CreateDynaset(object options)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(options);
-			object returnItem = Invoker.MethodReturn(this, "CreateDynaset", paramsArray);
-			NetOffice.DAOApi.Recordset newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.DAOApi.Recordset;
-			return newObject;
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.DAOApi.Recordset>(this, "CreateDynaset", options);
 		}
 
 		/// <summary>
 		/// SupportByVersion DAO 3.6, 12.0
-		/// 
 		/// </summary>
-		/// <param name="options">optional object Options</param>
-		[SupportByVersionAttribute("DAO", 3.6,12.0)]
+		/// <param name="options">optional object options</param>
+		[SupportByVersion("DAO", 3.6,12.0)]
+		[BaseResult]
 		public NetOffice.DAOApi.Recordset CreateSnapshot(object options)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(options);
-			object returnItem = Invoker.MethodReturn(this, "CreateSnapshot", paramsArray);
-			NetOffice.DAOApi.Recordset newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.DAOApi.Recordset;
-			return newObject;
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.DAOApi.Recordset>(this, "CreateSnapshot", options);
 		}
 
 		/// <summary>
 		/// SupportByVersion DAO 3.6, 12.0
-		/// 
 		/// </summary>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("DAO", 3.6,12.0)]
+		[CustomMethod]
+		[BaseResult]
+		[SupportByVersion("DAO", 3.6,12.0)]
 		public NetOffice.DAOApi.Recordset CreateSnapshot()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "CreateSnapshot", paramsArray);
-			NetOffice.DAOApi.Recordset newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.DAOApi.Recordset;
-			return newObject;
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.DAOApi.Recordset>(this, "CreateSnapshot");
 		}
 
 		/// <summary>
 		/// SupportByVersion DAO 3.6, 12.0
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("DAO", 3.6,12.0)]
+		[SupportByVersion("DAO", 3.6,12.0)]
 		public NetOffice.DAOApi.QueryDef CopyQueryDef()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "CopyQueryDef", paramsArray);
-			NetOffice.DAOApi.QueryDef newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.DAOApi.QueryDef.LateBindingApiWrapperType) as NetOffice.DAOApi.QueryDef;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.DAOApi.QueryDef>(this, "CopyQueryDef", NetOffice.DAOApi.QueryDef.LateBindingApiWrapperType);
 		}
 
 		/// <summary>
 		/// SupportByVersion DAO 3.6, 12.0
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("DAO", 3.6,12.0)]
+		[SupportByVersion("DAO", 3.6,12.0)]
+		[BaseResult]
 		public NetOffice.DAOApi.Recordset ListFields()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "ListFields", paramsArray);
-			NetOffice.DAOApi.Recordset newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.DAOApi.Recordset;
-			return newObject;
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.DAOApi.Recordset>(this, "ListFields");
 		}
 
 		/// <summary>
 		/// SupportByVersion DAO 3.6, 12.0
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("DAO", 3.6,12.0)]
+		[SupportByVersion("DAO", 3.6,12.0)]
+		[BaseResult]
 		public NetOffice.DAOApi.Recordset ListIndexes()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "ListIndexes", paramsArray);
-			NetOffice.DAOApi.Recordset newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.DAOApi.Recordset;
-			return newObject;
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.DAOApi.Recordset>(this, "ListIndexes");
 		}
 
 		/// <summary>
 		/// SupportByVersion DAO 3.6, 12.0
-		/// 
 		/// </summary>
-		/// <param name="numRows">optional object NumRows</param>
-		[SupportByVersionAttribute("DAO", 3.6,12.0)]
+		/// <param name="numRows">optional object numRows</param>
+		[SupportByVersion("DAO", 3.6,12.0)]
 		public object GetRows(object numRows)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(numRows);
-			object returnItem = Invoker.MethodReturn(this, "GetRows", paramsArray);
-			if((null != returnItem) && (returnItem is MarshalByRefObject))
-			{
-				ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
-				return newObject;
-			}
-			else
-			{
-				return  returnItem;
-			}
+			return Factory.ExecuteVariantMethodGet(this, "GetRows", numRows);
 		}
 
 		/// <summary>
 		/// SupportByVersion DAO 3.6, 12.0
-		/// 
 		/// </summary>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("DAO", 3.6,12.0)]
+		[CustomMethod]
+		[SupportByVersion("DAO", 3.6,12.0)]
 		public object GetRows()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "GetRows", paramsArray);
-			if((null != returnItem) && (returnItem is MarshalByRefObject))
-			{
-				ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
-				return newObject;
-			}
-			else
-			{
-				return  returnItem;
-			}
+			return Factory.ExecuteVariantMethodGet(this, "GetRows");
 		}
 
 		/// <summary>
 		/// SupportByVersion DAO 3.6, 12.0
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("DAO", 3.6,12.0)]
+		[SupportByVersion("DAO", 3.6,12.0)]
 		public void Cancel()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "Cancel", paramsArray);
+			 Factory.ExecuteMethod(this, "Cancel");
 		}
 
 		/// <summary>
 		/// SupportByVersion DAO 3.6, 12.0
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("DAO", 3.6,12.0)]
+		[SupportByVersion("DAO", 3.6,12.0)]
 		public bool NextRecordset()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "NextRecordset", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return Factory.ExecuteBoolMethodGet(this, "NextRecordset");
 		}
 
 		/// <summary>
 		/// SupportByVersion DAO 3.6, 12.0
-		/// 
 		/// </summary>
 		/// <param name="updateType">optional Int32 UpdateType = 1</param>
-		[SupportByVersionAttribute("DAO", 3.6,12.0)]
+		[SupportByVersion("DAO", 3.6,12.0)]
 		public void CancelUpdate(object updateType)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(updateType);
-			Invoker.Method(this, "CancelUpdate", paramsArray);
+			 Factory.ExecuteMethod(this, "CancelUpdate", updateType);
 		}
 
 		/// <summary>
 		/// SupportByVersion DAO 3.6, 12.0
-		/// 
 		/// </summary>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("DAO", 3.6,12.0)]
+		[CustomMethod]
+		[SupportByVersion("DAO", 3.6,12.0)]
 		public void CancelUpdate()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "CancelUpdate", paramsArray);
+			 Factory.ExecuteMethod(this, "CancelUpdate");
 		}
 
 		/// <summary>
 		/// SupportByVersion DAO 3.6, 12.0
-		/// 
 		/// </summary>
 		/// <param name="updateType">optional Int32 UpdateType = 1</param>
 		/// <param name="force">optional bool Force = false</param>
-		[SupportByVersionAttribute("DAO", 3.6,12.0)]
+		[SupportByVersion("DAO", 3.6,12.0)]
 		public void Update(object updateType, object force)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(updateType, force);
-			Invoker.Method(this, "Update", paramsArray);
+			 Factory.ExecuteMethod(this, "Update", updateType, force);
 		}
 
 		/// <summary>
 		/// SupportByVersion DAO 3.6, 12.0
-		/// 
 		/// </summary>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("DAO", 3.6,12.0)]
+		[CustomMethod]
+		[SupportByVersion("DAO", 3.6,12.0)]
 		public void Update()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "Update", paramsArray);
+			 Factory.ExecuteMethod(this, "Update");
 		}
 
 		/// <summary>
 		/// SupportByVersion DAO 3.6, 12.0
-		/// 
 		/// </summary>
 		/// <param name="updateType">optional Int32 UpdateType = 1</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("DAO", 3.6,12.0)]
+		[CustomMethod]
+		[SupportByVersion("DAO", 3.6,12.0)]
 		public void Update(object updateType)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(updateType);
-			Invoker.Method(this, "Update", paramsArray);
+			 Factory.ExecuteMethod(this, "Update", updateType);
 		}
 
 		/// <summary>
 		/// SupportByVersion DAO 3.6, 12.0
-		/// 
 		/// </summary>
 		/// <param name="options">optional Int32 Options = 0</param>
-		[SupportByVersionAttribute("DAO", 3.6,12.0)]
+		[SupportByVersion("DAO", 3.6,12.0)]
 		public void MoveLast(object options)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(options);
-			Invoker.Method(this, "MoveLast", paramsArray);
+			 Factory.ExecuteMethod(this, "MoveLast", options);
 		}
 
 		/// <summary>
 		/// SupportByVersion DAO 3.6, 12.0
-		/// 
 		/// </summary>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("DAO", 3.6,12.0)]
+		[CustomMethod]
+		[SupportByVersion("DAO", 3.6,12.0)]
 		public void MoveLast()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "MoveLast", paramsArray);
+			 Factory.ExecuteMethod(this, "MoveLast");
 		}
 
 		#endregion
+
 		#pragma warning restore
 	}
 }

@@ -1,27 +1,26 @@
 ﻿using System;
 using NetRuntimeSystem = System;
-using System.Runtime.InteropServices;
 using System.ComponentModel;
-using System.Runtime.CompilerServices;
-using System.Reflection;
-using System.Collections.Generic;
-using NetOffice;
+using NetOffice.Attributes;
+
 namespace NetOffice.ExcelApi
 {
-	///<summary>
+	/// <summary>
 	/// Interface IRTD 
 	/// SupportByVersion Excel, 10,11,12,14,15,16
-	///</summary>
-	[SupportByVersionAttribute("Excel", 10,11,12,14,15,16)]
-	[EntityTypeAttribute(EntityType.IsInterface)]
-	public class IRTD : COMObject
+	/// </summary>
+	[SupportByVersion("Excel", 10,11,12,14,15,16)]
+	[EntityType(EntityType.IsInterface)]
+ 	public class IRTD : COMObject
 	{
 		#pragma warning disable
+
 		#region Type Information
 
         /// <summary>
         /// Instance Type
         /// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
         public override Type InstanceType
         {
             get
@@ -39,14 +38,20 @@ namespace NetOffice.ExcelApi
             {
                 if (null == _type)
                     _type = typeof(IRTD);
-                    
                 return _type;
             }
         }
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public IRTD(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -92,7 +97,7 @@ namespace NetOffice.ExcelApi
 		{
 		}
 		
-		/// <param name="progId">registered ProgID</param>
+		/// <param name="progId">registered progID</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public IRTD(string progId) : base(progId)
 		{
@@ -106,19 +111,16 @@ namespace NetOffice.ExcelApi
 		/// SupportByVersion Excel 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 10,11,12,14,15,16)]
+		[SupportByVersion("Excel", 10,11,12,14,15,16)]
 		public Int32 ThrottleInterval
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "ThrottleInterval", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "ThrottleInterval");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "ThrottleInterval", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "ThrottleInterval", value);
 			}
 		}
 
@@ -128,29 +130,24 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 10,11,12,14,15,16)]
+		[SupportByVersion("Excel", 10,11,12,14,15,16)]
 		public Int32 RefreshData()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "RefreshData", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return Factory.ExecuteInt32MethodGet(this, "RefreshData");
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 10,11,12,14,15,16)]
+		[SupportByVersion("Excel", 10,11,12,14,15,16)]
 		public Int32 RestartServers()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "RestartServers", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return Factory.ExecuteInt32MethodGet(this, "RestartServers");
 		}
 
 		#endregion
+
 		#pragma warning restore
 	}
 }

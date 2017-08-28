@@ -1,23 +1,33 @@
-﻿using System;
+using System;
 using NetRuntimeSystem = System;
-using System.Runtime.InteropServices;
-using System.Runtime.CompilerServices;
 using System.ComponentModel;
-using System.Reflection;
-using System.Collections.Generic;
-using NetOffice;
+using NetOffice.Attributes;
+
 namespace NetOffice.OWC10Api
 {
-	///<summary>
+	/// <summary>
 	/// DispatchInterface PivotFieldSet 
 	/// SupportByVersion OWC10, 1
-	///</summary>
-	[SupportByVersionAttribute("OWC10", 1)]
-	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
-	public class PivotFieldSet : COMObject
+	/// </summary>
+	[SupportByVersion("OWC10", 1)]
+	[EntityType(EntityType.IsDispatchInterface)]
+ 	public class PivotFieldSet : COMObject
 	{
 		#pragma warning disable
+
 		#region Type Information
+
+		/// <summary>
+		/// Instance Type
+		/// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
+		public override Type InstanceType
+		{
+			get
+			{
+				return LateBindingApiWrapperType;
+			}
+		}
 
         private static Type _type;
 
@@ -28,14 +38,20 @@ namespace NetOffice.OWC10Api
             {
                 if (null == _type)
                     _type = typeof(PivotFieldSet);
-                    
                 return _type;
             }
         }
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public PivotFieldSet(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -81,7 +97,7 @@ namespace NetOffice.OWC10Api
 		{
 		}
 		
-		/// <param name="progId">registered ProgID</param>
+		/// <param name="progId">registered progID</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public PivotFieldSet(string progId) : base(progId)
 		{
@@ -95,19 +111,16 @@ namespace NetOffice.OWC10Api
 		/// SupportByVersion OWC10 1
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("OWC10", 1)]
+		[SupportByVersion("OWC10", 1)]
 		public string Name
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Name", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "Name");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "Name", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "Name", value);
 			}
 		}
 
@@ -115,19 +128,16 @@ namespace NetOffice.OWC10Api
 		/// SupportByVersion OWC10 1
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("OWC10", 1)]
+		[SupportByVersion("OWC10", 1)]
 		public string Caption
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Caption", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "Caption");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "Caption", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "Caption", value);
 			}
 		}
 
@@ -135,15 +145,12 @@ namespace NetOffice.OWC10Api
 		/// SupportByVersion OWC10 1
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("OWC10", 1)]
+		[SupportByVersion("OWC10", 1)]
 		public NetOffice.OWC10Api.PivotFields Fields
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Fields", paramsArray);
-				NetOffice.OWC10Api.PivotFields newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OWC10Api.PivotFields.LateBindingApiWrapperType) as NetOffice.OWC10Api.PivotFields;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OWC10Api.PivotFields>(this, "Fields", NetOffice.OWC10Api.PivotFields.LateBindingApiWrapperType);
 			}
 		}
 
@@ -151,16 +158,13 @@ namespace NetOffice.OWC10Api
 		/// SupportByVersion OWC10 1
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("OWC10", 1)]
+		[SupportByVersion("OWC10", 1)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public NetOffice.OWC10Api.PivotMembers Members
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Members", paramsArray);
-				NetOffice.OWC10Api.PivotMembers newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OWC10Api.PivotMembers.LateBindingApiWrapperType) as NetOffice.OWC10Api.PivotMembers;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OWC10Api.PivotMembers>(this, "Members", NetOffice.OWC10Api.PivotMembers.LateBindingApiWrapperType);
 			}
 		}
 
@@ -168,15 +172,12 @@ namespace NetOffice.OWC10Api
 		/// SupportByVersion OWC10 1
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("OWC10", 1)]
+		[SupportByVersion("OWC10", 1)]
 		public NetOffice.OWC10Api.Enums.PivotFieldSetOrientationEnum Orientation
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Orientation", paramsArray);
-				int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-				return (NetOffice.OWC10Api.Enums.PivotFieldSetOrientationEnum)intReturnItem;
+				return Factory.ExecuteEnumPropertyGet<NetOffice.OWC10Api.Enums.PivotFieldSetOrientationEnum>(this, "Orientation");
 			}
 		}
 
@@ -184,15 +185,12 @@ namespace NetOffice.OWC10Api
 		/// SupportByVersion OWC10 1
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("OWC10", 1)]
+		[SupportByVersion("OWC10", 1)]
 		public NetOffice.OWC10Api.Enums.PivotFieldSetTypeEnum Type
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Type", paramsArray);
-				int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-				return (NetOffice.OWC10Api.Enums.PivotFieldSetTypeEnum)intReturnItem;
+				return Factory.ExecuteEnumPropertyGet<NetOffice.OWC10Api.Enums.PivotFieldSetTypeEnum>(this, "Type");
 			}
 		}
 
@@ -200,15 +198,12 @@ namespace NetOffice.OWC10Api
 		/// SupportByVersion OWC10 1
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("OWC10", 1)]
+		[SupportByVersion("OWC10", 1)]
 		public NetOffice.OWC10Api.PivotField BoundField
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "BoundField", paramsArray);
-				NetOffice.OWC10Api.PivotField newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OWC10Api.PivotField.LateBindingApiWrapperType) as NetOffice.OWC10Api.PivotField;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OWC10Api.PivotField>(this, "BoundField", NetOffice.OWC10Api.PivotField.LateBindingApiWrapperType);
 			}
 		}
 
@@ -216,14 +211,12 @@ namespace NetOffice.OWC10Api
 		/// SupportByVersion OWC10 1
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("OWC10", 1)]
+		[SupportByVersion("OWC10", 1)]
 		public string UniqueName
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "UniqueName", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "UniqueName");
 			}
 		}
 
@@ -231,19 +224,16 @@ namespace NetOffice.OWC10Api
 		/// SupportByVersion OWC10 1
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("OWC10", 1)]
+		[SupportByVersion("OWC10", 1)]
 		public Int32 Width
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Width", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "Width");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "Width", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "Width", value);
 			}
 		}
 
@@ -251,15 +241,13 @@ namespace NetOffice.OWC10Api
 		/// SupportByVersion OWC10 1
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("OWC10", 1)]
+		[SupportByVersion("OWC10", 1)]
+		[BaseResult]
 		public NetOffice.OWC10Api.PivotMember DefaultMember
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "DefaultMember", paramsArray);
-				NetOffice.OWC10Api.PivotMember newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OWC10Api.PivotMember;
-				return newObject;
+				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.OWC10Api.PivotMember>(this, "DefaultMember");
 			}
 		}
 
@@ -267,15 +255,13 @@ namespace NetOffice.OWC10Api
 		/// SupportByVersion OWC10 1
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("OWC10", 1)]
+		[SupportByVersion("OWC10", 1)]
+		[BaseResult]
 		public NetOffice.OWC10Api.PivotMember Member
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Member", paramsArray);
-				NetOffice.OWC10Api.PivotMember newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OWC10Api.PivotMember;
-				return newObject;
+				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.OWC10Api.PivotMember>(this, "Member");
 			}
 		}
 
@@ -283,15 +269,13 @@ namespace NetOffice.OWC10Api
 		/// SupportByVersion OWC10 1
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("OWC10", 1)]
+		[SupportByVersion("OWC10", 1)]
+		[BaseResult]
 		public NetOffice.OWC10Api.PivotMember AllMember
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "AllMember", paramsArray);
-				NetOffice.OWC10Api.PivotMember newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OWC10Api.PivotMember;
-				return newObject;
+				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.OWC10Api.PivotMember>(this, "AllMember");
 			}
 		}
 
@@ -299,20 +283,16 @@ namespace NetOffice.OWC10Api
 		/// SupportByVersion OWC10 1
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("OWC10", 1)]
+		[SupportByVersion("OWC10", 1)]
 		public NetOffice.OWC10Api.Enums.PivotMembersCompareByEnum CompareOrderedMembersBy
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "CompareOrderedMembersBy", paramsArray);
-				int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-				return (NetOffice.OWC10Api.Enums.PivotMembersCompareByEnum)intReturnItem;
+				return Factory.ExecuteEnumPropertyGet<NetOffice.OWC10Api.Enums.PivotMembersCompareByEnum>(this, "CompareOrderedMembersBy");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "CompareOrderedMembersBy", paramsArray);
+				Factory.ExecuteEnumPropertySet(this, "CompareOrderedMembersBy", value);
 			}
 		}
 
@@ -320,15 +300,12 @@ namespace NetOffice.OWC10Api
 		/// SupportByVersion OWC10 1
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("OWC10", 1)]
+		[SupportByVersion("OWC10", 1)]
 		public NetOffice.OWC10Api.PivotView View
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "View", paramsArray);
-				NetOffice.OWC10Api.PivotView newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OWC10Api.PivotView.LateBindingApiWrapperType) as NetOffice.OWC10Api.PivotView;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OWC10Api.PivotView>(this, "View", NetOffice.OWC10Api.PivotView.LateBindingApiWrapperType);
 			}
 		}
 
@@ -336,16 +313,13 @@ namespace NetOffice.OWC10Api
 		/// SupportByVersion OWC10 1
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("OWC10", 1)]
+		[SupportByVersion("OWC10", 1)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public NetOffice.OWC10Api.PivotFilterUpdate CreateFilterUpdate
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "CreateFilterUpdate", paramsArray);
-				NetOffice.OWC10Api.PivotFilterUpdate newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OWC10Api.PivotFilterUpdate.LateBindingApiWrapperType) as NetOffice.OWC10Api.PivotFilterUpdate;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OWC10Api.PivotFilterUpdate>(this, "CreateFilterUpdate", NetOffice.OWC10Api.PivotFilterUpdate.LateBindingApiWrapperType);
 			}
 		}
 
@@ -353,19 +327,16 @@ namespace NetOffice.OWC10Api
 		/// SupportByVersion OWC10 1
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("OWC10", 1)]
+		[SupportByVersion("OWC10", 1)]
 		public bool AllowMultiFilter
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "AllowMultiFilter", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "AllowMultiFilter");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "AllowMultiFilter", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "AllowMultiFilter", value);
 			}
 		}
 
@@ -373,14 +344,12 @@ namespace NetOffice.OWC10Api
 		/// SupportByVersion OWC10 1
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("OWC10", 1)]
+		[SupportByVersion("OWC10", 1)]
 		public string FilterCaption
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "FilterCaption", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "FilterCaption");
 			}
 		}
 
@@ -388,20 +357,16 @@ namespace NetOffice.OWC10Api
 		/// SupportByVersion OWC10 1
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("OWC10", 1)]
+		[SupportByVersion("OWC10", 1)]
 		public NetOffice.OWC10Api.Enums.PivotFieldSetAllIncludeExcludeEnum AllIncludeExclude
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "AllIncludeExclude", paramsArray);
-				int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-				return (NetOffice.OWC10Api.Enums.PivotFieldSetAllIncludeExcludeEnum)intReturnItem;
+				return Factory.ExecuteEnumPropertyGet<NetOffice.OWC10Api.Enums.PivotFieldSetAllIncludeExcludeEnum>(this, "AllIncludeExclude");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "AllIncludeExclude", paramsArray);
+				Factory.ExecuteEnumPropertySet(this, "AllIncludeExclude", value);
 			}
 		}
 
@@ -409,20 +374,16 @@ namespace NetOffice.OWC10Api
 		/// SupportByVersion OWC10 1
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("OWC10", 1)]
+		[SupportByVersion("OWC10", 1)]
 		public NetOffice.OWC10Api.Enums.PivotMembersCompareByEnum CompareMemberCaptionsBy
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "CompareMemberCaptionsBy", paramsArray);
-				int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-				return (NetOffice.OWC10Api.Enums.PivotMembersCompareByEnum)intReturnItem;
+				return Factory.ExecuteEnumPropertyGet<NetOffice.OWC10Api.Enums.PivotMembersCompareByEnum>(this, "CompareMemberCaptionsBy");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "CompareMemberCaptionsBy", paramsArray);
+				Factory.ExecuteEnumPropertySet(this, "CompareMemberCaptionsBy", value);
 			}
 		}
 
@@ -430,19 +391,16 @@ namespace NetOffice.OWC10Api
 		/// SupportByVersion OWC10 1
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("OWC10", 1)]
+		[SupportByVersion("OWC10", 1)]
 		public bool DisplayInFieldList
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "DisplayInFieldList", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "DisplayInFieldList");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "DisplayInFieldList", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "DisplayInFieldList", value);
 			}
 		}
 
@@ -450,19 +408,16 @@ namespace NetOffice.OWC10Api
 		/// SupportByVersion OWC10 1
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("OWC10", 1)]
+		[SupportByVersion("OWC10", 1)]
 		public bool AlwaysIncludeInCube
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "AlwaysIncludeInCube", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "AlwaysIncludeInCube");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "AlwaysIncludeInCube", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "AlwaysIncludeInCube", value);
 			}
 		}
 
@@ -470,25 +425,22 @@ namespace NetOffice.OWC10Api
 		/// SupportByVersion OWC10 1
 		/// Get
 		/// </summary>
-		/// <param name="nameOrPath">object NameOrPath</param>
-		/// <param name="format">optional NetOffice.OWC10Api.Enums.PivotMemberFindFormatEnum Format</param>
-		[SupportByVersionAttribute("OWC10", 1)]
+		/// <param name="nameOrPath">object nameOrPath</param>
+		/// <param name="format">optional NetOffice.OWC10Api.Enums.PivotMemberFindFormatEnum format</param>
+		[SupportByVersion("OWC10", 1)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public NetOffice.OWC10Api.PivotMember get_FindMember(object nameOrPath, object format)
-		{		
-			object[] paramsArray = Invoker.ValidateParamsArray(nameOrPath, format);
-			object returnItem = Invoker.PropertyGet(this, "FindMember", paramsArray);
-			NetOffice.OWC10Api.PivotMember newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OWC10Api.PivotMember;
-			return newObject;
+		{
+			return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OWC10Api.PivotMember>(this, "FindMember", NetOffice.OWC10Api.PivotMember.LateBindingApiWrapperType, nameOrPath, format);
 		}
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
 		/// Alias for get_FindMember
 		/// </summary>
-		/// <param name="nameOrPath">object NameOrPath</param>
-		/// <param name="format">optional NetOffice.OWC10Api.Enums.PivotMemberFindFormatEnum Format</param>
-		[SupportByVersionAttribute("OWC10", 1)]
+		/// <param name="nameOrPath">object nameOrPath</param>
+		/// <param name="format">optional NetOffice.OWC10Api.Enums.PivotMemberFindFormatEnum format</param>
+		[SupportByVersion("OWC10", 1), Redirect("get_FindMember")]
 		public NetOffice.OWC10Api.PivotMember FindMember(object nameOrPath, object format)
 		{
 			return get_FindMember(nameOrPath, format);
@@ -498,23 +450,20 @@ namespace NetOffice.OWC10Api
 		/// SupportByVersion OWC10 1
 		/// Get
 		/// </summary>
-		/// <param name="nameOrPath">object NameOrPath</param>
-		[SupportByVersionAttribute("OWC10", 1)]
+		/// <param name="nameOrPath">object nameOrPath</param>
+		[SupportByVersion("OWC10", 1)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public NetOffice.OWC10Api.PivotMember get_FindMember(object nameOrPath)
-		{		
-			object[] paramsArray = Invoker.ValidateParamsArray(nameOrPath);
-			object returnItem = Invoker.PropertyGet(this, "FindMember", paramsArray);
-			NetOffice.OWC10Api.PivotMember newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OWC10Api.PivotMember;
-			return newObject;
+		{
+			return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OWC10Api.PivotMember>(this, "FindMember", NetOffice.OWC10Api.PivotMember.LateBindingApiWrapperType, nameOrPath);
 		}
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
 		/// Alias for get_FindMember
 		/// </summary>
-		/// <param name="nameOrPath">object NameOrPath</param>
-		[SupportByVersionAttribute("OWC10", 1)]
+		/// <param name="nameOrPath">object nameOrPath</param>
+		[SupportByVersion("OWC10", 1), Redirect("get_FindMember")]
 		public NetOffice.OWC10Api.PivotMember FindMember(object nameOrPath)
 		{
 			return get_FindMember(nameOrPath);
@@ -526,95 +475,74 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
-		/// 
 		/// </summary>
-		/// <param name="name">string Name</param>
-		/// <param name="caption">string Caption</param>
-		/// <param name="dataField">string DataField</param>
-		/// <param name="expression">string Expression</param>
-		[SupportByVersionAttribute("OWC10", 1)]
+		/// <param name="name">string name</param>
+		/// <param name="caption">string caption</param>
+		/// <param name="dataField">string dataField</param>
+		/// <param name="expression">string expression</param>
+		[SupportByVersion("OWC10", 1)]
 		public NetOffice.OWC10Api.PivotField AddCalculatedField(string name, string caption, string dataField, string expression)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(name, caption, dataField, expression);
-			object returnItem = Invoker.MethodReturn(this, "AddCalculatedField", paramsArray);
-			NetOffice.OWC10Api.PivotField newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OWC10Api.PivotField.LateBindingApiWrapperType) as NetOffice.OWC10Api.PivotField;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OWC10Api.PivotField>(this, "AddCalculatedField", NetOffice.OWC10Api.PivotField.LateBindingApiWrapperType, name, caption, dataField, expression);
 		}
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
-		/// 
 		/// </summary>
 		/// <param name="name">optional string Name = </param>
 		/// <param name="caption">optional string Caption = </param>
 		/// <param name="before">optional object Before = 0</param>
-		[SupportByVersionAttribute("OWC10", 1)]
+		[SupportByVersion("OWC10", 1)]
 		public NetOffice.OWC10Api.PivotField AddCustomGroupField(object name, object caption, object before)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(name, caption, before);
-			object returnItem = Invoker.MethodReturn(this, "AddCustomGroupField", paramsArray);
-			NetOffice.OWC10Api.PivotField newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OWC10Api.PivotField.LateBindingApiWrapperType) as NetOffice.OWC10Api.PivotField;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OWC10Api.PivotField>(this, "AddCustomGroupField", NetOffice.OWC10Api.PivotField.LateBindingApiWrapperType, name, caption, before);
 		}
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
-		/// 
 		/// </summary>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("OWC10", 1)]
+		[CustomMethod]
+		[SupportByVersion("OWC10", 1)]
 		public NetOffice.OWC10Api.PivotField AddCustomGroupField()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "AddCustomGroupField", paramsArray);
-			NetOffice.OWC10Api.PivotField newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OWC10Api.PivotField.LateBindingApiWrapperType) as NetOffice.OWC10Api.PivotField;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OWC10Api.PivotField>(this, "AddCustomGroupField", NetOffice.OWC10Api.PivotField.LateBindingApiWrapperType);
 		}
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
-		/// 
 		/// </summary>
 		/// <param name="name">optional string Name = </param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("OWC10", 1)]
+		[CustomMethod]
+		[SupportByVersion("OWC10", 1)]
 		public NetOffice.OWC10Api.PivotField AddCustomGroupField(object name)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(name);
-			object returnItem = Invoker.MethodReturn(this, "AddCustomGroupField", paramsArray);
-			NetOffice.OWC10Api.PivotField newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OWC10Api.PivotField.LateBindingApiWrapperType) as NetOffice.OWC10Api.PivotField;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OWC10Api.PivotField>(this, "AddCustomGroupField", NetOffice.OWC10Api.PivotField.LateBindingApiWrapperType, name);
 		}
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
-		/// 
 		/// </summary>
 		/// <param name="name">optional string Name = </param>
 		/// <param name="caption">optional string Caption = </param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("OWC10", 1)]
+		[CustomMethod]
+		[SupportByVersion("OWC10", 1)]
 		public NetOffice.OWC10Api.PivotField AddCustomGroupField(object name, object caption)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(name, caption);
-			object returnItem = Invoker.MethodReturn(this, "AddCustomGroupField", paramsArray);
-			NetOffice.OWC10Api.PivotField newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OWC10Api.PivotField.LateBindingApiWrapperType) as NetOffice.OWC10Api.PivotField;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OWC10Api.PivotField>(this, "AddCustomGroupField", NetOffice.OWC10Api.PivotField.LateBindingApiWrapperType, name, caption);
 		}
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
-		/// 
 		/// </summary>
-		/// <param name="field">object Field</param>
-		[SupportByVersionAttribute("OWC10", 1)]
+		/// <param name="field">object field</param>
+		[SupportByVersion("OWC10", 1)]
 		public void DeleteField(object field)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(field);
-			Invoker.Method(this, "DeleteField", paramsArray);
+			 Factory.ExecuteMethod(this, "DeleteField", field);
 		}
 
 		#endregion
+
 		#pragma warning restore
 	}
 }

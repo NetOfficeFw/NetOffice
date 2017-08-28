@@ -1,20 +1,26 @@
-﻿using System;
-using NetRuntimeSystem = System;
-using System.Runtime.InteropServices;
-using System.ComponentModel;
-using System.Runtime.CompilerServices;
-using System.Reflection;
+﻿using System.Collections;
 using System.Collections.Generic;
-using System.Collections;
-using NetOffice;
+using System;
+using NetRuntimeSystem = System;
+using System.ComponentModel;
+using NetOffice.Attributes;
+
 namespace NetOffice.OfficeApi
 {
-	///<summary>
+	/// <summary>
 	/// Trendlines
-	///</summary>
-	public class Trendlines_ : COMObject
+	/// </summary>
+	[SyntaxBypass]
+ 	public class Trendlines_ : COMObject
 	{
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public Trendlines_(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -63,7 +69,7 @@ namespace NetOffice.OfficeApi
 		{
 		}
 		
-		/// <param name="progId">registered ProgID</param>
+		/// <param name="progId">registered progID</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public Trendlines_(string progId) : base(progId)
 		{
@@ -81,16 +87,29 @@ namespace NetOffice.OfficeApi
 
 	}
 
-	///<summary>
+	/// <summary>
 	/// Interface Trendlines 
 	/// SupportByVersion Office, 12,14,15,16
-	///</summary>
-	[SupportByVersionAttribute("Office", 12,14,15,16)]
-	[EntityTypeAttribute(EntityType.IsInterface)]
-	public class Trendlines : COMObject ,IEnumerable<NetOffice.OfficeApi.IMsoTrendline>
+	/// </summary>
+	[SupportByVersion("Office", 12,14,15,16)]
+	[EntityType(EntityType.IsInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Method), HasIndexProperty(IndexInvoke.Property, "_Default")]
+	public class Trendlines : COMObject , IEnumerable<NetOffice.OfficeApi.IMsoTrendline>
 	{
 		#pragma warning disable
+
 		#region Type Information
+
+		/// <summary>
+		/// Instance Type
+		/// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
+		public override Type InstanceType
+		{
+			get
+			{
+				return LateBindingApiWrapperType;
+			}
+		}
 
         private static Type _type;
 
@@ -101,14 +120,20 @@ namespace NetOffice.OfficeApi
             {
                 if (null == _type)
                     _type = typeof(Trendlines);
-                    
                 return _type;
             }
         }
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public Trendlines(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -154,7 +179,7 @@ namespace NetOffice.OfficeApi
 		{
 		}
 		
-		/// <param name="progId">registered ProgID</param>
+		/// <param name="progId">registered progID</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public Trendlines(string progId) : base(progId)
 		{
@@ -169,15 +194,12 @@ namespace NetOffice.OfficeApi
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		[SupportByVersion("Office", 12,14,15,16), ProxyResult]
 		public object Parent
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Parent", paramsArray);
-				ICOMObject newObject = Factory.CreateObjectFromComProxy(this,returnItem);
-				return newObject;
+				return Factory.ExecuteReferencePropertyGet(this, "Parent");
 			}
 		}
 
@@ -185,14 +207,12 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		[SupportByVersion("Office", 12,14,15,16)]
 		public Int32 Count
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Count", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "Count");
 			}
 		}
 
@@ -201,15 +221,12 @@ namespace NetOffice.OfficeApi
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("Office", 14,15,16)]
+		[SupportByVersion("Office", 14,15,16), ProxyResult]
 		public object Application
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				ICOMObject newObject = Factory.CreateObjectFromComProxy(this,returnItem);
-				return newObject;
+				return Factory.ExecuteReferencePropertyGet(this, "Application");
 			}
 		}
 
@@ -217,14 +234,12 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Office", 14,15,16)]
+		[SupportByVersion("Office", 14,15,16)]
 		public Int32 Creator
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Creator", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "Creator");
 			}
 		}
 
@@ -232,17 +247,14 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <param name="index">optional object Index</param>
-		[SupportByVersionAttribute("Office", 14,15,16)]
-		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
+		/// <param name="index">optional object index</param>
+		[SupportByVersion("Office", 14,15,16)]
+		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
 		public NetOffice.OfficeApi.IMsoTrendline this[object index]
 		{
 			get
-{			
-			object[] paramsArray = Invoker.ValidateParamsArray(index);
-			object returnItem = Invoker.PropertyGet(this, "_Default", paramsArray);
-			NetOffice.OfficeApi.IMsoTrendline newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.IMsoTrendline.LateBindingApiWrapperType) as NetOffice.OfficeApi.IMsoTrendline;
-			return newObject;
+			{
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.IMsoTrendline>(this, "_Default", NetOffice.OfficeApi.IMsoTrendline.LateBindingApiWrapperType, index);
 			}
 		}
 
@@ -252,186 +264,146 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15, 16
-		/// 
 		/// </summary>
 		/// <param name="type">optional NetOffice.OfficeApi.Enums.XlTrendlineType Type = -4132</param>
-		/// <param name="order">optional object Order</param>
-		/// <param name="period">optional object Period</param>
-		/// <param name="forward">optional object Forward</param>
-		/// <param name="backward">optional object Backward</param>
-		/// <param name="intercept">optional object Intercept</param>
-		/// <param name="displayEquation">optional object DisplayEquation</param>
-		/// <param name="displayRSquared">optional object DisplayRSquared</param>
-		/// <param name="name">optional object Name</param>
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		/// <param name="order">optional object order</param>
+		/// <param name="period">optional object period</param>
+		/// <param name="forward">optional object forward</param>
+		/// <param name="backward">optional object backward</param>
+		/// <param name="intercept">optional object intercept</param>
+		/// <param name="displayEquation">optional object displayEquation</param>
+		/// <param name="displayRSquared">optional object displayRSquared</param>
+		/// <param name="name">optional object name</param>
+		[SupportByVersion("Office", 12,14,15,16)]
 		public NetOffice.OfficeApi.IMsoTrendline Add(object type, object order, object period, object forward, object backward, object intercept, object displayEquation, object displayRSquared, object name)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(type, order, period, forward, backward, intercept, displayEquation, displayRSquared, name);
-			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.OfficeApi.IMsoTrendline newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.IMsoTrendline.LateBindingApiWrapperType) as NetOffice.OfficeApi.IMsoTrendline;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.IMsoTrendline>(this, "Add", NetOffice.OfficeApi.IMsoTrendline.LateBindingApiWrapperType, new object[]{ type, order, period, forward, backward, intercept, displayEquation, displayRSquared, name });
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15, 16
-		/// 
 		/// </summary>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Office", 12,14,15,16)]
 		public NetOffice.OfficeApi.IMsoTrendline Add()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.OfficeApi.IMsoTrendline newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.IMsoTrendline.LateBindingApiWrapperType) as NetOffice.OfficeApi.IMsoTrendline;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.IMsoTrendline>(this, "Add", NetOffice.OfficeApi.IMsoTrendline.LateBindingApiWrapperType);
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15, 16
-		/// 
 		/// </summary>
 		/// <param name="type">optional NetOffice.OfficeApi.Enums.XlTrendlineType Type = -4132</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Office", 12,14,15,16)]
 		public NetOffice.OfficeApi.IMsoTrendline Add(object type)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(type);
-			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.OfficeApi.IMsoTrendline newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.IMsoTrendline.LateBindingApiWrapperType) as NetOffice.OfficeApi.IMsoTrendline;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.IMsoTrendline>(this, "Add", NetOffice.OfficeApi.IMsoTrendline.LateBindingApiWrapperType, type);
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15, 16
-		/// 
 		/// </summary>
 		/// <param name="type">optional NetOffice.OfficeApi.Enums.XlTrendlineType Type = -4132</param>
-		/// <param name="order">optional object Order</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		/// <param name="order">optional object order</param>
+		[CustomMethod]
+		[SupportByVersion("Office", 12,14,15,16)]
 		public NetOffice.OfficeApi.IMsoTrendline Add(object type, object order)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(type, order);
-			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.OfficeApi.IMsoTrendline newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.IMsoTrendline.LateBindingApiWrapperType) as NetOffice.OfficeApi.IMsoTrendline;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.IMsoTrendline>(this, "Add", NetOffice.OfficeApi.IMsoTrendline.LateBindingApiWrapperType, type, order);
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15, 16
-		/// 
 		/// </summary>
 		/// <param name="type">optional NetOffice.OfficeApi.Enums.XlTrendlineType Type = -4132</param>
-		/// <param name="order">optional object Order</param>
-		/// <param name="period">optional object Period</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		/// <param name="order">optional object order</param>
+		/// <param name="period">optional object period</param>
+		[CustomMethod]
+		[SupportByVersion("Office", 12,14,15,16)]
 		public NetOffice.OfficeApi.IMsoTrendline Add(object type, object order, object period)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(type, order, period);
-			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.OfficeApi.IMsoTrendline newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.IMsoTrendline.LateBindingApiWrapperType) as NetOffice.OfficeApi.IMsoTrendline;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.IMsoTrendline>(this, "Add", NetOffice.OfficeApi.IMsoTrendline.LateBindingApiWrapperType, type, order, period);
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15, 16
-		/// 
 		/// </summary>
 		/// <param name="type">optional NetOffice.OfficeApi.Enums.XlTrendlineType Type = -4132</param>
-		/// <param name="order">optional object Order</param>
-		/// <param name="period">optional object Period</param>
-		/// <param name="forward">optional object Forward</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		/// <param name="order">optional object order</param>
+		/// <param name="period">optional object period</param>
+		/// <param name="forward">optional object forward</param>
+		[CustomMethod]
+		[SupportByVersion("Office", 12,14,15,16)]
 		public NetOffice.OfficeApi.IMsoTrendline Add(object type, object order, object period, object forward)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(type, order, period, forward);
-			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.OfficeApi.IMsoTrendline newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.IMsoTrendline.LateBindingApiWrapperType) as NetOffice.OfficeApi.IMsoTrendline;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.IMsoTrendline>(this, "Add", NetOffice.OfficeApi.IMsoTrendline.LateBindingApiWrapperType, type, order, period, forward);
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15, 16
-		/// 
 		/// </summary>
 		/// <param name="type">optional NetOffice.OfficeApi.Enums.XlTrendlineType Type = -4132</param>
-		/// <param name="order">optional object Order</param>
-		/// <param name="period">optional object Period</param>
-		/// <param name="forward">optional object Forward</param>
-		/// <param name="backward">optional object Backward</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		/// <param name="order">optional object order</param>
+		/// <param name="period">optional object period</param>
+		/// <param name="forward">optional object forward</param>
+		/// <param name="backward">optional object backward</param>
+		[CustomMethod]
+		[SupportByVersion("Office", 12,14,15,16)]
 		public NetOffice.OfficeApi.IMsoTrendline Add(object type, object order, object period, object forward, object backward)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(type, order, period, forward, backward);
-			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.OfficeApi.IMsoTrendline newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.IMsoTrendline.LateBindingApiWrapperType) as NetOffice.OfficeApi.IMsoTrendline;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.IMsoTrendline>(this, "Add", NetOffice.OfficeApi.IMsoTrendline.LateBindingApiWrapperType, new object[]{ type, order, period, forward, backward });
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15, 16
-		/// 
 		/// </summary>
 		/// <param name="type">optional NetOffice.OfficeApi.Enums.XlTrendlineType Type = -4132</param>
-		/// <param name="order">optional object Order</param>
-		/// <param name="period">optional object Period</param>
-		/// <param name="forward">optional object Forward</param>
-		/// <param name="backward">optional object Backward</param>
-		/// <param name="intercept">optional object Intercept</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		/// <param name="order">optional object order</param>
+		/// <param name="period">optional object period</param>
+		/// <param name="forward">optional object forward</param>
+		/// <param name="backward">optional object backward</param>
+		/// <param name="intercept">optional object intercept</param>
+		[CustomMethod]
+		[SupportByVersion("Office", 12,14,15,16)]
 		public NetOffice.OfficeApi.IMsoTrendline Add(object type, object order, object period, object forward, object backward, object intercept)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(type, order, period, forward, backward, intercept);
-			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.OfficeApi.IMsoTrendline newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.IMsoTrendline.LateBindingApiWrapperType) as NetOffice.OfficeApi.IMsoTrendline;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.IMsoTrendline>(this, "Add", NetOffice.OfficeApi.IMsoTrendline.LateBindingApiWrapperType, new object[]{ type, order, period, forward, backward, intercept });
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15, 16
-		/// 
 		/// </summary>
 		/// <param name="type">optional NetOffice.OfficeApi.Enums.XlTrendlineType Type = -4132</param>
-		/// <param name="order">optional object Order</param>
-		/// <param name="period">optional object Period</param>
-		/// <param name="forward">optional object Forward</param>
-		/// <param name="backward">optional object Backward</param>
-		/// <param name="intercept">optional object Intercept</param>
-		/// <param name="displayEquation">optional object DisplayEquation</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		/// <param name="order">optional object order</param>
+		/// <param name="period">optional object period</param>
+		/// <param name="forward">optional object forward</param>
+		/// <param name="backward">optional object backward</param>
+		/// <param name="intercept">optional object intercept</param>
+		/// <param name="displayEquation">optional object displayEquation</param>
+		[CustomMethod]
+		[SupportByVersion("Office", 12,14,15,16)]
 		public NetOffice.OfficeApi.IMsoTrendline Add(object type, object order, object period, object forward, object backward, object intercept, object displayEquation)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(type, order, period, forward, backward, intercept, displayEquation);
-			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.OfficeApi.IMsoTrendline newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.IMsoTrendline.LateBindingApiWrapperType) as NetOffice.OfficeApi.IMsoTrendline;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.IMsoTrendline>(this, "Add", NetOffice.OfficeApi.IMsoTrendline.LateBindingApiWrapperType, new object[]{ type, order, period, forward, backward, intercept, displayEquation });
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15, 16
-		/// 
 		/// </summary>
 		/// <param name="type">optional NetOffice.OfficeApi.Enums.XlTrendlineType Type = -4132</param>
-		/// <param name="order">optional object Order</param>
-		/// <param name="period">optional object Period</param>
-		/// <param name="forward">optional object Forward</param>
-		/// <param name="backward">optional object Backward</param>
-		/// <param name="intercept">optional object Intercept</param>
-		/// <param name="displayEquation">optional object DisplayEquation</param>
-		/// <param name="displayRSquared">optional object DisplayRSquared</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		/// <param name="order">optional object order</param>
+		/// <param name="period">optional object period</param>
+		/// <param name="forward">optional object forward</param>
+		/// <param name="backward">optional object backward</param>
+		/// <param name="intercept">optional object intercept</param>
+		/// <param name="displayEquation">optional object displayEquation</param>
+		/// <param name="displayRSquared">optional object displayRSquared</param>
+		[CustomMethod]
+		[SupportByVersion("Office", 12,14,15,16)]
 		public NetOffice.OfficeApi.IMsoTrendline Add(object type, object order, object period, object forward, object backward, object intercept, object displayEquation, object displayRSquared)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(type, order, period, forward, backward, intercept, displayEquation, displayRSquared);
-			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.OfficeApi.IMsoTrendline newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.IMsoTrendline.LateBindingApiWrapperType) as NetOffice.OfficeApi.IMsoTrendline;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.IMsoTrendline>(this, "Add", NetOffice.OfficeApi.IMsoTrendline.LateBindingApiWrapperType, new object[]{ type, order, period, forward, backward, intercept, displayEquation, displayRSquared });
 		}
 
 		#endregion
@@ -439,9 +411,9 @@ namespace NetOffice.OfficeApi
        #region IEnumerable<NetOffice.OfficeApi.IMsoTrendline> Member
         
         /// <summary>
-		/// SupportByVersionAttribute Office, 12,14,15,16
+		/// SupportByVersion Office, 12,14,15,16
 		/// </summary>
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		[SupportByVersion("Office", 12,14,15,16)]
        public IEnumerator<NetOffice.OfficeApi.IMsoTrendline> GetEnumerator()  
        {
            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
@@ -454,15 +426,16 @@ namespace NetOffice.OfficeApi
 		#region IEnumerable Members
        
 		/// <summary>
-		/// SupportByVersionAttribute Office, 12,14,15,16
+		/// SupportByVersion Office, 12,14,15,16
 		/// </summary>
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		[SupportByVersion("Office", 12,14,15,16)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
 			return NetOffice.Utils.GetProxyEnumeratorAsMethod(this);
 		}
 
 		#endregion
+
 		#pragma warning restore
 	}
 }

@@ -1,23 +1,33 @@
 ﻿using System;
 using NetRuntimeSystem = System;
-using System.Runtime.InteropServices;
-using System.Runtime.CompilerServices;
 using System.ComponentModel;
-using System.Reflection;
-using System.Collections.Generic;
-using NetOffice;
+using NetOffice.Attributes;
+
 namespace NetOffice.WordApi
 {
-	///<summary>
+	/// <summary>
 	/// DispatchInterface IApplicationEvents2 
 	/// SupportByVersion Word, 9,10,11,12,14,15,16
-	///</summary>
-	[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
-	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
-	public class IApplicationEvents2 : COMObject
+	/// </summary>
+	[SupportByVersion("Word", 9,10,11,12,14,15,16)]
+	[EntityType(EntityType.IsDispatchInterface)]
+ 	public class IApplicationEvents2 : COMObject
 	{
 		#pragma warning disable
+
 		#region Type Information
+
+		/// <summary>
+		/// Instance Type
+		/// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
+		public override Type InstanceType
+		{
+			get
+			{
+				return LateBindingApiWrapperType;
+			}
+		}
 
         private static Type _type;
 
@@ -28,14 +38,20 @@ namespace NetOffice.WordApi
             {
                 if (null == _type)
                     _type = typeof(IApplicationEvents2);
-                    
                 return _type;
             }
         }
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public IApplicationEvents2(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -81,7 +97,7 @@ namespace NetOffice.WordApi
 		{
 		}
 		
-		/// <param name="progId">registered ProgID</param>
+		/// <param name="progId">registered progID</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public IApplicationEvents2(string progId) : base(progId)
 		{
@@ -97,167 +113,142 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void Startup()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "Startup", paramsArray);
+			 Factory.ExecuteMethod(this, "Startup");
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void Quit()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "Quit", paramsArray);
+			 Factory.ExecuteMethod(this, "Quit");
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void DocumentChange()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "DocumentChange", paramsArray);
+			 Factory.ExecuteMethod(this, "DocumentChange");
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="doc">NetOffice.WordApi.Document Doc</param>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <param name="doc">NetOffice.WordApi.Document doc</param>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void DocumentOpen(NetOffice.WordApi.Document doc)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(doc);
-			Invoker.Method(this, "DocumentOpen", paramsArray);
+			 Factory.ExecuteMethod(this, "DocumentOpen", doc);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="doc">NetOffice.WordApi.Document Doc</param>
-		/// <param name="cancel">bool Cancel</param>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <param name="doc">NetOffice.WordApi.Document doc</param>
+		/// <param name="cancel">bool cancel</param>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void DocumentBeforeClose(NetOffice.WordApi.Document doc, bool cancel)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(doc, cancel);
-			Invoker.Method(this, "DocumentBeforeClose", paramsArray);
+			 Factory.ExecuteMethod(this, "DocumentBeforeClose", doc, cancel);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="doc">NetOffice.WordApi.Document Doc</param>
-		/// <param name="cancel">bool Cancel</param>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <param name="doc">NetOffice.WordApi.Document doc</param>
+		/// <param name="cancel">bool cancel</param>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void DocumentBeforePrint(NetOffice.WordApi.Document doc, bool cancel)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(doc, cancel);
-			Invoker.Method(this, "DocumentBeforePrint", paramsArray);
+			 Factory.ExecuteMethod(this, "DocumentBeforePrint", doc, cancel);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="doc">NetOffice.WordApi.Document Doc</param>
-		/// <param name="saveAsUI">bool SaveAsUI</param>
-		/// <param name="cancel">bool Cancel</param>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <param name="doc">NetOffice.WordApi.Document doc</param>
+		/// <param name="saveAsUI">bool saveAsUI</param>
+		/// <param name="cancel">bool cancel</param>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void DocumentBeforeSave(NetOffice.WordApi.Document doc, bool saveAsUI, bool cancel)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(doc, saveAsUI, cancel);
-			Invoker.Method(this, "DocumentBeforeSave", paramsArray);
+			 Factory.ExecuteMethod(this, "DocumentBeforeSave", doc, saveAsUI, cancel);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="doc">NetOffice.WordApi.Document Doc</param>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <param name="doc">NetOffice.WordApi.Document doc</param>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void NewDocument(NetOffice.WordApi.Document doc)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(doc);
-			Invoker.Method(this, "NewDocument", paramsArray);
+			 Factory.ExecuteMethod(this, "NewDocument", doc);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="doc">NetOffice.WordApi.Document Doc</param>
-		/// <param name="wn">NetOffice.WordApi.Window Wn</param>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <param name="doc">NetOffice.WordApi.Document doc</param>
+		/// <param name="wn">NetOffice.WordApi.Window wn</param>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void WindowActivate(NetOffice.WordApi.Document doc, NetOffice.WordApi.Window wn)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(doc, wn);
-			Invoker.Method(this, "WindowActivate", paramsArray);
+			 Factory.ExecuteMethod(this, "WindowActivate", doc, wn);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="doc">NetOffice.WordApi.Document Doc</param>
-		/// <param name="wn">NetOffice.WordApi.Window Wn</param>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <param name="doc">NetOffice.WordApi.Document doc</param>
+		/// <param name="wn">NetOffice.WordApi.Window wn</param>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void WindowDeactivate(NetOffice.WordApi.Document doc, NetOffice.WordApi.Window wn)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(doc, wn);
-			Invoker.Method(this, "WindowDeactivate", paramsArray);
+			 Factory.ExecuteMethod(this, "WindowDeactivate", doc, wn);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="sel">NetOffice.WordApi.Selection Sel</param>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <param name="sel">NetOffice.WordApi.Selection sel</param>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void WindowSelectionChange(NetOffice.WordApi.Selection sel)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(sel);
-			Invoker.Method(this, "WindowSelectionChange", paramsArray);
+			 Factory.ExecuteMethod(this, "WindowSelectionChange", sel);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="sel">NetOffice.WordApi.Selection Sel</param>
-		/// <param name="cancel">bool Cancel</param>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <param name="sel">NetOffice.WordApi.Selection sel</param>
+		/// <param name="cancel">bool cancel</param>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void WindowBeforeRightClick(NetOffice.WordApi.Selection sel, bool cancel)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(sel, cancel);
-			Invoker.Method(this, "WindowBeforeRightClick", paramsArray);
+			 Factory.ExecuteMethod(this, "WindowBeforeRightClick", sel, cancel);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="sel">NetOffice.WordApi.Selection Sel</param>
-		/// <param name="cancel">bool Cancel</param>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <param name="sel">NetOffice.WordApi.Selection sel</param>
+		/// <param name="cancel">bool cancel</param>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void WindowBeforeDoubleClick(NetOffice.WordApi.Selection sel, bool cancel)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(sel, cancel);
-			Invoker.Method(this, "WindowBeforeDoubleClick", paramsArray);
+			 Factory.ExecuteMethod(this, "WindowBeforeDoubleClick", sel, cancel);
 		}
 
 		#endregion
+
 		#pragma warning restore
 	}
 }

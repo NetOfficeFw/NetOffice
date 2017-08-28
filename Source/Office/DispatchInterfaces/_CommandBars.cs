@@ -1,24 +1,36 @@
-﻿using System;
-using NetRuntimeSystem = System;
-using System.Runtime.InteropServices;
-using System.Runtime.CompilerServices;
-using System.ComponentModel;
-using System.Reflection;
-using System.Collections.Generic;
 using System.Collections;
-using NetOffice;
+using System.Collections.Generic;
+using System.Reflection;
+using System;
+using NetRuntimeSystem = System;
+using System.ComponentModel;
+using NetOffice.Attributes;
+
 namespace NetOffice.OfficeApi
 {
-	///<summary>
+	/// <summary>
 	/// DispatchInterface _CommandBars 
 	/// SupportByVersion Office, 9,10,11,12,14,15,16
-	///</summary>
-	[SupportByVersionAttribute("Office", 9,10,11,12,14,15,16)]
-	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
-	public class _CommandBars : _IMsoDispObj ,IEnumerable<NetOffice.OfficeApi.CommandBar>
+	/// </summary>
+	[SupportByVersion("Office", 9,10,11,12,14,15,16)]
+	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "Item")]
+	public class _CommandBars : _IMsoDispObj, IEnumerable<NetOffice.OfficeApi.CommandBar>
 	{
 		#pragma warning disable
+
 		#region Type Information
+
+		/// <summary>
+		/// Instance Type
+		/// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
+		public override Type InstanceType
+		{
+			get
+			{
+				return LateBindingApiWrapperType;
+			}
+		}
 
         private static Type _type;
 
@@ -29,14 +41,20 @@ namespace NetOffice.OfficeApi
             {
                 if (null == _type)
                     _type = typeof(_CommandBars);
-                    
                 return _type;
             }
         }
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public _CommandBars(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -82,7 +100,7 @@ namespace NetOffice.OfficeApi
 		{
 		}
 		
-		/// <param name="progId">registered ProgID</param>
+		/// <param name="progId">registered progID</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public _CommandBars(string progId) : base(progId)
 		{
@@ -95,92 +113,79 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff862425.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Office", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff862425.aspx </remarks>
+		[SupportByVersion("Office", 9,10,11,12,14,15,16)]
+		[BaseResult]
 		public NetOffice.OfficeApi.CommandBarControl ActionControl
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "ActionControl", paramsArray);
-				NetOffice.OfficeApi.CommandBarControl newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OfficeApi.CommandBarControl;
-				return newObject;
+				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.OfficeApi.CommandBarControl>(this, "ActionControl");
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff863075.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Office", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff863075.aspx </remarks>
+		[SupportByVersion("Office", 9,10,11,12,14,15,16)]
 		public NetOffice.OfficeApi.CommandBar ActiveMenuBar
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "ActiveMenuBar", paramsArray);
-				NetOffice.OfficeApi.CommandBar newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.CommandBar.LateBindingApiWrapperType) as NetOffice.OfficeApi.CommandBar;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.CommandBar>(this, "ActiveMenuBar", NetOffice.OfficeApi.CommandBar.LateBindingApiWrapperType);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff860520.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Office", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860520.aspx </remarks>
+		[SupportByVersion("Office", 9,10,11,12,14,15,16)]
 		public Int32 Count
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Count", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "Count");
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff863160.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Office", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff863160.aspx </remarks>
+		[SupportByVersion("Office", 9,10,11,12,14,15,16)]
 		public bool DisplayTooltips
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "DisplayTooltips", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "DisplayTooltips");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "DisplayTooltips", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "DisplayTooltips", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff864956.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Office", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff864956.aspx </remarks>
+		[SupportByVersion("Office", 9,10,11,12,14,15,16)]
 		public bool DisplayKeysInTooltips
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "DisplayKeysInTooltips", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "DisplayKeysInTooltips");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "DisplayKeysInTooltips", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "DisplayKeysInTooltips", value);
 			}
 		}
 
@@ -188,78 +193,65 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <param name="index">object Index</param>
-		[SupportByVersionAttribute("Office", 9,10,11,12,14,15,16)]
-		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
+		/// <param name="index">object index</param>
+		[SupportByVersion("Office", 9,10,11,12,14,15,16)]
+		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
 		public NetOffice.OfficeApi.CommandBar this[object index]
 		{
 			get
-{			
-			object[] paramsArray = Invoker.ValidateParamsArray(index);
-			object returnItem = Invoker.PropertyGet(this, "Item", paramsArray);
-			NetOffice.OfficeApi.CommandBar newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.CommandBar.LateBindingApiWrapperType) as NetOffice.OfficeApi.CommandBar;
-			return newObject;
+			{
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.CommandBar>(this, "Item", NetOffice.OfficeApi.CommandBar.LateBindingApiWrapperType, index);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff864068.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Office", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff864068.aspx </remarks>
+		[SupportByVersion("Office", 9,10,11,12,14,15,16)]
 		public bool LargeButtons
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "LargeButtons", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "LargeButtons");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "LargeButtons", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "LargeButtons", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff864076.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Office", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff864076.aspx </remarks>
+		[SupportByVersion("Office", 9,10,11,12,14,15,16)]
 		public NetOffice.OfficeApi.Enums.MsoMenuAnimation MenuAnimationStyle
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "MenuAnimationStyle", paramsArray);
-				int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-				return (NetOffice.OfficeApi.Enums.MsoMenuAnimation)intReturnItem;
+				return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoMenuAnimation>(this, "MenuAnimationStyle");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "MenuAnimationStyle", paramsArray);
+				Factory.ExecuteEnumPropertySet(this, "MenuAnimationStyle", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff862543.aspx
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("Office", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff862543.aspx </remarks>
+		[SupportByVersion("Office", 9,10,11,12,14,15,16), ProxyResult]
 		public object Parent
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Parent", paramsArray);
-				ICOMObject newObject = Factory.CreateObjectFromComProxy(this,returnItem);
-				return newObject;
+				return Factory.ExecuteReferencePropertyGet(this, "Parent");
 			}
 		}
 
@@ -269,15 +261,15 @@ namespace NetOffice.OfficeApi
 		/// </summary>
 		/// <param name="ids">Int32 ids</param>
 		/// <param name="pbstrName">string pbstrName</param>
-		[SupportByVersionAttribute("Office", 9,10,11,12,14,15,16)]
+		[SupportByVersion("Office", 9,10,11,12,14,15,16)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public Int32 get_IdsString(Int32 ids, out string pbstrName)
 		{		
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,true);
 			pbstrName = string.Empty;
 			object[] paramsArray = Invoker.ValidateParamsArray(ids, pbstrName);
-			object returnItem = Invoker.PropertyGet(this, "IdsString", paramsArray);
-			pbstrName = (string)paramsArray[1];
+			object returnItem = Invoker.PropertyGet(this, "IdsString", paramsArray, modifiers);
+			pbstrName = paramsArray[1] as string;
 			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
@@ -287,7 +279,7 @@ namespace NetOffice.OfficeApi
 		/// </summary>
 		/// <param name="ids">Int32 ids</param>
 		/// <param name="pbstrName">string pbstrName</param>
-		[SupportByVersionAttribute("Office", 9,10,11,12,14,15,16)]
+		[SupportByVersion("Office", 9,10,11,12,14,15,16), Redirect("get_IdsString")]
 		public Int32 IdsString(Int32 ids, out string pbstrName)
 		{
 			return get_IdsString(ids, out pbstrName);
@@ -299,15 +291,15 @@ namespace NetOffice.OfficeApi
 		/// </summary>
 		/// <param name="tmc">Int32 tmc</param>
 		/// <param name="pbstrName">string pbstrName</param>
-		[SupportByVersionAttribute("Office", 9,10,11,12,14,15,16)]
+		[SupportByVersion("Office", 9,10,11,12,14,15,16)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public Int32 get_TmcGetName(Int32 tmc, out string pbstrName)
 		{		
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,true);
 			pbstrName = string.Empty;
 			object[] paramsArray = Invoker.ValidateParamsArray(tmc, pbstrName);
-			object returnItem = Invoker.PropertyGet(this, "TmcGetName", paramsArray);
-			pbstrName = (string)paramsArray[1];
+			object returnItem = Invoker.PropertyGet(this, "TmcGetName", paramsArray, modifiers);
+			pbstrName = paramsArray[1] as string;
 			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
@@ -317,7 +309,7 @@ namespace NetOffice.OfficeApi
 		/// </summary>
 		/// <param name="tmc">Int32 tmc</param>
 		/// <param name="pbstrName">string pbstrName</param>
-		[SupportByVersionAttribute("Office", 9,10,11,12,14,15,16)]
+		[SupportByVersion("Office", 9,10,11,12,14,15,16), Redirect("get_TmcGetName")]
 		public Int32 TmcGetName(Int32 tmc, out string pbstrName)
 		{
 			return get_TmcGetName(tmc, out pbstrName);
@@ -326,84 +318,72 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff860590.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Office", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860590.aspx </remarks>
+		[SupportByVersion("Office", 9,10,11,12,14,15,16)]
 		public bool AdaptiveMenus
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "AdaptiveMenus", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "AdaptiveMenus");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "AdaptiveMenus", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "AdaptiveMenus", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff860823.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Office", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860823.aspx </remarks>
+		[SupportByVersion("Office", 9,10,11,12,14,15,16)]
 		public bool DisplayFonts
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "DisplayFonts", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "DisplayFonts");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "DisplayFonts", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "DisplayFonts", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff864631.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Office", 10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff864631.aspx </remarks>
+		[SupportByVersion("Office", 10,11,12,14,15,16)]
 		public bool DisableCustomize
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "DisableCustomize", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "DisableCustomize");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "DisableCustomize", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "DisableCustomize", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff863405.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Office", 10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff863405.aspx </remarks>
+		[SupportByVersion("Office", 10,11,12,14,15,16)]
 		public bool DisableAskAQuestionDropdown
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "DisableAskAQuestionDropdown", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "DisableAskAQuestionDropdown");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "DisableAskAQuestionDropdown", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "DisableAskAQuestionDropdown", value);
 			}
 		}
 
@@ -413,454 +393,376 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff861773.aspx
 		/// </summary>
-		/// <param name="name">optional object Name</param>
-		/// <param name="position">optional object Position</param>
-		/// <param name="menuBar">optional object MenuBar</param>
-		/// <param name="temporary">optional object Temporary</param>
-		[SupportByVersionAttribute("Office", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff861773.aspx </remarks>
+		/// <param name="name">optional object name</param>
+		/// <param name="position">optional object position</param>
+		/// <param name="menuBar">optional object menuBar</param>
+		/// <param name="temporary">optional object temporary</param>
+		[SupportByVersion("Office", 9,10,11,12,14,15,16)]
 		public NetOffice.OfficeApi.CommandBar Add(object name, object position, object menuBar, object temporary)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(name, position, menuBar, temporary);
-			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.OfficeApi.CommandBar newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.CommandBar.LateBindingApiWrapperType) as NetOffice.OfficeApi.CommandBar;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.CommandBar>(this, "Add", NetOffice.OfficeApi.CommandBar.LateBindingApiWrapperType, name, position, menuBar, temporary);
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff861773.aspx
 		/// </summary>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Office", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff861773.aspx </remarks>
+		[CustomMethod]
+		[SupportByVersion("Office", 9,10,11,12,14,15,16)]
 		public NetOffice.OfficeApi.CommandBar Add()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.OfficeApi.CommandBar newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.CommandBar.LateBindingApiWrapperType) as NetOffice.OfficeApi.CommandBar;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.CommandBar>(this, "Add", NetOffice.OfficeApi.CommandBar.LateBindingApiWrapperType);
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff861773.aspx
 		/// </summary>
-		/// <param name="name">optional object Name</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Office", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff861773.aspx </remarks>
+		/// <param name="name">optional object name</param>
+		[CustomMethod]
+		[SupportByVersion("Office", 9,10,11,12,14,15,16)]
 		public NetOffice.OfficeApi.CommandBar Add(object name)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(name);
-			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.OfficeApi.CommandBar newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.CommandBar.LateBindingApiWrapperType) as NetOffice.OfficeApi.CommandBar;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.CommandBar>(this, "Add", NetOffice.OfficeApi.CommandBar.LateBindingApiWrapperType, name);
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff861773.aspx
 		/// </summary>
-		/// <param name="name">optional object Name</param>
-		/// <param name="position">optional object Position</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Office", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff861773.aspx </remarks>
+		/// <param name="name">optional object name</param>
+		/// <param name="position">optional object position</param>
+		[CustomMethod]
+		[SupportByVersion("Office", 9,10,11,12,14,15,16)]
 		public NetOffice.OfficeApi.CommandBar Add(object name, object position)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(name, position);
-			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.OfficeApi.CommandBar newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.CommandBar.LateBindingApiWrapperType) as NetOffice.OfficeApi.CommandBar;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.CommandBar>(this, "Add", NetOffice.OfficeApi.CommandBar.LateBindingApiWrapperType, name, position);
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff861773.aspx
 		/// </summary>
-		/// <param name="name">optional object Name</param>
-		/// <param name="position">optional object Position</param>
-		/// <param name="menuBar">optional object MenuBar</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Office", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff861773.aspx </remarks>
+		/// <param name="name">optional object name</param>
+		/// <param name="position">optional object position</param>
+		/// <param name="menuBar">optional object menuBar</param>
+		[CustomMethod]
+		[SupportByVersion("Office", 9,10,11,12,14,15,16)]
 		public NetOffice.OfficeApi.CommandBar Add(object name, object position, object menuBar)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(name, position, menuBar);
-			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.OfficeApi.CommandBar newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.CommandBar.LateBindingApiWrapperType) as NetOffice.OfficeApi.CommandBar;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.CommandBar>(this, "Add", NetOffice.OfficeApi.CommandBar.LateBindingApiWrapperType, name, position, menuBar);
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff860267.aspx
 		/// </summary>
-		/// <param name="type">optional object Type</param>
-		/// <param name="id">optional object Id</param>
-		/// <param name="tag">optional object Tag</param>
-		/// <param name="visible">optional object Visible</param>
-		[SupportByVersionAttribute("Office", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860267.aspx </remarks>
+		/// <param name="type">optional object type</param>
+		/// <param name="id">optional object id</param>
+		/// <param name="tag">optional object tag</param>
+		/// <param name="visible">optional object visible</param>
+		[SupportByVersion("Office", 9,10,11,12,14,15,16)]
+		[BaseResult]
 		public NetOffice.OfficeApi.CommandBarControl FindControl(object type, object id, object tag, object visible)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(type, id, tag, visible);
-			object returnItem = Invoker.MethodReturn(this, "FindControl", paramsArray);
-			NetOffice.OfficeApi.CommandBarControl newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OfficeApi.CommandBarControl;
-			return newObject;
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.OfficeApi.CommandBarControl>(this, "FindControl", type, id, tag, visible);
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff860267.aspx
 		/// </summary>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Office", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860267.aspx </remarks>
+		[CustomMethod]
+		[BaseResult]
+		[SupportByVersion("Office", 9,10,11,12,14,15,16)]
 		public NetOffice.OfficeApi.CommandBarControl FindControl()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "FindControl", paramsArray);
-			NetOffice.OfficeApi.CommandBarControl newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OfficeApi.CommandBarControl;
-			return newObject;
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.OfficeApi.CommandBarControl>(this, "FindControl");
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff860267.aspx
 		/// </summary>
-		/// <param name="type">optional object Type</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Office", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860267.aspx </remarks>
+		/// <param name="type">optional object type</param>
+		[CustomMethod]
+		[BaseResult]
+		[SupportByVersion("Office", 9,10,11,12,14,15,16)]
 		public NetOffice.OfficeApi.CommandBarControl FindControl(object type)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(type);
-			object returnItem = Invoker.MethodReturn(this, "FindControl", paramsArray);
-			NetOffice.OfficeApi.CommandBarControl newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OfficeApi.CommandBarControl;
-			return newObject;
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.OfficeApi.CommandBarControl>(this, "FindControl", type);
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff860267.aspx
 		/// </summary>
-		/// <param name="type">optional object Type</param>
-		/// <param name="id">optional object Id</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Office", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860267.aspx </remarks>
+		/// <param name="type">optional object type</param>
+		/// <param name="id">optional object id</param>
+		[CustomMethod]
+		[BaseResult]
+		[SupportByVersion("Office", 9,10,11,12,14,15,16)]
 		public NetOffice.OfficeApi.CommandBarControl FindControl(object type, object id)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(type, id);
-			object returnItem = Invoker.MethodReturn(this, "FindControl", paramsArray);
-			NetOffice.OfficeApi.CommandBarControl newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OfficeApi.CommandBarControl;
-			return newObject;
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.OfficeApi.CommandBarControl>(this, "FindControl", type, id);
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff860267.aspx
 		/// </summary>
-		/// <param name="type">optional object Type</param>
-		/// <param name="id">optional object Id</param>
-		/// <param name="tag">optional object Tag</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Office", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860267.aspx </remarks>
+		/// <param name="type">optional object type</param>
+		/// <param name="id">optional object id</param>
+		/// <param name="tag">optional object tag</param>
+		[CustomMethod]
+		[BaseResult]
+		[SupportByVersion("Office", 9,10,11,12,14,15,16)]
 		public NetOffice.OfficeApi.CommandBarControl FindControl(object type, object id, object tag)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(type, id, tag);
-			object returnItem = Invoker.MethodReturn(this, "FindControl", paramsArray);
-			NetOffice.OfficeApi.CommandBarControl newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OfficeApi.CommandBarControl;
-			return newObject;
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.OfficeApi.CommandBarControl>(this, "FindControl", type, id, tag);
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff861062.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Office", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff861062.aspx </remarks>
+		[SupportByVersion("Office", 9,10,11,12,14,15,16)]
 		public void ReleaseFocus()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "ReleaseFocus", paramsArray);
+			 Factory.ExecuteMethod(this, "ReleaseFocus");
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff862556.aspx
 		/// </summary>
-		/// <param name="type">optional object Type</param>
-		/// <param name="id">optional object Id</param>
-		/// <param name="tag">optional object Tag</param>
-		/// <param name="visible">optional object Visible</param>
-		[SupportByVersionAttribute("Office", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff862556.aspx </remarks>
+		/// <param name="type">optional object type</param>
+		/// <param name="id">optional object id</param>
+		/// <param name="tag">optional object tag</param>
+		/// <param name="visible">optional object visible</param>
+		[SupportByVersion("Office", 9,10,11,12,14,15,16)]
 		public NetOffice.OfficeApi.CommandBarControls FindControls(object type, object id, object tag, object visible)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(type, id, tag, visible);
-			object returnItem = Invoker.MethodReturn(this, "FindControls", paramsArray);
-			NetOffice.OfficeApi.CommandBarControls newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.CommandBarControls.LateBindingApiWrapperType) as NetOffice.OfficeApi.CommandBarControls;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.CommandBarControls>(this, "FindControls", NetOffice.OfficeApi.CommandBarControls.LateBindingApiWrapperType, type, id, tag, visible);
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff862556.aspx
 		/// </summary>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Office", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff862556.aspx </remarks>
+		[CustomMethod]
+		[SupportByVersion("Office", 9,10,11,12,14,15,16)]
 		public NetOffice.OfficeApi.CommandBarControls FindControls()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "FindControls", paramsArray);
-			NetOffice.OfficeApi.CommandBarControls newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.CommandBarControls.LateBindingApiWrapperType) as NetOffice.OfficeApi.CommandBarControls;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.CommandBarControls>(this, "FindControls", NetOffice.OfficeApi.CommandBarControls.LateBindingApiWrapperType);
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff862556.aspx
 		/// </summary>
-		/// <param name="type">optional object Type</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Office", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff862556.aspx </remarks>
+		/// <param name="type">optional object type</param>
+		[CustomMethod]
+		[SupportByVersion("Office", 9,10,11,12,14,15,16)]
 		public NetOffice.OfficeApi.CommandBarControls FindControls(object type)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(type);
-			object returnItem = Invoker.MethodReturn(this, "FindControls", paramsArray);
-			NetOffice.OfficeApi.CommandBarControls newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.CommandBarControls.LateBindingApiWrapperType) as NetOffice.OfficeApi.CommandBarControls;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.CommandBarControls>(this, "FindControls", NetOffice.OfficeApi.CommandBarControls.LateBindingApiWrapperType, type);
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff862556.aspx
 		/// </summary>
-		/// <param name="type">optional object Type</param>
-		/// <param name="id">optional object Id</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Office", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff862556.aspx </remarks>
+		/// <param name="type">optional object type</param>
+		/// <param name="id">optional object id</param>
+		[CustomMethod]
+		[SupportByVersion("Office", 9,10,11,12,14,15,16)]
 		public NetOffice.OfficeApi.CommandBarControls FindControls(object type, object id)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(type, id);
-			object returnItem = Invoker.MethodReturn(this, "FindControls", paramsArray);
-			NetOffice.OfficeApi.CommandBarControls newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.CommandBarControls.LateBindingApiWrapperType) as NetOffice.OfficeApi.CommandBarControls;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.CommandBarControls>(this, "FindControls", NetOffice.OfficeApi.CommandBarControls.LateBindingApiWrapperType, type, id);
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff862556.aspx
 		/// </summary>
-		/// <param name="type">optional object Type</param>
-		/// <param name="id">optional object Id</param>
-		/// <param name="tag">optional object Tag</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Office", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff862556.aspx </remarks>
+		/// <param name="type">optional object type</param>
+		/// <param name="id">optional object id</param>
+		/// <param name="tag">optional object tag</param>
+		[CustomMethod]
+		[SupportByVersion("Office", 9,10,11,12,14,15,16)]
 		public NetOffice.OfficeApi.CommandBarControls FindControls(object type, object id, object tag)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(type, id, tag);
-			object returnItem = Invoker.MethodReturn(this, "FindControls", paramsArray);
-			NetOffice.OfficeApi.CommandBarControls newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.CommandBarControls.LateBindingApiWrapperType) as NetOffice.OfficeApi.CommandBarControls;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.CommandBarControls>(this, "FindControls", NetOffice.OfficeApi.CommandBarControls.LateBindingApiWrapperType, type, id, tag);
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="tbidOrName">optional object TbidOrName</param>
-		/// <param name="position">optional object Position</param>
-		/// <param name="menuBar">optional object MenuBar</param>
-		/// <param name="temporary">optional object Temporary</param>
-		/// <param name="tbtrProtection">optional object TbtrProtection</param>
+		/// <param name="tbidOrName">optional object tbidOrName</param>
+		/// <param name="position">optional object position</param>
+		/// <param name="menuBar">optional object menuBar</param>
+		/// <param name="temporary">optional object temporary</param>
+		/// <param name="tbtrProtection">optional object tbtrProtection</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("Office", 9,10,11,12,14,15,16)]
+		[SupportByVersion("Office", 9,10,11,12,14,15,16)]
 		public NetOffice.OfficeApi.CommandBar AddEx(object tbidOrName, object position, object menuBar, object temporary, object tbtrProtection)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(tbidOrName, position, menuBar, temporary, tbtrProtection);
-			object returnItem = Invoker.MethodReturn(this, "AddEx", paramsArray);
-			NetOffice.OfficeApi.CommandBar newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.CommandBar.LateBindingApiWrapperType) as NetOffice.OfficeApi.CommandBar;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.CommandBar>(this, "AddEx", NetOffice.OfficeApi.CommandBar.LateBindingApiWrapperType, new object[]{ tbidOrName, position, menuBar, temporary, tbtrProtection });
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Office", 9,10,11,12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Office", 9,10,11,12,14,15,16)]
 		public NetOffice.OfficeApi.CommandBar AddEx()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "AddEx", paramsArray);
-			NetOffice.OfficeApi.CommandBar newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.CommandBar.LateBindingApiWrapperType) as NetOffice.OfficeApi.CommandBar;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.CommandBar>(this, "AddEx", NetOffice.OfficeApi.CommandBar.LateBindingApiWrapperType);
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="tbidOrName">optional object TbidOrName</param>
+		/// <param name="tbidOrName">optional object tbidOrName</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Office", 9,10,11,12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Office", 9,10,11,12,14,15,16)]
 		public NetOffice.OfficeApi.CommandBar AddEx(object tbidOrName)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(tbidOrName);
-			object returnItem = Invoker.MethodReturn(this, "AddEx", paramsArray);
-			NetOffice.OfficeApi.CommandBar newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.CommandBar.LateBindingApiWrapperType) as NetOffice.OfficeApi.CommandBar;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.CommandBar>(this, "AddEx", NetOffice.OfficeApi.CommandBar.LateBindingApiWrapperType, tbidOrName);
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="tbidOrName">optional object TbidOrName</param>
-		/// <param name="position">optional object Position</param>
+		/// <param name="tbidOrName">optional object tbidOrName</param>
+		/// <param name="position">optional object position</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Office", 9,10,11,12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Office", 9,10,11,12,14,15,16)]
 		public NetOffice.OfficeApi.CommandBar AddEx(object tbidOrName, object position)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(tbidOrName, position);
-			object returnItem = Invoker.MethodReturn(this, "AddEx", paramsArray);
-			NetOffice.OfficeApi.CommandBar newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.CommandBar.LateBindingApiWrapperType) as NetOffice.OfficeApi.CommandBar;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.CommandBar>(this, "AddEx", NetOffice.OfficeApi.CommandBar.LateBindingApiWrapperType, tbidOrName, position);
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="tbidOrName">optional object TbidOrName</param>
-		/// <param name="position">optional object Position</param>
-		/// <param name="menuBar">optional object MenuBar</param>
+		/// <param name="tbidOrName">optional object tbidOrName</param>
+		/// <param name="position">optional object position</param>
+		/// <param name="menuBar">optional object menuBar</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Office", 9,10,11,12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Office", 9,10,11,12,14,15,16)]
 		public NetOffice.OfficeApi.CommandBar AddEx(object tbidOrName, object position, object menuBar)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(tbidOrName, position, menuBar);
-			object returnItem = Invoker.MethodReturn(this, "AddEx", paramsArray);
-			NetOffice.OfficeApi.CommandBar newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.CommandBar.LateBindingApiWrapperType) as NetOffice.OfficeApi.CommandBar;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.CommandBar>(this, "AddEx", NetOffice.OfficeApi.CommandBar.LateBindingApiWrapperType, tbidOrName, position, menuBar);
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="tbidOrName">optional object TbidOrName</param>
-		/// <param name="position">optional object Position</param>
-		/// <param name="menuBar">optional object MenuBar</param>
-		/// <param name="temporary">optional object Temporary</param>
+		/// <param name="tbidOrName">optional object tbidOrName</param>
+		/// <param name="position">optional object position</param>
+		/// <param name="menuBar">optional object menuBar</param>
+		/// <param name="temporary">optional object temporary</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Office", 9,10,11,12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Office", 9,10,11,12,14,15,16)]
 		public NetOffice.OfficeApi.CommandBar AddEx(object tbidOrName, object position, object menuBar, object temporary)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(tbidOrName, position, menuBar, temporary);
-			object returnItem = Invoker.MethodReturn(this, "AddEx", paramsArray);
-			NetOffice.OfficeApi.CommandBar newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.CommandBar.LateBindingApiWrapperType) as NetOffice.OfficeApi.CommandBar;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.CommandBar>(this, "AddEx", NetOffice.OfficeApi.CommandBar.LateBindingApiWrapperType, tbidOrName, position, menuBar, temporary);
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff862419.aspx
 		/// </summary>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff862419.aspx </remarks>
 		/// <param name="idMso">string idMso</param>
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		[SupportByVersion("Office", 12,14,15,16)]
 		public void ExecuteMso(string idMso)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(idMso);
-			Invoker.Method(this, "ExecuteMso", paramsArray);
+			 Factory.ExecuteMethod(this, "ExecuteMso", idMso);
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff862202.aspx
 		/// </summary>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff862202.aspx </remarks>
 		/// <param name="idMso">string idMso</param>
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		[SupportByVersion("Office", 12,14,15,16)]
 		public bool GetEnabledMso(string idMso)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(idMso);
-			object returnItem = Invoker.MethodReturn(this, "GetEnabledMso", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return Factory.ExecuteBoolMethodGet(this, "GetEnabledMso", idMso);
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff863712.aspx
 		/// </summary>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff863712.aspx </remarks>
 		/// <param name="idMso">string idMso</param>
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		[SupportByVersion("Office", 12,14,15,16)]
 		public bool GetVisibleMso(string idMso)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(idMso);
-			object returnItem = Invoker.MethodReturn(this, "GetVisibleMso", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return Factory.ExecuteBoolMethodGet(this, "GetVisibleMso", idMso);
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff863149.aspx
 		/// </summary>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff863149.aspx </remarks>
 		/// <param name="idMso">string idMso</param>
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		[SupportByVersion("Office", 12,14,15,16)]
 		public bool GetPressedMso(string idMso)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(idMso);
-			object returnItem = Invoker.MethodReturn(this, "GetPressedMso", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return Factory.ExecuteBoolMethodGet(this, "GetPressedMso", idMso);
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff860585.aspx
 		/// </summary>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860585.aspx </remarks>
 		/// <param name="idMso">string idMso</param>
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		[SupportByVersion("Office", 12,14,15,16)]
 		public string GetLabelMso(string idMso)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(idMso);
-			object returnItem = Invoker.MethodReturn(this, "GetLabelMso", paramsArray);
-			return NetRuntimeSystem.Convert.ToString(returnItem);
+			return Factory.ExecuteStringMethodGet(this, "GetLabelMso", idMso);
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff860790.aspx
 		/// </summary>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860790.aspx </remarks>
 		/// <param name="idMso">string idMso</param>
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		[SupportByVersion("Office", 12,14,15,16)]
 		public string GetScreentipMso(string idMso)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(idMso);
-			object returnItem = Invoker.MethodReturn(this, "GetScreentipMso", paramsArray);
-			return NetRuntimeSystem.Convert.ToString(returnItem);
+			return Factory.ExecuteStringMethodGet(this, "GetScreentipMso", idMso);
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff864975.aspx
 		/// </summary>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff864975.aspx </remarks>
 		/// <param name="idMso">string idMso</param>
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		[SupportByVersion("Office", 12,14,15,16)]
 		public string GetSupertipMso(string idMso)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(idMso);
-			object returnItem = Invoker.MethodReturn(this, "GetSupertipMso", paramsArray);
-			return NetRuntimeSystem.Convert.ToString(returnItem);
+			return Factory.ExecuteStringMethodGet(this, "GetSupertipMso", idMso);
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff861156.aspx
 		/// </summary>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff861156.aspx </remarks>
 		/// <param name="idMso">string idMso</param>
-		/// <param name="width">Int32 Width</param>
-		/// <param name="height">Int32 Height</param>
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		/// <param name="width">Int32 width</param>
+		/// <param name="height">Int32 height</param>
+		[SupportByVersion("Office", 12,14,15,16)]
 		public stdole.Picture GetImageMso(string idMso, Int32 width, Int32 height)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(idMso, width, height);
@@ -871,45 +773,45 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff863478.aspx
 		/// </summary>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff863478.aspx </remarks>
 		/// <param name="hwnd">Int32 hwnd</param>
-		[SupportByVersionAttribute("Office", 14,15,16)]
+		[SupportByVersion("Office", 14,15,16)]
 		public void CommitRenderingTransaction(Int32 hwnd)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(hwnd);
-			Invoker.Method(this, "CommitRenderingTransaction", paramsArray);
+			 Factory.ExecuteMethod(this, "CommitRenderingTransaction", hwnd);
 		}
 
-		#endregion
+        #endregion
 
-       #region IEnumerable<NetOffice.OfficeApi.CommandBar> Member
-        
+        #region IEnumerable<NetOffice.OfficeApi.CommandBar> Member
+
         /// <summary>
-		/// SupportByVersionAttribute Office, 9,10,11,12,14,15,16
-		/// </summary>
-		[SupportByVersionAttribute("Office", 9,10,11,12,14,15,16)]
-       public IEnumerator<NetOffice.OfficeApi.CommandBar> GetEnumerator()  
-       {
-           NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
-           foreach (NetOffice.OfficeApi.CommandBar item in innerEnumerator)
-               yield return item;
-       }
+        /// SupportByVersion Office, 9,10,11,12,14,15,16
+        /// </summary>
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
+        public IEnumerator<NetOffice.OfficeApi.CommandBar> GetEnumerator()
+        {
+            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
+            foreach (NetOffice.OfficeApi.CommandBar item in innerEnumerator)
+                yield return item;
+        }
 
-       #endregion
-          
-		#region IEnumerable Members
-       
-		/// <summary>
-		/// SupportByVersionAttribute Office, 9,10,11,12,14,15,16
-		/// </summary>
-		[SupportByVersionAttribute("Office", 9,10,11,12,14,15,16)]
+        #endregion
+
+        #region IEnumerable Members
+
+        /// <summary>
+        /// SupportByVersion Office, 9,10,11,12,14,15,16
+        /// </summary>
+        [SupportByVersion("Office", 9,10,11,12,14,15,16)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
 			return NetOffice.Utils.GetProxyEnumeratorAsProperty(this);
 		}
 
 		#endregion
+
 		#pragma warning restore
 	}
 }

@@ -1,39 +1,39 @@
 ﻿using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
-using NetOffice;
-using NetOffice.Misc;
+using NetOffice.Attributes;
 
 namespace NetOffice.VisioApi
 {
-
 	#region Delegates
 
 	#pragma warning disable
-	public delegate void Style_StyleChangedEventHandler(NetOffice.VisioApi.IVStyle Style);
-	public delegate void Style_BeforeStyleDeleteEventHandler(NetOffice.VisioApi.IVStyle Style);
-	public delegate void Style_QueryCancelStyleDeleteEventHandler(NetOffice.VisioApi.IVStyle Style);
-	public delegate void Style_StyleDeleteCanceledEventHandler(NetOffice.VisioApi.IVStyle Style);
+	public delegate void Style_StyleChangedEventHandler(NetOffice.VisioApi.IVStyle style);
+	public delegate void Style_BeforeStyleDeleteEventHandler(NetOffice.VisioApi.IVStyle style);
+	public delegate void Style_QueryCancelStyleDeleteEventHandler(NetOffice.VisioApi.IVStyle style);
+	public delegate void Style_StyleDeleteCanceledEventHandler(NetOffice.VisioApi.IVStyle style);
 	#pragma warning restore
 
 	#endregion
 
-	///<summary>
+	/// <summary>
 	/// CoClass Style 
 	/// SupportByVersion Visio, 11,12,14,15,16
-	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff769398(v=office.14).aspx
-	///</summary>
-	[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
-	[EntityTypeAttribute(EntityType.IsCoClass)]
-	public class Style : IVStyle,IEventBinding
+	/// </summary>
+	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/ff769398(v=office.14).aspx </remarks>
+	[SupportByVersion("Visio", 11,12,14,15,16)]
+	[EntityType(EntityType.IsCoClass)]
+	[EventSink(typeof(Events.EStyle_SinkHelper))]
+	public class Style : IVStyle, IEventBinding
 	{
 		#pragma warning disable
+
 		#region Fields
 		
 		private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
 		private string _activeSinkId;
 		private NetRuntimeSystem.Type _thisType;
-		EStyle_SinkHelper _eStyle_SinkHelper;
+		private Events.EStyle_SinkHelper _eStyle_SinkHelper;
 	
 		#endregion
 
@@ -42,6 +42,7 @@ namespace NetOffice.VisioApi
         /// <summary>
         /// Instance Type
         /// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
         public override Type InstanceType
         {
             get
@@ -108,17 +109,17 @@ namespace NetOffice.VisioApi
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of Style 
-        ///</summary>		
+        /// </summary>		
 		public Style():base("Visio.Style")
 		{
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of Style
-        ///</summary>
+        /// </summary>
         ///<param name="progId">registered ProgID</param>
 		public Style(string progId):base(progId)
 		{
@@ -128,46 +129,6 @@ namespace NetOffice.VisioApi
 		#endregion
 
 		#region Static CoClass Methods
-
-		/// <summary>
-        /// Returns all running Visio.Style objects from the environment/system
-        /// </summary>
-        /// <returns>an Visio.Style array</returns>
-		public static NetOffice.VisioApi.Style[] GetActiveInstances()
-		{		
-			IDisposableEnumeration proxyList = NetOffice.ProxyService.GetActiveInstances("Visio","Style");
-			NetRuntimeSystem.Collections.Generic.List<NetOffice.VisioApi.Style> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.VisioApi.Style>();
-			foreach(object proxy in proxyList)
-				resultList.Add( new NetOffice.VisioApi.Style(null, proxy) );
-			return resultList.ToArray();
-		}
-
-		/// <summary>
-        /// Returns a running Visio.Style object from the environment/system.
-        /// </summary>
-        /// <returns>an Visio.Style object or null</returns>
-		public static NetOffice.VisioApi.Style GetActiveInstance()
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Visio","Style", false);
-			if(null != proxy)
-				return new NetOffice.VisioApi.Style(null, proxy);
-			else
-				return null;
-		}
-
-		/// <summary>
-        /// Returns a running Visio.Style object from the environment/system. 
-        /// </summary>
-	    /// <param name="throwOnError">throw an exception if no object was found</param>
-        /// <returns>an Visio.Style object or null</returns>
-		public static NetOffice.VisioApi.Style GetActiveInstance(bool throwOnError)
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Visio","Style", throwOnError);
-			if(null != proxy)
-				return new NetOffice.VisioApi.Style(null, proxy);
-			else
-				return null;
-		}
 		#endregion
 
 		#region Events
@@ -281,12 +242,12 @@ namespace NetOffice.VisioApi
 				return;
 	
             if (null == _activeSinkId)
-				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, EStyle_SinkHelper.Id);
+				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, Events.EStyle_SinkHelper.Id);
 
 
-			if(EStyle_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
+			if(Events.EStyle_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
 			{
-				_eStyle_SinkHelper = new EStyle_SinkHelper(this, _connectPoint);
+				_eStyle_SinkHelper = new Events.EStyle_SinkHelper(this, _connectPoint);
 				return;
 			} 
         }

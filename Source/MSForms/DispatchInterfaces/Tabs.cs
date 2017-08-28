@@ -1,24 +1,35 @@
-﻿using System;
-using NetRuntimeSystem = System;
-using System.Runtime.InteropServices;
-using System.Runtime.CompilerServices;
-using System.ComponentModel;
-using System.Reflection;
+﻿using System.Collections;
 using System.Collections.Generic;
-using System.Collections;
-using NetOffice;
+using System;
+using NetRuntimeSystem = System;
+using System.ComponentModel;
+using NetOffice.Attributes;
+
 namespace NetOffice.MSFormsApi
 {
-	///<summary>
+	/// <summary>
 	/// DispatchInterface Tabs 
 	/// SupportByVersion MSForms, 2
-	///</summary>
-	[SupportByVersionAttribute("MSForms", 2)]
-	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
-	public class Tabs : COMObject ,IEnumerable<object>
+	/// </summary>
+	[SupportByVersion("MSForms", 2)]
+	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Method, "Item")]
+	public class Tabs : COMObject , IEnumerable<object>
 	{
 		#pragma warning disable
+
 		#region Type Information
+
+		/// <summary>
+		/// Instance Type
+		/// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
+		public override Type InstanceType
+		{
+			get
+			{
+				return LateBindingApiWrapperType;
+			}
+		}
 
         private static Type _type;
 
@@ -29,14 +40,20 @@ namespace NetOffice.MSFormsApi
             {
                 if (null == _type)
                     _type = typeof(Tabs);
-                    
                 return _type;
             }
         }
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public Tabs(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -82,7 +99,7 @@ namespace NetOffice.MSFormsApi
 		{
 		}
 		
-		/// <param name="progId">registered ProgID</param>
+		/// <param name="progId">registered progID</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public Tabs(string progId) : base(progId)
 		{
@@ -96,15 +113,13 @@ namespace NetOffice.MSFormsApi
 		/// SupportByVersion MSForms 2
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("MSForms", 2)]
+		[SupportByVersion("MSForms", 2)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public Int32 Count
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Count", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "Count");
 			}
 		}
 
@@ -114,176 +129,132 @@ namespace NetOffice.MSFormsApi
 
 		/// <summary>
 		/// SupportByVersion MSForms 2
-		/// 
 		/// </summary>
 		/// <param name="lIndex">Int32 lIndex</param>
-		[SupportByVersionAttribute("MSForms", 2)]
+		[SupportByVersion("MSForms", 2)]
 		public NetOffice.MSFormsApi.Tab _GetItemByIndex(Int32 lIndex)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(lIndex);
-			object returnItem = Invoker.MethodReturn(this, "_GetItemByIndex", paramsArray);
-			NetOffice.MSFormsApi.Tab newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.MSFormsApi.Tab.LateBindingApiWrapperType) as NetOffice.MSFormsApi.Tab;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.MSFormsApi.Tab>(this, "_GetItemByIndex", NetOffice.MSFormsApi.Tab.LateBindingApiWrapperType, lIndex);
 		}
 
 		/// <summary>
 		/// SupportByVersion MSForms 2
-		/// 
 		/// </summary>
 		/// <param name="bstr">string bstr</param>
-		[SupportByVersionAttribute("MSForms", 2)]
+		[SupportByVersion("MSForms", 2)]
 		public NetOffice.MSFormsApi.Tab _GetItemByName(string bstr)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(bstr);
-			object returnItem = Invoker.MethodReturn(this, "_GetItemByName", paramsArray);
-			NetOffice.MSFormsApi.Tab newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.MSFormsApi.Tab.LateBindingApiWrapperType) as NetOffice.MSFormsApi.Tab;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.MSFormsApi.Tab>(this, "_GetItemByName", NetOffice.MSFormsApi.Tab.LateBindingApiWrapperType, bstr);
 		}
 
 		/// <summary>
 		/// SupportByVersion MSForms 2
-		/// 
 		/// </summary>
 		/// <param name="varg">object varg</param>
-		[SupportByVersionAttribute("MSForms", 2)]
-		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
+		[SupportByVersion("MSForms", 2)]
+		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
 		public object this[object varg]
 		{
 			get
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(varg);
-				object returnItem = Invoker.MethodReturn(this, "Item", paramsArray);
-				object newObject = Factory.CreateObjectFromComProxy(this,returnItem);
-				return newObject;
+				return Factory.ExecuteVariantMethodGet(this, "Item", varg);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion MSForms 2
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("MSForms", 2)]
+		[SupportByVersion("MSForms", 2)]
 		public object Enum()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "Enum", paramsArray);
-			object newObject = Factory.CreateObjectFromComProxy(this,returnItem);
-			return newObject;
+			return Factory.ExecuteVariantMethodGet(this, "Enum");
 		}
 
 		/// <summary>
 		/// SupportByVersion MSForms 2
-		/// 
 		/// </summary>
 		/// <param name="bstrName">optional object bstrName</param>
 		/// <param name="bstrCaption">optional object bstrCaption</param>
 		/// <param name="lIndex">optional object lIndex</param>
-		[SupportByVersionAttribute("MSForms", 2)]
+		[SupportByVersion("MSForms", 2)]
 		public NetOffice.MSFormsApi.Tab Add(object bstrName, object bstrCaption, object lIndex)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(bstrName, bstrCaption, lIndex);
-			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.MSFormsApi.Tab newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.MSFormsApi.Tab.LateBindingApiWrapperType) as NetOffice.MSFormsApi.Tab;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.MSFormsApi.Tab>(this, "Add", NetOffice.MSFormsApi.Tab.LateBindingApiWrapperType, bstrName, bstrCaption, lIndex);
 		}
 
 		/// <summary>
 		/// SupportByVersion MSForms 2
-		/// 
 		/// </summary>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSForms", 2)]
+		[CustomMethod]
+		[SupportByVersion("MSForms", 2)]
 		public NetOffice.MSFormsApi.Tab Add()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.MSFormsApi.Tab newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.MSFormsApi.Tab.LateBindingApiWrapperType) as NetOffice.MSFormsApi.Tab;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.MSFormsApi.Tab>(this, "Add", NetOffice.MSFormsApi.Tab.LateBindingApiWrapperType);
 		}
 
 		/// <summary>
 		/// SupportByVersion MSForms 2
-		/// 
 		/// </summary>
 		/// <param name="bstrName">optional object bstrName</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSForms", 2)]
+		[CustomMethod]
+		[SupportByVersion("MSForms", 2)]
 		public NetOffice.MSFormsApi.Tab Add(object bstrName)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(bstrName);
-			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.MSFormsApi.Tab newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.MSFormsApi.Tab.LateBindingApiWrapperType) as NetOffice.MSFormsApi.Tab;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.MSFormsApi.Tab>(this, "Add", NetOffice.MSFormsApi.Tab.LateBindingApiWrapperType, bstrName);
 		}
 
 		/// <summary>
 		/// SupportByVersion MSForms 2
-		/// 
 		/// </summary>
 		/// <param name="bstrName">optional object bstrName</param>
 		/// <param name="bstrCaption">optional object bstrCaption</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSForms", 2)]
+		[CustomMethod]
+		[SupportByVersion("MSForms", 2)]
 		public NetOffice.MSFormsApi.Tab Add(object bstrName, object bstrCaption)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(bstrName, bstrCaption);
-			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.MSFormsApi.Tab newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.MSFormsApi.Tab.LateBindingApiWrapperType) as NetOffice.MSFormsApi.Tab;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.MSFormsApi.Tab>(this, "Add", NetOffice.MSFormsApi.Tab.LateBindingApiWrapperType, bstrName, bstrCaption);
 		}
 
 		/// <summary>
 		/// SupportByVersion MSForms 2
-		/// 
 		/// </summary>
 		/// <param name="bstrName">string bstrName</param>
 		/// <param name="bstrCaption">string bstrCaption</param>
-		[SupportByVersionAttribute("MSForms", 2)]
+		[SupportByVersion("MSForms", 2)]
 		public NetOffice.MSFormsApi.Tab _Add(string bstrName, string bstrCaption)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(bstrName, bstrCaption);
-			object returnItem = Invoker.MethodReturn(this, "_Add", paramsArray);
-			NetOffice.MSFormsApi.Tab newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.MSFormsApi.Tab.LateBindingApiWrapperType) as NetOffice.MSFormsApi.Tab;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.MSFormsApi.Tab>(this, "_Add", NetOffice.MSFormsApi.Tab.LateBindingApiWrapperType, bstrName, bstrCaption);
 		}
 
 		/// <summary>
 		/// SupportByVersion MSForms 2
-		/// 
 		/// </summary>
 		/// <param name="bstrName">string bstrName</param>
 		/// <param name="bstrCaption">string bstrCaption</param>
 		/// <param name="lIndex">Int32 lIndex</param>
-		[SupportByVersionAttribute("MSForms", 2)]
+		[SupportByVersion("MSForms", 2)]
 		public NetOffice.MSFormsApi.Tab _Insert(string bstrName, string bstrCaption, Int32 lIndex)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(bstrName, bstrCaption, lIndex);
-			object returnItem = Invoker.MethodReturn(this, "_Insert", paramsArray);
-			NetOffice.MSFormsApi.Tab newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.MSFormsApi.Tab.LateBindingApiWrapperType) as NetOffice.MSFormsApi.Tab;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.MSFormsApi.Tab>(this, "_Insert", NetOffice.MSFormsApi.Tab.LateBindingApiWrapperType, bstrName, bstrCaption, lIndex);
 		}
 
 		/// <summary>
 		/// SupportByVersion MSForms 2
-		/// 
 		/// </summary>
 		/// <param name="varg">object varg</param>
-		[SupportByVersionAttribute("MSForms", 2)]
+		[SupportByVersion("MSForms", 2)]
 		public void Remove(object varg)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(varg);
-			Invoker.Method(this, "Remove", paramsArray);
+			 Factory.ExecuteMethod(this, "Remove", varg);
 		}
 
 		/// <summary>
 		/// SupportByVersion MSForms 2
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("MSForms", 2)]
+		[SupportByVersion("MSForms", 2)]
 		public void Clear()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "Clear", paramsArray);
+			 Factory.ExecuteMethod(this, "Clear");
 		}
 
 		#endregion
@@ -291,9 +262,9 @@ namespace NetOffice.MSFormsApi
        #region IEnumerable<object> Member
         
         /// <summary>
-		/// SupportByVersionAttribute MSForms, 2
+		/// SupportByVersion MSForms, 2
 		/// </summary>
-		[SupportByVersionAttribute("MSForms", 2)]
+		[SupportByVersion("MSForms", 2)]
        public IEnumerator<object> GetEnumerator()  
        {
            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
@@ -306,15 +277,16 @@ namespace NetOffice.MSFormsApi
 		#region IEnumerable Members
        
 		/// <summary>
-		/// SupportByVersionAttribute MSForms, 2
+		/// SupportByVersion MSForms, 2
 		/// </summary>
-		[SupportByVersionAttribute("MSForms", 2)]
+		[SupportByVersion("MSForms", 2)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
 			return NetOffice.Utils.GetProxyEnumeratorAsProperty(this);
 		}
 
 		#endregion
+
 		#pragma warning restore
 	}
 }

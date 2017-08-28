@@ -1,23 +1,33 @@
 ﻿using System;
 using NetRuntimeSystem = System;
-using System.Runtime.InteropServices;
 using System.ComponentModel;
-using System.Runtime.CompilerServices;
-using System.Reflection;
-using System.Collections.Generic;
-using NetOffice;
+using NetOffice.Attributes;
+
 namespace NetOffice.OutlookApi
 {
-	///<summary>
+	/// <summary>
 	/// Interface _IInspectorCtrl 
 	/// SupportByVersion Outlook, 10
-	///</summary>
-	[SupportByVersionAttribute("Outlook", 10)]
-	[EntityTypeAttribute(EntityType.IsInterface)]
-	public class _IInspectorCtrl : COMObject
+	/// </summary>
+	[SupportByVersion("Outlook", 10)]
+	[EntityType(EntityType.IsInterface)]
+ 	public class _IInspectorCtrl : COMObject
 	{
 		#pragma warning disable
+
 		#region Type Information
+
+		/// <summary>
+		/// Instance Type
+		/// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
+		public override Type InstanceType
+		{
+			get
+			{
+				return LateBindingApiWrapperType;
+			}
+		}
 
         private static Type _type;
 
@@ -28,14 +38,20 @@ namespace NetOffice.OutlookApi
             {
                 if (null == _type)
                     _type = typeof(_IInspectorCtrl);
-                    
                 return _type;
             }
         }
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public _IInspectorCtrl(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -81,7 +97,7 @@ namespace NetOffice.OutlookApi
 		{
 		}
 		
-		/// <param name="progId">registered ProgID</param>
+		/// <param name="progId">registered progID</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public _IInspectorCtrl(string progId) : base(progId)
 		{
@@ -95,19 +111,16 @@ namespace NetOffice.OutlookApi
 		/// SupportByVersion Outlook 10
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Outlook", 10)]
+		[SupportByVersion("Outlook", 10)]
 		public string URL
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "URL", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "URL");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "URL", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "URL", value);
 			}
 		}
 
@@ -116,15 +129,12 @@ namespace NetOffice.OutlookApi
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("Outlook", 10)]
+		[SupportByVersion("Outlook", 10), ProxyResult]
 		public object Item
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Item", paramsArray);
-				ICOMObject newObject = Factory.CreateObjectFromComProxy(this,returnItem);
-				return newObject;
+				return Factory.ExecuteReferencePropertyGet(this, "Item");
 			}
 		}
 
@@ -134,18 +144,16 @@ namespace NetOffice.OutlookApi
 
 		/// <summary>
 		/// SupportByVersion Outlook 10
-		/// 
 		/// </summary>
 		/// <param name="pdispItem">object pdispItem</param>
-		[SupportByVersionAttribute("Outlook", 10)]
+		[SupportByVersion("Outlook", 10)]
 		public Int32 OnItemChange(object pdispItem)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(pdispItem);
-			object returnItem = Invoker.MethodReturn(this, "OnItemChange", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return Factory.ExecuteInt32MethodGet(this, "OnItemChange", pdispItem);
 		}
 
 		#endregion
+
 		#pragma warning restore
 	}
 }

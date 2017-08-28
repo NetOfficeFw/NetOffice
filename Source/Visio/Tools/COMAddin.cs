@@ -7,6 +7,7 @@ using Microsoft.Win32;
 using System.ComponentModel;
 using System.Runtime.InteropServices;
 using NetOffice;
+using NetOffice.Attributes;
 using NetOffice.Tools;
 using Visio = NetOffice.VisioApi;
 

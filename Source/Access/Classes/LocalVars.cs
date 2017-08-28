@@ -1,12 +1,10 @@
 ﻿using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
-using NetOffice;
-using NetOffice.Misc;
+using NetOffice.Attributes;
 
 namespace NetOffice.AccessApi
 {
-
 	#region Delegates
 
 	#pragma warning disable
@@ -14,15 +12,16 @@ namespace NetOffice.AccessApi
 
 	#endregion
 
-	///<summary>
+	/// <summary>
 	/// CoClass LocalVars 
 	/// SupportByVersion Access, 14,15,16
-	///</summary>
-	[SupportByVersionAttribute("Access", 14,15,16)]
-	[EntityTypeAttribute(EntityType.IsCoClass)]
-	public class LocalVars : _LocalVars
+	/// </summary>
+	[SupportByVersion("Access", 14,15,16)]
+	[EntityType(EntityType.IsCoClass)]
+ 	public class LocalVars : _LocalVars
 	{
 		#pragma warning disable
+
 		#region Fields
 		
 		private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
@@ -36,6 +35,7 @@ namespace NetOffice.AccessApi
         /// <summary>
         /// Instance Type
         /// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
         public override Type InstanceType
         {
             get
@@ -102,17 +102,17 @@ namespace NetOffice.AccessApi
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of LocalVars 
-        ///</summary>		
+        /// </summary>		
 		public LocalVars():base("Access.LocalVars")
 		{
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of LocalVars
-        ///</summary>
+        /// </summary>
         ///<param name="progId">registered ProgID</param>
 		public LocalVars(string progId):base(progId)
 		{
@@ -122,46 +122,6 @@ namespace NetOffice.AccessApi
 		#endregion
 
 		#region Static CoClass Methods
-
-		/// <summary>
-        /// Returns all running Access.LocalVars objects from the environment/system
-        /// </summary>
-        /// <returns>an Access.LocalVars array</returns>
-		public static NetOffice.AccessApi.LocalVars[] GetActiveInstances()
-		{		
-			IDisposableEnumeration proxyList = NetOffice.ProxyService.GetActiveInstances("Access","LocalVars");
-			NetRuntimeSystem.Collections.Generic.List<NetOffice.AccessApi.LocalVars> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.AccessApi.LocalVars>();
-			foreach(object proxy in proxyList)
-				resultList.Add( new NetOffice.AccessApi.LocalVars(null, proxy) );
-			return resultList.ToArray();
-		}
-
-		/// <summary>
-        /// Returns a running Access.LocalVars object from the environment/system.
-        /// </summary>
-        /// <returns>an Access.LocalVars object or null</returns>
-		public static NetOffice.AccessApi.LocalVars GetActiveInstance()
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Access","LocalVars", false);
-			if(null != proxy)
-				return new NetOffice.AccessApi.LocalVars(null, proxy);
-			else
-				return null;
-		}
-
-		/// <summary>
-        /// Returns a running Access.LocalVars object from the environment/system. 
-        /// </summary>
-	    /// <param name="throwOnError">throw an exception if no object was found</param>
-        /// <returns>an Access.LocalVars object or null</returns>
-		public static NetOffice.AccessApi.LocalVars GetActiveInstance(bool throwOnError)
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Access","LocalVars", throwOnError);
-			if(null != proxy)
-				return new NetOffice.AccessApi.LocalVars(null, proxy);
-			else
-				return null;
-		}
 		#endregion
 
 		#region Events

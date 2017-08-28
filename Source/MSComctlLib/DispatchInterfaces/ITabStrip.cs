@@ -1,23 +1,33 @@
-﻿using System;
+using System;
 using NetRuntimeSystem = System;
-using System.Runtime.InteropServices;
-using System.Runtime.CompilerServices;
 using System.ComponentModel;
-using System.Reflection;
-using System.Collections.Generic;
-using NetOffice;
+using NetOffice.Attributes;
+
 namespace NetOffice.MSComctlLibApi
 {
-	///<summary>
+	/// <summary>
 	/// DispatchInterface ITabStrip 
 	/// SupportByVersion MSComctlLib, 6
-	///</summary>
-	[SupportByVersionAttribute("MSComctlLib", 6)]
-	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
-	public class ITabStrip : COMObject
+	/// </summary>
+	[SupportByVersion("MSComctlLib", 6)]
+	[EntityType(EntityType.IsDispatchInterface)]
+ 	public class ITabStrip : COMObject
 	{
 		#pragma warning disable
+
 		#region Type Information
+
+		/// <summary>
+		/// Instance Type
+		/// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
+		public override Type InstanceType
+		{
+			get
+			{
+				return LateBindingApiWrapperType;
+			}
+		}
 
         private static Type _type;
 
@@ -28,14 +38,20 @@ namespace NetOffice.MSComctlLibApi
             {
                 if (null == _type)
                     _type = typeof(ITabStrip);
-                    
                 return _type;
             }
         }
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public ITabStrip(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -81,7 +97,7 @@ namespace NetOffice.MSComctlLibApi
 		{
 		}
 		
-		/// <param name="progId">registered ProgID</param>
+		/// <param name="progId">registered progID</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public ITabStrip(string progId) : base(progId)
 		{
@@ -95,20 +111,17 @@ namespace NetOffice.MSComctlLibApi
 		/// SupportByVersion MSComctlLib 6
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSComctlLib", 6)]
+		[SupportByVersion("MSComctlLib", 6)]
+		[BaseResult]
 		public NetOffice.MSComctlLibApi.ITabs Tabs
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Tabs", paramsArray);
-				NetOffice.MSComctlLibApi.ITabs newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSComctlLibApi.ITabs;
-				return newObject;
+				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.MSComctlLibApi.ITabs>(this, "Tabs");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "Tabs", paramsArray);
+				Factory.ExecuteReferencePropertySet(this, "Tabs", value);
 			}
 		}
 
@@ -116,19 +129,16 @@ namespace NetOffice.MSComctlLibApi
 		/// SupportByVersion MSComctlLib 6
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSComctlLib", 6)]
+		[SupportByVersion("MSComctlLib", 6)]
 		public bool Enabled
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Enabled", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "Enabled");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "Enabled", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "Enabled", value);
 			}
 		}
 
@@ -136,7 +146,7 @@ namespace NetOffice.MSComctlLibApi
 		/// SupportByVersion MSComctlLib 6
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSComctlLib", 6)]
+		[SupportByVersion("MSComctlLib", 6)]
 		public stdole.Font Font
 		{
 			get
@@ -157,20 +167,17 @@ namespace NetOffice.MSComctlLibApi
 		/// SupportByVersion MSComctlLib 6
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSComctlLib", 6)]
+		[SupportByVersion("MSComctlLib", 6)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public Int32 hWnd
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "hWnd", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "hWnd");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "hWnd", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "hWnd", value);
 			}
 		}
 
@@ -178,7 +185,7 @@ namespace NetOffice.MSComctlLibApi
 		/// SupportByVersion MSComctlLib 6
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSComctlLib", 6)]
+		[SupportByVersion("MSComctlLib", 6)]
 		public stdole.Picture MouseIcon
 		{
 			get
@@ -199,19 +206,16 @@ namespace NetOffice.MSComctlLibApi
 		/// SupportByVersion MSComctlLib 6
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSComctlLib", 6)]
+		[SupportByVersion("MSComctlLib", 6)]
 		public bool MultiRow
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "MultiRow", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "MultiRow");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "MultiRow", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "MultiRow", value);
 			}
 		}
 
@@ -219,20 +223,16 @@ namespace NetOffice.MSComctlLibApi
 		/// SupportByVersion MSComctlLib 6
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSComctlLib", 6)]
+		[SupportByVersion("MSComctlLib", 6)]
 		public NetOffice.MSComctlLibApi.Enums.TabStyleConstants Style
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Style", paramsArray);
-				int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-				return (NetOffice.MSComctlLibApi.Enums.TabStyleConstants)intReturnItem;
+				return Factory.ExecuteEnumPropertyGet<NetOffice.MSComctlLibApi.Enums.TabStyleConstants>(this, "Style");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "Style", paramsArray);
+				Factory.ExecuteEnumPropertySet(this, "Style", value);
 			}
 		}
 
@@ -240,19 +240,16 @@ namespace NetOffice.MSComctlLibApi
 		/// SupportByVersion MSComctlLib 6
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSComctlLib", 6)]
+		[SupportByVersion("MSComctlLib", 6)]
 		public Int16 TabFixedWidth
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "TabFixedWidth", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt16(returnItem);
+				return Factory.ExecuteInt16PropertyGet(this, "TabFixedWidth");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "TabFixedWidth", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "TabFixedWidth", value);
 			}
 		}
 
@@ -260,20 +257,16 @@ namespace NetOffice.MSComctlLibApi
 		/// SupportByVersion MSComctlLib 6
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSComctlLib", 6)]
+		[SupportByVersion("MSComctlLib", 6)]
 		public NetOffice.MSComctlLibApi.Enums.TabWidthStyleConstants TabWidthStyle
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "TabWidthStyle", paramsArray);
-				int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-				return (NetOffice.MSComctlLibApi.Enums.TabWidthStyleConstants)intReturnItem;
+				return Factory.ExecuteEnumPropertyGet<NetOffice.MSComctlLibApi.Enums.TabWidthStyleConstants>(this, "TabWidthStyle");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "TabWidthStyle", paramsArray);
+				Factory.ExecuteEnumPropertySet(this, "TabWidthStyle", value);
 			}
 		}
 
@@ -281,20 +274,17 @@ namespace NetOffice.MSComctlLibApi
 		/// SupportByVersion MSComctlLib 6
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSComctlLib", 6)]
+		[SupportByVersion("MSComctlLib", 6)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public Single ClientTop
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "ClientTop", paramsArray);
-				return NetRuntimeSystem.Convert.ToSingle(returnItem);
+				return Factory.ExecuteSinglePropertyGet(this, "ClientTop");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "ClientTop", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "ClientTop", value);
 			}
 		}
 
@@ -302,20 +292,17 @@ namespace NetOffice.MSComctlLibApi
 		/// SupportByVersion MSComctlLib 6
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSComctlLib", 6)]
+		[SupportByVersion("MSComctlLib", 6)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public Single ClientLeft
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "ClientLeft", paramsArray);
-				return NetRuntimeSystem.Convert.ToSingle(returnItem);
+				return Factory.ExecuteSinglePropertyGet(this, "ClientLeft");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "ClientLeft", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "ClientLeft", value);
 			}
 		}
 
@@ -323,20 +310,17 @@ namespace NetOffice.MSComctlLibApi
 		/// SupportByVersion MSComctlLib 6
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSComctlLib", 6)]
+		[SupportByVersion("MSComctlLib", 6)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public Single ClientHeight
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "ClientHeight", paramsArray);
-				return NetRuntimeSystem.Convert.ToSingle(returnItem);
+				return Factory.ExecuteSinglePropertyGet(this, "ClientHeight");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "ClientHeight", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "ClientHeight", value);
 			}
 		}
 
@@ -344,20 +328,17 @@ namespace NetOffice.MSComctlLibApi
 		/// SupportByVersion MSComctlLib 6
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSComctlLib", 6)]
+		[SupportByVersion("MSComctlLib", 6)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public Single ClientWidth
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "ClientWidth", paramsArray);
-				return NetRuntimeSystem.Convert.ToSingle(returnItem);
+				return Factory.ExecuteSinglePropertyGet(this, "ClientWidth");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "ClientWidth", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "ClientWidth", value);
 			}
 		}
 
@@ -365,20 +346,16 @@ namespace NetOffice.MSComctlLibApi
 		/// SupportByVersion MSComctlLib 6
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSComctlLib", 6)]
+		[SupportByVersion("MSComctlLib", 6)]
 		public NetOffice.MSComctlLibApi.Enums.MousePointerConstants MousePointer
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "MousePointer", paramsArray);
-				int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-				return (NetOffice.MSComctlLibApi.Enums.MousePointerConstants)intReturnItem;
+				return Factory.ExecuteEnumPropertyGet<NetOffice.MSComctlLibApi.Enums.MousePointerConstants>(this, "MousePointer");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "MousePointer", paramsArray);
+				Factory.ExecuteEnumPropertySet(this, "MousePointer", value);
 			}
 		}
 
@@ -387,20 +364,16 @@ namespace NetOffice.MSComctlLibApi
 		/// Get/Set
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("MSComctlLib", 6)]
+		[SupportByVersion("MSComctlLib", 6), ProxyResult]
 		public object ImageList
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "ImageList", paramsArray);
-				ICOMObject newObject = Factory.CreateObjectFromComProxy(this,returnItem);
-				return newObject;
+				return Factory.ExecuteReferencePropertyGet(this, "ImageList");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "ImageList", paramsArray);
+				Factory.ExecuteReferencePropertySet(this, "ImageList", value);
 			}
 		}
 
@@ -408,19 +381,16 @@ namespace NetOffice.MSComctlLibApi
 		/// SupportByVersion MSComctlLib 6
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSComctlLib", 6)]
+		[SupportByVersion("MSComctlLib", 6)]
 		public Int16 TabFixedHeight
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "TabFixedHeight", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt16(returnItem);
+				return Factory.ExecuteInt16PropertyGet(this, "TabFixedHeight");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "TabFixedHeight", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "TabFixedHeight", value);
 			}
 		}
 
@@ -428,19 +398,16 @@ namespace NetOffice.MSComctlLibApi
 		/// SupportByVersion MSComctlLib 6
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSComctlLib", 6)]
+		[SupportByVersion("MSComctlLib", 6)]
 		public bool ShowTips
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "ShowTips", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "ShowTips");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "ShowTips", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "ShowTips", value);
 			}
 		}
 
@@ -448,21 +415,18 @@ namespace NetOffice.MSComctlLibApi
 		/// SupportByVersion MSComctlLib 6
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSComctlLib", 6)]
+		[SupportByVersion("MSComctlLib", 6)]
+		[BaseResult]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public NetOffice.MSComctlLibApi.ITab SelectedItem
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "SelectedItem", paramsArray);
-				NetOffice.MSComctlLibApi.ITab newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSComctlLibApi.ITab;
-				return newObject;
+				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.MSComctlLibApi.ITab>(this, "SelectedItem");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "SelectedItem", paramsArray);
+				Factory.ExecuteReferencePropertySet(this, "SelectedItem", value);
 			}
 		}
 
@@ -470,20 +434,16 @@ namespace NetOffice.MSComctlLibApi
 		/// SupportByVersion MSComctlLib 6
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSComctlLib", 6)]
+		[SupportByVersion("MSComctlLib", 6)]
 		public NetOffice.MSComctlLibApi.Enums.OLEDropConstants OLEDropMode
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "OLEDropMode", paramsArray);
-				int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-				return (NetOffice.MSComctlLibApi.Enums.OLEDropConstants)intReturnItem;
+				return Factory.ExecuteEnumPropertyGet<NetOffice.MSComctlLibApi.Enums.OLEDropConstants>(this, "OLEDropMode");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "OLEDropMode", paramsArray);
+				Factory.ExecuteEnumPropertySet(this, "OLEDropMode", value);
 			}
 		}
 
@@ -491,19 +451,16 @@ namespace NetOffice.MSComctlLibApi
 		/// SupportByVersion MSComctlLib 6
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSComctlLib", 6)]
+		[SupportByVersion("MSComctlLib", 6)]
 		public bool HotTracking
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "HotTracking", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "HotTracking");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "HotTracking", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "HotTracking", value);
 			}
 		}
 
@@ -511,19 +468,16 @@ namespace NetOffice.MSComctlLibApi
 		/// SupportByVersion MSComctlLib 6
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSComctlLib", 6)]
+		[SupportByVersion("MSComctlLib", 6)]
 		public bool MultiSelect
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "MultiSelect", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "MultiSelect");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "MultiSelect", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "MultiSelect", value);
 			}
 		}
 
@@ -531,20 +485,16 @@ namespace NetOffice.MSComctlLibApi
 		/// SupportByVersion MSComctlLib 6
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSComctlLib", 6)]
+		[SupportByVersion("MSComctlLib", 6)]
 		public NetOffice.MSComctlLibApi.Enums.PlacementConstants Placement
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Placement", paramsArray);
-				int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-				return (NetOffice.MSComctlLibApi.Enums.PlacementConstants)intReturnItem;
+				return Factory.ExecuteEnumPropertyGet<NetOffice.MSComctlLibApi.Enums.PlacementConstants>(this, "Placement");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "Placement", paramsArray);
+				Factory.ExecuteEnumPropertySet(this, "Placement", value);
 			}
 		}
 
@@ -552,19 +502,16 @@ namespace NetOffice.MSComctlLibApi
 		/// SupportByVersion MSComctlLib 6
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSComctlLib", 6)]
+		[SupportByVersion("MSComctlLib", 6)]
 		public bool Separators
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Separators", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "Separators");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "Separators", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "Separators", value);
 			}
 		}
 
@@ -572,19 +519,16 @@ namespace NetOffice.MSComctlLibApi
 		/// SupportByVersion MSComctlLib 6
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSComctlLib", 6)]
+		[SupportByVersion("MSComctlLib", 6)]
 		public Single TabMinWidth
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "TabMinWidth", paramsArray);
-				return NetRuntimeSystem.Convert.ToSingle(returnItem);
+				return Factory.ExecuteSinglePropertyGet(this, "TabMinWidth");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "TabMinWidth", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "TabMinWidth", value);
 			}
 		}
 
@@ -592,20 +536,16 @@ namespace NetOffice.MSComctlLibApi
 		/// SupportByVersion MSComctlLib 6
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSComctlLib", 6)]
+		[SupportByVersion("MSComctlLib", 6)]
 		public NetOffice.MSComctlLibApi.Enums.TabSelStyleConstants TabStyle
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "TabStyle", paramsArray);
-				int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-				return (NetOffice.MSComctlLibApi.Enums.TabSelStyleConstants)intReturnItem;
+				return Factory.ExecuteEnumPropertyGet<NetOffice.MSComctlLibApi.Enums.TabSelStyleConstants>(this, "TabStyle");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "TabStyle", paramsArray);
+				Factory.ExecuteEnumPropertySet(this, "TabStyle", value);
 			}
 		}
 
@@ -615,50 +555,43 @@ namespace NetOffice.MSComctlLibApi
 
 		/// <summary>
 		/// SupportByVersion MSComctlLib 6
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("MSComctlLib", 6)]
+		[SupportByVersion("MSComctlLib", 6)]
 		public void Refresh()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "Refresh", paramsArray);
+			 Factory.ExecuteMethod(this, "Refresh");
 		}
 
 		/// <summary>
 		/// SupportByVersion MSComctlLib 6
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("MSComctlLib", 6)]
+		[SupportByVersion("MSComctlLib", 6)]
 		public void OLEDrag()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "OLEDrag", paramsArray);
+			 Factory.ExecuteMethod(this, "OLEDrag");
 		}
 
 		/// <summary>
 		/// SupportByVersion MSComctlLib 6
-		/// 
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("MSComctlLib", 6)]
+		[SupportByVersion("MSComctlLib", 6)]
 		public void AboutBox()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "AboutBox", paramsArray);
+			 Factory.ExecuteMethod(this, "AboutBox");
 		}
 
 		/// <summary>
 		/// SupportByVersion MSComctlLib 6
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("MSComctlLib", 6)]
+		[SupportByVersion("MSComctlLib", 6)]
 		public void DeselectAll()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "DeselectAll", paramsArray);
+			 Factory.ExecuteMethod(this, "DeselectAll");
 		}
 
 		#endregion
+
 		#pragma warning restore
 	}
 }

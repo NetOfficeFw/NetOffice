@@ -12,7 +12,7 @@ namespace NetOffice.OfficeApi.Tools.Informations
         #region Fields
 
         private object _lock;
-        private Utils.CommonUtils _owner;
+        private Contribution.CommonUtils _owner;
         private AssemblyInfo _assemblyInfo;
         private AppDomainInfo _appDomainInfo;
         private EnvironmentInfo _environmentInfo;
@@ -26,7 +26,7 @@ namespace NetOffice.OfficeApi.Tools.Informations
         /// Creates an instance of the class
         /// </summary>
         /// <param name="owner">owner instance</param>
-        internal Infos(Utils.CommonUtils owner)
+        internal Infos(Contribution.CommonUtils owner)
         {
             if (null == owner)
                 throw new ArgumentNullException("owner");
@@ -105,7 +105,7 @@ namespace NetOffice.OfficeApi.Tools.Informations
         /// <summary>
         /// Owner Instance
         /// </summary>
-        internal Utils.CommonUtils Owner
+        internal Contribution.CommonUtils Owner
         {
             get
             {

@@ -1,37 +1,37 @@
 ﻿using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
-using NetOffice;
-using NetOffice.Misc;
+using NetOffice.Attributes;
 
 namespace NetOffice.VisioApi
 {
-
 	#region Delegates
 
 	#pragma warning disable
-	public delegate void Cell_CellChangedEventHandler(NetOffice.VisioApi.IVCell Cell);
-	public delegate void Cell_FormulaChangedEventHandler(NetOffice.VisioApi.IVCell Cell);
+	public delegate void Cell_CellChangedEventHandler(NetOffice.VisioApi.IVCell cell);
+	public delegate void Cell_FormulaChangedEventHandler(NetOffice.VisioApi.IVCell cell);
 	#pragma warning restore
 
 	#endregion
 
-	///<summary>
+	/// <summary>
 	/// CoClass Cell 
 	/// SupportByVersion Visio, 11,12,14,15,16
-	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff769228(v=office.14).aspx
-	///</summary>
-	[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
-	[EntityTypeAttribute(EntityType.IsCoClass)]
-	public class Cell : IVCell,IEventBinding
+	/// </summary>
+	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/ff769228(v=office.14).aspx </remarks>
+	[SupportByVersion("Visio", 11,12,14,15,16)]
+	[EntityType(EntityType.IsCoClass)]
+	[EventSink(typeof(Events.ECell_SinkHelper))]
+	public class Cell : IVCell, IEventBinding
 	{
 		#pragma warning disable
+
 		#region Fields
 		
 		private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
 		private string _activeSinkId;
 		private NetRuntimeSystem.Type _thisType;
-		ECell_SinkHelper _eCell_SinkHelper;
+        private Events.ECell_SinkHelper _eCell_SinkHelper;
 	
 		#endregion
 
@@ -40,6 +40,7 @@ namespace NetOffice.VisioApi
         /// <summary>
         /// Instance Type
         /// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
         public override Type InstanceType
         {
             get
@@ -106,17 +107,17 @@ namespace NetOffice.VisioApi
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of Cell 
-        ///</summary>		
+        /// </summary>		
 		public Cell():base("Visio.Cell")
 		{
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of Cell
-        ///</summary>
+        /// </summary>
         ///<param name="progId">registered ProgID</param>
 		public Cell(string progId):base(progId)
 		{
@@ -126,46 +127,6 @@ namespace NetOffice.VisioApi
 		#endregion
 
 		#region Static CoClass Methods
-
-		/// <summary>
-        /// Returns all running Visio.Cell objects from the environment/system
-        /// </summary>
-        /// <returns>an Visio.Cell array</returns>
-		public static NetOffice.VisioApi.Cell[] GetActiveInstances()
-		{		
-			IDisposableEnumeration proxyList = NetOffice.ProxyService.GetActiveInstances("Visio","Cell");
-			NetRuntimeSystem.Collections.Generic.List<NetOffice.VisioApi.Cell> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.VisioApi.Cell>();
-			foreach(object proxy in proxyList)
-				resultList.Add( new NetOffice.VisioApi.Cell(null, proxy) );
-			return resultList.ToArray();
-		}
-
-		/// <summary>
-        /// Returns a running Visio.Cell object from the environment/system.
-        /// </summary>
-        /// <returns>an Visio.Cell object or null</returns>
-		public static NetOffice.VisioApi.Cell GetActiveInstance()
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Visio","Cell", false);
-			if(null != proxy)
-				return new NetOffice.VisioApi.Cell(null, proxy);
-			else
-				return null;
-		}
-
-		/// <summary>
-        /// Returns a running Visio.Cell object from the environment/system. 
-        /// </summary>
-	    /// <param name="throwOnError">throw an exception if no object was found</param>
-        /// <returns>an Visio.Cell object or null</returns>
-		public static NetOffice.VisioApi.Cell GetActiveInstance(bool throwOnError)
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Visio","Cell", throwOnError);
-			if(null != proxy)
-				return new NetOffice.VisioApi.Cell(null, proxy);
-			else
-				return null;
-		}
 		#endregion
 
 		#region Events
@@ -233,12 +194,12 @@ namespace NetOffice.VisioApi
 				return;
 	
             if (null == _activeSinkId)
-				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, ECell_SinkHelper.Id);
+				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, Events.ECell_SinkHelper.Id);
 
 
-			if(ECell_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
+			if (Events.ECell_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
 			{
-				_eCell_SinkHelper = new ECell_SinkHelper(this, _connectPoint);
+				_eCell_SinkHelper = new Events.ECell_SinkHelper(this, _connectPoint);
 				return;
 			} 
         }

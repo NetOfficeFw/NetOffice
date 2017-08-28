@@ -1,27 +1,26 @@
 ﻿using System;
 using NetRuntimeSystem = System;
-using System.Runtime.InteropServices;
 using System.ComponentModel;
-using System.Runtime.CompilerServices;
-using System.Reflection;
-using System.Collections.Generic;
-using NetOffice;
+using NetOffice.Attributes;
+
 namespace NetOffice.ExcelApi
 {
-	///<summary>
+	/// <summary>
 	/// Interface IIconSetCondition 
 	/// SupportByVersion Excel, 12,14,15,16
-	///</summary>
-	[SupportByVersionAttribute("Excel", 12,14,15,16)]
-	[EntityTypeAttribute(EntityType.IsInterface)]
-	public class IIconSetCondition : COMObject
+	/// </summary>
+	[SupportByVersion("Excel", 12,14,15,16)]
+	[EntityType(EntityType.IsInterface)]
+ 	public class IIconSetCondition : COMObject
 	{
 		#pragma warning disable
+
 		#region Type Information
 
         /// <summary>
         /// Instance Type
         /// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
         public override Type InstanceType
         {
             get
@@ -39,14 +38,20 @@ namespace NetOffice.ExcelApi
             {
                 if (null == _type)
                     _type = typeof(IIconSetCondition);
-                    
                 return _type;
             }
         }
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public IIconSetCondition(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -92,7 +97,7 @@ namespace NetOffice.ExcelApi
 		{
 		}
 		
-		/// <param name="progId">registered ProgID</param>
+		/// <param name="progId">registered progID</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public IIconSetCondition(string progId) : base(progId)
 		{
@@ -106,15 +111,12 @@ namespace NetOffice.ExcelApi
 		/// SupportByVersion Excel 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 12,14,15,16)]
+		[SupportByVersion("Excel", 12,14,15,16)]
 		public NetOffice.ExcelApi.Application Application
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				NetOffice.ExcelApi.Application newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.Application.LateBindingApiWrapperType) as NetOffice.ExcelApi.Application;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Application>(this, "Application", NetOffice.ExcelApi.Application.LateBindingApiWrapperType);
 			}
 		}
 
@@ -122,15 +124,12 @@ namespace NetOffice.ExcelApi
 		/// SupportByVersion Excel 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 12,14,15,16)]
+		[SupportByVersion("Excel", 12,14,15,16)]
 		public NetOffice.ExcelApi.Enums.XlCreator Creator
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Creator", paramsArray);
-				int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-				return (NetOffice.ExcelApi.Enums.XlCreator)intReturnItem;
+				return Factory.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlCreator>(this, "Creator");
 			}
 		}
 
@@ -139,15 +138,12 @@ namespace NetOffice.ExcelApi
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 12,14,15,16)]
+		[SupportByVersion("Excel", 12,14,15,16), ProxyResult]
 		public object Parent
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Parent", paramsArray);
-				ICOMObject newObject = Factory.CreateObjectFromComProxy(this,returnItem);
-				return newObject;
+				return Factory.ExecuteReferencePropertyGet(this, "Parent");
 			}
 		}
 
@@ -155,19 +151,16 @@ namespace NetOffice.ExcelApi
 		/// SupportByVersion Excel 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 12,14,15,16)]
+		[SupportByVersion("Excel", 12,14,15,16)]
 		public Int32 Priority
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Priority", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "Priority");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "Priority", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "Priority", value);
 			}
 		}
 
@@ -175,14 +168,12 @@ namespace NetOffice.ExcelApi
 		/// SupportByVersion Excel 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 12,14,15,16)]
+		[SupportByVersion("Excel", 12,14,15,16)]
 		public bool StopIfTrue
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "StopIfTrue", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "StopIfTrue");
 			}
 		}
 
@@ -190,15 +181,12 @@ namespace NetOffice.ExcelApi
 		/// SupportByVersion Excel 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 12,14,15,16)]
+		[SupportByVersion("Excel", 12,14,15,16)]
 		public NetOffice.ExcelApi.Range AppliesTo
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "AppliesTo", paramsArray);
-				NetOffice.ExcelApi.Range newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.Range.LateBindingApiWrapperType) as NetOffice.ExcelApi.Range;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Range>(this, "AppliesTo", NetOffice.ExcelApi.Range.LateBindingApiWrapperType);
 			}
 		}
 
@@ -206,14 +194,12 @@ namespace NetOffice.ExcelApi
 		/// SupportByVersion Excel 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 12,14,15,16)]
+		[SupportByVersion("Excel", 12,14,15,16)]
 		public Int32 Type
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Type", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "Type");
 			}
 		}
 
@@ -221,14 +207,12 @@ namespace NetOffice.ExcelApi
 		/// SupportByVersion Excel 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 12,14,15,16)]
+		[SupportByVersion("Excel", 12,14,15,16)]
 		public bool PTCondition
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "PTCondition", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "PTCondition");
 			}
 		}
 
@@ -236,20 +220,16 @@ namespace NetOffice.ExcelApi
 		/// SupportByVersion Excel 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 12,14,15,16)]
+		[SupportByVersion("Excel", 12,14,15,16)]
 		public NetOffice.ExcelApi.Enums.XlPivotConditionScope ScopeType
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "ScopeType", paramsArray);
-				int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-				return (NetOffice.ExcelApi.Enums.XlPivotConditionScope)intReturnItem;
+				return Factory.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlPivotConditionScope>(this, "ScopeType");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "ScopeType", paramsArray);
+				Factory.ExecuteEnumPropertySet(this, "ScopeType", value);
 			}
 		}
 
@@ -257,19 +237,16 @@ namespace NetOffice.ExcelApi
 		/// SupportByVersion Excel 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 12,14,15,16)]
+		[SupportByVersion("Excel", 12,14,15,16)]
 		public bool ReverseOrder
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "ReverseOrder", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "ReverseOrder");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "ReverseOrder", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "ReverseOrder", value);
 			}
 		}
 
@@ -277,19 +254,16 @@ namespace NetOffice.ExcelApi
 		/// SupportByVersion Excel 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 12,14,15,16)]
+		[SupportByVersion("Excel", 12,14,15,16)]
 		public bool PercentileValues
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "PercentileValues", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "PercentileValues");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "PercentileValues", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "PercentileValues", value);
 			}
 		}
 
@@ -297,19 +271,16 @@ namespace NetOffice.ExcelApi
 		/// SupportByVersion Excel 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 12,14,15,16)]
+		[SupportByVersion("Excel", 12,14,15,16)]
 		public bool ShowIconOnly
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "ShowIconOnly", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "ShowIconOnly");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "ShowIconOnly", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "ShowIconOnly", value);
 			}
 		}
 
@@ -317,19 +288,16 @@ namespace NetOffice.ExcelApi
 		/// SupportByVersion Excel 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 12,14,15,16)]
+		[SupportByVersion("Excel", 12,14,15,16)]
 		public string Formula
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Formula", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "Formula");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "Formula", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "Formula", value);
 			}
 		}
 
@@ -337,27 +305,16 @@ namespace NetOffice.ExcelApi
 		/// SupportByVersion Excel 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 12,14,15,16)]
+		[SupportByVersion("Excel", 12,14,15,16)]
 		public object IconSet
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "IconSet", paramsArray);
-				if((null != returnItem) && (returnItem is MarshalByRefObject))
-				{
-					ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
-					return newObject;
-				}
-				else
-				{
-					return  returnItem;
-				}
+				return Factory.ExecuteVariantPropertyGet(this, "IconSet");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "IconSet", paramsArray);
+				Factory.ExecuteVariantPropertySet(this, "IconSet", value);
 			}
 		}
 
@@ -365,15 +322,12 @@ namespace NetOffice.ExcelApi
 		/// SupportByVersion Excel 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 12,14,15,16)]
+		[SupportByVersion("Excel", 12,14,15,16)]
 		public NetOffice.ExcelApi.IconCriteria IconCriteria
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "IconCriteria", paramsArray);
-				NetOffice.ExcelApi.IconCriteria newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.IconCriteria.LateBindingApiWrapperType) as NetOffice.ExcelApi.IconCriteria;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.IconCriteria>(this, "IconCriteria", NetOffice.ExcelApi.IconCriteria.LateBindingApiWrapperType);
 			}
 		}
 
@@ -383,54 +337,43 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="range">NetOffice.ExcelApi.Range Range</param>
-		[SupportByVersionAttribute("Excel", 12,14,15,16)]
+		/// <param name="range">NetOffice.ExcelApi.Range range</param>
+		[SupportByVersion("Excel", 12,14,15,16)]
 		public Int32 ModifyAppliesToRange(NetOffice.ExcelApi.Range range)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(range);
-			object returnItem = Invoker.MethodReturn(this, "ModifyAppliesToRange", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return Factory.ExecuteInt32MethodGet(this, "ModifyAppliesToRange", range);
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15, 16
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 12,14,15,16)]
+		[SupportByVersion("Excel", 12,14,15,16)]
 		public Int32 SetFirstPriority()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "SetFirstPriority", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return Factory.ExecuteInt32MethodGet(this, "SetFirstPriority");
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15, 16
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 12,14,15,16)]
+		[SupportByVersion("Excel", 12,14,15,16)]
 		public Int32 SetLastPriority()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "SetLastPriority", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return Factory.ExecuteInt32MethodGet(this, "SetLastPriority");
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15, 16
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 12,14,15,16)]
+		[SupportByVersion("Excel", 12,14,15,16)]
 		public Int32 Delete()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "Delete", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return Factory.ExecuteInt32MethodGet(this, "Delete");
 		}
 
 		#endregion
+
 		#pragma warning restore
 	}
 }

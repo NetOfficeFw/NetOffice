@@ -1,23 +1,33 @@
 ﻿using System;
 using NetRuntimeSystem = System;
-using System.Runtime.InteropServices;
-using System.Runtime.CompilerServices;
 using System.ComponentModel;
-using System.Reflection;
-using System.Collections.Generic;
-using NetOffice;
+using NetOffice.Attributes;
+
 namespace NetOffice.OWC10Api
 {
-	///<summary>
+	/// <summary>
 	/// DispatchInterface DropTarget 
 	/// SupportByVersion OWC10, 1
-	///</summary>
-	[SupportByVersionAttribute("OWC10", 1)]
-	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
-	public class DropTarget : COMObject
+	/// </summary>
+	[SupportByVersion("OWC10", 1)]
+	[EntityType(EntityType.IsDispatchInterface)]
+ 	public class DropTarget : COMObject
 	{
 		#pragma warning disable
+
 		#region Type Information
+
+		/// <summary>
+		/// Instance Type
+		/// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
+		public override Type InstanceType
+		{
+			get
+			{
+				return LateBindingApiWrapperType;
+			}
+		}
 
         private static Type _type;
 
@@ -28,14 +38,20 @@ namespace NetOffice.OWC10Api
             {
                 if (null == _type)
                     _type = typeof(DropTarget);
-                    
                 return _type;
             }
         }
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public DropTarget(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -81,7 +97,7 @@ namespace NetOffice.OWC10Api
 		{
 		}
 		
-		/// <param name="progId">registered ProgID</param>
+		/// <param name="progId">registered progID</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public DropTarget(string progId) : base(progId)
 		{
@@ -97,62 +113,55 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
-		/// 
 		/// </summary>
 		/// <param name="x">Int32 x</param>
 		/// <param name="y">Int32 y</param>
-		/// <param name="keyState">Int32 KeyState</param>
-		/// <param name="effect">Int32 Effect</param>
-		/// <param name="_object">object Object</param>
-		[SupportByVersionAttribute("OWC10", 1)]
+		/// <param name="keyState">Int32 keyState</param>
+		/// <param name="effect">Int32 effect</param>
+		/// <param name="_object">object object</param>
+		[SupportByVersion("OWC10", 1)]
 		public void DragEnter(Int32 x, Int32 y, Int32 keyState, Int32 effect, object _object)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(x, y, keyState, effect, _object);
-			Invoker.Method(this, "DragEnter", paramsArray);
+			 Factory.ExecuteMethod(this, "DragEnter", new object[]{ x, y, keyState, effect, _object });
 		}
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
-		/// 
 		/// </summary>
 		/// <param name="x">Int32 x</param>
 		/// <param name="y">Int32 y</param>
-		/// <param name="keyState">Int32 KeyState</param>
-		/// <param name="effect">Int32 Effect</param>
-		[SupportByVersionAttribute("OWC10", 1)]
+		/// <param name="keyState">Int32 keyState</param>
+		/// <param name="effect">Int32 effect</param>
+		[SupportByVersion("OWC10", 1)]
 		public void DragOver(Int32 x, Int32 y, Int32 keyState, Int32 effect)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(x, y, keyState, effect);
-			Invoker.Method(this, "DragOver", paramsArray);
+			 Factory.ExecuteMethod(this, "DragOver", x, y, keyState, effect);
 		}
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("OWC10", 1)]
+		[SupportByVersion("OWC10", 1)]
 		public void DragLeave()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "DragLeave", paramsArray);
+			 Factory.ExecuteMethod(this, "DragLeave");
 		}
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
-		/// 
 		/// </summary>
 		/// <param name="x">Int32 x</param>
 		/// <param name="y">Int32 y</param>
-		/// <param name="keyState">Int32 KeyState</param>
-		/// <param name="effect">Int32 Effect</param>
-		[SupportByVersionAttribute("OWC10", 1)]
+		/// <param name="keyState">Int32 keyState</param>
+		/// <param name="effect">Int32 effect</param>
+		[SupportByVersion("OWC10", 1)]
 		public void Drop(Int32 x, Int32 y, Int32 keyState, Int32 effect)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(x, y, keyState, effect);
-			Invoker.Method(this, "Drop", paramsArray);
+			 Factory.ExecuteMethod(this, "Drop", x, y, keyState, effect);
 		}
 
 		#endregion
+
 		#pragma warning restore
 	}
 }

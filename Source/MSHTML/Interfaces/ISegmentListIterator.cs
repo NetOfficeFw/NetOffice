@@ -1,23 +1,34 @@
-﻿using System;
+﻿using System.Reflection;
+using System;
 using NetRuntimeSystem = System;
-using System.Runtime.InteropServices;
 using System.ComponentModel;
-using System.Runtime.CompilerServices;
-using System.Reflection;
-using System.Collections.Generic;
-using NetOffice;
+using NetOffice.Attributes;
+
 namespace NetOffice.MSHTMLApi
 {
-	///<summary>
+	/// <summary>
 	/// Interface ISegmentListIterator 
 	/// SupportByVersion MSHTML, 4
-	///</summary>
-	[SupportByVersionAttribute("MSHTML", 4)]
-	[EntityTypeAttribute(EntityType.IsInterface)]
-	public class ISegmentListIterator : COMObject
+	/// </summary>
+	[SupportByVersion("MSHTML", 4)]
+	[EntityType(EntityType.IsInterface)]
+ 	public class ISegmentListIterator : COMObject
 	{
 		#pragma warning disable
+
 		#region Type Information
+
+		/// <summary>
+		/// Instance Type
+		/// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
+		public override Type InstanceType
+		{
+			get
+			{
+				return LateBindingApiWrapperType;
+			}
+		}
 
         private static Type _type;
 
@@ -28,14 +39,20 @@ namespace NetOffice.MSHTMLApi
             {
                 if (null == _type)
                     _type = typeof(ISegmentListIterator);
-                    
                 return _type;
             }
         }
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public ISegmentListIterator(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -81,7 +98,7 @@ namespace NetOffice.MSHTMLApi
 		{
 		}
 		
-		/// <param name="progId">registered ProgID</param>
+		/// <param name="progId">registered progID</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public ISegmentListIterator(string progId) : base(progId)
 		{
@@ -97,57 +114,51 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
-		/// 
 		/// </summary>
 		/// <param name="ppISegment">NetOffice.MSHTMLApi.ISegment ppISegment</param>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[SupportByVersion("MSHTML", 4)]
 		public Int32 Current(out NetOffice.MSHTMLApi.ISegment ppISegment)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
 			ppISegment = null;
 			object[] paramsArray = Invoker.ValidateParamsArray(ppISegment);
-			object returnItem = Invoker.MethodReturn(this, "Current", paramsArray);
-			ppISegment = (NetOffice.MSHTMLApi.ISegment)paramsArray[0];
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			object returnItem = Invoker.MethodReturn(this, "Current", paramsArray, modifiers);
+            if (paramsArray[0] is MarshalByRefObject)
+                ppISegment = new NetOffice.MSHTMLApi.ISegment(this, paramsArray[0]);
+            else
+                ppISegment = null;
+            return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[SupportByVersion("MSHTML", 4)]
 		public Int32 First()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "First", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return Factory.ExecuteInt32MethodGet(this, "First");
 		}
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[SupportByVersion("MSHTML", 4)]
 		public Int32 IsDone()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "IsDone", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return Factory.ExecuteInt32MethodGet(this, "IsDone");
 		}
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[SupportByVersion("MSHTML", 4)]
 		public Int32 Advance()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "Advance", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return Factory.ExecuteInt32MethodGet(this, "Advance");
 		}
 
 		#endregion
+
 		#pragma warning restore
 	}
 }

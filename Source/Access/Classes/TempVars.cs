@@ -1,12 +1,10 @@
 ﻿using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
-using NetOffice;
-using NetOffice.Misc;
+using NetOffice.Attributes;
 
 namespace NetOffice.AccessApi
 {
-
 	#region Delegates
 
 	#pragma warning disable
@@ -14,16 +12,17 @@ namespace NetOffice.AccessApi
 
 	#endregion
 
-	///<summary>
+	/// <summary>
 	/// CoClass TempVars 
 	/// SupportByVersion Access, 12,14,15,16
-	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff821458.aspx
-	///</summary>
-	[SupportByVersionAttribute("Access", 12,14,15,16)]
-	[EntityTypeAttribute(EntityType.IsCoClass)]
-	public class TempVars : _TempVars
+	/// </summary>
+	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff821458.aspx </remarks>
+	[SupportByVersion("Access", 12,14,15,16)]
+	[EntityType(EntityType.IsCoClass)]
+ 	public class TempVars : _TempVars
 	{
 		#pragma warning disable
+
 		#region Fields
 		
 		private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
@@ -37,6 +36,7 @@ namespace NetOffice.AccessApi
         /// <summary>
         /// Instance Type
         /// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
         public override Type InstanceType
         {
             get
@@ -103,17 +103,17 @@ namespace NetOffice.AccessApi
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of TempVars 
-        ///</summary>		
+        /// </summary>		
 		public TempVars():base("Access.TempVars")
 		{
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of TempVars
-        ///</summary>
+        /// </summary>
         ///<param name="progId">registered ProgID</param>
 		public TempVars(string progId):base(progId)
 		{
@@ -123,46 +123,6 @@ namespace NetOffice.AccessApi
 		#endregion
 
 		#region Static CoClass Methods
-
-		/// <summary>
-        /// Returns all running Access.TempVars objects from the environment/system
-        /// </summary>
-        /// <returns>an Access.TempVars array</returns>
-		public static NetOffice.AccessApi.TempVars[] GetActiveInstances()
-		{		
-			IDisposableEnumeration proxyList = NetOffice.ProxyService.GetActiveInstances("Access","TempVars");
-			NetRuntimeSystem.Collections.Generic.List<NetOffice.AccessApi.TempVars> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.AccessApi.TempVars>();
-			foreach(object proxy in proxyList)
-				resultList.Add( new NetOffice.AccessApi.TempVars(null, proxy) );
-			return resultList.ToArray();
-		}
-
-		/// <summary>
-        /// Returns a running Access.TempVars object from the environment/system.
-        /// </summary>
-        /// <returns>an Access.TempVars object or null</returns>
-		public static NetOffice.AccessApi.TempVars GetActiveInstance()
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Access","TempVars", false);
-			if(null != proxy)
-				return new NetOffice.AccessApi.TempVars(null, proxy);
-			else
-				return null;
-		}
-
-		/// <summary>
-        /// Returns a running Access.TempVars object from the environment/system. 
-        /// </summary>
-	    /// <param name="throwOnError">throw an exception if no object was found</param>
-        /// <returns>an Access.TempVars object or null</returns>
-		public static NetOffice.AccessApi.TempVars GetActiveInstance(bool throwOnError)
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Access","TempVars", throwOnError);
-			if(null != proxy)
-				return new NetOffice.AccessApi.TempVars(null, proxy);
-			else
-				return null;
-		}
 		#endregion
 
 		#region Events

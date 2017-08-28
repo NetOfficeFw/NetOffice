@@ -1,12 +1,10 @@
 ﻿using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
-using NetOffice;
-using NetOffice.Misc;
+using NetOffice.Attributes;
 
 namespace NetOffice.AccessApi
 {
-
 	#region Delegates
 
 	#pragma warning disable
@@ -14,16 +12,17 @@ namespace NetOffice.AccessApi
 
 	#endregion
 
-	///<summary>
+	/// <summary>
 	/// CoClass DependencyInfo 
 	/// SupportByVersion Access, 11,12,14,15,16
-	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193194.aspx
-	///</summary>
-	[SupportByVersionAttribute("Access", 11,12,14,15,16)]
-	[EntityTypeAttribute(EntityType.IsCoClass)]
-	public class DependencyInfo : _DependencyInfo
+	/// </summary>
+	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff193194.aspx </remarks>
+	[SupportByVersion("Access", 11,12,14,15,16)]
+	[EntityType(EntityType.IsCoClass)]
+ 	public class DependencyInfo : _DependencyInfo
 	{
 		#pragma warning disable
+
 		#region Fields
 		
 		private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
@@ -37,6 +36,7 @@ namespace NetOffice.AccessApi
         /// <summary>
         /// Instance Type
         /// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
         public override Type InstanceType
         {
             get
@@ -103,17 +103,17 @@ namespace NetOffice.AccessApi
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of DependencyInfo 
-        ///</summary>		
+        /// </summary>		
 		public DependencyInfo():base("Access.DependencyInfo")
 		{
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of DependencyInfo
-        ///</summary>
+        /// </summary>
         ///<param name="progId">registered ProgID</param>
 		public DependencyInfo(string progId):base(progId)
 		{
@@ -123,46 +123,6 @@ namespace NetOffice.AccessApi
 		#endregion
 
 		#region Static CoClass Methods
-
-		/// <summary>
-        /// Returns all running Access.DependencyInfo objects from the environment/system
-        /// </summary>
-        /// <returns>an Access.DependencyInfo array</returns>
-		public static NetOffice.AccessApi.DependencyInfo[] GetActiveInstances()
-		{		
-			IDisposableEnumeration proxyList = NetOffice.ProxyService.GetActiveInstances("Access","DependencyInfo");
-			NetRuntimeSystem.Collections.Generic.List<NetOffice.AccessApi.DependencyInfo> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.AccessApi.DependencyInfo>();
-			foreach(object proxy in proxyList)
-				resultList.Add( new NetOffice.AccessApi.DependencyInfo(null, proxy) );
-			return resultList.ToArray();
-		}
-
-		/// <summary>
-        /// Returns a running Access.DependencyInfo object from the environment/system.
-        /// </summary>
-        /// <returns>an Access.DependencyInfo object or null</returns>
-		public static NetOffice.AccessApi.DependencyInfo GetActiveInstance()
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Access","DependencyInfo", false);
-			if(null != proxy)
-				return new NetOffice.AccessApi.DependencyInfo(null, proxy);
-			else
-				return null;
-		}
-
-		/// <summary>
-        /// Returns a running Access.DependencyInfo object from the environment/system. 
-        /// </summary>
-	    /// <param name="throwOnError">throw an exception if no object was found</param>
-        /// <returns>an Access.DependencyInfo object or null</returns>
-		public static NetOffice.AccessApi.DependencyInfo GetActiveInstance(bool throwOnError)
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Access","DependencyInfo", throwOnError);
-			if(null != proxy)
-				return new NetOffice.AccessApi.DependencyInfo(null, proxy);
-			else
-				return null;
-		}
 		#endregion
 
 		#region Events

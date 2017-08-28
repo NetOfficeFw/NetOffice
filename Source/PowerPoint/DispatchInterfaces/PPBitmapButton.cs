@@ -1,23 +1,33 @@
 ﻿using System;
 using NetRuntimeSystem = System;
-using System.Runtime.InteropServices;
-using System.Runtime.CompilerServices;
 using System.ComponentModel;
-using System.Reflection;
-using System.Collections.Generic;
-using NetOffice;
+using NetOffice.Attributes;
+
 namespace NetOffice.PowerPointApi
 {
-	///<summary>
+	/// <summary>
 	/// DispatchInterface PPBitmapButton 
 	/// SupportByVersion PowerPoint, 9
-	///</summary>
-	[SupportByVersionAttribute("PowerPoint", 9)]
-	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
-	public class PPBitmapButton : PPControl
+	/// </summary>
+	[SupportByVersion("PowerPoint", 9)]
+	[EntityType(EntityType.IsDispatchInterface)]
+ 	public class PPBitmapButton : PPControl
 	{
 		#pragma warning disable
+
 		#region Type Information
+
+		/// <summary>
+		/// Instance Type
+		/// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
+		public override Type InstanceType
+		{
+			get
+			{
+				return LateBindingApiWrapperType;
+			}
+		}
 
         private static Type _type;
 
@@ -28,14 +38,20 @@ namespace NetOffice.PowerPointApi
             {
                 if (null == _type)
                     _type = typeof(PPBitmapButton);
-                    
                 return _type;
             }
         }
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public PPBitmapButton(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -81,7 +97,7 @@ namespace NetOffice.PowerPointApi
 		{
 		}
 		
-		/// <param name="progId">registered ProgID</param>
+		/// <param name="progId">registered progID</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public PPBitmapButton(string progId) : base(progId)
 		{
@@ -95,19 +111,16 @@ namespace NetOffice.PowerPointApi
 		/// SupportByVersion PowerPoint 9
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 9)]
+		[SupportByVersion("PowerPoint", 9)]
 		public Int32 ResourceID
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "ResourceID", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "ResourceID");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "ResourceID", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "ResourceID", value);
 			}
 		}
 
@@ -115,19 +128,16 @@ namespace NetOffice.PowerPointApi
 		/// SupportByVersion PowerPoint 9
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 9)]
+		[SupportByVersion("PowerPoint", 9)]
 		public string OnPressed
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "OnPressed", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "OnPressed");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "OnPressed", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "OnPressed", value);
 			}
 		}
 
@@ -135,20 +145,16 @@ namespace NetOffice.PowerPointApi
 		/// SupportByVersion PowerPoint 9
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 9)]
+		[SupportByVersion("PowerPoint", 9)]
 		public NetOffice.OfficeApi.Enums.MsoTriState IsDefault
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "IsDefault", paramsArray);
-				int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-				return (NetOffice.OfficeApi.Enums.MsoTriState)intReturnItem;
+				return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoTriState>(this, "IsDefault");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "IsDefault", paramsArray);
+				Factory.ExecuteEnumPropertySet(this, "IsDefault", value);
 			}
 		}
 
@@ -156,20 +162,16 @@ namespace NetOffice.PowerPointApi
 		/// SupportByVersion PowerPoint 9
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 9)]
+		[SupportByVersion("PowerPoint", 9)]
 		public NetOffice.OfficeApi.Enums.MsoTriState IsEscape
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "IsEscape", paramsArray);
-				int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-				return (NetOffice.OfficeApi.Enums.MsoTriState)intReturnItem;
+				return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoTriState>(this, "IsEscape");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "IsEscape", paramsArray);
+				Factory.ExecuteEnumPropertySet(this, "IsEscape", value);
 			}
 		}
 
@@ -179,16 +181,15 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 9
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 9)]
+		[SupportByVersion("PowerPoint", 9)]
 		public void Click()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "Click", paramsArray);
+			 Factory.ExecuteMethod(this, "Click");
 		}
 
 		#endregion
+
 		#pragma warning restore
 	}
 }

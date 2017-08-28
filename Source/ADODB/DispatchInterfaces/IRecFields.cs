@@ -1,23 +1,33 @@
 ﻿using System;
 using NetRuntimeSystem = System;
-using System.Runtime.InteropServices;
-using System.Runtime.CompilerServices;
 using System.ComponentModel;
-using System.Reflection;
-using System.Collections.Generic;
-using NetOffice;
+using NetOffice.Attributes;
+
 namespace NetOffice.ADODBApi
 {
-	///<summary>
+	/// <summary>
 	/// DispatchInterface IRecFields 
 	/// SupportByVersion ADODB, 2.5
-	///</summary>
-	[SupportByVersionAttribute("ADODB", 2.5)]
-	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
-	public class IRecFields : COMObject
+	/// </summary>
+	[SupportByVersion("ADODB", 2.5)]
+	[EntityType(EntityType.IsDispatchInterface)]
+ 	public class IRecFields : COMObject
 	{
 		#pragma warning disable
+
 		#region Type Information
+
+		/// <summary>
+		/// Instance Type
+		/// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
+		public override Type InstanceType
+		{
+			get
+			{
+				return LateBindingApiWrapperType;
+			}
+		}
 
         private static Type _type;
 
@@ -28,14 +38,20 @@ namespace NetOffice.ADODBApi
             {
                 if (null == _type)
                     _type = typeof(IRecFields);
-                    
                 return _type;
             }
         }
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public IRecFields(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -81,7 +97,7 @@ namespace NetOffice.ADODBApi
 		{
 		}
 		
-		/// <param name="progId">registered ProgID</param>
+		/// <param name="progId">registered progID</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public IRecFields(string progId) : base(progId)
 		{
@@ -97,16 +113,15 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.5
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("ADODB", 2.5)]
+		[SupportByVersion("ADODB", 2.5)]
 		public void ADOCheck()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "ADOCheck", paramsArray);
+			 Factory.ExecuteMethod(this, "ADOCheck");
 		}
 
 		#endregion
+
 		#pragma warning restore
 	}
 }

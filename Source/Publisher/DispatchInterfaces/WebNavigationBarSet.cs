@@ -1,23 +1,33 @@
 ﻿using System;
 using NetRuntimeSystem = System;
-using System.Runtime.InteropServices;
-using System.Runtime.CompilerServices;
 using System.ComponentModel;
-using System.Reflection;
-using System.Collections.Generic;
-using NetOffice;
+using NetOffice.Attributes;
+
 namespace NetOffice.PublisherApi
 {
-	///<summary>
+	/// <summary>
 	/// DispatchInterface WebNavigationBarSet 
 	/// SupportByVersion Publisher, 14,15,16
-	///</summary>
-	[SupportByVersionAttribute("Publisher", 14,15,16)]
-	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
-	public class WebNavigationBarSet : COMObject
+	/// </summary>
+	[SupportByVersion("Publisher", 14,15,16)]
+	[EntityType(EntityType.IsDispatchInterface)]
+ 	public class WebNavigationBarSet : COMObject
 	{
 		#pragma warning disable
+
 		#region Type Information
+
+		/// <summary>
+		/// Instance Type
+		/// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
+		public override Type InstanceType
+		{
+			get
+			{
+				return LateBindingApiWrapperType;
+			}
+		}
 
         private static Type _type;
 
@@ -28,14 +38,20 @@ namespace NetOffice.PublisherApi
             {
                 if (null == _type)
                     _type = typeof(WebNavigationBarSet);
-                    
                 return _type;
             }
         }
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public WebNavigationBarSet(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -81,7 +97,7 @@ namespace NetOffice.PublisherApi
 		{
 		}
 		
-		/// <param name="progId">registered ProgID</param>
+		/// <param name="progId">registered progID</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public WebNavigationBarSet(string progId) : base(progId)
 		{
@@ -95,19 +111,16 @@ namespace NetOffice.PublisherApi
 		/// SupportByVersion Publisher 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		[SupportByVersion("Publisher", 14,15,16)]
 		public string Name
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Name", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "Name");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "Name", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "Name", value);
 			}
 		}
 
@@ -115,15 +128,12 @@ namespace NetOffice.PublisherApi
 		/// SupportByVersion Publisher 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		[SupportByVersion("Publisher", 14,15,16)]
 		public NetOffice.PublisherApi.Application Application
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				NetOffice.PublisherApi.Application newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.PublisherApi.Application.LateBindingApiWrapperType) as NetOffice.PublisherApi.Application;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.PublisherApi.Application>(this, "Application", NetOffice.PublisherApi.Application.LateBindingApiWrapperType);
 			}
 		}
 
@@ -132,15 +142,12 @@ namespace NetOffice.PublisherApi
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		[SupportByVersion("Publisher", 14,15,16), ProxyResult]
 		public object Parent
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Parent", paramsArray);
-				ICOMObject newObject = Factory.CreateObjectFromComProxy(this,returnItem);
-				return newObject;
+				return Factory.ExecuteReferencePropertyGet(this, "Parent");
 			}
 		}
 
@@ -148,20 +155,16 @@ namespace NetOffice.PublisherApi
 		/// SupportByVersion Publisher 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		[SupportByVersion("Publisher", 14,15,16)]
 		public NetOffice.PublisherApi.Enums.PbWizardNavBarDesign Design
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Design", paramsArray);
-				int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-				return (NetOffice.PublisherApi.Enums.PbWizardNavBarDesign)intReturnItem;
+				return Factory.ExecuteEnumPropertyGet<NetOffice.PublisherApi.Enums.PbWizardNavBarDesign>(this, "Design");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "Design", paramsArray);
+				Factory.ExecuteEnumPropertySet(this, "Design", value);
 			}
 		}
 
@@ -169,20 +172,16 @@ namespace NetOffice.PublisherApi
 		/// SupportByVersion Publisher 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		[SupportByVersion("Publisher", 14,15,16)]
 		public NetOffice.PublisherApi.Enums.PbWizardNavBarButtonStyle ButtonStyle
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "ButtonStyle", paramsArray);
-				int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-				return (NetOffice.PublisherApi.Enums.PbWizardNavBarButtonStyle)intReturnItem;
+				return Factory.ExecuteEnumPropertyGet<NetOffice.PublisherApi.Enums.PbWizardNavBarButtonStyle>(this, "ButtonStyle");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "ButtonStyle", paramsArray);
+				Factory.ExecuteEnumPropertySet(this, "ButtonStyle", value);
 			}
 		}
 
@@ -190,14 +189,12 @@ namespace NetOffice.PublisherApi
 		/// SupportByVersion Publisher 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		[SupportByVersion("Publisher", 14,15,16)]
 		public bool IsHorizontal
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "IsHorizontal", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "IsHorizontal");
 			}
 		}
 
@@ -205,19 +202,16 @@ namespace NetOffice.PublisherApi
 		/// SupportByVersion Publisher 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		[SupportByVersion("Publisher", 14,15,16)]
 		public Int32 HorizontalButtonCount
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "HorizontalButtonCount", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "HorizontalButtonCount");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "HorizontalButtonCount", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "HorizontalButtonCount", value);
 			}
 		}
 
@@ -225,20 +219,16 @@ namespace NetOffice.PublisherApi
 		/// SupportByVersion Publisher 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		[SupportByVersion("Publisher", 14,15,16)]
 		public NetOffice.PublisherApi.Enums.PbWizardNavBarAlignment HorizontalAlignment
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "HorizontalAlignment", paramsArray);
-				int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-				return (NetOffice.PublisherApi.Enums.PbWizardNavBarAlignment)intReturnItem;
+				return Factory.ExecuteEnumPropertyGet<NetOffice.PublisherApi.Enums.PbWizardNavBarAlignment>(this, "HorizontalAlignment");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "HorizontalAlignment", paramsArray);
+				Factory.ExecuteEnumPropertySet(this, "HorizontalAlignment", value);
 			}
 		}
 
@@ -246,19 +236,16 @@ namespace NetOffice.PublisherApi
 		/// SupportByVersion Publisher 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		[SupportByVersion("Publisher", 14,15,16)]
 		public bool AutoUpdate
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "AutoUpdate", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "AutoUpdate");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "AutoUpdate", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "AutoUpdate", value);
 			}
 		}
 
@@ -266,19 +253,16 @@ namespace NetOffice.PublisherApi
 		/// SupportByVersion Publisher 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		[SupportByVersion("Publisher", 14,15,16)]
 		public bool ShowSelected
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "ShowSelected", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "ShowSelected");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "ShowSelected", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "ShowSelected", value);
 			}
 		}
 
@@ -286,20 +270,16 @@ namespace NetOffice.PublisherApi
 		/// SupportByVersion Publisher 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		[SupportByVersion("Publisher", 14,15,16)]
 		public NetOffice.PublisherApi.WebNavigationBarHyperlinks Links
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Links", paramsArray);
-				NetOffice.PublisherApi.WebNavigationBarHyperlinks newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.PublisherApi.WebNavigationBarHyperlinks.LateBindingApiWrapperType) as NetOffice.PublisherApi.WebNavigationBarHyperlinks;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.PublisherApi.WebNavigationBarHyperlinks>(this, "Links", NetOffice.PublisherApi.WebNavigationBarHyperlinks.LateBindingApiWrapperType);
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "Links", paramsArray);
+				Factory.ExecuteReferencePropertySet(this, "Links", value);
 			}
 		}
 
@@ -309,60 +289,49 @@ namespace NetOffice.PublisherApi
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		[SupportByVersion("Publisher", 14,15,16)]
 		public void DeleteSetAndInstances()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "DeleteSetAndInstances", paramsArray);
+			 Factory.ExecuteMethod(this, "DeleteSetAndInstances");
 		}
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="left">object Left</param>
-		/// <param name="top">object Top</param>
-		/// <param name="width">optional object Width</param>
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		/// <param name="left">object left</param>
+		/// <param name="top">object top</param>
+		/// <param name="width">optional object width</param>
+		[SupportByVersion("Publisher", 14,15,16)]
 		public NetOffice.PublisherApi.ShapeRange AddToEveryPage(object left, object top, object width)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(left, top, width);
-			object returnItem = Invoker.MethodReturn(this, "AddToEveryPage", paramsArray);
-			NetOffice.PublisherApi.ShapeRange newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PublisherApi.ShapeRange.LateBindingApiWrapperType) as NetOffice.PublisherApi.ShapeRange;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PublisherApi.ShapeRange>(this, "AddToEveryPage", NetOffice.PublisherApi.ShapeRange.LateBindingApiWrapperType, left, top, width);
 		}
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="left">object Left</param>
-		/// <param name="top">object Top</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		/// <param name="left">object left</param>
+		/// <param name="top">object top</param>
+		[CustomMethod]
+		[SupportByVersion("Publisher", 14,15,16)]
 		public NetOffice.PublisherApi.ShapeRange AddToEveryPage(object left, object top)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(left, top);
-			object returnItem = Invoker.MethodReturn(this, "AddToEveryPage", paramsArray);
-			NetOffice.PublisherApi.ShapeRange newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PublisherApi.ShapeRange.LateBindingApiWrapperType) as NetOffice.PublisherApi.ShapeRange;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PublisherApi.ShapeRange>(this, "AddToEveryPage", NetOffice.PublisherApi.ShapeRange.LateBindingApiWrapperType, left, top);
 		}
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="orientation">NetOffice.PublisherApi.Enums.PbNavBarOrientation Orientation</param>
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		/// <param name="orientation">NetOffice.PublisherApi.Enums.PbNavBarOrientation orientation</param>
+		[SupportByVersion("Publisher", 14,15,16)]
 		public void ChangeOrientation(NetOffice.PublisherApi.Enums.PbNavBarOrientation orientation)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(orientation);
-			Invoker.Method(this, "ChangeOrientation", paramsArray);
+			 Factory.ExecuteMethod(this, "ChangeOrientation", orientation);
 		}
 
 		#endregion
+
 		#pragma warning restore
 	}
 }

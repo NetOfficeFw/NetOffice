@@ -1,75 +1,76 @@
 ﻿using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
-using NetOffice;
-using NetOffice.Misc;
+using NetOffice.Attributes;
+using NetOffice.Contribution.CollectionsGeneric;
 
 namespace NetOffice.ExcelApi
 {
-
 	#region Delegates
 
 	#pragma warning disable
 	public delegate void Workbook_OpenEventHandler();
 	public delegate void Workbook_ActivateEventHandler();
 	public delegate void Workbook_DeactivateEventHandler();
-	public delegate void Workbook_BeforeCloseEventHandler(ref bool Cancel);
-	public delegate void Workbook_BeforeSaveEventHandler(bool SaveAsUI, ref bool Cancel);
-	public delegate void Workbook_BeforePrintEventHandler(ref bool Cancel);
-	public delegate void Workbook_NewSheetEventHandler(COMObject Sh);
+	public delegate void Workbook_BeforeCloseEventHandler(ref bool cancel);
+	public delegate void Workbook_BeforeSaveEventHandler(bool saveAsUI, ref bool cancel);
+	public delegate void Workbook_BeforePrintEventHandler(ref bool cancel);
+	public delegate void Workbook_NewSheetEventHandler(ICOMObject sh);
 	public delegate void Workbook_AddinInstallEventHandler();
 	public delegate void Workbook_AddinUninstallEventHandler();
-	public delegate void Workbook_WindowResizeEventHandler(NetOffice.ExcelApi.Window Wn);
-	public delegate void Workbook_WindowActivateEventHandler(NetOffice.ExcelApi.Window Wn);
-	public delegate void Workbook_WindowDeactivateEventHandler(NetOffice.ExcelApi.Window Wn);
-	public delegate void Workbook_SheetSelectionChangeEventHandler(COMObject Sh, NetOffice.ExcelApi.Range Target);
-	public delegate void Workbook_SheetBeforeDoubleClickEventHandler(COMObject Sh, NetOffice.ExcelApi.Range Target, ref bool Cancel);
-	public delegate void Workbook_SheetBeforeRightClickEventHandler(COMObject Sh, NetOffice.ExcelApi.Range Target, ref bool Cancel);
-	public delegate void Workbook_SheetActivateEventHandler(COMObject Sh);
-	public delegate void Workbook_SheetDeactivateEventHandler(COMObject Sh);
-	public delegate void Workbook_SheetCalculateEventHandler(COMObject Sh);
-	public delegate void Workbook_SheetChangeEventHandler(COMObject Sh, NetOffice.ExcelApi.Range Target);
-	public delegate void Workbook_SheetFollowHyperlinkEventHandler(COMObject Sh, NetOffice.ExcelApi.Hyperlink Target);
-	public delegate void Workbook_SheetPivotTableUpdateEventHandler(COMObject Sh, NetOffice.ExcelApi.PivotTable Target);
-	public delegate void Workbook_PivotTableCloseConnectionEventHandler(NetOffice.ExcelApi.PivotTable Target);
-	public delegate void Workbook_PivotTableOpenConnectionEventHandler(NetOffice.ExcelApi.PivotTable Target);
-	public delegate void Workbook_SyncEventHandler(NetOffice.OfficeApi.Enums.MsoSyncEventType SyncEventType);
-	public delegate void Workbook_BeforeXmlImportEventHandler(NetOffice.ExcelApi.XmlMap Map, string Url, bool IsRefresh, ref bool Cancel);
-	public delegate void Workbook_AfterXmlImportEventHandler(NetOffice.ExcelApi.XmlMap Map, bool IsRefresh, NetOffice.ExcelApi.Enums.XlXmlImportResult Result);
-	public delegate void Workbook_BeforeXmlExportEventHandler(NetOffice.ExcelApi.XmlMap Map, string Url, ref bool Cancel);
-	public delegate void Workbook_AfterXmlExportEventHandler(NetOffice.ExcelApi.XmlMap Map, string Url, NetOffice.ExcelApi.Enums.XlXmlExportResult Result);
-	public delegate void Workbook_RowsetCompleteEventHandler(string Description, string Sheet, bool Success);
-	public delegate void Workbook_SheetPivotTableAfterValueChangeEventHandler(COMObject Sh, NetOffice.ExcelApi.PivotTable TargetPivotTable, NetOffice.ExcelApi.Range TargetRange);
-	public delegate void Workbook_SheetPivotTableBeforeAllocateChangesEventHandler(COMObject Sh, NetOffice.ExcelApi.PivotTable TargetPivotTable, Int32 ValueChangeStart, Int32 ValueChangeEnd, ref bool Cancel);
-	public delegate void Workbook_SheetPivotTableBeforeCommitChangesEventHandler(COMObject Sh, NetOffice.ExcelApi.PivotTable TargetPivotTable, Int32 ValueChangeStart, Int32 ValueChangeEnd, ref bool Cancel);
-	public delegate void Workbook_SheetPivotTableBeforeDiscardChangesEventHandler(COMObject Sh, NetOffice.ExcelApi.PivotTable TargetPivotTable, Int32 ValueChangeStart, Int32 ValueChangeEnd);
-	public delegate void Workbook_SheetPivotTableChangeSyncEventHandler(COMObject Sh, NetOffice.ExcelApi.PivotTable Target);
-	public delegate void Workbook_AfterSaveEventHandler(bool Success);
-	public delegate void Workbook_NewChartEventHandler(NetOffice.ExcelApi.Chart Ch);
-	public delegate void Workbook_SheetLensGalleryRenderCompleteEventHandler(COMObject Sh);
-	public delegate void Workbook_SheetTableUpdateEventHandler(COMObject Sh, NetOffice.ExcelApi.TableObject Target);
-	public delegate void Workbook_ModelChangeEventHandler(NetOffice.ExcelApi.ModelChanges Changes);
-	public delegate void Workbook_SheetBeforeDeleteEventHandler(COMObject Sh);
+	public delegate void Workbook_WindowResizeEventHandler(NetOffice.ExcelApi.Window wn);
+	public delegate void Workbook_WindowActivateEventHandler(NetOffice.ExcelApi.Window wn);
+	public delegate void Workbook_WindowDeactivateEventHandler(NetOffice.ExcelApi.Window wn);
+	public delegate void Workbook_SheetSelectionChangeEventHandler(ICOMObject sh, NetOffice.ExcelApi.Range target);
+	public delegate void Workbook_SheetBeforeDoubleClickEventHandler(ICOMObject sh, NetOffice.ExcelApi.Range target, ref bool cancel);
+	public delegate void Workbook_SheetBeforeRightClickEventHandler(ICOMObject sh, NetOffice.ExcelApi.Range target, ref bool cancel);
+	public delegate void Workbook_SheetActivateEventHandler(ICOMObject sh);
+	public delegate void Workbook_SheetDeactivateEventHandler(ICOMObject sh);
+	public delegate void Workbook_SheetCalculateEventHandler(ICOMObject sh);
+	public delegate void Workbook_SheetChangeEventHandler(ICOMObject sh, NetOffice.ExcelApi.Range target);
+	public delegate void Workbook_SheetFollowHyperlinkEventHandler(ICOMObject sh, NetOffice.ExcelApi.Hyperlink target);
+	public delegate void Workbook_SheetPivotTableUpdateEventHandler(ICOMObject sh, NetOffice.ExcelApi.PivotTable target);
+	public delegate void Workbook_PivotTableCloseConnectionEventHandler(NetOffice.ExcelApi.PivotTable target);
+	public delegate void Workbook_PivotTableOpenConnectionEventHandler(NetOffice.ExcelApi.PivotTable target);
+	public delegate void Workbook_SyncEventHandler(NetOffice.OfficeApi.Enums.MsoSyncEventType syncEventType);
+	public delegate void Workbook_BeforeXmlImportEventHandler(NetOffice.ExcelApi.XmlMap map, string url, bool IsRefresh, ref bool cancel);
+	public delegate void Workbook_AfterXmlImportEventHandler(NetOffice.ExcelApi.XmlMap map, bool isRefresh, NetOffice.ExcelApi.Enums.XlXmlImportResult result);
+	public delegate void Workbook_BeforeXmlExportEventHandler(NetOffice.ExcelApi.XmlMap map, string url, ref bool cancel);
+	public delegate void Workbook_AfterXmlExportEventHandler(NetOffice.ExcelApi.XmlMap map, string url, NetOffice.ExcelApi.Enums.XlXmlExportResult result);
+	public delegate void Workbook_RowsetCompleteEventHandler(string description, string sheet, bool success);
+	public delegate void Workbook_SheetPivotTableAfterValueChangeEventHandler(ICOMObject sh, NetOffice.ExcelApi.PivotTable targetPivotTable, NetOffice.ExcelApi.Range targetRange);
+	public delegate void Workbook_SheetPivotTableBeforeAllocateChangesEventHandler(ICOMObject sh, NetOffice.ExcelApi.PivotTable targetPivotTable, Int32 valueChangeStart, Int32 valueChangeEnd, ref bool cancel);
+	public delegate void Workbook_SheetPivotTableBeforeCommitChangesEventHandler(ICOMObject sh, NetOffice.ExcelApi.PivotTable targetPivotTable, Int32 valueChangeStart, Int32 valueChangeEnd, ref bool cancel);
+	public delegate void Workbook_SheetPivotTableBeforeDiscardChangesEventHandler(ICOMObject sh, NetOffice.ExcelApi.PivotTable targetPivotTable, Int32 valueChangeStart, Int32 valueChangeEnd);
+	public delegate void Workbook_SheetPivotTableChangeSyncEventHandler(ICOMObject sh, NetOffice.ExcelApi.PivotTable target);
+	public delegate void Workbook_AfterSaveEventHandler(bool success);
+	public delegate void Workbook_NewChartEventHandler(NetOffice.ExcelApi.Chart ch);
+	public delegate void Workbook_SheetLensGalleryRenderCompleteEventHandler(ICOMObject sh);
+	public delegate void Workbook_SheetTableUpdateEventHandler(ICOMObject sh, NetOffice.ExcelApi.TableObject target);
+	public delegate void Workbook_ModelChangeEventHandler(NetOffice.ExcelApi.ModelChanges changes);
+	public delegate void Workbook_SheetBeforeDeleteEventHandler(ICOMObject sh);
 	#pragma warning restore
 
 	#endregion
 
-	///<summary>
+	/// <summary>
 	/// CoClass Workbook 
 	/// SupportByVersion Excel, 9,10,11,12,14,15,16
-	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835568.aspx
-	///</summary>
-	[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
-	[EntityTypeAttribute(EntityType.IsCoClass)]
-	public class Workbook : _Workbook,IEventBinding
+	/// </summary>
+	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835568.aspx </remarks>
+	[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+	[EntityType(EntityType.IsCoClass)]
+	[EventSink(typeof(Events.WorkbookEvents_SinkHelper))]
+	public class Workbook : _Workbook, IEventBinding
 	{
 		#pragma warning disable
+
 		#region Fields
 		
 		private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
 		private string _activeSinkId;
 		private NetRuntimeSystem.Type _thisType;
-		WorkbookEvents_SinkHelper _workbookEvents_SinkHelper;
+        private Events.WorkbookEvents_SinkHelper _workbookEvents_SinkHelper;
 	
 		#endregion
 
@@ -78,6 +79,7 @@ namespace NetOffice.ExcelApi
         /// <summary>
         /// Instance Type
         /// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
         public override Type InstanceType
         {
             get
@@ -144,74 +146,54 @@ namespace NetOffice.ExcelApi
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of Workbook 
-        ///</summary>		
+        /// </summary>		
 		public Workbook():base("Excel.Workbook")
 		{
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of Workbook
-        ///</summary>
+        /// </summary>
         ///<param name="progId">registered ProgID</param>
 		public Workbook(string progId):base(progId)
 		{
 			
 		}
 
-		#endregion
+        #endregion
 
-		#region Static CoClass Methods
+        #region Static CoClass Methods
 
-		/// <summary>
-        /// Returns all running Excel.Workbook objects from the environment/system
+        /// <summary>
+        /// Returns all running Excel.Workbook instances from the environment/system
         /// </summary>
-        /// <returns>an Excel.Workbook array</returns>
-		public static NetOffice.ExcelApi.Workbook[] GetActiveInstances()
-		{		
-			IDisposableEnumeration proxyList = NetOffice.ProxyService.GetActiveInstances("Excel","Workbook");
-			NetRuntimeSystem.Collections.Generic.List<NetOffice.ExcelApi.Workbook> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.ExcelApi.Workbook>();
-			foreach(object proxy in proxyList)
-				resultList.Add( new NetOffice.ExcelApi.Workbook(null, proxy) );
-			return resultList.ToArray();
-		}
+        /// <returns>Excel.Workbook sequence</returns>
+        public static IDisposableSequence<Application> GetActiveInstances()
+        {
+            return Running.ProxyService.GetActiveInstances<Application>("Excel", "Workbook");
+        }
 
-		/// <summary>
-        /// Returns a running Excel.Workbook object from the environment/system.
+        /// <summary>
+        /// Returns a running Excel.Workbook instance from the environment/system
         /// </summary>
-        /// <returns>an Excel.Workbook object or null</returns>
-		public static NetOffice.ExcelApi.Workbook GetActiveInstance()
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Excel","Workbook", false);
-			if(null != proxy)
-				return new NetOffice.ExcelApi.Workbook(null, proxy);
-			else
-				return null;
-		}
+        /// <param name="throwExceptionIfNotFound">throw exception if unable to find an instance</param>
+        /// <returns>Excel.Workbook instance or null</returns>
+        public static Application GetActiveInstance(bool throwExceptionIfNotFound = false)
+        {
+            return Running.ProxyService.GetActiveInstance<Application>("Excel", "Workbook", throwExceptionIfNotFound);
+        }
 
-		/// <summary>
-        /// Returns a running Excel.Workbook object from the environment/system. 
+        #endregion
+
+        #region Events
+
+        /// <summary>
+        /// SupportByVersion Excel, 9,10,11,12,14,15,16
         /// </summary>
-	    /// <param name="throwOnError">throw an exception if no object was found</param>
-        /// <returns>an Excel.Workbook object or null</returns>
-		public static NetOffice.ExcelApi.Workbook GetActiveInstance(bool throwOnError)
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Excel","Workbook", throwOnError);
-			if(null != proxy)
-				return new NetOffice.ExcelApi.Workbook(null, proxy);
-			else
-				return null;
-		}
-		#endregion
-
-		#region Events
-
-		/// <summary>
-		/// SupportByVersion Excel, 9,10,11,12,14,15,16
-		/// </summary>
-		private event Workbook_OpenEventHandler _OpenEvent;
+        private event Workbook_OpenEventHandler _OpenEvent;
 
 		/// <summary>
 		/// SupportByVersion Excel 9 10 11 12 14 15,16
@@ -240,19 +222,19 @@ namespace NetOffice.ExcelApi
 		/// SupportByVersion Excel 9 10 11 12 14 15,16
 		/// </summary>
 		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff823078.aspx </remarks>
-		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public event Workbook_ActivateEventHandler ActivateEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_ActivateEvent += value;
-			}
-			remove
-			{
-				_ActivateEvent -= value;
-			}
-		}
+		[SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
+        public event Workbook_ActivateEventHandler ActivateEvent
+        {
+            add
+            {
+                CreateEventBridge();
+                _ActivateEvent += value;
+            }
+            remove
+            {
+                _ActivateEvent -= value;
+            }
+        }
 
 		/// <summary>
 		/// SupportByVersion Excel, 9,10,11,12,14,15,16
@@ -1145,12 +1127,12 @@ namespace NetOffice.ExcelApi
 				return;
 	
             if (null == _activeSinkId)
-				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, WorkbookEvents_SinkHelper.Id);
+				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, Events.WorkbookEvents_SinkHelper.Id);
 
 
-			if(WorkbookEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
+			if(Events.WorkbookEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
 			{
-				_workbookEvents_SinkHelper = new WorkbookEvents_SinkHelper(this, _connectPoint);
+				_workbookEvents_SinkHelper = new Events.WorkbookEvents_SinkHelper(this, _connectPoint);
 				return;
 			} 
         }

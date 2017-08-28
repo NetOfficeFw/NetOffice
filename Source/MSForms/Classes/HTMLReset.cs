@@ -1,12 +1,10 @@
 ﻿using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
-using NetOffice;
-using NetOffice.Misc;
+using NetOffice.Attributes;
 
 namespace NetOffice.MSFormsApi
 {
-
 	#region Delegates
 
 	#pragma warning disable
@@ -15,21 +13,23 @@ namespace NetOffice.MSFormsApi
 
 	#endregion
 
-	///<summary>
+	/// <summary>
 	/// CoClass HTMLReset 
 	/// SupportByVersion MSForms, 2
-	///</summary>
-	[SupportByVersionAttribute("MSForms", 2)]
-	[EntityTypeAttribute(EntityType.IsCoClass)]
-	public class HTMLReset : IWHTMLReset,IEventBinding
+	/// </summary>
+	[SupportByVersion("MSForms", 2)]
+	[EntityType(EntityType.IsCoClass)]
+	[EventSink(typeof(Events.WHTMLControlEvents2_SinkHelper))]
+	public class HTMLReset : IWHTMLReset, IEventBinding
 	{
 		#pragma warning disable
+
 		#region Fields
 		
 		private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
 		private string _activeSinkId;
 		private NetRuntimeSystem.Type _thisType;
-		WHTMLControlEvents2_SinkHelper _wHTMLControlEvents2_SinkHelper;
+		private Events.WHTMLControlEvents2_SinkHelper _wHTMLControlEvents2_SinkHelper;
 	
 		#endregion
 
@@ -38,6 +38,7 @@ namespace NetOffice.MSFormsApi
         /// <summary>
         /// Instance Type
         /// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
         public override Type InstanceType
         {
             get
@@ -104,17 +105,17 @@ namespace NetOffice.MSFormsApi
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of HTMLReset 
-        ///</summary>		
+        /// </summary>		
 		public HTMLReset():base("MSForms.HTMLReset")
 		{
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of HTMLReset
-        ///</summary>
+        /// </summary>
         ///<param name="progId">registered ProgID</param>
 		public HTMLReset(string progId):base(progId)
 		{
@@ -124,46 +125,6 @@ namespace NetOffice.MSFormsApi
 		#endregion
 
 		#region Static CoClass Methods
-
-		/// <summary>
-        /// Returns all running MSForms.HTMLReset objects from the environment/system
-        /// </summary>
-        /// <returns>an MSForms.HTMLReset array</returns>
-		public static NetOffice.MSFormsApi.HTMLReset[] GetActiveInstances()
-		{		
-			IDisposableEnumeration proxyList = NetOffice.ProxyService.GetActiveInstances("MSForms","HTMLReset");
-			NetRuntimeSystem.Collections.Generic.List<NetOffice.MSFormsApi.HTMLReset> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.MSFormsApi.HTMLReset>();
-			foreach(object proxy in proxyList)
-				resultList.Add( new NetOffice.MSFormsApi.HTMLReset(null, proxy) );
-			return resultList.ToArray();
-		}
-
-		/// <summary>
-        /// Returns a running MSForms.HTMLReset object from the environment/system.
-        /// </summary>
-        /// <returns>an MSForms.HTMLReset object or null</returns>
-		public static NetOffice.MSFormsApi.HTMLReset GetActiveInstance()
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("MSForms","HTMLReset", false);
-			if(null != proxy)
-				return new NetOffice.MSFormsApi.HTMLReset(null, proxy);
-			else
-				return null;
-		}
-
-		/// <summary>
-        /// Returns a running MSForms.HTMLReset object from the environment/system. 
-        /// </summary>
-	    /// <param name="throwOnError">throw an exception if no object was found</param>
-        /// <returns>an MSForms.HTMLReset object or null</returns>
-		public static NetOffice.MSFormsApi.HTMLReset GetActiveInstance(bool throwOnError)
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("MSForms","HTMLReset", throwOnError);
-			if(null != proxy)
-				return new NetOffice.MSFormsApi.HTMLReset(null, proxy);
-			else
-				return null;
-		}
 		#endregion
 
 		#region Events
@@ -207,12 +168,12 @@ namespace NetOffice.MSFormsApi
 				return;
 	
             if (null == _activeSinkId)
-				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, WHTMLControlEvents2_SinkHelper.Id);
+				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, Events.WHTMLControlEvents2_SinkHelper.Id);
 
 
-			if(WHTMLControlEvents2_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
+			if(Events.WHTMLControlEvents2_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
 			{
-				_wHTMLControlEvents2_SinkHelper = new WHTMLControlEvents2_SinkHelper(this, _connectPoint);
+				_wHTMLControlEvents2_SinkHelper = new Events.WHTMLControlEvents2_SinkHelper(this, _connectPoint);
 				return;
 			} 
         }

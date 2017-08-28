@@ -1,12 +1,10 @@
 ﻿using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
-using NetOffice;
-using NetOffice.Misc;
+using NetOffice.Attributes;
 
 namespace NetOffice.MSFormsApi
 {
-
 	#region Delegates
 
 	#pragma warning disable
@@ -14,15 +12,16 @@ namespace NetOffice.MSFormsApi
 
 	#endregion
 
-	///<summary>
+	/// <summary>
 	/// CoClass ReturnString 
 	/// SupportByVersion MSForms, 2
-	///</summary>
-	[SupportByVersionAttribute("MSForms", 2)]
-	[EntityTypeAttribute(EntityType.IsCoClass)]
-	public class ReturnString : IReturnString
+	/// </summary>
+	[SupportByVersion("MSForms", 2)]
+	[EntityType(EntityType.IsCoClass)]
+ 	public class ReturnString : IReturnString
 	{
 		#pragma warning disable
+
 		#region Fields
 		
 		private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
@@ -36,6 +35,7 @@ namespace NetOffice.MSFormsApi
         /// <summary>
         /// Instance Type
         /// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
         public override Type InstanceType
         {
             get
@@ -102,17 +102,17 @@ namespace NetOffice.MSFormsApi
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of ReturnString 
-        ///</summary>		
+        /// </summary>		
 		public ReturnString():base("MSForms.ReturnString")
 		{
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of ReturnString
-        ///</summary>
+        /// </summary>
         ///<param name="progId">registered ProgID</param>
 		public ReturnString(string progId):base(progId)
 		{
@@ -122,46 +122,6 @@ namespace NetOffice.MSFormsApi
 		#endregion
 
 		#region Static CoClass Methods
-
-		/// <summary>
-        /// Returns all running MSForms.ReturnString objects from the environment/system
-        /// </summary>
-        /// <returns>an MSForms.ReturnString array</returns>
-		public static NetOffice.MSFormsApi.ReturnString[] GetActiveInstances()
-		{		
-			IDisposableEnumeration proxyList = NetOffice.ProxyService.GetActiveInstances("MSForms","ReturnString");
-			NetRuntimeSystem.Collections.Generic.List<NetOffice.MSFormsApi.ReturnString> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.MSFormsApi.ReturnString>();
-			foreach(object proxy in proxyList)
-				resultList.Add( new NetOffice.MSFormsApi.ReturnString(null, proxy) );
-			return resultList.ToArray();
-		}
-
-		/// <summary>
-        /// Returns a running MSForms.ReturnString object from the environment/system.
-        /// </summary>
-        /// <returns>an MSForms.ReturnString object or null</returns>
-		public static NetOffice.MSFormsApi.ReturnString GetActiveInstance()
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("MSForms","ReturnString", false);
-			if(null != proxy)
-				return new NetOffice.MSFormsApi.ReturnString(null, proxy);
-			else
-				return null;
-		}
-
-		/// <summary>
-        /// Returns a running MSForms.ReturnString object from the environment/system. 
-        /// </summary>
-	    /// <param name="throwOnError">throw an exception if no object was found</param>
-        /// <returns>an MSForms.ReturnString object or null</returns>
-		public static NetOffice.MSFormsApi.ReturnString GetActiveInstance(bool throwOnError)
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("MSForms","ReturnString", throwOnError);
-			if(null != proxy)
-				return new NetOffice.MSFormsApi.ReturnString(null, proxy);
-			else
-				return null;
-		}
 		#endregion
 
 		#region Events

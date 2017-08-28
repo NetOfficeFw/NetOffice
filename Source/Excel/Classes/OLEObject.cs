@@ -1,12 +1,10 @@
 ﻿using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
-using NetOffice;
-using NetOffice.Misc;
+using NetOffice.Attributes;
 
 namespace NetOffice.ExcelApi
 {
-
 	#region Delegates
 
 	#pragma warning disable
@@ -16,22 +14,24 @@ namespace NetOffice.ExcelApi
 
 	#endregion
 
-	///<summary>
+	/// <summary>
 	/// CoClass OLEObject 
 	/// SupportByVersion Excel, 9,10,11,12,14,15,16
-	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838421.aspx
-	///</summary>
-	[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
-	[EntityTypeAttribute(EntityType.IsCoClass)]
-	public class OLEObject : _OLEObject,IEventBinding
+	/// </summary>
+	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff838421.aspx </remarks>
+	[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+	[EntityType(EntityType.IsCoClass)]
+	[EventSink(typeof(Events.OLEObjectEvents_SinkHelper))]
+	public class OLEObject : _OLEObject, IEventBinding
 	{
 		#pragma warning disable
+
 		#region Fields
 		
 		private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
 		private string _activeSinkId;
 		private NetRuntimeSystem.Type _thisType;
-		OLEObjectEvents_SinkHelper _oLEObjectEvents_SinkHelper;
+        private Events.OLEObjectEvents_SinkHelper _oLEObjectEvents_SinkHelper;
 	
 		#endregion
 
@@ -40,6 +40,7 @@ namespace NetOffice.ExcelApi
         /// <summary>
         /// Instance Type
         /// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
         public override Type InstanceType
         {
             get
@@ -106,17 +107,17 @@ namespace NetOffice.ExcelApi
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of OLEObject 
-        ///</summary>		
+        /// </summary>		
 		public OLEObject():base("Excel.OLEObject")
 		{
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of OLEObject
-        ///</summary>
+        /// </summary>
         ///<param name="progId">registered ProgID</param>
 		public OLEObject(string progId):base(progId)
 		{
@@ -126,46 +127,6 @@ namespace NetOffice.ExcelApi
 		#endregion
 
 		#region Static CoClass Methods
-
-		/// <summary>
-        /// Returns all running Excel.OLEObject objects from the environment/system
-        /// </summary>
-        /// <returns>an Excel.OLEObject array</returns>
-		public static NetOffice.ExcelApi.OLEObject[] GetActiveInstances()
-		{		
-			IDisposableEnumeration proxyList = NetOffice.ProxyService.GetActiveInstances("Excel","OLEObject");
-			NetRuntimeSystem.Collections.Generic.List<NetOffice.ExcelApi.OLEObject> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.ExcelApi.OLEObject>();
-			foreach(object proxy in proxyList)
-				resultList.Add( new NetOffice.ExcelApi.OLEObject(null, proxy) );
-			return resultList.ToArray();
-		}
-
-		/// <summary>
-        /// Returns a running Excel.OLEObject object from the environment/system.
-        /// </summary>
-        /// <returns>an Excel.OLEObject object or null</returns>
-		public static NetOffice.ExcelApi.OLEObject GetActiveInstance()
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Excel","OLEObject", false);
-			if(null != proxy)
-				return new NetOffice.ExcelApi.OLEObject(null, proxy);
-			else
-				return null;
-		}
-
-		/// <summary>
-        /// Returns a running Excel.OLEObject object from the environment/system. 
-        /// </summary>
-	    /// <param name="throwOnError">throw an exception if no object was found</param>
-        /// <returns>an Excel.OLEObject object or null</returns>
-		public static NetOffice.ExcelApi.OLEObject GetActiveInstance(bool throwOnError)
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Excel","OLEObject", throwOnError);
-			if(null != proxy)
-				return new NetOffice.ExcelApi.OLEObject(null, proxy);
-			else
-				return null;
-		}
 		#endregion
 
 		#region Events
@@ -233,12 +194,12 @@ namespace NetOffice.ExcelApi
 				return;
 	
             if (null == _activeSinkId)
-				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, OLEObjectEvents_SinkHelper.Id);
+				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, Events.OLEObjectEvents_SinkHelper.Id);
 
 
-			if(OLEObjectEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
+			if(Events.OLEObjectEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
 			{
-				_oLEObjectEvents_SinkHelper = new OLEObjectEvents_SinkHelper(this, _connectPoint);
+				_oLEObjectEvents_SinkHelper = new Events.OLEObjectEvents_SinkHelper(this, _connectPoint);
 				return;
 			} 
         }

@@ -1,62 +1,61 @@
 ﻿using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
-using NetOffice;
-using NetOffice.Misc;
+using NetOffice.Attributes;
 
 namespace NetOffice.OutlookApi
 {
-
 	#region Delegates
 
 	#pragma warning disable
-	public delegate void AppointmentItem_OpenEventHandler(ref bool Cancel);
-	public delegate void AppointmentItem_CustomActionEventHandler(COMObject Action, COMObject Response, ref bool Cancel);
-	public delegate void AppointmentItem_CustomPropertyChangeEventHandler(string Name);
-	public delegate void AppointmentItem_ForwardEventHandler(COMObject Forward, ref bool Cancel);
-	public delegate void AppointmentItem_CloseEventHandler(ref bool Cancel);
+	public delegate void AppointmentItem_OpenEventHandler(ref bool cancel);
+	public delegate void AppointmentItem_CustomActionEventHandler(ICOMObject action, ICOMObject response, ref bool cancel);
+	public delegate void AppointmentItem_CustomPropertyChangeEventHandler(string name);
+	public delegate void AppointmentItem_ForwardEventHandler(ICOMObject forward, ref bool cancel);
+	public delegate void AppointmentItem_CloseEventHandler(ref bool cancel);
 	public delegate void AppointmentItem_PropertyChangeEventHandler(string Name);
 	public delegate void AppointmentItem_ReadEventHandler();
-	public delegate void AppointmentItem_ReplyEventHandler(COMObject Response, ref bool Cancel);
-	public delegate void AppointmentItem_ReplyAllEventHandler(COMObject Response, ref bool Cancel);
-	public delegate void AppointmentItem_SendEventHandler(ref bool Cancel);
-	public delegate void AppointmentItem_WriteEventHandler(ref bool Cancel);
-	public delegate void AppointmentItem_BeforeCheckNamesEventHandler(ref bool Cancel);
-	public delegate void AppointmentItem_AttachmentAddEventHandler(NetOffice.OutlookApi.Attachment Attachment);
-	public delegate void AppointmentItem_AttachmentReadEventHandler(NetOffice.OutlookApi.Attachment Attachment);
-	public delegate void AppointmentItem_BeforeAttachmentSaveEventHandler(NetOffice.OutlookApi.Attachment Attachment, ref bool Cancel);
-	public delegate void AppointmentItem_BeforeDeleteEventHandler(COMObject Item, ref bool Cancel);
-	public delegate void AppointmentItem_AttachmentRemoveEventHandler(NetOffice.OutlookApi.Attachment Attachment);
-	public delegate void AppointmentItem_BeforeAttachmentAddEventHandler(NetOffice.OutlookApi.Attachment Attachment, ref bool Cancel);
-	public delegate void AppointmentItem_BeforeAttachmentPreviewEventHandler(NetOffice.OutlookApi.Attachment Attachment, ref bool Cancel);
-	public delegate void AppointmentItem_BeforeAttachmentReadEventHandler(NetOffice.OutlookApi.Attachment Attachment, ref bool Cancel);
-	public delegate void AppointmentItem_BeforeAttachmentWriteToTempFileEventHandler(NetOffice.OutlookApi.Attachment Attachment, ref bool Cancel);
+	public delegate void AppointmentItem_ReplyEventHandler(ICOMObject response, ref bool cancel);
+	public delegate void AppointmentItem_ReplyAllEventHandler(COMObject response, ref bool cancel);
+	public delegate void AppointmentItem_SendEventHandler(ref bool cancel);
+	public delegate void AppointmentItem_WriteEventHandler(ref bool cancel);
+	public delegate void AppointmentItem_BeforeCheckNamesEventHandler(ref bool cancel);
+	public delegate void AppointmentItem_AttachmentAddEventHandler(NetOffice.OutlookApi.Attachment attachment);
+	public delegate void AppointmentItem_AttachmentReadEventHandler(NetOffice.OutlookApi.Attachment attachment);
+	public delegate void AppointmentItem_BeforeAttachmentSaveEventHandler(NetOffice.OutlookApi.Attachment attachment, ref bool cancel);
+	public delegate void AppointmentItem_BeforeDeleteEventHandler(ICOMObject item, ref bool cancel);
+	public delegate void AppointmentItem_AttachmentRemoveEventHandler(NetOffice.OutlookApi.Attachment attachment);
+	public delegate void AppointmentItem_BeforeAttachmentAddEventHandler(NetOffice.OutlookApi.Attachment attachment, ref bool cancel);
+	public delegate void AppointmentItem_BeforeAttachmentPreviewEventHandler(NetOffice.OutlookApi.Attachment attachment, ref bool cancel);
+	public delegate void AppointmentItem_BeforeAttachmentReadEventHandler(NetOffice.OutlookApi.Attachment attachment, ref bool cancel);
+	public delegate void AppointmentItem_BeforeAttachmentWriteToTempFileEventHandler(NetOffice.OutlookApi.Attachment attachment, ref bool cancel);
 	public delegate void AppointmentItem_UnloadEventHandler();
-	public delegate void AppointmentItem_BeforeAutoSaveEventHandler(ref bool Cancel);
+	public delegate void AppointmentItem_BeforeAutoSaveEventHandler(ref bool cancel);
 	public delegate void AppointmentItem_BeforeReadEventHandler();
 	public delegate void AppointmentItem_AfterWriteEventHandler();
-	public delegate void AppointmentItem_ReadCompleteEventHandler(ref bool Cancel);
+	public delegate void AppointmentItem_ReadCompleteEventHandler(ref bool cancel);
 	#pragma warning restore
 
 	#endregion
 
-	///<summary>
+	/// <summary>
 	/// CoClass AppointmentItem 
 	/// SupportByVersion Outlook, 9,10,11,12,14,15,16
-	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff862177.aspx
-	///</summary>
-	[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15,16)]
-	[EntityTypeAttribute(EntityType.IsCoClass)]
-	public class AppointmentItem : _AppointmentItem,IEventBinding
+	/// </summary>
+	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff862177.aspx </remarks>
+	[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
+	[EntityType(EntityType.IsCoClass)]
+	public class AppointmentItem : _AppointmentItem, IEventBinding
 	{
 		#pragma warning disable
+
 		#region Fields
 		
 		private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
 		private string _activeSinkId;
 		private NetRuntimeSystem.Type _thisType;
-		ItemEvents_SinkHelper _itemEvents_SinkHelper;
-		ItemEvents_10_SinkHelper _itemEvents_10_SinkHelper;
+        Events.ItemEvents_SinkHelper _itemEvents_SinkHelper;
+        Events.ItemEvents_10_SinkHelper _itemEvents_10_SinkHelper;
 	
 		#endregion
 
@@ -65,6 +64,7 @@ namespace NetOffice.OutlookApi
         /// <summary>
         /// Instance Type
         /// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
         public override Type InstanceType
         {
             get
@@ -131,17 +131,17 @@ namespace NetOffice.OutlookApi
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of AppointmentItem 
-        ///</summary>		
+        /// </summary>		
 		public AppointmentItem():base("Outlook.AppointmentItem")
 		{
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of AppointmentItem
-        ///</summary>
+        /// </summary>
         ///<param name="progId">registered ProgID</param>
 		public AppointmentItem(string progId):base(progId)
 		{
@@ -151,46 +151,6 @@ namespace NetOffice.OutlookApi
 		#endregion
 
 		#region Static CoClass Methods
-
-		/// <summary>
-        /// Returns all running Outlook.AppointmentItem objects from the environment/system
-        /// </summary>
-        /// <returns>an Outlook.AppointmentItem array</returns>
-		public static NetOffice.OutlookApi.AppointmentItem[] GetActiveInstances()
-		{		
-			IDisposableEnumeration proxyList = NetOffice.ProxyService.GetActiveInstances("Outlook","AppointmentItem");
-			NetRuntimeSystem.Collections.Generic.List<NetOffice.OutlookApi.AppointmentItem> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.OutlookApi.AppointmentItem>();
-			foreach(object proxy in proxyList)
-				resultList.Add( new NetOffice.OutlookApi.AppointmentItem(null, proxy) );
-			return resultList.ToArray();
-		}
-
-		/// <summary>
-        /// Returns a running Outlook.AppointmentItem object from the environment/system.
-        /// </summary>
-        /// <returns>an Outlook.AppointmentItem object or null</returns>
-		public static NetOffice.OutlookApi.AppointmentItem GetActiveInstance()
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Outlook","AppointmentItem", false);
-			if(null != proxy)
-				return new NetOffice.OutlookApi.AppointmentItem(null, proxy);
-			else
-				return null;
-		}
-
-		/// <summary>
-        /// Returns a running Outlook.AppointmentItem object from the environment/system. 
-        /// </summary>
-	    /// <param name="throwOnError">throw an exception if no object was found</param>
-        /// <returns>an Outlook.AppointmentItem object or null</returns>
-		public static NetOffice.OutlookApi.AppointmentItem GetActiveInstance(bool throwOnError)
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Outlook","AppointmentItem", throwOnError);
-			if(null != proxy)
-				return new NetOffice.OutlookApi.AppointmentItem(null, proxy);
-			else
-				return null;
-		}
 		#endregion
 
 		#region Events
@@ -810,18 +770,18 @@ namespace NetOffice.OutlookApi
 				return;
 	
             if (null == _activeSinkId)
-				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, ItemEvents_SinkHelper.Id,ItemEvents_10_SinkHelper.Id);
+				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, Events.ItemEvents_SinkHelper.Id, Events.ItemEvents_10_SinkHelper.Id);
 
 
-			if(ItemEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
+			if(Events.ItemEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
 			{
-				_itemEvents_SinkHelper = new ItemEvents_SinkHelper(this, _connectPoint);
+				_itemEvents_SinkHelper = new Events.ItemEvents_SinkHelper(this, _connectPoint);
 				return;
 			}
 
-			if(ItemEvents_10_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
+			if(Events.ItemEvents_10_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
 			{
-				_itemEvents_10_SinkHelper = new ItemEvents_10_SinkHelper(this, _connectPoint);
+				_itemEvents_10_SinkHelper = new Events.ItemEvents_10_SinkHelper(this, _connectPoint);
 				return;
 			} 
         }

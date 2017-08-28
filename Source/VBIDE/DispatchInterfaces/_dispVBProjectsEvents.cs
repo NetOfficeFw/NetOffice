@@ -1,23 +1,33 @@
 ﻿using System;
 using NetRuntimeSystem = System;
-using System.Runtime.InteropServices;
-using System.Runtime.CompilerServices;
 using System.ComponentModel;
-using System.Reflection;
-using System.Collections.Generic;
-using NetOffice;
+using NetOffice.Attributes;
+
 namespace NetOffice.VBIDEApi
 {
-	///<summary>
+	/// <summary>
 	/// DispatchInterface _dispVBProjectsEvents 
 	/// SupportByVersion VBIDE, 12,14,5.3
-	///</summary>
-	[SupportByVersionAttribute("VBIDE", 12,14,5.3)]
-	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
-	public class _dispVBProjectsEvents : COMObject
+	/// </summary>
+	[SupportByVersion("VBIDE", 12,14,5.3)]
+	[EntityType(EntityType.IsDispatchInterface)]
+ 	public class _dispVBProjectsEvents : COMObject
 	{
 		#pragma warning disable
+
 		#region Type Information
+
+		/// <summary>
+		/// Instance Type
+		/// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
+		public override Type InstanceType
+		{
+			get
+			{
+				return LateBindingApiWrapperType;
+			}
+		}
 
         private static Type _type;
 
@@ -28,14 +38,20 @@ namespace NetOffice.VBIDEApi
             {
                 if (null == _type)
                     _type = typeof(_dispVBProjectsEvents);
-                    
                 return _type;
             }
         }
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public _dispVBProjectsEvents(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -81,7 +97,7 @@ namespace NetOffice.VBIDEApi
 		{
 		}
 		
-		/// <param name="progId">registered ProgID</param>
+		/// <param name="progId">registered progID</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public _dispVBProjectsEvents(string progId) : base(progId)
 		{
@@ -97,54 +113,47 @@ namespace NetOffice.VBIDEApi
 
 		/// <summary>
 		/// SupportByVersion VBIDE 12, 14, 5.3
-		/// 
 		/// </summary>
-		/// <param name="vBProject">NetOffice.VBIDEApi.VBProject VBProject</param>
-		[SupportByVersionAttribute("VBIDE", 12,14,5.3)]
+		/// <param name="vBProject">NetOffice.VBIDEApi.VBProject vBProject</param>
+		[SupportByVersion("VBIDE", 12,14,5.3)]
 		public void ItemAdded(NetOffice.VBIDEApi.VBProject vBProject)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(vBProject);
-			Invoker.Method(this, "ItemAdded", paramsArray);
+			 Factory.ExecuteMethod(this, "ItemAdded", vBProject);
 		}
 
 		/// <summary>
 		/// SupportByVersion VBIDE 12, 14, 5.3
-		/// 
 		/// </summary>
-		/// <param name="vBProject">NetOffice.VBIDEApi.VBProject VBProject</param>
-		[SupportByVersionAttribute("VBIDE", 12,14,5.3)]
+		/// <param name="vBProject">NetOffice.VBIDEApi.VBProject vBProject</param>
+		[SupportByVersion("VBIDE", 12,14,5.3)]
 		public void ItemRemoved(NetOffice.VBIDEApi.VBProject vBProject)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(vBProject);
-			Invoker.Method(this, "ItemRemoved", paramsArray);
+			 Factory.ExecuteMethod(this, "ItemRemoved", vBProject);
 		}
 
 		/// <summary>
 		/// SupportByVersion VBIDE 12, 14, 5.3
-		/// 
 		/// </summary>
-		/// <param name="vBProject">NetOffice.VBIDEApi.VBProject VBProject</param>
-		/// <param name="oldName">string OldName</param>
-		[SupportByVersionAttribute("VBIDE", 12,14,5.3)]
+		/// <param name="vBProject">NetOffice.VBIDEApi.VBProject vBProject</param>
+		/// <param name="oldName">string oldName</param>
+		[SupportByVersion("VBIDE", 12,14,5.3)]
 		public void ItemRenamed(NetOffice.VBIDEApi.VBProject vBProject, string oldName)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(vBProject, oldName);
-			Invoker.Method(this, "ItemRenamed", paramsArray);
+			 Factory.ExecuteMethod(this, "ItemRenamed", vBProject, oldName);
 		}
 
 		/// <summary>
 		/// SupportByVersion VBIDE 12, 14, 5.3
-		/// 
 		/// </summary>
-		/// <param name="vBProject">NetOffice.VBIDEApi.VBProject VBProject</param>
-		[SupportByVersionAttribute("VBIDE", 12,14,5.3)]
+		/// <param name="vBProject">NetOffice.VBIDEApi.VBProject vBProject</param>
+		[SupportByVersion("VBIDE", 12,14,5.3)]
 		public void ItemActivated(NetOffice.VBIDEApi.VBProject vBProject)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(vBProject);
-			Invoker.Method(this, "ItemActivated", paramsArray);
+			 Factory.ExecuteMethod(this, "ItemActivated", vBProject);
 		}
 
 		#endregion
+
 		#pragma warning restore
 	}
 }

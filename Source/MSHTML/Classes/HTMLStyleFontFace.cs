@@ -1,12 +1,10 @@
 ﻿using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
-using NetOffice;
-using NetOffice.Misc;
+using NetOffice.Attributes;
 
 namespace NetOffice.MSHTMLApi
 {
-
 	#region Delegates
 
 	#pragma warning disable
@@ -14,15 +12,16 @@ namespace NetOffice.MSHTMLApi
 
 	#endregion
 
-	///<summary>
+	/// <summary>
 	/// CoClass HTMLStyleFontFace 
 	/// SupportByVersion MSHTML, 4
-	///</summary>
-	[SupportByVersionAttribute("MSHTML", 4)]
-	[EntityTypeAttribute(EntityType.IsCoClass)]
-	public class HTMLStyleFontFace : IHTMLStyleFontFace
+	/// </summary>
+	[SupportByVersion("MSHTML", 4)]
+	[EntityType(EntityType.IsCoClass)]
+ 	public class HTMLStyleFontFace : IHTMLStyleFontFace
 	{
 		#pragma warning disable
+
 		#region Fields
 		
 		private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
@@ -36,6 +35,7 @@ namespace NetOffice.MSHTMLApi
         /// <summary>
         /// Instance Type
         /// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
         public override Type InstanceType
         {
             get
@@ -102,17 +102,17 @@ namespace NetOffice.MSHTMLApi
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of HTMLStyleFontFace 
-        ///</summary>		
+        /// </summary>		
 		public HTMLStyleFontFace():base("MSHTML.HTMLStyleFontFace")
 		{
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of HTMLStyleFontFace
-        ///</summary>
+        /// </summary>
         ///<param name="progId">registered ProgID</param>
 		public HTMLStyleFontFace(string progId):base(progId)
 		{
@@ -122,46 +122,6 @@ namespace NetOffice.MSHTMLApi
 		#endregion
 
 		#region Static CoClass Methods
-
-		/// <summary>
-        /// Returns all running MSHTML.HTMLStyleFontFace objects from the environment/system
-        /// </summary>
-        /// <returns>an MSHTML.HTMLStyleFontFace array</returns>
-		public static NetOffice.MSHTMLApi.HTMLStyleFontFace[] GetActiveInstances()
-		{		
-			IDisposableEnumeration proxyList = NetOffice.ProxyService.GetActiveInstances("MSHTML","HTMLStyleFontFace");
-			NetRuntimeSystem.Collections.Generic.List<NetOffice.MSHTMLApi.HTMLStyleFontFace> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.MSHTMLApi.HTMLStyleFontFace>();
-			foreach(object proxy in proxyList)
-				resultList.Add( new NetOffice.MSHTMLApi.HTMLStyleFontFace(null, proxy) );
-			return resultList.ToArray();
-		}
-
-		/// <summary>
-        /// Returns a running MSHTML.HTMLStyleFontFace object from the environment/system.
-        /// </summary>
-        /// <returns>an MSHTML.HTMLStyleFontFace object or null</returns>
-		public static NetOffice.MSHTMLApi.HTMLStyleFontFace GetActiveInstance()
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("MSHTML","HTMLStyleFontFace", false);
-			if(null != proxy)
-				return new NetOffice.MSHTMLApi.HTMLStyleFontFace(null, proxy);
-			else
-				return null;
-		}
-
-		/// <summary>
-        /// Returns a running MSHTML.HTMLStyleFontFace object from the environment/system. 
-        /// </summary>
-	    /// <param name="throwOnError">throw an exception if no object was found</param>
-        /// <returns>an MSHTML.HTMLStyleFontFace object or null</returns>
-		public static NetOffice.MSHTMLApi.HTMLStyleFontFace GetActiveInstance(bool throwOnError)
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("MSHTML","HTMLStyleFontFace", throwOnError);
-			if(null != proxy)
-				return new NetOffice.MSHTMLApi.HTMLStyleFontFace(null, proxy);
-			else
-				return null;
-		}
 		#endregion
 
 		#region Events

@@ -1,23 +1,34 @@
-﻿using System;
-using NetRuntimeSystem = System;
-using System.Runtime.InteropServices;
-using System.ComponentModel;
-using System.Runtime.CompilerServices;
 using System.Reflection;
-using System.Collections.Generic;
-using NetOffice;
+using System;
+using NetRuntimeSystem = System;
+using System.ComponentModel;
+using NetOffice.Attributes;
+
 namespace NetOffice.VisioApi
 {
-	///<summary>
+	/// <summary>
 	/// Interface LPVISIOAPPSETTINGS 
 	/// SupportByVersion Visio, 11,12,14,15,16
-	///</summary>
-	[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
-	[EntityTypeAttribute(EntityType.IsInterface)]
-	public class LPVISIOAPPSETTINGS : COMObject
+	/// </summary>
+	[SupportByVersion("Visio", 11,12,14,15,16)]
+	[EntityType(EntityType.IsInterface)]
+ 	public class LPVISIOAPPSETTINGS : COMObject
 	{
 		#pragma warning disable
+
 		#region Type Information
+
+		/// <summary>
+		/// Instance Type
+		/// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
+		public override Type InstanceType
+		{
+			get
+			{
+				return LateBindingApiWrapperType;
+			}
+		}
 
         private static Type _type;
 
@@ -28,14 +39,20 @@ namespace NetOffice.VisioApi
             {
                 if (null == _type)
                     _type = typeof(LPVISIOAPPSETTINGS);
-                    
                 return _type;
             }
         }
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public LPVISIOAPPSETTINGS(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -81,7 +98,7 @@ namespace NetOffice.VisioApi
 		{
 		}
 		
-		/// <param name="progId">registered ProgID</param>
+		/// <param name="progId">registered progID</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public LPVISIOAPPSETTINGS(string progId) : base(progId)
 		{
@@ -95,15 +112,13 @@ namespace NetOffice.VisioApi
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
+		[SupportByVersion("Visio", 11,12,14,15,16)]
+		[BaseResult]
 		public NetOffice.VisioApi.IVApplication Application
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				NetOffice.VisioApi.IVApplication newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVApplication;
-				return newObject;
+				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.VisioApi.IVApplication>(this, "Application");
 			}
 		}
 
@@ -111,15 +126,12 @@ namespace NetOffice.VisioApi
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
+		[SupportByVersion("Visio", 11,12,14,15,16)]
 		public NetOffice.VisioApi.Enums.VisObjectTypes ObjectType
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "ObjectType", paramsArray);
-				int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-				return (NetOffice.VisioApi.Enums.VisObjectTypes)intReturnItem;
+				return Factory.ExecuteEnumPropertyGet<NetOffice.VisioApi.Enums.VisObjectTypes>(this, "ObjectType");
 			}
 		}
 
@@ -127,19 +139,16 @@ namespace NetOffice.VisioApi
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
+		[SupportByVersion("Visio", 11,12,14,15,16)]
 		public bool DrawingAids
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "DrawingAids", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "DrawingAids");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "DrawingAids", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "DrawingAids", value);
 			}
 		}
 
@@ -147,19 +156,16 @@ namespace NetOffice.VisioApi
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
+		[SupportByVersion("Visio", 11,12,14,15,16)]
 		public Int32 SnapStrengthRulerX
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "SnapStrengthRulerX", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "SnapStrengthRulerX");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "SnapStrengthRulerX", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "SnapStrengthRulerX", value);
 			}
 		}
 
@@ -167,19 +173,16 @@ namespace NetOffice.VisioApi
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
+		[SupportByVersion("Visio", 11,12,14,15,16)]
 		public Int32 SnapStrengthRulerY
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "SnapStrengthRulerY", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "SnapStrengthRulerY");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "SnapStrengthRulerY", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "SnapStrengthRulerY", value);
 			}
 		}
 
@@ -187,19 +190,16 @@ namespace NetOffice.VisioApi
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
+		[SupportByVersion("Visio", 11,12,14,15,16)]
 		public Int32 SnapStrengthGridX
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "SnapStrengthGridX", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "SnapStrengthGridX");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "SnapStrengthGridX", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "SnapStrengthGridX", value);
 			}
 		}
 
@@ -207,19 +207,16 @@ namespace NetOffice.VisioApi
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
+		[SupportByVersion("Visio", 11,12,14,15,16)]
 		public Int32 SnapStrengthGridY
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "SnapStrengthGridY", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "SnapStrengthGridY");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "SnapStrengthGridY", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "SnapStrengthGridY", value);
 			}
 		}
 
@@ -227,19 +224,16 @@ namespace NetOffice.VisioApi
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
+		[SupportByVersion("Visio", 11,12,14,15,16)]
 		public Int32 SnapStrengthGuidesX
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "SnapStrengthGuidesX", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "SnapStrengthGuidesX");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "SnapStrengthGuidesX", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "SnapStrengthGuidesX", value);
 			}
 		}
 
@@ -247,19 +241,16 @@ namespace NetOffice.VisioApi
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
+		[SupportByVersion("Visio", 11,12,14,15,16)]
 		public Int32 SnapStrengthGuidesY
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "SnapStrengthGuidesY", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "SnapStrengthGuidesY");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "SnapStrengthGuidesY", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "SnapStrengthGuidesY", value);
 			}
 		}
 
@@ -267,19 +258,16 @@ namespace NetOffice.VisioApi
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
+		[SupportByVersion("Visio", 11,12,14,15,16)]
 		public Int32 SnapStrengthPointsX
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "SnapStrengthPointsX", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "SnapStrengthPointsX");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "SnapStrengthPointsX", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "SnapStrengthPointsX", value);
 			}
 		}
 
@@ -287,19 +275,16 @@ namespace NetOffice.VisioApi
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
+		[SupportByVersion("Visio", 11,12,14,15,16)]
 		public Int32 SnapStrengthPointsY
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "SnapStrengthPointsY", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "SnapStrengthPointsY");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "SnapStrengthPointsY", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "SnapStrengthPointsY", value);
 			}
 		}
 
@@ -307,19 +292,16 @@ namespace NetOffice.VisioApi
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
+		[SupportByVersion("Visio", 11,12,14,15,16)]
 		public Int32 SnapStrengthGeometryX
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "SnapStrengthGeometryX", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "SnapStrengthGeometryX");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "SnapStrengthGeometryX", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "SnapStrengthGeometryX", value);
 			}
 		}
 
@@ -327,19 +309,16 @@ namespace NetOffice.VisioApi
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
+		[SupportByVersion("Visio", 11,12,14,15,16)]
 		public Int32 SnapStrengthGeometryY
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "SnapStrengthGeometryY", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "SnapStrengthGeometryY");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "SnapStrengthGeometryY", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "SnapStrengthGeometryY", value);
 			}
 		}
 
@@ -347,19 +326,16 @@ namespace NetOffice.VisioApi
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
+		[SupportByVersion("Visio", 11,12,14,15,16)]
 		public Int32 SnapStrengthExtensionsX
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "SnapStrengthExtensionsX", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "SnapStrengthExtensionsX");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "SnapStrengthExtensionsX", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "SnapStrengthExtensionsX", value);
 			}
 		}
 
@@ -367,19 +343,16 @@ namespace NetOffice.VisioApi
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
+		[SupportByVersion("Visio", 11,12,14,15,16)]
 		public Int32 SnapStrengthExtensionsY
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "SnapStrengthExtensionsY", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "SnapStrengthExtensionsY");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "SnapStrengthExtensionsY", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "SnapStrengthExtensionsY", value);
 			}
 		}
 
@@ -387,19 +360,16 @@ namespace NetOffice.VisioApi
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
+		[SupportByVersion("Visio", 11,12,14,15,16)]
 		public bool ShowFileSaveWarnings
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "ShowFileSaveWarnings", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "ShowFileSaveWarnings");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "ShowFileSaveWarnings", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "ShowFileSaveWarnings", value);
 			}
 		}
 
@@ -407,19 +377,16 @@ namespace NetOffice.VisioApi
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
+		[SupportByVersion("Visio", 11,12,14,15,16)]
 		public bool ShowFileOpenWarnings
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "ShowFileOpenWarnings", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "ShowFileOpenWarnings");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "ShowFileOpenWarnings", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "ShowFileOpenWarnings", value);
 			}
 		}
 
@@ -427,20 +394,16 @@ namespace NetOffice.VisioApi
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
+		[SupportByVersion("Visio", 11,12,14,15,16)]
 		public NetOffice.VisioApi.Enums.VisDefaultSaveFormats DefaultSaveFormat
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "DefaultSaveFormat", paramsArray);
-				int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-				return (NetOffice.VisioApi.Enums.VisDefaultSaveFormats)intReturnItem;
+				return Factory.ExecuteEnumPropertyGet<NetOffice.VisioApi.Enums.VisDefaultSaveFormats>(this, "DefaultSaveFormat");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "DefaultSaveFormat", paramsArray);
+				Factory.ExecuteEnumPropertySet(this, "DefaultSaveFormat", value);
 			}
 		}
 
@@ -448,19 +411,16 @@ namespace NetOffice.VisioApi
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
+		[SupportByVersion("Visio", 11,12,14,15,16)]
 		public Int32 DrawingPageColor
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "DrawingPageColor", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "DrawingPageColor");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "DrawingPageColor", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "DrawingPageColor", value);
 			}
 		}
 
@@ -468,19 +428,16 @@ namespace NetOffice.VisioApi
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
+		[SupportByVersion("Visio", 11,12,14,15,16)]
 		public Int32 DrawingBackgroundColor
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "DrawingBackgroundColor", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "DrawingBackgroundColor");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "DrawingBackgroundColor", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "DrawingBackgroundColor", value);
 			}
 		}
 
@@ -488,19 +445,16 @@ namespace NetOffice.VisioApi
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
+		[SupportByVersion("Visio", 11,12,14,15,16)]
 		public Int32 DrawingBackgroundColorGradient
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "DrawingBackgroundColorGradient", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "DrawingBackgroundColorGradient");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "DrawingBackgroundColorGradient", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "DrawingBackgroundColorGradient", value);
 			}
 		}
 
@@ -508,19 +462,16 @@ namespace NetOffice.VisioApi
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
+		[SupportByVersion("Visio", 11,12,14,15,16)]
 		public Int32 StencilBackgroundColor
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "StencilBackgroundColor", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "StencilBackgroundColor");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "StencilBackgroundColor", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "StencilBackgroundColor", value);
 			}
 		}
 
@@ -528,19 +479,16 @@ namespace NetOffice.VisioApi
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
+		[SupportByVersion("Visio", 11,12,14,15,16)]
 		public Int32 StencilBackgroundColorGradient
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "StencilBackgroundColorGradient", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "StencilBackgroundColorGradient");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "StencilBackgroundColorGradient", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "StencilBackgroundColorGradient", value);
 			}
 		}
 
@@ -548,19 +496,16 @@ namespace NetOffice.VisioApi
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
+		[SupportByVersion("Visio", 11,12,14,15,16)]
 		public Int32 StencilTextColor
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "StencilTextColor", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "StencilTextColor");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "StencilTextColor", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "StencilTextColor", value);
 			}
 		}
 
@@ -568,19 +513,16 @@ namespace NetOffice.VisioApi
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
+		[SupportByVersion("Visio", 11,12,14,15,16)]
 		public Int32 PrintPreviewBackgroundColor
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "PrintPreviewBackgroundColor", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "PrintPreviewBackgroundColor");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "PrintPreviewBackgroundColor", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "PrintPreviewBackgroundColor", value);
 			}
 		}
 
@@ -588,19 +530,16 @@ namespace NetOffice.VisioApi
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
+		[SupportByVersion("Visio", 11,12,14,15,16)]
 		public Int32 FullScreenBackgroundColor
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "FullScreenBackgroundColor", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "FullScreenBackgroundColor");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "FullScreenBackgroundColor", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "FullScreenBackgroundColor", value);
 			}
 		}
 
@@ -608,19 +547,16 @@ namespace NetOffice.VisioApi
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
+		[SupportByVersion("Visio", 11,12,14,15,16)]
 		public bool ShowStartupDialog
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "ShowStartupDialog", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "ShowStartupDialog");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "ShowStartupDialog", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "ShowStartupDialog", value);
 			}
 		}
 
@@ -628,19 +564,16 @@ namespace NetOffice.VisioApi
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
+		[SupportByVersion("Visio", 11,12,14,15,16)]
 		public bool ShowSmartTags
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "ShowSmartTags", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "ShowSmartTags");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "ShowSmartTags", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "ShowSmartTags", value);
 			}
 		}
 
@@ -648,20 +581,16 @@ namespace NetOffice.VisioApi
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
+		[SupportByVersion("Visio", 11,12,14,15,16)]
 		public NetOffice.VisioApi.Enums.VisTextDisplayQualityTypes TextDisplayQuality
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "TextDisplayQuality", paramsArray);
-				int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-				return (NetOffice.VisioApi.Enums.VisTextDisplayQualityTypes)intReturnItem;
+				return Factory.ExecuteEnumPropertyGet<NetOffice.VisioApi.Enums.VisTextDisplayQualityTypes>(this, "TextDisplayQuality");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "TextDisplayQuality", paramsArray);
+				Factory.ExecuteEnumPropertySet(this, "TextDisplayQuality", value);
 			}
 		}
 
@@ -669,19 +598,16 @@ namespace NetOffice.VisioApi
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
+		[SupportByVersion("Visio", 11,12,14,15,16)]
 		public bool HigherQualityShapeDisplay
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "HigherQualityShapeDisplay", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "HigherQualityShapeDisplay");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "HigherQualityShapeDisplay", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "HigherQualityShapeDisplay", value);
 			}
 		}
 
@@ -689,19 +615,16 @@ namespace NetOffice.VisioApi
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
+		[SupportByVersion("Visio", 11,12,14,15,16)]
 		public bool SmoothDrawing
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "SmoothDrawing", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "SmoothDrawing");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "SmoothDrawing", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "SmoothDrawing", value);
 			}
 		}
 
@@ -709,19 +632,16 @@ namespace NetOffice.VisioApi
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
+		[SupportByVersion("Visio", 11,12,14,15,16)]
 		public Int32 StencilCharactersPerLine
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "StencilCharactersPerLine", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "StencilCharactersPerLine");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "StencilCharactersPerLine", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "StencilCharactersPerLine", value);
 			}
 		}
 
@@ -729,19 +649,16 @@ namespace NetOffice.VisioApi
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
+		[SupportByVersion("Visio", 11,12,14,15,16)]
 		public Int32 StencilLinesPerMaster
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "StencilLinesPerMaster", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "StencilLinesPerMaster");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "StencilLinesPerMaster", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "StencilLinesPerMaster", value);
 			}
 		}
 
@@ -749,19 +666,16 @@ namespace NetOffice.VisioApi
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
+		[SupportByVersion("Visio", 11,12,14,15,16)]
 		public string UserName
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "UserName", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "UserName");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "UserName", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "UserName", value);
 			}
 		}
 
@@ -769,19 +683,16 @@ namespace NetOffice.VisioApi
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
+		[SupportByVersion("Visio", 11,12,14,15,16)]
 		public string UserInitials
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "UserInitials", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "UserInitials");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "UserInitials", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "UserInitials", value);
 			}
 		}
 
@@ -789,19 +700,16 @@ namespace NetOffice.VisioApi
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
+		[SupportByVersion("Visio", 11,12,14,15,16)]
 		public bool ZoomOnRoll
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "ZoomOnRoll", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "ZoomOnRoll");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "ZoomOnRoll", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "ZoomOnRoll", value);
 			}
 		}
 
@@ -809,19 +717,16 @@ namespace NetOffice.VisioApi
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
+		[SupportByVersion("Visio", 11,12,14,15,16)]
 		public Int32 UndoLevels
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "UndoLevels", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "UndoLevels");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "UndoLevels", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "UndoLevels", value);
 			}
 		}
 
@@ -829,19 +734,16 @@ namespace NetOffice.VisioApi
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
+		[SupportByVersion("Visio", 11,12,14,15,16)]
 		public Int32 RecentFilesListSize
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "RecentFilesListSize", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "RecentFilesListSize");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "RecentFilesListSize", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "RecentFilesListSize", value);
 			}
 		}
 
@@ -849,19 +751,16 @@ namespace NetOffice.VisioApi
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
+		[SupportByVersion("Visio", 11,12,14,15,16)]
 		public bool CenterSelectionOnZoom
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "CenterSelectionOnZoom", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "CenterSelectionOnZoom");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "CenterSelectionOnZoom", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "CenterSelectionOnZoom", value);
 			}
 		}
 
@@ -869,19 +768,16 @@ namespace NetOffice.VisioApi
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
+		[SupportByVersion("Visio", 11,12,14,15,16)]
 		public bool ConnectorSplittingEnabled
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "ConnectorSplittingEnabled", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "ConnectorSplittingEnabled");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "ConnectorSplittingEnabled", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "ConnectorSplittingEnabled", value);
 			}
 		}
 
@@ -889,20 +785,16 @@ namespace NetOffice.VisioApi
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
+		[SupportByVersion("Visio", 11,12,14,15,16)]
 		public NetOffice.VisioApi.Enums.VisRegionalUIOptions AsianTextUI
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "AsianTextUI", paramsArray);
-				int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-				return (NetOffice.VisioApi.Enums.VisRegionalUIOptions)intReturnItem;
+				return Factory.ExecuteEnumPropertyGet<NetOffice.VisioApi.Enums.VisRegionalUIOptions>(this, "AsianTextUI");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "AsianTextUI", paramsArray);
+				Factory.ExecuteEnumPropertySet(this, "AsianTextUI", value);
 			}
 		}
 
@@ -910,20 +802,16 @@ namespace NetOffice.VisioApi
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
+		[SupportByVersion("Visio", 11,12,14,15,16)]
 		public NetOffice.VisioApi.Enums.VisRegionalUIOptions ComplexTextUI
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "ComplexTextUI", paramsArray);
-				int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-				return (NetOffice.VisioApi.Enums.VisRegionalUIOptions)intReturnItem;
+				return Factory.ExecuteEnumPropertyGet<NetOffice.VisioApi.Enums.VisRegionalUIOptions>(this, "ComplexTextUI");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "ComplexTextUI", paramsArray);
+				Factory.ExecuteEnumPropertySet(this, "ComplexTextUI", value);
 			}
 		}
 
@@ -931,20 +819,16 @@ namespace NetOffice.VisioApi
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
+		[SupportByVersion("Visio", 11,12,14,15,16)]
 		public NetOffice.VisioApi.Enums.VisRegionalUIOptions KanaFindAndReplace
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "KanaFindAndReplace", paramsArray);
-				int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-				return (NetOffice.VisioApi.Enums.VisRegionalUIOptions)intReturnItem;
+				return Factory.ExecuteEnumPropertyGet<NetOffice.VisioApi.Enums.VisRegionalUIOptions>(this, "KanaFindAndReplace");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "KanaFindAndReplace", paramsArray);
+				Factory.ExecuteEnumPropertySet(this, "KanaFindAndReplace", value);
 			}
 		}
 
@@ -952,19 +836,16 @@ namespace NetOffice.VisioApi
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
+		[SupportByVersion("Visio", 11,12,14,15,16)]
 		public Int32 FreeformDrawingPrecision
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "FreeformDrawingPrecision", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "FreeformDrawingPrecision");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "FreeformDrawingPrecision", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "FreeformDrawingPrecision", value);
 			}
 		}
 
@@ -972,19 +853,16 @@ namespace NetOffice.VisioApi
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
+		[SupportByVersion("Visio", 11,12,14,15,16)]
 		public Int32 FreeformDrawingSmoothing
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "FreeformDrawingSmoothing", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "FreeformDrawingSmoothing");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "FreeformDrawingSmoothing", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "FreeformDrawingSmoothing", value);
 			}
 		}
 
@@ -992,19 +870,16 @@ namespace NetOffice.VisioApi
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
+		[SupportByVersion("Visio", 11,12,14,15,16)]
 		public bool DeveloperMode
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "DeveloperMode", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "DeveloperMode");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "DeveloperMode", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "DeveloperMode", value);
 			}
 		}
 
@@ -1012,19 +887,16 @@ namespace NetOffice.VisioApi
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
+		[SupportByVersion("Visio", 11,12,14,15,16)]
 		public bool ShowChooseDrawingTypePane
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "ShowChooseDrawingTypePane", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "ShowChooseDrawingTypePane");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "ShowChooseDrawingTypePane", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "ShowChooseDrawingTypePane", value);
 			}
 		}
 
@@ -1032,19 +904,16 @@ namespace NetOffice.VisioApi
 		/// SupportByVersion Visio 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 12,14,15,16)]
+		[SupportByVersion("Visio", 12,14,15,16)]
 		public bool ShowShapeSearchPane
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "ShowShapeSearchPane", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "ShowShapeSearchPane");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "ShowShapeSearchPane", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "ShowShapeSearchPane", value);
 			}
 		}
 
@@ -1052,19 +921,16 @@ namespace NetOffice.VisioApi
 		/// SupportByVersion Visio 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 12,14,15,16)]
+		[SupportByVersion("Visio", 12,14,15,16)]
 		public bool ApplyThemesOnShapeAdd
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "ApplyThemesOnShapeAdd", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "ApplyThemesOnShapeAdd");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "ApplyThemesOnShapeAdd", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "ApplyThemesOnShapeAdd", value);
 			}
 		}
 
@@ -1072,15 +938,12 @@ namespace NetOffice.VisioApi
 		/// SupportByVersion Visio 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 12,14,15,16)]
+		[SupportByVersion("Visio", 12,14,15,16)]
 		public NetOffice.VisioApi.Enums.VisRegionalUIOptions SATextUI
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "SATextUI", paramsArray);
-				int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-				return (NetOffice.VisioApi.Enums.VisRegionalUIOptions)intReturnItem;
+				return Factory.ExecuteEnumPropertyGet<NetOffice.VisioApi.Enums.VisRegionalUIOptions>(this, "SATextUI");
 			}
 		}
 
@@ -1088,15 +951,12 @@ namespace NetOffice.VisioApi
 		/// SupportByVersion Visio 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 12,14,15,16)]
+		[SupportByVersion("Visio", 12,14,15,16)]
 		public NetOffice.VisioApi.Enums.VisRegionalUIOptions BIDITextUI
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "BIDITextUI", paramsArray);
-				int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-				return (NetOffice.VisioApi.Enums.VisRegionalUIOptions)intReturnItem;
+				return Factory.ExecuteEnumPropertyGet<NetOffice.VisioApi.Enums.VisRegionalUIOptions>(this, "BIDITextUI");
 			}
 		}
 
@@ -1104,15 +964,12 @@ namespace NetOffice.VisioApi
 		/// SupportByVersion Visio 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 12,14,15,16)]
+		[SupportByVersion("Visio", 12,14,15,16)]
 		public NetOffice.VisioApi.Enums.VisRegionalUIOptions KashidaTextUI
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "KashidaTextUI", paramsArray);
-				int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-				return (NetOffice.VisioApi.Enums.VisRegionalUIOptions)intReturnItem;
+				return Factory.ExecuteEnumPropertyGet<NetOffice.VisioApi.Enums.VisRegionalUIOptions>(this, "KashidaTextUI");
 			}
 		}
 
@@ -1120,14 +977,12 @@ namespace NetOffice.VisioApi
 		/// SupportByVersion Visio 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 12,14,15,16)]
+		[SupportByVersion("Visio", 12,14,15,16)]
 		public Int16 Stat
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Stat", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt16(returnItem);
+				return Factory.ExecuteInt16PropertyGet(this, "Stat");
 			}
 		}
 
@@ -1135,19 +990,16 @@ namespace NetOffice.VisioApi
 		/// SupportByVersion Visio 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 12,14,15,16)]
+		[SupportByVersion("Visio", 12,14,15,16)]
 		public bool ShowMoreShapeHandlesOnHover
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "ShowMoreShapeHandlesOnHover", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "ShowMoreShapeHandlesOnHover");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "ShowMoreShapeHandlesOnHover", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "ShowMoreShapeHandlesOnHover", value);
 			}
 		}
 
@@ -1155,19 +1007,16 @@ namespace NetOffice.VisioApi
 		/// SupportByVersion Visio 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 12,14,15,16)]
+		[SupportByVersion("Visio", 12,14,15,16)]
 		public bool EnableAutoConnect
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "EnableAutoConnect", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "EnableAutoConnect");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "EnableAutoConnect", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "EnableAutoConnect", value);
 			}
 		}
 
@@ -1175,19 +1024,16 @@ namespace NetOffice.VisioApi
 		/// SupportByVersion Visio 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 14,15,16)]
+		[SupportByVersion("Visio", 14,15,16)]
 		public bool ApplyBackgroundToDocument
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "ApplyBackgroundToDocument", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "ApplyBackgroundToDocument");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "ApplyBackgroundToDocument", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "ApplyBackgroundToDocument", value);
 			}
 		}
 
@@ -1195,19 +1041,16 @@ namespace NetOffice.VisioApi
 		/// SupportByVersion Visio 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 14,15,16)]
+		[SupportByVersion("Visio", 14,15,16)]
 		public bool TransitionsEnabled
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "TransitionsEnabled", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "TransitionsEnabled");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "TransitionsEnabled", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "TransitionsEnabled", value);
 			}
 		}
 
@@ -1215,19 +1058,16 @@ namespace NetOffice.VisioApi
 		/// SupportByVersion Visio 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 14,15,16)]
+		[SupportByVersion("Visio", 14,15,16)]
 		public bool EnableFormulaAutoComplete
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "EnableFormulaAutoComplete", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "EnableFormulaAutoComplete");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "EnableFormulaAutoComplete", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "EnableFormulaAutoComplete", value);
 			}
 		}
 
@@ -1235,19 +1075,16 @@ namespace NetOffice.VisioApi
 		/// SupportByVersion Visio 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 14,15,16)]
+		[SupportByVersion("Visio", 14,15,16)]
 		public bool DeleteConnectorsEnabled
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "DeleteConnectorsEnabled", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "DeleteConnectorsEnabled");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "DeleteConnectorsEnabled", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "DeleteConnectorsEnabled", value);
 			}
 		}
 
@@ -1255,19 +1092,16 @@ namespace NetOffice.VisioApi
 		/// SupportByVersion Visio 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 14,15,16)]
+		[SupportByVersion("Visio", 14,15,16)]
 		public Int32 RecentTemplatesListSize
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "RecentTemplatesListSize", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "RecentTemplatesListSize");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "RecentTemplatesListSize", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "RecentTemplatesListSize", value);
 			}
 		}
 
@@ -1275,20 +1109,16 @@ namespace NetOffice.VisioApi
 		/// SupportByVersion Visio 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 14,15,16)]
+		[SupportByVersion("Visio", 14,15,16)]
 		public NetOffice.VisioApi.Enums.VisRasterExportDataFormat RasterExportDataFormat
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "RasterExportDataFormat", paramsArray);
-				int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-				return (NetOffice.VisioApi.Enums.VisRasterExportDataFormat)intReturnItem;
+				return Factory.ExecuteEnumPropertyGet<NetOffice.VisioApi.Enums.VisRasterExportDataFormat>(this, "RasterExportDataFormat");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "RasterExportDataFormat", paramsArray);
+				Factory.ExecuteEnumPropertySet(this, "RasterExportDataFormat", value);
 			}
 		}
 
@@ -1296,20 +1126,16 @@ namespace NetOffice.VisioApi
 		/// SupportByVersion Visio 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 14,15,16)]
+		[SupportByVersion("Visio", 14,15,16)]
 		public NetOffice.VisioApi.Enums.VisRasterExportDataCompression RasterExportDataCompression
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "RasterExportDataCompression", paramsArray);
-				int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-				return (NetOffice.VisioApi.Enums.VisRasterExportDataCompression)intReturnItem;
+				return Factory.ExecuteEnumPropertyGet<NetOffice.VisioApi.Enums.VisRasterExportDataCompression>(this, "RasterExportDataCompression");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "RasterExportDataCompression", paramsArray);
+				Factory.ExecuteEnumPropertySet(this, "RasterExportDataCompression", value);
 			}
 		}
 
@@ -1317,20 +1143,16 @@ namespace NetOffice.VisioApi
 		/// SupportByVersion Visio 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 14,15,16)]
+		[SupportByVersion("Visio", 14,15,16)]
 		public NetOffice.VisioApi.Enums.VisRasterExportColorReduction RasterExportColorReduction
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "RasterExportColorReduction", paramsArray);
-				int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-				return (NetOffice.VisioApi.Enums.VisRasterExportColorReduction)intReturnItem;
+				return Factory.ExecuteEnumPropertyGet<NetOffice.VisioApi.Enums.VisRasterExportColorReduction>(this, "RasterExportColorReduction");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "RasterExportColorReduction", paramsArray);
+				Factory.ExecuteEnumPropertySet(this, "RasterExportColorReduction", value);
 			}
 		}
 
@@ -1338,20 +1160,16 @@ namespace NetOffice.VisioApi
 		/// SupportByVersion Visio 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 14,15,16)]
+		[SupportByVersion("Visio", 14,15,16)]
 		public NetOffice.VisioApi.Enums.VisRasterExportColorFormat RasterExportColorFormat
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "RasterExportColorFormat", paramsArray);
-				int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-				return (NetOffice.VisioApi.Enums.VisRasterExportColorFormat)intReturnItem;
+				return Factory.ExecuteEnumPropertyGet<NetOffice.VisioApi.Enums.VisRasterExportColorFormat>(this, "RasterExportColorFormat");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "RasterExportColorFormat", paramsArray);
+				Factory.ExecuteEnumPropertySet(this, "RasterExportColorFormat", value);
 			}
 		}
 
@@ -1359,20 +1177,16 @@ namespace NetOffice.VisioApi
 		/// SupportByVersion Visio 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 14,15,16)]
+		[SupportByVersion("Visio", 14,15,16)]
 		public NetOffice.VisioApi.Enums.VisRasterExportOperation RasterExportOperation
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "RasterExportOperation", paramsArray);
-				int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-				return (NetOffice.VisioApi.Enums.VisRasterExportOperation)intReturnItem;
+				return Factory.ExecuteEnumPropertyGet<NetOffice.VisioApi.Enums.VisRasterExportOperation>(this, "RasterExportOperation");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "RasterExportOperation", paramsArray);
+				Factory.ExecuteEnumPropertySet(this, "RasterExportOperation", value);
 			}
 		}
 
@@ -1380,20 +1194,16 @@ namespace NetOffice.VisioApi
 		/// SupportByVersion Visio 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 14,15,16)]
+		[SupportByVersion("Visio", 14,15,16)]
 		public NetOffice.VisioApi.Enums.VisRasterExportRotation RasterExportRotation
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "RasterExportRotation", paramsArray);
-				int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-				return (NetOffice.VisioApi.Enums.VisRasterExportRotation)intReturnItem;
+				return Factory.ExecuteEnumPropertyGet<NetOffice.VisioApi.Enums.VisRasterExportRotation>(this, "RasterExportRotation");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "RasterExportRotation", paramsArray);
+				Factory.ExecuteEnumPropertySet(this, "RasterExportRotation", value);
 			}
 		}
 
@@ -1401,20 +1211,16 @@ namespace NetOffice.VisioApi
 		/// SupportByVersion Visio 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 14,15,16)]
+		[SupportByVersion("Visio", 14,15,16)]
 		public NetOffice.VisioApi.Enums.VisRasterExportFlip RasterExportFlip
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "RasterExportFlip", paramsArray);
-				int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-				return (NetOffice.VisioApi.Enums.VisRasterExportFlip)intReturnItem;
+				return Factory.ExecuteEnumPropertyGet<NetOffice.VisioApi.Enums.VisRasterExportFlip>(this, "RasterExportFlip");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "RasterExportFlip", paramsArray);
+				Factory.ExecuteEnumPropertySet(this, "RasterExportFlip", value);
 			}
 		}
 
@@ -1422,19 +1228,16 @@ namespace NetOffice.VisioApi
 		/// SupportByVersion Visio 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 14,15,16)]
+		[SupportByVersion("Visio", 14,15,16)]
 		public Int32 RasterExportBackgroundColor
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "RasterExportBackgroundColor", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "RasterExportBackgroundColor");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "RasterExportBackgroundColor", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "RasterExportBackgroundColor", value);
 			}
 		}
 
@@ -1442,19 +1245,16 @@ namespace NetOffice.VisioApi
 		/// SupportByVersion Visio 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 14,15,16)]
+		[SupportByVersion("Visio", 14,15,16)]
 		public Int32 RasterExportTransparencyColor
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "RasterExportTransparencyColor", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "RasterExportTransparencyColor");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "RasterExportTransparencyColor", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "RasterExportTransparencyColor", value);
 			}
 		}
 
@@ -1462,19 +1262,16 @@ namespace NetOffice.VisioApi
 		/// SupportByVersion Visio 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 14,15,16)]
+		[SupportByVersion("Visio", 14,15,16)]
 		public bool RasterExportUseTransparencyColor
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "RasterExportUseTransparencyColor", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "RasterExportUseTransparencyColor");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "RasterExportUseTransparencyColor", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "RasterExportUseTransparencyColor", value);
 			}
 		}
 
@@ -1482,19 +1279,16 @@ namespace NetOffice.VisioApi
 		/// SupportByVersion Visio 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 14,15,16)]
+		[SupportByVersion("Visio", 14,15,16)]
 		public Int32 RasterExportQuality
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "RasterExportQuality", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "RasterExportQuality");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "RasterExportQuality", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "RasterExportQuality", value);
 			}
 		}
 
@@ -1502,20 +1296,16 @@ namespace NetOffice.VisioApi
 		/// SupportByVersion Visio 15,16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 15, 16)]
+		[SupportByVersion("Visio", 15, 16)]
 		public NetOffice.VisioApi.Enums.VisSVGExportFormat SVGExportFormat
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "SVGExportFormat", paramsArray);
-				int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-				return (NetOffice.VisioApi.Enums.VisSVGExportFormat)intReturnItem;
+				return Factory.ExecuteEnumPropertyGet<NetOffice.VisioApi.Enums.VisSVGExportFormat>(this, "SVGExportFormat");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "SVGExportFormat", paramsArray);
+				Factory.ExecuteEnumPropertySet(this, "SVGExportFormat", value);
 			}
 		}
 
@@ -1523,19 +1313,16 @@ namespace NetOffice.VisioApi
 		/// SupportByVersion Visio 15,16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 15, 16)]
+		[SupportByVersion("Visio", 15, 16)]
 		public bool EnableLowMemoryMode
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "EnableLowMemoryMode", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "EnableLowMemoryMode");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "EnableLowMemoryMode", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "EnableLowMemoryMode", value);
 			}
 		}
 
@@ -1543,19 +1330,16 @@ namespace NetOffice.VisioApi
 		/// SupportByVersion Visio 15,16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 15, 16)]
+		[SupportByVersion("Visio", 15, 16)]
 		public bool EnterCommitsText
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "EnterCommitsText", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "EnterCommitsText");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "EnterCommitsText", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "EnterCommitsText", value);
 			}
 		}
 
@@ -1565,70 +1349,61 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 14, 15, 16
-		/// 
 		/// </summary>
 		/// <param name="resolution">NetOffice.VisioApi.Enums.VisRasterExportResolution resolution</param>
 		/// <param name="width">optional Double Width = 0</param>
 		/// <param name="height">optional Double Height = 0</param>
 		/// <param name="resolutionUnits">optional NetOffice.VisioApi.Enums.VisRasterExportResolutionUnits resolutionUnits</param>
-		[SupportByVersionAttribute("Visio", 14,15,16)]
+		[SupportByVersion("Visio", 14,15,16)]
 		public void SetRasterExportResolution(NetOffice.VisioApi.Enums.VisRasterExportResolution resolution, object width, object height, object resolutionUnits)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(resolution, width, height, resolutionUnits);
-			Invoker.Method(this, "SetRasterExportResolution", paramsArray);
+			 Factory.ExecuteMethod(this, "SetRasterExportResolution", resolution, width, height, resolutionUnits);
 		}
 
 		/// <summary>
 		/// SupportByVersion Visio 14, 15, 16
-		/// 
 		/// </summary>
 		/// <param name="resolution">NetOffice.VisioApi.Enums.VisRasterExportResolution resolution</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Visio", 14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Visio", 14,15,16)]
 		public void SetRasterExportResolution(NetOffice.VisioApi.Enums.VisRasterExportResolution resolution)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(resolution);
-			Invoker.Method(this, "SetRasterExportResolution", paramsArray);
+			 Factory.ExecuteMethod(this, "SetRasterExportResolution", resolution);
 		}
 
 		/// <summary>
 		/// SupportByVersion Visio 14, 15, 16
-		/// 
 		/// </summary>
 		/// <param name="resolution">NetOffice.VisioApi.Enums.VisRasterExportResolution resolution</param>
 		/// <param name="width">optional Double Width = 0</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Visio", 14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Visio", 14,15,16)]
 		public void SetRasterExportResolution(NetOffice.VisioApi.Enums.VisRasterExportResolution resolution, object width)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(resolution, width);
-			Invoker.Method(this, "SetRasterExportResolution", paramsArray);
+			 Factory.ExecuteMethod(this, "SetRasterExportResolution", resolution, width);
 		}
 
 		/// <summary>
 		/// SupportByVersion Visio 14, 15, 16
-		/// 
 		/// </summary>
 		/// <param name="resolution">NetOffice.VisioApi.Enums.VisRasterExportResolution resolution</param>
 		/// <param name="width">optional Double Width = 0</param>
 		/// <param name="height">optional Double Height = 0</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Visio", 14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Visio", 14,15,16)]
 		public void SetRasterExportResolution(NetOffice.VisioApi.Enums.VisRasterExportResolution resolution, object width, object height)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(resolution, width, height);
-			Invoker.Method(this, "SetRasterExportResolution", paramsArray);
+			 Factory.ExecuteMethod(this, "SetRasterExportResolution", resolution, width, height);
 		}
 
 		/// <summary>
 		/// SupportByVersion Visio 14, 15, 16
-		/// 
 		/// </summary>
 		/// <param name="pResolution">NetOffice.VisioApi.Enums.VisRasterExportResolution pResolution</param>
 		/// <param name="pWidth">Double pWidth</param>
 		/// <param name="pHeight">Double pHeight</param>
 		/// <param name="pResolutionUnits">NetOffice.VisioApi.Enums.VisRasterExportResolutionUnits pResolutionUnits</param>
-		[SupportByVersionAttribute("Visio", 14,15,16)]
+		[SupportByVersion("Visio", 14,15,16)]
 		public void GetRasterExportResolution(out NetOffice.VisioApi.Enums.VisRasterExportResolution pResolution, out Double pWidth, out Double pHeight, out NetOffice.VisioApi.Enums.VisRasterExportResolutionUnits pResolutionUnits)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true,true,true,true);
@@ -1646,70 +1421,61 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 14, 15, 16
-		/// 
 		/// </summary>
 		/// <param name="size">NetOffice.VisioApi.Enums.VisRasterExportSize size</param>
 		/// <param name="width">optional Double Width = 0</param>
 		/// <param name="height">optional Double Height = 0</param>
 		/// <param name="sizeUnits">optional NetOffice.VisioApi.Enums.VisRasterExportSizeUnits sizeUnits</param>
-		[SupportByVersionAttribute("Visio", 14,15,16)]
+		[SupportByVersion("Visio", 14,15,16)]
 		public void SetRasterExportSize(NetOffice.VisioApi.Enums.VisRasterExportSize size, object width, object height, object sizeUnits)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(size, width, height, sizeUnits);
-			Invoker.Method(this, "SetRasterExportSize", paramsArray);
+			 Factory.ExecuteMethod(this, "SetRasterExportSize", size, width, height, sizeUnits);
 		}
 
 		/// <summary>
 		/// SupportByVersion Visio 14, 15, 16
-		/// 
 		/// </summary>
 		/// <param name="size">NetOffice.VisioApi.Enums.VisRasterExportSize size</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Visio", 14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Visio", 14,15,16)]
 		public void SetRasterExportSize(NetOffice.VisioApi.Enums.VisRasterExportSize size)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(size);
-			Invoker.Method(this, "SetRasterExportSize", paramsArray);
+			 Factory.ExecuteMethod(this, "SetRasterExportSize", size);
 		}
 
 		/// <summary>
 		/// SupportByVersion Visio 14, 15, 16
-		/// 
 		/// </summary>
 		/// <param name="size">NetOffice.VisioApi.Enums.VisRasterExportSize size</param>
 		/// <param name="width">optional Double Width = 0</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Visio", 14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Visio", 14,15,16)]
 		public void SetRasterExportSize(NetOffice.VisioApi.Enums.VisRasterExportSize size, object width)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(size, width);
-			Invoker.Method(this, "SetRasterExportSize", paramsArray);
+			 Factory.ExecuteMethod(this, "SetRasterExportSize", size, width);
 		}
 
 		/// <summary>
 		/// SupportByVersion Visio 14, 15, 16
-		/// 
 		/// </summary>
 		/// <param name="size">NetOffice.VisioApi.Enums.VisRasterExportSize size</param>
 		/// <param name="width">optional Double Width = 0</param>
 		/// <param name="height">optional Double Height = 0</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Visio", 14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Visio", 14,15,16)]
 		public void SetRasterExportSize(NetOffice.VisioApi.Enums.VisRasterExportSize size, object width, object height)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(size, width, height);
-			Invoker.Method(this, "SetRasterExportSize", paramsArray);
+			 Factory.ExecuteMethod(this, "SetRasterExportSize", size, width, height);
 		}
 
 		/// <summary>
 		/// SupportByVersion Visio 14, 15, 16
-		/// 
 		/// </summary>
 		/// <param name="pSize">NetOffice.VisioApi.Enums.VisRasterExportSize pSize</param>
 		/// <param name="pWidth">Double pWidth</param>
 		/// <param name="pHeight">Double pHeight</param>
 		/// <param name="pSizeUnits">NetOffice.VisioApi.Enums.VisRasterExportSizeUnits pSizeUnits</param>
-		[SupportByVersionAttribute("Visio", 14,15,16)]
+		[SupportByVersion("Visio", 14,15,16)]
 		public void GetRasterExportSize(out NetOffice.VisioApi.Enums.VisRasterExportSize pSize, out Double pWidth, out Double pHeight, out NetOffice.VisioApi.Enums.VisRasterExportSizeUnits pSizeUnits)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true,true,true,true);
@@ -1726,6 +1492,7 @@ namespace NetOffice.VisioApi
 		}
 
 		#endregion
+
 		#pragma warning restore
 	}
 }

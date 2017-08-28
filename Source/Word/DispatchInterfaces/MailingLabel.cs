@@ -1,24 +1,34 @@
 ﻿using System;
 using NetRuntimeSystem = System;
-using System.Runtime.InteropServices;
-using System.Runtime.CompilerServices;
 using System.ComponentModel;
-using System.Reflection;
-using System.Collections.Generic;
-using NetOffice;
+using NetOffice.Attributes;
+
 namespace NetOffice.WordApi
 {
-	///<summary>
+	/// <summary>
 	/// DispatchInterface MailingLabel 
 	/// SupportByVersion Word, 9,10,11,12,14,15,16
-	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835169.aspx
-	///</summary>
-	[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
-	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
-	public class MailingLabel : COMObject
+	/// </summary>
+	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835169.aspx </remarks>
+	[SupportByVersion("Word", 9,10,11,12,14,15,16)]
+	[EntityType(EntityType.IsDispatchInterface)]
+ 	public class MailingLabel : COMObject
 	{
 		#pragma warning disable
+
 		#region Type Information
+
+		/// <summary>
+		/// Instance Type
+		/// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
+		public override Type InstanceType
+		{
+			get
+			{
+				return LateBindingApiWrapperType;
+			}
+		}
 
         private static Type _type;
 
@@ -29,14 +39,20 @@ namespace NetOffice.WordApi
             {
                 if (null == _type)
                     _type = typeof(MailingLabel);
-                    
                 return _type;
             }
         }
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public MailingLabel(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -82,7 +98,7 @@ namespace NetOffice.WordApi
 		{
 		}
 		
-		/// <param name="progId">registered ProgID</param>
+		/// <param name="progId">registered progID</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public MailingLabel(string progId) : base(progId)
 		{
@@ -95,51 +111,43 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837248.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff837248.aspx </remarks>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.Application Application
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				NetOffice.WordApi.Application newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.Application.LateBindingApiWrapperType) as NetOffice.WordApi.Application;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.Application>(this, "Application", NetOffice.WordApi.Application.LateBindingApiWrapperType);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840786.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff840786.aspx </remarks>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public Int32 Creator
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Creator", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "Creator");
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff191949.aspx
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff191949.aspx </remarks>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16), ProxyResult]
 		public object Parent
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Parent", paramsArray);
-				ICOMObject newObject = Factory.CreateObjectFromComProxy(this,returnItem);
-				return newObject;
+				return Factory.ExecuteReferencePropertyGet(this, "Parent");
 			}
 		}
 
@@ -147,100 +155,84 @@ namespace NetOffice.WordApi
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public bool DefaultPrintBarCode
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "DefaultPrintBarCode", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "DefaultPrintBarCode");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "DefaultPrintBarCode", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "DefaultPrintBarCode", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845366.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff845366.aspx </remarks>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.Enums.WdPaperTray DefaultLaserTray
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "DefaultLaserTray", paramsArray);
-				int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-				return (NetOffice.WordApi.Enums.WdPaperTray)intReturnItem;
+				return Factory.ExecuteEnumPropertyGet<NetOffice.WordApi.Enums.WdPaperTray>(this, "DefaultLaserTray");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "DefaultLaserTray", paramsArray);
+				Factory.ExecuteEnumPropertySet(this, "DefaultLaserTray", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837913.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff837913.aspx </remarks>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.CustomLabels CustomLabels
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "CustomLabels", paramsArray);
-				NetOffice.WordApi.CustomLabels newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.CustomLabels.LateBindingApiWrapperType) as NetOffice.WordApi.CustomLabels;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.CustomLabels>(this, "CustomLabels", NetOffice.WordApi.CustomLabels.LateBindingApiWrapperType);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840714.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff840714.aspx </remarks>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public string DefaultLabelName
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "DefaultLabelName", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "DefaultLabelName");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "DefaultLabelName", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "DefaultLabelName", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835161.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835161.aspx </remarks>
+		[SupportByVersion("Word", 10,11,12,14,15,16)]
 		public bool Vertical
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Vertical", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "Vertical");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "Vertical", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "Vertical", value);
 			}
 		}
 
@@ -250,855 +242,747 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835757.aspx
 		/// </summary>
-		/// <param name="name">optional object Name</param>
-		/// <param name="address">optional object Address</param>
-		/// <param name="autoText">optional object AutoText</param>
-		/// <param name="extractAddress">optional object ExtractAddress</param>
-		/// <param name="laserTray">optional object LaserTray</param>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835757.aspx </remarks>
+		/// <param name="name">optional object name</param>
+		/// <param name="address">optional object address</param>
+		/// <param name="autoText">optional object autoText</param>
+		/// <param name="extractAddress">optional object extractAddress</param>
+		/// <param name="laserTray">optional object laserTray</param>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.Document CreateNewDocument(object name, object address, object autoText, object extractAddress, object laserTray)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(name, address, autoText, extractAddress, laserTray);
-			object returnItem = Invoker.MethodReturn(this, "CreateNewDocument", paramsArray);
-			NetOffice.WordApi.Document newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Document.LateBindingApiWrapperType) as NetOffice.WordApi.Document;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Document>(this, "CreateNewDocument", NetOffice.WordApi.Document.LateBindingApiWrapperType, new object[]{ name, address, autoText, extractAddress, laserTray });
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835757.aspx
 		/// </summary>
-		/// <param name="name">optional object Name</param>
-		/// <param name="address">optional object Address</param>
-		/// <param name="autoText">optional object AutoText</param>
-		/// <param name="extractAddress">optional object ExtractAddress</param>
-		/// <param name="laserTray">optional object LaserTray</param>
-		/// <param name="printEPostageLabel">optional object PrintEPostageLabel</param>
-		/// <param name="vertical">optional object Vertical</param>
-		[SupportByVersionAttribute("Word", 10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835757.aspx </remarks>
+		/// <param name="name">optional object name</param>
+		/// <param name="address">optional object address</param>
+		/// <param name="autoText">optional object autoText</param>
+		/// <param name="extractAddress">optional object extractAddress</param>
+		/// <param name="laserTray">optional object laserTray</param>
+		/// <param name="printEPostageLabel">optional object printEPostageLabel</param>
+		/// <param name="vertical">optional object vertical</param>
+		[SupportByVersion("Word", 10,11,12,14,15,16)]
 		public NetOffice.WordApi.Document CreateNewDocument(object name, object address, object autoText, object extractAddress, object laserTray, object printEPostageLabel, object vertical)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(name, address, autoText, extractAddress, laserTray, printEPostageLabel, vertical);
-			object returnItem = Invoker.MethodReturn(this, "CreateNewDocument", paramsArray);
-			NetOffice.WordApi.Document newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Document.LateBindingApiWrapperType) as NetOffice.WordApi.Document;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Document>(this, "CreateNewDocument", NetOffice.WordApi.Document.LateBindingApiWrapperType, new object[]{ name, address, autoText, extractAddress, laserTray, printEPostageLabel, vertical });
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835757.aspx
 		/// </summary>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835757.aspx </remarks>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.Document CreateNewDocument()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "CreateNewDocument", paramsArray);
-			NetOffice.WordApi.Document newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Document.LateBindingApiWrapperType) as NetOffice.WordApi.Document;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Document>(this, "CreateNewDocument", NetOffice.WordApi.Document.LateBindingApiWrapperType);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835757.aspx
 		/// </summary>
-		/// <param name="name">optional object Name</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835757.aspx </remarks>
+		/// <param name="name">optional object name</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.Document CreateNewDocument(object name)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(name);
-			object returnItem = Invoker.MethodReturn(this, "CreateNewDocument", paramsArray);
-			NetOffice.WordApi.Document newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Document.LateBindingApiWrapperType) as NetOffice.WordApi.Document;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Document>(this, "CreateNewDocument", NetOffice.WordApi.Document.LateBindingApiWrapperType, name);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835757.aspx
 		/// </summary>
-		/// <param name="name">optional object Name</param>
-		/// <param name="address">optional object Address</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835757.aspx </remarks>
+		/// <param name="name">optional object name</param>
+		/// <param name="address">optional object address</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.Document CreateNewDocument(object name, object address)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(name, address);
-			object returnItem = Invoker.MethodReturn(this, "CreateNewDocument", paramsArray);
-			NetOffice.WordApi.Document newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Document.LateBindingApiWrapperType) as NetOffice.WordApi.Document;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Document>(this, "CreateNewDocument", NetOffice.WordApi.Document.LateBindingApiWrapperType, name, address);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835757.aspx
 		/// </summary>
-		/// <param name="name">optional object Name</param>
-		/// <param name="address">optional object Address</param>
-		/// <param name="autoText">optional object AutoText</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835757.aspx </remarks>
+		/// <param name="name">optional object name</param>
+		/// <param name="address">optional object address</param>
+		/// <param name="autoText">optional object autoText</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.Document CreateNewDocument(object name, object address, object autoText)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(name, address, autoText);
-			object returnItem = Invoker.MethodReturn(this, "CreateNewDocument", paramsArray);
-			NetOffice.WordApi.Document newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Document.LateBindingApiWrapperType) as NetOffice.WordApi.Document;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Document>(this, "CreateNewDocument", NetOffice.WordApi.Document.LateBindingApiWrapperType, name, address, autoText);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835757.aspx
 		/// </summary>
-		/// <param name="name">optional object Name</param>
-		/// <param name="address">optional object Address</param>
-		/// <param name="autoText">optional object AutoText</param>
-		/// <param name="extractAddress">optional object ExtractAddress</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835757.aspx </remarks>
+		/// <param name="name">optional object name</param>
+		/// <param name="address">optional object address</param>
+		/// <param name="autoText">optional object autoText</param>
+		/// <param name="extractAddress">optional object extractAddress</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.Document CreateNewDocument(object name, object address, object autoText, object extractAddress)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(name, address, autoText, extractAddress);
-			object returnItem = Invoker.MethodReturn(this, "CreateNewDocument", paramsArray);
-			NetOffice.WordApi.Document newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Document.LateBindingApiWrapperType) as NetOffice.WordApi.Document;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Document>(this, "CreateNewDocument", NetOffice.WordApi.Document.LateBindingApiWrapperType, name, address, autoText, extractAddress);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835757.aspx
 		/// </summary>
-		/// <param name="name">optional object Name</param>
-		/// <param name="address">optional object Address</param>
-		/// <param name="autoText">optional object AutoText</param>
-		/// <param name="extractAddress">optional object ExtractAddress</param>
-		/// <param name="laserTray">optional object LaserTray</param>
-		/// <param name="printEPostageLabel">optional object PrintEPostageLabel</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835757.aspx </remarks>
+		/// <param name="name">optional object name</param>
+		/// <param name="address">optional object address</param>
+		/// <param name="autoText">optional object autoText</param>
+		/// <param name="extractAddress">optional object extractAddress</param>
+		/// <param name="laserTray">optional object laserTray</param>
+		/// <param name="printEPostageLabel">optional object printEPostageLabel</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 10,11,12,14,15,16)]
 		public NetOffice.WordApi.Document CreateNewDocument(object name, object address, object autoText, object extractAddress, object laserTray, object printEPostageLabel)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(name, address, autoText, extractAddress, laserTray, printEPostageLabel);
-			object returnItem = Invoker.MethodReturn(this, "CreateNewDocument", paramsArray);
-			NetOffice.WordApi.Document newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Document.LateBindingApiWrapperType) as NetOffice.WordApi.Document;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Document>(this, "CreateNewDocument", NetOffice.WordApi.Document.LateBindingApiWrapperType, new object[]{ name, address, autoText, extractAddress, laserTray, printEPostageLabel });
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193415.aspx
 		/// </summary>
-		/// <param name="name">optional object Name</param>
-		/// <param name="address">optional object Address</param>
-		/// <param name="extractAddress">optional object ExtractAddress</param>
-		/// <param name="laserTray">optional object LaserTray</param>
-		/// <param name="singleLabel">optional object SingleLabel</param>
-		/// <param name="row">optional object Row</param>
-		/// <param name="column">optional object Column</param>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff193415.aspx </remarks>
+		/// <param name="name">optional object name</param>
+		/// <param name="address">optional object address</param>
+		/// <param name="extractAddress">optional object extractAddress</param>
+		/// <param name="laserTray">optional object laserTray</param>
+		/// <param name="singleLabel">optional object singleLabel</param>
+		/// <param name="row">optional object row</param>
+		/// <param name="column">optional object column</param>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void PrintOut(object name, object address, object extractAddress, object laserTray, object singleLabel, object row, object column)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(name, address, extractAddress, laserTray, singleLabel, row, column);
-			Invoker.Method(this, "PrintOut", paramsArray);
+			 Factory.ExecuteMethod(this, "PrintOut", new object[]{ name, address, extractAddress, laserTray, singleLabel, row, column });
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193415.aspx
 		/// </summary>
-		/// <param name="name">optional object Name</param>
-		/// <param name="address">optional object Address</param>
-		/// <param name="extractAddress">optional object ExtractAddress</param>
-		/// <param name="laserTray">optional object LaserTray</param>
-		/// <param name="singleLabel">optional object SingleLabel</param>
-		/// <param name="row">optional object Row</param>
-		/// <param name="column">optional object Column</param>
-		/// <param name="printEPostageLabel">optional object PrintEPostageLabel</param>
-		/// <param name="vertical">optional object Vertical</param>
-		[SupportByVersionAttribute("Word", 10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff193415.aspx </remarks>
+		/// <param name="name">optional object name</param>
+		/// <param name="address">optional object address</param>
+		/// <param name="extractAddress">optional object extractAddress</param>
+		/// <param name="laserTray">optional object laserTray</param>
+		/// <param name="singleLabel">optional object singleLabel</param>
+		/// <param name="row">optional object row</param>
+		/// <param name="column">optional object column</param>
+		/// <param name="printEPostageLabel">optional object printEPostageLabel</param>
+		/// <param name="vertical">optional object vertical</param>
+		[SupportByVersion("Word", 10,11,12,14,15,16)]
 		public void PrintOut(object name, object address, object extractAddress, object laserTray, object singleLabel, object row, object column, object printEPostageLabel, object vertical)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(name, address, extractAddress, laserTray, singleLabel, row, column, printEPostageLabel, vertical);
-			Invoker.Method(this, "PrintOut", paramsArray);
+			 Factory.ExecuteMethod(this, "PrintOut", new object[]{ name, address, extractAddress, laserTray, singleLabel, row, column, printEPostageLabel, vertical });
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193415.aspx
 		/// </summary>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff193415.aspx </remarks>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void PrintOut()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "PrintOut", paramsArray);
+			 Factory.ExecuteMethod(this, "PrintOut");
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193415.aspx
 		/// </summary>
-		/// <param name="name">optional object Name</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff193415.aspx </remarks>
+		/// <param name="name">optional object name</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void PrintOut(object name)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(name);
-			Invoker.Method(this, "PrintOut", paramsArray);
+			 Factory.ExecuteMethod(this, "PrintOut", name);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193415.aspx
 		/// </summary>
-		/// <param name="name">optional object Name</param>
-		/// <param name="address">optional object Address</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff193415.aspx </remarks>
+		/// <param name="name">optional object name</param>
+		/// <param name="address">optional object address</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void PrintOut(object name, object address)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(name, address);
-			Invoker.Method(this, "PrintOut", paramsArray);
+			 Factory.ExecuteMethod(this, "PrintOut", name, address);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193415.aspx
 		/// </summary>
-		/// <param name="name">optional object Name</param>
-		/// <param name="address">optional object Address</param>
-		/// <param name="extractAddress">optional object ExtractAddress</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff193415.aspx </remarks>
+		/// <param name="name">optional object name</param>
+		/// <param name="address">optional object address</param>
+		/// <param name="extractAddress">optional object extractAddress</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void PrintOut(object name, object address, object extractAddress)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(name, address, extractAddress);
-			Invoker.Method(this, "PrintOut", paramsArray);
+			 Factory.ExecuteMethod(this, "PrintOut", name, address, extractAddress);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193415.aspx
 		/// </summary>
-		/// <param name="name">optional object Name</param>
-		/// <param name="address">optional object Address</param>
-		/// <param name="extractAddress">optional object ExtractAddress</param>
-		/// <param name="laserTray">optional object LaserTray</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff193415.aspx </remarks>
+		/// <param name="name">optional object name</param>
+		/// <param name="address">optional object address</param>
+		/// <param name="extractAddress">optional object extractAddress</param>
+		/// <param name="laserTray">optional object laserTray</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void PrintOut(object name, object address, object extractAddress, object laserTray)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(name, address, extractAddress, laserTray);
-			Invoker.Method(this, "PrintOut", paramsArray);
+			 Factory.ExecuteMethod(this, "PrintOut", name, address, extractAddress, laserTray);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193415.aspx
 		/// </summary>
-		/// <param name="name">optional object Name</param>
-		/// <param name="address">optional object Address</param>
-		/// <param name="extractAddress">optional object ExtractAddress</param>
-		/// <param name="laserTray">optional object LaserTray</param>
-		/// <param name="singleLabel">optional object SingleLabel</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff193415.aspx </remarks>
+		/// <param name="name">optional object name</param>
+		/// <param name="address">optional object address</param>
+		/// <param name="extractAddress">optional object extractAddress</param>
+		/// <param name="laserTray">optional object laserTray</param>
+		/// <param name="singleLabel">optional object singleLabel</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void PrintOut(object name, object address, object extractAddress, object laserTray, object singleLabel)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(name, address, extractAddress, laserTray, singleLabel);
-			Invoker.Method(this, "PrintOut", paramsArray);
+			 Factory.ExecuteMethod(this, "PrintOut", new object[]{ name, address, extractAddress, laserTray, singleLabel });
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193415.aspx
 		/// </summary>
-		/// <param name="name">optional object Name</param>
-		/// <param name="address">optional object Address</param>
-		/// <param name="extractAddress">optional object ExtractAddress</param>
-		/// <param name="laserTray">optional object LaserTray</param>
-		/// <param name="singleLabel">optional object SingleLabel</param>
-		/// <param name="row">optional object Row</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff193415.aspx </remarks>
+		/// <param name="name">optional object name</param>
+		/// <param name="address">optional object address</param>
+		/// <param name="extractAddress">optional object extractAddress</param>
+		/// <param name="laserTray">optional object laserTray</param>
+		/// <param name="singleLabel">optional object singleLabel</param>
+		/// <param name="row">optional object row</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void PrintOut(object name, object address, object extractAddress, object laserTray, object singleLabel, object row)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(name, address, extractAddress, laserTray, singleLabel, row);
-			Invoker.Method(this, "PrintOut", paramsArray);
+			 Factory.ExecuteMethod(this, "PrintOut", new object[]{ name, address, extractAddress, laserTray, singleLabel, row });
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193415.aspx
 		/// </summary>
-		/// <param name="name">optional object Name</param>
-		/// <param name="address">optional object Address</param>
-		/// <param name="extractAddress">optional object ExtractAddress</param>
-		/// <param name="laserTray">optional object LaserTray</param>
-		/// <param name="singleLabel">optional object SingleLabel</param>
-		/// <param name="row">optional object Row</param>
-		/// <param name="column">optional object Column</param>
-		/// <param name="printEPostageLabel">optional object PrintEPostageLabel</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff193415.aspx </remarks>
+		/// <param name="name">optional object name</param>
+		/// <param name="address">optional object address</param>
+		/// <param name="extractAddress">optional object extractAddress</param>
+		/// <param name="laserTray">optional object laserTray</param>
+		/// <param name="singleLabel">optional object singleLabel</param>
+		/// <param name="row">optional object row</param>
+		/// <param name="column">optional object column</param>
+		/// <param name="printEPostageLabel">optional object printEPostageLabel</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 10,11,12,14,15,16)]
 		public void PrintOut(object name, object address, object extractAddress, object laserTray, object singleLabel, object row, object column, object printEPostageLabel)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(name, address, extractAddress, laserTray, singleLabel, row, column, printEPostageLabel);
-			Invoker.Method(this, "PrintOut", paramsArray);
+			 Factory.ExecuteMethod(this, "PrintOut", new object[]{ name, address, extractAddress, laserTray, singleLabel, row, column, printEPostageLabel });
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="name">optional object Name</param>
-		/// <param name="address">optional object Address</param>
-		/// <param name="autoText">optional object AutoText</param>
-		/// <param name="extractAddress">optional object ExtractAddress</param>
-		/// <param name="laserTray">optional object LaserTray</param>
+		/// <param name="name">optional object name</param>
+		/// <param name="address">optional object address</param>
+		/// <param name="autoText">optional object autoText</param>
+		/// <param name="extractAddress">optional object extractAddress</param>
+		/// <param name="laserTray">optional object laserTray</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("Word", 10,11,12,14,15,16)]
+		[SupportByVersion("Word", 10,11,12,14,15,16)]
 		public NetOffice.WordApi.Document CreateNewDocument2000(object name, object address, object autoText, object extractAddress, object laserTray)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(name, address, autoText, extractAddress, laserTray);
-			object returnItem = Invoker.MethodReturn(this, "CreateNewDocument2000", paramsArray);
-			NetOffice.WordApi.Document newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Document.LateBindingApiWrapperType) as NetOffice.WordApi.Document;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Document>(this, "CreateNewDocument2000", NetOffice.WordApi.Document.LateBindingApiWrapperType, new object[]{ name, address, autoText, extractAddress, laserTray });
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 10,11,12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Word", 10,11,12,14,15,16)]
 		public NetOffice.WordApi.Document CreateNewDocument2000()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "CreateNewDocument2000", paramsArray);
-			NetOffice.WordApi.Document newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Document.LateBindingApiWrapperType) as NetOffice.WordApi.Document;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Document>(this, "CreateNewDocument2000", NetOffice.WordApi.Document.LateBindingApiWrapperType);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="name">optional object Name</param>
+		/// <param name="name">optional object name</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 10,11,12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Word", 10,11,12,14,15,16)]
 		public NetOffice.WordApi.Document CreateNewDocument2000(object name)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(name);
-			object returnItem = Invoker.MethodReturn(this, "CreateNewDocument2000", paramsArray);
-			NetOffice.WordApi.Document newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Document.LateBindingApiWrapperType) as NetOffice.WordApi.Document;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Document>(this, "CreateNewDocument2000", NetOffice.WordApi.Document.LateBindingApiWrapperType, name);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="name">optional object Name</param>
-		/// <param name="address">optional object Address</param>
+		/// <param name="name">optional object name</param>
+		/// <param name="address">optional object address</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 10,11,12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Word", 10,11,12,14,15,16)]
 		public NetOffice.WordApi.Document CreateNewDocument2000(object name, object address)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(name, address);
-			object returnItem = Invoker.MethodReturn(this, "CreateNewDocument2000", paramsArray);
-			NetOffice.WordApi.Document newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Document.LateBindingApiWrapperType) as NetOffice.WordApi.Document;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Document>(this, "CreateNewDocument2000", NetOffice.WordApi.Document.LateBindingApiWrapperType, name, address);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="name">optional object Name</param>
-		/// <param name="address">optional object Address</param>
-		/// <param name="autoText">optional object AutoText</param>
+		/// <param name="name">optional object name</param>
+		/// <param name="address">optional object address</param>
+		/// <param name="autoText">optional object autoText</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 10,11,12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Word", 10,11,12,14,15,16)]
 		public NetOffice.WordApi.Document CreateNewDocument2000(object name, object address, object autoText)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(name, address, autoText);
-			object returnItem = Invoker.MethodReturn(this, "CreateNewDocument2000", paramsArray);
-			NetOffice.WordApi.Document newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Document.LateBindingApiWrapperType) as NetOffice.WordApi.Document;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Document>(this, "CreateNewDocument2000", NetOffice.WordApi.Document.LateBindingApiWrapperType, name, address, autoText);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="name">optional object Name</param>
-		/// <param name="address">optional object Address</param>
-		/// <param name="autoText">optional object AutoText</param>
-		/// <param name="extractAddress">optional object ExtractAddress</param>
+		/// <param name="name">optional object name</param>
+		/// <param name="address">optional object address</param>
+		/// <param name="autoText">optional object autoText</param>
+		/// <param name="extractAddress">optional object extractAddress</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 10,11,12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Word", 10,11,12,14,15,16)]
 		public NetOffice.WordApi.Document CreateNewDocument2000(object name, object address, object autoText, object extractAddress)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(name, address, autoText, extractAddress);
-			object returnItem = Invoker.MethodReturn(this, "CreateNewDocument2000", paramsArray);
-			NetOffice.WordApi.Document newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Document.LateBindingApiWrapperType) as NetOffice.WordApi.Document;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Document>(this, "CreateNewDocument2000", NetOffice.WordApi.Document.LateBindingApiWrapperType, name, address, autoText, extractAddress);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="name">optional object Name</param>
-		/// <param name="address">optional object Address</param>
-		/// <param name="extractAddress">optional object ExtractAddress</param>
-		/// <param name="laserTray">optional object LaserTray</param>
-		/// <param name="singleLabel">optional object SingleLabel</param>
-		/// <param name="row">optional object Row</param>
-		/// <param name="column">optional object Column</param>
+		/// <param name="name">optional object name</param>
+		/// <param name="address">optional object address</param>
+		/// <param name="extractAddress">optional object extractAddress</param>
+		/// <param name="laserTray">optional object laserTray</param>
+		/// <param name="singleLabel">optional object singleLabel</param>
+		/// <param name="row">optional object row</param>
+		/// <param name="column">optional object column</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("Word", 10,11,12,14,15,16)]
+		[SupportByVersion("Word", 10,11,12,14,15,16)]
 		public void PrintOut2000(object name, object address, object extractAddress, object laserTray, object singleLabel, object row, object column)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(name, address, extractAddress, laserTray, singleLabel, row, column);
-			Invoker.Method(this, "PrintOut2000", paramsArray);
+			 Factory.ExecuteMethod(this, "PrintOut2000", new object[]{ name, address, extractAddress, laserTray, singleLabel, row, column });
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 10,11,12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Word", 10,11,12,14,15,16)]
 		public void PrintOut2000()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "PrintOut2000", paramsArray);
+			 Factory.ExecuteMethod(this, "PrintOut2000");
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="name">optional object Name</param>
+		/// <param name="name">optional object name</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 10,11,12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Word", 10,11,12,14,15,16)]
 		public void PrintOut2000(object name)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(name);
-			Invoker.Method(this, "PrintOut2000", paramsArray);
+			 Factory.ExecuteMethod(this, "PrintOut2000", name);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="name">optional object Name</param>
-		/// <param name="address">optional object Address</param>
+		/// <param name="name">optional object name</param>
+		/// <param name="address">optional object address</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 10,11,12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Word", 10,11,12,14,15,16)]
 		public void PrintOut2000(object name, object address)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(name, address);
-			Invoker.Method(this, "PrintOut2000", paramsArray);
+			 Factory.ExecuteMethod(this, "PrintOut2000", name, address);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="name">optional object Name</param>
-		/// <param name="address">optional object Address</param>
-		/// <param name="extractAddress">optional object ExtractAddress</param>
+		/// <param name="name">optional object name</param>
+		/// <param name="address">optional object address</param>
+		/// <param name="extractAddress">optional object extractAddress</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 10,11,12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Word", 10,11,12,14,15,16)]
 		public void PrintOut2000(object name, object address, object extractAddress)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(name, address, extractAddress);
-			Invoker.Method(this, "PrintOut2000", paramsArray);
+			 Factory.ExecuteMethod(this, "PrintOut2000", name, address, extractAddress);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="name">optional object Name</param>
-		/// <param name="address">optional object Address</param>
-		/// <param name="extractAddress">optional object ExtractAddress</param>
-		/// <param name="laserTray">optional object LaserTray</param>
+		/// <param name="name">optional object name</param>
+		/// <param name="address">optional object address</param>
+		/// <param name="extractAddress">optional object extractAddress</param>
+		/// <param name="laserTray">optional object laserTray</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 10,11,12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Word", 10,11,12,14,15,16)]
 		public void PrintOut2000(object name, object address, object extractAddress, object laserTray)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(name, address, extractAddress, laserTray);
-			Invoker.Method(this, "PrintOut2000", paramsArray);
+			 Factory.ExecuteMethod(this, "PrintOut2000", name, address, extractAddress, laserTray);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="name">optional object Name</param>
-		/// <param name="address">optional object Address</param>
-		/// <param name="extractAddress">optional object ExtractAddress</param>
-		/// <param name="laserTray">optional object LaserTray</param>
-		/// <param name="singleLabel">optional object SingleLabel</param>
+		/// <param name="name">optional object name</param>
+		/// <param name="address">optional object address</param>
+		/// <param name="extractAddress">optional object extractAddress</param>
+		/// <param name="laserTray">optional object laserTray</param>
+		/// <param name="singleLabel">optional object singleLabel</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 10,11,12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Word", 10,11,12,14,15,16)]
 		public void PrintOut2000(object name, object address, object extractAddress, object laserTray, object singleLabel)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(name, address, extractAddress, laserTray, singleLabel);
-			Invoker.Method(this, "PrintOut2000", paramsArray);
+			 Factory.ExecuteMethod(this, "PrintOut2000", new object[]{ name, address, extractAddress, laserTray, singleLabel });
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="name">optional object Name</param>
-		/// <param name="address">optional object Address</param>
-		/// <param name="extractAddress">optional object ExtractAddress</param>
-		/// <param name="laserTray">optional object LaserTray</param>
-		/// <param name="singleLabel">optional object SingleLabel</param>
-		/// <param name="row">optional object Row</param>
+		/// <param name="name">optional object name</param>
+		/// <param name="address">optional object address</param>
+		/// <param name="extractAddress">optional object extractAddress</param>
+		/// <param name="laserTray">optional object laserTray</param>
+		/// <param name="singleLabel">optional object singleLabel</param>
+		/// <param name="row">optional object row</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 10,11,12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Word", 10,11,12,14,15,16)]
 		public void PrintOut2000(object name, object address, object extractAddress, object laserTray, object singleLabel, object row)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(name, address, extractAddress, laserTray, singleLabel, row);
-			Invoker.Method(this, "PrintOut2000", paramsArray);
+			 Factory.ExecuteMethod(this, "PrintOut2000", new object[]{ name, address, extractAddress, laserTray, singleLabel, row });
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836933.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff836933.aspx </remarks>
+		[SupportByVersion("Word", 10,11,12,14,15,16)]
 		public void LabelOptions()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "LabelOptions", paramsArray);
+			 Factory.ExecuteMethod(this, "LabelOptions");
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196548.aspx
 		/// </summary>
-		/// <param name="labelID">optional object LabelID</param>
-		/// <param name="address">optional object Address</param>
-		/// <param name="autoText">optional object AutoText</param>
-		/// <param name="extractAddress">optional object ExtractAddress</param>
-		/// <param name="laserTray">optional object LaserTray</param>
-		/// <param name="printEPostageLabel">optional object PrintEPostageLabel</param>
-		/// <param name="vertical">optional object Vertical</param>
-		[SupportByVersionAttribute("Word", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff196548.aspx </remarks>
+		/// <param name="labelID">optional object labelID</param>
+		/// <param name="address">optional object address</param>
+		/// <param name="autoText">optional object autoText</param>
+		/// <param name="extractAddress">optional object extractAddress</param>
+		/// <param name="laserTray">optional object laserTray</param>
+		/// <param name="printEPostageLabel">optional object printEPostageLabel</param>
+		/// <param name="vertical">optional object vertical</param>
+		[SupportByVersion("Word", 12,14,15,16)]
 		public NetOffice.WordApi.Document CreateNewDocumentByID(object labelID, object address, object autoText, object extractAddress, object laserTray, object printEPostageLabel, object vertical)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(labelID, address, autoText, extractAddress, laserTray, printEPostageLabel, vertical);
-			object returnItem = Invoker.MethodReturn(this, "CreateNewDocumentByID", paramsArray);
-			NetOffice.WordApi.Document newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Document.LateBindingApiWrapperType) as NetOffice.WordApi.Document;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Document>(this, "CreateNewDocumentByID", NetOffice.WordApi.Document.LateBindingApiWrapperType, new object[]{ labelID, address, autoText, extractAddress, laserTray, printEPostageLabel, vertical });
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196548.aspx
 		/// </summary>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff196548.aspx </remarks>
+		[CustomMethod]
+		[SupportByVersion("Word", 12,14,15,16)]
 		public NetOffice.WordApi.Document CreateNewDocumentByID()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "CreateNewDocumentByID", paramsArray);
-			NetOffice.WordApi.Document newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Document.LateBindingApiWrapperType) as NetOffice.WordApi.Document;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Document>(this, "CreateNewDocumentByID", NetOffice.WordApi.Document.LateBindingApiWrapperType);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196548.aspx
 		/// </summary>
-		/// <param name="labelID">optional object LabelID</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff196548.aspx </remarks>
+		/// <param name="labelID">optional object labelID</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 12,14,15,16)]
 		public NetOffice.WordApi.Document CreateNewDocumentByID(object labelID)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(labelID);
-			object returnItem = Invoker.MethodReturn(this, "CreateNewDocumentByID", paramsArray);
-			NetOffice.WordApi.Document newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Document.LateBindingApiWrapperType) as NetOffice.WordApi.Document;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Document>(this, "CreateNewDocumentByID", NetOffice.WordApi.Document.LateBindingApiWrapperType, labelID);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196548.aspx
 		/// </summary>
-		/// <param name="labelID">optional object LabelID</param>
-		/// <param name="address">optional object Address</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff196548.aspx </remarks>
+		/// <param name="labelID">optional object labelID</param>
+		/// <param name="address">optional object address</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 12,14,15,16)]
 		public NetOffice.WordApi.Document CreateNewDocumentByID(object labelID, object address)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(labelID, address);
-			object returnItem = Invoker.MethodReturn(this, "CreateNewDocumentByID", paramsArray);
-			NetOffice.WordApi.Document newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Document.LateBindingApiWrapperType) as NetOffice.WordApi.Document;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Document>(this, "CreateNewDocumentByID", NetOffice.WordApi.Document.LateBindingApiWrapperType, labelID, address);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196548.aspx
 		/// </summary>
-		/// <param name="labelID">optional object LabelID</param>
-		/// <param name="address">optional object Address</param>
-		/// <param name="autoText">optional object AutoText</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff196548.aspx </remarks>
+		/// <param name="labelID">optional object labelID</param>
+		/// <param name="address">optional object address</param>
+		/// <param name="autoText">optional object autoText</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 12,14,15,16)]
 		public NetOffice.WordApi.Document CreateNewDocumentByID(object labelID, object address, object autoText)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(labelID, address, autoText);
-			object returnItem = Invoker.MethodReturn(this, "CreateNewDocumentByID", paramsArray);
-			NetOffice.WordApi.Document newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Document.LateBindingApiWrapperType) as NetOffice.WordApi.Document;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Document>(this, "CreateNewDocumentByID", NetOffice.WordApi.Document.LateBindingApiWrapperType, labelID, address, autoText);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196548.aspx
 		/// </summary>
-		/// <param name="labelID">optional object LabelID</param>
-		/// <param name="address">optional object Address</param>
-		/// <param name="autoText">optional object AutoText</param>
-		/// <param name="extractAddress">optional object ExtractAddress</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff196548.aspx </remarks>
+		/// <param name="labelID">optional object labelID</param>
+		/// <param name="address">optional object address</param>
+		/// <param name="autoText">optional object autoText</param>
+		/// <param name="extractAddress">optional object extractAddress</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 12,14,15,16)]
 		public NetOffice.WordApi.Document CreateNewDocumentByID(object labelID, object address, object autoText, object extractAddress)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(labelID, address, autoText, extractAddress);
-			object returnItem = Invoker.MethodReturn(this, "CreateNewDocumentByID", paramsArray);
-			NetOffice.WordApi.Document newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Document.LateBindingApiWrapperType) as NetOffice.WordApi.Document;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Document>(this, "CreateNewDocumentByID", NetOffice.WordApi.Document.LateBindingApiWrapperType, labelID, address, autoText, extractAddress);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196548.aspx
 		/// </summary>
-		/// <param name="labelID">optional object LabelID</param>
-		/// <param name="address">optional object Address</param>
-		/// <param name="autoText">optional object AutoText</param>
-		/// <param name="extractAddress">optional object ExtractAddress</param>
-		/// <param name="laserTray">optional object LaserTray</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff196548.aspx </remarks>
+		/// <param name="labelID">optional object labelID</param>
+		/// <param name="address">optional object address</param>
+		/// <param name="autoText">optional object autoText</param>
+		/// <param name="extractAddress">optional object extractAddress</param>
+		/// <param name="laserTray">optional object laserTray</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 12,14,15,16)]
 		public NetOffice.WordApi.Document CreateNewDocumentByID(object labelID, object address, object autoText, object extractAddress, object laserTray)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(labelID, address, autoText, extractAddress, laserTray);
-			object returnItem = Invoker.MethodReturn(this, "CreateNewDocumentByID", paramsArray);
-			NetOffice.WordApi.Document newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Document.LateBindingApiWrapperType) as NetOffice.WordApi.Document;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Document>(this, "CreateNewDocumentByID", NetOffice.WordApi.Document.LateBindingApiWrapperType, new object[]{ labelID, address, autoText, extractAddress, laserTray });
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196548.aspx
 		/// </summary>
-		/// <param name="labelID">optional object LabelID</param>
-		/// <param name="address">optional object Address</param>
-		/// <param name="autoText">optional object AutoText</param>
-		/// <param name="extractAddress">optional object ExtractAddress</param>
-		/// <param name="laserTray">optional object LaserTray</param>
-		/// <param name="printEPostageLabel">optional object PrintEPostageLabel</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff196548.aspx </remarks>
+		/// <param name="labelID">optional object labelID</param>
+		/// <param name="address">optional object address</param>
+		/// <param name="autoText">optional object autoText</param>
+		/// <param name="extractAddress">optional object extractAddress</param>
+		/// <param name="laserTray">optional object laserTray</param>
+		/// <param name="printEPostageLabel">optional object printEPostageLabel</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 12,14,15,16)]
 		public NetOffice.WordApi.Document CreateNewDocumentByID(object labelID, object address, object autoText, object extractAddress, object laserTray, object printEPostageLabel)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(labelID, address, autoText, extractAddress, laserTray, printEPostageLabel);
-			object returnItem = Invoker.MethodReturn(this, "CreateNewDocumentByID", paramsArray);
-			NetOffice.WordApi.Document newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Document.LateBindingApiWrapperType) as NetOffice.WordApi.Document;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Document>(this, "CreateNewDocumentByID", NetOffice.WordApi.Document.LateBindingApiWrapperType, new object[]{ labelID, address, autoText, extractAddress, laserTray, printEPostageLabel });
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822145.aspx
 		/// </summary>
-		/// <param name="labelID">optional object LabelID</param>
-		/// <param name="address">optional object Address</param>
-		/// <param name="extractAddress">optional object ExtractAddress</param>
-		/// <param name="laserTray">optional object LaserTray</param>
-		/// <param name="singleLabel">optional object SingleLabel</param>
-		/// <param name="row">optional object Row</param>
-		/// <param name="column">optional object Column</param>
-		/// <param name="printEPostageLabel">optional object PrintEPostageLabel</param>
-		/// <param name="vertical">optional object Vertical</param>
-		[SupportByVersionAttribute("Word", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff822145.aspx </remarks>
+		/// <param name="labelID">optional object labelID</param>
+		/// <param name="address">optional object address</param>
+		/// <param name="extractAddress">optional object extractAddress</param>
+		/// <param name="laserTray">optional object laserTray</param>
+		/// <param name="singleLabel">optional object singleLabel</param>
+		/// <param name="row">optional object row</param>
+		/// <param name="column">optional object column</param>
+		/// <param name="printEPostageLabel">optional object printEPostageLabel</param>
+		/// <param name="vertical">optional object vertical</param>
+		[SupportByVersion("Word", 12,14,15,16)]
 		public void PrintOutByID(object labelID, object address, object extractAddress, object laserTray, object singleLabel, object row, object column, object printEPostageLabel, object vertical)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(labelID, address, extractAddress, laserTray, singleLabel, row, column, printEPostageLabel, vertical);
-			Invoker.Method(this, "PrintOutByID", paramsArray);
+			 Factory.ExecuteMethod(this, "PrintOutByID", new object[]{ labelID, address, extractAddress, laserTray, singleLabel, row, column, printEPostageLabel, vertical });
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822145.aspx
 		/// </summary>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff822145.aspx </remarks>
+		[CustomMethod]
+		[SupportByVersion("Word", 12,14,15,16)]
 		public void PrintOutByID()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "PrintOutByID", paramsArray);
+			 Factory.ExecuteMethod(this, "PrintOutByID");
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822145.aspx
 		/// </summary>
-		/// <param name="labelID">optional object LabelID</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff822145.aspx </remarks>
+		/// <param name="labelID">optional object labelID</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 12,14,15,16)]
 		public void PrintOutByID(object labelID)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(labelID);
-			Invoker.Method(this, "PrintOutByID", paramsArray);
+			 Factory.ExecuteMethod(this, "PrintOutByID", labelID);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822145.aspx
 		/// </summary>
-		/// <param name="labelID">optional object LabelID</param>
-		/// <param name="address">optional object Address</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff822145.aspx </remarks>
+		/// <param name="labelID">optional object labelID</param>
+		/// <param name="address">optional object address</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 12,14,15,16)]
 		public void PrintOutByID(object labelID, object address)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(labelID, address);
-			Invoker.Method(this, "PrintOutByID", paramsArray);
+			 Factory.ExecuteMethod(this, "PrintOutByID", labelID, address);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822145.aspx
 		/// </summary>
-		/// <param name="labelID">optional object LabelID</param>
-		/// <param name="address">optional object Address</param>
-		/// <param name="extractAddress">optional object ExtractAddress</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff822145.aspx </remarks>
+		/// <param name="labelID">optional object labelID</param>
+		/// <param name="address">optional object address</param>
+		/// <param name="extractAddress">optional object extractAddress</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 12,14,15,16)]
 		public void PrintOutByID(object labelID, object address, object extractAddress)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(labelID, address, extractAddress);
-			Invoker.Method(this, "PrintOutByID", paramsArray);
+			 Factory.ExecuteMethod(this, "PrintOutByID", labelID, address, extractAddress);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822145.aspx
 		/// </summary>
-		/// <param name="labelID">optional object LabelID</param>
-		/// <param name="address">optional object Address</param>
-		/// <param name="extractAddress">optional object ExtractAddress</param>
-		/// <param name="laserTray">optional object LaserTray</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff822145.aspx </remarks>
+		/// <param name="labelID">optional object labelID</param>
+		/// <param name="address">optional object address</param>
+		/// <param name="extractAddress">optional object extractAddress</param>
+		/// <param name="laserTray">optional object laserTray</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 12,14,15,16)]
 		public void PrintOutByID(object labelID, object address, object extractAddress, object laserTray)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(labelID, address, extractAddress, laserTray);
-			Invoker.Method(this, "PrintOutByID", paramsArray);
+			 Factory.ExecuteMethod(this, "PrintOutByID", labelID, address, extractAddress, laserTray);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822145.aspx
 		/// </summary>
-		/// <param name="labelID">optional object LabelID</param>
-		/// <param name="address">optional object Address</param>
-		/// <param name="extractAddress">optional object ExtractAddress</param>
-		/// <param name="laserTray">optional object LaserTray</param>
-		/// <param name="singleLabel">optional object SingleLabel</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff822145.aspx </remarks>
+		/// <param name="labelID">optional object labelID</param>
+		/// <param name="address">optional object address</param>
+		/// <param name="extractAddress">optional object extractAddress</param>
+		/// <param name="laserTray">optional object laserTray</param>
+		/// <param name="singleLabel">optional object singleLabel</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 12,14,15,16)]
 		public void PrintOutByID(object labelID, object address, object extractAddress, object laserTray, object singleLabel)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(labelID, address, extractAddress, laserTray, singleLabel);
-			Invoker.Method(this, "PrintOutByID", paramsArray);
+			 Factory.ExecuteMethod(this, "PrintOutByID", new object[]{ labelID, address, extractAddress, laserTray, singleLabel });
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822145.aspx
 		/// </summary>
-		/// <param name="labelID">optional object LabelID</param>
-		/// <param name="address">optional object Address</param>
-		/// <param name="extractAddress">optional object ExtractAddress</param>
-		/// <param name="laserTray">optional object LaserTray</param>
-		/// <param name="singleLabel">optional object SingleLabel</param>
-		/// <param name="row">optional object Row</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff822145.aspx </remarks>
+		/// <param name="labelID">optional object labelID</param>
+		/// <param name="address">optional object address</param>
+		/// <param name="extractAddress">optional object extractAddress</param>
+		/// <param name="laserTray">optional object laserTray</param>
+		/// <param name="singleLabel">optional object singleLabel</param>
+		/// <param name="row">optional object row</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 12,14,15,16)]
 		public void PrintOutByID(object labelID, object address, object extractAddress, object laserTray, object singleLabel, object row)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(labelID, address, extractAddress, laserTray, singleLabel, row);
-			Invoker.Method(this, "PrintOutByID", paramsArray);
+			 Factory.ExecuteMethod(this, "PrintOutByID", new object[]{ labelID, address, extractAddress, laserTray, singleLabel, row });
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822145.aspx
 		/// </summary>
-		/// <param name="labelID">optional object LabelID</param>
-		/// <param name="address">optional object Address</param>
-		/// <param name="extractAddress">optional object ExtractAddress</param>
-		/// <param name="laserTray">optional object LaserTray</param>
-		/// <param name="singleLabel">optional object SingleLabel</param>
-		/// <param name="row">optional object Row</param>
-		/// <param name="column">optional object Column</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff822145.aspx </remarks>
+		/// <param name="labelID">optional object labelID</param>
+		/// <param name="address">optional object address</param>
+		/// <param name="extractAddress">optional object extractAddress</param>
+		/// <param name="laserTray">optional object laserTray</param>
+		/// <param name="singleLabel">optional object singleLabel</param>
+		/// <param name="row">optional object row</param>
+		/// <param name="column">optional object column</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 12,14,15,16)]
 		public void PrintOutByID(object labelID, object address, object extractAddress, object laserTray, object singleLabel, object row, object column)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(labelID, address, extractAddress, laserTray, singleLabel, row, column);
-			Invoker.Method(this, "PrintOutByID", paramsArray);
+			 Factory.ExecuteMethod(this, "PrintOutByID", new object[]{ labelID, address, extractAddress, laserTray, singleLabel, row, column });
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822145.aspx
 		/// </summary>
-		/// <param name="labelID">optional object LabelID</param>
-		/// <param name="address">optional object Address</param>
-		/// <param name="extractAddress">optional object ExtractAddress</param>
-		/// <param name="laserTray">optional object LaserTray</param>
-		/// <param name="singleLabel">optional object SingleLabel</param>
-		/// <param name="row">optional object Row</param>
-		/// <param name="column">optional object Column</param>
-		/// <param name="printEPostageLabel">optional object PrintEPostageLabel</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff822145.aspx </remarks>
+		/// <param name="labelID">optional object labelID</param>
+		/// <param name="address">optional object address</param>
+		/// <param name="extractAddress">optional object extractAddress</param>
+		/// <param name="laserTray">optional object laserTray</param>
+		/// <param name="singleLabel">optional object singleLabel</param>
+		/// <param name="row">optional object row</param>
+		/// <param name="column">optional object column</param>
+		/// <param name="printEPostageLabel">optional object printEPostageLabel</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 12,14,15,16)]
 		public void PrintOutByID(object labelID, object address, object extractAddress, object laserTray, object singleLabel, object row, object column, object printEPostageLabel)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(labelID, address, extractAddress, laserTray, singleLabel, row, column, printEPostageLabel);
-			Invoker.Method(this, "PrintOutByID", paramsArray);
+			 Factory.ExecuteMethod(this, "PrintOutByID", new object[]{ labelID, address, extractAddress, laserTray, singleLabel, row, column, printEPostageLabel });
 		}
 
 		#endregion
+
 		#pragma warning restore
 	}
 }

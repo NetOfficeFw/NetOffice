@@ -1,24 +1,34 @@
 ﻿using System;
 using NetRuntimeSystem = System;
-using System.Runtime.InteropServices;
-using System.Runtime.CompilerServices;
 using System.ComponentModel;
-using System.Reflection;
-using System.Collections.Generic;
-using NetOffice;
+using NetOffice.Attributes;
+
 namespace NetOffice.PowerPointApi
 {
-	///<summary>
+	/// <summary>
 	/// DispatchInterface Research 
 	/// SupportByVersion PowerPoint, 12,14,15,16
-	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745646.aspx
-	///</summary>
-	[SupportByVersionAttribute("PowerPoint", 12,14,15,16)]
-	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
-	public class Research : COMObject
+	/// </summary>
+	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff745646.aspx </remarks>
+	[SupportByVersion("PowerPoint", 12,14,15,16)]
+	[EntityType(EntityType.IsDispatchInterface)]
+ 	public class Research : COMObject
 	{
 		#pragma warning disable
+
 		#region Type Information
+
+		/// <summary>
+		/// Instance Type
+		/// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
+		public override Type InstanceType
+		{
+			get
+			{
+				return LateBindingApiWrapperType;
+			}
+		}
 
         private static Type _type;
 
@@ -29,14 +39,20 @@ namespace NetOffice.PowerPointApi
             {
                 if (null == _type)
                     _type = typeof(Research);
-                    
                 return _type;
             }
         }
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public Research(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -82,7 +98,7 @@ namespace NetOffice.PowerPointApi
 		{
 		}
 		
-		/// <param name="progId">registered ProgID</param>
+		/// <param name="progId">registered progID</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public Research(string progId) : base(progId)
 		{
@@ -95,35 +111,29 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746098.aspx
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff746098.aspx </remarks>
+		[SupportByVersion("PowerPoint", 12,14,15,16)]
 		public NetOffice.PowerPointApi.Application Application
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				NetOffice.PowerPointApi.Application newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.PowerPointApi.Application.LateBindingApiWrapperType) as NetOffice.PowerPointApi.Application;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.PowerPointApi.Application>(this, "Application", NetOffice.PowerPointApi.Application.LateBindingApiWrapperType);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744070.aspx
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff744070.aspx </remarks>
+		[SupportByVersion("PowerPoint", 12,14,15,16), ProxyResult]
 		public object Parent
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Parent", paramsArray);
-				ICOMObject newObject = Factory.CreateObjectFromComProxy(this,returnItem);
-				return newObject;
+				return Factory.ExecuteReferencePropertyGet(this, "Parent");
 			}
 		}
 
@@ -133,105 +143,98 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744220.aspx
 		/// </summary>
-		/// <param name="serviceID">string ServiceID</param>
-		/// <param name="queryString">optional object QueryString</param>
-		/// <param name="queryLanguage">optional object QueryLanguage</param>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff744220.aspx </remarks>
+		/// <param name="serviceID">string serviceID</param>
+		/// <param name="queryString">optional object queryString</param>
+		/// <param name="queryLanguage">optional object queryLanguage</param>
 		/// <param name="useSelection">optional bool UseSelection = false</param>
 		/// <param name="launchQuery">optional bool LaunchQuery = true</param>
-		[SupportByVersionAttribute("PowerPoint", 12,14,15,16)]
+		[SupportByVersion("PowerPoint", 12,14,15,16)]
 		public void Query(string serviceID, object queryString, object queryLanguage, object useSelection, object launchQuery)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(serviceID, queryString, queryLanguage, useSelection, launchQuery);
-			Invoker.Method(this, "Query", paramsArray);
+			 Factory.ExecuteMethod(this, "Query", new object[]{ serviceID, queryString, queryLanguage, useSelection, launchQuery });
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744220.aspx
 		/// </summary>
-		/// <param name="serviceID">string ServiceID</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("PowerPoint", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff744220.aspx </remarks>
+		/// <param name="serviceID">string serviceID</param>
+		[CustomMethod]
+		[SupportByVersion("PowerPoint", 12,14,15,16)]
 		public void Query(string serviceID)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(serviceID);
-			Invoker.Method(this, "Query", paramsArray);
+			 Factory.ExecuteMethod(this, "Query", serviceID);
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744220.aspx
 		/// </summary>
-		/// <param name="serviceID">string ServiceID</param>
-		/// <param name="queryString">optional object QueryString</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("PowerPoint", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff744220.aspx </remarks>
+		/// <param name="serviceID">string serviceID</param>
+		/// <param name="queryString">optional object queryString</param>
+		[CustomMethod]
+		[SupportByVersion("PowerPoint", 12,14,15,16)]
 		public void Query(string serviceID, object queryString)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(serviceID, queryString);
-			Invoker.Method(this, "Query", paramsArray);
+			 Factory.ExecuteMethod(this, "Query", serviceID, queryString);
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744220.aspx
 		/// </summary>
-		/// <param name="serviceID">string ServiceID</param>
-		/// <param name="queryString">optional object QueryString</param>
-		/// <param name="queryLanguage">optional object QueryLanguage</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("PowerPoint", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff744220.aspx </remarks>
+		/// <param name="serviceID">string serviceID</param>
+		/// <param name="queryString">optional object queryString</param>
+		/// <param name="queryLanguage">optional object queryLanguage</param>
+		[CustomMethod]
+		[SupportByVersion("PowerPoint", 12,14,15,16)]
 		public void Query(string serviceID, object queryString, object queryLanguage)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(serviceID, queryString, queryLanguage);
-			Invoker.Method(this, "Query", paramsArray);
+			 Factory.ExecuteMethod(this, "Query", serviceID, queryString, queryLanguage);
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744220.aspx
 		/// </summary>
-		/// <param name="serviceID">string ServiceID</param>
-		/// <param name="queryString">optional object QueryString</param>
-		/// <param name="queryLanguage">optional object QueryLanguage</param>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff744220.aspx </remarks>
+		/// <param name="serviceID">string serviceID</param>
+		/// <param name="queryString">optional object queryString</param>
+		/// <param name="queryLanguage">optional object queryLanguage</param>
 		/// <param name="useSelection">optional bool UseSelection = false</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("PowerPoint", 12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("PowerPoint", 12,14,15,16)]
 		public void Query(string serviceID, object queryString, object queryLanguage, object useSelection)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(serviceID, queryString, queryLanguage, useSelection);
-			Invoker.Method(this, "Query", paramsArray);
+			 Factory.ExecuteMethod(this, "Query", serviceID, queryString, queryLanguage, useSelection);
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745349.aspx
 		/// </summary>
-		/// <param name="language1">object Language1</param>
-		/// <param name="language2">object Language2</param>
-		[SupportByVersionAttribute("PowerPoint", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff745349.aspx </remarks>
+		/// <param name="language1">object language1</param>
+		/// <param name="language2">object language2</param>
+		[SupportByVersion("PowerPoint", 12,14,15,16)]
 		public void SetLanguagePair(object language1, object language2)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(language1, language2);
-			Invoker.Method(this, "SetLanguagePair", paramsArray);
+			 Factory.ExecuteMethod(this, "SetLanguagePair", language1, language2);
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746351.aspx
 		/// </summary>
-		/// <param name="serviceID">string ServiceID</param>
-		[SupportByVersionAttribute("PowerPoint", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff746351.aspx </remarks>
+		/// <param name="serviceID">string serviceID</param>
+		[SupportByVersion("PowerPoint", 12,14,15,16)]
 		public bool IsResearchService(string serviceID)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(serviceID);
-			object returnItem = Invoker.MethodReturn(this, "IsResearchService", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return Factory.ExecuteBoolMethodGet(this, "IsResearchService", serviceID);
 		}
 
 		#endregion
+
 		#pragma warning restore
 	}
 }

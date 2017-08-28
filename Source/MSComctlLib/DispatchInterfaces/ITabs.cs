@@ -1,24 +1,35 @@
-﻿using System;
-using NetRuntimeSystem = System;
-using System.Runtime.InteropServices;
-using System.Runtime.CompilerServices;
-using System.ComponentModel;
-using System.Reflection;
-using System.Collections.Generic;
 using System.Collections;
-using NetOffice;
+using System.Collections.Generic;
+using System;
+using NetRuntimeSystem = System;
+using System.ComponentModel;
+using NetOffice.Attributes;
+
 namespace NetOffice.MSComctlLibApi
 {
-	///<summary>
+	/// <summary>
 	/// DispatchInterface ITabs 
 	/// SupportByVersion MSComctlLib, 6
-	///</summary>
-	[SupportByVersionAttribute("MSComctlLib", 6)]
-	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
-	public class ITabs : COMObject ,IEnumerable<NetOffice.MSComctlLibApi.ITab>
+	/// </summary>
+	[SupportByVersion("MSComctlLib", 6)]
+	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Method), HasIndexProperty(IndexInvoke.Property, "Item")]
+	public class ITabs : COMObject , IEnumerable<NetOffice.MSComctlLibApi.ITab>
 	{
 		#pragma warning disable
+
 		#region Type Information
+
+		/// <summary>
+		/// Instance Type
+		/// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
+		public override Type InstanceType
+		{
+			get
+			{
+				return LateBindingApiWrapperType;
+			}
+		}
 
         private static Type _type;
 
@@ -29,14 +40,20 @@ namespace NetOffice.MSComctlLibApi
             {
                 if (null == _type)
                     _type = typeof(ITabs);
-                    
                 return _type;
             }
         }
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public ITabs(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -82,7 +99,7 @@ namespace NetOffice.MSComctlLibApi
 		{
 		}
 		
-		/// <param name="progId">registered ProgID</param>
+		/// <param name="progId">registered progID</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public ITabs(string progId) : base(progId)
 		{
@@ -96,19 +113,16 @@ namespace NetOffice.MSComctlLibApi
 		/// SupportByVersion MSComctlLib 6
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSComctlLib", 6)]
+		[SupportByVersion("MSComctlLib", 6)]
 		public Int16 Count
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Count", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt16(returnItem);
+				return Factory.ExecuteInt16PropertyGet(this, "Count");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "Count", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "Count", value);
 			}
 		}
 
@@ -117,14 +131,11 @@ namespace NetOffice.MSComctlLibApi
 		/// Get/Set
 		/// </summary>
 		/// <param name="pvIndex">object pvIndex</param>
-		[SupportByVersionAttribute("MSComctlLib", 6)]
+		[SupportByVersion("MSComctlLib", 6)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public NetOffice.MSComctlLibApi.ITab get_ControlDefault(object pvIndex)
-		{		
-			object[] paramsArray = Invoker.ValidateParamsArray(pvIndex);
-			object returnItem = Invoker.PropertyGet(this, "ControlDefault", paramsArray);
-			NetOffice.MSComctlLibApi.ITab newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSComctlLibApi.ITab;
-			return newObject;
+		{
+			return Factory.ExecuteKnownReferencePropertyGet<NetOffice.MSComctlLibApi.ITab>(this, "ControlDefault", NetOffice.MSComctlLibApi.ITab.LateBindingApiWrapperType, pvIndex);
 		}
 
 		/// <summary>
@@ -132,12 +143,11 @@ namespace NetOffice.MSComctlLibApi
 		/// Get/Set
 		/// </summary>
 		/// <param name="pvIndex">object pvIndex</param>
-		[SupportByVersionAttribute("MSComctlLib", 6)]
+		[SupportByVersion("MSComctlLib", 6)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public void set_ControlDefault(object pvIndex, NetOffice.MSComctlLibApi.ITab value)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(pvIndex);
-			Invoker.PropertySet(this, "ControlDefault", paramsArray, value);
+			Factory.ExecutePropertySet(this, "ControlDefault", pvIndex, value);
 		}
 
 		/// <summary>
@@ -145,7 +155,7 @@ namespace NetOffice.MSComctlLibApi
 		/// Alias for get_ControlDefault
 		/// </summary>
 		/// <param name="pvIndex">object pvIndex</param>
-		[SupportByVersionAttribute("MSComctlLib", 6)]
+		[SupportByVersion("MSComctlLib", 6), Redirect("get_ControlDefault")]
 		public NetOffice.MSComctlLibApi.ITab ControlDefault(object pvIndex)
 		{
 			return get_ControlDefault(pvIndex);
@@ -156,21 +166,18 @@ namespace NetOffice.MSComctlLibApi
 		/// Get/Set
 		/// </summary>
 		/// <param name="pvIndex">object pvIndex</param>
-		[SupportByVersionAttribute("MSComctlLib", 6)]
-		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
+		[SupportByVersion("MSComctlLib", 6)]
+		[BaseResult]
+		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
 		public NetOffice.MSComctlLibApi.ITab this[object pvIndex]
 		{
 			get
 			{
-			object[] paramsArray = Invoker.ValidateParamsArray(pvIndex);
-			object returnItem = Invoker.PropertyGet(this, "Item", paramsArray);
-			NetOffice.MSComctlLibApi.ITab newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSComctlLibApi.ITab;
-			return newObject;
+				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.MSComctlLibApi.ITab>(this, "Item", pvIndex);
 			}
 			set
 			{
-			object[] paramsArray = Invoker.ValidateParamsArray(pvIndex);
-			Invoker.PropertySet(this, "Item", paramsArray, value);
+				Factory.ExecuteReferencePropertySet(this, "Item", value, pvIndex);
 			}
 		}
 
@@ -180,104 +187,85 @@ namespace NetOffice.MSComctlLibApi
 
 		/// <summary>
 		/// SupportByVersion MSComctlLib 6
-		/// 
 		/// </summary>
 		/// <param name="pvIndex">object pvIndex</param>
-		[SupportByVersionAttribute("MSComctlLib", 6)]
+		[SupportByVersion("MSComctlLib", 6)]
 		public void Remove(object pvIndex)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(pvIndex);
-			Invoker.Method(this, "Remove", paramsArray);
+			 Factory.ExecuteMethod(this, "Remove", pvIndex);
 		}
 
 		/// <summary>
 		/// SupportByVersion MSComctlLib 6
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("MSComctlLib", 6)]
+		[SupportByVersion("MSComctlLib", 6)]
 		public void Clear()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "Clear", paramsArray);
+			 Factory.ExecuteMethod(this, "Clear");
 		}
 
 		/// <summary>
 		/// SupportByVersion MSComctlLib 6
-		/// 
 		/// </summary>
 		/// <param name="pvIndex">optional object pvIndex</param>
 		/// <param name="pvKey">optional object pvKey</param>
 		/// <param name="pvCaption">optional object pvCaption</param>
 		/// <param name="pvImage">optional object pvImage</param>
-		[SupportByVersionAttribute("MSComctlLib", 6)]
+		[SupportByVersion("MSComctlLib", 6)]
+		[BaseResult]
 		public NetOffice.MSComctlLibApi.ITab Add(object pvIndex, object pvKey, object pvCaption, object pvImage)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(pvIndex, pvKey, pvCaption, pvImage);
-			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.MSComctlLibApi.ITab newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSComctlLibApi.ITab;
-			return newObject;
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.MSComctlLibApi.ITab>(this, "Add", pvIndex, pvKey, pvCaption, pvImage);
 		}
 
 		/// <summary>
 		/// SupportByVersion MSComctlLib 6
-		/// 
 		/// </summary>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSComctlLib", 6)]
+		[CustomMethod]
+		[BaseResult]
+		[SupportByVersion("MSComctlLib", 6)]
 		public NetOffice.MSComctlLibApi.ITab Add()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.MSComctlLibApi.ITab newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSComctlLibApi.ITab;
-			return newObject;
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.MSComctlLibApi.ITab>(this, "Add");
 		}
 
 		/// <summary>
 		/// SupportByVersion MSComctlLib 6
-		/// 
 		/// </summary>
 		/// <param name="pvIndex">optional object pvIndex</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSComctlLib", 6)]
+		[CustomMethod]
+		[BaseResult]
+		[SupportByVersion("MSComctlLib", 6)]
 		public NetOffice.MSComctlLibApi.ITab Add(object pvIndex)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(pvIndex);
-			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.MSComctlLibApi.ITab newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSComctlLibApi.ITab;
-			return newObject;
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.MSComctlLibApi.ITab>(this, "Add", pvIndex);
 		}
 
 		/// <summary>
 		/// SupportByVersion MSComctlLib 6
-		/// 
 		/// </summary>
 		/// <param name="pvIndex">optional object pvIndex</param>
 		/// <param name="pvKey">optional object pvKey</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSComctlLib", 6)]
+		[CustomMethod]
+		[BaseResult]
+		[SupportByVersion("MSComctlLib", 6)]
 		public NetOffice.MSComctlLibApi.ITab Add(object pvIndex, object pvKey)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(pvIndex, pvKey);
-			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.MSComctlLibApi.ITab newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSComctlLibApi.ITab;
-			return newObject;
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.MSComctlLibApi.ITab>(this, "Add", pvIndex, pvKey);
 		}
 
 		/// <summary>
 		/// SupportByVersion MSComctlLib 6
-		/// 
 		/// </summary>
 		/// <param name="pvIndex">optional object pvIndex</param>
 		/// <param name="pvKey">optional object pvKey</param>
 		/// <param name="pvCaption">optional object pvCaption</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSComctlLib", 6)]
+		[CustomMethod]
+		[BaseResult]
+		[SupportByVersion("MSComctlLib", 6)]
 		public NetOffice.MSComctlLibApi.ITab Add(object pvIndex, object pvKey, object pvCaption)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(pvIndex, pvKey, pvCaption);
-			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.MSComctlLibApi.ITab newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSComctlLibApi.ITab;
-			return newObject;
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.MSComctlLibApi.ITab>(this, "Add", pvIndex, pvKey, pvCaption);
 		}
 
 		#endregion
@@ -285,9 +273,9 @@ namespace NetOffice.MSComctlLibApi
        #region IEnumerable<NetOffice.MSComctlLibApi.ITab> Member
         
         /// <summary>
-		/// SupportByVersionAttribute MSComctlLib, 6
+		/// SupportByVersion MSComctlLib, 6
 		/// </summary>
-		[SupportByVersionAttribute("MSComctlLib", 6)]
+		[SupportByVersion("MSComctlLib", 6)]
        public IEnumerator<NetOffice.MSComctlLibApi.ITab> GetEnumerator()  
        {
            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
@@ -300,15 +288,16 @@ namespace NetOffice.MSComctlLibApi
 		#region IEnumerable Members
        
 		/// <summary>
-		/// SupportByVersionAttribute MSComctlLib, 6
+		/// SupportByVersion MSComctlLib, 6
 		/// </summary>
-		[SupportByVersionAttribute("MSComctlLib", 6)]
+		[SupportByVersion("MSComctlLib", 6)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
 			return NetOffice.Utils.GetProxyEnumeratorAsMethod(this);
 		}
 
 		#endregion
+
 		#pragma warning restore
 	}
 }

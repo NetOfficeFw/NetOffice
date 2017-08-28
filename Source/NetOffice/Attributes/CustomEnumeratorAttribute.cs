@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace NetOffice
+namespace NetOffice.Attributes
 {
     /// <summary>
     /// This enumerator is not supported from the com proxy instance, its a custom service from NetOffice

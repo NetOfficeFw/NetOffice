@@ -1,24 +1,35 @@
-﻿using System;
+﻿using System.Reflection;
+using System;
 using NetRuntimeSystem = System;
-using System.Runtime.InteropServices;
 using System.ComponentModel;
-using System.Runtime.CompilerServices;
-using System.Reflection;
-using System.Collections.Generic;
-using NetOffice;
+using NetOffice.Attributes;
+
 namespace NetOffice.OfficeApi
 {
-	///<summary>
+	/// <summary>
 	/// Interface IConverterPreferences 
 	/// SupportByVersion Office, 14,15,16
-	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff864179.aspx
-	///</summary>
-	[SupportByVersionAttribute("Office", 14,15,16)]
-	[EntityTypeAttribute(EntityType.IsInterface)]
-	public class IConverterPreferences : COMObject
+	/// </summary>
+	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff864179.aspx </remarks>
+	[SupportByVersion("Office", 14,15,16)]
+	[EntityType(EntityType.IsInterface)]
+ 	public class IConverterPreferences : COMObject
 	{
 		#pragma warning disable
+
 		#region Type Information
+
+		/// <summary>
+		/// Instance Type
+		/// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
+		public override Type InstanceType
+		{
+			get
+			{
+				return LateBindingApiWrapperType;
+			}
+		}
 
         private static Type _type;
 
@@ -29,14 +40,20 @@ namespace NetOffice.OfficeApi
             {
                 if (null == _type)
                     _type = typeof(IConverterPreferences);
-                    
                 return _type;
             }
         }
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public IConverterPreferences(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -82,7 +99,7 @@ namespace NetOffice.OfficeApi
 		{
 		}
 		
-		/// <param name="progId">registered ProgID</param>
+		/// <param name="progId">registered progID</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public IConverterPreferences(string progId) : base(progId)
 		{
@@ -98,53 +115,54 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff863141.aspx
 		/// </summary>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff863141.aspx </remarks>
 		/// <param name="pfMacroEnabled">Int32 pfMacroEnabled</param>
-		[SupportByVersionAttribute("Office", 14,15,16)]
+		[SupportByVersion("Office", 14,15,16)]
 		public Int32 HrGetMacroEnabled(out Int32 pfMacroEnabled)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
 			pfMacroEnabled = 0;
 			object[] paramsArray = Invoker.ValidateParamsArray(pfMacroEnabled);
-			object returnItem = Invoker.MethodReturn(this, "HrGetMacroEnabled", paramsArray);
+			object returnItem = Invoker.MethodReturn(this, "HrGetMacroEnabled", paramsArray, modifiers);
 			pfMacroEnabled = (Int32)paramsArray[0];
 			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff865570.aspx
 		/// </summary>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff865570.aspx </remarks>
 		/// <param name="pFormat">Int32 pFormat</param>
-		[SupportByVersionAttribute("Office", 14,15,16)]
+		[SupportByVersion("Office", 14,15,16)]
 		public Int32 HrCheckFormat(out Int32 pFormat)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
 			pFormat = 0;
 			object[] paramsArray = Invoker.ValidateParamsArray(pFormat);
-			object returnItem = Invoker.MethodReturn(this, "HrCheckFormat", paramsArray);
+			object returnItem = Invoker.MethodReturn(this, "HrCheckFormat", paramsArray, modifiers);
 			pFormat = (Int32)paramsArray[0];
 			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff860851.aspx
 		/// </summary>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860851.aspx </remarks>
 		/// <param name="pfLossySave">Int32 pfLossySave</param>
-		[SupportByVersionAttribute("Office", 14,15,16)]
+		[SupportByVersion("Office", 14,15,16)]
 		public Int32 HrGetLossySave(out Int32 pfLossySave)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
 			pfLossySave = 0;
 			object[] paramsArray = Invoker.ValidateParamsArray(pfLossySave);
-			object returnItem = Invoker.MethodReturn(this, "HrGetLossySave", paramsArray);
+			object returnItem = Invoker.MethodReturn(this, "HrGetLossySave", paramsArray, modifiers);
 			pfLossySave = (Int32)paramsArray[0];
 			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		#endregion
+
 		#pragma warning restore
 	}
 }

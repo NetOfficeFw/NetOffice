@@ -1,24 +1,35 @@
-﻿using System;
-using NetRuntimeSystem = System;
-using System.Runtime.InteropServices;
-using System.Runtime.CompilerServices;
-using System.ComponentModel;
-using System.Reflection;
+﻿using System.Collections;
 using System.Collections.Generic;
-using System.Collections;
-using NetOffice;
+using System;
+using NetRuntimeSystem = System;
+using System.ComponentModel;
+using NetOffice.Attributes;
+
 namespace NetOffice.OWC10Api
 {
-	///<summary>
+	/// <summary>
 	/// DispatchInterface SchemaRowsources 
 	/// SupportByVersion OWC10, 1
-	///</summary>
-	[SupportByVersionAttribute("OWC10", 1)]
-	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
-	public class SchemaRowsources : COMObject ,IEnumerable<NetOffice.OWC10Api.SchemaRowsource>
+	/// </summary>
+	[SupportByVersion("OWC10", 1)]
+	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "Item")]
+	public class SchemaRowsources : COMObject , IEnumerable<NetOffice.OWC10Api.SchemaRowsource>
 	{
 		#pragma warning disable
+
 		#region Type Information
+
+		/// <summary>
+		/// Instance Type
+		/// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
+		public override Type InstanceType
+		{
+			get
+			{
+				return LateBindingApiWrapperType;
+			}
+		}
 
         private static Type _type;
 
@@ -29,14 +40,20 @@ namespace NetOffice.OWC10Api
             {
                 if (null == _type)
                     _type = typeof(SchemaRowsources);
-                    
                 return _type;
             }
         }
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public SchemaRowsources(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -82,7 +99,7 @@ namespace NetOffice.OWC10Api
 		{
 		}
 		
-		/// <param name="progId">registered ProgID</param>
+		/// <param name="progId">registered progID</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public SchemaRowsources(string progId) : base(progId)
 		{
@@ -96,14 +113,12 @@ namespace NetOffice.OWC10Api
 		/// SupportByVersion OWC10 1
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("OWC10", 1)]
+		[SupportByVersion("OWC10", 1)]
 		public Int32 Count
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Count", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "Count");
 			}
 		}
 
@@ -111,17 +126,14 @@ namespace NetOffice.OWC10Api
 		/// SupportByVersion OWC10 1
 		/// Get
 		/// </summary>
-		/// <param name="index">object Index</param>
-		[SupportByVersionAttribute("OWC10", 1)]
-		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
+		/// <param name="index">object index</param>
+		[SupportByVersion("OWC10", 1)]
+		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
 		public NetOffice.OWC10Api.SchemaRowsource this[object index]
 		{
 			get
-{			
-			object[] paramsArray = Invoker.ValidateParamsArray(index);
-			object returnItem = Invoker.PropertyGet(this, "Item", paramsArray);
-			NetOffice.OWC10Api.SchemaRowsource newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OWC10Api.SchemaRowsource.LateBindingApiWrapperType) as NetOffice.OWC10Api.SchemaRowsource;
-			return newObject;
+			{
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OWC10Api.SchemaRowsource>(this, "Item", NetOffice.OWC10Api.SchemaRowsource.LateBindingApiWrapperType, index);
 			}
 		}
 
@@ -131,80 +143,62 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
-		/// 
 		/// </summary>
-		/// <param name="name">string Name</param>
-		/// <param name="rowsourceType">NetOffice.OWC10Api.Enums.DscRowsourceTypeEnum RowsourceType</param>
-		/// <param name="commandText">optional object CommandText</param>
-		[SupportByVersionAttribute("OWC10", 1)]
+		/// <param name="name">string name</param>
+		/// <param name="rowsourceType">NetOffice.OWC10Api.Enums.DscRowsourceTypeEnum rowsourceType</param>
+		/// <param name="commandText">optional object commandText</param>
+		[SupportByVersion("OWC10", 1)]
 		public NetOffice.OWC10Api.SchemaRowsource Add(string name, NetOffice.OWC10Api.Enums.DscRowsourceTypeEnum rowsourceType, object commandText)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(name, rowsourceType, commandText);
-			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.OWC10Api.SchemaRowsource newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OWC10Api.SchemaRowsource.LateBindingApiWrapperType) as NetOffice.OWC10Api.SchemaRowsource;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OWC10Api.SchemaRowsource>(this, "Add", NetOffice.OWC10Api.SchemaRowsource.LateBindingApiWrapperType, name, rowsourceType, commandText);
 		}
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
-		/// 
 		/// </summary>
-		/// <param name="name">string Name</param>
-		/// <param name="rowsourceType">NetOffice.OWC10Api.Enums.DscRowsourceTypeEnum RowsourceType</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("OWC10", 1)]
+		/// <param name="name">string name</param>
+		/// <param name="rowsourceType">NetOffice.OWC10Api.Enums.DscRowsourceTypeEnum rowsourceType</param>
+		[CustomMethod]
+		[SupportByVersion("OWC10", 1)]
 		public NetOffice.OWC10Api.SchemaRowsource Add(string name, NetOffice.OWC10Api.Enums.DscRowsourceTypeEnum rowsourceType)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(name, rowsourceType);
-			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.OWC10Api.SchemaRowsource newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OWC10Api.SchemaRowsource.LateBindingApiWrapperType) as NetOffice.OWC10Api.SchemaRowsource;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OWC10Api.SchemaRowsource>(this, "Add", NetOffice.OWC10Api.SchemaRowsource.LateBindingApiWrapperType, name, rowsourceType);
 		}
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
-		/// 
 		/// </summary>
-		/// <param name="name">string Name</param>
-		/// <param name="rowsourceType">NetOffice.OWC10Api.Enums.DscRowsourceTypeEnum RowsourceType</param>
-		/// <param name="commandText">optional object CommandText</param>
+		/// <param name="name">string name</param>
+		/// <param name="rowsourceType">NetOffice.OWC10Api.Enums.DscRowsourceTypeEnum rowsourceType</param>
+		/// <param name="commandText">optional object commandText</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("OWC10", 1)]
+		[SupportByVersion("OWC10", 1)]
 		public NetOffice.OWC10Api.SchemaRowsource AddNew(string name, NetOffice.OWC10Api.Enums.DscRowsourceTypeEnum rowsourceType, object commandText)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(name, rowsourceType, commandText);
-			object returnItem = Invoker.MethodReturn(this, "AddNew", paramsArray);
-			NetOffice.OWC10Api.SchemaRowsource newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OWC10Api.SchemaRowsource.LateBindingApiWrapperType) as NetOffice.OWC10Api.SchemaRowsource;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OWC10Api.SchemaRowsource>(this, "AddNew", NetOffice.OWC10Api.SchemaRowsource.LateBindingApiWrapperType, name, rowsourceType, commandText);
 		}
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
-		/// 
 		/// </summary>
-		/// <param name="name">string Name</param>
-		/// <param name="rowsourceType">NetOffice.OWC10Api.Enums.DscRowsourceTypeEnum RowsourceType</param>
+		/// <param name="name">string name</param>
+		/// <param name="rowsourceType">NetOffice.OWC10Api.Enums.DscRowsourceTypeEnum rowsourceType</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("OWC10", 1)]
+		[CustomMethod]
+		[SupportByVersion("OWC10", 1)]
 		public NetOffice.OWC10Api.SchemaRowsource AddNew(string name, NetOffice.OWC10Api.Enums.DscRowsourceTypeEnum rowsourceType)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(name, rowsourceType);
-			object returnItem = Invoker.MethodReturn(this, "AddNew", paramsArray);
-			NetOffice.OWC10Api.SchemaRowsource newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OWC10Api.SchemaRowsource.LateBindingApiWrapperType) as NetOffice.OWC10Api.SchemaRowsource;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OWC10Api.SchemaRowsource>(this, "AddNew", NetOffice.OWC10Api.SchemaRowsource.LateBindingApiWrapperType, name, rowsourceType);
 		}
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
-		/// 
 		/// </summary>
-		/// <param name="index">object Index</param>
-		[SupportByVersionAttribute("OWC10", 1)]
+		/// <param name="index">object index</param>
+		[SupportByVersion("OWC10", 1)]
 		public void Delete(object index)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(index);
-			Invoker.Method(this, "Delete", paramsArray);
+			 Factory.ExecuteMethod(this, "Delete", index);
 		}
 
 		#endregion
@@ -212,9 +206,9 @@ namespace NetOffice.OWC10Api
        #region IEnumerable<NetOffice.OWC10Api.SchemaRowsource> Member
         
         /// <summary>
-		/// SupportByVersionAttribute OWC10, 1
+		/// SupportByVersion OWC10, 1
 		/// </summary>
-		[SupportByVersionAttribute("OWC10", 1)]
+		[SupportByVersion("OWC10", 1)]
        public IEnumerator<NetOffice.OWC10Api.SchemaRowsource> GetEnumerator()  
        {
            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
@@ -227,15 +221,16 @@ namespace NetOffice.OWC10Api
 		#region IEnumerable Members
        
 		/// <summary>
-		/// SupportByVersionAttribute OWC10, 1
+		/// SupportByVersion OWC10, 1
 		/// </summary>
-		[SupportByVersionAttribute("OWC10", 1)]
+		[SupportByVersion("OWC10", 1)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
 			return NetOffice.Utils.GetProxyEnumeratorAsProperty(this);
 		}
 
 		#endregion
+
 		#pragma warning restore
 	}
 }

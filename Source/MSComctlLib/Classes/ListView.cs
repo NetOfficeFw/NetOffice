@@ -1,53 +1,53 @@
 ﻿using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
-using NetOffice;
-using NetOffice.Misc;
+using NetOffice.Attributes;
 
 namespace NetOffice.MSComctlLibApi
 {
-
 	#region Delegates
 
 	#pragma warning disable
-	public delegate void ListView_BeforeLabelEditEventHandler(ref Int16 Cancel);
-	public delegate void ListView_AfterLabelEditEventHandler(ref Int16 Cancel, ref string NewString);
-	public delegate void ListView_ColumnClickEventHandler(NetOffice.MSComctlLibApi.ColumnHeader ColumnHeader);
-	public delegate void ListView_ItemClickEventHandler(NetOffice.MSComctlLibApi.ListItem Item);
-	public delegate void ListView_KeyDownEventHandler(ref Int16 KeyCode, Int16 Shift);
-	public delegate void ListView_KeyUpEventHandler(ref Int16 KeyCode, Int16 Shift);
-	public delegate void ListView_KeyPressEventHandler(ref Int16 KeyAscii);
-	public delegate void ListView_MouseDownEventHandler(Int16 Button, Int16 Shift, Int32 x, Int32 y);
-	public delegate void ListView_MouseMoveEventHandler(Int16 Button, Int16 Shift, Int32 x, Int32 y);
-	public delegate void ListView_MouseUpEventHandler(Int16 Button, Int16 Shift, Int32 x, Int32 y);
+	public delegate void ListView_BeforeLabelEditEventHandler(ref Int16 cancel);
+	public delegate void ListView_AfterLabelEditEventHandler(ref Int16 cancel, ref string newString);
+	public delegate void ListView_ColumnClickEventHandler(NetOffice.MSComctlLibApi.ColumnHeader columnHeader);
+	public delegate void ListView_ItemClickEventHandler(NetOffice.MSComctlLibApi.ListItem item);
+	public delegate void ListView_KeyDownEventHandler(ref Int16 keyCode, Int16 shift);
+	public delegate void ListView_KeyUpEventHandler(ref Int16 keyCode, Int16 shift);
+	public delegate void ListView_KeyPressEventHandler(ref Int16 keyAscii);
+	public delegate void ListView_MouseDownEventHandler(Int16 button, Int16 shift, Int32 x, Int32 y);
+	public delegate void ListView_MouseMoveEventHandler(Int16 button, Int16 shift, Int32 x, Int32 y);
+	public delegate void ListView_MouseUpEventHandler(Int16 button, Int16 shift, Int32 x, Int32 y);
 	public delegate void ListView_ClickEventHandler();
 	public delegate void ListView_DblClickEventHandler();
-	public delegate void ListView_OLEStartDragEventHandler(ref NetOffice.MSComctlLibApi.DataObject Data, ref Int32 AllowedEffects);
-	public delegate void ListView_OLEGiveFeedbackEventHandler(ref Int32 Effect, ref bool DefaultCursors);
-	public delegate void ListView_OLESetDataEventHandler(ref NetOffice.MSComctlLibApi.DataObject Data, ref Int16 DataFormat);
-	public delegate void ListView_OLECompleteDragEventHandler(ref Int32 Effect);
-	public delegate void ListView_OLEDragOverEventHandler(ref NetOffice.MSComctlLibApi.DataObject Data, ref Int32 Effect, ref Int16 Button, ref Int16 Shift, ref Single x, ref Single y, ref Int16 State);
-	public delegate void ListView_OLEDragDropEventHandler(ref NetOffice.MSComctlLibApi.DataObject Data, ref Int32 Effect, ref Int16 Button, ref Int16 Shift, ref Single x, ref Single y);
-	public delegate void ListView_ItemCheckEventHandler(NetOffice.MSComctlLibApi.ListItem Item);
+	public delegate void ListView_OLEStartDragEventHandler(ref NetOffice.MSComctlLibApi.DataObject Data, ref Int32 allowedEffects);
+	public delegate void ListView_OLEGiveFeedbackEventHandler(ref Int32 effect, ref bool defaultCursors);
+	public delegate void ListView_OLESetDataEventHandler(ref NetOffice.MSComctlLibApi.DataObject data, ref Int16 dataFormat);
+	public delegate void ListView_OLECompleteDragEventHandler(ref Int32 effect);
+	public delegate void ListView_OLEDragOverEventHandler(ref NetOffice.MSComctlLibApi.DataObject data, ref Int32 effect, ref Int16 button, ref Int16 shift, ref Single x, ref Single y, ref Int16 state);
+	public delegate void ListView_OLEDragDropEventHandler(ref NetOffice.MSComctlLibApi.DataObject data, ref Int32 effect, ref Int16 button, ref Int16 shift, ref Single x, ref Single y);
+	public delegate void ListView_ItemCheckEventHandler(NetOffice.MSComctlLibApi.ListItem item);
 	#pragma warning restore
 
 	#endregion
 
-	///<summary>
+	/// <summary>
 	/// CoClass ListView 
 	/// SupportByVersion MSComctlLib, 6
-	///</summary>
-	[SupportByVersionAttribute("MSComctlLib", 6)]
-	[EntityTypeAttribute(EntityType.IsCoClass)]
-	public class ListView : IListView,IEventBinding
+	/// </summary>
+	[SupportByVersion("MSComctlLib", 6)]
+	[EntityType(EntityType.IsCoClass)]
+	[EventSink(typeof(Events.ListViewEvents_SinkHelper))]
+	public class ListView : IListView, IEventBinding
 	{
 		#pragma warning disable
+
 		#region Fields
 		
 		private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
 		private string _activeSinkId;
 		private NetRuntimeSystem.Type _thisType;
-		ListViewEvents_SinkHelper _listViewEvents_SinkHelper;
+		private Events.ListViewEvents_SinkHelper _listViewEvents_SinkHelper;
 	
 		#endregion
 
@@ -56,6 +56,7 @@ namespace NetOffice.MSComctlLibApi
         /// <summary>
         /// Instance Type
         /// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
         public override Type InstanceType
         {
             get
@@ -122,17 +123,17 @@ namespace NetOffice.MSComctlLibApi
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of ListView 
-        ///</summary>		
+        /// </summary>		
 		public ListView():base("MSComctlLib.ListView")
 		{
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of ListView
-        ///</summary>
+        /// </summary>
         ///<param name="progId">registered ProgID</param>
 		public ListView(string progId):base(progId)
 		{
@@ -142,46 +143,6 @@ namespace NetOffice.MSComctlLibApi
 		#endregion
 
 		#region Static CoClass Methods
-
-		/// <summary>
-        /// Returns all running MSComctlLib.ListView objects from the environment/system
-        /// </summary>
-        /// <returns>an MSComctlLib.ListView array</returns>
-		public static NetOffice.MSComctlLibApi.ListView[] GetActiveInstances()
-		{		
-			IDisposableEnumeration proxyList = NetOffice.ProxyService.GetActiveInstances("MSComctlLib","ListView");
-			NetRuntimeSystem.Collections.Generic.List<NetOffice.MSComctlLibApi.ListView> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.MSComctlLibApi.ListView>();
-			foreach(object proxy in proxyList)
-				resultList.Add( new NetOffice.MSComctlLibApi.ListView(null, proxy) );
-			return resultList.ToArray();
-		}
-
-		/// <summary>
-        /// Returns a running MSComctlLib.ListView object from the environment/system.
-        /// </summary>
-        /// <returns>an MSComctlLib.ListView object or null</returns>
-		public static NetOffice.MSComctlLibApi.ListView GetActiveInstance()
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("MSComctlLib","ListView", false);
-			if(null != proxy)
-				return new NetOffice.MSComctlLibApi.ListView(null, proxy);
-			else
-				return null;
-		}
-
-		/// <summary>
-        /// Returns a running MSComctlLib.ListView object from the environment/system. 
-        /// </summary>
-	    /// <param name="throwOnError">throw an exception if no object was found</param>
-        /// <returns>an MSComctlLib.ListView object or null</returns>
-		public static NetOffice.MSComctlLibApi.ListView GetActiveInstance(bool throwOnError)
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("MSComctlLib","ListView", throwOnError);
-			if(null != proxy)
-				return new NetOffice.MSComctlLibApi.ListView(null, proxy);
-			else
-				return null;
-		}
 		#endregion
 
 		#region Events
@@ -621,12 +582,12 @@ namespace NetOffice.MSComctlLibApi
 				return;
 	
             if (null == _activeSinkId)
-				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, ListViewEvents_SinkHelper.Id);
+				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, Events.ListViewEvents_SinkHelper.Id);
 
 
-			if(ListViewEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
+			if(Events.ListViewEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
 			{
-				_listViewEvents_SinkHelper = new ListViewEvents_SinkHelper(this, _connectPoint);
+				_listViewEvents_SinkHelper = new Events.ListViewEvents_SinkHelper(this, _connectPoint);
 				return;
 			} 
         }

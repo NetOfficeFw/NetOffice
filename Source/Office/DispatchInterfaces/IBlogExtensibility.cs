@@ -1,24 +1,35 @@
-﻿using System;
+﻿using System.Reflection;
+using System;
 using NetRuntimeSystem = System;
-using System.Runtime.InteropServices;
-using System.Runtime.CompilerServices;
 using System.ComponentModel;
-using System.Reflection;
-using System.Collections.Generic;
-using NetOffice;
+using NetOffice.Attributes;
+
 namespace NetOffice.OfficeApi
 {
-	///<summary>
+	/// <summary>
 	/// DispatchInterface IBlogExtensibility 
 	/// SupportByVersion Office, 12,14,15,16
-	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff863146.aspx
-	///</summary>
-	[SupportByVersionAttribute("Office", 12,14,15,16)]
-	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
-	public class IBlogExtensibility : COMObject
+	/// </summary>
+	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff863146.aspx </remarks>
+	[SupportByVersion("Office", 12,14,15,16)]
+	[EntityType(EntityType.IsDispatchInterface)]
+ 	public class IBlogExtensibility : COMObject
 	{
 		#pragma warning disable
+
 		#region Type Information
+
+		/// <summary>
+		/// Instance Type
+		/// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
+		public override Type InstanceType
+		{
+			get
+			{
+				return LateBindingApiWrapperType;
+			}
+		}
 
         private static Type _type;
 
@@ -29,14 +40,20 @@ namespace NetOffice.OfficeApi
             {
                 if (null == _type)
                     _type = typeof(IBlogExtensibility);
-                    
                 return _type;
             }
         }
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public IBlogExtensibility(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -82,7 +99,7 @@ namespace NetOffice.OfficeApi
 		{
 		}
 		
-		/// <param name="progId">registered ProgID</param>
+		/// <param name="progId">registered progID</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public IBlogExtensibility(string progId) : base(progId)
 		{
@@ -98,13 +115,13 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff862840.aspx
 		/// </summary>
-		/// <param name="blogProvider">string BlogProvider</param>
-		/// <param name="friendlyName">string FriendlyName</param>
-		/// <param name="categorySupport">NetOffice.OfficeApi.Enums.MsoBlogCategorySupport CategorySupport</param>
-		/// <param name="padding">bool Padding</param>
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff862840.aspx </remarks>
+		/// <param name="blogProvider">string blogProvider</param>
+		/// <param name="friendlyName">string friendlyName</param>
+		/// <param name="categorySupport">NetOffice.OfficeApi.Enums.MsoBlogCategorySupport categorySupport</param>
+		/// <param name="padding">bool padding</param>
+		[SupportByVersion("Office", 12,14,15,16)]
 		public void BlogProviderProperties(out string blogProvider, out string friendlyName, out NetOffice.OfficeApi.Enums.MsoBlogCategorySupport categorySupport, out bool padding)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true,true,true,true);
@@ -114,22 +131,22 @@ namespace NetOffice.OfficeApi
 			padding = false;
 			object[] paramsArray = Invoker.ValidateParamsArray(blogProvider, friendlyName, categorySupport, padding);
 			Invoker.Method(this, "BlogProviderProperties", paramsArray, modifiers);
-			blogProvider = (string)paramsArray[0];
-			friendlyName = (string)paramsArray[1];
+			blogProvider = paramsArray[0] as string;
+			friendlyName = paramsArray[1] as string;
 			categorySupport = (NetOffice.OfficeApi.Enums.MsoBlogCategorySupport)paramsArray[2];
 			padding = (bool)paramsArray[3];
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff863154.aspx
 		/// </summary>
-		/// <param name="account">string Account</param>
-		/// <param name="parentWindow">Int32 ParentWindow</param>
-		/// <param name="document">object Document</param>
-		/// <param name="newAccount">bool NewAccount</param>
-		/// <param name="showPictureUI">bool ShowPictureUI</param>
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff863154.aspx </remarks>
+		/// <param name="account">string account</param>
+		/// <param name="parentWindow">Int32 parentWindow</param>
+		/// <param name="document">object document</param>
+		/// <param name="newAccount">bool newAccount</param>
+		/// <param name="showPictureUI">bool showPictureUI</param>
+		[SupportByVersion("Office", 12,14,15,16)]
 		public void SetupBlogAccount(string account, Int32 parentWindow, object document, bool newAccount, out bool showPictureUI)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,false,false,false,true);
@@ -141,15 +158,15 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff860220.aspx
 		/// </summary>
-		/// <param name="account">string Account</param>
-		/// <param name="parentWindow">Int32 ParentWindow</param>
-		/// <param name="document">object Document</param>
-		/// <param name="blogNames">String[] BlogNames</param>
-		/// <param name="blogIDs">String[] BlogIDs</param>
-		/// <param name="blogURLs">String[] BlogURLs</param>
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860220.aspx </remarks>
+		/// <param name="account">string account</param>
+		/// <param name="parentWindow">Int32 parentWindow</param>
+		/// <param name="document">object document</param>
+		/// <param name="blogNames">String[] blogNames</param>
+		/// <param name="blogIDs">String[] blogIDs</param>
+		/// <param name="blogURLs">String[] blogURLs</param>
+		[SupportByVersion("Office", 12,14,15,16)]
 		public void GetUserBlogs(string account, Int32 parentWindow, object document, out String[] blogNames, out String[] blogIDs, out String[] blogURLs)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,false,false,true,true,true);
@@ -158,22 +175,22 @@ namespace NetOffice.OfficeApi
 			blogURLs = null;
 			object[] paramsArray = Invoker.ValidateParamsArray(account, parentWindow, document, (object)blogNames, (object)blogIDs, (object)blogURLs);
 			Invoker.Method(this, "GetUserBlogs", paramsArray, modifiers);
-			blogNames = (String[])paramsArray[3];
-			blogIDs = (String[])paramsArray[4];
-			blogURLs = (String[])paramsArray[5];
-		}
+			blogNames = paramsArray[3] as String[];
+			blogIDs = paramsArray[4] as String[];
+            blogURLs = paramsArray[5] as String[];
+        }
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff861430.aspx
 		/// </summary>
-		/// <param name="account">string Account</param>
-		/// <param name="parentWindow">Int32 ParentWindow</param>
-		/// <param name="document">object Document</param>
-		/// <param name="postTitles">String[] PostTitles</param>
-		/// <param name="postDates">String[] PostDates</param>
-		/// <param name="postIDs">String[] PostIDs</param>
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff861430.aspx </remarks>
+		/// <param name="account">string account</param>
+		/// <param name="parentWindow">Int32 parentWindow</param>
+		/// <param name="document">object document</param>
+		/// <param name="postTitles">String[] postTitles</param>
+		/// <param name="postDates">String[] postDates</param>
+		/// <param name="postIDs">String[] postIDs</param>
+		[SupportByVersion("Office", 12,14,15,16)]
 		public void GetRecentPosts(string account, Int32 parentWindow, object document, out String[] postTitles, out String[] postDates, out String[] postIDs)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,false,false,true,true,true);
@@ -182,23 +199,23 @@ namespace NetOffice.OfficeApi
 			postIDs = null;
 			object[] paramsArray = Invoker.ValidateParamsArray(account, parentWindow, document, (object)postTitles, (object)postDates, (object)postIDs);
 			Invoker.Method(this, "GetRecentPosts", paramsArray, modifiers);
-			postTitles = (String[])paramsArray[3];
-			postDates = (String[])paramsArray[4];
-			postIDs = (String[])paramsArray[5];
+			postTitles = paramsArray[3] as String[];
+			postDates = paramsArray[4] as String[];
+			postIDs = paramsArray[5] as String[];
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff861145.aspx
 		/// </summary>
-		/// <param name="account">string Account</param>
-		/// <param name="postID">string PostID</param>
-		/// <param name="parentWindow">Int32 ParentWindow</param>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff861145.aspx </remarks>
+		/// <param name="account">string account</param>
+		/// <param name="postID">string postID</param>
+		/// <param name="parentWindow">Int32 parentWindow</param>
 		/// <param name="xHTML">string xHTML</param>
-		/// <param name="title">string Title</param>
-		/// <param name="datePosted">string DatePosted</param>
-		/// <param name="categories">String[] Categories</param>
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		/// <param name="title">string title</param>
+		/// <param name="datePosted">string datePosted</param>
+		/// <param name="categories">String[] categories</param>
+		[SupportByVersion("Office", 12,14,15,16)]
 		public void Open(string account, string postID, Int32 parentWindow, out string xHTML, out string title, out string datePosted, out String[] categories)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,false,false,true,true,true,true);
@@ -208,27 +225,27 @@ namespace NetOffice.OfficeApi
 			categories = null;
 			object[] paramsArray = Invoker.ValidateParamsArray(account, postID, parentWindow, xHTML, title, datePosted, (object)categories);
 			Invoker.Method(this, "Open", paramsArray, modifiers);
-			xHTML = (string)paramsArray[3];
-			title = (string)paramsArray[4];
-			datePosted = (string)paramsArray[5];
-			categories = (String[])paramsArray[6];
+			xHTML = paramsArray[3] as string;
+			title = paramsArray[4] as string;
+			datePosted = paramsArray[5] as string;
+			categories = paramsArray[6] as String[];
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff862458.aspx
 		/// </summary>
-		/// <param name="account">string Account</param>
-		/// <param name="parentWindow">Int32 ParentWindow</param>
-		/// <param name="document">object Document</param>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff862458.aspx </remarks>
+		/// <param name="account">string account</param>
+		/// <param name="parentWindow">Int32 parentWindow</param>
+		/// <param name="document">object document</param>
 		/// <param name="xHTML">string xHTML</param>
-		/// <param name="title">string Title</param>
-		/// <param name="dateTime">string DateTime</param>
-		/// <param name="categories">String[] Categories</param>
-		/// <param name="draft">bool Draft</param>
-		/// <param name="postID">string PostID</param>
-		/// <param name="publishMessage">string PublishMessage</param>
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		/// <param name="title">string title</param>
+		/// <param name="dateTime">string dateTime</param>
+		/// <param name="categories">String[] categories</param>
+		/// <param name="draft">bool draft</param>
+		/// <param name="postID">string postID</param>
+		/// <param name="publishMessage">string publishMessage</param>
+		[SupportByVersion("Office", 12,14,15,16)]
 		public void PublishPost(string account, Int32 parentWindow, object document, string xHTML, string title, string dateTime, String[] categories, bool draft, out string postID, out string publishMessage)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,false,false,false,false,false,false,false,true,true);
@@ -236,53 +253,54 @@ namespace NetOffice.OfficeApi
 			publishMessage = string.Empty;
 			object[] paramsArray = Invoker.ValidateParamsArray(account, parentWindow, document, xHTML, title, dateTime, (object)categories, draft, postID, publishMessage);
 			Invoker.Method(this, "PublishPost", paramsArray, modifiers);
-			postID = (string)paramsArray[8];
-			publishMessage = (string)paramsArray[9];
+			postID = paramsArray[8] as string;
+			publishMessage = paramsArray[9] as string;
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff860616.aspx
 		/// </summary>
-		/// <param name="account">string Account</param>
-		/// <param name="parentWindow">Int32 ParentWindow</param>
-		/// <param name="document">object Document</param>
-		/// <param name="postID">string PostID</param>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860616.aspx </remarks>
+		/// <param name="account">string account</param>
+		/// <param name="parentWindow">Int32 parentWindow</param>
+		/// <param name="document">object document</param>
+		/// <param name="postID">string postID</param>
 		/// <param name="xHTML">string xHTML</param>
-		/// <param name="title">string Title</param>
-		/// <param name="dateTime">string DateTime</param>
-		/// <param name="categories">String[] Categories</param>
-		/// <param name="draft">bool Draft</param>
-		/// <param name="publishMessage">string PublishMessage</param>
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		/// <param name="title">string title</param>
+		/// <param name="dateTime">string dateTime</param>
+		/// <param name="categories">String[] categories</param>
+		/// <param name="draft">bool draft</param>
+		/// <param name="publishMessage">string publishMessage</param>
+		[SupportByVersion("Office", 12,14,15,16)]
 		public void RepublishPost(string account, Int32 parentWindow, object document, string postID, string xHTML, string title, string dateTime, String[] categories, bool draft, out string publishMessage)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,false,false,false,false,false,false,false,false,true);
 			publishMessage = string.Empty;
 			object[] paramsArray = Invoker.ValidateParamsArray(account, parentWindow, document, postID, xHTML, title, dateTime, (object)categories, draft, publishMessage);
 			Invoker.Method(this, "RepublishPost", paramsArray, modifiers);
-			publishMessage = (string)paramsArray[9];
+			publishMessage = paramsArray[9] as string;
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff865355.aspx
 		/// </summary>
-		/// <param name="account">string Account</param>
-		/// <param name="parentWindow">Int32 ParentWindow</param>
-		/// <param name="document">object Document</param>
-		/// <param name="categories">String[] Categories</param>
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff865355.aspx </remarks>
+		/// <param name="account">string account</param>
+		/// <param name="parentWindow">Int32 parentWindow</param>
+		/// <param name="document">object document</param>
+		/// <param name="categories">String[] categories</param>
+		[SupportByVersion("Office", 12,14,15,16)]
 		public void GetCategories(string account, Int32 parentWindow, object document, out String[] categories)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,false,false,true);
 			categories = null;
 			object[] paramsArray = Invoker.ValidateParamsArray(account, parentWindow, document, (object)categories);
 			Invoker.Method(this, "GetCategories", paramsArray, modifiers);
-			categories = (String[])paramsArray[3];
+			categories = paramsArray[3] as String[];
 		}
 
 		#endregion
+
 		#pragma warning restore
 	}
 }

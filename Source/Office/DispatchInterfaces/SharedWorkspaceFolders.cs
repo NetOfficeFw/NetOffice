@@ -1,25 +1,36 @@
-﻿using System;
-using NetRuntimeSystem = System;
-using System.Runtime.InteropServices;
-using System.Runtime.CompilerServices;
-using System.ComponentModel;
-using System.Reflection;
+﻿using System.Collections;
 using System.Collections.Generic;
-using System.Collections;
-using NetOffice;
+using System;
+using NetRuntimeSystem = System;
+using System.ComponentModel;
+using NetOffice.Attributes;
+
 namespace NetOffice.OfficeApi
 {
-	///<summary>
+	/// <summary>
 	/// DispatchInterface SharedWorkspaceFolders 
 	/// SupportByVersion Office, 11,12,14,15,16
-	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff863650.aspx
-	///</summary>
-	[SupportByVersionAttribute("Office", 11,12,14,15,16)]
-	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
-	public class SharedWorkspaceFolders : _IMsoDispObj ,IEnumerable<NetOffice.OfficeApi.SharedWorkspaceFolder>
+	/// </summary>
+	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff863650.aspx </remarks>
+	[SupportByVersion("Office", 11,12,14,15,16)]
+	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "Item")]
+	public class SharedWorkspaceFolders : _IMsoDispObj, IEnumerable<NetOffice.OfficeApi.SharedWorkspaceFolder>
 	{
 		#pragma warning disable
+
 		#region Type Information
+
+		/// <summary>
+		/// Instance Type
+		/// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
+		public override Type InstanceType
+		{
+			get
+			{
+				return LateBindingApiWrapperType;
+			}
+		}
 
         private static Type _type;
 
@@ -30,14 +41,20 @@ namespace NetOffice.OfficeApi
             {
                 if (null == _type)
                     _type = typeof(SharedWorkspaceFolders);
-                    
                 return _type;
             }
         }
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public SharedWorkspaceFolders(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -83,7 +100,7 @@ namespace NetOffice.OfficeApi
 		{
 		}
 		
-		/// <param name="progId">registered ProgID</param>
+		/// <param name="progId">registered progID</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public SharedWorkspaceFolders(string progId) : base(progId)
 		{
@@ -97,67 +114,57 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <param name="index">Int32 Index</param>
-		[SupportByVersionAttribute("Office", 11,12,14,15,16)]
-		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
+		/// <param name="index">Int32 index</param>
+		[SupportByVersion("Office", 11,12,14,15,16)]
+		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
 		public NetOffice.OfficeApi.SharedWorkspaceFolder this[Int32 index]
 		{
 			get
-{			
-			object[] paramsArray = Invoker.ValidateParamsArray(index);
-			object returnItem = Invoker.PropertyGet(this, "Item", paramsArray);
-			NetOffice.OfficeApi.SharedWorkspaceFolder newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.SharedWorkspaceFolder.LateBindingApiWrapperType) as NetOffice.OfficeApi.SharedWorkspaceFolder;
-			return newObject;
+			{
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.SharedWorkspaceFolder>(this, "Item", NetOffice.OfficeApi.SharedWorkspaceFolder.LateBindingApiWrapperType, index);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff865340.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Office", 11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff865340.aspx </remarks>
+		[SupportByVersion("Office", 11,12,14,15,16)]
 		public Int32 Count
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Count", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "Count");
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff860587.aspx
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("Office", 11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860587.aspx </remarks>
+		[SupportByVersion("Office", 11,12,14,15,16), ProxyResult]
 		public object Parent
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Parent", paramsArray);
-				ICOMObject newObject = Factory.CreateObjectFromComProxy(this,returnItem);
-				return newObject;
+				return Factory.ExecuteReferencePropertyGet(this, "Parent");
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff864641.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Office", 11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff864641.aspx </remarks>
+		[SupportByVersion("Office", 11,12,14,15,16)]
 		public bool ItemCountExceeded
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "ItemCountExceeded", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "ItemCountExceeded");
 			}
 		}
 
@@ -167,63 +174,58 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff861883.aspx
 		/// </summary>
-		/// <param name="folderName">string FolderName</param>
-		/// <param name="parentFolder">optional object ParentFolder</param>
-		[SupportByVersionAttribute("Office", 11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff861883.aspx </remarks>
+		/// <param name="folderName">string folderName</param>
+		/// <param name="parentFolder">optional object parentFolder</param>
+		[SupportByVersion("Office", 11,12,14,15,16)]
 		public NetOffice.OfficeApi.SharedWorkspaceFolder Add(string folderName, object parentFolder)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(folderName, parentFolder);
-			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.OfficeApi.SharedWorkspaceFolder newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.SharedWorkspaceFolder.LateBindingApiWrapperType) as NetOffice.OfficeApi.SharedWorkspaceFolder;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.SharedWorkspaceFolder>(this, "Add", NetOffice.OfficeApi.SharedWorkspaceFolder.LateBindingApiWrapperType, folderName, parentFolder);
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff861883.aspx
 		/// </summary>
-		/// <param name="folderName">string FolderName</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Office", 11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff861883.aspx </remarks>
+		/// <param name="folderName">string folderName</param>
+		[CustomMethod]
+		[SupportByVersion("Office", 11,12,14,15,16)]
 		public NetOffice.OfficeApi.SharedWorkspaceFolder Add(string folderName)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(folderName);
-			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.OfficeApi.SharedWorkspaceFolder newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.SharedWorkspaceFolder.LateBindingApiWrapperType) as NetOffice.OfficeApi.SharedWorkspaceFolder;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.SharedWorkspaceFolder>(this, "Add", NetOffice.OfficeApi.SharedWorkspaceFolder.LateBindingApiWrapperType, folderName);
 		}
 
-		#endregion
+        #endregion
 
-       #region IEnumerable<NetOffice.OfficeApi.SharedWorkspaceFolder> Member
-        
+        #region IEnumerable<NetOffice.OfficeApi.SharedWorkspaceFolder> Member
+
         /// <summary>
-		/// SupportByVersionAttribute Office, 11,12,14,15,16
-		/// </summary>
-		[SupportByVersionAttribute("Office", 11,12,14,15,16)]
-       public IEnumerator<NetOffice.OfficeApi.SharedWorkspaceFolder> GetEnumerator()  
-       {
-           NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
-           foreach (NetOffice.OfficeApi.SharedWorkspaceFolder item in innerEnumerator)
-               yield return item;
-       }
+        /// SupportByVersion Office, 11,12,14,15,16
+        /// </summary>
+        [SupportByVersion("Office", 11, 12, 14, 15, 16)]
+        public IEnumerator<NetOffice.OfficeApi.SharedWorkspaceFolder> GetEnumerator()
+        {
+            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
+            foreach (NetOffice.OfficeApi.SharedWorkspaceFolder item in innerEnumerator)
+                yield return item;
+        }
 
-       #endregion
-          
-		#region IEnumerable Members
-       
-		/// <summary>
-		/// SupportByVersionAttribute Office, 11,12,14,15,16
-		/// </summary>
-		[SupportByVersionAttribute("Office", 11,12,14,15,16)]
+        #endregion
+
+        #region IEnumerable Members
+
+        /// <summary>
+        /// SupportByVersion Office, 11,12,14,15,16
+        /// </summary>
+        [SupportByVersion("Office", 11,12,14,15,16)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
 			return NetOffice.Utils.GetProxyEnumeratorAsProperty(this);
 		}
 
 		#endregion
+
 		#pragma warning restore
 	}
 }

@@ -1,28 +1,27 @@
 ﻿using System;
 using NetRuntimeSystem = System;
-using System.Runtime.InteropServices;
-using System.Runtime.CompilerServices;
 using System.ComponentModel;
-using System.Reflection;
-using System.Collections.Generic;
-using NetOffice;
+using NetOffice.Attributes;
+
 namespace NetOffice.ExcelApi
 {
-	///<summary>
+	/// <summary>
 	/// DispatchInterface XPath 
 	/// SupportByVersion Excel, 11,12,14,15,16
-	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840102.aspx
-	///</summary>
-	[SupportByVersionAttribute("Excel", 11,12,14,15,16)]
-	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
-	public class XPath : COMObject
+	/// </summary>
+	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff840102.aspx </remarks>
+	[SupportByVersion("Excel", 11,12,14,15,16)]
+	[EntityType(EntityType.IsDispatchInterface)]
+ 	public class XPath : COMObject
 	{
 		#pragma warning disable
+
 		#region Type Information
 
         /// <summary>
         /// Instance Type
         /// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
         public override Type InstanceType
         {
             get
@@ -40,14 +39,20 @@ namespace NetOffice.ExcelApi
             {
                 if (null == _type)
                     _type = typeof(XPath);
-                    
                 return _type;
             }
         }
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public XPath(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -93,7 +98,7 @@ namespace NetOffice.ExcelApi
 		{
 		}
 		
-		/// <param name="progId">registered ProgID</param>
+		/// <param name="progId">registered progID</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public XPath(string progId) : base(progId)
 		{
@@ -106,52 +111,43 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840823.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff840823.aspx </remarks>
+		[SupportByVersion("Excel", 11,12,14,15,16)]
 		public NetOffice.ExcelApi.Application Application
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				NetOffice.ExcelApi.Application newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.Application.LateBindingApiWrapperType) as NetOffice.ExcelApi.Application;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Application>(this, "Application", NetOffice.ExcelApi.Application.LateBindingApiWrapperType);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff834983.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff834983.aspx </remarks>
+		[SupportByVersion("Excel", 11,12,14,15,16)]
 		public NetOffice.ExcelApi.Enums.XlCreator Creator
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Creator", paramsArray);
-				int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-				return (NetOffice.ExcelApi.Enums.XlCreator)intReturnItem;
+				return Factory.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlCreator>(this, "Creator");
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822616.aspx
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff822616.aspx </remarks>
+		[SupportByVersion("Excel", 11,12,14,15,16), ProxyResult]
 		public object Parent
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Parent", paramsArray);
-				ICOMObject newObject = Factory.CreateObjectFromComProxy(this,returnItem);
-				return newObject;
+				return Factory.ExecuteReferencePropertyGet(this, "Parent");
 			}
 		}
 
@@ -159,63 +155,54 @@ namespace NetOffice.ExcelApi
 		/// SupportByVersion Excel 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 11,12,14,15,16)]
+		[SupportByVersion("Excel", 11,12,14,15,16)]
 		public string _Default
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "_Default", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "_Default");
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822150.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff822150.aspx </remarks>
+		[SupportByVersion("Excel", 11,12,14,15,16)]
 		public string Value
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Value", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "Value");
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197699.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff197699.aspx </remarks>
+		[SupportByVersion("Excel", 11,12,14,15,16)]
 		public NetOffice.ExcelApi.XmlMap Map
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Map", paramsArray);
-				NetOffice.ExcelApi.XmlMap newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.XmlMap.LateBindingApiWrapperType) as NetOffice.ExcelApi.XmlMap;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.XmlMap>(this, "Map", NetOffice.ExcelApi.XmlMap.LateBindingApiWrapperType);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836528.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff836528.aspx </remarks>
+		[SupportByVersion("Excel", 11,12,14,15,16)]
 		public bool Repeating
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Repeating", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "Repeating");
 			}
 		}
 
@@ -225,60 +212,57 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836812.aspx
 		/// </summary>
-		/// <param name="map">NetOffice.ExcelApi.XmlMap Map</param>
-		/// <param name="xPath">string XPath</param>
-		/// <param name="selectionNamespace">optional object SelectionNamespace</param>
-		/// <param name="repeating">optional object Repeating</param>
-		[SupportByVersionAttribute("Excel", 11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff836812.aspx </remarks>
+		/// <param name="map">NetOffice.ExcelApi.XmlMap map</param>
+		/// <param name="xPath">string xPath</param>
+		/// <param name="selectionNamespace">optional object selectionNamespace</param>
+		/// <param name="repeating">optional object repeating</param>
+		[SupportByVersion("Excel", 11,12,14,15,16)]
 		public void SetValue(NetOffice.ExcelApi.XmlMap map, string xPath, object selectionNamespace, object repeating)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(map, xPath, selectionNamespace, repeating);
-			Invoker.Method(this, "SetValue", paramsArray);
+			 Factory.ExecuteMethod(this, "SetValue", map, xPath, selectionNamespace, repeating);
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836812.aspx
 		/// </summary>
-		/// <param name="map">NetOffice.ExcelApi.XmlMap Map</param>
-		/// <param name="xPath">string XPath</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff836812.aspx </remarks>
+		/// <param name="map">NetOffice.ExcelApi.XmlMap map</param>
+		/// <param name="xPath">string xPath</param>
+		[CustomMethod]
+		[SupportByVersion("Excel", 11,12,14,15,16)]
 		public void SetValue(NetOffice.ExcelApi.XmlMap map, string xPath)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(map, xPath);
-			Invoker.Method(this, "SetValue", paramsArray);
+			 Factory.ExecuteMethod(this, "SetValue", map, xPath);
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836812.aspx
 		/// </summary>
-		/// <param name="map">NetOffice.ExcelApi.XmlMap Map</param>
-		/// <param name="xPath">string XPath</param>
-		/// <param name="selectionNamespace">optional object SelectionNamespace</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff836812.aspx </remarks>
+		/// <param name="map">NetOffice.ExcelApi.XmlMap map</param>
+		/// <param name="xPath">string xPath</param>
+		/// <param name="selectionNamespace">optional object selectionNamespace</param>
+		[CustomMethod]
+		[SupportByVersion("Excel", 11,12,14,15,16)]
 		public void SetValue(NetOffice.ExcelApi.XmlMap map, string xPath, object selectionNamespace)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(map, xPath, selectionNamespace);
-			Invoker.Method(this, "SetValue", paramsArray);
+			 Factory.ExecuteMethod(this, "SetValue", map, xPath, selectionNamespace);
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835615.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835615.aspx </remarks>
+		[SupportByVersion("Excel", 11,12,14,15,16)]
 		public void Clear()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "Clear", paramsArray);
+			 Factory.ExecuteMethod(this, "Clear");
 		}
 
 		#endregion
+
 		#pragma warning restore
 	}
 }

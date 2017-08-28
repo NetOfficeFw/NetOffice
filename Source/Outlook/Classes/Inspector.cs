@@ -1,45 +1,45 @@
 ﻿using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
-using NetOffice;
-using NetOffice.Misc;
+using NetOffice.Attributes;
 
 namespace NetOffice.OutlookApi
 {
-
 	#region Delegates
 
 	#pragma warning disable
 	public delegate void Inspector_ActivateEventHandler();
 	public delegate void Inspector_DeactivateEventHandler();
 	public delegate void Inspector_CloseEventHandler();
-	public delegate void Inspector_BeforeMaximizeEventHandler(ref bool Cancel);
-	public delegate void Inspector_BeforeMinimizeEventHandler(ref bool Cancel);
-	public delegate void Inspector_BeforeMoveEventHandler(ref bool Cancel);
-	public delegate void Inspector_BeforeSizeEventHandler(ref bool Cancel);
-	public delegate void Inspector_PageChangeEventHandler(ref string ActivePageName);
+	public delegate void Inspector_BeforeMaximizeEventHandler(ref bool cancel);
+	public delegate void Inspector_BeforeMinimizeEventHandler(ref bool cancel);
+	public delegate void Inspector_BeforeMoveEventHandler(ref bool cancel);
+	public delegate void Inspector_BeforeSizeEventHandler(ref bool cancel);
+	public delegate void Inspector_PageChangeEventHandler(ref string activePageName);
 	public delegate void Inspector_AttachmentSelectionChangeEventHandler();
 	#pragma warning restore
 
 	#endregion
 
-	///<summary>
+	/// <summary>
 	/// CoClass Inspector 
 	/// SupportByVersion Outlook, 9,10,11,12,14,15,16
-	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff869356.aspx
-	///</summary>
-	[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15,16)]
-	[EntityTypeAttribute(EntityType.IsCoClass)]
-	public class Inspector : _Inspector,IEventBinding
+	/// </summary>
+	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff869356.aspx </remarks>
+	[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
+	[EntityType(EntityType.IsCoClass)]
+	[EventSink(typeof(Events.InspectorEvents_SinkHelper), typeof(Events.InspectorEvents_10_SinkHelper))]
+	public class Inspector : _Inspector, IEventBinding
 	{
 		#pragma warning disable
+
 		#region Fields
 		
 		private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
 		private string _activeSinkId;
 		private NetRuntimeSystem.Type _thisType;
-		InspectorEvents_SinkHelper _inspectorEvents_SinkHelper;
-		InspectorEvents_10_SinkHelper _inspectorEvents_10_SinkHelper;
+        private Events.InspectorEvents_SinkHelper _inspectorEvents_SinkHelper;
+        private Events.InspectorEvents_10_SinkHelper _inspectorEvents_10_SinkHelper;
 	
 		#endregion
 
@@ -48,6 +48,7 @@ namespace NetOffice.OutlookApi
         /// <summary>
         /// Instance Type
         /// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
         public override Type InstanceType
         {
             get
@@ -114,17 +115,17 @@ namespace NetOffice.OutlookApi
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of Inspector 
-        ///</summary>		
+        /// </summary>		
 		public Inspector():base("Outlook.Inspector")
 		{
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of Inspector
-        ///</summary>
+        /// </summary>
         ///<param name="progId">registered ProgID</param>
 		public Inspector(string progId):base(progId)
 		{
@@ -134,46 +135,6 @@ namespace NetOffice.OutlookApi
 		#endregion
 
 		#region Static CoClass Methods
-
-		/// <summary>
-        /// Returns all running Outlook.Inspector objects from the environment/system
-        /// </summary>
-        /// <returns>an Outlook.Inspector array</returns>
-		public static NetOffice.OutlookApi.Inspector[] GetActiveInstances()
-		{		
-			IDisposableEnumeration proxyList = NetOffice.ProxyService.GetActiveInstances("Outlook","Inspector");
-			NetRuntimeSystem.Collections.Generic.List<NetOffice.OutlookApi.Inspector> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.OutlookApi.Inspector>();
-			foreach(object proxy in proxyList)
-				resultList.Add( new NetOffice.OutlookApi.Inspector(null, proxy) );
-			return resultList.ToArray();
-		}
-
-		/// <summary>
-        /// Returns a running Outlook.Inspector object from the environment/system.
-        /// </summary>
-        /// <returns>an Outlook.Inspector object or null</returns>
-		public static NetOffice.OutlookApi.Inspector GetActiveInstance()
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Outlook","Inspector", false);
-			if(null != proxy)
-				return new NetOffice.OutlookApi.Inspector(null, proxy);
-			else
-				return null;
-		}
-
-		/// <summary>
-        /// Returns a running Outlook.Inspector object from the environment/system. 
-        /// </summary>
-	    /// <param name="throwOnError">throw an exception if no object was found</param>
-        /// <returns>an Outlook.Inspector object or null</returns>
-		public static NetOffice.OutlookApi.Inspector GetActiveInstance(bool throwOnError)
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Outlook","Inspector", throwOnError);
-			if(null != proxy)
-				return new NetOffice.OutlookApi.Inspector(null, proxy);
-			else
-				return null;
-		}
 		#endregion
 
 		#region Events
@@ -402,18 +363,18 @@ namespace NetOffice.OutlookApi
 				return;
 	
             if (null == _activeSinkId)
-				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, InspectorEvents_SinkHelper.Id,InspectorEvents_10_SinkHelper.Id);
+				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, Events.InspectorEvents_SinkHelper.Id, Events.InspectorEvents_10_SinkHelper.Id);
 
 
-			if(InspectorEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
+			if(Events.InspectorEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
 			{
-				_inspectorEvents_SinkHelper = new InspectorEvents_SinkHelper(this, _connectPoint);
+				_inspectorEvents_SinkHelper = new Events.InspectorEvents_SinkHelper(this, _connectPoint);
 				return;
 			}
 
-			if(InspectorEvents_10_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
+			if(Events.InspectorEvents_10_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
 			{
-				_inspectorEvents_10_SinkHelper = new InspectorEvents_10_SinkHelper(this, _connectPoint);
+				_inspectorEvents_10_SinkHelper = new Events.InspectorEvents_10_SinkHelper(this, _connectPoint);
 				return;
 			} 
         }

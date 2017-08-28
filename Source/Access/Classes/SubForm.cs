@@ -1,38 +1,38 @@
 ﻿using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
-using NetOffice;
-using NetOffice.Misc;
+using NetOffice.Attributes;
 
 namespace NetOffice.AccessApi
 {
-
 	#region Delegates
 
 	#pragma warning disable
 	public delegate void SubForm_EnterEventHandler();
-	public delegate void SubForm_ExitEventHandler(ref Int16 Cancel);
+	public delegate void SubForm_ExitEventHandler(ref Int16 cancel);
 	#pragma warning restore
 
 	#endregion
 
-	///<summary>
+	/// <summary>
 	/// CoClass SubForm 
 	/// SupportByVersion Access, 9,10,11,12,14,15,16
-	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194842.aspx
-	///</summary>
-	[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
-	[EntityTypeAttribute(EntityType.IsCoClass)]
-	public class SubForm : _SubForm,IEventBinding
+	/// </summary>
+	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194842.aspx </remarks>
+	[SupportByVersion("Access", 9,10,11,12,14,15,16)]
+	[EntityType(EntityType.IsCoClass)]
+    [EventSink(typeof(Events._SubFormEvents_SinkHelper), typeof(Events.DispSubFormEvents_SinkHelper))]
+    public class SubForm : _SubForm, IEventBinding
 	{
 		#pragma warning disable
+
 		#region Fields
 		
 		private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
 		private string _activeSinkId;
 		private NetRuntimeSystem.Type _thisType;
-		_SubFormEvents_SinkHelper __SubFormEvents_SinkHelper;
-		DispSubFormEvents_SinkHelper _dispSubFormEvents_SinkHelper;
+		private Events._SubFormEvents_SinkHelper __SubFormEvents_SinkHelper;
+		private Events.DispSubFormEvents_SinkHelper _dispSubFormEvents_SinkHelper;
 	
 		#endregion
 
@@ -41,6 +41,7 @@ namespace NetOffice.AccessApi
         /// <summary>
         /// Instance Type
         /// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
         public override Type InstanceType
         {
             get
@@ -107,17 +108,17 @@ namespace NetOffice.AccessApi
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of SubForm 
-        ///</summary>		
+        /// </summary>		
 		public SubForm():base("Access.SubForm")
 		{
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of SubForm
-        ///</summary>
+        /// </summary>
         ///<param name="progId">registered ProgID</param>
 		public SubForm(string progId):base(progId)
 		{
@@ -127,46 +128,6 @@ namespace NetOffice.AccessApi
 		#endregion
 
 		#region Static CoClass Methods
-
-		/// <summary>
-        /// Returns all running Access.SubForm objects from the environment/system
-        /// </summary>
-        /// <returns>an Access.SubForm array</returns>
-		public static NetOffice.AccessApi.SubForm[] GetActiveInstances()
-		{		
-			IDisposableEnumeration proxyList = NetOffice.ProxyService.GetActiveInstances("Access","SubForm");
-			NetRuntimeSystem.Collections.Generic.List<NetOffice.AccessApi.SubForm> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.AccessApi.SubForm>();
-			foreach(object proxy in proxyList)
-				resultList.Add( new NetOffice.AccessApi.SubForm(null, proxy) );
-			return resultList.ToArray();
-		}
-
-		/// <summary>
-        /// Returns a running Access.SubForm object from the environment/system.
-        /// </summary>
-        /// <returns>an Access.SubForm object or null</returns>
-		public static NetOffice.AccessApi.SubForm GetActiveInstance()
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Access","SubForm", false);
-			if(null != proxy)
-				return new NetOffice.AccessApi.SubForm(null, proxy);
-			else
-				return null;
-		}
-
-		/// <summary>
-        /// Returns a running Access.SubForm object from the environment/system. 
-        /// </summary>
-	    /// <param name="throwOnError">throw an exception if no object was found</param>
-        /// <returns>an Access.SubForm object or null</returns>
-		public static NetOffice.AccessApi.SubForm GetActiveInstance(bool throwOnError)
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Access","SubForm", throwOnError);
-			if(null != proxy)
-				return new NetOffice.AccessApi.SubForm(null, proxy);
-			else
-				return null;
-		}
 		#endregion
 
 		#region Events
@@ -234,18 +195,18 @@ namespace NetOffice.AccessApi
 				return;
 	
             if (null == _activeSinkId)
-				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, _SubFormEvents_SinkHelper.Id,DispSubFormEvents_SinkHelper.Id);
+				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, Events._SubFormEvents_SinkHelper.Id, Events.DispSubFormEvents_SinkHelper.Id);
 
 
-			if(_SubFormEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
+			if(Events._SubFormEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
 			{
-				__SubFormEvents_SinkHelper = new _SubFormEvents_SinkHelper(this, _connectPoint);
+				__SubFormEvents_SinkHelper = new Events._SubFormEvents_SinkHelper(this, _connectPoint);
 				return;
 			}
 
-			if(DispSubFormEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
+			if(Events.DispSubFormEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
 			{
-				_dispSubFormEvents_SinkHelper = new DispSubFormEvents_SinkHelper(this, _connectPoint);
+				_dispSubFormEvents_SinkHelper = new Events.DispSubFormEvents_SinkHelper(this, _connectPoint);
 				return;
 			} 
         }

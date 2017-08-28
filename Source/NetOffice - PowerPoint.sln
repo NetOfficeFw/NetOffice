@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetOffice", "NetOffice\NetOffice.csproj", "{65442327-D01F-4ECB-8C39-6D5C7622A80F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OfficeApi", "Office\OfficeApi.csproj", "{79B19A83-A79F-446C-9B7E-9B595E918E40}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VBIDEApi", "VBIDE\VBIDEApi.csproj", "{ACD7DB2E-DDB2-4BBB-BDB9-C2FD953585C4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PowerPointApi", "PowerPoint\PowerPointApi.csproj", "{D2DF07D1-46EA-4578-9183-9ABB368547E5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{65442327-D01F-4ECB-8C39-6D5C7622A80F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{65442327-D01F-4ECB-8C39-6D5C7622A80F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{65442327-D01F-4ECB-8C39-6D5C7622A80F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{65442327-D01F-4ECB-8C39-6D5C7622A80F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{79B19A83-A79F-446C-9B7E-9B595E918E40}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{79B19A83-A79F-446C-9B7E-9B595E918E40}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{79B19A83-A79F-446C-9B7E-9B595E918E40}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{79B19A83-A79F-446C-9B7E-9B595E918E40}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ACD7DB2E-DDB2-4BBB-BDB9-C2FD953585C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ACD7DB2E-DDB2-4BBB-BDB9-C2FD953585C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ACD7DB2E-DDB2-4BBB-BDB9-C2FD953585C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ACD7DB2E-DDB2-4BBB-BDB9-C2FD953585C4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D2DF07D1-46EA-4578-9183-9ABB368547E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D2DF07D1-46EA-4578-9183-9ABB368547E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D2DF07D1-46EA-4578-9183-9ABB368547E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D2DF07D1-46EA-4578-9183-9ABB368547E5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

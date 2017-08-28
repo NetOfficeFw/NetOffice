@@ -1,12 +1,10 @@
 ﻿using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
-using NetOffice;
-using NetOffice.Misc;
+using NetOffice.Attributes;
 
 namespace NetOffice.PowerPointApi
 {
-
 	#region Delegates
 
 	#pragma warning disable
@@ -14,22 +12,24 @@ namespace NetOffice.PowerPointApi
 
 	#endregion
 
-	///<summary>
+	/// <summary>
 	/// CoClass Slide 
 	/// SupportByVersion PowerPoint, 9,10,11,12,14,15,16
-	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745958.aspx
-	///</summary>
-	[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
-	[EntityTypeAttribute(EntityType.IsCoClass)]
-	public class Slide : _Slide,IEventBinding
+	/// </summary>
+	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff745958.aspx </remarks>
+	[SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+	[EntityType(EntityType.IsCoClass)]
+	[EventSink(typeof(Events.SldEvents_SinkHelper))]
+	public class Slide : _Slide, IEventBinding
 	{
 		#pragma warning disable
+
 		#region Fields
 		
 		private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
 		private string _activeSinkId;
 		private NetRuntimeSystem.Type _thisType;
-		SldEvents_SinkHelper _sldEvents_SinkHelper;
+		private Events.SldEvents_SinkHelper _sldEvents_SinkHelper;
 	
 		#endregion
 
@@ -38,6 +38,7 @@ namespace NetOffice.PowerPointApi
         /// <summary>
         /// Instance Type
         /// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
         public override Type InstanceType
         {
             get
@@ -104,17 +105,17 @@ namespace NetOffice.PowerPointApi
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of Slide 
-        ///</summary>		
+        /// </summary>		
 		public Slide():base("PowerPoint.Slide")
 		{
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of Slide
-        ///</summary>
+        /// </summary>
         ///<param name="progId">registered ProgID</param>
 		public Slide(string progId):base(progId)
 		{
@@ -124,46 +125,6 @@ namespace NetOffice.PowerPointApi
 		#endregion
 
 		#region Static CoClass Methods
-
-		/// <summary>
-        /// Returns all running PowerPoint.Slide objects from the environment/system
-        /// </summary>
-        /// <returns>an PowerPoint.Slide array</returns>
-		public static NetOffice.PowerPointApi.Slide[] GetActiveInstances()
-		{		
-			IDisposableEnumeration proxyList = NetOffice.ProxyService.GetActiveInstances("PowerPoint","Slide");
-			NetRuntimeSystem.Collections.Generic.List<NetOffice.PowerPointApi.Slide> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.PowerPointApi.Slide>();
-			foreach(object proxy in proxyList)
-				resultList.Add( new NetOffice.PowerPointApi.Slide(null, proxy) );
-			return resultList.ToArray();
-		}
-
-		/// <summary>
-        /// Returns a running PowerPoint.Slide object from the environment/system.
-        /// </summary>
-        /// <returns>an PowerPoint.Slide object or null</returns>
-		public static NetOffice.PowerPointApi.Slide GetActiveInstance()
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("PowerPoint","Slide", false);
-			if(null != proxy)
-				return new NetOffice.PowerPointApi.Slide(null, proxy);
-			else
-				return null;
-		}
-
-		/// <summary>
-        /// Returns a running PowerPoint.Slide object from the environment/system. 
-        /// </summary>
-	    /// <param name="throwOnError">throw an exception if no object was found</param>
-        /// <returns>an PowerPoint.Slide object or null</returns>
-		public static NetOffice.PowerPointApi.Slide GetActiveInstance(bool throwOnError)
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("PowerPoint","Slide", throwOnError);
-			if(null != proxy)
-				return new NetOffice.PowerPointApi.Slide(null, proxy);
-			else
-				return null;
-		}
 		#endregion
 
 		#region Events
@@ -185,12 +146,12 @@ namespace NetOffice.PowerPointApi
 				return;
 	
             if (null == _activeSinkId)
-				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, SldEvents_SinkHelper.Id);
+				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, Events.SldEvents_SinkHelper.Id);
 
 
-			if(SldEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
+			if(Events.SldEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
 			{
-				_sldEvents_SinkHelper = new SldEvents_SinkHelper(this, _connectPoint);
+				_sldEvents_SinkHelper = new Events.SldEvents_SinkHelper(this, _connectPoint);
 				return;
 			} 
         }

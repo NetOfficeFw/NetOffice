@@ -1,41 +1,41 @@
 ﻿using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
-using NetOffice;
-using NetOffice.Misc;
+using NetOffice.Attributes;
 
 namespace NetOffice.AccessApi
 {
-
 	#region Delegates
 
 	#pragma warning disable
-	public delegate void ReportOld_OpenEventHandler(ref Int16 Cancel);
+	public delegate void ReportOld_OpenEventHandler(ref Int16 cancel);
 	public delegate void ReportOld_CloseEventHandler();
 	public delegate void ReportOld_ActivateEventHandler();
 	public delegate void ReportOld_DeactivateEventHandler();
-	public delegate void ReportOld_ErrorEventHandler(ref Int16 DataErr, ref Int16 Response);
-	public delegate void ReportOld_NoDataEventHandler(ref Int16 Cancel);
+	public delegate void ReportOld_ErrorEventHandler(ref Int16 dataErr, ref Int16 response);
+	public delegate void ReportOld_NoDataEventHandler(ref Int16 cancel);
 	public delegate void ReportOld_PageEventHandler();
 	#pragma warning restore
 
 	#endregion
 
-	///<summary>
+	/// <summary>
 	/// CoClass ReportOld 
 	/// SupportByVersion Access, 10,11,12,14,15,16
-	///</summary>
-	[SupportByVersionAttribute("Access", 10,11,12,14,15,16)]
-	[EntityTypeAttribute(EntityType.IsCoClass)]
-	public class ReportOld : _Report,IEventBinding
+	/// </summary>
+	[SupportByVersion("Access", 10,11,12,14,15,16)]
+	[EntityType(EntityType.IsCoClass)]
+    [EventSink(typeof(Events._ReportEvents_SinkHelper))]
+    public class ReportOld : _Report, IEventBinding
 	{
 		#pragma warning disable
+
 		#region Fields
 		
 		private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
 		private string _activeSinkId;
 		private NetRuntimeSystem.Type _thisType;
-		_ReportEvents_SinkHelper __ReportEvents_SinkHelper;
+		private Events._ReportEvents_SinkHelper __ReportEvents_SinkHelper;
 	
 		#endregion
 
@@ -44,6 +44,7 @@ namespace NetOffice.AccessApi
         /// <summary>
         /// Instance Type
         /// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
         public override Type InstanceType
         {
             get
@@ -110,17 +111,17 @@ namespace NetOffice.AccessApi
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of ReportOld 
-        ///</summary>		
+        /// </summary>		
 		public ReportOld():base("Access.ReportOld")
 		{
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of ReportOld
-        ///</summary>
+        /// </summary>
         ///<param name="progId">registered ProgID</param>
 		public ReportOld(string progId):base(progId)
 		{
@@ -130,46 +131,6 @@ namespace NetOffice.AccessApi
 		#endregion
 
 		#region Static CoClass Methods
-
-		/// <summary>
-        /// Returns all running Access.ReportOld objects from the environment/system
-        /// </summary>
-        /// <returns>an Access.ReportOld array</returns>
-		public static NetOffice.AccessApi.ReportOld[] GetActiveInstances()
-		{		
-			IDisposableEnumeration proxyList = NetOffice.ProxyService.GetActiveInstances("Access","ReportOld");
-			NetRuntimeSystem.Collections.Generic.List<NetOffice.AccessApi.ReportOld> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.AccessApi.ReportOld>();
-			foreach(object proxy in proxyList)
-				resultList.Add( new NetOffice.AccessApi.ReportOld(null, proxy) );
-			return resultList.ToArray();
-		}
-
-		/// <summary>
-        /// Returns a running Access.ReportOld object from the environment/system.
-        /// </summary>
-        /// <returns>an Access.ReportOld object or null</returns>
-		public static NetOffice.AccessApi.ReportOld GetActiveInstance()
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Access","ReportOld", false);
-			if(null != proxy)
-				return new NetOffice.AccessApi.ReportOld(null, proxy);
-			else
-				return null;
-		}
-
-		/// <summary>
-        /// Returns a running Access.ReportOld object from the environment/system. 
-        /// </summary>
-	    /// <param name="throwOnError">throw an exception if no object was found</param>
-        /// <returns>an Access.ReportOld object or null</returns>
-		public static NetOffice.AccessApi.ReportOld GetActiveInstance(bool throwOnError)
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Access","ReportOld", throwOnError);
-			if(null != proxy)
-				return new NetOffice.AccessApi.ReportOld(null, proxy);
-			else
-				return null;
-		}
 		#endregion
 
 		#region Events
@@ -345,12 +306,12 @@ namespace NetOffice.AccessApi
 				return;
 	
             if (null == _activeSinkId)
-				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, _ReportEvents_SinkHelper.Id);
+				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, Events._ReportEvents_SinkHelper.Id);
 
 
-			if(_ReportEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
+			if(Events._ReportEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
 			{
-				__ReportEvents_SinkHelper = new _ReportEvents_SinkHelper(this, _connectPoint);
+				__ReportEvents_SinkHelper = new Events._ReportEvents_SinkHelper(this, _connectPoint);
 				return;
 			} 
         }

@@ -1,8 +1,7 @@
 ﻿using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
-using NetOffice;
-using NetOffice.Misc;
+using NetOffice.Attributes;
 
 namespace NetOffice.MSHTMLApi
 {
@@ -13,15 +12,16 @@ namespace NetOffice.MSHTMLApi
 
 	#endregion
 
-	///<summary>
+	/// <summary>
 	/// CoClass HTCMethodBehavior 
 	/// SupportByVersion MSHTML, 4
-	///</summary>
-	[SupportByVersionAttribute("MSHTML", 4)]
-	[EntityTypeAttribute(EntityType.IsCoClass)]
-	public class HTCMethodBehavior : DispHTCMethodBehavior
+	/// </summary>
+	[SupportByVersion("MSHTML", 4)]
+	[EntityType(EntityType.IsCoClass)]
+ 	public class HTCMethodBehavior : DispHTCMethodBehavior
 	{
 		#pragma warning disable
+
 		#region Fields
 		
 		private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
@@ -35,6 +35,7 @@ namespace NetOffice.MSHTMLApi
         /// <summary>
         /// Instance Type
         /// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
         public override Type InstanceType
         {
             get
@@ -101,17 +102,17 @@ namespace NetOffice.MSHTMLApi
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of HTCMethodBehavior 
-        ///</summary>		
+        /// </summary>		
 		public HTCMethodBehavior():base("MSHTML.HTCMethodBehavior")
 		{
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of HTCMethodBehavior
-        ///</summary>
+        /// </summary>
         ///<param name="progId">registered ProgID</param>
 		public HTCMethodBehavior(string progId):base(progId)
 		{
@@ -121,46 +122,6 @@ namespace NetOffice.MSHTMLApi
 		#endregion
 
 		#region Static CoClass Methods
-
-		/// <summary>
-        /// Returns all running MSHTML.HTCMethodBehavior objects from the environment/system
-        /// </summary>
-        /// <returns>an MSHTML.HTCMethodBehavior array</returns>
-		public static NetOffice.MSHTMLApi.HTCMethodBehavior[] GetActiveInstances()
-		{		
-			IDisposableEnumeration proxyList = NetOffice.ProxyService.GetActiveInstances("MSHTML","HTCMethodBehavior");
-			NetRuntimeSystem.Collections.Generic.List<NetOffice.MSHTMLApi.HTCMethodBehavior> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.MSHTMLApi.HTCMethodBehavior>();
-			foreach(object proxy in proxyList)
-				resultList.Add( new NetOffice.MSHTMLApi.HTCMethodBehavior(null, proxy) );
-			return resultList.ToArray();
-		}
-
-		/// <summary>
-        /// Returns a running MSHTML.HTCMethodBehavior object from the environment/system.
-        /// </summary>
-        /// <returns>an MSHTML.HTCMethodBehavior object or null</returns>
-		public static NetOffice.MSHTMLApi.HTCMethodBehavior GetActiveInstance()
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("MSHTML","HTCMethodBehavior", false);
-			if(null != proxy)
-				return new NetOffice.MSHTMLApi.HTCMethodBehavior(null, proxy);
-			else
-				return null;
-		}
-
-		/// <summary>
-        /// Returns a running MSHTML.HTCMethodBehavior object from the environment/system. 
-        /// </summary>
-	    /// <param name="throwOnError">throw an exception if no object was found</param>
-        /// <returns>an MSHTML.HTCMethodBehavior object or null</returns>
-		public static NetOffice.MSHTMLApi.HTCMethodBehavior GetActiveInstance(bool throwOnError)
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("MSHTML","HTCMethodBehavior", throwOnError);
-			if(null != proxy)
-				return new NetOffice.MSHTMLApi.HTCMethodBehavior(null, proxy);
-			else
-				return null;
-		}
 		#endregion
 
 		#region Events

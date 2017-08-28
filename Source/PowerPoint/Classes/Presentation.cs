@@ -1,12 +1,10 @@
 ﻿using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
-using NetOffice;
-using NetOffice.Misc;
+using NetOffice.Attributes;
 
 namespace NetOffice.PowerPointApi
 {
-
 	#region Delegates
 
 	#pragma warning disable
@@ -14,22 +12,24 @@ namespace NetOffice.PowerPointApi
 
 	#endregion
 
-	///<summary>
+	/// <summary>
 	/// CoClass Presentation 
 	/// SupportByVersion PowerPoint, 9,10,11,12,14,15,16
-	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746640.aspx
-	///</summary>
-	[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
-	[EntityTypeAttribute(EntityType.IsCoClass)]
-	public class Presentation : _Presentation,IEventBinding
+	/// </summary>
+	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff746640.aspx </remarks>
+	[SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+	[EntityType(EntityType.IsCoClass)]
+	[EventSink(typeof(Events.PresEvents_SinkHelper))]
+	public class Presentation : _Presentation, IEventBinding
 	{
 		#pragma warning disable
+
 		#region Fields
 		
 		private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
 		private string _activeSinkId;
 		private NetRuntimeSystem.Type _thisType;
-		PresEvents_SinkHelper _presEvents_SinkHelper;
+		private Events.PresEvents_SinkHelper _presEvents_SinkHelper;
 	
 		#endregion
 
@@ -38,6 +38,7 @@ namespace NetOffice.PowerPointApi
         /// <summary>
         /// Instance Type
         /// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
         public override Type InstanceType
         {
             get
@@ -104,17 +105,17 @@ namespace NetOffice.PowerPointApi
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of Presentation 
-        ///</summary>		
+        /// </summary>		
 		public Presentation():base("PowerPoint.Presentation")
 		{
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of Presentation
-        ///</summary>
+        /// </summary>
         ///<param name="progId">registered ProgID</param>
 		public Presentation(string progId):base(progId)
 		{
@@ -124,46 +125,6 @@ namespace NetOffice.PowerPointApi
 		#endregion
 
 		#region Static CoClass Methods
-
-		/// <summary>
-        /// Returns all running PowerPoint.Presentation objects from the environment/system
-        /// </summary>
-        /// <returns>an PowerPoint.Presentation array</returns>
-		public static NetOffice.PowerPointApi.Presentation[] GetActiveInstances()
-		{		
-			IDisposableEnumeration proxyList = NetOffice.ProxyService.GetActiveInstances("PowerPoint","Presentation");
-			NetRuntimeSystem.Collections.Generic.List<NetOffice.PowerPointApi.Presentation> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.PowerPointApi.Presentation>();
-			foreach(object proxy in proxyList)
-				resultList.Add( new NetOffice.PowerPointApi.Presentation(null, proxy) );
-			return resultList.ToArray();
-		}
-
-		/// <summary>
-        /// Returns a running PowerPoint.Presentation object from the environment/system.
-        /// </summary>
-        /// <returns>an PowerPoint.Presentation object or null</returns>
-		public static NetOffice.PowerPointApi.Presentation GetActiveInstance()
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("PowerPoint","Presentation", false);
-			if(null != proxy)
-				return new NetOffice.PowerPointApi.Presentation(null, proxy);
-			else
-				return null;
-		}
-
-		/// <summary>
-        /// Returns a running PowerPoint.Presentation object from the environment/system. 
-        /// </summary>
-	    /// <param name="throwOnError">throw an exception if no object was found</param>
-        /// <returns>an PowerPoint.Presentation object or null</returns>
-		public static NetOffice.PowerPointApi.Presentation GetActiveInstance(bool throwOnError)
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("PowerPoint","Presentation", throwOnError);
-			if(null != proxy)
-				return new NetOffice.PowerPointApi.Presentation(null, proxy);
-			else
-				return null;
-		}
 		#endregion
 
 		#region Events
@@ -185,12 +146,12 @@ namespace NetOffice.PowerPointApi
 				return;
 	
             if (null == _activeSinkId)
-				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, PresEvents_SinkHelper.Id);
+				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, Events.PresEvents_SinkHelper.Id);
 
 
-			if(PresEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
+			if(Events.PresEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
 			{
-				_presEvents_SinkHelper = new PresEvents_SinkHelper(this, _connectPoint);
+				_presEvents_SinkHelper = new Events.PresEvents_SinkHelper(this, _connectPoint);
 				return;
 			} 
         }

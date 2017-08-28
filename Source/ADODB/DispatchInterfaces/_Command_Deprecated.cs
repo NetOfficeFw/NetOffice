@@ -1,23 +1,33 @@
 ﻿using System;
 using NetRuntimeSystem = System;
-using System.Runtime.InteropServices;
-using System.Runtime.CompilerServices;
 using System.ComponentModel;
-using System.Reflection;
-using System.Collections.Generic;
-using NetOffice;
+using NetOffice.Attributes;
+
 namespace NetOffice.ADODBApi
 {
-	///<summary>
+	/// <summary>
 	/// DispatchInterface _Command_Deprecated 
 	/// SupportByVersion ADODB, 2.5
-	///</summary>
-	[SupportByVersionAttribute("ADODB", 2.5)]
-	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
-	public class _Command_Deprecated : Command15_Deprecated
+	/// </summary>
+	[SupportByVersion("ADODB", 2.5)]
+	[EntityType(EntityType.IsDispatchInterface)]
+ 	public class _Command_Deprecated : Command15_Deprecated
 	{
 		#pragma warning disable
+
 		#region Type Information
+
+		/// <summary>
+		/// Instance Type
+		/// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
+		public override Type InstanceType
+		{
+			get
+			{
+				return LateBindingApiWrapperType;
+			}
+		}
 
         private static Type _type;
 
@@ -28,14 +38,20 @@ namespace NetOffice.ADODBApi
             {
                 if (null == _type)
                     _type = typeof(_Command_Deprecated);
-                    
                 return _type;
             }
         }
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public _Command_Deprecated(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -81,7 +97,7 @@ namespace NetOffice.ADODBApi
 		{
 		}
 		
-		/// <param name="progId">registered ProgID</param>
+		/// <param name="progId">registered progID</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public _Command_Deprecated(string progId) : base(progId)
 		{
@@ -95,15 +111,12 @@ namespace NetOffice.ADODBApi
 		/// SupportByVersion ADODB 2.5
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("ADODB", 2.5)]
+		[SupportByVersion("ADODB", 2.5)]
 		public NetOffice.ADODBApi.Properties Properties
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Properties", paramsArray);
-				NetOffice.ADODBApi.Properties newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ADODBApi.Properties.LateBindingApiWrapperType) as NetOffice.ADODBApi.Properties;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ADODBApi.Properties>(this, "Properties", NetOffice.ADODBApi.Properties.LateBindingApiWrapperType);
 			}
 		}
 
@@ -111,14 +124,12 @@ namespace NetOffice.ADODBApi
 		/// SupportByVersion ADODB 2.5
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("ADODB", 2.5)]
+		[SupportByVersion("ADODB", 2.5)]
 		public Int32 State
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "State", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "State");
 			}
 		}
 
@@ -128,16 +139,15 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.5
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("ADODB", 2.5)]
+		[SupportByVersion("ADODB", 2.5)]
 		public void Cancel()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "Cancel", paramsArray);
+			 Factory.ExecuteMethod(this, "Cancel");
 		}
 
 		#endregion
+
 		#pragma warning restore
 	}
 }

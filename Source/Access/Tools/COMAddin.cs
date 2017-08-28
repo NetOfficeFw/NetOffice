@@ -7,6 +7,7 @@ using Microsoft.Win32;
 using System.ComponentModel;
 using System.Runtime.InteropServices;
 using NetOffice;
+using NetOffice.Attributes;
 using NetOffice.Tools;
 using NetOffice.OfficeApi.Tools;
 using Office = NetOffice.OfficeApi;
@@ -65,7 +66,7 @@ namespace NetOffice.AccessApi.Tools
         /// <summary>
         /// Common Tasks Helper. The property is available after the host application has called OnConnection for the instance
         /// </summary>
-        public Utils.CommonUtils Utils { get; private set; }
+        public Contribution.CommonUtils Utils { get; private set; }
 
         /// <summary>
         /// Host Application Instance
@@ -658,9 +659,9 @@ namespace NetOffice.AccessApi.Tools
         /// Create the used utils. The method was called in OnConnection
         /// </summary>
         /// <returns>new ToolsUtils instance</returns>
-        protected internal virtual Utils.CommonUtils OnCreateUtils()
+        protected internal virtual Contribution.CommonUtils OnCreateUtils()
         {
-            return new Utils.CommonUtils(this, Type, 3 == _automationCode ? true : false, this.Type.Assembly);
+            return new Contribution.CommonUtils(this, Type, 3 == _automationCode ? true : false, this.Type.Assembly);
         }
 
         /// <summary>
@@ -710,14 +711,14 @@ namespace NetOffice.AccessApi.Tools
             if (null != _isLoadedFromSystem)
                 return _isLoadedFromSystem;
 
-            OfficeApi.Tools.Utils.RegistryLocationResult result = OfficeApi.Tools.Utils.CommonUtils.TryFindAddinLoadLocation(Type,
+            OfficeApi.Tools.Contribution.RegistryLocationResult result = OfficeApi.Tools.Contribution.CommonUtils.TryFindAddinLoadLocation(Type,
                     ApplicationIdentifiers.ApplicationType.Access);
             switch (result)
             {
-                case Office.Tools.Utils.RegistryLocationResult.User:
+                case Office.Tools.Contribution.RegistryLocationResult.User:
                     _isLoadedFromSystem = false;
                     break;
-                case Office.Tools.Utils.RegistryLocationResult.System:
+                case Office.Tools.Contribution.RegistryLocationResult.System:
                     _isLoadedFromSystem = true;
                     break;
                 default:

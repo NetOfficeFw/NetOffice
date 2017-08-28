@@ -1,60 +1,60 @@
 ﻿using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
-using NetOffice;
-using NetOffice.Misc;
+using NetOffice.Attributes;
 
 namespace NetOffice.OutlookApi
 {
-
 	#region Delegates
 
 	#pragma warning disable
-	public delegate void MobileItem_OpenEventHandler(ref bool Cancel);
-	public delegate void MobileItem_CustomActionEventHandler(COMObject Action, COMObject Response, ref bool Cancel);
-	public delegate void MobileItem_CustomPropertyChangeEventHandler(string Name);
-	public delegate void MobileItem_ForwardEventHandler(COMObject Forward, ref bool Cancel);
-	public delegate void MobileItem_CloseEventHandler(ref bool Cancel);
-	public delegate void MobileItem_PropertyChangeEventHandler(string Name);
+	public delegate void MobileItem_OpenEventHandler(ref bool cancel);
+	public delegate void MobileItem_CustomActionEventHandler(ICOMObject action, ICOMObject response, ref bool cancel);
+	public delegate void MobileItem_CustomPropertyChangeEventHandler(string name);
+	public delegate void MobileItem_ForwardEventHandler(ICOMObject forward, ref bool cancel);
+	public delegate void MobileItem_CloseEventHandler(ref bool cancel);
+	public delegate void MobileItem_PropertyChangeEventHandler(string name);
 	public delegate void MobileItem_ReadEventHandler();
-	public delegate void MobileItem_ReplyEventHandler(COMObject Response, ref bool Cancel);
-	public delegate void MobileItem_ReplyAllEventHandler(COMObject Response, ref bool Cancel);
-	public delegate void MobileItem_SendEventHandler(ref bool Cancel);
-	public delegate void MobileItem_WriteEventHandler(ref bool Cancel);
-	public delegate void MobileItem_BeforeCheckNamesEventHandler(ref bool Cancel);
-	public delegate void MobileItem_AttachmentAddEventHandler(NetOffice.OutlookApi.Attachment Attachment);
-	public delegate void MobileItem_AttachmentReadEventHandler(NetOffice.OutlookApi.Attachment Attachment);
-	public delegate void MobileItem_BeforeAttachmentSaveEventHandler(NetOffice.OutlookApi.Attachment Attachment, ref bool Cancel);
-	public delegate void MobileItem_BeforeDeleteEventHandler(COMObject Item, ref bool Cancel);
-	public delegate void MobileItem_AttachmentRemoveEventHandler(NetOffice.OutlookApi.Attachment Attachment);
-	public delegate void MobileItem_BeforeAttachmentAddEventHandler(NetOffice.OutlookApi.Attachment Attachment, ref bool Cancel);
-	public delegate void MobileItem_BeforeAttachmentPreviewEventHandler(NetOffice.OutlookApi.Attachment Attachment, ref bool Cancel);
-	public delegate void MobileItem_BeforeAttachmentReadEventHandler(NetOffice.OutlookApi.Attachment Attachment, ref bool Cancel);
-	public delegate void MobileItem_BeforeAttachmentWriteToTempFileEventHandler(NetOffice.OutlookApi.Attachment Attachment, ref bool Cancel);
+	public delegate void MobileItem_ReplyEventHandler(ICOMObject response, ref bool cancel);
+	public delegate void MobileItem_ReplyAllEventHandler(ICOMObject response, ref bool cancel);
+	public delegate void MobileItem_SendEventHandler(ref bool cancel);
+	public delegate void MobileItem_WriteEventHandler(ref bool cancel);
+	public delegate void MobileItem_BeforeCheckNamesEventHandler(ref bool cancel);
+	public delegate void MobileItem_AttachmentAddEventHandler(NetOffice.OutlookApi.Attachment attachment);
+	public delegate void MobileItem_AttachmentReadEventHandler(NetOffice.OutlookApi.Attachment attachment);
+	public delegate void MobileItem_BeforeAttachmentSaveEventHandler(NetOffice.OutlookApi.Attachment attachment, ref bool cancel);
+	public delegate void MobileItem_BeforeDeleteEventHandler(ICOMObject item, ref bool cancel);
+	public delegate void MobileItem_AttachmentRemoveEventHandler(NetOffice.OutlookApi.Attachment attachment);
+	public delegate void MobileItem_BeforeAttachmentAddEventHandler(NetOffice.OutlookApi.Attachment attachment, ref bool cancel);
+	public delegate void MobileItem_BeforeAttachmentPreviewEventHandler(NetOffice.OutlookApi.Attachment attachment, ref bool cancel);
+	public delegate void MobileItem_BeforeAttachmentReadEventHandler(NetOffice.OutlookApi.Attachment attachment, ref bool cancel);
+	public delegate void MobileItem_BeforeAttachmentWriteToTempFileEventHandler(NetOffice.OutlookApi.Attachment attachment, ref bool cancel);
 	public delegate void MobileItem_UnloadEventHandler();
-	public delegate void MobileItem_BeforeAutoSaveEventHandler(ref bool Cancel);
+	public delegate void MobileItem_BeforeAutoSaveEventHandler(ref bool cancel);
 	public delegate void MobileItem_BeforeReadEventHandler();
 	public delegate void MobileItem_AfterWriteEventHandler();
-	public delegate void MobileItem_ReadCompleteEventHandler(ref bool Cancel);
+	public delegate void MobileItem_ReadCompleteEventHandler(ref bool cancel);
 	#pragma warning restore
 
 	#endregion
 
-	///<summary>
+	/// <summary>
 	/// CoClass MobileItem 
 	/// SupportByVersion Outlook, 14,15,16
-	///</summary>
-	[SupportByVersionAttribute("Outlook", 14,15,16)]
-	[EntityTypeAttribute(EntityType.IsCoClass)]
-	public class MobileItem : _MobileItem,IEventBinding
+	/// </summary>
+	[SupportByVersion("Outlook", 14,15,16)]
+	[EntityType(EntityType.IsCoClass)]
+	[EventSink(typeof(Events.ItemEvents_10_SinkHelper))]
+	public class MobileItem : _MobileItem, IEventBinding
 	{
 		#pragma warning disable
+
 		#region Fields
 		
 		private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
 		private string _activeSinkId;
 		private NetRuntimeSystem.Type _thisType;
-		ItemEvents_10_SinkHelper _itemEvents_10_SinkHelper;
+		private Events.ItemEvents_10_SinkHelper _itemEvents_10_SinkHelper;
 	
 		#endregion
 
@@ -63,6 +63,7 @@ namespace NetOffice.OutlookApi
         /// <summary>
         /// Instance Type
         /// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
         public override Type InstanceType
         {
             get
@@ -129,17 +130,17 @@ namespace NetOffice.OutlookApi
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of MobileItem 
-        ///</summary>		
+        /// </summary>		
 		public MobileItem():base("Outlook.MobileItem")
 		{
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of MobileItem
-        ///</summary>
+        /// </summary>
         ///<param name="progId">registered ProgID</param>
 		public MobileItem(string progId):base(progId)
 		{
@@ -149,46 +150,6 @@ namespace NetOffice.OutlookApi
 		#endregion
 
 		#region Static CoClass Methods
-
-		/// <summary>
-        /// Returns all running Outlook.MobileItem objects from the environment/system
-        /// </summary>
-        /// <returns>an Outlook.MobileItem array</returns>
-		public static NetOffice.OutlookApi.MobileItem[] GetActiveInstances()
-		{		
-			IDisposableEnumeration proxyList = NetOffice.ProxyService.GetActiveInstances("Outlook","MobileItem");
-			NetRuntimeSystem.Collections.Generic.List<NetOffice.OutlookApi.MobileItem> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.OutlookApi.MobileItem>();
-			foreach(object proxy in proxyList)
-				resultList.Add( new NetOffice.OutlookApi.MobileItem(null, proxy) );
-			return resultList.ToArray();
-		}
-
-		/// <summary>
-        /// Returns a running Outlook.MobileItem object from the environment/system.
-        /// </summary>
-        /// <returns>an Outlook.MobileItem object or null</returns>
-		public static NetOffice.OutlookApi.MobileItem GetActiveInstance()
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Outlook","MobileItem", false);
-			if(null != proxy)
-				return new NetOffice.OutlookApi.MobileItem(null, proxy);
-			else
-				return null;
-		}
-
-		/// <summary>
-        /// Returns a running Outlook.MobileItem object from the environment/system. 
-        /// </summary>
-	    /// <param name="throwOnError">throw an exception if no object was found</param>
-        /// <returns>an Outlook.MobileItem object or null</returns>
-		public static NetOffice.OutlookApi.MobileItem GetActiveInstance(bool throwOnError)
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Outlook","MobileItem", throwOnError);
-			if(null != proxy)
-				return new NetOffice.OutlookApi.MobileItem(null, proxy);
-			else
-				return null;
-		}
 		#endregion
 
 		#region Events
@@ -782,12 +743,12 @@ namespace NetOffice.OutlookApi
 				return;
 	
             if (null == _activeSinkId)
-				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, ItemEvents_10_SinkHelper.Id);
+				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, Events.ItemEvents_10_SinkHelper.Id);
 
 
-			if(ItemEvents_10_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
+			if(Events.ItemEvents_10_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
 			{
-				_itemEvents_10_SinkHelper = new ItemEvents_10_SinkHelper(this, _connectPoint);
+				_itemEvents_10_SinkHelper = new Events.ItemEvents_10_SinkHelper(this, _connectPoint);
 				return;
 			} 
         }

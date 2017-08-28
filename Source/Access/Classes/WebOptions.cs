@@ -1,12 +1,10 @@
 ﻿using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
-using NetOffice;
-using NetOffice.Misc;
+using NetOffice.Attributes;
 
 namespace NetOffice.AccessApi
 {
-
 	#region Delegates
 
 	#pragma warning disable
@@ -14,15 +12,16 @@ namespace NetOffice.AccessApi
 
 	#endregion
 
-	///<summary>
+	/// <summary>
 	/// CoClass WebOptions 
 	/// SupportByVersion Access, 9,10,11,12,14,15,16
-	///</summary>
-	[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
-	[EntityTypeAttribute(EntityType.IsCoClass)]
-	public class WebOptions : _WebOptions
+	/// </summary>
+	[SupportByVersion("Access", 9,10,11,12,14,15,16)]
+	[EntityType(EntityType.IsCoClass)]
+ 	public class WebOptions : _WebOptions
 	{
 		#pragma warning disable
+
 		#region Fields
 		
 		private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
@@ -36,6 +35,7 @@ namespace NetOffice.AccessApi
         /// <summary>
         /// Instance Type
         /// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
         public override Type InstanceType
         {
             get
@@ -102,17 +102,17 @@ namespace NetOffice.AccessApi
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of WebOptions 
-        ///</summary>		
+        /// </summary>		
 		public WebOptions():base("Access.WebOptions")
 		{
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of WebOptions
-        ///</summary>
+        /// </summary>
         ///<param name="progId">registered ProgID</param>
 		public WebOptions(string progId):base(progId)
 		{
@@ -122,46 +122,6 @@ namespace NetOffice.AccessApi
 		#endregion
 
 		#region Static CoClass Methods
-
-		/// <summary>
-        /// Returns all running Access.WebOptions objects from the environment/system
-        /// </summary>
-        /// <returns>an Access.WebOptions array</returns>
-		public static NetOffice.AccessApi.WebOptions[] GetActiveInstances()
-		{		
-			IDisposableEnumeration proxyList = NetOffice.ProxyService.GetActiveInstances("Access","WebOptions");
-			NetRuntimeSystem.Collections.Generic.List<NetOffice.AccessApi.WebOptions> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.AccessApi.WebOptions>();
-			foreach(object proxy in proxyList)
-				resultList.Add( new NetOffice.AccessApi.WebOptions(null, proxy) );
-			return resultList.ToArray();
-		}
-
-		/// <summary>
-        /// Returns a running Access.WebOptions object from the environment/system.
-        /// </summary>
-        /// <returns>an Access.WebOptions object or null</returns>
-		public static NetOffice.AccessApi.WebOptions GetActiveInstance()
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Access","WebOptions", false);
-			if(null != proxy)
-				return new NetOffice.AccessApi.WebOptions(null, proxy);
-			else
-				return null;
-		}
-
-		/// <summary>
-        /// Returns a running Access.WebOptions object from the environment/system. 
-        /// </summary>
-	    /// <param name="throwOnError">throw an exception if no object was found</param>
-        /// <returns>an Access.WebOptions object or null</returns>
-		public static NetOffice.AccessApi.WebOptions GetActiveInstance(bool throwOnError)
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Access","WebOptions", throwOnError);
-			if(null != proxy)
-				return new NetOffice.AccessApi.WebOptions(null, proxy);
-			else
-				return null;
-		}
 		#endregion
 
 		#region Events

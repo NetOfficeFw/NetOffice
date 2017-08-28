@@ -1,12 +1,10 @@
 ﻿using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
-using NetOffice;
-using NetOffice.Misc;
+using NetOffice.Attributes;
 
 namespace NetOffice.OutlookApi
 {
-
 	#region Delegates
 
 	#pragma warning disable
@@ -14,16 +12,17 @@ namespace NetOffice.OutlookApi
 
 	#endregion
 
-	///<summary>
+	/// <summary>
 	/// CoClass IconView 
 	/// SupportByVersion Outlook, 12,14,15,16
-	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff869455.aspx
-	///</summary>
-	[SupportByVersionAttribute("Outlook", 12,14,15,16)]
-	[EntityTypeAttribute(EntityType.IsCoClass)]
-	public class IconView : _IconView
+	/// </summary>
+	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff869455.aspx </remarks>
+	[SupportByVersion("Outlook", 12,14,15,16)]
+	[EntityType(EntityType.IsCoClass)]
+ 	public class IconView : _IconView
 	{
 		#pragma warning disable
+
 		#region Fields
 		
 		private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
@@ -37,6 +36,7 @@ namespace NetOffice.OutlookApi
         /// <summary>
         /// Instance Type
         /// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
         public override Type InstanceType
         {
             get
@@ -103,17 +103,17 @@ namespace NetOffice.OutlookApi
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of IconView 
-        ///</summary>		
+        /// </summary>		
 		public IconView():base("Outlook.IconView")
 		{
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of IconView
-        ///</summary>
+        /// </summary>
         ///<param name="progId">registered ProgID</param>
 		public IconView(string progId):base(progId)
 		{
@@ -123,46 +123,6 @@ namespace NetOffice.OutlookApi
 		#endregion
 
 		#region Static CoClass Methods
-
-		/// <summary>
-        /// Returns all running Outlook.IconView objects from the environment/system
-        /// </summary>
-        /// <returns>an Outlook.IconView array</returns>
-		public static NetOffice.OutlookApi.IconView[] GetActiveInstances()
-		{		
-			IDisposableEnumeration proxyList = NetOffice.ProxyService.GetActiveInstances("Outlook","IconView");
-			NetRuntimeSystem.Collections.Generic.List<NetOffice.OutlookApi.IconView> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.OutlookApi.IconView>();
-			foreach(object proxy in proxyList)
-				resultList.Add( new NetOffice.OutlookApi.IconView(null, proxy) );
-			return resultList.ToArray();
-		}
-
-		/// <summary>
-        /// Returns a running Outlook.IconView object from the environment/system.
-        /// </summary>
-        /// <returns>an Outlook.IconView object or null</returns>
-		public static NetOffice.OutlookApi.IconView GetActiveInstance()
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Outlook","IconView", false);
-			if(null != proxy)
-				return new NetOffice.OutlookApi.IconView(null, proxy);
-			else
-				return null;
-		}
-
-		/// <summary>
-        /// Returns a running Outlook.IconView object from the environment/system. 
-        /// </summary>
-	    /// <param name="throwOnError">throw an exception if no object was found</param>
-        /// <returns>an Outlook.IconView object or null</returns>
-		public static NetOffice.OutlookApi.IconView GetActiveInstance(bool throwOnError)
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Outlook","IconView", throwOnError);
-			if(null != proxy)
-				return new NetOffice.OutlookApi.IconView(null, proxy);
-			else
-				return null;
-		}
 		#endregion
 
 		#region Events

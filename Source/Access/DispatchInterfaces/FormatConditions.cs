@@ -1,25 +1,36 @@
-﻿using System;
-using NetRuntimeSystem = System;
-using System.Runtime.InteropServices;
-using System.Runtime.CompilerServices;
-using System.ComponentModel;
-using System.Reflection;
-using System.Collections.Generic;
 using System.Collections;
-using NetOffice;
+using System.Collections.Generic;
+using System;
+using NetRuntimeSystem = System;
+using System.ComponentModel;
+using NetOffice.Attributes;
+
 namespace NetOffice.AccessApi
 {
-	///<summary>
+	/// <summary>
 	/// DispatchInterface FormatConditions 
 	/// SupportByVersion Access, 9,10,11,12,14,15,16
-	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845092.aspx
-	///</summary>
-	[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
-	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
-	public class FormatConditions : COMObject ,IEnumerable<NetOffice.AccessApi._FormatCondition>
+	/// </summary>
+	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff845092.aspx </remarks>
+	[SupportByVersion("Access", 9,10,11,12,14,15,16)]
+	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Method), HasIndexProperty(IndexInvoke.Property, "Item")]
+	public class FormatConditions : COMObject, IEnumerable<NetOffice.AccessApi._FormatCondition>
 	{
 		#pragma warning disable
+
 		#region Type Information
+
+		/// <summary>
+		/// Instance Type
+		/// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
+		public override Type InstanceType
+		{
+			get
+			{
+				return LateBindingApiWrapperType;
+			}
+		}
 
         private static Type _type;
 
@@ -30,14 +41,20 @@ namespace NetOffice.AccessApi
             {
                 if (null == _type)
                     _type = typeof(FormatConditions);
-                    
                 return _type;
             }
         }
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public FormatConditions(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -83,7 +100,7 @@ namespace NetOffice.AccessApi
 		{
 		}
 		
-		/// <param name="progId">registered ProgID</param>
+		/// <param name="progId">registered progID</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public FormatConditions(string progId) : base(progId)
 		{
@@ -96,35 +113,29 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192090.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff192090.aspx </remarks>
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public NetOffice.AccessApi.Application Application
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				NetOffice.AccessApi.Application newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.AccessApi.Application.LateBindingApiWrapperType) as NetOffice.AccessApi.Application;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.AccessApi.Application>(this, "Application", NetOffice.AccessApi.Application.LateBindingApiWrapperType);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff198351.aspx
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff198351.aspx </remarks>
+		[SupportByVersion("Access", 9,10,11,12,14,15,16), ProxyResult]
 		public object Parent
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Parent", paramsArray);
-				ICOMObject newObject = Factory.CreateObjectFromComProxy(this,returnItem);
-				return newObject;
+				return Factory.ExecuteReferencePropertyGet(this, "Parent");
 			}
 		}
 
@@ -132,33 +143,29 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <param name="index">object Index</param>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
-		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
+		/// <param name="index">object index</param>
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
+		[BaseResult]
+		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
 		public NetOffice.AccessApi._FormatCondition this[object index]
 		{
 			get
-{			
-			object[] paramsArray = Invoker.ValidateParamsArray(index);
-			object returnItem = Invoker.PropertyGet(this, "Item", paramsArray);
-			NetOffice.AccessApi._FormatCondition newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.AccessApi._FormatCondition;
-			return newObject;
+			{
+				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.AccessApi._FormatCondition>(this, "Item", index);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192647.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff192647.aspx </remarks>
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public Int32 Count
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Count", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "Count");
 			}
 		}
 
@@ -168,123 +175,112 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194814.aspx
 		/// </summary>
-		/// <param name="type">NetOffice.AccessApi.Enums.AcFormatConditionType Type</param>
-		/// <param name="_operator">optional NetOffice.AccessApi.Enums.AcFormatConditionOperator Operator = 0</param>
-		/// <param name="expression1">optional object Expression1</param>
-		/// <param name="expression2">optional object Expression2</param>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194814.aspx </remarks>
+		/// <param name="type">NetOffice.AccessApi.Enums.AcFormatConditionType type</param>
+		/// <param name="_operator">optional NetOffice.AccessApi.Enums.AcFormatConditionOperator operator = 0</param>
+		/// <param name="expression1">optional object expression1</param>
+		/// <param name="expression2">optional object expression2</param>
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
+		[BaseResult]
 		public NetOffice.AccessApi._FormatCondition Add(NetOffice.AccessApi.Enums.AcFormatConditionType type, object _operator, object expression1, object expression2)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(type, _operator, expression1, expression2);
-			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.AccessApi._FormatCondition newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.AccessApi._FormatCondition;
-			return newObject;
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.AccessApi._FormatCondition>(this, "Add", type, _operator, expression1, expression2);
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194814.aspx
 		/// </summary>
-		/// <param name="type">NetOffice.AccessApi.Enums.AcFormatConditionType Type</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194814.aspx </remarks>
+		/// <param name="type">NetOffice.AccessApi.Enums.AcFormatConditionType type</param>
+		[CustomMethod]
+		[BaseResult]
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public NetOffice.AccessApi._FormatCondition Add(NetOffice.AccessApi.Enums.AcFormatConditionType type)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(type);
-			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.AccessApi._FormatCondition newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.AccessApi._FormatCondition;
-			return newObject;
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.AccessApi._FormatCondition>(this, "Add", type);
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194814.aspx
 		/// </summary>
-		/// <param name="type">NetOffice.AccessApi.Enums.AcFormatConditionType Type</param>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194814.aspx </remarks>
+		/// <param name="type">NetOffice.AccessApi.Enums.AcFormatConditionType type</param>
 		/// <param name="_operator">optional NetOffice.AccessApi.Enums.AcFormatConditionOperator Operator = 0</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		[CustomMethod]
+		[BaseResult]
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public NetOffice.AccessApi._FormatCondition Add(NetOffice.AccessApi.Enums.AcFormatConditionType type, object _operator)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(type, _operator);
-			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.AccessApi._FormatCondition newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.AccessApi._FormatCondition;
-			return newObject;
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.AccessApi._FormatCondition>(this, "Add", type, _operator);
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194814.aspx
 		/// </summary>
-		/// <param name="type">NetOffice.AccessApi.Enums.AcFormatConditionType Type</param>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194814.aspx </remarks>
+		/// <param name="type">NetOffice.AccessApi.Enums.AcFormatConditionType type</param>
 		/// <param name="_operator">optional NetOffice.AccessApi.Enums.AcFormatConditionOperator Operator = 0</param>
-		/// <param name="expression1">optional object Expression1</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		/// <param name="expression1">optional object expression1</param>
+		[CustomMethod]
+		[BaseResult]
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public NetOffice.AccessApi._FormatCondition Add(NetOffice.AccessApi.Enums.AcFormatConditionType type, object _operator, object expression1)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(type, _operator, expression1);
-			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.AccessApi._FormatCondition newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.AccessApi._FormatCondition;
-			return newObject;
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.AccessApi._FormatCondition>(this, "Add", type, _operator, expression1);
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836089.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff836089.aspx </remarks>
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public void Delete()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "Delete", paramsArray);
+			 Factory.ExecuteMethod(this, "Delete");
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
 		/// <param name="dispid">Int32 dispid</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("Access", 11,12,14,15,16)]
+		[SupportByVersion("Access", 11,12,14,15,16)]
 		public bool IsMemberSafe(Int32 dispid)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(dispid);
-			object returnItem = Invoker.MethodReturn(this, "IsMemberSafe", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return Factory.ExecuteBoolMethodGet(this, "IsMemberSafe", dispid);
 		}
 
-		#endregion
+        #endregion
 
-       #region IEnumerable<NetOffice.AccessApi._FormatCondition> Member
-        
+        #region IEnumerable<NetOffice.AccessApi._FormatCondition> Member
+
         /// <summary>
-		/// SupportByVersionAttribute Access, 9,10,11,12,14,15,16
-		/// </summary>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
-       public IEnumerator<NetOffice.AccessApi._FormatCondition> GetEnumerator()  
-       {
-           NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
-           foreach (NetOffice.AccessApi._FormatCondition item in innerEnumerator)
-               yield return item;
-       }
+        /// SupportByVersion Access, 9,10,11,12,14,15,16
+        /// </summary>
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
+        public IEnumerator<NetOffice.AccessApi._FormatCondition> GetEnumerator()
+        {
+            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
+            foreach (NetOffice.AccessApi._FormatCondition item in innerEnumerator)
+                yield return item;
+        }
 
-       #endregion
-          
-		#region IEnumerable Members
-       
-		/// <summary>
-		/// SupportByVersionAttribute Access, 9,10,11,12,14,15,16
-		/// </summary>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+        #endregion
+
+        #region IEnumerable Members
+
+        /// <summary>
+        /// SupportByVersion Access, 9,10,11,12,14,15,16
+        /// </summary>
+        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
 			return NetOffice.Utils.GetProxyEnumeratorAsMethod(this);
 		}
 
 		#endregion
+
 		#pragma warning restore
 	}
 }

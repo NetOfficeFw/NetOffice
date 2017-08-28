@@ -1,12 +1,10 @@
 ﻿using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
-using NetOffice;
-using NetOffice.Misc;
+using NetOffice.Attributes;
 
 namespace NetOffice.OutlookApi
 {
-
 	#region Delegates
 
 	#pragma warning disable
@@ -14,15 +12,16 @@ namespace NetOffice.OutlookApi
 
 	#endregion
 
-	///<summary>
+	/// <summary>
 	/// CoClass DoNotUseMeFolder 
 	/// SupportByVersion Outlook, 12,14,15,16
-	///</summary>
-	[SupportByVersionAttribute("Outlook", 12,14,15,16)]
-	[EntityTypeAttribute(EntityType.IsCoClass)]
-	public class DoNotUseMeFolder : MAPIFolder
+	/// </summary>
+	[SupportByVersion("Outlook", 12,14,15,16)]
+	[EntityType(EntityType.IsCoClass)]
+ 	public class DoNotUseMeFolder : MAPIFolder
 	{
 		#pragma warning disable
+
 		#region Fields
 		
 		private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
@@ -36,6 +35,7 @@ namespace NetOffice.OutlookApi
         /// <summary>
         /// Instance Type
         /// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
         public override Type InstanceType
         {
             get
@@ -102,17 +102,17 @@ namespace NetOffice.OutlookApi
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of DoNotUseMeFolder 
-        ///</summary>		
+        /// </summary>		
 		public DoNotUseMeFolder():base("Outlook.DoNotUseMeFolder")
 		{
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of DoNotUseMeFolder
-        ///</summary>
+        /// </summary>
         ///<param name="progId">registered ProgID</param>
 		public DoNotUseMeFolder(string progId):base(progId)
 		{
@@ -122,46 +122,6 @@ namespace NetOffice.OutlookApi
 		#endregion
 
 		#region Static CoClass Methods
-
-		/// <summary>
-        /// Returns all running Outlook.DoNotUseMeFolder objects from the environment/system
-        /// </summary>
-        /// <returns>an Outlook.DoNotUseMeFolder array</returns>
-		public static NetOffice.OutlookApi.DoNotUseMeFolder[] GetActiveInstances()
-		{		
-			IDisposableEnumeration proxyList = NetOffice.ProxyService.GetActiveInstances("Outlook","DoNotUseMeFolder");
-			NetRuntimeSystem.Collections.Generic.List<NetOffice.OutlookApi.DoNotUseMeFolder> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.OutlookApi.DoNotUseMeFolder>();
-			foreach(object proxy in proxyList)
-				resultList.Add( new NetOffice.OutlookApi.DoNotUseMeFolder(null, proxy) );
-			return resultList.ToArray();
-		}
-
-		/// <summary>
-        /// Returns a running Outlook.DoNotUseMeFolder object from the environment/system.
-        /// </summary>
-        /// <returns>an Outlook.DoNotUseMeFolder object or null</returns>
-		public static NetOffice.OutlookApi.DoNotUseMeFolder GetActiveInstance()
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Outlook","DoNotUseMeFolder", false);
-			if(null != proxy)
-				return new NetOffice.OutlookApi.DoNotUseMeFolder(null, proxy);
-			else
-				return null;
-		}
-
-		/// <summary>
-        /// Returns a running Outlook.DoNotUseMeFolder object from the environment/system. 
-        /// </summary>
-	    /// <param name="throwOnError">throw an exception if no object was found</param>
-        /// <returns>an Outlook.DoNotUseMeFolder object or null</returns>
-		public static NetOffice.OutlookApi.DoNotUseMeFolder GetActiveInstance(bool throwOnError)
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Outlook","DoNotUseMeFolder", throwOnError);
-			if(null != proxy)
-				return new NetOffice.OutlookApi.DoNotUseMeFolder(null, proxy);
-			else
-				return null;
-		}
 		#endregion
 
 		#region Events

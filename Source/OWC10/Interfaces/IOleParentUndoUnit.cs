@@ -1,23 +1,34 @@
-﻿using System;
+﻿using System.Reflection;
+using System;
 using NetRuntimeSystem = System;
-using System.Runtime.InteropServices;
 using System.ComponentModel;
-using System.Runtime.CompilerServices;
-using System.Reflection;
-using System.Collections.Generic;
-using NetOffice;
+using NetOffice.Attributes;
+
 namespace NetOffice.OWC10Api
 {
-	///<summary>
+	/// <summary>
 	/// Interface IOleParentUndoUnit 
 	/// SupportByVersion OWC10, 1
-	///</summary>
-	[SupportByVersionAttribute("OWC10", 1)]
-	[EntityTypeAttribute(EntityType.IsInterface)]
-	public class IOleParentUndoUnit : IOleUndoUnit
+	/// </summary>
+	[SupportByVersion("OWC10", 1)]
+	[EntityType(EntityType.IsInterface)]
+ 	public class IOleParentUndoUnit : IOleUndoUnit
 	{
 		#pragma warning disable
+
 		#region Type Information
+
+		/// <summary>
+		/// Instance Type
+		/// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
+		public override Type InstanceType
+		{
+			get
+			{
+				return LateBindingApiWrapperType;
+			}
+		}
 
         private static Type _type;
 
@@ -28,14 +39,20 @@ namespace NetOffice.OWC10Api
             {
                 if (null == _type)
                     _type = typeof(IOleParentUndoUnit);
-                    
                 return _type;
             }
         }
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public IOleParentUndoUnit(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -81,7 +98,7 @@ namespace NetOffice.OWC10Api
 		{
 		}
 		
-		/// <param name="progId">registered ProgID</param>
+		/// <param name="progId">registered progID</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public IOleParentUndoUnit(string progId) : base(progId)
 		{
@@ -97,74 +114,62 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
-		/// 
 		/// </summary>
 		/// <param name="pPUU">NetOffice.OWC10Api.IOleParentUndoUnit pPUU</param>
-		[SupportByVersionAttribute("OWC10", 1)]
+		[SupportByVersion("OWC10", 1)]
 		public Int32 Open(NetOffice.OWC10Api.IOleParentUndoUnit pPUU)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(pPUU);
-			object returnItem = Invoker.MethodReturn(this, "Open", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return Factory.ExecuteInt32MethodGet(this, "Open", pPUU);
 		}
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
-		/// 
 		/// </summary>
 		/// <param name="pPUU">NetOffice.OWC10Api.IOleParentUndoUnit pPUU</param>
 		/// <param name="fCommit">Int32 fCommit</param>
-		[SupportByVersionAttribute("OWC10", 1)]
+		[SupportByVersion("OWC10", 1)]
 		public Int32 Close(NetOffice.OWC10Api.IOleParentUndoUnit pPUU, Int32 fCommit)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(pPUU, fCommit);
-			object returnItem = Invoker.MethodReturn(this, "Close", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return Factory.ExecuteInt32MethodGet(this, "Close", pPUU, fCommit);
 		}
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
-		/// 
 		/// </summary>
 		/// <param name="pUU">NetOffice.OWC10Api.IOleUndoUnit pUU</param>
-		[SupportByVersionAttribute("OWC10", 1)]
+		[SupportByVersion("OWC10", 1)]
 		public Int32 Add(NetOffice.OWC10Api.IOleUndoUnit pUU)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(pUU);
-			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return Factory.ExecuteInt32MethodGet(this, "Add", pUU);
 		}
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
-		/// 
 		/// </summary>
 		/// <param name="pUU">NetOffice.OWC10Api.IOleUndoUnit pUU</param>
-		[SupportByVersionAttribute("OWC10", 1)]
+		[SupportByVersion("OWC10", 1)]
 		public Int32 FindUnit(NetOffice.OWC10Api.IOleUndoUnit pUU)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(pUU);
-			object returnItem = Invoker.MethodReturn(this, "FindUnit", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return Factory.ExecuteInt32MethodGet(this, "FindUnit", pUU);
 		}
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
-		/// 
 		/// </summary>
 		/// <param name="pdwState">Int32 pdwState</param>
-		[SupportByVersionAttribute("OWC10", 1)]
+		[SupportByVersion("OWC10", 1)]
 		public Int32 GetParentState(out Int32 pdwState)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
 			pdwState = 0;
 			object[] paramsArray = Invoker.ValidateParamsArray(pdwState);
-			object returnItem = Invoker.MethodReturn(this, "GetParentState", paramsArray);
+			object returnItem = Invoker.MethodReturn(this, "GetParentState", paramsArray, modifiers);
 			pdwState = (Int32)paramsArray[0];
 			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		#endregion
+
 		#pragma warning restore
 	}
 }

@@ -1,23 +1,33 @@
 ﻿using System;
 using NetRuntimeSystem = System;
-using System.Runtime.InteropServices;
-using System.Runtime.CompilerServices;
 using System.ComponentModel;
-using System.Reflection;
-using System.Collections.Generic;
-using NetOffice;
+using NetOffice.Attributes;
+
 namespace NetOffice.PowerPointApi
 {
-	///<summary>
+	/// <summary>
 	/// DispatchInterface PPTabSheets 
 	/// SupportByVersion PowerPoint, 9
-	///</summary>
-	[SupportByVersionAttribute("PowerPoint", 9)]
-	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
-	public class PPTabSheets : Collection
+	/// </summary>
+	[SupportByVersion("PowerPoint", 9)]
+	[EntityType(EntityType.IsDispatchInterface), HasIndexProperty(IndexInvoke.Method, "Item")]
+ 	public class PPTabSheets : Collection
 	{
 		#pragma warning disable
+
 		#region Type Information
+
+		/// <summary>
+		/// Instance Type
+		/// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
+		public override Type InstanceType
+		{
+			get
+			{
+				return LateBindingApiWrapperType;
+			}
+		}
 
         private static Type _type;
 
@@ -28,14 +38,20 @@ namespace NetOffice.PowerPointApi
             {
                 if (null == _type)
                     _type = typeof(PPTabSheets);
-                    
                 return _type;
             }
         }
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public PPTabSheets(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -81,7 +97,7 @@ namespace NetOffice.PowerPointApi
 		{
 		}
 		
-		/// <param name="progId">registered ProgID</param>
+		/// <param name="progId">registered progID</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public PPTabSheets(string progId) : base(progId)
 		{
@@ -95,15 +111,12 @@ namespace NetOffice.PowerPointApi
 		/// SupportByVersion PowerPoint 9
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 9)]
+		[SupportByVersion("PowerPoint", 9)]
 		public NetOffice.PowerPointApi.PPTabSheet ActiveSheet
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "ActiveSheet", paramsArray);
-				NetOffice.PowerPointApi.PPTabSheet newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.PowerPointApi.PPTabSheet.LateBindingApiWrapperType) as NetOffice.PowerPointApi.PPTabSheet;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.PowerPointApi.PPTabSheet>(this, "ActiveSheet", NetOffice.PowerPointApi.PPTabSheet.LateBindingApiWrapperType);
 			}
 		}
 
@@ -111,19 +124,16 @@ namespace NetOffice.PowerPointApi
 		/// SupportByVersion PowerPoint 9
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 9)]
+		[SupportByVersion("PowerPoint", 9)]
 		public string Name
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Name", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "Name");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "Name", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "Name", value);
 			}
 		}
 
@@ -133,37 +143,30 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 9
-		/// 
 		/// </summary>
 		/// <param name="index">object index</param>
-		[SupportByVersionAttribute("PowerPoint", 9)]
-		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
+		[SupportByVersion("PowerPoint", 9)]
+		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
 		public NetOffice.PowerPointApi.PPTabSheet this[object index]
 		{
 			get
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(index);
-				object returnItem = Invoker.MethodReturn(this, "Item", paramsArray);
-				NetOffice.PowerPointApi.PPTabSheet newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PowerPointApi.PPTabSheet.LateBindingApiWrapperType) as NetOffice.PowerPointApi.PPTabSheet;
-				return newObject;
+				return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PowerPointApi.PPTabSheet>(this, "Item", NetOffice.PowerPointApi.PPTabSheet.LateBindingApiWrapperType, index);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 9
-		/// 
 		/// </summary>
-		/// <param name="name">string Name</param>
-		[SupportByVersionAttribute("PowerPoint", 9)]
+		/// <param name="name">string name</param>
+		[SupportByVersion("PowerPoint", 9)]
 		public NetOffice.PowerPointApi.PPTabSheet Add(string name)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(name);
-			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.PowerPointApi.PPTabSheet newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PowerPointApi.PPTabSheet.LateBindingApiWrapperType) as NetOffice.PowerPointApi.PPTabSheet;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PowerPointApi.PPTabSheet>(this, "Add", NetOffice.PowerPointApi.PPTabSheet.LateBindingApiWrapperType, name);
 		}
 
 		#endregion
+
 		#pragma warning restore
 	}
 }

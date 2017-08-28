@@ -1,49 +1,49 @@
 ﻿using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
-using NetOffice;
-using NetOffice.Misc;
+using NetOffice.Attributes;
 
 namespace NetOffice.OutlookApi
 {
-
 	#region Delegates
 
 	#pragma warning disable
 	public delegate void OlkTimeControl_ClickEventHandler();
 	public delegate void OlkTimeControl_DoubleClickEventHandler();
-	public delegate void OlkTimeControl_MouseDownEventHandler(NetOffice.OutlookApi.Enums.OlMouseButton Button, NetOffice.OutlookApi.Enums.OlShiftState Shift, Single X, Single Y);
-	public delegate void OlkTimeControl_MouseMoveEventHandler(NetOffice.OutlookApi.Enums.OlMouseButton Button, NetOffice.OutlookApi.Enums.OlShiftState Shift, Single X, Single Y);
-	public delegate void OlkTimeControl_MouseUpEventHandler(NetOffice.OutlookApi.Enums.OlMouseButton Button, NetOffice.OutlookApi.Enums.OlShiftState Shift, Single X, Single Y);
+	public delegate void OlkTimeControl_MouseDownEventHandler(NetOffice.OutlookApi.Enums.OlMouseButton button, NetOffice.OutlookApi.Enums.OlShiftState shift, Single x, Single y);
+	public delegate void OlkTimeControl_MouseMoveEventHandler(NetOffice.OutlookApi.Enums.OlMouseButton button, NetOffice.OutlookApi.Enums.OlShiftState shift, Single x, Single y);
+	public delegate void OlkTimeControl_MouseUpEventHandler(NetOffice.OutlookApi.Enums.OlMouseButton button, NetOffice.OutlookApi.Enums.OlShiftState shift, Single x, Single y);
 	public delegate void OlkTimeControl_EnterEventHandler();
-	public delegate void OlkTimeControl_ExitEventHandler(ref bool Cancel);
-	public delegate void OlkTimeControl_KeyDownEventHandler(ref Int32 KeyCode, NetOffice.OutlookApi.Enums.OlShiftState Shift);
-	public delegate void OlkTimeControl_KeyPressEventHandler(ref Int32 KeyAscii);
-	public delegate void OlkTimeControl_KeyUpEventHandler(ref Int32 KeyCode, NetOffice.OutlookApi.Enums.OlShiftState Shift);
+	public delegate void OlkTimeControl_ExitEventHandler(ref bool cancel);
+	public delegate void OlkTimeControl_KeyDownEventHandler(ref Int32 keyCode, NetOffice.OutlookApi.Enums.OlShiftState shift);
+	public delegate void OlkTimeControl_KeyPressEventHandler(ref Int32 keyAscii);
+	public delegate void OlkTimeControl_KeyUpEventHandler(ref Int32 keyCode, NetOffice.OutlookApi.Enums.OlShiftState shift);
 	public delegate void OlkTimeControl_ChangeEventHandler();
 	public delegate void OlkTimeControl_DropButtonClickEventHandler();
 	public delegate void OlkTimeControl_AfterUpdateEventHandler();
-	public delegate void OlkTimeControl_BeforeUpdateEventHandler(ref bool Cancel);
+	public delegate void OlkTimeControl_BeforeUpdateEventHandler(ref bool cancel);
 	#pragma warning restore
 
 	#endregion
 
-	///<summary>
+	/// <summary>
 	/// CoClass OlkTimeControl 
 	/// SupportByVersion Outlook, 12,14,15,16
-	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff868612.aspx
-	///</summary>
-	[SupportByVersionAttribute("Outlook", 12,14,15,16)]
-	[EntityTypeAttribute(EntityType.IsCoClass)]
-	public class OlkTimeControl : _OlkTimeControl,IEventBinding
+	/// </summary>
+	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff868612.aspx </remarks>
+	[SupportByVersion("Outlook", 12,14,15,16)]
+	[EntityType(EntityType.IsCoClass)]
+	[EventSink(typeof(Events.OlkTimeControlEvents_SinkHelper))]
+	public class OlkTimeControl : _OlkTimeControl, IEventBinding
 	{
 		#pragma warning disable
+
 		#region Fields
 		
 		private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
 		private string _activeSinkId;
 		private NetRuntimeSystem.Type _thisType;
-		OlkTimeControlEvents_SinkHelper _olkTimeControlEvents_SinkHelper;
+		private Events.OlkTimeControlEvents_SinkHelper _olkTimeControlEvents_SinkHelper;
 	
 		#endregion
 
@@ -52,6 +52,7 @@ namespace NetOffice.OutlookApi
         /// <summary>
         /// Instance Type
         /// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
         public override Type InstanceType
         {
             get
@@ -118,17 +119,17 @@ namespace NetOffice.OutlookApi
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of OlkTimeControl 
-        ///</summary>		
+        /// </summary>		
 		public OlkTimeControl():base("Outlook.OlkTimeControl")
 		{
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of OlkTimeControl
-        ///</summary>
+        /// </summary>
         ///<param name="progId">registered ProgID</param>
 		public OlkTimeControl(string progId):base(progId)
 		{
@@ -138,46 +139,6 @@ namespace NetOffice.OutlookApi
 		#endregion
 
 		#region Static CoClass Methods
-
-		/// <summary>
-        /// Returns all running Outlook.OlkTimeControl objects from the environment/system
-        /// </summary>
-        /// <returns>an Outlook.OlkTimeControl array</returns>
-		public static NetOffice.OutlookApi.OlkTimeControl[] GetActiveInstances()
-		{		
-			IDisposableEnumeration proxyList = NetOffice.ProxyService.GetActiveInstances("Outlook","OlkTimeControl");
-			NetRuntimeSystem.Collections.Generic.List<NetOffice.OutlookApi.OlkTimeControl> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.OutlookApi.OlkTimeControl>();
-			foreach(object proxy in proxyList)
-				resultList.Add( new NetOffice.OutlookApi.OlkTimeControl(null, proxy) );
-			return resultList.ToArray();
-		}
-
-		/// <summary>
-        /// Returns a running Outlook.OlkTimeControl object from the environment/system.
-        /// </summary>
-        /// <returns>an Outlook.OlkTimeControl object or null</returns>
-		public static NetOffice.OutlookApi.OlkTimeControl GetActiveInstance()
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Outlook","OlkTimeControl", false);
-			if(null != proxy)
-				return new NetOffice.OutlookApi.OlkTimeControl(null, proxy);
-			else
-				return null;
-		}
-
-		/// <summary>
-        /// Returns a running Outlook.OlkTimeControl object from the environment/system. 
-        /// </summary>
-	    /// <param name="throwOnError">throw an exception if no object was found</param>
-        /// <returns>an Outlook.OlkTimeControl object or null</returns>
-		public static NetOffice.OutlookApi.OlkTimeControl GetActiveInstance(bool throwOnError)
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Outlook","OlkTimeControl", throwOnError);
-			if(null != proxy)
-				return new NetOffice.OutlookApi.OlkTimeControl(null, proxy);
-			else
-				return null;
-		}
 		#endregion
 
 		#region Events
@@ -521,12 +482,12 @@ namespace NetOffice.OutlookApi
 				return;
 	
             if (null == _activeSinkId)
-				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, OlkTimeControlEvents_SinkHelper.Id);
+				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, Events.OlkTimeControlEvents_SinkHelper.Id);
 
 
-			if(OlkTimeControlEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
+			if(Events.OlkTimeControlEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
 			{
-				_olkTimeControlEvents_SinkHelper = new OlkTimeControlEvents_SinkHelper(this, _connectPoint);
+				_olkTimeControlEvents_SinkHelper = new Events.OlkTimeControlEvents_SinkHelper(this, _connectPoint);
 				return;
 			} 
         }

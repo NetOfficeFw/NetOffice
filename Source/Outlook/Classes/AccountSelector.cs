@@ -1,35 +1,36 @@
 ﻿using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
-using NetOffice;
-using NetOffice.Misc;
+using NetOffice.Attributes;
+
 namespace NetOffice.OutlookApi
 {
-
 	#region Delegates
 
 	#pragma warning disable
-	public delegate void AccountSelector_SelectedAccountChangeEventHandler(NetOffice.OutlookApi.Account SelectedAccount);
+	public delegate void AccountSelector_SelectedAccountChangeEventHandler(NetOffice.OutlookApi.Account selectedAccount);
 	#pragma warning restore
 
 	#endregion
 
-	///<summary>
+	/// <summary>
 	/// CoClass AccountSelector 
 	/// SupportByVersion Outlook, 14,15,16
-	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff867249.aspx
-	///</summary>
-	[SupportByVersionAttribute("Outlook", 14,15,16)]
-	[EntityTypeAttribute(EntityType.IsCoClass)]
-	public class AccountSelector : _AccountSelector,IEventBinding
+	/// </summary>
+	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff867249.aspx </remarks>
+	[SupportByVersion("Outlook", 14,15,16)]
+	[EntityType(EntityType.IsCoClass)]
+	[EventSink(typeof(Events.AccountSelectorEvents_SinkHelper))]
+	public class AccountSelector : _AccountSelector, IEventBinding
 	{
 		#pragma warning disable
+
 		#region Fields
 		
 		private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
 		private string _activeSinkId;
 		private NetRuntimeSystem.Type _thisType;
-		AccountSelectorEvents_SinkHelper _accountSelectorEvents_SinkHelper;
+		private Events.AccountSelectorEvents_SinkHelper _accountSelectorEvents_SinkHelper;
 	
 		#endregion
 
@@ -38,6 +39,7 @@ namespace NetOffice.OutlookApi
         /// <summary>
         /// Instance Type
         /// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
         public override Type InstanceType
         {
             get
@@ -104,17 +106,17 @@ namespace NetOffice.OutlookApi
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of AccountSelector 
-        ///</summary>		
+        /// </summary>		
 		public AccountSelector():base("Outlook.AccountSelector")
 		{
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of AccountSelector
-        ///</summary>
+        /// </summary>
         ///<param name="progId">registered ProgID</param>
 		public AccountSelector(string progId):base(progId)
 		{
@@ -124,46 +126,6 @@ namespace NetOffice.OutlookApi
 		#endregion
 
 		#region Static CoClass Methods
-
-		/// <summary>
-        /// Returns all running Outlook.AccountSelector objects from the environment/system
-        /// </summary>
-        /// <returns>an Outlook.AccountSelector array</returns>
-		public static NetOffice.OutlookApi.AccountSelector[] GetActiveInstances()
-		{		
-			IDisposableEnumeration proxyList = NetOffice.ProxyService.GetActiveInstances("Outlook","AccountSelector");
-			NetRuntimeSystem.Collections.Generic.List<NetOffice.OutlookApi.AccountSelector> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.OutlookApi.AccountSelector>();
-			foreach(object proxy in proxyList)
-				resultList.Add( new NetOffice.OutlookApi.AccountSelector(null, proxy) );
-			return resultList.ToArray();
-		}
-
-		/// <summary>
-        /// Returns a running Outlook.AccountSelector object from the environment/system.
-        /// </summary>
-        /// <returns>an Outlook.AccountSelector object or null</returns>
-		public static NetOffice.OutlookApi.AccountSelector GetActiveInstance()
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Outlook","AccountSelector", false);
-			if(null != proxy)
-				return new NetOffice.OutlookApi.AccountSelector(null, proxy);
-			else
-				return null;
-		}
-
-		/// <summary>
-        /// Returns a running Outlook.AccountSelector object from the environment/system. 
-        /// </summary>
-	    /// <param name="throwOnError">throw an exception if no object was found</param>
-        /// <returns>an Outlook.AccountSelector object or null</returns>
-		public static NetOffice.OutlookApi.AccountSelector GetActiveInstance(bool throwOnError)
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Outlook","AccountSelector", throwOnError);
-			if(null != proxy)
-				return new NetOffice.OutlookApi.AccountSelector(null, proxy);
-			else
-				return null;
-		}
 		#endregion
 
 		#region Events
@@ -208,12 +170,12 @@ namespace NetOffice.OutlookApi
 				return;
 	
             if (null == _activeSinkId)
-				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, AccountSelectorEvents_SinkHelper.Id);
+				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, Events.AccountSelectorEvents_SinkHelper.Id);
 
 
-			if(AccountSelectorEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
+			if(Events.AccountSelectorEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
 			{
-				_accountSelectorEvents_SinkHelper = new AccountSelectorEvents_SinkHelper(this, _connectPoint);
+				_accountSelectorEvents_SinkHelper = new Events.AccountSelectorEvents_SinkHelper(this, _connectPoint);
 				return;
 			} 
         }

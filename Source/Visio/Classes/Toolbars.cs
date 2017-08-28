@@ -1,12 +1,10 @@
 ﻿using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
-using NetOffice;
-using NetOffice.Misc;
+using NetOffice.Attributes;
 
 namespace NetOffice.VisioApi
 {
-
 	#region Delegates
 
 	#pragma warning disable
@@ -14,16 +12,17 @@ namespace NetOffice.VisioApi
 
 	#endregion
 
-	///<summary>
+	/// <summary>
 	/// CoClass Toolbars 
 	/// SupportByVersion Visio, 11,12,14,15,16
-	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff769415(v=office.14).aspx
-	///</summary>
-	[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
-	[EntityTypeAttribute(EntityType.IsCoClass)]
-	public class Toolbars : IVToolbars
+	/// </summary>
+	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/ff769415(v=office.14).aspx </remarks>
+	[SupportByVersion("Visio", 11,12,14,15,16)]
+	[EntityType(EntityType.IsCoClass)]
+ 	public class Toolbars : IVToolbars
 	{
 		#pragma warning disable
+
 		#region Fields
 		
 		private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
@@ -37,6 +36,7 @@ namespace NetOffice.VisioApi
         /// <summary>
         /// Instance Type
         /// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
         public override Type InstanceType
         {
             get
@@ -103,17 +103,17 @@ namespace NetOffice.VisioApi
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of Toolbars 
-        ///</summary>		
+        /// </summary>		
 		public Toolbars():base("Visio.Toolbars")
 		{
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of Toolbars
-        ///</summary>
+        /// </summary>
         ///<param name="progId">registered ProgID</param>
 		public Toolbars(string progId):base(progId)
 		{
@@ -123,46 +123,6 @@ namespace NetOffice.VisioApi
 		#endregion
 
 		#region Static CoClass Methods
-
-		/// <summary>
-        /// Returns all running Visio.Toolbars objects from the environment/system
-        /// </summary>
-        /// <returns>an Visio.Toolbars array</returns>
-		public static NetOffice.VisioApi.Toolbars[] GetActiveInstances()
-		{		
-			IDisposableEnumeration proxyList = NetOffice.ProxyService.GetActiveInstances("Visio","Toolbars");
-			NetRuntimeSystem.Collections.Generic.List<NetOffice.VisioApi.Toolbars> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.VisioApi.Toolbars>();
-			foreach(object proxy in proxyList)
-				resultList.Add( new NetOffice.VisioApi.Toolbars(null, proxy) );
-			return resultList.ToArray();
-		}
-
-		/// <summary>
-        /// Returns a running Visio.Toolbars object from the environment/system.
-        /// </summary>
-        /// <returns>an Visio.Toolbars object or null</returns>
-		public static NetOffice.VisioApi.Toolbars GetActiveInstance()
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Visio","Toolbars", false);
-			if(null != proxy)
-				return new NetOffice.VisioApi.Toolbars(null, proxy);
-			else
-				return null;
-		}
-
-		/// <summary>
-        /// Returns a running Visio.Toolbars object from the environment/system. 
-        /// </summary>
-	    /// <param name="throwOnError">throw an exception if no object was found</param>
-        /// <returns>an Visio.Toolbars object or null</returns>
-		public static NetOffice.VisioApi.Toolbars GetActiveInstance(bool throwOnError)
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Visio","Toolbars", throwOnError);
-			if(null != proxy)
-				return new NetOffice.VisioApi.Toolbars(null, proxy);
-			else
-				return null;
-		}
 		#endregion
 
 		#region Events

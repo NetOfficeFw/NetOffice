@@ -1,23 +1,34 @@
-﻿using System;
+﻿using System.Reflection;
+using System;
 using NetRuntimeSystem = System;
-using System.Runtime.InteropServices;
 using System.ComponentModel;
-using System.Runtime.CompilerServices;
-using System.Reflection;
-using System.Collections.Generic;
-using NetOffice;
+using NetOffice.Attributes;
+
 namespace NetOffice.MSHTMLApi
 {
-	///<summary>
+	/// <summary>
 	/// Interface IEnumRegisterWordW 
 	/// SupportByVersion MSHTML, 4
-	///</summary>
-	[SupportByVersionAttribute("MSHTML", 4)]
-	[EntityTypeAttribute(EntityType.IsInterface)]
-	public class IEnumRegisterWordW : COMObject
+	/// </summary>
+	[SupportByVersion("MSHTML", 4)]
+	[EntityType(EntityType.IsInterface)]
+ 	public class IEnumRegisterWordW : COMObject
 	{
 		#pragma warning disable
+
 		#region Type Information
+
+		/// <summary>
+		/// Instance Type
+		/// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
+		public override Type InstanceType
+		{
+			get
+			{
+				return LateBindingApiWrapperType;
+			}
+		}
 
         private static Type _type;
 
@@ -28,14 +39,20 @@ namespace NetOffice.MSHTMLApi
             {
                 if (null == _type)
                     _type = typeof(IEnumRegisterWordW);
-                    
                 return _type;
             }
         }
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public IEnumRegisterWordW(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -81,7 +98,7 @@ namespace NetOffice.MSHTMLApi
 		{
 		}
 		
-		/// <param name="progId">registered ProgID</param>
+		/// <param name="progId">registered progID</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public IEnumRegisterWordW(string progId) : base(progId)
 		{
@@ -97,35 +114,36 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
-		/// 
 		/// </summary>
 		/// <param name="ppEnum">NetOffice.MSHTMLApi.IEnumRegisterWordW ppEnum</param>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[SupportByVersion("MSHTML", 4)]
 		public Int32 Clone(out NetOffice.MSHTMLApi.IEnumRegisterWordW ppEnum)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
 			ppEnum = null;
 			object[] paramsArray = Invoker.ValidateParamsArray(ppEnum);
-			object returnItem = Invoker.MethodReturn(this, "Clone", paramsArray);
-			ppEnum = (NetOffice.MSHTMLApi.IEnumRegisterWordW)paramsArray[0];
+			object returnItem = Invoker.MethodReturn(this, "Clone", paramsArray, modifiers);
+            if (paramsArray[0] is MarshalByRefObject)
+                ppEnum = new NetOffice.MSHTMLApi.IEnumRegisterWordW(this, paramsArray[0]);
+            else
+                ppEnum = null;
 			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
-		/// 
 		/// </summary>
 		/// <param name="ulCount">Int32 ulCount</param>
 		/// <param name="rgRegisterWord">__MIDL___MIDL_itf_mshtml_0001_0042_0002 rgRegisterWord</param>
 		/// <param name="pcFetched">Int32 pcFetched</param>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[SupportByVersion("MSHTML", 4)]
 		public Int32 Next(Int32 ulCount, out __MIDL___MIDL_itf_mshtml_0001_0042_0002 rgRegisterWord, out Int32 pcFetched)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,true,true);
 			rgRegisterWord = new NetOffice.MSHTMLApi.__MIDL___MIDL_itf_mshtml_0001_0042_0002();
 			pcFetched = 0;
 			object[] paramsArray = Invoker.ValidateParamsArray(ulCount, rgRegisterWord, pcFetched);
-			object returnItem = Invoker.MethodReturn(this, "Next", paramsArray);
+			object returnItem = Invoker.MethodReturn(this, "Next", paramsArray, modifiers);
 			rgRegisterWord = (__MIDL___MIDL_itf_mshtml_0001_0042_0002)paramsArray[1];
 			pcFetched = (Int32)paramsArray[2];
 			return NetRuntimeSystem.Convert.ToInt32(returnItem);
@@ -133,30 +151,25 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[SupportByVersion("MSHTML", 4)]
 		public Int32 reset()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "reset", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return Factory.ExecuteInt32MethodGet(this, "reset");
 		}
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
-		/// 
 		/// </summary>
 		/// <param name="ulCount">Int32 ulCount</param>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[SupportByVersion("MSHTML", 4)]
 		public Int32 Skip(Int32 ulCount)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(ulCount);
-			object returnItem = Invoker.MethodReturn(this, "Skip", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return Factory.ExecuteInt32MethodGet(this, "Skip", ulCount);
 		}
 
 		#endregion
+
 		#pragma warning restore
 	}
 }

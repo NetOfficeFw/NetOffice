@@ -1,12 +1,10 @@
 ﻿using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
-using NetOffice;
-using NetOffice.Misc;
+using NetOffice.Attributes;
 
 namespace NetOffice.MSHTMLApi
 {
-
 	#region Delegates
 
 	#pragma warning disable
@@ -14,15 +12,16 @@ namespace NetOffice.MSHTMLApi
 
 	#endregion
 
-	///<summary>
+	/// <summary>
 	/// CoClass HTMLDOMAttribute 
 	/// SupportByVersion MSHTML, 4
-	///</summary>
-	[SupportByVersionAttribute("MSHTML", 4)]
-	[EntityTypeAttribute(EntityType.IsCoClass)]
-	public class HTMLDOMAttribute : DispHTMLDOMAttribute
+	/// </summary>
+	[SupportByVersion("MSHTML", 4)]
+	[EntityType(EntityType.IsCoClass)]
+ 	public class HTMLDOMAttribute : DispHTMLDOMAttribute
 	{
 		#pragma warning disable
+
 		#region Fields
 		
 		private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
@@ -36,6 +35,7 @@ namespace NetOffice.MSHTMLApi
         /// <summary>
         /// Instance Type
         /// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
         public override Type InstanceType
         {
             get
@@ -102,17 +102,17 @@ namespace NetOffice.MSHTMLApi
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of HTMLDOMAttribute 
-        ///</summary>		
+        /// </summary>		
 		public HTMLDOMAttribute():base("MSHTML.HTMLDOMAttribute")
 		{
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of HTMLDOMAttribute
-        ///</summary>
+        /// </summary>
         ///<param name="progId">registered ProgID</param>
 		public HTMLDOMAttribute(string progId):base(progId)
 		{
@@ -122,46 +122,6 @@ namespace NetOffice.MSHTMLApi
 		#endregion
 
 		#region Static CoClass Methods
-
-		/// <summary>
-        /// Returns all running MSHTML.HTMLDOMAttribute objects from the environment/system
-        /// </summary>
-        /// <returns>an MSHTML.HTMLDOMAttribute array</returns>
-		public static NetOffice.MSHTMLApi.HTMLDOMAttribute[] GetActiveInstances()
-		{		
-			IDisposableEnumeration proxyList = NetOffice.ProxyService.GetActiveInstances("MSHTML","HTMLDOMAttribute");
-			NetRuntimeSystem.Collections.Generic.List<NetOffice.MSHTMLApi.HTMLDOMAttribute> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.MSHTMLApi.HTMLDOMAttribute>();
-			foreach(object proxy in proxyList)
-				resultList.Add( new NetOffice.MSHTMLApi.HTMLDOMAttribute(null, proxy) );
-			return resultList.ToArray();
-		}
-
-		/// <summary>
-        /// Returns a running MSHTML.HTMLDOMAttribute object from the environment/system.
-        /// </summary>
-        /// <returns>an MSHTML.HTMLDOMAttribute object or null</returns>
-		public static NetOffice.MSHTMLApi.HTMLDOMAttribute GetActiveInstance()
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("MSHTML","HTMLDOMAttribute", false);
-			if(null != proxy)
-				return new NetOffice.MSHTMLApi.HTMLDOMAttribute(null, proxy);
-			else
-				return null;
-		}
-
-		/// <summary>
-        /// Returns a running MSHTML.HTMLDOMAttribute object from the environment/system. 
-        /// </summary>
-	    /// <param name="throwOnError">throw an exception if no object was found</param>
-        /// <returns>an MSHTML.HTMLDOMAttribute object or null</returns>
-		public static NetOffice.MSHTMLApi.HTMLDOMAttribute GetActiveInstance(bool throwOnError)
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("MSHTML","HTMLDOMAttribute", throwOnError);
-			if(null != proxy)
-				return new NetOffice.MSHTMLApi.HTMLDOMAttribute(null, proxy);
-			else
-				return null;
-		}
 		#endregion
 
 		#region Events

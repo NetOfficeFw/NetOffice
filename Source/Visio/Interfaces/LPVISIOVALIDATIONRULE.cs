@@ -1,23 +1,33 @@
-﻿using System;
+using System;
 using NetRuntimeSystem = System;
-using System.Runtime.InteropServices;
 using System.ComponentModel;
-using System.Runtime.CompilerServices;
-using System.Reflection;
-using System.Collections.Generic;
-using NetOffice;
+using NetOffice.Attributes;
+
 namespace NetOffice.VisioApi
 {
-	///<summary>
+	/// <summary>
 	/// Interface LPVISIOVALIDATIONRULE 
 	/// SupportByVersion Visio, 14,15,16
-	///</summary>
-	[SupportByVersionAttribute("Visio", 14,15,16)]
-	[EntityTypeAttribute(EntityType.IsInterface)]
-	public class LPVISIOVALIDATIONRULE : COMObject
+	/// </summary>
+	[SupportByVersion("Visio", 14,15,16)]
+	[EntityType(EntityType.IsInterface)]
+ 	public class LPVISIOVALIDATIONRULE : COMObject
 	{
 		#pragma warning disable
+
 		#region Type Information
+
+		/// <summary>
+		/// Instance Type
+		/// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
+		public override Type InstanceType
+		{
+			get
+			{
+				return LateBindingApiWrapperType;
+			}
+		}
 
         private static Type _type;
 
@@ -28,14 +38,20 @@ namespace NetOffice.VisioApi
             {
                 if (null == _type)
                     _type = typeof(LPVISIOVALIDATIONRULE);
-                    
                 return _type;
             }
         }
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public LPVISIOVALIDATIONRULE(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -81,7 +97,7 @@ namespace NetOffice.VisioApi
 		{
 		}
 		
-		/// <param name="progId">registered ProgID</param>
+		/// <param name="progId">registered progID</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public LPVISIOVALIDATIONRULE(string progId) : base(progId)
 		{
@@ -95,15 +111,13 @@ namespace NetOffice.VisioApi
 		/// SupportByVersion Visio 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 14,15,16)]
+		[SupportByVersion("Visio", 14,15,16)]
+		[BaseResult]
 		public NetOffice.VisioApi.IVApplication Application
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				NetOffice.VisioApi.IVApplication newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVApplication;
-				return newObject;
+				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.VisioApi.IVApplication>(this, "Application");
 			}
 		}
 
@@ -111,14 +125,12 @@ namespace NetOffice.VisioApi
 		/// SupportByVersion Visio 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 14,15,16)]
+		[SupportByVersion("Visio", 14,15,16)]
 		public Int16 Stat
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Stat", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt16(returnItem);
+				return Factory.ExecuteInt16PropertyGet(this, "Stat");
 			}
 		}
 
@@ -126,15 +138,13 @@ namespace NetOffice.VisioApi
 		/// SupportByVersion Visio 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 14,15,16)]
+		[SupportByVersion("Visio", 14,15,16)]
+		[BaseResult]
 		public NetOffice.VisioApi.IVDocument Document
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Document", paramsArray);
-				NetOffice.VisioApi.IVDocument newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVDocument;
-				return newObject;
+				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.VisioApi.IVDocument>(this, "Document");
 			}
 		}
 
@@ -142,14 +152,12 @@ namespace NetOffice.VisioApi
 		/// SupportByVersion Visio 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 14,15,16)]
+		[SupportByVersion("Visio", 14,15,16)]
 		public Int16 ObjectType
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "ObjectType", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt16(returnItem);
+				return Factory.ExecuteInt16PropertyGet(this, "ObjectType");
 			}
 		}
 
@@ -157,14 +165,12 @@ namespace NetOffice.VisioApi
 		/// SupportByVersion Visio 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 14,15,16)]
+		[SupportByVersion("Visio", 14,15,16)]
 		public Int32 ID
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "ID", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "ID");
 			}
 		}
 
@@ -172,19 +178,16 @@ namespace NetOffice.VisioApi
 		/// SupportByVersion Visio 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 14,15,16)]
+		[SupportByVersion("Visio", 14,15,16)]
 		public string NameU
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "NameU", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "NameU");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "NameU", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "NameU", value);
 			}
 		}
 
@@ -192,19 +195,16 @@ namespace NetOffice.VisioApi
 		/// SupportByVersion Visio 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 14,15,16)]
+		[SupportByVersion("Visio", 14,15,16)]
 		public string Category
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Category", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "Category");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "Category", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "Category", value);
 			}
 		}
 
@@ -212,19 +212,16 @@ namespace NetOffice.VisioApi
 		/// SupportByVersion Visio 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 14,15,16)]
+		[SupportByVersion("Visio", 14,15,16)]
 		public string Description
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Description", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "Description");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "Description", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "Description", value);
 			}
 		}
 
@@ -232,19 +229,16 @@ namespace NetOffice.VisioApi
 		/// SupportByVersion Visio 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 14,15,16)]
+		[SupportByVersion("Visio", 14,15,16)]
 		public bool Ignored
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Ignored", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "Ignored");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "Ignored", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "Ignored", value);
 			}
 		}
 
@@ -252,19 +246,16 @@ namespace NetOffice.VisioApi
 		/// SupportByVersion Visio 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 14,15,16)]
+		[SupportByVersion("Visio", 14,15,16)]
 		public string FilterExpression
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "FilterExpression", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "FilterExpression");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "FilterExpression", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "FilterExpression", value);
 			}
 		}
 
@@ -272,20 +263,16 @@ namespace NetOffice.VisioApi
 		/// SupportByVersion Visio 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 14,15,16)]
+		[SupportByVersion("Visio", 14,15,16)]
 		public NetOffice.VisioApi.Enums.VisRuleTargets TargetType
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "TargetType", paramsArray);
-				int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-				return (NetOffice.VisioApi.Enums.VisRuleTargets)intReturnItem;
+				return Factory.ExecuteEnumPropertyGet<NetOffice.VisioApi.Enums.VisRuleTargets>(this, "TargetType");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "TargetType", paramsArray);
+				Factory.ExecuteEnumPropertySet(this, "TargetType", value);
 			}
 		}
 
@@ -293,19 +280,16 @@ namespace NetOffice.VisioApi
 		/// SupportByVersion Visio 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 14,15,16)]
+		[SupportByVersion("Visio", 14,15,16)]
 		public string TestExpression
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "TestExpression", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "TestExpression");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "TestExpression", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "TestExpression", value);
 			}
 		}
 
@@ -313,15 +297,13 @@ namespace NetOffice.VisioApi
 		/// SupportByVersion Visio 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 14,15,16)]
+		[SupportByVersion("Visio", 14,15,16)]
+		[BaseResult]
 		public NetOffice.VisioApi.IVValidationRuleSet RuleSet
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "RuleSet", paramsArray);
-				NetOffice.VisioApi.IVValidationRuleSet newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVValidationRuleSet;
-				return newObject;
+				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.VisioApi.IVValidationRuleSet>(this, "RuleSet");
 			}
 		}
 
@@ -331,60 +313,50 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 14, 15, 16
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 14,15,16)]
+		[SupportByVersion("Visio", 14,15,16)]
 		public void Delete()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "Delete", paramsArray);
+			 Factory.ExecuteMethod(this, "Delete");
 		}
 
 		/// <summary>
 		/// SupportByVersion Visio 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="targetPage">optional NetOffice.VisioApi.IVPage TargetPage</param>
-		/// <param name="targetShape">optional NetOffice.VisioApi.IVShape TargetShape</param>
-		[SupportByVersionAttribute("Visio", 14,15,16)]
+		/// <param name="targetPage">optional NetOffice.VisioApi.IVPage targetPage</param>
+		/// <param name="targetShape">optional NetOffice.VisioApi.IVShape targetShape</param>
+		[SupportByVersion("Visio", 14,15,16)]
+		[BaseResult]
 		public NetOffice.VisioApi.IVValidationIssue AddIssue(object targetPage, object targetShape)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(targetPage, targetShape);
-			object returnItem = Invoker.MethodReturn(this, "AddIssue", paramsArray);
-			NetOffice.VisioApi.IVValidationIssue newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVValidationIssue;
-			return newObject;
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.VisioApi.IVValidationIssue>(this, "AddIssue", targetPage, targetShape);
 		}
 
 		/// <summary>
 		/// SupportByVersion Visio 14, 15, 16
-		/// 
 		/// </summary>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Visio", 14,15,16)]
+		[CustomMethod]
+		[BaseResult]
+		[SupportByVersion("Visio", 14,15,16)]
 		public NetOffice.VisioApi.IVValidationIssue AddIssue()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "AddIssue", paramsArray);
-			NetOffice.VisioApi.IVValidationIssue newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVValidationIssue;
-			return newObject;
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.VisioApi.IVValidationIssue>(this, "AddIssue");
 		}
 
 		/// <summary>
 		/// SupportByVersion Visio 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="targetPage">optional NetOffice.VisioApi.IVPage TargetPage</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Visio", 14,15,16)]
+		/// <param name="targetPage">optional NetOffice.VisioApi.IVPage targetPage</param>
+		[CustomMethod]
+		[BaseResult]
+		[SupportByVersion("Visio", 14,15,16)]
 		public NetOffice.VisioApi.IVValidationIssue AddIssue(object targetPage)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(targetPage);
-			object returnItem = Invoker.MethodReturn(this, "AddIssue", paramsArray);
-			NetOffice.VisioApi.IVValidationIssue newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVValidationIssue;
-			return newObject;
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.VisioApi.IVValidationIssue>(this, "AddIssue", targetPage);
 		}
 
 		#endregion
+
 		#pragma warning restore
 	}
 }

@@ -1,24 +1,34 @@
 ﻿using System;
 using NetRuntimeSystem = System;
-using System.Runtime.InteropServices;
-using System.Runtime.CompilerServices;
 using System.ComponentModel;
-using System.Reflection;
-using System.Collections.Generic;
-using NetOffice;
+using NetOffice.Attributes;
+
 namespace NetOffice.WordApi
 {
-	///<summary>
+	/// <summary>
 	/// DispatchInterface MailMerge 
 	/// SupportByVersion Word, 9,10,11,12,14,15,16
-	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836701.aspx
-	///</summary>
-	[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
-	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
-	public class MailMerge : COMObject
+	/// </summary>
+	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff836701.aspx </remarks>
+	[SupportByVersion("Word", 9,10,11,12,14,15,16)]
+	[EntityType(EntityType.IsDispatchInterface)]
+ 	public class MailMerge : COMObject
 	{
 		#pragma warning disable
+
 		#region Type Information
+
+		/// <summary>
+		/// Instance Type
+		/// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
+		public override Type InstanceType
+		{
+			get
+			{
+				return LateBindingApiWrapperType;
+			}
+		}
 
         private static Type _type;
 
@@ -29,14 +39,20 @@ namespace NetOffice.WordApi
             {
                 if (null == _type)
                     _type = typeof(MailMerge);
-                    
                 return _type;
             }
         }
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public MailMerge(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -82,7 +98,7 @@ namespace NetOffice.WordApi
 		{
 		}
 		
-		/// <param name="progId">registered ProgID</param>
+		/// <param name="progId">registered progID</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public MailMerge(string progId) : base(progId)
 		{
@@ -95,336 +111,283 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837890.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff837890.aspx </remarks>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.Application Application
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				NetOffice.WordApi.Application newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.Application.LateBindingApiWrapperType) as NetOffice.WordApi.Application;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.Application>(this, "Application", NetOffice.WordApi.Application.LateBindingApiWrapperType);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837179.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff837179.aspx </remarks>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public Int32 Creator
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Creator", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "Creator");
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839335.aspx
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff839335.aspx </remarks>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16), ProxyResult]
 		public object Parent
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Parent", paramsArray);
-				ICOMObject newObject = Factory.CreateObjectFromComProxy(this,returnItem);
-				return newObject;
+				return Factory.ExecuteReferencePropertyGet(this, "Parent");
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197137.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff197137.aspx </remarks>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.Enums.WdMailMergeMainDocType MainDocumentType
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "MainDocumentType", paramsArray);
-				int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-				return (NetOffice.WordApi.Enums.WdMailMergeMainDocType)intReturnItem;
+				return Factory.ExecuteEnumPropertyGet<NetOffice.WordApi.Enums.WdMailMergeMainDocType>(this, "MainDocumentType");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "MainDocumentType", paramsArray);
+				Factory.ExecuteEnumPropertySet(this, "MainDocumentType", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840195.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff840195.aspx </remarks>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.Enums.WdMailMergeState State
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "State", paramsArray);
-				int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-				return (NetOffice.WordApi.Enums.WdMailMergeState)intReturnItem;
+				return Factory.ExecuteEnumPropertyGet<NetOffice.WordApi.Enums.WdMailMergeState>(this, "State");
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845069.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff845069.aspx </remarks>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.Enums.WdMailMergeDestination Destination
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Destination", paramsArray);
-				int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-				return (NetOffice.WordApi.Enums.WdMailMergeDestination)intReturnItem;
+				return Factory.ExecuteEnumPropertyGet<NetOffice.WordApi.Enums.WdMailMergeDestination>(this, "Destination");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "Destination", paramsArray);
+				Factory.ExecuteEnumPropertySet(this, "Destination", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838518.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff838518.aspx </remarks>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.MailMergeDataSource DataSource
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "DataSource", paramsArray);
-				NetOffice.WordApi.MailMergeDataSource newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.MailMergeDataSource.LateBindingApiWrapperType) as NetOffice.WordApi.MailMergeDataSource;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.MailMergeDataSource>(this, "DataSource", NetOffice.WordApi.MailMergeDataSource.LateBindingApiWrapperType);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193129.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff193129.aspx </remarks>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.MailMergeFields Fields
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Fields", paramsArray);
-				NetOffice.WordApi.MailMergeFields newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.MailMergeFields.LateBindingApiWrapperType) as NetOffice.WordApi.MailMergeFields;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.MailMergeFields>(this, "Fields", NetOffice.WordApi.MailMergeFields.LateBindingApiWrapperType);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840472.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff840472.aspx </remarks>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public Int32 ViewMailMergeFieldCodes
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "ViewMailMergeFieldCodes", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "ViewMailMergeFieldCodes");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "ViewMailMergeFieldCodes", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "ViewMailMergeFieldCodes", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192581.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff192581.aspx </remarks>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public bool SuppressBlankLines
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "SuppressBlankLines", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "SuppressBlankLines");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "SuppressBlankLines", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "SuppressBlankLines", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff841091.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff841091.aspx </remarks>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public bool MailAsAttachment
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "MailAsAttachment", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "MailAsAttachment");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "MailAsAttachment", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "MailAsAttachment", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff820768.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff820768.aspx </remarks>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public string MailAddressFieldName
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "MailAddressFieldName", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "MailAddressFieldName");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "MailAddressFieldName", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "MailAddressFieldName", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff820986.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff820986.aspx </remarks>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public string MailSubject
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "MailSubject", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "MailSubject");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "MailSubject", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "MailSubject", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845591.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff845591.aspx </remarks>
+		[SupportByVersion("Word", 10,11,12,14,15,16)]
 		public bool HighlightMergeFields
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "HighlightMergeFields", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "HighlightMergeFields");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "HighlightMergeFields", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "HighlightMergeFields", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192784.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff192784.aspx </remarks>
+		[SupportByVersion("Word", 10,11,12,14,15,16)]
 		public NetOffice.WordApi.Enums.WdMailMergeMailFormat MailFormat
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "MailFormat", paramsArray);
-				int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-				return (NetOffice.WordApi.Enums.WdMailMergeMailFormat)intReturnItem;
+				return Factory.ExecuteEnumPropertyGet<NetOffice.WordApi.Enums.WdMailMergeMailFormat>(this, "MailFormat");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "MailFormat", paramsArray);
+				Factory.ExecuteEnumPropertySet(this, "MailFormat", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192539.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff192539.aspx </remarks>
+		[SupportByVersion("Word", 10,11,12,14,15,16)]
 		public string ShowSendToCustom
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "ShowSendToCustom", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "ShowSendToCustom");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "ShowSendToCustom", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "ShowSendToCustom", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff821604.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff821604.aspx </remarks>
+		[SupportByVersion("Word", 10,11,12,14,15,16)]
 		public Int32 WizardState
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "WizardState", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "WizardState");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "WizardState", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "WizardState", value);
 			}
 		}
 
@@ -434,1409 +397,1306 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff820730.aspx
 		/// </summary>
-		/// <param name="name">optional object Name</param>
-		/// <param name="passwordDocument">optional object PasswordDocument</param>
-		/// <param name="writePasswordDocument">optional object WritePasswordDocument</param>
-		/// <param name="headerRecord">optional object HeaderRecord</param>
-		/// <param name="mSQuery">optional object MSQuery</param>
-		/// <param name="sQLStatement">optional object SQLStatement</param>
-		/// <param name="sQLStatement1">optional object SQLStatement1</param>
-		/// <param name="connection">optional object Connection</param>
-		/// <param name="linkToSource">optional object LinkToSource</param>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff820730.aspx </remarks>
+		/// <param name="name">optional object name</param>
+		/// <param name="passwordDocument">optional object passwordDocument</param>
+		/// <param name="writePasswordDocument">optional object writePasswordDocument</param>
+		/// <param name="headerRecord">optional object headerRecord</param>
+		/// <param name="mSQuery">optional object mSQuery</param>
+		/// <param name="sQLStatement">optional object sQLStatement</param>
+		/// <param name="sQLStatement1">optional object sQLStatement1</param>
+		/// <param name="connection">optional object connection</param>
+		/// <param name="linkToSource">optional object linkToSource</param>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void CreateDataSource(object name, object passwordDocument, object writePasswordDocument, object headerRecord, object mSQuery, object sQLStatement, object sQLStatement1, object connection, object linkToSource)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(name, passwordDocument, writePasswordDocument, headerRecord, mSQuery, sQLStatement, sQLStatement1, connection, linkToSource);
-			Invoker.Method(this, "CreateDataSource", paramsArray);
+			 Factory.ExecuteMethod(this, "CreateDataSource", new object[]{ name, passwordDocument, writePasswordDocument, headerRecord, mSQuery, sQLStatement, sQLStatement1, connection, linkToSource });
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff820730.aspx
 		/// </summary>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff820730.aspx </remarks>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void CreateDataSource()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "CreateDataSource", paramsArray);
+			 Factory.ExecuteMethod(this, "CreateDataSource");
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff820730.aspx
 		/// </summary>
-		/// <param name="name">optional object Name</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff820730.aspx </remarks>
+		/// <param name="name">optional object name</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void CreateDataSource(object name)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(name);
-			Invoker.Method(this, "CreateDataSource", paramsArray);
+			 Factory.ExecuteMethod(this, "CreateDataSource", name);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff820730.aspx
 		/// </summary>
-		/// <param name="name">optional object Name</param>
-		/// <param name="passwordDocument">optional object PasswordDocument</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff820730.aspx </remarks>
+		/// <param name="name">optional object name</param>
+		/// <param name="passwordDocument">optional object passwordDocument</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void CreateDataSource(object name, object passwordDocument)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(name, passwordDocument);
-			Invoker.Method(this, "CreateDataSource", paramsArray);
+			 Factory.ExecuteMethod(this, "CreateDataSource", name, passwordDocument);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff820730.aspx
 		/// </summary>
-		/// <param name="name">optional object Name</param>
-		/// <param name="passwordDocument">optional object PasswordDocument</param>
-		/// <param name="writePasswordDocument">optional object WritePasswordDocument</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff820730.aspx </remarks>
+		/// <param name="name">optional object name</param>
+		/// <param name="passwordDocument">optional object passwordDocument</param>
+		/// <param name="writePasswordDocument">optional object writePasswordDocument</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void CreateDataSource(object name, object passwordDocument, object writePasswordDocument)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(name, passwordDocument, writePasswordDocument);
-			Invoker.Method(this, "CreateDataSource", paramsArray);
+			 Factory.ExecuteMethod(this, "CreateDataSource", name, passwordDocument, writePasswordDocument);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff820730.aspx
 		/// </summary>
-		/// <param name="name">optional object Name</param>
-		/// <param name="passwordDocument">optional object PasswordDocument</param>
-		/// <param name="writePasswordDocument">optional object WritePasswordDocument</param>
-		/// <param name="headerRecord">optional object HeaderRecord</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff820730.aspx </remarks>
+		/// <param name="name">optional object name</param>
+		/// <param name="passwordDocument">optional object passwordDocument</param>
+		/// <param name="writePasswordDocument">optional object writePasswordDocument</param>
+		/// <param name="headerRecord">optional object headerRecord</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void CreateDataSource(object name, object passwordDocument, object writePasswordDocument, object headerRecord)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(name, passwordDocument, writePasswordDocument, headerRecord);
-			Invoker.Method(this, "CreateDataSource", paramsArray);
+			 Factory.ExecuteMethod(this, "CreateDataSource", name, passwordDocument, writePasswordDocument, headerRecord);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff820730.aspx
 		/// </summary>
-		/// <param name="name">optional object Name</param>
-		/// <param name="passwordDocument">optional object PasswordDocument</param>
-		/// <param name="writePasswordDocument">optional object WritePasswordDocument</param>
-		/// <param name="headerRecord">optional object HeaderRecord</param>
-		/// <param name="mSQuery">optional object MSQuery</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff820730.aspx </remarks>
+		/// <param name="name">optional object name</param>
+		/// <param name="passwordDocument">optional object passwordDocument</param>
+		/// <param name="writePasswordDocument">optional object writePasswordDocument</param>
+		/// <param name="headerRecord">optional object headerRecord</param>
+		/// <param name="mSQuery">optional object mSQuery</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void CreateDataSource(object name, object passwordDocument, object writePasswordDocument, object headerRecord, object mSQuery)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(name, passwordDocument, writePasswordDocument, headerRecord, mSQuery);
-			Invoker.Method(this, "CreateDataSource", paramsArray);
+			 Factory.ExecuteMethod(this, "CreateDataSource", new object[]{ name, passwordDocument, writePasswordDocument, headerRecord, mSQuery });
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff820730.aspx
 		/// </summary>
-		/// <param name="name">optional object Name</param>
-		/// <param name="passwordDocument">optional object PasswordDocument</param>
-		/// <param name="writePasswordDocument">optional object WritePasswordDocument</param>
-		/// <param name="headerRecord">optional object HeaderRecord</param>
-		/// <param name="mSQuery">optional object MSQuery</param>
-		/// <param name="sQLStatement">optional object SQLStatement</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff820730.aspx </remarks>
+		/// <param name="name">optional object name</param>
+		/// <param name="passwordDocument">optional object passwordDocument</param>
+		/// <param name="writePasswordDocument">optional object writePasswordDocument</param>
+		/// <param name="headerRecord">optional object headerRecord</param>
+		/// <param name="mSQuery">optional object mSQuery</param>
+		/// <param name="sQLStatement">optional object sQLStatement</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void CreateDataSource(object name, object passwordDocument, object writePasswordDocument, object headerRecord, object mSQuery, object sQLStatement)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(name, passwordDocument, writePasswordDocument, headerRecord, mSQuery, sQLStatement);
-			Invoker.Method(this, "CreateDataSource", paramsArray);
+			 Factory.ExecuteMethod(this, "CreateDataSource", new object[]{ name, passwordDocument, writePasswordDocument, headerRecord, mSQuery, sQLStatement });
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff820730.aspx
 		/// </summary>
-		/// <param name="name">optional object Name</param>
-		/// <param name="passwordDocument">optional object PasswordDocument</param>
-		/// <param name="writePasswordDocument">optional object WritePasswordDocument</param>
-		/// <param name="headerRecord">optional object HeaderRecord</param>
-		/// <param name="mSQuery">optional object MSQuery</param>
-		/// <param name="sQLStatement">optional object SQLStatement</param>
-		/// <param name="sQLStatement1">optional object SQLStatement1</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff820730.aspx </remarks>
+		/// <param name="name">optional object name</param>
+		/// <param name="passwordDocument">optional object passwordDocument</param>
+		/// <param name="writePasswordDocument">optional object writePasswordDocument</param>
+		/// <param name="headerRecord">optional object headerRecord</param>
+		/// <param name="mSQuery">optional object mSQuery</param>
+		/// <param name="sQLStatement">optional object sQLStatement</param>
+		/// <param name="sQLStatement1">optional object sQLStatement1</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void CreateDataSource(object name, object passwordDocument, object writePasswordDocument, object headerRecord, object mSQuery, object sQLStatement, object sQLStatement1)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(name, passwordDocument, writePasswordDocument, headerRecord, mSQuery, sQLStatement, sQLStatement1);
-			Invoker.Method(this, "CreateDataSource", paramsArray);
+			 Factory.ExecuteMethod(this, "CreateDataSource", new object[]{ name, passwordDocument, writePasswordDocument, headerRecord, mSQuery, sQLStatement, sQLStatement1 });
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff820730.aspx
 		/// </summary>
-		/// <param name="name">optional object Name</param>
-		/// <param name="passwordDocument">optional object PasswordDocument</param>
-		/// <param name="writePasswordDocument">optional object WritePasswordDocument</param>
-		/// <param name="headerRecord">optional object HeaderRecord</param>
-		/// <param name="mSQuery">optional object MSQuery</param>
-		/// <param name="sQLStatement">optional object SQLStatement</param>
-		/// <param name="sQLStatement1">optional object SQLStatement1</param>
-		/// <param name="connection">optional object Connection</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff820730.aspx </remarks>
+		/// <param name="name">optional object name</param>
+		/// <param name="passwordDocument">optional object passwordDocument</param>
+		/// <param name="writePasswordDocument">optional object writePasswordDocument</param>
+		/// <param name="headerRecord">optional object headerRecord</param>
+		/// <param name="mSQuery">optional object mSQuery</param>
+		/// <param name="sQLStatement">optional object sQLStatement</param>
+		/// <param name="sQLStatement1">optional object sQLStatement1</param>
+		/// <param name="connection">optional object connection</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void CreateDataSource(object name, object passwordDocument, object writePasswordDocument, object headerRecord, object mSQuery, object sQLStatement, object sQLStatement1, object connection)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(name, passwordDocument, writePasswordDocument, headerRecord, mSQuery, sQLStatement, sQLStatement1, connection);
-			Invoker.Method(this, "CreateDataSource", paramsArray);
+			 Factory.ExecuteMethod(this, "CreateDataSource", new object[]{ name, passwordDocument, writePasswordDocument, headerRecord, mSQuery, sQLStatement, sQLStatement1, connection });
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196953.aspx
 		/// </summary>
-		/// <param name="name">string Name</param>
-		/// <param name="passwordDocument">optional object PasswordDocument</param>
-		/// <param name="writePasswordDocument">optional object WritePasswordDocument</param>
-		/// <param name="headerRecord">optional object HeaderRecord</param>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff196953.aspx </remarks>
+		/// <param name="name">string name</param>
+		/// <param name="passwordDocument">optional object passwordDocument</param>
+		/// <param name="writePasswordDocument">optional object writePasswordDocument</param>
+		/// <param name="headerRecord">optional object headerRecord</param>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void CreateHeaderSource(string name, object passwordDocument, object writePasswordDocument, object headerRecord)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(name, passwordDocument, writePasswordDocument, headerRecord);
-			Invoker.Method(this, "CreateHeaderSource", paramsArray);
+			 Factory.ExecuteMethod(this, "CreateHeaderSource", name, passwordDocument, writePasswordDocument, headerRecord);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196953.aspx
 		/// </summary>
-		/// <param name="name">string Name</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff196953.aspx </remarks>
+		/// <param name="name">string name</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void CreateHeaderSource(string name)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(name);
-			Invoker.Method(this, "CreateHeaderSource", paramsArray);
+			 Factory.ExecuteMethod(this, "CreateHeaderSource", name);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196953.aspx
 		/// </summary>
-		/// <param name="name">string Name</param>
-		/// <param name="passwordDocument">optional object PasswordDocument</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff196953.aspx </remarks>
+		/// <param name="name">string name</param>
+		/// <param name="passwordDocument">optional object passwordDocument</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void CreateHeaderSource(string name, object passwordDocument)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(name, passwordDocument);
-			Invoker.Method(this, "CreateHeaderSource", paramsArray);
+			 Factory.ExecuteMethod(this, "CreateHeaderSource", name, passwordDocument);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196953.aspx
 		/// </summary>
-		/// <param name="name">string Name</param>
-		/// <param name="passwordDocument">optional object PasswordDocument</param>
-		/// <param name="writePasswordDocument">optional object WritePasswordDocument</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff196953.aspx </remarks>
+		/// <param name="name">string name</param>
+		/// <param name="passwordDocument">optional object passwordDocument</param>
+		/// <param name="writePasswordDocument">optional object writePasswordDocument</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void CreateHeaderSource(string name, object passwordDocument, object writePasswordDocument)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(name, passwordDocument, writePasswordDocument);
-			Invoker.Method(this, "CreateHeaderSource", paramsArray);
+			 Factory.ExecuteMethod(this, "CreateHeaderSource", name, passwordDocument, writePasswordDocument);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff841005.aspx
 		/// </summary>
-		/// <param name="name">string Name</param>
-		/// <param name="format">optional object Format</param>
-		/// <param name="confirmConversions">optional object ConfirmConversions</param>
-		/// <param name="readOnly">optional object ReadOnly</param>
-		/// <param name="linkToSource">optional object LinkToSource</param>
-		/// <param name="addToRecentFiles">optional object AddToRecentFiles</param>
-		/// <param name="passwordDocument">optional object PasswordDocument</param>
-		/// <param name="passwordTemplate">optional object PasswordTemplate</param>
-		/// <param name="revert">optional object Revert</param>
-		/// <param name="writePasswordDocument">optional object WritePasswordDocument</param>
-		/// <param name="writePasswordTemplate">optional object WritePasswordTemplate</param>
-		/// <param name="connection">optional object Connection</param>
-		/// <param name="sQLStatement">optional object SQLStatement</param>
-		/// <param name="sQLStatement1">optional object SQLStatement1</param>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff841005.aspx </remarks>
+		/// <param name="name">string name</param>
+		/// <param name="format">optional object format</param>
+		/// <param name="confirmConversions">optional object confirmConversions</param>
+		/// <param name="readOnly">optional object readOnly</param>
+		/// <param name="linkToSource">optional object linkToSource</param>
+		/// <param name="addToRecentFiles">optional object addToRecentFiles</param>
+		/// <param name="passwordDocument">optional object passwordDocument</param>
+		/// <param name="passwordTemplate">optional object passwordTemplate</param>
+		/// <param name="revert">optional object revert</param>
+		/// <param name="writePasswordDocument">optional object writePasswordDocument</param>
+		/// <param name="writePasswordTemplate">optional object writePasswordTemplate</param>
+		/// <param name="connection">optional object connection</param>
+		/// <param name="sQLStatement">optional object sQLStatement</param>
+		/// <param name="sQLStatement1">optional object sQLStatement1</param>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void OpenDataSource(string name, object format, object confirmConversions, object readOnly, object linkToSource, object addToRecentFiles, object passwordDocument, object passwordTemplate, object revert, object writePasswordDocument, object writePasswordTemplate, object connection, object sQLStatement, object sQLStatement1)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(name, format, confirmConversions, readOnly, linkToSource, addToRecentFiles, passwordDocument, passwordTemplate, revert, writePasswordDocument, writePasswordTemplate, connection, sQLStatement, sQLStatement1);
-			Invoker.Method(this, "OpenDataSource", paramsArray);
+			 Factory.ExecuteMethod(this, "OpenDataSource", new object[]{ name, format, confirmConversions, readOnly, linkToSource, addToRecentFiles, passwordDocument, passwordTemplate, revert, writePasswordDocument, writePasswordTemplate, connection, sQLStatement, sQLStatement1 });
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff841005.aspx
 		/// </summary>
-		/// <param name="name">string Name</param>
-		/// <param name="format">optional object Format</param>
-		/// <param name="confirmConversions">optional object ConfirmConversions</param>
-		/// <param name="readOnly">optional object ReadOnly</param>
-		/// <param name="linkToSource">optional object LinkToSource</param>
-		/// <param name="addToRecentFiles">optional object AddToRecentFiles</param>
-		/// <param name="passwordDocument">optional object PasswordDocument</param>
-		/// <param name="passwordTemplate">optional object PasswordTemplate</param>
-		/// <param name="revert">optional object Revert</param>
-		/// <param name="writePasswordDocument">optional object WritePasswordDocument</param>
-		/// <param name="writePasswordTemplate">optional object WritePasswordTemplate</param>
-		/// <param name="connection">optional object Connection</param>
-		/// <param name="sQLStatement">optional object SQLStatement</param>
-		/// <param name="sQLStatement1">optional object SQLStatement1</param>
-		/// <param name="openExclusive">optional object OpenExclusive</param>
-		/// <param name="subType">optional object SubType</param>
-		[SupportByVersionAttribute("Word", 10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff841005.aspx </remarks>
+		/// <param name="name">string name</param>
+		/// <param name="format">optional object format</param>
+		/// <param name="confirmConversions">optional object confirmConversions</param>
+		/// <param name="readOnly">optional object readOnly</param>
+		/// <param name="linkToSource">optional object linkToSource</param>
+		/// <param name="addToRecentFiles">optional object addToRecentFiles</param>
+		/// <param name="passwordDocument">optional object passwordDocument</param>
+		/// <param name="passwordTemplate">optional object passwordTemplate</param>
+		/// <param name="revert">optional object revert</param>
+		/// <param name="writePasswordDocument">optional object writePasswordDocument</param>
+		/// <param name="writePasswordTemplate">optional object writePasswordTemplate</param>
+		/// <param name="connection">optional object connection</param>
+		/// <param name="sQLStatement">optional object sQLStatement</param>
+		/// <param name="sQLStatement1">optional object sQLStatement1</param>
+		/// <param name="openExclusive">optional object openExclusive</param>
+		/// <param name="subType">optional object subType</param>
+		[SupportByVersion("Word", 10,11,12,14,15,16)]
 		public void OpenDataSource(string name, object format, object confirmConversions, object readOnly, object linkToSource, object addToRecentFiles, object passwordDocument, object passwordTemplate, object revert, object writePasswordDocument, object writePasswordTemplate, object connection, object sQLStatement, object sQLStatement1, object openExclusive, object subType)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(name, format, confirmConversions, readOnly, linkToSource, addToRecentFiles, passwordDocument, passwordTemplate, revert, writePasswordDocument, writePasswordTemplate, connection, sQLStatement, sQLStatement1, openExclusive, subType);
-			Invoker.Method(this, "OpenDataSource", paramsArray);
+			 Factory.ExecuteMethod(this, "OpenDataSource", new object[]{ name, format, confirmConversions, readOnly, linkToSource, addToRecentFiles, passwordDocument, passwordTemplate, revert, writePasswordDocument, writePasswordTemplate, connection, sQLStatement, sQLStatement1, openExclusive, subType });
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff841005.aspx
 		/// </summary>
-		/// <param name="name">string Name</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff841005.aspx </remarks>
+		/// <param name="name">string name</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void OpenDataSource(string name)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(name);
-			Invoker.Method(this, "OpenDataSource", paramsArray);
+			 Factory.ExecuteMethod(this, "OpenDataSource", name);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff841005.aspx
 		/// </summary>
-		/// <param name="name">string Name</param>
-		/// <param name="format">optional object Format</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff841005.aspx </remarks>
+		/// <param name="name">string name</param>
+		/// <param name="format">optional object format</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void OpenDataSource(string name, object format)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(name, format);
-			Invoker.Method(this, "OpenDataSource", paramsArray);
+			 Factory.ExecuteMethod(this, "OpenDataSource", name, format);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff841005.aspx
 		/// </summary>
-		/// <param name="name">string Name</param>
-		/// <param name="format">optional object Format</param>
-		/// <param name="confirmConversions">optional object ConfirmConversions</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff841005.aspx </remarks>
+		/// <param name="name">string name</param>
+		/// <param name="format">optional object format</param>
+		/// <param name="confirmConversions">optional object confirmConversions</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void OpenDataSource(string name, object format, object confirmConversions)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(name, format, confirmConversions);
-			Invoker.Method(this, "OpenDataSource", paramsArray);
+			 Factory.ExecuteMethod(this, "OpenDataSource", name, format, confirmConversions);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff841005.aspx
 		/// </summary>
-		/// <param name="name">string Name</param>
-		/// <param name="format">optional object Format</param>
-		/// <param name="confirmConversions">optional object ConfirmConversions</param>
-		/// <param name="readOnly">optional object ReadOnly</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff841005.aspx </remarks>
+		/// <param name="name">string name</param>
+		/// <param name="format">optional object format</param>
+		/// <param name="confirmConversions">optional object confirmConversions</param>
+		/// <param name="readOnly">optional object readOnly</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void OpenDataSource(string name, object format, object confirmConversions, object readOnly)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(name, format, confirmConversions, readOnly);
-			Invoker.Method(this, "OpenDataSource", paramsArray);
+			 Factory.ExecuteMethod(this, "OpenDataSource", name, format, confirmConversions, readOnly);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff841005.aspx
 		/// </summary>
-		/// <param name="name">string Name</param>
-		/// <param name="format">optional object Format</param>
-		/// <param name="confirmConversions">optional object ConfirmConversions</param>
-		/// <param name="readOnly">optional object ReadOnly</param>
-		/// <param name="linkToSource">optional object LinkToSource</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff841005.aspx </remarks>
+		/// <param name="name">string name</param>
+		/// <param name="format">optional object format</param>
+		/// <param name="confirmConversions">optional object confirmConversions</param>
+		/// <param name="readOnly">optional object readOnly</param>
+		/// <param name="linkToSource">optional object linkToSource</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void OpenDataSource(string name, object format, object confirmConversions, object readOnly, object linkToSource)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(name, format, confirmConversions, readOnly, linkToSource);
-			Invoker.Method(this, "OpenDataSource", paramsArray);
+			 Factory.ExecuteMethod(this, "OpenDataSource", new object[]{ name, format, confirmConversions, readOnly, linkToSource });
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff841005.aspx
 		/// </summary>
-		/// <param name="name">string Name</param>
-		/// <param name="format">optional object Format</param>
-		/// <param name="confirmConversions">optional object ConfirmConversions</param>
-		/// <param name="readOnly">optional object ReadOnly</param>
-		/// <param name="linkToSource">optional object LinkToSource</param>
-		/// <param name="addToRecentFiles">optional object AddToRecentFiles</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff841005.aspx </remarks>
+		/// <param name="name">string name</param>
+		/// <param name="format">optional object format</param>
+		/// <param name="confirmConversions">optional object confirmConversions</param>
+		/// <param name="readOnly">optional object readOnly</param>
+		/// <param name="linkToSource">optional object linkToSource</param>
+		/// <param name="addToRecentFiles">optional object addToRecentFiles</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void OpenDataSource(string name, object format, object confirmConversions, object readOnly, object linkToSource, object addToRecentFiles)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(name, format, confirmConversions, readOnly, linkToSource, addToRecentFiles);
-			Invoker.Method(this, "OpenDataSource", paramsArray);
+			 Factory.ExecuteMethod(this, "OpenDataSource", new object[]{ name, format, confirmConversions, readOnly, linkToSource, addToRecentFiles });
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff841005.aspx
 		/// </summary>
-		/// <param name="name">string Name</param>
-		/// <param name="format">optional object Format</param>
-		/// <param name="confirmConversions">optional object ConfirmConversions</param>
-		/// <param name="readOnly">optional object ReadOnly</param>
-		/// <param name="linkToSource">optional object LinkToSource</param>
-		/// <param name="addToRecentFiles">optional object AddToRecentFiles</param>
-		/// <param name="passwordDocument">optional object PasswordDocument</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff841005.aspx </remarks>
+		/// <param name="name">string name</param>
+		/// <param name="format">optional object format</param>
+		/// <param name="confirmConversions">optional object confirmConversions</param>
+		/// <param name="readOnly">optional object readOnly</param>
+		/// <param name="linkToSource">optional object linkToSource</param>
+		/// <param name="addToRecentFiles">optional object addToRecentFiles</param>
+		/// <param name="passwordDocument">optional object passwordDocument</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void OpenDataSource(string name, object format, object confirmConversions, object readOnly, object linkToSource, object addToRecentFiles, object passwordDocument)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(name, format, confirmConversions, readOnly, linkToSource, addToRecentFiles, passwordDocument);
-			Invoker.Method(this, "OpenDataSource", paramsArray);
+			 Factory.ExecuteMethod(this, "OpenDataSource", new object[]{ name, format, confirmConversions, readOnly, linkToSource, addToRecentFiles, passwordDocument });
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff841005.aspx
 		/// </summary>
-		/// <param name="name">string Name</param>
-		/// <param name="format">optional object Format</param>
-		/// <param name="confirmConversions">optional object ConfirmConversions</param>
-		/// <param name="readOnly">optional object ReadOnly</param>
-		/// <param name="linkToSource">optional object LinkToSource</param>
-		/// <param name="addToRecentFiles">optional object AddToRecentFiles</param>
-		/// <param name="passwordDocument">optional object PasswordDocument</param>
-		/// <param name="passwordTemplate">optional object PasswordTemplate</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff841005.aspx </remarks>
+		/// <param name="name">string name</param>
+		/// <param name="format">optional object format</param>
+		/// <param name="confirmConversions">optional object confirmConversions</param>
+		/// <param name="readOnly">optional object readOnly</param>
+		/// <param name="linkToSource">optional object linkToSource</param>
+		/// <param name="addToRecentFiles">optional object addToRecentFiles</param>
+		/// <param name="passwordDocument">optional object passwordDocument</param>
+		/// <param name="passwordTemplate">optional object passwordTemplate</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void OpenDataSource(string name, object format, object confirmConversions, object readOnly, object linkToSource, object addToRecentFiles, object passwordDocument, object passwordTemplate)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(name, format, confirmConversions, readOnly, linkToSource, addToRecentFiles, passwordDocument, passwordTemplate);
-			Invoker.Method(this, "OpenDataSource", paramsArray);
+			 Factory.ExecuteMethod(this, "OpenDataSource", new object[]{ name, format, confirmConversions, readOnly, linkToSource, addToRecentFiles, passwordDocument, passwordTemplate });
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff841005.aspx
 		/// </summary>
-		/// <param name="name">string Name</param>
-		/// <param name="format">optional object Format</param>
-		/// <param name="confirmConversions">optional object ConfirmConversions</param>
-		/// <param name="readOnly">optional object ReadOnly</param>
-		/// <param name="linkToSource">optional object LinkToSource</param>
-		/// <param name="addToRecentFiles">optional object AddToRecentFiles</param>
-		/// <param name="passwordDocument">optional object PasswordDocument</param>
-		/// <param name="passwordTemplate">optional object PasswordTemplate</param>
-		/// <param name="revert">optional object Revert</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff841005.aspx </remarks>
+		/// <param name="name">string name</param>
+		/// <param name="format">optional object format</param>
+		/// <param name="confirmConversions">optional object confirmConversions</param>
+		/// <param name="readOnly">optional object readOnly</param>
+		/// <param name="linkToSource">optional object linkToSource</param>
+		/// <param name="addToRecentFiles">optional object addToRecentFiles</param>
+		/// <param name="passwordDocument">optional object passwordDocument</param>
+		/// <param name="passwordTemplate">optional object passwordTemplate</param>
+		/// <param name="revert">optional object revert</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void OpenDataSource(string name, object format, object confirmConversions, object readOnly, object linkToSource, object addToRecentFiles, object passwordDocument, object passwordTemplate, object revert)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(name, format, confirmConversions, readOnly, linkToSource, addToRecentFiles, passwordDocument, passwordTemplate, revert);
-			Invoker.Method(this, "OpenDataSource", paramsArray);
+			 Factory.ExecuteMethod(this, "OpenDataSource", new object[]{ name, format, confirmConversions, readOnly, linkToSource, addToRecentFiles, passwordDocument, passwordTemplate, revert });
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff841005.aspx
 		/// </summary>
-		/// <param name="name">string Name</param>
-		/// <param name="format">optional object Format</param>
-		/// <param name="confirmConversions">optional object ConfirmConversions</param>
-		/// <param name="readOnly">optional object ReadOnly</param>
-		/// <param name="linkToSource">optional object LinkToSource</param>
-		/// <param name="addToRecentFiles">optional object AddToRecentFiles</param>
-		/// <param name="passwordDocument">optional object PasswordDocument</param>
-		/// <param name="passwordTemplate">optional object PasswordTemplate</param>
-		/// <param name="revert">optional object Revert</param>
-		/// <param name="writePasswordDocument">optional object WritePasswordDocument</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff841005.aspx </remarks>
+		/// <param name="name">string name</param>
+		/// <param name="format">optional object format</param>
+		/// <param name="confirmConversions">optional object confirmConversions</param>
+		/// <param name="readOnly">optional object readOnly</param>
+		/// <param name="linkToSource">optional object linkToSource</param>
+		/// <param name="addToRecentFiles">optional object addToRecentFiles</param>
+		/// <param name="passwordDocument">optional object passwordDocument</param>
+		/// <param name="passwordTemplate">optional object passwordTemplate</param>
+		/// <param name="revert">optional object revert</param>
+		/// <param name="writePasswordDocument">optional object writePasswordDocument</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void OpenDataSource(string name, object format, object confirmConversions, object readOnly, object linkToSource, object addToRecentFiles, object passwordDocument, object passwordTemplate, object revert, object writePasswordDocument)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(name, format, confirmConversions, readOnly, linkToSource, addToRecentFiles, passwordDocument, passwordTemplate, revert, writePasswordDocument);
-			Invoker.Method(this, "OpenDataSource", paramsArray);
+			 Factory.ExecuteMethod(this, "OpenDataSource", new object[]{ name, format, confirmConversions, readOnly, linkToSource, addToRecentFiles, passwordDocument, passwordTemplate, revert, writePasswordDocument });
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff841005.aspx
 		/// </summary>
-		/// <param name="name">string Name</param>
-		/// <param name="format">optional object Format</param>
-		/// <param name="confirmConversions">optional object ConfirmConversions</param>
-		/// <param name="readOnly">optional object ReadOnly</param>
-		/// <param name="linkToSource">optional object LinkToSource</param>
-		/// <param name="addToRecentFiles">optional object AddToRecentFiles</param>
-		/// <param name="passwordDocument">optional object PasswordDocument</param>
-		/// <param name="passwordTemplate">optional object PasswordTemplate</param>
-		/// <param name="revert">optional object Revert</param>
-		/// <param name="writePasswordDocument">optional object WritePasswordDocument</param>
-		/// <param name="writePasswordTemplate">optional object WritePasswordTemplate</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff841005.aspx </remarks>
+		/// <param name="name">string name</param>
+		/// <param name="format">optional object format</param>
+		/// <param name="confirmConversions">optional object confirmConversions</param>
+		/// <param name="readOnly">optional object readOnly</param>
+		/// <param name="linkToSource">optional object linkToSource</param>
+		/// <param name="addToRecentFiles">optional object addToRecentFiles</param>
+		/// <param name="passwordDocument">optional object passwordDocument</param>
+		/// <param name="passwordTemplate">optional object passwordTemplate</param>
+		/// <param name="revert">optional object revert</param>
+		/// <param name="writePasswordDocument">optional object writePasswordDocument</param>
+		/// <param name="writePasswordTemplate">optional object writePasswordTemplate</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void OpenDataSource(string name, object format, object confirmConversions, object readOnly, object linkToSource, object addToRecentFiles, object passwordDocument, object passwordTemplate, object revert, object writePasswordDocument, object writePasswordTemplate)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(name, format, confirmConversions, readOnly, linkToSource, addToRecentFiles, passwordDocument, passwordTemplate, revert, writePasswordDocument, writePasswordTemplate);
-			Invoker.Method(this, "OpenDataSource", paramsArray);
+			 Factory.ExecuteMethod(this, "OpenDataSource", new object[]{ name, format, confirmConversions, readOnly, linkToSource, addToRecentFiles, passwordDocument, passwordTemplate, revert, writePasswordDocument, writePasswordTemplate });
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff841005.aspx
 		/// </summary>
-		/// <param name="name">string Name</param>
-		/// <param name="format">optional object Format</param>
-		/// <param name="confirmConversions">optional object ConfirmConversions</param>
-		/// <param name="readOnly">optional object ReadOnly</param>
-		/// <param name="linkToSource">optional object LinkToSource</param>
-		/// <param name="addToRecentFiles">optional object AddToRecentFiles</param>
-		/// <param name="passwordDocument">optional object PasswordDocument</param>
-		/// <param name="passwordTemplate">optional object PasswordTemplate</param>
-		/// <param name="revert">optional object Revert</param>
-		/// <param name="writePasswordDocument">optional object WritePasswordDocument</param>
-		/// <param name="writePasswordTemplate">optional object WritePasswordTemplate</param>
-		/// <param name="connection">optional object Connection</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff841005.aspx </remarks>
+		/// <param name="name">string name</param>
+		/// <param name="format">optional object format</param>
+		/// <param name="confirmConversions">optional object confirmConversions</param>
+		/// <param name="readOnly">optional object readOnly</param>
+		/// <param name="linkToSource">optional object linkToSource</param>
+		/// <param name="addToRecentFiles">optional object addToRecentFiles</param>
+		/// <param name="passwordDocument">optional object passwordDocument</param>
+		/// <param name="passwordTemplate">optional object passwordTemplate</param>
+		/// <param name="revert">optional object revert</param>
+		/// <param name="writePasswordDocument">optional object writePasswordDocument</param>
+		/// <param name="writePasswordTemplate">optional object writePasswordTemplate</param>
+		/// <param name="connection">optional object connection</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void OpenDataSource(string name, object format, object confirmConversions, object readOnly, object linkToSource, object addToRecentFiles, object passwordDocument, object passwordTemplate, object revert, object writePasswordDocument, object writePasswordTemplate, object connection)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(name, format, confirmConversions, readOnly, linkToSource, addToRecentFiles, passwordDocument, passwordTemplate, revert, writePasswordDocument, writePasswordTemplate, connection);
-			Invoker.Method(this, "OpenDataSource", paramsArray);
+			 Factory.ExecuteMethod(this, "OpenDataSource", new object[]{ name, format, confirmConversions, readOnly, linkToSource, addToRecentFiles, passwordDocument, passwordTemplate, revert, writePasswordDocument, writePasswordTemplate, connection });
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff841005.aspx
 		/// </summary>
-		/// <param name="name">string Name</param>
-		/// <param name="format">optional object Format</param>
-		/// <param name="confirmConversions">optional object ConfirmConversions</param>
-		/// <param name="readOnly">optional object ReadOnly</param>
-		/// <param name="linkToSource">optional object LinkToSource</param>
-		/// <param name="addToRecentFiles">optional object AddToRecentFiles</param>
-		/// <param name="passwordDocument">optional object PasswordDocument</param>
-		/// <param name="passwordTemplate">optional object PasswordTemplate</param>
-		/// <param name="revert">optional object Revert</param>
-		/// <param name="writePasswordDocument">optional object WritePasswordDocument</param>
-		/// <param name="writePasswordTemplate">optional object WritePasswordTemplate</param>
-		/// <param name="connection">optional object Connection</param>
-		/// <param name="sQLStatement">optional object SQLStatement</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff841005.aspx </remarks>
+		/// <param name="name">string name</param>
+		/// <param name="format">optional object format</param>
+		/// <param name="confirmConversions">optional object confirmConversions</param>
+		/// <param name="readOnly">optional object readOnly</param>
+		/// <param name="linkToSource">optional object linkToSource</param>
+		/// <param name="addToRecentFiles">optional object addToRecentFiles</param>
+		/// <param name="passwordDocument">optional object passwordDocument</param>
+		/// <param name="passwordTemplate">optional object passwordTemplate</param>
+		/// <param name="revert">optional object revert</param>
+		/// <param name="writePasswordDocument">optional object writePasswordDocument</param>
+		/// <param name="writePasswordTemplate">optional object writePasswordTemplate</param>
+		/// <param name="connection">optional object connection</param>
+		/// <param name="sQLStatement">optional object sQLStatement</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void OpenDataSource(string name, object format, object confirmConversions, object readOnly, object linkToSource, object addToRecentFiles, object passwordDocument, object passwordTemplate, object revert, object writePasswordDocument, object writePasswordTemplate, object connection, object sQLStatement)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(name, format, confirmConversions, readOnly, linkToSource, addToRecentFiles, passwordDocument, passwordTemplate, revert, writePasswordDocument, writePasswordTemplate, connection, sQLStatement);
-			Invoker.Method(this, "OpenDataSource", paramsArray);
+			 Factory.ExecuteMethod(this, "OpenDataSource", new object[]{ name, format, confirmConversions, readOnly, linkToSource, addToRecentFiles, passwordDocument, passwordTemplate, revert, writePasswordDocument, writePasswordTemplate, connection, sQLStatement });
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff841005.aspx
 		/// </summary>
-		/// <param name="name">string Name</param>
-		/// <param name="format">optional object Format</param>
-		/// <param name="confirmConversions">optional object ConfirmConversions</param>
-		/// <param name="readOnly">optional object ReadOnly</param>
-		/// <param name="linkToSource">optional object LinkToSource</param>
-		/// <param name="addToRecentFiles">optional object AddToRecentFiles</param>
-		/// <param name="passwordDocument">optional object PasswordDocument</param>
-		/// <param name="passwordTemplate">optional object PasswordTemplate</param>
-		/// <param name="revert">optional object Revert</param>
-		/// <param name="writePasswordDocument">optional object WritePasswordDocument</param>
-		/// <param name="writePasswordTemplate">optional object WritePasswordTemplate</param>
-		/// <param name="connection">optional object Connection</param>
-		/// <param name="sQLStatement">optional object SQLStatement</param>
-		/// <param name="sQLStatement1">optional object SQLStatement1</param>
-		/// <param name="openExclusive">optional object OpenExclusive</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff841005.aspx </remarks>
+		/// <param name="name">string name</param>
+		/// <param name="format">optional object format</param>
+		/// <param name="confirmConversions">optional object confirmConversions</param>
+		/// <param name="readOnly">optional object readOnly</param>
+		/// <param name="linkToSource">optional object linkToSource</param>
+		/// <param name="addToRecentFiles">optional object addToRecentFiles</param>
+		/// <param name="passwordDocument">optional object passwordDocument</param>
+		/// <param name="passwordTemplate">optional object passwordTemplate</param>
+		/// <param name="revert">optional object revert</param>
+		/// <param name="writePasswordDocument">optional object writePasswordDocument</param>
+		/// <param name="writePasswordTemplate">optional object writePasswordTemplate</param>
+		/// <param name="connection">optional object connection</param>
+		/// <param name="sQLStatement">optional object sQLStatement</param>
+		/// <param name="sQLStatement1">optional object sQLStatement1</param>
+		/// <param name="openExclusive">optional object openExclusive</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 10,11,12,14,15,16)]
 		public void OpenDataSource(string name, object format, object confirmConversions, object readOnly, object linkToSource, object addToRecentFiles, object passwordDocument, object passwordTemplate, object revert, object writePasswordDocument, object writePasswordTemplate, object connection, object sQLStatement, object sQLStatement1, object openExclusive)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(name, format, confirmConversions, readOnly, linkToSource, addToRecentFiles, passwordDocument, passwordTemplate, revert, writePasswordDocument, writePasswordTemplate, connection, sQLStatement, sQLStatement1, openExclusive);
-			Invoker.Method(this, "OpenDataSource", paramsArray);
+			 Factory.ExecuteMethod(this, "OpenDataSource", new object[]{ name, format, confirmConversions, readOnly, linkToSource, addToRecentFiles, passwordDocument, passwordTemplate, revert, writePasswordDocument, writePasswordTemplate, connection, sQLStatement, sQLStatement1, openExclusive });
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845427.aspx
 		/// </summary>
-		/// <param name="name">string Name</param>
-		/// <param name="format">optional object Format</param>
-		/// <param name="confirmConversions">optional object ConfirmConversions</param>
-		/// <param name="readOnly">optional object ReadOnly</param>
-		/// <param name="addToRecentFiles">optional object AddToRecentFiles</param>
-		/// <param name="passwordDocument">optional object PasswordDocument</param>
-		/// <param name="passwordTemplate">optional object PasswordTemplate</param>
-		/// <param name="revert">optional object Revert</param>
-		/// <param name="writePasswordDocument">optional object WritePasswordDocument</param>
-		/// <param name="writePasswordTemplate">optional object WritePasswordTemplate</param>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff845427.aspx </remarks>
+		/// <param name="name">string name</param>
+		/// <param name="format">optional object format</param>
+		/// <param name="confirmConversions">optional object confirmConversions</param>
+		/// <param name="readOnly">optional object readOnly</param>
+		/// <param name="addToRecentFiles">optional object addToRecentFiles</param>
+		/// <param name="passwordDocument">optional object passwordDocument</param>
+		/// <param name="passwordTemplate">optional object passwordTemplate</param>
+		/// <param name="revert">optional object revert</param>
+		/// <param name="writePasswordDocument">optional object writePasswordDocument</param>
+		/// <param name="writePasswordTemplate">optional object writePasswordTemplate</param>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void OpenHeaderSource(string name, object format, object confirmConversions, object readOnly, object addToRecentFiles, object passwordDocument, object passwordTemplate, object revert, object writePasswordDocument, object writePasswordTemplate)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(name, format, confirmConversions, readOnly, addToRecentFiles, passwordDocument, passwordTemplate, revert, writePasswordDocument, writePasswordTemplate);
-			Invoker.Method(this, "OpenHeaderSource", paramsArray);
+			 Factory.ExecuteMethod(this, "OpenHeaderSource", new object[]{ name, format, confirmConversions, readOnly, addToRecentFiles, passwordDocument, passwordTemplate, revert, writePasswordDocument, writePasswordTemplate });
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845427.aspx
 		/// </summary>
-		/// <param name="name">string Name</param>
-		/// <param name="format">optional object Format</param>
-		/// <param name="confirmConversions">optional object ConfirmConversions</param>
-		/// <param name="readOnly">optional object ReadOnly</param>
-		/// <param name="addToRecentFiles">optional object AddToRecentFiles</param>
-		/// <param name="passwordDocument">optional object PasswordDocument</param>
-		/// <param name="passwordTemplate">optional object PasswordTemplate</param>
-		/// <param name="revert">optional object Revert</param>
-		/// <param name="writePasswordDocument">optional object WritePasswordDocument</param>
-		/// <param name="writePasswordTemplate">optional object WritePasswordTemplate</param>
-		/// <param name="openExclusive">optional object OpenExclusive</param>
-		[SupportByVersionAttribute("Word", 10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff845427.aspx </remarks>
+		/// <param name="name">string name</param>
+		/// <param name="format">optional object format</param>
+		/// <param name="confirmConversions">optional object confirmConversions</param>
+		/// <param name="readOnly">optional object readOnly</param>
+		/// <param name="addToRecentFiles">optional object addToRecentFiles</param>
+		/// <param name="passwordDocument">optional object passwordDocument</param>
+		/// <param name="passwordTemplate">optional object passwordTemplate</param>
+		/// <param name="revert">optional object revert</param>
+		/// <param name="writePasswordDocument">optional object writePasswordDocument</param>
+		/// <param name="writePasswordTemplate">optional object writePasswordTemplate</param>
+		/// <param name="openExclusive">optional object openExclusive</param>
+		[SupportByVersion("Word", 10,11,12,14,15,16)]
 		public void OpenHeaderSource(string name, object format, object confirmConversions, object readOnly, object addToRecentFiles, object passwordDocument, object passwordTemplate, object revert, object writePasswordDocument, object writePasswordTemplate, object openExclusive)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(name, format, confirmConversions, readOnly, addToRecentFiles, passwordDocument, passwordTemplate, revert, writePasswordDocument, writePasswordTemplate, openExclusive);
-			Invoker.Method(this, "OpenHeaderSource", paramsArray);
+			 Factory.ExecuteMethod(this, "OpenHeaderSource", new object[]{ name, format, confirmConversions, readOnly, addToRecentFiles, passwordDocument, passwordTemplate, revert, writePasswordDocument, writePasswordTemplate, openExclusive });
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845427.aspx
 		/// </summary>
-		/// <param name="name">string Name</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff845427.aspx </remarks>
+		/// <param name="name">string name</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void OpenHeaderSource(string name)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(name);
-			Invoker.Method(this, "OpenHeaderSource", paramsArray);
+			 Factory.ExecuteMethod(this, "OpenHeaderSource", name);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845427.aspx
 		/// </summary>
-		/// <param name="name">string Name</param>
-		/// <param name="format">optional object Format</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff845427.aspx </remarks>
+		/// <param name="name">string name</param>
+		/// <param name="format">optional object format</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void OpenHeaderSource(string name, object format)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(name, format);
-			Invoker.Method(this, "OpenHeaderSource", paramsArray);
+			 Factory.ExecuteMethod(this, "OpenHeaderSource", name, format);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845427.aspx
 		/// </summary>
-		/// <param name="name">string Name</param>
-		/// <param name="format">optional object Format</param>
-		/// <param name="confirmConversions">optional object ConfirmConversions</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff845427.aspx </remarks>
+		/// <param name="name">string name</param>
+		/// <param name="format">optional object format</param>
+		/// <param name="confirmConversions">optional object confirmConversions</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void OpenHeaderSource(string name, object format, object confirmConversions)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(name, format, confirmConversions);
-			Invoker.Method(this, "OpenHeaderSource", paramsArray);
+			 Factory.ExecuteMethod(this, "OpenHeaderSource", name, format, confirmConversions);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845427.aspx
 		/// </summary>
-		/// <param name="name">string Name</param>
-		/// <param name="format">optional object Format</param>
-		/// <param name="confirmConversions">optional object ConfirmConversions</param>
-		/// <param name="readOnly">optional object ReadOnly</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff845427.aspx </remarks>
+		/// <param name="name">string name</param>
+		/// <param name="format">optional object format</param>
+		/// <param name="confirmConversions">optional object confirmConversions</param>
+		/// <param name="readOnly">optional object readOnly</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void OpenHeaderSource(string name, object format, object confirmConversions, object readOnly)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(name, format, confirmConversions, readOnly);
-			Invoker.Method(this, "OpenHeaderSource", paramsArray);
+			 Factory.ExecuteMethod(this, "OpenHeaderSource", name, format, confirmConversions, readOnly);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845427.aspx
 		/// </summary>
-		/// <param name="name">string Name</param>
-		/// <param name="format">optional object Format</param>
-		/// <param name="confirmConversions">optional object ConfirmConversions</param>
-		/// <param name="readOnly">optional object ReadOnly</param>
-		/// <param name="addToRecentFiles">optional object AddToRecentFiles</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff845427.aspx </remarks>
+		/// <param name="name">string name</param>
+		/// <param name="format">optional object format</param>
+		/// <param name="confirmConversions">optional object confirmConversions</param>
+		/// <param name="readOnly">optional object readOnly</param>
+		/// <param name="addToRecentFiles">optional object addToRecentFiles</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void OpenHeaderSource(string name, object format, object confirmConversions, object readOnly, object addToRecentFiles)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(name, format, confirmConversions, readOnly, addToRecentFiles);
-			Invoker.Method(this, "OpenHeaderSource", paramsArray);
+			 Factory.ExecuteMethod(this, "OpenHeaderSource", new object[]{ name, format, confirmConversions, readOnly, addToRecentFiles });
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845427.aspx
 		/// </summary>
-		/// <param name="name">string Name</param>
-		/// <param name="format">optional object Format</param>
-		/// <param name="confirmConversions">optional object ConfirmConversions</param>
-		/// <param name="readOnly">optional object ReadOnly</param>
-		/// <param name="addToRecentFiles">optional object AddToRecentFiles</param>
-		/// <param name="passwordDocument">optional object PasswordDocument</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff845427.aspx </remarks>
+		/// <param name="name">string name</param>
+		/// <param name="format">optional object format</param>
+		/// <param name="confirmConversions">optional object confirmConversions</param>
+		/// <param name="readOnly">optional object readOnly</param>
+		/// <param name="addToRecentFiles">optional object addToRecentFiles</param>
+		/// <param name="passwordDocument">optional object passwordDocument</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void OpenHeaderSource(string name, object format, object confirmConversions, object readOnly, object addToRecentFiles, object passwordDocument)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(name, format, confirmConversions, readOnly, addToRecentFiles, passwordDocument);
-			Invoker.Method(this, "OpenHeaderSource", paramsArray);
+			 Factory.ExecuteMethod(this, "OpenHeaderSource", new object[]{ name, format, confirmConversions, readOnly, addToRecentFiles, passwordDocument });
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845427.aspx
 		/// </summary>
-		/// <param name="name">string Name</param>
-		/// <param name="format">optional object Format</param>
-		/// <param name="confirmConversions">optional object ConfirmConversions</param>
-		/// <param name="readOnly">optional object ReadOnly</param>
-		/// <param name="addToRecentFiles">optional object AddToRecentFiles</param>
-		/// <param name="passwordDocument">optional object PasswordDocument</param>
-		/// <param name="passwordTemplate">optional object PasswordTemplate</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff845427.aspx </remarks>
+		/// <param name="name">string name</param>
+		/// <param name="format">optional object format</param>
+		/// <param name="confirmConversions">optional object confirmConversions</param>
+		/// <param name="readOnly">optional object readOnly</param>
+		/// <param name="addToRecentFiles">optional object addToRecentFiles</param>
+		/// <param name="passwordDocument">optional object passwordDocument</param>
+		/// <param name="passwordTemplate">optional object passwordTemplate</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void OpenHeaderSource(string name, object format, object confirmConversions, object readOnly, object addToRecentFiles, object passwordDocument, object passwordTemplate)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(name, format, confirmConversions, readOnly, addToRecentFiles, passwordDocument, passwordTemplate);
-			Invoker.Method(this, "OpenHeaderSource", paramsArray);
+			 Factory.ExecuteMethod(this, "OpenHeaderSource", new object[]{ name, format, confirmConversions, readOnly, addToRecentFiles, passwordDocument, passwordTemplate });
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845427.aspx
 		/// </summary>
-		/// <param name="name">string Name</param>
-		/// <param name="format">optional object Format</param>
-		/// <param name="confirmConversions">optional object ConfirmConversions</param>
-		/// <param name="readOnly">optional object ReadOnly</param>
-		/// <param name="addToRecentFiles">optional object AddToRecentFiles</param>
-		/// <param name="passwordDocument">optional object PasswordDocument</param>
-		/// <param name="passwordTemplate">optional object PasswordTemplate</param>
-		/// <param name="revert">optional object Revert</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff845427.aspx </remarks>
+		/// <param name="name">string name</param>
+		/// <param name="format">optional object format</param>
+		/// <param name="confirmConversions">optional object confirmConversions</param>
+		/// <param name="readOnly">optional object readOnly</param>
+		/// <param name="addToRecentFiles">optional object addToRecentFiles</param>
+		/// <param name="passwordDocument">optional object passwordDocument</param>
+		/// <param name="passwordTemplate">optional object passwordTemplate</param>
+		/// <param name="revert">optional object revert</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void OpenHeaderSource(string name, object format, object confirmConversions, object readOnly, object addToRecentFiles, object passwordDocument, object passwordTemplate, object revert)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(name, format, confirmConversions, readOnly, addToRecentFiles, passwordDocument, passwordTemplate, revert);
-			Invoker.Method(this, "OpenHeaderSource", paramsArray);
+			 Factory.ExecuteMethod(this, "OpenHeaderSource", new object[]{ name, format, confirmConversions, readOnly, addToRecentFiles, passwordDocument, passwordTemplate, revert });
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845427.aspx
 		/// </summary>
-		/// <param name="name">string Name</param>
-		/// <param name="format">optional object Format</param>
-		/// <param name="confirmConversions">optional object ConfirmConversions</param>
-		/// <param name="readOnly">optional object ReadOnly</param>
-		/// <param name="addToRecentFiles">optional object AddToRecentFiles</param>
-		/// <param name="passwordDocument">optional object PasswordDocument</param>
-		/// <param name="passwordTemplate">optional object PasswordTemplate</param>
-		/// <param name="revert">optional object Revert</param>
-		/// <param name="writePasswordDocument">optional object WritePasswordDocument</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff845427.aspx </remarks>
+		/// <param name="name">string name</param>
+		/// <param name="format">optional object format</param>
+		/// <param name="confirmConversions">optional object confirmConversions</param>
+		/// <param name="readOnly">optional object readOnly</param>
+		/// <param name="addToRecentFiles">optional object addToRecentFiles</param>
+		/// <param name="passwordDocument">optional object passwordDocument</param>
+		/// <param name="passwordTemplate">optional object passwordTemplate</param>
+		/// <param name="revert">optional object revert</param>
+		/// <param name="writePasswordDocument">optional object writePasswordDocument</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void OpenHeaderSource(string name, object format, object confirmConversions, object readOnly, object addToRecentFiles, object passwordDocument, object passwordTemplate, object revert, object writePasswordDocument)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(name, format, confirmConversions, readOnly, addToRecentFiles, passwordDocument, passwordTemplate, revert, writePasswordDocument);
-			Invoker.Method(this, "OpenHeaderSource", paramsArray);
+			 Factory.ExecuteMethod(this, "OpenHeaderSource", new object[]{ name, format, confirmConversions, readOnly, addToRecentFiles, passwordDocument, passwordTemplate, revert, writePasswordDocument });
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff841097.aspx
 		/// </summary>
-		/// <param name="pause">optional object Pause</param>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff841097.aspx </remarks>
+		/// <param name="pause">optional object pause</param>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void Execute(object pause)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(pause);
-			Invoker.Method(this, "Execute", paramsArray);
+			 Factory.ExecuteMethod(this, "Execute", pause);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff841097.aspx
 		/// </summary>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff841097.aspx </remarks>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void Execute()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "Execute", paramsArray);
+			 Factory.ExecuteMethod(this, "Execute");
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835814.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835814.aspx </remarks>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void Check()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "Check", paramsArray);
+			 Factory.ExecuteMethod(this, "Check");
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192805.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff192805.aspx </remarks>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void EditDataSource()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "EditDataSource", paramsArray);
+			 Factory.ExecuteMethod(this, "EditDataSource");
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838561.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff838561.aspx </remarks>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void EditHeaderSource()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "EditHeaderSource", paramsArray);
+			 Factory.ExecuteMethod(this, "EditHeaderSource");
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845149.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff845149.aspx </remarks>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void EditMainDocument()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "EditMainDocument", paramsArray);
+			 Factory.ExecuteMethod(this, "EditMainDocument");
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="type">string Type</param>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <param name="type">string type</param>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void UseAddressBook(string type)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(type);
-			Invoker.Method(this, "UseAddressBook", paramsArray);
+			 Factory.ExecuteMethod(this, "UseAddressBook", type);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="name">string Name</param>
-		/// <param name="format">optional object Format</param>
-		/// <param name="confirmConversions">optional object ConfirmConversions</param>
-		/// <param name="readOnly">optional object ReadOnly</param>
-		/// <param name="linkToSource">optional object LinkToSource</param>
-		/// <param name="addToRecentFiles">optional object AddToRecentFiles</param>
-		/// <param name="passwordDocument">optional object PasswordDocument</param>
-		/// <param name="passwordTemplate">optional object PasswordTemplate</param>
-		/// <param name="revert">optional object Revert</param>
-		/// <param name="writePasswordDocument">optional object WritePasswordDocument</param>
-		/// <param name="writePasswordTemplate">optional object WritePasswordTemplate</param>
-		/// <param name="connection">optional object Connection</param>
-		/// <param name="sQLStatement">optional object SQLStatement</param>
-		/// <param name="sQLStatement1">optional object SQLStatement1</param>
+		/// <param name="name">string name</param>
+		/// <param name="format">optional object format</param>
+		/// <param name="confirmConversions">optional object confirmConversions</param>
+		/// <param name="readOnly">optional object readOnly</param>
+		/// <param name="linkToSource">optional object linkToSource</param>
+		/// <param name="addToRecentFiles">optional object addToRecentFiles</param>
+		/// <param name="passwordDocument">optional object passwordDocument</param>
+		/// <param name="passwordTemplate">optional object passwordTemplate</param>
+		/// <param name="revert">optional object revert</param>
+		/// <param name="writePasswordDocument">optional object writePasswordDocument</param>
+		/// <param name="writePasswordTemplate">optional object writePasswordTemplate</param>
+		/// <param name="connection">optional object connection</param>
+		/// <param name="sQLStatement">optional object sQLStatement</param>
+		/// <param name="sQLStatement1">optional object sQLStatement1</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("Word", 10,11,12,14,15,16)]
+		[SupportByVersion("Word", 10,11,12,14,15,16)]
 		public void OpenDataSource2000(string name, object format, object confirmConversions, object readOnly, object linkToSource, object addToRecentFiles, object passwordDocument, object passwordTemplate, object revert, object writePasswordDocument, object writePasswordTemplate, object connection, object sQLStatement, object sQLStatement1)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(name, format, confirmConversions, readOnly, linkToSource, addToRecentFiles, passwordDocument, passwordTemplate, revert, writePasswordDocument, writePasswordTemplate, connection, sQLStatement, sQLStatement1);
-			Invoker.Method(this, "OpenDataSource2000", paramsArray);
+			 Factory.ExecuteMethod(this, "OpenDataSource2000", new object[]{ name, format, confirmConversions, readOnly, linkToSource, addToRecentFiles, passwordDocument, passwordTemplate, revert, writePasswordDocument, writePasswordTemplate, connection, sQLStatement, sQLStatement1 });
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="name">string Name</param>
+		/// <param name="name">string name</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 10,11,12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Word", 10,11,12,14,15,16)]
 		public void OpenDataSource2000(string name)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(name);
-			Invoker.Method(this, "OpenDataSource2000", paramsArray);
+			 Factory.ExecuteMethod(this, "OpenDataSource2000", name);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="name">string Name</param>
-		/// <param name="format">optional object Format</param>
+		/// <param name="name">string name</param>
+		/// <param name="format">optional object format</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 10,11,12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Word", 10,11,12,14,15,16)]
 		public void OpenDataSource2000(string name, object format)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(name, format);
-			Invoker.Method(this, "OpenDataSource2000", paramsArray);
+			 Factory.ExecuteMethod(this, "OpenDataSource2000", name, format);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="name">string Name</param>
-		/// <param name="format">optional object Format</param>
-		/// <param name="confirmConversions">optional object ConfirmConversions</param>
+		/// <param name="name">string name</param>
+		/// <param name="format">optional object format</param>
+		/// <param name="confirmConversions">optional object confirmConversions</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 10,11,12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Word", 10,11,12,14,15,16)]
 		public void OpenDataSource2000(string name, object format, object confirmConversions)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(name, format, confirmConversions);
-			Invoker.Method(this, "OpenDataSource2000", paramsArray);
+			 Factory.ExecuteMethod(this, "OpenDataSource2000", name, format, confirmConversions);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="name">string Name</param>
-		/// <param name="format">optional object Format</param>
-		/// <param name="confirmConversions">optional object ConfirmConversions</param>
-		/// <param name="readOnly">optional object ReadOnly</param>
+		/// <param name="name">string name</param>
+		/// <param name="format">optional object format</param>
+		/// <param name="confirmConversions">optional object confirmConversions</param>
+		/// <param name="readOnly">optional object readOnly</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 10,11,12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Word", 10,11,12,14,15,16)]
 		public void OpenDataSource2000(string name, object format, object confirmConversions, object readOnly)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(name, format, confirmConversions, readOnly);
-			Invoker.Method(this, "OpenDataSource2000", paramsArray);
+			 Factory.ExecuteMethod(this, "OpenDataSource2000", name, format, confirmConversions, readOnly);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="name">string Name</param>
-		/// <param name="format">optional object Format</param>
-		/// <param name="confirmConversions">optional object ConfirmConversions</param>
-		/// <param name="readOnly">optional object ReadOnly</param>
-		/// <param name="linkToSource">optional object LinkToSource</param>
+		/// <param name="name">string name</param>
+		/// <param name="format">optional object format</param>
+		/// <param name="confirmConversions">optional object confirmConversions</param>
+		/// <param name="readOnly">optional object readOnly</param>
+		/// <param name="linkToSource">optional object linkToSource</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 10,11,12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Word", 10,11,12,14,15,16)]
 		public void OpenDataSource2000(string name, object format, object confirmConversions, object readOnly, object linkToSource)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(name, format, confirmConversions, readOnly, linkToSource);
-			Invoker.Method(this, "OpenDataSource2000", paramsArray);
+			 Factory.ExecuteMethod(this, "OpenDataSource2000", new object[]{ name, format, confirmConversions, readOnly, linkToSource });
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="name">string Name</param>
-		/// <param name="format">optional object Format</param>
-		/// <param name="confirmConversions">optional object ConfirmConversions</param>
-		/// <param name="readOnly">optional object ReadOnly</param>
-		/// <param name="linkToSource">optional object LinkToSource</param>
-		/// <param name="addToRecentFiles">optional object AddToRecentFiles</param>
+		/// <param name="name">string name</param>
+		/// <param name="format">optional object format</param>
+		/// <param name="confirmConversions">optional object confirmConversions</param>
+		/// <param name="readOnly">optional object readOnly</param>
+		/// <param name="linkToSource">optional object linkToSource</param>
+		/// <param name="addToRecentFiles">optional object addToRecentFiles</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 10,11,12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Word", 10,11,12,14,15,16)]
 		public void OpenDataSource2000(string name, object format, object confirmConversions, object readOnly, object linkToSource, object addToRecentFiles)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(name, format, confirmConversions, readOnly, linkToSource, addToRecentFiles);
-			Invoker.Method(this, "OpenDataSource2000", paramsArray);
+			 Factory.ExecuteMethod(this, "OpenDataSource2000", new object[]{ name, format, confirmConversions, readOnly, linkToSource, addToRecentFiles });
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="name">string Name</param>
-		/// <param name="format">optional object Format</param>
-		/// <param name="confirmConversions">optional object ConfirmConversions</param>
-		/// <param name="readOnly">optional object ReadOnly</param>
-		/// <param name="linkToSource">optional object LinkToSource</param>
-		/// <param name="addToRecentFiles">optional object AddToRecentFiles</param>
-		/// <param name="passwordDocument">optional object PasswordDocument</param>
+		/// <param name="name">string name</param>
+		/// <param name="format">optional object format</param>
+		/// <param name="confirmConversions">optional object confirmConversions</param>
+		/// <param name="readOnly">optional object readOnly</param>
+		/// <param name="linkToSource">optional object linkToSource</param>
+		/// <param name="addToRecentFiles">optional object addToRecentFiles</param>
+		/// <param name="passwordDocument">optional object passwordDocument</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 10,11,12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Word", 10,11,12,14,15,16)]
 		public void OpenDataSource2000(string name, object format, object confirmConversions, object readOnly, object linkToSource, object addToRecentFiles, object passwordDocument)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(name, format, confirmConversions, readOnly, linkToSource, addToRecentFiles, passwordDocument);
-			Invoker.Method(this, "OpenDataSource2000", paramsArray);
+			 Factory.ExecuteMethod(this, "OpenDataSource2000", new object[]{ name, format, confirmConversions, readOnly, linkToSource, addToRecentFiles, passwordDocument });
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="name">string Name</param>
-		/// <param name="format">optional object Format</param>
-		/// <param name="confirmConversions">optional object ConfirmConversions</param>
-		/// <param name="readOnly">optional object ReadOnly</param>
-		/// <param name="linkToSource">optional object LinkToSource</param>
-		/// <param name="addToRecentFiles">optional object AddToRecentFiles</param>
-		/// <param name="passwordDocument">optional object PasswordDocument</param>
-		/// <param name="passwordTemplate">optional object PasswordTemplate</param>
+		/// <param name="name">string name</param>
+		/// <param name="format">optional object format</param>
+		/// <param name="confirmConversions">optional object confirmConversions</param>
+		/// <param name="readOnly">optional object readOnly</param>
+		/// <param name="linkToSource">optional object linkToSource</param>
+		/// <param name="addToRecentFiles">optional object addToRecentFiles</param>
+		/// <param name="passwordDocument">optional object passwordDocument</param>
+		/// <param name="passwordTemplate">optional object passwordTemplate</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 10,11,12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Word", 10,11,12,14,15,16)]
 		public void OpenDataSource2000(string name, object format, object confirmConversions, object readOnly, object linkToSource, object addToRecentFiles, object passwordDocument, object passwordTemplate)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(name, format, confirmConversions, readOnly, linkToSource, addToRecentFiles, passwordDocument, passwordTemplate);
-			Invoker.Method(this, "OpenDataSource2000", paramsArray);
+			 Factory.ExecuteMethod(this, "OpenDataSource2000", new object[]{ name, format, confirmConversions, readOnly, linkToSource, addToRecentFiles, passwordDocument, passwordTemplate });
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="name">string Name</param>
-		/// <param name="format">optional object Format</param>
-		/// <param name="confirmConversions">optional object ConfirmConversions</param>
-		/// <param name="readOnly">optional object ReadOnly</param>
-		/// <param name="linkToSource">optional object LinkToSource</param>
-		/// <param name="addToRecentFiles">optional object AddToRecentFiles</param>
-		/// <param name="passwordDocument">optional object PasswordDocument</param>
-		/// <param name="passwordTemplate">optional object PasswordTemplate</param>
-		/// <param name="revert">optional object Revert</param>
+		/// <param name="name">string name</param>
+		/// <param name="format">optional object format</param>
+		/// <param name="confirmConversions">optional object confirmConversions</param>
+		/// <param name="readOnly">optional object readOnly</param>
+		/// <param name="linkToSource">optional object linkToSource</param>
+		/// <param name="addToRecentFiles">optional object addToRecentFiles</param>
+		/// <param name="passwordDocument">optional object passwordDocument</param>
+		/// <param name="passwordTemplate">optional object passwordTemplate</param>
+		/// <param name="revert">optional object revert</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 10,11,12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Word", 10,11,12,14,15,16)]
 		public void OpenDataSource2000(string name, object format, object confirmConversions, object readOnly, object linkToSource, object addToRecentFiles, object passwordDocument, object passwordTemplate, object revert)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(name, format, confirmConversions, readOnly, linkToSource, addToRecentFiles, passwordDocument, passwordTemplate, revert);
-			Invoker.Method(this, "OpenDataSource2000", paramsArray);
+			 Factory.ExecuteMethod(this, "OpenDataSource2000", new object[]{ name, format, confirmConversions, readOnly, linkToSource, addToRecentFiles, passwordDocument, passwordTemplate, revert });
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="name">string Name</param>
-		/// <param name="format">optional object Format</param>
-		/// <param name="confirmConversions">optional object ConfirmConversions</param>
-		/// <param name="readOnly">optional object ReadOnly</param>
-		/// <param name="linkToSource">optional object LinkToSource</param>
-		/// <param name="addToRecentFiles">optional object AddToRecentFiles</param>
-		/// <param name="passwordDocument">optional object PasswordDocument</param>
-		/// <param name="passwordTemplate">optional object PasswordTemplate</param>
-		/// <param name="revert">optional object Revert</param>
-		/// <param name="writePasswordDocument">optional object WritePasswordDocument</param>
+		/// <param name="name">string name</param>
+		/// <param name="format">optional object format</param>
+		/// <param name="confirmConversions">optional object confirmConversions</param>
+		/// <param name="readOnly">optional object readOnly</param>
+		/// <param name="linkToSource">optional object linkToSource</param>
+		/// <param name="addToRecentFiles">optional object addToRecentFiles</param>
+		/// <param name="passwordDocument">optional object passwordDocument</param>
+		/// <param name="passwordTemplate">optional object passwordTemplate</param>
+		/// <param name="revert">optional object revert</param>
+		/// <param name="writePasswordDocument">optional object writePasswordDocument</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 10,11,12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Word", 10,11,12,14,15,16)]
 		public void OpenDataSource2000(string name, object format, object confirmConversions, object readOnly, object linkToSource, object addToRecentFiles, object passwordDocument, object passwordTemplate, object revert, object writePasswordDocument)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(name, format, confirmConversions, readOnly, linkToSource, addToRecentFiles, passwordDocument, passwordTemplate, revert, writePasswordDocument);
-			Invoker.Method(this, "OpenDataSource2000", paramsArray);
+			 Factory.ExecuteMethod(this, "OpenDataSource2000", new object[]{ name, format, confirmConversions, readOnly, linkToSource, addToRecentFiles, passwordDocument, passwordTemplate, revert, writePasswordDocument });
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="name">string Name</param>
-		/// <param name="format">optional object Format</param>
-		/// <param name="confirmConversions">optional object ConfirmConversions</param>
-		/// <param name="readOnly">optional object ReadOnly</param>
-		/// <param name="linkToSource">optional object LinkToSource</param>
-		/// <param name="addToRecentFiles">optional object AddToRecentFiles</param>
-		/// <param name="passwordDocument">optional object PasswordDocument</param>
-		/// <param name="passwordTemplate">optional object PasswordTemplate</param>
-		/// <param name="revert">optional object Revert</param>
-		/// <param name="writePasswordDocument">optional object WritePasswordDocument</param>
-		/// <param name="writePasswordTemplate">optional object WritePasswordTemplate</param>
+		/// <param name="name">string name</param>
+		/// <param name="format">optional object format</param>
+		/// <param name="confirmConversions">optional object confirmConversions</param>
+		/// <param name="readOnly">optional object readOnly</param>
+		/// <param name="linkToSource">optional object linkToSource</param>
+		/// <param name="addToRecentFiles">optional object addToRecentFiles</param>
+		/// <param name="passwordDocument">optional object passwordDocument</param>
+		/// <param name="passwordTemplate">optional object passwordTemplate</param>
+		/// <param name="revert">optional object revert</param>
+		/// <param name="writePasswordDocument">optional object writePasswordDocument</param>
+		/// <param name="writePasswordTemplate">optional object writePasswordTemplate</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 10,11,12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Word", 10,11,12,14,15,16)]
 		public void OpenDataSource2000(string name, object format, object confirmConversions, object readOnly, object linkToSource, object addToRecentFiles, object passwordDocument, object passwordTemplate, object revert, object writePasswordDocument, object writePasswordTemplate)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(name, format, confirmConversions, readOnly, linkToSource, addToRecentFiles, passwordDocument, passwordTemplate, revert, writePasswordDocument, writePasswordTemplate);
-			Invoker.Method(this, "OpenDataSource2000", paramsArray);
+			 Factory.ExecuteMethod(this, "OpenDataSource2000", new object[]{ name, format, confirmConversions, readOnly, linkToSource, addToRecentFiles, passwordDocument, passwordTemplate, revert, writePasswordDocument, writePasswordTemplate });
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="name">string Name</param>
-		/// <param name="format">optional object Format</param>
-		/// <param name="confirmConversions">optional object ConfirmConversions</param>
-		/// <param name="readOnly">optional object ReadOnly</param>
-		/// <param name="linkToSource">optional object LinkToSource</param>
-		/// <param name="addToRecentFiles">optional object AddToRecentFiles</param>
-		/// <param name="passwordDocument">optional object PasswordDocument</param>
-		/// <param name="passwordTemplate">optional object PasswordTemplate</param>
-		/// <param name="revert">optional object Revert</param>
-		/// <param name="writePasswordDocument">optional object WritePasswordDocument</param>
-		/// <param name="writePasswordTemplate">optional object WritePasswordTemplate</param>
-		/// <param name="connection">optional object Connection</param>
+		/// <param name="name">string name</param>
+		/// <param name="format">optional object format</param>
+		/// <param name="confirmConversions">optional object confirmConversions</param>
+		/// <param name="readOnly">optional object readOnly</param>
+		/// <param name="linkToSource">optional object linkToSource</param>
+		/// <param name="addToRecentFiles">optional object addToRecentFiles</param>
+		/// <param name="passwordDocument">optional object passwordDocument</param>
+		/// <param name="passwordTemplate">optional object passwordTemplate</param>
+		/// <param name="revert">optional object revert</param>
+		/// <param name="writePasswordDocument">optional object writePasswordDocument</param>
+		/// <param name="writePasswordTemplate">optional object writePasswordTemplate</param>
+		/// <param name="connection">optional object connection</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 10,11,12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Word", 10,11,12,14,15,16)]
 		public void OpenDataSource2000(string name, object format, object confirmConversions, object readOnly, object linkToSource, object addToRecentFiles, object passwordDocument, object passwordTemplate, object revert, object writePasswordDocument, object writePasswordTemplate, object connection)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(name, format, confirmConversions, readOnly, linkToSource, addToRecentFiles, passwordDocument, passwordTemplate, revert, writePasswordDocument, writePasswordTemplate, connection);
-			Invoker.Method(this, "OpenDataSource2000", paramsArray);
+			 Factory.ExecuteMethod(this, "OpenDataSource2000", new object[]{ name, format, confirmConversions, readOnly, linkToSource, addToRecentFiles, passwordDocument, passwordTemplate, revert, writePasswordDocument, writePasswordTemplate, connection });
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="name">string Name</param>
-		/// <param name="format">optional object Format</param>
-		/// <param name="confirmConversions">optional object ConfirmConversions</param>
-		/// <param name="readOnly">optional object ReadOnly</param>
-		/// <param name="linkToSource">optional object LinkToSource</param>
-		/// <param name="addToRecentFiles">optional object AddToRecentFiles</param>
-		/// <param name="passwordDocument">optional object PasswordDocument</param>
-		/// <param name="passwordTemplate">optional object PasswordTemplate</param>
-		/// <param name="revert">optional object Revert</param>
-		/// <param name="writePasswordDocument">optional object WritePasswordDocument</param>
-		/// <param name="writePasswordTemplate">optional object WritePasswordTemplate</param>
-		/// <param name="connection">optional object Connection</param>
-		/// <param name="sQLStatement">optional object SQLStatement</param>
+		/// <param name="name">string name</param>
+		/// <param name="format">optional object format</param>
+		/// <param name="confirmConversions">optional object confirmConversions</param>
+		/// <param name="readOnly">optional object readOnly</param>
+		/// <param name="linkToSource">optional object linkToSource</param>
+		/// <param name="addToRecentFiles">optional object addToRecentFiles</param>
+		/// <param name="passwordDocument">optional object passwordDocument</param>
+		/// <param name="passwordTemplate">optional object passwordTemplate</param>
+		/// <param name="revert">optional object revert</param>
+		/// <param name="writePasswordDocument">optional object writePasswordDocument</param>
+		/// <param name="writePasswordTemplate">optional object writePasswordTemplate</param>
+		/// <param name="connection">optional object connection</param>
+		/// <param name="sQLStatement">optional object sQLStatement</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 10,11,12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Word", 10,11,12,14,15,16)]
 		public void OpenDataSource2000(string name, object format, object confirmConversions, object readOnly, object linkToSource, object addToRecentFiles, object passwordDocument, object passwordTemplate, object revert, object writePasswordDocument, object writePasswordTemplate, object connection, object sQLStatement)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(name, format, confirmConversions, readOnly, linkToSource, addToRecentFiles, passwordDocument, passwordTemplate, revert, writePasswordDocument, writePasswordTemplate, connection, sQLStatement);
-			Invoker.Method(this, "OpenDataSource2000", paramsArray);
+			 Factory.ExecuteMethod(this, "OpenDataSource2000", new object[]{ name, format, confirmConversions, readOnly, linkToSource, addToRecentFiles, passwordDocument, passwordTemplate, revert, writePasswordDocument, writePasswordTemplate, connection, sQLStatement });
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="name">string Name</param>
-		/// <param name="format">optional object Format</param>
-		/// <param name="confirmConversions">optional object ConfirmConversions</param>
-		/// <param name="readOnly">optional object ReadOnly</param>
-		/// <param name="addToRecentFiles">optional object AddToRecentFiles</param>
-		/// <param name="passwordDocument">optional object PasswordDocument</param>
-		/// <param name="passwordTemplate">optional object PasswordTemplate</param>
-		/// <param name="revert">optional object Revert</param>
-		/// <param name="writePasswordDocument">optional object WritePasswordDocument</param>
-		/// <param name="writePasswordTemplate">optional object WritePasswordTemplate</param>
+		/// <param name="name">string name</param>
+		/// <param name="format">optional object format</param>
+		/// <param name="confirmConversions">optional object confirmConversions</param>
+		/// <param name="readOnly">optional object readOnly</param>
+		/// <param name="addToRecentFiles">optional object addToRecentFiles</param>
+		/// <param name="passwordDocument">optional object passwordDocument</param>
+		/// <param name="passwordTemplate">optional object passwordTemplate</param>
+		/// <param name="revert">optional object revert</param>
+		/// <param name="writePasswordDocument">optional object writePasswordDocument</param>
+		/// <param name="writePasswordTemplate">optional object writePasswordTemplate</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("Word", 10,11,12,14,15,16)]
+		[SupportByVersion("Word", 10,11,12,14,15,16)]
 		public void OpenHeaderSource2000(string name, object format, object confirmConversions, object readOnly, object addToRecentFiles, object passwordDocument, object passwordTemplate, object revert, object writePasswordDocument, object writePasswordTemplate)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(name, format, confirmConversions, readOnly, addToRecentFiles, passwordDocument, passwordTemplate, revert, writePasswordDocument, writePasswordTemplate);
-			Invoker.Method(this, "OpenHeaderSource2000", paramsArray);
+			 Factory.ExecuteMethod(this, "OpenHeaderSource2000", new object[]{ name, format, confirmConversions, readOnly, addToRecentFiles, passwordDocument, passwordTemplate, revert, writePasswordDocument, writePasswordTemplate });
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="name">string Name</param>
+		/// <param name="name">string name</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 10,11,12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Word", 10,11,12,14,15,16)]
 		public void OpenHeaderSource2000(string name)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(name);
-			Invoker.Method(this, "OpenHeaderSource2000", paramsArray);
+			 Factory.ExecuteMethod(this, "OpenHeaderSource2000", name);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="name">string Name</param>
-		/// <param name="format">optional object Format</param>
+		/// <param name="name">string name</param>
+		/// <param name="format">optional object format</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 10,11,12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Word", 10,11,12,14,15,16)]
 		public void OpenHeaderSource2000(string name, object format)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(name, format);
-			Invoker.Method(this, "OpenHeaderSource2000", paramsArray);
+			 Factory.ExecuteMethod(this, "OpenHeaderSource2000", name, format);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="name">string Name</param>
-		/// <param name="format">optional object Format</param>
-		/// <param name="confirmConversions">optional object ConfirmConversions</param>
+		/// <param name="name">string name</param>
+		/// <param name="format">optional object format</param>
+		/// <param name="confirmConversions">optional object confirmConversions</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 10,11,12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Word", 10,11,12,14,15,16)]
 		public void OpenHeaderSource2000(string name, object format, object confirmConversions)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(name, format, confirmConversions);
-			Invoker.Method(this, "OpenHeaderSource2000", paramsArray);
+			 Factory.ExecuteMethod(this, "OpenHeaderSource2000", name, format, confirmConversions);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="name">string Name</param>
-		/// <param name="format">optional object Format</param>
-		/// <param name="confirmConversions">optional object ConfirmConversions</param>
-		/// <param name="readOnly">optional object ReadOnly</param>
+		/// <param name="name">string name</param>
+		/// <param name="format">optional object format</param>
+		/// <param name="confirmConversions">optional object confirmConversions</param>
+		/// <param name="readOnly">optional object readOnly</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 10,11,12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Word", 10,11,12,14,15,16)]
 		public void OpenHeaderSource2000(string name, object format, object confirmConversions, object readOnly)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(name, format, confirmConversions, readOnly);
-			Invoker.Method(this, "OpenHeaderSource2000", paramsArray);
+			 Factory.ExecuteMethod(this, "OpenHeaderSource2000", name, format, confirmConversions, readOnly);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="name">string Name</param>
-		/// <param name="format">optional object Format</param>
-		/// <param name="confirmConversions">optional object ConfirmConversions</param>
-		/// <param name="readOnly">optional object ReadOnly</param>
-		/// <param name="addToRecentFiles">optional object AddToRecentFiles</param>
+		/// <param name="name">string name</param>
+		/// <param name="format">optional object format</param>
+		/// <param name="confirmConversions">optional object confirmConversions</param>
+		/// <param name="readOnly">optional object readOnly</param>
+		/// <param name="addToRecentFiles">optional object addToRecentFiles</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 10,11,12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Word", 10,11,12,14,15,16)]
 		public void OpenHeaderSource2000(string name, object format, object confirmConversions, object readOnly, object addToRecentFiles)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(name, format, confirmConversions, readOnly, addToRecentFiles);
-			Invoker.Method(this, "OpenHeaderSource2000", paramsArray);
+			 Factory.ExecuteMethod(this, "OpenHeaderSource2000", new object[]{ name, format, confirmConversions, readOnly, addToRecentFiles });
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="name">string Name</param>
-		/// <param name="format">optional object Format</param>
-		/// <param name="confirmConversions">optional object ConfirmConversions</param>
-		/// <param name="readOnly">optional object ReadOnly</param>
-		/// <param name="addToRecentFiles">optional object AddToRecentFiles</param>
-		/// <param name="passwordDocument">optional object PasswordDocument</param>
+		/// <param name="name">string name</param>
+		/// <param name="format">optional object format</param>
+		/// <param name="confirmConversions">optional object confirmConversions</param>
+		/// <param name="readOnly">optional object readOnly</param>
+		/// <param name="addToRecentFiles">optional object addToRecentFiles</param>
+		/// <param name="passwordDocument">optional object passwordDocument</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 10,11,12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Word", 10,11,12,14,15,16)]
 		public void OpenHeaderSource2000(string name, object format, object confirmConversions, object readOnly, object addToRecentFiles, object passwordDocument)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(name, format, confirmConversions, readOnly, addToRecentFiles, passwordDocument);
-			Invoker.Method(this, "OpenHeaderSource2000", paramsArray);
+			 Factory.ExecuteMethod(this, "OpenHeaderSource2000", new object[]{ name, format, confirmConversions, readOnly, addToRecentFiles, passwordDocument });
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="name">string Name</param>
-		/// <param name="format">optional object Format</param>
-		/// <param name="confirmConversions">optional object ConfirmConversions</param>
-		/// <param name="readOnly">optional object ReadOnly</param>
-		/// <param name="addToRecentFiles">optional object AddToRecentFiles</param>
-		/// <param name="passwordDocument">optional object PasswordDocument</param>
-		/// <param name="passwordTemplate">optional object PasswordTemplate</param>
+		/// <param name="name">string name</param>
+		/// <param name="format">optional object format</param>
+		/// <param name="confirmConversions">optional object confirmConversions</param>
+		/// <param name="readOnly">optional object readOnly</param>
+		/// <param name="addToRecentFiles">optional object addToRecentFiles</param>
+		/// <param name="passwordDocument">optional object passwordDocument</param>
+		/// <param name="passwordTemplate">optional object passwordTemplate</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 10,11,12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Word", 10,11,12,14,15,16)]
 		public void OpenHeaderSource2000(string name, object format, object confirmConversions, object readOnly, object addToRecentFiles, object passwordDocument, object passwordTemplate)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(name, format, confirmConversions, readOnly, addToRecentFiles, passwordDocument, passwordTemplate);
-			Invoker.Method(this, "OpenHeaderSource2000", paramsArray);
+			 Factory.ExecuteMethod(this, "OpenHeaderSource2000", new object[]{ name, format, confirmConversions, readOnly, addToRecentFiles, passwordDocument, passwordTemplate });
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="name">string Name</param>
-		/// <param name="format">optional object Format</param>
-		/// <param name="confirmConversions">optional object ConfirmConversions</param>
-		/// <param name="readOnly">optional object ReadOnly</param>
-		/// <param name="addToRecentFiles">optional object AddToRecentFiles</param>
-		/// <param name="passwordDocument">optional object PasswordDocument</param>
-		/// <param name="passwordTemplate">optional object PasswordTemplate</param>
-		/// <param name="revert">optional object Revert</param>
+		/// <param name="name">string name</param>
+		/// <param name="format">optional object format</param>
+		/// <param name="confirmConversions">optional object confirmConversions</param>
+		/// <param name="readOnly">optional object readOnly</param>
+		/// <param name="addToRecentFiles">optional object addToRecentFiles</param>
+		/// <param name="passwordDocument">optional object passwordDocument</param>
+		/// <param name="passwordTemplate">optional object passwordTemplate</param>
+		/// <param name="revert">optional object revert</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 10,11,12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Word", 10,11,12,14,15,16)]
 		public void OpenHeaderSource2000(string name, object format, object confirmConversions, object readOnly, object addToRecentFiles, object passwordDocument, object passwordTemplate, object revert)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(name, format, confirmConversions, readOnly, addToRecentFiles, passwordDocument, passwordTemplate, revert);
-			Invoker.Method(this, "OpenHeaderSource2000", paramsArray);
+			 Factory.ExecuteMethod(this, "OpenHeaderSource2000", new object[]{ name, format, confirmConversions, readOnly, addToRecentFiles, passwordDocument, passwordTemplate, revert });
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="name">string Name</param>
-		/// <param name="format">optional object Format</param>
-		/// <param name="confirmConversions">optional object ConfirmConversions</param>
-		/// <param name="readOnly">optional object ReadOnly</param>
-		/// <param name="addToRecentFiles">optional object AddToRecentFiles</param>
-		/// <param name="passwordDocument">optional object PasswordDocument</param>
-		/// <param name="passwordTemplate">optional object PasswordTemplate</param>
-		/// <param name="revert">optional object Revert</param>
-		/// <param name="writePasswordDocument">optional object WritePasswordDocument</param>
+		/// <param name="name">string name</param>
+		/// <param name="format">optional object format</param>
+		/// <param name="confirmConversions">optional object confirmConversions</param>
+		/// <param name="readOnly">optional object readOnly</param>
+		/// <param name="addToRecentFiles">optional object addToRecentFiles</param>
+		/// <param name="passwordDocument">optional object passwordDocument</param>
+		/// <param name="passwordTemplate">optional object passwordTemplate</param>
+		/// <param name="revert">optional object revert</param>
+		/// <param name="writePasswordDocument">optional object writePasswordDocument</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 10,11,12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Word", 10,11,12,14,15,16)]
 		public void OpenHeaderSource2000(string name, object format, object confirmConversions, object readOnly, object addToRecentFiles, object passwordDocument, object passwordTemplate, object revert, object writePasswordDocument)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(name, format, confirmConversions, readOnly, addToRecentFiles, passwordDocument, passwordTemplate, revert, writePasswordDocument);
-			Invoker.Method(this, "OpenHeaderSource2000", paramsArray);
+			 Factory.ExecuteMethod(this, "OpenHeaderSource2000", new object[]{ name, format, confirmConversions, readOnly, addToRecentFiles, passwordDocument, passwordTemplate, revert, writePasswordDocument });
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff844772.aspx
 		/// </summary>
-		/// <param name="initialState">object InitialState</param>
-		/// <param name="showDocumentStep">optional object ShowDocumentStep</param>
-		/// <param name="showTemplateStep">optional object ShowTemplateStep</param>
-		/// <param name="showDataStep">optional object ShowDataStep</param>
-		/// <param name="showWriteStep">optional object ShowWriteStep</param>
-		/// <param name="showPreviewStep">optional object ShowPreviewStep</param>
-		/// <param name="showMergeStep">optional object ShowMergeStep</param>
-		[SupportByVersionAttribute("Word", 10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff844772.aspx </remarks>
+		/// <param name="initialState">object initialState</param>
+		/// <param name="showDocumentStep">optional object showDocumentStep</param>
+		/// <param name="showTemplateStep">optional object showTemplateStep</param>
+		/// <param name="showDataStep">optional object showDataStep</param>
+		/// <param name="showWriteStep">optional object showWriteStep</param>
+		/// <param name="showPreviewStep">optional object showPreviewStep</param>
+		/// <param name="showMergeStep">optional object showMergeStep</param>
+		[SupportByVersion("Word", 10,11,12,14,15,16)]
 		public void ShowWizard(object initialState, object showDocumentStep, object showTemplateStep, object showDataStep, object showWriteStep, object showPreviewStep, object showMergeStep)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(initialState, showDocumentStep, showTemplateStep, showDataStep, showWriteStep, showPreviewStep, showMergeStep);
-			Invoker.Method(this, "ShowWizard", paramsArray);
+			 Factory.ExecuteMethod(this, "ShowWizard", new object[]{ initialState, showDocumentStep, showTemplateStep, showDataStep, showWriteStep, showPreviewStep, showMergeStep });
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff844772.aspx
 		/// </summary>
-		/// <param name="initialState">object InitialState</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff844772.aspx </remarks>
+		/// <param name="initialState">object initialState</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 10,11,12,14,15,16)]
 		public void ShowWizard(object initialState)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(initialState);
-			Invoker.Method(this, "ShowWizard", paramsArray);
+			 Factory.ExecuteMethod(this, "ShowWizard", initialState);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff844772.aspx
 		/// </summary>
-		/// <param name="initialState">object InitialState</param>
-		/// <param name="showDocumentStep">optional object ShowDocumentStep</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff844772.aspx </remarks>
+		/// <param name="initialState">object initialState</param>
+		/// <param name="showDocumentStep">optional object showDocumentStep</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 10,11,12,14,15,16)]
 		public void ShowWizard(object initialState, object showDocumentStep)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(initialState, showDocumentStep);
-			Invoker.Method(this, "ShowWizard", paramsArray);
+			 Factory.ExecuteMethod(this, "ShowWizard", initialState, showDocumentStep);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff844772.aspx
 		/// </summary>
-		/// <param name="initialState">object InitialState</param>
-		/// <param name="showDocumentStep">optional object ShowDocumentStep</param>
-		/// <param name="showTemplateStep">optional object ShowTemplateStep</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff844772.aspx </remarks>
+		/// <param name="initialState">object initialState</param>
+		/// <param name="showDocumentStep">optional object showDocumentStep</param>
+		/// <param name="showTemplateStep">optional object showTemplateStep</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 10,11,12,14,15,16)]
 		public void ShowWizard(object initialState, object showDocumentStep, object showTemplateStep)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(initialState, showDocumentStep, showTemplateStep);
-			Invoker.Method(this, "ShowWizard", paramsArray);
+			 Factory.ExecuteMethod(this, "ShowWizard", initialState, showDocumentStep, showTemplateStep);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff844772.aspx
 		/// </summary>
-		/// <param name="initialState">object InitialState</param>
-		/// <param name="showDocumentStep">optional object ShowDocumentStep</param>
-		/// <param name="showTemplateStep">optional object ShowTemplateStep</param>
-		/// <param name="showDataStep">optional object ShowDataStep</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff844772.aspx </remarks>
+		/// <param name="initialState">object initialState</param>
+		/// <param name="showDocumentStep">optional object showDocumentStep</param>
+		/// <param name="showTemplateStep">optional object showTemplateStep</param>
+		/// <param name="showDataStep">optional object showDataStep</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 10,11,12,14,15,16)]
 		public void ShowWizard(object initialState, object showDocumentStep, object showTemplateStep, object showDataStep)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(initialState, showDocumentStep, showTemplateStep, showDataStep);
-			Invoker.Method(this, "ShowWizard", paramsArray);
+			 Factory.ExecuteMethod(this, "ShowWizard", initialState, showDocumentStep, showTemplateStep, showDataStep);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff844772.aspx
 		/// </summary>
-		/// <param name="initialState">object InitialState</param>
-		/// <param name="showDocumentStep">optional object ShowDocumentStep</param>
-		/// <param name="showTemplateStep">optional object ShowTemplateStep</param>
-		/// <param name="showDataStep">optional object ShowDataStep</param>
-		/// <param name="showWriteStep">optional object ShowWriteStep</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff844772.aspx </remarks>
+		/// <param name="initialState">object initialState</param>
+		/// <param name="showDocumentStep">optional object showDocumentStep</param>
+		/// <param name="showTemplateStep">optional object showTemplateStep</param>
+		/// <param name="showDataStep">optional object showDataStep</param>
+		/// <param name="showWriteStep">optional object showWriteStep</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 10,11,12,14,15,16)]
 		public void ShowWizard(object initialState, object showDocumentStep, object showTemplateStep, object showDataStep, object showWriteStep)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(initialState, showDocumentStep, showTemplateStep, showDataStep, showWriteStep);
-			Invoker.Method(this, "ShowWizard", paramsArray);
+			 Factory.ExecuteMethod(this, "ShowWizard", new object[]{ initialState, showDocumentStep, showTemplateStep, showDataStep, showWriteStep });
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff844772.aspx
 		/// </summary>
-		/// <param name="initialState">object InitialState</param>
-		/// <param name="showDocumentStep">optional object ShowDocumentStep</param>
-		/// <param name="showTemplateStep">optional object ShowTemplateStep</param>
-		/// <param name="showDataStep">optional object ShowDataStep</param>
-		/// <param name="showWriteStep">optional object ShowWriteStep</param>
-		/// <param name="showPreviewStep">optional object ShowPreviewStep</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff844772.aspx </remarks>
+		/// <param name="initialState">object initialState</param>
+		/// <param name="showDocumentStep">optional object showDocumentStep</param>
+		/// <param name="showTemplateStep">optional object showTemplateStep</param>
+		/// <param name="showDataStep">optional object showDataStep</param>
+		/// <param name="showWriteStep">optional object showWriteStep</param>
+		/// <param name="showPreviewStep">optional object showPreviewStep</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 10,11,12,14,15,16)]
 		public void ShowWizard(object initialState, object showDocumentStep, object showTemplateStep, object showDataStep, object showWriteStep, object showPreviewStep)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(initialState, showDocumentStep, showTemplateStep, showDataStep, showWriteStep, showPreviewStep);
-			Invoker.Method(this, "ShowWizard", paramsArray);
+			 Factory.ExecuteMethod(this, "ShowWizard", new object[]{ initialState, showDocumentStep, showTemplateStep, showDataStep, showWriteStep, showPreviewStep });
 		}
 
 		#endregion
+
 		#pragma warning restore
 	}
 }

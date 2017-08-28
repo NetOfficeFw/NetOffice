@@ -1,48 +1,48 @@
 ﻿using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
-using NetOffice;
-using NetOffice.Misc;
+using NetOffice.Attributes;
 
 namespace NetOffice.OutlookApi
 {
-
 	#region Delegates
 
 	#pragma warning disable
 	public delegate void OlkCheckBox_ClickEventHandler();
 	public delegate void OlkCheckBox_DoubleClickEventHandler();
-	public delegate void OlkCheckBox_MouseDownEventHandler(NetOffice.OutlookApi.Enums.OlMouseButton Button, NetOffice.OutlookApi.Enums.OlShiftState Shift, Single X, Single Y);
-	public delegate void OlkCheckBox_MouseMoveEventHandler(NetOffice.OutlookApi.Enums.OlMouseButton Button, NetOffice.OutlookApi.Enums.OlShiftState Shift, Single X, Single Y);
-	public delegate void OlkCheckBox_MouseUpEventHandler(NetOffice.OutlookApi.Enums.OlMouseButton Button, NetOffice.OutlookApi.Enums.OlShiftState Shift, Single X, Single Y);
+	public delegate void OlkCheckBox_MouseDownEventHandler(NetOffice.OutlookApi.Enums.OlMouseButton button, NetOffice.OutlookApi.Enums.OlShiftState shift, Single x, Single y);
+	public delegate void OlkCheckBox_MouseMoveEventHandler(NetOffice.OutlookApi.Enums.OlMouseButton button, NetOffice.OutlookApi.Enums.OlShiftState shift, Single x, Single y);
+	public delegate void OlkCheckBox_MouseUpEventHandler(NetOffice.OutlookApi.Enums.OlMouseButton button, NetOffice.OutlookApi.Enums.OlShiftState shift, Single x, Single y);
 	public delegate void OlkCheckBox_EnterEventHandler();
-	public delegate void OlkCheckBox_ExitEventHandler(ref bool Cancel);
-	public delegate void OlkCheckBox_KeyDownEventHandler(ref Int32 KeyCode, NetOffice.OutlookApi.Enums.OlShiftState Shift);
-	public delegate void OlkCheckBox_KeyPressEventHandler(ref Int32 KeyAscii);
-	public delegate void OlkCheckBox_KeyUpEventHandler(ref Int32 KeyCode, NetOffice.OutlookApi.Enums.OlShiftState Shift);
+	public delegate void OlkCheckBox_ExitEventHandler(ref bool cancel);
+	public delegate void OlkCheckBox_KeyDownEventHandler(ref Int32 keyCode, NetOffice.OutlookApi.Enums.OlShiftState shift);
+	public delegate void OlkCheckBox_KeyPressEventHandler(ref Int32 keyAscii);
+	public delegate void OlkCheckBox_KeyUpEventHandler(ref Int32 keyCode, NetOffice.OutlookApi.Enums.OlShiftState shift);
 	public delegate void OlkCheckBox_ChangeEventHandler();
 	public delegate void OlkCheckBox_AfterUpdateEventHandler();
-	public delegate void OlkCheckBox_BeforeUpdateEventHandler(ref bool Cancel);
+	public delegate void OlkCheckBox_BeforeUpdateEventHandler(ref bool cancel);
 	#pragma warning restore
 
 	#endregion
 
-	///<summary>
+	/// <summary>
 	/// CoClass OlkCheckBox 
 	/// SupportByVersion Outlook, 12,14,15,16
-	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff866887.aspx
-	///</summary>
-	[SupportByVersionAttribute("Outlook", 12,14,15,16)]
-	[EntityTypeAttribute(EntityType.IsCoClass)]
-	public class OlkCheckBox : _OlkCheckBox,IEventBinding
+	/// </summary>
+	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff866887.aspx </remarks>
+	[SupportByVersion("Outlook", 12,14,15,16)]
+	[EntityType(EntityType.IsCoClass)]
+	[EventSink(typeof(Events.OlkCheckBoxEvents_SinkHelper))]
+	public class OlkCheckBox : _OlkCheckBox, IEventBinding
 	{
 		#pragma warning disable
+
 		#region Fields
 		
 		private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
 		private string _activeSinkId;
 		private NetRuntimeSystem.Type _thisType;
-		OlkCheckBoxEvents_SinkHelper _olkCheckBoxEvents_SinkHelper;
+		private Events.OlkCheckBoxEvents_SinkHelper _olkCheckBoxEvents_SinkHelper;
 	
 		#endregion
 
@@ -51,6 +51,7 @@ namespace NetOffice.OutlookApi
         /// <summary>
         /// Instance Type
         /// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
         public override Type InstanceType
         {
             get
@@ -117,17 +118,17 @@ namespace NetOffice.OutlookApi
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of OlkCheckBox 
-        ///</summary>		
+        /// </summary>		
 		public OlkCheckBox():base("Outlook.OlkCheckBox")
 		{
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of OlkCheckBox
-        ///</summary>
+        /// </summary>
         ///<param name="progId">registered ProgID</param>
 		public OlkCheckBox(string progId):base(progId)
 		{
@@ -137,46 +138,6 @@ namespace NetOffice.OutlookApi
 		#endregion
 
 		#region Static CoClass Methods
-
-		/// <summary>
-        /// Returns all running Outlook.OlkCheckBox objects from the environment/system
-        /// </summary>
-        /// <returns>an Outlook.OlkCheckBox array</returns>
-		public static NetOffice.OutlookApi.OlkCheckBox[] GetActiveInstances()
-		{		
-			IDisposableEnumeration proxyList = NetOffice.ProxyService.GetActiveInstances("Outlook","OlkCheckBox");
-			NetRuntimeSystem.Collections.Generic.List<NetOffice.OutlookApi.OlkCheckBox> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.OutlookApi.OlkCheckBox>();
-			foreach(object proxy in proxyList)
-				resultList.Add( new NetOffice.OutlookApi.OlkCheckBox(null, proxy) );
-			return resultList.ToArray();
-		}
-
-		/// <summary>
-        /// Returns a running Outlook.OlkCheckBox object from the environment/system.
-        /// </summary>
-        /// <returns>an Outlook.OlkCheckBox object or null</returns>
-		public static NetOffice.OutlookApi.OlkCheckBox GetActiveInstance()
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Outlook","OlkCheckBox", false);
-			if(null != proxy)
-				return new NetOffice.OutlookApi.OlkCheckBox(null, proxy);
-			else
-				return null;
-		}
-
-		/// <summary>
-        /// Returns a running Outlook.OlkCheckBox object from the environment/system. 
-        /// </summary>
-	    /// <param name="throwOnError">throw an exception if no object was found</param>
-        /// <returns>an Outlook.OlkCheckBox object or null</returns>
-		public static NetOffice.OutlookApi.OlkCheckBox GetActiveInstance(bool throwOnError)
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Outlook","OlkCheckBox", throwOnError);
-			if(null != proxy)
-				return new NetOffice.OutlookApi.OlkCheckBox(null, proxy);
-			else
-				return null;
-		}
 		#endregion
 
 		#region Events
@@ -497,12 +458,12 @@ namespace NetOffice.OutlookApi
 				return;
 	
             if (null == _activeSinkId)
-				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, OlkCheckBoxEvents_SinkHelper.Id);
+				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, Events.OlkCheckBoxEvents_SinkHelper.Id);
 
 
-			if(OlkCheckBoxEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
+			if(Events.OlkCheckBoxEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
 			{
-				_olkCheckBoxEvents_SinkHelper = new OlkCheckBoxEvents_SinkHelper(this, _connectPoint);
+				_olkCheckBoxEvents_SinkHelper = new Events.OlkCheckBoxEvents_SinkHelper(this, _connectPoint);
 				return;
 			} 
         }

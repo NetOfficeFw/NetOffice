@@ -15,69 +15,6 @@ namespace NetOffice
         #region Nested
 
         /// <summary>
-        /// Message Added delegate
-        /// </summary>
-        /// <param name="sender">sender instance</param>
-        /// <param name="message">new message</param>
-        public delegate void MessageAddedHandler(DebugConsole sender, ConsoleMessage message);
-
-        /// <summary>
-        /// Message Removed delegate
-        /// </summary>
-        /// <param name="sender">sender instance</param>
-        /// <param name="message">removed message</param>
-        /// <param name="index">former message index</param>
-        public delegate void MessageRemovedHandler(DebugConsole sender, ConsoleMessage message, int index);
-
-        /// <summary>
-        /// Message Clear delegate
-        /// </summary>
-        /// <param name="sender">sender instance</param>
-        public delegate void MessageClearHandler(DebugConsole sender);
-
-        /// <summary>
-        /// Bindable list wrapper
-        /// </summary>
-        /// <typeparam name="T">T as any</typeparam>
-        public class TypedList<T> : List<T>, ITypedList where T :class
-        {
-            /// <summary>
-            /// Creates an instance of the class
-            /// </summary>
-            public TypedList()
-            {  
-            }
-
-            /// <summary>
-            /// Creates an instance of the class
-            /// </summary>
-            /// <param name="list">list to copy</param>
-            public TypedList(IList<T> list) : base(list)
-            {
-            }
-
-            /// <summary>
-            /// Returns informations about T
-            /// </summary>
-            /// <param name="listAccessors">attributes</param>
-            /// <returns>type description</returns>
-            public PropertyDescriptorCollection GetItemProperties(PropertyDescriptor[] listAccessors)
-            {
-                return TypeDescriptor.GetProperties(typeof(T));
-            }
-
-            /// <summary>
-            /// Unsupported
-            /// </summary>
-            /// <param name="listAccessors"></param>
-            /// <returns></returns>
-            public string GetListName(PropertyDescriptor[] listAccessors)
-            {
-                return String.Empty;
-            }
-        }
-
-        /// <summary>
         /// Console Message Kind
         /// </summary>
         public enum MessageKind
@@ -157,7 +94,7 @@ namespace NetOffice
             {
                 PipeName = pipeName;
                 Text = text;
-                Error = error;                
+                Error = error;
                 DisableSharedOutput = disableSharedOutput;
             }
 
@@ -196,15 +133,38 @@ namespace NetOffice
             public bool DisableSharedOutput { get; set; }
         }
 
+        /// <summary>
+        /// Message Added delegate
+        /// </summary>
+        /// <param name="sender">sender instance</param>
+        /// <param name="message">new message</param>
+        public delegate void MessageAddedHandler(DebugConsole sender, ConsoleMessage message);
+
+        /// <summary>
+        /// Message Removed delegate
+        /// </summary>
+        /// <param name="sender">sender instance</param>
+        /// <param name="message">removed message</param>
+        /// <param name="index">former message index</param>
+        public delegate void MessageRemovedHandler(DebugConsole sender, ConsoleMessage message, int index);
+
+        /// <summary>
+        /// Message Clear delegate
+        /// </summary>
+        /// <param name="sender">sender instance</param>
+        public delegate void MessageClearHandler(DebugConsole sender);
+
         #endregion
 
         #region Fields
+
+        private static DebugConsole _default;
 
         private static object _thisLock = new object();
 
         private static object _sharedLock = new object();
         
-        private TypedList<ConsoleMessage> _messageList = new TypedList<ConsoleMessage>();
+        private List<ConsoleMessage> _messageList = new List<ConsoleMessage>();
 
         private string _name = "";
 
@@ -293,8 +253,7 @@ namespace NetOffice
 
             }
         }
-        private static DebugConsole _default;
-
+      
         /// <summary>
         /// Name of the Console instance
         /// </summary>
@@ -550,7 +509,7 @@ namespace NetOffice
             _messageList.Add(message);
             RaiseMessageAdded(message);
 
-            if (_messageList.Count >= 1010)
+            if (_messageList.Count >= 110)
             {
                 while (_messageList.Count >= 1000)
                 {

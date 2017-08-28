@@ -1,42 +1,42 @@
 ﻿using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
-using NetOffice;
-using NetOffice.Misc;
+using NetOffice.Attributes;
 
 namespace NetOffice.MSFormsApi
 {
-
 	#region Delegates
 
 	#pragma warning disable
-	public delegate void Image_BeforeDragOverEventHandler(NetOffice.MSFormsApi.ReturnBoolean Cancel, NetOffice.MSFormsApi.DataObject Data, Single X, Single Y, NetOffice.MSFormsApi.Enums.fmDragState DragState, NetOffice.MSFormsApi.ReturnEffect Effect, Int16 Shift);
-	public delegate void Image_BeforeDropOrPasteEventHandler(NetOffice.MSFormsApi.ReturnBoolean Cancel, NetOffice.MSFormsApi.Enums.fmAction Action, NetOffice.MSFormsApi.DataObject Data, Single X, Single Y, NetOffice.MSFormsApi.ReturnEffect Effect, Int16 Shift);
+	public delegate void Image_BeforeDragOverEventHandler(NetOffice.MSFormsApi.ReturnBoolean cancel, NetOffice.MSFormsApi.DataObject data, Single x, Single y, NetOffice.MSFormsApi.Enums.fmDragState dragState, NetOffice.MSFormsApi.ReturnEffect effect, Int16 shift);
+	public delegate void Image_BeforeDropOrPasteEventHandler(NetOffice.MSFormsApi.ReturnBoolean cancel, NetOffice.MSFormsApi.Enums.fmAction action, NetOffice.MSFormsApi.DataObject data, Single x, Single y, NetOffice.MSFormsApi.ReturnEffect effect, Int16 shift);
 	public delegate void Image_ClickEventHandler();
-	public delegate void Image_DblClickEventHandler(NetOffice.MSFormsApi.ReturnBoolean Cancel);
-	public delegate void Image_ErrorEventHandler(Int16 Number, NetOffice.MSFormsApi.ReturnString Description, Int32 SCode, string Source, string HelpFile, Int32 HelpContext, NetOffice.MSFormsApi.ReturnBoolean CancelDisplay);
-	public delegate void Image_MouseDownEventHandler(Int16 Button, Int16 Shift, Single X, Single Y);
-	public delegate void Image_MouseMoveEventHandler(Int16 Button, Int16 Shift, Single X, Single Y);
-	public delegate void Image_MouseUpEventHandler(Int16 Button, Int16 Shift, Single X, Single Y);
+	public delegate void Image_DblClickEventHandler(NetOffice.MSFormsApi.ReturnBoolean cancel);
+	public delegate void Image_ErrorEventHandler(Int16 number, NetOffice.MSFormsApi.ReturnString description, Int32 sCode, string source, string helpFile, Int32 helpContext, NetOffice.MSFormsApi.ReturnBoolean cancelDisplay);
+	public delegate void Image_MouseDownEventHandler(Int16 button, Int16 shift, Single x, Single y);
+	public delegate void Image_MouseMoveEventHandler(Int16 button, Int16 shift, Single x, Single y);
+	public delegate void Image_MouseUpEventHandler(Int16 button, Int16 shift, Single x, Single y);
 	#pragma warning restore
 
 	#endregion
 
-	///<summary>
+	/// <summary>
 	/// CoClass Image 
 	/// SupportByVersion MSForms, 2
-	///</summary>
-	[SupportByVersionAttribute("MSForms", 2)]
-	[EntityTypeAttribute(EntityType.IsCoClass)]
-	public class Image : IImage,IEventBinding
+	/// </summary>
+	[SupportByVersion("MSForms", 2)]
+	[EntityType(EntityType.IsCoClass)]
+	[EventSink(typeof(Events.ImageEvents_SinkHelper))]
+	public class Image : IImage, IEventBinding
 	{
 		#pragma warning disable
+
 		#region Fields
 		
 		private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
 		private string _activeSinkId;
 		private NetRuntimeSystem.Type _thisType;
-		ImageEvents_SinkHelper _imageEvents_SinkHelper;
+		private Events.ImageEvents_SinkHelper _imageEvents_SinkHelper;
 	
 		#endregion
 
@@ -45,6 +45,7 @@ namespace NetOffice.MSFormsApi
         /// <summary>
         /// Instance Type
         /// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
         public override Type InstanceType
         {
             get
@@ -111,17 +112,17 @@ namespace NetOffice.MSFormsApi
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of Image 
-        ///</summary>		
+        /// </summary>		
 		public Image():base("MSForms.Image")
 		{
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of Image
-        ///</summary>
+        /// </summary>
         ///<param name="progId">registered ProgID</param>
 		public Image(string progId):base(progId)
 		{
@@ -131,46 +132,6 @@ namespace NetOffice.MSFormsApi
 		#endregion
 
 		#region Static CoClass Methods
-
-		/// <summary>
-        /// Returns all running MSForms.Image objects from the environment/system
-        /// </summary>
-        /// <returns>an MSForms.Image array</returns>
-		public static NetOffice.MSFormsApi.Image[] GetActiveInstances()
-		{		
-			IDisposableEnumeration proxyList = NetOffice.ProxyService.GetActiveInstances("MSForms","Image");
-			NetRuntimeSystem.Collections.Generic.List<NetOffice.MSFormsApi.Image> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.MSFormsApi.Image>();
-			foreach(object proxy in proxyList)
-				resultList.Add( new NetOffice.MSFormsApi.Image(null, proxy) );
-			return resultList.ToArray();
-		}
-
-		/// <summary>
-        /// Returns a running MSForms.Image object from the environment/system.
-        /// </summary>
-        /// <returns>an MSForms.Image object or null</returns>
-		public static NetOffice.MSFormsApi.Image GetActiveInstance()
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("MSForms","Image", false);
-			if(null != proxy)
-				return new NetOffice.MSFormsApi.Image(null, proxy);
-			else
-				return null;
-		}
-
-		/// <summary>
-        /// Returns a running MSForms.Image object from the environment/system. 
-        /// </summary>
-	    /// <param name="throwOnError">throw an exception if no object was found</param>
-        /// <returns>an MSForms.Image object or null</returns>
-		public static NetOffice.MSFormsApi.Image GetActiveInstance(bool throwOnError)
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("MSForms","Image", throwOnError);
-			if(null != proxy)
-				return new NetOffice.MSFormsApi.Image(null, proxy);
-			else
-				return null;
-		}
 		#endregion
 
 		#region Events
@@ -368,12 +329,12 @@ namespace NetOffice.MSFormsApi
 				return;
 	
             if (null == _activeSinkId)
-				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, ImageEvents_SinkHelper.Id);
+				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, Events.ImageEvents_SinkHelper.Id);
 
 
-			if(ImageEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
+			if(Events.ImageEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
 			{
-				_imageEvents_SinkHelper = new ImageEvents_SinkHelper(this, _connectPoint);
+				_imageEvents_SinkHelper = new Events.ImageEvents_SinkHelper(this, _connectPoint);
 				return;
 			} 
         }

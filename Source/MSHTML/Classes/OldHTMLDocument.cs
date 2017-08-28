@@ -1,12 +1,10 @@
 ﻿using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
-using NetOffice;
-using NetOffice.Misc;
+using NetOffice.Attributes;
 
 namespace NetOffice.MSHTMLApi
 {
-
 	#region Delegates
 
 	#pragma warning disable
@@ -52,21 +50,23 @@ namespace NetOffice.MSHTMLApi
 
 	#endregion
 
-	///<summary>
+	/// <summary>
 	/// CoClass OldHTMLDocument 
 	/// SupportByVersion MSHTML, 4
-	///</summary>
-	[SupportByVersionAttribute("MSHTML", 4)]
-	[EntityTypeAttribute(EntityType.IsCoClass)]
-	public class OldHTMLDocument : DispHTMLDocument,IEventBinding
+	/// </summary>
+	[SupportByVersion("MSHTML", 4)]
+	[EntityType(EntityType.IsCoClass)]
+	[EventSink(typeof(Events.HTMLDocumentEvents_SinkHelper))]
+	public class OldHTMLDocument : DispHTMLDocument, IEventBinding
 	{
 		#pragma warning disable
+
 		#region Fields
 		
 		private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
 		private string _activeSinkId;
 		private NetRuntimeSystem.Type _thisType;
-		HTMLDocumentEvents_SinkHelper _hTMLDocumentEvents_SinkHelper;
+		private Events.HTMLDocumentEvents_SinkHelper _hTMLDocumentEvents_SinkHelper;
 	
 		#endregion
 
@@ -75,6 +75,7 @@ namespace NetOffice.MSHTMLApi
         /// <summary>
         /// Instance Type
         /// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
         public override Type InstanceType
         {
             get
@@ -141,17 +142,17 @@ namespace NetOffice.MSHTMLApi
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of OldHTMLDocument 
-        ///</summary>		
+        /// </summary>		
 		public OldHTMLDocument():base("MSHTML.OldHTMLDocument")
 		{
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of OldHTMLDocument
-        ///</summary>
+        /// </summary>
         ///<param name="progId">registered ProgID</param>
 		public OldHTMLDocument(string progId):base(progId)
 		{
@@ -161,46 +162,6 @@ namespace NetOffice.MSHTMLApi
 		#endregion
 
 		#region Static CoClass Methods
-
-		/// <summary>
-        /// Returns all running MSHTML.OldHTMLDocument objects from the environment/system
-        /// </summary>
-        /// <returns>an MSHTML.OldHTMLDocument array</returns>
-		public static NetOffice.MSHTMLApi.OldHTMLDocument[] GetActiveInstances()
-		{		
-			IDisposableEnumeration proxyList = NetOffice.ProxyService.GetActiveInstances("MSHTML","OldHTMLDocument");
-			NetRuntimeSystem.Collections.Generic.List<NetOffice.MSHTMLApi.OldHTMLDocument> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.MSHTMLApi.OldHTMLDocument>();
-			foreach(object proxy in proxyList)
-				resultList.Add( new NetOffice.MSHTMLApi.OldHTMLDocument(null, proxy) );
-			return resultList.ToArray();
-		}
-
-		/// <summary>
-        /// Returns a running MSHTML.OldHTMLDocument object from the environment/system.
-        /// </summary>
-        /// <returns>an MSHTML.OldHTMLDocument object or null</returns>
-		public static NetOffice.MSHTMLApi.OldHTMLDocument GetActiveInstance()
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("MSHTML","OldHTMLDocument", false);
-			if(null != proxy)
-				return new NetOffice.MSHTMLApi.OldHTMLDocument(null, proxy);
-			else
-				return null;
-		}
-
-		/// <summary>
-        /// Returns a running MSHTML.OldHTMLDocument object from the environment/system. 
-        /// </summary>
-	    /// <param name="throwOnError">throw an exception if no object was found</param>
-        /// <returns>an MSHTML.OldHTMLDocument object or null</returns>
-		public static NetOffice.MSHTMLApi.OldHTMLDocument GetActiveInstance(bool throwOnError)
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("MSHTML","OldHTMLDocument", throwOnError);
-			if(null != proxy)
-				return new NetOffice.MSHTMLApi.OldHTMLDocument(null, proxy);
-			else
-				return null;
-		}
 		#endregion
 
 		#region Events
@@ -1058,12 +1019,12 @@ namespace NetOffice.MSHTMLApi
 				return;
 	
             if (null == _activeSinkId)
-				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, HTMLDocumentEvents_SinkHelper.Id);
+				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, Events.HTMLDocumentEvents_SinkHelper.Id);
 
 
-			if(HTMLDocumentEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
+			if(Events.HTMLDocumentEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
 			{
-				_hTMLDocumentEvents_SinkHelper = new HTMLDocumentEvents_SinkHelper(this, _connectPoint);
+				_hTMLDocumentEvents_SinkHelper = new Events.HTMLDocumentEvents_SinkHelper(this, _connectPoint);
 				return;
 			} 
         }

@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Reflection;
-using System.ComponentModel;
-using System.Collections.Generic;
-using System.Text;
 
 namespace NetOffice
 {
@@ -44,5 +41,10 @@ namespace NetOffice
         /// Returns a name array of dependent NetOfficeApi assemblies
         /// </summary>
         string[] Dependencies { get; }
+
+        /// <summary>
+        /// Returns information the factory serves duck interfaces only
+        /// </summary>
+        bool IsDuck { get; }
     }
 }

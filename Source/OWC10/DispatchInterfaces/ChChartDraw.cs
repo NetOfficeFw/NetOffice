@@ -1,23 +1,33 @@
 ﻿using System;
 using NetRuntimeSystem = System;
-using System.Runtime.InteropServices;
-using System.Runtime.CompilerServices;
 using System.ComponentModel;
-using System.Reflection;
-using System.Collections.Generic;
-using NetOffice;
+using NetOffice.Attributes;
+
 namespace NetOffice.OWC10Api
 {
-	///<summary>
+	/// <summary>
 	/// DispatchInterface ChChartDraw 
 	/// SupportByVersion OWC10, 1
-	///</summary>
-	[SupportByVersionAttribute("OWC10", 1)]
-	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
-	public class ChChartDraw : COMObject
+	/// </summary>
+	[SupportByVersion("OWC10", 1)]
+	[EntityType(EntityType.IsDispatchInterface)]
+ 	public class ChChartDraw : COMObject
 	{
 		#pragma warning disable
+
 		#region Type Information
+
+		/// <summary>
+		/// Instance Type
+		/// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
+		public override Type InstanceType
+		{
+			get
+			{
+				return LateBindingApiWrapperType;
+			}
+		}
 
         private static Type _type;
 
@@ -28,14 +38,20 @@ namespace NetOffice.OWC10Api
             {
                 if (null == _type)
                     _type = typeof(ChChartDraw);
-                    
                 return _type;
             }
         }
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public ChChartDraw(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -81,7 +97,7 @@ namespace NetOffice.OWC10Api
 		{
 		}
 		
-		/// <param name="progId">registered ProgID</param>
+		/// <param name="progId">registered progID</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public ChChartDraw(string progId) : base(progId)
 		{
@@ -95,15 +111,12 @@ namespace NetOffice.OWC10Api
 		/// SupportByVersion OWC10 1
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("OWC10", 1)]
+		[SupportByVersion("OWC10", 1)]
 		public NetOffice.OWC10Api.ChInterior Interior
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Interior", paramsArray);
-				NetOffice.OWC10Api.ChInterior newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OWC10Api.ChInterior.LateBindingApiWrapperType) as NetOffice.OWC10Api.ChInterior;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OWC10Api.ChInterior>(this, "Interior", NetOffice.OWC10Api.ChInterior.LateBindingApiWrapperType);
 			}
 		}
 
@@ -111,15 +124,12 @@ namespace NetOffice.OWC10Api
 		/// SupportByVersion OWC10 1
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("OWC10", 1)]
+		[SupportByVersion("OWC10", 1)]
 		public NetOffice.OWC10Api.ChBorder Border
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Border", paramsArray);
-				NetOffice.OWC10Api.ChBorder newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OWC10Api.ChBorder.LateBindingApiWrapperType) as NetOffice.OWC10Api.ChBorder;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OWC10Api.ChBorder>(this, "Border", NetOffice.OWC10Api.ChBorder.LateBindingApiWrapperType);
 			}
 		}
 
@@ -127,15 +137,12 @@ namespace NetOffice.OWC10Api
 		/// SupportByVersion OWC10 1
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("OWC10", 1)]
+		[SupportByVersion("OWC10", 1)]
 		public NetOffice.OWC10Api.ChFont Font
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Font", paramsArray);
-				NetOffice.OWC10Api.ChFont newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OWC10Api.ChFont.LateBindingApiWrapperType) as NetOffice.OWC10Api.ChFont;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OWC10Api.ChFont>(this, "Font", NetOffice.OWC10Api.ChFont.LateBindingApiWrapperType);
 			}
 		}
 
@@ -143,15 +150,12 @@ namespace NetOffice.OWC10Api
 		/// SupportByVersion OWC10 1
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("OWC10", 1)]
+		[SupportByVersion("OWC10", 1)]
 		public NetOffice.OWC10Api.ChLine Line
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Line", paramsArray);
-				NetOffice.OWC10Api.ChLine newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OWC10Api.ChLine.LateBindingApiWrapperType) as NetOffice.OWC10Api.ChLine;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OWC10Api.ChLine>(this, "Line", NetOffice.OWC10Api.ChLine.LateBindingApiWrapperType);
 			}
 		}
 
@@ -159,15 +163,12 @@ namespace NetOffice.OWC10Api
 		/// SupportByVersion OWC10 1
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("OWC10", 1)]
+		[SupportByVersion("OWC10", 1)]
 		public NetOffice.OWC10Api.Enums.ChartDrawModesEnum DrawType
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "DrawType", paramsArray);
-				int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-				return (NetOffice.OWC10Api.Enums.ChartDrawModesEnum)intReturnItem;
+				return Factory.ExecuteEnumPropertyGet<NetOffice.OWC10Api.Enums.ChartDrawModesEnum>(this, "DrawType");
 			}
 		}
 
@@ -175,15 +176,13 @@ namespace NetOffice.OWC10Api
 		/// SupportByVersion OWC10 1
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("OWC10", 1)]
+		[SupportByVersion("OWC10", 1)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public Int32 hDC
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "hDC", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "hDC");
 			}
 		}
 
@@ -193,155 +192,118 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
-		/// 
 		/// </summary>
 		/// <param name="id">Int32 id</param>
-		[SupportByVersionAttribute("OWC10", 1)]
+		[SupportByVersion("OWC10", 1)]
 		public void BeginObject(Int32 id)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(id);
-			Invoker.Method(this, "BeginObject", paramsArray);
+			 Factory.ExecuteMethod(this, "BeginObject", id);
 		}
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("OWC10", 1)]
+		[SupportByVersion("OWC10", 1)]
 		public void EndObject()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "EndObject", paramsArray);
+			 Factory.ExecuteMethod(this, "EndObject");
 		}
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
-		/// 
 		/// </summary>
 		/// <param name="x0">Int32 x0</param>
 		/// <param name="y0">Int32 y0</param>
 		/// <param name="x1">Int32 x1</param>
 		/// <param name="y1">Int32 y1</param>
-		[SupportByVersionAttribute("OWC10", 1)]
+		[SupportByVersion("OWC10", 1)]
 		public void DrawLine(Int32 x0, Int32 y0, Int32 x1, Int32 y1)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(x0, y0, x1, y1);
-			Invoker.Method(this, "DrawLine", paramsArray);
+			 Factory.ExecuteMethod(this, "DrawLine", x0, y0, x1, y1);
 		}
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
-		/// 
 		/// </summary>
-		/// <param name="left">Int32 Left</param>
-		/// <param name="top">Int32 Top</param>
-		/// <param name="right">Int32 Right</param>
-		/// <param name="bottom">Int32 Bottom</param>
-		[SupportByVersionAttribute("OWC10", 1)]
+		/// <param name="left">Int32 left</param>
+		/// <param name="top">Int32 top</param>
+		/// <param name="right">Int32 right</param>
+		/// <param name="bottom">Int32 bottom</param>
+		[SupportByVersion("OWC10", 1)]
 		public void DrawRectangle(Int32 left, Int32 top, Int32 right, Int32 bottom)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(left, top, right, bottom);
-			Invoker.Method(this, "DrawRectangle", paramsArray);
+			 Factory.ExecuteMethod(this, "DrawRectangle", left, top, right, bottom);
 		}
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
-		/// 
 		/// </summary>
-		/// <param name="left">Int32 Left</param>
-		/// <param name="top">Int32 Top</param>
-		/// <param name="right">Int32 Right</param>
-		/// <param name="bottom">Int32 Bottom</param>
-		[SupportByVersionAttribute("OWC10", 1)]
+		/// <param name="left">Int32 left</param>
+		/// <param name="top">Int32 top</param>
+		/// <param name="right">Int32 right</param>
+		/// <param name="bottom">Int32 bottom</param>
+		[SupportByVersion("OWC10", 1)]
 		public void DrawEllipse(Int32 left, Int32 top, Int32 right, Int32 bottom)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(left, top, right, bottom);
-			Invoker.Method(this, "DrawEllipse", paramsArray);
+			 Factory.ExecuteMethod(this, "DrawEllipse", left, top, right, bottom);
 		}
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
-		/// 
 		/// </summary>
 		/// <param name="bstrText">string bstrText</param>
-		/// <param name="left">Int32 Left</param>
-		/// <param name="top">Int32 Top</param>
-		[SupportByVersionAttribute("OWC10", 1)]
+		/// <param name="left">Int32 left</param>
+		/// <param name="top">Int32 top</param>
+		[SupportByVersion("OWC10", 1)]
 		public void DrawText(string bstrText, Int32 left, Int32 top)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(bstrText, left, top);
-			Invoker.Method(this, "DrawText", paramsArray);
+			 Factory.ExecuteMethod(this, "DrawText", bstrText, left, top);
 		}
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
-		/// 
 		/// </summary>
 		/// <param name="xValues">object xValues</param>
 		/// <param name="yValues">object yValues</param>
-		[SupportByVersionAttribute("OWC10", 1)]
+		[SupportByVersion("OWC10", 1)]
 		public void DrawPolyLine(object xValues, object yValues)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(xValues, yValues);
-			Invoker.Method(this, "DrawPolyLine", paramsArray);
+			 Factory.ExecuteMethod(this, "DrawPolyLine", xValues, yValues);
 		}
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
-		/// 
 		/// </summary>
 		/// <param name="xValues">object xValues</param>
 		/// <param name="yValues">object yValues</param>
-		[SupportByVersionAttribute("OWC10", 1)]
+		[SupportByVersion("OWC10", 1)]
 		public void DrawPolygon(object xValues, object yValues)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(xValues, yValues);
-			Invoker.Method(this, "DrawPolygon", paramsArray);
+			 Factory.ExecuteMethod(this, "DrawPolygon", xValues, yValues);
 		}
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
-		/// 
 		/// </summary>
-		/// <param name="text">string Text</param>
-		[SupportByVersionAttribute("OWC10", 1)]
+		/// <param name="text">string text</param>
+		[SupportByVersion("OWC10", 1)]
 		public object TextWidth(string text)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(text);
-			object returnItem = Invoker.MethodReturn(this, "TextWidth", paramsArray);
-			if((null != returnItem) && (returnItem is MarshalByRefObject))
-			{
-				ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
-				return newObject;
-			}
-			else
-			{
-				return  returnItem;
-			}
+			return Factory.ExecuteVariantMethodGet(this, "TextWidth", text);
 		}
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
-		/// 
 		/// </summary>
-		/// <param name="text">string Text</param>
-		[SupportByVersionAttribute("OWC10", 1)]
+		/// <param name="text">string text</param>
+		[SupportByVersion("OWC10", 1)]
 		public object TextHeight(string text)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(text);
-			object returnItem = Invoker.MethodReturn(this, "TextHeight", paramsArray);
-			if((null != returnItem) && (returnItem is MarshalByRefObject))
-			{
-				ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
-				return newObject;
-			}
-			else
-			{
-				return  returnItem;
-			}
+			return Factory.ExecuteVariantMethodGet(this, "TextHeight", text);
 		}
 
 		#endregion
+
 		#pragma warning restore
 	}
 }

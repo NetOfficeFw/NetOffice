@@ -1,63 +1,63 @@
 ﻿using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
-using NetOffice;
-using NetOffice.Misc;
+using NetOffice.Attributes;
 
 namespace NetOffice.OWC10Api
 {
-
 	#region Delegates
 
 	#pragma warning disable
 	public delegate void PivotTable_SelectionChangeEventHandler();
-	public delegate void PivotTable_ViewChangeEventHandler(NetOffice.OWC10Api.Enums.PivotViewReasonEnum Reason);
-	public delegate void PivotTable_DataChangeEventHandler(NetOffice.OWC10Api.Enums.PivotDataReasonEnum Reason);
-	public delegate void PivotTable_PivotTableChangeEventHandler(NetOffice.OWC10Api.Enums.PivotTableReasonEnum Reason);
+	public delegate void PivotTable_ViewChangeEventHandler(NetOffice.OWC10Api.Enums.PivotViewReasonEnum reason);
+	public delegate void PivotTable_DataChangeEventHandler(NetOffice.OWC10Api.Enums.PivotDataReasonEnum reason);
+	public delegate void PivotTable_PivotTableChangeEventHandler(NetOffice.OWC10Api.Enums.PivotTableReasonEnum reason);
 	public delegate void PivotTable_BeforeQueryEventHandler();
 	public delegate void PivotTable_QueryEventHandler();
 	public delegate void PivotTable_OnConnectEventHandler();
 	public delegate void PivotTable_OnDisconnectEventHandler();
-	public delegate void PivotTable_MouseDownEventHandler(Int32 Button, Int32 Shift, Int32 x, Int32 y);
-	public delegate void PivotTable_MouseMoveEventHandler(Int32 Button, Int32 Shift, Int32 x, Int32 y);
-	public delegate void PivotTable_MouseUpEventHandler(Int32 Button, Int32 Shift, Int32 x, Int32 y);
-	public delegate void PivotTable_MouseWheelEventHandler(bool Page, Int32 Count);
+	public delegate void PivotTable_MouseDownEventHandler(Int32 button, Int32 shift, Int32 x, Int32 y);
+	public delegate void PivotTable_MouseMoveEventHandler(Int32 button, Int32 shift, Int32 x, Int32 y);
+	public delegate void PivotTable_MouseUpEventHandler(Int32 button, Int32 shift, Int32 x, Int32 y);
+	public delegate void PivotTable_MouseWheelEventHandler(bool page, Int32 count);
 	public delegate void PivotTable_ClickEventHandler();
 	public delegate void PivotTable_DblClickEventHandler();
-	public delegate void PivotTable_CommandEnabledEventHandler(object Command, NetOffice.OWC10Api.ByRef Enabled);
-	public delegate void PivotTable_CommandCheckedEventHandler(object Command, NetOffice.OWC10Api.ByRef Checked);
-	public delegate void PivotTable_CommandTipTextEventHandler(object Command, NetOffice.OWC10Api.ByRef Caption);
-	public delegate void PivotTable_CommandBeforeExecuteEventHandler(object Command, NetOffice.OWC10Api.ByRef Cancel);
-	public delegate void PivotTable_CommandExecuteEventHandler(object Command, bool Succeeded);
-	public delegate void PivotTable_KeyDownEventHandler(Int32 KeyCode, Int32 Shift);
-	public delegate void PivotTable_KeyUpEventHandler(Int32 KeyCode, Int32 Shift);
-	public delegate void PivotTable_KeyPressEventHandler(Int32 KeyAscii);
-	public delegate void PivotTable_BeforeKeyDownEventHandler(Int32 KeyCode, Int32 Shift, NetOffice.OWC10Api.ByRef Cancel);
-	public delegate void PivotTable_BeforeKeyUpEventHandler(Int32 KeyCode, Int32 Shift, NetOffice.OWC10Api.ByRef Cancel);
-	public delegate void PivotTable_BeforeKeyPressEventHandler(Int32 KeyAscii, NetOffice.OWC10Api.ByRef Cancel);
-	public delegate void PivotTable_BeforeContextMenuEventHandler(Int32 x, Int32 y, NetOffice.OWC10Api.ByRef Menu, NetOffice.OWC10Api.ByRef Cancel);
-	public delegate void PivotTable_StartEditEventHandler(COMObject Selection, COMObject ActiveObject, NetOffice.OWC10Api.ByRef InitialValue, NetOffice.OWC10Api.ByRef ArrowMode, NetOffice.OWC10Api.ByRef CaretPosition, NetOffice.OWC10Api.ByRef Cancel, NetOffice.OWC10Api.ByRef ErrorDescription);
-	public delegate void PivotTable_EndEditEventHandler(bool Accept, NetOffice.OWC10Api.ByRef FinalValue, NetOffice.OWC10Api.ByRef Cancel, NetOffice.OWC10Api.ByRef ErrorDescription);
-	public delegate void PivotTable_BeforeScreenTipEventHandler(NetOffice.OWC10Api.ByRef ScreenTipText, COMObject SourceObject);
+	public delegate void PivotTable_CommandEnabledEventHandler(object command, NetOffice.OWC10Api.ByRef enabled);
+	public delegate void PivotTable_CommandCheckedEventHandler(object command, NetOffice.OWC10Api.ByRef Checked);
+	public delegate void PivotTable_CommandTipTextEventHandler(object command, NetOffice.OWC10Api.ByRef caption);
+	public delegate void PivotTable_CommandBeforeExecuteEventHandler(object command, NetOffice.OWC10Api.ByRef Cancel);
+	public delegate void PivotTable_CommandExecuteEventHandler(object command, bool succeeded);
+	public delegate void PivotTable_KeyDownEventHandler(Int32 keyCode, Int32 shift);
+	public delegate void PivotTable_KeyUpEventHandler(Int32 keyCode, Int32 shift);
+	public delegate void PivotTable_KeyPressEventHandler(Int32 keyAscii);
+	public delegate void PivotTable_BeforeKeyDownEventHandler(Int32 keyCode, Int32 shift, NetOffice.OWC10Api.ByRef cancel);
+	public delegate void PivotTable_BeforeKeyUpEventHandler(Int32 keyCode, Int32 shift, NetOffice.OWC10Api.ByRef cancel);
+	public delegate void PivotTable_BeforeKeyPressEventHandler(Int32 keyAscii, NetOffice.OWC10Api.ByRef cancel);
+	public delegate void PivotTable_BeforeContextMenuEventHandler(Int32 x, Int32 y, NetOffice.OWC10Api.ByRef Menu, NetOffice.OWC10Api.ByRef cancel);
+	public delegate void PivotTable_StartEditEventHandler(ICOMObject selection, ICOMObject activeObject, NetOffice.OWC10Api.ByRef initialValue, NetOffice.OWC10Api.ByRef arrowMode, NetOffice.OWC10Api.ByRef caretPosition, NetOffice.OWC10Api.ByRef cancel, NetOffice.OWC10Api.ByRef errorDescription);
+	public delegate void PivotTable_EndEditEventHandler(bool accept, NetOffice.OWC10Api.ByRef finalValue, NetOffice.OWC10Api.ByRef cancel, NetOffice.OWC10Api.ByRef errorDescription);
+	public delegate void PivotTable_BeforeScreenTipEventHandler(NetOffice.OWC10Api.ByRef screenTipText, ICOMObject sourceObject);
 	#pragma warning restore
 
 	#endregion
 
-	///<summary>
+	/// <summary>
 	/// CoClass PivotTable 
 	/// SupportByVersion OWC10, 1
-	///</summary>
-	[SupportByVersionAttribute("OWC10", 1)]
-	[EntityTypeAttribute(EntityType.IsCoClass)]
-	public class PivotTable : IPivotControl,IEventBinding
+	/// </summary>
+	[SupportByVersion("OWC10", 1)]
+	[EntityType(EntityType.IsCoClass)]
+	[EventSink(typeof(Events.IPivotControlEvents_SinkHelper))]
+	public class PivotTable : IPivotControl, IEventBinding
 	{
 		#pragma warning disable
+
 		#region Fields
 		
 		private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
 		private string _activeSinkId;
 		private NetRuntimeSystem.Type _thisType;
-		IPivotControlEvents_SinkHelper _iPivotControlEvents_SinkHelper;
+		private Events.IPivotControlEvents_SinkHelper _iPivotControlEvents_SinkHelper;
 	
 		#endregion
 
@@ -66,6 +66,7 @@ namespace NetOffice.OWC10Api
         /// <summary>
         /// Instance Type
         /// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
         public override Type InstanceType
         {
             get
@@ -132,17 +133,17 @@ namespace NetOffice.OWC10Api
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of PivotTable 
-        ///</summary>		
+        /// </summary>		
 		public PivotTable():base("OWC10.PivotTable")
 		{
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of PivotTable
-        ///</summary>
+        /// </summary>
         ///<param name="progId">registered ProgID</param>
 		public PivotTable(string progId):base(progId)
 		{
@@ -152,46 +153,6 @@ namespace NetOffice.OWC10Api
 		#endregion
 
 		#region Static CoClass Methods
-
-		/// <summary>
-        /// Returns all running OWC10.PivotTable objects from the environment/system
-        /// </summary>
-        /// <returns>an OWC10.PivotTable array</returns>
-		public static NetOffice.OWC10Api.PivotTable[] GetActiveInstances()
-		{		
-			IDisposableEnumeration proxyList = NetOffice.ProxyService.GetActiveInstances("OWC10","PivotTable");
-			NetRuntimeSystem.Collections.Generic.List<NetOffice.OWC10Api.PivotTable> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.OWC10Api.PivotTable>();
-			foreach(object proxy in proxyList)
-				resultList.Add( new NetOffice.OWC10Api.PivotTable(null, proxy) );
-			return resultList.ToArray();
-		}
-
-		/// <summary>
-        /// Returns a running OWC10.PivotTable object from the environment/system.
-        /// </summary>
-        /// <returns>an OWC10.PivotTable object or null</returns>
-		public static NetOffice.OWC10Api.PivotTable GetActiveInstance()
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("OWC10","PivotTable", false);
-			if(null != proxy)
-				return new NetOffice.OWC10Api.PivotTable(null, proxy);
-			else
-				return null;
-		}
-
-		/// <summary>
-        /// Returns a running OWC10.PivotTable object from the environment/system. 
-        /// </summary>
-	    /// <param name="throwOnError">throw an exception if no object was found</param>
-        /// <returns>an OWC10.PivotTable object or null</returns>
-		public static NetOffice.OWC10Api.PivotTable GetActiveInstance(bool throwOnError)
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("OWC10","PivotTable", throwOnError);
-			if(null != proxy)
-				return new NetOffice.OWC10Api.PivotTable(null, proxy);
-			else
-				return null;
-		}
 		#endregion
 
 		#region Events
@@ -851,12 +812,12 @@ namespace NetOffice.OWC10Api
 				return;
 	
             if (null == _activeSinkId)
-				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, IPivotControlEvents_SinkHelper.Id);
+				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, Events.IPivotControlEvents_SinkHelper.Id);
 
 
-			if(IPivotControlEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
+			if(Events.IPivotControlEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
 			{
-				_iPivotControlEvents_SinkHelper = new IPivotControlEvents_SinkHelper(this, _connectPoint);
+				_iPivotControlEvents_SinkHelper = new Events.IPivotControlEvents_SinkHelper(this, _connectPoint);
 				return;
 			} 
         }

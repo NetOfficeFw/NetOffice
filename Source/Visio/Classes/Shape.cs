@@ -1,57 +1,57 @@
 ﻿using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
-using NetOffice;
-using NetOffice.Misc;
+using NetOffice.Attributes;
 
 namespace NetOffice.VisioApi
 {
-
 	#region Delegates
 
 	#pragma warning disable
-	public delegate void Shape_CellChangedEventHandler(NetOffice.VisioApi.IVCell Cell);
-	public delegate void Shape_ShapeAddedEventHandler(NetOffice.VisioApi.IVShape Shape);
-	public delegate void Shape_BeforeSelectionDeleteEventHandler(NetOffice.VisioApi.IVSelection Selection);
-	public delegate void Shape_ShapeChangedEventHandler(NetOffice.VisioApi.IVShape Shape);
-	public delegate void Shape_SelectionAddedEventHandler(NetOffice.VisioApi.IVSelection Selection);
-	public delegate void Shape_BeforeShapeDeleteEventHandler(NetOffice.VisioApi.IVShape Shape);
-	public delegate void Shape_TextChangedEventHandler(NetOffice.VisioApi.IVShape Shape);
-	public delegate void Shape_FormulaChangedEventHandler(NetOffice.VisioApi.IVCell Cell);
-	public delegate void Shape_ShapeParentChangedEventHandler(NetOffice.VisioApi.IVShape Shape);
-	public delegate void Shape_BeforeShapeTextEditEventHandler(NetOffice.VisioApi.IVShape Shape);
-	public delegate void Shape_ShapeExitedTextEditEventHandler(NetOffice.VisioApi.IVShape Shape);
-	public delegate void Shape_QueryCancelSelectionDeleteEventHandler(NetOffice.VisioApi.IVSelection Selection);
-	public delegate void Shape_SelectionDeleteCanceledEventHandler(NetOffice.VisioApi.IVSelection Selection);
-	public delegate void Shape_QueryCancelUngroupEventHandler(NetOffice.VisioApi.IVSelection Selection);
-	public delegate void Shape_UngroupCanceledEventHandler(NetOffice.VisioApi.IVSelection Selection);
-	public delegate void Shape_QueryCancelConvertToGroupEventHandler(NetOffice.VisioApi.IVSelection Selection);
-	public delegate void Shape_ConvertToGroupCanceledEventHandler(NetOffice.VisioApi.IVSelection Selection);
-	public delegate void Shape_QueryCancelGroupEventHandler(NetOffice.VisioApi.IVSelection Selection);
-	public delegate void Shape_GroupCanceledEventHandler(NetOffice.VisioApi.IVSelection Selection);
-	public delegate void Shape_ShapeDataGraphicChangedEventHandler(NetOffice.VisioApi.IVShape Shape);
-	public delegate void Shape_ShapeLinkAddedEventHandler(NetOffice.VisioApi.IVShape Shape, Int32 DataRecordsetID, Int32 DataRowID);
-	public delegate void Shape_ShapeLinkDeletedEventHandler(NetOffice.VisioApi.IVShape Shape, Int32 DataRecordsetID, Int32 DataRowID);
+	public delegate void Shape_CellChangedEventHandler(NetOffice.VisioApi.IVCell cell);
+	public delegate void Shape_ShapeAddedEventHandler(NetOffice.VisioApi.IVShape shape);
+	public delegate void Shape_BeforeSelectionDeleteEventHandler(NetOffice.VisioApi.IVSelection selection);
+	public delegate void Shape_ShapeChangedEventHandler(NetOffice.VisioApi.IVShape shape);
+	public delegate void Shape_SelectionAddedEventHandler(NetOffice.VisioApi.IVSelection selection);
+	public delegate void Shape_BeforeShapeDeleteEventHandler(NetOffice.VisioApi.IVShape shape);
+	public delegate void Shape_TextChangedEventHandler(NetOffice.VisioApi.IVShape shape);
+	public delegate void Shape_FormulaChangedEventHandler(NetOffice.VisioApi.IVCell cell);
+	public delegate void Shape_ShapeParentChangedEventHandler(NetOffice.VisioApi.IVShape shape);
+	public delegate void Shape_BeforeShapeTextEditEventHandler(NetOffice.VisioApi.IVShape shape);
+	public delegate void Shape_ShapeExitedTextEditEventHandler(NetOffice.VisioApi.IVShape shape);
+	public delegate void Shape_QueryCancelSelectionDeleteEventHandler(NetOffice.VisioApi.IVSelection selection);
+	public delegate void Shape_SelectionDeleteCanceledEventHandler(NetOffice.VisioApi.IVSelection selection);
+	public delegate void Shape_QueryCancelUngroupEventHandler(NetOffice.VisioApi.IVSelection selection);
+	public delegate void Shape_UngroupCanceledEventHandler(NetOffice.VisioApi.IVSelection selection);
+	public delegate void Shape_QueryCancelConvertToGroupEventHandler(NetOffice.VisioApi.IVSelection selection);
+	public delegate void Shape_ConvertToGroupCanceledEventHandler(NetOffice.VisioApi.IVSelection selection);
+	public delegate void Shape_QueryCancelGroupEventHandler(NetOffice.VisioApi.IVSelection selection);
+	public delegate void Shape_GroupCanceledEventHandler(NetOffice.VisioApi.IVSelection selection);
+	public delegate void Shape_ShapeDataGraphicChangedEventHandler(NetOffice.VisioApi.IVShape shape);
+	public delegate void Shape_ShapeLinkAddedEventHandler(NetOffice.VisioApi.IVShape shape, Int32 dataRecordsetID, Int32 dataRowID);
+	public delegate void Shape_ShapeLinkDeletedEventHandler(NetOffice.VisioApi.IVShape shape, Int32 dataRecordsetID, Int32 dataRowID);
 	#pragma warning restore
 
 	#endregion
 
-	///<summary>
+	/// <summary>
 	/// CoClass Shape 
 	/// SupportByVersion Visio, 11,12,14,15,16
-	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff769391(v=office.14).aspx
-	///</summary>
-	[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
-	[EntityTypeAttribute(EntityType.IsCoClass)]
-	public class Shape : IVShape,IEventBinding
+	/// </summary>
+	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/ff769391(v=office.14).aspx </remarks>
+	[SupportByVersion("Visio", 11,12,14,15,16)]
+	[EntityType(EntityType.IsCoClass)]
+	[EventSink(typeof(Events.EShape_SinkHelper))]
+	public class Shape : IVShape, IEventBinding
 	{
 		#pragma warning disable
+
 		#region Fields
 		
 		private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
 		private string _activeSinkId;
 		private NetRuntimeSystem.Type _thisType;
-		EShape_SinkHelper _eShape_SinkHelper;
+		private Events.EShape_SinkHelper _eShape_SinkHelper;
 	
 		#endregion
 
@@ -60,6 +60,7 @@ namespace NetOffice.VisioApi
         /// <summary>
         /// Instance Type
         /// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
         public override Type InstanceType
         {
             get
@@ -126,17 +127,17 @@ namespace NetOffice.VisioApi
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of Shape 
-        ///</summary>		
+        /// </summary>		
 		public Shape():base("Visio.Shape")
 		{
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of Shape
-        ///</summary>
+        /// </summary>
         ///<param name="progId">registered ProgID</param>
 		public Shape(string progId):base(progId)
 		{
@@ -146,46 +147,6 @@ namespace NetOffice.VisioApi
 		#endregion
 
 		#region Static CoClass Methods
-
-		/// <summary>
-        /// Returns all running Visio.Shape objects from the environment/system
-        /// </summary>
-        /// <returns>an Visio.Shape array</returns>
-		public static NetOffice.VisioApi.Shape[] GetActiveInstances()
-		{		
-			IDisposableEnumeration proxyList = NetOffice.ProxyService.GetActiveInstances("Visio","Shape");
-			NetRuntimeSystem.Collections.Generic.List<NetOffice.VisioApi.Shape> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.VisioApi.Shape>();
-			foreach(object proxy in proxyList)
-				resultList.Add( new NetOffice.VisioApi.Shape(null, proxy) );
-			return resultList.ToArray();
-		}
-
-		/// <summary>
-        /// Returns a running Visio.Shape object from the environment/system.
-        /// </summary>
-        /// <returns>an Visio.Shape object or null</returns>
-		public static NetOffice.VisioApi.Shape GetActiveInstance()
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Visio","Shape", false);
-			if(null != proxy)
-				return new NetOffice.VisioApi.Shape(null, proxy);
-			else
-				return null;
-		}
-
-		/// <summary>
-        /// Returns a running Visio.Shape object from the environment/system. 
-        /// </summary>
-	    /// <param name="throwOnError">throw an exception if no object was found</param>
-        /// <returns>an Visio.Shape object or null</returns>
-		public static NetOffice.VisioApi.Shape GetActiveInstance(bool throwOnError)
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Visio","Shape", throwOnError);
-			if(null != proxy)
-				return new NetOffice.VisioApi.Shape(null, proxy);
-			else
-				return null;
-		}
 		#endregion
 
 		#region Events
@@ -713,12 +674,12 @@ namespace NetOffice.VisioApi
 				return;
 	
             if (null == _activeSinkId)
-				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, EShape_SinkHelper.Id);
+				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, Events.EShape_SinkHelper.Id);
 
 
-			if(EShape_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
+			if(Events.EShape_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
 			{
-				_eShape_SinkHelper = new EShape_SinkHelper(this, _connectPoint);
+				_eShape_SinkHelper = new Events.EShape_SinkHelper(this, _connectPoint);
 				return;
 			} 
         }

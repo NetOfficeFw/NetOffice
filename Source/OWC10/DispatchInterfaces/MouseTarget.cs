@@ -1,23 +1,33 @@
 ﻿using System;
 using NetRuntimeSystem = System;
-using System.Runtime.InteropServices;
-using System.Runtime.CompilerServices;
 using System.ComponentModel;
-using System.Reflection;
-using System.Collections.Generic;
-using NetOffice;
+using NetOffice.Attributes;
+
 namespace NetOffice.OWC10Api
 {
-	///<summary>
+	/// <summary>
 	/// DispatchInterface MouseTarget 
 	/// SupportByVersion OWC10, 1
-	///</summary>
-	[SupportByVersionAttribute("OWC10", 1)]
-	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
-	public class MouseTarget : COMObject
+	/// </summary>
+	[SupportByVersion("OWC10", 1)]
+	[EntityType(EntityType.IsDispatchInterface)]
+ 	public class MouseTarget : COMObject
 	{
 		#pragma warning disable
+
 		#region Type Information
+
+		/// <summary>
+		/// Instance Type
+		/// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
+		public override Type InstanceType
+		{
+			get
+			{
+				return LateBindingApiWrapperType;
+			}
+		}
 
         private static Type _type;
 
@@ -28,14 +38,20 @@ namespace NetOffice.OWC10Api
             {
                 if (null == _type)
                     _type = typeof(MouseTarget);
-                    
                 return _type;
             }
         }
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public MouseTarget(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -81,7 +97,7 @@ namespace NetOffice.OWC10Api
 		{
 		}
 		
-		/// <param name="progId">registered ProgID</param>
+		/// <param name="progId">registered progID</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public MouseTarget(string progId) : base(progId)
 		{
@@ -97,113 +113,98 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
-		/// 
 		/// </summary>
 		/// <param name="x">Int32 x</param>
 		/// <param name="y">Int32 y</param>
-		/// <param name="cursor">Int32 Cursor</param>
-		[SupportByVersionAttribute("OWC10", 1)]
+		/// <param name="cursor">Int32 cursor</param>
+		[SupportByVersion("OWC10", 1)]
 		public void MouseEnter(Int32 x, Int32 y, Int32 cursor)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(x, y, cursor);
-			Invoker.Method(this, "MouseEnter", paramsArray);
+			 Factory.ExecuteMethod(this, "MouseEnter", x, y, cursor);
 		}
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
-		/// 
 		/// </summary>
 		/// <param name="x">Int32 x</param>
 		/// <param name="y">Int32 y</param>
-		/// <param name="cursor">Int32 Cursor</param>
-		[SupportByVersionAttribute("OWC10", 1)]
+		/// <param name="cursor">Int32 cursor</param>
+		[SupportByVersion("OWC10", 1)]
 		public void MouseOver(Int32 x, Int32 y, Int32 cursor)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(x, y, cursor);
-			Invoker.Method(this, "MouseOver", paramsArray);
+			 Factory.ExecuteMethod(this, "MouseOver", x, y, cursor);
 		}
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("OWC10", 1)]
+		[SupportByVersion("OWC10", 1)]
 		public void MouseLeave()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "MouseLeave", paramsArray);
+			 Factory.ExecuteMethod(this, "MouseLeave");
 		}
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
-		/// 
 		/// </summary>
 		/// <param name="x">Int32 x</param>
 		/// <param name="y">Int32 y</param>
-		/// <param name="button">Int32 Button</param>
-		[SupportByVersionAttribute("OWC10", 1)]
+		/// <param name="button">Int32 button</param>
+		[SupportByVersion("OWC10", 1)]
 		public void MouseDown(Int32 x, Int32 y, Int32 button)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(x, y, button);
-			Invoker.Method(this, "MouseDown", paramsArray);
+			 Factory.ExecuteMethod(this, "MouseDown", x, y, button);
 		}
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
-		/// 
 		/// </summary>
 		/// <param name="x">Int32 x</param>
 		/// <param name="y">Int32 y</param>
-		/// <param name="button">Int32 Button</param>
-		[SupportByVersionAttribute("OWC10", 1)]
+		/// <param name="button">Int32 button</param>
+		[SupportByVersion("OWC10", 1)]
 		public void MouseUp(Int32 x, Int32 y, Int32 button)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(x, y, button);
-			Invoker.Method(this, "MouseUp", paramsArray);
+			 Factory.ExecuteMethod(this, "MouseUp", x, y, button);
 		}
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
-		/// 
 		/// </summary>
 		/// <param name="x">Int32 x</param>
 		/// <param name="y">Int32 y</param>
-		/// <param name="button">Int32 Button</param>
-		[SupportByVersionAttribute("OWC10", 1)]
+		/// <param name="button">Int32 button</param>
+		[SupportByVersion("OWC10", 1)]
 		public void MouseClick(Int32 x, Int32 y, Int32 button)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(x, y, button);
-			Invoker.Method(this, "MouseClick", paramsArray);
+			 Factory.ExecuteMethod(this, "MouseClick", x, y, button);
 		}
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
-		/// 
 		/// </summary>
 		/// <param name="x">Int32 x</param>
 		/// <param name="y">Int32 y</param>
-		/// <param name="button">Int32 Button</param>
-		[SupportByVersionAttribute("OWC10", 1)]
+		/// <param name="button">Int32 button</param>
+		[SupportByVersion("OWC10", 1)]
 		public void MouseDblClick(Int32 x, Int32 y, Int32 button)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(x, y, button);
-			Invoker.Method(this, "MouseDblClick", paramsArray);
+			 Factory.ExecuteMethod(this, "MouseDblClick", x, y, button);
 		}
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
-		/// 
 		/// </summary>
-		/// <param name="page">bool Page</param>
-		/// <param name="count">Int32 Count</param>
-		[SupportByVersionAttribute("OWC10", 1)]
+		/// <param name="page">bool page</param>
+		/// <param name="count">Int32 count</param>
+		[SupportByVersion("OWC10", 1)]
 		public void MouseWheel(bool page, Int32 count)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(page, count);
-			Invoker.Method(this, "MouseWheel", paramsArray);
+			 Factory.ExecuteMethod(this, "MouseWheel", page, count);
 		}
 
 		#endregion
+
 		#pragma warning restore
 	}
 }

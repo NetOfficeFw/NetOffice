@@ -1,23 +1,34 @@
-﻿using System;
+﻿using System.Reflection;
+using System;
 using NetRuntimeSystem = System;
-using System.Runtime.InteropServices;
 using System.ComponentModel;
-using System.Runtime.CompilerServices;
-using System.Reflection;
-using System.Collections.Generic;
-using NetOffice;
+using NetOffice.Attributes;
+
 namespace NetOffice.MSHTMLApi
 {
-	///<summary>
+	/// <summary>
 	/// Interface IHTMLPainterEventInfo 
 	/// SupportByVersion MSHTML, 4
-	///</summary>
-	[SupportByVersionAttribute("MSHTML", 4)]
-	[EntityTypeAttribute(EntityType.IsInterface)]
-	public class IHTMLPainterEventInfo : COMObject
+	/// </summary>
+	[SupportByVersion("MSHTML", 4)]
+	[EntityType(EntityType.IsInterface)]
+ 	public class IHTMLPainterEventInfo : COMObject
 	{
 		#pragma warning disable
+
 		#region Type Information
+
+		/// <summary>
+		/// Instance Type
+		/// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
+		public override Type InstanceType
+		{
+			get
+			{
+				return LateBindingApiWrapperType;
+			}
+		}
 
         private static Type _type;
 
@@ -28,14 +39,20 @@ namespace NetOffice.MSHTMLApi
             {
                 if (null == _type)
                     _type = typeof(IHTMLPainterEventInfo);
-                    
                 return _type;
             }
         }
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public IHTMLPainterEventInfo(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -81,7 +98,7 @@ namespace NetOffice.MSHTMLApi
 		{
 		}
 		
-		/// <param name="progId">registered ProgID</param>
+		/// <param name="progId">registered progID</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public IHTMLPainterEventInfo(string progId) : base(progId)
 		{
@@ -97,64 +114,57 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
-		/// 
 		/// </summary>
 		/// <param name="plEventInfoFlags">Int32 plEventInfoFlags</param>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[SupportByVersion("MSHTML", 4)]
 		public Int32 GetEventInfoFlags(out Int32 plEventInfoFlags)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
 			plEventInfoFlags = 0;
 			object[] paramsArray = Invoker.ValidateParamsArray(plEventInfoFlags);
-			object returnItem = Invoker.MethodReturn(this, "GetEventInfoFlags", paramsArray);
+			object returnItem = Invoker.MethodReturn(this, "GetEventInfoFlags", paramsArray, modifiers);
 			plEventInfoFlags = (Int32)paramsArray[0];
 			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
-		/// 
 		/// </summary>
 		/// <param name="ppElement">NetOffice.MSHTMLApi.IHTMLElement ppElement</param>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[SupportByVersion("MSHTML", 4)]
 		public Int32 GetEventTarget(NetOffice.MSHTMLApi.IHTMLElement ppElement)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(ppElement);
-			object returnItem = Invoker.MethodReturn(this, "GetEventTarget", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return Factory.ExecuteInt32MethodGet(this, "GetEventTarget", ppElement);
 		}
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
-		/// 
 		/// </summary>
 		/// <param name="lPartID">Int32 lPartID</param>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[SupportByVersion("MSHTML", 4)]
 		public Int32 SetCursor(Int32 lPartID)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(lPartID);
-			object returnItem = Invoker.MethodReturn(this, "SetCursor", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return Factory.ExecuteInt32MethodGet(this, "SetCursor", lPartID);
 		}
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
-		/// 
 		/// </summary>
 		/// <param name="lPartID">Int32 lPartID</param>
 		/// <param name="pbstrPart">string pbstrPart</param>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[SupportByVersion("MSHTML", 4)]
 		public Int32 StringFromPartID(Int32 lPartID, out string pbstrPart)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,true);
 			pbstrPart = string.Empty;
 			object[] paramsArray = Invoker.ValidateParamsArray(lPartID, pbstrPart);
-			object returnItem = Invoker.MethodReturn(this, "StringFromPartID", paramsArray);
-			pbstrPart = (string)paramsArray[1];
+			object returnItem = Invoker.MethodReturn(this, "StringFromPartID", paramsArray, modifiers);
+			pbstrPart = paramsArray[1] as string;
 			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		#endregion
+
 		#pragma warning restore
 	}
 }

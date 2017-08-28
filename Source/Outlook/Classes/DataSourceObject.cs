@@ -1,11 +1,10 @@
 ﻿using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
-using NetOffice;
-using NetOffice.Misc;
+using NetOffice.Attributes;
+
 namespace NetOffice.OutlookApi
 {
-
 	#region Delegates
 
 	#pragma warning disable
@@ -13,15 +12,16 @@ namespace NetOffice.OutlookApi
 
 	#endregion
 
-	///<summary>
+	/// <summary>
 	/// CoClass DataSourceObject 
 	/// SupportByVersion Outlook, 10
-	///</summary>
-	[SupportByVersionAttribute("Outlook", 10)]
-	[EntityTypeAttribute(EntityType.IsCoClass)]
-	public class DataSourceObject : DDataSourceObject
+	/// </summary>
+	[SupportByVersion("Outlook", 10)]
+	[EntityType(EntityType.IsCoClass)]
+ 	public class DataSourceObject : DDataSourceObject
 	{
 		#pragma warning disable
+
 		#region Fields
 		
 		private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
@@ -35,6 +35,7 @@ namespace NetOffice.OutlookApi
         /// <summary>
         /// Instance Type
         /// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
         public override Type InstanceType
         {
             get
@@ -101,17 +102,17 @@ namespace NetOffice.OutlookApi
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of DataSourceObject 
-        ///</summary>		
+        /// </summary>		
 		public DataSourceObject():base("Outlook.DataSourceObject")
 		{
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of DataSourceObject
-        ///</summary>
+        /// </summary>
         ///<param name="progId">registered ProgID</param>
 		public DataSourceObject(string progId):base(progId)
 		{
@@ -121,46 +122,6 @@ namespace NetOffice.OutlookApi
 		#endregion
 
 		#region Static CoClass Methods
-
-		/// <summary>
-        /// Returns all running Outlook.DataSourceObject objects from the environment/system
-        /// </summary>
-        /// <returns>an Outlook.DataSourceObject array</returns>
-		public static NetOffice.OutlookApi.DataSourceObject[] GetActiveInstances()
-		{		
-			IDisposableEnumeration proxyList = NetOffice.ProxyService.GetActiveInstances("Outlook","DataSourceObject");
-			NetRuntimeSystem.Collections.Generic.List<NetOffice.OutlookApi.DataSourceObject> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.OutlookApi.DataSourceObject>();
-			foreach(object proxy in proxyList)
-				resultList.Add( new NetOffice.OutlookApi.DataSourceObject(null, proxy) );
-			return resultList.ToArray();
-		}
-
-		/// <summary>
-        /// Returns a running Outlook.DataSourceObject object from the environment/system.
-        /// </summary>
-        /// <returns>an Outlook.DataSourceObject object or null</returns>
-		public static NetOffice.OutlookApi.DataSourceObject GetActiveInstance()
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Outlook","DataSourceObject", false);
-			if(null != proxy)
-				return new NetOffice.OutlookApi.DataSourceObject(null, proxy);
-			else
-				return null;
-		}
-
-		/// <summary>
-        /// Returns a running Outlook.DataSourceObject object from the environment/system. 
-        /// </summary>
-	    /// <param name="throwOnError">throw an exception if no object was found</param>
-        /// <returns>an Outlook.DataSourceObject object or null</returns>
-		public static NetOffice.OutlookApi.DataSourceObject GetActiveInstance(bool throwOnError)
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Outlook","DataSourceObject", throwOnError);
-			if(null != proxy)
-				return new NetOffice.OutlookApi.DataSourceObject(null, proxy);
-			else
-				return null;
-		}
 		#endregion
 
 		#region Events

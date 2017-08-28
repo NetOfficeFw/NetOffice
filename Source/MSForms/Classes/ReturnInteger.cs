@@ -1,12 +1,10 @@
 ﻿using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
-using NetOffice;
-using NetOffice.Misc;
+using NetOffice.Attributes;
 
 namespace NetOffice.MSFormsApi
 {
-
 	#region Delegates
 
 	#pragma warning disable
@@ -14,15 +12,16 @@ namespace NetOffice.MSFormsApi
 
 	#endregion
 
-	///<summary>
+	/// <summary>
 	/// CoClass ReturnInteger 
 	/// SupportByVersion MSForms, 2
-	///</summary>
-	[SupportByVersionAttribute("MSForms", 2)]
-	[EntityTypeAttribute(EntityType.IsCoClass)]
-	public class ReturnInteger : IReturnInteger
+	/// </summary>
+	[SupportByVersion("MSForms", 2)]
+	[EntityType(EntityType.IsCoClass)]
+ 	public class ReturnInteger : IReturnInteger
 	{
 		#pragma warning disable
+
 		#region Fields
 		
 		private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
@@ -36,6 +35,7 @@ namespace NetOffice.MSFormsApi
         /// <summary>
         /// Instance Type
         /// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
         public override Type InstanceType
         {
             get
@@ -102,17 +102,17 @@ namespace NetOffice.MSFormsApi
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of ReturnInteger 
-        ///</summary>		
+        /// </summary>		
 		public ReturnInteger():base("MSForms.ReturnInteger")
 		{
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of ReturnInteger
-        ///</summary>
+        /// </summary>
         ///<param name="progId">registered ProgID</param>
 		public ReturnInteger(string progId):base(progId)
 		{
@@ -122,46 +122,6 @@ namespace NetOffice.MSFormsApi
 		#endregion
 
 		#region Static CoClass Methods
-
-		/// <summary>
-        /// Returns all running MSForms.ReturnInteger objects from the environment/system
-        /// </summary>
-        /// <returns>an MSForms.ReturnInteger array</returns>
-		public static NetOffice.MSFormsApi.ReturnInteger[] GetActiveInstances()
-		{		
-			IDisposableEnumeration proxyList = NetOffice.ProxyService.GetActiveInstances("MSForms","ReturnInteger");
-			NetRuntimeSystem.Collections.Generic.List<NetOffice.MSFormsApi.ReturnInteger> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.MSFormsApi.ReturnInteger>();
-			foreach(object proxy in proxyList)
-				resultList.Add( new NetOffice.MSFormsApi.ReturnInteger(null, proxy) );
-			return resultList.ToArray();
-		}
-
-		/// <summary>
-        /// Returns a running MSForms.ReturnInteger object from the environment/system.
-        /// </summary>
-        /// <returns>an MSForms.ReturnInteger object or null</returns>
-		public static NetOffice.MSFormsApi.ReturnInteger GetActiveInstance()
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("MSForms","ReturnInteger", false);
-			if(null != proxy)
-				return new NetOffice.MSFormsApi.ReturnInteger(null, proxy);
-			else
-				return null;
-		}
-
-		/// <summary>
-        /// Returns a running MSForms.ReturnInteger object from the environment/system. 
-        /// </summary>
-	    /// <param name="throwOnError">throw an exception if no object was found</param>
-        /// <returns>an MSForms.ReturnInteger object or null</returns>
-		public static NetOffice.MSFormsApi.ReturnInteger GetActiveInstance(bool throwOnError)
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("MSForms","ReturnInteger", throwOnError);
-			if(null != proxy)
-				return new NetOffice.MSFormsApi.ReturnInteger(null, proxy);
-			else
-				return null;
-		}
 		#endregion
 
 		#region Events

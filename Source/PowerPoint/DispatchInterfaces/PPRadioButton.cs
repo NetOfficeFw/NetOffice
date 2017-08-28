@@ -1,23 +1,33 @@
 ﻿using System;
 using NetRuntimeSystem = System;
-using System.Runtime.InteropServices;
-using System.Runtime.CompilerServices;
 using System.ComponentModel;
-using System.Reflection;
-using System.Collections.Generic;
-using NetOffice;
+using NetOffice.Attributes;
+
 namespace NetOffice.PowerPointApi
 {
-	///<summary>
+	/// <summary>
 	/// DispatchInterface PPRadioButton 
 	/// SupportByVersion PowerPoint, 9
-	///</summary>
-	[SupportByVersionAttribute("PowerPoint", 9)]
-	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
-	public class PPRadioButton : PPControl
+	/// </summary>
+	[SupportByVersion("PowerPoint", 9)]
+	[EntityType(EntityType.IsDispatchInterface)]
+ 	public class PPRadioButton : PPControl
 	{
 		#pragma warning disable
+
 		#region Type Information
+
+		/// <summary>
+		/// Instance Type
+		/// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
+		public override Type InstanceType
+		{
+			get
+			{
+				return LateBindingApiWrapperType;
+			}
+		}
 
         private static Type _type;
 
@@ -28,14 +38,20 @@ namespace NetOffice.PowerPointApi
             {
                 if (null == _type)
                     _type = typeof(PPRadioButton);
-                    
                 return _type;
             }
         }
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public PPRadioButton(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -81,7 +97,7 @@ namespace NetOffice.PowerPointApi
 		{
 		}
 		
-		/// <param name="progId">registered ProgID</param>
+		/// <param name="progId">registered progID</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public PPRadioButton(string progId) : base(progId)
 		{
@@ -95,20 +111,16 @@ namespace NetOffice.PowerPointApi
 		/// SupportByVersion PowerPoint 9
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 9)]
+		[SupportByVersion("PowerPoint", 9)]
 		public NetOffice.OfficeApi.Enums.MsoTriState State
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "State", paramsArray);
-				int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-				return (NetOffice.OfficeApi.Enums.MsoTriState)intReturnItem;
+				return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoTriState>(this, "State");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "State", paramsArray);
+				Factory.ExecuteEnumPropertySet(this, "State", value);
 			}
 		}
 
@@ -116,19 +128,16 @@ namespace NetOffice.PowerPointApi
 		/// SupportByVersion PowerPoint 9
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 9)]
+		[SupportByVersion("PowerPoint", 9)]
 		public string OnClick
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "OnClick", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "OnClick");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "OnClick", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "OnClick", value);
 			}
 		}
 
@@ -136,19 +145,16 @@ namespace NetOffice.PowerPointApi
 		/// SupportByVersion PowerPoint 9
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 9)]
+		[SupportByVersion("PowerPoint", 9)]
 		public string OnDoubleClick
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "OnDoubleClick", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "OnDoubleClick");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "OnDoubleClick", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "OnDoubleClick", value);
 			}
 		}
 
@@ -158,27 +164,24 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 9
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 9)]
+		[SupportByVersion("PowerPoint", 9)]
 		public void Click()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "Click", paramsArray);
+			 Factory.ExecuteMethod(this, "Click");
 		}
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 9
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("PowerPoint", 9)]
+		[SupportByVersion("PowerPoint", 9)]
 		public void DoubleClick()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "DoubleClick", paramsArray);
+			 Factory.ExecuteMethod(this, "DoubleClick");
 		}
 
 		#endregion
+
 		#pragma warning restore
 	}
 }

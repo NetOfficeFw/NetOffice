@@ -1,37 +1,37 @@
 ﻿using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
-using NetOffice;
-using NetOffice.Misc;
+using NetOffice.Attributes;
 
 namespace NetOffice.VisioApi
 {
-
 	#region Delegates
 
 	#pragma warning disable
-	public delegate void Row_CellChangedEventHandler(NetOffice.VisioApi.IVCell Cell);
-	public delegate void Row_FormulaChangedEventHandler(NetOffice.VisioApi.IVCell Cell);
+	public delegate void Row_CellChangedEventHandler(NetOffice.VisioApi.IVCell cell);
+	public delegate void Row_FormulaChangedEventHandler(NetOffice.VisioApi.IVCell cell);
 	#pragma warning restore
 
 	#endregion
 
-	///<summary>
+	/// <summary>
 	/// CoClass Row 
 	/// SupportByVersion Visio, 11,12,14,15,16
-	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff769378(v=office.14).aspx
-	///</summary>
-	[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
-	[EntityTypeAttribute(EntityType.IsCoClass)]
-	public class Row : IVRow,IEventBinding
+	/// </summary>
+	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/ff769378(v=office.14).aspx </remarks>
+	[SupportByVersion("Visio", 11,12,14,15,16)]
+	[EntityType(EntityType.IsCoClass)]
+	[EventSink(typeof(Events.ERow_SinkHelper))]
+	public class Row : IVRow, IEventBinding
 	{
 		#pragma warning disable
+
 		#region Fields
 		
 		private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
 		private string _activeSinkId;
 		private NetRuntimeSystem.Type _thisType;
-		ERow_SinkHelper _eRow_SinkHelper;
+		private Events.ERow_SinkHelper _eRow_SinkHelper;
 	
 		#endregion
 
@@ -40,6 +40,7 @@ namespace NetOffice.VisioApi
         /// <summary>
         /// Instance Type
         /// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
         public override Type InstanceType
         {
             get
@@ -106,17 +107,17 @@ namespace NetOffice.VisioApi
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of Row 
-        ///</summary>		
+        /// </summary>		
 		public Row():base("Visio.Row")
 		{
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of Row
-        ///</summary>
+        /// </summary>
         ///<param name="progId">registered ProgID</param>
 		public Row(string progId):base(progId)
 		{
@@ -126,46 +127,6 @@ namespace NetOffice.VisioApi
 		#endregion
 
 		#region Static CoClass Methods
-
-		/// <summary>
-        /// Returns all running Visio.Row objects from the environment/system
-        /// </summary>
-        /// <returns>an Visio.Row array</returns>
-		public static NetOffice.VisioApi.Row[] GetActiveInstances()
-		{		
-			IDisposableEnumeration proxyList = NetOffice.ProxyService.GetActiveInstances("Visio","Row");
-			NetRuntimeSystem.Collections.Generic.List<NetOffice.VisioApi.Row> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.VisioApi.Row>();
-			foreach(object proxy in proxyList)
-				resultList.Add( new NetOffice.VisioApi.Row(null, proxy) );
-			return resultList.ToArray();
-		}
-
-		/// <summary>
-        /// Returns a running Visio.Row object from the environment/system.
-        /// </summary>
-        /// <returns>an Visio.Row object or null</returns>
-		public static NetOffice.VisioApi.Row GetActiveInstance()
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Visio","Row", false);
-			if(null != proxy)
-				return new NetOffice.VisioApi.Row(null, proxy);
-			else
-				return null;
-		}
-
-		/// <summary>
-        /// Returns a running Visio.Row object from the environment/system. 
-        /// </summary>
-	    /// <param name="throwOnError">throw an exception if no object was found</param>
-        /// <returns>an Visio.Row object or null</returns>
-		public static NetOffice.VisioApi.Row GetActiveInstance(bool throwOnError)
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Visio","Row", throwOnError);
-			if(null != proxy)
-				return new NetOffice.VisioApi.Row(null, proxy);
-			else
-				return null;
-		}
 		#endregion
 
 		#region Events
@@ -233,12 +194,12 @@ namespace NetOffice.VisioApi
 				return;
 	
             if (null == _activeSinkId)
-				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, ERow_SinkHelper.Id);
+				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, Events.ERow_SinkHelper.Id);
 
 
-			if(ERow_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
+			if(Events.ERow_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
 			{
-				_eRow_SinkHelper = new ERow_SinkHelper(this, _connectPoint);
+				_eRow_SinkHelper = new Events.ERow_SinkHelper(this, _connectPoint);
 				return;
 			} 
         }

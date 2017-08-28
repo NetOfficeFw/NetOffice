@@ -1,23 +1,33 @@
 ﻿using System;
 using NetRuntimeSystem = System;
-using System.Runtime.InteropServices;
-using System.Runtime.CompilerServices;
 using System.ComponentModel;
-using System.Reflection;
-using System.Collections.Generic;
-using NetOffice;
+using NetOffice.Attributes;
+
 namespace NetOffice.ADODBApi
 {
-	///<summary>
+	/// <summary>
 	/// DispatchInterface Command15_Deprecated 
 	/// SupportByVersion ADODB, 2.5
-	///</summary>
-	[SupportByVersionAttribute("ADODB", 2.5)]
-	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
-	public class Command15_Deprecated : _ADO
+	/// </summary>
+	[SupportByVersion("ADODB", 2.5)]
+	[EntityType(EntityType.IsDispatchInterface)]
+ 	public class Command15_Deprecated : _ADO
 	{
 		#pragma warning disable
+
 		#region Type Information
+
+		/// <summary>
+		/// Instance Type
+		/// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
+		public override Type InstanceType
+		{
+			get
+			{
+				return LateBindingApiWrapperType;
+			}
+		}
 
         private static Type _type;
 
@@ -28,14 +38,20 @@ namespace NetOffice.ADODBApi
             {
                 if (null == _type)
                     _type = typeof(Command15_Deprecated);
-                    
                 return _type;
             }
         }
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public Command15_Deprecated(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -81,7 +97,7 @@ namespace NetOffice.ADODBApi
 		{
 		}
 		
-		/// <param name="progId">registered ProgID</param>
+		/// <param name="progId">registered progID</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public Command15_Deprecated(string progId) : base(progId)
 		{
@@ -95,20 +111,16 @@ namespace NetOffice.ADODBApi
 		/// SupportByVersion ADODB 2.5
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("ADODB", 2.5)]
+		[SupportByVersion("ADODB", 2.5)]
 		public NetOffice.ADODBApi._Connection_Deprecated ActiveConnection
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "ActiveConnection", paramsArray);
-				NetOffice.ADODBApi._Connection_Deprecated newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ADODBApi._Connection_Deprecated.LateBindingApiWrapperType) as NetOffice.ADODBApi._Connection_Deprecated;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ADODBApi._Connection_Deprecated>(this, "ActiveConnection", NetOffice.ADODBApi._Connection_Deprecated.LateBindingApiWrapperType);
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "ActiveConnection", paramsArray);
+				Factory.ExecuteReferencePropertySet(this, "ActiveConnection", value);
 			}
 		}
 
@@ -116,19 +128,16 @@ namespace NetOffice.ADODBApi
 		/// SupportByVersion ADODB 2.5
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("ADODB", 2.5)]
+		[SupportByVersion("ADODB", 2.5)]
 		public string CommandText
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "CommandText", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "CommandText");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "CommandText", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "CommandText", value);
 			}
 		}
 
@@ -136,19 +145,16 @@ namespace NetOffice.ADODBApi
 		/// SupportByVersion ADODB 2.5
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("ADODB", 2.5)]
+		[SupportByVersion("ADODB", 2.5)]
 		public Int32 CommandTimeout
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "CommandTimeout", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "CommandTimeout");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "CommandTimeout", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "CommandTimeout", value);
 			}
 		}
 
@@ -156,19 +162,16 @@ namespace NetOffice.ADODBApi
 		/// SupportByVersion ADODB 2.5
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("ADODB", 2.5)]
+		[SupportByVersion("ADODB", 2.5)]
 		public bool Prepared
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Prepared", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "Prepared");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "Prepared", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "Prepared", value);
 			}
 		}
 
@@ -176,15 +179,12 @@ namespace NetOffice.ADODBApi
 		/// SupportByVersion ADODB 2.5
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("ADODB", 2.5)]
+		[SupportByVersion("ADODB", 2.5)]
 		public NetOffice.ADODBApi.Parameters_Deprecated Parameters
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Parameters", paramsArray);
-				NetOffice.ADODBApi.Parameters_Deprecated newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ADODBApi.Parameters_Deprecated.LateBindingApiWrapperType) as NetOffice.ADODBApi.Parameters_Deprecated;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ADODBApi.Parameters_Deprecated>(this, "Parameters", NetOffice.ADODBApi.Parameters_Deprecated.LateBindingApiWrapperType);
 			}
 		}
 
@@ -192,20 +192,16 @@ namespace NetOffice.ADODBApi
 		/// SupportByVersion ADODB 2.5
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("ADODB", 2.5)]
+		[SupportByVersion("ADODB", 2.5)]
 		public NetOffice.ADODBApi.Enums.CommandTypeEnum CommandType
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "CommandType", paramsArray);
-				int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-				return (NetOffice.ADODBApi.Enums.CommandTypeEnum)intReturnItem;
+				return Factory.ExecuteEnumPropertyGet<NetOffice.ADODBApi.Enums.CommandTypeEnum>(this, "CommandType");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "CommandType", paramsArray);
+				Factory.ExecuteEnumPropertySet(this, "CommandType", value);
 			}
 		}
 
@@ -213,19 +209,16 @@ namespace NetOffice.ADODBApi
 		/// SupportByVersion ADODB 2.5
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("ADODB", 2.5)]
+		[SupportByVersion("ADODB", 2.5)]
 		public string Name
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Name", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "Name");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "Name", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "Name", value);
 			}
 		}
 
@@ -235,150 +228,115 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.5
-		/// 
 		/// </summary>
-		/// <param name="recordsAffected">object RecordsAffected</param>
-		/// <param name="parameters">optional object Parameters</param>
+		/// <param name="recordsAffected">object recordsAffected</param>
+		/// <param name="parameters">optional object parameters</param>
 		/// <param name="options">optional Int32 Options = -1</param>
-		[SupportByVersionAttribute("ADODB", 2.5)]
+		[SupportByVersion("ADODB", 2.5)]
 		public NetOffice.ADODBApi._Recordset_Deprecated Execute(object recordsAffected, object parameters, object options)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(recordsAffected, parameters, options);
-			object returnItem = Invoker.MethodReturn(this, "Execute", paramsArray);
-			NetOffice.ADODBApi._Recordset_Deprecated newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ADODBApi._Recordset_Deprecated.LateBindingApiWrapperType) as NetOffice.ADODBApi._Recordset_Deprecated;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ADODBApi._Recordset_Deprecated>(this, "Execute", NetOffice.ADODBApi._Recordset_Deprecated.LateBindingApiWrapperType, recordsAffected, parameters, options);
 		}
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.5
-		/// 
 		/// </summary>
-		/// <param name="recordsAffected">object RecordsAffected</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("ADODB", 2.5)]
+		/// <param name="recordsAffected">object recordsAffected</param>
+		[CustomMethod]
+		[SupportByVersion("ADODB", 2.5)]
 		public NetOffice.ADODBApi._Recordset_Deprecated Execute(object recordsAffected)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(recordsAffected);
-			object returnItem = Invoker.MethodReturn(this, "Execute", paramsArray);
-			NetOffice.ADODBApi._Recordset_Deprecated newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ADODBApi._Recordset_Deprecated.LateBindingApiWrapperType) as NetOffice.ADODBApi._Recordset_Deprecated;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ADODBApi._Recordset_Deprecated>(this, "Execute", NetOffice.ADODBApi._Recordset_Deprecated.LateBindingApiWrapperType, recordsAffected);
 		}
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.5
-		/// 
 		/// </summary>
-		/// <param name="recordsAffected">object RecordsAffected</param>
-		/// <param name="parameters">optional object Parameters</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("ADODB", 2.5)]
+		/// <param name="recordsAffected">object recordsAffected</param>
+		/// <param name="parameters">optional object parameters</param>
+		[CustomMethod]
+		[SupportByVersion("ADODB", 2.5)]
 		public NetOffice.ADODBApi._Recordset_Deprecated Execute(object recordsAffected, object parameters)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(recordsAffected, parameters);
-			object returnItem = Invoker.MethodReturn(this, "Execute", paramsArray);
-			NetOffice.ADODBApi._Recordset_Deprecated newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ADODBApi._Recordset_Deprecated.LateBindingApiWrapperType) as NetOffice.ADODBApi._Recordset_Deprecated;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ADODBApi._Recordset_Deprecated>(this, "Execute", NetOffice.ADODBApi._Recordset_Deprecated.LateBindingApiWrapperType, recordsAffected, parameters);
 		}
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.5
-		/// 
 		/// </summary>
 		/// <param name="name">optional string Name = </param>
 		/// <param name="type">optional NetOffice.ADODBApi.Enums.DataTypeEnum Type = 0</param>
 		/// <param name="direction">optional NetOffice.ADODBApi.Enums.ParameterDirectionEnum Direction = 1</param>
 		/// <param name="size">optional Int32 Size = 0</param>
-		/// <param name="value">optional object Value</param>
-		[SupportByVersionAttribute("ADODB", 2.5)]
+		/// <param name="value">optional object value</param>
+		[SupportByVersion("ADODB", 2.5)]
 		public NetOffice.ADODBApi._Parameter_Deprecated CreateParameter(object name, object type, object direction, object size, object value)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(name, type, direction, size, value);
-			object returnItem = Invoker.MethodReturn(this, "CreateParameter", paramsArray);
-			NetOffice.ADODBApi._Parameter_Deprecated newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ADODBApi._Parameter_Deprecated.LateBindingApiWrapperType) as NetOffice.ADODBApi._Parameter_Deprecated;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ADODBApi._Parameter_Deprecated>(this, "CreateParameter", NetOffice.ADODBApi._Parameter_Deprecated.LateBindingApiWrapperType, new object[]{ name, type, direction, size, value });
 		}
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.5
-		/// 
 		/// </summary>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("ADODB", 2.5)]
+		[CustomMethod]
+		[SupportByVersion("ADODB", 2.5)]
 		public NetOffice.ADODBApi._Parameter_Deprecated CreateParameter()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "CreateParameter", paramsArray);
-			NetOffice.ADODBApi._Parameter_Deprecated newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ADODBApi._Parameter_Deprecated.LateBindingApiWrapperType) as NetOffice.ADODBApi._Parameter_Deprecated;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ADODBApi._Parameter_Deprecated>(this, "CreateParameter", NetOffice.ADODBApi._Parameter_Deprecated.LateBindingApiWrapperType);
 		}
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.5
-		/// 
 		/// </summary>
 		/// <param name="name">optional string Name = </param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("ADODB", 2.5)]
+		[CustomMethod]
+		[SupportByVersion("ADODB", 2.5)]
 		public NetOffice.ADODBApi._Parameter_Deprecated CreateParameter(object name)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(name);
-			object returnItem = Invoker.MethodReturn(this, "CreateParameter", paramsArray);
-			NetOffice.ADODBApi._Parameter_Deprecated newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ADODBApi._Parameter_Deprecated.LateBindingApiWrapperType) as NetOffice.ADODBApi._Parameter_Deprecated;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ADODBApi._Parameter_Deprecated>(this, "CreateParameter", NetOffice.ADODBApi._Parameter_Deprecated.LateBindingApiWrapperType, name);
 		}
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.5
-		/// 
 		/// </summary>
 		/// <param name="name">optional string Name = </param>
 		/// <param name="type">optional NetOffice.ADODBApi.Enums.DataTypeEnum Type = 0</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("ADODB", 2.5)]
+		[CustomMethod]
+		[SupportByVersion("ADODB", 2.5)]
 		public NetOffice.ADODBApi._Parameter_Deprecated CreateParameter(object name, object type)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(name, type);
-			object returnItem = Invoker.MethodReturn(this, "CreateParameter", paramsArray);
-			NetOffice.ADODBApi._Parameter_Deprecated newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ADODBApi._Parameter_Deprecated.LateBindingApiWrapperType) as NetOffice.ADODBApi._Parameter_Deprecated;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ADODBApi._Parameter_Deprecated>(this, "CreateParameter", NetOffice.ADODBApi._Parameter_Deprecated.LateBindingApiWrapperType, name, type);
 		}
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.5
-		/// 
 		/// </summary>
 		/// <param name="name">optional string Name = </param>
 		/// <param name="type">optional NetOffice.ADODBApi.Enums.DataTypeEnum Type = 0</param>
 		/// <param name="direction">optional NetOffice.ADODBApi.Enums.ParameterDirectionEnum Direction = 1</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("ADODB", 2.5)]
+		[CustomMethod]
+		[SupportByVersion("ADODB", 2.5)]
 		public NetOffice.ADODBApi._Parameter_Deprecated CreateParameter(object name, object type, object direction)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(name, type, direction);
-			object returnItem = Invoker.MethodReturn(this, "CreateParameter", paramsArray);
-			NetOffice.ADODBApi._Parameter_Deprecated newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ADODBApi._Parameter_Deprecated.LateBindingApiWrapperType) as NetOffice.ADODBApi._Parameter_Deprecated;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ADODBApi._Parameter_Deprecated>(this, "CreateParameter", NetOffice.ADODBApi._Parameter_Deprecated.LateBindingApiWrapperType, name, type, direction);
 		}
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.5
-		/// 
 		/// </summary>
 		/// <param name="name">optional string Name = </param>
 		/// <param name="type">optional NetOffice.ADODBApi.Enums.DataTypeEnum Type = 0</param>
 		/// <param name="direction">optional NetOffice.ADODBApi.Enums.ParameterDirectionEnum Direction = 1</param>
 		/// <param name="size">optional Int32 Size = 0</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("ADODB", 2.5)]
+		[CustomMethod]
+		[SupportByVersion("ADODB", 2.5)]
 		public NetOffice.ADODBApi._Parameter_Deprecated CreateParameter(object name, object type, object direction, object size)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(name, type, direction, size);
-			object returnItem = Invoker.MethodReturn(this, "CreateParameter", paramsArray);
-			NetOffice.ADODBApi._Parameter_Deprecated newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ADODBApi._Parameter_Deprecated.LateBindingApiWrapperType) as NetOffice.ADODBApi._Parameter_Deprecated;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ADODBApi._Parameter_Deprecated>(this, "CreateParameter", NetOffice.ADODBApi._Parameter_Deprecated.LateBindingApiWrapperType, name, type, direction, size);
 		}
 
 		#endregion
+
 		#pragma warning restore
 	}
 }

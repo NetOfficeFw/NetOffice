@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace NetOffice
+namespace NetOffice.Attributes
 {
     /// <summary>
     /// This method is a custom overload from NetOffice

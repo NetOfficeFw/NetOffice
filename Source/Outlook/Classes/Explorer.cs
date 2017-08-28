@@ -1,54 +1,54 @@
 ﻿using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
-using NetOffice;
-using NetOffice.Misc;
+using NetOffice.Attributes;
 
 namespace NetOffice.OutlookApi
 {
-
 	#region Delegates
 
 	#pragma warning disable
 	public delegate void Explorer_ActivateEventHandler();
 	public delegate void Explorer_FolderSwitchEventHandler();
-	public delegate void Explorer_BeforeFolderSwitchEventHandler(COMObject NewFolder, ref bool Cancel);
+	public delegate void Explorer_BeforeFolderSwitchEventHandler(ICOMObject newFolder, ref bool cancel);
 	public delegate void Explorer_ViewSwitchEventHandler();
-	public delegate void Explorer_BeforeViewSwitchEventHandler(object NewView, ref bool Cancel);
+	public delegate void Explorer_BeforeViewSwitchEventHandler(object newView, ref bool cancel);
 	public delegate void Explorer_DeactivateEventHandler();
 	public delegate void Explorer_SelectionChangeEventHandler();
 	public delegate void Explorer_CloseEventHandler();
-	public delegate void Explorer_BeforeMaximizeEventHandler(ref bool Cancel);
-	public delegate void Explorer_BeforeMinimizeEventHandler(ref bool Cancel);
-	public delegate void Explorer_BeforeMoveEventHandler(ref bool Cancel);
-	public delegate void Explorer_BeforeSizeEventHandler(ref bool Cancel);
-	public delegate void Explorer_BeforeItemCopyEventHandler(ref bool Cancel);
-	public delegate void Explorer_BeforeItemCutEventHandler(ref bool Cancel);
-	public delegate void Explorer_BeforeItemPasteEventHandler(ref object ClipboardContent, NetOffice.OutlookApi.MAPIFolder Target, ref bool Cancel);
+	public delegate void Explorer_BeforeMaximizeEventHandler(ref bool cancel);
+	public delegate void Explorer_BeforeMinimizeEventHandler(ref bool cancel);
+	public delegate void Explorer_BeforeMoveEventHandler(ref bool cancel);
+	public delegate void Explorer_BeforeSizeEventHandler(ref bool cancel);
+	public delegate void Explorer_BeforeItemCopyEventHandler(ref bool cancel);
+	public delegate void Explorer_BeforeItemCutEventHandler(ref bool cancel);
+	public delegate void Explorer_BeforeItemPasteEventHandler(ref object clipboardContent, NetOffice.OutlookApi.MAPIFolder target, ref bool cancel);
 	public delegate void Explorer_AttachmentSelectionChangeEventHandler();
-	public delegate void Explorer_InlineResponseEventHandler(COMObject Item);
+	public delegate void Explorer_InlineResponseEventHandler(ICOMObject item);
     public delegate void Explorer_InlineResponseCloseEventHandler();
 	#pragma warning restore
 
 	#endregion
 
-	///<summary>
+	/// <summary>
 	/// CoClass Explorer 
 	/// SupportByVersion Outlook, 9,10,11,12,14,15,16
-	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff860356.aspx
-	///</summary>
-	[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15,16)]
-	[EntityTypeAttribute(EntityType.IsCoClass)]
-	public class Explorer : _Explorer,IEventBinding
+	/// </summary>
+	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860356.aspx </remarks>
+	[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
+	[EntityType(EntityType.IsCoClass)]
+	[EventSink(typeof(Events.ExplorerEvents_SinkHelper), typeof(Events.ExplorerEvents_10_SinkHelper))]
+	public class Explorer : _Explorer, IEventBinding
 	{
 		#pragma warning disable
+
 		#region Fields
 		
 		private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
 		private string _activeSinkId;
 		private NetRuntimeSystem.Type _thisType;
-		ExplorerEvents_SinkHelper _explorerEvents_SinkHelper;
-		ExplorerEvents_10_SinkHelper _explorerEvents_10_SinkHelper;
+		private Events.ExplorerEvents_SinkHelper _explorerEvents_SinkHelper;
+        private Events.ExplorerEvents_10_SinkHelper _explorerEvents_10_SinkHelper;
 	
 		#endregion
 
@@ -57,6 +57,7 @@ namespace NetOffice.OutlookApi
         /// <summary>
         /// Instance Type
         /// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
         public override Type InstanceType
         {
             get
@@ -123,17 +124,17 @@ namespace NetOffice.OutlookApi
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of Explorer 
-        ///</summary>		
+        /// </summary>		
 		public Explorer():base("Outlook.Explorer")
 		{
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of Explorer
-        ///</summary>
+        /// </summary>
         ///<param name="progId">registered ProgID</param>
 		public Explorer(string progId):base(progId)
 		{
@@ -143,46 +144,6 @@ namespace NetOffice.OutlookApi
 		#endregion
 
 		#region Static CoClass Methods
-
-		/// <summary>
-        /// Returns all running Outlook.Explorer objects from the environment/system
-        /// </summary>
-        /// <returns>an Outlook.Explorer array</returns>
-		public static NetOffice.OutlookApi.Explorer[] GetActiveInstances()
-		{		
-			IDisposableEnumeration proxyList = NetOffice.ProxyService.GetActiveInstances("Outlook","Explorer");
-			NetRuntimeSystem.Collections.Generic.List<NetOffice.OutlookApi.Explorer> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.OutlookApi.Explorer>();
-			foreach(object proxy in proxyList)
-				resultList.Add( new NetOffice.OutlookApi.Explorer(null, proxy) );
-			return resultList.ToArray();
-		}
-
-		/// <summary>
-        /// Returns a running Outlook.Explorer object from the environment/system.
-        /// </summary>
-        /// <returns>an Outlook.Explorer object or null</returns>
-		public static NetOffice.OutlookApi.Explorer GetActiveInstance()
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Outlook","Explorer", false);
-			if(null != proxy)
-				return new NetOffice.OutlookApi.Explorer(null, proxy);
-			else
-				return null;
-		}
-
-		/// <summary>
-        /// Returns a running Outlook.Explorer object from the environment/system. 
-        /// </summary>
-	    /// <param name="throwOnError">throw an exception if no object was found</param>
-        /// <returns>an Outlook.Explorer object or null</returns>
-		public static NetOffice.OutlookApi.Explorer GetActiveInstance(bool throwOnError)
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Outlook","Explorer", throwOnError);
-			if(null != proxy)
-				return new NetOffice.OutlookApi.Explorer(null, proxy);
-			else
-				return null;
-		}
 		#endregion
 
 		#region Events
@@ -618,18 +579,18 @@ namespace NetOffice.OutlookApi
 				return;
 	
             if (null == _activeSinkId)
-				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, ExplorerEvents_SinkHelper.Id,ExplorerEvents_10_SinkHelper.Id);
+				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, Events.ExplorerEvents_SinkHelper.Id, Events.ExplorerEvents_10_SinkHelper.Id);
 
 
-			if(ExplorerEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
+			if(Events.ExplorerEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
 			{
-				_explorerEvents_SinkHelper = new ExplorerEvents_SinkHelper(this, _connectPoint);
+				_explorerEvents_SinkHelper = new Events.ExplorerEvents_SinkHelper(this, _connectPoint);
 				return;
 			}
 
-			if(ExplorerEvents_10_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
+			if(Events.ExplorerEvents_10_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
 			{
-				_explorerEvents_10_SinkHelper = new ExplorerEvents_10_SinkHelper(this, _connectPoint);
+				_explorerEvents_10_SinkHelper = new Events.ExplorerEvents_10_SinkHelper(this, _connectPoint);
 				return;
 			} 
         }

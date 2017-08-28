@@ -1,23 +1,34 @@
-﻿using System;
-using NetRuntimeSystem = System;
-using System.Runtime.InteropServices;
-using System.ComponentModel;
-using System.Runtime.CompilerServices;
 using System.Reflection;
-using System.Collections.Generic;
-using NetOffice;
+using System;
+using NetRuntimeSystem = System;
+using System.ComponentModel;
+using NetOffice.Attributes;
+
 namespace NetOffice.VisioApi
 {
-	///<summary>
+	/// <summary>
 	/// Interface LPSERVERPUBLISHOPTIONS 
 	/// SupportByVersion Visio, 14,15,16
-	///</summary>
-	[SupportByVersionAttribute("Visio", 14,15,16)]
-	[EntityTypeAttribute(EntityType.IsInterface)]
-	public class LPSERVERPUBLISHOPTIONS : COMObject
+	/// </summary>
+	[SupportByVersion("Visio", 14,15,16)]
+	[EntityType(EntityType.IsInterface)]
+ 	public class LPSERVERPUBLISHOPTIONS : COMObject
 	{
 		#pragma warning disable
+
 		#region Type Information
+
+		/// <summary>
+		/// Instance Type
+		/// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
+		public override Type InstanceType
+		{
+			get
+			{
+				return LateBindingApiWrapperType;
+			}
+		}
 
         private static Type _type;
 
@@ -28,14 +39,20 @@ namespace NetOffice.VisioApi
             {
                 if (null == _type)
                     _type = typeof(LPSERVERPUBLISHOPTIONS);
-                    
                 return _type;
             }
         }
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public LPSERVERPUBLISHOPTIONS(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -81,7 +98,7 @@ namespace NetOffice.VisioApi
 		{
 		}
 		
-		/// <param name="progId">registered ProgID</param>
+		/// <param name="progId">registered progID</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public LPSERVERPUBLISHOPTIONS(string progId) : base(progId)
 		{
@@ -95,15 +112,13 @@ namespace NetOffice.VisioApi
 		/// SupportByVersion Visio 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 14,15,16)]
+		[SupportByVersion("Visio", 14,15,16)]
+		[BaseResult]
 		public NetOffice.VisioApi.IVApplication Application
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				NetOffice.VisioApi.IVApplication newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVApplication;
-				return newObject;
+				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.VisioApi.IVApplication>(this, "Application");
 			}
 		}
 
@@ -111,14 +126,12 @@ namespace NetOffice.VisioApi
 		/// SupportByVersion Visio 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 14,15,16)]
+		[SupportByVersion("Visio", 14,15,16)]
 		public Int16 Stat
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Stat", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt16(returnItem);
+				return Factory.ExecuteInt16PropertyGet(this, "Stat");
 			}
 		}
 
@@ -126,15 +139,13 @@ namespace NetOffice.VisioApi
 		/// SupportByVersion Visio 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 14,15,16)]
+		[SupportByVersion("Visio", 14,15,16)]
+		[BaseResult]
 		public NetOffice.VisioApi.IVDocument Document
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Document", paramsArray);
-				NetOffice.VisioApi.IVDocument newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVDocument;
-				return newObject;
+				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.VisioApi.IVDocument>(this, "Document");
 			}
 		}
 
@@ -142,14 +153,12 @@ namespace NetOffice.VisioApi
 		/// SupportByVersion Visio 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 14,15,16)]
+		[SupportByVersion("Visio", 14,15,16)]
 		public Int16 ObjectType
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "ObjectType", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt16(returnItem);
+				return Factory.ExecuteInt16PropertyGet(this, "ObjectType");
 			}
 		}
 
@@ -157,24 +166,22 @@ namespace NetOffice.VisioApi
 		/// SupportByVersion Visio 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <param name="pageName">string PageName</param>
-		/// <param name="flags">NetOffice.VisioApi.Enums.VisLangFlags Flags</param>
-		[SupportByVersionAttribute("Visio", 14,15,16)]
+		/// <param name="pageName">string pageName</param>
+		/// <param name="flags">NetOffice.VisioApi.Enums.VisLangFlags flags</param>
+		[SupportByVersion("Visio", 14,15,16)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public bool get_IsPublishedPage(string pageName, NetOffice.VisioApi.Enums.VisLangFlags flags)
-		{		
-			object[] paramsArray = Invoker.ValidateParamsArray(pageName, flags);
-			object returnItem = Invoker.PropertyGet(this, "IsPublishedPage", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+		{
+			return Factory.ExecuteBoolPropertyGet(this, "IsPublishedPage", pageName, flags);
 		}
 
 		/// <summary>
 		/// SupportByVersion Visio 14, 15, 16
 		/// Alias for get_IsPublishedPage
 		/// </summary>
-		/// <param name="pageName">string PageName</param>
-		/// <param name="flags">NetOffice.VisioApi.Enums.VisLangFlags Flags</param>
-		[SupportByVersionAttribute("Visio", 14,15,16)]
+		/// <param name="pageName">string pageName</param>
+		/// <param name="flags">NetOffice.VisioApi.Enums.VisLangFlags flags</param>
+		[SupportByVersion("Visio", 14,15,16), Redirect("get_IsPublishedPage")]
 		public bool IsPublishedPage(string pageName, NetOffice.VisioApi.Enums.VisLangFlags flags)
 		{
 			return get_IsPublishedPage(pageName, flags);
@@ -186,52 +193,45 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="pageName">string PageName</param>
-		/// <param name="flags">NetOffice.VisioApi.Enums.VisLangFlags Flags</param>
-		[SupportByVersionAttribute("Visio", 14,15,16)]
+		/// <param name="pageName">string pageName</param>
+		/// <param name="flags">NetOffice.VisioApi.Enums.VisLangFlags flags</param>
+		[SupportByVersion("Visio", 14,15,16)]
 		public void IncludePage(string pageName, NetOffice.VisioApi.Enums.VisLangFlags flags)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(pageName, flags);
-			Invoker.Method(this, "IncludePage", paramsArray);
+			 Factory.ExecuteMethod(this, "IncludePage", pageName, flags);
 		}
 
 		/// <summary>
 		/// SupportByVersion Visio 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="pageName">string PageName</param>
-		/// <param name="flags">NetOffice.VisioApi.Enums.VisLangFlags Flags</param>
-		[SupportByVersionAttribute("Visio", 14,15,16)]
+		/// <param name="pageName">string pageName</param>
+		/// <param name="flags">NetOffice.VisioApi.Enums.VisLangFlags flags</param>
+		[SupportByVersion("Visio", 14,15,16)]
 		public void ExcludePage(string pageName, NetOffice.VisioApi.Enums.VisLangFlags flags)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(pageName, flags);
-			Invoker.Method(this, "ExcludePage", paramsArray);
+			 Factory.ExecuteMethod(this, "ExcludePage", pageName, flags);
 		}
 
 		/// <summary>
 		/// SupportByVersion Visio 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="publishPages">NetOffice.VisioApi.Enums.VisPublishPages PublishPages</param>
-		/// <param name="namesArray">String[] NamesArray</param>
-		/// <param name="flags">NetOffice.VisioApi.Enums.VisLangFlags Flags</param>
-		[SupportByVersionAttribute("Visio", 14,15,16)]
+		/// <param name="publishPages">NetOffice.VisioApi.Enums.VisPublishPages publishPages</param>
+		/// <param name="namesArray">String[] namesArray</param>
+		/// <param name="flags">NetOffice.VisioApi.Enums.VisLangFlags flags</param>
+		[SupportByVersion("Visio", 14,15,16)]
 		public void SetPagesToPublish(NetOffice.VisioApi.Enums.VisPublishPages publishPages, String[] namesArray, NetOffice.VisioApi.Enums.VisLangFlags flags)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(publishPages, (object)namesArray, flags);
-			Invoker.Method(this, "SetPagesToPublish", paramsArray);
+			 Factory.ExecuteMethod(this, "SetPagesToPublish", publishPages, namesArray, flags);
 		}
 
 		/// <summary>
 		/// SupportByVersion Visio 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="flags">NetOffice.VisioApi.Enums.VisLangFlags Flags</param>
-		/// <param name="publishPages">NetOffice.VisioApi.Enums.VisPublishPages PublishPages</param>
-		/// <param name="namesArray">String[] NamesArray</param>
-		[SupportByVersionAttribute("Visio", 14,15,16)]
+		/// <param name="flags">NetOffice.VisioApi.Enums.VisLangFlags flags</param>
+		/// <param name="publishPages">NetOffice.VisioApi.Enums.VisPublishPages publishPages</param>
+		/// <param name="namesArray">String[] namesArray</param>
+		[SupportByVersion("Visio", 14,15,16)]
 		public void GetPagesToPublish(NetOffice.VisioApi.Enums.VisLangFlags flags, out NetOffice.VisioApi.Enums.VisPublishPages publishPages, out String[] namesArray)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,true,true);
@@ -245,24 +245,21 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="publishDataRecordsets">NetOffice.VisioApi.Enums.VisPublishDataRecordsets PublishDataRecordsets</param>
-		/// <param name="dataRecordsetIDs">Int32[] DataRecordsetIDs</param>
-		[SupportByVersionAttribute("Visio", 14,15,16)]
+		/// <param name="publishDataRecordsets">NetOffice.VisioApi.Enums.VisPublishDataRecordsets publishDataRecordsets</param>
+		/// <param name="dataRecordsetIDs">Int32[] dataRecordsetIDs</param>
+		[SupportByVersion("Visio", 14,15,16)]
 		public void SetRecordsetsToPublish(NetOffice.VisioApi.Enums.VisPublishDataRecordsets publishDataRecordsets, Int32[] dataRecordsetIDs)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(publishDataRecordsets, (object)dataRecordsetIDs);
-			Invoker.Method(this, "SetRecordsetsToPublish", paramsArray);
+			 Factory.ExecuteMethod(this, "SetRecordsetsToPublish", publishDataRecordsets, dataRecordsetIDs);
 		}
 
 		/// <summary>
 		/// SupportByVersion Visio 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="publishDataRecordsets">NetOffice.VisioApi.Enums.VisPublishDataRecordsets PublishDataRecordsets</param>
-		/// <param name="dataRecordsetIDs">Int32[] DataRecordsetIDs</param>
-		[SupportByVersionAttribute("Visio", 14,15,16)]
+		/// <param name="publishDataRecordsets">NetOffice.VisioApi.Enums.VisPublishDataRecordsets publishDataRecordsets</param>
+		/// <param name="dataRecordsetIDs">Int32[] dataRecordsetIDs</param>
+		[SupportByVersion("Visio", 14,15,16)]
 		public void GetRecordsetsToPublish(out NetOffice.VisioApi.Enums.VisPublishDataRecordsets publishDataRecordsets, out Int32[] dataRecordsetIDs)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true,true);
@@ -275,6 +272,7 @@ namespace NetOffice.VisioApi
 		}
 
 		#endregion
+
 		#pragma warning restore
 	}
 }

@@ -1,24 +1,35 @@
-﻿using System;
-using NetRuntimeSystem = System;
-using System.Runtime.InteropServices;
-using System.Runtime.CompilerServices;
-using System.ComponentModel;
-using System.Reflection;
+﻿using System.Collections;
 using System.Collections.Generic;
-using System.Collections;
-using NetOffice;
+using System;
+using NetRuntimeSystem = System;
+using System.ComponentModel;
+using NetOffice.Attributes;
+
 namespace NetOffice.PublisherApi
 {
-	///<summary>
+	/// <summary>
 	/// DispatchInterface Hyperlinks 
 	/// SupportByVersion Publisher, 14,15,16
-	///</summary>
-	[SupportByVersionAttribute("Publisher", 14,15,16)]
-	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
-	public class Hyperlinks : COMObject ,IEnumerable<NetOffice.PublisherApi.Hyperlink>
+	/// </summary>
+	[SupportByVersion("Publisher", 14,15,16)]
+	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "Item")]
+	public class Hyperlinks : COMObject , IEnumerable<NetOffice.PublisherApi.Hyperlink>
 	{
 		#pragma warning disable
+
 		#region Type Information
+
+		/// <summary>
+		/// Instance Type
+		/// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
+		public override Type InstanceType
+		{
+			get
+			{
+				return LateBindingApiWrapperType;
+			}
+		}
 
         private static Type _type;
 
@@ -29,14 +40,20 @@ namespace NetOffice.PublisherApi
             {
                 if (null == _type)
                     _type = typeof(Hyperlinks);
-                    
                 return _type;
             }
         }
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public Hyperlinks(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -82,7 +99,7 @@ namespace NetOffice.PublisherApi
 		{
 		}
 		
-		/// <param name="progId">registered ProgID</param>
+		/// <param name="progId">registered progID</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public Hyperlinks(string progId) : base(progId)
 		{
@@ -96,17 +113,14 @@ namespace NetOffice.PublisherApi
 		/// SupportByVersion Publisher 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <param name="index">Int32 Index</param>
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
-		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
+		/// <param name="index">Int32 index</param>
+		[SupportByVersion("Publisher", 14,15,16)]
+		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
 		public NetOffice.PublisherApi.Hyperlink this[Int32 index]
 		{
 			get
-{			
-			object[] paramsArray = Invoker.ValidateParamsArray(index);
-			object returnItem = Invoker.PropertyGet(this, "Item", paramsArray);
-			NetOffice.PublisherApi.Hyperlink newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.PublisherApi.Hyperlink.LateBindingApiWrapperType) as NetOffice.PublisherApi.Hyperlink;
-			return newObject;
+			{
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.PublisherApi.Hyperlink>(this, "Item", NetOffice.PublisherApi.Hyperlink.LateBindingApiWrapperType, index);
 			}
 		}
 
@@ -114,15 +128,12 @@ namespace NetOffice.PublisherApi
 		/// SupportByVersion Publisher 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		[SupportByVersion("Publisher", 14,15,16)]
 		public NetOffice.PublisherApi.Application Application
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				NetOffice.PublisherApi.Application newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.PublisherApi.Application.LateBindingApiWrapperType) as NetOffice.PublisherApi.Application;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.PublisherApi.Application>(this, "Application", NetOffice.PublisherApi.Application.LateBindingApiWrapperType);
 			}
 		}
 
@@ -131,15 +142,12 @@ namespace NetOffice.PublisherApi
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		[SupportByVersion("Publisher", 14,15,16), ProxyResult]
 		public object Parent
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Parent", paramsArray);
-				ICOMObject newObject = Factory.CreateObjectFromComProxy(this,returnItem);
-				return newObject;
+				return Factory.ExecuteReferencePropertyGet(this, "Parent");
 			}
 		}
 
@@ -147,14 +155,12 @@ namespace NetOffice.PublisherApi
 		/// SupportByVersion Publisher 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		[SupportByVersion("Publisher", 14,15,16)]
 		public Int32 Count
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Count", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "Count");
 			}
 		}
 
@@ -164,86 +170,66 @@ namespace NetOffice.PublisherApi
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="text">NetOffice.PublisherApi.TextRange Text</param>
+		/// <param name="text">NetOffice.PublisherApi.TextRange text</param>
 		/// <param name="address">optional string Address = </param>
 		/// <param name="relativePage">optional NetOffice.PublisherApi.Enums.PbHlinkTargetType RelativePage = 1</param>
 		/// <param name="pageID">optional Int32 PageID = 0</param>
 		/// <param name="textToDisplay">optional string TextToDisplay = </param>
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		[SupportByVersion("Publisher", 14,15,16)]
 		public NetOffice.PublisherApi.Hyperlink Add(NetOffice.PublisherApi.TextRange text, object address, object relativePage, object pageID, object textToDisplay)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(text, address, relativePage, pageID, textToDisplay);
-			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.PublisherApi.Hyperlink newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PublisherApi.Hyperlink.LateBindingApiWrapperType) as NetOffice.PublisherApi.Hyperlink;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PublisherApi.Hyperlink>(this, "Add", NetOffice.PublisherApi.Hyperlink.LateBindingApiWrapperType, new object[]{ text, address, relativePage, pageID, textToDisplay });
 		}
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="text">NetOffice.PublisherApi.TextRange Text</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		/// <param name="text">NetOffice.PublisherApi.TextRange text</param>
+		[CustomMethod]
+		[SupportByVersion("Publisher", 14,15,16)]
 		public NetOffice.PublisherApi.Hyperlink Add(NetOffice.PublisherApi.TextRange text)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(text);
-			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.PublisherApi.Hyperlink newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PublisherApi.Hyperlink.LateBindingApiWrapperType) as NetOffice.PublisherApi.Hyperlink;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PublisherApi.Hyperlink>(this, "Add", NetOffice.PublisherApi.Hyperlink.LateBindingApiWrapperType, text);
 		}
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="text">NetOffice.PublisherApi.TextRange Text</param>
+		/// <param name="text">NetOffice.PublisherApi.TextRange text</param>
 		/// <param name="address">optional string Address = </param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Publisher", 14,15,16)]
 		public NetOffice.PublisherApi.Hyperlink Add(NetOffice.PublisherApi.TextRange text, object address)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(text, address);
-			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.PublisherApi.Hyperlink newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PublisherApi.Hyperlink.LateBindingApiWrapperType) as NetOffice.PublisherApi.Hyperlink;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PublisherApi.Hyperlink>(this, "Add", NetOffice.PublisherApi.Hyperlink.LateBindingApiWrapperType, text, address);
 		}
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="text">NetOffice.PublisherApi.TextRange Text</param>
+		/// <param name="text">NetOffice.PublisherApi.TextRange text</param>
 		/// <param name="address">optional string Address = </param>
 		/// <param name="relativePage">optional NetOffice.PublisherApi.Enums.PbHlinkTargetType RelativePage = 1</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Publisher", 14,15,16)]
 		public NetOffice.PublisherApi.Hyperlink Add(NetOffice.PublisherApi.TextRange text, object address, object relativePage)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(text, address, relativePage);
-			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.PublisherApi.Hyperlink newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PublisherApi.Hyperlink.LateBindingApiWrapperType) as NetOffice.PublisherApi.Hyperlink;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PublisherApi.Hyperlink>(this, "Add", NetOffice.PublisherApi.Hyperlink.LateBindingApiWrapperType, text, address, relativePage);
 		}
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="text">NetOffice.PublisherApi.TextRange Text</param>
+		/// <param name="text">NetOffice.PublisherApi.TextRange text</param>
 		/// <param name="address">optional string Address = </param>
 		/// <param name="relativePage">optional NetOffice.PublisherApi.Enums.PbHlinkTargetType RelativePage = 1</param>
 		/// <param name="pageID">optional Int32 PageID = 0</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Publisher", 14,15,16)]
 		public NetOffice.PublisherApi.Hyperlink Add(NetOffice.PublisherApi.TextRange text, object address, object relativePage, object pageID)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(text, address, relativePage, pageID);
-			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.PublisherApi.Hyperlink newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PublisherApi.Hyperlink.LateBindingApiWrapperType) as NetOffice.PublisherApi.Hyperlink;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PublisherApi.Hyperlink>(this, "Add", NetOffice.PublisherApi.Hyperlink.LateBindingApiWrapperType, text, address, relativePage, pageID);
 		}
 
 		#endregion
@@ -251,9 +237,9 @@ namespace NetOffice.PublisherApi
        #region IEnumerable<NetOffice.PublisherApi.Hyperlink> Member
         
         /// <summary>
-		/// SupportByVersionAttribute Publisher, 14,15,16
+		/// SupportByVersion Publisher, 14,15,16
 		/// </summary>
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		[SupportByVersion("Publisher", 14,15,16)]
        public IEnumerator<NetOffice.PublisherApi.Hyperlink> GetEnumerator()  
        {
            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
@@ -266,15 +252,16 @@ namespace NetOffice.PublisherApi
 		#region IEnumerable Members
        
 		/// <summary>
-		/// SupportByVersionAttribute Publisher, 14,15,16
+		/// SupportByVersion Publisher, 14,15,16
 		/// </summary>
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		[SupportByVersion("Publisher", 14,15,16)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
 			return NetOffice.Utils.GetProxyEnumeratorAsProperty(this);
 		}
 
 		#endregion
+
 		#pragma warning restore
 	}
 }

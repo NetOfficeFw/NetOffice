@@ -148,15 +148,15 @@
     <Compile Include="Classes\ComboItem.cs" />
     <Compile Include="Classes\ComboItems.cs" />
     <Compile Include="Classes\ImageCombo.cs" />
-    <Compile Include="EventInterfaces\ITabStripEvents.cs" />
-    <Compile Include="EventInterfaces\IToolbarEvents.cs" />
-    <Compile Include="EventInterfaces\IStatusBarEvents.cs" />
-    <Compile Include="EventInterfaces\IProgressBarEvents.cs" />
-    <Compile Include="EventInterfaces\ITreeViewEvents.cs" />
-    <Compile Include="EventInterfaces\ListViewEvents.cs" />
-    <Compile Include="EventInterfaces\ImageListEvents.cs" />
-    <Compile Include="EventInterfaces\ISliderEvents.cs" />
-    <Compile Include="EventInterfaces\DImageComboEvents.cs" />
+    <Compile Include="Events\ITabStripEvents.cs" />
+    <Compile Include="Events\IToolbarEvents.cs" />
+    <Compile Include="Events\IStatusBarEvents.cs" />
+    <Compile Include="Events\IProgressBarEvents.cs" />
+    <Compile Include="Events\ITreeViewEvents.cs" />
+    <Compile Include="Events\ListViewEvents.cs" />
+    <Compile Include="Events\ImageListEvents.cs" />
+    <Compile Include="Events\ISliderEvents.cs" />
+    <Compile Include="Events\DImageComboEvents.cs" />
   </ItemGroup>
   <ItemGroup>
     <COMReference Include="stdole">

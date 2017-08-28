@@ -1,12 +1,10 @@
 ﻿using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
-using NetOffice;
-using NetOffice.Misc;
+using NetOffice.Attributes;
 
 namespace NetOffice.VisioApi
 {
-
 	#region Delegates
 
 	#pragma warning disable
@@ -14,15 +12,16 @@ namespace NetOffice.VisioApi
 
 	#endregion
 
-	///<summary>
+	/// <summary>
 	/// CoClass Comments 
 	/// SupportByVersion Visio, 15, 16
-	///</summary>
-	[SupportByVersionAttribute("Visio", 15, 16)]
-	[EntityTypeAttribute(EntityType.IsCoClass)]
-	public class Comments : IVComments
+	/// </summary>
+	[SupportByVersion("Visio", 15, 16)]
+	[EntityType(EntityType.IsCoClass)]
+ 	public class Comments : IVComments
 	{
 		#pragma warning disable
+
 		#region Fields
 		
 		private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
@@ -36,6 +35,7 @@ namespace NetOffice.VisioApi
         /// <summary>
         /// Instance Type
         /// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
         public override Type InstanceType
         {
             get
@@ -102,17 +102,17 @@ namespace NetOffice.VisioApi
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of Comments 
-        ///</summary>		
+        /// </summary>		
 		public Comments():base("Visio.Comments")
 		{
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of Comments
-        ///</summary>
+        /// </summary>
         ///<param name="progId">registered ProgID</param>
 		public Comments(string progId):base(progId)
 		{
@@ -122,46 +122,6 @@ namespace NetOffice.VisioApi
 		#endregion
 
 		#region Static CoClass Methods
-
-		/// <summary>
-        /// Returns all running Visio.Comments objects from the environment/system
-        /// </summary>
-        /// <returns>an Visio.Comments array</returns>
-		public static NetOffice.VisioApi.Comments[] GetActiveInstances()
-		{		
-			IDisposableEnumeration proxyList = NetOffice.ProxyService.GetActiveInstances("Visio","Comments");
-			NetRuntimeSystem.Collections.Generic.List<NetOffice.VisioApi.Comments> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.VisioApi.Comments>();
-			foreach(object proxy in proxyList)
-				resultList.Add( new NetOffice.VisioApi.Comments(null, proxy) );
-			return resultList.ToArray();
-		}
-
-		/// <summary>
-        /// Returns a running Visio.Comments object from the environment/system.
-        /// </summary>
-        /// <returns>an Visio.Comments object or null</returns>
-		public static NetOffice.VisioApi.Comments GetActiveInstance()
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Visio","Comments", false);
-			if(null != proxy)
-				return new NetOffice.VisioApi.Comments(null, proxy);
-			else
-				return null;
-		}
-
-		/// <summary>
-        /// Returns a running Visio.Comments object from the environment/system. 
-        /// </summary>
-	    /// <param name="throwOnError">throw an exception if no object was found</param>
-        /// <returns>an Visio.Comments object or null</returns>
-		public static NetOffice.VisioApi.Comments GetActiveInstance(bool throwOnError)
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Visio","Comments", throwOnError);
-			if(null != proxy)
-				return new NetOffice.VisioApi.Comments(null, proxy);
-			else
-				return null;
-		}
 		#endregion
 
 		#region Events

@@ -1,39 +1,39 @@
 ﻿using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
-using NetOffice;
-using NetOffice.Misc;
+using NetOffice.Attributes;
 
 namespace NetOffice.OutlookApi
 {
-
 	#region Delegates
 
 	#pragma warning disable
 	public delegate void SyncObject_SyncStartEventHandler();
-	public delegate void SyncObject_ProgressEventHandler(NetOffice.OutlookApi.Enums.OlSyncState State, string Description, Int32 Value, Int32 Max);
-	public delegate void SyncObject_OnErrorEventHandler(Int32 Code, string Description);
+	public delegate void SyncObject_ProgressEventHandler(NetOffice.OutlookApi.Enums.OlSyncState state, string description, Int32 value, Int32 max);
+	public delegate void SyncObject_OnErrorEventHandler(Int32 code, string description);
 	public delegate void SyncObject_SyncEndEventHandler();
 	#pragma warning restore
 
 	#endregion
 
-	///<summary>
+	/// <summary>
 	/// CoClass SyncObject 
 	/// SupportByVersion Outlook, 9,10,11,12,14,15,16
-	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff860720.aspx
-	///</summary>
-	[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15,16)]
-	[EntityTypeAttribute(EntityType.IsCoClass)]
-	public class SyncObject : _SyncObject,IEventBinding
+	/// </summary>
+	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860720.aspx </remarks>
+	[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
+	[EntityType(EntityType.IsCoClass)]
+	[EventSink(typeof(Events.SyncObjectEvents_SinkHelper))]
+	public class SyncObject : _SyncObject, IEventBinding
 	{
 		#pragma warning disable
+
 		#region Fields
 		
 		private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
 		private string _activeSinkId;
 		private NetRuntimeSystem.Type _thisType;
-		SyncObjectEvents_SinkHelper _syncObjectEvents_SinkHelper;
+		private Events.SyncObjectEvents_SinkHelper _syncObjectEvents_SinkHelper;
 	
 		#endregion
 
@@ -42,6 +42,7 @@ namespace NetOffice.OutlookApi
         /// <summary>
         /// Instance Type
         /// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
         public override Type InstanceType
         {
             get
@@ -108,17 +109,17 @@ namespace NetOffice.OutlookApi
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of SyncObject 
-        ///</summary>		
+        /// </summary>		
 		public SyncObject():base("Outlook.SyncObject")
 		{
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of SyncObject
-        ///</summary>
+        /// </summary>
         ///<param name="progId">registered ProgID</param>
 		public SyncObject(string progId):base(progId)
 		{
@@ -128,46 +129,6 @@ namespace NetOffice.OutlookApi
 		#endregion
 
 		#region Static CoClass Methods
-
-		/// <summary>
-        /// Returns all running Outlook.SyncObject objects from the environment/system
-        /// </summary>
-        /// <returns>an Outlook.SyncObject array</returns>
-		public static NetOffice.OutlookApi.SyncObject[] GetActiveInstances()
-		{		
-			IDisposableEnumeration proxyList = NetOffice.ProxyService.GetActiveInstances("Outlook","SyncObject");
-			NetRuntimeSystem.Collections.Generic.List<NetOffice.OutlookApi.SyncObject> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.OutlookApi.SyncObject>();
-			foreach(object proxy in proxyList)
-				resultList.Add( new NetOffice.OutlookApi.SyncObject(null, proxy) );
-			return resultList.ToArray();
-		}
-
-		/// <summary>
-        /// Returns a running Outlook.SyncObject object from the environment/system.
-        /// </summary>
-        /// <returns>an Outlook.SyncObject object or null</returns>
-		public static NetOffice.OutlookApi.SyncObject GetActiveInstance()
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Outlook","SyncObject", false);
-			if(null != proxy)
-				return new NetOffice.OutlookApi.SyncObject(null, proxy);
-			else
-				return null;
-		}
-
-		/// <summary>
-        /// Returns a running Outlook.SyncObject object from the environment/system. 
-        /// </summary>
-	    /// <param name="throwOnError">throw an exception if no object was found</param>
-        /// <returns>an Outlook.SyncObject object or null</returns>
-		public static NetOffice.OutlookApi.SyncObject GetActiveInstance(bool throwOnError)
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Outlook","SyncObject", throwOnError);
-			if(null != proxy)
-				return new NetOffice.OutlookApi.SyncObject(null, proxy);
-			else
-				return null;
-		}
 		#endregion
 
 		#region Events
@@ -281,12 +242,12 @@ namespace NetOffice.OutlookApi
 				return;
 	
             if (null == _activeSinkId)
-				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, SyncObjectEvents_SinkHelper.Id);
+				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, Events.SyncObjectEvents_SinkHelper.Id);
 
 
-			if(SyncObjectEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
+			if(Events.SyncObjectEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
 			{
-				_syncObjectEvents_SinkHelper = new SyncObjectEvents_SinkHelper(this, _connectPoint);
+				_syncObjectEvents_SinkHelper = new Events.SyncObjectEvents_SinkHelper(this, _connectPoint);
 				return;
 			} 
         }

@@ -1,17 +1,15 @@
 ﻿using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
-using NetOffice;
-using NetOffice.Misc;
+using NetOffice.Attributes;
 
 namespace NetOffice.PublisherApi
 {
-
 	#region Delegates
 
 	#pragma warning disable
 	public delegate void Document_OpenEventHandler();
-	public delegate void Document_BeforeCloseEventHandler(ref bool Cancel);
+	public delegate void Document_BeforeCloseEventHandler(ref bool cancel);
 	public delegate void Document_ShapesAddedEventHandler();
 	public delegate void Document_WizardAfterChangeEventHandler();
 	public delegate void Document_ShapesRemovedEventHandler();
@@ -21,21 +19,23 @@ namespace NetOffice.PublisherApi
 
 	#endregion
 
-	///<summary>
+	/// <summary>
 	/// CoClass Document 
 	/// SupportByVersion Publisher, 14,15,16
-	///</summary>
-	[SupportByVersionAttribute("Publisher", 14,15,16)]
-	[EntityTypeAttribute(EntityType.IsCoClass)]
-	public class Document : _Document,IEventBinding
+	/// </summary>
+	[SupportByVersion("Publisher", 14,15,16)]
+	[EntityType(EntityType.IsCoClass)]
+	[EventSink(typeof(Events.DocumentEvents_SinkHelper))]
+	public class Document : _Document, IEventBinding
 	{
 		#pragma warning disable
+
 		#region Fields
 		
 		private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
 		private string _activeSinkId;
 		private NetRuntimeSystem.Type _thisType;
-		DocumentEvents_SinkHelper _documentEvents_SinkHelper;
+		private Events.DocumentEvents_SinkHelper _documentEvents_SinkHelper;
 	
 		#endregion
 
@@ -44,6 +44,7 @@ namespace NetOffice.PublisherApi
         /// <summary>
         /// Instance Type
         /// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
         public override Type InstanceType
         {
             get
@@ -110,17 +111,17 @@ namespace NetOffice.PublisherApi
 			
 		}
 		
-		///<summary>
+		/// <summary>
         ///creates a new instance of Document 
-        ///</summary>		
+        /// </summary>		
 		public Document():base("Publisher.Document")
 		{
 			
 		}
 		
-		///<summary>
+		/// <summary>
         ///creates a new instance of Document
-        ///</summary>
+        /// </summary>
         ///<param name="progId">registered ProgID</param>
 		public Document(string progId):base(progId)
 		{
@@ -130,46 +131,6 @@ namespace NetOffice.PublisherApi
 		#endregion
 
 		#region Static CoClass Methods
-
-		/// <summary>
-        /// returns all running Publisher.Document objects from the running object table(ROT)
-        /// </summary>
-        /// <returns>an Publisher.Document array</returns>
-		public static NetOffice.PublisherApi.Document[] GetActiveInstances()
-		{
-            IDisposableEnumeration proxyList = NetOffice.RunningObjectTable.GetActiveProxies("Publisher","Document");
-			NetRuntimeSystem.Collections.Generic.List<NetOffice.PublisherApi.Document> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.PublisherApi.Document>();
-			foreach(object proxy in proxyList)
-				resultList.Add( new NetOffice.PublisherApi.Document(null, proxy) );
-			return resultList.ToArray();
-		}
-
-		/// <summary>
-        /// returns a running Publisher.Document object from the running object table(ROT). the method takes the first element from the table
-        /// </summary>
-        /// <returns>an Publisher.Document object or null</returns>
-		public static NetOffice.PublisherApi.Document GetActiveInstance()
-		{
-			object proxy = NetOffice.RunningObjectTable.GetActiveProxy("Publisher","Document", false);
-			if(null != proxy)
-				return new NetOffice.PublisherApi.Document(null, proxy);
-			else
-				return null;
-		}
-
-		/// <summary>
-        /// returns a running Publisher.Document object from the running object table(ROT).  the method takes the first element from the table
-        /// </summary>
-	    /// <param name="throwOnError">throw an exception if no object was found</param>
-        /// <returns>an Publisher.Document object or null</returns>
-		public static NetOffice.PublisherApi.Document GetActiveInstance(bool throwOnError)
-		{
-			object proxy = NetOffice.RunningObjectTable.GetActiveProxy("Publisher","Document", throwOnError);
-			if(null != proxy)
-				return new NetOffice.PublisherApi.Document(null, proxy);
-			else
-				return null;
-		}
 		#endregion
 
 		#region Events
@@ -345,12 +306,12 @@ namespace NetOffice.PublisherApi
 				return;
 	
             if (null == _activeSinkId)
-				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, DocumentEvents_SinkHelper.Id);
+				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, Events.DocumentEvents_SinkHelper.Id);
 
 
-			if(DocumentEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
+			if(Events.DocumentEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
 			{
-				_documentEvents_SinkHelper = new DocumentEvents_SinkHelper(this, _connectPoint);
+				_documentEvents_SinkHelper = new Events.DocumentEvents_SinkHelper(this, _connectPoint);
 				return;
 			} 
         }

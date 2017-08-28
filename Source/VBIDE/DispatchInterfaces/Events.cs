@@ -1,23 +1,33 @@
 ﻿using System;
 using NetRuntimeSystem = System;
-using System.Runtime.InteropServices;
-using System.Runtime.CompilerServices;
 using System.ComponentModel;
-using System.Reflection;
-using System.Collections.Generic;
-using NetOffice;
+using NetOffice.Attributes;
+
 namespace NetOffice.VBIDEApi
 {
-	///<summary>
+	/// <summary>
 	/// DispatchInterface Events 
 	/// SupportByVersion VBIDE, 12,14,5.3
-	///</summary>
-	[SupportByVersionAttribute("VBIDE", 12,14,5.3)]
-	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
-	public class Events : COMObject
+	/// </summary>
+	[SupportByVersion("VBIDE", 12,14,5.3)]
+	[EntityType(EntityType.IsDispatchInterface)]
+ 	public class Events : COMObject
 	{
 		#pragma warning disable
+
 		#region Type Information
+
+		/// <summary>
+		/// Instance Type
+		/// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
+		public override Type InstanceType
+		{
+			get
+			{
+				return LateBindingApiWrapperType;
+			}
+		}
 
         private static Type _type;
 
@@ -28,14 +38,20 @@ namespace NetOffice.VBIDEApi
             {
                 if (null == _type)
                     _type = typeof(Events);
-                    
                 return _type;
             }
         }
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public Events(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -81,7 +97,7 @@ namespace NetOffice.VBIDEApi
 		{
 		}
 		
-		/// <param name="progId">registered ProgID</param>
+		/// <param name="progId">registered progID</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public Events(string progId) : base(progId)
 		{
@@ -95,23 +111,20 @@ namespace NetOffice.VBIDEApi
 		/// SupportByVersion VBIDE 12, 14, 5.3
 		/// Get
 		/// </summary>
-		/// <param name="vBProject">NetOffice.VBIDEApi.VBProject VBProject</param>
-		[SupportByVersionAttribute("VBIDE", 12,14,5.3)]
+		/// <param name="vBProject">NetOffice.VBIDEApi.VBProject vBProject</param>
+		[SupportByVersion("VBIDE", 12,14,5.3)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public NetOffice.VBIDEApi.ReferencesEvents get_ReferencesEvents(NetOffice.VBIDEApi.VBProject vBProject)
-		{		
-			object[] paramsArray = Invoker.ValidateParamsArray(vBProject);
-			object returnItem = Invoker.PropertyGet(this, "ReferencesEvents", paramsArray);
-			NetOffice.VBIDEApi.ReferencesEvents newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.VBIDEApi.ReferencesEvents.LateBindingApiWrapperType) as NetOffice.VBIDEApi.ReferencesEvents;
-			return newObject;
+		{
+			return Factory.ExecuteKnownReferencePropertyGet<NetOffice.VBIDEApi.ReferencesEvents>(this, "ReferencesEvents", NetOffice.VBIDEApi.ReferencesEvents.LateBindingApiWrapperType, vBProject);
 		}
 
 		/// <summary>
 		/// SupportByVersion VBIDE 12, 14, 5.3
 		/// Alias for get_ReferencesEvents
 		/// </summary>
-		/// <param name="vBProject">NetOffice.VBIDEApi.VBProject VBProject</param>
-		[SupportByVersionAttribute("VBIDE", 12,14,5.3)]
+		/// <param name="vBProject">NetOffice.VBIDEApi.VBProject vBProject</param>
+		[SupportByVersion("VBIDE", 12,14,5.3), Redirect("get_ReferencesEvents")]
 		public NetOffice.VBIDEApi.ReferencesEvents ReferencesEvents(NetOffice.VBIDEApi.VBProject vBProject)
 		{
 			return get_ReferencesEvents(vBProject);
@@ -121,23 +134,20 @@ namespace NetOffice.VBIDEApi
 		/// SupportByVersion VBIDE 12, 14, 5.3
 		/// Get
 		/// </summary>
-		/// <param name="commandBarControl">object CommandBarControl</param>
-		[SupportByVersionAttribute("VBIDE", 12,14,5.3)]
+		/// <param name="commandBarControl">object commandBarControl</param>
+		[SupportByVersion("VBIDE", 12,14,5.3)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public NetOffice.VBIDEApi.CommandBarEvents get_CommandBarEvents(object commandBarControl)
-		{		
-			object[] paramsArray = Invoker.ValidateParamsArray(commandBarControl);
-			object returnItem = Invoker.PropertyGet(this, "CommandBarEvents", paramsArray);
-			NetOffice.VBIDEApi.CommandBarEvents newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.VBIDEApi.CommandBarEvents.LateBindingApiWrapperType) as NetOffice.VBIDEApi.CommandBarEvents;
-			return newObject;
+		{
+			return Factory.ExecuteKnownReferencePropertyGet<NetOffice.VBIDEApi.CommandBarEvents>(this, "CommandBarEvents", NetOffice.VBIDEApi.CommandBarEvents.LateBindingApiWrapperType, commandBarControl);
 		}
 
 		/// <summary>
 		/// SupportByVersion VBIDE 12, 14, 5.3
 		/// Alias for get_CommandBarEvents
 		/// </summary>
-		/// <param name="commandBarControl">object CommandBarControl</param>
-		[SupportByVersionAttribute("VBIDE", 12,14,5.3)]
+		/// <param name="commandBarControl">object commandBarControl</param>
+		[SupportByVersion("VBIDE", 12,14,5.3), Redirect("get_CommandBarEvents")]
 		public NetOffice.VBIDEApi.CommandBarEvents CommandBarEvents(object commandBarControl)
 		{
 			return get_CommandBarEvents(commandBarControl);
@@ -148,6 +158,7 @@ namespace NetOffice.VBIDEApi
 		#region Methods
 
 		#endregion
+
 		#pragma warning restore
 	}
 }

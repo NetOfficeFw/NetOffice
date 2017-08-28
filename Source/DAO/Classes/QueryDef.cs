@@ -1,12 +1,10 @@
 ﻿using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
-using NetOffice;
-using NetOffice.Misc;
+using NetOffice.Attributes;
 
 namespace NetOffice.DAOApi
 {
-
 	#region Delegates
 
 	#pragma warning disable
@@ -14,15 +12,16 @@ namespace NetOffice.DAOApi
 
 	#endregion
 
-	///<summary>
+	/// <summary>
 	/// CoClass QueryDef 
 	/// SupportByVersion DAO, 3.6,12.0
-	///</summary>
-	[SupportByVersionAttribute("DAO", 3.6,12.0)]
-	[EntityTypeAttribute(EntityType.IsCoClass)]
-	public class QueryDef : _QueryDef
+	/// </summary>
+	[SupportByVersion("DAO", 3.6,12.0)]
+	[EntityType(EntityType.IsCoClass)]
+ 	public class QueryDef : _QueryDef
 	{
 		#pragma warning disable
+
 		#region Fields
 		
 		private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
@@ -36,6 +35,7 @@ namespace NetOffice.DAOApi
         /// <summary>
         /// Instance Type
         /// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
         public override Type InstanceType
         {
             get
@@ -102,17 +102,17 @@ namespace NetOffice.DAOApi
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of QueryDef 
-        ///</summary>		
+        /// </summary>		
 		public QueryDef():base("DAO.QueryDef")
 		{
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of QueryDef
-        ///</summary>
+        /// </summary>
         ///<param name="progId">registered ProgID</param>
 		public QueryDef(string progId):base(progId)
 		{
@@ -122,46 +122,6 @@ namespace NetOffice.DAOApi
 		#endregion
 
 		#region Static CoClass Methods
-
-		/// <summary>
-        /// Returns all running DAO.QueryDef objects from the environment/system
-        /// </summary>
-        /// <returns>an DAO.QueryDef array</returns>
-		public static NetOffice.DAOApi.QueryDef[] GetActiveInstances()
-		{		
-			IDisposableEnumeration proxyList = NetOffice.ProxyService.GetActiveInstances("DAO","QueryDef");
-			NetRuntimeSystem.Collections.Generic.List<NetOffice.DAOApi.QueryDef> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.DAOApi.QueryDef>();
-			foreach(object proxy in proxyList)
-				resultList.Add( new NetOffice.DAOApi.QueryDef(null, proxy) );
-			return resultList.ToArray();
-		}
-
-		/// <summary>
-        /// Returns a running DAO.QueryDef object from the environment/system.
-        /// </summary>
-        /// <returns>an DAO.QueryDef object or null</returns>
-		public static NetOffice.DAOApi.QueryDef GetActiveInstance()
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("DAO","QueryDef", false);
-			if(null != proxy)
-				return new NetOffice.DAOApi.QueryDef(null, proxy);
-			else
-				return null;
-		}
-
-		/// <summary>
-        /// Returns a running DAO.QueryDef object from the environment/system. 
-        /// </summary>
-	    /// <param name="throwOnError">throw an exception if no object was found</param>
-        /// <returns>an DAO.QueryDef object or null</returns>
-		public static NetOffice.DAOApi.QueryDef GetActiveInstance(bool throwOnError)
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("DAO","QueryDef", throwOnError);
-			if(null != proxy)
-				return new NetOffice.DAOApi.QueryDef(null, proxy);
-			else
-				return null;
-		}
 		#endregion
 
 		#region Events

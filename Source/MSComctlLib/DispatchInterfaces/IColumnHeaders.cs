@@ -1,24 +1,35 @@
-﻿using System;
-using NetRuntimeSystem = System;
-using System.Runtime.InteropServices;
-using System.Runtime.CompilerServices;
-using System.ComponentModel;
-using System.Reflection;
-using System.Collections.Generic;
 using System.Collections;
-using NetOffice;
+using System.Collections.Generic;
+using System;
+using NetRuntimeSystem = System;
+using System.ComponentModel;
+using NetOffice.Attributes;
+
 namespace NetOffice.MSComctlLibApi
 {
-	///<summary>
+	/// <summary>
 	/// DispatchInterface IColumnHeaders 
 	/// SupportByVersion MSComctlLib, 6
-	///</summary>
-	[SupportByVersionAttribute("MSComctlLib", 6)]
-	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
-	public class IColumnHeaders : COMObject ,IEnumerable<NetOffice.MSComctlLibApi.IColumnHeader>
+	/// </summary>
+	[SupportByVersion("MSComctlLib", 6)]
+	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Method), HasIndexProperty(IndexInvoke.Property, "Item")]
+	public class IColumnHeaders : COMObject , IEnumerable<NetOffice.MSComctlLibApi.IColumnHeader>
 	{
 		#pragma warning disable
+
 		#region Type Information
+
+		/// <summary>
+		/// Instance Type
+		/// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
+		public override Type InstanceType
+		{
+			get
+			{
+				return LateBindingApiWrapperType;
+			}
+		}
 
         private static Type _type;
 
@@ -29,14 +40,20 @@ namespace NetOffice.MSComctlLibApi
             {
                 if (null == _type)
                     _type = typeof(IColumnHeaders);
-                    
                 return _type;
             }
         }
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public IColumnHeaders(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -82,7 +99,7 @@ namespace NetOffice.MSComctlLibApi
 		{
 		}
 		
-		/// <param name="progId">registered ProgID</param>
+		/// <param name="progId">registered progID</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public IColumnHeaders(string progId) : base(progId)
 		{
@@ -96,19 +113,16 @@ namespace NetOffice.MSComctlLibApi
 		/// SupportByVersion MSComctlLib 6
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSComctlLib", 6)]
+		[SupportByVersion("MSComctlLib", 6)]
 		public Int32 Count
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Count", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "Count");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "Count", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "Count", value);
 			}
 		}
 
@@ -116,23 +130,20 @@ namespace NetOffice.MSComctlLibApi
 		/// SupportByVersion MSComctlLib 6
 		/// Get
 		/// </summary>
-		/// <param name="index">object Index</param>
-		[SupportByVersionAttribute("MSComctlLib", 6)]
+		/// <param name="index">object index</param>
+		[SupportByVersion("MSComctlLib", 6)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public NetOffice.MSComctlLibApi.IColumnHeader get_ControlDefault(object index)
-		{		
-			object[] paramsArray = Invoker.ValidateParamsArray(index);
-			object returnItem = Invoker.PropertyGet(this, "ControlDefault", paramsArray);
-			NetOffice.MSComctlLibApi.IColumnHeader newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSComctlLibApi.IColumnHeader;
-			return newObject;
+		{
+			return Factory.ExecuteKnownReferencePropertyGet<NetOffice.MSComctlLibApi.IColumnHeader>(this, "ControlDefault", NetOffice.MSComctlLibApi.IColumnHeader.LateBindingApiWrapperType, index);
 		}
 
 		/// <summary>
 		/// SupportByVersion MSComctlLib 6
 		/// Alias for get_ControlDefault
 		/// </summary>
-		/// <param name="index">object Index</param>
-		[SupportByVersionAttribute("MSComctlLib", 6)]
+		/// <param name="index">object index</param>
+		[SupportByVersion("MSComctlLib", 6), Redirect("get_ControlDefault")]
 		public NetOffice.MSComctlLibApi.IColumnHeader ControlDefault(object index)
 		{
 			return get_ControlDefault(index);
@@ -142,17 +153,15 @@ namespace NetOffice.MSComctlLibApi
 		/// SupportByVersion MSComctlLib 6
 		/// Get
 		/// </summary>
-		/// <param name="index">object Index</param>
-		[SupportByVersionAttribute("MSComctlLib", 6)]
-		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
+		/// <param name="index">object index</param>
+		[SupportByVersion("MSComctlLib", 6)]
+		[BaseResult]
+		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
 		public NetOffice.MSComctlLibApi.IColumnHeader this[object index]
 		{
 			get
-{			
-			object[] paramsArray = Invoker.ValidateParamsArray(index);
-			object returnItem = Invoker.PropertyGet(this, "Item", paramsArray);
-			NetOffice.MSComctlLibApi.IColumnHeader newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSComctlLibApi.IColumnHeader;
-			return newObject;
+			{
+				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.MSComctlLibApi.IColumnHeader>(this, "Item", index);
 			}
 		}
 
@@ -162,247 +171,204 @@ namespace NetOffice.MSComctlLibApi
 
 		/// <summary>
 		/// SupportByVersion MSComctlLib 6
-		/// 
 		/// </summary>
-		/// <param name="index">optional object Index</param>
-		/// <param name="key">optional object Key</param>
-		/// <param name="text">optional object Text</param>
-		/// <param name="width">optional object Width</param>
-		/// <param name="alignment">optional object Alignment</param>
+		/// <param name="index">optional object index</param>
+		/// <param name="key">optional object key</param>
+		/// <param name="text">optional object text</param>
+		/// <param name="width">optional object width</param>
+		/// <param name="alignment">optional object alignment</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("MSComctlLib", 6)]
+		[BaseResult]
+		[SupportByVersion("MSComctlLib", 6)]
 		public NetOffice.MSComctlLibApi.IColumnHeader Add_PreVB98(object index, object key, object text, object width, object alignment)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(index, key, text, width, alignment);
-			object returnItem = Invoker.MethodReturn(this, "Add_PreVB98", paramsArray);
-			NetOffice.MSComctlLibApi.IColumnHeader newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSComctlLibApi.IColumnHeader;
-			return newObject;
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.MSComctlLibApi.IColumnHeader>(this, "Add_PreVB98", new object[]{ index, key, text, width, alignment });
 		}
 
 		/// <summary>
 		/// SupportByVersion MSComctlLib 6
-		/// 
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSComctlLib", 6)]
+		[BaseResult]
+		[CustomMethod]
+		[SupportByVersion("MSComctlLib", 6)]
 		public NetOffice.MSComctlLibApi.IColumnHeader Add_PreVB98()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "Add_PreVB98", paramsArray);
-			NetOffice.MSComctlLibApi.IColumnHeader newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSComctlLibApi.IColumnHeader;
-			return newObject;
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.MSComctlLibApi.IColumnHeader>(this, "Add_PreVB98");
 		}
 
 		/// <summary>
 		/// SupportByVersion MSComctlLib 6
-		/// 
 		/// </summary>
-		/// <param name="index">optional object Index</param>
+		/// <param name="index">optional object index</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSComctlLib", 6)]
+		[BaseResult]
+		[CustomMethod]
+		[SupportByVersion("MSComctlLib", 6)]
 		public NetOffice.MSComctlLibApi.IColumnHeader Add_PreVB98(object index)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(index);
-			object returnItem = Invoker.MethodReturn(this, "Add_PreVB98", paramsArray);
-			NetOffice.MSComctlLibApi.IColumnHeader newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSComctlLibApi.IColumnHeader;
-			return newObject;
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.MSComctlLibApi.IColumnHeader>(this, "Add_PreVB98", index);
 		}
 
 		/// <summary>
 		/// SupportByVersion MSComctlLib 6
-		/// 
 		/// </summary>
-		/// <param name="index">optional object Index</param>
-		/// <param name="key">optional object Key</param>
+		/// <param name="index">optional object index</param>
+		/// <param name="key">optional object key</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSComctlLib", 6)]
+		[BaseResult]
+		[CustomMethod]
+		[SupportByVersion("MSComctlLib", 6)]
 		public NetOffice.MSComctlLibApi.IColumnHeader Add_PreVB98(object index, object key)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(index, key);
-			object returnItem = Invoker.MethodReturn(this, "Add_PreVB98", paramsArray);
-			NetOffice.MSComctlLibApi.IColumnHeader newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSComctlLibApi.IColumnHeader;
-			return newObject;
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.MSComctlLibApi.IColumnHeader>(this, "Add_PreVB98", index, key);
 		}
 
 		/// <summary>
 		/// SupportByVersion MSComctlLib 6
-		/// 
 		/// </summary>
-		/// <param name="index">optional object Index</param>
-		/// <param name="key">optional object Key</param>
-		/// <param name="text">optional object Text</param>
+		/// <param name="index">optional object index</param>
+		/// <param name="key">optional object key</param>
+		/// <param name="text">optional object text</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSComctlLib", 6)]
+		[BaseResult]
+		[CustomMethod]
+		[SupportByVersion("MSComctlLib", 6)]
 		public NetOffice.MSComctlLibApi.IColumnHeader Add_PreVB98(object index, object key, object text)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(index, key, text);
-			object returnItem = Invoker.MethodReturn(this, "Add_PreVB98", paramsArray);
-			NetOffice.MSComctlLibApi.IColumnHeader newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSComctlLibApi.IColumnHeader;
-			return newObject;
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.MSComctlLibApi.IColumnHeader>(this, "Add_PreVB98", index, key, text);
 		}
 
 		/// <summary>
 		/// SupportByVersion MSComctlLib 6
-		/// 
 		/// </summary>
-		/// <param name="index">optional object Index</param>
-		/// <param name="key">optional object Key</param>
-		/// <param name="text">optional object Text</param>
-		/// <param name="width">optional object Width</param>
+		/// <param name="index">optional object index</param>
+		/// <param name="key">optional object key</param>
+		/// <param name="text">optional object text</param>
+		/// <param name="width">optional object width</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSComctlLib", 6)]
+		[BaseResult]
+		[CustomMethod]
+		[SupportByVersion("MSComctlLib", 6)]
 		public NetOffice.MSComctlLibApi.IColumnHeader Add_PreVB98(object index, object key, object text, object width)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(index, key, text, width);
-			object returnItem = Invoker.MethodReturn(this, "Add_PreVB98", paramsArray);
-			NetOffice.MSComctlLibApi.IColumnHeader newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSComctlLibApi.IColumnHeader;
-			return newObject;
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.MSComctlLibApi.IColumnHeader>(this, "Add_PreVB98", index, key, text, width);
 		}
 
 		/// <summary>
 		/// SupportByVersion MSComctlLib 6
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("MSComctlLib", 6)]
+		[SupportByVersion("MSComctlLib", 6)]
 		public void Clear()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "Clear", paramsArray);
+			 Factory.ExecuteMethod(this, "Clear");
 		}
 
 		/// <summary>
 		/// SupportByVersion MSComctlLib 6
-		/// 
 		/// </summary>
-		/// <param name="index">object Index</param>
-		[SupportByVersionAttribute("MSComctlLib", 6)]
+		/// <param name="index">object index</param>
+		[SupportByVersion("MSComctlLib", 6)]
 		public void Remove(object index)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(index);
-			Invoker.Method(this, "Remove", paramsArray);
+			 Factory.ExecuteMethod(this, "Remove", index);
 		}
 
 		/// <summary>
 		/// SupportByVersion MSComctlLib 6
-		/// 
 		/// </summary>
-		/// <param name="index">optional object Index</param>
-		/// <param name="key">optional object Key</param>
-		/// <param name="text">optional object Text</param>
-		/// <param name="width">optional object Width</param>
-		/// <param name="alignment">optional object Alignment</param>
-		/// <param name="icon">optional object Icon</param>
-		[SupportByVersionAttribute("MSComctlLib", 6)]
+		/// <param name="index">optional object index</param>
+		/// <param name="key">optional object key</param>
+		/// <param name="text">optional object text</param>
+		/// <param name="width">optional object width</param>
+		/// <param name="alignment">optional object alignment</param>
+		/// <param name="icon">optional object icon</param>
+		[SupportByVersion("MSComctlLib", 6)]
+		[BaseResult]
 		public NetOffice.MSComctlLibApi.IColumnHeader Add(object index, object key, object text, object width, object alignment, object icon)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(index, key, text, width, alignment, icon);
-			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.MSComctlLibApi.IColumnHeader newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSComctlLibApi.IColumnHeader;
-			return newObject;
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.MSComctlLibApi.IColumnHeader>(this, "Add", new object[]{ index, key, text, width, alignment, icon });
 		}
 
 		/// <summary>
 		/// SupportByVersion MSComctlLib 6
-		/// 
 		/// </summary>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSComctlLib", 6)]
+		[CustomMethod]
+		[BaseResult]
+		[SupportByVersion("MSComctlLib", 6)]
 		public NetOffice.MSComctlLibApi.IColumnHeader Add()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.MSComctlLibApi.IColumnHeader newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSComctlLibApi.IColumnHeader;
-			return newObject;
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.MSComctlLibApi.IColumnHeader>(this, "Add");
 		}
 
 		/// <summary>
 		/// SupportByVersion MSComctlLib 6
-		/// 
 		/// </summary>
-		/// <param name="index">optional object Index</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSComctlLib", 6)]
+		/// <param name="index">optional object index</param>
+		[CustomMethod]
+		[BaseResult]
+		[SupportByVersion("MSComctlLib", 6)]
 		public NetOffice.MSComctlLibApi.IColumnHeader Add(object index)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(index);
-			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.MSComctlLibApi.IColumnHeader newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSComctlLibApi.IColumnHeader;
-			return newObject;
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.MSComctlLibApi.IColumnHeader>(this, "Add", index);
 		}
 
 		/// <summary>
 		/// SupportByVersion MSComctlLib 6
-		/// 
 		/// </summary>
-		/// <param name="index">optional object Index</param>
-		/// <param name="key">optional object Key</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSComctlLib", 6)]
+		/// <param name="index">optional object index</param>
+		/// <param name="key">optional object key</param>
+		[CustomMethod]
+		[BaseResult]
+		[SupportByVersion("MSComctlLib", 6)]
 		public NetOffice.MSComctlLibApi.IColumnHeader Add(object index, object key)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(index, key);
-			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.MSComctlLibApi.IColumnHeader newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSComctlLibApi.IColumnHeader;
-			return newObject;
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.MSComctlLibApi.IColumnHeader>(this, "Add", index, key);
 		}
 
 		/// <summary>
 		/// SupportByVersion MSComctlLib 6
-		/// 
 		/// </summary>
-		/// <param name="index">optional object Index</param>
-		/// <param name="key">optional object Key</param>
-		/// <param name="text">optional object Text</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSComctlLib", 6)]
+		/// <param name="index">optional object index</param>
+		/// <param name="key">optional object key</param>
+		/// <param name="text">optional object text</param>
+		[CustomMethod]
+		[BaseResult]
+		[SupportByVersion("MSComctlLib", 6)]
 		public NetOffice.MSComctlLibApi.IColumnHeader Add(object index, object key, object text)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(index, key, text);
-			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.MSComctlLibApi.IColumnHeader newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSComctlLibApi.IColumnHeader;
-			return newObject;
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.MSComctlLibApi.IColumnHeader>(this, "Add", index, key, text);
 		}
 
 		/// <summary>
 		/// SupportByVersion MSComctlLib 6
-		/// 
 		/// </summary>
-		/// <param name="index">optional object Index</param>
-		/// <param name="key">optional object Key</param>
-		/// <param name="text">optional object Text</param>
-		/// <param name="width">optional object Width</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSComctlLib", 6)]
+		/// <param name="index">optional object index</param>
+		/// <param name="key">optional object key</param>
+		/// <param name="text">optional object text</param>
+		/// <param name="width">optional object width</param>
+		[CustomMethod]
+		[BaseResult]
+		[SupportByVersion("MSComctlLib", 6)]
 		public NetOffice.MSComctlLibApi.IColumnHeader Add(object index, object key, object text, object width)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(index, key, text, width);
-			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.MSComctlLibApi.IColumnHeader newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSComctlLibApi.IColumnHeader;
-			return newObject;
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.MSComctlLibApi.IColumnHeader>(this, "Add", index, key, text, width);
 		}
 
 		/// <summary>
 		/// SupportByVersion MSComctlLib 6
-		/// 
 		/// </summary>
-		/// <param name="index">optional object Index</param>
-		/// <param name="key">optional object Key</param>
-		/// <param name="text">optional object Text</param>
-		/// <param name="width">optional object Width</param>
-		/// <param name="alignment">optional object Alignment</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSComctlLib", 6)]
+		/// <param name="index">optional object index</param>
+		/// <param name="key">optional object key</param>
+		/// <param name="text">optional object text</param>
+		/// <param name="width">optional object width</param>
+		/// <param name="alignment">optional object alignment</param>
+		[CustomMethod]
+		[BaseResult]
+		[SupportByVersion("MSComctlLib", 6)]
 		public NetOffice.MSComctlLibApi.IColumnHeader Add(object index, object key, object text, object width, object alignment)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(index, key, text, width, alignment);
-			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.MSComctlLibApi.IColumnHeader newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSComctlLibApi.IColumnHeader;
-			return newObject;
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.MSComctlLibApi.IColumnHeader>(this, "Add", new object[]{ index, key, text, width, alignment });
 		}
 
 		#endregion
@@ -410,9 +376,9 @@ namespace NetOffice.MSComctlLibApi
        #region IEnumerable<NetOffice.MSComctlLibApi.IColumnHeader> Member
         
         /// <summary>
-		/// SupportByVersionAttribute MSComctlLib, 6
+		/// SupportByVersion MSComctlLib, 6
 		/// </summary>
-		[SupportByVersionAttribute("MSComctlLib", 6)]
+		[SupportByVersion("MSComctlLib", 6)]
        public IEnumerator<NetOffice.MSComctlLibApi.IColumnHeader> GetEnumerator()  
        {
            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
@@ -425,15 +391,16 @@ namespace NetOffice.MSComctlLibApi
 		#region IEnumerable Members
        
 		/// <summary>
-		/// SupportByVersionAttribute MSComctlLib, 6
+		/// SupportByVersion MSComctlLib, 6
 		/// </summary>
-		[SupportByVersionAttribute("MSComctlLib", 6)]
+		[SupportByVersion("MSComctlLib", 6)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
 			return NetOffice.Utils.GetProxyEnumeratorAsMethod(this);
 		}
 
 		#endregion
+
 		#pragma warning restore
 	}
 }

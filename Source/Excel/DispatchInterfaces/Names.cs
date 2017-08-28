@@ -1,29 +1,29 @@
-﻿using System;
-using NetRuntimeSystem = System;
-using System.Runtime.InteropServices;
-using System.Runtime.CompilerServices;
-using System.ComponentModel;
-using System.Reflection;
+﻿using System.Collections;
 using System.Collections.Generic;
-using System.Collections;
-using NetOffice;
+using System;
+using NetRuntimeSystem = System;
+using System.ComponentModel;
+using NetOffice.Attributes;
+
 namespace NetOffice.ExcelApi
 {
-	///<summary>
+	/// <summary>
 	/// DispatchInterface Names 
 	/// SupportByVersion Excel, 9,10,11,12,14,15,16
-	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff841280.aspx
-	///</summary>
-	[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
-	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
-	public class Names : COMObject ,IEnumerable<NetOffice.ExcelApi.Name>
+	/// </summary>
+	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff841280.aspx </remarks>
+	[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Method, "_Default")]
+	public class Names : COMObject, IEnumerable<NetOffice.ExcelApi.Name>
 	{
 		#pragma warning disable
+
 		#region Type Information
 
         /// <summary>
         /// Instance Type
         /// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
         public override Type InstanceType
         {
             get
@@ -41,14 +41,20 @@ namespace NetOffice.ExcelApi
             {
                 if (null == _type)
                     _type = typeof(Names);
-                    
                 return _type;
             }
         }
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public Names(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -94,7 +100,7 @@ namespace NetOffice.ExcelApi
 		{
 		}
 		
-		/// <param name="progId">registered ProgID</param>
+		/// <param name="progId">registered progID</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public Names(string progId) : base(progId)
 		{
@@ -107,68 +113,57 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195100.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff195100.aspx </remarks>
+		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public NetOffice.ExcelApi.Application Application
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				NetOffice.ExcelApi.Application newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.Application.LateBindingApiWrapperType) as NetOffice.ExcelApi.Application;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Application>(this, "Application", NetOffice.ExcelApi.Application.LateBindingApiWrapperType);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff823118.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff823118.aspx </remarks>
+		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public NetOffice.ExcelApi.Enums.XlCreator Creator
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Creator", paramsArray);
-				int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-				return (NetOffice.ExcelApi.Enums.XlCreator)intReturnItem;
+				return Factory.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlCreator>(this, "Creator");
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196647.aspx
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff196647.aspx </remarks>
+		[SupportByVersion("Excel", 9,10,11,12,14,15,16), ProxyResult]
 		public object Parent
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Parent", paramsArray);
-				ICOMObject newObject = Factory.CreateObjectFromComProxy(this,returnItem);
-				return newObject;
+				return Factory.ExecuteReferencePropertyGet(this, "Parent");
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840866.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff840866.aspx </remarks>
+		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public Int32 Count
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Count", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "Count");
 			}
 		}
 
@@ -178,302 +173,256 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835300.aspx
 		/// </summary>
-		/// <param name="name">optional object Name</param>
-		/// <param name="refersTo">optional object RefersTo</param>
-		/// <param name="visible">optional object Visible</param>
-		/// <param name="macroType">optional object MacroType</param>
-		/// <param name="shortcutKey">optional object ShortcutKey</param>
-		/// <param name="category">optional object Category</param>
-		/// <param name="nameLocal">optional object NameLocal</param>
-		/// <param name="refersToLocal">optional object RefersToLocal</param>
-		/// <param name="categoryLocal">optional object CategoryLocal</param>
-		/// <param name="refersToR1C1">optional object RefersToR1C1</param>
-		/// <param name="refersToR1C1Local">optional object RefersToR1C1Local</param>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835300.aspx </remarks>
+		/// <param name="name">optional object name</param>
+		/// <param name="refersTo">optional object refersTo</param>
+		/// <param name="visible">optional object visible</param>
+		/// <param name="macroType">optional object macroType</param>
+		/// <param name="shortcutKey">optional object shortcutKey</param>
+		/// <param name="category">optional object category</param>
+		/// <param name="nameLocal">optional object nameLocal</param>
+		/// <param name="refersToLocal">optional object refersToLocal</param>
+		/// <param name="categoryLocal">optional object categoryLocal</param>
+		/// <param name="refersToR1C1">optional object refersToR1C1</param>
+		/// <param name="refersToR1C1Local">optional object refersToR1C1Local</param>
+		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public NetOffice.ExcelApi.Name Add(object name, object refersTo, object visible, object macroType, object shortcutKey, object category, object nameLocal, object refersToLocal, object categoryLocal, object refersToR1C1, object refersToR1C1Local)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(name, refersTo, visible, macroType, shortcutKey, category, nameLocal, refersToLocal, categoryLocal, refersToR1C1, refersToR1C1Local);
-			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.ExcelApi.Name newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.Name.LateBindingApiWrapperType) as NetOffice.ExcelApi.Name;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Name>(this, "Add", NetOffice.ExcelApi.Name.LateBindingApiWrapperType, new object[]{ name, refersTo, visible, macroType, shortcutKey, category, nameLocal, refersToLocal, categoryLocal, refersToR1C1, refersToR1C1Local });
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835300.aspx
 		/// </summary>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835300.aspx </remarks>
+		[CustomMethod]
+		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public NetOffice.ExcelApi.Name Add()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.ExcelApi.Name newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.Name.LateBindingApiWrapperType) as NetOffice.ExcelApi.Name;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Name>(this, "Add", NetOffice.ExcelApi.Name.LateBindingApiWrapperType);
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835300.aspx
 		/// </summary>
-		/// <param name="name">optional object Name</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835300.aspx </remarks>
+		/// <param name="name">optional object name</param>
+		[CustomMethod]
+		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public NetOffice.ExcelApi.Name Add(object name)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(name);
-			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.ExcelApi.Name newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.Name.LateBindingApiWrapperType) as NetOffice.ExcelApi.Name;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Name>(this, "Add", NetOffice.ExcelApi.Name.LateBindingApiWrapperType, name);
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835300.aspx
 		/// </summary>
-		/// <param name="name">optional object Name</param>
-		/// <param name="refersTo">optional object RefersTo</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835300.aspx </remarks>
+		/// <param name="name">optional object name</param>
+		/// <param name="refersTo">optional object refersTo</param>
+		[CustomMethod]
+		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public NetOffice.ExcelApi.Name Add(object name, object refersTo)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(name, refersTo);
-			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.ExcelApi.Name newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.Name.LateBindingApiWrapperType) as NetOffice.ExcelApi.Name;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Name>(this, "Add", NetOffice.ExcelApi.Name.LateBindingApiWrapperType, name, refersTo);
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835300.aspx
 		/// </summary>
-		/// <param name="name">optional object Name</param>
-		/// <param name="refersTo">optional object RefersTo</param>
-		/// <param name="visible">optional object Visible</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835300.aspx </remarks>
+		/// <param name="name">optional object name</param>
+		/// <param name="refersTo">optional object refersTo</param>
+		/// <param name="visible">optional object visible</param>
+		[CustomMethod]
+		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public NetOffice.ExcelApi.Name Add(object name, object refersTo, object visible)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(name, refersTo, visible);
-			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.ExcelApi.Name newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.Name.LateBindingApiWrapperType) as NetOffice.ExcelApi.Name;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Name>(this, "Add", NetOffice.ExcelApi.Name.LateBindingApiWrapperType, name, refersTo, visible);
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835300.aspx
 		/// </summary>
-		/// <param name="name">optional object Name</param>
-		/// <param name="refersTo">optional object RefersTo</param>
-		/// <param name="visible">optional object Visible</param>
-		/// <param name="macroType">optional object MacroType</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835300.aspx </remarks>
+		/// <param name="name">optional object name</param>
+		/// <param name="refersTo">optional object refersTo</param>
+		/// <param name="visible">optional object visible</param>
+		/// <param name="macroType">optional object macroType</param>
+		[CustomMethod]
+		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public NetOffice.ExcelApi.Name Add(object name, object refersTo, object visible, object macroType)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(name, refersTo, visible, macroType);
-			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.ExcelApi.Name newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.Name.LateBindingApiWrapperType) as NetOffice.ExcelApi.Name;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Name>(this, "Add", NetOffice.ExcelApi.Name.LateBindingApiWrapperType, name, refersTo, visible, macroType);
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835300.aspx
 		/// </summary>
-		/// <param name="name">optional object Name</param>
-		/// <param name="refersTo">optional object RefersTo</param>
-		/// <param name="visible">optional object Visible</param>
-		/// <param name="macroType">optional object MacroType</param>
-		/// <param name="shortcutKey">optional object ShortcutKey</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835300.aspx </remarks>
+		/// <param name="name">optional object name</param>
+		/// <param name="refersTo">optional object refersTo</param>
+		/// <param name="visible">optional object visible</param>
+		/// <param name="macroType">optional object macroType</param>
+		/// <param name="shortcutKey">optional object shortcutKey</param>
+		[CustomMethod]
+		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public NetOffice.ExcelApi.Name Add(object name, object refersTo, object visible, object macroType, object shortcutKey)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(name, refersTo, visible, macroType, shortcutKey);
-			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.ExcelApi.Name newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.Name.LateBindingApiWrapperType) as NetOffice.ExcelApi.Name;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Name>(this, "Add", NetOffice.ExcelApi.Name.LateBindingApiWrapperType, new object[]{ name, refersTo, visible, macroType, shortcutKey });
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835300.aspx
 		/// </summary>
-		/// <param name="name">optional object Name</param>
-		/// <param name="refersTo">optional object RefersTo</param>
-		/// <param name="visible">optional object Visible</param>
-		/// <param name="macroType">optional object MacroType</param>
-		/// <param name="shortcutKey">optional object ShortcutKey</param>
-		/// <param name="category">optional object Category</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835300.aspx </remarks>
+		/// <param name="name">optional object name</param>
+		/// <param name="refersTo">optional object refersTo</param>
+		/// <param name="visible">optional object visible</param>
+		/// <param name="macroType">optional object macroType</param>
+		/// <param name="shortcutKey">optional object shortcutKey</param>
+		/// <param name="category">optional object category</param>
+		[CustomMethod]
+		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public NetOffice.ExcelApi.Name Add(object name, object refersTo, object visible, object macroType, object shortcutKey, object category)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(name, refersTo, visible, macroType, shortcutKey, category);
-			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.ExcelApi.Name newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.Name.LateBindingApiWrapperType) as NetOffice.ExcelApi.Name;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Name>(this, "Add", NetOffice.ExcelApi.Name.LateBindingApiWrapperType, new object[]{ name, refersTo, visible, macroType, shortcutKey, category });
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835300.aspx
 		/// </summary>
-		/// <param name="name">optional object Name</param>
-		/// <param name="refersTo">optional object RefersTo</param>
-		/// <param name="visible">optional object Visible</param>
-		/// <param name="macroType">optional object MacroType</param>
-		/// <param name="shortcutKey">optional object ShortcutKey</param>
-		/// <param name="category">optional object Category</param>
-		/// <param name="nameLocal">optional object NameLocal</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835300.aspx </remarks>
+		/// <param name="name">optional object name</param>
+		/// <param name="refersTo">optional object refersTo</param>
+		/// <param name="visible">optional object visible</param>
+		/// <param name="macroType">optional object macroType</param>
+		/// <param name="shortcutKey">optional object shortcutKey</param>
+		/// <param name="category">optional object category</param>
+		/// <param name="nameLocal">optional object nameLocal</param>
+		[CustomMethod]
+		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public NetOffice.ExcelApi.Name Add(object name, object refersTo, object visible, object macroType, object shortcutKey, object category, object nameLocal)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(name, refersTo, visible, macroType, shortcutKey, category, nameLocal);
-			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.ExcelApi.Name newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.Name.LateBindingApiWrapperType) as NetOffice.ExcelApi.Name;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Name>(this, "Add", NetOffice.ExcelApi.Name.LateBindingApiWrapperType, new object[]{ name, refersTo, visible, macroType, shortcutKey, category, nameLocal });
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835300.aspx
 		/// </summary>
-		/// <param name="name">optional object Name</param>
-		/// <param name="refersTo">optional object RefersTo</param>
-		/// <param name="visible">optional object Visible</param>
-		/// <param name="macroType">optional object MacroType</param>
-		/// <param name="shortcutKey">optional object ShortcutKey</param>
-		/// <param name="category">optional object Category</param>
-		/// <param name="nameLocal">optional object NameLocal</param>
-		/// <param name="refersToLocal">optional object RefersToLocal</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835300.aspx </remarks>
+		/// <param name="name">optional object name</param>
+		/// <param name="refersTo">optional object refersTo</param>
+		/// <param name="visible">optional object visible</param>
+		/// <param name="macroType">optional object macroType</param>
+		/// <param name="shortcutKey">optional object shortcutKey</param>
+		/// <param name="category">optional object category</param>
+		/// <param name="nameLocal">optional object nameLocal</param>
+		/// <param name="refersToLocal">optional object refersToLocal</param>
+		[CustomMethod]
+		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public NetOffice.ExcelApi.Name Add(object name, object refersTo, object visible, object macroType, object shortcutKey, object category, object nameLocal, object refersToLocal)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(name, refersTo, visible, macroType, shortcutKey, category, nameLocal, refersToLocal);
-			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.ExcelApi.Name newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.Name.LateBindingApiWrapperType) as NetOffice.ExcelApi.Name;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Name>(this, "Add", NetOffice.ExcelApi.Name.LateBindingApiWrapperType, new object[]{ name, refersTo, visible, macroType, shortcutKey, category, nameLocal, refersToLocal });
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835300.aspx
 		/// </summary>
-		/// <param name="name">optional object Name</param>
-		/// <param name="refersTo">optional object RefersTo</param>
-		/// <param name="visible">optional object Visible</param>
-		/// <param name="macroType">optional object MacroType</param>
-		/// <param name="shortcutKey">optional object ShortcutKey</param>
-		/// <param name="category">optional object Category</param>
-		/// <param name="nameLocal">optional object NameLocal</param>
-		/// <param name="refersToLocal">optional object RefersToLocal</param>
-		/// <param name="categoryLocal">optional object CategoryLocal</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835300.aspx </remarks>
+		/// <param name="name">optional object name</param>
+		/// <param name="refersTo">optional object refersTo</param>
+		/// <param name="visible">optional object visible</param>
+		/// <param name="macroType">optional object macroType</param>
+		/// <param name="shortcutKey">optional object shortcutKey</param>
+		/// <param name="category">optional object category</param>
+		/// <param name="nameLocal">optional object nameLocal</param>
+		/// <param name="refersToLocal">optional object refersToLocal</param>
+		/// <param name="categoryLocal">optional object categoryLocal</param>
+		[CustomMethod]
+		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public NetOffice.ExcelApi.Name Add(object name, object refersTo, object visible, object macroType, object shortcutKey, object category, object nameLocal, object refersToLocal, object categoryLocal)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(name, refersTo, visible, macroType, shortcutKey, category, nameLocal, refersToLocal, categoryLocal);
-			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.ExcelApi.Name newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.Name.LateBindingApiWrapperType) as NetOffice.ExcelApi.Name;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Name>(this, "Add", NetOffice.ExcelApi.Name.LateBindingApiWrapperType, new object[]{ name, refersTo, visible, macroType, shortcutKey, category, nameLocal, refersToLocal, categoryLocal });
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835300.aspx
 		/// </summary>
-		/// <param name="name">optional object Name</param>
-		/// <param name="refersTo">optional object RefersTo</param>
-		/// <param name="visible">optional object Visible</param>
-		/// <param name="macroType">optional object MacroType</param>
-		/// <param name="shortcutKey">optional object ShortcutKey</param>
-		/// <param name="category">optional object Category</param>
-		/// <param name="nameLocal">optional object NameLocal</param>
-		/// <param name="refersToLocal">optional object RefersToLocal</param>
-		/// <param name="categoryLocal">optional object CategoryLocal</param>
-		/// <param name="refersToR1C1">optional object RefersToR1C1</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835300.aspx </remarks>
+		/// <param name="name">optional object name</param>
+		/// <param name="refersTo">optional object refersTo</param>
+		/// <param name="visible">optional object visible</param>
+		/// <param name="macroType">optional object macroType</param>
+		/// <param name="shortcutKey">optional object shortcutKey</param>
+		/// <param name="category">optional object category</param>
+		/// <param name="nameLocal">optional object nameLocal</param>
+		/// <param name="refersToLocal">optional object refersToLocal</param>
+		/// <param name="categoryLocal">optional object categoryLocal</param>
+		/// <param name="refersToR1C1">optional object refersToR1C1</param>
+		[CustomMethod]
+		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public NetOffice.ExcelApi.Name Add(object name, object refersTo, object visible, object macroType, object shortcutKey, object category, object nameLocal, object refersToLocal, object categoryLocal, object refersToR1C1)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(name, refersTo, visible, macroType, shortcutKey, category, nameLocal, refersToLocal, categoryLocal, refersToR1C1);
-			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.ExcelApi.Name newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.Name.LateBindingApiWrapperType) as NetOffice.ExcelApi.Name;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Name>(this, "Add", NetOffice.ExcelApi.Name.LateBindingApiWrapperType, new object[]{ name, refersTo, visible, macroType, shortcutKey, category, nameLocal, refersToLocal, categoryLocal, refersToR1C1 });
 		}
 
-		/// <summary>
-		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
-		/// 
-		/// </summary>
-		/// <param name="index">optional object Index</param>
-		/// <param name="indexLocal">optional object IndexLocal</param>
-		/// <param name="refersTo">optional object RefersTo</param>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
-		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
+        /// <summary>
+        /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
+        /// Custom Indexer
+        /// </summary>
+        /// <param name="index">object index</param>
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
+        [NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty, CustomIndexer]
+        public NetOffice.ExcelApi.Name this[object index]
+		{
+			get
+			{
+				return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Name>(this, "_Default", NetOffice.ExcelApi.Name.LateBindingApiWrapperType, index);
+			}
+		}
+
+        /// <summary>
+        /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
+        /// Custom Indexer
+        /// </summary>
+        /// <param name="index">optional object index</param>
+        /// <param name="indexLocal">optional object indexLocal</param>
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
+        [NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty, CustomIndexer]
+        public NetOffice.ExcelApi.Name this[object index, object indexLocal]
+		{
+			get
+			{
+				return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Name>(this, "_Default", NetOffice.ExcelApi.Name.LateBindingApiWrapperType, index, indexLocal);
+			}
+		}
+
+        /// <summary>
+        /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
+        /// </summary>
+        /// <param name="index">optional object index</param>
+        /// <param name="indexLocal">optional object indexLocal</param>
+        /// <param name="refersTo">optional object refersTo</param>
+        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
 		public NetOffice.ExcelApi.Name this[object index, object indexLocal, object refersTo]
 		{
 			get
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(index, indexLocal, refersTo);
-				object returnItem = Invoker.MethodReturn(this, "_Default", paramsArray);
-				NetOffice.ExcelApi.Name newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.Name.LateBindingApiWrapperType) as NetOffice.ExcelApi.Name;
-				return newObject;
+				return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Name>(this, "_Default", NetOffice.ExcelApi.Name.LateBindingApiWrapperType, index, indexLocal, refersTo);
 			}
 		}
-        /// <summary>
-        /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
-        /// </summary>
-        /// <param name="index">optional object Index</param>
-        /// <param name="indexLocal">optional object IndexLocal</param>
-        /// <param name="refersTo">optional object RefersTo</param>
-        [SupportByVersionAttribute("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        [NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
-        public NetOffice.ExcelApi.Name this[object index, object indexLocal]
-        {
-            get
-            {
-                object[] paramsArray = Invoker.ValidateParamsArray(index, indexLocal, null);
-                object returnItem = Invoker.MethodReturn(this, "_Default", paramsArray);
-                NetOffice.ExcelApi.Name newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem, NetOffice.ExcelApi.Name.LateBindingApiWrapperType) as NetOffice.ExcelApi.Name;
-                return newObject;
-            }
-        }
-
-        /// <summary>
-        /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
-        /// </summary>
-        /// <param name="index">optional object Index</param>
-        /// <param name="indexLocal">optional object IndexLocal</param>
-        /// <param name="refersTo">optional object RefersTo</param>
-        [SupportByVersionAttribute("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        [NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
-        public NetOffice.ExcelApi.Name this[object index]
-        {
-            get
-            {
-                object[] paramsArray = Invoker.ValidateParamsArray(index, null, null);
-                object returnItem = Invoker.MethodReturn(this, "_Default", paramsArray);
-                NetOffice.ExcelApi.Name newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem, NetOffice.ExcelApi.Name.LateBindingApiWrapperType) as NetOffice.ExcelApi.Name;
-                return newObject;
-            }
-        }
 
         #endregion
 
         #region IEnumerable<NetOffice.ExcelApi.Name> Member
 
         /// <summary>
-        /// SupportByVersionAttribute Excel, 9,10,11,12,14,15,16
+        /// SupportByVersion Excel, 9,10,11,12,14,15,16
         /// </summary>
-        [SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
        public IEnumerator<NetOffice.ExcelApi.Name> GetEnumerator()  
        {
            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
@@ -486,15 +435,16 @@ namespace NetOffice.ExcelApi
 		#region IEnumerable Members
        
 		/// <summary>
-		/// SupportByVersionAttribute Excel, 9,10,11,12,14,15,16
+		/// SupportByVersion Excel, 9,10,11,12,14,15,16
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
+		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
 			return NetOffice.Utils.GetProxyEnumeratorAsProperty(this);
 		}
 
 		#endregion
+
 		#pragma warning restore
 	}
 }

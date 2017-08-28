@@ -1,12 +1,10 @@
 ﻿using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
-using NetOffice;
-using NetOffice.Misc;
+using NetOffice.Attributes;
 
 namespace NetOffice.OfficeApi
 {
-
 	#region Delegates
 
 	#pragma warning disable
@@ -15,22 +13,24 @@ namespace NetOffice.OfficeApi
 
 	#endregion
 
-	///<summary>
+	/// <summary>
 	/// CoClass CommandBars 
 	/// SupportByVersion Office, 9,10,11,12,14,15,16
-	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff860339.aspx
-	///</summary>
-	[SupportByVersionAttribute("Office", 9,10,11,12,14,15,16)]
-	[EntityTypeAttribute(EntityType.IsCoClass)]
-	public class CommandBars : _CommandBars,IEventBinding
+	/// </summary>
+	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860339.aspx </remarks>
+	[SupportByVersion("Office", 9,10,11,12,14,15,16)]
+	[EntityType(EntityType.IsCoClass)]
+	[EventSink(typeof(Events._CommandBarsEvents_SinkHelper))]
+	public class CommandBars : _CommandBars, IEventBinding
 	{
 		#pragma warning disable
+
 		#region Fields
 		
 		private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
 		private string _activeSinkId;
 		private NetRuntimeSystem.Type _thisType;
-		_CommandBarsEvents_SinkHelper __CommandBarsEvents_SinkHelper;
+		private Events._CommandBarsEvents_SinkHelper __CommandBarsEvents_SinkHelper;
 	
 		#endregion
 
@@ -39,6 +39,7 @@ namespace NetOffice.OfficeApi
         /// <summary>
         /// Instance Type
         /// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
         public override Type InstanceType
         {
             get
@@ -105,17 +106,17 @@ namespace NetOffice.OfficeApi
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of CommandBars 
-        ///</summary>		
+        /// </summary>		
 		public CommandBars():base("Office.CommandBars")
 		{
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of CommandBars
-        ///</summary>
+        /// </summary>
         ///<param name="progId">registered ProgID</param>
 		public CommandBars(string progId):base(progId)
 		{
@@ -125,46 +126,6 @@ namespace NetOffice.OfficeApi
 		#endregion
 
 		#region Static CoClass Methods
-
-		/// <summary>
-        /// Returns all running Office.CommandBars objects from the environment/system
-        /// </summary>
-        /// <returns>an Office.CommandBars array</returns>
-		public static NetOffice.OfficeApi.CommandBars[] GetActiveInstances()
-		{	
-			IDisposableEnumeration proxyList = NetOffice.ProxyService.GetActiveInstances("Office","CommandBars");
-			NetRuntimeSystem.Collections.Generic.List<NetOffice.OfficeApi.CommandBars> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.OfficeApi.CommandBars>();
-			foreach(object proxy in proxyList)
-				resultList.Add( new NetOffice.OfficeApi.CommandBars(null, proxy) );
-			return resultList.ToArray();
-		}
-
-		/// <summary>
-        /// Returns a running Office.CommandBars object from the environment/system.
-        /// </summary>
-        /// <returns>an Office.CommandBars object or null</returns>
-		public static NetOffice.OfficeApi.CommandBars GetActiveInstance()
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Office","CommandBars", false);
-			if(null != proxy)
-				return new NetOffice.OfficeApi.CommandBars(null, proxy);
-			else
-				return null;
-		}
-
-		/// <summary>
-        /// Returns a running Office.CommandBars object from the environment/system. 
-        /// </summary>
-	    /// <param name="throwOnError">throw an exception if no object was found</param>
-        /// <returns>an Office.CommandBars object or null</returns>
-		public static NetOffice.OfficeApi.CommandBars GetActiveInstance(bool throwOnError)
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Office","CommandBars", throwOnError);
-			if(null != proxy)
-				return new NetOffice.OfficeApi.CommandBars(null, proxy);
-			else
-				return null;
-		}
 		#endregion
 
 		#region Events
@@ -209,12 +170,12 @@ namespace NetOffice.OfficeApi
 				return;
 	
             if (null == _activeSinkId)
-				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, _CommandBarsEvents_SinkHelper.Id);
+				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, Events._CommandBarsEvents_SinkHelper.Id);
 
 
-			if(_CommandBarsEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
+			if(Events._CommandBarsEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
 			{
-				__CommandBarsEvents_SinkHelper = new _CommandBarsEvents_SinkHelper(this, _connectPoint);
+				__CommandBarsEvents_SinkHelper = new Events._CommandBarsEvents_SinkHelper(this, _connectPoint);
 				return;
 			} 
         }

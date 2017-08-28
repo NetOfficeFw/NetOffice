@@ -1,23 +1,33 @@
 ﻿using System;
 using NetRuntimeSystem = System;
-using System.Runtime.InteropServices;
-using System.Runtime.CompilerServices;
 using System.ComponentModel;
-using System.Reflection;
-using System.Collections.Generic;
-using NetOffice;
+using NetOffice.Attributes;
+
 namespace NetOffice.OfficeApi
 {
-	///<summary>
+	/// <summary>
 	/// DispatchInterface ICustomXMLPartsEvents 
 	/// SupportByVersion Office, 12,14,15,16
-	///</summary>
-	[SupportByVersionAttribute("Office", 12,14,15,16)]
-	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
-	public class ICustomXMLPartsEvents : COMObject
+	/// </summary>
+	[SupportByVersion("Office", 12,14,15,16)]
+	[EntityType(EntityType.IsDispatchInterface)]
+ 	public class ICustomXMLPartsEvents : COMObject
 	{
 		#pragma warning disable
+
 		#region Type Information
+
+		/// <summary>
+		/// Instance Type
+		/// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
+		public override Type InstanceType
+		{
+			get
+			{
+				return LateBindingApiWrapperType;
+			}
+		}
 
         private static Type _type;
 
@@ -28,14 +38,20 @@ namespace NetOffice.OfficeApi
             {
                 if (null == _type)
                     _type = typeof(ICustomXMLPartsEvents);
-                    
                 return _type;
             }
         }
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public ICustomXMLPartsEvents(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -81,7 +97,7 @@ namespace NetOffice.OfficeApi
 		{
 		}
 		
-		/// <param name="progId">registered ProgID</param>
+		/// <param name="progId">registered progID</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public ICustomXMLPartsEvents(string progId) : base(progId)
 		{
@@ -97,41 +113,36 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="newPart">NetOffice.OfficeApi.CustomXMLPart NewPart</param>
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		/// <param name="newPart">NetOffice.OfficeApi.CustomXMLPart newPart</param>
+		[SupportByVersion("Office", 12,14,15,16)]
 		public void PartAfterAdd(NetOffice.OfficeApi.CustomXMLPart newPart)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(newPart);
-			Invoker.Method(this, "PartAfterAdd", paramsArray);
+			 Factory.ExecuteMethod(this, "PartAfterAdd", newPart);
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="oldPart">NetOffice.OfficeApi.CustomXMLPart OldPart</param>
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		/// <param name="oldPart">NetOffice.OfficeApi.CustomXMLPart oldPart</param>
+		[SupportByVersion("Office", 12,14,15,16)]
 		public void PartBeforeDelete(NetOffice.OfficeApi.CustomXMLPart oldPart)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(oldPart);
-			Invoker.Method(this, "PartBeforeDelete", paramsArray);
+			 Factory.ExecuteMethod(this, "PartBeforeDelete", oldPart);
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="part">NetOffice.OfficeApi.CustomXMLPart Part</param>
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		/// <param name="part">NetOffice.OfficeApi.CustomXMLPart part</param>
+		[SupportByVersion("Office", 12,14,15,16)]
 		public void PartAfterLoad(NetOffice.OfficeApi.CustomXMLPart part)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(part);
-			Invoker.Method(this, "PartAfterLoad", paramsArray);
+			 Factory.ExecuteMethod(this, "PartAfterLoad", part);
 		}
 
 		#endregion
+
 		#pragma warning restore
 	}
 }

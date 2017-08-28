@@ -1,12 +1,10 @@
 ﻿using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
-using NetOffice;
-using NetOffice.Misc;
+using NetOffice.Attributes;
 
 namespace NetOffice.ADODBApi
 {
-
 	#region Delegates
 
 	#pragma warning disable
@@ -14,15 +12,16 @@ namespace NetOffice.ADODBApi
 
 	#endregion
 
-	///<summary>
+	/// <summary>
 	/// CoClass Record 
 	/// SupportByVersion ADODB, 2.5
-	///</summary>
-	[SupportByVersionAttribute("ADODB", 2.5)]
-	[EntityTypeAttribute(EntityType.IsCoClass)]
-	public class Record : _Record
+	/// </summary>
+	[SupportByVersion("ADODB", 2.5)]
+	[EntityType(EntityType.IsCoClass)]
+ 	public class Record : _Record
 	{
 		#pragma warning disable
+
 		#region Fields
 		
 		private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
@@ -36,6 +35,7 @@ namespace NetOffice.ADODBApi
         /// <summary>
         /// Instance Type
         /// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
         public override Type InstanceType
         {
             get
@@ -102,17 +102,17 @@ namespace NetOffice.ADODBApi
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of Record 
-        ///</summary>		
+        /// </summary>		
 		public Record():base("ADODB.Record")
 		{
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of Record
-        ///</summary>
+        /// </summary>
         ///<param name="progId">registered ProgID</param>
 		public Record(string progId):base(progId)
 		{
@@ -122,46 +122,6 @@ namespace NetOffice.ADODBApi
 		#endregion
 
 		#region Static CoClass Methods
-
-		/// <summary>
-        /// Returns all running ADODB.Record objects from the environment/system
-        /// </summary>
-        /// <returns>an ADODB.Record array</returns>
-		public static NetOffice.ADODBApi.Record[] GetActiveInstances()
-		{		
-			IDisposableEnumeration proxyList = NetOffice.ProxyService.GetActiveInstances("ADODB","Record");
-			NetRuntimeSystem.Collections.Generic.List<NetOffice.ADODBApi.Record> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.ADODBApi.Record>();
-			foreach(object proxy in proxyList)
-				resultList.Add( new NetOffice.ADODBApi.Record(null, proxy) );
-			return resultList.ToArray();
-		}
-
-		/// <summary>
-        /// Returns a running ADODB.Record object from the environment/system.
-        /// </summary>
-        /// <returns>an ADODB.Record object or null</returns>
-		public static NetOffice.ADODBApi.Record GetActiveInstance()
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("ADODB","Record", false);
-			if(null != proxy)
-				return new NetOffice.ADODBApi.Record(null, proxy);
-			else
-				return null;
-		}
-
-		/// <summary>
-        /// Returns a running ADODB.Record object from the environment/system. 
-        /// </summary>
-	    /// <param name="throwOnError">throw an exception if no object was found</param>
-        /// <returns>an ADODB.Record object or null</returns>
-		public static NetOffice.ADODBApi.Record GetActiveInstance(bool throwOnError)
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("ADODB","Record", throwOnError);
-			if(null != proxy)
-				return new NetOffice.ADODBApi.Record(null, proxy);
-			else
-				return null;
-		}
 		#endregion
 
 		#region Events

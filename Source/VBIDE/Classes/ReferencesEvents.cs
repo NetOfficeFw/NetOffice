@@ -1,36 +1,36 @@
 ﻿using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
-using NetOffice;
-using NetOffice.Misc;
+using NetOffice.Attributes;
 
 namespace NetOffice.VBIDEApi
 {
-
 	#region Delegates
 
 	#pragma warning disable
-	public delegate void ReferencesEvents_ItemAddedEventHandler(NetOffice.VBIDEApi.Reference Reference);
-	public delegate void ReferencesEvents_ItemRemovedEventHandler(NetOffice.VBIDEApi.Reference Reference);
+	public delegate void ReferencesEvents_ItemAddedEventHandler(NetOffice.VBIDEApi.Reference reference);
+	public delegate void ReferencesEvents_ItemRemovedEventHandler(NetOffice.VBIDEApi.Reference reference);
 	#pragma warning restore
 
 	#endregion
 
-	///<summary>
+	/// <summary>
 	/// CoClass ReferencesEvents 
 	/// SupportByVersion VBIDE, 12,14,5.3
-	///</summary>
-	[SupportByVersionAttribute("VBIDE", 12,14,5.3)]
-	[EntityTypeAttribute(EntityType.IsCoClass)]
-	public class ReferencesEvents : _ReferencesEvents,IEventBinding
+	/// </summary>
+	[SupportByVersion("VBIDE", 12,14,5.3)]
+	[EntityType(EntityType.IsCoClass)]
+    [EventSink(typeof(EventInterfaces._dispReferencesEvents_SinkHelper))]
+    public class ReferencesEvents : _ReferencesEvents, IEventBinding
 	{
 		#pragma warning disable
+
 		#region Fields
 		
 		private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
 		private string _activeSinkId;
 		private NetRuntimeSystem.Type _thisType;
-		_dispReferencesEvents_SinkHelper __dispReferencesEvents_SinkHelper;
+		private EventInterfaces._dispReferencesEvents_SinkHelper __dispReferencesEvents_SinkHelper;
 	
 		#endregion
 
@@ -39,6 +39,7 @@ namespace NetOffice.VBIDEApi
         /// <summary>
         /// Instance Type
         /// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
         public override Type InstanceType
         {
             get
@@ -105,17 +106,17 @@ namespace NetOffice.VBIDEApi
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of ReferencesEvents 
-        ///</summary>		
+        /// </summary>		
 		public ReferencesEvents():base("VBIDE.ReferencesEvents")
 		{
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of ReferencesEvents
-        ///</summary>
+        /// </summary>
         ///<param name="progId">registered ProgID</param>
 		public ReferencesEvents(string progId):base(progId)
 		{
@@ -125,46 +126,6 @@ namespace NetOffice.VBIDEApi
 		#endregion
 
 		#region Static CoClass Methods
-
-		/// <summary>
-        /// Returns all running VBIDE.ReferencesEvents objects from the environment/system
-        /// </summary>
-        /// <returns>an VBIDE.ReferencesEvents array</returns>
-		public static NetOffice.VBIDEApi.ReferencesEvents[] GetActiveInstances()
-		{		
-			IDisposableEnumeration proxyList = NetOffice.ProxyService.GetActiveInstances("VBIDE","ReferencesEvents");
-			NetRuntimeSystem.Collections.Generic.List<NetOffice.VBIDEApi.ReferencesEvents> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.VBIDEApi.ReferencesEvents>();
-			foreach(object proxy in proxyList)
-				resultList.Add( new NetOffice.VBIDEApi.ReferencesEvents(null, proxy) );
-			return resultList.ToArray();
-		}
-
-		/// <summary>
-        /// Returns a running VBIDE.ReferencesEvents object from the environment/system.
-        /// </summary>
-        /// <returns>an VBIDE.ReferencesEvents object or null</returns>
-		public static NetOffice.VBIDEApi.ReferencesEvents GetActiveInstance()
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("VBIDE","ReferencesEvents", false);
-			if(null != proxy)
-				return new NetOffice.VBIDEApi.ReferencesEvents(null, proxy);
-			else
-				return null;
-		}
-
-		/// <summary>
-        /// Returns a running VBIDE.ReferencesEvents object from the environment/system. 
-        /// </summary>
-	    /// <param name="throwOnError">throw an exception if no object was found</param>
-        /// <returns>an VBIDE.ReferencesEvents object or null</returns>
-		public static NetOffice.VBIDEApi.ReferencesEvents GetActiveInstance(bool throwOnError)
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("VBIDE","ReferencesEvents", throwOnError);
-			if(null != proxy)
-				return new NetOffice.VBIDEApi.ReferencesEvents(null, proxy);
-			else
-				return null;
-		}
 		#endregion
 
 		#region Events
@@ -230,12 +191,12 @@ namespace NetOffice.VBIDEApi
 				return;
 	
             if (null == _activeSinkId)
-				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, _dispReferencesEvents_SinkHelper.Id);
+				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, EventInterfaces._dispReferencesEvents_SinkHelper.Id);
 
 
-			if(_dispReferencesEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
+			if(EventInterfaces._dispReferencesEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
 			{
-				__dispReferencesEvents_SinkHelper = new _dispReferencesEvents_SinkHelper(this, _connectPoint);
+				__dispReferencesEvents_SinkHelper = new EventInterfaces._dispReferencesEvents_SinkHelper(this, _connectPoint);
 				return;
 			} 
         }

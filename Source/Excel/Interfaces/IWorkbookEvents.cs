@@ -1,27 +1,26 @@
 ﻿using System;
 using NetRuntimeSystem = System;
-using System.Runtime.InteropServices;
 using System.ComponentModel;
-using System.Runtime.CompilerServices;
-using System.Reflection;
-using System.Collections.Generic;
-using NetOffice;
+using NetOffice.Attributes;
+
 namespace NetOffice.ExcelApi
 {
-	///<summary>
+	/// <summary>
 	/// Interface IWorkbookEvents 
 	/// SupportByVersion Excel, 9,10,11,12,14,15,16
-	///</summary>
-	[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
-	[EntityTypeAttribute(EntityType.IsInterface)]
-	public class IWorkbookEvents : COMObject
+	/// </summary>
+	[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+	[EntityType(EntityType.IsInterface)]
+ 	public class IWorkbookEvents : COMObject
 	{
 		#pragma warning disable
+
 		#region Type Information
 
         /// <summary>
         /// Instance Type
         /// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
         public override Type InstanceType
         {
             get
@@ -39,14 +38,20 @@ namespace NetOffice.ExcelApi
             {
                 if (null == _type)
                     _type = typeof(IWorkbookEvents);
-                    
                 return _type;
             }
         }
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public IWorkbookEvents(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -92,7 +97,7 @@ namespace NetOffice.ExcelApi
 		{
 		}
 		
-		/// <param name="progId">registered ProgID</param>
+		/// <param name="progId">registered progID</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public IWorkbookEvents(string progId) : base(progId)
 		{
@@ -108,555 +113,436 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
+		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public Int32 Open()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "Open", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return Factory.ExecuteInt32MethodGet(this, "Open");
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
+		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public Int32 Activate()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "Activate", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return Factory.ExecuteInt32MethodGet(this, "Activate");
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
+		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public Int32 Deactivate()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "Deactivate", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return Factory.ExecuteInt32MethodGet(this, "Deactivate");
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="cancel">bool Cancel</param>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
+		/// <param name="cancel">bool cancel</param>
+		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public Int32 BeforeClose(bool cancel)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(cancel);
-			object returnItem = Invoker.MethodReturn(this, "BeforeClose", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return Factory.ExecuteInt32MethodGet(this, "BeforeClose", cancel);
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="saveAsUI">bool SaveAsUI</param>
-		/// <param name="cancel">bool Cancel</param>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
+		/// <param name="saveAsUI">bool saveAsUI</param>
+		/// <param name="cancel">bool cancel</param>
+		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public Int32 BeforeSave(bool saveAsUI, bool cancel)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(saveAsUI, cancel);
-			object returnItem = Invoker.MethodReturn(this, "BeforeSave", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return Factory.ExecuteInt32MethodGet(this, "BeforeSave", saveAsUI, cancel);
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="cancel">bool Cancel</param>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
+		/// <param name="cancel">bool cancel</param>
+		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public Int32 BeforePrint(bool cancel)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(cancel);
-			object returnItem = Invoker.MethodReturn(this, "BeforePrint", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return Factory.ExecuteInt32MethodGet(this, "BeforePrint", cancel);
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="sh">object Sh</param>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
+		/// <param name="sh">object sh</param>
+		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public Int32 NewSheet(object sh)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(sh);
-			object returnItem = Invoker.MethodReturn(this, "NewSheet", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return Factory.ExecuteInt32MethodGet(this, "NewSheet", sh);
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
+		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public Int32 AddinInstall()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "AddinInstall", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return Factory.ExecuteInt32MethodGet(this, "AddinInstall");
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
+		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public Int32 AddinUninstall()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "AddinUninstall", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return Factory.ExecuteInt32MethodGet(this, "AddinUninstall");
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="wn">NetOffice.ExcelApi.Window Wn</param>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
+		/// <param name="wn">NetOffice.ExcelApi.Window wn</param>
+		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public Int32 WindowResize(NetOffice.ExcelApi.Window wn)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(wn);
-			object returnItem = Invoker.MethodReturn(this, "WindowResize", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return Factory.ExecuteInt32MethodGet(this, "WindowResize", wn);
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="wn">NetOffice.ExcelApi.Window Wn</param>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
+		/// <param name="wn">NetOffice.ExcelApi.Window wn</param>
+		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public Int32 WindowActivate(NetOffice.ExcelApi.Window wn)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(wn);
-			object returnItem = Invoker.MethodReturn(this, "WindowActivate", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return Factory.ExecuteInt32MethodGet(this, "WindowActivate", wn);
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="wn">NetOffice.ExcelApi.Window Wn</param>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
+		/// <param name="wn">NetOffice.ExcelApi.Window wn</param>
+		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public Int32 WindowDeactivate(NetOffice.ExcelApi.Window wn)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(wn);
-			object returnItem = Invoker.MethodReturn(this, "WindowDeactivate", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return Factory.ExecuteInt32MethodGet(this, "WindowDeactivate", wn);
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="sh">object Sh</param>
-		/// <param name="target">NetOffice.ExcelApi.Range Target</param>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
+		/// <param name="sh">object sh</param>
+		/// <param name="target">NetOffice.ExcelApi.Range target</param>
+		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public Int32 SheetSelectionChange(object sh, NetOffice.ExcelApi.Range target)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(sh, target);
-			object returnItem = Invoker.MethodReturn(this, "SheetSelectionChange", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return Factory.ExecuteInt32MethodGet(this, "SheetSelectionChange", sh, target);
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="sh">object Sh</param>
-		/// <param name="target">NetOffice.ExcelApi.Range Target</param>
-		/// <param name="cancel">bool Cancel</param>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
+		/// <param name="sh">object sh</param>
+		/// <param name="target">NetOffice.ExcelApi.Range target</param>
+		/// <param name="cancel">bool cancel</param>
+		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public Int32 SheetBeforeDoubleClick(object sh, NetOffice.ExcelApi.Range target, bool cancel)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(sh, target, cancel);
-			object returnItem = Invoker.MethodReturn(this, "SheetBeforeDoubleClick", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return Factory.ExecuteInt32MethodGet(this, "SheetBeforeDoubleClick", sh, target, cancel);
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="sh">object Sh</param>
-		/// <param name="target">NetOffice.ExcelApi.Range Target</param>
-		/// <param name="cancel">bool Cancel</param>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
+		/// <param name="sh">object sh</param>
+		/// <param name="target">NetOffice.ExcelApi.Range target</param>
+		/// <param name="cancel">bool cancel</param>
+		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public Int32 SheetBeforeRightClick(object sh, NetOffice.ExcelApi.Range target, bool cancel)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(sh, target, cancel);
-			object returnItem = Invoker.MethodReturn(this, "SheetBeforeRightClick", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return Factory.ExecuteInt32MethodGet(this, "SheetBeforeRightClick", sh, target, cancel);
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="sh">object Sh</param>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
+		/// <param name="sh">object sh</param>
+		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public Int32 SheetActivate(object sh)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(sh);
-			object returnItem = Invoker.MethodReturn(this, "SheetActivate", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return Factory.ExecuteInt32MethodGet(this, "SheetActivate", sh);
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="sh">object Sh</param>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
+		/// <param name="sh">object sh</param>
+		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public Int32 SheetDeactivate(object sh)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(sh);
-			object returnItem = Invoker.MethodReturn(this, "SheetDeactivate", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return Factory.ExecuteInt32MethodGet(this, "SheetDeactivate", sh);
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="sh">object Sh</param>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
+		/// <param name="sh">object sh</param>
+		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public Int32 SheetCalculate(object sh)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(sh);
-			object returnItem = Invoker.MethodReturn(this, "SheetCalculate", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return Factory.ExecuteInt32MethodGet(this, "SheetCalculate", sh);
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="sh">object Sh</param>
-		/// <param name="target">NetOffice.ExcelApi.Range Target</param>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
+		/// <param name="sh">object sh</param>
+		/// <param name="target">NetOffice.ExcelApi.Range target</param>
+		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public Int32 SheetChange(object sh, NetOffice.ExcelApi.Range target)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(sh, target);
-			object returnItem = Invoker.MethodReturn(this, "SheetChange", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return Factory.ExecuteInt32MethodGet(this, "SheetChange", sh, target);
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="sh">object Sh</param>
-		/// <param name="target">NetOffice.ExcelApi.Hyperlink Target</param>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
+		/// <param name="sh">object sh</param>
+		/// <param name="target">NetOffice.ExcelApi.Hyperlink target</param>
+		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public Int32 SheetFollowHyperlink(object sh, NetOffice.ExcelApi.Hyperlink target)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(sh, target);
-			object returnItem = Invoker.MethodReturn(this, "SheetFollowHyperlink", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return Factory.ExecuteInt32MethodGet(this, "SheetFollowHyperlink", sh, target);
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="sh">object Sh</param>
-		/// <param name="target">NetOffice.ExcelApi.PivotTable Target</param>
-		[SupportByVersionAttribute("Excel", 10,11,12,14,15,16)]
+		/// <param name="sh">object sh</param>
+		/// <param name="target">NetOffice.ExcelApi.PivotTable target</param>
+		[SupportByVersion("Excel", 10,11,12,14,15,16)]
 		public Int32 SheetPivotTableUpdate(object sh, NetOffice.ExcelApi.PivotTable target)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(sh, target);
-			object returnItem = Invoker.MethodReturn(this, "SheetPivotTableUpdate", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return Factory.ExecuteInt32MethodGet(this, "SheetPivotTableUpdate", sh, target);
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="target">NetOffice.ExcelApi.PivotTable Target</param>
-		[SupportByVersionAttribute("Excel", 10,11,12,14,15,16)]
+		/// <param name="target">NetOffice.ExcelApi.PivotTable target</param>
+		[SupportByVersion("Excel", 10,11,12,14,15,16)]
 		public Int32 PivotTableCloseConnection(NetOffice.ExcelApi.PivotTable target)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(target);
-			object returnItem = Invoker.MethodReturn(this, "PivotTableCloseConnection", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return Factory.ExecuteInt32MethodGet(this, "PivotTableCloseConnection", target);
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="target">NetOffice.ExcelApi.PivotTable Target</param>
-		[SupportByVersionAttribute("Excel", 10,11,12,14,15,16)]
+		/// <param name="target">NetOffice.ExcelApi.PivotTable target</param>
+		[SupportByVersion("Excel", 10,11,12,14,15,16)]
 		public Int32 PivotTableOpenConnection(NetOffice.ExcelApi.PivotTable target)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(target);
-			object returnItem = Invoker.MethodReturn(this, "PivotTableOpenConnection", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return Factory.ExecuteInt32MethodGet(this, "PivotTableOpenConnection", target);
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="syncEventType">NetOffice.OfficeApi.Enums.MsoSyncEventType SyncEventType</param>
-		[SupportByVersionAttribute("Excel", 11,12,14,15,16)]
+		/// <param name="syncEventType">NetOffice.OfficeApi.Enums.MsoSyncEventType syncEventType</param>
+		[SupportByVersion("Excel", 11,12,14,15,16)]
 		public Int32 Sync(NetOffice.OfficeApi.Enums.MsoSyncEventType syncEventType)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(syncEventType);
-			object returnItem = Invoker.MethodReturn(this, "Sync", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return Factory.ExecuteInt32MethodGet(this, "Sync", syncEventType);
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="map">NetOffice.ExcelApi.XmlMap Map</param>
-		/// <param name="url">string Url</param>
-		/// <param name="isRefresh">bool IsRefresh</param>
-		/// <param name="cancel">bool Cancel</param>
-		[SupportByVersionAttribute("Excel", 11,12,14,15,16)]
+		/// <param name="map">NetOffice.ExcelApi.XmlMap map</param>
+		/// <param name="url">string url</param>
+		/// <param name="isRefresh">bool isRefresh</param>
+		/// <param name="cancel">bool cancel</param>
+		[SupportByVersion("Excel", 11,12,14,15,16)]
 		public Int32 BeforeXmlImport(NetOffice.ExcelApi.XmlMap map, string url, bool isRefresh, bool cancel)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(map, url, isRefresh, cancel);
-			object returnItem = Invoker.MethodReturn(this, "BeforeXmlImport", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return Factory.ExecuteInt32MethodGet(this, "BeforeXmlImport", map, url, isRefresh, cancel);
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="map">NetOffice.ExcelApi.XmlMap Map</param>
-		/// <param name="isRefresh">bool IsRefresh</param>
-		/// <param name="result">NetOffice.ExcelApi.Enums.XlXmlImportResult Result</param>
-		[SupportByVersionAttribute("Excel", 11,12,14,15,16)]
+		/// <param name="map">NetOffice.ExcelApi.XmlMap map</param>
+		/// <param name="isRefresh">bool isRefresh</param>
+		/// <param name="result">NetOffice.ExcelApi.Enums.XlXmlImportResult result</param>
+		[SupportByVersion("Excel", 11,12,14,15,16)]
 		public Int32 AfterXmlImport(NetOffice.ExcelApi.XmlMap map, bool isRefresh, NetOffice.ExcelApi.Enums.XlXmlImportResult result)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(map, isRefresh, result);
-			object returnItem = Invoker.MethodReturn(this, "AfterXmlImport", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return Factory.ExecuteInt32MethodGet(this, "AfterXmlImport", map, isRefresh, result);
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="map">NetOffice.ExcelApi.XmlMap Map</param>
-		/// <param name="url">string Url</param>
-		/// <param name="cancel">bool Cancel</param>
-		[SupportByVersionAttribute("Excel", 11,12,14,15,16)]
+		/// <param name="map">NetOffice.ExcelApi.XmlMap map</param>
+		/// <param name="url">string url</param>
+		/// <param name="cancel">bool cancel</param>
+		[SupportByVersion("Excel", 11,12,14,15,16)]
 		public Int32 BeforeXmlExport(NetOffice.ExcelApi.XmlMap map, string url, bool cancel)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(map, url, cancel);
-			object returnItem = Invoker.MethodReturn(this, "BeforeXmlExport", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return Factory.ExecuteInt32MethodGet(this, "BeforeXmlExport", map, url, cancel);
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="map">NetOffice.ExcelApi.XmlMap Map</param>
-		/// <param name="url">string Url</param>
-		/// <param name="result">NetOffice.ExcelApi.Enums.XlXmlExportResult Result</param>
-		[SupportByVersionAttribute("Excel", 11,12,14,15,16)]
+		/// <param name="map">NetOffice.ExcelApi.XmlMap map</param>
+		/// <param name="url">string url</param>
+		/// <param name="result">NetOffice.ExcelApi.Enums.XlXmlExportResult result</param>
+		[SupportByVersion("Excel", 11,12,14,15,16)]
 		public Int32 AfterXmlExport(NetOffice.ExcelApi.XmlMap map, string url, NetOffice.ExcelApi.Enums.XlXmlExportResult result)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(map, url, result);
-			object returnItem = Invoker.MethodReturn(this, "AfterXmlExport", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return Factory.ExecuteInt32MethodGet(this, "AfterXmlExport", map, url, result);
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="description">string Description</param>
-		/// <param name="sheet">string Sheet</param>
-		/// <param name="success">bool Success</param>
-		[SupportByVersionAttribute("Excel", 12,14,15,16)]
+		/// <param name="description">string description</param>
+		/// <param name="sheet">string sheet</param>
+		/// <param name="success">bool success</param>
+		[SupportByVersion("Excel", 12,14,15,16)]
 		public Int32 RowsetComplete(string description, string sheet, bool success)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(description, sheet, success);
-			object returnItem = Invoker.MethodReturn(this, "RowsetComplete", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return Factory.ExecuteInt32MethodGet(this, "RowsetComplete", description, sheet, success);
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="sh">object Sh</param>
-		/// <param name="targetPivotTable">NetOffice.ExcelApi.PivotTable TargetPivotTable</param>
-		/// <param name="targetRange">NetOffice.ExcelApi.Range TargetRange</param>
-		[SupportByVersionAttribute("Excel", 14,15,16)]
+		/// <param name="sh">object sh</param>
+		/// <param name="targetPivotTable">NetOffice.ExcelApi.PivotTable targetPivotTable</param>
+		/// <param name="targetRange">NetOffice.ExcelApi.Range targetRange</param>
+		[SupportByVersion("Excel", 14,15,16)]
 		public Int32 SheetPivotTableAfterValueChange(object sh, NetOffice.ExcelApi.PivotTable targetPivotTable, NetOffice.ExcelApi.Range targetRange)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(sh, targetPivotTable, targetRange);
-			object returnItem = Invoker.MethodReturn(this, "SheetPivotTableAfterValueChange", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return Factory.ExecuteInt32MethodGet(this, "SheetPivotTableAfterValueChange", sh, targetPivotTable, targetRange);
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="sh">object Sh</param>
-		/// <param name="targetPivotTable">NetOffice.ExcelApi.PivotTable TargetPivotTable</param>
-		/// <param name="valueChangeStart">Int32 ValueChangeStart</param>
-		/// <param name="valueChangeEnd">Int32 ValueChangeEnd</param>
-		/// <param name="cancel">bool Cancel</param>
-		[SupportByVersionAttribute("Excel", 14,15,16)]
+		/// <param name="sh">object sh</param>
+		/// <param name="targetPivotTable">NetOffice.ExcelApi.PivotTable targetPivotTable</param>
+		/// <param name="valueChangeStart">Int32 valueChangeStart</param>
+		/// <param name="valueChangeEnd">Int32 valueChangeEnd</param>
+		/// <param name="cancel">bool cancel</param>
+		[SupportByVersion("Excel", 14,15,16)]
 		public Int32 SheetPivotTableBeforeAllocateChanges(object sh, NetOffice.ExcelApi.PivotTable targetPivotTable, Int32 valueChangeStart, Int32 valueChangeEnd, bool cancel)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(sh, targetPivotTable, valueChangeStart, valueChangeEnd, cancel);
-			object returnItem = Invoker.MethodReturn(this, "SheetPivotTableBeforeAllocateChanges", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return Factory.ExecuteInt32MethodGet(this, "SheetPivotTableBeforeAllocateChanges", new object[]{ sh, targetPivotTable, valueChangeStart, valueChangeEnd, cancel });
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="sh">object Sh</param>
-		/// <param name="targetPivotTable">NetOffice.ExcelApi.PivotTable TargetPivotTable</param>
-		/// <param name="valueChangeStart">Int32 ValueChangeStart</param>
-		/// <param name="valueChangeEnd">Int32 ValueChangeEnd</param>
-		/// <param name="cancel">bool Cancel</param>
-		[SupportByVersionAttribute("Excel", 14,15,16)]
+		/// <param name="sh">object sh</param>
+		/// <param name="targetPivotTable">NetOffice.ExcelApi.PivotTable targetPivotTable</param>
+		/// <param name="valueChangeStart">Int32 valueChangeStart</param>
+		/// <param name="valueChangeEnd">Int32 valueChangeEnd</param>
+		/// <param name="cancel">bool cancel</param>
+		[SupportByVersion("Excel", 14,15,16)]
 		public Int32 SheetPivotTableBeforeCommitChanges(object sh, NetOffice.ExcelApi.PivotTable targetPivotTable, Int32 valueChangeStart, Int32 valueChangeEnd, bool cancel)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(sh, targetPivotTable, valueChangeStart, valueChangeEnd, cancel);
-			object returnItem = Invoker.MethodReturn(this, "SheetPivotTableBeforeCommitChanges", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return Factory.ExecuteInt32MethodGet(this, "SheetPivotTableBeforeCommitChanges", new object[]{ sh, targetPivotTable, valueChangeStart, valueChangeEnd, cancel });
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="sh">object Sh</param>
-		/// <param name="targetPivotTable">NetOffice.ExcelApi.PivotTable TargetPivotTable</param>
-		/// <param name="valueChangeStart">Int32 ValueChangeStart</param>
-		/// <param name="valueChangeEnd">Int32 ValueChangeEnd</param>
-		[SupportByVersionAttribute("Excel", 14,15,16)]
+		/// <param name="sh">object sh</param>
+		/// <param name="targetPivotTable">NetOffice.ExcelApi.PivotTable targetPivotTable</param>
+		/// <param name="valueChangeStart">Int32 valueChangeStart</param>
+		/// <param name="valueChangeEnd">Int32 valueChangeEnd</param>
+		[SupportByVersion("Excel", 14,15,16)]
 		public Int32 SheetPivotTableBeforeDiscardChanges(object sh, NetOffice.ExcelApi.PivotTable targetPivotTable, Int32 valueChangeStart, Int32 valueChangeEnd)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(sh, targetPivotTable, valueChangeStart, valueChangeEnd);
-			object returnItem = Invoker.MethodReturn(this, "SheetPivotTableBeforeDiscardChanges", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return Factory.ExecuteInt32MethodGet(this, "SheetPivotTableBeforeDiscardChanges", sh, targetPivotTable, valueChangeStart, valueChangeEnd);
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="sh">object Sh</param>
-		/// <param name="target">NetOffice.ExcelApi.PivotTable Target</param>
-		[SupportByVersionAttribute("Excel", 14,15,16)]
+		/// <param name="sh">object sh</param>
+		/// <param name="target">NetOffice.ExcelApi.PivotTable target</param>
+		[SupportByVersion("Excel", 14,15,16)]
 		public Int32 SheetPivotTableChangeSync(object sh, NetOffice.ExcelApi.PivotTable target)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(sh, target);
-			object returnItem = Invoker.MethodReturn(this, "SheetPivotTableChangeSync", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return Factory.ExecuteInt32MethodGet(this, "SheetPivotTableChangeSync", sh, target);
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="success">bool Success</param>
-		[SupportByVersionAttribute("Excel", 14,15,16)]
+		/// <param name="success">bool success</param>
+		[SupportByVersion("Excel", 14,15,16)]
 		public Int32 AfterSave(bool success)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(success);
-			object returnItem = Invoker.MethodReturn(this, "AfterSave", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return Factory.ExecuteInt32MethodGet(this, "AfterSave", success);
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="ch">NetOffice.ExcelApi.Chart Ch</param>
-		[SupportByVersionAttribute("Excel", 14,15,16)]
+		/// <param name="ch">NetOffice.ExcelApi.Chart ch</param>
+		[SupportByVersion("Excel", 14,15,16)]
 		public Int32 NewChart(NetOffice.ExcelApi.Chart ch)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(ch);
-			object returnItem = Invoker.MethodReturn(this, "NewChart", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return Factory.ExecuteInt32MethodGet(this, "NewChart", ch);
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 15,16
-		/// 
 		/// </summary>
-		/// <param name="sh">object Sh</param>
-		[SupportByVersionAttribute("Excel", 15, 16)]
+		/// <param name="sh">object sh</param>
+		[SupportByVersion("Excel", 15, 16)]
 		public Int32 SheetLensGalleryRenderComplete(object sh)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(sh);
-			object returnItem = Invoker.MethodReturn(this, "SheetLensGalleryRenderComplete", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return Factory.ExecuteInt32MethodGet(this, "SheetLensGalleryRenderComplete", sh);
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 15,16
-		/// 
 		/// </summary>
-		/// <param name="sh">object Sh</param>
-		/// <param name="target">NetOffice.ExcelApi.TableObject Target</param>
-		[SupportByVersionAttribute("Excel", 15, 16)]
+		/// <param name="sh">object sh</param>
+		/// <param name="target">NetOffice.ExcelApi.TableObject target</param>
+		[SupportByVersion("Excel", 15, 16)]
 		public Int32 SheetTableUpdate(object sh, NetOffice.ExcelApi.TableObject target)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(sh, target);
-			object returnItem = Invoker.MethodReturn(this, "SheetTableUpdate", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return Factory.ExecuteInt32MethodGet(this, "SheetTableUpdate", sh, target);
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 15,16
-		/// 
 		/// </summary>
-		/// <param name="changes">NetOffice.ExcelApi.ModelChanges Changes</param>
-		[SupportByVersionAttribute("Excel", 15, 16)]
+		/// <param name="changes">NetOffice.ExcelApi.ModelChanges changes</param>
+		[SupportByVersion("Excel", 15, 16)]
 		public Int32 ModelChange(NetOffice.ExcelApi.ModelChanges changes)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(changes);
-			object returnItem = Invoker.MethodReturn(this, "ModelChange", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return Factory.ExecuteInt32MethodGet(this, "ModelChange", changes);
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 15,16
-		/// 
 		/// </summary>
-		/// <param name="sh">object Sh</param>
-		[SupportByVersionAttribute("Excel", 15, 16)]
+		/// <param name="sh">object sh</param>
+		[SupportByVersion("Excel", 15, 16)]
 		public Int32 SheetBeforeDelete(object sh)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(sh);
-			object returnItem = Invoker.MethodReturn(this, "SheetBeforeDelete", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return Factory.ExecuteInt32MethodGet(this, "SheetBeforeDelete", sh);
 		}
 
 		#endregion
+
 		#pragma warning restore
 	}
 }

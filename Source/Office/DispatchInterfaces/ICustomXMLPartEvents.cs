@@ -1,23 +1,33 @@
 ﻿using System;
 using NetRuntimeSystem = System;
-using System.Runtime.InteropServices;
-using System.Runtime.CompilerServices;
 using System.ComponentModel;
-using System.Reflection;
-using System.Collections.Generic;
-using NetOffice;
+using NetOffice.Attributes;
+
 namespace NetOffice.OfficeApi
 {
-	///<summary>
+	/// <summary>
 	/// DispatchInterface ICustomXMLPartEvents 
 	/// SupportByVersion Office, 12,14,15,16
-	///</summary>
-	[SupportByVersionAttribute("Office", 12,14,15,16)]
-	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
-	public class ICustomXMLPartEvents : COMObject
+	/// </summary>
+	[SupportByVersion("Office", 12,14,15,16)]
+	[EntityType(EntityType.IsDispatchInterface)]
+ 	public class ICustomXMLPartEvents : COMObject
 	{
 		#pragma warning disable
+
 		#region Type Information
+
+		/// <summary>
+		/// Instance Type
+		/// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
+		public override Type InstanceType
+		{
+			get
+			{
+				return LateBindingApiWrapperType;
+			}
+		}
 
         private static Type _type;
 
@@ -28,14 +38,20 @@ namespace NetOffice.OfficeApi
             {
                 if (null == _type)
                     _type = typeof(ICustomXMLPartEvents);
-                    
                 return _type;
             }
         }
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public ICustomXMLPartEvents(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -81,7 +97,7 @@ namespace NetOffice.OfficeApi
 		{
 		}
 		
-		/// <param name="progId">registered ProgID</param>
+		/// <param name="progId">registered progID</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public ICustomXMLPartEvents(string progId) : base(progId)
 		{
@@ -97,47 +113,42 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="newNode">NetOffice.OfficeApi.CustomXMLNode NewNode</param>
-		/// <param name="inUndoRedo">bool InUndoRedo</param>
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		/// <param name="newNode">NetOffice.OfficeApi.CustomXMLNode newNode</param>
+		/// <param name="inUndoRedo">bool inUndoRedo</param>
+		[SupportByVersion("Office", 12,14,15,16)]
 		public void NodeAfterInsert(NetOffice.OfficeApi.CustomXMLNode newNode, bool inUndoRedo)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(newNode, inUndoRedo);
-			Invoker.Method(this, "NodeAfterInsert", paramsArray);
+			 Factory.ExecuteMethod(this, "NodeAfterInsert", newNode, inUndoRedo);
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="oldNode">NetOffice.OfficeApi.CustomXMLNode OldNode</param>
-		/// <param name="oldParentNode">NetOffice.OfficeApi.CustomXMLNode OldParentNode</param>
-		/// <param name="oldNextSibling">NetOffice.OfficeApi.CustomXMLNode OldNextSibling</param>
-		/// <param name="inUndoRedo">bool InUndoRedo</param>
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		/// <param name="oldNode">NetOffice.OfficeApi.CustomXMLNode oldNode</param>
+		/// <param name="oldParentNode">NetOffice.OfficeApi.CustomXMLNode oldParentNode</param>
+		/// <param name="oldNextSibling">NetOffice.OfficeApi.CustomXMLNode oldNextSibling</param>
+		/// <param name="inUndoRedo">bool inUndoRedo</param>
+		[SupportByVersion("Office", 12,14,15,16)]
 		public void NodeAfterDelete(NetOffice.OfficeApi.CustomXMLNode oldNode, NetOffice.OfficeApi.CustomXMLNode oldParentNode, NetOffice.OfficeApi.CustomXMLNode oldNextSibling, bool inUndoRedo)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(oldNode, oldParentNode, oldNextSibling, inUndoRedo);
-			Invoker.Method(this, "NodeAfterDelete", paramsArray);
+			 Factory.ExecuteMethod(this, "NodeAfterDelete", oldNode, oldParentNode, oldNextSibling, inUndoRedo);
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="oldNode">NetOffice.OfficeApi.CustomXMLNode OldNode</param>
-		/// <param name="newNode">NetOffice.OfficeApi.CustomXMLNode NewNode</param>
-		/// <param name="inUndoRedo">bool InUndoRedo</param>
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		/// <param name="oldNode">NetOffice.OfficeApi.CustomXMLNode oldNode</param>
+		/// <param name="newNode">NetOffice.OfficeApi.CustomXMLNode newNode</param>
+		/// <param name="inUndoRedo">bool inUndoRedo</param>
+		[SupportByVersion("Office", 12,14,15,16)]
 		public void NodeAfterReplace(NetOffice.OfficeApi.CustomXMLNode oldNode, NetOffice.OfficeApi.CustomXMLNode newNode, bool inUndoRedo)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(oldNode, newNode, inUndoRedo);
-			Invoker.Method(this, "NodeAfterReplace", paramsArray);
+			 Factory.ExecuteMethod(this, "NodeAfterReplace", oldNode, newNode, inUndoRedo);
 		}
 
 		#endregion
+
 		#pragma warning restore
 	}
 }

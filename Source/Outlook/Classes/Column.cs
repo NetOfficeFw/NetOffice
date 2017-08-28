@@ -1,11 +1,10 @@
 ﻿using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
-using NetOffice;
-using NetOffice.Misc;
+using NetOffice.Attributes;
+
 namespace NetOffice.OutlookApi
 {
-
 	#region Delegates
 
 	#pragma warning disable
@@ -13,16 +12,17 @@ namespace NetOffice.OutlookApi
 
 	#endregion
 
-	///<summary>
+	/// <summary>
 	/// CoClass Column 
 	/// SupportByVersion Outlook, 12,14,15,16
-	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff868725.aspx
-	///</summary>
-	[SupportByVersionAttribute("Outlook", 12,14,15,16)]
-	[EntityTypeAttribute(EntityType.IsCoClass)]
-	public class Column : _Column
+	/// </summary>
+	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff868725.aspx </remarks>
+	[SupportByVersion("Outlook", 12,14,15,16)]
+	[EntityType(EntityType.IsCoClass)]
+ 	public class Column : _Column
 	{
 		#pragma warning disable
+
 		#region Fields
 		
 		private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
@@ -36,6 +36,7 @@ namespace NetOffice.OutlookApi
         /// <summary>
         /// Instance Type
         /// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
         public override Type InstanceType
         {
             get
@@ -102,17 +103,17 @@ namespace NetOffice.OutlookApi
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of Column 
-        ///</summary>		
+        /// </summary>		
 		public Column():base("Outlook.Column")
 		{
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of Column
-        ///</summary>
+        /// </summary>
         ///<param name="progId">registered ProgID</param>
 		public Column(string progId):base(progId)
 		{
@@ -122,46 +123,6 @@ namespace NetOffice.OutlookApi
 		#endregion
 
 		#region Static CoClass Methods
-
-		/// <summary>
-        /// Returns all running Outlook.Column objects from the environment/system
-        /// </summary>
-        /// <returns>an Outlook.Column array</returns>
-		public static NetOffice.OutlookApi.Column[] GetActiveInstances()
-		{		
-			IDisposableEnumeration proxyList = NetOffice.ProxyService.GetActiveInstances("Outlook","Column");
-			NetRuntimeSystem.Collections.Generic.List<NetOffice.OutlookApi.Column> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.OutlookApi.Column>();
-			foreach(object proxy in proxyList)
-				resultList.Add( new NetOffice.OutlookApi.Column(null, proxy) );
-			return resultList.ToArray();
-		}
-
-		/// <summary>
-        /// Returns a running Outlook.Column object from the environment/system.
-        /// </summary>
-        /// <returns>an Outlook.Column object or null</returns>
-		public static NetOffice.OutlookApi.Column GetActiveInstance()
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Outlook","Column", false);
-			if(null != proxy)
-				return new NetOffice.OutlookApi.Column(null, proxy);
-			else
-				return null;
-		}
-
-		/// <summary>
-        /// Returns a running Outlook.Column object from the environment/system. 
-        /// </summary>
-	    /// <param name="throwOnError">throw an exception if no object was found</param>
-        /// <returns>an Outlook.Column object or null</returns>
-		public static NetOffice.OutlookApi.Column GetActiveInstance(bool throwOnError)
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Outlook","Column", throwOnError);
-			if(null != proxy)
-				return new NetOffice.OutlookApi.Column(null, proxy);
-			else
-				return null;
-		}
 		#endregion
 
 		#region Events

@@ -1,23 +1,33 @@
 ﻿using System;
 using NetRuntimeSystem = System;
-using System.Runtime.InteropServices;
-using System.Runtime.CompilerServices;
 using System.ComponentModel;
-using System.Reflection;
-using System.Collections.Generic;
-using NetOffice;
+using NetOffice.Attributes;
+
 namespace NetOffice.PublisherApi
 {
-	///<summary>
+	/// <summary>
 	/// DispatchInterface MailMerge 
 	/// SupportByVersion Publisher, 14,15,16
-	///</summary>
-	[SupportByVersionAttribute("Publisher", 14,15,16)]
-	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
-	public class MailMerge : COMObject
+	/// </summary>
+	[SupportByVersion("Publisher", 14,15,16)]
+	[EntityType(EntityType.IsDispatchInterface)]
+ 	public class MailMerge : COMObject
 	{
 		#pragma warning disable
+
 		#region Type Information
+
+		/// <summary>
+		/// Instance Type
+		/// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
+		public override Type InstanceType
+		{
+			get
+			{
+				return LateBindingApiWrapperType;
+			}
+		}
 
         private static Type _type;
 
@@ -28,14 +38,20 @@ namespace NetOffice.PublisherApi
             {
                 if (null == _type)
                     _type = typeof(MailMerge);
-                    
                 return _type;
             }
         }
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public MailMerge(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -81,7 +97,7 @@ namespace NetOffice.PublisherApi
 		{
 		}
 		
-		/// <param name="progId">registered ProgID</param>
+		/// <param name="progId">registered progID</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public MailMerge(string progId) : base(progId)
 		{
@@ -95,15 +111,12 @@ namespace NetOffice.PublisherApi
 		/// SupportByVersion Publisher 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		[SupportByVersion("Publisher", 14,15,16)]
 		public NetOffice.PublisherApi.Application Application
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				NetOffice.PublisherApi.Application newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.PublisherApi.Application.LateBindingApiWrapperType) as NetOffice.PublisherApi.Application;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.PublisherApi.Application>(this, "Application", NetOffice.PublisherApi.Application.LateBindingApiWrapperType);
 			}
 		}
 
@@ -112,15 +125,12 @@ namespace NetOffice.PublisherApi
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		[SupportByVersion("Publisher", 14,15,16), ProxyResult]
 		public object Parent
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Parent", paramsArray);
-				ICOMObject newObject = Factory.CreateObjectFromComProxy(this,returnItem);
-				return newObject;
+				return Factory.ExecuteReferencePropertyGet(this, "Parent");
 			}
 		}
 
@@ -128,15 +138,12 @@ namespace NetOffice.PublisherApi
 		/// SupportByVersion Publisher 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		[SupportByVersion("Publisher", 14,15,16)]
 		public NetOffice.PublisherApi.MailMergeDataSource DataSource
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "DataSource", paramsArray);
-				NetOffice.PublisherApi.MailMergeDataSource newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.PublisherApi.MailMergeDataSource.LateBindingApiWrapperType) as NetOffice.PublisherApi.MailMergeDataSource;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.PublisherApi.MailMergeDataSource>(this, "DataSource", NetOffice.PublisherApi.MailMergeDataSource.LateBindingApiWrapperType);
 			}
 		}
 
@@ -144,15 +151,13 @@ namespace NetOffice.PublisherApi
 		/// SupportByVersion Publisher 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		[SupportByVersion("Publisher", 14,15,16)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public Int32 Destination
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Destination", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "Destination");
 			}
 		}
 
@@ -160,19 +165,16 @@ namespace NetOffice.PublisherApi
 		/// SupportByVersion Publisher 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		[SupportByVersion("Publisher", 14,15,16)]
 		public bool DocumentUpdating
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "DocumentUpdating", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "DocumentUpdating");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "DocumentUpdating", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "DocumentUpdating", value);
 			}
 		}
 
@@ -180,20 +182,17 @@ namespace NetOffice.PublisherApi
 		/// SupportByVersion Publisher 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		[SupportByVersion("Publisher", 14,15,16)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public string ShowSendToCustom
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "ShowSendToCustom", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "ShowSendToCustom");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "ShowSendToCustom", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "ShowSendToCustom", value);
 			}
 		}
 
@@ -201,19 +200,16 @@ namespace NetOffice.PublisherApi
 		/// SupportByVersion Publisher 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		[SupportByVersion("Publisher", 14,15,16)]
 		public bool SuppressBlankLines
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "SuppressBlankLines", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "SuppressBlankLines");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "SuppressBlankLines", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "SuppressBlankLines", value);
 			}
 		}
 
@@ -221,19 +217,16 @@ namespace NetOffice.PublisherApi
 		/// SupportByVersion Publisher 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		[SupportByVersion("Publisher", 14,15,16)]
 		public bool ViewMailMergeFieldCodes
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "ViewMailMergeFieldCodes", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "ViewMailMergeFieldCodes");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "ViewMailMergeFieldCodes", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "ViewMailMergeFieldCodes", value);
 			}
 		}
 
@@ -241,19 +234,16 @@ namespace NetOffice.PublisherApi
 		/// SupportByVersion Publisher 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		[SupportByVersion("Publisher", 14,15,16)]
 		public Int32 WizardState
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "WizardState", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "WizardState");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "WizardState", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "WizardState", value);
 			}
 		}
 
@@ -261,15 +251,12 @@ namespace NetOffice.PublisherApi
 		/// SupportByVersion Publisher 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		[SupportByVersion("Publisher", 14,15,16)]
 		public NetOffice.PublisherApi.EmailMergeEnvelope EmailMergeEnvelope
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "EmailMergeEnvelope", paramsArray);
-				NetOffice.PublisherApi.EmailMergeEnvelope newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.PublisherApi.EmailMergeEnvelope.LateBindingApiWrapperType) as NetOffice.PublisherApi.EmailMergeEnvelope;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.PublisherApi.EmailMergeEnvelope>(this, "EmailMergeEnvelope", NetOffice.PublisherApi.EmailMergeEnvelope.LateBindingApiWrapperType);
 			}
 		}
 
@@ -277,20 +264,16 @@ namespace NetOffice.PublisherApi
 		/// SupportByVersion Publisher 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		[SupportByVersion("Publisher", 14,15,16)]
 		public NetOffice.PublisherApi.Enums.PbMergeType Type
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Type", paramsArray);
-				int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-				return (NetOffice.PublisherApi.Enums.PbMergeType)intReturnItem;
+				return Factory.ExecuteEnumPropertyGet<NetOffice.PublisherApi.Enums.PbMergeType>(this, "Type");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "Type", paramsArray);
+				Factory.ExecuteEnumPropertySet(this, "Type", value);
 			}
 		}
 
@@ -300,106 +283,91 @@ namespace NetOffice.PublisherApi
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="pause">bool Pause</param>
+		/// <param name="pause">bool pause</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		[SupportByVersion("Publisher", 14,15,16)]
 		public void Execute10(bool pause)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(pause);
-			Invoker.Method(this, "Execute10", paramsArray);
+			 Factory.ExecuteMethod(this, "Execute10", pause);
 		}
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
-		/// 
 		/// </summary>
 		/// <param name="bstrDataSource">optional string bstrDataSource = </param>
 		/// <param name="bstrConnect">optional string bstrConnect = </param>
 		/// <param name="bstrTable">optional string bstrTable = </param>
 		/// <param name="fOpenExclusive">optional Int32 fOpenExclusive = 0</param>
 		/// <param name="fNeverPrompt">optional Int32 fNeverPrompt = 1</param>
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		[SupportByVersion("Publisher", 14,15,16)]
 		public void OpenDataSource(object bstrDataSource, object bstrConnect, object bstrTable, object fOpenExclusive, object fNeverPrompt)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(bstrDataSource, bstrConnect, bstrTable, fOpenExclusive, fNeverPrompt);
-			Invoker.Method(this, "OpenDataSource", paramsArray);
+			 Factory.ExecuteMethod(this, "OpenDataSource", new object[]{ bstrDataSource, bstrConnect, bstrTable, fOpenExclusive, fNeverPrompt });
 		}
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
-		/// 
 		/// </summary>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Publisher", 14,15,16)]
 		public void OpenDataSource()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "OpenDataSource", paramsArray);
+			 Factory.ExecuteMethod(this, "OpenDataSource");
 		}
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
-		/// 
 		/// </summary>
 		/// <param name="bstrDataSource">optional string bstrDataSource = </param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Publisher", 14,15,16)]
 		public void OpenDataSource(object bstrDataSource)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(bstrDataSource);
-			Invoker.Method(this, "OpenDataSource", paramsArray);
+			 Factory.ExecuteMethod(this, "OpenDataSource", bstrDataSource);
 		}
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
-		/// 
 		/// </summary>
 		/// <param name="bstrDataSource">optional string bstrDataSource = </param>
 		/// <param name="bstrConnect">optional string bstrConnect = </param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Publisher", 14,15,16)]
 		public void OpenDataSource(object bstrDataSource, object bstrConnect)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(bstrDataSource, bstrConnect);
-			Invoker.Method(this, "OpenDataSource", paramsArray);
+			 Factory.ExecuteMethod(this, "OpenDataSource", bstrDataSource, bstrConnect);
 		}
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
-		/// 
 		/// </summary>
 		/// <param name="bstrDataSource">optional string bstrDataSource = </param>
 		/// <param name="bstrConnect">optional string bstrConnect = </param>
 		/// <param name="bstrTable">optional string bstrTable = </param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Publisher", 14,15,16)]
 		public void OpenDataSource(object bstrDataSource, object bstrConnect, object bstrTable)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(bstrDataSource, bstrConnect, bstrTable);
-			Invoker.Method(this, "OpenDataSource", paramsArray);
+			 Factory.ExecuteMethod(this, "OpenDataSource", bstrDataSource, bstrConnect, bstrTable);
 		}
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
-		/// 
 		/// </summary>
 		/// <param name="bstrDataSource">optional string bstrDataSource = </param>
 		/// <param name="bstrConnect">optional string bstrConnect = </param>
 		/// <param name="bstrTable">optional string bstrTable = </param>
 		/// <param name="fOpenExclusive">optional Int32 fOpenExclusive = 0</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Publisher", 14,15,16)]
 		public void OpenDataSource(object bstrDataSource, object bstrConnect, object bstrTable, object fOpenExclusive)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(bstrDataSource, bstrConnect, bstrTable, fOpenExclusive);
-			Invoker.Method(this, "OpenDataSource", paramsArray);
+			 Factory.ExecuteMethod(this, "OpenDataSource", bstrDataSource, bstrConnect, bstrTable, fOpenExclusive);
 		}
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
-		/// 
 		/// </summary>
 		/// <param name="showDocumentStep">optional bool ShowDocumentStep = true</param>
 		/// <param name="showTemplateStep">optional bool ShowTemplateStep = false</param>
@@ -408,91 +376,79 @@ namespace NetOffice.PublisherApi
 		/// <param name="showPreviewStep">optional bool ShowPreviewStep = true</param>
 		/// <param name="showMergeStep">optional bool ShowMergeStep = true</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		[SupportByVersion("Publisher", 14,15,16)]
 		public void ShowWizard(object showDocumentStep, object showTemplateStep, object showDataStep, object showWriteStep, object showPreviewStep, object showMergeStep)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(showDocumentStep, showTemplateStep, showDataStep, showWriteStep, showPreviewStep, showMergeStep);
-			Invoker.Method(this, "ShowWizard", paramsArray);
+			 Factory.ExecuteMethod(this, "ShowWizard", new object[]{ showDocumentStep, showTemplateStep, showDataStep, showWriteStep, showPreviewStep, showMergeStep });
 		}
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
-		/// 
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Publisher", 14,15,16)]
 		public void ShowWizard()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "ShowWizard", paramsArray);
+			 Factory.ExecuteMethod(this, "ShowWizard");
 		}
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
-		/// 
 		/// </summary>
 		/// <param name="showDocumentStep">optional bool ShowDocumentStep = true</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Publisher", 14,15,16)]
 		public void ShowWizard(object showDocumentStep)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(showDocumentStep);
-			Invoker.Method(this, "ShowWizard", paramsArray);
+			 Factory.ExecuteMethod(this, "ShowWizard", showDocumentStep);
 		}
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
-		/// 
 		/// </summary>
 		/// <param name="showDocumentStep">optional bool ShowDocumentStep = true</param>
 		/// <param name="showTemplateStep">optional bool ShowTemplateStep = false</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Publisher", 14,15,16)]
 		public void ShowWizard(object showDocumentStep, object showTemplateStep)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(showDocumentStep, showTemplateStep);
-			Invoker.Method(this, "ShowWizard", paramsArray);
+			 Factory.ExecuteMethod(this, "ShowWizard", showDocumentStep, showTemplateStep);
 		}
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
-		/// 
 		/// </summary>
 		/// <param name="showDocumentStep">optional bool ShowDocumentStep = true</param>
 		/// <param name="showTemplateStep">optional bool ShowTemplateStep = false</param>
 		/// <param name="showDataStep">optional bool ShowDataStep = true</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Publisher", 14,15,16)]
 		public void ShowWizard(object showDocumentStep, object showTemplateStep, object showDataStep)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(showDocumentStep, showTemplateStep, showDataStep);
-			Invoker.Method(this, "ShowWizard", paramsArray);
+			 Factory.ExecuteMethod(this, "ShowWizard", showDocumentStep, showTemplateStep, showDataStep);
 		}
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
-		/// 
 		/// </summary>
 		/// <param name="showDocumentStep">optional bool ShowDocumentStep = true</param>
 		/// <param name="showTemplateStep">optional bool ShowTemplateStep = false</param>
 		/// <param name="showDataStep">optional bool ShowDataStep = true</param>
 		/// <param name="showWriteStep">optional bool ShowWriteStep = true</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Publisher", 14,15,16)]
 		public void ShowWizard(object showDocumentStep, object showTemplateStep, object showDataStep, object showWriteStep)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(showDocumentStep, showTemplateStep, showDataStep, showWriteStep);
-			Invoker.Method(this, "ShowWizard", paramsArray);
+			 Factory.ExecuteMethod(this, "ShowWizard", showDocumentStep, showTemplateStep, showDataStep, showWriteStep);
 		}
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
-		/// 
 		/// </summary>
 		/// <param name="showDocumentStep">optional bool ShowDocumentStep = true</param>
 		/// <param name="showTemplateStep">optional bool ShowTemplateStep = false</param>
@@ -500,117 +456,95 @@ namespace NetOffice.PublisherApi
 		/// <param name="showWriteStep">optional bool ShowWriteStep = true</param>
 		/// <param name="showPreviewStep">optional bool ShowPreviewStep = true</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Publisher", 14,15,16)]
 		public void ShowWizard(object showDocumentStep, object showTemplateStep, object showDataStep, object showWriteStep, object showPreviewStep)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(showDocumentStep, showTemplateStep, showDataStep, showWriteStep, showPreviewStep);
-			Invoker.Method(this, "ShowWizard", paramsArray);
+			 Factory.ExecuteMethod(this, "ShowWizard", new object[]{ showDocumentStep, showTemplateStep, showDataStep, showWriteStep, showPreviewStep });
 		}
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="pause">bool Pause</param>
+		/// <param name="pause">bool pause</param>
 		/// <param name="destination">optional NetOffice.PublisherApi.Enums.PbMailMergeDestination Destination = 1</param>
 		/// <param name="filename">optional string Filename = </param>
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		[SupportByVersion("Publisher", 14,15,16)]
 		public NetOffice.PublisherApi.Document Execute(bool pause, object destination, object filename)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(pause, destination, filename);
-			object returnItem = Invoker.MethodReturn(this, "Execute", paramsArray);
-			NetOffice.PublisherApi.Document newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PublisherApi.Document.LateBindingApiWrapperType) as NetOffice.PublisherApi.Document;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PublisherApi.Document>(this, "Execute", NetOffice.PublisherApi.Document.LateBindingApiWrapperType, pause, destination, filename);
 		}
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="pause">bool Pause</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		/// <param name="pause">bool pause</param>
+		[CustomMethod]
+		[SupportByVersion("Publisher", 14,15,16)]
 		public NetOffice.PublisherApi.Document Execute(bool pause)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(pause);
-			object returnItem = Invoker.MethodReturn(this, "Execute", paramsArray);
-			NetOffice.PublisherApi.Document newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PublisherApi.Document.LateBindingApiWrapperType) as NetOffice.PublisherApi.Document;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PublisherApi.Document>(this, "Execute", NetOffice.PublisherApi.Document.LateBindingApiWrapperType, pause);
 		}
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="pause">bool Pause</param>
+		/// <param name="pause">bool pause</param>
 		/// <param name="destination">optional NetOffice.PublisherApi.Enums.PbMailMergeDestination Destination = 1</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Publisher", 14,15,16)]
 		public NetOffice.PublisherApi.Document Execute(bool pause, object destination)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(pause, destination);
-			object returnItem = Invoker.MethodReturn(this, "Execute", paramsArray);
-			NetOffice.PublisherApi.Document newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PublisherApi.Document.LateBindingApiWrapperType) as NetOffice.PublisherApi.Document;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PublisherApi.Document>(this, "Execute", NetOffice.PublisherApi.Document.LateBindingApiWrapperType, pause, destination);
 		}
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="filename">string Filename</param>
+		/// <param name="filename">string filename</param>
 		/// <param name="fileType">optional NetOffice.PublisherApi.Enums.PbRecipientListFileType FileType = 0</param>
 		/// <param name="includedOnly">optional bool IncludedOnly = true</param>
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		[SupportByVersion("Publisher", 14,15,16)]
 		public void ExportRecipientList(string filename, object fileType, object includedOnly)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(filename, fileType, includedOnly);
-			Invoker.Method(this, "ExportRecipientList", paramsArray);
+			 Factory.ExecuteMethod(this, "ExportRecipientList", filename, fileType, includedOnly);
 		}
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="filename">string Filename</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		/// <param name="filename">string filename</param>
+		[CustomMethod]
+		[SupportByVersion("Publisher", 14,15,16)]
 		public void ExportRecipientList(string filename)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(filename);
-			Invoker.Method(this, "ExportRecipientList", paramsArray);
+			 Factory.ExecuteMethod(this, "ExportRecipientList", filename);
 		}
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="filename">string Filename</param>
+		/// <param name="filename">string filename</param>
 		/// <param name="fileType">optional NetOffice.PublisherApi.Enums.PbRecipientListFileType FileType = 0</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Publisher", 14,15,16)]
 		public void ExportRecipientList(string filename, object fileType)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(filename, fileType);
-			Invoker.Method(this, "ExportRecipientList", paramsArray);
+			 Factory.ExecuteMethod(this, "ExportRecipientList", filename, fileType);
 		}
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="filename">string Filename</param>
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		/// <param name="filename">string filename</param>
+		[SupportByVersion("Publisher", 14,15,16)]
 		public void CreateShortcut(string filename)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(filename);
-			Invoker.Method(this, "CreateShortcut", paramsArray);
+			 Factory.ExecuteMethod(this, "CreateShortcut", filename);
 		}
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
-		/// 
 		/// </summary>
 		/// <param name="showDocumentStep">optional bool ShowDocumentStep = true</param>
 		/// <param name="showTemplateStep">optional bool ShowTemplateStep = false</param>
@@ -620,103 +554,89 @@ namespace NetOffice.PublisherApi
 		/// <param name="showMergeStep">optional bool ShowMergeStep = true</param>
 		/// <param name="mergeType">optional NetOffice.PublisherApi.Enums.PbMergeType MergeType = 0</param>
 		/// <param name="iStep">optional Int32 iStep = 1</param>
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		[SupportByVersion("Publisher", 14,15,16)]
 		public void ShowWizardEx(object showDocumentStep, object showTemplateStep, object showDataStep, object showWriteStep, object showPreviewStep, object showMergeStep, object mergeType, object iStep)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(showDocumentStep, showTemplateStep, showDataStep, showWriteStep, showPreviewStep, showMergeStep, mergeType, iStep);
-			Invoker.Method(this, "ShowWizardEx", paramsArray);
+			 Factory.ExecuteMethod(this, "ShowWizardEx", new object[]{ showDocumentStep, showTemplateStep, showDataStep, showWriteStep, showPreviewStep, showMergeStep, mergeType, iStep });
 		}
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
-		/// 
 		/// </summary>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Publisher", 14,15,16)]
 		public void ShowWizardEx()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "ShowWizardEx", paramsArray);
+			 Factory.ExecuteMethod(this, "ShowWizardEx");
 		}
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
-		/// 
 		/// </summary>
 		/// <param name="showDocumentStep">optional bool ShowDocumentStep = true</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Publisher", 14,15,16)]
 		public void ShowWizardEx(object showDocumentStep)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(showDocumentStep);
-			Invoker.Method(this, "ShowWizardEx", paramsArray);
+			 Factory.ExecuteMethod(this, "ShowWizardEx", showDocumentStep);
 		}
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
-		/// 
 		/// </summary>
 		/// <param name="showDocumentStep">optional bool ShowDocumentStep = true</param>
 		/// <param name="showTemplateStep">optional bool ShowTemplateStep = false</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Publisher", 14,15,16)]
 		public void ShowWizardEx(object showDocumentStep, object showTemplateStep)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(showDocumentStep, showTemplateStep);
-			Invoker.Method(this, "ShowWizardEx", paramsArray);
+			 Factory.ExecuteMethod(this, "ShowWizardEx", showDocumentStep, showTemplateStep);
 		}
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
-		/// 
 		/// </summary>
 		/// <param name="showDocumentStep">optional bool ShowDocumentStep = true</param>
 		/// <param name="showTemplateStep">optional bool ShowTemplateStep = false</param>
 		/// <param name="showDataStep">optional bool ShowDataStep = true</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Publisher", 14,15,16)]
 		public void ShowWizardEx(object showDocumentStep, object showTemplateStep, object showDataStep)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(showDocumentStep, showTemplateStep, showDataStep);
-			Invoker.Method(this, "ShowWizardEx", paramsArray);
+			 Factory.ExecuteMethod(this, "ShowWizardEx", showDocumentStep, showTemplateStep, showDataStep);
 		}
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
-		/// 
 		/// </summary>
 		/// <param name="showDocumentStep">optional bool ShowDocumentStep = true</param>
 		/// <param name="showTemplateStep">optional bool ShowTemplateStep = false</param>
 		/// <param name="showDataStep">optional bool ShowDataStep = true</param>
 		/// <param name="showWriteStep">optional bool ShowWriteStep = true</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Publisher", 14,15,16)]
 		public void ShowWizardEx(object showDocumentStep, object showTemplateStep, object showDataStep, object showWriteStep)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(showDocumentStep, showTemplateStep, showDataStep, showWriteStep);
-			Invoker.Method(this, "ShowWizardEx", paramsArray);
+			 Factory.ExecuteMethod(this, "ShowWizardEx", showDocumentStep, showTemplateStep, showDataStep, showWriteStep);
 		}
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
-		/// 
 		/// </summary>
 		/// <param name="showDocumentStep">optional bool ShowDocumentStep = true</param>
 		/// <param name="showTemplateStep">optional bool ShowTemplateStep = false</param>
 		/// <param name="showDataStep">optional bool ShowDataStep = true</param>
 		/// <param name="showWriteStep">optional bool ShowWriteStep = true</param>
 		/// <param name="showPreviewStep">optional bool ShowPreviewStep = true</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Publisher", 14,15,16)]
 		public void ShowWizardEx(object showDocumentStep, object showTemplateStep, object showDataStep, object showWriteStep, object showPreviewStep)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(showDocumentStep, showTemplateStep, showDataStep, showWriteStep, showPreviewStep);
-			Invoker.Method(this, "ShowWizardEx", paramsArray);
+			 Factory.ExecuteMethod(this, "ShowWizardEx", new object[]{ showDocumentStep, showTemplateStep, showDataStep, showWriteStep, showPreviewStep });
 		}
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
-		/// 
 		/// </summary>
 		/// <param name="showDocumentStep">optional bool ShowDocumentStep = true</param>
 		/// <param name="showTemplateStep">optional bool ShowTemplateStep = false</param>
@@ -724,17 +644,15 @@ namespace NetOffice.PublisherApi
 		/// <param name="showWriteStep">optional bool ShowWriteStep = true</param>
 		/// <param name="showPreviewStep">optional bool ShowPreviewStep = true</param>
 		/// <param name="showMergeStep">optional bool ShowMergeStep = true</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Publisher", 14,15,16)]
 		public void ShowWizardEx(object showDocumentStep, object showTemplateStep, object showDataStep, object showWriteStep, object showPreviewStep, object showMergeStep)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(showDocumentStep, showTemplateStep, showDataStep, showWriteStep, showPreviewStep, showMergeStep);
-			Invoker.Method(this, "ShowWizardEx", paramsArray);
+			 Factory.ExecuteMethod(this, "ShowWizardEx", new object[]{ showDocumentStep, showTemplateStep, showDataStep, showWriteStep, showPreviewStep, showMergeStep });
 		}
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
-		/// 
 		/// </summary>
 		/// <param name="showDocumentStep">optional bool ShowDocumentStep = true</param>
 		/// <param name="showTemplateStep">optional bool ShowTemplateStep = false</param>
@@ -743,15 +661,15 @@ namespace NetOffice.PublisherApi
 		/// <param name="showPreviewStep">optional bool ShowPreviewStep = true</param>
 		/// <param name="showMergeStep">optional bool ShowMergeStep = true</param>
 		/// <param name="mergeType">optional NetOffice.PublisherApi.Enums.PbMergeType MergeType = 0</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Publisher", 14,15,16)]
 		public void ShowWizardEx(object showDocumentStep, object showTemplateStep, object showDataStep, object showWriteStep, object showPreviewStep, object showMergeStep, object mergeType)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(showDocumentStep, showTemplateStep, showDataStep, showWriteStep, showPreviewStep, showMergeStep, mergeType);
-			Invoker.Method(this, "ShowWizardEx", paramsArray);
+			 Factory.ExecuteMethod(this, "ShowWizardEx", new object[]{ showDocumentStep, showTemplateStep, showDataStep, showWriteStep, showPreviewStep, showMergeStep, mergeType });
 		}
 
 		#endregion
+
 		#pragma warning restore
 	}
 }

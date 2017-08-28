@@ -2,6 +2,7 @@
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using NetOffice;
+using NetOffice.Attributes;
 
 /*
     Contains the following Type Libraries:
@@ -16,26 +17,26 @@ using NetOffice;
 */
 
 [assembly: AssemblyTitle("Office")]
-[assembly: AssemblyDescription("NetOffice Office Api")]
+[assembly: AssemblyDescription("Netoffice Office Api")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("netoffice.codeplex.com")]
-[assembly: AssemblyProduct("NetOffice")]
+[assembly: AssemblyProduct("Netoffice")]
 [assembly: AssemblyCopyright("Sebastian Lange")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
-[assembly: AssemblyVersion("1.7.4.0")]
-[assembly: AssemblyFileVersion("1.7.4.0")]
+[assembly: AssemblyVersion("1.7.4.1")]
+[assembly: AssemblyFileVersion("1.7.4.1")]
 [assembly: PrimaryInteropAssembly(1, 0)]
 [assembly: ImportedFromTypeLib("Office")]
 [assembly: Guid("2DF8D04C-5BFA-101B-BDE5-00AA0044DE52")]
-[assembly: NetOfficeAssemblyAttribute("1.7.4.0")]
+[assembly: NetOfficeAssemblyAttribute("1.7.4.1")]
 [assembly: Dependency("NetOffice.dll", LoadHint.Default)]
 
 
 /*
 Alias Table
  
-[SupportByVersionAttribute("Office", 9,10,11,12,14,15,16)]
+[SupportByVersion("Office", 9,10,11,12,14,15,16)]
 MsoRGBType as Int32
 
 */

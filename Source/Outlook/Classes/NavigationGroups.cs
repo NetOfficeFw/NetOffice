@@ -1,38 +1,38 @@
 ﻿using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
-using NetOffice;
-using NetOffice.Misc;
+using NetOffice.Attributes;
 
 namespace NetOffice.OutlookApi
 {
-
 	#region Delegates
 
 	#pragma warning disable
-	public delegate void NavigationGroups_SelectedChangeEventHandler(NetOffice.OutlookApi.NavigationFolder NavigationFolder);
-	public delegate void NavigationGroups_NavigationFolderAddEventHandler(NetOffice.OutlookApi.NavigationFolder NavigationFolder);
+	public delegate void NavigationGroups_SelectedChangeEventHandler(NetOffice.OutlookApi.NavigationFolder navigationFolder);
+	public delegate void NavigationGroups_NavigationFolderAddEventHandler(NetOffice.OutlookApi.NavigationFolder navigationFolder);
 	public delegate void NavigationGroups_NavigationFolderRemoveEventHandler();
 	#pragma warning restore
 
 	#endregion
 
-	///<summary>
+	/// <summary>
 	/// CoClass NavigationGroups 
 	/// SupportByVersion Outlook, 12,14,15,16
-	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff860649.aspx
-	///</summary>
-	[SupportByVersionAttribute("Outlook", 12,14,15,16)]
-	[EntityTypeAttribute(EntityType.IsCoClass)]
-	public class NavigationGroups : _NavigationGroups,IEventBinding
+	/// </summary>
+	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860649.aspx </remarks>
+	[SupportByVersion("Outlook", 12,14,15,16)]
+	[EntityType(EntityType.IsCoClass)]
+	[EventSink(typeof(Events.NavigationGroupsEvents_12_SinkHelper))]
+	public class NavigationGroups : _NavigationGroups, IEventBinding
 	{
 		#pragma warning disable
+
 		#region Fields
 		
 		private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
 		private string _activeSinkId;
 		private NetRuntimeSystem.Type _thisType;
-		NavigationGroupsEvents_12_SinkHelper _navigationGroupsEvents_12_SinkHelper;
+		private Events.NavigationGroupsEvents_12_SinkHelper _navigationGroupsEvents_12_SinkHelper;
 	
 		#endregion
 
@@ -41,6 +41,7 @@ namespace NetOffice.OutlookApi
         /// <summary>
         /// Instance Type
         /// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
         public override Type InstanceType
         {
             get
@@ -107,17 +108,17 @@ namespace NetOffice.OutlookApi
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of NavigationGroups 
-        ///</summary>		
+        /// </summary>		
 		public NavigationGroups():base("Outlook.NavigationGroups")
 		{
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of NavigationGroups
-        ///</summary>
+        /// </summary>
         ///<param name="progId">registered ProgID</param>
 		public NavigationGroups(string progId):base(progId)
 		{
@@ -127,46 +128,6 @@ namespace NetOffice.OutlookApi
 		#endregion
 
 		#region Static CoClass Methods
-
-		/// <summary>
-        /// Returns all running Outlook.NavigationGroups objects from the environment/system
-        /// </summary>
-        /// <returns>an Outlook.NavigationGroups array</returns>
-		public static NetOffice.OutlookApi.NavigationGroups[] GetActiveInstances()
-		{		
-			IDisposableEnumeration proxyList = NetOffice.ProxyService.GetActiveInstances("Outlook","NavigationGroups");
-			NetRuntimeSystem.Collections.Generic.List<NetOffice.OutlookApi.NavigationGroups> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.OutlookApi.NavigationGroups>();
-			foreach(object proxy in proxyList)
-				resultList.Add( new NetOffice.OutlookApi.NavigationGroups(null, proxy) );
-			return resultList.ToArray();
-		}
-
-		/// <summary>
-        /// Returns a running Outlook.NavigationGroups object from the environment/system.
-        /// </summary>
-        /// <returns>an Outlook.NavigationGroups object or null</returns>
-		public static NetOffice.OutlookApi.NavigationGroups GetActiveInstance()
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Outlook","NavigationGroups", false);
-			if(null != proxy)
-				return new NetOffice.OutlookApi.NavigationGroups(null, proxy);
-			else
-				return null;
-		}
-
-		/// <summary>
-        /// Returns a running Outlook.NavigationGroups object from the environment/system. 
-        /// </summary>
-	    /// <param name="throwOnError">throw an exception if no object was found</param>
-        /// <returns>an Outlook.NavigationGroups object or null</returns>
-		public static NetOffice.OutlookApi.NavigationGroups GetActiveInstance(bool throwOnError)
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Outlook","NavigationGroups", throwOnError);
-			if(null != proxy)
-				return new NetOffice.OutlookApi.NavigationGroups(null, proxy);
-			else
-				return null;
-		}
 		#endregion
 
 		#region Events
@@ -257,12 +218,12 @@ namespace NetOffice.OutlookApi
 				return;
 	
             if (null == _activeSinkId)
-				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, NavigationGroupsEvents_12_SinkHelper.Id);
+				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, Events.NavigationGroupsEvents_12_SinkHelper.Id);
 
 
-			if(NavigationGroupsEvents_12_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
+			if(Events.NavigationGroupsEvents_12_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
 			{
-				_navigationGroupsEvents_12_SinkHelper = new NavigationGroupsEvents_12_SinkHelper(this, _connectPoint);
+				_navigationGroupsEvents_12_SinkHelper = new Events.NavigationGroupsEvents_12_SinkHelper(this, _connectPoint);
 				return;
 			} 
         }

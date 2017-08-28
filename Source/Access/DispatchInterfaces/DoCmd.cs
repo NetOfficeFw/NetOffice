@@ -1,24 +1,34 @@
 ﻿using System;
 using NetRuntimeSystem = System;
-using System.Runtime.InteropServices;
-using System.Runtime.CompilerServices;
 using System.ComponentModel;
-using System.Reflection;
-using System.Collections.Generic;
-using NetOffice;
+using NetOffice.Attributes;
+
 namespace NetOffice.AccessApi
 {
-	///<summary>
+	/// <summary>
 	/// DispatchInterface DoCmd 
 	/// SupportByVersion Access, 9,10,11,12,14,15,16
-	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192694.aspx
-	///</summary>
-	[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
-	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
-	public class DoCmd : COMObject
+	/// </summary>
+	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff192694.aspx </remarks>
+	[SupportByVersion("Access", 9,10,11,12,14,15,16)]
+	[EntityType(EntityType.IsDispatchInterface)]
+ 	public class DoCmd : COMObject
 	{
 		#pragma warning disable
+
 		#region Type Information
+
+		/// <summary>
+		/// Instance Type
+		/// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
+		public override Type InstanceType
+		{
+			get
+			{
+				return LateBindingApiWrapperType;
+			}
+		}
 
         private static Type _type;
 
@@ -29,14 +39,20 @@ namespace NetOffice.AccessApi
             {
                 if (null == _type)
                     _type = typeof(DoCmd);
-                    
                 return _type;
             }
         }
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public DoCmd(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -82,7 +98,7 @@ namespace NetOffice.AccessApi
 		{
 		}
 		
-		/// <param name="progId">registered ProgID</param>
+		/// <param name="progId">registered progID</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public DoCmd(string progId) : base(progId)
 		{
@@ -98,3294 +114,3046 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff834781.aspx
 		/// </summary>
-		/// <param name="menuName">object MenuName</param>
-		/// <param name="menuMacroName">object MenuMacroName</param>
-		/// <param name="statusBarText">object StatusBarText</param>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff834781.aspx </remarks>
+		/// <param name="menuName">object menuName</param>
+		/// <param name="menuMacroName">object menuMacroName</param>
+		/// <param name="statusBarText">object statusBarText</param>
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public void AddMenu(object menuName, object menuMacroName, object statusBarText)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(menuName, menuMacroName, statusBarText);
-			Invoker.Method(this, "AddMenu", paramsArray);
+			 Factory.ExecuteMethod(this, "AddMenu", menuName, menuMacroName, statusBarText);
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197651.aspx
 		/// </summary>
-		/// <param name="filterName">optional object FilterName</param>
-		/// <param name="whereCondition">optional object WhereCondition</param>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff197651.aspx </remarks>
+		/// <param name="filterName">optional object filterName</param>
+		/// <param name="whereCondition">optional object whereCondition</param>
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public void ApplyFilter(object filterName, object whereCondition)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(filterName, whereCondition);
-			Invoker.Method(this, "ApplyFilter", paramsArray);
+			 Factory.ExecuteMethod(this, "ApplyFilter", filterName, whereCondition);
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197651.aspx
 		/// </summary>
-		/// <param name="filterName">optional object FilterName</param>
-		/// <param name="whereCondition">optional object WhereCondition</param>
-		/// <param name="controlName">optional object ControlName</param>
-		[SupportByVersionAttribute("Access", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff197651.aspx </remarks>
+		/// <param name="filterName">optional object filterName</param>
+		/// <param name="whereCondition">optional object whereCondition</param>
+		/// <param name="controlName">optional object controlName</param>
+		[SupportByVersion("Access", 12,14,15,16)]
 		public void ApplyFilter(object filterName, object whereCondition, object controlName)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(filterName, whereCondition, controlName);
-			Invoker.Method(this, "ApplyFilter", paramsArray);
+			 Factory.ExecuteMethod(this, "ApplyFilter", filterName, whereCondition, controlName);
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197651.aspx
 		/// </summary>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff197651.aspx </remarks>
+		[CustomMethod]
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public void ApplyFilter()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "ApplyFilter", paramsArray);
+			 Factory.ExecuteMethod(this, "ApplyFilter");
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197651.aspx
 		/// </summary>
-		/// <param name="filterName">optional object FilterName</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff197651.aspx </remarks>
+		/// <param name="filterName">optional object filterName</param>
+		[CustomMethod]
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public void ApplyFilter(object filterName)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(filterName);
-			Invoker.Method(this, "ApplyFilter", paramsArray);
+			 Factory.ExecuteMethod(this, "ApplyFilter", filterName);
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196680.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff196680.aspx </remarks>
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public void Beep()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "Beep", paramsArray);
+			 Factory.ExecuteMethod(this, "Beep");
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836964.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff836964.aspx </remarks>
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public void CancelEvent()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "CancelEvent", paramsArray);
+			 Factory.ExecuteMethod(this, "CancelEvent");
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192860.aspx
 		/// </summary>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff192860.aspx </remarks>
 		/// <param name="objectType">optional NetOffice.AccessApi.Enums.AcObjectType ObjectType = -1</param>
-		/// <param name="objectName">optional object ObjectName</param>
+		/// <param name="objectName">optional object objectName</param>
 		/// <param name="save">optional NetOffice.AccessApi.Enums.AcCloseSave Save = 0</param>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public void Close(object objectType, object objectName, object save)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(objectType, objectName, save);
-			Invoker.Method(this, "Close", paramsArray);
+			 Factory.ExecuteMethod(this, "Close", objectType, objectName, save);
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192860.aspx
 		/// </summary>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff192860.aspx </remarks>
+		[CustomMethod]
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public void Close()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "Close", paramsArray);
+			 Factory.ExecuteMethod(this, "Close");
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192860.aspx
 		/// </summary>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff192860.aspx </remarks>
 		/// <param name="objectType">optional NetOffice.AccessApi.Enums.AcObjectType ObjectType = -1</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public void Close(object objectType)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(objectType);
-			Invoker.Method(this, "Close", paramsArray);
+			 Factory.ExecuteMethod(this, "Close", objectType);
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192860.aspx
 		/// </summary>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff192860.aspx </remarks>
 		/// <param name="objectType">optional NetOffice.AccessApi.Enums.AcObjectType ObjectType = -1</param>
-		/// <param name="objectName">optional object ObjectName</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		/// <param name="objectName">optional object objectName</param>
+		[CustomMethod]
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public void Close(object objectType, object objectName)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(objectType, objectName);
-			Invoker.Method(this, "Close", paramsArray);
+			 Factory.ExecuteMethod(this, "Close", objectType, objectName);
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff844724.aspx
 		/// </summary>
-		/// <param name="destinationDatabase">optional object DestinationDatabase</param>
-		/// <param name="newName">optional object NewName</param>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff844724.aspx </remarks>
+		/// <param name="destinationDatabase">optional object destinationDatabase</param>
+		/// <param name="newName">optional object newName</param>
 		/// <param name="sourceObjectType">optional NetOffice.AccessApi.Enums.AcObjectType SourceObjectType = -1</param>
-		/// <param name="sourceObjectName">optional object SourceObjectName</param>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		/// <param name="sourceObjectName">optional object sourceObjectName</param>
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public void CopyObject(object destinationDatabase, object newName, object sourceObjectType, object sourceObjectName)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(destinationDatabase, newName, sourceObjectType, sourceObjectName);
-			Invoker.Method(this, "CopyObject", paramsArray);
+			 Factory.ExecuteMethod(this, "CopyObject", destinationDatabase, newName, sourceObjectType, sourceObjectName);
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff844724.aspx
 		/// </summary>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff844724.aspx </remarks>
+		[CustomMethod]
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public void CopyObject()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "CopyObject", paramsArray);
+			 Factory.ExecuteMethod(this, "CopyObject");
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff844724.aspx
 		/// </summary>
-		/// <param name="destinationDatabase">optional object DestinationDatabase</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff844724.aspx </remarks>
+		/// <param name="destinationDatabase">optional object destinationDatabase</param>
+		[CustomMethod]
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public void CopyObject(object destinationDatabase)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(destinationDatabase);
-			Invoker.Method(this, "CopyObject", paramsArray);
+			 Factory.ExecuteMethod(this, "CopyObject", destinationDatabase);
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff844724.aspx
 		/// </summary>
-		/// <param name="destinationDatabase">optional object DestinationDatabase</param>
-		/// <param name="newName">optional object NewName</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff844724.aspx </remarks>
+		/// <param name="destinationDatabase">optional object destinationDatabase</param>
+		/// <param name="newName">optional object newName</param>
+		[CustomMethod]
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public void CopyObject(object destinationDatabase, object newName)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(destinationDatabase, newName);
-			Invoker.Method(this, "CopyObject", paramsArray);
+			 Factory.ExecuteMethod(this, "CopyObject", destinationDatabase, newName);
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff844724.aspx
 		/// </summary>
-		/// <param name="destinationDatabase">optional object DestinationDatabase</param>
-		/// <param name="newName">optional object NewName</param>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff844724.aspx </remarks>
+		/// <param name="destinationDatabase">optional object destinationDatabase</param>
+		/// <param name="newName">optional object newName</param>
 		/// <param name="sourceObjectType">optional NetOffice.AccessApi.Enums.AcObjectType SourceObjectType = -1</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public void CopyObject(object destinationDatabase, object newName, object sourceObjectType)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(destinationDatabase, newName, sourceObjectType);
-			Invoker.Method(this, "CopyObject", paramsArray);
+			 Factory.ExecuteMethod(this, "CopyObject", destinationDatabase, newName, sourceObjectType);
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822447.aspx
 		/// </summary>
-		/// <param name="menuBar">object MenuBar</param>
-		/// <param name="menuName">object MenuName</param>
-		/// <param name="command">object Command</param>
-		/// <param name="subcommand">optional object Subcommand</param>
-		/// <param name="version">optional object Version</param>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff822447.aspx </remarks>
+		/// <param name="menuBar">object menuBar</param>
+		/// <param name="menuName">object menuName</param>
+		/// <param name="command">object command</param>
+		/// <param name="subcommand">optional object subcommand</param>
+		/// <param name="version">optional object version</param>
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public void DoMenuItem(object menuBar, object menuName, object command, object subcommand, object version)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(menuBar, menuName, command, subcommand, version);
-			Invoker.Method(this, "DoMenuItem", paramsArray);
+			 Factory.ExecuteMethod(this, "DoMenuItem", new object[]{ menuBar, menuName, command, subcommand, version });
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822447.aspx
 		/// </summary>
-		/// <param name="menuBar">object MenuBar</param>
-		/// <param name="menuName">object MenuName</param>
-		/// <param name="command">object Command</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff822447.aspx </remarks>
+		/// <param name="menuBar">object menuBar</param>
+		/// <param name="menuName">object menuName</param>
+		/// <param name="command">object command</param>
+		[CustomMethod]
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public void DoMenuItem(object menuBar, object menuName, object command)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(menuBar, menuName, command);
-			Invoker.Method(this, "DoMenuItem", paramsArray);
+			 Factory.ExecuteMethod(this, "DoMenuItem", menuBar, menuName, command);
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822447.aspx
 		/// </summary>
-		/// <param name="menuBar">object MenuBar</param>
-		/// <param name="menuName">object MenuName</param>
-		/// <param name="command">object Command</param>
-		/// <param name="subcommand">optional object Subcommand</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff822447.aspx </remarks>
+		/// <param name="menuBar">object menuBar</param>
+		/// <param name="menuName">object menuName</param>
+		/// <param name="command">object command</param>
+		/// <param name="subcommand">optional object subcommand</param>
+		[CustomMethod]
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public void DoMenuItem(object menuBar, object menuName, object command, object subcommand)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(menuBar, menuName, command, subcommand);
-			Invoker.Method(this, "DoMenuItem", paramsArray);
+			 Factory.ExecuteMethod(this, "DoMenuItem", menuBar, menuName, command, subcommand);
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193863.aspx
 		/// </summary>
-		/// <param name="echoOn">object EchoOn</param>
-		/// <param name="statusBarText">optional object StatusBarText</param>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff193863.aspx </remarks>
+		/// <param name="echoOn">object echoOn</param>
+		/// <param name="statusBarText">optional object statusBarText</param>
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public void Echo(object echoOn, object statusBarText)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(echoOn, statusBarText);
-			Invoker.Method(this, "Echo", paramsArray);
+			 Factory.ExecuteMethod(this, "Echo", echoOn, statusBarText);
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193863.aspx
 		/// </summary>
-		/// <param name="echoOn">object EchoOn</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff193863.aspx </remarks>
+		/// <param name="echoOn">object echoOn</param>
+		[CustomMethod]
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public void Echo(object echoOn)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(echoOn);
-			Invoker.Method(this, "Echo", paramsArray);
+			 Factory.ExecuteMethod(this, "Echo", echoOn);
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196453.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff196453.aspx </remarks>
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public void FindNext()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "FindNext", paramsArray);
+			 Factory.ExecuteMethod(this, "FindNext");
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835361.aspx
 		/// </summary>
-		/// <param name="findWhat">object FindWhat</param>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835361.aspx </remarks>
+		/// <param name="findWhat">object findWhat</param>
 		/// <param name="match">optional NetOffice.AccessApi.Enums.AcFindMatch Match = 1</param>
-		/// <param name="matchCase">optional object MatchCase</param>
+		/// <param name="matchCase">optional object matchCase</param>
 		/// <param name="search">optional NetOffice.AccessApi.Enums.AcSearchDirection Search = 2</param>
-		/// <param name="searchAsFormatted">optional object SearchAsFormatted</param>
+		/// <param name="searchAsFormatted">optional object searchAsFormatted</param>
 		/// <param name="onlyCurrentField">optional NetOffice.AccessApi.Enums.AcFindField OnlyCurrentField = -1</param>
-		/// <param name="findFirst">optional object FindFirst</param>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		/// <param name="findFirst">optional object findFirst</param>
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public void FindRecord(object findWhat, object match, object matchCase, object search, object searchAsFormatted, object onlyCurrentField, object findFirst)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(findWhat, match, matchCase, search, searchAsFormatted, onlyCurrentField, findFirst);
-			Invoker.Method(this, "FindRecord", paramsArray);
+			 Factory.ExecuteMethod(this, "FindRecord", new object[]{ findWhat, match, matchCase, search, searchAsFormatted, onlyCurrentField, findFirst });
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835361.aspx
 		/// </summary>
-		/// <param name="findWhat">object FindWhat</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835361.aspx </remarks>
+		/// <param name="findWhat">object findWhat</param>
+		[CustomMethod]
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public void FindRecord(object findWhat)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(findWhat);
-			Invoker.Method(this, "FindRecord", paramsArray);
+			 Factory.ExecuteMethod(this, "FindRecord", findWhat);
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835361.aspx
 		/// </summary>
-		/// <param name="findWhat">object FindWhat</param>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835361.aspx </remarks>
+		/// <param name="findWhat">object findWhat</param>
 		/// <param name="match">optional NetOffice.AccessApi.Enums.AcFindMatch Match = 1</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public void FindRecord(object findWhat, object match)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(findWhat, match);
-			Invoker.Method(this, "FindRecord", paramsArray);
+			 Factory.ExecuteMethod(this, "FindRecord", findWhat, match);
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835361.aspx
 		/// </summary>
-		/// <param name="findWhat">object FindWhat</param>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835361.aspx </remarks>
+		/// <param name="findWhat">object findWhat</param>
 		/// <param name="match">optional NetOffice.AccessApi.Enums.AcFindMatch Match = 1</param>
-		/// <param name="matchCase">optional object MatchCase</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		/// <param name="matchCase">optional object matchCase</param>
+		[CustomMethod]
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public void FindRecord(object findWhat, object match, object matchCase)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(findWhat, match, matchCase);
-			Invoker.Method(this, "FindRecord", paramsArray);
+			 Factory.ExecuteMethod(this, "FindRecord", findWhat, match, matchCase);
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835361.aspx
 		/// </summary>
-		/// <param name="findWhat">object FindWhat</param>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835361.aspx </remarks>
+		/// <param name="findWhat">object findWhat</param>
 		/// <param name="match">optional NetOffice.AccessApi.Enums.AcFindMatch Match = 1</param>
-		/// <param name="matchCase">optional object MatchCase</param>
+		/// <param name="matchCase">optional object matchCase</param>
 		/// <param name="search">optional NetOffice.AccessApi.Enums.AcSearchDirection Search = 2</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public void FindRecord(object findWhat, object match, object matchCase, object search)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(findWhat, match, matchCase, search);
-			Invoker.Method(this, "FindRecord", paramsArray);
+			 Factory.ExecuteMethod(this, "FindRecord", findWhat, match, matchCase, search);
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835361.aspx
 		/// </summary>
-		/// <param name="findWhat">object FindWhat</param>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835361.aspx </remarks>
+		/// <param name="findWhat">object findWhat</param>
 		/// <param name="match">optional NetOffice.AccessApi.Enums.AcFindMatch Match = 1</param>
-		/// <param name="matchCase">optional object MatchCase</param>
+		/// <param name="matchCase">optional object matchCase</param>
 		/// <param name="search">optional NetOffice.AccessApi.Enums.AcSearchDirection Search = 2</param>
-		/// <param name="searchAsFormatted">optional object SearchAsFormatted</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		/// <param name="searchAsFormatted">optional object searchAsFormatted</param>
+		[CustomMethod]
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public void FindRecord(object findWhat, object match, object matchCase, object search, object searchAsFormatted)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(findWhat, match, matchCase, search, searchAsFormatted);
-			Invoker.Method(this, "FindRecord", paramsArray);
+			 Factory.ExecuteMethod(this, "FindRecord", new object[]{ findWhat, match, matchCase, search, searchAsFormatted });
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835361.aspx
 		/// </summary>
-		/// <param name="findWhat">object FindWhat</param>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835361.aspx </remarks>
+		/// <param name="findWhat">object findWhat</param>
 		/// <param name="match">optional NetOffice.AccessApi.Enums.AcFindMatch Match = 1</param>
-		/// <param name="matchCase">optional object MatchCase</param>
+		/// <param name="matchCase">optional object matchCase</param>
 		/// <param name="search">optional NetOffice.AccessApi.Enums.AcSearchDirection Search = 2</param>
-		/// <param name="searchAsFormatted">optional object SearchAsFormatted</param>
+		/// <param name="searchAsFormatted">optional object searchAsFormatted</param>
 		/// <param name="onlyCurrentField">optional NetOffice.AccessApi.Enums.AcFindField OnlyCurrentField = -1</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public void FindRecord(object findWhat, object match, object matchCase, object search, object searchAsFormatted, object onlyCurrentField)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(findWhat, match, matchCase, search, searchAsFormatted, onlyCurrentField);
-			Invoker.Method(this, "FindRecord", paramsArray);
+			 Factory.ExecuteMethod(this, "FindRecord", new object[]{ findWhat, match, matchCase, search, searchAsFormatted, onlyCurrentField });
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192079.aspx
 		/// </summary>
-		/// <param name="controlName">object ControlName</param>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff192079.aspx </remarks>
+		/// <param name="controlName">object controlName</param>
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public void GoToControl(object controlName)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(controlName);
-			Invoker.Method(this, "GoToControl", paramsArray);
+			 Factory.ExecuteMethod(this, "GoToControl", controlName);
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192504.aspx
 		/// </summary>
-		/// <param name="pageNumber">object PageNumber</param>
-		/// <param name="right">optional object Right</param>
-		/// <param name="down">optional object Down</param>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff192504.aspx </remarks>
+		/// <param name="pageNumber">object pageNumber</param>
+		/// <param name="right">optional object right</param>
+		/// <param name="down">optional object down</param>
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public void GoToPage(object pageNumber, object right, object down)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(pageNumber, right, down);
-			Invoker.Method(this, "GoToPage", paramsArray);
+			 Factory.ExecuteMethod(this, "GoToPage", pageNumber, right, down);
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192504.aspx
 		/// </summary>
-		/// <param name="pageNumber">object PageNumber</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff192504.aspx </remarks>
+		/// <param name="pageNumber">object pageNumber</param>
+		[CustomMethod]
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public void GoToPage(object pageNumber)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(pageNumber);
-			Invoker.Method(this, "GoToPage", paramsArray);
+			 Factory.ExecuteMethod(this, "GoToPage", pageNumber);
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192504.aspx
 		/// </summary>
-		/// <param name="pageNumber">object PageNumber</param>
-		/// <param name="right">optional object Right</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff192504.aspx </remarks>
+		/// <param name="pageNumber">object pageNumber</param>
+		/// <param name="right">optional object right</param>
+		[CustomMethod]
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public void GoToPage(object pageNumber, object right)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(pageNumber, right);
-			Invoker.Method(this, "GoToPage", paramsArray);
+			 Factory.ExecuteMethod(this, "GoToPage", pageNumber, right);
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194117.aspx
 		/// </summary>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194117.aspx </remarks>
 		/// <param name="objectType">optional NetOffice.AccessApi.Enums.AcDataObjectType ObjectType = -1</param>
-		/// <param name="objectName">optional object ObjectName</param>
+		/// <param name="objectName">optional object objectName</param>
 		/// <param name="record">optional NetOffice.AccessApi.Enums.AcRecord Record = 1</param>
-		/// <param name="offset">optional object Offset</param>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		/// <param name="offset">optional object offset</param>
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public void GoToRecord(object objectType, object objectName, object record, object offset)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(objectType, objectName, record, offset);
-			Invoker.Method(this, "GoToRecord", paramsArray);
+			 Factory.ExecuteMethod(this, "GoToRecord", objectType, objectName, record, offset);
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194117.aspx
 		/// </summary>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194117.aspx </remarks>
+		[CustomMethod]
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public void GoToRecord()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "GoToRecord", paramsArray);
+			 Factory.ExecuteMethod(this, "GoToRecord");
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194117.aspx
 		/// </summary>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194117.aspx </remarks>
 		/// <param name="objectType">optional NetOffice.AccessApi.Enums.AcDataObjectType ObjectType = -1</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public void GoToRecord(object objectType)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(objectType);
-			Invoker.Method(this, "GoToRecord", paramsArray);
+			 Factory.ExecuteMethod(this, "GoToRecord", objectType);
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194117.aspx
 		/// </summary>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194117.aspx </remarks>
 		/// <param name="objectType">optional NetOffice.AccessApi.Enums.AcDataObjectType ObjectType = -1</param>
-		/// <param name="objectName">optional object ObjectName</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		/// <param name="objectName">optional object objectName</param>
+		[CustomMethod]
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public void GoToRecord(object objectType, object objectName)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(objectType, objectName);
-			Invoker.Method(this, "GoToRecord", paramsArray);
+			 Factory.ExecuteMethod(this, "GoToRecord", objectType, objectName);
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194117.aspx
 		/// </summary>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194117.aspx </remarks>
 		/// <param name="objectType">optional NetOffice.AccessApi.Enums.AcDataObjectType ObjectType = -1</param>
-		/// <param name="objectName">optional object ObjectName</param>
+		/// <param name="objectName">optional object objectName</param>
 		/// <param name="record">optional NetOffice.AccessApi.Enums.AcRecord Record = 1</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public void GoToRecord(object objectType, object objectName, object record)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(objectType, objectName, record);
-			Invoker.Method(this, "GoToRecord", paramsArray);
+			 Factory.ExecuteMethod(this, "GoToRecord", objectType, objectName, record);
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835648.aspx
 		/// </summary>
-		/// <param name="hourglassOn">object HourglassOn</param>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835648.aspx </remarks>
+		/// <param name="hourglassOn">object hourglassOn</param>
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public void Hourglass(object hourglassOn)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(hourglassOn);
-			Invoker.Method(this, "Hourglass", paramsArray);
+			 Factory.ExecuteMethod(this, "Hourglass", hourglassOn);
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195449.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff195449.aspx </remarks>
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public void Maximize()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "Maximize", paramsArray);
+			 Factory.ExecuteMethod(this, "Maximize");
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837032.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff837032.aspx </remarks>
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public void Minimize()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "Minimize", paramsArray);
+			 Factory.ExecuteMethod(this, "Minimize");
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197394.aspx
 		/// </summary>
-		/// <param name="right">optional object Right</param>
-		/// <param name="down">optional object Down</param>
-		/// <param name="width">optional object Width</param>
-		/// <param name="height">optional object Height</param>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff197394.aspx </remarks>
+		/// <param name="right">optional object right</param>
+		/// <param name="down">optional object down</param>
+		/// <param name="width">optional object width</param>
+		/// <param name="height">optional object height</param>
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public void MoveSize(object right, object down, object width, object height)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(right, down, width, height);
-			Invoker.Method(this, "MoveSize", paramsArray);
+			 Factory.ExecuteMethod(this, "MoveSize", right, down, width, height);
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197394.aspx
 		/// </summary>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff197394.aspx </remarks>
+		[CustomMethod]
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public void MoveSize()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "MoveSize", paramsArray);
+			 Factory.ExecuteMethod(this, "MoveSize");
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197394.aspx
 		/// </summary>
-		/// <param name="right">optional object Right</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff197394.aspx </remarks>
+		/// <param name="right">optional object right</param>
+		[CustomMethod]
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public void MoveSize(object right)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(right);
-			Invoker.Method(this, "MoveSize", paramsArray);
+			 Factory.ExecuteMethod(this, "MoveSize", right);
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197394.aspx
 		/// </summary>
-		/// <param name="right">optional object Right</param>
-		/// <param name="down">optional object Down</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff197394.aspx </remarks>
+		/// <param name="right">optional object right</param>
+		/// <param name="down">optional object down</param>
+		[CustomMethod]
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public void MoveSize(object right, object down)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(right, down);
-			Invoker.Method(this, "MoveSize", paramsArray);
+			 Factory.ExecuteMethod(this, "MoveSize", right, down);
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197394.aspx
 		/// </summary>
-		/// <param name="right">optional object Right</param>
-		/// <param name="down">optional object Down</param>
-		/// <param name="width">optional object Width</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff197394.aspx </remarks>
+		/// <param name="right">optional object right</param>
+		/// <param name="down">optional object down</param>
+		/// <param name="width">optional object width</param>
+		[CustomMethod]
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public void MoveSize(object right, object down, object width)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(right, down, width);
-			Invoker.Method(this, "MoveSize", paramsArray);
+			 Factory.ExecuteMethod(this, "MoveSize", right, down, width);
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff820845.aspx
 		/// </summary>
-		/// <param name="formName">object FormName</param>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff820845.aspx </remarks>
+		/// <param name="formName">object formName</param>
 		/// <param name="view">optional NetOffice.AccessApi.Enums.AcFormView View = 0</param>
-		/// <param name="filterName">optional object FilterName</param>
-		/// <param name="whereCondition">optional object WhereCondition</param>
+		/// <param name="filterName">optional object filterName</param>
+		/// <param name="whereCondition">optional object whereCondition</param>
 		/// <param name="dataMode">optional NetOffice.AccessApi.Enums.AcFormOpenDataMode DataMode = -1</param>
 		/// <param name="windowMode">optional NetOffice.AccessApi.Enums.AcWindowMode WindowMode = 0</param>
-		/// <param name="openArgs">optional object OpenArgs</param>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		/// <param name="openArgs">optional object openArgs</param>
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public void OpenForm(object formName, object view, object filterName, object whereCondition, object dataMode, object windowMode, object openArgs)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(formName, view, filterName, whereCondition, dataMode, windowMode, openArgs);
-			Invoker.Method(this, "OpenForm", paramsArray);
+			 Factory.ExecuteMethod(this, "OpenForm", new object[]{ formName, view, filterName, whereCondition, dataMode, windowMode, openArgs });
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff820845.aspx
 		/// </summary>
-		/// <param name="formName">object FormName</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff820845.aspx </remarks>
+		/// <param name="formName">object formName</param>
+		[CustomMethod]
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public void OpenForm(object formName)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(formName);
-			Invoker.Method(this, "OpenForm", paramsArray);
+			 Factory.ExecuteMethod(this, "OpenForm", formName);
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff820845.aspx
 		/// </summary>
-		/// <param name="formName">object FormName</param>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff820845.aspx </remarks>
+		/// <param name="formName">object formName</param>
 		/// <param name="view">optional NetOffice.AccessApi.Enums.AcFormView View = 0</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public void OpenForm(object formName, object view)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(formName, view);
-			Invoker.Method(this, "OpenForm", paramsArray);
+			 Factory.ExecuteMethod(this, "OpenForm", formName, view);
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff820845.aspx
 		/// </summary>
-		/// <param name="formName">object FormName</param>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff820845.aspx </remarks>
+		/// <param name="formName">object formName</param>
 		/// <param name="view">optional NetOffice.AccessApi.Enums.AcFormView View = 0</param>
-		/// <param name="filterName">optional object FilterName</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		/// <param name="filterName">optional object filterName</param>
+		[CustomMethod]
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public void OpenForm(object formName, object view, object filterName)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(formName, view, filterName);
-			Invoker.Method(this, "OpenForm", paramsArray);
+			 Factory.ExecuteMethod(this, "OpenForm", formName, view, filterName);
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff820845.aspx
 		/// </summary>
-		/// <param name="formName">object FormName</param>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff820845.aspx </remarks>
+		/// <param name="formName">object formName</param>
 		/// <param name="view">optional NetOffice.AccessApi.Enums.AcFormView View = 0</param>
-		/// <param name="filterName">optional object FilterName</param>
-		/// <param name="whereCondition">optional object WhereCondition</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		/// <param name="filterName">optional object filterName</param>
+		/// <param name="whereCondition">optional object whereCondition</param>
+		[CustomMethod]
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public void OpenForm(object formName, object view, object filterName, object whereCondition)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(formName, view, filterName, whereCondition);
-			Invoker.Method(this, "OpenForm", paramsArray);
+			 Factory.ExecuteMethod(this, "OpenForm", formName, view, filterName, whereCondition);
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff820845.aspx
 		/// </summary>
-		/// <param name="formName">object FormName</param>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff820845.aspx </remarks>
+		/// <param name="formName">object formName</param>
 		/// <param name="view">optional NetOffice.AccessApi.Enums.AcFormView View = 0</param>
-		/// <param name="filterName">optional object FilterName</param>
-		/// <param name="whereCondition">optional object WhereCondition</param>
+		/// <param name="filterName">optional object filterName</param>
+		/// <param name="whereCondition">optional object whereCondition</param>
 		/// <param name="dataMode">optional NetOffice.AccessApi.Enums.AcFormOpenDataMode DataMode = -1</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public void OpenForm(object formName, object view, object filterName, object whereCondition, object dataMode)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(formName, view, filterName, whereCondition, dataMode);
-			Invoker.Method(this, "OpenForm", paramsArray);
+			 Factory.ExecuteMethod(this, "OpenForm", new object[]{ formName, view, filterName, whereCondition, dataMode });
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff820845.aspx
 		/// </summary>
-		/// <param name="formName">object FormName</param>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff820845.aspx </remarks>
+		/// <param name="formName">object formName</param>
 		/// <param name="view">optional NetOffice.AccessApi.Enums.AcFormView View = 0</param>
-		/// <param name="filterName">optional object FilterName</param>
-		/// <param name="whereCondition">optional object WhereCondition</param>
+		/// <param name="filterName">optional object filterName</param>
+		/// <param name="whereCondition">optional object whereCondition</param>
 		/// <param name="dataMode">optional NetOffice.AccessApi.Enums.AcFormOpenDataMode DataMode = -1</param>
 		/// <param name="windowMode">optional NetOffice.AccessApi.Enums.AcWindowMode WindowMode = 0</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public void OpenForm(object formName, object view, object filterName, object whereCondition, object dataMode, object windowMode)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(formName, view, filterName, whereCondition, dataMode, windowMode);
-			Invoker.Method(this, "OpenForm", paramsArray);
+			 Factory.ExecuteMethod(this, "OpenForm", new object[]{ formName, view, filterName, whereCondition, dataMode, windowMode });
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192746.aspx
 		/// </summary>
-		/// <param name="queryName">object QueryName</param>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff192746.aspx </remarks>
+		/// <param name="queryName">object queryName</param>
 		/// <param name="view">optional NetOffice.AccessApi.Enums.AcView View = 0</param>
 		/// <param name="dataMode">optional NetOffice.AccessApi.Enums.AcOpenDataMode DataMode = 1</param>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public void OpenQuery(object queryName, object view, object dataMode)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(queryName, view, dataMode);
-			Invoker.Method(this, "OpenQuery", paramsArray);
+			 Factory.ExecuteMethod(this, "OpenQuery", queryName, view, dataMode);
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192746.aspx
 		/// </summary>
-		/// <param name="queryName">object QueryName</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff192746.aspx </remarks>
+		/// <param name="queryName">object queryName</param>
+		[CustomMethod]
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public void OpenQuery(object queryName)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(queryName);
-			Invoker.Method(this, "OpenQuery", paramsArray);
+			 Factory.ExecuteMethod(this, "OpenQuery", queryName);
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192746.aspx
 		/// </summary>
-		/// <param name="queryName">object QueryName</param>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff192746.aspx </remarks>
+		/// <param name="queryName">object queryName</param>
 		/// <param name="view">optional NetOffice.AccessApi.Enums.AcView View = 0</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public void OpenQuery(object queryName, object view)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(queryName, view);
-			Invoker.Method(this, "OpenQuery", paramsArray);
+			 Factory.ExecuteMethod(this, "OpenQuery", queryName, view);
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194975.aspx
 		/// </summary>
-		/// <param name="tableName">object TableName</param>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194975.aspx </remarks>
+		/// <param name="tableName">object tableName</param>
 		/// <param name="view">optional NetOffice.AccessApi.Enums.AcView View = 0</param>
 		/// <param name="dataMode">optional NetOffice.AccessApi.Enums.AcOpenDataMode DataMode = 1</param>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public void OpenTable(object tableName, object view, object dataMode)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(tableName, view, dataMode);
-			Invoker.Method(this, "OpenTable", paramsArray);
+			 Factory.ExecuteMethod(this, "OpenTable", tableName, view, dataMode);
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194975.aspx
 		/// </summary>
-		/// <param name="tableName">object TableName</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194975.aspx </remarks>
+		/// <param name="tableName">object tableName</param>
+		[CustomMethod]
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public void OpenTable(object tableName)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(tableName);
-			Invoker.Method(this, "OpenTable", paramsArray);
+			 Factory.ExecuteMethod(this, "OpenTable", tableName);
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194975.aspx
 		/// </summary>
-		/// <param name="tableName">object TableName</param>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194975.aspx </remarks>
+		/// <param name="tableName">object tableName</param>
 		/// <param name="view">optional NetOffice.AccessApi.Enums.AcView View = 0</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public void OpenTable(object tableName, object view)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(tableName, view);
-			Invoker.Method(this, "OpenTable", paramsArray);
+			 Factory.ExecuteMethod(this, "OpenTable", tableName, view);
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192667.aspx
 		/// </summary>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff192667.aspx </remarks>
 		/// <param name="printRange">optional NetOffice.AccessApi.Enums.AcPrintRange PrintRange = 0</param>
-		/// <param name="pageFrom">optional object PageFrom</param>
-		/// <param name="pageTo">optional object PageTo</param>
+		/// <param name="pageFrom">optional object pageFrom</param>
+		/// <param name="pageTo">optional object pageTo</param>
 		/// <param name="printQuality">optional NetOffice.AccessApi.Enums.AcPrintQuality PrintQuality = 0</param>
-		/// <param name="copies">optional object Copies</param>
-		/// <param name="collateCopies">optional object CollateCopies</param>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		/// <param name="copies">optional object copies</param>
+		/// <param name="collateCopies">optional object collateCopies</param>
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public void PrintOut(object printRange, object pageFrom, object pageTo, object printQuality, object copies, object collateCopies)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(printRange, pageFrom, pageTo, printQuality, copies, collateCopies);
-			Invoker.Method(this, "PrintOut", paramsArray);
+			 Factory.ExecuteMethod(this, "PrintOut", new object[]{ printRange, pageFrom, pageTo, printQuality, copies, collateCopies });
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192667.aspx
 		/// </summary>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff192667.aspx </remarks>
+		[CustomMethod]
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public void PrintOut()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "PrintOut", paramsArray);
+			 Factory.ExecuteMethod(this, "PrintOut");
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192667.aspx
 		/// </summary>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff192667.aspx </remarks>
 		/// <param name="printRange">optional NetOffice.AccessApi.Enums.AcPrintRange PrintRange = 0</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public void PrintOut(object printRange)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(printRange);
-			Invoker.Method(this, "PrintOut", paramsArray);
+			 Factory.ExecuteMethod(this, "PrintOut", printRange);
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192667.aspx
 		/// </summary>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff192667.aspx </remarks>
 		/// <param name="printRange">optional NetOffice.AccessApi.Enums.AcPrintRange PrintRange = 0</param>
-		/// <param name="pageFrom">optional object PageFrom</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		/// <param name="pageFrom">optional object pageFrom</param>
+		[CustomMethod]
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public void PrintOut(object printRange, object pageFrom)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(printRange, pageFrom);
-			Invoker.Method(this, "PrintOut", paramsArray);
+			 Factory.ExecuteMethod(this, "PrintOut", printRange, pageFrom);
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192667.aspx
 		/// </summary>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff192667.aspx </remarks>
 		/// <param name="printRange">optional NetOffice.AccessApi.Enums.AcPrintRange PrintRange = 0</param>
-		/// <param name="pageFrom">optional object PageFrom</param>
-		/// <param name="pageTo">optional object PageTo</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		/// <param name="pageFrom">optional object pageFrom</param>
+		/// <param name="pageTo">optional object pageTo</param>
+		[CustomMethod]
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public void PrintOut(object printRange, object pageFrom, object pageTo)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(printRange, pageFrom, pageTo);
-			Invoker.Method(this, "PrintOut", paramsArray);
+			 Factory.ExecuteMethod(this, "PrintOut", printRange, pageFrom, pageTo);
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192667.aspx
 		/// </summary>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff192667.aspx </remarks>
 		/// <param name="printRange">optional NetOffice.AccessApi.Enums.AcPrintRange PrintRange = 0</param>
-		/// <param name="pageFrom">optional object PageFrom</param>
-		/// <param name="pageTo">optional object PageTo</param>
+		/// <param name="pageFrom">optional object pageFrom</param>
+		/// <param name="pageTo">optional object pageTo</param>
 		/// <param name="printQuality">optional NetOffice.AccessApi.Enums.AcPrintQuality PrintQuality = 0</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public void PrintOut(object printRange, object pageFrom, object pageTo, object printQuality)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(printRange, pageFrom, pageTo, printQuality);
-			Invoker.Method(this, "PrintOut", paramsArray);
+			 Factory.ExecuteMethod(this, "PrintOut", printRange, pageFrom, pageTo, printQuality);
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192667.aspx
 		/// </summary>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff192667.aspx </remarks>
 		/// <param name="printRange">optional NetOffice.AccessApi.Enums.AcPrintRange PrintRange = 0</param>
-		/// <param name="pageFrom">optional object PageFrom</param>
-		/// <param name="pageTo">optional object PageTo</param>
+		/// <param name="pageFrom">optional object pageFrom</param>
+		/// <param name="pageTo">optional object pageTo</param>
 		/// <param name="printQuality">optional NetOffice.AccessApi.Enums.AcPrintQuality PrintQuality = 0</param>
-		/// <param name="copies">optional object Copies</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		/// <param name="copies">optional object copies</param>
+		[CustomMethod]
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public void PrintOut(object printRange, object pageFrom, object pageTo, object printQuality, object copies)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(printRange, pageFrom, pageTo, printQuality, copies);
-			Invoker.Method(this, "PrintOut", paramsArray);
+			 Factory.ExecuteMethod(this, "PrintOut", new object[]{ printRange, pageFrom, pageTo, printQuality, copies });
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff191887.aspx
 		/// </summary>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff191887.aspx </remarks>
 		/// <param name="options">optional NetOffice.AccessApi.Enums.AcQuitOption Options = 1</param>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public void Quit(object options)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(options);
-			Invoker.Method(this, "Quit", paramsArray);
+			 Factory.ExecuteMethod(this, "Quit", options);
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff191887.aspx
 		/// </summary>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff191887.aspx </remarks>
+		[CustomMethod]
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public void Quit()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "Quit", paramsArray);
+			 Factory.ExecuteMethod(this, "Quit");
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195253.aspx
 		/// </summary>
-		/// <param name="controlName">optional object ControlName</param>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff195253.aspx </remarks>
+		/// <param name="controlName">optional object controlName</param>
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public void Requery(object controlName)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(controlName);
-			Invoker.Method(this, "Requery", paramsArray);
+			 Factory.ExecuteMethod(this, "Requery", controlName);
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195253.aspx
 		/// </summary>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff195253.aspx </remarks>
+		[CustomMethod]
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public void Requery()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "Requery", paramsArray);
+			 Factory.ExecuteMethod(this, "Requery");
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195560.aspx
 		/// </summary>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff195560.aspx </remarks>
 		/// <param name="objectType">optional NetOffice.AccessApi.Enums.AcObjectType ObjectType = -1</param>
-		/// <param name="objectName">optional object ObjectName</param>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		/// <param name="objectName">optional object objectName</param>
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public void RepaintObject(object objectType, object objectName)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(objectType, objectName);
-			Invoker.Method(this, "RepaintObject", paramsArray);
+			 Factory.ExecuteMethod(this, "RepaintObject", objectType, objectName);
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195560.aspx
 		/// </summary>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff195560.aspx </remarks>
+		[CustomMethod]
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public void RepaintObject()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "RepaintObject", paramsArray);
+			 Factory.ExecuteMethod(this, "RepaintObject");
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195560.aspx
 		/// </summary>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff195560.aspx </remarks>
 		/// <param name="objectType">optional NetOffice.AccessApi.Enums.AcObjectType ObjectType = -1</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public void RepaintObject(object objectType)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(objectType);
-			Invoker.Method(this, "RepaintObject", paramsArray);
+			 Factory.ExecuteMethod(this, "RepaintObject", objectType);
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff823209.aspx
 		/// </summary>
-		/// <param name="newName">object NewName</param>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff823209.aspx </remarks>
+		/// <param name="newName">object newName</param>
 		/// <param name="objectType">optional NetOffice.AccessApi.Enums.AcObjectType ObjectType = -1</param>
-		/// <param name="oldName">optional object OldName</param>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		/// <param name="oldName">optional object oldName</param>
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public void Rename(object newName, object objectType, object oldName)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(newName, objectType, oldName);
-			Invoker.Method(this, "Rename", paramsArray);
+			 Factory.ExecuteMethod(this, "Rename", newName, objectType, oldName);
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff823209.aspx
 		/// </summary>
-		/// <param name="newName">object NewName</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff823209.aspx </remarks>
+		/// <param name="newName">object newName</param>
+		[CustomMethod]
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public void Rename(object newName)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(newName);
-			Invoker.Method(this, "Rename", paramsArray);
+			 Factory.ExecuteMethod(this, "Rename", newName);
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff823209.aspx
 		/// </summary>
-		/// <param name="newName">object NewName</param>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff823209.aspx </remarks>
+		/// <param name="newName">object newName</param>
 		/// <param name="objectType">optional NetOffice.AccessApi.Enums.AcObjectType ObjectType = -1</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public void Rename(object newName, object objectType)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(newName, objectType);
-			Invoker.Method(this, "Rename", paramsArray);
+			 Factory.ExecuteMethod(this, "Rename", newName, objectType);
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193174.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff193174.aspx </remarks>
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public void Restore()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "Restore", paramsArray);
+			 Factory.ExecuteMethod(this, "Restore");
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192075.aspx
 		/// </summary>
-		/// <param name="macroName">object MacroName</param>
-		/// <param name="repeatCount">optional object RepeatCount</param>
-		/// <param name="repeatExpression">optional object RepeatExpression</param>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff192075.aspx </remarks>
+		/// <param name="macroName">object macroName</param>
+		/// <param name="repeatCount">optional object repeatCount</param>
+		/// <param name="repeatExpression">optional object repeatExpression</param>
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public void RunMacro(object macroName, object repeatCount, object repeatExpression)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(macroName, repeatCount, repeatExpression);
-			Invoker.Method(this, "RunMacro", paramsArray);
+			 Factory.ExecuteMethod(this, "RunMacro", macroName, repeatCount, repeatExpression);
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192075.aspx
 		/// </summary>
-		/// <param name="macroName">object MacroName</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff192075.aspx </remarks>
+		/// <param name="macroName">object macroName</param>
+		[CustomMethod]
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public void RunMacro(object macroName)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(macroName);
-			Invoker.Method(this, "RunMacro", paramsArray);
+			 Factory.ExecuteMethod(this, "RunMacro", macroName);
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192075.aspx
 		/// </summary>
-		/// <param name="macroName">object MacroName</param>
-		/// <param name="repeatCount">optional object RepeatCount</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff192075.aspx </remarks>
+		/// <param name="macroName">object macroName</param>
+		/// <param name="repeatCount">optional object repeatCount</param>
+		[CustomMethod]
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public void RunMacro(object macroName, object repeatCount)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(macroName, repeatCount);
-			Invoker.Method(this, "RunMacro", paramsArray);
+			 Factory.ExecuteMethod(this, "RunMacro", macroName, repeatCount);
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194626.aspx
 		/// </summary>
-		/// <param name="sQLStatement">object SQLStatement</param>
-		/// <param name="useTransaction">optional object UseTransaction</param>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194626.aspx </remarks>
+		/// <param name="sQLStatement">object sQLStatement</param>
+		/// <param name="useTransaction">optional object useTransaction</param>
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public void RunSQL(object sQLStatement, object useTransaction)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(sQLStatement, useTransaction);
-			Invoker.Method(this, "RunSQL", paramsArray);
+			 Factory.ExecuteMethod(this, "RunSQL", sQLStatement, useTransaction);
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194626.aspx
 		/// </summary>
-		/// <param name="sQLStatement">object SQLStatement</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194626.aspx </remarks>
+		/// <param name="sQLStatement">object sQLStatement</param>
+		[CustomMethod]
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public void RunSQL(object sQLStatement)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(sQLStatement);
-			Invoker.Method(this, "RunSQL", paramsArray);
+			 Factory.ExecuteMethod(this, "RunSQL", sQLStatement);
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835629.aspx
 		/// </summary>
-		/// <param name="objectType">NetOffice.AccessApi.Enums.AcObjectType ObjectType</param>
-		/// <param name="objectName">optional object ObjectName</param>
-		/// <param name="inDatabaseWindow">optional object InDatabaseWindow</param>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835629.aspx </remarks>
+		/// <param name="objectType">NetOffice.AccessApi.Enums.AcObjectType objectType</param>
+		/// <param name="objectName">optional object objectName</param>
+		/// <param name="inDatabaseWindow">optional object inDatabaseWindow</param>
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public void SelectObject(NetOffice.AccessApi.Enums.AcObjectType objectType, object objectName, object inDatabaseWindow)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(objectType, objectName, inDatabaseWindow);
-			Invoker.Method(this, "SelectObject", paramsArray);
+			 Factory.ExecuteMethod(this, "SelectObject", objectType, objectName, inDatabaseWindow);
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835629.aspx
 		/// </summary>
-		/// <param name="objectType">NetOffice.AccessApi.Enums.AcObjectType ObjectType</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835629.aspx </remarks>
+		/// <param name="objectType">NetOffice.AccessApi.Enums.AcObjectType objectType</param>
+		[CustomMethod]
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public void SelectObject(NetOffice.AccessApi.Enums.AcObjectType objectType)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(objectType);
-			Invoker.Method(this, "SelectObject", paramsArray);
+			 Factory.ExecuteMethod(this, "SelectObject", objectType);
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835629.aspx
 		/// </summary>
-		/// <param name="objectType">NetOffice.AccessApi.Enums.AcObjectType ObjectType</param>
-		/// <param name="objectName">optional object ObjectName</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835629.aspx </remarks>
+		/// <param name="objectType">NetOffice.AccessApi.Enums.AcObjectType objectType</param>
+		/// <param name="objectName">optional object objectName</param>
+		[CustomMethod]
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public void SelectObject(NetOffice.AccessApi.Enums.AcObjectType objectType, object objectName)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(objectType, objectName);
-			Invoker.Method(this, "SelectObject", paramsArray);
+			 Factory.ExecuteMethod(this, "SelectObject", objectType, objectName);
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837275.aspx
 		/// </summary>
-		/// <param name="warningsOn">object WarningsOn</param>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff837275.aspx </remarks>
+		/// <param name="warningsOn">object warningsOn</param>
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public void SetWarnings(object warningsOn)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(warningsOn);
-			Invoker.Method(this, "SetWarnings", paramsArray);
+			 Factory.ExecuteMethod(this, "SetWarnings", warningsOn);
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195994.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff195994.aspx </remarks>
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public void ShowAllRecords()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "ShowAllRecords", paramsArray);
+			 Factory.ExecuteMethod(this, "ShowAllRecords");
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192676.aspx
 		/// </summary>
-		/// <param name="reportName">object ReportName</param>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff192676.aspx </remarks>
+		/// <param name="reportName">object reportName</param>
 		/// <param name="view">optional NetOffice.AccessApi.Enums.AcView View = 0</param>
-		/// <param name="filterName">optional object FilterName</param>
-		/// <param name="whereCondition">optional object WhereCondition</param>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		/// <param name="filterName">optional object filterName</param>
+		/// <param name="whereCondition">optional object whereCondition</param>
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public void OpenReport(object reportName, object view, object filterName, object whereCondition)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(reportName, view, filterName, whereCondition);
-			Invoker.Method(this, "OpenReport", paramsArray);
+			 Factory.ExecuteMethod(this, "OpenReport", reportName, view, filterName, whereCondition);
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192676.aspx
 		/// </summary>
-		/// <param name="reportName">object ReportName</param>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff192676.aspx </remarks>
+		/// <param name="reportName">object reportName</param>
 		/// <param name="view">optional NetOffice.AccessApi.Enums.AcView View = 0</param>
-		/// <param name="filterName">optional object FilterName</param>
-		/// <param name="whereCondition">optional object WhereCondition</param>
+		/// <param name="filterName">optional object filterName</param>
+		/// <param name="whereCondition">optional object whereCondition</param>
 		/// <param name="windowMode">optional NetOffice.AccessApi.Enums.AcWindowMode WindowMode = 0</param>
-		/// <param name="openArgs">optional object OpenArgs</param>
-		[SupportByVersionAttribute("Access", 10,11,12,14,15,16)]
+		/// <param name="openArgs">optional object openArgs</param>
+		[SupportByVersion("Access", 10,11,12,14,15,16)]
 		public void OpenReport(object reportName, object view, object filterName, object whereCondition, object windowMode, object openArgs)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(reportName, view, filterName, whereCondition, windowMode, openArgs);
-			Invoker.Method(this, "OpenReport", paramsArray);
+			 Factory.ExecuteMethod(this, "OpenReport", new object[]{ reportName, view, filterName, whereCondition, windowMode, openArgs });
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192676.aspx
 		/// </summary>
-		/// <param name="reportName">object ReportName</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff192676.aspx </remarks>
+		/// <param name="reportName">object reportName</param>
+		[CustomMethod]
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public void OpenReport(object reportName)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(reportName);
-			Invoker.Method(this, "OpenReport", paramsArray);
+			 Factory.ExecuteMethod(this, "OpenReport", reportName);
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192676.aspx
 		/// </summary>
-		/// <param name="reportName">object ReportName</param>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff192676.aspx </remarks>
+		/// <param name="reportName">object reportName</param>
 		/// <param name="view">optional NetOffice.AccessApi.Enums.AcView View = 0</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public void OpenReport(object reportName, object view)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(reportName, view);
-			Invoker.Method(this, "OpenReport", paramsArray);
+			 Factory.ExecuteMethod(this, "OpenReport", reportName, view);
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192676.aspx
 		/// </summary>
-		/// <param name="reportName">object ReportName</param>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff192676.aspx </remarks>
+		/// <param name="reportName">object reportName</param>
 		/// <param name="view">optional NetOffice.AccessApi.Enums.AcView View = 0</param>
-		/// <param name="filterName">optional object FilterName</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		/// <param name="filterName">optional object filterName</param>
+		[CustomMethod]
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public void OpenReport(object reportName, object view, object filterName)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(reportName, view, filterName);
-			Invoker.Method(this, "OpenReport", paramsArray);
+			 Factory.ExecuteMethod(this, "OpenReport", reportName, view, filterName);
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192676.aspx
 		/// </summary>
-		/// <param name="reportName">object ReportName</param>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff192676.aspx </remarks>
+		/// <param name="reportName">object reportName</param>
 		/// <param name="view">optional NetOffice.AccessApi.Enums.AcView View = 0</param>
-		/// <param name="filterName">optional object FilterName</param>
-		/// <param name="whereCondition">optional object WhereCondition</param>
+		/// <param name="filterName">optional object filterName</param>
+		/// <param name="whereCondition">optional object whereCondition</param>
 		/// <param name="windowMode">optional NetOffice.AccessApi.Enums.AcWindowMode WindowMode = 0</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 10,11,12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Access", 10,11,12,14,15,16)]
 		public void OpenReport(object reportName, object view, object filterName, object whereCondition, object windowMode)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(reportName, view, filterName, whereCondition, windowMode);
-			Invoker.Method(this, "OpenReport", paramsArray);
+			 Factory.ExecuteMethod(this, "OpenReport", new object[]{ reportName, view, filterName, whereCondition, windowMode });
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196455.aspx
 		/// </summary>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff196455.aspx </remarks>
 		/// <param name="transferType">optional NetOffice.AccessApi.Enums.AcDataTransferType TransferType = 0</param>
-		/// <param name="databaseType">optional object DatabaseType</param>
-		/// <param name="databaseName">optional object DatabaseName</param>
+		/// <param name="databaseType">optional object databaseType</param>
+		/// <param name="databaseName">optional object databaseName</param>
 		/// <param name="objectType">optional NetOffice.AccessApi.Enums.AcObjectType ObjectType = 0</param>
-		/// <param name="source">optional object Source</param>
-		/// <param name="destination">optional object Destination</param>
-		/// <param name="structureOnly">optional object StructureOnly</param>
-		/// <param name="storeLogin">optional object StoreLogin</param>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		/// <param name="source">optional object source</param>
+		/// <param name="destination">optional object destination</param>
+		/// <param name="structureOnly">optional object structureOnly</param>
+		/// <param name="storeLogin">optional object storeLogin</param>
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public void TransferDatabase(object transferType, object databaseType, object databaseName, object objectType, object source, object destination, object structureOnly, object storeLogin)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(transferType, databaseType, databaseName, objectType, source, destination, structureOnly, storeLogin);
-			Invoker.Method(this, "TransferDatabase", paramsArray);
+			 Factory.ExecuteMethod(this, "TransferDatabase", new object[]{ transferType, databaseType, databaseName, objectType, source, destination, structureOnly, storeLogin });
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196455.aspx
 		/// </summary>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff196455.aspx </remarks>
+		[CustomMethod]
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public void TransferDatabase()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "TransferDatabase", paramsArray);
+			 Factory.ExecuteMethod(this, "TransferDatabase");
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196455.aspx
 		/// </summary>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff196455.aspx </remarks>
 		/// <param name="transferType">optional NetOffice.AccessApi.Enums.AcDataTransferType TransferType = 0</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public void TransferDatabase(object transferType)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(transferType);
-			Invoker.Method(this, "TransferDatabase", paramsArray);
+			 Factory.ExecuteMethod(this, "TransferDatabase", transferType);
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196455.aspx
 		/// </summary>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff196455.aspx </remarks>
 		/// <param name="transferType">optional NetOffice.AccessApi.Enums.AcDataTransferType TransferType = 0</param>
-		/// <param name="databaseType">optional object DatabaseType</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		/// <param name="databaseType">optional object databaseType</param>
+		[CustomMethod]
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public void TransferDatabase(object transferType, object databaseType)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(transferType, databaseType);
-			Invoker.Method(this, "TransferDatabase", paramsArray);
+			 Factory.ExecuteMethod(this, "TransferDatabase", transferType, databaseType);
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196455.aspx
 		/// </summary>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff196455.aspx </remarks>
 		/// <param name="transferType">optional NetOffice.AccessApi.Enums.AcDataTransferType TransferType = 0</param>
-		/// <param name="databaseType">optional object DatabaseType</param>
-		/// <param name="databaseName">optional object DatabaseName</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		/// <param name="databaseType">optional object databaseType</param>
+		/// <param name="databaseName">optional object databaseName</param>
+		[CustomMethod]
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public void TransferDatabase(object transferType, object databaseType, object databaseName)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(transferType, databaseType, databaseName);
-			Invoker.Method(this, "TransferDatabase", paramsArray);
+			 Factory.ExecuteMethod(this, "TransferDatabase", transferType, databaseType, databaseName);
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196455.aspx
 		/// </summary>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff196455.aspx </remarks>
 		/// <param name="transferType">optional NetOffice.AccessApi.Enums.AcDataTransferType TransferType = 0</param>
-		/// <param name="databaseType">optional object DatabaseType</param>
-		/// <param name="databaseName">optional object DatabaseName</param>
+		/// <param name="databaseType">optional object databaseType</param>
+		/// <param name="databaseName">optional object databaseName</param>
 		/// <param name="objectType">optional NetOffice.AccessApi.Enums.AcObjectType ObjectType = 0</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public void TransferDatabase(object transferType, object databaseType, object databaseName, object objectType)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(transferType, databaseType, databaseName, objectType);
-			Invoker.Method(this, "TransferDatabase", paramsArray);
+			 Factory.ExecuteMethod(this, "TransferDatabase", transferType, databaseType, databaseName, objectType);
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196455.aspx
 		/// </summary>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff196455.aspx </remarks>
 		/// <param name="transferType">optional NetOffice.AccessApi.Enums.AcDataTransferType TransferType = 0</param>
-		/// <param name="databaseType">optional object DatabaseType</param>
-		/// <param name="databaseName">optional object DatabaseName</param>
+		/// <param name="databaseType">optional object databaseType</param>
+		/// <param name="databaseName">optional object databaseName</param>
 		/// <param name="objectType">optional NetOffice.AccessApi.Enums.AcObjectType ObjectType = 0</param>
-		/// <param name="source">optional object Source</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		/// <param name="source">optional object source</param>
+		[CustomMethod]
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public void TransferDatabase(object transferType, object databaseType, object databaseName, object objectType, object source)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(transferType, databaseType, databaseName, objectType, source);
-			Invoker.Method(this, "TransferDatabase", paramsArray);
+			 Factory.ExecuteMethod(this, "TransferDatabase", new object[]{ transferType, databaseType, databaseName, objectType, source });
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196455.aspx
 		/// </summary>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff196455.aspx </remarks>
 		/// <param name="transferType">optional NetOffice.AccessApi.Enums.AcDataTransferType TransferType = 0</param>
-		/// <param name="databaseType">optional object DatabaseType</param>
-		/// <param name="databaseName">optional object DatabaseName</param>
+		/// <param name="databaseType">optional object databaseType</param>
+		/// <param name="databaseName">optional object databaseName</param>
 		/// <param name="objectType">optional NetOffice.AccessApi.Enums.AcObjectType ObjectType = 0</param>
-		/// <param name="source">optional object Source</param>
-		/// <param name="destination">optional object Destination</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		/// <param name="source">optional object source</param>
+		/// <param name="destination">optional object destination</param>
+		[CustomMethod]
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public void TransferDatabase(object transferType, object databaseType, object databaseName, object objectType, object source, object destination)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(transferType, databaseType, databaseName, objectType, source, destination);
-			Invoker.Method(this, "TransferDatabase", paramsArray);
+			 Factory.ExecuteMethod(this, "TransferDatabase", new object[]{ transferType, databaseType, databaseName, objectType, source, destination });
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196455.aspx
 		/// </summary>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff196455.aspx </remarks>
 		/// <param name="transferType">optional NetOffice.AccessApi.Enums.AcDataTransferType TransferType = 0</param>
-		/// <param name="databaseType">optional object DatabaseType</param>
-		/// <param name="databaseName">optional object DatabaseName</param>
+		/// <param name="databaseType">optional object databaseType</param>
+		/// <param name="databaseName">optional object databaseName</param>
 		/// <param name="objectType">optional NetOffice.AccessApi.Enums.AcObjectType ObjectType = 0</param>
-		/// <param name="source">optional object Source</param>
-		/// <param name="destination">optional object Destination</param>
-		/// <param name="structureOnly">optional object StructureOnly</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		/// <param name="source">optional object source</param>
+		/// <param name="destination">optional object destination</param>
+		/// <param name="structureOnly">optional object structureOnly</param>
+		[CustomMethod]
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public void TransferDatabase(object transferType, object databaseType, object databaseName, object objectType, object source, object destination, object structureOnly)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(transferType, databaseType, databaseName, objectType, source, destination, structureOnly);
-			Invoker.Method(this, "TransferDatabase", paramsArray);
+			 Factory.ExecuteMethod(this, "TransferDatabase", new object[]{ transferType, databaseType, databaseName, objectType, source, destination, structureOnly });
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff844793.aspx
 		/// </summary>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff844793.aspx </remarks>
 		/// <param name="transferType">optional NetOffice.AccessApi.Enums.AcDataTransferType TransferType = 0</param>
 		/// <param name="spreadsheetType">optional NetOffice.AccessApi.Enums.AcSpreadSheetType SpreadsheetType = 8</param>
-		/// <param name="tableName">optional object TableName</param>
-		/// <param name="fileName">optional object FileName</param>
-		/// <param name="hasFieldNames">optional object HasFieldNames</param>
-		/// <param name="range">optional object Range</param>
-		/// <param name="useOA">optional object UseOA</param>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		/// <param name="tableName">optional object tableName</param>
+		/// <param name="fileName">optional object fileName</param>
+		/// <param name="hasFieldNames">optional object hasFieldNames</param>
+		/// <param name="range">optional object range</param>
+		/// <param name="useOA">optional object useOA</param>
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public void TransferSpreadsheet(object transferType, object spreadsheetType, object tableName, object fileName, object hasFieldNames, object range, object useOA)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(transferType, spreadsheetType, tableName, fileName, hasFieldNames, range, useOA);
-			Invoker.Method(this, "TransferSpreadsheet", paramsArray);
+			 Factory.ExecuteMethod(this, "TransferSpreadsheet", new object[]{ transferType, spreadsheetType, tableName, fileName, hasFieldNames, range, useOA });
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff844793.aspx
 		/// </summary>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff844793.aspx </remarks>
+		[CustomMethod]
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public void TransferSpreadsheet()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "TransferSpreadsheet", paramsArray);
+			 Factory.ExecuteMethod(this, "TransferSpreadsheet");
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff844793.aspx
 		/// </summary>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff844793.aspx </remarks>
 		/// <param name="transferType">optional NetOffice.AccessApi.Enums.AcDataTransferType TransferType = 0</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public void TransferSpreadsheet(object transferType)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(transferType);
-			Invoker.Method(this, "TransferSpreadsheet", paramsArray);
+			 Factory.ExecuteMethod(this, "TransferSpreadsheet", transferType);
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff844793.aspx
 		/// </summary>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff844793.aspx </remarks>
 		/// <param name="transferType">optional NetOffice.AccessApi.Enums.AcDataTransferType TransferType = 0</param>
 		/// <param name="spreadsheetType">optional NetOffice.AccessApi.Enums.AcSpreadSheetType SpreadsheetType = 8</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public void TransferSpreadsheet(object transferType, object spreadsheetType)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(transferType, spreadsheetType);
-			Invoker.Method(this, "TransferSpreadsheet", paramsArray);
+			 Factory.ExecuteMethod(this, "TransferSpreadsheet", transferType, spreadsheetType);
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff844793.aspx
 		/// </summary>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff844793.aspx </remarks>
 		/// <param name="transferType">optional NetOffice.AccessApi.Enums.AcDataTransferType TransferType = 0</param>
 		/// <param name="spreadsheetType">optional NetOffice.AccessApi.Enums.AcSpreadSheetType SpreadsheetType = 8</param>
-		/// <param name="tableName">optional object TableName</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		/// <param name="tableName">optional object tableName</param>
+		[CustomMethod]
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public void TransferSpreadsheet(object transferType, object spreadsheetType, object tableName)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(transferType, spreadsheetType, tableName);
-			Invoker.Method(this, "TransferSpreadsheet", paramsArray);
+			 Factory.ExecuteMethod(this, "TransferSpreadsheet", transferType, spreadsheetType, tableName);
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff844793.aspx
 		/// </summary>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff844793.aspx </remarks>
 		/// <param name="transferType">optional NetOffice.AccessApi.Enums.AcDataTransferType TransferType = 0</param>
 		/// <param name="spreadsheetType">optional NetOffice.AccessApi.Enums.AcSpreadSheetType SpreadsheetType = 8</param>
-		/// <param name="tableName">optional object TableName</param>
-		/// <param name="fileName">optional object FileName</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		/// <param name="tableName">optional object tableName</param>
+		/// <param name="fileName">optional object fileName</param>
+		[CustomMethod]
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public void TransferSpreadsheet(object transferType, object spreadsheetType, object tableName, object fileName)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(transferType, spreadsheetType, tableName, fileName);
-			Invoker.Method(this, "TransferSpreadsheet", paramsArray);
+			 Factory.ExecuteMethod(this, "TransferSpreadsheet", transferType, spreadsheetType, tableName, fileName);
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff844793.aspx
 		/// </summary>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff844793.aspx </remarks>
 		/// <param name="transferType">optional NetOffice.AccessApi.Enums.AcDataTransferType TransferType = 0</param>
 		/// <param name="spreadsheetType">optional NetOffice.AccessApi.Enums.AcSpreadSheetType SpreadsheetType = 8</param>
-		/// <param name="tableName">optional object TableName</param>
-		/// <param name="fileName">optional object FileName</param>
-		/// <param name="hasFieldNames">optional object HasFieldNames</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		/// <param name="tableName">optional object tableName</param>
+		/// <param name="fileName">optional object fileName</param>
+		/// <param name="hasFieldNames">optional object hasFieldNames</param>
+		[CustomMethod]
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public void TransferSpreadsheet(object transferType, object spreadsheetType, object tableName, object fileName, object hasFieldNames)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(transferType, spreadsheetType, tableName, fileName, hasFieldNames);
-			Invoker.Method(this, "TransferSpreadsheet", paramsArray);
+			 Factory.ExecuteMethod(this, "TransferSpreadsheet", new object[]{ transferType, spreadsheetType, tableName, fileName, hasFieldNames });
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff844793.aspx
 		/// </summary>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff844793.aspx </remarks>
 		/// <param name="transferType">optional NetOffice.AccessApi.Enums.AcDataTransferType TransferType = 0</param>
 		/// <param name="spreadsheetType">optional NetOffice.AccessApi.Enums.AcSpreadSheetType SpreadsheetType = 8</param>
-		/// <param name="tableName">optional object TableName</param>
-		/// <param name="fileName">optional object FileName</param>
-		/// <param name="hasFieldNames">optional object HasFieldNames</param>
-		/// <param name="range">optional object Range</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		/// <param name="tableName">optional object tableName</param>
+		/// <param name="fileName">optional object fileName</param>
+		/// <param name="hasFieldNames">optional object hasFieldNames</param>
+		/// <param name="range">optional object range</param>
+		[CustomMethod]
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public void TransferSpreadsheet(object transferType, object spreadsheetType, object tableName, object fileName, object hasFieldNames, object range)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(transferType, spreadsheetType, tableName, fileName, hasFieldNames, range);
-			Invoker.Method(this, "TransferSpreadsheet", paramsArray);
+			 Factory.ExecuteMethod(this, "TransferSpreadsheet", new object[]{ transferType, spreadsheetType, tableName, fileName, hasFieldNames, range });
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835958.aspx
 		/// </summary>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835958.aspx </remarks>
 		/// <param name="transferType">optional NetOffice.AccessApi.Enums.AcTextTransferType TransferType = 0</param>
-		/// <param name="specificationName">optional object SpecificationName</param>
-		/// <param name="tableName">optional object TableName</param>
-		/// <param name="fileName">optional object FileName</param>
-		/// <param name="hasFieldNames">optional object HasFieldNames</param>
-		/// <param name="hTMLTableName">optional object HTMLTableName</param>
-		/// <param name="codePage">optional object CodePage</param>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		/// <param name="specificationName">optional object specificationName</param>
+		/// <param name="tableName">optional object tableName</param>
+		/// <param name="fileName">optional object fileName</param>
+		/// <param name="hasFieldNames">optional object hasFieldNames</param>
+		/// <param name="hTMLTableName">optional object hTMLTableName</param>
+		/// <param name="codePage">optional object codePage</param>
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public void TransferText(object transferType, object specificationName, object tableName, object fileName, object hasFieldNames, object hTMLTableName, object codePage)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(transferType, specificationName, tableName, fileName, hasFieldNames, hTMLTableName, codePage);
-			Invoker.Method(this, "TransferText", paramsArray);
+			 Factory.ExecuteMethod(this, "TransferText", new object[]{ transferType, specificationName, tableName, fileName, hasFieldNames, hTMLTableName, codePage });
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835958.aspx
 		/// </summary>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835958.aspx </remarks>
+		[CustomMethod]
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public void TransferText()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "TransferText", paramsArray);
+			 Factory.ExecuteMethod(this, "TransferText");
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835958.aspx
 		/// </summary>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835958.aspx </remarks>
 		/// <param name="transferType">optional NetOffice.AccessApi.Enums.AcTextTransferType TransferType = 0</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public void TransferText(object transferType)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(transferType);
-			Invoker.Method(this, "TransferText", paramsArray);
+			 Factory.ExecuteMethod(this, "TransferText", transferType);
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835958.aspx
 		/// </summary>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835958.aspx </remarks>
 		/// <param name="transferType">optional NetOffice.AccessApi.Enums.AcTextTransferType TransferType = 0</param>
-		/// <param name="specificationName">optional object SpecificationName</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		/// <param name="specificationName">optional object specificationName</param>
+		[CustomMethod]
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public void TransferText(object transferType, object specificationName)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(transferType, specificationName);
-			Invoker.Method(this, "TransferText", paramsArray);
+			 Factory.ExecuteMethod(this, "TransferText", transferType, specificationName);
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835958.aspx
 		/// </summary>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835958.aspx </remarks>
 		/// <param name="transferType">optional NetOffice.AccessApi.Enums.AcTextTransferType TransferType = 0</param>
-		/// <param name="specificationName">optional object SpecificationName</param>
-		/// <param name="tableName">optional object TableName</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		/// <param name="specificationName">optional object specificationName</param>
+		/// <param name="tableName">optional object tableName</param>
+		[CustomMethod]
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public void TransferText(object transferType, object specificationName, object tableName)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(transferType, specificationName, tableName);
-			Invoker.Method(this, "TransferText", paramsArray);
+			 Factory.ExecuteMethod(this, "TransferText", transferType, specificationName, tableName);
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835958.aspx
 		/// </summary>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835958.aspx </remarks>
 		/// <param name="transferType">optional NetOffice.AccessApi.Enums.AcTextTransferType TransferType = 0</param>
-		/// <param name="specificationName">optional object SpecificationName</param>
-		/// <param name="tableName">optional object TableName</param>
-		/// <param name="fileName">optional object FileName</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		/// <param name="specificationName">optional object specificationName</param>
+		/// <param name="tableName">optional object tableName</param>
+		/// <param name="fileName">optional object fileName</param>
+		[CustomMethod]
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public void TransferText(object transferType, object specificationName, object tableName, object fileName)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(transferType, specificationName, tableName, fileName);
-			Invoker.Method(this, "TransferText", paramsArray);
+			 Factory.ExecuteMethod(this, "TransferText", transferType, specificationName, tableName, fileName);
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835958.aspx
 		/// </summary>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835958.aspx </remarks>
 		/// <param name="transferType">optional NetOffice.AccessApi.Enums.AcTextTransferType TransferType = 0</param>
-		/// <param name="specificationName">optional object SpecificationName</param>
-		/// <param name="tableName">optional object TableName</param>
-		/// <param name="fileName">optional object FileName</param>
-		/// <param name="hasFieldNames">optional object HasFieldNames</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		/// <param name="specificationName">optional object specificationName</param>
+		/// <param name="tableName">optional object tableName</param>
+		/// <param name="fileName">optional object fileName</param>
+		/// <param name="hasFieldNames">optional object hasFieldNames</param>
+		[CustomMethod]
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public void TransferText(object transferType, object specificationName, object tableName, object fileName, object hasFieldNames)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(transferType, specificationName, tableName, fileName, hasFieldNames);
-			Invoker.Method(this, "TransferText", paramsArray);
+			 Factory.ExecuteMethod(this, "TransferText", new object[]{ transferType, specificationName, tableName, fileName, hasFieldNames });
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835958.aspx
 		/// </summary>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835958.aspx </remarks>
 		/// <param name="transferType">optional NetOffice.AccessApi.Enums.AcTextTransferType TransferType = 0</param>
-		/// <param name="specificationName">optional object SpecificationName</param>
-		/// <param name="tableName">optional object TableName</param>
-		/// <param name="fileName">optional object FileName</param>
-		/// <param name="hasFieldNames">optional object HasFieldNames</param>
-		/// <param name="hTMLTableName">optional object HTMLTableName</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		/// <param name="specificationName">optional object specificationName</param>
+		/// <param name="tableName">optional object tableName</param>
+		/// <param name="fileName">optional object fileName</param>
+		/// <param name="hasFieldNames">optional object hasFieldNames</param>
+		/// <param name="hTMLTableName">optional object hTMLTableName</param>
+		[CustomMethod]
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public void TransferText(object transferType, object specificationName, object tableName, object fileName, object hasFieldNames, object hTMLTableName)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(transferType, specificationName, tableName, fileName, hasFieldNames, hTMLTableName);
-			Invoker.Method(this, "TransferText", paramsArray);
+			 Factory.ExecuteMethod(this, "TransferText", new object[]{ transferType, specificationName, tableName, fileName, hasFieldNames, hTMLTableName });
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192065.aspx
 		/// </summary>
-		/// <param name="objectType">NetOffice.AccessApi.Enums.AcOutputObjectType ObjectType</param>
-		/// <param name="objectName">optional object ObjectName</param>
-		/// <param name="outputFormat">optional object OutputFormat</param>
-		/// <param name="outputFile">optional object OutputFile</param>
-		/// <param name="autoStart">optional object AutoStart</param>
-		/// <param name="templateFile">optional object TemplateFile</param>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff192065.aspx </remarks>
+		/// <param name="objectType">NetOffice.AccessApi.Enums.AcOutputObjectType objectType</param>
+		/// <param name="objectName">optional object objectName</param>
+		/// <param name="outputFormat">optional object outputFormat</param>
+		/// <param name="outputFile">optional object outputFile</param>
+		/// <param name="autoStart">optional object autoStart</param>
+		/// <param name="templateFile">optional object templateFile</param>
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public void OutputTo(NetOffice.AccessApi.Enums.AcOutputObjectType objectType, object objectName, object outputFormat, object outputFile, object autoStart, object templateFile)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(objectType, objectName, outputFormat, outputFile, autoStart, templateFile);
-			Invoker.Method(this, "OutputTo", paramsArray);
+			 Factory.ExecuteMethod(this, "OutputTo", new object[]{ objectType, objectName, outputFormat, outputFile, autoStart, templateFile });
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192065.aspx
 		/// </summary>
-		/// <param name="objectType">NetOffice.AccessApi.Enums.AcOutputObjectType ObjectType</param>
-		/// <param name="objectName">optional object ObjectName</param>
-		/// <param name="outputFormat">optional object OutputFormat</param>
-		/// <param name="outputFile">optional object OutputFile</param>
-		/// <param name="autoStart">optional object AutoStart</param>
-		/// <param name="templateFile">optional object TemplateFile</param>
-		/// <param name="encoding">optional object Encoding</param>
-		[SupportByVersionAttribute("Access", 10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff192065.aspx </remarks>
+		/// <param name="objectType">NetOffice.AccessApi.Enums.AcOutputObjectType objectType</param>
+		/// <param name="objectName">optional object objectName</param>
+		/// <param name="outputFormat">optional object outputFormat</param>
+		/// <param name="outputFile">optional object outputFile</param>
+		/// <param name="autoStart">optional object autoStart</param>
+		/// <param name="templateFile">optional object templateFile</param>
+		/// <param name="encoding">optional object encoding</param>
+		[SupportByVersion("Access", 10,11,12,14,15,16)]
 		public void OutputTo(NetOffice.AccessApi.Enums.AcOutputObjectType objectType, object objectName, object outputFormat, object outputFile, object autoStart, object templateFile, object encoding)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(objectType, objectName, outputFormat, outputFile, autoStart, templateFile, encoding);
-			Invoker.Method(this, "OutputTo", paramsArray);
+			 Factory.ExecuteMethod(this, "OutputTo", new object[]{ objectType, objectName, outputFormat, outputFile, autoStart, templateFile, encoding });
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192065.aspx
 		/// </summary>
-		/// <param name="objectType">NetOffice.AccessApi.Enums.AcOutputObjectType ObjectType</param>
-		/// <param name="objectName">optional object ObjectName</param>
-		/// <param name="outputFormat">optional object OutputFormat</param>
-		/// <param name="outputFile">optional object OutputFile</param>
-		/// <param name="autoStart">optional object AutoStart</param>
-		/// <param name="templateFile">optional object TemplateFile</param>
-		/// <param name="encoding">optional object Encoding</param>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff192065.aspx </remarks>
+		/// <param name="objectType">NetOffice.AccessApi.Enums.AcOutputObjectType objectType</param>
+		/// <param name="objectName">optional object objectName</param>
+		/// <param name="outputFormat">optional object outputFormat</param>
+		/// <param name="outputFile">optional object outputFile</param>
+		/// <param name="autoStart">optional object autoStart</param>
+		/// <param name="templateFile">optional object templateFile</param>
+		/// <param name="encoding">optional object encoding</param>
 		/// <param name="outputQuality">optional NetOffice.AccessApi.Enums.AcExportQuality OutputQuality = 0</param>
-		[SupportByVersionAttribute("Access", 12,14,15,16)]
+		[SupportByVersion("Access", 12,14,15,16)]
 		public void OutputTo(NetOffice.AccessApi.Enums.AcOutputObjectType objectType, object objectName, object outputFormat, object outputFile, object autoStart, object templateFile, object encoding, object outputQuality)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(objectType, objectName, outputFormat, outputFile, autoStart, templateFile, encoding, outputQuality);
-			Invoker.Method(this, "OutputTo", paramsArray);
+			 Factory.ExecuteMethod(this, "OutputTo", new object[]{ objectType, objectName, outputFormat, outputFile, autoStart, templateFile, encoding, outputQuality });
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192065.aspx
 		/// </summary>
-		/// <param name="objectType">NetOffice.AccessApi.Enums.AcOutputObjectType ObjectType</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff192065.aspx </remarks>
+		/// <param name="objectType">NetOffice.AccessApi.Enums.AcOutputObjectType objectType</param>
+		[CustomMethod]
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public void OutputTo(NetOffice.AccessApi.Enums.AcOutputObjectType objectType)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(objectType);
-			Invoker.Method(this, "OutputTo", paramsArray);
+			 Factory.ExecuteMethod(this, "OutputTo", objectType);
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192065.aspx
 		/// </summary>
-		/// <param name="objectType">NetOffice.AccessApi.Enums.AcOutputObjectType ObjectType</param>
-		/// <param name="objectName">optional object ObjectName</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff192065.aspx </remarks>
+		/// <param name="objectType">NetOffice.AccessApi.Enums.AcOutputObjectType objectType</param>
+		/// <param name="objectName">optional object objectName</param>
+		[CustomMethod]
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public void OutputTo(NetOffice.AccessApi.Enums.AcOutputObjectType objectType, object objectName)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(objectType, objectName);
-			Invoker.Method(this, "OutputTo", paramsArray);
+			 Factory.ExecuteMethod(this, "OutputTo", objectType, objectName);
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192065.aspx
 		/// </summary>
-		/// <param name="objectType">NetOffice.AccessApi.Enums.AcOutputObjectType ObjectType</param>
-		/// <param name="objectName">optional object ObjectName</param>
-		/// <param name="outputFormat">optional object OutputFormat</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff192065.aspx </remarks>
+		/// <param name="objectType">NetOffice.AccessApi.Enums.AcOutputObjectType objectType</param>
+		/// <param name="objectName">optional object objectName</param>
+		/// <param name="outputFormat">optional object outputFormat</param>
+		[CustomMethod]
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public void OutputTo(NetOffice.AccessApi.Enums.AcOutputObjectType objectType, object objectName, object outputFormat)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(objectType, objectName, outputFormat);
-			Invoker.Method(this, "OutputTo", paramsArray);
+			 Factory.ExecuteMethod(this, "OutputTo", objectType, objectName, outputFormat);
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192065.aspx
 		/// </summary>
-		/// <param name="objectType">NetOffice.AccessApi.Enums.AcOutputObjectType ObjectType</param>
-		/// <param name="objectName">optional object ObjectName</param>
-		/// <param name="outputFormat">optional object OutputFormat</param>
-		/// <param name="outputFile">optional object OutputFile</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff192065.aspx </remarks>
+		/// <param name="objectType">NetOffice.AccessApi.Enums.AcOutputObjectType objectType</param>
+		/// <param name="objectName">optional object objectName</param>
+		/// <param name="outputFormat">optional object outputFormat</param>
+		/// <param name="outputFile">optional object outputFile</param>
+		[CustomMethod]
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public void OutputTo(NetOffice.AccessApi.Enums.AcOutputObjectType objectType, object objectName, object outputFormat, object outputFile)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(objectType, objectName, outputFormat, outputFile);
-			Invoker.Method(this, "OutputTo", paramsArray);
+			 Factory.ExecuteMethod(this, "OutputTo", objectType, objectName, outputFormat, outputFile);
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192065.aspx
 		/// </summary>
-		/// <param name="objectType">NetOffice.AccessApi.Enums.AcOutputObjectType ObjectType</param>
-		/// <param name="objectName">optional object ObjectName</param>
-		/// <param name="outputFormat">optional object OutputFormat</param>
-		/// <param name="outputFile">optional object OutputFile</param>
-		/// <param name="autoStart">optional object AutoStart</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff192065.aspx </remarks>
+		/// <param name="objectType">NetOffice.AccessApi.Enums.AcOutputObjectType objectType</param>
+		/// <param name="objectName">optional object objectName</param>
+		/// <param name="outputFormat">optional object outputFormat</param>
+		/// <param name="outputFile">optional object outputFile</param>
+		/// <param name="autoStart">optional object autoStart</param>
+		[CustomMethod]
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public void OutputTo(NetOffice.AccessApi.Enums.AcOutputObjectType objectType, object objectName, object outputFormat, object outputFile, object autoStart)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(objectType, objectName, outputFormat, outputFile, autoStart);
-			Invoker.Method(this, "OutputTo", paramsArray);
+			 Factory.ExecuteMethod(this, "OutputTo", new object[]{ objectType, objectName, outputFormat, outputFile, autoStart });
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197376.aspx
 		/// </summary>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff197376.aspx </remarks>
 		/// <param name="objectType">optional NetOffice.AccessApi.Enums.AcObjectType ObjectType = -1</param>
-		/// <param name="objectName">optional object ObjectName</param>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		/// <param name="objectName">optional object objectName</param>
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public void DeleteObject(object objectType, object objectName)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(objectType, objectName);
-			Invoker.Method(this, "DeleteObject", paramsArray);
+			 Factory.ExecuteMethod(this, "DeleteObject", objectType, objectName);
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197376.aspx
 		/// </summary>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff197376.aspx </remarks>
+		[CustomMethod]
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public void DeleteObject()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "DeleteObject", paramsArray);
+			 Factory.ExecuteMethod(this, "DeleteObject");
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197376.aspx
 		/// </summary>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff197376.aspx </remarks>
 		/// <param name="objectType">optional NetOffice.AccessApi.Enums.AcObjectType ObjectType = -1</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public void DeleteObject(object objectType)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(objectType);
-			Invoker.Method(this, "DeleteObject", paramsArray);
+			 Factory.ExecuteMethod(this, "DeleteObject", objectType);
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192698.aspx
 		/// </summary>
-		/// <param name="moduleName">optional object ModuleName</param>
-		/// <param name="procedureName">optional object ProcedureName</param>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff192698.aspx </remarks>
+		/// <param name="moduleName">optional object moduleName</param>
+		/// <param name="procedureName">optional object procedureName</param>
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public void OpenModule(object moduleName, object procedureName)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(moduleName, procedureName);
-			Invoker.Method(this, "OpenModule", paramsArray);
+			 Factory.ExecuteMethod(this, "OpenModule", moduleName, procedureName);
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192698.aspx
 		/// </summary>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff192698.aspx </remarks>
+		[CustomMethod]
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public void OpenModule()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "OpenModule", paramsArray);
+			 Factory.ExecuteMethod(this, "OpenModule");
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192698.aspx
 		/// </summary>
-		/// <param name="moduleName">optional object ModuleName</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff192698.aspx </remarks>
+		/// <param name="moduleName">optional object moduleName</param>
+		[CustomMethod]
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public void OpenModule(object moduleName)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(moduleName);
-			Invoker.Method(this, "OpenModule", paramsArray);
+			 Factory.ExecuteMethod(this, "OpenModule", moduleName);
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197046.aspx
 		/// </summary>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff197046.aspx </remarks>
 		/// <param name="objectType">optional NetOffice.AccessApi.Enums.AcSendObjectType ObjectType = -1</param>
-		/// <param name="objectName">optional object ObjectName</param>
-		/// <param name="outputFormat">optional object OutputFormat</param>
-		/// <param name="to">optional object To</param>
-		/// <param name="cc">optional object Cc</param>
-		/// <param name="bcc">optional object Bcc</param>
-		/// <param name="subject">optional object Subject</param>
-		/// <param name="messageText">optional object MessageText</param>
-		/// <param name="editMessage">optional object EditMessage</param>
-		/// <param name="templateFile">optional object TemplateFile</param>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		/// <param name="objectName">optional object objectName</param>
+		/// <param name="outputFormat">optional object outputFormat</param>
+		/// <param name="to">optional object to</param>
+		/// <param name="cc">optional object cc</param>
+		/// <param name="bcc">optional object bcc</param>
+		/// <param name="subject">optional object subject</param>
+		/// <param name="messageText">optional object messageText</param>
+		/// <param name="editMessage">optional object editMessage</param>
+		/// <param name="templateFile">optional object templateFile</param>
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public void SendObject(object objectType, object objectName, object outputFormat, object to, object cc, object bcc, object subject, object messageText, object editMessage, object templateFile)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(objectType, objectName, outputFormat, to, cc, bcc, subject, messageText, editMessage, templateFile);
-			Invoker.Method(this, "SendObject", paramsArray);
+			 Factory.ExecuteMethod(this, "SendObject", new object[]{ objectType, objectName, outputFormat, to, cc, bcc, subject, messageText, editMessage, templateFile });
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197046.aspx
 		/// </summary>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff197046.aspx </remarks>
+		[CustomMethod]
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public void SendObject()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "SendObject", paramsArray);
+			 Factory.ExecuteMethod(this, "SendObject");
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197046.aspx
 		/// </summary>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff197046.aspx </remarks>
 		/// <param name="objectType">optional NetOffice.AccessApi.Enums.AcSendObjectType ObjectType = -1</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public void SendObject(object objectType)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(objectType);
-			Invoker.Method(this, "SendObject", paramsArray);
+			 Factory.ExecuteMethod(this, "SendObject", objectType);
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197046.aspx
 		/// </summary>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff197046.aspx </remarks>
 		/// <param name="objectType">optional NetOffice.AccessApi.Enums.AcSendObjectType ObjectType = -1</param>
-		/// <param name="objectName">optional object ObjectName</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		/// <param name="objectName">optional object objectName</param>
+		[CustomMethod]
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public void SendObject(object objectType, object objectName)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(objectType, objectName);
-			Invoker.Method(this, "SendObject", paramsArray);
+			 Factory.ExecuteMethod(this, "SendObject", objectType, objectName);
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197046.aspx
 		/// </summary>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff197046.aspx </remarks>
 		/// <param name="objectType">optional NetOffice.AccessApi.Enums.AcSendObjectType ObjectType = -1</param>
-		/// <param name="objectName">optional object ObjectName</param>
-		/// <param name="outputFormat">optional object OutputFormat</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		/// <param name="objectName">optional object objectName</param>
+		/// <param name="outputFormat">optional object outputFormat</param>
+		[CustomMethod]
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public void SendObject(object objectType, object objectName, object outputFormat)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(objectType, objectName, outputFormat);
-			Invoker.Method(this, "SendObject", paramsArray);
+			 Factory.ExecuteMethod(this, "SendObject", objectType, objectName, outputFormat);
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197046.aspx
 		/// </summary>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff197046.aspx </remarks>
 		/// <param name="objectType">optional NetOffice.AccessApi.Enums.AcSendObjectType ObjectType = -1</param>
-		/// <param name="objectName">optional object ObjectName</param>
-		/// <param name="outputFormat">optional object OutputFormat</param>
-		/// <param name="to">optional object To</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		/// <param name="objectName">optional object objectName</param>
+		/// <param name="outputFormat">optional object outputFormat</param>
+		/// <param name="to">optional object to</param>
+		[CustomMethod]
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public void SendObject(object objectType, object objectName, object outputFormat, object to)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(objectType, objectName, outputFormat, to);
-			Invoker.Method(this, "SendObject", paramsArray);
+			 Factory.ExecuteMethod(this, "SendObject", objectType, objectName, outputFormat, to);
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197046.aspx
 		/// </summary>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff197046.aspx </remarks>
 		/// <param name="objectType">optional NetOffice.AccessApi.Enums.AcSendObjectType ObjectType = -1</param>
-		/// <param name="objectName">optional object ObjectName</param>
-		/// <param name="outputFormat">optional object OutputFormat</param>
-		/// <param name="to">optional object To</param>
-		/// <param name="cc">optional object Cc</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		/// <param name="objectName">optional object objectName</param>
+		/// <param name="outputFormat">optional object outputFormat</param>
+		/// <param name="to">optional object to</param>
+		/// <param name="cc">optional object cc</param>
+		[CustomMethod]
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public void SendObject(object objectType, object objectName, object outputFormat, object to, object cc)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(objectType, objectName, outputFormat, to, cc);
-			Invoker.Method(this, "SendObject", paramsArray);
+			 Factory.ExecuteMethod(this, "SendObject", new object[]{ objectType, objectName, outputFormat, to, cc });
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197046.aspx
 		/// </summary>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff197046.aspx </remarks>
 		/// <param name="objectType">optional NetOffice.AccessApi.Enums.AcSendObjectType ObjectType = -1</param>
-		/// <param name="objectName">optional object ObjectName</param>
-		/// <param name="outputFormat">optional object OutputFormat</param>
-		/// <param name="to">optional object To</param>
-		/// <param name="cc">optional object Cc</param>
-		/// <param name="bcc">optional object Bcc</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		/// <param name="objectName">optional object objectName</param>
+		/// <param name="outputFormat">optional object outputFormat</param>
+		/// <param name="to">optional object to</param>
+		/// <param name="cc">optional object cc</param>
+		/// <param name="bcc">optional object bcc</param>
+		[CustomMethod]
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public void SendObject(object objectType, object objectName, object outputFormat, object to, object cc, object bcc)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(objectType, objectName, outputFormat, to, cc, bcc);
-			Invoker.Method(this, "SendObject", paramsArray);
+			 Factory.ExecuteMethod(this, "SendObject", new object[]{ objectType, objectName, outputFormat, to, cc, bcc });
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197046.aspx
 		/// </summary>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff197046.aspx </remarks>
 		/// <param name="objectType">optional NetOffice.AccessApi.Enums.AcSendObjectType ObjectType = -1</param>
-		/// <param name="objectName">optional object ObjectName</param>
-		/// <param name="outputFormat">optional object OutputFormat</param>
-		/// <param name="to">optional object To</param>
-		/// <param name="cc">optional object Cc</param>
-		/// <param name="bcc">optional object Bcc</param>
-		/// <param name="subject">optional object Subject</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		/// <param name="objectName">optional object objectName</param>
+		/// <param name="outputFormat">optional object outputFormat</param>
+		/// <param name="to">optional object to</param>
+		/// <param name="cc">optional object cc</param>
+		/// <param name="bcc">optional object bcc</param>
+		/// <param name="subject">optional object subject</param>
+		[CustomMethod]
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public void SendObject(object objectType, object objectName, object outputFormat, object to, object cc, object bcc, object subject)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(objectType, objectName, outputFormat, to, cc, bcc, subject);
-			Invoker.Method(this, "SendObject", paramsArray);
+			 Factory.ExecuteMethod(this, "SendObject", new object[]{ objectType, objectName, outputFormat, to, cc, bcc, subject });
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197046.aspx
 		/// </summary>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff197046.aspx </remarks>
 		/// <param name="objectType">optional NetOffice.AccessApi.Enums.AcSendObjectType ObjectType = -1</param>
-		/// <param name="objectName">optional object ObjectName</param>
-		/// <param name="outputFormat">optional object OutputFormat</param>
-		/// <param name="to">optional object To</param>
-		/// <param name="cc">optional object Cc</param>
-		/// <param name="bcc">optional object Bcc</param>
-		/// <param name="subject">optional object Subject</param>
-		/// <param name="messageText">optional object MessageText</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		/// <param name="objectName">optional object objectName</param>
+		/// <param name="outputFormat">optional object outputFormat</param>
+		/// <param name="to">optional object to</param>
+		/// <param name="cc">optional object cc</param>
+		/// <param name="bcc">optional object bcc</param>
+		/// <param name="subject">optional object subject</param>
+		/// <param name="messageText">optional object messageText</param>
+		[CustomMethod]
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public void SendObject(object objectType, object objectName, object outputFormat, object to, object cc, object bcc, object subject, object messageText)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(objectType, objectName, outputFormat, to, cc, bcc, subject, messageText);
-			Invoker.Method(this, "SendObject", paramsArray);
+			 Factory.ExecuteMethod(this, "SendObject", new object[]{ objectType, objectName, outputFormat, to, cc, bcc, subject, messageText });
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197046.aspx
 		/// </summary>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff197046.aspx </remarks>
 		/// <param name="objectType">optional NetOffice.AccessApi.Enums.AcSendObjectType ObjectType = -1</param>
-		/// <param name="objectName">optional object ObjectName</param>
-		/// <param name="outputFormat">optional object OutputFormat</param>
-		/// <param name="to">optional object To</param>
-		/// <param name="cc">optional object Cc</param>
-		/// <param name="bcc">optional object Bcc</param>
-		/// <param name="subject">optional object Subject</param>
-		/// <param name="messageText">optional object MessageText</param>
-		/// <param name="editMessage">optional object EditMessage</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		/// <param name="objectName">optional object objectName</param>
+		/// <param name="outputFormat">optional object outputFormat</param>
+		/// <param name="to">optional object to</param>
+		/// <param name="cc">optional object cc</param>
+		/// <param name="bcc">optional object bcc</param>
+		/// <param name="subject">optional object subject</param>
+		/// <param name="messageText">optional object messageText</param>
+		/// <param name="editMessage">optional object editMessage</param>
+		[CustomMethod]
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public void SendObject(object objectType, object objectName, object outputFormat, object to, object cc, object bcc, object subject, object messageText, object editMessage)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(objectType, objectName, outputFormat, to, cc, bcc, subject, messageText, editMessage);
-			Invoker.Method(this, "SendObject", paramsArray);
+			 Factory.ExecuteMethod(this, "SendObject", new object[]{ objectType, objectName, outputFormat, to, cc, bcc, subject, messageText, editMessage });
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194957.aspx
 		/// </summary>
-		/// <param name="toolbarName">object ToolbarName</param>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194957.aspx </remarks>
+		/// <param name="toolbarName">object toolbarName</param>
 		/// <param name="show">optional NetOffice.AccessApi.Enums.AcShowToolbar Show = 0</param>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public void ShowToolbar(object toolbarName, object show)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(toolbarName, show);
-			Invoker.Method(this, "ShowToolbar", paramsArray);
+			 Factory.ExecuteMethod(this, "ShowToolbar", toolbarName, show);
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194957.aspx
 		/// </summary>
-		/// <param name="toolbarName">object ToolbarName</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194957.aspx </remarks>
+		/// <param name="toolbarName">object toolbarName</param>
+		[CustomMethod]
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public void ShowToolbar(object toolbarName)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(toolbarName);
-			Invoker.Method(this, "ShowToolbar", paramsArray);
+			 Factory.ExecuteMethod(this, "ShowToolbar", toolbarName);
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196435.aspx
 		/// </summary>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff196435.aspx </remarks>
 		/// <param name="objectType">optional NetOffice.AccessApi.Enums.AcObjectType ObjectType = -1</param>
-		/// <param name="objectName">optional object ObjectName</param>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		/// <param name="objectName">optional object objectName</param>
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public void Save(object objectType, object objectName)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(objectType, objectName);
-			Invoker.Method(this, "Save", paramsArray);
+			 Factory.ExecuteMethod(this, "Save", objectType, objectName);
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196435.aspx
 		/// </summary>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff196435.aspx </remarks>
+		[CustomMethod]
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public void Save()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "Save", paramsArray);
+			 Factory.ExecuteMethod(this, "Save");
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196435.aspx
 		/// </summary>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff196435.aspx </remarks>
 		/// <param name="objectType">optional NetOffice.AccessApi.Enums.AcObjectType ObjectType = -1</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public void Save(object objectType)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(objectType);
-			Invoker.Method(this, "Save", paramsArray);
+			 Factory.ExecuteMethod(this, "Save", objectType);
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195265.aspx
 		/// </summary>
-		/// <param name="menuIndex">object MenuIndex</param>
-		/// <param name="commandIndex">optional object CommandIndex</param>
-		/// <param name="subcommandIndex">optional object SubcommandIndex</param>
-		/// <param name="flag">optional object Flag</param>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff195265.aspx </remarks>
+		/// <param name="menuIndex">object menuIndex</param>
+		/// <param name="commandIndex">optional object commandIndex</param>
+		/// <param name="subcommandIndex">optional object subcommandIndex</param>
+		/// <param name="flag">optional object flag</param>
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public void SetMenuItem(object menuIndex, object commandIndex, object subcommandIndex, object flag)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(menuIndex, commandIndex, subcommandIndex, flag);
-			Invoker.Method(this, "SetMenuItem", paramsArray);
+			 Factory.ExecuteMethod(this, "SetMenuItem", menuIndex, commandIndex, subcommandIndex, flag);
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195265.aspx
 		/// </summary>
-		/// <param name="menuIndex">object MenuIndex</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff195265.aspx </remarks>
+		/// <param name="menuIndex">object menuIndex</param>
+		[CustomMethod]
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public void SetMenuItem(object menuIndex)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(menuIndex);
-			Invoker.Method(this, "SetMenuItem", paramsArray);
+			 Factory.ExecuteMethod(this, "SetMenuItem", menuIndex);
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195265.aspx
 		/// </summary>
-		/// <param name="menuIndex">object MenuIndex</param>
-		/// <param name="commandIndex">optional object CommandIndex</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff195265.aspx </remarks>
+		/// <param name="menuIndex">object menuIndex</param>
+		/// <param name="commandIndex">optional object commandIndex</param>
+		[CustomMethod]
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public void SetMenuItem(object menuIndex, object commandIndex)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(menuIndex, commandIndex);
-			Invoker.Method(this, "SetMenuItem", paramsArray);
+			 Factory.ExecuteMethod(this, "SetMenuItem", menuIndex, commandIndex);
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195265.aspx
 		/// </summary>
-		/// <param name="menuIndex">object MenuIndex</param>
-		/// <param name="commandIndex">optional object CommandIndex</param>
-		/// <param name="subcommandIndex">optional object SubcommandIndex</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff195265.aspx </remarks>
+		/// <param name="menuIndex">object menuIndex</param>
+		/// <param name="commandIndex">optional object commandIndex</param>
+		/// <param name="subcommandIndex">optional object subcommandIndex</param>
+		[CustomMethod]
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public void SetMenuItem(object menuIndex, object commandIndex, object subcommandIndex)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(menuIndex, commandIndex, subcommandIndex);
-			Invoker.Method(this, "SetMenuItem", paramsArray);
+			 Factory.ExecuteMethod(this, "SetMenuItem", menuIndex, commandIndex, subcommandIndex);
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194612.aspx
 		/// </summary>
-		/// <param name="command">NetOffice.AccessApi.Enums.AcCommand Command</param>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194612.aspx </remarks>
+		/// <param name="command">NetOffice.AccessApi.Enums.AcCommand command</param>
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public void RunCommand(NetOffice.AccessApi.Enums.AcCommand command)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(command);
-			Invoker.Method(this, "RunCommand", paramsArray);
+			 Factory.ExecuteMethod(this, "RunCommand", command);
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845421.aspx
 		/// </summary>
-		/// <param name="dataAccessPageName">object DataAccessPageName</param>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff845421.aspx </remarks>
+		/// <param name="dataAccessPageName">object dataAccessPageName</param>
 		/// <param name="view">optional NetOffice.AccessApi.Enums.AcDataAccessPageView View = 0</param>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public void OpenDataAccessPage(object dataAccessPageName, object view)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(dataAccessPageName, view);
-			Invoker.Method(this, "OpenDataAccessPage", paramsArray);
+			 Factory.ExecuteMethod(this, "OpenDataAccessPage", dataAccessPageName, view);
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845421.aspx
 		/// </summary>
-		/// <param name="dataAccessPageName">object DataAccessPageName</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff845421.aspx </remarks>
+		/// <param name="dataAccessPageName">object dataAccessPageName</param>
+		[CustomMethod]
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public void OpenDataAccessPage(object dataAccessPageName)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(dataAccessPageName);
-			Invoker.Method(this, "OpenDataAccessPage", paramsArray);
+			 Factory.ExecuteMethod(this, "OpenDataAccessPage", dataAccessPageName);
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197347.aspx
 		/// </summary>
-		/// <param name="viewName">object ViewName</param>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff197347.aspx </remarks>
+		/// <param name="viewName">object viewName</param>
 		/// <param name="view">optional NetOffice.AccessApi.Enums.AcView View = 0</param>
 		/// <param name="dataMode">optional NetOffice.AccessApi.Enums.AcOpenDataMode DataMode = 1</param>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public void OpenView(object viewName, object view, object dataMode)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(viewName, view, dataMode);
-			Invoker.Method(this, "OpenView", paramsArray);
+			 Factory.ExecuteMethod(this, "OpenView", viewName, view, dataMode);
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197347.aspx
 		/// </summary>
-		/// <param name="viewName">object ViewName</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff197347.aspx </remarks>
+		/// <param name="viewName">object viewName</param>
+		[CustomMethod]
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public void OpenView(object viewName)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(viewName);
-			Invoker.Method(this, "OpenView", paramsArray);
+			 Factory.ExecuteMethod(this, "OpenView", viewName);
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197347.aspx
 		/// </summary>
-		/// <param name="viewName">object ViewName</param>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff197347.aspx </remarks>
+		/// <param name="viewName">object viewName</param>
 		/// <param name="view">optional NetOffice.AccessApi.Enums.AcView View = 0</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public void OpenView(object viewName, object view)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(viewName, view);
-			Invoker.Method(this, "OpenView", paramsArray);
+			 Factory.ExecuteMethod(this, "OpenView", viewName, view);
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff821439.aspx
 		/// </summary>
-		/// <param name="diagramName">object DiagramName</param>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff821439.aspx </remarks>
+		/// <param name="diagramName">object diagramName</param>
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public void OpenDiagram(object diagramName)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(diagramName);
-			Invoker.Method(this, "OpenDiagram", paramsArray);
+			 Factory.ExecuteMethod(this, "OpenDiagram", diagramName);
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197412.aspx
 		/// </summary>
-		/// <param name="procedureName">object ProcedureName</param>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff197412.aspx </remarks>
+		/// <param name="procedureName">object procedureName</param>
 		/// <param name="view">optional NetOffice.AccessApi.Enums.AcView View = 0</param>
 		/// <param name="dataMode">optional NetOffice.AccessApi.Enums.AcOpenDataMode DataMode = 1</param>
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public void OpenStoredProcedure(object procedureName, object view, object dataMode)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(procedureName, view, dataMode);
-			Invoker.Method(this, "OpenStoredProcedure", paramsArray);
+			 Factory.ExecuteMethod(this, "OpenStoredProcedure", procedureName, view, dataMode);
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197412.aspx
 		/// </summary>
-		/// <param name="procedureName">object ProcedureName</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff197412.aspx </remarks>
+		/// <param name="procedureName">object procedureName</param>
+		[CustomMethod]
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public void OpenStoredProcedure(object procedureName)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(procedureName);
-			Invoker.Method(this, "OpenStoredProcedure", paramsArray);
+			 Factory.ExecuteMethod(this, "OpenStoredProcedure", procedureName);
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197412.aspx
 		/// </summary>
-		/// <param name="procedureName">object ProcedureName</param>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff197412.aspx </remarks>
+		/// <param name="procedureName">object procedureName</param>
 		/// <param name="view">optional NetOffice.AccessApi.Enums.AcView View = 0</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		public void OpenStoredProcedure(object procedureName, object view)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(procedureName, view);
-			Invoker.Method(this, "OpenStoredProcedure", paramsArray);
+			 Factory.ExecuteMethod(this, "OpenStoredProcedure", procedureName, view);
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="reportName">object ReportName</param>
+		/// <param name="reportName">object reportName</param>
 		/// <param name="view">optional NetOffice.AccessApi.Enums.AcView View = 0</param>
-		/// <param name="filterName">optional object FilterName</param>
-		/// <param name="whereCondition">optional object WhereCondition</param>
+		/// <param name="filterName">optional object filterName</param>
+		/// <param name="whereCondition">optional object whereCondition</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("Access", 10,11,12,14,15,16)]
+		[SupportByVersion("Access", 10,11,12,14,15,16)]
 		public void OpenReportOld0(object reportName, object view, object filterName, object whereCondition)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(reportName, view, filterName, whereCondition);
-			Invoker.Method(this, "OpenReportOld0", paramsArray);
+			 Factory.ExecuteMethod(this, "OpenReportOld0", reportName, view, filterName, whereCondition);
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="reportName">object ReportName</param>
+		/// <param name="reportName">object reportName</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 10,11,12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Access", 10,11,12,14,15,16)]
 		public void OpenReportOld0(object reportName)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(reportName);
-			Invoker.Method(this, "OpenReportOld0", paramsArray);
+			 Factory.ExecuteMethod(this, "OpenReportOld0", reportName);
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="reportName">object ReportName</param>
+		/// <param name="reportName">object reportName</param>
 		/// <param name="view">optional NetOffice.AccessApi.Enums.AcView View = 0</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 10,11,12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Access", 10,11,12,14,15,16)]
 		public void OpenReportOld0(object reportName, object view)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(reportName, view);
-			Invoker.Method(this, "OpenReportOld0", paramsArray);
+			 Factory.ExecuteMethod(this, "OpenReportOld0", reportName, view);
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="reportName">object ReportName</param>
+		/// <param name="reportName">object reportName</param>
 		/// <param name="view">optional NetOffice.AccessApi.Enums.AcView View = 0</param>
-		/// <param name="filterName">optional object FilterName</param>
+		/// <param name="filterName">optional object filterName</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 10,11,12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Access", 10,11,12,14,15,16)]
 		public void OpenReportOld0(object reportName, object view, object filterName)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(reportName, view, filterName);
-			Invoker.Method(this, "OpenReportOld0", paramsArray);
+			 Factory.ExecuteMethod(this, "OpenReportOld0", reportName, view, filterName);
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="objectType">NetOffice.AccessApi.Enums.AcOutputObjectType ObjectType</param>
-		/// <param name="objectName">optional object ObjectName</param>
-		/// <param name="outputFormat">optional object OutputFormat</param>
-		/// <param name="outputFile">optional object OutputFile</param>
-		/// <param name="autoStart">optional object AutoStart</param>
-		/// <param name="templateFile">optional object TemplateFile</param>
+		/// <param name="objectType">NetOffice.AccessApi.Enums.AcOutputObjectType objectType</param>
+		/// <param name="objectName">optional object objectName</param>
+		/// <param name="outputFormat">optional object outputFormat</param>
+		/// <param name="outputFile">optional object outputFile</param>
+		/// <param name="autoStart">optional object autoStart</param>
+		/// <param name="templateFile">optional object templateFile</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("Access", 10,11,12,14,15,16)]
+		[SupportByVersion("Access", 10,11,12,14,15,16)]
 		public void OutputToOld0(NetOffice.AccessApi.Enums.AcOutputObjectType objectType, object objectName, object outputFormat, object outputFile, object autoStart, object templateFile)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(objectType, objectName, outputFormat, outputFile, autoStart, templateFile);
-			Invoker.Method(this, "OutputToOld0", paramsArray);
+			 Factory.ExecuteMethod(this, "OutputToOld0", new object[]{ objectType, objectName, outputFormat, outputFile, autoStart, templateFile });
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="objectType">NetOffice.AccessApi.Enums.AcOutputObjectType ObjectType</param>
+		/// <param name="objectType">NetOffice.AccessApi.Enums.AcOutputObjectType objectType</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 10,11,12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Access", 10,11,12,14,15,16)]
 		public void OutputToOld0(NetOffice.AccessApi.Enums.AcOutputObjectType objectType)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(objectType);
-			Invoker.Method(this, "OutputToOld0", paramsArray);
+			 Factory.ExecuteMethod(this, "OutputToOld0", objectType);
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="objectType">NetOffice.AccessApi.Enums.AcOutputObjectType ObjectType</param>
-		/// <param name="objectName">optional object ObjectName</param>
+		/// <param name="objectType">NetOffice.AccessApi.Enums.AcOutputObjectType objectType</param>
+		/// <param name="objectName">optional object objectName</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 10,11,12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Access", 10,11,12,14,15,16)]
 		public void OutputToOld0(NetOffice.AccessApi.Enums.AcOutputObjectType objectType, object objectName)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(objectType, objectName);
-			Invoker.Method(this, "OutputToOld0", paramsArray);
+			 Factory.ExecuteMethod(this, "OutputToOld0", objectType, objectName);
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="objectType">NetOffice.AccessApi.Enums.AcOutputObjectType ObjectType</param>
-		/// <param name="objectName">optional object ObjectName</param>
-		/// <param name="outputFormat">optional object OutputFormat</param>
+		/// <param name="objectType">NetOffice.AccessApi.Enums.AcOutputObjectType objectType</param>
+		/// <param name="objectName">optional object objectName</param>
+		/// <param name="outputFormat">optional object outputFormat</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 10,11,12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Access", 10,11,12,14,15,16)]
 		public void OutputToOld0(NetOffice.AccessApi.Enums.AcOutputObjectType objectType, object objectName, object outputFormat)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(objectType, objectName, outputFormat);
-			Invoker.Method(this, "OutputToOld0", paramsArray);
+			 Factory.ExecuteMethod(this, "OutputToOld0", objectType, objectName, outputFormat);
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="objectType">NetOffice.AccessApi.Enums.AcOutputObjectType ObjectType</param>
-		/// <param name="objectName">optional object ObjectName</param>
-		/// <param name="outputFormat">optional object OutputFormat</param>
-		/// <param name="outputFile">optional object OutputFile</param>
+		/// <param name="objectType">NetOffice.AccessApi.Enums.AcOutputObjectType objectType</param>
+		/// <param name="objectName">optional object objectName</param>
+		/// <param name="outputFormat">optional object outputFormat</param>
+		/// <param name="outputFile">optional object outputFile</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 10,11,12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Access", 10,11,12,14,15,16)]
 		public void OutputToOld0(NetOffice.AccessApi.Enums.AcOutputObjectType objectType, object objectName, object outputFormat, object outputFile)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(objectType, objectName, outputFormat, outputFile);
-			Invoker.Method(this, "OutputToOld0", paramsArray);
+			 Factory.ExecuteMethod(this, "OutputToOld0", objectType, objectName, outputFormat, outputFile);
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="objectType">NetOffice.AccessApi.Enums.AcOutputObjectType ObjectType</param>
-		/// <param name="objectName">optional object ObjectName</param>
-		/// <param name="outputFormat">optional object OutputFormat</param>
-		/// <param name="outputFile">optional object OutputFile</param>
-		/// <param name="autoStart">optional object AutoStart</param>
+		/// <param name="objectType">NetOffice.AccessApi.Enums.AcOutputObjectType objectType</param>
+		/// <param name="objectName">optional object objectName</param>
+		/// <param name="outputFormat">optional object outputFormat</param>
+		/// <param name="outputFile">optional object outputFile</param>
+		/// <param name="autoStart">optional object autoStart</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 10,11,12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Access", 10,11,12,14,15,16)]
 		public void OutputToOld0(NetOffice.AccessApi.Enums.AcOutputObjectType objectType, object objectName, object outputFormat, object outputFile, object autoStart)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(objectType, objectName, outputFormat, outputFile, autoStart);
-			Invoker.Method(this, "OutputToOld0", paramsArray);
+			 Factory.ExecuteMethod(this, "OutputToOld0", new object[]{ objectType, objectName, outputFormat, outputFile, autoStart });
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835048.aspx
 		/// </summary>
-		/// <param name="server">object Server</param>
-		/// <param name="database">object Database</param>
-		/// <param name="useTrustedConnection">optional object UseTrustedConnection</param>
-		/// <param name="login">optional object Login</param>
-		/// <param name="password">optional object Password</param>
-		/// <param name="transferCopyData">optional object TransferCopyData</param>
-		[SupportByVersionAttribute("Access", 10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835048.aspx </remarks>
+		/// <param name="server">object server</param>
+		/// <param name="database">object database</param>
+		/// <param name="useTrustedConnection">optional object useTrustedConnection</param>
+		/// <param name="login">optional object login</param>
+		/// <param name="password">optional object password</param>
+		/// <param name="transferCopyData">optional object transferCopyData</param>
+		[SupportByVersion("Access", 10,11,12,14,15,16)]
 		public void TransferSQLDatabase(object server, object database, object useTrustedConnection, object login, object password, object transferCopyData)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(server, database, useTrustedConnection, login, password, transferCopyData);
-			Invoker.Method(this, "TransferSQLDatabase", paramsArray);
+			 Factory.ExecuteMethod(this, "TransferSQLDatabase", new object[]{ server, database, useTrustedConnection, login, password, transferCopyData });
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835048.aspx
 		/// </summary>
-		/// <param name="server">object Server</param>
-		/// <param name="database">object Database</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835048.aspx </remarks>
+		/// <param name="server">object server</param>
+		/// <param name="database">object database</param>
+		[CustomMethod]
+		[SupportByVersion("Access", 10,11,12,14,15,16)]
 		public void TransferSQLDatabase(object server, object database)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(server, database);
-			Invoker.Method(this, "TransferSQLDatabase", paramsArray);
+			 Factory.ExecuteMethod(this, "TransferSQLDatabase", server, database);
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835048.aspx
 		/// </summary>
-		/// <param name="server">object Server</param>
-		/// <param name="database">object Database</param>
-		/// <param name="useTrustedConnection">optional object UseTrustedConnection</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835048.aspx </remarks>
+		/// <param name="server">object server</param>
+		/// <param name="database">object database</param>
+		/// <param name="useTrustedConnection">optional object useTrustedConnection</param>
+		[CustomMethod]
+		[SupportByVersion("Access", 10,11,12,14,15,16)]
 		public void TransferSQLDatabase(object server, object database, object useTrustedConnection)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(server, database, useTrustedConnection);
-			Invoker.Method(this, "TransferSQLDatabase", paramsArray);
+			 Factory.ExecuteMethod(this, "TransferSQLDatabase", server, database, useTrustedConnection);
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835048.aspx
 		/// </summary>
-		/// <param name="server">object Server</param>
-		/// <param name="database">object Database</param>
-		/// <param name="useTrustedConnection">optional object UseTrustedConnection</param>
-		/// <param name="login">optional object Login</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835048.aspx </remarks>
+		/// <param name="server">object server</param>
+		/// <param name="database">object database</param>
+		/// <param name="useTrustedConnection">optional object useTrustedConnection</param>
+		/// <param name="login">optional object login</param>
+		[CustomMethod]
+		[SupportByVersion("Access", 10,11,12,14,15,16)]
 		public void TransferSQLDatabase(object server, object database, object useTrustedConnection, object login)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(server, database, useTrustedConnection, login);
-			Invoker.Method(this, "TransferSQLDatabase", paramsArray);
+			 Factory.ExecuteMethod(this, "TransferSQLDatabase", server, database, useTrustedConnection, login);
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835048.aspx
 		/// </summary>
-		/// <param name="server">object Server</param>
-		/// <param name="database">object Database</param>
-		/// <param name="useTrustedConnection">optional object UseTrustedConnection</param>
-		/// <param name="login">optional object Login</param>
-		/// <param name="password">optional object Password</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835048.aspx </remarks>
+		/// <param name="server">object server</param>
+		/// <param name="database">object database</param>
+		/// <param name="useTrustedConnection">optional object useTrustedConnection</param>
+		/// <param name="login">optional object login</param>
+		/// <param name="password">optional object password</param>
+		[CustomMethod]
+		[SupportByVersion("Access", 10,11,12,14,15,16)]
 		public void TransferSQLDatabase(object server, object database, object useTrustedConnection, object login, object password)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(server, database, useTrustedConnection, login, password);
-			Invoker.Method(this, "TransferSQLDatabase", paramsArray);
+			 Factory.ExecuteMethod(this, "TransferSQLDatabase", new object[]{ server, database, useTrustedConnection, login, password });
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845497.aspx
 		/// </summary>
-		/// <param name="databaseFileName">object DatabaseFileName</param>
-		/// <param name="overwriteExistingFile">optional object OverwriteExistingFile</param>
-		/// <param name="disconnectAllUsers">optional object DisconnectAllUsers</param>
-		[SupportByVersionAttribute("Access", 10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff845497.aspx </remarks>
+		/// <param name="databaseFileName">object databaseFileName</param>
+		/// <param name="overwriteExistingFile">optional object overwriteExistingFile</param>
+		/// <param name="disconnectAllUsers">optional object disconnectAllUsers</param>
+		[SupportByVersion("Access", 10,11,12,14,15,16)]
 		public void CopyDatabaseFile(object databaseFileName, object overwriteExistingFile, object disconnectAllUsers)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(databaseFileName, overwriteExistingFile, disconnectAllUsers);
-			Invoker.Method(this, "CopyDatabaseFile", paramsArray);
+			 Factory.ExecuteMethod(this, "CopyDatabaseFile", databaseFileName, overwriteExistingFile, disconnectAllUsers);
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845497.aspx
 		/// </summary>
-		/// <param name="databaseFileName">object DatabaseFileName</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff845497.aspx </remarks>
+		/// <param name="databaseFileName">object databaseFileName</param>
+		[CustomMethod]
+		[SupportByVersion("Access", 10,11,12,14,15,16)]
 		public void CopyDatabaseFile(object databaseFileName)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(databaseFileName);
-			Invoker.Method(this, "CopyDatabaseFile", paramsArray);
+			 Factory.ExecuteMethod(this, "CopyDatabaseFile", databaseFileName);
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845497.aspx
 		/// </summary>
-		/// <param name="databaseFileName">object DatabaseFileName</param>
-		/// <param name="overwriteExistingFile">optional object OverwriteExistingFile</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff845497.aspx </remarks>
+		/// <param name="databaseFileName">object databaseFileName</param>
+		/// <param name="overwriteExistingFile">optional object overwriteExistingFile</param>
+		[CustomMethod]
+		[SupportByVersion("Access", 10,11,12,14,15,16)]
 		public void CopyDatabaseFile(object databaseFileName, object overwriteExistingFile)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(databaseFileName, overwriteExistingFile);
-			Invoker.Method(this, "CopyDatabaseFile", paramsArray);
+			 Factory.ExecuteMethod(this, "CopyDatabaseFile", databaseFileName, overwriteExistingFile);
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194192.aspx
 		/// </summary>
-		/// <param name="functionName">object FunctionName</param>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194192.aspx </remarks>
+		/// <param name="functionName">object functionName</param>
 		/// <param name="view">optional NetOffice.AccessApi.Enums.AcView View = 0</param>
 		/// <param name="dataMode">optional NetOffice.AccessApi.Enums.AcOpenDataMode DataMode = 1</param>
-		[SupportByVersionAttribute("Access", 10,11,12,14,15,16)]
+		[SupportByVersion("Access", 10,11,12,14,15,16)]
 		public void OpenFunction(object functionName, object view, object dataMode)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(functionName, view, dataMode);
-			Invoker.Method(this, "OpenFunction", paramsArray);
+			 Factory.ExecuteMethod(this, "OpenFunction", functionName, view, dataMode);
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194192.aspx
 		/// </summary>
-		/// <param name="functionName">object FunctionName</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194192.aspx </remarks>
+		/// <param name="functionName">object functionName</param>
+		[CustomMethod]
+		[SupportByVersion("Access", 10,11,12,14,15,16)]
 		public void OpenFunction(object functionName)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(functionName);
-			Invoker.Method(this, "OpenFunction", paramsArray);
+			 Factory.ExecuteMethod(this, "OpenFunction", functionName);
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194192.aspx
 		/// </summary>
-		/// <param name="functionName">object FunctionName</param>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194192.aspx </remarks>
+		/// <param name="functionName">object functionName</param>
 		/// <param name="view">optional NetOffice.AccessApi.Enums.AcView View = 0</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 10,11,12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Access", 10,11,12,14,15,16)]
 		public void OpenFunction(object functionName, object view)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(functionName, view);
-			Invoker.Method(this, "OpenFunction", paramsArray);
+			 Factory.ExecuteMethod(this, "OpenFunction", functionName, view);
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="filterName">optional object FilterName</param>
-		/// <param name="whereCondition">optional object WhereCondition</param>
+		/// <param name="filterName">optional object filterName</param>
+		/// <param name="whereCondition">optional object whereCondition</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("Access", 12,14,15,16)]
+		[SupportByVersion("Access", 12,14,15,16)]
 		public void ApplyFilterOld0(object filterName, object whereCondition)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(filterName, whereCondition);
-			Invoker.Method(this, "ApplyFilterOld0", paramsArray);
+			 Factory.ExecuteMethod(this, "ApplyFilterOld0", filterName, whereCondition);
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15, 16
-		/// 
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Access", 12,14,15,16)]
 		public void ApplyFilterOld0()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "ApplyFilterOld0", paramsArray);
+			 Factory.ExecuteMethod(this, "ApplyFilterOld0");
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="filterName">optional object FilterName</param>
+		/// <param name="filterName">optional object filterName</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Access", 12,14,15,16)]
 		public void ApplyFilterOld0(object filterName)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(filterName);
-			Invoker.Method(this, "ApplyFilterOld0", paramsArray);
+			 Factory.ExecuteMethod(this, "ApplyFilterOld0", filterName);
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="objectType">NetOffice.AccessApi.Enums.AcOutputObjectType ObjectType</param>
-		/// <param name="objectName">optional object ObjectName</param>
-		/// <param name="outputFormat">optional object OutputFormat</param>
-		/// <param name="outputFile">optional object OutputFile</param>
-		/// <param name="autoStart">optional object AutoStart</param>
-		/// <param name="templateFile">optional object TemplateFile</param>
-		/// <param name="encoding">optional object Encoding</param>
+		/// <param name="objectType">NetOffice.AccessApi.Enums.AcOutputObjectType objectType</param>
+		/// <param name="objectName">optional object objectName</param>
+		/// <param name="outputFormat">optional object outputFormat</param>
+		/// <param name="outputFile">optional object outputFile</param>
+		/// <param name="autoStart">optional object autoStart</param>
+		/// <param name="templateFile">optional object templateFile</param>
+		/// <param name="encoding">optional object encoding</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("Access", 12,14,15,16)]
+		[SupportByVersion("Access", 12,14,15,16)]
 		public void OutputToOld1(NetOffice.AccessApi.Enums.AcOutputObjectType objectType, object objectName, object outputFormat, object outputFile, object autoStart, object templateFile, object encoding)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(objectType, objectName, outputFormat, outputFile, autoStart, templateFile, encoding);
-			Invoker.Method(this, "OutputToOld1", paramsArray);
+			 Factory.ExecuteMethod(this, "OutputToOld1", new object[]{ objectType, objectName, outputFormat, outputFile, autoStart, templateFile, encoding });
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="objectType">NetOffice.AccessApi.Enums.AcOutputObjectType ObjectType</param>
+		/// <param name="objectType">NetOffice.AccessApi.Enums.AcOutputObjectType objectType</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Access", 12,14,15,16)]
 		public void OutputToOld1(NetOffice.AccessApi.Enums.AcOutputObjectType objectType)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(objectType);
-			Invoker.Method(this, "OutputToOld1", paramsArray);
+			 Factory.ExecuteMethod(this, "OutputToOld1", objectType);
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="objectType">NetOffice.AccessApi.Enums.AcOutputObjectType ObjectType</param>
-		/// <param name="objectName">optional object ObjectName</param>
+		/// <param name="objectType">NetOffice.AccessApi.Enums.AcOutputObjectType objectType</param>
+		/// <param name="objectName">optional object objectName</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Access", 12,14,15,16)]
 		public void OutputToOld1(NetOffice.AccessApi.Enums.AcOutputObjectType objectType, object objectName)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(objectType, objectName);
-			Invoker.Method(this, "OutputToOld1", paramsArray);
+			 Factory.ExecuteMethod(this, "OutputToOld1", objectType, objectName);
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="objectType">NetOffice.AccessApi.Enums.AcOutputObjectType ObjectType</param>
-		/// <param name="objectName">optional object ObjectName</param>
-		/// <param name="outputFormat">optional object OutputFormat</param>
+		/// <param name="objectType">NetOffice.AccessApi.Enums.AcOutputObjectType objectType</param>
+		/// <param name="objectName">optional object objectName</param>
+		/// <param name="outputFormat">optional object outputFormat</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Access", 12,14,15,16)]
 		public void OutputToOld1(NetOffice.AccessApi.Enums.AcOutputObjectType objectType, object objectName, object outputFormat)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(objectType, objectName, outputFormat);
-			Invoker.Method(this, "OutputToOld1", paramsArray);
+			 Factory.ExecuteMethod(this, "OutputToOld1", objectType, objectName, outputFormat);
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="objectType">NetOffice.AccessApi.Enums.AcOutputObjectType ObjectType</param>
-		/// <param name="objectName">optional object ObjectName</param>
-		/// <param name="outputFormat">optional object OutputFormat</param>
-		/// <param name="outputFile">optional object OutputFile</param>
+		/// <param name="objectType">NetOffice.AccessApi.Enums.AcOutputObjectType objectType</param>
+		/// <param name="objectName">optional object objectName</param>
+		/// <param name="outputFormat">optional object outputFormat</param>
+		/// <param name="outputFile">optional object outputFile</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Access", 12,14,15,16)]
 		public void OutputToOld1(NetOffice.AccessApi.Enums.AcOutputObjectType objectType, object objectName, object outputFormat, object outputFile)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(objectType, objectName, outputFormat, outputFile);
-			Invoker.Method(this, "OutputToOld1", paramsArray);
+			 Factory.ExecuteMethod(this, "OutputToOld1", objectType, objectName, outputFormat, outputFile);
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="objectType">NetOffice.AccessApi.Enums.AcOutputObjectType ObjectType</param>
-		/// <param name="objectName">optional object ObjectName</param>
-		/// <param name="outputFormat">optional object OutputFormat</param>
-		/// <param name="outputFile">optional object OutputFile</param>
-		/// <param name="autoStart">optional object AutoStart</param>
+		/// <param name="objectType">NetOffice.AccessApi.Enums.AcOutputObjectType objectType</param>
+		/// <param name="objectName">optional object objectName</param>
+		/// <param name="outputFormat">optional object outputFormat</param>
+		/// <param name="outputFile">optional object outputFile</param>
+		/// <param name="autoStart">optional object autoStart</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Access", 12,14,15,16)]
 		public void OutputToOld1(NetOffice.AccessApi.Enums.AcOutputObjectType objectType, object objectName, object outputFormat, object outputFile, object autoStart)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(objectType, objectName, outputFormat, outputFile, autoStart);
-			Invoker.Method(this, "OutputToOld1", paramsArray);
+			 Factory.ExecuteMethod(this, "OutputToOld1", new object[]{ objectType, objectName, outputFormat, outputFile, autoStart });
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="objectType">NetOffice.AccessApi.Enums.AcOutputObjectType ObjectType</param>
-		/// <param name="objectName">optional object ObjectName</param>
-		/// <param name="outputFormat">optional object OutputFormat</param>
-		/// <param name="outputFile">optional object OutputFile</param>
-		/// <param name="autoStart">optional object AutoStart</param>
-		/// <param name="templateFile">optional object TemplateFile</param>
+		/// <param name="objectType">NetOffice.AccessApi.Enums.AcOutputObjectType objectType</param>
+		/// <param name="objectName">optional object objectName</param>
+		/// <param name="outputFormat">optional object outputFormat</param>
+		/// <param name="outputFile">optional object outputFile</param>
+		/// <param name="autoStart">optional object autoStart</param>
+		/// <param name="templateFile">optional object templateFile</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Access", 12,14,15,16)]
 		public void OutputToOld1(NetOffice.AccessApi.Enums.AcOutputObjectType objectType, object objectName, object outputFormat, object outputFile, object autoStart, object templateFile)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(objectType, objectName, outputFormat, outputFile, autoStart, templateFile);
-			Invoker.Method(this, "OutputToOld1", paramsArray);
+			 Factory.ExecuteMethod(this, "OutputToOld1", new object[]{ objectType, objectName, outputFormat, outputFile, autoStart, templateFile });
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff198137.aspx
 		/// </summary>
-		/// <param name="transferType">NetOffice.AccessApi.Enums.AcSharePointListTransferType TransferType</param>
-		/// <param name="siteAddress">object SiteAddress</param>
-		/// <param name="listID">object ListID</param>
-		/// <param name="viewID">optional object ViewID</param>
-		/// <param name="tableName">optional object TableName</param>
-		/// <param name="getLookupDisplayValues">optional object GetLookupDisplayValues</param>
-		[SupportByVersionAttribute("Access", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff198137.aspx </remarks>
+		/// <param name="transferType">NetOffice.AccessApi.Enums.AcSharePointListTransferType transferType</param>
+		/// <param name="siteAddress">object siteAddress</param>
+		/// <param name="listID">object listID</param>
+		/// <param name="viewID">optional object viewID</param>
+		/// <param name="tableName">optional object tableName</param>
+		/// <param name="getLookupDisplayValues">optional object getLookupDisplayValues</param>
+		[SupportByVersion("Access", 12,14,15,16)]
 		public void TransferSharePointList(NetOffice.AccessApi.Enums.AcSharePointListTransferType transferType, object siteAddress, object listID, object viewID, object tableName, object getLookupDisplayValues)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(transferType, siteAddress, listID, viewID, tableName, getLookupDisplayValues);
-			Invoker.Method(this, "TransferSharePointList", paramsArray);
+			 Factory.ExecuteMethod(this, "TransferSharePointList", new object[]{ transferType, siteAddress, listID, viewID, tableName, getLookupDisplayValues });
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff198137.aspx
 		/// </summary>
-		/// <param name="transferType">NetOffice.AccessApi.Enums.AcSharePointListTransferType TransferType</param>
-		/// <param name="siteAddress">object SiteAddress</param>
-		/// <param name="listID">object ListID</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff198137.aspx </remarks>
+		/// <param name="transferType">NetOffice.AccessApi.Enums.AcSharePointListTransferType transferType</param>
+		/// <param name="siteAddress">object siteAddress</param>
+		/// <param name="listID">object listID</param>
+		[CustomMethod]
+		[SupportByVersion("Access", 12,14,15,16)]
 		public void TransferSharePointList(NetOffice.AccessApi.Enums.AcSharePointListTransferType transferType, object siteAddress, object listID)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(transferType, siteAddress, listID);
-			Invoker.Method(this, "TransferSharePointList", paramsArray);
+			 Factory.ExecuteMethod(this, "TransferSharePointList", transferType, siteAddress, listID);
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff198137.aspx
 		/// </summary>
-		/// <param name="transferType">NetOffice.AccessApi.Enums.AcSharePointListTransferType TransferType</param>
-		/// <param name="siteAddress">object SiteAddress</param>
-		/// <param name="listID">object ListID</param>
-		/// <param name="viewID">optional object ViewID</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff198137.aspx </remarks>
+		/// <param name="transferType">NetOffice.AccessApi.Enums.AcSharePointListTransferType transferType</param>
+		/// <param name="siteAddress">object siteAddress</param>
+		/// <param name="listID">object listID</param>
+		/// <param name="viewID">optional object viewID</param>
+		[CustomMethod]
+		[SupportByVersion("Access", 12,14,15,16)]
 		public void TransferSharePointList(NetOffice.AccessApi.Enums.AcSharePointListTransferType transferType, object siteAddress, object listID, object viewID)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(transferType, siteAddress, listID, viewID);
-			Invoker.Method(this, "TransferSharePointList", paramsArray);
+			 Factory.ExecuteMethod(this, "TransferSharePointList", transferType, siteAddress, listID, viewID);
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff198137.aspx
 		/// </summary>
-		/// <param name="transferType">NetOffice.AccessApi.Enums.AcSharePointListTransferType TransferType</param>
-		/// <param name="siteAddress">object SiteAddress</param>
-		/// <param name="listID">object ListID</param>
-		/// <param name="viewID">optional object ViewID</param>
-		/// <param name="tableName">optional object TableName</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff198137.aspx </remarks>
+		/// <param name="transferType">NetOffice.AccessApi.Enums.AcSharePointListTransferType transferType</param>
+		/// <param name="siteAddress">object siteAddress</param>
+		/// <param name="listID">object listID</param>
+		/// <param name="viewID">optional object viewID</param>
+		/// <param name="tableName">optional object tableName</param>
+		[CustomMethod]
+		[SupportByVersion("Access", 12,14,15,16)]
 		public void TransferSharePointList(NetOffice.AccessApi.Enums.AcSharePointListTransferType transferType, object siteAddress, object listID, object viewID, object tableName)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(transferType, siteAddress, listID, viewID, tableName);
-			Invoker.Method(this, "TransferSharePointList", paramsArray);
+			 Factory.ExecuteMethod(this, "TransferSharePointList", new object[]{ transferType, siteAddress, listID, viewID, tableName });
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff844747.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Access", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff844747.aspx </remarks>
+		[SupportByVersion("Access", 12,14,15,16)]
 		public void CloseDatabase()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "CloseDatabase", paramsArray);
+			 Factory.ExecuteMethod(this, "CloseDatabase");
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff191916.aspx
 		/// </summary>
-		/// <param name="category">optional object Category</param>
-		/// <param name="group">optional object Group</param>
-		[SupportByVersionAttribute("Access", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff191916.aspx </remarks>
+		/// <param name="category">optional object category</param>
+		/// <param name="group">optional object group</param>
+		[SupportByVersion("Access", 12,14,15,16)]
 		public void NavigateTo(object category, object group)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(category, group);
-			Invoker.Method(this, "NavigateTo", paramsArray);
+			 Factory.ExecuteMethod(this, "NavigateTo", category, group);
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff191916.aspx
 		/// </summary>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff191916.aspx </remarks>
+		[CustomMethod]
+		[SupportByVersion("Access", 12,14,15,16)]
 		public void NavigateTo()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "NavigateTo", paramsArray);
+			 Factory.ExecuteMethod(this, "NavigateTo");
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff191916.aspx
 		/// </summary>
-		/// <param name="category">optional object Category</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff191916.aspx </remarks>
+		/// <param name="category">optional object category</param>
+		[CustomMethod]
+		[SupportByVersion("Access", 12,14,15,16)]
 		public void NavigateTo(object category)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(category);
-			Invoker.Method(this, "NavigateTo", paramsArray);
+			 Factory.ExecuteMethod(this, "NavigateTo", category);
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836254.aspx
 		/// </summary>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff836254.aspx </remarks>
 		/// <param name="objectType">optional NetOffice.AccessApi.Enums.AcDataObjectType ObjectType = -1</param>
-		/// <param name="objectName">optional object ObjectName</param>
+		/// <param name="objectName">optional object objectName</param>
 		/// <param name="record">optional NetOffice.AccessApi.Enums.AcRecord Record = 2</param>
-		/// <param name="whereCondition">optional object WhereCondition</param>
-		[SupportByVersionAttribute("Access", 12,14,15,16)]
+		/// <param name="whereCondition">optional object whereCondition</param>
+		[SupportByVersion("Access", 12,14,15,16)]
 		public void SearchForRecord(object objectType, object objectName, object record, object whereCondition)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(objectType, objectName, record, whereCondition);
-			Invoker.Method(this, "SearchForRecord", paramsArray);
+			 Factory.ExecuteMethod(this, "SearchForRecord", objectType, objectName, record, whereCondition);
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836254.aspx
 		/// </summary>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff836254.aspx </remarks>
+		[CustomMethod]
+		[SupportByVersion("Access", 12,14,15,16)]
 		public void SearchForRecord()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "SearchForRecord", paramsArray);
+			 Factory.ExecuteMethod(this, "SearchForRecord");
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836254.aspx
 		/// </summary>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff836254.aspx </remarks>
 		/// <param name="objectType">optional NetOffice.AccessApi.Enums.AcDataObjectType ObjectType = -1</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Access", 12,14,15,16)]
 		public void SearchForRecord(object objectType)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(objectType);
-			Invoker.Method(this, "SearchForRecord", paramsArray);
+			 Factory.ExecuteMethod(this, "SearchForRecord", objectType);
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836254.aspx
 		/// </summary>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff836254.aspx </remarks>
 		/// <param name="objectType">optional NetOffice.AccessApi.Enums.AcDataObjectType ObjectType = -1</param>
-		/// <param name="objectName">optional object ObjectName</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 12,14,15,16)]
+		/// <param name="objectName">optional object objectName</param>
+		[CustomMethod]
+		[SupportByVersion("Access", 12,14,15,16)]
 		public void SearchForRecord(object objectType, object objectName)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(objectType, objectName);
-			Invoker.Method(this, "SearchForRecord", paramsArray);
+			 Factory.ExecuteMethod(this, "SearchForRecord", objectType, objectName);
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836254.aspx
 		/// </summary>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff836254.aspx </remarks>
 		/// <param name="objectType">optional NetOffice.AccessApi.Enums.AcDataObjectType ObjectType = -1</param>
-		/// <param name="objectName">optional object ObjectName</param>
+		/// <param name="objectName">optional object objectName</param>
 		/// <param name="record">optional NetOffice.AccessApi.Enums.AcRecord Record = 2</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Access", 12,14,15,16)]
 		public void SearchForRecord(object objectType, object objectName, object record)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(objectType, objectName, record);
-			Invoker.Method(this, "SearchForRecord", paramsArray);
+			 Factory.ExecuteMethod(this, "SearchForRecord", objectType, objectName, record);
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192301.aspx
 		/// </summary>
-		/// <param name="controlName">object ControlName</param>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff192301.aspx </remarks>
+		/// <param name="controlName">object controlName</param>
 		/// <param name="property">optional NetOffice.AccessApi.Enums.AcProperty Property = 0</param>
-		/// <param name="value">optional object Value</param>
-		[SupportByVersionAttribute("Access", 12,14,15,16)]
+		/// <param name="value">optional object value</param>
+		[SupportByVersion("Access", 12,14,15,16)]
 		public void SetProperty(object controlName, object property, object value)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(controlName, property, value);
-			Invoker.Method(this, "SetProperty", paramsArray);
+			 Factory.ExecuteMethod(this, "SetProperty", controlName, property, value);
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192301.aspx
 		/// </summary>
-		/// <param name="controlName">object ControlName</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff192301.aspx </remarks>
+		/// <param name="controlName">object controlName</param>
+		[CustomMethod]
+		[SupportByVersion("Access", 12,14,15,16)]
 		public void SetProperty(object controlName)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(controlName);
-			Invoker.Method(this, "SetProperty", paramsArray);
+			 Factory.ExecuteMethod(this, "SetProperty", controlName);
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192301.aspx
 		/// </summary>
-		/// <param name="controlName">object ControlName</param>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff192301.aspx </remarks>
+		/// <param name="controlName">object controlName</param>
 		/// <param name="property">optional NetOffice.AccessApi.Enums.AcProperty Property = 0</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Access", 12,14,15,16)]
 		public void SetProperty(object controlName, object property)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(controlName, property);
-			Invoker.Method(this, "SetProperty", paramsArray);
+			 Factory.ExecuteMethod(this, "SetProperty", controlName, property);
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837036.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Access", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff837036.aspx </remarks>
+		[SupportByVersion("Access", 12,14,15,16)]
 		public void SingleStep()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "SingleStep", paramsArray);
+			 Factory.ExecuteMethod(this, "SingleStep");
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff191914.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Access", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff191914.aspx </remarks>
+		[SupportByVersion("Access", 12,14,15,16)]
 		public void ClearMacroError()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "ClearMacroError", paramsArray);
+			 Factory.ExecuteMethod(this, "ClearMacroError");
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff821741.aspx
 		/// </summary>
-		/// <param name="show">object Show</param>
-		/// <param name="category">optional object Category</param>
-		[SupportByVersionAttribute("Access", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff821741.aspx </remarks>
+		/// <param name="show">object show</param>
+		/// <param name="category">optional object category</param>
+		[SupportByVersion("Access", 12,14,15,16)]
 		public void SetDisplayedCategories(object show, object category)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(show, category);
-			Invoker.Method(this, "SetDisplayedCategories", paramsArray);
+			 Factory.ExecuteMethod(this, "SetDisplayedCategories", show, category);
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff821741.aspx
 		/// </summary>
-		/// <param name="show">object Show</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff821741.aspx </remarks>
+		/// <param name="show">object show</param>
+		[CustomMethod]
+		[SupportByVersion("Access", 12,14,15,16)]
 		public void SetDisplayedCategories(object show)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(show);
-			Invoker.Method(this, "SetDisplayedCategories", paramsArray);
+			 Factory.ExecuteMethod(this, "SetDisplayedCategories", show);
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195088.aspx
 		/// </summary>
-		/// <param name="_lock">object Lock</param>
-		[SupportByVersionAttribute("Access", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff195088.aspx </remarks>
+		/// <param name="_lock">object lock</param>
+		[SupportByVersion("Access", 12,14,15,16)]
 		public void LockNavigationPane(object _lock)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(_lock);
-			Invoker.Method(this, "LockNavigationPane", paramsArray);
+			 Factory.ExecuteMethod(this, "LockNavigationPane", _lock);
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff834375.aspx
 		/// </summary>
-		/// <param name="savedImportExportName">object SavedImportExportName</param>
-		[SupportByVersionAttribute("Access", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff834375.aspx </remarks>
+		/// <param name="savedImportExportName">object savedImportExportName</param>
+		[SupportByVersion("Access", 12,14,15,16)]
 		public void RunSavedImportExport(object savedImportExportName)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(savedImportExportName);
-			Invoker.Method(this, "RunSavedImportExport", paramsArray);
+			 Factory.ExecuteMethod(this, "RunSavedImportExport", savedImportExportName);
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196381.aspx
 		/// </summary>
-		/// <param name="objectType">NetOffice.AccessApi.Enums.AcBrowseToObjectType ObjectType</param>
-		/// <param name="objectName">object ObjectName</param>
-		/// <param name="pathtoSubformControl">optional object PathtoSubformControl</param>
-		/// <param name="whereCondition">optional object WhereCondition</param>
-		/// <param name="page">optional object Page</param>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff196381.aspx </remarks>
+		/// <param name="objectType">NetOffice.AccessApi.Enums.AcBrowseToObjectType objectType</param>
+		/// <param name="objectName">object objectName</param>
+		/// <param name="pathtoSubformControl">optional object pathtoSubformControl</param>
+		/// <param name="whereCondition">optional object whereCondition</param>
+		/// <param name="page">optional object page</param>
 		/// <param name="dataMode">optional NetOffice.AccessApi.Enums.AcFormOpenDataMode DataMode = 1</param>
-		[SupportByVersionAttribute("Access", 14,15,16)]
+		[SupportByVersion("Access", 14,15,16)]
 		public void BrowseTo(NetOffice.AccessApi.Enums.AcBrowseToObjectType objectType, object objectName, object pathtoSubformControl, object whereCondition, object page, object dataMode)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(objectType, objectName, pathtoSubformControl, whereCondition, page, dataMode);
-			Invoker.Method(this, "BrowseTo", paramsArray);
+			 Factory.ExecuteMethod(this, "BrowseTo", new object[]{ objectType, objectName, pathtoSubformControl, whereCondition, page, dataMode });
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196381.aspx
 		/// </summary>
-		/// <param name="objectType">NetOffice.AccessApi.Enums.AcBrowseToObjectType ObjectType</param>
-		/// <param name="objectName">object ObjectName</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff196381.aspx </remarks>
+		/// <param name="objectType">NetOffice.AccessApi.Enums.AcBrowseToObjectType objectType</param>
+		/// <param name="objectName">object objectName</param>
+		[CustomMethod]
+		[SupportByVersion("Access", 14,15,16)]
 		public void BrowseTo(NetOffice.AccessApi.Enums.AcBrowseToObjectType objectType, object objectName)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(objectType, objectName);
-			Invoker.Method(this, "BrowseTo", paramsArray);
+			 Factory.ExecuteMethod(this, "BrowseTo", objectType, objectName);
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196381.aspx
 		/// </summary>
-		/// <param name="objectType">NetOffice.AccessApi.Enums.AcBrowseToObjectType ObjectType</param>
-		/// <param name="objectName">object ObjectName</param>
-		/// <param name="pathtoSubformControl">optional object PathtoSubformControl</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff196381.aspx </remarks>
+		/// <param name="objectType">NetOffice.AccessApi.Enums.AcBrowseToObjectType objectType</param>
+		/// <param name="objectName">object objectName</param>
+		/// <param name="pathtoSubformControl">optional object pathtoSubformControl</param>
+		[CustomMethod]
+		[SupportByVersion("Access", 14,15,16)]
 		public void BrowseTo(NetOffice.AccessApi.Enums.AcBrowseToObjectType objectType, object objectName, object pathtoSubformControl)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(objectType, objectName, pathtoSubformControl);
-			Invoker.Method(this, "BrowseTo", paramsArray);
+			 Factory.ExecuteMethod(this, "BrowseTo", objectType, objectName, pathtoSubformControl);
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196381.aspx
 		/// </summary>
-		/// <param name="objectType">NetOffice.AccessApi.Enums.AcBrowseToObjectType ObjectType</param>
-		/// <param name="objectName">object ObjectName</param>
-		/// <param name="pathtoSubformControl">optional object PathtoSubformControl</param>
-		/// <param name="whereCondition">optional object WhereCondition</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff196381.aspx </remarks>
+		/// <param name="objectType">NetOffice.AccessApi.Enums.AcBrowseToObjectType objectType</param>
+		/// <param name="objectName">object objectName</param>
+		/// <param name="pathtoSubformControl">optional object pathtoSubformControl</param>
+		/// <param name="whereCondition">optional object whereCondition</param>
+		[CustomMethod]
+		[SupportByVersion("Access", 14,15,16)]
 		public void BrowseTo(NetOffice.AccessApi.Enums.AcBrowseToObjectType objectType, object objectName, object pathtoSubformControl, object whereCondition)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(objectType, objectName, pathtoSubformControl, whereCondition);
-			Invoker.Method(this, "BrowseTo", paramsArray);
+			 Factory.ExecuteMethod(this, "BrowseTo", objectType, objectName, pathtoSubformControl, whereCondition);
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196381.aspx
 		/// </summary>
-		/// <param name="objectType">NetOffice.AccessApi.Enums.AcBrowseToObjectType ObjectType</param>
-		/// <param name="objectName">object ObjectName</param>
-		/// <param name="pathtoSubformControl">optional object PathtoSubformControl</param>
-		/// <param name="whereCondition">optional object WhereCondition</param>
-		/// <param name="page">optional object Page</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff196381.aspx </remarks>
+		/// <param name="objectType">NetOffice.AccessApi.Enums.AcBrowseToObjectType objectType</param>
+		/// <param name="objectName">object objectName</param>
+		/// <param name="pathtoSubformControl">optional object pathtoSubformControl</param>
+		/// <param name="whereCondition">optional object whereCondition</param>
+		/// <param name="page">optional object page</param>
+		[CustomMethod]
+		[SupportByVersion("Access", 14,15,16)]
 		public void BrowseTo(NetOffice.AccessApi.Enums.AcBrowseToObjectType objectType, object objectName, object pathtoSubformControl, object whereCondition, object page)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(objectType, objectName, pathtoSubformControl, whereCondition, page);
-			Invoker.Method(this, "BrowseTo", paramsArray);
+			 Factory.ExecuteMethod(this, "BrowseTo", new object[]{ objectType, objectName, pathtoSubformControl, whereCondition, page });
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194182.aspx
 		/// </summary>
-		/// <param name="name">object Name</param>
-		/// <param name="expression">object Expression</param>
-		[SupportByVersionAttribute("Access", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194182.aspx </remarks>
+		/// <param name="name">object name</param>
+		/// <param name="expression">object expression</param>
+		[SupportByVersion("Access", 14,15,16)]
 		public void SetParameter(object name, object expression)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(name, expression);
-			Invoker.Method(this, "SetParameter", paramsArray);
+			 Factory.ExecuteMethod(this, "SetParameter", name, expression);
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836068.aspx
 		/// </summary>
-		/// <param name="macroName">object MacroName</param>
-		[SupportByVersionAttribute("Access", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff836068.aspx </remarks>
+		/// <param name="macroName">object macroName</param>
+		[SupportByVersion("Access", 14,15,16)]
 		public void RunDataMacro(object macroName)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(macroName);
-			Invoker.Method(this, "RunDataMacro", paramsArray);
+			 Factory.ExecuteMethod(this, "RunDataMacro", macroName);
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff844761.aspx
 		/// </summary>
-		/// <param name="orderBy">object OrderBy</param>
-		/// <param name="controlName">optional object ControlName</param>
-		[SupportByVersionAttribute("Access", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff844761.aspx </remarks>
+		/// <param name="orderBy">object orderBy</param>
+		/// <param name="controlName">optional object controlName</param>
+		[SupportByVersion("Access", 14,15,16)]
 		public void SetOrderBy(object orderBy, object controlName)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(orderBy, controlName);
-			Invoker.Method(this, "SetOrderBy", paramsArray);
+			 Factory.ExecuteMethod(this, "SetOrderBy", orderBy, controlName);
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff844761.aspx
 		/// </summary>
-		/// <param name="orderBy">object OrderBy</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff844761.aspx </remarks>
+		/// <param name="orderBy">object orderBy</param>
+		[CustomMethod]
+		[SupportByVersion("Access", 14,15,16)]
 		public void SetOrderBy(object orderBy)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(orderBy);
-			Invoker.Method(this, "SetOrderBy", paramsArray);
+			 Factory.ExecuteMethod(this, "SetOrderBy", orderBy);
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197950.aspx
 		/// </summary>
-		/// <param name="filterName">optional object FilterName</param>
-		/// <param name="whereCondition">optional object WhereCondition</param>
-		/// <param name="controlName">optional object ControlName</param>
-		[SupportByVersionAttribute("Access", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff197950.aspx </remarks>
+		/// <param name="filterName">optional object filterName</param>
+		/// <param name="whereCondition">optional object whereCondition</param>
+		/// <param name="controlName">optional object controlName</param>
+		[SupportByVersion("Access", 14,15,16)]
 		public void SetFilter(object filterName, object whereCondition, object controlName)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(filterName, whereCondition, controlName);
-			Invoker.Method(this, "SetFilter", paramsArray);
+			 Factory.ExecuteMethod(this, "SetFilter", filterName, whereCondition, controlName);
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197950.aspx
 		/// </summary>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff197950.aspx </remarks>
+		[CustomMethod]
+		[SupportByVersion("Access", 14,15,16)]
 		public void SetFilter()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "SetFilter", paramsArray);
+			 Factory.ExecuteMethod(this, "SetFilter");
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197950.aspx
 		/// </summary>
-		/// <param name="filterName">optional object FilterName</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff197950.aspx </remarks>
+		/// <param name="filterName">optional object filterName</param>
+		[CustomMethod]
+		[SupportByVersion("Access", 14,15,16)]
 		public void SetFilter(object filterName)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(filterName);
-			Invoker.Method(this, "SetFilter", paramsArray);
+			 Factory.ExecuteMethod(this, "SetFilter", filterName);
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197950.aspx
 		/// </summary>
-		/// <param name="filterName">optional object FilterName</param>
-		/// <param name="whereCondition">optional object WhereCondition</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Access", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff197950.aspx </remarks>
+		/// <param name="filterName">optional object filterName</param>
+		/// <param name="whereCondition">optional object whereCondition</param>
+		[CustomMethod]
+		[SupportByVersion("Access", 14,15,16)]
 		public void SetFilter(object filterName, object whereCondition)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(filterName, whereCondition);
-			Invoker.Method(this, "SetFilter", paramsArray);
+			 Factory.ExecuteMethod(this, "SetFilter", filterName, whereCondition);
 		}
 
 		/// <summary>
 		/// SupportByVersion Access 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff191907.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Access", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff191907.aspx </remarks>
+		[SupportByVersion("Access", 14,15,16)]
 		public void RefreshRecord()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "RefreshRecord", paramsArray);
+			 Factory.ExecuteMethod(this, "RefreshRecord");
 		}
 
 		#endregion
+
 		#pragma warning restore
 	}
 }

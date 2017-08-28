@@ -1,12 +1,11 @@
 ﻿using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
-using NetOffice;
-using NetOffice.Misc;
+using NetOffice.Attributes;
+using NetOffice.Contribution.CollectionsGeneric;
 
 namespace NetOffice.AccessApi
 {
-
 	#region Delegates
 
 	#pragma warning disable
@@ -14,16 +13,17 @@ namespace NetOffice.AccessApi
 
 	#endregion
 
-	///<summary>
+	/// <summary>
 	/// CoClass Application 
 	/// SupportByVersion Access, 9,10,11,12,14,15,16
-	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff821758.aspx
-	///</summary>
-	[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
-	[EntityTypeAttribute(EntityType.IsCoClass)]
-	public class Application : _Application
-	{
+	/// </summary>
+	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff821758.aspx </remarks>
+	[SupportByVersion("Access", 9,10,11,12,14,15,16)]
+	[EntityType(EntityType.IsCoClass), ComProgId("Access.Application"), ModuleProvider(typeof(GlobalHelperModules.GlobalModule))]
+ 	public class Application : _Application, ICloneable<Application>
+    {
 		#pragma warning disable
+
 		#region Fields
 		
 		private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
@@ -37,6 +37,7 @@ namespace NetOffice.AccessApi
         /// <summary>
         /// Instance Type
         /// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
         public override Type InstanceType
         {
             get
@@ -60,7 +61,7 @@ namespace NetOffice.AccessApi
         
         #endregion
         		
-		#region Construction
+		#region Ctor
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -105,18 +106,18 @@ namespace NetOffice.AccessApi
 			_callQuitInDispose = true;
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of Application 
-        ///</summary>		
+        /// </summary>		
 		public Application():base("Access.Application")
 		{
 			_callQuitInDispose = true;
 			GlobalHelperModules.GlobalModule.Instance = this;
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of Application
-        ///</summary>
+        /// </summary>
         ///<param name="progId">registered ProgID</param>
 		public Application(string progId):base(progId)
 		{
@@ -128,6 +129,7 @@ namespace NetOffice.AccessApi
 		/// NetOffice method: dispose instance and all child instances
 		/// </summary>
 		/// <param name="disposeEventBinding">dispose event exported proxies with one or more event recipients</param>
+		[Category("NetOffice"), CoreOverridden]
 		public override void Dispose(bool disposeEventBinding)
 		{
 			if(this.Equals(GlobalHelperModules.GlobalModule.Instance))
@@ -138,6 +140,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// NetOffice method: dispose instance and all child instances
 		/// </summary>
+		[Category("NetOffice"), CoreOverridden]
 		public override void Dispose()
 		{
 			if(this.Equals(GlobalHelperModules.GlobalModule.Instance))
@@ -145,61 +148,41 @@ namespace NetOffice.AccessApi
 			base.Dispose();
 		}
 
-		#endregion
+        #endregion
 
-		#region Static CoClass Methods
+        #region Static CoClass Methods
 
-		/// <summary>
-        /// Returns all running Access.Application objects from the environment/system
+        /// <summary>
+        /// Returns all running Access.Application instances from the environment/system
         /// </summary>
-        /// <returns>an Access.Application array</returns>
-		public static NetOffice.AccessApi.Application[] GetActiveInstances()
-		{		
-			IDisposableEnumeration proxyList = NetOffice.ProxyService.GetActiveInstances("Access","Application");
-			NetRuntimeSystem.Collections.Generic.List<NetOffice.AccessApi.Application> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.AccessApi.Application>();
-			foreach(object proxy in proxyList)
-				resultList.Add( new NetOffice.AccessApi.Application(null, proxy) );
-			return resultList.ToArray();
-		}
+        /// <returns>Access.Application sequence</returns>
+        public static IDisposableSequence<Application> GetActiveInstances()
+        {
+            return Running.ProxyService.GetActiveInstances<Application>("Access", "Application");
+        }
 
-		/// <summary>
-        /// Returns a running Access.Application object from the environment/system.
+        /// <summary>
+        /// Returns a running Access.Application instance from the environment/system
         /// </summary>
-        /// <returns>an Access.Application object or null</returns>
-		public static NetOffice.AccessApi.Application GetActiveInstance()
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Access","Application", false);
-			if(null != proxy)
-				return new NetOffice.AccessApi.Application(null, proxy);
-			else
-				return null;
-		}
+        /// <param name="throwExceptionIfNotFound">throw exception if unable to find an instance</param>
+        /// <returns>Access.Application instance or null</returns>
+        public static Application GetActiveInstance(bool throwExceptionIfNotFound = false)
+        {
+            return Running.ProxyService.GetActiveInstance<Application>("Access", "Application", throwExceptionIfNotFound);
+        }
 
-		/// <summary>
-        /// Returns a running Access.Application object from the environment/system. 
-        /// </summary>
-	    /// <param name="throwOnError">throw an exception if no object was found</param>
-        /// <returns>an Access.Application object or null</returns>
-		public static NetOffice.AccessApi.Application GetActiveInstance(bool throwOnError)
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Access","Application", throwOnError);
-			if(null != proxy)
-				return new NetOffice.AccessApi.Application(null, proxy);
-			else
-				return null;
-		}
-		#endregion
+        #endregion
 
-		#region Events
+        #region Events
 
-		#endregion
-       
-	    #region IEventBinding Member
-        
-		/// <summary>
+        #endregion
+
+        #region IEventBinding Member
+
+        /// <summary>
         /// Creates active sink helper
         /// </summary>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public void CreateEventBridge()
         {
 			if(false == Factory.Settings.EnableEvents)
@@ -340,9 +323,23 @@ namespace NetOffice.AccessApi
 
 			_connectPoint = null;
 		}
-        
+
         #endregion
 
-		#pragma warning restore
-	}
+        #region ICloneable<Application>
+
+        /// <summary>
+        /// Creates a new Application that is a copy of the current instance
+        /// </summary>
+        /// <returns>A new Application that is a copy of this instance</returns>
+        /// <exception cref="CloneException">An unexpected error occured. See inner exception(s) for details.</exception>
+        public new Application Clone()
+        {
+            return base.Clone() as Application;
+        }
+
+        #endregion
+
+        #pragma warning restore
+    }
 }

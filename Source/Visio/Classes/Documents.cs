@@ -1,12 +1,10 @@
 ﻿using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
-using NetOffice;
-using NetOffice.Misc;
+using NetOffice.Attributes;
 
 namespace NetOffice.VisioApi
 {
-
 	#region Delegates
 
 	#pragma warning disable
@@ -16,60 +14,60 @@ namespace NetOffice.VisioApi
 	public delegate void Documents_DocumentSavedAsEventHandler(NetOffice.VisioApi.IVDocument doc);
 	public delegate void Documents_DocumentChangedEventHandler(NetOffice.VisioApi.IVDocument doc);
 	public delegate void Documents_BeforeDocumentCloseEventHandler(NetOffice.VisioApi.IVDocument doc);
-	public delegate void Documents_StyleAddedEventHandler(NetOffice.VisioApi.IVStyle Style);
-	public delegate void Documents_StyleChangedEventHandler(NetOffice.VisioApi.IVStyle Style);
-	public delegate void Documents_BeforeStyleDeleteEventHandler(NetOffice.VisioApi.IVStyle Style);
-	public delegate void Documents_MasterAddedEventHandler(NetOffice.VisioApi.IVMaster Master);
-	public delegate void Documents_MasterChangedEventHandler(NetOffice.VisioApi.IVMaster Master);
-	public delegate void Documents_BeforeMasterDeleteEventHandler(NetOffice.VisioApi.IVMaster Master);
-	public delegate void Documents_PageAddedEventHandler(NetOffice.VisioApi.IVPage Page);
-	public delegate void Documents_PageChangedEventHandler(NetOffice.VisioApi.IVPage Page);
-	public delegate void Documents_BeforePageDeleteEventHandler(NetOffice.VisioApi.IVPage Page);
-	public delegate void Documents_ShapeAddedEventHandler(NetOffice.VisioApi.IVShape Shape);
-	public delegate void Documents_BeforeSelectionDeleteEventHandler(NetOffice.VisioApi.IVSelection Selection);
-	public delegate void Documents_ShapeChangedEventHandler(NetOffice.VisioApi.IVShape Shape);
-	public delegate void Documents_SelectionAddedEventHandler(NetOffice.VisioApi.IVSelection Selection);
-	public delegate void Documents_BeforeShapeDeleteEventHandler(NetOffice.VisioApi.IVShape Shape);
-	public delegate void Documents_TextChangedEventHandler(NetOffice.VisioApi.IVShape Shape);
-	public delegate void Documents_CellChangedEventHandler(NetOffice.VisioApi.IVCell Cell);
+	public delegate void Documents_StyleAddedEventHandler(NetOffice.VisioApi.IVStyle style);
+	public delegate void Documents_StyleChangedEventHandler(NetOffice.VisioApi.IVStyle style);
+	public delegate void Documents_BeforeStyleDeleteEventHandler(NetOffice.VisioApi.IVStyle style);
+	public delegate void Documents_MasterAddedEventHandler(NetOffice.VisioApi.IVMaster master);
+	public delegate void Documents_MasterChangedEventHandler(NetOffice.VisioApi.IVMaster master);
+	public delegate void Documents_BeforeMasterDeleteEventHandler(NetOffice.VisioApi.IVMaster master);
+	public delegate void Documents_PageAddedEventHandler(NetOffice.VisioApi.IVPage page);
+	public delegate void Documents_PageChangedEventHandler(NetOffice.VisioApi.IVPage page);
+	public delegate void Documents_BeforePageDeleteEventHandler(NetOffice.VisioApi.IVPage page);
+	public delegate void Documents_ShapeAddedEventHandler(NetOffice.VisioApi.IVShape shape);
+	public delegate void Documents_BeforeSelectionDeleteEventHandler(NetOffice.VisioApi.IVSelection selection);
+	public delegate void Documents_ShapeChangedEventHandler(NetOffice.VisioApi.IVShape shape);
+	public delegate void Documents_SelectionAddedEventHandler(NetOffice.VisioApi.IVSelection selection);
+	public delegate void Documents_BeforeShapeDeleteEventHandler(NetOffice.VisioApi.IVShape shape);
+	public delegate void Documents_TextChangedEventHandler(NetOffice.VisioApi.IVShape shape);
+	public delegate void Documents_CellChangedEventHandler(NetOffice.VisioApi.IVCell cell);
 	public delegate void Documents_RunModeEnteredEventHandler(NetOffice.VisioApi.IVDocument doc);
 	public delegate void Documents_DesignModeEnteredEventHandler(NetOffice.VisioApi.IVDocument doc);
 	public delegate void Documents_BeforeDocumentSaveEventHandler(NetOffice.VisioApi.IVDocument doc);
 	public delegate void Documents_BeforeDocumentSaveAsEventHandler(NetOffice.VisioApi.IVDocument doc);
-	public delegate void Documents_FormulaChangedEventHandler(NetOffice.VisioApi.IVCell Cell);
-	public delegate void Documents_ConnectionsAddedEventHandler(NetOffice.VisioApi.IVConnects Connects);
-	public delegate void Documents_ConnectionsDeletedEventHandler(NetOffice.VisioApi.IVConnects Connects);
+	public delegate void Documents_FormulaChangedEventHandler(NetOffice.VisioApi.IVCell cell);
+	public delegate void Documents_ConnectionsAddedEventHandler(NetOffice.VisioApi.IVConnects connects);
+	public delegate void Documents_ConnectionsDeletedEventHandler(NetOffice.VisioApi.IVConnects connects);
 	public delegate void Documents_QueryCancelDocumentCloseEventHandler(NetOffice.VisioApi.IVDocument doc);
 	public delegate void Documents_DocumentCloseCanceledEventHandler(NetOffice.VisioApi.IVDocument doc);
-	public delegate void Documents_QueryCancelStyleDeleteEventHandler(NetOffice.VisioApi.IVStyle Style);
-	public delegate void Documents_StyleDeleteCanceledEventHandler(NetOffice.VisioApi.IVStyle Style);
-	public delegate void Documents_QueryCancelMasterDeleteEventHandler(NetOffice.VisioApi.IVMaster Master);
-	public delegate void Documents_MasterDeleteCanceledEventHandler(NetOffice.VisioApi.IVMaster Master);
-	public delegate void Documents_QueryCancelPageDeleteEventHandler(NetOffice.VisioApi.IVPage Page);
-	public delegate void Documents_PageDeleteCanceledEventHandler(NetOffice.VisioApi.IVPage Page);
-	public delegate void Documents_ShapeParentChangedEventHandler(NetOffice.VisioApi.IVShape Shape);
-	public delegate void Documents_BeforeShapeTextEditEventHandler(NetOffice.VisioApi.IVShape Shape);
-	public delegate void Documents_ShapeExitedTextEditEventHandler(NetOffice.VisioApi.IVShape Shape);
-	public delegate void Documents_QueryCancelSelectionDeleteEventHandler(NetOffice.VisioApi.IVSelection Selection);
-	public delegate void Documents_SelectionDeleteCanceledEventHandler(NetOffice.VisioApi.IVSelection Selection);
-	public delegate void Documents_QueryCancelUngroupEventHandler(NetOffice.VisioApi.IVSelection Selection);
-	public delegate void Documents_UngroupCanceledEventHandler(NetOffice.VisioApi.IVSelection Selection);
-	public delegate void Documents_QueryCancelConvertToGroupEventHandler(NetOffice.VisioApi.IVSelection Selection);
-	public delegate void Documents_ConvertToGroupCanceledEventHandler(NetOffice.VisioApi.IVSelection Selection);
-	public delegate void Documents_QueryCancelGroupEventHandler(NetOffice.VisioApi.IVSelection Selection);
-	public delegate void Documents_GroupCanceledEventHandler(NetOffice.VisioApi.IVSelection Selection);
-	public delegate void Documents_ShapeDataGraphicChangedEventHandler(NetOffice.VisioApi.IVShape Shape);
-	public delegate void Documents_BeforeDataRecordsetDeleteEventHandler(NetOffice.VisioApi.IVDataRecordset DataRecordset);
-	public delegate void Documents_DataRecordsetChangedEventHandler(NetOffice.VisioApi.IVDataRecordsetChangedEvent DataRecordsetChanged);
-	public delegate void Documents_DataRecordsetAddedEventHandler(NetOffice.VisioApi.IVDataRecordset DataRecordset);
-	public delegate void Documents_ShapeLinkAddedEventHandler(NetOffice.VisioApi.IVShape Shape, Int32 DataRecordsetID, Int32 DataRowID);
-	public delegate void Documents_ShapeLinkDeletedEventHandler(NetOffice.VisioApi.IVShape Shape, Int32 DataRecordsetID, Int32 DataRowID);
+	public delegate void Documents_QueryCancelStyleDeleteEventHandler(NetOffice.VisioApi.IVStyle style);
+	public delegate void Documents_StyleDeleteCanceledEventHandler(NetOffice.VisioApi.IVStyle style);
+	public delegate void Documents_QueryCancelMasterDeleteEventHandler(NetOffice.VisioApi.IVMaster master);
+	public delegate void Documents_MasterDeleteCanceledEventHandler(NetOffice.VisioApi.IVMaster master);
+	public delegate void Documents_QueryCancelPageDeleteEventHandler(NetOffice.VisioApi.IVPage page);
+	public delegate void Documents_PageDeleteCanceledEventHandler(NetOffice.VisioApi.IVPage page);
+	public delegate void Documents_ShapeParentChangedEventHandler(NetOffice.VisioApi.IVShape shape);
+	public delegate void Documents_BeforeShapeTextEditEventHandler(NetOffice.VisioApi.IVShape shape);
+	public delegate void Documents_ShapeExitedTextEditEventHandler(NetOffice.VisioApi.IVShape shape);
+	public delegate void Documents_QueryCancelSelectionDeleteEventHandler(NetOffice.VisioApi.IVSelection selection);
+	public delegate void Documents_SelectionDeleteCanceledEventHandler(NetOffice.VisioApi.IVSelection selection);
+	public delegate void Documents_QueryCancelUngroupEventHandler(NetOffice.VisioApi.IVSelection selection);
+	public delegate void Documents_UngroupCanceledEventHandler(NetOffice.VisioApi.IVSelection selection);
+	public delegate void Documents_QueryCancelConvertToGroupEventHandler(NetOffice.VisioApi.IVSelection selection);
+	public delegate void Documents_ConvertToGroupCanceledEventHandler(NetOffice.VisioApi.IVSelection selection);
+	public delegate void Documents_QueryCancelGroupEventHandler(NetOffice.VisioApi.IVSelection selection);
+	public delegate void Documents_GroupCanceledEventHandler(NetOffice.VisioApi.IVSelection selection);
+	public delegate void Documents_ShapeDataGraphicChangedEventHandler(NetOffice.VisioApi.IVShape shape);
+	public delegate void Documents_BeforeDataRecordsetDeleteEventHandler(NetOffice.VisioApi.IVDataRecordset dataRecordset);
+	public delegate void Documents_DataRecordsetChangedEventHandler(NetOffice.VisioApi.IVDataRecordsetChangedEvent dataRecordsetChanged);
+	public delegate void Documents_DataRecordsetAddedEventHandler(NetOffice.VisioApi.IVDataRecordset dataRecordset);
+	public delegate void Documents_ShapeLinkAddedEventHandler(NetOffice.VisioApi.IVShape shape, Int32 dataRecordsetID, Int32 dataRowID);
+	public delegate void Documents_ShapeLinkDeletedEventHandler(NetOffice.VisioApi.IVShape shape, Int32 dataRecordsetID, Int32 dataRowID);
 	public delegate void Documents_AfterRemoveHiddenInformationEventHandler(NetOffice.VisioApi.IVDocument doc);
-	public delegate void Documents_ContainerRelationshipAddedEventHandler(NetOffice.VisioApi.IVRelatedShapePairEvent ShapePair);
-	public delegate void Documents_ContainerRelationshipDeletedEventHandler(NetOffice.VisioApi.IVRelatedShapePairEvent ShapePair);
-	public delegate void Documents_CalloutRelationshipAddedEventHandler(NetOffice.VisioApi.IVRelatedShapePairEvent ShapePair);
-	public delegate void Documents_CalloutRelationshipDeletedEventHandler(NetOffice.VisioApi.IVRelatedShapePairEvent ShapePair);
-	public delegate void Documents_RuleSetValidatedEventHandler(NetOffice.VisioApi.IVValidationRuleSet RuleSet);
+	public delegate void Documents_ContainerRelationshipAddedEventHandler(NetOffice.VisioApi.IVRelatedShapePairEvent shapePair);
+	public delegate void Documents_ContainerRelationshipDeletedEventHandler(NetOffice.VisioApi.IVRelatedShapePairEvent shapePair);
+	public delegate void Documents_CalloutRelationshipAddedEventHandler(NetOffice.VisioApi.IVRelatedShapePairEvent shapePair);
+	public delegate void Documents_CalloutRelationshipDeletedEventHandler(NetOffice.VisioApi.IVRelatedShapePairEvent shapePair);
+	public delegate void Documents_RuleSetValidatedEventHandler(NetOffice.VisioApi.IVValidationRuleSet ruleSet);
 	public delegate void Documents_QueryCancelReplaceShapesEventHandler(NetOffice.VisioApi.IVReplaceShapesEvent replaceShapes);
 	public delegate void Documents_ReplaceShapesCanceledEventHandler(NetOffice.VisioApi.IVReplaceShapesEvent replaceShapes);
 	public delegate void Documents_BeforeReplaceShapesEventHandler(NetOffice.VisioApi.IVReplaceShapesEvent replaceShapes);
@@ -79,22 +77,24 @@ namespace NetOffice.VisioApi
 
 	#endregion
 
-	///<summary>
+	/// <summary>
 	/// CoClass Documents 
 	/// SupportByVersion Visio, 11,12,14,15,16
-	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff769272(v=office.14).aspx
-	///</summary>
-	[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
-	[EntityTypeAttribute(EntityType.IsCoClass)]
-	public class Documents : IVDocuments,IEventBinding
+	/// </summary>
+	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/ff769272(v=office.14).aspx </remarks>
+	[SupportByVersion("Visio", 11,12,14,15,16)]
+	[EntityType(EntityType.IsCoClass)]
+	[EventSink(typeof(Events.EDocuments_SinkHelper))]
+	public class Documents : IVDocuments, IEventBinding
 	{
 		#pragma warning disable
+
 		#region Fields
 		
 		private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
 		private string _activeSinkId;
 		private NetRuntimeSystem.Type _thisType;
-		EDocuments_SinkHelper _eDocuments_SinkHelper;
+        private Events.EDocuments_SinkHelper _eDocuments_SinkHelper;
 	
 		#endregion
 
@@ -103,6 +103,7 @@ namespace NetOffice.VisioApi
         /// <summary>
         /// Instance Type
         /// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
         public override Type InstanceType
         {
             get
@@ -169,17 +170,17 @@ namespace NetOffice.VisioApi
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of Documents 
-        ///</summary>		
+        /// </summary>		
 		public Documents():base("Visio.Documents")
 		{
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of Documents
-        ///</summary>
+        /// </summary>
         ///<param name="progId">registered ProgID</param>
 		public Documents(string progId):base(progId)
 		{
@@ -189,46 +190,6 @@ namespace NetOffice.VisioApi
 		#endregion
 
 		#region Static CoClass Methods
-
-		/// <summary>
-        /// Returns all running Visio.Documents objects from the environment/system
-        /// </summary>
-        /// <returns>an Visio.Documents array</returns>
-		public static NetOffice.VisioApi.Documents[] GetActiveInstances()
-		{		
-			IDisposableEnumeration proxyList = NetOffice.ProxyService.GetActiveInstances("Visio","Documents");
-			NetRuntimeSystem.Collections.Generic.List<NetOffice.VisioApi.Documents> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.VisioApi.Documents>();
-			foreach(object proxy in proxyList)
-				resultList.Add( new NetOffice.VisioApi.Documents(null, proxy) );
-			return resultList.ToArray();
-		}
-
-		/// <summary>
-        /// Returns a running Visio.Documents object from the environment/system.
-        /// </summary>
-        /// <returns>an Visio.Documents object or null</returns>
-		public static NetOffice.VisioApi.Documents GetActiveInstance()
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Visio","Documents", false);
-			if(null != proxy)
-				return new NetOffice.VisioApi.Documents(null, proxy);
-			else
-				return null;
-		}
-
-		/// <summary>
-        /// Returns a running Visio.Documents object from the environment/system. 
-        /// </summary>
-	    /// <param name="throwOnError">throw an exception if no object was found</param>
-        /// <returns>an Visio.Documents object or null</returns>
-		public static NetOffice.VisioApi.Documents GetActiveInstance(bool throwOnError)
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Visio","Documents", throwOnError);
-			if(null != proxy)
-				return new NetOffice.VisioApi.Documents(null, proxy);
-			else
-				return null;
-		}
 		#endregion
 
 		#region Events
@@ -1740,12 +1701,12 @@ namespace NetOffice.VisioApi
 				return;
 	
             if (null == _activeSinkId)
-				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, EDocuments_SinkHelper.Id);
+				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, Events.EDocuments_SinkHelper.Id);
 
 
-			if(EDocuments_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
+			if (Events.EDocuments_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
 			{
-				_eDocuments_SinkHelper = new EDocuments_SinkHelper(this, _connectPoint);
+				_eDocuments_SinkHelper = new Events.EDocuments_SinkHelper(this, _connectPoint);
 				return;
 			} 
         }

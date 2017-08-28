@@ -1,23 +1,33 @@
 ﻿using System;
 using NetRuntimeSystem = System;
-using System.Runtime.InteropServices;
-using System.Runtime.CompilerServices;
 using System.ComponentModel;
-using System.Reflection;
-using System.Collections.Generic;
-using NetOffice;
+using NetOffice.Attributes;
+
 namespace NetOffice.ADODBApi
 {
-	///<summary>
+	/// <summary>
 	/// DispatchInterface Connection15_Deprecated 
 	/// SupportByVersion ADODB, 2.5
-	///</summary>
-	[SupportByVersionAttribute("ADODB", 2.5)]
-	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
-	public class Connection15_Deprecated : _ADO
+	/// </summary>
+	[SupportByVersion("ADODB", 2.5)]
+	[EntityType(EntityType.IsDispatchInterface)]
+ 	public class Connection15_Deprecated : _ADO
 	{
 		#pragma warning disable
+
 		#region Type Information
+
+		/// <summary>
+		/// Instance Type
+		/// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
+		public override Type InstanceType
+		{
+			get
+			{
+				return LateBindingApiWrapperType;
+			}
+		}
 
         private static Type _type;
 
@@ -28,14 +38,20 @@ namespace NetOffice.ADODBApi
             {
                 if (null == _type)
                     _type = typeof(Connection15_Deprecated);
-                    
                 return _type;
             }
         }
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public Connection15_Deprecated(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -81,7 +97,7 @@ namespace NetOffice.ADODBApi
 		{
 		}
 		
-		/// <param name="progId">registered ProgID</param>
+		/// <param name="progId">registered progID</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public Connection15_Deprecated(string progId) : base(progId)
 		{
@@ -95,19 +111,16 @@ namespace NetOffice.ADODBApi
 		/// SupportByVersion ADODB 2.5
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("ADODB", 2.5)]
+		[SupportByVersion("ADODB", 2.5)]
 		public string ConnectionString
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "ConnectionString", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "ConnectionString");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "ConnectionString", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "ConnectionString", value);
 			}
 		}
 
@@ -115,19 +128,16 @@ namespace NetOffice.ADODBApi
 		/// SupportByVersion ADODB 2.5
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("ADODB", 2.5)]
+		[SupportByVersion("ADODB", 2.5)]
 		public Int32 CommandTimeout
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "CommandTimeout", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "CommandTimeout");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "CommandTimeout", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "CommandTimeout", value);
 			}
 		}
 
@@ -135,19 +145,16 @@ namespace NetOffice.ADODBApi
 		/// SupportByVersion ADODB 2.5
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("ADODB", 2.5)]
+		[SupportByVersion("ADODB", 2.5)]
 		public Int32 ConnectionTimeout
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "ConnectionTimeout", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "ConnectionTimeout");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "ConnectionTimeout", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "ConnectionTimeout", value);
 			}
 		}
 
@@ -155,14 +162,12 @@ namespace NetOffice.ADODBApi
 		/// SupportByVersion ADODB 2.5
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("ADODB", 2.5)]
+		[SupportByVersion("ADODB", 2.5)]
 		public string Version
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Version", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "Version");
 			}
 		}
 
@@ -170,15 +175,12 @@ namespace NetOffice.ADODBApi
 		/// SupportByVersion ADODB 2.5
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("ADODB", 2.5)]
+		[SupportByVersion("ADODB", 2.5)]
 		public NetOffice.ADODBApi.Errors Errors
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Errors", paramsArray);
-				NetOffice.ADODBApi.Errors newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ADODBApi.Errors.LateBindingApiWrapperType) as NetOffice.ADODBApi.Errors;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ADODBApi.Errors>(this, "Errors", NetOffice.ADODBApi.Errors.LateBindingApiWrapperType);
 			}
 		}
 
@@ -186,19 +188,16 @@ namespace NetOffice.ADODBApi
 		/// SupportByVersion ADODB 2.5
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("ADODB", 2.5)]
+		[SupportByVersion("ADODB", 2.5)]
 		public string DefaultDatabase
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "DefaultDatabase", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "DefaultDatabase");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "DefaultDatabase", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "DefaultDatabase", value);
 			}
 		}
 
@@ -206,20 +205,16 @@ namespace NetOffice.ADODBApi
 		/// SupportByVersion ADODB 2.5
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("ADODB", 2.5)]
+		[SupportByVersion("ADODB", 2.5)]
 		public NetOffice.ADODBApi.Enums.IsolationLevelEnum IsolationLevel
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "IsolationLevel", paramsArray);
-				int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-				return (NetOffice.ADODBApi.Enums.IsolationLevelEnum)intReturnItem;
+				return Factory.ExecuteEnumPropertyGet<NetOffice.ADODBApi.Enums.IsolationLevelEnum>(this, "IsolationLevel");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "IsolationLevel", paramsArray);
+				Factory.ExecuteEnumPropertySet(this, "IsolationLevel", value);
 			}
 		}
 
@@ -227,19 +222,16 @@ namespace NetOffice.ADODBApi
 		/// SupportByVersion ADODB 2.5
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("ADODB", 2.5)]
+		[SupportByVersion("ADODB", 2.5)]
 		public Int32 Attributes
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Attributes", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "Attributes");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "Attributes", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "Attributes", value);
 			}
 		}
 
@@ -247,20 +239,16 @@ namespace NetOffice.ADODBApi
 		/// SupportByVersion ADODB 2.5
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("ADODB", 2.5)]
+		[SupportByVersion("ADODB", 2.5)]
 		public NetOffice.ADODBApi.Enums.CursorLocationEnum CursorLocation
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "CursorLocation", paramsArray);
-				int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-				return (NetOffice.ADODBApi.Enums.CursorLocationEnum)intReturnItem;
+				return Factory.ExecuteEnumPropertyGet<NetOffice.ADODBApi.Enums.CursorLocationEnum>(this, "CursorLocation");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "CursorLocation", paramsArray);
+				Factory.ExecuteEnumPropertySet(this, "CursorLocation", value);
 			}
 		}
 
@@ -268,20 +256,16 @@ namespace NetOffice.ADODBApi
 		/// SupportByVersion ADODB 2.5
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("ADODB", 2.5)]
+		[SupportByVersion("ADODB", 2.5)]
 		public NetOffice.ADODBApi.Enums.ConnectModeEnum Mode
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Mode", paramsArray);
-				int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-				return (NetOffice.ADODBApi.Enums.ConnectModeEnum)intReturnItem;
+				return Factory.ExecuteEnumPropertyGet<NetOffice.ADODBApi.Enums.ConnectModeEnum>(this, "Mode");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "Mode", paramsArray);
+				Factory.ExecuteEnumPropertySet(this, "Mode", value);
 			}
 		}
 
@@ -289,19 +273,16 @@ namespace NetOffice.ADODBApi
 		/// SupportByVersion ADODB 2.5
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("ADODB", 2.5)]
+		[SupportByVersion("ADODB", 2.5)]
 		public string Provider
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Provider", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "Provider");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "Provider", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "Provider", value);
 			}
 		}
 
@@ -309,14 +290,12 @@ namespace NetOffice.ADODBApi
 		/// SupportByVersion ADODB 2.5
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("ADODB", 2.5)]
+		[SupportByVersion("ADODB", 2.5)]
 		public Int32 State
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "State", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "State");
 			}
 		}
 
@@ -326,198 +305,160 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.5
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("ADODB", 2.5)]
+		[SupportByVersion("ADODB", 2.5)]
 		public void Close()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "Close", paramsArray);
+			 Factory.ExecuteMethod(this, "Close");
 		}
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.5
-		/// 
 		/// </summary>
-		/// <param name="commandText">string CommandText</param>
-		/// <param name="recordsAffected">object RecordsAffected</param>
+		/// <param name="commandText">string commandText</param>
+		/// <param name="recordsAffected">object recordsAffected</param>
 		/// <param name="options">optional Int32 Options = -1</param>
-		[SupportByVersionAttribute("ADODB", 2.5)]
+		[SupportByVersion("ADODB", 2.5)]
 		public NetOffice.ADODBApi._Recordset_Deprecated Execute(string commandText, object recordsAffected, object options)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(commandText, recordsAffected, options);
-			object returnItem = Invoker.MethodReturn(this, "Execute", paramsArray);
-			NetOffice.ADODBApi._Recordset_Deprecated newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ADODBApi._Recordset_Deprecated.LateBindingApiWrapperType) as NetOffice.ADODBApi._Recordset_Deprecated;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ADODBApi._Recordset_Deprecated>(this, "Execute", NetOffice.ADODBApi._Recordset_Deprecated.LateBindingApiWrapperType, commandText, recordsAffected, options);
 		}
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.5
-		/// 
 		/// </summary>
-		/// <param name="commandText">string CommandText</param>
-		/// <param name="recordsAffected">object RecordsAffected</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("ADODB", 2.5)]
+		/// <param name="commandText">string commandText</param>
+		/// <param name="recordsAffected">object recordsAffected</param>
+		[CustomMethod]
+		[SupportByVersion("ADODB", 2.5)]
 		public NetOffice.ADODBApi._Recordset_Deprecated Execute(string commandText, object recordsAffected)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(commandText, recordsAffected);
-			object returnItem = Invoker.MethodReturn(this, "Execute", paramsArray);
-			NetOffice.ADODBApi._Recordset_Deprecated newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ADODBApi._Recordset_Deprecated.LateBindingApiWrapperType) as NetOffice.ADODBApi._Recordset_Deprecated;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ADODBApi._Recordset_Deprecated>(this, "Execute", NetOffice.ADODBApi._Recordset_Deprecated.LateBindingApiWrapperType, commandText, recordsAffected);
 		}
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.5
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("ADODB", 2.5)]
+		[SupportByVersion("ADODB", 2.5)]
 		public Int32 BeginTrans()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "BeginTrans", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return Factory.ExecuteInt32MethodGet(this, "BeginTrans");
 		}
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.5
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("ADODB", 2.5)]
+		[SupportByVersion("ADODB", 2.5)]
 		public void CommitTrans()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "CommitTrans", paramsArray);
+			 Factory.ExecuteMethod(this, "CommitTrans");
 		}
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.5
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("ADODB", 2.5)]
+		[SupportByVersion("ADODB", 2.5)]
 		public void RollbackTrans()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "RollbackTrans", paramsArray);
+			 Factory.ExecuteMethod(this, "RollbackTrans");
 		}
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.5
-		/// 
 		/// </summary>
 		/// <param name="connectionString">optional string ConnectionString = </param>
 		/// <param name="userID">optional string UserID = </param>
 		/// <param name="password">optional string Password = </param>
 		/// <param name="options">optional Int32 Options = -1</param>
-		[SupportByVersionAttribute("ADODB", 2.5)]
+		[SupportByVersion("ADODB", 2.5)]
 		public void Open(object connectionString, object userID, object password, object options)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(connectionString, userID, password, options);
-			Invoker.Method(this, "Open", paramsArray);
+			 Factory.ExecuteMethod(this, "Open", connectionString, userID, password, options);
 		}
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.5
-		/// 
 		/// </summary>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("ADODB", 2.5)]
+		[CustomMethod]
+		[SupportByVersion("ADODB", 2.5)]
 		public void Open()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "Open", paramsArray);
+			 Factory.ExecuteMethod(this, "Open");
 		}
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.5
-		/// 
 		/// </summary>
 		/// <param name="connectionString">optional string ConnectionString = </param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("ADODB", 2.5)]
+		[CustomMethod]
+		[SupportByVersion("ADODB", 2.5)]
 		public void Open(object connectionString)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(connectionString);
-			Invoker.Method(this, "Open", paramsArray);
+			 Factory.ExecuteMethod(this, "Open", connectionString);
 		}
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.5
-		/// 
 		/// </summary>
 		/// <param name="connectionString">optional string ConnectionString = </param>
 		/// <param name="userID">optional string UserID = </param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("ADODB", 2.5)]
+		[CustomMethod]
+		[SupportByVersion("ADODB", 2.5)]
 		public void Open(object connectionString, object userID)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(connectionString, userID);
-			Invoker.Method(this, "Open", paramsArray);
+			 Factory.ExecuteMethod(this, "Open", connectionString, userID);
 		}
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.5
-		/// 
 		/// </summary>
 		/// <param name="connectionString">optional string ConnectionString = </param>
 		/// <param name="userID">optional string UserID = </param>
 		/// <param name="password">optional string Password = </param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("ADODB", 2.5)]
+		[CustomMethod]
+		[SupportByVersion("ADODB", 2.5)]
 		public void Open(object connectionString, object userID, object password)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(connectionString, userID, password);
-			Invoker.Method(this, "Open", paramsArray);
+			 Factory.ExecuteMethod(this, "Open", connectionString, userID, password);
 		}
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.5
-		/// 
 		/// </summary>
-		/// <param name="schema">NetOffice.ADODBApi.Enums.SchemaEnum Schema</param>
-		/// <param name="restrictions">optional object Restrictions</param>
-		/// <param name="schemaID">optional object SchemaID</param>
-		[SupportByVersionAttribute("ADODB", 2.5)]
+		/// <param name="schema">NetOffice.ADODBApi.Enums.SchemaEnum schema</param>
+		/// <param name="restrictions">optional object restrictions</param>
+		/// <param name="schemaID">optional object schemaID</param>
+		[SupportByVersion("ADODB", 2.5)]
 		public NetOffice.ADODBApi._Recordset_Deprecated OpenSchema(NetOffice.ADODBApi.Enums.SchemaEnum schema, object restrictions, object schemaID)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(schema, restrictions, schemaID);
-			object returnItem = Invoker.MethodReturn(this, "OpenSchema", paramsArray);
-			NetOffice.ADODBApi._Recordset_Deprecated newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ADODBApi._Recordset_Deprecated.LateBindingApiWrapperType) as NetOffice.ADODBApi._Recordset_Deprecated;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ADODBApi._Recordset_Deprecated>(this, "OpenSchema", NetOffice.ADODBApi._Recordset_Deprecated.LateBindingApiWrapperType, schema, restrictions, schemaID);
 		}
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.5
-		/// 
 		/// </summary>
-		/// <param name="schema">NetOffice.ADODBApi.Enums.SchemaEnum Schema</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("ADODB", 2.5)]
+		/// <param name="schema">NetOffice.ADODBApi.Enums.SchemaEnum schema</param>
+		[CustomMethod]
+		[SupportByVersion("ADODB", 2.5)]
 		public NetOffice.ADODBApi._Recordset_Deprecated OpenSchema(NetOffice.ADODBApi.Enums.SchemaEnum schema)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(schema);
-			object returnItem = Invoker.MethodReturn(this, "OpenSchema", paramsArray);
-			NetOffice.ADODBApi._Recordset_Deprecated newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ADODBApi._Recordset_Deprecated.LateBindingApiWrapperType) as NetOffice.ADODBApi._Recordset_Deprecated;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ADODBApi._Recordset_Deprecated>(this, "OpenSchema", NetOffice.ADODBApi._Recordset_Deprecated.LateBindingApiWrapperType, schema);
 		}
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.5
-		/// 
 		/// </summary>
-		/// <param name="schema">NetOffice.ADODBApi.Enums.SchemaEnum Schema</param>
-		/// <param name="restrictions">optional object Restrictions</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("ADODB", 2.5)]
+		/// <param name="schema">NetOffice.ADODBApi.Enums.SchemaEnum schema</param>
+		/// <param name="restrictions">optional object restrictions</param>
+		[CustomMethod]
+		[SupportByVersion("ADODB", 2.5)]
 		public NetOffice.ADODBApi._Recordset_Deprecated OpenSchema(NetOffice.ADODBApi.Enums.SchemaEnum schema, object restrictions)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(schema, restrictions);
-			object returnItem = Invoker.MethodReturn(this, "OpenSchema", paramsArray);
-			NetOffice.ADODBApi._Recordset_Deprecated newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ADODBApi._Recordset_Deprecated.LateBindingApiWrapperType) as NetOffice.ADODBApi._Recordset_Deprecated;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ADODBApi._Recordset_Deprecated>(this, "OpenSchema", NetOffice.ADODBApi._Recordset_Deprecated.LateBindingApiWrapperType, schema, restrictions);
 		}
 
 		#endregion
+
 		#pragma warning restore
 	}
 }

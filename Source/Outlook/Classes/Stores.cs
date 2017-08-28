@@ -1,37 +1,37 @@
 ﻿using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
-using NetOffice;
-using NetOffice.Misc;
+using NetOffice.Attributes;
 
 namespace NetOffice.OutlookApi
 {
-
 	#region Delegates
 
 	#pragma warning disable
-	public delegate void Stores_BeforeStoreRemoveEventHandler(NetOffice.OutlookApi._Store Store, ref bool Cancel);
-	public delegate void Stores_StoreAddEventHandler(NetOffice.OutlookApi._Store Store);
+	public delegate void Stores_BeforeStoreRemoveEventHandler(NetOffice.OutlookApi._Store store, ref bool cancel);
+	public delegate void Stores_StoreAddEventHandler(NetOffice.OutlookApi._Store store);
 	#pragma warning restore
 
 	#endregion
 
-	///<summary>
+	/// <summary>
 	/// CoClass Stores 
 	/// SupportByVersion Outlook, 12,14,15,16
-	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff867405.aspx
-	///</summary>
-	[SupportByVersionAttribute("Outlook", 12,14,15,16)]
-	[EntityTypeAttribute(EntityType.IsCoClass)]
-	public class Stores : _Stores,IEventBinding
+	/// </summary>
+	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff867405.aspx </remarks>
+	[SupportByVersion("Outlook", 12,14,15,16)]
+	[EntityType(EntityType.IsCoClass)]
+	[EventSink(typeof(Events.StoresEvents_12_SinkHelper))]
+	public class Stores : _Stores, IEventBinding
 	{
 		#pragma warning disable
+
 		#region Fields
 		
 		private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
 		private string _activeSinkId;
 		private NetRuntimeSystem.Type _thisType;
-		StoresEvents_12_SinkHelper _storesEvents_12_SinkHelper;
+		private Events.StoresEvents_12_SinkHelper _storesEvents_12_SinkHelper;
 	
 		#endregion
 
@@ -40,6 +40,7 @@ namespace NetOffice.OutlookApi
         /// <summary>
         /// Instance Type
         /// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
         public override Type InstanceType
         {
             get
@@ -106,17 +107,17 @@ namespace NetOffice.OutlookApi
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of Stores 
-        ///</summary>		
+        /// </summary>		
 		public Stores():base("Outlook.Stores")
 		{
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of Stores
-        ///</summary>
+        /// </summary>
         ///<param name="progId">registered ProgID</param>
 		public Stores(string progId):base(progId)
 		{
@@ -126,46 +127,6 @@ namespace NetOffice.OutlookApi
 		#endregion
 
 		#region Static CoClass Methods
-
-		/// <summary>
-        /// Returns all running Outlook.Stores objects from the environment/system
-        /// </summary>
-        /// <returns>an Outlook.Stores array</returns>
-		public static NetOffice.OutlookApi.Stores[] GetActiveInstances()
-		{		
-			IDisposableEnumeration proxyList = NetOffice.ProxyService.GetActiveInstances("Outlook","Stores");
-			NetRuntimeSystem.Collections.Generic.List<NetOffice.OutlookApi.Stores> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.OutlookApi.Stores>();
-			foreach(object proxy in proxyList)
-				resultList.Add( new NetOffice.OutlookApi.Stores(null, proxy) );
-			return resultList.ToArray();
-		}
-
-		/// <summary>
-        /// Returns a running Outlook.Stores object from the environment/system.
-        /// </summary>
-        /// <returns>an Outlook.Stores object or null</returns>
-		public static NetOffice.OutlookApi.Stores GetActiveInstance()
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Outlook","Stores", false);
-			if(null != proxy)
-				return new NetOffice.OutlookApi.Stores(null, proxy);
-			else
-				return null;
-		}
-
-		/// <summary>
-        /// Returns a running Outlook.Stores object from the environment/system. 
-        /// </summary>
-	    /// <param name="throwOnError">throw an exception if no object was found</param>
-        /// <returns>an Outlook.Stores object or null</returns>
-		public static NetOffice.OutlookApi.Stores GetActiveInstance(bool throwOnError)
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Outlook","Stores", throwOnError);
-			if(null != proxy)
-				return new NetOffice.OutlookApi.Stores(null, proxy);
-			else
-				return null;
-		}
 		#endregion
 
 		#region Events
@@ -233,12 +194,12 @@ namespace NetOffice.OutlookApi
 				return;
 	
             if (null == _activeSinkId)
-				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, StoresEvents_12_SinkHelper.Id);
+				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, Events.StoresEvents_12_SinkHelper.Id);
 
 
-			if(StoresEvents_12_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
+			if(Events.StoresEvents_12_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
 			{
-				_storesEvents_12_SinkHelper = new StoresEvents_12_SinkHelper(this, _connectPoint);
+				_storesEvents_12_SinkHelper = new Events.StoresEvents_12_SinkHelper(this, _connectPoint);
 				return;
 			} 
         }

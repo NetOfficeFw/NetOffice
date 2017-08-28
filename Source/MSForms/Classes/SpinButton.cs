@@ -1,43 +1,43 @@
 ﻿using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
-using NetOffice;
-using NetOffice.Misc;
+using NetOffice.Attributes;
 
 namespace NetOffice.MSFormsApi
 {
-
 	#region Delegates
 
 	#pragma warning disable
-	public delegate void SpinButton_BeforeDragOverEventHandler(NetOffice.MSFormsApi.ReturnBoolean Cancel, NetOffice.MSFormsApi.DataObject Data, Single X, Single Y, NetOffice.MSFormsApi.Enums.fmDragState DragState, NetOffice.MSFormsApi.ReturnEffect Effect, Int16 Shift);
-	public delegate void SpinButton_BeforeDropOrPasteEventHandler(NetOffice.MSFormsApi.ReturnBoolean Cancel, NetOffice.MSFormsApi.Enums.fmAction Action, NetOffice.MSFormsApi.DataObject Data, Single X, Single Y, NetOffice.MSFormsApi.ReturnEffect Effect, Int16 Shift);
+	public delegate void SpinButton_BeforeDragOverEventHandler(NetOffice.MSFormsApi.ReturnBoolean cancel, NetOffice.MSFormsApi.DataObject data, Single x, Single y, NetOffice.MSFormsApi.Enums.fmDragState dragState, NetOffice.MSFormsApi.ReturnEffect effect, Int16 shift);
+	public delegate void SpinButton_BeforeDropOrPasteEventHandler(NetOffice.MSFormsApi.ReturnBoolean cancel, NetOffice.MSFormsApi.Enums.fmAction action, NetOffice.MSFormsApi.DataObject data, Single x, Single y, NetOffice.MSFormsApi.ReturnEffect effect, Int16 shift);
 	public delegate void SpinButton_ChangeEventHandler();
-	public delegate void SpinButton_ErrorEventHandler(Int16 Number, NetOffice.MSFormsApi.ReturnString Description, Int32 SCode, string Source, string HelpFile, Int32 HelpContext, NetOffice.MSFormsApi.ReturnBoolean CancelDisplay);
-	public delegate void SpinButton_KeyDownEventHandler(NetOffice.MSFormsApi.ReturnInteger KeyCode, Int16 Shift);
-	public delegate void SpinButton_KeyPressEventHandler(NetOffice.MSFormsApi.ReturnInteger KeyAscii);
-	public delegate void SpinButton_KeyUpEventHandler(NetOffice.MSFormsApi.ReturnInteger KeyCode, Int16 Shift);
+	public delegate void SpinButton_ErrorEventHandler(Int16 number, NetOffice.MSFormsApi.ReturnString description, Int32 sCode, string source, string helpFile, Int32 helpContext, NetOffice.MSFormsApi.ReturnBoolean cancelDisplay);
+	public delegate void SpinButton_KeyDownEventHandler(NetOffice.MSFormsApi.ReturnInteger keyCode, Int16 shift);
+	public delegate void SpinButton_KeyPressEventHandler(NetOffice.MSFormsApi.ReturnInteger keyAscii);
+	public delegate void SpinButton_KeyUpEventHandler(NetOffice.MSFormsApi.ReturnInteger keyCode, Int16 shift);
 	public delegate void SpinButton_SpinUpEventHandler();
 	public delegate void SpinButton_SpinDownEventHandler();
 	#pragma warning restore
 
 	#endregion
 
-	///<summary>
+	/// <summary>
 	/// CoClass SpinButton 
 	/// SupportByVersion MSForms, 2
-	///</summary>
-	[SupportByVersionAttribute("MSForms", 2)]
-	[EntityTypeAttribute(EntityType.IsCoClass)]
-	public class SpinButton : ISpinbutton,IEventBinding
+	/// </summary>
+	[SupportByVersion("MSForms", 2)]
+	[EntityType(EntityType.IsCoClass)]
+	[EventSink(typeof(Events.SpinbuttonEvents_SinkHelper))]
+	public class SpinButton : ISpinbutton, IEventBinding
 	{
 		#pragma warning disable
+
 		#region Fields
 		
 		private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
 		private string _activeSinkId;
 		private NetRuntimeSystem.Type _thisType;
-		SpinbuttonEvents_SinkHelper _spinbuttonEvents_SinkHelper;
+		private Events.SpinbuttonEvents_SinkHelper _spinbuttonEvents_SinkHelper;
 	
 		#endregion
 
@@ -46,6 +46,7 @@ namespace NetOffice.MSFormsApi
         /// <summary>
         /// Instance Type
         /// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
         public override Type InstanceType
         {
             get
@@ -112,17 +113,17 @@ namespace NetOffice.MSFormsApi
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of SpinButton 
-        ///</summary>		
+        /// </summary>		
 		public SpinButton():base("MSForms.SpinButton")
 		{
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of SpinButton
-        ///</summary>
+        /// </summary>
         ///<param name="progId">registered ProgID</param>
 		public SpinButton(string progId):base(progId)
 		{
@@ -132,46 +133,6 @@ namespace NetOffice.MSFormsApi
 		#endregion
 
 		#region Static CoClass Methods
-
-		/// <summary>
-        /// Returns all running MSForms.SpinButton objects from the environment/system
-        /// </summary>
-        /// <returns>an MSForms.SpinButton array</returns>
-		public static NetOffice.MSFormsApi.SpinButton[] GetActiveInstances()
-		{		
-			IDisposableEnumeration proxyList = NetOffice.ProxyService.GetActiveInstances("MSForms","SpinButton");
-			NetRuntimeSystem.Collections.Generic.List<NetOffice.MSFormsApi.SpinButton> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.MSFormsApi.SpinButton>();
-			foreach(object proxy in proxyList)
-				resultList.Add( new NetOffice.MSFormsApi.SpinButton(null, proxy) );
-			return resultList.ToArray();
-		}
-
-		/// <summary>
-        /// Returns a running MSForms.SpinButton object from the environment/system.
-        /// </summary>
-        /// <returns>an MSForms.SpinButton object or null</returns>
-		public static NetOffice.MSFormsApi.SpinButton GetActiveInstance()
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("MSForms","SpinButton", false);
-			if(null != proxy)
-				return new NetOffice.MSFormsApi.SpinButton(null, proxy);
-			else
-				return null;
-		}
-
-		/// <summary>
-        /// Returns a running MSForms.SpinButton object from the environment/system. 
-        /// </summary>
-	    /// <param name="throwOnError">throw an exception if no object was found</param>
-        /// <returns>an MSForms.SpinButton object or null</returns>
-		public static NetOffice.MSFormsApi.SpinButton GetActiveInstance(bool throwOnError)
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("MSForms","SpinButton", throwOnError);
-			if(null != proxy)
-				return new NetOffice.MSFormsApi.SpinButton(null, proxy);
-			else
-				return null;
-		}
 		#endregion
 
 		#region Events
@@ -391,12 +352,12 @@ namespace NetOffice.MSFormsApi
 				return;
 	
             if (null == _activeSinkId)
-				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, SpinbuttonEvents_SinkHelper.Id);
+				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, Events.SpinbuttonEvents_SinkHelper.Id);
 
 
-			if(SpinbuttonEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
+			if(Events.SpinbuttonEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
 			{
-				_spinbuttonEvents_SinkHelper = new SpinbuttonEvents_SinkHelper(this, _connectPoint);
+				_spinbuttonEvents_SinkHelper = new Events.SpinbuttonEvents_SinkHelper(this, _connectPoint);
 				return;
 			} 
         }

@@ -1,11 +1,9 @@
 ﻿using System;
 using System.IO;
 using System.Diagnostics;
-using System.Collections.Generic;
 using System.Reflection;
-using System.Text;
 
-namespace NetOffice
+namespace NetOffice.Loader
 {
     /// <summary>
     /// Encapsulate current appdomain with exception tolerant methods
@@ -88,7 +86,8 @@ namespace NetOffice
                     if (Owner.Settings.LoadAssembliesUnsafe)
                         return Assembly.UnsafeLoadFrom(fileName);
                     else
-                        return Assembly.Load(fileName);
+                        return Assembly.LoadFrom(fileName);
+                        // changed Load to LoadFrom, thanks to Frank Fajardo
                 }
                 else
                     return null;
@@ -111,11 +110,11 @@ namespace NetOffice
             try
             {
                 bool versionMatch = false;
-                localPath = false == String.IsNullOrEmpty(name.CodeBase) ? UriConvert.ToLocalPath(name.CodeBase) : null;
+                localPath = false == String.IsNullOrEmpty(name.CodeBase) ? Resolver.UriResolver.ResolveLocalPath(name.CodeBase) : null;
                 versionMatch = null == localPath ? ValidateVersion(name) : ValidateVersion(localPath);
                 if (null == localPath)
                 {
-                    string thisLocalPath = UriConvert.ToLocalPath(Owner.ThisAssembly.CodeBase);
+                    string thisLocalPath = Resolver.UriResolver.ResolveLocalPath(Owner.ThisAssembly.CodeBase);
                     string extension = Path.GetExtension(thisLocalPath);
                     string path = Path.GetDirectoryName(thisLocalPath);
                     localPath = Path.Combine(path, name.Name + extension);
@@ -152,66 +151,10 @@ namespace NetOffice
         }
 
         /// <summary>
-        /// Try load an assembly
-        /// </summary>
-        /// <param name="fileName">full qualified name</param>
-        /// <returns>Assembly instance or null</returns>
-        internal Assembly LoadFile(string fileName)
-        {
-            try
-            {
-                if (ValidateVersion(fileName))
-                {
-                    if (Owner.Settings.LoadAssembliesUnsafe)
-                        return Assembly.UnsafeLoadFrom(fileName);
-                    else
-                        return Assembly.Load(fileName);
-                }
-                else
-                    return null;
-            }
-            catch(Exception exception)
-            {
-                Owner.Console.WriteLine("AssemblyLoad Exception<{1}> {0}", Path.GetFileName(fileName), exception.GetType().Name);
-                return null;
-            }
-        }
-
-        /// <summary>
-        /// Try load an assembly
-        /// </summary>
-        /// <param name="fileName">full qualified file name</param>
-        /// <returns>Assembly instance or null</returns>
-        internal Assembly LoadFrom(string fileName)
-        {
-            try
-            {
-                if (ValidateVersion(fileName))
-                {
-                    if (Owner.Settings.LoadAssembliesUnsafe)
-                        return Assembly.UnsafeLoadFrom(fileName);
-                    else
-                    {
-                        // todo: find a #pragma to make a possible exception silent
-                        // even the developer want a hard debugger break in all(or matched) CLR exception(s)
-                        return Assembly.Load(fileName);
-                    }
-                }
-                else
-                    return null;
-            }
-            catch(Exception exception)
-            {
-                Owner.Console.WriteLine("AssemblyLoad Exception<{1}> {0}", Path.GetFileName(fileName), exception.GetType().Name);
-                return null;
-            }
-        }
-
-        /// <summary>
-        /// Try to validate argument file version match with current NO version. The method does nothing if argument file not exists
+        /// Try to validate argument file version match with current NetOffice version. The method does nothing if argument file not exists
         /// </summary>
         /// <param name="fileName">target file to load</param>.resources
-        /// <returns>true if file exists in current NO version</returns>
+        /// <returns>true if file exists in current NetOffice version</returns>
         internal bool ValidateVersion(string fileName)
         {
             if (File.Exists(fileName))
@@ -261,7 +204,7 @@ namespace NetOffice
                 if ((!String.IsNullOrEmpty(args.Name) && args.Name.ToLower().Trim().IndexOf(".resources") > -1))
                     return null;
 
-                string thisLocalPath = UriConvert.ToLocalPath(Owner.ThisAssembly.CodeBase);
+                string thisLocalPath = Resolver.UriResolver.ResolveLocalPath(Owner.ThisAssembly.CodeBase);
                 string extension = Path.GetExtension(thisLocalPath);
                 string path = Path.GetDirectoryName(thisLocalPath);
                 string fullFileName = Path.Combine(path, args.Name + extension);
@@ -277,8 +220,8 @@ namespace NetOffice
 
                 if (System.IO.File.Exists(fullFileName))
                 {
-                    Console.WriteLine(string.Format("Try to resolve assembly {0}", args.Name));
-                    Assembly assembly = Load(args.Name);
+                    Owner.Console.WriteLine(string.Format("Try to resolve assembly {0}", args.Name));
+                    Assembly assembly = Load(fullFileName);
                     return assembly;
                 }
                 else

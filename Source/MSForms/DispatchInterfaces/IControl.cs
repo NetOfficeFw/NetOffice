@@ -1,23 +1,34 @@
-﻿using System;
+﻿using System.Reflection;
+using System;
 using NetRuntimeSystem = System;
-using System.Runtime.InteropServices;
-using System.Runtime.CompilerServices;
 using System.ComponentModel;
-using System.Reflection;
-using System.Collections.Generic;
-using NetOffice;
+using NetOffice.Attributes;
+
 namespace NetOffice.MSFormsApi
 {
-	///<summary>
+	/// <summary>
 	/// DispatchInterface IControl 
 	/// SupportByVersion MSForms, 2
-	///</summary>
-	[SupportByVersionAttribute("MSForms", 2)]
-	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
-	public class IControl : COMObject
+	/// </summary>
+	[SupportByVersion("MSForms", 2)]
+	[EntityType(EntityType.IsDispatchInterface)]
+ 	public class IControl : COMObject
 	{
 		#pragma warning disable
+
 		#region Type Information
+
+		/// <summary>
+		/// Instance Type
+		/// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
+		public override Type InstanceType
+		{
+			get
+			{
+				return LateBindingApiWrapperType;
+			}
+		}
 
         private static Type _type;
 
@@ -28,14 +39,20 @@ namespace NetOffice.MSFormsApi
             {
                 if (null == _type)
                     _type = typeof(IControl);
-                    
                 return _type;
             }
         }
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public IControl(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -81,7 +98,7 @@ namespace NetOffice.MSFormsApi
 		{
 		}
 		
-		/// <param name="progId">registered ProgID</param>
+		/// <param name="progId">registered progID</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public IControl(string progId) : base(progId)
 		{
@@ -95,19 +112,16 @@ namespace NetOffice.MSFormsApi
 		/// SupportByVersion MSForms 2
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSForms", 2)]
+		[SupportByVersion("MSForms", 2)]
 		public bool Cancel
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Cancel", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "Cancel");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "Cancel", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "Cancel", value);
 			}
 		}
 
@@ -115,19 +129,16 @@ namespace NetOffice.MSFormsApi
 		/// SupportByVersion MSForms 2
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSForms", 2)]
+		[SupportByVersion("MSForms", 2)]
 		public string ControlSource
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "ControlSource", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "ControlSource");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "ControlSource", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "ControlSource", value);
 			}
 		}
 
@@ -135,19 +146,16 @@ namespace NetOffice.MSFormsApi
 		/// SupportByVersion MSForms 2
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSForms", 2)]
+		[SupportByVersion("MSForms", 2)]
 		public string ControlTipText
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "ControlTipText", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "ControlTipText");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "ControlTipText", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "ControlTipText", value);
 			}
 		}
 
@@ -155,19 +163,16 @@ namespace NetOffice.MSFormsApi
 		/// SupportByVersion MSForms 2
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSForms", 2)]
+		[SupportByVersion("MSForms", 2)]
 		public bool Default
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Default", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "Default");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "Default", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "Default", value);
 			}
 		}
 
@@ -175,19 +180,16 @@ namespace NetOffice.MSFormsApi
 		/// SupportByVersion MSForms 2
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSForms", 2)]
+		[SupportByVersion("MSForms", 2)]
 		public Single Height
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Height", paramsArray);
-				return NetRuntimeSystem.Convert.ToSingle(returnItem);
+				return Factory.ExecuteSinglePropertyGet(this, "Height");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "Height", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "Height", value);
 			}
 		}
 
@@ -195,19 +197,16 @@ namespace NetOffice.MSFormsApi
 		/// SupportByVersion MSForms 2
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSForms", 2)]
+		[SupportByVersion("MSForms", 2)]
 		public Int32 HelpContextID
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "HelpContextID", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "HelpContextID");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "HelpContextID", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "HelpContextID", value);
 			}
 		}
 
@@ -215,20 +214,17 @@ namespace NetOffice.MSFormsApi
 		/// SupportByVersion MSForms 2
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSForms", 2)]
+		[SupportByVersion("MSForms", 2)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public bool InSelection
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "InSelection", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "InSelection");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "InSelection", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "InSelection", value);
 			}
 		}
 
@@ -236,16 +232,13 @@ namespace NetOffice.MSFormsApi
 		/// SupportByVersion MSForms 2
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("MSForms", 2)]
+		[SupportByVersion("MSForms", 2)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public NetOffice.MSFormsApi.Enums.fmLayoutEffect LayoutEffect
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "LayoutEffect", paramsArray);
-				int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-				return (NetOffice.MSFormsApi.Enums.fmLayoutEffect)intReturnItem;
+				return Factory.ExecuteEnumPropertyGet<NetOffice.MSFormsApi.Enums.fmLayoutEffect>(this, "LayoutEffect");
 			}
 		}
 
@@ -253,19 +246,16 @@ namespace NetOffice.MSFormsApi
 		/// SupportByVersion MSForms 2
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSForms", 2)]
+		[SupportByVersion("MSForms", 2)]
 		public Single Left
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Left", paramsArray);
-				return NetRuntimeSystem.Convert.ToSingle(returnItem);
+				return Factory.ExecuteSinglePropertyGet(this, "Left");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "Left", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "Left", value);
 			}
 		}
 
@@ -273,19 +263,16 @@ namespace NetOffice.MSFormsApi
 		/// SupportByVersion MSForms 2
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSForms", 2)]
+		[SupportByVersion("MSForms", 2)]
 		public string Name
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Name", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "Name");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "Name", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "Name", value);
 			}
 		}
 
@@ -293,15 +280,13 @@ namespace NetOffice.MSFormsApi
 		/// SupportByVersion MSForms 2
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("MSForms", 2)]
+		[SupportByVersion("MSForms", 2)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public Single OldHeight
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "OldHeight", paramsArray);
-				return NetRuntimeSystem.Convert.ToSingle(returnItem);
+				return Factory.ExecuteSinglePropertyGet(this, "OldHeight");
 			}
 		}
 
@@ -309,15 +294,13 @@ namespace NetOffice.MSFormsApi
 		/// SupportByVersion MSForms 2
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("MSForms", 2)]
+		[SupportByVersion("MSForms", 2)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public Single OldLeft
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "OldLeft", paramsArray);
-				return NetRuntimeSystem.Convert.ToSingle(returnItem);
+				return Factory.ExecuteSinglePropertyGet(this, "OldLeft");
 			}
 		}
 
@@ -325,15 +308,13 @@ namespace NetOffice.MSFormsApi
 		/// SupportByVersion MSForms 2
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("MSForms", 2)]
+		[SupportByVersion("MSForms", 2)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public Single OldTop
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "OldTop", paramsArray);
-				return NetRuntimeSystem.Convert.ToSingle(returnItem);
+				return Factory.ExecuteSinglePropertyGet(this, "OldTop");
 			}
 		}
 
@@ -341,15 +322,13 @@ namespace NetOffice.MSFormsApi
 		/// SupportByVersion MSForms 2
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("MSForms", 2)]
+		[SupportByVersion("MSForms", 2)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public Single OldWidth
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "OldWidth", paramsArray);
-				return NetRuntimeSystem.Convert.ToSingle(returnItem);
+				return Factory.ExecuteSinglePropertyGet(this, "OldWidth");
 			}
 		}
 
@@ -358,16 +337,13 @@ namespace NetOffice.MSFormsApi
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("MSForms", 2)]
+		[SupportByVersion("MSForms", 2), ProxyResult]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public object Object
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Object", paramsArray);
-				ICOMObject newObject = Factory.CreateObjectFromComProxy(this,returnItem);
-				return newObject;
+				return Factory.ExecuteReferencePropertyGet(this, "Object");
 			}
 		}
 
@@ -376,16 +352,13 @@ namespace NetOffice.MSFormsApi
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("MSForms", 2)]
+		[SupportByVersion("MSForms", 2), ProxyResult]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public object Parent
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Parent", paramsArray);
-				ICOMObject newObject = Factory.CreateObjectFromComProxy(this,returnItem);
-				return newObject;
+				return Factory.ExecuteReferencePropertyGet(this, "Parent");
 			}
 		}
 
@@ -393,19 +366,16 @@ namespace NetOffice.MSFormsApi
 		/// SupportByVersion MSForms 2
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSForms", 2)]
+		[SupportByVersion("MSForms", 2)]
 		public string RowSource
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "RowSource", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "RowSource");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "RowSource", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "RowSource", value);
 			}
 		}
 
@@ -413,19 +383,16 @@ namespace NetOffice.MSFormsApi
 		/// SupportByVersion MSForms 2
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSForms", 2)]
+		[SupportByVersion("MSForms", 2)]
 		public Int16 RowSourceType
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "RowSourceType", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt16(returnItem);
+				return Factory.ExecuteInt16PropertyGet(this, "RowSourceType");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "RowSourceType", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "RowSourceType", value);
 			}
 		}
 
@@ -433,19 +400,16 @@ namespace NetOffice.MSFormsApi
 		/// SupportByVersion MSForms 2
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSForms", 2)]
+		[SupportByVersion("MSForms", 2)]
 		public Int16 TabIndex
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "TabIndex", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt16(returnItem);
+				return Factory.ExecuteInt16PropertyGet(this, "TabIndex");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "TabIndex", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "TabIndex", value);
 			}
 		}
 
@@ -453,19 +417,16 @@ namespace NetOffice.MSFormsApi
 		/// SupportByVersion MSForms 2
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSForms", 2)]
+		[SupportByVersion("MSForms", 2)]
 		public bool TabStop
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "TabStop", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "TabStop");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "TabStop", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "TabStop", value);
 			}
 		}
 
@@ -473,19 +434,16 @@ namespace NetOffice.MSFormsApi
 		/// SupportByVersion MSForms 2
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSForms", 2)]
+		[SupportByVersion("MSForms", 2)]
 		public string Tag
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Tag", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "Tag");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "Tag", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "Tag", value);
 			}
 		}
 
@@ -493,19 +451,16 @@ namespace NetOffice.MSFormsApi
 		/// SupportByVersion MSForms 2
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSForms", 2)]
+		[SupportByVersion("MSForms", 2)]
 		public Single Top
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Top", paramsArray);
-				return NetRuntimeSystem.Convert.ToSingle(returnItem);
+				return Factory.ExecuteSinglePropertyGet(this, "Top");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "Top", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "Top", value);
 			}
 		}
 
@@ -513,28 +468,17 @@ namespace NetOffice.MSFormsApi
 		/// SupportByVersion MSForms 2
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSForms", 2)]
+		[SupportByVersion("MSForms", 2)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public object BoundValue
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "BoundValue", paramsArray);
-				if((null != returnItem) && (returnItem is MarshalByRefObject))
-				{
-					ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
-					return newObject;
-				}
-				else
-				{
-					return  returnItem;
-				}
+				return Factory.ExecuteVariantPropertyGet(this, "BoundValue");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "BoundValue", paramsArray);
+				Factory.ExecuteVariantPropertySet(this, "BoundValue", value);
 			}
 		}
 
@@ -542,19 +486,16 @@ namespace NetOffice.MSFormsApi
 		/// SupportByVersion MSForms 2
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSForms", 2)]
+		[SupportByVersion("MSForms", 2)]
 		public bool Visible
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Visible", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "Visible");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "Visible", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "Visible", value);
 			}
 		}
 
@@ -562,19 +503,16 @@ namespace NetOffice.MSFormsApi
 		/// SupportByVersion MSForms 2
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSForms", 2)]
+		[SupportByVersion("MSForms", 2)]
 		public Single Width
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Width", paramsArray);
-				return NetRuntimeSystem.Convert.ToSingle(returnItem);
+				return Factory.ExecuteSinglePropertyGet(this, "Width");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "Width", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "Width", value);
 			}
 		}
 
@@ -584,22 +522,19 @@ namespace NetOffice.MSFormsApi
 
 		/// <summary>
 		/// SupportByVersion MSForms 2
-		/// 
 		/// </summary>
-		/// <param name="height">Int32 Height</param>
-		[SupportByVersionAttribute("MSForms", 2)]
+		/// <param name="height">Int32 height</param>
+		[SupportByVersion("MSForms", 2)]
 		public void _SetHeight(Int32 height)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(height);
-			Invoker.Method(this, "_SetHeight", paramsArray);
+			 Factory.ExecuteMethod(this, "_SetHeight", height);
 		}
 
 		/// <summary>
 		/// SupportByVersion MSForms 2
-		/// 
 		/// </summary>
-		/// <param name="height">Int32 Height</param>
-		[SupportByVersionAttribute("MSForms", 2)]
+		/// <param name="height">Int32 height</param>
+		[SupportByVersion("MSForms", 2)]
 		public void _GetHeight(out Int32 height)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
@@ -611,22 +546,19 @@ namespace NetOffice.MSFormsApi
 
 		/// <summary>
 		/// SupportByVersion MSForms 2
-		/// 
 		/// </summary>
-		/// <param name="left">Int32 Left</param>
-		[SupportByVersionAttribute("MSForms", 2)]
+		/// <param name="left">Int32 left</param>
+		[SupportByVersion("MSForms", 2)]
 		public void _SetLeft(Int32 left)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(left);
-			Invoker.Method(this, "_SetLeft", paramsArray);
+			 Factory.ExecuteMethod(this, "_SetLeft", left);
 		}
 
 		/// <summary>
 		/// SupportByVersion MSForms 2
-		/// 
 		/// </summary>
-		/// <param name="left">Int32 Left</param>
-		[SupportByVersionAttribute("MSForms", 2)]
+		/// <param name="left">Int32 left</param>
+		[SupportByVersion("MSForms", 2)]
 		public void _GetLeft(out Int32 left)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
@@ -638,10 +570,9 @@ namespace NetOffice.MSFormsApi
 
 		/// <summary>
 		/// SupportByVersion MSForms 2
-		/// 
 		/// </summary>
-		/// <param name="oldHeight">Int32 OldHeight</param>
-		[SupportByVersionAttribute("MSForms", 2)]
+		/// <param name="oldHeight">Int32 oldHeight</param>
+		[SupportByVersion("MSForms", 2)]
 		public void _GetOldHeight(out Int32 oldHeight)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
@@ -653,10 +584,9 @@ namespace NetOffice.MSFormsApi
 
 		/// <summary>
 		/// SupportByVersion MSForms 2
-		/// 
 		/// </summary>
-		/// <param name="oldLeft">Int32 OldLeft</param>
-		[SupportByVersionAttribute("MSForms", 2)]
+		/// <param name="oldLeft">Int32 oldLeft</param>
+		[SupportByVersion("MSForms", 2)]
 		public void _GetOldLeft(out Int32 oldLeft)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
@@ -668,10 +598,9 @@ namespace NetOffice.MSFormsApi
 
 		/// <summary>
 		/// SupportByVersion MSForms 2
-		/// 
 		/// </summary>
-		/// <param name="oldTop">Int32 OldTop</param>
-		[SupportByVersionAttribute("MSForms", 2)]
+		/// <param name="oldTop">Int32 oldTop</param>
+		[SupportByVersion("MSForms", 2)]
 		public void _GetOldTop(out Int32 oldTop)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
@@ -683,10 +612,9 @@ namespace NetOffice.MSFormsApi
 
 		/// <summary>
 		/// SupportByVersion MSForms 2
-		/// 
 		/// </summary>
-		/// <param name="oldWidth">Int32 OldWidth</param>
-		[SupportByVersionAttribute("MSForms", 2)]
+		/// <param name="oldWidth">Int32 oldWidth</param>
+		[SupportByVersion("MSForms", 2)]
 		public void _GetOldWidth(out Int32 oldWidth)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
@@ -698,22 +626,19 @@ namespace NetOffice.MSFormsApi
 
 		/// <summary>
 		/// SupportByVersion MSForms 2
-		/// 
 		/// </summary>
-		/// <param name="top">Int32 Top</param>
-		[SupportByVersionAttribute("MSForms", 2)]
+		/// <param name="top">Int32 top</param>
+		[SupportByVersion("MSForms", 2)]
 		public void _SetTop(Int32 top)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(top);
-			Invoker.Method(this, "_SetTop", paramsArray);
+			 Factory.ExecuteMethod(this, "_SetTop", top);
 		}
 
 		/// <summary>
 		/// SupportByVersion MSForms 2
-		/// 
 		/// </summary>
-		/// <param name="top">Int32 Top</param>
-		[SupportByVersionAttribute("MSForms", 2)]
+		/// <param name="top">Int32 top</param>
+		[SupportByVersion("MSForms", 2)]
 		public void _GetTop(out Int32 top)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
@@ -725,22 +650,19 @@ namespace NetOffice.MSFormsApi
 
 		/// <summary>
 		/// SupportByVersion MSForms 2
-		/// 
 		/// </summary>
-		/// <param name="width">Int32 Width</param>
-		[SupportByVersionAttribute("MSForms", 2)]
+		/// <param name="width">Int32 width</param>
+		[SupportByVersion("MSForms", 2)]
 		public void _SetWidth(Int32 width)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(width);
-			Invoker.Method(this, "_SetWidth", paramsArray);
+			 Factory.ExecuteMethod(this, "_SetWidth", width);
 		}
 
 		/// <summary>
 		/// SupportByVersion MSForms 2
-		/// 
 		/// </summary>
-		/// <param name="width">Int32 Width</param>
-		[SupportByVersionAttribute("MSForms", 2)]
+		/// <param name="width">Int32 width</param>
+		[SupportByVersion("MSForms", 2)]
 		public void _GetWidth(out Int32 width)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
@@ -752,190 +674,161 @@ namespace NetOffice.MSFormsApi
 
 		/// <summary>
 		/// SupportByVersion MSForms 2
-		/// 
 		/// </summary>
-		/// <param name="left">optional object Left</param>
-		/// <param name="top">optional object Top</param>
-		/// <param name="width">optional object Width</param>
-		/// <param name="height">optional object Height</param>
-		/// <param name="layout">optional object Layout</param>
-		[SupportByVersionAttribute("MSForms", 2)]
+		/// <param name="left">optional object left</param>
+		/// <param name="top">optional object top</param>
+		/// <param name="width">optional object width</param>
+		/// <param name="height">optional object height</param>
+		/// <param name="layout">optional object layout</param>
+		[SupportByVersion("MSForms", 2)]
 		public void Move(object left, object top, object width, object height, object layout)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(left, top, width, height, layout);
-			Invoker.Method(this, "Move", paramsArray);
+			 Factory.ExecuteMethod(this, "Move", new object[]{ left, top, width, height, layout });
 		}
 
 		/// <summary>
 		/// SupportByVersion MSForms 2
-		/// 
 		/// </summary>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSForms", 2)]
+		[CustomMethod]
+		[SupportByVersion("MSForms", 2)]
 		public void Move()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "Move", paramsArray);
+			 Factory.ExecuteMethod(this, "Move");
 		}
 
 		/// <summary>
 		/// SupportByVersion MSForms 2
-		/// 
 		/// </summary>
-		/// <param name="left">optional object Left</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSForms", 2)]
+		/// <param name="left">optional object left</param>
+		[CustomMethod]
+		[SupportByVersion("MSForms", 2)]
 		public void Move(object left)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(left);
-			Invoker.Method(this, "Move", paramsArray);
+			 Factory.ExecuteMethod(this, "Move", left);
 		}
 
 		/// <summary>
 		/// SupportByVersion MSForms 2
-		/// 
 		/// </summary>
-		/// <param name="left">optional object Left</param>
-		/// <param name="top">optional object Top</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSForms", 2)]
+		/// <param name="left">optional object left</param>
+		/// <param name="top">optional object top</param>
+		[CustomMethod]
+		[SupportByVersion("MSForms", 2)]
 		public void Move(object left, object top)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(left, top);
-			Invoker.Method(this, "Move", paramsArray);
+			 Factory.ExecuteMethod(this, "Move", left, top);
 		}
 
 		/// <summary>
 		/// SupportByVersion MSForms 2
-		/// 
 		/// </summary>
-		/// <param name="left">optional object Left</param>
-		/// <param name="top">optional object Top</param>
-		/// <param name="width">optional object Width</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSForms", 2)]
+		/// <param name="left">optional object left</param>
+		/// <param name="top">optional object top</param>
+		/// <param name="width">optional object width</param>
+		[CustomMethod]
+		[SupportByVersion("MSForms", 2)]
 		public void Move(object left, object top, object width)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(left, top, width);
-			Invoker.Method(this, "Move", paramsArray);
+			 Factory.ExecuteMethod(this, "Move", left, top, width);
 		}
 
 		/// <summary>
 		/// SupportByVersion MSForms 2
-		/// 
 		/// </summary>
-		/// <param name="left">optional object Left</param>
-		/// <param name="top">optional object Top</param>
-		/// <param name="width">optional object Width</param>
-		/// <param name="height">optional object Height</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSForms", 2)]
+		/// <param name="left">optional object left</param>
+		/// <param name="top">optional object top</param>
+		/// <param name="width">optional object width</param>
+		/// <param name="height">optional object height</param>
+		[CustomMethod]
+		[SupportByVersion("MSForms", 2)]
 		public void Move(object left, object top, object width, object height)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(left, top, width, height);
-			Invoker.Method(this, "Move", paramsArray);
+			 Factory.ExecuteMethod(this, "Move", left, top, width, height);
 		}
 
 		/// <summary>
 		/// SupportByVersion MSForms 2
-		/// 
 		/// </summary>
 		/// <param name="zPosition">optional object zPosition</param>
-		[SupportByVersionAttribute("MSForms", 2)]
+		[SupportByVersion("MSForms", 2)]
 		public void ZOrder(object zPosition)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(zPosition);
-			Invoker.Method(this, "ZOrder", paramsArray);
+			 Factory.ExecuteMethod(this, "ZOrder", zPosition);
 		}
 
 		/// <summary>
 		/// SupportByVersion MSForms 2
-		/// 
 		/// </summary>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSForms", 2)]
+		[CustomMethod]
+		[SupportByVersion("MSForms", 2)]
 		public void ZOrder()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "ZOrder", paramsArray);
+			 Factory.ExecuteMethod(this, "ZOrder");
 		}
 
 		/// <summary>
 		/// SupportByVersion MSForms 2
-		/// 
 		/// </summary>
-		/// <param name="selectInGroup">bool SelectInGroup</param>
+		/// <param name="selectInGroup">bool selectInGroup</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("MSForms", 2)]
+		[SupportByVersion("MSForms", 2)]
 		public void Select(bool selectInGroup)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(selectInGroup);
-			Invoker.Method(this, "Select", paramsArray);
+			 Factory.ExecuteMethod(this, "Select", selectInGroup);
 		}
 
 		/// <summary>
 		/// SupportByVersion MSForms 2
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("MSForms", 2)]
+		[SupportByVersion("MSForms", 2)]
 		public void SetFocus()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "SetFocus", paramsArray);
+			 Factory.ExecuteMethod(this, "SetFocus");
 		}
 
 		/// <summary>
 		/// SupportByVersion MSForms 2
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("MSForms", 2)]
+		[SupportByVersion("MSForms", 2)]
 		public Int32 _GethWnd()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "_GethWnd", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return Factory.ExecuteInt32MethodGet(this, "_GethWnd");
 		}
 
 		/// <summary>
 		/// SupportByVersion MSForms 2
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("MSForms", 2)]
+		[SupportByVersion("MSForms", 2)]
 		public Int32 _GetID()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "_GetID", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return Factory.ExecuteInt32MethodGet(this, "_GetID");
 		}
 
 		/// <summary>
 		/// SupportByVersion MSForms 2
-		/// 
 		/// </summary>
-		/// <param name="left">Int32 Left</param>
-		/// <param name="top">Int32 Top</param>
-		/// <param name="width">Int32 Width</param>
-		/// <param name="height">Int32 Height</param>
-		[SupportByVersionAttribute("MSForms", 2)]
+		/// <param name="left">Int32 left</param>
+		/// <param name="top">Int32 top</param>
+		/// <param name="width">Int32 width</param>
+		/// <param name="height">Int32 height</param>
+		[SupportByVersion("MSForms", 2)]
 		public void _Move(Int32 left, Int32 top, Int32 width, Int32 height)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(left, top, width, height);
-			Invoker.Method(this, "_Move", paramsArray);
+			 Factory.ExecuteMethod(this, "_Move", left, top, width, height);
 		}
 
 		/// <summary>
 		/// SupportByVersion MSForms 2
-		/// 
 		/// </summary>
 		/// <param name="zPosition">NetOffice.MSFormsApi.Enums.fmZOrder zPosition</param>
-		[SupportByVersionAttribute("MSForms", 2)]
+		[SupportByVersion("MSForms", 2)]
 		public void _ZOrder(NetOffice.MSFormsApi.Enums.fmZOrder zPosition)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(zPosition);
-			Invoker.Method(this, "_ZOrder", paramsArray);
+			 Factory.ExecuteMethod(this, "_ZOrder", zPosition);
 		}
 
 		#endregion
+
 		#pragma warning restore
 	}
 }

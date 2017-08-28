@@ -1,24 +1,34 @@
 ﻿using System;
 using NetRuntimeSystem = System;
-using System.Runtime.InteropServices;
-using System.Runtime.CompilerServices;
 using System.ComponentModel;
-using System.Reflection;
-using System.Collections.Generic;
-using NetOffice;
+using NetOffice.Attributes;
+
 namespace NetOffice.MSProjectApi
 {
-	///<summary>
+	/// <summary>
 	/// DispatchInterface ViewsCombination 
 	/// SupportByVersion MSProject, 11,12,14
-	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff920750(v=office.14).aspx
-	///</summary>
-	[SupportByVersionAttribute("MSProject", 11,12,14)]
-	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
-	public class ViewsCombination : Views
+	/// </summary>
+	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff920750(v=office.14).aspx </remarks>
+	[SupportByVersion("MSProject", 11,12,14)]
+	[EntityType(EntityType.IsDispatchInterface)]
+ 	public class ViewsCombination : Views
 	{
 		#pragma warning disable
+
 		#region Type Information
+
+		/// <summary>
+		/// Instance Type
+		/// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
+		public override Type InstanceType
+		{
+			get
+			{
+				return LateBindingApiWrapperType;
+			}
+		}
 
         private static Type _type;
 
@@ -29,14 +39,20 @@ namespace NetOffice.MSProjectApi
             {
                 if (null == _type)
                     _type = typeof(ViewsCombination);
-                    
                 return _type;
             }
         }
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public ViewsCombination(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -82,7 +98,7 @@ namespace NetOffice.MSProjectApi
 		{
 		}
 		
-		/// <param name="progId">registered ProgID</param>
+		/// <param name="progId">registered progID</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public ViewsCombination(string progId) : base(progId)
 		{
@@ -98,39 +114,32 @@ namespace NetOffice.MSProjectApi
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
-		/// 
 		/// </summary>
-		/// <param name="name">string Name</param>
-		/// <param name="topView">object TopView</param>
-		/// <param name="bottomView">object BottomView</param>
+		/// <param name="name">string name</param>
+		/// <param name="topView">object topView</param>
+		/// <param name="bottomView">object bottomView</param>
 		/// <param name="showInMenu">optional bool ShowInMenu = false</param>
-		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		[SupportByVersion("MSProject", 11,12,14)]
 		public NetOffice.MSProjectApi.ViewCombination Add(string name, object topView, object bottomView, object showInMenu)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(name, topView, bottomView, showInMenu);
-			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.MSProjectApi.ViewCombination newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.MSProjectApi.ViewCombination.LateBindingApiWrapperType) as NetOffice.MSProjectApi.ViewCombination;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.MSProjectApi.ViewCombination>(this, "Add", NetOffice.MSProjectApi.ViewCombination.LateBindingApiWrapperType, name, topView, bottomView, showInMenu);
 		}
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
-		/// 
 		/// </summary>
-		/// <param name="name">string Name</param>
-		/// <param name="topView">object TopView</param>
-		/// <param name="bottomView">object BottomView</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		/// <param name="name">string name</param>
+		/// <param name="topView">object topView</param>
+		/// <param name="bottomView">object bottomView</param>
+		[CustomMethod]
+		[SupportByVersion("MSProject", 11,12,14)]
 		public NetOffice.MSProjectApi.ViewCombination Add(string name, object topView, object bottomView)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(name, topView, bottomView);
-			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.MSProjectApi.ViewCombination newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.MSProjectApi.ViewCombination.LateBindingApiWrapperType) as NetOffice.MSProjectApi.ViewCombination;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.MSProjectApi.ViewCombination>(this, "Add", NetOffice.MSProjectApi.ViewCombination.LateBindingApiWrapperType, name, topView, bottomView);
 		}
 
 		#endregion
+
 		#pragma warning restore
 	}
 }

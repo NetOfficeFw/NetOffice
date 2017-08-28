@@ -1,12 +1,10 @@
 ﻿using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
-using NetOffice;
-using NetOffice.Misc;
+using NetOffice.Attributes;
 
 namespace NetOffice.AccessApi
 {
-
 	#region Delegates
 
 	#pragma warning disable
@@ -14,22 +12,24 @@ namespace NetOffice.AccessApi
 
 	#endregion
 
-	///<summary>
+	/// <summary>
 	/// CoClass _CustomControlInReport 
 	/// SupportByVersion Access, 9,10,11,12,14,15,16
-	///</summary>
-	[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
-	[EntityTypeAttribute(EntityType.IsCoClass)]
-	public class _CustomControlInReport : _CustomControl,IEventBinding
+	/// </summary>
+	[SupportByVersion("Access", 9,10,11,12,14,15,16)]
+	[EntityType(EntityType.IsCoClass)]
+    [EventSink(typeof(Events._CustomControlInReportEvents_SinkHelper), typeof(Events.DispCustomControlInReportEvents_SinkHelper))]
+    public class _CustomControlInReport : _CustomControl, IEventBinding
 	{
 		#pragma warning disable
+
 		#region Fields
 		
 		private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
 		private string _activeSinkId;
 		private NetRuntimeSystem.Type _thisType;
-		_CustomControlInReportEvents_SinkHelper __CustomControlInReportEvents_SinkHelper;
-		DispCustomControlInReportEvents_SinkHelper _dispCustomControlInReportEvents_SinkHelper;
+        private Events._CustomControlInReportEvents_SinkHelper __CustomControlInReportEvents_SinkHelper;
+        private Events.DispCustomControlInReportEvents_SinkHelper _dispCustomControlInReportEvents_SinkHelper;
 	
 		#endregion
 
@@ -38,6 +38,7 @@ namespace NetOffice.AccessApi
         /// <summary>
         /// Instance Type
         /// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
         public override Type InstanceType
         {
             get
@@ -104,17 +105,17 @@ namespace NetOffice.AccessApi
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of _CustomControlInReport 
-        ///</summary>		
+        /// </summary>		
 		public _CustomControlInReport():base("Access._CustomControlInReport")
 		{
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of _CustomControlInReport
-        ///</summary>
+        /// </summary>
         ///<param name="progId">registered ProgID</param>
 		public _CustomControlInReport(string progId):base(progId)
 		{
@@ -124,46 +125,6 @@ namespace NetOffice.AccessApi
 		#endregion
 
 		#region Static CoClass Methods
-
-		/// <summary>
-        /// Returns all running Access._CustomControlInReport objects from the environment/system
-        /// </summary>
-        /// <returns>an Access._CustomControlInReport array</returns>
-		public static NetOffice.AccessApi._CustomControlInReport[] GetActiveInstances()
-		{		
-			IDisposableEnumeration proxyList = NetOffice.ProxyService.GetActiveInstances("Access","_CustomControlInReport");
-			NetRuntimeSystem.Collections.Generic.List<NetOffice.AccessApi._CustomControlInReport> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.AccessApi._CustomControlInReport>();
-			foreach(object proxy in proxyList)
-				resultList.Add( new NetOffice.AccessApi._CustomControlInReport(null, proxy) );
-			return resultList.ToArray();
-		}
-
-		/// <summary>
-        /// Returns a running Access._CustomControlInReport object from the environment/system.
-        /// </summary>
-        /// <returns>an Access._CustomControlInReport object or null</returns>
-		public static NetOffice.AccessApi._CustomControlInReport GetActiveInstance()
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Access","_CustomControlInReport", false);
-			if(null != proxy)
-				return new NetOffice.AccessApi._CustomControlInReport(null, proxy);
-			else
-				return null;
-		}
-
-		/// <summary>
-        /// Returns a running Access._CustomControlInReport object from the environment/system. 
-        /// </summary>
-	    /// <param name="throwOnError">throw an exception if no object was found</param>
-        /// <returns>an Access._CustomControlInReport object or null</returns>
-		public static NetOffice.AccessApi._CustomControlInReport GetActiveInstance(bool throwOnError)
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Access","_CustomControlInReport", throwOnError);
-			if(null != proxy)
-				return new NetOffice.AccessApi._CustomControlInReport(null, proxy);
-			else
-				return null;
-		}
 		#endregion
 
 		#region Events
@@ -185,18 +146,18 @@ namespace NetOffice.AccessApi
 				return;
 	
             if (null == _activeSinkId)
-				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, _CustomControlInReportEvents_SinkHelper.Id,DispCustomControlInReportEvents_SinkHelper.Id);
+				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, Events._CustomControlInReportEvents_SinkHelper.Id, Events.DispCustomControlInReportEvents_SinkHelper.Id);
 
 
-			if(_CustomControlInReportEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
+			if(Events._CustomControlInReportEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
 			{
-				__CustomControlInReportEvents_SinkHelper = new _CustomControlInReportEvents_SinkHelper(this, _connectPoint);
+				__CustomControlInReportEvents_SinkHelper = new Events._CustomControlInReportEvents_SinkHelper(this, _connectPoint);
 				return;
 			}
 
-			if(DispCustomControlInReportEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
+			if(Events.DispCustomControlInReportEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
 			{
-				_dispCustomControlInReportEvents_SinkHelper = new DispCustomControlInReportEvents_SinkHelper(this, _connectPoint);
+				_dispCustomControlInReportEvents_SinkHelper = new Events.DispCustomControlInReportEvents_SinkHelper(this, _connectPoint);
 				return;
 			} 
         }

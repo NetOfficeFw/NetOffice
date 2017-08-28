@@ -1,47 +1,47 @@
 ﻿using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
-using NetOffice;
-using NetOffice.Misc;
+using NetOffice.Attributes;
 
 namespace NetOffice.AccessApi
 {
-
 	#region Delegates
 
 	#pragma warning disable
 	public delegate void NavigationButton_ClickEventHandler();
 	public delegate void NavigationButton_EnterEventHandler();
-	public delegate void NavigationButton_ExitEventHandler(ref Int16 Cancel);
+	public delegate void NavigationButton_ExitEventHandler(ref Int16 cancel);
 	public delegate void NavigationButton_GotFocusEventHandler();
 	public delegate void NavigationButton_LostFocusEventHandler();
-	public delegate void NavigationButton_DblClickEventHandler(ref Int16 Cancel);
-	public delegate void NavigationButton_MouseDownEventHandler(ref Int16 Button, ref Int16 Shift, ref Single X, ref Single Y);
-	public delegate void NavigationButton_MouseMoveEventHandler(ref Int16 Button, ref Int16 Shift, ref Single X, ref Single Y);
-	public delegate void NavigationButton_MouseUpEventHandler(ref Int16 Button, ref Int16 Shift, ref Single X, ref Single Y);
-	public delegate void NavigationButton_KeyDownEventHandler(ref Int16 KeyCode, ref Int16 Shift);
-	public delegate void NavigationButton_KeyPressEventHandler(ref Int16 KeyAscii);
-	public delegate void NavigationButton_KeyUpEventHandler(ref Int16 KeyCode, ref Int16 Shift);
+	public delegate void NavigationButton_DblClickEventHandler(ref Int16 cancel);
+	public delegate void NavigationButton_MouseDownEventHandler(ref Int16 button, ref Int16 shift, ref Single x, ref Single y);
+	public delegate void NavigationButton_MouseMoveEventHandler(ref Int16 button, ref Int16 shift, ref Single x, ref Single y);
+	public delegate void NavigationButton_MouseUpEventHandler(ref Int16 button, ref Int16 shift, ref Single x, ref Single y);
+	public delegate void NavigationButton_KeyDownEventHandler(ref Int16 keyCode, ref Int16 shift);
+	public delegate void NavigationButton_KeyPressEventHandler(ref Int16 keyAscii);
+	public delegate void NavigationButton_KeyUpEventHandler(ref Int16 keyCode, ref Int16 shift);
 	#pragma warning restore
 
 	#endregion
 
-	///<summary>
+	/// <summary>
 	/// CoClass NavigationButton 
 	/// SupportByVersion Access, 14,15,16
-	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff821707.aspx
-	///</summary>
-	[SupportByVersionAttribute("Access", 14,15,16)]
-	[EntityTypeAttribute(EntityType.IsCoClass)]
-	public class NavigationButton : _NavigationButton,IEventBinding
+	/// </summary>
+	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff821707.aspx </remarks>
+	[SupportByVersion("Access", 14,15,16)]
+	[EntityType(EntityType.IsCoClass)]
+    [EventSink(typeof(Events.DispNavigationButtonEvents_SinkHelper))]
+    public class NavigationButton : _NavigationButton, IEventBinding
 	{
 		#pragma warning disable
+
 		#region Fields
 		
 		private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
 		private string _activeSinkId;
 		private NetRuntimeSystem.Type _thisType;
-		DispNavigationButtonEvents_SinkHelper _dispNavigationButtonEvents_SinkHelper;
+		private Events.DispNavigationButtonEvents_SinkHelper _dispNavigationButtonEvents_SinkHelper;
 	
 		#endregion
 
@@ -50,6 +50,7 @@ namespace NetOffice.AccessApi
         /// <summary>
         /// Instance Type
         /// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
         public override Type InstanceType
         {
             get
@@ -116,17 +117,17 @@ namespace NetOffice.AccessApi
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of NavigationButton 
-        ///</summary>		
+        /// </summary>		
 		public NavigationButton():base("Access.NavigationButton")
 		{
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of NavigationButton
-        ///</summary>
+        /// </summary>
         ///<param name="progId">registered ProgID</param>
 		public NavigationButton(string progId):base(progId)
 		{
@@ -136,46 +137,6 @@ namespace NetOffice.AccessApi
 		#endregion
 
 		#region Static CoClass Methods
-
-		/// <summary>
-        /// Returns all running Access.NavigationButton objects from the environment/system
-        /// </summary>
-        /// <returns>an Access.NavigationButton array</returns>
-		public static NetOffice.AccessApi.NavigationButton[] GetActiveInstances()
-		{		
-			IDisposableEnumeration proxyList = NetOffice.ProxyService.GetActiveInstances("Access","NavigationButton");
-			NetRuntimeSystem.Collections.Generic.List<NetOffice.AccessApi.NavigationButton> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.AccessApi.NavigationButton>();
-			foreach(object proxy in proxyList)
-				resultList.Add( new NetOffice.AccessApi.NavigationButton(null, proxy) );
-			return resultList.ToArray();
-		}
-
-		/// <summary>
-        /// Returns a running Access.NavigationButton object from the environment/system.
-        /// </summary>
-        /// <returns>an Access.NavigationButton object or null</returns>
-		public static NetOffice.AccessApi.NavigationButton GetActiveInstance()
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Access","NavigationButton", false);
-			if(null != proxy)
-				return new NetOffice.AccessApi.NavigationButton(null, proxy);
-			else
-				return null;
-		}
-
-		/// <summary>
-        /// Returns a running Access.NavigationButton object from the environment/system. 
-        /// </summary>
-	    /// <param name="throwOnError">throw an exception if no object was found</param>
-        /// <returns>an Access.NavigationButton object or null</returns>
-		public static NetOffice.AccessApi.NavigationButton GetActiveInstance(bool throwOnError)
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Access","NavigationButton", throwOnError);
-			if(null != proxy)
-				return new NetOffice.AccessApi.NavigationButton(null, proxy);
-			else
-				return null;
-		}
 		#endregion
 
 		#region Events
@@ -473,12 +434,12 @@ namespace NetOffice.AccessApi
 				return;
 	
             if (null == _activeSinkId)
-				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, DispNavigationButtonEvents_SinkHelper.Id);
+				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, Events.DispNavigationButtonEvents_SinkHelper.Id);
 
 
-			if(DispNavigationButtonEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
+			if(Events.DispNavigationButtonEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
 			{
-				_dispNavigationButtonEvents_SinkHelper = new DispNavigationButtonEvents_SinkHelper(this, _connectPoint);
+				_dispNavigationButtonEvents_SinkHelper = new Events.DispNavigationButtonEvents_SinkHelper(this, _connectPoint);
 				return;
 			} 
         }

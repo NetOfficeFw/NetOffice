@@ -1,12 +1,10 @@
 ﻿using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
-using NetOffice;
-using NetOffice.Misc;
+using NetOffice.Attributes;
 
 namespace NetOffice.OutlookApi
 {
-
 	#region Delegates
 
 	#pragma warning disable
@@ -14,21 +12,23 @@ namespace NetOffice.OutlookApi
 
 	#endregion
 
-	///<summary>
+	/// <summary>
 	/// CoClass _PageWrapCtrl 
 	/// SupportByVersion Outlook, 10
-	///</summary>
-	[SupportByVersionAttribute("Outlook", 10)]
-	[EntityTypeAttribute(EntityType.IsCoClass)]
-	public class _PageWrapCtrl : _DPageWrapCtrl,IEventBinding
+	/// </summary>
+	[SupportByVersion("Outlook", 10)]
+	[EntityType(EntityType.IsCoClass)]
+	[EventSink(typeof(Events._DPageWrapCtrlEvents_SinkHelper))]
+	public class _PageWrapCtrl : _DPageWrapCtrl, IEventBinding
 	{
 		#pragma warning disable
+
 		#region Fields
 		
 		private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
 		private string _activeSinkId;
 		private NetRuntimeSystem.Type _thisType;
-		_DPageWrapCtrlEvents_SinkHelper __DPageWrapCtrlEvents_SinkHelper;
+		private Events._DPageWrapCtrlEvents_SinkHelper __DPageWrapCtrlEvents_SinkHelper;
 	
 		#endregion
 
@@ -37,6 +37,7 @@ namespace NetOffice.OutlookApi
         /// <summary>
         /// Instance Type
         /// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
         public override Type InstanceType
         {
             get
@@ -103,17 +104,17 @@ namespace NetOffice.OutlookApi
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of _PageWrapCtrl 
-        ///</summary>		
+        /// </summary>		
 		public _PageWrapCtrl():base("Outlook._PageWrapCtrl")
 		{
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of _PageWrapCtrl
-        ///</summary>
+        /// </summary>
         ///<param name="progId">registered ProgID</param>
 		public _PageWrapCtrl(string progId):base(progId)
 		{
@@ -123,46 +124,6 @@ namespace NetOffice.OutlookApi
 		#endregion
 
 		#region Static CoClass Methods
-
-		/// <summary>
-        /// Returns all running Outlook._PageWrapCtrl objects from the environment/system
-        /// </summary>
-        /// <returns>an Outlook._PageWrapCtrl array</returns>
-		public static NetOffice.OutlookApi._PageWrapCtrl[] GetActiveInstances()
-		{		
-			IDisposableEnumeration proxyList = NetOffice.ProxyService.GetActiveInstances("Outlook","_PageWrapCtrl");
-			NetRuntimeSystem.Collections.Generic.List<NetOffice.OutlookApi._PageWrapCtrl> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.OutlookApi._PageWrapCtrl>();
-			foreach(object proxy in proxyList)
-				resultList.Add( new NetOffice.OutlookApi._PageWrapCtrl(null, proxy) );
-			return resultList.ToArray();
-		}
-
-		/// <summary>
-        /// Returns a running Outlook._PageWrapCtrl object from the environment/system.
-        /// </summary>
-        /// <returns>an Outlook._PageWrapCtrl object or null</returns>
-		public static NetOffice.OutlookApi._PageWrapCtrl GetActiveInstance()
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Outlook","_PageWrapCtrl", false);
-			if(null != proxy)
-				return new NetOffice.OutlookApi._PageWrapCtrl(null, proxy);
-			else
-				return null;
-		}
-
-		/// <summary>
-        /// Returns a running Outlook._PageWrapCtrl object from the environment/system. 
-        /// </summary>
-	    /// <param name="throwOnError">throw an exception if no object was found</param>
-        /// <returns>an Outlook._PageWrapCtrl object or null</returns>
-		public static NetOffice.OutlookApi._PageWrapCtrl GetActiveInstance(bool throwOnError)
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Outlook","_PageWrapCtrl", throwOnError);
-			if(null != proxy)
-				return new NetOffice.OutlookApi._PageWrapCtrl(null, proxy);
-			else
-				return null;
-		}
 		#endregion
 
 		#region Events
@@ -184,12 +145,12 @@ namespace NetOffice.OutlookApi
 				return;
 	
             if (null == _activeSinkId)
-				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, _DPageWrapCtrlEvents_SinkHelper.Id);
+				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, Events._DPageWrapCtrlEvents_SinkHelper.Id);
 
 
-			if(_DPageWrapCtrlEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
+			if(Events._DPageWrapCtrlEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
 			{
-				__DPageWrapCtrlEvents_SinkHelper = new _DPageWrapCtrlEvents_SinkHelper(this, _connectPoint);
+				__DPageWrapCtrlEvents_SinkHelper = new Events._DPageWrapCtrlEvents_SinkHelper(this, _connectPoint);
 				return;
 			} 
         }

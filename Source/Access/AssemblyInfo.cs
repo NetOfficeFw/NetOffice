@@ -2,6 +2,7 @@
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using NetOffice;
+using NetOffice.Attributes;
 
 /*
     Contains the following Type Libraries:
@@ -16,25 +17,28 @@ using NetOffice;
 */
 
 [assembly: AssemblyTitle("Access")]
-[assembly: AssemblyDescription("NetOffice Access Api")]
+[assembly: AssemblyDescription("Netoffice Access Api")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("netoffice.codeplex.com")]
-[assembly: AssemblyProduct("NetOffice")]
+[assembly: AssemblyProduct("Netoffice")]
 [assembly: AssemblyCopyright("Sebastian Lange")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
-[assembly: AssemblyVersion("1.7.4.0")]
-[assembly: AssemblyFileVersion("1.7.4.0")]
+[assembly: AssemblyVersion("1.7.4.1")]
+[assembly: AssemblyFileVersion("1.7.4.1")]
 [assembly: PrimaryInteropAssembly(1, 0)]
 [assembly: ImportedFromTypeLib("Access")]
 [assembly: Guid("4AFFC9A0-5F99-101B-AF4E-00AA003F0F07")]
-[assembly: NetOfficeAssemblyAttribute("1.7.4.0")]
+[assembly: NetOfficeAssemblyAttribute("1.7.4.1")]
 [assembly: Dependency("OfficeApi.dll", LoadHint.Default)]
 [assembly: Dependency("DAOApi.dll", LoadHint.Default)]
 [assembly: Dependency("VBIDEApi.dll", LoadHint.Default)]
+[assembly: Dependency("MSDATASRCApi.dll", LoadHint.Default)]
+[assembly: Dependency("MSComctlLibApi.dll", LoadHint.Default)]
 [assembly: Dependency("ADODBApi.dll", LoadHint.Default)]
 [assembly: Dependency("OWC10Api.dll", LoadHint.Default)]
 [assembly: Dependency("NetOffice.dll", LoadHint.Default)]
+
 
 
 /*

@@ -1,36 +1,36 @@
 ﻿using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
-using NetOffice;
-using NetOffice.Misc;
+using NetOffice.Attributes;
 
 namespace NetOffice.OfficeApi
 {
-
 	#region Delegates
 
 	#pragma warning disable
-	public delegate void CommandBarComboBox_ChangeEventHandler(NetOffice.OfficeApi.CommandBarComboBox Ctrl);
+	public delegate void CommandBarComboBox_ChangeEventHandler(NetOffice.OfficeApi.CommandBarComboBox ctrl);
 	#pragma warning restore
 
 	#endregion
 
-	///<summary>
+	/// <summary>
 	/// CoClass CommandBarComboBox 
 	/// SupportByVersion Office, 9,10,11,12,14,15,16
-	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff865547.aspx
-	///</summary>
-	[SupportByVersionAttribute("Office", 9,10,11,12,14,15,16)]
-	[EntityTypeAttribute(EntityType.IsCoClass)]
-	public class CommandBarComboBox : _CommandBarComboBox,IEventBinding
+	/// </summary>
+	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff865547.aspx </remarks>
+	[SupportByVersion("Office", 9,10,11,12,14,15,16)]
+	[EntityType(EntityType.IsCoClass)]
+	[EventSink(typeof(Events._CommandBarComboBoxEvents_SinkHelper))]
+	public class CommandBarComboBox : _CommandBarComboBox, IEventBinding
 	{
 		#pragma warning disable
+
 		#region Fields
 		
 		private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
 		private string _activeSinkId;
 		private NetRuntimeSystem.Type _thisType;
-		_CommandBarComboBoxEvents_SinkHelper __CommandBarComboBoxEvents_SinkHelper;
+		private Events._CommandBarComboBoxEvents_SinkHelper __CommandBarComboBoxEvents_SinkHelper;
 	
 		#endregion
 
@@ -39,6 +39,7 @@ namespace NetOffice.OfficeApi
         /// <summary>
         /// Instance Type
         /// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
         public override Type InstanceType
         {
             get
@@ -105,17 +106,17 @@ namespace NetOffice.OfficeApi
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of CommandBarComboBox 
-        ///</summary>		
+        /// </summary>		
 		public CommandBarComboBox():base("Office.CommandBarComboBox")
 		{
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of CommandBarComboBox
-        ///</summary>
+        /// </summary>
         ///<param name="progId">registered ProgID</param>
 		public CommandBarComboBox(string progId):base(progId)
 		{
@@ -125,46 +126,6 @@ namespace NetOffice.OfficeApi
 		#endregion
 
 		#region Static CoClass Methods
-
-		/// <summary>
-        /// Returns all running Office.CommandBarComboBox objects from the environment/system
-        /// </summary>
-        /// <returns>an Office.CommandBarComboBox array</returns>
-		public static NetOffice.OfficeApi.CommandBarComboBox[] GetActiveInstances()
-		{		
-			IDisposableEnumeration proxyList = NetOffice.ProxyService.GetActiveInstances("Office","CommandBarComboBox");
-			NetRuntimeSystem.Collections.Generic.List<NetOffice.OfficeApi.CommandBarComboBox> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.OfficeApi.CommandBarComboBox>();
-			foreach(object proxy in proxyList)
-				resultList.Add( new NetOffice.OfficeApi.CommandBarComboBox(null, proxy) );
-			return resultList.ToArray();
-		}
-
-		/// <summary>
-        /// Returns a running Office.CommandBarComboBox object from the environment/system.
-        /// </summary>
-        /// <returns>an Office.CommandBarComboBox object or null</returns>
-		public static NetOffice.OfficeApi.CommandBarComboBox GetActiveInstance()
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Office","CommandBarComboBox", false);
-			if(null != proxy)
-				return new NetOffice.OfficeApi.CommandBarComboBox(null, proxy);
-			else
-				return null;
-		}
-
-		/// <summary>
-        /// Returns a running Office.CommandBarComboBox object from the environment/system. 
-        /// </summary>
-	    /// <param name="throwOnError">throw an exception if no object was found</param>
-        /// <returns>an Office.CommandBarComboBox object or null</returns>
-		public static NetOffice.OfficeApi.CommandBarComboBox GetActiveInstance(bool throwOnError)
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Office","CommandBarComboBox", throwOnError);
-			if(null != proxy)
-				return new NetOffice.OfficeApi.CommandBarComboBox(null, proxy);
-			else
-				return null;
-		}
 		#endregion
 
 		#region Events
@@ -209,12 +170,12 @@ namespace NetOffice.OfficeApi
 				return;
 	
             if (null == _activeSinkId)
-				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, _CommandBarComboBoxEvents_SinkHelper.Id);
+				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, Events._CommandBarComboBoxEvents_SinkHelper.Id);
 
 
-			if(_CommandBarComboBoxEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
+			if(Events._CommandBarComboBoxEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
 			{
-				__CommandBarComboBoxEvents_SinkHelper = new _CommandBarComboBoxEvents_SinkHelper(this, _connectPoint);
+				__CommandBarComboBoxEvents_SinkHelper = new Events._CommandBarComboBoxEvents_SinkHelper(this, _connectPoint);
 				return;
 			} 
         }

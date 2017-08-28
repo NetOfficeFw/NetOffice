@@ -1,23 +1,33 @@
 ﻿using System;
 using NetRuntimeSystem = System;
-using System.Runtime.InteropServices;
-using System.Runtime.CompilerServices;
 using System.ComponentModel;
-using System.Reflection;
-using System.Collections.Generic;
-using NetOffice;
+using NetOffice.Attributes;
+
 namespace NetOffice.MSHTMLApi
 {
-	///<summary>
+	/// <summary>
 	/// DispatchInterface HTMLWindowEvents2 
 	/// SupportByVersion MSHTML, 4
-	///</summary>
-	[SupportByVersionAttribute("MSHTML", 4)]
-	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
-	public class HTMLWindowEvents2 : DispHTMLWindow2
+	/// </summary>
+	[SupportByVersion("MSHTML", 4)]
+	[EntityType(EntityType.IsDispatchInterface)]
+ 	public class HTMLWindowEvents2 : DispHTMLWindow2
 	{
 		#pragma warning disable
+
 		#region Type Information
+
+		/// <summary>
+		/// Instance Type
+		/// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
+		public override Type InstanceType
+		{
+			get
+			{
+				return LateBindingApiWrapperType;
+			}
+		}
 
         private static Type _type;
 
@@ -28,14 +38,20 @@ namespace NetOffice.MSHTMLApi
             {
                 if (null == _type)
                     _type = typeof(HTMLWindowEvents2);
-                    
                 return _type;
             }
         }
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public HTMLWindowEvents2(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -81,7 +97,7 @@ namespace NetOffice.MSHTMLApi
 		{
 		}
 		
-		/// <param name="progId">registered ProgID</param>
+		/// <param name="progId">registered progID</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public HTMLWindowEvents2(string progId) : base(progId)
 		{
@@ -97,140 +113,118 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
-		/// 
 		/// </summary>
 		/// <param name="pEvtObj">NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj</param>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[SupportByVersion("MSHTML", 4)]
 		public void onload(NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(pEvtObj);
-			Invoker.Method(this, "onload", paramsArray);
+			 Factory.ExecuteMethod(this, "onload", pEvtObj);
 		}
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
-		/// 
 		/// </summary>
 		/// <param name="pEvtObj">NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj</param>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[SupportByVersion("MSHTML", 4)]
 		public void onunload(NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(pEvtObj);
-			Invoker.Method(this, "onunload", paramsArray);
+			 Factory.ExecuteMethod(this, "onunload", pEvtObj);
 		}
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
-		/// 
 		/// </summary>
 		/// <param name="pEvtObj">NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj</param>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[SupportByVersion("MSHTML", 4)]
 		public bool onhelp(NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(pEvtObj);
-			object returnItem = Invoker.MethodReturn(this, "onhelp", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return Factory.ExecuteBoolMethodGet(this, "onhelp", pEvtObj);
 		}
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
-		/// 
 		/// </summary>
 		/// <param name="pEvtObj">NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj</param>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[SupportByVersion("MSHTML", 4)]
 		public void onfocus(NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(pEvtObj);
-			Invoker.Method(this, "onfocus", paramsArray);
+			 Factory.ExecuteMethod(this, "onfocus", pEvtObj);
 		}
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
-		/// 
 		/// </summary>
 		/// <param name="pEvtObj">NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj</param>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[SupportByVersion("MSHTML", 4)]
 		public void onblur(NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(pEvtObj);
-			Invoker.Method(this, "onblur", paramsArray);
+			 Factory.ExecuteMethod(this, "onblur", pEvtObj);
 		}
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
-		/// 
 		/// </summary>
 		/// <param name="description">string description</param>
 		/// <param name="url">string url</param>
 		/// <param name="line">Int32 line</param>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[SupportByVersion("MSHTML", 4)]
 		public void onerror(string description, string url, Int32 line)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(description, url, line);
-			Invoker.Method(this, "onerror", paramsArray);
+			 Factory.ExecuteMethod(this, "onerror", description, url, line);
 		}
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
-		/// 
 		/// </summary>
 		/// <param name="pEvtObj">NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj</param>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[SupportByVersion("MSHTML", 4)]
 		public void onresize(NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(pEvtObj);
-			Invoker.Method(this, "onresize", paramsArray);
+			 Factory.ExecuteMethod(this, "onresize", pEvtObj);
 		}
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
-		/// 
 		/// </summary>
 		/// <param name="pEvtObj">NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj</param>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[SupportByVersion("MSHTML", 4)]
 		public void onscroll(NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(pEvtObj);
-			Invoker.Method(this, "onscroll", paramsArray);
+			 Factory.ExecuteMethod(this, "onscroll", pEvtObj);
 		}
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
-		/// 
 		/// </summary>
 		/// <param name="pEvtObj">NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj</param>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[SupportByVersion("MSHTML", 4)]
 		public void onbeforeunload(NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(pEvtObj);
-			Invoker.Method(this, "onbeforeunload", paramsArray);
+			 Factory.ExecuteMethod(this, "onbeforeunload", pEvtObj);
 		}
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
-		/// 
 		/// </summary>
 		/// <param name="pEvtObj">NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj</param>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[SupportByVersion("MSHTML", 4)]
 		public void onbeforeprint(NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(pEvtObj);
-			Invoker.Method(this, "onbeforeprint", paramsArray);
+			 Factory.ExecuteMethod(this, "onbeforeprint", pEvtObj);
 		}
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
-		/// 
 		/// </summary>
 		/// <param name="pEvtObj">NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj</param>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[SupportByVersion("MSHTML", 4)]
 		public void onafterprint(NetOffice.MSHTMLApi.IHTMLEventObj pEvtObj)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(pEvtObj);
-			Invoker.Method(this, "onafterprint", paramsArray);
+			 Factory.ExecuteMethod(this, "onafterprint", pEvtObj);
 		}
 
 		#endregion
+
 		#pragma warning restore
 	}
 }

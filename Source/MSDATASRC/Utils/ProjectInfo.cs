@@ -3,6 +3,7 @@ using System.Reflection;
 using System.ComponentModel;
 using System.Collections.Generic;
 using NetOffice;
+using NetOffice.Attributes;
 
 namespace MSDATASRCApi.Utils
 {
@@ -94,7 +95,15 @@ namespace MSDATASRCApi.Utils
                 return _dependents;
             }
         }
-        
+
+        public bool IsDuck
+        {
+            get
+            {
+                return false;
+            }
+        }
+
         #endregion
     }
     #pragma warning restore

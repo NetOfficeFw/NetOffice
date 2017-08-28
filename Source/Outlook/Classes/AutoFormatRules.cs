@@ -1,8 +1,7 @@
 ﻿using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
-using NetOffice;
-using NetOffice.Misc;
+using NetOffice.Attributes;
 
 namespace NetOffice.OutlookApi
 {
@@ -13,16 +12,17 @@ namespace NetOffice.OutlookApi
 
 	#endregion
 
-	///<summary>
+	/// <summary>
 	/// CoClass AutoFormatRules 
 	/// SupportByVersion Outlook, 12,14,15,16
-	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff866587.aspx
-	///</summary>
-	[SupportByVersionAttribute("Outlook", 12,14,15,16)]
-	[EntityTypeAttribute(EntityType.IsCoClass)]
-	public class AutoFormatRules : _AutoFormatRules
+	/// </summary>
+	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff866587.aspx </remarks>
+	[SupportByVersion("Outlook", 12,14,15,16)]
+	[EntityType(EntityType.IsCoClass)]
+ 	public class AutoFormatRules : _AutoFormatRules
 	{
 		#pragma warning disable
+
 		#region Fields
 		
 		private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
@@ -36,6 +36,7 @@ namespace NetOffice.OutlookApi
         /// <summary>
         /// Instance Type
         /// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
         public override Type InstanceType
         {
             get
@@ -102,17 +103,17 @@ namespace NetOffice.OutlookApi
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of AutoFormatRules 
-        ///</summary>		
+        /// </summary>		
 		public AutoFormatRules():base("Outlook.AutoFormatRules")
 		{
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of AutoFormatRules
-        ///</summary>
+        /// </summary>
         ///<param name="progId">registered ProgID</param>
 		public AutoFormatRules(string progId):base(progId)
 		{
@@ -122,46 +123,6 @@ namespace NetOffice.OutlookApi
 		#endregion
 
 		#region Static CoClass Methods
-
-		/// <summary>
-        /// Returns all running Outlook.AutoFormatRules objects from the environment/system
-        /// </summary>
-        /// <returns>an Outlook.AutoFormatRules array</returns>
-		public static NetOffice.OutlookApi.AutoFormatRules[] GetActiveInstances()
-		{		
-			IDisposableEnumeration proxyList = NetOffice.ProxyService.GetActiveInstances("Outlook","AutoFormatRules");
-			NetRuntimeSystem.Collections.Generic.List<NetOffice.OutlookApi.AutoFormatRules> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.OutlookApi.AutoFormatRules>();
-			foreach(object proxy in proxyList)
-				resultList.Add( new NetOffice.OutlookApi.AutoFormatRules(null, proxy) );
-			return resultList.ToArray();
-		}
-
-		/// <summary>
-        /// Returns a running Outlook.AutoFormatRules object from the environment/system.
-        /// </summary>
-        /// <returns>an Outlook.AutoFormatRules object or null</returns>
-		public static NetOffice.OutlookApi.AutoFormatRules GetActiveInstance()
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Outlook","AutoFormatRules", false);
-			if(null != proxy)
-				return new NetOffice.OutlookApi.AutoFormatRules(null, proxy);
-			else
-				return null;
-		}
-
-		/// <summary>
-        /// Returns a running Outlook.AutoFormatRules object from the environment/system. 
-        /// </summary>
-	    /// <param name="throwOnError">throw an exception if no object was found</param>
-        /// <returns>an Outlook.AutoFormatRules object or null</returns>
-		public static NetOffice.OutlookApi.AutoFormatRules GetActiveInstance(bool throwOnError)
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Outlook","AutoFormatRules", throwOnError);
-			if(null != proxy)
-				return new NetOffice.OutlookApi.AutoFormatRules(null, proxy);
-			else
-				return null;
-		}
 		#endregion
 
 		#region Events

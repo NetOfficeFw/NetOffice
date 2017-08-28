@@ -1,37 +1,37 @@
 ﻿using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
-using NetOffice;
-using NetOffice.Misc;
+using NetOffice.Attributes;
 
 namespace NetOffice.VisioApi
 {
-
 	#region Delegates
 
 	#pragma warning disable
-	public delegate void DataRecordset_DataRecordsetChangedEventHandler(NetOffice.VisioApi.IVDataRecordsetChangedEvent DataRecordsetChanged);
-	public delegate void DataRecordset_BeforeDataRecordsetDeleteEventHandler(NetOffice.VisioApi.IVDataRecordset DataRecordset);
+	public delegate void DataRecordset_DataRecordsetChangedEventHandler(NetOffice.VisioApi.IVDataRecordsetChangedEvent dataRecordsetChanged);
+	public delegate void DataRecordset_BeforeDataRecordsetDeleteEventHandler(NetOffice.VisioApi.IVDataRecordset dataRecordset);
 	#pragma warning restore
 
 	#endregion
 
-	///<summary>
+	/// <summary>
 	/// CoClass DataRecordset 
 	/// SupportByVersion Visio, 12,14,15,16
-	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff769258(v=office.14).aspx
-	///</summary>
-	[SupportByVersionAttribute("Visio", 12,14,15,16)]
-	[EntityTypeAttribute(EntityType.IsCoClass)]
-	public class DataRecordset : IVDataRecordset,IEventBinding
+	/// </summary>
+	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/ff769258(v=office.14).aspx </remarks>
+	[SupportByVersion("Visio", 12,14,15,16)]
+	[EntityType(EntityType.IsCoClass)]
+	[EventSink(typeof(Events.EDataRecordset_SinkHelper))]
+	public class DataRecordset : IVDataRecordset, IEventBinding
 	{
 		#pragma warning disable
+
 		#region Fields
 		
 		private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
 		private string _activeSinkId;
 		private NetRuntimeSystem.Type _thisType;
-		EDataRecordset_SinkHelper _eDataRecordset_SinkHelper;
+        private Events.EDataRecordset_SinkHelper _eDataRecordset_SinkHelper;
 	
 		#endregion
 
@@ -40,6 +40,7 @@ namespace NetOffice.VisioApi
         /// <summary>
         /// Instance Type
         /// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
         public override Type InstanceType
         {
             get
@@ -106,17 +107,17 @@ namespace NetOffice.VisioApi
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of DataRecordset 
-        ///</summary>		
+        /// </summary>		
 		public DataRecordset():base("Visio.DataRecordset")
 		{
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of DataRecordset
-        ///</summary>
+        /// </summary>
         ///<param name="progId">registered ProgID</param>
 		public DataRecordset(string progId):base(progId)
 		{
@@ -126,46 +127,6 @@ namespace NetOffice.VisioApi
 		#endregion
 
 		#region Static CoClass Methods
-
-		/// <summary>
-        /// Returns all running Visio.DataRecordset objects from the environment/system
-        /// </summary>
-        /// <returns>an Visio.DataRecordset array</returns>
-		public static NetOffice.VisioApi.DataRecordset[] GetActiveInstances()
-		{		
-			IDisposableEnumeration proxyList = NetOffice.ProxyService.GetActiveInstances("Visio","DataRecordset");
-			NetRuntimeSystem.Collections.Generic.List<NetOffice.VisioApi.DataRecordset> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.VisioApi.DataRecordset>();
-			foreach(object proxy in proxyList)
-				resultList.Add( new NetOffice.VisioApi.DataRecordset(null, proxy) );
-			return resultList.ToArray();
-		}
-
-		/// <summary>
-        /// Returns a running Visio.DataRecordset object from the environment/system.
-        /// </summary>
-        /// <returns>an Visio.DataRecordset object or null</returns>
-		public static NetOffice.VisioApi.DataRecordset GetActiveInstance()
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Visio","DataRecordset", false);
-			if(null != proxy)
-				return new NetOffice.VisioApi.DataRecordset(null, proxy);
-			else
-				return null;
-		}
-
-		/// <summary>
-        /// Returns a running Visio.DataRecordset object from the environment/system. 
-        /// </summary>
-	    /// <param name="throwOnError">throw an exception if no object was found</param>
-        /// <returns>an Visio.DataRecordset object or null</returns>
-		public static NetOffice.VisioApi.DataRecordset GetActiveInstance(bool throwOnError)
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Visio","DataRecordset", throwOnError);
-			if(null != proxy)
-				return new NetOffice.VisioApi.DataRecordset(null, proxy);
-			else
-				return null;
-		}
 		#endregion
 
 		#region Events
@@ -233,12 +194,12 @@ namespace NetOffice.VisioApi
 				return;
 	
             if (null == _activeSinkId)
-				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, EDataRecordset_SinkHelper.Id);
+				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, Events.EDataRecordset_SinkHelper.Id);
 
 
-			if(EDataRecordset_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
+			if (Events.EDataRecordset_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
 			{
-				_eDataRecordset_SinkHelper = new EDataRecordset_SinkHelper(this, _connectPoint);
+				_eDataRecordset_SinkHelper = new Events.EDataRecordset_SinkHelper(this, _connectPoint);
 				return;
 			} 
         }

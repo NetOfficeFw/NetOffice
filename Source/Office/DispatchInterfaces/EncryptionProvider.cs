@@ -1,24 +1,35 @@
-﻿using System;
+﻿using System.Reflection;
+using System;
 using NetRuntimeSystem = System;
-using System.Runtime.InteropServices;
-using System.Runtime.CompilerServices;
 using System.ComponentModel;
-using System.Reflection;
-using System.Collections.Generic;
-using NetOffice;
+using NetOffice.Attributes;
+
 namespace NetOffice.OfficeApi
 {
-	///<summary>
+	/// <summary>
 	/// DispatchInterface EncryptionProvider 
 	/// SupportByVersion Office, 12,14,15,16
-	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff863389.aspx
-	///</summary>
-	[SupportByVersionAttribute("Office", 12,14,15,16)]
-	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
-	public class EncryptionProvider : COMObject
+	/// </summary>
+	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff863389.aspx </remarks>
+	[SupportByVersion("Office", 12,14,15,16)]
+	[EntityType(EntityType.IsDispatchInterface)]
+ 	public class EncryptionProvider : COMObject
 	{
 		#pragma warning disable
+
 		#region Type Information
+
+		/// <summary>
+		/// Instance Type
+		/// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
+		public override Type InstanceType
+		{
+			get
+			{
+				return LateBindingApiWrapperType;
+			}
+		}
 
         private static Type _type;
 
@@ -29,14 +40,20 @@ namespace NetOffice.OfficeApi
             {
                 if (null == _type)
                     _type = typeof(EncryptionProvider);
-                    
                 return _type;
             }
         }
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public EncryptionProvider(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -82,7 +99,7 @@ namespace NetOffice.OfficeApi
 		{
 		}
 		
-		/// <param name="progId">registered ProgID</param>
+		/// <param name="progId">registered progID</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public EncryptionProvider(string progId) : base(progId)
 		{
@@ -98,134 +115,115 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff864896.aspx
 		/// </summary>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff864896.aspx </remarks>
 		/// <param name="encprovdet">NetOffice.OfficeApi.Enums.EncryptionProviderDetail encprovdet</param>
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		[SupportByVersion("Office", 12,14,15,16)]
 		public object GetProviderDetail(NetOffice.OfficeApi.Enums.EncryptionProviderDetail encprovdet)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(encprovdet);
-			object returnItem = Invoker.MethodReturn(this, "GetProviderDetail", paramsArray);
-			if((null != returnItem) && (returnItem is MarshalByRefObject))
-			{
-				ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
-				return newObject;
-			}
-			else
-			{
-				return  returnItem;
-			}
+			return Factory.ExecuteVariantMethodGet(this, "GetProviderDetail", encprovdet);
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff864027.aspx
 		/// </summary>
-		/// <param name="parentWindow">object ParentWindow</param>
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff864027.aspx </remarks>
+		/// <param name="parentWindow">object parentWindow</param>
+		[SupportByVersion("Office", 12,14,15,16)]
 		public Int32 NewSession(object parentWindow)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(parentWindow);
-			object returnItem = Invoker.MethodReturn(this, "NewSession", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return Factory.ExecuteInt32MethodGet(this, "NewSession", parentWindow);
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff864627.aspx
 		/// </summary>
-		/// <param name="parentWindow">object ParentWindow</param>
-		/// <param name="encryptionData">object EncryptionData</param>
-		/// <param name="permissionsMask">UIntPtr PermissionsMask</param>
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff864627.aspx </remarks>
+		/// <param name="parentWindow">object parentWindow</param>
+		/// <param name="encryptionData">object encryptionData</param>
+		/// <param name="permissionsMask">UIntPtr permissionsMask</param>
+		[SupportByVersion("Office", 12,14,15,16)]
 		public Int32 Authenticate(object parentWindow, object encryptionData, out UIntPtr permissionsMask)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,false,true);
 			permissionsMask = UIntPtr.Zero;
 			object[] paramsArray = Invoker.ValidateParamsArray(parentWindow, encryptionData, permissionsMask);
-			object returnItem = Invoker.MethodReturn(this, "Authenticate", paramsArray);
+			object returnItem = Invoker.MethodReturn(this, "Authenticate", paramsArray, modifiers);
 			permissionsMask = (UIntPtr)paramsArray[2];
 			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff864902.aspx
 		/// </summary>
-		/// <param name="sessionHandle">Int32 SessionHandle</param>
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff864902.aspx </remarks>
+		/// <param name="sessionHandle">Int32 sessionHandle</param>
+		[SupportByVersion("Office", 12,14,15,16)]
 		public Int32 CloneSession(Int32 sessionHandle)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(sessionHandle);
-			object returnItem = Invoker.MethodReturn(this, "CloneSession", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return Factory.ExecuteInt32MethodGet(this, "CloneSession", sessionHandle);
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff864652.aspx
 		/// </summary>
-		/// <param name="sessionHandle">Int32 SessionHandle</param>
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff864652.aspx </remarks>
+		/// <param name="sessionHandle">Int32 sessionHandle</param>
+		[SupportByVersion("Office", 12,14,15,16)]
 		public void EndSession(Int32 sessionHandle)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(sessionHandle);
-			Invoker.Method(this, "EndSession", paramsArray);
+			 Factory.ExecuteMethod(this, "EndSession", sessionHandle);
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff862766.aspx
 		/// </summary>
-		/// <param name="sessionHandle">Int32 SessionHandle</param>
-		/// <param name="encryptionData">object EncryptionData</param>
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff862766.aspx </remarks>
+		/// <param name="sessionHandle">Int32 sessionHandle</param>
+		/// <param name="encryptionData">object encryptionData</param>
+		[SupportByVersion("Office", 12,14,15,16)]
 		public Int32 Save(Int32 sessionHandle, object encryptionData)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(sessionHandle, encryptionData);
-			object returnItem = Invoker.MethodReturn(this, "Save", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return Factory.ExecuteInt32MethodGet(this, "Save", sessionHandle, encryptionData);
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff861839.aspx
 		/// </summary>
-		/// <param name="sessionHandle">Int32 SessionHandle</param>
-		/// <param name="streamName">string StreamName</param>
-		/// <param name="unencryptedStream">object UnencryptedStream</param>
-		/// <param name="encryptedStream">object EncryptedStream</param>
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff861839.aspx </remarks>
+		/// <param name="sessionHandle">Int32 sessionHandle</param>
+		/// <param name="streamName">string streamName</param>
+		/// <param name="unencryptedStream">object unencryptedStream</param>
+		/// <param name="encryptedStream">object encryptedStream</param>
+		[SupportByVersion("Office", 12,14,15,16)]
 		public void EncryptStream(Int32 sessionHandle, string streamName, object unencryptedStream, object encryptedStream)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(sessionHandle, streamName, unencryptedStream, encryptedStream);
-			Invoker.Method(this, "EncryptStream", paramsArray);
+			 Factory.ExecuteMethod(this, "EncryptStream", sessionHandle, streamName, unencryptedStream, encryptedStream);
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff864940.aspx
 		/// </summary>
-		/// <param name="sessionHandle">Int32 SessionHandle</param>
-		/// <param name="streamName">string StreamName</param>
-		/// <param name="encryptedStream">object EncryptedStream</param>
-		/// <param name="unencryptedStream">object UnencryptedStream</param>
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff864940.aspx </remarks>
+		/// <param name="sessionHandle">Int32 sessionHandle</param>
+		/// <param name="streamName">string streamName</param>
+		/// <param name="encryptedStream">object encryptedStream</param>
+		/// <param name="unencryptedStream">object unencryptedStream</param>
+		[SupportByVersion("Office", 12,14,15,16)]
 		public void DecryptStream(Int32 sessionHandle, string streamName, object encryptedStream, object unencryptedStream)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(sessionHandle, streamName, encryptedStream, unencryptedStream);
-			Invoker.Method(this, "DecryptStream", paramsArray);
+			 Factory.ExecuteMethod(this, "DecryptStream", sessionHandle, streamName, encryptedStream, unencryptedStream);
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff863378.aspx
 		/// </summary>
-		/// <param name="sessionHandle">Int32 SessionHandle</param>
-		/// <param name="parentWindow">object ParentWindow</param>
-		/// <param name="readOnly">bool ReadOnly</param>
-		/// <param name="remove">bool Remove</param>
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff863378.aspx </remarks>
+		/// <param name="sessionHandle">Int32 sessionHandle</param>
+		/// <param name="parentWindow">object parentWindow</param>
+		/// <param name="readOnly">bool readOnly</param>
+		/// <param name="remove">bool remove</param>
+		[SupportByVersion("Office", 12,14,15,16)]
 		public void ShowSettings(Int32 sessionHandle, object parentWindow, bool readOnly, out bool remove)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,false,false,true);
@@ -236,6 +234,7 @@ namespace NetOffice.OfficeApi
 		}
 
 		#endregion
+
 		#pragma warning restore
 	}
 }

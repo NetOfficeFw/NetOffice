@@ -1,12 +1,10 @@
 ﻿using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
-using NetOffice;
-using NetOffice.Misc;
+using NetOffice.Attributes;
 
 namespace NetOffice.OutlookApi
 {
-
 	#region Delegates
 
 	#pragma warning disable
@@ -14,21 +12,23 @@ namespace NetOffice.OutlookApi
 
 	#endregion
 
-	///<summary>
+	/// <summary>
 	/// CoClass _DocSiteControl 
 	/// SupportByVersion Outlook, 9,10,11,12,14,15,16
-	///</summary>
-	[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15,16)]
-	[EntityTypeAttribute(EntityType.IsCoClass)]
-	public class _DocSiteControl : _DDocSiteControl,IEventBinding
+	/// </summary>
+	[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
+	[EntityType(EntityType.IsCoClass)]
+	[EventSink(typeof(Events._DDocSiteControlEvents_SinkHelper))]
+	public class _DocSiteControl : _DDocSiteControl, IEventBinding
 	{
 		#pragma warning disable
+
 		#region Fields
 		
 		private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
 		private string _activeSinkId;
 		private NetRuntimeSystem.Type _thisType;
-		_DDocSiteControlEvents_SinkHelper __DDocSiteControlEvents_SinkHelper;
+		private Events._DDocSiteControlEvents_SinkHelper __DDocSiteControlEvents_SinkHelper;
 	
 		#endregion
 
@@ -37,6 +37,7 @@ namespace NetOffice.OutlookApi
         /// <summary>
         /// Instance Type
         /// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
         public override Type InstanceType
         {
             get
@@ -103,17 +104,17 @@ namespace NetOffice.OutlookApi
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of _DocSiteControl 
-        ///</summary>		
+        /// </summary>		
 		public _DocSiteControl():base("Outlook._DocSiteControl")
 		{
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of _DocSiteControl
-        ///</summary>
+        /// </summary>
         ///<param name="progId">registered ProgID</param>
 		public _DocSiteControl(string progId):base(progId)
 		{
@@ -123,46 +124,6 @@ namespace NetOffice.OutlookApi
 		#endregion
 
 		#region Static CoClass Methods
-
-		/// <summary>
-        /// Returns all running Outlook._DocSiteControl objects from the environment/system
-        /// </summary>
-        /// <returns>an Outlook._DocSiteControl array</returns>
-		public static NetOffice.OutlookApi._DocSiteControl[] GetActiveInstances()
-		{		
-			IDisposableEnumeration proxyList = NetOffice.ProxyService.GetActiveInstances("Outlook","_DocSiteControl");
-			NetRuntimeSystem.Collections.Generic.List<NetOffice.OutlookApi._DocSiteControl> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.OutlookApi._DocSiteControl>();
-			foreach(object proxy in proxyList)
-				resultList.Add( new NetOffice.OutlookApi._DocSiteControl(null, proxy) );
-			return resultList.ToArray();
-		}
-
-		/// <summary>
-        /// Returns a running Outlook._DocSiteControl object from the environment/system.
-        /// </summary>
-        /// <returns>an Outlook._DocSiteControl object or null</returns>
-		public static NetOffice.OutlookApi._DocSiteControl GetActiveInstance()
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Outlook","_DocSiteControl", false);
-			if(null != proxy)
-				return new NetOffice.OutlookApi._DocSiteControl(null, proxy);
-			else
-				return null;
-		}
-
-		/// <summary>
-        /// Returns a running Outlook._DocSiteControl object from the environment/system. 
-        /// </summary>
-	    /// <param name="throwOnError">throw an exception if no object was found</param>
-        /// <returns>an Outlook._DocSiteControl object or null</returns>
-		public static NetOffice.OutlookApi._DocSiteControl GetActiveInstance(bool throwOnError)
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Outlook","_DocSiteControl", throwOnError);
-			if(null != proxy)
-				return new NetOffice.OutlookApi._DocSiteControl(null, proxy);
-			else
-				return null;
-		}
 		#endregion
 
 		#region Events
@@ -184,12 +145,12 @@ namespace NetOffice.OutlookApi
 				return;
 	
             if (null == _activeSinkId)
-				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, _DDocSiteControlEvents_SinkHelper.Id);
+				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, Events._DDocSiteControlEvents_SinkHelper.Id);
 
 
-			if(_DDocSiteControlEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
+			if(Events._DDocSiteControlEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
 			{
-				__DDocSiteControlEvents_SinkHelper = new _DDocSiteControlEvents_SinkHelper(this, _connectPoint);
+				__DDocSiteControlEvents_SinkHelper = new Events._DDocSiteControlEvents_SinkHelper(this, _connectPoint);
 				return;
 			} 
         }

@@ -1,23 +1,33 @@
 ﻿using System;
 using NetRuntimeSystem = System;
-using System.Runtime.InteropServices;
-using System.Runtime.CompilerServices;
 using System.ComponentModel;
-using System.Reflection;
-using System.Collections.Generic;
-using NetOffice;
+using NetOffice.Attributes;
+
 namespace NetOffice.OWC10Api
 {
-	///<summary>
+	/// <summary>
 	/// DispatchInterface FieldListHierarchy 
 	/// SupportByVersion OWC10, 1
-	///</summary>
-	[SupportByVersionAttribute("OWC10", 1)]
-	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
-	public class FieldListHierarchy : COMObject
+	/// </summary>
+	[SupportByVersion("OWC10", 1)]
+	[EntityType(EntityType.IsDispatchInterface)]
+ 	public class FieldListHierarchy : COMObject
 	{
 		#pragma warning disable
+
 		#region Type Information
+
+		/// <summary>
+		/// Instance Type
+		/// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
+		public override Type InstanceType
+		{
+			get
+			{
+				return LateBindingApiWrapperType;
+			}
+		}
 
         private static Type _type;
 
@@ -28,14 +38,20 @@ namespace NetOffice.OWC10Api
             {
                 if (null == _type)
                     _type = typeof(FieldListHierarchy);
-                    
                 return _type;
             }
         }
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public FieldListHierarchy(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -81,7 +97,7 @@ namespace NetOffice.OWC10Api
 		{
 		}
 		
-		/// <param name="progId">registered ProgID</param>
+		/// <param name="progId">registered progID</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public FieldListHierarchy(string progId) : base(progId)
 		{
@@ -95,15 +111,12 @@ namespace NetOffice.OWC10Api
 		/// SupportByVersion OWC10 1
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("OWC10", 1)]
+		[SupportByVersion("OWC10", 1)]
 		public NetOffice.OWC10Api.FieldListNode Root
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Root", paramsArray);
-				NetOffice.OWC10Api.FieldListNode newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OWC10Api.FieldListNode.LateBindingApiWrapperType) as NetOffice.OWC10Api.FieldListNode;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OWC10Api.FieldListNode>(this, "Root", NetOffice.OWC10Api.FieldListNode.LateBindingApiWrapperType);
 			}
 		}
 
@@ -111,19 +124,16 @@ namespace NetOffice.OWC10Api
 		/// SupportByVersion OWC10 1
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("OWC10", 1)]
+		[SupportByVersion("OWC10", 1)]
 		public bool Visible
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Visible", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "Visible");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "Visible", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "Visible", value);
 			}
 		}
 
@@ -131,15 +141,12 @@ namespace NetOffice.OWC10Api
 		/// SupportByVersion OWC10 1
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("OWC10", 1)]
+		[SupportByVersion("OWC10", 1)]
 		public NetOffice.OWC10Api.FieldListNode Selection
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Selection", paramsArray);
-				NetOffice.OWC10Api.FieldListNode newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OWC10Api.FieldListNode.LateBindingApiWrapperType) as NetOffice.OWC10Api.FieldListNode;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OWC10Api.FieldListNode>(this, "Selection", NetOffice.OWC10Api.FieldListNode.LateBindingApiWrapperType);
 			}
 		}
 
@@ -147,19 +154,16 @@ namespace NetOffice.OWC10Api
 		/// SupportByVersion OWC10 1
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("OWC10", 1)]
+		[SupportByVersion("OWC10", 1)]
 		public bool ConcatenateData
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "ConcatenateData", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "ConcatenateData");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "ConcatenateData", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "ConcatenateData", value);
 			}
 		}
 
@@ -167,19 +171,16 @@ namespace NetOffice.OWC10Api
 		/// SupportByVersion OWC10 1
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("OWC10", 1)]
+		[SupportByVersion("OWC10", 1)]
 		public string DataSeparator
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "DataSeparator", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "DataSeparator");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "DataSeparator", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "DataSeparator", value);
 			}
 		}
 
@@ -189,19 +190,16 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
-		/// 
 		/// </summary>
 		/// <param name="pflhs">NetOffice.OWC10Api.FieldListHierarchySite pflhs</param>
-		[SupportByVersionAttribute("OWC10", 1)]
+		[SupportByVersion("OWC10", 1)]
 		public void SetHierarchySite(NetOffice.OWC10Api.FieldListHierarchySite pflhs)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(pflhs);
-			Invoker.Method(this, "SetHierarchySite", paramsArray);
+			 Factory.ExecuteMethod(this, "SetHierarchySite", pflhs);
 		}
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
-		/// 
 		/// </summary>
 		/// <param name="pflnParent">NetOffice.OWC10Api.FieldListNode pflnParent</param>
 		/// <param name="fInsertFirst">bool fInsertFirst</param>
@@ -209,85 +207,65 @@ namespace NetOffice.OWC10Api
 		/// <param name="bstrName">string bstrName</param>
 		/// <param name="bstrData">string bstrData</param>
 		/// <param name="nType">Int32 nType</param>
-		[SupportByVersionAttribute("OWC10", 1)]
+		[SupportByVersion("OWC10", 1)]
 		public NetOffice.OWC10Api.FieldListNode AddNode(NetOffice.OWC10Api.FieldListNode pflnParent, bool fInsertFirst, Int32 nID, string bstrName, string bstrData, Int32 nType)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(pflnParent, fInsertFirst, nID, bstrName, bstrData, nType);
-			object returnItem = Invoker.MethodReturn(this, "AddNode", paramsArray);
-			NetOffice.OWC10Api.FieldListNode newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OWC10Api.FieldListNode.LateBindingApiWrapperType) as NetOffice.OWC10Api.FieldListNode;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OWC10Api.FieldListNode>(this, "AddNode", NetOffice.OWC10Api.FieldListNode.LateBindingApiWrapperType, new object[]{ pflnParent, fInsertFirst, nID, bstrName, bstrData, nType });
 		}
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
-		/// 
 		/// </summary>
 		/// <param name="nID">Int32 nID</param>
-		[SupportByVersionAttribute("OWC10", 1)]
+		[SupportByVersion("OWC10", 1)]
 		public NetOffice.OWC10Api.FieldListNode GetNode(Int32 nID)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(nID);
-			object returnItem = Invoker.MethodReturn(this, "GetNode", paramsArray);
-			NetOffice.OWC10Api.FieldListNode newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OWC10Api.FieldListNode.LateBindingApiWrapperType) as NetOffice.OWC10Api.FieldListNode;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OWC10Api.FieldListNode>(this, "GetNode", NetOffice.OWC10Api.FieldListNode.LateBindingApiWrapperType, nID);
 		}
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
-		/// 
 		/// </summary>
 		/// <param name="pfln">NetOffice.OWC10Api.FieldListNode pfln</param>
-		[SupportByVersionAttribute("OWC10", 1)]
+		[SupportByVersion("OWC10", 1)]
 		public void RemoveNode(NetOffice.OWC10Api.FieldListNode pfln)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(pfln);
-			Invoker.Method(this, "RemoveNode", paramsArray);
+			 Factory.ExecuteMethod(this, "RemoveNode", pfln);
 		}
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
-		/// 
 		/// </summary>
 		/// <param name="nType">Int32 nType</param>
-		[SupportByVersionAttribute("OWC10", 1)]
+		[SupportByVersion("OWC10", 1)]
 		public NetOffice.OWC10Api.FieldListType AddType(Int32 nType)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(nType);
-			object returnItem = Invoker.MethodReturn(this, "AddType", paramsArray);
-			NetOffice.OWC10Api.FieldListType newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OWC10Api.FieldListType.LateBindingApiWrapperType) as NetOffice.OWC10Api.FieldListType;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OWC10Api.FieldListType>(this, "AddType", NetOffice.OWC10Api.FieldListType.LateBindingApiWrapperType, nType);
 		}
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
-		/// 
 		/// </summary>
 		/// <param name="nTypeId">Int32 nTypeId</param>
-		[SupportByVersionAttribute("OWC10", 1)]
+		[SupportByVersion("OWC10", 1)]
 		public NetOffice.OWC10Api.FieldListType GetType(Int32 nTypeId)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(nTypeId);
-			object returnItem = Invoker.MethodReturn(this, "GetType", paramsArray);
-			NetOffice.OWC10Api.FieldListType newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OWC10Api.FieldListType.LateBindingApiWrapperType) as NetOffice.OWC10Api.FieldListType;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OWC10Api.FieldListType>(this, "GetType", NetOffice.OWC10Api.FieldListType.LateBindingApiWrapperType, nTypeId);
 		}
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
-		/// 
 		/// </summary>
 		/// <param name="pfln">NetOffice.OWC10Api.FieldListNode pfln</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("OWC10", 1)]
+		[SupportByVersion("OWC10", 1)]
 		public NetOffice.OWC10Api.FieldListNode GetNextSelected(NetOffice.OWC10Api.FieldListNode pfln)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(pfln);
-			object returnItem = Invoker.MethodReturn(this, "GetNextSelected", paramsArray);
-			NetOffice.OWC10Api.FieldListNode newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OWC10Api.FieldListNode.LateBindingApiWrapperType) as NetOffice.OWC10Api.FieldListNode;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OWC10Api.FieldListNode>(this, "GetNextSelected", NetOffice.OWC10Api.FieldListNode.LateBindingApiWrapperType, pfln);
 		}
 
 		#endregion
+
 		#pragma warning restore
 	}
 }

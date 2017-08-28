@@ -1,23 +1,33 @@
 ﻿using System;
 using NetRuntimeSystem = System;
-using System.Runtime.InteropServices;
-using System.Runtime.CompilerServices;
 using System.ComponentModel;
-using System.Reflection;
-using System.Collections.Generic;
-using NetOffice;
+using NetOffice.Attributes;
+
 namespace NetOffice.MSHTMLApi
 {
-	///<summary>
+	/// <summary>
 	/// DispatchInterface IHTMLCommentElement2 
 	/// SupportByVersion MSHTML, 4
-	///</summary>
-	[SupportByVersionAttribute("MSHTML", 4)]
-	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
-	public class IHTMLCommentElement2 : IHTMLCommentElement
+	/// </summary>
+	[SupportByVersion("MSHTML", 4)]
+	[EntityType(EntityType.IsDispatchInterface)]
+ 	public class IHTMLCommentElement2 : IHTMLCommentElement
 	{
 		#pragma warning disable
+
 		#region Type Information
+
+		/// <summary>
+		/// Instance Type
+		/// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
+		public override Type InstanceType
+		{
+			get
+			{
+				return LateBindingApiWrapperType;
+			}
+		}
 
         private static Type _type;
 
@@ -28,14 +38,20 @@ namespace NetOffice.MSHTMLApi
             {
                 if (null == _type)
                     _type = typeof(IHTMLCommentElement2);
-                    
                 return _type;
             }
         }
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public IHTMLCommentElement2(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -81,7 +97,7 @@ namespace NetOffice.MSHTMLApi
 		{
 		}
 		
-		/// <param name="progId">registered ProgID</param>
+		/// <param name="progId">registered progID</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public IHTMLCommentElement2(string progId) : base(progId)
 		{
@@ -95,19 +111,16 @@ namespace NetOffice.MSHTMLApi
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[SupportByVersion("MSHTML", 4)]
 		public string data
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "data", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "data");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "data", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "data", value);
 			}
 		}
 
@@ -115,14 +128,12 @@ namespace NetOffice.MSHTMLApi
 		/// SupportByVersion MSHTML 4
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[SupportByVersion("MSHTML", 4)]
 		public Int32 length
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "length", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "length");
 			}
 		}
 
@@ -132,71 +143,61 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
-		/// 
 		/// </summary>
 		/// <param name="offset">Int32 offset</param>
-		/// <param name="count">Int32 Count</param>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		/// <param name="count">Int32 count</param>
+		[SupportByVersion("MSHTML", 4)]
 		public string substringData(Int32 offset, Int32 count)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(offset, count);
-			object returnItem = Invoker.MethodReturn(this, "substringData", paramsArray);
-			return NetRuntimeSystem.Convert.ToString(returnItem);
+			return Factory.ExecuteStringMethodGet(this, "substringData", offset, count);
 		}
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
-		/// 
 		/// </summary>
 		/// <param name="bstrstring">string bstrstring</param>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[SupportByVersion("MSHTML", 4)]
 		public void appendData(string bstrstring)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(bstrstring);
-			Invoker.Method(this, "appendData", paramsArray);
+			 Factory.ExecuteMethod(this, "appendData", bstrstring);
 		}
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
-		/// 
 		/// </summary>
 		/// <param name="offset">Int32 offset</param>
 		/// <param name="bstrstring">string bstrstring</param>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[SupportByVersion("MSHTML", 4)]
 		public void insertData(Int32 offset, string bstrstring)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(offset, bstrstring);
-			Invoker.Method(this, "insertData", paramsArray);
+			 Factory.ExecuteMethod(this, "insertData", offset, bstrstring);
 		}
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
-		/// 
 		/// </summary>
 		/// <param name="offset">Int32 offset</param>
-		/// <param name="count">Int32 Count</param>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		/// <param name="count">Int32 count</param>
+		[SupportByVersion("MSHTML", 4)]
 		public void deleteData(Int32 offset, Int32 count)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(offset, count);
-			Invoker.Method(this, "deleteData", paramsArray);
+			 Factory.ExecuteMethod(this, "deleteData", offset, count);
 		}
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
-		/// 
 		/// </summary>
 		/// <param name="offset">Int32 offset</param>
-		/// <param name="count">Int32 Count</param>
+		/// <param name="count">Int32 count</param>
 		/// <param name="bstrstring">string bstrstring</param>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[SupportByVersion("MSHTML", 4)]
 		public void replaceData(Int32 offset, Int32 count, string bstrstring)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(offset, count, bstrstring);
-			Invoker.Method(this, "replaceData", paramsArray);
+			 Factory.ExecuteMethod(this, "replaceData", offset, count, bstrstring);
 		}
 
 		#endregion
+
 		#pragma warning restore
 	}
 }

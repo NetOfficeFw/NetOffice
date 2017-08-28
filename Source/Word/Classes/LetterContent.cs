@@ -1,12 +1,10 @@
 ﻿using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
-using NetOffice;
-using NetOffice.Misc;
+using NetOffice.Attributes;
 
 namespace NetOffice.WordApi
 {
-
 	#region Delegates
 
 	#pragma warning disable
@@ -14,16 +12,17 @@ namespace NetOffice.WordApi
 
 	#endregion
 
-	///<summary>
+	/// <summary>
 	/// CoClass LetterContent 
 	/// SupportByVersion Word, 9,10,11,12,14,15,16
-	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197151.aspx
-	///</summary>
-	[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
-	[EntityTypeAttribute(EntityType.IsCoClass)]
-	public class LetterContent : _LetterContent
+	/// </summary>
+	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff197151.aspx </remarks>
+	[SupportByVersion("Word", 9,10,11,12,14,15,16)]
+	[EntityType(EntityType.IsCoClass)]
+ 	public class LetterContent : _LetterContent
 	{
 		#pragma warning disable
+
 		#region Fields
 		
 		private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
@@ -37,6 +36,7 @@ namespace NetOffice.WordApi
         /// <summary>
         /// Instance Type
         /// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
         public override Type InstanceType
         {
             get
@@ -103,17 +103,17 @@ namespace NetOffice.WordApi
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of LetterContent 
-        ///</summary>		
+        /// </summary>		
 		public LetterContent():base("Word.LetterContent")
 		{
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of LetterContent
-        ///</summary>
+        /// </summary>
         ///<param name="progId">registered ProgID</param>
 		public LetterContent(string progId):base(progId)
 		{
@@ -123,46 +123,6 @@ namespace NetOffice.WordApi
 		#endregion
 
 		#region Static CoClass Methods
-
-		/// <summary>
-        /// Returns all running Word.LetterContent objects from the environment/system
-        /// </summary>
-        /// <returns>an Word.LetterContent array</returns>
-		public static NetOffice.WordApi.LetterContent[] GetActiveInstances()
-		{		
-			IDisposableEnumeration proxyList = NetOffice.ProxyService.GetActiveInstances("Word","LetterContent");
-			NetRuntimeSystem.Collections.Generic.List<NetOffice.WordApi.LetterContent> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.WordApi.LetterContent>();
-			foreach(object proxy in proxyList)
-				resultList.Add( new NetOffice.WordApi.LetterContent(null, proxy) );
-			return resultList.ToArray();
-		}
-
-		/// <summary>
-        /// Returns a running Word.LetterContent object from the environment/system.
-        /// </summary>
-        /// <returns>an Word.LetterContent object or null</returns>
-		public static NetOffice.WordApi.LetterContent GetActiveInstance()
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Word","LetterContent", false);
-			if(null != proxy)
-				return new NetOffice.WordApi.LetterContent(null, proxy);
-			else
-				return null;
-		}
-
-		/// <summary>
-        /// Returns a running Word.LetterContent object from the environment/system. 
-        /// </summary>
-	    /// <param name="throwOnError">throw an exception if no object was found</param>
-        /// <returns>an Word.LetterContent object or null</returns>
-		public static NetOffice.WordApi.LetterContent GetActiveInstance(bool throwOnError)
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Word","LetterContent", throwOnError);
-			if(null != proxy)
-				return new NetOffice.WordApi.LetterContent(null, proxy);
-			else
-				return null;
-		}
 		#endregion
 
 		#region Events

@@ -1,24 +1,34 @@
 ﻿using System;
 using NetRuntimeSystem = System;
-using System.Runtime.InteropServices;
-using System.Runtime.CompilerServices;
 using System.ComponentModel;
-using System.Reflection;
-using System.Collections.Generic;
-using NetOffice;
+using NetOffice.Attributes;
+
 namespace NetOffice.MSProjectApi
 {
-	///<summary>
+	/// <summary>
 	/// DispatchInterface ViewsSingle 
 	/// SupportByVersion MSProject, 11,12,14
-	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff920756(v=office.14).aspx
-	///</summary>
-	[SupportByVersionAttribute("MSProject", 11,12,14)]
-	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
-	public class ViewsSingle : Views
+	/// </summary>
+	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff920756(v=office.14).aspx </remarks>
+	[SupportByVersion("MSProject", 11,12,14)]
+	[EntityType(EntityType.IsDispatchInterface)]
+ 	public class ViewsSingle : Views
 	{
 		#pragma warning disable
+
 		#region Type Information
+
+		/// <summary>
+		/// Instance Type
+		/// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
+		public override Type InstanceType
+		{
+			get
+			{
+				return LateBindingApiWrapperType;
+			}
+		}
 
         private static Type _type;
 
@@ -29,14 +39,20 @@ namespace NetOffice.MSProjectApi
             {
                 if (null == _type)
                     _type = typeof(ViewsSingle);
-                    
                 return _type;
             }
         }
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public ViewsSingle(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -82,7 +98,7 @@ namespace NetOffice.MSProjectApi
 		{
 		}
 		
-		/// <param name="progId">registered ProgID</param>
+		/// <param name="progId">registered progID</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public ViewsSingle(string progId) : base(progId)
 		{
@@ -98,130 +114,103 @@ namespace NetOffice.MSProjectApi
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
-		/// 
 		/// </summary>
-		/// <param name="name">string Name</param>
+		/// <param name="name">string name</param>
 		/// <param name="screen">optional NetOffice.MSProjectApi.Enums.PjViewScreen Screen = 1</param>
 		/// <param name="showInMenu">optional bool ShowInMenu = false</param>
-		/// <param name="table">optional object Table</param>
-		/// <param name="filter">optional object Filter</param>
-		/// <param name="group">optional object Group</param>
+		/// <param name="table">optional object table</param>
+		/// <param name="filter">optional object filter</param>
+		/// <param name="group">optional object group</param>
 		/// <param name="highlightFilt">optional bool HighlightFilt = false</param>
-		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		[SupportByVersion("MSProject", 11,12,14)]
 		public NetOffice.MSProjectApi.ViewSingle Add(string name, object screen, object showInMenu, object table, object filter, object group, object highlightFilt)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(name, screen, showInMenu, table, filter, group, highlightFilt);
-			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.MSProjectApi.ViewSingle newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.MSProjectApi.ViewSingle.LateBindingApiWrapperType) as NetOffice.MSProjectApi.ViewSingle;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.MSProjectApi.ViewSingle>(this, "Add", NetOffice.MSProjectApi.ViewSingle.LateBindingApiWrapperType, new object[]{ name, screen, showInMenu, table, filter, group, highlightFilt });
 		}
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
-		/// 
 		/// </summary>
-		/// <param name="name">string Name</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		/// <param name="name">string name</param>
+		[CustomMethod]
+		[SupportByVersion("MSProject", 11,12,14)]
 		public NetOffice.MSProjectApi.ViewSingle Add(string name)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(name);
-			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.MSProjectApi.ViewSingle newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.MSProjectApi.ViewSingle.LateBindingApiWrapperType) as NetOffice.MSProjectApi.ViewSingle;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.MSProjectApi.ViewSingle>(this, "Add", NetOffice.MSProjectApi.ViewSingle.LateBindingApiWrapperType, name);
 		}
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
-		/// 
 		/// </summary>
-		/// <param name="name">string Name</param>
+		/// <param name="name">string name</param>
 		/// <param name="screen">optional NetOffice.MSProjectApi.Enums.PjViewScreen Screen = 1</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		[CustomMethod]
+		[SupportByVersion("MSProject", 11,12,14)]
 		public NetOffice.MSProjectApi.ViewSingle Add(string name, object screen)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(name, screen);
-			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.MSProjectApi.ViewSingle newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.MSProjectApi.ViewSingle.LateBindingApiWrapperType) as NetOffice.MSProjectApi.ViewSingle;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.MSProjectApi.ViewSingle>(this, "Add", NetOffice.MSProjectApi.ViewSingle.LateBindingApiWrapperType, name, screen);
 		}
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
-		/// 
 		/// </summary>
-		/// <param name="name">string Name</param>
+		/// <param name="name">string name</param>
 		/// <param name="screen">optional NetOffice.MSProjectApi.Enums.PjViewScreen Screen = 1</param>
 		/// <param name="showInMenu">optional bool ShowInMenu = false</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		[CustomMethod]
+		[SupportByVersion("MSProject", 11,12,14)]
 		public NetOffice.MSProjectApi.ViewSingle Add(string name, object screen, object showInMenu)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(name, screen, showInMenu);
-			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.MSProjectApi.ViewSingle newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.MSProjectApi.ViewSingle.LateBindingApiWrapperType) as NetOffice.MSProjectApi.ViewSingle;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.MSProjectApi.ViewSingle>(this, "Add", NetOffice.MSProjectApi.ViewSingle.LateBindingApiWrapperType, name, screen, showInMenu);
 		}
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
-		/// 
 		/// </summary>
-		/// <param name="name">string Name</param>
+		/// <param name="name">string name</param>
 		/// <param name="screen">optional NetOffice.MSProjectApi.Enums.PjViewScreen Screen = 1</param>
 		/// <param name="showInMenu">optional bool ShowInMenu = false</param>
-		/// <param name="table">optional object Table</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		/// <param name="table">optional object table</param>
+		[CustomMethod]
+		[SupportByVersion("MSProject", 11,12,14)]
 		public NetOffice.MSProjectApi.ViewSingle Add(string name, object screen, object showInMenu, object table)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(name, screen, showInMenu, table);
-			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.MSProjectApi.ViewSingle newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.MSProjectApi.ViewSingle.LateBindingApiWrapperType) as NetOffice.MSProjectApi.ViewSingle;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.MSProjectApi.ViewSingle>(this, "Add", NetOffice.MSProjectApi.ViewSingle.LateBindingApiWrapperType, name, screen, showInMenu, table);
 		}
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
-		/// 
 		/// </summary>
-		/// <param name="name">string Name</param>
+		/// <param name="name">string name</param>
 		/// <param name="screen">optional NetOffice.MSProjectApi.Enums.PjViewScreen Screen = 1</param>
 		/// <param name="showInMenu">optional bool ShowInMenu = false</param>
-		/// <param name="table">optional object Table</param>
-		/// <param name="filter">optional object Filter</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		/// <param name="table">optional object table</param>
+		/// <param name="filter">optional object filter</param>
+		[CustomMethod]
+		[SupportByVersion("MSProject", 11,12,14)]
 		public NetOffice.MSProjectApi.ViewSingle Add(string name, object screen, object showInMenu, object table, object filter)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(name, screen, showInMenu, table, filter);
-			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.MSProjectApi.ViewSingle newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.MSProjectApi.ViewSingle.LateBindingApiWrapperType) as NetOffice.MSProjectApi.ViewSingle;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.MSProjectApi.ViewSingle>(this, "Add", NetOffice.MSProjectApi.ViewSingle.LateBindingApiWrapperType, new object[]{ name, screen, showInMenu, table, filter });
 		}
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
-		/// 
 		/// </summary>
-		/// <param name="name">string Name</param>
+		/// <param name="name">string name</param>
 		/// <param name="screen">optional NetOffice.MSProjectApi.Enums.PjViewScreen Screen = 1</param>
 		/// <param name="showInMenu">optional bool ShowInMenu = false</param>
-		/// <param name="table">optional object Table</param>
-		/// <param name="filter">optional object Filter</param>
-		/// <param name="group">optional object Group</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		/// <param name="table">optional object table</param>
+		/// <param name="filter">optional object filter</param>
+		/// <param name="group">optional object group</param>
+		[CustomMethod]
+		[SupportByVersion("MSProject", 11,12,14)]
 		public NetOffice.MSProjectApi.ViewSingle Add(string name, object screen, object showInMenu, object table, object filter, object group)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(name, screen, showInMenu, table, filter, group);
-			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.MSProjectApi.ViewSingle newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.MSProjectApi.ViewSingle.LateBindingApiWrapperType) as NetOffice.MSProjectApi.ViewSingle;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.MSProjectApi.ViewSingle>(this, "Add", NetOffice.MSProjectApi.ViewSingle.LateBindingApiWrapperType, new object[]{ name, screen, showInMenu, table, filter, group });
 		}
 
 		#endregion
+
 		#pragma warning restore
 	}
 }

@@ -1,11 +1,10 @@
 ﻿using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
-using NetOffice;
-using NetOffice.Misc;
+using NetOffice.Attributes;
+
 namespace NetOffice.OutlookApi
 {
-
 	#region Delegates
 
 	#pragma warning disable
@@ -13,16 +12,17 @@ namespace NetOffice.OutlookApi
 
 	#endregion
 
-	///<summary>
+	/// <summary>
 	/// CoClass AccountRuleCondition 
 	/// SupportByVersion Outlook, 12,14,15,16
-	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff861913.aspx
-	///</summary>
-	[SupportByVersionAttribute("Outlook", 12,14,15,16)]
-	[EntityTypeAttribute(EntityType.IsCoClass)]
-	public class AccountRuleCondition : _AccountRuleCondition
+	/// </summary>
+	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff861913.aspx </remarks>
+	[SupportByVersion("Outlook", 12,14,15,16)]
+	[EntityType(EntityType.IsCoClass)]
+ 	public class AccountRuleCondition : _AccountRuleCondition
 	{
 		#pragma warning disable
+
 		#region Fields
 		
 		private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
@@ -36,6 +36,7 @@ namespace NetOffice.OutlookApi
         /// <summary>
         /// Instance Type
         /// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
         public override Type InstanceType
         {
             get
@@ -102,17 +103,17 @@ namespace NetOffice.OutlookApi
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of AccountRuleCondition 
-        ///</summary>		
+        /// </summary>		
 		public AccountRuleCondition():base("Outlook.AccountRuleCondition")
 		{
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of AccountRuleCondition
-        ///</summary>
+        /// </summary>
         ///<param name="progId">registered ProgID</param>
 		public AccountRuleCondition(string progId):base(progId)
 		{
@@ -122,46 +123,6 @@ namespace NetOffice.OutlookApi
 		#endregion
 
 		#region Static CoClass Methods
-
-		/// <summary>
-        /// Returns all running Outlook.AccountRuleCondition objects from the environment/system
-        /// </summary>
-        /// <returns>an Outlook.AccountRuleCondition array</returns>
-		public static NetOffice.OutlookApi.AccountRuleCondition[] GetActiveInstances()
-		{		
-			IDisposableEnumeration proxyList = NetOffice.ProxyService.GetActiveInstances("Outlook","AccountRuleCondition");
-			NetRuntimeSystem.Collections.Generic.List<NetOffice.OutlookApi.AccountRuleCondition> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.OutlookApi.AccountRuleCondition>();
-			foreach(object proxy in proxyList)
-				resultList.Add( new NetOffice.OutlookApi.AccountRuleCondition(null, proxy) );
-			return resultList.ToArray();
-		}
-
-		/// <summary>
-        /// Returns a running Outlook.AccountRuleCondition object from the environment/system.
-        /// </summary>
-        /// <returns>an Outlook.AccountRuleCondition object or null</returns>
-		public static NetOffice.OutlookApi.AccountRuleCondition GetActiveInstance()
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Outlook","AccountRuleCondition", false);
-			if(null != proxy)
-				return new NetOffice.OutlookApi.AccountRuleCondition(null, proxy);
-			else
-				return null;
-		}
-
-		/// <summary>
-        /// Returns a running Outlook.AccountRuleCondition object from the environment/system. 
-        /// </summary>
-	    /// <param name="throwOnError">throw an exception if no object was found</param>
-        /// <returns>an Outlook.AccountRuleCondition object or null</returns>
-		public static NetOffice.OutlookApi.AccountRuleCondition GetActiveInstance(bool throwOnError)
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Outlook","AccountRuleCondition", throwOnError);
-			if(null != proxy)
-				return new NetOffice.OutlookApi.AccountRuleCondition(null, proxy);
-			else
-				return null;
-		}
 		#endregion
 
 		#region Events

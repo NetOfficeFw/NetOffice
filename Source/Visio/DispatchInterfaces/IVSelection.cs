@@ -1,24 +1,36 @@
-﻿using System;
-using NetRuntimeSystem = System;
-using System.Runtime.InteropServices;
-using System.Runtime.CompilerServices;
-using System.ComponentModel;
-using System.Reflection;
-using System.Collections.Generic;
 using System.Collections;
-using NetOffice;
+using System.Collections.Generic;
+using System.Reflection;
+using System;
+using NetRuntimeSystem = System;
+using System.ComponentModel;
+using NetOffice.Attributes;
+
 namespace NetOffice.VisioApi
 {
-	///<summary>
+	/// <summary>
 	/// DispatchInterface IVSelection 
 	/// SupportByVersion Visio, 11,12,14,15,16
-	///</summary>
-	[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
-	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
-	public class IVSelection : COMObject ,IEnumerable<NetOffice.VisioApi.IVShape>
+	/// </summary>
+	[SupportByVersion("Visio", 11,12,14,15,16)]
+	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "Item")]
+	public class IVSelection : COMObject , IEnumerable<NetOffice.VisioApi.IVShape>
 	{
 		#pragma warning disable
+
 		#region Type Information
+
+		/// <summary>
+		/// Instance Type
+		/// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
+		public override Type InstanceType
+		{
+			get
+			{
+				return LateBindingApiWrapperType;
+			}
+		}
 
         private static Type _type;
 
@@ -29,14 +41,20 @@ namespace NetOffice.VisioApi
             {
                 if (null == _type)
                     _type = typeof(IVSelection);
-                    
                 return _type;
             }
         }
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public IVSelection(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -82,7 +100,7 @@ namespace NetOffice.VisioApi
 		{
 		}
 		
-		/// <param name="progId">registered ProgID</param>
+		/// <param name="progId">registered progID</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public IVSelection(string progId) : base(progId)
 		{
@@ -96,15 +114,13 @@ namespace NetOffice.VisioApi
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
+		[SupportByVersion("Visio", 11,12,14,15,16)]
+		[BaseResult]
 		public NetOffice.VisioApi.IVApplication Application
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				NetOffice.VisioApi.IVApplication newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVApplication;
-				return newObject;
+				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.VisioApi.IVApplication>(this, "Application");
 			}
 		}
 
@@ -112,14 +128,12 @@ namespace NetOffice.VisioApi
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
+		[SupportByVersion("Visio", 11,12,14,15,16)]
 		public Int16 Stat
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Stat", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt16(returnItem);
+				return Factory.ExecuteInt16PropertyGet(this, "Stat");
 			}
 		}
 
@@ -127,14 +141,12 @@ namespace NetOffice.VisioApi
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
+		[SupportByVersion("Visio", 11,12,14,15,16)]
 		public Int16 ObjectType
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "ObjectType", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt16(returnItem);
+				return Factory.ExecuteInt16PropertyGet(this, "ObjectType");
 			}
 		}
 
@@ -142,23 +154,20 @@ namespace NetOffice.VisioApi
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <param name="index">Int16 Index</param>
-		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
+		/// <param name="index">Int16 index</param>
+		[SupportByVersion("Visio", 11,12,14,15,16)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public NetOffice.VisioApi.IVShape get_Item16(Int16 index)
-		{		
-			object[] paramsArray = Invoker.ValidateParamsArray(index);
-			object returnItem = Invoker.PropertyGet(this, "Item16", paramsArray);
-			NetOffice.VisioApi.IVShape newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVShape;
-			return newObject;
+		{
+			return Factory.ExecuteKnownReferencePropertyGet<NetOffice.VisioApi.IVShape>(this, "Item16", NetOffice.VisioApi.IVShape.LateBindingApiWrapperType, index);
 		}
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// Alias for get_Item16
 		/// </summary>
-		/// <param name="index">Int16 Index</param>
-		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
+		/// <param name="index">Int16 index</param>
+		[SupportByVersion("Visio", 11,12,14,15,16), Redirect("get_Item16")]
 		public NetOffice.VisioApi.IVShape Item16(Int16 index)
 		{
 			return get_Item16(index);
@@ -168,15 +177,13 @@ namespace NetOffice.VisioApi
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
+		[SupportByVersion("Visio", 11,12,14,15,16)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public Int16 Count16
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Count16", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt16(returnItem);
+				return Factory.ExecuteInt16PropertyGet(this, "Count16");
 			}
 		}
 
@@ -184,15 +191,13 @@ namespace NetOffice.VisioApi
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
+		[SupportByVersion("Visio", 11,12,14,15,16)]
+		[BaseResult]
 		public NetOffice.VisioApi.IVDocument Document
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Document", paramsArray);
-				NetOffice.VisioApi.IVDocument newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVDocument;
-				return newObject;
+				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.VisioApi.IVDocument>(this, "Document");
 			}
 		}
 
@@ -200,15 +205,13 @@ namespace NetOffice.VisioApi
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
+		[SupportByVersion("Visio", 11,12,14,15,16)]
+		[BaseResult]
 		public NetOffice.VisioApi.IVPage ContainingPage
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "ContainingPage", paramsArray);
-				NetOffice.VisioApi.IVPage newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVPage;
-				return newObject;
+				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.VisioApi.IVPage>(this, "ContainingPage");
 			}
 		}
 
@@ -216,15 +219,13 @@ namespace NetOffice.VisioApi
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
+		[SupportByVersion("Visio", 11,12,14,15,16)]
+		[BaseResult]
 		public NetOffice.VisioApi.IVMaster ContainingMaster
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "ContainingMaster", paramsArray);
-				NetOffice.VisioApi.IVMaster newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVMaster;
-				return newObject;
+				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.VisioApi.IVMaster>(this, "ContainingMaster");
 			}
 		}
 
@@ -232,15 +233,13 @@ namespace NetOffice.VisioApi
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
+		[SupportByVersion("Visio", 11,12,14,15,16)]
+		[BaseResult]
 		public NetOffice.VisioApi.IVShape ContainingShape
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "ContainingShape", paramsArray);
-				NetOffice.VisioApi.IVShape newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVShape;
-				return newObject;
+				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.VisioApi.IVShape>(this, "ContainingShape");
 			}
 		}
 
@@ -248,19 +247,16 @@ namespace NetOffice.VisioApi
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
+		[SupportByVersion("Visio", 11,12,14,15,16)]
 		public string Style
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Style", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "Style");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "Style", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "Style", value);
 			}
 		}
 
@@ -268,19 +264,16 @@ namespace NetOffice.VisioApi
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
+		[SupportByVersion("Visio", 11,12,14,15,16)]
 		public string StyleKeepFmt
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "StyleKeepFmt", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "StyleKeepFmt");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "StyleKeepFmt", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "StyleKeepFmt", value);
 			}
 		}
 
@@ -288,19 +281,16 @@ namespace NetOffice.VisioApi
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
+		[SupportByVersion("Visio", 11,12,14,15,16)]
 		public string LineStyle
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "LineStyle", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "LineStyle");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "LineStyle", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "LineStyle", value);
 			}
 		}
 
@@ -308,19 +298,16 @@ namespace NetOffice.VisioApi
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
+		[SupportByVersion("Visio", 11,12,14,15,16)]
 		public string LineStyleKeepFmt
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "LineStyleKeepFmt", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "LineStyleKeepFmt");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "LineStyleKeepFmt", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "LineStyleKeepFmt", value);
 			}
 		}
 
@@ -328,19 +315,16 @@ namespace NetOffice.VisioApi
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
+		[SupportByVersion("Visio", 11,12,14,15,16)]
 		public string FillStyle
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "FillStyle", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "FillStyle");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "FillStyle", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "FillStyle", value);
 			}
 		}
 
@@ -348,19 +332,16 @@ namespace NetOffice.VisioApi
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
+		[SupportByVersion("Visio", 11,12,14,15,16)]
 		public string FillStyleKeepFmt
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "FillStyleKeepFmt", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "FillStyleKeepFmt");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "FillStyleKeepFmt", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "FillStyleKeepFmt", value);
 			}
 		}
 
@@ -368,19 +349,16 @@ namespace NetOffice.VisioApi
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
+		[SupportByVersion("Visio", 11,12,14,15,16)]
 		public string TextStyle
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "TextStyle", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "TextStyle");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "TextStyle", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "TextStyle", value);
 			}
 		}
 
@@ -388,19 +366,16 @@ namespace NetOffice.VisioApi
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
+		[SupportByVersion("Visio", 11,12,14,15,16)]
 		public string TextStyleKeepFmt
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "TextStyleKeepFmt", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "TextStyleKeepFmt");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "TextStyleKeepFmt", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "TextStyleKeepFmt", value);
 			}
 		}
 
@@ -408,15 +383,13 @@ namespace NetOffice.VisioApi
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
+		[SupportByVersion("Visio", 11,12,14,15,16)]
+		[BaseResult]
 		public NetOffice.VisioApi.IVEventList EventList
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "EventList", paramsArray);
-				NetOffice.VisioApi.IVEventList newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVEventList;
-				return newObject;
+				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.VisioApi.IVEventList>(this, "EventList");
 			}
 		}
 
@@ -424,14 +397,12 @@ namespace NetOffice.VisioApi
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
+		[SupportByVersion("Visio", 11,12,14,15,16)]
 		public Int16 PersistsEvents
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "PersistsEvents", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt16(returnItem);
+				return Factory.ExecuteInt16PropertyGet(this, "PersistsEvents");
 			}
 		}
 
@@ -439,17 +410,15 @@ namespace NetOffice.VisioApi
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <param name="index">Int32 Index</param>
-		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
-		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
+		/// <param name="index">Int32 index</param>
+		[SupportByVersion("Visio", 11,12,14,15,16)]
+		[BaseResult]
+		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
 		public NetOffice.VisioApi.IVShape this[Int32 index]
 		{
 			get
-{			
-			object[] paramsArray = Invoker.ValidateParamsArray(index);
-			object returnItem = Invoker.PropertyGet(this, "Item", paramsArray);
-			NetOffice.VisioApi.IVShape newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVShape;
-			return newObject;
+			{
+				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.VisioApi.IVShape>(this, "Item", index);
 			}
 		}
 
@@ -457,14 +426,12 @@ namespace NetOffice.VisioApi
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
+		[SupportByVersion("Visio", 11,12,14,15,16)]
 		public Int32 Count
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Count", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "Count");
 			}
 		}
 
@@ -472,19 +439,16 @@ namespace NetOffice.VisioApi
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
+		[SupportByVersion("Visio", 11,12,14,15,16)]
 		public Int32 IterationMode
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "IterationMode", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "IterationMode");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "IterationMode", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "IterationMode", value);
 			}
 		}
 
@@ -492,22 +456,20 @@ namespace NetOffice.VisioApi
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <param name="index">Int32 Index</param>
-		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
+		/// <param name="index">Int32 index</param>
+		[SupportByVersion("Visio", 11,12,14,15,16)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public Int16 get_ItemStatus(Int32 index)
-		{		
-			object[] paramsArray = Invoker.ValidateParamsArray(index);
-			object returnItem = Invoker.PropertyGet(this, "ItemStatus", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt16(returnItem);
+		{
+			return Factory.ExecuteInt16PropertyGet(this, "ItemStatus", index);
 		}
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// Alias for get_ItemStatus
 		/// </summary>
-		/// <param name="index">Int32 Index</param>
-		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
+		/// <param name="index">Int32 index</param>
+		[SupportByVersion("Visio", 11,12,14,15,16), Redirect("get_ItemStatus")]
 		public Int16 ItemStatus(Int32 index)
 		{
 			return get_ItemStatus(index);
@@ -517,15 +479,13 @@ namespace NetOffice.VisioApi
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
+		[SupportByVersion("Visio", 11,12,14,15,16)]
+		[BaseResult]
 		public NetOffice.VisioApi.IVShape PrimaryItem
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "PrimaryItem", paramsArray);
-				NetOffice.VisioApi.IVShape newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVShape;
-				return newObject;
+				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.VisioApi.IVShape>(this, "PrimaryItem");
 			}
 		}
 
@@ -533,7 +493,7 @@ namespace NetOffice.VisioApi
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
+		[SupportByVersion("Visio", 11,12,14,15,16)]
 		public stdole.Picture Picture
 		{
 			get
@@ -549,14 +509,12 @@ namespace NetOffice.VisioApi
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
+		[SupportByVersion("Visio", 11,12,14,15,16)]
 		public Int32 ContainingPageID
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "ContainingPageID", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "ContainingPageID");
 			}
 		}
 
@@ -564,14 +522,12 @@ namespace NetOffice.VisioApi
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
+		[SupportByVersion("Visio", 11,12,14,15,16)]
 		public Int32 ContainingMasterID
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "ContainingMasterID", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "ContainingMasterID");
 			}
 		}
 
@@ -579,20 +535,17 @@ namespace NetOffice.VisioApi
 		/// SupportByVersion Visio 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 12,14,15,16)]
+		[SupportByVersion("Visio", 12,14,15,16)]
+		[BaseResult]
 		public NetOffice.VisioApi.IVMaster DataGraphic
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "DataGraphic", paramsArray);
-				NetOffice.VisioApi.IVMaster newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVMaster;
-				return newObject;
+				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.VisioApi.IVMaster>(this, "DataGraphic");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "DataGraphic", paramsArray);
+				Factory.ExecuteReferencePropertySet(this, "DataGraphic", value);
 			}
 		}
 
@@ -600,15 +553,13 @@ namespace NetOffice.VisioApi
 		/// SupportByVersion Visio 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 14,15,16)]
+		[SupportByVersion("Visio", 14,15,16)]
+		[BaseResult]
 		public NetOffice.VisioApi.IVSelection SelectionForDragCopy
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "SelectionForDragCopy", paramsArray);
-				NetOffice.VisioApi.IVSelection newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVSelection;
-				return newObject;
+				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.VisioApi.IVSelection>(this, "SelectionForDragCopy");
 			}
 		}
 
@@ -618,331 +569,274 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="fileName">string FileName</param>
-		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
+		/// <param name="fileName">string fileName</param>
+		[SupportByVersion("Visio", 11,12,14,15,16)]
 		public void Export(string fileName)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(fileName);
-			Invoker.Method(this, "Export", paramsArray);
+			 Factory.ExecuteMethod(this, "Export", fileName);
 		}
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
+		[SupportByVersion("Visio", 11,12,14,15,16)]
 		public void BringForward()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "BringForward", paramsArray);
+			 Factory.ExecuteMethod(this, "BringForward");
 		}
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
+		[SupportByVersion("Visio", 11,12,14,15,16)]
 		public void BringToFront()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "BringToFront", paramsArray);
+			 Factory.ExecuteMethod(this, "BringToFront");
 		}
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
+		[SupportByVersion("Visio", 11,12,14,15,16)]
 		public void SendBackward()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "SendBackward", paramsArray);
+			 Factory.ExecuteMethod(this, "SendBackward");
 		}
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
+		[SupportByVersion("Visio", 11,12,14,15,16)]
 		public void SendToBack()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "SendToBack", paramsArray);
+			 Factory.ExecuteMethod(this, "SendToBack");
 		}
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
+		[SupportByVersion("Visio", 11,12,14,15,16)]
 		public void Combine()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "Combine", paramsArray);
+			 Factory.ExecuteMethod(this, "Combine");
 		}
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
+		[SupportByVersion("Visio", 11,12,14,15,16)]
 		public void Fragment()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "Fragment", paramsArray);
+			 Factory.ExecuteMethod(this, "Fragment");
 		}
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
+		[SupportByVersion("Visio", 11,12,14,15,16)]
 		public void Intersect()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "Intersect", paramsArray);
+			 Factory.ExecuteMethod(this, "Intersect");
 		}
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
+		[SupportByVersion("Visio", 11,12,14,15,16)]
 		public void Subtract()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "Subtract", paramsArray);
+			 Factory.ExecuteMethod(this, "Subtract");
 		}
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
+		[SupportByVersion("Visio", 11,12,14,15,16)]
 		public void Union()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "Union", paramsArray);
+			 Factory.ExecuteMethod(this, "Union");
 		}
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
+		[SupportByVersion("Visio", 11,12,14,15,16)]
 		public void FlipHorizontal()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "FlipHorizontal", paramsArray);
+			 Factory.ExecuteMethod(this, "FlipHorizontal");
 		}
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
+		[SupportByVersion("Visio", 11,12,14,15,16)]
 		public void FlipVertical()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "FlipVertical", paramsArray);
+			 Factory.ExecuteMethod(this, "FlipVertical");
 		}
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
+		[SupportByVersion("Visio", 11,12,14,15,16)]
 		public void ReverseEnds()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "ReverseEnds", paramsArray);
+			 Factory.ExecuteMethod(this, "ReverseEnds");
 		}
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
+		[SupportByVersion("Visio", 11,12,14,15,16)]
 		public void Rotate90()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "Rotate90", paramsArray);
+			 Factory.ExecuteMethod(this, "Rotate90");
 		}
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
+		[SupportByVersion("Visio", 11,12,14,15,16)]
 		public void old_Copy()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "old_Copy", paramsArray);
+			 Factory.ExecuteMethod(this, "old_Copy");
 		}
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
+		[SupportByVersion("Visio", 11,12,14,15,16)]
 		public void old_Cut()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "old_Cut", paramsArray);
+			 Factory.ExecuteMethod(this, "old_Cut");
 		}
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
+		[SupportByVersion("Visio", 11,12,14,15,16)]
 		public void Delete()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "Delete", paramsArray);
+			 Factory.ExecuteMethod(this, "Delete");
 		}
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
+		[SupportByVersion("Visio", 11,12,14,15,16)]
 		public void VoidDuplicate()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "VoidDuplicate", paramsArray);
+			 Factory.ExecuteMethod(this, "VoidDuplicate");
 		}
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
+		[SupportByVersion("Visio", 11,12,14,15,16)]
 		public void VoidGroup()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "VoidGroup", paramsArray);
+			 Factory.ExecuteMethod(this, "VoidGroup");
 		}
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
+		[SupportByVersion("Visio", 11,12,14,15,16)]
 		public void ConvertToGroup()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "ConvertToGroup", paramsArray);
+			 Factory.ExecuteMethod(this, "ConvertToGroup");
 		}
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
+		[SupportByVersion("Visio", 11,12,14,15,16)]
 		public void Ungroup()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "Ungroup", paramsArray);
+			 Factory.ExecuteMethod(this, "Ungroup");
 		}
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
+		[SupportByVersion("Visio", 11,12,14,15,16)]
 		public void SelectAll()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "SelectAll", paramsArray);
+			 Factory.ExecuteMethod(this, "SelectAll");
 		}
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
+		[SupportByVersion("Visio", 11,12,14,15,16)]
 		public void DeselectAll()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "DeselectAll", paramsArray);
+			 Factory.ExecuteMethod(this, "DeselectAll");
 		}
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="sheetObject">NetOffice.VisioApi.IVShape SheetObject</param>
-		/// <param name="selectAction">Int16 SelectAction</param>
-		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
+		/// <param name="sheetObject">NetOffice.VisioApi.IVShape sheetObject</param>
+		/// <param name="selectAction">Int16 selectAction</param>
+		[SupportByVersion("Visio", 11,12,14,15,16)]
 		public void Select(NetOffice.VisioApi.IVShape sheetObject, Int16 selectAction)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(sheetObject, selectAction);
-			Invoker.Method(this, "Select", paramsArray);
+			 Factory.ExecuteMethod(this, "Select", sheetObject, selectAction);
 		}
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
+		[SupportByVersion("Visio", 11,12,14,15,16)]
 		public void Trim()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "Trim", paramsArray);
+			 Factory.ExecuteMethod(this, "Trim");
 		}
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
+		[SupportByVersion("Visio", 11,12,14,15,16)]
 		public void Join()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "Join", paramsArray);
+			 Factory.ExecuteMethod(this, "Join");
 		}
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="tolerance">Double Tolerance</param>
-		/// <param name="flags">Int16 Flags</param>
-		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
+		/// <param name="tolerance">Double tolerance</param>
+		/// <param name="flags">Int16 flags</param>
+		[SupportByVersion("Visio", 11,12,14,15,16)]
 		public void FitCurve(Double tolerance, Int16 flags)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(tolerance, flags);
-			Invoker.Method(this, "FitCurve", paramsArray);
+			 Factory.ExecuteMethod(this, "FitCurve", tolerance, flags);
 		}
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
+		[SupportByVersion("Visio", 11,12,14,15,16)]
 		public void Layout()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "Layout", paramsArray);
+			 Factory.ExecuteMethod(this, "Layout");
 		}
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="flags">Int16 Flags</param>
+		/// <param name="flags">Int16 flags</param>
 		/// <param name="lpr8Left">Double lpr8Left</param>
 		/// <param name="lpr8Bottom">Double lpr8Bottom</param>
 		/// <param name="lpr8Right">Double lpr8Right</param>
 		/// <param name="lpr8Top">Double lpr8Top</param>
-		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
+		[SupportByVersion("Visio", 11,12,14,15,16)]
 		public void BoundingBox(Int16 flags, out Double lpr8Left, out Double lpr8Bottom, out Double lpr8Right, out Double lpr8Top)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,true,true,true,true);
@@ -960,545 +854,462 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="tolerance">Double Tolerance</param>
-		/// <param name="flags">Int16 Flags</param>
+		/// <param name="tolerance">Double tolerance</param>
+		/// <param name="flags">Int16 flags</param>
 		/// <param name="x">optional object x</param>
 		/// <param name="y">optional object y</param>
-		/// <param name="resultsMaster">optional object ResultsMaster</param>
-		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
+		/// <param name="resultsMaster">optional object resultsMaster</param>
+		[SupportByVersion("Visio", 11,12,14,15,16)]
+		[BaseResult]
 		public NetOffice.VisioApi.IVShape DrawRegion(Double tolerance, Int16 flags, object x, object y, object resultsMaster)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(tolerance, flags, x, y, resultsMaster);
-			object returnItem = Invoker.MethodReturn(this, "DrawRegion", paramsArray);
-			NetOffice.VisioApi.IVShape newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVShape;
-			return newObject;
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.VisioApi.IVShape>(this, "DrawRegion", new object[]{ tolerance, flags, x, y, resultsMaster });
 		}
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="tolerance">Double Tolerance</param>
-		/// <param name="flags">Int16 Flags</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
+		/// <param name="tolerance">Double tolerance</param>
+		/// <param name="flags">Int16 flags</param>
+		[CustomMethod]
+		[BaseResult]
+		[SupportByVersion("Visio", 11,12,14,15,16)]
 		public NetOffice.VisioApi.IVShape DrawRegion(Double tolerance, Int16 flags)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(tolerance, flags);
-			object returnItem = Invoker.MethodReturn(this, "DrawRegion", paramsArray);
-			NetOffice.VisioApi.IVShape newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVShape;
-			return newObject;
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.VisioApi.IVShape>(this, "DrawRegion", tolerance, flags);
 		}
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="tolerance">Double Tolerance</param>
-		/// <param name="flags">Int16 Flags</param>
+		/// <param name="tolerance">Double tolerance</param>
+		/// <param name="flags">Int16 flags</param>
 		/// <param name="x">optional object x</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
+		[CustomMethod]
+		[BaseResult]
+		[SupportByVersion("Visio", 11,12,14,15,16)]
 		public NetOffice.VisioApi.IVShape DrawRegion(Double tolerance, Int16 flags, object x)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(tolerance, flags, x);
-			object returnItem = Invoker.MethodReturn(this, "DrawRegion", paramsArray);
-			NetOffice.VisioApi.IVShape newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVShape;
-			return newObject;
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.VisioApi.IVShape>(this, "DrawRegion", tolerance, flags, x);
 		}
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="tolerance">Double Tolerance</param>
-		/// <param name="flags">Int16 Flags</param>
+		/// <param name="tolerance">Double tolerance</param>
+		/// <param name="flags">Int16 flags</param>
 		/// <param name="x">optional object x</param>
 		/// <param name="y">optional object y</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
+		[CustomMethod]
+		[BaseResult]
+		[SupportByVersion("Visio", 11,12,14,15,16)]
 		public NetOffice.VisioApi.IVShape DrawRegion(Double tolerance, Int16 flags, object x, object y)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(tolerance, flags, x, y);
-			object returnItem = Invoker.MethodReturn(this, "DrawRegion", paramsArray);
-			NetOffice.VisioApi.IVShape newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVShape;
-			return newObject;
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.VisioApi.IVShape>(this, "DrawRegion", tolerance, flags, x, y);
 		}
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
+		[SupportByVersion("Visio", 11,12,14,15,16)]
+		[BaseResult]
 		public NetOffice.VisioApi.IVShape Group()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "Group", paramsArray);
-			NetOffice.VisioApi.IVShape newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVShape;
-			return newObject;
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.VisioApi.IVShape>(this, "Group");
 		}
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
+		[SupportByVersion("Visio", 11,12,14,15,16)]
 		public void SwapEnds()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "SwapEnds", paramsArray);
+			 Factory.ExecuteMethod(this, "SwapEnds");
 		}
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
+		[SupportByVersion("Visio", 11,12,14,15,16)]
 		public void AddToGroup()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "AddToGroup", paramsArray);
+			 Factory.ExecuteMethod(this, "AddToGroup");
 		}
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
+		[SupportByVersion("Visio", 11,12,14,15,16)]
 		public void RemoveFromGroup()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "RemoveFromGroup", paramsArray);
+			 Factory.ExecuteMethod(this, "RemoveFromGroup");
 		}
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
+		[SupportByVersion("Visio", 11,12,14,15,16)]
+		[BaseResult]
 		public NetOffice.VisioApi.IVSelection Duplicate()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "Duplicate", paramsArray);
-			NetOffice.VisioApi.IVSelection newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVSelection;
-			return newObject;
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.VisioApi.IVSelection>(this, "Duplicate");
 		}
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="flags">optional object Flags</param>
-		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
+		/// <param name="flags">optional object flags</param>
+		[SupportByVersion("Visio", 11,12,14,15,16)]
 		public void Copy(object flags)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(flags);
-			Invoker.Method(this, "Copy", paramsArray);
+			 Factory.ExecuteMethod(this, "Copy", flags);
 		}
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Visio", 11,12,14,15,16)]
 		public void Copy()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "Copy", paramsArray);
+			 Factory.ExecuteMethod(this, "Copy");
 		}
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="flags">optional object Flags</param>
-		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
+		/// <param name="flags">optional object flags</param>
+		[SupportByVersion("Visio", 11,12,14,15,16)]
 		public void Cut(object flags)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(flags);
-			Invoker.Method(this, "Cut", paramsArray);
+			 Factory.ExecuteMethod(this, "Cut", flags);
 		}
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Visio", 11,12,14,15,16)]
 		public void Cut()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "Cut", paramsArray);
+			 Factory.ExecuteMethod(this, "Cut");
 		}
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
 		/// <param name="dx">Double dx</param>
 		/// <param name="dy">Double dy</param>
-		/// <param name="unitsNameOrCode">optional object UnitsNameOrCode</param>
-		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
+		/// <param name="unitsNameOrCode">optional object unitsNameOrCode</param>
+		[SupportByVersion("Visio", 11,12,14,15,16)]
 		public void Move(Double dx, Double dy, object unitsNameOrCode)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(dx, dy, unitsNameOrCode);
-			Invoker.Method(this, "Move", paramsArray);
+			 Factory.ExecuteMethod(this, "Move", dx, dy, unitsNameOrCode);
 		}
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
 		/// <param name="dx">Double dx</param>
 		/// <param name="dy">Double dy</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Visio", 11,12,14,15,16)]
 		public void Move(Double dx, Double dy)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(dx, dy);
-			Invoker.Method(this, "Move", paramsArray);
+			 Factory.ExecuteMethod(this, "Move", dx, dy);
 		}
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="angle">Double Angle</param>
-		/// <param name="angleUnitsNameOrCode">optional object AngleUnitsNameOrCode</param>
+		/// <param name="angle">Double angle</param>
+		/// <param name="angleUnitsNameOrCode">optional object angleUnitsNameOrCode</param>
 		/// <param name="blastGuards">optional bool BlastGuards = false</param>
 		/// <param name="rotationType">optional NetOffice.VisioApi.Enums.VisRotationTypes RotationType = 0</param>
 		/// <param name="pinX">optional Double PinX = 0</param>
 		/// <param name="pinY">optional Double PinY = 0</param>
-		/// <param name="pinUnitsNameOrCode">optional object PinUnitsNameOrCode</param>
-		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
+		/// <param name="pinUnitsNameOrCode">optional object pinUnitsNameOrCode</param>
+		[SupportByVersion("Visio", 11,12,14,15,16)]
 		public void Rotate(Double angle, object angleUnitsNameOrCode, object blastGuards, object rotationType, object pinX, object pinY, object pinUnitsNameOrCode)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(angle, angleUnitsNameOrCode, blastGuards, rotationType, pinX, pinY, pinUnitsNameOrCode);
-			Invoker.Method(this, "Rotate", paramsArray);
+			 Factory.ExecuteMethod(this, "Rotate", new object[]{ angle, angleUnitsNameOrCode, blastGuards, rotationType, pinX, pinY, pinUnitsNameOrCode });
 		}
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="angle">Double Angle</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
+		/// <param name="angle">Double angle</param>
+		[CustomMethod]
+		[SupportByVersion("Visio", 11,12,14,15,16)]
 		public void Rotate(Double angle)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(angle);
-			Invoker.Method(this, "Rotate", paramsArray);
+			 Factory.ExecuteMethod(this, "Rotate", angle);
 		}
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="angle">Double Angle</param>
-		/// <param name="angleUnitsNameOrCode">optional object AngleUnitsNameOrCode</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
+		/// <param name="angle">Double angle</param>
+		/// <param name="angleUnitsNameOrCode">optional object angleUnitsNameOrCode</param>
+		[CustomMethod]
+		[SupportByVersion("Visio", 11,12,14,15,16)]
 		public void Rotate(Double angle, object angleUnitsNameOrCode)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(angle, angleUnitsNameOrCode);
-			Invoker.Method(this, "Rotate", paramsArray);
+			 Factory.ExecuteMethod(this, "Rotate", angle, angleUnitsNameOrCode);
 		}
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="angle">Double Angle</param>
-		/// <param name="angleUnitsNameOrCode">optional object AngleUnitsNameOrCode</param>
+		/// <param name="angle">Double angle</param>
+		/// <param name="angleUnitsNameOrCode">optional object angleUnitsNameOrCode</param>
 		/// <param name="blastGuards">optional bool BlastGuards = false</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Visio", 11,12,14,15,16)]
 		public void Rotate(Double angle, object angleUnitsNameOrCode, object blastGuards)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(angle, angleUnitsNameOrCode, blastGuards);
-			Invoker.Method(this, "Rotate", paramsArray);
+			 Factory.ExecuteMethod(this, "Rotate", angle, angleUnitsNameOrCode, blastGuards);
 		}
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="angle">Double Angle</param>
-		/// <param name="angleUnitsNameOrCode">optional object AngleUnitsNameOrCode</param>
+		/// <param name="angle">Double angle</param>
+		/// <param name="angleUnitsNameOrCode">optional object angleUnitsNameOrCode</param>
 		/// <param name="blastGuards">optional bool BlastGuards = false</param>
 		/// <param name="rotationType">optional NetOffice.VisioApi.Enums.VisRotationTypes RotationType = 0</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Visio", 11,12,14,15,16)]
 		public void Rotate(Double angle, object angleUnitsNameOrCode, object blastGuards, object rotationType)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(angle, angleUnitsNameOrCode, blastGuards, rotationType);
-			Invoker.Method(this, "Rotate", paramsArray);
+			 Factory.ExecuteMethod(this, "Rotate", angle, angleUnitsNameOrCode, blastGuards, rotationType);
 		}
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="angle">Double Angle</param>
-		/// <param name="angleUnitsNameOrCode">optional object AngleUnitsNameOrCode</param>
+		/// <param name="angle">Double angle</param>
+		/// <param name="angleUnitsNameOrCode">optional object angleUnitsNameOrCode</param>
 		/// <param name="blastGuards">optional bool BlastGuards = false</param>
 		/// <param name="rotationType">optional NetOffice.VisioApi.Enums.VisRotationTypes RotationType = 0</param>
 		/// <param name="pinX">optional Double PinX = 0</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Visio", 11,12,14,15,16)]
 		public void Rotate(Double angle, object angleUnitsNameOrCode, object blastGuards, object rotationType, object pinX)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(angle, angleUnitsNameOrCode, blastGuards, rotationType, pinX);
-			Invoker.Method(this, "Rotate", paramsArray);
+			 Factory.ExecuteMethod(this, "Rotate", new object[]{ angle, angleUnitsNameOrCode, blastGuards, rotationType, pinX });
 		}
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="angle">Double Angle</param>
-		/// <param name="angleUnitsNameOrCode">optional object AngleUnitsNameOrCode</param>
+		/// <param name="angle">Double angle</param>
+		/// <param name="angleUnitsNameOrCode">optional object angleUnitsNameOrCode</param>
 		/// <param name="blastGuards">optional bool BlastGuards = false</param>
 		/// <param name="rotationType">optional NetOffice.VisioApi.Enums.VisRotationTypes RotationType = 0</param>
 		/// <param name="pinX">optional Double PinX = 0</param>
 		/// <param name="pinY">optional Double PinY = 0</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Visio", 11,12,14,15,16)]
 		public void Rotate(Double angle, object angleUnitsNameOrCode, object blastGuards, object rotationType, object pinX, object pinY)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(angle, angleUnitsNameOrCode, blastGuards, rotationType, pinX, pinY);
-			Invoker.Method(this, "Rotate", paramsArray);
+			 Factory.ExecuteMethod(this, "Rotate", new object[]{ angle, angleUnitsNameOrCode, blastGuards, rotationType, pinX, pinY });
 		}
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="alignHorizontal">NetOffice.VisioApi.Enums.VisHorizontalAlignTypes AlignHorizontal</param>
-		/// <param name="alignVertical">NetOffice.VisioApi.Enums.VisVerticalAlignTypes AlignVertical</param>
+		/// <param name="alignHorizontal">NetOffice.VisioApi.Enums.VisHorizontalAlignTypes alignHorizontal</param>
+		/// <param name="alignVertical">NetOffice.VisioApi.Enums.VisVerticalAlignTypes alignVertical</param>
 		/// <param name="glueToGuide">optional bool GlueToGuide = false</param>
-		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
+		[SupportByVersion("Visio", 11,12,14,15,16)]
 		public void Align(NetOffice.VisioApi.Enums.VisHorizontalAlignTypes alignHorizontal, NetOffice.VisioApi.Enums.VisVerticalAlignTypes alignVertical, object glueToGuide)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(alignHorizontal, alignVertical, glueToGuide);
-			Invoker.Method(this, "Align", paramsArray);
+			 Factory.ExecuteMethod(this, "Align", alignHorizontal, alignVertical, glueToGuide);
 		}
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="alignHorizontal">NetOffice.VisioApi.Enums.VisHorizontalAlignTypes AlignHorizontal</param>
-		/// <param name="alignVertical">NetOffice.VisioApi.Enums.VisVerticalAlignTypes AlignVertical</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
+		/// <param name="alignHorizontal">NetOffice.VisioApi.Enums.VisHorizontalAlignTypes alignHorizontal</param>
+		/// <param name="alignVertical">NetOffice.VisioApi.Enums.VisVerticalAlignTypes alignVertical</param>
+		[CustomMethod]
+		[SupportByVersion("Visio", 11,12,14,15,16)]
 		public void Align(NetOffice.VisioApi.Enums.VisHorizontalAlignTypes alignHorizontal, NetOffice.VisioApi.Enums.VisVerticalAlignTypes alignVertical)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(alignHorizontal, alignVertical);
-			Invoker.Method(this, "Align", paramsArray);
+			 Factory.ExecuteMethod(this, "Align", alignHorizontal, alignVertical);
 		}
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="distribute">NetOffice.VisioApi.Enums.VisDistributeTypes Distribute</param>
+		/// <param name="distribute">NetOffice.VisioApi.Enums.VisDistributeTypes distribute</param>
 		/// <param name="glueToGuide">optional bool GlueToGuide = false</param>
-		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
+		[SupportByVersion("Visio", 11,12,14,15,16)]
 		public void Distribute(NetOffice.VisioApi.Enums.VisDistributeTypes distribute, object glueToGuide)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(distribute, glueToGuide);
-			Invoker.Method(this, "Distribute", paramsArray);
+			 Factory.ExecuteMethod(this, "Distribute", distribute, glueToGuide);
 		}
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="distribute">NetOffice.VisioApi.Enums.VisDistributeTypes Distribute</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
+		/// <param name="distribute">NetOffice.VisioApi.Enums.VisDistributeTypes distribute</param>
+		[CustomMethod]
+		[SupportByVersion("Visio", 11,12,14,15,16)]
 		public void Distribute(NetOffice.VisioApi.Enums.VisDistributeTypes distribute)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(distribute);
-			Invoker.Method(this, "Distribute", paramsArray);
+			 Factory.ExecuteMethod(this, "Distribute", distribute);
 		}
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
+		[SupportByVersion("Visio", 11,12,14,15,16)]
 		public void UpdateAlignmentBox()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "UpdateAlignmentBox", paramsArray);
+			 Factory.ExecuteMethod(this, "UpdateAlignmentBox");
 		}
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="distance">Double Distance</param>
-		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
+		/// <param name="distance">Double distance</param>
+		[SupportByVersion("Visio", 11,12,14,15,16)]
 		public void Offset(Double distance)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(distance);
-			Invoker.Method(this, "Offset", paramsArray);
+			 Factory.ExecuteMethod(this, "Offset", distance);
 		}
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
+		[SupportByVersion("Visio", 11,12,14,15,16)]
 		public void ConnectShapes()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "ConnectShapes", paramsArray);
+			 Factory.ExecuteMethod(this, "ConnectShapes");
 		}
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="flipDirection">NetOffice.VisioApi.Enums.VisFlipDirection FlipDirection</param>
+		/// <param name="flipDirection">NetOffice.VisioApi.Enums.VisFlipDirection flipDirection</param>
 		/// <param name="flipType">optional NetOffice.VisioApi.Enums.VisFlipTypes FlipType = 0</param>
 		/// <param name="blastGuards">optional bool BlastGuards = false</param>
 		/// <param name="pinX">optional Double PinX = 0</param>
 		/// <param name="pinY">optional Double PinY = 0</param>
-		/// <param name="pinUnitsNameOrCode">optional object PinUnitsNameOrCode</param>
-		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
+		/// <param name="pinUnitsNameOrCode">optional object pinUnitsNameOrCode</param>
+		[SupportByVersion("Visio", 11,12,14,15,16)]
 		public void Flip(NetOffice.VisioApi.Enums.VisFlipDirection flipDirection, object flipType, object blastGuards, object pinX, object pinY, object pinUnitsNameOrCode)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(flipDirection, flipType, blastGuards, pinX, pinY, pinUnitsNameOrCode);
-			Invoker.Method(this, "Flip", paramsArray);
+			 Factory.ExecuteMethod(this, "Flip", new object[]{ flipDirection, flipType, blastGuards, pinX, pinY, pinUnitsNameOrCode });
 		}
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="flipDirection">NetOffice.VisioApi.Enums.VisFlipDirection FlipDirection</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
+		/// <param name="flipDirection">NetOffice.VisioApi.Enums.VisFlipDirection flipDirection</param>
+		[CustomMethod]
+		[SupportByVersion("Visio", 11,12,14,15,16)]
 		public void Flip(NetOffice.VisioApi.Enums.VisFlipDirection flipDirection)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(flipDirection);
-			Invoker.Method(this, "Flip", paramsArray);
+			 Factory.ExecuteMethod(this, "Flip", flipDirection);
 		}
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="flipDirection">NetOffice.VisioApi.Enums.VisFlipDirection FlipDirection</param>
+		/// <param name="flipDirection">NetOffice.VisioApi.Enums.VisFlipDirection flipDirection</param>
 		/// <param name="flipType">optional NetOffice.VisioApi.Enums.VisFlipTypes FlipType = 0</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Visio", 11,12,14,15,16)]
 		public void Flip(NetOffice.VisioApi.Enums.VisFlipDirection flipDirection, object flipType)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(flipDirection, flipType);
-			Invoker.Method(this, "Flip", paramsArray);
+			 Factory.ExecuteMethod(this, "Flip", flipDirection, flipType);
 		}
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="flipDirection">NetOffice.VisioApi.Enums.VisFlipDirection FlipDirection</param>
+		/// <param name="flipDirection">NetOffice.VisioApi.Enums.VisFlipDirection flipDirection</param>
 		/// <param name="flipType">optional NetOffice.VisioApi.Enums.VisFlipTypes FlipType = 0</param>
 		/// <param name="blastGuards">optional bool BlastGuards = false</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Visio", 11,12,14,15,16)]
 		public void Flip(NetOffice.VisioApi.Enums.VisFlipDirection flipDirection, object flipType, object blastGuards)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(flipDirection, flipType, blastGuards);
-			Invoker.Method(this, "Flip", paramsArray);
+			 Factory.ExecuteMethod(this, "Flip", flipDirection, flipType, blastGuards);
 		}
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="flipDirection">NetOffice.VisioApi.Enums.VisFlipDirection FlipDirection</param>
+		/// <param name="flipDirection">NetOffice.VisioApi.Enums.VisFlipDirection flipDirection</param>
 		/// <param name="flipType">optional NetOffice.VisioApi.Enums.VisFlipTypes FlipType = 0</param>
 		/// <param name="blastGuards">optional bool BlastGuards = false</param>
 		/// <param name="pinX">optional Double PinX = 0</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Visio", 11,12,14,15,16)]
 		public void Flip(NetOffice.VisioApi.Enums.VisFlipDirection flipDirection, object flipType, object blastGuards, object pinX)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(flipDirection, flipType, blastGuards, pinX);
-			Invoker.Method(this, "Flip", paramsArray);
+			 Factory.ExecuteMethod(this, "Flip", flipDirection, flipType, blastGuards, pinX);
 		}
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="flipDirection">NetOffice.VisioApi.Enums.VisFlipDirection FlipDirection</param>
+		/// <param name="flipDirection">NetOffice.VisioApi.Enums.VisFlipDirection flipDirection</param>
 		/// <param name="flipType">optional NetOffice.VisioApi.Enums.VisFlipTypes FlipType = 0</param>
 		/// <param name="blastGuards">optional bool BlastGuards = false</param>
 		/// <param name="pinX">optional Double PinX = 0</param>
 		/// <param name="pinY">optional Double PinY = 0</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Visio", 11,12,14,15,16)]
 		public void Flip(NetOffice.VisioApi.Enums.VisFlipDirection flipDirection, object flipType, object blastGuards, object pinX, object pinY)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(flipDirection, flipType, blastGuards, pinX, pinY);
-			Invoker.Method(this, "Flip", paramsArray);
+			 Factory.ExecuteMethod(this, "Flip", new object[]{ flipDirection, flipType, blastGuards, pinX, pinY });
 		}
 
 		/// <summary>
 		/// SupportByVersion Visio 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="dataRecordsetID">Int32 DataRecordsetID</param>
-		/// <param name="dataRowID">Int32 DataRowID</param>
+		/// <param name="dataRecordsetID">Int32 dataRecordsetID</param>
+		/// <param name="dataRowID">Int32 dataRowID</param>
 		/// <param name="applyDataGraphicAfterLink">optional bool ApplyDataGraphicAfterLink = true</param>
-		[SupportByVersionAttribute("Visio", 12,14,15,16)]
+		[SupportByVersion("Visio", 12,14,15,16)]
 		public void LinkToData(Int32 dataRecordsetID, Int32 dataRowID, object applyDataGraphicAfterLink)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(dataRecordsetID, dataRowID, applyDataGraphicAfterLink);
-			Invoker.Method(this, "LinkToData", paramsArray);
+			 Factory.ExecuteMethod(this, "LinkToData", dataRecordsetID, dataRowID, applyDataGraphicAfterLink);
 		}
 
 		/// <summary>
 		/// SupportByVersion Visio 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="dataRecordsetID">Int32 DataRecordsetID</param>
-		/// <param name="dataRowID">Int32 DataRowID</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Visio", 12,14,15,16)]
+		/// <param name="dataRecordsetID">Int32 dataRecordsetID</param>
+		/// <param name="dataRowID">Int32 dataRowID</param>
+		[CustomMethod]
+		[SupportByVersion("Visio", 12,14,15,16)]
 		public void LinkToData(Int32 dataRecordsetID, Int32 dataRowID)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(dataRecordsetID, dataRowID);
-			Invoker.Method(this, "LinkToData", paramsArray);
+			 Factory.ExecuteMethod(this, "LinkToData", dataRecordsetID, dataRowID);
 		}
 
 		/// <summary>
 		/// SupportByVersion Visio 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="dataRecordsetID">Int32 DataRecordsetID</param>
-		[SupportByVersionAttribute("Visio", 12,14,15,16)]
+		/// <param name="dataRecordsetID">Int32 dataRecordsetID</param>
+		[SupportByVersion("Visio", 12,14,15,16)]
 		public void BreakLinkToData(Int32 dataRecordsetID)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(dataRecordsetID);
-			Invoker.Method(this, "BreakLinkToData", paramsArray);
+			 Factory.ExecuteMethod(this, "BreakLinkToData", dataRecordsetID);
 		}
 
 		/// <summary>
 		/// SupportByVersion Visio 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="shapeIDs">Int32[] ShapeIDs</param>
-		[SupportByVersionAttribute("Visio", 12,14,15,16)]
+		/// <param name="shapeIDs">Int32[] shapeIDs</param>
+		[SupportByVersion("Visio", 12,14,15,16)]
 		public void GetIDs(out Int32[] shapeIDs)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
@@ -1510,15 +1321,14 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="dataRecordsetID">Int32 DataRecordsetID</param>
-		/// <param name="columnNames">String[] ColumnNames</param>
-		/// <param name="autoLinkFieldTypes">Int32[] AutoLinkFieldTypes</param>
-		/// <param name="fieldNames">String[] FieldNames</param>
-		/// <param name="autoLinkBehavior">Int32 AutoLinkBehavior</param>
-		/// <param name="shapeIDs">Int32[] ShapeIDs</param>
-		[SupportByVersionAttribute("Visio", 12,14,15,16)]
+		/// <param name="dataRecordsetID">Int32 dataRecordsetID</param>
+		/// <param name="columnNames">String[] columnNames</param>
+		/// <param name="autoLinkFieldTypes">Int32[] autoLinkFieldTypes</param>
+		/// <param name="fieldNames">String[] fieldNames</param>
+		/// <param name="autoLinkBehavior">Int32 autoLinkBehavior</param>
+		/// <param name="shapeIDs">Int32[] shapeIDs</param>
+		[SupportByVersion("Visio", 12,14,15,16)]
 		public Int32 AutomaticLink(Int32 dataRecordsetID, String[] columnNames, Int32[] autoLinkFieldTypes, String[] fieldNames, Int32 autoLinkBehavior, out Int32[] shapeIDs)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,false,false,false,false,true);
@@ -1531,130 +1341,109 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="alignOrSpace">NetOffice.VisioApi.Enums.VisLayoutIncrementalType AlignOrSpace</param>
-		/// <param name="alignHorizontal">NetOffice.VisioApi.Enums.VisLayoutHorzAlignType AlignHorizontal</param>
-		/// <param name="alignVertical">NetOffice.VisioApi.Enums.VisLayoutVertAlignType AlignVertical</param>
-		/// <param name="spaceHorizontal">Double SpaceHorizontal</param>
-		/// <param name="spaceVertical">Double SpaceVertical</param>
-		/// <param name="unitCode">NetOffice.VisioApi.Enums.VisUnitCodes UnitCode</param>
-		[SupportByVersionAttribute("Visio", 14,15,16)]
+		/// <param name="alignOrSpace">NetOffice.VisioApi.Enums.VisLayoutIncrementalType alignOrSpace</param>
+		/// <param name="alignHorizontal">NetOffice.VisioApi.Enums.VisLayoutHorzAlignType alignHorizontal</param>
+		/// <param name="alignVertical">NetOffice.VisioApi.Enums.VisLayoutVertAlignType alignVertical</param>
+		/// <param name="spaceHorizontal">Double spaceHorizontal</param>
+		/// <param name="spaceVertical">Double spaceVertical</param>
+		/// <param name="unitCode">NetOffice.VisioApi.Enums.VisUnitCodes unitCode</param>
+		[SupportByVersion("Visio", 14,15,16)]
 		public void LayoutIncremental(NetOffice.VisioApi.Enums.VisLayoutIncrementalType alignOrSpace, NetOffice.VisioApi.Enums.VisLayoutHorzAlignType alignHorizontal, NetOffice.VisioApi.Enums.VisLayoutVertAlignType alignVertical, Double spaceHorizontal, Double spaceVertical, NetOffice.VisioApi.Enums.VisUnitCodes unitCode)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(alignOrSpace, alignHorizontal, alignVertical, spaceHorizontal, spaceVertical, unitCode);
-			Invoker.Method(this, "LayoutIncremental", paramsArray);
+			 Factory.ExecuteMethod(this, "LayoutIncremental", new object[]{ alignOrSpace, alignHorizontal, alignVertical, spaceHorizontal, spaceVertical, unitCode });
 		}
 
 		/// <summary>
 		/// SupportByVersion Visio 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="direction">NetOffice.VisioApi.Enums.VisLayoutDirection Direction</param>
-		[SupportByVersionAttribute("Visio", 14,15,16)]
+		/// <param name="direction">NetOffice.VisioApi.Enums.VisLayoutDirection direction</param>
+		[SupportByVersion("Visio", 14,15,16)]
 		public void LayoutChangeDirection(NetOffice.VisioApi.Enums.VisLayoutDirection direction)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(direction);
-			Invoker.Method(this, "LayoutChangeDirection", paramsArray);
+			 Factory.ExecuteMethod(this, "LayoutChangeDirection", direction);
 		}
 
 		/// <summary>
 		/// SupportByVersion Visio 14, 15, 16
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 14,15,16)]
+		[SupportByVersion("Visio", 14,15,16)]
 		public void AvoidPageBreaks()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "AvoidPageBreaks", paramsArray);
+			 Factory.ExecuteMethod(this, "AvoidPageBreaks");
 		}
 
 		/// <summary>
 		/// SupportByVersion Visio 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="direction">NetOffice.VisioApi.Enums.VisResizeDirection Direction</param>
-		/// <param name="distance">Double Distance</param>
-		/// <param name="unitCode">NetOffice.VisioApi.Enums.VisUnitCodes UnitCode</param>
-		[SupportByVersionAttribute("Visio", 14,15,16)]
+		/// <param name="direction">NetOffice.VisioApi.Enums.VisResizeDirection direction</param>
+		/// <param name="distance">Double distance</param>
+		/// <param name="unitCode">NetOffice.VisioApi.Enums.VisUnitCodes unitCode</param>
+		[SupportByVersion("Visio", 14,15,16)]
 		public void Resize(NetOffice.VisioApi.Enums.VisResizeDirection direction, Double distance, NetOffice.VisioApi.Enums.VisUnitCodes unitCode)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(direction, distance, unitCode);
-			Invoker.Method(this, "Resize", paramsArray);
+			 Factory.ExecuteMethod(this, "Resize", direction, distance, unitCode);
 		}
 
 		/// <summary>
 		/// SupportByVersion Visio 14, 15, 16
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 14,15,16)]
+		[SupportByVersion("Visio", 14,15,16)]
 		public void AddToContainers()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "AddToContainers", paramsArray);
+			 Factory.ExecuteMethod(this, "AddToContainers");
 		}
 
 		/// <summary>
 		/// SupportByVersion Visio 14, 15, 16
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 14,15,16)]
+		[SupportByVersion("Visio", 14,15,16)]
 		public void RemoveFromContainers()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "RemoveFromContainers", paramsArray);
+			 Factory.ExecuteMethod(this, "RemoveFromContainers");
 		}
 
 		/// <summary>
 		/// SupportByVersion Visio 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="page">NetOffice.VisioApi.IVPage Page</param>
-		/// <param name="objectToDrop">object ObjectToDrop</param>
+		/// <param name="page">NetOffice.VisioApi.IVPage page</param>
+		/// <param name="objectToDrop">object objectToDrop</param>
 		/// <param name="newShape">optional NetOffice.VisioApi.IVShape NewShape = 0</param>
-		[SupportByVersionAttribute("Visio", 14,15,16)]
+		[SupportByVersion("Visio", 14,15,16)]
+		[BaseResult]
 		public NetOffice.VisioApi.IVSelection MoveToSubprocess(NetOffice.VisioApi.IVPage page, object objectToDrop, object newShape)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(page, objectToDrop, newShape);
-			object returnItem = Invoker.MethodReturn(this, "MoveToSubprocess", paramsArray);
-			NetOffice.VisioApi.IVSelection newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVSelection;
-			return newObject;
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.VisioApi.IVSelection>(this, "MoveToSubprocess", page, objectToDrop, newShape);
 		}
 
 		/// <summary>
 		/// SupportByVersion Visio 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="page">NetOffice.VisioApi.IVPage Page</param>
-		/// <param name="objectToDrop">object ObjectToDrop</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Visio", 14,15,16)]
+		/// <param name="page">NetOffice.VisioApi.IVPage page</param>
+		/// <param name="objectToDrop">object objectToDrop</param>
+		[CustomMethod]
+		[BaseResult]
+		[SupportByVersion("Visio", 14,15,16)]
 		public NetOffice.VisioApi.IVSelection MoveToSubprocess(NetOffice.VisioApi.IVPage page, object objectToDrop)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(page, objectToDrop);
-			object returnItem = Invoker.MethodReturn(this, "MoveToSubprocess", paramsArray);
-			NetOffice.VisioApi.IVSelection newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVSelection;
-			return newObject;
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.VisioApi.IVSelection>(this, "MoveToSubprocess", page, objectToDrop);
 		}
 
 		/// <summary>
 		/// SupportByVersion Visio 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="delFlags">Int32 DelFlags</param>
-		[SupportByVersionAttribute("Visio", 14,15,16)]
+		/// <param name="delFlags">Int32 delFlags</param>
+		[SupportByVersion("Visio", 14,15,16)]
 		public void DeleteEx(Int32 delFlags)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(delFlags);
-			Invoker.Method(this, "DeleteEx", paramsArray);
+			 Factory.ExecuteMethod(this, "DeleteEx", delFlags);
 		}
 
 		/// <summary>
 		/// SupportByVersion Visio 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="nestedOptions">NetOffice.VisioApi.Enums.VisContainerNested NestedOptions</param>
-		[SupportByVersionAttribute("Visio", 14,15,16)]
+		/// <param name="nestedOptions">NetOffice.VisioApi.Enums.VisContainerNested nestedOptions</param>
+		[SupportByVersion("Visio", 14,15,16)]
 		public Int32[] GetContainers(NetOffice.VisioApi.Enums.VisContainerNested nestedOptions)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(nestedOptions);
@@ -1664,10 +1453,9 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="nestedOptions">NetOffice.VisioApi.Enums.VisContainerNested NestedOptions</param>
-		[SupportByVersionAttribute("Visio", 14,15,16)]
+		/// <param name="nestedOptions">NetOffice.VisioApi.Enums.VisContainerNested nestedOptions</param>
+		[SupportByVersion("Visio", 14,15,16)]
 		public Int32[] GetCallouts(NetOffice.VisioApi.Enums.VisContainerNested nestedOptions)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(nestedOptions);
@@ -1677,9 +1465,8 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 14, 15, 16
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 14,15,16)]
+		[SupportByVersion("Visio", 14,15,16)]
 		public Int32[] MemberOfContainersUnion()
 		{
 			object[] paramsArray = null;
@@ -1689,9 +1476,8 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 14, 15, 16
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 14,15,16)]
+		[SupportByVersion("Visio", 14,15,16)]
 		public Int32[] MemberOfContainersIntersection()
 		{
 			object[] paramsArray = null;
@@ -1701,11 +1487,10 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="formatType">NetOffice.VisioApi.Enums.VisContainerFormatType FormatType</param>
+		/// <param name="formatType">NetOffice.VisioApi.Enums.VisContainerFormatType formatType</param>
 		/// <param name="formatValue">optional object FormatValue = 0</param>
-		[SupportByVersionAttribute("Visio", 14,15,16)]
+		[SupportByVersion("Visio", 14,15,16)]
 		public Int32[] SetContainerFormat(NetOffice.VisioApi.Enums.VisContainerFormatType formatType, object formatValue)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(formatType, formatValue);
@@ -1715,11 +1500,10 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="formatType">NetOffice.VisioApi.Enums.VisContainerFormatType FormatType</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Visio", 14,15,16)]
+		/// <param name="formatType">NetOffice.VisioApi.Enums.VisContainerFormatType formatType</param>
+		[CustomMethod]
+		[SupportByVersion("Visio", 14,15,16)]
 		public Int32[] SetContainerFormat(NetOffice.VisioApi.Enums.VisContainerFormatType formatType)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(formatType);
@@ -1729,11 +1513,10 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 15,16
-		/// 
 		/// </summary>
-		/// <param name="masterOrMasterShortcutToDrop">object MasterOrMasterShortcutToDrop</param>
+		/// <param name="masterOrMasterShortcutToDrop">object masterOrMasterShortcutToDrop</param>
 		/// <param name="replaceFlags">optional Int32 ReplaceFlags = 0</param>
-		[SupportByVersionAttribute("Visio", 15, 16)]
+		[SupportByVersion("Visio", 15, 16)]
 		public NetOffice.VisioApi.IVShape[] ReplaceShape(object masterOrMasterShortcutToDrop, object replaceFlags)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(masterOrMasterShortcutToDrop, replaceFlags);
@@ -1747,11 +1530,10 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 15,16
-		/// 
 		/// </summary>
-		/// <param name="masterOrMasterShortcutToDrop">object MasterOrMasterShortcutToDrop</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Visio", 15, 16)]
+		/// <param name="masterOrMasterShortcutToDrop">object masterOrMasterShortcutToDrop</param>
+		[CustomMethod]
+		[SupportByVersion("Visio", 15, 16)]
 		public NetOffice.VisioApi.IVShape[] ReplaceShape(object masterOrMasterShortcutToDrop)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(masterOrMasterShortcutToDrop);
@@ -1765,7 +1547,6 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 15,16
-		/// 
 		/// </summary>
 		/// <param name="lineMatrix">NetOffice.VisioApi.Enums.VisQuickStyleMatrixIndices lineMatrix</param>
 		/// <param name="fillMatrix">NetOffice.VisioApi.Enums.VisQuickStyleMatrixIndices fillMatrix</param>
@@ -1775,11 +1556,10 @@ namespace NetOffice.VisioApi
 		/// <param name="fillColor">NetOffice.VisioApi.Enums.VisQuickStyleColors fillColor</param>
 		/// <param name="shadowColor">NetOffice.VisioApi.Enums.VisQuickStyleColors shadowColor</param>
 		/// <param name="fontColor">NetOffice.VisioApi.Enums.VisQuickStyleColors fontColor</param>
-		[SupportByVersionAttribute("Visio", 15, 16)]
+		[SupportByVersion("Visio", 15, 16)]
 		public void SetQuickStyle(NetOffice.VisioApi.Enums.VisQuickStyleMatrixIndices lineMatrix, NetOffice.VisioApi.Enums.VisQuickStyleMatrixIndices fillMatrix, NetOffice.VisioApi.Enums.VisQuickStyleMatrixIndices effectsMatrix, NetOffice.VisioApi.Enums.VisQuickStyleMatrixIndices fontMatrix, NetOffice.VisioApi.Enums.VisQuickStyleColors lineColor, NetOffice.VisioApi.Enums.VisQuickStyleColors fillColor, NetOffice.VisioApi.Enums.VisQuickStyleColors shadowColor, NetOffice.VisioApi.Enums.VisQuickStyleColors fontColor)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(lineMatrix, fillMatrix, effectsMatrix, fontMatrix, lineColor, fillColor, shadowColor, fontColor);
-			Invoker.Method(this, "SetQuickStyle", paramsArray);
+			 Factory.ExecuteMethod(this, "SetQuickStyle", new object[]{ lineMatrix, fillMatrix, effectsMatrix, fontMatrix, lineColor, fillColor, shadowColor, fontColor });
 		}
 
 		#endregion
@@ -1787,9 +1567,9 @@ namespace NetOffice.VisioApi
        #region IEnumerable<NetOffice.VisioApi.IVShape> Member
         
         /// <summary>
-		/// SupportByVersionAttribute Visio, 11,12,14,15,16
+		/// SupportByVersion Visio, 11,12,14,15,16
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
+		[SupportByVersion("Visio", 11,12,14,15,16)]
        public IEnumerator<NetOffice.VisioApi.IVShape> GetEnumerator()  
        {
            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
@@ -1802,15 +1582,16 @@ namespace NetOffice.VisioApi
 		#region IEnumerable Members
        
 		/// <summary>
-		/// SupportByVersionAttribute Visio, 11,12,14,15,16
+		/// SupportByVersion Visio, 11,12,14,15,16
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
+		[SupportByVersion("Visio", 11,12,14,15,16)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
 			return NetOffice.Utils.GetProxyEnumeratorAsProperty(this);
 		}
 
 		#endregion
+
 		#pragma warning restore
 	}
 }

@@ -1,12 +1,10 @@
 ﻿using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
-using NetOffice;
-using NetOffice.Misc;
+using NetOffice.Attributes;
 
 namespace NetOffice.ADODBApi
 {
-
 	#region Delegates
 
 	#pragma warning disable
@@ -14,15 +12,16 @@ namespace NetOffice.ADODBApi
 
 	#endregion
 
-	///<summary>
+	/// <summary>
 	/// CoClass Parameter 
 	/// SupportByVersion ADODB, 2.1,2.5
-	///</summary>
-	[SupportByVersionAttribute("ADODB", 2.1,2.5)]
-	[EntityTypeAttribute(EntityType.IsCoClass)]
-	public class Parameter : _Parameter
+	/// </summary>
+	[SupportByVersion("ADODB", 2.1,2.5)]
+	[EntityType(EntityType.IsCoClass)]
+ 	public class Parameter : _Parameter
 	{
 		#pragma warning disable
+
 		#region Fields
 		
 		private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
@@ -36,6 +35,7 @@ namespace NetOffice.ADODBApi
         /// <summary>
         /// Instance Type
         /// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
         public override Type InstanceType
         {
             get
@@ -102,17 +102,17 @@ namespace NetOffice.ADODBApi
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of Parameter 
-        ///</summary>		
+        /// </summary>		
 		public Parameter():base("ADODB.Parameter")
 		{
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of Parameter
-        ///</summary>
+        /// </summary>
         ///<param name="progId">registered ProgID</param>
 		public Parameter(string progId):base(progId)
 		{
@@ -122,46 +122,6 @@ namespace NetOffice.ADODBApi
 		#endregion
 
 		#region Static CoClass Methods
-
-		/// <summary>
-        /// Returns all running ADODB.Parameter objects from the environment/system
-        /// </summary>
-        /// <returns>an ADODB.Parameter array</returns>
-		public static NetOffice.ADODBApi.Parameter[] GetActiveInstances()
-		{		
-			IDisposableEnumeration proxyList = NetOffice.ProxyService.GetActiveInstances("ADODB","Parameter");
-			NetRuntimeSystem.Collections.Generic.List<NetOffice.ADODBApi.Parameter> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.ADODBApi.Parameter>();
-			foreach(object proxy in proxyList)
-				resultList.Add( new NetOffice.ADODBApi.Parameter(null, proxy) );
-			return resultList.ToArray();
-		}
-
-		/// <summary>
-        /// Returns a running ADODB.Parameter object from the environment/system.
-        /// </summary>
-        /// <returns>an ADODB.Parameter object or null</returns>
-		public static NetOffice.ADODBApi.Parameter GetActiveInstance()
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("ADODB","Parameter", false);
-			if(null != proxy)
-				return new NetOffice.ADODBApi.Parameter(null, proxy);
-			else
-				return null;
-		}
-
-		/// <summary>
-        /// Returns a running ADODB.Parameter object from the environment/system. 
-        /// </summary>
-	    /// <param name="throwOnError">throw an exception if no object was found</param>
-        /// <returns>an ADODB.Parameter object or null</returns>
-		public static NetOffice.ADODBApi.Parameter GetActiveInstance(bool throwOnError)
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("ADODB","Parameter", throwOnError);
-			if(null != proxy)
-				return new NetOffice.ADODBApi.Parameter(null, proxy);
-			else
-				return null;
-		}
 		#endregion
 
 		#region Events

@@ -1,19 +1,24 @@
 ﻿using System;
 using NetRuntimeSystem = System;
-using System.Runtime.InteropServices;
-using System.Runtime.CompilerServices;
 using System.ComponentModel;
-using System.Reflection;
-using System.Collections.Generic;
-using NetOffice;
+using NetOffice.Attributes;
+
 namespace NetOffice.WordApi
 {
-	///<summary>
+	/// <summary>
 	/// Range
-	///</summary>
-	public class Range_ : COMObject
+	/// </summary>
+	[SyntaxBypass]
+ 	public class Range_ : COMObject
 	{
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public Range_(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -62,7 +67,7 @@ namespace NetOffice.WordApi
 		{
 		}
 		
-		/// <param name="progId">registered ProgID</param>
+		/// <param name="progId">registered progID</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public Range_(string progId) : base(progId)
 		{
@@ -76,24 +81,22 @@ namespace NetOffice.WordApi
 		/// SupportByVersion Word 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <param name="dataOnly">optional bool DataOnly</param>
+		/// <param name="dataOnly">optional bool dataOnly</param>
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193656.aspx
-		[SupportByVersionAttribute("Word", 11,12,14,15,16)]
+		[SupportByVersion("Word", 11,12,14,15,16)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public string get_XML(object dataOnly)
-		{		
-			object[] paramsArray = Invoker.ValidateParamsArray(dataOnly);
-			object returnItem = Invoker.PropertyGet(this, "XML", paramsArray);
-			return NetRuntimeSystem.Convert.ToString(returnItem);
+		{
+			return Factory.ExecuteStringPropertyGet(this, "XML", dataOnly);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193656.aspx
 		/// Alias for get_XML
 		/// </summary>
-		/// <param name="dataOnly">optional bool DataOnly</param>
-		[SupportByVersionAttribute("Word", 11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff193656.aspx </remarks>
+		/// <param name="dataOnly">optional bool dataOnly</param>
+		[SupportByVersion("Word", 11,12,14,15,16), Redirect("get_XML")]
 		public string XML(object dataOnly)
 		{
 			return get_XML(dataOnly);
@@ -107,17 +110,30 @@ namespace NetOffice.WordApi
 
 	}
 
-	///<summary>
+	/// <summary>
 	/// DispatchInterface Range 
 	/// SupportByVersion Word, 9,10,11,12,14,15,16
-	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845882.aspx
-	///</summary>
-	[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
-	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
-	public class Range : Range_
+	/// </summary>
+	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff845882.aspx </remarks>
+	[SupportByVersion("Word", 9,10,11,12,14,15,16)]
+	[EntityType(EntityType.IsDispatchInterface)]
+ 	public class Range : Range_
 	{
 		#pragma warning disable
+
 		#region Type Information
+
+		/// <summary>
+		/// Instance Type
+		/// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
+		public override Type InstanceType
+		{
+			get
+			{
+				return LateBindingApiWrapperType;
+			}
+		}
 
         private static Type _type;
 
@@ -128,14 +144,20 @@ namespace NetOffice.WordApi
             {
                 if (null == _type)
                     _type = typeof(Range);
-                    
                 return _type;
             }
         }
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public Range(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -181,7 +203,7 @@ namespace NetOffice.WordApi
 		{
 		}
 		
-		/// <param name="progId">registered ProgID</param>
+		/// <param name="progId">registered progID</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public Range(string progId) : base(progId)
 		{
@@ -194,887 +216,731 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195101.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff195101.aspx </remarks>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public string Text
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Text", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "Text");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "Text", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "Text", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192541.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff192541.aspx </remarks>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.Range FormattedText
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "FormattedText", paramsArray);
-				NetOffice.WordApi.Range newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.Range.LateBindingApiWrapperType) as NetOffice.WordApi.Range;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.Range>(this, "FormattedText", NetOffice.WordApi.Range.LateBindingApiWrapperType);
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "FormattedText", paramsArray);
+				Factory.ExecuteReferencePropertySet(this, "FormattedText", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836102.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff836102.aspx </remarks>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public Int32 Start
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Start", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "Start");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "Start", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "Start", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840998.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff840998.aspx </remarks>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public Int32 End
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "End", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "End");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "End", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "End", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff821026.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff821026.aspx </remarks>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.Font Font
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Font", paramsArray);
-				NetOffice.WordApi.Font newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.Font.LateBindingApiWrapperType) as NetOffice.WordApi.Font;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.Font>(this, "Font", NetOffice.WordApi.Font.LateBindingApiWrapperType);
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "Font", paramsArray);
+				Factory.ExecuteReferencePropertySet(this, "Font", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837543.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff837543.aspx </remarks>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.Range Duplicate
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Duplicate", paramsArray);
-				NetOffice.WordApi.Range newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.Range.LateBindingApiWrapperType) as NetOffice.WordApi.Range;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.Range>(this, "Duplicate", NetOffice.WordApi.Range.LateBindingApiWrapperType);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837652.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff837652.aspx </remarks>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.Enums.WdStoryType StoryType
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "StoryType", paramsArray);
-				int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-				return (NetOffice.WordApi.Enums.WdStoryType)intReturnItem;
+				return Factory.ExecuteEnumPropertyGet<NetOffice.WordApi.Enums.WdStoryType>(this, "StoryType");
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff191956.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff191956.aspx </remarks>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.Tables Tables
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Tables", paramsArray);
-				NetOffice.WordApi.Tables newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.Tables.LateBindingApiWrapperType) as NetOffice.WordApi.Tables;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.Tables>(this, "Tables", NetOffice.WordApi.Tables.LateBindingApiWrapperType);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836346.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff836346.aspx </remarks>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.Words Words
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Words", paramsArray);
-				NetOffice.WordApi.Words newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.Words.LateBindingApiWrapperType) as NetOffice.WordApi.Words;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.Words>(this, "Words", NetOffice.WordApi.Words.LateBindingApiWrapperType);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840991.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff840991.aspx </remarks>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.Sentences Sentences
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Sentences", paramsArray);
-				NetOffice.WordApi.Sentences newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.Sentences.LateBindingApiWrapperType) as NetOffice.WordApi.Sentences;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.Sentences>(this, "Sentences", NetOffice.WordApi.Sentences.LateBindingApiWrapperType);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845462.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff845462.aspx </remarks>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.Characters Characters
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Characters", paramsArray);
-				NetOffice.WordApi.Characters newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.Characters.LateBindingApiWrapperType) as NetOffice.WordApi.Characters;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.Characters>(this, "Characters", NetOffice.WordApi.Characters.LateBindingApiWrapperType);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196597.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff196597.aspx </remarks>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.Footnotes Footnotes
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Footnotes", paramsArray);
-				NetOffice.WordApi.Footnotes newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.Footnotes.LateBindingApiWrapperType) as NetOffice.WordApi.Footnotes;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.Footnotes>(this, "Footnotes", NetOffice.WordApi.Footnotes.LateBindingApiWrapperType);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193114.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff193114.aspx </remarks>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.Endnotes Endnotes
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Endnotes", paramsArray);
-				NetOffice.WordApi.Endnotes newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.Endnotes.LateBindingApiWrapperType) as NetOffice.WordApi.Endnotes;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.Endnotes>(this, "Endnotes", NetOffice.WordApi.Endnotes.LateBindingApiWrapperType);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192150.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff192150.aspx </remarks>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.Comments Comments
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Comments", paramsArray);
-				NetOffice.WordApi.Comments newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.Comments.LateBindingApiWrapperType) as NetOffice.WordApi.Comments;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.Comments>(this, "Comments", NetOffice.WordApi.Comments.LateBindingApiWrapperType);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836072.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff836072.aspx </remarks>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.Cells Cells
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Cells", paramsArray);
-				NetOffice.WordApi.Cells newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.Cells.LateBindingApiWrapperType) as NetOffice.WordApi.Cells;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.Cells>(this, "Cells", NetOffice.WordApi.Cells.LateBindingApiWrapperType);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff834837.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff834837.aspx </remarks>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.Sections Sections
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Sections", paramsArray);
-				NetOffice.WordApi.Sections newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.Sections.LateBindingApiWrapperType) as NetOffice.WordApi.Sections;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.Sections>(this, "Sections", NetOffice.WordApi.Sections.LateBindingApiWrapperType);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837006.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff837006.aspx </remarks>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.Paragraphs Paragraphs
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Paragraphs", paramsArray);
-				NetOffice.WordApi.Paragraphs newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.Paragraphs.LateBindingApiWrapperType) as NetOffice.WordApi.Paragraphs;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.Paragraphs>(this, "Paragraphs", NetOffice.WordApi.Paragraphs.LateBindingApiWrapperType);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835448.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835448.aspx </remarks>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.Borders Borders
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Borders", paramsArray);
-				NetOffice.WordApi.Borders newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.Borders.LateBindingApiWrapperType) as NetOffice.WordApi.Borders;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.Borders>(this, "Borders", NetOffice.WordApi.Borders.LateBindingApiWrapperType);
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "Borders", paramsArray);
+				Factory.ExecuteReferencePropertySet(this, "Borders", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822980.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff822980.aspx </remarks>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.Shading Shading
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Shading", paramsArray);
-				NetOffice.WordApi.Shading newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.Shading.LateBindingApiWrapperType) as NetOffice.WordApi.Shading;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.Shading>(this, "Shading", NetOffice.WordApi.Shading.LateBindingApiWrapperType);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839529.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff839529.aspx </remarks>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.TextRetrievalMode TextRetrievalMode
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "TextRetrievalMode", paramsArray);
-				NetOffice.WordApi.TextRetrievalMode newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.TextRetrievalMode.LateBindingApiWrapperType) as NetOffice.WordApi.TextRetrievalMode;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.TextRetrievalMode>(this, "TextRetrievalMode", NetOffice.WordApi.TextRetrievalMode.LateBindingApiWrapperType);
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "TextRetrievalMode", paramsArray);
+				Factory.ExecuteReferencePropertySet(this, "TextRetrievalMode", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845620.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff845620.aspx </remarks>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.Fields Fields
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Fields", paramsArray);
-				NetOffice.WordApi.Fields newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.Fields.LateBindingApiWrapperType) as NetOffice.WordApi.Fields;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.Fields>(this, "Fields", NetOffice.WordApi.Fields.LateBindingApiWrapperType);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff834816.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff834816.aspx </remarks>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.FormFields FormFields
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "FormFields", paramsArray);
-				NetOffice.WordApi.FormFields newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.FormFields.LateBindingApiWrapperType) as NetOffice.WordApi.FormFields;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.FormFields>(this, "FormFields", NetOffice.WordApi.FormFields.LateBindingApiWrapperType);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837877.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff837877.aspx </remarks>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.Frames Frames
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Frames", paramsArray);
-				NetOffice.WordApi.Frames newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.Frames.LateBindingApiWrapperType) as NetOffice.WordApi.Frames;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.Frames>(this, "Frames", NetOffice.WordApi.Frames.LateBindingApiWrapperType);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff834843.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff834843.aspx </remarks>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.ParagraphFormat ParagraphFormat
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "ParagraphFormat", paramsArray);
-				NetOffice.WordApi.ParagraphFormat newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.ParagraphFormat.LateBindingApiWrapperType) as NetOffice.WordApi.ParagraphFormat;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.ParagraphFormat>(this, "ParagraphFormat", NetOffice.WordApi.ParagraphFormat.LateBindingApiWrapperType);
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "ParagraphFormat", paramsArray);
+				Factory.ExecuteReferencePropertySet(this, "ParagraphFormat", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195640.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff195640.aspx </remarks>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.ListFormat ListFormat
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "ListFormat", paramsArray);
-				NetOffice.WordApi.ListFormat newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.ListFormat.LateBindingApiWrapperType) as NetOffice.WordApi.ListFormat;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.ListFormat>(this, "ListFormat", NetOffice.WordApi.ListFormat.LateBindingApiWrapperType);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195181.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff195181.aspx </remarks>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.Bookmarks Bookmarks
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Bookmarks", paramsArray);
-				NetOffice.WordApi.Bookmarks newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.Bookmarks.LateBindingApiWrapperType) as NetOffice.WordApi.Bookmarks;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.Bookmarks>(this, "Bookmarks", NetOffice.WordApi.Bookmarks.LateBindingApiWrapperType);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196242.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff196242.aspx </remarks>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.Application Application
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				NetOffice.WordApi.Application newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.Application.LateBindingApiWrapperType) as NetOffice.WordApi.Application;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.Application>(this, "Application", NetOffice.WordApi.Application.LateBindingApiWrapperType);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839336.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff839336.aspx </remarks>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public Int32 Creator
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Creator", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "Creator");
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822923.aspx
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff822923.aspx </remarks>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16), ProxyResult]
 		public object Parent
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Parent", paramsArray);
-				ICOMObject newObject = Factory.CreateObjectFromComProxy(this,returnItem);
-				return newObject;
+				return Factory.ExecuteReferencePropertyGet(this, "Parent");
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff844991.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff844991.aspx </remarks>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public Int32 Bold
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Bold", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "Bold");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "Bold", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "Bold", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff821583.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff821583.aspx </remarks>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public Int32 Italic
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Italic", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "Italic");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "Italic", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "Italic", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff821959.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff821959.aspx </remarks>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.Enums.WdUnderline Underline
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Underline", paramsArray);
-				int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-				return (NetOffice.WordApi.Enums.WdUnderline)intReturnItem;
+				return Factory.ExecuteEnumPropertyGet<NetOffice.WordApi.Enums.WdUnderline>(this, "Underline");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "Underline", paramsArray);
+				Factory.ExecuteEnumPropertySet(this, "Underline", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff198151.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff198151.aspx </remarks>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.Enums.WdEmphasisMark EmphasisMark
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "EmphasisMark", paramsArray);
-				int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-				return (NetOffice.WordApi.Enums.WdEmphasisMark)intReturnItem;
+				return Factory.ExecuteEnumPropertyGet<NetOffice.WordApi.Enums.WdEmphasisMark>(this, "EmphasisMark");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "EmphasisMark", paramsArray);
+				Factory.ExecuteEnumPropertySet(this, "EmphasisMark", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff844978.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff844978.aspx </remarks>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public bool DisableCharacterSpaceGrid
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "DisableCharacterSpaceGrid", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "DisableCharacterSpaceGrid");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "DisableCharacterSpaceGrid", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "DisableCharacterSpaceGrid", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838481.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff838481.aspx </remarks>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.Revisions Revisions
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Revisions", paramsArray);
-				NetOffice.WordApi.Revisions newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.Revisions.LateBindingApiWrapperType) as NetOffice.WordApi.Revisions;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.Revisions>(this, "Revisions", NetOffice.WordApi.Revisions.LateBindingApiWrapperType);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836418.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff836418.aspx </remarks>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public object Style
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Style", paramsArray);
-				if((null != returnItem) && (returnItem is MarshalByRefObject))
-				{
-					ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
-					return newObject;
-				}
-				else
-				{
-					return  returnItem;
-				}
+				return Factory.ExecuteVariantPropertyGet(this, "Style");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "Style", paramsArray);
+				Factory.ExecuteVariantPropertySet(this, "Style", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845486.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff845486.aspx </remarks>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public Int32 StoryLength
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "StoryLength", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "StoryLength");
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839161.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff839161.aspx </remarks>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.Enums.WdLanguageID LanguageID
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "LanguageID", paramsArray);
-				int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-				return (NetOffice.WordApi.Enums.WdLanguageID)intReturnItem;
+				return Factory.ExecuteEnumPropertyGet<NetOffice.WordApi.Enums.WdLanguageID>(this, "LanguageID");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "LanguageID", paramsArray);
+				Factory.ExecuteEnumPropertySet(this, "LanguageID", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837028.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff837028.aspx </remarks>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.SynonymInfo SynonymInfo
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "SynonymInfo", paramsArray);
-				NetOffice.WordApi.SynonymInfo newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.SynonymInfo.LateBindingApiWrapperType) as NetOffice.WordApi.SynonymInfo;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.SynonymInfo>(this, "SynonymInfo", NetOffice.WordApi.SynonymInfo.LateBindingApiWrapperType);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838128.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff838128.aspx </remarks>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.Hyperlinks Hyperlinks
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Hyperlinks", paramsArray);
-				NetOffice.WordApi.Hyperlinks newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.Hyperlinks.LateBindingApiWrapperType) as NetOffice.WordApi.Hyperlinks;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.Hyperlinks>(this, "Hyperlinks", NetOffice.WordApi.Hyperlinks.LateBindingApiWrapperType);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838758.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff838758.aspx </remarks>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.ListParagraphs ListParagraphs
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "ListParagraphs", paramsArray);
-				NetOffice.WordApi.ListParagraphs newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.ListParagraphs.LateBindingApiWrapperType) as NetOffice.WordApi.ListParagraphs;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.ListParagraphs>(this, "ListParagraphs", NetOffice.WordApi.ListParagraphs.LateBindingApiWrapperType);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837692.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff837692.aspx </remarks>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.Subdocuments Subdocuments
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Subdocuments", paramsArray);
-				NetOffice.WordApi.Subdocuments newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.Subdocuments.LateBindingApiWrapperType) as NetOffice.WordApi.Subdocuments;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.Subdocuments>(this, "Subdocuments", NetOffice.WordApi.Subdocuments.LateBindingApiWrapperType);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840317.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff840317.aspx </remarks>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public bool GrammarChecked
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "GrammarChecked", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "GrammarChecked");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "GrammarChecked", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "GrammarChecked", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196502.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff196502.aspx </remarks>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public bool SpellingChecked
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "SpellingChecked", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "SpellingChecked");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "SpellingChecked", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "SpellingChecked", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff841064.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff841064.aspx </remarks>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.Enums.WdColorIndex HighlightColorIndex
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "HighlightColorIndex", paramsArray);
-				int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-				return (NetOffice.WordApi.Enums.WdColorIndex)intReturnItem;
+				return Factory.ExecuteEnumPropertyGet<NetOffice.WordApi.Enums.WdColorIndex>(this, "HighlightColorIndex");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "HighlightColorIndex", paramsArray);
+				Factory.ExecuteEnumPropertySet(this, "HighlightColorIndex", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197474.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff197474.aspx </remarks>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.Columns Columns
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Columns", paramsArray);
-				NetOffice.WordApi.Columns newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.Columns.LateBindingApiWrapperType) as NetOffice.WordApi.Columns;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.Columns>(this, "Columns", NetOffice.WordApi.Columns.LateBindingApiWrapperType);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840908.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff840908.aspx </remarks>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.Rows Rows
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Rows", paramsArray);
-				NetOffice.WordApi.Rows newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.Rows.LateBindingApiWrapperType) as NetOffice.WordApi.Rows;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.Rows>(this, "Rows", NetOffice.WordApi.Rows.LateBindingApiWrapperType);
 			}
 		}
 
@@ -1082,15 +948,13 @@ namespace NetOffice.WordApi
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public Int32 CanEdit
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "CanEdit", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "CanEdit");
 			}
 		}
 
@@ -1098,174 +962,142 @@ namespace NetOffice.WordApi
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public Int32 CanPaste
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "CanPaste", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "CanPaste");
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845343.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff845343.aspx </remarks>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public bool IsEndOfRowMark
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "IsEndOfRowMark", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "IsEndOfRowMark");
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845646.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff845646.aspx </remarks>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public Int32 BookmarkID
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "BookmarkID", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "BookmarkID");
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff191844.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff191844.aspx </remarks>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public Int32 PreviousBookmarkID
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "PreviousBookmarkID", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "PreviousBookmarkID");
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195912.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff195912.aspx </remarks>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.Find Find
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Find", paramsArray);
-				NetOffice.WordApi.Find newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.Find.LateBindingApiWrapperType) as NetOffice.WordApi.Find;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.Find>(this, "Find", NetOffice.WordApi.Find.LateBindingApiWrapperType);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192629.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff192629.aspx </remarks>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.PageSetup PageSetup
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "PageSetup", paramsArray);
-				NetOffice.WordApi.PageSetup newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.PageSetup.LateBindingApiWrapperType) as NetOffice.WordApi.PageSetup;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.PageSetup>(this, "PageSetup", NetOffice.WordApi.PageSetup.LateBindingApiWrapperType);
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "PageSetup", paramsArray);
+				Factory.ExecuteReferencePropertySet(this, "PageSetup", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837242.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff837242.aspx </remarks>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.ShapeRange ShapeRange
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "ShapeRange", paramsArray);
-				NetOffice.WordApi.ShapeRange newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.ShapeRange.LateBindingApiWrapperType) as NetOffice.WordApi.ShapeRange;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.ShapeRange>(this, "ShapeRange", NetOffice.WordApi.ShapeRange.LateBindingApiWrapperType);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff834838.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff834838.aspx </remarks>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.Enums.WdCharacterCase Case
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Case", paramsArray);
-				int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-				return (NetOffice.WordApi.Enums.WdCharacterCase)intReturnItem;
+				return Factory.ExecuteEnumPropertyGet<NetOffice.WordApi.Enums.WdCharacterCase>(this, "Case");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "Case", paramsArray);
+				Factory.ExecuteEnumPropertySet(this, "Case", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff834587.aspx
 		/// </summary>
-		/// <param name="type">NetOffice.WordApi.Enums.WdInformation Type</param>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff834587.aspx </remarks>
+		/// <param name="type">NetOffice.WordApi.Enums.WdInformation type</param>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public object get_Information(NetOffice.WordApi.Enums.WdInformation type)
-		{		
-			object[] paramsArray = Invoker.ValidateParamsArray(type);
-			object returnItem = Invoker.PropertyGet(this, "Information", paramsArray);
-			if((null != returnItem) && (returnItem is MarshalByRefObject))
-			{
-				ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
-				return newObject;
-			}
-			else
-			{
-				return  returnItem;
-			}
+		{
+			return Factory.ExecuteVariantPropertyGet(this, "Information", type);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff834587.aspx
 		/// Alias for get_Information
 		/// </summary>
-		/// <param name="type">NetOffice.WordApi.Enums.WdInformation Type</param>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff834587.aspx </remarks>
+		/// <param name="type">NetOffice.WordApi.Enums.WdInformation type</param>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16), Redirect("get_Information")]
 		public object Information(NetOffice.WordApi.Enums.WdInformation type)
 		{
 			return get_Information(type);
@@ -1274,437 +1106,364 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837707.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff837707.aspx </remarks>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.ReadabilityStatistics ReadabilityStatistics
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "ReadabilityStatistics", paramsArray);
-				NetOffice.WordApi.ReadabilityStatistics newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.ReadabilityStatistics.LateBindingApiWrapperType) as NetOffice.WordApi.ReadabilityStatistics;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.ReadabilityStatistics>(this, "ReadabilityStatistics", NetOffice.WordApi.ReadabilityStatistics.LateBindingApiWrapperType);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192406.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff192406.aspx </remarks>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.ProofreadingErrors GrammaticalErrors
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "GrammaticalErrors", paramsArray);
-				NetOffice.WordApi.ProofreadingErrors newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.ProofreadingErrors.LateBindingApiWrapperType) as NetOffice.WordApi.ProofreadingErrors;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.ProofreadingErrors>(this, "GrammaticalErrors", NetOffice.WordApi.ProofreadingErrors.LateBindingApiWrapperType);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195285.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff195285.aspx </remarks>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.ProofreadingErrors SpellingErrors
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "SpellingErrors", paramsArray);
-				NetOffice.WordApi.ProofreadingErrors newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.ProofreadingErrors.LateBindingApiWrapperType) as NetOffice.WordApi.ProofreadingErrors;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.ProofreadingErrors>(this, "SpellingErrors", NetOffice.WordApi.ProofreadingErrors.LateBindingApiWrapperType);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195776.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff195776.aspx </remarks>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.Enums.WdTextOrientation Orientation
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Orientation", paramsArray);
-				int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-				return (NetOffice.WordApi.Enums.WdTextOrientation)intReturnItem;
+				return Factory.ExecuteEnumPropertyGet<NetOffice.WordApi.Enums.WdTextOrientation>(this, "Orientation");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "Orientation", paramsArray);
+				Factory.ExecuteEnumPropertySet(this, "Orientation", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195321.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff195321.aspx </remarks>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.InlineShapes InlineShapes
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "InlineShapes", paramsArray);
-				NetOffice.WordApi.InlineShapes newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.InlineShapes.LateBindingApiWrapperType) as NetOffice.WordApi.InlineShapes;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.InlineShapes>(this, "InlineShapes", NetOffice.WordApi.InlineShapes.LateBindingApiWrapperType);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193730.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff193730.aspx </remarks>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.Range NextStoryRange
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "NextStoryRange", paramsArray);
-				NetOffice.WordApi.Range newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.Range.LateBindingApiWrapperType) as NetOffice.WordApi.Range;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.Range>(this, "NextStoryRange", NetOffice.WordApi.Range.LateBindingApiWrapperType);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193321.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff193321.aspx </remarks>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.Enums.WdLanguageID LanguageIDFarEast
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "LanguageIDFarEast", paramsArray);
-				int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-				return (NetOffice.WordApi.Enums.WdLanguageID)intReturnItem;
+				return Factory.ExecuteEnumPropertyGet<NetOffice.WordApi.Enums.WdLanguageID>(this, "LanguageIDFarEast");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "LanguageIDFarEast", paramsArray);
+				Factory.ExecuteEnumPropertySet(this, "LanguageIDFarEast", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff844803.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff844803.aspx </remarks>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.Enums.WdLanguageID LanguageIDOther
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "LanguageIDOther", paramsArray);
-				int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-				return (NetOffice.WordApi.Enums.WdLanguageID)intReturnItem;
+				return Factory.ExecuteEnumPropertyGet<NetOffice.WordApi.Enums.WdLanguageID>(this, "LanguageIDOther");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "LanguageIDOther", paramsArray);
+				Factory.ExecuteEnumPropertySet(this, "LanguageIDOther", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839349.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff839349.aspx </remarks>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public bool LanguageDetected
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "LanguageDetected", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "LanguageDetected");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "LanguageDetected", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "LanguageDetected", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197181.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff197181.aspx </remarks>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public Single FitTextWidth
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "FitTextWidth", paramsArray);
-				return NetRuntimeSystem.Convert.ToSingle(returnItem);
+				return Factory.ExecuteSinglePropertyGet(this, "FitTextWidth");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "FitTextWidth", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "FitTextWidth", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff191976.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff191976.aspx </remarks>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.Enums.WdHorizontalInVerticalType HorizontalInVertical
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "HorizontalInVertical", paramsArray);
-				int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-				return (NetOffice.WordApi.Enums.WdHorizontalInVerticalType)intReturnItem;
+				return Factory.ExecuteEnumPropertyGet<NetOffice.WordApi.Enums.WdHorizontalInVerticalType>(this, "HorizontalInVertical");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "HorizontalInVertical", paramsArray);
+				Factory.ExecuteEnumPropertySet(this, "HorizontalInVertical", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845231.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff845231.aspx </remarks>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.Enums.WdTwoLinesInOneType TwoLinesInOne
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "TwoLinesInOne", paramsArray);
-				int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-				return (NetOffice.WordApi.Enums.WdTwoLinesInOneType)intReturnItem;
+				return Factory.ExecuteEnumPropertyGet<NetOffice.WordApi.Enums.WdTwoLinesInOneType>(this, "TwoLinesInOne");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "TwoLinesInOne", paramsArray);
+				Factory.ExecuteEnumPropertySet(this, "TwoLinesInOne", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195015.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff195015.aspx </remarks>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public bool CombineCharacters
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "CombineCharacters", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "CombineCharacters");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "CombineCharacters", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "CombineCharacters", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff844920.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff844920.aspx </remarks>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public Int32 NoProofing
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "NoProofing", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "NoProofing");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "NoProofing", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "NoProofing", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194640.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194640.aspx </remarks>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.Tables TopLevelTables
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "TopLevelTables", paramsArray);
-				NetOffice.WordApi.Tables newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.Tables.LateBindingApiWrapperType) as NetOffice.WordApi.Tables;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.Tables>(this, "TopLevelTables", NetOffice.WordApi.Tables.LateBindingApiWrapperType);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192353.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff192353.aspx </remarks>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.OfficeApi.Scripts Scripts
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Scripts", paramsArray);
-				NetOffice.OfficeApi.Scripts newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.Scripts.LateBindingApiWrapperType) as NetOffice.OfficeApi.Scripts;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.Scripts>(this, "Scripts", NetOffice.OfficeApi.Scripts.LateBindingApiWrapperType);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822135.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff822135.aspx </remarks>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.Enums.WdCharacterWidth CharacterWidth
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "CharacterWidth", paramsArray);
-				int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-				return (NetOffice.WordApi.Enums.WdCharacterWidth)intReturnItem;
+				return Factory.ExecuteEnumPropertyGet<NetOffice.WordApi.Enums.WdCharacterWidth>(this, "CharacterWidth");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "CharacterWidth", paramsArray);
+				Factory.ExecuteEnumPropertySet(this, "CharacterWidth", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840112.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff840112.aspx </remarks>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.Enums.WdKana Kana
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Kana", paramsArray);
-				int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-				return (NetOffice.WordApi.Enums.WdKana)intReturnItem;
+				return Factory.ExecuteEnumPropertyGet<NetOffice.WordApi.Enums.WdKana>(this, "Kana");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "Kana", paramsArray);
+				Factory.ExecuteEnumPropertySet(this, "Kana", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff821869.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff821869.aspx </remarks>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public Int32 BoldBi
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "BoldBi", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "BoldBi");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "BoldBi", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "BoldBi", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197717.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff197717.aspx </remarks>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public Int32 ItalicBi
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "ItalicBi", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "ItalicBi");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "ItalicBi", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "ItalicBi", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196542.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff196542.aspx </remarks>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public string ID
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "ID", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "ID");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "ID", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "ID", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194856.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194856.aspx </remarks>
+		[SupportByVersion("Word", 10,11,12,14,15,16)]
 		public NetOffice.WordApi.HTMLDivisions HTMLDivisions
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "HTMLDivisions", paramsArray);
-				NetOffice.WordApi.HTMLDivisions newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.HTMLDivisions.LateBindingApiWrapperType) as NetOffice.WordApi.HTMLDivisions;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.HTMLDivisions>(this, "HTMLDivisions", NetOffice.WordApi.HTMLDivisions.LateBindingApiWrapperType);
 			}
 		}
 
@@ -1712,87 +1471,72 @@ namespace NetOffice.WordApi
 		/// SupportByVersion Word 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Word", 10,11,12,14,15,16)]
+		[SupportByVersion("Word", 10,11,12,14,15,16)]
 		public NetOffice.WordApi.SmartTags SmartTags
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "SmartTags", paramsArray);
-				NetOffice.WordApi.SmartTags newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.SmartTags.LateBindingApiWrapperType) as NetOffice.WordApi.SmartTags;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.SmartTags>(this, "SmartTags", NetOffice.WordApi.SmartTags.LateBindingApiWrapperType);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff820977.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff820977.aspx </remarks>
+		[SupportByVersion("Word", 10,11,12,14,15,16)]
 		public bool ShowAll
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "ShowAll", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "ShowAll");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "ShowAll", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "ShowAll", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194311.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194311.aspx </remarks>
+		[SupportByVersion("Word", 10,11,12,14,15,16)]
 		public NetOffice.WordApi.Document Document
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Document", paramsArray);
-				NetOffice.WordApi.Document newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.Document.LateBindingApiWrapperType) as NetOffice.WordApi.Document;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.Document>(this, "Document", NetOffice.WordApi.Document.LateBindingApiWrapperType);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195199.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff195199.aspx </remarks>
+		[SupportByVersion("Word", 10,11,12,14,15,16)]
 		public NetOffice.WordApi.FootnoteOptions FootnoteOptions
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "FootnoteOptions", paramsArray);
-				NetOffice.WordApi.FootnoteOptions newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.FootnoteOptions.LateBindingApiWrapperType) as NetOffice.WordApi.FootnoteOptions;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.FootnoteOptions>(this, "FootnoteOptions", NetOffice.WordApi.FootnoteOptions.LateBindingApiWrapperType);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195039.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff195039.aspx </remarks>
+		[SupportByVersion("Word", 10,11,12,14,15,16)]
 		public NetOffice.WordApi.EndnoteOptions EndnoteOptions
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "EndnoteOptions", paramsArray);
-				NetOffice.WordApi.EndnoteOptions newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.EndnoteOptions.LateBindingApiWrapperType) as NetOffice.WordApi.EndnoteOptions;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.EndnoteOptions>(this, "EndnoteOptions", NetOffice.WordApi.EndnoteOptions.LateBindingApiWrapperType);
 			}
 		}
 
@@ -1800,15 +1544,12 @@ namespace NetOffice.WordApi
 		/// SupportByVersion Word 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Word", 11,12,14,15,16)]
+		[SupportByVersion("Word", 11,12,14,15,16)]
 		public NetOffice.WordApi.XMLNodes XMLNodes
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "XMLNodes", paramsArray);
-				NetOffice.WordApi.XMLNodes newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.XMLNodes.LateBindingApiWrapperType) as NetOffice.WordApi.XMLNodes;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.XMLNodes>(this, "XMLNodes", NetOffice.WordApi.XMLNodes.LateBindingApiWrapperType);
 			}
 		}
 
@@ -1816,302 +1557,222 @@ namespace NetOffice.WordApi
 		/// SupportByVersion Word 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Word", 11,12,14,15,16)]
+		[SupportByVersion("Word", 11,12,14,15,16)]
 		public NetOffice.WordApi.XMLNode XMLParentNode
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "XMLParentNode", paramsArray);
-				NetOffice.WordApi.XMLNode newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.XMLNode.LateBindingApiWrapperType) as NetOffice.WordApi.XMLNode;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.XMLNode>(this, "XMLParentNode", NetOffice.WordApi.XMLNode.LateBindingApiWrapperType);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840972.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff840972.aspx </remarks>
+		[SupportByVersion("Word", 11,12,14,15,16)]
 		public NetOffice.WordApi.Editors Editors
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Editors", paramsArray);
-				NetOffice.WordApi.Editors newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.Editors.LateBindingApiWrapperType) as NetOffice.WordApi.Editors;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.Editors>(this, "Editors", NetOffice.WordApi.Editors.LateBindingApiWrapperType);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193656.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff193656.aspx </remarks>
+		[SupportByVersion("Word", 11,12,14,15,16)]
 		public string XML
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "XML", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "XML");
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192034.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff192034.aspx </remarks>
+		[SupportByVersion("Word", 11,12,14,15,16)]
 		public object EnhMetaFileBits
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "EnhMetaFileBits", paramsArray);
-				if((null != returnItem) && (returnItem is MarshalByRefObject))
-				{
-					ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
-					return newObject;
-				}
-				else
-				{
-					return  returnItem;
-				}
+				return Factory.ExecuteVariantPropertyGet(this, "EnhMetaFileBits");
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822393.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff822393.aspx </remarks>
+		[SupportByVersion("Word", 12,14,15,16)]
 		public NetOffice.WordApi.OMaths OMaths
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "OMaths", paramsArray);
-				NetOffice.WordApi.OMaths newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.OMaths.LateBindingApiWrapperType) as NetOffice.WordApi.OMaths;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.OMaths>(this, "OMaths", NetOffice.WordApi.OMaths.LateBindingApiWrapperType);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192339.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff192339.aspx </remarks>
+		[SupportByVersion("Word", 12,14,15,16)]
 		public object CharacterStyle
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "CharacterStyle", paramsArray);
-				if((null != returnItem) && (returnItem is MarshalByRefObject))
-				{
-					ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
-					return newObject;
-				}
-				else
-				{
-					return  returnItem;
-				}
+				return Factory.ExecuteVariantPropertyGet(this, "CharacterStyle");
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196075.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff196075.aspx </remarks>
+		[SupportByVersion("Word", 12,14,15,16)]
 		public object ParagraphStyle
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "ParagraphStyle", paramsArray);
-				if((null != returnItem) && (returnItem is MarshalByRefObject))
-				{
-					ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
-					return newObject;
-				}
-				else
-				{
-					return  returnItem;
-				}
+				return Factory.ExecuteVariantPropertyGet(this, "ParagraphStyle");
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196585.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff196585.aspx </remarks>
+		[SupportByVersion("Word", 12,14,15,16)]
 		public object ListStyle
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "ListStyle", paramsArray);
-				if((null != returnItem) && (returnItem is MarshalByRefObject))
-				{
-					ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
-					return newObject;
-				}
-				else
-				{
-					return  returnItem;
-				}
+				return Factory.ExecuteVariantPropertyGet(this, "ListStyle");
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff841045.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff841045.aspx </remarks>
+		[SupportByVersion("Word", 12,14,15,16)]
 		public object TableStyle
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "TableStyle", paramsArray);
-				if((null != returnItem) && (returnItem is MarshalByRefObject))
-				{
-					ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
-					return newObject;
-				}
-				else
-				{
-					return  returnItem;
-				}
+				return Factory.ExecuteVariantPropertyGet(this, "TableStyle");
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839822.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff839822.aspx </remarks>
+		[SupportByVersion("Word", 12,14,15,16)]
 		public NetOffice.WordApi.ContentControls ContentControls
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "ContentControls", paramsArray);
-				NetOffice.WordApi.ContentControls newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.ContentControls.LateBindingApiWrapperType) as NetOffice.WordApi.ContentControls;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.ContentControls>(this, "ContentControls", NetOffice.WordApi.ContentControls.LateBindingApiWrapperType);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837448.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff837448.aspx </remarks>
+		[SupportByVersion("Word", 12,14,15,16)]
 		public string WordOpenXML
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "WordOpenXML", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "WordOpenXML");
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839629.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff839629.aspx </remarks>
+		[SupportByVersion("Word", 12,14,15,16)]
 		public NetOffice.WordApi.ContentControl ParentContentControl
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "ParentContentControl", paramsArray);
-				NetOffice.WordApi.ContentControl newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.ContentControl.LateBindingApiWrapperType) as NetOffice.WordApi.ContentControl;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.ContentControl>(this, "ParentContentControl", NetOffice.WordApi.ContentControl.LateBindingApiWrapperType);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845600.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff845600.aspx </remarks>
+		[SupportByVersion("Word", 14,15,16)]
 		public NetOffice.WordApi.CoAuthLocks Locks
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Locks", paramsArray);
-				NetOffice.WordApi.CoAuthLocks newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.CoAuthLocks.LateBindingApiWrapperType) as NetOffice.WordApi.CoAuthLocks;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.CoAuthLocks>(this, "Locks", NetOffice.WordApi.CoAuthLocks.LateBindingApiWrapperType);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196284.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff196284.aspx </remarks>
+		[SupportByVersion("Word", 14,15,16)]
 		public NetOffice.WordApi.CoAuthUpdates Updates
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Updates", paramsArray);
-				NetOffice.WordApi.CoAuthUpdates newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.CoAuthUpdates.LateBindingApiWrapperType) as NetOffice.WordApi.CoAuthUpdates;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.CoAuthUpdates>(this, "Updates", NetOffice.WordApi.CoAuthUpdates.LateBindingApiWrapperType);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff823246.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff823246.aspx </remarks>
+		[SupportByVersion("Word", 14,15,16)]
 		public NetOffice.WordApi.Conflicts Conflicts
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Conflicts", paramsArray);
-				NetOffice.WordApi.Conflicts newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.Conflicts.LateBindingApiWrapperType) as NetOffice.WordApi.Conflicts;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.Conflicts>(this, "Conflicts", NetOffice.WordApi.Conflicts.LateBindingApiWrapperType);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 15,16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj231893.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 15, 16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/jj231893.aspx </remarks>
+		[SupportByVersion("Word", 15, 16)]
 		public Int32 TextVisibleOnScreen
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "TextVisibleOnScreen", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "TextVisibleOnScreen");
 			}
 		}
 
@@ -2121,4440 +1782,3964 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff820813.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff820813.aspx </remarks>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void Select()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "Select", paramsArray);
+			 Factory.ExecuteMethod(this, "Select");
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff823262.aspx
 		/// </summary>
-		/// <param name="start">Int32 Start</param>
-		/// <param name="end">Int32 End</param>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff823262.aspx </remarks>
+		/// <param name="start">Int32 start</param>
+		/// <param name="end">Int32 end</param>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void SetRange(Int32 start, Int32 end)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(start, end);
-			Invoker.Method(this, "SetRange", paramsArray);
+			 Factory.ExecuteMethod(this, "SetRange", start, end);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840825.aspx
 		/// </summary>
-		/// <param name="direction">optional object Direction</param>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff840825.aspx </remarks>
+		/// <param name="direction">optional object direction</param>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void Collapse(object direction)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(direction);
-			Invoker.Method(this, "Collapse", paramsArray);
+			 Factory.ExecuteMethod(this, "Collapse", direction);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840825.aspx
 		/// </summary>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff840825.aspx </remarks>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void Collapse()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "Collapse", paramsArray);
+			 Factory.ExecuteMethod(this, "Collapse");
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836272.aspx
 		/// </summary>
-		/// <param name="text">string Text</param>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff836272.aspx </remarks>
+		/// <param name="text">string text</param>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void InsertBefore(string text)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(text);
-			Invoker.Method(this, "InsertBefore", paramsArray);
+			 Factory.ExecuteMethod(this, "InsertBefore", text);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192427.aspx
 		/// </summary>
-		/// <param name="text">string Text</param>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff192427.aspx </remarks>
+		/// <param name="text">string text</param>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void InsertAfter(string text)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(text);
-			Invoker.Method(this, "InsertAfter", paramsArray);
+			 Factory.ExecuteMethod(this, "InsertAfter", text);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822953.aspx
 		/// </summary>
-		/// <param name="unit">optional object Unit</param>
-		/// <param name="count">optional object Count</param>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff822953.aspx </remarks>
+		/// <param name="unit">optional object unit</param>
+		/// <param name="count">optional object count</param>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.Range Next(object unit, object count)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(unit, count);
-			object returnItem = Invoker.MethodReturn(this, "Next", paramsArray);
-			NetOffice.WordApi.Range newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Range.LateBindingApiWrapperType) as NetOffice.WordApi.Range;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Range>(this, "Next", NetOffice.WordApi.Range.LateBindingApiWrapperType, unit, count);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822953.aspx
 		/// </summary>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff822953.aspx </remarks>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.Range Next()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "Next", paramsArray);
-			NetOffice.WordApi.Range newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Range.LateBindingApiWrapperType) as NetOffice.WordApi.Range;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Range>(this, "Next", NetOffice.WordApi.Range.LateBindingApiWrapperType);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822953.aspx
 		/// </summary>
-		/// <param name="unit">optional object Unit</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff822953.aspx </remarks>
+		/// <param name="unit">optional object unit</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.Range Next(object unit)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(unit);
-			object returnItem = Invoker.MethodReturn(this, "Next", paramsArray);
-			NetOffice.WordApi.Range newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Range.LateBindingApiWrapperType) as NetOffice.WordApi.Range;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Range>(this, "Next", NetOffice.WordApi.Range.LateBindingApiWrapperType, unit);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840143.aspx
 		/// </summary>
-		/// <param name="unit">optional object Unit</param>
-		/// <param name="count">optional object Count</param>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff840143.aspx </remarks>
+		/// <param name="unit">optional object unit</param>
+		/// <param name="count">optional object count</param>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.Range Previous(object unit, object count)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(unit, count);
-			object returnItem = Invoker.MethodReturn(this, "Previous", paramsArray);
-			NetOffice.WordApi.Range newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Range.LateBindingApiWrapperType) as NetOffice.WordApi.Range;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Range>(this, "Previous", NetOffice.WordApi.Range.LateBindingApiWrapperType, unit, count);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840143.aspx
 		/// </summary>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff840143.aspx </remarks>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.Range Previous()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "Previous", paramsArray);
-			NetOffice.WordApi.Range newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Range.LateBindingApiWrapperType) as NetOffice.WordApi.Range;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Range>(this, "Previous", NetOffice.WordApi.Range.LateBindingApiWrapperType);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840143.aspx
 		/// </summary>
-		/// <param name="unit">optional object Unit</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff840143.aspx </remarks>
+		/// <param name="unit">optional object unit</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.Range Previous(object unit)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(unit);
-			object returnItem = Invoker.MethodReturn(this, "Previous", paramsArray);
-			NetOffice.WordApi.Range newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Range.LateBindingApiWrapperType) as NetOffice.WordApi.Range;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Range>(this, "Previous", NetOffice.WordApi.Range.LateBindingApiWrapperType, unit);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195382.aspx
 		/// </summary>
-		/// <param name="unit">optional object Unit</param>
-		/// <param name="extend">optional object Extend</param>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff195382.aspx </remarks>
+		/// <param name="unit">optional object unit</param>
+		/// <param name="extend">optional object extend</param>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public Int32 StartOf(object unit, object extend)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(unit, extend);
-			object returnItem = Invoker.MethodReturn(this, "StartOf", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return Factory.ExecuteInt32MethodGet(this, "StartOf", unit, extend);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195382.aspx
 		/// </summary>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff195382.aspx </remarks>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public Int32 StartOf()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "StartOf", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return Factory.ExecuteInt32MethodGet(this, "StartOf");
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195382.aspx
 		/// </summary>
-		/// <param name="unit">optional object Unit</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff195382.aspx </remarks>
+		/// <param name="unit">optional object unit</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public Int32 StartOf(object unit)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(unit);
-			object returnItem = Invoker.MethodReturn(this, "StartOf", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return Factory.ExecuteInt32MethodGet(this, "StartOf", unit);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837285.aspx
 		/// </summary>
-		/// <param name="unit">optional object Unit</param>
-		/// <param name="extend">optional object Extend</param>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff837285.aspx </remarks>
+		/// <param name="unit">optional object unit</param>
+		/// <param name="extend">optional object extend</param>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public Int32 EndOf(object unit, object extend)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(unit, extend);
-			object returnItem = Invoker.MethodReturn(this, "EndOf", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return Factory.ExecuteInt32MethodGet(this, "EndOf", unit, extend);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837285.aspx
 		/// </summary>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff837285.aspx </remarks>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public Int32 EndOf()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "EndOf", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return Factory.ExecuteInt32MethodGet(this, "EndOf");
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837285.aspx
 		/// </summary>
-		/// <param name="unit">optional object Unit</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff837285.aspx </remarks>
+		/// <param name="unit">optional object unit</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public Int32 EndOf(object unit)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(unit);
-			object returnItem = Invoker.MethodReturn(this, "EndOf", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return Factory.ExecuteInt32MethodGet(this, "EndOf", unit);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194352.aspx
 		/// </summary>
-		/// <param name="unit">optional object Unit</param>
-		/// <param name="count">optional object Count</param>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194352.aspx </remarks>
+		/// <param name="unit">optional object unit</param>
+		/// <param name="count">optional object count</param>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public Int32 Move(object unit, object count)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(unit, count);
-			object returnItem = Invoker.MethodReturn(this, "Move", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return Factory.ExecuteInt32MethodGet(this, "Move", unit, count);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194352.aspx
 		/// </summary>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194352.aspx </remarks>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public Int32 Move()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "Move", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return Factory.ExecuteInt32MethodGet(this, "Move");
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194352.aspx
 		/// </summary>
-		/// <param name="unit">optional object Unit</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194352.aspx </remarks>
+		/// <param name="unit">optional object unit</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public Int32 Move(object unit)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(unit);
-			object returnItem = Invoker.MethodReturn(this, "Move", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return Factory.ExecuteInt32MethodGet(this, "Move", unit);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff823249.aspx
 		/// </summary>
-		/// <param name="unit">optional object Unit</param>
-		/// <param name="count">optional object Count</param>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff823249.aspx </remarks>
+		/// <param name="unit">optional object unit</param>
+		/// <param name="count">optional object count</param>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public Int32 MoveStart(object unit, object count)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(unit, count);
-			object returnItem = Invoker.MethodReturn(this, "MoveStart", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return Factory.ExecuteInt32MethodGet(this, "MoveStart", unit, count);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff823249.aspx
 		/// </summary>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff823249.aspx </remarks>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public Int32 MoveStart()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "MoveStart", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return Factory.ExecuteInt32MethodGet(this, "MoveStart");
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff823249.aspx
 		/// </summary>
-		/// <param name="unit">optional object Unit</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff823249.aspx </remarks>
+		/// <param name="unit">optional object unit</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public Int32 MoveStart(object unit)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(unit);
-			object returnItem = Invoker.MethodReturn(this, "MoveStart", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return Factory.ExecuteInt32MethodGet(this, "MoveStart", unit);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194698.aspx
 		/// </summary>
-		/// <param name="unit">optional object Unit</param>
-		/// <param name="count">optional object Count</param>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194698.aspx </remarks>
+		/// <param name="unit">optional object unit</param>
+		/// <param name="count">optional object count</param>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public Int32 MoveEnd(object unit, object count)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(unit, count);
-			object returnItem = Invoker.MethodReturn(this, "MoveEnd", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return Factory.ExecuteInt32MethodGet(this, "MoveEnd", unit, count);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194698.aspx
 		/// </summary>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194698.aspx </remarks>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public Int32 MoveEnd()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "MoveEnd", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return Factory.ExecuteInt32MethodGet(this, "MoveEnd");
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194698.aspx
 		/// </summary>
-		/// <param name="unit">optional object Unit</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194698.aspx </remarks>
+		/// <param name="unit">optional object unit</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public Int32 MoveEnd(object unit)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(unit);
-			object returnItem = Invoker.MethodReturn(this, "MoveEnd", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return Factory.ExecuteInt32MethodGet(this, "MoveEnd", unit);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192586.aspx
 		/// </summary>
-		/// <param name="cset">object Cset</param>
-		/// <param name="count">optional object Count</param>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff192586.aspx </remarks>
+		/// <param name="cset">object cset</param>
+		/// <param name="count">optional object count</param>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public Int32 MoveWhile(object cset, object count)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(cset, count);
-			object returnItem = Invoker.MethodReturn(this, "MoveWhile", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return Factory.ExecuteInt32MethodGet(this, "MoveWhile", cset, count);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192586.aspx
 		/// </summary>
-		/// <param name="cset">object Cset</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff192586.aspx </remarks>
+		/// <param name="cset">object cset</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public Int32 MoveWhile(object cset)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(cset);
-			object returnItem = Invoker.MethodReturn(this, "MoveWhile", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return Factory.ExecuteInt32MethodGet(this, "MoveWhile", cset);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838537.aspx
 		/// </summary>
-		/// <param name="cset">object Cset</param>
-		/// <param name="count">optional object Count</param>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff838537.aspx </remarks>
+		/// <param name="cset">object cset</param>
+		/// <param name="count">optional object count</param>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public Int32 MoveStartWhile(object cset, object count)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(cset, count);
-			object returnItem = Invoker.MethodReturn(this, "MoveStartWhile", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return Factory.ExecuteInt32MethodGet(this, "MoveStartWhile", cset, count);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838537.aspx
 		/// </summary>
-		/// <param name="cset">object Cset</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff838537.aspx </remarks>
+		/// <param name="cset">object cset</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public Int32 MoveStartWhile(object cset)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(cset);
-			object returnItem = Invoker.MethodReturn(this, "MoveStartWhile", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return Factory.ExecuteInt32MethodGet(this, "MoveStartWhile", cset);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835396.aspx
 		/// </summary>
-		/// <param name="cset">object Cset</param>
-		/// <param name="count">optional object Count</param>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835396.aspx </remarks>
+		/// <param name="cset">object cset</param>
+		/// <param name="count">optional object count</param>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public Int32 MoveEndWhile(object cset, object count)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(cset, count);
-			object returnItem = Invoker.MethodReturn(this, "MoveEndWhile", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return Factory.ExecuteInt32MethodGet(this, "MoveEndWhile", cset, count);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835396.aspx
 		/// </summary>
-		/// <param name="cset">object Cset</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835396.aspx </remarks>
+		/// <param name="cset">object cset</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public Int32 MoveEndWhile(object cset)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(cset);
-			object returnItem = Invoker.MethodReturn(this, "MoveEndWhile", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return Factory.ExecuteInt32MethodGet(this, "MoveEndWhile", cset);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840312.aspx
 		/// </summary>
-		/// <param name="cset">object Cset</param>
-		/// <param name="count">optional object Count</param>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff840312.aspx </remarks>
+		/// <param name="cset">object cset</param>
+		/// <param name="count">optional object count</param>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public Int32 MoveUntil(object cset, object count)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(cset, count);
-			object returnItem = Invoker.MethodReturn(this, "MoveUntil", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return Factory.ExecuteInt32MethodGet(this, "MoveUntil", cset, count);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840312.aspx
 		/// </summary>
-		/// <param name="cset">object Cset</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff840312.aspx </remarks>
+		/// <param name="cset">object cset</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public Int32 MoveUntil(object cset)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(cset);
-			object returnItem = Invoker.MethodReturn(this, "MoveUntil", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return Factory.ExecuteInt32MethodGet(this, "MoveUntil", cset);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192403.aspx
 		/// </summary>
-		/// <param name="cset">object Cset</param>
-		/// <param name="count">optional object Count</param>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff192403.aspx </remarks>
+		/// <param name="cset">object cset</param>
+		/// <param name="count">optional object count</param>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public Int32 MoveStartUntil(object cset, object count)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(cset, count);
-			object returnItem = Invoker.MethodReturn(this, "MoveStartUntil", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return Factory.ExecuteInt32MethodGet(this, "MoveStartUntil", cset, count);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192403.aspx
 		/// </summary>
-		/// <param name="cset">object Cset</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff192403.aspx </remarks>
+		/// <param name="cset">object cset</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public Int32 MoveStartUntil(object cset)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(cset);
-			object returnItem = Invoker.MethodReturn(this, "MoveStartUntil", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return Factory.ExecuteInt32MethodGet(this, "MoveStartUntil", cset);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197156.aspx
 		/// </summary>
-		/// <param name="cset">object Cset</param>
-		/// <param name="count">optional object Count</param>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff197156.aspx </remarks>
+		/// <param name="cset">object cset</param>
+		/// <param name="count">optional object count</param>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public Int32 MoveEndUntil(object cset, object count)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(cset, count);
-			object returnItem = Invoker.MethodReturn(this, "MoveEndUntil", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return Factory.ExecuteInt32MethodGet(this, "MoveEndUntil", cset, count);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197156.aspx
 		/// </summary>
-		/// <param name="cset">object Cset</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff197156.aspx </remarks>
+		/// <param name="cset">object cset</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public Int32 MoveEndUntil(object cset)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(cset);
-			object returnItem = Invoker.MethodReturn(this, "MoveEndUntil", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return Factory.ExecuteInt32MethodGet(this, "MoveEndUntil", cset);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195686.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff195686.aspx </remarks>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void Cut()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "Cut", paramsArray);
+			 Factory.ExecuteMethod(this, "Cut");
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837718.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff837718.aspx </remarks>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void Copy()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "Copy", paramsArray);
+			 Factory.ExecuteMethod(this, "Copy");
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845105.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff845105.aspx </remarks>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void Paste()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "Paste", paramsArray);
+			 Factory.ExecuteMethod(this, "Paste");
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835132.aspx
 		/// </summary>
-		/// <param name="type">optional object Type</param>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835132.aspx </remarks>
+		/// <param name="type">optional object type</param>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void InsertBreak(object type)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(type);
-			Invoker.Method(this, "InsertBreak", paramsArray);
+			 Factory.ExecuteMethod(this, "InsertBreak", type);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835132.aspx
 		/// </summary>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835132.aspx </remarks>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void InsertBreak()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "InsertBreak", paramsArray);
+			 Factory.ExecuteMethod(this, "InsertBreak");
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835231.aspx
 		/// </summary>
-		/// <param name="fileName">string FileName</param>
-		/// <param name="range">optional object Range</param>
-		/// <param name="confirmConversions">optional object ConfirmConversions</param>
-		/// <param name="link">optional object Link</param>
-		/// <param name="attachment">optional object Attachment</param>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835231.aspx </remarks>
+		/// <param name="fileName">string fileName</param>
+		/// <param name="range">optional object range</param>
+		/// <param name="confirmConversions">optional object confirmConversions</param>
+		/// <param name="link">optional object link</param>
+		/// <param name="attachment">optional object attachment</param>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void InsertFile(string fileName, object range, object confirmConversions, object link, object attachment)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(fileName, range, confirmConversions, link, attachment);
-			Invoker.Method(this, "InsertFile", paramsArray);
+			 Factory.ExecuteMethod(this, "InsertFile", new object[]{ fileName, range, confirmConversions, link, attachment });
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835231.aspx
 		/// </summary>
-		/// <param name="fileName">string FileName</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835231.aspx </remarks>
+		/// <param name="fileName">string fileName</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void InsertFile(string fileName)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(fileName);
-			Invoker.Method(this, "InsertFile", paramsArray);
+			 Factory.ExecuteMethod(this, "InsertFile", fileName);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835231.aspx
 		/// </summary>
-		/// <param name="fileName">string FileName</param>
-		/// <param name="range">optional object Range</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835231.aspx </remarks>
+		/// <param name="fileName">string fileName</param>
+		/// <param name="range">optional object range</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void InsertFile(string fileName, object range)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(fileName, range);
-			Invoker.Method(this, "InsertFile", paramsArray);
+			 Factory.ExecuteMethod(this, "InsertFile", fileName, range);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835231.aspx
 		/// </summary>
-		/// <param name="fileName">string FileName</param>
-		/// <param name="range">optional object Range</param>
-		/// <param name="confirmConversions">optional object ConfirmConversions</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835231.aspx </remarks>
+		/// <param name="fileName">string fileName</param>
+		/// <param name="range">optional object range</param>
+		/// <param name="confirmConversions">optional object confirmConversions</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void InsertFile(string fileName, object range, object confirmConversions)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(fileName, range, confirmConversions);
-			Invoker.Method(this, "InsertFile", paramsArray);
+			 Factory.ExecuteMethod(this, "InsertFile", fileName, range, confirmConversions);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835231.aspx
 		/// </summary>
-		/// <param name="fileName">string FileName</param>
-		/// <param name="range">optional object Range</param>
-		/// <param name="confirmConversions">optional object ConfirmConversions</param>
-		/// <param name="link">optional object Link</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835231.aspx </remarks>
+		/// <param name="fileName">string fileName</param>
+		/// <param name="range">optional object range</param>
+		/// <param name="confirmConversions">optional object confirmConversions</param>
+		/// <param name="link">optional object link</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void InsertFile(string fileName, object range, object confirmConversions, object link)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(fileName, range, confirmConversions, link);
-			Invoker.Method(this, "InsertFile", paramsArray);
+			 Factory.ExecuteMethod(this, "InsertFile", fileName, range, confirmConversions, link);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197125.aspx
 		/// </summary>
-		/// <param name="range">NetOffice.WordApi.Range Range</param>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff197125.aspx </remarks>
+		/// <param name="range">NetOffice.WordApi.Range range</param>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public bool InStory(NetOffice.WordApi.Range range)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(range);
-			object returnItem = Invoker.MethodReturn(this, "InStory", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return Factory.ExecuteBoolMethodGet(this, "InStory", range);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822960.aspx
 		/// </summary>
-		/// <param name="range">NetOffice.WordApi.Range Range</param>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff822960.aspx </remarks>
+		/// <param name="range">NetOffice.WordApi.Range range</param>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public bool InRange(NetOffice.WordApi.Range range)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(range);
-			object returnItem = Invoker.MethodReturn(this, "InRange", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return Factory.ExecuteBoolMethodGet(this, "InRange", range);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845114.aspx
 		/// </summary>
-		/// <param name="unit">optional object Unit</param>
-		/// <param name="count">optional object Count</param>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff845114.aspx </remarks>
+		/// <param name="unit">optional object unit</param>
+		/// <param name="count">optional object count</param>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public Int32 Delete(object unit, object count)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(unit, count);
-			object returnItem = Invoker.MethodReturn(this, "Delete", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return Factory.ExecuteInt32MethodGet(this, "Delete", unit, count);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845114.aspx
 		/// </summary>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff845114.aspx </remarks>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public Int32 Delete()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "Delete", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return Factory.ExecuteInt32MethodGet(this, "Delete");
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845114.aspx
 		/// </summary>
-		/// <param name="unit">optional object Unit</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff845114.aspx </remarks>
+		/// <param name="unit">optional object unit</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public Int32 Delete(object unit)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(unit);
-			object returnItem = Invoker.MethodReturn(this, "Delete", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return Factory.ExecuteInt32MethodGet(this, "Delete", unit);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837449.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff837449.aspx </remarks>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void WholeStory()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "WholeStory", paramsArray);
+			 Factory.ExecuteMethod(this, "WholeStory");
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838477.aspx
 		/// </summary>
-		/// <param name="unit">optional object Unit</param>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff838477.aspx </remarks>
+		/// <param name="unit">optional object unit</param>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public Int32 Expand(object unit)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(unit);
-			object returnItem = Invoker.MethodReturn(this, "Expand", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return Factory.ExecuteInt32MethodGet(this, "Expand", unit);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838477.aspx
 		/// </summary>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff838477.aspx </remarks>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public Int32 Expand()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "Expand", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return Factory.ExecuteInt32MethodGet(this, "Expand");
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196197.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff196197.aspx </remarks>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void InsertParagraph()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "InsertParagraph", paramsArray);
+			 Factory.ExecuteMethod(this, "InsertParagraph");
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822546.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff822546.aspx </remarks>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void InsertParagraphAfter()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "InsertParagraphAfter", paramsArray);
+			 Factory.ExecuteMethod(this, "InsertParagraphAfter");
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="separator">optional object Separator</param>
-		/// <param name="numRows">optional object NumRows</param>
-		/// <param name="numColumns">optional object NumColumns</param>
-		/// <param name="initialColumnWidth">optional object InitialColumnWidth</param>
-		/// <param name="format">optional object Format</param>
-		/// <param name="applyBorders">optional object ApplyBorders</param>
-		/// <param name="applyShading">optional object ApplyShading</param>
-		/// <param name="applyFont">optional object ApplyFont</param>
-		/// <param name="applyColor">optional object ApplyColor</param>
-		/// <param name="applyHeadingRows">optional object ApplyHeadingRows</param>
-		/// <param name="applyLastRow">optional object ApplyLastRow</param>
-		/// <param name="applyFirstColumn">optional object ApplyFirstColumn</param>
-		/// <param name="applyLastColumn">optional object ApplyLastColumn</param>
-		/// <param name="autoFit">optional object AutoFit</param>
+		/// <param name="separator">optional object separator</param>
+		/// <param name="numRows">optional object numRows</param>
+		/// <param name="numColumns">optional object numColumns</param>
+		/// <param name="initialColumnWidth">optional object initialColumnWidth</param>
+		/// <param name="format">optional object format</param>
+		/// <param name="applyBorders">optional object applyBorders</param>
+		/// <param name="applyShading">optional object applyShading</param>
+		/// <param name="applyFont">optional object applyFont</param>
+		/// <param name="applyColor">optional object applyColor</param>
+		/// <param name="applyHeadingRows">optional object applyHeadingRows</param>
+		/// <param name="applyLastRow">optional object applyLastRow</param>
+		/// <param name="applyFirstColumn">optional object applyFirstColumn</param>
+		/// <param name="applyLastColumn">optional object applyLastColumn</param>
+		/// <param name="autoFit">optional object autoFit</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.Table ConvertToTableOld(object separator, object numRows, object numColumns, object initialColumnWidth, object format, object applyBorders, object applyShading, object applyFont, object applyColor, object applyHeadingRows, object applyLastRow, object applyFirstColumn, object applyLastColumn, object autoFit)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(separator, numRows, numColumns, initialColumnWidth, format, applyBorders, applyShading, applyFont, applyColor, applyHeadingRows, applyLastRow, applyFirstColumn, applyLastColumn, autoFit);
-			object returnItem = Invoker.MethodReturn(this, "ConvertToTableOld", paramsArray);
-			NetOffice.WordApi.Table newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Table.LateBindingApiWrapperType) as NetOffice.WordApi.Table;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Table>(this, "ConvertToTableOld", NetOffice.WordApi.Table.LateBindingApiWrapperType, new object[]{ separator, numRows, numColumns, initialColumnWidth, format, applyBorders, applyShading, applyFont, applyColor, applyHeadingRows, applyLastRow, applyFirstColumn, applyLastColumn, autoFit });
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.Table ConvertToTableOld()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "ConvertToTableOld", paramsArray);
-			NetOffice.WordApi.Table newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Table.LateBindingApiWrapperType) as NetOffice.WordApi.Table;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Table>(this, "ConvertToTableOld", NetOffice.WordApi.Table.LateBindingApiWrapperType);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="separator">optional object Separator</param>
+		/// <param name="separator">optional object separator</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.Table ConvertToTableOld(object separator)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(separator);
-			object returnItem = Invoker.MethodReturn(this, "ConvertToTableOld", paramsArray);
-			NetOffice.WordApi.Table newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Table.LateBindingApiWrapperType) as NetOffice.WordApi.Table;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Table>(this, "ConvertToTableOld", NetOffice.WordApi.Table.LateBindingApiWrapperType, separator);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="separator">optional object Separator</param>
-		/// <param name="numRows">optional object NumRows</param>
+		/// <param name="separator">optional object separator</param>
+		/// <param name="numRows">optional object numRows</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.Table ConvertToTableOld(object separator, object numRows)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(separator, numRows);
-			object returnItem = Invoker.MethodReturn(this, "ConvertToTableOld", paramsArray);
-			NetOffice.WordApi.Table newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Table.LateBindingApiWrapperType) as NetOffice.WordApi.Table;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Table>(this, "ConvertToTableOld", NetOffice.WordApi.Table.LateBindingApiWrapperType, separator, numRows);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="separator">optional object Separator</param>
-		/// <param name="numRows">optional object NumRows</param>
-		/// <param name="numColumns">optional object NumColumns</param>
+		/// <param name="separator">optional object separator</param>
+		/// <param name="numRows">optional object numRows</param>
+		/// <param name="numColumns">optional object numColumns</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.Table ConvertToTableOld(object separator, object numRows, object numColumns)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(separator, numRows, numColumns);
-			object returnItem = Invoker.MethodReturn(this, "ConvertToTableOld", paramsArray);
-			NetOffice.WordApi.Table newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Table.LateBindingApiWrapperType) as NetOffice.WordApi.Table;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Table>(this, "ConvertToTableOld", NetOffice.WordApi.Table.LateBindingApiWrapperType, separator, numRows, numColumns);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="separator">optional object Separator</param>
-		/// <param name="numRows">optional object NumRows</param>
-		/// <param name="numColumns">optional object NumColumns</param>
-		/// <param name="initialColumnWidth">optional object InitialColumnWidth</param>
+		/// <param name="separator">optional object separator</param>
+		/// <param name="numRows">optional object numRows</param>
+		/// <param name="numColumns">optional object numColumns</param>
+		/// <param name="initialColumnWidth">optional object initialColumnWidth</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.Table ConvertToTableOld(object separator, object numRows, object numColumns, object initialColumnWidth)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(separator, numRows, numColumns, initialColumnWidth);
-			object returnItem = Invoker.MethodReturn(this, "ConvertToTableOld", paramsArray);
-			NetOffice.WordApi.Table newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Table.LateBindingApiWrapperType) as NetOffice.WordApi.Table;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Table>(this, "ConvertToTableOld", NetOffice.WordApi.Table.LateBindingApiWrapperType, separator, numRows, numColumns, initialColumnWidth);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="separator">optional object Separator</param>
-		/// <param name="numRows">optional object NumRows</param>
-		/// <param name="numColumns">optional object NumColumns</param>
-		/// <param name="initialColumnWidth">optional object InitialColumnWidth</param>
-		/// <param name="format">optional object Format</param>
+		/// <param name="separator">optional object separator</param>
+		/// <param name="numRows">optional object numRows</param>
+		/// <param name="numColumns">optional object numColumns</param>
+		/// <param name="initialColumnWidth">optional object initialColumnWidth</param>
+		/// <param name="format">optional object format</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.Table ConvertToTableOld(object separator, object numRows, object numColumns, object initialColumnWidth, object format)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(separator, numRows, numColumns, initialColumnWidth, format);
-			object returnItem = Invoker.MethodReturn(this, "ConvertToTableOld", paramsArray);
-			NetOffice.WordApi.Table newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Table.LateBindingApiWrapperType) as NetOffice.WordApi.Table;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Table>(this, "ConvertToTableOld", NetOffice.WordApi.Table.LateBindingApiWrapperType, new object[]{ separator, numRows, numColumns, initialColumnWidth, format });
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="separator">optional object Separator</param>
-		/// <param name="numRows">optional object NumRows</param>
-		/// <param name="numColumns">optional object NumColumns</param>
-		/// <param name="initialColumnWidth">optional object InitialColumnWidth</param>
-		/// <param name="format">optional object Format</param>
-		/// <param name="applyBorders">optional object ApplyBorders</param>
+		/// <param name="separator">optional object separator</param>
+		/// <param name="numRows">optional object numRows</param>
+		/// <param name="numColumns">optional object numColumns</param>
+		/// <param name="initialColumnWidth">optional object initialColumnWidth</param>
+		/// <param name="format">optional object format</param>
+		/// <param name="applyBorders">optional object applyBorders</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.Table ConvertToTableOld(object separator, object numRows, object numColumns, object initialColumnWidth, object format, object applyBorders)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(separator, numRows, numColumns, initialColumnWidth, format, applyBorders);
-			object returnItem = Invoker.MethodReturn(this, "ConvertToTableOld", paramsArray);
-			NetOffice.WordApi.Table newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Table.LateBindingApiWrapperType) as NetOffice.WordApi.Table;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Table>(this, "ConvertToTableOld", NetOffice.WordApi.Table.LateBindingApiWrapperType, new object[]{ separator, numRows, numColumns, initialColumnWidth, format, applyBorders });
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="separator">optional object Separator</param>
-		/// <param name="numRows">optional object NumRows</param>
-		/// <param name="numColumns">optional object NumColumns</param>
-		/// <param name="initialColumnWidth">optional object InitialColumnWidth</param>
-		/// <param name="format">optional object Format</param>
-		/// <param name="applyBorders">optional object ApplyBorders</param>
-		/// <param name="applyShading">optional object ApplyShading</param>
+		/// <param name="separator">optional object separator</param>
+		/// <param name="numRows">optional object numRows</param>
+		/// <param name="numColumns">optional object numColumns</param>
+		/// <param name="initialColumnWidth">optional object initialColumnWidth</param>
+		/// <param name="format">optional object format</param>
+		/// <param name="applyBorders">optional object applyBorders</param>
+		/// <param name="applyShading">optional object applyShading</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.Table ConvertToTableOld(object separator, object numRows, object numColumns, object initialColumnWidth, object format, object applyBorders, object applyShading)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(separator, numRows, numColumns, initialColumnWidth, format, applyBorders, applyShading);
-			object returnItem = Invoker.MethodReturn(this, "ConvertToTableOld", paramsArray);
-			NetOffice.WordApi.Table newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Table.LateBindingApiWrapperType) as NetOffice.WordApi.Table;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Table>(this, "ConvertToTableOld", NetOffice.WordApi.Table.LateBindingApiWrapperType, new object[]{ separator, numRows, numColumns, initialColumnWidth, format, applyBorders, applyShading });
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="separator">optional object Separator</param>
-		/// <param name="numRows">optional object NumRows</param>
-		/// <param name="numColumns">optional object NumColumns</param>
-		/// <param name="initialColumnWidth">optional object InitialColumnWidth</param>
-		/// <param name="format">optional object Format</param>
-		/// <param name="applyBorders">optional object ApplyBorders</param>
-		/// <param name="applyShading">optional object ApplyShading</param>
-		/// <param name="applyFont">optional object ApplyFont</param>
+		/// <param name="separator">optional object separator</param>
+		/// <param name="numRows">optional object numRows</param>
+		/// <param name="numColumns">optional object numColumns</param>
+		/// <param name="initialColumnWidth">optional object initialColumnWidth</param>
+		/// <param name="format">optional object format</param>
+		/// <param name="applyBorders">optional object applyBorders</param>
+		/// <param name="applyShading">optional object applyShading</param>
+		/// <param name="applyFont">optional object applyFont</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.Table ConvertToTableOld(object separator, object numRows, object numColumns, object initialColumnWidth, object format, object applyBorders, object applyShading, object applyFont)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(separator, numRows, numColumns, initialColumnWidth, format, applyBorders, applyShading, applyFont);
-			object returnItem = Invoker.MethodReturn(this, "ConvertToTableOld", paramsArray);
-			NetOffice.WordApi.Table newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Table.LateBindingApiWrapperType) as NetOffice.WordApi.Table;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Table>(this, "ConvertToTableOld", NetOffice.WordApi.Table.LateBindingApiWrapperType, new object[]{ separator, numRows, numColumns, initialColumnWidth, format, applyBorders, applyShading, applyFont });
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="separator">optional object Separator</param>
-		/// <param name="numRows">optional object NumRows</param>
-		/// <param name="numColumns">optional object NumColumns</param>
-		/// <param name="initialColumnWidth">optional object InitialColumnWidth</param>
-		/// <param name="format">optional object Format</param>
-		/// <param name="applyBorders">optional object ApplyBorders</param>
-		/// <param name="applyShading">optional object ApplyShading</param>
-		/// <param name="applyFont">optional object ApplyFont</param>
-		/// <param name="applyColor">optional object ApplyColor</param>
+		/// <param name="separator">optional object separator</param>
+		/// <param name="numRows">optional object numRows</param>
+		/// <param name="numColumns">optional object numColumns</param>
+		/// <param name="initialColumnWidth">optional object initialColumnWidth</param>
+		/// <param name="format">optional object format</param>
+		/// <param name="applyBorders">optional object applyBorders</param>
+		/// <param name="applyShading">optional object applyShading</param>
+		/// <param name="applyFont">optional object applyFont</param>
+		/// <param name="applyColor">optional object applyColor</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.Table ConvertToTableOld(object separator, object numRows, object numColumns, object initialColumnWidth, object format, object applyBorders, object applyShading, object applyFont, object applyColor)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(separator, numRows, numColumns, initialColumnWidth, format, applyBorders, applyShading, applyFont, applyColor);
-			object returnItem = Invoker.MethodReturn(this, "ConvertToTableOld", paramsArray);
-			NetOffice.WordApi.Table newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Table.LateBindingApiWrapperType) as NetOffice.WordApi.Table;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Table>(this, "ConvertToTableOld", NetOffice.WordApi.Table.LateBindingApiWrapperType, new object[]{ separator, numRows, numColumns, initialColumnWidth, format, applyBorders, applyShading, applyFont, applyColor });
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="separator">optional object Separator</param>
-		/// <param name="numRows">optional object NumRows</param>
-		/// <param name="numColumns">optional object NumColumns</param>
-		/// <param name="initialColumnWidth">optional object InitialColumnWidth</param>
-		/// <param name="format">optional object Format</param>
-		/// <param name="applyBorders">optional object ApplyBorders</param>
-		/// <param name="applyShading">optional object ApplyShading</param>
-		/// <param name="applyFont">optional object ApplyFont</param>
-		/// <param name="applyColor">optional object ApplyColor</param>
-		/// <param name="applyHeadingRows">optional object ApplyHeadingRows</param>
+		/// <param name="separator">optional object separator</param>
+		/// <param name="numRows">optional object numRows</param>
+		/// <param name="numColumns">optional object numColumns</param>
+		/// <param name="initialColumnWidth">optional object initialColumnWidth</param>
+		/// <param name="format">optional object format</param>
+		/// <param name="applyBorders">optional object applyBorders</param>
+		/// <param name="applyShading">optional object applyShading</param>
+		/// <param name="applyFont">optional object applyFont</param>
+		/// <param name="applyColor">optional object applyColor</param>
+		/// <param name="applyHeadingRows">optional object applyHeadingRows</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.Table ConvertToTableOld(object separator, object numRows, object numColumns, object initialColumnWidth, object format, object applyBorders, object applyShading, object applyFont, object applyColor, object applyHeadingRows)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(separator, numRows, numColumns, initialColumnWidth, format, applyBorders, applyShading, applyFont, applyColor, applyHeadingRows);
-			object returnItem = Invoker.MethodReturn(this, "ConvertToTableOld", paramsArray);
-			NetOffice.WordApi.Table newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Table.LateBindingApiWrapperType) as NetOffice.WordApi.Table;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Table>(this, "ConvertToTableOld", NetOffice.WordApi.Table.LateBindingApiWrapperType, new object[]{ separator, numRows, numColumns, initialColumnWidth, format, applyBorders, applyShading, applyFont, applyColor, applyHeadingRows });
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="separator">optional object Separator</param>
-		/// <param name="numRows">optional object NumRows</param>
-		/// <param name="numColumns">optional object NumColumns</param>
-		/// <param name="initialColumnWidth">optional object InitialColumnWidth</param>
-		/// <param name="format">optional object Format</param>
-		/// <param name="applyBorders">optional object ApplyBorders</param>
-		/// <param name="applyShading">optional object ApplyShading</param>
-		/// <param name="applyFont">optional object ApplyFont</param>
-		/// <param name="applyColor">optional object ApplyColor</param>
-		/// <param name="applyHeadingRows">optional object ApplyHeadingRows</param>
-		/// <param name="applyLastRow">optional object ApplyLastRow</param>
+		/// <param name="separator">optional object separator</param>
+		/// <param name="numRows">optional object numRows</param>
+		/// <param name="numColumns">optional object numColumns</param>
+		/// <param name="initialColumnWidth">optional object initialColumnWidth</param>
+		/// <param name="format">optional object format</param>
+		/// <param name="applyBorders">optional object applyBorders</param>
+		/// <param name="applyShading">optional object applyShading</param>
+		/// <param name="applyFont">optional object applyFont</param>
+		/// <param name="applyColor">optional object applyColor</param>
+		/// <param name="applyHeadingRows">optional object applyHeadingRows</param>
+		/// <param name="applyLastRow">optional object applyLastRow</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.Table ConvertToTableOld(object separator, object numRows, object numColumns, object initialColumnWidth, object format, object applyBorders, object applyShading, object applyFont, object applyColor, object applyHeadingRows, object applyLastRow)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(separator, numRows, numColumns, initialColumnWidth, format, applyBorders, applyShading, applyFont, applyColor, applyHeadingRows, applyLastRow);
-			object returnItem = Invoker.MethodReturn(this, "ConvertToTableOld", paramsArray);
-			NetOffice.WordApi.Table newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Table.LateBindingApiWrapperType) as NetOffice.WordApi.Table;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Table>(this, "ConvertToTableOld", NetOffice.WordApi.Table.LateBindingApiWrapperType, new object[]{ separator, numRows, numColumns, initialColumnWidth, format, applyBorders, applyShading, applyFont, applyColor, applyHeadingRows, applyLastRow });
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="separator">optional object Separator</param>
-		/// <param name="numRows">optional object NumRows</param>
-		/// <param name="numColumns">optional object NumColumns</param>
-		/// <param name="initialColumnWidth">optional object InitialColumnWidth</param>
-		/// <param name="format">optional object Format</param>
-		/// <param name="applyBorders">optional object ApplyBorders</param>
-		/// <param name="applyShading">optional object ApplyShading</param>
-		/// <param name="applyFont">optional object ApplyFont</param>
-		/// <param name="applyColor">optional object ApplyColor</param>
-		/// <param name="applyHeadingRows">optional object ApplyHeadingRows</param>
-		/// <param name="applyLastRow">optional object ApplyLastRow</param>
-		/// <param name="applyFirstColumn">optional object ApplyFirstColumn</param>
+		/// <param name="separator">optional object separator</param>
+		/// <param name="numRows">optional object numRows</param>
+		/// <param name="numColumns">optional object numColumns</param>
+		/// <param name="initialColumnWidth">optional object initialColumnWidth</param>
+		/// <param name="format">optional object format</param>
+		/// <param name="applyBorders">optional object applyBorders</param>
+		/// <param name="applyShading">optional object applyShading</param>
+		/// <param name="applyFont">optional object applyFont</param>
+		/// <param name="applyColor">optional object applyColor</param>
+		/// <param name="applyHeadingRows">optional object applyHeadingRows</param>
+		/// <param name="applyLastRow">optional object applyLastRow</param>
+		/// <param name="applyFirstColumn">optional object applyFirstColumn</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.Table ConvertToTableOld(object separator, object numRows, object numColumns, object initialColumnWidth, object format, object applyBorders, object applyShading, object applyFont, object applyColor, object applyHeadingRows, object applyLastRow, object applyFirstColumn)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(separator, numRows, numColumns, initialColumnWidth, format, applyBorders, applyShading, applyFont, applyColor, applyHeadingRows, applyLastRow, applyFirstColumn);
-			object returnItem = Invoker.MethodReturn(this, "ConvertToTableOld", paramsArray);
-			NetOffice.WordApi.Table newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Table.LateBindingApiWrapperType) as NetOffice.WordApi.Table;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Table>(this, "ConvertToTableOld", NetOffice.WordApi.Table.LateBindingApiWrapperType, new object[]{ separator, numRows, numColumns, initialColumnWidth, format, applyBorders, applyShading, applyFont, applyColor, applyHeadingRows, applyLastRow, applyFirstColumn });
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="separator">optional object Separator</param>
-		/// <param name="numRows">optional object NumRows</param>
-		/// <param name="numColumns">optional object NumColumns</param>
-		/// <param name="initialColumnWidth">optional object InitialColumnWidth</param>
-		/// <param name="format">optional object Format</param>
-		/// <param name="applyBorders">optional object ApplyBorders</param>
-		/// <param name="applyShading">optional object ApplyShading</param>
-		/// <param name="applyFont">optional object ApplyFont</param>
-		/// <param name="applyColor">optional object ApplyColor</param>
-		/// <param name="applyHeadingRows">optional object ApplyHeadingRows</param>
-		/// <param name="applyLastRow">optional object ApplyLastRow</param>
-		/// <param name="applyFirstColumn">optional object ApplyFirstColumn</param>
-		/// <param name="applyLastColumn">optional object ApplyLastColumn</param>
+		/// <param name="separator">optional object separator</param>
+		/// <param name="numRows">optional object numRows</param>
+		/// <param name="numColumns">optional object numColumns</param>
+		/// <param name="initialColumnWidth">optional object initialColumnWidth</param>
+		/// <param name="format">optional object format</param>
+		/// <param name="applyBorders">optional object applyBorders</param>
+		/// <param name="applyShading">optional object applyShading</param>
+		/// <param name="applyFont">optional object applyFont</param>
+		/// <param name="applyColor">optional object applyColor</param>
+		/// <param name="applyHeadingRows">optional object applyHeadingRows</param>
+		/// <param name="applyLastRow">optional object applyLastRow</param>
+		/// <param name="applyFirstColumn">optional object applyFirstColumn</param>
+		/// <param name="applyLastColumn">optional object applyLastColumn</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.Table ConvertToTableOld(object separator, object numRows, object numColumns, object initialColumnWidth, object format, object applyBorders, object applyShading, object applyFont, object applyColor, object applyHeadingRows, object applyLastRow, object applyFirstColumn, object applyLastColumn)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(separator, numRows, numColumns, initialColumnWidth, format, applyBorders, applyShading, applyFont, applyColor, applyHeadingRows, applyLastRow, applyFirstColumn, applyLastColumn);
-			object returnItem = Invoker.MethodReturn(this, "ConvertToTableOld", paramsArray);
-			NetOffice.WordApi.Table newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Table.LateBindingApiWrapperType) as NetOffice.WordApi.Table;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Table>(this, "ConvertToTableOld", NetOffice.WordApi.Table.LateBindingApiWrapperType, new object[]{ separator, numRows, numColumns, initialColumnWidth, format, applyBorders, applyShading, applyFont, applyColor, applyHeadingRows, applyLastRow, applyFirstColumn, applyLastColumn });
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="dateTimeFormat">optional object DateTimeFormat</param>
-		/// <param name="insertAsField">optional object InsertAsField</param>
-		/// <param name="insertAsFullWidth">optional object InsertAsFullWidth</param>
+		/// <param name="dateTimeFormat">optional object dateTimeFormat</param>
+		/// <param name="insertAsField">optional object insertAsField</param>
+		/// <param name="insertAsFullWidth">optional object insertAsFullWidth</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void InsertDateTimeOld(object dateTimeFormat, object insertAsField, object insertAsFullWidth)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(dateTimeFormat, insertAsField, insertAsFullWidth);
-			Invoker.Method(this, "InsertDateTimeOld", paramsArray);
+			 Factory.ExecuteMethod(this, "InsertDateTimeOld", dateTimeFormat, insertAsField, insertAsFullWidth);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void InsertDateTimeOld()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "InsertDateTimeOld", paramsArray);
+			 Factory.ExecuteMethod(this, "InsertDateTimeOld");
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="dateTimeFormat">optional object DateTimeFormat</param>
+		/// <param name="dateTimeFormat">optional object dateTimeFormat</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void InsertDateTimeOld(object dateTimeFormat)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(dateTimeFormat);
-			Invoker.Method(this, "InsertDateTimeOld", paramsArray);
+			 Factory.ExecuteMethod(this, "InsertDateTimeOld", dateTimeFormat);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="dateTimeFormat">optional object DateTimeFormat</param>
-		/// <param name="insertAsField">optional object InsertAsField</param>
+		/// <param name="dateTimeFormat">optional object dateTimeFormat</param>
+		/// <param name="insertAsField">optional object insertAsField</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void InsertDateTimeOld(object dateTimeFormat, object insertAsField)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(dateTimeFormat, insertAsField);
-			Invoker.Method(this, "InsertDateTimeOld", paramsArray);
+			 Factory.ExecuteMethod(this, "InsertDateTimeOld", dateTimeFormat, insertAsField);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193081.aspx
 		/// </summary>
-		/// <param name="characterNumber">Int32 CharacterNumber</param>
-		/// <param name="font">optional object Font</param>
-		/// <param name="unicode">optional object Unicode</param>
-		/// <param name="bias">optional object Bias</param>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff193081.aspx </remarks>
+		/// <param name="characterNumber">Int32 characterNumber</param>
+		/// <param name="font">optional object font</param>
+		/// <param name="unicode">optional object unicode</param>
+		/// <param name="bias">optional object bias</param>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void InsertSymbol(Int32 characterNumber, object font, object unicode, object bias)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(characterNumber, font, unicode, bias);
-			Invoker.Method(this, "InsertSymbol", paramsArray);
+			 Factory.ExecuteMethod(this, "InsertSymbol", characterNumber, font, unicode, bias);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193081.aspx
 		/// </summary>
-		/// <param name="characterNumber">Int32 CharacterNumber</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff193081.aspx </remarks>
+		/// <param name="characterNumber">Int32 characterNumber</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void InsertSymbol(Int32 characterNumber)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(characterNumber);
-			Invoker.Method(this, "InsertSymbol", paramsArray);
+			 Factory.ExecuteMethod(this, "InsertSymbol", characterNumber);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193081.aspx
 		/// </summary>
-		/// <param name="characterNumber">Int32 CharacterNumber</param>
-		/// <param name="font">optional object Font</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff193081.aspx </remarks>
+		/// <param name="characterNumber">Int32 characterNumber</param>
+		/// <param name="font">optional object font</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void InsertSymbol(Int32 characterNumber, object font)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(characterNumber, font);
-			Invoker.Method(this, "InsertSymbol", paramsArray);
+			 Factory.ExecuteMethod(this, "InsertSymbol", characterNumber, font);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193081.aspx
 		/// </summary>
-		/// <param name="characterNumber">Int32 CharacterNumber</param>
-		/// <param name="font">optional object Font</param>
-		/// <param name="unicode">optional object Unicode</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff193081.aspx </remarks>
+		/// <param name="characterNumber">Int32 characterNumber</param>
+		/// <param name="font">optional object font</param>
+		/// <param name="unicode">optional object unicode</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void InsertSymbol(Int32 characterNumber, object font, object unicode)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(characterNumber, font, unicode);
-			Invoker.Method(this, "InsertSymbol", paramsArray);
+			 Factory.ExecuteMethod(this, "InsertSymbol", characterNumber, font, unicode);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196302.aspx
 		/// </summary>
-		/// <param name="referenceType">object ReferenceType</param>
-		/// <param name="referenceKind">NetOffice.WordApi.Enums.WdReferenceKind ReferenceKind</param>
-		/// <param name="referenceItem">object ReferenceItem</param>
-		/// <param name="insertAsHyperlink">optional object InsertAsHyperlink</param>
-		/// <param name="includePosition">optional object IncludePosition</param>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff196302.aspx </remarks>
+		/// <param name="referenceType">object referenceType</param>
+		/// <param name="referenceKind">NetOffice.WordApi.Enums.WdReferenceKind referenceKind</param>
+		/// <param name="referenceItem">object referenceItem</param>
+		/// <param name="insertAsHyperlink">optional object insertAsHyperlink</param>
+		/// <param name="includePosition">optional object includePosition</param>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void InsertCrossReference(object referenceType, NetOffice.WordApi.Enums.WdReferenceKind referenceKind, object referenceItem, object insertAsHyperlink, object includePosition)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(referenceType, referenceKind, referenceItem, insertAsHyperlink, includePosition);
-			Invoker.Method(this, "InsertCrossReference", paramsArray);
+			 Factory.ExecuteMethod(this, "InsertCrossReference", new object[]{ referenceType, referenceKind, referenceItem, insertAsHyperlink, includePosition });
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196302.aspx
 		/// </summary>
-		/// <param name="referenceType">object ReferenceType</param>
-		/// <param name="referenceKind">NetOffice.WordApi.Enums.WdReferenceKind ReferenceKind</param>
-		/// <param name="referenceItem">object ReferenceItem</param>
-		/// <param name="insertAsHyperlink">optional object InsertAsHyperlink</param>
-		/// <param name="includePosition">optional object IncludePosition</param>
-		/// <param name="separateNumbers">optional object SeparateNumbers</param>
-		/// <param name="separatorString">optional object SeparatorString</param>
-		[SupportByVersionAttribute("Word", 11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff196302.aspx </remarks>
+		/// <param name="referenceType">object referenceType</param>
+		/// <param name="referenceKind">NetOffice.WordApi.Enums.WdReferenceKind referenceKind</param>
+		/// <param name="referenceItem">object referenceItem</param>
+		/// <param name="insertAsHyperlink">optional object insertAsHyperlink</param>
+		/// <param name="includePosition">optional object includePosition</param>
+		/// <param name="separateNumbers">optional object separateNumbers</param>
+		/// <param name="separatorString">optional object separatorString</param>
+		[SupportByVersion("Word", 11,12,14,15,16)]
 		public void InsertCrossReference(object referenceType, NetOffice.WordApi.Enums.WdReferenceKind referenceKind, object referenceItem, object insertAsHyperlink, object includePosition, object separateNumbers, object separatorString)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(referenceType, referenceKind, referenceItem, insertAsHyperlink, includePosition, separateNumbers, separatorString);
-			Invoker.Method(this, "InsertCrossReference", paramsArray);
+			 Factory.ExecuteMethod(this, "InsertCrossReference", new object[]{ referenceType, referenceKind, referenceItem, insertAsHyperlink, includePosition, separateNumbers, separatorString });
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196302.aspx
 		/// </summary>
-		/// <param name="referenceType">object ReferenceType</param>
-		/// <param name="referenceKind">NetOffice.WordApi.Enums.WdReferenceKind ReferenceKind</param>
-		/// <param name="referenceItem">object ReferenceItem</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff196302.aspx </remarks>
+		/// <param name="referenceType">object referenceType</param>
+		/// <param name="referenceKind">NetOffice.WordApi.Enums.WdReferenceKind referenceKind</param>
+		/// <param name="referenceItem">object referenceItem</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void InsertCrossReference(object referenceType, NetOffice.WordApi.Enums.WdReferenceKind referenceKind, object referenceItem)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(referenceType, referenceKind, referenceItem);
-			Invoker.Method(this, "InsertCrossReference", paramsArray);
+			 Factory.ExecuteMethod(this, "InsertCrossReference", referenceType, referenceKind, referenceItem);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196302.aspx
 		/// </summary>
-		/// <param name="referenceType">object ReferenceType</param>
-		/// <param name="referenceKind">NetOffice.WordApi.Enums.WdReferenceKind ReferenceKind</param>
-		/// <param name="referenceItem">object ReferenceItem</param>
-		/// <param name="insertAsHyperlink">optional object InsertAsHyperlink</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff196302.aspx </remarks>
+		/// <param name="referenceType">object referenceType</param>
+		/// <param name="referenceKind">NetOffice.WordApi.Enums.WdReferenceKind referenceKind</param>
+		/// <param name="referenceItem">object referenceItem</param>
+		/// <param name="insertAsHyperlink">optional object insertAsHyperlink</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void InsertCrossReference(object referenceType, NetOffice.WordApi.Enums.WdReferenceKind referenceKind, object referenceItem, object insertAsHyperlink)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(referenceType, referenceKind, referenceItem, insertAsHyperlink);
-			Invoker.Method(this, "InsertCrossReference", paramsArray);
+			 Factory.ExecuteMethod(this, "InsertCrossReference", referenceType, referenceKind, referenceItem, insertAsHyperlink);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196302.aspx
 		/// </summary>
-		/// <param name="referenceType">object ReferenceType</param>
-		/// <param name="referenceKind">NetOffice.WordApi.Enums.WdReferenceKind ReferenceKind</param>
-		/// <param name="referenceItem">object ReferenceItem</param>
-		/// <param name="insertAsHyperlink">optional object InsertAsHyperlink</param>
-		/// <param name="includePosition">optional object IncludePosition</param>
-		/// <param name="separateNumbers">optional object SeparateNumbers</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff196302.aspx </remarks>
+		/// <param name="referenceType">object referenceType</param>
+		/// <param name="referenceKind">NetOffice.WordApi.Enums.WdReferenceKind referenceKind</param>
+		/// <param name="referenceItem">object referenceItem</param>
+		/// <param name="insertAsHyperlink">optional object insertAsHyperlink</param>
+		/// <param name="includePosition">optional object includePosition</param>
+		/// <param name="separateNumbers">optional object separateNumbers</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 11,12,14,15,16)]
 		public void InsertCrossReference(object referenceType, NetOffice.WordApi.Enums.WdReferenceKind referenceKind, object referenceItem, object insertAsHyperlink, object includePosition, object separateNumbers)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(referenceType, referenceKind, referenceItem, insertAsHyperlink, includePosition, separateNumbers);
-			Invoker.Method(this, "InsertCrossReference", paramsArray);
+			 Factory.ExecuteMethod(this, "InsertCrossReference", new object[]{ referenceType, referenceKind, referenceItem, insertAsHyperlink, includePosition, separateNumbers });
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff841026.aspx
 		/// </summary>
-		/// <param name="label">object Label</param>
-		/// <param name="title">optional object Title</param>
-		/// <param name="titleAutoText">optional object TitleAutoText</param>
-		/// <param name="position">optional object Position</param>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff841026.aspx </remarks>
+		/// <param name="label">object label</param>
+		/// <param name="title">optional object title</param>
+		/// <param name="titleAutoText">optional object titleAutoText</param>
+		/// <param name="position">optional object position</param>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void InsertCaption(object label, object title, object titleAutoText, object position)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(label, title, titleAutoText, position);
-			Invoker.Method(this, "InsertCaption", paramsArray);
+			 Factory.ExecuteMethod(this, "InsertCaption", label, title, titleAutoText, position);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff841026.aspx
 		/// </summary>
-		/// <param name="label">object Label</param>
-		/// <param name="title">optional object Title</param>
-		/// <param name="titleAutoText">optional object TitleAutoText</param>
-		/// <param name="position">optional object Position</param>
-		/// <param name="excludeLabel">optional object ExcludeLabel</param>
-		[SupportByVersionAttribute("Word", 11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff841026.aspx </remarks>
+		/// <param name="label">object label</param>
+		/// <param name="title">optional object title</param>
+		/// <param name="titleAutoText">optional object titleAutoText</param>
+		/// <param name="position">optional object position</param>
+		/// <param name="excludeLabel">optional object excludeLabel</param>
+		[SupportByVersion("Word", 11,12,14,15,16)]
 		public void InsertCaption(object label, object title, object titleAutoText, object position, object excludeLabel)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(label, title, titleAutoText, position, excludeLabel);
-			Invoker.Method(this, "InsertCaption", paramsArray);
+			 Factory.ExecuteMethod(this, "InsertCaption", new object[]{ label, title, titleAutoText, position, excludeLabel });
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff841026.aspx
 		/// </summary>
-		/// <param name="label">object Label</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff841026.aspx </remarks>
+		/// <param name="label">object label</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void InsertCaption(object label)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(label);
-			Invoker.Method(this, "InsertCaption", paramsArray);
+			 Factory.ExecuteMethod(this, "InsertCaption", label);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff841026.aspx
 		/// </summary>
-		/// <param name="label">object Label</param>
-		/// <param name="title">optional object Title</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff841026.aspx </remarks>
+		/// <param name="label">object label</param>
+		/// <param name="title">optional object title</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void InsertCaption(object label, object title)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(label, title);
-			Invoker.Method(this, "InsertCaption", paramsArray);
+			 Factory.ExecuteMethod(this, "InsertCaption", label, title);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff841026.aspx
 		/// </summary>
-		/// <param name="label">object Label</param>
-		/// <param name="title">optional object Title</param>
-		/// <param name="titleAutoText">optional object TitleAutoText</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff841026.aspx </remarks>
+		/// <param name="label">object label</param>
+		/// <param name="title">optional object title</param>
+		/// <param name="titleAutoText">optional object titleAutoText</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void InsertCaption(object label, object title, object titleAutoText)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(label, title, titleAutoText);
-			Invoker.Method(this, "InsertCaption", paramsArray);
+			 Factory.ExecuteMethod(this, "InsertCaption", label, title, titleAutoText);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836633.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff836633.aspx </remarks>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void CopyAsPicture()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "CopyAsPicture", paramsArray);
+			 Factory.ExecuteMethod(this, "CopyAsPicture");
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="excludeHeader">optional object ExcludeHeader</param>
-		/// <param name="fieldNumber">optional object FieldNumber</param>
-		/// <param name="sortFieldType">optional object SortFieldType</param>
-		/// <param name="sortOrder">optional object SortOrder</param>
-		/// <param name="fieldNumber2">optional object FieldNumber2</param>
-		/// <param name="sortFieldType2">optional object SortFieldType2</param>
-		/// <param name="sortOrder2">optional object SortOrder2</param>
-		/// <param name="fieldNumber3">optional object FieldNumber3</param>
-		/// <param name="sortFieldType3">optional object SortFieldType3</param>
-		/// <param name="sortOrder3">optional object SortOrder3</param>
-		/// <param name="sortColumn">optional object SortColumn</param>
-		/// <param name="separator">optional object Separator</param>
-		/// <param name="caseSensitive">optional object CaseSensitive</param>
-		/// <param name="languageID">optional object LanguageID</param>
+		/// <param name="excludeHeader">optional object excludeHeader</param>
+		/// <param name="fieldNumber">optional object fieldNumber</param>
+		/// <param name="sortFieldType">optional object sortFieldType</param>
+		/// <param name="sortOrder">optional object sortOrder</param>
+		/// <param name="fieldNumber2">optional object fieldNumber2</param>
+		/// <param name="sortFieldType2">optional object sortFieldType2</param>
+		/// <param name="sortOrder2">optional object sortOrder2</param>
+		/// <param name="fieldNumber3">optional object fieldNumber3</param>
+		/// <param name="sortFieldType3">optional object sortFieldType3</param>
+		/// <param name="sortOrder3">optional object sortOrder3</param>
+		/// <param name="sortColumn">optional object sortColumn</param>
+		/// <param name="separator">optional object separator</param>
+		/// <param name="caseSensitive">optional object caseSensitive</param>
+		/// <param name="languageID">optional object languageID</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void SortOld(object excludeHeader, object fieldNumber, object sortFieldType, object sortOrder, object fieldNumber2, object sortFieldType2, object sortOrder2, object fieldNumber3, object sortFieldType3, object sortOrder3, object sortColumn, object separator, object caseSensitive, object languageID)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(excludeHeader, fieldNumber, sortFieldType, sortOrder, fieldNumber2, sortFieldType2, sortOrder2, fieldNumber3, sortFieldType3, sortOrder3, sortColumn, separator, caseSensitive, languageID);
-			Invoker.Method(this, "SortOld", paramsArray);
+			 Factory.ExecuteMethod(this, "SortOld", new object[]{ excludeHeader, fieldNumber, sortFieldType, sortOrder, fieldNumber2, sortFieldType2, sortOrder2, fieldNumber3, sortFieldType3, sortOrder3, sortColumn, separator, caseSensitive, languageID });
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void SortOld()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "SortOld", paramsArray);
+			 Factory.ExecuteMethod(this, "SortOld");
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="excludeHeader">optional object ExcludeHeader</param>
+		/// <param name="excludeHeader">optional object excludeHeader</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void SortOld(object excludeHeader)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(excludeHeader);
-			Invoker.Method(this, "SortOld", paramsArray);
+			 Factory.ExecuteMethod(this, "SortOld", excludeHeader);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="excludeHeader">optional object ExcludeHeader</param>
-		/// <param name="fieldNumber">optional object FieldNumber</param>
+		/// <param name="excludeHeader">optional object excludeHeader</param>
+		/// <param name="fieldNumber">optional object fieldNumber</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void SortOld(object excludeHeader, object fieldNumber)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(excludeHeader, fieldNumber);
-			Invoker.Method(this, "SortOld", paramsArray);
+			 Factory.ExecuteMethod(this, "SortOld", excludeHeader, fieldNumber);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="excludeHeader">optional object ExcludeHeader</param>
-		/// <param name="fieldNumber">optional object FieldNumber</param>
-		/// <param name="sortFieldType">optional object SortFieldType</param>
+		/// <param name="excludeHeader">optional object excludeHeader</param>
+		/// <param name="fieldNumber">optional object fieldNumber</param>
+		/// <param name="sortFieldType">optional object sortFieldType</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void SortOld(object excludeHeader, object fieldNumber, object sortFieldType)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(excludeHeader, fieldNumber, sortFieldType);
-			Invoker.Method(this, "SortOld", paramsArray);
+			 Factory.ExecuteMethod(this, "SortOld", excludeHeader, fieldNumber, sortFieldType);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="excludeHeader">optional object ExcludeHeader</param>
-		/// <param name="fieldNumber">optional object FieldNumber</param>
-		/// <param name="sortFieldType">optional object SortFieldType</param>
-		/// <param name="sortOrder">optional object SortOrder</param>
+		/// <param name="excludeHeader">optional object excludeHeader</param>
+		/// <param name="fieldNumber">optional object fieldNumber</param>
+		/// <param name="sortFieldType">optional object sortFieldType</param>
+		/// <param name="sortOrder">optional object sortOrder</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void SortOld(object excludeHeader, object fieldNumber, object sortFieldType, object sortOrder)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(excludeHeader, fieldNumber, sortFieldType, sortOrder);
-			Invoker.Method(this, "SortOld", paramsArray);
+			 Factory.ExecuteMethod(this, "SortOld", excludeHeader, fieldNumber, sortFieldType, sortOrder);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="excludeHeader">optional object ExcludeHeader</param>
-		/// <param name="fieldNumber">optional object FieldNumber</param>
-		/// <param name="sortFieldType">optional object SortFieldType</param>
-		/// <param name="sortOrder">optional object SortOrder</param>
-		/// <param name="fieldNumber2">optional object FieldNumber2</param>
+		/// <param name="excludeHeader">optional object excludeHeader</param>
+		/// <param name="fieldNumber">optional object fieldNumber</param>
+		/// <param name="sortFieldType">optional object sortFieldType</param>
+		/// <param name="sortOrder">optional object sortOrder</param>
+		/// <param name="fieldNumber2">optional object fieldNumber2</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void SortOld(object excludeHeader, object fieldNumber, object sortFieldType, object sortOrder, object fieldNumber2)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(excludeHeader, fieldNumber, sortFieldType, sortOrder, fieldNumber2);
-			Invoker.Method(this, "SortOld", paramsArray);
+			 Factory.ExecuteMethod(this, "SortOld", new object[]{ excludeHeader, fieldNumber, sortFieldType, sortOrder, fieldNumber2 });
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="excludeHeader">optional object ExcludeHeader</param>
-		/// <param name="fieldNumber">optional object FieldNumber</param>
-		/// <param name="sortFieldType">optional object SortFieldType</param>
-		/// <param name="sortOrder">optional object SortOrder</param>
-		/// <param name="fieldNumber2">optional object FieldNumber2</param>
-		/// <param name="sortFieldType2">optional object SortFieldType2</param>
+		/// <param name="excludeHeader">optional object excludeHeader</param>
+		/// <param name="fieldNumber">optional object fieldNumber</param>
+		/// <param name="sortFieldType">optional object sortFieldType</param>
+		/// <param name="sortOrder">optional object sortOrder</param>
+		/// <param name="fieldNumber2">optional object fieldNumber2</param>
+		/// <param name="sortFieldType2">optional object sortFieldType2</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void SortOld(object excludeHeader, object fieldNumber, object sortFieldType, object sortOrder, object fieldNumber2, object sortFieldType2)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(excludeHeader, fieldNumber, sortFieldType, sortOrder, fieldNumber2, sortFieldType2);
-			Invoker.Method(this, "SortOld", paramsArray);
+			 Factory.ExecuteMethod(this, "SortOld", new object[]{ excludeHeader, fieldNumber, sortFieldType, sortOrder, fieldNumber2, sortFieldType2 });
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="excludeHeader">optional object ExcludeHeader</param>
-		/// <param name="fieldNumber">optional object FieldNumber</param>
-		/// <param name="sortFieldType">optional object SortFieldType</param>
-		/// <param name="sortOrder">optional object SortOrder</param>
-		/// <param name="fieldNumber2">optional object FieldNumber2</param>
-		/// <param name="sortFieldType2">optional object SortFieldType2</param>
-		/// <param name="sortOrder2">optional object SortOrder2</param>
+		/// <param name="excludeHeader">optional object excludeHeader</param>
+		/// <param name="fieldNumber">optional object fieldNumber</param>
+		/// <param name="sortFieldType">optional object sortFieldType</param>
+		/// <param name="sortOrder">optional object sortOrder</param>
+		/// <param name="fieldNumber2">optional object fieldNumber2</param>
+		/// <param name="sortFieldType2">optional object sortFieldType2</param>
+		/// <param name="sortOrder2">optional object sortOrder2</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void SortOld(object excludeHeader, object fieldNumber, object sortFieldType, object sortOrder, object fieldNumber2, object sortFieldType2, object sortOrder2)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(excludeHeader, fieldNumber, sortFieldType, sortOrder, fieldNumber2, sortFieldType2, sortOrder2);
-			Invoker.Method(this, "SortOld", paramsArray);
+			 Factory.ExecuteMethod(this, "SortOld", new object[]{ excludeHeader, fieldNumber, sortFieldType, sortOrder, fieldNumber2, sortFieldType2, sortOrder2 });
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="excludeHeader">optional object ExcludeHeader</param>
-		/// <param name="fieldNumber">optional object FieldNumber</param>
-		/// <param name="sortFieldType">optional object SortFieldType</param>
-		/// <param name="sortOrder">optional object SortOrder</param>
-		/// <param name="fieldNumber2">optional object FieldNumber2</param>
-		/// <param name="sortFieldType2">optional object SortFieldType2</param>
-		/// <param name="sortOrder2">optional object SortOrder2</param>
-		/// <param name="fieldNumber3">optional object FieldNumber3</param>
+		/// <param name="excludeHeader">optional object excludeHeader</param>
+		/// <param name="fieldNumber">optional object fieldNumber</param>
+		/// <param name="sortFieldType">optional object sortFieldType</param>
+		/// <param name="sortOrder">optional object sortOrder</param>
+		/// <param name="fieldNumber2">optional object fieldNumber2</param>
+		/// <param name="sortFieldType2">optional object sortFieldType2</param>
+		/// <param name="sortOrder2">optional object sortOrder2</param>
+		/// <param name="fieldNumber3">optional object fieldNumber3</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void SortOld(object excludeHeader, object fieldNumber, object sortFieldType, object sortOrder, object fieldNumber2, object sortFieldType2, object sortOrder2, object fieldNumber3)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(excludeHeader, fieldNumber, sortFieldType, sortOrder, fieldNumber2, sortFieldType2, sortOrder2, fieldNumber3);
-			Invoker.Method(this, "SortOld", paramsArray);
+			 Factory.ExecuteMethod(this, "SortOld", new object[]{ excludeHeader, fieldNumber, sortFieldType, sortOrder, fieldNumber2, sortFieldType2, sortOrder2, fieldNumber3 });
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="excludeHeader">optional object ExcludeHeader</param>
-		/// <param name="fieldNumber">optional object FieldNumber</param>
-		/// <param name="sortFieldType">optional object SortFieldType</param>
-		/// <param name="sortOrder">optional object SortOrder</param>
-		/// <param name="fieldNumber2">optional object FieldNumber2</param>
-		/// <param name="sortFieldType2">optional object SortFieldType2</param>
-		/// <param name="sortOrder2">optional object SortOrder2</param>
-		/// <param name="fieldNumber3">optional object FieldNumber3</param>
-		/// <param name="sortFieldType3">optional object SortFieldType3</param>
+		/// <param name="excludeHeader">optional object excludeHeader</param>
+		/// <param name="fieldNumber">optional object fieldNumber</param>
+		/// <param name="sortFieldType">optional object sortFieldType</param>
+		/// <param name="sortOrder">optional object sortOrder</param>
+		/// <param name="fieldNumber2">optional object fieldNumber2</param>
+		/// <param name="sortFieldType2">optional object sortFieldType2</param>
+		/// <param name="sortOrder2">optional object sortOrder2</param>
+		/// <param name="fieldNumber3">optional object fieldNumber3</param>
+		/// <param name="sortFieldType3">optional object sortFieldType3</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void SortOld(object excludeHeader, object fieldNumber, object sortFieldType, object sortOrder, object fieldNumber2, object sortFieldType2, object sortOrder2, object fieldNumber3, object sortFieldType3)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(excludeHeader, fieldNumber, sortFieldType, sortOrder, fieldNumber2, sortFieldType2, sortOrder2, fieldNumber3, sortFieldType3);
-			Invoker.Method(this, "SortOld", paramsArray);
+			 Factory.ExecuteMethod(this, "SortOld", new object[]{ excludeHeader, fieldNumber, sortFieldType, sortOrder, fieldNumber2, sortFieldType2, sortOrder2, fieldNumber3, sortFieldType3 });
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="excludeHeader">optional object ExcludeHeader</param>
-		/// <param name="fieldNumber">optional object FieldNumber</param>
-		/// <param name="sortFieldType">optional object SortFieldType</param>
-		/// <param name="sortOrder">optional object SortOrder</param>
-		/// <param name="fieldNumber2">optional object FieldNumber2</param>
-		/// <param name="sortFieldType2">optional object SortFieldType2</param>
-		/// <param name="sortOrder2">optional object SortOrder2</param>
-		/// <param name="fieldNumber3">optional object FieldNumber3</param>
-		/// <param name="sortFieldType3">optional object SortFieldType3</param>
-		/// <param name="sortOrder3">optional object SortOrder3</param>
+		/// <param name="excludeHeader">optional object excludeHeader</param>
+		/// <param name="fieldNumber">optional object fieldNumber</param>
+		/// <param name="sortFieldType">optional object sortFieldType</param>
+		/// <param name="sortOrder">optional object sortOrder</param>
+		/// <param name="fieldNumber2">optional object fieldNumber2</param>
+		/// <param name="sortFieldType2">optional object sortFieldType2</param>
+		/// <param name="sortOrder2">optional object sortOrder2</param>
+		/// <param name="fieldNumber3">optional object fieldNumber3</param>
+		/// <param name="sortFieldType3">optional object sortFieldType3</param>
+		/// <param name="sortOrder3">optional object sortOrder3</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void SortOld(object excludeHeader, object fieldNumber, object sortFieldType, object sortOrder, object fieldNumber2, object sortFieldType2, object sortOrder2, object fieldNumber3, object sortFieldType3, object sortOrder3)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(excludeHeader, fieldNumber, sortFieldType, sortOrder, fieldNumber2, sortFieldType2, sortOrder2, fieldNumber3, sortFieldType3, sortOrder3);
-			Invoker.Method(this, "SortOld", paramsArray);
+			 Factory.ExecuteMethod(this, "SortOld", new object[]{ excludeHeader, fieldNumber, sortFieldType, sortOrder, fieldNumber2, sortFieldType2, sortOrder2, fieldNumber3, sortFieldType3, sortOrder3 });
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="excludeHeader">optional object ExcludeHeader</param>
-		/// <param name="fieldNumber">optional object FieldNumber</param>
-		/// <param name="sortFieldType">optional object SortFieldType</param>
-		/// <param name="sortOrder">optional object SortOrder</param>
-		/// <param name="fieldNumber2">optional object FieldNumber2</param>
-		/// <param name="sortFieldType2">optional object SortFieldType2</param>
-		/// <param name="sortOrder2">optional object SortOrder2</param>
-		/// <param name="fieldNumber3">optional object FieldNumber3</param>
-		/// <param name="sortFieldType3">optional object SortFieldType3</param>
-		/// <param name="sortOrder3">optional object SortOrder3</param>
-		/// <param name="sortColumn">optional object SortColumn</param>
+		/// <param name="excludeHeader">optional object excludeHeader</param>
+		/// <param name="fieldNumber">optional object fieldNumber</param>
+		/// <param name="sortFieldType">optional object sortFieldType</param>
+		/// <param name="sortOrder">optional object sortOrder</param>
+		/// <param name="fieldNumber2">optional object fieldNumber2</param>
+		/// <param name="sortFieldType2">optional object sortFieldType2</param>
+		/// <param name="sortOrder2">optional object sortOrder2</param>
+		/// <param name="fieldNumber3">optional object fieldNumber3</param>
+		/// <param name="sortFieldType3">optional object sortFieldType3</param>
+		/// <param name="sortOrder3">optional object sortOrder3</param>
+		/// <param name="sortColumn">optional object sortColumn</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void SortOld(object excludeHeader, object fieldNumber, object sortFieldType, object sortOrder, object fieldNumber2, object sortFieldType2, object sortOrder2, object fieldNumber3, object sortFieldType3, object sortOrder3, object sortColumn)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(excludeHeader, fieldNumber, sortFieldType, sortOrder, fieldNumber2, sortFieldType2, sortOrder2, fieldNumber3, sortFieldType3, sortOrder3, sortColumn);
-			Invoker.Method(this, "SortOld", paramsArray);
+			 Factory.ExecuteMethod(this, "SortOld", new object[]{ excludeHeader, fieldNumber, sortFieldType, sortOrder, fieldNumber2, sortFieldType2, sortOrder2, fieldNumber3, sortFieldType3, sortOrder3, sortColumn });
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="excludeHeader">optional object ExcludeHeader</param>
-		/// <param name="fieldNumber">optional object FieldNumber</param>
-		/// <param name="sortFieldType">optional object SortFieldType</param>
-		/// <param name="sortOrder">optional object SortOrder</param>
-		/// <param name="fieldNumber2">optional object FieldNumber2</param>
-		/// <param name="sortFieldType2">optional object SortFieldType2</param>
-		/// <param name="sortOrder2">optional object SortOrder2</param>
-		/// <param name="fieldNumber3">optional object FieldNumber3</param>
-		/// <param name="sortFieldType3">optional object SortFieldType3</param>
-		/// <param name="sortOrder3">optional object SortOrder3</param>
-		/// <param name="sortColumn">optional object SortColumn</param>
-		/// <param name="separator">optional object Separator</param>
+		/// <param name="excludeHeader">optional object excludeHeader</param>
+		/// <param name="fieldNumber">optional object fieldNumber</param>
+		/// <param name="sortFieldType">optional object sortFieldType</param>
+		/// <param name="sortOrder">optional object sortOrder</param>
+		/// <param name="fieldNumber2">optional object fieldNumber2</param>
+		/// <param name="sortFieldType2">optional object sortFieldType2</param>
+		/// <param name="sortOrder2">optional object sortOrder2</param>
+		/// <param name="fieldNumber3">optional object fieldNumber3</param>
+		/// <param name="sortFieldType3">optional object sortFieldType3</param>
+		/// <param name="sortOrder3">optional object sortOrder3</param>
+		/// <param name="sortColumn">optional object sortColumn</param>
+		/// <param name="separator">optional object separator</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void SortOld(object excludeHeader, object fieldNumber, object sortFieldType, object sortOrder, object fieldNumber2, object sortFieldType2, object sortOrder2, object fieldNumber3, object sortFieldType3, object sortOrder3, object sortColumn, object separator)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(excludeHeader, fieldNumber, sortFieldType, sortOrder, fieldNumber2, sortFieldType2, sortOrder2, fieldNumber3, sortFieldType3, sortOrder3, sortColumn, separator);
-			Invoker.Method(this, "SortOld", paramsArray);
+			 Factory.ExecuteMethod(this, "SortOld", new object[]{ excludeHeader, fieldNumber, sortFieldType, sortOrder, fieldNumber2, sortFieldType2, sortOrder2, fieldNumber3, sortFieldType3, sortOrder3, sortColumn, separator });
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="excludeHeader">optional object ExcludeHeader</param>
-		/// <param name="fieldNumber">optional object FieldNumber</param>
-		/// <param name="sortFieldType">optional object SortFieldType</param>
-		/// <param name="sortOrder">optional object SortOrder</param>
-		/// <param name="fieldNumber2">optional object FieldNumber2</param>
-		/// <param name="sortFieldType2">optional object SortFieldType2</param>
-		/// <param name="sortOrder2">optional object SortOrder2</param>
-		/// <param name="fieldNumber3">optional object FieldNumber3</param>
-		/// <param name="sortFieldType3">optional object SortFieldType3</param>
-		/// <param name="sortOrder3">optional object SortOrder3</param>
-		/// <param name="sortColumn">optional object SortColumn</param>
-		/// <param name="separator">optional object Separator</param>
-		/// <param name="caseSensitive">optional object CaseSensitive</param>
+		/// <param name="excludeHeader">optional object excludeHeader</param>
+		/// <param name="fieldNumber">optional object fieldNumber</param>
+		/// <param name="sortFieldType">optional object sortFieldType</param>
+		/// <param name="sortOrder">optional object sortOrder</param>
+		/// <param name="fieldNumber2">optional object fieldNumber2</param>
+		/// <param name="sortFieldType2">optional object sortFieldType2</param>
+		/// <param name="sortOrder2">optional object sortOrder2</param>
+		/// <param name="fieldNumber3">optional object fieldNumber3</param>
+		/// <param name="sortFieldType3">optional object sortFieldType3</param>
+		/// <param name="sortOrder3">optional object sortOrder3</param>
+		/// <param name="sortColumn">optional object sortColumn</param>
+		/// <param name="separator">optional object separator</param>
+		/// <param name="caseSensitive">optional object caseSensitive</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void SortOld(object excludeHeader, object fieldNumber, object sortFieldType, object sortOrder, object fieldNumber2, object sortFieldType2, object sortOrder2, object fieldNumber3, object sortFieldType3, object sortOrder3, object sortColumn, object separator, object caseSensitive)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(excludeHeader, fieldNumber, sortFieldType, sortOrder, fieldNumber2, sortFieldType2, sortOrder2, fieldNumber3, sortFieldType3, sortOrder3, sortColumn, separator, caseSensitive);
-			Invoker.Method(this, "SortOld", paramsArray);
+			 Factory.ExecuteMethod(this, "SortOld", new object[]{ excludeHeader, fieldNumber, sortFieldType, sortOrder, fieldNumber2, sortFieldType2, sortOrder2, fieldNumber3, sortFieldType3, sortOrder3, sortColumn, separator, caseSensitive });
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193013.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff193013.aspx </remarks>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void SortAscending()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "SortAscending", paramsArray);
+			 Factory.ExecuteMethod(this, "SortAscending");
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff844858.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff844858.aspx </remarks>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void SortDescending()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "SortDescending", paramsArray);
+			 Factory.ExecuteMethod(this, "SortDescending");
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838323.aspx
 		/// </summary>
-		/// <param name="range">NetOffice.WordApi.Range Range</param>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff838323.aspx </remarks>
+		/// <param name="range">NetOffice.WordApi.Range range</param>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public bool IsEqual(NetOffice.WordApi.Range range)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(range);
-			object returnItem = Invoker.MethodReturn(this, "IsEqual", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return Factory.ExecuteBoolMethodGet(this, "IsEqual", range);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff821015.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff821015.aspx </remarks>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public Single Calculate()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "Calculate", paramsArray);
-			return NetRuntimeSystem.Convert.ToSingle(returnItem);
+			return Factory.ExecuteSingleMethodGet(this, "Calculate");
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835184.aspx
 		/// </summary>
-		/// <param name="what">optional object What</param>
-		/// <param name="which">optional object Which</param>
-		/// <param name="count">optional object Count</param>
-		/// <param name="name">optional object Name</param>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835184.aspx </remarks>
+		/// <param name="what">optional object what</param>
+		/// <param name="which">optional object which</param>
+		/// <param name="count">optional object count</param>
+		/// <param name="name">optional object name</param>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.Range GoTo(object what, object which, object count, object name)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(what, which, count, name);
-			object returnItem = Invoker.MethodReturn(this, "GoTo", paramsArray);
-			NetOffice.WordApi.Range newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Range.LateBindingApiWrapperType) as NetOffice.WordApi.Range;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Range>(this, "GoTo", NetOffice.WordApi.Range.LateBindingApiWrapperType, what, which, count, name);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835184.aspx
 		/// </summary>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835184.aspx </remarks>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.Range GoTo()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "GoTo", paramsArray);
-			NetOffice.WordApi.Range newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Range.LateBindingApiWrapperType) as NetOffice.WordApi.Range;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Range>(this, "GoTo", NetOffice.WordApi.Range.LateBindingApiWrapperType);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835184.aspx
 		/// </summary>
-		/// <param name="what">optional object What</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835184.aspx </remarks>
+		/// <param name="what">optional object what</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.Range GoTo(object what)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(what);
-			object returnItem = Invoker.MethodReturn(this, "GoTo", paramsArray);
-			NetOffice.WordApi.Range newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Range.LateBindingApiWrapperType) as NetOffice.WordApi.Range;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Range>(this, "GoTo", NetOffice.WordApi.Range.LateBindingApiWrapperType, what);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835184.aspx
 		/// </summary>
-		/// <param name="what">optional object What</param>
-		/// <param name="which">optional object Which</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835184.aspx </remarks>
+		/// <param name="what">optional object what</param>
+		/// <param name="which">optional object which</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.Range GoTo(object what, object which)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(what, which);
-			object returnItem = Invoker.MethodReturn(this, "GoTo", paramsArray);
-			NetOffice.WordApi.Range newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Range.LateBindingApiWrapperType) as NetOffice.WordApi.Range;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Range>(this, "GoTo", NetOffice.WordApi.Range.LateBindingApiWrapperType, what, which);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835184.aspx
 		/// </summary>
-		/// <param name="what">optional object What</param>
-		/// <param name="which">optional object Which</param>
-		/// <param name="count">optional object Count</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835184.aspx </remarks>
+		/// <param name="what">optional object what</param>
+		/// <param name="which">optional object which</param>
+		/// <param name="count">optional object count</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.Range GoTo(object what, object which, object count)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(what, which, count);
-			object returnItem = Invoker.MethodReturn(this, "GoTo", paramsArray);
-			NetOffice.WordApi.Range newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Range.LateBindingApiWrapperType) as NetOffice.WordApi.Range;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Range>(this, "GoTo", NetOffice.WordApi.Range.LateBindingApiWrapperType, what, which, count);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff844826.aspx
 		/// </summary>
-		/// <param name="what">NetOffice.WordApi.Enums.WdGoToItem What</param>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff844826.aspx </remarks>
+		/// <param name="what">NetOffice.WordApi.Enums.WdGoToItem what</param>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.Range GoToNext(NetOffice.WordApi.Enums.WdGoToItem what)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(what);
-			object returnItem = Invoker.MethodReturn(this, "GoToNext", paramsArray);
-			NetOffice.WordApi.Range newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Range.LateBindingApiWrapperType) as NetOffice.WordApi.Range;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Range>(this, "GoToNext", NetOffice.WordApi.Range.LateBindingApiWrapperType, what);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836673.aspx
 		/// </summary>
-		/// <param name="what">NetOffice.WordApi.Enums.WdGoToItem What</param>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff836673.aspx </remarks>
+		/// <param name="what">NetOffice.WordApi.Enums.WdGoToItem what</param>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.Range GoToPrevious(NetOffice.WordApi.Enums.WdGoToItem what)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(what);
-			object returnItem = Invoker.MethodReturn(this, "GoToPrevious", paramsArray);
-			NetOffice.WordApi.Range newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Range.LateBindingApiWrapperType) as NetOffice.WordApi.Range;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Range>(this, "GoToPrevious", NetOffice.WordApi.Range.LateBindingApiWrapperType, what);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff821124.aspx
 		/// </summary>
-		/// <param name="iconIndex">optional object IconIndex</param>
-		/// <param name="link">optional object Link</param>
-		/// <param name="placement">optional object Placement</param>
-		/// <param name="displayAsIcon">optional object DisplayAsIcon</param>
-		/// <param name="dataType">optional object DataType</param>
-		/// <param name="iconFileName">optional object IconFileName</param>
-		/// <param name="iconLabel">optional object IconLabel</param>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff821124.aspx </remarks>
+		/// <param name="iconIndex">optional object iconIndex</param>
+		/// <param name="link">optional object link</param>
+		/// <param name="placement">optional object placement</param>
+		/// <param name="displayAsIcon">optional object displayAsIcon</param>
+		/// <param name="dataType">optional object dataType</param>
+		/// <param name="iconFileName">optional object iconFileName</param>
+		/// <param name="iconLabel">optional object iconLabel</param>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void PasteSpecial(object iconIndex, object link, object placement, object displayAsIcon, object dataType, object iconFileName, object iconLabel)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(iconIndex, link, placement, displayAsIcon, dataType, iconFileName, iconLabel);
-			Invoker.Method(this, "PasteSpecial", paramsArray);
+			 Factory.ExecuteMethod(this, "PasteSpecial", new object[]{ iconIndex, link, placement, displayAsIcon, dataType, iconFileName, iconLabel });
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff821124.aspx
 		/// </summary>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff821124.aspx </remarks>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void PasteSpecial()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "PasteSpecial", paramsArray);
+			 Factory.ExecuteMethod(this, "PasteSpecial");
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff821124.aspx
 		/// </summary>
-		/// <param name="iconIndex">optional object IconIndex</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff821124.aspx </remarks>
+		/// <param name="iconIndex">optional object iconIndex</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void PasteSpecial(object iconIndex)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(iconIndex);
-			Invoker.Method(this, "PasteSpecial", paramsArray);
+			 Factory.ExecuteMethod(this, "PasteSpecial", iconIndex);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff821124.aspx
 		/// </summary>
-		/// <param name="iconIndex">optional object IconIndex</param>
-		/// <param name="link">optional object Link</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff821124.aspx </remarks>
+		/// <param name="iconIndex">optional object iconIndex</param>
+		/// <param name="link">optional object link</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void PasteSpecial(object iconIndex, object link)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(iconIndex, link);
-			Invoker.Method(this, "PasteSpecial", paramsArray);
+			 Factory.ExecuteMethod(this, "PasteSpecial", iconIndex, link);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff821124.aspx
 		/// </summary>
-		/// <param name="iconIndex">optional object IconIndex</param>
-		/// <param name="link">optional object Link</param>
-		/// <param name="placement">optional object Placement</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff821124.aspx </remarks>
+		/// <param name="iconIndex">optional object iconIndex</param>
+		/// <param name="link">optional object link</param>
+		/// <param name="placement">optional object placement</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void PasteSpecial(object iconIndex, object link, object placement)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(iconIndex, link, placement);
-			Invoker.Method(this, "PasteSpecial", paramsArray);
+			 Factory.ExecuteMethod(this, "PasteSpecial", iconIndex, link, placement);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff821124.aspx
 		/// </summary>
-		/// <param name="iconIndex">optional object IconIndex</param>
-		/// <param name="link">optional object Link</param>
-		/// <param name="placement">optional object Placement</param>
-		/// <param name="displayAsIcon">optional object DisplayAsIcon</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff821124.aspx </remarks>
+		/// <param name="iconIndex">optional object iconIndex</param>
+		/// <param name="link">optional object link</param>
+		/// <param name="placement">optional object placement</param>
+		/// <param name="displayAsIcon">optional object displayAsIcon</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void PasteSpecial(object iconIndex, object link, object placement, object displayAsIcon)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(iconIndex, link, placement, displayAsIcon);
-			Invoker.Method(this, "PasteSpecial", paramsArray);
+			 Factory.ExecuteMethod(this, "PasteSpecial", iconIndex, link, placement, displayAsIcon);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff821124.aspx
 		/// </summary>
-		/// <param name="iconIndex">optional object IconIndex</param>
-		/// <param name="link">optional object Link</param>
-		/// <param name="placement">optional object Placement</param>
-		/// <param name="displayAsIcon">optional object DisplayAsIcon</param>
-		/// <param name="dataType">optional object DataType</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff821124.aspx </remarks>
+		/// <param name="iconIndex">optional object iconIndex</param>
+		/// <param name="link">optional object link</param>
+		/// <param name="placement">optional object placement</param>
+		/// <param name="displayAsIcon">optional object displayAsIcon</param>
+		/// <param name="dataType">optional object dataType</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void PasteSpecial(object iconIndex, object link, object placement, object displayAsIcon, object dataType)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(iconIndex, link, placement, displayAsIcon, dataType);
-			Invoker.Method(this, "PasteSpecial", paramsArray);
+			 Factory.ExecuteMethod(this, "PasteSpecial", new object[]{ iconIndex, link, placement, displayAsIcon, dataType });
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff821124.aspx
 		/// </summary>
-		/// <param name="iconIndex">optional object IconIndex</param>
-		/// <param name="link">optional object Link</param>
-		/// <param name="placement">optional object Placement</param>
-		/// <param name="displayAsIcon">optional object DisplayAsIcon</param>
-		/// <param name="dataType">optional object DataType</param>
-		/// <param name="iconFileName">optional object IconFileName</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff821124.aspx </remarks>
+		/// <param name="iconIndex">optional object iconIndex</param>
+		/// <param name="link">optional object link</param>
+		/// <param name="placement">optional object placement</param>
+		/// <param name="displayAsIcon">optional object displayAsIcon</param>
+		/// <param name="dataType">optional object dataType</param>
+		/// <param name="iconFileName">optional object iconFileName</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void PasteSpecial(object iconIndex, object link, object placement, object displayAsIcon, object dataType, object iconFileName)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(iconIndex, link, placement, displayAsIcon, dataType, iconFileName);
-			Invoker.Method(this, "PasteSpecial", paramsArray);
+			 Factory.ExecuteMethod(this, "PasteSpecial", new object[]{ iconIndex, link, placement, displayAsIcon, dataType, iconFileName });
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835691.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835691.aspx </remarks>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void LookupNameProperties()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "LookupNameProperties", paramsArray);
+			 Factory.ExecuteMethod(this, "LookupNameProperties");
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196924.aspx
 		/// </summary>
-		/// <param name="statistic">NetOffice.WordApi.Enums.WdStatistic Statistic</param>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff196924.aspx </remarks>
+		/// <param name="statistic">NetOffice.WordApi.Enums.WdStatistic statistic</param>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public Int32 ComputeStatistics(NetOffice.WordApi.Enums.WdStatistic statistic)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(statistic);
-			object returnItem = Invoker.MethodReturn(this, "ComputeStatistics", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return Factory.ExecuteInt32MethodGet(this, "ComputeStatistics", statistic);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192827.aspx
 		/// </summary>
-		/// <param name="direction">Int32 Direction</param>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff192827.aspx </remarks>
+		/// <param name="direction">Int32 direction</param>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void Relocate(Int32 direction)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(direction);
-			Invoker.Method(this, "Relocate", paramsArray);
+			 Factory.ExecuteMethod(this, "Relocate", direction);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839497.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff839497.aspx </remarks>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void CheckSynonyms()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "CheckSynonyms", paramsArray);
+			 Factory.ExecuteMethod(this, "CheckSynonyms");
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="edition">string Edition</param>
-		/// <param name="format">optional object Format</param>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <param name="edition">string edition</param>
+		/// <param name="format">optional object format</param>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void SubscribeTo(string edition, object format)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(edition, format);
-			Invoker.Method(this, "SubscribeTo", paramsArray);
+			 Factory.ExecuteMethod(this, "SubscribeTo", edition, format);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="edition">string Edition</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <param name="edition">string edition</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void SubscribeTo(string edition)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(edition);
-			Invoker.Method(this, "SubscribeTo", paramsArray);
+			 Factory.ExecuteMethod(this, "SubscribeTo", edition);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="edition">optional object Edition</param>
-		/// <param name="containsPICT">optional object ContainsPICT</param>
-		/// <param name="containsRTF">optional object ContainsRTF</param>
-		/// <param name="containsText">optional object ContainsText</param>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <param name="edition">optional object edition</param>
+		/// <param name="containsPICT">optional object containsPICT</param>
+		/// <param name="containsRTF">optional object containsRTF</param>
+		/// <param name="containsText">optional object containsText</param>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void CreatePublisher(object edition, object containsPICT, object containsRTF, object containsText)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(edition, containsPICT, containsRTF, containsText);
-			Invoker.Method(this, "CreatePublisher", paramsArray);
+			 Factory.ExecuteMethod(this, "CreatePublisher", edition, containsPICT, containsRTF, containsText);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void CreatePublisher()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "CreatePublisher", paramsArray);
+			 Factory.ExecuteMethod(this, "CreatePublisher");
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="edition">optional object Edition</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <param name="edition">optional object edition</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void CreatePublisher(object edition)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(edition);
-			Invoker.Method(this, "CreatePublisher", paramsArray);
+			 Factory.ExecuteMethod(this, "CreatePublisher", edition);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="edition">optional object Edition</param>
-		/// <param name="containsPICT">optional object ContainsPICT</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <param name="edition">optional object edition</param>
+		/// <param name="containsPICT">optional object containsPICT</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void CreatePublisher(object edition, object containsPICT)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(edition, containsPICT);
-			Invoker.Method(this, "CreatePublisher", paramsArray);
+			 Factory.ExecuteMethod(this, "CreatePublisher", edition, containsPICT);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="edition">optional object Edition</param>
-		/// <param name="containsPICT">optional object ContainsPICT</param>
-		/// <param name="containsRTF">optional object ContainsRTF</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <param name="edition">optional object edition</param>
+		/// <param name="containsPICT">optional object containsPICT</param>
+		/// <param name="containsRTF">optional object containsRTF</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void CreatePublisher(object edition, object containsPICT, object containsRTF)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(edition, containsPICT, containsRTF);
-			Invoker.Method(this, "CreatePublisher", paramsArray);
+			 Factory.ExecuteMethod(this, "CreatePublisher", edition, containsPICT, containsRTF);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838952.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff838952.aspx </remarks>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void InsertAutoText()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "InsertAutoText", paramsArray);
+			 Factory.ExecuteMethod(this, "InsertAutoText");
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838122.aspx
 		/// </summary>
-		/// <param name="format">optional object Format</param>
-		/// <param name="style">optional object Style</param>
-		/// <param name="linkToSource">optional object LinkToSource</param>
-		/// <param name="connection">optional object Connection</param>
-		/// <param name="sQLStatement">optional object SQLStatement</param>
-		/// <param name="sQLStatement1">optional object SQLStatement1</param>
-		/// <param name="passwordDocument">optional object PasswordDocument</param>
-		/// <param name="passwordTemplate">optional object PasswordTemplate</param>
-		/// <param name="writePasswordDocument">optional object WritePasswordDocument</param>
-		/// <param name="writePasswordTemplate">optional object WritePasswordTemplate</param>
-		/// <param name="dataSource">optional object DataSource</param>
-		/// <param name="from">optional object From</param>
-		/// <param name="to">optional object To</param>
-		/// <param name="includeFields">optional object IncludeFields</param>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff838122.aspx </remarks>
+		/// <param name="format">optional object format</param>
+		/// <param name="style">optional object style</param>
+		/// <param name="linkToSource">optional object linkToSource</param>
+		/// <param name="connection">optional object connection</param>
+		/// <param name="sQLStatement">optional object sQLStatement</param>
+		/// <param name="sQLStatement1">optional object sQLStatement1</param>
+		/// <param name="passwordDocument">optional object passwordDocument</param>
+		/// <param name="passwordTemplate">optional object passwordTemplate</param>
+		/// <param name="writePasswordDocument">optional object writePasswordDocument</param>
+		/// <param name="writePasswordTemplate">optional object writePasswordTemplate</param>
+		/// <param name="dataSource">optional object dataSource</param>
+		/// <param name="from">optional object from</param>
+		/// <param name="to">optional object to</param>
+		/// <param name="includeFields">optional object includeFields</param>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void InsertDatabase(object format, object style, object linkToSource, object connection, object sQLStatement, object sQLStatement1, object passwordDocument, object passwordTemplate, object writePasswordDocument, object writePasswordTemplate, object dataSource, object from, object to, object includeFields)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(format, style, linkToSource, connection, sQLStatement, sQLStatement1, passwordDocument, passwordTemplate, writePasswordDocument, writePasswordTemplate, dataSource, from, to, includeFields);
-			Invoker.Method(this, "InsertDatabase", paramsArray);
+			 Factory.ExecuteMethod(this, "InsertDatabase", new object[]{ format, style, linkToSource, connection, sQLStatement, sQLStatement1, passwordDocument, passwordTemplate, writePasswordDocument, writePasswordTemplate, dataSource, from, to, includeFields });
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838122.aspx
 		/// </summary>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff838122.aspx </remarks>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void InsertDatabase()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "InsertDatabase", paramsArray);
+			 Factory.ExecuteMethod(this, "InsertDatabase");
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838122.aspx
 		/// </summary>
-		/// <param name="format">optional object Format</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff838122.aspx </remarks>
+		/// <param name="format">optional object format</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void InsertDatabase(object format)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(format);
-			Invoker.Method(this, "InsertDatabase", paramsArray);
+			 Factory.ExecuteMethod(this, "InsertDatabase", format);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838122.aspx
 		/// </summary>
-		/// <param name="format">optional object Format</param>
-		/// <param name="style">optional object Style</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff838122.aspx </remarks>
+		/// <param name="format">optional object format</param>
+		/// <param name="style">optional object style</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void InsertDatabase(object format, object style)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(format, style);
-			Invoker.Method(this, "InsertDatabase", paramsArray);
+			 Factory.ExecuteMethod(this, "InsertDatabase", format, style);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838122.aspx
 		/// </summary>
-		/// <param name="format">optional object Format</param>
-		/// <param name="style">optional object Style</param>
-		/// <param name="linkToSource">optional object LinkToSource</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff838122.aspx </remarks>
+		/// <param name="format">optional object format</param>
+		/// <param name="style">optional object style</param>
+		/// <param name="linkToSource">optional object linkToSource</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void InsertDatabase(object format, object style, object linkToSource)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(format, style, linkToSource);
-			Invoker.Method(this, "InsertDatabase", paramsArray);
+			 Factory.ExecuteMethod(this, "InsertDatabase", format, style, linkToSource);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838122.aspx
 		/// </summary>
-		/// <param name="format">optional object Format</param>
-		/// <param name="style">optional object Style</param>
-		/// <param name="linkToSource">optional object LinkToSource</param>
-		/// <param name="connection">optional object Connection</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff838122.aspx </remarks>
+		/// <param name="format">optional object format</param>
+		/// <param name="style">optional object style</param>
+		/// <param name="linkToSource">optional object linkToSource</param>
+		/// <param name="connection">optional object connection</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void InsertDatabase(object format, object style, object linkToSource, object connection)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(format, style, linkToSource, connection);
-			Invoker.Method(this, "InsertDatabase", paramsArray);
+			 Factory.ExecuteMethod(this, "InsertDatabase", format, style, linkToSource, connection);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838122.aspx
 		/// </summary>
-		/// <param name="format">optional object Format</param>
-		/// <param name="style">optional object Style</param>
-		/// <param name="linkToSource">optional object LinkToSource</param>
-		/// <param name="connection">optional object Connection</param>
-		/// <param name="sQLStatement">optional object SQLStatement</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff838122.aspx </remarks>
+		/// <param name="format">optional object format</param>
+		/// <param name="style">optional object style</param>
+		/// <param name="linkToSource">optional object linkToSource</param>
+		/// <param name="connection">optional object connection</param>
+		/// <param name="sQLStatement">optional object sQLStatement</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void InsertDatabase(object format, object style, object linkToSource, object connection, object sQLStatement)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(format, style, linkToSource, connection, sQLStatement);
-			Invoker.Method(this, "InsertDatabase", paramsArray);
+			 Factory.ExecuteMethod(this, "InsertDatabase", new object[]{ format, style, linkToSource, connection, sQLStatement });
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838122.aspx
 		/// </summary>
-		/// <param name="format">optional object Format</param>
-		/// <param name="style">optional object Style</param>
-		/// <param name="linkToSource">optional object LinkToSource</param>
-		/// <param name="connection">optional object Connection</param>
-		/// <param name="sQLStatement">optional object SQLStatement</param>
-		/// <param name="sQLStatement1">optional object SQLStatement1</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff838122.aspx </remarks>
+		/// <param name="format">optional object format</param>
+		/// <param name="style">optional object style</param>
+		/// <param name="linkToSource">optional object linkToSource</param>
+		/// <param name="connection">optional object connection</param>
+		/// <param name="sQLStatement">optional object sQLStatement</param>
+		/// <param name="sQLStatement1">optional object sQLStatement1</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void InsertDatabase(object format, object style, object linkToSource, object connection, object sQLStatement, object sQLStatement1)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(format, style, linkToSource, connection, sQLStatement, sQLStatement1);
-			Invoker.Method(this, "InsertDatabase", paramsArray);
+			 Factory.ExecuteMethod(this, "InsertDatabase", new object[]{ format, style, linkToSource, connection, sQLStatement, sQLStatement1 });
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838122.aspx
 		/// </summary>
-		/// <param name="format">optional object Format</param>
-		/// <param name="style">optional object Style</param>
-		/// <param name="linkToSource">optional object LinkToSource</param>
-		/// <param name="connection">optional object Connection</param>
-		/// <param name="sQLStatement">optional object SQLStatement</param>
-		/// <param name="sQLStatement1">optional object SQLStatement1</param>
-		/// <param name="passwordDocument">optional object PasswordDocument</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff838122.aspx </remarks>
+		/// <param name="format">optional object format</param>
+		/// <param name="style">optional object style</param>
+		/// <param name="linkToSource">optional object linkToSource</param>
+		/// <param name="connection">optional object connection</param>
+		/// <param name="sQLStatement">optional object sQLStatement</param>
+		/// <param name="sQLStatement1">optional object sQLStatement1</param>
+		/// <param name="passwordDocument">optional object passwordDocument</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void InsertDatabase(object format, object style, object linkToSource, object connection, object sQLStatement, object sQLStatement1, object passwordDocument)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(format, style, linkToSource, connection, sQLStatement, sQLStatement1, passwordDocument);
-			Invoker.Method(this, "InsertDatabase", paramsArray);
+			 Factory.ExecuteMethod(this, "InsertDatabase", new object[]{ format, style, linkToSource, connection, sQLStatement, sQLStatement1, passwordDocument });
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838122.aspx
 		/// </summary>
-		/// <param name="format">optional object Format</param>
-		/// <param name="style">optional object Style</param>
-		/// <param name="linkToSource">optional object LinkToSource</param>
-		/// <param name="connection">optional object Connection</param>
-		/// <param name="sQLStatement">optional object SQLStatement</param>
-		/// <param name="sQLStatement1">optional object SQLStatement1</param>
-		/// <param name="passwordDocument">optional object PasswordDocument</param>
-		/// <param name="passwordTemplate">optional object PasswordTemplate</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff838122.aspx </remarks>
+		/// <param name="format">optional object format</param>
+		/// <param name="style">optional object style</param>
+		/// <param name="linkToSource">optional object linkToSource</param>
+		/// <param name="connection">optional object connection</param>
+		/// <param name="sQLStatement">optional object sQLStatement</param>
+		/// <param name="sQLStatement1">optional object sQLStatement1</param>
+		/// <param name="passwordDocument">optional object passwordDocument</param>
+		/// <param name="passwordTemplate">optional object passwordTemplate</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void InsertDatabase(object format, object style, object linkToSource, object connection, object sQLStatement, object sQLStatement1, object passwordDocument, object passwordTemplate)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(format, style, linkToSource, connection, sQLStatement, sQLStatement1, passwordDocument, passwordTemplate);
-			Invoker.Method(this, "InsertDatabase", paramsArray);
+			 Factory.ExecuteMethod(this, "InsertDatabase", new object[]{ format, style, linkToSource, connection, sQLStatement, sQLStatement1, passwordDocument, passwordTemplate });
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838122.aspx
 		/// </summary>
-		/// <param name="format">optional object Format</param>
-		/// <param name="style">optional object Style</param>
-		/// <param name="linkToSource">optional object LinkToSource</param>
-		/// <param name="connection">optional object Connection</param>
-		/// <param name="sQLStatement">optional object SQLStatement</param>
-		/// <param name="sQLStatement1">optional object SQLStatement1</param>
-		/// <param name="passwordDocument">optional object PasswordDocument</param>
-		/// <param name="passwordTemplate">optional object PasswordTemplate</param>
-		/// <param name="writePasswordDocument">optional object WritePasswordDocument</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff838122.aspx </remarks>
+		/// <param name="format">optional object format</param>
+		/// <param name="style">optional object style</param>
+		/// <param name="linkToSource">optional object linkToSource</param>
+		/// <param name="connection">optional object connection</param>
+		/// <param name="sQLStatement">optional object sQLStatement</param>
+		/// <param name="sQLStatement1">optional object sQLStatement1</param>
+		/// <param name="passwordDocument">optional object passwordDocument</param>
+		/// <param name="passwordTemplate">optional object passwordTemplate</param>
+		/// <param name="writePasswordDocument">optional object writePasswordDocument</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void InsertDatabase(object format, object style, object linkToSource, object connection, object sQLStatement, object sQLStatement1, object passwordDocument, object passwordTemplate, object writePasswordDocument)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(format, style, linkToSource, connection, sQLStatement, sQLStatement1, passwordDocument, passwordTemplate, writePasswordDocument);
-			Invoker.Method(this, "InsertDatabase", paramsArray);
+			 Factory.ExecuteMethod(this, "InsertDatabase", new object[]{ format, style, linkToSource, connection, sQLStatement, sQLStatement1, passwordDocument, passwordTemplate, writePasswordDocument });
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838122.aspx
 		/// </summary>
-		/// <param name="format">optional object Format</param>
-		/// <param name="style">optional object Style</param>
-		/// <param name="linkToSource">optional object LinkToSource</param>
-		/// <param name="connection">optional object Connection</param>
-		/// <param name="sQLStatement">optional object SQLStatement</param>
-		/// <param name="sQLStatement1">optional object SQLStatement1</param>
-		/// <param name="passwordDocument">optional object PasswordDocument</param>
-		/// <param name="passwordTemplate">optional object PasswordTemplate</param>
-		/// <param name="writePasswordDocument">optional object WritePasswordDocument</param>
-		/// <param name="writePasswordTemplate">optional object WritePasswordTemplate</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff838122.aspx </remarks>
+		/// <param name="format">optional object format</param>
+		/// <param name="style">optional object style</param>
+		/// <param name="linkToSource">optional object linkToSource</param>
+		/// <param name="connection">optional object connection</param>
+		/// <param name="sQLStatement">optional object sQLStatement</param>
+		/// <param name="sQLStatement1">optional object sQLStatement1</param>
+		/// <param name="passwordDocument">optional object passwordDocument</param>
+		/// <param name="passwordTemplate">optional object passwordTemplate</param>
+		/// <param name="writePasswordDocument">optional object writePasswordDocument</param>
+		/// <param name="writePasswordTemplate">optional object writePasswordTemplate</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void InsertDatabase(object format, object style, object linkToSource, object connection, object sQLStatement, object sQLStatement1, object passwordDocument, object passwordTemplate, object writePasswordDocument, object writePasswordTemplate)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(format, style, linkToSource, connection, sQLStatement, sQLStatement1, passwordDocument, passwordTemplate, writePasswordDocument, writePasswordTemplate);
-			Invoker.Method(this, "InsertDatabase", paramsArray);
+			 Factory.ExecuteMethod(this, "InsertDatabase", new object[]{ format, style, linkToSource, connection, sQLStatement, sQLStatement1, passwordDocument, passwordTemplate, writePasswordDocument, writePasswordTemplate });
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838122.aspx
 		/// </summary>
-		/// <param name="format">optional object Format</param>
-		/// <param name="style">optional object Style</param>
-		/// <param name="linkToSource">optional object LinkToSource</param>
-		/// <param name="connection">optional object Connection</param>
-		/// <param name="sQLStatement">optional object SQLStatement</param>
-		/// <param name="sQLStatement1">optional object SQLStatement1</param>
-		/// <param name="passwordDocument">optional object PasswordDocument</param>
-		/// <param name="passwordTemplate">optional object PasswordTemplate</param>
-		/// <param name="writePasswordDocument">optional object WritePasswordDocument</param>
-		/// <param name="writePasswordTemplate">optional object WritePasswordTemplate</param>
-		/// <param name="dataSource">optional object DataSource</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff838122.aspx </remarks>
+		/// <param name="format">optional object format</param>
+		/// <param name="style">optional object style</param>
+		/// <param name="linkToSource">optional object linkToSource</param>
+		/// <param name="connection">optional object connection</param>
+		/// <param name="sQLStatement">optional object sQLStatement</param>
+		/// <param name="sQLStatement1">optional object sQLStatement1</param>
+		/// <param name="passwordDocument">optional object passwordDocument</param>
+		/// <param name="passwordTemplate">optional object passwordTemplate</param>
+		/// <param name="writePasswordDocument">optional object writePasswordDocument</param>
+		/// <param name="writePasswordTemplate">optional object writePasswordTemplate</param>
+		/// <param name="dataSource">optional object dataSource</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void InsertDatabase(object format, object style, object linkToSource, object connection, object sQLStatement, object sQLStatement1, object passwordDocument, object passwordTemplate, object writePasswordDocument, object writePasswordTemplate, object dataSource)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(format, style, linkToSource, connection, sQLStatement, sQLStatement1, passwordDocument, passwordTemplate, writePasswordDocument, writePasswordTemplate, dataSource);
-			Invoker.Method(this, "InsertDatabase", paramsArray);
+			 Factory.ExecuteMethod(this, "InsertDatabase", new object[]{ format, style, linkToSource, connection, sQLStatement, sQLStatement1, passwordDocument, passwordTemplate, writePasswordDocument, writePasswordTemplate, dataSource });
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838122.aspx
 		/// </summary>
-		/// <param name="format">optional object Format</param>
-		/// <param name="style">optional object Style</param>
-		/// <param name="linkToSource">optional object LinkToSource</param>
-		/// <param name="connection">optional object Connection</param>
-		/// <param name="sQLStatement">optional object SQLStatement</param>
-		/// <param name="sQLStatement1">optional object SQLStatement1</param>
-		/// <param name="passwordDocument">optional object PasswordDocument</param>
-		/// <param name="passwordTemplate">optional object PasswordTemplate</param>
-		/// <param name="writePasswordDocument">optional object WritePasswordDocument</param>
-		/// <param name="writePasswordTemplate">optional object WritePasswordTemplate</param>
-		/// <param name="dataSource">optional object DataSource</param>
-		/// <param name="from">optional object From</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff838122.aspx </remarks>
+		/// <param name="format">optional object format</param>
+		/// <param name="style">optional object style</param>
+		/// <param name="linkToSource">optional object linkToSource</param>
+		/// <param name="connection">optional object connection</param>
+		/// <param name="sQLStatement">optional object sQLStatement</param>
+		/// <param name="sQLStatement1">optional object sQLStatement1</param>
+		/// <param name="passwordDocument">optional object passwordDocument</param>
+		/// <param name="passwordTemplate">optional object passwordTemplate</param>
+		/// <param name="writePasswordDocument">optional object writePasswordDocument</param>
+		/// <param name="writePasswordTemplate">optional object writePasswordTemplate</param>
+		/// <param name="dataSource">optional object dataSource</param>
+		/// <param name="from">optional object from</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void InsertDatabase(object format, object style, object linkToSource, object connection, object sQLStatement, object sQLStatement1, object passwordDocument, object passwordTemplate, object writePasswordDocument, object writePasswordTemplate, object dataSource, object from)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(format, style, linkToSource, connection, sQLStatement, sQLStatement1, passwordDocument, passwordTemplate, writePasswordDocument, writePasswordTemplate, dataSource, from);
-			Invoker.Method(this, "InsertDatabase", paramsArray);
+			 Factory.ExecuteMethod(this, "InsertDatabase", new object[]{ format, style, linkToSource, connection, sQLStatement, sQLStatement1, passwordDocument, passwordTemplate, writePasswordDocument, writePasswordTemplate, dataSource, from });
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838122.aspx
 		/// </summary>
-		/// <param name="format">optional object Format</param>
-		/// <param name="style">optional object Style</param>
-		/// <param name="linkToSource">optional object LinkToSource</param>
-		/// <param name="connection">optional object Connection</param>
-		/// <param name="sQLStatement">optional object SQLStatement</param>
-		/// <param name="sQLStatement1">optional object SQLStatement1</param>
-		/// <param name="passwordDocument">optional object PasswordDocument</param>
-		/// <param name="passwordTemplate">optional object PasswordTemplate</param>
-		/// <param name="writePasswordDocument">optional object WritePasswordDocument</param>
-		/// <param name="writePasswordTemplate">optional object WritePasswordTemplate</param>
-		/// <param name="dataSource">optional object DataSource</param>
-		/// <param name="from">optional object From</param>
-		/// <param name="to">optional object To</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff838122.aspx </remarks>
+		/// <param name="format">optional object format</param>
+		/// <param name="style">optional object style</param>
+		/// <param name="linkToSource">optional object linkToSource</param>
+		/// <param name="connection">optional object connection</param>
+		/// <param name="sQLStatement">optional object sQLStatement</param>
+		/// <param name="sQLStatement1">optional object sQLStatement1</param>
+		/// <param name="passwordDocument">optional object passwordDocument</param>
+		/// <param name="passwordTemplate">optional object passwordTemplate</param>
+		/// <param name="writePasswordDocument">optional object writePasswordDocument</param>
+		/// <param name="writePasswordTemplate">optional object writePasswordTemplate</param>
+		/// <param name="dataSource">optional object dataSource</param>
+		/// <param name="from">optional object from</param>
+		/// <param name="to">optional object to</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void InsertDatabase(object format, object style, object linkToSource, object connection, object sQLStatement, object sQLStatement1, object passwordDocument, object passwordTemplate, object writePasswordDocument, object writePasswordTemplate, object dataSource, object from, object to)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(format, style, linkToSource, connection, sQLStatement, sQLStatement1, passwordDocument, passwordTemplate, writePasswordDocument, writePasswordTemplate, dataSource, from, to);
-			Invoker.Method(this, "InsertDatabase", paramsArray);
+			 Factory.ExecuteMethod(this, "InsertDatabase", new object[]{ format, style, linkToSource, connection, sQLStatement, sQLStatement1, passwordDocument, passwordTemplate, writePasswordDocument, writePasswordTemplate, dataSource, from, to });
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845283.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff845283.aspx </remarks>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void AutoFormat()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "AutoFormat", paramsArray);
+			 Factory.ExecuteMethod(this, "AutoFormat");
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193931.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff193931.aspx </remarks>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void CheckGrammar()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "CheckGrammar", paramsArray);
+			 Factory.ExecuteMethod(this, "CheckGrammar");
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194400.aspx
 		/// </summary>
-		/// <param name="customDictionary">optional object CustomDictionary</param>
-		/// <param name="ignoreUppercase">optional object IgnoreUppercase</param>
-		/// <param name="alwaysSuggest">optional object AlwaysSuggest</param>
-		/// <param name="customDictionary2">optional object CustomDictionary2</param>
-		/// <param name="customDictionary3">optional object CustomDictionary3</param>
-		/// <param name="customDictionary4">optional object CustomDictionary4</param>
-		/// <param name="customDictionary5">optional object CustomDictionary5</param>
-		/// <param name="customDictionary6">optional object CustomDictionary6</param>
-		/// <param name="customDictionary7">optional object CustomDictionary7</param>
-		/// <param name="customDictionary8">optional object CustomDictionary8</param>
-		/// <param name="customDictionary9">optional object CustomDictionary9</param>
-		/// <param name="customDictionary10">optional object CustomDictionary10</param>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194400.aspx </remarks>
+		/// <param name="customDictionary">optional object customDictionary</param>
+		/// <param name="ignoreUppercase">optional object ignoreUppercase</param>
+		/// <param name="alwaysSuggest">optional object alwaysSuggest</param>
+		/// <param name="customDictionary2">optional object customDictionary2</param>
+		/// <param name="customDictionary3">optional object customDictionary3</param>
+		/// <param name="customDictionary4">optional object customDictionary4</param>
+		/// <param name="customDictionary5">optional object customDictionary5</param>
+		/// <param name="customDictionary6">optional object customDictionary6</param>
+		/// <param name="customDictionary7">optional object customDictionary7</param>
+		/// <param name="customDictionary8">optional object customDictionary8</param>
+		/// <param name="customDictionary9">optional object customDictionary9</param>
+		/// <param name="customDictionary10">optional object customDictionary10</param>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void CheckSpelling(object customDictionary, object ignoreUppercase, object alwaysSuggest, object customDictionary2, object customDictionary3, object customDictionary4, object customDictionary5, object customDictionary6, object customDictionary7, object customDictionary8, object customDictionary9, object customDictionary10)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(customDictionary, ignoreUppercase, alwaysSuggest, customDictionary2, customDictionary3, customDictionary4, customDictionary5, customDictionary6, customDictionary7, customDictionary8, customDictionary9, customDictionary10);
-			Invoker.Method(this, "CheckSpelling", paramsArray);
+			 Factory.ExecuteMethod(this, "CheckSpelling", new object[]{ customDictionary, ignoreUppercase, alwaysSuggest, customDictionary2, customDictionary3, customDictionary4, customDictionary5, customDictionary6, customDictionary7, customDictionary8, customDictionary9, customDictionary10 });
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194400.aspx
 		/// </summary>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194400.aspx </remarks>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void CheckSpelling()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "CheckSpelling", paramsArray);
+			 Factory.ExecuteMethod(this, "CheckSpelling");
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194400.aspx
 		/// </summary>
-		/// <param name="customDictionary">optional object CustomDictionary</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194400.aspx </remarks>
+		/// <param name="customDictionary">optional object customDictionary</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void CheckSpelling(object customDictionary)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(customDictionary);
-			Invoker.Method(this, "CheckSpelling", paramsArray);
+			 Factory.ExecuteMethod(this, "CheckSpelling", customDictionary);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194400.aspx
 		/// </summary>
-		/// <param name="customDictionary">optional object CustomDictionary</param>
-		/// <param name="ignoreUppercase">optional object IgnoreUppercase</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194400.aspx </remarks>
+		/// <param name="customDictionary">optional object customDictionary</param>
+		/// <param name="ignoreUppercase">optional object ignoreUppercase</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void CheckSpelling(object customDictionary, object ignoreUppercase)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(customDictionary, ignoreUppercase);
-			Invoker.Method(this, "CheckSpelling", paramsArray);
+			 Factory.ExecuteMethod(this, "CheckSpelling", customDictionary, ignoreUppercase);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194400.aspx
 		/// </summary>
-		/// <param name="customDictionary">optional object CustomDictionary</param>
-		/// <param name="ignoreUppercase">optional object IgnoreUppercase</param>
-		/// <param name="alwaysSuggest">optional object AlwaysSuggest</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194400.aspx </remarks>
+		/// <param name="customDictionary">optional object customDictionary</param>
+		/// <param name="ignoreUppercase">optional object ignoreUppercase</param>
+		/// <param name="alwaysSuggest">optional object alwaysSuggest</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void CheckSpelling(object customDictionary, object ignoreUppercase, object alwaysSuggest)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(customDictionary, ignoreUppercase, alwaysSuggest);
-			Invoker.Method(this, "CheckSpelling", paramsArray);
+			 Factory.ExecuteMethod(this, "CheckSpelling", customDictionary, ignoreUppercase, alwaysSuggest);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194400.aspx
 		/// </summary>
-		/// <param name="customDictionary">optional object CustomDictionary</param>
-		/// <param name="ignoreUppercase">optional object IgnoreUppercase</param>
-		/// <param name="alwaysSuggest">optional object AlwaysSuggest</param>
-		/// <param name="customDictionary2">optional object CustomDictionary2</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194400.aspx </remarks>
+		/// <param name="customDictionary">optional object customDictionary</param>
+		/// <param name="ignoreUppercase">optional object ignoreUppercase</param>
+		/// <param name="alwaysSuggest">optional object alwaysSuggest</param>
+		/// <param name="customDictionary2">optional object customDictionary2</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void CheckSpelling(object customDictionary, object ignoreUppercase, object alwaysSuggest, object customDictionary2)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(customDictionary, ignoreUppercase, alwaysSuggest, customDictionary2);
-			Invoker.Method(this, "CheckSpelling", paramsArray);
+			 Factory.ExecuteMethod(this, "CheckSpelling", customDictionary, ignoreUppercase, alwaysSuggest, customDictionary2);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194400.aspx
 		/// </summary>
-		/// <param name="customDictionary">optional object CustomDictionary</param>
-		/// <param name="ignoreUppercase">optional object IgnoreUppercase</param>
-		/// <param name="alwaysSuggest">optional object AlwaysSuggest</param>
-		/// <param name="customDictionary2">optional object CustomDictionary2</param>
-		/// <param name="customDictionary3">optional object CustomDictionary3</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194400.aspx </remarks>
+		/// <param name="customDictionary">optional object customDictionary</param>
+		/// <param name="ignoreUppercase">optional object ignoreUppercase</param>
+		/// <param name="alwaysSuggest">optional object alwaysSuggest</param>
+		/// <param name="customDictionary2">optional object customDictionary2</param>
+		/// <param name="customDictionary3">optional object customDictionary3</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void CheckSpelling(object customDictionary, object ignoreUppercase, object alwaysSuggest, object customDictionary2, object customDictionary3)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(customDictionary, ignoreUppercase, alwaysSuggest, customDictionary2, customDictionary3);
-			Invoker.Method(this, "CheckSpelling", paramsArray);
+			 Factory.ExecuteMethod(this, "CheckSpelling", new object[]{ customDictionary, ignoreUppercase, alwaysSuggest, customDictionary2, customDictionary3 });
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194400.aspx
 		/// </summary>
-		/// <param name="customDictionary">optional object CustomDictionary</param>
-		/// <param name="ignoreUppercase">optional object IgnoreUppercase</param>
-		/// <param name="alwaysSuggest">optional object AlwaysSuggest</param>
-		/// <param name="customDictionary2">optional object CustomDictionary2</param>
-		/// <param name="customDictionary3">optional object CustomDictionary3</param>
-		/// <param name="customDictionary4">optional object CustomDictionary4</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194400.aspx </remarks>
+		/// <param name="customDictionary">optional object customDictionary</param>
+		/// <param name="ignoreUppercase">optional object ignoreUppercase</param>
+		/// <param name="alwaysSuggest">optional object alwaysSuggest</param>
+		/// <param name="customDictionary2">optional object customDictionary2</param>
+		/// <param name="customDictionary3">optional object customDictionary3</param>
+		/// <param name="customDictionary4">optional object customDictionary4</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void CheckSpelling(object customDictionary, object ignoreUppercase, object alwaysSuggest, object customDictionary2, object customDictionary3, object customDictionary4)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(customDictionary, ignoreUppercase, alwaysSuggest, customDictionary2, customDictionary3, customDictionary4);
-			Invoker.Method(this, "CheckSpelling", paramsArray);
+			 Factory.ExecuteMethod(this, "CheckSpelling", new object[]{ customDictionary, ignoreUppercase, alwaysSuggest, customDictionary2, customDictionary3, customDictionary4 });
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194400.aspx
 		/// </summary>
-		/// <param name="customDictionary">optional object CustomDictionary</param>
-		/// <param name="ignoreUppercase">optional object IgnoreUppercase</param>
-		/// <param name="alwaysSuggest">optional object AlwaysSuggest</param>
-		/// <param name="customDictionary2">optional object CustomDictionary2</param>
-		/// <param name="customDictionary3">optional object CustomDictionary3</param>
-		/// <param name="customDictionary4">optional object CustomDictionary4</param>
-		/// <param name="customDictionary5">optional object CustomDictionary5</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194400.aspx </remarks>
+		/// <param name="customDictionary">optional object customDictionary</param>
+		/// <param name="ignoreUppercase">optional object ignoreUppercase</param>
+		/// <param name="alwaysSuggest">optional object alwaysSuggest</param>
+		/// <param name="customDictionary2">optional object customDictionary2</param>
+		/// <param name="customDictionary3">optional object customDictionary3</param>
+		/// <param name="customDictionary4">optional object customDictionary4</param>
+		/// <param name="customDictionary5">optional object customDictionary5</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void CheckSpelling(object customDictionary, object ignoreUppercase, object alwaysSuggest, object customDictionary2, object customDictionary3, object customDictionary4, object customDictionary5)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(customDictionary, ignoreUppercase, alwaysSuggest, customDictionary2, customDictionary3, customDictionary4, customDictionary5);
-			Invoker.Method(this, "CheckSpelling", paramsArray);
+			 Factory.ExecuteMethod(this, "CheckSpelling", new object[]{ customDictionary, ignoreUppercase, alwaysSuggest, customDictionary2, customDictionary3, customDictionary4, customDictionary5 });
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194400.aspx
 		/// </summary>
-		/// <param name="customDictionary">optional object CustomDictionary</param>
-		/// <param name="ignoreUppercase">optional object IgnoreUppercase</param>
-		/// <param name="alwaysSuggest">optional object AlwaysSuggest</param>
-		/// <param name="customDictionary2">optional object CustomDictionary2</param>
-		/// <param name="customDictionary3">optional object CustomDictionary3</param>
-		/// <param name="customDictionary4">optional object CustomDictionary4</param>
-		/// <param name="customDictionary5">optional object CustomDictionary5</param>
-		/// <param name="customDictionary6">optional object CustomDictionary6</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194400.aspx </remarks>
+		/// <param name="customDictionary">optional object customDictionary</param>
+		/// <param name="ignoreUppercase">optional object ignoreUppercase</param>
+		/// <param name="alwaysSuggest">optional object alwaysSuggest</param>
+		/// <param name="customDictionary2">optional object customDictionary2</param>
+		/// <param name="customDictionary3">optional object customDictionary3</param>
+		/// <param name="customDictionary4">optional object customDictionary4</param>
+		/// <param name="customDictionary5">optional object customDictionary5</param>
+		/// <param name="customDictionary6">optional object customDictionary6</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void CheckSpelling(object customDictionary, object ignoreUppercase, object alwaysSuggest, object customDictionary2, object customDictionary3, object customDictionary4, object customDictionary5, object customDictionary6)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(customDictionary, ignoreUppercase, alwaysSuggest, customDictionary2, customDictionary3, customDictionary4, customDictionary5, customDictionary6);
-			Invoker.Method(this, "CheckSpelling", paramsArray);
+			 Factory.ExecuteMethod(this, "CheckSpelling", new object[]{ customDictionary, ignoreUppercase, alwaysSuggest, customDictionary2, customDictionary3, customDictionary4, customDictionary5, customDictionary6 });
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194400.aspx
 		/// </summary>
-		/// <param name="customDictionary">optional object CustomDictionary</param>
-		/// <param name="ignoreUppercase">optional object IgnoreUppercase</param>
-		/// <param name="alwaysSuggest">optional object AlwaysSuggest</param>
-		/// <param name="customDictionary2">optional object CustomDictionary2</param>
-		/// <param name="customDictionary3">optional object CustomDictionary3</param>
-		/// <param name="customDictionary4">optional object CustomDictionary4</param>
-		/// <param name="customDictionary5">optional object CustomDictionary5</param>
-		/// <param name="customDictionary6">optional object CustomDictionary6</param>
-		/// <param name="customDictionary7">optional object CustomDictionary7</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194400.aspx </remarks>
+		/// <param name="customDictionary">optional object customDictionary</param>
+		/// <param name="ignoreUppercase">optional object ignoreUppercase</param>
+		/// <param name="alwaysSuggest">optional object alwaysSuggest</param>
+		/// <param name="customDictionary2">optional object customDictionary2</param>
+		/// <param name="customDictionary3">optional object customDictionary3</param>
+		/// <param name="customDictionary4">optional object customDictionary4</param>
+		/// <param name="customDictionary5">optional object customDictionary5</param>
+		/// <param name="customDictionary6">optional object customDictionary6</param>
+		/// <param name="customDictionary7">optional object customDictionary7</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void CheckSpelling(object customDictionary, object ignoreUppercase, object alwaysSuggest, object customDictionary2, object customDictionary3, object customDictionary4, object customDictionary5, object customDictionary6, object customDictionary7)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(customDictionary, ignoreUppercase, alwaysSuggest, customDictionary2, customDictionary3, customDictionary4, customDictionary5, customDictionary6, customDictionary7);
-			Invoker.Method(this, "CheckSpelling", paramsArray);
+			 Factory.ExecuteMethod(this, "CheckSpelling", new object[]{ customDictionary, ignoreUppercase, alwaysSuggest, customDictionary2, customDictionary3, customDictionary4, customDictionary5, customDictionary6, customDictionary7 });
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194400.aspx
 		/// </summary>
-		/// <param name="customDictionary">optional object CustomDictionary</param>
-		/// <param name="ignoreUppercase">optional object IgnoreUppercase</param>
-		/// <param name="alwaysSuggest">optional object AlwaysSuggest</param>
-		/// <param name="customDictionary2">optional object CustomDictionary2</param>
-		/// <param name="customDictionary3">optional object CustomDictionary3</param>
-		/// <param name="customDictionary4">optional object CustomDictionary4</param>
-		/// <param name="customDictionary5">optional object CustomDictionary5</param>
-		/// <param name="customDictionary6">optional object CustomDictionary6</param>
-		/// <param name="customDictionary7">optional object CustomDictionary7</param>
-		/// <param name="customDictionary8">optional object CustomDictionary8</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194400.aspx </remarks>
+		/// <param name="customDictionary">optional object customDictionary</param>
+		/// <param name="ignoreUppercase">optional object ignoreUppercase</param>
+		/// <param name="alwaysSuggest">optional object alwaysSuggest</param>
+		/// <param name="customDictionary2">optional object customDictionary2</param>
+		/// <param name="customDictionary3">optional object customDictionary3</param>
+		/// <param name="customDictionary4">optional object customDictionary4</param>
+		/// <param name="customDictionary5">optional object customDictionary5</param>
+		/// <param name="customDictionary6">optional object customDictionary6</param>
+		/// <param name="customDictionary7">optional object customDictionary7</param>
+		/// <param name="customDictionary8">optional object customDictionary8</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void CheckSpelling(object customDictionary, object ignoreUppercase, object alwaysSuggest, object customDictionary2, object customDictionary3, object customDictionary4, object customDictionary5, object customDictionary6, object customDictionary7, object customDictionary8)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(customDictionary, ignoreUppercase, alwaysSuggest, customDictionary2, customDictionary3, customDictionary4, customDictionary5, customDictionary6, customDictionary7, customDictionary8);
-			Invoker.Method(this, "CheckSpelling", paramsArray);
+			 Factory.ExecuteMethod(this, "CheckSpelling", new object[]{ customDictionary, ignoreUppercase, alwaysSuggest, customDictionary2, customDictionary3, customDictionary4, customDictionary5, customDictionary6, customDictionary7, customDictionary8 });
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194400.aspx
 		/// </summary>
-		/// <param name="customDictionary">optional object CustomDictionary</param>
-		/// <param name="ignoreUppercase">optional object IgnoreUppercase</param>
-		/// <param name="alwaysSuggest">optional object AlwaysSuggest</param>
-		/// <param name="customDictionary2">optional object CustomDictionary2</param>
-		/// <param name="customDictionary3">optional object CustomDictionary3</param>
-		/// <param name="customDictionary4">optional object CustomDictionary4</param>
-		/// <param name="customDictionary5">optional object CustomDictionary5</param>
-		/// <param name="customDictionary6">optional object CustomDictionary6</param>
-		/// <param name="customDictionary7">optional object CustomDictionary7</param>
-		/// <param name="customDictionary8">optional object CustomDictionary8</param>
-		/// <param name="customDictionary9">optional object CustomDictionary9</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194400.aspx </remarks>
+		/// <param name="customDictionary">optional object customDictionary</param>
+		/// <param name="ignoreUppercase">optional object ignoreUppercase</param>
+		/// <param name="alwaysSuggest">optional object alwaysSuggest</param>
+		/// <param name="customDictionary2">optional object customDictionary2</param>
+		/// <param name="customDictionary3">optional object customDictionary3</param>
+		/// <param name="customDictionary4">optional object customDictionary4</param>
+		/// <param name="customDictionary5">optional object customDictionary5</param>
+		/// <param name="customDictionary6">optional object customDictionary6</param>
+		/// <param name="customDictionary7">optional object customDictionary7</param>
+		/// <param name="customDictionary8">optional object customDictionary8</param>
+		/// <param name="customDictionary9">optional object customDictionary9</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void CheckSpelling(object customDictionary, object ignoreUppercase, object alwaysSuggest, object customDictionary2, object customDictionary3, object customDictionary4, object customDictionary5, object customDictionary6, object customDictionary7, object customDictionary8, object customDictionary9)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(customDictionary, ignoreUppercase, alwaysSuggest, customDictionary2, customDictionary3, customDictionary4, customDictionary5, customDictionary6, customDictionary7, customDictionary8, customDictionary9);
-			Invoker.Method(this, "CheckSpelling", paramsArray);
+			 Factory.ExecuteMethod(this, "CheckSpelling", new object[]{ customDictionary, ignoreUppercase, alwaysSuggest, customDictionary2, customDictionary3, customDictionary4, customDictionary5, customDictionary6, customDictionary7, customDictionary8, customDictionary9 });
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196525.aspx
 		/// </summary>
-		/// <param name="customDictionary">optional object CustomDictionary</param>
-		/// <param name="ignoreUppercase">optional object IgnoreUppercase</param>
-		/// <param name="mainDictionary">optional object MainDictionary</param>
-		/// <param name="suggestionMode">optional object SuggestionMode</param>
-		/// <param name="customDictionary2">optional object CustomDictionary2</param>
-		/// <param name="customDictionary3">optional object CustomDictionary3</param>
-		/// <param name="customDictionary4">optional object CustomDictionary4</param>
-		/// <param name="customDictionary5">optional object CustomDictionary5</param>
-		/// <param name="customDictionary6">optional object CustomDictionary6</param>
-		/// <param name="customDictionary7">optional object CustomDictionary7</param>
-		/// <param name="customDictionary8">optional object CustomDictionary8</param>
-		/// <param name="customDictionary9">optional object CustomDictionary9</param>
-		/// <param name="customDictionary10">optional object CustomDictionary10</param>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff196525.aspx </remarks>
+		/// <param name="customDictionary">optional object customDictionary</param>
+		/// <param name="ignoreUppercase">optional object ignoreUppercase</param>
+		/// <param name="mainDictionary">optional object mainDictionary</param>
+		/// <param name="suggestionMode">optional object suggestionMode</param>
+		/// <param name="customDictionary2">optional object customDictionary2</param>
+		/// <param name="customDictionary3">optional object customDictionary3</param>
+		/// <param name="customDictionary4">optional object customDictionary4</param>
+		/// <param name="customDictionary5">optional object customDictionary5</param>
+		/// <param name="customDictionary6">optional object customDictionary6</param>
+		/// <param name="customDictionary7">optional object customDictionary7</param>
+		/// <param name="customDictionary8">optional object customDictionary8</param>
+		/// <param name="customDictionary9">optional object customDictionary9</param>
+		/// <param name="customDictionary10">optional object customDictionary10</param>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.SpellingSuggestions GetSpellingSuggestions(object customDictionary, object ignoreUppercase, object mainDictionary, object suggestionMode, object customDictionary2, object customDictionary3, object customDictionary4, object customDictionary5, object customDictionary6, object customDictionary7, object customDictionary8, object customDictionary9, object customDictionary10)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(customDictionary, ignoreUppercase, mainDictionary, suggestionMode, customDictionary2, customDictionary3, customDictionary4, customDictionary5, customDictionary6, customDictionary7, customDictionary8, customDictionary9, customDictionary10);
-			object returnItem = Invoker.MethodReturn(this, "GetSpellingSuggestions", paramsArray);
-			NetOffice.WordApi.SpellingSuggestions newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.SpellingSuggestions.LateBindingApiWrapperType) as NetOffice.WordApi.SpellingSuggestions;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.SpellingSuggestions>(this, "GetSpellingSuggestions", NetOffice.WordApi.SpellingSuggestions.LateBindingApiWrapperType, new object[]{ customDictionary, ignoreUppercase, mainDictionary, suggestionMode, customDictionary2, customDictionary3, customDictionary4, customDictionary5, customDictionary6, customDictionary7, customDictionary8, customDictionary9, customDictionary10 });
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196525.aspx
 		/// </summary>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff196525.aspx </remarks>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.SpellingSuggestions GetSpellingSuggestions()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "GetSpellingSuggestions", paramsArray);
-			NetOffice.WordApi.SpellingSuggestions newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.SpellingSuggestions.LateBindingApiWrapperType) as NetOffice.WordApi.SpellingSuggestions;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.SpellingSuggestions>(this, "GetSpellingSuggestions", NetOffice.WordApi.SpellingSuggestions.LateBindingApiWrapperType);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196525.aspx
 		/// </summary>
-		/// <param name="customDictionary">optional object CustomDictionary</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff196525.aspx </remarks>
+		/// <param name="customDictionary">optional object customDictionary</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.SpellingSuggestions GetSpellingSuggestions(object customDictionary)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(customDictionary);
-			object returnItem = Invoker.MethodReturn(this, "GetSpellingSuggestions", paramsArray);
-			NetOffice.WordApi.SpellingSuggestions newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.SpellingSuggestions.LateBindingApiWrapperType) as NetOffice.WordApi.SpellingSuggestions;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.SpellingSuggestions>(this, "GetSpellingSuggestions", NetOffice.WordApi.SpellingSuggestions.LateBindingApiWrapperType, customDictionary);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196525.aspx
 		/// </summary>
-		/// <param name="customDictionary">optional object CustomDictionary</param>
-		/// <param name="ignoreUppercase">optional object IgnoreUppercase</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff196525.aspx </remarks>
+		/// <param name="customDictionary">optional object customDictionary</param>
+		/// <param name="ignoreUppercase">optional object ignoreUppercase</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.SpellingSuggestions GetSpellingSuggestions(object customDictionary, object ignoreUppercase)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(customDictionary, ignoreUppercase);
-			object returnItem = Invoker.MethodReturn(this, "GetSpellingSuggestions", paramsArray);
-			NetOffice.WordApi.SpellingSuggestions newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.SpellingSuggestions.LateBindingApiWrapperType) as NetOffice.WordApi.SpellingSuggestions;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.SpellingSuggestions>(this, "GetSpellingSuggestions", NetOffice.WordApi.SpellingSuggestions.LateBindingApiWrapperType, customDictionary, ignoreUppercase);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196525.aspx
 		/// </summary>
-		/// <param name="customDictionary">optional object CustomDictionary</param>
-		/// <param name="ignoreUppercase">optional object IgnoreUppercase</param>
-		/// <param name="mainDictionary">optional object MainDictionary</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff196525.aspx </remarks>
+		/// <param name="customDictionary">optional object customDictionary</param>
+		/// <param name="ignoreUppercase">optional object ignoreUppercase</param>
+		/// <param name="mainDictionary">optional object mainDictionary</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.SpellingSuggestions GetSpellingSuggestions(object customDictionary, object ignoreUppercase, object mainDictionary)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(customDictionary, ignoreUppercase, mainDictionary);
-			object returnItem = Invoker.MethodReturn(this, "GetSpellingSuggestions", paramsArray);
-			NetOffice.WordApi.SpellingSuggestions newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.SpellingSuggestions.LateBindingApiWrapperType) as NetOffice.WordApi.SpellingSuggestions;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.SpellingSuggestions>(this, "GetSpellingSuggestions", NetOffice.WordApi.SpellingSuggestions.LateBindingApiWrapperType, customDictionary, ignoreUppercase, mainDictionary);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196525.aspx
 		/// </summary>
-		/// <param name="customDictionary">optional object CustomDictionary</param>
-		/// <param name="ignoreUppercase">optional object IgnoreUppercase</param>
-		/// <param name="mainDictionary">optional object MainDictionary</param>
-		/// <param name="suggestionMode">optional object SuggestionMode</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff196525.aspx </remarks>
+		/// <param name="customDictionary">optional object customDictionary</param>
+		/// <param name="ignoreUppercase">optional object ignoreUppercase</param>
+		/// <param name="mainDictionary">optional object mainDictionary</param>
+		/// <param name="suggestionMode">optional object suggestionMode</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.SpellingSuggestions GetSpellingSuggestions(object customDictionary, object ignoreUppercase, object mainDictionary, object suggestionMode)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(customDictionary, ignoreUppercase, mainDictionary, suggestionMode);
-			object returnItem = Invoker.MethodReturn(this, "GetSpellingSuggestions", paramsArray);
-			NetOffice.WordApi.SpellingSuggestions newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.SpellingSuggestions.LateBindingApiWrapperType) as NetOffice.WordApi.SpellingSuggestions;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.SpellingSuggestions>(this, "GetSpellingSuggestions", NetOffice.WordApi.SpellingSuggestions.LateBindingApiWrapperType, customDictionary, ignoreUppercase, mainDictionary, suggestionMode);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196525.aspx
 		/// </summary>
-		/// <param name="customDictionary">optional object CustomDictionary</param>
-		/// <param name="ignoreUppercase">optional object IgnoreUppercase</param>
-		/// <param name="mainDictionary">optional object MainDictionary</param>
-		/// <param name="suggestionMode">optional object SuggestionMode</param>
-		/// <param name="customDictionary2">optional object CustomDictionary2</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff196525.aspx </remarks>
+		/// <param name="customDictionary">optional object customDictionary</param>
+		/// <param name="ignoreUppercase">optional object ignoreUppercase</param>
+		/// <param name="mainDictionary">optional object mainDictionary</param>
+		/// <param name="suggestionMode">optional object suggestionMode</param>
+		/// <param name="customDictionary2">optional object customDictionary2</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.SpellingSuggestions GetSpellingSuggestions(object customDictionary, object ignoreUppercase, object mainDictionary, object suggestionMode, object customDictionary2)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(customDictionary, ignoreUppercase, mainDictionary, suggestionMode, customDictionary2);
-			object returnItem = Invoker.MethodReturn(this, "GetSpellingSuggestions", paramsArray);
-			NetOffice.WordApi.SpellingSuggestions newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.SpellingSuggestions.LateBindingApiWrapperType) as NetOffice.WordApi.SpellingSuggestions;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.SpellingSuggestions>(this, "GetSpellingSuggestions", NetOffice.WordApi.SpellingSuggestions.LateBindingApiWrapperType, new object[]{ customDictionary, ignoreUppercase, mainDictionary, suggestionMode, customDictionary2 });
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196525.aspx
 		/// </summary>
-		/// <param name="customDictionary">optional object CustomDictionary</param>
-		/// <param name="ignoreUppercase">optional object IgnoreUppercase</param>
-		/// <param name="mainDictionary">optional object MainDictionary</param>
-		/// <param name="suggestionMode">optional object SuggestionMode</param>
-		/// <param name="customDictionary2">optional object CustomDictionary2</param>
-		/// <param name="customDictionary3">optional object CustomDictionary3</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff196525.aspx </remarks>
+		/// <param name="customDictionary">optional object customDictionary</param>
+		/// <param name="ignoreUppercase">optional object ignoreUppercase</param>
+		/// <param name="mainDictionary">optional object mainDictionary</param>
+		/// <param name="suggestionMode">optional object suggestionMode</param>
+		/// <param name="customDictionary2">optional object customDictionary2</param>
+		/// <param name="customDictionary3">optional object customDictionary3</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.SpellingSuggestions GetSpellingSuggestions(object customDictionary, object ignoreUppercase, object mainDictionary, object suggestionMode, object customDictionary2, object customDictionary3)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(customDictionary, ignoreUppercase, mainDictionary, suggestionMode, customDictionary2, customDictionary3);
-			object returnItem = Invoker.MethodReturn(this, "GetSpellingSuggestions", paramsArray);
-			NetOffice.WordApi.SpellingSuggestions newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.SpellingSuggestions.LateBindingApiWrapperType) as NetOffice.WordApi.SpellingSuggestions;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.SpellingSuggestions>(this, "GetSpellingSuggestions", NetOffice.WordApi.SpellingSuggestions.LateBindingApiWrapperType, new object[]{ customDictionary, ignoreUppercase, mainDictionary, suggestionMode, customDictionary2, customDictionary3 });
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196525.aspx
 		/// </summary>
-		/// <param name="customDictionary">optional object CustomDictionary</param>
-		/// <param name="ignoreUppercase">optional object IgnoreUppercase</param>
-		/// <param name="mainDictionary">optional object MainDictionary</param>
-		/// <param name="suggestionMode">optional object SuggestionMode</param>
-		/// <param name="customDictionary2">optional object CustomDictionary2</param>
-		/// <param name="customDictionary3">optional object CustomDictionary3</param>
-		/// <param name="customDictionary4">optional object CustomDictionary4</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff196525.aspx </remarks>
+		/// <param name="customDictionary">optional object customDictionary</param>
+		/// <param name="ignoreUppercase">optional object ignoreUppercase</param>
+		/// <param name="mainDictionary">optional object mainDictionary</param>
+		/// <param name="suggestionMode">optional object suggestionMode</param>
+		/// <param name="customDictionary2">optional object customDictionary2</param>
+		/// <param name="customDictionary3">optional object customDictionary3</param>
+		/// <param name="customDictionary4">optional object customDictionary4</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.SpellingSuggestions GetSpellingSuggestions(object customDictionary, object ignoreUppercase, object mainDictionary, object suggestionMode, object customDictionary2, object customDictionary3, object customDictionary4)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(customDictionary, ignoreUppercase, mainDictionary, suggestionMode, customDictionary2, customDictionary3, customDictionary4);
-			object returnItem = Invoker.MethodReturn(this, "GetSpellingSuggestions", paramsArray);
-			NetOffice.WordApi.SpellingSuggestions newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.SpellingSuggestions.LateBindingApiWrapperType) as NetOffice.WordApi.SpellingSuggestions;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.SpellingSuggestions>(this, "GetSpellingSuggestions", NetOffice.WordApi.SpellingSuggestions.LateBindingApiWrapperType, new object[]{ customDictionary, ignoreUppercase, mainDictionary, suggestionMode, customDictionary2, customDictionary3, customDictionary4 });
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196525.aspx
 		/// </summary>
-		/// <param name="customDictionary">optional object CustomDictionary</param>
-		/// <param name="ignoreUppercase">optional object IgnoreUppercase</param>
-		/// <param name="mainDictionary">optional object MainDictionary</param>
-		/// <param name="suggestionMode">optional object SuggestionMode</param>
-		/// <param name="customDictionary2">optional object CustomDictionary2</param>
-		/// <param name="customDictionary3">optional object CustomDictionary3</param>
-		/// <param name="customDictionary4">optional object CustomDictionary4</param>
-		/// <param name="customDictionary5">optional object CustomDictionary5</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff196525.aspx </remarks>
+		/// <param name="customDictionary">optional object customDictionary</param>
+		/// <param name="ignoreUppercase">optional object ignoreUppercase</param>
+		/// <param name="mainDictionary">optional object mainDictionary</param>
+		/// <param name="suggestionMode">optional object suggestionMode</param>
+		/// <param name="customDictionary2">optional object customDictionary2</param>
+		/// <param name="customDictionary3">optional object customDictionary3</param>
+		/// <param name="customDictionary4">optional object customDictionary4</param>
+		/// <param name="customDictionary5">optional object customDictionary5</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.SpellingSuggestions GetSpellingSuggestions(object customDictionary, object ignoreUppercase, object mainDictionary, object suggestionMode, object customDictionary2, object customDictionary3, object customDictionary4, object customDictionary5)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(customDictionary, ignoreUppercase, mainDictionary, suggestionMode, customDictionary2, customDictionary3, customDictionary4, customDictionary5);
-			object returnItem = Invoker.MethodReturn(this, "GetSpellingSuggestions", paramsArray);
-			NetOffice.WordApi.SpellingSuggestions newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.SpellingSuggestions.LateBindingApiWrapperType) as NetOffice.WordApi.SpellingSuggestions;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.SpellingSuggestions>(this, "GetSpellingSuggestions", NetOffice.WordApi.SpellingSuggestions.LateBindingApiWrapperType, new object[]{ customDictionary, ignoreUppercase, mainDictionary, suggestionMode, customDictionary2, customDictionary3, customDictionary4, customDictionary5 });
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196525.aspx
 		/// </summary>
-		/// <param name="customDictionary">optional object CustomDictionary</param>
-		/// <param name="ignoreUppercase">optional object IgnoreUppercase</param>
-		/// <param name="mainDictionary">optional object MainDictionary</param>
-		/// <param name="suggestionMode">optional object SuggestionMode</param>
-		/// <param name="customDictionary2">optional object CustomDictionary2</param>
-		/// <param name="customDictionary3">optional object CustomDictionary3</param>
-		/// <param name="customDictionary4">optional object CustomDictionary4</param>
-		/// <param name="customDictionary5">optional object CustomDictionary5</param>
-		/// <param name="customDictionary6">optional object CustomDictionary6</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff196525.aspx </remarks>
+		/// <param name="customDictionary">optional object customDictionary</param>
+		/// <param name="ignoreUppercase">optional object ignoreUppercase</param>
+		/// <param name="mainDictionary">optional object mainDictionary</param>
+		/// <param name="suggestionMode">optional object suggestionMode</param>
+		/// <param name="customDictionary2">optional object customDictionary2</param>
+		/// <param name="customDictionary3">optional object customDictionary3</param>
+		/// <param name="customDictionary4">optional object customDictionary4</param>
+		/// <param name="customDictionary5">optional object customDictionary5</param>
+		/// <param name="customDictionary6">optional object customDictionary6</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.SpellingSuggestions GetSpellingSuggestions(object customDictionary, object ignoreUppercase, object mainDictionary, object suggestionMode, object customDictionary2, object customDictionary3, object customDictionary4, object customDictionary5, object customDictionary6)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(customDictionary, ignoreUppercase, mainDictionary, suggestionMode, customDictionary2, customDictionary3, customDictionary4, customDictionary5, customDictionary6);
-			object returnItem = Invoker.MethodReturn(this, "GetSpellingSuggestions", paramsArray);
-			NetOffice.WordApi.SpellingSuggestions newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.SpellingSuggestions.LateBindingApiWrapperType) as NetOffice.WordApi.SpellingSuggestions;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.SpellingSuggestions>(this, "GetSpellingSuggestions", NetOffice.WordApi.SpellingSuggestions.LateBindingApiWrapperType, new object[]{ customDictionary, ignoreUppercase, mainDictionary, suggestionMode, customDictionary2, customDictionary3, customDictionary4, customDictionary5, customDictionary6 });
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196525.aspx
 		/// </summary>
-		/// <param name="customDictionary">optional object CustomDictionary</param>
-		/// <param name="ignoreUppercase">optional object IgnoreUppercase</param>
-		/// <param name="mainDictionary">optional object MainDictionary</param>
-		/// <param name="suggestionMode">optional object SuggestionMode</param>
-		/// <param name="customDictionary2">optional object CustomDictionary2</param>
-		/// <param name="customDictionary3">optional object CustomDictionary3</param>
-		/// <param name="customDictionary4">optional object CustomDictionary4</param>
-		/// <param name="customDictionary5">optional object CustomDictionary5</param>
-		/// <param name="customDictionary6">optional object CustomDictionary6</param>
-		/// <param name="customDictionary7">optional object CustomDictionary7</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff196525.aspx </remarks>
+		/// <param name="customDictionary">optional object customDictionary</param>
+		/// <param name="ignoreUppercase">optional object ignoreUppercase</param>
+		/// <param name="mainDictionary">optional object mainDictionary</param>
+		/// <param name="suggestionMode">optional object suggestionMode</param>
+		/// <param name="customDictionary2">optional object customDictionary2</param>
+		/// <param name="customDictionary3">optional object customDictionary3</param>
+		/// <param name="customDictionary4">optional object customDictionary4</param>
+		/// <param name="customDictionary5">optional object customDictionary5</param>
+		/// <param name="customDictionary6">optional object customDictionary6</param>
+		/// <param name="customDictionary7">optional object customDictionary7</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.SpellingSuggestions GetSpellingSuggestions(object customDictionary, object ignoreUppercase, object mainDictionary, object suggestionMode, object customDictionary2, object customDictionary3, object customDictionary4, object customDictionary5, object customDictionary6, object customDictionary7)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(customDictionary, ignoreUppercase, mainDictionary, suggestionMode, customDictionary2, customDictionary3, customDictionary4, customDictionary5, customDictionary6, customDictionary7);
-			object returnItem = Invoker.MethodReturn(this, "GetSpellingSuggestions", paramsArray);
-			NetOffice.WordApi.SpellingSuggestions newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.SpellingSuggestions.LateBindingApiWrapperType) as NetOffice.WordApi.SpellingSuggestions;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.SpellingSuggestions>(this, "GetSpellingSuggestions", NetOffice.WordApi.SpellingSuggestions.LateBindingApiWrapperType, new object[]{ customDictionary, ignoreUppercase, mainDictionary, suggestionMode, customDictionary2, customDictionary3, customDictionary4, customDictionary5, customDictionary6, customDictionary7 });
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196525.aspx
 		/// </summary>
-		/// <param name="customDictionary">optional object CustomDictionary</param>
-		/// <param name="ignoreUppercase">optional object IgnoreUppercase</param>
-		/// <param name="mainDictionary">optional object MainDictionary</param>
-		/// <param name="suggestionMode">optional object SuggestionMode</param>
-		/// <param name="customDictionary2">optional object CustomDictionary2</param>
-		/// <param name="customDictionary3">optional object CustomDictionary3</param>
-		/// <param name="customDictionary4">optional object CustomDictionary4</param>
-		/// <param name="customDictionary5">optional object CustomDictionary5</param>
-		/// <param name="customDictionary6">optional object CustomDictionary6</param>
-		/// <param name="customDictionary7">optional object CustomDictionary7</param>
-		/// <param name="customDictionary8">optional object CustomDictionary8</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff196525.aspx </remarks>
+		/// <param name="customDictionary">optional object customDictionary</param>
+		/// <param name="ignoreUppercase">optional object ignoreUppercase</param>
+		/// <param name="mainDictionary">optional object mainDictionary</param>
+		/// <param name="suggestionMode">optional object suggestionMode</param>
+		/// <param name="customDictionary2">optional object customDictionary2</param>
+		/// <param name="customDictionary3">optional object customDictionary3</param>
+		/// <param name="customDictionary4">optional object customDictionary4</param>
+		/// <param name="customDictionary5">optional object customDictionary5</param>
+		/// <param name="customDictionary6">optional object customDictionary6</param>
+		/// <param name="customDictionary7">optional object customDictionary7</param>
+		/// <param name="customDictionary8">optional object customDictionary8</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.SpellingSuggestions GetSpellingSuggestions(object customDictionary, object ignoreUppercase, object mainDictionary, object suggestionMode, object customDictionary2, object customDictionary3, object customDictionary4, object customDictionary5, object customDictionary6, object customDictionary7, object customDictionary8)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(customDictionary, ignoreUppercase, mainDictionary, suggestionMode, customDictionary2, customDictionary3, customDictionary4, customDictionary5, customDictionary6, customDictionary7, customDictionary8);
-			object returnItem = Invoker.MethodReturn(this, "GetSpellingSuggestions", paramsArray);
-			NetOffice.WordApi.SpellingSuggestions newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.SpellingSuggestions.LateBindingApiWrapperType) as NetOffice.WordApi.SpellingSuggestions;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.SpellingSuggestions>(this, "GetSpellingSuggestions", NetOffice.WordApi.SpellingSuggestions.LateBindingApiWrapperType, new object[]{ customDictionary, ignoreUppercase, mainDictionary, suggestionMode, customDictionary2, customDictionary3, customDictionary4, customDictionary5, customDictionary6, customDictionary7, customDictionary8 });
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196525.aspx
 		/// </summary>
-		/// <param name="customDictionary">optional object CustomDictionary</param>
-		/// <param name="ignoreUppercase">optional object IgnoreUppercase</param>
-		/// <param name="mainDictionary">optional object MainDictionary</param>
-		/// <param name="suggestionMode">optional object SuggestionMode</param>
-		/// <param name="customDictionary2">optional object CustomDictionary2</param>
-		/// <param name="customDictionary3">optional object CustomDictionary3</param>
-		/// <param name="customDictionary4">optional object CustomDictionary4</param>
-		/// <param name="customDictionary5">optional object CustomDictionary5</param>
-		/// <param name="customDictionary6">optional object CustomDictionary6</param>
-		/// <param name="customDictionary7">optional object CustomDictionary7</param>
-		/// <param name="customDictionary8">optional object CustomDictionary8</param>
-		/// <param name="customDictionary9">optional object CustomDictionary9</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff196525.aspx </remarks>
+		/// <param name="customDictionary">optional object customDictionary</param>
+		/// <param name="ignoreUppercase">optional object ignoreUppercase</param>
+		/// <param name="mainDictionary">optional object mainDictionary</param>
+		/// <param name="suggestionMode">optional object suggestionMode</param>
+		/// <param name="customDictionary2">optional object customDictionary2</param>
+		/// <param name="customDictionary3">optional object customDictionary3</param>
+		/// <param name="customDictionary4">optional object customDictionary4</param>
+		/// <param name="customDictionary5">optional object customDictionary5</param>
+		/// <param name="customDictionary6">optional object customDictionary6</param>
+		/// <param name="customDictionary7">optional object customDictionary7</param>
+		/// <param name="customDictionary8">optional object customDictionary8</param>
+		/// <param name="customDictionary9">optional object customDictionary9</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.SpellingSuggestions GetSpellingSuggestions(object customDictionary, object ignoreUppercase, object mainDictionary, object suggestionMode, object customDictionary2, object customDictionary3, object customDictionary4, object customDictionary5, object customDictionary6, object customDictionary7, object customDictionary8, object customDictionary9)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(customDictionary, ignoreUppercase, mainDictionary, suggestionMode, customDictionary2, customDictionary3, customDictionary4, customDictionary5, customDictionary6, customDictionary7, customDictionary8, customDictionary9);
-			object returnItem = Invoker.MethodReturn(this, "GetSpellingSuggestions", paramsArray);
-			NetOffice.WordApi.SpellingSuggestions newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.SpellingSuggestions.LateBindingApiWrapperType) as NetOffice.WordApi.SpellingSuggestions;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.SpellingSuggestions>(this, "GetSpellingSuggestions", NetOffice.WordApi.SpellingSuggestions.LateBindingApiWrapperType, new object[]{ customDictionary, ignoreUppercase, mainDictionary, suggestionMode, customDictionary2, customDictionary3, customDictionary4, customDictionary5, customDictionary6, customDictionary7, customDictionary8, customDictionary9 });
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff821256.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff821256.aspx </remarks>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void InsertParagraphBefore()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "InsertParagraphBefore", paramsArray);
+			 Factory.ExecuteMethod(this, "InsertParagraphBefore");
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195326.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff195326.aspx </remarks>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void NextSubdocument()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "NextSubdocument", paramsArray);
+			 Factory.ExecuteMethod(this, "NextSubdocument");
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195945.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff195945.aspx </remarks>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void PreviousSubdocument()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "PreviousSubdocument", paramsArray);
+			 Factory.ExecuteMethod(this, "PreviousSubdocument");
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192769.aspx
 		/// </summary>
-		/// <param name="conversionsMode">optional object ConversionsMode</param>
-		/// <param name="fastConversion">optional object FastConversion</param>
-		/// <param name="checkHangulEnding">optional object CheckHangulEnding</param>
-		/// <param name="enableRecentOrdering">optional object EnableRecentOrdering</param>
-		/// <param name="customDictionary">optional object CustomDictionary</param>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff192769.aspx </remarks>
+		/// <param name="conversionsMode">optional object conversionsMode</param>
+		/// <param name="fastConversion">optional object fastConversion</param>
+		/// <param name="checkHangulEnding">optional object checkHangulEnding</param>
+		/// <param name="enableRecentOrdering">optional object enableRecentOrdering</param>
+		/// <param name="customDictionary">optional object customDictionary</param>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void ConvertHangulAndHanja(object conversionsMode, object fastConversion, object checkHangulEnding, object enableRecentOrdering, object customDictionary)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(conversionsMode, fastConversion, checkHangulEnding, enableRecentOrdering, customDictionary);
-			Invoker.Method(this, "ConvertHangulAndHanja", paramsArray);
+			 Factory.ExecuteMethod(this, "ConvertHangulAndHanja", new object[]{ conversionsMode, fastConversion, checkHangulEnding, enableRecentOrdering, customDictionary });
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192769.aspx
 		/// </summary>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff192769.aspx </remarks>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void ConvertHangulAndHanja()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "ConvertHangulAndHanja", paramsArray);
+			 Factory.ExecuteMethod(this, "ConvertHangulAndHanja");
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192769.aspx
 		/// </summary>
-		/// <param name="conversionsMode">optional object ConversionsMode</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff192769.aspx </remarks>
+		/// <param name="conversionsMode">optional object conversionsMode</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void ConvertHangulAndHanja(object conversionsMode)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(conversionsMode);
-			Invoker.Method(this, "ConvertHangulAndHanja", paramsArray);
+			 Factory.ExecuteMethod(this, "ConvertHangulAndHanja", conversionsMode);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192769.aspx
 		/// </summary>
-		/// <param name="conversionsMode">optional object ConversionsMode</param>
-		/// <param name="fastConversion">optional object FastConversion</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff192769.aspx </remarks>
+		/// <param name="conversionsMode">optional object conversionsMode</param>
+		/// <param name="fastConversion">optional object fastConversion</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void ConvertHangulAndHanja(object conversionsMode, object fastConversion)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(conversionsMode, fastConversion);
-			Invoker.Method(this, "ConvertHangulAndHanja", paramsArray);
+			 Factory.ExecuteMethod(this, "ConvertHangulAndHanja", conversionsMode, fastConversion);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192769.aspx
 		/// </summary>
-		/// <param name="conversionsMode">optional object ConversionsMode</param>
-		/// <param name="fastConversion">optional object FastConversion</param>
-		/// <param name="checkHangulEnding">optional object CheckHangulEnding</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff192769.aspx </remarks>
+		/// <param name="conversionsMode">optional object conversionsMode</param>
+		/// <param name="fastConversion">optional object fastConversion</param>
+		/// <param name="checkHangulEnding">optional object checkHangulEnding</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void ConvertHangulAndHanja(object conversionsMode, object fastConversion, object checkHangulEnding)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(conversionsMode, fastConversion, checkHangulEnding);
-			Invoker.Method(this, "ConvertHangulAndHanja", paramsArray);
+			 Factory.ExecuteMethod(this, "ConvertHangulAndHanja", conversionsMode, fastConversion, checkHangulEnding);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192769.aspx
 		/// </summary>
-		/// <param name="conversionsMode">optional object ConversionsMode</param>
-		/// <param name="fastConversion">optional object FastConversion</param>
-		/// <param name="checkHangulEnding">optional object CheckHangulEnding</param>
-		/// <param name="enableRecentOrdering">optional object EnableRecentOrdering</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff192769.aspx </remarks>
+		/// <param name="conversionsMode">optional object conversionsMode</param>
+		/// <param name="fastConversion">optional object fastConversion</param>
+		/// <param name="checkHangulEnding">optional object checkHangulEnding</param>
+		/// <param name="enableRecentOrdering">optional object enableRecentOrdering</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void ConvertHangulAndHanja(object conversionsMode, object fastConversion, object checkHangulEnding, object enableRecentOrdering)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(conversionsMode, fastConversion, checkHangulEnding, enableRecentOrdering);
-			Invoker.Method(this, "ConvertHangulAndHanja", paramsArray);
+			 Factory.ExecuteMethod(this, "ConvertHangulAndHanja", conversionsMode, fastConversion, checkHangulEnding, enableRecentOrdering);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822962.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff822962.aspx </remarks>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void PasteAsNestedTable()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "PasteAsNestedTable", paramsArray);
+			 Factory.ExecuteMethod(this, "PasteAsNestedTable");
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff191734.aspx
 		/// </summary>
-		/// <param name="style">object Style</param>
-		/// <param name="symbol">optional object Symbol</param>
-		/// <param name="enclosedText">optional object EnclosedText</param>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff191734.aspx </remarks>
+		/// <param name="style">object style</param>
+		/// <param name="symbol">optional object symbol</param>
+		/// <param name="enclosedText">optional object enclosedText</param>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void ModifyEnclosure(object style, object symbol, object enclosedText)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(style, symbol, enclosedText);
-			Invoker.Method(this, "ModifyEnclosure", paramsArray);
+			 Factory.ExecuteMethod(this, "ModifyEnclosure", style, symbol, enclosedText);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff191734.aspx
 		/// </summary>
-		/// <param name="style">object Style</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff191734.aspx </remarks>
+		/// <param name="style">object style</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void ModifyEnclosure(object style)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(style);
-			Invoker.Method(this, "ModifyEnclosure", paramsArray);
+			 Factory.ExecuteMethod(this, "ModifyEnclosure", style);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff191734.aspx
 		/// </summary>
-		/// <param name="style">object Style</param>
-		/// <param name="symbol">optional object Symbol</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff191734.aspx </remarks>
+		/// <param name="style">object style</param>
+		/// <param name="symbol">optional object symbol</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void ModifyEnclosure(object style, object symbol)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(style, symbol);
-			Invoker.Method(this, "ModifyEnclosure", paramsArray);
+			 Factory.ExecuteMethod(this, "ModifyEnclosure", style, symbol);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840645.aspx
 		/// </summary>
-		/// <param name="text">string Text</param>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff840645.aspx </remarks>
+		/// <param name="text">string text</param>
 		/// <param name="alignment">optional NetOffice.WordApi.Enums.WdPhoneticGuideAlignmentType Alignment = -1</param>
 		/// <param name="raise">optional Int32 Raise = 0</param>
 		/// <param name="fontSize">optional Int32 FontSize = 0</param>
 		/// <param name="fontName">optional string FontName = </param>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void PhoneticGuide(string text, object alignment, object raise, object fontSize, object fontName)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(text, alignment, raise, fontSize, fontName);
-			Invoker.Method(this, "PhoneticGuide", paramsArray);
+			 Factory.ExecuteMethod(this, "PhoneticGuide", new object[]{ text, alignment, raise, fontSize, fontName });
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840645.aspx
 		/// </summary>
-		/// <param name="text">string Text</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff840645.aspx </remarks>
+		/// <param name="text">string text</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void PhoneticGuide(string text)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(text);
-			Invoker.Method(this, "PhoneticGuide", paramsArray);
+			 Factory.ExecuteMethod(this, "PhoneticGuide", text);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840645.aspx
 		/// </summary>
-		/// <param name="text">string Text</param>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff840645.aspx </remarks>
+		/// <param name="text">string text</param>
 		/// <param name="alignment">optional NetOffice.WordApi.Enums.WdPhoneticGuideAlignmentType Alignment = -1</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void PhoneticGuide(string text, object alignment)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(text, alignment);
-			Invoker.Method(this, "PhoneticGuide", paramsArray);
+			 Factory.ExecuteMethod(this, "PhoneticGuide", text, alignment);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840645.aspx
 		/// </summary>
-		/// <param name="text">string Text</param>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff840645.aspx </remarks>
+		/// <param name="text">string text</param>
 		/// <param name="alignment">optional NetOffice.WordApi.Enums.WdPhoneticGuideAlignmentType Alignment = -1</param>
 		/// <param name="raise">optional Int32 Raise = 0</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void PhoneticGuide(string text, object alignment, object raise)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(text, alignment, raise);
-			Invoker.Method(this, "PhoneticGuide", paramsArray);
+			 Factory.ExecuteMethod(this, "PhoneticGuide", text, alignment, raise);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840645.aspx
 		/// </summary>
-		/// <param name="text">string Text</param>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff840645.aspx </remarks>
+		/// <param name="text">string text</param>
 		/// <param name="alignment">optional NetOffice.WordApi.Enums.WdPhoneticGuideAlignmentType Alignment = -1</param>
 		/// <param name="raise">optional Int32 Raise = 0</param>
 		/// <param name="fontSize">optional Int32 FontSize = 0</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void PhoneticGuide(string text, object alignment, object raise, object fontSize)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(text, alignment, raise, fontSize);
-			Invoker.Method(this, "PhoneticGuide", paramsArray);
+			 Factory.ExecuteMethod(this, "PhoneticGuide", text, alignment, raise, fontSize);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192209.aspx
 		/// </summary>
-		/// <param name="dateTimeFormat">optional object DateTimeFormat</param>
-		/// <param name="insertAsField">optional object InsertAsField</param>
-		/// <param name="insertAsFullWidth">optional object InsertAsFullWidth</param>
-		/// <param name="dateLanguage">optional object DateLanguage</param>
-		/// <param name="calendarType">optional object CalendarType</param>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff192209.aspx </remarks>
+		/// <param name="dateTimeFormat">optional object dateTimeFormat</param>
+		/// <param name="insertAsField">optional object insertAsField</param>
+		/// <param name="insertAsFullWidth">optional object insertAsFullWidth</param>
+		/// <param name="dateLanguage">optional object dateLanguage</param>
+		/// <param name="calendarType">optional object calendarType</param>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void InsertDateTime(object dateTimeFormat, object insertAsField, object insertAsFullWidth, object dateLanguage, object calendarType)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(dateTimeFormat, insertAsField, insertAsFullWidth, dateLanguage, calendarType);
-			Invoker.Method(this, "InsertDateTime", paramsArray);
+			 Factory.ExecuteMethod(this, "InsertDateTime", new object[]{ dateTimeFormat, insertAsField, insertAsFullWidth, dateLanguage, calendarType });
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192209.aspx
 		/// </summary>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff192209.aspx </remarks>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void InsertDateTime()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "InsertDateTime", paramsArray);
+			 Factory.ExecuteMethod(this, "InsertDateTime");
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192209.aspx
 		/// </summary>
-		/// <param name="dateTimeFormat">optional object DateTimeFormat</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff192209.aspx </remarks>
+		/// <param name="dateTimeFormat">optional object dateTimeFormat</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void InsertDateTime(object dateTimeFormat)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(dateTimeFormat);
-			Invoker.Method(this, "InsertDateTime", paramsArray);
+			 Factory.ExecuteMethod(this, "InsertDateTime", dateTimeFormat);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192209.aspx
 		/// </summary>
-		/// <param name="dateTimeFormat">optional object DateTimeFormat</param>
-		/// <param name="insertAsField">optional object InsertAsField</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff192209.aspx </remarks>
+		/// <param name="dateTimeFormat">optional object dateTimeFormat</param>
+		/// <param name="insertAsField">optional object insertAsField</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void InsertDateTime(object dateTimeFormat, object insertAsField)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(dateTimeFormat, insertAsField);
-			Invoker.Method(this, "InsertDateTime", paramsArray);
+			 Factory.ExecuteMethod(this, "InsertDateTime", dateTimeFormat, insertAsField);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192209.aspx
 		/// </summary>
-		/// <param name="dateTimeFormat">optional object DateTimeFormat</param>
-		/// <param name="insertAsField">optional object InsertAsField</param>
-		/// <param name="insertAsFullWidth">optional object InsertAsFullWidth</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff192209.aspx </remarks>
+		/// <param name="dateTimeFormat">optional object dateTimeFormat</param>
+		/// <param name="insertAsField">optional object insertAsField</param>
+		/// <param name="insertAsFullWidth">optional object insertAsFullWidth</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void InsertDateTime(object dateTimeFormat, object insertAsField, object insertAsFullWidth)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(dateTimeFormat, insertAsField, insertAsFullWidth);
-			Invoker.Method(this, "InsertDateTime", paramsArray);
+			 Factory.ExecuteMethod(this, "InsertDateTime", dateTimeFormat, insertAsField, insertAsFullWidth);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192209.aspx
 		/// </summary>
-		/// <param name="dateTimeFormat">optional object DateTimeFormat</param>
-		/// <param name="insertAsField">optional object InsertAsField</param>
-		/// <param name="insertAsFullWidth">optional object InsertAsFullWidth</param>
-		/// <param name="dateLanguage">optional object DateLanguage</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff192209.aspx </remarks>
+		/// <param name="dateTimeFormat">optional object dateTimeFormat</param>
+		/// <param name="insertAsField">optional object insertAsField</param>
+		/// <param name="insertAsFullWidth">optional object insertAsFullWidth</param>
+		/// <param name="dateLanguage">optional object dateLanguage</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void InsertDateTime(object dateTimeFormat, object insertAsField, object insertAsFullWidth, object dateLanguage)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(dateTimeFormat, insertAsField, insertAsFullWidth, dateLanguage);
-			Invoker.Method(this, "InsertDateTime", paramsArray);
+			 Factory.ExecuteMethod(this, "InsertDateTime", dateTimeFormat, insertAsField, insertAsFullWidth, dateLanguage);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192159.aspx
 		/// </summary>
-		/// <param name="excludeHeader">optional object ExcludeHeader</param>
-		/// <param name="fieldNumber">optional object FieldNumber</param>
-		/// <param name="sortFieldType">optional object SortFieldType</param>
-		/// <param name="sortOrder">optional object SortOrder</param>
-		/// <param name="fieldNumber2">optional object FieldNumber2</param>
-		/// <param name="sortFieldType2">optional object SortFieldType2</param>
-		/// <param name="sortOrder2">optional object SortOrder2</param>
-		/// <param name="fieldNumber3">optional object FieldNumber3</param>
-		/// <param name="sortFieldType3">optional object SortFieldType3</param>
-		/// <param name="sortOrder3">optional object SortOrder3</param>
-		/// <param name="sortColumn">optional object SortColumn</param>
-		/// <param name="separator">optional object Separator</param>
-		/// <param name="caseSensitive">optional object CaseSensitive</param>
-		/// <param name="bidiSort">optional object BidiSort</param>
-		/// <param name="ignoreThe">optional object IgnoreThe</param>
-		/// <param name="ignoreKashida">optional object IgnoreKashida</param>
-		/// <param name="ignoreDiacritics">optional object IgnoreDiacritics</param>
-		/// <param name="ignoreHe">optional object IgnoreHe</param>
-		/// <param name="languageID">optional object LanguageID</param>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff192159.aspx </remarks>
+		/// <param name="excludeHeader">optional object excludeHeader</param>
+		/// <param name="fieldNumber">optional object fieldNumber</param>
+		/// <param name="sortFieldType">optional object sortFieldType</param>
+		/// <param name="sortOrder">optional object sortOrder</param>
+		/// <param name="fieldNumber2">optional object fieldNumber2</param>
+		/// <param name="sortFieldType2">optional object sortFieldType2</param>
+		/// <param name="sortOrder2">optional object sortOrder2</param>
+		/// <param name="fieldNumber3">optional object fieldNumber3</param>
+		/// <param name="sortFieldType3">optional object sortFieldType3</param>
+		/// <param name="sortOrder3">optional object sortOrder3</param>
+		/// <param name="sortColumn">optional object sortColumn</param>
+		/// <param name="separator">optional object separator</param>
+		/// <param name="caseSensitive">optional object caseSensitive</param>
+		/// <param name="bidiSort">optional object bidiSort</param>
+		/// <param name="ignoreThe">optional object ignoreThe</param>
+		/// <param name="ignoreKashida">optional object ignoreKashida</param>
+		/// <param name="ignoreDiacritics">optional object ignoreDiacritics</param>
+		/// <param name="ignoreHe">optional object ignoreHe</param>
+		/// <param name="languageID">optional object languageID</param>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void Sort(object excludeHeader, object fieldNumber, object sortFieldType, object sortOrder, object fieldNumber2, object sortFieldType2, object sortOrder2, object fieldNumber3, object sortFieldType3, object sortOrder3, object sortColumn, object separator, object caseSensitive, object bidiSort, object ignoreThe, object ignoreKashida, object ignoreDiacritics, object ignoreHe, object languageID)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(excludeHeader, fieldNumber, sortFieldType, sortOrder, fieldNumber2, sortFieldType2, sortOrder2, fieldNumber3, sortFieldType3, sortOrder3, sortColumn, separator, caseSensitive, bidiSort, ignoreThe, ignoreKashida, ignoreDiacritics, ignoreHe, languageID);
-			Invoker.Method(this, "Sort", paramsArray);
+			 Factory.ExecuteMethod(this, "Sort", new object[]{ excludeHeader, fieldNumber, sortFieldType, sortOrder, fieldNumber2, sortFieldType2, sortOrder2, fieldNumber3, sortFieldType3, sortOrder3, sortColumn, separator, caseSensitive, bidiSort, ignoreThe, ignoreKashida, ignoreDiacritics, ignoreHe, languageID });
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192159.aspx
 		/// </summary>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff192159.aspx </remarks>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void Sort()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "Sort", paramsArray);
+			 Factory.ExecuteMethod(this, "Sort");
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192159.aspx
 		/// </summary>
-		/// <param name="excludeHeader">optional object ExcludeHeader</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff192159.aspx </remarks>
+		/// <param name="excludeHeader">optional object excludeHeader</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void Sort(object excludeHeader)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(excludeHeader);
-			Invoker.Method(this, "Sort", paramsArray);
+			 Factory.ExecuteMethod(this, "Sort", excludeHeader);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192159.aspx
 		/// </summary>
-		/// <param name="excludeHeader">optional object ExcludeHeader</param>
-		/// <param name="fieldNumber">optional object FieldNumber</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff192159.aspx </remarks>
+		/// <param name="excludeHeader">optional object excludeHeader</param>
+		/// <param name="fieldNumber">optional object fieldNumber</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void Sort(object excludeHeader, object fieldNumber)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(excludeHeader, fieldNumber);
-			Invoker.Method(this, "Sort", paramsArray);
+			 Factory.ExecuteMethod(this, "Sort", excludeHeader, fieldNumber);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192159.aspx
 		/// </summary>
-		/// <param name="excludeHeader">optional object ExcludeHeader</param>
-		/// <param name="fieldNumber">optional object FieldNumber</param>
-		/// <param name="sortFieldType">optional object SortFieldType</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff192159.aspx </remarks>
+		/// <param name="excludeHeader">optional object excludeHeader</param>
+		/// <param name="fieldNumber">optional object fieldNumber</param>
+		/// <param name="sortFieldType">optional object sortFieldType</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void Sort(object excludeHeader, object fieldNumber, object sortFieldType)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(excludeHeader, fieldNumber, sortFieldType);
-			Invoker.Method(this, "Sort", paramsArray);
+			 Factory.ExecuteMethod(this, "Sort", excludeHeader, fieldNumber, sortFieldType);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192159.aspx
 		/// </summary>
-		/// <param name="excludeHeader">optional object ExcludeHeader</param>
-		/// <param name="fieldNumber">optional object FieldNumber</param>
-		/// <param name="sortFieldType">optional object SortFieldType</param>
-		/// <param name="sortOrder">optional object SortOrder</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff192159.aspx </remarks>
+		/// <param name="excludeHeader">optional object excludeHeader</param>
+		/// <param name="fieldNumber">optional object fieldNumber</param>
+		/// <param name="sortFieldType">optional object sortFieldType</param>
+		/// <param name="sortOrder">optional object sortOrder</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void Sort(object excludeHeader, object fieldNumber, object sortFieldType, object sortOrder)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(excludeHeader, fieldNumber, sortFieldType, sortOrder);
-			Invoker.Method(this, "Sort", paramsArray);
+			 Factory.ExecuteMethod(this, "Sort", excludeHeader, fieldNumber, sortFieldType, sortOrder);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192159.aspx
 		/// </summary>
-		/// <param name="excludeHeader">optional object ExcludeHeader</param>
-		/// <param name="fieldNumber">optional object FieldNumber</param>
-		/// <param name="sortFieldType">optional object SortFieldType</param>
-		/// <param name="sortOrder">optional object SortOrder</param>
-		/// <param name="fieldNumber2">optional object FieldNumber2</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff192159.aspx </remarks>
+		/// <param name="excludeHeader">optional object excludeHeader</param>
+		/// <param name="fieldNumber">optional object fieldNumber</param>
+		/// <param name="sortFieldType">optional object sortFieldType</param>
+		/// <param name="sortOrder">optional object sortOrder</param>
+		/// <param name="fieldNumber2">optional object fieldNumber2</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void Sort(object excludeHeader, object fieldNumber, object sortFieldType, object sortOrder, object fieldNumber2)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(excludeHeader, fieldNumber, sortFieldType, sortOrder, fieldNumber2);
-			Invoker.Method(this, "Sort", paramsArray);
+			 Factory.ExecuteMethod(this, "Sort", new object[]{ excludeHeader, fieldNumber, sortFieldType, sortOrder, fieldNumber2 });
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192159.aspx
 		/// </summary>
-		/// <param name="excludeHeader">optional object ExcludeHeader</param>
-		/// <param name="fieldNumber">optional object FieldNumber</param>
-		/// <param name="sortFieldType">optional object SortFieldType</param>
-		/// <param name="sortOrder">optional object SortOrder</param>
-		/// <param name="fieldNumber2">optional object FieldNumber2</param>
-		/// <param name="sortFieldType2">optional object SortFieldType2</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff192159.aspx </remarks>
+		/// <param name="excludeHeader">optional object excludeHeader</param>
+		/// <param name="fieldNumber">optional object fieldNumber</param>
+		/// <param name="sortFieldType">optional object sortFieldType</param>
+		/// <param name="sortOrder">optional object sortOrder</param>
+		/// <param name="fieldNumber2">optional object fieldNumber2</param>
+		/// <param name="sortFieldType2">optional object sortFieldType2</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void Sort(object excludeHeader, object fieldNumber, object sortFieldType, object sortOrder, object fieldNumber2, object sortFieldType2)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(excludeHeader, fieldNumber, sortFieldType, sortOrder, fieldNumber2, sortFieldType2);
-			Invoker.Method(this, "Sort", paramsArray);
+			 Factory.ExecuteMethod(this, "Sort", new object[]{ excludeHeader, fieldNumber, sortFieldType, sortOrder, fieldNumber2, sortFieldType2 });
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192159.aspx
 		/// </summary>
-		/// <param name="excludeHeader">optional object ExcludeHeader</param>
-		/// <param name="fieldNumber">optional object FieldNumber</param>
-		/// <param name="sortFieldType">optional object SortFieldType</param>
-		/// <param name="sortOrder">optional object SortOrder</param>
-		/// <param name="fieldNumber2">optional object FieldNumber2</param>
-		/// <param name="sortFieldType2">optional object SortFieldType2</param>
-		/// <param name="sortOrder2">optional object SortOrder2</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff192159.aspx </remarks>
+		/// <param name="excludeHeader">optional object excludeHeader</param>
+		/// <param name="fieldNumber">optional object fieldNumber</param>
+		/// <param name="sortFieldType">optional object sortFieldType</param>
+		/// <param name="sortOrder">optional object sortOrder</param>
+		/// <param name="fieldNumber2">optional object fieldNumber2</param>
+		/// <param name="sortFieldType2">optional object sortFieldType2</param>
+		/// <param name="sortOrder2">optional object sortOrder2</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void Sort(object excludeHeader, object fieldNumber, object sortFieldType, object sortOrder, object fieldNumber2, object sortFieldType2, object sortOrder2)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(excludeHeader, fieldNumber, sortFieldType, sortOrder, fieldNumber2, sortFieldType2, sortOrder2);
-			Invoker.Method(this, "Sort", paramsArray);
+			 Factory.ExecuteMethod(this, "Sort", new object[]{ excludeHeader, fieldNumber, sortFieldType, sortOrder, fieldNumber2, sortFieldType2, sortOrder2 });
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192159.aspx
 		/// </summary>
-		/// <param name="excludeHeader">optional object ExcludeHeader</param>
-		/// <param name="fieldNumber">optional object FieldNumber</param>
-		/// <param name="sortFieldType">optional object SortFieldType</param>
-		/// <param name="sortOrder">optional object SortOrder</param>
-		/// <param name="fieldNumber2">optional object FieldNumber2</param>
-		/// <param name="sortFieldType2">optional object SortFieldType2</param>
-		/// <param name="sortOrder2">optional object SortOrder2</param>
-		/// <param name="fieldNumber3">optional object FieldNumber3</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff192159.aspx </remarks>
+		/// <param name="excludeHeader">optional object excludeHeader</param>
+		/// <param name="fieldNumber">optional object fieldNumber</param>
+		/// <param name="sortFieldType">optional object sortFieldType</param>
+		/// <param name="sortOrder">optional object sortOrder</param>
+		/// <param name="fieldNumber2">optional object fieldNumber2</param>
+		/// <param name="sortFieldType2">optional object sortFieldType2</param>
+		/// <param name="sortOrder2">optional object sortOrder2</param>
+		/// <param name="fieldNumber3">optional object fieldNumber3</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void Sort(object excludeHeader, object fieldNumber, object sortFieldType, object sortOrder, object fieldNumber2, object sortFieldType2, object sortOrder2, object fieldNumber3)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(excludeHeader, fieldNumber, sortFieldType, sortOrder, fieldNumber2, sortFieldType2, sortOrder2, fieldNumber3);
-			Invoker.Method(this, "Sort", paramsArray);
+			 Factory.ExecuteMethod(this, "Sort", new object[]{ excludeHeader, fieldNumber, sortFieldType, sortOrder, fieldNumber2, sortFieldType2, sortOrder2, fieldNumber3 });
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192159.aspx
 		/// </summary>
-		/// <param name="excludeHeader">optional object ExcludeHeader</param>
-		/// <param name="fieldNumber">optional object FieldNumber</param>
-		/// <param name="sortFieldType">optional object SortFieldType</param>
-		/// <param name="sortOrder">optional object SortOrder</param>
-		/// <param name="fieldNumber2">optional object FieldNumber2</param>
-		/// <param name="sortFieldType2">optional object SortFieldType2</param>
-		/// <param name="sortOrder2">optional object SortOrder2</param>
-		/// <param name="fieldNumber3">optional object FieldNumber3</param>
-		/// <param name="sortFieldType3">optional object SortFieldType3</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff192159.aspx </remarks>
+		/// <param name="excludeHeader">optional object excludeHeader</param>
+		/// <param name="fieldNumber">optional object fieldNumber</param>
+		/// <param name="sortFieldType">optional object sortFieldType</param>
+		/// <param name="sortOrder">optional object sortOrder</param>
+		/// <param name="fieldNumber2">optional object fieldNumber2</param>
+		/// <param name="sortFieldType2">optional object sortFieldType2</param>
+		/// <param name="sortOrder2">optional object sortOrder2</param>
+		/// <param name="fieldNumber3">optional object fieldNumber3</param>
+		/// <param name="sortFieldType3">optional object sortFieldType3</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void Sort(object excludeHeader, object fieldNumber, object sortFieldType, object sortOrder, object fieldNumber2, object sortFieldType2, object sortOrder2, object fieldNumber3, object sortFieldType3)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(excludeHeader, fieldNumber, sortFieldType, sortOrder, fieldNumber2, sortFieldType2, sortOrder2, fieldNumber3, sortFieldType3);
-			Invoker.Method(this, "Sort", paramsArray);
+			 Factory.ExecuteMethod(this, "Sort", new object[]{ excludeHeader, fieldNumber, sortFieldType, sortOrder, fieldNumber2, sortFieldType2, sortOrder2, fieldNumber3, sortFieldType3 });
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192159.aspx
 		/// </summary>
-		/// <param name="excludeHeader">optional object ExcludeHeader</param>
-		/// <param name="fieldNumber">optional object FieldNumber</param>
-		/// <param name="sortFieldType">optional object SortFieldType</param>
-		/// <param name="sortOrder">optional object SortOrder</param>
-		/// <param name="fieldNumber2">optional object FieldNumber2</param>
-		/// <param name="sortFieldType2">optional object SortFieldType2</param>
-		/// <param name="sortOrder2">optional object SortOrder2</param>
-		/// <param name="fieldNumber3">optional object FieldNumber3</param>
-		/// <param name="sortFieldType3">optional object SortFieldType3</param>
-		/// <param name="sortOrder3">optional object SortOrder3</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff192159.aspx </remarks>
+		/// <param name="excludeHeader">optional object excludeHeader</param>
+		/// <param name="fieldNumber">optional object fieldNumber</param>
+		/// <param name="sortFieldType">optional object sortFieldType</param>
+		/// <param name="sortOrder">optional object sortOrder</param>
+		/// <param name="fieldNumber2">optional object fieldNumber2</param>
+		/// <param name="sortFieldType2">optional object sortFieldType2</param>
+		/// <param name="sortOrder2">optional object sortOrder2</param>
+		/// <param name="fieldNumber3">optional object fieldNumber3</param>
+		/// <param name="sortFieldType3">optional object sortFieldType3</param>
+		/// <param name="sortOrder3">optional object sortOrder3</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void Sort(object excludeHeader, object fieldNumber, object sortFieldType, object sortOrder, object fieldNumber2, object sortFieldType2, object sortOrder2, object fieldNumber3, object sortFieldType3, object sortOrder3)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(excludeHeader, fieldNumber, sortFieldType, sortOrder, fieldNumber2, sortFieldType2, sortOrder2, fieldNumber3, sortFieldType3, sortOrder3);
-			Invoker.Method(this, "Sort", paramsArray);
+			 Factory.ExecuteMethod(this, "Sort", new object[]{ excludeHeader, fieldNumber, sortFieldType, sortOrder, fieldNumber2, sortFieldType2, sortOrder2, fieldNumber3, sortFieldType3, sortOrder3 });
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192159.aspx
 		/// </summary>
-		/// <param name="excludeHeader">optional object ExcludeHeader</param>
-		/// <param name="fieldNumber">optional object FieldNumber</param>
-		/// <param name="sortFieldType">optional object SortFieldType</param>
-		/// <param name="sortOrder">optional object SortOrder</param>
-		/// <param name="fieldNumber2">optional object FieldNumber2</param>
-		/// <param name="sortFieldType2">optional object SortFieldType2</param>
-		/// <param name="sortOrder2">optional object SortOrder2</param>
-		/// <param name="fieldNumber3">optional object FieldNumber3</param>
-		/// <param name="sortFieldType3">optional object SortFieldType3</param>
-		/// <param name="sortOrder3">optional object SortOrder3</param>
-		/// <param name="sortColumn">optional object SortColumn</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff192159.aspx </remarks>
+		/// <param name="excludeHeader">optional object excludeHeader</param>
+		/// <param name="fieldNumber">optional object fieldNumber</param>
+		/// <param name="sortFieldType">optional object sortFieldType</param>
+		/// <param name="sortOrder">optional object sortOrder</param>
+		/// <param name="fieldNumber2">optional object fieldNumber2</param>
+		/// <param name="sortFieldType2">optional object sortFieldType2</param>
+		/// <param name="sortOrder2">optional object sortOrder2</param>
+		/// <param name="fieldNumber3">optional object fieldNumber3</param>
+		/// <param name="sortFieldType3">optional object sortFieldType3</param>
+		/// <param name="sortOrder3">optional object sortOrder3</param>
+		/// <param name="sortColumn">optional object sortColumn</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void Sort(object excludeHeader, object fieldNumber, object sortFieldType, object sortOrder, object fieldNumber2, object sortFieldType2, object sortOrder2, object fieldNumber3, object sortFieldType3, object sortOrder3, object sortColumn)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(excludeHeader, fieldNumber, sortFieldType, sortOrder, fieldNumber2, sortFieldType2, sortOrder2, fieldNumber3, sortFieldType3, sortOrder3, sortColumn);
-			Invoker.Method(this, "Sort", paramsArray);
+			 Factory.ExecuteMethod(this, "Sort", new object[]{ excludeHeader, fieldNumber, sortFieldType, sortOrder, fieldNumber2, sortFieldType2, sortOrder2, fieldNumber3, sortFieldType3, sortOrder3, sortColumn });
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192159.aspx
 		/// </summary>
-		/// <param name="excludeHeader">optional object ExcludeHeader</param>
-		/// <param name="fieldNumber">optional object FieldNumber</param>
-		/// <param name="sortFieldType">optional object SortFieldType</param>
-		/// <param name="sortOrder">optional object SortOrder</param>
-		/// <param name="fieldNumber2">optional object FieldNumber2</param>
-		/// <param name="sortFieldType2">optional object SortFieldType2</param>
-		/// <param name="sortOrder2">optional object SortOrder2</param>
-		/// <param name="fieldNumber3">optional object FieldNumber3</param>
-		/// <param name="sortFieldType3">optional object SortFieldType3</param>
-		/// <param name="sortOrder3">optional object SortOrder3</param>
-		/// <param name="sortColumn">optional object SortColumn</param>
-		/// <param name="separator">optional object Separator</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff192159.aspx </remarks>
+		/// <param name="excludeHeader">optional object excludeHeader</param>
+		/// <param name="fieldNumber">optional object fieldNumber</param>
+		/// <param name="sortFieldType">optional object sortFieldType</param>
+		/// <param name="sortOrder">optional object sortOrder</param>
+		/// <param name="fieldNumber2">optional object fieldNumber2</param>
+		/// <param name="sortFieldType2">optional object sortFieldType2</param>
+		/// <param name="sortOrder2">optional object sortOrder2</param>
+		/// <param name="fieldNumber3">optional object fieldNumber3</param>
+		/// <param name="sortFieldType3">optional object sortFieldType3</param>
+		/// <param name="sortOrder3">optional object sortOrder3</param>
+		/// <param name="sortColumn">optional object sortColumn</param>
+		/// <param name="separator">optional object separator</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void Sort(object excludeHeader, object fieldNumber, object sortFieldType, object sortOrder, object fieldNumber2, object sortFieldType2, object sortOrder2, object fieldNumber3, object sortFieldType3, object sortOrder3, object sortColumn, object separator)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(excludeHeader, fieldNumber, sortFieldType, sortOrder, fieldNumber2, sortFieldType2, sortOrder2, fieldNumber3, sortFieldType3, sortOrder3, sortColumn, separator);
-			Invoker.Method(this, "Sort", paramsArray);
+			 Factory.ExecuteMethod(this, "Sort", new object[]{ excludeHeader, fieldNumber, sortFieldType, sortOrder, fieldNumber2, sortFieldType2, sortOrder2, fieldNumber3, sortFieldType3, sortOrder3, sortColumn, separator });
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192159.aspx
 		/// </summary>
-		/// <param name="excludeHeader">optional object ExcludeHeader</param>
-		/// <param name="fieldNumber">optional object FieldNumber</param>
-		/// <param name="sortFieldType">optional object SortFieldType</param>
-		/// <param name="sortOrder">optional object SortOrder</param>
-		/// <param name="fieldNumber2">optional object FieldNumber2</param>
-		/// <param name="sortFieldType2">optional object SortFieldType2</param>
-		/// <param name="sortOrder2">optional object SortOrder2</param>
-		/// <param name="fieldNumber3">optional object FieldNumber3</param>
-		/// <param name="sortFieldType3">optional object SortFieldType3</param>
-		/// <param name="sortOrder3">optional object SortOrder3</param>
-		/// <param name="sortColumn">optional object SortColumn</param>
-		/// <param name="separator">optional object Separator</param>
-		/// <param name="caseSensitive">optional object CaseSensitive</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff192159.aspx </remarks>
+		/// <param name="excludeHeader">optional object excludeHeader</param>
+		/// <param name="fieldNumber">optional object fieldNumber</param>
+		/// <param name="sortFieldType">optional object sortFieldType</param>
+		/// <param name="sortOrder">optional object sortOrder</param>
+		/// <param name="fieldNumber2">optional object fieldNumber2</param>
+		/// <param name="sortFieldType2">optional object sortFieldType2</param>
+		/// <param name="sortOrder2">optional object sortOrder2</param>
+		/// <param name="fieldNumber3">optional object fieldNumber3</param>
+		/// <param name="sortFieldType3">optional object sortFieldType3</param>
+		/// <param name="sortOrder3">optional object sortOrder3</param>
+		/// <param name="sortColumn">optional object sortColumn</param>
+		/// <param name="separator">optional object separator</param>
+		/// <param name="caseSensitive">optional object caseSensitive</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void Sort(object excludeHeader, object fieldNumber, object sortFieldType, object sortOrder, object fieldNumber2, object sortFieldType2, object sortOrder2, object fieldNumber3, object sortFieldType3, object sortOrder3, object sortColumn, object separator, object caseSensitive)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(excludeHeader, fieldNumber, sortFieldType, sortOrder, fieldNumber2, sortFieldType2, sortOrder2, fieldNumber3, sortFieldType3, sortOrder3, sortColumn, separator, caseSensitive);
-			Invoker.Method(this, "Sort", paramsArray);
+			 Factory.ExecuteMethod(this, "Sort", new object[]{ excludeHeader, fieldNumber, sortFieldType, sortOrder, fieldNumber2, sortFieldType2, sortOrder2, fieldNumber3, sortFieldType3, sortOrder3, sortColumn, separator, caseSensitive });
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192159.aspx
 		/// </summary>
-		/// <param name="excludeHeader">optional object ExcludeHeader</param>
-		/// <param name="fieldNumber">optional object FieldNumber</param>
-		/// <param name="sortFieldType">optional object SortFieldType</param>
-		/// <param name="sortOrder">optional object SortOrder</param>
-		/// <param name="fieldNumber2">optional object FieldNumber2</param>
-		/// <param name="sortFieldType2">optional object SortFieldType2</param>
-		/// <param name="sortOrder2">optional object SortOrder2</param>
-		/// <param name="fieldNumber3">optional object FieldNumber3</param>
-		/// <param name="sortFieldType3">optional object SortFieldType3</param>
-		/// <param name="sortOrder3">optional object SortOrder3</param>
-		/// <param name="sortColumn">optional object SortColumn</param>
-		/// <param name="separator">optional object Separator</param>
-		/// <param name="caseSensitive">optional object CaseSensitive</param>
-		/// <param name="bidiSort">optional object BidiSort</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff192159.aspx </remarks>
+		/// <param name="excludeHeader">optional object excludeHeader</param>
+		/// <param name="fieldNumber">optional object fieldNumber</param>
+		/// <param name="sortFieldType">optional object sortFieldType</param>
+		/// <param name="sortOrder">optional object sortOrder</param>
+		/// <param name="fieldNumber2">optional object fieldNumber2</param>
+		/// <param name="sortFieldType2">optional object sortFieldType2</param>
+		/// <param name="sortOrder2">optional object sortOrder2</param>
+		/// <param name="fieldNumber3">optional object fieldNumber3</param>
+		/// <param name="sortFieldType3">optional object sortFieldType3</param>
+		/// <param name="sortOrder3">optional object sortOrder3</param>
+		/// <param name="sortColumn">optional object sortColumn</param>
+		/// <param name="separator">optional object separator</param>
+		/// <param name="caseSensitive">optional object caseSensitive</param>
+		/// <param name="bidiSort">optional object bidiSort</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void Sort(object excludeHeader, object fieldNumber, object sortFieldType, object sortOrder, object fieldNumber2, object sortFieldType2, object sortOrder2, object fieldNumber3, object sortFieldType3, object sortOrder3, object sortColumn, object separator, object caseSensitive, object bidiSort)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(excludeHeader, fieldNumber, sortFieldType, sortOrder, fieldNumber2, sortFieldType2, sortOrder2, fieldNumber3, sortFieldType3, sortOrder3, sortColumn, separator, caseSensitive, bidiSort);
-			Invoker.Method(this, "Sort", paramsArray);
+			 Factory.ExecuteMethod(this, "Sort", new object[]{ excludeHeader, fieldNumber, sortFieldType, sortOrder, fieldNumber2, sortFieldType2, sortOrder2, fieldNumber3, sortFieldType3, sortOrder3, sortColumn, separator, caseSensitive, bidiSort });
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192159.aspx
 		/// </summary>
-		/// <param name="excludeHeader">optional object ExcludeHeader</param>
-		/// <param name="fieldNumber">optional object FieldNumber</param>
-		/// <param name="sortFieldType">optional object SortFieldType</param>
-		/// <param name="sortOrder">optional object SortOrder</param>
-		/// <param name="fieldNumber2">optional object FieldNumber2</param>
-		/// <param name="sortFieldType2">optional object SortFieldType2</param>
-		/// <param name="sortOrder2">optional object SortOrder2</param>
-		/// <param name="fieldNumber3">optional object FieldNumber3</param>
-		/// <param name="sortFieldType3">optional object SortFieldType3</param>
-		/// <param name="sortOrder3">optional object SortOrder3</param>
-		/// <param name="sortColumn">optional object SortColumn</param>
-		/// <param name="separator">optional object Separator</param>
-		/// <param name="caseSensitive">optional object CaseSensitive</param>
-		/// <param name="bidiSort">optional object BidiSort</param>
-		/// <param name="ignoreThe">optional object IgnoreThe</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff192159.aspx </remarks>
+		/// <param name="excludeHeader">optional object excludeHeader</param>
+		/// <param name="fieldNumber">optional object fieldNumber</param>
+		/// <param name="sortFieldType">optional object sortFieldType</param>
+		/// <param name="sortOrder">optional object sortOrder</param>
+		/// <param name="fieldNumber2">optional object fieldNumber2</param>
+		/// <param name="sortFieldType2">optional object sortFieldType2</param>
+		/// <param name="sortOrder2">optional object sortOrder2</param>
+		/// <param name="fieldNumber3">optional object fieldNumber3</param>
+		/// <param name="sortFieldType3">optional object sortFieldType3</param>
+		/// <param name="sortOrder3">optional object sortOrder3</param>
+		/// <param name="sortColumn">optional object sortColumn</param>
+		/// <param name="separator">optional object separator</param>
+		/// <param name="caseSensitive">optional object caseSensitive</param>
+		/// <param name="bidiSort">optional object bidiSort</param>
+		/// <param name="ignoreThe">optional object ignoreThe</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void Sort(object excludeHeader, object fieldNumber, object sortFieldType, object sortOrder, object fieldNumber2, object sortFieldType2, object sortOrder2, object fieldNumber3, object sortFieldType3, object sortOrder3, object sortColumn, object separator, object caseSensitive, object bidiSort, object ignoreThe)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(excludeHeader, fieldNumber, sortFieldType, sortOrder, fieldNumber2, sortFieldType2, sortOrder2, fieldNumber3, sortFieldType3, sortOrder3, sortColumn, separator, caseSensitive, bidiSort, ignoreThe);
-			Invoker.Method(this, "Sort", paramsArray);
+			 Factory.ExecuteMethod(this, "Sort", new object[]{ excludeHeader, fieldNumber, sortFieldType, sortOrder, fieldNumber2, sortFieldType2, sortOrder2, fieldNumber3, sortFieldType3, sortOrder3, sortColumn, separator, caseSensitive, bidiSort, ignoreThe });
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192159.aspx
 		/// </summary>
-		/// <param name="excludeHeader">optional object ExcludeHeader</param>
-		/// <param name="fieldNumber">optional object FieldNumber</param>
-		/// <param name="sortFieldType">optional object SortFieldType</param>
-		/// <param name="sortOrder">optional object SortOrder</param>
-		/// <param name="fieldNumber2">optional object FieldNumber2</param>
-		/// <param name="sortFieldType2">optional object SortFieldType2</param>
-		/// <param name="sortOrder2">optional object SortOrder2</param>
-		/// <param name="fieldNumber3">optional object FieldNumber3</param>
-		/// <param name="sortFieldType3">optional object SortFieldType3</param>
-		/// <param name="sortOrder3">optional object SortOrder3</param>
-		/// <param name="sortColumn">optional object SortColumn</param>
-		/// <param name="separator">optional object Separator</param>
-		/// <param name="caseSensitive">optional object CaseSensitive</param>
-		/// <param name="bidiSort">optional object BidiSort</param>
-		/// <param name="ignoreThe">optional object IgnoreThe</param>
-		/// <param name="ignoreKashida">optional object IgnoreKashida</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff192159.aspx </remarks>
+		/// <param name="excludeHeader">optional object excludeHeader</param>
+		/// <param name="fieldNumber">optional object fieldNumber</param>
+		/// <param name="sortFieldType">optional object sortFieldType</param>
+		/// <param name="sortOrder">optional object sortOrder</param>
+		/// <param name="fieldNumber2">optional object fieldNumber2</param>
+		/// <param name="sortFieldType2">optional object sortFieldType2</param>
+		/// <param name="sortOrder2">optional object sortOrder2</param>
+		/// <param name="fieldNumber3">optional object fieldNumber3</param>
+		/// <param name="sortFieldType3">optional object sortFieldType3</param>
+		/// <param name="sortOrder3">optional object sortOrder3</param>
+		/// <param name="sortColumn">optional object sortColumn</param>
+		/// <param name="separator">optional object separator</param>
+		/// <param name="caseSensitive">optional object caseSensitive</param>
+		/// <param name="bidiSort">optional object bidiSort</param>
+		/// <param name="ignoreThe">optional object ignoreThe</param>
+		/// <param name="ignoreKashida">optional object ignoreKashida</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void Sort(object excludeHeader, object fieldNumber, object sortFieldType, object sortOrder, object fieldNumber2, object sortFieldType2, object sortOrder2, object fieldNumber3, object sortFieldType3, object sortOrder3, object sortColumn, object separator, object caseSensitive, object bidiSort, object ignoreThe, object ignoreKashida)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(excludeHeader, fieldNumber, sortFieldType, sortOrder, fieldNumber2, sortFieldType2, sortOrder2, fieldNumber3, sortFieldType3, sortOrder3, sortColumn, separator, caseSensitive, bidiSort, ignoreThe, ignoreKashida);
-			Invoker.Method(this, "Sort", paramsArray);
+			 Factory.ExecuteMethod(this, "Sort", new object[]{ excludeHeader, fieldNumber, sortFieldType, sortOrder, fieldNumber2, sortFieldType2, sortOrder2, fieldNumber3, sortFieldType3, sortOrder3, sortColumn, separator, caseSensitive, bidiSort, ignoreThe, ignoreKashida });
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192159.aspx
 		/// </summary>
-		/// <param name="excludeHeader">optional object ExcludeHeader</param>
-		/// <param name="fieldNumber">optional object FieldNumber</param>
-		/// <param name="sortFieldType">optional object SortFieldType</param>
-		/// <param name="sortOrder">optional object SortOrder</param>
-		/// <param name="fieldNumber2">optional object FieldNumber2</param>
-		/// <param name="sortFieldType2">optional object SortFieldType2</param>
-		/// <param name="sortOrder2">optional object SortOrder2</param>
-		/// <param name="fieldNumber3">optional object FieldNumber3</param>
-		/// <param name="sortFieldType3">optional object SortFieldType3</param>
-		/// <param name="sortOrder3">optional object SortOrder3</param>
-		/// <param name="sortColumn">optional object SortColumn</param>
-		/// <param name="separator">optional object Separator</param>
-		/// <param name="caseSensitive">optional object CaseSensitive</param>
-		/// <param name="bidiSort">optional object BidiSort</param>
-		/// <param name="ignoreThe">optional object IgnoreThe</param>
-		/// <param name="ignoreKashida">optional object IgnoreKashida</param>
-		/// <param name="ignoreDiacritics">optional object IgnoreDiacritics</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff192159.aspx </remarks>
+		/// <param name="excludeHeader">optional object excludeHeader</param>
+		/// <param name="fieldNumber">optional object fieldNumber</param>
+		/// <param name="sortFieldType">optional object sortFieldType</param>
+		/// <param name="sortOrder">optional object sortOrder</param>
+		/// <param name="fieldNumber2">optional object fieldNumber2</param>
+		/// <param name="sortFieldType2">optional object sortFieldType2</param>
+		/// <param name="sortOrder2">optional object sortOrder2</param>
+		/// <param name="fieldNumber3">optional object fieldNumber3</param>
+		/// <param name="sortFieldType3">optional object sortFieldType3</param>
+		/// <param name="sortOrder3">optional object sortOrder3</param>
+		/// <param name="sortColumn">optional object sortColumn</param>
+		/// <param name="separator">optional object separator</param>
+		/// <param name="caseSensitive">optional object caseSensitive</param>
+		/// <param name="bidiSort">optional object bidiSort</param>
+		/// <param name="ignoreThe">optional object ignoreThe</param>
+		/// <param name="ignoreKashida">optional object ignoreKashida</param>
+		/// <param name="ignoreDiacritics">optional object ignoreDiacritics</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void Sort(object excludeHeader, object fieldNumber, object sortFieldType, object sortOrder, object fieldNumber2, object sortFieldType2, object sortOrder2, object fieldNumber3, object sortFieldType3, object sortOrder3, object sortColumn, object separator, object caseSensitive, object bidiSort, object ignoreThe, object ignoreKashida, object ignoreDiacritics)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(excludeHeader, fieldNumber, sortFieldType, sortOrder, fieldNumber2, sortFieldType2, sortOrder2, fieldNumber3, sortFieldType3, sortOrder3, sortColumn, separator, caseSensitive, bidiSort, ignoreThe, ignoreKashida, ignoreDiacritics);
-			Invoker.Method(this, "Sort", paramsArray);
+			 Factory.ExecuteMethod(this, "Sort", new object[]{ excludeHeader, fieldNumber, sortFieldType, sortOrder, fieldNumber2, sortFieldType2, sortOrder2, fieldNumber3, sortFieldType3, sortOrder3, sortColumn, separator, caseSensitive, bidiSort, ignoreThe, ignoreKashida, ignoreDiacritics });
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192159.aspx
 		/// </summary>
-		/// <param name="excludeHeader">optional object ExcludeHeader</param>
-		/// <param name="fieldNumber">optional object FieldNumber</param>
-		/// <param name="sortFieldType">optional object SortFieldType</param>
-		/// <param name="sortOrder">optional object SortOrder</param>
-		/// <param name="fieldNumber2">optional object FieldNumber2</param>
-		/// <param name="sortFieldType2">optional object SortFieldType2</param>
-		/// <param name="sortOrder2">optional object SortOrder2</param>
-		/// <param name="fieldNumber3">optional object FieldNumber3</param>
-		/// <param name="sortFieldType3">optional object SortFieldType3</param>
-		/// <param name="sortOrder3">optional object SortOrder3</param>
-		/// <param name="sortColumn">optional object SortColumn</param>
-		/// <param name="separator">optional object Separator</param>
-		/// <param name="caseSensitive">optional object CaseSensitive</param>
-		/// <param name="bidiSort">optional object BidiSort</param>
-		/// <param name="ignoreThe">optional object IgnoreThe</param>
-		/// <param name="ignoreKashida">optional object IgnoreKashida</param>
-		/// <param name="ignoreDiacritics">optional object IgnoreDiacritics</param>
-		/// <param name="ignoreHe">optional object IgnoreHe</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff192159.aspx </remarks>
+		/// <param name="excludeHeader">optional object excludeHeader</param>
+		/// <param name="fieldNumber">optional object fieldNumber</param>
+		/// <param name="sortFieldType">optional object sortFieldType</param>
+		/// <param name="sortOrder">optional object sortOrder</param>
+		/// <param name="fieldNumber2">optional object fieldNumber2</param>
+		/// <param name="sortFieldType2">optional object sortFieldType2</param>
+		/// <param name="sortOrder2">optional object sortOrder2</param>
+		/// <param name="fieldNumber3">optional object fieldNumber3</param>
+		/// <param name="sortFieldType3">optional object sortFieldType3</param>
+		/// <param name="sortOrder3">optional object sortOrder3</param>
+		/// <param name="sortColumn">optional object sortColumn</param>
+		/// <param name="separator">optional object separator</param>
+		/// <param name="caseSensitive">optional object caseSensitive</param>
+		/// <param name="bidiSort">optional object bidiSort</param>
+		/// <param name="ignoreThe">optional object ignoreThe</param>
+		/// <param name="ignoreKashida">optional object ignoreKashida</param>
+		/// <param name="ignoreDiacritics">optional object ignoreDiacritics</param>
+		/// <param name="ignoreHe">optional object ignoreHe</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void Sort(object excludeHeader, object fieldNumber, object sortFieldType, object sortOrder, object fieldNumber2, object sortFieldType2, object sortOrder2, object fieldNumber3, object sortFieldType3, object sortOrder3, object sortColumn, object separator, object caseSensitive, object bidiSort, object ignoreThe, object ignoreKashida, object ignoreDiacritics, object ignoreHe)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(excludeHeader, fieldNumber, sortFieldType, sortOrder, fieldNumber2, sortFieldType2, sortOrder2, fieldNumber3, sortFieldType3, sortOrder3, sortColumn, separator, caseSensitive, bidiSort, ignoreThe, ignoreKashida, ignoreDiacritics, ignoreHe);
-			Invoker.Method(this, "Sort", paramsArray);
+			 Factory.ExecuteMethod(this, "Sort", new object[]{ excludeHeader, fieldNumber, sortFieldType, sortOrder, fieldNumber2, sortFieldType2, sortOrder2, fieldNumber3, sortFieldType3, sortOrder3, sortColumn, separator, caseSensitive, bidiSort, ignoreThe, ignoreKashida, ignoreDiacritics, ignoreHe });
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195289.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff195289.aspx </remarks>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void DetectLanguage()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "DetectLanguage", paramsArray);
+			 Factory.ExecuteMethod(this, "DetectLanguage");
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835980.aspx
 		/// </summary>
-		/// <param name="separator">optional object Separator</param>
-		/// <param name="numRows">optional object NumRows</param>
-		/// <param name="numColumns">optional object NumColumns</param>
-		/// <param name="initialColumnWidth">optional object InitialColumnWidth</param>
-		/// <param name="format">optional object Format</param>
-		/// <param name="applyBorders">optional object ApplyBorders</param>
-		/// <param name="applyShading">optional object ApplyShading</param>
-		/// <param name="applyFont">optional object ApplyFont</param>
-		/// <param name="applyColor">optional object ApplyColor</param>
-		/// <param name="applyHeadingRows">optional object ApplyHeadingRows</param>
-		/// <param name="applyLastRow">optional object ApplyLastRow</param>
-		/// <param name="applyFirstColumn">optional object ApplyFirstColumn</param>
-		/// <param name="applyLastColumn">optional object ApplyLastColumn</param>
-		/// <param name="autoFit">optional object AutoFit</param>
-		/// <param name="autoFitBehavior">optional object AutoFitBehavior</param>
-		/// <param name="defaultTableBehavior">optional object DefaultTableBehavior</param>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835980.aspx </remarks>
+		/// <param name="separator">optional object separator</param>
+		/// <param name="numRows">optional object numRows</param>
+		/// <param name="numColumns">optional object numColumns</param>
+		/// <param name="initialColumnWidth">optional object initialColumnWidth</param>
+		/// <param name="format">optional object format</param>
+		/// <param name="applyBorders">optional object applyBorders</param>
+		/// <param name="applyShading">optional object applyShading</param>
+		/// <param name="applyFont">optional object applyFont</param>
+		/// <param name="applyColor">optional object applyColor</param>
+		/// <param name="applyHeadingRows">optional object applyHeadingRows</param>
+		/// <param name="applyLastRow">optional object applyLastRow</param>
+		/// <param name="applyFirstColumn">optional object applyFirstColumn</param>
+		/// <param name="applyLastColumn">optional object applyLastColumn</param>
+		/// <param name="autoFit">optional object autoFit</param>
+		/// <param name="autoFitBehavior">optional object autoFitBehavior</param>
+		/// <param name="defaultTableBehavior">optional object defaultTableBehavior</param>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.Table ConvertToTable(object separator, object numRows, object numColumns, object initialColumnWidth, object format, object applyBorders, object applyShading, object applyFont, object applyColor, object applyHeadingRows, object applyLastRow, object applyFirstColumn, object applyLastColumn, object autoFit, object autoFitBehavior, object defaultTableBehavior)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(separator, numRows, numColumns, initialColumnWidth, format, applyBorders, applyShading, applyFont, applyColor, applyHeadingRows, applyLastRow, applyFirstColumn, applyLastColumn, autoFit, autoFitBehavior, defaultTableBehavior);
-			object returnItem = Invoker.MethodReturn(this, "ConvertToTable", paramsArray);
-			NetOffice.WordApi.Table newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Table.LateBindingApiWrapperType) as NetOffice.WordApi.Table;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Table>(this, "ConvertToTable", NetOffice.WordApi.Table.LateBindingApiWrapperType, new object[]{ separator, numRows, numColumns, initialColumnWidth, format, applyBorders, applyShading, applyFont, applyColor, applyHeadingRows, applyLastRow, applyFirstColumn, applyLastColumn, autoFit, autoFitBehavior, defaultTableBehavior });
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835980.aspx
 		/// </summary>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835980.aspx </remarks>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.Table ConvertToTable()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "ConvertToTable", paramsArray);
-			NetOffice.WordApi.Table newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Table.LateBindingApiWrapperType) as NetOffice.WordApi.Table;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Table>(this, "ConvertToTable", NetOffice.WordApi.Table.LateBindingApiWrapperType);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835980.aspx
 		/// </summary>
-		/// <param name="separator">optional object Separator</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835980.aspx </remarks>
+		/// <param name="separator">optional object separator</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.Table ConvertToTable(object separator)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(separator);
-			object returnItem = Invoker.MethodReturn(this, "ConvertToTable", paramsArray);
-			NetOffice.WordApi.Table newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Table.LateBindingApiWrapperType) as NetOffice.WordApi.Table;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Table>(this, "ConvertToTable", NetOffice.WordApi.Table.LateBindingApiWrapperType, separator);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835980.aspx
 		/// </summary>
-		/// <param name="separator">optional object Separator</param>
-		/// <param name="numRows">optional object NumRows</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835980.aspx </remarks>
+		/// <param name="separator">optional object separator</param>
+		/// <param name="numRows">optional object numRows</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.Table ConvertToTable(object separator, object numRows)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(separator, numRows);
-			object returnItem = Invoker.MethodReturn(this, "ConvertToTable", paramsArray);
-			NetOffice.WordApi.Table newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Table.LateBindingApiWrapperType) as NetOffice.WordApi.Table;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Table>(this, "ConvertToTable", NetOffice.WordApi.Table.LateBindingApiWrapperType, separator, numRows);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835980.aspx
 		/// </summary>
-		/// <param name="separator">optional object Separator</param>
-		/// <param name="numRows">optional object NumRows</param>
-		/// <param name="numColumns">optional object NumColumns</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835980.aspx </remarks>
+		/// <param name="separator">optional object separator</param>
+		/// <param name="numRows">optional object numRows</param>
+		/// <param name="numColumns">optional object numColumns</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.Table ConvertToTable(object separator, object numRows, object numColumns)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(separator, numRows, numColumns);
-			object returnItem = Invoker.MethodReturn(this, "ConvertToTable", paramsArray);
-			NetOffice.WordApi.Table newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Table.LateBindingApiWrapperType) as NetOffice.WordApi.Table;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Table>(this, "ConvertToTable", NetOffice.WordApi.Table.LateBindingApiWrapperType, separator, numRows, numColumns);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835980.aspx
 		/// </summary>
-		/// <param name="separator">optional object Separator</param>
-		/// <param name="numRows">optional object NumRows</param>
-		/// <param name="numColumns">optional object NumColumns</param>
-		/// <param name="initialColumnWidth">optional object InitialColumnWidth</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835980.aspx </remarks>
+		/// <param name="separator">optional object separator</param>
+		/// <param name="numRows">optional object numRows</param>
+		/// <param name="numColumns">optional object numColumns</param>
+		/// <param name="initialColumnWidth">optional object initialColumnWidth</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.Table ConvertToTable(object separator, object numRows, object numColumns, object initialColumnWidth)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(separator, numRows, numColumns, initialColumnWidth);
-			object returnItem = Invoker.MethodReturn(this, "ConvertToTable", paramsArray);
-			NetOffice.WordApi.Table newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Table.LateBindingApiWrapperType) as NetOffice.WordApi.Table;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Table>(this, "ConvertToTable", NetOffice.WordApi.Table.LateBindingApiWrapperType, separator, numRows, numColumns, initialColumnWidth);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835980.aspx
 		/// </summary>
-		/// <param name="separator">optional object Separator</param>
-		/// <param name="numRows">optional object NumRows</param>
-		/// <param name="numColumns">optional object NumColumns</param>
-		/// <param name="initialColumnWidth">optional object InitialColumnWidth</param>
-		/// <param name="format">optional object Format</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835980.aspx </remarks>
+		/// <param name="separator">optional object separator</param>
+		/// <param name="numRows">optional object numRows</param>
+		/// <param name="numColumns">optional object numColumns</param>
+		/// <param name="initialColumnWidth">optional object initialColumnWidth</param>
+		/// <param name="format">optional object format</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.Table ConvertToTable(object separator, object numRows, object numColumns, object initialColumnWidth, object format)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(separator, numRows, numColumns, initialColumnWidth, format);
-			object returnItem = Invoker.MethodReturn(this, "ConvertToTable", paramsArray);
-			NetOffice.WordApi.Table newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Table.LateBindingApiWrapperType) as NetOffice.WordApi.Table;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Table>(this, "ConvertToTable", NetOffice.WordApi.Table.LateBindingApiWrapperType, new object[]{ separator, numRows, numColumns, initialColumnWidth, format });
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835980.aspx
 		/// </summary>
-		/// <param name="separator">optional object Separator</param>
-		/// <param name="numRows">optional object NumRows</param>
-		/// <param name="numColumns">optional object NumColumns</param>
-		/// <param name="initialColumnWidth">optional object InitialColumnWidth</param>
-		/// <param name="format">optional object Format</param>
-		/// <param name="applyBorders">optional object ApplyBorders</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835980.aspx </remarks>
+		/// <param name="separator">optional object separator</param>
+		/// <param name="numRows">optional object numRows</param>
+		/// <param name="numColumns">optional object numColumns</param>
+		/// <param name="initialColumnWidth">optional object initialColumnWidth</param>
+		/// <param name="format">optional object format</param>
+		/// <param name="applyBorders">optional object applyBorders</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.Table ConvertToTable(object separator, object numRows, object numColumns, object initialColumnWidth, object format, object applyBorders)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(separator, numRows, numColumns, initialColumnWidth, format, applyBorders);
-			object returnItem = Invoker.MethodReturn(this, "ConvertToTable", paramsArray);
-			NetOffice.WordApi.Table newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Table.LateBindingApiWrapperType) as NetOffice.WordApi.Table;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Table>(this, "ConvertToTable", NetOffice.WordApi.Table.LateBindingApiWrapperType, new object[]{ separator, numRows, numColumns, initialColumnWidth, format, applyBorders });
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835980.aspx
 		/// </summary>
-		/// <param name="separator">optional object Separator</param>
-		/// <param name="numRows">optional object NumRows</param>
-		/// <param name="numColumns">optional object NumColumns</param>
-		/// <param name="initialColumnWidth">optional object InitialColumnWidth</param>
-		/// <param name="format">optional object Format</param>
-		/// <param name="applyBorders">optional object ApplyBorders</param>
-		/// <param name="applyShading">optional object ApplyShading</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835980.aspx </remarks>
+		/// <param name="separator">optional object separator</param>
+		/// <param name="numRows">optional object numRows</param>
+		/// <param name="numColumns">optional object numColumns</param>
+		/// <param name="initialColumnWidth">optional object initialColumnWidth</param>
+		/// <param name="format">optional object format</param>
+		/// <param name="applyBorders">optional object applyBorders</param>
+		/// <param name="applyShading">optional object applyShading</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.Table ConvertToTable(object separator, object numRows, object numColumns, object initialColumnWidth, object format, object applyBorders, object applyShading)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(separator, numRows, numColumns, initialColumnWidth, format, applyBorders, applyShading);
-			object returnItem = Invoker.MethodReturn(this, "ConvertToTable", paramsArray);
-			NetOffice.WordApi.Table newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Table.LateBindingApiWrapperType) as NetOffice.WordApi.Table;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Table>(this, "ConvertToTable", NetOffice.WordApi.Table.LateBindingApiWrapperType, new object[]{ separator, numRows, numColumns, initialColumnWidth, format, applyBorders, applyShading });
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835980.aspx
 		/// </summary>
-		/// <param name="separator">optional object Separator</param>
-		/// <param name="numRows">optional object NumRows</param>
-		/// <param name="numColumns">optional object NumColumns</param>
-		/// <param name="initialColumnWidth">optional object InitialColumnWidth</param>
-		/// <param name="format">optional object Format</param>
-		/// <param name="applyBorders">optional object ApplyBorders</param>
-		/// <param name="applyShading">optional object ApplyShading</param>
-		/// <param name="applyFont">optional object ApplyFont</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835980.aspx </remarks>
+		/// <param name="separator">optional object separator</param>
+		/// <param name="numRows">optional object numRows</param>
+		/// <param name="numColumns">optional object numColumns</param>
+		/// <param name="initialColumnWidth">optional object initialColumnWidth</param>
+		/// <param name="format">optional object format</param>
+		/// <param name="applyBorders">optional object applyBorders</param>
+		/// <param name="applyShading">optional object applyShading</param>
+		/// <param name="applyFont">optional object applyFont</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.Table ConvertToTable(object separator, object numRows, object numColumns, object initialColumnWidth, object format, object applyBorders, object applyShading, object applyFont)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(separator, numRows, numColumns, initialColumnWidth, format, applyBorders, applyShading, applyFont);
-			object returnItem = Invoker.MethodReturn(this, "ConvertToTable", paramsArray);
-			NetOffice.WordApi.Table newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Table.LateBindingApiWrapperType) as NetOffice.WordApi.Table;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Table>(this, "ConvertToTable", NetOffice.WordApi.Table.LateBindingApiWrapperType, new object[]{ separator, numRows, numColumns, initialColumnWidth, format, applyBorders, applyShading, applyFont });
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835980.aspx
 		/// </summary>
-		/// <param name="separator">optional object Separator</param>
-		/// <param name="numRows">optional object NumRows</param>
-		/// <param name="numColumns">optional object NumColumns</param>
-		/// <param name="initialColumnWidth">optional object InitialColumnWidth</param>
-		/// <param name="format">optional object Format</param>
-		/// <param name="applyBorders">optional object ApplyBorders</param>
-		/// <param name="applyShading">optional object ApplyShading</param>
-		/// <param name="applyFont">optional object ApplyFont</param>
-		/// <param name="applyColor">optional object ApplyColor</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835980.aspx </remarks>
+		/// <param name="separator">optional object separator</param>
+		/// <param name="numRows">optional object numRows</param>
+		/// <param name="numColumns">optional object numColumns</param>
+		/// <param name="initialColumnWidth">optional object initialColumnWidth</param>
+		/// <param name="format">optional object format</param>
+		/// <param name="applyBorders">optional object applyBorders</param>
+		/// <param name="applyShading">optional object applyShading</param>
+		/// <param name="applyFont">optional object applyFont</param>
+		/// <param name="applyColor">optional object applyColor</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.Table ConvertToTable(object separator, object numRows, object numColumns, object initialColumnWidth, object format, object applyBorders, object applyShading, object applyFont, object applyColor)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(separator, numRows, numColumns, initialColumnWidth, format, applyBorders, applyShading, applyFont, applyColor);
-			object returnItem = Invoker.MethodReturn(this, "ConvertToTable", paramsArray);
-			NetOffice.WordApi.Table newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Table.LateBindingApiWrapperType) as NetOffice.WordApi.Table;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Table>(this, "ConvertToTable", NetOffice.WordApi.Table.LateBindingApiWrapperType, new object[]{ separator, numRows, numColumns, initialColumnWidth, format, applyBorders, applyShading, applyFont, applyColor });
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835980.aspx
 		/// </summary>
-		/// <param name="separator">optional object Separator</param>
-		/// <param name="numRows">optional object NumRows</param>
-		/// <param name="numColumns">optional object NumColumns</param>
-		/// <param name="initialColumnWidth">optional object InitialColumnWidth</param>
-		/// <param name="format">optional object Format</param>
-		/// <param name="applyBorders">optional object ApplyBorders</param>
-		/// <param name="applyShading">optional object ApplyShading</param>
-		/// <param name="applyFont">optional object ApplyFont</param>
-		/// <param name="applyColor">optional object ApplyColor</param>
-		/// <param name="applyHeadingRows">optional object ApplyHeadingRows</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835980.aspx </remarks>
+		/// <param name="separator">optional object separator</param>
+		/// <param name="numRows">optional object numRows</param>
+		/// <param name="numColumns">optional object numColumns</param>
+		/// <param name="initialColumnWidth">optional object initialColumnWidth</param>
+		/// <param name="format">optional object format</param>
+		/// <param name="applyBorders">optional object applyBorders</param>
+		/// <param name="applyShading">optional object applyShading</param>
+		/// <param name="applyFont">optional object applyFont</param>
+		/// <param name="applyColor">optional object applyColor</param>
+		/// <param name="applyHeadingRows">optional object applyHeadingRows</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.Table ConvertToTable(object separator, object numRows, object numColumns, object initialColumnWidth, object format, object applyBorders, object applyShading, object applyFont, object applyColor, object applyHeadingRows)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(separator, numRows, numColumns, initialColumnWidth, format, applyBorders, applyShading, applyFont, applyColor, applyHeadingRows);
-			object returnItem = Invoker.MethodReturn(this, "ConvertToTable", paramsArray);
-			NetOffice.WordApi.Table newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Table.LateBindingApiWrapperType) as NetOffice.WordApi.Table;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Table>(this, "ConvertToTable", NetOffice.WordApi.Table.LateBindingApiWrapperType, new object[]{ separator, numRows, numColumns, initialColumnWidth, format, applyBorders, applyShading, applyFont, applyColor, applyHeadingRows });
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835980.aspx
 		/// </summary>
-		/// <param name="separator">optional object Separator</param>
-		/// <param name="numRows">optional object NumRows</param>
-		/// <param name="numColumns">optional object NumColumns</param>
-		/// <param name="initialColumnWidth">optional object InitialColumnWidth</param>
-		/// <param name="format">optional object Format</param>
-		/// <param name="applyBorders">optional object ApplyBorders</param>
-		/// <param name="applyShading">optional object ApplyShading</param>
-		/// <param name="applyFont">optional object ApplyFont</param>
-		/// <param name="applyColor">optional object ApplyColor</param>
-		/// <param name="applyHeadingRows">optional object ApplyHeadingRows</param>
-		/// <param name="applyLastRow">optional object ApplyLastRow</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835980.aspx </remarks>
+		/// <param name="separator">optional object separator</param>
+		/// <param name="numRows">optional object numRows</param>
+		/// <param name="numColumns">optional object numColumns</param>
+		/// <param name="initialColumnWidth">optional object initialColumnWidth</param>
+		/// <param name="format">optional object format</param>
+		/// <param name="applyBorders">optional object applyBorders</param>
+		/// <param name="applyShading">optional object applyShading</param>
+		/// <param name="applyFont">optional object applyFont</param>
+		/// <param name="applyColor">optional object applyColor</param>
+		/// <param name="applyHeadingRows">optional object applyHeadingRows</param>
+		/// <param name="applyLastRow">optional object applyLastRow</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.Table ConvertToTable(object separator, object numRows, object numColumns, object initialColumnWidth, object format, object applyBorders, object applyShading, object applyFont, object applyColor, object applyHeadingRows, object applyLastRow)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(separator, numRows, numColumns, initialColumnWidth, format, applyBorders, applyShading, applyFont, applyColor, applyHeadingRows, applyLastRow);
-			object returnItem = Invoker.MethodReturn(this, "ConvertToTable", paramsArray);
-			NetOffice.WordApi.Table newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Table.LateBindingApiWrapperType) as NetOffice.WordApi.Table;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Table>(this, "ConvertToTable", NetOffice.WordApi.Table.LateBindingApiWrapperType, new object[]{ separator, numRows, numColumns, initialColumnWidth, format, applyBorders, applyShading, applyFont, applyColor, applyHeadingRows, applyLastRow });
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835980.aspx
 		/// </summary>
-		/// <param name="separator">optional object Separator</param>
-		/// <param name="numRows">optional object NumRows</param>
-		/// <param name="numColumns">optional object NumColumns</param>
-		/// <param name="initialColumnWidth">optional object InitialColumnWidth</param>
-		/// <param name="format">optional object Format</param>
-		/// <param name="applyBorders">optional object ApplyBorders</param>
-		/// <param name="applyShading">optional object ApplyShading</param>
-		/// <param name="applyFont">optional object ApplyFont</param>
-		/// <param name="applyColor">optional object ApplyColor</param>
-		/// <param name="applyHeadingRows">optional object ApplyHeadingRows</param>
-		/// <param name="applyLastRow">optional object ApplyLastRow</param>
-		/// <param name="applyFirstColumn">optional object ApplyFirstColumn</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835980.aspx </remarks>
+		/// <param name="separator">optional object separator</param>
+		/// <param name="numRows">optional object numRows</param>
+		/// <param name="numColumns">optional object numColumns</param>
+		/// <param name="initialColumnWidth">optional object initialColumnWidth</param>
+		/// <param name="format">optional object format</param>
+		/// <param name="applyBorders">optional object applyBorders</param>
+		/// <param name="applyShading">optional object applyShading</param>
+		/// <param name="applyFont">optional object applyFont</param>
+		/// <param name="applyColor">optional object applyColor</param>
+		/// <param name="applyHeadingRows">optional object applyHeadingRows</param>
+		/// <param name="applyLastRow">optional object applyLastRow</param>
+		/// <param name="applyFirstColumn">optional object applyFirstColumn</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.Table ConvertToTable(object separator, object numRows, object numColumns, object initialColumnWidth, object format, object applyBorders, object applyShading, object applyFont, object applyColor, object applyHeadingRows, object applyLastRow, object applyFirstColumn)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(separator, numRows, numColumns, initialColumnWidth, format, applyBorders, applyShading, applyFont, applyColor, applyHeadingRows, applyLastRow, applyFirstColumn);
-			object returnItem = Invoker.MethodReturn(this, "ConvertToTable", paramsArray);
-			NetOffice.WordApi.Table newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Table.LateBindingApiWrapperType) as NetOffice.WordApi.Table;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Table>(this, "ConvertToTable", NetOffice.WordApi.Table.LateBindingApiWrapperType, new object[]{ separator, numRows, numColumns, initialColumnWidth, format, applyBorders, applyShading, applyFont, applyColor, applyHeadingRows, applyLastRow, applyFirstColumn });
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835980.aspx
 		/// </summary>
-		/// <param name="separator">optional object Separator</param>
-		/// <param name="numRows">optional object NumRows</param>
-		/// <param name="numColumns">optional object NumColumns</param>
-		/// <param name="initialColumnWidth">optional object InitialColumnWidth</param>
-		/// <param name="format">optional object Format</param>
-		/// <param name="applyBorders">optional object ApplyBorders</param>
-		/// <param name="applyShading">optional object ApplyShading</param>
-		/// <param name="applyFont">optional object ApplyFont</param>
-		/// <param name="applyColor">optional object ApplyColor</param>
-		/// <param name="applyHeadingRows">optional object ApplyHeadingRows</param>
-		/// <param name="applyLastRow">optional object ApplyLastRow</param>
-		/// <param name="applyFirstColumn">optional object ApplyFirstColumn</param>
-		/// <param name="applyLastColumn">optional object ApplyLastColumn</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835980.aspx </remarks>
+		/// <param name="separator">optional object separator</param>
+		/// <param name="numRows">optional object numRows</param>
+		/// <param name="numColumns">optional object numColumns</param>
+		/// <param name="initialColumnWidth">optional object initialColumnWidth</param>
+		/// <param name="format">optional object format</param>
+		/// <param name="applyBorders">optional object applyBorders</param>
+		/// <param name="applyShading">optional object applyShading</param>
+		/// <param name="applyFont">optional object applyFont</param>
+		/// <param name="applyColor">optional object applyColor</param>
+		/// <param name="applyHeadingRows">optional object applyHeadingRows</param>
+		/// <param name="applyLastRow">optional object applyLastRow</param>
+		/// <param name="applyFirstColumn">optional object applyFirstColumn</param>
+		/// <param name="applyLastColumn">optional object applyLastColumn</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.Table ConvertToTable(object separator, object numRows, object numColumns, object initialColumnWidth, object format, object applyBorders, object applyShading, object applyFont, object applyColor, object applyHeadingRows, object applyLastRow, object applyFirstColumn, object applyLastColumn)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(separator, numRows, numColumns, initialColumnWidth, format, applyBorders, applyShading, applyFont, applyColor, applyHeadingRows, applyLastRow, applyFirstColumn, applyLastColumn);
-			object returnItem = Invoker.MethodReturn(this, "ConvertToTable", paramsArray);
-			NetOffice.WordApi.Table newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Table.LateBindingApiWrapperType) as NetOffice.WordApi.Table;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Table>(this, "ConvertToTable", NetOffice.WordApi.Table.LateBindingApiWrapperType, new object[]{ separator, numRows, numColumns, initialColumnWidth, format, applyBorders, applyShading, applyFont, applyColor, applyHeadingRows, applyLastRow, applyFirstColumn, applyLastColumn });
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835980.aspx
 		/// </summary>
-		/// <param name="separator">optional object Separator</param>
-		/// <param name="numRows">optional object NumRows</param>
-		/// <param name="numColumns">optional object NumColumns</param>
-		/// <param name="initialColumnWidth">optional object InitialColumnWidth</param>
-		/// <param name="format">optional object Format</param>
-		/// <param name="applyBorders">optional object ApplyBorders</param>
-		/// <param name="applyShading">optional object ApplyShading</param>
-		/// <param name="applyFont">optional object ApplyFont</param>
-		/// <param name="applyColor">optional object ApplyColor</param>
-		/// <param name="applyHeadingRows">optional object ApplyHeadingRows</param>
-		/// <param name="applyLastRow">optional object ApplyLastRow</param>
-		/// <param name="applyFirstColumn">optional object ApplyFirstColumn</param>
-		/// <param name="applyLastColumn">optional object ApplyLastColumn</param>
-		/// <param name="autoFit">optional object AutoFit</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835980.aspx </remarks>
+		/// <param name="separator">optional object separator</param>
+		/// <param name="numRows">optional object numRows</param>
+		/// <param name="numColumns">optional object numColumns</param>
+		/// <param name="initialColumnWidth">optional object initialColumnWidth</param>
+		/// <param name="format">optional object format</param>
+		/// <param name="applyBorders">optional object applyBorders</param>
+		/// <param name="applyShading">optional object applyShading</param>
+		/// <param name="applyFont">optional object applyFont</param>
+		/// <param name="applyColor">optional object applyColor</param>
+		/// <param name="applyHeadingRows">optional object applyHeadingRows</param>
+		/// <param name="applyLastRow">optional object applyLastRow</param>
+		/// <param name="applyFirstColumn">optional object applyFirstColumn</param>
+		/// <param name="applyLastColumn">optional object applyLastColumn</param>
+		/// <param name="autoFit">optional object autoFit</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.Table ConvertToTable(object separator, object numRows, object numColumns, object initialColumnWidth, object format, object applyBorders, object applyShading, object applyFont, object applyColor, object applyHeadingRows, object applyLastRow, object applyFirstColumn, object applyLastColumn, object autoFit)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(separator, numRows, numColumns, initialColumnWidth, format, applyBorders, applyShading, applyFont, applyColor, applyHeadingRows, applyLastRow, applyFirstColumn, applyLastColumn, autoFit);
-			object returnItem = Invoker.MethodReturn(this, "ConvertToTable", paramsArray);
-			NetOffice.WordApi.Table newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Table.LateBindingApiWrapperType) as NetOffice.WordApi.Table;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Table>(this, "ConvertToTable", NetOffice.WordApi.Table.LateBindingApiWrapperType, new object[]{ separator, numRows, numColumns, initialColumnWidth, format, applyBorders, applyShading, applyFont, applyColor, applyHeadingRows, applyLastRow, applyFirstColumn, applyLastColumn, autoFit });
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835980.aspx
 		/// </summary>
-		/// <param name="separator">optional object Separator</param>
-		/// <param name="numRows">optional object NumRows</param>
-		/// <param name="numColumns">optional object NumColumns</param>
-		/// <param name="initialColumnWidth">optional object InitialColumnWidth</param>
-		/// <param name="format">optional object Format</param>
-		/// <param name="applyBorders">optional object ApplyBorders</param>
-		/// <param name="applyShading">optional object ApplyShading</param>
-		/// <param name="applyFont">optional object ApplyFont</param>
-		/// <param name="applyColor">optional object ApplyColor</param>
-		/// <param name="applyHeadingRows">optional object ApplyHeadingRows</param>
-		/// <param name="applyLastRow">optional object ApplyLastRow</param>
-		/// <param name="applyFirstColumn">optional object ApplyFirstColumn</param>
-		/// <param name="applyLastColumn">optional object ApplyLastColumn</param>
-		/// <param name="autoFit">optional object AutoFit</param>
-		/// <param name="autoFitBehavior">optional object AutoFitBehavior</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835980.aspx </remarks>
+		/// <param name="separator">optional object separator</param>
+		/// <param name="numRows">optional object numRows</param>
+		/// <param name="numColumns">optional object numColumns</param>
+		/// <param name="initialColumnWidth">optional object initialColumnWidth</param>
+		/// <param name="format">optional object format</param>
+		/// <param name="applyBorders">optional object applyBorders</param>
+		/// <param name="applyShading">optional object applyShading</param>
+		/// <param name="applyFont">optional object applyFont</param>
+		/// <param name="applyColor">optional object applyColor</param>
+		/// <param name="applyHeadingRows">optional object applyHeadingRows</param>
+		/// <param name="applyLastRow">optional object applyLastRow</param>
+		/// <param name="applyFirstColumn">optional object applyFirstColumn</param>
+		/// <param name="applyLastColumn">optional object applyLastColumn</param>
+		/// <param name="autoFit">optional object autoFit</param>
+		/// <param name="autoFitBehavior">optional object autoFitBehavior</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.Table ConvertToTable(object separator, object numRows, object numColumns, object initialColumnWidth, object format, object applyBorders, object applyShading, object applyFont, object applyColor, object applyHeadingRows, object applyLastRow, object applyFirstColumn, object applyLastColumn, object autoFit, object autoFitBehavior)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(separator, numRows, numColumns, initialColumnWidth, format, applyBorders, applyShading, applyFont, applyColor, applyHeadingRows, applyLastRow, applyFirstColumn, applyLastColumn, autoFit, autoFitBehavior);
-			object returnItem = Invoker.MethodReturn(this, "ConvertToTable", paramsArray);
-			NetOffice.WordApi.Table newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Table.LateBindingApiWrapperType) as NetOffice.WordApi.Table;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Table>(this, "ConvertToTable", NetOffice.WordApi.Table.LateBindingApiWrapperType, new object[]{ separator, numRows, numColumns, initialColumnWidth, format, applyBorders, applyShading, applyFont, applyColor, applyHeadingRows, applyLastRow, applyFirstColumn, applyLastColumn, autoFit, autoFitBehavior });
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff198332.aspx
 		/// </summary>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff198332.aspx </remarks>
 		/// <param name="wdTCSCConverterDirection">optional NetOffice.WordApi.Enums.WdTCSCConverterDirection WdTCSCConverterDirection = 2</param>
 		/// <param name="commonTerms">optional bool CommonTerms = false</param>
 		/// <param name="useVariants">optional bool UseVariants = false</param>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void TCSCConverter(object wdTCSCConverterDirection, object commonTerms, object useVariants)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(wdTCSCConverterDirection, commonTerms, useVariants);
-			Invoker.Method(this, "TCSCConverter", paramsArray);
+			 Factory.ExecuteMethod(this, "TCSCConverter", wdTCSCConverterDirection, commonTerms, useVariants);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff198332.aspx
 		/// </summary>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff198332.aspx </remarks>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void TCSCConverter()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "TCSCConverter", paramsArray);
+			 Factory.ExecuteMethod(this, "TCSCConverter");
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff198332.aspx
 		/// </summary>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff198332.aspx </remarks>
 		/// <param name="wdTCSCConverterDirection">optional NetOffice.WordApi.Enums.WdTCSCConverterDirection WdTCSCConverterDirection = 2</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void TCSCConverter(object wdTCSCConverterDirection)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(wdTCSCConverterDirection);
-			Invoker.Method(this, "TCSCConverter", paramsArray);
+			 Factory.ExecuteMethod(this, "TCSCConverter", wdTCSCConverterDirection);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff198332.aspx
 		/// </summary>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff198332.aspx </remarks>
 		/// <param name="wdTCSCConverterDirection">optional NetOffice.WordApi.Enums.WdTCSCConverterDirection WdTCSCConverterDirection = 2</param>
 		/// <param name="commonTerms">optional bool CommonTerms = false</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void TCSCConverter(object wdTCSCConverterDirection, object commonTerms)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(wdTCSCConverterDirection, commonTerms);
-			Invoker.Method(this, "TCSCConverter", paramsArray);
+			 Factory.ExecuteMethod(this, "TCSCConverter", wdTCSCConverterDirection, commonTerms);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193749.aspx
 		/// </summary>
-		/// <param name="type">NetOffice.WordApi.Enums.WdRecoveryType Type</param>
-		[SupportByVersionAttribute("Word", 10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff193749.aspx </remarks>
+		/// <param name="type">NetOffice.WordApi.Enums.WdRecoveryType type</param>
+		[SupportByVersion("Word", 10,11,12,14,15,16)]
 		public void PasteAndFormat(NetOffice.WordApi.Enums.WdRecoveryType type)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(type);
-			Invoker.Method(this, "PasteAndFormat", paramsArray);
+			 Factory.ExecuteMethod(this, "PasteAndFormat", type);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193063.aspx
 		/// </summary>
-		/// <param name="linkedToExcel">bool LinkedToExcel</param>
-		/// <param name="wordFormatting">bool WordFormatting</param>
-		/// <param name="rTF">bool RTF</param>
-		[SupportByVersionAttribute("Word", 10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff193063.aspx </remarks>
+		/// <param name="linkedToExcel">bool linkedToExcel</param>
+		/// <param name="wordFormatting">bool wordFormatting</param>
+		/// <param name="rTF">bool rTF</param>
+		[SupportByVersion("Word", 10,11,12,14,15,16)]
 		public void PasteExcelTable(bool linkedToExcel, bool wordFormatting, bool rTF)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(linkedToExcel, wordFormatting, rTF);
-			Invoker.Method(this, "PasteExcelTable", paramsArray);
+			 Factory.ExecuteMethod(this, "PasteExcelTable", linkedToExcel, wordFormatting, rTF);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839173.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff839173.aspx </remarks>
+		[SupportByVersion("Word", 10,11,12,14,15,16)]
 		public void PasteAppendTable()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "PasteAppendTable", paramsArray);
+			 Factory.ExecuteMethod(this, "PasteAppendTable");
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="referenceType">object ReferenceType</param>
-		/// <param name="referenceKind">NetOffice.WordApi.Enums.WdReferenceKind ReferenceKind</param>
-		/// <param name="referenceItem">object ReferenceItem</param>
-		/// <param name="insertAsHyperlink">optional object InsertAsHyperlink</param>
-		/// <param name="includePosition">optional object IncludePosition</param>
+		/// <param name="referenceType">object referenceType</param>
+		/// <param name="referenceKind">NetOffice.WordApi.Enums.WdReferenceKind referenceKind</param>
+		/// <param name="referenceItem">object referenceItem</param>
+		/// <param name="insertAsHyperlink">optional object insertAsHyperlink</param>
+		/// <param name="includePosition">optional object includePosition</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("Word", 11,12,14,15,16)]
+		[SupportByVersion("Word", 11,12,14,15,16)]
 		public void InsertCrossReference_2002(object referenceType, NetOffice.WordApi.Enums.WdReferenceKind referenceKind, object referenceItem, object insertAsHyperlink, object includePosition)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(referenceType, referenceKind, referenceItem, insertAsHyperlink, includePosition);
-			Invoker.Method(this, "InsertCrossReference_2002", paramsArray);
+			 Factory.ExecuteMethod(this, "InsertCrossReference_2002", new object[]{ referenceType, referenceKind, referenceItem, insertAsHyperlink, includePosition });
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="referenceType">object ReferenceType</param>
-		/// <param name="referenceKind">NetOffice.WordApi.Enums.WdReferenceKind ReferenceKind</param>
-		/// <param name="referenceItem">object ReferenceItem</param>
+		/// <param name="referenceType">object referenceType</param>
+		/// <param name="referenceKind">NetOffice.WordApi.Enums.WdReferenceKind referenceKind</param>
+		/// <param name="referenceItem">object referenceItem</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 11,12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Word", 11,12,14,15,16)]
 		public void InsertCrossReference_2002(object referenceType, NetOffice.WordApi.Enums.WdReferenceKind referenceKind, object referenceItem)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(referenceType, referenceKind, referenceItem);
-			Invoker.Method(this, "InsertCrossReference_2002", paramsArray);
+			 Factory.ExecuteMethod(this, "InsertCrossReference_2002", referenceType, referenceKind, referenceItem);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="referenceType">object ReferenceType</param>
-		/// <param name="referenceKind">NetOffice.WordApi.Enums.WdReferenceKind ReferenceKind</param>
-		/// <param name="referenceItem">object ReferenceItem</param>
-		/// <param name="insertAsHyperlink">optional object InsertAsHyperlink</param>
+		/// <param name="referenceType">object referenceType</param>
+		/// <param name="referenceKind">NetOffice.WordApi.Enums.WdReferenceKind referenceKind</param>
+		/// <param name="referenceItem">object referenceItem</param>
+		/// <param name="insertAsHyperlink">optional object insertAsHyperlink</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 11,12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Word", 11,12,14,15,16)]
 		public void InsertCrossReference_2002(object referenceType, NetOffice.WordApi.Enums.WdReferenceKind referenceKind, object referenceItem, object insertAsHyperlink)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(referenceType, referenceKind, referenceItem, insertAsHyperlink);
-			Invoker.Method(this, "InsertCrossReference_2002", paramsArray);
+			 Factory.ExecuteMethod(this, "InsertCrossReference_2002", referenceType, referenceKind, referenceItem, insertAsHyperlink);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="label">object Label</param>
-		/// <param name="title">optional object Title</param>
-		/// <param name="titleAutoText">optional object TitleAutoText</param>
-		/// <param name="position">optional object Position</param>
+		/// <param name="label">object label</param>
+		/// <param name="title">optional object title</param>
+		/// <param name="titleAutoText">optional object titleAutoText</param>
+		/// <param name="position">optional object position</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("Word", 11,12,14,15,16)]
+		[SupportByVersion("Word", 11,12,14,15,16)]
 		public void InsertCaptionXP(object label, object title, object titleAutoText, object position)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(label, title, titleAutoText, position);
-			Invoker.Method(this, "InsertCaptionXP", paramsArray);
+			 Factory.ExecuteMethod(this, "InsertCaptionXP", label, title, titleAutoText, position);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="label">object Label</param>
+		/// <param name="label">object label</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 11,12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Word", 11,12,14,15,16)]
 		public void InsertCaptionXP(object label)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(label);
-			Invoker.Method(this, "InsertCaptionXP", paramsArray);
+			 Factory.ExecuteMethod(this, "InsertCaptionXP", label);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="label">object Label</param>
-		/// <param name="title">optional object Title</param>
+		/// <param name="label">object label</param>
+		/// <param name="title">optional object title</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 11,12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Word", 11,12,14,15,16)]
 		public void InsertCaptionXP(object label, object title)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(label, title);
-			Invoker.Method(this, "InsertCaptionXP", paramsArray);
+			 Factory.ExecuteMethod(this, "InsertCaptionXP", label, title);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="label">object Label</param>
-		/// <param name="title">optional object Title</param>
-		/// <param name="titleAutoText">optional object TitleAutoText</param>
+		/// <param name="label">object label</param>
+		/// <param name="title">optional object title</param>
+		/// <param name="titleAutoText">optional object titleAutoText</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 11,12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Word", 11,12,14,15,16)]
 		public void InsertCaptionXP(object label, object title, object titleAutoText)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(label, title, titleAutoText);
-			Invoker.Method(this, "InsertCaptionXP", paramsArray);
+			 Factory.ExecuteMethod(this, "InsertCaptionXP", label, title, titleAutoText);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195065.aspx
 		/// </summary>
-		/// <param name="editorID">optional object EditorID</param>
-		[SupportByVersionAttribute("Word", 11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff195065.aspx </remarks>
+		/// <param name="editorID">optional object editorID</param>
+		[SupportByVersion("Word", 11,12,14,15,16)]
 		public NetOffice.WordApi.Range GoToEditableRange(object editorID)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(editorID);
-			object returnItem = Invoker.MethodReturn(this, "GoToEditableRange", paramsArray);
-			NetOffice.WordApi.Range newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Range.LateBindingApiWrapperType) as NetOffice.WordApi.Range;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Range>(this, "GoToEditableRange", NetOffice.WordApi.Range.LateBindingApiWrapperType, editorID);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195065.aspx
 		/// </summary>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff195065.aspx </remarks>
+		[CustomMethod]
+		[SupportByVersion("Word", 11,12,14,15,16)]
 		public NetOffice.WordApi.Range GoToEditableRange()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "GoToEditableRange", paramsArray);
-			NetOffice.WordApi.Range newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Range.LateBindingApiWrapperType) as NetOffice.WordApi.Range;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Range>(this, "GoToEditableRange", NetOffice.WordApi.Range.LateBindingApiWrapperType);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839129.aspx
 		/// </summary>
-		/// <param name="xML">string XML</param>
-		/// <param name="transform">optional object Transform</param>
-		[SupportByVersionAttribute("Word", 11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff839129.aspx </remarks>
+		/// <param name="xML">string xML</param>
+		/// <param name="transform">optional object transform</param>
+		[SupportByVersion("Word", 11,12,14,15,16)]
 		public void InsertXML(string xML, object transform)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(xML, transform);
-			Invoker.Method(this, "InsertXML", paramsArray);
+			 Factory.ExecuteMethod(this, "InsertXML", xML, transform);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839129.aspx
 		/// </summary>
-		/// <param name="xML">string XML</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff839129.aspx </remarks>
+		/// <param name="xML">string xML</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 11,12,14,15,16)]
 		public void InsertXML(string xML)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(xML);
-			Invoker.Method(this, "InsertXML", paramsArray);
+			 Factory.ExecuteMethod(this, "InsertXML", xML);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822335.aspx
 		/// </summary>
-		/// <param name="fileName">string FileName</param>
-		/// <param name="format">NetOffice.WordApi.Enums.WdSaveFormat Format</param>
-		[SupportByVersionAttribute("Word", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff822335.aspx </remarks>
+		/// <param name="fileName">string fileName</param>
+		/// <param name="format">NetOffice.WordApi.Enums.WdSaveFormat format</param>
+		[SupportByVersion("Word", 12,14,15,16)]
 		public void ExportFragment(string fileName, NetOffice.WordApi.Enums.WdSaveFormat format)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(fileName, format);
-			Invoker.Method(this, "ExportFragment", paramsArray);
+			 Factory.ExecuteMethod(this, "ExportFragment", fileName, format);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff821878.aspx
 		/// </summary>
-		/// <param name="level">Int16 Level</param>
-		[SupportByVersionAttribute("Word", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff821878.aspx </remarks>
+		/// <param name="level">Int16 level</param>
+		[SupportByVersion("Word", 12,14,15,16)]
 		public void SetListLevel(Int16 level)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(level);
-			Invoker.Method(this, "SetListLevel", paramsArray);
+			 Factory.ExecuteMethod(this, "SetListLevel", level);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff191966.aspx
 		/// </summary>
-		/// <param name="alignment">Int32 Alignment</param>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff191966.aspx </remarks>
+		/// <param name="alignment">Int32 alignment</param>
 		/// <param name="relativeTo">optional Int32 RelativeTo = 0</param>
-		[SupportByVersionAttribute("Word", 12,14,15,16)]
+		[SupportByVersion("Word", 12,14,15,16)]
 		public void InsertAlignmentTab(Int32 alignment, object relativeTo)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(alignment, relativeTo);
-			Invoker.Method(this, "InsertAlignmentTab", paramsArray);
+			 Factory.ExecuteMethod(this, "InsertAlignmentTab", alignment, relativeTo);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff191966.aspx
 		/// </summary>
-		/// <param name="alignment">Int32 Alignment</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff191966.aspx </remarks>
+		/// <param name="alignment">Int32 alignment</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 12,14,15,16)]
 		public void InsertAlignmentTab(Int32 alignment)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(alignment);
-			Invoker.Method(this, "InsertAlignmentTab", paramsArray);
+			 Factory.ExecuteMethod(this, "InsertAlignmentTab", alignment);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839096.aspx
 		/// </summary>
-		/// <param name="fileName">string FileName</param>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff839096.aspx </remarks>
+		/// <param name="fileName">string fileName</param>
 		/// <param name="matchDestination">optional bool MatchDestination = false</param>
-		[SupportByVersionAttribute("Word", 12,14,15,16)]
+		[SupportByVersion("Word", 12,14,15,16)]
 		public void ImportFragment(string fileName, object matchDestination)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(fileName, matchDestination);
-			Invoker.Method(this, "ImportFragment", paramsArray);
+			 Factory.ExecuteMethod(this, "ImportFragment", fileName, matchDestination);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839096.aspx
 		/// </summary>
-		/// <param name="fileName">string FileName</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff839096.aspx </remarks>
+		/// <param name="fileName">string fileName</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 12,14,15,16)]
 		public void ImportFragment(string fileName)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(fileName);
-			Invoker.Method(this, "ImportFragment", paramsArray);
+			 Factory.ExecuteMethod(this, "ImportFragment", fileName);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838566.aspx
 		/// </summary>
-		/// <param name="outputFileName">string OutputFileName</param>
-		/// <param name="exportFormat">NetOffice.WordApi.Enums.WdExportFormat ExportFormat</param>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff838566.aspx </remarks>
+		/// <param name="outputFileName">string outputFileName</param>
+		/// <param name="exportFormat">NetOffice.WordApi.Enums.WdExportFormat exportFormat</param>
 		/// <param name="openAfterExport">optional bool OpenAfterExport = false</param>
 		/// <param name="optimizeFor">optional NetOffice.WordApi.Enums.WdExportOptimizeFor OptimizeFor = 0</param>
 		/// <param name="exportCurrentPage">optional bool ExportCurrentPage = false</param>
@@ -6565,139 +5750,131 @@ namespace NetOffice.WordApi
 		/// <param name="docStructureTags">optional bool DocStructureTags = true</param>
 		/// <param name="bitmapMissingFonts">optional bool BitmapMissingFonts = true</param>
 		/// <param name="useISO19005_1">optional bool UseISO19005_1 = false</param>
-		/// <param name="fixedFormatExtClassPtr">optional object FixedFormatExtClassPtr</param>
-		[SupportByVersionAttribute("Word", 12,14,15,16)]
+		/// <param name="fixedFormatExtClassPtr">optional object fixedFormatExtClassPtr</param>
+		[SupportByVersion("Word", 12,14,15,16)]
 		public void ExportAsFixedFormat(string outputFileName, NetOffice.WordApi.Enums.WdExportFormat exportFormat, object openAfterExport, object optimizeFor, object exportCurrentPage, object item, object includeDocProps, object keepIRM, object createBookmarks, object docStructureTags, object bitmapMissingFonts, object useISO19005_1, object fixedFormatExtClassPtr)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(outputFileName, exportFormat, openAfterExport, optimizeFor, exportCurrentPage, item, includeDocProps, keepIRM, createBookmarks, docStructureTags, bitmapMissingFonts, useISO19005_1, fixedFormatExtClassPtr);
-			Invoker.Method(this, "ExportAsFixedFormat", paramsArray);
+			 Factory.ExecuteMethod(this, "ExportAsFixedFormat", new object[]{ outputFileName, exportFormat, openAfterExport, optimizeFor, exportCurrentPage, item, includeDocProps, keepIRM, createBookmarks, docStructureTags, bitmapMissingFonts, useISO19005_1, fixedFormatExtClassPtr });
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838566.aspx
 		/// </summary>
-		/// <param name="outputFileName">string OutputFileName</param>
-		/// <param name="exportFormat">NetOffice.WordApi.Enums.WdExportFormat ExportFormat</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff838566.aspx </remarks>
+		/// <param name="outputFileName">string outputFileName</param>
+		/// <param name="exportFormat">NetOffice.WordApi.Enums.WdExportFormat exportFormat</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 12,14,15,16)]
 		public void ExportAsFixedFormat(string outputFileName, NetOffice.WordApi.Enums.WdExportFormat exportFormat)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(outputFileName, exportFormat);
-			Invoker.Method(this, "ExportAsFixedFormat", paramsArray);
+			 Factory.ExecuteMethod(this, "ExportAsFixedFormat", outputFileName, exportFormat);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838566.aspx
 		/// </summary>
-		/// <param name="outputFileName">string OutputFileName</param>
-		/// <param name="exportFormat">NetOffice.WordApi.Enums.WdExportFormat ExportFormat</param>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff838566.aspx </remarks>
+		/// <param name="outputFileName">string outputFileName</param>
+		/// <param name="exportFormat">NetOffice.WordApi.Enums.WdExportFormat exportFormat</param>
 		/// <param name="openAfterExport">optional bool OpenAfterExport = false</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Word", 12,14,15,16)]
 		public void ExportAsFixedFormat(string outputFileName, NetOffice.WordApi.Enums.WdExportFormat exportFormat, object openAfterExport)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(outputFileName, exportFormat, openAfterExport);
-			Invoker.Method(this, "ExportAsFixedFormat", paramsArray);
+			 Factory.ExecuteMethod(this, "ExportAsFixedFormat", outputFileName, exportFormat, openAfterExport);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838566.aspx
 		/// </summary>
-		/// <param name="outputFileName">string OutputFileName</param>
-		/// <param name="exportFormat">NetOffice.WordApi.Enums.WdExportFormat ExportFormat</param>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff838566.aspx </remarks>
+		/// <param name="outputFileName">string outputFileName</param>
+		/// <param name="exportFormat">NetOffice.WordApi.Enums.WdExportFormat exportFormat</param>
 		/// <param name="openAfterExport">optional bool OpenAfterExport = false</param>
 		/// <param name="optimizeFor">optional NetOffice.WordApi.Enums.WdExportOptimizeFor OptimizeFor = 0</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Word", 12,14,15,16)]
 		public void ExportAsFixedFormat(string outputFileName, NetOffice.WordApi.Enums.WdExportFormat exportFormat, object openAfterExport, object optimizeFor)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(outputFileName, exportFormat, openAfterExport, optimizeFor);
-			Invoker.Method(this, "ExportAsFixedFormat", paramsArray);
+			 Factory.ExecuteMethod(this, "ExportAsFixedFormat", outputFileName, exportFormat, openAfterExport, optimizeFor);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838566.aspx
 		/// </summary>
-		/// <param name="outputFileName">string OutputFileName</param>
-		/// <param name="exportFormat">NetOffice.WordApi.Enums.WdExportFormat ExportFormat</param>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff838566.aspx </remarks>
+		/// <param name="outputFileName">string outputFileName</param>
+		/// <param name="exportFormat">NetOffice.WordApi.Enums.WdExportFormat exportFormat</param>
 		/// <param name="openAfterExport">optional bool OpenAfterExport = false</param>
 		/// <param name="optimizeFor">optional NetOffice.WordApi.Enums.WdExportOptimizeFor OptimizeFor = 0</param>
 		/// <param name="exportCurrentPage">optional bool ExportCurrentPage = false</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Word", 12,14,15,16)]
 		public void ExportAsFixedFormat(string outputFileName, NetOffice.WordApi.Enums.WdExportFormat exportFormat, object openAfterExport, object optimizeFor, object exportCurrentPage)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(outputFileName, exportFormat, openAfterExport, optimizeFor, exportCurrentPage);
-			Invoker.Method(this, "ExportAsFixedFormat", paramsArray);
+			 Factory.ExecuteMethod(this, "ExportAsFixedFormat", new object[]{ outputFileName, exportFormat, openAfterExport, optimizeFor, exportCurrentPage });
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838566.aspx
 		/// </summary>
-		/// <param name="outputFileName">string OutputFileName</param>
-		/// <param name="exportFormat">NetOffice.WordApi.Enums.WdExportFormat ExportFormat</param>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff838566.aspx </remarks>
+		/// <param name="outputFileName">string outputFileName</param>
+		/// <param name="exportFormat">NetOffice.WordApi.Enums.WdExportFormat exportFormat</param>
 		/// <param name="openAfterExport">optional bool OpenAfterExport = false</param>
 		/// <param name="optimizeFor">optional NetOffice.WordApi.Enums.WdExportOptimizeFor OptimizeFor = 0</param>
 		/// <param name="exportCurrentPage">optional bool ExportCurrentPage = false</param>
 		/// <param name="item">optional NetOffice.WordApi.Enums.WdExportItem Item = 0</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Word", 12,14,15,16)]
 		public void ExportAsFixedFormat(string outputFileName, NetOffice.WordApi.Enums.WdExportFormat exportFormat, object openAfterExport, object optimizeFor, object exportCurrentPage, object item)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(outputFileName, exportFormat, openAfterExport, optimizeFor, exportCurrentPage, item);
-			Invoker.Method(this, "ExportAsFixedFormat", paramsArray);
+			 Factory.ExecuteMethod(this, "ExportAsFixedFormat", new object[]{ outputFileName, exportFormat, openAfterExport, optimizeFor, exportCurrentPage, item });
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838566.aspx
 		/// </summary>
-		/// <param name="outputFileName">string OutputFileName</param>
-		/// <param name="exportFormat">NetOffice.WordApi.Enums.WdExportFormat ExportFormat</param>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff838566.aspx </remarks>
+		/// <param name="outputFileName">string outputFileName</param>
+		/// <param name="exportFormat">NetOffice.WordApi.Enums.WdExportFormat exportFormat</param>
 		/// <param name="openAfterExport">optional bool OpenAfterExport = false</param>
 		/// <param name="optimizeFor">optional NetOffice.WordApi.Enums.WdExportOptimizeFor OptimizeFor = 0</param>
 		/// <param name="exportCurrentPage">optional bool ExportCurrentPage = false</param>
 		/// <param name="item">optional NetOffice.WordApi.Enums.WdExportItem Item = 0</param>
 		/// <param name="includeDocProps">optional bool IncludeDocProps = false</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Word", 12,14,15,16)]
 		public void ExportAsFixedFormat(string outputFileName, NetOffice.WordApi.Enums.WdExportFormat exportFormat, object openAfterExport, object optimizeFor, object exportCurrentPage, object item, object includeDocProps)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(outputFileName, exportFormat, openAfterExport, optimizeFor, exportCurrentPage, item, includeDocProps);
-			Invoker.Method(this, "ExportAsFixedFormat", paramsArray);
+			 Factory.ExecuteMethod(this, "ExportAsFixedFormat", new object[]{ outputFileName, exportFormat, openAfterExport, optimizeFor, exportCurrentPage, item, includeDocProps });
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838566.aspx
 		/// </summary>
-		/// <param name="outputFileName">string OutputFileName</param>
-		/// <param name="exportFormat">NetOffice.WordApi.Enums.WdExportFormat ExportFormat</param>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff838566.aspx </remarks>
+		/// <param name="outputFileName">string outputFileName</param>
+		/// <param name="exportFormat">NetOffice.WordApi.Enums.WdExportFormat exportFormat</param>
 		/// <param name="openAfterExport">optional bool OpenAfterExport = false</param>
 		/// <param name="optimizeFor">optional NetOffice.WordApi.Enums.WdExportOptimizeFor OptimizeFor = 0</param>
 		/// <param name="exportCurrentPage">optional bool ExportCurrentPage = false</param>
 		/// <param name="item">optional NetOffice.WordApi.Enums.WdExportItem Item = 0</param>
 		/// <param name="includeDocProps">optional bool IncludeDocProps = false</param>
 		/// <param name="keepIRM">optional bool KeepIRM = true</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Word", 12,14,15,16)]
 		public void ExportAsFixedFormat(string outputFileName, NetOffice.WordApi.Enums.WdExportFormat exportFormat, object openAfterExport, object optimizeFor, object exportCurrentPage, object item, object includeDocProps, object keepIRM)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(outputFileName, exportFormat, openAfterExport, optimizeFor, exportCurrentPage, item, includeDocProps, keepIRM);
-			Invoker.Method(this, "ExportAsFixedFormat", paramsArray);
+			 Factory.ExecuteMethod(this, "ExportAsFixedFormat", new object[]{ outputFileName, exportFormat, openAfterExport, optimizeFor, exportCurrentPage, item, includeDocProps, keepIRM });
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838566.aspx
 		/// </summary>
-		/// <param name="outputFileName">string OutputFileName</param>
-		/// <param name="exportFormat">NetOffice.WordApi.Enums.WdExportFormat ExportFormat</param>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff838566.aspx </remarks>
+		/// <param name="outputFileName">string outputFileName</param>
+		/// <param name="exportFormat">NetOffice.WordApi.Enums.WdExportFormat exportFormat</param>
 		/// <param name="openAfterExport">optional bool OpenAfterExport = false</param>
 		/// <param name="optimizeFor">optional NetOffice.WordApi.Enums.WdExportOptimizeFor OptimizeFor = 0</param>
 		/// <param name="exportCurrentPage">optional bool ExportCurrentPage = false</param>
@@ -6705,20 +5882,19 @@ namespace NetOffice.WordApi
 		/// <param name="includeDocProps">optional bool IncludeDocProps = false</param>
 		/// <param name="keepIRM">optional bool KeepIRM = true</param>
 		/// <param name="createBookmarks">optional NetOffice.WordApi.Enums.WdExportCreateBookmarks CreateBookmarks = 0</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Word", 12,14,15,16)]
 		public void ExportAsFixedFormat(string outputFileName, NetOffice.WordApi.Enums.WdExportFormat exportFormat, object openAfterExport, object optimizeFor, object exportCurrentPage, object item, object includeDocProps, object keepIRM, object createBookmarks)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(outputFileName, exportFormat, openAfterExport, optimizeFor, exportCurrentPage, item, includeDocProps, keepIRM, createBookmarks);
-			Invoker.Method(this, "ExportAsFixedFormat", paramsArray);
+			 Factory.ExecuteMethod(this, "ExportAsFixedFormat", new object[]{ outputFileName, exportFormat, openAfterExport, optimizeFor, exportCurrentPage, item, includeDocProps, keepIRM, createBookmarks });
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838566.aspx
 		/// </summary>
-		/// <param name="outputFileName">string OutputFileName</param>
-		/// <param name="exportFormat">NetOffice.WordApi.Enums.WdExportFormat ExportFormat</param>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff838566.aspx </remarks>
+		/// <param name="outputFileName">string outputFileName</param>
+		/// <param name="exportFormat">NetOffice.WordApi.Enums.WdExportFormat exportFormat</param>
 		/// <param name="openAfterExport">optional bool OpenAfterExport = false</param>
 		/// <param name="optimizeFor">optional NetOffice.WordApi.Enums.WdExportOptimizeFor OptimizeFor = 0</param>
 		/// <param name="exportCurrentPage">optional bool ExportCurrentPage = false</param>
@@ -6727,20 +5903,19 @@ namespace NetOffice.WordApi
 		/// <param name="keepIRM">optional bool KeepIRM = true</param>
 		/// <param name="createBookmarks">optional NetOffice.WordApi.Enums.WdExportCreateBookmarks CreateBookmarks = 0</param>
 		/// <param name="docStructureTags">optional bool DocStructureTags = true</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Word", 12,14,15,16)]
 		public void ExportAsFixedFormat(string outputFileName, NetOffice.WordApi.Enums.WdExportFormat exportFormat, object openAfterExport, object optimizeFor, object exportCurrentPage, object item, object includeDocProps, object keepIRM, object createBookmarks, object docStructureTags)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(outputFileName, exportFormat, openAfterExport, optimizeFor, exportCurrentPage, item, includeDocProps, keepIRM, createBookmarks, docStructureTags);
-			Invoker.Method(this, "ExportAsFixedFormat", paramsArray);
+			 Factory.ExecuteMethod(this, "ExportAsFixedFormat", new object[]{ outputFileName, exportFormat, openAfterExport, optimizeFor, exportCurrentPage, item, includeDocProps, keepIRM, createBookmarks, docStructureTags });
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838566.aspx
 		/// </summary>
-		/// <param name="outputFileName">string OutputFileName</param>
-		/// <param name="exportFormat">NetOffice.WordApi.Enums.WdExportFormat ExportFormat</param>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff838566.aspx </remarks>
+		/// <param name="outputFileName">string outputFileName</param>
+		/// <param name="exportFormat">NetOffice.WordApi.Enums.WdExportFormat exportFormat</param>
 		/// <param name="openAfterExport">optional bool OpenAfterExport = false</param>
 		/// <param name="optimizeFor">optional NetOffice.WordApi.Enums.WdExportOptimizeFor OptimizeFor = 0</param>
 		/// <param name="exportCurrentPage">optional bool ExportCurrentPage = false</param>
@@ -6750,20 +5925,19 @@ namespace NetOffice.WordApi
 		/// <param name="createBookmarks">optional NetOffice.WordApi.Enums.WdExportCreateBookmarks CreateBookmarks = 0</param>
 		/// <param name="docStructureTags">optional bool DocStructureTags = true</param>
 		/// <param name="bitmapMissingFonts">optional bool BitmapMissingFonts = true</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Word", 12,14,15,16)]
 		public void ExportAsFixedFormat(string outputFileName, NetOffice.WordApi.Enums.WdExportFormat exportFormat, object openAfterExport, object optimizeFor, object exportCurrentPage, object item, object includeDocProps, object keepIRM, object createBookmarks, object docStructureTags, object bitmapMissingFonts)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(outputFileName, exportFormat, openAfterExport, optimizeFor, exportCurrentPage, item, includeDocProps, keepIRM, createBookmarks, docStructureTags, bitmapMissingFonts);
-			Invoker.Method(this, "ExportAsFixedFormat", paramsArray);
+			 Factory.ExecuteMethod(this, "ExportAsFixedFormat", new object[]{ outputFileName, exportFormat, openAfterExport, optimizeFor, exportCurrentPage, item, includeDocProps, keepIRM, createBookmarks, docStructureTags, bitmapMissingFonts });
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838566.aspx
 		/// </summary>
-		/// <param name="outputFileName">string OutputFileName</param>
-		/// <param name="exportFormat">NetOffice.WordApi.Enums.WdExportFormat ExportFormat</param>
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff838566.aspx </remarks>
+		/// <param name="outputFileName">string outputFileName</param>
+		/// <param name="exportFormat">NetOffice.WordApi.Enums.WdExportFormat exportFormat</param>
 		/// <param name="openAfterExport">optional bool OpenAfterExport = false</param>
 		/// <param name="optimizeFor">optional NetOffice.WordApi.Enums.WdExportOptimizeFor OptimizeFor = 0</param>
 		/// <param name="exportCurrentPage">optional bool ExportCurrentPage = false</param>
@@ -6774,179 +5948,169 @@ namespace NetOffice.WordApi
 		/// <param name="docStructureTags">optional bool DocStructureTags = true</param>
 		/// <param name="bitmapMissingFonts">optional bool BitmapMissingFonts = true</param>
 		/// <param name="useISO19005_1">optional bool UseISO19005_1 = false</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Word", 12,14,15,16)]
 		public void ExportAsFixedFormat(string outputFileName, NetOffice.WordApi.Enums.WdExportFormat exportFormat, object openAfterExport, object optimizeFor, object exportCurrentPage, object item, object includeDocProps, object keepIRM, object createBookmarks, object docStructureTags, object bitmapMissingFonts, object useISO19005_1)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(outputFileName, exportFormat, openAfterExport, optimizeFor, exportCurrentPage, item, includeDocProps, keepIRM, createBookmarks, docStructureTags, bitmapMissingFonts, useISO19005_1);
-			Invoker.Method(this, "ExportAsFixedFormat", paramsArray);
+			 Factory.ExecuteMethod(this, "ExportAsFixedFormat", new object[]{ outputFileName, exportFormat, openAfterExport, optimizeFor, exportCurrentPage, item, includeDocProps, keepIRM, createBookmarks, docStructureTags, bitmapMissingFonts, useISO19005_1 });
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 15,16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj230923.aspx
 		/// </summary>
-		/// <param name="sortFieldType">optional object SortFieldType</param>
-		/// <param name="sortOrder">optional object SortOrder</param>
-		/// <param name="caseSensitive">optional object CaseSensitive</param>
-		/// <param name="bidiSort">optional object BidiSort</param>
-		/// <param name="ignoreThe">optional object IgnoreThe</param>
-		/// <param name="ignoreKashida">optional object IgnoreKashida</param>
-		/// <param name="ignoreDiacritics">optional object IgnoreDiacritics</param>
-		/// <param name="ignoreHe">optional object IgnoreHe</param>
-		/// <param name="languageID">optional object LanguageID</param>
-		[SupportByVersionAttribute("Word", 15, 16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/jj230923.aspx </remarks>
+		/// <param name="sortFieldType">optional object sortFieldType</param>
+		/// <param name="sortOrder">optional object sortOrder</param>
+		/// <param name="caseSensitive">optional object caseSensitive</param>
+		/// <param name="bidiSort">optional object bidiSort</param>
+		/// <param name="ignoreThe">optional object ignoreThe</param>
+		/// <param name="ignoreKashida">optional object ignoreKashida</param>
+		/// <param name="ignoreDiacritics">optional object ignoreDiacritics</param>
+		/// <param name="ignoreHe">optional object ignoreHe</param>
+		/// <param name="languageID">optional object languageID</param>
+		[SupportByVersion("Word", 15, 16)]
 		public void SortByHeadings(object sortFieldType, object sortOrder, object caseSensitive, object bidiSort, object ignoreThe, object ignoreKashida, object ignoreDiacritics, object ignoreHe, object languageID)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(sortFieldType, sortOrder, caseSensitive, bidiSort, ignoreThe, ignoreKashida, ignoreDiacritics, ignoreHe, languageID);
-			Invoker.Method(this, "SortByHeadings", paramsArray);
+			 Factory.ExecuteMethod(this, "SortByHeadings", new object[]{ sortFieldType, sortOrder, caseSensitive, bidiSort, ignoreThe, ignoreKashida, ignoreDiacritics, ignoreHe, languageID });
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 15,16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj230923.aspx
 		/// </summary>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 15, 16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/jj230923.aspx </remarks>
+		[CustomMethod]
+		[SupportByVersion("Word", 15, 16)]
 		public void SortByHeadings()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "SortByHeadings", paramsArray);
+			 Factory.ExecuteMethod(this, "SortByHeadings");
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 15,16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj230923.aspx
 		/// </summary>
-		/// <param name="sortFieldType">optional object SortFieldType</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 15, 16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/jj230923.aspx </remarks>
+		/// <param name="sortFieldType">optional object sortFieldType</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 15, 16)]
 		public void SortByHeadings(object sortFieldType)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(sortFieldType);
-			Invoker.Method(this, "SortByHeadings", paramsArray);
+			 Factory.ExecuteMethod(this, "SortByHeadings", sortFieldType);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 15,16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj230923.aspx
 		/// </summary>
-		/// <param name="sortFieldType">optional object SortFieldType</param>
-		/// <param name="sortOrder">optional object SortOrder</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 15, 16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/jj230923.aspx </remarks>
+		/// <param name="sortFieldType">optional object sortFieldType</param>
+		/// <param name="sortOrder">optional object sortOrder</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 15, 16)]
 		public void SortByHeadings(object sortFieldType, object sortOrder)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(sortFieldType, sortOrder);
-			Invoker.Method(this, "SortByHeadings", paramsArray);
+			 Factory.ExecuteMethod(this, "SortByHeadings", sortFieldType, sortOrder);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 15,16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj230923.aspx
 		/// </summary>
-		/// <param name="sortFieldType">optional object SortFieldType</param>
-		/// <param name="sortOrder">optional object SortOrder</param>
-		/// <param name="caseSensitive">optional object CaseSensitive</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 15, 16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/jj230923.aspx </remarks>
+		/// <param name="sortFieldType">optional object sortFieldType</param>
+		/// <param name="sortOrder">optional object sortOrder</param>
+		/// <param name="caseSensitive">optional object caseSensitive</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 15, 16)]
 		public void SortByHeadings(object sortFieldType, object sortOrder, object caseSensitive)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(sortFieldType, sortOrder, caseSensitive);
-			Invoker.Method(this, "SortByHeadings", paramsArray);
+			 Factory.ExecuteMethod(this, "SortByHeadings", sortFieldType, sortOrder, caseSensitive);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 15,16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj230923.aspx
 		/// </summary>
-		/// <param name="sortFieldType">optional object SortFieldType</param>
-		/// <param name="sortOrder">optional object SortOrder</param>
-		/// <param name="caseSensitive">optional object CaseSensitive</param>
-		/// <param name="bidiSort">optional object BidiSort</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 15, 16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/jj230923.aspx </remarks>
+		/// <param name="sortFieldType">optional object sortFieldType</param>
+		/// <param name="sortOrder">optional object sortOrder</param>
+		/// <param name="caseSensitive">optional object caseSensitive</param>
+		/// <param name="bidiSort">optional object bidiSort</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 15, 16)]
 		public void SortByHeadings(object sortFieldType, object sortOrder, object caseSensitive, object bidiSort)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(sortFieldType, sortOrder, caseSensitive, bidiSort);
-			Invoker.Method(this, "SortByHeadings", paramsArray);
+			 Factory.ExecuteMethod(this, "SortByHeadings", sortFieldType, sortOrder, caseSensitive, bidiSort);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 15,16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj230923.aspx
 		/// </summary>
-		/// <param name="sortFieldType">optional object SortFieldType</param>
-		/// <param name="sortOrder">optional object SortOrder</param>
-		/// <param name="caseSensitive">optional object CaseSensitive</param>
-		/// <param name="bidiSort">optional object BidiSort</param>
-		/// <param name="ignoreThe">optional object IgnoreThe</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 15, 16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/jj230923.aspx </remarks>
+		/// <param name="sortFieldType">optional object sortFieldType</param>
+		/// <param name="sortOrder">optional object sortOrder</param>
+		/// <param name="caseSensitive">optional object caseSensitive</param>
+		/// <param name="bidiSort">optional object bidiSort</param>
+		/// <param name="ignoreThe">optional object ignoreThe</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 15, 16)]
 		public void SortByHeadings(object sortFieldType, object sortOrder, object caseSensitive, object bidiSort, object ignoreThe)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(sortFieldType, sortOrder, caseSensitive, bidiSort, ignoreThe);
-			Invoker.Method(this, "SortByHeadings", paramsArray);
+			 Factory.ExecuteMethod(this, "SortByHeadings", new object[]{ sortFieldType, sortOrder, caseSensitive, bidiSort, ignoreThe });
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 15,16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj230923.aspx
 		/// </summary>
-		/// <param name="sortFieldType">optional object SortFieldType</param>
-		/// <param name="sortOrder">optional object SortOrder</param>
-		/// <param name="caseSensitive">optional object CaseSensitive</param>
-		/// <param name="bidiSort">optional object BidiSort</param>
-		/// <param name="ignoreThe">optional object IgnoreThe</param>
-		/// <param name="ignoreKashida">optional object IgnoreKashida</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 15, 16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/jj230923.aspx </remarks>
+		/// <param name="sortFieldType">optional object sortFieldType</param>
+		/// <param name="sortOrder">optional object sortOrder</param>
+		/// <param name="caseSensitive">optional object caseSensitive</param>
+		/// <param name="bidiSort">optional object bidiSort</param>
+		/// <param name="ignoreThe">optional object ignoreThe</param>
+		/// <param name="ignoreKashida">optional object ignoreKashida</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 15, 16)]
 		public void SortByHeadings(object sortFieldType, object sortOrder, object caseSensitive, object bidiSort, object ignoreThe, object ignoreKashida)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(sortFieldType, sortOrder, caseSensitive, bidiSort, ignoreThe, ignoreKashida);
-			Invoker.Method(this, "SortByHeadings", paramsArray);
+			 Factory.ExecuteMethod(this, "SortByHeadings", new object[]{ sortFieldType, sortOrder, caseSensitive, bidiSort, ignoreThe, ignoreKashida });
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 15,16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj230923.aspx
 		/// </summary>
-		/// <param name="sortFieldType">optional object SortFieldType</param>
-		/// <param name="sortOrder">optional object SortOrder</param>
-		/// <param name="caseSensitive">optional object CaseSensitive</param>
-		/// <param name="bidiSort">optional object BidiSort</param>
-		/// <param name="ignoreThe">optional object IgnoreThe</param>
-		/// <param name="ignoreKashida">optional object IgnoreKashida</param>
-		/// <param name="ignoreDiacritics">optional object IgnoreDiacritics</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 15, 16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/jj230923.aspx </remarks>
+		/// <param name="sortFieldType">optional object sortFieldType</param>
+		/// <param name="sortOrder">optional object sortOrder</param>
+		/// <param name="caseSensitive">optional object caseSensitive</param>
+		/// <param name="bidiSort">optional object bidiSort</param>
+		/// <param name="ignoreThe">optional object ignoreThe</param>
+		/// <param name="ignoreKashida">optional object ignoreKashida</param>
+		/// <param name="ignoreDiacritics">optional object ignoreDiacritics</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 15, 16)]
 		public void SortByHeadings(object sortFieldType, object sortOrder, object caseSensitive, object bidiSort, object ignoreThe, object ignoreKashida, object ignoreDiacritics)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(sortFieldType, sortOrder, caseSensitive, bidiSort, ignoreThe, ignoreKashida, ignoreDiacritics);
-			Invoker.Method(this, "SortByHeadings", paramsArray);
+			 Factory.ExecuteMethod(this, "SortByHeadings", new object[]{ sortFieldType, sortOrder, caseSensitive, bidiSort, ignoreThe, ignoreKashida, ignoreDiacritics });
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 15,16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj230923.aspx
 		/// </summary>
-		/// <param name="sortFieldType">optional object SortFieldType</param>
-		/// <param name="sortOrder">optional object SortOrder</param>
-		/// <param name="caseSensitive">optional object CaseSensitive</param>
-		/// <param name="bidiSort">optional object BidiSort</param>
-		/// <param name="ignoreThe">optional object IgnoreThe</param>
-		/// <param name="ignoreKashida">optional object IgnoreKashida</param>
-		/// <param name="ignoreDiacritics">optional object IgnoreDiacritics</param>
-		/// <param name="ignoreHe">optional object IgnoreHe</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 15, 16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/jj230923.aspx </remarks>
+		/// <param name="sortFieldType">optional object sortFieldType</param>
+		/// <param name="sortOrder">optional object sortOrder</param>
+		/// <param name="caseSensitive">optional object caseSensitive</param>
+		/// <param name="bidiSort">optional object bidiSort</param>
+		/// <param name="ignoreThe">optional object ignoreThe</param>
+		/// <param name="ignoreKashida">optional object ignoreKashida</param>
+		/// <param name="ignoreDiacritics">optional object ignoreDiacritics</param>
+		/// <param name="ignoreHe">optional object ignoreHe</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 15, 16)]
 		public void SortByHeadings(object sortFieldType, object sortOrder, object caseSensitive, object bidiSort, object ignoreThe, object ignoreKashida, object ignoreDiacritics, object ignoreHe)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(sortFieldType, sortOrder, caseSensitive, bidiSort, ignoreThe, ignoreKashida, ignoreDiacritics, ignoreHe);
-			Invoker.Method(this, "SortByHeadings", paramsArray);
+			 Factory.ExecuteMethod(this, "SortByHeadings", new object[]{ sortFieldType, sortOrder, caseSensitive, bidiSort, ignoreThe, ignoreKashida, ignoreDiacritics, ignoreHe });
 		}
 
 		#endregion
+
 		#pragma warning restore
 	}
 }

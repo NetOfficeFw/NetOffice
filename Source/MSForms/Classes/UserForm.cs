@@ -1,50 +1,50 @@
 ﻿using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
-using NetOffice;
-using NetOffice.Misc;
+using NetOffice.Attributes;
 
 namespace NetOffice.MSFormsApi
 {
-
 	#region Delegates
 
 	#pragma warning disable
-	public delegate void UserForm_AddControlEventHandler(NetOffice.MSFormsApi.Control Control);
-	public delegate void UserForm_BeforeDragOverEventHandler(NetOffice.MSFormsApi.ReturnBoolean Cancel, NetOffice.MSFormsApi.Control Control, NetOffice.MSFormsApi.DataObject Data, Single X, Single Y, NetOffice.MSFormsApi.Enums.fmDragState State, NetOffice.MSFormsApi.ReturnEffect Effect, Int16 Shift);
-	public delegate void UserForm_BeforeDropOrPasteEventHandler(NetOffice.MSFormsApi.ReturnBoolean Cancel, NetOffice.MSFormsApi.Control Control, NetOffice.MSFormsApi.Enums.fmAction Action, NetOffice.MSFormsApi.DataObject Data, Single X, Single Y, NetOffice.MSFormsApi.ReturnEffect Effect, Int16 Shift);
+	public delegate void UserForm_AddControlEventHandler(NetOffice.MSFormsApi.Control control);
+	public delegate void UserForm_BeforeDragOverEventHandler(NetOffice.MSFormsApi.ReturnBoolean cancel, NetOffice.MSFormsApi.Control control, NetOffice.MSFormsApi.DataObject data, Single x, Single y, NetOffice.MSFormsApi.Enums.fmDragState state, NetOffice.MSFormsApi.ReturnEffect effect, Int16 shift);
+	public delegate void UserForm_BeforeDropOrPasteEventHandler(NetOffice.MSFormsApi.ReturnBoolean cancel, NetOffice.MSFormsApi.Control control, NetOffice.MSFormsApi.Enums.fmAction action, NetOffice.MSFormsApi.DataObject data, Single x, Single y, NetOffice.MSFormsApi.ReturnEffect effect, Int16 shift);
 	public delegate void UserForm_ClickEventHandler();
-	public delegate void UserForm_DblClickEventHandler(NetOffice.MSFormsApi.ReturnBoolean Cancel);
-	public delegate void UserForm_ErrorEventHandler(Int16 Number, NetOffice.MSFormsApi.ReturnString Description, Int32 SCode, string Source, string HelpFile, Int32 HelpContext, NetOffice.MSFormsApi.ReturnBoolean CancelDisplay);
-	public delegate void UserForm_KeyDownEventHandler(NetOffice.MSFormsApi.ReturnInteger KeyCode, Int16 Shift);
-	public delegate void UserForm_KeyPressEventHandler(NetOffice.MSFormsApi.ReturnInteger KeyAscii);
-	public delegate void UserForm_KeyUpEventHandler(NetOffice.MSFormsApi.ReturnInteger KeyCode, Int16 Shift);
+	public delegate void UserForm_DblClickEventHandler(NetOffice.MSFormsApi.ReturnBoolean cancel);
+	public delegate void UserForm_ErrorEventHandler(Int16 number, NetOffice.MSFormsApi.ReturnString description, Int32 sCode, string source, string helpFile, Int32 helpContext, NetOffice.MSFormsApi.ReturnBoolean cancelDisplay);
+	public delegate void UserForm_KeyDownEventHandler(NetOffice.MSFormsApi.ReturnInteger keyCode, Int16 shift);
+	public delegate void UserForm_KeyPressEventHandler(NetOffice.MSFormsApi.ReturnInteger keyAscii);
+	public delegate void UserForm_KeyUpEventHandler(NetOffice.MSFormsApi.ReturnInteger keyCode, Int16 Shift);
 	public delegate void UserForm_LayoutEventHandler();
-	public delegate void UserForm_MouseDownEventHandler(Int16 Button, Int16 Shift, Single X, Single Y);
-	public delegate void UserForm_MouseMoveEventHandler(Int16 Button, Int16 Shift, Single X, Single Y);
-	public delegate void UserForm_MouseUpEventHandler(Int16 Button, Int16 Shift, Single X, Single Y);
-	public delegate void UserForm_RemoveControlEventHandler(NetOffice.MSFormsApi.Control Control);
-	public delegate void UserForm_ScrollEventHandler(NetOffice.MSFormsApi.Enums.fmScrollAction ActionX, NetOffice.MSFormsApi.Enums.fmScrollAction ActionY, Single RequestDx, Single RequestDy, NetOffice.MSFormsApi.ReturnSingle ActualDx, NetOffice.MSFormsApi.ReturnSingle ActualDy);
-	public delegate void UserForm_ZoomEventHandler(ref Int16 Percent);
+	public delegate void UserForm_MouseDownEventHandler(Int16 button, Int16 shift, Single X, Single Y);
+	public delegate void UserForm_MouseMoveEventHandler(Int16 button, Int16 shift, Single X, Single Y);
+	public delegate void UserForm_MouseUpEventHandler(Int16 button, Int16 shift, Single X, Single Y);
+	public delegate void UserForm_RemoveControlEventHandler(NetOffice.MSFormsApi.Control control);
+	public delegate void UserForm_ScrollEventHandler(NetOffice.MSFormsApi.Enums.fmScrollAction actionX, NetOffice.MSFormsApi.Enums.fmScrollAction actionY, Single requestDx, Single requestDy, NetOffice.MSFormsApi.ReturnSingle actualDx, NetOffice.MSFormsApi.ReturnSingle actualDy);
+	public delegate void UserForm_ZoomEventHandler(ref Int16 percent);
 	#pragma warning restore
 
 	#endregion
 
-	///<summary>
+	/// <summary>
 	/// CoClass UserForm 
 	/// SupportByVersion MSForms, 2
-	///</summary>
-	[SupportByVersionAttribute("MSForms", 2)]
-	[EntityTypeAttribute(EntityType.IsCoClass)]
-	public class UserForm : _UserForm,IEventBinding
+	/// </summary>
+	[SupportByVersion("MSForms", 2)]
+	[EntityType(EntityType.IsCoClass)]
+	[EventSink(typeof(Events.FormEvents_SinkHelper))]
+	public class UserForm : _UserForm, IEventBinding
 	{
 		#pragma warning disable
+
 		#region Fields
 		
 		private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
 		private string _activeSinkId;
 		private NetRuntimeSystem.Type _thisType;
-		FormEvents_SinkHelper _formEvents_SinkHelper;
+		private Events.FormEvents_SinkHelper _formEvents_SinkHelper;
 	
 		#endregion
 
@@ -55,6 +55,7 @@ namespace NetOffice.MSFormsApi
         /// <summary>
         /// Instance Type
         /// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
         public override Type InstanceType
         {
             get
@@ -119,17 +120,17 @@ namespace NetOffice.MSFormsApi
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of UserForm 
-        ///</summary>		
+        /// </summary>		
 		public UserForm():base("MSForms.UserForm")
 		{
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of UserForm
-        ///</summary>
+        /// </summary>
         ///<param name="progId">registered ProgID</param>
 		public UserForm(string progId):base(progId)
 		{
@@ -139,46 +140,6 @@ namespace NetOffice.MSFormsApi
 		#endregion
 
 		#region Static CoClass Methods
-
-		/// <summary>
-        /// Returns all running MSForms.UserForm objects from the environment/system
-        /// </summary>
-        /// <returns>an MSForms.UserForm array</returns>
-		public static NetOffice.MSFormsApi.UserForm[] GetActiveInstances()
-		{		
-			IDisposableEnumeration proxyList = NetOffice.ProxyService.GetActiveInstances("MSForms","UserForm");
-			NetRuntimeSystem.Collections.Generic.List<NetOffice.MSFormsApi.UserForm> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.MSFormsApi.UserForm>();
-			foreach(object proxy in proxyList)
-				resultList.Add( new NetOffice.MSFormsApi.UserForm(null, proxy) );
-			return resultList.ToArray();
-		}
-
-		/// <summary>
-        /// Returns a running MSForms.UserForm object from the environment/system.
-        /// </summary>
-        /// <returns>an MSForms.UserForm object or null</returns>
-		public static NetOffice.MSFormsApi.UserForm GetActiveInstance()
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("MSForms","UserForm", false);
-			if(null != proxy)
-				return new NetOffice.MSFormsApi.UserForm(null, proxy);
-			else
-				return null;
-		}
-
-		/// <summary>
-        /// Returns a running MSForms.UserForm object from the environment/system. 
-        /// </summary>
-	    /// <param name="throwOnError">throw an exception if no object was found</param>
-        /// <returns>an MSForms.UserForm object or null</returns>
-		public static NetOffice.MSFormsApi.UserForm GetActiveInstance(bool throwOnError)
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("MSForms","UserForm", throwOnError);
-			if(null != proxy)
-				return new NetOffice.MSFormsApi.UserForm(null, proxy);
-			else
-				return null;
-		}
 		#endregion
 
 		#region Events
@@ -552,12 +513,12 @@ namespace NetOffice.MSFormsApi
 				return;
 	
             if (null == _activeSinkId)
-				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, FormEvents_SinkHelper.Id);
+				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, Events.FormEvents_SinkHelper.Id);
 
 
-			if(FormEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
+			if(Events.FormEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
 			{
-				_formEvents_SinkHelper = new FormEvents_SinkHelper(this, _connectPoint);
+				_formEvents_SinkHelper = new Events.FormEvents_SinkHelper(this, _connectPoint);
 				return;
 			} 
         }

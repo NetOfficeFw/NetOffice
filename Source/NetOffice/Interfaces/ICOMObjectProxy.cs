@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.ComponentModel;
 
 namespace NetOffice
@@ -42,12 +39,6 @@ namespace NetOffice
         string UnderlyingComponentName { get; }
         
         /// <summary>
-        /// Name of the hosting NetOffice component
-        /// </summary>
-        [Browsable(false), EditorBrowsable(EditorBrowsableState.Advanced)]
-        string InstanceComponentName { get; }
-
-        /// <summary>
         /// Full name of the NetOffice Wrapper class
         /// </summary>
         [Browsable(false), EditorBrowsable(EditorBrowsableState.Advanced)]
@@ -59,6 +50,12 @@ namespace NetOffice
         [Browsable(false), EditorBrowsable(EditorBrowsableState.Advanced)]
         string InstanceFriendlyName { get; }
 
+        /// <summary>
+        /// Name of the hosting NetOffice component
+        /// </summary>
+        [Browsable(false), EditorBrowsable(EditorBrowsableState.Advanced)]
+        string InstanceComponentName { get; }
+       
         /// <summary>
         /// Type informations from ICOMObject instance
         /// </summary>

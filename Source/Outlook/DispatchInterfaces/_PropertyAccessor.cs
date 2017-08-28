@@ -1,23 +1,33 @@
-﻿using System;
+using System;
 using NetRuntimeSystem = System;
-using System.Runtime.InteropServices;
-using System.Runtime.CompilerServices;
 using System.ComponentModel;
-using System.Reflection;
-using System.Collections.Generic;
-using NetOffice;
+using NetOffice.Attributes;
+
 namespace NetOffice.OutlookApi
 {
-	///<summary>
+	/// <summary>
 	/// DispatchInterface _PropertyAccessor 
 	/// SupportByVersion Outlook, 12,14,15,16
-	///</summary>
-	[SupportByVersionAttribute("Outlook", 12,14,15,16)]
-	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
-	public class _PropertyAccessor : COMObject
+	/// </summary>
+	[SupportByVersion("Outlook", 12,14,15,16)]
+	[EntityType(EntityType.IsDispatchInterface)]
+ 	public class _PropertyAccessor : COMObject
 	{
 		#pragma warning disable
+
 		#region Type Information
+
+		/// <summary>
+		/// Instance Type
+		/// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
+		public override Type InstanceType
+		{
+			get
+			{
+				return LateBindingApiWrapperType;
+			}
+		}
 
         private static Type _type;
 
@@ -28,14 +38,20 @@ namespace NetOffice.OutlookApi
             {
                 if (null == _type)
                     _type = typeof(_PropertyAccessor);
-                    
                 return _type;
             }
         }
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public _PropertyAccessor(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -81,7 +97,7 @@ namespace NetOffice.OutlookApi
 		{
 		}
 		
-		/// <param name="progId">registered ProgID</param>
+		/// <param name="progId">registered progID</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public _PropertyAccessor(string progId) : base(progId)
 		{
@@ -94,69 +110,59 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff865030.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Outlook", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff865030.aspx </remarks>
+		[SupportByVersion("Outlook", 12,14,15,16)]
+		[BaseResult]
 		public NetOffice.OutlookApi._Application Application
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				NetOffice.OutlookApi._Application newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OutlookApi._Application;
-				return newObject;
+				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.OutlookApi._Application>(this, "Application");
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff869821.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Outlook", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff869821.aspx </remarks>
+		[SupportByVersion("Outlook", 12,14,15,16)]
 		public NetOffice.OutlookApi.Enums.OlObjectClass Class
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Class", paramsArray);
-				int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-				return (NetOffice.OutlookApi.Enums.OlObjectClass)intReturnItem;
+				return Factory.ExecuteEnumPropertyGet<NetOffice.OutlookApi.Enums.OlObjectClass>(this, "Class");
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff869435.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Outlook", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff869435.aspx </remarks>
+		[SupportByVersion("Outlook", 12,14,15,16)]
+		[BaseResult]
 		public NetOffice.OutlookApi._NameSpace Session
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Session", paramsArray);
-				NetOffice.OutlookApi._NameSpace newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OutlookApi._NameSpace;
-				return newObject;
+				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.OutlookApi._NameSpace>(this, "Session");
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff866730.aspx
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("Outlook", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff866730.aspx </remarks>
+		[SupportByVersion("Outlook", 12,14,15,16), ProxyResult]
 		public object Parent
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Parent", paramsArray);
-				ICOMObject newObject = Factory.CreateObjectFromComProxy(this,returnItem);
-				return newObject;
+				return Factory.ExecuteReferencePropertyGet(this, "Parent");
 			}
 		}
 
@@ -166,175 +172,118 @@ namespace NetOffice.OutlookApi
 
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff868350.aspx
 		/// </summary>
-		/// <param name="schemaName">string SchemaName</param>
-		[SupportByVersionAttribute("Outlook", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff868350.aspx </remarks>
+		/// <param name="schemaName">string schemaName</param>
+		[SupportByVersion("Outlook", 12,14,15,16)]
 		public object GetProperty(string schemaName)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(schemaName);
-			object returnItem = Invoker.MethodReturn(this, "GetProperty", paramsArray);
-			if((null != returnItem) && (returnItem is MarshalByRefObject))
-			{
-				ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
-				return newObject;
-			}
-			else
-			{
-				return  returnItem;
-			}
+			return Factory.ExecuteVariantMethodGet(this, "GetProperty", schemaName);
 		}
 
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff862751.aspx
 		/// </summary>
-		/// <param name="schemaName">string SchemaName</param>
-		/// <param name="value">object Value</param>
-		[SupportByVersionAttribute("Outlook", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff862751.aspx </remarks>
+		/// <param name="schemaName">string schemaName</param>
+		/// <param name="value">object value</param>
+		[SupportByVersion("Outlook", 12,14,15,16)]
 		public void SetProperty(string schemaName, object value)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(schemaName, value);
-			Invoker.Method(this, "SetProperty", paramsArray);
+			 Factory.ExecuteMethod(this, "SetProperty", schemaName, value);
 		}
 
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff869865.aspx
 		/// </summary>
-		/// <param name="schemaNames">object SchemaNames</param>
-		[SupportByVersionAttribute("Outlook", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff869865.aspx </remarks>
+		/// <param name="schemaNames">object schemaNames</param>
+		[SupportByVersion("Outlook", 12,14,15,16)]
 		public object GetProperties(object schemaNames)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(schemaNames);
-			object returnItem = Invoker.MethodReturn(this, "GetProperties", paramsArray);
-			if((null != returnItem) && (returnItem is MarshalByRefObject))
-			{
-				ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
-				return newObject;
-			}
-			else
-			{
-				return  returnItem;
-			}
+			return Factory.ExecuteVariantMethodGet(this, "GetProperties", schemaNames);
 		}
 
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff868862.aspx
 		/// </summary>
-		/// <param name="schemaNames">object SchemaNames</param>
-		/// <param name="values">object Values</param>
-		[SupportByVersionAttribute("Outlook", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff868862.aspx </remarks>
+		/// <param name="schemaNames">object schemaNames</param>
+		/// <param name="values">object values</param>
+		[SupportByVersion("Outlook", 12,14,15,16)]
 		public object SetProperties(object schemaNames, object values)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(schemaNames, values);
-			object returnItem = Invoker.MethodReturn(this, "SetProperties", paramsArray);
-			if((null != returnItem) && (returnItem is MarshalByRefObject))
-			{
-				ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
-				return newObject;
-			}
-			else
-			{
-				return  returnItem;
-			}
+			return Factory.ExecuteVariantMethodGet(this, "SetProperties", schemaNames, values);
 		}
 
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff868342.aspx
 		/// </summary>
-		/// <param name="value">DateTime Value</param>
-		[SupportByVersionAttribute("Outlook", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff868342.aspx </remarks>
+		/// <param name="value">DateTime value</param>
+		[SupportByVersion("Outlook", 12,14,15,16)]
 		public DateTime UTCToLocalTime(DateTime value)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(value);
-			object returnItem = Invoker.MethodReturn(this, "UTCToLocalTime", paramsArray);
-			return NetRuntimeSystem.Convert.ToDateTime(returnItem);
+			return Factory.ExecuteDateTimeMethodGet(this, "UTCToLocalTime", value);
 		}
 
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff868909.aspx
 		/// </summary>
-		/// <param name="value">DateTime Value</param>
-		[SupportByVersionAttribute("Outlook", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff868909.aspx </remarks>
+		/// <param name="value">DateTime value</param>
+		[SupportByVersion("Outlook", 12,14,15,16)]
 		public DateTime LocalTimeToUTC(DateTime value)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(value);
-			object returnItem = Invoker.MethodReturn(this, "LocalTimeToUTC", paramsArray);
-			return NetRuntimeSystem.Convert.ToDateTime(returnItem);
+			return Factory.ExecuteDateTimeMethodGet(this, "LocalTimeToUTC", value);
 		}
 
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff862123.aspx
 		/// </summary>
-		/// <param name="value">string Value</param>
-		[SupportByVersionAttribute("Outlook", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff862123.aspx </remarks>
+		/// <param name="value">string value</param>
+		[SupportByVersion("Outlook", 12,14,15,16)]
 		public object StringToBinary(string value)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(value);
-			object returnItem = Invoker.MethodReturn(this, "StringToBinary", paramsArray);
-			if((null != returnItem) && (returnItem is MarshalByRefObject))
-			{
-				ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
-				return newObject;
-			}
-			else
-			{
-				return  returnItem;
-			}
+			return Factory.ExecuteVariantMethodGet(this, "StringToBinary", value);
 		}
 
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff864468.aspx
 		/// </summary>
-		/// <param name="value">object Value</param>
-		[SupportByVersionAttribute("Outlook", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff864468.aspx </remarks>
+		/// <param name="value">object value</param>
+		[SupportByVersion("Outlook", 12,14,15,16)]
 		public string BinaryToString(object value)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(value);
-			object returnItem = Invoker.MethodReturn(this, "BinaryToString", paramsArray);
-			return NetRuntimeSystem.Convert.ToString(returnItem);
+			return Factory.ExecuteStringMethodGet(this, "BinaryToString", value);
 		}
 
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff868076.aspx
 		/// </summary>
-		/// <param name="schemaName">string SchemaName</param>
-		[SupportByVersionAttribute("Outlook", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff868076.aspx </remarks>
+		/// <param name="schemaName">string schemaName</param>
+		[SupportByVersion("Outlook", 12,14,15,16)]
 		public void DeleteProperty(string schemaName)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(schemaName);
-			Invoker.Method(this, "DeleteProperty", paramsArray);
+			 Factory.ExecuteMethod(this, "DeleteProperty", schemaName);
 		}
 
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff869707.aspx
 		/// </summary>
-		/// <param name="schemaNames">object SchemaNames</param>
-		[SupportByVersionAttribute("Outlook", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff869707.aspx </remarks>
+		/// <param name="schemaNames">object schemaNames</param>
+		[SupportByVersion("Outlook", 12,14,15,16)]
 		public object DeleteProperties(object schemaNames)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(schemaNames);
-			object returnItem = Invoker.MethodReturn(this, "DeleteProperties", paramsArray);
-			if((null != returnItem) && (returnItem is MarshalByRefObject))
-			{
-				ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
-				return newObject;
-			}
-			else
-			{
-				return  returnItem;
-			}
+			return Factory.ExecuteVariantMethodGet(this, "DeleteProperties", schemaNames);
 		}
 
 		#endregion
+
 		#pragma warning restore
 	}
 }

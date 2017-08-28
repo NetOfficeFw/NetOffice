@@ -1,12 +1,10 @@
 ﻿using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
-using NetOffice;
-using NetOffice.Misc;
+using NetOffice.Attributes;
 
 namespace NetOffice.MSHTMLApi
 {
-
 	#region Delegates
 
 	#pragma warning disable
@@ -77,21 +75,23 @@ namespace NetOffice.MSHTMLApi
 
 	#endregion
 
-	///<summary>
+	/// <summary>
 	/// CoClass HTMLIFrame 
 	/// SupportByVersion MSHTML, 4
-	///</summary>
-	[SupportByVersionAttribute("MSHTML", 4)]
-	[EntityTypeAttribute(EntityType.IsCoClass)]
-	public class HTMLIFrame : DispHTMLIFrame,IEventBinding
+	/// </summary>
+	[SupportByVersion("MSHTML", 4)]
+	[EntityType(EntityType.IsCoClass)]
+	[EventSink(typeof(Events.HTMLControlElementEvents_SinkHelper))]
+	public class HTMLIFrame : DispHTMLIFrame, IEventBinding
 	{
 		#pragma warning disable
+
 		#region Fields
 		
 		private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
 		private string _activeSinkId;
 		private NetRuntimeSystem.Type _thisType;
-		HTMLControlElementEvents_SinkHelper _hTMLControlElementEvents_SinkHelper;
+		private Events.HTMLControlElementEvents_SinkHelper _hTMLControlElementEvents_SinkHelper;
 	
 		#endregion
 
@@ -100,6 +100,7 @@ namespace NetOffice.MSHTMLApi
         /// <summary>
         /// Instance Type
         /// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
         public override Type InstanceType
         {
             get
@@ -166,17 +167,17 @@ namespace NetOffice.MSHTMLApi
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of HTMLIFrame 
-        ///</summary>		
+        /// </summary>		
 		public HTMLIFrame():base("MSHTML.HTMLIFrame")
 		{
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of HTMLIFrame
-        ///</summary>
+        /// </summary>
         ///<param name="progId">registered ProgID</param>
 		public HTMLIFrame(string progId):base(progId)
 		{
@@ -186,46 +187,6 @@ namespace NetOffice.MSHTMLApi
 		#endregion
 
 		#region Static CoClass Methods
-
-		/// <summary>
-        /// Returns all running MSHTML.HTMLIFrame objects from the environment/system
-        /// </summary>
-        /// <returns>an MSHTML.HTMLIFrame array</returns>
-		public static NetOffice.MSHTMLApi.HTMLIFrame[] GetActiveInstances()
-		{		
-			IDisposableEnumeration proxyList = NetOffice.ProxyService.GetActiveInstances("MSHTML","HTMLIFrame");
-			NetRuntimeSystem.Collections.Generic.List<NetOffice.MSHTMLApi.HTMLIFrame> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.MSHTMLApi.HTMLIFrame>();
-			foreach(object proxy in proxyList)
-				resultList.Add( new NetOffice.MSHTMLApi.HTMLIFrame(null, proxy) );
-			return resultList.ToArray();
-		}
-
-		/// <summary>
-        /// Returns a running MSHTML.HTMLIFrame object from the environment/system.
-        /// </summary>
-        /// <returns>an MSHTML.HTMLIFrame object or null</returns>
-		public static NetOffice.MSHTMLApi.HTMLIFrame GetActiveInstance()
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("MSHTML","HTMLIFrame", false);
-			if(null != proxy)
-				return new NetOffice.MSHTMLApi.HTMLIFrame(null, proxy);
-			else
-				return null;
-		}
-
-		/// <summary>
-        /// Returns a running MSHTML.HTMLIFrame object from the environment/system. 
-        /// </summary>
-	    /// <param name="throwOnError">throw an exception if no object was found</param>
-        /// <returns>an MSHTML.HTMLIFrame object or null</returns>
-		public static NetOffice.MSHTMLApi.HTMLIFrame GetActiveInstance(bool throwOnError)
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("MSHTML","HTMLIFrame", throwOnError);
-			if(null != proxy)
-				return new NetOffice.MSHTMLApi.HTMLIFrame(null, proxy);
-			else
-				return null;
-		}
 		#endregion
 
 		#region Events
@@ -1633,12 +1594,12 @@ namespace NetOffice.MSHTMLApi
 				return;
 	
             if (null == _activeSinkId)
-				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, HTMLControlElementEvents_SinkHelper.Id);
+				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, Events.HTMLControlElementEvents_SinkHelper.Id);
 
 
-			if(HTMLControlElementEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
+			if(Events.HTMLControlElementEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
 			{
-				_hTMLControlElementEvents_SinkHelper = new HTMLControlElementEvents_SinkHelper(this, _connectPoint);
+				_hTMLControlElementEvents_SinkHelper = new Events.HTMLControlElementEvents_SinkHelper(this, _connectPoint);
 				return;
 			} 
         }

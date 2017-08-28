@@ -1,23 +1,33 @@
 ﻿using System;
 using NetRuntimeSystem = System;
-using System.Runtime.InteropServices;
 using System.ComponentModel;
-using System.Runtime.CompilerServices;
-using System.Reflection;
-using System.Collections.Generic;
-using NetOffice;
+using NetOffice.Attributes;
+
 namespace NetOffice.ADODBApi
 {
-	///<summary>
+	/// <summary>
 	/// Interface RecordsetEventsVt 
 	/// SupportByVersion ADODB, 2.1,2.5
-	///</summary>
-	[SupportByVersionAttribute("ADODB", 2.1,2.5)]
-	[EntityTypeAttribute(EntityType.IsInterface)]
-	public class RecordsetEventsVt : COMObject
+	/// </summary>
+	[SupportByVersion("ADODB", 2.1,2.5)]
+	[EntityType(EntityType.IsInterface)]
+ 	public class RecordsetEventsVt : COMObject
 	{
 		#pragma warning disable
+
 		#region Type Information
+
+		/// <summary>
+		/// Instance Type
+		/// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
+		public override Type InstanceType
+		{
+			get
+			{
+				return LateBindingApiWrapperType;
+			}
+		}
 
         private static Type _type;
 
@@ -28,14 +38,20 @@ namespace NetOffice.ADODBApi
             {
                 if (null == _type)
                     _type = typeof(RecordsetEventsVt);
-                    
                 return _type;
             }
         }
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public RecordsetEventsVt(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -81,7 +97,7 @@ namespace NetOffice.ADODBApi
 		{
 		}
 		
-		/// <param name="progId">registered ProgID</param>
+		/// <param name="progId">registered progID</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public RecordsetEventsVt(string progId) : base(progId)
 		{
@@ -97,179 +113,147 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.1, 2.5
-		/// 
 		/// </summary>
 		/// <param name="cFields">Int32 cFields</param>
-		/// <param name="fields">object Fields</param>
+		/// <param name="fields">object fields</param>
 		/// <param name="adStatus">NetOffice.ADODBApi.Enums.EventStatusEnum adStatus</param>
 		/// <param name="pRecordset">NetOffice.ADODBApi._Recordset pRecordset</param>
-		[SupportByVersionAttribute("ADODB", 2.1,2.5)]
+		[SupportByVersion("ADODB", 2.1,2.5)]
 		public Int32 WillChangeField(Int32 cFields, object fields, NetOffice.ADODBApi.Enums.EventStatusEnum adStatus, NetOffice.ADODBApi._Recordset pRecordset)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(cFields, fields, adStatus, pRecordset);
-			object returnItem = Invoker.MethodReturn(this, "WillChangeField", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return Factory.ExecuteInt32MethodGet(this, "WillChangeField", cFields, fields, adStatus, pRecordset);
 		}
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.1, 2.5
-		/// 
 		/// </summary>
 		/// <param name="cFields">Int32 cFields</param>
-		/// <param name="fields">object Fields</param>
+		/// <param name="fields">object fields</param>
 		/// <param name="pError">NetOffice.ADODBApi.Error pError</param>
 		/// <param name="adStatus">NetOffice.ADODBApi.Enums.EventStatusEnum adStatus</param>
 		/// <param name="pRecordset">NetOffice.ADODBApi._Recordset pRecordset</param>
-		[SupportByVersionAttribute("ADODB", 2.1,2.5)]
+		[SupportByVersion("ADODB", 2.1,2.5)]
 		public Int32 FieldChangeComplete(Int32 cFields, object fields, NetOffice.ADODBApi.Error pError, NetOffice.ADODBApi.Enums.EventStatusEnum adStatus, NetOffice.ADODBApi._Recordset pRecordset)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(cFields, fields, pError, adStatus, pRecordset);
-			object returnItem = Invoker.MethodReturn(this, "FieldChangeComplete", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return Factory.ExecuteInt32MethodGet(this, "FieldChangeComplete", new object[]{ cFields, fields, pError, adStatus, pRecordset });
 		}
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.1, 2.5
-		/// 
 		/// </summary>
 		/// <param name="adReason">NetOffice.ADODBApi.Enums.EventReasonEnum adReason</param>
 		/// <param name="cRecords">Int32 cRecords</param>
 		/// <param name="adStatus">NetOffice.ADODBApi.Enums.EventStatusEnum adStatus</param>
 		/// <param name="pRecordset">NetOffice.ADODBApi._Recordset pRecordset</param>
-		[SupportByVersionAttribute("ADODB", 2.1,2.5)]
+		[SupportByVersion("ADODB", 2.1,2.5)]
 		public Int32 WillChangeRecord(NetOffice.ADODBApi.Enums.EventReasonEnum adReason, Int32 cRecords, NetOffice.ADODBApi.Enums.EventStatusEnum adStatus, NetOffice.ADODBApi._Recordset pRecordset)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(adReason, cRecords, adStatus, pRecordset);
-			object returnItem = Invoker.MethodReturn(this, "WillChangeRecord", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return Factory.ExecuteInt32MethodGet(this, "WillChangeRecord", adReason, cRecords, adStatus, pRecordset);
 		}
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.1, 2.5
-		/// 
 		/// </summary>
 		/// <param name="adReason">NetOffice.ADODBApi.Enums.EventReasonEnum adReason</param>
 		/// <param name="cRecords">Int32 cRecords</param>
 		/// <param name="pError">NetOffice.ADODBApi.Error pError</param>
 		/// <param name="adStatus">NetOffice.ADODBApi.Enums.EventStatusEnum adStatus</param>
 		/// <param name="pRecordset">NetOffice.ADODBApi._Recordset pRecordset</param>
-		[SupportByVersionAttribute("ADODB", 2.1,2.5)]
+		[SupportByVersion("ADODB", 2.1,2.5)]
 		public Int32 RecordChangeComplete(NetOffice.ADODBApi.Enums.EventReasonEnum adReason, Int32 cRecords, NetOffice.ADODBApi.Error pError, NetOffice.ADODBApi.Enums.EventStatusEnum adStatus, NetOffice.ADODBApi._Recordset pRecordset)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(adReason, cRecords, pError, adStatus, pRecordset);
-			object returnItem = Invoker.MethodReturn(this, "RecordChangeComplete", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return Factory.ExecuteInt32MethodGet(this, "RecordChangeComplete", new object[]{ adReason, cRecords, pError, adStatus, pRecordset });
 		}
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.1, 2.5
-		/// 
 		/// </summary>
 		/// <param name="adReason">NetOffice.ADODBApi.Enums.EventReasonEnum adReason</param>
 		/// <param name="adStatus">NetOffice.ADODBApi.Enums.EventStatusEnum adStatus</param>
 		/// <param name="pRecordset">NetOffice.ADODBApi._Recordset pRecordset</param>
-		[SupportByVersionAttribute("ADODB", 2.1,2.5)]
+		[SupportByVersion("ADODB", 2.1,2.5)]
 		public Int32 WillChangeRecordset(NetOffice.ADODBApi.Enums.EventReasonEnum adReason, NetOffice.ADODBApi.Enums.EventStatusEnum adStatus, NetOffice.ADODBApi._Recordset pRecordset)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(adReason, adStatus, pRecordset);
-			object returnItem = Invoker.MethodReturn(this, "WillChangeRecordset", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return Factory.ExecuteInt32MethodGet(this, "WillChangeRecordset", adReason, adStatus, pRecordset);
 		}
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.1, 2.5
-		/// 
 		/// </summary>
 		/// <param name="adReason">NetOffice.ADODBApi.Enums.EventReasonEnum adReason</param>
 		/// <param name="pError">NetOffice.ADODBApi.Error pError</param>
 		/// <param name="adStatus">NetOffice.ADODBApi.Enums.EventStatusEnum adStatus</param>
 		/// <param name="pRecordset">NetOffice.ADODBApi._Recordset pRecordset</param>
-		[SupportByVersionAttribute("ADODB", 2.1,2.5)]
+		[SupportByVersion("ADODB", 2.1,2.5)]
 		public Int32 RecordsetChangeComplete(NetOffice.ADODBApi.Enums.EventReasonEnum adReason, NetOffice.ADODBApi.Error pError, NetOffice.ADODBApi.Enums.EventStatusEnum adStatus, NetOffice.ADODBApi._Recordset pRecordset)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(adReason, pError, adStatus, pRecordset);
-			object returnItem = Invoker.MethodReturn(this, "RecordsetChangeComplete", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return Factory.ExecuteInt32MethodGet(this, "RecordsetChangeComplete", adReason, pError, adStatus, pRecordset);
 		}
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.1, 2.5
-		/// 
 		/// </summary>
 		/// <param name="adReason">NetOffice.ADODBApi.Enums.EventReasonEnum adReason</param>
 		/// <param name="adStatus">NetOffice.ADODBApi.Enums.EventStatusEnum adStatus</param>
 		/// <param name="pRecordset">NetOffice.ADODBApi._Recordset pRecordset</param>
-		[SupportByVersionAttribute("ADODB", 2.1,2.5)]
+		[SupportByVersion("ADODB", 2.1,2.5)]
 		public Int32 WillMove(NetOffice.ADODBApi.Enums.EventReasonEnum adReason, NetOffice.ADODBApi.Enums.EventStatusEnum adStatus, NetOffice.ADODBApi._Recordset pRecordset)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(adReason, adStatus, pRecordset);
-			object returnItem = Invoker.MethodReturn(this, "WillMove", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return Factory.ExecuteInt32MethodGet(this, "WillMove", adReason, adStatus, pRecordset);
 		}
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.1, 2.5
-		/// 
 		/// </summary>
 		/// <param name="adReason">NetOffice.ADODBApi.Enums.EventReasonEnum adReason</param>
 		/// <param name="pError">NetOffice.ADODBApi.Error pError</param>
 		/// <param name="adStatus">NetOffice.ADODBApi.Enums.EventStatusEnum adStatus</param>
 		/// <param name="pRecordset">NetOffice.ADODBApi._Recordset pRecordset</param>
-		[SupportByVersionAttribute("ADODB", 2.1,2.5)]
+		[SupportByVersion("ADODB", 2.1,2.5)]
 		public Int32 MoveComplete(NetOffice.ADODBApi.Enums.EventReasonEnum adReason, NetOffice.ADODBApi.Error pError, NetOffice.ADODBApi.Enums.EventStatusEnum adStatus, NetOffice.ADODBApi._Recordset pRecordset)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(adReason, pError, adStatus, pRecordset);
-			object returnItem = Invoker.MethodReturn(this, "MoveComplete", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return Factory.ExecuteInt32MethodGet(this, "MoveComplete", adReason, pError, adStatus, pRecordset);
 		}
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.1, 2.5
-		/// 
 		/// </summary>
 		/// <param name="fMoreData">bool fMoreData</param>
 		/// <param name="adStatus">NetOffice.ADODBApi.Enums.EventStatusEnum adStatus</param>
 		/// <param name="pRecordset">NetOffice.ADODBApi._Recordset pRecordset</param>
-		[SupportByVersionAttribute("ADODB", 2.1,2.5)]
+		[SupportByVersion("ADODB", 2.1,2.5)]
 		public Int32 EndOfRecordset(bool fMoreData, NetOffice.ADODBApi.Enums.EventStatusEnum adStatus, NetOffice.ADODBApi._Recordset pRecordset)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(fMoreData, adStatus, pRecordset);
-			object returnItem = Invoker.MethodReturn(this, "EndOfRecordset", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return Factory.ExecuteInt32MethodGet(this, "EndOfRecordset", fMoreData, adStatus, pRecordset);
 		}
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.1, 2.5
-		/// 
 		/// </summary>
-		/// <param name="progress">Int32 Progress</param>
-		/// <param name="maxProgress">Int32 MaxProgress</param>
+		/// <param name="progress">Int32 progress</param>
+		/// <param name="maxProgress">Int32 maxProgress</param>
 		/// <param name="adStatus">NetOffice.ADODBApi.Enums.EventStatusEnum adStatus</param>
 		/// <param name="pRecordset">NetOffice.ADODBApi._Recordset pRecordset</param>
-		[SupportByVersionAttribute("ADODB", 2.1,2.5)]
+		[SupportByVersion("ADODB", 2.1,2.5)]
 		public Int32 FetchProgress(Int32 progress, Int32 maxProgress, NetOffice.ADODBApi.Enums.EventStatusEnum adStatus, NetOffice.ADODBApi._Recordset pRecordset)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(progress, maxProgress, adStatus, pRecordset);
-			object returnItem = Invoker.MethodReturn(this, "FetchProgress", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return Factory.ExecuteInt32MethodGet(this, "FetchProgress", progress, maxProgress, adStatus, pRecordset);
 		}
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.1, 2.5
-		/// 
 		/// </summary>
 		/// <param name="pError">NetOffice.ADODBApi.Error pError</param>
 		/// <param name="adStatus">NetOffice.ADODBApi.Enums.EventStatusEnum adStatus</param>
 		/// <param name="pRecordset">NetOffice.ADODBApi._Recordset pRecordset</param>
-		[SupportByVersionAttribute("ADODB", 2.1,2.5)]
+		[SupportByVersion("ADODB", 2.1,2.5)]
 		public Int32 FetchComplete(NetOffice.ADODBApi.Error pError, NetOffice.ADODBApi.Enums.EventStatusEnum adStatus, NetOffice.ADODBApi._Recordset pRecordset)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(pError, adStatus, pRecordset);
-			object returnItem = Invoker.MethodReturn(this, "FetchComplete", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return Factory.ExecuteInt32MethodGet(this, "FetchComplete", pError, adStatus, pRecordset);
 		}
 
 		#endregion
+
 		#pragma warning restore
 	}
 }

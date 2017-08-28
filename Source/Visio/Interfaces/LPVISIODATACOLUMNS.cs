@@ -1,24 +1,35 @@
-﻿using System;
-using NetRuntimeSystem = System;
-using System.Runtime.InteropServices;
-using System.ComponentModel;
-using System.Runtime.CompilerServices;
-using System.Reflection;
-using System.Collections.Generic;
 using System.Collections;
-using NetOffice;
+using System.Collections.Generic;
+using System;
+using NetRuntimeSystem = System;
+using System.ComponentModel;
+using NetOffice.Attributes;
+
 namespace NetOffice.VisioApi
 {
-	///<summary>
+	/// <summary>
 	/// Interface LPVISIODATACOLUMNS 
 	/// SupportByVersion Visio, 12,14,15,16
-	///</summary>
-	[SupportByVersionAttribute("Visio", 12,14,15,16)]
-	[EntityTypeAttribute(EntityType.IsInterface)]
-	public class LPVISIODATACOLUMNS : COMObject ,IEnumerable<NetOffice.VisioApi.IVDataColumn>
+	/// </summary>
+	[SupportByVersion("Visio", 12,14,15,16)]
+	[EntityType(EntityType.IsInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "Item")]
+	public class LPVISIODATACOLUMNS : COMObject , IEnumerable<NetOffice.VisioApi.IVDataColumn>
 	{
 		#pragma warning disable
+
 		#region Type Information
+
+		/// <summary>
+		/// Instance Type
+		/// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
+		public override Type InstanceType
+		{
+			get
+			{
+				return LateBindingApiWrapperType;
+			}
+		}
 
         private static Type _type;
 
@@ -29,14 +40,20 @@ namespace NetOffice.VisioApi
             {
                 if (null == _type)
                     _type = typeof(LPVISIODATACOLUMNS);
-                    
                 return _type;
             }
         }
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public LPVISIODATACOLUMNS(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -82,7 +99,7 @@ namespace NetOffice.VisioApi
 		{
 		}
 		
-		/// <param name="progId">registered ProgID</param>
+		/// <param name="progId">registered progID</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public LPVISIODATACOLUMNS(string progId) : base(progId)
 		{
@@ -96,15 +113,13 @@ namespace NetOffice.VisioApi
 		/// SupportByVersion Visio 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 12,14,15,16)]
+		[SupportByVersion("Visio", 12,14,15,16)]
+		[BaseResult]
 		public NetOffice.VisioApi.IVApplication Application
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				NetOffice.VisioApi.IVApplication newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVApplication;
-				return newObject;
+				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.VisioApi.IVApplication>(this, "Application");
 			}
 		}
 
@@ -112,14 +127,12 @@ namespace NetOffice.VisioApi
 		/// SupportByVersion Visio 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 12,14,15,16)]
+		[SupportByVersion("Visio", 12,14,15,16)]
 		public Int16 Stat
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Stat", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt16(returnItem);
+				return Factory.ExecuteInt16PropertyGet(this, "Stat");
 			}
 		}
 
@@ -127,15 +140,13 @@ namespace NetOffice.VisioApi
 		/// SupportByVersion Visio 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 12,14,15,16)]
+		[SupportByVersion("Visio", 12,14,15,16)]
+		[BaseResult]
 		public NetOffice.VisioApi.IVDocument Document
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Document", paramsArray);
-				NetOffice.VisioApi.IVDocument newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVDocument;
-				return newObject;
+				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.VisioApi.IVDocument>(this, "Document");
 			}
 		}
 
@@ -143,14 +154,12 @@ namespace NetOffice.VisioApi
 		/// SupportByVersion Visio 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 12,14,15,16)]
+		[SupportByVersion("Visio", 12,14,15,16)]
 		public Int16 ObjectType
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "ObjectType", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt16(returnItem);
+				return Factory.ExecuteInt16PropertyGet(this, "ObjectType");
 			}
 		}
 
@@ -158,15 +167,13 @@ namespace NetOffice.VisioApi
 		/// SupportByVersion Visio 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 12,14,15,16)]
+		[SupportByVersion("Visio", 12,14,15,16)]
+		[BaseResult]
 		public NetOffice.VisioApi.IVDataRecordset DataRecordset
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "DataRecordset", paramsArray);
-				NetOffice.VisioApi.IVDataRecordset newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVDataRecordset;
-				return newObject;
+				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.VisioApi.IVDataRecordset>(this, "DataRecordset");
 			}
 		}
 
@@ -174,14 +181,12 @@ namespace NetOffice.VisioApi
 		/// SupportByVersion Visio 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 12,14,15,16)]
+		[SupportByVersion("Visio", 12,14,15,16)]
 		public Int32 Count
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Count", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "Count");
 			}
 		}
 
@@ -189,17 +194,15 @@ namespace NetOffice.VisioApi
 		/// SupportByVersion Visio 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <param name="indexOrName">object IndexOrName</param>
-		[SupportByVersionAttribute("Visio", 12,14,15,16)]
-		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
+		/// <param name="indexOrName">object indexOrName</param>
+		[SupportByVersion("Visio", 12,14,15,16)]
+		[BaseResult]
+		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
 		public NetOffice.VisioApi.IVDataColumn this[object indexOrName]
 		{
 			get
-{			
-			object[] paramsArray = Invoker.ValidateParamsArray(indexOrName);
-			object returnItem = Invoker.PropertyGet(this, "Item", paramsArray);
-			NetOffice.VisioApi.IVDataColumn newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVDataColumn;
-			return newObject;
+			{
+				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.VisioApi.IVDataColumn>(this, "Item", indexOrName);
 			}
 		}
 
@@ -209,16 +212,14 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="columnNames">String[] ColumnNames</param>
-		/// <param name="properties">Int32[] Properties</param>
-		/// <param name="values">object[] Values</param>
-		[SupportByVersionAttribute("Visio", 12,14,15,16)]
+		/// <param name="columnNames">String[] columnNames</param>
+		/// <param name="properties">Int32[] properties</param>
+		/// <param name="values">object[] values</param>
+		[SupportByVersion("Visio", 12,14,15,16)]
 		public void SetColumnProperties(String[] columnNames, Int32[] properties, object[] values)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray((object)columnNames, (object)properties, (object)values);
-			Invoker.Method(this, "SetColumnProperties", paramsArray);
+			 Factory.ExecuteMethod(this, "SetColumnProperties", columnNames, properties, values);
 		}
 
 		#endregion
@@ -226,9 +227,9 @@ namespace NetOffice.VisioApi
        #region IEnumerable<NetOffice.VisioApi.IVDataColumn> Member
         
         /// <summary>
-		/// SupportByVersionAttribute Visio, 12,14,15,16
+		/// SupportByVersion Visio, 12,14,15,16
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 12,14,15,16)]
+		[SupportByVersion("Visio", 12,14,15,16)]
        public IEnumerator<NetOffice.VisioApi.IVDataColumn> GetEnumerator()  
        {
            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
@@ -241,15 +242,16 @@ namespace NetOffice.VisioApi
 		#region IEnumerable Members
        
 		/// <summary>
-		/// SupportByVersionAttribute Visio, 12,14,15,16
+		/// SupportByVersion Visio, 12,14,15,16
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 12,14,15,16)]
+		[SupportByVersion("Visio", 12,14,15,16)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
 			return NetOffice.Utils.GetProxyEnumeratorAsProperty(this);
 		}
 
 		#endregion
+
 		#pragma warning restore
 	}
 }

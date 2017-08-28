@@ -12,7 +12,7 @@ namespace NetOffice.OfficeApi.Tools.Informations
     {
         #region Fields
 
-        private Utils.CommonUtils _owner;
+        private Contribution.CommonUtils _owner;
 
         #endregion
 
@@ -30,7 +30,7 @@ namespace NetOffice.OfficeApi.Tools.Informations
         /// Creates an instance of the class
         /// </summary>
         /// <param name="owner">owner instance</param>
-        internal AppDomainInfo(Utils.CommonUtils owner)
+        internal AppDomainInfo(Contribution.CommonUtils owner)
         {
             if (null == owner)
                 throw new ArgumentNullException("owner");
@@ -51,7 +51,7 @@ namespace NetOffice.OfficeApi.Tools.Informations
                 if (null != _owner)
                     return _owner.HeaderCaptionLine;
                 else
-                    return Utils.CommonUtils.HeaderCaptionLineDefault;
+                    return Contribution.CommonUtils.HeaderCaptionLineDefault;
             }
         }
 

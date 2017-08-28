@@ -1,12 +1,10 @@
 ﻿using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
-using NetOffice;
-using NetOffice.Misc;
+using NetOffice.Attributes;
 
 namespace NetOffice.MSComctlLibApi
 {
-
 	#region Delegates
 
 	#pragma warning disable
@@ -14,15 +12,16 @@ namespace NetOffice.MSComctlLibApi
 
 	#endregion
 
-	///<summary>
+	/// <summary>
 	/// CoClass Button 
 	/// SupportByVersion MSComctlLib, 6
-	///</summary>
-	[SupportByVersionAttribute("MSComctlLib", 6)]
-	[EntityTypeAttribute(EntityType.IsCoClass)]
-	public class Button : IButton
+	/// </summary>
+	[SupportByVersion("MSComctlLib", 6)]
+	[EntityType(EntityType.IsCoClass)]
+ 	public class Button : IButton
 	{
 		#pragma warning disable
+
 		#region Fields
 		
 		private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
@@ -36,6 +35,7 @@ namespace NetOffice.MSComctlLibApi
         /// <summary>
         /// Instance Type
         /// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
         public override Type InstanceType
         {
             get
@@ -102,17 +102,17 @@ namespace NetOffice.MSComctlLibApi
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of Button 
-        ///</summary>		
+        /// </summary>		
 		public Button():base("MSComctlLib.Button")
 		{
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of Button
-        ///</summary>
+        /// </summary>
         ///<param name="progId">registered ProgID</param>
 		public Button(string progId):base(progId)
 		{
@@ -122,46 +122,6 @@ namespace NetOffice.MSComctlLibApi
 		#endregion
 
 		#region Static CoClass Methods
-
-		/// <summary>
-        /// Returns all running MSComctlLib.Button objects from the environment/system
-        /// </summary>
-        /// <returns>an MSComctlLib.Button array</returns>
-		public static NetOffice.MSComctlLibApi.Button[] GetActiveInstances()
-		{		
-			IDisposableEnumeration proxyList = NetOffice.ProxyService.GetActiveInstances("MSComctlLib","Button");
-			NetRuntimeSystem.Collections.Generic.List<NetOffice.MSComctlLibApi.Button> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.MSComctlLibApi.Button>();
-			foreach(object proxy in proxyList)
-				resultList.Add( new NetOffice.MSComctlLibApi.Button(null, proxy) );
-			return resultList.ToArray();
-		}
-
-		/// <summary>
-        /// Returns a running MSComctlLib.Button object from the environment/system.
-        /// </summary>
-        /// <returns>an MSComctlLib.Button object or null</returns>
-		public static NetOffice.MSComctlLibApi.Button GetActiveInstance()
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("MSComctlLib","Button", false);
-			if(null != proxy)
-				return new NetOffice.MSComctlLibApi.Button(null, proxy);
-			else
-				return null;
-		}
-
-		/// <summary>
-        /// Returns a running MSComctlLib.Button object from the environment/system. 
-        /// </summary>
-	    /// <param name="throwOnError">throw an exception if no object was found</param>
-        /// <returns>an MSComctlLib.Button object or null</returns>
-		public static NetOffice.MSComctlLibApi.Button GetActiveInstance(bool throwOnError)
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("MSComctlLib","Button", throwOnError);
-			if(null != proxy)
-				return new NetOffice.MSComctlLibApi.Button(null, proxy);
-			else
-				return null;
-		}
 		#endregion
 
 		#region Events

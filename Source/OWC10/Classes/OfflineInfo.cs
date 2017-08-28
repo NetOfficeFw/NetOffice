@@ -1,12 +1,10 @@
 ﻿using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
-using NetOffice;
-using NetOffice.Misc;
+using NetOffice.Attributes;
 
 namespace NetOffice.OWC10Api
 {
-
 	#region Delegates
 
 	#pragma warning disable
@@ -14,15 +12,16 @@ namespace NetOffice.OWC10Api
 
 	#endregion
 
-	///<summary>
+	/// <summary>
 	/// CoClass OfflineInfo 
 	/// SupportByVersion OWC10, 1
-	///</summary>
-	[SupportByVersionAttribute("OWC10", 1)]
-	[EntityTypeAttribute(EntityType.IsCoClass)]
-	public class OfflineInfo : IOfflineInfo
+	/// </summary>
+	[SupportByVersion("OWC10", 1)]
+	[EntityType(EntityType.IsCoClass)]
+ 	public class OfflineInfo : IOfflineInfo
 	{
 		#pragma warning disable
+
 		#region Fields
 		
 		private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
@@ -36,6 +35,7 @@ namespace NetOffice.OWC10Api
         /// <summary>
         /// Instance Type
         /// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
         public override Type InstanceType
         {
             get
@@ -102,17 +102,17 @@ namespace NetOffice.OWC10Api
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of OfflineInfo 
-        ///</summary>		
+        /// </summary>		
 		public OfflineInfo():base("OWC10.OfflineInfo")
 		{
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of OfflineInfo
-        ///</summary>
+        /// </summary>
         ///<param name="progId">registered ProgID</param>
 		public OfflineInfo(string progId):base(progId)
 		{
@@ -122,46 +122,6 @@ namespace NetOffice.OWC10Api
 		#endregion
 
 		#region Static CoClass Methods
-
-		/// <summary>
-        /// Returns all running OWC10.OfflineInfo objects from the environment/system
-        /// </summary>
-        /// <returns>an OWC10.OfflineInfo array</returns>
-		public static NetOffice.OWC10Api.OfflineInfo[] GetActiveInstances()
-		{		
-			IDisposableEnumeration proxyList = NetOffice.ProxyService.GetActiveInstances("OWC10","OfflineInfo");
-			NetRuntimeSystem.Collections.Generic.List<NetOffice.OWC10Api.OfflineInfo> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.OWC10Api.OfflineInfo>();
-			foreach(object proxy in proxyList)
-				resultList.Add( new NetOffice.OWC10Api.OfflineInfo(null, proxy) );
-			return resultList.ToArray();
-		}
-
-		/// <summary>
-        /// Returns a running OWC10.OfflineInfo object from the environment/system.
-        /// </summary>
-        /// <returns>an OWC10.OfflineInfo object or null</returns>
-		public static NetOffice.OWC10Api.OfflineInfo GetActiveInstance()
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("OWC10","OfflineInfo", false);
-			if(null != proxy)
-				return new NetOffice.OWC10Api.OfflineInfo(null, proxy);
-			else
-				return null;
-		}
-
-		/// <summary>
-        /// Returns a running OWC10.OfflineInfo object from the environment/system. 
-        /// </summary>
-	    /// <param name="throwOnError">throw an exception if no object was found</param>
-        /// <returns>an OWC10.OfflineInfo object or null</returns>
-		public static NetOffice.OWC10Api.OfflineInfo GetActiveInstance(bool throwOnError)
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("OWC10","OfflineInfo", throwOnError);
-			if(null != proxy)
-				return new NetOffice.OWC10Api.OfflineInfo(null, proxy);
-			else
-				return null;
-		}
 		#endregion
 
 		#region Events

@@ -1,23 +1,33 @@
 ﻿using System;
 using NetRuntimeSystem = System;
-using System.Runtime.InteropServices;
 using System.ComponentModel;
-using System.Runtime.CompilerServices;
-using System.Reflection;
-using System.Collections.Generic;
-using NetOffice;
+using NetOffice.Attributes;
+
 namespace NetOffice.MSHTMLApi
 {
-	///<summary>
+	/// <summary>
 	/// Interface IHTMLEditDesigner 
 	/// SupportByVersion MSHTML, 4
-	///</summary>
-	[SupportByVersionAttribute("MSHTML", 4)]
-	[EntityTypeAttribute(EntityType.IsInterface)]
-	public class IHTMLEditDesigner : COMObject
+	/// </summary>
+	[SupportByVersion("MSHTML", 4)]
+	[EntityType(EntityType.IsInterface)]
+ 	public class IHTMLEditDesigner : COMObject
 	{
 		#pragma warning disable
+
 		#region Type Information
+
+		/// <summary>
+		/// Instance Type
+		/// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
+		public override Type InstanceType
+		{
+			get
+			{
+				return LateBindingApiWrapperType;
+			}
+		}
 
         private static Type _type;
 
@@ -28,14 +38,20 @@ namespace NetOffice.MSHTMLApi
             {
                 if (null == _type)
                     _type = typeof(IHTMLEditDesigner);
-                    
                 return _type;
             }
         }
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public IHTMLEditDesigner(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -81,7 +97,7 @@ namespace NetOffice.MSHTMLApi
 		{
 		}
 		
-		/// <param name="progId">registered ProgID</param>
+		/// <param name="progId">registered progID</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public IHTMLEditDesigner(string progId) : base(progId)
 		{
@@ -97,61 +113,50 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
-		/// 
 		/// </summary>
 		/// <param name="inEvtDispId">Int32 inEvtDispId</param>
 		/// <param name="pIEventObj">NetOffice.MSHTMLApi.IHTMLEventObj pIEventObj</param>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[SupportByVersion("MSHTML", 4)]
 		public Int32 PreHandleEvent(Int32 inEvtDispId, NetOffice.MSHTMLApi.IHTMLEventObj pIEventObj)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(inEvtDispId, pIEventObj);
-			object returnItem = Invoker.MethodReturn(this, "PreHandleEvent", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return Factory.ExecuteInt32MethodGet(this, "PreHandleEvent", inEvtDispId, pIEventObj);
 		}
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
-		/// 
 		/// </summary>
 		/// <param name="inEvtDispId">Int32 inEvtDispId</param>
 		/// <param name="pIEventObj">NetOffice.MSHTMLApi.IHTMLEventObj pIEventObj</param>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[SupportByVersion("MSHTML", 4)]
 		public Int32 PostHandleEvent(Int32 inEvtDispId, NetOffice.MSHTMLApi.IHTMLEventObj pIEventObj)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(inEvtDispId, pIEventObj);
-			object returnItem = Invoker.MethodReturn(this, "PostHandleEvent", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return Factory.ExecuteInt32MethodGet(this, "PostHandleEvent", inEvtDispId, pIEventObj);
 		}
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
-		/// 
 		/// </summary>
 		/// <param name="inEvtDispId">Int32 inEvtDispId</param>
 		/// <param name="pIEventObj">NetOffice.MSHTMLApi.IHTMLEventObj pIEventObj</param>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[SupportByVersion("MSHTML", 4)]
 		public Int32 TranslateAccelerator(Int32 inEvtDispId, NetOffice.MSHTMLApi.IHTMLEventObj pIEventObj)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(inEvtDispId, pIEventObj);
-			object returnItem = Invoker.MethodReturn(this, "TranslateAccelerator", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return Factory.ExecuteInt32MethodGet(this, "TranslateAccelerator", inEvtDispId, pIEventObj);
 		}
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
-		/// 
 		/// </summary>
 		/// <param name="inEvtDispId">Int32 inEvtDispId</param>
 		/// <param name="pIEventObj">NetOffice.MSHTMLApi.IHTMLEventObj pIEventObj</param>
-		[SupportByVersionAttribute("MSHTML", 4)]
+		[SupportByVersion("MSHTML", 4)]
 		public Int32 PostEditorEventNotify(Int32 inEvtDispId, NetOffice.MSHTMLApi.IHTMLEventObj pIEventObj)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(inEvtDispId, pIEventObj);
-			object returnItem = Invoker.MethodReturn(this, "PostEditorEventNotify", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return Factory.ExecuteInt32MethodGet(this, "PostEditorEventNotify", inEvtDispId, pIEventObj);
 		}
 
 		#endregion
+
 		#pragma warning restore
 	}
 }

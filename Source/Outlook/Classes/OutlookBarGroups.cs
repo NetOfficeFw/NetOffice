@@ -1,38 +1,38 @@
 ﻿using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
-using NetOffice;
-using NetOffice.Misc;
+using NetOffice.Attributes;
 
 namespace NetOffice.OutlookApi
 {
-
 	#region Delegates
 
 	#pragma warning disable
-	public delegate void OutlookBarGroups_GroupAddEventHandler(NetOffice.OutlookApi.OutlookBarGroup NewGroup);
-	public delegate void OutlookBarGroups_BeforeGroupAddEventHandler(ref bool Cancel);
-	public delegate void OutlookBarGroups_BeforeGroupRemoveEventHandler(NetOffice.OutlookApi.OutlookBarGroup Group, ref bool Cancel);
+	public delegate void OutlookBarGroups_GroupAddEventHandler(NetOffice.OutlookApi.OutlookBarGroup newGroup);
+	public delegate void OutlookBarGroups_BeforeGroupAddEventHandler(ref bool cancel);
+	public delegate void OutlookBarGroups_BeforeGroupRemoveEventHandler(NetOffice.OutlookApi.OutlookBarGroup group, ref bool cancel);
 	#pragma warning restore
 
 	#endregion
 
-	///<summary>
+	/// <summary>
 	/// CoClass OutlookBarGroups 
 	/// SupportByVersion Outlook, 9,10,11,12,14,15,16
-	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff868789.aspx
-	///</summary>
-	[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15,16)]
-	[EntityTypeAttribute(EntityType.IsCoClass)]
-	public class OutlookBarGroups : _OutlookBarGroups,IEventBinding
+	/// </summary>
+	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff868789.aspx </remarks>
+	[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
+	[EntityType(EntityType.IsCoClass)]
+	[EventSink(typeof(Events.OutlookBarGroupsEvents_SinkHelper))]
+	public class OutlookBarGroups : _OutlookBarGroups, IEventBinding
 	{
 		#pragma warning disable
+
 		#region Fields
 		
 		private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
 		private string _activeSinkId;
 		private NetRuntimeSystem.Type _thisType;
-		OutlookBarGroupsEvents_SinkHelper _outlookBarGroupsEvents_SinkHelper;
+		private Events.OutlookBarGroupsEvents_SinkHelper _outlookBarGroupsEvents_SinkHelper;
 	
 		#endregion
 
@@ -41,6 +41,7 @@ namespace NetOffice.OutlookApi
         /// <summary>
         /// Instance Type
         /// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
         public override Type InstanceType
         {
             get
@@ -107,17 +108,17 @@ namespace NetOffice.OutlookApi
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of OutlookBarGroups 
-        ///</summary>		
+        /// </summary>		
 		public OutlookBarGroups():base("Outlook.OutlookBarGroups")
 		{
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of OutlookBarGroups
-        ///</summary>
+        /// </summary>
         ///<param name="progId">registered ProgID</param>
 		public OutlookBarGroups(string progId):base(progId)
 		{
@@ -127,46 +128,6 @@ namespace NetOffice.OutlookApi
 		#endregion
 
 		#region Static CoClass Methods
-
-		/// <summary>
-        /// Returns all running Outlook.OutlookBarGroups objects from the environment/system
-        /// </summary>
-        /// <returns>an Outlook.OutlookBarGroups array</returns>
-		public static NetOffice.OutlookApi.OutlookBarGroups[] GetActiveInstances()
-		{		
-			IDisposableEnumeration proxyList = NetOffice.ProxyService.GetActiveInstances("Outlook","OutlookBarGroups");
-			NetRuntimeSystem.Collections.Generic.List<NetOffice.OutlookApi.OutlookBarGroups> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.OutlookApi.OutlookBarGroups>();
-			foreach(object proxy in proxyList)
-				resultList.Add( new NetOffice.OutlookApi.OutlookBarGroups(null, proxy) );
-			return resultList.ToArray();
-		}
-
-		/// <summary>
-        /// Returns a running Outlook.OutlookBarGroups object from the environment/system.
-        /// </summary>
-        /// <returns>an Outlook.OutlookBarGroups object or null</returns>
-		public static NetOffice.OutlookApi.OutlookBarGroups GetActiveInstance()
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Outlook","OutlookBarGroups", false);
-			if(null != proxy)
-				return new NetOffice.OutlookApi.OutlookBarGroups(null, proxy);
-			else
-				return null;
-		}
-
-		/// <summary>
-        /// Returns a running Outlook.OutlookBarGroups object from the environment/system. 
-        /// </summary>
-	    /// <param name="throwOnError">throw an exception if no object was found</param>
-        /// <returns>an Outlook.OutlookBarGroups object or null</returns>
-		public static NetOffice.OutlookApi.OutlookBarGroups GetActiveInstance(bool throwOnError)
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Outlook","OutlookBarGroups", throwOnError);
-			if(null != proxy)
-				return new NetOffice.OutlookApi.OutlookBarGroups(null, proxy);
-			else
-				return null;
-		}
 		#endregion
 
 		#region Events
@@ -257,12 +218,12 @@ namespace NetOffice.OutlookApi
 				return;
 	
             if (null == _activeSinkId)
-				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, OutlookBarGroupsEvents_SinkHelper.Id);
+				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, Events.OutlookBarGroupsEvents_SinkHelper.Id);
 
 
-			if(OutlookBarGroupsEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
+			if(Events.OutlookBarGroupsEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
 			{
-				_outlookBarGroupsEvents_SinkHelper = new OutlookBarGroupsEvents_SinkHelper(this, _connectPoint);
+				_outlookBarGroupsEvents_SinkHelper = new Events.OutlookBarGroupsEvents_SinkHelper(this, _connectPoint);
 				return;
 			} 
         }

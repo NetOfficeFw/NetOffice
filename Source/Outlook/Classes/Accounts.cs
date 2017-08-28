@@ -1,36 +1,36 @@
 ﻿using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
-using NetOffice;
-using NetOffice.Misc;
+using NetOffice.Attributes;
 
 namespace NetOffice.OutlookApi
 {
-
 	#region Delegates
 
 	#pragma warning disable
-	public delegate void Accounts_AutoDiscoverCompleteEventHandler(NetOffice.OutlookApi.Account Account);
+	public delegate void Accounts_AutoDiscoverCompleteEventHandler(NetOffice.OutlookApi.Account account);
 	#pragma warning restore
 
 	#endregion
 
-	///<summary>
+	/// <summary>
 	/// CoClass Accounts 
 	/// SupportByVersion Outlook, 12,14,15,16
-	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff862476.aspx
-	///</summary>
-	[SupportByVersionAttribute("Outlook", 12,14,15,16)]
-	[EntityTypeAttribute(EntityType.IsCoClass)]
-	public class Accounts : _Accounts,IEventBinding
+	/// </summary>
+	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff862476.aspx </remarks>
+	[SupportByVersion("Outlook", 12,14,15,16)]
+	[EntityType(EntityType.IsCoClass)]
+	[EventSink(typeof(Events.AccountsEvents_SinkHelper))]
+	public class Accounts : _Accounts, IEventBinding
 	{
 		#pragma warning disable
+
 		#region Fields
 		
 		private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
 		private string _activeSinkId;
 		private NetRuntimeSystem.Type _thisType;
-		AccountsEvents_SinkHelper _accountsEvents_SinkHelper;
+		private Events.AccountsEvents_SinkHelper _accountsEvents_SinkHelper;
 	
 		#endregion
 
@@ -39,6 +39,7 @@ namespace NetOffice.OutlookApi
         /// <summary>
         /// Instance Type
         /// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
         public override Type InstanceType
         {
             get
@@ -105,17 +106,17 @@ namespace NetOffice.OutlookApi
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of Accounts 
-        ///</summary>		
+        /// </summary>		
 		public Accounts():base("Outlook.Accounts")
 		{
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of Accounts
-        ///</summary>
+        /// </summary>
         ///<param name="progId">registered ProgID</param>
 		public Accounts(string progId):base(progId)
 		{
@@ -125,46 +126,6 @@ namespace NetOffice.OutlookApi
 		#endregion
 
 		#region Static CoClass Methods
-
-		/// <summary>
-        /// Returns all running Outlook.Accounts objects from the environment/system
-        /// </summary>
-        /// <returns>an Outlook.Accounts array</returns>
-		public static NetOffice.OutlookApi.Accounts[] GetActiveInstances()
-		{		
-			IDisposableEnumeration proxyList = NetOffice.ProxyService.GetActiveInstances("Outlook","Accounts");
-			NetRuntimeSystem.Collections.Generic.List<NetOffice.OutlookApi.Accounts> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.OutlookApi.Accounts>();
-			foreach(object proxy in proxyList)
-				resultList.Add( new NetOffice.OutlookApi.Accounts(null, proxy) );
-			return resultList.ToArray();
-		}
-
-		/// <summary>
-        /// Returns a running Outlook.Accounts object from the environment/system.
-        /// </summary>
-        /// <returns>an Outlook.Accounts object or null</returns>
-		public static NetOffice.OutlookApi.Accounts GetActiveInstance()
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Outlook","Accounts", false);
-			if(null != proxy)
-				return new NetOffice.OutlookApi.Accounts(null, proxy);
-			else
-				return null;
-		}
-
-		/// <summary>
-        /// Returns a running Outlook.Accounts object from the environment/system. 
-        /// </summary>
-	    /// <param name="throwOnError">throw an exception if no object was found</param>
-        /// <returns>an Outlook.Accounts object or null</returns>
-		public static NetOffice.OutlookApi.Accounts GetActiveInstance(bool throwOnError)
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Outlook","Accounts", throwOnError);
-			if(null != proxy)
-				return new NetOffice.OutlookApi.Accounts(null, proxy);
-			else
-				return null;
-		}
 		#endregion
 
 		#region Events
@@ -209,12 +170,12 @@ namespace NetOffice.OutlookApi
 				return;
 	
             if (null == _activeSinkId)
-				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, AccountsEvents_SinkHelper.Id);
+				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, Events.AccountsEvents_SinkHelper.Id);
 
 
-			if(AccountsEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
+			if(Events.AccountsEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
 			{
-				_accountsEvents_SinkHelper = new AccountsEvents_SinkHelper(this, _connectPoint);
+				_accountsEvents_SinkHelper = new Events.AccountsEvents_SinkHelper(this, _connectPoint);
 				return;
 			} 
         }

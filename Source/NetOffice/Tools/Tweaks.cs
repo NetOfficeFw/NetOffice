@@ -7,6 +7,7 @@ using System.Reflection;
 using Microsoft.Win32;
 using System.Text;
 using NetOffice.Tools;
+using NetOffice.Filtering;
 
 namespace NetOffice.Tools
 {
@@ -325,10 +326,10 @@ namespace NetOffice.Tools
                 switch (value)
                 {
                     case "copyInnerexceptionmessagetotoplevelexception":
-                        factory.Settings.UseExceptionMessage = ExceptionMessageHandling.CopyInnerExceptionMessageToTopLevelException;
+                        factory.Settings.ExceptionMessageBehavior = ExceptionMessageHandling.CopyInnerExceptionMessageToTopLevelException;
                         return;
                     case "copyallinnerexceptionmessagestotoplevelexception":
-                        factory.Settings.UseExceptionMessage = ExceptionMessageHandling.CopyAllInnerExceptionMessagesToTopLevelException;
+                        factory.Settings.ExceptionMessageBehavior = ExceptionMessageHandling.CopyAllInnerExceptionMessagesToTopLevelException;
                         return;
                     default:
                         break;
@@ -338,13 +339,13 @@ namespace NetOffice.Tools
 
         private static void TweakExceptionMessage(Core factory, object addinInstance, Type addinType, RegistryKey key)
         {
-            string value = key.GetValue("NOExceptionMessage", null) as string;
+            string value = key.GetValue("NOExceptionDefaultMessage", null) as string;
             if (null != value)
             {
-                bool allow = CallAllowApplyTweak(factory, addinInstance, addinType, "NOExceptionMessage", value);
+                bool allow = CallAllowApplyTweak(factory, addinInstance, addinType, "NOExceptionDefaultMessage", value);
                 if (!allow)
                     return;
-                factory.Settings.ExceptionMessage = value;
+                factory.Settings.ExceptionDefaultMessage = value;
             }
         }
 

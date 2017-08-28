@@ -1,12 +1,10 @@
 ﻿using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
-using NetOffice;
-using NetOffice.Misc;
+using NetOffice.Attributes;
 
 namespace NetOffice.PowerPointApi
 {
-
 	#region Delegates
 
 	#pragma warning disable
@@ -14,22 +12,24 @@ namespace NetOffice.PowerPointApi
 
 	#endregion
 
-	///<summary>
+	/// <summary>
 	/// CoClass Master 
 	/// SupportByVersion PowerPoint, 9,10,11,12,14,15,16
-	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744232.aspx
-	///</summary>
-	[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15,16)]
-	[EntityTypeAttribute(EntityType.IsCoClass)]
-	public class Master : _Master,IEventBinding
+	/// </summary>
+	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff744232.aspx </remarks>
+	[SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+	[EntityType(EntityType.IsCoClass)]
+	[EventSink(typeof(Events.MasterEvents_SinkHelper))]
+	public class Master : _Master, IEventBinding
 	{
 		#pragma warning disable
+
 		#region Fields
 		
 		private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
 		private string _activeSinkId;
 		private NetRuntimeSystem.Type _thisType;
-		MasterEvents_SinkHelper _masterEvents_SinkHelper;
+		private Events.MasterEvents_SinkHelper _masterEvents_SinkHelper;
 	
 		#endregion
 
@@ -38,6 +38,7 @@ namespace NetOffice.PowerPointApi
         /// <summary>
         /// Instance Type
         /// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
         public override Type InstanceType
         {
             get
@@ -104,17 +105,17 @@ namespace NetOffice.PowerPointApi
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of Master 
-        ///</summary>		
+        /// </summary>		
 		public Master():base("PowerPoint.Master")
 		{
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of Master
-        ///</summary>
+        /// </summary>
         ///<param name="progId">registered ProgID</param>
 		public Master(string progId):base(progId)
 		{
@@ -124,46 +125,6 @@ namespace NetOffice.PowerPointApi
 		#endregion
 
 		#region Static CoClass Methods
-
-		/// <summary>
-        /// Returns all running PowerPoint.Master objects from the environment/system
-        /// </summary>
-        /// <returns>an PowerPoint.Master array</returns>
-		public static NetOffice.PowerPointApi.Master[] GetActiveInstances()
-		{		
-			IDisposableEnumeration proxyList = NetOffice.ProxyService.GetActiveInstances("PowerPoint","Master");
-			NetRuntimeSystem.Collections.Generic.List<NetOffice.PowerPointApi.Master> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.PowerPointApi.Master>();
-			foreach(object proxy in proxyList)
-				resultList.Add( new NetOffice.PowerPointApi.Master(null, proxy) );
-			return resultList.ToArray();
-		}
-
-		/// <summary>
-        /// Returns a running PowerPoint.Master object from the environment/system.
-        /// </summary>
-        /// <returns>an PowerPoint.Master object or null</returns>
-		public static NetOffice.PowerPointApi.Master GetActiveInstance()
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("PowerPoint","Master", false);
-			if(null != proxy)
-				return new NetOffice.PowerPointApi.Master(null, proxy);
-			else
-				return null;
-		}
-
-		/// <summary>
-        /// Returns a running PowerPoint.Master object from the environment/system. 
-        /// </summary>
-	    /// <param name="throwOnError">throw an exception if no object was found</param>
-        /// <returns>an PowerPoint.Master object or null</returns>
-		public static NetOffice.PowerPointApi.Master GetActiveInstance(bool throwOnError)
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("PowerPoint","Master", throwOnError);
-			if(null != proxy)
-				return new NetOffice.PowerPointApi.Master(null, proxy);
-			else
-				return null;
-		}
 		#endregion
 
 		#region Events
@@ -185,12 +146,12 @@ namespace NetOffice.PowerPointApi
 				return;
 	
             if (null == _activeSinkId)
-				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, MasterEvents_SinkHelper.Id);
+				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, Events.MasterEvents_SinkHelper.Id);
 
 
-			if(MasterEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
+			if(Events.MasterEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
 			{
-				_masterEvents_SinkHelper = new MasterEvents_SinkHelper(this, _connectPoint);
+				_masterEvents_SinkHelper = new Events.MasterEvents_SinkHelper(this, _connectPoint);
 				return;
 			} 
         }

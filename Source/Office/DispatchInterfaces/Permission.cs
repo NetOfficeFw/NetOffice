@@ -1,25 +1,36 @@
-﻿using System;
-using NetRuntimeSystem = System;
-using System.Runtime.InteropServices;
-using System.Runtime.CompilerServices;
-using System.ComponentModel;
-using System.Reflection;
+﻿using System.Collections;
 using System.Collections.Generic;
-using System.Collections;
-using NetOffice;
+using System;
+using NetRuntimeSystem = System;
+using System.ComponentModel;
+using NetOffice.Attributes;
+
 namespace NetOffice.OfficeApi
 {
-	///<summary>
+	/// <summary>
 	/// DispatchInterface Permission 
 	/// SupportByVersion Office, 11,12,14,15,16
-	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff861518.aspx
-	///</summary>
-	[SupportByVersionAttribute("Office", 11,12,14,15,16)]
-	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
-	public class Permission : _IMsoDispObj ,IEnumerable<NetOffice.OfficeApi.UserPermission>
+	/// </summary>
+	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff861518.aspx </remarks>
+	[SupportByVersion("Office", 11,12,14,15,16)]
+	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "Item")]
+	public class Permission : _IMsoDispObj , IEnumerable<NetOffice.OfficeApi.UserPermission>
 	{
 		#pragma warning disable
+
 		#region Type Information
+
+		/// <summary>
+		/// Instance Type
+		/// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
+		public override Type InstanceType
+		{
+			get
+			{
+				return LateBindingApiWrapperType;
+			}
+		}
 
         private static Type _type;
 
@@ -30,14 +41,20 @@ namespace NetOffice.OfficeApi
             {
                 if (null == _type)
                     _type = typeof(Permission);
-                    
                 return _type;
             }
         }
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public Permission(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -83,7 +100,7 @@ namespace NetOffice.OfficeApi
 		{
 		}
 		
-		/// <param name="progId">registered ProgID</param>
+		/// <param name="progId">registered progID</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public Permission(string progId) : base(progId)
 		{
@@ -97,204 +114,175 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		/// <param name="index">object Index</param>
-		[SupportByVersionAttribute("Office", 11,12,14,15,16)]
-		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
+		/// <param name="index">object index</param>
+		[SupportByVersion("Office", 11,12,14,15,16)]
+		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
 		public NetOffice.OfficeApi.UserPermission this[object index]
 		{
 			get
-{			
-			object[] paramsArray = Invoker.ValidateParamsArray(index);
-			object returnItem = Invoker.PropertyGet(this, "Item", paramsArray);
-			NetOffice.OfficeApi.UserPermission newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.UserPermission.LateBindingApiWrapperType) as NetOffice.OfficeApi.UserPermission;
-			return newObject;
+			{
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.UserPermission>(this, "Item", NetOffice.OfficeApi.UserPermission.LateBindingApiWrapperType, index);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff865565.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Office", 11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff865565.aspx </remarks>
+		[SupportByVersion("Office", 11,12,14,15,16)]
 		public Int32 Count
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Count", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "Count");
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 11, 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff862116.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Office", 11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff862116.aspx </remarks>
+		[SupportByVersion("Office", 11,12,14,15,16)]
 		public bool EnableTrustedBrowser
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "EnableTrustedBrowser", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "EnableTrustedBrowser");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "EnableTrustedBrowser", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "EnableTrustedBrowser", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff861383.aspx
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("Office", 11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff861383.aspx </remarks>
+		[SupportByVersion("Office", 11,12,14,15,16), ProxyResult]
 		public object Parent
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Parent", paramsArray);
-				ICOMObject newObject = Factory.CreateObjectFromComProxy(this,returnItem);
-				return newObject;
+				return Factory.ExecuteReferencePropertyGet(this, "Parent");
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 11, 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff865228.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Office", 11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff865228.aspx </remarks>
+		[SupportByVersion("Office", 11,12,14,15,16)]
 		public bool Enabled
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Enabled", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "Enabled");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "Enabled", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "Enabled", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 11, 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff862755.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Office", 11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff862755.aspx </remarks>
+		[SupportByVersion("Office", 11,12,14,15,16)]
 		public string RequestPermissionURL
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "RequestPermissionURL", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "RequestPermissionURL");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "RequestPermissionURL", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "RequestPermissionURL", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff860910.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Office", 11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860910.aspx </remarks>
+		[SupportByVersion("Office", 11,12,14,15,16)]
 		public string PolicyName
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "PolicyName", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "PolicyName");
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff860601.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Office", 11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860601.aspx </remarks>
+		[SupportByVersion("Office", 11,12,14,15,16)]
 		public string PolicyDescription
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "PolicyDescription", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "PolicyDescription");
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 11, 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff864131.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Office", 11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff864131.aspx </remarks>
+		[SupportByVersion("Office", 11,12,14,15,16)]
 		public bool StoreLicenses
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "StoreLicenses", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "StoreLicenses");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "StoreLicenses", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "StoreLicenses", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 11, 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff864905.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Office", 11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff864905.aspx </remarks>
+		[SupportByVersion("Office", 11,12,14,15,16)]
 		public string DocumentAuthor
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "DocumentAuthor", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "DocumentAuthor");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "DocumentAuthor", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "DocumentAuthor", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff863690.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Office", 11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff863690.aspx </remarks>
+		[SupportByVersion("Office", 11,12,14,15,16)]
 		public bool PermissionFromPolicy
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "PermissionFromPolicy", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "PermissionFromPolicy");
 			}
 		}
 
@@ -304,72 +292,61 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff863139.aspx
 		/// </summary>
-		/// <param name="userId">string UserId</param>
-		/// <param name="permission">optional object Permission</param>
-		/// <param name="expirationDate">optional object ExpirationDate</param>
-		[SupportByVersionAttribute("Office", 11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff863139.aspx </remarks>
+		/// <param name="userId">string userId</param>
+		/// <param name="permission">optional object permission</param>
+		/// <param name="expirationDate">optional object expirationDate</param>
+		[SupportByVersion("Office", 11,12,14,15,16)]
 		public NetOffice.OfficeApi.UserPermission Add(string userId, object permission, object expirationDate)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(userId, permission, expirationDate);
-			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.OfficeApi.UserPermission newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.UserPermission.LateBindingApiWrapperType) as NetOffice.OfficeApi.UserPermission;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.UserPermission>(this, "Add", NetOffice.OfficeApi.UserPermission.LateBindingApiWrapperType, userId, permission, expirationDate);
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff863139.aspx
 		/// </summary>
-		/// <param name="userId">string UserId</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Office", 11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff863139.aspx </remarks>
+		/// <param name="userId">string userId</param>
+		[CustomMethod]
+		[SupportByVersion("Office", 11,12,14,15,16)]
 		public NetOffice.OfficeApi.UserPermission Add(string userId)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(userId);
-			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.OfficeApi.UserPermission newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.UserPermission.LateBindingApiWrapperType) as NetOffice.OfficeApi.UserPermission;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.UserPermission>(this, "Add", NetOffice.OfficeApi.UserPermission.LateBindingApiWrapperType, userId);
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff863139.aspx
 		/// </summary>
-		/// <param name="userId">string UserId</param>
-		/// <param name="permission">optional object Permission</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Office", 11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff863139.aspx </remarks>
+		/// <param name="userId">string userId</param>
+		/// <param name="permission">optional object permission</param>
+		[CustomMethod]
+		[SupportByVersion("Office", 11,12,14,15,16)]
 		public NetOffice.OfficeApi.UserPermission Add(string userId, object permission)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(userId, permission);
-			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.OfficeApi.UserPermission newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.UserPermission.LateBindingApiWrapperType) as NetOffice.OfficeApi.UserPermission;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.UserPermission>(this, "Add", NetOffice.OfficeApi.UserPermission.LateBindingApiWrapperType, userId, permission);
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff864678.aspx
 		/// </summary>
-		/// <param name="fileName">string FileName</param>
-		[SupportByVersionAttribute("Office", 11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff864678.aspx </remarks>
+		/// <param name="fileName">string fileName</param>
+		[SupportByVersion("Office", 11,12,14,15,16)]
 		public void ApplyPolicy(string fileName)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(fileName);
-			Invoker.Method(this, "ApplyPolicy", paramsArray);
+			 Factory.ExecuteMethod(this, "ApplyPolicy", fileName);
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff861135.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Office", 11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff861135.aspx </remarks>
+		[SupportByVersion("Office", 11,12,14,15,16)]
 		public void RemoveAll()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "RemoveAll", paramsArray);
+			 Factory.ExecuteMethod(this, "RemoveAll");
 		}
 
 		#endregion
@@ -377,9 +354,9 @@ namespace NetOffice.OfficeApi
        #region IEnumerable<NetOffice.OfficeApi.UserPermission> Member
         
         /// <summary>
-		/// SupportByVersionAttribute Office, 11,12,14,15,16
+		/// SupportByVersion Office, 11,12,14,15,16
 		/// </summary>
-		[SupportByVersionAttribute("Office", 11,12,14,15,16)]
+		[SupportByVersion("Office", 11,12,14,15,16)]
        public IEnumerator<NetOffice.OfficeApi.UserPermission> GetEnumerator()  
        {
            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
@@ -392,15 +369,16 @@ namespace NetOffice.OfficeApi
 		#region IEnumerable Members
        
 		/// <summary>
-		/// SupportByVersionAttribute Office, 11,12,14,15,16
+		/// SupportByVersion Office, 11,12,14,15,16
 		/// </summary>
-		[SupportByVersionAttribute("Office", 11,12,14,15,16)]
+		[SupportByVersion("Office", 11,12,14,15,16)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
 			return NetOffice.Utils.GetProxyEnumeratorAsProperty(this);
 		}
 
 		#endregion
+
 		#pragma warning restore
 	}
 }

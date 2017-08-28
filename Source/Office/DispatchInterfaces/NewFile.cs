@@ -1,24 +1,34 @@
 ﻿using System;
 using NetRuntimeSystem = System;
-using System.Runtime.InteropServices;
-using System.Runtime.CompilerServices;
 using System.ComponentModel;
-using System.Reflection;
-using System.Collections.Generic;
-using NetOffice;
+using NetOffice.Attributes;
+
 namespace NetOffice.OfficeApi
 {
-	///<summary>
+	/// <summary>
 	/// DispatchInterface NewFile 
 	/// SupportByVersion Office, 10,11,12,14,15,16
-	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff862417.aspx
-	///</summary>
-	[SupportByVersionAttribute("Office", 10,11,12,14,15,16)]
-	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
-	public class NewFile : _IMsoDispObj
+	/// </summary>
+	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff862417.aspx </remarks>
+	[SupportByVersion("Office", 10,11,12,14,15,16)]
+	[EntityType(EntityType.IsDispatchInterface)]
+ 	public class NewFile : _IMsoDispObj
 	{
 		#pragma warning disable
+
 		#region Type Information
+
+		/// <summary>
+		/// Instance Type
+		/// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
+		public override Type InstanceType
+		{
+			get
+			{
+				return LateBindingApiWrapperType;
+			}
+		}
 
         private static Type _type;
 
@@ -29,14 +39,20 @@ namespace NetOffice.OfficeApi
             {
                 if (null == _type)
                     _type = typeof(NewFile);
-                    
                 return _type;
             }
         }
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public NewFile(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -82,7 +98,7 @@ namespace NetOffice.OfficeApi
 		{
 		}
 		
-		/// <param name="progId">registered ProgID</param>
+		/// <param name="progId">registered progID</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public NewFile(string progId) : base(progId)
 		{
@@ -98,127 +114,112 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff860279.aspx
 		/// </summary>
-		/// <param name="fileName">string FileName</param>
-		/// <param name="section">optional object Section</param>
-		/// <param name="displayName">optional object DisplayName</param>
-		/// <param name="action">optional object Action</param>
-		[SupportByVersionAttribute("Office", 10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860279.aspx </remarks>
+		/// <param name="fileName">string fileName</param>
+		/// <param name="section">optional object section</param>
+		/// <param name="displayName">optional object displayName</param>
+		/// <param name="action">optional object action</param>
+		[SupportByVersion("Office", 10,11,12,14,15,16)]
 		public bool Add(string fileName, object section, object displayName, object action)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(fileName, section, displayName, action);
-			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return Factory.ExecuteBoolMethodGet(this, "Add", fileName, section, displayName, action);
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff860279.aspx
 		/// </summary>
-		/// <param name="fileName">string FileName</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Office", 10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860279.aspx </remarks>
+		/// <param name="fileName">string fileName</param>
+		[CustomMethod]
+		[SupportByVersion("Office", 10,11,12,14,15,16)]
 		public bool Add(string fileName)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(fileName);
-			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return Factory.ExecuteBoolMethodGet(this, "Add", fileName);
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff860279.aspx
 		/// </summary>
-		/// <param name="fileName">string FileName</param>
-		/// <param name="section">optional object Section</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Office", 10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860279.aspx </remarks>
+		/// <param name="fileName">string fileName</param>
+		/// <param name="section">optional object section</param>
+		[CustomMethod]
+		[SupportByVersion("Office", 10,11,12,14,15,16)]
 		public bool Add(string fileName, object section)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(fileName, section);
-			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return Factory.ExecuteBoolMethodGet(this, "Add", fileName, section);
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff860279.aspx
 		/// </summary>
-		/// <param name="fileName">string FileName</param>
-		/// <param name="section">optional object Section</param>
-		/// <param name="displayName">optional object DisplayName</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Office", 10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860279.aspx </remarks>
+		/// <param name="fileName">string fileName</param>
+		/// <param name="section">optional object section</param>
+		/// <param name="displayName">optional object displayName</param>
+		[CustomMethod]
+		[SupportByVersion("Office", 10,11,12,14,15,16)]
 		public bool Add(string fileName, object section, object displayName)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(fileName, section, displayName);
-			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return Factory.ExecuteBoolMethodGet(this, "Add", fileName, section, displayName);
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff860573.aspx
 		/// </summary>
-		/// <param name="fileName">string FileName</param>
-		/// <param name="section">optional object Section</param>
-		/// <param name="displayName">optional object DisplayName</param>
-		/// <param name="action">optional object Action</param>
-		[SupportByVersionAttribute("Office", 10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860573.aspx </remarks>
+		/// <param name="fileName">string fileName</param>
+		/// <param name="section">optional object section</param>
+		/// <param name="displayName">optional object displayName</param>
+		/// <param name="action">optional object action</param>
+		[SupportByVersion("Office", 10,11,12,14,15,16)]
 		public bool Remove(string fileName, object section, object displayName, object action)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(fileName, section, displayName, action);
-			object returnItem = Invoker.MethodReturn(this, "Remove", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return Factory.ExecuteBoolMethodGet(this, "Remove", fileName, section, displayName, action);
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff860573.aspx
 		/// </summary>
-		/// <param name="fileName">string FileName</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Office", 10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860573.aspx </remarks>
+		/// <param name="fileName">string fileName</param>
+		[CustomMethod]
+		[SupportByVersion("Office", 10,11,12,14,15,16)]
 		public bool Remove(string fileName)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(fileName);
-			object returnItem = Invoker.MethodReturn(this, "Remove", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return Factory.ExecuteBoolMethodGet(this, "Remove", fileName);
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff860573.aspx
 		/// </summary>
-		/// <param name="fileName">string FileName</param>
-		/// <param name="section">optional object Section</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Office", 10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860573.aspx </remarks>
+		/// <param name="fileName">string fileName</param>
+		/// <param name="section">optional object section</param>
+		[CustomMethod]
+		[SupportByVersion("Office", 10,11,12,14,15,16)]
 		public bool Remove(string fileName, object section)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(fileName, section);
-			object returnItem = Invoker.MethodReturn(this, "Remove", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return Factory.ExecuteBoolMethodGet(this, "Remove", fileName, section);
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff860573.aspx
 		/// </summary>
-		/// <param name="fileName">string FileName</param>
-		/// <param name="section">optional object Section</param>
-		/// <param name="displayName">optional object DisplayName</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Office", 10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860573.aspx </remarks>
+		/// <param name="fileName">string fileName</param>
+		/// <param name="section">optional object section</param>
+		/// <param name="displayName">optional object displayName</param>
+		[CustomMethod]
+		[SupportByVersion("Office", 10,11,12,14,15,16)]
 		public bool Remove(string fileName, object section, object displayName)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(fileName, section, displayName);
-			object returnItem = Invoker.MethodReturn(this, "Remove", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return Factory.ExecuteBoolMethodGet(this, "Remove", fileName, section, displayName);
 		}
 
 		#endregion
+
 		#pragma warning restore
 	}
 }

@@ -1,51 +1,51 @@
 ﻿using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
-using NetOffice;
-using NetOffice.Misc;
+using NetOffice.Attributes;
 
 namespace NetOffice.AccessApi
 {
-
 	#region Delegates
 
 	#pragma warning disable
-	public delegate void BoundObjectFrame_UpdatedEventHandler(ref Int16 Code);
-	public delegate void BoundObjectFrame_BeforeUpdateEventHandler(ref Int16 Cancel);
+	public delegate void BoundObjectFrame_UpdatedEventHandler(ref Int16 code);
+	public delegate void BoundObjectFrame_BeforeUpdateEventHandler(ref Int16 cancel);
 	public delegate void BoundObjectFrame_AfterUpdateEventHandler();
 	public delegate void BoundObjectFrame_EnterEventHandler();
-	public delegate void BoundObjectFrame_ExitEventHandler(ref Int16 Cancel);
+	public delegate void BoundObjectFrame_ExitEventHandler(ref Int16 cancel);
 	public delegate void BoundObjectFrame_GotFocusEventHandler();
 	public delegate void BoundObjectFrame_LostFocusEventHandler();
 	public delegate void BoundObjectFrame_ClickEventHandler();
-	public delegate void BoundObjectFrame_DblClickEventHandler(ref Int16 Cancel);
-	public delegate void BoundObjectFrame_MouseDownEventHandler(ref Int16 Button, ref Int16 Shift, ref Single X, ref Single Y);
-	public delegate void BoundObjectFrame_MouseMoveEventHandler(ref Int16 Button, ref Int16 Shift, ref Single X, ref Single Y);
-	public delegate void BoundObjectFrame_MouseUpEventHandler(ref Int16 Button, ref Int16 Shift, ref Single X, ref Single Y);
-	public delegate void BoundObjectFrame_KeyDownEventHandler(ref Int16 KeyCode, ref Int16 Shift);
-	public delegate void BoundObjectFrame_KeyPressEventHandler(ref Int16 KeyAscii);
-	public delegate void BoundObjectFrame_KeyUpEventHandler(ref Int16 KeyCode, ref Int16 Shift);
+	public delegate void BoundObjectFrame_DblClickEventHandler(ref Int16 cancel);
+	public delegate void BoundObjectFrame_MouseDownEventHandler(ref Int16 button, ref Int16 shift, ref Single x, ref Single y);
+	public delegate void BoundObjectFrame_MouseMoveEventHandler(ref Int16 button, ref Int16 shift, ref Single x, ref Single y);
+	public delegate void BoundObjectFrame_MouseUpEventHandler(ref Int16 button, ref Int16 shift, ref Single x, ref Single y);
+	public delegate void BoundObjectFrame_KeyDownEventHandler(ref Int16 keyCode, ref Int16 shift);
+	public delegate void BoundObjectFrame_KeyPressEventHandler(ref Int16 keyAscii);
+	public delegate void BoundObjectFrame_KeyUpEventHandler(ref Int16 keyCode, ref Int16 shift);
 	#pragma warning restore
 
 	#endregion
 
-	///<summary>
+	/// <summary>
 	/// CoClass BoundObjectFrame 
 	/// SupportByVersion Access, 9,10,11,12,14,15,16
-	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822036.aspx
-	///</summary>
-	[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
-	[EntityTypeAttribute(EntityType.IsCoClass)]
-	public class BoundObjectFrame : _BoundObjectFrame,IEventBinding
+	/// </summary>
+	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff822036.aspx </remarks>
+	[SupportByVersion("Access", 9,10,11,12,14,15,16)]
+	[EntityType(EntityType.IsCoClass)]
+    [EventSink(typeof(Events._BoundObjectFrameEvents_SinkHelper), typeof(Events.DispBoundObjectFrameEvents_SinkHelper))]
+    public class BoundObjectFrame : _BoundObjectFrame, IEventBinding
 	{
 		#pragma warning disable
+
 		#region Fields
 		
 		private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
 		private string _activeSinkId;
 		private NetRuntimeSystem.Type _thisType;
-		_BoundObjectFrameEvents_SinkHelper __BoundObjectFrameEvents_SinkHelper;
-		DispBoundObjectFrameEvents_SinkHelper _dispBoundObjectFrameEvents_SinkHelper;
+		private Events._BoundObjectFrameEvents_SinkHelper __BoundObjectFrameEvents_SinkHelper;
+		private Events.DispBoundObjectFrameEvents_SinkHelper _dispBoundObjectFrameEvents_SinkHelper;
 	
 		#endregion
 
@@ -54,6 +54,7 @@ namespace NetOffice.AccessApi
         /// <summary>
         /// Instance Type
         /// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
         public override Type InstanceType
         {
             get
@@ -120,17 +121,17 @@ namespace NetOffice.AccessApi
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of BoundObjectFrame 
-        ///</summary>		
+        /// </summary>		
 		public BoundObjectFrame():base("Access.BoundObjectFrame")
 		{
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of BoundObjectFrame
-        ///</summary>
+        /// </summary>
         ///<param name="progId">registered ProgID</param>
 		public BoundObjectFrame(string progId):base(progId)
 		{
@@ -140,46 +141,6 @@ namespace NetOffice.AccessApi
 		#endregion
 
 		#region Static CoClass Methods
-
-		/// <summary>
-        /// Returns all running Access.BoundObjectFrame objects from the environment/system
-        /// </summary>
-        /// <returns>an Access.BoundObjectFrame array</returns>
-		public static NetOffice.AccessApi.BoundObjectFrame[] GetActiveInstances()
-		{		
-			IDisposableEnumeration proxyList = NetOffice.ProxyService.GetActiveInstances("Access","BoundObjectFrame");
-			NetRuntimeSystem.Collections.Generic.List<NetOffice.AccessApi.BoundObjectFrame> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.AccessApi.BoundObjectFrame>();
-			foreach(object proxy in proxyList)
-				resultList.Add( new NetOffice.AccessApi.BoundObjectFrame(null, proxy) );
-			return resultList.ToArray();
-		}
-
-		/// <summary>
-        /// Returns a running Access.BoundObjectFrame object from the environment/system.
-        /// </summary>
-        /// <returns>an Access.BoundObjectFrame object or null</returns>
-		public static NetOffice.AccessApi.BoundObjectFrame GetActiveInstance()
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Access","BoundObjectFrame", false);
-			if(null != proxy)
-				return new NetOffice.AccessApi.BoundObjectFrame(null, proxy);
-			else
-				return null;
-		}
-
-		/// <summary>
-        /// Returns a running Access.BoundObjectFrame object from the environment/system. 
-        /// </summary>
-	    /// <param name="throwOnError">throw an exception if no object was found</param>
-        /// <returns>an Access.BoundObjectFrame object or null</returns>
-		public static NetOffice.AccessApi.BoundObjectFrame GetActiveInstance(bool throwOnError)
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Access","BoundObjectFrame", throwOnError);
-			if(null != proxy)
-				return new NetOffice.AccessApi.BoundObjectFrame(null, proxy);
-			else
-				return null;
-		}
 		#endregion
 
 		#region Events
@@ -546,18 +507,18 @@ namespace NetOffice.AccessApi
 				return;
 	
             if (null == _activeSinkId)
-				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, _BoundObjectFrameEvents_SinkHelper.Id,DispBoundObjectFrameEvents_SinkHelper.Id);
+				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, Events._BoundObjectFrameEvents_SinkHelper.Id, Events.DispBoundObjectFrameEvents_SinkHelper.Id);
 
 
-			if(_BoundObjectFrameEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
+			if(Events._BoundObjectFrameEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
 			{
-				__BoundObjectFrameEvents_SinkHelper = new _BoundObjectFrameEvents_SinkHelper(this, _connectPoint);
+				__BoundObjectFrameEvents_SinkHelper = new Events._BoundObjectFrameEvents_SinkHelper(this, _connectPoint);
 				return;
 			}
 
-			if(DispBoundObjectFrameEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
+			if(Events.DispBoundObjectFrameEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
 			{
-				_dispBoundObjectFrameEvents_SinkHelper = new DispBoundObjectFrameEvents_SinkHelper(this, _connectPoint);
+				_dispBoundObjectFrameEvents_SinkHelper = new Events.DispBoundObjectFrameEvents_SinkHelper(this, _connectPoint);
 				return;
 			} 
         }

@@ -1,52 +1,52 @@
 ﻿using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
-using NetOffice;
-using NetOffice.Misc;
+using NetOffice.Attributes;
 
 namespace NetOffice.VisioApi
 {
-
 	#region Delegates
 
 	#pragma warning disable
-	public delegate void Window_SelectionChangedEventHandler(NetOffice.VisioApi.IVWindow Window);
-	public delegate void Window_BeforeWindowClosedEventHandler(NetOffice.VisioApi.IVWindow Window);
-	public delegate void Window_WindowActivatedEventHandler(NetOffice.VisioApi.IVWindow Window);
-	public delegate void Window_BeforeWindowSelDeleteEventHandler(NetOffice.VisioApi.IVWindow Window);
-	public delegate void Window_BeforeWindowPageTurnEventHandler(NetOffice.VisioApi.IVWindow Window);
-	public delegate void Window_WindowTurnedToPageEventHandler(NetOffice.VisioApi.IVWindow Window);
-	public delegate void Window_WindowChangedEventHandler(NetOffice.VisioApi.IVWindow Window);
-	public delegate void Window_ViewChangedEventHandler(NetOffice.VisioApi.IVWindow Window);
-	public delegate void Window_QueryCancelWindowCloseEventHandler(NetOffice.VisioApi.IVWindow Window);
-	public delegate void Window_WindowCloseCanceledEventHandler(NetOffice.VisioApi.IVWindow Window);
-	public delegate void Window_OnKeystrokeMessageForAddonEventHandler(NetOffice.VisioApi.IVMSGWrap MSG);
-	public delegate void Window_MouseDownEventHandler(Int32 Button, Int32 KeyButtonState, Double x, Double y, ref bool CancelDefault);
-	public delegate void Window_MouseMoveEventHandler(Int32 Button, Int32 KeyButtonState, Double x, Double y, ref bool CancelDefault);
-	public delegate void Window_MouseUpEventHandler(Int32 Button, Int32 KeyButtonState, Double x, Double y, ref bool CancelDefault);
-	public delegate void Window_KeyDownEventHandler(Int32 KeyCode, Int32 KeyButtonState, ref bool CancelDefault);
-	public delegate void Window_KeyPressEventHandler(Int32 KeyAscii, ref bool CancelDefault);
-	public delegate void Window_KeyUpEventHandler(Int32 KeyCode, Int32 KeyButtonState, ref bool CancelDefault);
+	public delegate void Window_SelectionChangedEventHandler(NetOffice.VisioApi.IVWindow window);
+	public delegate void Window_BeforeWindowClosedEventHandler(NetOffice.VisioApi.IVWindow window);
+	public delegate void Window_WindowActivatedEventHandler(NetOffice.VisioApi.IVWindow window);
+	public delegate void Window_BeforeWindowSelDeleteEventHandler(NetOffice.VisioApi.IVWindow window);
+	public delegate void Window_BeforeWindowPageTurnEventHandler(NetOffice.VisioApi.IVWindow window);
+	public delegate void Window_WindowTurnedToPageEventHandler(NetOffice.VisioApi.IVWindow window);
+	public delegate void Window_WindowChangedEventHandler(NetOffice.VisioApi.IVWindow window);
+	public delegate void Window_ViewChangedEventHandler(NetOffice.VisioApi.IVWindow window);
+	public delegate void Window_QueryCancelWindowCloseEventHandler(NetOffice.VisioApi.IVWindow window);
+	public delegate void Window_WindowCloseCanceledEventHandler(NetOffice.VisioApi.IVWindow window);
+	public delegate void Window_OnKeystrokeMessageForAddonEventHandler(NetOffice.VisioApi.IVMSGWrap msg);
+	public delegate void Window_MouseDownEventHandler(Int32 button, Int32 keyButtonState, Double x, Double y, ref bool cancelDefault);
+	public delegate void Window_MouseMoveEventHandler(Int32 button, Int32 keyButtonState, Double x, Double y, ref bool cancelDefault);
+	public delegate void Window_MouseUpEventHandler(Int32 button, Int32 keyButtonState, Double x, Double y, ref bool cancelDefault);
+	public delegate void Window_KeyDownEventHandler(Int32 KeyCode, Int32 keyButtonState, ref bool cancelDefault);
+	public delegate void Window_KeyPressEventHandler(Int32 keyAscii, ref bool cancelDefault);
+	public delegate void Window_KeyUpEventHandler(Int32 keyCode, Int32 keyButtonState, ref bool cancelDefault);
 	#pragma warning restore
 
 	#endregion
 
-	///<summary>
+	/// <summary>
 	/// CoClass Window 
 	/// SupportByVersion Visio, 11,12,14,15,16
-	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff769449(v=office.14).aspx
-	///</summary>
-	[SupportByVersionAttribute("Visio", 11,12,14,15,16)]
-	[EntityTypeAttribute(EntityType.IsCoClass)]
-	public class Window : IVWindow,IEventBinding
+	/// </summary>
+	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/ff769449(v=office.14).aspx </remarks>
+	[SupportByVersion("Visio", 11,12,14,15,16)]
+	[EntityType(EntityType.IsCoClass)]
+	[EventSink(typeof(Events.EWindow_SinkHelper))]
+	public class Window : IVWindow, IEventBinding
 	{
 		#pragma warning disable
+
 		#region Fields
 		
 		private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
 		private string _activeSinkId;
 		private NetRuntimeSystem.Type _thisType;
-		EWindow_SinkHelper _eWindow_SinkHelper;
+		private Events.EWindow_SinkHelper _eWindow_SinkHelper;
 	
 		#endregion
 
@@ -55,6 +55,7 @@ namespace NetOffice.VisioApi
         /// <summary>
         /// Instance Type
         /// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
         public override Type InstanceType
         {
             get
@@ -121,17 +122,17 @@ namespace NetOffice.VisioApi
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of Window 
-        ///</summary>		
+        /// </summary>		
 		public Window():base("Visio.Window")
 		{
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of Window
-        ///</summary>
+        /// </summary>
         ///<param name="progId">registered ProgID</param>
 		public Window(string progId):base(progId)
 		{
@@ -141,46 +142,6 @@ namespace NetOffice.VisioApi
 		#endregion
 
 		#region Static CoClass Methods
-
-		/// <summary>
-        /// Returns all running Visio.Window objects from the environment/system
-        /// </summary>
-        /// <returns>an Visio.Window array</returns>
-		public static NetOffice.VisioApi.Window[] GetActiveInstances()
-		{		
-			IDisposableEnumeration proxyList = NetOffice.ProxyService.GetActiveInstances("Visio","Window");
-			NetRuntimeSystem.Collections.Generic.List<NetOffice.VisioApi.Window> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.VisioApi.Window>();
-			foreach(object proxy in proxyList)
-				resultList.Add( new NetOffice.VisioApi.Window(null, proxy) );
-			return resultList.ToArray();
-		}
-
-		/// <summary>
-        /// Returns a running Visio.Window object from the environment/system.
-        /// </summary>
-        /// <returns>an Visio.Window object or null</returns>
-		public static NetOffice.VisioApi.Window GetActiveInstance()
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Visio","Window", false);
-			if(null != proxy)
-				return new NetOffice.VisioApi.Window(null, proxy);
-			else
-				return null;
-		}
-
-		/// <summary>
-        /// Returns a running Visio.Window object from the environment/system. 
-        /// </summary>
-	    /// <param name="throwOnError">throw an exception if no object was found</param>
-        /// <returns>an Visio.Window object or null</returns>
-		public static NetOffice.VisioApi.Window GetActiveInstance(bool throwOnError)
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Visio","Window", throwOnError);
-			if(null != proxy)
-				return new NetOffice.VisioApi.Window(null, proxy);
-			else
-				return null;
-		}
 		#endregion
 
 		#region Events
@@ -593,12 +554,12 @@ namespace NetOffice.VisioApi
 				return;
 	
             if (null == _activeSinkId)
-				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, EWindow_SinkHelper.Id);
+				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, Events.EWindow_SinkHelper.Id);
 
 
-			if(EWindow_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
+			if(Events.EWindow_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
 			{
-				_eWindow_SinkHelper = new EWindow_SinkHelper(this, _connectPoint);
+				_eWindow_SinkHelper = new Events.EWindow_SinkHelper(this, _connectPoint);
 				return;
 			} 
         }

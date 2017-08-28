@@ -2,6 +2,7 @@
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using NetOffice;
+using NetOffice.Attributes;
 
 /*
     Contains the following Type Libraries:
@@ -11,29 +12,29 @@ using NetOffice;
 */
 
 [assembly: AssemblyTitle("MSHTML")]
-[assembly: AssemblyDescription("NetOffice MSHTML Api")]
+[assembly: AssemblyDescription("Netoffice MSHTML Api")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("netoffice.codeplex.com")]
-[assembly: AssemblyProduct("NetOffice")]
+[assembly: AssemblyProduct("Netoffice")]
 [assembly: AssemblyCopyright("Sebastian Lange")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
-[assembly: AssemblyVersion("1.7.4.0")]
-[assembly: AssemblyFileVersion("1.7.4.0")]
+[assembly: AssemblyVersion("1.7.4.1")]
+[assembly: AssemblyFileVersion("1.7.4.1")]
 [assembly: PrimaryInteropAssembly(1, 0)]
 [assembly: ImportedFromTypeLib("MSHTML")]
 [assembly: Guid("3050F1C5-98B5-11CF-BB82-00AA00BDCE0B")]
-[assembly: NetOfficeAssemblyAttribute("1.7.4.0")]
+[assembly: NetOfficeAssemblyAttribute("1.7.4.1")]
 [assembly: Dependency("NetOffice.dll", LoadHint.Default)]
 
 
 /*
 Alias Table
  
-[SupportByVersionAttribute("MSHTML", 4)]
+[SupportByVersion("MSHTML", 4)]
 LONG_PTR as Int32
 
-[SupportByVersionAttribute("MSHTML", 4)]
+[SupportByVersion("MSHTML", 4)]
 UINT_PTR as Int32
 
 */

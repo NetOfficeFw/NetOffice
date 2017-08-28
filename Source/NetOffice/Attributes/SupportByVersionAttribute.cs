@@ -1,5 +1,5 @@
 ﻿using System;
-namespace NetOffice
+namespace NetOffice.Attributes
 {
     /// <summary>
     /// Indicates which COM Type Library Version supports the entity
@@ -13,7 +13,7 @@ namespace NetOffice
         public readonly string Name;
 
         /// <summary>
-        ///All supported library versions from the entity
+        /// All supported library versions from the entity
         /// </summary>
         public readonly double[] Versions;
 

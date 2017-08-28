@@ -1,8 +1,7 @@
 ﻿using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
-using NetOffice;
-using NetOffice.Misc;
+using NetOffice.Attributes;
 
 namespace NetOffice.MSHTMLApi
 {
@@ -76,21 +75,23 @@ namespace NetOffice.MSHTMLApi
 
 	#endregion
 
-	///<summary>
+	/// <summary>
 	/// CoClass HTMLHeadElement 
 	/// SupportByVersion MSHTML, 4
-	///</summary>
-	[SupportByVersionAttribute("MSHTML", 4)]
-	[EntityTypeAttribute(EntityType.IsCoClass)]
-	public class HTMLHeadElement : DispHTMLHeadElement,IEventBinding
+	/// </summary>
+	[SupportByVersion("MSHTML", 4)]
+	[EntityType(EntityType.IsCoClass)]
+	[EventSink(typeof(Events.HTMLElementEvents_SinkHelper))]
+	public class HTMLHeadElement : DispHTMLHeadElement, IEventBinding
 	{
 		#pragma warning disable
+
 		#region Fields
 		
 		private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
 		private string _activeSinkId;
 		private NetRuntimeSystem.Type _thisType;
-		HTMLElementEvents_SinkHelper _hTMLElementEvents_SinkHelper;
+		private Events.HTMLElementEvents_SinkHelper _hTMLElementEvents_SinkHelper;
 	
 		#endregion
 
@@ -99,6 +100,7 @@ namespace NetOffice.MSHTMLApi
         /// <summary>
         /// Instance Type
         /// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
         public override Type InstanceType
         {
             get
@@ -165,17 +167,17 @@ namespace NetOffice.MSHTMLApi
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of HTMLHeadElement 
-        ///</summary>		
+        /// </summary>		
 		public HTMLHeadElement():base("MSHTML.HTMLHeadElement")
 		{
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of HTMLHeadElement
-        ///</summary>
+        /// </summary>
         ///<param name="progId">registered ProgID</param>
 		public HTMLHeadElement(string progId):base(progId)
 		{
@@ -185,46 +187,6 @@ namespace NetOffice.MSHTMLApi
 		#endregion
 
 		#region Static CoClass Methods
-
-		/// <summary>
-        /// Returns all running MSHTML.HTMLHeadElement objects from the environment/system
-        /// </summary>
-        /// <returns>an MSHTML.HTMLHeadElement array</returns>
-		public static NetOffice.MSHTMLApi.HTMLHeadElement[] GetActiveInstances()
-		{		
-			IDisposableEnumeration proxyList = NetOffice.ProxyService.GetActiveInstances("MSHTML","HTMLHeadElement");
-			NetRuntimeSystem.Collections.Generic.List<NetOffice.MSHTMLApi.HTMLHeadElement> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.MSHTMLApi.HTMLHeadElement>();
-			foreach(object proxy in proxyList)
-				resultList.Add( new NetOffice.MSHTMLApi.HTMLHeadElement(null, proxy) );
-			return resultList.ToArray();
-		}
-
-		/// <summary>
-        /// Returns a running MSHTML.HTMLHeadElement object from the environment/system.
-        /// </summary>
-        /// <returns>an MSHTML.HTMLHeadElement object or null</returns>
-		public static NetOffice.MSHTMLApi.HTMLHeadElement GetActiveInstance()
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("MSHTML","HTMLHeadElement", false);
-			if(null != proxy)
-				return new NetOffice.MSHTMLApi.HTMLHeadElement(null, proxy);
-			else
-				return null;
-		}
-
-		/// <summary>
-        /// Returns a running MSHTML.HTMLHeadElement object from the environment/system. 
-        /// </summary>
-	    /// <param name="throwOnError">throw an exception if no object was found</param>
-        /// <returns>an MSHTML.HTMLHeadElement object or null</returns>
-		public static NetOffice.MSHTMLApi.HTMLHeadElement GetActiveInstance(bool throwOnError)
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("MSHTML","HTMLHeadElement", throwOnError);
-			if(null != proxy)
-				return new NetOffice.MSHTMLApi.HTMLHeadElement(null, proxy);
-			else
-				return null;
-		}
 		#endregion
 
 		#region Events
@@ -1632,12 +1594,12 @@ namespace NetOffice.MSHTMLApi
 				return;
 	
             if (null == _activeSinkId)
-				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, HTMLElementEvents_SinkHelper.Id);
+				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, Events.HTMLElementEvents_SinkHelper.Id);
 
 
-			if(HTMLElementEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
+			if(Events.HTMLElementEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
 			{
-				_hTMLElementEvents_SinkHelper = new HTMLElementEvents_SinkHelper(this, _connectPoint);
+				_hTMLElementEvents_SinkHelper = new Events.HTMLElementEvents_SinkHelper(this, _connectPoint);
 				return;
 			} 
         }

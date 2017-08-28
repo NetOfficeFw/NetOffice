@@ -1,19 +1,24 @@
 ﻿using System;
 using NetRuntimeSystem = System;
-using System.Runtime.InteropServices;
-using System.Runtime.CompilerServices;
 using System.ComponentModel;
-using System.Reflection;
-using System.Collections.Generic;
-using NetOffice;
+using NetOffice.Attributes;
+
 namespace NetOffice.OWC10Api
 {
-	///<summary>
+	/// <summary>
 	/// Moniker
-	///</summary>
-	public class Moniker_ : COMObject
+	/// </summary>
+	[SyntaxBypass]
+ 	public class Moniker_ : COMObject
 	{
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public Moniker_(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -62,7 +67,7 @@ namespace NetOffice.OWC10Api
 		{
 		}
 		
-		/// <param name="progId">registered ProgID</param>
+		/// <param name="progId">registered progID</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public Moniker_(string progId) : base(progId)
 		{
@@ -76,22 +81,20 @@ namespace NetOffice.OWC10Api
 		/// SupportByVersion OWC10 1
 		/// Get
 		/// </summary>
-		/// <param name="relativeTo">optional object RelativeTo</param>
-		[SupportByVersionAttribute("OWC10", 1)]
+		/// <param name="relativeTo">optional object relativeTo</param>
+		[SupportByVersion("OWC10", 1)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public string get_Moniker(object relativeTo)
-		{		
-			object[] paramsArray = Invoker.ValidateParamsArray(relativeTo);
-			object returnItem = Invoker.PropertyGet(this, "Moniker", paramsArray);
-			return NetRuntimeSystem.Convert.ToString(returnItem);
+		{
+			return Factory.ExecuteStringPropertyGet(this, "Moniker", relativeTo);
 		}
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
 		/// Alias for get_Moniker
 		/// </summary>
-		/// <param name="relativeTo">optional object RelativeTo</param>
-		[SupportByVersionAttribute("OWC10", 1)]
+		/// <param name="relativeTo">optional object relativeTo</param>
+		[SupportByVersion("OWC10", 1), Redirect("get_Moniker")]
 		public string Moniker(object relativeTo)
 		{
 			return get_Moniker(relativeTo);
@@ -105,16 +108,29 @@ namespace NetOffice.OWC10Api
 
 	}
 
-	///<summary>
+	/// <summary>
 	/// DispatchInterface Moniker 
 	/// SupportByVersion OWC10, 1
-	///</summary>
-	[SupportByVersionAttribute("OWC10", 1)]
-	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
-	public class Moniker : Moniker_
+	/// </summary>
+	[SupportByVersion("OWC10", 1)]
+	[EntityType(EntityType.IsDispatchInterface)]
+ 	public class Moniker : Moniker_
 	{
 		#pragma warning disable
+
 		#region Type Information
+
+		/// <summary>
+		/// Instance Type
+		/// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
+		public override Type InstanceType
+		{
+			get
+			{
+				return LateBindingApiWrapperType;
+			}
+		}
 
         private static Type _type;
 
@@ -125,14 +141,20 @@ namespace NetOffice.OWC10Api
             {
                 if (null == _type)
                     _type = typeof(Moniker);
-                    
                 return _type;
             }
         }
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public Moniker(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -178,7 +200,7 @@ namespace NetOffice.OWC10Api
 		{
 		}
 		
-		/// <param name="progId">registered ProgID</param>
+		/// <param name="progId">registered progID</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public Moniker(string progId) : base(progId)
 		{
@@ -193,15 +215,12 @@ namespace NetOffice.OWC10Api
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		/// <param name="moniker">string Moniker</param>
-		[SupportByVersionAttribute("OWC10", 1)]
+		/// <param name="moniker">string moniker</param>
+		[SupportByVersion("OWC10", 1), ProxyResult]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public object get_Parse(string moniker)
-		{		
-			object[] paramsArray = Invoker.ValidateParamsArray(moniker);
-			object returnItem = Invoker.PropertyGet(this, "Parse", paramsArray);
-			ICOMObject newObject = Factory.CreateObjectFromComProxy(this,returnItem);
-			return newObject;
+		{
+			return Factory.ExecuteReferencePropertyGet(this, "Parse", moniker);
 		}
 
 		/// <summary>
@@ -209,8 +228,8 @@ namespace NetOffice.OWC10Api
 		/// Alias for get_Parse
 		/// Unknown COM Proxy
 		/// </summary>
-		/// <param name="moniker">string Moniker</param>
-		[SupportByVersionAttribute("OWC10", 1)]
+		/// <param name="moniker">string moniker</param>
+		[SupportByVersion("OWC10", 1), ProxyResult, Redirect("get_Parse")]
 		public object Parse(string moniker)
 		{
 			return get_Parse(moniker);
@@ -221,6 +240,7 @@ namespace NetOffice.OWC10Api
 		#region Methods
 
 		#endregion
+
 		#pragma warning restore
 	}
 }

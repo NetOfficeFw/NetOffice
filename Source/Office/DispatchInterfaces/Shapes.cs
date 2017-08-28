@@ -1,24 +1,35 @@
-﻿using System;
-using NetRuntimeSystem = System;
-using System.Runtime.InteropServices;
-using System.Runtime.CompilerServices;
-using System.ComponentModel;
-using System.Reflection;
+﻿using System.Collections;
 using System.Collections.Generic;
-using System.Collections;
-using NetOffice;
+using System;
+using NetRuntimeSystem = System;
+using System.ComponentModel;
+using NetOffice.Attributes;
+
 namespace NetOffice.OfficeApi
 {
-	///<summary>
+	/// <summary>
 	/// DispatchInterface Shapes 
 	/// SupportByVersion Office, 9,10,11,12,14,15,16
-	///</summary>
-	[SupportByVersionAttribute("Office", 9,10,11,12,14,15,16)]
-	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
-	public class Shapes : _IMsoDispObj ,IEnumerable<NetOffice.OfficeApi.Shape>
+	/// </summary>
+	[SupportByVersion("Office", 9,10,11,12,14,15,16)]
+	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Method, "Item")]
+	public class Shapes : _IMsoDispObj, IEnumerable<NetOffice.OfficeApi.Shape>
 	{
 		#pragma warning disable
+
 		#region Type Information
+
+		/// <summary>
+		/// Instance Type
+		/// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
+		public override Type InstanceType
+		{
+			get
+			{
+				return LateBindingApiWrapperType;
+			}
+		}
 
         private static Type _type;
 
@@ -29,14 +40,20 @@ namespace NetOffice.OfficeApi
             {
                 if (null == _type)
                     _type = typeof(Shapes);
-                    
                 return _type;
             }
         }
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public Shapes(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -82,7 +99,7 @@ namespace NetOffice.OfficeApi
 		{
 		}
 		
-		/// <param name="progId">registered ProgID</param>
+		/// <param name="progId">registered progID</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public Shapes(string progId) : base(progId)
 		{
@@ -97,15 +114,12 @@ namespace NetOffice.OfficeApi
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("Office", 9,10,11,12,14,15,16)]
+		[SupportByVersion("Office", 9,10,11,12,14,15,16), ProxyResult]
 		public object Parent
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Parent", paramsArray);
-				ICOMObject newObject = Factory.CreateObjectFromComProxy(this,returnItem);
-				return newObject;
+				return Factory.ExecuteReferencePropertyGet(this, "Parent");
 			}
 		}
 
@@ -113,14 +127,12 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Office", 9,10,11,12,14,15,16)]
+		[SupportByVersion("Office", 9,10,11,12,14,15,16)]
 		public Int32 Count
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Count", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "Count");
 			}
 		}
 
@@ -128,15 +140,12 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Office", 9,10,11,12,14,15,16)]
+		[SupportByVersion("Office", 9,10,11,12,14,15,16)]
 		public NetOffice.OfficeApi.Shape Background
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Background", paramsArray);
-				NetOffice.OfficeApi.Shape newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.Shape.LateBindingApiWrapperType) as NetOffice.OfficeApi.Shape;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.Shape>(this, "Background", NetOffice.OfficeApi.Shape.LateBindingApiWrapperType);
 			}
 		}
 
@@ -144,15 +153,12 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Office", 9,10,11,12,14,15,16)]
+		[SupportByVersion("Office", 9,10,11,12,14,15,16)]
 		public NetOffice.OfficeApi.Shape Default
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Default", paramsArray);
-				NetOffice.OfficeApi.Shape newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.Shape.LateBindingApiWrapperType) as NetOffice.OfficeApi.Shape;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.Shape>(this, "Default", NetOffice.OfficeApi.Shape.LateBindingApiWrapperType);
 			}
 		}
 
@@ -162,519 +168,400 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="index">object Index</param>
-		[SupportByVersionAttribute("Office", 9,10,11,12,14,15,16)]
-		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
+		/// <param name="index">object index</param>
+		[SupportByVersion("Office", 9,10,11,12,14,15,16)]
+		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
 		public NetOffice.OfficeApi.Shape this[object index]
 		{
 			get
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(index);
-				object returnItem = Invoker.MethodReturn(this, "Item", paramsArray);
-				NetOffice.OfficeApi.Shape newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.Shape.LateBindingApiWrapperType) as NetOffice.OfficeApi.Shape;
-				return newObject;
+				return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.Shape>(this, "Item", NetOffice.OfficeApi.Shape.LateBindingApiWrapperType, index);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="type">NetOffice.OfficeApi.Enums.MsoCalloutType Type</param>
-		/// <param name="left">Single Left</param>
-		/// <param name="top">Single Top</param>
-		/// <param name="width">Single Width</param>
-		/// <param name="height">Single Height</param>
-		[SupportByVersionAttribute("Office", 9,10,11,12,14,15,16)]
+		/// <param name="type">NetOffice.OfficeApi.Enums.MsoCalloutType type</param>
+		/// <param name="left">Single left</param>
+		/// <param name="top">Single top</param>
+		/// <param name="width">Single width</param>
+		/// <param name="height">Single height</param>
+		[SupportByVersion("Office", 9,10,11,12,14,15,16)]
 		public NetOffice.OfficeApi.Shape AddCallout(NetOffice.OfficeApi.Enums.MsoCalloutType type, Single left, Single top, Single width, Single height)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(type, left, top, width, height);
-			object returnItem = Invoker.MethodReturn(this, "AddCallout", paramsArray);
-			NetOffice.OfficeApi.Shape newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.Shape.LateBindingApiWrapperType) as NetOffice.OfficeApi.Shape;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.Shape>(this, "AddCallout", NetOffice.OfficeApi.Shape.LateBindingApiWrapperType, new object[]{ type, left, top, width, height });
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="type">NetOffice.OfficeApi.Enums.MsoConnectorType Type</param>
-		/// <param name="beginX">Single BeginX</param>
-		/// <param name="beginY">Single BeginY</param>
-		/// <param name="endX">Single EndX</param>
-		/// <param name="endY">Single EndY</param>
-		[SupportByVersionAttribute("Office", 9,10,11,12,14,15,16)]
+		/// <param name="type">NetOffice.OfficeApi.Enums.MsoConnectorType type</param>
+		/// <param name="beginX">Single beginX</param>
+		/// <param name="beginY">Single beginY</param>
+		/// <param name="endX">Single endX</param>
+		/// <param name="endY">Single endY</param>
+		[SupportByVersion("Office", 9,10,11,12,14,15,16)]
 		public NetOffice.OfficeApi.Shape AddConnector(NetOffice.OfficeApi.Enums.MsoConnectorType type, Single beginX, Single beginY, Single endX, Single endY)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(type, beginX, beginY, endX, endY);
-			object returnItem = Invoker.MethodReturn(this, "AddConnector", paramsArray);
-			NetOffice.OfficeApi.Shape newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.Shape.LateBindingApiWrapperType) as NetOffice.OfficeApi.Shape;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.Shape>(this, "AddConnector", NetOffice.OfficeApi.Shape.LateBindingApiWrapperType, new object[]{ type, beginX, beginY, endX, endY });
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="safeArrayOfPoints">object SafeArrayOfPoints</param>
-		[SupportByVersionAttribute("Office", 9,10,11,12,14,15,16)]
+		/// <param name="safeArrayOfPoints">object safeArrayOfPoints</param>
+		[SupportByVersion("Office", 9,10,11,12,14,15,16)]
 		public NetOffice.OfficeApi.Shape AddCurve(object safeArrayOfPoints)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(safeArrayOfPoints);
-			object returnItem = Invoker.MethodReturn(this, "AddCurve", paramsArray);
-			NetOffice.OfficeApi.Shape newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.Shape.LateBindingApiWrapperType) as NetOffice.OfficeApi.Shape;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.Shape>(this, "AddCurve", NetOffice.OfficeApi.Shape.LateBindingApiWrapperType, safeArrayOfPoints);
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="orientation">NetOffice.OfficeApi.Enums.MsoTextOrientation Orientation</param>
-		/// <param name="left">Single Left</param>
-		/// <param name="top">Single Top</param>
-		/// <param name="width">Single Width</param>
-		/// <param name="height">Single Height</param>
-		[SupportByVersionAttribute("Office", 9,10,11,12,14,15,16)]
+		/// <param name="orientation">NetOffice.OfficeApi.Enums.MsoTextOrientation orientation</param>
+		/// <param name="left">Single left</param>
+		/// <param name="top">Single top</param>
+		/// <param name="width">Single width</param>
+		/// <param name="height">Single height</param>
+		[SupportByVersion("Office", 9,10,11,12,14,15,16)]
 		public NetOffice.OfficeApi.Shape AddLabel(NetOffice.OfficeApi.Enums.MsoTextOrientation orientation, Single left, Single top, Single width, Single height)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(orientation, left, top, width, height);
-			object returnItem = Invoker.MethodReturn(this, "AddLabel", paramsArray);
-			NetOffice.OfficeApi.Shape newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.Shape.LateBindingApiWrapperType) as NetOffice.OfficeApi.Shape;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.Shape>(this, "AddLabel", NetOffice.OfficeApi.Shape.LateBindingApiWrapperType, new object[]{ orientation, left, top, width, height });
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="beginX">Single BeginX</param>
-		/// <param name="beginY">Single BeginY</param>
-		/// <param name="endX">Single EndX</param>
-		/// <param name="endY">Single EndY</param>
-		[SupportByVersionAttribute("Office", 9,10,11,12,14,15,16)]
+		/// <param name="beginX">Single beginX</param>
+		/// <param name="beginY">Single beginY</param>
+		/// <param name="endX">Single endX</param>
+		/// <param name="endY">Single endY</param>
+		[SupportByVersion("Office", 9,10,11,12,14,15,16)]
 		public NetOffice.OfficeApi.Shape AddLine(Single beginX, Single beginY, Single endX, Single endY)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(beginX, beginY, endX, endY);
-			object returnItem = Invoker.MethodReturn(this, "AddLine", paramsArray);
-			NetOffice.OfficeApi.Shape newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.Shape.LateBindingApiWrapperType) as NetOffice.OfficeApi.Shape;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.Shape>(this, "AddLine", NetOffice.OfficeApi.Shape.LateBindingApiWrapperType, beginX, beginY, endX, endY);
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="fileName">string FileName</param>
-		/// <param name="linkToFile">NetOffice.OfficeApi.Enums.MsoTriState LinkToFile</param>
-		/// <param name="saveWithDocument">NetOffice.OfficeApi.Enums.MsoTriState SaveWithDocument</param>
-		/// <param name="left">Single Left</param>
-		/// <param name="top">Single Top</param>
+		/// <param name="fileName">string fileName</param>
+		/// <param name="linkToFile">NetOffice.OfficeApi.Enums.MsoTriState linkToFile</param>
+		/// <param name="saveWithDocument">NetOffice.OfficeApi.Enums.MsoTriState saveWithDocument</param>
+		/// <param name="left">Single left</param>
+		/// <param name="top">Single top</param>
 		/// <param name="width">optional Single Width = -1</param>
 		/// <param name="height">optional Single Height = -1</param>
-		[SupportByVersionAttribute("Office", 9,10,11,12,14,15,16)]
+		[SupportByVersion("Office", 9,10,11,12,14,15,16)]
 		public NetOffice.OfficeApi.Shape AddPicture(string fileName, NetOffice.OfficeApi.Enums.MsoTriState linkToFile, NetOffice.OfficeApi.Enums.MsoTriState saveWithDocument, Single left, Single top, object width, object height)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(fileName, linkToFile, saveWithDocument, left, top, width, height);
-			object returnItem = Invoker.MethodReturn(this, "AddPicture", paramsArray);
-			NetOffice.OfficeApi.Shape newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.Shape.LateBindingApiWrapperType) as NetOffice.OfficeApi.Shape;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.Shape>(this, "AddPicture", NetOffice.OfficeApi.Shape.LateBindingApiWrapperType, new object[]{ fileName, linkToFile, saveWithDocument, left, top, width, height });
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="fileName">string FileName</param>
-		/// <param name="linkToFile">NetOffice.OfficeApi.Enums.MsoTriState LinkToFile</param>
-		/// <param name="saveWithDocument">NetOffice.OfficeApi.Enums.MsoTriState SaveWithDocument</param>
-		/// <param name="left">Single Left</param>
-		/// <param name="top">Single Top</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Office", 9,10,11,12,14,15,16)]
+		/// <param name="fileName">string fileName</param>
+		/// <param name="linkToFile">NetOffice.OfficeApi.Enums.MsoTriState linkToFile</param>
+		/// <param name="saveWithDocument">NetOffice.OfficeApi.Enums.MsoTriState saveWithDocument</param>
+		/// <param name="left">Single left</param>
+		/// <param name="top">Single top</param>
+		[CustomMethod]
+		[SupportByVersion("Office", 9,10,11,12,14,15,16)]
 		public NetOffice.OfficeApi.Shape AddPicture(string fileName, NetOffice.OfficeApi.Enums.MsoTriState linkToFile, NetOffice.OfficeApi.Enums.MsoTriState saveWithDocument, Single left, Single top)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(fileName, linkToFile, saveWithDocument, left, top);
-			object returnItem = Invoker.MethodReturn(this, "AddPicture", paramsArray);
-			NetOffice.OfficeApi.Shape newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.Shape.LateBindingApiWrapperType) as NetOffice.OfficeApi.Shape;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.Shape>(this, "AddPicture", NetOffice.OfficeApi.Shape.LateBindingApiWrapperType, new object[]{ fileName, linkToFile, saveWithDocument, left, top });
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="fileName">string FileName</param>
-		/// <param name="linkToFile">NetOffice.OfficeApi.Enums.MsoTriState LinkToFile</param>
-		/// <param name="saveWithDocument">NetOffice.OfficeApi.Enums.MsoTriState SaveWithDocument</param>
-		/// <param name="left">Single Left</param>
-		/// <param name="top">Single Top</param>
+		/// <param name="fileName">string fileName</param>
+		/// <param name="linkToFile">NetOffice.OfficeApi.Enums.MsoTriState linkToFile</param>
+		/// <param name="saveWithDocument">NetOffice.OfficeApi.Enums.MsoTriState saveWithDocument</param>
+		/// <param name="left">Single left</param>
+		/// <param name="top">Single top</param>
 		/// <param name="width">optional Single Width = -1</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Office", 9,10,11,12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Office", 9,10,11,12,14,15,16)]
 		public NetOffice.OfficeApi.Shape AddPicture(string fileName, NetOffice.OfficeApi.Enums.MsoTriState linkToFile, NetOffice.OfficeApi.Enums.MsoTriState saveWithDocument, Single left, Single top, object width)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(fileName, linkToFile, saveWithDocument, left, top, width);
-			object returnItem = Invoker.MethodReturn(this, "AddPicture", paramsArray);
-			NetOffice.OfficeApi.Shape newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.Shape.LateBindingApiWrapperType) as NetOffice.OfficeApi.Shape;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.Shape>(this, "AddPicture", NetOffice.OfficeApi.Shape.LateBindingApiWrapperType, new object[]{ fileName, linkToFile, saveWithDocument, left, top, width });
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="safeArrayOfPoints">object SafeArrayOfPoints</param>
-		[SupportByVersionAttribute("Office", 9,10,11,12,14,15,16)]
+		/// <param name="safeArrayOfPoints">object safeArrayOfPoints</param>
+		[SupportByVersion("Office", 9,10,11,12,14,15,16)]
 		public NetOffice.OfficeApi.Shape AddPolyline(object safeArrayOfPoints)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(safeArrayOfPoints);
-			object returnItem = Invoker.MethodReturn(this, "AddPolyline", paramsArray);
-			NetOffice.OfficeApi.Shape newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.Shape.LateBindingApiWrapperType) as NetOffice.OfficeApi.Shape;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.Shape>(this, "AddPolyline", NetOffice.OfficeApi.Shape.LateBindingApiWrapperType, safeArrayOfPoints);
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="type">NetOffice.OfficeApi.Enums.MsoAutoShapeType Type</param>
-		/// <param name="left">Single Left</param>
-		/// <param name="top">Single Top</param>
-		/// <param name="width">Single Width</param>
-		/// <param name="height">Single Height</param>
-		[SupportByVersionAttribute("Office", 9,10,11,12,14,15,16)]
+		/// <param name="type">NetOffice.OfficeApi.Enums.MsoAutoShapeType type</param>
+		/// <param name="left">Single left</param>
+		/// <param name="top">Single top</param>
+		/// <param name="width">Single width</param>
+		/// <param name="height">Single height</param>
+		[SupportByVersion("Office", 9,10,11,12,14,15,16)]
 		public NetOffice.OfficeApi.Shape AddShape(NetOffice.OfficeApi.Enums.MsoAutoShapeType type, Single left, Single top, Single width, Single height)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(type, left, top, width, height);
-			object returnItem = Invoker.MethodReturn(this, "AddShape", paramsArray);
-			NetOffice.OfficeApi.Shape newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.Shape.LateBindingApiWrapperType) as NetOffice.OfficeApi.Shape;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.Shape>(this, "AddShape", NetOffice.OfficeApi.Shape.LateBindingApiWrapperType, new object[]{ type, left, top, width, height });
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="presetTextEffect">NetOffice.OfficeApi.Enums.MsoPresetTextEffect PresetTextEffect</param>
-		/// <param name="text">string Text</param>
-		/// <param name="fontName">string FontName</param>
-		/// <param name="fontSize">Single FontSize</param>
-		/// <param name="fontBold">NetOffice.OfficeApi.Enums.MsoTriState FontBold</param>
-		/// <param name="fontItalic">NetOffice.OfficeApi.Enums.MsoTriState FontItalic</param>
-		/// <param name="left">Single Left</param>
-		/// <param name="top">Single Top</param>
-		[SupportByVersionAttribute("Office", 9,10,11,12,14,15,16)]
+		/// <param name="presetTextEffect">NetOffice.OfficeApi.Enums.MsoPresetTextEffect presetTextEffect</param>
+		/// <param name="text">string text</param>
+		/// <param name="fontName">string fontName</param>
+		/// <param name="fontSize">Single fontSize</param>
+		/// <param name="fontBold">NetOffice.OfficeApi.Enums.MsoTriState fontBold</param>
+		/// <param name="fontItalic">NetOffice.OfficeApi.Enums.MsoTriState fontItalic</param>
+		/// <param name="left">Single left</param>
+		/// <param name="top">Single top</param>
+		[SupportByVersion("Office", 9,10,11,12,14,15,16)]
 		public NetOffice.OfficeApi.Shape AddTextEffect(NetOffice.OfficeApi.Enums.MsoPresetTextEffect presetTextEffect, string text, string fontName, Single fontSize, NetOffice.OfficeApi.Enums.MsoTriState fontBold, NetOffice.OfficeApi.Enums.MsoTriState fontItalic, Single left, Single top)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(presetTextEffect, text, fontName, fontSize, fontBold, fontItalic, left, top);
-			object returnItem = Invoker.MethodReturn(this, "AddTextEffect", paramsArray);
-			NetOffice.OfficeApi.Shape newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.Shape.LateBindingApiWrapperType) as NetOffice.OfficeApi.Shape;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.Shape>(this, "AddTextEffect", NetOffice.OfficeApi.Shape.LateBindingApiWrapperType, new object[]{ presetTextEffect, text, fontName, fontSize, fontBold, fontItalic, left, top });
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="orientation">NetOffice.OfficeApi.Enums.MsoTextOrientation Orientation</param>
-		/// <param name="left">Single Left</param>
-		/// <param name="top">Single Top</param>
-		/// <param name="width">Single Width</param>
-		/// <param name="height">Single Height</param>
-		[SupportByVersionAttribute("Office", 9,10,11,12,14,15,16)]
+		/// <param name="orientation">NetOffice.OfficeApi.Enums.MsoTextOrientation orientation</param>
+		/// <param name="left">Single left</param>
+		/// <param name="top">Single top</param>
+		/// <param name="width">Single width</param>
+		/// <param name="height">Single height</param>
+		[SupportByVersion("Office", 9,10,11,12,14,15,16)]
 		public NetOffice.OfficeApi.Shape AddTextbox(NetOffice.OfficeApi.Enums.MsoTextOrientation orientation, Single left, Single top, Single width, Single height)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(orientation, left, top, width, height);
-			object returnItem = Invoker.MethodReturn(this, "AddTextbox", paramsArray);
-			NetOffice.OfficeApi.Shape newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.Shape.LateBindingApiWrapperType) as NetOffice.OfficeApi.Shape;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.Shape>(this, "AddTextbox", NetOffice.OfficeApi.Shape.LateBindingApiWrapperType, new object[]{ orientation, left, top, width, height });
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="editingType">NetOffice.OfficeApi.Enums.MsoEditingType EditingType</param>
-		/// <param name="x1">Single X1</param>
-		/// <param name="y1">Single Y1</param>
-		[SupportByVersionAttribute("Office", 9,10,11,12,14,15,16)]
+		/// <param name="editingType">NetOffice.OfficeApi.Enums.MsoEditingType editingType</param>
+		/// <param name="x1">Single x1</param>
+		/// <param name="y1">Single y1</param>
+		[SupportByVersion("Office", 9,10,11,12,14,15,16)]
 		public NetOffice.OfficeApi.FreeformBuilder BuildFreeform(NetOffice.OfficeApi.Enums.MsoEditingType editingType, Single x1, Single y1)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(editingType, x1, y1);
-			object returnItem = Invoker.MethodReturn(this, "BuildFreeform", paramsArray);
-			NetOffice.OfficeApi.FreeformBuilder newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.FreeformBuilder.LateBindingApiWrapperType) as NetOffice.OfficeApi.FreeformBuilder;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.FreeformBuilder>(this, "BuildFreeform", NetOffice.OfficeApi.FreeformBuilder.LateBindingApiWrapperType, editingType, x1, y1);
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="index">object Index</param>
-		[SupportByVersionAttribute("Office", 9,10,11,12,14,15,16)]
+		/// <param name="index">object index</param>
+		[SupportByVersion("Office", 9,10,11,12,14,15,16)]
 		public NetOffice.OfficeApi.ShapeRange Range(object index)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(index);
-			object returnItem = Invoker.MethodReturn(this, "Range", paramsArray);
-			NetOffice.OfficeApi.ShapeRange newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.ShapeRange.LateBindingApiWrapperType) as NetOffice.OfficeApi.ShapeRange;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.ShapeRange>(this, "Range", NetOffice.OfficeApi.ShapeRange.LateBindingApiWrapperType, index);
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("Office", 9,10,11,12,14,15,16)]
+		[SupportByVersion("Office", 9,10,11,12,14,15,16)]
 		public void SelectAll()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "SelectAll", paramsArray);
+			 Factory.ExecuteMethod(this, "SelectAll");
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="type">NetOffice.OfficeApi.Enums.MsoDiagramType Type</param>
-		/// <param name="left">Single Left</param>
-		/// <param name="top">Single Top</param>
-		/// <param name="width">Single Width</param>
-		/// <param name="height">Single Height</param>
-		[SupportByVersionAttribute("Office", 10,11,12,14,15,16)]
+		/// <param name="type">NetOffice.OfficeApi.Enums.MsoDiagramType type</param>
+		/// <param name="left">Single left</param>
+		/// <param name="top">Single top</param>
+		/// <param name="width">Single width</param>
+		/// <param name="height">Single height</param>
+		[SupportByVersion("Office", 10,11,12,14,15,16)]
 		public NetOffice.OfficeApi.Shape AddDiagram(NetOffice.OfficeApi.Enums.MsoDiagramType type, Single left, Single top, Single width, Single height)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(type, left, top, width, height);
-			object returnItem = Invoker.MethodReturn(this, "AddDiagram", paramsArray);
-			NetOffice.OfficeApi.Shape newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.Shape.LateBindingApiWrapperType) as NetOffice.OfficeApi.Shape;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.Shape>(this, "AddDiagram", NetOffice.OfficeApi.Shape.LateBindingApiWrapperType, new object[]{ type, left, top, width, height });
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="left">Single Left</param>
-		/// <param name="top">Single Top</param>
-		/// <param name="width">Single Width</param>
-		/// <param name="height">Single Height</param>
+		/// <param name="left">Single left</param>
+		/// <param name="top">Single top</param>
+		/// <param name="width">Single width</param>
+		/// <param name="height">Single height</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("Office", 10,11,12,14,15,16)]
+		[SupportByVersion("Office", 10,11,12,14,15,16)]
 		public NetOffice.OfficeApi.Shape AddCanvas(Single left, Single top, Single width, Single height)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(left, top, width, height);
-			object returnItem = Invoker.MethodReturn(this, "AddCanvas", paramsArray);
-			NetOffice.OfficeApi.Shape newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.Shape.LateBindingApiWrapperType) as NetOffice.OfficeApi.Shape;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.Shape>(this, "AddCanvas", NetOffice.OfficeApi.Shape.LateBindingApiWrapperType, left, top, width, height);
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15, 16
-		/// 
 		/// </summary>
 		/// <param name="type">optional NetOffice.OfficeApi.Enums.XlChartType Type = -1</param>
 		/// <param name="left">optional Single Left = -1</param>
 		/// <param name="top">optional Single Top = -1</param>
 		/// <param name="width">optional Single Width = -1</param>
 		/// <param name="height">optional Single Height = -1</param>
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		[SupportByVersion("Office", 12,14,15,16)]
 		public NetOffice.OfficeApi.Shape AddChart(object type, object left, object top, object width, object height)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(type, left, top, width, height);
-			object returnItem = Invoker.MethodReturn(this, "AddChart", paramsArray);
-			NetOffice.OfficeApi.Shape newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.Shape.LateBindingApiWrapperType) as NetOffice.OfficeApi.Shape;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.Shape>(this, "AddChart", NetOffice.OfficeApi.Shape.LateBindingApiWrapperType, new object[]{ type, left, top, width, height });
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15, 16
-		/// 
 		/// </summary>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Office", 12,14,15,16)]
 		public NetOffice.OfficeApi.Shape AddChart()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "AddChart", paramsArray);
-			NetOffice.OfficeApi.Shape newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.Shape.LateBindingApiWrapperType) as NetOffice.OfficeApi.Shape;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.Shape>(this, "AddChart", NetOffice.OfficeApi.Shape.LateBindingApiWrapperType);
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15, 16
-		/// 
 		/// </summary>
 		/// <param name="type">optional NetOffice.OfficeApi.Enums.XlChartType Type = -1</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Office", 12,14,15,16)]
 		public NetOffice.OfficeApi.Shape AddChart(object type)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(type);
-			object returnItem = Invoker.MethodReturn(this, "AddChart", paramsArray);
-			NetOffice.OfficeApi.Shape newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.Shape.LateBindingApiWrapperType) as NetOffice.OfficeApi.Shape;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.Shape>(this, "AddChart", NetOffice.OfficeApi.Shape.LateBindingApiWrapperType, type);
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15, 16
-		/// 
 		/// </summary>
 		/// <param name="type">optional NetOffice.OfficeApi.Enums.XlChartType Type = -1</param>
 		/// <param name="left">optional Single Left = -1</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Office", 12,14,15,16)]
 		public NetOffice.OfficeApi.Shape AddChart(object type, object left)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(type, left);
-			object returnItem = Invoker.MethodReturn(this, "AddChart", paramsArray);
-			NetOffice.OfficeApi.Shape newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.Shape.LateBindingApiWrapperType) as NetOffice.OfficeApi.Shape;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.Shape>(this, "AddChart", NetOffice.OfficeApi.Shape.LateBindingApiWrapperType, type, left);
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15, 16
-		/// 
 		/// </summary>
 		/// <param name="type">optional NetOffice.OfficeApi.Enums.XlChartType Type = -1</param>
 		/// <param name="left">optional Single Left = -1</param>
 		/// <param name="top">optional Single Top = -1</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Office", 12,14,15,16)]
 		public NetOffice.OfficeApi.Shape AddChart(object type, object left, object top)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(type, left, top);
-			object returnItem = Invoker.MethodReturn(this, "AddChart", paramsArray);
-			NetOffice.OfficeApi.Shape newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.Shape.LateBindingApiWrapperType) as NetOffice.OfficeApi.Shape;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.Shape>(this, "AddChart", NetOffice.OfficeApi.Shape.LateBindingApiWrapperType, type, left, top);
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15, 16
-		/// 
 		/// </summary>
 		/// <param name="type">optional NetOffice.OfficeApi.Enums.XlChartType Type = -1</param>
 		/// <param name="left">optional Single Left = -1</param>
 		/// <param name="top">optional Single Top = -1</param>
 		/// <param name="width">optional Single Width = -1</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Office", 12,14,15,16)]
 		public NetOffice.OfficeApi.Shape AddChart(object type, object left, object top, object width)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(type, left, top, width);
-			object returnItem = Invoker.MethodReturn(this, "AddChart", paramsArray);
-			NetOffice.OfficeApi.Shape newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.Shape.LateBindingApiWrapperType) as NetOffice.OfficeApi.Shape;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.Shape>(this, "AddChart", NetOffice.OfficeApi.Shape.LateBindingApiWrapperType, type, left, top, width);
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="numRows">Int32 NumRows</param>
-		/// <param name="numColumns">Int32 NumColumns</param>
-		/// <param name="left">Single Left</param>
-		/// <param name="top">Single Top</param>
-		/// <param name="width">Single Width</param>
-		/// <param name="height">Single Height</param>
+		/// <param name="numRows">Int32 numRows</param>
+		/// <param name="numColumns">Int32 numColumns</param>
+		/// <param name="left">Single left</param>
+		/// <param name="top">Single top</param>
+		/// <param name="width">Single width</param>
+		/// <param name="height">Single height</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("Office", 12,14,15,16)]
+		[SupportByVersion("Office", 12,14,15,16)]
 		public NetOffice.OfficeApi.Shape AddTable(Int32 numRows, Int32 numColumns, Single left, Single top, Single width, Single height)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(numRows, numColumns, left, top, width, height);
-			object returnItem = Invoker.MethodReturn(this, "AddTable", paramsArray);
-			NetOffice.OfficeApi.Shape newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.Shape.LateBindingApiWrapperType) as NetOffice.OfficeApi.Shape;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.Shape>(this, "AddTable", NetOffice.OfficeApi.Shape.LateBindingApiWrapperType, new object[]{ numRows, numColumns, left, top, width, height });
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="layout">NetOffice.OfficeApi.SmartArtLayout Layout</param>
+		/// <param name="layout">NetOffice.OfficeApi.SmartArtLayout layout</param>
 		/// <param name="left">optional Single Left = -1</param>
 		/// <param name="top">optional Single Top = -1</param>
 		/// <param name="width">optional Single Width = -1</param>
 		/// <param name="height">optional Single Height = -1</param>
-		[SupportByVersionAttribute("Office", 14,15,16)]
+		[SupportByVersion("Office", 14,15,16)]
 		public NetOffice.OfficeApi.Shape AddSmartArt(NetOffice.OfficeApi.SmartArtLayout layout, object left, object top, object width, object height)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(layout, left, top, width, height);
-			object returnItem = Invoker.MethodReturn(this, "AddSmartArt", paramsArray);
-			NetOffice.OfficeApi.Shape newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.Shape.LateBindingApiWrapperType) as NetOffice.OfficeApi.Shape;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.Shape>(this, "AddSmartArt", NetOffice.OfficeApi.Shape.LateBindingApiWrapperType, new object[]{ layout, left, top, width, height });
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="layout">NetOffice.OfficeApi.SmartArtLayout Layout</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Office", 14,15,16)]
+		/// <param name="layout">NetOffice.OfficeApi.SmartArtLayout layout</param>
+		[CustomMethod]
+		[SupportByVersion("Office", 14,15,16)]
 		public NetOffice.OfficeApi.Shape AddSmartArt(NetOffice.OfficeApi.SmartArtLayout layout)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(layout);
-			object returnItem = Invoker.MethodReturn(this, "AddSmartArt", paramsArray);
-			NetOffice.OfficeApi.Shape newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.Shape.LateBindingApiWrapperType) as NetOffice.OfficeApi.Shape;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.Shape>(this, "AddSmartArt", NetOffice.OfficeApi.Shape.LateBindingApiWrapperType, layout);
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="layout">NetOffice.OfficeApi.SmartArtLayout Layout</param>
+		/// <param name="layout">NetOffice.OfficeApi.SmartArtLayout layout</param>
 		/// <param name="left">optional Single Left = -1</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Office", 14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Office", 14,15,16)]
 		public NetOffice.OfficeApi.Shape AddSmartArt(NetOffice.OfficeApi.SmartArtLayout layout, object left)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(layout, left);
-			object returnItem = Invoker.MethodReturn(this, "AddSmartArt", paramsArray);
-			NetOffice.OfficeApi.Shape newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.Shape.LateBindingApiWrapperType) as NetOffice.OfficeApi.Shape;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.Shape>(this, "AddSmartArt", NetOffice.OfficeApi.Shape.LateBindingApiWrapperType, layout, left);
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="layout">NetOffice.OfficeApi.SmartArtLayout Layout</param>
+		/// <param name="layout">NetOffice.OfficeApi.SmartArtLayout layout</param>
 		/// <param name="left">optional Single Left = -1</param>
 		/// <param name="top">optional Single Top = -1</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Office", 14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Office", 14,15,16)]
 		public NetOffice.OfficeApi.Shape AddSmartArt(NetOffice.OfficeApi.SmartArtLayout layout, object left, object top)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(layout, left, top);
-			object returnItem = Invoker.MethodReturn(this, "AddSmartArt", paramsArray);
-			NetOffice.OfficeApi.Shape newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.Shape.LateBindingApiWrapperType) as NetOffice.OfficeApi.Shape;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.Shape>(this, "AddSmartArt", NetOffice.OfficeApi.Shape.LateBindingApiWrapperType, layout, left, top);
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="layout">NetOffice.OfficeApi.SmartArtLayout Layout</param>
+		/// <param name="layout">NetOffice.OfficeApi.SmartArtLayout layout</param>
 		/// <param name="left">optional Single Left = -1</param>
 		/// <param name="top">optional Single Top = -1</param>
 		/// <param name="width">optional Single Width = -1</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Office", 14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Office", 14,15,16)]
 		public NetOffice.OfficeApi.Shape AddSmartArt(NetOffice.OfficeApi.SmartArtLayout layout, object left, object top, object width)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(layout, left, top, width);
-			object returnItem = Invoker.MethodReturn(this, "AddSmartArt", paramsArray);
-			NetOffice.OfficeApi.Shape newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.Shape.LateBindingApiWrapperType) as NetOffice.OfficeApi.Shape;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.Shape>(this, "AddSmartArt", NetOffice.OfficeApi.Shape.LateBindingApiWrapperType, layout, left, top, width);
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 15,16
-		/// 
 		/// </summary>
 		/// <param name="style">optional Int32 Style = -1</param>
 		/// <param name="type">optional NetOffice.OfficeApi.Enums.XlChartType Type = -1</param>
@@ -683,117 +570,89 @@ namespace NetOffice.OfficeApi
 		/// <param name="width">optional Single Width = -1</param>
 		/// <param name="height">optional Single Height = -1</param>
 		/// <param name="newLayout">optional bool NewLayout = true</param>
-		[SupportByVersionAttribute("Office", 15, 16)]
+		[SupportByVersion("Office", 15, 16)]
 		public NetOffice.OfficeApi.Shape AddChart2(object style, object type, object left, object top, object width, object height, object newLayout)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(style, type, left, top, width, height, newLayout);
-			object returnItem = Invoker.MethodReturn(this, "AddChart2", paramsArray);
-			NetOffice.OfficeApi.Shape newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.Shape.LateBindingApiWrapperType) as NetOffice.OfficeApi.Shape;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.Shape>(this, "AddChart2", NetOffice.OfficeApi.Shape.LateBindingApiWrapperType, new object[]{ style, type, left, top, width, height, newLayout });
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 15,16
-		/// 
 		/// </summary>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Office", 15, 16)]
+		[CustomMethod]
+		[SupportByVersion("Office", 15, 16)]
 		public NetOffice.OfficeApi.Shape AddChart2()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "AddChart2", paramsArray);
-			NetOffice.OfficeApi.Shape newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.Shape.LateBindingApiWrapperType) as NetOffice.OfficeApi.Shape;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.Shape>(this, "AddChart2", NetOffice.OfficeApi.Shape.LateBindingApiWrapperType);
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 15,16
-		/// 
 		/// </summary>
 		/// <param name="style">optional Int32 Style = -1</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Office", 15, 16)]
+		[CustomMethod]
+		[SupportByVersion("Office", 15, 16)]
 		public NetOffice.OfficeApi.Shape AddChart2(object style)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(style);
-			object returnItem = Invoker.MethodReturn(this, "AddChart2", paramsArray);
-			NetOffice.OfficeApi.Shape newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.Shape.LateBindingApiWrapperType) as NetOffice.OfficeApi.Shape;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.Shape>(this, "AddChart2", NetOffice.OfficeApi.Shape.LateBindingApiWrapperType, style);
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 15,16
-		/// 
 		/// </summary>
 		/// <param name="style">optional Int32 Style = -1</param>
 		/// <param name="type">optional NetOffice.OfficeApi.Enums.XlChartType Type = -1</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Office", 15, 16)]
+		[CustomMethod]
+		[SupportByVersion("Office", 15, 16)]
 		public NetOffice.OfficeApi.Shape AddChart2(object style, object type)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(style, type);
-			object returnItem = Invoker.MethodReturn(this, "AddChart2", paramsArray);
-			NetOffice.OfficeApi.Shape newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.Shape.LateBindingApiWrapperType) as NetOffice.OfficeApi.Shape;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.Shape>(this, "AddChart2", NetOffice.OfficeApi.Shape.LateBindingApiWrapperType, style, type);
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 15,16
-		/// 
 		/// </summary>
 		/// <param name="style">optional Int32 Style = -1</param>
 		/// <param name="type">optional NetOffice.OfficeApi.Enums.XlChartType Type = -1</param>
 		/// <param name="left">optional Single Left = -1</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Office", 15, 16)]
+		[CustomMethod]
+		[SupportByVersion("Office", 15, 16)]
 		public NetOffice.OfficeApi.Shape AddChart2(object style, object type, object left)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(style, type, left);
-			object returnItem = Invoker.MethodReturn(this, "AddChart2", paramsArray);
-			NetOffice.OfficeApi.Shape newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.Shape.LateBindingApiWrapperType) as NetOffice.OfficeApi.Shape;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.Shape>(this, "AddChart2", NetOffice.OfficeApi.Shape.LateBindingApiWrapperType, style, type, left);
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 15,16
-		/// 
 		/// </summary>
 		/// <param name="style">optional Int32 Style = -1</param>
 		/// <param name="type">optional NetOffice.OfficeApi.Enums.XlChartType Type = -1</param>
 		/// <param name="left">optional Single Left = -1</param>
 		/// <param name="top">optional Single Top = -1</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Office", 15, 16)]
+		[CustomMethod]
+		[SupportByVersion("Office", 15, 16)]
 		public NetOffice.OfficeApi.Shape AddChart2(object style, object type, object left, object top)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(style, type, left, top);
-			object returnItem = Invoker.MethodReturn(this, "AddChart2", paramsArray);
-			NetOffice.OfficeApi.Shape newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.Shape.LateBindingApiWrapperType) as NetOffice.OfficeApi.Shape;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.Shape>(this, "AddChart2", NetOffice.OfficeApi.Shape.LateBindingApiWrapperType, style, type, left, top);
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 15,16
-		/// 
 		/// </summary>
 		/// <param name="style">optional Int32 Style = -1</param>
 		/// <param name="type">optional NetOffice.OfficeApi.Enums.XlChartType Type = -1</param>
 		/// <param name="left">optional Single Left = -1</param>
 		/// <param name="top">optional Single Top = -1</param>
 		/// <param name="width">optional Single Width = -1</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Office", 15, 16)]
+		[CustomMethod]
+		[SupportByVersion("Office", 15, 16)]
 		public NetOffice.OfficeApi.Shape AddChart2(object style, object type, object left, object top, object width)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(style, type, left, top, width);
-			object returnItem = Invoker.MethodReturn(this, "AddChart2", paramsArray);
-			NetOffice.OfficeApi.Shape newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.Shape.LateBindingApiWrapperType) as NetOffice.OfficeApi.Shape;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.Shape>(this, "AddChart2", NetOffice.OfficeApi.Shape.LateBindingApiWrapperType, new object[]{ style, type, left, top, width });
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 15,16
-		/// 
 		/// </summary>
 		/// <param name="style">optional Int32 Style = -1</param>
 		/// <param name="type">optional NetOffice.OfficeApi.Enums.XlChartType Type = -1</param>
@@ -801,45 +660,43 @@ namespace NetOffice.OfficeApi
 		/// <param name="top">optional Single Top = -1</param>
 		/// <param name="width">optional Single Width = -1</param>
 		/// <param name="height">optional Single Height = -1</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Office", 15, 16)]
+		[CustomMethod]
+		[SupportByVersion("Office", 15, 16)]
 		public NetOffice.OfficeApi.Shape AddChart2(object style, object type, object left, object top, object width, object height)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(style, type, left, top, width, height);
-			object returnItem = Invoker.MethodReturn(this, "AddChart2", paramsArray);
-			NetOffice.OfficeApi.Shape newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.Shape.LateBindingApiWrapperType) as NetOffice.OfficeApi.Shape;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.Shape>(this, "AddChart2", NetOffice.OfficeApi.Shape.LateBindingApiWrapperType, new object[]{ style, type, left, top, width, height });
 		}
 
-		#endregion
+        #endregion
 
-       #region IEnumerable<NetOffice.OfficeApi.Shape> Member
-        
+        #region IEnumerable<NetOffice.OfficeApi.Shape> Member
+
         /// <summary>
-		/// SupportByVersionAttribute Office, 9,10,11,12,14,15,16
-		/// </summary>
-		[SupportByVersionAttribute("Office", 9,10,11,12,14,15,16)]
-       public IEnumerator<NetOffice.OfficeApi.Shape> GetEnumerator()  
-       {
-           NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
-           foreach (NetOffice.OfficeApi.Shape item in innerEnumerator)
-               yield return item;
-       }
+        /// SupportByVersion Office, 9,10,11,12,14,15,16
+        /// </summary>
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
+        public IEnumerator<NetOffice.OfficeApi.Shape> GetEnumerator()
+        {
+            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
+            foreach (NetOffice.OfficeApi.Shape item in innerEnumerator)
+                yield return item;
+        }
 
-       #endregion
-          
-		#region IEnumerable Members
-       
-		/// <summary>
-		/// SupportByVersionAttribute Office, 9,10,11,12,14,15,16
-		/// </summary>
-		[SupportByVersionAttribute("Office", 9,10,11,12,14,15,16)]
+        #endregion
+
+        #region IEnumerable Members
+
+        /// <summary>
+        /// SupportByVersion Office, 9,10,11,12,14,15,16
+        /// </summary>
+        [SupportByVersion("Office", 9,10,11,12,14,15,16)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
 			return NetOffice.Utils.GetProxyEnumeratorAsProperty(this);
 		}
 
 		#endregion
+
 		#pragma warning restore
 	}
 }

@@ -1,24 +1,34 @@
 ﻿using System;
 using NetRuntimeSystem = System;
-using System.Runtime.InteropServices;
-using System.Runtime.CompilerServices;
 using System.ComponentModel;
-using System.Reflection;
-using System.Collections.Generic;
-using NetOffice;
+using NetOffice.Attributes;
+
 namespace NetOffice.WordApi
 {
-	///<summary>
+	/// <summary>
 	/// DispatchInterface ListFormat 
 	/// SupportByVersion Word, 9,10,11,12,14,15,16
-	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff820923.aspx
-	///</summary>
-	[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
-	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
-	public class ListFormat : COMObject
+	/// </summary>
+	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff820923.aspx </remarks>
+	[SupportByVersion("Word", 9,10,11,12,14,15,16)]
+	[EntityType(EntityType.IsDispatchInterface)]
+ 	public class ListFormat : COMObject
 	{
 		#pragma warning disable
+
 		#region Type Information
+
+		/// <summary>
+		/// Instance Type
+		/// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
+		public override Type InstanceType
+		{
+			get
+			{
+				return LateBindingApiWrapperType;
+			}
+		}
 
         private static Type _type;
 
@@ -29,14 +39,20 @@ namespace NetOffice.WordApi
             {
                 if (null == _type)
                     _type = typeof(ListFormat);
-                    
                 return _type;
             }
         }
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public ListFormat(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -82,7 +98,7 @@ namespace NetOffice.WordApi
 		{
 		}
 		
-		/// <param name="progId">registered ProgID</param>
+		/// <param name="progId">registered progID</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public ListFormat(string progId) : base(progId)
 		{
@@ -95,204 +111,173 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff844779.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff844779.aspx </remarks>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public Int32 ListLevelNumber
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "ListLevelNumber", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "ListLevelNumber");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "ListLevelNumber", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "ListLevelNumber", value);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839514.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff839514.aspx </remarks>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.List List
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "List", paramsArray);
-				NetOffice.WordApi.List newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.List.LateBindingApiWrapperType) as NetOffice.WordApi.List;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.List>(this, "List", NetOffice.WordApi.List.LateBindingApiWrapperType);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff821156.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff821156.aspx </remarks>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.ListTemplate ListTemplate
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "ListTemplate", paramsArray);
-				NetOffice.WordApi.ListTemplate newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.ListTemplate.LateBindingApiWrapperType) as NetOffice.WordApi.ListTemplate;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.ListTemplate>(this, "ListTemplate", NetOffice.WordApi.ListTemplate.LateBindingApiWrapperType);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196311.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff196311.aspx </remarks>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public Int32 ListValue
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "ListValue", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "ListValue");
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836742.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff836742.aspx </remarks>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public bool SingleList
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "SingleList", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "SingleList");
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835216.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835216.aspx </remarks>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public bool SingleListTemplate
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "SingleListTemplate", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "SingleListTemplate");
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197765.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff197765.aspx </remarks>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.Enums.WdListType ListType
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "ListType", paramsArray);
-				int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-				return (NetOffice.WordApi.Enums.WdListType)intReturnItem;
+				return Factory.ExecuteEnumPropertyGet<NetOffice.WordApi.Enums.WdListType>(this, "ListType");
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836909.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff836909.aspx </remarks>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public string ListString
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "ListString", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "ListString");
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194491.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194491.aspx </remarks>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.Application Application
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				NetOffice.WordApi.Application newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.Application.LateBindingApiWrapperType) as NetOffice.WordApi.Application;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.Application>(this, "Application", NetOffice.WordApi.Application.LateBindingApiWrapperType);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195720.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff195720.aspx </remarks>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public Int32 Creator
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Creator", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "Creator");
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194230.aspx
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194230.aspx </remarks>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16), ProxyResult]
 		public object Parent
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Parent", paramsArray);
-				ICOMObject newObject = Factory.CreateObjectFromComProxy(this,returnItem);
-				return newObject;
+				return Factory.ExecuteReferencePropertyGet(this, "Parent");
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837259.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff837259.aspx </remarks>
+		[SupportByVersion("Word", 10,11,12,14,15,16)]
 		public NetOffice.WordApi.InlineShape ListPictureBullet
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "ListPictureBullet", paramsArray);
-				NetOffice.WordApi.InlineShape newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.InlineShape.LateBindingApiWrapperType) as NetOffice.WordApi.InlineShape;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.InlineShape>(this, "ListPictureBullet", NetOffice.WordApi.InlineShape.LateBindingApiWrapperType);
 			}
 		}
 
@@ -302,413 +287,372 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196639.aspx
 		/// </summary>
-		/// <param name="listTemplate">NetOffice.WordApi.ListTemplate ListTemplate</param>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff196639.aspx </remarks>
+		/// <param name="listTemplate">NetOffice.WordApi.ListTemplate listTemplate</param>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.Enums.WdContinue CanContinuePreviousList(NetOffice.WordApi.ListTemplate listTemplate)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(listTemplate);
-			object returnItem = Invoker.MethodReturn(this, "CanContinuePreviousList", paramsArray);
-			int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-			return (NetOffice.WordApi.Enums.WdContinue)intReturnItem;
+			return Factory.ExecuteEnumMethodGet<NetOffice.WordApi.Enums.WdContinue>(this, "CanContinuePreviousList", listTemplate);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff821874.aspx
 		/// </summary>
-		/// <param name="numberType">optional object NumberType</param>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff821874.aspx </remarks>
+		/// <param name="numberType">optional object numberType</param>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void RemoveNumbers(object numberType)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(numberType);
-			Invoker.Method(this, "RemoveNumbers", paramsArray);
+			 Factory.ExecuteMethod(this, "RemoveNumbers", numberType);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff821874.aspx
 		/// </summary>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff821874.aspx </remarks>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void RemoveNumbers()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "RemoveNumbers", paramsArray);
+			 Factory.ExecuteMethod(this, "RemoveNumbers");
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196580.aspx
 		/// </summary>
-		/// <param name="numberType">optional object NumberType</param>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff196580.aspx </remarks>
+		/// <param name="numberType">optional object numberType</param>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void ConvertNumbersToText(object numberType)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(numberType);
-			Invoker.Method(this, "ConvertNumbersToText", paramsArray);
+			 Factory.ExecuteMethod(this, "ConvertNumbersToText", numberType);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196580.aspx
 		/// </summary>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff196580.aspx </remarks>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void ConvertNumbersToText()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "ConvertNumbersToText", paramsArray);
+			 Factory.ExecuteMethod(this, "ConvertNumbersToText");
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff820721.aspx
 		/// </summary>
-		/// <param name="numberType">optional object NumberType</param>
-		/// <param name="level">optional object Level</param>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff820721.aspx </remarks>
+		/// <param name="numberType">optional object numberType</param>
+		/// <param name="level">optional object level</param>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public Int32 CountNumberedItems(object numberType, object level)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(numberType, level);
-			object returnItem = Invoker.MethodReturn(this, "CountNumberedItems", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return Factory.ExecuteInt32MethodGet(this, "CountNumberedItems", numberType, level);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff820721.aspx
 		/// </summary>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff820721.aspx </remarks>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public Int32 CountNumberedItems()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "CountNumberedItems", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return Factory.ExecuteInt32MethodGet(this, "CountNumberedItems");
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff820721.aspx
 		/// </summary>
-		/// <param name="numberType">optional object NumberType</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff820721.aspx </remarks>
+		/// <param name="numberType">optional object numberType</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public Int32 CountNumberedItems(object numberType)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(numberType);
-			object returnItem = Invoker.MethodReturn(this, "CountNumberedItems", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return Factory.ExecuteInt32MethodGet(this, "CountNumberedItems", numberType);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void ApplyBulletDefaultOld()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "ApplyBulletDefaultOld", paramsArray);
+			 Factory.ExecuteMethod(this, "ApplyBulletDefaultOld");
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void ApplyNumberDefaultOld()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "ApplyNumberDefaultOld", paramsArray);
+			 Factory.ExecuteMethod(this, "ApplyNumberDefaultOld");
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void ApplyOutlineNumberDefaultOld()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "ApplyOutlineNumberDefaultOld", paramsArray);
+			 Factory.ExecuteMethod(this, "ApplyOutlineNumberDefaultOld");
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="listTemplate">NetOffice.WordApi.ListTemplate ListTemplate</param>
-		/// <param name="continuePreviousList">optional object ContinuePreviousList</param>
-		/// <param name="applyTo">optional object ApplyTo</param>
+		/// <param name="listTemplate">NetOffice.WordApi.ListTemplate listTemplate</param>
+		/// <param name="continuePreviousList">optional object continuePreviousList</param>
+		/// <param name="applyTo">optional object applyTo</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void ApplyListTemplateOld(NetOffice.WordApi.ListTemplate listTemplate, object continuePreviousList, object applyTo)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(listTemplate, continuePreviousList, applyTo);
-			Invoker.Method(this, "ApplyListTemplateOld", paramsArray);
+			 Factory.ExecuteMethod(this, "ApplyListTemplateOld", listTemplate, continuePreviousList, applyTo);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="listTemplate">NetOffice.WordApi.ListTemplate ListTemplate</param>
+		/// <param name="listTemplate">NetOffice.WordApi.ListTemplate listTemplate</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void ApplyListTemplateOld(NetOffice.WordApi.ListTemplate listTemplate)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(listTemplate);
-			Invoker.Method(this, "ApplyListTemplateOld", paramsArray);
+			 Factory.ExecuteMethod(this, "ApplyListTemplateOld", listTemplate);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="listTemplate">NetOffice.WordApi.ListTemplate ListTemplate</param>
-		/// <param name="continuePreviousList">optional object ContinuePreviousList</param>
+		/// <param name="listTemplate">NetOffice.WordApi.ListTemplate listTemplate</param>
+		/// <param name="continuePreviousList">optional object continuePreviousList</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void ApplyListTemplateOld(NetOffice.WordApi.ListTemplate listTemplate, object continuePreviousList)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(listTemplate, continuePreviousList);
-			Invoker.Method(this, "ApplyListTemplateOld", paramsArray);
+			 Factory.ExecuteMethod(this, "ApplyListTemplateOld", listTemplate, continuePreviousList);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840622.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff840622.aspx </remarks>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void ListOutdent()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "ListOutdent", paramsArray);
+			 Factory.ExecuteMethod(this, "ListOutdent");
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192794.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff192794.aspx </remarks>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void ListIndent()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "ListIndent", paramsArray);
+			 Factory.ExecuteMethod(this, "ListIndent");
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194355.aspx
 		/// </summary>
-		/// <param name="defaultListBehavior">optional object DefaultListBehavior</param>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194355.aspx </remarks>
+		/// <param name="defaultListBehavior">optional object defaultListBehavior</param>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void ApplyBulletDefault(object defaultListBehavior)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(defaultListBehavior);
-			Invoker.Method(this, "ApplyBulletDefault", paramsArray);
+			 Factory.ExecuteMethod(this, "ApplyBulletDefault", defaultListBehavior);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194355.aspx
 		/// </summary>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194355.aspx </remarks>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void ApplyBulletDefault()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "ApplyBulletDefault", paramsArray);
+			 Factory.ExecuteMethod(this, "ApplyBulletDefault");
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839320.aspx
 		/// </summary>
-		/// <param name="defaultListBehavior">optional object DefaultListBehavior</param>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff839320.aspx </remarks>
+		/// <param name="defaultListBehavior">optional object defaultListBehavior</param>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void ApplyNumberDefault(object defaultListBehavior)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(defaultListBehavior);
-			Invoker.Method(this, "ApplyNumberDefault", paramsArray);
+			 Factory.ExecuteMethod(this, "ApplyNumberDefault", defaultListBehavior);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839320.aspx
 		/// </summary>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff839320.aspx </remarks>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void ApplyNumberDefault()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "ApplyNumberDefault", paramsArray);
+			 Factory.ExecuteMethod(this, "ApplyNumberDefault");
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822954.aspx
 		/// </summary>
-		/// <param name="defaultListBehavior">optional object DefaultListBehavior</param>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff822954.aspx </remarks>
+		/// <param name="defaultListBehavior">optional object defaultListBehavior</param>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void ApplyOutlineNumberDefault(object defaultListBehavior)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(defaultListBehavior);
-			Invoker.Method(this, "ApplyOutlineNumberDefault", paramsArray);
+			 Factory.ExecuteMethod(this, "ApplyOutlineNumberDefault", defaultListBehavior);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822954.aspx
 		/// </summary>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff822954.aspx </remarks>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void ApplyOutlineNumberDefault()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "ApplyOutlineNumberDefault", paramsArray);
+			 Factory.ExecuteMethod(this, "ApplyOutlineNumberDefault");
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197184.aspx
 		/// </summary>
-		/// <param name="listTemplate">NetOffice.WordApi.ListTemplate ListTemplate</param>
-		/// <param name="continuePreviousList">optional object ContinuePreviousList</param>
-		/// <param name="applyTo">optional object ApplyTo</param>
-		/// <param name="defaultListBehavior">optional object DefaultListBehavior</param>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff197184.aspx </remarks>
+		/// <param name="listTemplate">NetOffice.WordApi.ListTemplate listTemplate</param>
+		/// <param name="continuePreviousList">optional object continuePreviousList</param>
+		/// <param name="applyTo">optional object applyTo</param>
+		/// <param name="defaultListBehavior">optional object defaultListBehavior</param>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void ApplyListTemplate(NetOffice.WordApi.ListTemplate listTemplate, object continuePreviousList, object applyTo, object defaultListBehavior)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(listTemplate, continuePreviousList, applyTo, defaultListBehavior);
-			Invoker.Method(this, "ApplyListTemplate", paramsArray);
+			 Factory.ExecuteMethod(this, "ApplyListTemplate", listTemplate, continuePreviousList, applyTo, defaultListBehavior);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197184.aspx
 		/// </summary>
-		/// <param name="listTemplate">NetOffice.WordApi.ListTemplate ListTemplate</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff197184.aspx </remarks>
+		/// <param name="listTemplate">NetOffice.WordApi.ListTemplate listTemplate</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void ApplyListTemplate(NetOffice.WordApi.ListTemplate listTemplate)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(listTemplate);
-			Invoker.Method(this, "ApplyListTemplate", paramsArray);
+			 Factory.ExecuteMethod(this, "ApplyListTemplate", listTemplate);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197184.aspx
 		/// </summary>
-		/// <param name="listTemplate">NetOffice.WordApi.ListTemplate ListTemplate</param>
-		/// <param name="continuePreviousList">optional object ContinuePreviousList</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff197184.aspx </remarks>
+		/// <param name="listTemplate">NetOffice.WordApi.ListTemplate listTemplate</param>
+		/// <param name="continuePreviousList">optional object continuePreviousList</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void ApplyListTemplate(NetOffice.WordApi.ListTemplate listTemplate, object continuePreviousList)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(listTemplate, continuePreviousList);
-			Invoker.Method(this, "ApplyListTemplate", paramsArray);
+			 Factory.ExecuteMethod(this, "ApplyListTemplate", listTemplate, continuePreviousList);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197184.aspx
 		/// </summary>
-		/// <param name="listTemplate">NetOffice.WordApi.ListTemplate ListTemplate</param>
-		/// <param name="continuePreviousList">optional object ContinuePreviousList</param>
-		/// <param name="applyTo">optional object ApplyTo</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff197184.aspx </remarks>
+		/// <param name="listTemplate">NetOffice.WordApi.ListTemplate listTemplate</param>
+		/// <param name="continuePreviousList">optional object continuePreviousList</param>
+		/// <param name="applyTo">optional object applyTo</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public void ApplyListTemplate(NetOffice.WordApi.ListTemplate listTemplate, object continuePreviousList, object applyTo)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(listTemplate, continuePreviousList, applyTo);
-			Invoker.Method(this, "ApplyListTemplate", paramsArray);
+			 Factory.ExecuteMethod(this, "ApplyListTemplate", listTemplate, continuePreviousList, applyTo);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195913.aspx
 		/// </summary>
-		/// <param name="listTemplate">NetOffice.WordApi.ListTemplate ListTemplate</param>
-		/// <param name="continuePreviousList">optional object ContinuePreviousList</param>
-		/// <param name="applyTo">optional object ApplyTo</param>
-		/// <param name="defaultListBehavior">optional object DefaultListBehavior</param>
-		/// <param name="applyLevel">optional object ApplyLevel</param>
-		[SupportByVersionAttribute("Word", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff195913.aspx </remarks>
+		/// <param name="listTemplate">NetOffice.WordApi.ListTemplate listTemplate</param>
+		/// <param name="continuePreviousList">optional object continuePreviousList</param>
+		/// <param name="applyTo">optional object applyTo</param>
+		/// <param name="defaultListBehavior">optional object defaultListBehavior</param>
+		/// <param name="applyLevel">optional object applyLevel</param>
+		[SupportByVersion("Word", 12,14,15,16)]
 		public void ApplyListTemplateWithLevel(NetOffice.WordApi.ListTemplate listTemplate, object continuePreviousList, object applyTo, object defaultListBehavior, object applyLevel)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(listTemplate, continuePreviousList, applyTo, defaultListBehavior, applyLevel);
-			Invoker.Method(this, "ApplyListTemplateWithLevel", paramsArray);
+			 Factory.ExecuteMethod(this, "ApplyListTemplateWithLevel", new object[]{ listTemplate, continuePreviousList, applyTo, defaultListBehavior, applyLevel });
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195913.aspx
 		/// </summary>
-		/// <param name="listTemplate">NetOffice.WordApi.ListTemplate ListTemplate</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff195913.aspx </remarks>
+		/// <param name="listTemplate">NetOffice.WordApi.ListTemplate listTemplate</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 12,14,15,16)]
 		public void ApplyListTemplateWithLevel(NetOffice.WordApi.ListTemplate listTemplate)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(listTemplate);
-			Invoker.Method(this, "ApplyListTemplateWithLevel", paramsArray);
+			 Factory.ExecuteMethod(this, "ApplyListTemplateWithLevel", listTemplate);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195913.aspx
 		/// </summary>
-		/// <param name="listTemplate">NetOffice.WordApi.ListTemplate ListTemplate</param>
-		/// <param name="continuePreviousList">optional object ContinuePreviousList</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff195913.aspx </remarks>
+		/// <param name="listTemplate">NetOffice.WordApi.ListTemplate listTemplate</param>
+		/// <param name="continuePreviousList">optional object continuePreviousList</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 12,14,15,16)]
 		public void ApplyListTemplateWithLevel(NetOffice.WordApi.ListTemplate listTemplate, object continuePreviousList)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(listTemplate, continuePreviousList);
-			Invoker.Method(this, "ApplyListTemplateWithLevel", paramsArray);
+			 Factory.ExecuteMethod(this, "ApplyListTemplateWithLevel", listTemplate, continuePreviousList);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195913.aspx
 		/// </summary>
-		/// <param name="listTemplate">NetOffice.WordApi.ListTemplate ListTemplate</param>
-		/// <param name="continuePreviousList">optional object ContinuePreviousList</param>
-		/// <param name="applyTo">optional object ApplyTo</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff195913.aspx </remarks>
+		/// <param name="listTemplate">NetOffice.WordApi.ListTemplate listTemplate</param>
+		/// <param name="continuePreviousList">optional object continuePreviousList</param>
+		/// <param name="applyTo">optional object applyTo</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 12,14,15,16)]
 		public void ApplyListTemplateWithLevel(NetOffice.WordApi.ListTemplate listTemplate, object continuePreviousList, object applyTo)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(listTemplate, continuePreviousList, applyTo);
-			Invoker.Method(this, "ApplyListTemplateWithLevel", paramsArray);
+			 Factory.ExecuteMethod(this, "ApplyListTemplateWithLevel", listTemplate, continuePreviousList, applyTo);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195913.aspx
 		/// </summary>
-		/// <param name="listTemplate">NetOffice.WordApi.ListTemplate ListTemplate</param>
-		/// <param name="continuePreviousList">optional object ContinuePreviousList</param>
-		/// <param name="applyTo">optional object ApplyTo</param>
-		/// <param name="defaultListBehavior">optional object DefaultListBehavior</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff195913.aspx </remarks>
+		/// <param name="listTemplate">NetOffice.WordApi.ListTemplate listTemplate</param>
+		/// <param name="continuePreviousList">optional object continuePreviousList</param>
+		/// <param name="applyTo">optional object applyTo</param>
+		/// <param name="defaultListBehavior">optional object defaultListBehavior</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 12,14,15,16)]
 		public void ApplyListTemplateWithLevel(NetOffice.WordApi.ListTemplate listTemplate, object continuePreviousList, object applyTo, object defaultListBehavior)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(listTemplate, continuePreviousList, applyTo, defaultListBehavior);
-			Invoker.Method(this, "ApplyListTemplateWithLevel", paramsArray);
+			 Factory.ExecuteMethod(this, "ApplyListTemplateWithLevel", listTemplate, continuePreviousList, applyTo, defaultListBehavior);
 		}
 
 		#endregion
+
 		#pragma warning restore
 	}
 }

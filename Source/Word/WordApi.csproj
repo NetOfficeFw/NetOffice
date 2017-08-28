@@ -42,10 +42,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AssemblyInfo.cs" />
-    <Compile Include="Tools\Utils\ApplicationUtils.cs" />
-    <Compile Include="Tools\Utils\CommonUtils.cs" />
-    <Compile Include="Tools\Utils\DocumentFormat.cs" />
-    <Compile Include="Tools\Utils\FileUtils.cs" />
+    <Compile Include="Tools\Contribution\ApplicationUtils.cs" />
+    <Compile Include="Tools\Contribution\CommonUtils.cs" />
+    <Compile Include="Tools\Contribution\DocumentFormat.cs" />
+    <Compile Include="Tools\Contribution\FileUtils.cs" />
     <Compile Include="Utils\ProjectInfo.cs" />
     <Compile Include="Enums\WdMailSystem.cs" />
     <Compile Include="Enums\WdTemplateType.cs" />
@@ -795,12 +795,12 @@
     <Compile Include="Classes\ParagraphFormat.cs" />
     <Compile Include="Classes\OLEControl.cs" />
     <Compile Include="Classes\LetterContent.cs" />
-    <Compile Include="EventInterfaces\DocumentEvents.cs" />
-    <Compile Include="EventInterfaces\OCXEvents.cs" />
-    <Compile Include="EventInterfaces\ApplicationEvents2.cs" />
-    <Compile Include="EventInterfaces\ApplicationEvents3.cs" />
-    <Compile Include="EventInterfaces\ApplicationEvents4.cs" />
-    <Compile Include="EventInterfaces\DocumentEvents2.cs" />
+    <Compile Include="Events\DocumentEvents.cs" />
+    <Compile Include="Events\OCXEvents.cs" />
+    <Compile Include="Events\ApplicationEvents2.cs" />
+    <Compile Include="Events\ApplicationEvents3.cs" />
+    <Compile Include="Events\ApplicationEvents4.cs" />
+    <Compile Include="Events\DocumentEvents2.cs" />
     <Compile Include="Modules\Global.cs" />
     <Compile Include="Tools\COMAddin.cs" />
     <Compile Include="Tools\ITaskPane.cs" />

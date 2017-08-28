@@ -1,61 +1,62 @@
 ﻿using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
-using NetOffice;
-using NetOffice.Misc;
+using NetOffice.Attributes;
+
 namespace NetOffice.OutlookApi
 {
-
 	#region Delegates
 
 	#pragma warning disable
-	public delegate void DistListItem_OpenEventHandler(ref bool Cancel);
-	public delegate void DistListItem_CustomActionEventHandler(COMObject Action, COMObject Response, ref bool Cancel);
-	public delegate void DistListItem_CustomPropertyChangeEventHandler(string Name);
-	public delegate void DistListItem_ForwardEventHandler(COMObject Forward, ref bool Cancel);
-	public delegate void DistListItem_CloseEventHandler(ref bool Cancel);
+	public delegate void DistListItem_OpenEventHandler(ref bool cancel);
+	public delegate void DistListItem_CustomActionEventHandler(ICOMObject action, ICOMObject response, ref bool cancel);
+	public delegate void DistListItem_CustomPropertyChangeEventHandler(string name);
+	public delegate void DistListItem_ForwardEventHandler(ICOMObject forward, ref bool cancel);
+	public delegate void DistListItem_CloseEventHandler(ref bool cancel);
 	public delegate void DistListItem_PropertyChangeEventHandler(string Name);
 	public delegate void DistListItem_ReadEventHandler();
-	public delegate void DistListItem_ReplyEventHandler(COMObject Response, ref bool Cancel);
-	public delegate void DistListItem_ReplyAllEventHandler(COMObject Response, ref bool Cancel);
-	public delegate void DistListItem_SendEventHandler(ref bool Cancel);
-	public delegate void DistListItem_WriteEventHandler(ref bool Cancel);
-	public delegate void DistListItem_BeforeCheckNamesEventHandler(ref bool Cancel);
-	public delegate void DistListItem_AttachmentAddEventHandler(NetOffice.OutlookApi.Attachment Attachment);
-	public delegate void DistListItem_AttachmentReadEventHandler(NetOffice.OutlookApi.Attachment Attachment);
-	public delegate void DistListItem_BeforeAttachmentSaveEventHandler(NetOffice.OutlookApi.Attachment Attachment, ref bool Cancel);
-	public delegate void DistListItem_BeforeDeleteEventHandler(COMObject Item, ref bool Cancel);
-	public delegate void DistListItem_AttachmentRemoveEventHandler(NetOffice.OutlookApi.Attachment Attachment);
-	public delegate void DistListItem_BeforeAttachmentAddEventHandler(NetOffice.OutlookApi.Attachment Attachment, ref bool Cancel);
-	public delegate void DistListItem_BeforeAttachmentPreviewEventHandler(NetOffice.OutlookApi.Attachment Attachment, ref bool Cancel);
-	public delegate void DistListItem_BeforeAttachmentReadEventHandler(NetOffice.OutlookApi.Attachment Attachment, ref bool Cancel);
-	public delegate void DistListItem_BeforeAttachmentWriteToTempFileEventHandler(NetOffice.OutlookApi.Attachment Attachment, ref bool Cancel);
+	public delegate void DistListItem_ReplyEventHandler(ICOMObject response, ref bool cancel);
+	public delegate void DistListItem_ReplyAllEventHandler(ICOMObject response, ref bool cancel);
+	public delegate void DistListItem_SendEventHandler(ref bool cancel);
+	public delegate void DistListItem_WriteEventHandler(ref bool cancel);
+	public delegate void DistListItem_BeforeCheckNamesEventHandler(ref bool cancel);
+	public delegate void DistListItem_AttachmentAddEventHandler(NetOffice.OutlookApi.Attachment attachment);
+	public delegate void DistListItem_AttachmentReadEventHandler(NetOffice.OutlookApi.Attachment attachment);
+	public delegate void DistListItem_BeforeAttachmentSaveEventHandler(NetOffice.OutlookApi.Attachment attachment, ref bool cancel);
+	public delegate void DistListItem_BeforeDeleteEventHandler(ICOMObject item, ref bool cancel);
+	public delegate void DistListItem_AttachmentRemoveEventHandler(NetOffice.OutlookApi.Attachment attachment);
+	public delegate void DistListItem_BeforeAttachmentAddEventHandler(NetOffice.OutlookApi.Attachment attachment, ref bool cancel);
+	public delegate void DistListItem_BeforeAttachmentPreviewEventHandler(NetOffice.OutlookApi.Attachment attachment, ref bool cancel);
+	public delegate void DistListItem_BeforeAttachmentReadEventHandler(NetOffice.OutlookApi.Attachment attachment, ref bool cancel);
+	public delegate void DistListItem_BeforeAttachmentWriteToTempFileEventHandler(NetOffice.OutlookApi.Attachment attachment, ref bool cancel);
 	public delegate void DistListItem_UnloadEventHandler();
-	public delegate void DistListItem_BeforeAutoSaveEventHandler(ref bool Cancel);
+	public delegate void DistListItem_BeforeAutoSaveEventHandler(ref bool cancel);
 	public delegate void DistListItem_BeforeReadEventHandler();
 	public delegate void DistListItem_AfterWriteEventHandler();
-	public delegate void DistListItem_ReadCompleteEventHandler(ref bool Cancel);
+	public delegate void DistListItem_ReadCompleteEventHandler(ref bool cancel);
 	#pragma warning restore
 
 	#endregion
 
-	///<summary>
+	/// <summary>
 	/// CoClass DistListItem 
 	/// SupportByVersion Outlook, 9,10,11,12,14,15,16
-	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff860361.aspx
-	///</summary>
-	[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15,16)]
-	[EntityTypeAttribute(EntityType.IsCoClass)]
-	public class DistListItem : _DistListItem,IEventBinding
+	/// </summary>
+	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860361.aspx </remarks>
+	[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
+	[EntityType(EntityType.IsCoClass)]
+	[EventSink(typeof(Events.ItemEvents_SinkHelper), typeof(Events.ItemEvents_10_SinkHelper))]
+	public class DistListItem : _DistListItem, IEventBinding
 	{
 		#pragma warning disable
+
 		#region Fields
 		
 		private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
 		private string _activeSinkId;
 		private NetRuntimeSystem.Type _thisType;
-		ItemEvents_SinkHelper _itemEvents_SinkHelper;
-		ItemEvents_10_SinkHelper _itemEvents_10_SinkHelper;
+		private Events.ItemEvents_SinkHelper _itemEvents_SinkHelper;
+        private Events.ItemEvents_10_SinkHelper _itemEvents_10_SinkHelper;
 	
 		#endregion
 
@@ -64,6 +65,7 @@ namespace NetOffice.OutlookApi
         /// <summary>
         /// Instance Type
         /// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
         public override Type InstanceType
         {
             get
@@ -130,17 +132,17 @@ namespace NetOffice.OutlookApi
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of DistListItem 
-        ///</summary>		
+        /// </summary>		
 		public DistListItem():base("Outlook.DistListItem")
 		{
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of DistListItem
-        ///</summary>
+        /// </summary>
         ///<param name="progId">registered ProgID</param>
 		public DistListItem(string progId):base(progId)
 		{
@@ -150,46 +152,6 @@ namespace NetOffice.OutlookApi
 		#endregion
 
 		#region Static CoClass Methods
-
-		/// <summary>
-        /// Returns all running Outlook.DistListItem objects from the environment/system
-        /// </summary>
-        /// <returns>an Outlook.DistListItem array</returns>
-		public static NetOffice.OutlookApi.DistListItem[] GetActiveInstances()
-		{		
-			IDisposableEnumeration proxyList = NetOffice.ProxyService.GetActiveInstances("Outlook","DistListItem");
-			NetRuntimeSystem.Collections.Generic.List<NetOffice.OutlookApi.DistListItem> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.OutlookApi.DistListItem>();
-			foreach(object proxy in proxyList)
-				resultList.Add( new NetOffice.OutlookApi.DistListItem(null, proxy) );
-			return resultList.ToArray();
-		}
-
-		/// <summary>
-        /// Returns a running Outlook.DistListItem object from the environment/system.
-        /// </summary>
-        /// <returns>an Outlook.DistListItem object or null</returns>
-		public static NetOffice.OutlookApi.DistListItem GetActiveInstance()
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Outlook","DistListItem", false);
-			if(null != proxy)
-				return new NetOffice.OutlookApi.DistListItem(null, proxy);
-			else
-				return null;
-		}
-
-		/// <summary>
-        /// Returns a running Outlook.DistListItem object from the environment/system. 
-        /// </summary>
-	    /// <param name="throwOnError">throw an exception if no object was found</param>
-        /// <returns>an Outlook.DistListItem object or null</returns>
-		public static NetOffice.OutlookApi.DistListItem GetActiveInstance(bool throwOnError)
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Outlook","DistListItem", throwOnError);
-			if(null != proxy)
-				return new NetOffice.OutlookApi.DistListItem(null, proxy);
-			else
-				return null;
-		}
 		#endregion
 
 		#region Events
@@ -809,18 +771,18 @@ namespace NetOffice.OutlookApi
 				return;
 	
             if (null == _activeSinkId)
-				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, ItemEvents_SinkHelper.Id,ItemEvents_10_SinkHelper.Id);
+				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, Events.ItemEvents_SinkHelper.Id, Events.ItemEvents_10_SinkHelper.Id);
 
 
-			if(ItemEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
+			if (Events.ItemEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
 			{
-				_itemEvents_SinkHelper = new ItemEvents_SinkHelper(this, _connectPoint);
+				_itemEvents_SinkHelper = new Events.ItemEvents_SinkHelper(this, _connectPoint);
 				return;
 			}
 
-			if(ItemEvents_10_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
+			if (Events.ItemEvents_10_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
 			{
-				_itemEvents_10_SinkHelper = new ItemEvents_10_SinkHelper(this, _connectPoint);
+				_itemEvents_10_SinkHelper = new Events.ItemEvents_10_SinkHelper(this, _connectPoint);
 				return;
 			} 
         }

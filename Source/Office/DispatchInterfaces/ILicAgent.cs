@@ -1,23 +1,33 @@
 ﻿using System;
 using NetRuntimeSystem = System;
-using System.Runtime.InteropServices;
-using System.Runtime.CompilerServices;
 using System.ComponentModel;
-using System.Reflection;
-using System.Collections.Generic;
-using NetOffice;
+using NetOffice.Attributes;
+
 namespace NetOffice.OfficeApi
 {
-	///<summary>
+	/// <summary>
 	/// DispatchInterface ILicAgent 
 	/// SupportByVersion Office, 10,11,12,14,15,16
-	///</summary>
-	[SupportByVersionAttribute("Office", 10,11,12,14,15,16)]
-	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
-	public class ILicAgent : COMObject
+	/// </summary>
+	[SupportByVersion("Office", 10,11,12,14,15,16)]
+	[EntityType(EntityType.IsDispatchInterface)]
+ 	public class ILicAgent : COMObject
 	{
 		#pragma warning disable
+
 		#region Type Information
+
+		/// <summary>
+		/// Instance Type
+		/// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
+		public override Type InstanceType
+		{
+			get
+			{
+				return LateBindingApiWrapperType;
+			}
+		}
 
         private static Type _type;
 
@@ -28,14 +38,20 @@ namespace NetOffice.OfficeApi
             {
                 if (null == _type)
                     _type = typeof(ILicAgent);
-                    
                 return _type;
             }
         }
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public ILicAgent(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -81,7 +97,7 @@ namespace NetOffice.OfficeApi
 		{
 		}
 		
-		/// <param name="progId">registered ProgID</param>
+		/// <param name="progId">registered progID</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public ILicAgent(string progId) : base(progId)
 		{
@@ -97,1200 +113,946 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
 		/// <param name="dwBPC">Int32 dwBPC</param>
 		/// <param name="dwMode">Int32 dwMode</param>
 		/// <param name="bstrLicSource">string bstrLicSource</param>
-		[SupportByVersionAttribute("Office", 10,11,12,14,15,16)]
+		[SupportByVersion("Office", 10,11,12,14,15,16)]
 		public Int32 Initialize(Int32 dwBPC, Int32 dwMode, string bstrLicSource)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(dwBPC, dwMode, bstrLicSource);
-			object returnItem = Invoker.MethodReturn(this, "Initialize", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return Factory.ExecuteInt32MethodGet(this, "Initialize", dwBPC, dwMode, bstrLicSource);
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("Office", 10,11,12,14,15,16)]
+		[SupportByVersion("Office", 10,11,12,14,15,16)]
 		public string GetFirstName()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "GetFirstName", paramsArray);
-			return NetRuntimeSystem.Convert.ToString(returnItem);
+			return Factory.ExecuteStringMethodGet(this, "GetFirstName");
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
 		/// <param name="bstrNewVal">string bstrNewVal</param>
-		[SupportByVersionAttribute("Office", 10,11,12,14,15,16)]
+		[SupportByVersion("Office", 10,11,12,14,15,16)]
 		public void SetFirstName(string bstrNewVal)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(bstrNewVal);
-			Invoker.Method(this, "SetFirstName", paramsArray);
+			 Factory.ExecuteMethod(this, "SetFirstName", bstrNewVal);
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("Office", 10,11,12,14,15,16)]
+		[SupportByVersion("Office", 10,11,12,14,15,16)]
 		public string GetLastName()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "GetLastName", paramsArray);
-			return NetRuntimeSystem.Convert.ToString(returnItem);
+			return Factory.ExecuteStringMethodGet(this, "GetLastName");
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
 		/// <param name="bstrNewVal">string bstrNewVal</param>
-		[SupportByVersionAttribute("Office", 10,11,12,14,15,16)]
+		[SupportByVersion("Office", 10,11,12,14,15,16)]
 		public void SetLastName(string bstrNewVal)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(bstrNewVal);
-			Invoker.Method(this, "SetLastName", paramsArray);
+			 Factory.ExecuteMethod(this, "SetLastName", bstrNewVal);
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("Office", 10,11,12,14,15,16)]
+		[SupportByVersion("Office", 10,11,12,14,15,16)]
 		public string GetOrgName()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "GetOrgName", paramsArray);
-			return NetRuntimeSystem.Convert.ToString(returnItem);
+			return Factory.ExecuteStringMethodGet(this, "GetOrgName");
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
 		/// <param name="bstrNewVal">string bstrNewVal</param>
-		[SupportByVersionAttribute("Office", 10,11,12,14,15,16)]
+		[SupportByVersion("Office", 10,11,12,14,15,16)]
 		public void SetOrgName(string bstrNewVal)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(bstrNewVal);
-			Invoker.Method(this, "SetOrgName", paramsArray);
+			 Factory.ExecuteMethod(this, "SetOrgName", bstrNewVal);
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("Office", 10,11,12,14,15,16)]
+		[SupportByVersion("Office", 10,11,12,14,15,16)]
 		public string GetEmail()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "GetEmail", paramsArray);
-			return NetRuntimeSystem.Convert.ToString(returnItem);
+			return Factory.ExecuteStringMethodGet(this, "GetEmail");
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
 		/// <param name="bstrNewVal">string bstrNewVal</param>
-		[SupportByVersionAttribute("Office", 10,11,12,14,15,16)]
+		[SupportByVersion("Office", 10,11,12,14,15,16)]
 		public void SetEmail(string bstrNewVal)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(bstrNewVal);
-			Invoker.Method(this, "SetEmail", paramsArray);
+			 Factory.ExecuteMethod(this, "SetEmail", bstrNewVal);
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("Office", 10,11,12,14,15,16)]
+		[SupportByVersion("Office", 10,11,12,14,15,16)]
 		public string GetPhone()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "GetPhone", paramsArray);
-			return NetRuntimeSystem.Convert.ToString(returnItem);
+			return Factory.ExecuteStringMethodGet(this, "GetPhone");
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
 		/// <param name="bstrNewVal">string bstrNewVal</param>
-		[SupportByVersionAttribute("Office", 10,11,12,14,15,16)]
+		[SupportByVersion("Office", 10,11,12,14,15,16)]
 		public void SetPhone(string bstrNewVal)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(bstrNewVal);
-			Invoker.Method(this, "SetPhone", paramsArray);
+			 Factory.ExecuteMethod(this, "SetPhone", bstrNewVal);
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("Office", 10,11,12,14,15,16)]
+		[SupportByVersion("Office", 10,11,12,14,15,16)]
 		public string GetAddress1()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "GetAddress1", paramsArray);
-			return NetRuntimeSystem.Convert.ToString(returnItem);
+			return Factory.ExecuteStringMethodGet(this, "GetAddress1");
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
 		/// <param name="bstrNewVal">string bstrNewVal</param>
-		[SupportByVersionAttribute("Office", 10,11,12,14,15,16)]
+		[SupportByVersion("Office", 10,11,12,14,15,16)]
 		public void SetAddress1(string bstrNewVal)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(bstrNewVal);
-			Invoker.Method(this, "SetAddress1", paramsArray);
+			 Factory.ExecuteMethod(this, "SetAddress1", bstrNewVal);
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("Office", 10,11,12,14,15,16)]
+		[SupportByVersion("Office", 10,11,12,14,15,16)]
 		public string GetCity()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "GetCity", paramsArray);
-			return NetRuntimeSystem.Convert.ToString(returnItem);
+			return Factory.ExecuteStringMethodGet(this, "GetCity");
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
 		/// <param name="bstrNewVal">string bstrNewVal</param>
-		[SupportByVersionAttribute("Office", 10,11,12,14,15,16)]
+		[SupportByVersion("Office", 10,11,12,14,15,16)]
 		public void SetCity(string bstrNewVal)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(bstrNewVal);
-			Invoker.Method(this, "SetCity", paramsArray);
+			 Factory.ExecuteMethod(this, "SetCity", bstrNewVal);
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("Office", 10,11,12,14,15,16)]
+		[SupportByVersion("Office", 10,11,12,14,15,16)]
 		public string GetState()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "GetState", paramsArray);
-			return NetRuntimeSystem.Convert.ToString(returnItem);
+			return Factory.ExecuteStringMethodGet(this, "GetState");
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
 		/// <param name="bstrNewVal">string bstrNewVal</param>
-		[SupportByVersionAttribute("Office", 10,11,12,14,15,16)]
+		[SupportByVersion("Office", 10,11,12,14,15,16)]
 		public void SetState(string bstrNewVal)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(bstrNewVal);
-			Invoker.Method(this, "SetState", paramsArray);
+			 Factory.ExecuteMethod(this, "SetState", bstrNewVal);
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("Office", 10,11,12,14,15,16)]
+		[SupportByVersion("Office", 10,11,12,14,15,16)]
 		public string GetCountryCode()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "GetCountryCode", paramsArray);
-			return NetRuntimeSystem.Convert.ToString(returnItem);
+			return Factory.ExecuteStringMethodGet(this, "GetCountryCode");
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
 		/// <param name="bstrNewVal">string bstrNewVal</param>
-		[SupportByVersionAttribute("Office", 10,11,12,14,15,16)]
+		[SupportByVersion("Office", 10,11,12,14,15,16)]
 		public void SetCountryCode(string bstrNewVal)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(bstrNewVal);
-			Invoker.Method(this, "SetCountryCode", paramsArray);
+			 Factory.ExecuteMethod(this, "SetCountryCode", bstrNewVal);
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("Office", 10,11,12,14,15,16)]
+		[SupportByVersion("Office", 10,11,12,14,15,16)]
 		public string GetCountryDesc()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "GetCountryDesc", paramsArray);
-			return NetRuntimeSystem.Convert.ToString(returnItem);
+			return Factory.ExecuteStringMethodGet(this, "GetCountryDesc");
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
 		/// <param name="bstrNewVal">string bstrNewVal</param>
-		[SupportByVersionAttribute("Office", 10,11,12,14,15,16)]
+		[SupportByVersion("Office", 10,11,12,14,15,16)]
 		public void SetCountryDesc(string bstrNewVal)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(bstrNewVal);
-			Invoker.Method(this, "SetCountryDesc", paramsArray);
+			 Factory.ExecuteMethod(this, "SetCountryDesc", bstrNewVal);
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("Office", 10,11,12,14,15,16)]
+		[SupportByVersion("Office", 10,11,12,14,15,16)]
 		public string GetZip()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "GetZip", paramsArray);
-			return NetRuntimeSystem.Convert.ToString(returnItem);
+			return Factory.ExecuteStringMethodGet(this, "GetZip");
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
 		/// <param name="bstrNewVal">string bstrNewVal</param>
-		[SupportByVersionAttribute("Office", 10,11,12,14,15,16)]
+		[SupportByVersion("Office", 10,11,12,14,15,16)]
 		public void SetZip(string bstrNewVal)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(bstrNewVal);
-			Invoker.Method(this, "SetZip", paramsArray);
+			 Factory.ExecuteMethod(this, "SetZip", bstrNewVal);
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("Office", 10,11,12,14,15,16)]
+		[SupportByVersion("Office", 10,11,12,14,15,16)]
 		public Int32 GetIsoLanguage()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "GetIsoLanguage", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return Factory.ExecuteInt32MethodGet(this, "GetIsoLanguage");
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
 		/// <param name="dwNewVal">Int32 dwNewVal</param>
-		[SupportByVersionAttribute("Office", 10,11,12,14,15,16)]
+		[SupportByVersion("Office", 10,11,12,14,15,16)]
 		public void SetIsoLanguage(Int32 dwNewVal)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(dwNewVal);
-			Invoker.Method(this, "SetIsoLanguage", paramsArray);
+			 Factory.ExecuteMethod(this, "SetIsoLanguage", dwNewVal);
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("Office", 10,11,12,14,15,16)]
+		[SupportByVersion("Office", 10,11,12,14,15,16)]
 		public string GetMSUpdate()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "GetMSUpdate", paramsArray);
-			return NetRuntimeSystem.Convert.ToString(returnItem);
+			return Factory.ExecuteStringMethodGet(this, "GetMSUpdate");
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
 		/// <param name="bstrNewVal">string bstrNewVal</param>
-		[SupportByVersionAttribute("Office", 10,11,12,14,15,16)]
+		[SupportByVersion("Office", 10,11,12,14,15,16)]
 		public void SetMSUpdate(string bstrNewVal)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(bstrNewVal);
-			Invoker.Method(this, "SetMSUpdate", paramsArray);
+			 Factory.ExecuteMethod(this, "SetMSUpdate", bstrNewVal);
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("Office", 10,11,12,14,15,16)]
+		[SupportByVersion("Office", 10,11,12,14,15,16)]
 		public string GetMSOffer()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "GetMSOffer", paramsArray);
-			return NetRuntimeSystem.Convert.ToString(returnItem);
+			return Factory.ExecuteStringMethodGet(this, "GetMSOffer");
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
 		/// <param name="bstrNewVal">string bstrNewVal</param>
-		[SupportByVersionAttribute("Office", 10,11,12,14,15,16)]
+		[SupportByVersion("Office", 10,11,12,14,15,16)]
 		public void SetMSOffer(string bstrNewVal)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(bstrNewVal);
-			Invoker.Method(this, "SetMSOffer", paramsArray);
+			 Factory.ExecuteMethod(this, "SetMSOffer", bstrNewVal);
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("Office", 10,11,12,14,15,16)]
+		[SupportByVersion("Office", 10,11,12,14,15,16)]
 		public string GetOtherOffer()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "GetOtherOffer", paramsArray);
-			return NetRuntimeSystem.Convert.ToString(returnItem);
+			return Factory.ExecuteStringMethodGet(this, "GetOtherOffer");
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
 		/// <param name="bstrNewVal">string bstrNewVal</param>
-		[SupportByVersionAttribute("Office", 10,11,12,14,15,16)]
+		[SupportByVersion("Office", 10,11,12,14,15,16)]
 		public void SetOtherOffer(string bstrNewVal)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(bstrNewVal);
-			Invoker.Method(this, "SetOtherOffer", paramsArray);
+			 Factory.ExecuteMethod(this, "SetOtherOffer", bstrNewVal);
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("Office", 10,11,12,14,15,16)]
+		[SupportByVersion("Office", 10,11,12,14,15,16)]
 		public string GetAddress2()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "GetAddress2", paramsArray);
-			return NetRuntimeSystem.Convert.ToString(returnItem);
+			return Factory.ExecuteStringMethodGet(this, "GetAddress2");
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
 		/// <param name="bstrNewVal">string bstrNewVal</param>
-		[SupportByVersionAttribute("Office", 10,11,12,14,15,16)]
+		[SupportByVersion("Office", 10,11,12,14,15,16)]
 		public void SetAddress2(string bstrNewVal)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(bstrNewVal);
-			Invoker.Method(this, "SetAddress2", paramsArray);
+			 Factory.ExecuteMethod(this, "SetAddress2", bstrNewVal);
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("Office", 10,11,12,14,15,16)]
+		[SupportByVersion("Office", 10,11,12,14,15,16)]
 		public Int32 CheckSystemClock()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "CheckSystemClock", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return Factory.ExecuteInt32MethodGet(this, "CheckSystemClock");
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("Office", 10,11,12,14,15,16)]
+		[SupportByVersion("Office", 10,11,12,14,15,16)]
 		public DateTime GetExistingExpiryDate()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "GetExistingExpiryDate", paramsArray);
-			return NetRuntimeSystem.Convert.ToDateTime(returnItem);
+			return Factory.ExecuteDateTimeMethodGet(this, "GetExistingExpiryDate");
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("Office", 10,11,12,14,15,16)]
+		[SupportByVersion("Office", 10,11,12,14,15,16)]
 		public DateTime GetNewExpiryDate()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "GetNewExpiryDate", paramsArray);
-			return NetRuntimeSystem.Convert.ToDateTime(returnItem);
+			return Factory.ExecuteDateTimeMethodGet(this, "GetNewExpiryDate");
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("Office", 10,11,12,14,15,16)]
+		[SupportByVersion("Office", 10,11,12,14,15,16)]
 		public string GetBillingFirstName()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "GetBillingFirstName", paramsArray);
-			return NetRuntimeSystem.Convert.ToString(returnItem);
+			return Factory.ExecuteStringMethodGet(this, "GetBillingFirstName");
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
 		/// <param name="bstrNewVal">string bstrNewVal</param>
-		[SupportByVersionAttribute("Office", 10,11,12,14,15,16)]
+		[SupportByVersion("Office", 10,11,12,14,15,16)]
 		public void SetBillingFirstName(string bstrNewVal)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(bstrNewVal);
-			Invoker.Method(this, "SetBillingFirstName", paramsArray);
+			 Factory.ExecuteMethod(this, "SetBillingFirstName", bstrNewVal);
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("Office", 10,11,12,14,15,16)]
+		[SupportByVersion("Office", 10,11,12,14,15,16)]
 		public string GetBillingLastName()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "GetBillingLastName", paramsArray);
-			return NetRuntimeSystem.Convert.ToString(returnItem);
+			return Factory.ExecuteStringMethodGet(this, "GetBillingLastName");
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
 		/// <param name="bstrNewVal">string bstrNewVal</param>
-		[SupportByVersionAttribute("Office", 10,11,12,14,15,16)]
+		[SupportByVersion("Office", 10,11,12,14,15,16)]
 		public void SetBillingLastName(string bstrNewVal)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(bstrNewVal);
-			Invoker.Method(this, "SetBillingLastName", paramsArray);
+			 Factory.ExecuteMethod(this, "SetBillingLastName", bstrNewVal);
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("Office", 10,11,12,14,15,16)]
+		[SupportByVersion("Office", 10,11,12,14,15,16)]
 		public string GetBillingPhone()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "GetBillingPhone", paramsArray);
-			return NetRuntimeSystem.Convert.ToString(returnItem);
+			return Factory.ExecuteStringMethodGet(this, "GetBillingPhone");
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
 		/// <param name="bstrNewVal">string bstrNewVal</param>
-		[SupportByVersionAttribute("Office", 10,11,12,14,15,16)]
+		[SupportByVersion("Office", 10,11,12,14,15,16)]
 		public void SetBillingPhone(string bstrNewVal)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(bstrNewVal);
-			Invoker.Method(this, "SetBillingPhone", paramsArray);
+			 Factory.ExecuteMethod(this, "SetBillingPhone", bstrNewVal);
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("Office", 10,11,12,14,15,16)]
+		[SupportByVersion("Office", 10,11,12,14,15,16)]
 		public string GetBillingAddress1()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "GetBillingAddress1", paramsArray);
-			return NetRuntimeSystem.Convert.ToString(returnItem);
+			return Factory.ExecuteStringMethodGet(this, "GetBillingAddress1");
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
 		/// <param name="bstrNewVal">string bstrNewVal</param>
-		[SupportByVersionAttribute("Office", 10,11,12,14,15,16)]
+		[SupportByVersion("Office", 10,11,12,14,15,16)]
 		public void SetBillingAddress1(string bstrNewVal)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(bstrNewVal);
-			Invoker.Method(this, "SetBillingAddress1", paramsArray);
+			 Factory.ExecuteMethod(this, "SetBillingAddress1", bstrNewVal);
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("Office", 10,11,12,14,15,16)]
+		[SupportByVersion("Office", 10,11,12,14,15,16)]
 		public string GetBillingAddress2()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "GetBillingAddress2", paramsArray);
-			return NetRuntimeSystem.Convert.ToString(returnItem);
+			return Factory.ExecuteStringMethodGet(this, "GetBillingAddress2");
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
 		/// <param name="bstrNewVal">string bstrNewVal</param>
-		[SupportByVersionAttribute("Office", 10,11,12,14,15,16)]
+		[SupportByVersion("Office", 10,11,12,14,15,16)]
 		public void SetBillingAddress2(string bstrNewVal)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(bstrNewVal);
-			Invoker.Method(this, "SetBillingAddress2", paramsArray);
+			 Factory.ExecuteMethod(this, "SetBillingAddress2", bstrNewVal);
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("Office", 10,11,12,14,15,16)]
+		[SupportByVersion("Office", 10,11,12,14,15,16)]
 		public string GetBillingCity()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "GetBillingCity", paramsArray);
-			return NetRuntimeSystem.Convert.ToString(returnItem);
+			return Factory.ExecuteStringMethodGet(this, "GetBillingCity");
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
 		/// <param name="bstrNewVal">string bstrNewVal</param>
-		[SupportByVersionAttribute("Office", 10,11,12,14,15,16)]
+		[SupportByVersion("Office", 10,11,12,14,15,16)]
 		public void SetBillingCity(string bstrNewVal)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(bstrNewVal);
-			Invoker.Method(this, "SetBillingCity", paramsArray);
+			 Factory.ExecuteMethod(this, "SetBillingCity", bstrNewVal);
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("Office", 10,11,12,14,15,16)]
+		[SupportByVersion("Office", 10,11,12,14,15,16)]
 		public string GetBillingState()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "GetBillingState", paramsArray);
-			return NetRuntimeSystem.Convert.ToString(returnItem);
+			return Factory.ExecuteStringMethodGet(this, "GetBillingState");
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
 		/// <param name="bstrNewVal">string bstrNewVal</param>
-		[SupportByVersionAttribute("Office", 10,11,12,14,15,16)]
+		[SupportByVersion("Office", 10,11,12,14,15,16)]
 		public void SetBillingState(string bstrNewVal)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(bstrNewVal);
-			Invoker.Method(this, "SetBillingState", paramsArray);
+			 Factory.ExecuteMethod(this, "SetBillingState", bstrNewVal);
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("Office", 10,11,12,14,15,16)]
+		[SupportByVersion("Office", 10,11,12,14,15,16)]
 		public string GetBillingCountryCode()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "GetBillingCountryCode", paramsArray);
-			return NetRuntimeSystem.Convert.ToString(returnItem);
+			return Factory.ExecuteStringMethodGet(this, "GetBillingCountryCode");
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
 		/// <param name="bstrNewVal">string bstrNewVal</param>
-		[SupportByVersionAttribute("Office", 10,11,12,14,15,16)]
+		[SupportByVersion("Office", 10,11,12,14,15,16)]
 		public void SetBillingCountryCode(string bstrNewVal)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(bstrNewVal);
-			Invoker.Method(this, "SetBillingCountryCode", paramsArray);
+			 Factory.ExecuteMethod(this, "SetBillingCountryCode", bstrNewVal);
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("Office", 10,11,12,14,15,16)]
+		[SupportByVersion("Office", 10,11,12,14,15,16)]
 		public string GetBillingZip()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "GetBillingZip", paramsArray);
-			return NetRuntimeSystem.Convert.ToString(returnItem);
+			return Factory.ExecuteStringMethodGet(this, "GetBillingZip");
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
 		/// <param name="bstrNewVal">string bstrNewVal</param>
-		[SupportByVersionAttribute("Office", 10,11,12,14,15,16)]
+		[SupportByVersion("Office", 10,11,12,14,15,16)]
 		public void SetBillingZip(string bstrNewVal)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(bstrNewVal);
-			Invoker.Method(this, "SetBillingZip", paramsArray);
+			 Factory.ExecuteMethod(this, "SetBillingZip", bstrNewVal);
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
 		/// <param name="bSave">Int32 bSave</param>
-		[SupportByVersionAttribute("Office", 10,11,12,14,15,16)]
+		[SupportByVersion("Office", 10,11,12,14,15,16)]
 		public Int32 SaveBillingInfo(Int32 bSave)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(bSave);
-			object returnItem = Invoker.MethodReturn(this, "SaveBillingInfo", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return Factory.ExecuteInt32MethodGet(this, "SaveBillingInfo", bSave);
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
 		/// <param name="bstrCountryCode">string bstrCountryCode</param>
-		[SupportByVersionAttribute("Office", 10,11,12,14,15,16)]
+		[SupportByVersion("Office", 10,11,12,14,15,16)]
 		public Int32 IsCCRenewalCountry(string bstrCountryCode)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(bstrCountryCode);
-			object returnItem = Invoker.MethodReturn(this, "IsCCRenewalCountry", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return Factory.ExecuteInt32MethodGet(this, "IsCCRenewalCountry", bstrCountryCode);
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
 		/// <param name="bstrCountryCode">string bstrCountryCode</param>
-		[SupportByVersionAttribute("Office", 10,11,12,14,15,16)]
+		[SupportByVersion("Office", 10,11,12,14,15,16)]
 		public string GetVATLabel(string bstrCountryCode)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(bstrCountryCode);
-			object returnItem = Invoker.MethodReturn(this, "GetVATLabel", paramsArray);
-			return NetRuntimeSystem.Convert.ToString(returnItem);
+			return Factory.ExecuteStringMethodGet(this, "GetVATLabel", bstrCountryCode);
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("Office", 10,11,12,14,15,16)]
+		[SupportByVersion("Office", 10,11,12,14,15,16)]
 		public DateTime GetCCRenewalExpiryDate()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "GetCCRenewalExpiryDate", paramsArray);
-			return NetRuntimeSystem.Convert.ToDateTime(returnItem);
+			return Factory.ExecuteDateTimeMethodGet(this, "GetCCRenewalExpiryDate");
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
 		/// <param name="bstrVATNumber">string bstrVATNumber</param>
-		[SupportByVersionAttribute("Office", 10,11,12,14,15,16)]
+		[SupportByVersion("Office", 10,11,12,14,15,16)]
 		public void SetVATNumber(string bstrVATNumber)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(bstrVATNumber);
-			Invoker.Method(this, "SetVATNumber", paramsArray);
+			 Factory.ExecuteMethod(this, "SetVATNumber", bstrVATNumber);
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
 		/// <param name="bstrCCCode">string bstrCCCode</param>
-		[SupportByVersionAttribute("Office", 10,11,12,14,15,16)]
+		[SupportByVersion("Office", 10,11,12,14,15,16)]
 		public void SetCreditCardType(string bstrCCCode)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(bstrCCCode);
-			Invoker.Method(this, "SetCreditCardType", paramsArray);
+			 Factory.ExecuteMethod(this, "SetCreditCardType", bstrCCCode);
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
 		/// <param name="bstrCCNumber">string bstrCCNumber</param>
-		[SupportByVersionAttribute("Office", 10,11,12,14,15,16)]
+		[SupportByVersion("Office", 10,11,12,14,15,16)]
 		public void SetCreditCardNumber(string bstrCCNumber)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(bstrCCNumber);
-			Invoker.Method(this, "SetCreditCardNumber", paramsArray);
+			 Factory.ExecuteMethod(this, "SetCreditCardNumber", bstrCCNumber);
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
 		/// <param name="dwCCYear">Int32 dwCCYear</param>
-		[SupportByVersionAttribute("Office", 10,11,12,14,15,16)]
+		[SupportByVersion("Office", 10,11,12,14,15,16)]
 		public void SetCreditCardExpiryYear(Int32 dwCCYear)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(dwCCYear);
-			Invoker.Method(this, "SetCreditCardExpiryYear", paramsArray);
+			 Factory.ExecuteMethod(this, "SetCreditCardExpiryYear", dwCCYear);
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
 		/// <param name="dwCCMonth">Int32 dwCCMonth</param>
-		[SupportByVersionAttribute("Office", 10,11,12,14,15,16)]
+		[SupportByVersion("Office", 10,11,12,14,15,16)]
 		public void SetCreditCardExpiryMonth(Int32 dwCCMonth)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(dwCCMonth);
-			Invoker.Method(this, "SetCreditCardExpiryMonth", paramsArray);
+			 Factory.ExecuteMethod(this, "SetCreditCardExpiryMonth", dwCCMonth);
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("Office", 10,11,12,14,15,16)]
+		[SupportByVersion("Office", 10,11,12,14,15,16)]
 		public Int32 GetCreditCardCount()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "GetCreditCardCount", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return Factory.ExecuteInt32MethodGet(this, "GetCreditCardCount");
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
 		/// <param name="dwIndex">Int32 dwIndex</param>
-		[SupportByVersionAttribute("Office", 10,11,12,14,15,16)]
+		[SupportByVersion("Office", 10,11,12,14,15,16)]
 		public string GetCreditCardCode(Int32 dwIndex)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(dwIndex);
-			object returnItem = Invoker.MethodReturn(this, "GetCreditCardCode", paramsArray);
-			return NetRuntimeSystem.Convert.ToString(returnItem);
+			return Factory.ExecuteStringMethodGet(this, "GetCreditCardCode", dwIndex);
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
 		/// <param name="dwIndex">Int32 dwIndex</param>
-		[SupportByVersionAttribute("Office", 10,11,12,14,15,16)]
+		[SupportByVersion("Office", 10,11,12,14,15,16)]
 		public string GetCreditCardName(Int32 dwIndex)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(dwIndex);
-			object returnItem = Invoker.MethodReturn(this, "GetCreditCardName", paramsArray);
-			return NetRuntimeSystem.Convert.ToString(returnItem);
+			return Factory.ExecuteStringMethodGet(this, "GetCreditCardName", dwIndex);
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("Office", 10,11,12,14,15,16)]
+		[SupportByVersion("Office", 10,11,12,14,15,16)]
 		public string GetVATNumber()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "GetVATNumber", paramsArray);
-			return NetRuntimeSystem.Convert.ToString(returnItem);
+			return Factory.ExecuteStringMethodGet(this, "GetVATNumber");
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("Office", 10,11,12,14,15,16)]
+		[SupportByVersion("Office", 10,11,12,14,15,16)]
 		public string GetCreditCardType()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "GetCreditCardType", paramsArray);
-			return NetRuntimeSystem.Convert.ToString(returnItem);
+			return Factory.ExecuteStringMethodGet(this, "GetCreditCardType");
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("Office", 10,11,12,14,15,16)]
+		[SupportByVersion("Office", 10,11,12,14,15,16)]
 		public string GetCreditCardNumber()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "GetCreditCardNumber", paramsArray);
-			return NetRuntimeSystem.Convert.ToString(returnItem);
+			return Factory.ExecuteStringMethodGet(this, "GetCreditCardNumber");
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("Office", 10,11,12,14,15,16)]
+		[SupportByVersion("Office", 10,11,12,14,15,16)]
 		public Int32 GetCreditCardExpiryYear()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "GetCreditCardExpiryYear", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return Factory.ExecuteInt32MethodGet(this, "GetCreditCardExpiryYear");
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("Office", 10,11,12,14,15,16)]
+		[SupportByVersion("Office", 10,11,12,14,15,16)]
 		public Int32 GetCreditCardExpiryMonth()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "GetCreditCardExpiryMonth", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return Factory.ExecuteInt32MethodGet(this, "GetCreditCardExpiryMonth");
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("Office", 10,11,12,14,15,16)]
+		[SupportByVersion("Office", 10,11,12,14,15,16)]
 		public Int32 GetDisconnectOption()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "GetDisconnectOption", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return Factory.ExecuteInt32MethodGet(this, "GetDisconnectOption");
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
 		/// <param name="bNewVal">Int32 bNewVal</param>
-		[SupportByVersionAttribute("Office", 10,11,12,14,15,16)]
+		[SupportByVersion("Office", 10,11,12,14,15,16)]
 		public void SetDisconnectOption(Int32 bNewVal)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(bNewVal);
-			Invoker.Method(this, "SetDisconnectOption", paramsArray);
+			 Factory.ExecuteMethod(this, "SetDisconnectOption", bNewVal);
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
 		/// <param name="bReviseCustInfo">Int32 bReviseCustInfo</param>
-		[SupportByVersionAttribute("Office", 10,11,12,14,15,16)]
+		[SupportByVersion("Office", 10,11,12,14,15,16)]
 		public void AsyncProcessHandshakeRequest(Int32 bReviseCustInfo)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(bReviseCustInfo);
-			Invoker.Method(this, "AsyncProcessHandshakeRequest", paramsArray);
+			 Factory.ExecuteMethod(this, "AsyncProcessHandshakeRequest", bReviseCustInfo);
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("Office", 10,11,12,14,15,16)]
+		[SupportByVersion("Office", 10,11,12,14,15,16)]
 		public void AsyncProcessNewLicenseRequest()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "AsyncProcessNewLicenseRequest", paramsArray);
+			 Factory.ExecuteMethod(this, "AsyncProcessNewLicenseRequest");
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("Office", 10,11,12,14,15,16)]
+		[SupportByVersion("Office", 10,11,12,14,15,16)]
 		public void AsyncProcessReissueLicenseRequest()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "AsyncProcessReissueLicenseRequest", paramsArray);
+			 Factory.ExecuteMethod(this, "AsyncProcessReissueLicenseRequest");
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("Office", 10,11,12,14,15,16)]
+		[SupportByVersion("Office", 10,11,12,14,15,16)]
 		public void AsyncProcessRetailRenewalLicenseRequest()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "AsyncProcessRetailRenewalLicenseRequest", paramsArray);
+			 Factory.ExecuteMethod(this, "AsyncProcessRetailRenewalLicenseRequest");
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("Office", 10,11,12,14,15,16)]
+		[SupportByVersion("Office", 10,11,12,14,15,16)]
 		public void AsyncProcessReviseCustInfoRequest()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "AsyncProcessReviseCustInfoRequest", paramsArray);
+			 Factory.ExecuteMethod(this, "AsyncProcessReviseCustInfoRequest");
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("Office", 10,11,12,14,15,16)]
+		[SupportByVersion("Office", 10,11,12,14,15,16)]
 		public void AsyncProcessCCRenewalPriceRequest()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "AsyncProcessCCRenewalPriceRequest", paramsArray);
+			 Factory.ExecuteMethod(this, "AsyncProcessCCRenewalPriceRequest");
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("Office", 10,11,12,14,15,16)]
+		[SupportByVersion("Office", 10,11,12,14,15,16)]
 		public void AsyncProcessCCRenewalLicenseRequest()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "AsyncProcessCCRenewalLicenseRequest", paramsArray);
+			 Factory.ExecuteMethod(this, "AsyncProcessCCRenewalLicenseRequest");
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("Office", 10,11,12,14,15,16)]
+		[SupportByVersion("Office", 10,11,12,14,15,16)]
 		public Int32 GetAsyncProcessReturnCode()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "GetAsyncProcessReturnCode", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return Factory.ExecuteInt32MethodGet(this, "GetAsyncProcessReturnCode");
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("Office", 10,11,12,14,15,16)]
+		[SupportByVersion("Office", 10,11,12,14,15,16)]
 		public Int32 IsUpgradeAvailable()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "IsUpgradeAvailable", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return Factory.ExecuteInt32MethodGet(this, "IsUpgradeAvailable");
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
 		/// <param name="bWantUpgrade">Int32 bWantUpgrade</param>
-		[SupportByVersionAttribute("Office", 10,11,12,14,15,16)]
+		[SupportByVersion("Office", 10,11,12,14,15,16)]
 		public void WantUpgrade(Int32 bWantUpgrade)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(bWantUpgrade);
-			Invoker.Method(this, "WantUpgrade", paramsArray);
+			 Factory.ExecuteMethod(this, "WantUpgrade", bWantUpgrade);
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("Office", 10,11,12,14,15,16)]
+		[SupportByVersion("Office", 10,11,12,14,15,16)]
 		public void AsyncProcessDroppedLicenseRequest()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "AsyncProcessDroppedLicenseRequest", paramsArray);
+			 Factory.ExecuteMethod(this, "AsyncProcessDroppedLicenseRequest");
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("Office", 10,11,12,14,15,16)]
+		[SupportByVersion("Office", 10,11,12,14,15,16)]
 		public string GenerateInstallationId()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "GenerateInstallationId", paramsArray);
-			return NetRuntimeSystem.Convert.ToString(returnItem);
+			return Factory.ExecuteStringMethodGet(this, "GenerateInstallationId");
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
 		/// <param name="bstrVal">string bstrVal</param>
-		[SupportByVersionAttribute("Office", 10,11,12,14,15,16)]
+		[SupportByVersion("Office", 10,11,12,14,15,16)]
 		public Int32 DepositConfirmationId(string bstrVal)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(bstrVal);
-			object returnItem = Invoker.MethodReturn(this, "DepositConfirmationId", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return Factory.ExecuteInt32MethodGet(this, "DepositConfirmationId", bstrVal);
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
 		/// <param name="bstrCIDIID">string bstrCIDIID</param>
-		[SupportByVersionAttribute("Office", 10,11,12,14,15,16)]
+		[SupportByVersion("Office", 10,11,12,14,15,16)]
 		public Int32 VerifyCheckDigits(string bstrCIDIID)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(bstrCIDIID);
-			object returnItem = Invoker.MethodReturn(this, "VerifyCheckDigits", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return Factory.ExecuteInt32MethodGet(this, "VerifyCheckDigits", bstrCIDIID);
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("Office", 10,11,12,14,15,16)]
+		[SupportByVersion("Office", 10,11,12,14,15,16)]
 		public DateTime GetCurrentExpiryDate()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "GetCurrentExpiryDate", paramsArray);
-			return NetRuntimeSystem.Convert.ToDateTime(returnItem);
+			return Factory.ExecuteDateTimeMethodGet(this, "GetCurrentExpiryDate");
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
 		/// <param name="bIsLicenseRequest">Int32 bIsLicenseRequest</param>
-		[SupportByVersionAttribute("Office", 10,11,12,14,15,16)]
+		[SupportByVersion("Office", 10,11,12,14,15,16)]
 		public void CancelAsyncProcessRequest(Int32 bIsLicenseRequest)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(bIsLicenseRequest);
-			Invoker.Method(this, "CancelAsyncProcessRequest", paramsArray);
+			 Factory.ExecuteMethod(this, "CancelAsyncProcessRequest", bIsLicenseRequest);
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
 		/// <param name="dwCurrencyIndex">Int32 dwCurrencyIndex</param>
-		[SupportByVersionAttribute("Office", 10,11,12,14,15,16)]
+		[SupportByVersion("Office", 10,11,12,14,15,16)]
 		public string GetCurrencyDescription(Int32 dwCurrencyIndex)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(dwCurrencyIndex);
-			object returnItem = Invoker.MethodReturn(this, "GetCurrencyDescription", paramsArray);
-			return NetRuntimeSystem.Convert.ToString(returnItem);
+			return Factory.ExecuteStringMethodGet(this, "GetCurrencyDescription", dwCurrencyIndex);
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("Office", 10,11,12,14,15,16)]
+		[SupportByVersion("Office", 10,11,12,14,15,16)]
 		public Int32 GetPriceItemCount()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "GetPriceItemCount", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return Factory.ExecuteInt32MethodGet(this, "GetPriceItemCount");
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
 		/// <param name="dwIndex">Int32 dwIndex</param>
-		[SupportByVersionAttribute("Office", 10,11,12,14,15,16)]
+		[SupportByVersion("Office", 10,11,12,14,15,16)]
 		public string GetPriceItemLabel(Int32 dwIndex)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(dwIndex);
-			object returnItem = Invoker.MethodReturn(this, "GetPriceItemLabel", paramsArray);
-			return NetRuntimeSystem.Convert.ToString(returnItem);
+			return Factory.ExecuteStringMethodGet(this, "GetPriceItemLabel", dwIndex);
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
 		/// <param name="dwCurrencyIndex">Int32 dwCurrencyIndex</param>
 		/// <param name="dwIndex">Int32 dwIndex</param>
-		[SupportByVersionAttribute("Office", 10,11,12,14,15,16)]
+		[SupportByVersion("Office", 10,11,12,14,15,16)]
 		public string GetPriceItemValue(Int32 dwCurrencyIndex, Int32 dwIndex)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(dwCurrencyIndex, dwIndex);
-			object returnItem = Invoker.MethodReturn(this, "GetPriceItemValue", paramsArray);
-			return NetRuntimeSystem.Convert.ToString(returnItem);
+			return Factory.ExecuteStringMethodGet(this, "GetPriceItemValue", dwCurrencyIndex, dwIndex);
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("Office", 10,11,12,14,15,16)]
+		[SupportByVersion("Office", 10,11,12,14,15,16)]
 		public string GetInvoiceText()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "GetInvoiceText", paramsArray);
-			return NetRuntimeSystem.Convert.ToString(returnItem);
+			return Factory.ExecuteStringMethodGet(this, "GetInvoiceText");
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("Office", 10,11,12,14,15,16)]
+		[SupportByVersion("Office", 10,11,12,14,15,16)]
 		public string GetBackendErrorMsg()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "GetBackendErrorMsg", paramsArray);
-			return NetRuntimeSystem.Convert.ToString(returnItem);
+			return Factory.ExecuteStringMethodGet(this, "GetBackendErrorMsg");
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("Office", 10,11,12,14,15,16)]
+		[SupportByVersion("Office", 10,11,12,14,15,16)]
 		public Int32 GetCurrencyOption()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "GetCurrencyOption", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return Factory.ExecuteInt32MethodGet(this, "GetCurrencyOption");
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
 		/// <param name="dwCurrencyOption">Int32 dwCurrencyOption</param>
-		[SupportByVersionAttribute("Office", 10,11,12,14,15,16)]
+		[SupportByVersion("Office", 10,11,12,14,15,16)]
 		public void SetCurrencyOption(Int32 dwCurrencyOption)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(dwCurrencyOption);
-			Invoker.Method(this, "SetCurrencyOption", paramsArray);
+			 Factory.ExecuteMethod(this, "SetCurrencyOption", dwCurrencyOption);
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("Office", 10,11,12,14,15,16)]
+		[SupportByVersion("Office", 10,11,12,14,15,16)]
 		public string GetEndOfLifeHtmlText()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "GetEndOfLifeHtmlText", paramsArray);
-			return NetRuntimeSystem.Convert.ToString(returnItem);
+			return Factory.ExecuteStringMethodGet(this, "GetEndOfLifeHtmlText");
 		}
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("Office", 10,11,12,14,15,16)]
+		[SupportByVersion("Office", 10,11,12,14,15,16)]
 		public Int32 DisplaySSLCert()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "DisplaySSLCert", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return Factory.ExecuteInt32MethodGet(this, "DisplaySSLCert");
 		}
 
 		#endregion
+
 		#pragma warning restore
 	}
 }

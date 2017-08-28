@@ -4,6 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Reflection;
 using System.ComponentModel;
+using NetOffice.Attributes;
 using NetOffice.Tools;
 using NetOffice.VBIDEApi;
 

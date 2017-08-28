@@ -1,12 +1,10 @@
 ﻿using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
-using NetOffice;
-using NetOffice.Misc;
+using NetOffice.Attributes;
 
 namespace NetOffice.VisioApi
 {
-
 	#region Delegates
 
 	#pragma warning disable
@@ -14,16 +12,17 @@ namespace NetOffice.VisioApi
 
 	#endregion
 
-	///<summary>
+	/// <summary>
 	/// CoClass ValidationRuleSets 
 	/// SupportByVersion Visio, 14,15,16
-	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff769446(v=office.14).aspx
-	///</summary>
-	[SupportByVersionAttribute("Visio", 14,15,16)]
-	[EntityTypeAttribute(EntityType.IsCoClass)]
-	public class ValidationRuleSets : IVValidationRuleSets
+	/// </summary>
+	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/ff769446(v=office.14).aspx </remarks>
+	[SupportByVersion("Visio", 14,15,16)]
+	[EntityType(EntityType.IsCoClass)]
+ 	public class ValidationRuleSets : IVValidationRuleSets
 	{
 		#pragma warning disable
+
 		#region Fields
 		
 		private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
@@ -37,6 +36,7 @@ namespace NetOffice.VisioApi
         /// <summary>
         /// Instance Type
         /// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
         public override Type InstanceType
         {
             get
@@ -103,17 +103,17 @@ namespace NetOffice.VisioApi
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of ValidationRuleSets 
-        ///</summary>		
+        /// </summary>		
 		public ValidationRuleSets():base("Visio.ValidationRuleSets")
 		{
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of ValidationRuleSets
-        ///</summary>
+        /// </summary>
         ///<param name="progId">registered ProgID</param>
 		public ValidationRuleSets(string progId):base(progId)
 		{
@@ -123,46 +123,6 @@ namespace NetOffice.VisioApi
 		#endregion
 
 		#region Static CoClass Methods
-
-		/// <summary>
-        /// Returns all running Visio.ValidationRuleSets objects from the environment/system
-        /// </summary>
-        /// <returns>an Visio.ValidationRuleSets array</returns>
-		public static NetOffice.VisioApi.ValidationRuleSets[] GetActiveInstances()
-		{		
-			IDisposableEnumeration proxyList = NetOffice.ProxyService.GetActiveInstances("Visio","ValidationRuleSets");
-			NetRuntimeSystem.Collections.Generic.List<NetOffice.VisioApi.ValidationRuleSets> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.VisioApi.ValidationRuleSets>();
-			foreach(object proxy in proxyList)
-				resultList.Add( new NetOffice.VisioApi.ValidationRuleSets(null, proxy) );
-			return resultList.ToArray();
-		}
-
-		/// <summary>
-        /// Returns a running Visio.ValidationRuleSets object from the environment/system.
-        /// </summary>
-        /// <returns>an Visio.ValidationRuleSets object or null</returns>
-		public static NetOffice.VisioApi.ValidationRuleSets GetActiveInstance()
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Visio","ValidationRuleSets", false);
-			if(null != proxy)
-				return new NetOffice.VisioApi.ValidationRuleSets(null, proxy);
-			else
-				return null;
-		}
-
-		/// <summary>
-        /// Returns a running Visio.ValidationRuleSets object from the environment/system. 
-        /// </summary>
-	    /// <param name="throwOnError">throw an exception if no object was found</param>
-        /// <returns>an Visio.ValidationRuleSets object or null</returns>
-		public static NetOffice.VisioApi.ValidationRuleSets GetActiveInstance(bool throwOnError)
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Visio","ValidationRuleSets", throwOnError);
-			if(null != proxy)
-				return new NetOffice.VisioApi.ValidationRuleSets(null, proxy);
-			else
-				return null;
-		}
 		#endregion
 
 		#region Events

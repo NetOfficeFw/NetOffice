@@ -1,12 +1,10 @@
 ﻿using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
-using NetOffice;
-using NetOffice.Misc;
+using NetOffice.Attributes;
 
 namespace NetOffice.MSFormsApi
 {
-
 	#region Delegates
 
 	#pragma warning disable
@@ -14,15 +12,16 @@ namespace NetOffice.MSFormsApi
 
 	#endregion
 
-	///<summary>
+	/// <summary>
 	/// CoClass DataObject 
 	/// SupportByVersion MSForms, 2
-	///</summary>
-	[SupportByVersionAttribute("MSForms", 2)]
-	[EntityTypeAttribute(EntityType.IsCoClass)]
-	public class DataObject : IDataAutoWrapper
+	/// </summary>
+	[SupportByVersion("MSForms", 2)]
+	[EntityType(EntityType.IsCoClass)]
+ 	public class DataObject : IDataAutoWrapper
 	{
 		#pragma warning disable
+
 		#region Fields
 		
 		private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
@@ -36,6 +35,7 @@ namespace NetOffice.MSFormsApi
         /// <summary>
         /// Instance Type
         /// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
         public override Type InstanceType
         {
             get
@@ -102,17 +102,17 @@ namespace NetOffice.MSFormsApi
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of DataObject 
-        ///</summary>		
+        /// </summary>		
 		public DataObject():base("MSForms.DataObject")
 		{
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of DataObject
-        ///</summary>
+        /// </summary>
         ///<param name="progId">registered ProgID</param>
 		public DataObject(string progId):base(progId)
 		{
@@ -122,46 +122,6 @@ namespace NetOffice.MSFormsApi
 		#endregion
 
 		#region Static CoClass Methods
-
-		/// <summary>
-        /// Returns all running MSForms.DataObject objects from the environment/system
-        /// </summary>
-        /// <returns>an MSForms.DataObject array</returns>
-		public static NetOffice.MSFormsApi.DataObject[] GetActiveInstances()
-		{		
-			IDisposableEnumeration proxyList = NetOffice.ProxyService.GetActiveInstances("MSForms","DataObject");
-			NetRuntimeSystem.Collections.Generic.List<NetOffice.MSFormsApi.DataObject> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.MSFormsApi.DataObject>();
-			foreach(object proxy in proxyList)
-				resultList.Add( new NetOffice.MSFormsApi.DataObject(null, proxy) );
-			return resultList.ToArray();
-		}
-
-		/// <summary>
-        /// Returns a running MSForms.DataObject object from the environment/system.
-        /// </summary>
-        /// <returns>an MSForms.DataObject object or null</returns>
-		public static NetOffice.MSFormsApi.DataObject GetActiveInstance()
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("MSForms","DataObject", false);
-			if(null != proxy)
-				return new NetOffice.MSFormsApi.DataObject(null, proxy);
-			else
-				return null;
-		}
-
-		/// <summary>
-        /// Returns a running MSForms.DataObject object from the environment/system. 
-        /// </summary>
-	    /// <param name="throwOnError">throw an exception if no object was found</param>
-        /// <returns>an MSForms.DataObject object or null</returns>
-		public static NetOffice.MSFormsApi.DataObject GetActiveInstance(bool throwOnError)
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("MSForms","DataObject", throwOnError);
-			if(null != proxy)
-				return new NetOffice.MSFormsApi.DataObject(null, proxy);
-			else
-				return null;
-		}
 		#endregion
 
 		#region Events

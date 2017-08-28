@@ -1,44 +1,44 @@
 ﻿using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
-using NetOffice;
-using NetOffice.Misc;
+using NetOffice.Attributes;
 
 namespace NetOffice.MSComctlLibApi
 {
-
 	#region Delegates
 
 	#pragma warning disable
-	public delegate void ProgressBar_MouseDownEventHandler(Int16 Button, Int16 Shift, Int32 x, Int32 y);
-	public delegate void ProgressBar_MouseMoveEventHandler(Int16 Button, Int16 Shift, Int32 x, Int32 y);
-	public delegate void ProgressBar_MouseUpEventHandler(Int16 Button, Int16 Shift, Int32 x, Int32 y);
+	public delegate void ProgressBar_MouseDownEventHandler(Int16 button, Int16 shift, Int32 x, Int32 y);
+	public delegate void ProgressBar_MouseMoveEventHandler(Int16 button, Int16 shift, Int32 x, Int32 y);
+	public delegate void ProgressBar_MouseUpEventHandler(Int16 button, Int16 shift, Int32 x, Int32 y);
 	public delegate void ProgressBar_ClickEventHandler();
-	public delegate void ProgressBar_OLEStartDragEventHandler(ref NetOffice.MSComctlLibApi.DataObject Data, ref Int32 AllowedEffects);
-	public delegate void ProgressBar_OLEGiveFeedbackEventHandler(ref Int32 Effect, ref bool DefaultCursors);
-	public delegate void ProgressBar_OLESetDataEventHandler(ref NetOffice.MSComctlLibApi.DataObject Data, ref Int16 DataFormat);
-	public delegate void ProgressBar_OLECompleteDragEventHandler(ref Int32 Effect);
-	public delegate void ProgressBar_OLEDragOverEventHandler(ref NetOffice.MSComctlLibApi.DataObject Data, ref Int32 Effect, ref Int16 Button, ref Int16 Shift, ref Single x, ref Single y, ref Int16 State);
-	public delegate void ProgressBar_OLEDragDropEventHandler(ref NetOffice.MSComctlLibApi.DataObject Data, ref Int32 Effect, ref Int16 Button, ref Int16 Shift, ref Single x, ref Single y);
+	public delegate void ProgressBar_OLEStartDragEventHandler(ref NetOffice.MSComctlLibApi.DataObject data, ref Int32 allowedEffects);
+	public delegate void ProgressBar_OLEGiveFeedbackEventHandler(ref Int32 effect, ref bool defaultCursors);
+	public delegate void ProgressBar_OLESetDataEventHandler(ref NetOffice.MSComctlLibApi.DataObject data, ref Int16 dataFormat);
+	public delegate void ProgressBar_OLECompleteDragEventHandler(ref Int32 effect);
+	public delegate void ProgressBar_OLEDragOverEventHandler(ref NetOffice.MSComctlLibApi.DataObject data, ref Int32 effect, ref Int16 button, ref Int16 shift, ref Single x, ref Single y, ref Int16 state);
+	public delegate void ProgressBar_OLEDragDropEventHandler(ref NetOffice.MSComctlLibApi.DataObject data, ref Int32 effect, ref Int16 button, ref Int16 shift, ref Single x, ref Single y);
 	#pragma warning restore
 
 	#endregion
 
-	///<summary>
+	/// <summary>
 	/// CoClass ProgressBar 
 	/// SupportByVersion MSComctlLib, 6
-	///</summary>
-	[SupportByVersionAttribute("MSComctlLib", 6)]
-	[EntityTypeAttribute(EntityType.IsCoClass)]
-	public class ProgressBar : IProgressBar,IEventBinding
+	/// </summary>
+	[SupportByVersion("MSComctlLib", 6)]
+	[EntityType(EntityType.IsCoClass)]
+	[EventSink(typeof(Events.IProgressBarEvents_SinkHelper))]
+	public class ProgressBar : IProgressBar, IEventBinding
 	{
 		#pragma warning disable
+
 		#region Fields
 		
 		private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
 		private string _activeSinkId;
 		private NetRuntimeSystem.Type _thisType;
-		IProgressBarEvents_SinkHelper _iProgressBarEvents_SinkHelper;
+		private Events.IProgressBarEvents_SinkHelper _iProgressBarEvents_SinkHelper;
 	
 		#endregion
 
@@ -47,6 +47,7 @@ namespace NetOffice.MSComctlLibApi
         /// <summary>
         /// Instance Type
         /// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
         public override Type InstanceType
         {
             get
@@ -113,17 +114,17 @@ namespace NetOffice.MSComctlLibApi
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of ProgressBar 
-        ///</summary>		
+        /// </summary>		
 		public ProgressBar():base("MSComctlLib.ProgressBar")
 		{
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of ProgressBar
-        ///</summary>
+        /// </summary>
         ///<param name="progId">registered ProgID</param>
 		public ProgressBar(string progId):base(progId)
 		{
@@ -133,46 +134,6 @@ namespace NetOffice.MSComctlLibApi
 		#endregion
 
 		#region Static CoClass Methods
-
-		/// <summary>
-        /// Returns all running MSComctlLib.ProgressBar objects from the environment/system
-        /// </summary>
-        /// <returns>an MSComctlLib.ProgressBar array</returns>
-		public static NetOffice.MSComctlLibApi.ProgressBar[] GetActiveInstances()
-		{		
-			IDisposableEnumeration proxyList = NetOffice.ProxyService.GetActiveInstances("MSComctlLib","ProgressBar");
-			NetRuntimeSystem.Collections.Generic.List<NetOffice.MSComctlLibApi.ProgressBar> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.MSComctlLibApi.ProgressBar>();
-			foreach(object proxy in proxyList)
-				resultList.Add( new NetOffice.MSComctlLibApi.ProgressBar(null, proxy) );
-			return resultList.ToArray();
-		}
-
-		/// <summary>
-        /// Returns a running MSComctlLib.ProgressBar object from the environment/system.
-        /// </summary>
-        /// <returns>an MSComctlLib.ProgressBar object or null</returns>
-		public static NetOffice.MSComctlLibApi.ProgressBar GetActiveInstance()
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("MSComctlLib","ProgressBar", false);
-			if(null != proxy)
-				return new NetOffice.MSComctlLibApi.ProgressBar(null, proxy);
-			else
-				return null;
-		}
-
-		/// <summary>
-        /// Returns a running MSComctlLib.ProgressBar object from the environment/system. 
-        /// </summary>
-	    /// <param name="throwOnError">throw an exception if no object was found</param>
-        /// <returns>an MSComctlLib.ProgressBar object or null</returns>
-		public static NetOffice.MSComctlLibApi.ProgressBar GetActiveInstance(bool throwOnError)
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("MSComctlLib","ProgressBar", throwOnError);
-			if(null != proxy)
-				return new NetOffice.MSComctlLibApi.ProgressBar(null, proxy);
-			else
-				return null;
-		}
 		#endregion
 
 		#region Events
@@ -414,12 +375,12 @@ namespace NetOffice.MSComctlLibApi
 				return;
 	
             if (null == _activeSinkId)
-				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, IProgressBarEvents_SinkHelper.Id);
+				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, Events.IProgressBarEvents_SinkHelper.Id);
 
 
-			if(IProgressBarEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
+			if(Events.IProgressBarEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
 			{
-				_iProgressBarEvents_SinkHelper = new IProgressBarEvents_SinkHelper(this, _connectPoint);
+				_iProgressBarEvents_SinkHelper = new Events.IProgressBarEvents_SinkHelper(this, _connectPoint);
 				return;
 			} 
         }

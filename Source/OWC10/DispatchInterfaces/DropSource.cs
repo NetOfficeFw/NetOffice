@@ -1,23 +1,33 @@
 ﻿using System;
 using NetRuntimeSystem = System;
-using System.Runtime.InteropServices;
-using System.Runtime.CompilerServices;
 using System.ComponentModel;
-using System.Reflection;
-using System.Collections.Generic;
-using NetOffice;
+using NetOffice.Attributes;
+
 namespace NetOffice.OWC10Api
 {
-	///<summary>
+	/// <summary>
 	/// DispatchInterface DropSource 
 	/// SupportByVersion OWC10, 1
-	///</summary>
-	[SupportByVersionAttribute("OWC10", 1)]
-	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
-	public class DropSource : COMObject
+	/// </summary>
+	[SupportByVersion("OWC10", 1)]
+	[EntityType(EntityType.IsDispatchInterface)]
+ 	public class DropSource : COMObject
 	{
 		#pragma warning disable
+
 		#region Type Information
+
+		/// <summary>
+		/// Instance Type
+		/// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
+		public override Type InstanceType
+		{
+			get
+			{
+				return LateBindingApiWrapperType;
+			}
+		}
 
         private static Type _type;
 
@@ -28,14 +38,20 @@ namespace NetOffice.OWC10Api
             {
                 if (null == _type)
                     _type = typeof(DropSource);
-                    
                 return _type;
             }
         }
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public DropSource(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -81,7 +97,7 @@ namespace NetOffice.OWC10Api
 		{
 		}
 		
-		/// <param name="progId">registered ProgID</param>
+		/// <param name="progId">registered progID</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public DropSource(string progId) : base(progId)
 		{
@@ -97,30 +113,27 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
-		/// 
 		/// </summary>
 		/// <param name="dwEffect">Int32 dwEffect</param>
-		[SupportByVersionAttribute("OWC10", 1)]
+		[SupportByVersion("OWC10", 1)]
 		public void GiveFeedback(Int32 dwEffect)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(dwEffect);
-			Invoker.Method(this, "GiveFeedback", paramsArray);
+			 Factory.ExecuteMethod(this, "GiveFeedback", dwEffect);
 		}
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
-		/// 
 		/// </summary>
-		/// <param name="escapePressed">bool EscapePressed</param>
-		/// <param name="keyState">Int32 KeyState</param>
-		[SupportByVersionAttribute("OWC10", 1)]
+		/// <param name="escapePressed">bool escapePressed</param>
+		/// <param name="keyState">Int32 keyState</param>
+		[SupportByVersion("OWC10", 1)]
 		public void QueryContinueDrag(bool escapePressed, Int32 keyState)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(escapePressed, keyState);
-			Invoker.Method(this, "QueryContinueDrag", paramsArray);
+			 Factory.ExecuteMethod(this, "QueryContinueDrag", escapePressed, keyState);
 		}
 
 		#endregion
+
 		#pragma warning restore
 	}
 }

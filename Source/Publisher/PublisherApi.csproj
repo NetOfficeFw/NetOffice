@@ -47,7 +47,7 @@
     <Compile Include="AssemblyInfo.cs" />
     <Compile Include="Tools\COMAddin.cs" />
     <Compile Include="Tools\ITaskPane.cs" />
-    <Compile Include="Tools\Utils\CommonUtils.cs" />
+    <Compile Include="Tools\Contribution\CommonUtils.cs" />
     <Compile Include="Utils\ProjectInfo.cs" />
     <Compile Include="Enums\PbSchemeColorIndex.cs" />
     <Compile Include="Enums\PbColorType.cs" />
@@ -284,8 +284,8 @@
     <Compile Include="DispatchInterfaces\SoftEdgeFormat.cs" />
     <Compile Include="Classes\Document.cs" />
     <Compile Include="Classes\Application.cs" />
-    <Compile Include="EventInterfaces\ApplicationEvents.cs" />
-    <Compile Include="EventInterfaces\DocumentEvents.cs" />
+    <Compile Include="Events\ApplicationEvents.cs" />
+    <Compile Include="Events\DocumentEvents.cs" />
     <Compile Include="Modules\Global.cs" />
   </ItemGroup>
   <ItemGroup>

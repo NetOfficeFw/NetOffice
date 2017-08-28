@@ -1,23 +1,33 @@
 ﻿using System;
 using NetRuntimeSystem = System;
-using System.Runtime.InteropServices;
-using System.Runtime.CompilerServices;
 using System.ComponentModel;
-using System.Reflection;
-using System.Collections.Generic;
-using NetOffice;
+using NetOffice.Attributes;
+
 namespace NetOffice.DAOApi
 {
-	///<summary>
+	/// <summary>
 	/// DispatchInterface _DynaCollection 
 	/// SupportByVersion DAO, 3.6,12.0
-	///</summary>
-	[SupportByVersionAttribute("DAO", 3.6,12.0)]
-	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
-	public class _DynaCollection : _Collection
+	/// </summary>
+	[SupportByVersion("DAO", 3.6,12.0)]
+	[EntityType(EntityType.IsDispatchInterface)]
+ 	public class _DynaCollection : _Collection
 	{
 		#pragma warning disable
+
 		#region Type Information
+
+		/// <summary>
+		/// Instance Type
+		/// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
+		public override Type InstanceType
+		{
+			get
+			{
+				return LateBindingApiWrapperType;
+			}
+		}
 
         private static Type _type;
 
@@ -28,14 +38,20 @@ namespace NetOffice.DAOApi
             {
                 if (null == _type)
                     _type = typeof(_DynaCollection);
-                    
                 return _type;
             }
         }
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public _DynaCollection(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -81,7 +97,7 @@ namespace NetOffice.DAOApi
 		{
 		}
 		
-		/// <param name="progId">registered ProgID</param>
+		/// <param name="progId">registered progID</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public _DynaCollection(string progId) : base(progId)
 		{
@@ -97,29 +113,26 @@ namespace NetOffice.DAOApi
 
 		/// <summary>
 		/// SupportByVersion DAO 3.6, 12.0
-		/// 
 		/// </summary>
-		/// <param name="_object">object Object</param>
-		[SupportByVersionAttribute("DAO", 3.6,12.0)]
+		/// <param name="_object">object object</param>
+		[SupportByVersion("DAO", 3.6,12.0)]
 		public void Append(object _object)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(_object);
-			Invoker.Method(this, "Append", paramsArray);
+			 Factory.ExecuteMethod(this, "Append", _object);
 		}
 
 		/// <summary>
 		/// SupportByVersion DAO 3.6, 12.0
-		/// 
 		/// </summary>
-		/// <param name="name">string Name</param>
-		[SupportByVersionAttribute("DAO", 3.6,12.0)]
+		/// <param name="name">string name</param>
+		[SupportByVersion("DAO", 3.6,12.0)]
 		public void Delete(string name)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(name);
-			Invoker.Method(this, "Delete", paramsArray);
+			 Factory.ExecuteMethod(this, "Delete", name);
 		}
 
 		#endregion
+
 		#pragma warning restore
 	}
 }

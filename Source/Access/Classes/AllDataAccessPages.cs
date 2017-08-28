@@ -1,12 +1,10 @@
 ﻿using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
-using NetOffice;
-using NetOffice.Misc;
+using NetOffice.Attributes;
 
 namespace NetOffice.AccessApi
 {
-
 	#region Delegates
 
 	#pragma warning disable
@@ -14,15 +12,16 @@ namespace NetOffice.AccessApi
 
 	#endregion
 
-	///<summary>
+	/// <summary>
 	/// CoClass AllDataAccessPages 
 	/// SupportByVersion Access, 9,10,11,12,14,15,16
-	///</summary>
-	[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
-	[EntityTypeAttribute(EntityType.IsCoClass)]
-	public class AllDataAccessPages : AllObjects
+	/// </summary>
+	[SupportByVersion("Access", 9,10,11,12,14,15,16)]
+	[EntityType(EntityType.IsCoClass)]
+ 	public class AllDataAccessPages : AllObjects
 	{
 		#pragma warning disable
+
 		#region Fields
 		
 		private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
@@ -36,6 +35,7 @@ namespace NetOffice.AccessApi
         /// <summary>
         /// Instance Type
         /// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
         public override Type InstanceType
         {
             get
@@ -102,17 +102,17 @@ namespace NetOffice.AccessApi
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of AllDataAccessPages 
-        ///</summary>		
+        /// </summary>		
 		public AllDataAccessPages():base("Access.AllDataAccessPages")
 		{
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of AllDataAccessPages
-        ///</summary>
+        /// </summary>
         ///<param name="progId">registered ProgID</param>
 		public AllDataAccessPages(string progId):base(progId)
 		{
@@ -122,46 +122,6 @@ namespace NetOffice.AccessApi
 		#endregion
 
 		#region Static CoClass Methods
-
-		/// <summary>
-        /// Returns all running Access.AllDataAccessPages objects from the environment/system
-        /// </summary>
-        /// <returns>an Access.AllDataAccessPages array</returns>
-		public static NetOffice.AccessApi.AllDataAccessPages[] GetActiveInstances()
-		{		
-			IDisposableEnumeration proxyList = NetOffice.ProxyService.GetActiveInstances("Access","AllDataAccessPages");
-			NetRuntimeSystem.Collections.Generic.List<NetOffice.AccessApi.AllDataAccessPages> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.AccessApi.AllDataAccessPages>();
-			foreach(object proxy in proxyList)
-				resultList.Add( new NetOffice.AccessApi.AllDataAccessPages(null, proxy) );
-			return resultList.ToArray();
-		}
-
-		/// <summary>
-        /// Returns a running Access.AllDataAccessPages object from the environment/system.
-        /// </summary>
-        /// <returns>an Access.AllDataAccessPages object or null</returns>
-		public static NetOffice.AccessApi.AllDataAccessPages GetActiveInstance()
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Access","AllDataAccessPages", false);
-			if(null != proxy)
-				return new NetOffice.AccessApi.AllDataAccessPages(null, proxy);
-			else
-				return null;
-		}
-
-		/// <summary>
-        /// Returns a running Access.AllDataAccessPages object from the environment/system. 
-        /// </summary>
-	    /// <param name="throwOnError">throw an exception if no object was found</param>
-        /// <returns>an Access.AllDataAccessPages object or null</returns>
-		public static NetOffice.AccessApi.AllDataAccessPages GetActiveInstance(bool throwOnError)
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Access","AllDataAccessPages", throwOnError);
-			if(null != proxy)
-				return new NetOffice.AccessApi.AllDataAccessPages(null, proxy);
-			else
-				return null;
-		}
 		#endregion
 
 		#region Events

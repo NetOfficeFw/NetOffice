@@ -1,12 +1,10 @@
 ﻿using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
-using NetOffice;
-using NetOffice.Misc;
+using NetOffice.Attributes;
 
 namespace NetOffice.PowerPointApi
 {
-
 	#region Delegates
 
 	#pragma warning disable
@@ -14,15 +12,16 @@ namespace NetOffice.PowerPointApi
 
 	#endregion
 
-	///<summary>
+	/// <summary>
 	/// CoClass PowerRex 
 	/// SupportByVersion PowerPoint, 10,11,12,14,15,16
-	///</summary>
-	[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15,16)]
-	[EntityTypeAttribute(EntityType.IsCoClass)]
-	public class PowerRex : _PowerRex
+	/// </summary>
+	[SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
+	[EntityType(EntityType.IsCoClass)]
+ 	public class PowerRex : _PowerRex
 	{
 		#pragma warning disable
+
 		#region Fields
 		
 		private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
@@ -36,6 +35,7 @@ namespace NetOffice.PowerPointApi
         /// <summary>
         /// Instance Type
         /// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
         public override Type InstanceType
         {
             get
@@ -102,17 +102,17 @@ namespace NetOffice.PowerPointApi
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of PowerRex 
-        ///</summary>		
+        /// </summary>		
 		public PowerRex():base("PowerPoint.PowerRex")
 		{
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of PowerRex
-        ///</summary>
+        /// </summary>
         ///<param name="progId">registered ProgID</param>
 		public PowerRex(string progId):base(progId)
 		{
@@ -122,46 +122,6 @@ namespace NetOffice.PowerPointApi
 		#endregion
 
 		#region Static CoClass Methods
-
-		/// <summary>
-        /// Returns all running PowerPoint.PowerRex objects from the environment/system
-        /// </summary>
-        /// <returns>an PowerPoint.PowerRex array</returns>
-		public static NetOffice.PowerPointApi.PowerRex[] GetActiveInstances()
-		{		
-			IDisposableEnumeration proxyList = NetOffice.ProxyService.GetActiveInstances("PowerPoint","PowerRex");
-			NetRuntimeSystem.Collections.Generic.List<NetOffice.PowerPointApi.PowerRex> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.PowerPointApi.PowerRex>();
-			foreach(object proxy in proxyList)
-				resultList.Add( new NetOffice.PowerPointApi.PowerRex(null, proxy) );
-			return resultList.ToArray();
-		}
-
-		/// <summary>
-        /// Returns a running PowerPoint.PowerRex object from the environment/system.
-        /// </summary>
-        /// <returns>an PowerPoint.PowerRex object or null</returns>
-		public static NetOffice.PowerPointApi.PowerRex GetActiveInstance()
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("PowerPoint","PowerRex", false);
-			if(null != proxy)
-				return new NetOffice.PowerPointApi.PowerRex(null, proxy);
-			else
-				return null;
-		}
-
-		/// <summary>
-        /// Returns a running PowerPoint.PowerRex object from the environment/system. 
-        /// </summary>
-	    /// <param name="throwOnError">throw an exception if no object was found</param>
-        /// <returns>an PowerPoint.PowerRex object or null</returns>
-		public static NetOffice.PowerPointApi.PowerRex GetActiveInstance(bool throwOnError)
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("PowerPoint","PowerRex", throwOnError);
-			if(null != proxy)
-				return new NetOffice.PowerPointApi.PowerRex(null, proxy);
-			else
-				return null;
-		}
 		#endregion
 
 		#region Events

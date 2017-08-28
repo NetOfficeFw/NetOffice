@@ -1,38 +1,38 @@
 ﻿using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
-using NetOffice;
-using NetOffice.Misc;
+using NetOffice.Attributes;
 
 namespace NetOffice.OfficeApi
 {
-
 	#region Delegates
 
 	#pragma warning disable
-	public delegate void CustomXMLPart_NodeAfterInsertEventHandler(NetOffice.OfficeApi.CustomXMLNode NewNode, bool InUndoRedo);
-	public delegate void CustomXMLPart_NodeAfterDeleteEventHandler(NetOffice.OfficeApi.CustomXMLNode OldNode, NetOffice.OfficeApi.CustomXMLNode OldParentNode, NetOffice.OfficeApi.CustomXMLNode OldNextSibling, bool InUndoRedo);
-	public delegate void CustomXMLPart_NodeAfterReplaceEventHandler(NetOffice.OfficeApi.CustomXMLNode OldNode, NetOffice.OfficeApi.CustomXMLNode NewNode, bool InUndoRedo);
+	public delegate void CustomXMLPart_NodeAfterInsertEventHandler(NetOffice.OfficeApi.CustomXMLNode newNode, bool InUndoRedo);
+	public delegate void CustomXMLPart_NodeAfterDeleteEventHandler(NetOffice.OfficeApi.CustomXMLNode oldNode, NetOffice.OfficeApi.CustomXMLNode oldParentNode, NetOffice.OfficeApi.CustomXMLNode oldNextSibling, bool inUndoRedo);
+	public delegate void CustomXMLPart_NodeAfterReplaceEventHandler(NetOffice.OfficeApi.CustomXMLNode oldNode, NetOffice.OfficeApi.CustomXMLNode newNode, bool inUndoRedo);
 	#pragma warning restore
 
 	#endregion
 
-	///<summary>
+	/// <summary>
 	/// CoClass CustomXMLPart 
 	/// SupportByVersion Office, 12,14,15,16
-	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff863497.aspx
-	///</summary>
-	[SupportByVersionAttribute("Office", 12,14,15,16)]
-	[EntityTypeAttribute(EntityType.IsCoClass)]
-	public class CustomXMLPart : _CustomXMLPart,IEventBinding
+	/// </summary>
+	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff863497.aspx </remarks>
+	[SupportByVersion("Office", 12,14,15,16)]
+	[EntityType(EntityType.IsCoClass)]
+	[EventSink(typeof(Events._CustomXMLPartEvents_SinkHelper))]
+	public class CustomXMLPart : _CustomXMLPart, IEventBinding
 	{
 		#pragma warning disable
+
 		#region Fields
 		
 		private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
 		private string _activeSinkId;
 		private NetRuntimeSystem.Type _thisType;
-		_CustomXMLPartEvents_SinkHelper __CustomXMLPartEvents_SinkHelper;
+		private Events._CustomXMLPartEvents_SinkHelper __CustomXMLPartEvents_SinkHelper;
 	
 		#endregion
 
@@ -41,6 +41,7 @@ namespace NetOffice.OfficeApi
         /// <summary>
         /// Instance Type
         /// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
         public override Type InstanceType
         {
             get
@@ -107,17 +108,17 @@ namespace NetOffice.OfficeApi
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of CustomXMLPart 
-        ///</summary>		
+        /// </summary>		
 		public CustomXMLPart():base("Office.CustomXMLPart")
 		{
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of CustomXMLPart
-        ///</summary>
+        /// </summary>
         ///<param name="progId">registered ProgID</param>
 		public CustomXMLPart(string progId):base(progId)
 		{
@@ -127,46 +128,6 @@ namespace NetOffice.OfficeApi
 		#endregion
 
 		#region Static CoClass Methods
-
-		/// <summary>
-        /// Returns all running Office.CustomXMLPart objects from the environment/system
-        /// </summary>
-        /// <returns>an Office.CustomXMLPart array</returns>
-		public static NetOffice.OfficeApi.CustomXMLPart[] GetActiveInstances()
-		{		
-			IDisposableEnumeration proxyList = NetOffice.ProxyService.GetActiveInstances("Office","CustomXMLPart");
-			NetRuntimeSystem.Collections.Generic.List<NetOffice.OfficeApi.CustomXMLPart> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.OfficeApi.CustomXMLPart>();
-			foreach(object proxy in proxyList)
-				resultList.Add( new NetOffice.OfficeApi.CustomXMLPart(null, proxy) );
-			return resultList.ToArray();
-		}
-
-		/// <summary>
-        /// Returns a running Office.CustomXMLPart object from the environment/system.
-        /// </summary>
-        /// <returns>an Office.CustomXMLPart object or null</returns>
-		public static NetOffice.OfficeApi.CustomXMLPart GetActiveInstance()
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Office","CustomXMLPart", false);
-			if(null != proxy)
-				return new NetOffice.OfficeApi.CustomXMLPart(null, proxy);
-			else
-				return null;
-		}
-
-		/// <summary>
-        /// Returns a running Office.CustomXMLPart object from the environment/system. 
-        /// </summary>
-	    /// <param name="throwOnError">throw an exception if no object was found</param>
-        /// <returns>an Office.CustomXMLPart object or null</returns>
-		public static NetOffice.OfficeApi.CustomXMLPart GetActiveInstance(bool throwOnError)
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Office","CustomXMLPart", throwOnError);
-			if(null != proxy)
-				return new NetOffice.OfficeApi.CustomXMLPart(null, proxy);
-			else
-				return null;
-		}
 		#endregion
 
 		#region Events
@@ -257,12 +218,12 @@ namespace NetOffice.OfficeApi
 				return;
 	
             if (null == _activeSinkId)
-				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, _CustomXMLPartEvents_SinkHelper.Id);
+				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, Events._CustomXMLPartEvents_SinkHelper.Id);
 
 
-			if(_CustomXMLPartEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
+			if(Events._CustomXMLPartEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
 			{
-				__CustomXMLPartEvents_SinkHelper = new _CustomXMLPartEvents_SinkHelper(this, _connectPoint);
+				__CustomXMLPartEvents_SinkHelper = new Events._CustomXMLPartEvents_SinkHelper(this, _connectPoint);
 				return;
 			} 
         }

@@ -1,23 +1,33 @@
-﻿using System;
+using System;
 using NetRuntimeSystem = System;
-using System.Runtime.InteropServices;
-using System.Runtime.CompilerServices;
 using System.ComponentModel;
-using System.Reflection;
-using System.Collections.Generic;
-using NetOffice;
+using NetOffice.Attributes;
+
 namespace NetOffice.MSFormsApi
 {
-	///<summary>
+	/// <summary>
 	/// DispatchInterface IMdcCheckBox 
 	/// SupportByVersion MSForms, 2
-	///</summary>
-	[SupportByVersionAttribute("MSForms", 2)]
-	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
-	public class IMdcCheckBox : COMObject
+	/// </summary>
+	[SupportByVersion("MSForms", 2)]
+	[EntityType(EntityType.IsDispatchInterface)]
+ 	public class IMdcCheckBox : COMObject
 	{
 		#pragma warning disable
+
 		#region Type Information
+
+		/// <summary>
+		/// Instance Type
+		/// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
+		public override Type InstanceType
+		{
+			get
+			{
+				return LateBindingApiWrapperType;
+			}
+		}
 
         private static Type _type;
 
@@ -28,14 +38,20 @@ namespace NetOffice.MSFormsApi
             {
                 if (null == _type)
                     _type = typeof(IMdcCheckBox);
-                    
                 return _type;
             }
         }
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public IMdcCheckBox(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -81,7 +97,7 @@ namespace NetOffice.MSFormsApi
 		{
 		}
 		
-		/// <param name="progId">registered ProgID</param>
+		/// <param name="progId">registered progID</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public IMdcCheckBox(string progId) : base(progId)
 		{
@@ -95,19 +111,16 @@ namespace NetOffice.MSFormsApi
 		/// SupportByVersion MSForms 2
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSForms", 2)]
+		[SupportByVersion("MSForms", 2)]
 		public string Accelerator
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Accelerator", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "Accelerator");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "Accelerator", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "Accelerator", value);
 			}
 		}
 
@@ -115,20 +128,16 @@ namespace NetOffice.MSFormsApi
 		/// SupportByVersion MSForms 2
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSForms", 2)]
+		[SupportByVersion("MSForms", 2)]
 		public NetOffice.MSFormsApi.Enums.fmAlignment Alignment
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Alignment", paramsArray);
-				int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-				return (NetOffice.MSFormsApi.Enums.fmAlignment)intReturnItem;
+				return Factory.ExecuteEnumPropertyGet<NetOffice.MSFormsApi.Enums.fmAlignment>(this, "Alignment");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "Alignment", paramsArray);
+				Factory.ExecuteEnumPropertySet(this, "Alignment", value);
 			}
 		}
 
@@ -136,19 +145,16 @@ namespace NetOffice.MSFormsApi
 		/// SupportByVersion MSForms 2
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSForms", 2)]
+		[SupportByVersion("MSForms", 2)]
 		public bool AutoSize
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "AutoSize", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "AutoSize");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "AutoSize", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "AutoSize", value);
 			}
 		}
 
@@ -156,19 +162,16 @@ namespace NetOffice.MSFormsApi
 		/// SupportByVersion MSForms 2
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSForms", 2)]
+		[SupportByVersion("MSForms", 2)]
 		public Int32 BackColor
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "BackColor", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "BackColor");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "BackColor", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "BackColor", value);
 			}
 		}
 
@@ -176,20 +179,16 @@ namespace NetOffice.MSFormsApi
 		/// SupportByVersion MSForms 2
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSForms", 2)]
+		[SupportByVersion("MSForms", 2)]
 		public NetOffice.MSFormsApi.Enums.fmBackStyle BackStyle
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "BackStyle", paramsArray);
-				int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-				return (NetOffice.MSFormsApi.Enums.fmBackStyle)intReturnItem;
+				return Factory.ExecuteEnumPropertyGet<NetOffice.MSFormsApi.Enums.fmBackStyle>(this, "BackStyle");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "BackStyle", paramsArray);
+				Factory.ExecuteEnumPropertySet(this, "BackStyle", value);
 			}
 		}
 
@@ -197,20 +196,17 @@ namespace NetOffice.MSFormsApi
 		/// SupportByVersion MSForms 2
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSForms", 2)]
+		[SupportByVersion("MSForms", 2)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public bool BordersSuppress
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "BordersSuppress", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "BordersSuppress");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "BordersSuppress", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "BordersSuppress", value);
 			}
 		}
 
@@ -218,19 +214,16 @@ namespace NetOffice.MSFormsApi
 		/// SupportByVersion MSForms 2
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSForms", 2)]
+		[SupportByVersion("MSForms", 2)]
 		public string Caption
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Caption", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "Caption");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "Caption", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "Caption", value);
 			}
 		}
 
@@ -238,19 +231,16 @@ namespace NetOffice.MSFormsApi
 		/// SupportByVersion MSForms 2
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSForms", 2)]
+		[SupportByVersion("MSForms", 2)]
 		public bool Enabled
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Enabled", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "Enabled");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "Enabled", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "Enabled", value);
 			}
 		}
 
@@ -258,21 +248,18 @@ namespace NetOffice.MSFormsApi
 		/// SupportByVersion MSForms 2
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSForms", 2)]
+		[SupportByVersion("MSForms", 2)]
+		[BaseResult]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public NetOffice.MSFormsApi.Font _Font_Reserved
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "_Font_Reserved", paramsArray);
-				NetOffice.MSFormsApi.Font newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.MSFormsApi.Font.LateBindingApiWrapperType) as NetOffice.MSFormsApi.Font;
-				return newObject;
+				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.MSFormsApi.Font>(this, "_Font_Reserved");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "_Font_Reserved", paramsArray);
+				Factory.ExecuteReferencePropertySet(this, "_Font_Reserved", value);
 			}
 		}
 
@@ -280,20 +267,17 @@ namespace NetOffice.MSFormsApi
 		/// SupportByVersion MSForms 2
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSForms", 2)]
+		[SupportByVersion("MSForms", 2)]
+		[BaseResult]
 		public NetOffice.MSFormsApi.Font Font
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Font", paramsArray);
-				NetOffice.MSFormsApi.Font newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.MSFormsApi.Font.LateBindingApiWrapperType) as NetOffice.MSFormsApi.Font;
-				return newObject;
+				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.MSFormsApi.Font>(this, "Font");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "Font", paramsArray);
+				Factory.ExecuteReferencePropertySet(this, "Font", value);
 			}
 		}
 
@@ -301,20 +285,17 @@ namespace NetOffice.MSFormsApi
 		/// SupportByVersion MSForms 2
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSForms", 2)]
+		[SupportByVersion("MSForms", 2)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public bool FontBold
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "FontBold", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "FontBold");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "FontBold", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "FontBold", value);
 			}
 		}
 
@@ -322,20 +303,17 @@ namespace NetOffice.MSFormsApi
 		/// SupportByVersion MSForms 2
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSForms", 2)]
+		[SupportByVersion("MSForms", 2)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public bool FontItalic
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "FontItalic", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "FontItalic");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "FontItalic", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "FontItalic", value);
 			}
 		}
 
@@ -343,20 +321,17 @@ namespace NetOffice.MSFormsApi
 		/// SupportByVersion MSForms 2
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSForms", 2)]
+		[SupportByVersion("MSForms", 2)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public string FontName
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "FontName", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "FontName");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "FontName", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "FontName", value);
 			}
 		}
 
@@ -364,20 +339,17 @@ namespace NetOffice.MSFormsApi
 		/// SupportByVersion MSForms 2
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSForms", 2)]
+		[SupportByVersion("MSForms", 2)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public float FontSize
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "FontSize", paramsArray);
-                return NetRuntimeSystem.Convert.ToSingle(returnItem);
+				return Factory.ExecuteFloatPropertyGet(this, "FontSize");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "FontSize", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "FontSize", value);
 			}
 		}
 
@@ -385,20 +357,17 @@ namespace NetOffice.MSFormsApi
 		/// SupportByVersion MSForms 2
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSForms", 2)]
+		[SupportByVersion("MSForms", 2)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public bool FontStrikethru
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "FontStrikethru", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "FontStrikethru");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "FontStrikethru", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "FontStrikethru", value);
 			}
 		}
 
@@ -406,20 +375,17 @@ namespace NetOffice.MSFormsApi
 		/// SupportByVersion MSForms 2
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSForms", 2)]
+		[SupportByVersion("MSForms", 2)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public bool FontUnderline
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "FontUnderline", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "FontUnderline");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "FontUnderline", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "FontUnderline", value);
 			}
 		}
 
@@ -427,20 +393,17 @@ namespace NetOffice.MSFormsApi
 		/// SupportByVersion MSForms 2
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSForms", 2)]
+		[SupportByVersion("MSForms", 2)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public Int16 FontWeight
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "FontWeight", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt16(returnItem);
+				return Factory.ExecuteInt16PropertyGet(this, "FontWeight");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "FontWeight", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "FontWeight", value);
 			}
 		}
 
@@ -448,19 +411,16 @@ namespace NetOffice.MSFormsApi
 		/// SupportByVersion MSForms 2
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSForms", 2)]
+		[SupportByVersion("MSForms", 2)]
 		public Int32 ForeColor
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "ForeColor", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "ForeColor");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "ForeColor", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "ForeColor", value);
 			}
 		}
 
@@ -468,19 +428,16 @@ namespace NetOffice.MSFormsApi
 		/// SupportByVersion MSForms 2
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSForms", 2)]
+		[SupportByVersion("MSForms", 2)]
 		public bool Locked
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Locked", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "Locked");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "Locked", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "Locked", value);
 			}
 		}
 
@@ -488,7 +445,7 @@ namespace NetOffice.MSFormsApi
 		/// SupportByVersion MSForms 2
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSForms", 2)]
+		[SupportByVersion("MSForms", 2)]
 		public stdole.Picture MouseIcon
 		{
 			get
@@ -509,20 +466,16 @@ namespace NetOffice.MSFormsApi
 		/// SupportByVersion MSForms 2
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSForms", 2)]
+		[SupportByVersion("MSForms", 2)]
 		public NetOffice.MSFormsApi.Enums.fmMousePointer MousePointer
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "MousePointer", paramsArray);
-				int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-				return (NetOffice.MSFormsApi.Enums.fmMousePointer)intReturnItem;
+				return Factory.ExecuteEnumPropertyGet<NetOffice.MSFormsApi.Enums.fmMousePointer>(this, "MousePointer");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "MousePointer", paramsArray);
+				Factory.ExecuteEnumPropertySet(this, "MousePointer", value);
 			}
 		}
 
@@ -530,21 +483,17 @@ namespace NetOffice.MSFormsApi
 		/// SupportByVersion MSForms 2
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSForms", 2)]
+		[SupportByVersion("MSForms", 2)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public NetOffice.MSFormsApi.Enums.fmMultiSelect MultiSelect
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "MultiSelect", paramsArray);
-				int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-				return (NetOffice.MSFormsApi.Enums.fmMultiSelect)intReturnItem;
+				return Factory.ExecuteEnumPropertyGet<NetOffice.MSFormsApi.Enums.fmMultiSelect>(this, "MultiSelect");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "MultiSelect", paramsArray);
+				Factory.ExecuteEnumPropertySet(this, "MultiSelect", value);
 			}
 		}
 
@@ -552,7 +501,7 @@ namespace NetOffice.MSFormsApi
 		/// SupportByVersion MSForms 2
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSForms", 2)]
+		[SupportByVersion("MSForms", 2)]
 		public stdole.Picture Picture
 		{
 			get
@@ -573,20 +522,16 @@ namespace NetOffice.MSFormsApi
 		/// SupportByVersion MSForms 2
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSForms", 2)]
+		[SupportByVersion("MSForms", 2)]
 		public NetOffice.MSFormsApi.Enums.fmPicturePosition PicturePosition
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "PicturePosition", paramsArray);
-				int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-				return (NetOffice.MSFormsApi.Enums.fmPicturePosition)intReturnItem;
+				return Factory.ExecuteEnumPropertyGet<NetOffice.MSFormsApi.Enums.fmPicturePosition>(this, "PicturePosition");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "PicturePosition", paramsArray);
+				Factory.ExecuteEnumPropertySet(this, "PicturePosition", value);
 			}
 		}
 
@@ -594,20 +539,16 @@ namespace NetOffice.MSFormsApi
 		/// SupportByVersion MSForms 2
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSForms", 2)]
+		[SupportByVersion("MSForms", 2)]
 		public NetOffice.MSFormsApi.Enums.fmButtonEffect SpecialEffect
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "SpecialEffect", paramsArray);
-				int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-				return (NetOffice.MSFormsApi.Enums.fmButtonEffect)intReturnItem;
+				return Factory.ExecuteEnumPropertyGet<NetOffice.MSFormsApi.Enums.fmButtonEffect>(this, "SpecialEffect");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "SpecialEffect", paramsArray);
+				Factory.ExecuteEnumPropertySet(this, "SpecialEffect", value);
 			}
 		}
 
@@ -615,19 +556,16 @@ namespace NetOffice.MSFormsApi
 		/// SupportByVersion MSForms 2
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSForms", 2)]
+		[SupportByVersion("MSForms", 2)]
 		public bool TripleState
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "TripleState", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "TripleState");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "TripleState", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "TripleState", value);
 			}
 		}
 
@@ -635,15 +573,13 @@ namespace NetOffice.MSFormsApi
 		/// SupportByVersion MSForms 2
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("MSForms", 2)]
+		[SupportByVersion("MSForms", 2)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public bool Valid
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Valid", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "Valid");
 			}
 		}
 
@@ -651,27 +587,16 @@ namespace NetOffice.MSFormsApi
 		/// SupportByVersion MSForms 2
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSForms", 2)]
+		[SupportByVersion("MSForms", 2)]
 		public object Value
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Value", paramsArray);
-				if((null != returnItem) && (returnItem is MarshalByRefObject))
-				{
-					ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
-					return newObject;
-				}
-				else
-				{
-					return  returnItem;
-				}
+				return Factory.ExecuteVariantPropertyGet(this, "Value");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "Value", paramsArray);
+				Factory.ExecuteVariantPropertySet(this, "Value", value);
 			}
 		}
 
@@ -679,19 +604,16 @@ namespace NetOffice.MSFormsApi
 		/// SupportByVersion MSForms 2
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSForms", 2)]
+		[SupportByVersion("MSForms", 2)]
 		public bool WordWrap
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "WordWrap", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+				return Factory.ExecuteBoolPropertyGet(this, "WordWrap");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "WordWrap", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "WordWrap", value);
 			}
 		}
 
@@ -699,16 +621,13 @@ namespace NetOffice.MSFormsApi
 		/// SupportByVersion MSForms 2
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("MSForms", 2)]
+		[SupportByVersion("MSForms", 2)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public NetOffice.MSFormsApi.Enums.fmDisplayStyle DisplayStyle
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "DisplayStyle", paramsArray);
-				int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-				return (NetOffice.MSFormsApi.Enums.fmDisplayStyle)intReturnItem;
+				return Factory.ExecuteEnumPropertyGet<NetOffice.MSFormsApi.Enums.fmDisplayStyle>(this, "DisplayStyle");
 			}
 		}
 
@@ -716,19 +635,16 @@ namespace NetOffice.MSFormsApi
 		/// SupportByVersion MSForms 2
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSForms", 2)]
+		[SupportByVersion("MSForms", 2)]
 		public string GroupName
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "GroupName", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "GroupName");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "GroupName", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "GroupName", value);
 			}
 		}
 
@@ -736,20 +652,16 @@ namespace NetOffice.MSFormsApi
 		/// SupportByVersion MSForms 2
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSForms", 2)]
+		[SupportByVersion("MSForms", 2)]
 		public NetOffice.MSFormsApi.Enums.fmTextAlign TextAlign
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "TextAlign", paramsArray);
-				int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-				return (NetOffice.MSFormsApi.Enums.fmTextAlign)intReturnItem;
+				return Factory.ExecuteEnumPropertyGet<NetOffice.MSFormsApi.Enums.fmTextAlign>(this, "TextAlign");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "TextAlign", paramsArray);
+				Factory.ExecuteEnumPropertySet(this, "TextAlign", value);
 			}
 		}
 
@@ -758,6 +670,7 @@ namespace NetOffice.MSFormsApi
 		#region Methods
 
 		#endregion
+
 		#pragma warning restore
 	}
 }

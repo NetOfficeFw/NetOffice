@@ -1,24 +1,35 @@
-﻿using System;
-using NetRuntimeSystem = System;
-using System.Runtime.InteropServices;
-using System.Runtime.CompilerServices;
-using System.ComponentModel;
-using System.Reflection;
-using System.Collections.Generic;
 using System.Collections;
-using NetOffice;
+using System.Collections.Generic;
+using System;
+using NetRuntimeSystem = System;
+using System.ComponentModel;
+using NetOffice.Attributes;
+
 namespace NetOffice.MSComctlLibApi
 {
-	///<summary>
+	/// <summary>
 	/// DispatchInterface IListSubItems 
 	/// SupportByVersion MSComctlLib, 6
-	///</summary>
-	[SupportByVersionAttribute("MSComctlLib", 6)]
-	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
-	public class IListSubItems : COMObject ,IEnumerable<NetOffice.MSComctlLibApi.IListSubItem>
+	/// </summary>
+	[SupportByVersion("MSComctlLib", 6)]
+	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Method), HasIndexProperty(IndexInvoke.Property, "Item")]
+	public class IListSubItems : COMObject , IEnumerable<NetOffice.MSComctlLibApi.IListSubItem>
 	{
 		#pragma warning disable
+
 		#region Type Information
+
+		/// <summary>
+		/// Instance Type
+		/// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
+		public override Type InstanceType
+		{
+			get
+			{
+				return LateBindingApiWrapperType;
+			}
+		}
 
         private static Type _type;
 
@@ -29,14 +40,20 @@ namespace NetOffice.MSComctlLibApi
             {
                 if (null == _type)
                     _type = typeof(IListSubItems);
-                    
                 return _type;
             }
         }
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public IListSubItems(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -82,7 +99,7 @@ namespace NetOffice.MSComctlLibApi
 		{
 		}
 		
-		/// <param name="progId">registered ProgID</param>
+		/// <param name="progId">registered progID</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public IListSubItems(string progId) : base(progId)
 		{
@@ -96,19 +113,16 @@ namespace NetOffice.MSComctlLibApi
 		/// SupportByVersion MSComctlLib 6
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSComctlLib", 6)]
+		[SupportByVersion("MSComctlLib", 6)]
 		public Int32 Count
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Count", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "Count");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "Count", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "Count", value);
 			}
 		}
 
@@ -116,23 +130,20 @@ namespace NetOffice.MSComctlLibApi
 		/// SupportByVersion MSComctlLib 6
 		/// Get
 		/// </summary>
-		/// <param name="index">object Index</param>
-		[SupportByVersionAttribute("MSComctlLib", 6)]
+		/// <param name="index">object index</param>
+		[SupportByVersion("MSComctlLib", 6)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public NetOffice.MSComctlLibApi.IListSubItem get_ControlDefault(object index)
-		{		
-			object[] paramsArray = Invoker.ValidateParamsArray(index);
-			object returnItem = Invoker.PropertyGet(this, "ControlDefault", paramsArray);
-			NetOffice.MSComctlLibApi.IListSubItem newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSComctlLibApi.IListSubItem;
-			return newObject;
+		{
+			return Factory.ExecuteKnownReferencePropertyGet<NetOffice.MSComctlLibApi.IListSubItem>(this, "ControlDefault", NetOffice.MSComctlLibApi.IListSubItem.LateBindingApiWrapperType, index);
 		}
 
 		/// <summary>
 		/// SupportByVersion MSComctlLib 6
 		/// Alias for get_ControlDefault
 		/// </summary>
-		/// <param name="index">object Index</param>
-		[SupportByVersionAttribute("MSComctlLib", 6)]
+		/// <param name="index">object index</param>
+		[SupportByVersion("MSComctlLib", 6), Redirect("get_ControlDefault")]
 		public NetOffice.MSComctlLibApi.IListSubItem ControlDefault(object index)
 		{
 			return get_ControlDefault(index);
@@ -142,17 +153,15 @@ namespace NetOffice.MSComctlLibApi
 		/// SupportByVersion MSComctlLib 6
 		/// Get
 		/// </summary>
-		/// <param name="index">object Index</param>
-		[SupportByVersionAttribute("MSComctlLib", 6)]
-		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
+		/// <param name="index">object index</param>
+		[SupportByVersion("MSComctlLib", 6)]
+		[BaseResult]
+		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
 		public NetOffice.MSComctlLibApi.IListSubItem this[object index]
 		{
 			get
-{			
-			object[] paramsArray = Invoker.ValidateParamsArray(index);
-			object returnItem = Invoker.PropertyGet(this, "Item", paramsArray);
-			NetOffice.MSComctlLibApi.IListSubItem newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSComctlLibApi.IListSubItem;
-			return newObject;
+			{
+				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.MSComctlLibApi.IListSubItem>(this, "Item", index);
 			}
 		}
 
@@ -162,123 +171,101 @@ namespace NetOffice.MSComctlLibApi
 
 		/// <summary>
 		/// SupportByVersion MSComctlLib 6
-		/// 
 		/// </summary>
-		/// <param name="index">optional object Index</param>
-		/// <param name="key">optional object Key</param>
-		/// <param name="text">optional object Text</param>
-		/// <param name="reportIcon">optional object ReportIcon</param>
-		/// <param name="toolTipText">optional object ToolTipText</param>
-		[SupportByVersionAttribute("MSComctlLib", 6)]
+		/// <param name="index">optional object index</param>
+		/// <param name="key">optional object key</param>
+		/// <param name="text">optional object text</param>
+		/// <param name="reportIcon">optional object reportIcon</param>
+		/// <param name="toolTipText">optional object toolTipText</param>
+		[SupportByVersion("MSComctlLib", 6)]
+		[BaseResult]
 		public NetOffice.MSComctlLibApi.IListSubItem Add(object index, object key, object text, object reportIcon, object toolTipText)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(index, key, text, reportIcon, toolTipText);
-			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.MSComctlLibApi.IListSubItem newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSComctlLibApi.IListSubItem;
-			return newObject;
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.MSComctlLibApi.IListSubItem>(this, "Add", new object[]{ index, key, text, reportIcon, toolTipText });
 		}
 
 		/// <summary>
 		/// SupportByVersion MSComctlLib 6
-		/// 
 		/// </summary>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSComctlLib", 6)]
+		[CustomMethod]
+		[BaseResult]
+		[SupportByVersion("MSComctlLib", 6)]
 		public NetOffice.MSComctlLibApi.IListSubItem Add()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.MSComctlLibApi.IListSubItem newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSComctlLibApi.IListSubItem;
-			return newObject;
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.MSComctlLibApi.IListSubItem>(this, "Add");
 		}
 
 		/// <summary>
 		/// SupportByVersion MSComctlLib 6
-		/// 
 		/// </summary>
-		/// <param name="index">optional object Index</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSComctlLib", 6)]
+		/// <param name="index">optional object index</param>
+		[CustomMethod]
+		[BaseResult]
+		[SupportByVersion("MSComctlLib", 6)]
 		public NetOffice.MSComctlLibApi.IListSubItem Add(object index)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(index);
-			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.MSComctlLibApi.IListSubItem newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSComctlLibApi.IListSubItem;
-			return newObject;
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.MSComctlLibApi.IListSubItem>(this, "Add", index);
 		}
 
 		/// <summary>
 		/// SupportByVersion MSComctlLib 6
-		/// 
 		/// </summary>
-		/// <param name="index">optional object Index</param>
-		/// <param name="key">optional object Key</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSComctlLib", 6)]
+		/// <param name="index">optional object index</param>
+		/// <param name="key">optional object key</param>
+		[CustomMethod]
+		[BaseResult]
+		[SupportByVersion("MSComctlLib", 6)]
 		public NetOffice.MSComctlLibApi.IListSubItem Add(object index, object key)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(index, key);
-			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.MSComctlLibApi.IListSubItem newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSComctlLibApi.IListSubItem;
-			return newObject;
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.MSComctlLibApi.IListSubItem>(this, "Add", index, key);
 		}
 
 		/// <summary>
 		/// SupportByVersion MSComctlLib 6
-		/// 
 		/// </summary>
-		/// <param name="index">optional object Index</param>
-		/// <param name="key">optional object Key</param>
-		/// <param name="text">optional object Text</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSComctlLib", 6)]
+		/// <param name="index">optional object index</param>
+		/// <param name="key">optional object key</param>
+		/// <param name="text">optional object text</param>
+		[CustomMethod]
+		[BaseResult]
+		[SupportByVersion("MSComctlLib", 6)]
 		public NetOffice.MSComctlLibApi.IListSubItem Add(object index, object key, object text)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(index, key, text);
-			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.MSComctlLibApi.IListSubItem newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSComctlLibApi.IListSubItem;
-			return newObject;
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.MSComctlLibApi.IListSubItem>(this, "Add", index, key, text);
 		}
 
 		/// <summary>
 		/// SupportByVersion MSComctlLib 6
-		/// 
 		/// </summary>
-		/// <param name="index">optional object Index</param>
-		/// <param name="key">optional object Key</param>
-		/// <param name="text">optional object Text</param>
-		/// <param name="reportIcon">optional object ReportIcon</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSComctlLib", 6)]
+		/// <param name="index">optional object index</param>
+		/// <param name="key">optional object key</param>
+		/// <param name="text">optional object text</param>
+		/// <param name="reportIcon">optional object reportIcon</param>
+		[CustomMethod]
+		[BaseResult]
+		[SupportByVersion("MSComctlLib", 6)]
 		public NetOffice.MSComctlLibApi.IListSubItem Add(object index, object key, object text, object reportIcon)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(index, key, text, reportIcon);
-			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.MSComctlLibApi.IListSubItem newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSComctlLibApi.IListSubItem;
-			return newObject;
+			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.MSComctlLibApi.IListSubItem>(this, "Add", index, key, text, reportIcon);
 		}
 
 		/// <summary>
 		/// SupportByVersion MSComctlLib 6
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("MSComctlLib", 6)]
+		[SupportByVersion("MSComctlLib", 6)]
 		public void Clear()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "Clear", paramsArray);
+			 Factory.ExecuteMethod(this, "Clear");
 		}
 
 		/// <summary>
 		/// SupportByVersion MSComctlLib 6
-		/// 
 		/// </summary>
-		/// <param name="index">object Index</param>
-		[SupportByVersionAttribute("MSComctlLib", 6)]
+		/// <param name="index">object index</param>
+		[SupportByVersion("MSComctlLib", 6)]
 		public void Remove(object index)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(index);
-			Invoker.Method(this, "Remove", paramsArray);
+			 Factory.ExecuteMethod(this, "Remove", index);
 		}
 
 		#endregion
@@ -286,9 +273,9 @@ namespace NetOffice.MSComctlLibApi
        #region IEnumerable<NetOffice.MSComctlLibApi.IListSubItem> Member
         
         /// <summary>
-		/// SupportByVersionAttribute MSComctlLib, 6
+		/// SupportByVersion MSComctlLib, 6
 		/// </summary>
-		[SupportByVersionAttribute("MSComctlLib", 6)]
+		[SupportByVersion("MSComctlLib", 6)]
        public IEnumerator<NetOffice.MSComctlLibApi.IListSubItem> GetEnumerator()  
        {
            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
@@ -301,15 +288,16 @@ namespace NetOffice.MSComctlLibApi
 		#region IEnumerable Members
        
 		/// <summary>
-		/// SupportByVersionAttribute MSComctlLib, 6
+		/// SupportByVersion MSComctlLib, 6
 		/// </summary>
-		[SupportByVersionAttribute("MSComctlLib", 6)]
+		[SupportByVersion("MSComctlLib", 6)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
 			return NetOffice.Utils.GetProxyEnumeratorAsMethod(this);
 		}
 
 		#endregion
+
 		#pragma warning restore
 	}
 }

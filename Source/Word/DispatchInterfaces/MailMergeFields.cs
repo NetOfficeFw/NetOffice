@@ -1,25 +1,36 @@
-﻿using System;
-using NetRuntimeSystem = System;
-using System.Runtime.InteropServices;
-using System.Runtime.CompilerServices;
-using System.ComponentModel;
-using System.Reflection;
+﻿using System.Collections;
 using System.Collections.Generic;
-using System.Collections;
-using NetOffice;
+using System;
+using NetRuntimeSystem = System;
+using System.ComponentModel;
+using NetOffice.Attributes;
+
 namespace NetOffice.WordApi
 {
-	///<summary>
+	/// <summary>
 	/// DispatchInterface MailMergeFields 
 	/// SupportByVersion Word, 9,10,11,12,14,15,16
-	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835151.aspx
-	///</summary>
-	[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
-	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
-	public class MailMergeFields : COMObject ,IEnumerable<NetOffice.WordApi.MailMergeField>
+	/// </summary>
+	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff835151.aspx </remarks>
+	[SupportByVersion("Word", 9,10,11,12,14,15,16)]
+	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Method, "Item")]
+	public class MailMergeFields : COMObject , IEnumerable<NetOffice.WordApi.MailMergeField>
 	{
 		#pragma warning disable
+
 		#region Type Information
+
+		/// <summary>
+		/// Instance Type
+		/// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
+		public override Type InstanceType
+		{
+			get
+			{
+				return LateBindingApiWrapperType;
+			}
+		}
 
         private static Type _type;
 
@@ -30,14 +41,20 @@ namespace NetOffice.WordApi
             {
                 if (null == _type)
                     _type = typeof(MailMergeFields);
-                    
                 return _type;
             }
         }
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public MailMergeFields(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -83,7 +100,7 @@ namespace NetOffice.WordApi
 		{
 		}
 		
-		/// <param name="progId">registered ProgID</param>
+		/// <param name="progId">registered progID</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public MailMergeFields(string progId) : base(progId)
 		{
@@ -96,67 +113,57 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195330.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff195330.aspx </remarks>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.Application Application
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				NetOffice.WordApi.Application newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.Application.LateBindingApiWrapperType) as NetOffice.WordApi.Application;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.Application>(this, "Application", NetOffice.WordApi.Application.LateBindingApiWrapperType);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff834563.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff834563.aspx </remarks>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public Int32 Creator
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Creator", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "Creator");
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840148.aspx
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff840148.aspx </remarks>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16), ProxyResult]
 		public object Parent
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Parent", paramsArray);
-				ICOMObject newObject = Factory.CreateObjectFromComProxy(this,returnItem);
-				return newObject;
+				return Factory.ExecuteReferencePropertyGet(this, "Parent");
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837178.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff837178.aspx </remarks>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public Int32 Count
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Count", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "Count");
 			}
 		}
 
@@ -166,445 +173,366 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="index">Int32 Index</param>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
-		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
+		/// <param name="index">Int32 index</param>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
+		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
 		public NetOffice.WordApi.MailMergeField this[Int32 index]
 		{
 			get
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(index);
-				object returnItem = Invoker.MethodReturn(this, "Item", paramsArray);
-				NetOffice.WordApi.MailMergeField newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.MailMergeField.LateBindingApiWrapperType) as NetOffice.WordApi.MailMergeField;
-				return newObject;
+				return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.MailMergeField>(this, "Item", NetOffice.WordApi.MailMergeField.LateBindingApiWrapperType, index);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836028.aspx
 		/// </summary>
-		/// <param name="range">NetOffice.WordApi.Range Range</param>
-		/// <param name="name">string Name</param>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff836028.aspx </remarks>
+		/// <param name="range">NetOffice.WordApi.Range range</param>
+		/// <param name="name">string name</param>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.MailMergeField Add(NetOffice.WordApi.Range range, string name)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(range, name);
-			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.WordApi.MailMergeField newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.MailMergeField.LateBindingApiWrapperType) as NetOffice.WordApi.MailMergeField;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.MailMergeField>(this, "Add", NetOffice.WordApi.MailMergeField.LateBindingApiWrapperType, range, name);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839897.aspx
 		/// </summary>
-		/// <param name="range">NetOffice.WordApi.Range Range</param>
-		/// <param name="name">string Name</param>
-		/// <param name="prompt">optional object Prompt</param>
-		/// <param name="defaultAskText">optional object DefaultAskText</param>
-		/// <param name="askOnce">optional object AskOnce</param>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff839897.aspx </remarks>
+		/// <param name="range">NetOffice.WordApi.Range range</param>
+		/// <param name="name">string name</param>
+		/// <param name="prompt">optional object prompt</param>
+		/// <param name="defaultAskText">optional object defaultAskText</param>
+		/// <param name="askOnce">optional object askOnce</param>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.MailMergeField AddAsk(NetOffice.WordApi.Range range, string name, object prompt, object defaultAskText, object askOnce)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(range, name, prompt, defaultAskText, askOnce);
-			object returnItem = Invoker.MethodReturn(this, "AddAsk", paramsArray);
-			NetOffice.WordApi.MailMergeField newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.MailMergeField.LateBindingApiWrapperType) as NetOffice.WordApi.MailMergeField;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.MailMergeField>(this, "AddAsk", NetOffice.WordApi.MailMergeField.LateBindingApiWrapperType, new object[]{ range, name, prompt, defaultAskText, askOnce });
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839897.aspx
 		/// </summary>
-		/// <param name="range">NetOffice.WordApi.Range Range</param>
-		/// <param name="name">string Name</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff839897.aspx </remarks>
+		/// <param name="range">NetOffice.WordApi.Range range</param>
+		/// <param name="name">string name</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.MailMergeField AddAsk(NetOffice.WordApi.Range range, string name)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(range, name);
-			object returnItem = Invoker.MethodReturn(this, "AddAsk", paramsArray);
-			NetOffice.WordApi.MailMergeField newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.MailMergeField.LateBindingApiWrapperType) as NetOffice.WordApi.MailMergeField;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.MailMergeField>(this, "AddAsk", NetOffice.WordApi.MailMergeField.LateBindingApiWrapperType, range, name);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839897.aspx
 		/// </summary>
-		/// <param name="range">NetOffice.WordApi.Range Range</param>
-		/// <param name="name">string Name</param>
-		/// <param name="prompt">optional object Prompt</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff839897.aspx </remarks>
+		/// <param name="range">NetOffice.WordApi.Range range</param>
+		/// <param name="name">string name</param>
+		/// <param name="prompt">optional object prompt</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.MailMergeField AddAsk(NetOffice.WordApi.Range range, string name, object prompt)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(range, name, prompt);
-			object returnItem = Invoker.MethodReturn(this, "AddAsk", paramsArray);
-			NetOffice.WordApi.MailMergeField newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.MailMergeField.LateBindingApiWrapperType) as NetOffice.WordApi.MailMergeField;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.MailMergeField>(this, "AddAsk", NetOffice.WordApi.MailMergeField.LateBindingApiWrapperType, range, name, prompt);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839897.aspx
 		/// </summary>
-		/// <param name="range">NetOffice.WordApi.Range Range</param>
-		/// <param name="name">string Name</param>
-		/// <param name="prompt">optional object Prompt</param>
-		/// <param name="defaultAskText">optional object DefaultAskText</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff839897.aspx </remarks>
+		/// <param name="range">NetOffice.WordApi.Range range</param>
+		/// <param name="name">string name</param>
+		/// <param name="prompt">optional object prompt</param>
+		/// <param name="defaultAskText">optional object defaultAskText</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.MailMergeField AddAsk(NetOffice.WordApi.Range range, string name, object prompt, object defaultAskText)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(range, name, prompt, defaultAskText);
-			object returnItem = Invoker.MethodReturn(this, "AddAsk", paramsArray);
-			NetOffice.WordApi.MailMergeField newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.MailMergeField.LateBindingApiWrapperType) as NetOffice.WordApi.MailMergeField;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.MailMergeField>(this, "AddAsk", NetOffice.WordApi.MailMergeField.LateBindingApiWrapperType, range, name, prompt, defaultAskText);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836431.aspx
 		/// </summary>
-		/// <param name="range">NetOffice.WordApi.Range Range</param>
-		/// <param name="prompt">optional object Prompt</param>
-		/// <param name="defaultFillInText">optional object DefaultFillInText</param>
-		/// <param name="askOnce">optional object AskOnce</param>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff836431.aspx </remarks>
+		/// <param name="range">NetOffice.WordApi.Range range</param>
+		/// <param name="prompt">optional object prompt</param>
+		/// <param name="defaultFillInText">optional object defaultFillInText</param>
+		/// <param name="askOnce">optional object askOnce</param>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.MailMergeField AddFillIn(NetOffice.WordApi.Range range, object prompt, object defaultFillInText, object askOnce)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(range, prompt, defaultFillInText, askOnce);
-			object returnItem = Invoker.MethodReturn(this, "AddFillIn", paramsArray);
-			NetOffice.WordApi.MailMergeField newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.MailMergeField.LateBindingApiWrapperType) as NetOffice.WordApi.MailMergeField;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.MailMergeField>(this, "AddFillIn", NetOffice.WordApi.MailMergeField.LateBindingApiWrapperType, range, prompt, defaultFillInText, askOnce);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836431.aspx
 		/// </summary>
-		/// <param name="range">NetOffice.WordApi.Range Range</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff836431.aspx </remarks>
+		/// <param name="range">NetOffice.WordApi.Range range</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.MailMergeField AddFillIn(NetOffice.WordApi.Range range)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(range);
-			object returnItem = Invoker.MethodReturn(this, "AddFillIn", paramsArray);
-			NetOffice.WordApi.MailMergeField newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.MailMergeField.LateBindingApiWrapperType) as NetOffice.WordApi.MailMergeField;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.MailMergeField>(this, "AddFillIn", NetOffice.WordApi.MailMergeField.LateBindingApiWrapperType, range);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836431.aspx
 		/// </summary>
-		/// <param name="range">NetOffice.WordApi.Range Range</param>
-		/// <param name="prompt">optional object Prompt</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff836431.aspx </remarks>
+		/// <param name="range">NetOffice.WordApi.Range range</param>
+		/// <param name="prompt">optional object prompt</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.MailMergeField AddFillIn(NetOffice.WordApi.Range range, object prompt)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(range, prompt);
-			object returnItem = Invoker.MethodReturn(this, "AddFillIn", paramsArray);
-			NetOffice.WordApi.MailMergeField newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.MailMergeField.LateBindingApiWrapperType) as NetOffice.WordApi.MailMergeField;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.MailMergeField>(this, "AddFillIn", NetOffice.WordApi.MailMergeField.LateBindingApiWrapperType, range, prompt);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836431.aspx
 		/// </summary>
-		/// <param name="range">NetOffice.WordApi.Range Range</param>
-		/// <param name="prompt">optional object Prompt</param>
-		/// <param name="defaultFillInText">optional object DefaultFillInText</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff836431.aspx </remarks>
+		/// <param name="range">NetOffice.WordApi.Range range</param>
+		/// <param name="prompt">optional object prompt</param>
+		/// <param name="defaultFillInText">optional object defaultFillInText</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.MailMergeField AddFillIn(NetOffice.WordApi.Range range, object prompt, object defaultFillInText)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(range, prompt, defaultFillInText);
-			object returnItem = Invoker.MethodReturn(this, "AddFillIn", paramsArray);
-			NetOffice.WordApi.MailMergeField newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.MailMergeField.LateBindingApiWrapperType) as NetOffice.WordApi.MailMergeField;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.MailMergeField>(this, "AddFillIn", NetOffice.WordApi.MailMergeField.LateBindingApiWrapperType, range, prompt, defaultFillInText);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845762.aspx
 		/// </summary>
-		/// <param name="range">NetOffice.WordApi.Range Range</param>
-		/// <param name="mergeField">string MergeField</param>
-		/// <param name="comparison">NetOffice.WordApi.Enums.WdMailMergeComparison Comparison</param>
-		/// <param name="compareTo">optional object CompareTo</param>
-		/// <param name="trueAutoText">optional object TrueAutoText</param>
-		/// <param name="trueText">optional object TrueText</param>
-		/// <param name="falseAutoText">optional object FalseAutoText</param>
-		/// <param name="falseText">optional object FalseText</param>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff845762.aspx </remarks>
+		/// <param name="range">NetOffice.WordApi.Range range</param>
+		/// <param name="mergeField">string mergeField</param>
+		/// <param name="comparison">NetOffice.WordApi.Enums.WdMailMergeComparison comparison</param>
+		/// <param name="compareTo">optional object compareTo</param>
+		/// <param name="trueAutoText">optional object trueAutoText</param>
+		/// <param name="trueText">optional object trueText</param>
+		/// <param name="falseAutoText">optional object falseAutoText</param>
+		/// <param name="falseText">optional object falseText</param>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.MailMergeField AddIf(NetOffice.WordApi.Range range, string mergeField, NetOffice.WordApi.Enums.WdMailMergeComparison comparison, object compareTo, object trueAutoText, object trueText, object falseAutoText, object falseText)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(range, mergeField, comparison, compareTo, trueAutoText, trueText, falseAutoText, falseText);
-			object returnItem = Invoker.MethodReturn(this, "AddIf", paramsArray);
-			NetOffice.WordApi.MailMergeField newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.MailMergeField.LateBindingApiWrapperType) as NetOffice.WordApi.MailMergeField;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.MailMergeField>(this, "AddIf", NetOffice.WordApi.MailMergeField.LateBindingApiWrapperType, new object[]{ range, mergeField, comparison, compareTo, trueAutoText, trueText, falseAutoText, falseText });
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845762.aspx
 		/// </summary>
-		/// <param name="range">NetOffice.WordApi.Range Range</param>
-		/// <param name="mergeField">string MergeField</param>
-		/// <param name="comparison">NetOffice.WordApi.Enums.WdMailMergeComparison Comparison</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff845762.aspx </remarks>
+		/// <param name="range">NetOffice.WordApi.Range range</param>
+		/// <param name="mergeField">string mergeField</param>
+		/// <param name="comparison">NetOffice.WordApi.Enums.WdMailMergeComparison comparison</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.MailMergeField AddIf(NetOffice.WordApi.Range range, string mergeField, NetOffice.WordApi.Enums.WdMailMergeComparison comparison)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(range, mergeField, comparison);
-			object returnItem = Invoker.MethodReturn(this, "AddIf", paramsArray);
-			NetOffice.WordApi.MailMergeField newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.MailMergeField.LateBindingApiWrapperType) as NetOffice.WordApi.MailMergeField;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.MailMergeField>(this, "AddIf", NetOffice.WordApi.MailMergeField.LateBindingApiWrapperType, range, mergeField, comparison);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845762.aspx
 		/// </summary>
-		/// <param name="range">NetOffice.WordApi.Range Range</param>
-		/// <param name="mergeField">string MergeField</param>
-		/// <param name="comparison">NetOffice.WordApi.Enums.WdMailMergeComparison Comparison</param>
-		/// <param name="compareTo">optional object CompareTo</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff845762.aspx </remarks>
+		/// <param name="range">NetOffice.WordApi.Range range</param>
+		/// <param name="mergeField">string mergeField</param>
+		/// <param name="comparison">NetOffice.WordApi.Enums.WdMailMergeComparison comparison</param>
+		/// <param name="compareTo">optional object compareTo</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.MailMergeField AddIf(NetOffice.WordApi.Range range, string mergeField, NetOffice.WordApi.Enums.WdMailMergeComparison comparison, object compareTo)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(range, mergeField, comparison, compareTo);
-			object returnItem = Invoker.MethodReturn(this, "AddIf", paramsArray);
-			NetOffice.WordApi.MailMergeField newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.MailMergeField.LateBindingApiWrapperType) as NetOffice.WordApi.MailMergeField;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.MailMergeField>(this, "AddIf", NetOffice.WordApi.MailMergeField.LateBindingApiWrapperType, range, mergeField, comparison, compareTo);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845762.aspx
 		/// </summary>
-		/// <param name="range">NetOffice.WordApi.Range Range</param>
-		/// <param name="mergeField">string MergeField</param>
-		/// <param name="comparison">NetOffice.WordApi.Enums.WdMailMergeComparison Comparison</param>
-		/// <param name="compareTo">optional object CompareTo</param>
-		/// <param name="trueAutoText">optional object TrueAutoText</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff845762.aspx </remarks>
+		/// <param name="range">NetOffice.WordApi.Range range</param>
+		/// <param name="mergeField">string mergeField</param>
+		/// <param name="comparison">NetOffice.WordApi.Enums.WdMailMergeComparison comparison</param>
+		/// <param name="compareTo">optional object compareTo</param>
+		/// <param name="trueAutoText">optional object trueAutoText</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.MailMergeField AddIf(NetOffice.WordApi.Range range, string mergeField, NetOffice.WordApi.Enums.WdMailMergeComparison comparison, object compareTo, object trueAutoText)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(range, mergeField, comparison, compareTo, trueAutoText);
-			object returnItem = Invoker.MethodReturn(this, "AddIf", paramsArray);
-			NetOffice.WordApi.MailMergeField newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.MailMergeField.LateBindingApiWrapperType) as NetOffice.WordApi.MailMergeField;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.MailMergeField>(this, "AddIf", NetOffice.WordApi.MailMergeField.LateBindingApiWrapperType, new object[]{ range, mergeField, comparison, compareTo, trueAutoText });
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845762.aspx
 		/// </summary>
-		/// <param name="range">NetOffice.WordApi.Range Range</param>
-		/// <param name="mergeField">string MergeField</param>
-		/// <param name="comparison">NetOffice.WordApi.Enums.WdMailMergeComparison Comparison</param>
-		/// <param name="compareTo">optional object CompareTo</param>
-		/// <param name="trueAutoText">optional object TrueAutoText</param>
-		/// <param name="trueText">optional object TrueText</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff845762.aspx </remarks>
+		/// <param name="range">NetOffice.WordApi.Range range</param>
+		/// <param name="mergeField">string mergeField</param>
+		/// <param name="comparison">NetOffice.WordApi.Enums.WdMailMergeComparison comparison</param>
+		/// <param name="compareTo">optional object compareTo</param>
+		/// <param name="trueAutoText">optional object trueAutoText</param>
+		/// <param name="trueText">optional object trueText</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.MailMergeField AddIf(NetOffice.WordApi.Range range, string mergeField, NetOffice.WordApi.Enums.WdMailMergeComparison comparison, object compareTo, object trueAutoText, object trueText)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(range, mergeField, comparison, compareTo, trueAutoText, trueText);
-			object returnItem = Invoker.MethodReturn(this, "AddIf", paramsArray);
-			NetOffice.WordApi.MailMergeField newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.MailMergeField.LateBindingApiWrapperType) as NetOffice.WordApi.MailMergeField;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.MailMergeField>(this, "AddIf", NetOffice.WordApi.MailMergeField.LateBindingApiWrapperType, new object[]{ range, mergeField, comparison, compareTo, trueAutoText, trueText });
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845762.aspx
 		/// </summary>
-		/// <param name="range">NetOffice.WordApi.Range Range</param>
-		/// <param name="mergeField">string MergeField</param>
-		/// <param name="comparison">NetOffice.WordApi.Enums.WdMailMergeComparison Comparison</param>
-		/// <param name="compareTo">optional object CompareTo</param>
-		/// <param name="trueAutoText">optional object TrueAutoText</param>
-		/// <param name="trueText">optional object TrueText</param>
-		/// <param name="falseAutoText">optional object FalseAutoText</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff845762.aspx </remarks>
+		/// <param name="range">NetOffice.WordApi.Range range</param>
+		/// <param name="mergeField">string mergeField</param>
+		/// <param name="comparison">NetOffice.WordApi.Enums.WdMailMergeComparison comparison</param>
+		/// <param name="compareTo">optional object compareTo</param>
+		/// <param name="trueAutoText">optional object trueAutoText</param>
+		/// <param name="trueText">optional object trueText</param>
+		/// <param name="falseAutoText">optional object falseAutoText</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.MailMergeField AddIf(NetOffice.WordApi.Range range, string mergeField, NetOffice.WordApi.Enums.WdMailMergeComparison comparison, object compareTo, object trueAutoText, object trueText, object falseAutoText)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(range, mergeField, comparison, compareTo, trueAutoText, trueText, falseAutoText);
-			object returnItem = Invoker.MethodReturn(this, "AddIf", paramsArray);
-			NetOffice.WordApi.MailMergeField newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.MailMergeField.LateBindingApiWrapperType) as NetOffice.WordApi.MailMergeField;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.MailMergeField>(this, "AddIf", NetOffice.WordApi.MailMergeField.LateBindingApiWrapperType, new object[]{ range, mergeField, comparison, compareTo, trueAutoText, trueText, falseAutoText });
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195621.aspx
 		/// </summary>
-		/// <param name="range">NetOffice.WordApi.Range Range</param>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff195621.aspx </remarks>
+		/// <param name="range">NetOffice.WordApi.Range range</param>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.MailMergeField AddMergeRec(NetOffice.WordApi.Range range)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(range);
-			object returnItem = Invoker.MethodReturn(this, "AddMergeRec", paramsArray);
-			NetOffice.WordApi.MailMergeField newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.MailMergeField.LateBindingApiWrapperType) as NetOffice.WordApi.MailMergeField;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.MailMergeField>(this, "AddMergeRec", NetOffice.WordApi.MailMergeField.LateBindingApiWrapperType, range);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839562.aspx
 		/// </summary>
-		/// <param name="range">NetOffice.WordApi.Range Range</param>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff839562.aspx </remarks>
+		/// <param name="range">NetOffice.WordApi.Range range</param>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.MailMergeField AddMergeSeq(NetOffice.WordApi.Range range)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(range);
-			object returnItem = Invoker.MethodReturn(this, "AddMergeSeq", paramsArray);
-			NetOffice.WordApi.MailMergeField newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.MailMergeField.LateBindingApiWrapperType) as NetOffice.WordApi.MailMergeField;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.MailMergeField>(this, "AddMergeSeq", NetOffice.WordApi.MailMergeField.LateBindingApiWrapperType, range);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837747.aspx
 		/// </summary>
-		/// <param name="range">NetOffice.WordApi.Range Range</param>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff837747.aspx </remarks>
+		/// <param name="range">NetOffice.WordApi.Range range</param>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.MailMergeField AddNext(NetOffice.WordApi.Range range)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(range);
-			object returnItem = Invoker.MethodReturn(this, "AddNext", paramsArray);
-			NetOffice.WordApi.MailMergeField newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.MailMergeField.LateBindingApiWrapperType) as NetOffice.WordApi.MailMergeField;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.MailMergeField>(this, "AddNext", NetOffice.WordApi.MailMergeField.LateBindingApiWrapperType, range);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836276.aspx
 		/// </summary>
-		/// <param name="range">NetOffice.WordApi.Range Range</param>
-		/// <param name="mergeField">string MergeField</param>
-		/// <param name="comparison">NetOffice.WordApi.Enums.WdMailMergeComparison Comparison</param>
-		/// <param name="compareTo">optional object CompareTo</param>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff836276.aspx </remarks>
+		/// <param name="range">NetOffice.WordApi.Range range</param>
+		/// <param name="mergeField">string mergeField</param>
+		/// <param name="comparison">NetOffice.WordApi.Enums.WdMailMergeComparison comparison</param>
+		/// <param name="compareTo">optional object compareTo</param>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.MailMergeField AddNextIf(NetOffice.WordApi.Range range, string mergeField, NetOffice.WordApi.Enums.WdMailMergeComparison comparison, object compareTo)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(range, mergeField, comparison, compareTo);
-			object returnItem = Invoker.MethodReturn(this, "AddNextIf", paramsArray);
-			NetOffice.WordApi.MailMergeField newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.MailMergeField.LateBindingApiWrapperType) as NetOffice.WordApi.MailMergeField;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.MailMergeField>(this, "AddNextIf", NetOffice.WordApi.MailMergeField.LateBindingApiWrapperType, range, mergeField, comparison, compareTo);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836276.aspx
 		/// </summary>
-		/// <param name="range">NetOffice.WordApi.Range Range</param>
-		/// <param name="mergeField">string MergeField</param>
-		/// <param name="comparison">NetOffice.WordApi.Enums.WdMailMergeComparison Comparison</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff836276.aspx </remarks>
+		/// <param name="range">NetOffice.WordApi.Range range</param>
+		/// <param name="mergeField">string mergeField</param>
+		/// <param name="comparison">NetOffice.WordApi.Enums.WdMailMergeComparison comparison</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.MailMergeField AddNextIf(NetOffice.WordApi.Range range, string mergeField, NetOffice.WordApi.Enums.WdMailMergeComparison comparison)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(range, mergeField, comparison);
-			object returnItem = Invoker.MethodReturn(this, "AddNextIf", paramsArray);
-			NetOffice.WordApi.MailMergeField newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.MailMergeField.LateBindingApiWrapperType) as NetOffice.WordApi.MailMergeField;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.MailMergeField>(this, "AddNextIf", NetOffice.WordApi.MailMergeField.LateBindingApiWrapperType, range, mergeField, comparison);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197837.aspx
 		/// </summary>
-		/// <param name="range">NetOffice.WordApi.Range Range</param>
-		/// <param name="name">string Name</param>
-		/// <param name="valueText">optional object ValueText</param>
-		/// <param name="valueAutoText">optional object ValueAutoText</param>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff197837.aspx </remarks>
+		/// <param name="range">NetOffice.WordApi.Range range</param>
+		/// <param name="name">string name</param>
+		/// <param name="valueText">optional object valueText</param>
+		/// <param name="valueAutoText">optional object valueAutoText</param>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.MailMergeField AddSet(NetOffice.WordApi.Range range, string name, object valueText, object valueAutoText)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(range, name, valueText, valueAutoText);
-			object returnItem = Invoker.MethodReturn(this, "AddSet", paramsArray);
-			NetOffice.WordApi.MailMergeField newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.MailMergeField.LateBindingApiWrapperType) as NetOffice.WordApi.MailMergeField;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.MailMergeField>(this, "AddSet", NetOffice.WordApi.MailMergeField.LateBindingApiWrapperType, range, name, valueText, valueAutoText);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197837.aspx
 		/// </summary>
-		/// <param name="range">NetOffice.WordApi.Range Range</param>
-		/// <param name="name">string Name</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff197837.aspx </remarks>
+		/// <param name="range">NetOffice.WordApi.Range range</param>
+		/// <param name="name">string name</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.MailMergeField AddSet(NetOffice.WordApi.Range range, string name)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(range, name);
-			object returnItem = Invoker.MethodReturn(this, "AddSet", paramsArray);
-			NetOffice.WordApi.MailMergeField newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.MailMergeField.LateBindingApiWrapperType) as NetOffice.WordApi.MailMergeField;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.MailMergeField>(this, "AddSet", NetOffice.WordApi.MailMergeField.LateBindingApiWrapperType, range, name);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197837.aspx
 		/// </summary>
-		/// <param name="range">NetOffice.WordApi.Range Range</param>
-		/// <param name="name">string Name</param>
-		/// <param name="valueText">optional object ValueText</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff197837.aspx </remarks>
+		/// <param name="range">NetOffice.WordApi.Range range</param>
+		/// <param name="name">string name</param>
+		/// <param name="valueText">optional object valueText</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.MailMergeField AddSet(NetOffice.WordApi.Range range, string name, object valueText)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(range, name, valueText);
-			object returnItem = Invoker.MethodReturn(this, "AddSet", paramsArray);
-			NetOffice.WordApi.MailMergeField newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.MailMergeField.LateBindingApiWrapperType) as NetOffice.WordApi.MailMergeField;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.MailMergeField>(this, "AddSet", NetOffice.WordApi.MailMergeField.LateBindingApiWrapperType, range, name, valueText);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff841008.aspx
 		/// </summary>
-		/// <param name="range">NetOffice.WordApi.Range Range</param>
-		/// <param name="mergeField">string MergeField</param>
-		/// <param name="comparison">NetOffice.WordApi.Enums.WdMailMergeComparison Comparison</param>
-		/// <param name="compareTo">optional object CompareTo</param>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff841008.aspx </remarks>
+		/// <param name="range">NetOffice.WordApi.Range range</param>
+		/// <param name="mergeField">string mergeField</param>
+		/// <param name="comparison">NetOffice.WordApi.Enums.WdMailMergeComparison comparison</param>
+		/// <param name="compareTo">optional object compareTo</param>
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.MailMergeField AddSkipIf(NetOffice.WordApi.Range range, string mergeField, NetOffice.WordApi.Enums.WdMailMergeComparison comparison, object compareTo)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(range, mergeField, comparison, compareTo);
-			object returnItem = Invoker.MethodReturn(this, "AddSkipIf", paramsArray);
-			NetOffice.WordApi.MailMergeField newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.MailMergeField.LateBindingApiWrapperType) as NetOffice.WordApi.MailMergeField;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.MailMergeField>(this, "AddSkipIf", NetOffice.WordApi.MailMergeField.LateBindingApiWrapperType, range, mergeField, comparison, compareTo);
 		}
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff841008.aspx
 		/// </summary>
-		/// <param name="range">NetOffice.WordApi.Range Range</param>
-		/// <param name="mergeField">string MergeField</param>
-		/// <param name="comparison">NetOffice.WordApi.Enums.WdMailMergeComparison Comparison</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff841008.aspx </remarks>
+		/// <param name="range">NetOffice.WordApi.Range range</param>
+		/// <param name="mergeField">string mergeField</param>
+		/// <param name="comparison">NetOffice.WordApi.Enums.WdMailMergeComparison comparison</param>
+		[CustomMethod]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		public NetOffice.WordApi.MailMergeField AddSkipIf(NetOffice.WordApi.Range range, string mergeField, NetOffice.WordApi.Enums.WdMailMergeComparison comparison)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(range, mergeField, comparison);
-			object returnItem = Invoker.MethodReturn(this, "AddSkipIf", paramsArray);
-			NetOffice.WordApi.MailMergeField newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.MailMergeField.LateBindingApiWrapperType) as NetOffice.WordApi.MailMergeField;
-			return newObject;
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.MailMergeField>(this, "AddSkipIf", NetOffice.WordApi.MailMergeField.LateBindingApiWrapperType, range, mergeField, comparison);
 		}
 
 		#endregion
@@ -612,9 +540,9 @@ namespace NetOffice.WordApi
        #region IEnumerable<NetOffice.WordApi.MailMergeField> Member
         
         /// <summary>
-		/// SupportByVersionAttribute Word, 9,10,11,12,14,15,16
+		/// SupportByVersion Word, 9,10,11,12,14,15,16
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
        public IEnumerator<NetOffice.WordApi.MailMergeField> GetEnumerator()  
        {
            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
@@ -627,15 +555,16 @@ namespace NetOffice.WordApi
 		#region IEnumerable Members
        
 		/// <summary>
-		/// SupportByVersionAttribute Word, 9,10,11,12,14,15,16
+		/// SupportByVersion Word, 9,10,11,12,14,15,16
 		/// </summary>
-		[SupportByVersionAttribute("Word", 9,10,11,12,14,15,16)]
+		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
 			return NetOffice.Utils.GetProxyEnumeratorAsProperty(this);
 		}
 
 		#endregion
+
 		#pragma warning restore
 	}
 }

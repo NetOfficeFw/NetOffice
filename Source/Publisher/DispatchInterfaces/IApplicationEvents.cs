@@ -1,23 +1,33 @@
 ﻿using System;
 using NetRuntimeSystem = System;
-using System.Runtime.InteropServices;
-using System.Runtime.CompilerServices;
 using System.ComponentModel;
-using System.Reflection;
-using System.Collections.Generic;
-using NetOffice;
+using NetOffice.Attributes;
+
 namespace NetOffice.PublisherApi
 {
-	///<summary>
+	/// <summary>
 	/// DispatchInterface IApplicationEvents 
 	/// SupportByVersion Publisher, 14,15,16
-	///</summary>
-	[SupportByVersionAttribute("Publisher", 14,15,16)]
-	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
-	public class IApplicationEvents : COMObject
+	/// </summary>
+	[SupportByVersion("Publisher", 14,15,16)]
+	[EntityType(EntityType.IsDispatchInterface)]
+ 	public class IApplicationEvents : COMObject
 	{
 		#pragma warning disable
+
 		#region Type Information
+
+		/// <summary>
+		/// Instance Type
+		/// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
+		public override Type InstanceType
+		{
+			get
+			{
+				return LateBindingApiWrapperType;
+			}
+		}
 
         private static Type _type;
 
@@ -28,14 +38,20 @@ namespace NetOffice.PublisherApi
             {
                 if (null == _type)
                     _type = typeof(IApplicationEvents);
-                    
                 return _type;
             }
         }
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public IApplicationEvents(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -81,7 +97,7 @@ namespace NetOffice.PublisherApi
 		{
 		}
 		
-		/// <param name="progId">registered ProgID</param>
+		/// <param name="progId">registered progID</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public IApplicationEvents(string progId) : base(progId)
 		{
@@ -97,289 +113,244 @@ namespace NetOffice.PublisherApi
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="wn">NetOffice.PublisherApi.Window Wn</param>
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		/// <param name="wn">NetOffice.PublisherApi.Window wn</param>
+		[SupportByVersion("Publisher", 14,15,16)]
 		public void WindowActivate(NetOffice.PublisherApi.Window wn)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(wn);
-			Invoker.Method(this, "WindowActivate", paramsArray);
+			 Factory.ExecuteMethod(this, "WindowActivate", wn);
 		}
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="wn">NetOffice.PublisherApi.Window Wn</param>
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		/// <param name="wn">NetOffice.PublisherApi.Window wn</param>
+		[SupportByVersion("Publisher", 14,15,16)]
 		public void WindowDeactivate(NetOffice.PublisherApi.Window wn)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(wn);
-			Invoker.Method(this, "WindowDeactivate", paramsArray);
+			 Factory.ExecuteMethod(this, "WindowDeactivate", wn);
 		}
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="vw">NetOffice.PublisherApi.View Vw</param>
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		/// <param name="vw">NetOffice.PublisherApi.View vw</param>
+		[SupportByVersion("Publisher", 14,15,16)]
 		public void WindowPageChange(NetOffice.PublisherApi.View vw)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(vw);
-			Invoker.Method(this, "WindowPageChange", paramsArray);
+			 Factory.ExecuteMethod(this, "WindowPageChange", vw);
 		}
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		[SupportByVersion("Publisher", 14,15,16)]
 		public void Quit()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "Quit", paramsArray);
+			 Factory.ExecuteMethod(this, "Quit");
 		}
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="doc">NetOffice.PublisherApi._Document Doc</param>
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		/// <param name="doc">NetOffice.PublisherApi._Document doc</param>
+		[SupportByVersion("Publisher", 14,15,16)]
 		public void NewDocument(NetOffice.PublisherApi._Document doc)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(doc);
-			Invoker.Method(this, "NewDocument", paramsArray);
+			 Factory.ExecuteMethod(this, "NewDocument", doc);
 		}
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="doc">NetOffice.PublisherApi._Document Doc</param>
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		/// <param name="doc">NetOffice.PublisherApi._Document doc</param>
+		[SupportByVersion("Publisher", 14,15,16)]
 		public void DocumentOpen(NetOffice.PublisherApi._Document doc)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(doc);
-			Invoker.Method(this, "DocumentOpen", paramsArray);
+			 Factory.ExecuteMethod(this, "DocumentOpen", doc);
 		}
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="doc">NetOffice.PublisherApi._Document Doc</param>
-		/// <param name="cancel">bool Cancel</param>
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		/// <param name="doc">NetOffice.PublisherApi._Document doc</param>
+		/// <param name="cancel">bool cancel</param>
+		[SupportByVersion("Publisher", 14,15,16)]
 		public void DocumentBeforeClose(NetOffice.PublisherApi._Document doc, bool cancel)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(doc, cancel);
-			Invoker.Method(this, "DocumentBeforeClose", paramsArray);
+			 Factory.ExecuteMethod(this, "DocumentBeforeClose", doc, cancel);
 		}
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="doc">NetOffice.PublisherApi._Document Doc</param>
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		/// <param name="doc">NetOffice.PublisherApi._Document doc</param>
+		[SupportByVersion("Publisher", 14,15,16)]
 		public void MailMergeAfterMerge(NetOffice.PublisherApi._Document doc)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(doc);
-			Invoker.Method(this, "MailMergeAfterMerge", paramsArray);
+			 Factory.ExecuteMethod(this, "MailMergeAfterMerge", doc);
 		}
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="doc">NetOffice.PublisherApi._Document Doc</param>
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		/// <param name="doc">NetOffice.PublisherApi._Document doc</param>
+		[SupportByVersion("Publisher", 14,15,16)]
 		public void MailMergeAfterRecordMerge(NetOffice.PublisherApi._Document doc)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(doc);
-			Invoker.Method(this, "MailMergeAfterRecordMerge", paramsArray);
+			 Factory.ExecuteMethod(this, "MailMergeAfterRecordMerge", doc);
 		}
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="doc">NetOffice.PublisherApi._Document Doc</param>
-		/// <param name="startRecord">Int32 StartRecord</param>
-		/// <param name="endRecord">Int32 EndRecord</param>
-		/// <param name="cancel">bool Cancel</param>
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		/// <param name="doc">NetOffice.PublisherApi._Document doc</param>
+		/// <param name="startRecord">Int32 startRecord</param>
+		/// <param name="endRecord">Int32 endRecord</param>
+		/// <param name="cancel">bool cancel</param>
+		[SupportByVersion("Publisher", 14,15,16)]
 		public void MailMergeBeforeMerge(NetOffice.PublisherApi._Document doc, Int32 startRecord, Int32 endRecord, bool cancel)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(doc, startRecord, endRecord, cancel);
-			Invoker.Method(this, "MailMergeBeforeMerge", paramsArray);
+			 Factory.ExecuteMethod(this, "MailMergeBeforeMerge", doc, startRecord, endRecord, cancel);
 		}
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="doc">NetOffice.PublisherApi._Document Doc</param>
-		/// <param name="cancel">bool Cancel</param>
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		/// <param name="doc">NetOffice.PublisherApi._Document doc</param>
+		/// <param name="cancel">bool cancel</param>
+		[SupportByVersion("Publisher", 14,15,16)]
 		public void MailMergeBeforeRecordMerge(NetOffice.PublisherApi._Document doc, bool cancel)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(doc, cancel);
-			Invoker.Method(this, "MailMergeBeforeRecordMerge", paramsArray);
+			 Factory.ExecuteMethod(this, "MailMergeBeforeRecordMerge", doc, cancel);
 		}
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="doc">NetOffice.PublisherApi._Document Doc</param>
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		/// <param name="doc">NetOffice.PublisherApi._Document doc</param>
+		[SupportByVersion("Publisher", 14,15,16)]
 		public void MailMergeDataSourceLoad(NetOffice.PublisherApi._Document doc)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(doc);
-			Invoker.Method(this, "MailMergeDataSourceLoad", paramsArray);
+			 Factory.ExecuteMethod(this, "MailMergeDataSourceLoad", doc);
 		}
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="doc">NetOffice.PublisherApi._Document Doc</param>
+		/// <param name="doc">NetOffice.PublisherApi._Document doc</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		[SupportByVersion("Publisher", 14,15,16)]
 		public void MailMergeWizardSendToCustom(NetOffice.PublisherApi._Document doc)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(doc);
-			Invoker.Method(this, "MailMergeWizardSendToCustom", paramsArray);
+			 Factory.ExecuteMethod(this, "MailMergeWizardSendToCustom", doc);
 		}
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="doc">NetOffice.PublisherApi._Document Doc</param>
-		/// <param name="fromState">Int32 FromState</param>
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		/// <param name="doc">NetOffice.PublisherApi._Document doc</param>
+		/// <param name="fromState">Int32 fromState</param>
+		[SupportByVersion("Publisher", 14,15,16)]
 		public void MailMergeWizardStateChange(NetOffice.PublisherApi._Document doc, Int32 fromState)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(doc, fromState);
-			Invoker.Method(this, "MailMergeWizardStateChange", paramsArray);
+			 Factory.ExecuteMethod(this, "MailMergeWizardStateChange", doc, fromState);
 		}
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="doc">NetOffice.PublisherApi._Document Doc</param>
-		/// <param name="handled">bool Handled</param>
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		/// <param name="doc">NetOffice.PublisherApi._Document doc</param>
+		/// <param name="handled">bool handled</param>
+		[SupportByVersion("Publisher", 14,15,16)]
 		public void MailMergeDataSourceValidate(NetOffice.PublisherApi._Document doc, bool handled)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(doc, handled);
-			Invoker.Method(this, "MailMergeDataSourceValidate", paramsArray);
+			 Factory.ExecuteMethod(this, "MailMergeDataSourceValidate", doc, handled);
 		}
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="doc">NetOffice.PublisherApi._Document Doc</param>
-		/// <param name="okToInsert">bool OkToInsert</param>
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		/// <param name="doc">NetOffice.PublisherApi._Document doc</param>
+		/// <param name="okToInsert">bool okToInsert</param>
+		[SupportByVersion("Publisher", 14,15,16)]
 		public void MailMergeInsertBarcode(NetOffice.PublisherApi._Document doc, bool okToInsert)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(doc, okToInsert);
-			Invoker.Method(this, "MailMergeInsertBarcode", paramsArray);
+			 Factory.ExecuteMethod(this, "MailMergeInsertBarcode", doc, okToInsert);
 		}
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="doc">NetOffice.PublisherApi._Document Doc</param>
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		/// <param name="doc">NetOffice.PublisherApi._Document doc</param>
+		[SupportByVersion("Publisher", 14,15,16)]
 		public void MailMergeRecipientListClose(NetOffice.PublisherApi._Document doc)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(doc);
-			Invoker.Method(this, "MailMergeRecipientListClose", paramsArray);
+			 Factory.ExecuteMethod(this, "MailMergeRecipientListClose", doc);
 		}
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="doc">NetOffice.PublisherApi._Document Doc</param>
+		/// <param name="doc">NetOffice.PublisherApi._Document doc</param>
 		/// <param name="bstrString">string bstrString</param>
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		[SupportByVersion("Publisher", 14,15,16)]
 		public void MailMergeGenerateBarcode(NetOffice.PublisherApi._Document doc, string bstrString)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(doc, bstrString);
-			Invoker.Method(this, "MailMergeGenerateBarcode", paramsArray);
+			 Factory.ExecuteMethod(this, "MailMergeGenerateBarcode", doc, bstrString);
 		}
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="doc">NetOffice.PublisherApi._Document Doc</param>
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		/// <param name="doc">NetOffice.PublisherApi._Document doc</param>
+		[SupportByVersion("Publisher", 14,15,16)]
 		public void MailMergeWizardFollowUpCustom(NetOffice.PublisherApi._Document doc)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(doc);
-			Invoker.Method(this, "MailMergeWizardFollowUpCustom", paramsArray);
+			 Factory.ExecuteMethod(this, "MailMergeWizardFollowUpCustom", doc);
 		}
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="doc">NetOffice.PublisherApi._Document Doc</param>
-		/// <param name="cancel">bool Cancel</param>
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		/// <param name="doc">NetOffice.PublisherApi._Document doc</param>
+		/// <param name="cancel">bool cancel</param>
+		[SupportByVersion("Publisher", 14,15,16)]
 		public void BeforePrint(NetOffice.PublisherApi._Document doc, bool cancel)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(doc, cancel);
-			Invoker.Method(this, "BeforePrint", paramsArray);
+			 Factory.ExecuteMethod(this, "BeforePrint", doc, cancel);
 		}
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
-		/// 
 		/// </summary>
-		/// <param name="doc">NetOffice.PublisherApi._Document Doc</param>
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		/// <param name="doc">NetOffice.PublisherApi._Document doc</param>
+		[SupportByVersion("Publisher", 14,15,16)]
 		public void AfterPrint(NetOffice.PublisherApi._Document doc)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(doc);
-			Invoker.Method(this, "AfterPrint", paramsArray);
+			 Factory.ExecuteMethod(this, "AfterPrint", doc);
 		}
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		[SupportByVersion("Publisher", 14,15,16)]
 		public void ShowCatalogUI()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "ShowCatalogUI", paramsArray);
+			 Factory.ExecuteMethod(this, "ShowCatalogUI");
 		}
 
 		/// <summary>
 		/// SupportByVersion Publisher 14, 15, 16
-		/// 
 		/// </summary>
-		[SupportByVersionAttribute("Publisher", 14,15,16)]
+		[SupportByVersion("Publisher", 14,15,16)]
 		public void HideCatalogUI()
 		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "HideCatalogUI", paramsArray);
+			 Factory.ExecuteMethod(this, "HideCatalogUI");
 		}
 
 		#endregion
+
 		#pragma warning restore
 	}
 }

@@ -1,23 +1,34 @@
-﻿using System;
+﻿using System.Reflection;
+using System;
 using NetRuntimeSystem = System;
-using System.Runtime.InteropServices;
-using System.Runtime.CompilerServices;
 using System.ComponentModel;
-using System.Reflection;
-using System.Collections.Generic;
-using NetOffice;
+using NetOffice.Attributes;
+
 namespace NetOffice.VBIDEApi
 {
-	///<summary>
+	/// <summary>
 	/// DispatchInterface _CodeModule 
 	/// SupportByVersion VBIDE, 12,14,5.3
-	///</summary>
-	[SupportByVersionAttribute("VBIDE", 12,14,5.3)]
-	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
-	public class _CodeModule : COMObject
+	/// </summary>
+	[SupportByVersion("VBIDE", 12,14,5.3)]
+	[EntityType(EntityType.IsDispatchInterface)]
+ 	public class _CodeModule : COMObject
 	{
 		#pragma warning disable
+
 		#region Type Information
+
+		/// <summary>
+		/// Instance Type
+		/// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
+		public override Type InstanceType
+		{
+			get
+			{
+				return LateBindingApiWrapperType;
+			}
+		}
 
         private static Type _type;
 
@@ -28,14 +39,20 @@ namespace NetOffice.VBIDEApi
             {
                 if (null == _type)
                     _type = typeof(_CodeModule);
-                    
                 return _type;
             }
         }
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public _CodeModule(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -81,7 +98,7 @@ namespace NetOffice.VBIDEApi
 		{
 		}
 		
-		/// <param name="progId">registered ProgID</param>
+		/// <param name="progId">registered progID</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public _CodeModule(string progId) : base(progId)
 		{
@@ -95,15 +112,12 @@ namespace NetOffice.VBIDEApi
 		/// SupportByVersion VBIDE 12, 14, 5.3
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("VBIDE", 12,14,5.3)]
+		[SupportByVersion("VBIDE", 12,14,5.3)]
 		public NetOffice.VBIDEApi.VBComponent Parent
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Parent", paramsArray);
-				NetOffice.VBIDEApi.VBComponent newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.VBIDEApi.VBComponent.LateBindingApiWrapperType) as NetOffice.VBIDEApi.VBComponent;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.VBIDEApi.VBComponent>(this, "Parent", NetOffice.VBIDEApi.VBComponent.LateBindingApiWrapperType);
 			}
 		}
 
@@ -111,15 +125,12 @@ namespace NetOffice.VBIDEApi
 		/// SupportByVersion VBIDE 12, 14, 5.3
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("VBIDE", 12,14,5.3)]
+		[SupportByVersion("VBIDE", 12,14,5.3)]
 		public NetOffice.VBIDEApi.VBE VBE
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "VBE", paramsArray);
-				NetOffice.VBIDEApi.VBE newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.VBIDEApi.VBE.LateBindingApiWrapperType) as NetOffice.VBIDEApi.VBE;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.VBIDEApi.VBE>(this, "VBE", NetOffice.VBIDEApi.VBE.LateBindingApiWrapperType);
 			}
 		}
 
@@ -127,19 +138,16 @@ namespace NetOffice.VBIDEApi
 		/// SupportByVersion VBIDE 12, 14, 5.3
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("VBIDE", 12,14,5.3)]
+		[SupportByVersion("VBIDE", 12,14,5.3)]
 		public string Name
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Name", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
+				return Factory.ExecuteStringPropertyGet(this, "Name");
 			}
 			set
 			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "Name", paramsArray);
+				Factory.ExecuteValuePropertySet(this, "Name", value);
 			}
 		}
 
@@ -147,24 +155,22 @@ namespace NetOffice.VBIDEApi
 		/// SupportByVersion VBIDE 12, 14, 5.3
 		/// Get
 		/// </summary>
-		/// <param name="startLine">Int32 StartLine</param>
-		/// <param name="count">Int32 Count</param>
-		[SupportByVersionAttribute("VBIDE", 12,14,5.3)]
+		/// <param name="startLine">Int32 startLine</param>
+		/// <param name="count">Int32 count</param>
+		[SupportByVersion("VBIDE", 12,14,5.3)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public string get_Lines(Int32 startLine, Int32 count)
-		{		
-			object[] paramsArray = Invoker.ValidateParamsArray(startLine, count);
-			object returnItem = Invoker.PropertyGet(this, "Lines", paramsArray);
-			return NetRuntimeSystem.Convert.ToString(returnItem);
+		{
+			return Factory.ExecuteStringPropertyGet(this, "Lines", startLine, count);
 		}
 
 		/// <summary>
 		/// SupportByVersion VBIDE 12, 14, 5.3
 		/// Alias for get_Lines
 		/// </summary>
-		/// <param name="startLine">Int32 StartLine</param>
-		/// <param name="count">Int32 Count</param>
-		[SupportByVersionAttribute("VBIDE", 12,14,5.3)]
+		/// <param name="startLine">Int32 startLine</param>
+		/// <param name="count">Int32 count</param>
+		[SupportByVersion("VBIDE", 12,14,5.3), Redirect("get_Lines")]
 		public string Lines(Int32 startLine, Int32 count)
 		{
 			return get_Lines(startLine, count);
@@ -174,14 +180,12 @@ namespace NetOffice.VBIDEApi
 		/// SupportByVersion VBIDE 12, 14, 5.3
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("VBIDE", 12,14,5.3)]
+		[SupportByVersion("VBIDE", 12,14,5.3)]
 		public Int32 CountOfLines
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "CountOfLines", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "CountOfLines");
 			}
 		}
 
@@ -189,24 +193,22 @@ namespace NetOffice.VBIDEApi
 		/// SupportByVersion VBIDE 12, 14, 5.3
 		/// Get
 		/// </summary>
-		/// <param name="procName">string ProcName</param>
-		/// <param name="procKind">NetOffice.VBIDEApi.Enums.vbext_ProcKind ProcKind</param>
-		[SupportByVersionAttribute("VBIDE", 12,14,5.3)]
+		/// <param name="procName">string procName</param>
+		/// <param name="procKind">NetOffice.VBIDEApi.Enums.vbext_ProcKind procKind</param>
+		[SupportByVersion("VBIDE", 12,14,5.3)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public Int32 get_ProcStartLine(string procName, NetOffice.VBIDEApi.Enums.vbext_ProcKind procKind)
-		{		
-			object[] paramsArray = Invoker.ValidateParamsArray(procName, procKind);
-			object returnItem = Invoker.PropertyGet(this, "ProcStartLine", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+		{
+			return Factory.ExecuteInt32PropertyGet(this, "ProcStartLine", procName, procKind);
 		}
 
 		/// <summary>
 		/// SupportByVersion VBIDE 12, 14, 5.3
 		/// Alias for get_ProcStartLine
 		/// </summary>
-		/// <param name="procName">string ProcName</param>
-		/// <param name="procKind">NetOffice.VBIDEApi.Enums.vbext_ProcKind ProcKind</param>
-		[SupportByVersionAttribute("VBIDE", 12,14,5.3)]
+		/// <param name="procName">string procName</param>
+		/// <param name="procKind">NetOffice.VBIDEApi.Enums.vbext_ProcKind procKind</param>
+		[SupportByVersion("VBIDE", 12,14,5.3), Redirect("get_ProcStartLine")]
 		public Int32 ProcStartLine(string procName, NetOffice.VBIDEApi.Enums.vbext_ProcKind procKind)
 		{
 			return get_ProcStartLine(procName, procKind);
@@ -216,24 +218,22 @@ namespace NetOffice.VBIDEApi
 		/// SupportByVersion VBIDE 12, 14, 5.3
 		/// Get
 		/// </summary>
-		/// <param name="procName">string ProcName</param>
-		/// <param name="procKind">NetOffice.VBIDEApi.Enums.vbext_ProcKind ProcKind</param>
-		[SupportByVersionAttribute("VBIDE", 12,14,5.3)]
+		/// <param name="procName">string procName</param>
+		/// <param name="procKind">NetOffice.VBIDEApi.Enums.vbext_ProcKind procKind</param>
+		[SupportByVersion("VBIDE", 12,14,5.3)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public Int32 get_ProcCountLines(string procName, NetOffice.VBIDEApi.Enums.vbext_ProcKind procKind)
-		{		
-			object[] paramsArray = Invoker.ValidateParamsArray(procName, procKind);
-			object returnItem = Invoker.PropertyGet(this, "ProcCountLines", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+		{
+			return Factory.ExecuteInt32PropertyGet(this, "ProcCountLines", procName, procKind);
 		}
 
 		/// <summary>
 		/// SupportByVersion VBIDE 12, 14, 5.3
 		/// Alias for get_ProcCountLines
 		/// </summary>
-		/// <param name="procName">string ProcName</param>
-		/// <param name="procKind">NetOffice.VBIDEApi.Enums.vbext_ProcKind ProcKind</param>
-		[SupportByVersionAttribute("VBIDE", 12,14,5.3)]
+		/// <param name="procName">string procName</param>
+		/// <param name="procKind">NetOffice.VBIDEApi.Enums.vbext_ProcKind procKind</param>
+		[SupportByVersion("VBIDE", 12,14,5.3), Redirect("get_ProcCountLines")]
 		public Int32 ProcCountLines(string procName, NetOffice.VBIDEApi.Enums.vbext_ProcKind procKind)
 		{
 			return get_ProcCountLines(procName, procKind);
@@ -243,24 +243,22 @@ namespace NetOffice.VBIDEApi
 		/// SupportByVersion VBIDE 12, 14, 5.3
 		/// Get
 		/// </summary>
-		/// <param name="procName">string ProcName</param>
-		/// <param name="procKind">NetOffice.VBIDEApi.Enums.vbext_ProcKind ProcKind</param>
-		[SupportByVersionAttribute("VBIDE", 12,14,5.3)]
+		/// <param name="procName">string procName</param>
+		/// <param name="procKind">NetOffice.VBIDEApi.Enums.vbext_ProcKind procKind</param>
+		[SupportByVersion("VBIDE", 12,14,5.3)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public Int32 get_ProcBodyLine(string procName, NetOffice.VBIDEApi.Enums.vbext_ProcKind procKind)
-		{		
-			object[] paramsArray = Invoker.ValidateParamsArray(procName, procKind);
-			object returnItem = Invoker.PropertyGet(this, "ProcBodyLine", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+		{
+			return Factory.ExecuteInt32PropertyGet(this, "ProcBodyLine", procName, procKind);
 		}
 
 		/// <summary>
 		/// SupportByVersion VBIDE 12, 14, 5.3
 		/// Alias for get_ProcBodyLine
 		/// </summary>
-		/// <param name="procName">string ProcName</param>
-		/// <param name="procKind">NetOffice.VBIDEApi.Enums.vbext_ProcKind ProcKind</param>
-		[SupportByVersionAttribute("VBIDE", 12,14,5.3)]
+		/// <param name="procName">string procName</param>
+		/// <param name="procKind">NetOffice.VBIDEApi.Enums.vbext_ProcKind procKind</param>
+		[SupportByVersion("VBIDE", 12,14,5.3), Redirect("get_ProcBodyLine")]
 		public Int32 ProcBodyLine(string procName, NetOffice.VBIDEApi.Enums.vbext_ProcKind procKind)
 		{
 			return get_ProcBodyLine(procName, procKind);
@@ -270,16 +268,16 @@ namespace NetOffice.VBIDEApi
 		/// SupportByVersion VBIDE 12, 14, 5.3
 		/// Get
 		/// </summary>
-		/// <param name="line">Int32 Line</param>
-		/// <param name="procKind">NetOffice.VBIDEApi.Enums.vbext_ProcKind ProcKind</param>
-		[SupportByVersionAttribute("VBIDE", 12,14,5.3)]
+		/// <param name="line">Int32 line</param>
+		/// <param name="procKind">NetOffice.VBIDEApi.Enums.vbext_ProcKind procKind</param>
+		[SupportByVersion("VBIDE", 12,14,5.3)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public string get_ProcOfLine(Int32 line, out NetOffice.VBIDEApi.Enums.vbext_ProcKind procKind)
 		{		
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,true);
 			procKind = 0;
 			object[] paramsArray = Invoker.ValidateParamsArray(line, procKind);
-			object returnItem = Invoker.PropertyGet(this, "ProcOfLine", paramsArray);
+			object returnItem = Invoker.PropertyGet(this, "ProcOfLine", paramsArray, modifiers);
 			procKind = (NetOffice.VBIDEApi.Enums.vbext_ProcKind)paramsArray[1];
 			return NetRuntimeSystem.Convert.ToString(returnItem);
 		}
@@ -288,9 +286,9 @@ namespace NetOffice.VBIDEApi
 		/// SupportByVersion VBIDE 12, 14, 5.3
 		/// Alias for get_ProcOfLine
 		/// </summary>
-		/// <param name="line">Int32 Line</param>
-		/// <param name="procKind">NetOffice.VBIDEApi.Enums.vbext_ProcKind ProcKind</param>
-		[SupportByVersionAttribute("VBIDE", 12,14,5.3)]
+		/// <param name="line">Int32 line</param>
+		/// <param name="procKind">NetOffice.VBIDEApi.Enums.vbext_ProcKind procKind</param>
+		[SupportByVersion("VBIDE", 12,14,5.3), Redirect("get_ProcOfLine")]
 		public string ProcOfLine(Int32 line, out NetOffice.VBIDEApi.Enums.vbext_ProcKind procKind)
 		{
 			return get_ProcOfLine(line, out procKind);
@@ -300,14 +298,12 @@ namespace NetOffice.VBIDEApi
 		/// SupportByVersion VBIDE 12, 14, 5.3
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("VBIDE", 12,14,5.3)]
+		[SupportByVersion("VBIDE", 12,14,5.3)]
 		public Int32 CountOfDeclarationLines
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "CountOfDeclarationLines", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
+				return Factory.ExecuteInt32PropertyGet(this, "CountOfDeclarationLines");
 			}
 		}
 
@@ -315,15 +311,12 @@ namespace NetOffice.VBIDEApi
 		/// SupportByVersion VBIDE 12, 14, 5.3
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("VBIDE", 12,14,5.3)]
+		[SupportByVersion("VBIDE", 12,14,5.3)]
 		public NetOffice.VBIDEApi.CodePane CodePane
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "CodePane", paramsArray);
-				NetOffice.VBIDEApi.CodePane newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.VBIDEApi.CodePane.LateBindingApiWrapperType) as NetOffice.VBIDEApi.CodePane;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.VBIDEApi.CodePane>(this, "CodePane", NetOffice.VBIDEApi.CodePane.LateBindingApiWrapperType);
 			}
 		}
 
@@ -333,172 +326,146 @@ namespace NetOffice.VBIDEApi
 
 		/// <summary>
 		/// SupportByVersion VBIDE 12, 14, 5.3
-		/// 
 		/// </summary>
-		/// <param name="_string">string String</param>
-		[SupportByVersionAttribute("VBIDE", 12,14,5.3)]
+		/// <param name="_string">string string</param>
+		[SupportByVersion("VBIDE", 12,14,5.3)]
 		public void AddFromString(string _string)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(_string);
-			Invoker.Method(this, "AddFromString", paramsArray);
+			 Factory.ExecuteMethod(this, "AddFromString", _string);
 		}
 
 		/// <summary>
 		/// SupportByVersion VBIDE 12, 14, 5.3
-		/// 
 		/// </summary>
-		/// <param name="fileName">string FileName</param>
-		[SupportByVersionAttribute("VBIDE", 12,14,5.3)]
+		/// <param name="fileName">string fileName</param>
+		[SupportByVersion("VBIDE", 12,14,5.3)]
 		public void AddFromFile(string fileName)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(fileName);
-			Invoker.Method(this, "AddFromFile", paramsArray);
+			 Factory.ExecuteMethod(this, "AddFromFile", fileName);
 		}
 
 		/// <summary>
 		/// SupportByVersion VBIDE 12, 14, 5.3
-		/// 
 		/// </summary>
-		/// <param name="line">Int32 Line</param>
-		/// <param name="_string">string String</param>
-		[SupportByVersionAttribute("VBIDE", 12,14,5.3)]
+		/// <param name="line">Int32 line</param>
+		/// <param name="_string">string string</param>
+		[SupportByVersion("VBIDE", 12,14,5.3)]
 		public void InsertLines(Int32 line, string _string)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(line, _string);
-			Invoker.Method(this, "InsertLines", paramsArray);
+			 Factory.ExecuteMethod(this, "InsertLines", line, _string);
 		}
 
 		/// <summary>
 		/// SupportByVersion VBIDE 12, 14, 5.3
-		/// 
 		/// </summary>
-		/// <param name="startLine">Int32 StartLine</param>
+		/// <param name="startLine">Int32 startLine</param>
 		/// <param name="count">optional Int32 Count = 1</param>
-		[SupportByVersionAttribute("VBIDE", 12,14,5.3)]
+		[SupportByVersion("VBIDE", 12,14,5.3)]
 		public void DeleteLines(Int32 startLine, object count)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(startLine, count);
-			Invoker.Method(this, "DeleteLines", paramsArray);
+			 Factory.ExecuteMethod(this, "DeleteLines", startLine, count);
 		}
 
 		/// <summary>
 		/// SupportByVersion VBIDE 12, 14, 5.3
-		/// 
 		/// </summary>
-		/// <param name="startLine">Int32 StartLine</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("VBIDE", 12,14,5.3)]
+		/// <param name="startLine">Int32 startLine</param>
+		[CustomMethod]
+		[SupportByVersion("VBIDE", 12,14,5.3)]
 		public void DeleteLines(Int32 startLine)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(startLine);
-			Invoker.Method(this, "DeleteLines", paramsArray);
+			 Factory.ExecuteMethod(this, "DeleteLines", startLine);
 		}
 
 		/// <summary>
 		/// SupportByVersion VBIDE 12, 14, 5.3
-		/// 
 		/// </summary>
-		/// <param name="line">Int32 Line</param>
-		/// <param name="_string">string String</param>
-		[SupportByVersionAttribute("VBIDE", 12,14,5.3)]
+		/// <param name="line">Int32 line</param>
+		/// <param name="_string">string string</param>
+		[SupportByVersion("VBIDE", 12,14,5.3)]
 		public void ReplaceLine(Int32 line, string _string)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(line, _string);
-			Invoker.Method(this, "ReplaceLine", paramsArray);
+			 Factory.ExecuteMethod(this, "ReplaceLine", line, _string);
 		}
 
 		/// <summary>
 		/// SupportByVersion VBIDE 12, 14, 5.3
-		/// 
 		/// </summary>
-		/// <param name="eventName">string EventName</param>
-		/// <param name="objectName">string ObjectName</param>
-		[SupportByVersionAttribute("VBIDE", 12,14,5.3)]
+		/// <param name="eventName">string eventName</param>
+		/// <param name="objectName">string objectName</param>
+		[SupportByVersion("VBIDE", 12,14,5.3)]
 		public Int32 CreateEventProc(string eventName, string objectName)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(eventName, objectName);
-			object returnItem = Invoker.MethodReturn(this, "CreateEventProc", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return Factory.ExecuteInt32MethodGet(this, "CreateEventProc", eventName, objectName);
 		}
 
 		/// <summary>
 		/// SupportByVersion VBIDE 12, 14, 5.3
-		/// 
 		/// </summary>
-		/// <param name="target">string Target</param>
-		/// <param name="startLine">Int32 StartLine</param>
-		/// <param name="startColumn">Int32 StartColumn</param>
-		/// <param name="endLine">Int32 EndLine</param>
-		/// <param name="endColumn">Int32 EndColumn</param>
+		/// <param name="target">string target</param>
+		/// <param name="startLine">Int32 startLine</param>
+		/// <param name="startColumn">Int32 startColumn</param>
+		/// <param name="endLine">Int32 endLine</param>
+		/// <param name="endColumn">Int32 endColumn</param>
 		/// <param name="wholeWord">optional bool WholeWord = false</param>
 		/// <param name="matchCase">optional bool MatchCase = false</param>
 		/// <param name="patternSearch">optional bool PatternSearch = false</param>
-		[SupportByVersionAttribute("VBIDE", 12,14,5.3)]
+		[SupportByVersion("VBIDE", 12,14,5.3)]
 		public bool Find(string target, Int32 startLine, Int32 startColumn, Int32 endLine, Int32 endColumn, object wholeWord, object matchCase, object patternSearch)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(target, startLine, startColumn, endLine, endColumn, wholeWord, matchCase, patternSearch);
-			object returnItem = Invoker.MethodReturn(this, "Find", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return Factory.ExecuteBoolMethodGet(this, "Find", new object[]{ target, startLine, startColumn, endLine, endColumn, wholeWord, matchCase, patternSearch });
 		}
 
 		/// <summary>
 		/// SupportByVersion VBIDE 12, 14, 5.3
-		/// 
 		/// </summary>
-		/// <param name="target">string Target</param>
-		/// <param name="startLine">Int32 StartLine</param>
-		/// <param name="startColumn">Int32 StartColumn</param>
-		/// <param name="endLine">Int32 EndLine</param>
-		/// <param name="endColumn">Int32 EndColumn</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("VBIDE", 12,14,5.3)]
+		/// <param name="target">string target</param>
+		/// <param name="startLine">Int32 startLine</param>
+		/// <param name="startColumn">Int32 startColumn</param>
+		/// <param name="endLine">Int32 endLine</param>
+		/// <param name="endColumn">Int32 endColumn</param>
+		[CustomMethod]
+		[SupportByVersion("VBIDE", 12,14,5.3)]
 		public bool Find(string target, Int32 startLine, Int32 startColumn, Int32 endLine, Int32 endColumn)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(target, startLine, startColumn, endLine, endColumn);
-			object returnItem = Invoker.MethodReturn(this, "Find", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return Factory.ExecuteBoolMethodGet(this, "Find", new object[]{ target, startLine, startColumn, endLine, endColumn });
 		}
 
 		/// <summary>
 		/// SupportByVersion VBIDE 12, 14, 5.3
-		/// 
 		/// </summary>
-		/// <param name="target">string Target</param>
-		/// <param name="startLine">Int32 StartLine</param>
-		/// <param name="startColumn">Int32 StartColumn</param>
-		/// <param name="endLine">Int32 EndLine</param>
-		/// <param name="endColumn">Int32 EndColumn</param>
+		/// <param name="target">string target</param>
+		/// <param name="startLine">Int32 startLine</param>
+		/// <param name="startColumn">Int32 startColumn</param>
+		/// <param name="endLine">Int32 endLine</param>
+		/// <param name="endColumn">Int32 endColumn</param>
 		/// <param name="wholeWord">optional bool WholeWord = false</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("VBIDE", 12,14,5.3)]
+		[CustomMethod]
+		[SupportByVersion("VBIDE", 12,14,5.3)]
 		public bool Find(string target, Int32 startLine, Int32 startColumn, Int32 endLine, Int32 endColumn, object wholeWord)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(target, startLine, startColumn, endLine, endColumn, wholeWord);
-			object returnItem = Invoker.MethodReturn(this, "Find", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return Factory.ExecuteBoolMethodGet(this, "Find", new object[]{ target, startLine, startColumn, endLine, endColumn, wholeWord });
 		}
 
 		/// <summary>
 		/// SupportByVersion VBIDE 12, 14, 5.3
-		/// 
 		/// </summary>
-		/// <param name="target">string Target</param>
-		/// <param name="startLine">Int32 StartLine</param>
-		/// <param name="startColumn">Int32 StartColumn</param>
-		/// <param name="endLine">Int32 EndLine</param>
-		/// <param name="endColumn">Int32 EndColumn</param>
+		/// <param name="target">string target</param>
+		/// <param name="startLine">Int32 startLine</param>
+		/// <param name="startColumn">Int32 startColumn</param>
+		/// <param name="endLine">Int32 endLine</param>
+		/// <param name="endColumn">Int32 endColumn</param>
 		/// <param name="wholeWord">optional bool WholeWord = false</param>
 		/// <param name="matchCase">optional bool MatchCase = false</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("VBIDE", 12,14,5.3)]
+		[CustomMethod]
+		[SupportByVersion("VBIDE", 12,14,5.3)]
 		public bool Find(string target, Int32 startLine, Int32 startColumn, Int32 endLine, Int32 endColumn, object wholeWord, object matchCase)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(target, startLine, startColumn, endLine, endColumn, wholeWord, matchCase);
-			object returnItem = Invoker.MethodReturn(this, "Find", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return Factory.ExecuteBoolMethodGet(this, "Find", new object[]{ target, startLine, startColumn, endLine, endColumn, wholeWord, matchCase });
 		}
 
 		#endregion
+
 		#pragma warning restore
 	}
 }

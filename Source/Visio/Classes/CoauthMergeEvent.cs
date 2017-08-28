@@ -1,11 +1,9 @@
 ﻿using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
-using NetOffice;
-using NetOffice.Misc;
+using NetOffice.Attributes;
 namespace NetOffice.VisioApi
 {
-
 	#region Delegates
 
 	#pragma warning disable
@@ -13,15 +11,16 @@ namespace NetOffice.VisioApi
 
 	#endregion
 
-	///<summary>
+	/// <summary>
 	/// CoClass CoauthMergeEvent 
 	/// SupportByVersion Visio, 15, 16
-	///</summary>
-	[SupportByVersionAttribute("Visio", 15, 16)]
-	[EntityTypeAttribute(EntityType.IsCoClass)]
-	public class CoauthMergeEvent : IVCoauthMergeEvent
+	/// </summary>
+	[SupportByVersion("Visio", 15, 16)]
+	[EntityType(EntityType.IsCoClass)]
+ 	public class CoauthMergeEvent : IVCoauthMergeEvent
 	{
 		#pragma warning disable
+
 		#region Fields
 		
 		private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
@@ -35,6 +34,7 @@ namespace NetOffice.VisioApi
         /// <summary>
         /// Instance Type
         /// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
         public override Type InstanceType
         {
             get
@@ -101,17 +101,17 @@ namespace NetOffice.VisioApi
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of CoauthMergeEvent 
-        ///</summary>		
+        /// </summary>		
 		public CoauthMergeEvent():base("Visio.CoauthMergeEvent")
 		{
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of CoauthMergeEvent
-        ///</summary>
+        /// </summary>
         ///<param name="progId">registered ProgID</param>
 		public CoauthMergeEvent(string progId):base(progId)
 		{
@@ -121,46 +121,6 @@ namespace NetOffice.VisioApi
 		#endregion
 
 		#region Static CoClass Methods
-
-		/// <summary>
-        /// Returns all running Visio.CoauthMergeEvent objects from the environment/system
-        /// </summary>
-        /// <returns>an Visio.CoauthMergeEvent array</returns>
-		public static NetOffice.VisioApi.CoauthMergeEvent[] GetActiveInstances()
-		{		
-			IDisposableEnumeration proxyList = NetOffice.ProxyService.GetActiveInstances("Visio","CoauthMergeEvent");
-			NetRuntimeSystem.Collections.Generic.List<NetOffice.VisioApi.CoauthMergeEvent> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.VisioApi.CoauthMergeEvent>();
-			foreach(object proxy in proxyList)
-				resultList.Add( new NetOffice.VisioApi.CoauthMergeEvent(null, proxy) );
-			return resultList.ToArray();
-		}
-
-		/// <summary>
-        /// Returns a running Visio.CoauthMergeEvent object from the environment/system.
-        /// </summary>
-        /// <returns>an Visio.CoauthMergeEvent object or null</returns>
-		public static NetOffice.VisioApi.CoauthMergeEvent GetActiveInstance()
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Visio","CoauthMergeEvent", false);
-			if(null != proxy)
-				return new NetOffice.VisioApi.CoauthMergeEvent(null, proxy);
-			else
-				return null;
-		}
-
-		/// <summary>
-        /// Returns a running Visio.CoauthMergeEvent object from the environment/system. 
-        /// </summary>
-	    /// <param name="throwOnError">throw an exception if no object was found</param>
-        /// <returns>an Visio.CoauthMergeEvent object or null</returns>
-		public static NetOffice.VisioApi.CoauthMergeEvent GetActiveInstance(bool throwOnError)
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Visio","CoauthMergeEvent", throwOnError);
-			if(null != proxy)
-				return new NetOffice.VisioApi.CoauthMergeEvent(null, proxy);
-			else
-				return null;
-		}
 		#endregion
 
 		#region Events

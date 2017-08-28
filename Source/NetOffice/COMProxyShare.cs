@@ -1,48 +1,81 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.InteropServices;
-using System.Text;
 
 namespace NetOffice
 {
-    /// <summary>
-    /// Handle the shared access RCW. Not intended to use from client callers.
-    /// </summary>
-    public interface ICOMProxyShareProvider
-    {
-        /// <summary>
-        /// Returns the inner proxy shared access handler
-        /// </summary>
-        /// <returns>shared proxy</returns>
-        COMProxyShare GetProxyShare();
+    /* 
+        Purpose:
 
-        /// <summary>
-        /// Set the inner proxy shared access handler.
-        /// The method want aquire the share 1x times
-        /// </summary>
-        /// <param name="share">target share</param>
-        void SetProxyShare(COMProxyShare share);
-    }
+        Managed proxies (System._ComObject) implement its own managed lifetime service and reference counter.
+        Marshal.ReleaseComObject does NOT! decrement the remote IUnkown interface directly - 
+        its decrement its own managed reference counter and 
+        if the managed ref counter is <= 0 then the remote IUnkown interface want be decremented.       
+        (a common missunderstanding)
+
+        If you increment the IUnkown reference counter directly(Marshal.AddRef) means 
+        the RCW(System._ComObject) does not recognize that in its own managed lifetime service. 
+        (Moreover there is no Marshal.RemoveRef - a broken implementation for a passionate COM developer)
+
+        (You can try Marshal.GetIUnknownForObject&Marshal.AddRef and then call Marshal.ReleaseComObject 2x times and see what happen)
+
+        Unfortunately Microsoft spend no possibilities to influence the managed RCW lifetime service 
+        for System._ComObject except of Marshal.ReleaseComObject/Marshal.FinalReleaseComObject.
+        Thats why we spend this lifetime wrapper arround to have multiple 
+        Netoffice wrapper instances with same RCW proxy and keep the managed proxy alive as long we need.
+    */
 
     /// <summary>
-    /// Provides simple shared access to RCW COM proxies
+    /// Provides shared access to managed COM proxies(System._ComObject) by implement a reference counter.
+    /// COMProxyShare does not provide any thread safe operations because 
+    /// all essential NetOffice.Core operations are thread-safe and its not intended to use COMProxyShare outside from Netoffice infrastructure.
     /// </summary>
     public class COMProxyShare
-    {   
-        private int _count;
-        private object _proxy;
-        private bool _released;
+    {
+        /// <summary>
+        /// Reference count for _proxy
+        /// </summary>
+        protected volatile int _count;
 
+        /// <summary>
+        /// Com proxy as any
+        /// </summary>
+        protected object _proxy;
+
+        /// <summary>
+        /// Cache flag to see _proxy is disconnected
+        /// </summary>
+        protected bool _released;
+
+        /// <summary>
+        /// Instance is an enumerator provider
+        /// </summary>
+        private bool _isEnumerator;
+
+        /// <summary>
+        /// Creates an instance of the class and aquire the given proxy
+        /// </summary>
+        /// <param name="proxy">com proxy as any</param>
+        /// <exception cref="ArgumentNullException">throws when proxy is null</exception>
         internal COMProxyShare(object proxy)
-        {
+        {    
+            if (null == proxy)
+                throw new ArgumentNullException("proxy");
+            _isEnumerator = proxy is ICustomAdapter;
             _proxy = proxy;
             Aquire();
         }
 
+        /// <summary>
+        ///  Creates an instance of the class and aquire the given proxy
+        /// </summary>
+        /// <param name="proxy">com proxy as any</param>
+        /// <param name="isEnumerator">indicates proxy is an enumerator</param>
+        /// <exception cref="ArgumentNullException">throws when proxy is null</exception>
         internal COMProxyShare(object proxy, bool isEnumerator)
         {
-            // isEnumerator is ignored, see ReleaseComObject
+            if (null == proxy)
+                throw new ArgumentNullException("proxy");
+            _isEnumerator = isEnumerator;
             _proxy = proxy;
             Aquire();
         }
@@ -50,7 +83,7 @@ namespace NetOffice
         /// <summary>
         /// Returns information the underlying proxy is already released
         /// </summary>
-        public bool Released
+        public virtual bool Released
         {
             get
             {
@@ -59,9 +92,9 @@ namespace NetOffice
         }
 
         /// <summary>
-        /// Underyling RCW proxy
+        /// Underyling managed proxy(System._ComObject)
         /// </summary>
-        public object Proxy
+        public virtual object Proxy
         {
             get
             {
@@ -72,7 +105,7 @@ namespace NetOffice
         /// <summary>
         /// Increment the reference counter by 1
         /// </summary>
-        public void Aquire()
+        public virtual void Aquire()
         {
             if (_released)
                 throw new ObjectDisposedException("proxy");
@@ -80,10 +113,10 @@ namespace NetOffice
         }
 
         /// <summary>
-        /// Decrement the reference counter by 1 and release the proxy if 0
+        /// Decrement the reference counter by 1 and release the proxy if counter is 0 after decrement
         /// </summary>
-        /// <returns></returns>
-        public bool Release()
+        /// <returns>true if underlying proxy is released, otherwise false</returns>
+        public virtual bool Release()
         {
             _count--;
             if (0 == _count)
@@ -98,17 +131,44 @@ namespace NetOffice
 
         private void ReleaseComObject()
         {
-            // we ignore _isEnumerator here so far and do try convert
-            // want to change if its cause issues or performance problems
-            ICustomAdapter adapter = TryConvertToCustomAdapter();
-            if (null != adapter)
+            if(_isEnumerator)
             {
-                Marshal.ReleaseComObject(adapter.GetUnderlyingObject());
-                Marshal.ReleaseComObject(_proxy);
+                ICustomAdapter adapter = TryConvertToCustomAdapter();
+                if (null != adapter)
+                {
+                    object adapterUnderlyingObject = AdapterGetUnderlyingObject(adapter);
+                    MarshalReleaseComObject(adapterUnderlyingObject);
+                }
             }
             else
-                Marshal.ReleaseComObject(_proxy);
+                MarshalReleaseComObject(_proxy);
             _proxy = null;
+        }
+
+        private static object AdapterGetUnderlyingObject(ICustomAdapter adapter)
+        {
+            try
+            {
+                return adapter.GetUnderlyingObject();
+            }
+            catch (Exception exception)
+            {
+                DebugConsole.Default.WriteException(exception);
+                throw;
+            }          
+        }
+
+        private static void MarshalReleaseComObject(object proxy)
+        {
+            try
+            {
+                Marshal.ReleaseComObject(proxy);
+            }
+            catch (Exception exception)
+            {
+                DebugConsole.Default.WriteException(exception);
+                throw;
+            }
         }
 
         private ICustomAdapter TryConvertToCustomAdapter()
@@ -120,7 +180,7 @@ namespace NetOffice
             }
             catch
             {
-                // cast want throw an exception if RCW is already released
+                // cast want throw an exception if rcw is already disconnected
                 return null;
             }
         }

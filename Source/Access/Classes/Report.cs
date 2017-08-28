@@ -1,61 +1,61 @@
 ﻿using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
-using NetOffice;
-using NetOffice.Misc;
+using NetOffice.Attributes;
 
 namespace NetOffice.AccessApi
 {
-
 	#region Delegates
 
 	#pragma warning disable
-	public delegate void Report_OpenEventHandler(ref Int16 Cancel);
+	public delegate void Report_OpenEventHandler(ref Int16 cancel);
 	public delegate void Report_CloseEventHandler();
 	public delegate void Report_ActivateEventHandler();
 	public delegate void Report_DeactivateEventHandler();
-	public delegate void Report_ErrorEventHandler(ref Int16 DataErr, ref Int16 Response);
-	public delegate void Report_NoDataEventHandler(ref Int16 Cancel);
+	public delegate void Report_ErrorEventHandler(ref Int16 dataErr, ref Int16 response);
+	public delegate void Report_NoDataEventHandler(ref Int16 cancel);
 	public delegate void Report_PageEventHandler();
 	public delegate void Report_CurrentEventHandler();
 	public delegate void Report_LoadEventHandler();
 	public delegate void Report_ResizeEventHandler();
-	public delegate void Report_UnloadEventHandler(ref Int16 Cancel);
+	public delegate void Report_UnloadEventHandler(ref Int16 cancel);
 	public delegate void Report_GotFocusEventHandler();
 	public delegate void Report_LostFocusEventHandler();
 	public delegate void Report_ClickEventHandler();
-	public delegate void Report_DblClickEventHandler(ref Int16 Cancel);
-	public delegate void Report_MouseDownEventHandler(ref Int16 Button, ref Int16 Shift, ref Single X, ref Single Y);
-	public delegate void Report_MouseMoveEventHandler(ref Int16 Button, ref Int16 Shift, ref Single X, ref Single Y);
-	public delegate void Report_MouseUpEventHandler(ref Int16 Button, ref Int16 Shift, ref Single X, ref Single Y);
-	public delegate void Report_KeyDownEventHandler(ref Int16 KeyCode, ref Int16 Shift);
-	public delegate void Report_KeyPressEventHandler(ref Int16 KeyAscii);
-	public delegate void Report_KeyUpEventHandler(ref Int16 KeyCode, ref Int16 Shift);
+	public delegate void Report_DblClickEventHandler(ref Int16 cancel);
+	public delegate void Report_MouseDownEventHandler(ref Int16 button, ref Int16 shift, ref Single x, ref Single y);
+	public delegate void Report_MouseMoveEventHandler(ref Int16 button, ref Int16 shift, ref Single x, ref Single y);
+	public delegate void Report_MouseUpEventHandler(ref Int16 button, ref Int16 shift, ref Single x, ref Single y);
+	public delegate void Report_KeyDownEventHandler(ref Int16 keyCode, ref Int16 shift);
+	public delegate void Report_KeyPressEventHandler(ref Int16 keyAscii);
+	public delegate void Report_KeyUpEventHandler(ref Int16 keyCode, ref Int16 Shift);
 	public delegate void Report_TimerEventHandler();
-	public delegate void Report_FilterEventHandler(ref Int16 Cancel, ref Int16 FilterType);
-	public delegate void Report_ApplyFilterEventHandler(ref Int16 Cancel, ref Int16 ApplyType);
-	public delegate void Report_MouseWheelEventHandler(bool Page, Int32 Count);
+	public delegate void Report_FilterEventHandler(ref Int16 cancel, ref Int16 filterType);
+	public delegate void Report_ApplyFilterEventHandler(ref Int16 cancel, ref Int16 applyType);
+	public delegate void Report_MouseWheelEventHandler(bool page, Int32 count);
 	#pragma warning restore
 
 	#endregion
 
-	///<summary>
+	/// <summary>
 	/// CoClass Report 
 	/// SupportByVersion Access, 9,10,11,12,14,15,16
-	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195583.aspx
-	///</summary>
-	[SupportByVersionAttribute("Access", 9,10,11,12,14,15,16)]
-	[EntityTypeAttribute(EntityType.IsCoClass)]
-	public class Report : _Report3,IEventBinding
+	/// </summary>
+	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff195583.aspx </remarks>
+	[SupportByVersion("Access", 9,10,11,12,14,15,16)]
+	[EntityType(EntityType.IsCoClass)]
+    [EventSink(typeof(Events._ReportEvents_SinkHelper), typeof(Events._ReportEvents2_SinkHelper))]
+    public class Report : _Report3, IEventBinding
 	{
 		#pragma warning disable
+
 		#region Fields
 		
 		private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
 		private string _activeSinkId;
 		private NetRuntimeSystem.Type _thisType;
-		_ReportEvents_SinkHelper __ReportEvents_SinkHelper;
-		_ReportEvents2_SinkHelper __ReportEvents2_SinkHelper;
+		private Events._ReportEvents_SinkHelper __ReportEvents_SinkHelper;
+		private Events._ReportEvents2_SinkHelper __ReportEvents2_SinkHelper;
 	
 		#endregion
 
@@ -64,6 +64,7 @@ namespace NetOffice.AccessApi
         /// <summary>
         /// Instance Type
         /// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
         public override Type InstanceType
         {
             get
@@ -130,17 +131,17 @@ namespace NetOffice.AccessApi
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of Report 
-        ///</summary>		
+        /// </summary>		
 		public Report():base("Access.Report")
 		{
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of Report
-        ///</summary>
+        /// </summary>
         ///<param name="progId">registered ProgID</param>
 		public Report(string progId):base(progId)
 		{
@@ -150,46 +151,6 @@ namespace NetOffice.AccessApi
 		#endregion
 
 		#region Static CoClass Methods
-
-		/// <summary>
-        /// Returns all running Access.Report objects from the environment/system
-        /// </summary>
-        /// <returns>an Access.Report array</returns>
-		public static NetOffice.AccessApi.Report[] GetActiveInstances()
-		{		
-			IDisposableEnumeration proxyList = NetOffice.ProxyService.GetActiveInstances("Access","Report");
-			NetRuntimeSystem.Collections.Generic.List<NetOffice.AccessApi.Report> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.AccessApi.Report>();
-			foreach(object proxy in proxyList)
-				resultList.Add( new NetOffice.AccessApi.Report(null, proxy) );
-			return resultList.ToArray();
-		}
-
-		/// <summary>
-        /// Returns a running Access.Report object from the environment/system.
-        /// </summary>
-        /// <returns>an Access.Report object or null</returns>
-		public static NetOffice.AccessApi.Report GetActiveInstance()
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Access","Report", false);
-			if(null != proxy)
-				return new NetOffice.AccessApi.Report(null, proxy);
-			else
-				return null;
-		}
-
-		/// <summary>
-        /// Returns a running Access.Report object from the environment/system. 
-        /// </summary>
-	    /// <param name="throwOnError">throw an exception if no object was found</param>
-        /// <returns>an Access.Report object or null</returns>
-		public static NetOffice.AccessApi.Report GetActiveInstance(bool throwOnError)
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("Access","Report", throwOnError);
-			if(null != proxy)
-				return new NetOffice.AccessApi.Report(null, proxy);
-			else
-				return null;
-		}
 		#endregion
 
 		#region Events
@@ -786,18 +747,18 @@ namespace NetOffice.AccessApi
 				return;
 	
             if (null == _activeSinkId)
-				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, _ReportEvents_SinkHelper.Id,_ReportEvents2_SinkHelper.Id);
+				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, Events._ReportEvents_SinkHelper.Id, Events._ReportEvents2_SinkHelper.Id);
 
 
-			if(_ReportEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
+			if(Events._ReportEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
 			{
-				__ReportEvents_SinkHelper = new _ReportEvents_SinkHelper(this, _connectPoint);
+				__ReportEvents_SinkHelper = new Events._ReportEvents_SinkHelper(this, _connectPoint);
 				return;
 			}
 
-			if(_ReportEvents2_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
+			if(Events._ReportEvents2_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
 			{
-				__ReportEvents2_SinkHelper = new _ReportEvents2_SinkHelper(this, _connectPoint);
+				__ReportEvents2_SinkHelper = new Events._ReportEvents2_SinkHelper(this, _connectPoint);
 				return;
 			} 
         }

@@ -1,42 +1,42 @@
 ﻿using System;
 using NetRuntimeSystem = System;
 using System.ComponentModel;
-using NetOffice;
-using NetOffice.Misc;
+using NetOffice.Attributes;
 
 namespace NetOffice.MSFormsApi
 {
-
 	#region Delegates
 
 	#pragma warning disable
-	public delegate void ScrollBar_BeforeDragOverEventHandler(NetOffice.MSFormsApi.ReturnBoolean Cancel, NetOffice.MSFormsApi.DataObject Data, Single X, Single Y, NetOffice.MSFormsApi.Enums.fmDragState DragState, NetOffice.MSFormsApi.ReturnEffect Effect, Int16 Shift);
-	public delegate void ScrollBar_BeforeDropOrPasteEventHandler(NetOffice.MSFormsApi.ReturnBoolean Cancel, NetOffice.MSFormsApi.Enums.fmAction Action, NetOffice.MSFormsApi.DataObject Data, Single X, Single Y, NetOffice.MSFormsApi.ReturnEffect Effect, Int16 Shift);
+	public delegate void ScrollBar_BeforeDragOverEventHandler(NetOffice.MSFormsApi.ReturnBoolean cancel, NetOffice.MSFormsApi.DataObject data, Single x, Single y, NetOffice.MSFormsApi.Enums.fmDragState dragState, NetOffice.MSFormsApi.ReturnEffect effect, Int16 shift);
+	public delegate void ScrollBar_BeforeDropOrPasteEventHandler(NetOffice.MSFormsApi.ReturnBoolean cancel, NetOffice.MSFormsApi.Enums.fmAction action, NetOffice.MSFormsApi.DataObject data, Single x, Single y, NetOffice.MSFormsApi.ReturnEffect effect, Int16 shift);
 	public delegate void ScrollBar_ChangeEventHandler();
-	public delegate void ScrollBar_ErrorEventHandler(Int16 Number, NetOffice.MSFormsApi.ReturnString Description, Int32 SCode, string Source, string HelpFile, Int32 HelpContext, NetOffice.MSFormsApi.ReturnBoolean CancelDisplay);
-	public delegate void ScrollBar_KeyDownEventHandler(NetOffice.MSFormsApi.ReturnInteger KeyCode, Int16 Shift);
-	public delegate void ScrollBar_KeyPressEventHandler(NetOffice.MSFormsApi.ReturnInteger KeyAscii);
-	public delegate void ScrollBar_KeyUpEventHandler(NetOffice.MSFormsApi.ReturnInteger KeyCode, Int16 Shift);
+	public delegate void ScrollBar_ErrorEventHandler(Int16 number, NetOffice.MSFormsApi.ReturnString description, Int32 sCode, string source, string helpFile, Int32 helpContext, NetOffice.MSFormsApi.ReturnBoolean cancelDisplay);
+	public delegate void ScrollBar_KeyDownEventHandler(NetOffice.MSFormsApi.ReturnInteger keyCode, Int16 shift);
+	public delegate void ScrollBar_KeyPressEventHandler(NetOffice.MSFormsApi.ReturnInteger keyAscii);
+	public delegate void ScrollBar_KeyUpEventHandler(NetOffice.MSFormsApi.ReturnInteger keyCode, Int16 shift);
 	public delegate void ScrollBar_ScrollEventHandler();
 	#pragma warning restore
 
 	#endregion
 
-	///<summary>
+	/// <summary>
 	/// CoClass ScrollBar 
 	/// SupportByVersion MSForms, 2
-	///</summary>
-	[SupportByVersionAttribute("MSForms", 2)]
-	[EntityTypeAttribute(EntityType.IsCoClass)]
-	public class ScrollBar : IScrollbar,IEventBinding
+	/// </summary>
+	[SupportByVersion("MSForms", 2)]
+	[EntityType(EntityType.IsCoClass)]
+	[EventSink(typeof(Events.ScrollbarEvents_SinkHelper))]
+	public class ScrollBar : IScrollbar, IEventBinding
 	{
 		#pragma warning disable
+
 		#region Fields
 		
 		private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
 		private string _activeSinkId;
 		private NetRuntimeSystem.Type _thisType;
-		ScrollbarEvents_SinkHelper _scrollbarEvents_SinkHelper;
+		private Events.ScrollbarEvents_SinkHelper _scrollbarEvents_SinkHelper;
 	
 		#endregion
 
@@ -45,6 +45,7 @@ namespace NetOffice.MSFormsApi
         /// <summary>
         /// Instance Type
         /// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
         public override Type InstanceType
         {
             get
@@ -111,17 +112,17 @@ namespace NetOffice.MSFormsApi
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of ScrollBar 
-        ///</summary>		
+        /// </summary>		
 		public ScrollBar():base("MSForms.ScrollBar")
 		{
 			
 		}
 		
-		///<summary>
+		/// <summary>
         /// Creates a new instance of ScrollBar
-        ///</summary>
+        /// </summary>
         ///<param name="progId">registered ProgID</param>
 		public ScrollBar(string progId):base(progId)
 		{
@@ -131,46 +132,6 @@ namespace NetOffice.MSFormsApi
 		#endregion
 
 		#region Static CoClass Methods
-
-		/// <summary>
-        /// Returns all running MSForms.ScrollBar objects from the environment/system
-        /// </summary>
-        /// <returns>an MSForms.ScrollBar array</returns>
-		public static NetOffice.MSFormsApi.ScrollBar[] GetActiveInstances()
-		{		
-			IDisposableEnumeration proxyList = NetOffice.ProxyService.GetActiveInstances("MSForms","ScrollBar");
-			NetRuntimeSystem.Collections.Generic.List<NetOffice.MSFormsApi.ScrollBar> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.MSFormsApi.ScrollBar>();
-			foreach(object proxy in proxyList)
-				resultList.Add( new NetOffice.MSFormsApi.ScrollBar(null, proxy) );
-			return resultList.ToArray();
-		}
-
-		/// <summary>
-        /// Returns a running MSForms.ScrollBar object from the environment/system.
-        /// </summary>
-        /// <returns>an MSForms.ScrollBar object or null</returns>
-		public static NetOffice.MSFormsApi.ScrollBar GetActiveInstance()
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("MSForms","ScrollBar", false);
-			if(null != proxy)
-				return new NetOffice.MSFormsApi.ScrollBar(null, proxy);
-			else
-				return null;
-		}
-
-		/// <summary>
-        /// Returns a running MSForms.ScrollBar object from the environment/system. 
-        /// </summary>
-	    /// <param name="throwOnError">throw an exception if no object was found</param>
-        /// <returns>an MSForms.ScrollBar object or null</returns>
-		public static NetOffice.MSFormsApi.ScrollBar GetActiveInstance(bool throwOnError)
-		{
-			object proxy  = NetOffice.ProxyService.GetActiveInstance("MSForms","ScrollBar", throwOnError);
-			if(null != proxy)
-				return new NetOffice.MSFormsApi.ScrollBar(null, proxy);
-			else
-				return null;
-		}
 		#endregion
 
 		#region Events
@@ -368,12 +329,12 @@ namespace NetOffice.MSFormsApi
 				return;
 	
             if (null == _activeSinkId)
-				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, ScrollbarEvents_SinkHelper.Id);
+				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, Events.ScrollbarEvents_SinkHelper.Id);
 
 
-			if(ScrollbarEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
+			if(Events.ScrollbarEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
 			{
-				_scrollbarEvents_SinkHelper = new ScrollbarEvents_SinkHelper(this, _connectPoint);
+				_scrollbarEvents_SinkHelper = new Events.ScrollbarEvents_SinkHelper(this, _connectPoint);
 				return;
 			} 
         }

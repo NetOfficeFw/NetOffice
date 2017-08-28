@@ -1,28 +1,27 @@
 ﻿using System;
 using NetRuntimeSystem = System;
-using System.Runtime.InteropServices;
-using System.Runtime.CompilerServices;
 using System.ComponentModel;
-using System.Reflection;
-using System.Collections.Generic;
-using NetOffice;
+using NetOffice.Attributes;
+
 namespace NetOffice.ExcelApi
 {
-	///<summary>
+	/// <summary>
 	/// DispatchInterface Dialog 
 	/// SupportByVersion Excel, 9,10,11,12,14,15,16
-	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837805.aspx
-	///</summary>
-	[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
-	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
-	public class Dialog : COMObject
+	/// </summary>
+	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff837805.aspx </remarks>
+	[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+	[EntityType(EntityType.IsDispatchInterface)]
+ 	public class Dialog : COMObject
 	{
 		#pragma warning disable
+
 		#region Type Information
 
         /// <summary>
         /// Instance Type
         /// </summary>
+		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
         public override Type InstanceType
         {
             get
@@ -40,14 +39,20 @@ namespace NetOffice.ExcelApi
             {
                 if (null == _type)
                     _type = typeof(Dialog);
-                    
                 return _type;
             }
         }
         
         #endregion
         
-		#region Construction
+		#region Ctor
+
+		/// <param name="factory">current used factory core</param>
+		/// <param name="parentObject">object there has created the proxy</param>
+		/// <param name="proxyShare">proxy share instead if com proxy</param>
+		public Dialog(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+		{
+		}
 
 		///<param name="factory">current used factory core</param>
 		///<param name="parentObject">object there has created the proxy</param>
@@ -93,7 +98,7 @@ namespace NetOffice.ExcelApi
 		{
 		}
 		
-		/// <param name="progId">registered ProgID</param>
+		/// <param name="progId">registered progID</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public Dialog(string progId) : base(progId)
 		{
@@ -106,52 +111,43 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196391.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff196391.aspx </remarks>
+		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public NetOffice.ExcelApi.Application Application
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				NetOffice.ExcelApi.Application newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.Application.LateBindingApiWrapperType) as NetOffice.ExcelApi.Application;
-				return newObject;
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Application>(this, "Application", NetOffice.ExcelApi.Application.LateBindingApiWrapperType);
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839743.aspx
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff839743.aspx </remarks>
+		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public NetOffice.ExcelApi.Enums.XlCreator Creator
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Creator", paramsArray);
-				int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-				return (NetOffice.ExcelApi.Enums.XlCreator)intReturnItem;
+				return Factory.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlCreator>(this, "Creator");
 			}
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194078.aspx
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff194078.aspx </remarks>
+		[SupportByVersion("Excel", 9,10,11,12,14,15,16), ProxyResult]
 		public object Parent
 		{
 			get
 			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Parent", paramsArray);
-				ICOMObject newObject = Factory.CreateObjectFromComProxy(this,returnItem);
-				return newObject;
+				return Factory.ExecuteReferencePropertyGet(this, "Parent");
 			}
 		}
 
@@ -161,872 +157,811 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff834620.aspx
 		/// </summary>
-		/// <param name="arg1">optional object Arg1</param>
-		/// <param name="arg2">optional object Arg2</param>
-		/// <param name="arg3">optional object Arg3</param>
-		/// <param name="arg4">optional object Arg4</param>
-		/// <param name="arg5">optional object Arg5</param>
-		/// <param name="arg6">optional object Arg6</param>
-		/// <param name="arg7">optional object Arg7</param>
-		/// <param name="arg8">optional object Arg8</param>
-		/// <param name="arg9">optional object Arg9</param>
-		/// <param name="arg10">optional object Arg10</param>
-		/// <param name="arg11">optional object Arg11</param>
-		/// <param name="arg12">optional object Arg12</param>
-		/// <param name="arg13">optional object Arg13</param>
-		/// <param name="arg14">optional object Arg14</param>
-		/// <param name="arg15">optional object Arg15</param>
-		/// <param name="arg16">optional object Arg16</param>
-		/// <param name="arg17">optional object Arg17</param>
-		/// <param name="arg18">optional object Arg18</param>
-		/// <param name="arg19">optional object Arg19</param>
-		/// <param name="arg20">optional object Arg20</param>
-		/// <param name="arg21">optional object Arg21</param>
-		/// <param name="arg22">optional object Arg22</param>
-		/// <param name="arg23">optional object Arg23</param>
-		/// <param name="arg24">optional object Arg24</param>
-		/// <param name="arg25">optional object Arg25</param>
-		/// <param name="arg26">optional object Arg26</param>
-		/// <param name="arg27">optional object Arg27</param>
-		/// <param name="arg28">optional object Arg28</param>
-		/// <param name="arg29">optional object Arg29</param>
-		/// <param name="arg30">optional object Arg30</param>
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff834620.aspx </remarks>
+		/// <param name="arg1">optional object arg1</param>
+		/// <param name="arg2">optional object arg2</param>
+		/// <param name="arg3">optional object arg3</param>
+		/// <param name="arg4">optional object arg4</param>
+		/// <param name="arg5">optional object arg5</param>
+		/// <param name="arg6">optional object arg6</param>
+		/// <param name="arg7">optional object arg7</param>
+		/// <param name="arg8">optional object arg8</param>
+		/// <param name="arg9">optional object arg9</param>
+		/// <param name="arg10">optional object arg10</param>
+		/// <param name="arg11">optional object arg11</param>
+		/// <param name="arg12">optional object arg12</param>
+		/// <param name="arg13">optional object arg13</param>
+		/// <param name="arg14">optional object arg14</param>
+		/// <param name="arg15">optional object arg15</param>
+		/// <param name="arg16">optional object arg16</param>
+		/// <param name="arg17">optional object arg17</param>
+		/// <param name="arg18">optional object arg18</param>
+		/// <param name="arg19">optional object arg19</param>
+		/// <param name="arg20">optional object arg20</param>
+		/// <param name="arg21">optional object arg21</param>
+		/// <param name="arg22">optional object arg22</param>
+		/// <param name="arg23">optional object arg23</param>
+		/// <param name="arg24">optional object arg24</param>
+		/// <param name="arg25">optional object arg25</param>
+		/// <param name="arg26">optional object arg26</param>
+		/// <param name="arg27">optional object arg27</param>
+		/// <param name="arg28">optional object arg28</param>
+		/// <param name="arg29">optional object arg29</param>
+		/// <param name="arg30">optional object arg30</param>
+		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public bool Show(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24, object arg25, object arg26, object arg27, object arg28, object arg29, object arg30)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28, arg29, arg30);
-			object returnItem = Invoker.MethodReturn(this, "Show", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return Factory.ExecuteBoolMethodGet(this, "Show", new object[]{ arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28, arg29, arg30 });
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff834620.aspx
 		/// </summary>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff834620.aspx </remarks>
+		[CustomMethod]
+		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public bool Show()
 		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "Show", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return Factory.ExecuteBoolMethodGet(this, "Show");
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff834620.aspx
 		/// </summary>
-		/// <param name="arg1">optional object Arg1</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff834620.aspx </remarks>
+		/// <param name="arg1">optional object arg1</param>
+		[CustomMethod]
+		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public bool Show(object arg1)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(arg1);
-			object returnItem = Invoker.MethodReturn(this, "Show", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return Factory.ExecuteBoolMethodGet(this, "Show", arg1);
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff834620.aspx
 		/// </summary>
-		/// <param name="arg1">optional object Arg1</param>
-		/// <param name="arg2">optional object Arg2</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff834620.aspx </remarks>
+		/// <param name="arg1">optional object arg1</param>
+		/// <param name="arg2">optional object arg2</param>
+		[CustomMethod]
+		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public bool Show(object arg1, object arg2)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
-			object returnItem = Invoker.MethodReturn(this, "Show", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return Factory.ExecuteBoolMethodGet(this, "Show", arg1, arg2);
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff834620.aspx
 		/// </summary>
-		/// <param name="arg1">optional object Arg1</param>
-		/// <param name="arg2">optional object Arg2</param>
-		/// <param name="arg3">optional object Arg3</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff834620.aspx </remarks>
+		/// <param name="arg1">optional object arg1</param>
+		/// <param name="arg2">optional object arg2</param>
+		/// <param name="arg3">optional object arg3</param>
+		[CustomMethod]
+		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public bool Show(object arg1, object arg2, object arg3)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
-			object returnItem = Invoker.MethodReturn(this, "Show", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return Factory.ExecuteBoolMethodGet(this, "Show", arg1, arg2, arg3);
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff834620.aspx
 		/// </summary>
-		/// <param name="arg1">optional object Arg1</param>
-		/// <param name="arg2">optional object Arg2</param>
-		/// <param name="arg3">optional object Arg3</param>
-		/// <param name="arg4">optional object Arg4</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff834620.aspx </remarks>
+		/// <param name="arg1">optional object arg1</param>
+		/// <param name="arg2">optional object arg2</param>
+		/// <param name="arg3">optional object arg3</param>
+		/// <param name="arg4">optional object arg4</param>
+		[CustomMethod]
+		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public bool Show(object arg1, object arg2, object arg3, object arg4)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4);
-			object returnItem = Invoker.MethodReturn(this, "Show", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return Factory.ExecuteBoolMethodGet(this, "Show", arg1, arg2, arg3, arg4);
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff834620.aspx
 		/// </summary>
-		/// <param name="arg1">optional object Arg1</param>
-		/// <param name="arg2">optional object Arg2</param>
-		/// <param name="arg3">optional object Arg3</param>
-		/// <param name="arg4">optional object Arg4</param>
-		/// <param name="arg5">optional object Arg5</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff834620.aspx </remarks>
+		/// <param name="arg1">optional object arg1</param>
+		/// <param name="arg2">optional object arg2</param>
+		/// <param name="arg3">optional object arg3</param>
+		/// <param name="arg4">optional object arg4</param>
+		/// <param name="arg5">optional object arg5</param>
+		[CustomMethod]
+		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public bool Show(object arg1, object arg2, object arg3, object arg4, object arg5)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5);
-			object returnItem = Invoker.MethodReturn(this, "Show", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return Factory.ExecuteBoolMethodGet(this, "Show", new object[]{ arg1, arg2, arg3, arg4, arg5 });
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff834620.aspx
 		/// </summary>
-		/// <param name="arg1">optional object Arg1</param>
-		/// <param name="arg2">optional object Arg2</param>
-		/// <param name="arg3">optional object Arg3</param>
-		/// <param name="arg4">optional object Arg4</param>
-		/// <param name="arg5">optional object Arg5</param>
-		/// <param name="arg6">optional object Arg6</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff834620.aspx </remarks>
+		/// <param name="arg1">optional object arg1</param>
+		/// <param name="arg2">optional object arg2</param>
+		/// <param name="arg3">optional object arg3</param>
+		/// <param name="arg4">optional object arg4</param>
+		/// <param name="arg5">optional object arg5</param>
+		/// <param name="arg6">optional object arg6</param>
+		[CustomMethod]
+		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public bool Show(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6);
-			object returnItem = Invoker.MethodReturn(this, "Show", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return Factory.ExecuteBoolMethodGet(this, "Show", new object[]{ arg1, arg2, arg3, arg4, arg5, arg6 });
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff834620.aspx
 		/// </summary>
-		/// <param name="arg1">optional object Arg1</param>
-		/// <param name="arg2">optional object Arg2</param>
-		/// <param name="arg3">optional object Arg3</param>
-		/// <param name="arg4">optional object Arg4</param>
-		/// <param name="arg5">optional object Arg5</param>
-		/// <param name="arg6">optional object Arg6</param>
-		/// <param name="arg7">optional object Arg7</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff834620.aspx </remarks>
+		/// <param name="arg1">optional object arg1</param>
+		/// <param name="arg2">optional object arg2</param>
+		/// <param name="arg3">optional object arg3</param>
+		/// <param name="arg4">optional object arg4</param>
+		/// <param name="arg5">optional object arg5</param>
+		/// <param name="arg6">optional object arg6</param>
+		/// <param name="arg7">optional object arg7</param>
+		[CustomMethod]
+		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public bool Show(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
-			object returnItem = Invoker.MethodReturn(this, "Show", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return Factory.ExecuteBoolMethodGet(this, "Show", new object[]{ arg1, arg2, arg3, arg4, arg5, arg6, arg7 });
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff834620.aspx
 		/// </summary>
-		/// <param name="arg1">optional object Arg1</param>
-		/// <param name="arg2">optional object Arg2</param>
-		/// <param name="arg3">optional object Arg3</param>
-		/// <param name="arg4">optional object Arg4</param>
-		/// <param name="arg5">optional object Arg5</param>
-		/// <param name="arg6">optional object Arg6</param>
-		/// <param name="arg7">optional object Arg7</param>
-		/// <param name="arg8">optional object Arg8</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff834620.aspx </remarks>
+		/// <param name="arg1">optional object arg1</param>
+		/// <param name="arg2">optional object arg2</param>
+		/// <param name="arg3">optional object arg3</param>
+		/// <param name="arg4">optional object arg4</param>
+		/// <param name="arg5">optional object arg5</param>
+		/// <param name="arg6">optional object arg6</param>
+		/// <param name="arg7">optional object arg7</param>
+		/// <param name="arg8">optional object arg8</param>
+		[CustomMethod]
+		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public bool Show(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
-			object returnItem = Invoker.MethodReturn(this, "Show", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return Factory.ExecuteBoolMethodGet(this, "Show", new object[]{ arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8 });
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff834620.aspx
 		/// </summary>
-		/// <param name="arg1">optional object Arg1</param>
-		/// <param name="arg2">optional object Arg2</param>
-		/// <param name="arg3">optional object Arg3</param>
-		/// <param name="arg4">optional object Arg4</param>
-		/// <param name="arg5">optional object Arg5</param>
-		/// <param name="arg6">optional object Arg6</param>
-		/// <param name="arg7">optional object Arg7</param>
-		/// <param name="arg8">optional object Arg8</param>
-		/// <param name="arg9">optional object Arg9</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff834620.aspx </remarks>
+		/// <param name="arg1">optional object arg1</param>
+		/// <param name="arg2">optional object arg2</param>
+		/// <param name="arg3">optional object arg3</param>
+		/// <param name="arg4">optional object arg4</param>
+		/// <param name="arg5">optional object arg5</param>
+		/// <param name="arg6">optional object arg6</param>
+		/// <param name="arg7">optional object arg7</param>
+		/// <param name="arg8">optional object arg8</param>
+		/// <param name="arg9">optional object arg9</param>
+		[CustomMethod]
+		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public bool Show(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9);
-			object returnItem = Invoker.MethodReturn(this, "Show", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return Factory.ExecuteBoolMethodGet(this, "Show", new object[]{ arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9 });
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff834620.aspx
 		/// </summary>
-		/// <param name="arg1">optional object Arg1</param>
-		/// <param name="arg2">optional object Arg2</param>
-		/// <param name="arg3">optional object Arg3</param>
-		/// <param name="arg4">optional object Arg4</param>
-		/// <param name="arg5">optional object Arg5</param>
-		/// <param name="arg6">optional object Arg6</param>
-		/// <param name="arg7">optional object Arg7</param>
-		/// <param name="arg8">optional object Arg8</param>
-		/// <param name="arg9">optional object Arg9</param>
-		/// <param name="arg10">optional object Arg10</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff834620.aspx </remarks>
+		/// <param name="arg1">optional object arg1</param>
+		/// <param name="arg2">optional object arg2</param>
+		/// <param name="arg3">optional object arg3</param>
+		/// <param name="arg4">optional object arg4</param>
+		/// <param name="arg5">optional object arg5</param>
+		/// <param name="arg6">optional object arg6</param>
+		/// <param name="arg7">optional object arg7</param>
+		/// <param name="arg8">optional object arg8</param>
+		/// <param name="arg9">optional object arg9</param>
+		/// <param name="arg10">optional object arg10</param>
+		[CustomMethod]
+		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public bool Show(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10);
-			object returnItem = Invoker.MethodReturn(this, "Show", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return Factory.ExecuteBoolMethodGet(this, "Show", new object[]{ arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10 });
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff834620.aspx
 		/// </summary>
-		/// <param name="arg1">optional object Arg1</param>
-		/// <param name="arg2">optional object Arg2</param>
-		/// <param name="arg3">optional object Arg3</param>
-		/// <param name="arg4">optional object Arg4</param>
-		/// <param name="arg5">optional object Arg5</param>
-		/// <param name="arg6">optional object Arg6</param>
-		/// <param name="arg7">optional object Arg7</param>
-		/// <param name="arg8">optional object Arg8</param>
-		/// <param name="arg9">optional object Arg9</param>
-		/// <param name="arg10">optional object Arg10</param>
-		/// <param name="arg11">optional object Arg11</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff834620.aspx </remarks>
+		/// <param name="arg1">optional object arg1</param>
+		/// <param name="arg2">optional object arg2</param>
+		/// <param name="arg3">optional object arg3</param>
+		/// <param name="arg4">optional object arg4</param>
+		/// <param name="arg5">optional object arg5</param>
+		/// <param name="arg6">optional object arg6</param>
+		/// <param name="arg7">optional object arg7</param>
+		/// <param name="arg8">optional object arg8</param>
+		/// <param name="arg9">optional object arg9</param>
+		/// <param name="arg10">optional object arg10</param>
+		/// <param name="arg11">optional object arg11</param>
+		[CustomMethod]
+		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public bool Show(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11);
-			object returnItem = Invoker.MethodReturn(this, "Show", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return Factory.ExecuteBoolMethodGet(this, "Show", new object[]{ arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11 });
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff834620.aspx
 		/// </summary>
-		/// <param name="arg1">optional object Arg1</param>
-		/// <param name="arg2">optional object Arg2</param>
-		/// <param name="arg3">optional object Arg3</param>
-		/// <param name="arg4">optional object Arg4</param>
-		/// <param name="arg5">optional object Arg5</param>
-		/// <param name="arg6">optional object Arg6</param>
-		/// <param name="arg7">optional object Arg7</param>
-		/// <param name="arg8">optional object Arg8</param>
-		/// <param name="arg9">optional object Arg9</param>
-		/// <param name="arg10">optional object Arg10</param>
-		/// <param name="arg11">optional object Arg11</param>
-		/// <param name="arg12">optional object Arg12</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff834620.aspx </remarks>
+		/// <param name="arg1">optional object arg1</param>
+		/// <param name="arg2">optional object arg2</param>
+		/// <param name="arg3">optional object arg3</param>
+		/// <param name="arg4">optional object arg4</param>
+		/// <param name="arg5">optional object arg5</param>
+		/// <param name="arg6">optional object arg6</param>
+		/// <param name="arg7">optional object arg7</param>
+		/// <param name="arg8">optional object arg8</param>
+		/// <param name="arg9">optional object arg9</param>
+		/// <param name="arg10">optional object arg10</param>
+		/// <param name="arg11">optional object arg11</param>
+		/// <param name="arg12">optional object arg12</param>
+		[CustomMethod]
+		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public bool Show(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12);
-			object returnItem = Invoker.MethodReturn(this, "Show", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return Factory.ExecuteBoolMethodGet(this, "Show", new object[]{ arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12 });
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff834620.aspx
 		/// </summary>
-		/// <param name="arg1">optional object Arg1</param>
-		/// <param name="arg2">optional object Arg2</param>
-		/// <param name="arg3">optional object Arg3</param>
-		/// <param name="arg4">optional object Arg4</param>
-		/// <param name="arg5">optional object Arg5</param>
-		/// <param name="arg6">optional object Arg6</param>
-		/// <param name="arg7">optional object Arg7</param>
-		/// <param name="arg8">optional object Arg8</param>
-		/// <param name="arg9">optional object Arg9</param>
-		/// <param name="arg10">optional object Arg10</param>
-		/// <param name="arg11">optional object Arg11</param>
-		/// <param name="arg12">optional object Arg12</param>
-		/// <param name="arg13">optional object Arg13</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff834620.aspx </remarks>
+		/// <param name="arg1">optional object arg1</param>
+		/// <param name="arg2">optional object arg2</param>
+		/// <param name="arg3">optional object arg3</param>
+		/// <param name="arg4">optional object arg4</param>
+		/// <param name="arg5">optional object arg5</param>
+		/// <param name="arg6">optional object arg6</param>
+		/// <param name="arg7">optional object arg7</param>
+		/// <param name="arg8">optional object arg8</param>
+		/// <param name="arg9">optional object arg9</param>
+		/// <param name="arg10">optional object arg10</param>
+		/// <param name="arg11">optional object arg11</param>
+		/// <param name="arg12">optional object arg12</param>
+		/// <param name="arg13">optional object arg13</param>
+		[CustomMethod]
+		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public bool Show(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13);
-			object returnItem = Invoker.MethodReturn(this, "Show", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return Factory.ExecuteBoolMethodGet(this, "Show", new object[]{ arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13 });
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff834620.aspx
 		/// </summary>
-		/// <param name="arg1">optional object Arg1</param>
-		/// <param name="arg2">optional object Arg2</param>
-		/// <param name="arg3">optional object Arg3</param>
-		/// <param name="arg4">optional object Arg4</param>
-		/// <param name="arg5">optional object Arg5</param>
-		/// <param name="arg6">optional object Arg6</param>
-		/// <param name="arg7">optional object Arg7</param>
-		/// <param name="arg8">optional object Arg8</param>
-		/// <param name="arg9">optional object Arg9</param>
-		/// <param name="arg10">optional object Arg10</param>
-		/// <param name="arg11">optional object Arg11</param>
-		/// <param name="arg12">optional object Arg12</param>
-		/// <param name="arg13">optional object Arg13</param>
-		/// <param name="arg14">optional object Arg14</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff834620.aspx </remarks>
+		/// <param name="arg1">optional object arg1</param>
+		/// <param name="arg2">optional object arg2</param>
+		/// <param name="arg3">optional object arg3</param>
+		/// <param name="arg4">optional object arg4</param>
+		/// <param name="arg5">optional object arg5</param>
+		/// <param name="arg6">optional object arg6</param>
+		/// <param name="arg7">optional object arg7</param>
+		/// <param name="arg8">optional object arg8</param>
+		/// <param name="arg9">optional object arg9</param>
+		/// <param name="arg10">optional object arg10</param>
+		/// <param name="arg11">optional object arg11</param>
+		/// <param name="arg12">optional object arg12</param>
+		/// <param name="arg13">optional object arg13</param>
+		/// <param name="arg14">optional object arg14</param>
+		[CustomMethod]
+		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public bool Show(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14);
-			object returnItem = Invoker.MethodReturn(this, "Show", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return Factory.ExecuteBoolMethodGet(this, "Show", new object[]{ arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14 });
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff834620.aspx
 		/// </summary>
-		/// <param name="arg1">optional object Arg1</param>
-		/// <param name="arg2">optional object Arg2</param>
-		/// <param name="arg3">optional object Arg3</param>
-		/// <param name="arg4">optional object Arg4</param>
-		/// <param name="arg5">optional object Arg5</param>
-		/// <param name="arg6">optional object Arg6</param>
-		/// <param name="arg7">optional object Arg7</param>
-		/// <param name="arg8">optional object Arg8</param>
-		/// <param name="arg9">optional object Arg9</param>
-		/// <param name="arg10">optional object Arg10</param>
-		/// <param name="arg11">optional object Arg11</param>
-		/// <param name="arg12">optional object Arg12</param>
-		/// <param name="arg13">optional object Arg13</param>
-		/// <param name="arg14">optional object Arg14</param>
-		/// <param name="arg15">optional object Arg15</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff834620.aspx </remarks>
+		/// <param name="arg1">optional object arg1</param>
+		/// <param name="arg2">optional object arg2</param>
+		/// <param name="arg3">optional object arg3</param>
+		/// <param name="arg4">optional object arg4</param>
+		/// <param name="arg5">optional object arg5</param>
+		/// <param name="arg6">optional object arg6</param>
+		/// <param name="arg7">optional object arg7</param>
+		/// <param name="arg8">optional object arg8</param>
+		/// <param name="arg9">optional object arg9</param>
+		/// <param name="arg10">optional object arg10</param>
+		/// <param name="arg11">optional object arg11</param>
+		/// <param name="arg12">optional object arg12</param>
+		/// <param name="arg13">optional object arg13</param>
+		/// <param name="arg14">optional object arg14</param>
+		/// <param name="arg15">optional object arg15</param>
+		[CustomMethod]
+		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public bool Show(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15);
-			object returnItem = Invoker.MethodReturn(this, "Show", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return Factory.ExecuteBoolMethodGet(this, "Show", new object[]{ arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15 });
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff834620.aspx
 		/// </summary>
-		/// <param name="arg1">optional object Arg1</param>
-		/// <param name="arg2">optional object Arg2</param>
-		/// <param name="arg3">optional object Arg3</param>
-		/// <param name="arg4">optional object Arg4</param>
-		/// <param name="arg5">optional object Arg5</param>
-		/// <param name="arg6">optional object Arg6</param>
-		/// <param name="arg7">optional object Arg7</param>
-		/// <param name="arg8">optional object Arg8</param>
-		/// <param name="arg9">optional object Arg9</param>
-		/// <param name="arg10">optional object Arg10</param>
-		/// <param name="arg11">optional object Arg11</param>
-		/// <param name="arg12">optional object Arg12</param>
-		/// <param name="arg13">optional object Arg13</param>
-		/// <param name="arg14">optional object Arg14</param>
-		/// <param name="arg15">optional object Arg15</param>
-		/// <param name="arg16">optional object Arg16</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff834620.aspx </remarks>
+		/// <param name="arg1">optional object arg1</param>
+		/// <param name="arg2">optional object arg2</param>
+		/// <param name="arg3">optional object arg3</param>
+		/// <param name="arg4">optional object arg4</param>
+		/// <param name="arg5">optional object arg5</param>
+		/// <param name="arg6">optional object arg6</param>
+		/// <param name="arg7">optional object arg7</param>
+		/// <param name="arg8">optional object arg8</param>
+		/// <param name="arg9">optional object arg9</param>
+		/// <param name="arg10">optional object arg10</param>
+		/// <param name="arg11">optional object arg11</param>
+		/// <param name="arg12">optional object arg12</param>
+		/// <param name="arg13">optional object arg13</param>
+		/// <param name="arg14">optional object arg14</param>
+		/// <param name="arg15">optional object arg15</param>
+		/// <param name="arg16">optional object arg16</param>
+		[CustomMethod]
+		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public bool Show(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16);
-			object returnItem = Invoker.MethodReturn(this, "Show", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return Factory.ExecuteBoolMethodGet(this, "Show", new object[]{ arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16 });
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff834620.aspx
 		/// </summary>
-		/// <param name="arg1">optional object Arg1</param>
-		/// <param name="arg2">optional object Arg2</param>
-		/// <param name="arg3">optional object Arg3</param>
-		/// <param name="arg4">optional object Arg4</param>
-		/// <param name="arg5">optional object Arg5</param>
-		/// <param name="arg6">optional object Arg6</param>
-		/// <param name="arg7">optional object Arg7</param>
-		/// <param name="arg8">optional object Arg8</param>
-		/// <param name="arg9">optional object Arg9</param>
-		/// <param name="arg10">optional object Arg10</param>
-		/// <param name="arg11">optional object Arg11</param>
-		/// <param name="arg12">optional object Arg12</param>
-		/// <param name="arg13">optional object Arg13</param>
-		/// <param name="arg14">optional object Arg14</param>
-		/// <param name="arg15">optional object Arg15</param>
-		/// <param name="arg16">optional object Arg16</param>
-		/// <param name="arg17">optional object Arg17</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff834620.aspx </remarks>
+		/// <param name="arg1">optional object arg1</param>
+		/// <param name="arg2">optional object arg2</param>
+		/// <param name="arg3">optional object arg3</param>
+		/// <param name="arg4">optional object arg4</param>
+		/// <param name="arg5">optional object arg5</param>
+		/// <param name="arg6">optional object arg6</param>
+		/// <param name="arg7">optional object arg7</param>
+		/// <param name="arg8">optional object arg8</param>
+		/// <param name="arg9">optional object arg9</param>
+		/// <param name="arg10">optional object arg10</param>
+		/// <param name="arg11">optional object arg11</param>
+		/// <param name="arg12">optional object arg12</param>
+		/// <param name="arg13">optional object arg13</param>
+		/// <param name="arg14">optional object arg14</param>
+		/// <param name="arg15">optional object arg15</param>
+		/// <param name="arg16">optional object arg16</param>
+		/// <param name="arg17">optional object arg17</param>
+		[CustomMethod]
+		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public bool Show(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17);
-			object returnItem = Invoker.MethodReturn(this, "Show", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return Factory.ExecuteBoolMethodGet(this, "Show", new object[]{ arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17 });
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff834620.aspx
 		/// </summary>
-		/// <param name="arg1">optional object Arg1</param>
-		/// <param name="arg2">optional object Arg2</param>
-		/// <param name="arg3">optional object Arg3</param>
-		/// <param name="arg4">optional object Arg4</param>
-		/// <param name="arg5">optional object Arg5</param>
-		/// <param name="arg6">optional object Arg6</param>
-		/// <param name="arg7">optional object Arg7</param>
-		/// <param name="arg8">optional object Arg8</param>
-		/// <param name="arg9">optional object Arg9</param>
-		/// <param name="arg10">optional object Arg10</param>
-		/// <param name="arg11">optional object Arg11</param>
-		/// <param name="arg12">optional object Arg12</param>
-		/// <param name="arg13">optional object Arg13</param>
-		/// <param name="arg14">optional object Arg14</param>
-		/// <param name="arg15">optional object Arg15</param>
-		/// <param name="arg16">optional object Arg16</param>
-		/// <param name="arg17">optional object Arg17</param>
-		/// <param name="arg18">optional object Arg18</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff834620.aspx </remarks>
+		/// <param name="arg1">optional object arg1</param>
+		/// <param name="arg2">optional object arg2</param>
+		/// <param name="arg3">optional object arg3</param>
+		/// <param name="arg4">optional object arg4</param>
+		/// <param name="arg5">optional object arg5</param>
+		/// <param name="arg6">optional object arg6</param>
+		/// <param name="arg7">optional object arg7</param>
+		/// <param name="arg8">optional object arg8</param>
+		/// <param name="arg9">optional object arg9</param>
+		/// <param name="arg10">optional object arg10</param>
+		/// <param name="arg11">optional object arg11</param>
+		/// <param name="arg12">optional object arg12</param>
+		/// <param name="arg13">optional object arg13</param>
+		/// <param name="arg14">optional object arg14</param>
+		/// <param name="arg15">optional object arg15</param>
+		/// <param name="arg16">optional object arg16</param>
+		/// <param name="arg17">optional object arg17</param>
+		/// <param name="arg18">optional object arg18</param>
+		[CustomMethod]
+		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public bool Show(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18);
-			object returnItem = Invoker.MethodReturn(this, "Show", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return Factory.ExecuteBoolMethodGet(this, "Show", new object[]{ arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18 });
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff834620.aspx
 		/// </summary>
-		/// <param name="arg1">optional object Arg1</param>
-		/// <param name="arg2">optional object Arg2</param>
-		/// <param name="arg3">optional object Arg3</param>
-		/// <param name="arg4">optional object Arg4</param>
-		/// <param name="arg5">optional object Arg5</param>
-		/// <param name="arg6">optional object Arg6</param>
-		/// <param name="arg7">optional object Arg7</param>
-		/// <param name="arg8">optional object Arg8</param>
-		/// <param name="arg9">optional object Arg9</param>
-		/// <param name="arg10">optional object Arg10</param>
-		/// <param name="arg11">optional object Arg11</param>
-		/// <param name="arg12">optional object Arg12</param>
-		/// <param name="arg13">optional object Arg13</param>
-		/// <param name="arg14">optional object Arg14</param>
-		/// <param name="arg15">optional object Arg15</param>
-		/// <param name="arg16">optional object Arg16</param>
-		/// <param name="arg17">optional object Arg17</param>
-		/// <param name="arg18">optional object Arg18</param>
-		/// <param name="arg19">optional object Arg19</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff834620.aspx </remarks>
+		/// <param name="arg1">optional object arg1</param>
+		/// <param name="arg2">optional object arg2</param>
+		/// <param name="arg3">optional object arg3</param>
+		/// <param name="arg4">optional object arg4</param>
+		/// <param name="arg5">optional object arg5</param>
+		/// <param name="arg6">optional object arg6</param>
+		/// <param name="arg7">optional object arg7</param>
+		/// <param name="arg8">optional object arg8</param>
+		/// <param name="arg9">optional object arg9</param>
+		/// <param name="arg10">optional object arg10</param>
+		/// <param name="arg11">optional object arg11</param>
+		/// <param name="arg12">optional object arg12</param>
+		/// <param name="arg13">optional object arg13</param>
+		/// <param name="arg14">optional object arg14</param>
+		/// <param name="arg15">optional object arg15</param>
+		/// <param name="arg16">optional object arg16</param>
+		/// <param name="arg17">optional object arg17</param>
+		/// <param name="arg18">optional object arg18</param>
+		/// <param name="arg19">optional object arg19</param>
+		[CustomMethod]
+		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public bool Show(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19);
-			object returnItem = Invoker.MethodReturn(this, "Show", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return Factory.ExecuteBoolMethodGet(this, "Show", new object[]{ arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19 });
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff834620.aspx
 		/// </summary>
-		/// <param name="arg1">optional object Arg1</param>
-		/// <param name="arg2">optional object Arg2</param>
-		/// <param name="arg3">optional object Arg3</param>
-		/// <param name="arg4">optional object Arg4</param>
-		/// <param name="arg5">optional object Arg5</param>
-		/// <param name="arg6">optional object Arg6</param>
-		/// <param name="arg7">optional object Arg7</param>
-		/// <param name="arg8">optional object Arg8</param>
-		/// <param name="arg9">optional object Arg9</param>
-		/// <param name="arg10">optional object Arg10</param>
-		/// <param name="arg11">optional object Arg11</param>
-		/// <param name="arg12">optional object Arg12</param>
-		/// <param name="arg13">optional object Arg13</param>
-		/// <param name="arg14">optional object Arg14</param>
-		/// <param name="arg15">optional object Arg15</param>
-		/// <param name="arg16">optional object Arg16</param>
-		/// <param name="arg17">optional object Arg17</param>
-		/// <param name="arg18">optional object Arg18</param>
-		/// <param name="arg19">optional object Arg19</param>
-		/// <param name="arg20">optional object Arg20</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff834620.aspx </remarks>
+		/// <param name="arg1">optional object arg1</param>
+		/// <param name="arg2">optional object arg2</param>
+		/// <param name="arg3">optional object arg3</param>
+		/// <param name="arg4">optional object arg4</param>
+		/// <param name="arg5">optional object arg5</param>
+		/// <param name="arg6">optional object arg6</param>
+		/// <param name="arg7">optional object arg7</param>
+		/// <param name="arg8">optional object arg8</param>
+		/// <param name="arg9">optional object arg9</param>
+		/// <param name="arg10">optional object arg10</param>
+		/// <param name="arg11">optional object arg11</param>
+		/// <param name="arg12">optional object arg12</param>
+		/// <param name="arg13">optional object arg13</param>
+		/// <param name="arg14">optional object arg14</param>
+		/// <param name="arg15">optional object arg15</param>
+		/// <param name="arg16">optional object arg16</param>
+		/// <param name="arg17">optional object arg17</param>
+		/// <param name="arg18">optional object arg18</param>
+		/// <param name="arg19">optional object arg19</param>
+		/// <param name="arg20">optional object arg20</param>
+		[CustomMethod]
+		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public bool Show(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20);
-			object returnItem = Invoker.MethodReturn(this, "Show", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return Factory.ExecuteBoolMethodGet(this, "Show", new object[]{ arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20 });
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff834620.aspx
 		/// </summary>
-		/// <param name="arg1">optional object Arg1</param>
-		/// <param name="arg2">optional object Arg2</param>
-		/// <param name="arg3">optional object Arg3</param>
-		/// <param name="arg4">optional object Arg4</param>
-		/// <param name="arg5">optional object Arg5</param>
-		/// <param name="arg6">optional object Arg6</param>
-		/// <param name="arg7">optional object Arg7</param>
-		/// <param name="arg8">optional object Arg8</param>
-		/// <param name="arg9">optional object Arg9</param>
-		/// <param name="arg10">optional object Arg10</param>
-		/// <param name="arg11">optional object Arg11</param>
-		/// <param name="arg12">optional object Arg12</param>
-		/// <param name="arg13">optional object Arg13</param>
-		/// <param name="arg14">optional object Arg14</param>
-		/// <param name="arg15">optional object Arg15</param>
-		/// <param name="arg16">optional object Arg16</param>
-		/// <param name="arg17">optional object Arg17</param>
-		/// <param name="arg18">optional object Arg18</param>
-		/// <param name="arg19">optional object Arg19</param>
-		/// <param name="arg20">optional object Arg20</param>
-		/// <param name="arg21">optional object Arg21</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff834620.aspx </remarks>
+		/// <param name="arg1">optional object arg1</param>
+		/// <param name="arg2">optional object arg2</param>
+		/// <param name="arg3">optional object arg3</param>
+		/// <param name="arg4">optional object arg4</param>
+		/// <param name="arg5">optional object arg5</param>
+		/// <param name="arg6">optional object arg6</param>
+		/// <param name="arg7">optional object arg7</param>
+		/// <param name="arg8">optional object arg8</param>
+		/// <param name="arg9">optional object arg9</param>
+		/// <param name="arg10">optional object arg10</param>
+		/// <param name="arg11">optional object arg11</param>
+		/// <param name="arg12">optional object arg12</param>
+		/// <param name="arg13">optional object arg13</param>
+		/// <param name="arg14">optional object arg14</param>
+		/// <param name="arg15">optional object arg15</param>
+		/// <param name="arg16">optional object arg16</param>
+		/// <param name="arg17">optional object arg17</param>
+		/// <param name="arg18">optional object arg18</param>
+		/// <param name="arg19">optional object arg19</param>
+		/// <param name="arg20">optional object arg20</param>
+		/// <param name="arg21">optional object arg21</param>
+		[CustomMethod]
+		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public bool Show(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21);
-			object returnItem = Invoker.MethodReturn(this, "Show", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return Factory.ExecuteBoolMethodGet(this, "Show", new object[]{ arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21 });
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff834620.aspx
 		/// </summary>
-		/// <param name="arg1">optional object Arg1</param>
-		/// <param name="arg2">optional object Arg2</param>
-		/// <param name="arg3">optional object Arg3</param>
-		/// <param name="arg4">optional object Arg4</param>
-		/// <param name="arg5">optional object Arg5</param>
-		/// <param name="arg6">optional object Arg6</param>
-		/// <param name="arg7">optional object Arg7</param>
-		/// <param name="arg8">optional object Arg8</param>
-		/// <param name="arg9">optional object Arg9</param>
-		/// <param name="arg10">optional object Arg10</param>
-		/// <param name="arg11">optional object Arg11</param>
-		/// <param name="arg12">optional object Arg12</param>
-		/// <param name="arg13">optional object Arg13</param>
-		/// <param name="arg14">optional object Arg14</param>
-		/// <param name="arg15">optional object Arg15</param>
-		/// <param name="arg16">optional object Arg16</param>
-		/// <param name="arg17">optional object Arg17</param>
-		/// <param name="arg18">optional object Arg18</param>
-		/// <param name="arg19">optional object Arg19</param>
-		/// <param name="arg20">optional object Arg20</param>
-		/// <param name="arg21">optional object Arg21</param>
-		/// <param name="arg22">optional object Arg22</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff834620.aspx </remarks>
+		/// <param name="arg1">optional object arg1</param>
+		/// <param name="arg2">optional object arg2</param>
+		/// <param name="arg3">optional object arg3</param>
+		/// <param name="arg4">optional object arg4</param>
+		/// <param name="arg5">optional object arg5</param>
+		/// <param name="arg6">optional object arg6</param>
+		/// <param name="arg7">optional object arg7</param>
+		/// <param name="arg8">optional object arg8</param>
+		/// <param name="arg9">optional object arg9</param>
+		/// <param name="arg10">optional object arg10</param>
+		/// <param name="arg11">optional object arg11</param>
+		/// <param name="arg12">optional object arg12</param>
+		/// <param name="arg13">optional object arg13</param>
+		/// <param name="arg14">optional object arg14</param>
+		/// <param name="arg15">optional object arg15</param>
+		/// <param name="arg16">optional object arg16</param>
+		/// <param name="arg17">optional object arg17</param>
+		/// <param name="arg18">optional object arg18</param>
+		/// <param name="arg19">optional object arg19</param>
+		/// <param name="arg20">optional object arg20</param>
+		/// <param name="arg21">optional object arg21</param>
+		/// <param name="arg22">optional object arg22</param>
+		[CustomMethod]
+		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public bool Show(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22);
-			object returnItem = Invoker.MethodReturn(this, "Show", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return Factory.ExecuteBoolMethodGet(this, "Show", new object[]{ arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22 });
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff834620.aspx
 		/// </summary>
-		/// <param name="arg1">optional object Arg1</param>
-		/// <param name="arg2">optional object Arg2</param>
-		/// <param name="arg3">optional object Arg3</param>
-		/// <param name="arg4">optional object Arg4</param>
-		/// <param name="arg5">optional object Arg5</param>
-		/// <param name="arg6">optional object Arg6</param>
-		/// <param name="arg7">optional object Arg7</param>
-		/// <param name="arg8">optional object Arg8</param>
-		/// <param name="arg9">optional object Arg9</param>
-		/// <param name="arg10">optional object Arg10</param>
-		/// <param name="arg11">optional object Arg11</param>
-		/// <param name="arg12">optional object Arg12</param>
-		/// <param name="arg13">optional object Arg13</param>
-		/// <param name="arg14">optional object Arg14</param>
-		/// <param name="arg15">optional object Arg15</param>
-		/// <param name="arg16">optional object Arg16</param>
-		/// <param name="arg17">optional object Arg17</param>
-		/// <param name="arg18">optional object Arg18</param>
-		/// <param name="arg19">optional object Arg19</param>
-		/// <param name="arg20">optional object Arg20</param>
-		/// <param name="arg21">optional object Arg21</param>
-		/// <param name="arg22">optional object Arg22</param>
-		/// <param name="arg23">optional object Arg23</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff834620.aspx </remarks>
+		/// <param name="arg1">optional object arg1</param>
+		/// <param name="arg2">optional object arg2</param>
+		/// <param name="arg3">optional object arg3</param>
+		/// <param name="arg4">optional object arg4</param>
+		/// <param name="arg5">optional object arg5</param>
+		/// <param name="arg6">optional object arg6</param>
+		/// <param name="arg7">optional object arg7</param>
+		/// <param name="arg8">optional object arg8</param>
+		/// <param name="arg9">optional object arg9</param>
+		/// <param name="arg10">optional object arg10</param>
+		/// <param name="arg11">optional object arg11</param>
+		/// <param name="arg12">optional object arg12</param>
+		/// <param name="arg13">optional object arg13</param>
+		/// <param name="arg14">optional object arg14</param>
+		/// <param name="arg15">optional object arg15</param>
+		/// <param name="arg16">optional object arg16</param>
+		/// <param name="arg17">optional object arg17</param>
+		/// <param name="arg18">optional object arg18</param>
+		/// <param name="arg19">optional object arg19</param>
+		/// <param name="arg20">optional object arg20</param>
+		/// <param name="arg21">optional object arg21</param>
+		/// <param name="arg22">optional object arg22</param>
+		/// <param name="arg23">optional object arg23</param>
+		[CustomMethod]
+		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public bool Show(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23);
-			object returnItem = Invoker.MethodReturn(this, "Show", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return Factory.ExecuteBoolMethodGet(this, "Show", new object[]{ arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23 });
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff834620.aspx
 		/// </summary>
-		/// <param name="arg1">optional object Arg1</param>
-		/// <param name="arg2">optional object Arg2</param>
-		/// <param name="arg3">optional object Arg3</param>
-		/// <param name="arg4">optional object Arg4</param>
-		/// <param name="arg5">optional object Arg5</param>
-		/// <param name="arg6">optional object Arg6</param>
-		/// <param name="arg7">optional object Arg7</param>
-		/// <param name="arg8">optional object Arg8</param>
-		/// <param name="arg9">optional object Arg9</param>
-		/// <param name="arg10">optional object Arg10</param>
-		/// <param name="arg11">optional object Arg11</param>
-		/// <param name="arg12">optional object Arg12</param>
-		/// <param name="arg13">optional object Arg13</param>
-		/// <param name="arg14">optional object Arg14</param>
-		/// <param name="arg15">optional object Arg15</param>
-		/// <param name="arg16">optional object Arg16</param>
-		/// <param name="arg17">optional object Arg17</param>
-		/// <param name="arg18">optional object Arg18</param>
-		/// <param name="arg19">optional object Arg19</param>
-		/// <param name="arg20">optional object Arg20</param>
-		/// <param name="arg21">optional object Arg21</param>
-		/// <param name="arg22">optional object Arg22</param>
-		/// <param name="arg23">optional object Arg23</param>
-		/// <param name="arg24">optional object Arg24</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff834620.aspx </remarks>
+		/// <param name="arg1">optional object arg1</param>
+		/// <param name="arg2">optional object arg2</param>
+		/// <param name="arg3">optional object arg3</param>
+		/// <param name="arg4">optional object arg4</param>
+		/// <param name="arg5">optional object arg5</param>
+		/// <param name="arg6">optional object arg6</param>
+		/// <param name="arg7">optional object arg7</param>
+		/// <param name="arg8">optional object arg8</param>
+		/// <param name="arg9">optional object arg9</param>
+		/// <param name="arg10">optional object arg10</param>
+		/// <param name="arg11">optional object arg11</param>
+		/// <param name="arg12">optional object arg12</param>
+		/// <param name="arg13">optional object arg13</param>
+		/// <param name="arg14">optional object arg14</param>
+		/// <param name="arg15">optional object arg15</param>
+		/// <param name="arg16">optional object arg16</param>
+		/// <param name="arg17">optional object arg17</param>
+		/// <param name="arg18">optional object arg18</param>
+		/// <param name="arg19">optional object arg19</param>
+		/// <param name="arg20">optional object arg20</param>
+		/// <param name="arg21">optional object arg21</param>
+		/// <param name="arg22">optional object arg22</param>
+		/// <param name="arg23">optional object arg23</param>
+		/// <param name="arg24">optional object arg24</param>
+		[CustomMethod]
+		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public bool Show(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24);
-			object returnItem = Invoker.MethodReturn(this, "Show", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return Factory.ExecuteBoolMethodGet(this, "Show", new object[]{ arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24 });
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff834620.aspx
 		/// </summary>
-		/// <param name="arg1">optional object Arg1</param>
-		/// <param name="arg2">optional object Arg2</param>
-		/// <param name="arg3">optional object Arg3</param>
-		/// <param name="arg4">optional object Arg4</param>
-		/// <param name="arg5">optional object Arg5</param>
-		/// <param name="arg6">optional object Arg6</param>
-		/// <param name="arg7">optional object Arg7</param>
-		/// <param name="arg8">optional object Arg8</param>
-		/// <param name="arg9">optional object Arg9</param>
-		/// <param name="arg10">optional object Arg10</param>
-		/// <param name="arg11">optional object Arg11</param>
-		/// <param name="arg12">optional object Arg12</param>
-		/// <param name="arg13">optional object Arg13</param>
-		/// <param name="arg14">optional object Arg14</param>
-		/// <param name="arg15">optional object Arg15</param>
-		/// <param name="arg16">optional object Arg16</param>
-		/// <param name="arg17">optional object Arg17</param>
-		/// <param name="arg18">optional object Arg18</param>
-		/// <param name="arg19">optional object Arg19</param>
-		/// <param name="arg20">optional object Arg20</param>
-		/// <param name="arg21">optional object Arg21</param>
-		/// <param name="arg22">optional object Arg22</param>
-		/// <param name="arg23">optional object Arg23</param>
-		/// <param name="arg24">optional object Arg24</param>
-		/// <param name="arg25">optional object Arg25</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff834620.aspx </remarks>
+		/// <param name="arg1">optional object arg1</param>
+		/// <param name="arg2">optional object arg2</param>
+		/// <param name="arg3">optional object arg3</param>
+		/// <param name="arg4">optional object arg4</param>
+		/// <param name="arg5">optional object arg5</param>
+		/// <param name="arg6">optional object arg6</param>
+		/// <param name="arg7">optional object arg7</param>
+		/// <param name="arg8">optional object arg8</param>
+		/// <param name="arg9">optional object arg9</param>
+		/// <param name="arg10">optional object arg10</param>
+		/// <param name="arg11">optional object arg11</param>
+		/// <param name="arg12">optional object arg12</param>
+		/// <param name="arg13">optional object arg13</param>
+		/// <param name="arg14">optional object arg14</param>
+		/// <param name="arg15">optional object arg15</param>
+		/// <param name="arg16">optional object arg16</param>
+		/// <param name="arg17">optional object arg17</param>
+		/// <param name="arg18">optional object arg18</param>
+		/// <param name="arg19">optional object arg19</param>
+		/// <param name="arg20">optional object arg20</param>
+		/// <param name="arg21">optional object arg21</param>
+		/// <param name="arg22">optional object arg22</param>
+		/// <param name="arg23">optional object arg23</param>
+		/// <param name="arg24">optional object arg24</param>
+		/// <param name="arg25">optional object arg25</param>
+		[CustomMethod]
+		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public bool Show(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24, object arg25)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25);
-			object returnItem = Invoker.MethodReturn(this, "Show", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return Factory.ExecuteBoolMethodGet(this, "Show", new object[]{ arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25 });
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff834620.aspx
 		/// </summary>
-		/// <param name="arg1">optional object Arg1</param>
-		/// <param name="arg2">optional object Arg2</param>
-		/// <param name="arg3">optional object Arg3</param>
-		/// <param name="arg4">optional object Arg4</param>
-		/// <param name="arg5">optional object Arg5</param>
-		/// <param name="arg6">optional object Arg6</param>
-		/// <param name="arg7">optional object Arg7</param>
-		/// <param name="arg8">optional object Arg8</param>
-		/// <param name="arg9">optional object Arg9</param>
-		/// <param name="arg10">optional object Arg10</param>
-		/// <param name="arg11">optional object Arg11</param>
-		/// <param name="arg12">optional object Arg12</param>
-		/// <param name="arg13">optional object Arg13</param>
-		/// <param name="arg14">optional object Arg14</param>
-		/// <param name="arg15">optional object Arg15</param>
-		/// <param name="arg16">optional object Arg16</param>
-		/// <param name="arg17">optional object Arg17</param>
-		/// <param name="arg18">optional object Arg18</param>
-		/// <param name="arg19">optional object Arg19</param>
-		/// <param name="arg20">optional object Arg20</param>
-		/// <param name="arg21">optional object Arg21</param>
-		/// <param name="arg22">optional object Arg22</param>
-		/// <param name="arg23">optional object Arg23</param>
-		/// <param name="arg24">optional object Arg24</param>
-		/// <param name="arg25">optional object Arg25</param>
-		/// <param name="arg26">optional object Arg26</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff834620.aspx </remarks>
+		/// <param name="arg1">optional object arg1</param>
+		/// <param name="arg2">optional object arg2</param>
+		/// <param name="arg3">optional object arg3</param>
+		/// <param name="arg4">optional object arg4</param>
+		/// <param name="arg5">optional object arg5</param>
+		/// <param name="arg6">optional object arg6</param>
+		/// <param name="arg7">optional object arg7</param>
+		/// <param name="arg8">optional object arg8</param>
+		/// <param name="arg9">optional object arg9</param>
+		/// <param name="arg10">optional object arg10</param>
+		/// <param name="arg11">optional object arg11</param>
+		/// <param name="arg12">optional object arg12</param>
+		/// <param name="arg13">optional object arg13</param>
+		/// <param name="arg14">optional object arg14</param>
+		/// <param name="arg15">optional object arg15</param>
+		/// <param name="arg16">optional object arg16</param>
+		/// <param name="arg17">optional object arg17</param>
+		/// <param name="arg18">optional object arg18</param>
+		/// <param name="arg19">optional object arg19</param>
+		/// <param name="arg20">optional object arg20</param>
+		/// <param name="arg21">optional object arg21</param>
+		/// <param name="arg22">optional object arg22</param>
+		/// <param name="arg23">optional object arg23</param>
+		/// <param name="arg24">optional object arg24</param>
+		/// <param name="arg25">optional object arg25</param>
+		/// <param name="arg26">optional object arg26</param>
+		[CustomMethod]
+		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public bool Show(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24, object arg25, object arg26)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26);
-			object returnItem = Invoker.MethodReturn(this, "Show", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return Factory.ExecuteBoolMethodGet(this, "Show", new object[]{ arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26 });
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff834620.aspx
 		/// </summary>
-		/// <param name="arg1">optional object Arg1</param>
-		/// <param name="arg2">optional object Arg2</param>
-		/// <param name="arg3">optional object Arg3</param>
-		/// <param name="arg4">optional object Arg4</param>
-		/// <param name="arg5">optional object Arg5</param>
-		/// <param name="arg6">optional object Arg6</param>
-		/// <param name="arg7">optional object Arg7</param>
-		/// <param name="arg8">optional object Arg8</param>
-		/// <param name="arg9">optional object Arg9</param>
-		/// <param name="arg10">optional object Arg10</param>
-		/// <param name="arg11">optional object Arg11</param>
-		/// <param name="arg12">optional object Arg12</param>
-		/// <param name="arg13">optional object Arg13</param>
-		/// <param name="arg14">optional object Arg14</param>
-		/// <param name="arg15">optional object Arg15</param>
-		/// <param name="arg16">optional object Arg16</param>
-		/// <param name="arg17">optional object Arg17</param>
-		/// <param name="arg18">optional object Arg18</param>
-		/// <param name="arg19">optional object Arg19</param>
-		/// <param name="arg20">optional object Arg20</param>
-		/// <param name="arg21">optional object Arg21</param>
-		/// <param name="arg22">optional object Arg22</param>
-		/// <param name="arg23">optional object Arg23</param>
-		/// <param name="arg24">optional object Arg24</param>
-		/// <param name="arg25">optional object Arg25</param>
-		/// <param name="arg26">optional object Arg26</param>
-		/// <param name="arg27">optional object Arg27</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff834620.aspx </remarks>
+		/// <param name="arg1">optional object arg1</param>
+		/// <param name="arg2">optional object arg2</param>
+		/// <param name="arg3">optional object arg3</param>
+		/// <param name="arg4">optional object arg4</param>
+		/// <param name="arg5">optional object arg5</param>
+		/// <param name="arg6">optional object arg6</param>
+		/// <param name="arg7">optional object arg7</param>
+		/// <param name="arg8">optional object arg8</param>
+		/// <param name="arg9">optional object arg9</param>
+		/// <param name="arg10">optional object arg10</param>
+		/// <param name="arg11">optional object arg11</param>
+		/// <param name="arg12">optional object arg12</param>
+		/// <param name="arg13">optional object arg13</param>
+		/// <param name="arg14">optional object arg14</param>
+		/// <param name="arg15">optional object arg15</param>
+		/// <param name="arg16">optional object arg16</param>
+		/// <param name="arg17">optional object arg17</param>
+		/// <param name="arg18">optional object arg18</param>
+		/// <param name="arg19">optional object arg19</param>
+		/// <param name="arg20">optional object arg20</param>
+		/// <param name="arg21">optional object arg21</param>
+		/// <param name="arg22">optional object arg22</param>
+		/// <param name="arg23">optional object arg23</param>
+		/// <param name="arg24">optional object arg24</param>
+		/// <param name="arg25">optional object arg25</param>
+		/// <param name="arg26">optional object arg26</param>
+		/// <param name="arg27">optional object arg27</param>
+		[CustomMethod]
+		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public bool Show(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24, object arg25, object arg26, object arg27)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27);
-			object returnItem = Invoker.MethodReturn(this, "Show", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return Factory.ExecuteBoolMethodGet(this, "Show", new object[]{ arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27 });
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff834620.aspx
 		/// </summary>
-		/// <param name="arg1">optional object Arg1</param>
-		/// <param name="arg2">optional object Arg2</param>
-		/// <param name="arg3">optional object Arg3</param>
-		/// <param name="arg4">optional object Arg4</param>
-		/// <param name="arg5">optional object Arg5</param>
-		/// <param name="arg6">optional object Arg6</param>
-		/// <param name="arg7">optional object Arg7</param>
-		/// <param name="arg8">optional object Arg8</param>
-		/// <param name="arg9">optional object Arg9</param>
-		/// <param name="arg10">optional object Arg10</param>
-		/// <param name="arg11">optional object Arg11</param>
-		/// <param name="arg12">optional object Arg12</param>
-		/// <param name="arg13">optional object Arg13</param>
-		/// <param name="arg14">optional object Arg14</param>
-		/// <param name="arg15">optional object Arg15</param>
-		/// <param name="arg16">optional object Arg16</param>
-		/// <param name="arg17">optional object Arg17</param>
-		/// <param name="arg18">optional object Arg18</param>
-		/// <param name="arg19">optional object Arg19</param>
-		/// <param name="arg20">optional object Arg20</param>
-		/// <param name="arg21">optional object Arg21</param>
-		/// <param name="arg22">optional object Arg22</param>
-		/// <param name="arg23">optional object Arg23</param>
-		/// <param name="arg24">optional object Arg24</param>
-		/// <param name="arg25">optional object Arg25</param>
-		/// <param name="arg26">optional object Arg26</param>
-		/// <param name="arg27">optional object Arg27</param>
-		/// <param name="arg28">optional object Arg28</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff834620.aspx </remarks>
+		/// <param name="arg1">optional object arg1</param>
+		/// <param name="arg2">optional object arg2</param>
+		/// <param name="arg3">optional object arg3</param>
+		/// <param name="arg4">optional object arg4</param>
+		/// <param name="arg5">optional object arg5</param>
+		/// <param name="arg6">optional object arg6</param>
+		/// <param name="arg7">optional object arg7</param>
+		/// <param name="arg8">optional object arg8</param>
+		/// <param name="arg9">optional object arg9</param>
+		/// <param name="arg10">optional object arg10</param>
+		/// <param name="arg11">optional object arg11</param>
+		/// <param name="arg12">optional object arg12</param>
+		/// <param name="arg13">optional object arg13</param>
+		/// <param name="arg14">optional object arg14</param>
+		/// <param name="arg15">optional object arg15</param>
+		/// <param name="arg16">optional object arg16</param>
+		/// <param name="arg17">optional object arg17</param>
+		/// <param name="arg18">optional object arg18</param>
+		/// <param name="arg19">optional object arg19</param>
+		/// <param name="arg20">optional object arg20</param>
+		/// <param name="arg21">optional object arg21</param>
+		/// <param name="arg22">optional object arg22</param>
+		/// <param name="arg23">optional object arg23</param>
+		/// <param name="arg24">optional object arg24</param>
+		/// <param name="arg25">optional object arg25</param>
+		/// <param name="arg26">optional object arg26</param>
+		/// <param name="arg27">optional object arg27</param>
+		/// <param name="arg28">optional object arg28</param>
+		[CustomMethod]
+		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public bool Show(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24, object arg25, object arg26, object arg27, object arg28)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28);
-			object returnItem = Invoker.MethodReturn(this, "Show", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return Factory.ExecuteBoolMethodGet(this, "Show", new object[]{ arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28 });
 		}
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff834620.aspx
 		/// </summary>
-		/// <param name="arg1">optional object Arg1</param>
-		/// <param name="arg2">optional object Arg2</param>
-		/// <param name="arg3">optional object Arg3</param>
-		/// <param name="arg4">optional object Arg4</param>
-		/// <param name="arg5">optional object Arg5</param>
-		/// <param name="arg6">optional object Arg6</param>
-		/// <param name="arg7">optional object Arg7</param>
-		/// <param name="arg8">optional object Arg8</param>
-		/// <param name="arg9">optional object Arg9</param>
-		/// <param name="arg10">optional object Arg10</param>
-		/// <param name="arg11">optional object Arg11</param>
-		/// <param name="arg12">optional object Arg12</param>
-		/// <param name="arg13">optional object Arg13</param>
-		/// <param name="arg14">optional object Arg14</param>
-		/// <param name="arg15">optional object Arg15</param>
-		/// <param name="arg16">optional object Arg16</param>
-		/// <param name="arg17">optional object Arg17</param>
-		/// <param name="arg18">optional object Arg18</param>
-		/// <param name="arg19">optional object Arg19</param>
-		/// <param name="arg20">optional object Arg20</param>
-		/// <param name="arg21">optional object Arg21</param>
-		/// <param name="arg22">optional object Arg22</param>
-		/// <param name="arg23">optional object Arg23</param>
-		/// <param name="arg24">optional object Arg24</param>
-		/// <param name="arg25">optional object Arg25</param>
-		/// <param name="arg26">optional object Arg26</param>
-		/// <param name="arg27">optional object Arg27</param>
-		/// <param name="arg28">optional object Arg28</param>
-		/// <param name="arg29">optional object Arg29</param>
-		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15,16)]
+		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff834620.aspx </remarks>
+		/// <param name="arg1">optional object arg1</param>
+		/// <param name="arg2">optional object arg2</param>
+		/// <param name="arg3">optional object arg3</param>
+		/// <param name="arg4">optional object arg4</param>
+		/// <param name="arg5">optional object arg5</param>
+		/// <param name="arg6">optional object arg6</param>
+		/// <param name="arg7">optional object arg7</param>
+		/// <param name="arg8">optional object arg8</param>
+		/// <param name="arg9">optional object arg9</param>
+		/// <param name="arg10">optional object arg10</param>
+		/// <param name="arg11">optional object arg11</param>
+		/// <param name="arg12">optional object arg12</param>
+		/// <param name="arg13">optional object arg13</param>
+		/// <param name="arg14">optional object arg14</param>
+		/// <param name="arg15">optional object arg15</param>
+		/// <param name="arg16">optional object arg16</param>
+		/// <param name="arg17">optional object arg17</param>
+		/// <param name="arg18">optional object arg18</param>
+		/// <param name="arg19">optional object arg19</param>
+		/// <param name="arg20">optional object arg20</param>
+		/// <param name="arg21">optional object arg21</param>
+		/// <param name="arg22">optional object arg22</param>
+		/// <param name="arg23">optional object arg23</param>
+		/// <param name="arg24">optional object arg24</param>
+		/// <param name="arg25">optional object arg25</param>
+		/// <param name="arg26">optional object arg26</param>
+		/// <param name="arg27">optional object arg27</param>
+		/// <param name="arg28">optional object arg28</param>
+		/// <param name="arg29">optional object arg29</param>
+		[CustomMethod]
+		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		public bool Show(object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24, object arg25, object arg26, object arg27, object arg28, object arg29)
 		{
-			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28, arg29);
-			object returnItem = Invoker.MethodReturn(this, "Show", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			return Factory.ExecuteBoolMethodGet(this, "Show", new object[]{ arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28, arg29 });
 		}
 
 		#endregion
+
 		#pragma warning restore
 	}
 }
