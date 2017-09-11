@@ -10,7 +10,7 @@ namespace NetOffice.MSHTMLApi
 	/// SupportByVersion MSHTML, 4
 	/// </summary>
 	[SupportByVersion("MSHTML", 4)]
-	[EntityType(EntityType.IsInterface)]
+	[EntityType(EntityType.IsInterface), BaseType]
  	public class IElementBehaviorSiteOM : COMObject
 	{
 		#pragma warning disable

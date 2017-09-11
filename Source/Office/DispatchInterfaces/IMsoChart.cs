@@ -2018,7 +2018,7 @@ namespace NetOffice.OfficeApi
 			object returnItem = Invoker.MethodReturn(this, "Evaluate", paramsArray, modifiers);
 			if((null != returnItem) && (returnItem is MarshalByRefObject))
 			{
-				ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
+				ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem, true);
 				objType = (Int32)paramsArray[2];
 			    return newObject;
 			}

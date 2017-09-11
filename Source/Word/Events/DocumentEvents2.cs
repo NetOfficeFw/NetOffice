@@ -82,245 +82,205 @@ namespace NetOffice.WordApi.Events
 		public static readonly string Id = "00020A02-0000-0000-C000-000000000046";
 		
 		#endregion
-	
-		#region Fields
-
-		private IEventBinding	_eventBinding;
-        private ICOMObject _eventClass;
-        
-		#endregion
 		
-		#region Construction
+		#region Ctor
 
 		public DocumentEvents2_SinkHelper(ICOMObject eventClass, IConnectionPoint connectPoint): base(eventClass)
 		{
-			_eventClass = eventClass;
-			_eventBinding = (IEventBinding)eventClass;
 			SetupEventBinding(connectPoint);
 		}
-		
-		#endregion
-		
-		#region Properties
-
-        internal Core Factory
-        {
-            get
-            {
-                if (null != _eventClass)
-                    return _eventClass.Factory;
-                else
-                    return Core.Default;
-            }
-        }
 
         #endregion
 
-		#region DocumentEvents2 Members
-		
-		public void New()
+        #region DocumentEvents2
+
+        public void New()
+        {
+            if (!Validate("New"))
+            {
+                return;
+            }
+
+            object[] paramsArray = new object[0];
+            EventBinding.RaiseCustomEvent("New", ref paramsArray);
+        }
+
+        public void Open()
+        {
+            if (!Validate("Open"))
+            {
+                return;
+            }
+
+            object[] paramsArray = new object[0];
+            EventBinding.RaiseCustomEvent("Open", ref paramsArray);
+        }
+
+        public void Close()
+        {
+            if (!Validate("Close"))
+            {
+                return;
+            }
+
+            object[] paramsArray = new object[0];
+            EventBinding.RaiseCustomEvent("Close", ref paramsArray);
+        }
+
+        public void Sync([In] object syncEventType)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("New");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray();
-				return;
-			}
-
-			object[] paramsArray = new object[0];
-			_eventBinding.RaiseCustomEvent("New", ref paramsArray);
-		}
-
-		public void Open()
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("Open");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray();
-				return;
-			}
-
-			object[] paramsArray = new object[0];
-			_eventBinding.RaiseCustomEvent("Open", ref paramsArray);
-		}
-
-		public void Close()
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("Close");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray();
-				return;
-			}
-
-			object[] paramsArray = new object[0];
-			_eventBinding.RaiseCustomEvent("Close", ref paramsArray);
-		}
-
-		public void Sync([In] object syncEventType)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("Sync");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(syncEventType);
-				return;
-			}
+            if (!Validate("Sync"))
+            {
+                Invoker.ReleaseParamsArray(syncEventType);
+                return;
+            }
 
 			NetOffice.OfficeApi.Enums.MsoSyncEventType newSyncEventType = (NetOffice.OfficeApi.Enums.MsoSyncEventType)syncEventType;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newSyncEventType;
-			_eventBinding.RaiseCustomEvent("Sync", ref paramsArray);
+			EventBinding.RaiseCustomEvent("Sync", ref paramsArray);
 		}
 
 		public void XMLAfterInsert([In, MarshalAs(UnmanagedType.IDispatch)] object newXMLNode, [In] object inUndoRedo)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("XMLAfterInsert");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(newXMLNode, inUndoRedo);
-				return;
-			}
+        {
+            if (!Validate("XMLAfterInsert"))
+            {
+                Invoker.ReleaseParamsArray(newXMLNode, inUndoRedo);
+                return;
+            }
 
-			NetOffice.WordApi.XMLNode newNewXMLNode = Factory.CreateObjectFromComProxy(_eventClass, newXMLNode) as NetOffice.WordApi.XMLNode;
+			NetOffice.WordApi.XMLNode newNewXMLNode = Factory.CreateKnownObjectFromComProxy<NetOffice.WordApi.XMLNode>(EventClass, newXMLNode, NetOffice.WordApi.XMLNode.LateBindingApiWrapperType);
 			bool newInUndoRedo = Convert.ToBoolean(inUndoRedo);
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newNewXMLNode;
 			paramsArray[1] = newInUndoRedo;
-			_eventBinding.RaiseCustomEvent("XMLAfterInsert", ref paramsArray);
+			EventBinding.RaiseCustomEvent("XMLAfterInsert", ref paramsArray);
 		}
 
 		public void XMLBeforeDelete([In, MarshalAs(UnmanagedType.IDispatch)] object deletedRange, [In, MarshalAs(UnmanagedType.IDispatch)] object oldXMLNode, [In] object inUndoRedo)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("XMLBeforeDelete");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(deletedRange, oldXMLNode, inUndoRedo);
-				return;
-			}
+        {
+            if (!Validate("XMLBeforeDelete"))
+            {
+                Invoker.ReleaseParamsArray(deletedRange, oldXMLNode, inUndoRedo);
+                return;
+            }
 
-			NetOffice.WordApi.Range newDeletedRange = Factory.CreateObjectFromComProxy(_eventClass, deletedRange) as NetOffice.WordApi.Range;
-			NetOffice.WordApi.XMLNode newOldXMLNode = Factory.CreateObjectFromComProxy(_eventClass, oldXMLNode) as NetOffice.WordApi.XMLNode;
+			NetOffice.WordApi.Range newDeletedRange = Factory.CreateKnownObjectFromComProxy<NetOffice.WordApi.Range>(EventClass, deletedRange, NetOffice.WordApi.Range.LateBindingApiWrapperType);
+			NetOffice.WordApi.XMLNode newOldXMLNode = Factory.CreateKnownObjectFromComProxy<NetOffice.WordApi.XMLNode>(EventClass, oldXMLNode, NetOffice.WordApi.XMLNode.LateBindingApiWrapperType);
 			bool newInUndoRedo = Convert.ToBoolean(inUndoRedo);
 			object[] paramsArray = new object[3];
 			paramsArray[0] = newDeletedRange;
 			paramsArray[1] = newOldXMLNode;
 			paramsArray[2] = newInUndoRedo;
-			_eventBinding.RaiseCustomEvent("XMLBeforeDelete", ref paramsArray);
+			EventBinding.RaiseCustomEvent("XMLBeforeDelete", ref paramsArray);
 		}
 
 		public void ContentControlAfterAdd([In, MarshalAs(UnmanagedType.IDispatch)] object newContentControl, [In] object inUndoRedo)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("ContentControlAfterAdd");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(newContentControl, inUndoRedo);
-				return;
-			}
+        {
+            if (!Validate("ContentControlAfterAdd"))
+            {
+                Invoker.ReleaseParamsArray(newContentControl, inUndoRedo);
+                return;
+            }
 
-			NetOffice.WordApi.ContentControl newNewContentControl = Factory.CreateObjectFromComProxy(_eventClass, newContentControl) as NetOffice.WordApi.ContentControl;
+			NetOffice.WordApi.ContentControl newNewContentControl = Factory.CreateKnownObjectFromComProxy<NetOffice.WordApi.ContentControl>(EventClass, newContentControl, NetOffice.WordApi.ContentControl.LateBindingApiWrapperType);
 			bool newInUndoRedo = Convert.ToBoolean(inUndoRedo);
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newNewContentControl;
 			paramsArray[1] = newInUndoRedo;
-			_eventBinding.RaiseCustomEvent("ContentControlAfterAdd", ref paramsArray);
+			EventBinding.RaiseCustomEvent("ContentControlAfterAdd", ref paramsArray);
 		}
 
 		public void ContentControlBeforeDelete([In, MarshalAs(UnmanagedType.IDispatch)] object oldContentControl, [In] object inUndoRedo)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("ContentControlBeforeDelete");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(oldContentControl, inUndoRedo);
-				return;
-			}
+            if (!Validate("ContentControlBeforeDelete"))
+            {
+                Invoker.ReleaseParamsArray(oldContentControl, inUndoRedo);
+                return;
+            }
 
-			NetOffice.WordApi.ContentControl newOldContentControl = Factory.CreateObjectFromComProxy(_eventClass, oldContentControl) as NetOffice.WordApi.ContentControl;
-			bool newInUndoRedo = Convert.ToBoolean(inUndoRedo);
+			NetOffice.WordApi.ContentControl newOldContentControl = Factory.CreateKnownObjectFromComProxy<NetOffice.WordApi.ContentControl>(EventClass, oldContentControl, NetOffice.WordApi.ContentControl.LateBindingApiWrapperType);
+            bool newInUndoRedo = Convert.ToBoolean(inUndoRedo);
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newOldContentControl;
 			paramsArray[1] = newInUndoRedo;
-			_eventBinding.RaiseCustomEvent("ContentControlBeforeDelete", ref paramsArray);
+			EventBinding.RaiseCustomEvent("ContentControlBeforeDelete", ref paramsArray);
 		}
 
 		public void ContentControlOnExit([In, MarshalAs(UnmanagedType.IDispatch)] object contentControl, [In] [Out] ref object cancel)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("ContentControlOnExit");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(contentControl, cancel);
-				return;
-			}
+            if (!Validate("ContentControlOnExit"))
+            {
+                Invoker.ReleaseParamsArray(contentControl, cancel);
+                return;
+            }
 
-			NetOffice.WordApi.ContentControl newContentControl = Factory.CreateObjectFromComProxy(_eventClass, contentControl) as NetOffice.WordApi.ContentControl;
-			object[] paramsArray = new object[2];
+			NetOffice.WordApi.ContentControl newContentControl = Factory.CreateKnownObjectFromComProxy<NetOffice.WordApi.ContentControl>(EventClass, contentControl, NetOffice.WordApi.ContentControl.LateBindingApiWrapperType);
+            object[] paramsArray = new object[2];
 			paramsArray[0] = newContentControl;
 			paramsArray.SetValue(cancel, 1);
-			_eventBinding.RaiseCustomEvent("ContentControlOnExit", ref paramsArray);
+			EventBinding.RaiseCustomEvent("ContentControlOnExit", ref paramsArray);
 
-			cancel = (bool)paramsArray[1];
+			cancel = ToBoolean(paramsArray[1]);
 		}
 
 		public void ContentControlOnEnter([In, MarshalAs(UnmanagedType.IDispatch)] object contentControl)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("ContentControlOnEnter");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(contentControl);
-				return;
-			}
+        {
+            if (!Validate("ContentControlOnEnter"))
+            {
+                Invoker.ReleaseParamsArray(contentControl);
+                return;
+            }
 
-			NetOffice.WordApi.ContentControl newContentControl = Factory.CreateObjectFromComProxy(_eventClass, contentControl) as NetOffice.WordApi.ContentControl;
-			object[] paramsArray = new object[1];
+			NetOffice.WordApi.ContentControl newContentControl = Factory.CreateKnownObjectFromComProxy<NetOffice.WordApi.ContentControl>(EventClass, contentControl, NetOffice.WordApi.ContentControl.LateBindingApiWrapperType);
+            object[] paramsArray = new object[1];
 			paramsArray[0] = newContentControl;
-			_eventBinding.RaiseCustomEvent("ContentControlOnEnter", ref paramsArray);
+			EventBinding.RaiseCustomEvent("ContentControlOnEnter", ref paramsArray);
 		}
 
 		public void ContentControlBeforeStoreUpdate([In, MarshalAs(UnmanagedType.IDispatch)] object contentControl, [In] [Out] ref object content)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("ContentControlBeforeStoreUpdate");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(contentControl, content);
-				return;
-			}
+        {
+            if (!Validate("ContentControlBeforeStoreUpdate"))
+            {
+                Invoker.ReleaseParamsArray(contentControl, content);
+                return;
+            }
 
-			NetOffice.WordApi.ContentControl newContentControl = Factory.CreateObjectFromComProxy(_eventClass, contentControl) as NetOffice.WordApi.ContentControl;
-			object[] paramsArray = new object[2];
+            NetOffice.WordApi.ContentControl newContentControl = Factory.CreateKnownObjectFromComProxy<NetOffice.WordApi.ContentControl>(EventClass, contentControl, NetOffice.WordApi.ContentControl.LateBindingApiWrapperType);
+            object[] paramsArray = new object[2];
 			paramsArray[0] = newContentControl;
 			paramsArray.SetValue(content, 1);
-			_eventBinding.RaiseCustomEvent("ContentControlBeforeStoreUpdate", ref paramsArray);
+			EventBinding.RaiseCustomEvent("ContentControlBeforeStoreUpdate", ref paramsArray);
 
-			content = (string)paramsArray[1];
+			content = Convert.ToString(paramsArray[1]);
 		}
 
 		public void ContentControlBeforeContentUpdate([In, MarshalAs(UnmanagedType.IDispatch)] object contentControl, [In] [Out] ref object content)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("ContentControlBeforeContentUpdate");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(contentControl, content);
-				return;
-			}
+        {
+            if (!Validate("ContentControlBeforeStoreUpdate"))
+            {
+                Invoker.ReleaseParamsArray(contentControl, content);
+                return;
+            }
 
-			NetOffice.WordApi.ContentControl newContentControl = Factory.CreateObjectFromComProxy(_eventClass, contentControl) as NetOffice.WordApi.ContentControl;
-			object[] paramsArray = new object[2];
+			NetOffice.WordApi.ContentControl newContentControl = Factory.CreateKnownObjectFromComProxy<NetOffice.WordApi.ContentControl>(EventClass, contentControl, NetOffice.WordApi.ContentControl.LateBindingApiWrapperType);
+            object[] paramsArray = new object[2];
 			paramsArray[0] = newContentControl;
 			paramsArray.SetValue(content, 1);
-			_eventBinding.RaiseCustomEvent("ContentControlBeforeContentUpdate", ref paramsArray);
+			EventBinding.RaiseCustomEvent("ContentControlBeforeContentUpdate", ref paramsArray);
 
-			content = (string)paramsArray[1];
-		}
+            content = Convert.ToString(paramsArray[1]);
+        }
 
 		public void BuildingBlockInsert([In, MarshalAs(UnmanagedType.IDispatch)] object range, [In] object name, [In] object category, [In] object blockType, [In] object template)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("BuildingBlockInsert");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(range, name, category, blockType, template);
-				return;
-			}
+        {
+            if (!Validate("BuildingBlockInsert"))
+            {
+                Invoker.ReleaseParamsArray(range, name, category, blockType, template);
+                return;
+            }
 
-			NetOffice.WordApi.Range newRange = Factory.CreateObjectFromComProxy(_eventClass, range) as NetOffice.WordApi.Range;
+			NetOffice.WordApi.Range newRange = Factory.CreateKnownObjectFromComProxy<NetOffice.WordApi.Range>(EventClass, range, NetOffice.WordApi.Range.LateBindingApiWrapperType);
 			string newName = Convert.ToString(name);
 			string newCategory = Convert.ToString(category);
 			string newBlockType = Convert.ToString(blockType);
@@ -331,7 +291,7 @@ namespace NetOffice.WordApi.Events
 			paramsArray[2] = newCategory;
 			paramsArray[3] = newBlockType;
 			paramsArray[4] = newTemplate;
-			_eventBinding.RaiseCustomEvent("BuildingBlockInsert", ref paramsArray);
+			EventBinding.RaiseCustomEvent("BuildingBlockInsert", ref paramsArray);
 		}
 
 		#endregion

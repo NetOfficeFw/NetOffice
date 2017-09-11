@@ -86,277 +86,235 @@ namespace NetOffice.AccessApi.Events
 		public static readonly string Id = "2E70526A-92D1-43CC-A57B-ED48BCCC711D";
 		
 		#endregion
-	
-		#region Fields
-
-		private IEventBinding	_eventBinding;
-        private ICOMObject _eventClass;
-        
-		#endregion
-		
-		#region Construction
+			
+		#region Ctor
 
 		public DispCheckBoxEvents_SinkHelper(ICOMObject eventClass, IConnectionPoint connectPoint): base(eventClass)
 		{
-			_eventClass = eventClass;
-			_eventBinding = (IEventBinding)eventClass;
 			SetupEventBinding(connectPoint);
 		}
 		
 		#endregion
 		
-		#region Properties
-
-        internal Core Factory
-        {
-            get
-            {
-                if (null != _eventClass)
-                    return _eventClass.Factory;
-                else
-                    return Core.Default;
-            }
-        }
-
-        #endregion
-
-		#region DispCheckBoxEvents Members
+		#region DispCheckBoxEvents
 		
 		public void Click()
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("Click");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray();
-				return;
-			}
+            if (!Validate("Click"))
+            {
+                return;
+            }
 
-			object[] paramsArray = new object[0];
-			_eventBinding.RaiseCustomEvent("Click", ref paramsArray);
+            object[] paramsArray = new object[0];
+			EventBinding.RaiseCustomEvent("Click", ref paramsArray);
 		}
 
-		public void BeforeUpdate([In] [Out] ref object cancel)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("BeforeUpdate");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(cancel);
-				return;
-			}
 
-			object[] paramsArray = new object[1];
-			paramsArray.SetValue(cancel, 0);
-			_eventBinding.RaiseCustomEvent("BeforeUpdate", ref paramsArray);
+        public void BeforeUpdate([In] [Out] ref object cancel)
+        {
+            if (!Validate("BeforeUpdate"))
+            {
+                Invoker.ReleaseParamsArray(cancel);
+                return;
+            }
 
-			cancel = (Int16)paramsArray[0];
-		}
+            object[] paramsArray = new object[1];
+            paramsArray.SetValue(cancel, 0);
+            EventBinding.RaiseCustomEvent("BeforeUpdate", ref paramsArray);
 
-		public void AfterUpdate()
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("AfterUpdate");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray();
-				return;
-			}
+            cancel = ToInt16(paramsArray[0]);
+        }
 
-			object[] paramsArray = new object[0];
-			_eventBinding.RaiseCustomEvent("AfterUpdate", ref paramsArray);
-		}
+        public void AfterUpdate()
+        {
+            if (!Validate("AfterUpdate"))
+            {
+                return;
+            }
 
-		public void Enter()
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("Enter");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray();
-				return;
-			}
+            object[] paramsArray = new object[0];
+            EventBinding.RaiseCustomEvent("AfterUpdate", ref paramsArray);
+        }
 
-			object[] paramsArray = new object[0];
-			_eventBinding.RaiseCustomEvent("Enter", ref paramsArray);
-		}
+        public void Enter()
+        {
+            if (!Validate("Enter"))
+            {
+                return;
+            }
 
-		public void Exit([In] [Out] ref object cancel)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("Exit");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(cancel);
-				return;
-			}
+            object[] paramsArray = new object[0];
+            EventBinding.RaiseCustomEvent("Enter", ref paramsArray);
+        }
 
-			object[] paramsArray = new object[1];
-			paramsArray.SetValue(cancel, 0);
-			_eventBinding.RaiseCustomEvent("Exit", ref paramsArray);
+        public void Exit([In] [Out] ref object cancel)
+        {
+            if (!Validate("Exit"))
+            {
+                Invoker.ReleaseParamsArray(cancel);
+                return;
+            }
 
-			cancel = (Int16)paramsArray[0];
-		}
+            object[] paramsArray = new object[1];
+            paramsArray.SetValue(cancel, 0);
+            EventBinding.RaiseCustomEvent("Exit", ref paramsArray);
 
-		public void GotFocus()
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("GotFocus");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray();
-				return;
-			}
+            cancel = ToInt16(paramsArray[0]);
+        }
 
-			object[] paramsArray = new object[0];
-			_eventBinding.RaiseCustomEvent("GotFocus", ref paramsArray);
-		}
+        public void GotFocus()
+        {
+            if (!Validate("GotFocus"))
+            {
+                return;
+            }
 
-		public void LostFocus()
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("LostFocus");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray();
-				return;
-			}
+            object[] paramsArray = new object[0];
+            EventBinding.RaiseCustomEvent("GotFocus", ref paramsArray);
+        }
 
-			object[] paramsArray = new object[0];
-			_eventBinding.RaiseCustomEvent("LostFocus", ref paramsArray);
-		}
+        public void LostFocus()
+        {
+            if (!Validate("LostFocus"))
+            {
+                return;
+            }
 
-		public void DblClick([In] [Out] ref object cancel)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("DblClick");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(cancel);
-				return;
-			}
+            object[] paramsArray = new object[0];
+            EventBinding.RaiseCustomEvent("LostFocus", ref paramsArray);
+        }
 
-			object[] paramsArray = new object[1];
-			paramsArray.SetValue(cancel, 0);
-			_eventBinding.RaiseCustomEvent("DblClick", ref paramsArray);
+        public void DblClick([In] [Out] ref object cancel)
+        {
+            if (!Validate("DblClick"))
+            {
+                Invoker.ReleaseParamsArray(cancel);
+                return;
+            }
 
-			cancel = (Int16)paramsArray[0];
-		}
+            object[] paramsArray = new object[1];
+            paramsArray.SetValue(cancel, 0);
+            EventBinding.RaiseCustomEvent("DblClick", ref paramsArray);
 
-		public void MouseDown([In] [Out] ref object button, [In] [Out] ref object shift, [In] [Out] ref object x, [In] [Out] ref object y)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("MouseDown");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(button, shift, x, y);
-				return;
-			}
+            cancel = ToInt16(paramsArray[0]);
+        }
 
-			object[] paramsArray = new object[4];
-			paramsArray.SetValue(button, 0);
-			paramsArray.SetValue(shift, 1);
-			paramsArray.SetValue(x, 2);
-			paramsArray.SetValue(y, 3);
-			_eventBinding.RaiseCustomEvent("MouseDown", ref paramsArray);
+        public void MouseDown([In] [Out] ref object button, [In] [Out] ref object shift, [In] [Out] ref object x, [In] [Out] ref object y)
+        {
+            if (!Validate("MouseDown"))
+            {
+                Invoker.ReleaseParamsArray(button, shift, x, y);
+                return;
+            }
 
-			button = (Int16)paramsArray[0];
-			shift = (Int16)paramsArray[1];
-			x = (Single)paramsArray[2];
-			y = (Single)paramsArray[3];
-		}
+            object[] paramsArray = new object[4];
+            paramsArray.SetValue(button, 0);
+            paramsArray.SetValue(shift, 1);
+            paramsArray.SetValue(x, 2);
+            paramsArray.SetValue(y, 3);
+            EventBinding.RaiseCustomEvent("MouseDown", ref paramsArray);
 
-		public void MouseMove([In] [Out] ref object button, [In] [Out] ref object shift, [In] [Out] ref object x, [In] [Out] ref object y)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("MouseMove");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(button, shift, x, y);
-				return;
-			}
+            button = ToInt16(paramsArray[0]);
+            shift = ToInt16(paramsArray[1]);
+            x = ToSingle(paramsArray[2]);
+            y = ToSingle(paramsArray[3]);
+        }
 
-			object[] paramsArray = new object[4];
-			paramsArray.SetValue(button, 0);
-			paramsArray.SetValue(shift, 1);
-			paramsArray.SetValue(x, 2);
-			paramsArray.SetValue(y, 3);
-			_eventBinding.RaiseCustomEvent("MouseMove", ref paramsArray);
+        public void MouseMove([In] [Out] ref object button, [In] [Out] ref object shift, [In] [Out] ref object x, [In] [Out] ref object y)
+        {
+            if (!Validate("MouseMove"))
+            {
+                Invoker.ReleaseParamsArray(button, shift, x, y);
+                return;
+            }
 
-			button = (Int16)paramsArray[0];
-			shift = (Int16)paramsArray[1];
-			x = (Single)paramsArray[2];
-			y = (Single)paramsArray[3];
-		}
+            object[] paramsArray = new object[4];
+            paramsArray.SetValue(button, 0);
+            paramsArray.SetValue(shift, 1);
+            paramsArray.SetValue(x, 2);
+            paramsArray.SetValue(y, 3);
+            EventBinding.RaiseCustomEvent("MouseMove", ref paramsArray);
 
-		public void MouseUp([In] [Out] ref object button, [In] [Out] ref object shift, [In] [Out] ref object x, [In] [Out] ref object y)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("MouseUp");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(button, shift, x, y);
-				return;
-			}
+            button = ToInt16(paramsArray[0]);
+            shift = ToInt16(paramsArray[1]);
+            x = ToSingle(paramsArray[2]);
+            y = ToSingle(paramsArray[3]);
+        }
 
-			object[] paramsArray = new object[4];
-			paramsArray.SetValue(button, 0);
-			paramsArray.SetValue(shift, 1);
-			paramsArray.SetValue(x, 2);
-			paramsArray.SetValue(y, 3);
-			_eventBinding.RaiseCustomEvent("MouseUp", ref paramsArray);
+        public void MouseUp([In] [Out] ref object button, [In] [Out] ref object shift, [In] [Out] ref object x, [In] [Out] ref object y)
+        {
+            if (!Validate("MouseUp"))
+            {
+                Invoker.ReleaseParamsArray(button, shift, x, y);
+                return;
+            }
 
-			button = (Int16)paramsArray[0];
-			shift = (Int16)paramsArray[1];
-			x = (Single)paramsArray[2];
-			y = (Single)paramsArray[3];
-		}
+            object[] paramsArray = new object[4];
+            paramsArray.SetValue(button, 0);
+            paramsArray.SetValue(shift, 1);
+            paramsArray.SetValue(x, 2);
+            paramsArray.SetValue(y, 3);
+            EventBinding.RaiseCustomEvent("MouseUp", ref paramsArray);
 
-		public void KeyDown([In] [Out] ref object keyCode, [In] [Out] ref object shift)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("KeyDown");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(keyCode, shift);
-				return;
-			}
+            button = ToInt16(paramsArray[0]);
+            shift = ToInt16(paramsArray[1]);
+            x = ToSingle(paramsArray[2]);
+            y = ToSingle(paramsArray[3]);
+        }
 
-			object[] paramsArray = new object[2];
-			paramsArray.SetValue(keyCode, 0);
-			paramsArray.SetValue(shift, 1);
-			_eventBinding.RaiseCustomEvent("KeyDown", ref paramsArray);
+        public void KeyDown([In] [Out] ref object keyCode, [In] [Out] ref object shift)
+        {
+            if (!Validate("MouseUp"))
+            {
+                Invoker.ReleaseParamsArray(keyCode, shift);
+                return;
+            }
 
-			keyCode = (Int16)paramsArray[0];
-			shift = (Int16)paramsArray[1];
-		}
+            object[] paramsArray = new object[2];
+            paramsArray.SetValue(keyCode, 0);
+            paramsArray.SetValue(shift, 1);
+            EventBinding.RaiseCustomEvent("KeyDown", ref paramsArray);
 
-		public void KeyPress([In] [Out] ref object keyAscii)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("KeyPress");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(keyAscii);
-				return;
-			}
+            keyCode = ToInt16(paramsArray[0]);
+            shift = ToInt16(paramsArray[1]);
+        }
 
-			object[] paramsArray = new object[1];
-			paramsArray.SetValue(keyAscii, 0);
-			_eventBinding.RaiseCustomEvent("KeyPress", ref paramsArray);
+        public void KeyPress([In] [Out] ref object keyAscii)
+        {
+            if (!Validate("KeyPress"))
+            {
+                Invoker.ReleaseParamsArray(keyAscii);
+                return;
+            }
 
-			keyAscii = (Int16)paramsArray[0];
-		}
+            object[] paramsArray = new object[1];
+            paramsArray.SetValue(keyAscii, 0);
+            EventBinding.RaiseCustomEvent("KeyPress", ref paramsArray);
 
-		public void KeyUp([In] [Out] ref object keyCode, [In] [Out] ref object shift)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("KeyUp");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(keyCode, shift);
-				return;
-			}
+            keyAscii = ToInt16(paramsArray[0]);
+        }
 
-			object[] paramsArray = new object[2];
-			paramsArray.SetValue(keyCode, 0);
-			paramsArray.SetValue(shift, 1);
-			_eventBinding.RaiseCustomEvent("KeyUp", ref paramsArray);
+        public void KeyUp([In] [Out] ref object keyCode, [In] [Out] ref object shift)
+        {
+            if (!Validate("KeyUp"))
+            {
+                Invoker.ReleaseParamsArray(keyCode, shift);
+                return;
+            }
 
-			keyCode = (Int16)paramsArray[0];
-			shift = (Int16)paramsArray[1];
-		}
+            object[] paramsArray = new object[2];
+            paramsArray.SetValue(keyCode, 0);
+            paramsArray.SetValue(shift, 1);
+            EventBinding.RaiseCustomEvent("KeyUp", ref paramsArray);
 
-		#endregion
-	}
-	
-	#endregion
-	
-	#pragma warning restore
+            keyCode = ToInt16(paramsArray[0]);
+            shift = ToInt16(paramsArray[1]);
+        }
+
+        #endregion
+    }
+
+    #endregion
+
+#pragma warning restore
 }

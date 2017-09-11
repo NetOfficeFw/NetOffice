@@ -10,7 +10,7 @@ namespace NetOffice.MSFormsApi
 	/// SupportByVersion MSForms, 2
 	/// </summary>
 	[SupportByVersion("MSForms", 2)]
-	[EntityType(EntityType.IsDispatchInterface)]
+	[EntityType(EntityType.IsDispatchInterface), BaseType]
  	public class IReturnEffect : COMObject
 	{
 		#pragma warning disable

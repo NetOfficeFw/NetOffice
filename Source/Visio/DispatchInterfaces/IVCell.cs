@@ -10,7 +10,7 @@ namespace NetOffice.VisioApi
 	/// SupportByVersion Visio, 11,12,14,15,16
 	/// </summary>
 	[SupportByVersion("Visio", 11,12,14,15,16)]
-	[EntityType(EntityType.IsDispatchInterface)]
+	[EntityType(EntityType.IsDispatchInterface), BaseType]
  	public class IVCell : COMObject
 	{
 		#pragma warning disable
@@ -710,7 +710,7 @@ namespace NetOffice.VisioApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Dependents", paramsArray);
-                ICOMObject[] newObject = Factory.CreateObjectArrayFromComProxy(this,(object[])returnItem);
+                ICOMObject[] newObject = Factory.CreateObjectArrayFromComProxy(this,(object[])returnItem, false);
 				NetOffice.VisioApi.IVCell[] returnArray = new NetOffice.VisioApi.IVCell[newObject.Length];
 				for (int i = 0; i < newObject.Length; i++)
 					returnArray[i] = newObject[i] as NetOffice.VisioApi.IVCell;
@@ -729,7 +729,7 @@ namespace NetOffice.VisioApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Precedents", paramsArray);
-                ICOMObject[] newObject = Factory.CreateObjectArrayFromComProxy(this,(object[])returnItem);
+                ICOMObject[] newObject = Factory.CreateObjectArrayFromComProxy(this,(object[])returnItem, false);
 				NetOffice.VisioApi.IVCell[] returnArray = new NetOffice.VisioApi.IVCell[newObject.Length];
 				for (int i = 0; i < newObject.Length; i++)
 					returnArray[i] = newObject[i] as NetOffice.VisioApi.IVCell;

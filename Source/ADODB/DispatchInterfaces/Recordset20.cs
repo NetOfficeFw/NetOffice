@@ -10,7 +10,7 @@ namespace NetOffice.ADODBApi
 	/// SupportByVersion ADODB, 2.1,2.5
 	/// </summary>
 	[SupportByVersion("ADODB", 2.1,2.5)]
-	[EntityType(EntityType.IsDispatchInterface)]
+	[EntityType(EntityType.IsDispatchInterface), BaseType]
  	public class Recordset20 : Recordset15
 	{
 		#pragma warning disable
@@ -106,19 +106,6 @@ namespace NetOffice.ADODBApi
 		#endregion
 		
 		#region Properties
-
-		/// <summary>
-		/// SupportByVersion ADODB 2.1, 2.5
-		/// Get
-		/// </summary>
-		[SupportByVersion("ADODB", 2.1,2.5)]
-		public NetOffice.ADODBApi.Properties Properties
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ADODBApi.Properties>(this, "Properties", NetOffice.ADODBApi.Properties.LateBindingApiWrapperType);
-			}
-		}
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.1, 2.5

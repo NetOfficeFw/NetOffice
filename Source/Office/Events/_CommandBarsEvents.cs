@@ -34,53 +34,27 @@ namespace NetOffice.OfficeApi.Events
 		public static readonly string Id = "000C0352-0000-0000-C000-000000000046";
 		
 		#endregion
-	
-		#region Fields
-
-		private IEventBinding	_eventBinding;
-        private ICOMObject _eventClass;
-        
-		#endregion
-		
-		#region Construction
+			
+		#region Ctor
 
 		public _CommandBarsEvents_SinkHelper(ICOMObject eventClass, IConnectionPoint connectPoint): base(eventClass)
 		{
-			_eventClass = eventClass;
-			_eventBinding = (IEventBinding)eventClass;
 			SetupEventBinding(connectPoint);
 		}
 		
 		#endregion
-		
-		#region Properties
 
-        internal Core Factory
-        {
-            get
-            {
-                if (null != _eventClass)
-                    return _eventClass.Factory;
-                else
-                    return Core.Default;
-            }
-        }
-
-        #endregion
-
-		#region _CommandBarsEvents Members
+		#region _CommandBarsEvents
 		
 		public void OnUpdate()
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("OnUpdate");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray();
-				return;
-			}
+        {
+            if (!Validate("OnUpdate"))
+            {
+                return;
+            }
 
 			object[] paramsArray = new object[0];
-			_eventBinding.RaiseCustomEvent("OnUpdate", ref paramsArray);
+			EventBinding.RaiseCustomEvent("OnUpdate", ref paramsArray);
 		}
 
 		#endregion

@@ -107,59 +107,9 @@ namespace NetOffice.MSHTMLApi
 		
 		#region Properties
 
-		/// <summary>
-		/// SupportByVersion MSHTML 4
-		/// Get
-		/// </summary>
-		[SupportByVersion("MSHTML", 4)]
-		[BaseResult]
-		public NetOffice.MSHTMLApi.IHTMLDocument document
-		{
-			get
-			{
-				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.MSHTMLApi.IHTMLDocument>(this, "document");
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSHTML 4
-		/// Get
-		/// </summary>
-		[SupportByVersion("MSHTML", 4)]
-		public bool isOpen
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "isOpen");
-			}
-		}
-
 		#endregion
 
 		#region Methods
-
-		/// <summary>
-		/// SupportByVersion MSHTML 4
-		/// </summary>
-		/// <param name="x">Int32 x</param>
-		/// <param name="y">Int32 y</param>
-		/// <param name="w">Int32 w</param>
-		/// <param name="h">Int32 h</param>
-		/// <param name="pElement">object pElement</param>
-		[SupportByVersion("MSHTML", 4)]
-		public void Show(Int32 x, Int32 y, Int32 w, Int32 h, object pElement)
-		{
-			 Factory.ExecuteMethod(this, "Show", new object[]{ x, y, w, h, pElement });
-		}
-
-		/// <summary>
-		/// SupportByVersion MSHTML 4
-		/// </summary>
-		[SupportByVersion("MSHTML", 4)]
-		public void Hide()
-		{
-			 Factory.ExecuteMethod(this, "Hide");
-		}
 
 		#endregion
 

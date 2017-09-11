@@ -12,7 +12,7 @@ namespace NetOffice.VBIDEApi
 	/// SupportByVersion VBIDE, 12,14,5.3
 	/// </summary>
 	[SupportByVersion("VBIDE", 12,14,5.3)]
-	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Method), HasIndexProperty(IndexInvoke.Method, "Item")]
+	[EntityType(EntityType.IsDispatchInterface), BaseType, Enumerator(Enumerator.Reference, EnumeratorInvoke.Method), HasIndexProperty(IndexInvoke.Method, "Item")]
 	public class _VBComponents_Old : COMObject, IEnumerable<NetOffice.VBIDEApi.VBComponent>
 	{
 		#pragma warning disable

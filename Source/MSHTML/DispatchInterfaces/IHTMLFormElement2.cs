@@ -10,7 +10,7 @@ namespace NetOffice.MSHTMLApi
 	/// SupportByVersion MSHTML, 4
 	/// </summary>
 	[SupportByVersion("MSHTML", 4)]
-	[EntityType(EntityType.IsDispatchInterface)]
+	[EntityType(EntityType.IsDispatchInterface), BaseType]
  	public class IHTMLFormElement2 : IHTMLFormElement
 	{
 		#pragma warning disable
@@ -107,36 +107,9 @@ namespace NetOffice.MSHTMLApi
 		
 		#region Properties
 
-		/// <summary>
-		/// SupportByVersion MSHTML 4
-		/// Get/Set
-		/// </summary>
-		[SupportByVersion("MSHTML", 4)]
-		public string acceptCharset
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "acceptCharset");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "acceptCharset", value);
-			}
-		}
-
 		#endregion
 
 		#region Methods
-
-		/// <summary>
-		/// SupportByVersion MSHTML 4
-		/// </summary>
-		/// <param name="urn">object urn</param>
-		[SupportByVersion("MSHTML", 4)]
-		public object urns(object urn)
-		{
-			return Factory.ExecuteVariantMethodGet(this, "urns", urn);
-		}
 
 		#endregion
 

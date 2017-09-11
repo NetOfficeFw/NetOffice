@@ -82,251 +82,210 @@ namespace NetOffice.WordApi.Events
 		public static readonly string Id = "000209FE-0000-0000-C000-000000000046";
 		
 		#endregion
-	
-		#region Fields
 
-		private IEventBinding	_eventBinding;
-        private ICOMObject		_eventClass;
-        
-		#endregion
-		
-		#region Construction
+		#region Ctor
 
 		public ApplicationEvents2_SinkHelper(ICOMObject eventClass, IConnectionPoint connectPoint): base(eventClass)
 		{
-			_eventClass = eventClass;
-			_eventBinding = (IEventBinding)eventClass;
 			SetupEventBinding(connectPoint);
 		}
 		
 		#endregion
-		
-		#region Properties
 
-        internal Core Factory
-        {
-            get
-            {
-                if (null != _eventClass)
-                    return _eventClass.Factory;
-                else
-                    return Core.Default;
-            }
-        }
-
-        #endregion
-
-		#region ApplicationEvents2 Members
+		#region ApplicationEvents2
 		
 		public void Startup()
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("Startup");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray();
-				return;
-			}
+            if (!Validate("Startup"))
+            {
+                return;
+            }
 
 			object[] paramsArray = new object[0];
-			_eventBinding.RaiseCustomEvent("Startup", ref paramsArray);
+			EventBinding.RaiseCustomEvent("Startup", ref paramsArray);
 		}
 
 		public void Quit()
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("Quit");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray();
-				return;
-			}
+            if (!Validate("Quit"))
+            {
+                return;
+            }
 
-			object[] paramsArray = new object[0];
-			_eventBinding.RaiseCustomEvent("Quit", ref paramsArray);
+            object[] paramsArray = new object[0];
+			EventBinding.RaiseCustomEvent("Quit", ref paramsArray);
 		}
 
 		public void DocumentChange()
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("DocumentChange");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray();
-				return;
-			}
+            if (!Validate("DocumentChange"))
+            {
+                return;
+            }
 
-			object[] paramsArray = new object[0];
-			_eventBinding.RaiseCustomEvent("DocumentChange", ref paramsArray);
+            object[] paramsArray = new object[0];
+			EventBinding.RaiseCustomEvent("DocumentChange", ref paramsArray);
 		}
 
 		public void DocumentOpen([In, MarshalAs(UnmanagedType.IDispatch)] object doc)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("DocumentOpen");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(doc);
-				return;
-			}
+            if (!Validate("DocumentOpen"))
+            {
+                return;
+            }
 
-			NetOffice.WordApi.Document newDoc = Factory.CreateObjectFromComProxy(_eventClass, doc) as NetOffice.WordApi.Document;
+            NetOffice.WordApi.Document newDoc = Factory.CreateKnownObjectFromComProxy<NetOffice.WordApi.Document>(EventClass, doc, NetOffice.WordApi.Document.LateBindingApiWrapperType);
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newDoc;
-			_eventBinding.RaiseCustomEvent("DocumentOpen", ref paramsArray);
+			EventBinding.RaiseCustomEvent("DocumentOpen", ref paramsArray);
 		}
 
 		public void DocumentBeforeClose([In, MarshalAs(UnmanagedType.IDispatch)] object doc, [In] [Out] ref object cancel)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("DocumentBeforeClose");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(doc, cancel);
-				return;
-			}
+        {
+            if (!Validate("DocumentBeforeClose"))
+            {
+                Invoker.ReleaseParamsArray(doc, cancel);
+                return;
+            }
 
-			NetOffice.WordApi.Document newDoc = Factory.CreateObjectFromComProxy(_eventClass, doc) as NetOffice.WordApi.Document;
-			object[] paramsArray = new object[2];
+            NetOffice.WordApi.Document newDoc = Factory.CreateKnownObjectFromComProxy<NetOffice.WordApi.Document>(EventClass, doc, NetOffice.WordApi.Document.LateBindingApiWrapperType);
+            object[] paramsArray = new object[2];
 			paramsArray[0] = newDoc;
 			paramsArray.SetValue(cancel, 1);
-			_eventBinding.RaiseCustomEvent("DocumentBeforeClose", ref paramsArray);
+			EventBinding.RaiseCustomEvent("DocumentBeforeClose", ref paramsArray);
 
-			cancel = (bool)paramsArray[1];
+			cancel = ToBoolean(paramsArray[1]);
 		}
 
 		public void DocumentBeforePrint([In, MarshalAs(UnmanagedType.IDispatch)] object doc, [In] [Out] ref object cancel)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("DocumentBeforePrint");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(doc, cancel);
-				return;
-			}
+            if (!Validate("DocumentBeforePrint"))
+            {
+                Invoker.ReleaseParamsArray(doc, cancel);
+                return;
+            }
 
-			NetOffice.WordApi.Document newDoc = Factory.CreateObjectFromComProxy(_eventClass, doc) as NetOffice.WordApi.Document;
-			object[] paramsArray = new object[2];
+            NetOffice.WordApi.Document newDoc = Factory.CreateKnownObjectFromComProxy<NetOffice.WordApi.Document>(EventClass, doc, NetOffice.WordApi.Document.LateBindingApiWrapperType);
+            object[] paramsArray = new object[2];
 			paramsArray[0] = newDoc;
 			paramsArray.SetValue(cancel, 1);
-			_eventBinding.RaiseCustomEvent("DocumentBeforePrint", ref paramsArray);
+			EventBinding.RaiseCustomEvent("DocumentBeforePrint", ref paramsArray);
 
-			cancel = (bool)paramsArray[1];
-		}
+            cancel = ToBoolean(paramsArray[1]);
+        }
 
 		public void DocumentBeforeSave([In, MarshalAs(UnmanagedType.IDispatch)] object doc, [In] [Out] ref object saveAsUI, [In] [Out] ref object cancel)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("DocumentBeforeSave");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(doc, saveAsUI, cancel);
-				return;
-			}
+        {
+            if (!Validate("DocumentBeforeSave"))
+            {
+                Invoker.ReleaseParamsArray(doc, saveAsUI, cancel);
+                return;
+            }
 
-			NetOffice.WordApi.Document newDoc = Factory.CreateObjectFromComProxy(_eventClass, doc) as NetOffice.WordApi.Document;
-			object[] paramsArray = new object[3];
+            NetOffice.WordApi.Document newDoc = Factory.CreateKnownObjectFromComProxy<NetOffice.WordApi.Document>(EventClass, doc, NetOffice.WordApi.Document.LateBindingApiWrapperType);
+            object[] paramsArray = new object[3];
 			paramsArray[0] = newDoc;
 			paramsArray.SetValue(saveAsUI, 1);
 			paramsArray.SetValue(cancel, 2);
-			_eventBinding.RaiseCustomEvent("DocumentBeforeSave", ref paramsArray);
+			EventBinding.RaiseCustomEvent("DocumentBeforeSave", ref paramsArray);
 
-			saveAsUI = (bool)paramsArray[1];
-			cancel = (bool)paramsArray[2];
-		}
+			saveAsUI = ToBoolean(paramsArray[1]);
+            cancel = ToBoolean(paramsArray[2]);
+        }
 
 		public void NewDocument([In, MarshalAs(UnmanagedType.IDispatch)] object doc)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("NewDocument");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(doc);
-				return;
-			}
+        {
+            if (!Validate("NewDocument"))
+            {
+                Invoker.ReleaseParamsArray(doc);
+                return;
+            }
 
-			NetOffice.WordApi.Document newDoc = Factory.CreateObjectFromComProxy(_eventClass, doc) as NetOffice.WordApi.Document;
-			object[] paramsArray = new object[1];
+            NetOffice.WordApi.Document newDoc = Factory.CreateKnownObjectFromComProxy<NetOffice.WordApi.Document>(EventClass, doc, NetOffice.WordApi.Document.LateBindingApiWrapperType);
+            object[] paramsArray = new object[1];
 			paramsArray[0] = newDoc;
-			_eventBinding.RaiseCustomEvent("NewDocument", ref paramsArray);
+			EventBinding.RaiseCustomEvent("NewDocument", ref paramsArray);
 		}
 
 		public void WindowActivate([In, MarshalAs(UnmanagedType.IDispatch)] object doc, [In, MarshalAs(UnmanagedType.IDispatch)] object wn)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("WindowActivate");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(doc, wn);
-				return;
-			}
+            if (!Validate("WindowActivate"))
+            {
+                Invoker.ReleaseParamsArray(doc, wn);
+                return;
+            }
 
-			NetOffice.WordApi.Document newDoc = Factory.CreateObjectFromComProxy(_eventClass, doc) as NetOffice.WordApi.Document;
-			NetOffice.WordApi.Window newWn = Factory.CreateObjectFromComProxy(_eventClass, wn) as NetOffice.WordApi.Window;
+            NetOffice.WordApi.Document newDoc = Factory.CreateKnownObjectFromComProxy<NetOffice.WordApi.Document>(EventClass, doc, NetOffice.WordApi.Document.LateBindingApiWrapperType);
+            NetOffice.WordApi.Window newWn = Factory.CreateKnownObjectFromComProxy<NetOffice.WordApi.Window>(EventClass, wn, NetOffice.WordApi.Window.LateBindingApiWrapperType);
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newDoc;
 			paramsArray[1] = newWn;
-			_eventBinding.RaiseCustomEvent("WindowActivate", ref paramsArray);
+			EventBinding.RaiseCustomEvent("WindowActivate", ref paramsArray);
 		}
 
 		public void WindowDeactivate([In, MarshalAs(UnmanagedType.IDispatch)] object doc, [In, MarshalAs(UnmanagedType.IDispatch)] object wn)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("WindowDeactivate");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(doc, wn);
-				return;
-			}
+            if (!Validate("WindowDeactivate"))
+            {
+                Invoker.ReleaseParamsArray(doc, wn);
+                return;
+            }
 
-			NetOffice.WordApi.Document newDoc = Factory.CreateObjectFromComProxy(_eventClass, doc) as NetOffice.WordApi.Document;
-			NetOffice.WordApi.Window newWn = Factory.CreateObjectFromComProxy(_eventClass, wn) as NetOffice.WordApi.Window;
-			object[] paramsArray = new object[2];
+            NetOffice.WordApi.Document newDoc = Factory.CreateKnownObjectFromComProxy<NetOffice.WordApi.Document>(EventClass, doc, NetOffice.WordApi.Document.LateBindingApiWrapperType);
+            NetOffice.WordApi.Window newWn = Factory.CreateKnownObjectFromComProxy<NetOffice.WordApi.Window>(EventClass, wn, NetOffice.WordApi.Window.LateBindingApiWrapperType);
+            object[] paramsArray = new object[2];
 			paramsArray[0] = newDoc;
 			paramsArray[1] = newWn;
-			_eventBinding.RaiseCustomEvent("WindowDeactivate", ref paramsArray);
+			EventBinding.RaiseCustomEvent("WindowDeactivate", ref paramsArray);
 		}
 
 		public void WindowSelectionChange([In, MarshalAs(UnmanagedType.IDispatch)] object sel)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("WindowSelectionChange");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(sel);
-				return;
-			}
+        {
+            if (!Validate("WindowSelectionChange"))
+            {
+                Invoker.ReleaseParamsArray(sel);
+                return;
+            }
 
-			NetOffice.WordApi.Selection newSel = Factory.CreateObjectFromComProxy(_eventClass, sel) as NetOffice.WordApi.Selection;
+			NetOffice.WordApi.Selection newSel = Factory.CreateKnownObjectFromComProxy<NetOffice.WordApi.Selection>(EventClass, sel, NetOffice.WordApi.Selection.LateBindingApiWrapperType);
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newSel;
-			_eventBinding.RaiseCustomEvent("WindowSelectionChange", ref paramsArray);
+			EventBinding.RaiseCustomEvent("WindowSelectionChange", ref paramsArray);
 		}
 
 		public void WindowBeforeRightClick([In, MarshalAs(UnmanagedType.IDispatch)] object sel, [In] [Out] ref object cancel)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("WindowBeforeRightClick");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(sel, cancel);
-				return;
-			}
+        {
+            if (!Validate("WindowBeforeRightClick"))
+            {
+                Invoker.ReleaseParamsArray(sel, cancel);
+                return;
+            }
 
-			NetOffice.WordApi.Selection newSel = Factory.CreateObjectFromComProxy(_eventClass, sel) as NetOffice.WordApi.Selection;
-			object[] paramsArray = new object[2];
+            NetOffice.WordApi.Selection newSel = Factory.CreateKnownObjectFromComProxy<NetOffice.WordApi.Selection>(EventClass, sel, NetOffice.WordApi.Selection.LateBindingApiWrapperType);
+            object[] paramsArray = new object[2];
 			paramsArray[0] = newSel;
 			paramsArray.SetValue(cancel, 1);
-			_eventBinding.RaiseCustomEvent("WindowBeforeRightClick", ref paramsArray);
+			EventBinding.RaiseCustomEvent("WindowBeforeRightClick", ref paramsArray);
 
-			cancel = (bool)paramsArray[1];
+			cancel = ToBoolean(paramsArray[1]);
 		}
 
 		public void WindowBeforeDoubleClick([In, MarshalAs(UnmanagedType.IDispatch)] object sel, [In] [Out] ref object cancel)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("WindowBeforeDoubleClick");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(sel, cancel);
-				return;
-			}
+            if (!Validate("WindowBeforeDoubleClick"))
+            {
+                Invoker.ReleaseParamsArray(sel, cancel);
+                return;
+            }
 
-			NetOffice.WordApi.Selection newSel = Factory.CreateObjectFromComProxy(_eventClass, sel) as NetOffice.WordApi.Selection;
-			object[] paramsArray = new object[2];
+            NetOffice.WordApi.Selection newSel = Factory.CreateKnownObjectFromComProxy<NetOffice.WordApi.Selection>(EventClass, sel, NetOffice.WordApi.Selection.LateBindingApiWrapperType);
+            object[] paramsArray = new object[2];
 			paramsArray[0] = newSel;
 			paramsArray.SetValue(cancel, 1);
-			_eventBinding.RaiseCustomEvent("WindowBeforeDoubleClick", ref paramsArray);
+			EventBinding.RaiseCustomEvent("WindowBeforeDoubleClick", ref paramsArray);
 
-			cancel = (bool)paramsArray[1];
-		}
+            cancel = ToBoolean(paramsArray[1]);
+        }
 
 		#endregion
 	}

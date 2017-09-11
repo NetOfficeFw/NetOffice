@@ -107,47 +107,9 @@ namespace NetOffice.MSHTMLApi
 		
 		#region Properties
 
-		/// <summary>
-		/// SupportByVersion MSHTML 4
-		/// Get
-		/// </summary>
-		[SupportByVersion("MSHTML", 4)]
-		public Int32 length
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "length");
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSHTML 4
-		/// Get
-		/// Unknown COM Proxy
-		/// </summary>
-		[SupportByVersion("MSHTML", 4), ProxyResult]
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public object _newEnum
-		{
-			get
-			{
-				return Factory.ExecuteReferencePropertyGet(this, "_newEnum");
-			}
-		}
-
 		#endregion
 
 		#region Methods
-
-		/// <summary>
-		/// SupportByVersion MSHTML 4
-		/// </summary>
-		/// <param name="index">Int32 index</param>
-		[SupportByVersion("MSHTML", 4)]
-		public object item(Int32 index)
-		{
-			return Factory.ExecuteVariantMethodGet(this, "item", index);
-		}
 
 		#endregion
 

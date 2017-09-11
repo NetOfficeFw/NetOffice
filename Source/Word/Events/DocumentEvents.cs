@@ -43,78 +43,48 @@ namespace NetOffice.WordApi.Events
 		
 		#endregion
 	
-		#region Fields
-
-		private IEventBinding	_eventBinding;
-        private ICOMObject _eventClass;
-        
-		#endregion
-		
-		#region Construction
+		#region Ctor
 
 		public DocumentEvents_SinkHelper(ICOMObject eventClass, IConnectionPoint connectPoint): base(eventClass)
 		{
-			_eventClass = eventClass;
-			_eventBinding = (IEventBinding)eventClass;
 			SetupEventBinding(connectPoint);
 		}
 		
 		#endregion
 		
-		#region Properties
-
-        internal Core Factory
-        {
-            get
-            {
-                if (null != _eventClass)
-                    return _eventClass.Factory;
-                else
-                    return Core.Default;
-            }
-        }
-
-        #endregion
-
-		#region DocumentEvents Members
+		#region DocumentEvents
 		
 		public void New()
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("New");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray();
-				return;
-			}
+            if (!Validate("New"))
+            {
+                return;
+            }
 
-			object[] paramsArray = new object[0];
-			_eventBinding.RaiseCustomEvent("New", ref paramsArray);
+            object[] paramsArray = new object[0];
+			EventBinding.RaiseCustomEvent("New", ref paramsArray);
 		}
 
 		public void Open()
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("Open");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray();
-				return;
-			}
+            if (!Validate("Open"))
+            {
+                return;
+            }
 
-			object[] paramsArray = new object[0];
-			_eventBinding.RaiseCustomEvent("Open", ref paramsArray);
+            object[] paramsArray = new object[0];
+			EventBinding.RaiseCustomEvent("Open", ref paramsArray);
 		}
 
 		public void Close()
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("Close");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray();
-				return;
-			}
+            if (!Validate("Close"))
+            {
+                return;
+            }
 
-			object[] paramsArray = new object[0];
-			_eventBinding.RaiseCustomEvent("Close", ref paramsArray);
+            object[] paramsArray = new object[0];
+			EventBinding.RaiseCustomEvent("Close", ref paramsArray);
 		}
 
 		#endregion

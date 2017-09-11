@@ -83,208 +83,165 @@ namespace NetOffice.MSHTMLApi.Events
 		
 		#endregion
 	
-		#region Fields
-
-		private IEventBinding	_eventBinding;
-        private ICOMObject _eventClass;
-        
-		#endregion
-		
-		#region Construction
+		#region Ctor
 
 		public HTMLObjectElementEvents_SinkHelper(ICOMObject eventClass, IConnectionPoint connectPoint): base(eventClass)
 		{
-			_eventClass = eventClass;
-			_eventBinding = (IEventBinding)eventClass;
 			SetupEventBinding(connectPoint);
 		}
 		
 		#endregion
-		
-		#region Properties
 
-        internal Core Factory
-        {
-            get
-            {
-                if (null != _eventClass)
-                    return _eventClass.Factory;
-                else
-                    return Core.Default;
-            }
-        }
-
-        #endregion
-
-		#region HTMLObjectElementEvents Members
+		#region HTMLObjectElementEvents
 		
 		public void onbeforeupdate()
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("onbeforeupdate");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
+            if (!Validate("onbeforeupdate"))
+            {
+                return;
+            }
+
+			Delegate[] recipients = EventBinding.GetEventRecipients("onbeforeupdate");
+			if( (true == EventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
 			{
 				Invoker.ReleaseParamsArray();
 				return;
 			}
 
 			object[] paramsArray = new object[0];
-			_eventBinding.RaiseCustomEvent("onbeforeupdate", ref paramsArray);
+			EventBinding.RaiseCustomEvent("onbeforeupdate", ref paramsArray);
 		}
 
 		public void onafterupdate()
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("onafterupdate");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray();
-				return;
-			}
+            if (!Validate("onafterupdate"))
+            {
+                return;
+            }
 
-			object[] paramsArray = new object[0];
-			_eventBinding.RaiseCustomEvent("onafterupdate", ref paramsArray);
+            object[] paramsArray = new object[0];
+			EventBinding.RaiseCustomEvent("onafterupdate", ref paramsArray);
 		}
 
 		public void onerrorupdate()
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("onerrorupdate");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray();
-				return;
-			}
+            if (!Validate("onerrorupdate"))
+            {
+                return;
+            }
 
-			object[] paramsArray = new object[0];
-			_eventBinding.RaiseCustomEvent("onerrorupdate", ref paramsArray);
+            object[] paramsArray = new object[0];
+			EventBinding.RaiseCustomEvent("onerrorupdate", ref paramsArray);
 		}
 
 		public void onrowexit()
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("onrowexit");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray();
-				return;
-			}
+            if (!Validate("onrowexit"))
+            {
+                return;
+            }
 
-			object[] paramsArray = new object[0];
-			_eventBinding.RaiseCustomEvent("onrowexit", ref paramsArray);
+            object[] paramsArray = new object[0];
+			EventBinding.RaiseCustomEvent("onrowexit", ref paramsArray);
 		}
 
 		public void onrowenter()
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("onrowenter");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray();
-				return;
-			}
+            if (!Validate("onrowenter"))
+            {
+                return;
+            }
 
-			object[] paramsArray = new object[0];
-			_eventBinding.RaiseCustomEvent("onrowenter", ref paramsArray);
+            object[] paramsArray = new object[0];
+			EventBinding.RaiseCustomEvent("onrowenter", ref paramsArray);
 		}
 
 		public void ondatasetchanged()
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("ondatasetchanged");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray();
-				return;
-			}
+            if (!Validate("ondatasetchanged"))
+            {
+                return;
+            }
 
-			object[] paramsArray = new object[0];
-			_eventBinding.RaiseCustomEvent("ondatasetchanged", ref paramsArray);
+            object[] paramsArray = new object[0];
+			EventBinding.RaiseCustomEvent("ondatasetchanged", ref paramsArray);
 		}
 
 		public void ondataavailable()
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("ondataavailable");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray();
-				return;
-			}
+            if (!Validate("ondataavailable"))
+            {
+                return;
+            }
 
-			object[] paramsArray = new object[0];
-			_eventBinding.RaiseCustomEvent("ondataavailable", ref paramsArray);
+            object[] paramsArray = new object[0];
+			EventBinding.RaiseCustomEvent("ondataavailable", ref paramsArray);
 		}
 
 		public void ondatasetcomplete()
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("ondatasetcomplete");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray();
-				return;
-			}
+            if (!Validate("ondatasetcomplete"))
+            {
+                return;
+            }
 
-			object[] paramsArray = new object[0];
-			_eventBinding.RaiseCustomEvent("ondatasetcomplete", ref paramsArray);
+            object[] paramsArray = new object[0];
+			EventBinding.RaiseCustomEvent("ondatasetcomplete", ref paramsArray);
 		}
 
 		public void onerror()
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("onerror");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray();
-				return;
-			}
+            if (!Validate("onerror"))
+            {
+                return;
+            }
 
-			object[] paramsArray = new object[0];
-			_eventBinding.RaiseCustomEvent("onerror", ref paramsArray);
+            object[] paramsArray = new object[0];
+			EventBinding.RaiseCustomEvent("onerror", ref paramsArray);
 		}
 
 		public void onrowsdelete()
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("onrowsdelete");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray();
-				return;
-			}
+            if (!Validate("onrowsdelete"))
+            {
+                return;
+            }
 
-			object[] paramsArray = new object[0];
-			_eventBinding.RaiseCustomEvent("onrowsdelete", ref paramsArray);
+            object[] paramsArray = new object[0];
+			EventBinding.RaiseCustomEvent("onrowsdelete", ref paramsArray);
 		}
 
 		public void onrowsinserted()
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("onrowsinserted");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray();
-				return;
-			}
+            if (!Validate("onrowsinserted"))
+            {
+                return;
+            }
 
-			object[] paramsArray = new object[0];
-			_eventBinding.RaiseCustomEvent("onrowsinserted", ref paramsArray);
+            object[] paramsArray = new object[0];
+			EventBinding.RaiseCustomEvent("onrowsinserted", ref paramsArray);
 		}
 
 		public void oncellchange()
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("oncellchange");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray();
-				return;
-			}
+            if (!Validate("oncellchange"))
+            {
+                return;
+            }
 
-			object[] paramsArray = new object[0];
-			_eventBinding.RaiseCustomEvent("oncellchange", ref paramsArray);
+            object[] paramsArray = new object[0];
+			EventBinding.RaiseCustomEvent("oncellchange", ref paramsArray);
 		}
 
 		public void onreadystatechange()
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("onreadystatechange");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray();
-				return;
-			}
+            if (!Validate("onreadystatechange"))
+            {
+                return;
+            }
 
-			object[] paramsArray = new object[0];
-			_eventBinding.RaiseCustomEvent("onreadystatechange", ref paramsArray);
+            object[] paramsArray = new object[0];
+			EventBinding.RaiseCustomEvent("onreadystatechange", ref paramsArray);
 		}
 
 		#endregion

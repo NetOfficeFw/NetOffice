@@ -12,8 +12,8 @@ namespace NetOffice.ADODBApi
 	/// SupportByVersion ADODB, 2.1,2.5
 	/// </summary>
 	[SupportByVersion("ADODB", 2.1,2.5)]
-	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Method)]
-	public class _Collection : COMObject , IEnumerable<object>
+	[EntityType(EntityType.IsDispatchInterface), BaseType, Enumerator(Enumerator.Reference, EnumeratorInvoke.Method)]
+	public class _Collection : COMObject, IEnumerable<object>
 	{
 		#pragma warning disable
 
@@ -135,29 +135,29 @@ namespace NetOffice.ADODBApi
 			 Factory.ExecuteMethod(this, "Refresh");
 		}
 
-		#endregion
+        #endregion
 
-       #region IEnumerable<object> Member
-        
+        #region IEnumerable<object> Member
+
         /// <summary>
-		/// SupportByVersion ADODB, 2.1,2.5
-		/// </summary>
-		[SupportByVersion("ADODB", 2.1,2.5)]
-       public IEnumerator<object> GetEnumerator()  
-       {
-           NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
-           foreach (object item in innerEnumerator)
-               yield return item;
-       }
+        /// SupportByVersion ADODB, 2.1,2.5
+        /// </summary>
+        [SupportByVersion("ADODB", 2.1, 2.5)]
+        public IEnumerator<object> GetEnumerator()
+        {
+            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
+            foreach (object item in innerEnumerator)
+                yield return item;
+        }
 
-       #endregion
-          
-		#region IEnumerable Members
-       
-		/// <summary>
-		/// SupportByVersion ADODB, 2.1,2.5
-		/// </summary>
-		[SupportByVersion("ADODB", 2.1,2.5)]
+        #endregion
+
+        #region IEnumerable Members
+
+        /// <summary>
+        /// SupportByVersion ADODB, 2.1,2.5
+        /// </summary>
+        [SupportByVersion("ADODB", 2.1,2.5)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
 			return NetOffice.Utils.GetProxyEnumeratorAsMethod(this);

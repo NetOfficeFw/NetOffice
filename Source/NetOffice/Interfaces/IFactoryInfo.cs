@@ -1,15 +1,21 @@
 ﻿using System;
 using System.Reflection;
+using NetOffice.Attributes;
 
 namespace NetOffice
 {
     /// <summary>
-    /// Info about a NetOffice assembly
+    /// Informations about a NetOffice assembly
     /// </summary>
     public interface IFactoryInfo
     {
         /// <summary>
-        /// Namespace of assembly
+        /// Simple name of the assembly and type exporter
+        /// </summary>
+        string AssemblyName { get; }
+
+        /// <summary>
+        /// Namespace of the assembly
         /// </summary>
         string AssemblyNamespace { get; }
 
@@ -19,9 +25,14 @@ namespace NetOffice
         Guid[] ComponentGuid { get; }
 
         /// <summary>
-        /// Assembly info of NetOfficeApi assembly
+        /// Native API assembly
         /// </summary>
         Assembly Assembly { get; }
+
+        /// <summary>
+        /// Assembly attribute - Core want check the version for compatibility while initialize
+        /// </summary>
+        NetOfficeAssemblyAttribute AssemblyAttribute { get; }
 
         /// <summary>
         /// Returns info a class with given name exists in NetOfficeApi assembly

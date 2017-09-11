@@ -106,68 +106,7 @@ namespace NetOffice.MSHTMLApi
 		#endregion
 		
 		#region Properties
-
-		/// <summary>
-		/// SupportByVersion MSHTML 4
-		/// Get/Set
-		/// </summary>
-		[SupportByVersion("MSHTML", 4)]
-		public object nodeValue
-		{
-			get
-			{
-				return Factory.ExecuteVariantPropertyGet(this, "nodeValue");
-			}
-			set
-			{
-				Factory.ExecuteVariantPropertySet(this, "nodeValue", value);
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSHTML 4
-		/// Get/Set
-		/// </summary>
-		[SupportByVersion("MSHTML", 4)]
-		public string value
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "value");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "value", value);
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSHTML 4
-		/// Get
-		/// </summary>
-		[SupportByVersion("MSHTML", 4)]
-		public bool specified
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "specified");
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSHTML 4
-		/// Get
-		/// </summary>
-		[SupportByVersion("MSHTML", 4)]
-		[BaseResult]
-		public NetOffice.MSHTMLApi.IHTMLElement2 ownerElement
-		{
-			get
-			{
-				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.MSHTMLApi.IHTMLElement2>(this, "ownerElement");
-			}
-		}
-
+        
 		#endregion
 
 		#region Methods

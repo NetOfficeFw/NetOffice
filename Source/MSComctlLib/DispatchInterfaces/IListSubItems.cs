@@ -12,7 +12,7 @@ namespace NetOffice.MSComctlLibApi
 	/// SupportByVersion MSComctlLib, 6
 	/// </summary>
 	[SupportByVersion("MSComctlLib", 6)]
-	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Method), HasIndexProperty(IndexInvoke.Property, "Item")]
+	[EntityType(EntityType.IsDispatchInterface), BaseType, Enumerator(Enumerator.Reference, EnumeratorInvoke.Method), HasIndexProperty(IndexInvoke.Property, "Item")]
 	public class IListSubItems : COMObject , IEnumerable<NetOffice.MSComctlLibApi.IListSubItem>
 	{
 		#pragma warning disable

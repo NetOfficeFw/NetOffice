@@ -38,70 +38,44 @@ namespace NetOffice.VisioApi.Events
 		public static readonly string Id = "000D0B0E-0000-0000-C000-000000000046";
 		
 		#endregion
-	
-		#region Fields
 
-		private IEventBinding	_eventBinding;
-        private ICOMObject _eventClass;
-        
-		#endregion
-		
-		#region Construction
+		#region Ctor
 
 		public ESection_SinkHelper(ICOMObject eventClass, IConnectionPoint connectPoint): base(eventClass)
 		{
-			_eventClass = eventClass;
-			_eventBinding = (IEventBinding)eventClass;
 			SetupEventBinding(connectPoint);
 		}
 		
-		#endregion
-		
-		#region Properties
+		#endregion	
 
-        internal Core Factory
-        {
-            get
-            {
-                if (null != _eventClass)
-                    return _eventClass.Factory;
-                else
-                    return Core.Default;
-            }
-        }
-
-        #endregion
-
-		#region ESection Members
+		#region ESection
 		
 		public void CellChanged([In, MarshalAs(UnmanagedType.IDispatch)] object cell)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("CellChanged");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(cell);
-				return;
-			}
+            if (!Validate("CellChanged"))
+            {
+                Invoker.ReleaseParamsArray(cell);
+                return;
+            }
 
-			NetOffice.VisioApi.IVCell newCell = Factory.CreateObjectFromComProxy(_eventClass, cell) as NetOffice.VisioApi.IVCell;
-			object[] paramsArray = new object[1];
+            NetOffice.VisioApi.IVCell newCell = Factory.CreateKnownObjectFromComProxy<NetOffice.VisioApi.IVCell>(EventClass, cell, NetOffice.VisioApi.IVCell.LateBindingApiWrapperType);
+            object[] paramsArray = new object[1];
 			paramsArray[0] = newCell;
-			_eventBinding.RaiseCustomEvent("CellChanged", ref paramsArray);
+			EventBinding.RaiseCustomEvent("CellChanged", ref paramsArray);
 		}
 
 		public void FormulaChanged([In, MarshalAs(UnmanagedType.IDispatch)] object cell)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("FormulaChanged");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(cell);
-				return;
-			}
+            if (!Validate("FormulaChanged"))
+            {
+                Invoker.ReleaseParamsArray(cell);
+                return;
+            }
 
-			NetOffice.VisioApi.IVCell newCell = Factory.CreateObjectFromComProxy(_eventClass, cell) as NetOffice.VisioApi.IVCell;
-			object[] paramsArray = new object[1];
+            NetOffice.VisioApi.IVCell newCell = Factory.CreateKnownObjectFromComProxy<NetOffice.VisioApi.IVCell>(EventClass, cell, NetOffice.VisioApi.IVCell.LateBindingApiWrapperType);
+            object[] paramsArray = new object[1];
 			paramsArray[0] = newCell;
-			_eventBinding.RaiseCustomEvent("FormulaChanged", ref paramsArray);
+			EventBinding.RaiseCustomEvent("FormulaChanged", ref paramsArray);
 		}
 
 		#endregion

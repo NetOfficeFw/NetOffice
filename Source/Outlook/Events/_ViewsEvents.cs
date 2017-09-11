@@ -36,72 +36,44 @@ namespace NetOffice.OutlookApi.Events
 		#region Static
 		
 		public static readonly string Id = "000630A5-0000-0000-C000-000000000046";
-		
-		#endregion
-	
-		#region Fields
-
-		private IEventBinding	_eventBinding;
-        private ICOMObject _eventClass;
-        
-		#endregion
-		
-		#region Construction
-
-		public _ViewsEvents_SinkHelper(ICOMObject eventClass, IConnectionPoint connectPoint): base(eventClass)
-		{
-			_eventClass = eventClass;
-			_eventBinding = (IEventBinding)eventClass;
-			SetupEventBinding(connectPoint);
-		}
-		
-		#endregion
-		
-		#region Properties
-
-        internal Core Factory
-        {
-            get
-            {
-                if (null != _eventClass)
-                    return _eventClass.Factory;
-                else
-                    return Core.Default;
-            }
-        }
 
         #endregion
 
-		#region _ViewsEvents Members
-		
-		public void ViewAdd([In, MarshalAs(UnmanagedType.IDispatch)] object view)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("ViewAdd");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(view);
-				return;
-			}
+        #region Ctor
 
-			NetOffice.OutlookApi.View newView = Factory.CreateObjectFromComProxy(_eventClass, view) as NetOffice.OutlookApi.View;
+        public _ViewsEvents_SinkHelper(ICOMObject eventClass, IConnectionPoint connectPoint): base(eventClass)
+		{
+			SetupEventBinding(connectPoint);
+		}
+
+        #endregion
+
+        #region _ViewsEvents
+
+        public void ViewAdd([In, MarshalAs(UnmanagedType.IDispatch)] object view)
+        {
+            if (!Validate("ViewAdd"))
+            {
+                Invoker.ReleaseParamsArray(view);
+            }
+
+			NetOffice.OutlookApi.View newView = Factory.CreateKnownObjectFromComProxy<NetOffice.OutlookApi.View>(EventClass, view, NetOffice.OutlookApi.View.LateBindingApiWrapperType);
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newView;
-			_eventBinding.RaiseCustomEvent("ViewAdd", ref paramsArray);
+			EventBinding.RaiseCustomEvent("ViewAdd", ref paramsArray);
 		}
 
 		public void ViewRemove([In, MarshalAs(UnmanagedType.IDispatch)] object view)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("ViewRemove");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(view);
-				return;
-			}
+        {
+            if (!Validate("ViewRemove"))
+            {
+                Invoker.ReleaseParamsArray(view);
+            }
 
-			NetOffice.OutlookApi.View newView = Factory.CreateObjectFromComProxy(_eventClass, view) as NetOffice.OutlookApi.View;
-			object[] paramsArray = new object[1];
+            NetOffice.OutlookApi.View newView = Factory.CreateKnownObjectFromComProxy<NetOffice.OutlookApi.View>(EventClass, view, NetOffice.OutlookApi.View.LateBindingApiWrapperType);
+            object[] paramsArray = new object[1];
 			paramsArray[0] = newView;
-			_eventBinding.RaiseCustomEvent("ViewRemove", ref paramsArray);
+			EventBinding.RaiseCustomEvent("ViewRemove", ref paramsArray);
 		}
 
 		#endregion

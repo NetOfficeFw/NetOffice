@@ -39,65 +39,37 @@ namespace NetOffice.MSHTMLApi.Events
 		
 		#endregion
 	
-		#region Fields
-
-		private IEventBinding	_eventBinding;
-        private ICOMObject _eventClass;
-        
-		#endregion
-		
-		#region Construction
+		#region Ctor
 
 		public HTMLXMLHttpRequestEvents_SinkHelper(ICOMObject eventClass, IConnectionPoint connectPoint): base(eventClass)
 		{
-			_eventClass = eventClass;
-			_eventBinding = (IEventBinding)eventClass;
 			SetupEventBinding(connectPoint);
 		}
 		
 		#endregion
-		
-		#region Properties
-
-        internal Core Factory
-        {
-            get
-            {
-                if (null != _eventClass)
-                    return _eventClass.Factory;
-                else
-                    return Core.Default;
-            }
-        }
-
-        #endregion
 
 		#region HTMLXMLHttpRequestEvents Members
 		
 		public void ontimeout()
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("ontimeout");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray();
-				return;
-			}
+            if (!Validate("ontimeout"))
+            {
+                return;
+            }
 
-			object[] paramsArray = new object[0];
-			_eventBinding.RaiseCustomEvent("ontimeout", ref paramsArray);
+            object[] paramsArray = new object[0];
+			EventBinding.RaiseCustomEvent("ontimeout", ref paramsArray);
 		}
 
 		public void onreadystatechange()
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("onreadystatechange");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray();
-				return;
-			}
+            if (!Validate("onreadystatechange"))
+            {
+                return;
+            }
 
-			object[] paramsArray = new object[0];
-			_eventBinding.RaiseCustomEvent("onreadystatechange", ref paramsArray);
+            object[] paramsArray = new object[0];
+			EventBinding.RaiseCustomEvent("onreadystatechange", ref paramsArray);
 		}
 
 		#endregion

@@ -10,7 +10,7 @@ namespace NetOffice.ADODBApi
 	/// SupportByVersion ADODB, 2.1,2.5
 	/// </summary>
 	[SupportByVersion("ADODB", 2.1,2.5)]
-	[EntityType(EntityType.IsDispatchInterface)]
+	[EntityType(EntityType.IsDispatchInterface), BaseType]
  	public class _ADO : COMObject
 	{
 		#pragma warning disable

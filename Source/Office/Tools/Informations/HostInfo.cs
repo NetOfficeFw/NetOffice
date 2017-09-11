@@ -73,12 +73,13 @@ namespace NetOffice.OfficeApi.Tools.Informations
 
             List<KeyValuePair<string, string>> list = new List<KeyValuePair<string, string>>();
             list.Add(new KeyValuePair<string, string>(HeaderCaption, HeaderCaptionLine));
-            list.Add(new KeyValuePair<string, string>("Product Name", _owner.OwnerApplication.InstanceName));
+            list.Add(new KeyValuePair<string, string>("Product Name", _owner.OwnerApplication.InstanceFriendlyName));
             list.Add(new KeyValuePair<string, string>("Product Version", appVersion.ToString()));
             list.Add(new KeyValuePair<string, string>("Proxy Count", _owner.OwnerApplication.Factory.ProxyCount.ToString()));
             list.Add(new KeyValuePair<string, string>("Is Initialized", _owner.OwnerApplication.Factory.IsInitialized.ToString()));
             list.Add(new KeyValuePair<string, string>("Initialized Time MS", _owner.OwnerApplication.Factory.InitializedTime.TotalMilliseconds.ToString()));
-            list.Add(new KeyValuePair<string, string>("Loaded Time MS", _owner.Owner.LoadingTimeElapsed.TotalMilliseconds.ToString()));
+            if(null != _owner.Owner)
+                list.Add(new KeyValuePair<string, string>("Loaded Time MS", _owner.Owner.LoadingTimeElapsed.TotalMilliseconds.ToString()));
             list.Add(new KeyValuePair<string, string>("Load Assemblies Unsafe", _owner.OwnerApplication.Factory.Settings.LoadAssembliesUnsafe.ToString()));
             list.Add(new KeyValuePair<string, string>("Operators Enabled", _owner.OwnerApplication.Factory.Settings.EnableOperatorOverlads.ToString()));
             list.Add(new KeyValuePair<string, string>("Management Enabled", _owner.OwnerApplication.Factory.Settings.EnableProxyManagement.ToString()));

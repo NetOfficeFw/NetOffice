@@ -12,7 +12,7 @@ namespace NetOffice.DAOApi
 	/// SupportByVersion DAO, 3.6,12.0
 	/// </summary>
 	[SupportByVersion("DAO", 3.6,12.0)]
-	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Method)]
+	[EntityType(EntityType.IsDispatchInterface), BaseType, Enumerator(Enumerator.Reference, EnumeratorInvoke.Method)]
 	public class _Collection : COMObject , IEnumerable<object>
 	{
 		#pragma warning disable

@@ -31,39 +31,15 @@ namespace NetOffice.AccessApi.Events
 		public static readonly string Id = "2E70527A-92D1-43CC-A57B-ED48BCCC711D";
 		
 		#endregion
-	
-		#region Fields
-
-		private IEventBinding	_eventBinding;
-        private ICOMObject _eventClass;
-        
-		#endregion
 		
-		#region Construction
+		#region Ctor
 
 		public DispPageBreakEvents_SinkHelper(ICOMObject eventClass, IConnectionPoint connectPoint): base(eventClass)
 		{
-			_eventClass = eventClass;
-			_eventBinding = (IEventBinding)eventClass;
 			SetupEventBinding(connectPoint);
 		}
 		
 		#endregion
-		
-		#region Properties
-
-        internal Core Factory
-        {
-            get
-            {
-                if (null != _eventClass)
-                    return _eventClass.Factory;
-                else
-                    return Core.Default;
-            }
-        }
-
-        #endregion
 
 		#region DispPageBreakEvents Members
 		

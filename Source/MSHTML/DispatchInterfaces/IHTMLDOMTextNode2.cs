@@ -10,7 +10,7 @@ namespace NetOffice.MSHTMLApi
 	/// SupportByVersion MSHTML, 4
 	/// </summary>
 	[SupportByVersion("MSHTML", 4)]
-	[EntityType(EntityType.IsDispatchInterface)]
+	[EntityType(EntityType.IsDispatchInterface), BaseType]
  	public class IHTMLDOMTextNode2 : IHTMLDOMTextNode
 	{
 		#pragma warning disable
@@ -110,62 +110,7 @@ namespace NetOffice.MSHTMLApi
 		#endregion
 
 		#region Methods
-
-		/// <summary>
-		/// SupportByVersion MSHTML 4
-		/// </summary>
-		/// <param name="offset">Int32 offset</param>
-		/// <param name="count">Int32 count</param>
-		[SupportByVersion("MSHTML", 4)]
-		public string substringData(Int32 offset, Int32 count)
-		{
-			return Factory.ExecuteStringMethodGet(this, "substringData", offset, count);
-		}
-
-		/// <summary>
-		/// SupportByVersion MSHTML 4
-		/// </summary>
-		/// <param name="bstrstring">string bstrstring</param>
-		[SupportByVersion("MSHTML", 4)]
-		public void appendData(string bstrstring)
-		{
-			 Factory.ExecuteMethod(this, "appendData", bstrstring);
-		}
-
-		/// <summary>
-		/// SupportByVersion MSHTML 4
-		/// </summary>
-		/// <param name="offset">Int32 offset</param>
-		/// <param name="bstrstring">string bstrstring</param>
-		[SupportByVersion("MSHTML", 4)]
-		public void insertData(Int32 offset, string bstrstring)
-		{
-			 Factory.ExecuteMethod(this, "insertData", offset, bstrstring);
-		}
-
-		/// <summary>
-		/// SupportByVersion MSHTML 4
-		/// </summary>
-		/// <param name="offset">Int32 offset</param>
-		/// <param name="count">Int32 count</param>
-		[SupportByVersion("MSHTML", 4)]
-		public void deleteData(Int32 offset, Int32 count)
-		{
-			 Factory.ExecuteMethod(this, "deleteData", offset, count);
-		}
-
-		/// <summary>
-		/// SupportByVersion MSHTML 4
-		/// </summary>
-		/// <param name="offset">Int32 offset</param>
-		/// <param name="count">Int32 count</param>
-		/// <param name="bstrstring">string bstrstring</param>
-		[SupportByVersion("MSHTML", 4)]
-		public void replaceData(Int32 offset, Int32 count, string bstrstring)
-		{
-			 Factory.ExecuteMethod(this, "replaceData", offset, count, bstrstring);
-		}
-
+        
 		#endregion
 
 		#pragma warning restore

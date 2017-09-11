@@ -9,28 +9,40 @@ namespace NetOffice
         Managed proxies (System._ComObject) implement its own managed lifetime service and reference counter.
         Marshal.ReleaseComObject does NOT! decrement the remote IUnkown interface directly - 
         its decrement its own managed reference counter and 
-        if the managed ref counter is <= 0 then the remote IUnkown interface want be decremented.       
+        if the managed ref counter is == 0 then the remote IUnkown interface want be decremented.       
         (a common missunderstanding)
 
         If you increment the IUnkown reference counter directly(Marshal.AddRef) means 
         the RCW(System._ComObject) does not recognize that in its own managed lifetime service. 
-        (Moreover there is no Marshal.RemoveRef - a broken implementation for a passionate COM developer)
-
-        (You can try Marshal.GetIUnknownForObject&Marshal.AddRef and then call Marshal.ReleaseComObject 2x times and see what happen)
-
+     
         Unfortunately Microsoft spend no possibilities to influence the managed RCW lifetime service 
         for System._ComObject except of Marshal.ReleaseComObject/Marshal.FinalReleaseComObject.
         Thats why we spend this lifetime wrapper arround to have multiple 
         Netoffice wrapper instances with same RCW proxy and keep the managed proxy alive as long we need.
     */
-
+ 
     /// <summary>
-    /// Provides shared access to managed COM proxies(System._ComObject) by implement a reference counter.
-    /// COMProxyShare does not provide any thread safe operations because 
-    /// all essential NetOffice.Core operations are thread-safe and its not intended to use COMProxyShare outside from Netoffice infrastructure.
+    /// Provides shared access to managed COM proxies(System._ComObject) by implement a reference counter.  
     /// </summary>
     public class COMProxyShare
     {
+        #region Nested
+
+        /// <summary>
+        /// COMProxyShare event handler after reference counter has been changed
+        /// </summary>
+        /// <param name="sender">Event sender</param>
+        public delegate void COMProxyShareCountChangedChangedEventHandler(COMProxyShare sender);
+
+        #endregion
+
+        #region Fields
+
+        /// <summary>
+        /// Shared access thread lock in Aquire/Release
+        /// </summary>
+        private object _thisLock = new object();
+
         /// <summary>
         /// Reference count for _proxy
         /// </summary>
@@ -47,9 +59,13 @@ namespace NetOffice
         protected bool _released;
 
         /// <summary>
-        /// Instance is an enumerator provider
+        /// Instance is marked as enumerator provider
         /// </summary>
         private bool _isEnumerator;
+
+        #endregion
+
+        #region Ctor
 
         /// <summary>
         /// Creates an instance of the class and aquire the given proxy
@@ -62,9 +78,9 @@ namespace NetOffice
                 throw new ArgumentNullException("proxy");
             _isEnumerator = proxy is ICustomAdapter;
             _proxy = proxy;
-            Aquire();
+            Acquire();
         }
-
+        
         /// <summary>
         ///  Creates an instance of the class and aquire the given proxy
         /// </summary>
@@ -77,13 +93,43 @@ namespace NetOffice
                 throw new ArgumentNullException("proxy");
             _isEnumerator = isEnumerator;
             _proxy = proxy;
-            Aquire();
+            Acquire();
         }
+
+        /// <summary>
+        ///  Creates an instance of the class and aquire the given proxy
+        /// </summary>
+        /// <param name="proxy">com proxy as any</param>
+        /// <param name="isEnumerator">indicates proxy is an enumerator</param>
+        /// <param name="suppressReleaseExceptions">ignore exceptions when release underlying managed proxy</param>
+        /// <exception cref="ArgumentNullException">throws when proxy is null</exception>
+        internal COMProxyShare(object proxy, bool isEnumerator, bool suppressReleaseExceptions)
+        {
+            if (null == proxy)
+                throw new ArgumentNullException("proxy");
+            _isEnumerator = isEnumerator;
+            _proxy = proxy;
+            SuppressReleaseExceptions = suppressReleaseExceptions;
+            Acquire();
+        }
+
+        #endregion
+
+        #region Events
+
+        /// <summary>
+        /// Occurs after reference counter has been changed
+        /// </summary>
+        public COMProxyShareCountChangedChangedEventHandler CountChanged;
+
+        #endregion
+
+        #region Properties
 
         /// <summary>
         /// Returns information the underlying proxy is already released
         /// </summary>
-        public virtual bool Released
+        public bool Released
         {
             get
             {
@@ -94,7 +140,7 @@ namespace NetOffice
         /// <summary>
         /// Underyling managed proxy(System._ComObject)
         /// </summary>
-        public virtual object Proxy
+        public object Proxy
         {
             get
             {
@@ -103,30 +149,82 @@ namespace NetOffice
         }
 
         /// <summary>
-        /// Increment the reference counter by 1
+        /// Ignore exceptions when release underlying managed proxy(System._ComObject)
         /// </summary>
-        public virtual void Aquire()
+        public virtual bool SuppressReleaseExceptions { get; set; }
+
+        /// <summary>
+        /// Instance is marked as enumerator provider
+        /// </summary>
+        public bool IsEnumerator
         {
-            if (_released)
-                throw new ObjectDisposedException("proxy");
-            _count++;
+            get
+            {
+                return _isEnumerator;
+            }
         }
 
         /// <summary>
-        /// Decrement the reference counter by 1 and release the proxy if counter is 0 after decrement
+        /// Current Reference Count
+        /// </summary>
+        public int Count
+        {
+            get
+            {
+                return _count;
+            }
+        }
+
+        #endregion
+
+        #region Methods
+
+        /// <summary>
+        /// Increment the reference counter by 1
+        /// </summary>
+        public virtual void Acquire()
+        {
+            if (_released)
+                throw new ObjectDisposedException("proxy");
+            lock (_thisLock)
+            {
+                _count++;
+            }
+            RaiseCountChanged();
+        }
+
+        /// <summary>
+        /// Decrement the reference counter by 1 and release the underlying proxy if counter is 0 after decrement
         /// </summary>
         /// <returns>true if underlying proxy is released, otherwise false</returns>
         public virtual bool Release()
         {
-            _count--;
-            if (0 == _count)
-            {
-                ReleaseComObject();
-                _released = true;
-                return true;
+            try
+            { 
+                lock (_thisLock)
+                {
+                    _count--;
+                    if (0 == _count)
+                    {
+                        ReleaseComObject();
+                        _released = true;
+                        return true;
+                    }
+                    else
+                        return false;
+                }                
             }
-            else
-                return false;
+            catch 
+            {
+                if (!SuppressReleaseExceptions)
+                    throw;
+                else
+                    return false;
+            }
+            finally
+            {
+                RaiseCountChanged();
+            }
         }
 
         private void ReleaseComObject()
@@ -139,6 +237,8 @@ namespace NetOffice
                     object adapterUnderlyingObject = AdapterGetUnderlyingObject(adapter);
                     MarshalReleaseComObject(adapterUnderlyingObject);
                 }
+                else
+                    MarshalReleaseComObject(_proxy);
             }
             else
                 MarshalReleaseComObject(_proxy);
@@ -184,5 +284,37 @@ namespace NetOffice
                 return null;
             }
         }
+
+        private void RaiseCountChanged()
+        {
+            try
+            {
+                // CountChanged?Invoke is unsupported in previous C# versions
+                if (null != CountChanged)
+                    CountChanged(this);
+            }
+            catch
+            {
+                ;
+            }           
+        }
+
+        #endregion
+
+        #region Overrides
+       
+        /// <summary>
+        /// Returns a System.String that represents the instance
+        /// </summary>
+        /// <returns>System.String</returns>
+        public override string ToString()
+        {
+            if(_isEnumerator)
+                return String.Format("COMProxyShare:{0} (Enumerator)", _count);
+            else
+                return String.Format("COMProxyShare:{0} (Enumerator)");
+        }
+
+        #endregion
     }
 }

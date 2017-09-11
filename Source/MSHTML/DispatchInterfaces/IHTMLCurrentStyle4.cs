@@ -106,59 +106,7 @@ namespace NetOffice.MSHTMLApi
 		#endregion
 		
 		#region Properties
-
-		/// <summary>
-		/// SupportByVersion MSHTML 4
-		/// Get
-		/// </summary>
-		[SupportByVersion("MSHTML", 4)]
-		public string msInterpolationMode
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "msInterpolationMode");
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSHTML 4
-		/// Get
-		/// </summary>
-		[SupportByVersion("MSHTML", 4)]
-		public object maxHeight
-		{
-			get
-			{
-				return Factory.ExecuteVariantPropertyGet(this, "maxHeight");
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSHTML 4
-		/// Get
-		/// </summary>
-		[SupportByVersion("MSHTML", 4)]
-		public object minWidth
-		{
-			get
-			{
-				return Factory.ExecuteVariantPropertyGet(this, "minWidth");
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSHTML 4
-		/// Get
-		/// </summary>
-		[SupportByVersion("MSHTML", 4)]
-		public object maxWidth
-		{
-			get
-			{
-				return Factory.ExecuteVariantPropertyGet(this, "maxWidth");
-			}
-		}
-
+        
 		#endregion
 
 		#region Methods

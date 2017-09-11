@@ -10,7 +10,7 @@ namespace NetOffice.MSHTMLApi
 	/// SupportByVersion MSHTML, 4
 	/// </summary>
 	[SupportByVersion("MSHTML", 4)]
-	[EntityType(EntityType.IsDispatchInterface)]
+	[EntityType(EntityType.IsDispatchInterface), BaseType]
  	public class IHTMLScreen : DispHTMLScreen
 	{
 		#pragma warning disable
@@ -106,119 +106,7 @@ namespace NetOffice.MSHTMLApi
 		#endregion
 		
 		#region Properties
-
-		/// <summary>
-		/// SupportByVersion MSHTML 4
-		/// Get
-		/// </summary>
-		[SupportByVersion("MSHTML", 4)]
-		public Int32 colorDepth
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "colorDepth");
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSHTML 4
-		/// Get/Set
-		/// </summary>
-		[SupportByVersion("MSHTML", 4)]
-		public Int32 bufferDepth
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "bufferDepth");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "bufferDepth", value);
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSHTML 4
-		/// Get
-		/// </summary>
-		[SupportByVersion("MSHTML", 4)]
-		public Int32 width
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "width");
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSHTML 4
-		/// Get
-		/// </summary>
-		[SupportByVersion("MSHTML", 4)]
-		public Int32 height
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "height");
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSHTML 4
-		/// Get/Set
-		/// </summary>
-		[SupportByVersion("MSHTML", 4)]
-		public Int32 updateInterval
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "updateInterval");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "updateInterval", value);
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSHTML 4
-		/// Get
-		/// </summary>
-		[SupportByVersion("MSHTML", 4)]
-		public Int32 availHeight
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "availHeight");
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSHTML 4
-		/// Get
-		/// </summary>
-		[SupportByVersion("MSHTML", 4)]
-		public Int32 availWidth
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "availWidth");
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSHTML 4
-		/// Get
-		/// </summary>
-		[SupportByVersion("MSHTML", 4)]
-		public bool fontSmoothingEnabled
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "fontSmoothingEnabled");
-			}
-		}
-
+	
 		#endregion
 
 		#region Methods

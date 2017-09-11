@@ -11,7 +11,7 @@ namespace NetOffice.VisioApi
 	/// SupportByVersion Visio, 12,14,15,16
 	/// </summary>
 	[SupportByVersion("Visio", 12,14,15,16)]
-	[EntityType(EntityType.IsDispatchInterface)]
+	[EntityType(EntityType.IsDispatchInterface), BaseType]
  	public class IVGraphicItem : COMObject
 	{
 		#pragma warning disable

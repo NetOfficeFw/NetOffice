@@ -11,7 +11,7 @@ namespace NetOffice.PowerPointApi
 	/// SupportByVersion PowerPoint, 9,10,11,12,14,15,16
 	/// </summary>
 	[SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
-	[EntityType(EntityType.IsDispatchInterface)]
+	[EntityType(EntityType.IsDispatchInterface), BaseType]
  	public class _Presentation : COMObject
 	{
 		#pragma warning disable

@@ -10,7 +10,7 @@ namespace NetOffice.MSHTMLApi
 	/// SupportByVersion MSHTML, 4
 	/// </summary>
 	[SupportByVersion("MSHTML", 4)]
-	[EntityType(EntityType.IsDispatchInterface)]
+	[EntityType(EntityType.IsDispatchInterface), BaseType]
  	public class DispHTMLLinkElement : COMObject
 	{
 		#pragma warning disable
@@ -2643,23 +2643,6 @@ namespace NetOffice.MSHTMLApi
 			get
 			{
 				return Factory.ExecuteReferencePropertyGet(this, "constructor");
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSHTML 4
-		/// Get/Set
-		/// </summary>
-		[SupportByVersion("MSHTML", 4)]
-		public string href
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "href");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "href", value);
 			}
 		}
 

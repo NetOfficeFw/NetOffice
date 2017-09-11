@@ -70,174 +70,131 @@ namespace NetOffice.MSHTMLApi.Events
 		public static readonly string Id = "A6D897FF-0A95-11D1-B0BA-006008166E11";
 		
 		#endregion
-	
-		#region Fields
 
-		private IEventBinding	_eventBinding;
-        private ICOMObject		_eventClass;
-        
-		#endregion
-		
 		#region Construction
 
 		public DWebBridgeEvents_SinkHelper(ICOMObject eventClass, IConnectionPoint connectPoint): base(eventClass)
 		{
-			_eventClass = eventClass;
-			_eventBinding = (IEventBinding)eventClass;
 			SetupEventBinding(connectPoint);
 		}
 		
 		#endregion
-		
-		#region Properties
-
-        internal Core Factory
-        {
-            get
-            {
-                if (null != _eventClass)
-                    return _eventClass.Factory;
-                else
-                    return Core.Default;
-            }
-        }
-
-        #endregion
 
 		#region DWebBridgeEvents Members
 		
 		public void onscriptletevent([In] object name, [In] object eventData)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("onscriptletevent");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(name, eventData);
-				return;
-			}
+            if (!Validate("onscriptletevent"))
+            {
+                Invoker.ReleaseParamsArray(name, eventData);
+                return;
+            }
 
 			string newname = Convert.ToString(name);
 			object neweventData = (object)eventData;
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newname;
 			paramsArray[1] = neweventData;
-			_eventBinding.RaiseCustomEvent("onscriptletevent", ref paramsArray);
+			EventBinding.RaiseCustomEvent("onscriptletevent", ref paramsArray);
 		}
 
 		public void onreadystatechange()
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("onreadystatechange");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray();
-				return;
-			}
+            if (!Validate("onreadystatechange"))
+            {
+                return;
+            }
 
-			object[] paramsArray = new object[0];
-			_eventBinding.RaiseCustomEvent("onreadystatechange", ref paramsArray);
+            object[] paramsArray = new object[0];
+			EventBinding.RaiseCustomEvent("onreadystatechange", ref paramsArray);
 		}
 
 		public void onclick()
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("onclick");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray();
-				return;
-			}
+            if (!Validate("onclick"))
+            {
+                return;
+            }
 
-			object[] paramsArray = new object[0];
-			_eventBinding.RaiseCustomEvent("onclick", ref paramsArray);
+            object[] paramsArray = new object[0];
+			EventBinding.RaiseCustomEvent("onclick", ref paramsArray);
 		}
 
 		public void ondblclick()
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("ondblclick");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray();
-				return;
-			}
+            if (!Validate("ondblclick"))
+            {
+                return;
+            }
 
-			object[] paramsArray = new object[0];
-			_eventBinding.RaiseCustomEvent("ondblclick", ref paramsArray);
+            object[] paramsArray = new object[0];
+			EventBinding.RaiseCustomEvent("ondblclick", ref paramsArray);
 		}
 
 		public void onkeydown()
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("onkeydown");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray();
-				return;
-			}
+            if (!Validate("onkeydown"))
+            {
+                return;
+            }
 
-			object[] paramsArray = new object[0];
-			_eventBinding.RaiseCustomEvent("onkeydown", ref paramsArray);
+            object[] paramsArray = new object[0];
+			EventBinding.RaiseCustomEvent("onkeydown", ref paramsArray);
 		}
 
 		public void onkeyup()
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("onkeyup");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray();
-				return;
-			}
+            if (!Validate("onkeyup"))
+            {
+                return;
+            }
 
-			object[] paramsArray = new object[0];
-			_eventBinding.RaiseCustomEvent("onkeyup", ref paramsArray);
+            object[] paramsArray = new object[0];
+			EventBinding.RaiseCustomEvent("onkeyup", ref paramsArray);
 		}
 
 		public void onkeypress()
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("onkeypress");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray();
-				return;
-			}
+            if (!Validate("onkeypress"))
+            {
+                return;
+            }
 
-			object[] paramsArray = new object[0];
-			_eventBinding.RaiseCustomEvent("onkeypress", ref paramsArray);
+            object[] paramsArray = new object[0];
+			EventBinding.RaiseCustomEvent("onkeypress", ref paramsArray);
 		}
 
 		public void onmousedown()
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("onmousedown");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray();
-				return;
-			}
+            if (!Validate("onmousedown"))
+            {
+                return;
+            }
 
-			object[] paramsArray = new object[0];
-			_eventBinding.RaiseCustomEvent("onmousedown", ref paramsArray);
+            object[] paramsArray = new object[0];
+			EventBinding.RaiseCustomEvent("onmousedown", ref paramsArray);
 		}
 
 		public void onmousemove()
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("onmousemove");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray();
-				return;
-			}
+            if (!Validate("onmousemove"))
+            {
+                return;
+            }
 
-			object[] paramsArray = new object[0];
-			_eventBinding.RaiseCustomEvent("onmousemove", ref paramsArray);
+            object[] paramsArray = new object[0];
+			EventBinding.RaiseCustomEvent("onmousemove", ref paramsArray);
 		}
 
 		public void onmouseup()
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("onmouseup");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray();
-				return;
-			}
+            if (!Validate("onmouseup"))
+            {
+                return;
+            }
 
-			object[] paramsArray = new object[0];
-			_eventBinding.RaiseCustomEvent("onmouseup", ref paramsArray);
+            object[] paramsArray = new object[0];
+			EventBinding.RaiseCustomEvent("onmouseup", ref paramsArray);
 		}
 
 		#endregion

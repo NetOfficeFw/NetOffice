@@ -10,7 +10,7 @@ namespace NetOffice.OutlookApi
 	/// SupportByVersion Outlook, 9,10,11,12,14,15,16
 	/// </summary>
 	[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
-	[EntityType(EntityType.IsDispatchInterface)]
+	[EntityType(EntityType.IsDispatchInterface), BaseType]
  	public class _DistListItem : COMObject
 	{
 		#pragma warning disable

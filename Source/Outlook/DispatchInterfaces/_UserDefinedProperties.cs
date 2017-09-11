@@ -12,7 +12,7 @@ namespace NetOffice.OutlookApi
 	/// SupportByVersion Outlook, 12,14,15,16
 	/// </summary>
 	[SupportByVersion("Outlook", 12,14,15,16)]
-	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Custom), HasIndexProperty(IndexInvoke.Method, "Item")]
+	[EntityType(EntityType.IsDispatchInterface), BaseType, Enumerator(Enumerator.Reference, EnumeratorInvoke.Custom), HasIndexProperty(IndexInvoke.Method, "Item")]
 	public class _UserDefinedProperties : COMObject , IEnumerable<NetOffice.OutlookApi._UserDefinedProperty>
 	{
 		#pragma warning disable
@@ -274,45 +274,46 @@ namespace NetOffice.OutlookApi
 			 Factory.ExecuteMethod(this, "Refresh");
 		}
 
-		#endregion
-       #region IEnumerable<NetOffice.OutlookApi._UserDefinedProperty> Member
-        
-        /// <summary>
-		/// SupportByVersion Outlook, 12,14,15,16
-		/// This is a custom enumerator from NetOffice
-		/// </summary>
-		[SupportByVersion("Outlook", 12,14,15,16)]
-        [CustomEnumerator]
-       public IEnumerator<NetOffice.OutlookApi._UserDefinedProperty> GetEnumerator()  
-       {
-           NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
-           foreach (NetOffice.OutlookApi._UserDefinedProperty item in innerEnumerator)
-               yield return item;
-       }
+        #endregion
 
-       #endregion
-   
-       #region IEnumerable Members
-        
-       /// <summary>
-		/// SupportByVersion Outlook, 12,14,15,16
-		/// This is a custom enumerator from NetOffice
-		/// </summary>
-		[SupportByVersion("Outlook", 12,14,15,16)]
+        #region IEnumerable<NetOffice.OutlookApi._UserDefinedProperty> Member
+
+        /// <summary>
+        /// SupportByVersion Outlook, 12,14,15,16
+        /// This is a custom enumerator from NetOffice
+        /// </summary>
+        [SupportByVersion("Outlook", 12, 14, 15, 16)]
+        [CustomEnumerator]
+        public IEnumerator<NetOffice.OutlookApi._UserDefinedProperty> GetEnumerator()
+        {
+            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
+            foreach (NetOffice.OutlookApi._UserDefinedProperty item in innerEnumerator)
+                yield return item;
+        }
+
+        #endregion
+
+        #region IEnumerable Members
+
+        /// <summary>
+        /// SupportByVersion Outlook, 12,14,15,16
+        /// This is a custom enumerator from NetOffice
+        /// </summary>
+        [SupportByVersion("Outlook", 12, 14, 15, 16)]
         [CustomEnumerator]
         IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
-       {
+        {
             int count = Count;
             object[] enumeratorObjects = new object[count];
             for (int i = 0; i < count; i++)
-                enumeratorObjects[i] = this[i+1];
+                enumeratorObjects[i] = this[i + 1];
 
             foreach (object item in enumeratorObjects)
                 yield return item;
-       }
+        }
 
-       #endregion
+        #endregion
 
-       		#pragma warning restore
-	}
+        #pragma warning restore
+    }
 }

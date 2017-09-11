@@ -121,40 +121,6 @@ namespace NetOffice.MSHTMLApi
 			}
 		}
 
-		/// <summary>
-		/// SupportByVersion MSHTML 4
-		/// Get/Set
-		/// </summary>
-		[SupportByVersion("MSHTML", 4)]
-		public string codeBase
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "codeBase");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "codeBase", value);
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSHTML 4
-		/// Get/Set
-		/// </summary>
-		[SupportByVersion("MSHTML", 4)]
-		public string data
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "data");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "data", value);
-			}
-		}
-
 		#endregion
 
 		#region Methods

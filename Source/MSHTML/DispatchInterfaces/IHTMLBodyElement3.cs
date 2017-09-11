@@ -112,23 +112,6 @@ namespace NetOffice.MSHTMLApi
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public string background
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "background");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "background", value);
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSHTML 4
-		/// Get/Set
-		/// </summary>
-		[SupportByVersion("MSHTML", 4)]
 		public object ononline
 		{
 			get

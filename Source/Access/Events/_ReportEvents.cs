@@ -58,142 +58,107 @@ namespace NetOffice.AccessApi.Events
 		public static readonly string Id = "BC9E4357-F037-11CD-8701-00AA003F0F07";
 		
 		#endregion
-	
-		#region Fields
 
-		private IEventBinding	_eventBinding;
-        private ICOMObject _eventClass;
-        
-		#endregion
-		
-		#region Construction
+		#region Ctor
 
 		public _ReportEvents_SinkHelper(ICOMObject eventClass, IConnectionPoint connectPoint): base(eventClass)
 		{
-			_eventClass = eventClass;
-			_eventBinding = (IEventBinding)eventClass;
 			SetupEventBinding(connectPoint);
 		}
 		
 		#endregion
-		
-		#region Properties
 
-        internal Core Factory
-        {
-            get
-            {
-                if (null != _eventClass)
-                    return _eventClass.Factory;
-                else
-                    return Core.Default;
-            }
-        }
-
-        #endregion
-
-		#region _ReportEvents Members
+		#region _ReportEvents
 		
 		public void Open([In] [Out] ref object cancel)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("Open");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(cancel);
-				return;
-			}
+            if (!Validate("Open"))
+            {
+                Invoker.ReleaseParamsArray(cancel);
+                return;
+            }
 
 			object[] paramsArray = new object[1];
 			paramsArray.SetValue(cancel, 0);
-			_eventBinding.RaiseCustomEvent("Open", ref paramsArray);
+			EventBinding.RaiseCustomEvent("Open", ref paramsArray);
 
-			cancel = (Int16)paramsArray[0];
+			cancel = ToInt16(paramsArray[0]);
 		}
 
 		public void Close()
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("Close");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray();
-				return;
-			}
+            if (!Validate("Close"))
+            {
+                return;
+            }
 
 			object[] paramsArray = new object[0];
-			_eventBinding.RaiseCustomEvent("Close", ref paramsArray);
+			EventBinding.RaiseCustomEvent("Close", ref paramsArray);
 		}
 
 		public void Activate()
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("Activate");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray();
-				return;
-			}
+            if (!Validate("Activate"))
+            {
+                return;
+            }
 
-			object[] paramsArray = new object[0];
-			_eventBinding.RaiseCustomEvent("Activate", ref paramsArray);
+            object[] paramsArray = new object[0];
+			EventBinding.RaiseCustomEvent("Activate", ref paramsArray);
 		}
 
 		public void Deactivate()
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("Deactivate");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray();
-				return;
-			}
+            if (!Validate("Deactivate"))
+            {
+                return;
+            }
 
-			object[] paramsArray = new object[0];
-			_eventBinding.RaiseCustomEvent("Deactivate", ref paramsArray);
+            object[] paramsArray = new object[0];
+			EventBinding.RaiseCustomEvent("Deactivate", ref paramsArray);
 		}
 
 		public void Error([In] [Out] ref object dataErr, [In] [Out] ref object response)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("Error");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(dataErr, response);
-				return;
-			}
+            if (!Validate("Error"))
+            {
+                Invoker.ReleaseParamsArray(dataErr, response);
+                return;
+            }
 
 			object[] paramsArray = new object[2];
 			paramsArray.SetValue(dataErr, 0);
 			paramsArray.SetValue(response, 1);
-			_eventBinding.RaiseCustomEvent("Error", ref paramsArray);
+			EventBinding.RaiseCustomEvent("Error", ref paramsArray);
 
-			dataErr = (Int16)paramsArray[0];
-			response = (Int16)paramsArray[1];
+			dataErr = ToInt16(paramsArray[0]);
+			response = ToInt16(paramsArray[1]);
 		}
 
 		public void NoData([In] [Out] ref object cancel)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("NoData");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(cancel);
-				return;
-			}
+            if (!Validate("NoData"))
+            {
+                Invoker.ReleaseParamsArray(cancel);
+                return;
+            }
 
 			object[] paramsArray = new object[1];
 			paramsArray.SetValue(cancel, 0);
-			_eventBinding.RaiseCustomEvent("NoData", ref paramsArray);
+			EventBinding.RaiseCustomEvent("NoData", ref paramsArray);
 
-			cancel = (Int16)paramsArray[0];
-		}
+			cancel = ToInt16(paramsArray[0]);
+        }
 
 		public void Page()
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("Page");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray();
-				return;
-			}
+            if (!Validate("Page"))
+            {
+                return;
+            }
 
-			object[] paramsArray = new object[0];
-			_eventBinding.RaiseCustomEvent("Page", ref paramsArray);
+            object[] paramsArray = new object[0];
+			EventBinding.RaiseCustomEvent("Page", ref paramsArray);
 		}
 
 		#endregion

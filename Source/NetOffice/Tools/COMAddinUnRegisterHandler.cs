@@ -3,16 +3,15 @@ using System.Runtime.InteropServices;
 using System.Reflection;
 using System.Collections.Generic;
 using Microsoft.Win32;
+using NetOffice.Exceptions;
 
 namespace NetOffice.Tools
 {
     /// <summary>
     /// Handle COMAddin unregister process
     /// </summary>
-    public static class UnRegisterHandler
-    {
-        private static string _exceptionMessage = "An error occured while calling unregister.";
-        
+    public static class COMAddinUnRegisterHandler
+    {     
         /// <summary>
         /// Do unregister process per user uninstallation
         /// </summary>
@@ -42,7 +41,7 @@ namespace NetOffice.Tools
                 if ((null != registerAttribute && true == registerMethodPresent) && (registerAttribute.Value == RegisterMode.CallBefore || registerAttribute.Value == RegisterMode.CallBeforeAndAfter))
                 {
                     if (!CallDerivedUnRegisterMethod(registerMethod, type, registerAttribute.Value == RegisterMode.Replace ? RegisterCall.Replace : RegisterCall.CallBefore, scope, keyState))
-                        if (!RegisterErrorHandler.RaiseStaticErrorHandlerMethod(type, RegisterErrorMethodKind.UnRegister, new NetOfficeException(_exceptionMessage)))
+                        if (!RegisterErrorHandler.RaiseStaticErrorHandlerMethod(type, RegisterErrorMethodKind.UnRegister, new UnregisterException()))
                             return;
                     if (registerAttribute.Value == RegisterMode.Replace)
                         return;
@@ -80,7 +79,7 @@ namespace NetOffice.Tools
                 if ((null != registerAttribute && true == registerMethodPresent) && (registerAttribute.Value == RegisterMode.CallAfter || registerAttribute.Value == RegisterMode.CallBeforeAndAfter))
                 {
                     if (!CallDerivedUnRegisterMethod(registerMethod, type, RegisterCall.CallAfter, scope, keyState))
-                        RegisterErrorHandler.RaiseStaticErrorHandlerMethod(type, RegisterErrorMethodKind.UnRegister, new NetOfficeException(_exceptionMessage));
+                        RegisterErrorHandler.RaiseStaticErrorHandlerMethod(type, RegisterErrorMethodKind.UnRegister, new UnregisterException());
                 }
             }
             catch (System.Exception exception)

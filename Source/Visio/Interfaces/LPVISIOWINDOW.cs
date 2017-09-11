@@ -870,7 +870,7 @@ namespace NetOffice.VisioApi
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersion("Visio", 11,12,14,15,16)]
+		[SupportByVersion("Visio", 11,12,14,15,16), NativeResult]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public stdole.Picture Icon
 		{
@@ -878,9 +878,8 @@ namespace NetOffice.VisioApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Icon", paramsArray);
-				stdole.Picture newObject = Factory.CreateObjectFromComProxy(this,returnItem) as stdole.Picture;
-				return newObject;
-			}
+                return returnItem as stdole.Picture;
+            }
 			set
 			{
 				object[] paramsArray = Invoker.ValidateParamsArray(value);
@@ -1030,7 +1029,7 @@ namespace NetOffice.VisioApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "SelectedMasters", paramsArray);
-                ICOMObject[] newObject = Factory.CreateObjectArrayFromComProxy(this,(object[])returnItem);
+                ICOMObject[] newObject = Factory.CreateObjectArrayFromComProxy(this,(object[])returnItem, false);
 				return newObject;
 			}
 		}

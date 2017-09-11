@@ -37,17 +37,17 @@ namespace NetOffice.Tools
     public enum RegisterCall
     {
         /// <summary>
-        /// the method was called without any register/unregister action from the base class. The specified register method has to do all register operations
+        /// The method was called without any register/unregister action from the base class. The specified register method has to do all register operations
         /// </summary>
         Replace = 0,
 
         /// <summary>
-        /// the method is called before the base class perform all register operation
+        /// The method is called before the base class perform all register operation
         /// </summary>
         CallBefore = 1,
 
         /// <summary>
-        /// the method was called when the base class register operations are done
+        /// The method was called when the base class register operations are done
         /// </summary>
         CallAfter = 2,
     }
@@ -70,6 +70,14 @@ namespace NetOffice.Tools
         public RegisterFunctionAttribute(RegisterMode mode)
         {
             Value = mode;
+        }
+
+        /// <summary>
+        /// Creates an instance of the attribute
+        /// </summary>
+        public RegisterFunctionAttribute()
+        {
+
         }
     }
 }

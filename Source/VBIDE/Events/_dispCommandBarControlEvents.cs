@@ -34,60 +34,35 @@ namespace NetOffice.VBIDEApi.EventInterfaces
 		public static readonly string Id = "0002E131-0000-0000-C000-000000000046";
 		
 		#endregion
-	
-		#region Fields
-
-		private IEventBinding	_eventBinding;
-        private ICOMObject		_eventClass;
-        
-		#endregion
 		
-		#region Construction
+		#region Ctor
 
 		public _dispCommandBarControlEvents_SinkHelper(ICOMObject eventClass, IConnectionPoint connectPoint): base(eventClass)
 		{
-			_eventClass = eventClass;
-			_eventBinding = (IEventBinding)eventClass;
 			SetupEventBinding(connectPoint);
 		}
 		
 		#endregion
-		
-		#region Properties
 
-        internal Core Factory
-        {
-            get
-            {
-                if (null != _eventClass)
-                    return _eventClass.Factory;
-                else
-                    return Core.Default;
-            }
-        }
-
-        #endregion
-
-		#region _dispCommandBarControlEvents Members
+		#region _dispCommandBarControlEvents
 		
 		public void Click([In, MarshalAs(UnmanagedType.IDispatch)] object commandBarControl, [In] [Out] ref object handled, [In] [Out] ref object cancelDefault)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("Click");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(commandBarControl, handled, cancelDefault);
-				return;
-			}
+            if (!Validate("Click"))
+            {
+                Invoker.ReleaseParamsArray(commandBarControl, handled, cancelDefault);
+                return;
+            }
 
-			object newCommandBarControl = Factory.CreateObjectFromComProxy(_eventClass, commandBarControl) as object;
+			object newCommandBarControl = Factory.CreateEventArgumentObjectFromComProxy(EventClass, commandBarControl) as object;
 			object[] paramsArray = new object[3];
 			paramsArray[0] = newCommandBarControl;
 			paramsArray.SetValue(handled, 1);
 			paramsArray.SetValue(cancelDefault, 2);
-			_eventBinding.RaiseCustomEvent("Click", ref paramsArray);
+			EventBinding.RaiseCustomEvent("Click", ref paramsArray);
 
-			handled = (bool)paramsArray[1];
-			cancelDefault = (bool)paramsArray[2];
+			handled = ToBoolean(paramsArray[1]);
+			cancelDefault = ToBoolean(paramsArray[2]);
 		}
 
 		#endregion

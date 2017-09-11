@@ -42,83 +42,55 @@ namespace NetOffice.OutlookApi.Events
 		public static readonly string Id = "0006300D-0000-0000-C000-000000000046";
 		
 		#endregion
-	
-		#region Fields
-
-		private IEventBinding	_eventBinding;
-        private ICOMObject _eventClass;
-        
-		#endregion
-		
-		#region Construction
+			
+		#region Ctor
 
 		public ResultsEvents_SinkHelper(ICOMObject eventClass, IConnectionPoint connectPoint): base(eventClass)
 		{
-			_eventClass = eventClass;
-			_eventBinding = (IEventBinding)eventClass;
 			SetupEventBinding(connectPoint);
 		}
 		
 		#endregion
-		
-		#region Properties
-
-        internal Core Factory
-        {
-            get
-            {
-                if (null != _eventClass)
-                    return _eventClass.Factory;
-                else
-                    return Core.Default;
-            }
-        }
-
-        #endregion
 
 		#region ResultsEvents Members
 		
 		public void ItemAdd([In, MarshalAs(UnmanagedType.IDispatch)] object item)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("ItemAdd");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(item);
-				return;
-			}
+        {
+            if (!Validate("ItemAdd"))
+            {
+                Invoker.ReleaseParamsArray(item);
+                return;
+            }
 
-			object newItem = Factory.CreateObjectFromComProxy(_eventClass, item) as object;
+			object newItem = Factory.CreateEventArgumentObjectFromComProxy(EventClass, item) as object;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newItem;
-			_eventBinding.RaiseCustomEvent("ItemAdd", ref paramsArray);
+			EventBinding.RaiseCustomEvent("ItemAdd", ref paramsArray);
 		}
 
 		public void ItemChange([In, MarshalAs(UnmanagedType.IDispatch)] object item)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("ItemChange");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(item);
-				return;
-			}
+            if (!Validate("ItemChange"))
+            {
+                Invoker.ReleaseParamsArray(item);
+                return;
+            }
 
-			object newItem = Factory.CreateObjectFromComProxy(_eventClass, item) as object;
-			object[] paramsArray = new object[1];
+            object newItem = Factory.CreateEventArgumentObjectFromComProxy(EventClass, item) as object;
+            object[] paramsArray = new object[1];
 			paramsArray[0] = newItem;
-			_eventBinding.RaiseCustomEvent("ItemChange", ref paramsArray);
+			EventBinding.RaiseCustomEvent("ItemChange", ref paramsArray);
 		}
 
 		public void ItemRemove()
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("ItemRemove");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray();
-				return;
-			}
+            if (!Validate("ItemRemove"))
+            {
+                return;
+            }
 
-			object[] paramsArray = new object[0];
-			_eventBinding.RaiseCustomEvent("ItemRemove", ref paramsArray);
+            object[] paramsArray = new object[0];
+			EventBinding.RaiseCustomEvent("ItemRemove", ref paramsArray);
 		}
 
 		#endregion

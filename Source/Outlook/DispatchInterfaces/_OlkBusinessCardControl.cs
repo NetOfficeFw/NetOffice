@@ -10,7 +10,7 @@ namespace NetOffice.OutlookApi
 	/// SupportByVersion Outlook, 12,14,15,16
 	/// </summary>
 	[SupportByVersion("Outlook", 12,14,15,16)]
-	[EntityType(EntityType.IsDispatchInterface)]
+	[EntityType(EntityType.IsDispatchInterface), BaseType]
  	public class _OlkBusinessCardControl : COMObject
 	{
 		#pragma warning disable
@@ -112,15 +112,14 @@ namespace NetOffice.OutlookApi
 		/// Get/Set
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff863586.aspx </remarks>
-		[SupportByVersion("Outlook", 12,14,15,16)]
+		[SupportByVersion("Outlook", 12,14,15,16), NativeResult]
 		public stdole.Picture MouseIcon
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "MouseIcon", paramsArray);
-				stdole.Picture newObject = Factory.CreateObjectFromComProxy(this,returnItem) as stdole.Picture;
-				return newObject;
+                return returnItem as stdole.Picture;
 			}
 			set
 			{

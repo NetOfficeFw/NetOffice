@@ -50,141 +50,111 @@ namespace NetOffice.AccessApi.Events
 		public static readonly string Id = "BC9E4342-F037-11CD-8701-00AA003F0F07";
 		
 		#endregion
-	
-		#region Fields
-
-		private IEventBinding	_eventBinding;
-        private ICOMObject _eventClass;
-        
-		#endregion
-		
-		#region Construction
+			
+		#region Ctor
 
 		public _RectangleEvents_SinkHelper(ICOMObject eventClass, IConnectionPoint connectPoint): base(eventClass)
 		{
-			_eventClass = eventClass;
-			_eventBinding = (IEventBinding)eventClass;
 			SetupEventBinding(connectPoint);
 		}
 		
 		#endregion
 		
-		#region Properties
-
-        internal Core Factory
-        {
-            get
-            {
-                if (null != _eventClass)
-                    return _eventClass.Factory;
-                else
-                    return Core.Default;
-            }
-        }
-
-        #endregion
-
-		#region _RectangleEvents Members
+		#region _RectangleEvents
 		
 		public void Click()
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("Click");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray();
-				return;
-			}
+        {
+            if (!Validate("Click"))
+            {
+                return;
+            }
 
 			object[] paramsArray = new object[0];
-			_eventBinding.RaiseCustomEvent("Click", ref paramsArray);
+			EventBinding.RaiseCustomEvent("Click", ref paramsArray);
 		}
 
 		public void DblClick([In] [Out] ref object cancel)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("DblClick");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(cancel);
-				return;
-			}
+            if (!Validate("DblClick"))
+            {
+                Invoker.ReleaseParamsArray(cancel);
+                return;
+            }
 
 			object[] paramsArray = new object[1];
 			paramsArray.SetValue(cancel, 0);
-			_eventBinding.RaiseCustomEvent("DblClick", ref paramsArray);
+			EventBinding.RaiseCustomEvent("DblClick", ref paramsArray);
 
-			cancel = (Int16)paramsArray[0];
-		}
+			cancel = ToInt16(paramsArray[0]);
+        }
 
-		public void MouseDown([In] [Out] ref object button, [In] [Out] ref object shift, [In] [Out] ref object x, [In] [Out] ref object y)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("MouseDown");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(button, shift, x, y);
-				return;
-			}
+        public void MouseDown([In] [Out] ref object button, [In] [Out] ref object shift, [In] [Out] ref object x, [In] [Out] ref object y)
+        {
+            if (!Validate("MouseDown"))
+            {
+                Invoker.ReleaseParamsArray(button, shift, x, y);
+                return;
+            }
 
-			object[] paramsArray = new object[4];
-			paramsArray.SetValue(button, 0);
-			paramsArray.SetValue(shift, 1);
-			paramsArray.SetValue(x, 2);
-			paramsArray.SetValue(y, 3);
-			_eventBinding.RaiseCustomEvent("MouseDown", ref paramsArray);
+            object[] paramsArray = new object[4];
+            paramsArray.SetValue(button, 0);
+            paramsArray.SetValue(shift, 1);
+            paramsArray.SetValue(x, 2);
+            paramsArray.SetValue(y, 3);
+            EventBinding.RaiseCustomEvent("MouseDown", ref paramsArray);
 
-			button = (Int16)paramsArray[0];
-			shift = (Int16)paramsArray[1];
-			x = (Single)paramsArray[2];
-			y = (Single)paramsArray[3];
-		}
+            button = ToInt16(paramsArray[0]);
+            shift = ToInt16(paramsArray[1]);
+            x = ToSingle(paramsArray[2]);
+            y = ToSingle(paramsArray[3]);
+        }
 
-		public void MouseMove([In] [Out] ref object button, [In] [Out] ref object shift, [In] [Out] ref object x, [In] [Out] ref object y)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("MouseMove");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(button, shift, x, y);
-				return;
-			}
+        public void MouseMove([In] [Out] ref object button, [In] [Out] ref object shift, [In] [Out] ref object x, [In] [Out] ref object y)
+        {
+            if (!Validate("MouseMove"))
+            {
+                Invoker.ReleaseParamsArray(button, shift, x, y);
+                return;
+            }
 
-			object[] paramsArray = new object[4];
-			paramsArray.SetValue(button, 0);
-			paramsArray.SetValue(shift, 1);
-			paramsArray.SetValue(x, 2);
-			paramsArray.SetValue(y, 3);
-			_eventBinding.RaiseCustomEvent("MouseMove", ref paramsArray);
+            object[] paramsArray = new object[4];
+            paramsArray.SetValue(button, 0);
+            paramsArray.SetValue(shift, 1);
+            paramsArray.SetValue(x, 2);
+            paramsArray.SetValue(y, 3);
+            EventBinding.RaiseCustomEvent("MouseMove", ref paramsArray);
 
-			button = (Int16)paramsArray[0];
-			shift = (Int16)paramsArray[1];
-			x = (Single)paramsArray[2];
-			y = (Single)paramsArray[3];
-		}
+            button = ToInt16(paramsArray[0]);
+            shift = ToInt16(paramsArray[1]);
+            x = ToSingle(paramsArray[2]);
+            y = ToSingle(paramsArray[3]);
+        }
 
-		public void MouseUp([In] [Out] ref object button, [In] [Out] ref object shift, [In] [Out] ref object x, [In] [Out] ref object y)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("MouseUp");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(button, shift, x, y);
-				return;
-			}
+        public void MouseUp([In] [Out] ref object button, [In] [Out] ref object shift, [In] [Out] ref object x, [In] [Out] ref object y)
+        {
+            if (!Validate("MouseUp"))
+            {
+                Invoker.ReleaseParamsArray(button, shift, x, y);
+                return;
+            }
 
-			object[] paramsArray = new object[4];
-			paramsArray.SetValue(button, 0);
-			paramsArray.SetValue(shift, 1);
-			paramsArray.SetValue(x, 2);
-			paramsArray.SetValue(y, 3);
-			_eventBinding.RaiseCustomEvent("MouseUp", ref paramsArray);
+            object[] paramsArray = new object[4];
+            paramsArray.SetValue(button, 0);
+            paramsArray.SetValue(shift, 1);
+            paramsArray.SetValue(x, 2);
+            paramsArray.SetValue(y, 3);
+            EventBinding.RaiseCustomEvent("MouseUp", ref paramsArray);
 
-			button = (Int16)paramsArray[0];
-			shift = (Int16)paramsArray[1];
-			x = (Single)paramsArray[2];
-			y = (Single)paramsArray[3];
-		}
+            button = ToInt16(paramsArray[0]);
+            shift = ToInt16(paramsArray[1]);
+            x = ToSingle(paramsArray[2]);
+            y = ToSingle(paramsArray[3]);
+        }
 
-		#endregion
-	}
-	
-	#endregion
-	
-	#pragma warning restore
+        #endregion
+    }
+
+    #endregion
+
+#pragma warning restore
 }

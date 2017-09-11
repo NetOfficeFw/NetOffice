@@ -10,7 +10,7 @@ namespace NetOffice.MSHTMLApi
 	/// SupportByVersion MSHTML, 4
 	/// </summary>
 	[SupportByVersion("MSHTML", 4)]
-	[EntityType(EntityType.IsDispatchInterface)]
+	[EntityType(EntityType.IsDispatchInterface), BaseType]
  	public class IHTMLInputButtonElement : IHTMLInputHiddenElement
 	{
 		#pragma warning disable
@@ -107,113 +107,9 @@ namespace NetOffice.MSHTMLApi
 		
 		#region Properties
 
-		/// <summary>
-		/// SupportByVersion MSHTML 4
-		/// Get
-		/// </summary>
-		[SupportByVersion("MSHTML", 4)]
-		public string type
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "type");
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSHTML 4
-		/// Get/Set
-		/// </summary>
-		[SupportByVersion("MSHTML", 4)]
-		public string value
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "value");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "value", value);
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSHTML 4
-		/// Get/Set
-		/// </summary>
-		[SupportByVersion("MSHTML", 4)]
-		public string name
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "name");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "name", value);
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSHTML 4
-		/// Get/Set
-		/// </summary>
-		[SupportByVersion("MSHTML", 4)]
-		public object status
-		{
-			get
-			{
-				return Factory.ExecuteVariantPropertyGet(this, "status");
-			}
-			set
-			{
-				Factory.ExecuteVariantPropertySet(this, "status", value);
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSHTML 4
-		/// Get/Set
-		/// </summary>
-		[SupportByVersion("MSHTML", 4)]
-		public bool disabled
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "disabled");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "disabled", value);
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSHTML 4
-		/// Get
-		/// </summary>
-		[SupportByVersion("MSHTML", 4)]
-		[BaseResult]
-		public NetOffice.MSHTMLApi.IHTMLFormElement form
-		{
-			get
-			{
-				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.MSHTMLApi.IHTMLFormElement>(this, "form");
-			}
-		}
-
 		#endregion
 
 		#region Methods
-
-		/// <summary>
-		/// SupportByVersion MSHTML 4
-		/// </summary>
-		[SupportByVersion("MSHTML", 4)]
-		public NetOffice.MSHTMLApi.IHTMLTxtRange createTextRange()
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.MSHTMLApi.IHTMLTxtRange>(this, "createTextRange", NetOffice.MSHTMLApi.IHTMLTxtRange.LateBindingApiWrapperType);
-		}
 
 		#endregion
 

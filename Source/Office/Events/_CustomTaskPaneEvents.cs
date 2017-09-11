@@ -38,70 +38,44 @@ namespace NetOffice.OfficeApi.Events
 		public static readonly string Id = "000C033C-0000-0000-C000-000000000046";
 		
 		#endregion
-	
-		#region Fields
-
-		private IEventBinding	_eventBinding;
-        private ICOMObject _eventClass;
-        
-		#endregion
 		
-		#region Construction
+		#region Ctor
 
 		public _CustomTaskPaneEvents_SinkHelper(ICOMObject eventClass, IConnectionPoint connectPoint): base(eventClass)
 		{
-			_eventClass = eventClass;
-			_eventBinding = (IEventBinding)eventClass;
 			SetupEventBinding(connectPoint);
 		}
 		
 		#endregion
 		
-		#region Properties
-
-        internal Core Factory
-        {
-            get
-            {
-                if (null != _eventClass)
-                    return _eventClass.Factory;
-                else
-                    return Core.Default;
-            }
-        }
-
-        #endregion
-
-		#region _CustomTaskPaneEvents Members
+		#region _CustomTaskPaneEvents
 		
 		public void VisibleStateChange([In, MarshalAs(UnmanagedType.IDispatch)] object customTaskPaneInst)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("VisibleStateChange");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(customTaskPaneInst);
-				return;
-			}
+            if (!Validate("VisibleStateChange"))
+            {
+                Invoker.ReleaseParamsArray(customTaskPaneInst);
+                return;
+            }
 
-			NetOffice.OfficeApi._CustomTaskPane newCustomTaskPaneInst = Factory.CreateObjectFromComProxy(_eventClass, customTaskPaneInst) as NetOffice.OfficeApi._CustomTaskPane;
+			NetOffice.OfficeApi._CustomTaskPane newCustomTaskPaneInst = Factory.CreateKnownObjectFromComProxy<NetOffice.OfficeApi._CustomTaskPane>(EventClass, customTaskPaneInst, NetOffice.OfficeApi._CustomTaskPane.LateBindingApiWrapperType);
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newCustomTaskPaneInst;
-			_eventBinding.RaiseCustomEvent("VisibleStateChange", ref paramsArray);
+			EventBinding.RaiseCustomEvent("VisibleStateChange", ref paramsArray);
         }
 
 		public void DockPositionStateChange([In, MarshalAs(UnmanagedType.IDispatch)] object customTaskPaneInst)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("DockPositionStateChange");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(customTaskPaneInst);
-				return;
-			}
+            if (!Validate("DockPositionStateChange"))
+            {
+                Invoker.ReleaseParamsArray(customTaskPaneInst);
+                return;
+            }
 
-			NetOffice.OfficeApi._CustomTaskPane newCustomTaskPaneInst = Factory.CreateObjectFromComProxy(_eventClass, customTaskPaneInst) as NetOffice.OfficeApi._CustomTaskPane;
-			object[] paramsArray = new object[1];
+            NetOffice.OfficeApi._CustomTaskPane newCustomTaskPaneInst = Factory.CreateKnownObjectFromComProxy<NetOffice.OfficeApi._CustomTaskPane>(EventClass, customTaskPaneInst, NetOffice.OfficeApi._CustomTaskPane.LateBindingApiWrapperType);
+            object[] paramsArray = new object[1];
 			paramsArray[0] = newCustomTaskPaneInst;
-            _eventBinding.RaiseCustomEvent("DockPositionStateChange", ref paramsArray);
+            EventBinding.RaiseCustomEvent("DockPositionStateChange", ref paramsArray);
         }
 
 		#endregion

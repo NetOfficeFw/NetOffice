@@ -493,16 +493,15 @@ namespace NetOffice.VisioApi
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersion("Visio", 11,12,14,15,16)]
+		[SupportByVersion("Visio", 11,12,14,15,16), NativeResult]
 		public stdole.Picture Picture
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Picture", paramsArray);
-				stdole.Picture newObject = Factory.CreateObjectFromComProxy(this,returnItem) as stdole.Picture;
-				return newObject;
-			}
+                return returnItem as stdole.Picture;
+            }
 		}
 
 		/// <summary>
@@ -1521,7 +1520,7 @@ namespace NetOffice.VisioApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(masterOrMasterShortcutToDrop, replaceFlags);
 			object returnItem = Invoker.MethodReturn(this, "ReplaceShape", paramsArray);
-            ICOMObject[] newObject = Factory.CreateObjectArrayFromComProxy(this, (object[])returnItem);
+            ICOMObject[] newObject = Factory.CreateObjectArrayFromComProxy(this, (object[])returnItem, false);
 			NetOffice.VisioApi.IVShape[] returnArray = new NetOffice.VisioApi.IVShape[newObject.Length];
 			for (int i = 0; i < newObject.Length; i++)
 				returnArray[i] = newObject[i] as NetOffice.VisioApi.IVShape;
@@ -1538,7 +1537,7 @@ namespace NetOffice.VisioApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(masterOrMasterShortcutToDrop);
 			object returnItem = Invoker.MethodReturn(this, "ReplaceShape", paramsArray);
-            ICOMObject[] newObject = Factory.CreateObjectArrayFromComProxy(this, (object[])returnItem);
+            ICOMObject[] newObject = Factory.CreateObjectArrayFromComProxy(this, (object[])returnItem, false);
 			NetOffice.VisioApi.IVShape[] returnArray = new NetOffice.VisioApi.IVShape[newObject.Length];
 			for (int i = 0; i < newObject.Length; i++)
 				returnArray[i] = newObject[i] as NetOffice.VisioApi.IVShape;

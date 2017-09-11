@@ -111,6 +111,11 @@ namespace NetOffice
         /// The well know IUnknown Interface ID
         /// </summary>
         private static Guid IID_IUnknown = new Guid("00000000-0000-0000-C000-000000000046");
+        
+        /// <summary>
+        /// returns parent instance
+        /// </summary>
+        protected internal ICOMObject _parentObject;
 
         /// <summary>
         /// Child instance List
@@ -666,7 +671,7 @@ namespace NetOffice
             object returnItem = Invoker.MethodReturn(this, name);
             if ((null != returnItem) && (returnItem is MarshalByRefObject))
             {
-                ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
+                ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem, true);
                 return newObject;
             }
             else
@@ -690,7 +695,7 @@ namespace NetOffice
             object returnItem = Invoker.MethodReturn(this, name, args);
             if ((null != returnItem) && (returnItem is MarshalByRefObject))
             {
-                ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
+                ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem, true);
                 return newObject;
             }
             else
@@ -721,7 +726,7 @@ namespace NetOffice
             object returnItem = Invoker.MethodReturn(this, name, args);
             if ((null != returnItem) && (returnItem is MarshalByRefObject))
             {
-                ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
+                ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem, true);
                 return newObject;
             }
             else
@@ -740,7 +745,7 @@ namespace NetOffice
             object returnItem = Invoker.PropertyGet(this, name);
             if ((null != returnItem) && (returnItem is MarshalByRefObject))
             {
-                ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
+                ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem, true);
                 return newObject;
             }
             else
@@ -761,7 +766,7 @@ namespace NetOffice
             object returnItem = Invoker.PropertyGet(this, name, args);
             if ((null != returnItem) && (returnItem is MarshalByRefObject))
             {
-                ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
+                ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem, true);
                 return newObject;
             }
             else
@@ -1112,7 +1117,17 @@ namespace NetOffice
         /// <summary>
         /// Returns parent proxy object
         /// </summary>
-        public ICOMObject ParentObject { get; private set; }
+        public ICOMObject ParentObject
+        {
+            get
+            {
+                return _parentObject;
+            }
+            set
+            {
+                _parentObject = value;
+            }
+        }
 
         /// <summary>
         /// Child instances
@@ -1303,7 +1318,7 @@ namespace NetOffice
                 _proxyShare = null;
             }
             _proxyShare = share;
-            _proxyShare.Aquire();
+            _proxyShare.Acquire();
         }
 
         #endregion

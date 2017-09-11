@@ -75,114 +75,79 @@ namespace NetOffice.MSHTMLApi.Events
 		
 		#endregion
 	
-		#region Fields
-
-		private IEventBinding	_eventBinding;
-        private ICOMObject _eventClass;
-        
-		#endregion
-		
-		#region Construction
+		#region Ctor
 
 		public HTMLWindowEvents_SinkHelper(ICOMObject eventClass, IConnectionPoint connectPoint): base(eventClass)
 		{
-			_eventClass = eventClass;
-			_eventBinding = (IEventBinding)eventClass;
 			SetupEventBinding(connectPoint);
 		}
 		
 		#endregion
-		
-		#region Properties
 
-        internal Core Factory
-        {
-            get
-            {
-                if (null != _eventClass)
-                    return _eventClass.Factory;
-                else
-                    return Core.Default;
-            }
-        }
-
-        #endregion
-
-		#region HTMLWindowEvents Members
+		#region HTMLWindowEvents
 		
 		public void onload()
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("onload");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray();
-				return;
-			}
+            if (!Validate("onload"))
+            {
+                return;
+            }
 
-			object[] paramsArray = new object[0];
-			_eventBinding.RaiseCustomEvent("onload", ref paramsArray);
+            object[] paramsArray = new object[0];
+			EventBinding.RaiseCustomEvent("onload", ref paramsArray);
 		}
 
 		public void onunload()
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("onunload");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray();
-				return;
-			}
+            if (!Validate("onunload"))
+            {
+                return;
+            }
 
-			object[] paramsArray = new object[0];
-			_eventBinding.RaiseCustomEvent("onunload", ref paramsArray);
+            object[] paramsArray = new object[0];
+			EventBinding.RaiseCustomEvent("onunload", ref paramsArray);
 		}
 
 		public void onhelp()
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("onhelp");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray();
-				return;
-			}
+            if (!Validate("onhelp"))
+            {
+                return;
+            }
 
-			object[] paramsArray = new object[0];
-			_eventBinding.RaiseCustomEvent("onhelp", ref paramsArray);
+            object[] paramsArray = new object[0];
+			EventBinding.RaiseCustomEvent("onhelp", ref paramsArray);
 		}
 
 		public void onfocus()
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("onfocus");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray();
-				return;
-			}
+            if (!Validate("onfocus"))
+            {
+                return;
+            }
 
-			object[] paramsArray = new object[0];
-			_eventBinding.RaiseCustomEvent("onfocus", ref paramsArray);
+            object[] paramsArray = new object[0];
+			EventBinding.RaiseCustomEvent("onfocus", ref paramsArray);
 		}
 
 		public void onblur()
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("onblur");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray();
-				return;
-			}
+            if (!Validate("onblur"))
+            {
+                return;
+            }
 
-			object[] paramsArray = new object[0];
-			_eventBinding.RaiseCustomEvent("onblur", ref paramsArray);
+            object[] paramsArray = new object[0];
+			EventBinding.RaiseCustomEvent("onblur", ref paramsArray);
 		}
 
 		public void onerror([In] object description, [In] object url, [In] object line)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("onerror");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(description, url, line);
-				return;
-			}
+            if (!Validate("onerror"))
+            {
+                Invoker.ReleaseParamsArray(description, url, line);
+                return;
+            }
 
 			string newdescription = Convert.ToString(description);
 			string newurl = Convert.ToString(url);
@@ -191,72 +156,62 @@ namespace NetOffice.MSHTMLApi.Events
 			paramsArray[0] = newdescription;
 			paramsArray[1] = newurl;
 			paramsArray[2] = newline;
-			_eventBinding.RaiseCustomEvent("onerror", ref paramsArray);
+			EventBinding.RaiseCustomEvent("onerror", ref paramsArray);
 		}
 
 		public void onresize()
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("onresize");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray();
-				return;
-			}
+            if (!Validate("onresize"))
+            {
+                return;
+            }
 
-			object[] paramsArray = new object[0];
-			_eventBinding.RaiseCustomEvent("onresize", ref paramsArray);
+            object[] paramsArray = new object[0];
+			EventBinding.RaiseCustomEvent("onresize", ref paramsArray);
 		}
 
 		public void onscroll()
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("onscroll");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray();
-				return;
-			}
+            if (!Validate("onscroll"))
+            {
+                return;
+            }
 
-			object[] paramsArray = new object[0];
-			_eventBinding.RaiseCustomEvent("onscroll", ref paramsArray);
+            object[] paramsArray = new object[0];
+			EventBinding.RaiseCustomEvent("onscroll", ref paramsArray);
 		}
 
 		public void onbeforeunload()
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("onbeforeunload");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray();
-				return;
-			}
+            if (!Validate("onbeforeunload"))
+            {
+                return;
+            }
 
-			object[] paramsArray = new object[0];
-			_eventBinding.RaiseCustomEvent("onbeforeunload", ref paramsArray);
+            object[] paramsArray = new object[0];
+			EventBinding.RaiseCustomEvent("onbeforeunload", ref paramsArray);
 		}
 
 		public void onbeforeprint()
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("onbeforeprint");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray();
-				return;
-			}
+            if (!Validate("onbeforeprint"))
+            {
+                return;
+            }
 
-			object[] paramsArray = new object[0];
-			_eventBinding.RaiseCustomEvent("onbeforeprint", ref paramsArray);
+            object[] paramsArray = new object[0];
+			EventBinding.RaiseCustomEvent("onbeforeprint", ref paramsArray);
 		}
 
 		public void onafterprint()
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("onafterprint");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray();
-				return;
-			}
+            if (!Validate("onafterprint"))
+            {
+                return;
+            }
 
-			object[] paramsArray = new object[0];
-			_eventBinding.RaiseCustomEvent("onafterprint", ref paramsArray);
+            object[] paramsArray = new object[0];
+			EventBinding.RaiseCustomEvent("onafterprint", ref paramsArray);
 		}
 
 		#endregion

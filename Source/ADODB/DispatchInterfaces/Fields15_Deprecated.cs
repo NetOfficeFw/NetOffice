@@ -10,7 +10,7 @@ namespace NetOffice.ADODBApi
 	/// SupportByVersion ADODB, 2.5
 	/// </summary>
 	[SupportByVersion("ADODB", 2.5)]
-	[EntityType(EntityType.IsDispatchInterface), HasIndexProperty(IndexInvoke.Property, "Item")]
+	[EntityType(EntityType.IsDispatchInterface), BaseType, HasIndexProperty(IndexInvoke.Property, "Item")]
  	public class Fields15_Deprecated : _Collection
 	{
 		#pragma warning disable

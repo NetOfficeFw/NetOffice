@@ -34,55 +34,30 @@ namespace NetOffice.OfficeApi.Events
 		public static readonly string Id = "000C0354-0000-0000-C000-000000000046";
 		
 		#endregion
-	
-		#region Fields
-
-		private IEventBinding	_eventBinding;
-        private ICOMObject _eventClass;
-        
-		#endregion
-		
-		#region Construction
+			
+		#region Ctor
 
 		public _CommandBarComboBoxEvents_SinkHelper(ICOMObject eventClass, IConnectionPoint connectPoint): base(eventClass)
 		{
-			_eventClass = eventClass;
-			_eventBinding = (IEventBinding)eventClass;
 			SetupEventBinding(connectPoint);
 		}
 		
 		#endregion
 		
-		#region Properties
-
-        internal Core Factory
-        {
-            get
-            {
-                if (null != _eventClass)
-                    return _eventClass.Factory;
-                else
-                    return Core.Default;
-            }
-        }
-
-        #endregion
-
-		#region _CommandBarComboBoxEvents Members
+		#region _CommandBarComboBoxEvents
 		
 		public void Change([In, MarshalAs(UnmanagedType.IDispatch)] object ctrl)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("Change");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(ctrl);
-				return;
-			}
+        {
+            if (!Validate("Change"))
+            {
+                Invoker.ReleaseParamsArray(ctrl);
+                return;
+            }
 
-			NetOffice.OfficeApi.CommandBarComboBox newCtrl = Factory.CreateObjectFromComProxy(_eventClass, ctrl) as NetOffice.OfficeApi.CommandBarComboBox;
+			NetOffice.OfficeApi.CommandBarComboBox newCtrl = Factory.CreateKnownObjectFromComProxy<NetOffice.OfficeApi.CommandBarComboBox>(EventClass, ctrl, NetOffice.OfficeApi.CommandBarComboBox.LateBindingApiWrapperType);
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newCtrl;
-			_eventBinding.RaiseCustomEvent("Change", ref paramsArray);
+			EventBinding.RaiseCustomEvent("Change", ref paramsArray);
 		}
 
 		#endregion

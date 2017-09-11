@@ -10,7 +10,7 @@ namespace NetOffice.VBIDEApi
 	/// SupportByVersion VBIDE, 12,14,5.3
 	/// </summary>
 	[SupportByVersion("VBIDE", 12,14,5.3)]
-	[EntityType(EntityType.IsInterface)]
+	[EntityType(EntityType.IsInterface), BaseType]
  	public class _CommandBarControlEvents : COMObject
 	{
 		#pragma warning disable

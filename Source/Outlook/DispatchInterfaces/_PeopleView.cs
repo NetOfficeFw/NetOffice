@@ -10,7 +10,7 @@ namespace NetOffice.OutlookApi
 	/// SupportByVersion Outlook, 15, 16
 	/// </summary>
 	[SupportByVersion("Outlook", 15, 16)]
-	[EntityType(EntityType.IsDispatchInterface)]
+	[EntityType(EntityType.IsDispatchInterface), BaseType]
  	public class _PeopleView : COMObject
 	{
 		#pragma warning disable

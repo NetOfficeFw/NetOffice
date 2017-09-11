@@ -55,128 +55,97 @@ namespace NetOffice.OutlookApi.Events
 		
 		#endregion
 	
-		#region Fields
-
-		private IEventBinding	_eventBinding;
-        private ICOMObject _eventClass;
-        
-		#endregion
-		
-		#region Construction
+		#region Ctor
 
 		public ReminderCollectionEvents_SinkHelper(ICOMObject eventClass, IConnectionPoint connectPoint): base(eventClass)
 		{
-			_eventClass = eventClass;
-			_eventBinding = (IEventBinding)eventClass;
 			SetupEventBinding(connectPoint);
 		}
 		
 		#endregion
-		
-		#region Properties
 
-        internal Core Factory
-        {
-            get
-            {
-                if (null != _eventClass)
-                    return _eventClass.Factory;
-                else
-                    return Core.Default;
-            }
-        }
-
-        #endregion
-
-		#region ReminderCollectionEvents Members
+		#region ReminderCollectionEvents
 		
 		public void BeforeReminderShow([In] [Out] ref object cancel)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("BeforeReminderShow");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(cancel);
-				return;
-			}
+            if (!Validate("BeforeReminderShow"))
+            {
+                Invoker.ReleaseParamsArray(cancel);
+                return;
+            }
 
 			object[] paramsArray = new object[1];
 			paramsArray.SetValue(cancel, 0);
-			_eventBinding.RaiseCustomEvent("BeforeReminderShow", ref paramsArray);
+			EventBinding.RaiseCustomEvent("BeforeReminderShow", ref paramsArray);
 
-			cancel = (bool)paramsArray[0];
+			cancel = ToBoolean(paramsArray[0]);
 		}
 
 		public void ReminderAdd([In, MarshalAs(UnmanagedType.IDispatch)] object reminderObject)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("ReminderAdd");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(reminderObject);
-				return;
-			}
+        {
+            if (!Validate("ReminderAdd"))
+            {
+                Invoker.ReleaseParamsArray(reminderObject);
+                return;
+            }
 
-			NetOffice.OutlookApi._Reminder newReminderObject = Factory.CreateObjectFromComProxy(_eventClass, reminderObject) as NetOffice.OutlookApi._Reminder;
+			NetOffice.OutlookApi._Reminder newReminderObject = Factory.CreateKnownObjectFromComProxy<NetOffice.OutlookApi._Reminder>(EventClass, reminderObject, NetOffice.OutlookApi._Reminder.LateBindingApiWrapperType);
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newReminderObject;
-			_eventBinding.RaiseCustomEvent("ReminderAdd", ref paramsArray);
+			EventBinding.RaiseCustomEvent("ReminderAdd", ref paramsArray);
 		}
 
 		public void ReminderChange([In, MarshalAs(UnmanagedType.IDispatch)] object reminderObject)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("ReminderChange");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(reminderObject);
-				return;
-			}
+        {
+            if (!Validate("ReminderChange"))
+            {
+                Invoker.ReleaseParamsArray(reminderObject);
+                return;
+            }
 
-			NetOffice.OutlookApi._Reminder newReminderObject = Factory.CreateObjectFromComProxy(_eventClass, reminderObject) as NetOffice.OutlookApi._Reminder;
-			object[] paramsArray = new object[1];
+            NetOffice.OutlookApi._Reminder newReminderObject = Factory.CreateKnownObjectFromComProxy<NetOffice.OutlookApi._Reminder>(EventClass, reminderObject, NetOffice.OutlookApi._Reminder.LateBindingApiWrapperType);
+            object[] paramsArray = new object[1];
 			paramsArray[0] = newReminderObject;
-			_eventBinding.RaiseCustomEvent("ReminderChange", ref paramsArray);
+			EventBinding.RaiseCustomEvent("ReminderChange", ref paramsArray);
 		}
 
 		public void ReminderFire([In, MarshalAs(UnmanagedType.IDispatch)] object reminderObject)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("ReminderFire");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(reminderObject);
-				return;
-			}
+        {
+            if (!Validate("ReminderFire"))
+            {
+                Invoker.ReleaseParamsArray(reminderObject);
+                return;
+            }
 
-			NetOffice.OutlookApi._Reminder newReminderObject = Factory.CreateObjectFromComProxy(_eventClass, reminderObject) as NetOffice.OutlookApi._Reminder;
-			object[] paramsArray = new object[1];
+            NetOffice.OutlookApi._Reminder newReminderObject = Factory.CreateKnownObjectFromComProxy<NetOffice.OutlookApi._Reminder>(EventClass, reminderObject, NetOffice.OutlookApi._Reminder.LateBindingApiWrapperType);
+            object[] paramsArray = new object[1];
 			paramsArray[0] = newReminderObject;
-			_eventBinding.RaiseCustomEvent("ReminderFire", ref paramsArray);
+			EventBinding.RaiseCustomEvent("ReminderFire", ref paramsArray);
 		}
 
 		public void ReminderRemove()
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("ReminderRemove");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray();
-				return;
-			}
+        {
+            if (!Validate("ReminderRemove"))
+            {     
+                return;
+            }
 
 			object[] paramsArray = new object[0];
-			_eventBinding.RaiseCustomEvent("ReminderRemove", ref paramsArray);
+			EventBinding.RaiseCustomEvent("ReminderRemove", ref paramsArray);
 		}
 
 		public void Snooze([In, MarshalAs(UnmanagedType.IDispatch)] object reminderObject)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("Snooze");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(reminderObject);
-				return;
-			}
+            if (!Validate("Snooze"))
+            {
+                Invoker.ReleaseParamsArray(reminderObject);
+                return;
+            }
 
-			NetOffice.OutlookApi._Reminder newReminderObject = Factory.CreateObjectFromComProxy(_eventClass, reminderObject) as NetOffice.OutlookApi._Reminder;
-			object[] paramsArray = new object[1];
+            NetOffice.OutlookApi._Reminder newReminderObject = Factory.CreateKnownObjectFromComProxy<NetOffice.OutlookApi._Reminder>(EventClass, reminderObject, NetOffice.OutlookApi._Reminder.LateBindingApiWrapperType);
+            object[] paramsArray = new object[1];
 			paramsArray[0] = newReminderObject;
-			_eventBinding.RaiseCustomEvent("Snooze", ref paramsArray);
+			EventBinding.RaiseCustomEvent("Snooze", ref paramsArray);
 		}
 
 		#endregion

@@ -50,111 +50,79 @@ namespace NetOffice.AccessApi.Events
 		public static readonly string Id = "BC9E4352-F037-11CD-8701-00AA003F0F07";
 		
 		#endregion
-	
-		#region Fields
-
-		private IEventBinding	_eventBinding;
-        private ICOMObject _eventClass;
-        
-		#endregion
 		
-		#region Construction
+		#region Ctor
 
 		public _CustomControlEvents_SinkHelper(ICOMObject eventClass, IConnectionPoint connectPoint): base(eventClass)
 		{
-			_eventClass = eventClass;
-			_eventBinding = (IEventBinding)eventClass;
 			SetupEventBinding(connectPoint);
 		}
 		
 		#endregion
-		
-		#region Properties
-
-        internal Core Factory
-        {
-            get
-            {
-                if (null != _eventClass)
-                    return _eventClass.Factory;
-                else
-                    return Core.Default;
-            }
-        }
-
-        #endregion
-
-		#region _CustomControlEvents Members
+			
+		#region _CustomControlEvents
 		
 		public void Updated([In] [Out] ref object code)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("Updated");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(code);
-				return;
-			}
+        {
+            if (!Validate("Updated"))
+            {
+                Invoker.ReleaseParamsArray(code);
+                return;
+            }
 
 			object[] paramsArray = new object[1];
 			paramsArray.SetValue(code, 0);
-			_eventBinding.RaiseCustomEvent("Updated", ref paramsArray);
+			EventBinding.RaiseCustomEvent("Updated", ref paramsArray);
 
-			code = (Int16)paramsArray[0];
+			code = ToInt16(paramsArray[0]);
 		}
 
 		public void Enter()
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("Enter");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray();
-				return;
-			}
+        {
+            if (!Validate("Enter"))
+            {
+                return;
+            }
 
 			object[] paramsArray = new object[0];
-			_eventBinding.RaiseCustomEvent("Enter", ref paramsArray);
+			EventBinding.RaiseCustomEvent("Enter", ref paramsArray);
 		}
 
 		public void Exit([In] [Out] ref object cancel)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("Exit");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(cancel);
-				return;
-			}
+        {
+            if (!Validate("Exit"))
+            {
+                Invoker.ReleaseParamsArray(cancel);
+                return;
+            }
 
 			object[] paramsArray = new object[1];
 			paramsArray.SetValue(cancel, 0);
-			_eventBinding.RaiseCustomEvent("Exit", ref paramsArray);
+			EventBinding.RaiseCustomEvent("Exit", ref paramsArray);
 
-			cancel = (Int16)paramsArray[0];
-		}
+			cancel = ToInt16(paramsArray[0]);
+        }
 
 		public void GotFocus()
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("GotFocus");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray();
-				return;
-			}
+        {
+            if (!Validate("GotFocus"))
+            {
+                return;
+            }
 
 			object[] paramsArray = new object[0];
-			_eventBinding.RaiseCustomEvent("GotFocus", ref paramsArray);
+			EventBinding.RaiseCustomEvent("GotFocus", ref paramsArray);
 		}
 
 		public void LostFocus()
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("LostFocus");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray();
-				return;
-			}
+        {
+            if (!Validate("LostFocus"))
+            {
+                return;
+            }
 
 			object[] paramsArray = new object[0];
-			_eventBinding.RaiseCustomEvent("LostFocus", ref paramsArray);
+			EventBinding.RaiseCustomEvent("LostFocus", ref paramsArray);
 		}
 
 		#endregion

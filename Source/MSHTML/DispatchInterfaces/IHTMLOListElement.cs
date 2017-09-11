@@ -112,23 +112,6 @@ namespace NetOffice.MSHTMLApi
 		/// Get/Set
 		/// </summary>
 		[SupportByVersion("MSHTML", 4)]
-		public bool compact
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "compact");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "compact", value);
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSHTML 4
-		/// Get/Set
-		/// </summary>
-		[SupportByVersion("MSHTML", 4)]
 		public Int32 Start
 		{
 			get

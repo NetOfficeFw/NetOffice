@@ -29,43 +29,19 @@ namespace NetOffice.OutlookApi.Events
 		#region Static
 		
 		public static readonly string Id = "494F0971-DD96-11D2-AF70-006008AFF117";
-		
-		#endregion
-	
-		#region Fields
 
-		private IEventBinding	_eventBinding;
-        private ICOMObject _eventClass;
-        
-		#endregion
-		
-		#region Construction
+        #endregion
 
-		public _DPageWrapCtrlEvents_SinkHelper(ICOMObject eventClass, IConnectionPoint connectPoint): base(eventClass)
+        #region Ctor
+
+        public _DPageWrapCtrlEvents_SinkHelper(ICOMObject eventClass, IConnectionPoint connectPoint): base(eventClass)
 		{
-			_eventClass = eventClass;
-			_eventBinding = (IEventBinding)eventClass;
 			SetupEventBinding(connectPoint);
 		}
 		
 		#endregion
-		
-		#region Properties
 
-        internal Core Factory
-        {
-            get
-            {
-                if (null != _eventClass)
-                    return _eventClass.Factory;
-                else
-                    return Core.Default;
-            }
-        }
-
-        #endregion
-
-		#region _DPageWrapCtrlEvents Members
+		#region _DPageWrapCtrlEvents
 		
 		#endregion
 	}

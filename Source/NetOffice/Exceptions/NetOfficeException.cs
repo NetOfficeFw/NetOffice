@@ -21,6 +21,17 @@ namespace NetOffice
         /// <summary>
         /// Creates an instance of the class
         /// </summary>
+        /// <param name="innerException">inner exception</param>
+        public NetOfficeException( Exception innerException) : base(null != innerException? innerException.Message : "<NoErrorMessage>", innerException)
+        {
+            AppDomainId = AppDomain.CurrentDomain.Id;
+            AppDomainFriendlyName = AppDomain.CurrentDomain.FriendlyName;
+            AppDomainIsDefault = AppDomain.CurrentDomain.IsDefaultAppDomain();
+        }
+
+        /// <summary>
+        /// Creates an instance of the class
+        /// </summary>
         /// <param name="message">given exception info</param>
         /// <param name="innerException">inner exception</param>
         public NetOfficeException(string message, Exception innerException) : base(message, innerException)

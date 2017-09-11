@@ -47,99 +47,71 @@ namespace NetOffice.VisioApi.Events
 		
 		#endregion
 	
-		#region Fields
-
-		private IEventBinding	_eventBinding;
-        private ICOMObject _eventClass;
-        
-		#endregion
-		
-		#region Construction
+		#region Ctor
 
 		public EStyle_SinkHelper(ICOMObject eventClass, IConnectionPoint connectPoint): base(eventClass)
 		{
-			_eventClass = eventClass;
-			_eventBinding = (IEventBinding)eventClass;
 			SetupEventBinding(connectPoint);
 		}
 		
 		#endregion
-		
-		#region Properties
 
-        internal Core Factory
-        {
-            get
-            {
-                if (null != _eventClass)
-                    return _eventClass.Factory;
-                else
-                    return Core.Default;
-            }
-        }
-
-        #endregion
-
-		#region EStyle Members
+		#region EStyle
 		
 		public void StyleChanged([In, MarshalAs(UnmanagedType.IDispatch)] object style)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("StyleChanged");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(style);
-				return;
-			}
+        {
+            if (!Validate("StyleChanged"))
+            {
+                Invoker.ReleaseParamsArray(style);
+                return;
+            }
 
-			NetOffice.VisioApi.IVStyle newStyle = Factory.CreateObjectFromComProxy(_eventClass, style) as NetOffice.VisioApi.IVStyle;
+			NetOffice.VisioApi.IVStyle newStyle = Factory.CreateKnownObjectFromComProxy<NetOffice.VisioApi.IVStyle>(EventClass, style, NetOffice.VisioApi.IVStyle.LateBindingApiWrapperType);
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newStyle;
-			_eventBinding.RaiseCustomEvent("StyleChanged", ref paramsArray);
+			EventBinding.RaiseCustomEvent("StyleChanged", ref paramsArray);
 		}
 
 		public void BeforeStyleDelete([In, MarshalAs(UnmanagedType.IDispatch)] object style)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("BeforeStyleDelete");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(style);
-				return;
-			}
+            if (!Validate("BeforeStyleDelete"))
+            {
+                Invoker.ReleaseParamsArray(style);
+                return;
+            }
 
-			NetOffice.VisioApi.IVStyle newStyle = Factory.CreateObjectFromComProxy(_eventClass, style) as NetOffice.VisioApi.IVStyle;
-			object[] paramsArray = new object[1];
+            NetOffice.VisioApi.IVStyle newStyle = Factory.CreateKnownObjectFromComProxy<NetOffice.VisioApi.IVStyle>(EventClass, style, NetOffice.VisioApi.IVStyle.LateBindingApiWrapperType);
+            object[] paramsArray = new object[1];
 			paramsArray[0] = newStyle;
-			_eventBinding.RaiseCustomEvent("BeforeStyleDelete", ref paramsArray);
+			EventBinding.RaiseCustomEvent("BeforeStyleDelete", ref paramsArray);
 		}
 
 		public void QueryCancelStyleDelete([In, MarshalAs(UnmanagedType.IDispatch)] object style)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("QueryCancelStyleDelete");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(style);
-				return;
-			}
+            if (!Validate("QueryCancelStyleDelete"))
+            {
+                Invoker.ReleaseParamsArray(style);
+                return;
+            }
 
-			NetOffice.VisioApi.IVStyle newStyle = Factory.CreateObjectFromComProxy(_eventClass, style) as NetOffice.VisioApi.IVStyle;
-			object[] paramsArray = new object[1];
+            NetOffice.VisioApi.IVStyle newStyle = Factory.CreateKnownObjectFromComProxy<NetOffice.VisioApi.IVStyle>(EventClass, style, NetOffice.VisioApi.IVStyle.LateBindingApiWrapperType);
+            object[] paramsArray = new object[1];
 			paramsArray[0] = newStyle;
-			_eventBinding.RaiseCustomEvent("QueryCancelStyleDelete", ref paramsArray);
+			EventBinding.RaiseCustomEvent("QueryCancelStyleDelete", ref paramsArray);
 		}
 
 		public void StyleDeleteCanceled([In, MarshalAs(UnmanagedType.IDispatch)] object style)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("StyleDeleteCanceled");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(style);
-				return;
-			}
+            if (!Validate("StyleDeleteCanceled"))
+            {
+                Invoker.ReleaseParamsArray(style);
+                return;
+            }
 
-			NetOffice.VisioApi.IVStyle newStyle = Factory.CreateObjectFromComProxy(_eventClass, style) as NetOffice.VisioApi.IVStyle;
-			object[] paramsArray = new object[1];
+            NetOffice.VisioApi.IVStyle newStyle = Factory.CreateKnownObjectFromComProxy<NetOffice.VisioApi.IVStyle>(EventClass, style, NetOffice.VisioApi.IVStyle.LateBindingApiWrapperType);
+            object[] paramsArray = new object[1];
 			paramsArray[0] = newStyle;
-			_eventBinding.RaiseCustomEvent("StyleDeleteCanceled", ref paramsArray);
+			EventBinding.RaiseCustomEvent("StyleDeleteCanceled", ref paramsArray);
 		}
 
 		#endregion

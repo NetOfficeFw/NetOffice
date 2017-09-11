@@ -69,7 +69,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Attributes\AttributeExtensions.cs" />
     <Compile Include="Attributes\BaseResultAttribute.cs" />
+    <Compile Include="Attributes\BaseTypeAttribute.cs" />
+    <Compile Include="Attributes\ComEventInterfaceAttribute.cs" />
     <Compile Include="Attributes\ComRegExportCallAttribute.cs" />
     <Compile Include="Attributes\ComRegisterCallAttribute.cs" />
     <Compile Include="Attributes\ComUnregisterCallAttribute.cs.cs" />
@@ -78,12 +81,17 @@
     <Compile Include="Attributes\InternalEntityAttribute.cs" />
     <Compile Include="Attributes\ModuleBaseTypeAttribute.cs" />
     <Compile Include="Attributes\ModuleProviderAttribute.cs" />
+    <Compile Include="Attributes\NativeResultAttribute.cs" />
     <Compile Include="Attributes\ProxyResultAttribute.cs" />
+    <Compile Include="ComTypes\ITypeInfoExtensions.cs" />
     <Compile Include="Converter\ExpandableSettingsConverter.cs" />
+    <Compile Include="CoreExtensions\Core.Nested.cs" />
+    <Compile Include="CoreExtensions\CoreFactoryExtensions.cs" />
     <Compile Include="CoreExtensions\CoreMethodExtensions.cs" />
     <Compile Include="CoreExtensions\CorePropertyGetExtensions.cs" />
     <Compile Include="CoreExtensions\CorePropertySetExtensions.cs" />
     <Compile Include="Diagnostics\DiagnosticItem.cs" />
+    <Compile Include="Diagnostics\Internal\InternalDebugDiagnostics.cs" />
     <Compile Include="DuckTales\DuckTypeClassGenerator.cs" />
     <Compile Include="DuckTales\DuckTypeEnumeratorGenerator.cs" />
     <Compile Include="DuckTales\DuckTypeEventsGenerator.cs" />
@@ -109,6 +117,7 @@
     <Compile Include="DuckTales\Resources.cs" />
     <Compile Include="Attributes\SyntaxBypassAttribute.cs" />
     <Compile Include="DuckTales\VisibleAttribute.cs" />
+    <Compile Include="Events\CoClassEventReflector.cs" />
     <Compile Include="Exceptions\AvailityException.cs" />
     <Compile Include="Exceptions\CloneException.cs" />
     <Compile Include="Exceptions\COMChildRelationException.cs" />
@@ -123,6 +132,8 @@
     <Compile Include="Exceptions\NetOfficeCOMException.cs" />
     <Compile Include="Exceptions\PropertyGetCOMException.cs" />
     <Compile Include="Exceptions\PropertySetCOMException.cs" />
+    <Compile Include="Exceptions\RegisterException.cs" />
+    <Compile Include="Exceptions\UnregisterException.cs" />
     <Compile Include="Filtering\IMessageFilter.cs" />
     <Compile Include="Filtering\INTERFACEINFO.cs" />
     <Compile Include="Filtering\RetryMessageFilterLogMode.cs" />
@@ -130,6 +141,9 @@
     <Compile Include="Interfaces\ICloneable.cs" />
     <Compile Include="Interfaces\ICOMObjectAvaility.cs" />
     <Compile Include="Interfaces\ICOMProxyShareProvider.cs" />
+    <Compile Include="Loader\FactoryList.cs" />
+    <Compile Include="Loader\KnownKeyTokens.cs" />
+    <Compile Include="Loader\PathBuilder.cs" />
     <Compile Include="Resolver\InstanceTypeNameResolver.cs" />
     <Compile Include="Diagnostics\SelfDiagnostics.cs" />
     <Compile Include="Tools\DontRegisterAddinAttribute.cs" />
@@ -164,10 +178,10 @@
     <Compile Include="Tools\RegExportFunctionAttribute.cs" />
     <Compile Include="Tools\RegExportHandler.cs" />
     <Compile Include="Tools\RegisterErrorHandler.cs" />
-    <Compile Include="Tools\RegisterHandler.cs" />
+    <Compile Include="Tools\COMAddinRegisterHandler.cs" />
     <Compile Include="Tools\InstallScope.cs" />
     <Compile Include="Tools\TimestampAttribute.cs" />
-    <Compile Include="Tools\UnRegisterHandler.cs" />
+    <Compile Include="Tools\COMAddinUnRegisterHandler.cs" />
     <Compile Include="Running\ChildWindowBatchEnumerator.cs" />
     <Compile Include="Running\Win32.cs" />
     <Compile Include="Trace\DebugConsoleMode.cs" />

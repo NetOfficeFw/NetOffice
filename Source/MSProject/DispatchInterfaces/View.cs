@@ -11,7 +11,7 @@ namespace NetOffice.MSProjectApi
 	/// </summary>
 	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff920741(v=office.14).aspx </remarks>
 	[SupportByVersion("MSProject", 11,12,14)]
-	[EntityType(EntityType.IsDispatchInterface)]
+	[EntityType(EntityType.IsDispatchInterface), BaseType]
  	public class View : COMObject
 	{
 		#pragma warning disable

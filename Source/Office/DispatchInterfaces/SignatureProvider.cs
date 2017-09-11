@@ -120,13 +120,12 @@ namespace NetOffice.OfficeApi
 		/// <param name="psigsetup">NetOffice.OfficeApi.SignatureSetup psigsetup</param>
 		/// <param name="psiginfo">NetOffice.OfficeApi.SignatureInfo psiginfo</param>
 		/// <param name="xmlDsigStream">object xmlDsigStream</param>
-		[SupportByVersion("Office", 12,14,15,16)]
+		[SupportByVersion("Office", 12,14,15,16), NativeResult]
 		public stdole.Picture GenerateSignatureLineImage(NetOffice.OfficeApi.Enums.SignatureLineImage siglnimg, NetOffice.OfficeApi.SignatureSetup psigsetup, NetOffice.OfficeApi.SignatureInfo psiginfo, object xmlDsigStream)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(siglnimg, psigsetup, psiginfo, xmlDsigStream);
 			object returnItem = Invoker.MethodReturn(this, "GenerateSignatureLineImage", paramsArray);
-			stdole.Picture newObject = Factory.CreateObjectFromComProxy(this, returnItem) as stdole.Picture;
-			return newObject;
+            return returnItem as stdole.Picture;
 		}
 
 		/// <summary>

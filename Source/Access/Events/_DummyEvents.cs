@@ -38,66 +38,38 @@ namespace NetOffice.AccessApi.Events
 		public static readonly string Id = "58BF3100-B580-11CF-89A8-00A0C9054129";
 		
 		#endregion
-	
-		#region Fields
-
-		private IEventBinding	_eventBinding;
-        private ICOMObject _eventClass;
-        
-		#endregion
 		
-		#region Construction
+		#region Ctor
 
 		public _DummyEvents_SinkHelper(ICOMObject eventClass, IConnectionPoint connectPoint): base(eventClass)
 		{
-			_eventClass = eventClass;
-			_eventBinding = (IEventBinding)eventClass;
 			SetupEventBinding(connectPoint);
 		}
 		
 		#endregion
 		
-		#region Properties
-
-        internal Core Factory
-        {
-            get
-            {
-                if (null != _eventClass)
-                    return _eventClass.Factory;
-                else
-                    return Core.Default;
-            }
-        }
-
-        #endregion
-
-		#region _DummyEvents Members
+		#region _DummyEvents
 		
 		public void Initialize()
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("Initialize");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray();
-				return;
-			}
+        {
+            if (!Validate("Initialize"))
+            {
+                return;
+            }
 
 			object[] paramsArray = new object[0];
-			_eventBinding.RaiseCustomEvent("Initialize", ref paramsArray);
+			EventBinding.RaiseCustomEvent("Initialize", ref paramsArray);
 		}
 
 		public void Terminate()
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("Terminate");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray();
-				return;
-			}
+        {
+            if (!Validate("Terminate"))
+            {
+                return;
+            }
 
 			object[] paramsArray = new object[0];
-			_eventBinding.RaiseCustomEvent("Terminate", ref paramsArray);
+			EventBinding.RaiseCustomEvent("Terminate", ref paramsArray);
 		}
 
 		#endregion

@@ -10,7 +10,7 @@ namespace NetOffice.OutlookApi
 	/// SupportByVersion Outlook, 12,14,15,16
 	/// </summary>
 	[SupportByVersion("Outlook", 12,14,15,16)]
-	[EntityType(EntityType.IsDispatchInterface), HasIndexProperty(IndexInvoke.Method, "Item")]
+	[EntityType(EntityType.IsDispatchInterface), BaseType, HasIndexProperty(IndexInvoke.Method, "Item")]
  	public class _Row : COMObject
 	{
 		#pragma warning disable

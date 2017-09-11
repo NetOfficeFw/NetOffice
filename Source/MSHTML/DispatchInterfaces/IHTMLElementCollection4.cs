@@ -107,19 +107,6 @@ namespace NetOffice.MSHTMLApi
 		
 		#region Properties
 
-		/// <summary>
-		/// SupportByVersion MSHTML 4
-		/// Get
-		/// </summary>
-		[SupportByVersion("MSHTML", 4)]
-		public Int32 length
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "length");
-			}
-		}
-
 		#endregion
 
 		#region Methods

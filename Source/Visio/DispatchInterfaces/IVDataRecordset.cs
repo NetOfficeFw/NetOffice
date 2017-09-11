@@ -11,7 +11,7 @@ namespace NetOffice.VisioApi
 	/// SupportByVersion Visio, 12,14,15,16
 	/// </summary>
 	[SupportByVersion("Visio", 12,14,15,16)]
-	[EntityType(EntityType.IsDispatchInterface)]
+	[EntityType(EntityType.IsDispatchInterface), BaseType]
  	public class IVDataRecordset : COMObject
 	{
 		#pragma warning disable
@@ -384,7 +384,7 @@ namespace NetOffice.VisioApi
 			object returnItem = Invoker.MethodReturn(this, "GetRowData", paramsArray);
 			if((null != returnItem) && (returnItem is MarshalByRefObject))
 			{
-                ICOMObject[] newObject = Factory.CreateObjectArrayFromComProxy(this, (object[])returnItem);
+                ICOMObject[] newObject = Factory.CreateObjectArrayFromComProxy(this, (object[])returnItem, false);
 				return newObject;
 			}
 			else
@@ -429,7 +429,7 @@ namespace NetOffice.VisioApi
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "GetAllRefreshConflicts", paramsArray);
-            ICOMObject[] newObject = Factory.CreateObjectArrayFromComProxy(this, (object[])returnItem);
+            ICOMObject[] newObject = Factory.CreateObjectArrayFromComProxy(this, (object[])returnItem, false);
 			NetOffice.VisioApi.IVShape[] returnArray = new NetOffice.VisioApi.IVShape[newObject.Length];
 			for (int i = 0; i < newObject.Length; i++)
 				returnArray[i] = newObject[i] as NetOffice.VisioApi.IVShape;

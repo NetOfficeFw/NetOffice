@@ -219,537 +219,484 @@ namespace NetOffice.ExcelApi.Events
 
         #endregion
 
-        #region Fields
-
-        private IEventBinding _eventBinding;
-        private ICOMObject _eventClass;
-
-        #endregion
-
-        #region Construction
+        #region Ctor
 
         public AppEvents_SinkHelper(ICOMObject eventClass, IConnectionPoint connectPoint) : base(eventClass)
-        {
-            _eventClass = eventClass;
-            _eventBinding = (IEventBinding)eventClass;
+        {  
             SetupEventBinding(connectPoint);
         }
 
         #endregion
 
-        #region Properties
-
-        internal Core Factory
-        {
-            get
-            {
-                if (null != _eventClass)
-                    return _eventClass.Factory;
-                else
-                    return Core.Default;
-            }
-        }
-
-        #endregion
-
-        #region AppEvents Members
+        #region AppEvents
 
         public void NewWorkbook([In, MarshalAs(UnmanagedType.IDispatch)] object wb)
         {
-            Delegate[] recipients = _eventBinding.GetEventRecipients("NewWorkbook");
-            if ((true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0))
+            if (!Validate("NewWorkbook"))
             {
                 Invoker.ReleaseParamsArray(wb);
                 return;
             }
-
-            NetOffice.ExcelApi.Workbook newWb = Factory.CreateObjectFromComProxy(_eventClass, wb) as NetOffice.ExcelApi.Workbook;
+            
+            NetOffice.ExcelApi.Workbook newWb = Factory.CreateKnownObjectFromComProxy<NetOffice.ExcelApi.Workbook>(EventClass, wb, NetOffice.ExcelApi.Workbook.LateBindingApiWrapperType);
             object[] paramsArray = new object[1];
             paramsArray[0] = newWb;
-            _eventBinding.RaiseCustomEvent("NewWorkbook", ref paramsArray);
+            EventBinding.RaiseCustomEvent("NewWorkbook", ref paramsArray);
         }
 
         public void SheetSelectionChange([In, MarshalAs(UnmanagedType.IDispatch)] object sh, [In, MarshalAs(UnmanagedType.IDispatch)] object target)
         {
-            Delegate[] recipients = _eventBinding.GetEventRecipients("SheetSelectionChange");
-            if ((true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0))
+            if (!Validate("SheetSelectionChange"))
             {
                 Invoker.ReleaseParamsArray(sh, target);
                 return;
             }
-
-            object newSh = Factory.CreateObjectFromComProxy(_eventClass, sh) as object;
-            NetOffice.ExcelApi.Range newTarget = Factory.CreateObjectFromComProxy(_eventClass, target) as NetOffice.ExcelApi.Range;
+            
+            object newSh = Factory.CreateEventArgumentObjectFromComProxy(EventClass, sh) as object;
+            NetOffice.ExcelApi.Range newTarget = Factory.CreateKnownObjectFromComProxy<NetOffice.ExcelApi.Range>(EventClass, target, NetOffice.ExcelApi.Range.LateBindingApiWrapperType);
             object[] paramsArray = new object[2];
             paramsArray[0] = newSh;
             paramsArray[1] = newTarget;
-            _eventBinding.RaiseCustomEvent("SheetSelectionChange", ref paramsArray);
+            EventBinding.RaiseCustomEvent("SheetSelectionChange", ref paramsArray);
         }
 
         public void SheetBeforeDoubleClick([In, MarshalAs(UnmanagedType.IDispatch)] object sh, [In, MarshalAs(UnmanagedType.IDispatch)] object target, [In] [Out] ref object cancel)
         {
-            Delegate[] recipients = _eventBinding.GetEventRecipients("SheetBeforeDoubleClick");
-            if ((true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0))
+            if (!Validate("SheetBeforeDoubleClick"))
             {
                 Invoker.ReleaseParamsArray(sh, target, cancel);
                 return;
             }
-
-            object newSh = Factory.CreateObjectFromComProxy(_eventClass, sh) as object;
-            NetOffice.ExcelApi.Range newTarget = Factory.CreateObjectFromComProxy(_eventClass, target) as NetOffice.ExcelApi.Range;
+            
+            object newSh = Factory.CreateEventArgumentObjectFromComProxy(EventClass, sh) as object;
+            NetOffice.ExcelApi.Range newTarget = Factory.CreateKnownObjectFromComProxy<NetOffice.ExcelApi.Range>(EventClass, target, NetOffice.ExcelApi.Range.LateBindingApiWrapperType);
             object[] paramsArray = new object[3];
             paramsArray[0] = newSh;
             paramsArray[1] = newTarget;
             paramsArray.SetValue(cancel, 2);
-            _eventBinding.RaiseCustomEvent("SheetBeforeDoubleClick", ref paramsArray);
+            EventBinding.RaiseCustomEvent("SheetBeforeDoubleClick", ref paramsArray);
 
-            cancel = (bool)paramsArray[2];
+            cancel = ToBoolean(paramsArray[2]);
         }
 
         public void SheetBeforeRightClick([In, MarshalAs(UnmanagedType.IDispatch)] object sh, [In, MarshalAs(UnmanagedType.IDispatch)] object target, [In] [Out] ref object cancel)
         {
-            Delegate[] recipients = _eventBinding.GetEventRecipients("SheetBeforeRightClick");
-            if ((true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0))
+            if (!Validate("SheetBeforeRightClick"))
             {
                 Invoker.ReleaseParamsArray(sh, target, cancel);
                 return;
             }
 
-            object newSh = Factory.CreateObjectFromComProxy(_eventClass, sh) as object;
-            NetOffice.ExcelApi.Range newTarget = Factory.CreateObjectFromComProxy(_eventClass, target) as NetOffice.ExcelApi.Range;
+            object newSh = Factory.CreateEventArgumentObjectFromComProxy(EventClass, sh) as object;
+            NetOffice.ExcelApi.Range newTarget = Factory.CreateKnownObjectFromComProxy<NetOffice.ExcelApi.Range>(EventClass, target, NetOffice.ExcelApi.Range.LateBindingApiWrapperType);
             object[] paramsArray = new object[3];
             paramsArray[0] = newSh;
             paramsArray[1] = newTarget;
             paramsArray.SetValue(cancel, 2);
-            _eventBinding.RaiseCustomEvent("SheetBeforeRightClick", ref paramsArray);
+            EventBinding.RaiseCustomEvent("SheetBeforeRightClick", ref paramsArray);
 
-            cancel = (bool)paramsArray[2];
+            cancel = ToBoolean(paramsArray[2]);
         }
 
         public void SheetActivate([In, MarshalAs(UnmanagedType.IDispatch)] object sh)
         {
-            Delegate[] recipients = _eventBinding.GetEventRecipients("SheetActivate");
-            if ((true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0))
+            if (!Validate("SheetActivate"))
             {
                 Invoker.ReleaseParamsArray(sh);
                 return;
             }
 
-            object newSh = Factory.CreateObjectFromComProxy(_eventClass, sh) as object;
+            object newSh = Factory.CreateEventArgumentObjectFromComProxy(EventClass, sh) as object;
             object[] paramsArray = new object[1];
             paramsArray[0] = newSh;
-            _eventBinding.RaiseCustomEvent("SheetActivate", ref paramsArray);
+            EventBinding.RaiseCustomEvent("SheetActivate", ref paramsArray);
         }
 
         public void SheetDeactivate([In, MarshalAs(UnmanagedType.IDispatch)] object sh)
         {
-            Delegate[] recipients = _eventBinding.GetEventRecipients("SheetDeactivate");
-            if ((true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0))
+            if (!Validate("SheetDeactivate"))
             {
                 Invoker.ReleaseParamsArray(sh);
                 return;
             }
-
-            object newSh = Factory.CreateObjectFromComProxy(_eventClass, sh) as object;
+           
+            object newSh = Factory.CreateEventArgumentObjectFromComProxy(EventClass, sh) as object;
             object[] paramsArray = new object[1];
             paramsArray[0] = newSh;
-            _eventBinding.RaiseCustomEvent("SheetDeactivate", ref paramsArray);
+            EventBinding.RaiseCustomEvent("SheetDeactivate", ref paramsArray);
         }
 
         public void SheetCalculate([In, MarshalAs(UnmanagedType.IDispatch)] object sh)
         {
-            Delegate[] recipients = _eventBinding.GetEventRecipients("SheetCalculate");
-            if ((true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0))
+            if (!Validate("SheetCalculate"))
             {
                 Invoker.ReleaseParamsArray(sh);
                 return;
             }
 
-            object newSh = Factory.CreateObjectFromComProxy(_eventClass, sh) as object;
+            object newSh = Factory.CreateEventArgumentObjectFromComProxy(EventClass, sh) as object;
             object[] paramsArray = new object[1];
             paramsArray[0] = newSh;
-            _eventBinding.RaiseCustomEvent("SheetCalculate", ref paramsArray);
+            EventBinding.RaiseCustomEvent("SheetCalculate", ref paramsArray);
         }
 
         public void SheetChange([In, MarshalAs(UnmanagedType.IDispatch)] object sh, [In, MarshalAs(UnmanagedType.IDispatch)] object target)
         {
-            Delegate[] recipients = _eventBinding.GetEventRecipients("SheetChange");
-            if ((true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0))
+            if (!Validate("SheetChange"))
             {
                 Invoker.ReleaseParamsArray(sh, target);
                 return;
             }
 
-            object newSh = Factory.CreateObjectFromComProxy(_eventClass, sh) as object;
-            NetOffice.ExcelApi.Range newTarget = Factory.CreateObjectFromComProxy(_eventClass, target) as NetOffice.ExcelApi.Range;
+            object newSh = Factory.CreateEventArgumentObjectFromComProxy(EventClass, sh) as object;
+            NetOffice.ExcelApi.Range newTarget = Factory.CreateKnownObjectFromComProxy<NetOffice.ExcelApi.Range>(EventClass, target, NetOffice.ExcelApi.Range.LateBindingApiWrapperType);
             object[] paramsArray = new object[2];
             paramsArray[0] = newSh;
             paramsArray[1] = newTarget;
-            _eventBinding.RaiseCustomEvent("SheetChange", ref paramsArray);
+            EventBinding.RaiseCustomEvent("SheetChange", ref paramsArray);
         }
 
         public void WorkbookOpen([In, MarshalAs(UnmanagedType.IDispatch)] object wb)
         {
-            Delegate[] recipients = _eventBinding.GetEventRecipients("WorkbookOpen");
-            if ((true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0))
+            if (!Validate("WorkbookOpen"))
             {
                 Invoker.ReleaseParamsArray(wb);
                 return;
             }
 
-            NetOffice.ExcelApi.Workbook newWb = Factory.CreateObjectFromComProxy(_eventClass, wb) as NetOffice.ExcelApi.Workbook;
+            NetOffice.ExcelApi.Workbook newWb = Factory.CreateKnownObjectFromComProxy<NetOffice.ExcelApi.Workbook>(EventClass, wb, NetOffice.ExcelApi.Workbook.LateBindingApiWrapperType);
             object[] paramsArray = new object[1];
             paramsArray[0] = newWb;
-            _eventBinding.RaiseCustomEvent("WorkbookOpen", ref paramsArray);
+            EventBinding.RaiseCustomEvent("WorkbookOpen", ref paramsArray);
         }
 
         public void WorkbookActivate([In, MarshalAs(UnmanagedType.IDispatch)] object wb)
         {
-            Delegate[] recipients = _eventBinding.GetEventRecipients("WorkbookActivate");
-            if ((true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0))
+            if (!Validate("WorkbookActivate"))
             {
                 Invoker.ReleaseParamsArray(wb);
                 return;
             }
 
-            NetOffice.ExcelApi.Workbook newWb = Factory.CreateObjectFromComProxy(_eventClass, wb) as NetOffice.ExcelApi.Workbook;
+            NetOffice.ExcelApi.Workbook newWb = Factory.CreateKnownObjectFromComProxy<NetOffice.ExcelApi.Workbook>(EventClass, wb, NetOffice.ExcelApi.Workbook.LateBindingApiWrapperType);
             object[] paramsArray = new object[1];
             paramsArray[0] = newWb;
-            _eventBinding.RaiseCustomEvent("WorkbookActivate", ref paramsArray);
+            EventBinding.RaiseCustomEvent("WorkbookActivate", ref paramsArray);
         }
 
         public void WorkbookDeactivate([In, MarshalAs(UnmanagedType.IDispatch)] object wb)
         {
-            Delegate[] recipients = _eventBinding.GetEventRecipients("WorkbookDeactivate");
-            if ((true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0))
+            if (!Validate("WorkbookDeactivate"))
             {
                 Invoker.ReleaseParamsArray(wb);
                 return;
             }
 
-            NetOffice.ExcelApi.Workbook newWb = Factory.CreateObjectFromComProxy(_eventClass, wb) as NetOffice.ExcelApi.Workbook;
+            NetOffice.ExcelApi.Workbook newWb = Factory.CreateKnownObjectFromComProxy<NetOffice.ExcelApi.Workbook>(EventClass, wb, NetOffice.ExcelApi.Workbook.LateBindingApiWrapperType);
             object[] paramsArray = new object[1];
             paramsArray[0] = newWb;
-            _eventBinding.RaiseCustomEvent("WorkbookDeactivate", ref paramsArray);
+            EventBinding.RaiseCustomEvent("WorkbookDeactivate", ref paramsArray);
         }
 
         public void WorkbookBeforeClose([In, MarshalAs(UnmanagedType.IDispatch)] object wb, [In] [Out] ref object cancel)
         {
-            Delegate[] recipients = _eventBinding.GetEventRecipients("WorkbookBeforeClose");
-            if ((true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0))
+            if (!Validate("WorkbookBeforeClose"))
             {
                 Invoker.ReleaseParamsArray(wb, cancel);
                 return;
             }
 
-            NetOffice.ExcelApi.Workbook newWb = Factory.CreateObjectFromComProxy(_eventClass, wb) as NetOffice.ExcelApi.Workbook;
+            NetOffice.ExcelApi.Workbook newWb = Factory.CreateKnownObjectFromComProxy<NetOffice.ExcelApi.Workbook>(EventClass, wb, NetOffice.ExcelApi.Workbook.LateBindingApiWrapperType);
             object[] paramsArray = new object[2];
             paramsArray[0] = newWb;
             paramsArray.SetValue(cancel, 1);
-            _eventBinding.RaiseCustomEvent("WorkbookBeforeClose", ref paramsArray);
+            EventBinding.RaiseCustomEvent("WorkbookBeforeClose", ref paramsArray);
 
-            cancel = (bool)paramsArray[1];
+            cancel = ToBoolean(paramsArray[1]);
         }
 
         public void WorkbookBeforeSave([In, MarshalAs(UnmanagedType.IDispatch)] object wb, [In] object saveAsUI, [In] [Out] ref object cancel)
         {
-            Delegate[] recipients = _eventBinding.GetEventRecipients("WorkbookBeforeSave");
-            if ((true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0))
+            if (!Validate("WorkbookBeforeSave"))
             {
                 Invoker.ReleaseParamsArray(wb, saveAsUI, cancel);
                 return;
             }
 
-            NetOffice.ExcelApi.Workbook newWb = Factory.CreateObjectFromComProxy(_eventClass, wb) as NetOffice.ExcelApi.Workbook;
-            bool newSaveAsUI = Convert.ToBoolean(saveAsUI);
+            NetOffice.ExcelApi.Workbook newWb = Factory.CreateKnownObjectFromComProxy<NetOffice.ExcelApi.Workbook>(EventClass, wb, NetOffice.ExcelApi.Workbook.LateBindingApiWrapperType);
+            bool newSaveAsUI = ToBoolean(saveAsUI);
             object[] paramsArray = new object[3];
             paramsArray[0] = newWb;
             paramsArray[1] = newSaveAsUI;
             paramsArray.SetValue(cancel, 2);
-            _eventBinding.RaiseCustomEvent("WorkbookBeforeSave", ref paramsArray);
+            EventBinding.RaiseCustomEvent("WorkbookBeforeSave", ref paramsArray);
 
-            cancel = (bool)paramsArray[2];
+            cancel = ToBoolean(paramsArray[2]);
         }
 
         public void WorkbookBeforePrint([In, MarshalAs(UnmanagedType.IDispatch)] object wb, [In] [Out] ref object cancel)
         {
-            Delegate[] recipients = _eventBinding.GetEventRecipients("WorkbookBeforePrint");
-            if ((true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0))
+            if (!Validate("WorkbookBeforeSave"))
             {
                 Invoker.ReleaseParamsArray(wb, cancel);
                 return;
             }
 
-            NetOffice.ExcelApi.Workbook newWb = Factory.CreateObjectFromComProxy(_eventClass, wb) as NetOffice.ExcelApi.Workbook;
+            NetOffice.ExcelApi.Workbook newWb = Factory.CreateKnownObjectFromComProxy<NetOffice.ExcelApi.Workbook>(EventClass, wb, NetOffice.ExcelApi.Workbook.LateBindingApiWrapperType);
             object[] paramsArray = new object[2];
             paramsArray[0] = newWb;
             paramsArray.SetValue(cancel, 1);
-            _eventBinding.RaiseCustomEvent("WorkbookBeforePrint", ref paramsArray);
+            EventBinding.RaiseCustomEvent("WorkbookBeforeSave", ref paramsArray);
 
-            cancel = (bool)paramsArray[1];
+            cancel = ToBoolean(paramsArray[1]);
         }
 
         public void WorkbookNewSheet([In, MarshalAs(UnmanagedType.IDispatch)] object wb, [In, MarshalAs(UnmanagedType.IDispatch)] object sh)
         {
-            Delegate[] recipients = _eventBinding.GetEventRecipients("WorkbookNewSheet");
-            if ((true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0))
+            if (!Validate("WorkbookNewSheet"))
             {
                 Invoker.ReleaseParamsArray(wb, sh);
                 return;
             }
 
-            NetOffice.ExcelApi.Workbook newWb = Factory.CreateObjectFromComProxy(_eventClass, wb) as NetOffice.ExcelApi.Workbook;
-            object newSh = Factory.CreateObjectFromComProxy(_eventClass, sh) as object;
+            NetOffice.ExcelApi.Workbook newWb = Factory.CreateKnownObjectFromComProxy<NetOffice.ExcelApi.Workbook>(EventClass, wb, NetOffice.ExcelApi.Workbook.LateBindingApiWrapperType);
+            object newSh = Factory.CreateEventArgumentObjectFromComProxy(EventClass, sh) as object;
             object[] paramsArray = new object[2];
             paramsArray[0] = newWb;
             paramsArray[1] = newSh;
-            _eventBinding.RaiseCustomEvent("WorkbookNewSheet", ref paramsArray);
+            EventBinding.RaiseCustomEvent("WorkbookNewSheet", ref paramsArray);
         }
 
         public void WorkbookAddinInstall([In, MarshalAs(UnmanagedType.IDispatch)] object wb)
         {
-            Delegate[] recipients = _eventBinding.GetEventRecipients("WorkbookAddinInstall");
-            if ((true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0))
+            if (!Validate("WorkbookAddinInstall"))
             {
                 Invoker.ReleaseParamsArray(wb);
                 return;
             }
 
-            NetOffice.ExcelApi.Workbook newWb = Factory.CreateObjectFromComProxy(_eventClass, wb) as NetOffice.ExcelApi.Workbook;
+            NetOffice.ExcelApi.Workbook newWb = Factory.CreateKnownObjectFromComProxy<NetOffice.ExcelApi.Workbook>(EventClass, wb, NetOffice.ExcelApi.Workbook.LateBindingApiWrapperType);
             object[] paramsArray = new object[1];
             paramsArray[0] = newWb;
-            _eventBinding.RaiseCustomEvent("WorkbookAddinInstall", ref paramsArray);
+            EventBinding.RaiseCustomEvent("WorkbookAddinInstall", ref paramsArray);
         }
 
         public void WorkbookAddinUninstall([In, MarshalAs(UnmanagedType.IDispatch)] object wb)
         {
-            Delegate[] recipients = _eventBinding.GetEventRecipients("WorkbookAddinUninstall");
-            if ((true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0))
+            if (!Validate("WorkbookAddinUninstall"))
             {
                 Invoker.ReleaseParamsArray(wb);
                 return;
             }
 
-            NetOffice.ExcelApi.Workbook newWb = Factory.CreateObjectFromComProxy(_eventClass, wb) as NetOffice.ExcelApi.Workbook;
+            NetOffice.ExcelApi.Workbook newWb = Factory.CreateKnownObjectFromComProxy<NetOffice.ExcelApi.Workbook>(EventClass, wb, NetOffice.ExcelApi.Workbook.LateBindingApiWrapperType);
             object[] paramsArray = new object[1];
             paramsArray[0] = newWb;
-            _eventBinding.RaiseCustomEvent("WorkbookAddinUninstall", ref paramsArray);
+            EventBinding.RaiseCustomEvent("WorkbookAddinUninstall", ref paramsArray);
         }
 
         public void WindowResize([In, MarshalAs(UnmanagedType.IDispatch)] object wb, [In, MarshalAs(UnmanagedType.IDispatch)] object wn)
         {
-            Delegate[] recipients = _eventBinding.GetEventRecipients("WindowResize");
-            if ((true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0))
+            if (!Validate("WindowResize"))
             {
                 Invoker.ReleaseParamsArray(wb, wn);
                 return;
             }
 
-            NetOffice.ExcelApi.Workbook newWb = Factory.CreateObjectFromComProxy(_eventClass, wb) as NetOffice.ExcelApi.Workbook;
-            NetOffice.ExcelApi.Window newWn = Factory.CreateObjectFromComProxy(_eventClass, wn) as NetOffice.ExcelApi.Window;
+            NetOffice.ExcelApi.Workbook newWb = Factory.CreateKnownObjectFromComProxy<NetOffice.ExcelApi.Workbook>(EventClass, wb, NetOffice.ExcelApi.Workbook.LateBindingApiWrapperType);
+            NetOffice.ExcelApi.Window newWn = Factory.CreateKnownObjectFromComProxy<NetOffice.ExcelApi.Window>(EventClass, wb, NetOffice.ExcelApi.Window.LateBindingApiWrapperType);
             object[] paramsArray = new object[2];
             paramsArray[0] = newWb;
             paramsArray[1] = newWn;
-            _eventBinding.RaiseCustomEvent("WindowResize", ref paramsArray);
+            EventBinding.RaiseCustomEvent("WindowResize", ref paramsArray);
         }
 
         public void WindowActivate([In, MarshalAs(UnmanagedType.IDispatch)] object wb, [In, MarshalAs(UnmanagedType.IDispatch)] object wn)
         {
-            Delegate[] recipients = _eventBinding.GetEventRecipients("WindowActivate");
-            if ((true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0))
+            if (!Validate("WindowActivate"))
             {
                 Invoker.ReleaseParamsArray(wb, wn);
                 return;
             }
 
-            NetOffice.ExcelApi.Workbook newWb = Factory.CreateObjectFromComProxy(_eventClass, wb) as NetOffice.ExcelApi.Workbook;
-            NetOffice.ExcelApi.Window newWn = Factory.CreateObjectFromComProxy(_eventClass, wn) as NetOffice.ExcelApi.Window;
+            NetOffice.ExcelApi.Workbook newWb = Factory.CreateKnownObjectFromComProxy<NetOffice.ExcelApi.Workbook>(EventClass, wb, NetOffice.ExcelApi.Workbook.LateBindingApiWrapperType);
+            NetOffice.ExcelApi.Window newWn = Factory.CreateKnownObjectFromComProxy<NetOffice.ExcelApi.Window>(EventClass, wb, NetOffice.ExcelApi.Window.LateBindingApiWrapperType);
             object[] paramsArray = new object[2];
             paramsArray[0] = newWb;
             paramsArray[1] = newWn;
-            _eventBinding.RaiseCustomEvent("WindowActivate", ref paramsArray);
+            EventBinding.RaiseCustomEvent("WindowActivate", ref paramsArray);
         }
 
         public void WindowDeactivate([In, MarshalAs(UnmanagedType.IDispatch)] object wb, [In, MarshalAs(UnmanagedType.IDispatch)] object wn)
         {
-            Delegate[] recipients = _eventBinding.GetEventRecipients("WindowDeactivate");
-            if ((true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0))
+            if (!Validate("WindowDeactivate"))
             {
                 Invoker.ReleaseParamsArray(wb, wn);
                 return;
             }
 
-            NetOffice.ExcelApi.Workbook newWb = Factory.CreateObjectFromComProxy(_eventClass, wb) as NetOffice.ExcelApi.Workbook;
-            NetOffice.ExcelApi.Window newWn = Factory.CreateObjectFromComProxy(_eventClass, wn) as NetOffice.ExcelApi.Window;
+            NetOffice.ExcelApi.Workbook newWb = Factory.CreateKnownObjectFromComProxy<NetOffice.ExcelApi.Workbook>(EventClass, wb, NetOffice.ExcelApi.Workbook.LateBindingApiWrapperType);
+            NetOffice.ExcelApi.Window newWn = Factory.CreateKnownObjectFromComProxy<NetOffice.ExcelApi.Window>(EventClass, wb, NetOffice.ExcelApi.Window.LateBindingApiWrapperType);
             object[] paramsArray = new object[2];
             paramsArray[0] = newWb;
             paramsArray[1] = newWn;
-            _eventBinding.RaiseCustomEvent("WindowDeactivate", ref paramsArray);
+            EventBinding.RaiseCustomEvent("WindowDeactivate", ref paramsArray);
         }
 
         public void SheetFollowHyperlink([In, MarshalAs(UnmanagedType.IDispatch)] object sh, [In, MarshalAs(UnmanagedType.IDispatch)] object target)
         {
-            Delegate[] recipients = _eventBinding.GetEventRecipients("SheetFollowHyperlink");
-            if ((true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0))
+            if (!Validate("SheetFollowHyperlink"))
             {
                 Invoker.ReleaseParamsArray(sh, target);
                 return;
             }
 
-            object newSh = Factory.CreateObjectFromComProxy(_eventClass, sh) as object;
-            NetOffice.ExcelApi.Hyperlink newTarget = Factory.CreateObjectFromComProxy(_eventClass, target) as NetOffice.ExcelApi.Hyperlink;
+            object newSh = Factory.CreateEventArgumentObjectFromComProxy(EventClass, sh) as object;
+            NetOffice.ExcelApi.Hyperlink newTarget = Factory.CreateKnownObjectFromComProxy<NetOffice.ExcelApi.Hyperlink>(EventClass, target, NetOffice.ExcelApi.Hyperlink.LateBindingApiWrapperType);
             object[] paramsArray = new object[2];
             paramsArray[0] = newSh;
             paramsArray[1] = newTarget;
-            _eventBinding.RaiseCustomEvent("SheetFollowHyperlink", ref paramsArray);
+            EventBinding.RaiseCustomEvent("SheetFollowHyperlink", ref paramsArray);
         }
 
         public void SheetPivotTableUpdate([In, MarshalAs(UnmanagedType.IDispatch)] object sh, [In, MarshalAs(UnmanagedType.IDispatch)] object target)
         {
-            Delegate[] recipients = _eventBinding.GetEventRecipients("SheetPivotTableUpdate");
-            if ((true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0))
+            if (!Validate("SheetPivotTableUpdate"))
             {
                 Invoker.ReleaseParamsArray(sh, target);
                 return;
             }
 
-            object newSh = Factory.CreateObjectFromComProxy(_eventClass, sh) as object;
-            NetOffice.ExcelApi.PivotTable newTarget = Factory.CreateObjectFromComProxy(_eventClass, target) as NetOffice.ExcelApi.PivotTable;
+            object newSh = Factory.CreateEventArgumentObjectFromComProxy(EventClass, sh) as object;
+            NetOffice.ExcelApi.PivotTable newTarget = Factory.CreateKnownObjectFromComProxy<NetOffice.ExcelApi.PivotTable>(EventClass, target, NetOffice.ExcelApi.PivotTable.LateBindingApiWrapperType);
             object[] paramsArray = new object[2];
             paramsArray[0] = newSh;
             paramsArray[1] = newTarget;
-            _eventBinding.RaiseCustomEvent("SheetPivotTableUpdate", ref paramsArray);
+            EventBinding.RaiseCustomEvent("SheetPivotTableUpdate", ref paramsArray);
         }
 
         public void WorkbookPivotTableCloseConnection([In, MarshalAs(UnmanagedType.IDispatch)] object wb, [In, MarshalAs(UnmanagedType.IDispatch)] object target)
         {
-            Delegate[] recipients = _eventBinding.GetEventRecipients("WorkbookPivotTableCloseConnection");
-            if ((true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0))
+            if (!Validate("WorkbookPivotTableCloseConnection"))
             {
                 Invoker.ReleaseParamsArray(wb, target);
                 return;
             }
 
-            NetOffice.ExcelApi.Workbook newWb = Factory.CreateObjectFromComProxy(_eventClass, wb) as NetOffice.ExcelApi.Workbook;
-            NetOffice.ExcelApi.PivotTable newTarget = Factory.CreateObjectFromComProxy(_eventClass, target) as NetOffice.ExcelApi.PivotTable;
+            NetOffice.ExcelApi.Workbook newWb = Factory.CreateKnownObjectFromComProxy<NetOffice.ExcelApi.Workbook>(EventClass, wb, NetOffice.ExcelApi.Workbook.LateBindingApiWrapperType);
+            NetOffice.ExcelApi.PivotTable newTarget = Factory.CreateKnownObjectFromComProxy<NetOffice.ExcelApi.PivotTable>(EventClass, target, NetOffice.ExcelApi.PivotTable.LateBindingApiWrapperType);
             object[] paramsArray = new object[2];
             paramsArray[0] = newWb;
             paramsArray[1] = newTarget;
-            _eventBinding.RaiseCustomEvent("WorkbookPivotTableCloseConnection", ref paramsArray);
+            EventBinding.RaiseCustomEvent("WorkbookPivotTableCloseConnection", ref paramsArray);
         }
 
         public void WorkbookPivotTableOpenConnection([In, MarshalAs(UnmanagedType.IDispatch)] object wb, [In, MarshalAs(UnmanagedType.IDispatch)] object target)
         {
-            Delegate[] recipients = _eventBinding.GetEventRecipients("WorkbookPivotTableOpenConnection");
-            if ((true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0))
+            if (!Validate("WorkbookPivotTableOpenConnection"))
             {
                 Invoker.ReleaseParamsArray(wb, target);
                 return;
             }
 
-            NetOffice.ExcelApi.Workbook newWb = Factory.CreateObjectFromComProxy(_eventClass, wb) as NetOffice.ExcelApi.Workbook;
-            NetOffice.ExcelApi.PivotTable newTarget = Factory.CreateObjectFromComProxy(_eventClass, target) as NetOffice.ExcelApi.PivotTable;
+            NetOffice.ExcelApi.Workbook newWb = Factory.CreateKnownObjectFromComProxy<NetOffice.ExcelApi.Workbook>(EventClass, wb, NetOffice.ExcelApi.Workbook.LateBindingApiWrapperType);
+            NetOffice.ExcelApi.PivotTable newTarget = Factory.CreateKnownObjectFromComProxy<NetOffice.ExcelApi.PivotTable>(EventClass, target, NetOffice.ExcelApi.PivotTable.LateBindingApiWrapperType);
             object[] paramsArray = new object[2];
             paramsArray[0] = newWb;
             paramsArray[1] = newTarget;
-            _eventBinding.RaiseCustomEvent("WorkbookPivotTableOpenConnection", ref paramsArray);
+            EventBinding.RaiseCustomEvent("WorkbookPivotTableOpenConnection", ref paramsArray);
         }
 
         public void WorkbookSync([In, MarshalAs(UnmanagedType.IDispatch)] object wb, [In] object syncEventType)
         {
-            Delegate[] recipients = _eventBinding.GetEventRecipients("WorkbookSync");
-            if ((true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0))
+            if (!Validate("WorkbookSync"))
             {
                 Invoker.ReleaseParamsArray(wb, syncEventType);
                 return;
             }
 
-            NetOffice.ExcelApi.Workbook newWb = Factory.CreateObjectFromComProxy(_eventClass, wb) as NetOffice.ExcelApi.Workbook;
+            NetOffice.ExcelApi.Workbook newWb = Factory.CreateKnownObjectFromComProxy<NetOffice.ExcelApi.Workbook>(EventClass, wb, NetOffice.ExcelApi.Workbook.LateBindingApiWrapperType);
             NetOffice.OfficeApi.Enums.MsoSyncEventType newSyncEventType = (NetOffice.OfficeApi.Enums.MsoSyncEventType)syncEventType;
             object[] paramsArray = new object[2];
             paramsArray[0] = newWb;
             paramsArray[1] = newSyncEventType;
-            _eventBinding.RaiseCustomEvent("WorkbookSync", ref paramsArray);
+            EventBinding.RaiseCustomEvent("WorkbookSync", ref paramsArray);
         }
 
         public void WorkbookBeforeXmlImport([In, MarshalAs(UnmanagedType.IDispatch)] object wb, [In, MarshalAs(UnmanagedType.IDispatch)] object map, [In] object url, [In] object isRefresh, [In] [Out] ref object cancel)
         {
-            Delegate[] recipients = _eventBinding.GetEventRecipients("WorkbookBeforeXmlImport");
-            if ((true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0))
+            if (!Validate("WorkbookBeforeXmlImport"))
             {
                 Invoker.ReleaseParamsArray(wb, map, url, isRefresh, cancel);
                 return;
             }
 
-            NetOffice.ExcelApi.Workbook newWb = Factory.CreateObjectFromComProxy(_eventClass, wb) as NetOffice.ExcelApi.Workbook;
-            NetOffice.ExcelApi.XmlMap newMap = Factory.CreateObjectFromComProxy(_eventClass, map) as NetOffice.ExcelApi.XmlMap;
+            NetOffice.ExcelApi.Workbook newWb = Factory.CreateKnownObjectFromComProxy<NetOffice.ExcelApi.Workbook>(EventClass, wb, NetOffice.ExcelApi.Workbook.LateBindingApiWrapperType);
+            NetOffice.ExcelApi.XmlMap newMap = Factory.CreateKnownObjectFromComProxy<NetOffice.ExcelApi.XmlMap>(EventClass, map, NetOffice.ExcelApi.XmlMap.LateBindingApiWrapperType);
             string newUrl = Convert.ToString(url);
-            bool newIsRefresh = Convert.ToBoolean(isRefresh);
+            bool newIsRefresh = ToBoolean(isRefresh);
             object[] paramsArray = new object[5];
             paramsArray[0] = newWb;
             paramsArray[1] = newMap;
             paramsArray[2] = newUrl;
             paramsArray[3] = newIsRefresh;
             paramsArray.SetValue(cancel, 4);
-            _eventBinding.RaiseCustomEvent("WorkbookBeforeXmlImport", ref paramsArray);
+            EventBinding.RaiseCustomEvent("WorkbookBeforeXmlImport", ref paramsArray);
 
-            cancel = (bool)paramsArray[4];
+            cancel = ToBoolean(paramsArray[4]);
         }
 
         public void WorkbookAfterXmlImport([In, MarshalAs(UnmanagedType.IDispatch)] object wb, [In, MarshalAs(UnmanagedType.IDispatch)] object map, [In] object isRefresh, [In] object result)
         {
-            Delegate[] recipients = _eventBinding.GetEventRecipients("WorkbookAfterXmlImport");
-            if ((true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0))
+            if (!Validate("WorkbookAfterXmlImport"))
             {
                 Invoker.ReleaseParamsArray(wb, map, isRefresh, result);
                 return;
             }
 
-            NetOffice.ExcelApi.Workbook newWb = Factory.CreateObjectFromComProxy(_eventClass, wb) as NetOffice.ExcelApi.Workbook;
-            NetOffice.ExcelApi.XmlMap newMap = Factory.CreateObjectFromComProxy(_eventClass, map) as NetOffice.ExcelApi.XmlMap;
-            bool newIsRefresh = Convert.ToBoolean(isRefresh);
+            NetOffice.ExcelApi.Workbook newWb = Factory.CreateKnownObjectFromComProxy<NetOffice.ExcelApi.Workbook>(EventClass, wb, NetOffice.ExcelApi.Workbook.LateBindingApiWrapperType);
+            NetOffice.ExcelApi.XmlMap newMap = Factory.CreateKnownObjectFromComProxy<NetOffice.ExcelApi.XmlMap>(EventClass, map, NetOffice.ExcelApi.XmlMap.LateBindingApiWrapperType);
+            bool newIsRefresh = ToBoolean(isRefresh);
             NetOffice.ExcelApi.Enums.XlXmlImportResult newResult = (NetOffice.ExcelApi.Enums.XlXmlImportResult)result;
             object[] paramsArray = new object[4];
             paramsArray[0] = newWb;
             paramsArray[1] = newMap;
             paramsArray[2] = newIsRefresh;
             paramsArray[3] = newResult;
-            _eventBinding.RaiseCustomEvent("WorkbookAfterXmlImport", ref paramsArray);
+            EventBinding.RaiseCustomEvent("WorkbookAfterXmlImport", ref paramsArray);
         }
 
         public void WorkbookBeforeXmlExport([In, MarshalAs(UnmanagedType.IDispatch)] object wb, [In, MarshalAs(UnmanagedType.IDispatch)] object map, [In] object url, [In] [Out] ref object cancel)
         {
-            Delegate[] recipients = _eventBinding.GetEventRecipients("WorkbookBeforeXmlExport");
-            if ((true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0))
+            if (!Validate("WorkbookBeforeXmlExport"))
             {
                 Invoker.ReleaseParamsArray(wb, map, url, cancel);
                 return;
             }
 
-            NetOffice.ExcelApi.Workbook newWb = Factory.CreateObjectFromComProxy(_eventClass, wb) as NetOffice.ExcelApi.Workbook;
-            NetOffice.ExcelApi.XmlMap newMap = Factory.CreateObjectFromComProxy(_eventClass, map) as NetOffice.ExcelApi.XmlMap;
+            NetOffice.ExcelApi.Workbook newWb = Factory.CreateKnownObjectFromComProxy<NetOffice.ExcelApi.Workbook>(EventClass, wb, NetOffice.ExcelApi.Workbook.LateBindingApiWrapperType);
+            NetOffice.ExcelApi.XmlMap newMap = Factory.CreateKnownObjectFromComProxy<NetOffice.ExcelApi.XmlMap>(EventClass, map, NetOffice.ExcelApi.XmlMap.LateBindingApiWrapperType);
             string newUrl = Convert.ToString(url);
             object[] paramsArray = new object[4];
             paramsArray[0] = newWb;
             paramsArray[1] = newMap;
             paramsArray[2] = newUrl;
             paramsArray.SetValue(cancel, 3);
-            _eventBinding.RaiseCustomEvent("WorkbookBeforeXmlExport", ref paramsArray);
+            EventBinding.RaiseCustomEvent("WorkbookBeforeXmlExport", ref paramsArray);
 
-            cancel = (bool)paramsArray[3];
+            cancel = ToBoolean(paramsArray[3]);
         }
 
         public void WorkbookAfterXmlExport([In, MarshalAs(UnmanagedType.IDispatch)] object wb, [In, MarshalAs(UnmanagedType.IDispatch)] object map, [In] object url, [In] object result)
         {
-            Delegate[] recipients = _eventBinding.GetEventRecipients("WorkbookAfterXmlExport");
-            if ((true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0))
+            if (!Validate("WorkbookAfterXmlExport"))
             {
                 Invoker.ReleaseParamsArray(wb, map, url, result);
                 return;
             }
 
-            NetOffice.ExcelApi.Workbook newWb = Factory.CreateObjectFromComProxy(_eventClass, wb) as NetOffice.ExcelApi.Workbook;
-            NetOffice.ExcelApi.XmlMap newMap = Factory.CreateObjectFromComProxy(_eventClass, map) as NetOffice.ExcelApi.XmlMap;
+            NetOffice.ExcelApi.Workbook newWb = Factory.CreateKnownObjectFromComProxy<NetOffice.ExcelApi.Workbook>(EventClass, wb, NetOffice.ExcelApi.Workbook.LateBindingApiWrapperType);
+            NetOffice.ExcelApi.XmlMap newMap = Factory.CreateKnownObjectFromComProxy<NetOffice.ExcelApi.XmlMap>(EventClass, map, NetOffice.ExcelApi.XmlMap.LateBindingApiWrapperType);
             string newUrl = Convert.ToString(url);
             NetOffice.ExcelApi.Enums.XlXmlExportResult newResult = (NetOffice.ExcelApi.Enums.XlXmlExportResult)result;
             object[] paramsArray = new object[4];
@@ -757,73 +704,69 @@ namespace NetOffice.ExcelApi.Events
             paramsArray[1] = newMap;
             paramsArray[2] = newUrl;
             paramsArray[3] = newResult;
-            _eventBinding.RaiseCustomEvent("WorkbookAfterXmlExport", ref paramsArray);
+            EventBinding.RaiseCustomEvent("WorkbookAfterXmlExport", ref paramsArray);
         }
 
         public void WorkbookRowsetComplete([In, MarshalAs(UnmanagedType.IDispatch)] object wb, [In] object description, [In] object sheet, [In] object success)
         {
-            Delegate[] recipients = _eventBinding.GetEventRecipients("WorkbookRowsetComplete");
-            if ((true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0))
+            if (!Validate("WorkbookRowsetComplete"))
             {
                 Invoker.ReleaseParamsArray(wb, description, sheet, success);
                 return;
             }
 
-            NetOffice.ExcelApi.Workbook newWb = Factory.CreateObjectFromComProxy(_eventClass, wb) as NetOffice.ExcelApi.Workbook;
+            NetOffice.ExcelApi.Workbook newWb = Factory.CreateKnownObjectFromComProxy<NetOffice.ExcelApi.Workbook>(EventClass, wb, NetOffice.ExcelApi.Workbook.LateBindingApiWrapperType);
             string newDescription = Convert.ToString(description);
             string newSheet = Convert.ToString(sheet);
-            bool newSuccess = Convert.ToBoolean(success);
+            bool newSuccess = ToBoolean(success);
             object[] paramsArray = new object[4];
             paramsArray[0] = newWb;
             paramsArray[1] = newDescription;
             paramsArray[2] = newSheet;
             paramsArray[3] = newSuccess;
-            _eventBinding.RaiseCustomEvent("WorkbookRowsetComplete", ref paramsArray);
+            EventBinding.RaiseCustomEvent("WorkbookRowsetComplete", ref paramsArray);
         }
 
+        
         public void AfterCalculate()
         {
-            Delegate[] recipients = _eventBinding.GetEventRecipients("AfterCalculate");
-            if ((true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0))
+            if (!Validate("AfterCalculate"))
             {
-                Invoker.ReleaseParamsArray();
                 return;
             }
 
             object[] paramsArray = new object[0];
-            _eventBinding.RaiseCustomEvent("AfterCalculate", ref paramsArray);
+            EventBinding.RaiseCustomEvent("AfterCalculate", ref paramsArray);
         }
 
         public void SheetPivotTableAfterValueChange([In, MarshalAs(UnmanagedType.IDispatch)] object sh, [In, MarshalAs(UnmanagedType.IDispatch)] object targetPivotTable, [In, MarshalAs(UnmanagedType.IDispatch)] object targetRange)
         {
-            Delegate[] recipients = _eventBinding.GetEventRecipients("SheetPivotTableAfterValueChange");
-            if ((true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0))
+            if (!Validate("SheetPivotTableAfterValueChange"))
             {
                 Invoker.ReleaseParamsArray(sh, targetPivotTable, targetRange);
                 return;
             }
 
-            object newSh = Factory.CreateObjectFromComProxy(_eventClass, sh) as object;
-            NetOffice.ExcelApi.PivotTable newTargetPivotTable = Factory.CreateObjectFromComProxy(_eventClass, targetPivotTable) as NetOffice.ExcelApi.PivotTable;
-            NetOffice.ExcelApi.Range newTargetRange = Factory.CreateObjectFromComProxy(_eventClass, targetRange) as NetOffice.ExcelApi.Range;
+            object newSh = Factory.CreateEventArgumentObjectFromComProxy(EventClass, sh) as object;
+            NetOffice.ExcelApi.PivotTable newTargetPivotTable = Factory.CreateKnownObjectFromComProxy<NetOffice.ExcelApi.PivotTable>(EventClass, targetPivotTable, NetOffice.ExcelApi.PivotTable.LateBindingApiWrapperType);
+            NetOffice.ExcelApi.Range newTargetRange = Factory.CreateKnownObjectFromComProxy<NetOffice.ExcelApi.Range>(EventClass, targetRange, NetOffice.ExcelApi.Range.LateBindingApiWrapperType);
             object[] paramsArray = new object[3];
             paramsArray[0] = newSh;
             paramsArray[1] = newTargetPivotTable;
             paramsArray[2] = newTargetRange;
-            _eventBinding.RaiseCustomEvent("SheetPivotTableAfterValueChange", ref paramsArray);
+            EventBinding.RaiseCustomEvent("SheetPivotTableAfterValueChange", ref paramsArray);
         }
 
         public void SheetPivotTableBeforeAllocateChanges([In, MarshalAs(UnmanagedType.IDispatch)] object sh, [In, MarshalAs(UnmanagedType.IDispatch)] object targetPivotTable, [In] object valueChangeStart, [In] object valueChangeEnd, [In] [Out] ref object cancel)
         {
-            Delegate[] recipients = _eventBinding.GetEventRecipients("SheetPivotTableBeforeAllocateChanges");
-            if ((true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0))
+            if (!Validate("SheetPivotTableBeforeAllocateChanges"))
             {
                 Invoker.ReleaseParamsArray(sh, targetPivotTable, valueChangeStart, valueChangeEnd, cancel);
                 return;
             }
 
-            object newSh = Factory.CreateObjectFromComProxy(_eventClass, sh) as object;
-            NetOffice.ExcelApi.PivotTable newTargetPivotTable = Factory.CreateObjectFromComProxy(_eventClass, targetPivotTable) as NetOffice.ExcelApi.PivotTable;
+            object newSh = Factory.CreateEventArgumentObjectFromComProxy(EventClass, sh) as object;
+            NetOffice.ExcelApi.PivotTable newTargetPivotTable = Factory.CreateKnownObjectFromComProxy<NetOffice.ExcelApi.PivotTable>(EventClass, targetPivotTable, NetOffice.ExcelApi.PivotTable.LateBindingApiWrapperType);
             Int32 newValueChangeStart = Convert.ToInt32(valueChangeStart);
             Int32 newValueChangeEnd = Convert.ToInt32(valueChangeEnd);
             object[] paramsArray = new object[5];
@@ -832,22 +775,21 @@ namespace NetOffice.ExcelApi.Events
             paramsArray[2] = newValueChangeStart;
             paramsArray[3] = newValueChangeEnd;
             paramsArray.SetValue(cancel, 4);
-            _eventBinding.RaiseCustomEvent("SheetPivotTableBeforeAllocateChanges", ref paramsArray);
+            EventBinding.RaiseCustomEvent("SheetPivotTableBeforeAllocateChanges", ref paramsArray);
 
-            cancel = (bool)paramsArray[4];
+            cancel = ToBoolean(paramsArray[4]);
         }
 
         public void SheetPivotTableBeforeCommitChanges([In, MarshalAs(UnmanagedType.IDispatch)] object sh, [In, MarshalAs(UnmanagedType.IDispatch)] object targetPivotTable, [In] object valueChangeStart, [In] object valueChangeEnd, [In] [Out] ref object cancel)
         {
-            Delegate[] recipients = _eventBinding.GetEventRecipients("SheetPivotTableBeforeCommitChanges");
-            if ((true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0))
+            if (!Validate("SheetPivotTableBeforeCommitChanges"))
             {
                 Invoker.ReleaseParamsArray(sh, targetPivotTable, valueChangeStart, valueChangeEnd, cancel);
                 return;
             }
 
-            object newSh = Factory.CreateObjectFromComProxy(_eventClass, sh) as object;
-            NetOffice.ExcelApi.PivotTable newTargetPivotTable = Factory.CreateObjectFromComProxy(_eventClass, targetPivotTable) as NetOffice.ExcelApi.PivotTable;
+            object newSh = Factory.CreateEventArgumentObjectFromComProxy(EventClass, sh) as object;
+            NetOffice.ExcelApi.PivotTable newTargetPivotTable = Factory.CreateKnownObjectFromComProxy<NetOffice.ExcelApi.PivotTable>(EventClass, targetPivotTable, NetOffice.ExcelApi.PivotTable.LateBindingApiWrapperType);
             Int32 newValueChangeStart = Convert.ToInt32(valueChangeStart);
             Int32 newValueChangeEnd = Convert.ToInt32(valueChangeEnd);
             object[] paramsArray = new object[5];
@@ -856,22 +798,21 @@ namespace NetOffice.ExcelApi.Events
             paramsArray[2] = newValueChangeStart;
             paramsArray[3] = newValueChangeEnd;
             paramsArray.SetValue(cancel, 4);
-            _eventBinding.RaiseCustomEvent("SheetPivotTableBeforeCommitChanges", ref paramsArray);
+            EventBinding.RaiseCustomEvent("SheetPivotTableBeforeCommitChanges", ref paramsArray);
 
-            cancel = (bool)paramsArray[4];
+            cancel = ToBoolean(paramsArray[4]);
         }
 
         public void SheetPivotTableBeforeDiscardChanges([In, MarshalAs(UnmanagedType.IDispatch)] object sh, [In, MarshalAs(UnmanagedType.IDispatch)] object targetPivotTable, [In] object valueChangeStart, [In] object valueChangeEnd)
         {
-            Delegate[] recipients = _eventBinding.GetEventRecipients("SheetPivotTableBeforeDiscardChanges");
-            if ((true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0))
+            if (!Validate("SheetPivotTableBeforeDiscardChanges"))
             {
                 Invoker.ReleaseParamsArray(sh, targetPivotTable, valueChangeStart, valueChangeEnd);
                 return;
             }
 
-            object newSh = Factory.CreateObjectFromComProxy(_eventClass, sh) as object;
-            NetOffice.ExcelApi.PivotTable newTargetPivotTable = Factory.CreateObjectFromComProxy(_eventClass, targetPivotTable) as NetOffice.ExcelApi.PivotTable;
+            object newSh = Factory.CreateEventArgumentObjectFromComProxy(EventClass, sh) as object;
+            NetOffice.ExcelApi.PivotTable newTargetPivotTable = Factory.CreateKnownObjectFromComProxy<NetOffice.ExcelApi.PivotTable>(EventClass, targetPivotTable, NetOffice.ExcelApi.PivotTable.LateBindingApiWrapperType);
             Int32 newValueChangeStart = Convert.ToInt32(valueChangeStart);
             Int32 newValueChangeEnd = Convert.ToInt32(valueChangeEnd);
             object[] paramsArray = new object[4];
@@ -879,203 +820,191 @@ namespace NetOffice.ExcelApi.Events
             paramsArray[1] = newTargetPivotTable;
             paramsArray[2] = newValueChangeStart;
             paramsArray[3] = newValueChangeEnd;
-            _eventBinding.RaiseCustomEvent("SheetPivotTableBeforeDiscardChanges", ref paramsArray);
+            EventBinding.RaiseCustomEvent("SheetPivotTableBeforeDiscardChanges", ref paramsArray);
         }
 
         public void ProtectedViewWindowOpen([In, MarshalAs(UnmanagedType.IDispatch)] object pvw)
         {
-            Delegate[] recipients = _eventBinding.GetEventRecipients("ProtectedViewWindowOpen");
-            if ((true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0))
+            if (!Validate("ProtectedViewWindowOpen"))
             {
                 Invoker.ReleaseParamsArray(pvw);
                 return;
             }
 
-            NetOffice.ExcelApi.ProtectedViewWindow newPvw = Factory.CreateObjectFromComProxy(_eventClass, pvw) as NetOffice.ExcelApi.ProtectedViewWindow;
+            NetOffice.ExcelApi.ProtectedViewWindow newPvw = Factory.CreateKnownObjectFromComProxy<NetOffice.ExcelApi.ProtectedViewWindow>(EventClass, pvw, NetOffice.ExcelApi.ProtectedViewWindow.LateBindingApiWrapperType);
             object[] paramsArray = new object[1];
             paramsArray[0] = newPvw;
-            _eventBinding.RaiseCustomEvent("ProtectedViewWindowOpen", ref paramsArray);
+            EventBinding.RaiseCustomEvent("ProtectedViewWindowOpen", ref paramsArray);
         }
 
         public void ProtectedViewWindowBeforeEdit([In, MarshalAs(UnmanagedType.IDispatch)] object pvw, [In] [Out] ref object cancel)
         {
-            Delegate[] recipients = _eventBinding.GetEventRecipients("ProtectedViewWindowBeforeEdit");
-            if ((true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0))
+            if (!Validate("ProtectedViewWindowBeforeEdit"))
             {
                 Invoker.ReleaseParamsArray(pvw, cancel);
                 return;
             }
 
-            NetOffice.ExcelApi.ProtectedViewWindow newPvw = Factory.CreateObjectFromComProxy(_eventClass, pvw) as NetOffice.ExcelApi.ProtectedViewWindow;
+            NetOffice.ExcelApi.ProtectedViewWindow newPvw = Factory.CreateKnownObjectFromComProxy<NetOffice.ExcelApi.ProtectedViewWindow>(EventClass, pvw, NetOffice.ExcelApi.ProtectedViewWindow.LateBindingApiWrapperType);
             object[] paramsArray = new object[2];
             paramsArray[0] = newPvw;
             paramsArray.SetValue(cancel, 1);
-            _eventBinding.RaiseCustomEvent("ProtectedViewWindowBeforeEdit", ref paramsArray);
+            EventBinding.RaiseCustomEvent("ProtectedViewWindowBeforeEdit", ref paramsArray);
 
-            cancel = (bool)paramsArray[1];
+            cancel = ToBoolean(paramsArray[1]);
         }
 
         public void ProtectedViewWindowBeforeClose([In, MarshalAs(UnmanagedType.IDispatch)] object pvw, [In] object reason, [In] [Out] ref object cancel)
         {
-            Delegate[] recipients = _eventBinding.GetEventRecipients("ProtectedViewWindowBeforeClose");
-            if ((true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0))
+            if (!Validate("ProtectedViewWindowBeforeClose"))
             {
                 Invoker.ReleaseParamsArray(pvw, reason, cancel);
                 return;
             }
 
-            NetOffice.ExcelApi.ProtectedViewWindow newPvw = Factory.CreateObjectFromComProxy(_eventClass, pvw) as NetOffice.ExcelApi.ProtectedViewWindow;
+            NetOffice.ExcelApi.ProtectedViewWindow newPvw = Factory.CreateKnownObjectFromComProxy<NetOffice.ExcelApi.ProtectedViewWindow>(EventClass, pvw, NetOffice.ExcelApi.ProtectedViewWindow.LateBindingApiWrapperType);
             NetOffice.ExcelApi.Enums.XlProtectedViewCloseReason newReason = (NetOffice.ExcelApi.Enums.XlProtectedViewCloseReason)reason;
             object[] paramsArray = new object[3];
             paramsArray[0] = newPvw;
             paramsArray[1] = newReason;
             paramsArray.SetValue(cancel, 2);
-            _eventBinding.RaiseCustomEvent("ProtectedViewWindowBeforeClose", ref paramsArray);
+            EventBinding.RaiseCustomEvent("ProtectedViewWindowBeforeClose", ref paramsArray);
 
-            cancel = (bool)paramsArray[2];
+            cancel = ToBoolean(paramsArray[2]);
         }
 
         public void ProtectedViewWindowResize([In, MarshalAs(UnmanagedType.IDispatch)] object pvw)
         {
-            Delegate[] recipients = _eventBinding.GetEventRecipients("ProtectedViewWindowResize");
-            if ((true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0))
+            if (!Validate("ProtectedViewWindowResize"))
             {
                 Invoker.ReleaseParamsArray(pvw);
                 return;
             }
 
-            NetOffice.ExcelApi.ProtectedViewWindow newPvw = Factory.CreateObjectFromComProxy(_eventClass, pvw) as NetOffice.ExcelApi.ProtectedViewWindow;
+            NetOffice.ExcelApi.ProtectedViewWindow newPvw = Factory.CreateKnownObjectFromComProxy<NetOffice.ExcelApi.ProtectedViewWindow>(EventClass, pvw, NetOffice.ExcelApi.ProtectedViewWindow.LateBindingApiWrapperType);
             object[] paramsArray = new object[1];
             paramsArray[0] = newPvw;
-            _eventBinding.RaiseCustomEvent("ProtectedViewWindowResize", ref paramsArray);
+            EventBinding.RaiseCustomEvent("ProtectedViewWindowResize", ref paramsArray);
         }
 
         public void ProtectedViewWindowActivate([In, MarshalAs(UnmanagedType.IDispatch)] object pvw)
         {
-            Delegate[] recipients = _eventBinding.GetEventRecipients("ProtectedViewWindowActivate");
-            if ((true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0))
+            if (!Validate("ProtectedViewWindowActivate"))
             {
                 Invoker.ReleaseParamsArray(pvw);
                 return;
             }
 
-            NetOffice.ExcelApi.ProtectedViewWindow newPvw = Factory.CreateObjectFromComProxy(_eventClass, pvw) as NetOffice.ExcelApi.ProtectedViewWindow;
+            NetOffice.ExcelApi.ProtectedViewWindow newPvw = Factory.CreateKnownObjectFromComProxy<NetOffice.ExcelApi.ProtectedViewWindow>(EventClass, pvw, NetOffice.ExcelApi.ProtectedViewWindow.LateBindingApiWrapperType);
             object[] paramsArray = new object[1];
             paramsArray[0] = newPvw;
-            _eventBinding.RaiseCustomEvent("ProtectedViewWindowActivate", ref paramsArray);
+            EventBinding.RaiseCustomEvent("ProtectedViewWindowActivate", ref paramsArray);
         }
 
         public void ProtectedViewWindowDeactivate([In, MarshalAs(UnmanagedType.IDispatch)] object pvw)
         {
-            Delegate[] recipients = _eventBinding.GetEventRecipients("ProtectedViewWindowDeactivate");
-            if ((true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0))
+            if (!Validate("ProtectedViewWindowDeactivate"))
             {
                 Invoker.ReleaseParamsArray(pvw);
                 return;
             }
 
-            NetOffice.ExcelApi.ProtectedViewWindow newPvw = Factory.CreateObjectFromComProxy(_eventClass, pvw) as NetOffice.ExcelApi.ProtectedViewWindow;
+            NetOffice.ExcelApi.ProtectedViewWindow newPvw = Factory.CreateKnownObjectFromComProxy<NetOffice.ExcelApi.ProtectedViewWindow>(EventClass, pvw, NetOffice.ExcelApi.ProtectedViewWindow.LateBindingApiWrapperType);
             object[] paramsArray = new object[1];
             paramsArray[0] = newPvw;
-            _eventBinding.RaiseCustomEvent("ProtectedViewWindowDeactivate", ref paramsArray);
+            EventBinding.RaiseCustomEvent("ProtectedViewWindowDeactivate", ref paramsArray);
         }
 
         public void WorkbookAfterSave([In, MarshalAs(UnmanagedType.IDispatch)] object wb, [In] object success)
         {
-            Delegate[] recipients = _eventBinding.GetEventRecipients("WorkbookAfterSave");
-            if ((true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0))
+            if (!Validate("WorkbookAfterSave"))
             {
                 Invoker.ReleaseParamsArray(wb, success);
                 return;
             }
 
-            NetOffice.ExcelApi.Workbook newWb = Factory.CreateObjectFromComProxy(_eventClass, wb) as NetOffice.ExcelApi.Workbook;
+            NetOffice.ExcelApi.Workbook newWb = Factory.CreateKnownObjectFromComProxy<NetOffice.ExcelApi.Workbook>(EventClass, wb, NetOffice.ExcelApi.Workbook.LateBindingApiWrapperType);
             bool newSuccess = Convert.ToBoolean(success);
             object[] paramsArray = new object[2];
             paramsArray[0] = newWb;
             paramsArray[1] = newSuccess;
-            _eventBinding.RaiseCustomEvent("WorkbookAfterSave", ref paramsArray);
+            EventBinding.RaiseCustomEvent("WorkbookAfterSave", ref paramsArray);
         }
 
         public void WorkbookNewChart([In, MarshalAs(UnmanagedType.IDispatch)] object wb, [In, MarshalAs(UnmanagedType.IDispatch)] object ch)
         {
-            Delegate[] recipients = _eventBinding.GetEventRecipients("WorkbookNewChart");
-            if ((true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0))
+            if (!Validate("WorkbookNewChart"))
             {
                 Invoker.ReleaseParamsArray(wb, ch);
                 return;
             }
 
-            NetOffice.ExcelApi.Workbook newWb = Factory.CreateObjectFromComProxy(_eventClass, wb) as NetOffice.ExcelApi.Workbook;
-            NetOffice.ExcelApi.Chart newCh = Factory.CreateObjectFromComProxy(_eventClass, ch) as NetOffice.ExcelApi.Chart;
+            NetOffice.ExcelApi.Workbook newWb = Factory.CreateKnownObjectFromComProxy<NetOffice.ExcelApi.Workbook>(EventClass, wb, NetOffice.ExcelApi.Workbook.LateBindingApiWrapperType);
+            NetOffice.ExcelApi.Chart newCh = Factory.CreateKnownObjectFromComProxy<NetOffice.ExcelApi.Chart>(EventClass, ch, NetOffice.ExcelApi.Chart.LateBindingApiWrapperType);
             object[] paramsArray = new object[2];
             paramsArray[0] = newWb;
             paramsArray[1] = newCh;
-            _eventBinding.RaiseCustomEvent("WorkbookNewChart", ref paramsArray);
+            EventBinding.RaiseCustomEvent("WorkbookNewChart", ref paramsArray);
         }
 
         public void SheetLensGalleryRenderComplete([In, MarshalAs(UnmanagedType.IDispatch)] object sh)
         {
-            Delegate[] recipients = _eventBinding.GetEventRecipients("SheetLensGalleryRenderComplete");
-            if ((true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0))
+            if (!Validate("SheetLensGalleryRenderComplete"))
             {
                 Invoker.ReleaseParamsArray(sh);
                 return;
             }
 
-            object newSh = Factory.CreateObjectFromComProxy(_eventClass, sh) as object;
+            object newSh = Factory.CreateEventArgumentObjectFromComProxy(EventClass, sh) as object;
             object[] paramsArray = new object[1];
             paramsArray[0] = newSh;
-            _eventBinding.RaiseCustomEvent("SheetLensGalleryRenderComplete", ref paramsArray);
+            EventBinding.RaiseCustomEvent("SheetLensGalleryRenderComplete", ref paramsArray);
         }
 
         public void SheetTableUpdate([In, MarshalAs(UnmanagedType.IDispatch)] object sh, [In, MarshalAs(UnmanagedType.IDispatch)] object target)
         {
-            Delegate[] recipients = _eventBinding.GetEventRecipients("SheetTableUpdate");
-            if ((true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0))
+            if (!Validate("SheetTableUpdate"))
             {
                 Invoker.ReleaseParamsArray(sh, target);
                 return;
             }
 
-            object newSh = Factory.CreateObjectFromComProxy(_eventClass, sh) as object;
-            NetOffice.ExcelApi.TableObject newTarget = Factory.CreateObjectFromComProxy(_eventClass, target) as NetOffice.ExcelApi.TableObject;
+            object newSh = Factory.CreateEventArgumentObjectFromComProxy(EventClass, sh) as object;
+            NetOffice.ExcelApi.TableObject newTarget = Factory.CreateKnownObjectFromComProxy<NetOffice.ExcelApi.TableObject>(EventClass, target, NetOffice.ExcelApi.TableObject.LateBindingApiWrapperType);
             object[] paramsArray = new object[2];
             paramsArray[0] = newSh;
             paramsArray[1] = newTarget;
-            _eventBinding.RaiseCustomEvent("SheetTableUpdate", ref paramsArray);
+            EventBinding.RaiseCustomEvent("SheetTableUpdate", ref paramsArray);
         }
 
         public void WorkbookModelChange([In, MarshalAs(UnmanagedType.IDispatch)] object wb, [In, MarshalAs(UnmanagedType.IDispatch)] object changes)
         {
-            Delegate[] recipients = _eventBinding.GetEventRecipients("WorkbookModelChange");
-            if ((true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0))
+            if (!Validate("WorkbookModelChange"))
             {
                 Invoker.ReleaseParamsArray(wb, changes);
                 return;
             }
 
-            NetOffice.ExcelApi.Workbook newWb = Factory.CreateObjectFromComProxy(_eventClass, wb) as NetOffice.ExcelApi.Workbook;
-            NetOffice.ExcelApi.ModelChanges newChanges = Factory.CreateObjectFromComProxy(_eventClass, changes) as NetOffice.ExcelApi.ModelChanges;
+            NetOffice.ExcelApi.Workbook newWb = Factory.CreateKnownObjectFromComProxy<NetOffice.ExcelApi.Workbook>(EventClass, wb, NetOffice.ExcelApi.Workbook.LateBindingApiWrapperType);
+            NetOffice.ExcelApi.ModelChanges newChanges = Factory.CreateKnownObjectFromComProxy<NetOffice.ExcelApi.ModelChanges>(EventClass, changes, NetOffice.ExcelApi.ModelChanges.LateBindingApiWrapperType);
             object[] paramsArray = new object[2];
             paramsArray[0] = newWb;
             paramsArray[1] = newChanges;
-            _eventBinding.RaiseCustomEvent("WorkbookModelChange", ref paramsArray);
+            EventBinding.RaiseCustomEvent("WorkbookModelChange", ref paramsArray);
         }
 
         public void SheetBeforeDelete([In, MarshalAs(UnmanagedType.IDispatch)] object sh)
         {
-            Delegate[] recipients = _eventBinding.GetEventRecipients("SheetBeforeDelete");
-            if ((true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0))
+            if (!Validate("SheetBeforeDelete"))
             {
                 Invoker.ReleaseParamsArray(sh);
                 return;
             }
 
-            object newSh = Factory.CreateObjectFromComProxy(_eventClass, sh) as object;
+            object newSh = Factory.CreateEventArgumentObjectFromComProxy(EventClass, sh) as object;
             object[] paramsArray = new object[1];
             paramsArray[0] = newSh;
-            _eventBinding.RaiseCustomEvent("SheetBeforeDelete", ref paramsArray);
+            EventBinding.RaiseCustomEvent("SheetBeforeDelete", ref paramsArray);
         }
 
         #endregion

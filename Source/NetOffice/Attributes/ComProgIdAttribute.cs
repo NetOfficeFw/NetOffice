@@ -8,6 +8,7 @@ namespace NetOffice.Attributes
     /// <summary>
     /// ProgId to create an instance from
     /// </summary>
+    [AttributeUsage(AttributeTargets.Class | AttributeTargets.Interface)]
     public class ComProgIdAttribute : System.Attribute
     {
         /// <summary>

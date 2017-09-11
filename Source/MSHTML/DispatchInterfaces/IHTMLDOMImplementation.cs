@@ -110,29 +110,7 @@ namespace NetOffice.MSHTMLApi
 		#endregion
 
 		#region Methods
-
-		/// <summary>
-		/// SupportByVersion MSHTML 4
-		/// </summary>
-		/// <param name="bstrfeature">string bstrfeature</param>
-		/// <param name="version">optional object version</param>
-		[SupportByVersion("MSHTML", 4)]
-		public bool hasFeature(string bstrfeature, object version)
-		{
-			return Factory.ExecuteBoolMethodGet(this, "hasFeature", bstrfeature, version);
-		}
-
-		/// <summary>
-		/// SupportByVersion MSHTML 4
-		/// </summary>
-		/// <param name="bstrfeature">string bstrfeature</param>
-		[CustomMethod]
-		[SupportByVersion("MSHTML", 4)]
-		public bool hasFeature(string bstrfeature)
-		{
-			return Factory.ExecuteBoolMethodGet(this, "hasFeature", bstrfeature);
-		}
-
+        
 		#endregion
 
 		#pragma warning restore

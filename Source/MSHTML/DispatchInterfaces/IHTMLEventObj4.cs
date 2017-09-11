@@ -10,7 +10,7 @@ namespace NetOffice.MSHTMLApi
 	/// SupportByVersion MSHTML, 4
 	/// </summary>
 	[SupportByVersion("MSHTML", 4)]
-	[EntityType(EntityType.IsDispatchInterface)]
+	[EntityType(EntityType.IsDispatchInterface), BaseType]
  	public class IHTMLEventObj4 : IHTMLEventObj3
 	{
 		#pragma warning disable
@@ -106,19 +106,6 @@ namespace NetOffice.MSHTMLApi
 		#endregion
 		
 		#region Properties
-
-		/// <summary>
-		/// SupportByVersion MSHTML 4
-		/// Get
-		/// </summary>
-		[SupportByVersion("MSHTML", 4)]
-		public Int32 wheelDelta
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "wheelDelta");
-			}
-		}
 
 		#endregion
 

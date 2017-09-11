@@ -10,7 +10,7 @@ namespace NetOffice.ADODBApi
 	/// SupportByVersion ADODB, 2.5
 	/// </summary>
 	[SupportByVersion("ADODB", 2.5)]
-	[EntityType(EntityType.IsDispatchInterface)]
+	[EntityType(EntityType.IsDispatchInterface), BaseType]
  	public class Recordset20_Deprecated : Recordset15_Deprecated
 	{
 		#pragma warning disable

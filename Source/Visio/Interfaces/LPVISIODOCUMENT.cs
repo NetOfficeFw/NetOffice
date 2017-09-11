@@ -1956,17 +1956,16 @@ namespace NetOffice.VisioApi
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersion("Visio", 11,12,14,15,16)]
+		[SupportByVersion("Visio", 11,12,14,15,16), NativeResult]
 		public stdole.Font HeaderFooterFont
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "HeaderFooterFont", paramsArray);
-				stdole.Font newObject = Factory.CreateObjectFromComProxy(this,returnItem) as stdole.Font;
-				return newObject;
-			}
-			set
+                return returnItem as stdole.Font;
+            }
+            set
 			{
 				object[] paramsArray = Invoker.ValidateParamsArray(value);
 				Invoker.PropertySet(this, "HeaderFooterFont", paramsArray);
@@ -2012,16 +2011,15 @@ namespace NetOffice.VisioApi
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
-		[SupportByVersion("Visio", 11,12,14,15,16)]
+		[SupportByVersion("Visio", 11,12,14,15,16), NativeResult]
 		public stdole.Picture PreviewPicture
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "PreviewPicture", paramsArray);
-				stdole.Picture newObject = Factory.CreateObjectFromComProxy(this,returnItem) as stdole.Picture;
-				return newObject;
-			}
+                return returnItem as stdole.Picture;
+            }
 			set
 			{
 				object[] paramsArray = Invoker.ValidateParamsArray(value);
@@ -2146,7 +2144,7 @@ namespace NetOffice.VisioApi
 				object returnItem = Invoker.PropertyGet(this, "EmailRoutingData", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-                    ICOMObject[] newObject = Factory.CreateObjectArrayFromComProxy(this, (object[])returnItem);
+                    ICOMObject[] newObject = Factory.CreateObjectArrayFromComProxy(this, (object[])returnItem, false);
 					return newObject;
 				}
 				else

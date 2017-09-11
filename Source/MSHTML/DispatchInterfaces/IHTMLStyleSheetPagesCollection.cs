@@ -107,32 +107,9 @@ namespace NetOffice.MSHTMLApi
 		
 		#region Properties
 
-		/// <summary>
-		/// SupportByVersion MSHTML 4
-		/// Get
-		/// </summary>
-		[SupportByVersion("MSHTML", 4)]
-		public Int32 length
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "length");
-			}
-		}
-
 		#endregion
 
 		#region Methods
-
-		/// <summary>
-		/// SupportByVersion MSHTML 4
-		/// </summary>
-		/// <param name="index">Int32 index</param>
-		[SupportByVersion("MSHTML", 4)]
-		public NetOffice.MSHTMLApi.IHTMLStyleSheetPage item(Int32 index)
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.MSHTMLApi.IHTMLStyleSheetPage>(this, "item", NetOffice.MSHTMLApi.IHTMLStyleSheetPage.LateBindingApiWrapperType, index);
-		}
 
 		#endregion
 

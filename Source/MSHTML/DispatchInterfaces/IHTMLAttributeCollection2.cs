@@ -10,7 +10,7 @@ namespace NetOffice.MSHTMLApi
 	/// SupportByVersion MSHTML, 4
 	/// </summary>
 	[SupportByVersion("MSHTML", 4)]
-	[EntityType(EntityType.IsDispatchInterface)]
+	[EntityType(EntityType.IsDispatchInterface), BaseType]
  	public class IHTMLAttributeCollection2 : IHTMLAttributeCollection
 	{
 		#pragma warning disable
@@ -110,39 +110,6 @@ namespace NetOffice.MSHTMLApi
 		#endregion
 
 		#region Methods
-
-		/// <summary>
-		/// SupportByVersion MSHTML 4
-		/// </summary>
-		/// <param name="bstrName">string bstrName</param>
-		[SupportByVersion("MSHTML", 4)]
-		[BaseResult]
-		public NetOffice.MSHTMLApi.IHTMLDOMAttribute getNamedItem(string bstrName)
-		{
-			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.MSHTMLApi.IHTMLDOMAttribute>(this, "getNamedItem", bstrName);
-		}
-
-		/// <summary>
-		/// SupportByVersion MSHTML 4
-		/// </summary>
-		/// <param name="ppNode">NetOffice.MSHTMLApi.IHTMLDOMAttribute ppNode</param>
-		[SupportByVersion("MSHTML", 4)]
-		[BaseResult]
-		public NetOffice.MSHTMLApi.IHTMLDOMAttribute setNamedItem(NetOffice.MSHTMLApi.IHTMLDOMAttribute ppNode)
-		{
-			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.MSHTMLApi.IHTMLDOMAttribute>(this, "setNamedItem", ppNode);
-		}
-
-		/// <summary>
-		/// SupportByVersion MSHTML 4
-		/// </summary>
-		/// <param name="bstrName">string bstrName</param>
-		[SupportByVersion("MSHTML", 4)]
-		[BaseResult]
-		public NetOffice.MSHTMLApi.IHTMLDOMAttribute removeNamedItem(string bstrName)
-		{
-			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.MSHTMLApi.IHTMLDOMAttribute>(this, "removeNamedItem", bstrName);
-		}
 
 		#endregion
 

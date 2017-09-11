@@ -12,7 +12,7 @@ namespace NetOffice.VBIDEApi
 	/// SupportByVersion VBIDE, 12,14,5.3
 	/// </summary>
 	[SupportByVersion("VBIDE", 12,14,5.3)]
-	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Method), HasIndexProperty(IndexInvoke.Method, "Item")]
+	[EntityType(EntityType.IsDispatchInterface), BaseType, Enumerator(Enumerator.Reference, EnumeratorInvoke.Method), HasIndexProperty(IndexInvoke.Method, "Item")]
 	public class _VBProjects_Old : COMObject , IEnumerable<NetOffice.VBIDEApi.VBProject>
 	{
 		#pragma warning disable
@@ -166,29 +166,29 @@ namespace NetOffice.VBIDEApi
 			}
 		}
 
-		#endregion
+        #endregion
 
-       #region IEnumerable<NetOffice.VBIDEApi.VBProject> Member
-        
+        #region IEnumerable<NetOffice.VBIDEApi.VBProject> Member
+
         /// <summary>
-		/// SupportByVersion VBIDE, 12,14,5.3
-		/// </summary>
-		[SupportByVersion("VBIDE", 12,14,5.3)]
-       public IEnumerator<NetOffice.VBIDEApi.VBProject> GetEnumerator()  
-       {
-           NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
-           foreach (NetOffice.VBIDEApi.VBProject item in innerEnumerator)
-               yield return item;
-       }
+        /// SupportByVersion VBIDE, 12,14,5.3
+        /// </summary>
+        [SupportByVersion("VBIDE", 12, 14, 5.3)]
+        public IEnumerator<NetOffice.VBIDEApi.VBProject> GetEnumerator()
+        {
+            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
+            foreach (NetOffice.VBIDEApi.VBProject item in innerEnumerator)
+                yield return item;
+        }
 
-       #endregion
-          
-		#region IEnumerable Members
-       
-		/// <summary>
-		/// SupportByVersion VBIDE, 12,14,5.3
-		/// </summary>
-		[SupportByVersion("VBIDE", 12,14,5.3)]
+        #endregion
+
+        #region IEnumerable Members
+
+        /// <summary>
+        /// SupportByVersion VBIDE, 12,14,5.3
+        /// </summary>
+        [SupportByVersion("VBIDE", 12,14,5.3)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
 			return NetOffice.Utils.GetProxyEnumeratorAsMethod(this);

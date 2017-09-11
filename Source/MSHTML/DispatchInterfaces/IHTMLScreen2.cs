@@ -10,7 +10,7 @@ namespace NetOffice.MSHTMLApi
 	/// SupportByVersion MSHTML, 4
 	/// </summary>
 	[SupportByVersion("MSHTML", 4)]
-	[EntityType(EntityType.IsDispatchInterface)]
+	[EntityType(EntityType.IsDispatchInterface), BaseType]
  	public class IHTMLScreen2 : IHTMLScreen
 	{
 		#pragma warning disable
@@ -106,59 +106,7 @@ namespace NetOffice.MSHTMLApi
 		#endregion
 		
 		#region Properties
-
-		/// <summary>
-		/// SupportByVersion MSHTML 4
-		/// Get
-		/// </summary>
-		[SupportByVersion("MSHTML", 4)]
-		public Int32 logicalXDPI
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "logicalXDPI");
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSHTML 4
-		/// Get
-		/// </summary>
-		[SupportByVersion("MSHTML", 4)]
-		public Int32 logicalYDPI
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "logicalYDPI");
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSHTML 4
-		/// Get
-		/// </summary>
-		[SupportByVersion("MSHTML", 4)]
-		public Int32 deviceXDPI
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "deviceXDPI");
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSHTML 4
-		/// Get
-		/// </summary>
-		[SupportByVersion("MSHTML", 4)]
-		public Int32 deviceYDPI
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "deviceYDPI");
-			}
-		}
-
+	
 		#endregion
 
 		#region Methods

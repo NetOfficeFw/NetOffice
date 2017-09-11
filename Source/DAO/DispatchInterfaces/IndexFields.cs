@@ -93,7 +93,7 @@ namespace NetOffice.DAOApi
 	/// </summary>
 	[SupportByVersion("DAO", 3.6,12.0)]
 	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Method), HasIndexProperty(IndexInvoke.Property, "Item")]
-	public class IndexFields : IndexFields_ , IEnumerable<object>
+	public class IndexFields : IndexFields_, IEnumerable<object>
 	{
 		#pragma warning disable
 
@@ -193,19 +193,6 @@ namespace NetOffice.DAOApi
 		/// SupportByVersion DAO 3.6, 12.0
 		/// Get
 		/// </summary>
-		[SupportByVersion("DAO", 3.6,12.0)]
-		public Int16 Count
-		{
-			get
-			{
-				return Factory.ExecuteInt16PropertyGet(this, "Count");
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion DAO 3.6, 12.0
-		/// Get
-		/// </summary>
 		/// <param name="item">optional object item</param>
 		[SupportByVersion("DAO", 3.6,12.0)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
@@ -221,45 +208,8 @@ namespace NetOffice.DAOApi
 
 		#region Methods
 
-		/// <summary>
-		/// SupportByVersion DAO 3.6, 12.0
-		/// </summary>
-		[SupportByVersion("DAO", 3.6,12.0)]
-		public void Refresh()
-		{
-			 Factory.ExecuteMethod(this, "Refresh");
-		}
-
-		#endregion
-
-       #region IEnumerable<object> Member
+        #endregion
         
-        /// <summary>
-		/// SupportByVersion DAO, 3.6,12.0
-		/// </summary>
-		[SupportByVersion("DAO", 3.6,12.0)]
-       public IEnumerator<object> GetEnumerator()  
-       {
-           NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
-           foreach (object item in innerEnumerator)
-               yield return item;
-       }
-
-       #endregion
-          
-		#region IEnumerable Members
-       
-		/// <summary>
-		/// SupportByVersion DAO, 3.6,12.0
-		/// </summary>
-		[SupportByVersion("DAO", 3.6,12.0)]
-		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
-		{
-			return NetOffice.Utils.GetProxyEnumeratorAsMethod(this);
-		}
-
-		#endregion
-
 		#pragma warning restore
 	}
 }

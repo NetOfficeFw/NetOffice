@@ -37,52 +37,33 @@ namespace NetOffice.MSHTMLApi.Events
 	
 		#region Fields
 
-		private IEventBinding	_eventBinding;
-        private ICOMObject _eventClass;
+		private IEventBinding	EventBinding;
+        private ICOMObject EventClass;
         
 		#endregion
 		
-		#region Construction
+		#region Ctor
 
 		public HTMLNamespaceEvents_SinkHelper(ICOMObject eventClass, IConnectionPoint connectPoint): base(eventClass)
 		{
-			_eventClass = eventClass;
-			_eventBinding = (IEventBinding)eventClass;
 			SetupEventBinding(connectPoint);
 		}
 		
 		#endregion
-		
-		#region Properties
 
-        internal Core Factory
-        {
-            get
-            {
-                if (null != _eventClass)
-                    return _eventClass.Factory;
-                else
-                    return Core.Default;
-            }
-        }
-
-        #endregion
-
-		#region HTMLNamespaceEvents Members
+		#region HTMLNamespaceEvents
 		
 		public void onreadystatechange([In, MarshalAs(UnmanagedType.IDispatch)] object pEvtObj)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("onreadystatechange");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(pEvtObj);
-				return;
-			}
+            if (!Validate("onreadystatechange"))
+            {
+                return;
+            }
 
-			NetOffice.MSHTMLApi.IHTMLEventObj newpEvtObj = Factory.CreateObjectFromComProxy(_eventClass, pEvtObj) as NetOffice.MSHTMLApi.IHTMLEventObj;
+			NetOffice.MSHTMLApi.IHTMLEventObj newpEvtObj = Factory.CreateKnownObjectFromComProxy<NetOffice.MSHTMLApi.IHTMLEventObj>(EventClass, pEvtObj, NetOffice.MSHTMLApi.IHTMLEventObj.LateBindingApiWrapperType);
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newpEvtObj;
-			_eventBinding.RaiseCustomEvent("onreadystatechange", ref paramsArray);
+			EventBinding.RaiseCustomEvent("onreadystatechange", ref paramsArray);
 		}
 
 		#endregion

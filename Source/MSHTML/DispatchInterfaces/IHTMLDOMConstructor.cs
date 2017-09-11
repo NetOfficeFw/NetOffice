@@ -107,21 +107,6 @@ namespace NetOffice.MSHTMLApi
 		
 		#region Properties
 
-		/// <summary>
-		/// SupportByVersion MSHTML 4
-		/// Get
-		/// Unknown COM Proxy
-		/// </summary>
-		[SupportByVersion("MSHTML", 4), ProxyResult]
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public object constructor
-		{
-			get
-			{
-				return Factory.ExecuteReferencePropertyGet(this, "constructor");
-			}
-		}
-
 		#endregion
 
 		#region Methods

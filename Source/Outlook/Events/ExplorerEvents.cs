@@ -62,154 +62,116 @@ namespace NetOffice.OutlookApi.Events
 		public static readonly string Id = "0006304F-0000-0000-C000-000000000046";
 		
 		#endregion
-	
-		#region Fields
 
-		private IEventBinding	_eventBinding;
-        private ICOMObject _eventClass;
-        
-		#endregion
-		
-		#region Construction
+		#region Ctor
 
 		public ExplorerEvents_SinkHelper(ICOMObject eventClass, IConnectionPoint connectPoint): base(eventClass)
 		{
-			_eventClass = eventClass;
-			_eventBinding = (IEventBinding)eventClass;
 			SetupEventBinding(connectPoint);
 		}
 		
 		#endregion
-		
-		#region Properties
 
-        internal Core Factory
-        {
-            get
-            {
-                if (null != _eventClass)
-                    return _eventClass.Factory;
-                else
-                    return Core.Default;
-            }
-        }
-
-        #endregion
-
-		#region ExplorerEvents Members
+		#region ExplorerEvents
 		
 		public void Activate()
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("Activate");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray();
-				return;
-			}
+            if (!Validate("Activate"))
+            {
+                return;
+            }
 
-			object[] paramsArray = new object[0];
-			_eventBinding.RaiseCustomEvent("Activate", ref paramsArray);
+            object[] paramsArray = new object[0];
+			EventBinding.RaiseCustomEvent("Activate", ref paramsArray);
 		}
 
 		public void FolderSwitch()
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("FolderSwitch");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray();
-				return;
-			}
+            if (!Validate("FolderSwitch"))
+            {
+                return;
+            }
 
-			object[] paramsArray = new object[0];
-			_eventBinding.RaiseCustomEvent("FolderSwitch", ref paramsArray);
+            object[] paramsArray = new object[0];
+			EventBinding.RaiseCustomEvent("FolderSwitch", ref paramsArray);
 		}
 
 		public void BeforeFolderSwitch([In, MarshalAs(UnmanagedType.IDispatch)] object newFolder, [In] [Out] ref object cancel)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("BeforeFolderSwitch");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(newFolder, cancel);
-				return;
-			}
+            if (!Validate("BeforeFolderSwitch"))
+            {
+                Invoker.ReleaseParamsArray(newFolder, cancel);
+                return;
+            }
 
-			object newNewFolder = Factory.CreateObjectFromComProxy(_eventClass, newFolder) as object;
+			object newNewFolder = Factory.CreateEventArgumentObjectFromComProxy(EventClass, newFolder) as object;
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newNewFolder;
 			paramsArray.SetValue(cancel, 1);
-			_eventBinding.RaiseCustomEvent("BeforeFolderSwitch", ref paramsArray);
+			EventBinding.RaiseCustomEvent("BeforeFolderSwitch", ref paramsArray);
 
-			cancel = (bool)paramsArray[1];
+			cancel = ToBoolean(paramsArray[1]);
 		}
 
 		public void ViewSwitch()
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("ViewSwitch");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray();
-				return;
-			}
+            if (!Validate("ViewSwitch"))
+            {
+                return;
+            }
 
-			object[] paramsArray = new object[0];
-			_eventBinding.RaiseCustomEvent("ViewSwitch", ref paramsArray);
+            object[] paramsArray = new object[0];
+			EventBinding.RaiseCustomEvent("ViewSwitch", ref paramsArray);
 		}
 
 		public void BeforeViewSwitch([In] object newView, [In] [Out] ref object cancel)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("BeforeViewSwitch");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(newView, cancel);
-				return;
-			}
+        {
+            if (!Validate("BeforeViewSwitch"))
+            {
+                Invoker.ReleaseParamsArray(newView, cancel);
+                return;
+            }
 
 			object newNewView = (object)newView;
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newNewView;
 			paramsArray.SetValue(cancel, 1);
-			_eventBinding.RaiseCustomEvent("BeforeViewSwitch", ref paramsArray);
+			EventBinding.RaiseCustomEvent("BeforeViewSwitch", ref paramsArray);
 
-			cancel = (bool)paramsArray[1];
+			cancel = ToBoolean(paramsArray[1]);
 		}
 
 		public void Deactivate()
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("Deactivate");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray();
-				return;
-			}
+            if (!Validate("Deactivate"))
+            {
+                return;
+            }
 
-			object[] paramsArray = new object[0];
-			_eventBinding.RaiseCustomEvent("Deactivate", ref paramsArray);
+            object[] paramsArray = new object[0];
+			EventBinding.RaiseCustomEvent("Deactivate", ref paramsArray);
 		}
 
 		public void SelectionChange()
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("SelectionChange");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray();
-				return;
-			}
+            if (!Validate("SelectionChange"))
+            {
+                return;
+            }
 
-			object[] paramsArray = new object[0];
-			_eventBinding.RaiseCustomEvent("SelectionChange", ref paramsArray);
+            object[] paramsArray = new object[0];
+			EventBinding.RaiseCustomEvent("SelectionChange", ref paramsArray);
 		}
 
 		public void Close()
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("Close");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray();
-				return;
-			}
+            if (!Validate("Close"))
+            {
+                return;
+            }
 
-			object[] paramsArray = new object[0];
-			_eventBinding.RaiseCustomEvent("Close", ref paramsArray);
+            object[] paramsArray = new object[0];
+			EventBinding.RaiseCustomEvent("Close", ref paramsArray);
 		}
 
 		#endregion

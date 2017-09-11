@@ -34,55 +34,30 @@ namespace NetOffice.VisioApi.Events
 		public static readonly string Id = "000D0B0C-0000-0000-C000-000000000046";
 		
 		#endregion
-	
-		#region Fields
 
-		private IEventBinding	_eventBinding;
-        private ICOMObject _eventClass;
-        
-		#endregion
-		
-		#region Construction
+		#region Ctor
 
 		public ECharacters_SinkHelper(ICOMObject eventClass, IConnectionPoint connectPoint): base(eventClass)
 		{
-			_eventClass = eventClass;
-			_eventBinding = (IEventBinding)eventClass;
 			SetupEventBinding(connectPoint);
 		}
 		
 		#endregion
-		
-		#region Properties
 
-        internal Core Factory
-        {
-            get
-            {
-                if (null != _eventClass)
-                    return _eventClass.Factory;
-                else
-                    return Core.Default;
-            }
-        }
-
-        #endregion
-
-		#region ECharacters Members
+		#region ECharacters
 		
 		public void TextChanged([In, MarshalAs(UnmanagedType.IDispatch)] object shape)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("TextChanged");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(shape);
-				return;
-			}
+        {
+            if (!Validate("TextChanged"))
+            {
+                Invoker.ReleaseParamsArray(shape);
+                return;
+            }
 
-			NetOffice.VisioApi.IVShape newShape = Factory.CreateObjectFromComProxy(_eventClass, shape) as NetOffice.VisioApi.IVShape;
+			NetOffice.VisioApi.IVShape newShape = Factory.CreateKnownObjectFromComProxy<NetOffice.VisioApi.IVShape>(EventClass, shape, NetOffice.VisioApi.IVShape.LateBindingApiWrapperType);
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newShape;
-			_eventBinding.RaiseCustomEvent("TextChanged", ref paramsArray);
+			EventBinding.RaiseCustomEvent("TextChanged", ref paramsArray);
 		}
 
 		#endregion

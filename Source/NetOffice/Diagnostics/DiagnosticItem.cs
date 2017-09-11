@@ -3,7 +3,7 @@
 namespace NetOffice.Diagnostics
 {
     /// <summary>
-    /// Data item
+    /// Diagnostics Data as Name/Value
     /// </summary>
     public class DiagnosticItem
     {
@@ -27,5 +27,14 @@ namespace NetOffice.Diagnostics
         /// Information Value
         /// </summary>
         public string Value { get; private set; }
+
+        /// <summary>
+        /// Returns a System.String that represents the instance
+        /// </summary>
+        /// <returns>System.String</returns>
+        public override string ToString()
+        {
+            return String.Format("{0}:{1}", Name, Value);
+        }
     }
 }

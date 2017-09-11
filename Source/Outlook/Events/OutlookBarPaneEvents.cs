@@ -39,76 +39,50 @@ namespace NetOffice.OutlookApi.Events
 		
 		#endregion
 	
-		#region Fields
-
-		private IEventBinding	_eventBinding;
-        private ICOMObject _eventClass;
-        
-		#endregion
-		
 		#region Construction
 
 		public OutlookBarPaneEvents_SinkHelper(ICOMObject eventClass, IConnectionPoint connectPoint): base(eventClass)
 		{
-			_eventClass = eventClass;
-			_eventBinding = (IEventBinding)eventClass;
 			SetupEventBinding(connectPoint);
 		}
 		
 		#endregion
-		
-		#region Properties
 
-        internal Core Factory
-        {
-            get
-            {
-                if (null != _eventClass)
-                    return _eventClass.Factory;
-                else
-                    return Core.Default;
-            }
-        }
-
-        #endregion
-
-		#region OutlookBarPaneEvents Members
+		#region OutlookBarPaneEvents
 		
 		public void BeforeNavigate([In, MarshalAs(UnmanagedType.IDispatch)] object shortcut, [In] [Out] ref object cancel)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("BeforeNavigate");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(shortcut, cancel);
-				return;
-			}
+        {
+            if (!Validate("BeforeNavigate"))
+            {
+                Invoker.ReleaseParamsArray(shortcut, cancel);
+                return;
+            }
 
-			NetOffice.OutlookApi.OutlookBarShortcut newShortcut = Factory.CreateObjectFromComProxy(_eventClass, shortcut) as NetOffice.OutlookApi.OutlookBarShortcut;
+			NetOffice.OutlookApi.OutlookBarShortcut newShortcut = Factory.CreateKnownObjectFromComProxy<NetOffice.OutlookApi.OutlookBarShortcut>(EventClass, shortcut, NetOffice.OutlookApi.OutlookBarShortcut.LateBindingApiWrapperType);
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newShortcut;
 			paramsArray.SetValue(cancel, 1);
-			_eventBinding.RaiseCustomEvent("BeforeNavigate", ref paramsArray);
+			EventBinding.RaiseCustomEvent("BeforeNavigate", ref paramsArray);
 
-			cancel = (bool)paramsArray[1];
+			cancel = ToBoolean(paramsArray[1]);
 		}
 
 		public void BeforeGroupSwitch([In, MarshalAs(UnmanagedType.IDispatch)] object toGroup, [In] [Out] ref object cancel)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("BeforeGroupSwitch");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(toGroup, cancel);
-				return;
-			}
+        {
+            if (!Validate("BeforeGroupSwitch"))
+            {
+                Invoker.ReleaseParamsArray(toGroup, cancel);
+                return;
+            }
 
-			NetOffice.OutlookApi.OutlookBarGroup newToGroup = Factory.CreateObjectFromComProxy(_eventClass, toGroup) as NetOffice.OutlookApi.OutlookBarGroup;
+			NetOffice.OutlookApi.OutlookBarGroup newToGroup = Factory.CreateKnownObjectFromComProxy<NetOffice.OutlookApi.OutlookBarGroup>(EventClass, toGroup, NetOffice.OutlookApi.OutlookBarGroup.LateBindingApiWrapperType);
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newToGroup;
 			paramsArray.SetValue(cancel, 1);
-			_eventBinding.RaiseCustomEvent("BeforeGroupSwitch", ref paramsArray);
+			EventBinding.RaiseCustomEvent("BeforeGroupSwitch", ref paramsArray);
 
-			cancel = (bool)paramsArray[1];
-		}
+			cancel = ToBoolean(paramsArray[1]);
+        }
 
 		#endregion
 	}

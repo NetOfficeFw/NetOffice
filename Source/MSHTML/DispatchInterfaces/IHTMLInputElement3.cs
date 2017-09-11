@@ -106,75 +106,7 @@ namespace NetOffice.MSHTMLApi
 		#endregion
 		
 		#region Properties
-
-		/// <summary>
-		/// SupportByVersion MSHTML 4
-		/// Get/Set
-		/// </summary>
-		[SupportByVersion("MSHTML", 4)]
-		public string src
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "src");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "src", value);
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSHTML 4
-		/// Get/Set
-		/// </summary>
-		[SupportByVersion("MSHTML", 4)]
-		public string lowsrc
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "lowsrc");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "lowsrc", value);
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSHTML 4
-		/// Get/Set
-		/// </summary>
-		[SupportByVersion("MSHTML", 4)]
-		public string vrml
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "vrml");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "vrml", value);
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSHTML 4
-		/// Get/Set
-		/// </summary>
-		[SupportByVersion("MSHTML", 4)]
-		public string dynsrc
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "dynsrc");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "dynsrc", value);
-			}
-		}
-
+        
 		#endregion
 
 		#region Methods

@@ -10,7 +10,7 @@ namespace NetOffice.MSComctlLibApi
 	/// SupportByVersion MSComctlLib, 6
 	/// </summary>
 	[SupportByVersion("MSComctlLib", 6)]
-	[EntityType(EntityType.IsDispatchInterface)]
+	[EntityType(EntityType.IsDispatchInterface), BaseType]
  	public class IListView : COMObject
 	{
 		#pragma warning disable
@@ -270,16 +270,15 @@ namespace NetOffice.MSComctlLibApi
 		/// SupportByVersion MSComctlLib 6
 		/// Get/Set
 		/// </summary>
-		[SupportByVersion("MSComctlLib", 6)]
+		[SupportByVersion("MSComctlLib", 6), NativeResult]
 		public stdole.Picture MouseIcon
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "MouseIcon", paramsArray);
-				stdole.Picture newObject = Factory.CreateObjectFromComProxy(this,returnItem) as stdole.Picture;
-				return newObject;
-			}
+                return returnItem as stdole.Picture;
+            }
 			set
 			{
 				object[] paramsArray = Invoker.ValidateParamsArray(value);
@@ -532,15 +531,14 @@ namespace NetOffice.MSComctlLibApi
 		/// SupportByVersion MSComctlLib 6
 		/// Get/Set
 		/// </summary>
-		[SupportByVersion("MSComctlLib", 6)]
+		[SupportByVersion("MSComctlLib", 6), NativeResult]
 		public stdole.Font Font
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Font", paramsArray);
-				stdole.Font newObject = Factory.CreateObjectFromComProxy(this,returnItem) as stdole.Font;
-				return newObject;
+                return returnItem as stdole.Font;
 			}
 			set
 			{
@@ -707,15 +705,14 @@ namespace NetOffice.MSComctlLibApi
 		/// SupportByVersion MSComctlLib 6
 		/// Get/Set
 		/// </summary>
-		[SupportByVersion("MSComctlLib", 6)]
+		[SupportByVersion("MSComctlLib", 6), NativeResult]
 		public stdole.Picture Picture
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Picture", paramsArray);
-				stdole.Picture newObject = Factory.CreateObjectFromComProxy(this,returnItem) as stdole.Picture;
-				return newObject;
+                return returnItem as stdole.Picture;
 			}
 			set
 			{

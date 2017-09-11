@@ -107,32 +107,6 @@ namespace NetOffice.MSHTMLApi
 		
 		#region Properties
 
-		/// <summary>
-		/// SupportByVersion MSHTML 4
-		/// Get
-		/// </summary>
-		[SupportByVersion("MSHTML", 4)]
-		public Int32 systemXDPI
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "systemXDPI");
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSHTML 4
-		/// Get
-		/// </summary>
-		[SupportByVersion("MSHTML", 4)]
-		public Int32 systemYDPI
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "systemYDPI");
-			}
-		}
-
 		#endregion
 
 		#region Methods

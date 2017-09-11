@@ -10,7 +10,7 @@ namespace NetOffice.MSComctlLibApi
 	/// SupportByVersion MSComctlLib, 6
 	/// </summary>
 	[SupportByVersion("MSComctlLib", 6)]
-	[EntityType(EntityType.IsDispatchInterface)]
+	[EntityType(EntityType.IsDispatchInterface), BaseType]
  	public class IToolbar : COMObject
 	{
 		#pragma warning disable
@@ -212,15 +212,14 @@ namespace NetOffice.MSComctlLibApi
 		/// SupportByVersion MSComctlLib 6
 		/// Get/Set
 		/// </summary>
-		[SupportByVersion("MSComctlLib", 6)]
+		[SupportByVersion("MSComctlLib", 6), NativeResult]
 		public stdole.Picture MouseIcon
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "MouseIcon", paramsArray);
-				stdole.Picture newObject = Factory.CreateObjectFromComProxy(this,returnItem) as stdole.Picture;
-				return newObject;
+                return returnItem as stdole.Picture;
 			}
 			set
 			{

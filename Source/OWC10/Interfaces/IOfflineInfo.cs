@@ -10,7 +10,7 @@ namespace NetOffice.OWC10Api
 	/// SupportByVersion OWC10, 1
 	/// </summary>
 	[SupportByVersion("OWC10", 1)]
-	[EntityType(EntityType.IsInterface)]
+	[EntityType(EntityType.IsInterface), BaseType]
  	public class IOfflineInfo : COMObject
 	{
 		#pragma warning disable

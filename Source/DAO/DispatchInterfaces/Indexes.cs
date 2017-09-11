@@ -13,7 +13,7 @@ namespace NetOffice.DAOApi
 	/// </summary>
 	[SupportByVersion("DAO", 3.6,12.0)]
 	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Method), HasIndexProperty(IndexInvoke.Property, "Item")]
-	public class Indexes : _DynaCollection , IEnumerable<NetOffice.DAOApi.Index>
+	public class Indexes : _DynaCollection, IEnumerable<NetOffice.DAOApi.Index>
 	{
 		#pragma warning disable
 
@@ -113,19 +113,6 @@ namespace NetOffice.DAOApi
 		/// SupportByVersion DAO 3.6, 12.0
 		/// Get
 		/// </summary>
-		[SupportByVersion("DAO", 3.6,12.0)]
-		public Int16 Count
-		{
-			get
-			{
-				return Factory.ExecuteInt16PropertyGet(this, "Count");
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion DAO 3.6, 12.0
-		/// Get
-		/// </summary>
 		/// <param name="item">object item</param>
 		[SupportByVersion("DAO", 3.6,12.0)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
@@ -141,38 +128,29 @@ namespace NetOffice.DAOApi
 
 		#region Methods
 
-		/// <summary>
-		/// SupportByVersion DAO 3.6, 12.0
-		/// </summary>
-		[SupportByVersion("DAO", 3.6,12.0)]
-		public void Refresh()
-		{
-			 Factory.ExecuteMethod(this, "Refresh");
-		}
+        #endregion
 
-		#endregion
+        #region IEnumerable<NetOffice.DAOApi.Index> Member
 
-       #region IEnumerable<NetOffice.DAOApi.Index> Member
-        
         /// <summary>
-		/// SupportByVersion DAO, 3.6,12.0
-		/// </summary>
-		[SupportByVersion("DAO", 3.6,12.0)]
-       public IEnumerator<NetOffice.DAOApi.Index> GetEnumerator()  
-       {
-           NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
-           foreach (NetOffice.DAOApi.Index item in innerEnumerator)
-               yield return item;
-       }
+        /// SupportByVersion DAO, 3.6,12.0
+        /// </summary>
+        [SupportByVersion("DAO", 3.6, 12.0)]
+        public IEnumerator<NetOffice.DAOApi.Index> GetEnumerator()
+        {
+            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
+            foreach (NetOffice.DAOApi.Index item in innerEnumerator)
+                yield return item;
+        }
 
-       #endregion
-          
-		#region IEnumerable Members
-       
-		/// <summary>
-		/// SupportByVersion DAO, 3.6,12.0
-		/// </summary>
-		[SupportByVersion("DAO", 3.6,12.0)]
+        #endregion
+
+        #region IEnumerable Members
+
+        /// <summary>
+        /// SupportByVersion DAO, 3.6,12.0
+        /// </summary>
+        [SupportByVersion("DAO", 3.6,12.0)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
 			return NetOffice.Utils.GetProxyEnumeratorAsMethod(this);

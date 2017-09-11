@@ -26,7 +26,7 @@ namespace NetOffice
             COMDynamicObject instance2 = comObject as COMDynamicObject;
             if (null != instance2)
             {
-                instance1.ParentObject = null;
+                instance2.ParentObject = null;
                 return;
             }
 

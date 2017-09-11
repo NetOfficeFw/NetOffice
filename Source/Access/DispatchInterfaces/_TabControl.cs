@@ -12,7 +12,7 @@ namespace NetOffice.AccessApi
 	/// SupportByVersion Access, 9,10,11,12,14,15,16
 	/// </summary>
 	[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Method)]
+	[EntityType(EntityType.IsDispatchInterface), BaseType, Enumerator(Enumerator.Reference, EnumeratorInvoke.Method)]
 	public class _TabControl : NetOffice.OfficeApi.IAccessible, IEnumerable<object>
 	{
 		#pragma warning disable
@@ -2090,7 +2090,7 @@ namespace NetOffice.AccessApi
             object returnItem = Invoker.MethodReturn(this, "_Evaluate", paramsArray);
             if ((null != returnItem) && (returnItem is MarshalByRefObject))
             {
-                ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
+                ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem, true);
                 return newObject;
             }
             else

@@ -34,55 +34,30 @@ namespace NetOffice.OutlookApi.Events
 		public static readonly string Id = "000630F3-0000-0000-C000-000000000046";
 		
 		#endregion
-	
-		#region Fields
 
-		private IEventBinding	_eventBinding;
-        private ICOMObject _eventClass;
-        
-		#endregion
-		
-		#region Construction
+		#region Ctor
 
 		public NavigationPaneEvents_12_SinkHelper(ICOMObject eventClass, IConnectionPoint connectPoint): base(eventClass)
 		{
-			_eventClass = eventClass;
-			_eventBinding = (IEventBinding)eventClass;
 			SetupEventBinding(connectPoint);
 		}
 		
 		#endregion
-		
-		#region Properties
 
-        internal Core Factory
-        {
-            get
-            {
-                if (null != _eventClass)
-                    return _eventClass.Factory;
-                else
-                    return Core.Default;
-            }
-        }
-
-        #endregion
-
-		#region NavigationPaneEvents_12 Members
+		#region NavigationPaneEvents_12
 		
 		public void ModuleSwitch([In, MarshalAs(UnmanagedType.IDispatch)] object currentModule)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("ModuleSwitch");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(currentModule);
-				return;
-			}
+            if (!Validate("SelectedChange"))
+            {
+                Invoker.ReleaseParamsArray(currentModule);
+                return;
+            }
 
-			NetOffice.OutlookApi.NavigationModule newCurrentModule = Factory.CreateObjectFromComProxy(_eventClass, currentModule) as NetOffice.OutlookApi.NavigationModule;
+			NetOffice.OutlookApi.NavigationModule newCurrentModule = Factory.CreateKnownObjectFromComProxy<NetOffice.OutlookApi.NavigationModule>(EventClass, currentModule, NetOffice.OutlookApi.NavigationModule.LateBindingApiWrapperType);
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newCurrentModule;
-			_eventBinding.RaiseCustomEvent("ModuleSwitch", ref paramsArray);
+			EventBinding.RaiseCustomEvent("ModuleSwitch", ref paramsArray);
 		}
 
 		#endregion

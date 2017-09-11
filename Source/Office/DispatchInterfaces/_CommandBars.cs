@@ -13,7 +13,7 @@ namespace NetOffice.OfficeApi
 	/// SupportByVersion Office, 9,10,11,12,14,15,16
 	/// </summary>
 	[SupportByVersion("Office", 9,10,11,12,14,15,16)]
-	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "Item")]
+	[EntityType(EntityType.IsDispatchInterface), BaseType, Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "Item")]
 	public class _CommandBars : _IMsoDispObj, IEnumerable<NetOffice.OfficeApi.CommandBar>
 	{
 		#pragma warning disable
@@ -762,13 +762,12 @@ namespace NetOffice.OfficeApi
 		/// <param name="idMso">string idMso</param>
 		/// <param name="width">Int32 width</param>
 		/// <param name="height">Int32 height</param>
-		[SupportByVersion("Office", 12,14,15,16)]
+		[SupportByVersion("Office", 12,14,15,16), NativeResult]
 		public stdole.Picture GetImageMso(string idMso, Int32 width, Int32 height)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(idMso, width, height);
 			object returnItem = Invoker.MethodReturn(this, "GetImageMso", paramsArray);
-			stdole.Picture newObject = Factory.CreateObjectFromComProxy(this, returnItem) as stdole.Picture;
-			return newObject;
+            return returnItem as stdole.Picture;
 		}
 
 		/// <summary>

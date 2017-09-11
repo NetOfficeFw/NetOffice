@@ -10,7 +10,7 @@ namespace NetOffice.DAOApi
 	/// SupportByVersion DAO, 3.6,12.0
 	/// </summary>
 	[SupportByVersion("DAO", 3.6,12.0)]
-	[EntityType(EntityType.IsDispatchInterface)]
+	[EntityType(EntityType.IsDispatchInterface), BaseType]
  	public class _DBEngine : _DAO
 	{
 		#pragma warning disable

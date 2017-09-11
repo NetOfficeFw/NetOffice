@@ -10,7 +10,7 @@ namespace NetOffice.MSComctlLibApi
 	/// SupportByVersion MSComctlLib, 6
 	/// </summary>
 	[SupportByVersion("MSComctlLib", 6)]
-	[EntityType(EntityType.IsDispatchInterface)]
+	[EntityType(EntityType.IsDispatchInterface), BaseType]
  	public class IComboItem : COMObject
 	{
 		#pragma warning disable

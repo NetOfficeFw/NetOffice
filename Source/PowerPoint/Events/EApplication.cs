@@ -163,566 +163,509 @@ namespace NetOffice.PowerPointApi.Events
 		
 		#endregion
 	
-		#region Fields
-
-		private IEventBinding	_eventBinding;
-        private ICOMObject		_eventClass;
-        
-		#endregion
-		
-		#region Construction
+		#region Ctor
 
 		public EApplication_SinkHelper(ICOMObject eventClass, IConnectionPoint connectPoint): base(eventClass)
 		{
-			_eventClass = eventClass;
-			_eventBinding = (IEventBinding)eventClass;
 			SetupEventBinding(connectPoint);
 		}
 		
 		#endregion
-		
-		#region Properties
 
-        internal Core Factory
-        {
-            get
-            {
-                if (null != _eventClass)
-                    return _eventClass.Factory;
-                else
-                    return Core.Default;
-            }
-        }
-
-        #endregion
-
-		#region EApplication Members
+		#region EApplication
 		
 		public void WindowSelectionChange([In, MarshalAs(UnmanagedType.IDispatch)] object sel)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("WindowSelectionChange");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(sel);
-				return;
-			}
+            if (!Validate("WindowSelectionChange"))
+            {
+                Invoker.ReleaseParamsArray(sel);
+                return;
+            }
 
-			NetOffice.PowerPointApi.Selection newSel = Factory.CreateObjectFromComProxy(_eventClass, sel) as NetOffice.PowerPointApi.Selection;
+			NetOffice.PowerPointApi.Selection newSel = Factory.CreateKnownObjectFromComProxy<NetOffice.PowerPointApi.Selection>(EventClass, sel, NetOffice.PowerPointApi.Selection.LateBindingApiWrapperType);
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newSel;
-			_eventBinding.RaiseCustomEvent("WindowSelectionChange", ref paramsArray);
+			EventBinding.RaiseCustomEvent("WindowSelectionChange", ref paramsArray);
 		}
 
 		public void WindowBeforeRightClick([In, MarshalAs(UnmanagedType.IDispatch)] object sel, [In] [Out] ref object cancel)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("WindowBeforeRightClick");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(sel, cancel);
-				return;
-			}
+            if (!Validate("WindowBeforeRightClick"))
+            {
+                Invoker.ReleaseParamsArray(sel, cancel);
+                return;
+            }
 
-			NetOffice.PowerPointApi.Selection newSel = Factory.CreateObjectFromComProxy(_eventClass, sel) as NetOffice.PowerPointApi.Selection;
-			object[] paramsArray = new object[2];
+            NetOffice.PowerPointApi.Selection newSel = Factory.CreateKnownObjectFromComProxy<NetOffice.PowerPointApi.Selection>(EventClass, sel, NetOffice.PowerPointApi.Selection.LateBindingApiWrapperType);
+            object[] paramsArray = new object[2];
 			paramsArray[0] = newSel;
 			paramsArray.SetValue(cancel, 1);
-			_eventBinding.RaiseCustomEvent("WindowBeforeRightClick", ref paramsArray);
+			EventBinding.RaiseCustomEvent("WindowBeforeRightClick", ref paramsArray);
 
-			cancel = (bool)paramsArray[1];
+			cancel = ToBoolean(paramsArray[1]);
 		}
 
 		public void WindowBeforeDoubleClick([In, MarshalAs(UnmanagedType.IDispatch)] object sel, [In] [Out] ref object cancel)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("WindowBeforeDoubleClick");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(sel, cancel);
-				return;
-			}
+        {
+            if (!Validate("WindowBeforeDoubleClick"))
+            {
+                Invoker.ReleaseParamsArray(sel, cancel);
+                return;
+            }
 
-			NetOffice.PowerPointApi.Selection newSel = Factory.CreateObjectFromComProxy(_eventClass, sel) as NetOffice.PowerPointApi.Selection;
-			object[] paramsArray = new object[2];
+            NetOffice.PowerPointApi.Selection newSel = Factory.CreateKnownObjectFromComProxy<NetOffice.PowerPointApi.Selection>(EventClass, sel, NetOffice.PowerPointApi.Selection.LateBindingApiWrapperType);
+            object[] paramsArray = new object[2];
 			paramsArray[0] = newSel;
 			paramsArray.SetValue(cancel, 1);
-			_eventBinding.RaiseCustomEvent("WindowBeforeDoubleClick", ref paramsArray);
+			EventBinding.RaiseCustomEvent("WindowBeforeDoubleClick", ref paramsArray);
 
-			cancel = (bool)paramsArray[1];
-		}
+            cancel = ToBoolean(paramsArray[1]);
+        }
 
 		public void PresentationClose([In, MarshalAs(UnmanagedType.IDispatch)] object pres)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("PresentationClose");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(pres);
-				return;
-			}
+        {
+            if (!Validate("PresentationClose"))
+            {
+                Invoker.ReleaseParamsArray(pres);
+                return;
+            }
 
-			NetOffice.PowerPointApi.Presentation newPres = Factory.CreateObjectFromComProxy(_eventClass, pres) as NetOffice.PowerPointApi.Presentation;
+			NetOffice.PowerPointApi.Presentation newPres = Factory.CreateKnownObjectFromComProxy<NetOffice.PowerPointApi.Presentation>(EventClass, pres, NetOffice.PowerPointApi.Presentation.LateBindingApiWrapperType);
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newPres;
-			_eventBinding.RaiseCustomEvent("PresentationClose", ref paramsArray);
+			EventBinding.RaiseCustomEvent("PresentationClose", ref paramsArray);
 		}
 
 		public void PresentationSave([In, MarshalAs(UnmanagedType.IDispatch)] object pres)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("PresentationSave");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(pres);
-				return;
-			}
+            if (!Validate("PresentationSave"))
+            {
+                Invoker.ReleaseParamsArray(pres);
+                return;
+            }
 
-			NetOffice.PowerPointApi.Presentation newPres = Factory.CreateObjectFromComProxy(_eventClass, pres) as NetOffice.PowerPointApi.Presentation;
-			object[] paramsArray = new object[1];
+            NetOffice.PowerPointApi.Presentation newPres = Factory.CreateKnownObjectFromComProxy<NetOffice.PowerPointApi.Presentation>(EventClass, pres, NetOffice.PowerPointApi.Presentation.LateBindingApiWrapperType);
+            object[] paramsArray = new object[1];
 			paramsArray[0] = newPres;
-			_eventBinding.RaiseCustomEvent("PresentationSave", ref paramsArray);
+			EventBinding.RaiseCustomEvent("PresentationSave", ref paramsArray);
 		}
 
 		public void PresentationOpen([In, MarshalAs(UnmanagedType.IDispatch)] object pres)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("PresentationOpen");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(pres);
-				return;
-			}
+            if (!Validate("PresentationOpen"))
+            {
+                Invoker.ReleaseParamsArray(pres);
+                return;
+            }
 
-			NetOffice.PowerPointApi.Presentation newPres = Factory.CreateObjectFromComProxy(_eventClass, pres) as NetOffice.PowerPointApi.Presentation;
-			object[] paramsArray = new object[1];
+            NetOffice.PowerPointApi.Presentation newPres = Factory.CreateKnownObjectFromComProxy<NetOffice.PowerPointApi.Presentation>(EventClass, pres, NetOffice.PowerPointApi.Presentation.LateBindingApiWrapperType);
+            object[] paramsArray = new object[1];
 			paramsArray[0] = newPres;
-			_eventBinding.RaiseCustomEvent("PresentationOpen", ref paramsArray);
+			EventBinding.RaiseCustomEvent("PresentationOpen", ref paramsArray);
 		}
 
 		public void NewPresentation([In, MarshalAs(UnmanagedType.IDispatch)] object pres)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("NewPresentation");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(pres);
-				return;
-			}
+            if (!Validate("NewPresentation"))
+            {
+                Invoker.ReleaseParamsArray(pres);
+                return;
+            }
 
-			NetOffice.PowerPointApi.Presentation newPres = Factory.CreateObjectFromComProxy(_eventClass, pres) as NetOffice.PowerPointApi.Presentation;
-			object[] paramsArray = new object[1];
+            NetOffice.PowerPointApi.Presentation newPres = Factory.CreateKnownObjectFromComProxy<NetOffice.PowerPointApi.Presentation>(EventClass, pres, NetOffice.PowerPointApi.Presentation.LateBindingApiWrapperType);
+            object[] paramsArray = new object[1];
 			paramsArray[0] = newPres;
-			_eventBinding.RaiseCustomEvent("NewPresentation", ref paramsArray);
+			EventBinding.RaiseCustomEvent("NewPresentation", ref paramsArray);
 		}
 
 		public void PresentationNewSlide([In, MarshalAs(UnmanagedType.IDispatch)] object sld)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("PresentationNewSlide");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(sld);
-				return;
-			}
+        {
+            if (!Validate("PresentationNewSlide"))
+            {
+                Invoker.ReleaseParamsArray(sld);
+                return;
+            }
 
-			NetOffice.PowerPointApi.Slide newSld = Factory.CreateObjectFromComProxy(_eventClass, sld) as NetOffice.PowerPointApi.Slide;
+			NetOffice.PowerPointApi.Slide newSld = Factory.CreateKnownObjectFromComProxy<NetOffice.PowerPointApi.Slide>(EventClass, sld, NetOffice.PowerPointApi.Slide.LateBindingApiWrapperType);
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newSld;
-			_eventBinding.RaiseCustomEvent("PresentationNewSlide", ref paramsArray);
+			EventBinding.RaiseCustomEvent("PresentationNewSlide", ref paramsArray);
 		}
 
 		public void WindowActivate([In, MarshalAs(UnmanagedType.IDispatch)] object pres, [In, MarshalAs(UnmanagedType.IDispatch)] object wn)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("WindowActivate");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(pres, wn);
-				return;
-			}
+        {
+            if (!Validate("WindowActivate"))
+            {
+                Invoker.ReleaseParamsArray(pres, wn);
+                return;
+            }
 
-			NetOffice.PowerPointApi.Presentation newPres = Factory.CreateObjectFromComProxy(_eventClass, pres) as NetOffice.PowerPointApi.Presentation;
-			NetOffice.PowerPointApi.DocumentWindow newWn = Factory.CreateObjectFromComProxy(_eventClass, wn) as NetOffice.PowerPointApi.DocumentWindow;
+			NetOffice.PowerPointApi.Presentation newPres = Factory.CreateKnownObjectFromComProxy<NetOffice.PowerPointApi.Presentation>(EventClass, pres, NetOffice.PowerPointApi.Presentation.LateBindingApiWrapperType);
+			NetOffice.PowerPointApi.DocumentWindow newWn = Factory.CreateKnownObjectFromComProxy<NetOffice.PowerPointApi.DocumentWindow>(EventClass, wn, NetOffice.PowerPointApi.DocumentWindow.LateBindingApiWrapperType);
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newPres;
 			paramsArray[1] = newWn;
-			_eventBinding.RaiseCustomEvent("WindowActivate", ref paramsArray);
+			EventBinding.RaiseCustomEvent("WindowActivate", ref paramsArray);
 		}
 
 		public void WindowDeactivate([In, MarshalAs(UnmanagedType.IDispatch)] object pres, [In, MarshalAs(UnmanagedType.IDispatch)] object wn)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("WindowDeactivate");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(pres, wn);
-				return;
-			}
+            if (!Validate("WindowDeactivate"))
+            {
+                Invoker.ReleaseParamsArray(pres, wn);
+                return;
+            }
 
-			NetOffice.PowerPointApi.Presentation newPres = Factory.CreateObjectFromComProxy(_eventClass, pres) as NetOffice.PowerPointApi.Presentation;
-			NetOffice.PowerPointApi.DocumentWindow newWn = Factory.CreateObjectFromComProxy(_eventClass, wn) as NetOffice.PowerPointApi.DocumentWindow;
-			object[] paramsArray = new object[2];
+            NetOffice.PowerPointApi.Presentation newPres = Factory.CreateKnownObjectFromComProxy<NetOffice.PowerPointApi.Presentation>(EventClass, pres, NetOffice.PowerPointApi.Presentation.LateBindingApiWrapperType);
+            NetOffice.PowerPointApi.DocumentWindow newWn = Factory.CreateKnownObjectFromComProxy<NetOffice.PowerPointApi.DocumentWindow>(EventClass, wn, NetOffice.PowerPointApi.DocumentWindow.LateBindingApiWrapperType);
+            object[] paramsArray = new object[2];
 			paramsArray[0] = newPres;
 			paramsArray[1] = newWn;
-			_eventBinding.RaiseCustomEvent("WindowDeactivate", ref paramsArray);
+			EventBinding.RaiseCustomEvent("WindowDeactivate", ref paramsArray);
 		}
 
 		public void SlideShowBegin([In, MarshalAs(UnmanagedType.IDispatch)] object wn)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("SlideShowBegin");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(wn);
-				return;
-			}
+        {
+            if (!Validate("SlideShowBegin"))
+            {
+                Invoker.ReleaseParamsArray(wn);
+                return;
+            }
 
-			NetOffice.PowerPointApi.SlideShowWindow newWn = Factory.CreateObjectFromComProxy(_eventClass, wn) as NetOffice.PowerPointApi.SlideShowWindow;
-			object[] paramsArray = new object[1];
+            NetOffice.PowerPointApi.DocumentWindow newWn = Factory.CreateKnownObjectFromComProxy<NetOffice.PowerPointApi.DocumentWindow>(EventClass, wn, NetOffice.PowerPointApi.DocumentWindow.LateBindingApiWrapperType);
+            object[] paramsArray = new object[1];
 			paramsArray[0] = newWn;
-			_eventBinding.RaiseCustomEvent("SlideShowBegin", ref paramsArray);
+			EventBinding.RaiseCustomEvent("SlideShowBegin", ref paramsArray);
 		}
 
 		public void SlideShowNextBuild([In, MarshalAs(UnmanagedType.IDispatch)] object wn)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("SlideShowNextBuild");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(wn);
-				return;
-			}
+        {
+            if (!Validate("SlideShowNextBuild"))
+            {
+                Invoker.ReleaseParamsArray(wn);
+                return;
+            }
 
-			NetOffice.PowerPointApi.SlideShowWindow newWn = Factory.CreateObjectFromComProxy(_eventClass, wn) as NetOffice.PowerPointApi.SlideShowWindow;
-			object[] paramsArray = new object[1];
+            NetOffice.PowerPointApi.DocumentWindow newWn = Factory.CreateKnownObjectFromComProxy<NetOffice.PowerPointApi.DocumentWindow>(EventClass, wn, NetOffice.PowerPointApi.DocumentWindow.LateBindingApiWrapperType);
+            object[] paramsArray = new object[1];
 			paramsArray[0] = newWn;
-			_eventBinding.RaiseCustomEvent("SlideShowNextBuild", ref paramsArray);
+			EventBinding.RaiseCustomEvent("SlideShowNextBuild", ref paramsArray);
 		}
 
 		public void SlideShowNextSlide([In, MarshalAs(UnmanagedType.IDispatch)] object wn)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("SlideShowNextSlide");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(wn);
-				return;
-			}
+        {
+            if (!Validate("SlideShowNextSlide"))
+            {
+                Invoker.ReleaseParamsArray(wn);
+                return;
+            }
 
-			NetOffice.PowerPointApi.SlideShowWindow newWn = Factory.CreateObjectFromComProxy(_eventClass, wn) as NetOffice.PowerPointApi.SlideShowWindow;
-			object[] paramsArray = new object[1];
+            NetOffice.PowerPointApi.DocumentWindow newWn = Factory.CreateKnownObjectFromComProxy<NetOffice.PowerPointApi.DocumentWindow>(EventClass, wn, NetOffice.PowerPointApi.DocumentWindow.LateBindingApiWrapperType);
+            object[] paramsArray = new object[1];
 			paramsArray[0] = newWn;
-			_eventBinding.RaiseCustomEvent("SlideShowNextSlide", ref paramsArray);
+			EventBinding.RaiseCustomEvent("SlideShowNextSlide", ref paramsArray);
 		}
 
 		public void SlideShowEnd([In, MarshalAs(UnmanagedType.IDispatch)] object pres)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("SlideShowEnd");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(pres);
-				return;
-			}
+            if (!Validate("SlideShowEnd"))
+            {
+                Invoker.ReleaseParamsArray(pres);
+                return;
+            }
 
-			NetOffice.PowerPointApi.Presentation newPres = Factory.CreateObjectFromComProxy(_eventClass, pres) as NetOffice.PowerPointApi.Presentation;
+			NetOffice.PowerPointApi.Presentation newPres = Factory.CreateKnownObjectFromComProxy<NetOffice.PowerPointApi.Presentation>(EventClass, pres, NetOffice.PowerPointApi.Presentation.LateBindingApiWrapperType);
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newPres;
-			_eventBinding.RaiseCustomEvent("SlideShowEnd", ref paramsArray);
+			EventBinding.RaiseCustomEvent("SlideShowEnd", ref paramsArray);
 		}
 
 		public void PresentationPrint([In, MarshalAs(UnmanagedType.IDispatch)] object pres)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("PresentationPrint");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(pres);
-				return;
-			}
+            if (!Validate("PresentationPrint"))
+            {
+                Invoker.ReleaseParamsArray(pres);
+                return;
+            }
 
-			NetOffice.PowerPointApi.Presentation newPres = Factory.CreateObjectFromComProxy(_eventClass, pres) as NetOffice.PowerPointApi.Presentation;
-			object[] paramsArray = new object[1];
+            NetOffice.PowerPointApi.Presentation newPres = Factory.CreateKnownObjectFromComProxy<NetOffice.PowerPointApi.Presentation>(EventClass, pres, NetOffice.PowerPointApi.Presentation.LateBindingApiWrapperType);
+            object[] paramsArray = new object[1];
 			paramsArray[0] = newPres;
-			_eventBinding.RaiseCustomEvent("PresentationPrint", ref paramsArray);
+			EventBinding.RaiseCustomEvent("PresentationPrint", ref paramsArray);
 		}
 
 		public void SlideSelectionChanged([In, MarshalAs(UnmanagedType.IDispatch)] object sldRange)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("SlideSelectionChanged");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(sldRange);
-				return;
-			}
+        {
+            if (!Validate("SlideSelectionChanged"))
+            {
+                Invoker.ReleaseParamsArray(sldRange);
+                return;
+            }
 
-			NetOffice.PowerPointApi.SlideRange newSldRange = Factory.CreateObjectFromComProxy(_eventClass, sldRange) as NetOffice.PowerPointApi.SlideRange;
+			NetOffice.PowerPointApi.SlideRange newSldRange = Factory.CreateKnownObjectFromComProxy<NetOffice.PowerPointApi.SlideRange>(EventClass, sldRange, NetOffice.PowerPointApi.SlideRange.LateBindingApiWrapperType);
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newSldRange;
-			_eventBinding.RaiseCustomEvent("SlideSelectionChanged", ref paramsArray);
+			EventBinding.RaiseCustomEvent("SlideSelectionChanged", ref paramsArray);
 		}
 
 		public void ColorSchemeChanged([In, MarshalAs(UnmanagedType.IDispatch)] object sldRange)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("ColorSchemeChanged");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(sldRange);
-				return;
-			}
+            if (!Validate("ColorSchemeChanged"))
+            {
+                Invoker.ReleaseParamsArray(sldRange);
+                return;
+            }
 
-			NetOffice.PowerPointApi.SlideRange newSldRange = Factory.CreateObjectFromComProxy(_eventClass, sldRange) as NetOffice.PowerPointApi.SlideRange;
-			object[] paramsArray = new object[1];
+            NetOffice.PowerPointApi.SlideRange newSldRange = Factory.CreateKnownObjectFromComProxy<NetOffice.PowerPointApi.SlideRange>(EventClass, sldRange, NetOffice.PowerPointApi.SlideRange.LateBindingApiWrapperType);
+            object[] paramsArray = new object[1];
 			paramsArray[0] = newSldRange;
-			_eventBinding.RaiseCustomEvent("ColorSchemeChanged", ref paramsArray);
+			EventBinding.RaiseCustomEvent("ColorSchemeChanged", ref paramsArray);
 		}
 
 		public void PresentationBeforeSave([In, MarshalAs(UnmanagedType.IDispatch)] object pres, [In] [Out] ref object cancel)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("PresentationBeforeSave");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(pres, cancel);
-				return;
-			}
+        {
+            if (!Validate("PresentationBeforeSave"))
+            {
+                Invoker.ReleaseParamsArray(pres, cancel);
+                return;
+            }
 
-			NetOffice.PowerPointApi.Presentation newPres = Factory.CreateObjectFromComProxy(_eventClass, pres) as NetOffice.PowerPointApi.Presentation;
+			NetOffice.PowerPointApi.Presentation newPres = Factory.CreateKnownObjectFromComProxy<NetOffice.PowerPointApi.Presentation>(EventClass, pres, NetOffice.PowerPointApi.Presentation.LateBindingApiWrapperType);
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newPres;
 			paramsArray.SetValue(cancel, 1);
-			_eventBinding.RaiseCustomEvent("PresentationBeforeSave", ref paramsArray);
+			EventBinding.RaiseCustomEvent("PresentationBeforeSave", ref paramsArray);
 
 			cancel = (bool)paramsArray[1];
 		}
 
 		public void SlideShowNextClick([In, MarshalAs(UnmanagedType.IDispatch)] object wn, [In, MarshalAs(UnmanagedType.IDispatch)] object nEffect)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("SlideShowNextClick");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(wn, nEffect);
-				return;
-			}
+        {
+            if (!Validate("SlideShowNextClick"))
+            {
+                Invoker.ReleaseParamsArray(wn, nEffect);
+                return;
+            }
 
-			NetOffice.PowerPointApi.SlideShowWindow newWn = Factory.CreateObjectFromComProxy(_eventClass, wn) as NetOffice.PowerPointApi.SlideShowWindow;
-			NetOffice.PowerPointApi.Effect newnEffect = Factory.CreateObjectFromComProxy(_eventClass, nEffect) as NetOffice.PowerPointApi.Effect;
+            NetOffice.PowerPointApi.SlideShowWindow newWn = Factory.CreateKnownObjectFromComProxy<NetOffice.PowerPointApi.SlideShowWindow>(EventClass, wn, NetOffice.PowerPointApi.SlideShowWindow.LateBindingApiWrapperType);
+			NetOffice.PowerPointApi.Effect newnEffect = Factory.CreateKnownObjectFromComProxy<NetOffice.PowerPointApi.Effect>(EventClass, nEffect, NetOffice.PowerPointApi.Effect.LateBindingApiWrapperType);
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newWn;
 			paramsArray[1] = newnEffect;
-			_eventBinding.RaiseCustomEvent("SlideShowNextClick", ref paramsArray);
+			EventBinding.RaiseCustomEvent("SlideShowNextClick", ref paramsArray);
 		}
 
 		public void AfterNewPresentation([In, MarshalAs(UnmanagedType.IDispatch)] object pres)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("AfterNewPresentation");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(pres);
-				return;
-			}
+        {
+            if (!Validate("AfterNewPresentation"))
+            {
+                Invoker.ReleaseParamsArray(pres);
+                return;
+            }
 
-			NetOffice.PowerPointApi.Presentation newPres = Factory.CreateObjectFromComProxy(_eventClass, pres) as NetOffice.PowerPointApi.Presentation;
+			NetOffice.PowerPointApi.Presentation newPres = Factory.CreateKnownObjectFromComProxy<NetOffice.PowerPointApi.Presentation>(EventClass, pres, NetOffice.PowerPointApi.Presentation.LateBindingApiWrapperType);
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newPres;
-			_eventBinding.RaiseCustomEvent("AfterNewPresentation", ref paramsArray);
+			EventBinding.RaiseCustomEvent("AfterNewPresentation", ref paramsArray);
 		}
 
 		public void AfterPresentationOpen([In, MarshalAs(UnmanagedType.IDispatch)] object pres)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("AfterPresentationOpen");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(pres);
-				return;
-			}
+        {
+            if (!Validate("AfterPresentationOpen"))
+            {
+                Invoker.ReleaseParamsArray(pres);
+                return;
+            }
 
-			NetOffice.PowerPointApi.Presentation newPres = Factory.CreateObjectFromComProxy(_eventClass, pres) as NetOffice.PowerPointApi.Presentation;
-			object[] paramsArray = new object[1];
+            NetOffice.PowerPointApi.Presentation newPres = Factory.CreateKnownObjectFromComProxy<NetOffice.PowerPointApi.Presentation>(EventClass, pres, NetOffice.PowerPointApi.Presentation.LateBindingApiWrapperType);
+            object[] paramsArray = new object[1];
 			paramsArray[0] = newPres;
-			_eventBinding.RaiseCustomEvent("AfterPresentationOpen", ref paramsArray);
+			EventBinding.RaiseCustomEvent("AfterPresentationOpen", ref paramsArray);
 		}
 
 		public void PresentationSync([In, MarshalAs(UnmanagedType.IDispatch)] object pres, [In] object syncEventType)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("PresentationSync");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(pres, syncEventType);
-				return;
-			}
+        {
+            if (!Validate("PresentationSync"))
+            {
+                Invoker.ReleaseParamsArray(pres, syncEventType);
+                return;
+            }
 
-			NetOffice.PowerPointApi.Presentation newPres = Factory.CreateObjectFromComProxy(_eventClass, pres) as NetOffice.PowerPointApi.Presentation;
-			NetOffice.OfficeApi.Enums.MsoSyncEventType newSyncEventType = (NetOffice.OfficeApi.Enums.MsoSyncEventType)syncEventType;
+            NetOffice.PowerPointApi.Presentation newPres = Factory.CreateKnownObjectFromComProxy<NetOffice.PowerPointApi.Presentation>(EventClass, pres, NetOffice.PowerPointApi.Presentation.LateBindingApiWrapperType);
+            NetOffice.OfficeApi.Enums.MsoSyncEventType newSyncEventType = (NetOffice.OfficeApi.Enums.MsoSyncEventType)syncEventType;
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newPres;
 			paramsArray[1] = newSyncEventType;
-			_eventBinding.RaiseCustomEvent("PresentationSync", ref paramsArray);
+			EventBinding.RaiseCustomEvent("PresentationSync", ref paramsArray);
 		}
 
 		public void SlideShowOnNext([In, MarshalAs(UnmanagedType.IDispatch)] object wn)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("SlideShowOnNext");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(wn);
-				return;
-			}
+        {
+            if (!Validate("SlideShowOnNext"))
+            {
+                Invoker.ReleaseParamsArray(wn);
+                return;
+            }
 
-			NetOffice.PowerPointApi.SlideShowWindow newWn = Factory.CreateObjectFromComProxy(_eventClass, wn) as NetOffice.PowerPointApi.SlideShowWindow;
+			NetOffice.PowerPointApi.SlideShowWindow newWn = Factory.CreateKnownObjectFromComProxy<NetOffice.PowerPointApi.SlideShowWindow>(EventClass, wn, NetOffice.PowerPointApi.SlideShowWindow.LateBindingApiWrapperType);
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newWn;
-			_eventBinding.RaiseCustomEvent("SlideShowOnNext", ref paramsArray);
+			EventBinding.RaiseCustomEvent("SlideShowOnNext", ref paramsArray);
 		}
 
 		public void SlideShowOnPrevious([In, MarshalAs(UnmanagedType.IDispatch)] object wn)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("SlideShowOnPrevious");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(wn);
-				return;
-			}
+        {
+            if (!Validate("SlideShowOnPrevious"))
+            {
+                Invoker.ReleaseParamsArray(wn);
+                return;
+            }
 
-			NetOffice.PowerPointApi.SlideShowWindow newWn = Factory.CreateObjectFromComProxy(_eventClass, wn) as NetOffice.PowerPointApi.SlideShowWindow;
-			object[] paramsArray = new object[1];
+            NetOffice.PowerPointApi.SlideShowWindow newWn = Factory.CreateKnownObjectFromComProxy<NetOffice.PowerPointApi.SlideShowWindow>(EventClass, wn, NetOffice.PowerPointApi.SlideShowWindow.LateBindingApiWrapperType);
+            object[] paramsArray = new object[1];
 			paramsArray[0] = newWn;
-			_eventBinding.RaiseCustomEvent("SlideShowOnPrevious", ref paramsArray);
+			EventBinding.RaiseCustomEvent("SlideShowOnPrevious", ref paramsArray);
 		}
 
 		public void PresentationBeforeClose([In, MarshalAs(UnmanagedType.IDispatch)] object pres, [In] [Out] ref object cancel)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("PresentationBeforeClose");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(pres, cancel);
-				return;
-			}
+        {
+            if (!Validate("SlideShowOnPrevious"))
+            {
+                Invoker.ReleaseParamsArray(pres, cancel);
+                return;
+            }
 
-			NetOffice.PowerPointApi.Presentation newPres = Factory.CreateObjectFromComProxy(_eventClass, pres) as NetOffice.PowerPointApi.Presentation;
+			NetOffice.PowerPointApi.Presentation newPres = Factory.CreateKnownObjectFromComProxy<NetOffice.PowerPointApi.Presentation>(EventClass, pres, NetOffice.PowerPointApi.Presentation.LateBindingApiWrapperType);
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newPres;
 			paramsArray.SetValue(cancel, 1);
-			_eventBinding.RaiseCustomEvent("PresentationBeforeClose", ref paramsArray);
+			EventBinding.RaiseCustomEvent("PresentationBeforeClose", ref paramsArray);
 
-			cancel = (bool)paramsArray[1];
+			cancel = ToBoolean(paramsArray[1]);
 		}
 
 		public void ProtectedViewWindowOpen([In, MarshalAs(UnmanagedType.IDispatch)] object protViewWindow)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("ProtectedViewWindowOpen");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(protViewWindow);
-				return;
-			}
+        {
+            if (!Validate("ProtectedViewWindowOpen"))
+            {
+                Invoker.ReleaseParamsArray(protViewWindow);
+                return;
+            }
 
-			NetOffice.PowerPointApi.ProtectedViewWindow newProtViewWindow = Factory.CreateObjectFromComProxy(_eventClass, protViewWindow) as NetOffice.PowerPointApi.ProtectedViewWindow;
+			NetOffice.PowerPointApi.ProtectedViewWindow newProtViewWindow = Factory.CreateKnownObjectFromComProxy<NetOffice.PowerPointApi.ProtectedViewWindow>(EventClass, protViewWindow, NetOffice.PowerPointApi.ProtectedViewWindow.LateBindingApiWrapperType);
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newProtViewWindow;
-			_eventBinding.RaiseCustomEvent("ProtectedViewWindowOpen", ref paramsArray);
+			EventBinding.RaiseCustomEvent("ProtectedViewWindowOpen", ref paramsArray);
 		}
 
 		public void ProtectedViewWindowBeforeEdit([In, MarshalAs(UnmanagedType.IDispatch)] object protViewWindow, [In] [Out] ref object cancel)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("ProtectedViewWindowBeforeEdit");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(protViewWindow, cancel);
-				return;
-			}
+        {
+            if (!Validate("ProtectedViewWindowBeforeEdit"))
+            {
+                Invoker.ReleaseParamsArray(protViewWindow, cancel);
+                return;
+            }
 
-			NetOffice.PowerPointApi.ProtectedViewWindow newProtViewWindow = Factory.CreateObjectFromComProxy(_eventClass, protViewWindow) as NetOffice.PowerPointApi.ProtectedViewWindow;
-			object[] paramsArray = new object[2];
+            NetOffice.PowerPointApi.ProtectedViewWindow newProtViewWindow = Factory.CreateKnownObjectFromComProxy<NetOffice.PowerPointApi.ProtectedViewWindow>(EventClass, protViewWindow, NetOffice.PowerPointApi.ProtectedViewWindow.LateBindingApiWrapperType);
+            object[] paramsArray = new object[2];
 			paramsArray[0] = newProtViewWindow;
 			paramsArray.SetValue(cancel, 1);
-			_eventBinding.RaiseCustomEvent("ProtectedViewWindowBeforeEdit", ref paramsArray);
+			EventBinding.RaiseCustomEvent("ProtectedViewWindowBeforeEdit", ref paramsArray);
 
-			cancel = (bool)paramsArray[1];
+			cancel = ToBoolean(paramsArray[1]);
 		}
 
 		public void ProtectedViewWindowBeforeClose([In, MarshalAs(UnmanagedType.IDispatch)] object protViewWindow, [In] object protectedViewCloseReason, [In] [Out] ref object cancel)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("ProtectedViewWindowBeforeClose");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(protViewWindow, protectedViewCloseReason, cancel);
-				return;
-			}
+        {
+            if (!Validate("ProtectedViewWindowBeforeClose"))
+            {
+                Invoker.ReleaseParamsArray(protViewWindow, protectedViewCloseReason, cancel);
+                return;
+            }
 
-			NetOffice.PowerPointApi.ProtectedViewWindow newProtViewWindow = Factory.CreateObjectFromComProxy(_eventClass, protViewWindow) as NetOffice.PowerPointApi.ProtectedViewWindow;
-			NetOffice.PowerPointApi.Enums.PpProtectedViewCloseReason newProtectedViewCloseReason = (NetOffice.PowerPointApi.Enums.PpProtectedViewCloseReason)protectedViewCloseReason;
+            NetOffice.PowerPointApi.ProtectedViewWindow newProtViewWindow = Factory.CreateKnownObjectFromComProxy<NetOffice.PowerPointApi.ProtectedViewWindow>(EventClass, protViewWindow, NetOffice.PowerPointApi.ProtectedViewWindow.LateBindingApiWrapperType);
+            NetOffice.PowerPointApi.Enums.PpProtectedViewCloseReason newProtectedViewCloseReason = (NetOffice.PowerPointApi.Enums.PpProtectedViewCloseReason)protectedViewCloseReason;
 			object[] paramsArray = new object[3];
 			paramsArray[0] = newProtViewWindow;
 			paramsArray[1] = newProtectedViewCloseReason;
 			paramsArray.SetValue(cancel, 2);
-			_eventBinding.RaiseCustomEvent("ProtectedViewWindowBeforeClose", ref paramsArray);
+			EventBinding.RaiseCustomEvent("ProtectedViewWindowBeforeClose", ref paramsArray);
 
-			cancel = (bool)paramsArray[2];
-		}
+            cancel = ToBoolean(paramsArray[2]);
+        }
 
 		public void ProtectedViewWindowActivate([In, MarshalAs(UnmanagedType.IDispatch)] object protViewWindow)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("ProtectedViewWindowActivate");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(protViewWindow);
-				return;
-			}
+        {
+            if (!Validate("ProtectedViewWindowActivate"))
+            {
+                Invoker.ReleaseParamsArray(protViewWindow);
+                return;
+            }
 
-			NetOffice.PowerPointApi.ProtectedViewWindow newProtViewWindow = Factory.CreateObjectFromComProxy(_eventClass, protViewWindow) as NetOffice.PowerPointApi.ProtectedViewWindow;
-			object[] paramsArray = new object[1];
+            NetOffice.PowerPointApi.ProtectedViewWindow newProtViewWindow = Factory.CreateKnownObjectFromComProxy<NetOffice.PowerPointApi.ProtectedViewWindow>(EventClass, protViewWindow, NetOffice.PowerPointApi.ProtectedViewWindow.LateBindingApiWrapperType);
+            object[] paramsArray = new object[1];
 			paramsArray[0] = newProtViewWindow;
-			_eventBinding.RaiseCustomEvent("ProtectedViewWindowActivate", ref paramsArray);
+			EventBinding.RaiseCustomEvent("ProtectedViewWindowActivate", ref paramsArray);
 		}
 
 		public void ProtectedViewWindowDeactivate([In, MarshalAs(UnmanagedType.IDispatch)] object protViewWindow)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("ProtectedViewWindowDeactivate");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(protViewWindow);
-				return;
-			}
+        {
+            if (!Validate("ProtectedViewWindowDeactivate"))
+            {
+                Invoker.ReleaseParamsArray(protViewWindow);
+                return;
+            }
 
-			NetOffice.PowerPointApi.ProtectedViewWindow newProtViewWindow = Factory.CreateObjectFromComProxy(_eventClass, protViewWindow) as NetOffice.PowerPointApi.ProtectedViewWindow;
-			object[] paramsArray = new object[1];
+            NetOffice.PowerPointApi.ProtectedViewWindow newProtViewWindow = Factory.CreateKnownObjectFromComProxy<NetOffice.PowerPointApi.ProtectedViewWindow>(EventClass, protViewWindow, NetOffice.PowerPointApi.ProtectedViewWindow.LateBindingApiWrapperType);
+            object[] paramsArray = new object[1];
 			paramsArray[0] = newProtViewWindow;
-			_eventBinding.RaiseCustomEvent("ProtectedViewWindowDeactivate", ref paramsArray);
+			EventBinding.RaiseCustomEvent("ProtectedViewWindowDeactivate", ref paramsArray);
 		}
 
 		public void PresentationCloseFinal([In, MarshalAs(UnmanagedType.IDispatch)] object pres)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("PresentationCloseFinal");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(pres);
-				return;
-			}
+        {
+            if (!Validate("PresentationCloseFinal"))
+            {
+                Invoker.ReleaseParamsArray(pres);
+                return;
+            }
 
-			NetOffice.PowerPointApi.Presentation newPres = Factory.CreateObjectFromComProxy(_eventClass, pres) as NetOffice.PowerPointApi.Presentation;
+			NetOffice.PowerPointApi.Presentation newPres = Factory.CreateKnownObjectFromComProxy<NetOffice.PowerPointApi.Presentation>(EventClass, pres, NetOffice.PowerPointApi.Presentation.LateBindingApiWrapperType);
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newPres;
-			_eventBinding.RaiseCustomEvent("PresentationCloseFinal", ref paramsArray);
+			EventBinding.RaiseCustomEvent("PresentationCloseFinal", ref paramsArray);
 		}
 
 		public void AfterDragDropOnSlide([In, MarshalAs(UnmanagedType.IDispatch)] object sld, [In] object x, [In] object y)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("AfterDragDropOnSlide");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(sld, x, y);
-				return;
-			}
+        {
+            if (!Validate("AfterDragDropOnSlide"))
+            {
+                Invoker.ReleaseParamsArray(sld, x, y);
+                return;
+            }
 
-			NetOffice.PowerPointApi.Slide newSld = Factory.CreateObjectFromComProxy(_eventClass, sld) as NetOffice.PowerPointApi.Slide;
+			NetOffice.PowerPointApi.Slide newSld = Factory.CreateKnownObjectFromComProxy<NetOffice.PowerPointApi.Slide>(EventClass, sld, NetOffice.PowerPointApi.Slide.LateBindingApiWrapperType);
 			Single newX = Convert.ToSingle(x);
 			Single newY = Convert.ToSingle(y);
 			object[] paramsArray = new object[3];
 			paramsArray[0] = newSld;
 			paramsArray[1] = newX;
 			paramsArray[2] = newY;
-			_eventBinding.RaiseCustomEvent("AfterDragDropOnSlide", ref paramsArray);
+			EventBinding.RaiseCustomEvent("AfterDragDropOnSlide", ref paramsArray);
 		}
 
 		public void AfterShapeSizeChange([In, MarshalAs(UnmanagedType.IDispatch)] object shp)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("AfterShapeSizeChange");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(shp);
-				return;
-			}
+            if (!Validate("AfterShapeSizeChange"))
+            {
+                Invoker.ReleaseParamsArray(shp);
+                return;
+            }
 
-			NetOffice.PowerPointApi.Shape newshp = Factory.CreateObjectFromComProxy(_eventClass, shp) as NetOffice.PowerPointApi.Shape;
+			NetOffice.PowerPointApi.Shape newshp = Factory.CreateKnownObjectFromComProxy<NetOffice.PowerPointApi.Shape>(EventClass, shp, NetOffice.PowerPointApi.Shape.LateBindingApiWrapperType);
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newshp;
-			_eventBinding.RaiseCustomEvent("AfterShapeSizeChange", ref paramsArray);
+			EventBinding.RaiseCustomEvent("AfterShapeSizeChange", ref paramsArray);
 		}
 
 		#endregion

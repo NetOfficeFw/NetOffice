@@ -42,83 +42,55 @@ namespace NetOffice.OutlookApi.Events
 		public static readonly string Id = "000630F4-0000-0000-C000-000000000046";
 		
 		#endregion
-	
-		#region Fields
 
-		private IEventBinding	_eventBinding;
-        private ICOMObject _eventClass;
-        
-		#endregion
-		
-		#region Construction
+		#region Ctor
 
 		public NavigationGroupsEvents_12_SinkHelper(ICOMObject eventClass, IConnectionPoint connectPoint): base(eventClass)
 		{
-			_eventClass = eventClass;
-			_eventBinding = (IEventBinding)eventClass;
 			SetupEventBinding(connectPoint);
 		}
 		
 		#endregion
-		
-		#region Properties
 
-        internal Core Factory
-        {
-            get
-            {
-                if (null != _eventClass)
-                    return _eventClass.Factory;
-                else
-                    return Core.Default;
-            }
-        }
-
-        #endregion
-
-		#region NavigationGroupsEvents_12 Members
+		#region NavigationGroupsEvents_12
 		
 		public void SelectedChange([In, MarshalAs(UnmanagedType.IDispatch)] object navigationFolder)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("SelectedChange");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(navigationFolder);
-				return;
-			}
+            if (!Validate("SelectedChange"))
+            {
+                Invoker.ReleaseParamsArray(navigationFolder);
+                return;
+            }
 
-			NetOffice.OutlookApi.NavigationFolder newNavigationFolder = Factory.CreateObjectFromComProxy(_eventClass, navigationFolder) as NetOffice.OutlookApi.NavigationFolder;
+			NetOffice.OutlookApi.NavigationFolder newNavigationFolder = Factory.CreateKnownObjectFromComProxy<NetOffice.OutlookApi.NavigationFolder>(EventClass, navigationFolder, NetOffice.OutlookApi.NavigationFolder.LateBindingApiWrapperType);
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newNavigationFolder;
-			_eventBinding.RaiseCustomEvent("SelectedChange", ref paramsArray);
+			EventBinding.RaiseCustomEvent("SelectedChange", ref paramsArray);
 		}
 
 		public void NavigationFolderAdd([In, MarshalAs(UnmanagedType.IDispatch)] object navigationFolder)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("NavigationFolderAdd");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(navigationFolder);
-				return;
-			}
+            if (!Validate("NavigationFolderAdd"))
+            {
+                Invoker.ReleaseParamsArray(navigationFolder);
+                return;
+            }
 
-			NetOffice.OutlookApi.NavigationFolder newNavigationFolder = Factory.CreateObjectFromComProxy(_eventClass, navigationFolder) as NetOffice.OutlookApi.NavigationFolder;
-			object[] paramsArray = new object[1];
+            NetOffice.OutlookApi.NavigationFolder newNavigationFolder = Factory.CreateKnownObjectFromComProxy<NetOffice.OutlookApi.NavigationFolder>(EventClass, navigationFolder, NetOffice.OutlookApi.NavigationFolder.LateBindingApiWrapperType);
+            object[] paramsArray = new object[1];
 			paramsArray[0] = newNavigationFolder;
-			_eventBinding.RaiseCustomEvent("NavigationFolderAdd", ref paramsArray);
+			EventBinding.RaiseCustomEvent("NavigationFolderAdd", ref paramsArray);
 		}
 
 		public void NavigationFolderRemove()
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("NavigationFolderRemove");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray();
-				return;
-			}
+        {
+            if (!Validate("NavigationFolderRemove"))
+            {
+                return;
+            }
 
 			object[] paramsArray = new object[0];
-			_eventBinding.RaiseCustomEvent("NavigationFolderRemove", ref paramsArray);
+			EventBinding.RaiseCustomEvent("NavigationFolderRemove", ref paramsArray);
 		}
 
 		#endregion

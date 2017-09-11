@@ -5,12 +5,13 @@ using NetOffice.Attributes;
 
 namespace NetOffice.OfficeApi
 {
-	/// <summary>
-	/// DispatchInterface _IMsoOleAccDispObj 
-	/// SupportByVersion Office, 9,10,11,12,14,15,16
-	/// </summary>
-	[SupportByVersion("Office", 9,10,11,12,14,15,16)]
-	[EntityType(EntityType.IsDispatchInterface)]
+    /// <summary>
+    /// DispatchInterface _IMsoOleAccDispObj 
+    /// SupportByVersion Office, 9,10,11,12,14,15,16
+    /// </summary>
+    /// <remarks> MSDN Online: https://msdn.microsoft.com/en-us/library/microsoft.office.core._imsooleaccdispobj.aspx </remarks>
+    [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+	[EntityType(EntityType.IsDispatchInterface), BaseType]
  	public class _IMsoOleAccDispObj : IAccessible
 	{
 		#pragma warning disable

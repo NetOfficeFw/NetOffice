@@ -107,20 +107,6 @@ namespace NetOffice.MSHTMLApi
 		
 		#region Properties
 
-		/// <summary>
-		/// SupportByVersion MSHTML 4
-		/// Get
-		/// Unknown COM Proxy
-		/// </summary>
-		[SupportByVersion("MSHTML", 4), ProxyResult]
-		public object ownerDocument
-		{
-			get
-			{
-				return Factory.ExecuteReferencePropertyGet(this, "ownerDocument");
-			}
-		}
-
 		#endregion
 
 		#region Methods

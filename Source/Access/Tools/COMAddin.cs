@@ -753,7 +753,7 @@ namespace NetOffice.AccessApi.Tools
         [ComRegisterFunctionAttribute, Browsable(false), EditorBrowsable( EditorBrowsableState.Never)]
         public static void RegisterFunction(Type type)
         {
-            RegisterHandler.Proceed(type, new string[] { _addinOfficeRegistryKey }, InstallScope.System, OfficeRegisterKeyState.NeedToCreate);
+            COMAddinRegisterHandler.Proceed(type, new string[] { _addinOfficeRegistryKey }, InstallScope.System, OfficeRegisterKeyState.NeedToCreate);
         }
 
         /// <summary>
@@ -763,7 +763,7 @@ namespace NetOffice.AccessApi.Tools
         [ComUnregisterFunctionAttribute, Browsable(false), EditorBrowsable(EditorBrowsableState.Never)]
         public static void UnregisterFunction(Type type)
         {
-            UnRegisterHandler.Proceed(type, new string[] { _addinOfficeRegistryKey }, InstallScope.System, OfficeUnRegisterKeyState.NeedToDelete);
+            COMAddinUnRegisterHandler.Proceed(type, new string[] { _addinOfficeRegistryKey }, InstallScope.System, OfficeUnRegisterKeyState.NeedToDelete);
         }
 
         /// <summary>
@@ -780,7 +780,7 @@ namespace NetOffice.AccessApi.Tools
             InstallScope currentScope = (InstallScope)scope;
             OfficeRegisterKeyState currentKeyState = (OfficeRegisterKeyState)keyState;
 
-            RegisterHandler.Proceed(type, new string[] { _addinOfficeRegistryKey }, currentScope, currentKeyState);
+            COMAddinRegisterHandler.Proceed(type, new string[] { _addinOfficeRegistryKey }, currentScope, currentKeyState);
         }
 
         /// <summary>
@@ -797,7 +797,7 @@ namespace NetOffice.AccessApi.Tools
             InstallScope currentScope = (InstallScope)scope;
             OfficeUnRegisterKeyState currentKeyState = (OfficeUnRegisterKeyState)keyState;
 
-            UnRegisterHandler.Proceed(type, new string[] { _addinOfficeRegistryKey }, currentScope, currentKeyState);
+            COMAddinUnRegisterHandler.Proceed(type, new string[] { _addinOfficeRegistryKey }, currentScope, currentKeyState);
         }
 
         /// <summary>

@@ -10,7 +10,7 @@ namespace NetOffice.MSHTMLApi
 	/// SupportByVersion MSHTML, 4
 	/// </summary>
 	[SupportByVersion("MSHTML", 4)]
-	[EntityType(EntityType.IsDispatchInterface)]
+	[EntityType(EntityType.IsDispatchInterface), BaseType]
  	public class IHTMLObjectElement2 : IHTMLObjectElement
 	{
 		#pragma warning disable
@@ -106,42 +106,6 @@ namespace NetOffice.MSHTMLApi
 		#endregion
 		
 		#region Properties
-
-		/// <summary>
-		/// SupportByVersion MSHTML 4
-		/// Get/Set
-		/// </summary>
-		[SupportByVersion("MSHTML", 4)]
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public string classid
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "classid");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "classid", value);
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSHTML 4
-		/// Get/Set
-		/// </summary>
-		[SupportByVersion("MSHTML", 4)]
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public string data
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "data");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "data", value);
-			}
-		}
 
 		#endregion
 

@@ -35,54 +35,29 @@ namespace NetOffice.OutlookApi.Events
 		
 		#endregion
 	
-		#region Fields
-
-		private IEventBinding	_eventBinding;
-        private ICOMObject _eventClass;
-        
-		#endregion
-		
-		#region Construction
+		#region Ctor
 
 		public ExplorersEvents_SinkHelper(ICOMObject eventClass, IConnectionPoint connectPoint): base(eventClass)
 		{
-			_eventClass = eventClass;
-			_eventBinding = (IEventBinding)eventClass;
 			SetupEventBinding(connectPoint);
 		}
 		
 		#endregion
 		
-		#region Properties
-
-        internal Core Factory
-        {
-            get
-            {
-                if (null != _eventClass)
-                    return _eventClass.Factory;
-                else
-                    return Core.Default;
-            }
-        }
-
-        #endregion
-
-		#region ExplorersEvents Members
+		#region ExplorersEvents
 		
 		public void NewExplorer([In, MarshalAs(UnmanagedType.IDispatch)] object explorer)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("NewExplorer");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(explorer);
-				return;
-			}
+            if (!Validate("NewExplorer"))
+            {
+                Invoker.ReleaseParamsArray(explorer);
+                return;
+            }
 
-			NetOffice.OutlookApi._Explorer newExplorer = Factory.CreateObjectFromComProxy(_eventClass, explorer) as NetOffice.OutlookApi._Explorer;
+			NetOffice.OutlookApi._Explorer newExplorer = Factory.CreateKnownObjectFromComProxy<NetOffice.OutlookApi._Explorer>(EventClass, explorer, NetOffice.OutlookApi._Explorer.LateBindingApiWrapperType);
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newExplorer;
-			_eventBinding.RaiseCustomEvent("NewExplorer", ref paramsArray);
+			EventBinding.RaiseCustomEvent("NewExplorer", ref paramsArray);
 		}
 
 		#endregion

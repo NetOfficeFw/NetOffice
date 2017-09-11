@@ -65,136 +65,107 @@ namespace NetOffice.ADODBApi.Events
 		
 		public static readonly string Id = "00000400-0000-0010-8000-00AA006D2EA4";
 		
-		#endregion
-	
-		#region Fields
-
-		private IEventBinding	_eventBinding;
-        private ICOMObject		_eventClass;
-        
-		#endregion
+		#endregion	
 		
-		#region Construction
+		#region Ctor
 
 		public ConnectionEvents_SinkHelper(ICOMObject eventClass, IConnectionPoint connectPoint): base(eventClass)
 		{
-			_eventClass = eventClass;
-			_eventBinding = (IEventBinding)eventClass;
 			SetupEventBinding(connectPoint);
 		}
 		
 		#endregion
 		
-		#region Properties
-
-        internal Core Factory
-        {
-            get
-            {
-                if (null != _eventClass)
-                    return _eventClass.Factory;
-                else
-                    return Core.Default;
-            }
-        }
-
-        #endregion
-
 		#region ConnectionEvents Members
 		
 		public void InfoMessage([In, MarshalAs(UnmanagedType.IDispatch)] object pError, [In] object adStatus, [In, MarshalAs(UnmanagedType.IDispatch)] object pConnection)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("InfoMessage");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(pError, adStatus, pConnection);
-				return;
-			}
+            if(!Validate("InfoMessage"))
+            {
+                Invoker.ReleaseParamsArray(pError, adStatus, pConnection);
+                return;
+            }
 
-			NetOffice.ADODBApi.Error newpError = Factory.CreateObjectFromComProxy(_eventClass, pError) as NetOffice.ADODBApi.Error;
+			NetOffice.ADODBApi.Error newpError = Factory.CreateKnownObjectFromComProxy<NetOffice.ADODBApi.Error>(EventClass, pError, NetOffice.ADODBApi.Error.LateBindingApiWrapperType);
 			NetOffice.ADODBApi.Enums.EventStatusEnum newadStatus = (NetOffice.ADODBApi.Enums.EventStatusEnum)adStatus;
-			NetOffice.ADODBApi._Connection newpConnection = Factory.CreateObjectFromComProxy(_eventClass, pConnection) as NetOffice.ADODBApi._Connection;
+			NetOffice.ADODBApi._Connection newpConnection = Factory.CreateKnownObjectFromComProxy<NetOffice.ADODBApi._Connection>(EventClass, pConnection, NetOffice.ADODBApi._Connection.LateBindingApiWrapperType);
 			object[] paramsArray = new object[3];
 			paramsArray[0] = newpError;
 			paramsArray[1] = newadStatus;
 			paramsArray[2] = newpConnection;
-			_eventBinding.RaiseCustomEvent("InfoMessage", ref paramsArray);
+			EventBinding.RaiseCustomEvent("InfoMessage", ref paramsArray);
 		}
 
 		public void BeginTransComplete([In] object transactionLevel, [In, MarshalAs(UnmanagedType.IDispatch)] object pError, [In] object adStatus, [In, MarshalAs(UnmanagedType.IDispatch)] object pConnection)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("BeginTransComplete");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(transactionLevel, pError, adStatus, pConnection);
-				return;
-			}
+        {
+            if (!Validate("BeginTransComplete"))
+            {
+                Invoker.ReleaseParamsArray(transactionLevel, pError, adStatus, pConnection);
+                return;
+            }
 
 			Int32 newTransactionLevel = Convert.ToInt32(transactionLevel);
-			NetOffice.ADODBApi.Error newpError = Factory.CreateObjectFromComProxy(_eventClass, pError) as NetOffice.ADODBApi.Error;
+			NetOffice.ADODBApi.Error newpError = Factory.CreateKnownObjectFromComProxy<NetOffice.ADODBApi.Error>(EventClass, pError, NetOffice.ADODBApi.Error.LateBindingApiWrapperType);
 			NetOffice.ADODBApi.Enums.EventStatusEnum newadStatus = (NetOffice.ADODBApi.Enums.EventStatusEnum)adStatus;
-			NetOffice.ADODBApi._Connection newpConnection = Factory.CreateObjectFromComProxy(_eventClass, pConnection) as NetOffice.ADODBApi._Connection;
+            NetOffice.ADODBApi._Connection newpConnection = Factory.CreateKnownObjectFromComProxy<NetOffice.ADODBApi._Connection>(EventClass, pConnection, NetOffice.ADODBApi._Connection.LateBindingApiWrapperType);
 			object[] paramsArray = new object[4];
 			paramsArray[0] = newTransactionLevel;
 			paramsArray[1] = newpError;
 			paramsArray[2] = newadStatus;
 			paramsArray[3] = newpConnection;
-			_eventBinding.RaiseCustomEvent("BeginTransComplete", ref paramsArray);
+			EventBinding.RaiseCustomEvent("BeginTransComplete", ref paramsArray);
 		}
 
 		public void CommitTransComplete([In, MarshalAs(UnmanagedType.IDispatch)] object pError, [In] object adStatus, [In, MarshalAs(UnmanagedType.IDispatch)] object pConnection)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("CommitTransComplete");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(pError, adStatus, pConnection);
-				return;
-			}
+            if (!Validate("CommitTransComplete"))
+            {
+                Invoker.ReleaseParamsArray(pError, adStatus, pConnection);
+                return;
+            }
 
-			NetOffice.ADODBApi.Error newpError = Factory.CreateObjectFromComProxy(_eventClass, pError) as NetOffice.ADODBApi.Error;
+			NetOffice.ADODBApi.Error newpError = Factory.CreateKnownObjectFromComProxy<NetOffice.ADODBApi.Error>(EventClass, pError, NetOffice.ADODBApi.Error.LateBindingApiWrapperType);
 			NetOffice.ADODBApi.Enums.EventStatusEnum newadStatus = (NetOffice.ADODBApi.Enums.EventStatusEnum)adStatus;
-			NetOffice.ADODBApi._Connection newpConnection = Factory.CreateObjectFromComProxy(_eventClass, pConnection) as NetOffice.ADODBApi._Connection;
+            NetOffice.ADODBApi._Connection newpConnection = Factory.CreateKnownObjectFromComProxy<NetOffice.ADODBApi._Connection>(EventClass, pConnection, NetOffice.ADODBApi._Connection.LateBindingApiWrapperType);
 			object[] paramsArray = new object[3];
 			paramsArray[0] = newpError;
 			paramsArray[1] = newadStatus;
 			paramsArray[2] = newpConnection;
-			_eventBinding.RaiseCustomEvent("CommitTransComplete", ref paramsArray);
+			EventBinding.RaiseCustomEvent("CommitTransComplete", ref paramsArray);
 		}
 
 		public void RollbackTransComplete([In, MarshalAs(UnmanagedType.IDispatch)] object pError, [In] object adStatus, [In, MarshalAs(UnmanagedType.IDispatch)] object pConnection)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("RollbackTransComplete");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(pError, adStatus, pConnection);
-				return;
-			}
+        {
+            if (!Validate("RollbackTransComplete"))
+            {
+                Invoker.ReleaseParamsArray(pError, adStatus, pConnection);
+                return;
+            }
 
-			NetOffice.ADODBApi.Error newpError = Factory.CreateObjectFromComProxy(_eventClass, pError) as NetOffice.ADODBApi.Error;
+			NetOffice.ADODBApi.Error newpError = Factory.CreateKnownObjectFromComProxy<NetOffice.ADODBApi.Error>(EventClass, pError, NetOffice.ADODBApi.Error.LateBindingApiWrapperType);
 			NetOffice.ADODBApi.Enums.EventStatusEnum newadStatus = (NetOffice.ADODBApi.Enums.EventStatusEnum)adStatus;
-			NetOffice.ADODBApi._Connection newpConnection = Factory.CreateObjectFromComProxy(_eventClass, pConnection) as NetOffice.ADODBApi._Connection;
+			NetOffice.ADODBApi._Connection newpConnection = Factory.CreateKnownObjectFromComProxy<NetOffice.ADODBApi._Connection>(EventClass, pConnection, NetOffice.ADODBApi._Connection.LateBindingApiWrapperType);
 			object[] paramsArray = new object[3];
 			paramsArray[0] = newpError;
 			paramsArray[1] = newadStatus;
 			paramsArray[2] = newpConnection;
-			_eventBinding.RaiseCustomEvent("RollbackTransComplete", ref paramsArray);
+			EventBinding.RaiseCustomEvent("RollbackTransComplete", ref paramsArray);
 		}
 
 		public void WillExecute([In] [Out] ref object source, [In] object cursorType, [In] object lockType, [In] [Out] ref object options, [In] object adStatus, [In, MarshalAs(UnmanagedType.IDispatch)] object pCommand, [In, MarshalAs(UnmanagedType.IDispatch)] object pRecordset, [In, MarshalAs(UnmanagedType.IDispatch)] object pConnection)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("WillExecute");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(source, cursorType, lockType, options, adStatus, pCommand, pRecordset, pConnection);
-				return;
-			}
+            if (!Validate("WillExecute"))
+            {
+                Invoker.ReleaseParamsArray(source, cursorType, lockType, options, adStatus, pCommand, pRecordset, pConnection);
+                return;
+            }
 
 			NetOffice.ADODBApi.Enums.CursorTypeEnum newCursorType = (NetOffice.ADODBApi.Enums.CursorTypeEnum)cursorType;
 			NetOffice.ADODBApi.Enums.LockTypeEnum newLockType = (NetOffice.ADODBApi.Enums.LockTypeEnum)lockType;
 			NetOffice.ADODBApi.Enums.EventStatusEnum newadStatus = (NetOffice.ADODBApi.Enums.EventStatusEnum)adStatus;
-			NetOffice.ADODBApi._Command newpCommand = Factory.CreateObjectFromComProxy(_eventClass, pCommand) as NetOffice.ADODBApi._Command;
-			NetOffice.ADODBApi._Recordset newpRecordset = Factory.CreateObjectFromComProxy(_eventClass, pRecordset) as NetOffice.ADODBApi._Recordset;
-			NetOffice.ADODBApi._Connection newpConnection = Factory.CreateObjectFromComProxy(_eventClass, pConnection) as NetOffice.ADODBApi._Connection;
+			NetOffice.ADODBApi._Command newpCommand = Factory.CreateKnownObjectFromComProxy<NetOffice.ADODBApi._Command>(EventClass, pCommand, NetOffice.ADODBApi._Command.LateBindingApiWrapperType);
+            NetOffice.ADODBApi._Recordset newpRecordset = Factory.CreateKnownObjectFromComProxy<NetOffice.ADODBApi._Recordset> (EventClass, pRecordset, NetOffice.ADODBApi._Recordset.LateBindingApiWrapperType);
+			NetOffice.ADODBApi._Connection newpConnection = Factory.CreateKnownObjectFromComProxy<NetOffice.ADODBApi._Connection>(EventClass, pConnection, NetOffice.ADODBApi._Connection.LateBindingApiWrapperType);
 			object[] paramsArray = new object[8];
 			paramsArray.SetValue(source, 0);
 			paramsArray[1] = newCursorType;
@@ -204,27 +175,26 @@ namespace NetOffice.ADODBApi.Events
 			paramsArray[5] = newpCommand;
 			paramsArray[6] = newpRecordset;
 			paramsArray[7] = newpConnection;
-			_eventBinding.RaiseCustomEvent("WillExecute", ref paramsArray);
+			EventBinding.RaiseCustomEvent("WillExecute", ref paramsArray);
 
-			source = (string)paramsArray[0];
-			options = (Int32)paramsArray[3];
+            source = Convert.ToString(paramsArray[0]);
+            options = ToInt32(paramsArray[3]);            
 		}
 
 		public void ExecuteComplete([In] object recordsAffected, [In, MarshalAs(UnmanagedType.IDispatch)] object pError, [In] object adStatus, [In, MarshalAs(UnmanagedType.IDispatch)] object pCommand, [In, MarshalAs(UnmanagedType.IDispatch)] object pRecordset, [In, MarshalAs(UnmanagedType.IDispatch)] object pConnection)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("ExecuteComplete");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(recordsAffected, pError, adStatus, pCommand, pRecordset, pConnection);
-				return;
-			}
+            if (!Validate("ExecuteComplete"))
+            {
+                Invoker.ReleaseParamsArray(recordsAffected, pError, adStatus, pCommand, pRecordset, pConnection);
+                return;
+            }
 
 			Int32 newRecordsAffected = Convert.ToInt32(recordsAffected);
-			NetOffice.ADODBApi.Error newpError = Factory.CreateObjectFromComProxy(_eventClass, pError) as NetOffice.ADODBApi.Error;
+			NetOffice.ADODBApi.Error newpError = Factory.CreateKnownObjectFromComProxy<NetOffice.ADODBApi.Error>(EventClass, pError, NetOffice.ADODBApi.Error.LateBindingApiWrapperType);
 			NetOffice.ADODBApi.Enums.EventStatusEnum newadStatus = (NetOffice.ADODBApi.Enums.EventStatusEnum)adStatus;
-			NetOffice.ADODBApi._Command newpCommand = Factory.CreateObjectFromComProxy(_eventClass, pCommand) as NetOffice.ADODBApi._Command;
-			NetOffice.ADODBApi._Recordset newpRecordset = Factory.CreateObjectFromComProxy(_eventClass, pRecordset) as NetOffice.ADODBApi._Recordset;
-			NetOffice.ADODBApi._Connection newpConnection = Factory.CreateObjectFromComProxy(_eventClass, pConnection) as NetOffice.ADODBApi._Connection;
+            NetOffice.ADODBApi._Command newpCommand = Factory.CreateKnownObjectFromComProxy<NetOffice.ADODBApi._Command>(EventClass, pCommand, NetOffice.ADODBApi._Command.LateBindingApiWrapperType);
+			NetOffice.ADODBApi._Recordset newpRecordset = Factory.CreateKnownObjectFromComProxy<NetOffice.ADODBApi._Recordset>(EventClass, pRecordset, NetOffice.ADODBApi._Recordset.LateBindingApiWrapperType);
+			NetOffice.ADODBApi._Connection newpConnection = Factory.CreateKnownObjectFromComProxy<NetOffice.ADODBApi._Connection>(EventClass, pConnection, NetOffice.ADODBApi._Connection.LateBindingApiWrapperType);
 			object[] paramsArray = new object[6];
 			paramsArray[0] = newRecordsAffected;
 			paramsArray[1] = newpError;
@@ -232,20 +202,19 @@ namespace NetOffice.ADODBApi.Events
 			paramsArray[3] = newpCommand;
 			paramsArray[4] = newpRecordset;
 			paramsArray[5] = newpConnection;
-			_eventBinding.RaiseCustomEvent("ExecuteComplete", ref paramsArray);
+			EventBinding.RaiseCustomEvent("ExecuteComplete", ref paramsArray);
 		}
 
 		public void WillConnect([In] [Out] ref object connectionString, [In] [Out] ref object userID, [In] [Out] ref object password, [In] [Out] ref object options, [In] object adStatus, [In, MarshalAs(UnmanagedType.IDispatch)] object pConnection)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("WillConnect");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(connectionString, userID, password, options, adStatus, pConnection);
-				return;
-			}
+        {
+            if (!Validate("WillConnect"))
+            {
+                Invoker.ReleaseParamsArray(connectionString, userID, password, options, adStatus, pConnection);
+                return;
+            }
 
 			NetOffice.ADODBApi.Enums.EventStatusEnum newadStatus = (NetOffice.ADODBApi.Enums.EventStatusEnum)adStatus;
-			NetOffice.ADODBApi._Connection newpConnection = Factory.CreateObjectFromComProxy(_eventClass, pConnection) as NetOffice.ADODBApi._Connection;
+			NetOffice.ADODBApi._Connection newpConnection = Factory.CreateKnownObjectFromComProxy<NetOffice.ADODBApi._Connection>(EventClass, pConnection, NetOffice.ADODBApi._Connection.LateBindingApiWrapperType);
 			object[] paramsArray = new object[6];
 			paramsArray.SetValue(connectionString, 0);
 			paramsArray.SetValue(userID, 1);
@@ -253,48 +222,46 @@ namespace NetOffice.ADODBApi.Events
 			paramsArray.SetValue(options, 3);
 			paramsArray[4] = newadStatus;
 			paramsArray[5] = newpConnection;
-			_eventBinding.RaiseCustomEvent("WillConnect", ref paramsArray);
+			EventBinding.RaiseCustomEvent("WillConnect", ref paramsArray);
 
-			connectionString = (string)paramsArray[0];
-			userID = (string)paramsArray[1];
-			password = (string)paramsArray[2];
-			options = (Int32)paramsArray[3];
+			connectionString = Convert.ToString(paramsArray[0]);
+			userID = Convert.ToString(paramsArray[1]);
+			password = Convert.ToString(paramsArray[2]);
+			options = ToInt32(paramsArray[3]);
 		}
 
 		public void ConnectComplete([In, MarshalAs(UnmanagedType.IDispatch)] object pError, [In] object adStatus, [In, MarshalAs(UnmanagedType.IDispatch)] object pConnection)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("ConnectComplete");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(pError, adStatus, pConnection);
-				return;
-			}
+        {
+            if (!Validate("ConnectComplete"))
+            {
+                Invoker.ReleaseParamsArray(pError, adStatus, pConnection);
+                return;
+            }
 
-			NetOffice.ADODBApi.Error newpError = Factory.CreateObjectFromComProxy(_eventClass, pError) as NetOffice.ADODBApi.Error;
+			NetOffice.ADODBApi.Error newpError = Factory.CreateKnownObjectFromComProxy<NetOffice.ADODBApi.Error>(EventClass, pError, NetOffice.ADODBApi.Error.LateBindingApiWrapperType);
 			NetOffice.ADODBApi.Enums.EventStatusEnum newadStatus = (NetOffice.ADODBApi.Enums.EventStatusEnum)adStatus;
-			NetOffice.ADODBApi._Connection newpConnection = Factory.CreateObjectFromComProxy(_eventClass, pConnection) as NetOffice.ADODBApi._Connection;
+			NetOffice.ADODBApi._Connection newpConnection = Factory.CreateKnownObjectFromComProxy<NetOffice.ADODBApi._Connection>(EventClass, pConnection, NetOffice.ADODBApi._Connection.LateBindingApiWrapperType);
 			object[] paramsArray = new object[3];
 			paramsArray[0] = newpError;
 			paramsArray[1] = newadStatus;
 			paramsArray[2] = newpConnection;
-			_eventBinding.RaiseCustomEvent("ConnectComplete", ref paramsArray);
+			EventBinding.RaiseCustomEvent("ConnectComplete", ref paramsArray);
 		}
 
 		public void Disconnect([In] object adStatus, [In, MarshalAs(UnmanagedType.IDispatch)] object pConnection)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("Disconnect");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(adStatus, pConnection);
-				return;
-			}
+        {
+            if (!Validate("Disconnect"))
+            {
+                Invoker.ReleaseParamsArray(adStatus, pConnection);
+                return;
+            }
 
 			NetOffice.ADODBApi.Enums.EventStatusEnum newadStatus = (NetOffice.ADODBApi.Enums.EventStatusEnum)adStatus;
-			NetOffice.ADODBApi._Connection newpConnection = Factory.CreateObjectFromComProxy(_eventClass, pConnection) as NetOffice.ADODBApi._Connection;
+			NetOffice.ADODBApi._Connection newpConnection = Factory.CreateKnownObjectFromComProxy<NetOffice.ADODBApi._Connection>(EventClass, pConnection, NetOffice.ADODBApi._Connection.LateBindingApiWrapperType);
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newadStatus;
 			paramsArray[1] = newpConnection;
-			_eventBinding.RaiseCustomEvent("Disconnect", ref paramsArray);
+			EventBinding.RaiseCustomEvent("Disconnect", ref paramsArray);
 		}
 
 		#endregion

@@ -86,271 +86,227 @@ namespace NetOffice.OutlookApi.Events
 		public static readonly string Id = "00067368-0000-0000-C000-000000000046";
 		
 		#endregion
-	
-		#region Fields
 
-		private IEventBinding	_eventBinding;
-        private ICOMObject _eventClass;
-        
-		#endregion
-		
-		#region Construction
+		#region Ctor
 
 		public OlkTimeZoneControlEvents_SinkHelper(ICOMObject eventClass, IConnectionPoint connectPoint): base(eventClass)
 		{
-			_eventClass = eventClass;
-			_eventBinding = (IEventBinding)eventClass;
 			SetupEventBinding(connectPoint);
 		}
-		
-		#endregion
-		
-		#region Properties
-
-        internal Core Factory
-        {
-            get
-            {
-                if (null != _eventClass)
-                    return _eventClass.Factory;
-                else
-                    return Core.Default;
-            }
-        }
 
         #endregion
 
-		#region OlkTimeZoneControlEvents Members
-		
-		public void Click()
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("Click");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray();
-				return;
-			}
+        #region OlkTimeZoneControlEvents
 
-			object[] paramsArray = new object[0];
-			_eventBinding.RaiseCustomEvent("Click", ref paramsArray);
-		}
+        public void Click()
+        {
+            if (!Validate("Click"))
+            {
+                return;
+            }
 
-		public void DoubleClick()
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("DoubleClick");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray();
-				return;
-			}
+            object[] paramsArray = new object[0];
+            EventBinding.RaiseCustomEvent("Click", ref paramsArray);
+        }
 
-			object[] paramsArray = new object[0];
-			_eventBinding.RaiseCustomEvent("DoubleClick", ref paramsArray);
-		}
+        public void DoubleClick()
+        {
+            if (!Validate("DoubleClick"))
+            {
+                return;
+            }
 
-		public void MouseDown([In] object button, [In] object shift, [In] object x, [In] object y)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("MouseDown");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(button, shift, x, y);
-				return;
-			}
+            object[] paramsArray = new object[0];
+            EventBinding.RaiseCustomEvent("DoubleClick", ref paramsArray);
+        }
 
-			NetOffice.OutlookApi.Enums.OlMouseButton newButton = (NetOffice.OutlookApi.Enums.OlMouseButton)button;
-			NetOffice.OutlookApi.Enums.OlShiftState newShift = (NetOffice.OutlookApi.Enums.OlShiftState)shift;
-			Single newX = Convert.ToSingle(x);
-			Single newY = Convert.ToSingle(y);
-			object[] paramsArray = new object[4];
-			paramsArray[0] = newButton;
-			paramsArray[1] = newShift;
-			paramsArray[2] = newX;
-			paramsArray[3] = newY;
-			_eventBinding.RaiseCustomEvent("MouseDown", ref paramsArray);
-		}
+        public void MouseDown([In] object button, [In] object shift, [In] object x, [In] object y)
+        {
+            if (!Validate("MouseDown"))
+            {
+                Invoker.ReleaseParamsArray(button, shift, x, y);
+                return;
+            }
 
-		public void MouseMove([In] object button, [In] object shift, [In] object x, [In] object y)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("MouseMove");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(button, shift, x, y);
-				return;
-			}
+            NetOffice.OutlookApi.Enums.OlMouseButton newButton = (NetOffice.OutlookApi.Enums.OlMouseButton)button;
+            NetOffice.OutlookApi.Enums.OlShiftState newShift = (NetOffice.OutlookApi.Enums.OlShiftState)shift;
+            Single newX = Convert.ToSingle(x);
+            Single newY = Convert.ToSingle(y);
+            object[] paramsArray = new object[4];
+            paramsArray[0] = newButton;
+            paramsArray[1] = newShift;
+            paramsArray[2] = newX;
+            paramsArray[3] = newY;
+            EventBinding.RaiseCustomEvent("MouseDown", ref paramsArray);
+        }
 
-			NetOffice.OutlookApi.Enums.OlMouseButton newButton = (NetOffice.OutlookApi.Enums.OlMouseButton)button;
-			NetOffice.OutlookApi.Enums.OlShiftState newShift = (NetOffice.OutlookApi.Enums.OlShiftState)shift;
-			Single newX = Convert.ToSingle(x);
-			Single newY = Convert.ToSingle(y);
-			object[] paramsArray = new object[4];
-			paramsArray[0] = newButton;
-			paramsArray[1] = newShift;
-			paramsArray[2] = newX;
-			paramsArray[3] = newY;
-			_eventBinding.RaiseCustomEvent("MouseMove", ref paramsArray);
-		}
+        public void MouseMove([In] object button, [In] object shift, [In] object x, [In] object y)
+        {
+            if (!Validate("MouseMove"))
+            {
+                Invoker.ReleaseParamsArray(button, shift, x, y);
+                return;
+            }
 
-		public void MouseUp([In] object button, [In] object shift, [In] object x, [In] object y)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("MouseUp");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(button, shift, x, y);
-				return;
-			}
+            NetOffice.OutlookApi.Enums.OlMouseButton newButton = (NetOffice.OutlookApi.Enums.OlMouseButton)button;
+            NetOffice.OutlookApi.Enums.OlShiftState newShift = (NetOffice.OutlookApi.Enums.OlShiftState)shift;
+            Single newX = Convert.ToSingle(x);
+            Single newY = Convert.ToSingle(y);
+            object[] paramsArray = new object[4];
+            paramsArray[0] = newButton;
+            paramsArray[1] = newShift;
+            paramsArray[2] = newX;
+            paramsArray[3] = newY;
+            EventBinding.RaiseCustomEvent("MouseMove", ref paramsArray);
+        }
 
-			NetOffice.OutlookApi.Enums.OlMouseButton newButton = (NetOffice.OutlookApi.Enums.OlMouseButton)button;
-			NetOffice.OutlookApi.Enums.OlShiftState newShift = (NetOffice.OutlookApi.Enums.OlShiftState)shift;
-			Single newX = Convert.ToSingle(x);
-			Single newY = Convert.ToSingle(y);
-			object[] paramsArray = new object[4];
-			paramsArray[0] = newButton;
-			paramsArray[1] = newShift;
-			paramsArray[2] = newX;
-			paramsArray[3] = newY;
-			_eventBinding.RaiseCustomEvent("MouseUp", ref paramsArray);
-		}
+        public void MouseUp([In] object button, [In] object shift, [In] object x, [In] object y)
+        {
+            if (!Validate("MouseUp"))
+            {
+                Invoker.ReleaseParamsArray(button, shift, x, y);
+                return;
+            }
 
-		public void Enter()
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("Enter");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray();
-				return;
-			}
+            NetOffice.OutlookApi.Enums.OlMouseButton newButton = (NetOffice.OutlookApi.Enums.OlMouseButton)button;
+            NetOffice.OutlookApi.Enums.OlShiftState newShift = (NetOffice.OutlookApi.Enums.OlShiftState)shift;
+            Single newX = Convert.ToSingle(x);
+            Single newY = Convert.ToSingle(y);
+            object[] paramsArray = new object[4];
+            paramsArray[0] = newButton;
+            paramsArray[1] = newShift;
+            paramsArray[2] = newX;
+            paramsArray[3] = newY;
+            EventBinding.RaiseCustomEvent("MouseUp", ref paramsArray);
+        }
 
-			object[] paramsArray = new object[0];
-			_eventBinding.RaiseCustomEvent("Enter", ref paramsArray);
-		}
+        public void Enter()
+        {
+            if (!Validate("Enter"))
+            {
+                return;
+            }
 
-		public void Exit([In] [Out] ref object cancel)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("Exit");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(cancel);
-				return;
-			}
+            object[] paramsArray = new object[0];
+            EventBinding.RaiseCustomEvent("Enter", ref paramsArray);
+        }
 
-			object[] paramsArray = new object[1];
-			paramsArray.SetValue(cancel, 0);
-			_eventBinding.RaiseCustomEvent("Exit", ref paramsArray);
+        public void Exit([In] [Out] ref object cancel)
+        {
+            if (!Validate("Exit"))
+            {
+                Invoker.ReleaseParamsArray(cancel);
+                return;
+            }
 
-			cancel = (bool)paramsArray[0];
-		}
+            object[] paramsArray = new object[1];
+            paramsArray.SetValue(cancel, 0);
+            EventBinding.RaiseCustomEvent("Exit", ref paramsArray);
 
-		public void KeyDown([In] [Out] ref object keyCode, [In] object shift)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("KeyDown");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(keyCode, shift);
-				return;
-			}
+            cancel = ToBoolean(paramsArray[0]);
+        }
 
-			NetOffice.OutlookApi.Enums.OlShiftState newShift = (NetOffice.OutlookApi.Enums.OlShiftState)shift;
-			object[] paramsArray = new object[2];
-			paramsArray.SetValue(keyCode, 0);
-			paramsArray[1] = newShift;
-			_eventBinding.RaiseCustomEvent("KeyDown", ref paramsArray);
+        public void KeyDown([In] [Out] ref object keyCode, [In] object shift)
+        {
+            if (!Validate("KeyDown"))
+            {
+                Invoker.ReleaseParamsArray(keyCode, shift);
+                return;
+            }
 
-			keyCode = (Int32)paramsArray[0];
-		}
+            NetOffice.OutlookApi.Enums.OlShiftState newShift = (NetOffice.OutlookApi.Enums.OlShiftState)shift;
+            object[] paramsArray = new object[2];
+            paramsArray.SetValue(keyCode, 0);
+            paramsArray[1] = newShift;
+            EventBinding.RaiseCustomEvent("KeyDown", ref paramsArray);
 
-		public void KeyPress([In] [Out] ref object keyAscii)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("KeyPress");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(keyAscii);
-				return;
-			}
+            keyCode = ToInt32(paramsArray[0]);
+        }
 
-			object[] paramsArray = new object[1];
-			paramsArray.SetValue(keyAscii, 0);
-			_eventBinding.RaiseCustomEvent("KeyPress", ref paramsArray);
+        public void KeyPress([In] [Out] ref object keyAscii)
+        {
+            if (!Validate("KeyPress"))
+            {
+                Invoker.ReleaseParamsArray(keyAscii);
+                return;
+            }
 
-			keyAscii = (Int32)paramsArray[0];
-		}
+            object[] paramsArray = new object[1];
+            paramsArray.SetValue(keyAscii, 0);
+            EventBinding.RaiseCustomEvent("KeyPress", ref paramsArray);
 
-		public void KeyUp([In] [Out] ref object keyCode, [In] object shift)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("KeyUp");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(keyCode, shift);
-				return;
-			}
+            keyAscii = ToInt32(paramsArray[0]);
+        }
 
-			NetOffice.OutlookApi.Enums.OlShiftState newShift = (NetOffice.OutlookApi.Enums.OlShiftState)shift;
-			object[] paramsArray = new object[2];
-			paramsArray.SetValue(keyCode, 0);
-			paramsArray[1] = newShift;
-			_eventBinding.RaiseCustomEvent("KeyUp", ref paramsArray);
+        public void KeyUp([In] [Out] ref object keyCode, [In] object shift)
+        {
+            if (!Validate("KeyUp"))
+            {
+                Invoker.ReleaseParamsArray(keyCode, shift);
+                return;
+            }
 
-			keyCode = (Int32)paramsArray[0];
-		}
+            NetOffice.OutlookApi.Enums.OlShiftState newShift = (NetOffice.OutlookApi.Enums.OlShiftState)shift;
+            object[] paramsArray = new object[2];
+            paramsArray.SetValue(keyCode, 0);
+            paramsArray[1] = newShift;
+            EventBinding.RaiseCustomEvent("KeyUp", ref paramsArray);
 
-		public void Change()
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("Change");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray();
-				return;
-			}
+            keyCode = ToInt32(paramsArray[0]);
+        }
 
-			object[] paramsArray = new object[0];
-			_eventBinding.RaiseCustomEvent("Change", ref paramsArray);
-		}
+        public void Change()
+        {
+            if (!Validate("Change"))
+            {
+                return;
+            }
 
-		public void DropButtonClick()
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("DropButtonClick");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray();
-				return;
-			}
+            object[] paramsArray = new object[0];
+            EventBinding.RaiseCustomEvent("Change", ref paramsArray);
+        }
 
-			object[] paramsArray = new object[0];
-			_eventBinding.RaiseCustomEvent("DropButtonClick", ref paramsArray);
-		}
+        public void DropButtonClick()
+        {
+            if (!Validate("DropButtonClick"))
+            {
+                return;
+            }
 
-		public void AfterUpdate()
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("AfterUpdate");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray();
-				return;
-			}
+            object[] paramsArray = new object[0];
+            EventBinding.RaiseCustomEvent("DropButtonClick", ref paramsArray);
+        }
 
-			object[] paramsArray = new object[0];
-			_eventBinding.RaiseCustomEvent("AfterUpdate", ref paramsArray);
-		}
+        public void AfterUpdate()
+        {
+            if (!Validate("AfterUpdate"))
+            {
+                return;
+            }
 
-		public void BeforeUpdate([In] [Out] ref object cancel)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("BeforeUpdate");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(cancel);
-				return;
-			}
+            object[] paramsArray = new object[0];
+            EventBinding.RaiseCustomEvent("AfterUpdate", ref paramsArray);
+        }
 
-			object[] paramsArray = new object[1];
-			paramsArray.SetValue(cancel, 0);
-			_eventBinding.RaiseCustomEvent("BeforeUpdate", ref paramsArray);
+        public void BeforeUpdate([In] [Out] ref object cancel)
+        {
+            if (!Validate("BeforeUpdate"))
+            {
+                Invoker.ReleaseParamsArray(cancel);
+                return;
+            }
 
-			cancel = (bool)paramsArray[0];
-		}
+            object[] paramsArray = new object[1];
+            paramsArray.SetValue(cancel, 0);
+            EventBinding.RaiseCustomEvent("BeforeUpdate", ref paramsArray);
 
-		#endregion
-	}
-	
-	#endregion
-	
-	#pragma warning restore
+            cancel = ToBoolean(paramsArray[0]);
+        }
+
+        #endregion
+    }
+
+    #endregion
+
+#pragma warning restore
 }

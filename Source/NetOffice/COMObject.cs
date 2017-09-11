@@ -304,7 +304,7 @@ namespace NetOffice
             _proxyShare = proxyShare;
             _underlyingType = _proxyShare.Proxy.GetType();
 
-            _proxyShare.Aquire();
+            _proxyShare.Acquire();
 
             if (Settings.Default.EnableProxyManagement && !Object.ReferenceEquals(parentObject, null))
                 _parentObject.AddChildObject(this);
@@ -499,21 +499,21 @@ namespace NetOffice
         public COMObject(string progId)
         {
             if (String.IsNullOrEmpty(progId))
-                throw new ArgumentNullException("progId");
-            CreateFromProgId(progId);
+                throw new ArgumentNullException("progId");          
             Factory = Core.Default;
+            CreateFromProgId(progId);
             Factory.AddObjectToList(this);
              
             OnCreate();
         }
 
         /// <summary>
-        /// Not usable stub ctor
+        /// Stub
         /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public COMObject()
         {
-            DebugConsole.Default.WriteLine("Warning: Invalid COMObject Stub Ctor called.");
+            
         }
 
         #endregion
@@ -531,18 +531,33 @@ namespace NetOffice
                 return null;
             }
         }
-        
+
         #endregion
 
         #region Methods
 
         /// <summary>
+        /// NetOffice method: create object from proxy
+        /// </summary>
+        /// <param name="underlyingObject">given proxy as any</param>
+        /// <param name="factoryAddObject">add instance to factory</param>
+        [EditorBrowsable(EditorBrowsableState.Advanced)]
+        protected void CreateFromProxy(object underlyingObject, bool factoryAddObject = false)
+        {
+            _underlyingType = underlyingObject.GetType();
+            _proxyShare = Factory.CreateNewProxyShare(this, underlyingObject);
+            if (factoryAddObject)
+                Factory.AddObjectToList(this);
+        }
+
+        /// <summary>
         /// NetOffice method: create object from progid
         /// </summary>
-        /// <param name="progId"></param>
+        /// <param name="progId">registered progid</param>
+        /// <param name="factoryAddObject">add instance to factory</param>
         /// <exception cref="COMException">throws when its failed to resolve progId</exception>
         [EditorBrowsable(EditorBrowsableState.Advanced)]
-        public void CreateFromProgId(string progId)
+        protected void CreateFromProgId(string progId, bool factoryAddObject = false)
         {
             _underlyingType = System.Type.GetTypeFromProgID(progId, false);
             if (null == _underlyingType)
@@ -561,6 +576,8 @@ namespace NetOffice
             }
 
             _proxyShare = Factory.CreateNewProxyShare(this, underlyingObject);
+            if (factoryAddObject)
+                Factory.AddObjectToList(this);
         }
         
         /// <summary>
@@ -1141,7 +1158,7 @@ namespace NetOffice
                 _proxyShare = null;
             }
             _proxyShare = share;
-            _proxyShare.Aquire();
+            _proxyShare.Acquire();
         }
 
         #endregion

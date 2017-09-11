@@ -10,7 +10,7 @@ namespace NetOffice.ADODBApi
 	/// SupportByVersion ADODB, 2.1,2.5
 	/// </summary>
 	[SupportByVersion("ADODB", 2.1,2.5)]
-	[EntityType(EntityType.IsInterface)]
+	[EntityType(EntityType.IsInterface), BaseType]
  	public class ADOConnectionConstruction15 : COMObject
 	{
 		#pragma warning disable

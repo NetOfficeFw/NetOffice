@@ -12,7 +12,7 @@ namespace NetOffice.OutlookApi
 	/// SupportByVersion Outlook, 9,10,11,12,14,15,16
 	/// </summary>
 	[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
-	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Variant, EnumeratorInvoke.Custom), HasIndexProperty(IndexInvoke.Method, "Item")]
+	[EntityType(EntityType.IsDispatchInterface), BaseType, Enumerator(Enumerator.Variant, EnumeratorInvoke.Custom), HasIndexProperty(IndexInvoke.Method, "Item")]
 	public class _Items : COMObject, IEnumerable<object>
 	{
 		#pragma warning disable

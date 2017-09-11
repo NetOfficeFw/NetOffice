@@ -111,16 +111,6 @@ namespace NetOffice.MSHTMLApi
 
 		#region Methods
 
-		/// <summary>
-		/// SupportByVersion MSHTML 4
-		/// </summary>
-		/// <param name="evt">object evt</param>
-		[SupportByVersion("MSHTML", 4)]
-		public void FireEvent(object evt)
-		{
-			 Factory.ExecuteMethod(this, "FireEvent", evt);
-		}
-
 		#endregion
 
 		#pragma warning restore

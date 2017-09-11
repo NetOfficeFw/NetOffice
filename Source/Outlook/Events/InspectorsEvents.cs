@@ -34,55 +34,30 @@ namespace NetOffice.OutlookApi.Events
 		public static readonly string Id = "00063079-0000-0000-C000-000000000046";
 		
 		#endregion
-	
-		#region Fields
 
-		private IEventBinding	_eventBinding;
-        private ICOMObject _eventClass;
-        
-		#endregion
-		
-		#region Construction
+		#region Ctor
 
 		public InspectorsEvents_SinkHelper(ICOMObject eventClass, IConnectionPoint connectPoint): base(eventClass)
 		{
-			_eventClass = eventClass;
-			_eventBinding = (IEventBinding)eventClass;
 			SetupEventBinding(connectPoint);
 		}
 		
 		#endregion
-		
-		#region Properties
 
-        internal Core Factory
-        {
-            get
-            {
-                if (null != _eventClass)
-                    return _eventClass.Factory;
-                else
-                    return Core.Default;
-            }
-        }
-
-        #endregion
-
-		#region InspectorsEvents Members
+		#region InspectorsEvents
 		
 		public void NewInspector([In, MarshalAs(UnmanagedType.IDispatch)] object inspector)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("NewInspector");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(inspector);
-				return;
-			}
+        {
+            if (!Validate("NewInspector"))
+            {
+                Invoker.ReleaseParamsArray(inspector);
+                return;
+            }
 
-			NetOffice.OutlookApi._Inspector newInspector = Factory.CreateObjectFromComProxy(_eventClass, inspector) as NetOffice.OutlookApi._Inspector;
+			NetOffice.OutlookApi._Inspector newInspector = Factory.CreateKnownObjectFromComProxy<NetOffice.OutlookApi._Inspector>(EventClass, inspector, NetOffice.OutlookApi._Inspector.LateBindingApiWrapperType);
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newInspector;
-			_eventBinding.RaiseCustomEvent("NewInspector", ref paramsArray);
+			EventBinding.RaiseCustomEvent("NewInspector", ref paramsArray);
 		}
 
 		#endregion

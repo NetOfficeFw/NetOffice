@@ -12,7 +12,7 @@ namespace NetOffice.PowerPointApi
 	/// SupportByVersion PowerPoint, 9,10,11,12,14,15,16
 	/// </summary>
 	[SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
-	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property)]
+	[EntityType(EntityType.IsDispatchInterface), BaseType, Enumerator(Enumerator.Reference, EnumeratorInvoke.Property)]
 	public class Collection : COMObject, IEnumerable<object>
 	{
 		#pragma warning disable

@@ -291,1022 +291,933 @@ namespace NetOffice.VisioApi.Events
 		
 		#endregion
 	
-		#region Fields
-
-		private IEventBinding	_eventBinding;
-        private ICOMObject      _eventClass;
-        
-		#endregion
-		
-		#region Construction
+		#region Ctor
 
 		public EDocuments_SinkHelper(ICOMObject eventClass, IConnectionPoint connectPoint): base(eventClass)
 		{
-			_eventClass = eventClass;
-			_eventBinding = (IEventBinding)eventClass;
 			SetupEventBinding(connectPoint);
 		}
 		
 		#endregion
-		
-		#region Properties
 
-        internal Core Factory
-        {
-            get
-            {
-                if (null != _eventClass)
-                    return _eventClass.Factory;
-                else
-                    return Core.Default;
-            }
-        }
-
-        #endregion
-
-		#region EDocuments Members
+		#region EDocuments
 		
 		public void DocumentOpened([In, MarshalAs(UnmanagedType.IDispatch)] object doc)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("DocumentOpened");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
+            if (!Validate("DocumentOpened"))
+            {
 				Invoker.ReleaseParamsArray(doc);
 				return;
 			}
 
-			NetOffice.VisioApi.IVDocument newdoc = Factory.CreateObjectFromComProxy(_eventClass, doc) as NetOffice.VisioApi.IVDocument;
+			NetOffice.VisioApi.IVDocument newdoc = Factory.CreateKnownObjectFromComProxy<NetOffice.VisioApi.IVDocument>(EventClass, doc, NetOffice.VisioApi.IVDocument.LateBindingApiWrapperType);
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newdoc;
-			_eventBinding.RaiseCustomEvent("DocumentOpened", ref paramsArray);
+			EventBinding.RaiseCustomEvent("DocumentOpened", ref paramsArray);
 		}
 
 		public void DocumentCreated([In, MarshalAs(UnmanagedType.IDispatch)] object doc)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("DocumentCreated");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(doc);
-				return;
-			}
+            if (!Validate("DocumentCreated"))
+            {
+                Invoker.ReleaseParamsArray(doc);
+                return;
+            }
 
-			NetOffice.VisioApi.IVDocument newdoc = Factory.CreateObjectFromComProxy(_eventClass, doc) as NetOffice.VisioApi.IVDocument;
-			object[] paramsArray = new object[1];
+            NetOffice.VisioApi.IVDocument newdoc = Factory.CreateKnownObjectFromComProxy<NetOffice.VisioApi.IVDocument>(EventClass, doc, NetOffice.VisioApi.IVDocument.LateBindingApiWrapperType);
+            object[] paramsArray = new object[1];
 			paramsArray[0] = newdoc;
-			_eventBinding.RaiseCustomEvent("DocumentCreated", ref paramsArray);
+			EventBinding.RaiseCustomEvent("DocumentCreated", ref paramsArray);
 		}
 
 		public void DocumentSaved([In, MarshalAs(UnmanagedType.IDispatch)] object doc)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("DocumentSaved");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(doc);
-				return;
-			}
+            if (!Validate("DocumentSaved"))
+            {
+                Invoker.ReleaseParamsArray(doc);
+                return;
+            }
 
-			NetOffice.VisioApi.IVDocument newdoc = Factory.CreateObjectFromComProxy(_eventClass, doc) as NetOffice.VisioApi.IVDocument;
-			object[] paramsArray = new object[1];
+            NetOffice.VisioApi.IVDocument newdoc = Factory.CreateKnownObjectFromComProxy<NetOffice.VisioApi.IVDocument>(EventClass, doc, NetOffice.VisioApi.IVDocument.LateBindingApiWrapperType);
+            object[] paramsArray = new object[1];
 			paramsArray[0] = newdoc;
-			_eventBinding.RaiseCustomEvent("DocumentSaved", ref paramsArray);
+			EventBinding.RaiseCustomEvent("DocumentSaved", ref paramsArray);
 		}
 
 		public void DocumentSavedAs([In, MarshalAs(UnmanagedType.IDispatch)] object doc)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("DocumentSavedAs");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(doc);
-				return;
-			}
+            if (!Validate("DocumentSavedAs"))
+            {
+                Invoker.ReleaseParamsArray(doc);
+                return;
+            }
 
-			NetOffice.VisioApi.IVDocument newdoc = Factory.CreateObjectFromComProxy(_eventClass, doc) as NetOffice.VisioApi.IVDocument;
-			object[] paramsArray = new object[1];
+            NetOffice.VisioApi.IVDocument newdoc = Factory.CreateKnownObjectFromComProxy<NetOffice.VisioApi.IVDocument>(EventClass, doc, NetOffice.VisioApi.IVDocument.LateBindingApiWrapperType);
+            object[] paramsArray = new object[1];
 			paramsArray[0] = newdoc;
-			_eventBinding.RaiseCustomEvent("DocumentSavedAs", ref paramsArray);
+			EventBinding.RaiseCustomEvent("DocumentSavedAs", ref paramsArray);
 		}
 
 		public void DocumentChanged([In, MarshalAs(UnmanagedType.IDispatch)] object doc)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("DocumentChanged");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(doc);
-				return;
-			}
+            if (!Validate("DocumentChanged"))
+            {
+                Invoker.ReleaseParamsArray(doc);
+                return;
+            }
 
-			NetOffice.VisioApi.IVDocument newdoc = Factory.CreateObjectFromComProxy(_eventClass, doc) as NetOffice.VisioApi.IVDocument;
-			object[] paramsArray = new object[1];
+            NetOffice.VisioApi.IVDocument newdoc = Factory.CreateKnownObjectFromComProxy<NetOffice.VisioApi.IVDocument>(EventClass, doc, NetOffice.VisioApi.IVDocument.LateBindingApiWrapperType);
+            object[] paramsArray = new object[1];
 			paramsArray[0] = newdoc;
-			_eventBinding.RaiseCustomEvent("DocumentChanged", ref paramsArray);
+			EventBinding.RaiseCustomEvent("DocumentChanged", ref paramsArray);
 		}
 
 		public void BeforeDocumentClose([In, MarshalAs(UnmanagedType.IDispatch)] object doc)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("BeforeDocumentClose");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(doc);
-				return;
-			}
+            if (!Validate("BeforeDocumentClose"))
+            {
+                Invoker.ReleaseParamsArray(doc);
+                return;
+            }
 
-			NetOffice.VisioApi.IVDocument newdoc = Factory.CreateObjectFromComProxy(_eventClass, doc) as NetOffice.VisioApi.IVDocument;
-			object[] paramsArray = new object[1];
+            NetOffice.VisioApi.IVDocument newdoc = Factory.CreateKnownObjectFromComProxy<NetOffice.VisioApi.IVDocument>(EventClass, doc, NetOffice.VisioApi.IVDocument.LateBindingApiWrapperType);
+            object[] paramsArray = new object[1];
 			paramsArray[0] = newdoc;
-			_eventBinding.RaiseCustomEvent("BeforeDocumentClose", ref paramsArray);
+			EventBinding.RaiseCustomEvent("BeforeDocumentClose", ref paramsArray);
 		}
 
 		public void StyleAdded([In, MarshalAs(UnmanagedType.IDispatch)] object style)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("StyleAdded");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(style);
-				return;
-			}
+            if (!Validate("StyleAdded"))
+            {
+                Invoker.ReleaseParamsArray(style);
+                return;
+            }
 
-			NetOffice.VisioApi.IVStyle newStyle = Factory.CreateObjectFromComProxy(_eventClass, style) as NetOffice.VisioApi.IVStyle;
+            NetOffice.VisioApi.IVStyle newStyle = Factory.CreateKnownObjectFromComProxy<NetOffice.VisioApi.IVStyle>(EventClass, style, NetOffice.VisioApi.IVStyle.LateBindingApiWrapperType);
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newStyle;
-			_eventBinding.RaiseCustomEvent("StyleAdded", ref paramsArray);
+			EventBinding.RaiseCustomEvent("StyleAdded", ref paramsArray);
 		}
 
 		public void StyleChanged([In, MarshalAs(UnmanagedType.IDispatch)] object style)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("StyleChanged");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(style);
-				return;
-			}
+            if (!Validate("StyleChanged"))
+            {
+                Invoker.ReleaseParamsArray(style);
+                return;
+            }
 
-			NetOffice.VisioApi.IVStyle newStyle = Factory.CreateObjectFromComProxy(_eventClass, style) as NetOffice.VisioApi.IVStyle;
-			object[] paramsArray = new object[1];
+            NetOffice.VisioApi.IVStyle newStyle = Factory.CreateKnownObjectFromComProxy<NetOffice.VisioApi.IVStyle>(EventClass, style, NetOffice.VisioApi.IVStyle.LateBindingApiWrapperType);
+            object[] paramsArray = new object[1];
 			paramsArray[0] = newStyle;
-			_eventBinding.RaiseCustomEvent("StyleChanged", ref paramsArray);
+			EventBinding.RaiseCustomEvent("StyleChanged", ref paramsArray);
 		}
 
 		public void BeforeStyleDelete([In, MarshalAs(UnmanagedType.IDispatch)] object style)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("BeforeStyleDelete");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(style);
-				return;
-			}
+            if (!Validate("BeforeStyleDelete"))
+            {
+                Invoker.ReleaseParamsArray(style);
+                return;
+            }
 
-			NetOffice.VisioApi.IVStyle newStyle = Factory.CreateObjectFromComProxy(_eventClass, style) as NetOffice.VisioApi.IVStyle;
-			object[] paramsArray = new object[1];
+            NetOffice.VisioApi.IVStyle newStyle = Factory.CreateKnownObjectFromComProxy<NetOffice.VisioApi.IVStyle>(EventClass, style, NetOffice.VisioApi.IVStyle.LateBindingApiWrapperType);
+            object[] paramsArray = new object[1];
 			paramsArray[0] = newStyle;
-			_eventBinding.RaiseCustomEvent("BeforeStyleDelete", ref paramsArray);
+			EventBinding.RaiseCustomEvent("BeforeStyleDelete", ref paramsArray);
 		}
 
 		public void MasterAdded([In, MarshalAs(UnmanagedType.IDispatch)] object master)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("MasterAdded");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(master);
-				return;
-			}
+            if (!Validate("MasterAdded"))
+            {
+                Invoker.ReleaseParamsArray(master);
+                return;
+            }
 
-			NetOffice.VisioApi.IVMaster newMaster = Factory.CreateObjectFromComProxy(_eventClass, master) as NetOffice.VisioApi.IVMaster;
+			NetOffice.VisioApi.IVMaster newMaster = Factory.CreateKnownObjectFromComProxy<NetOffice.VisioApi.IVMaster>(EventClass, master, NetOffice.VisioApi.IVMaster.LateBindingApiWrapperType);
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newMaster;
-			_eventBinding.RaiseCustomEvent("MasterAdded", ref paramsArray);
+			EventBinding.RaiseCustomEvent("MasterAdded", ref paramsArray);
 		}
 
 		public void MasterChanged([In, MarshalAs(UnmanagedType.IDispatch)] object master)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("MasterChanged");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(master);
-				return;
-			}
+            if (!Validate("MasterChanged"))
+            {
+                Invoker.ReleaseParamsArray(master);
+                return;
+            }
 
-			NetOffice.VisioApi.IVMaster newMaster = Factory.CreateObjectFromComProxy(_eventClass, master) as NetOffice.VisioApi.IVMaster;
-			object[] paramsArray = new object[1];
+            NetOffice.VisioApi.IVMaster newMaster = Factory.CreateKnownObjectFromComProxy<NetOffice.VisioApi.IVMaster>(EventClass, master, NetOffice.VisioApi.IVMaster.LateBindingApiWrapperType);
+            object[] paramsArray = new object[1];
 			paramsArray[0] = newMaster;
-			_eventBinding.RaiseCustomEvent("MasterChanged", ref paramsArray);
+			EventBinding.RaiseCustomEvent("MasterChanged", ref paramsArray);
 		}
 
 		public void BeforeMasterDelete([In, MarshalAs(UnmanagedType.IDispatch)] object master)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("BeforeMasterDelete");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(master);
-				return;
-			}
+            if (!Validate("BeforeMasterDelete"))
+            {
+                Invoker.ReleaseParamsArray(master);
+                return;
+            }
 
-			NetOffice.VisioApi.IVMaster newMaster = Factory.CreateObjectFromComProxy(_eventClass, master) as NetOffice.VisioApi.IVMaster;
-			object[] paramsArray = new object[1];
+            NetOffice.VisioApi.IVMaster newMaster = Factory.CreateKnownObjectFromComProxy<NetOffice.VisioApi.IVMaster>(EventClass, master, NetOffice.VisioApi.IVMaster.LateBindingApiWrapperType);
+            object[] paramsArray = new object[1];
 			paramsArray[0] = newMaster;
-			_eventBinding.RaiseCustomEvent("BeforeMasterDelete", ref paramsArray);
+			EventBinding.RaiseCustomEvent("BeforeMasterDelete", ref paramsArray);
 		}
 
 		public void PageAdded([In, MarshalAs(UnmanagedType.IDispatch)] object page)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("PageAdded");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(page);
-				return;
-			}
+            if (!Validate("PageAdded"))
+            {
+                Invoker.ReleaseParamsArray(page);
+                return;
+            }
 
-			NetOffice.VisioApi.IVPage newPage = Factory.CreateObjectFromComProxy(_eventClass, page) as NetOffice.VisioApi.IVPage;
+            NetOffice.VisioApi.IVPage newPage = Factory.CreateKnownObjectFromComProxy<NetOffice.VisioApi.IVPage>(EventClass, page, NetOffice.VisioApi.IVPage.LateBindingApiWrapperType);
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newPage;
-			_eventBinding.RaiseCustomEvent("PageAdded", ref paramsArray);
+			EventBinding.RaiseCustomEvent("PageAdded", ref paramsArray);
 		}
 
 		public void PageChanged([In, MarshalAs(UnmanagedType.IDispatch)] object page)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("PageChanged");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(page);
-				return;
-			}
+            if (!Validate("PageChanged"))
+            {
+                Invoker.ReleaseParamsArray(page);
+                return;
+            }
 
-			NetOffice.VisioApi.IVPage newPage = Factory.CreateObjectFromComProxy(_eventClass, page) as NetOffice.VisioApi.IVPage;
-			object[] paramsArray = new object[1];
+            NetOffice.VisioApi.IVPage newPage = Factory.CreateKnownObjectFromComProxy<NetOffice.VisioApi.IVPage>(EventClass, page, NetOffice.VisioApi.IVPage.LateBindingApiWrapperType);
+            object[] paramsArray = new object[1];
 			paramsArray[0] = newPage;
-			_eventBinding.RaiseCustomEvent("PageChanged", ref paramsArray);
+			EventBinding.RaiseCustomEvent("PageChanged", ref paramsArray);
 		}
 
 		public void BeforePageDelete([In, MarshalAs(UnmanagedType.IDispatch)] object page)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("BeforePageDelete");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(page);
-				return;
-			}
+            if (!Validate("BeforePageDelete"))
+            {
+                Invoker.ReleaseParamsArray(page);
+                return;
+            }
 
-			NetOffice.VisioApi.IVPage newPage = Factory.CreateObjectFromComProxy(_eventClass, page) as NetOffice.VisioApi.IVPage;
-			object[] paramsArray = new object[1];
+            NetOffice.VisioApi.IVPage newPage = Factory.CreateKnownObjectFromComProxy<NetOffice.VisioApi.IVPage>(EventClass, page, NetOffice.VisioApi.IVPage.LateBindingApiWrapperType);
+            object[] paramsArray = new object[1];
 			paramsArray[0] = newPage;
-			_eventBinding.RaiseCustomEvent("BeforePageDelete", ref paramsArray);
+			EventBinding.RaiseCustomEvent("BeforePageDelete", ref paramsArray);
 		}
 
 		public void ShapeAdded([In, MarshalAs(UnmanagedType.IDispatch)] object shape)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("ShapeAdded");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(shape);
-				return;
-			}
+            if (!Validate("ShapeAdded"))
+            {
+                Invoker.ReleaseParamsArray(shape);
+                return;
+            }
 
-			NetOffice.VisioApi.IVShape newShape = Factory.CreateObjectFromComProxy(_eventClass, shape) as NetOffice.VisioApi.IVShape;
+            NetOffice.VisioApi.IVShape newShape = Factory.CreateKnownObjectFromComProxy<NetOffice.VisioApi.IVShape>(EventClass, shape, NetOffice.VisioApi.IVShape.LateBindingApiWrapperType);
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newShape;
-			_eventBinding.RaiseCustomEvent("ShapeAdded", ref paramsArray);
+			EventBinding.RaiseCustomEvent("ShapeAdded", ref paramsArray);
 		}
 
 		public void BeforeSelectionDelete([In, MarshalAs(UnmanagedType.IDispatch)] object selection)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("BeforeSelectionDelete");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(selection);
-				return;
-			}
+            if (!Validate("BeforeSelectionDelete"))
+            {
+                Invoker.ReleaseParamsArray(selection);
+                return;
+            }
 
-			NetOffice.VisioApi.IVSelection newSelection = Factory.CreateObjectFromComProxy(_eventClass, selection) as NetOffice.VisioApi.IVSelection;
+            NetOffice.VisioApi.IVSelection newSelection = Factory.CreateKnownObjectFromComProxy<NetOffice.VisioApi.IVSelection>(EventClass, selection, NetOffice.VisioApi.IVSelection.LateBindingApiWrapperType);
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newSelection;
-			_eventBinding.RaiseCustomEvent("BeforeSelectionDelete", ref paramsArray);
+			EventBinding.RaiseCustomEvent("BeforeSelectionDelete", ref paramsArray);
 		}
 
 		public void ShapeChanged([In, MarshalAs(UnmanagedType.IDispatch)] object shape)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("ShapeChanged");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(shape);
-				return;
-			}
+            if (!Validate("ShapeChanged"))
+            {
+                Invoker.ReleaseParamsArray(shape);
+                return;
+            }
 
-			NetOffice.VisioApi.IVShape newShape = Factory.CreateObjectFromComProxy(_eventClass, shape) as NetOffice.VisioApi.IVShape;
+            NetOffice.VisioApi.IVShape newShape = Factory.CreateKnownObjectFromComProxy<NetOffice.VisioApi.IVShape>(EventClass, shape, NetOffice.VisioApi.IVShape.LateBindingApiWrapperType);
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newShape;
-			_eventBinding.RaiseCustomEvent("ShapeChanged", ref paramsArray);
+			EventBinding.RaiseCustomEvent("ShapeChanged", ref paramsArray);
 		}
 
 		public void SelectionAdded([In, MarshalAs(UnmanagedType.IDispatch)] object selection)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("SelectionAdded");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(selection);
-				return;
-			}
+            if (!Validate("SelectionAdded"))
+            {
+                Invoker.ReleaseParamsArray(selection);
+                return;
+            }
 
-			NetOffice.VisioApi.IVSelection newSelection = Factory.CreateObjectFromComProxy(_eventClass, selection) as NetOffice.VisioApi.IVSelection;
+            NetOffice.VisioApi.IVSelection newSelection = Factory.CreateKnownObjectFromComProxy<NetOffice.VisioApi.IVSelection>(EventClass, selection, NetOffice.VisioApi.IVSelection.LateBindingApiWrapperType);
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newSelection;
-			_eventBinding.RaiseCustomEvent("SelectionAdded", ref paramsArray);
+			EventBinding.RaiseCustomEvent("SelectionAdded", ref paramsArray);
 		}
 
 		public void BeforeShapeDelete([In, MarshalAs(UnmanagedType.IDispatch)] object shape)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("BeforeShapeDelete");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(shape);
-				return;
-			}
+        {
+            if (!Validate("BeforeShapeDelete"))
+            {
+                Invoker.ReleaseParamsArray(shape);
+                return;
+            }
 
-			NetOffice.VisioApi.IVShape newShape = Factory.CreateObjectFromComProxy(_eventClass, shape) as NetOffice.VisioApi.IVShape;
+			NetOffice.VisioApi.IVShape newShape = Factory.CreateKnownObjectFromComProxy<NetOffice.VisioApi.IVShape>(EventClass, shape, NetOffice.VisioApi.IVShape.LateBindingApiWrapperType);
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newShape;
-			_eventBinding.RaiseCustomEvent("BeforeShapeDelete", ref paramsArray);
+			EventBinding.RaiseCustomEvent("BeforeShapeDelete", ref paramsArray);
 		}
 
 		public void TextChanged([In, MarshalAs(UnmanagedType.IDispatch)] object shape)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("TextChanged");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(shape);
-				return;
-			}
+            if (!Validate("TextChanged"))
+            {
+                Invoker.ReleaseParamsArray(shape);
+                return;
+            }
 
-			NetOffice.VisioApi.IVShape newShape = Factory.CreateObjectFromComProxy(_eventClass, shape) as NetOffice.VisioApi.IVShape;
-			object[] paramsArray = new object[1];
+            NetOffice.VisioApi.IVShape newShape = Factory.CreateKnownObjectFromComProxy<NetOffice.VisioApi.IVShape>(EventClass, shape, NetOffice.VisioApi.IVShape.LateBindingApiWrapperType);
+            object[] paramsArray = new object[1];
 			paramsArray[0] = newShape;
-			_eventBinding.RaiseCustomEvent("TextChanged", ref paramsArray);
+			EventBinding.RaiseCustomEvent("TextChanged", ref paramsArray);
 		}
 
 		public void CellChanged([In, MarshalAs(UnmanagedType.IDispatch)] object cell)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("CellChanged");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(cell);
-				return;
-			}
+            if (!Validate("CellChanged"))
+            {
+                Invoker.ReleaseParamsArray(cell);
+                return;
+            }
 
-			NetOffice.VisioApi.IVCell newCell = Factory.CreateObjectFromComProxy(_eventClass, cell) as NetOffice.VisioApi.IVCell;
+            NetOffice.VisioApi.IVCell newCell = Factory.CreateKnownObjectFromComProxy<NetOffice.VisioApi.IVCell>(EventClass, cell, NetOffice.VisioApi.IVCell.LateBindingApiWrapperType);
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newCell;
-			_eventBinding.RaiseCustomEvent("CellChanged", ref paramsArray);
+			EventBinding.RaiseCustomEvent("CellChanged", ref paramsArray);
 		}
 
 		public void RunModeEntered([In, MarshalAs(UnmanagedType.IDispatch)] object doc)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("RunModeEntered");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(doc);
-				return;
-			}
+            if (!Validate("CellChanged"))
+            {
+                Invoker.ReleaseParamsArray(doc);
+                return;
+            }
 
-			NetOffice.VisioApi.IVDocument newdoc = Factory.CreateObjectFromComProxy(_eventClass, doc) as NetOffice.VisioApi.IVDocument;
+            NetOffice.VisioApi.IVDocument newdoc = Factory.CreateKnownObjectFromComProxy<NetOffice.VisioApi.IVDocument>(EventClass, doc, NetOffice.VisioApi.IVDocument.LateBindingApiWrapperType);
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newdoc;
-			_eventBinding.RaiseCustomEvent("RunModeEntered", ref paramsArray);
+			EventBinding.RaiseCustomEvent("RunModeEntered", ref paramsArray);
 		}
 
 		public void DesignModeEntered([In, MarshalAs(UnmanagedType.IDispatch)] object doc)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("DesignModeEntered");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(doc);
-				return;
-			}
+            if (!Validate("DesignModeEntered"))
+            {
+                Invoker.ReleaseParamsArray(doc);
+                return;
+            }
 
-			NetOffice.VisioApi.IVDocument newdoc = Factory.CreateObjectFromComProxy(_eventClass, doc) as NetOffice.VisioApi.IVDocument;
-			object[] paramsArray = new object[1];
+            NetOffice.VisioApi.IVDocument newdoc = Factory.CreateKnownObjectFromComProxy<NetOffice.VisioApi.IVDocument>(EventClass, doc, NetOffice.VisioApi.IVDocument.LateBindingApiWrapperType);
+            object[] paramsArray = new object[1];
 			paramsArray[0] = newdoc;
-			_eventBinding.RaiseCustomEvent("DesignModeEntered", ref paramsArray);
+			EventBinding.RaiseCustomEvent("DesignModeEntered", ref paramsArray);
 		}
 
 		public void BeforeDocumentSave([In, MarshalAs(UnmanagedType.IDispatch)] object doc)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("BeforeDocumentSave");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(doc);
-				return;
-			}
+            if (!Validate("BeforeDocumentSave"))
+            {
+                Invoker.ReleaseParamsArray(doc);
+                return;
+            }
 
-			NetOffice.VisioApi.IVDocument newdoc = Factory.CreateObjectFromComProxy(_eventClass, doc) as NetOffice.VisioApi.IVDocument;
-			object[] paramsArray = new object[1];
+            NetOffice.VisioApi.IVDocument newdoc = Factory.CreateKnownObjectFromComProxy<NetOffice.VisioApi.IVDocument>(EventClass, doc, NetOffice.VisioApi.IVDocument.LateBindingApiWrapperType);
+            object[] paramsArray = new object[1];
 			paramsArray[0] = newdoc;
-			_eventBinding.RaiseCustomEvent("BeforeDocumentSave", ref paramsArray);
+			EventBinding.RaiseCustomEvent("BeforeDocumentSave", ref paramsArray);
 		}
 
 		public void BeforeDocumentSaveAs([In, MarshalAs(UnmanagedType.IDispatch)] object doc)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("BeforeDocumentSaveAs");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(doc);
-				return;
-			}
+            if (!Validate("BeforeDocumentSaveAs"))
+            {
+                Invoker.ReleaseParamsArray(doc);
+                return;
+            }
 
-			NetOffice.VisioApi.IVDocument newdoc = Factory.CreateObjectFromComProxy(_eventClass, doc) as NetOffice.VisioApi.IVDocument;
-			object[] paramsArray = new object[1];
+            NetOffice.VisioApi.IVDocument newdoc = Factory.CreateKnownObjectFromComProxy<NetOffice.VisioApi.IVDocument>(EventClass, doc, NetOffice.VisioApi.IVDocument.LateBindingApiWrapperType);
+            object[] paramsArray = new object[1];
 			paramsArray[0] = newdoc;
-			_eventBinding.RaiseCustomEvent("BeforeDocumentSaveAs", ref paramsArray);
+			EventBinding.RaiseCustomEvent("BeforeDocumentSaveAs", ref paramsArray);
 		}
 
 		public void FormulaChanged([In, MarshalAs(UnmanagedType.IDispatch)] object cell)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("FormulaChanged");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(cell);
-				return;
-			}
+            if (!Validate("FormulaChanged"))
+            {
+                Invoker.ReleaseParamsArray(cell);
+                return;
+            }
 
-			NetOffice.VisioApi.IVCell newCell = Factory.CreateObjectFromComProxy(_eventClass, cell) as NetOffice.VisioApi.IVCell;
+            NetOffice.VisioApi.IVCell newCell = Factory.CreateKnownObjectFromComProxy<NetOffice.VisioApi.IVCell>(EventClass, cell, NetOffice.VisioApi.IVCell.LateBindingApiWrapperType);
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newCell;
-			_eventBinding.RaiseCustomEvent("FormulaChanged", ref paramsArray);
+			EventBinding.RaiseCustomEvent("FormulaChanged", ref paramsArray);
 		}
 
 		public void ConnectionsAdded([In, MarshalAs(UnmanagedType.IDispatch)] object connects)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("ConnectionsAdded");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(connects);
-				return;
-			}
+        {
+            if (!Validate("ConnectionsAdded"))
+            {
+                Invoker.ReleaseParamsArray(connects);
+                return;
+            }
 
-			NetOffice.VisioApi.IVConnects newConnects = Factory.CreateObjectFromComProxy(_eventClass, connects) as NetOffice.VisioApi.IVConnects;
+			NetOffice.VisioApi.IVConnects newConnects = Factory.CreateKnownObjectFromComProxy<NetOffice.VisioApi.IVConnects>(EventClass, connects, NetOffice.VisioApi.IVConnects.LateBindingApiWrapperType);
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newConnects;
-			_eventBinding.RaiseCustomEvent("ConnectionsAdded", ref paramsArray);
+			EventBinding.RaiseCustomEvent("ConnectionsAdded", ref paramsArray);
 		}
 
 		public void ConnectionsDeleted([In, MarshalAs(UnmanagedType.IDispatch)] object connects)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("ConnectionsDeleted");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(connects);
-				return;
-			}
+            if (!Validate("ConnectionsDeleted"))
+            {
+                Invoker.ReleaseParamsArray(connects);
+                return;
+            }
 
-			NetOffice.VisioApi.IVConnects newConnects = Factory.CreateObjectFromComProxy(_eventClass, connects) as NetOffice.VisioApi.IVConnects;
-			object[] paramsArray = new object[1];
+            NetOffice.VisioApi.IVConnects newConnects = Factory.CreateKnownObjectFromComProxy<NetOffice.VisioApi.IVConnects>(EventClass, connects, NetOffice.VisioApi.IVConnects.LateBindingApiWrapperType);
+            object[] paramsArray = new object[1];
 			paramsArray[0] = newConnects;
-			_eventBinding.RaiseCustomEvent("ConnectionsDeleted", ref paramsArray);
+			EventBinding.RaiseCustomEvent("ConnectionsDeleted", ref paramsArray);
 		}
 
 		public void QueryCancelDocumentClose([In, MarshalAs(UnmanagedType.IDispatch)] object doc)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("QueryCancelDocumentClose");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(doc);
-				return;
-			}
+            if (!Validate("QueryCancelDocumentClose"))
+            {
+                Invoker.ReleaseParamsArray(doc);
+                return;
+            }
 
-			NetOffice.VisioApi.IVDocument newdoc = Factory.CreateObjectFromComProxy(_eventClass, doc) as NetOffice.VisioApi.IVDocument;
+			NetOffice.VisioApi.IVDocument newdoc = Factory.CreateKnownObjectFromComProxy<NetOffice.VisioApi.IVDocument>(EventClass, doc, NetOffice.VisioApi.IVDocument.LateBindingApiWrapperType);
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newdoc;
-			_eventBinding.RaiseCustomEvent("QueryCancelDocumentClose", ref paramsArray);
+			EventBinding.RaiseCustomEvent("QueryCancelDocumentClose", ref paramsArray);
 		}
 
 		public void DocumentCloseCanceled([In, MarshalAs(UnmanagedType.IDispatch)] object doc)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("DocumentCloseCanceled");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(doc);
-				return;
-			}
+            if (!Validate("DocumentCloseCanceled"))
+            {
+                Invoker.ReleaseParamsArray(doc);
+                return;
+            }
 
-			NetOffice.VisioApi.IVDocument newdoc = Factory.CreateObjectFromComProxy(_eventClass, doc) as NetOffice.VisioApi.IVDocument;
-			object[] paramsArray = new object[1];
+            NetOffice.VisioApi.IVDocument newdoc = Factory.CreateKnownObjectFromComProxy<NetOffice.VisioApi.IVDocument>(EventClass, doc, NetOffice.VisioApi.IVDocument.LateBindingApiWrapperType);
+            object[] paramsArray = new object[1];
 			paramsArray[0] = newdoc;
-			_eventBinding.RaiseCustomEvent("DocumentCloseCanceled", ref paramsArray);
+			EventBinding.RaiseCustomEvent("DocumentCloseCanceled", ref paramsArray);
 		}
 
 		public void QueryCancelStyleDelete([In, MarshalAs(UnmanagedType.IDispatch)] object style)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("QueryCancelStyleDelete");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(style);
-				return;
-			}
+            if (!Validate("QueryCancelStyleDelete"))
+            {
+                Invoker.ReleaseParamsArray(style);
+                return;
+            }
 
-			NetOffice.VisioApi.IVStyle newStyle = Factory.CreateObjectFromComProxy(_eventClass, style) as NetOffice.VisioApi.IVStyle;
+            NetOffice.VisioApi.IVStyle newStyle = Factory.CreateKnownObjectFromComProxy<NetOffice.VisioApi.IVStyle>(EventClass, style, NetOffice.VisioApi.IVStyle.LateBindingApiWrapperType);
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newStyle;
-			_eventBinding.RaiseCustomEvent("QueryCancelStyleDelete", ref paramsArray);
+			EventBinding.RaiseCustomEvent("QueryCancelStyleDelete", ref paramsArray);
 		}
 
 		public void StyleDeleteCanceled([In, MarshalAs(UnmanagedType.IDispatch)] object style)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("StyleDeleteCanceled");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(style);
-				return;
-			}
+            if (!Validate("StyleDeleteCanceled"))
+            {
+                Invoker.ReleaseParamsArray(style);
+                return;
+            }
 
-			NetOffice.VisioApi.IVStyle newStyle = Factory.CreateObjectFromComProxy(_eventClass, style) as NetOffice.VisioApi.IVStyle;
-			object[] paramsArray = new object[1];
+            NetOffice.VisioApi.IVStyle newStyle = Factory.CreateKnownObjectFromComProxy<NetOffice.VisioApi.IVStyle>(EventClass, style, NetOffice.VisioApi.IVStyle.LateBindingApiWrapperType);
+            object[] paramsArray = new object[1];
 			paramsArray[0] = newStyle;
-			_eventBinding.RaiseCustomEvent("StyleDeleteCanceled", ref paramsArray);
+			EventBinding.RaiseCustomEvent("StyleDeleteCanceled", ref paramsArray);
 		}
 
 		public void QueryCancelMasterDelete([In, MarshalAs(UnmanagedType.IDispatch)] object master)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("QueryCancelMasterDelete");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(master);
-				return;
-			}
+            if (!Validate("QueryCancelMasterDelete"))
+            {
+                Invoker.ReleaseParamsArray(master);
+                return;
+            }
 
-			NetOffice.VisioApi.IVMaster newMaster = Factory.CreateObjectFromComProxy(_eventClass, master) as NetOffice.VisioApi.IVMaster;
+            NetOffice.VisioApi.IVMaster newMaster = Factory.CreateKnownObjectFromComProxy<NetOffice.VisioApi.IVMaster>(EventClass, master, NetOffice.VisioApi.IVMaster.LateBindingApiWrapperType);
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newMaster;
-			_eventBinding.RaiseCustomEvent("QueryCancelMasterDelete", ref paramsArray);
+			EventBinding.RaiseCustomEvent("QueryCancelMasterDelete", ref paramsArray);
 		}
 
 		public void MasterDeleteCanceled([In, MarshalAs(UnmanagedType.IDispatch)] object master)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("MasterDeleteCanceled");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(master);
-				return;
-			}
+            if (!Validate("MasterDeleteCanceled"))
+            {
+                Invoker.ReleaseParamsArray(master);
+                return;
+            }
 
-			NetOffice.VisioApi.IVMaster newMaster = Factory.CreateObjectFromComProxy(_eventClass, master) as NetOffice.VisioApi.IVMaster;
-			object[] paramsArray = new object[1];
+            NetOffice.VisioApi.IVMaster newMaster = Factory.CreateKnownObjectFromComProxy<NetOffice.VisioApi.IVMaster>(EventClass, master, NetOffice.VisioApi.IVMaster.LateBindingApiWrapperType);
+            object[] paramsArray = new object[1];
 			paramsArray[0] = newMaster;
-			_eventBinding.RaiseCustomEvent("MasterDeleteCanceled", ref paramsArray);
+			EventBinding.RaiseCustomEvent("MasterDeleteCanceled", ref paramsArray);
 		}
 
 		public void QueryCancelPageDelete([In, MarshalAs(UnmanagedType.IDispatch)] object page)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("QueryCancelPageDelete");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(page);
-				return;
-			}
+            if (!Validate("QueryCancelPageDelete"))
+            {
+                Invoker.ReleaseParamsArray(page);
+                return;
+            }
 
-			NetOffice.VisioApi.IVPage newPage = Factory.CreateObjectFromComProxy(_eventClass, page) as NetOffice.VisioApi.IVPage;
+            NetOffice.VisioApi.IVPage newPage = Factory.CreateKnownObjectFromComProxy<NetOffice.VisioApi.IVPage>(EventClass, page, NetOffice.VisioApi.IVPage.LateBindingApiWrapperType);
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newPage;
-			_eventBinding.RaiseCustomEvent("QueryCancelPageDelete", ref paramsArray);
+			EventBinding.RaiseCustomEvent("QueryCancelPageDelete", ref paramsArray);
 		}
 
 		public void PageDeleteCanceled([In, MarshalAs(UnmanagedType.IDispatch)] object page)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("PageDeleteCanceled");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(page);
-				return;
-			}
+            if (!Validate("PageDeleteCanceled"))
+            {
+                Invoker.ReleaseParamsArray(page);
+                return;
+            }
 
-			NetOffice.VisioApi.IVPage newPage = Factory.CreateObjectFromComProxy(_eventClass, page) as NetOffice.VisioApi.IVPage;
-			object[] paramsArray = new object[1];
+            NetOffice.VisioApi.IVPage newPage = Factory.CreateKnownObjectFromComProxy<NetOffice.VisioApi.IVPage>(EventClass, page, NetOffice.VisioApi.IVPage.LateBindingApiWrapperType);
+            object[] paramsArray = new object[1];
 			paramsArray[0] = newPage;
-			_eventBinding.RaiseCustomEvent("PageDeleteCanceled", ref paramsArray);
+			EventBinding.RaiseCustomEvent("PageDeleteCanceled", ref paramsArray);
 		}
 
 		public void ShapeParentChanged([In, MarshalAs(UnmanagedType.IDispatch)] object shape)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("ShapeParentChanged");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(shape);
-				return;
-			}
+            if (!Validate("ShapeParentChanged"))
+            {
+                Invoker.ReleaseParamsArray(shape);
+                return;
+            }
 
-			NetOffice.VisioApi.IVShape newShape = Factory.CreateObjectFromComProxy(_eventClass, shape) as NetOffice.VisioApi.IVShape;
+            NetOffice.VisioApi.IVShape newShape = Factory.CreateKnownObjectFromComProxy<NetOffice.VisioApi.IVShape>(EventClass, shape, NetOffice.VisioApi.IVShape.LateBindingApiWrapperType);
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newShape;
-			_eventBinding.RaiseCustomEvent("ShapeParentChanged", ref paramsArray);
+			EventBinding.RaiseCustomEvent("ShapeParentChanged", ref paramsArray);
 		}
 
 		public void BeforeShapeTextEdit([In, MarshalAs(UnmanagedType.IDispatch)] object shape)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("BeforeShapeTextEdit");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(shape);
-				return;
-			}
+            if (!Validate("BeforeShapeTextEdit"))
+            {
+                Invoker.ReleaseParamsArray(shape);
+                return;
+            }
 
-			NetOffice.VisioApi.IVShape newShape = Factory.CreateObjectFromComProxy(_eventClass, shape) as NetOffice.VisioApi.IVShape;
-			object[] paramsArray = new object[1];
+            NetOffice.VisioApi.IVShape newShape = Factory.CreateKnownObjectFromComProxy<NetOffice.VisioApi.IVShape>(EventClass, shape, NetOffice.VisioApi.IVShape.LateBindingApiWrapperType);
+            object[] paramsArray = new object[1];
 			paramsArray[0] = newShape;
-			_eventBinding.RaiseCustomEvent("BeforeShapeTextEdit", ref paramsArray);
+			EventBinding.RaiseCustomEvent("BeforeShapeTextEdit", ref paramsArray);
 		}
 
 		public void ShapeExitedTextEdit([In, MarshalAs(UnmanagedType.IDispatch)] object shape)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("ShapeExitedTextEdit");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(shape);
-				return;
-			}
+            if (!Validate("ShapeExitedTextEdit"))
+            {
+                Invoker.ReleaseParamsArray(shape);
+                return;
+            }
 
-			NetOffice.VisioApi.IVShape newShape = Factory.CreateObjectFromComProxy(_eventClass, shape) as NetOffice.VisioApi.IVShape;
-			object[] paramsArray = new object[1];
+            NetOffice.VisioApi.IVShape newShape = Factory.CreateKnownObjectFromComProxy<NetOffice.VisioApi.IVShape>(EventClass, shape, NetOffice.VisioApi.IVShape.LateBindingApiWrapperType);
+            object[] paramsArray = new object[1];
 			paramsArray[0] = newShape;
-			_eventBinding.RaiseCustomEvent("ShapeExitedTextEdit", ref paramsArray);
+			EventBinding.RaiseCustomEvent("ShapeExitedTextEdit", ref paramsArray);
 		}
 
 		public void QueryCancelSelectionDelete([In, MarshalAs(UnmanagedType.IDispatch)] object selection)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("QueryCancelSelectionDelete");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(selection);
-				return;
-			}
+            if (!Validate("QueryCancelSelectionDelete"))
+            {
+                Invoker.ReleaseParamsArray(selection);
+                return;
+            }
 
-			NetOffice.VisioApi.IVSelection newSelection = Factory.CreateObjectFromComProxy(_eventClass, selection) as NetOffice.VisioApi.IVSelection;
+            NetOffice.VisioApi.IVSelection newSelection = Factory.CreateKnownObjectFromComProxy<NetOffice.VisioApi.IVSelection>(EventClass, selection, NetOffice.VisioApi.IVSelection.LateBindingApiWrapperType);
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newSelection;
-			_eventBinding.RaiseCustomEvent("QueryCancelSelectionDelete", ref paramsArray);
+			EventBinding.RaiseCustomEvent("QueryCancelSelectionDelete", ref paramsArray);
 		}
 
 		public void SelectionDeleteCanceled([In, MarshalAs(UnmanagedType.IDispatch)] object selection)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("SelectionDeleteCanceled");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(selection);
-				return;
-			}
+            if (!Validate("SelectionDeleteCanceled"))
+            {
+                Invoker.ReleaseParamsArray(selection);
+                return;
+            }
 
-			NetOffice.VisioApi.IVSelection newSelection = Factory.CreateObjectFromComProxy(_eventClass, selection) as NetOffice.VisioApi.IVSelection;
-			object[] paramsArray = new object[1];
+            NetOffice.VisioApi.IVSelection newSelection = Factory.CreateKnownObjectFromComProxy<NetOffice.VisioApi.IVSelection>(EventClass, selection, NetOffice.VisioApi.IVSelection.LateBindingApiWrapperType);
+            object[] paramsArray = new object[1];
 			paramsArray[0] = newSelection;
-			_eventBinding.RaiseCustomEvent("SelectionDeleteCanceled", ref paramsArray);
+			EventBinding.RaiseCustomEvent("SelectionDeleteCanceled", ref paramsArray);
 		}
 
 		public void QueryCancelUngroup([In, MarshalAs(UnmanagedType.IDispatch)] object selection)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("QueryCancelUngroup");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(selection);
-				return;
-			}
+            if (!Validate("QueryCancelUngroup"))
+            {
+                Invoker.ReleaseParamsArray(selection);
+                return;
+            }
 
-			NetOffice.VisioApi.IVSelection newSelection = Factory.CreateObjectFromComProxy(_eventClass, selection) as NetOffice.VisioApi.IVSelection;
-			object[] paramsArray = new object[1];
+            NetOffice.VisioApi.IVSelection newSelection = Factory.CreateKnownObjectFromComProxy<NetOffice.VisioApi.IVSelection>(EventClass, selection, NetOffice.VisioApi.IVSelection.LateBindingApiWrapperType);
+            object[] paramsArray = new object[1];
 			paramsArray[0] = newSelection;
-			_eventBinding.RaiseCustomEvent("QueryCancelUngroup", ref paramsArray);
+			EventBinding.RaiseCustomEvent("QueryCancelUngroup", ref paramsArray);
 		}
 
 		public void UngroupCanceled([In, MarshalAs(UnmanagedType.IDispatch)] object selection)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("UngroupCanceled");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(selection);
-				return;
-			}
+            if (!Validate("UngroupCanceled"))
+            {
+                Invoker.ReleaseParamsArray(selection);
+                return;
+            }
 
-			NetOffice.VisioApi.IVSelection newSelection = Factory.CreateObjectFromComProxy(_eventClass, selection) as NetOffice.VisioApi.IVSelection;
-			object[] paramsArray = new object[1];
+            NetOffice.VisioApi.IVSelection newSelection = Factory.CreateKnownObjectFromComProxy<NetOffice.VisioApi.IVSelection>(EventClass, selection, NetOffice.VisioApi.IVSelection.LateBindingApiWrapperType);
+            object[] paramsArray = new object[1];
 			paramsArray[0] = newSelection;
-			_eventBinding.RaiseCustomEvent("UngroupCanceled", ref paramsArray);
+			EventBinding.RaiseCustomEvent("UngroupCanceled", ref paramsArray);
 		}
 
 		public void QueryCancelConvertToGroup([In, MarshalAs(UnmanagedType.IDispatch)] object selection)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("QueryCancelConvertToGroup");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(selection);
-				return;
-			}
+            if (!Validate("QueryCancelConvertToGroup"))
+            {
+                Invoker.ReleaseParamsArray(selection);
+                return;
+            }
 
-			NetOffice.VisioApi.IVSelection newSelection = Factory.CreateObjectFromComProxy(_eventClass, selection) as NetOffice.VisioApi.IVSelection;
-			object[] paramsArray = new object[1];
+            NetOffice.VisioApi.IVSelection newSelection = Factory.CreateKnownObjectFromComProxy<NetOffice.VisioApi.IVSelection>(EventClass, selection, NetOffice.VisioApi.IVSelection.LateBindingApiWrapperType);
+            object[] paramsArray = new object[1];
 			paramsArray[0] = newSelection;
-			_eventBinding.RaiseCustomEvent("QueryCancelConvertToGroup", ref paramsArray);
+			EventBinding.RaiseCustomEvent("QueryCancelConvertToGroup", ref paramsArray);
 		}
 
 		public void ConvertToGroupCanceled([In, MarshalAs(UnmanagedType.IDispatch)] object selection)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("ConvertToGroupCanceled");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(selection);
-				return;
-			}
+            if (!Validate("ConvertToGroupCanceled"))
+            {
+                Invoker.ReleaseParamsArray(selection);
+                return;
+            }
 
-			NetOffice.VisioApi.IVSelection newSelection = Factory.CreateObjectFromComProxy(_eventClass, selection) as NetOffice.VisioApi.IVSelection;
-			object[] paramsArray = new object[1];
+            NetOffice.VisioApi.IVSelection newSelection = Factory.CreateKnownObjectFromComProxy<NetOffice.VisioApi.IVSelection>(EventClass, selection, NetOffice.VisioApi.IVSelection.LateBindingApiWrapperType);
+            object[] paramsArray = new object[1];
 			paramsArray[0] = newSelection;
-			_eventBinding.RaiseCustomEvent("ConvertToGroupCanceled", ref paramsArray);
+			EventBinding.RaiseCustomEvent("ConvertToGroupCanceled", ref paramsArray);
 		}
 
 		public void QueryCancelGroup([In, MarshalAs(UnmanagedType.IDispatch)] object selection)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("QueryCancelGroup");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(selection);
-				return;
-			}
+            if (!Validate("QueryCancelGroup"))
+            {
+                Invoker.ReleaseParamsArray(selection);
+                return;
+            }
 
-			NetOffice.VisioApi.IVSelection newSelection = Factory.CreateObjectFromComProxy(_eventClass, selection) as NetOffice.VisioApi.IVSelection;
-			object[] paramsArray = new object[1];
+            NetOffice.VisioApi.IVSelection newSelection = Factory.CreateKnownObjectFromComProxy<NetOffice.VisioApi.IVSelection>(EventClass, selection, NetOffice.VisioApi.IVSelection.LateBindingApiWrapperType);
+            object[] paramsArray = new object[1];
 			paramsArray[0] = newSelection;
-			_eventBinding.RaiseCustomEvent("QueryCancelGroup", ref paramsArray);
+			EventBinding.RaiseCustomEvent("QueryCancelGroup", ref paramsArray);
 		}
 
 		public void GroupCanceled([In, MarshalAs(UnmanagedType.IDispatch)] object selection)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("GroupCanceled");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(selection);
-				return;
-			}
+            if (!Validate("GroupCanceled"))
+            {
+                Invoker.ReleaseParamsArray(selection);
+                return;
+            }
 
-			NetOffice.VisioApi.IVSelection newSelection = Factory.CreateObjectFromComProxy(_eventClass, selection) as NetOffice.VisioApi.IVSelection;
-			object[] paramsArray = new object[1];
+            NetOffice.VisioApi.IVSelection newSelection = Factory.CreateKnownObjectFromComProxy<NetOffice.VisioApi.IVSelection>(EventClass, selection, NetOffice.VisioApi.IVSelection.LateBindingApiWrapperType);
+            object[] paramsArray = new object[1];
 			paramsArray[0] = newSelection;
-			_eventBinding.RaiseCustomEvent("GroupCanceled", ref paramsArray);
+			EventBinding.RaiseCustomEvent("GroupCanceled", ref paramsArray);
 		}
 
 		public void ShapeDataGraphicChanged([In, MarshalAs(UnmanagedType.IDispatch)] object shape)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("ShapeDataGraphicChanged");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(shape);
-				return;
-			}
+        {
+            if (!Validate("ShapeDataGraphicChanged"))
+            {
+                Invoker.ReleaseParamsArray(shape);
+                return;
+            }
 
-			NetOffice.VisioApi.IVShape newShape = Factory.CreateObjectFromComProxy(_eventClass, shape) as NetOffice.VisioApi.IVShape;
+			NetOffice.VisioApi.IVShape newShape = Factory.CreateKnownObjectFromComProxy<NetOffice.VisioApi.IVShape>(EventClass, shape, NetOffice.VisioApi.IVShape.LateBindingApiWrapperType);
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newShape;
-			_eventBinding.RaiseCustomEvent("ShapeDataGraphicChanged", ref paramsArray);
+			EventBinding.RaiseCustomEvent("ShapeDataGraphicChanged", ref paramsArray);
 		}
 
 		public void BeforeDataRecordsetDelete([In, MarshalAs(UnmanagedType.IDispatch)] object dataRecordset)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("BeforeDataRecordsetDelete");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(dataRecordset);
-				return;
-			}
+            if (!Validate("BeforeDataRecordsetDelete"))
+            {
+                Invoker.ReleaseParamsArray(dataRecordset);
+                return;
+            }
 
-			NetOffice.VisioApi.IVDataRecordset newDataRecordset = Factory.CreateObjectFromComProxy(_eventClass, dataRecordset) as NetOffice.VisioApi.IVDataRecordset;
+            NetOffice.VisioApi.IVDataRecordset newDataRecordset = Factory.CreateKnownObjectFromComProxy<NetOffice.VisioApi.IVDataRecordset>(EventClass, dataRecordset, NetOffice.VisioApi.IVDataRecordset.LateBindingApiWrapperType);
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newDataRecordset;
-			_eventBinding.RaiseCustomEvent("BeforeDataRecordsetDelete", ref paramsArray);
+			EventBinding.RaiseCustomEvent("BeforeDataRecordsetDelete", ref paramsArray);
 		}
 
 		public void DataRecordsetChanged([In, MarshalAs(UnmanagedType.IDispatch)] object dataRecordsetChanged)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("DataRecordsetChanged");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(dataRecordsetChanged);
-				return;
-			}
+            if (!Validate("DataRecordsetChanged"))
+            {
+                Invoker.ReleaseParamsArray(dataRecordsetChanged);
+                return;
+            }
 
-			NetOffice.VisioApi.IVDataRecordsetChangedEvent newDataRecordsetChanged = Factory.CreateObjectFromComProxy(_eventClass, dataRecordsetChanged) as NetOffice.VisioApi.IVDataRecordsetChangedEvent;
+            NetOffice.VisioApi.IVDataRecordsetChangedEvent newDataRecordsetChanged = Factory.CreateKnownObjectFromComProxy<NetOffice.VisioApi.IVDataRecordsetChangedEvent>(EventClass, dataRecordsetChanged, NetOffice.VisioApi.IVDataRecordsetChangedEvent.LateBindingApiWrapperType);
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newDataRecordsetChanged;
-			_eventBinding.RaiseCustomEvent("DataRecordsetChanged", ref paramsArray);
+			EventBinding.RaiseCustomEvent("DataRecordsetChanged", ref paramsArray);
 		}
 
 		public void DataRecordsetAdded([In, MarshalAs(UnmanagedType.IDispatch)] object dataRecordset)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("DataRecordsetAdded");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(dataRecordset);
-				return;
-			}
+            if (!Validate("DataRecordsetAdded"))
+            {
+                Invoker.ReleaseParamsArray(dataRecordset);
+                return;
+            }
 
-			NetOffice.VisioApi.IVDataRecordset newDataRecordset = Factory.CreateObjectFromComProxy(_eventClass, dataRecordset) as NetOffice.VisioApi.IVDataRecordset;
+            NetOffice.VisioApi.IVDataRecordset newDataRecordset = Factory.CreateKnownObjectFromComProxy<NetOffice.VisioApi.IVDataRecordset>(EventClass, dataRecordset, NetOffice.VisioApi.IVDataRecordset.LateBindingApiWrapperType);
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newDataRecordset;
-			_eventBinding.RaiseCustomEvent("DataRecordsetAdded", ref paramsArray);
+			EventBinding.RaiseCustomEvent("DataRecordsetAdded", ref paramsArray);
 		}
 
 		public void ShapeLinkAdded([In, MarshalAs(UnmanagedType.IDispatch)] object shape, [In] object dataRecordsetID, [In] object dataRowID)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("ShapeLinkAdded");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(shape, dataRecordsetID, dataRowID);
-				return;
-			}
+            if (!Validate("ShapeLinkAdded"))
+            {
+                Invoker.ReleaseParamsArray(shape, dataRecordsetID, dataRowID);
+                return;
+            }
 
-			NetOffice.VisioApi.IVShape newShape = Factory.CreateObjectFromComProxy(_eventClass, shape) as NetOffice.VisioApi.IVShape;
+			NetOffice.VisioApi.IVShape newShape = Factory.CreateKnownObjectFromComProxy<NetOffice.VisioApi.IVShape>(EventClass, shape, NetOffice.VisioApi.IVShape.LateBindingApiWrapperType);
 			Int32 newDataRecordsetID = Convert.ToInt32(dataRecordsetID);
 			Int32 newDataRowID = Convert.ToInt32(dataRowID);
 			object[] paramsArray = new object[3];
 			paramsArray[0] = newShape;
 			paramsArray[1] = newDataRecordsetID;
 			paramsArray[2] = newDataRowID;
-			_eventBinding.RaiseCustomEvent("ShapeLinkAdded", ref paramsArray);
+			EventBinding.RaiseCustomEvent("ShapeLinkAdded", ref paramsArray);
 		}
 
 		public void ShapeLinkDeleted([In, MarshalAs(UnmanagedType.IDispatch)] object shape, [In] object dataRecordsetID, [In] object dataRowID)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("ShapeLinkDeleted");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(shape, dataRecordsetID, dataRowID);
-				return;
-			}
+            if (!Validate("ShapeLinkDeleted"))
+            {
+                Invoker.ReleaseParamsArray(shape, dataRecordsetID, dataRowID);
+                return;
+            }
 
-			NetOffice.VisioApi.IVShape newShape = Factory.CreateObjectFromComProxy(_eventClass, shape) as NetOffice.VisioApi.IVShape;
-			Int32 newDataRecordsetID = Convert.ToInt32(dataRecordsetID);
+            NetOffice.VisioApi.IVShape newShape = Factory.CreateKnownObjectFromComProxy<NetOffice.VisioApi.IVShape>(EventClass, shape, NetOffice.VisioApi.IVShape.LateBindingApiWrapperType);
+            Int32 newDataRecordsetID = Convert.ToInt32(dataRecordsetID);
 			Int32 newDataRowID = Convert.ToInt32(dataRowID);
 			object[] paramsArray = new object[3];
 			paramsArray[0] = newShape;
 			paramsArray[1] = newDataRecordsetID;
 			paramsArray[2] = newDataRowID;
-			_eventBinding.RaiseCustomEvent("ShapeLinkDeleted", ref paramsArray);
+			EventBinding.RaiseCustomEvent("ShapeLinkDeleted", ref paramsArray);
 		}
 
 		public void AfterRemoveHiddenInformation([In, MarshalAs(UnmanagedType.IDispatch)] object doc)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("AfterRemoveHiddenInformation");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(doc);
-				return;
-			}
+            if (!Validate("AfterRemoveHiddenInformation"))
+            {
+                Invoker.ReleaseParamsArray(doc);
+                return;
+            }
 
-			NetOffice.VisioApi.IVDocument newdoc = Factory.CreateObjectFromComProxy(_eventClass, doc) as NetOffice.VisioApi.IVDocument;
+            NetOffice.VisioApi.IVDocument newdoc = Factory.CreateKnownObjectFromComProxy<NetOffice.VisioApi.IVDocument>(EventClass, doc, NetOffice.VisioApi.IVDocument.LateBindingApiWrapperType);
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newdoc;
-			_eventBinding.RaiseCustomEvent("AfterRemoveHiddenInformation", ref paramsArray);
+			EventBinding.RaiseCustomEvent("AfterRemoveHiddenInformation", ref paramsArray);
 		}
 
 		public void ContainerRelationshipAdded([In, MarshalAs(UnmanagedType.IDispatch)] object shapePair)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("ContainerRelationshipAdded");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(shapePair);
-				return;
-			}
-
-			NetOffice.VisioApi.IVRelatedShapePairEvent newShapePair = Factory.CreateObjectFromComProxy(_eventClass, shapePair) as NetOffice.VisioApi.IVRelatedShapePairEvent;
+            if (!Validate("ContainerRelationshipAdded"))
+            {
+                Invoker.ReleaseParamsArray(shapePair);
+                return;
+            }
+            
+			NetOffice.VisioApi.IVRelatedShapePairEvent newShapePair = Factory.CreateKnownObjectFromComProxy<NetOffice.VisioApi.IVRelatedShapePairEvent>(EventClass, shapePair, NetOffice.VisioApi.IVRelatedShapePairEvent.LateBindingApiWrapperType);
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newShapePair;
-			_eventBinding.RaiseCustomEvent("ContainerRelationshipAdded", ref paramsArray);
+			EventBinding.RaiseCustomEvent("ContainerRelationshipAdded", ref paramsArray);
 		}
 
 		public void ContainerRelationshipDeleted([In, MarshalAs(UnmanagedType.IDispatch)] object shapePair)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("ContainerRelationshipDeleted");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(shapePair);
-				return;
-			}
+            if (!Validate("ContainerRelationshipDeleted"))
+            {
+                Invoker.ReleaseParamsArray(shapePair);
+                return;
+            }
 
-			NetOffice.VisioApi.IVRelatedShapePairEvent newShapePair = Factory.CreateObjectFromComProxy(_eventClass, shapePair) as NetOffice.VisioApi.IVRelatedShapePairEvent;
-			object[] paramsArray = new object[1];
+            NetOffice.VisioApi.IVRelatedShapePairEvent newShapePair = Factory.CreateKnownObjectFromComProxy<NetOffice.VisioApi.IVRelatedShapePairEvent>(EventClass, shapePair, NetOffice.VisioApi.IVRelatedShapePairEvent.LateBindingApiWrapperType);
+            object[] paramsArray = new object[1];
 			paramsArray[0] = newShapePair;
-			_eventBinding.RaiseCustomEvent("ContainerRelationshipDeleted", ref paramsArray);
+			EventBinding.RaiseCustomEvent("ContainerRelationshipDeleted", ref paramsArray);
 		}
 
 		public void CalloutRelationshipAdded([In, MarshalAs(UnmanagedType.IDispatch)] object shapePair)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("CalloutRelationshipAdded");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(shapePair);
-				return;
-			}
+            if (!Validate("CalloutRelationshipAdded"))
+            {
+                Invoker.ReleaseParamsArray(shapePair);
+                return;
+            }
 
-			NetOffice.VisioApi.IVRelatedShapePairEvent newShapePair = Factory.CreateObjectFromComProxy(_eventClass, shapePair) as NetOffice.VisioApi.IVRelatedShapePairEvent;
-			object[] paramsArray = new object[1];
+            NetOffice.VisioApi.IVRelatedShapePairEvent newShapePair = Factory.CreateKnownObjectFromComProxy<NetOffice.VisioApi.IVRelatedShapePairEvent>(EventClass, shapePair, NetOffice.VisioApi.IVRelatedShapePairEvent.LateBindingApiWrapperType);
+            object[] paramsArray = new object[1];
 			paramsArray[0] = newShapePair;
-			_eventBinding.RaiseCustomEvent("CalloutRelationshipAdded", ref paramsArray);
+			EventBinding.RaiseCustomEvent("CalloutRelationshipAdded", ref paramsArray);
 		}
 
 		public void CalloutRelationshipDeleted([In, MarshalAs(UnmanagedType.IDispatch)] object shapePair)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("CalloutRelationshipDeleted");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(shapePair);
-				return;
-			}
+            if (!Validate("CalloutRelationshipDeleted"))
+            {
+                Invoker.ReleaseParamsArray(shapePair);
+                return;
+            }
 
-			NetOffice.VisioApi.IVRelatedShapePairEvent newShapePair = Factory.CreateObjectFromComProxy(_eventClass, shapePair) as NetOffice.VisioApi.IVRelatedShapePairEvent;
-			object[] paramsArray = new object[1];
+            NetOffice.VisioApi.IVRelatedShapePairEvent newShapePair = Factory.CreateKnownObjectFromComProxy<NetOffice.VisioApi.IVRelatedShapePairEvent>(EventClass, shapePair, NetOffice.VisioApi.IVRelatedShapePairEvent.LateBindingApiWrapperType);
+            object[] paramsArray = new object[1];
 			paramsArray[0] = newShapePair;
-			_eventBinding.RaiseCustomEvent("CalloutRelationshipDeleted", ref paramsArray);
+			EventBinding.RaiseCustomEvent("CalloutRelationshipDeleted", ref paramsArray);
 		}
 
 		public void RuleSetValidated([In, MarshalAs(UnmanagedType.IDispatch)] object ruleSet)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("RuleSetValidated");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(ruleSet);
-				return;
-			}
+            if (!Validate("RuleSetValidated"))
+            {
+                Invoker.ReleaseParamsArray(ruleSet);
+                return;
+            }
 
-			NetOffice.VisioApi.IVValidationRuleSet newRuleSet = Factory.CreateObjectFromComProxy(_eventClass, ruleSet) as NetOffice.VisioApi.IVValidationRuleSet;
+            NetOffice.VisioApi.IVValidationRuleSet newRuleSet = Factory.CreateKnownObjectFromComProxy<NetOffice.VisioApi.IVValidationRuleSet>(EventClass, ruleSet, NetOffice.VisioApi.IVValidationRuleSet.LateBindingApiWrapperType);
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newRuleSet;
-			_eventBinding.RaiseCustomEvent("RuleSetValidated", ref paramsArray);
+			EventBinding.RaiseCustomEvent("RuleSetValidated", ref paramsArray);
 		}
 
 		public void QueryCancelReplaceShapes([In, MarshalAs(UnmanagedType.IDispatch)] object replaceShapes)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("QueryCancelReplaceShapes");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(replaceShapes);
-				return;
-			}
+            if (!Validate("QueryCancelReplaceShapes"))
+            {
+                Invoker.ReleaseParamsArray(replaceShapes);
+                return;
+            }
 
-			NetOffice.VisioApi.IVReplaceShapesEvent newreplaceShapes = Factory.CreateObjectFromComProxy(_eventClass, replaceShapes) as NetOffice.VisioApi.IVReplaceShapesEvent;
+            NetOffice.VisioApi.IVReplaceShapesEvent newreplaceShapes = Factory.CreateKnownObjectFromComProxy<NetOffice.VisioApi.IVReplaceShapesEvent>(EventClass, replaceShapes, NetOffice.VisioApi.IVReplaceShapesEvent.LateBindingApiWrapperType);
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newreplaceShapes;
-			_eventBinding.RaiseCustomEvent("QueryCancelReplaceShapes", ref paramsArray);
+			EventBinding.RaiseCustomEvent("QueryCancelReplaceShapes", ref paramsArray);
 		}
 
 		public void ReplaceShapesCanceled([In, MarshalAs(UnmanagedType.IDispatch)] object replaceShapes)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("ReplaceShapesCanceled");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(replaceShapes);
-				return;
-			}
+            if (!Validate("ReplaceShapesCanceled"))
+            {
+                Invoker.ReleaseParamsArray(replaceShapes);
+                return;
+            }
 
-			NetOffice.VisioApi.IVReplaceShapesEvent newreplaceShapes = Factory.CreateObjectFromComProxy(_eventClass, replaceShapes) as NetOffice.VisioApi.IVReplaceShapesEvent;
-			object[] paramsArray = new object[1];
+            NetOffice.VisioApi.IVReplaceShapesEvent newreplaceShapes = Factory.CreateKnownObjectFromComProxy<NetOffice.VisioApi.IVReplaceShapesEvent>(EventClass, replaceShapes, NetOffice.VisioApi.IVReplaceShapesEvent.LateBindingApiWrapperType);
+            object[] paramsArray = new object[1];
 			paramsArray[0] = newreplaceShapes;
-			_eventBinding.RaiseCustomEvent("ReplaceShapesCanceled", ref paramsArray);
+			EventBinding.RaiseCustomEvent("ReplaceShapesCanceled", ref paramsArray);
 		}
 
 		public void BeforeReplaceShapes([In, MarshalAs(UnmanagedType.IDispatch)] object replaceShapes)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("BeforeReplaceShapes");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(replaceShapes);
-				return;
-			}
+            if (!Validate("BeforeReplaceShapes"))
+            {
+                Invoker.ReleaseParamsArray(replaceShapes);
+                return;
+            }
 
-			NetOffice.VisioApi.IVReplaceShapesEvent newreplaceShapes = Factory.CreateObjectFromComProxy(_eventClass, replaceShapes) as NetOffice.VisioApi.IVReplaceShapesEvent;
-			object[] paramsArray = new object[1];
+            NetOffice.VisioApi.IVReplaceShapesEvent newreplaceShapes = Factory.CreateKnownObjectFromComProxy<NetOffice.VisioApi.IVReplaceShapesEvent>(EventClass, replaceShapes, NetOffice.VisioApi.IVReplaceShapesEvent.LateBindingApiWrapperType);
+            object[] paramsArray = new object[1];
 			paramsArray[0] = newreplaceShapes;
-			_eventBinding.RaiseCustomEvent("BeforeReplaceShapes", ref paramsArray);
+			EventBinding.RaiseCustomEvent("BeforeReplaceShapes", ref paramsArray);
 		}
 
 		public void AfterReplaceShapes([In, MarshalAs(UnmanagedType.IDispatch)] object sel)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("AfterReplaceShapes");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(sel);
-				return;
-			}
+            if (!Validate("AfterReplaceShapes"))
+            {
+                Invoker.ReleaseParamsArray(sel);
+                return;
+            }
 
-			NetOffice.VisioApi.IVSelection newsel = Factory.CreateObjectFromComProxy(_eventClass, sel) as NetOffice.VisioApi.IVSelection;
+            NetOffice.VisioApi.IVSelection newsel = Factory.CreateKnownObjectFromComProxy<NetOffice.VisioApi.IVSelection>(EventClass, sel, NetOffice.VisioApi.IVSelection.LateBindingApiWrapperType);
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newsel;
-			_eventBinding.RaiseCustomEvent("AfterReplaceShapes", ref paramsArray);
+			EventBinding.RaiseCustomEvent("AfterReplaceShapes", ref paramsArray);
 		}
 
 		public void AfterDocumentMerge([In, MarshalAs(UnmanagedType.IDispatch)] object coauthMergeObjects)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("AfterDocumentMerge");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(coauthMergeObjects);
-				return;
-			}
+            if (!Validate("AfterDocumentMerge"))
+            {
+                Invoker.ReleaseParamsArray(coauthMergeObjects);
+                return;
+            }
 
-			NetOffice.VisioApi.IVCoauthMergeEvent newcoauthMergeObjects = Factory.CreateObjectFromComProxy(_eventClass, coauthMergeObjects) as NetOffice.VisioApi.IVCoauthMergeEvent;
+            NetOffice.VisioApi.IVCoauthMergeEvent newcoauthMergeObjects = Factory.CreateKnownObjectFromComProxy<NetOffice.VisioApi.IVCoauthMergeEvent>(EventClass, coauthMergeObjects, NetOffice.VisioApi.IVCoauthMergeEvent.LateBindingApiWrapperType);
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newcoauthMergeObjects;
-			_eventBinding.RaiseCustomEvent("AfterDocumentMerge", ref paramsArray);
+			EventBinding.RaiseCustomEvent("AfterDocumentMerge", ref paramsArray);
 		}
 
 		#endregion

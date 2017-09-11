@@ -10,7 +10,7 @@ namespace NetOffice.VBIDEApi
 	/// SupportByVersion VBIDE, 12,14,5.3
 	/// </summary>
 	[SupportByVersion("VBIDE", 12,14,5.3)]
-	[EntityType(EntityType.IsDispatchInterface)]
+	[EntityType(EntityType.IsDispatchInterface), BaseType]
  	public class _VBProjects : _VBProjects_Old
 	{
 		#pragma warning disable

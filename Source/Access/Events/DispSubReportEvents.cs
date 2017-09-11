@@ -38,73 +38,46 @@ namespace NetOffice.AccessApi.Events
 		public static readonly string Id = "2E705278-92D1-43CC-A57B-ED48BCCC711D";
 		
 		#endregion
-	
-		#region Fields
-
-		private IEventBinding	_eventBinding;
-        private ICOMObject _eventClass;
-        
-		#endregion
 		
-		#region Construction
+		#region Ctor
 
 		public DispSubReportEvents_SinkHelper(ICOMObject eventClass, IConnectionPoint connectPoint): base(eventClass)
 		{
-			_eventClass = eventClass;
-			_eventBinding = (IEventBinding)eventClass;
 			SetupEventBinding(connectPoint);
 		}
-		
-		#endregion
-		
-		#region Properties
-
-        internal Core Factory
-        {
-            get
-            {
-                if (null != _eventClass)
-                    return _eventClass.Factory;
-                else
-                    return Core.Default;
-            }
-        }
 
         #endregion
 
-		#region DispSubReportEvents Members
-		
-		public void Enter()
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("Enter");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray();
-				return;
-			}
+        #region DispSubReportEvents
 
-			object[] paramsArray = new object[0];
-			_eventBinding.RaiseCustomEvent("Enter", ref paramsArray);
-		}
+        public void Enter()
+        {
+            if (!Validate("Enter"))
+            {
+                return;
+            }
 
-		public void Exit([In] [Out] ref object cancel)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("Exit");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(cancel);
-				return;
-			}
+            object[] paramsArray = new object[0];
+            EventBinding.RaiseCustomEvent("Enter", ref paramsArray);
+        }
 
-			object[] paramsArray = new object[1];
-			paramsArray.SetValue(cancel, 0);
-			_eventBinding.RaiseCustomEvent("Exit", ref paramsArray);
+        public void Exit([In] [Out] ref object cancel)
+        {
+            if (!Validate("Exit"))
+            {
+                Invoker.ReleaseParamsArray(cancel);
+                return;
+            }
 
-			cancel = (Int16)paramsArray[0];
-		}
+            object[] paramsArray = new object[1];
+            paramsArray.SetValue(cancel, 0);
+            EventBinding.RaiseCustomEvent("Exit", ref paramsArray);
 
-		#endregion
-	}
+            cancel = ToInt16(paramsArray[0]);
+        }
+
+        #endregion
+    }
 	
 	#endregion
 	

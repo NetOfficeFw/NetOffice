@@ -106,52 +106,7 @@ namespace NetOffice.MSHTMLApi
 		#endregion
 		
 		#region Properties
-
-		/// <summary>
-		/// SupportByVersion MSHTML 4
-		/// Get/Set
-		/// </summary>
-		[SupportByVersion("MSHTML", 4)]
-		public string selectorText
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "selectorText");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "selectorText", value);
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSHTML 4
-		/// Get
-		/// </summary>
-		[SupportByVersion("MSHTML", 4)]
-		[BaseResult]
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public NetOffice.MSHTMLApi.IHTMLRuleStyle style
-		{
-			get
-			{
-				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.MSHTMLApi.IHTMLRuleStyle>(this, "style");
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSHTML 4
-		/// Get
-		/// </summary>
-		[SupportByVersion("MSHTML", 4)]
-		public bool readOnly
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "readOnly");
-			}
-		}
-
+        
 		#endregion
 
 		#region Methods

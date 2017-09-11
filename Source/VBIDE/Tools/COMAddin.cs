@@ -438,7 +438,7 @@ namespace NetOffice.VBIDEApi.Tools
         {         
             if (null == type)
                 throw new ArgumentNullException("type");
-            RegisterHandler.ProceedUser(type, new string[] { _addinOfficeRegistryKey, _addinOfficeRegistryKey64 }, OfficeRegisterKeyState.NeedToCreate);
+            COMAddinRegisterHandler.ProceedUser(type, new string[] { _addinOfficeRegistryKey, _addinOfficeRegistryKey64 }, OfficeRegisterKeyState.NeedToCreate);
         }
 
         /// <summary>
@@ -450,7 +450,7 @@ namespace NetOffice.VBIDEApi.Tools
         {
             if (null == type)
                 throw new ArgumentNullException("type");
-            UnRegisterHandler.ProceedUser(type, new string[] { _addinOfficeRegistryKey, _addinOfficeRegistryKey64 }, OfficeUnRegisterKeyState.NeedToDelete);
+            COMAddinUnRegisterHandler.ProceedUser(type, new string[] { _addinOfficeRegistryKey, _addinOfficeRegistryKey64 }, OfficeUnRegisterKeyState.NeedToDelete);
         }
 
         /// <summary>
@@ -466,7 +466,7 @@ namespace NetOffice.VBIDEApi.Tools
                 throw new ArgumentNullException("type");
 
             OfficeRegisterKeyState currentKeyState = (OfficeRegisterKeyState)keyState;
-            RegisterHandler.ProceedUser(type, new string[] { _addinOfficeRegistryKey, _addinOfficeRegistryKey64 }, currentKeyState);
+            COMAddinRegisterHandler.ProceedUser(type, new string[] { _addinOfficeRegistryKey, _addinOfficeRegistryKey64 }, currentKeyState);
         }
 
         /// <summary>
@@ -482,7 +482,7 @@ namespace NetOffice.VBIDEApi.Tools
                 throw new ArgumentNullException("type");
          
             OfficeUnRegisterKeyState currentKeyState = (OfficeUnRegisterKeyState)keyState;
-            UnRegisterHandler.ProceedUser(type, new string[] { _addinOfficeRegistryKey, _addinOfficeRegistryKey64 }, currentKeyState);
+            COMAddinUnRegisterHandler.ProceedUser(type, new string[] { _addinOfficeRegistryKey, _addinOfficeRegistryKey64 }, currentKeyState);
         }
 
         /// <summary>

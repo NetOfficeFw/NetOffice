@@ -10,7 +10,7 @@ namespace NetOffice.MSHTMLApi
 	/// SupportByVersion MSHTML, 4
 	/// </summary>
 	[SupportByVersion("MSHTML", 4)]
-	[EntityType(EntityType.IsDispatchInterface)]
+	[EntityType(EntityType.IsDispatchInterface), BaseType]
  	public class IHTMLRuleStyle4 : IHTMLRuleStyle3
 	{
 		#pragma warning disable
@@ -106,40 +106,6 @@ namespace NetOffice.MSHTMLApi
 		#endregion
 		
 		#region Properties
-
-		/// <summary>
-		/// SupportByVersion MSHTML 4
-		/// Get/Set
-		/// </summary>
-		[SupportByVersion("MSHTML", 4)]
-		public string textOverflow
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "textOverflow");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "textOverflow", value);
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSHTML 4
-		/// Get/Set
-		/// </summary>
-		[SupportByVersion("MSHTML", 4)]
-		public object minHeight
-		{
-			get
-			{
-				return Factory.ExecuteVariantPropertyGet(this, "minHeight");
-			}
-			set
-			{
-				Factory.ExecuteVariantPropertySet(this, "minHeight", value);
-			}
-		}
 
 		#endregion
 

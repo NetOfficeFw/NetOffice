@@ -107,42 +107,9 @@ namespace NetOffice.MSHTMLApi
 		
 		#region Properties
 
-		/// <summary>
-		/// SupportByVersion MSHTML 4
-		/// Get
-		/// </summary>
-		[SupportByVersion("MSHTML", 4)]
-		public Int32 length
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "length");
-			}
-		}
-
 		#endregion
 
 		#region Methods
-
-		/// <summary>
-		/// SupportByVersion MSHTML 4
-		/// </summary>
-		/// <param name="reload">optional bool reload = false</param>
-		[SupportByVersion("MSHTML", 4)]
-		public void refresh(object reload)
-		{
-			 Factory.ExecuteMethod(this, "refresh", reload);
-		}
-
-		/// <summary>
-		/// SupportByVersion MSHTML 4
-		/// </summary>
-		[CustomMethod]
-		[SupportByVersion("MSHTML", 4)]
-		public void refresh()
-		{
-			 Factory.ExecuteMethod(this, "refresh");
-		}
 
 		#endregion
 

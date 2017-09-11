@@ -39,78 +39,52 @@ namespace NetOffice.OutlookApi.Events
 		
 		#endregion
 	
-		#region Fields
-
-		private IEventBinding	_eventBinding;
-        private ICOMObject _eventClass;
-        
-		#endregion
-		
-		#region Construction
+		#region Ctor
 
 		public MAPIFolderEvents_12_SinkHelper(ICOMObject eventClass, IConnectionPoint connectPoint): base(eventClass)
 		{
-			_eventClass = eventClass;
-			_eventBinding = (IEventBinding)eventClass;
 			SetupEventBinding(connectPoint);
 		}
 		
 		#endregion
-		
-		#region Properties
 
-        internal Core Factory
-        {
-            get
-            {
-                if (null != _eventClass)
-                    return _eventClass.Factory;
-                else
-                    return Core.Default;
-            }
-        }
-
-        #endregion
-
-		#region MAPIFolderEvents_12 Members
+		#region MAPIFolderEvents_12
 		
 		public void BeforeFolderMove([In, MarshalAs(UnmanagedType.IDispatch)] object moveTo, [In] [Out] ref object cancel)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("BeforeFolderMove");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(moveTo, cancel);
-				return;
-			}
+            if (!Validate("BeforeFolderMove"))
+            {
+                Invoker.ReleaseParamsArray(moveTo, cancel);
+                return;
+            }
 
-			NetOffice.OutlookApi.MAPIFolder newMoveTo = Factory.CreateObjectFromComProxy(_eventClass, moveTo) as NetOffice.OutlookApi.MAPIFolder;
+			NetOffice.OutlookApi.MAPIFolder newMoveTo = Factory.CreateKnownObjectFromComProxy<NetOffice.OutlookApi.MAPIFolder>(EventClass, moveTo, NetOffice.OutlookApi.MAPIFolder.LateBindingApiWrapperType);
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newMoveTo;
 			paramsArray.SetValue(cancel, 1);
-			_eventBinding.RaiseCustomEvent("BeforeFolderMove", ref paramsArray);
+			EventBinding.RaiseCustomEvent("BeforeFolderMove", ref paramsArray);
 
-			cancel = (bool)paramsArray[1];
+			cancel = ToBoolean(paramsArray[1]);
 		}
 
 		public void BeforeItemMove([In, MarshalAs(UnmanagedType.IDispatch)] object item, [In, MarshalAs(UnmanagedType.IDispatch)] object moveTo, [In] [Out] ref object cancel)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("BeforeItemMove");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(item, moveTo, cancel);
-				return;
-			}
+        {
+            if (!Validate("BeforeItemMove"))
+            {
+                Invoker.ReleaseParamsArray(item, moveTo, cancel);
+                return;
+            }
 
-			object newItem = Factory.CreateObjectFromComProxy(_eventClass, item) as object;
-			NetOffice.OutlookApi.MAPIFolder newMoveTo = Factory.CreateObjectFromComProxy(_eventClass, moveTo) as NetOffice.OutlookApi.MAPIFolder;
-			object[] paramsArray = new object[3];
+			object newItem = Factory.CreateEventArgumentObjectFromComProxy(EventClass, item) as object;
+            NetOffice.OutlookApi.MAPIFolder newMoveTo = Factory.CreateKnownObjectFromComProxy<NetOffice.OutlookApi.MAPIFolder>(EventClass, moveTo, NetOffice.OutlookApi.MAPIFolder.LateBindingApiWrapperType);
+            object[] paramsArray = new object[3];
 			paramsArray[0] = newItem;
 			paramsArray[1] = newMoveTo;
 			paramsArray.SetValue(cancel, 2);
-			_eventBinding.RaiseCustomEvent("BeforeItemMove", ref paramsArray);
+			EventBinding.RaiseCustomEvent("BeforeItemMove", ref paramsArray);
 
-			cancel = (bool)paramsArray[2];
-		}
+            cancel = ToBoolean(paramsArray[2]);
+        }
 
 		#endregion
 	}

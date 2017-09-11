@@ -10,7 +10,7 @@ namespace NetOffice.MSHTMLApi
 	/// SupportByVersion MSHTML, 4
 	/// </summary>
 	[SupportByVersion("MSHTML", 4)]
-	[EntityType(EntityType.IsDispatchInterface)]
+	[EntityType(EntityType.IsDispatchInterface), BaseType]
  	public class IHTMLDOMAttribute : DispHTMLDOMAttribute
 	{
 		#pragma warning disable
@@ -106,49 +106,6 @@ namespace NetOffice.MSHTMLApi
 		#endregion
 		
 		#region Properties
-
-		/// <summary>
-		/// SupportByVersion MSHTML 4
-		/// Get
-		/// </summary>
-		[SupportByVersion("MSHTML", 4)]
-		public string nodeName
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "nodeName");
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSHTML 4
-		/// Get/Set
-		/// </summary>
-		[SupportByVersion("MSHTML", 4)]
-		public object nodeValue
-		{
-			get
-			{
-				return Factory.ExecuteVariantPropertyGet(this, "nodeValue");
-			}
-			set
-			{
-				Factory.ExecuteVariantPropertySet(this, "nodeValue", value);
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSHTML 4
-		/// Get
-		/// </summary>
-		[SupportByVersion("MSHTML", 4)]
-		public bool specified
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "specified");
-			}
-		}
 
 		#endregion
 

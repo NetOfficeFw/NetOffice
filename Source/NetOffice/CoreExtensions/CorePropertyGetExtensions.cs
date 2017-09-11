@@ -1329,7 +1329,7 @@ namespace NetOffice
         {
             object[] args = Invoker.ValidateParamsArray(paramsArray);
             object returnItem = value.Invoker.PropertyGet(caller, name, args);
-            ICOMObject newObject = value.CreateObjectFromComProxy(caller, returnItem);
+            ICOMObject newObject = value.CreateObjectFromComProxy(caller, returnItem, true);
             return newObject;
         }
 
@@ -1417,7 +1417,7 @@ namespace NetOffice
         {
             object[] args = Invoker.ValidateParamsArray(paramsArray);
             object returnItem = value.Invoker.PropertyGet(caller, name, args);
-            T newObject = value.CreateObjectFromComProxy(caller, returnItem) as T;
+            T newObject = value.CreateObjectFromComProxy(caller, returnItem, true) as T;
             return newObject;
         }
 
@@ -1505,7 +1505,7 @@ namespace NetOffice
         {
             object[] args = Invoker.ValidateParamsArray(paramsArray);
             object returnItem = value.Invoker.PropertyGet(caller, name, args);
-            T newObject = value.CreateObjectFromComProxy(caller, returnItem) as T;
+            T newObject = value.CreateObjectFromComProxy(caller, returnItem, true) as T;
             return newObject;
         }
 
@@ -1688,7 +1688,7 @@ namespace NetOffice
             object returnItem = value.Invoker.PropertyGet(caller, name, args);
             if ((null != returnItem) && (returnItem is MarshalByRefObject))
             {
-                ICOMObject newObject = value.CreateObjectFromComProxy(caller, returnItem);
+                ICOMObject newObject = value.CreateObjectFromComProxy(caller, returnItem, false);
                 return newObject;
             }
             else

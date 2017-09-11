@@ -80,92 +80,61 @@ namespace NetOffice.ExcelApi.Events
 		#region Static
 		
 		public static readonly string Id = "0002440F-0000-0000-C000-000000000046";
-		
-		#endregion
-	
-		#region Fields
 
-		private IEventBinding	_eventBinding;
-        private ICOMObject		_eventClass;
-        
-		#endregion
-		
-		#region Construction
+        #endregion
 
-		public ChartEvents_SinkHelper(ICOMObject eventClass, IConnectionPoint connectPoint): base(eventClass)
+        #region Ctor
+
+        public ChartEvents_SinkHelper(ICOMObject eventClass, IConnectionPoint connectPoint): base(eventClass)
 		{
-			_eventClass = eventClass;
-			_eventBinding = (IEventBinding)eventClass;
 			SetupEventBinding(connectPoint);
 		}
 		
 		#endregion
-		
-		#region Properties
 
-        internal Core Factory
-        {
-            get
-            {
-                if (null != _eventClass)
-                    return _eventClass.Factory;
-                else
-                    return Core.Default;
-            }
-        }
-
-        #endregion
-
-		#region ChartEvents Members
+		#region ChartEvents
 		
 		public void Activate()
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("Activate");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray();
-				return;
-			}
+            if (!Validate("Activate"))
+            {
+                return;
+            }
 
 			object[] paramsArray = new object[0];
-			_eventBinding.RaiseCustomEvent("Activate", ref paramsArray);
+			EventBinding.RaiseCustomEvent("Activate", ref paramsArray);
 		}
 
 		public void Deactivate()
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("Deactivate");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray();
-				return;
-			}
+            if (!Validate("Deactivate"))
+            {
+                return;
+            }
 
-			object[] paramsArray = new object[0];
-			_eventBinding.RaiseCustomEvent("Deactivate", ref paramsArray);
+            object[] paramsArray = new object[0];
+            EventBinding.RaiseCustomEvent("Deactivate", ref paramsArray);
 		}
 
 		public void Resize()
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("Resize");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray();
-				return;
-			}
+            if (!Validate("Resize"))
+            {
+                return;
+            }
 
-			object[] paramsArray = new object[0];
-			_eventBinding.RaiseCustomEvent("Resize", ref paramsArray);
+            object[] paramsArray = new object[0];
+            EventBinding.RaiseCustomEvent("Resize", ref paramsArray);
 		}
 
 		public void MouseDown([In] object button, [In] object shift, [In] object x, [In] object y)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("MouseDown");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(button, shift, x, y);
-				return;
-			}
-
+            if (!Validate("MouseDown"))
+            {
+                Invoker.ReleaseParamsArray(button, shift, x, y);
+                return;
+            }
+            
 			Int32 newButton = Convert.ToInt32(button);
 			Int32 newShift = Convert.ToInt32(shift);
 			Int32 newx = Convert.ToInt32(x);
@@ -175,17 +144,16 @@ namespace NetOffice.ExcelApi.Events
 			paramsArray[1] = newShift;
 			paramsArray[2] = newx;
 			paramsArray[3] = newy;
-			_eventBinding.RaiseCustomEvent("MouseDown", ref paramsArray);
+			EventBinding.RaiseCustomEvent("MouseDown", ref paramsArray);
 		}
 
 		public void MouseUp([In] object button, [In] object shift, [In] object x, [In] object y)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("MouseUp");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(button, shift, x, y);
-				return;
-			}
+            if (!Validate("MouseUp"))
+            {
+                Invoker.ReleaseParamsArray(button, shift, x, y);
+                return;
+            }
 
 			Int32 newButton = Convert.ToInt32(button);
 			Int32 newShift = Convert.ToInt32(shift);
@@ -196,17 +164,16 @@ namespace NetOffice.ExcelApi.Events
 			paramsArray[1] = newShift;
 			paramsArray[2] = newx;
 			paramsArray[3] = newy;
-			_eventBinding.RaiseCustomEvent("MouseUp", ref paramsArray);
+			EventBinding.RaiseCustomEvent("MouseUp", ref paramsArray);
 		}
 
 		public void MouseMove([In] object button, [In] object shift, [In] object x, [In] object y)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("MouseMove");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(button, shift, x, y);
-				return;
-			}
+        {
+            if (!Validate("MouseMove"))
+            {
+                Invoker.ReleaseParamsArray(button, shift, x, y);
+                return;
+            }
 
 			Int32 newButton = Convert.ToInt32(button);
 			Int32 newShift = Convert.ToInt32(shift);
@@ -217,59 +184,53 @@ namespace NetOffice.ExcelApi.Events
 			paramsArray[1] = newShift;
 			paramsArray[2] = newx;
 			paramsArray[3] = newy;
-			_eventBinding.RaiseCustomEvent("MouseMove", ref paramsArray);
+			EventBinding.RaiseCustomEvent("MouseMove", ref paramsArray);
 		}
 
 		public void BeforeRightClick([In] [Out] ref object cancel)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("BeforeRightClick");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(cancel);
-				return;
-			}
+        {
+            if (!Validate("BeforeRightClick"))
+            {
+                Invoker.ReleaseParamsArray(cancel);
+                return;
+            }
 
 			object[] paramsArray = new object[1];
 			paramsArray.SetValue(cancel, 0);
-			_eventBinding.RaiseCustomEvent("BeforeRightClick", ref paramsArray);
+			EventBinding.RaiseCustomEvent("BeforeRightClick", ref paramsArray);
 
-			cancel = (bool)paramsArray[0];
+            cancel = ToBoolean(paramsArray[0]);
 		}
 
 		public void DragPlot()
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("DragPlot");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray();
-				return;
-			}
+        {
+            if (!Validate("DragPlot"))
+            {
+                return;
+            }
 
 			object[] paramsArray = new object[0];
-			_eventBinding.RaiseCustomEvent("DragPlot", ref paramsArray);
+			EventBinding.RaiseCustomEvent("DragPlot", ref paramsArray);
 		}
 
 		public void DragOver()
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("DragOver");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray();
-				return;
-			}
+            if (!Validate("DragOver"))
+            {
+                return;
+            }
 
-			object[] paramsArray = new object[0];
-			_eventBinding.RaiseCustomEvent("DragOver", ref paramsArray);
+            object[] paramsArray = new object[0];
+			EventBinding.RaiseCustomEvent("DragOver", ref paramsArray);
 		}
 
 		public void BeforeDoubleClick([In] object elementID, [In] object arg1, [In] object arg2, [In] [Out] ref object cancel)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("BeforeDoubleClick");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(elementID, arg1, arg2, cancel);
-				return;
-			}
+        {
+            if (!Validate("BeforeDoubleClick"))
+            {
+                Invoker.ReleaseParamsArray(elementID, arg1, arg2, cancel);
+                return;
+            }
 
 			Int32 newElementID = Convert.ToInt32(elementID);
 			Int32 newArg1 = Convert.ToInt32(arg1);
@@ -279,19 +240,18 @@ namespace NetOffice.ExcelApi.Events
 			paramsArray[1] = newArg1;
 			paramsArray[2] = newArg2;
 			paramsArray.SetValue(cancel, 3);
-			_eventBinding.RaiseCustomEvent("BeforeDoubleClick", ref paramsArray);
+			EventBinding.RaiseCustomEvent("BeforeDoubleClick", ref paramsArray);
 
-			cancel = (bool)paramsArray[3];
+            cancel = ToBoolean(paramsArray[3]);
 		}
 
 		public void Select([In] object elementID, [In] object arg1, [In] object arg2)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("Select");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(elementID, arg1, arg2);
-				return;
-			}
+            if (!Validate("Select"))
+            {
+                Invoker.ReleaseParamsArray(elementID, arg1, arg2);
+                return;
+            }
 
 			Int32 newElementID = Convert.ToInt32(elementID);
 			Int32 newArg1 = Convert.ToInt32(arg1);
@@ -300,37 +260,34 @@ namespace NetOffice.ExcelApi.Events
 			paramsArray[0] = newElementID;
 			paramsArray[1] = newArg1;
 			paramsArray[2] = newArg2;
-			_eventBinding.RaiseCustomEvent("Select", ref paramsArray);
+			EventBinding.RaiseCustomEvent("Select", ref paramsArray);
 		}
 
 		public void SeriesChange([In] object seriesIndex, [In] object pointIndex)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("SeriesChange");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(seriesIndex, pointIndex);
-				return;
-			}
+            if (!Validate("SeriesChange"))
+            {
+                Invoker.ReleaseParamsArray(seriesIndex, pointIndex);
+                return;
+            }
 
 			Int32 newSeriesIndex = Convert.ToInt32(seriesIndex);
 			Int32 newPointIndex = Convert.ToInt32(pointIndex);
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newSeriesIndex;
 			paramsArray[1] = newPointIndex;
-			_eventBinding.RaiseCustomEvent("SeriesChange", ref paramsArray);
+			EventBinding.RaiseCustomEvent("SeriesChange", ref paramsArray);
 		}
 
 		public void Calculate()
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("Calculate");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray();
-				return;
-			}
+            if (!Validate("Calculate"))
+            {
+                return;
+            }
 
-			object[] paramsArray = new object[0];
-			_eventBinding.RaiseCustomEvent("Calculate", ref paramsArray);
+            object[] paramsArray = new object[0];
+			EventBinding.RaiseCustomEvent("Calculate", ref paramsArray);
 		}
 
 		#endregion

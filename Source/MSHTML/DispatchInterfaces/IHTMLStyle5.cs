@@ -10,7 +10,7 @@ namespace NetOffice.MSHTMLApi
 	/// SupportByVersion MSHTML, 4
 	/// </summary>
 	[SupportByVersion("MSHTML", 4)]
-	[EntityType(EntityType.IsDispatchInterface)]
+	[EntityType(EntityType.IsDispatchInterface), BaseType]
  	public class IHTMLStyle5 : IHTMLStyle4
 	{
 		#pragma warning disable
@@ -106,75 +106,7 @@ namespace NetOffice.MSHTMLApi
 		#endregion
 		
 		#region Properties
-
-		/// <summary>
-		/// SupportByVersion MSHTML 4
-		/// Get/Set
-		/// </summary>
-		[SupportByVersion("MSHTML", 4)]
-		public string msInterpolationMode
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "msInterpolationMode");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "msInterpolationMode", value);
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSHTML 4
-		/// Get/Set
-		/// </summary>
-		[SupportByVersion("MSHTML", 4)]
-		public object maxHeight
-		{
-			get
-			{
-				return Factory.ExecuteVariantPropertyGet(this, "maxHeight");
-			}
-			set
-			{
-				Factory.ExecuteVariantPropertySet(this, "maxHeight", value);
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSHTML 4
-		/// Get/Set
-		/// </summary>
-		[SupportByVersion("MSHTML", 4)]
-		public object minWidth
-		{
-			get
-			{
-				return Factory.ExecuteVariantPropertyGet(this, "minWidth");
-			}
-			set
-			{
-				Factory.ExecuteVariantPropertySet(this, "minWidth", value);
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSHTML 4
-		/// Get/Set
-		/// </summary>
-		[SupportByVersion("MSHTML", 4)]
-		public object maxWidth
-		{
-			get
-			{
-				return Factory.ExecuteVariantPropertyGet(this, "maxWidth");
-			}
-			set
-			{
-				Factory.ExecuteVariantPropertySet(this, "maxWidth", value);
-			}
-		}
-
+        
 		#endregion
 
 		#region Methods

@@ -32,57 +32,31 @@ namespace NetOffice.OutlookApi.Events
 		#region Static
 		
 		public static readonly string Id = "00063104-0000-0000-C000-000000000046";
-		
-		#endregion
-	
-		#region Fields
 
-		private IEventBinding	_eventBinding;
-        private ICOMObject _eventClass;
-        
-		#endregion
-		
-		#region Construction
+        #endregion
 
-		public AccountSelectorEvents_SinkHelper(ICOMObject eventClass, IConnectionPoint connectPoint): base(eventClass)
+        #region Ctor
+
+        public AccountSelectorEvents_SinkHelper(ICOMObject eventClass, IConnectionPoint connectPoint): base(eventClass)
 		{
-			_eventClass = eventClass;
-			_eventBinding = (IEventBinding)eventClass;
 			SetupEventBinding(connectPoint);
 		}
 		
 		#endregion
 		
-		#region Properties
-
-        internal Core Factory
-        {
-            get
-            {
-                if (null != _eventClass)
-                    return _eventClass.Factory;
-                else
-                    return Core.Default;
-            }
-        }
-
-        #endregion
-
-		#region AccountSelectorEvents Members
+		#region AccountSelectorEvents
 		
 		public void SelectedAccountChange([In, MarshalAs(UnmanagedType.IDispatch)] object selectedAccount)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("SelectedAccountChange");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(selectedAccount);
-				return;
-			}
+        {
+            if (!Validate("SelectedAccountChange"))
+            {
+                Invoker.ReleaseParamsArray(selectedAccount);
+            }
 
-			NetOffice.OutlookApi.Account newSelectedAccount = Factory.CreateObjectFromComProxy(_eventClass, selectedAccount) as NetOffice.OutlookApi.Account;
+			NetOffice.OutlookApi.Account newSelectedAccount = Factory.CreateKnownObjectFromComProxy<NetOffice.OutlookApi.Account>(EventClass, selectedAccount, NetOffice.OutlookApi.Account.LateBindingApiWrapperType);
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newSelectedAccount;
-			_eventBinding.RaiseCustomEvent("SelectedAccountChange", ref paramsArray);
+			EventBinding.RaiseCustomEvent("SelectedAccountChange", ref paramsArray);
 		}
 
 		#endregion

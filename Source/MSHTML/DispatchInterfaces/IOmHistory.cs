@@ -107,82 +107,9 @@ namespace NetOffice.MSHTMLApi
 		
 		#region Properties
 
-		/// <summary>
-		/// SupportByVersion MSHTML 4
-		/// Get
-		/// </summary>
-		[SupportByVersion("MSHTML", 4)]
-		public Int16 length
-		{
-			get
-			{
-				return Factory.ExecuteInt16PropertyGet(this, "length");
-			}
-		}
-
 		#endregion
 
 		#region Methods
-
-		/// <summary>
-		/// SupportByVersion MSHTML 4
-		/// </summary>
-		/// <param name="pvargdistance">optional object pvargdistance</param>
-		[SupportByVersion("MSHTML", 4)]
-		public void back(object pvargdistance)
-		{
-			 Factory.ExecuteMethod(this, "back", pvargdistance);
-		}
-
-		/// <summary>
-		/// SupportByVersion MSHTML 4
-		/// </summary>
-		[CustomMethod]
-		[SupportByVersion("MSHTML", 4)]
-		public void back()
-		{
-			 Factory.ExecuteMethod(this, "back");
-		}
-
-		/// <summary>
-		/// SupportByVersion MSHTML 4
-		/// </summary>
-		/// <param name="pvargdistance">optional object pvargdistance</param>
-		[SupportByVersion("MSHTML", 4)]
-		public void forward(object pvargdistance)
-		{
-			 Factory.ExecuteMethod(this, "forward", pvargdistance);
-		}
-
-		/// <summary>
-		/// SupportByVersion MSHTML 4
-		/// </summary>
-		[CustomMethod]
-		[SupportByVersion("MSHTML", 4)]
-		public void forward()
-		{
-			 Factory.ExecuteMethod(this, "forward");
-		}
-
-		/// <summary>
-		/// SupportByVersion MSHTML 4
-		/// </summary>
-		/// <param name="pvargdistance">optional object pvargdistance</param>
-		[SupportByVersion("MSHTML", 4)]
-		public void go(object pvargdistance)
-		{
-			 Factory.ExecuteMethod(this, "go", pvargdistance);
-		}
-
-		/// <summary>
-		/// SupportByVersion MSHTML 4
-		/// </summary>
-		[CustomMethod]
-		[SupportByVersion("MSHTML", 4)]
-		public void go()
-		{
-			 Factory.ExecuteMethod(this, "go");
-		}
 
 		#endregion
 

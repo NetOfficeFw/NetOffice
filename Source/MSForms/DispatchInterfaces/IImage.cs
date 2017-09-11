@@ -10,7 +10,7 @@ namespace NetOffice.MSFormsApi
 	/// SupportByVersion MSForms, 2
 	/// </summary>
 	[SupportByVersion("MSForms", 2)]
-	[EntityType(EntityType.IsDispatchInterface)]
+	[EntityType(EntityType.IsDispatchInterface), BaseType]
  	public class IImage : COMObject
 	{
 		#pragma warning disable
@@ -230,15 +230,14 @@ namespace NetOffice.MSFormsApi
 		/// SupportByVersion MSForms 2
 		/// Get/Set
 		/// </summary>
-		[SupportByVersion("MSForms", 2)]
+		[SupportByVersion("MSForms", 2), NativeResult]
 		public stdole.Picture Picture
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Picture", paramsArray);
-				stdole.Picture newObject = Factory.CreateObjectFromComProxy(this,returnItem) as stdole.Picture;
-				return newObject;
+                return returnItem as stdole.Picture;
 			}
 			set
 			{
@@ -251,15 +250,14 @@ namespace NetOffice.MSFormsApi
 		/// SupportByVersion MSForms 2
 		/// Get/Set
 		/// </summary>
-		[SupportByVersion("MSForms", 2)]
+		[SupportByVersion("MSForms", 2), NativeResult]
 		public stdole.Picture MouseIcon
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "MouseIcon", paramsArray);
-				stdole.Picture newObject = Factory.CreateObjectFromComProxy(this,returnItem) as stdole.Picture;
-				return newObject;
+                return returnItem as stdole.Picture;
 			}
 			set
 			{

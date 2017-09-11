@@ -10,7 +10,7 @@ namespace NetOffice.ADODBApi
 	/// SupportByVersion ADODB, 2.1,2.5
 	/// </summary>
 	[SupportByVersion("ADODB", 2.1,2.5)]
-	[EntityType(EntityType.IsDispatchInterface)]
+	[EntityType(EntityType.IsDispatchInterface), BaseType]
  	public class _Recordset : Recordset21
 	{
 		#pragma warning disable
@@ -1069,42 +1069,7 @@ namespace NetOffice.ADODBApi
 		{
 			 Factory.ExecuteMethod(this, "Cancel");
 		}
-
-		/// <summary>
-		/// SupportByVersion ADODB 2.5
-		/// </summary>
-		/// <param name="fileName">optional string fileName</param>
-		/// <param name="persistFormat">optional NetOffice.ADODBApi.Enums.PersistFormatEnum PersistFormat = 0</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersion("ADODB", 2.5)]
-		public void _xSave(object fileName, object persistFormat)
-		{
-			 Factory.ExecuteMethod(this, "_xSave", fileName, persistFormat);
-		}
-
-		/// <summary>
-		/// SupportByVersion ADODB 2.5
-		/// </summary>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[CustomMethod]
-		[SupportByVersion("ADODB", 2.5)]
-		public void _xSave()
-		{
-			 Factory.ExecuteMethod(this, "_xSave");
-		}
-
-		/// <summary>
-		/// SupportByVersion ADODB 2.5
-		/// </summary>
-		/// <param name="fileName">optional string fileName</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[CustomMethod]
-		[SupportByVersion("ADODB", 2.5)]
-		public void _xSave(object fileName)
-		{
-			 Factory.ExecuteMethod(this, "_xSave", fileName);
-		}
-
+        
 		/// <summary>
 		/// SupportByVersion ADODB 2.5
 		/// </summary>

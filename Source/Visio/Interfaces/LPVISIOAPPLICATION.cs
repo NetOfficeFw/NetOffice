@@ -1324,16 +1324,15 @@ namespace NetOffice.VisioApi
 		/// SupportByVersion Visio 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
-		[SupportByVersion("Visio", 11,12,14,15,16)]
+		[SupportByVersion("Visio", 11,12,14,15,16), NativeResult]
 		public stdole.Font DialogFont
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "DialogFont", paramsArray);
-				stdole.Font newObject = Factory.CreateObjectFromComProxy(this,returnItem) as stdole.Font;
-				return newObject;
-			}
+                return returnItem as stdole.Font;
+            }
 		}
 
 		/// <summary>

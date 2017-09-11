@@ -13,7 +13,7 @@ namespace NetOffice.ADODBApi
 	/// </summary>
 	[SupportByVersion("ADODB", 2.1,2.5)]
 	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Method), HasIndexProperty(IndexInvoke.Property, "Item")]
-	public class Parameters : _DynaCollection , IEnumerable<NetOffice.ADODBApi._Parameter>
+	public class Parameters : _DynaCollection, IEnumerable<NetOffice.ADODBApi._Parameter>
 	{
 		#pragma warning disable
 
@@ -113,19 +113,6 @@ namespace NetOffice.ADODBApi
 		/// SupportByVersion ADODB 2.1, 2.5
 		/// Get
 		/// </summary>
-		[SupportByVersion("ADODB", 2.1,2.5)]
-		public Int32 Count
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "Count");
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion ADODB 2.1, 2.5
-		/// Get
-		/// </summary>
 		/// <param name="index">object index</param>
 		[SupportByVersion("ADODB", 2.1,2.5)]
 		[BaseResult]
@@ -142,38 +129,29 @@ namespace NetOffice.ADODBApi
 
 		#region Methods
 
-		/// <summary>
-		/// SupportByVersion ADODB 2.1, 2.5
-		/// </summary>
-		[SupportByVersion("ADODB", 2.1,2.5)]
-		public void Refresh()
-		{
-			 Factory.ExecuteMethod(this, "Refresh");
-		}
+        #endregion
 
-		#endregion
+        #region IEnumerable<NetOffice.ADODBApi._Parameter> Member
 
-       #region IEnumerable<NetOffice.ADODBApi._Parameter> Member
-        
         /// <summary>
-		/// SupportByVersion ADODB, 2.1,2.5
-		/// </summary>
-		[SupportByVersion("ADODB", 2.1,2.5)]
-       public IEnumerator<NetOffice.ADODBApi._Parameter> GetEnumerator()  
-       {
-           NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
-           foreach (NetOffice.ADODBApi._Parameter item in innerEnumerator)
-               yield return item;
-       }
+        /// SupportByVersion ADODB, 2.1,2.5
+        /// </summary>
+        [SupportByVersion("ADODB", 2.1, 2.5)]
+        public IEnumerator<NetOffice.ADODBApi._Parameter> GetEnumerator()
+        {
+            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
+            foreach (NetOffice.ADODBApi._Parameter item in innerEnumerator)
+                yield return item;
+        }
 
-       #endregion
-          
-		#region IEnumerable Members
-       
-		/// <summary>
-		/// SupportByVersion ADODB, 2.1,2.5
-		/// </summary>
-		[SupportByVersion("ADODB", 2.1,2.5)]
+        #endregion
+
+        #region IEnumerable Members
+
+        /// <summary>
+        /// SupportByVersion ADODB, 2.1,2.5
+        /// </summary>
+        [SupportByVersion("ADODB", 2.1,2.5)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
 			return NetOffice.Utils.GetProxyEnumeratorAsMethod(this);

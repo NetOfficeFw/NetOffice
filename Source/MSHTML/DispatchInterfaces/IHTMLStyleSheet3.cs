@@ -107,49 +107,6 @@ namespace NetOffice.MSHTMLApi
 		
 		#region Properties
 
-		/// <summary>
-		/// SupportByVersion MSHTML 4
-		/// Get/Set
-		/// </summary>
-		[SupportByVersion("MSHTML", 4)]
-		public string href
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "href");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "href", value);
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSHTML 4
-		/// Get
-		/// </summary>
-		[SupportByVersion("MSHTML", 4)]
-		public bool isAlternate
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "isAlternate");
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSHTML 4
-		/// Get
-		/// </summary>
-		[SupportByVersion("MSHTML", 4)]
-		public bool isPrefAlternate
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "isPrefAlternate");
-			}
-		}
-
 		#endregion
 
 		#region Methods

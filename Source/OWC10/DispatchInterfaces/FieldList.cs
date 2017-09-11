@@ -10,7 +10,7 @@ namespace NetOffice.OWC10Api
 	/// SupportByVersion OWC10, 1
 	/// </summary>
 	[SupportByVersion("OWC10", 1)]
-	[EntityType(EntityType.IsDispatchInterface)]
+	[EntityType(EntityType.IsDispatchInterface), BaseType]
  	public class FieldList : COMObject
 	{
 		#pragma warning disable
@@ -137,15 +137,14 @@ namespace NetOffice.OWC10Api
 		/// SupportByVersion OWC10 1
 		/// Get/Set
 		/// </summary>
-		[SupportByVersion("OWC10", 1)]
+		[SupportByVersion("OWC10", 1), NativeResult]
 		public stdole.IFont Font
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Font", paramsArray);
-				stdole.IFont newObject = Factory.CreateObjectFromComProxy(this,returnItem) as stdole.IFont;
-				return newObject;
+                return returnItem as stdole.IFont;
 			}
 			set
 			{

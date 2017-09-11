@@ -300,7 +300,7 @@ namespace NetOffice.OfficeApi.Tools
                     System.Int32.TryParse(tryString, out _automationCode);
                 }
 
-                this.Application = Factory.CreateObjectFromComProxy(null, application);
+                this.Application = Factory.CreateObjectFromComProxy(null, application, true);
                 Utils = OnCreateUtils();
                 RaiseOnConnection(Application, ConnectMode, AddInInst, ref custom);
             }
@@ -962,7 +962,7 @@ namespace NetOffice.OfficeApi.Tools
                 for (int i = 0; i < attribute.Products.Length; i++)
                     product[i] = String.Format(_addinOfficeRegistryKey, MultiRegisterAttribute.RegistryEntry(attribute.Products[i]));
 
-                RegisterHandler.Proceed(type, product, InstallScope.System, OfficeRegisterKeyState.NeedToCreate);
+                COMAddinRegisterHandler.Proceed(type, product, InstallScope.System, OfficeRegisterKeyState.NeedToCreate);
             }
             catch (Exception exception)
             {
@@ -985,7 +985,7 @@ namespace NetOffice.OfficeApi.Tools
                 for (int i = 0; i < attribute.Products.Length; i++)
                     product[i] = String.Format(_addinOfficeRegistryKey, MultiRegisterAttribute.RegistryEntry(attribute.Products[i]));
 
-                UnRegisterHandler.Proceed(type, product, InstallScope.System, OfficeUnRegisterKeyState.NeedToDelete);
+                COMAddinUnRegisterHandler.Proceed(type, product, InstallScope.System, OfficeUnRegisterKeyState.NeedToDelete);
             }
             catch (Exception exception)
             {
@@ -1014,7 +1014,7 @@ namespace NetOffice.OfficeApi.Tools
             for (int i = 0; i < attribute.Products.Length; i++)
                 product[i] = String.Format(_addinOfficeRegistryKey, MultiRegisterAttribute.RegistryEntry(attribute.Products[i]));
 
-            RegisterHandler.Proceed(type, product, currentScope, currentKeyState);
+            COMAddinRegisterHandler.Proceed(type, product, currentScope, currentKeyState);
         }
 
         /// <summary>
@@ -1037,7 +1037,7 @@ namespace NetOffice.OfficeApi.Tools
             for (int i = 0; i < attribute.Products.Length; i++)
                 product[i] = String.Format(_addinOfficeRegistryKey, MultiRegisterAttribute.RegistryEntry(attribute.Products[i]));
 
-            UnRegisterHandler.Proceed(type, product, currentScope, currentKeyState);
+            COMAddinUnRegisterHandler.Proceed(type, product, currentScope, currentKeyState);
         }
 
         /// <summary>

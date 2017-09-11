@@ -38,71 +38,45 @@ namespace NetOffice.ExcelApi.Events
 		public static readonly string Id = "0002441B-0000-0000-C000-000000000046";
 		
 		#endregion
-	
-		#region Fields
-
-		private IEventBinding	_eventBinding;
-        private ICOMObject _eventClass;
-        
-		#endregion
-		
-		#region Construction
+			
+		#region Ctor
 
 		public RefreshEvents_SinkHelper(ICOMObject eventClass, IConnectionPoint connectPoint): base(eventClass)
 		{
-			_eventClass = eventClass;
-			_eventBinding = (IEventBinding)eventClass;
 			SetupEventBinding(connectPoint);
 		}
 		
 		#endregion
-		
-		#region Properties
 
-        internal Core Factory
-        {
-            get
-            {
-                if (null != _eventClass)
-                    return _eventClass.Factory;
-                else
-                    return Core.Default;
-            }
-        }
-
-        #endregion
-
-		#region RefreshEvents Members
+		#region RefreshEvents
 		
 		public void BeforeRefresh([In] [Out] ref object cancel)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("BeforeRefresh");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(cancel);
-				return;
-			}
+        {
+            if (!Validate("BeforeRefresh"))
+            {
+                Invoker.ReleaseParamsArray(cancel);
+                return;
+            }
 
 			object[] paramsArray = new object[1];
 			paramsArray.SetValue(cancel, 0);
-			_eventBinding.RaiseCustomEvent("BeforeRefresh", ref paramsArray);
+			EventBinding.RaiseCustomEvent("BeforeRefresh", ref paramsArray);
 
-			cancel = (bool)paramsArray[0];
+            cancel = ToBoolean(paramsArray[0]);
 		}
 
 		public void AfterRefresh([In] object success)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("AfterRefresh");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(success);
-				return;
-			}
+            if (!Validate("AfterRefresh"))
+            {
+                Invoker.ReleaseParamsArray(success);
+                return;
+            }
 
 			bool newSuccess = Convert.ToBoolean(success);
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newSuccess;
-			_eventBinding.RaiseCustomEvent("AfterRefresh", ref paramsArray);
+			EventBinding.RaiseCustomEvent("AfterRefresh", ref paramsArray);
 		}
 
 		#endregion

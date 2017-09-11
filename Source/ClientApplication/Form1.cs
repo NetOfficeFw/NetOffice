@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 using NetOffice;
-
+  
 namespace ClientApplication
 {
     public class Form1 : System.Windows.Forms.Form
@@ -14,6 +14,7 @@ namespace ClientApplication
         public Form1()
         {
             InitializeComponent();
+
             try
             {
                 new RunExcel01().Run();
@@ -57,7 +58,6 @@ namespace ClientApplication
             this.ClientSize = new System.Drawing.Size(292, 273);
             this.Name = "Form1";
             this.Text = "ClientApplication";
-            this.Shown += new System.EventHandler(this.Form1_Shown);
             this.ResumeLayout(false);
 
         }

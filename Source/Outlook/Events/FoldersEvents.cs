@@ -43,82 +43,54 @@ namespace NetOffice.OutlookApi.Events
 		
 		#endregion
 	
-		#region Fields
-
-		private IEventBinding	_eventBinding;
-        private ICOMObject _eventClass;
-        
-		#endregion
-		
-		#region Construction
+		#region Ctor
 
 		public FoldersEvents_SinkHelper(ICOMObject eventClass, IConnectionPoint connectPoint): base(eventClass)
 		{
-			_eventClass = eventClass;
-			_eventBinding = (IEventBinding)eventClass;
 			SetupEventBinding(connectPoint);
 		}
 		
 		#endregion
 		
-		#region Properties
-
-        internal Core Factory
-        {
-            get
-            {
-                if (null != _eventClass)
-                    return _eventClass.Factory;
-                else
-                    return Core.Default;
-            }
-        }
-
-        #endregion
-
-		#region FoldersEvents Members
+		#region FoldersEvents
 		
 		public void FolderAdd([In, MarshalAs(UnmanagedType.IDispatch)] object folder)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("FolderAdd");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(folder);
-				return;
-			}
+        {
+            if (!Validate("FolderAdd"))
+            {
+                Invoker.ReleaseParamsArray(folder);
+                return;
+            }
 
-			NetOffice.OutlookApi.MAPIFolder newFolder = Factory.CreateObjectFromComProxy(_eventClass, folder) as NetOffice.OutlookApi.MAPIFolder;
+			NetOffice.OutlookApi.MAPIFolder newFolder = Factory.CreateKnownObjectFromComProxy<NetOffice.OutlookApi.MAPIFolder>(EventClass, folder, NetOffice.OutlookApi.MAPIFolder.LateBindingApiWrapperType);
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newFolder;
-			_eventBinding.RaiseCustomEvent("FolderAdd", ref paramsArray);
+			EventBinding.RaiseCustomEvent("FolderAdd", ref paramsArray);
 		}
 
 		public void FolderChange([In, MarshalAs(UnmanagedType.IDispatch)] object folder)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("FolderChange");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(folder);
-				return;
-			}
+            if (!Validate("FolderChange"))
+            {
+                Invoker.ReleaseParamsArray(folder);
+                return;
+            }
 
-			NetOffice.OutlookApi.MAPIFolder newFolder = Factory.CreateObjectFromComProxy(_eventClass, folder) as NetOffice.OutlookApi.MAPIFolder;
-			object[] paramsArray = new object[1];
+            NetOffice.OutlookApi.MAPIFolder newFolder = Factory.CreateKnownObjectFromComProxy<NetOffice.OutlookApi.MAPIFolder>(EventClass, folder, NetOffice.OutlookApi.MAPIFolder.LateBindingApiWrapperType);
+            object[] paramsArray = new object[1];
 			paramsArray[0] = newFolder;
-			_eventBinding.RaiseCustomEvent("FolderChange", ref paramsArray);
+			EventBinding.RaiseCustomEvent("FolderChange", ref paramsArray);
 		}
 
 		public void FolderRemove()
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("FolderRemove");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray();
-				return;
-			}
+            if (!Validate("FolderRemove"))
+            {
+                return;
+            }
 
-			object[] paramsArray = new object[0];
-			_eventBinding.RaiseCustomEvent("FolderRemove", ref paramsArray);
+            object[] paramsArray = new object[0];
+			EventBinding.RaiseCustomEvent("FolderRemove", ref paramsArray);
 		}
 
 		#endregion

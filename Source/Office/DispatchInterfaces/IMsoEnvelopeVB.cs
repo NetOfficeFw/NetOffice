@@ -10,7 +10,7 @@ namespace NetOffice.OfficeApi
 	/// SupportByVersion Office, 10,11,12,14,15,16
 	/// </summary>
 	[SupportByVersion("Office", 10,11,12,14,15,16)]
-	[EntityType(EntityType.IsDispatchInterface)]
+	[EntityType(EntityType.IsDispatchInterface), BaseType]
  	public class IMsoEnvelopeVB : COMObject
 	{
 		#pragma warning disable

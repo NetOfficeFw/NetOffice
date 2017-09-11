@@ -10,7 +10,7 @@ namespace NetOffice.OutlookApi
 	/// SupportByVersion Outlook, 12,14,15,16
 	/// </summary>
 	[SupportByVersion("Outlook", 12,14,15,16)]
-	[EntityType(EntityType.IsDispatchInterface)]
+	[EntityType(EntityType.IsDispatchInterface), BaseType]
  	public class _OlkOptionButton : COMObject
 	{
 		#pragma warning disable
@@ -220,16 +220,15 @@ namespace NetOffice.OutlookApi
 		/// Get
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff861592.aspx </remarks>
-		[SupportByVersion("Outlook", 12,14,15,16)]
+		[SupportByVersion("Outlook", 12,14,15,16), NativeResult]
 		public stdole.Font Font
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Font", paramsArray);
-				stdole.Font newObject = Factory.CreateObjectFromComProxy(this,returnItem) as stdole.Font;
-				return newObject;
-			}
+                return returnItem as stdole.Font;
+            }
 		}
 
 		/// <summary>
@@ -273,16 +272,15 @@ namespace NetOffice.OutlookApi
 		/// Get/Set
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff867455.aspx </remarks>
-		[SupportByVersion("Outlook", 12,14,15,16)]
+		[SupportByVersion("Outlook", 12,14,15,16), NativeResult]
 		public stdole.Picture MouseIcon
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "MouseIcon", paramsArray);
-				stdole.Picture newObject = Factory.CreateObjectFromComProxy(this,returnItem) as stdole.Picture;
-				return newObject;
-			}
+                return returnItem as stdole.Picture;
+            }
 			set
 			{
 				object[] paramsArray = Invoker.ValidateParamsArray(value);

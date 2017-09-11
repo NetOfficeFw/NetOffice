@@ -149,7 +149,7 @@ namespace NetOffice
                     object itemProxy = comObject.Factory.Invoker.PropertyGetWithoutSafeMode(enumerator, "Current", null);
                     if (itemProxy is MarshalByRefObject)
                     { 
-                        ICOMObject returnClass = comObject.Factory.CreateObjectFromComProxy(enumerator, itemProxy);
+                        ICOMObject returnClass = comObject.Factory.CreateObjectFromComProxy(enumerator, itemProxy, true);
                         yield return returnClass;
                     }
                     else
@@ -182,7 +182,7 @@ namespace NetOffice
                     object itemProxy = comObject.Factory.Invoker.PropertyGetWithoutSafeMode(enumerator, "Current", null);
                     if (itemProxy is MarshalByRefObject)
                     {
-                        ICOMObject returnClass = comObject.Factory.CreateObjectFromComProxy(enumerator, itemProxy);
+                        ICOMObject returnClass = comObject.Factory.CreateObjectFromComProxy(enumerator, itemProxy, true);
                         yield return returnClass;
                     }
                     else
@@ -213,7 +213,7 @@ namespace NetOffice
                 while (true == isMoveNextTrue)
                 {
                     object itemProxy = comObject.Factory.Invoker.PropertyGetWithoutSafeMode(enumerator, "Current", null);
-                    ICOMObject returnClass = comObject.Factory.CreateObjectFromComProxy(enumerator, itemProxy);
+                    ICOMObject returnClass = comObject.Factory.CreateObjectFromComProxy(enumerator, itemProxy, false);
                     yield return returnClass;
                     isMoveNextTrue = (bool)comObject.Factory.Invoker.MethodReturnWithoutSafeMode(enumerator, "MoveNext", null);
                 }
@@ -240,7 +240,7 @@ namespace NetOffice
                 while (true == isMoveNextTrue)
                 {
                     object itemProxy = comObject.Factory.Invoker.PropertyGetWithoutSafeMode(enumerator, "Current", null);
-                    ICOMObject returnClass = comObject.Factory.CreateObjectFromComProxy(enumerator, itemProxy);
+                    ICOMObject returnClass = comObject.Factory.CreateObjectFromComProxy(enumerator, itemProxy, false);
                     yield return returnClass;
                     isMoveNextTrue = (bool)comObject.Factory.Invoker.MethodReturnWithoutSafeMode(enumerator, "MoveNext", null);
                 }

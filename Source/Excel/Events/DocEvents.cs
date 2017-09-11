@@ -99,203 +99,165 @@ namespace NetOffice.ExcelApi.Events
 
         #endregion
 
-        #region Fields
-
-        private IEventBinding _eventBinding;
-        private ICOMObject _eventClass;
-
-        #endregion
-
-        #region Construction
+        #region Ctor
 
         public DocEvents_SinkHelper(ICOMObject eventClass, IConnectionPoint connectPoint) : base(eventClass)
         {
-            _eventClass = eventClass;
-            _eventBinding = (IEventBinding)eventClass;
             SetupEventBinding(connectPoint);
         }
 
         #endregion
 
-        #region Properties
-
-        internal Core Factory
-        {
-            get
-            {
-                if (null != _eventClass)
-                    return _eventClass.Factory;
-                else
-                    return Core.Default;
-            }
-        }
-
-        #endregion
-
-        #region DocEvents Members
+        #region DocEvents
 
         public void SelectionChange([In, MarshalAs(UnmanagedType.IDispatch)] object target)
         {
-            Delegate[] recipients = _eventBinding.GetEventRecipients("SelectionChange");
-            if ((true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0))
+            if (!Validate("SelectionChange"))
             {
                 Invoker.ReleaseParamsArray(target);
                 return;
             }
 
-            NetOffice.ExcelApi.Range newTarget = Factory.CreateObjectFromComProxy(_eventClass, target) as NetOffice.ExcelApi.Range;
+            NetOffice.ExcelApi.Range newTarget = Factory.CreateKnownObjectFromComProxy<NetOffice.ExcelApi.Range>(EventClass, target, NetOffice.ExcelApi.Range.LateBindingApiWrapperType);
             object[] paramsArray = new object[1];
             paramsArray[0] = newTarget;
-            _eventBinding.RaiseCustomEvent("SelectionChange", ref paramsArray);
+            EventBinding.RaiseCustomEvent("SelectionChange", ref paramsArray);
         }
 
         public void BeforeDoubleClick([In, MarshalAs(UnmanagedType.IDispatch)] object target, [In] [Out] ref object cancel)
         {
-            Delegate[] recipients = _eventBinding.GetEventRecipients("BeforeDoubleClick");
-            if ((true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0))
+            if (!Validate("BeforeDoubleClick"))
             {
                 Invoker.ReleaseParamsArray(target, cancel);
                 return;
             }
 
-            NetOffice.ExcelApi.Range newTarget = Factory.CreateObjectFromComProxy(_eventClass, target) as NetOffice.ExcelApi.Range;
+            NetOffice.ExcelApi.Range newTarget = Factory.CreateKnownObjectFromComProxy<NetOffice.ExcelApi.Range>(EventClass, target, NetOffice.ExcelApi.Range.LateBindingApiWrapperType);
             object[] paramsArray = new object[2];
             paramsArray[0] = newTarget;
             paramsArray.SetValue(cancel, 1);
-            _eventBinding.RaiseCustomEvent("BeforeDoubleClick", ref paramsArray);
+            EventBinding.RaiseCustomEvent("BeforeDoubleClick", ref paramsArray);
 
-            cancel = (bool)paramsArray[1];
+            cancel = ToBoolean(paramsArray[1]);
         }
 
         public void BeforeRightClick([In, MarshalAs(UnmanagedType.IDispatch)] object target, [In] [Out] ref object cancel)
         {
-            Delegate[] recipients = _eventBinding.GetEventRecipients("BeforeRightClick");
-            if ((true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0))
+            if (!Validate("BeforeRightClick"))
             {
                 Invoker.ReleaseParamsArray(target, cancel);
                 return;
             }
 
-            NetOffice.ExcelApi.Range newTarget = Factory.CreateObjectFromComProxy(_eventClass, target) as NetOffice.ExcelApi.Range;
+            NetOffice.ExcelApi.Range newTarget = Factory.CreateKnownObjectFromComProxy<NetOffice.ExcelApi.Range>(EventClass, target, NetOffice.ExcelApi.Range.LateBindingApiWrapperType);
             object[] paramsArray = new object[2];
             paramsArray[0] = newTarget;
             paramsArray.SetValue(cancel, 1);
-            _eventBinding.RaiseCustomEvent("BeforeRightClick", ref paramsArray);
+            EventBinding.RaiseCustomEvent("BeforeRightClick", ref paramsArray);
 
-            cancel = (bool)paramsArray[1];
+            cancel = ToBoolean(paramsArray[1]);
         }
 
         public void Activate()
         {
-            Delegate[] recipients = _eventBinding.GetEventRecipients("Activate");
-            if ((true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0))
+            if (!Validate("Activate"))
             {
-                Invoker.ReleaseParamsArray();
                 return;
             }
 
             object[] paramsArray = new object[0];
-            _eventBinding.RaiseCustomEvent("Activate", ref paramsArray);
+            EventBinding.RaiseCustomEvent("Activate", ref paramsArray);
         }
 
         public void Deactivate()
         {
-            Delegate[] recipients = _eventBinding.GetEventRecipients("Deactivate");
-            if ((true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0))
+            if (!Validate("Deactivate"))
             {
-                Invoker.ReleaseParamsArray();
                 return;
             }
 
             object[] paramsArray = new object[0];
-            _eventBinding.RaiseCustomEvent("Deactivate", ref paramsArray);
+            EventBinding.RaiseCustomEvent("Deactivate", ref paramsArray);
         }
 
         public void Calculate()
         {
-            Delegate[] recipients = _eventBinding.GetEventRecipients("Calculate");
-            if ((true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0))
+            if (!Validate("Calculate"))
             {
-                Invoker.ReleaseParamsArray();
                 return;
             }
 
             object[] paramsArray = new object[0];
-            _eventBinding.RaiseCustomEvent("Calculate", ref paramsArray);
+            EventBinding.RaiseCustomEvent("Calculate", ref paramsArray);
         }
 
         public void Change([In, MarshalAs(UnmanagedType.IDispatch)] object target)
         {
-            Delegate[] recipients = _eventBinding.GetEventRecipients("Change");
-            if ((true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0))
+            if (!Validate("Change"))
             {
                 Invoker.ReleaseParamsArray(target);
                 return;
             }
 
-            NetOffice.ExcelApi.Range newTarget = Factory.CreateObjectFromComProxy(_eventClass, target) as NetOffice.ExcelApi.Range;
+            NetOffice.ExcelApi.Range newTarget = Factory.CreateKnownObjectFromComProxy<NetOffice.ExcelApi.Range>(EventClass, target, NetOffice.ExcelApi.Range.LateBindingApiWrapperType);
             object[] paramsArray = new object[1];
             paramsArray[0] = newTarget;
-            _eventBinding.RaiseCustomEvent("Change", ref paramsArray);
+            EventBinding.RaiseCustomEvent("Change", ref paramsArray);
         }
 
         public void FollowHyperlink([In, MarshalAs(UnmanagedType.IDispatch)] object target)
         {
-            Delegate[] recipients = _eventBinding.GetEventRecipients("FollowHyperlink");
-            if ((true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0))
+            if (!Validate("FollowHyperlink"))
             {
                 Invoker.ReleaseParamsArray(target);
                 return;
             }
 
-            NetOffice.ExcelApi.Hyperlink newTarget = Factory.CreateObjectFromComProxy(_eventClass, target) as NetOffice.ExcelApi.Hyperlink;
+            NetOffice.ExcelApi.Hyperlink newTarget = Factory.CreateKnownObjectFromComProxy<NetOffice.ExcelApi.Hyperlink>(EventClass, target, NetOffice.ExcelApi.Hyperlink.LateBindingApiWrapperType);
             object[] paramsArray = new object[1];
             paramsArray[0] = newTarget;
-            _eventBinding.RaiseCustomEvent("FollowHyperlink", ref paramsArray);
+            EventBinding.RaiseCustomEvent("FollowHyperlink", ref paramsArray);
         }
 
         public void PivotTableUpdate([In, MarshalAs(UnmanagedType.IDispatch)] object target)
         {
-            Delegate[] recipients = _eventBinding.GetEventRecipients("PivotTableUpdate");
-            if ((true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0))
+            if (!Validate("PivotTableUpdate"))
             {
                 Invoker.ReleaseParamsArray(target);
                 return;
             }
 
-            NetOffice.ExcelApi.PivotTable newTarget = Factory.CreateObjectFromComProxy(_eventClass, target) as NetOffice.ExcelApi.PivotTable;
+            NetOffice.ExcelApi.PivotTable newTarget = Factory.CreateKnownObjectFromComProxy<NetOffice.ExcelApi.PivotTable>(EventClass, target, NetOffice.ExcelApi.PivotTable.LateBindingApiWrapperType);
             object[] paramsArray = new object[1];
             paramsArray[0] = newTarget;
-            _eventBinding.RaiseCustomEvent("PivotTableUpdate", ref paramsArray);
+            EventBinding.RaiseCustomEvent("PivotTableUpdate", ref paramsArray);
         }
 
         public void PivotTableAfterValueChange([In, MarshalAs(UnmanagedType.IDispatch)] object targetPivotTable, [In, MarshalAs(UnmanagedType.IDispatch)] object targetRange)
         {
-            Delegate[] recipients = _eventBinding.GetEventRecipients("PivotTableAfterValueChange");
-            if ((true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0))
+            if (!Validate("PivotTableAfterValueChange"))
             {
                 Invoker.ReleaseParamsArray(targetPivotTable, targetRange);
                 return;
             }
 
-            NetOffice.ExcelApi.PivotTable newTargetPivotTable = Factory.CreateObjectFromComProxy(_eventClass, targetPivotTable) as NetOffice.ExcelApi.PivotTable;
-            NetOffice.ExcelApi.Range newTargetRange = Factory.CreateObjectFromComProxy(_eventClass, targetRange) as NetOffice.ExcelApi.Range;
+            NetOffice.ExcelApi.PivotTable newTargetPivotTable = Factory.CreateKnownObjectFromComProxy<NetOffice.ExcelApi.PivotTable>(EventClass, targetPivotTable, NetOffice.ExcelApi.PivotTable.LateBindingApiWrapperType);
+            NetOffice.ExcelApi.Range newTargetRange = Factory.CreateKnownObjectFromComProxy<NetOffice.ExcelApi.Range>(EventClass, targetRange, NetOffice.ExcelApi.Range.LateBindingApiWrapperType);
             object[] paramsArray = new object[2];
             paramsArray[0] = newTargetPivotTable;
             paramsArray[1] = newTargetRange;
-            _eventBinding.RaiseCustomEvent("PivotTableAfterValueChange", ref paramsArray);
+            EventBinding.RaiseCustomEvent("PivotTableAfterValueChange", ref paramsArray);
         }
 
         public void PivotTableBeforeAllocateChanges([In, MarshalAs(UnmanagedType.IDispatch)] object targetPivotTable, [In] object valueChangeStart, [In] object valueChangeEnd, [In] [Out] ref object cancel)
         {
-            Delegate[] recipients = _eventBinding.GetEventRecipients("PivotTableBeforeAllocateChanges");
-            if ((true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0))
+            if (!Validate("PivotTableBeforeAllocateChanges"))
             {
                 Invoker.ReleaseParamsArray(targetPivotTable, valueChangeStart, valueChangeEnd, cancel);
                 return;
             }
 
-            NetOffice.ExcelApi.PivotTable newTargetPivotTable = Factory.CreateObjectFromComProxy(_eventClass, targetPivotTable) as NetOffice.ExcelApi.PivotTable;
+            NetOffice.ExcelApi.PivotTable newTargetPivotTable = Factory.CreateKnownObjectFromComProxy<NetOffice.ExcelApi.PivotTable>(EventClass, targetPivotTable, NetOffice.ExcelApi.PivotTable.LateBindingApiWrapperType);
             Int32 newValueChangeStart = Convert.ToInt32(valueChangeStart);
             Int32 newValueChangeEnd = Convert.ToInt32(valueChangeEnd);
             object[] paramsArray = new object[4];
@@ -303,21 +265,20 @@ namespace NetOffice.ExcelApi.Events
             paramsArray[1] = newValueChangeStart;
             paramsArray[2] = newValueChangeEnd;
             paramsArray.SetValue(cancel, 3);
-            _eventBinding.RaiseCustomEvent("PivotTableBeforeAllocateChanges", ref paramsArray);
+            EventBinding.RaiseCustomEvent("PivotTableBeforeAllocateChanges", ref paramsArray);
 
-            cancel = (bool)paramsArray[3];
+            cancel = ToBoolean(paramsArray[3]);
         }
 
         public void PivotTableBeforeCommitChanges([In, MarshalAs(UnmanagedType.IDispatch)] object targetPivotTable, [In] object valueChangeStart, [In] object valueChangeEnd, [In] [Out] ref object cancel)
         {
-            Delegate[] recipients = _eventBinding.GetEventRecipients("PivotTableBeforeCommitChanges");
-            if ((true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0))
+            if (!Validate("PivotTableBeforeCommitChanges"))
             {
                 Invoker.ReleaseParamsArray(targetPivotTable, valueChangeStart, valueChangeEnd, cancel);
                 return;
             }
 
-            NetOffice.ExcelApi.PivotTable newTargetPivotTable = Factory.CreateObjectFromComProxy(_eventClass, targetPivotTable) as NetOffice.ExcelApi.PivotTable;
+            NetOffice.ExcelApi.PivotTable newTargetPivotTable = Factory.CreateKnownObjectFromComProxy<NetOffice.ExcelApi.PivotTable>(EventClass, targetPivotTable, NetOffice.ExcelApi.PivotTable.LateBindingApiWrapperType);
             Int32 newValueChangeStart = Convert.ToInt32(valueChangeStart);
             Int32 newValueChangeEnd = Convert.ToInt32(valueChangeEnd);
             object[] paramsArray = new object[4];
@@ -325,84 +286,77 @@ namespace NetOffice.ExcelApi.Events
             paramsArray[1] = newValueChangeStart;
             paramsArray[2] = newValueChangeEnd;
             paramsArray.SetValue(cancel, 3);
-            _eventBinding.RaiseCustomEvent("PivotTableBeforeCommitChanges", ref paramsArray);
+            EventBinding.RaiseCustomEvent("PivotTableBeforeCommitChanges", ref paramsArray);
 
-            cancel = (bool)paramsArray[3];
+            cancel = ToBoolean(paramsArray[3]);
         }
 
         public void PivotTableBeforeDiscardChanges([In, MarshalAs(UnmanagedType.IDispatch)] object targetPivotTable, [In] object valueChangeStart, [In] object valueChangeEnd)
         {
-            Delegate[] recipients = _eventBinding.GetEventRecipients("PivotTableBeforeDiscardChanges");
-            if ((true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0))
+            if (!Validate("PivotTableBeforeDiscardChanges"))
             {
                 Invoker.ReleaseParamsArray(targetPivotTable, valueChangeStart, valueChangeEnd);
                 return;
             }
 
-            NetOffice.ExcelApi.PivotTable newTargetPivotTable = Factory.CreateObjectFromComProxy(_eventClass, targetPivotTable) as NetOffice.ExcelApi.PivotTable;
+            NetOffice.ExcelApi.PivotTable newTargetPivotTable = Factory.CreateKnownObjectFromComProxy<NetOffice.ExcelApi.PivotTable>(EventClass, targetPivotTable, NetOffice.ExcelApi.PivotTable.LateBindingApiWrapperType);
             Int32 newValueChangeStart = Convert.ToInt32(valueChangeStart);
             Int32 newValueChangeEnd = Convert.ToInt32(valueChangeEnd);
             object[] paramsArray = new object[3];
             paramsArray[0] = newTargetPivotTable;
             paramsArray[1] = newValueChangeStart;
             paramsArray[2] = newValueChangeEnd;
-            _eventBinding.RaiseCustomEvent("PivotTableBeforeDiscardChanges", ref paramsArray);
+            EventBinding.RaiseCustomEvent("PivotTableBeforeDiscardChanges", ref paramsArray);
         }
 
         public void PivotTableChangeSync([In, MarshalAs(UnmanagedType.IDispatch)] object target)
         {
-            Delegate[] recipients = _eventBinding.GetEventRecipients("PivotTableChangeSync");
-            if ((true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0))
+            if (!Validate("PivotTableChangeSync"))
             {
                 Invoker.ReleaseParamsArray(target);
                 return;
             }
 
-            NetOffice.ExcelApi.PivotTable newTarget = Factory.CreateObjectFromComProxy(_eventClass, target) as NetOffice.ExcelApi.PivotTable;
+            NetOffice.ExcelApi.PivotTable newTarget = Factory.CreateKnownObjectFromComProxy<NetOffice.ExcelApi.PivotTable>(EventClass, target, NetOffice.ExcelApi.PivotTable.LateBindingApiWrapperType);
             object[] paramsArray = new object[1];
             paramsArray[0] = newTarget;
-            _eventBinding.RaiseCustomEvent("PivotTableChangeSync", ref paramsArray);
+            EventBinding.RaiseCustomEvent("PivotTableChangeSync", ref paramsArray);
         }
 
         public void LensGalleryRenderComplete()
         {
-            Delegate[] recipients = _eventBinding.GetEventRecipients("LensGalleryRenderComplete");
-            if ((true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0))
+            if (!Validate("LensGalleryRenderComplete"))
             {
-                Invoker.ReleaseParamsArray();
                 return;
             }
 
             object[] paramsArray = new object[0];
-            _eventBinding.RaiseCustomEvent("LensGalleryRenderComplete", ref paramsArray);
+            EventBinding.RaiseCustomEvent("LensGalleryRenderComplete", ref paramsArray);
         }
 
         public void TableUpdate([In, MarshalAs(UnmanagedType.IDispatch)] object target)
         {
-            Delegate[] recipients = _eventBinding.GetEventRecipients("TableUpdate");
-            if ((true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0))
+            if (!Validate("TableUpdate"))
             {
                 Invoker.ReleaseParamsArray(target);
                 return;
             }
 
-            NetOffice.ExcelApi.TableObject newTarget = Factory.CreateObjectFromComProxy(_eventClass, target) as NetOffice.ExcelApi.TableObject;
+            NetOffice.ExcelApi.TableObject newTarget = Factory.CreateKnownObjectFromComProxy<NetOffice.ExcelApi.TableObject>(EventClass, target, NetOffice.ExcelApi.TableObject.LateBindingApiWrapperType);
             object[] paramsArray = new object[1];
             paramsArray[0] = newTarget;
-            _eventBinding.RaiseCustomEvent("TableUpdate", ref paramsArray);
+            EventBinding.RaiseCustomEvent("TableUpdate", ref paramsArray);
         }
 
         public void BeforeDelete()
         {
-            Delegate[] recipients = _eventBinding.GetEventRecipients("BeforeDelete");
-            if ((true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0))
+            if (!Validate("BeforeDelete"))
             {
-                Invoker.ReleaseParamsArray();
                 return;
             }
 
             object[] paramsArray = new object[0];
-            _eventBinding.RaiseCustomEvent("BeforeDelete", ref paramsArray);
+            EventBinding.RaiseCustomEvent("BeforeDelete", ref paramsArray);
         }
 
         #endregion

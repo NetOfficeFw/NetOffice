@@ -43,96 +43,68 @@ namespace NetOffice.OfficeApi.Events
 		
 		#endregion
 	
-		#region Fields
-
-		private IEventBinding	_eventBinding;
-        private ICOMObject _eventClass;
-        
-		#endregion
-		
 		#region Construction
 
 		public _CustomXMLPartEvents_SinkHelper(ICOMObject eventClass, IConnectionPoint connectPoint): base(eventClass)
 		{
-			_eventClass = eventClass;
-			_eventBinding = (IEventBinding)eventClass;
 			SetupEventBinding(connectPoint);
 		}
 		
 		#endregion
-		
-		#region Properties
-
-        internal Core Factory
-        {
-            get
-            {
-                if (null != _eventClass)
-                    return _eventClass.Factory;
-                else
-                    return Core.Default;
-            }
-        }
-
-        #endregion
-
-		#region _CustomXMLPartEvents Members
+	
+		#region _CustomXMLPartEvents
 		
 		public void NodeAfterInsert([In, MarshalAs(UnmanagedType.IDispatch)] object newNode, [In] object inUndoRedo)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("NodeAfterInsert");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(newNode, inUndoRedo);
-				return;
-			}
+        {
+            if (!Validate("NodeAfterInsert"))
+            {
+                Invoker.ReleaseParamsArray(newNode, inUndoRedo);
+                return;
+            }
 
-			NetOffice.OfficeApi.CustomXMLNode newNewNode = Factory.CreateObjectFromComProxy(_eventClass, newNode) as NetOffice.OfficeApi.CustomXMLNode;
+			NetOffice.OfficeApi.CustomXMLNode newNewNode = Factory.CreateKnownObjectFromComProxy<NetOffice.OfficeApi.CustomXMLNode>(EventClass, newNode, NetOffice.OfficeApi.CustomXMLNode.LateBindingApiWrapperType);
 			bool newInUndoRedo = Convert.ToBoolean(inUndoRedo);
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newNewNode;
 			paramsArray[1] = newInUndoRedo;
-			_eventBinding.RaiseCustomEvent("NodeAfterInsert", ref paramsArray);
+			EventBinding.RaiseCustomEvent("NodeAfterInsert", ref paramsArray);
 		}
 
 		public void NodeAfterDelete([In, MarshalAs(UnmanagedType.IDispatch)] object oldNode, [In, MarshalAs(UnmanagedType.IDispatch)] object oldParentNode, [In, MarshalAs(UnmanagedType.IDispatch)] object oldNextSibling, [In] object inUndoRedo)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("NodeAfterDelete");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(oldNode, oldParentNode, oldNextSibling, inUndoRedo);
-				return;
-			}
+        {
+            if (!Validate("NodeAfterDelete"))
+            {
+                Invoker.ReleaseParamsArray(oldNode, oldParentNode, oldNextSibling, inUndoRedo);
+                return;
+            }
 
-			NetOffice.OfficeApi.CustomXMLNode newOldNode = Factory.CreateObjectFromComProxy(_eventClass, oldNode) as NetOffice.OfficeApi.CustomXMLNode;
-			NetOffice.OfficeApi.CustomXMLNode newOldParentNode = Factory.CreateObjectFromComProxy(_eventClass, oldParentNode) as NetOffice.OfficeApi.CustomXMLNode;
-			NetOffice.OfficeApi.CustomXMLNode newOldNextSibling = Factory.CreateObjectFromComProxy(_eventClass, oldNextSibling) as NetOffice.OfficeApi.CustomXMLNode;
-			bool newInUndoRedo = Convert.ToBoolean(inUndoRedo);
+            NetOffice.OfficeApi.CustomXMLNode newOldNode = Factory.CreateKnownObjectFromComProxy<NetOffice.OfficeApi.CustomXMLNode>(EventClass, oldNode, NetOffice.OfficeApi.CustomXMLNode.LateBindingApiWrapperType);
+            NetOffice.OfficeApi.CustomXMLNode newOldParentNode = Factory.CreateKnownObjectFromComProxy<NetOffice.OfficeApi.CustomXMLNode>(EventClass, oldParentNode, NetOffice.OfficeApi.CustomXMLNode.LateBindingApiWrapperType);
+            NetOffice.OfficeApi.CustomXMLNode newOldNextSibling = Factory.CreateKnownObjectFromComProxy<NetOffice.OfficeApi.CustomXMLNode>(EventClass, oldNextSibling, NetOffice.OfficeApi.CustomXMLNode.LateBindingApiWrapperType);
+ 			bool newInUndoRedo = Convert.ToBoolean(inUndoRedo);
 			object[] paramsArray = new object[4];
 			paramsArray[0] = newOldNode;
 			paramsArray[1] = newOldParentNode;
 			paramsArray[2] = newOldNextSibling;
 			paramsArray[3] = newInUndoRedo;
-			_eventBinding.RaiseCustomEvent("NodeAfterDelete", ref paramsArray);
+			EventBinding.RaiseCustomEvent("NodeAfterDelete", ref paramsArray);
 		}
 
 		public void NodeAfterReplace([In, MarshalAs(UnmanagedType.IDispatch)] object oldNode, [In, MarshalAs(UnmanagedType.IDispatch)] object newNode, [In] object inUndoRedo)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("NodeAfterReplace");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(oldNode, newNode, inUndoRedo);
-				return;
-			}
+        {
+            if (!Validate("NodeAfterReplace"))
+            {
+                Invoker.ReleaseParamsArray(oldNode, newNode, inUndoRedo); return;
+            }
 
-			NetOffice.OfficeApi.CustomXMLNode newOldNode = Factory.CreateObjectFromComProxy(_eventClass, oldNode) as NetOffice.OfficeApi.CustomXMLNode;
-			NetOffice.OfficeApi.CustomXMLNode newNewNode = Factory.CreateObjectFromComProxy(_eventClass, newNode) as NetOffice.OfficeApi.CustomXMLNode;
-			bool newInUndoRedo = Convert.ToBoolean(inUndoRedo);
+            NetOffice.OfficeApi.CustomXMLNode newOldNode = Factory.CreateKnownObjectFromComProxy<NetOffice.OfficeApi.CustomXMLNode>(EventClass, oldNode, NetOffice.OfficeApi.CustomXMLNode.LateBindingApiWrapperType);
+            NetOffice.OfficeApi.CustomXMLNode newNewNode = Factory.CreateKnownObjectFromComProxy<NetOffice.OfficeApi.CustomXMLNode>(EventClass, newNode, NetOffice.OfficeApi.CustomXMLNode.LateBindingApiWrapperType);
+            bool newInUndoRedo = Convert.ToBoolean(inUndoRedo);
 			object[] paramsArray = new object[3];
 			paramsArray[0] = newOldNode;
 			paramsArray[1] = newNewNode;
 			paramsArray[2] = newInUndoRedo;
-			_eventBinding.RaiseCustomEvent("NodeAfterReplace", ref paramsArray);
+			EventBinding.RaiseCustomEvent("NodeAfterReplace", ref paramsArray);
 		}
 
 		#endregion

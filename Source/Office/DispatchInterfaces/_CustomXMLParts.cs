@@ -12,7 +12,7 @@ namespace NetOffice.OfficeApi
 	/// SupportByVersion Office, 12,14,15,16
 	/// </summary>
 	[SupportByVersion("Office", 12,14,15,16)]
-	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "Item")]
+	[EntityType(EntityType.IsDispatchInterface), BaseType, Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "Item")]
 	public class _CustomXMLParts : _IMsoDispObj, IEnumerable<NetOffice.OfficeApi.CustomXMLPart>
 	{
 		#pragma warning disable

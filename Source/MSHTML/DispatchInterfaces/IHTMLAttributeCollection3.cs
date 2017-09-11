@@ -107,33 +107,11 @@ namespace NetOffice.MSHTMLApi
 		
 		#region Properties
 
-		/// <summary>
-		/// SupportByVersion MSHTML 4
-		/// Get
-		/// </summary>
-		[SupportByVersion("MSHTML", 4)]
-		public Int32 length
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "length");
-			}
-		}
+
 
 		#endregion
 
 		#region Methods
-
-		/// <summary>
-		/// SupportByVersion MSHTML 4
-		/// </summary>
-		/// <param name="bstrName">string bstrName</param>
-		[SupportByVersion("MSHTML", 4)]
-		[BaseResult]
-		public NetOffice.MSHTMLApi.IHTMLDOMAttribute getNamedItem(string bstrName)
-		{
-			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.MSHTMLApi.IHTMLDOMAttribute>(this, "getNamedItem", bstrName);
-		}
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
@@ -144,17 +122,6 @@ namespace NetOffice.MSHTMLApi
 		public NetOffice.MSHTMLApi.IHTMLDOMAttribute setNamedItem(NetOffice.MSHTMLApi.IHTMLDOMAttribute pNodeIn)
 		{
 			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.MSHTMLApi.IHTMLDOMAttribute>(this, "setNamedItem", pNodeIn);
-		}
-
-		/// <summary>
-		/// SupportByVersion MSHTML 4
-		/// </summary>
-		/// <param name="bstrName">string bstrName</param>
-		[SupportByVersion("MSHTML", 4)]
-		[BaseResult]
-		public NetOffice.MSHTMLApi.IHTMLDOMAttribute removeNamedItem(string bstrName)
-		{
-			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.MSHTMLApi.IHTMLDOMAttribute>(this, "removeNamedItem", bstrName);
 		}
 
 		/// <summary>

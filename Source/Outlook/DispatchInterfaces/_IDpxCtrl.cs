@@ -10,7 +10,7 @@ namespace NetOffice.OutlookApi
 	/// SupportByVersion Outlook, 10
 	/// </summary>
 	[SupportByVersion("Outlook", 10)]
-	[EntityType(EntityType.IsDispatchInterface)]
+	[EntityType(EntityType.IsDispatchInterface), BaseType]
  	public class _IDpxCtrl : COMObject
 	{
 		#pragma warning disable

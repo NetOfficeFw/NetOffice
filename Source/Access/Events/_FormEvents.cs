@@ -262,951 +262,868 @@ namespace NetOffice.AccessApi.Events
 		public static readonly string Id = "331FDCFB-CF31-11CD-8701-00AA003F0F07";
 		
 		#endregion
-	
-		#region Fields
-
-		private IEventBinding	_eventBinding;
-        private ICOMObject _eventClass;
-        
-		#endregion
-		
-		#region Construction
+				
+		#region Ctor
 
 		public _FormEvents_SinkHelper(ICOMObject eventClass, IConnectionPoint connectPoint): base(eventClass)
 		{
-			_eventClass = eventClass;
-			_eventBinding = (IEventBinding)eventClass;
 			SetupEventBinding(connectPoint);
 		}
 		
 		#endregion
-		
-		#region Properties
 
-        internal Core Factory
-        {
-            get
-            {
-                if (null != _eventClass)
-                    return _eventClass.Factory;
-                else
-                    return Core.Default;
-            }
-        }
-
-        #endregion
-
-		#region _FormEvents Members
+		#region _FormEvents
 		
 		public void Load()
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("Load");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray();
-				return;
-			}
+        {
+            if (!Validate("Load"))
+            {
+                return;
+            }
 
 			object[] paramsArray = new object[0];
-			_eventBinding.RaiseCustomEvent("Load", ref paramsArray);
+			EventBinding.RaiseCustomEvent("Load", ref paramsArray);
 		}
 
 		public void Current()
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("Current");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray();
-				return;
-			}
+        {
+            if (!Validate("Current"))
+            {
+                return;
+            }
 
 			object[] paramsArray = new object[0];
-			_eventBinding.RaiseCustomEvent("Current", ref paramsArray);
+			EventBinding.RaiseCustomEvent("Current", ref paramsArray);
 		}
 
 		public void BeforeInsert([In] [Out] ref object cancel)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("BeforeInsert");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(cancel);
-				return;
-			}
+        {
+            if (!Validate("BeforeInsert"))
+            {
+                Invoker.ReleaseParamsArray(cancel);
+                return;
+            }
 
 			object[] paramsArray = new object[1];
 			paramsArray.SetValue(cancel, 0);
-			_eventBinding.RaiseCustomEvent("BeforeInsert", ref paramsArray);
+			EventBinding.RaiseCustomEvent("BeforeInsert", ref paramsArray);
 
-			cancel = (Int16)paramsArray[0];
+			cancel = ToInt16(paramsArray[0]);
 		}
 
 		public void AfterInsert()
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("AfterInsert");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray();
-				return;
-			}
+        {
+            if (!Validate("AfterInsert"))
+            {
+                return;
+            }
 
 			object[] paramsArray = new object[0];
-			_eventBinding.RaiseCustomEvent("AfterInsert", ref paramsArray);
+			EventBinding.RaiseCustomEvent("AfterInsert", ref paramsArray);
 		}
 
 		public void BeforeUpdate([In] [Out] ref object cancel)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("BeforeUpdate");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(cancel);
-				return;
-			}
+        {
+            if (!Validate("BeforeUpdate"))
+            {
+                Invoker.ReleaseParamsArray(cancel);
+                return;
+            }
 
 			object[] paramsArray = new object[1];
 			paramsArray.SetValue(cancel, 0);
-			_eventBinding.RaiseCustomEvent("BeforeUpdate", ref paramsArray);
+			EventBinding.RaiseCustomEvent("BeforeUpdate", ref paramsArray);
 
-			cancel = (Int16)paramsArray[0];
+			cancel = ToInt16(paramsArray[0]);
 		}
 
 		public void AfterUpdate()
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("AfterUpdate");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray();
-				return;
-			}
-
+        {
+            if (!Validate("AfterUpdate"))
+            {
+                return;
+            }
 			object[] paramsArray = new object[0];
-			_eventBinding.RaiseCustomEvent("AfterUpdate", ref paramsArray);
+			EventBinding.RaiseCustomEvent("AfterUpdate", ref paramsArray);
 		}
 
 		public void Delete([In] [Out] ref object cancel)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("Delete");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(cancel);
-				return;
-			}
+        {
+            if (!Validate("Delete"))
+            {
+                Invoker.ReleaseParamsArray(cancel);
+                return;
+            }
 
 			object[] paramsArray = new object[1];
 			paramsArray.SetValue(cancel, 0);
-			_eventBinding.RaiseCustomEvent("Delete", ref paramsArray);
+			EventBinding.RaiseCustomEvent("Delete", ref paramsArray);
 
-			cancel = (Int16)paramsArray[0];
+			cancel = ToInt16(paramsArray[0]);
 		}
 
 		public void BeforeDelConfirm([In] [Out] ref object cancel, [In] [Out] ref object response)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("BeforeDelConfirm");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(cancel, response);
-				return;
-			}
+            if (!Validate("BeforeDelConfirm"))
+            {
+                Invoker.ReleaseParamsArray(cancel, response);
+                return;
+            }
 
 			object[] paramsArray = new object[2];
 			paramsArray.SetValue(cancel, 0);
 			paramsArray.SetValue(response, 1);
-			_eventBinding.RaiseCustomEvent("BeforeDelConfirm", ref paramsArray);
+			EventBinding.RaiseCustomEvent("BeforeDelConfirm", ref paramsArray);
 
-			cancel = (Int16)paramsArray[0];
-			response = (Int16)paramsArray[1];
-		}
+			cancel = ToInt16(paramsArray[0]);
+            response = ToInt16(paramsArray[1]);
+        }
 
 		public void AfterDelConfirm([In] [Out] ref object status)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("AfterDelConfirm");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(status);
-				return;
-			}
+        {
+            if (!Validate("AfterDelConfirm"))
+            {
+                Invoker.ReleaseParamsArray(status);
+                return;
+            }
 
 			object[] paramsArray = new object[1];
 			paramsArray.SetValue(status, 0);
-			_eventBinding.RaiseCustomEvent("AfterDelConfirm", ref paramsArray);
+			EventBinding.RaiseCustomEvent("AfterDelConfirm", ref paramsArray);
 
-			status = (Int16)paramsArray[0];
-		}
+			status = ToInt16(paramsArray[0]);
+        }
 
 		public void Open([In] [Out] ref object cancel)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("Open");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(cancel);
-				return;
-			}
+            if (!Validate("Open"))
+            {
+                Invoker.ReleaseParamsArray(cancel);
+                return;
+            }
 
 			object[] paramsArray = new object[1];
 			paramsArray.SetValue(cancel, 0);
-			_eventBinding.RaiseCustomEvent("Open", ref paramsArray);
+			EventBinding.RaiseCustomEvent("Open", ref paramsArray);
 
-			cancel = (Int16)paramsArray[0];
-		}
+			cancel = ToInt16(paramsArray[0]);
+        }
 
 		public void Resize()
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("Resize");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray();
-				return;
-			}
+        {
+            if (!Validate("Resize"))
+            {
+                return;
+            }
 
 			object[] paramsArray = new object[0];
-			_eventBinding.RaiseCustomEvent("Resize", ref paramsArray);
+			EventBinding.RaiseCustomEvent("Resize", ref paramsArray);
 		}
 
 		public void Unload([In] [Out] ref object cancel)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("Unload");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(cancel);
-				return;
-			}
+        {
+            if (!Validate("Unload"))
+            {
+                Invoker.ReleaseParamsArray(cancel);
+                return;
+            }
 
 			object[] paramsArray = new object[1];
 			paramsArray.SetValue(cancel, 0);
-			_eventBinding.RaiseCustomEvent("Unload", ref paramsArray);
+			EventBinding.RaiseCustomEvent("Unload", ref paramsArray);
 
-			cancel = (Int16)paramsArray[0];
-		}
+			cancel = ToInt16(paramsArray[0]);
+        }
 
 		public void Close()
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("Close");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray();
-				return;
-			}
+        {
+            if (!Validate("Close"))
+            {
+                return;
+            }
 
 			object[] paramsArray = new object[0];
-			_eventBinding.RaiseCustomEvent("Close", ref paramsArray);
+			EventBinding.RaiseCustomEvent("Close", ref paramsArray);
 		}
 
 		public void Activate()
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("Activate");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray();
-				return;
-			}
+        {
+            if (!Validate("Activate"))
+            {
+                return;
+            }
 
 			object[] paramsArray = new object[0];
-			_eventBinding.RaiseCustomEvent("Activate", ref paramsArray);
+			EventBinding.RaiseCustomEvent("Activate", ref paramsArray);
 		}
 
 		public void Deactivate()
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("Deactivate");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray();
-				return;
-			}
+            if (!Validate("Deactivate"))
+            {
+                return;
+            }
 
 			object[] paramsArray = new object[0];
-			_eventBinding.RaiseCustomEvent("Deactivate", ref paramsArray);
+			EventBinding.RaiseCustomEvent("Deactivate", ref paramsArray);
 		}
 
 		public void GotFocus()
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("GotFocus");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray();
-				return;
-			}
+        {
+            if (!Validate("GotFocus"))
+            {
+                return;
+            }
 
 			object[] paramsArray = new object[0];
-			_eventBinding.RaiseCustomEvent("GotFocus", ref paramsArray);
+			EventBinding.RaiseCustomEvent("GotFocus", ref paramsArray);
 		}
 
 		public void LostFocus()
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("LostFocus");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray();
-				return;
-			}
+        {
+            if (!Validate("LostFocus"))
+            {
+                return;
+            }
 
 			object[] paramsArray = new object[0];
-			_eventBinding.RaiseCustomEvent("LostFocus", ref paramsArray);
+			EventBinding.RaiseCustomEvent("LostFocus", ref paramsArray);
 		}
 
 		public void Click()
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("Click");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray();
-				return;
-			}
+            if (!Validate("Click"))
+            {
+                return;
+            }
 
 			object[] paramsArray = new object[0];
-			_eventBinding.RaiseCustomEvent("Click", ref paramsArray);
+			EventBinding.RaiseCustomEvent("Click", ref paramsArray);
 		}
 
 		public void DblClick([In] [Out] ref object cancel)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("DblClick");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(cancel);
-				return;
-			}
+            if (!Validate("DblClick"))
+            {
+                Invoker.ReleaseParamsArray(cancel);
+                return;
+            }
 
 			object[] paramsArray = new object[1];
 			paramsArray.SetValue(cancel, 0);
-			_eventBinding.RaiseCustomEvent("DblClick", ref paramsArray);
+			EventBinding.RaiseCustomEvent("DblClick", ref paramsArray);
 
-			cancel = (Int16)paramsArray[0];
+			cancel = ToInt16(paramsArray[0]);
 		}
 
 		public void MouseDown([In] [Out] ref object button, [In] [Out] ref object shift, [In] [Out] ref object x, [In] [Out] ref object y)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("MouseDown");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(button, shift, x, y);
-				return;
-			}
+        {
+            if (!Validate("MouseDown"))
+            {
+                Invoker.ReleaseParamsArray(button, shift, x, y);
+                return;
+            }
 
 			object[] paramsArray = new object[4];
 			paramsArray.SetValue(button, 0);
 			paramsArray.SetValue(shift, 1);
 			paramsArray.SetValue(x, 2);
 			paramsArray.SetValue(y, 3);
-			_eventBinding.RaiseCustomEvent("MouseDown", ref paramsArray);
+			EventBinding.RaiseCustomEvent("MouseDown", ref paramsArray);
 
-			button = (Int16)paramsArray[0];
-			shift = (Int16)paramsArray[1];
-			x = (Single)paramsArray[2];
-			y = (Single)paramsArray[3];
-		}
+			button = ToInt16(paramsArray[0]);
+			shift = ToInt16(paramsArray[1]);
+			x = ToSingle(paramsArray[2]);
+            y = ToSingle(paramsArray[3]);
+        }
 
 		public void MouseMove([In] [Out] ref object button, [In] [Out] ref object shift, [In] [Out] ref object x, [In] [Out] ref object y)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("MouseMove");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(button, shift, x, y);
-				return;
-			}
+        {
+            if (!Validate("MouseMove"))
+            {
+                Invoker.ReleaseParamsArray(button, shift, x, y);
+                return;
+            }
 
 			object[] paramsArray = new object[4];
 			paramsArray.SetValue(button, 0);
 			paramsArray.SetValue(shift, 1);
 			paramsArray.SetValue(x, 2);
 			paramsArray.SetValue(y, 3);
-			_eventBinding.RaiseCustomEvent("MouseMove", ref paramsArray);
+			EventBinding.RaiseCustomEvent("MouseMove", ref paramsArray);
 
-			button = (Int16)paramsArray[0];
-			shift = (Int16)paramsArray[1];
-			x = (Single)paramsArray[2];
-			y = (Single)paramsArray[3];
-		}
+            button = ToInt16(paramsArray[0]);
+            shift = ToInt16(paramsArray[1]);
+            x = ToSingle(paramsArray[2]);
+            y = ToSingle(paramsArray[3]);
+        }
 
 		public void MouseUp([In] [Out] ref object button, [In] [Out] ref object shift, [In] [Out] ref object x, [In] [Out] ref object y)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("MouseUp");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(button, shift, x, y);
-				return;
-			}
+            if (!Validate("MouseUp"))
+            {
+                Invoker.ReleaseParamsArray(button, shift, x, y);
+                return;
+            }
 
 			object[] paramsArray = new object[4];
 			paramsArray.SetValue(button, 0);
 			paramsArray.SetValue(shift, 1);
 			paramsArray.SetValue(x, 2);
 			paramsArray.SetValue(y, 3);
-			_eventBinding.RaiseCustomEvent("MouseUp", ref paramsArray);
+			EventBinding.RaiseCustomEvent("MouseUp", ref paramsArray);
 
-			button = (Int16)paramsArray[0];
-			shift = (Int16)paramsArray[1];
-			x = (Single)paramsArray[2];
-			y = (Single)paramsArray[3];
-		}
+            button = ToInt16(paramsArray[0]);
+            shift = ToInt16(paramsArray[1]);
+            x = ToSingle(paramsArray[2]);
+            y = ToSingle(paramsArray[3]);
+        }
 
 		public void KeyDown([In] [Out] ref object keyCode, [In] [Out] ref object shift)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("KeyDown");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(keyCode, shift);
-				return;
-			}
+        {
+            if (!Validate("KeyDown"))
+            {
+                Invoker.ReleaseParamsArray(keyCode, shift);
+                return;
+            }
 
 			object[] paramsArray = new object[2];
 			paramsArray.SetValue(keyCode, 0);
 			paramsArray.SetValue(shift, 1);
-			_eventBinding.RaiseCustomEvent("KeyDown", ref paramsArray);
+			EventBinding.RaiseCustomEvent("KeyDown", ref paramsArray);
 
-			keyCode = (Int16)paramsArray[0];
-			shift = (Int16)paramsArray[1];
-		}
+			keyCode = ToInt16(paramsArray[0]);
+            shift = ToInt16(paramsArray[1]);
+        }
 
 		public void KeyPress([In] [Out] ref object keyAscii)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("KeyPress");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(keyAscii);
-				return;
-			}
+        {
+            if (!Validate("KeyPress"))
+            {
+                Invoker.ReleaseParamsArray(keyAscii);
+                return;
+            }
 
 			object[] paramsArray = new object[1];
 			paramsArray.SetValue(keyAscii, 0);
-			_eventBinding.RaiseCustomEvent("KeyPress", ref paramsArray);
+			EventBinding.RaiseCustomEvent("KeyPress", ref paramsArray);
 
-			keyAscii = (Int16)paramsArray[0];
-		}
+			keyAscii = ToInt16(paramsArray[0]);
+        }
 
 		public void KeyUp([In] [Out] ref object keyCode, [In] [Out] ref object shift)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("KeyUp");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(keyCode, shift);
-				return;
-			}
+        {
+            if (!Validate("KeyUp"))
+            {
+                Invoker.ReleaseParamsArray(keyCode, shift);
+                return;
+            }
 
 			object[] paramsArray = new object[2];
 			paramsArray.SetValue(keyCode, 0);
 			paramsArray.SetValue(shift, 1);
-			_eventBinding.RaiseCustomEvent("KeyUp", ref paramsArray);
+			EventBinding.RaiseCustomEvent("KeyUp", ref paramsArray);
 
-			keyCode = (Int16)paramsArray[0];
-			shift = (Int16)paramsArray[1];
-		}
+			keyCode = ToInt16(paramsArray[0]);
+            shift = ToInt16(paramsArray[1]);
+        }
 
 		public void Error([In] [Out] ref object dataErr, [In] [Out] ref object response)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("Error");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(dataErr, response);
-				return;
-			}
+        {
+            if (!Validate("Error"))
+            {
+                Invoker.ReleaseParamsArray(dataErr, response);
+                return;
+            }
 
 			object[] paramsArray = new object[2];
 			paramsArray.SetValue(dataErr, 0);
 			paramsArray.SetValue(response, 1);
-			_eventBinding.RaiseCustomEvent("Error", ref paramsArray);
+			EventBinding.RaiseCustomEvent("Error", ref paramsArray);
 
-			dataErr = (Int16)paramsArray[0];
-			response = (Int16)paramsArray[1];
-		}
+			dataErr = ToInt16(paramsArray[0]);
+            response = ToInt16(paramsArray[1]);
+        }
 
 		public void Timer()
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("Timer");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray();
-				return;
-			}
-
+            if (!Validate("Timer"))
+            {
+                return;
+            }
 			object[] paramsArray = new object[0];
-			_eventBinding.RaiseCustomEvent("Timer", ref paramsArray);
+			EventBinding.RaiseCustomEvent("Timer", ref paramsArray);
 		}
 
 		public void Filter([In] [Out] ref object cancel, [In] [Out] ref object filterType)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("Filter");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(cancel, filterType);
-				return;
-			}
+        {
+            if (!Validate("Filter"))
+            {
+                Invoker.ReleaseParamsArray(cancel, filterType);
+                return;
+            }
 
 			object[] paramsArray = new object[2];
 			paramsArray.SetValue(cancel, 0);
 			paramsArray.SetValue(filterType, 1);
-			_eventBinding.RaiseCustomEvent("Filter", ref paramsArray);
+			EventBinding.RaiseCustomEvent("Filter", ref paramsArray);
 
-			cancel = (Int16)paramsArray[0];
-			filterType = (Int16)paramsArray[1];
-		}
+			cancel = ToInt16(paramsArray[0]);
+            filterType = ToInt16(paramsArray[1]);
+        }
 
 		public void ApplyFilter([In] [Out] ref object cancel, [In] [Out] ref object applyType)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("ApplyFilter");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(cancel, applyType);
-				return;
-			}
+            if (!Validate("ApplyFilter"))
+            {
+                Invoker.ReleaseParamsArray(cancel, applyType);
+                return;
+            }
 
 			object[] paramsArray = new object[2];
 			paramsArray.SetValue(cancel, 0);
 			paramsArray.SetValue(applyType, 1);
-			_eventBinding.RaiseCustomEvent("ApplyFilter", ref paramsArray);
+			EventBinding.RaiseCustomEvent("ApplyFilter", ref paramsArray);
 
-			cancel = (Int16)paramsArray[0];
-			applyType = (Int16)paramsArray[1];
-		}
+			cancel = ToInt16(paramsArray[0]);
+            applyType = ToInt16(paramsArray[1]);
+        }
 
 		public void Dirty([In] [Out] ref object cancel)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("Dirty");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(cancel);
-				return;
-			}
+        {
+            if (!Validate("Dirty"))
+            {
+                Invoker.ReleaseParamsArray(cancel);
+                return;
+            }
 
 			object[] paramsArray = new object[1];
 			paramsArray.SetValue(cancel, 0);
-			_eventBinding.RaiseCustomEvent("Dirty", ref paramsArray);
+			EventBinding.RaiseCustomEvent("Dirty", ref paramsArray);
 
-			cancel = (Int16)paramsArray[0];
-		}
+			cancel = ToInt16(paramsArray[0]);
+        }
 
 		public void Undo([In] [Out] ref object cancel)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("Undo");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(cancel);
-				return;
-			}
+        {
+            if (!Validate("Undo"))
+            {
+                Invoker.ReleaseParamsArray(cancel);
+                return;
+            }
 
 			object[] paramsArray = new object[1];
 			paramsArray.SetValue(cancel, 0);
-			_eventBinding.RaiseCustomEvent("Undo", ref paramsArray);
+			EventBinding.RaiseCustomEvent("Undo", ref paramsArray);
 
-			cancel = (Int16)paramsArray[0];
-		}
+            cancel = ToInt16(paramsArray[0]);
+        }
 
 		public void RecordExit([In] [Out] ref object cancel)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("RecordExit");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(cancel);
-				return;
-			}
+        {
+            if (!Validate("RecordExit"))
+            {
+                Invoker.ReleaseParamsArray(cancel);
+                return;
+            }
 
 			object[] paramsArray = new object[1];
 			paramsArray.SetValue(cancel, 0);
-			_eventBinding.RaiseCustomEvent("RecordExit", ref paramsArray);
+			EventBinding.RaiseCustomEvent("RecordExit", ref paramsArray);
 
-			cancel = (Int16)paramsArray[0];
-		}
+            cancel = ToInt16(paramsArray[0]);
+        }
 
 		public void BeginBatchEdit([In] [Out] ref object cancel)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("BeginBatchEdit");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(cancel);
-				return;
-			}
+        {
+            if (!Validate("BeginBatchEdit"))
+            {
+                Invoker.ReleaseParamsArray(cancel);
+                return;
+            }
 
 			object[] paramsArray = new object[1];
 			paramsArray.SetValue(cancel, 0);
-			_eventBinding.RaiseCustomEvent("BeginBatchEdit", ref paramsArray);
+			EventBinding.RaiseCustomEvent("BeginBatchEdit", ref paramsArray);
 
-			cancel = (Int16)paramsArray[0];
-		}
+            cancel = ToInt16(paramsArray[0]);
+        }
 
 		public void UndoBatchEdit([In] [Out] ref object cancel)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("UndoBatchEdit");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(cancel);
-				return;
-			}
+        {
+            if (!Validate("UndoBatchEdit"))
+            {
+                Invoker.ReleaseParamsArray(cancel);
+                return;
+            }
 
 			object[] paramsArray = new object[1];
 			paramsArray.SetValue(cancel, 0);
-			_eventBinding.RaiseCustomEvent("UndoBatchEdit", ref paramsArray);
+			EventBinding.RaiseCustomEvent("UndoBatchEdit", ref paramsArray);
 
-			cancel = (Int16)paramsArray[0];
-		}
+            cancel = ToInt16(paramsArray[0]);
+        }
 
 		public void BeforeBeginTransaction([In] [Out] ref object cancel, [In] [Out, MarshalAs(UnmanagedType.IDispatch)] object connection)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("BeforeBeginTransaction");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(cancel, connection);
-				return;
-			}
+            if (!Validate("BeforeBeginTransaction"))
+            {
+                Invoker.ReleaseParamsArray(cancel, connection);
+                return;
+            }
 
-			object[] paramsArray = new object[2];
+            NetOffice.ADODBApi.Connection newConnection = new NetOffice.ADODBApi.Connection(EventClass, connection);
+            (newConnection as ICOMProxyShareProvider).GetProxyShare().Acquire();
+
+            object[] paramsArray = new object[2];
 			paramsArray.SetValue(cancel, 0);
-			paramsArray.SetValue(connection, 1);
-			_eventBinding.RaiseCustomEvent("BeforeBeginTransaction", ref paramsArray);
+			paramsArray.SetValue(newConnection, 1);            
+            EventBinding.RaiseCustomEvent("BeforeBeginTransaction", ref paramsArray);
 
-			cancel = (Int16)paramsArray[0];
-			connection = (NetOffice.ADODBApi.Connection)paramsArray[1];
-		}
+			cancel = ToInt16(paramsArray[0]);
+            connection = newConnection.UnderlyingObject;
+            (newConnection as ICOMProxyShareProvider).GetProxyShare().Release();
+        }
 
 		public void AfterBeginTransaction([In] [Out, MarshalAs(UnmanagedType.IDispatch)] object connection)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("AfterBeginTransaction");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(connection);
-				return;
-			}
+            if (!Validate("AfterBeginTransaction"))
+            {
+                Invoker.ReleaseParamsArray(connection);
+                return;
+            }
 
-			object[] paramsArray = new object[1];
-			paramsArray.SetValue(connection, 0);
-			_eventBinding.RaiseCustomEvent("AfterBeginTransaction", ref paramsArray);
+            NetOffice.ADODBApi.Connection newConnection = new NetOffice.ADODBApi.Connection(EventClass, connection);
+            (newConnection as ICOMProxyShareProvider).GetProxyShare().Acquire();
 
-			connection = (NetOffice.ADODBApi.Connection)paramsArray[0];
-		}
+            object[] paramsArray = new object[1];
+			paramsArray.SetValue(newConnection, 0);
+			EventBinding.RaiseCustomEvent("AfterBeginTransaction", ref paramsArray);
+
+            connection = newConnection.UnderlyingObject;
+            (newConnection as ICOMProxyShareProvider).GetProxyShare().Release();
+        }
 
 		public void BeforeCommitTransaction([In] [Out] ref object cancel, [In] [Out, MarshalAs(UnmanagedType.IDispatch)] object connection)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("BeforeCommitTransaction");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(cancel, connection);
-				return;
-			}
+            if (!Validate("BeforeCommitTransaction"))
+            {
+                Invoker.ReleaseParamsArray(connection);
+                return;
+            }
 
-			object[] paramsArray = new object[2];
+            NetOffice.ADODBApi.Connection newConnection = new NetOffice.ADODBApi.Connection(EventClass, connection);
+            (newConnection as ICOMProxyShareProvider).GetProxyShare().Acquire();
+
+            object[] paramsArray = new object[2];
 			paramsArray.SetValue(cancel, 0);
-			paramsArray.SetValue(connection, 1);
-			_eventBinding.RaiseCustomEvent("BeforeCommitTransaction", ref paramsArray);
+			paramsArray.SetValue(newConnection, 1);
+			EventBinding.RaiseCustomEvent("BeforeCommitTransaction", ref paramsArray);
 
-			cancel = (Int16)paramsArray[0];
-			connection = (NetOffice.ADODBApi.Connection)paramsArray[1];
-		}
+			cancel = ToInt16(paramsArray[0]);
+            connection = newConnection.UnderlyingObject;
+            (newConnection as ICOMProxyShareProvider).GetProxyShare().Release();
+        }
 
 		public void AfterCommitTransaction([In] [Out, MarshalAs(UnmanagedType.IDispatch)] object connection)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("AfterCommitTransaction");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(connection);
-				return;
-			}
+        {
+            if (!Validate("AfterCommitTransaction"))
+            {
+                Invoker.ReleaseParamsArray(connection);
+                return;
+            }
 
-			object[] paramsArray = new object[1];
+            NetOffice.ADODBApi.Connection newConnection = new NetOffice.ADODBApi.Connection(EventClass, connection);
+            (newConnection as ICOMProxyShareProvider).GetProxyShare().Acquire();
+
+            object[] paramsArray = new object[1];
 			paramsArray.SetValue(connection, 0);
-			_eventBinding.RaiseCustomEvent("AfterCommitTransaction", ref paramsArray);
+			EventBinding.RaiseCustomEvent("AfterCommitTransaction", ref paramsArray);
 
-			connection = (NetOffice.ADODBApi.Connection)paramsArray[0];
-		}
+            connection = newConnection.UnderlyingObject;
+            (newConnection as ICOMProxyShareProvider).GetProxyShare().Release();
+        }
 
 		public void RollbackTransaction([In] [Out, MarshalAs(UnmanagedType.IDispatch)] object connection)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("RollbackTransaction");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(connection);
-				return;
-			}
+        {
+            if (!Validate("RollbackTransaction"))
+            {
+                Invoker.ReleaseParamsArray(connection);
+                return;
+            }
 
-			object[] paramsArray = new object[1];
+            NetOffice.ADODBApi.Connection newConnection = new NetOffice.ADODBApi.Connection(EventClass, connection);
+            (newConnection as ICOMProxyShareProvider).GetProxyShare().Acquire();
+
+            object[] paramsArray = new object[1];
 			paramsArray.SetValue(connection, 0);
-			_eventBinding.RaiseCustomEvent("RollbackTransaction", ref paramsArray);
+			EventBinding.RaiseCustomEvent("RollbackTransaction", ref paramsArray);
 
-			connection = (NetOffice.ADODBApi.Connection)paramsArray[0];
-		}
+            connection = newConnection.UnderlyingObject;
+            (newConnection as ICOMProxyShareProvider).GetProxyShare().Release();
+        }
 
 		public void OnConnect()
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("OnConnect");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray();
-				return;
-			}
+            if (!Validate("OnConnect"))
+            {
+                return;
+            }
 
 			object[] paramsArray = new object[0];
-			_eventBinding.RaiseCustomEvent("OnConnect", ref paramsArray);
+			EventBinding.RaiseCustomEvent("OnConnect", ref paramsArray);
 		}
 
 		public void OnDisconnect()
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("OnDisconnect");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray();
-				return;
-			}
+            if (!Validate("OnDisconnect"))
+            {
+                return;
+            }
 
 			object[] paramsArray = new object[0];
-			_eventBinding.RaiseCustomEvent("OnDisconnect", ref paramsArray);
+			EventBinding.RaiseCustomEvent("OnDisconnect", ref paramsArray);
 		}
 
 		public void PivotTableChange([In] object reason)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("PivotTableChange");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(reason);
-				return;
-			}
+        {
+            if (!Validate("PivotTableChange"))
+            {
+                return;
+            }
 
 			Int32 newReason = Convert.ToInt32(reason);
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newReason;
-			_eventBinding.RaiseCustomEvent("PivotTableChange", ref paramsArray);
+			EventBinding.RaiseCustomEvent("PivotTableChange", ref paramsArray);
 		}
 
 		public void Query()
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("Query");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray();
-				return;
-			}
+        {
+            if (!Validate("Query"))
+            {
+                return;
+            }
 
 			object[] paramsArray = new object[0];
-			_eventBinding.RaiseCustomEvent("Query", ref paramsArray);
+			EventBinding.RaiseCustomEvent("Query", ref paramsArray);
 		}
 
 		public void BeforeQuery()
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("BeforeQuery");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray();
-				return;
-			}
+            if (!Validate("BeforeQuery"))
+            {
+                return;
+            }
 
-			object[] paramsArray = new object[0];
-			_eventBinding.RaiseCustomEvent("BeforeQuery", ref paramsArray);
+            object[] paramsArray = new object[0];
+			EventBinding.RaiseCustomEvent("BeforeQuery", ref paramsArray);
 		}
 
 		public void SelectionChange()
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("SelectionChange");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray();
-				return;
-			}
+            if (!Validate("SelectionChange"))
+            {
+                return;
+            }
 
-			object[] paramsArray = new object[0];
-			_eventBinding.RaiseCustomEvent("SelectionChange", ref paramsArray);
+            object[] paramsArray = new object[0];
+			EventBinding.RaiseCustomEvent("SelectionChange", ref paramsArray);
 		}
 
 		public void CommandBeforeExecute([In] object command, [In, MarshalAs(UnmanagedType.IDispatch)] object cancel)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("CommandBeforeExecute");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(command, cancel);
-				return;
-			}
+        {
+            if (!Validate("CommandBeforeExecute"))
+            {
+                Invoker.ReleaseParamsArray(command, cancel);
+                return;
+            }
 
 			object newCommand = (object)command;
-			object newCancel = Factory.CreateObjectFromComProxy(_eventClass, cancel) as object;
+			object newCancel = Factory.CreateEventArgumentObjectFromComProxy(EventClass, cancel) as object;
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newCommand;
 			paramsArray[1] = newCancel;
-			_eventBinding.RaiseCustomEvent("CommandBeforeExecute", ref paramsArray);
+			EventBinding.RaiseCustomEvent("CommandBeforeExecute", ref paramsArray);
 		}
 
 		public void CommandChecked([In] object command, [In, MarshalAs(UnmanagedType.IDispatch)] object _checked)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("CommandChecked");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(command, _checked);
-				return;
-			}
+        {
+            if (!Validate("CommandChecked"))
+            {
+                Invoker.ReleaseParamsArray(command, _checked);
+                return;
+            }
 
 			object newCommand = (object)command;
-			object newChecked = Factory.CreateObjectFromComProxy(_eventClass, _checked) as object;
+			object newChecked = Factory.CreateEventArgumentObjectFromComProxy(EventClass, _checked) as object;
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newCommand;
 			paramsArray[1] = newChecked;
-			_eventBinding.RaiseCustomEvent("CommandChecked", ref paramsArray);
+			EventBinding.RaiseCustomEvent("CommandChecked", ref paramsArray);
 		}
 
 		public void CommandEnabled([In] object command, [In, MarshalAs(UnmanagedType.IDispatch)] object enabled)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("CommandEnabled");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(command, enabled);
-				return;
-			}
+        {
+            if (!Validate("CommandEnabled"))
+            {
+                Invoker.ReleaseParamsArray(command, enabled);
+                return;
+            }
 
 			object newCommand = (object)command;
-			object newEnabled = Factory.CreateObjectFromComProxy(_eventClass, enabled) as object;
+			object newEnabled = Factory.CreateEventArgumentObjectFromComProxy(EventClass, enabled) as object;
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newCommand;
 			paramsArray[1] = newEnabled;
-			_eventBinding.RaiseCustomEvent("CommandEnabled", ref paramsArray);
+			EventBinding.RaiseCustomEvent("CommandEnabled", ref paramsArray);
 		}
 
 		public void CommandExecute([In] object command)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("CommandExecute");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(command);
-				return;
-			}
+            if (!Validate("CommandExecute"))
+            {
+                Invoker.ReleaseParamsArray(command);
+                return;
+            }
 
 			object newCommand = (object)command;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newCommand;
-			_eventBinding.RaiseCustomEvent("CommandExecute", ref paramsArray);
+            EventBinding.RaiseCustomEvent("CommandExecute", ref paramsArray);
 		}
 
 		public void DataSetChange()
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("DataSetChange");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray();
-				return;
-			}
+        {
+            if (!Validate("DataSetChange"))
+            {
+                return;
+            }
 
 			object[] paramsArray = new object[0];
-			_eventBinding.RaiseCustomEvent("DataSetChange", ref paramsArray);
+			EventBinding.RaiseCustomEvent("DataSetChange", ref paramsArray);
 		}
 
 		public void BeforeScreenTip([In, MarshalAs(UnmanagedType.IDispatch)] object screenTipText, [In, MarshalAs(UnmanagedType.IDispatch)] object sourceObject)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("BeforeScreenTip");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(screenTipText, sourceObject);
-				return;
-			}
+        {
+            if (!Validate("BeforeScreenTip"))
+            {
+                Invoker.ReleaseParamsArray(screenTipText, sourceObject);
+                return;
+            }
 
-			object newScreenTipText = Factory.CreateObjectFromComProxy(_eventClass, screenTipText) as object;
-			object newSourceObject = Factory.CreateObjectFromComProxy(_eventClass, sourceObject) as object;
+			object newScreenTipText = Factory.CreateEventArgumentObjectFromComProxy(EventClass, screenTipText) as object;
+			object newSourceObject = Factory.CreateEventArgumentObjectFromComProxy(EventClass, sourceObject) as object;
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newScreenTipText;
 			paramsArray[1] = newSourceObject;
-			_eventBinding.RaiseCustomEvent("BeforeScreenTip", ref paramsArray);
+			EventBinding.RaiseCustomEvent("BeforeScreenTip", ref paramsArray);
 		}
 
 		public void BeforeRender([In, MarshalAs(UnmanagedType.IDispatch)] object drawObject, [In, MarshalAs(UnmanagedType.IDispatch)] object chartObject, [In, MarshalAs(UnmanagedType.IDispatch)] object cancel)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("BeforeRender");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(drawObject, chartObject, cancel);
-				return;
-			}
+        {
+            if (!Validate("BeforeRender"))
+            {
+                Invoker.ReleaseParamsArray(drawObject, chartObject, cancel);
+                return;
+            }
 
-			object newdrawObject = Factory.CreateObjectFromComProxy(_eventClass, drawObject) as object;
-			object newchartObject = Factory.CreateObjectFromComProxy(_eventClass, chartObject) as object;
-			object newCancel = Factory.CreateObjectFromComProxy(_eventClass, cancel) as object;
+			object newdrawObject = Factory.CreateEventArgumentObjectFromComProxy(EventClass, drawObject) as object;
+			object newchartObject = Factory.CreateEventArgumentObjectFromComProxy(EventClass, chartObject) as object;
+			object newCancel = Factory.CreateEventArgumentObjectFromComProxy(EventClass, cancel) as object;
 			object[] paramsArray = new object[3];
 			paramsArray[0] = newdrawObject;
 			paramsArray[1] = newchartObject;
 			paramsArray[2] = newCancel;
-			_eventBinding.RaiseCustomEvent("BeforeRender", ref paramsArray);
+			EventBinding.RaiseCustomEvent("BeforeRender", ref paramsArray);
 		}
 
 		public void AfterRender([In, MarshalAs(UnmanagedType.IDispatch)] object drawObject, [In, MarshalAs(UnmanagedType.IDispatch)] object chartObject)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("AfterRender");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(drawObject, chartObject);
-				return;
-			}
+        {
+            if (!Validate("AfterRender"))
+            {
+                Invoker.ReleaseParamsArray(drawObject, chartObject);
+                return;
+            }
 
-			object newdrawObject = Factory.CreateObjectFromComProxy(_eventClass, drawObject) as object;
-			object newchartObject = Factory.CreateObjectFromComProxy(_eventClass, chartObject) as object;
+			object newdrawObject = Factory.CreateEventArgumentObjectFromComProxy(EventClass, drawObject) as object;
+			object newchartObject = Factory.CreateEventArgumentObjectFromComProxy(EventClass, chartObject) as object;
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newdrawObject;
 			paramsArray[1] = newchartObject;
-			_eventBinding.RaiseCustomEvent("AfterRender", ref paramsArray);
+            EventBinding.RaiseCustomEvent("AfterRender", ref paramsArray);
 		}
 
 		public void AfterFinalRender([In, MarshalAs(UnmanagedType.IDispatch)] object drawObject)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("AfterFinalRender");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(drawObject);
-				return;
-			}
+        {
+            if (!Validate("AfterFinalRender"))
+            {
+                Invoker.ReleaseParamsArray(drawObject);
+                return;
+            }
 
-			object newdrawObject = Factory.CreateObjectFromComProxy(_eventClass, drawObject) as object;
+			object newdrawObject = Factory.CreateEventArgumentObjectFromComProxy(EventClass, drawObject) as object;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newdrawObject;
-			_eventBinding.RaiseCustomEvent("AfterFinalRender", ref paramsArray);
+            EventBinding.RaiseCustomEvent("AfterFinalRender", ref paramsArray);
 		}
 
 		public void AfterLayout([In, MarshalAs(UnmanagedType.IDispatch)] object drawObject)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("AfterLayout");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(drawObject);
-				return;
-			}
+        {
+            if (!Validate("AfterLayout"))
+            {
+                Invoker.ReleaseParamsArray(drawObject);
+                return;
+            }
 
-			object newdrawObject = Factory.CreateObjectFromComProxy(_eventClass, drawObject) as object;
+			object newdrawObject = Factory.CreateEventArgumentObjectFromComProxy(EventClass, drawObject) as object;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newdrawObject;
-			_eventBinding.RaiseCustomEvent("AfterLayout", ref paramsArray);
+			EventBinding.RaiseCustomEvent("AfterLayout", ref paramsArray);
 		}
 
 		public void MouseWheel([In] object page, [In] object count)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("MouseWheel");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(page, count);
-				return;
-			}
+            if (!Validate("MouseWheel"))
+            {
+                Invoker.ReleaseParamsArray(page, count);
+                return;
+            }
 
 			bool newPage = Convert.ToBoolean(page);
 			Int32 newCount = Convert.ToInt32(count);
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newPage;
 			paramsArray[1] = newCount;
-			_eventBinding.RaiseCustomEvent("MouseWheel", ref paramsArray);
+			EventBinding.RaiseCustomEvent("MouseWheel", ref paramsArray);
 		}
 
 		public void ViewChange([In] object reason)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("ViewChange");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(reason);
-				return;
-			}
-
+        {
+            if (!Validate("ViewChange"))
+            {
+                Invoker.ReleaseParamsArray(reason);
+                return;
+            }
+       
 			Int32 newReason = Convert.ToInt32(reason);
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newReason;
-			_eventBinding.RaiseCustomEvent("ViewChange", ref paramsArray);
+			EventBinding.RaiseCustomEvent("ViewChange", ref paramsArray);
 		}
 
 		public void DataChange([In] object reason)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("DataChange");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(reason);
-				return;
-			}
+            if (!Validate("DataChange"))
+            {
+                Invoker.ReleaseParamsArray(reason);
+                return;
+            }
 
 			Int32 newReason = Convert.ToInt32(reason);
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newReason;
-			_eventBinding.RaiseCustomEvent("DataChange", ref paramsArray);
+			EventBinding.RaiseCustomEvent("DataChange", ref paramsArray);
 		}
 
 		#endregion

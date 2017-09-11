@@ -119,369 +119,323 @@ namespace NetOffice.OWC10Api.Events
 		
 		#endregion
 	
-		#region Fields
-
-		private IEventBinding	_eventBinding;
-        private ICOMObject		_eventClass;
-        
-		#endregion
-		
-		#region Construction
+		#region Ctor
 
 		public _DataSourceControlEvent_SinkHelper(ICOMObject eventClass, IConnectionPoint connectPoint): base(eventClass)
 		{
-			_eventClass = eventClass;
-			_eventBinding = (IEventBinding)eventClass;
 			SetupEventBinding(connectPoint);
 		}
 		
-		#endregion
-		
-		#region Properties
+		#endregion		
 
-        internal Core Factory
-        {
-            get
-            {
-                if (null != _eventClass)
-                    return _eventClass.Factory;
-                else
-                    return Core.Default;
-            }
-        }
-
-        #endregion
-
-		#region _DataSourceControlEvent Members
+		#region _DataSourceControlEvent
 		
 		public void Current([In, MarshalAs(UnmanagedType.IDispatch)] object dSCEventInfo)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("Current");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(dSCEventInfo);
-				return;
-			}
+        {
+            if (!Validate("Current"))
+            {
+                Invoker.ReleaseParamsArray(dSCEventInfo);
+                return;
+            }
 
-			NetOffice.OWC10Api.DSCEventInfo newDSCEventInfo = Factory.CreateObjectFromComProxy(_eventClass, dSCEventInfo) as NetOffice.OWC10Api.DSCEventInfo;
+			NetOffice.OWC10Api.DSCEventInfo newDSCEventInfo = Factory.CreateKnownObjectFromComProxy<NetOffice.OWC10Api.DSCEventInfo>(EventClass, dSCEventInfo, NetOffice.OWC10Api.DSCEventInfo.LateBindingApiWrapperType);
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newDSCEventInfo;
-			_eventBinding.RaiseCustomEvent("Current", ref paramsArray);
+			EventBinding.RaiseCustomEvent("Current", ref paramsArray);
 		}
 
 		public void BeforeExpand([In, MarshalAs(UnmanagedType.IDispatch)] object dSCEventInfo)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("BeforeExpand");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(dSCEventInfo);
-				return;
-			}
+            if (!Validate("BeforeExpand"))
+            {
+                Invoker.ReleaseParamsArray(dSCEventInfo);
+                return;
+            }
 
-			NetOffice.OWC10Api.DSCEventInfo newDSCEventInfo = Factory.CreateObjectFromComProxy(_eventClass, dSCEventInfo) as NetOffice.OWC10Api.DSCEventInfo;
-			object[] paramsArray = new object[1];
+            NetOffice.OWC10Api.DSCEventInfo newDSCEventInfo = Factory.CreateKnownObjectFromComProxy<NetOffice.OWC10Api.DSCEventInfo>(EventClass, dSCEventInfo, NetOffice.OWC10Api.DSCEventInfo.LateBindingApiWrapperType);
+            object[] paramsArray = new object[1];
 			paramsArray[0] = newDSCEventInfo;
-			_eventBinding.RaiseCustomEvent("BeforeExpand", ref paramsArray);
+			EventBinding.RaiseCustomEvent("BeforeExpand", ref paramsArray);
 		}
 
 		public void BeforeCollapse([In, MarshalAs(UnmanagedType.IDispatch)] object dSCEventInfo)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("BeforeCollapse");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(dSCEventInfo);
-				return;
-			}
+            if (!Validate("BeforeCollapse"))
+            {
+                Invoker.ReleaseParamsArray(dSCEventInfo);
+                return;
+            }
 
-			NetOffice.OWC10Api.DSCEventInfo newDSCEventInfo = Factory.CreateObjectFromComProxy(_eventClass, dSCEventInfo) as NetOffice.OWC10Api.DSCEventInfo;
-			object[] paramsArray = new object[1];
+            NetOffice.OWC10Api.DSCEventInfo newDSCEventInfo = Factory.CreateKnownObjectFromComProxy<NetOffice.OWC10Api.DSCEventInfo>(EventClass, dSCEventInfo, NetOffice.OWC10Api.DSCEventInfo.LateBindingApiWrapperType);
+            object[] paramsArray = new object[1];
 			paramsArray[0] = newDSCEventInfo;
-			_eventBinding.RaiseCustomEvent("BeforeCollapse", ref paramsArray);
+			EventBinding.RaiseCustomEvent("BeforeCollapse", ref paramsArray);
 		}
 
 		public void BeforeFirstPage([In, MarshalAs(UnmanagedType.IDispatch)] object dSCEventInfo)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("BeforeFirstPage");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(dSCEventInfo);
-				return;
-			}
+            if (!Validate("BeforeFirstPage"))
+            {
+                Invoker.ReleaseParamsArray(dSCEventInfo);
+                return;
+            }
 
-			NetOffice.OWC10Api.DSCEventInfo newDSCEventInfo = Factory.CreateObjectFromComProxy(_eventClass, dSCEventInfo) as NetOffice.OWC10Api.DSCEventInfo;
-			object[] paramsArray = new object[1];
+            NetOffice.OWC10Api.DSCEventInfo newDSCEventInfo = Factory.CreateKnownObjectFromComProxy<NetOffice.OWC10Api.DSCEventInfo>(EventClass, dSCEventInfo, NetOffice.OWC10Api.DSCEventInfo.LateBindingApiWrapperType);
+            object[] paramsArray = new object[1];
 			paramsArray[0] = newDSCEventInfo;
-			_eventBinding.RaiseCustomEvent("BeforeFirstPage", ref paramsArray);
+			EventBinding.RaiseCustomEvent("BeforeFirstPage", ref paramsArray);
 		}
 
 		public void BeforePreviousPage([In, MarshalAs(UnmanagedType.IDispatch)] object dSCEventInfo)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("BeforePreviousPage");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(dSCEventInfo);
-				return;
-			}
+        {
+            if (!Validate("BeforePreviousPage"))
+            {
+                Invoker.ReleaseParamsArray(dSCEventInfo);
+                return;
+            }
 
-			NetOffice.OWC10Api.DSCEventInfo newDSCEventInfo = Factory.CreateObjectFromComProxy(_eventClass, dSCEventInfo) as NetOffice.OWC10Api.DSCEventInfo;
-			object[] paramsArray = new object[1];
+            NetOffice.OWC10Api.DSCEventInfo newDSCEventInfo = Factory.CreateKnownObjectFromComProxy<NetOffice.OWC10Api.DSCEventInfo>(EventClass, dSCEventInfo, NetOffice.OWC10Api.DSCEventInfo.LateBindingApiWrapperType);
+            object[] paramsArray = new object[1];
 			paramsArray[0] = newDSCEventInfo;
-			_eventBinding.RaiseCustomEvent("BeforePreviousPage", ref paramsArray);
+			EventBinding.RaiseCustomEvent("BeforePreviousPage", ref paramsArray);
 		}
 
 		public void BeforeNextPage([In, MarshalAs(UnmanagedType.IDispatch)] object dSCEventInfo)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("BeforeNextPage");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(dSCEventInfo);
-				return;
-			}
+            if (!Validate("BeforeNextPage"))
+            {
+                Invoker.ReleaseParamsArray(dSCEventInfo);
+                return;
+            }
 
-			NetOffice.OWC10Api.DSCEventInfo newDSCEventInfo = Factory.CreateObjectFromComProxy(_eventClass, dSCEventInfo) as NetOffice.OWC10Api.DSCEventInfo;
-			object[] paramsArray = new object[1];
+            NetOffice.OWC10Api.DSCEventInfo newDSCEventInfo = Factory.CreateKnownObjectFromComProxy<NetOffice.OWC10Api.DSCEventInfo>(EventClass, dSCEventInfo, NetOffice.OWC10Api.DSCEventInfo.LateBindingApiWrapperType);
+            object[] paramsArray = new object[1];
 			paramsArray[0] = newDSCEventInfo;
-			_eventBinding.RaiseCustomEvent("BeforeNextPage", ref paramsArray);
+			EventBinding.RaiseCustomEvent("BeforeNextPage", ref paramsArray);
 		}
 
 		public void BeforeLastPage([In, MarshalAs(UnmanagedType.IDispatch)] object dSCEventInfo)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("BeforeLastPage");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(dSCEventInfo);
-				return;
-			}
+            if (!Validate("BeforeLastPage"))
+            {
+                Invoker.ReleaseParamsArray(dSCEventInfo);
+                return;
+            }
 
-			NetOffice.OWC10Api.DSCEventInfo newDSCEventInfo = Factory.CreateObjectFromComProxy(_eventClass, dSCEventInfo) as NetOffice.OWC10Api.DSCEventInfo;
-			object[] paramsArray = new object[1];
+            NetOffice.OWC10Api.DSCEventInfo newDSCEventInfo = Factory.CreateKnownObjectFromComProxy<NetOffice.OWC10Api.DSCEventInfo>(EventClass, dSCEventInfo, NetOffice.OWC10Api.DSCEventInfo.LateBindingApiWrapperType);
+            object[] paramsArray = new object[1];
 			paramsArray[0] = newDSCEventInfo;
-			_eventBinding.RaiseCustomEvent("BeforeLastPage", ref paramsArray);
+			EventBinding.RaiseCustomEvent("BeforeLastPage", ref paramsArray);
 		}
 
 		public void DataError([In, MarshalAs(UnmanagedType.IDispatch)] object dSCEventInfo)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("DataError");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(dSCEventInfo);
-				return;
-			}
+            if (!Validate("DataError"))
+            {
+                Invoker.ReleaseParamsArray(dSCEventInfo);
+                return;
+            }
 
-			NetOffice.OWC10Api.DSCEventInfo newDSCEventInfo = Factory.CreateObjectFromComProxy(_eventClass, dSCEventInfo) as NetOffice.OWC10Api.DSCEventInfo;
-			object[] paramsArray = new object[1];
+            NetOffice.OWC10Api.DSCEventInfo newDSCEventInfo = Factory.CreateKnownObjectFromComProxy<NetOffice.OWC10Api.DSCEventInfo>(EventClass, dSCEventInfo, NetOffice.OWC10Api.DSCEventInfo.LateBindingApiWrapperType);
+            object[] paramsArray = new object[1];
 			paramsArray[0] = newDSCEventInfo;
-			_eventBinding.RaiseCustomEvent("DataError", ref paramsArray);
+			EventBinding.RaiseCustomEvent("DataError", ref paramsArray);
 		}
 
 		public void DataPageComplete([In, MarshalAs(UnmanagedType.IDispatch)] object dSCEventInfo)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("DataPageComplete");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(dSCEventInfo);
-				return;
-			}
+            if (!Validate("DataPageComplete"))
+            {
+                Invoker.ReleaseParamsArray(dSCEventInfo);
+                return;
+            }
 
-			NetOffice.OWC10Api.DSCEventInfo newDSCEventInfo = Factory.CreateObjectFromComProxy(_eventClass, dSCEventInfo) as NetOffice.OWC10Api.DSCEventInfo;
-			object[] paramsArray = new object[1];
+            NetOffice.OWC10Api.DSCEventInfo newDSCEventInfo = Factory.CreateKnownObjectFromComProxy<NetOffice.OWC10Api.DSCEventInfo>(EventClass, dSCEventInfo, NetOffice.OWC10Api.DSCEventInfo.LateBindingApiWrapperType);
+            object[] paramsArray = new object[1];
 			paramsArray[0] = newDSCEventInfo;
-			_eventBinding.RaiseCustomEvent("DataPageComplete", ref paramsArray);
+			EventBinding.RaiseCustomEvent("DataPageComplete", ref paramsArray);
 		}
 
 		public void BeforeInitialBind([In, MarshalAs(UnmanagedType.IDispatch)] object dSCEventInfo)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("BeforeInitialBind");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(dSCEventInfo);
-				return;
-			}
+            if (!Validate("BeforeInitialBind"))
+            {
+                Invoker.ReleaseParamsArray(dSCEventInfo);
+                return;
+            }
 
-			NetOffice.OWC10Api.DSCEventInfo newDSCEventInfo = Factory.CreateObjectFromComProxy(_eventClass, dSCEventInfo) as NetOffice.OWC10Api.DSCEventInfo;
-			object[] paramsArray = new object[1];
+            NetOffice.OWC10Api.DSCEventInfo newDSCEventInfo = Factory.CreateKnownObjectFromComProxy<NetOffice.OWC10Api.DSCEventInfo>(EventClass, dSCEventInfo, NetOffice.OWC10Api.DSCEventInfo.LateBindingApiWrapperType);
+            object[] paramsArray = new object[1];
 			paramsArray[0] = newDSCEventInfo;
-			_eventBinding.RaiseCustomEvent("BeforeInitialBind", ref paramsArray);
+			EventBinding.RaiseCustomEvent("BeforeInitialBind", ref paramsArray);
 		}
 
 		public void RecordsetSaveProgress([In, MarshalAs(UnmanagedType.IDispatch)] object dSCEventInfo)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("RecordsetSaveProgress");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(dSCEventInfo);
-				return;
-			}
+            if (!Validate("RecordsetSaveProgress"))
+            {
+                Invoker.ReleaseParamsArray(dSCEventInfo);
+                return;
+            }
 
-			NetOffice.OWC10Api.DSCEventInfo newDSCEventInfo = Factory.CreateObjectFromComProxy(_eventClass, dSCEventInfo) as NetOffice.OWC10Api.DSCEventInfo;
-			object[] paramsArray = new object[1];
+            NetOffice.OWC10Api.DSCEventInfo newDSCEventInfo = Factory.CreateKnownObjectFromComProxy<NetOffice.OWC10Api.DSCEventInfo>(EventClass, dSCEventInfo, NetOffice.OWC10Api.DSCEventInfo.LateBindingApiWrapperType);
+            object[] paramsArray = new object[1];
 			paramsArray[0] = newDSCEventInfo;
-			_eventBinding.RaiseCustomEvent("RecordsetSaveProgress", ref paramsArray);
+			EventBinding.RaiseCustomEvent("RecordsetSaveProgress", ref paramsArray);
 		}
 
 		public void AfterDelete([In, MarshalAs(UnmanagedType.IDispatch)] object dSCEventInfo)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("AfterDelete");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(dSCEventInfo);
-				return;
-			}
+            if (!Validate("AfterDelete"))
+            {
+                Invoker.ReleaseParamsArray(dSCEventInfo);
+                return;
+            }
 
-			NetOffice.OWC10Api.DSCEventInfo newDSCEventInfo = Factory.CreateObjectFromComProxy(_eventClass, dSCEventInfo) as NetOffice.OWC10Api.DSCEventInfo;
-			object[] paramsArray = new object[1];
+            NetOffice.OWC10Api.DSCEventInfo newDSCEventInfo = Factory.CreateKnownObjectFromComProxy<NetOffice.OWC10Api.DSCEventInfo>(EventClass, dSCEventInfo, NetOffice.OWC10Api.DSCEventInfo.LateBindingApiWrapperType);
+            object[] paramsArray = new object[1];
 			paramsArray[0] = newDSCEventInfo;
-			_eventBinding.RaiseCustomEvent("AfterDelete", ref paramsArray);
+			EventBinding.RaiseCustomEvent("AfterDelete", ref paramsArray);
 		}
 
 		public void AfterInsert([In, MarshalAs(UnmanagedType.IDispatch)] object dSCEventInfo)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("AfterInsert");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(dSCEventInfo);
-				return;
-			}
+            if (!Validate("AfterInsert"))
+            {
+                Invoker.ReleaseParamsArray(dSCEventInfo);
+                return;
+            }
 
-			NetOffice.OWC10Api.DSCEventInfo newDSCEventInfo = Factory.CreateObjectFromComProxy(_eventClass, dSCEventInfo) as NetOffice.OWC10Api.DSCEventInfo;
-			object[] paramsArray = new object[1];
+            NetOffice.OWC10Api.DSCEventInfo newDSCEventInfo = Factory.CreateKnownObjectFromComProxy<NetOffice.OWC10Api.DSCEventInfo>(EventClass, dSCEventInfo, NetOffice.OWC10Api.DSCEventInfo.LateBindingApiWrapperType);
+            object[] paramsArray = new object[1];
 			paramsArray[0] = newDSCEventInfo;
-			_eventBinding.RaiseCustomEvent("AfterInsert", ref paramsArray);
+			EventBinding.RaiseCustomEvent("AfterInsert", ref paramsArray);
 		}
 
 		public void AfterUpdate([In, MarshalAs(UnmanagedType.IDispatch)] object dSCEventInfo)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("AfterUpdate");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(dSCEventInfo);
-				return;
-			}
+            if (!Validate("AfterUpdate"))
+            {
+                Invoker.ReleaseParamsArray(dSCEventInfo);
+                return;
+            }
 
-			NetOffice.OWC10Api.DSCEventInfo newDSCEventInfo = Factory.CreateObjectFromComProxy(_eventClass, dSCEventInfo) as NetOffice.OWC10Api.DSCEventInfo;
-			object[] paramsArray = new object[1];
+            NetOffice.OWC10Api.DSCEventInfo newDSCEventInfo = Factory.CreateKnownObjectFromComProxy<NetOffice.OWC10Api.DSCEventInfo>(EventClass, dSCEventInfo, NetOffice.OWC10Api.DSCEventInfo.LateBindingApiWrapperType);
+            object[] paramsArray = new object[1];
 			paramsArray[0] = newDSCEventInfo;
-			_eventBinding.RaiseCustomEvent("AfterUpdate", ref paramsArray);
+			EventBinding.RaiseCustomEvent("AfterUpdate", ref paramsArray);
 		}
 
 		public void BeforeDelete([In, MarshalAs(UnmanagedType.IDispatch)] object dSCEventInfo)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("BeforeDelete");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(dSCEventInfo);
-				return;
-			}
+            if (!Validate("BeforeDelete"))
+            {
+                Invoker.ReleaseParamsArray(dSCEventInfo);
+                return;
+            }
 
-			NetOffice.OWC10Api.DSCEventInfo newDSCEventInfo = Factory.CreateObjectFromComProxy(_eventClass, dSCEventInfo) as NetOffice.OWC10Api.DSCEventInfo;
-			object[] paramsArray = new object[1];
+            NetOffice.OWC10Api.DSCEventInfo newDSCEventInfo = Factory.CreateKnownObjectFromComProxy<NetOffice.OWC10Api.DSCEventInfo>(EventClass, dSCEventInfo, NetOffice.OWC10Api.DSCEventInfo.LateBindingApiWrapperType);
+            object[] paramsArray = new object[1];
 			paramsArray[0] = newDSCEventInfo;
-			_eventBinding.RaiseCustomEvent("BeforeDelete", ref paramsArray);
+			EventBinding.RaiseCustomEvent("BeforeDelete", ref paramsArray);
 		}
 
 		public void BeforeInsert([In, MarshalAs(UnmanagedType.IDispatch)] object dSCEventInfo)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("BeforeInsert");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(dSCEventInfo);
-				return;
-			}
+            if (!Validate("BeforeInsert"))
+            {
+                Invoker.ReleaseParamsArray(dSCEventInfo);
+                return;
+            }
 
-			NetOffice.OWC10Api.DSCEventInfo newDSCEventInfo = Factory.CreateObjectFromComProxy(_eventClass, dSCEventInfo) as NetOffice.OWC10Api.DSCEventInfo;
-			object[] paramsArray = new object[1];
+            NetOffice.OWC10Api.DSCEventInfo newDSCEventInfo = Factory.CreateKnownObjectFromComProxy<NetOffice.OWC10Api.DSCEventInfo>(EventClass, dSCEventInfo, NetOffice.OWC10Api.DSCEventInfo.LateBindingApiWrapperType);
+            object[] paramsArray = new object[1];
 			paramsArray[0] = newDSCEventInfo;
-			_eventBinding.RaiseCustomEvent("BeforeInsert", ref paramsArray);
+			EventBinding.RaiseCustomEvent("BeforeInsert", ref paramsArray);
 		}
 
 		public void BeforeOverwrite([In, MarshalAs(UnmanagedType.IDispatch)] object dSCEventInfo)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("BeforeOverwrite");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(dSCEventInfo);
-				return;
-			}
+            if (!Validate("BeforeOverwrite"))
+            {
+                Invoker.ReleaseParamsArray(dSCEventInfo);
+                return;
+            }
 
-			NetOffice.OWC10Api.DSCEventInfo newDSCEventInfo = Factory.CreateObjectFromComProxy(_eventClass, dSCEventInfo) as NetOffice.OWC10Api.DSCEventInfo;
-			object[] paramsArray = new object[1];
+            NetOffice.OWC10Api.DSCEventInfo newDSCEventInfo = Factory.CreateKnownObjectFromComProxy<NetOffice.OWC10Api.DSCEventInfo>(EventClass, dSCEventInfo, NetOffice.OWC10Api.DSCEventInfo.LateBindingApiWrapperType);
+            object[] paramsArray = new object[1];
 			paramsArray[0] = newDSCEventInfo;
-			_eventBinding.RaiseCustomEvent("BeforeOverwrite", ref paramsArray);
+			EventBinding.RaiseCustomEvent("BeforeOverwrite", ref paramsArray);
 		}
 
 		public void BeforeUpdate([In, MarshalAs(UnmanagedType.IDispatch)] object dSCEventInfo)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("BeforeUpdate");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(dSCEventInfo);
-				return;
-			}
+            if (!Validate("BeforeUpdate"))
+            {
+                Invoker.ReleaseParamsArray(dSCEventInfo);
+                return;
+            }
 
-			NetOffice.OWC10Api.DSCEventInfo newDSCEventInfo = Factory.CreateObjectFromComProxy(_eventClass, dSCEventInfo) as NetOffice.OWC10Api.DSCEventInfo;
-			object[] paramsArray = new object[1];
+            NetOffice.OWC10Api.DSCEventInfo newDSCEventInfo = Factory.CreateKnownObjectFromComProxy<NetOffice.OWC10Api.DSCEventInfo>(EventClass, dSCEventInfo, NetOffice.OWC10Api.DSCEventInfo.LateBindingApiWrapperType);
+            object[] paramsArray = new object[1];
 			paramsArray[0] = newDSCEventInfo;
-			_eventBinding.RaiseCustomEvent("BeforeUpdate", ref paramsArray);
+			EventBinding.RaiseCustomEvent("BeforeUpdate", ref paramsArray);
 		}
 
 		public void Dirty([In, MarshalAs(UnmanagedType.IDispatch)] object dSCEventInfo)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("Dirty");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(dSCEventInfo);
-				return;
-			}
+            if (!Validate("Dirty"))
+            {
+                Invoker.ReleaseParamsArray(dSCEventInfo);
+                return;
+            }
 
-			NetOffice.OWC10Api.DSCEventInfo newDSCEventInfo = Factory.CreateObjectFromComProxy(_eventClass, dSCEventInfo) as NetOffice.OWC10Api.DSCEventInfo;
-			object[] paramsArray = new object[1];
+            NetOffice.OWC10Api.DSCEventInfo newDSCEventInfo = Factory.CreateKnownObjectFromComProxy<NetOffice.OWC10Api.DSCEventInfo>(EventClass, dSCEventInfo, NetOffice.OWC10Api.DSCEventInfo.LateBindingApiWrapperType);
+            object[] paramsArray = new object[1];
 			paramsArray[0] = newDSCEventInfo;
-			_eventBinding.RaiseCustomEvent("Dirty", ref paramsArray);
+			EventBinding.RaiseCustomEvent("Dirty", ref paramsArray);
 		}
 
 		public void RecordExit([In, MarshalAs(UnmanagedType.IDispatch)] object dSCEventInfo)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("RecordExit");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(dSCEventInfo);
-				return;
-			}
+            if (!Validate("RecordExit"))
+            {
+                Invoker.ReleaseParamsArray(dSCEventInfo);
+                return;
+            }
 
-			NetOffice.OWC10Api.DSCEventInfo newDSCEventInfo = Factory.CreateObjectFromComProxy(_eventClass, dSCEventInfo) as NetOffice.OWC10Api.DSCEventInfo;
-			object[] paramsArray = new object[1];
+            NetOffice.OWC10Api.DSCEventInfo newDSCEventInfo = Factory.CreateKnownObjectFromComProxy<NetOffice.OWC10Api.DSCEventInfo>(EventClass, dSCEventInfo, NetOffice.OWC10Api.DSCEventInfo.LateBindingApiWrapperType);
+            object[] paramsArray = new object[1];
 			paramsArray[0] = newDSCEventInfo;
-			_eventBinding.RaiseCustomEvent("RecordExit", ref paramsArray);
+			EventBinding.RaiseCustomEvent("RecordExit", ref paramsArray);
 		}
 
 		public void Undo([In, MarshalAs(UnmanagedType.IDispatch)] object dSCEventInfo)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("Undo");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(dSCEventInfo);
-				return;
-			}
+            if (!Validate("Undo"))
+            {
+                Invoker.ReleaseParamsArray(dSCEventInfo);
+                return;
+            }
 
-			NetOffice.OWC10Api.DSCEventInfo newDSCEventInfo = Factory.CreateObjectFromComProxy(_eventClass, dSCEventInfo) as NetOffice.OWC10Api.DSCEventInfo;
-			object[] paramsArray = new object[1];
+            NetOffice.OWC10Api.DSCEventInfo newDSCEventInfo = Factory.CreateKnownObjectFromComProxy<NetOffice.OWC10Api.DSCEventInfo>(EventClass, dSCEventInfo, NetOffice.OWC10Api.DSCEventInfo.LateBindingApiWrapperType);
+            object[] paramsArray = new object[1];
 			paramsArray[0] = newDSCEventInfo;
-			_eventBinding.RaiseCustomEvent("Undo", ref paramsArray);
+			EventBinding.RaiseCustomEvent("Undo", ref paramsArray);
 		}
 
 		public void Focus([In, MarshalAs(UnmanagedType.IDispatch)] object dSCEventInfo)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("Focus");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(dSCEventInfo);
-				return;
-			}
+            if (!Validate("Focus"))
+            {
+                Invoker.ReleaseParamsArray(dSCEventInfo);
+                return;
+            }
 
-			NetOffice.OWC10Api.DSCEventInfo newDSCEventInfo = Factory.CreateObjectFromComProxy(_eventClass, dSCEventInfo) as NetOffice.OWC10Api.DSCEventInfo;
-			object[] paramsArray = new object[1];
+            NetOffice.OWC10Api.DSCEventInfo newDSCEventInfo = Factory.CreateKnownObjectFromComProxy<NetOffice.OWC10Api.DSCEventInfo>(EventClass, dSCEventInfo, NetOffice.OWC10Api.DSCEventInfo.LateBindingApiWrapperType);
+            object[] paramsArray = new object[1];
 			paramsArray[0] = newDSCEventInfo;
-			_eventBinding.RaiseCustomEvent("Focus", ref paramsArray);
+			EventBinding.RaiseCustomEvent("Focus", ref paramsArray);
 		}
 
 		#endregion

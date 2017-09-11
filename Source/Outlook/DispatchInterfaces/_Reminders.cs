@@ -12,7 +12,7 @@ namespace NetOffice.OutlookApi
 	/// SupportByVersion Outlook, 10,11,12,14,15,16
 	/// </summary>
 	[SupportByVersion("Outlook", 10,11,12,14,15,16)]
-	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Method), HasIndexProperty(IndexInvoke.Method, "Item")]
+	[EntityType(EntityType.IsDispatchInterface), BaseType, Enumerator(Enumerator.Reference, EnumeratorInvoke.Method), HasIndexProperty(IndexInvoke.Method, "Item")]
 	public class _Reminders : COMObject, IEnumerable<NetOffice.OutlookApi._Reminder>
 	{
 		#pragma warning disable

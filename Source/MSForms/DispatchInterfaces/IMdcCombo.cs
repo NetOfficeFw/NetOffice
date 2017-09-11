@@ -240,7 +240,7 @@ namespace NetOffice.MSFormsApi
 	/// SupportByVersion MSForms, 2
 	/// </summary>
 	[SupportByVersion("MSForms", 2)]
-	[EntityType(EntityType.IsDispatchInterface)]
+	[EntityType(EntityType.IsDispatchInterface), BaseType]
  	public class IMdcCombo : IMdcCombo_
 	{
 		#pragma warning disable
@@ -1035,15 +1035,14 @@ namespace NetOffice.MSFormsApi
 		/// SupportByVersion MSForms 2
 		/// Get/Set
 		/// </summary>
-		[SupportByVersion("MSForms", 2)]
+		[SupportByVersion("MSForms", 2), NativeResult]
 		public stdole.Picture MouseIcon
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "MouseIcon", paramsArray);
-				stdole.Picture newObject = Factory.CreateObjectFromComProxy(this,returnItem) as stdole.Picture;
-				return newObject;
+                return returnItem as stdole.Picture;
 			}
 			set
 			{

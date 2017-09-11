@@ -12,8 +12,8 @@ namespace NetOffice.VisioApi
 	/// SupportByVersion Visio, 15, 16
 	/// </summary>
 	[SupportByVersion("Visio", 15, 16)]
-	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "Item")]
-	public class IVComments : COMObject , IEnumerable<NetOffice.VisioApi.IVComment>
+	[EntityType(EntityType.IsDispatchInterface), BaseType, Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "Item")]
+	public class IVComments : COMObject, IEnumerable<NetOffice.VisioApi.IVComment>
 	{
 		#pragma warning disable
 
@@ -216,29 +216,29 @@ namespace NetOffice.VisioApi
 			 Factory.ExecuteMethod(this, "DeleteAll");
 		}
 
-		#endregion
+        #endregion
 
-       #region IEnumerable<NetOffice.VisioApi.IVComment> Member
-        
+        #region IEnumerable<NetOffice.VisioApi.IVComment> Member
+
         /// <summary>
-		/// SupportByVersion Visio, 15, 16
-		/// </summary>
-		[SupportByVersion("Visio", 15, 16)]
-       public IEnumerator<NetOffice.VisioApi.IVComment> GetEnumerator()  
-       {
-           NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
-           foreach (NetOffice.VisioApi.IVComment item in innerEnumerator)
-               yield return item;
-       }
+        /// SupportByVersion Visio, 15, 16
+        /// </summary>
+        [SupportByVersion("Visio", 15, 16)]
+        public IEnumerator<NetOffice.VisioApi.IVComment> GetEnumerator()
+        {
+            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
+            foreach (NetOffice.VisioApi.IVComment item in innerEnumerator)
+                yield return item;
+        }
 
-       #endregion
-          
-		#region IEnumerable Members
-       
-		/// <summary>
-		/// SupportByVersion Visio, 15, 16
-		/// </summary>
-		[SupportByVersion("Visio", 15, 16)]
+        #endregion
+
+        #region IEnumerable Members
+
+        /// <summary>
+        /// SupportByVersion Visio, 15, 16
+        /// </summary>
+        [SupportByVersion("Visio", 15, 16)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
 			return NetOffice.Utils.GetProxyEnumeratorAsProperty(this);

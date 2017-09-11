@@ -10,7 +10,7 @@ namespace NetOffice.MSHTMLApi
 	/// SupportByVersion MSHTML, 4
 	/// </summary>
 	[SupportByVersion("MSHTML", 4)]
-	[EntityType(EntityType.IsDispatchInterface)]
+	[EntityType(EntityType.IsDispatchInterface), BaseType]
  	public class IHTMLElementCollection : DispHTMLElementCollection
 	{
 		#pragma warning disable
@@ -106,93 +106,10 @@ namespace NetOffice.MSHTMLApi
 		#endregion
 		
 		#region Properties
-
-		/// <summary>
-		/// SupportByVersion MSHTML 4
-		/// Get/Set
-		/// </summary>
-		[SupportByVersion("MSHTML", 4)]
-		public Int32 length
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "length");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "length", value);
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSHTML 4
-		/// Get
-		/// Unknown COM Proxy
-		/// </summary>
-		[SupportByVersion("MSHTML", 4), ProxyResult]
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public object _newEnum
-		{
-			get
-			{
-				return Factory.ExecuteReferencePropertyGet(this, "_newEnum");
-			}
-		}
-
+        
 		#endregion
 
 		#region Methods
-
-		/// <summary>
-		/// SupportByVersion MSHTML 4
-		/// </summary>
-		[SupportByVersion("MSHTML", 4)]
-		public string toString()
-		{
-			return Factory.ExecuteStringMethodGet(this, "toString");
-		}
-
-		/// <summary>
-		/// SupportByVersion MSHTML 4
-		/// </summary>
-		/// <param name="name">optional object name</param>
-		/// <param name="index">optional object index</param>
-		[SupportByVersion("MSHTML", 4)]
-		public object item(object name, object index)
-		{
-			return Factory.ExecuteVariantMethodGet(this, "item", name, index);
-		}
-
-		/// <summary>
-		/// SupportByVersion MSHTML 4
-		/// </summary>
-		[CustomMethod]
-		[SupportByVersion("MSHTML", 4)]
-		public object item()
-		{
-			return Factory.ExecuteVariantMethodGet(this, "item");
-		}
-
-		/// <summary>
-		/// SupportByVersion MSHTML 4
-		/// </summary>
-		/// <param name="name">optional object name</param>
-		[CustomMethod]
-		[SupportByVersion("MSHTML", 4)]
-		public object item(object name)
-		{
-			return Factory.ExecuteVariantMethodGet(this, "item", name);
-		}
-
-		/// <summary>
-		/// SupportByVersion MSHTML 4
-		/// </summary>
-		/// <param name="tagName">object tagName</param>
-		[SupportByVersion("MSHTML", 4)]
-		public object tags(object tagName)
-		{
-			return Factory.ExecuteVariantMethodGet(this, "tags", tagName);
-		}
 
 		#endregion
 

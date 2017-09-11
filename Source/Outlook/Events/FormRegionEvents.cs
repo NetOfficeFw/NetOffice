@@ -39,67 +39,40 @@ namespace NetOffice.OutlookApi.Events
 		
 		#endregion
 	
-		#region Fields
-
-		private IEventBinding	_eventBinding;
-        private ICOMObject _eventClass;
-        
-		#endregion
-		
-		#region Construction
+		#region Ctor
 
 		public FormRegionEvents_SinkHelper(ICOMObject eventClass, IConnectionPoint connectPoint): base(eventClass)
 		{
-			_eventClass = eventClass;
-			_eventBinding = (IEventBinding)eventClass;
 			SetupEventBinding(connectPoint);
 		}
 		
 		#endregion
 		
-		#region Properties
-
-        internal Core Factory
-        {
-            get
-            {
-                if (null != _eventClass)
-                    return _eventClass.Factory;
-                else
-                    return Core.Default;
-            }
-        }
-
-        #endregion
-
-		#region FormRegionEvents Members
+		#region FormRegionEvents
 		
 		public void Expanded([In] object expand)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("Expanded");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(expand);
-				return;
-			}
+        {
+            if (!Validate("Expanded"))
+            {
+                Invoker.ReleaseParamsArray(expand);
+                return;
+            }
 
 			bool newExpand = Convert.ToBoolean(expand);
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newExpand;
-			_eventBinding.RaiseCustomEvent("Expanded", ref paramsArray);
+			EventBinding.RaiseCustomEvent("Expanded", ref paramsArray);
 		}
 
 		public void Close()
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("Close");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray();
-				return;
-			}
+            if (!Validate("Close"))
+            {
+                return;
+            }
 
-			object[] paramsArray = new object[0];
-			_eventBinding.RaiseCustomEvent("Close", ref paramsArray);
+            object[] paramsArray = new object[0];
+			EventBinding.RaiseCustomEvent("Close", ref paramsArray);
 		}
 
 		#endregion

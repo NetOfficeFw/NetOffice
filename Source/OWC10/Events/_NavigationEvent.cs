@@ -35,54 +35,29 @@ namespace NetOffice.OWC10Api.Events
 		
 		#endregion
 	
-		#region Fields
-
-		private IEventBinding	_eventBinding;
-        private ICOMObject _eventClass;
-        
-		#endregion
-		
-		#region Construction
+		#region Ctor
 
 		public _NavigationEvent_SinkHelper(ICOMObject eventClass, IConnectionPoint connectPoint): base(eventClass)
 		{
-			_eventClass = eventClass;
-			_eventBinding = (IEventBinding)eventClass;
 			SetupEventBinding(connectPoint);
 		}
 		
 		#endregion
 		
-		#region Properties
-
-        internal Core Factory
-        {
-            get
-            {
-                if (null != _eventClass)
-                    return _eventClass.Factory;
-                else
-                    return Core.Default;
-            }
-        }
-
-        #endregion
-
-		#region _NavigationEvent Members
+		#region _NavigationEvent
 		
 		public void ButtonClick([In] object navButton)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("ButtonClick");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(navButton);
-				return;
-			}
+            if (!Validate("ButtonClick"))
+            {
+                Invoker.ReleaseParamsArray(navButton);
+                return;
+            }
 
 			NetOffice.OWC10Api.Enums.NavButtonEnum newNavButton = (NetOffice.OWC10Api.Enums.NavButtonEnum)navButton;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newNavButton;
-			_eventBinding.RaiseCustomEvent("ButtonClick", ref paramsArray);
+			EventBinding.RaiseCustomEvent("ButtonClick", ref paramsArray);
 		}
 
 		#endregion

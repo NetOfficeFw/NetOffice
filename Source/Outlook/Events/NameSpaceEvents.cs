@@ -39,69 +39,42 @@ namespace NetOffice.OutlookApi.Events
 		
 		#endregion
 	
-		#region Fields
-
-		private IEventBinding	_eventBinding;
-        private ICOMObject _eventClass;
-        
-		#endregion
-		
-		#region Construction
+		#region Ctor
 
 		public NameSpaceEvents_SinkHelper(ICOMObject eventClass, IConnectionPoint connectPoint): base(eventClass)
 		{
-			_eventClass = eventClass;
-			_eventBinding = (IEventBinding)eventClass;
 			SetupEventBinding(connectPoint);
 		}
 		
 		#endregion
-		
-		#region Properties
 
-        internal Core Factory
-        {
-            get
-            {
-                if (null != _eventClass)
-                    return _eventClass.Factory;
-                else
-                    return Core.Default;
-            }
-        }
-
-        #endregion
-
-		#region NameSpaceEvents Members
+		#region NameSpaceEvents
 		
 		public void OptionsPagesAdd([In, MarshalAs(UnmanagedType.IDispatch)] object pages, [In, MarshalAs(UnmanagedType.IDispatch)] object folder)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("OptionsPagesAdd");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(pages, folder);
-				return;
-			}
+            if (!Validate("OptionsPagesAdd"))
+            {
+                Invoker.ReleaseParamsArray(pages, folder);
+                return;
+            }
 
-			NetOffice.OutlookApi.PropertyPages newPages = Factory.CreateObjectFromComProxy(_eventClass, pages) as NetOffice.OutlookApi.PropertyPages;
-			NetOffice.OutlookApi.MAPIFolder newFolder = Factory.CreateObjectFromComProxy(_eventClass, folder) as NetOffice.OutlookApi.MAPIFolder;
+			NetOffice.OutlookApi.PropertyPages newPages = Factory.CreateKnownObjectFromComProxy<NetOffice.OutlookApi.PropertyPages>(EventClass, pages, NetOffice.OutlookApi.PropertyPages.LateBindingApiWrapperType);
+			NetOffice.OutlookApi.MAPIFolder newFolder = Factory.CreateKnownObjectFromComProxy<NetOffice.OutlookApi.MAPIFolder>(EventClass, folder, NetOffice.OutlookApi.MAPIFolder.LateBindingApiWrapperType);
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newPages;
 			paramsArray[1] = newFolder;
-			_eventBinding.RaiseCustomEvent("OptionsPagesAdd", ref paramsArray);
+			EventBinding.RaiseCustomEvent("OptionsPagesAdd", ref paramsArray);
 		}
 
 		public void AutoDiscoverComplete()
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("AutoDiscoverComplete");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray();
-				return;
-			}
+        {
+            if (!Validate("AutoDiscoverComplete"))
+            {
+                return;
+            }
 
 			object[] paramsArray = new object[0];
-			_eventBinding.RaiseCustomEvent("AutoDiscoverComplete", ref paramsArray);
+			EventBinding.RaiseCustomEvent("AutoDiscoverComplete", ref paramsArray);
 		}
 
 		#endregion

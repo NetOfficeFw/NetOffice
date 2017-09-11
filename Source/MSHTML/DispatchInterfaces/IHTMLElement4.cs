@@ -10,7 +10,7 @@ namespace NetOffice.MSHTMLApi
 	/// SupportByVersion MSHTML, 4
 	/// </summary>
 	[SupportByVersion("MSHTML", 4)]
-	[EntityType(EntityType.IsDispatchInterface)]
+	[EntityType(EntityType.IsDispatchInterface), BaseType]
  	public class IHTMLElement4 : IHTMLElement3
 	{
 		#pragma warning disable
@@ -106,121 +106,11 @@ namespace NetOffice.MSHTMLApi
 		#endregion
 		
 		#region Properties
-
-		/// <summary>
-		/// SupportByVersion MSHTML 4
-		/// Get/Set
-		/// </summary>
-		[SupportByVersion("MSHTML", 4)]
-		public object onmousewheel
-		{
-			get
-			{
-				return Factory.ExecuteVariantPropertyGet(this, "onmousewheel");
-			}
-			set
-			{
-				Factory.ExecuteVariantPropertySet(this, "onmousewheel", value);
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSHTML 4
-		/// Get/Set
-		/// </summary>
-		[SupportByVersion("MSHTML", 4)]
-		public object onbeforeactivate
-		{
-			get
-			{
-				return Factory.ExecuteVariantPropertyGet(this, "onbeforeactivate");
-			}
-			set
-			{
-				Factory.ExecuteVariantPropertySet(this, "onbeforeactivate", value);
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSHTML 4
-		/// Get/Set
-		/// </summary>
-		[SupportByVersion("MSHTML", 4)]
-		public object onfocusin
-		{
-			get
-			{
-				return Factory.ExecuteVariantPropertyGet(this, "onfocusin");
-			}
-			set
-			{
-				Factory.ExecuteVariantPropertySet(this, "onfocusin", value);
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSHTML 4
-		/// Get/Set
-		/// </summary>
-		[SupportByVersion("MSHTML", 4)]
-		public object onfocusout
-		{
-			get
-			{
-				return Factory.ExecuteVariantPropertyGet(this, "onfocusout");
-			}
-			set
-			{
-				Factory.ExecuteVariantPropertySet(this, "onfocusout", value);
-			}
-		}
-
+        
 		#endregion
 
 		#region Methods
-
-		/// <summary>
-		/// SupportByVersion MSHTML 4
-		/// </summary>
-		[SupportByVersion("MSHTML", 4)]
-		public void normalize()
-		{
-			 Factory.ExecuteMethod(this, "normalize");
-		}
-
-		/// <summary>
-		/// SupportByVersion MSHTML 4
-		/// </summary>
-		/// <param name="bstrName">string bstrName</param>
-		[SupportByVersion("MSHTML", 4)]
-		[BaseResult]
-		public NetOffice.MSHTMLApi.IHTMLDOMAttribute getAttributeNode(string bstrName)
-		{
-			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.MSHTMLApi.IHTMLDOMAttribute>(this, "getAttributeNode", bstrName);
-		}
-
-		/// <summary>
-		/// SupportByVersion MSHTML 4
-		/// </summary>
-		/// <param name="pattr">NetOffice.MSHTMLApi.IHTMLDOMAttribute pattr</param>
-		[SupportByVersion("MSHTML", 4)]
-		[BaseResult]
-		public NetOffice.MSHTMLApi.IHTMLDOMAttribute setAttributeNode(NetOffice.MSHTMLApi.IHTMLDOMAttribute pattr)
-		{
-			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.MSHTMLApi.IHTMLDOMAttribute>(this, "setAttributeNode", pattr);
-		}
-
-		/// <summary>
-		/// SupportByVersion MSHTML 4
-		/// </summary>
-		/// <param name="pattr">NetOffice.MSHTMLApi.IHTMLDOMAttribute pattr</param>
-		[SupportByVersion("MSHTML", 4)]
-		[BaseResult]
-		public NetOffice.MSHTMLApi.IHTMLDOMAttribute removeAttributeNode(NetOffice.MSHTMLApi.IHTMLDOMAttribute pattr)
-		{
-			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.MSHTMLApi.IHTMLDOMAttribute>(this, "removeAttributeNode", pattr);
-		}
-
+        
 		#endregion
 
 		#pragma warning restore

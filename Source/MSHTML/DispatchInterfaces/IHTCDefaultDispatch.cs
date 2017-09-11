@@ -106,62 +106,10 @@ namespace NetOffice.MSHTMLApi
 		#endregion
 		
 		#region Properties
-
-		/// <summary>
-		/// SupportByVersion MSHTML 4
-		/// Get
-		/// </summary>
-		[SupportByVersion("MSHTML", 4)]
-		[BaseResult]
-		public NetOffice.MSHTMLApi.IHTMLElement element
-		{
-			get
-			{
-				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.MSHTMLApi.IHTMLElement>(this, "element");
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSHTML 4
-		/// Get
-		/// Unknown COM Proxy
-		/// </summary>
-		[SupportByVersion("MSHTML", 4), ProxyResult]
-		public object defaults
-		{
-			get
-			{
-				return Factory.ExecuteReferencePropertyGet(this, "defaults");
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSHTML 4
-		/// Get
-		/// Unknown COM Proxy
-		/// </summary>
-		[SupportByVersion("MSHTML", 4), ProxyResult]
-		public object document
-		{
-			get
-			{
-				return Factory.ExecuteReferencePropertyGet(this, "document");
-			}
-		}
-
+        
 		#endregion
 
 		#region Methods
-
-		/// <summary>
-		/// SupportByVersion MSHTML 4
-		/// </summary>
-		[SupportByVersion("MSHTML", 4)]
-		[BaseResult]
-		public NetOffice.MSHTMLApi.IHTMLEventObj CreateEventObject()
-		{
-			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.MSHTMLApi.IHTMLEventObj>(this, "CreateEventObject");
-		}
 
 		#endregion
 

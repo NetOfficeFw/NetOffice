@@ -42,85 +42,58 @@ namespace NetOffice.OfficeApi.Events
 		public static readonly string Id = "000CDB0B-0000-0000-C000-000000000046";
 		
 		#endregion
-	
-		#region Fields
-
-		private IEventBinding	_eventBinding;
-        private ICOMObject _eventClass;
-        
-		#endregion
 		
-		#region Construction
+		#region Ctor
 
 		public _CustomXMLPartsEvents_SinkHelper(ICOMObject eventClass, IConnectionPoint connectPoint): base(eventClass)
 		{
-			_eventClass = eventClass;
-			_eventBinding = (IEventBinding)eventClass;
 			SetupEventBinding(connectPoint);
 		}
 		
 		#endregion
 		
-		#region Properties
-
-        internal Core Factory
-        {
-            get
-            {
-                if (null != _eventClass)
-                    return _eventClass.Factory;
-                else
-                    return Core.Default;
-            }
-        }
-
-        #endregion
-
-		#region _CustomXMLPartsEvents Members
+		#region _CustomXMLPartsEvents
 		
 		public void PartAfterAdd([In, MarshalAs(UnmanagedType.IDispatch)] object newPart)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("PartAfterAdd");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(newPart);
-				return;
-			}
-
-			NetOffice.OfficeApi.CustomXMLPart newNewPart = Factory.CreateObjectFromComProxy(_eventClass, newPart) as NetOffice.OfficeApi.CustomXMLPart;
+        {
+            if (!Validate("PartAfterAdd"))
+            {
+                Invoker.ReleaseParamsArray(newPart);
+                return;
+            }
+            
+			NetOffice.OfficeApi.CustomXMLPart newNewPart = Factory.CreateKnownObjectFromComProxy<NetOffice.OfficeApi.CustomXMLPart>(EventClass, newPart, NetOffice.OfficeApi.CustomXMLPart.LateBindingApiWrapperType);
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newNewPart;
-			_eventBinding.RaiseCustomEvent("PartAfterAdd", ref paramsArray);
+			EventBinding.RaiseCustomEvent("PartAfterAdd", ref paramsArray);
 		}
 
 		public void PartBeforeDelete([In, MarshalAs(UnmanagedType.IDispatch)] object oldPart)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("PartBeforeDelete");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(oldPart);
-				return;
-			}
+        {
+            if (!Validate("PartBeforeDelete"))
+            {
+                Invoker.ReleaseParamsArray(oldPart);
+                return;
+            }
 
-			NetOffice.OfficeApi.CustomXMLPart newOldPart = Factory.CreateObjectFromComProxy(_eventClass, oldPart) as NetOffice.OfficeApi.CustomXMLPart;
-			object[] paramsArray = new object[1];
+            NetOffice.OfficeApi.CustomXMLPart newOldPart = Factory.CreateKnownObjectFromComProxy<NetOffice.OfficeApi.CustomXMLPart>(EventClass, oldPart, NetOffice.OfficeApi.CustomXMLPart.LateBindingApiWrapperType);
+            object[] paramsArray = new object[1];
 			paramsArray[0] = newOldPart;
-			_eventBinding.RaiseCustomEvent("PartBeforeDelete", ref paramsArray);
+			EventBinding.RaiseCustomEvent("PartBeforeDelete", ref paramsArray);
 		}
 
 		public void PartAfterLoad([In, MarshalAs(UnmanagedType.IDispatch)] object part)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("PartAfterLoad");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(part);
-				return;
-			}
+            if (!Validate("PartAfterLoad"))
+            {
+                Invoker.ReleaseParamsArray(part);
+                return;
+            }
 
-			NetOffice.OfficeApi.CustomXMLPart newPart = Factory.CreateObjectFromComProxy(_eventClass, part) as NetOffice.OfficeApi.CustomXMLPart;
-			object[] paramsArray = new object[1];
+            NetOffice.OfficeApi.CustomXMLPart newPart = Factory.CreateKnownObjectFromComProxy<NetOffice.OfficeApi.CustomXMLPart>(EventClass, part, NetOffice.OfficeApi.CustomXMLPart.LateBindingApiWrapperType);
+            object[] paramsArray = new object[1];
 			paramsArray[0] = newPart;
-			_eventBinding.RaiseCustomEvent("PartAfterLoad", ref paramsArray);
+			EventBinding.RaiseCustomEvent("PartAfterLoad", ref paramsArray);
 		}
 
 		#endregion

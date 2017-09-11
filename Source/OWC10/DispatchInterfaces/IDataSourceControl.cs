@@ -114,7 +114,7 @@ namespace NetOffice.OWC10Api
 	/// SupportByVersion OWC10, 1
 	/// </summary>
 	[SupportByVersion("OWC10", 1)]
-	[EntityType(EntityType.IsDispatchInterface)]
+	[EntityType(EntityType.IsDispatchInterface), BaseType]
  	public class IDataSourceControl : IDataSourceControl_
 	{
 		#pragma warning disable

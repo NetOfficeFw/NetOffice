@@ -13,7 +13,7 @@ namespace NetOffice.ADODBApi
 	/// </summary>
 	[SupportByVersion("ADODB", 2.1,2.5)]
 	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Method), HasIndexProperty(IndexInvoke.Property, "Item")]
-	public class Fields : Fields20 , IEnumerable<NetOffice.ADODBApi.Field>
+	public class Fields : Fields20, IEnumerable<NetOffice.ADODBApi.Field>
 	{
 		#pragma warning disable
 
@@ -250,29 +250,29 @@ namespace NetOffice.ADODBApi
 			 Factory.ExecuteMethod(this, "CancelUpdate");
 		}
 
-		#endregion
+        #endregion
 
-       #region IEnumerable<NetOffice.ADODBApi.Field> Member
-        
+        #region IEnumerable<NetOffice.ADODBApi.Field> Member
+
         /// <summary>
-		/// SupportByVersion ADODB, 2.1,2.5
-		/// </summary>
-		[SupportByVersion("ADODB", 2.1,2.5)]
-       public IEnumerator<NetOffice.ADODBApi.Field> GetEnumerator()  
-       {
-           NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
-           foreach (NetOffice.ADODBApi.Field item in innerEnumerator)
-               yield return item;
-       }
+        /// SupportByVersion ADODB, 2.1,2.5
+        /// </summary>
+        [SupportByVersion("ADODB", 2.1, 2.5)]
+        public IEnumerator<NetOffice.ADODBApi.Field> GetEnumerator()
+        {
+            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
+            foreach (NetOffice.ADODBApi.Field item in innerEnumerator)
+                yield return item;
+        }
 
-       #endregion
-          
-		#region IEnumerable Members
-       
-		/// <summary>
-		/// SupportByVersion ADODB, 2.1,2.5
-		/// </summary>
-		[SupportByVersion("ADODB", 2.1,2.5)]
+        #endregion
+
+        #region IEnumerable Members
+
+        /// <summary>
+        /// SupportByVersion ADODB, 2.1,2.5
+        /// </summary>
+        [SupportByVersion("ADODB", 2.1,2.5)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
 			return NetOffice.Utils.GetProxyEnumeratorAsMethod(this);

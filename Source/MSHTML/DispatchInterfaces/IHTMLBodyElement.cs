@@ -10,7 +10,7 @@ namespace NetOffice.MSHTMLApi
 	/// SupportByVersion MSHTML, 4
 	/// </summary>
 	[SupportByVersion("MSHTML", 4)]
-	[EntityType(EntityType.IsDispatchInterface)]
+	[EntityType(EntityType.IsDispatchInterface), BaseType]
  	public class IHTMLBodyElement : IHTMLTextContainer
 	{
 		#pragma warning disable
@@ -206,23 +206,6 @@ namespace NetOffice.MSHTMLApi
 			set
 			{
 				Factory.ExecuteVariantPropertySet(this, "bottomMargin", value);
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSHTML 4
-		/// Get/Set
-		/// </summary>
-		[SupportByVersion("MSHTML", 4)]
-		public bool noWrap
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "noWrap");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "noWrap", value);
 			}
 		}
 

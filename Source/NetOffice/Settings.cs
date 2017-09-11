@@ -31,6 +31,9 @@ namespace NetOffice
         private bool _enableEventDebugOutput = false;
         private bool _enableSafeMode = false;
         private bool _enableDynamicObjects = true;
+        private bool _enableDynamicEventArguments;
+        private bool _enableKnownReferenceInspection;
+        private bool _enableAutoDisposeEventArguments;
 
         private bool _enableProxyManagement = true;
         private CacheOptions _cacheOptions = CacheOptions.KeepExistingCacheAlive;
@@ -59,7 +62,7 @@ namespace NetOffice
         #endregion
 
         #region Properties
-         
+
         /// <summary>
         /// Shared Default Settings
         /// </summary>
@@ -120,6 +123,54 @@ namespace NetOffice
             }
         }
         
+        /// <summary>
+        /// Analyze also known reference proxies to see proxy is may inherited type, false by default
+        /// </summary>
+        [Category("Settings"), Description("Analyze also known reference proxies to see proxy is may inherited type, false by default."), DefaultValue(true)]
+        public bool EnableKnownReferenceInspection
+        {
+            get
+            {
+                return _enableKnownReferenceInspection;
+            }
+            set
+            {
+                _enableKnownReferenceInspection = value;
+            }
+        }
+
+        /// <summary>
+        /// Dispose event arguments automatically, false by default
+        /// </summary>
+        [Category("Settings"), Description("Dispose event arguments automatically, false by default."), DefaultValue(true)]
+        public bool EnableAutoDisposeEventArguments
+        {
+            get
+            {
+                return _enableAutoDisposeEventArguments;
+            }
+            set
+            {
+                _enableAutoDisposeEventArguments = value;
+            }
+        }
+
+        /// <summary>
+        /// Wrap event arguments into COMDynamicObject if proxy has no wrapper class in current app domain. false by default
+        /// </summary>
+        [Category("Settings"), Description("Convert unknown proxies in dynamic objects incl. proxy management."), DefaultValue(false)]
+        public bool EnableDynamicEventArguments
+        {
+            get
+            {
+                return _enableDynamicEventArguments;
+            }
+            set
+            {
+                _enableDynamicEventArguments = value;
+            }
+        }
+
         /// <summary>
         /// NetOffice wrap all thrown exceptions from Office applications in a COMException.
         /// This option can be used to set the top level exception message or copy the innerst message to top.

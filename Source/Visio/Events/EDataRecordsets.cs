@@ -43,84 +43,57 @@ namespace NetOffice.VisioApi.Events
 		
 		#endregion
 	
-		#region Fields
-
-		private IEventBinding	_eventBinding;
-        private ICOMObject _eventClass;
-        
-		#endregion
-		
-		#region Construction
+		#region Ctor
 
 		public EDataRecordsets_SinkHelper(ICOMObject eventClass, IConnectionPoint connectPoint): base(eventClass)
 		{
-			_eventClass = eventClass;
-			_eventBinding = (IEventBinding)eventClass;
 			SetupEventBinding(connectPoint);
 		}
 		
-		#endregion
-		
-		#region Properties
+		#endregion		
 
-        internal Core Factory
-        {
-            get
-            {
-                if (null != _eventClass)
-                    return _eventClass.Factory;
-                else
-                    return Core.Default;
-            }
-        }
-
-        #endregion
-
-		#region EDataRecordsets Members
+		#region EDataRecordsets
 		
 		public void DataRecordsetAdded([In, MarshalAs(UnmanagedType.IDispatch)] object dataRecordset)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("DataRecordsetAdded");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(dataRecordset);
-				return;
-			}
+            if (!Validate("DataRecordsetAdded"))
+            {
+                Invoker.ReleaseParamsArray(dataRecordset);
+                return;
+            }
 
-			NetOffice.VisioApi.IVDataRecordset newDataRecordset = Factory.CreateObjectFromComProxy(_eventClass, dataRecordset) as NetOffice.VisioApi.IVDataRecordset;
+			NetOffice.VisioApi.IVDataRecordset newDataRecordset = Factory.CreateKnownObjectFromComProxy<NetOffice.VisioApi.IVDataRecordset>(EventClass, dataRecordset, NetOffice.VisioApi.IVDataRecordset.LateBindingApiWrapperType);
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newDataRecordset;
-			_eventBinding.RaiseCustomEvent("DataRecordsetAdded", ref paramsArray);
+			EventBinding.RaiseCustomEvent("DataRecordsetAdded", ref paramsArray);
 		}
 
 		public void BeforeDataRecordsetDelete([In, MarshalAs(UnmanagedType.IDispatch)] object dataRecordset)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("BeforeDataRecordsetDelete");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(dataRecordset);
-				return;
-			}
+            if (!Validate("BeforeDataRecordsetDelete"))
+            {
+                Invoker.ReleaseParamsArray(dataRecordset);
+                return;
+            }
 
-			NetOffice.VisioApi.IVDataRecordset newDataRecordset = Factory.CreateObjectFromComProxy(_eventClass, dataRecordset) as NetOffice.VisioApi.IVDataRecordset;
+            NetOffice.VisioApi.IVDataRecordset newDataRecordset = Factory.CreateKnownObjectFromComProxy<NetOffice.VisioApi.IVDataRecordset>(EventClass, dataRecordset, NetOffice.VisioApi.IVDataRecordset.LateBindingApiWrapperType);
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newDataRecordset;
-			_eventBinding.RaiseCustomEvent("BeforeDataRecordsetDelete", ref paramsArray);
+			EventBinding.RaiseCustomEvent("BeforeDataRecordsetDelete", ref paramsArray);
 		}
 
 		public void DataRecordsetChanged([In, MarshalAs(UnmanagedType.IDispatch)] object dataRecordsetChanged)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("DataRecordsetChanged");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(dataRecordsetChanged);
-				return;
-			}
-
-			NetOffice.VisioApi.IVDataRecordsetChangedEvent newDataRecordsetChanged = Factory.CreateObjectFromComProxy(_eventClass, dataRecordsetChanged) as NetOffice.VisioApi.IVDataRecordsetChangedEvent;
-			object[] paramsArray = new object[1];
+            if (!Validate("DataRecordsetChanged"))
+            {
+                Invoker.ReleaseParamsArray(dataRecordsetChanged);
+                return;
+            }
+            
+            NetOffice.VisioApi.IVDataRecordsetChangedEvent newDataRecordsetChanged = Factory.CreateKnownObjectFromComProxy<NetOffice.VisioApi.IVDataRecordsetChangedEvent>(EventClass, dataRecordsetChanged, NetOffice.VisioApi.IVDataRecordsetChangedEvent.LateBindingApiWrapperType);
+            object[] paramsArray = new object[1];
 			paramsArray[0] = newDataRecordsetChanged;
-			_eventBinding.RaiseCustomEvent("DataRecordsetChanged", ref paramsArray);
+			EventBinding.RaiseCustomEvent("DataRecordsetChanged", ref paramsArray);
 		}
 
 		#endregion

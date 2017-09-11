@@ -32,60 +32,35 @@ namespace NetOffice.OfficeApi.Events
 		#region Static
 		
 		public static readonly string Id = "000C0351-0000-0000-C000-000000000046";
-		
-		#endregion
-	
-		#region Fields
 
-		private IEventBinding	_eventBinding;
-        private ICOMObject		_eventClass;
-        
-		#endregion
-		
-		#region Construction
+        #endregion
 
-		public _CommandBarButtonEvents_SinkHelper(ICOMObject eventClass, IConnectionPoint connectPoint): base(eventClass)
+        #region Ctor
+
+        public _CommandBarButtonEvents_SinkHelper(ICOMObject eventClass, IConnectionPoint connectPoint): base(eventClass)
 		{
-			_eventClass = eventClass;
-			_eventBinding = (IEventBinding)eventClass;
 			SetupEventBinding(connectPoint);
 		}
 		
 		#endregion
 		
-		#region Properties
-
-        internal Core Factory
-        {
-            get
-            {
-                if (null != _eventClass)
-                    return _eventClass.Factory;
-                else
-                    return Core.Default;
-            }
-        }
-
-        #endregion
-
-		#region _CommandBarButtonEvents Members
+		#region _CommandBarButtonEvents
 		
 		public void Click([In, MarshalAs(UnmanagedType.IDispatch)] object ctrl, [In] [Out] ref object cancelDefault)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("Click");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(ctrl, cancelDefault);
-				return;
-			}
+            if(!Validate("Click"))
+            {
+                Invoker.ReleaseParamsArray(ctrl, cancelDefault);
+                return;
+            }
 
-			NetOffice.OfficeApi.CommandBarButton newCtrl = Factory.CreateObjectFromComProxy(_eventClass, ctrl) as NetOffice.OfficeApi.CommandBarButton;
+            NetOffice.OfficeApi.CommandBarButton newCtrl = Factory.CreateKnownObjectFromComProxy<NetOffice.OfficeApi.CommandBarButton>(EventClass, ctrl, NetOffice.OfficeApi.CommandBarButton.LateBindingApiWrapperType);
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newCtrl;
 			paramsArray.SetValue(cancelDefault, 1);
-			_eventBinding.RaiseCustomEvent("Click", ref paramsArray);
+			EventBinding.RaiseCustomEvent("Click", ref paramsArray);
 
-			cancelDefault = (bool)paramsArray[1];
+            cancelDefault = ToBoolean(paramsArray[1]);
 		}
 
 		#endregion

@@ -42,89 +42,62 @@ namespace NetOffice.OutlookApi.Events
 		public static readonly string Id = "0006307B-0000-0000-C000-000000000046";
 		
 		#endregion
-	
-		#region Fields
 
-		private IEventBinding	_eventBinding;
-        private ICOMObject _eventClass;
-        
-		#endregion
-		
-		#region Construction
+		#region Ctor
 
 		public OutlookBarGroupsEvents_SinkHelper(ICOMObject eventClass, IConnectionPoint connectPoint): base(eventClass)
 		{
-			_eventClass = eventClass;
-			_eventBinding = (IEventBinding)eventClass;
 			SetupEventBinding(connectPoint);
 		}
 		
 		#endregion
-		
-		#region Properties
 
-        internal Core Factory
-        {
-            get
-            {
-                if (null != _eventClass)
-                    return _eventClass.Factory;
-                else
-                    return Core.Default;
-            }
-        }
-
-        #endregion
-
-		#region OutlookBarGroupsEvents Members
+		#region OutlookBarGroupsEvents
 		
 		public void GroupAdd([In, MarshalAs(UnmanagedType.IDispatch)] object newGroup)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("GroupAdd");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(newGroup);
-				return;
-			}
+            if (!Validate("GroupAdd"))
+            {
+                Invoker.ReleaseParamsArray(newGroup);
+                return;
+            }
 
-			NetOffice.OutlookApi.OutlookBarGroup newNewGroup = Factory.CreateObjectFromComProxy(_eventClass, newGroup) as NetOffice.OutlookApi.OutlookBarGroup;
+			NetOffice.OutlookApi.OutlookBarGroup newNewGroup = Factory.CreateKnownObjectFromComProxy<NetOffice.OutlookApi.OutlookBarGroup>(EventClass, newGroup, NetOffice.OutlookApi.OutlookBarGroup.LateBindingApiWrapperType);
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newNewGroup;
-			_eventBinding.RaiseCustomEvent("GroupAdd", ref paramsArray);
+			EventBinding.RaiseCustomEvent("GroupAdd", ref paramsArray);
 		}
 
 		public void BeforeGroupAdd([In] [Out] ref object cancel)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("BeforeGroupAdd");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(cancel);
-				return;
-			}
+            if (!Validate("BeforeGroupAdd"))
+            {
+                Invoker.ReleaseParamsArray(cancel);
+                return;
+            }
 
 			object[] paramsArray = new object[1];
 			paramsArray.SetValue(cancel, 0);
-			_eventBinding.RaiseCustomEvent("BeforeGroupAdd", ref paramsArray);
+			EventBinding.RaiseCustomEvent("BeforeGroupAdd", ref paramsArray);
 
-			cancel = (bool)paramsArray[0];
+			cancel = ToBoolean(paramsArray[0]);
 		}
 
 		public void BeforeGroupRemove([In, MarshalAs(UnmanagedType.IDispatch)] object group, [In] [Out] ref object cancel)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("BeforeGroupRemove");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(group, cancel);
-				return;
-			}
+        {
+            if (!Validate("BeforeGroupRemove"))
+            {
+                Invoker.ReleaseParamsArray(group, cancel);
+                return;
+            }
 
-			NetOffice.OutlookApi.OutlookBarGroup newGroup = Factory.CreateObjectFromComProxy(_eventClass, group) as NetOffice.OutlookApi.OutlookBarGroup;
+			NetOffice.OutlookApi.OutlookBarGroup newGroup = Factory.CreateKnownObjectFromComProxy<NetOffice.OutlookApi.OutlookBarGroup>(EventClass, group, NetOffice.OutlookApi.OutlookBarGroup.LateBindingApiWrapperType);
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newGroup;
 			paramsArray.SetValue(cancel, 1);
-			_eventBinding.RaiseCustomEvent("BeforeGroupRemove", ref paramsArray);
+			EventBinding.RaiseCustomEvent("BeforeGroupRemove", ref paramsArray);
 
-			cancel = (bool)paramsArray[1];
+			cancel = ToBoolean(paramsArray[1]);
 		}
 
 		#endregion

@@ -106,58 +106,7 @@ namespace NetOffice.MSHTMLApi
 		#endregion
 		
 		#region Properties
-
-		/// <summary>
-		/// SupportByVersion MSHTML 4
-		/// Get/Set
-		/// </summary>
-		[SupportByVersion("MSHTML", 4)]
-		public string shape
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "shape");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "shape", value);
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSHTML 4
-		/// Get/Set
-		/// </summary>
-		[SupportByVersion("MSHTML", 4)]
-		public string coords
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "coords");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "coords", value);
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSHTML 4
-		/// Get/Set
-		/// </summary>
-		[SupportByVersion("MSHTML", 4)]
-		public string href
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "href");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "href", value);
-			}
-		}
-
+        
 		#endregion
 
 		#region Methods

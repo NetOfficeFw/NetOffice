@@ -103,310 +103,260 @@ namespace NetOffice.OutlookApi.Events
 		
 		#endregion
 	
-		#region Fields
-
-		private IEventBinding	_eventBinding;
-        private ICOMObject _eventClass;
-        
-		#endregion
-		
-		#region Construction
+		#region Ctor
 
 		public ExplorerEvents_10_SinkHelper(ICOMObject eventClass, IConnectionPoint connectPoint): base(eventClass)
 		{
-			_eventClass = eventClass;
-			_eventBinding = (IEventBinding)eventClass;
 			SetupEventBinding(connectPoint);
 		}
 		
 		#endregion
-		
-		#region Properties
 
-        internal Core Factory
-        {
-            get
-            {
-                if (null != _eventClass)
-                    return _eventClass.Factory;
-                else
-                    return Core.Default;
-            }
-        }
-
-        #endregion
-
-		#region ExplorerEvents_10 Members
+		#region ExplorerEvents_10
 		
 		public void Activate()
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("Activate");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray();
-				return;
-			}
+            if (!Validate("Activate"))
+            {
+                return;
+            }
 
-			object[] paramsArray = new object[0];
-			_eventBinding.RaiseCustomEvent("Activate", ref paramsArray);
+            object[] paramsArray = new object[0];
+			EventBinding.RaiseCustomEvent("Activate", ref paramsArray);
 		}
 
 		public void FolderSwitch()
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("FolderSwitch");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray();
-				return;
-			}
+            if (!Validate("FolderSwitch"))
+            {
+                return;
+            }
 
-			object[] paramsArray = new object[0];
-			_eventBinding.RaiseCustomEvent("FolderSwitch", ref paramsArray);
+            object[] paramsArray = new object[0];
+			EventBinding.RaiseCustomEvent("FolderSwitch", ref paramsArray);
 		}
 
 		public void BeforeFolderSwitch([In, MarshalAs(UnmanagedType.IDispatch)] object newFolder, [In] [Out] ref object cancel)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("BeforeFolderSwitch");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(newFolder, cancel);
-				return;
-			}
+            if (!Validate("BeforeFolderSwitch"))
+            {
+                Invoker.ReleaseParamsArray(newFolder, cancel);
+                return;
+            }
 
-			object newNewFolder = Factory.CreateObjectFromComProxy(_eventClass, newFolder) as object;
+			object newNewFolder = Factory.CreateEventArgumentObjectFromComProxy(EventClass, newFolder) as object;
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newNewFolder;
 			paramsArray.SetValue(cancel, 1);
-			_eventBinding.RaiseCustomEvent("BeforeFolderSwitch", ref paramsArray);
+			EventBinding.RaiseCustomEvent("BeforeFolderSwitch", ref paramsArray);
 
 			cancel = (bool)paramsArray[1];
 		}
 
 		public void ViewSwitch()
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("ViewSwitch");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray();
-				return;
-			}
+            if (!Validate("ViewSwitch"))
+            {
+                return;
+            }
 
-			object[] paramsArray = new object[0];
-			_eventBinding.RaiseCustomEvent("ViewSwitch", ref paramsArray);
+            object[] paramsArray = new object[0];
+			EventBinding.RaiseCustomEvent("ViewSwitch", ref paramsArray);
 		}
 
 		public void BeforeViewSwitch([In] object newView, [In] [Out] ref object cancel)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("BeforeViewSwitch");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(newView, cancel);
-				return;
-			}
+        {
+            if (!Validate("BeforeViewSwitch"))
+            {
+                Invoker.ReleaseParamsArray(newView, cancel);
+                return;
+            }
 
 			object newNewView = (object)newView;
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newNewView;
 			paramsArray.SetValue(cancel, 1);
-			_eventBinding.RaiseCustomEvent("BeforeViewSwitch", ref paramsArray);
+			EventBinding.RaiseCustomEvent("BeforeViewSwitch", ref paramsArray);
 
-			cancel = (bool)paramsArray[1];
+			cancel = ToBoolean(paramsArray[1]);
 		}
 
 		public void Deactivate()
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("Deactivate");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray();
-				return;
-			}
-
-			object[] paramsArray = new object[0];
-			_eventBinding.RaiseCustomEvent("Deactivate", ref paramsArray);
-		}
-
-		public void SelectionChange()
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("SelectionChange");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray();
-				return;
-			}
-
-			object[] paramsArray = new object[0];
-			_eventBinding.RaiseCustomEvent("SelectionChange", ref paramsArray);
-		}
-
-		public void Close()
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("Close");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray();
-				return;
-			}
-
-			object[] paramsArray = new object[0];
-			_eventBinding.RaiseCustomEvent("Close", ref paramsArray);
-		}
-
-		public void BeforeMaximize([In] [Out] ref object cancel)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("BeforeMaximize");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(cancel);
-				return;
-			}
-
-			object[] paramsArray = new object[1];
-			paramsArray.SetValue(cancel, 0);
-			_eventBinding.RaiseCustomEvent("BeforeMaximize", ref paramsArray);
-
-			cancel = (bool)paramsArray[0];
-		}
-
-		public void BeforeMinimize([In] [Out] ref object cancel)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("BeforeMinimize");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(cancel);
-				return;
-			}
-
-			object[] paramsArray = new object[1];
-			paramsArray.SetValue(cancel, 0);
-			_eventBinding.RaiseCustomEvent("BeforeMinimize", ref paramsArray);
-
-			cancel = (bool)paramsArray[0];
-		}
-
-		public void BeforeMove([In] [Out] ref object cancel)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("BeforeMove");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(cancel);
-				return;
-			}
-
-			object[] paramsArray = new object[1];
-			paramsArray.SetValue(cancel, 0);
-			_eventBinding.RaiseCustomEvent("BeforeMove", ref paramsArray);
-
-			cancel = (bool)paramsArray[0];
-		}
-
-		public void BeforeSize([In] [Out] ref object cancel)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("BeforeSize");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(cancel);
-				return;
-			}
-
-			object[] paramsArray = new object[1];
-			paramsArray.SetValue(cancel, 0);
-			_eventBinding.RaiseCustomEvent("BeforeSize", ref paramsArray);
-
-			cancel = (bool)paramsArray[0];
-		}
-
-		public void BeforeItemCopy([In] [Out] ref object cancel)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("BeforeItemCopy");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(cancel);
-				return;
-			}
-
-			object[] paramsArray = new object[1];
-			paramsArray.SetValue(cancel, 0);
-			_eventBinding.RaiseCustomEvent("BeforeItemCopy", ref paramsArray);
-
-			cancel = (bool)paramsArray[0];
-		}
-
-		public void BeforeItemCut([In] [Out] ref object cancel)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("BeforeItemCut");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(cancel);
-				return;
-			}
-
-			object[] paramsArray = new object[1];
-			paramsArray.SetValue(cancel, 0);
-			_eventBinding.RaiseCustomEvent("BeforeItemCut", ref paramsArray);
-
-			cancel = (bool)paramsArray[0];
-		}
-
-		public void BeforeItemPaste([In] [Out] ref object clipboardContent, [In, MarshalAs(UnmanagedType.IDispatch)] object target, [In] [Out] ref object cancel)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("BeforeItemPaste");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(clipboardContent, target, cancel);
-				return;
-			}
-
-			NetOffice.OutlookApi.MAPIFolder newTarget = Factory.CreateObjectFromComProxy(_eventClass, target) as NetOffice.OutlookApi.MAPIFolder;
-			object[] paramsArray = new object[3];
-			paramsArray.SetValue(clipboardContent, 0);
-			paramsArray[1] = newTarget;
-			paramsArray.SetValue(cancel, 2);
-			_eventBinding.RaiseCustomEvent("BeforeItemPaste", ref paramsArray);
-
-			clipboardContent = (object)paramsArray[0];
-			cancel = (bool)paramsArray[2];
-		}
-
-		public void AttachmentSelectionChange()
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("AttachmentSelectionChange");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray();
-				return;
-			}
-
-			object[] paramsArray = new object[0];
-			_eventBinding.RaiseCustomEvent("AttachmentSelectionChange", ref paramsArray);
-		}
-
-		public void InlineResponse([In, MarshalAs(UnmanagedType.IDispatch)] object item)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("InlineResponse");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(item);
-				return;
-			}
-
-			object newItem = Factory.CreateObjectFromComProxy(_eventClass, item) as object;
-			object[] paramsArray = new object[1];
-			paramsArray[0] = newItem;
-			_eventBinding.RaiseCustomEvent("InlineResponse", ref paramsArray);
-		}
-
-        public void InlineResponseClose()
-        {
-            Delegate[] recipients = _eventBinding.GetEventRecipients("InlineResponseClose");
-            if ((true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0))
+            if (!Validate("Deactivate"))
             {
-                Invoker.ReleaseParamsArray();
                 return;
             }
 
             object[] paramsArray = new object[0];
-            _eventBinding.RaiseCustomEvent("InlineResponseClose", ref paramsArray);
+			EventBinding.RaiseCustomEvent("Deactivate", ref paramsArray);
+		}
+
+		public void SelectionChange()
+		{
+            if (!Validate("SelectionChange"))
+            {
+                return;
+            }
+
+            object[] paramsArray = new object[0];
+			EventBinding.RaiseCustomEvent("SelectionChange", ref paramsArray);
+		}
+
+		public void Close()
+		{
+            if (!Validate("Close"))
+            {
+                return;
+            }
+
+            object[] paramsArray = new object[0];
+			EventBinding.RaiseCustomEvent("Close", ref paramsArray);
+		}
+
+		public void BeforeMaximize([In] [Out] ref object cancel)
+		{
+            if (!Validate("BeforeMaximize"))
+            {
+                Invoker.ReleaseParamsArray(cancel);
+                return;
+            }
+
+			object[] paramsArray = new object[1];
+			paramsArray.SetValue(cancel, 0);
+			EventBinding.RaiseCustomEvent("BeforeMaximize", ref paramsArray);
+
+			cancel = ToBoolean(paramsArray[0]);
+		}
+
+		public void BeforeMinimize([In] [Out] ref object cancel)
+		{
+            if (!Validate("BeforeMinimize"))
+            {
+                Invoker.ReleaseParamsArray(cancel);
+                return;
+            }
+
+            object[] paramsArray = new object[1];
+			paramsArray.SetValue(cancel, 0);
+			EventBinding.RaiseCustomEvent("BeforeMinimize", ref paramsArray);
+
+            cancel = ToBoolean(paramsArray[0]);
+        }
+
+		public void BeforeMove([In] [Out] ref object cancel)
+		{
+            if (!Validate("BeforeMove"))
+            {
+                Invoker.ReleaseParamsArray(cancel);
+                return;
+            }
+
+            object[] paramsArray = new object[1];
+			paramsArray.SetValue(cancel, 0);
+			EventBinding.RaiseCustomEvent("BeforeMove", ref paramsArray);
+
+            cancel = ToBoolean(paramsArray[0]);
+        }
+
+		public void BeforeSize([In] [Out] ref object cancel)
+		{
+            if (!Validate("BeforeSize"))
+            {
+                Invoker.ReleaseParamsArray(cancel);
+                return;
+            }
+
+            object[] paramsArray = new object[1];
+			paramsArray.SetValue(cancel, 0);
+			EventBinding.RaiseCustomEvent("BeforeSize", ref paramsArray);
+
+            cancel = ToBoolean(paramsArray[0]);
+        }
+
+		public void BeforeItemCopy([In] [Out] ref object cancel)
+		{
+            if (!Validate("BeforeItemCopy"))
+            {
+                Invoker.ReleaseParamsArray(cancel);
+                return;
+            }
+
+            object[] paramsArray = new object[1];
+			paramsArray.SetValue(cancel, 0);
+			EventBinding.RaiseCustomEvent("BeforeItemCopy", ref paramsArray);
+
+            cancel = ToBoolean(paramsArray[0]);
+        }
+
+		public void BeforeItemCut([In] [Out] ref object cancel)
+		{
+            if (!Validate("BeforeItemCut"))
+            {
+                Invoker.ReleaseParamsArray(cancel);
+                return;
+            }
+
+            object[] paramsArray = new object[1];
+			paramsArray.SetValue(cancel, 0);
+			EventBinding.RaiseCustomEvent("BeforeItemCut", ref paramsArray);
+
+            cancel = ToBoolean(paramsArray[0]);
+        }
+
+		public void BeforeItemPaste([In] [Out] ref object clipboardContent, [In, MarshalAs(UnmanagedType.IDispatch)] object target, [In] [Out] ref object cancel)
+        {
+            if (!Validate("BeforeItemPaste"))
+            {
+                Invoker.ReleaseParamsArray(clipboardContent, target, cancel);
+                return;
+            }
+
+			NetOffice.OutlookApi.MAPIFolder newTarget = Factory.CreateKnownObjectFromComProxy<NetOffice.OutlookApi.MAPIFolder>(EventClass, target, NetOffice.OutlookApi.MAPIFolder.LateBindingApiWrapperType);
+			object[] paramsArray = new object[3];
+			paramsArray.SetValue(clipboardContent, 0);
+			paramsArray[1] = newTarget;
+			paramsArray.SetValue(cancel, 2);
+			EventBinding.RaiseCustomEvent("BeforeItemPaste", ref paramsArray);
+
+			clipboardContent = (object)paramsArray[0];
+			cancel = ToBoolean(paramsArray[2]);
+        }
+
+		public void AttachmentSelectionChange()
+        {
+            if (!Validate("AttachmentSelectionChange"))
+            {
+                return;
+            }
+
+			object[] paramsArray = new object[0];
+			EventBinding.RaiseCustomEvent("AttachmentSelectionChange", ref paramsArray);
+		}
+
+		public void InlineResponse([In, MarshalAs(UnmanagedType.IDispatch)] object item)
+        {
+            if (!Validate("InlineResponse"))
+            {
+                Invoker.ReleaseParamsArray(item);
+                return;
+            }
+
+			object newItem = Factory.CreateEventArgumentObjectFromComProxy(EventClass, item) as object;
+			object[] paramsArray = new object[1];
+			paramsArray[0] = newItem;
+			EventBinding.RaiseCustomEvent("InlineResponse", ref paramsArray);
+		}
+
+        public void InlineResponseClose()
+        {
+            if (!Validate("InlineResponseClose"))
+            {
+                return;
+            }
+
+            object[] paramsArray = new object[0];
+            EventBinding.RaiseCustomEvent("InlineResponseClose", ref paramsArray);
         }
 
 		#endregion

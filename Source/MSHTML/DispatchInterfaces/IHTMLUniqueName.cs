@@ -107,34 +107,6 @@ namespace NetOffice.MSHTMLApi
 		
 		#region Properties
 
-		/// <summary>
-		/// SupportByVersion MSHTML 4
-		/// Get
-		/// </summary>
-		[SupportByVersion("MSHTML", 4)]
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public Int32 uniqueNumber
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "uniqueNumber");
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSHTML 4
-		/// Get
-		/// </summary>
-		[SupportByVersion("MSHTML", 4)]
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public string uniqueID
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "uniqueID");
-			}
-		}
-
 		#endregion
 
 		#region Methods

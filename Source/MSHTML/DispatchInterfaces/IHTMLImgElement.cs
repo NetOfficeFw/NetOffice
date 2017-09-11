@@ -10,7 +10,7 @@ namespace NetOffice.MSHTMLApi
 	/// SupportByVersion MSHTML, 4
 	/// </summary>
 	[SupportByVersion("MSHTML", 4)]
-	[EntityType(EntityType.IsDispatchInterface)]
+	[EntityType(EntityType.IsDispatchInterface), BaseType]
  	public class IHTMLImgElement : IHTMLControlElement
 	{
 		#pragma warning disable
@@ -423,24 +423,7 @@ namespace NetOffice.MSHTMLApi
 				Factory.ExecuteVariantPropertySet(this, "loop", value);
 			}
 		}
-
-		/// <summary>
-		/// SupportByVersion MSHTML 4
-		/// Get/Set
-		/// </summary>
-		[SupportByVersion("MSHTML", 4)]
-		public string align
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "align");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "align", value);
-			}
-		}
-
+        
 		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// Get/Set

@@ -107,57 +107,10 @@ namespace NetOffice.MSHTMLApi
 		
 		#region Properties
 
-		/// <summary>
-		/// SupportByVersion MSHTML 4
-		/// Get
-		/// </summary>
-		[SupportByVersion("MSHTML", 4)]
-		public Int32 length
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "length");
-			}
-		}
-
 		#endregion
 
 		#region Methods
-
-		/// <summary>
-		/// SupportByVersion MSHTML 4
-		/// </summary>
-		/// <param name="index">object index</param>
-		[SupportByVersion("MSHTML", 4)]
-		public object item(object index)
-		{
-			return Factory.ExecuteVariantMethodGet(this, "item", index);
-		}
-
-		/// <summary>
-		/// SupportByVersion MSHTML 4
-		/// </summary>
-		/// <param name="bstrNamespace">string bstrNamespace</param>
-		/// <param name="bstrUrn">string bstrUrn</param>
-		/// <param name="implementationUrl">optional object implementationUrl</param>
-		[SupportByVersion("MSHTML", 4)]
-		public object add(string bstrNamespace, string bstrUrn, object implementationUrl)
-		{
-			return Factory.ExecuteVariantMethodGet(this, "add", bstrNamespace, bstrUrn, implementationUrl);
-		}
-
-		/// <summary>
-		/// SupportByVersion MSHTML 4
-		/// </summary>
-		/// <param name="bstrNamespace">string bstrNamespace</param>
-		/// <param name="bstrUrn">string bstrUrn</param>
-		[CustomMethod]
-		[SupportByVersion("MSHTML", 4)]
-		public object add(string bstrNamespace, string bstrUrn)
-		{
-			return Factory.ExecuteVariantMethodGet(this, "add", bstrNamespace, bstrUrn);
-		}
-
+		
 		#endregion
 
 		#pragma warning restore

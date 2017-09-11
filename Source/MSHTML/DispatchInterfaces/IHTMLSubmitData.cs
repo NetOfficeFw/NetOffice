@@ -10,7 +10,7 @@ namespace NetOffice.MSHTMLApi
 	/// SupportByVersion MSHTML, 4
 	/// </summary>
 	[SupportByVersion("MSHTML", 4)]
-	[EntityType(EntityType.IsDispatchInterface)]
+	[EntityType(EntityType.IsDispatchInterface), BaseType]
  	public class IHTMLSubmitData : IHTMLFormElement3
 	{
 		#pragma warning disable
@@ -110,79 +110,6 @@ namespace NetOffice.MSHTMLApi
 		#endregion
 
 		#region Methods
-
-		/// <summary>
-		/// SupportByVersion MSHTML 4
-		/// </summary>
-		/// <param name="name">optional string name = </param>
-		/// <param name="value">optional string value = </param>
-		[SupportByVersion("MSHTML", 4)]
-		public void appendNameValuePair(object name, object value)
-		{
-			 Factory.ExecuteMethod(this, "appendNameValuePair", name, value);
-		}
-
-		/// <summary>
-		/// SupportByVersion MSHTML 4
-		/// </summary>
-		[CustomMethod]
-		[SupportByVersion("MSHTML", 4)]
-		public void appendNameValuePair()
-		{
-			 Factory.ExecuteMethod(this, "appendNameValuePair");
-		}
-
-		/// <summary>
-		/// SupportByVersion MSHTML 4
-		/// </summary>
-		/// <param name="name">optional string name = </param>
-		[CustomMethod]
-		[SupportByVersion("MSHTML", 4)]
-		public void appendNameValuePair(object name)
-		{
-			 Factory.ExecuteMethod(this, "appendNameValuePair", name);
-		}
-
-		/// <summary>
-		/// SupportByVersion MSHTML 4
-		/// </summary>
-		/// <param name="name">optional string name = </param>
-		/// <param name="filename">optional string filename = </param>
-		[SupportByVersion("MSHTML", 4)]
-		public void appendNameFilePair(object name, object filename)
-		{
-			 Factory.ExecuteMethod(this, "appendNameFilePair", name, filename);
-		}
-
-		/// <summary>
-		/// SupportByVersion MSHTML 4
-		/// </summary>
-		[CustomMethod]
-		[SupportByVersion("MSHTML", 4)]
-		public void appendNameFilePair()
-		{
-			 Factory.ExecuteMethod(this, "appendNameFilePair");
-		}
-
-		/// <summary>
-		/// SupportByVersion MSHTML 4
-		/// </summary>
-		/// <param name="name">optional string name = </param>
-		[CustomMethod]
-		[SupportByVersion("MSHTML", 4)]
-		public void appendNameFilePair(object name)
-		{
-			 Factory.ExecuteMethod(this, "appendNameFilePair", name);
-		}
-
-		/// <summary>
-		/// SupportByVersion MSHTML 4
-		/// </summary>
-		[SupportByVersion("MSHTML", 4)]
-		public void appendItemSeparator()
-		{
-			 Factory.ExecuteMethod(this, "appendItemSeparator");
-		}
 
 		#endregion
 

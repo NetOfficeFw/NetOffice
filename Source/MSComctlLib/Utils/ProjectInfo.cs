@@ -1,67 +1,49 @@
 ﻿using System;
 using System.Reflection;
-using System.ComponentModel;
-using System.Collections.Generic;
 using NetOffice;
 using NetOffice.Attributes;
 
 namespace MSComctlLibApi.Utils
 {
-	#pragma warning disable
+    #pragma warning disable
     /// <summary>
-    /// necessary factory info, used from NetOffice.Factory while Initialize()
+    /// Necessary factory info, used from NetOffice.Core while Initialize()
     /// </summary>
     public class ProjectInfo : IFactoryInfo
     {
         #region Fields
 
-        private string   _namespace     = "NetOffice.MSComctlLibApi";
+        private string    _name;
+        private string    _namespace     = "NetOffice.MSComctlLibApi";
         private Guid[]    _componentGuid = new Guid[]{new Guid("831FDD16-0C5C-11D2-A9FC-0000F8754DA1")};
-        private Assembly _assembly;
-		private Type[]	 _exportedTypes;
-		private string[] _dependents;
+        private Assembly  _assembly;
+        private NetOfficeAssemblyAttribute _assemblyAttribute;
+        private Type[]	  _exportedTypes;
+		private string[]  _dependents;
 		
         #endregion
 
-        #region Construction
+        #region Ctor
 
         public ProjectInfo()
         {
-            _assembly = Assembly.GetExecutingAssembly();
+            _assembly = typeof(ProjectInfo).Assembly;
+            _assemblyAttribute = _assembly.GetCustomAttributes(typeof(NetOfficeAssemblyAttribute), true)[0] as NetOfficeAssemblyAttribute;
+            _name = _assembly.GetName().Name;
         }
 
         #endregion
 
-        #region IFactoryInfo Members
+        #region IFactoryInfo
 
-        public bool Contains(Type type)
+        public string AssemblyName
         {
-            if (null == _exportedTypes)
-                _exportedTypes = Assembly.GetExportedTypes();
-
-            foreach (Type item in _exportedTypes)
+            get
             {
-                if (item == type)
-                    return true;
+                return _name;
             }
-
-            return false;
         }
 
-        public bool Contains(string className)
-		{
-			if(null == _exportedTypes)
-				_exportedTypes = Assembly.GetExportedTypes();
-			
-			foreach (Type item in _exportedTypes)
-            {
-				if (item.Name.EndsWith(className, StringComparison.InvariantCultureIgnoreCase))
-					return true;
-            }
-				
-			return false;			
-		}
-		
         public string AssemblyNamespace
         {
             get
@@ -86,6 +68,14 @@ namespace MSComctlLibApi.Utils
             }
         }
 
+        public NetOfficeAssemblyAttribute AssemblyAttribute
+        {
+            get
+            {
+                return _assemblyAttribute;
+            }
+        }
+
         public string[] Dependencies
         {
             get
@@ -102,6 +92,34 @@ namespace MSComctlLibApi.Utils
             {
                 return false;
             }
+        }
+
+        public bool Contains(Type type)
+        {
+            if (null == _exportedTypes)
+                _exportedTypes = Assembly.GetExportedTypes();
+
+            foreach (Type item in _exportedTypes)
+            {
+                if (item == type)
+                    return true;
+            }
+
+            return false;
+        }
+
+        public bool Contains(string className)
+        {
+            if (null == _exportedTypes)
+                _exportedTypes = Assembly.GetExportedTypes();
+
+            foreach (Type item in _exportedTypes)
+            {
+                if (item.Name.EndsWith(className, StringComparison.InvariantCultureIgnoreCase))
+                    return true;
+            }
+
+            return false;
         }
 
         #endregion

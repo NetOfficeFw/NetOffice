@@ -38,66 +38,38 @@ namespace NetOffice.OfficeApi.Events
 		public static readonly string Id = "000672AD-0000-0000-C000-000000000046";
 		
 		#endregion
-	
-		#region Fields
-
-		private IEventBinding	_eventBinding;
-        private ICOMObject _eventClass;
-        
-		#endregion
 		
-		#region Construction
+		#region Ctor
 
 		public IMsoEnvelopeVBEvents_SinkHelper(ICOMObject eventClass, IConnectionPoint connectPoint): base(eventClass)
 		{
-			_eventClass = eventClass;
-			_eventBinding = (IEventBinding)eventClass;
 			SetupEventBinding(connectPoint);
 		}
 		
 		#endregion
 		
-		#region Properties
-
-        internal Core Factory
-        {
-            get
-            {
-                if (null != _eventClass)
-                    return _eventClass.Factory;
-                else
-                    return Core.Default;
-            }
-        }
-
-        #endregion
-
-		#region IMsoEnvelopeVBEvents Members
+		#region IMsoEnvelopeVBEvents
 		
 		public void EnvelopeShow()
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("EnvelopeShow");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray();
-				return;
-			}
+        {
+            if (!Validate("EnvelopeShow"))
+            {
+                return;
+            }
 
 			object[] paramsArray = new object[0];
-			_eventBinding.RaiseCustomEvent("EnvelopeShow", ref paramsArray);
+			EventBinding.RaiseCustomEvent("EnvelopeShow", ref paramsArray);
 		}
 
 		public void EnvelopeHide()
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("EnvelopeHide");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray();
-				return;
-			}
+        {
+            if (!Validate("EnvelopeHide"))
+            {
+                return;
+            }
 
 			object[] paramsArray = new object[0];
-			_eventBinding.RaiseCustomEvent("EnvelopeHide", ref paramsArray);
+			EventBinding.RaiseCustomEvent("EnvelopeHide", ref paramsArray);
 		}
 
 		#endregion

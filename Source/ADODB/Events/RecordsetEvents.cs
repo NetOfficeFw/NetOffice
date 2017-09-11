@@ -74,268 +74,234 @@ namespace NetOffice.ADODBApi.Events
 		public static readonly string Id = "00000266-0000-0010-8000-00AA006D2EA4";
 		
 		#endregion
-	
-		#region Fields
 
-		private IEventBinding	_eventBinding;
-        private ICOMObject _eventClass;
-        
-		#endregion
-		
-		#region Construction
+		#region Ctor
 
 		public RecordsetEvents_SinkHelper(ICOMObject eventClass, IConnectionPoint connectPoint): base(eventClass)
 		{
-			_eventClass = eventClass;
-			_eventBinding = (IEventBinding)eventClass;
 			SetupEventBinding(connectPoint);
 		}
 		
 		#endregion
-		
-		#region Properties
-
-        internal Core Factory
-        {
-            get
-            {
-                if (null != _eventClass)
-                    return _eventClass.Factory;
-                else
-                    return Core.Default;
-            }
-        }
-
-        #endregion
 
 		#region RecordsetEvents Members
 		
 		public void WillChangeField([In] object cFields, [In] object fields, [In] object adStatus, [In, MarshalAs(UnmanagedType.IDispatch)] object pRecordset)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("WillChangeField");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(cFields, fields, adStatus, pRecordset);
-				return;
-			}
+            if (!Validate("WillChangeField"))
+            {
+                Invoker.ReleaseParamsArray(cFields, fields, adStatus, pRecordset);
+                return;
+            }
 
 			Int32 newcFields = Convert.ToInt32(cFields);
 			object newFields = (object)fields;
 			NetOffice.ADODBApi.Enums.EventStatusEnum newadStatus = (NetOffice.ADODBApi.Enums.EventStatusEnum)adStatus;
-			NetOffice.ADODBApi._Recordset newpRecordset = Factory.CreateObjectFromComProxy(_eventClass, pRecordset) as NetOffice.ADODBApi._Recordset;
+            NetOffice.ADODBApi._Recordset newpRecordset = Factory.CreateKnownObjectFromComProxy<NetOffice.ADODBApi._Recordset>(EventClass, pRecordset, NetOffice.ADODBApi._Recordset.LateBindingApiWrapperType);
 			object[] paramsArray = new object[4];
 			paramsArray[0] = newcFields;
 			paramsArray[1] = newFields;
 			paramsArray[2] = newadStatus;
 			paramsArray[3] = newpRecordset;
-			_eventBinding.RaiseCustomEvent("WillChangeField", ref paramsArray);
+			EventBinding.RaiseCustomEvent("WillChangeField", ref paramsArray);
 		}
 
 		public void FieldChangeComplete([In] object cFields, [In] object fields, [In, MarshalAs(UnmanagedType.IDispatch)] object pError, [In] object adStatus, [In, MarshalAs(UnmanagedType.IDispatch)] object pRecordset)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("FieldChangeComplete");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(cFields, fields, pError, adStatus, pRecordset);
-				return;
-			}
+            if (!Validate("FieldChangeComplete"))
+            {
+                Invoker.ReleaseParamsArray(cFields, fields, pError, adStatus, pRecordset);
+                return;
+            }
 
 			Int32 newcFields = Convert.ToInt32(cFields);
 			object newFields = (object)fields;
-			NetOffice.ADODBApi.Error newpError = Factory.CreateObjectFromComProxy(_eventClass, pError) as NetOffice.ADODBApi.Error;
+            NetOffice.ADODBApi.Error newpError = Factory.CreateKnownObjectFromComProxy<NetOffice.ADODBApi.Error>(EventClass, pError, NetOffice.ADODBApi.Error.LateBindingApiWrapperType);
 			NetOffice.ADODBApi.Enums.EventStatusEnum newadStatus = (NetOffice.ADODBApi.Enums.EventStatusEnum)adStatus;
-			NetOffice.ADODBApi._Recordset newpRecordset = Factory.CreateObjectFromComProxy(_eventClass, pRecordset) as NetOffice.ADODBApi._Recordset;
+			NetOffice.ADODBApi._Recordset newpRecordset = Factory.CreateKnownObjectFromComProxy<NetOffice.ADODBApi._Recordset>(EventClass, pRecordset, NetOffice.ADODBApi.Error.LateBindingApiWrapperType);
 			object[] paramsArray = new object[5];
 			paramsArray[0] = newcFields;
 			paramsArray[1] = newFields;
 			paramsArray[2] = newpError;
 			paramsArray[3] = newadStatus;
 			paramsArray[4] = newpRecordset;
-			_eventBinding.RaiseCustomEvent("FieldChangeComplete", ref paramsArray);
+			EventBinding.RaiseCustomEvent("FieldChangeComplete", ref paramsArray);
 		}
 
 		public void WillChangeRecord([In] object adReason, [In] object cRecords, [In] object adStatus, [In, MarshalAs(UnmanagedType.IDispatch)] object pRecordset)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("WillChangeRecord");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(adReason, cRecords, adStatus, pRecordset);
-				return;
-			}
+        {
+            if (!Validate("WillChangeRecord"))
+            {
+                Invoker.ReleaseParamsArray(adReason, cRecords, adStatus, pRecordset);
+                return;
+            }
 
 			NetOffice.ADODBApi.Enums.EventReasonEnum newadReason = (NetOffice.ADODBApi.Enums.EventReasonEnum)adReason;
 			Int32 newcRecords = Convert.ToInt32(cRecords);
 			NetOffice.ADODBApi.Enums.EventStatusEnum newadStatus = (NetOffice.ADODBApi.Enums.EventStatusEnum)adStatus;
-			NetOffice.ADODBApi._Recordset newpRecordset = Factory.CreateObjectFromComProxy(_eventClass, pRecordset) as NetOffice.ADODBApi._Recordset;
+			NetOffice.ADODBApi._Recordset newpRecordset = Factory.CreateKnownObjectFromComProxy<NetOffice.ADODBApi._Recordset>(EventClass, pRecordset, NetOffice.ADODBApi._Recordset.LateBindingApiWrapperType);
 			object[] paramsArray = new object[4];
 			paramsArray[0] = newadReason;
 			paramsArray[1] = newcRecords;
 			paramsArray[2] = newadStatus;
 			paramsArray[3] = newpRecordset;
-			_eventBinding.RaiseCustomEvent("WillChangeRecord", ref paramsArray);
+			EventBinding.RaiseCustomEvent("WillChangeRecord", ref paramsArray);
 		}
 
 		public void RecordChangeComplete([In] object adReason, [In] object cRecords, [In, MarshalAs(UnmanagedType.IDispatch)] object pError, [In] object adStatus, [In, MarshalAs(UnmanagedType.IDispatch)] object pRecordset)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("RecordChangeComplete");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(adReason, cRecords, pError, adStatus, pRecordset);
-				return;
-			}
+        {
+            if (!Validate("RecordChangeComplete"))
+            {
+                Invoker.ReleaseParamsArray(adReason, cRecords, pError, adStatus, pRecordset);
+                return;
+            }
 
 			NetOffice.ADODBApi.Enums.EventReasonEnum newadReason = (NetOffice.ADODBApi.Enums.EventReasonEnum)adReason;
 			Int32 newcRecords = Convert.ToInt32(cRecords);
-			NetOffice.ADODBApi.Error newpError = Factory.CreateObjectFromComProxy(_eventClass, pError) as NetOffice.ADODBApi.Error;
+			NetOffice.ADODBApi.Error newpError = Factory.CreateKnownObjectFromComProxy<NetOffice.ADODBApi.Error>(EventClass, pError, NetOffice.ADODBApi.Error.LateBindingApiWrapperType);
 			NetOffice.ADODBApi.Enums.EventStatusEnum newadStatus = (NetOffice.ADODBApi.Enums.EventStatusEnum)adStatus;
-			NetOffice.ADODBApi._Recordset newpRecordset = Factory.CreateObjectFromComProxy(_eventClass, pRecordset) as NetOffice.ADODBApi._Recordset;
+			NetOffice.ADODBApi._Recordset newpRecordset = Factory.CreateKnownObjectFromComProxy<NetOffice.ADODBApi._Recordset>(EventClass, pRecordset, NetOffice.ADODBApi._Recordset.LateBindingApiWrapperType);
 			object[] paramsArray = new object[5];
 			paramsArray[0] = newadReason;
 			paramsArray[1] = newcRecords;
 			paramsArray[2] = newpError;
 			paramsArray[3] = newadStatus;
 			paramsArray[4] = newpRecordset;
-			_eventBinding.RaiseCustomEvent("RecordChangeComplete", ref paramsArray);
+			EventBinding.RaiseCustomEvent("RecordChangeComplete", ref paramsArray);
 		}
 
 		public void WillChangeRecordset([In] object adReason, [In] object adStatus, [In, MarshalAs(UnmanagedType.IDispatch)] object pRecordset)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("WillChangeRecordset");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(adReason, adStatus, pRecordset);
-				return;
-			}
+        {
+            if (!Validate("WillChangeRecordset"))
+            {
+                Invoker.ReleaseParamsArray(adReason, adStatus, pRecordset);
+                return;
+            }
 
 			NetOffice.ADODBApi.Enums.EventReasonEnum newadReason = (NetOffice.ADODBApi.Enums.EventReasonEnum)adReason;
 			NetOffice.ADODBApi.Enums.EventStatusEnum newadStatus = (NetOffice.ADODBApi.Enums.EventStatusEnum)adStatus;
-			NetOffice.ADODBApi._Recordset newpRecordset = Factory.CreateObjectFromComProxy(_eventClass, pRecordset) as NetOffice.ADODBApi._Recordset;
+			NetOffice.ADODBApi._Recordset newpRecordset = Factory.CreateKnownObjectFromComProxy<NetOffice.ADODBApi._Recordset>(EventClass, pRecordset, NetOffice.ADODBApi._Recordset.LateBindingApiWrapperType);
 			object[] paramsArray = new object[3];
 			paramsArray[0] = newadReason;
 			paramsArray[1] = newadStatus;
 			paramsArray[2] = newpRecordset;
-			_eventBinding.RaiseCustomEvent("WillChangeRecordset", ref paramsArray);
+			EventBinding.RaiseCustomEvent("WillChangeRecordset", ref paramsArray);
 		}
 
 		public void RecordsetChangeComplete([In] object adReason, [In, MarshalAs(UnmanagedType.IDispatch)] object pError, [In] object adStatus, [In, MarshalAs(UnmanagedType.IDispatch)] object pRecordset)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("RecordsetChangeComplete");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(adReason, pError, adStatus, pRecordset);
-				return;
-			}
+        {
+            if (!Validate("RecordsetChangeComplete"))
+            {
+                Invoker.ReleaseParamsArray(adReason, pError, adStatus, pRecordset);
+                return;
+            }
+
 
 			NetOffice.ADODBApi.Enums.EventReasonEnum newadReason = (NetOffice.ADODBApi.Enums.EventReasonEnum)adReason;
-			NetOffice.ADODBApi.Error newpError = Factory.CreateObjectFromComProxy(_eventClass, pError) as NetOffice.ADODBApi.Error;
+			NetOffice.ADODBApi.Error newpError = Factory.CreateKnownObjectFromComProxy<NetOffice.ADODBApi.Error>(EventClass, pError, NetOffice.ADODBApi.Error.LateBindingApiWrapperType);
 			NetOffice.ADODBApi.Enums.EventStatusEnum newadStatus = (NetOffice.ADODBApi.Enums.EventStatusEnum)adStatus;
-			NetOffice.ADODBApi._Recordset newpRecordset = Factory.CreateObjectFromComProxy(_eventClass, pRecordset) as NetOffice.ADODBApi._Recordset;
+			NetOffice.ADODBApi._Recordset newpRecordset = Factory.CreateKnownObjectFromComProxy<NetOffice.ADODBApi._Recordset>(EventClass, pRecordset, NetOffice.ADODBApi._Recordset.LateBindingApiWrapperType);
 			object[] paramsArray = new object[4];
 			paramsArray[0] = newadReason;
 			paramsArray[1] = newpError;
 			paramsArray[2] = newadStatus;
 			paramsArray[3] = newpRecordset;
-			_eventBinding.RaiseCustomEvent("RecordsetChangeComplete", ref paramsArray);
+			EventBinding.RaiseCustomEvent("RecordsetChangeComplete", ref paramsArray);
 		}
 
 		public void WillMove([In] object adReason, [In] object adStatus, [In, MarshalAs(UnmanagedType.IDispatch)] object pRecordset)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("WillMove");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(adReason, adStatus, pRecordset);
-				return;
-			}
+        {
+            if (!Validate("WillMove"))
+            {
+                Invoker.ReleaseParamsArray(adReason, adStatus, pRecordset);
+                return;
+            }
 
 			NetOffice.ADODBApi.Enums.EventReasonEnum newadReason = (NetOffice.ADODBApi.Enums.EventReasonEnum)adReason;
 			NetOffice.ADODBApi.Enums.EventStatusEnum newadStatus = (NetOffice.ADODBApi.Enums.EventStatusEnum)adStatus;
-			NetOffice.ADODBApi._Recordset newpRecordset = Factory.CreateObjectFromComProxy(_eventClass, pRecordset) as NetOffice.ADODBApi._Recordset;
+            NetOffice.ADODBApi._Recordset newpRecordset = Factory.CreateKnownObjectFromComProxy<NetOffice.ADODBApi._Recordset> (EventClass, pRecordset, NetOffice.ADODBApi._Recordset.LateBindingApiWrapperType);
 			object[] paramsArray = new object[3];
 			paramsArray[0] = newadReason;
 			paramsArray[1] = newadStatus;
 			paramsArray[2] = newpRecordset;
-			_eventBinding.RaiseCustomEvent("WillMove", ref paramsArray);
+			EventBinding.RaiseCustomEvent("WillMove", ref paramsArray);
 		}
 
 		public void MoveComplete([In] object adReason, [In, MarshalAs(UnmanagedType.IDispatch)] object pError, [In] object adStatus, [In, MarshalAs(UnmanagedType.IDispatch)] object pRecordset)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("MoveComplete");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(adReason, pError, adStatus, pRecordset);
-				return;
-			}
+        {
+            if (!Validate("MoveComplete"))
+            {
+                Invoker.ReleaseParamsArray(adReason, pError, adStatus, pRecordset);
+                return;
+            }
 
 			NetOffice.ADODBApi.Enums.EventReasonEnum newadReason = (NetOffice.ADODBApi.Enums.EventReasonEnum)adReason;
-			NetOffice.ADODBApi.Error newpError = Factory.CreateObjectFromComProxy(_eventClass, pError) as NetOffice.ADODBApi.Error;
+            NetOffice.ADODBApi.Error newpError = Factory.CreateKnownObjectFromComProxy<NetOffice.ADODBApi.Error>(EventClass, pError, NetOffice.ADODBApi.Error.LateBindingApiWrapperType);
 			NetOffice.ADODBApi.Enums.EventStatusEnum newadStatus = (NetOffice.ADODBApi.Enums.EventStatusEnum)adStatus;
-			NetOffice.ADODBApi._Recordset newpRecordset = Factory.CreateObjectFromComProxy(_eventClass, pRecordset) as NetOffice.ADODBApi._Recordset;
+			NetOffice.ADODBApi._Recordset newpRecordset = Factory.CreateKnownObjectFromComProxy<NetOffice.ADODBApi._Recordset>(EventClass, pRecordset, NetOffice.ADODBApi._Recordset.LateBindingApiWrapperType);
 			object[] paramsArray = new object[4];
 			paramsArray[0] = newadReason;
 			paramsArray[1] = newpError;
 			paramsArray[2] = newadStatus;
 			paramsArray[3] = newpRecordset;
-			_eventBinding.RaiseCustomEvent("MoveComplete", ref paramsArray);
+			EventBinding.RaiseCustomEvent("MoveComplete", ref paramsArray);
 		}
 
 		public void EndOfRecordset([In] [Out] ref object fMoreData, [In] object adStatus, [In, MarshalAs(UnmanagedType.IDispatch)] object pRecordset)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("EndOfRecordset");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(fMoreData, adStatus, pRecordset);
-				return;
-			}
+        {
+            if (!Validate("EndOfRecordset"))
+            {
+                Invoker.ReleaseParamsArray(fMoreData, adStatus, pRecordset);
+                return;
+            }
 
 			NetOffice.ADODBApi.Enums.EventStatusEnum newadStatus = (NetOffice.ADODBApi.Enums.EventStatusEnum)adStatus;
-			NetOffice.ADODBApi._Recordset newpRecordset = Factory.CreateObjectFromComProxy(_eventClass, pRecordset) as NetOffice.ADODBApi._Recordset;
+			NetOffice.ADODBApi._Recordset newpRecordset = Factory.CreateKnownObjectFromComProxy<NetOffice.ADODBApi._Recordset>(EventClass, pRecordset, NetOffice.ADODBApi._Recordset.LateBindingApiWrapperType);
 			object[] paramsArray = new object[3];
 			paramsArray.SetValue(fMoreData, 0);
 			paramsArray[1] = newadStatus;
 			paramsArray[2] = newpRecordset;
-			_eventBinding.RaiseCustomEvent("EndOfRecordset", ref paramsArray);
+			EventBinding.RaiseCustomEvent("EndOfRecordset", ref paramsArray);
 
-			fMoreData = (bool)paramsArray[0];
+			fMoreData = ToBoolean(paramsArray[0]);
 		}
 
 		public void FetchProgress([In] object progress, [In] object maxProgress, [In] object adStatus, [In, MarshalAs(UnmanagedType.IDispatch)] object pRecordset)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("FetchProgress");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(progress, maxProgress, adStatus, pRecordset);
-				return;
-			}
+            if (!Validate("FetchProgress"))
+            {
+                Invoker.ReleaseParamsArray(progress, maxProgress, adStatus, pRecordset);
+                return;
+            }
 
 			Int32 newProgress = Convert.ToInt32(progress);
 			Int32 newMaxProgress = Convert.ToInt32(maxProgress);
 			NetOffice.ADODBApi.Enums.EventStatusEnum newadStatus = (NetOffice.ADODBApi.Enums.EventStatusEnum)adStatus;
-			NetOffice.ADODBApi._Recordset newpRecordset = Factory.CreateObjectFromComProxy(_eventClass, pRecordset) as NetOffice.ADODBApi._Recordset;
+			NetOffice.ADODBApi._Recordset newpRecordset = Factory.CreateKnownObjectFromComProxy<NetOffice.ADODBApi._Recordset>(EventClass, pRecordset, NetOffice.ADODBApi._Recordset.LateBindingApiWrapperType);
 			object[] paramsArray = new object[4];
 			paramsArray[0] = newProgress;
 			paramsArray[1] = newMaxProgress;
 			paramsArray[2] = newadStatus;
 			paramsArray[3] = newpRecordset;
-			_eventBinding.RaiseCustomEvent("FetchProgress", ref paramsArray);
+			EventBinding.RaiseCustomEvent("FetchProgress", ref paramsArray);
 		}
 
 		public void FetchComplete([In, MarshalAs(UnmanagedType.IDispatch)] object pError, [In] object adStatus, [In, MarshalAs(UnmanagedType.IDispatch)] object pRecordset)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("FetchComplete");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(pError, adStatus, pRecordset);
-				return;
-			}
+            if (!Validate("FetchComplete"))
+            {
+                Invoker.ReleaseParamsArray(pError, adStatus, pRecordset);
+                return;
+            }
 
-			NetOffice.ADODBApi.Error newpError = Factory.CreateObjectFromComProxy(_eventClass, pError) as NetOffice.ADODBApi.Error;
+            NetOffice.ADODBApi.Error newpError = Factory.CreateKnownObjectFromComProxy<NetOffice.ADODBApi.Error>(EventClass, pError, NetOffice.ADODBApi.Error.LateBindingApiWrapperType);
 			NetOffice.ADODBApi.Enums.EventStatusEnum newadStatus = (NetOffice.ADODBApi.Enums.EventStatusEnum)adStatus;
-			NetOffice.ADODBApi._Recordset newpRecordset = Factory.CreateObjectFromComProxy(_eventClass, pRecordset) as NetOffice.ADODBApi._Recordset;
+			NetOffice.ADODBApi._Recordset newpRecordset = Factory.CreateKnownObjectFromComProxy<NetOffice.ADODBApi._Recordset>(EventClass, pRecordset, NetOffice.ADODBApi._Recordset.LateBindingApiWrapperType);
 			object[] paramsArray = new object[3];
 			paramsArray[0] = newpError;
 			paramsArray[1] = newadStatus;
 			paramsArray[2] = newpRecordset;
-			_eventBinding.RaiseCustomEvent("FetchComplete", ref paramsArray);
+			EventBinding.RaiseCustomEvent("FetchComplete", ref paramsArray);
 		}
 
 		#endregion

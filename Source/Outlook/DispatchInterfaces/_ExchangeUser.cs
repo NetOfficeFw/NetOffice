@@ -10,7 +10,7 @@ namespace NetOffice.OutlookApi
 	/// SupportByVersion Outlook, 12,14,15,16
 	/// </summary>
 	[SupportByVersion("Outlook", 12,14,15,16)]
-	[EntityType(EntityType.IsDispatchInterface)]
+	[EntityType(EntityType.IsDispatchInterface), BaseType]
  	public class _ExchangeUser : COMObject
 	{
 		#pragma warning disable
@@ -865,14 +865,13 @@ namespace NetOffice.OutlookApi
 		/// SupportByVersion Outlook 14, 15, 16
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff864210.aspx </remarks>
-		[SupportByVersion("Outlook", 14,15,16)]
+		[SupportByVersion("Outlook", 14,15,16), NativeResult]
 		public stdole.Picture GetPicture()
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "GetPicture", paramsArray);
-			stdole.Picture newObject = Factory.CreateObjectFromComProxy(this, returnItem) as stdole.Picture;
-			return newObject;
-		}
+            return returnItem as stdole.Picture;
+        }
 
 		#endregion
 

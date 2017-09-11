@@ -107,40 +107,6 @@ namespace NetOffice.MSHTMLApi
 		
 		#region Properties
 
-		/// <summary>
-		/// SupportByVersion MSHTML 4
-		/// Get/Set
-		/// </summary>
-		[SupportByVersion("MSHTML", 4)]
-		public Int32 timeout
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "timeout");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "timeout", value);
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSHTML 4
-		/// Get/Set
-		/// </summary>
-		[SupportByVersion("MSHTML", 4)]
-		public object ontimeout
-		{
-			get
-			{
-				return Factory.ExecuteVariantPropertyGet(this, "ontimeout");
-			}
-			set
-			{
-				Factory.ExecuteVariantPropertySet(this, "ontimeout", value);
-			}
-		}
-
 		#endregion
 
 		#region Methods

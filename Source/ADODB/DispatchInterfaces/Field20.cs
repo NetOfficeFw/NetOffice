@@ -10,7 +10,7 @@ namespace NetOffice.ADODBApi
 	/// SupportByVersion ADODB, 2.5
 	/// </summary>
 	[SupportByVersion("ADODB", 2.5)]
-	[EntityType(EntityType.IsDispatchInterface)]
+	[EntityType(EntityType.IsDispatchInterface), BaseType]
  	public class Field20 : _ADO
 	{
 		#pragma warning disable

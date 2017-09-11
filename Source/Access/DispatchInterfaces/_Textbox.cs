@@ -10,7 +10,7 @@ namespace NetOffice.AccessApi
 	/// SupportByVersion Access, 9,10,11,12,14,15,16
 	/// </summary>
 	[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-	[EntityType(EntityType.IsDispatchInterface)]
+	[EntityType(EntityType.IsDispatchInterface), BaseType]
  	public class _Textbox : NetOffice.OfficeApi.IAccessible
 	{
 		#pragma warning disable
@@ -3107,7 +3107,7 @@ namespace NetOffice.AccessApi
             object returnItem = Invoker.MethodReturn(this, "_Evaluate", paramsArray);
             if ((null != returnItem) && (returnItem is MarshalByRefObject))
             {
-                ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
+                ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem, true);
                 return newObject;
             }
             else

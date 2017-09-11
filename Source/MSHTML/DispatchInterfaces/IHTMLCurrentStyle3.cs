@@ -106,59 +106,7 @@ namespace NetOffice.MSHTMLApi
 		#endregion
 		
 		#region Properties
-
-		/// <summary>
-		/// SupportByVersion MSHTML 4
-		/// Get
-		/// </summary>
-		[SupportByVersion("MSHTML", 4)]
-		public string textOverflow
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "textOverflow");
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSHTML 4
-		/// Get
-		/// </summary>
-		[SupportByVersion("MSHTML", 4)]
-		public object minHeight
-		{
-			get
-			{
-				return Factory.ExecuteVariantPropertyGet(this, "minHeight");
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSHTML 4
-		/// Get
-		/// </summary>
-		[SupportByVersion("MSHTML", 4)]
-		public object wordSpacing
-		{
-			get
-			{
-				return Factory.ExecuteVariantPropertyGet(this, "wordSpacing");
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSHTML 4
-		/// Get
-		/// </summary>
-		[SupportByVersion("MSHTML", 4)]
-		public string whiteSpace
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "whiteSpace");
-			}
-		}
-
+        
 		#endregion
 
 		#region Methods

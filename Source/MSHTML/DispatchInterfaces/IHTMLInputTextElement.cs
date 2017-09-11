@@ -10,7 +10,7 @@ namespace NetOffice.MSHTMLApi
 	/// SupportByVersion MSHTML, 4
 	/// </summary>
 	[SupportByVersion("MSHTML", 4)]
-	[EntityType(EntityType.IsDispatchInterface)]
+	[EntityType(EntityType.IsDispatchInterface), BaseType]
  	public class IHTMLInputTextElement : IHTMLInputElement2
 	{
 		#pragma warning disable
@@ -107,54 +107,6 @@ namespace NetOffice.MSHTMLApi
 		
 		#region Properties
 
-		/// <summary>
-		/// SupportByVersion MSHTML 4
-		/// Get
-		/// </summary>
-		[SupportByVersion("MSHTML", 4)]
-		public string type
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "type");
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSHTML 4
-		/// Get/Set
-		/// </summary>
-		[SupportByVersion("MSHTML", 4)]
-		public string value
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "value");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "value", value);
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSHTML 4
-		/// Get/Set
-		/// </summary>
-		[SupportByVersion("MSHTML", 4)]
-		public string name
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "name");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "name", value);
-			}
-		}
-
-		/// <summary>
 		/// SupportByVersion MSHTML 4
 		/// Get/Set
 		/// </summary>
@@ -170,162 +122,10 @@ namespace NetOffice.MSHTMLApi
 				Factory.ExecuteVariantPropertySet(this, "status", value);
 			}
 		}
-
-		/// <summary>
-		/// SupportByVersion MSHTML 4
-		/// Get/Set
-		/// </summary>
-		[SupportByVersion("MSHTML", 4)]
-		public bool disabled
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "disabled");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "disabled", value);
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSHTML 4
-		/// Get
-		/// </summary>
-		[SupportByVersion("MSHTML", 4)]
-		[BaseResult]
-		public NetOffice.MSHTMLApi.IHTMLFormElement form
-		{
-			get
-			{
-				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.MSHTMLApi.IHTMLFormElement>(this, "form");
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSHTML 4
-		/// Get/Set
-		/// </summary>
-		[SupportByVersion("MSHTML", 4)]
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public string defaultValue
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "defaultValue");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "defaultValue", value);
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSHTML 4
-		/// Get/Set
-		/// </summary>
-		[SupportByVersion("MSHTML", 4)]
-		public Int32 size
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "size");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "size", value);
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSHTML 4
-		/// Get/Set
-		/// </summary>
-		[SupportByVersion("MSHTML", 4)]
-		public Int32 maxLength
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "maxLength");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "maxLength", value);
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSHTML 4
-		/// Get/Set
-		/// </summary>
-		[SupportByVersion("MSHTML", 4)]
-		public object onchange
-		{
-			get
-			{
-				return Factory.ExecuteVariantPropertyGet(this, "onchange");
-			}
-			set
-			{
-				Factory.ExecuteVariantPropertySet(this, "onchange", value);
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSHTML 4
-		/// Get/Set
-		/// </summary>
-		[SupportByVersion("MSHTML", 4)]
-		public object onselect
-		{
-			get
-			{
-				return Factory.ExecuteVariantPropertyGet(this, "onselect");
-			}
-			set
-			{
-				Factory.ExecuteVariantPropertySet(this, "onselect", value);
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSHTML 4
-		/// Get/Set
-		/// </summary>
-		[SupportByVersion("MSHTML", 4)]
-		public bool readOnly
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "readOnly");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "readOnly", value);
-			}
-		}
-
+        
 		#endregion
 
 		#region Methods
-
-		/// <summary>
-		/// SupportByVersion MSHTML 4
-		/// </summary>
-		[SupportByVersion("MSHTML", 4)]
-		public void select()
-		{
-			 Factory.ExecuteMethod(this, "select");
-		}
-
-		/// <summary>
-		/// SupportByVersion MSHTML 4
-		/// </summary>
-		[SupportByVersion("MSHTML", 4)]
-		public NetOffice.MSHTMLApi.IHTMLTxtRange createTextRange()
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.MSHTMLApi.IHTMLTxtRange>(this, "createTextRange", NetOffice.MSHTMLApi.IHTMLTxtRange.LateBindingApiWrapperType);
-		}
 
 		#endregion
 

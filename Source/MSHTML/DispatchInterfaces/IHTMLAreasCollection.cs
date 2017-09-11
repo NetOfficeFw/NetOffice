@@ -10,7 +10,7 @@ namespace NetOffice.MSHTMLApi
 	/// SupportByVersion MSHTML, 4
 	/// </summary>
 	[SupportByVersion("MSHTML", 4)]
-	[EntityType(EntityType.IsDispatchInterface)]
+	[EntityType(EntityType.IsDispatchInterface), BaseType]
  	public class IHTMLAreasCollection : DispHTMLAreasCollection
 	{
 		#pragma warning disable
@@ -106,126 +106,10 @@ namespace NetOffice.MSHTMLApi
 		#endregion
 		
 		#region Properties
-
-		/// <summary>
-		/// SupportByVersion MSHTML 4
-		/// Get/Set
-		/// </summary>
-		[SupportByVersion("MSHTML", 4)]
-		public Int32 length
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "length");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "length", value);
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion MSHTML 4
-		/// Get
-		/// Unknown COM Proxy
-		/// </summary>
-		[SupportByVersion("MSHTML", 4), ProxyResult]
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public object _newEnum
-		{
-			get
-			{
-				return Factory.ExecuteReferencePropertyGet(this, "_newEnum");
-			}
-		}
-
+	
 		#endregion
 
 		#region Methods
-
-		/// <summary>
-		/// SupportByVersion MSHTML 4
-		/// </summary>
-		/// <param name="name">optional object name</param>
-		/// <param name="index">optional object index</param>
-		[SupportByVersion("MSHTML", 4)]
-		public object item(object name, object index)
-		{
-			return Factory.ExecuteVariantMethodGet(this, "item", name, index);
-		}
-
-		/// <summary>
-		/// SupportByVersion MSHTML 4
-		/// </summary>
-		[CustomMethod]
-		[SupportByVersion("MSHTML", 4)]
-		public object item()
-		{
-			return Factory.ExecuteVariantMethodGet(this, "item");
-		}
-
-		/// <summary>
-		/// SupportByVersion MSHTML 4
-		/// </summary>
-		/// <param name="name">optional object name</param>
-		[CustomMethod]
-		[SupportByVersion("MSHTML", 4)]
-		public object item(object name)
-		{
-			return Factory.ExecuteVariantMethodGet(this, "item", name);
-		}
-
-		/// <summary>
-		/// SupportByVersion MSHTML 4
-		/// </summary>
-		/// <param name="tagName">object tagName</param>
-		[SupportByVersion("MSHTML", 4)]
-		public object tags(object tagName)
-		{
-			return Factory.ExecuteVariantMethodGet(this, "tags", tagName);
-		}
-
-		/// <summary>
-		/// SupportByVersion MSHTML 4
-		/// </summary>
-		/// <param name="element">NetOffice.MSHTMLApi.IHTMLElement element</param>
-		/// <param name="before">optional object before</param>
-		[SupportByVersion("MSHTML", 4)]
-		public void add(NetOffice.MSHTMLApi.IHTMLElement element, object before)
-		{
-			 Factory.ExecuteMethod(this, "add", element, before);
-		}
-
-		/// <summary>
-		/// SupportByVersion MSHTML 4
-		/// </summary>
-		/// <param name="element">NetOffice.MSHTMLApi.IHTMLElement element</param>
-		[CustomMethod]
-		[SupportByVersion("MSHTML", 4)]
-		public void add(NetOffice.MSHTMLApi.IHTMLElement element)
-		{
-			 Factory.ExecuteMethod(this, "add", element);
-		}
-
-		/// <summary>
-		/// SupportByVersion MSHTML 4
-		/// </summary>
-		/// <param name="index">optional Int32 index = -1</param>
-		[SupportByVersion("MSHTML", 4)]
-		public void remove(object index)
-		{
-			 Factory.ExecuteMethod(this, "remove", index);
-		}
-
-		/// <summary>
-		/// SupportByVersion MSHTML 4
-		/// </summary>
-		[CustomMethod]
-		[SupportByVersion("MSHTML", 4)]
-		public void remove()
-		{
-			 Factory.ExecuteMethod(this, "remove");
-		}
 
 		#endregion
 

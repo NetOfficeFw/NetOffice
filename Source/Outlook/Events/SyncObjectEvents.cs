@@ -47,62 +47,35 @@ namespace NetOffice.OutlookApi.Events
 		
 		#endregion
 	
-		#region Fields
-
-		private IEventBinding	_eventBinding;
-        private ICOMObject _eventClass;
-        
-		#endregion
-		
-		#region Construction
+		#region Ctor
 
 		public SyncObjectEvents_SinkHelper(ICOMObject eventClass, IConnectionPoint connectPoint): base(eventClass)
 		{
-			_eventClass = eventClass;
-			_eventBinding = (IEventBinding)eventClass;
 			SetupEventBinding(connectPoint);
 		}
 		
 		#endregion
-		
-		#region Properties
 
-        internal Core Factory
-        {
-            get
-            {
-                if (null != _eventClass)
-                    return _eventClass.Factory;
-                else
-                    return Core.Default;
-            }
-        }
-
-        #endregion
-
-		#region SyncObjectEvents Members
+		#region SyncObjectEvents
 		
 		public void SyncStart()
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("SyncStart");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray();
-				return;
-			}
+            if (!Validate("SyncStart"))
+            {              
+                return;
+            }
 
-			object[] paramsArray = new object[0];
-			_eventBinding.RaiseCustomEvent("SyncStart", ref paramsArray);
+            object[] paramsArray = new object[0];
+			EventBinding.RaiseCustomEvent("SyncStart", ref paramsArray);
 		}
 
 		public void Progress([In] object state, [In] object description, [In] object value, [In] object max)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("Progress");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(state, description, value, max);
-				return;
-			}
+        {
+            if (!Validate("Progress"))
+            {
+                Invoker.ReleaseParamsArray(state, description, value, max);
+                return;
+            }
 
 			NetOffice.OutlookApi.Enums.OlSyncState newState = (NetOffice.OutlookApi.Enums.OlSyncState)state;
 			string newDescription = Convert.ToString(description);
@@ -113,37 +86,34 @@ namespace NetOffice.OutlookApi.Events
 			paramsArray[1] = newDescription;
 			paramsArray[2] = newValue;
 			paramsArray[3] = newMax;
-			_eventBinding.RaiseCustomEvent("Progress", ref paramsArray);
+			EventBinding.RaiseCustomEvent("Progress", ref paramsArray);
 		}
 
 		public void OnError([In] object code, [In] object description)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("OnError");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(code, description);
-				return;
-			}
+        {
+            if (!Validate("OnError"))
+            {
+                Invoker.ReleaseParamsArray(code, description);
+                return;
+            }
 
 			Int32 newCode = Convert.ToInt32(code);
 			string newDescription = Convert.ToString(description);
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newCode;
 			paramsArray[1] = newDescription;
-			_eventBinding.RaiseCustomEvent("OnError", ref paramsArray);
+			EventBinding.RaiseCustomEvent("OnError", ref paramsArray);
 		}
 
 		public void SyncEnd()
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("SyncEnd");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray();
-				return;
-			}
-
+        {
+            if (!Validate("SyncEnd"))
+            {
+                return;
+            }
+           
 			object[] paramsArray = new object[0];
-			_eventBinding.RaiseCustomEvent("SyncEnd", ref paramsArray);
+			EventBinding.RaiseCustomEvent("SyncEnd", ref paramsArray);
 		}
 
 		#endregion

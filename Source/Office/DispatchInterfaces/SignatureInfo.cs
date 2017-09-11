@@ -159,16 +159,15 @@ namespace NetOffice.OfficeApi
 		/// Get/Set
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff861498.aspx </remarks>
-		[SupportByVersion("Office", 12,14,15,16)]
+		[SupportByVersion("Office", 12,14,15,16), NativeResult]
 		public stdole.Picture SignatureImage
 		{
 			get
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "SignatureImage", paramsArray);
-				stdole.Picture newObject = Factory.CreateObjectFromComProxy(this,returnItem) as stdole.Picture;
-				return newObject;
-			}
+                return returnItem as stdole.Picture;
+            }
 			set
 			{
 				object[] paramsArray = Invoker.ValidateParamsArray(value);

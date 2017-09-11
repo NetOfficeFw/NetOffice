@@ -10,7 +10,7 @@ namespace NetOffice.MSHTMLApi
 	/// SupportByVersion MSHTML, 4
 	/// </summary>
 	[SupportByVersion("MSHTML", 4)]
-	[EntityType(EntityType.IsDispatchInterface)]
+	[EntityType(EntityType.IsDispatchInterface), BaseType]
  	public class IHTMLElementCollection2 : IHTMLElementCollection
 	{
 		#pragma warning disable
@@ -110,16 +110,6 @@ namespace NetOffice.MSHTMLApi
 		#endregion
 
 		#region Methods
-
-		/// <summary>
-		/// SupportByVersion MSHTML 4
-		/// </summary>
-		/// <param name="urn">object urn</param>
-		[SupportByVersion("MSHTML", 4)]
-		public object urns(object urn)
-		{
-			return Factory.ExecuteVariantMethodGet(this, "urns", urn);
-		}
 
 		#endregion
 

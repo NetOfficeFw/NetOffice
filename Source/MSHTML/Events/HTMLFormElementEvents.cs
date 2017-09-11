@@ -293,8 +293,8 @@ namespace NetOffice.MSHTMLApi.Events
 	
 		#region Fields
 
-		private IEventBinding	_eventBinding;
-        private ICOMObject _eventClass;
+		private IEventBinding	EventBinding;
+        private ICOMObject EventClass;
         
 		#endregion
 		
@@ -302,8 +302,8 @@ namespace NetOffice.MSHTMLApi.Events
 
 		public HTMLFormElementEvents_SinkHelper(ICOMObject eventClass, IConnectionPoint connectPoint): base(eventClass)
 		{
-			_eventClass = eventClass;
-			_eventBinding = (IEventBinding)eventClass;
+			EventClass = eventClass;
+			EventBinding = (IEventBinding)eventClass;
 			SetupEventBinding(connectPoint);
 		}
 		
@@ -315,8 +315,8 @@ namespace NetOffice.MSHTMLApi.Events
         {
             get
             {
-                if (null != _eventClass)
-                    return _eventClass.Factory;
+                if (null != EventClass)
+                    return EventClass.Factory;
                 else
                     return Core.Default;
             }
@@ -328,847 +328,717 @@ namespace NetOffice.MSHTMLApi.Events
 		
 		public void onhelp()
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("onhelp");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray();
-				return;
-			}
+            if (!Validate("onhelp"))
+            {
+                return;
+            }
 
-			object[] paramsArray = new object[0];
-			_eventBinding.RaiseCustomEvent("onhelp", ref paramsArray);
+            object[] paramsArray = new object[0];
+			EventBinding.RaiseCustomEvent("onhelp", ref paramsArray);
 		}
 
-		public void onclick()
+        public void onclick()
+        {
+            if (!Validate("onclick"))
+            {
+                return;
+            }
+
+            object[] paramsArray = new object[0];
+            EventBinding.RaiseCustomEvent("onclick", ref paramsArray);
+        }
+
+        public void ondblclick()
+        {
+            if (!Validate("ondblclick"))
+            {
+                return;
+            }
+
+            object[] paramsArray = new object[0];
+            EventBinding.RaiseCustomEvent("ondblclick", ref paramsArray);
+        }
+
+        public void onkeypress()
+        {
+            if (!Validate("onkeypress"))
+            {
+                return;
+            }
+
+            object[] paramsArray = new object[0];
+            EventBinding.RaiseCustomEvent("onkeypress", ref paramsArray);
+        }
+
+        public void onkeydown()
+        {
+            if (!Validate("onkeydown"))
+            {
+                return;
+            }
+
+            object[] paramsArray = new object[0];
+            EventBinding.RaiseCustomEvent("onkeydown", ref paramsArray);
+        }
+
+        public void onkeyup()
+        {
+            if (!Validate("onkeyup"))
+            {
+                return;
+            }
+
+            object[] paramsArray = new object[0];
+            EventBinding.RaiseCustomEvent("onkeyup", ref paramsArray);
+        }
+
+        public void onmouseout()
+        {
+            if (!Validate("onmouseout"))
+            {
+                return;
+            }
+
+            object[] paramsArray = new object[0];
+            EventBinding.RaiseCustomEvent("onmouseout", ref paramsArray);
+        }
+
+        public void onmouseover()
+        {
+            if (!Validate("onmouseover"))
+            {
+                return;
+            }
+
+            object[] paramsArray = new object[0];
+            EventBinding.RaiseCustomEvent("onmouseover", ref paramsArray);
+        }
+
+        public void onmousemove()
+        {
+            if (!Validate("onmousemove"))
+            {
+                return;
+            }
+
+            object[] paramsArray = new object[0];
+            EventBinding.RaiseCustomEvent("onmousemove", ref paramsArray);
+        }
+
+        public void onmousedown()
+        {
+            if (!Validate("onmousedown"))
+            {
+                return;
+            }
+
+            object[] paramsArray = new object[0];
+            EventBinding.RaiseCustomEvent("onmousedown", ref paramsArray);
+        }
+
+        public void onmouseup()
+        {
+            if (!Validate("onmouseup"))
+            {
+                return;
+            }
+
+            object[] paramsArray = new object[0];
+            EventBinding.RaiseCustomEvent("onmouseup", ref paramsArray);
+        }
+
+        public void onselectstart()
+        {
+            if (!Validate("onselectstart"))
+            {
+                return;
+            }
+
+            object[] paramsArray = new object[0];
+            EventBinding.RaiseCustomEvent("onselectstart", ref paramsArray);
+        }
+
+        public void onfilterchange()
+        {
+            if (!Validate("onfilterchange"))
+            {
+                return;
+            }
+
+            object[] paramsArray = new object[0];
+            EventBinding.RaiseCustomEvent("onfilterchange", ref paramsArray);
+        }
+
+        public void ondragstart()
+        {
+            if (!Validate("ondragstart"))
+            {
+                return;
+            }
+
+            object[] paramsArray = new object[0];
+            EventBinding.RaiseCustomEvent("ondragstart", ref paramsArray);
+        }
+
+        public void onbeforeupdate()
+        {
+            if (!Validate("onbeforeupdate"))
+            {
+                return;
+            }
+
+            object[] paramsArray = new object[0];
+            EventBinding.RaiseCustomEvent("onbeforeupdate", ref paramsArray);
+        }
+
+        public void onafterupdate()
+        {
+            if (!Validate("onafterupdate"))
+            {
+                return;
+            }
+
+            object[] paramsArray = new object[0];
+            EventBinding.RaiseCustomEvent("onafterupdate", ref paramsArray);
+        }
+
+        public void onerrorupdate()
+        {
+            if (!Validate("onerrorupdate"))
+            {
+                return;
+            }
+
+            object[] paramsArray = new object[0];
+            EventBinding.RaiseCustomEvent("onerrorupdate", ref paramsArray);
+        }
+
+        public void onrowexit()
+        {
+            if (!Validate("onrowexit"))
+            {
+                return;
+            }
+
+            object[] paramsArray = new object[0];
+            EventBinding.RaiseCustomEvent("onrowexit", ref paramsArray);
+        }
+
+        public void onrowenter()
+        {
+            if (!Validate("onrowenter"))
+            {
+                return;
+            }
+
+            object[] paramsArray = new object[0];
+            EventBinding.RaiseCustomEvent("onrowenter", ref paramsArray);
+        }
+
+        public void ondatasetchanged()
+        {
+            if (!Validate("ondatasetchanged"))
+            {
+                return;
+            }
+
+            object[] paramsArray = new object[0];
+            EventBinding.RaiseCustomEvent("ondatasetchanged", ref paramsArray);
+        }
+
+        public void ondataavailable()
+        {
+            if (!Validate("ondataavailable"))
+            {
+                return;
+            }
+
+            object[] paramsArray = new object[0];
+            EventBinding.RaiseCustomEvent("ondataavailable", ref paramsArray);
+        }
+
+        public void ondatasetcomplete()
+        {
+            if (!Validate("ondatasetcomplete"))
+            {
+                return;
+            }
+
+            object[] paramsArray = new object[0];
+            EventBinding.RaiseCustomEvent("ondatasetcomplete", ref paramsArray);
+        }
+
+        public void onlosecapture()
+        {
+            if (!Validate("onlosecapture"))
+            {
+                return;
+            }
+
+            object[] paramsArray = new object[0];
+            EventBinding.RaiseCustomEvent("onlosecapture", ref paramsArray);
+        }
+
+        public void onpropertychange()
+        {
+            if (!Validate("onpropertychange"))
+            {
+                return;
+            }
+
+            object[] paramsArray = new object[0];
+            EventBinding.RaiseCustomEvent("onpropertychange", ref paramsArray);
+        }
+
+        public void onscroll()
+        {
+            if (!Validate("onscroll"))
+            {
+                return;
+            }
+
+            object[] paramsArray = new object[0];
+            EventBinding.RaiseCustomEvent("onscroll", ref paramsArray);
+        }
+
+        public void onfocus()
+        {
+            if (!Validate("onfocus"))
+            {
+                return;
+            }
+
+            object[] paramsArray = new object[0];
+            EventBinding.RaiseCustomEvent("onfocus", ref paramsArray);
+        }
+
+        public void onblur()
+        {
+            if (!Validate("onblur"))
+            {
+                return;
+            }
+
+            object[] paramsArray = new object[0];
+            EventBinding.RaiseCustomEvent("onblur", ref paramsArray);
+        }
+
+        public void onresize()
+        {
+            if (!Validate("onresize"))
+            {
+                return;
+            }
+
+            object[] paramsArray = new object[0];
+            EventBinding.RaiseCustomEvent("onresize", ref paramsArray);
+        }
+
+        public void ondrag()
+        {
+            if (!Validate("ondrag"))
+            {
+                return;
+            }
+
+            object[] paramsArray = new object[0];
+            EventBinding.RaiseCustomEvent("ondrag", ref paramsArray);
+        }
+
+        public void ondragend()
+        {
+            if (!Validate("ondragend"))
+            {
+                return;
+            }
+
+            object[] paramsArray = new object[0];
+            EventBinding.RaiseCustomEvent("ondragend", ref paramsArray);
+        }
+
+        public void ondragenter()
+        {
+            if (!Validate("ondragenter"))
+            {
+                return;
+            }
+
+            object[] paramsArray = new object[0];
+            EventBinding.RaiseCustomEvent("ondragenter", ref paramsArray);
+        }
+
+        public void ondragover()
+        {
+            if (!Validate("ondragover"))
+            {
+                return;
+            }
+
+            object[] paramsArray = new object[0];
+            EventBinding.RaiseCustomEvent("ondragover", ref paramsArray);
+        }
+
+        public void ondragleave()
+        {
+            if (!Validate("ondragleave"))
+            {
+                return;
+            }
+
+            object[] paramsArray = new object[0];
+            EventBinding.RaiseCustomEvent("ondragleave", ref paramsArray);
+        }
+
+        public void ondrop()
+        {
+            if (!Validate("ondrop"))
+            {
+                return;
+            }
+
+            object[] paramsArray = new object[0];
+            EventBinding.RaiseCustomEvent("ondrop", ref paramsArray);
+        }
+
+        public void onbeforecut()
+        {
+            if (!Validate("onbeforecut"))
+            {
+                return;
+            }
+
+            object[] paramsArray = new object[0];
+            EventBinding.RaiseCustomEvent("onbeforecut", ref paramsArray);
+        }
+
+        public void oncut()
+        {
+            if (!Validate("oncut"))
+            {
+                return;
+            }
+
+            object[] paramsArray = new object[0];
+            EventBinding.RaiseCustomEvent("oncut", ref paramsArray);
+        }
+
+        public void onbeforecopy()
+        {
+            if (!Validate("onbeforecopy"))
+            {
+                return;
+            }
+
+            object[] paramsArray = new object[0];
+            EventBinding.RaiseCustomEvent("onbeforecopy", ref paramsArray);
+        }
+
+        public void oncopy()
+        {
+            if (!Validate("oncopy"))
+            {
+                return;
+            }
+
+            object[] paramsArray = new object[0];
+            EventBinding.RaiseCustomEvent("oncopy", ref paramsArray);
+        }
+
+        public void onbeforepaste()
+        {
+            if (!Validate("onbeforepaste"))
+            {
+                return;
+            }
+
+            object[] paramsArray = new object[0];
+            EventBinding.RaiseCustomEvent("onbeforepaste", ref paramsArray);
+        }
+
+        public void onpaste()
+        {
+            if (!Validate("onpaste"))
+            {
+                return;
+            }
+
+            object[] paramsArray = new object[0];
+            EventBinding.RaiseCustomEvent("onpaste", ref paramsArray);
+        }
+
+        public void oncontextmenu()
+        {
+            if (!Validate("oncontextmenu"))
+            {
+                return;
+            }
+
+            object[] paramsArray = new object[0];
+            EventBinding.RaiseCustomEvent("oncontextmenu", ref paramsArray);
+        }
+
+        public void onrowsdelete()
+        {
+            if (!Validate("onrowsdelete"))
+            {
+                return;
+            }
+
+            object[] paramsArray = new object[0];
+            EventBinding.RaiseCustomEvent("onrowsdelete", ref paramsArray);
+        }
+
+        public void onrowsinserted()
+        {
+            if (!Validate("onrowsinserted"))
+            {
+                return;
+            }
+
+            object[] paramsArray = new object[0];
+            EventBinding.RaiseCustomEvent("onrowsinserted", ref paramsArray);
+        }
+
+        public void oncellchange()
+        {
+            if (!Validate("oncellchange"))
+            {
+                return;
+            }
+
+            object[] paramsArray = new object[0];
+            EventBinding.RaiseCustomEvent("oncellchange", ref paramsArray);
+        }
+
+        public void onreadystatechange()
+        {
+            if (!Validate("onreadystatechange"))
+            {
+                return;
+            }
+
+            object[] paramsArray = new object[0];
+            EventBinding.RaiseCustomEvent("onreadystatechange", ref paramsArray);
+        }
+
+        public void onbeforeeditfocus()
+        {
+            if (!Validate("onbeforeeditfocus"))
+            {
+                return;
+            }
+
+            object[] paramsArray = new object[0];
+            EventBinding.RaiseCustomEvent("onbeforeeditfocus", ref paramsArray);
+        }
+
+        public void onlayoutcomplete()
+        {
+            if (!Validate("onlayoutcomplete"))
+            {
+                return;
+            }
+
+            object[] paramsArray = new object[0];
+            EventBinding.RaiseCustomEvent("onlayoutcomplete", ref paramsArray);
+        }
+
+        public void onpage()
+        {
+            if (!Validate("onpage"))
+            {
+                return;
+            }
+
+            object[] paramsArray = new object[0];
+            EventBinding.RaiseCustomEvent("onpage", ref paramsArray);
+        }
+
+        public void onbeforedeactivate()
+        {
+            if (!Validate("onbeforedeactivate"))
+            {
+                return;
+            }
+
+            object[] paramsArray = new object[0];
+            EventBinding.RaiseCustomEvent("onbeforedeactivate", ref paramsArray);
+        }
+
+        public void onbeforeactivate()
+        {
+            if (!Validate("onbeforeactivate"))
+            {
+                return;
+            }
+
+            object[] paramsArray = new object[0];
+            EventBinding.RaiseCustomEvent("onbeforeactivate", ref paramsArray);
+        }
+
+        public void onmove()
+        {
+            if (!Validate("onmove"))
+            {
+                return;
+            }
+
+            object[] paramsArray = new object[0];
+            EventBinding.RaiseCustomEvent("onmove", ref paramsArray);
+        }
+
+        public void oncontrolselect()
+        {
+            if (!Validate("oncontrolselect"))
+            {
+                return;
+            }
+
+            object[] paramsArray = new object[0];
+            EventBinding.RaiseCustomEvent("oncontrolselect", ref paramsArray);
+        }
+
+        public void onmovestart()
+        {
+            if (!Validate("onmovestart"))
+            {
+                return;
+            }
+
+            object[] paramsArray = new object[0];
+            EventBinding.RaiseCustomEvent("onmovestart", ref paramsArray);
+        }
+
+        public void onmoveend()
+        {
+            if (!Validate("onmoveend"))
+            {
+                return;
+            }
+
+            object[] paramsArray = new object[0];
+            EventBinding.RaiseCustomEvent("onmoveend", ref paramsArray);
+        }
+
+        public void onresizestart()
+        {
+            if (!Validate("onresizestart"))
+            {
+                return;
+            }
+
+            object[] paramsArray = new object[0];
+            EventBinding.RaiseCustomEvent("onresizestart", ref paramsArray);
+        }
+
+        public void onresizeend()
+        {
+            if (!Validate("onresizeend"))
+            {
+                return;
+            }
+
+            object[] paramsArray = new object[0];
+            EventBinding.RaiseCustomEvent("onresizeend", ref paramsArray);
+        }
+
+        public void onmouseenter()
+        {
+            if (!Validate("onmouseenter"))
+            {
+                return;
+            }
+
+            object[] paramsArray = new object[0];
+            EventBinding.RaiseCustomEvent("onmouseenter", ref paramsArray);
+        }
+
+        public void onmouseleave()
+        {
+            if (!Validate("onmouseleave"))
+            {
+                return;
+            }
+
+            object[] paramsArray = new object[0];
+            EventBinding.RaiseCustomEvent("onmouseleave", ref paramsArray);
+        }
+
+        public void onmousewheel()
+        {
+            if (!Validate("onmousewheel"))
+            {
+                return;
+            }
+
+            object[] paramsArray = new object[0];
+            EventBinding.RaiseCustomEvent("onmousewheel", ref paramsArray);
+        }
+
+        public void onactivate()
+        {
+            if (!Validate("onactivate"))
+            {
+                return;
+            }
+
+            object[] paramsArray = new object[0];
+            EventBinding.RaiseCustomEvent("onactivate", ref paramsArray);
+        }
+
+        public void ondeactivate()
+        {
+            if (!Validate("ondeactivate"))
+            {
+                return;
+            }
+
+            object[] paramsArray = new object[0];
+            EventBinding.RaiseCustomEvent("ondeactivate", ref paramsArray);
+        }
+
+        public void onfocusin()
+        {
+            if (!Validate("onfocusin"))
+            {
+                return;
+            }
+
+            object[] paramsArray = new object[0];
+            EventBinding.RaiseCustomEvent("onfocusin", ref paramsArray);
+        }
+
+        public void onfocusout()
+        {
+            if (!Validate("onfocusout"))
+            {
+                return;
+            }
+
+            object[] paramsArray = new object[0];
+            EventBinding.RaiseCustomEvent("onfocusout", ref paramsArray);
+        }
+
+        public void onsubmit()
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("onclick");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray();
-				return;
-			}
-
-			object[] paramsArray = new object[0];
-			_eventBinding.RaiseCustomEvent("onclick", ref paramsArray);
-		}
-
-		public void ondblclick()
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("ondblclick");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray();
-				return;
-			}
-
-			object[] paramsArray = new object[0];
-			_eventBinding.RaiseCustomEvent("ondblclick", ref paramsArray);
-		}
-
-		public void onkeypress()
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("onkeypress");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray();
-				return;
-			}
-
-			object[] paramsArray = new object[0];
-			_eventBinding.RaiseCustomEvent("onkeypress", ref paramsArray);
-		}
-
-		public void onkeydown()
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("onkeydown");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray();
-				return;
-			}
-
-			object[] paramsArray = new object[0];
-			_eventBinding.RaiseCustomEvent("onkeydown", ref paramsArray);
-		}
-
-		public void onkeyup()
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("onkeyup");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray();
-				return;
-			}
-
-			object[] paramsArray = new object[0];
-			_eventBinding.RaiseCustomEvent("onkeyup", ref paramsArray);
-		}
-
-		public void onmouseout()
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("onmouseout");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray();
-				return;
-			}
-
-			object[] paramsArray = new object[0];
-			_eventBinding.RaiseCustomEvent("onmouseout", ref paramsArray);
-		}
-
-		public void onmouseover()
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("onmouseover");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray();
-				return;
-			}
-
-			object[] paramsArray = new object[0];
-			_eventBinding.RaiseCustomEvent("onmouseover", ref paramsArray);
-		}
-
-		public void onmousemove()
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("onmousemove");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray();
-				return;
-			}
-
-			object[] paramsArray = new object[0];
-			_eventBinding.RaiseCustomEvent("onmousemove", ref paramsArray);
-		}
-
-		public void onmousedown()
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("onmousedown");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray();
-				return;
-			}
-
-			object[] paramsArray = new object[0];
-			_eventBinding.RaiseCustomEvent("onmousedown", ref paramsArray);
-		}
-
-		public void onmouseup()
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("onmouseup");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray();
-				return;
-			}
-
-			object[] paramsArray = new object[0];
-			_eventBinding.RaiseCustomEvent("onmouseup", ref paramsArray);
-		}
-
-		public void onselectstart()
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("onselectstart");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray();
-				return;
-			}
-
-			object[] paramsArray = new object[0];
-			_eventBinding.RaiseCustomEvent("onselectstart", ref paramsArray);
-		}
-
-		public void onfilterchange()
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("onfilterchange");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray();
-				return;
-			}
-
-			object[] paramsArray = new object[0];
-			_eventBinding.RaiseCustomEvent("onfilterchange", ref paramsArray);
-		}
-
-		public void ondragstart()
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("ondragstart");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray();
-				return;
-			}
-
-			object[] paramsArray = new object[0];
-			_eventBinding.RaiseCustomEvent("ondragstart", ref paramsArray);
-		}
-
-		public void onbeforeupdate()
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("onbeforeupdate");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray();
-				return;
-			}
-
-			object[] paramsArray = new object[0];
-			_eventBinding.RaiseCustomEvent("onbeforeupdate", ref paramsArray);
-		}
-
-		public void onafterupdate()
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("onafterupdate");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray();
-				return;
-			}
-
-			object[] paramsArray = new object[0];
-			_eventBinding.RaiseCustomEvent("onafterupdate", ref paramsArray);
-		}
-
-		public void onerrorupdate()
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("onerrorupdate");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray();
-				return;
-			}
-
-			object[] paramsArray = new object[0];
-			_eventBinding.RaiseCustomEvent("onerrorupdate", ref paramsArray);
-		}
-
-		public void onrowexit()
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("onrowexit");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray();
-				return;
-			}
-
-			object[] paramsArray = new object[0];
-			_eventBinding.RaiseCustomEvent("onrowexit", ref paramsArray);
-		}
-
-		public void onrowenter()
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("onrowenter");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray();
-				return;
-			}
-
-			object[] paramsArray = new object[0];
-			_eventBinding.RaiseCustomEvent("onrowenter", ref paramsArray);
-		}
-
-		public void ondatasetchanged()
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("ondatasetchanged");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray();
-				return;
-			}
-
-			object[] paramsArray = new object[0];
-			_eventBinding.RaiseCustomEvent("ondatasetchanged", ref paramsArray);
-		}
-
-		public void ondataavailable()
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("ondataavailable");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray();
-				return;
-			}
-
-			object[] paramsArray = new object[0];
-			_eventBinding.RaiseCustomEvent("ondataavailable", ref paramsArray);
-		}
-
-		public void ondatasetcomplete()
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("ondatasetcomplete");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray();
-				return;
-			}
-
-			object[] paramsArray = new object[0];
-			_eventBinding.RaiseCustomEvent("ondatasetcomplete", ref paramsArray);
-		}
-
-		public void onlosecapture()
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("onlosecapture");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray();
-				return;
-			}
-
-			object[] paramsArray = new object[0];
-			_eventBinding.RaiseCustomEvent("onlosecapture", ref paramsArray);
-		}
-
-		public void onpropertychange()
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("onpropertychange");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray();
-				return;
-			}
-
-			object[] paramsArray = new object[0];
-			_eventBinding.RaiseCustomEvent("onpropertychange", ref paramsArray);
-		}
-
-		public void onscroll()
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("onscroll");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray();
-				return;
-			}
-
-			object[] paramsArray = new object[0];
-			_eventBinding.RaiseCustomEvent("onscroll", ref paramsArray);
-		}
-
-		public void onfocus()
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("onfocus");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray();
-				return;
-			}
-
-			object[] paramsArray = new object[0];
-			_eventBinding.RaiseCustomEvent("onfocus", ref paramsArray);
-		}
-
-		public void onblur()
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("onblur");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray();
-				return;
-			}
-
-			object[] paramsArray = new object[0];
-			_eventBinding.RaiseCustomEvent("onblur", ref paramsArray);
-		}
-
-		public void onresize()
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("onresize");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray();
-				return;
-			}
-
-			object[] paramsArray = new object[0];
-			_eventBinding.RaiseCustomEvent("onresize", ref paramsArray);
-		}
-
-		public void ondrag()
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("ondrag");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray();
-				return;
-			}
-
-			object[] paramsArray = new object[0];
-			_eventBinding.RaiseCustomEvent("ondrag", ref paramsArray);
-		}
-
-		public void ondragend()
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("ondragend");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray();
-				return;
-			}
-
-			object[] paramsArray = new object[0];
-			_eventBinding.RaiseCustomEvent("ondragend", ref paramsArray);
-		}
-
-		public void ondragenter()
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("ondragenter");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray();
-				return;
-			}
-
-			object[] paramsArray = new object[0];
-			_eventBinding.RaiseCustomEvent("ondragenter", ref paramsArray);
-		}
-
-		public void ondragover()
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("ondragover");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray();
-				return;
-			}
-
-			object[] paramsArray = new object[0];
-			_eventBinding.RaiseCustomEvent("ondragover", ref paramsArray);
-		}
-
-		public void ondragleave()
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("ondragleave");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray();
-				return;
-			}
-
-			object[] paramsArray = new object[0];
-			_eventBinding.RaiseCustomEvent("ondragleave", ref paramsArray);
-		}
-
-		public void ondrop()
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("ondrop");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray();
-				return;
-			}
-
-			object[] paramsArray = new object[0];
-			_eventBinding.RaiseCustomEvent("ondrop", ref paramsArray);
-		}
-
-		public void onbeforecut()
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("onbeforecut");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray();
-				return;
-			}
-
-			object[] paramsArray = new object[0];
-			_eventBinding.RaiseCustomEvent("onbeforecut", ref paramsArray);
-		}
-
-		public void oncut()
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("oncut");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray();
-				return;
-			}
-
-			object[] paramsArray = new object[0];
-			_eventBinding.RaiseCustomEvent("oncut", ref paramsArray);
-		}
-
-		public void onbeforecopy()
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("onbeforecopy");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray();
-				return;
-			}
-
-			object[] paramsArray = new object[0];
-			_eventBinding.RaiseCustomEvent("onbeforecopy", ref paramsArray);
-		}
-
-		public void oncopy()
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("oncopy");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray();
-				return;
-			}
-
-			object[] paramsArray = new object[0];
-			_eventBinding.RaiseCustomEvent("oncopy", ref paramsArray);
-		}
-
-		public void onbeforepaste()
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("onbeforepaste");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray();
-				return;
-			}
-
-			object[] paramsArray = new object[0];
-			_eventBinding.RaiseCustomEvent("onbeforepaste", ref paramsArray);
-		}
-
-		public void onpaste()
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("onpaste");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray();
-				return;
-			}
-
-			object[] paramsArray = new object[0];
-			_eventBinding.RaiseCustomEvent("onpaste", ref paramsArray);
-		}
-
-		public void oncontextmenu()
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("oncontextmenu");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray();
-				return;
-			}
-
-			object[] paramsArray = new object[0];
-			_eventBinding.RaiseCustomEvent("oncontextmenu", ref paramsArray);
-		}
-
-		public void onrowsdelete()
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("onrowsdelete");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray();
-				return;
-			}
-
-			object[] paramsArray = new object[0];
-			_eventBinding.RaiseCustomEvent("onrowsdelete", ref paramsArray);
-		}
-
-		public void onrowsinserted()
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("onrowsinserted");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray();
-				return;
-			}
-
-			object[] paramsArray = new object[0];
-			_eventBinding.RaiseCustomEvent("onrowsinserted", ref paramsArray);
-		}
-
-		public void oncellchange()
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("oncellchange");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray();
-				return;
-			}
-
-			object[] paramsArray = new object[0];
-			_eventBinding.RaiseCustomEvent("oncellchange", ref paramsArray);
-		}
-
-		public void onreadystatechange()
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("onreadystatechange");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray();
-				return;
-			}
-
-			object[] paramsArray = new object[0];
-			_eventBinding.RaiseCustomEvent("onreadystatechange", ref paramsArray);
-		}
-
-		public void onbeforeeditfocus()
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("onbeforeeditfocus");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray();
-				return;
-			}
-
-			object[] paramsArray = new object[0];
-			_eventBinding.RaiseCustomEvent("onbeforeeditfocus", ref paramsArray);
-		}
-
-		public void onlayoutcomplete()
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("onlayoutcomplete");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray();
-				return;
-			}
-
-			object[] paramsArray = new object[0];
-			_eventBinding.RaiseCustomEvent("onlayoutcomplete", ref paramsArray);
-		}
-
-		public void onpage()
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("onpage");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray();
-				return;
-			}
-
-			object[] paramsArray = new object[0];
-			_eventBinding.RaiseCustomEvent("onpage", ref paramsArray);
-		}
-
-		public void onbeforedeactivate()
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("onbeforedeactivate");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray();
-				return;
-			}
-
-			object[] paramsArray = new object[0];
-			_eventBinding.RaiseCustomEvent("onbeforedeactivate", ref paramsArray);
-		}
-
-		public void onbeforeactivate()
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("onbeforeactivate");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray();
-				return;
-			}
-
-			object[] paramsArray = new object[0];
-			_eventBinding.RaiseCustomEvent("onbeforeactivate", ref paramsArray);
-		}
-
-		public void onmove()
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("onmove");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray();
-				return;
-			}
-
-			object[] paramsArray = new object[0];
-			_eventBinding.RaiseCustomEvent("onmove", ref paramsArray);
-		}
-
-		public void oncontrolselect()
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("oncontrolselect");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray();
-				return;
-			}
-
-			object[] paramsArray = new object[0];
-			_eventBinding.RaiseCustomEvent("oncontrolselect", ref paramsArray);
-		}
-
-		public void onmovestart()
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("onmovestart");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray();
-				return;
-			}
-
-			object[] paramsArray = new object[0];
-			_eventBinding.RaiseCustomEvent("onmovestart", ref paramsArray);
-		}
-
-		public void onmoveend()
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("onmoveend");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray();
-				return;
-			}
-
-			object[] paramsArray = new object[0];
-			_eventBinding.RaiseCustomEvent("onmoveend", ref paramsArray);
-		}
-
-		public void onresizestart()
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("onresizestart");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray();
-				return;
-			}
-
-			object[] paramsArray = new object[0];
-			_eventBinding.RaiseCustomEvent("onresizestart", ref paramsArray);
-		}
-
-		public void onresizeend()
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("onresizeend");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray();
-				return;
-			}
-
-			object[] paramsArray = new object[0];
-			_eventBinding.RaiseCustomEvent("onresizeend", ref paramsArray);
-		}
-
-		public void onmouseenter()
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("onmouseenter");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray();
-				return;
-			}
-
-			object[] paramsArray = new object[0];
-			_eventBinding.RaiseCustomEvent("onmouseenter", ref paramsArray);
-		}
-
-		public void onmouseleave()
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("onmouseleave");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray();
-				return;
-			}
-
-			object[] paramsArray = new object[0];
-			_eventBinding.RaiseCustomEvent("onmouseleave", ref paramsArray);
-		}
-
-		public void onmousewheel()
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("onmousewheel");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray();
-				return;
-			}
-
-			object[] paramsArray = new object[0];
-			_eventBinding.RaiseCustomEvent("onmousewheel", ref paramsArray);
-		}
-
-		public void onactivate()
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("onactivate");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray();
-				return;
-			}
-
-			object[] paramsArray = new object[0];
-			_eventBinding.RaiseCustomEvent("onactivate", ref paramsArray);
-		}
-
-		public void ondeactivate()
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("ondeactivate");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray();
-				return;
-			}
-
-			object[] paramsArray = new object[0];
-			_eventBinding.RaiseCustomEvent("ondeactivate", ref paramsArray);
-		}
-
-		public void onfocusin()
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("onfocusin");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray();
-				return;
-			}
-
-			object[] paramsArray = new object[0];
-			_eventBinding.RaiseCustomEvent("onfocusin", ref paramsArray);
-		}
-
-		public void onfocusout()
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("onfocusout");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray();
-				return;
-			}
-
-			object[] paramsArray = new object[0];
-			_eventBinding.RaiseCustomEvent("onfocusout", ref paramsArray);
-		}
-
-		public void onsubmit()
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("onsubmit");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray();
-				return;
-			}
-
-			object[] paramsArray = new object[0];
-			_eventBinding.RaiseCustomEvent("onsubmit", ref paramsArray);
+            if (!Validate("onsubmit"))
+            {
+                return;
+            }
+
+            object[] paramsArray = new object[0];
+			EventBinding.RaiseCustomEvent("onsubmit", ref paramsArray);
 		}
 
 		public void onreset()
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("onreset");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray();
-				return;
-			}
+            if (!Validate("onreset"))
+            {
+                return;
+            }
 
-			object[] paramsArray = new object[0];
-			_eventBinding.RaiseCustomEvent("onreset", ref paramsArray);
+            object[] paramsArray = new object[0];
+			EventBinding.RaiseCustomEvent("onreset", ref paramsArray);
 		}
 
 		#endregion

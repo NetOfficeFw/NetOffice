@@ -134,193 +134,156 @@ namespace NetOffice.OWC10Api.Events
 		public static readonly string Id = "F5B39A7A-1480-11D3-8549-00C04FAC67D7";
 		
 		#endregion
-	
-		#region Fields
 
-		private IEventBinding	_eventBinding;
-        private ICOMObject _eventClass;
-        
-		#endregion
-		
-		#region Construction
+		#region Ctor
 
 		public IChartEvents_SinkHelper(ICOMObject eventClass, IConnectionPoint connectPoint): base(eventClass)
 		{
-			_eventClass = eventClass;
-			_eventBinding = (IEventBinding)eventClass;
 			SetupEventBinding(connectPoint);
 		}
 		
 		#endregion
-		
-		#region Properties
 
-        internal Core Factory
-        {
-            get
-            {
-                if (null != _eventClass)
-                    return _eventClass.Factory;
-                else
-                    return Core.Default;
-            }
-        }
-
-        #endregion
-
-		#region IChartEvents Members
+		#region IChartEvents
 		
 		public void DataSetChange()
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("DataSetChange");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray();
-				return;
-			}
+            if (!Validate("DataSetChange"))
+            {
+                return;
+            }
 
-			object[] paramsArray = new object[0];
-			_eventBinding.RaiseCustomEvent("DataSetChange", ref paramsArray);
+            object[] paramsArray = new object[0];
+			EventBinding.RaiseCustomEvent("DataSetChange", ref paramsArray);
 		}
 
 		public void DblClick()
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("DblClick");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray();
-				return;
-			}
+            if (!Validate("DblClick"))
+            {
+                return;
+            }
 
-			object[] paramsArray = new object[0];
-			_eventBinding.RaiseCustomEvent("DblClick", ref paramsArray);
+            object[] paramsArray = new object[0];
+			EventBinding.RaiseCustomEvent("DblClick", ref paramsArray);
 		}
 
 		public void Click()
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("Click");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray();
-				return;
-			}
+            if (!Validate("Click"))
+            {
+                return;
+            }
 
-			object[] paramsArray = new object[0];
-			_eventBinding.RaiseCustomEvent("Click", ref paramsArray);
+            object[] paramsArray = new object[0];
+			EventBinding.RaiseCustomEvent("Click", ref paramsArray);
 		}
 
 		public void KeyDown([In] object keyCode, [In] object shift)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("KeyDown");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(keyCode, shift);
-				return;
-			}
+            if (!Validate("KeyDown"))
+            {
+                Invoker.ReleaseParamsArray(keyCode, shift);
+                return;
+            }
 
 			Int32 newKeyCode = Convert.ToInt32(keyCode);
 			Int32 newShift = Convert.ToInt32(shift);
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newKeyCode;
 			paramsArray[1] = newShift;
-			_eventBinding.RaiseCustomEvent("KeyDown", ref paramsArray);
+			EventBinding.RaiseCustomEvent("KeyDown", ref paramsArray);
 		}
 
 		public void KeyUp([In] object keyCode, [In] object shift)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("KeyUp");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(keyCode, shift);
-				return;
-			}
+            if (!Validate("KeyUp"))
+            {
+                Invoker.ReleaseParamsArray(keyCode, shift);
+                return;
+            }
 
-			Int32 newKeyCode = Convert.ToInt32(keyCode);
+            Int32 newKeyCode = Convert.ToInt32(keyCode);
 			Int32 newShift = Convert.ToInt32(shift);
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newKeyCode;
 			paramsArray[1] = newShift;
-			_eventBinding.RaiseCustomEvent("KeyUp", ref paramsArray);
+			EventBinding.RaiseCustomEvent("KeyUp", ref paramsArray);
 		}
 
 		public void KeyPress([In] object keyAscii)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("KeyPress");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(keyAscii);
-				return;
-			}
+        {
+            if (!Validate("KeyPress"))
+            {
+                Invoker.ReleaseParamsArray(keyAscii);
+                return;
+            }
 
 			Int32 newKeyAscii = Convert.ToInt32(keyAscii);
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newKeyAscii;
-			_eventBinding.RaiseCustomEvent("KeyPress", ref paramsArray);
+			EventBinding.RaiseCustomEvent("KeyPress", ref paramsArray);
 		}
 
 		public void BeforeKeyDown([In] object keyCode, [In] object shift, [In, MarshalAs(UnmanagedType.IDispatch)] object cancel)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("BeforeKeyDown");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(keyCode, shift, cancel);
-				return;
-			}
+            if (!Validate("BeforeKeyDown"))
+            {
+                Invoker.ReleaseParamsArray(keyCode, shift, cancel);
+                return;
+            }
 
 			Int32 newKeyCode = Convert.ToInt32(keyCode);
 			Int32 newShift = Convert.ToInt32(shift);
-			NetOffice.OWC10Api.ByRef newCancel = Factory.CreateObjectFromComProxy(_eventClass, cancel) as NetOffice.OWC10Api.ByRef;
+			NetOffice.OWC10Api.ByRef newCancel = Factory.CreateKnownObjectFromComProxy<NetOffice.OWC10Api.ByRef>(EventClass, cancel, NetOffice.OWC10Api.ByRef.LateBindingApiWrapperType);
 			object[] paramsArray = new object[3];
 			paramsArray[0] = newKeyCode;
 			paramsArray[1] = newShift;
 			paramsArray[2] = newCancel;
-			_eventBinding.RaiseCustomEvent("BeforeKeyDown", ref paramsArray);
+			EventBinding.RaiseCustomEvent("BeforeKeyDown", ref paramsArray);
 		}
 
 		public void BeforeKeyUp([In] object keyCode, [In] object shift, [In, MarshalAs(UnmanagedType.IDispatch)] object cancel)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("BeforeKeyUp");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(keyCode, shift, cancel);
-				return;
-			}
+        {
+            if (!Validate("BeforeKeyUp"))
+            {
+                Invoker.ReleaseParamsArray(keyCode, shift, cancel);
+                return;
+            }
 
 			Int32 newKeyCode = Convert.ToInt32(keyCode);
 			Int32 newShift = Convert.ToInt32(shift);
-			NetOffice.OWC10Api.ByRef newCancel = Factory.CreateObjectFromComProxy(_eventClass, cancel) as NetOffice.OWC10Api.ByRef;
-			object[] paramsArray = new object[3];
+            NetOffice.OWC10Api.ByRef newCancel = Factory.CreateKnownObjectFromComProxy<NetOffice.OWC10Api.ByRef>(EventClass, cancel, NetOffice.OWC10Api.ByRef.LateBindingApiWrapperType);
+            object[] paramsArray = new object[3];
 			paramsArray[0] = newKeyCode;
 			paramsArray[1] = newShift;
 			paramsArray[2] = newCancel;
-			_eventBinding.RaiseCustomEvent("BeforeKeyUp", ref paramsArray);
+			EventBinding.RaiseCustomEvent("BeforeKeyUp", ref paramsArray);
 		}
 
 		public void BeforeKeyPress([In] object keyAscii, [In, MarshalAs(UnmanagedType.IDispatch)] object cancel)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("BeforeKeyPress");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(keyAscii, cancel);
-				return;
-			}
+            if (!Validate("BeforeKeyPress"))
+            {
+                Invoker.ReleaseParamsArray(keyAscii, cancel);
+                return;
+            }
 
 			Int32 newKeyAscii = Convert.ToInt32(keyAscii);
-			NetOffice.OWC10Api.ByRef newCancel = Factory.CreateObjectFromComProxy(_eventClass, cancel) as NetOffice.OWC10Api.ByRef;
-			object[] paramsArray = new object[2];
+            NetOffice.OWC10Api.ByRef newCancel = Factory.CreateKnownObjectFromComProxy<NetOffice.OWC10Api.ByRef>(EventClass, cancel, NetOffice.OWC10Api.ByRef.LateBindingApiWrapperType);
+            object[] paramsArray = new object[2];
 			paramsArray[0] = newKeyAscii;
 			paramsArray[1] = newCancel;
-			_eventBinding.RaiseCustomEvent("BeforeKeyPress", ref paramsArray);
+			EventBinding.RaiseCustomEvent("BeforeKeyPress", ref paramsArray);
 		}
 
 		public void MouseDown([In] object button, [In] object shift, [In] object x, [In] object y)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("MouseDown");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(button, shift, x, y);
-				return;
-			}
+        {
+            if (!Validate("MouseDown"))
+            {
+                Invoker.ReleaseParamsArray(button, shift, x, y);
+                return;
+            }
 
 			Int32 newButton = Convert.ToInt32(button);
 			Int32 newShift = Convert.ToInt32(shift);
@@ -331,19 +294,18 @@ namespace NetOffice.OWC10Api.Events
 			paramsArray[1] = newShift;
 			paramsArray[2] = newx;
 			paramsArray[3] = newy;
-			_eventBinding.RaiseCustomEvent("MouseDown", ref paramsArray);
+			EventBinding.RaiseCustomEvent("MouseDown", ref paramsArray);
 		}
 
 		public void MouseMove([In] object button, [In] object shift, [In] object x, [In] object y)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("MouseMove");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(button, shift, x, y);
-				return;
-			}
+            if (!Validate("MouseMove"))
+            {
+                Invoker.ReleaseParamsArray(button, shift, x, y);
+                return;
+            }
 
-			Int32 newButton = Convert.ToInt32(button);
+            Int32 newButton = Convert.ToInt32(button);
 			Int32 newShift = Convert.ToInt32(shift);
 			Int32 newx = Convert.ToInt32(x);
 			Int32 newy = Convert.ToInt32(y);
@@ -352,19 +314,18 @@ namespace NetOffice.OWC10Api.Events
 			paramsArray[1] = newShift;
 			paramsArray[2] = newx;
 			paramsArray[3] = newy;
-			_eventBinding.RaiseCustomEvent("MouseMove", ref paramsArray);
+			EventBinding.RaiseCustomEvent("MouseMove", ref paramsArray);
 		}
 
 		public void MouseUp([In] object button, [In] object shift, [In] object x, [In] object y)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("MouseUp");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(button, shift, x, y);
-				return;
-			}
+            if (!Validate("MouseUp"))
+            {
+                Invoker.ReleaseParamsArray(button, shift, x, y);
+                return;
+            }
 
-			Int32 newButton = Convert.ToInt32(button);
+            Int32 newButton = Convert.ToInt32(button);
 			Int32 newShift = Convert.ToInt32(shift);
 			Int32 newx = Convert.ToInt32(x);
 			Int32 newy = Convert.ToInt32(y);
@@ -373,239 +334,223 @@ namespace NetOffice.OWC10Api.Events
 			paramsArray[1] = newShift;
 			paramsArray[2] = newx;
 			paramsArray[3] = newy;
-			_eventBinding.RaiseCustomEvent("MouseUp", ref paramsArray);
+			EventBinding.RaiseCustomEvent("MouseUp", ref paramsArray);
 		}
 
 		public void MouseWheel([In] object page, [In] object count)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("MouseWheel");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(page, count);
-				return;
-			}
+            if (!Validate("MouseWheel"))
+            {
+                Invoker.ReleaseParamsArray(page, count);
+                return;
+            }
 
 			bool newPage = Convert.ToBoolean(page);
 			Int32 newCount = Convert.ToInt32(count);
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newPage;
 			paramsArray[1] = newCount;
-			_eventBinding.RaiseCustomEvent("MouseWheel", ref paramsArray);
+			EventBinding.RaiseCustomEvent("MouseWheel", ref paramsArray);
 		}
 
 		public void SelectionChange()
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("SelectionChange");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray();
-				return;
-			}
+            if (!Validate("SelectionChange"))
+            {
+                return;
+            }
 
-			object[] paramsArray = new object[0];
-			_eventBinding.RaiseCustomEvent("SelectionChange", ref paramsArray);
+            object[] paramsArray = new object[0];
+			EventBinding.RaiseCustomEvent("SelectionChange", ref paramsArray);
 		}
 
 		public void BeforeScreenTip([In, MarshalAs(UnmanagedType.IDispatch)] object tipText, [In, MarshalAs(UnmanagedType.IDispatch)] object contextObject)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("BeforeScreenTip");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(tipText, contextObject);
-				return;
-			}
+        {
+            if (!Validate("BeforeScreenTip"))
+            {
+                Invoker.ReleaseParamsArray(tipText, contextObject);
+                return;
+            }
 
-			NetOffice.OWC10Api.ByRef newTipText = Factory.CreateObjectFromComProxy(_eventClass, tipText) as NetOffice.OWC10Api.ByRef;
-			object newContextObject = Factory.CreateObjectFromComProxy(_eventClass, contextObject) as object;
+			NetOffice.OWC10Api.ByRef newTipText = Factory.CreateKnownObjectFromComProxy<NetOffice.OWC10Api.ByRef>(EventClass, tipText, NetOffice.OWC10Api.ByRef.LateBindingApiWrapperType);
+			object newContextObject = Factory.CreateEventArgumentObjectFromComProxy(EventClass, contextObject) as object;
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newTipText;
 			paramsArray[1] = newContextObject;
-			_eventBinding.RaiseCustomEvent("BeforeScreenTip", ref paramsArray);
+			EventBinding.RaiseCustomEvent("BeforeScreenTip", ref paramsArray);
 		}
 
 		public void CommandEnabled([In] object command, [In, MarshalAs(UnmanagedType.IDispatch)] object enabled)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("CommandEnabled");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(command, enabled);
-				return;
-			}
+        {
+            if (!Validate("CommandEnabled"))
+            {
+                Invoker.ReleaseParamsArray(command, enabled);
+                return;
+            }
 
 			object newCommand = (object)command;
-			NetOffice.OWC10Api.ByRef newEnabled = Factory.CreateObjectFromComProxy(_eventClass, enabled) as NetOffice.OWC10Api.ByRef;
-			object[] paramsArray = new object[2];
+            NetOffice.OWC10Api.ByRef newEnabled = Factory.CreateKnownObjectFromComProxy<NetOffice.OWC10Api.ByRef>(EventClass, enabled, NetOffice.OWC10Api.ByRef.LateBindingApiWrapperType);
+            object[] paramsArray = new object[2];
 			paramsArray[0] = newCommand;
 			paramsArray[1] = newEnabled;
-			_eventBinding.RaiseCustomEvent("CommandEnabled", ref paramsArray);
+			EventBinding.RaiseCustomEvent("CommandEnabled", ref paramsArray);
 		}
 
 		public void CommandChecked([In] object command, [In, MarshalAs(UnmanagedType.IDispatch)] object _checked)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("CommandChecked");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(command, _checked);
-				return;
-			}
+        {
+            if (!Validate("CommandChecked"))
+            {
+                Invoker.ReleaseParamsArray(command, _checked);
+                return;
+            }
 
 			object newCommand = (object)command;
-			NetOffice.OWC10Api.ByRef newChecked = Factory.CreateObjectFromComProxy(_eventClass, _checked) as NetOffice.OWC10Api.ByRef;
-			object[] paramsArray = new object[2];
+            NetOffice.OWC10Api.ByRef newChecked = Factory.CreateKnownObjectFromComProxy<NetOffice.OWC10Api.ByRef>(EventClass, _checked, NetOffice.OWC10Api.ByRef.LateBindingApiWrapperType);
+            object[] paramsArray = new object[2];
 			paramsArray[0] = newCommand;
 			paramsArray[1] = newChecked;
-			_eventBinding.RaiseCustomEvent("CommandChecked", ref paramsArray);
+			EventBinding.RaiseCustomEvent("CommandChecked", ref paramsArray);
 		}
 
 		public void CommandTipText([In] object command, [In, MarshalAs(UnmanagedType.IDispatch)] object caption)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("CommandTipText");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(command, caption);
-				return;
-			}
-
+        {
+            if (!Validate("CommandTipText"))
+            {
+                Invoker.ReleaseParamsArray(command, caption);
+                return;
+            }
+            
 			object newCommand = (object)command;
-			NetOffice.OWC10Api.ByRef newCaption = Factory.CreateObjectFromComProxy(_eventClass, caption) as NetOffice.OWC10Api.ByRef;
-			object[] paramsArray = new object[2];
+            NetOffice.OWC10Api.ByRef newCaption = Factory.CreateKnownObjectFromComProxy<NetOffice.OWC10Api.ByRef>(EventClass, command, NetOffice.OWC10Api.ByRef.LateBindingApiWrapperType);
+            object[] paramsArray = new object[2];
 			paramsArray[0] = newCommand;
 			paramsArray[1] = newCaption;
-			_eventBinding.RaiseCustomEvent("CommandTipText", ref paramsArray);
+			EventBinding.RaiseCustomEvent("CommandTipText", ref paramsArray);
 		}
 
 		public void CommandBeforeExecute([In] object command, [In, MarshalAs(UnmanagedType.IDispatch)] object cancel)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("CommandBeforeExecute");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(command, cancel);
-				return;
-			}
+        {
+            if (!Validate("CommandBeforeExecute"))
+            {
+                Invoker.ReleaseParamsArray(command, cancel);
+                return;
+            }
 
 			object newCommand = (object)command;
-			NetOffice.OWC10Api.ByRef newCancel = Factory.CreateObjectFromComProxy(_eventClass, cancel) as NetOffice.OWC10Api.ByRef;
-			object[] paramsArray = new object[2];
+            NetOffice.OWC10Api.ByRef newCancel = Factory.CreateKnownObjectFromComProxy<NetOffice.OWC10Api.ByRef>(EventClass, cancel, NetOffice.OWC10Api.ByRef.LateBindingApiWrapperType);
+            object[] paramsArray = new object[2];
 			paramsArray[0] = newCommand;
 			paramsArray[1] = newCancel;
-			_eventBinding.RaiseCustomEvent("CommandBeforeExecute", ref paramsArray);
+			EventBinding.RaiseCustomEvent("CommandBeforeExecute", ref paramsArray);
 		}
 
 		public void CommandExecute([In] object command, [In] object succeeded)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("CommandExecute");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(command, succeeded);
-				return;
-			}
+        {
+            if (!Validate("CommandExecute"))
+            {
+                Invoker.ReleaseParamsArray(command, succeeded);
+                return;
+            }
 
 			object newCommand = (object)command;
 			bool newSucceeded = Convert.ToBoolean(succeeded);
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newCommand;
 			paramsArray[1] = newSucceeded;
-			_eventBinding.RaiseCustomEvent("CommandExecute", ref paramsArray);
+			EventBinding.RaiseCustomEvent("CommandExecute", ref paramsArray);
 		}
 
 		public void BeforeContextMenu([In] object x, [In] object y, [In, MarshalAs(UnmanagedType.IDispatch)] object menu, [In, MarshalAs(UnmanagedType.IDispatch)] object cancel)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("BeforeContextMenu");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(x, y, menu, cancel);
-				return;
-			}
+        {
+            if (!Validate("BeforeContextMenu"))
+            {
+                Invoker.ReleaseParamsArray(x, y, menu, cancel);
+                return;
+            }
 
 			Int32 newx = Convert.ToInt32(x);
 			Int32 newy = Convert.ToInt32(y);
-			NetOffice.OWC10Api.ByRef newMenu = Factory.CreateObjectFromComProxy(_eventClass, menu) as NetOffice.OWC10Api.ByRef;
-			NetOffice.OWC10Api.ByRef newCancel = Factory.CreateObjectFromComProxy(_eventClass, cancel) as NetOffice.OWC10Api.ByRef;
-			object[] paramsArray = new object[4];
+            NetOffice.OWC10Api.ByRef newMenu = Factory.CreateKnownObjectFromComProxy<NetOffice.OWC10Api.ByRef>(EventClass, menu, NetOffice.OWC10Api.ByRef.LateBindingApiWrapperType);
+            NetOffice.OWC10Api.ByRef newCancel = Factory.CreateKnownObjectFromComProxy<NetOffice.OWC10Api.ByRef>(EventClass, cancel, NetOffice.OWC10Api.ByRef.LateBindingApiWrapperType);
+            object[] paramsArray = new object[4];
 			paramsArray[0] = newx;
 			paramsArray[1] = newy;
 			paramsArray[2] = newMenu;
 			paramsArray[3] = newCancel;
-			_eventBinding.RaiseCustomEvent("BeforeContextMenu", ref paramsArray);
+			EventBinding.RaiseCustomEvent("BeforeContextMenu", ref paramsArray);
 		}
 
 		public void BeforeRender([In, MarshalAs(UnmanagedType.IDispatch)] object drawObject, [In, MarshalAs(UnmanagedType.IDispatch)] object chartObject, [In, MarshalAs(UnmanagedType.IDispatch)] object cancel)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("BeforeRender");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(drawObject, chartObject, cancel);
-				return;
-			}
+            if (!Validate("BeforeRender"))
+            {
+                Invoker.ReleaseParamsArray(drawObject, chartObject, cancel);
+                return;
+            }
 
-			NetOffice.OWC10Api.ChChartDraw newdrawObject = Factory.CreateObjectFromComProxy(_eventClass, drawObject) as NetOffice.OWC10Api.ChChartDraw;
-			object newchartObject = Factory.CreateObjectFromComProxy(_eventClass, chartObject) as object;
-			NetOffice.OWC10Api.ByRef newCancel = Factory.CreateObjectFromComProxy(_eventClass, cancel) as NetOffice.OWC10Api.ByRef;
-			object[] paramsArray = new object[3];
+            NetOffice.OWC10Api.ChChartDraw newdrawObject = Factory.CreateKnownObjectFromComProxy<NetOffice.OWC10Api.ChChartDraw>(EventClass, drawObject, NetOffice.OWC10Api.ChChartDraw.LateBindingApiWrapperType);
+			object newchartObject = Factory.CreateEventArgumentObjectFromComProxy(EventClass, chartObject) as object;
+            NetOffice.OWC10Api.ByRef newCancel = Factory.CreateKnownObjectFromComProxy<NetOffice.OWC10Api.ByRef>(EventClass, cancel, NetOffice.OWC10Api.ByRef.LateBindingApiWrapperType);
+            object[] paramsArray = new object[3];
 			paramsArray[0] = newdrawObject;
 			paramsArray[1] = newchartObject;
 			paramsArray[2] = newCancel;
-			_eventBinding.RaiseCustomEvent("BeforeRender", ref paramsArray);
+			EventBinding.RaiseCustomEvent("BeforeRender", ref paramsArray);
 		}
 
 		public void AfterRender([In, MarshalAs(UnmanagedType.IDispatch)] object drawObject, [In, MarshalAs(UnmanagedType.IDispatch)] object chartObject)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("AfterRender");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(drawObject, chartObject);
-				return;
-			}
+        {
+            if (!Validate("AfterRender"))
+            {
+                Invoker.ReleaseParamsArray(drawObject, chartObject);
+                return;
+            }
 
-			NetOffice.OWC10Api.ChChartDraw newdrawObject = Factory.CreateObjectFromComProxy(_eventClass, drawObject) as NetOffice.OWC10Api.ChChartDraw;
-			object newchartObject = Factory.CreateObjectFromComProxy(_eventClass, chartObject) as object;
+			NetOffice.OWC10Api.ChChartDraw newdrawObject = Factory.CreateKnownObjectFromComProxy<NetOffice.OWC10Api.ChChartDraw>(EventClass, drawObject, NetOffice.OWC10Api.ChChartDraw.LateBindingApiWrapperType);
+			object newchartObject = Factory.CreateEventArgumentObjectFromComProxy(EventClass, chartObject) as object;
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newdrawObject;
 			paramsArray[1] = newchartObject;
-			_eventBinding.RaiseCustomEvent("AfterRender", ref paramsArray);
+			EventBinding.RaiseCustomEvent("AfterRender", ref paramsArray);
 		}
 
 		public void AfterFinalRender([In, MarshalAs(UnmanagedType.IDispatch)] object drawObject)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("AfterFinalRender");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(drawObject);
-				return;
-			}
+            if (!Validate("AfterFinalRender"))
+            {
+                Invoker.ReleaseParamsArray(drawObject);
+                return;
+            }
 
-			NetOffice.OWC10Api.ChChartDraw newdrawObject = Factory.CreateObjectFromComProxy(_eventClass, drawObject) as NetOffice.OWC10Api.ChChartDraw;
-			object[] paramsArray = new object[1];
+            NetOffice.OWC10Api.ChChartDraw newdrawObject = Factory.CreateKnownObjectFromComProxy<NetOffice.OWC10Api.ChChartDraw>(EventClass, drawObject, NetOffice.OWC10Api.ChChartDraw.LateBindingApiWrapperType);
+            object[] paramsArray = new object[1];
 			paramsArray[0] = newdrawObject;
-			_eventBinding.RaiseCustomEvent("AfterFinalRender", ref paramsArray);
+			EventBinding.RaiseCustomEvent("AfterFinalRender", ref paramsArray);
 		}
 
 		public void AfterLayout([In, MarshalAs(UnmanagedType.IDispatch)] object drawObject)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("AfterLayout");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(drawObject);
-				return;
-			}
+        {
+            if (!Validate("AfterLayout"))
+            {
+                Invoker.ReleaseParamsArray(drawObject);
+                return;
+            }
 
-			NetOffice.OWC10Api.ChChartDraw newdrawObject = Factory.CreateObjectFromComProxy(_eventClass, drawObject) as NetOffice.OWC10Api.ChChartDraw;
-			object[] paramsArray = new object[1];
+            NetOffice.OWC10Api.ChChartDraw newdrawObject = Factory.CreateKnownObjectFromComProxy<NetOffice.OWC10Api.ChChartDraw>(EventClass, drawObject, NetOffice.OWC10Api.ChChartDraw.LateBindingApiWrapperType);
+            object[] paramsArray = new object[1];
 			paramsArray[0] = newdrawObject;
-			_eventBinding.RaiseCustomEvent("AfterLayout", ref paramsArray);
+			EventBinding.RaiseCustomEvent("AfterLayout", ref paramsArray);
 		}
 
 		public void ViewChange()
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("ViewChange");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray();
-				return;
-			}
+        {
+            if (!Validate("ViewChange"))
+            {
+                return;
+            }
 
 			object[] paramsArray = new object[0];
-			_eventBinding.RaiseCustomEvent("ViewChange", ref paramsArray);
+			EventBinding.RaiseCustomEvent("ViewChange", ref paramsArray);
 		}
 
 		#endregion

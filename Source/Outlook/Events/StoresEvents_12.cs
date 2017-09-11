@@ -39,72 +39,46 @@ namespace NetOffice.OutlookApi.Events
 		
 		#endregion
 	
-		#region Fields
-
-		private IEventBinding	_eventBinding;
-        private ICOMObject _eventClass;
-        
-		#endregion
-		
-		#region Construction
+		#region Ctor
 
 		public StoresEvents_12_SinkHelper(ICOMObject eventClass, IConnectionPoint connectPoint): base(eventClass)
 		{
-			_eventClass = eventClass;
-			_eventBinding = (IEventBinding)eventClass;
 			SetupEventBinding(connectPoint);
 		}
 		
 		#endregion
-		
-		#region Properties
 
-        internal Core Factory
-        {
-            get
-            {
-                if (null != _eventClass)
-                    return _eventClass.Factory;
-                else
-                    return Core.Default;
-            }
-        }
-
-        #endregion
-
-		#region StoresEvents_12 Members
+		#region StoresEvents_12
 		
 		public void BeforeStoreRemove([In, MarshalAs(UnmanagedType.IDispatch)] object store, [In] [Out] ref object cancel)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("BeforeStoreRemove");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(store, cancel);
-				return;
-			}
+            if (!Validate("BeforeStoreRemove"))
+            {
+                Invoker.ReleaseParamsArray(store, cancel);
+                return;
+            }
 
-			NetOffice.OutlookApi._Store newStore = Factory.CreateObjectFromComProxy(_eventClass, store) as NetOffice.OutlookApi._Store;
+			NetOffice.OutlookApi._Store newStore = Factory.CreateKnownObjectFromComProxy<NetOffice.OutlookApi._Store>(EventClass, store, NetOffice.OutlookApi._Store.LateBindingApiWrapperType);
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newStore;
 			paramsArray.SetValue(cancel, 1);
-			_eventBinding.RaiseCustomEvent("BeforeStoreRemove", ref paramsArray);
+			EventBinding.RaiseCustomEvent("BeforeStoreRemove", ref paramsArray);
 
-			cancel = (bool)paramsArray[1];
+			cancel = ToBoolean(paramsArray[1]);
 		}
 
 		public void StoreAdd([In, MarshalAs(UnmanagedType.IDispatch)] object store)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("StoreAdd");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(store);
-				return;
-			}
+        {
+            if (!Validate("BeforeStoreRemove"))
+            {
+                Invoker.ReleaseParamsArray(store);
+                return;
+            }
 
-			NetOffice.OutlookApi._Store newStore = Factory.CreateObjectFromComProxy(_eventClass, store) as NetOffice.OutlookApi._Store;
-			object[] paramsArray = new object[1];
+            NetOffice.OutlookApi._Store newStore = Factory.CreateKnownObjectFromComProxy<NetOffice.OutlookApi._Store>(EventClass, store, NetOffice.OutlookApi._Store.LateBindingApiWrapperType);
+            object[] paramsArray = new object[1];
 			paramsArray[0] = newStore;
-			_eventBinding.RaiseCustomEvent("StoreAdd", ref paramsArray);
+			EventBinding.RaiseCustomEvent("StoreAdd", ref paramsArray);
 		}
 
 		#endregion

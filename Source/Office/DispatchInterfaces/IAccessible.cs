@@ -293,15 +293,15 @@ namespace NetOffice.OfficeApi
 		#region Methods
 
 		#endregion
-
 	}
 
-	/// <summary>
-	/// DispatchInterface IAccessible 
-	/// SupportByVersion Office, 9,10,11,12,14,15,16
-	/// </summary>
-	[SupportByVersion("Office", 9,10,11,12,14,15,16)]
-	[EntityType(EntityType.IsDispatchInterface)]
+    /// <summary>
+    /// DispatchInterface IAccessible 
+    /// SupportByVersion Office, 9,10,11,12,14,15,16
+    /// </summary>
+    /// <remarks> MSDN Online: https://msdn.microsoft.com/en-us/library/microsoft.office.core.iaccessible.aspx </remarks>
+    [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+	[EntityType(EntityType.IsDispatchInterface), BaseType]
  	public class IAccessible : IAccessible_
 	{
 		#pragma warning disable

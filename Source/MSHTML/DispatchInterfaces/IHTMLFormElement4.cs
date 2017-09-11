@@ -106,24 +106,7 @@ namespace NetOffice.MSHTMLApi
 		#endregion
 		
 		#region Properties
-
-		/// <summary>
-		/// SupportByVersion MSHTML 4
-		/// Get/Set
-		/// </summary>
-		[SupportByVersion("MSHTML", 4)]
-		public string action
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "action");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "action", value);
-			}
-		}
-
+        
 		#endregion
 
 		#region Methods

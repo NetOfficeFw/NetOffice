@@ -19,13 +19,22 @@ namespace NetOffice
         /// <summary>
         /// Instance has one or more event recipients
         /// </summary>
+        /// <returns>true if one or more event is active, otherwise false</returns>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         bool HasEventRecipients();
 
         /// <summary>
+        /// Instance has one or more event recipients
+        /// </summary>
+        /// <param name="eventName">name of the event</param>
+        /// <returns>true if event is active, otherwise false</returns>
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        bool HasEventRecipients(string eventName);
+
+        /// <summary>
         /// Recipient delegates for an event
         /// </summary>
-        /// <param name="eventName">name of the even</param>
+        /// <param name="eventName">name of the event</param>
         /// <returns>recipients delegates</returns>
         Delegate[] GetEventRecipients(string eventName);
 

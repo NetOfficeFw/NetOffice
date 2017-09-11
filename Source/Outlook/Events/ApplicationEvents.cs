@@ -55,126 +55,91 @@ namespace NetOffice.OutlookApi.Events
 		
 		#endregion
 	
-		#region Fields
-
-		private IEventBinding	_eventBinding;
-        private ICOMObject _eventClass;
-        
-		#endregion
-		
 		#region Construction
 
 		public ApplicationEvents_SinkHelper(ICOMObject eventClass, IConnectionPoint connectPoint): base(eventClass)
 		{
-			_eventClass = eventClass;
-			_eventBinding = (IEventBinding)eventClass;
 			SetupEventBinding(connectPoint);
 		}
-		
-		#endregion
-		
-		#region Properties
-
-        internal Core Factory
-        {
-            get
-            {
-                if (null != _eventClass)
-                    return _eventClass.Factory;
-                else
-                    return Core.Default;
-            }
-        }
 
         #endregion
 
-		#region ApplicationEvents Members
-		
-		public void ItemSend([In, MarshalAs(UnmanagedType.IDispatch)] object item, [In] [Out] ref object cancel)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("ItemSend");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(item, cancel);
-				return;
-			}
+        #region Ctor
 
-			object newItem = Factory.CreateObjectFromComProxy(_eventClass, item) as object;
+        public void ItemSend([In, MarshalAs(UnmanagedType.IDispatch)] object item, [In] [Out] ref object cancel)
+        {
+            if (!Validate("ItemSend"))
+            {
+                Invoker.ReleaseParamsArray(item, cancel);
+                return;
+            }
+
+			object newItem = Factory.CreateEventArgumentObjectFromComProxy(EventClass, item) as object;
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newItem;
 			paramsArray.SetValue(cancel, 1);
-			_eventBinding.RaiseCustomEvent("ItemSend", ref paramsArray);
+			EventBinding.RaiseCustomEvent("ItemSend", ref paramsArray);
 
-			cancel = (bool)paramsArray[1];
+            cancel = ToBoolean(paramsArray[1]);
 		}
 
 		public void NewMail()
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("NewMail");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray();
-				return;
-			}
+        {
+            if (!Validate("NewMail"))
+            { 
+                return;
+            }
 
 			object[] paramsArray = new object[0];
-			_eventBinding.RaiseCustomEvent("NewMail", ref paramsArray);
+			EventBinding.RaiseCustomEvent("NewMail", ref paramsArray);
 		}
 
 		public void Reminder([In, MarshalAs(UnmanagedType.IDispatch)] object item)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("Reminder");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(item);
-				return;
-			}
+        {
+            if (!Validate("Reminder"))
+            {
+                return;
+            }
 
-			object newItem = Factory.CreateObjectFromComProxy(_eventClass, item) as object;
+			object newItem = Factory.CreateEventArgumentObjectFromComProxy(EventClass, item) as object;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newItem;
-			_eventBinding.RaiseCustomEvent("Reminder", ref paramsArray);
+			EventBinding.RaiseCustomEvent("Reminder", ref paramsArray);
 		}
 
 		public void OptionsPagesAdd([In, MarshalAs(UnmanagedType.IDispatch)] object pages)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("OptionsPagesAdd");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(pages);
-				return;
-			}
+        {
+            if (!Validate("OptionsPagesAdd"))
+            {
+                return;
+            }
 
-			NetOffice.OutlookApi.PropertyPages newPages = Factory.CreateObjectFromComProxy(_eventClass, pages) as NetOffice.OutlookApi.PropertyPages;
+			NetOffice.OutlookApi.PropertyPages newPages = Factory.CreateKnownObjectFromComProxy<NetOffice.OutlookApi.PropertyPages>(EventClass, pages, NetOffice.OutlookApi.PropertyPages.LateBindingApiWrapperType);
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newPages;
-			_eventBinding.RaiseCustomEvent("OptionsPagesAdd", ref paramsArray);
+			EventBinding.RaiseCustomEvent("OptionsPagesAdd", ref paramsArray);
 		}
 
 		public void Startup()
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("Startup");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray();
-				return;
-			}
+        {
+            if (!Validate("Startup"))
+            {
+                return;
+            }
 
 			object[] paramsArray = new object[0];
-			_eventBinding.RaiseCustomEvent("Startup", ref paramsArray);
+			EventBinding.RaiseCustomEvent("Startup", ref paramsArray);
 		}
 
 		public void Quit()
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("Quit");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray();
-				return;
-			}
-
+        {
+            if (!Validate("Quit"))
+            {
+                return;
+            }
+            
 			object[] paramsArray = new object[0];
-			_eventBinding.RaiseCustomEvent("Quit", ref paramsArray);
+			EventBinding.RaiseCustomEvent("Quit", ref paramsArray);
 		}
 
 		#endregion

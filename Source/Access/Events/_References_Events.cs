@@ -38,70 +38,44 @@ namespace NetOffice.AccessApi.Events
 		public static readonly string Id = "F163F201-ADA2-11CF-89A9-00A0C9054129";
 		
 		#endregion
-	
-		#region Fields
-
-		private IEventBinding	_eventBinding;
-        private ICOMObject _eventClass;
-        
-		#endregion
 		
-		#region Construction
+		#region Ctor
 
 		public _References_Events_SinkHelper(ICOMObject eventClass, IConnectionPoint connectPoint): base(eventClass)
 		{
-			_eventClass = eventClass;
-			_eventBinding = (IEventBinding)eventClass;
 			SetupEventBinding(connectPoint);
 		}
 		
 		#endregion
-		
-		#region Properties
 
-        internal Core Factory
-        {
-            get
-            {
-                if (null != _eventClass)
-                    return _eventClass.Factory;
-                else
-                    return Core.Default;
-            }
-        }
-
-        #endregion
-
-		#region _References_Events Members
+		#region _References_Events
 		
 		public void ItemAdded([In, MarshalAs(UnmanagedType.IDispatch)] object reference)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("ItemAdded");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(reference);
-				return;
-			}
+            if (!Validate("ItemAdded"))
+            {
+                Invoker.ReleaseParamsArray(reference);
+                return;
+            }
 
-			NetOffice.AccessApi.Reference newReference = Factory.CreateObjectFromComProxy(_eventClass, reference) as NetOffice.AccessApi.Reference;
+			NetOffice.AccessApi.Reference newReference = Factory.CreateKnownObjectFromComProxy<NetOffice.AccessApi.Reference>(EventClass, reference, NetOffice.AccessApi.Reference.LateBindingApiWrapperType);
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newReference;
-			_eventBinding.RaiseCustomEvent("ItemAdded", ref paramsArray);
+			EventBinding.RaiseCustomEvent("ItemAdded", ref paramsArray);
 		}
 
 		public void ItemRemoved([In, MarshalAs(UnmanagedType.IDispatch)] object reference)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("ItemRemoved");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(reference);
-				return;
-			}
+        {
+            if (!Validate("ItemAdded"))
+            {
+                Invoker.ReleaseParamsArray(reference);
+                return;
+            }
 
-			NetOffice.AccessApi.Reference newReference = Factory.CreateObjectFromComProxy(_eventClass, reference) as NetOffice.AccessApi.Reference;
-			object[] paramsArray = new object[1];
+            NetOffice.AccessApi.Reference newReference = Factory.CreateKnownObjectFromComProxy<NetOffice.AccessApi.Reference>(EventClass, reference, NetOffice.AccessApi.Reference.LateBindingApiWrapperType);
+            object[] paramsArray = new object[1];
 			paramsArray[0] = newReference;
-			_eventBinding.RaiseCustomEvent("ItemRemoved", ref paramsArray);
+			EventBinding.RaiseCustomEvent("ItemRemoved", ref paramsArray);
 		}
 
 		#endregion

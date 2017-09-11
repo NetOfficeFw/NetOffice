@@ -134,461 +134,407 @@ namespace NetOffice.OutlookApi.Events
 		public static readonly string Id = "0006302B-0000-0000-C000-000000000046";
 		
 		#endregion
-	
-		#region Fields
 
-		private IEventBinding	_eventBinding;
-        private ICOMObject _eventClass;
-        
-		#endregion
-		
-		#region Construction
+		#region Ctor
 
 		public ItemEvents_10_SinkHelper(ICOMObject eventClass, IConnectionPoint connectPoint): base(eventClass)
 		{
-			_eventClass = eventClass;
-			_eventBinding = (IEventBinding)eventClass;
 			SetupEventBinding(connectPoint);
 		}
 		
 		#endregion
-		
-		#region Properties
 
-        internal Core Factory
-        {
-            get
-            {
-                if (null != _eventClass)
-                    return _eventClass.Factory;
-                else
-                    return Core.Default;
-            }
-        }
-
-        #endregion
-
-		#region ItemEvents_10 Members
+		#region ItemEvents_10
 		
 		public void Open([In] [Out] ref object cancel)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("Open");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(cancel);
-				return;
-			}
+            if (!Validate("Open"))
+            {
+                Invoker.ReleaseParamsArray(cancel);
+                return;
+            }
 
 			object[] paramsArray = new object[1];
 			paramsArray.SetValue(cancel, 0);
-			_eventBinding.RaiseCustomEvent("Open", ref paramsArray);
+			EventBinding.RaiseCustomEvent("Open", ref paramsArray);
 
-			cancel = (bool)paramsArray[0];
+			cancel = ToBoolean(paramsArray[0]);
 		}
 
 		public void CustomAction([In, MarshalAs(UnmanagedType.IDispatch)] object action, [In, MarshalAs(UnmanagedType.IDispatch)] object response, [In] [Out] ref object cancel)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("CustomAction");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(action, response, cancel);
-				return;
-			}
+        {
+            if (!Validate("CustomAction"))
+            {
+                Invoker.ReleaseParamsArray(action, response, cancel);
+                return;
+            }
 
-			object newAction = Factory.CreateObjectFromComProxy(_eventClass, action) as object;
-			object newResponse = Factory.CreateObjectFromComProxy(_eventClass, response) as object;
+			object newAction = Factory.CreateEventArgumentObjectFromComProxy(EventClass, action) as object;
+			object newResponse = Factory.CreateEventArgumentObjectFromComProxy(EventClass, response) as object;
 			object[] paramsArray = new object[3];
 			paramsArray[0] = newAction;
 			paramsArray[1] = newResponse;
 			paramsArray.SetValue(cancel, 2);
-			_eventBinding.RaiseCustomEvent("CustomAction", ref paramsArray);
+			EventBinding.RaiseCustomEvent("CustomAction", ref paramsArray);
 
-			cancel = (bool)paramsArray[2];
-		}
+			cancel = ToBoolean(paramsArray[2]);
+        }
 
 		public void CustomPropertyChange([In] object name)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("CustomPropertyChange");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(name);
-				return;
-			}
+        {
+            if (!Validate("CustomPropertyChange"))
+            {
+                Invoker.ReleaseParamsArray(name);
+                return;
+            }
 
 			string newName = Convert.ToString(name);
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newName;
-			_eventBinding.RaiseCustomEvent("CustomPropertyChange", ref paramsArray);
+			EventBinding.RaiseCustomEvent("CustomPropertyChange", ref paramsArray);
 		}
 
 		public void Forward([In, MarshalAs(UnmanagedType.IDispatch)] object forward, [In] [Out] ref object cancel)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("Forward");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(forward, cancel);
-				return;
-			}
+        {
+            if (!Validate("Forward"))
+            {
+                Invoker.ReleaseParamsArray(forward, cancel);
+                return;
+            }
 
-			object newForward = Factory.CreateObjectFromComProxy(_eventClass, forward) as object;
+			object newForward = Factory.CreateEventArgumentObjectFromComProxy(EventClass, forward) as object;
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newForward;
 			paramsArray.SetValue(cancel, 1);
-			_eventBinding.RaiseCustomEvent("Forward", ref paramsArray);
+			EventBinding.RaiseCustomEvent("Forward", ref paramsArray);
 
-			cancel = (bool)paramsArray[1];
-		}
+			cancel = ToBoolean(paramsArray[1]);
+        }
 
 		public void Close([In] [Out] ref object cancel)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("Close");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(cancel);
-				return;
-			}
+            if (!Validate("Close"))
+            {
+                Invoker.ReleaseParamsArray(cancel);
+                return;
+            }
 
-			object[] paramsArray = new object[1];
+            object[] paramsArray = new object[1];
 			paramsArray.SetValue(cancel, 0);
-			_eventBinding.RaiseCustomEvent("Close", ref paramsArray);
+			EventBinding.RaiseCustomEvent("Close", ref paramsArray);
 
-			cancel = (bool)paramsArray[0];
-		}
+			cancel = ToBoolean(paramsArray[0]);
+        }
 
 		public void PropertyChange([In] object name)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("PropertyChange");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(name);
-				return;
-			}
+        {
+            if (!Validate("PropertyChange"))
+            {
+                Invoker.ReleaseParamsArray(name);
+                return;
+            }
 
 			string newName = Convert.ToString(name);
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newName;
-			_eventBinding.RaiseCustomEvent("PropertyChange", ref paramsArray);
+			EventBinding.RaiseCustomEvent("PropertyChange", ref paramsArray);
 		}
 
 		public void Read()
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("Read");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray();
-				return;
-			}
+        {
+            if (!Validate("Read"))
+            {
+                return;
+            }
 
 			object[] paramsArray = new object[0];
-			_eventBinding.RaiseCustomEvent("Read", ref paramsArray);
+			EventBinding.RaiseCustomEvent("Read", ref paramsArray);
 		}
 
 		public void Reply([In, MarshalAs(UnmanagedType.IDispatch)] object response, [In] [Out] ref object cancel)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("Reply");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(response, cancel);
-				return;
-			}
+        {
+            if (!Validate("Reply"))
+            {
+                Invoker.ReleaseParamsArray(response, cancel);
+                return;
+            }
 
-			object newResponse = Factory.CreateObjectFromComProxy(_eventClass, response) as object;
+			object newResponse = Factory.CreateEventArgumentObjectFromComProxy(EventClass, response) as object;
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newResponse;
 			paramsArray.SetValue(cancel, 1);
-			_eventBinding.RaiseCustomEvent("Reply", ref paramsArray);
+			EventBinding.RaiseCustomEvent("Reply", ref paramsArray);
 
-			cancel = (bool)paramsArray[1];
+			cancel = ToBoolean(paramsArray[1]);
 		}
 
 		public void ReplyAll([In, MarshalAs(UnmanagedType.IDispatch)] object response, [In] [Out] ref object cancel)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("ReplyAll");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(response, cancel);
-				return;
-			}
+        {
+            if (!Validate("ReplyAll"))
+            {
+                Invoker.ReleaseParamsArray(response, cancel);
+                return;
+            }
 
-			object newResponse = Factory.CreateObjectFromComProxy(_eventClass, response) as object;
-			object[] paramsArray = new object[2];
+            object newResponse = Factory.CreateEventArgumentObjectFromComProxy(EventClass, response) as object;
+            object[] paramsArray = new object[2];
 			paramsArray[0] = newResponse;
 			paramsArray.SetValue(cancel, 1);
-			_eventBinding.RaiseCustomEvent("ReplyAll", ref paramsArray);
+			EventBinding.RaiseCustomEvent("ReplyAll", ref paramsArray);
 
-			cancel = (bool)paramsArray[1];
-		}
+            cancel = ToBoolean(paramsArray[1]);
+        }
 
-		public void Send([In] [Out] ref object cancel)
+        public void Send([In] [Out] ref object cancel)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("Send");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(cancel);
-				return;
-			}
+            if (!Validate("Send"))
+            {
+                Invoker.ReleaseParamsArray(cancel);
+                return;
+            }
 
-			object[] paramsArray = new object[1];
+            object[] paramsArray = new object[1];
 			paramsArray.SetValue(cancel, 0);
-			_eventBinding.RaiseCustomEvent("Send", ref paramsArray);
+			EventBinding.RaiseCustomEvent("Send", ref paramsArray);
 
-			cancel = (bool)paramsArray[0];
-		}
+            cancel = ToBoolean(paramsArray[0]);
+        }
 
 		public void Write([In] [Out] ref object cancel)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("Write");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(cancel);
-				return;
-			}
+            if (!Validate("Write"))
+            {
+                Invoker.ReleaseParamsArray(cancel);
+                return;
+            }
 
-			object[] paramsArray = new object[1];
+            object[] paramsArray = new object[1];
 			paramsArray.SetValue(cancel, 0);
-			_eventBinding.RaiseCustomEvent("Write", ref paramsArray);
+			EventBinding.RaiseCustomEvent("Write", ref paramsArray);
 
-			cancel = (bool)paramsArray[0];
-		}
+            cancel = ToBoolean(paramsArray[0]);
+        }
 
 		public void BeforeCheckNames([In] [Out] ref object cancel)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("BeforeCheckNames");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(cancel);
-				return;
-			}
+            if (!Validate("BeforeCheckNames"))
+            {
+                Invoker.ReleaseParamsArray(cancel);
+                return;
+            }
 
-			object[] paramsArray = new object[1];
+            object[] paramsArray = new object[1];
 			paramsArray.SetValue(cancel, 0);
-			_eventBinding.RaiseCustomEvent("BeforeCheckNames", ref paramsArray);
+			EventBinding.RaiseCustomEvent("BeforeCheckNames", ref paramsArray);
 
-			cancel = (bool)paramsArray[0];
-		}
+            cancel = ToBoolean(paramsArray[0]);
+        }
 
 		public void AttachmentAdd([In, MarshalAs(UnmanagedType.IDispatch)] object attachment)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("AttachmentAdd");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(attachment);
-				return;
-			}
+        {
+            if (!Validate("AttachmentAdd"))
+            {
+                Invoker.ReleaseParamsArray(attachment);
+                return;
+            }
 
-			NetOffice.OutlookApi.Attachment newAttachment = Factory.CreateObjectFromComProxy(_eventClass, attachment) as NetOffice.OutlookApi.Attachment;
+			NetOffice.OutlookApi.Attachment newAttachment = Factory.CreateKnownObjectFromComProxy<NetOffice.OutlookApi.Attachment>(EventClass, attachment, NetOffice.OutlookApi.Attachment.LateBindingApiWrapperType);
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newAttachment;
-			_eventBinding.RaiseCustomEvent("AttachmentAdd", ref paramsArray);
+			EventBinding.RaiseCustomEvent("AttachmentAdd", ref paramsArray);
 		}
 
 		public void AttachmentRead([In, MarshalAs(UnmanagedType.IDispatch)] object attachment)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("AttachmentRead");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(attachment);
-				return;
-			}
+            if (!Validate("AttachmentRead"))
+            {
+                Invoker.ReleaseParamsArray(attachment);
+                return;
+            }
 
-			NetOffice.OutlookApi.Attachment newAttachment = Factory.CreateObjectFromComProxy(_eventClass, attachment) as NetOffice.OutlookApi.Attachment;
-			object[] paramsArray = new object[1];
+            NetOffice.OutlookApi.Attachment newAttachment = Factory.CreateKnownObjectFromComProxy<NetOffice.OutlookApi.Attachment>(EventClass, attachment, NetOffice.OutlookApi.Attachment.LateBindingApiWrapperType);
+            object[] paramsArray = new object[1];
 			paramsArray[0] = newAttachment;
-			_eventBinding.RaiseCustomEvent("AttachmentRead", ref paramsArray);
+			EventBinding.RaiseCustomEvent("AttachmentRead", ref paramsArray);
 		}
 
 		public void BeforeAttachmentSave([In, MarshalAs(UnmanagedType.IDispatch)] object attachment, [In] [Out] ref object cancel)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("BeforeAttachmentSave");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(attachment, cancel);
-				return;
-			}
+        {
+            if (!Validate("BeforeAttachmentSave"))
+            {
+                Invoker.ReleaseParamsArray(attachment, cancel);
+                return;
+            }
 
-			NetOffice.OutlookApi.Attachment newAttachment = Factory.CreateObjectFromComProxy(_eventClass, attachment) as NetOffice.OutlookApi.Attachment;
-			object[] paramsArray = new object[2];
+            NetOffice.OutlookApi.Attachment newAttachment = Factory.CreateKnownObjectFromComProxy<NetOffice.OutlookApi.Attachment>(EventClass, attachment, NetOffice.OutlookApi.Attachment.LateBindingApiWrapperType);
+            object[] paramsArray = new object[2];
 			paramsArray[0] = newAttachment;
 			paramsArray.SetValue(cancel, 1);
-			_eventBinding.RaiseCustomEvent("BeforeAttachmentSave", ref paramsArray);
+			EventBinding.RaiseCustomEvent("BeforeAttachmentSave", ref paramsArray);
 
-			cancel = (bool)paramsArray[1];
+			cancel = ToBoolean(paramsArray[1]);
 		}
 
 		public void BeforeDelete([In, MarshalAs(UnmanagedType.IDispatch)] object item, [In] [Out] ref object cancel)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("BeforeDelete");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(item, cancel);
-				return;
-			}
+        {
+            if (!Validate("BeforeDelete"))
+            {
+                Invoker.ReleaseParamsArray(item, cancel);
+                return;
+            }
 
-			object newItem = Factory.CreateObjectFromComProxy(_eventClass, item) as object;
+			object newItem = Factory.CreateEventArgumentObjectFromComProxy(EventClass, item) as object;
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newItem;
 			paramsArray.SetValue(cancel, 1);
-			_eventBinding.RaiseCustomEvent("BeforeDelete", ref paramsArray);
+			EventBinding.RaiseCustomEvent("BeforeDelete", ref paramsArray);
 
-			cancel = (bool)paramsArray[1];
-		}
+            cancel = ToBoolean(paramsArray[1]);
+        }
 
 		public void AttachmentRemove([In, MarshalAs(UnmanagedType.IDispatch)] object attachment)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("AttachmentRemove");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(attachment);
-				return;
-			}
+            if (!Validate("AttachmentRemove"))
+            {
+                Invoker.ReleaseParamsArray(attachment);
+                return;
+            }
 
-			NetOffice.OutlookApi.Attachment newAttachment = Factory.CreateObjectFromComProxy(_eventClass, attachment) as NetOffice.OutlookApi.Attachment;
+            NetOffice.OutlookApi.Attachment newAttachment = Factory.CreateKnownObjectFromComProxy<NetOffice.OutlookApi.Attachment>(EventClass, attachment, NetOffice.OutlookApi.Attachment.LateBindingApiWrapperType);
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newAttachment;
-			_eventBinding.RaiseCustomEvent("AttachmentRemove", ref paramsArray);
+			EventBinding.RaiseCustomEvent("AttachmentRemove", ref paramsArray);
 		}
 
 		public void BeforeAttachmentAdd([In, MarshalAs(UnmanagedType.IDispatch)] object attachment, [In] [Out] ref object cancel)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("BeforeAttachmentAdd");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(attachment, cancel);
-				return;
-			}
+            if (!Validate("BeforeAttachmentAdd"))
+            {
+                Invoker.ReleaseParamsArray(attachment, cancel);
+                return;
+            }
 
-			NetOffice.OutlookApi.Attachment newAttachment = Factory.CreateObjectFromComProxy(_eventClass, attachment) as NetOffice.OutlookApi.Attachment;
-			object[] paramsArray = new object[2];
+            NetOffice.OutlookApi.Attachment newAttachment = Factory.CreateKnownObjectFromComProxy<NetOffice.OutlookApi.Attachment>(EventClass, attachment, NetOffice.OutlookApi.Attachment.LateBindingApiWrapperType);
+            object[] paramsArray = new object[2];
 			paramsArray[0] = newAttachment;
 			paramsArray.SetValue(cancel, 1);
-			_eventBinding.RaiseCustomEvent("BeforeAttachmentAdd", ref paramsArray);
+			EventBinding.RaiseCustomEvent("BeforeAttachmentAdd", ref paramsArray);
 
-			cancel = (bool)paramsArray[1];
+			cancel = ToBoolean(paramsArray[1]);
 		}
 
 		public void BeforeAttachmentPreview([In, MarshalAs(UnmanagedType.IDispatch)] object attachment, [In] [Out] ref object cancel)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("BeforeAttachmentPreview");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(attachment, cancel);
-				return;
-			}
+        {
+            if (!Validate("BeforeAttachmentPreview"))
+            {
+                Invoker.ReleaseParamsArray(attachment, cancel);
+                return;
+            }
 
-			NetOffice.OutlookApi.Attachment newAttachment = Factory.CreateObjectFromComProxy(_eventClass, attachment) as NetOffice.OutlookApi.Attachment;
-			object[] paramsArray = new object[2];
+            NetOffice.OutlookApi.Attachment newAttachment = Factory.CreateKnownObjectFromComProxy<NetOffice.OutlookApi.Attachment>(EventClass, attachment, NetOffice.OutlookApi.Attachment.LateBindingApiWrapperType);
+            object[] paramsArray = new object[2];
 			paramsArray[0] = newAttachment;
 			paramsArray.SetValue(cancel, 1);
-			_eventBinding.RaiseCustomEvent("BeforeAttachmentPreview", ref paramsArray);
+			EventBinding.RaiseCustomEvent("BeforeAttachmentPreview", ref paramsArray);
 
-			cancel = (bool)paramsArray[1];
-		}
+            cancel = ToBoolean(paramsArray[1]);
+        }
 
 		public void BeforeAttachmentRead([In, MarshalAs(UnmanagedType.IDispatch)] object attachment, [In] [Out] ref object cancel)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("BeforeAttachmentRead");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(attachment, cancel);
-				return;
-			}
+        {
+            if (!Validate("BeforeAttachmentRead"))
+            {
+                Invoker.ReleaseParamsArray(attachment, cancel);
+                return;
+            }
 
-			NetOffice.OutlookApi.Attachment newAttachment = Factory.CreateObjectFromComProxy(_eventClass, attachment) as NetOffice.OutlookApi.Attachment;
-			object[] paramsArray = new object[2];
+            NetOffice.OutlookApi.Attachment newAttachment = Factory.CreateKnownObjectFromComProxy<NetOffice.OutlookApi.Attachment>(EventClass, attachment, NetOffice.OutlookApi.Attachment.LateBindingApiWrapperType);
+            object[] paramsArray = new object[2];
 			paramsArray[0] = newAttachment;
 			paramsArray.SetValue(cancel, 1);
-			_eventBinding.RaiseCustomEvent("BeforeAttachmentRead", ref paramsArray);
+			EventBinding.RaiseCustomEvent("BeforeAttachmentRead", ref paramsArray);
 
-			cancel = (bool)paramsArray[1];
-		}
+            cancel = ToBoolean(paramsArray[1]);
+        }
 
 		public void BeforeAttachmentWriteToTempFile([In, MarshalAs(UnmanagedType.IDispatch)] object attachment, [In] [Out] ref object cancel)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("BeforeAttachmentWriteToTempFile");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(attachment, cancel);
-				return;
-			}
+            if (!Validate("BeforeAttachmentWriteToTempFile"))
+            {
+                Invoker.ReleaseParamsArray(attachment, cancel);
+                return;
+            }
 
-			NetOffice.OutlookApi.Attachment newAttachment = Factory.CreateObjectFromComProxy(_eventClass, attachment) as NetOffice.OutlookApi.Attachment;
-			object[] paramsArray = new object[2];
+            NetOffice.OutlookApi.Attachment newAttachment = Factory.CreateKnownObjectFromComProxy<NetOffice.OutlookApi.Attachment>(EventClass, attachment, NetOffice.OutlookApi.Attachment.LateBindingApiWrapperType);
+            object[] paramsArray = new object[2];
 			paramsArray[0] = newAttachment;
 			paramsArray.SetValue(cancel, 1);
-			_eventBinding.RaiseCustomEvent("BeforeAttachmentWriteToTempFile", ref paramsArray);
+			EventBinding.RaiseCustomEvent("BeforeAttachmentWriteToTempFile", ref paramsArray);
 
-			cancel = (bool)paramsArray[1];
-		}
+            cancel = ToBoolean(paramsArray[1]);
+        }
 
-		public void Unload()
+        public void Unload()
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("Unload");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray();
-				return;
-			}
+            if (!Validate("Unload"))
+            {
+                return;
+            }
 
-			object[] paramsArray = new object[0];
-			_eventBinding.RaiseCustomEvent("Unload", ref paramsArray);
+            object[] paramsArray = new object[0];
+			EventBinding.RaiseCustomEvent("Unload", ref paramsArray);
 		}
 
 		public void BeforeAutoSave([In] [Out] ref object cancel)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("BeforeAutoSave");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(cancel);
-				return;
-			}
+            if (!Validate("BeforeAutoSave"))
+            {
+                Invoker.ReleaseParamsArray(cancel);
+                return;
+            }
 
 			object[] paramsArray = new object[1];
 			paramsArray.SetValue(cancel, 0);
-			_eventBinding.RaiseCustomEvent("BeforeAutoSave", ref paramsArray);
+			EventBinding.RaiseCustomEvent("BeforeAutoSave", ref paramsArray);
 
-			cancel = (bool)paramsArray[0];
+			cancel = ToBoolean(paramsArray[0]);
 		}
 
 		public void BeforeRead()
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("BeforeRead");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray();
-				return;
-			}
+            if (!Validate("BeforeRead"))
+            {
+                return;
+            }
 
-			object[] paramsArray = new object[0];
-			_eventBinding.RaiseCustomEvent("BeforeRead", ref paramsArray);
+            object[] paramsArray = new object[0];
+			EventBinding.RaiseCustomEvent("BeforeRead", ref paramsArray);
 		}
 
 		public void AfterWrite()
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("AfterWrite");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray();
-				return;
-			}
+            if (!Validate("AfterWrite"))
+            {
+                return;
+            }
 
-			object[] paramsArray = new object[0];
-			_eventBinding.RaiseCustomEvent("AfterWrite", ref paramsArray);
+            object[] paramsArray = new object[0];
+			EventBinding.RaiseCustomEvent("AfterWrite", ref paramsArray);
 		}
 
 		public void ReadComplete([In] [Out] ref object cancel)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("ReadComplete");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(cancel);
-				return;
-			}
+            if (!Validate("ReadComplete"))
+            {
+                Invoker.ReleaseParamsArray(cancel);
+                return;
+            }
 
-			object[] paramsArray = new object[1];
+            object[] paramsArray = new object[1];
 			paramsArray.SetValue(cancel, 0);
-			_eventBinding.RaiseCustomEvent("ReadComplete", ref paramsArray);
+			EventBinding.RaiseCustomEvent("ReadComplete", ref paramsArray);
 
-			cancel = (bool)paramsArray[0];
+			cancel = ToBoolean(paramsArray[0]);
 		}
 
 		#endregion

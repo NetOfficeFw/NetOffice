@@ -1,18 +1,15 @@
 ﻿using System;
 using System.Runtime.InteropServices;
 using System.Reflection;
-using System.Collections.Generic;
-using Microsoft.Win32;
+using NetOffice.Exceptions;
 
 namespace NetOffice.Tools
 {
     /// <summary>
     /// Handle COMAddin register process
     /// </summary>
-    public static class RegisterHandler
-    {
-        private static string _exceptionMessage = "An error occured while calling register.";
-
+    public static class COMAddinRegisterHandler
+    {  
         /// <summary>
         /// Do register process per user installation
         /// </summary>
@@ -67,7 +64,7 @@ namespace NetOffice.Tools
                         {
                             if (!RegisterErrorHandler.RaiseStaticErrorHandlerMethod(type, 
                                                                                     RegisterErrorMethodKind.Register, 
-                                                                                    new NetOfficeException(_exceptionMessage)))
+                                                                                    new RegisterException(errorBlock)))
                                 return;
                         }
 
@@ -135,7 +132,7 @@ namespace NetOffice.Tools
                 if ((null != registerAttribute && true == registerMethodPresent) && (registerAttribute.Value == RegisterMode.CallAfter || registerAttribute.Value == RegisterMode.CallBeforeAndAfter))
                 {
                     if (!CallDerivedRegisterMethod(registerMethod, type, RegisterCall.CallAfter, scope, keyState))
-                        RegisterErrorHandler.RaiseStaticErrorHandlerMethod(type, RegisterErrorMethodKind.Register, new NetOfficeException(_exceptionMessage));
+                        RegisterErrorHandler.RaiseStaticErrorHandlerMethod(type, RegisterErrorMethodKind.Register, new RegisterException(errorBlock));
                 }
             }
             catch (System.Exception exception)
@@ -155,7 +152,7 @@ namespace NetOffice.Tools
         /// <param name="scope">current register scope</param>
         /// <param name="keyState">office reg key state</param>
         /// <returns>true if no exception occurs, otherwise false</returns>
-        private static bool CallDerivedRegisterMethod(MethodInfo registerMethod, Type type, 
+        public static bool CallDerivedRegisterMethod(MethodInfo registerMethod, Type type, 
             RegisterCall callType, InstallScope scope, OfficeRegisterKeyState keyState)
         {
             try

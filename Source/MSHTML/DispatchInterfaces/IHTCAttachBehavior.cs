@@ -10,7 +10,7 @@ namespace NetOffice.MSHTMLApi
 	/// SupportByVersion MSHTML, 4
 	/// </summary>
 	[SupportByVersion("MSHTML", 4)]
-	[EntityType(EntityType.IsDispatchInterface)]
+	[EntityType(EntityType.IsDispatchInterface), BaseType]
  	public class IHTCAttachBehavior : IHTCAttachBehavior2
 	{
 		#pragma warning disable
@@ -110,25 +110,6 @@ namespace NetOffice.MSHTMLApi
 		#endregion
 
 		#region Methods
-
-		/// <summary>
-		/// SupportByVersion MSHTML 4
-		/// </summary>
-		/// <param name="evt">object evt</param>
-		[SupportByVersion("MSHTML", 4)]
-		public void FireEvent(object evt)
-		{
-			 Factory.ExecuteMethod(this, "FireEvent", evt);
-		}
-
-		/// <summary>
-		/// SupportByVersion MSHTML 4
-		/// </summary>
-		[SupportByVersion("MSHTML", 4)]
-		public void detachEvent()
-		{
-			 Factory.ExecuteMethod(this, "detachEvent");
-		}
 
 		#endregion
 

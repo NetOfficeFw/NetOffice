@@ -10,7 +10,7 @@ namespace NetOffice.MSComctlLibApi
 	/// SupportByVersion MSComctlLib, 6
 	/// </summary>
 	[SupportByVersion("MSComctlLib", 6)]
-	[EntityType(EntityType.IsDispatchInterface)]
+	[EntityType(EntityType.IsDispatchInterface), BaseType]
  	public class IListItem : COMObject
 	{
 		#pragma warning disable
@@ -456,13 +456,12 @@ namespace NetOffice.MSComctlLibApi
 		/// <summary>
 		/// SupportByVersion MSComctlLib 6
 		/// </summary>
-		[SupportByVersion("MSComctlLib", 6)]
+		[SupportByVersion("MSComctlLib", 6), NativeResult]
 		public stdole.Picture CreateDragImage()
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "CreateDragImage", paramsArray);
-			stdole.Picture newObject = Factory.CreateObjectFromComProxy(this, returnItem) as stdole.Picture;
-			return newObject;
+            return returnItem as stdole.Picture;
 		}
 
 		/// <summary>

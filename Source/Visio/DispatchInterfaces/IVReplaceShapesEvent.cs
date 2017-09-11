@@ -10,7 +10,7 @@ namespace NetOffice.VisioApi
 	/// SupportByVersion Visio, 15, 16
 	/// </summary>
 	[SupportByVersion("Visio", 15, 16)]
-	[EntityType(EntityType.IsDispatchInterface)]
+	[EntityType(EntityType.IsDispatchInterface), BaseType]
  	public class IVReplaceShapesEvent : COMObject
 	{
 		#pragma warning disable

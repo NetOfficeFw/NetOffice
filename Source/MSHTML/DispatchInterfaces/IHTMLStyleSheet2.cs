@@ -10,7 +10,7 @@ namespace NetOffice.MSHTMLApi
 	/// SupportByVersion MSHTML, 4
 	/// </summary>
 	[SupportByVersion("MSHTML", 4)]
-	[EntityType(EntityType.IsDispatchInterface)]
+	[EntityType(EntityType.IsDispatchInterface), BaseType]
  	public class IHTMLStyleSheet2 : IHTMLStyleSheet
 	{
 		#pragma warning disable
@@ -107,47 +107,10 @@ namespace NetOffice.MSHTMLApi
 		
 		#region Properties
 
-		/// <summary>
-		/// SupportByVersion MSHTML 4
-		/// Get
-		/// </summary>
-		[SupportByVersion("MSHTML", 4)]
-		public NetOffice.MSHTMLApi.IHTMLStyleSheetPagesCollection pages
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.MSHTMLApi.IHTMLStyleSheetPagesCollection>(this, "pages", NetOffice.MSHTMLApi.IHTMLStyleSheetPagesCollection.LateBindingApiWrapperType);
-			}
-		}
-
 		#endregion
 
 		#region Methods
-
-		/// <summary>
-		/// SupportByVersion MSHTML 4
-		/// </summary>
-		/// <param name="bstrSelector">string bstrSelector</param>
-		/// <param name="bstrStyle">string bstrStyle</param>
-		/// <param name="lIndex">optional Int32 lIndex = -1</param>
-		[SupportByVersion("MSHTML", 4)]
-		public Int32 addPageRule(string bstrSelector, string bstrStyle, object lIndex)
-		{
-			return Factory.ExecuteInt32MethodGet(this, "addPageRule", bstrSelector, bstrStyle, lIndex);
-		}
-
-		/// <summary>
-		/// SupportByVersion MSHTML 4
-		/// </summary>
-		/// <param name="bstrSelector">string bstrSelector</param>
-		/// <param name="bstrStyle">string bstrStyle</param>
-		[CustomMethod]
-		[SupportByVersion("MSHTML", 4)]
-		public Int32 addPageRule(string bstrSelector, string bstrStyle)
-		{
-			return Factory.ExecuteInt32MethodGet(this, "addPageRule", bstrSelector, bstrStyle);
-		}
-
+        
 		#endregion
 
 		#pragma warning restore

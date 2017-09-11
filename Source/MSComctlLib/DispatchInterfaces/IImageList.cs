@@ -10,7 +10,7 @@ namespace NetOffice.MSComctlLibApi
 	/// SupportByVersion MSComctlLib, 6
 	/// </summary>
 	[SupportByVersion("MSComctlLib", 6)]
-	[EntityType(EntityType.IsDispatchInterface)]
+	[EntityType(EntityType.IsDispatchInterface), BaseType]
  	public class IImageList : COMObject
 	{
 		#pragma warning disable
@@ -237,13 +237,12 @@ namespace NetOffice.MSComctlLibApi
 		/// </summary>
 		/// <param name="key1">object key1</param>
 		/// <param name="key2">object key2</param>
-		[SupportByVersion("MSComctlLib", 6)]
+		[SupportByVersion("MSComctlLib", 6), NativeResult]
 		public stdole.Picture Overlay(object key1, object key2)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(key1, key2);
 			object returnItem = Invoker.MethodReturn(this, "Overlay", paramsArray);
-			stdole.Picture newObject = Factory.CreateObjectFromComProxy(this, returnItem) as stdole.Picture;
-			return newObject;
+            return returnItem as stdole.Picture;
 		}
 
 		/// <summary>

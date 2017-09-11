@@ -42,90 +42,63 @@ namespace NetOffice.OutlookApi.Events
 		public static readonly string Id = "0006307C-0000-0000-C000-000000000046";
 		
 		#endregion
-	
-		#region Fields
-
-		private IEventBinding	_eventBinding;
-        private ICOMObject _eventClass;
-        
-		#endregion
 		
 		#region Construction
 
 		public OutlookBarShortcutsEvents_SinkHelper(ICOMObject eventClass, IConnectionPoint connectPoint): base(eventClass)
 		{
-			_eventClass = eventClass;
-			_eventBinding = (IEventBinding)eventClass;
 			SetupEventBinding(connectPoint);
 		}
 		
 		#endregion
-		
-		#region Properties
 
-        internal Core Factory
-        {
-            get
-            {
-                if (null != _eventClass)
-                    return _eventClass.Factory;
-                else
-                    return Core.Default;
-            }
-        }
-
-        #endregion
-
-		#region OutlookBarShortcutsEvents Members
+		#region OutlookBarShortcutsEvents
 		
 		public void ShortcutAdd([In, MarshalAs(UnmanagedType.IDispatch)] object newShortcut)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("ShortcutAdd");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(newShortcut);
-				return;
-			}
+            if (!Validate("ShortcutAdd"))
+            {
+                Invoker.ReleaseParamsArray(newShortcut);
+                return;
+            }
 
-			NetOffice.OutlookApi.OutlookBarShortcut newNewShortcut = Factory.CreateObjectFromComProxy(_eventClass, newShortcut) as NetOffice.OutlookApi.OutlookBarShortcut;
+			NetOffice.OutlookApi.OutlookBarShortcut newNewShortcut = Factory.CreateKnownObjectFromComProxy<NetOffice.OutlookApi.OutlookBarShortcut>(EventClass, newShortcut, NetOffice.OutlookApi.OutlookBarShortcut.LateBindingApiWrapperType);
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newNewShortcut;
-			_eventBinding.RaiseCustomEvent("ShortcutAdd", ref paramsArray);
+			EventBinding.RaiseCustomEvent("ShortcutAdd", ref paramsArray);
 		}
 
 		public void BeforeShortcutAdd([In] [Out] ref object cancel)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("BeforeShortcutAdd");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(cancel);
-				return;
-			}
+            if (!Validate("BeforeShortcutAdd"))
+            {
+                Invoker.ReleaseParamsArray(cancel);
+                return;
+            }
 
 			object[] paramsArray = new object[1];
 			paramsArray.SetValue(cancel, 0);
-			_eventBinding.RaiseCustomEvent("BeforeShortcutAdd", ref paramsArray);
+			EventBinding.RaiseCustomEvent("BeforeShortcutAdd", ref paramsArray);
 
-			cancel = (bool)paramsArray[0];
+			cancel = ToBoolean(paramsArray[0]);
 		}
 
 		public void BeforeShortcutRemove([In, MarshalAs(UnmanagedType.IDispatch)] object shortcut, [In] [Out] ref object cancel)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("BeforeShortcutRemove");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(shortcut, cancel);
-				return;
-			}
+        {
+            if (!Validate("BeforeShortcutRemove"))
+            {
+                Invoker.ReleaseParamsArray(shortcut, cancel);
+                return;
+            }
 
-			NetOffice.OutlookApi.OutlookBarShortcut newShortcut = Factory.CreateObjectFromComProxy(_eventClass, shortcut) as NetOffice.OutlookApi.OutlookBarShortcut;
+			NetOffice.OutlookApi.OutlookBarShortcut newShortcut = Factory.CreateKnownObjectFromComProxy<NetOffice.OutlookApi.OutlookBarShortcut>(EventClass, shortcut, NetOffice.OutlookApi.OutlookBarShortcut.LateBindingApiWrapperType);
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newShortcut;
 			paramsArray.SetValue(cancel, 1);
-			_eventBinding.RaiseCustomEvent("BeforeShortcutRemove", ref paramsArray);
+			EventBinding.RaiseCustomEvent("BeforeShortcutRemove", ref paramsArray);
 
-			cancel = (bool)paramsArray[1];
-		}
+			cancel = ToBoolean(paramsArray[1]);
+        }
 
 		#endregion
 	}

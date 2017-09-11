@@ -111,16 +111,6 @@ namespace NetOffice.MSHTMLApi
 
 		#region Methods
 
-		/// <summary>
-		/// SupportByVersion MSHTML 4
-		/// </summary>
-		/// <param name="pVar">NetOffice.MSHTMLApi.IHTMLEventObj pVar</param>
-		[SupportByVersion("MSHTML", 4)]
-		public void fire(NetOffice.MSHTMLApi.IHTMLEventObj pVar)
-		{
-			 Factory.ExecuteMethod(this, "fire", pVar);
-		}
-
 		#endregion
 
 		#pragma warning restore

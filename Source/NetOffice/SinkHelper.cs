@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Runtime.InteropServices;
 using System.Runtime.InteropServices.ComTypes;
+using NetOffice.Exceptions;
 
 namespace NetOffice
 {
@@ -15,6 +16,7 @@ namespace NetOffice
 
         private static List<SinkHelper> _pointList = new List<SinkHelper>();
         private ICOMObject _eventClass;
+        private IEventBinding _eventBinding;
         private IConnectionPoint _connectionPoint;
         private int _connectionCookie;
 
@@ -31,6 +33,47 @@ namespace NetOffice
             if (null == eventClass)
                 throw new ArgumentNullException("eventClass");
             _eventClass = eventClass;
+            _eventBinding = (IEventBinding)eventClass;
+        }
+
+        #endregion
+
+        #region Properties
+        
+        /// <summary>
+        /// CoClass Instance
+        /// </summary>
+        protected internal ICOMObject EventClass
+        {
+            get
+            {
+                return _eventClass;
+            }
+        }
+
+        /// <summary>
+        /// CoClass Instance EventBinding
+        /// </summary>
+        protected internal IEventBinding EventBinding
+        {
+            get
+            {
+                return _eventBinding;
+            }
+        }
+
+        /// <summary>
+        /// CoClass Factore Core
+        /// </summary>
+        protected internal Core Factory
+        {
+            get
+            {
+                if (null != _eventClass)
+                    return _eventClass.Factory;
+                else
+                    return Core.Default;
+            }
         }
 
         #endregion
@@ -201,10 +244,10 @@ namespace NetOffice
 
         #endregion
 
-        #region Public Methods
-
+        #region Methods
+        
         /// <summary>
-        /// create event binding
+        /// Create event binding
         /// </summary>
         /// <param name="connectPoint">target connection point</param>
         public void SetupEventBinding(IConnectionPoint connectPoint)
@@ -221,7 +264,7 @@ namespace NetOffice
             catch (Exception throwedException)
             {
                 _eventClass.Console.WriteException(throwedException);
-                throw (throwedException);
+                throw new NetOfficeCOMException("An error occured while setup event binding.", throwedException);
             }
         }
 
@@ -253,7 +296,7 @@ namespace NetOffice
                 catch (Exception throwedException)
                 {
                     _eventClass.Console.WriteException(throwedException);
-                    throw new COMException("An error occured.", throwedException);
+                    throw new NetOfficeCOMException("An error occured while release event binding.", throwedException);
                 }
 
                 _connectionPoint = null;
@@ -261,6 +304,87 @@ namespace NetOffice
 
                 if (removeFromList)
                     _pointList.Remove(this);
+            }
+        }
+
+        /// <summary>
+        /// Validate to proceed event
+        /// </summary>
+        /// <param name="eventName">name of the event</param>
+        /// <returns>true if event is ready, otherwise false</returns>
+        public bool Validate(string eventName)
+        {
+            if ((true == _eventClass.IsCurrentlyDisposing) || (false == _eventBinding.HasEventRecipients(eventName)))
+                return false;
+            else
+                return true;
+        }
+
+        /// <summary>
+        /// Perform cast to System.Boolean and suspress any exception(s)
+        /// </summary>
+        /// <param name="value">value to cast</param>
+        /// <returns>cast value or false if exception occurs</returns>
+        protected static bool ToBoolean(object value)
+        {
+            try
+            {
+                return (bool)value;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
+        /// <summary>
+        /// Perform cast to System.Int16 and suspress any exception(s)
+        /// </summary>
+        /// <param name="value">value to cast</param>
+        /// <returns>cast value or 0 if exception occurs</returns>
+        protected static Int16 ToInt16(object value)
+        {
+            try
+            {
+                return (Int16)value;
+            }
+            catch
+            {
+                return 0;
+            }
+        }
+
+        /// <summary>
+        /// Perform cast to System.Int32 and suspress any exception(s)
+        /// </summary>
+        /// <param name="value">value to cast</param>
+        /// <returns>cast value or 0 if exception occurs</returns>
+        protected static Int32 ToInt32(object value)
+        {
+            try
+            {
+                return (Int32)value;
+            }
+            catch
+            {
+                return 0;
+            }
+        }
+
+        /// <summary>
+        /// Perform cast to System.Single and suspress any exception(s)
+        /// </summary>
+        /// <param name="value">value to cast</param>
+        /// <returns>cast value or 0 if exception occurs</returns>
+        protected static Single ToSingle(object value)
+        {
+            try
+            {
+                return (Single)value;
+            }
+            catch
+            {
+                return 0;
             }
         }
 

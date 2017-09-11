@@ -10,7 +10,7 @@ namespace NetOffice.OutlookApi
 	/// SupportByVersion Outlook, 9,10,11,12,14,15,16
 	/// </summary>
 	[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
-	[EntityType(EntityType.IsDispatchInterface)]
+	[EntityType(EntityType.IsDispatchInterface), BaseType]
  	public class MAPIFolder : COMObject
 	{
 		#pragma warning disable
@@ -724,13 +724,12 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 14, 15, 16
 		/// </summary>
-		[SupportByVersion("Outlook", 14,15,16)]
+		[SupportByVersion("Outlook", 14,15,16), NativeResult]
 		public stdole.Picture GetCustomIcon()
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "GetCustomIcon", paramsArray);
-			stdole.Picture newObject = Factory.CreateObjectFromComProxy(this, returnItem) as stdole.Picture;
-			return newObject;
+            return returnItem as stdole.Picture;
 		}
 
 		/// <summary>

@@ -757,11 +757,10 @@ namespace NetOffice.ExcelApi.Tools
             if (null == type)
                 throw new ArgumentNullException("type");
 
-            object[] array = type.GetCustomAttributes(typeof(DontRegisterAddinAttribute), false);
-            if (null != array && array.Length == 1)
+            if (null != type.GetCustomAttribute<DontRegisterAddinAttribute>())
                 return;
 
-            RegisterHandler.Proceed(type, new string[] { _addinOfficeRegistryKey }, InstallScope.System, OfficeRegisterKeyState.NeedToCreate);
+            COMAddinRegisterHandler.Proceed(type, new string[] { _addinOfficeRegistryKey }, InstallScope.System, OfficeRegisterKeyState.NeedToCreate);
         }
 
         /// <summary>
@@ -774,11 +773,10 @@ namespace NetOffice.ExcelApi.Tools
             if (null == type)
                 throw new ArgumentNullException("type");
 
-            object[] array = type.GetCustomAttributes(typeof(DontRegisterAddinAttribute), false);
-            if (null != array && array.Length == 1)
+            if (null != type.GetCustomAttribute<DontRegisterAddinAttribute>())
                 return;
 
-            UnRegisterHandler.Proceed(type, new string[] { _addinOfficeRegistryKey }, InstallScope.System, OfficeUnRegisterKeyState.NeedToDelete);
+            COMAddinUnRegisterHandler.Proceed(type, new string[] { _addinOfficeRegistryKey }, InstallScope.System, OfficeUnRegisterKeyState.NeedToDelete);
         }
 
         /// <summary>
@@ -795,7 +793,7 @@ namespace NetOffice.ExcelApi.Tools
             InstallScope currentScope = (InstallScope)scope;
             OfficeRegisterKeyState currentKeyState = (OfficeRegisterKeyState)keyState;
 
-            RegisterHandler.Proceed(type, new string[] { _addinOfficeRegistryKey }, currentScope, currentKeyState);
+            COMAddinRegisterHandler.Proceed(type, new string[] { _addinOfficeRegistryKey }, currentScope, currentKeyState);
         }
 
         /// <summary>
@@ -812,7 +810,7 @@ namespace NetOffice.ExcelApi.Tools
             InstallScope currentScope = (InstallScope)scope;
             OfficeUnRegisterKeyState currentKeyState = (OfficeUnRegisterKeyState)keyState;
 
-            UnRegisterHandler.Proceed(type, new string[] { _addinOfficeRegistryKey }, currentScope, currentKeyState);
+            COMAddinUnRegisterHandler.Proceed(type, new string[] { _addinOfficeRegistryKey }, currentScope, currentKeyState);
         }
 
         /// <summary>

@@ -251,120 +251,91 @@ namespace NetOffice.MSProjectApi.Events
 		
 		#endregion
 	
-		#region Fields
-
-		private IEventBinding	_eventBinding;
-        private ICOMObject		_eventClass;
-        
-		#endregion
-		
-		#region Construction
+		#region Ctor
 
 		public _EProjectApp2_SinkHelper(ICOMObject eventClass, IConnectionPoint connectPoint): base(eventClass)
 		{
-			_eventClass = eventClass;
-			_eventBinding = (IEventBinding)eventClass;
 			SetupEventBinding(connectPoint);
 		}
 		
 		#endregion
-		
-		#region Properties
-
-        internal Core Factory
-        {
-            get
-            {
-                if (null != _eventClass)
-                    return _eventClass.Factory;
-                else
-                    return Core.Default;
-            }
-        }
-
-        #endregion
 
 		#region _EProjectApp2 Members
 		
 		public void NewProject([In, MarshalAs(UnmanagedType.IDispatch)] object pj)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("NewProject");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(pj);
-				return;
-			}
+            if (!Validate("NewProject"))
+            {
+                Invoker.ReleaseParamsArray(pj);
+                return;
+            }
 
-			NetOffice.MSProjectApi.Project newpj = Factory.CreateObjectFromComProxy(_eventClass, pj) as NetOffice.MSProjectApi.Project;
+			NetOffice.MSProjectApi.Project newpj = Factory.CreateKnownObjectFromComProxy<NetOffice.MSProjectApi.Project>(EventClass, pj, NetOffice.MSProjectApi.Project.LateBindingApiWrapperType);
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newpj;
-			_eventBinding.RaiseCustomEvent("NewProject", ref paramsArray);
+			EventBinding.RaiseCustomEvent("NewProject", ref paramsArray);
 		}
 
 		public void ProjectBeforeTaskDelete([In, MarshalAs(UnmanagedType.IDispatch)] object tsk, [In] [Out] ref object cancel)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("ProjectBeforeTaskDelete");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(tsk, cancel);
-				return;
-			}
+            if (!Validate("ProjectBeforeTaskDelete"))
+            {
+                Invoker.ReleaseParamsArray(tsk, cancel);
+                return;
+            }
 
-			NetOffice.MSProjectApi.Task newtsk = Factory.CreateObjectFromComProxy(_eventClass, tsk) as NetOffice.MSProjectApi.Task;
+			NetOffice.MSProjectApi.Task newtsk = Factory.CreateKnownObjectFromComProxy<NetOffice.MSProjectApi.Task>(EventClass, tsk, NetOffice.MSProjectApi.Task.LateBindingApiWrapperType);
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newtsk;
 			paramsArray.SetValue(cancel, 1);
-			_eventBinding.RaiseCustomEvent("ProjectBeforeTaskDelete", ref paramsArray);
+			EventBinding.RaiseCustomEvent("ProjectBeforeTaskDelete", ref paramsArray);
 
-			cancel = (bool)paramsArray[1];
+			cancel = ToBoolean(paramsArray[1]);
 		}
 
 		public void ProjectBeforeResourceDelete([In, MarshalAs(UnmanagedType.IDispatch)] object res, [In] [Out] ref object cancel)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("ProjectBeforeResourceDelete");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(res, cancel);
-				return;
-			}
+            if (!Validate("ProjectBeforeResourceDelete"))
+            {
+                Invoker.ReleaseParamsArray(res, cancel);
+                return;
+            }
 
-			NetOffice.MSProjectApi.Resource newres = Factory.CreateObjectFromComProxy(_eventClass, res) as NetOffice.MSProjectApi.Resource;
+            NetOffice.MSProjectApi.Resource newres = Factory.CreateKnownObjectFromComProxy<NetOffice.MSProjectApi.Resource>(EventClass, res, NetOffice.MSProjectApi.Resource.LateBindingApiWrapperType);
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newres;
 			paramsArray.SetValue(cancel, 1);
-			_eventBinding.RaiseCustomEvent("ProjectBeforeResourceDelete", ref paramsArray);
+			EventBinding.RaiseCustomEvent("ProjectBeforeResourceDelete", ref paramsArray);
 
-			cancel = (bool)paramsArray[1];
-		}
+			cancel = ToBoolean(paramsArray[1]);
+        }
 
 		public void ProjectBeforeAssignmentDelete([In, MarshalAs(UnmanagedType.IDispatch)] object asg, [In] [Out] ref object cancel)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("ProjectBeforeAssignmentDelete");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(asg, cancel);
-				return;
-			}
+        {
+            if (!Validate("ProjectBeforeResourceDelete"))
+            {
+                Invoker.ReleaseParamsArray(asg, cancel);
+                return;
+            }
 
-			NetOffice.MSProjectApi.Assignment newasg = Factory.CreateObjectFromComProxy(_eventClass, asg) as NetOffice.MSProjectApi.Assignment;
+			NetOffice.MSProjectApi.Assignment newasg = Factory.CreateKnownObjectFromComProxy<NetOffice.MSProjectApi.Assignment>(EventClass, asg, NetOffice.MSProjectApi.Assignment.LateBindingApiWrapperType);
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newasg;
 			paramsArray.SetValue(cancel, 1);
-			_eventBinding.RaiseCustomEvent("ProjectBeforeAssignmentDelete", ref paramsArray);
+			EventBinding.RaiseCustomEvent("ProjectBeforeAssignmentDelete", ref paramsArray);
 
-			cancel = (bool)paramsArray[1];
-		}
+			cancel = ToBoolean(paramsArray[1]);
+        }
 
 		public void ProjectBeforeTaskChange([In, MarshalAs(UnmanagedType.IDispatch)] object tsk, [In] object field, [In] object newVal, [In] [Out] ref object cancel)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("ProjectBeforeTaskChange");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(tsk, field, newVal, cancel);
-				return;
-			}
+            if (!Validate("ProjectBeforeResourceDelete"))
+            {
+                Invoker.ReleaseParamsArray(tsk, field, newVal, cancel);
+                return;
+            }
 
-			NetOffice.MSProjectApi.Task newtsk = Factory.CreateObjectFromComProxy(_eventClass, tsk) as NetOffice.MSProjectApi.Task;
+            NetOffice.MSProjectApi.Task newtsk = Factory.CreateKnownObjectFromComProxy<NetOffice.MSProjectApi.Task>(EventClass, tsk, NetOffice.MSProjectApi.Task.LateBindingApiWrapperType);
 			NetOffice.MSProjectApi.Enums.PjField newField = (NetOffice.MSProjectApi.Enums.PjField)field;
 			object newNewVal = (object)newVal;
 			object[] paramsArray = new object[4];
@@ -372,21 +343,20 @@ namespace NetOffice.MSProjectApi.Events
 			paramsArray[1] = newField;
 			paramsArray[2] = newNewVal;
 			paramsArray.SetValue(cancel, 3);
-			_eventBinding.RaiseCustomEvent("ProjectBeforeTaskChange", ref paramsArray);
+			EventBinding.RaiseCustomEvent("ProjectBeforeTaskChange", ref paramsArray);
 
-			cancel = (bool)paramsArray[3];
-		}
+			cancel = ToBoolean(paramsArray[3]);
+        }
 
 		public void ProjectBeforeResourceChange([In, MarshalAs(UnmanagedType.IDispatch)] object res, [In] object field, [In] object newVal, [In] [Out] ref object cancel)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("ProjectBeforeResourceChange");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(res, field, newVal, cancel);
-				return;
-			}
+        {
+            if (!Validate("ProjectBeforeResourceChange"))
+            {
+                Invoker.ReleaseParamsArray(res, field, newVal, cancel);
+                return;
+            }
 
-			NetOffice.MSProjectApi.Resource newres = Factory.CreateObjectFromComProxy(_eventClass, res) as NetOffice.MSProjectApi.Resource;
+			NetOffice.MSProjectApi.Resource newres = Factory.CreateKnownObjectFromComProxy<NetOffice.MSProjectApi.Resource>(EventClass, res, NetOffice.MSProjectApi.Resource.LateBindingApiWrapperType);
 			NetOffice.MSProjectApi.Enums.PjField newField = (NetOffice.MSProjectApi.Enums.PjField)field;
 			object newNewVal = (object)newVal;
 			object[] paramsArray = new object[4];
@@ -394,21 +364,20 @@ namespace NetOffice.MSProjectApi.Events
 			paramsArray[1] = newField;
 			paramsArray[2] = newNewVal;
 			paramsArray.SetValue(cancel, 3);
-			_eventBinding.RaiseCustomEvent("ProjectBeforeResourceChange", ref paramsArray);
+			EventBinding.RaiseCustomEvent("ProjectBeforeResourceChange", ref paramsArray);
 
-			cancel = (bool)paramsArray[3];
-		}
+			cancel = ToBoolean(paramsArray[3]);
+        }
 
 		public void ProjectBeforeAssignmentChange([In, MarshalAs(UnmanagedType.IDispatch)] object asg, [In] object field, [In] object newVal, [In] [Out] ref object cancel)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("ProjectBeforeAssignmentChange");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(asg, field, newVal, cancel);
-				return;
-			}
+            if (!Validate("ProjectBeforeAssignmentChange"))
+            {
+                Invoker.ReleaseParamsArray(asg, field, newVal, cancel);
+                return;
+            }
 
-			NetOffice.MSProjectApi.Assignment newasg = Factory.CreateObjectFromComProxy(_eventClass, asg) as NetOffice.MSProjectApi.Assignment;
+			NetOffice.MSProjectApi.Assignment newasg = Factory.CreateKnownObjectFromComProxy<NetOffice.MSProjectApi.Assignment>(EventClass, asg, NetOffice.MSProjectApi.Assignment.LateBindingApiWrapperType);
 			NetOffice.MSProjectApi.Enums.PjAssignmentField newField = (NetOffice.MSProjectApi.Enums.PjAssignmentField)field;
 			object newNewVal = (object)newVal;
 			object[] paramsArray = new object[4];
@@ -416,397 +385,374 @@ namespace NetOffice.MSProjectApi.Events
 			paramsArray[1] = newField;
 			paramsArray[2] = newNewVal;
 			paramsArray.SetValue(cancel, 3);
-			_eventBinding.RaiseCustomEvent("ProjectBeforeAssignmentChange", ref paramsArray);
+			EventBinding.RaiseCustomEvent("ProjectBeforeAssignmentChange", ref paramsArray);
 
-			cancel = (bool)paramsArray[3];
-		}
+			cancel = ToBoolean(paramsArray[3]);
+        }
 
 		public void ProjectBeforeTaskNew([In, MarshalAs(UnmanagedType.IDispatch)] object pj, [In] [Out] ref object cancel)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("ProjectBeforeTaskNew");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(pj, cancel);
-				return;
-			}
+            if (!Validate("ProjectBeforeTaskNew"))
+            {
+                Invoker.ReleaseParamsArray(pj, cancel);
+                return;
+            }
 
-			NetOffice.MSProjectApi.Project newpj = Factory.CreateObjectFromComProxy(_eventClass, pj) as NetOffice.MSProjectApi.Project;
+			NetOffice.MSProjectApi.Project newpj = Factory.CreateKnownObjectFromComProxy<NetOffice.MSProjectApi.Project>(EventClass, pj, NetOffice.MSProjectApi.Project.LateBindingApiWrapperType);
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newpj;
 			paramsArray.SetValue(cancel, 1);
-			_eventBinding.RaiseCustomEvent("ProjectBeforeTaskNew", ref paramsArray);
+			EventBinding.RaiseCustomEvent("ProjectBeforeTaskNew", ref paramsArray);
 
-			cancel = (bool)paramsArray[1];
-		}
+            cancel = ToBoolean(paramsArray[1]);
+        }
 
 		public void ProjectBeforeResourceNew([In, MarshalAs(UnmanagedType.IDispatch)] object pj, [In] [Out] ref object cancel)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("ProjectBeforeResourceNew");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(pj, cancel);
-				return;
-			}
+            if (!Validate("ProjectBeforeResourceNew"))
+            {
+                Invoker.ReleaseParamsArray(pj, cancel);
+                return;
+            }
 
-			NetOffice.MSProjectApi.Project newpj = Factory.CreateObjectFromComProxy(_eventClass, pj) as NetOffice.MSProjectApi.Project;
+			NetOffice.MSProjectApi.Project newpj = Factory.CreateKnownObjectFromComProxy<NetOffice.MSProjectApi.Project>(EventClass, pj, NetOffice.MSProjectApi.Project.LateBindingApiWrapperType);
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newpj;
 			paramsArray.SetValue(cancel, 1);
-			_eventBinding.RaiseCustomEvent("ProjectBeforeResourceNew", ref paramsArray);
+			EventBinding.RaiseCustomEvent("ProjectBeforeResourceNew", ref paramsArray);
 
-			cancel = (bool)paramsArray[1];
-		}
+			cancel = ToBoolean(paramsArray[1]);
+        }
 
 		public void ProjectBeforeAssignmentNew([In, MarshalAs(UnmanagedType.IDispatch)] object pj, [In] [Out] ref object cancel)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("ProjectBeforeAssignmentNew");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(pj, cancel);
-				return;
-			}
+        {
+            if (!Validate("ProjectBeforeAssignmentNew"))
+            {
+                Invoker.ReleaseParamsArray(pj, cancel);
+                return;
+            }
 
-			NetOffice.MSProjectApi.Project newpj = Factory.CreateObjectFromComProxy(_eventClass, pj) as NetOffice.MSProjectApi.Project;
+			NetOffice.MSProjectApi.Project newpj = Factory.CreateKnownObjectFromComProxy<NetOffice.MSProjectApi.Project>(EventClass, pj, NetOffice.MSProjectApi.Project.LateBindingApiWrapperType);
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newpj;
 			paramsArray.SetValue(cancel, 1);
-			_eventBinding.RaiseCustomEvent("ProjectBeforeAssignmentNew", ref paramsArray);
+			EventBinding.RaiseCustomEvent("ProjectBeforeAssignmentNew", ref paramsArray);
 
-			cancel = (bool)paramsArray[1];
-		}
+			cancel = ToBoolean(paramsArray[1]);
+        }
 
 		public void ProjectBeforeClose([In, MarshalAs(UnmanagedType.IDispatch)] object pj, [In] [Out] ref object cancel)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("ProjectBeforeClose");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(pj, cancel);
-				return;
-			}
+        {
+            if (!Validate("ProjectBeforeClose"))
+            {
+                Invoker.ReleaseParamsArray(pj, cancel);
+                return;
+            }
 
-			NetOffice.MSProjectApi.Project newpj = Factory.CreateObjectFromComProxy(_eventClass, pj) as NetOffice.MSProjectApi.Project;
-			object[] paramsArray = new object[2];
+            NetOffice.MSProjectApi.Project newpj = Factory.CreateKnownObjectFromComProxy<NetOffice.MSProjectApi.Project>(EventClass, pj, NetOffice.MSProjectApi.Project.LateBindingApiWrapperType);
+            object[] paramsArray = new object[2];
 			paramsArray[0] = newpj;
 			paramsArray.SetValue(cancel, 1);
-			_eventBinding.RaiseCustomEvent("ProjectBeforeClose", ref paramsArray);
+			EventBinding.RaiseCustomEvent("ProjectBeforeClose", ref paramsArray);
 
-			cancel = (bool)paramsArray[1];
-		}
+            cancel = ToBoolean(paramsArray[1]);
+        }
 
 		public void ProjectBeforePrint([In, MarshalAs(UnmanagedType.IDispatch)] object pj, [In] [Out] ref object cancel)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("ProjectBeforePrint");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(pj, cancel);
-				return;
-			}
+            if (!Validate("ProjectBeforePrint"))
+            {
+                Invoker.ReleaseParamsArray(pj, cancel);
+                return;
+            }
 
-			NetOffice.MSProjectApi.Project newpj = Factory.CreateObjectFromComProxy(_eventClass, pj) as NetOffice.MSProjectApi.Project;
-			object[] paramsArray = new object[2];
+            NetOffice.MSProjectApi.Project newpj = Factory.CreateKnownObjectFromComProxy<NetOffice.MSProjectApi.Project>(EventClass, pj, NetOffice.MSProjectApi.Project.LateBindingApiWrapperType);
+            object[] paramsArray = new object[2];
 			paramsArray[0] = newpj;
 			paramsArray.SetValue(cancel, 1);
-			_eventBinding.RaiseCustomEvent("ProjectBeforePrint", ref paramsArray);
+			EventBinding.RaiseCustomEvent("ProjectBeforePrint", ref paramsArray);
 
-			cancel = (bool)paramsArray[1];
-		}
+            cancel = ToBoolean(paramsArray[1]);
+        }
 
 		public void ProjectBeforeSave([In, MarshalAs(UnmanagedType.IDispatch)] object pj, [In] object saveAsUi, [In] [Out] ref object cancel)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("ProjectBeforeSave");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(pj, saveAsUi, cancel);
-				return;
-			}
+            if (!Validate("ProjectBeforeSave"))
+            {
+                Invoker.ReleaseParamsArray(pj, saveAsUi, cancel);
+                return;
+            }
 
-			NetOffice.MSProjectApi.Project newpj = Factory.CreateObjectFromComProxy(_eventClass, pj) as NetOffice.MSProjectApi.Project;
-			bool newSaveAsUi = Convert.ToBoolean(saveAsUi);
+            NetOffice.MSProjectApi.Project newpj = Factory.CreateKnownObjectFromComProxy<NetOffice.MSProjectApi.Project>(EventClass, pj, NetOffice.MSProjectApi.Project.LateBindingApiWrapperType);
+            bool newSaveAsUi = Convert.ToBoolean(saveAsUi);
 			object[] paramsArray = new object[3];
 			paramsArray[0] = newpj;
 			paramsArray[1] = newSaveAsUi;
 			paramsArray.SetValue(cancel, 2);
-			_eventBinding.RaiseCustomEvent("ProjectBeforeSave", ref paramsArray);
+			EventBinding.RaiseCustomEvent("ProjectBeforeSave", ref paramsArray);
 
-			cancel = (bool)paramsArray[2];
-		}
+            cancel = ToBoolean(paramsArray[2]);
+        }
 
 		public void ProjectCalculate([In, MarshalAs(UnmanagedType.IDispatch)] object pj)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("ProjectCalculate");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(pj);
-				return;
-			}
+            if (!Validate("ProjectCalculate"))
+            {
+                Invoker.ReleaseParamsArray(pj);
+                return;
+            }
 
-			NetOffice.MSProjectApi.Project newpj = Factory.CreateObjectFromComProxy(_eventClass, pj) as NetOffice.MSProjectApi.Project;
-			object[] paramsArray = new object[1];
+            NetOffice.MSProjectApi.Project newpj = Factory.CreateKnownObjectFromComProxy<NetOffice.MSProjectApi.Project>(EventClass, pj, NetOffice.MSProjectApi.Project.LateBindingApiWrapperType);
+            object[] paramsArray = new object[1];
 			paramsArray[0] = newpj;
-			_eventBinding.RaiseCustomEvent("ProjectCalculate", ref paramsArray);
+			EventBinding.RaiseCustomEvent("ProjectCalculate", ref paramsArray);
 		}
 
 		public void WindowGoalAreaChange([In, MarshalAs(UnmanagedType.IDispatch)] object window, [In] object goalArea)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("WindowGoalAreaChange");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(window, goalArea);
-				return;
-			}
+            if (!Validate("WindowGoalAreaChange"))
+            {
+                Invoker.ReleaseParamsArray(window, goalArea);
+                return;
+            }
 
-			NetOffice.MSProjectApi.Window newWindow = Factory.CreateObjectFromComProxy(_eventClass, window) as NetOffice.MSProjectApi.Window;
+			NetOffice.MSProjectApi.Window newWindow = Factory.CreateKnownObjectFromComProxy<NetOffice.MSProjectApi.Window>(EventClass, window, NetOffice.MSProjectApi.Window.LateBindingApiWrapperType);
 			Int32 newgoalArea = Convert.ToInt32(goalArea);
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newWindow;
 			paramsArray[1] = newgoalArea;
-			_eventBinding.RaiseCustomEvent("WindowGoalAreaChange", ref paramsArray);
+			EventBinding.RaiseCustomEvent("WindowGoalAreaChange", ref paramsArray);
 		}
 
 		public void WindowSelectionChange([In, MarshalAs(UnmanagedType.IDispatch)] object window, [In, MarshalAs(UnmanagedType.IDispatch)] object sel, [In] object selType)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("WindowSelectionChange");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(window, sel, selType);
-				return;
-			}
+        {
+            if (!Validate("WindowSelectionChange"))
+            {
+                Invoker.ReleaseParamsArray(window, sel, selType);
+                return;
+            }
 
-			NetOffice.MSProjectApi.Window newWindow = Factory.CreateObjectFromComProxy(_eventClass, window) as NetOffice.MSProjectApi.Window;
-			NetOffice.MSProjectApi.Selection newsel = Factory.CreateObjectFromComProxy(_eventClass, sel) as NetOffice.MSProjectApi.Selection;
+			NetOffice.MSProjectApi.Window newWindow = Factory.CreateKnownObjectFromComProxy<NetOffice.MSProjectApi.Window>(EventClass, window, NetOffice.MSProjectApi.Window.LateBindingApiWrapperType);
+			NetOffice.MSProjectApi.Selection newsel = Factory.CreateKnownObjectFromComProxy<NetOffice.MSProjectApi.Selection>(EventClass, sel, NetOffice.MSProjectApi.Selection.LateBindingApiWrapperType);
 			object newselType = (object)selType;
 			object[] paramsArray = new object[3];
 			paramsArray[0] = newWindow;
 			paramsArray[1] = newsel;
 			paramsArray[2] = newselType;
-			_eventBinding.RaiseCustomEvent("WindowSelectionChange", ref paramsArray);
+			EventBinding.RaiseCustomEvent("WindowSelectionChange", ref paramsArray);
 		}
 
 		public void WindowBeforeViewChange([In, MarshalAs(UnmanagedType.IDispatch)] object window, [In, MarshalAs(UnmanagedType.IDispatch)] object prevView, [In, MarshalAs(UnmanagedType.IDispatch)] object newView, [In] object projectHasViewWindow, [In, MarshalAs(UnmanagedType.IDispatch)] object info)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("WindowBeforeViewChange");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(window, prevView, newView, projectHasViewWindow, info);
-				return;
-			}
+        {
+            if (!Validate("WindowBeforeViewChange"))
+            {
+                Invoker.ReleaseParamsArray(window, prevView, newView, projectHasViewWindow, info);
+                return;
+            }
 
-			NetOffice.MSProjectApi.Window newWindow = Factory.CreateObjectFromComProxy(_eventClass, window) as NetOffice.MSProjectApi.Window;
-			NetOffice.MSProjectApi.View newprevView = Factory.CreateObjectFromComProxy(_eventClass, prevView) as NetOffice.MSProjectApi.View;
-			NetOffice.MSProjectApi.View newnewView = Factory.CreateObjectFromComProxy(_eventClass, newView) as NetOffice.MSProjectApi.View;
+			NetOffice.MSProjectApi.Window newWindow = Factory.CreateKnownObjectFromComProxy<NetOffice.MSProjectApi.Window>(EventClass, window, NetOffice.MSProjectApi.Window.LateBindingApiWrapperType);
+			NetOffice.MSProjectApi.View newprevView = Factory.CreateKnownObjectFromComProxy<NetOffice.MSProjectApi.View>(EventClass, prevView, NetOffice.MSProjectApi.View.LateBindingApiWrapperType);
+			NetOffice.MSProjectApi.View newnewView = Factory.CreateKnownObjectFromComProxy<NetOffice.MSProjectApi.View>(EventClass, newView, NetOffice.MSProjectApi.View.LateBindingApiWrapperType);
 			bool newprojectHasViewWindow = Convert.ToBoolean(projectHasViewWindow);
-			NetOffice.MSProjectApi.EventInfo newInfo = Factory.CreateObjectFromComProxy(_eventClass, info) as NetOffice.MSProjectApi.EventInfo;
+			NetOffice.MSProjectApi.EventInfo newInfo = Factory.CreateKnownObjectFromComProxy<NetOffice.MSProjectApi.EventInfo>(EventClass, info, NetOffice.MSProjectApi.EventInfo.LateBindingApiWrapperType);
 			object[] paramsArray = new object[5];
 			paramsArray[0] = newWindow;
 			paramsArray[1] = newprevView;
 			paramsArray[2] = newnewView;
 			paramsArray[3] = newprojectHasViewWindow;
 			paramsArray[4] = newInfo;
-			_eventBinding.RaiseCustomEvent("WindowBeforeViewChange", ref paramsArray);
+			EventBinding.RaiseCustomEvent("WindowBeforeViewChange", ref paramsArray);
 		}
 
 		public void WindowViewChange([In, MarshalAs(UnmanagedType.IDispatch)] object window, [In, MarshalAs(UnmanagedType.IDispatch)] object prevView, [In, MarshalAs(UnmanagedType.IDispatch)] object newView, [In] object success)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("WindowViewChange");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(window, prevView, newView, success);
-				return;
-			}
+            if (!Validate("WindowViewChange"))
+            {
+                Invoker.ReleaseParamsArray(window, prevView, newView, success);
+                return;
+            }
 
-			NetOffice.MSProjectApi.Window newWindow = Factory.CreateObjectFromComProxy(_eventClass, window) as NetOffice.MSProjectApi.Window;
-			NetOffice.MSProjectApi.View newprevView = Factory.CreateObjectFromComProxy(_eventClass, prevView) as NetOffice.MSProjectApi.View;
-			NetOffice.MSProjectApi.View newnewView = Factory.CreateObjectFromComProxy(_eventClass, newView) as NetOffice.MSProjectApi.View;
-			bool newsuccess = Convert.ToBoolean(success);
+            NetOffice.MSProjectApi.Window newWindow = Factory.CreateKnownObjectFromComProxy<NetOffice.MSProjectApi.Window>(EventClass, window, NetOffice.MSProjectApi.Window.LateBindingApiWrapperType);
+            NetOffice.MSProjectApi.View newprevView = Factory.CreateKnownObjectFromComProxy<NetOffice.MSProjectApi.View>(EventClass, prevView, NetOffice.MSProjectApi.View.LateBindingApiWrapperType);
+            NetOffice.MSProjectApi.View newnewView = Factory.CreateKnownObjectFromComProxy<NetOffice.MSProjectApi.View>(EventClass, newView, NetOffice.MSProjectApi.View.LateBindingApiWrapperType);
+            bool newsuccess = Convert.ToBoolean(success);
 			object[] paramsArray = new object[4];
 			paramsArray[0] = newWindow;
 			paramsArray[1] = newprevView;
 			paramsArray[2] = newnewView;
 			paramsArray[3] = newsuccess;
-			_eventBinding.RaiseCustomEvent("WindowViewChange", ref paramsArray);
+			EventBinding.RaiseCustomEvent("WindowViewChange", ref paramsArray);
 		}
 
 		public void WindowActivate([In, MarshalAs(UnmanagedType.IDispatch)] object activatedWindow)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("WindowActivate");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(activatedWindow);
-				return;
-			}
+            if (!Validate("WindowActivate"))
+            {
+                Invoker.ReleaseParamsArray(activatedWindow);
+                return;
+            }
 
-			NetOffice.MSProjectApi.Window newactivatedWindow = Factory.CreateObjectFromComProxy(_eventClass, activatedWindow) as NetOffice.MSProjectApi.Window;
+			NetOffice.MSProjectApi.Window newactivatedWindow = Factory.CreateKnownObjectFromComProxy<NetOffice.MSProjectApi.Window>(EventClass, activatedWindow, NetOffice.MSProjectApi.Window.LateBindingApiWrapperType);
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newactivatedWindow;
-			_eventBinding.RaiseCustomEvent("WindowActivate", ref paramsArray);
+			EventBinding.RaiseCustomEvent("WindowActivate", ref paramsArray);
 		}
 
 		public void WindowDeactivate([In, MarshalAs(UnmanagedType.IDispatch)] object deactivatedWindow)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("WindowDeactivate");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(deactivatedWindow);
-				return;
-			}
+        {
+            if (!Validate("WindowDeactivate"))
+            {
+                Invoker.ReleaseParamsArray(deactivatedWindow);
+                return;
+            }
 
-			NetOffice.MSProjectApi.Window newdeactivatedWindow = Factory.CreateObjectFromComProxy(_eventClass, deactivatedWindow) as NetOffice.MSProjectApi.Window;
+			NetOffice.MSProjectApi.Window newdeactivatedWindow = Factory.CreateKnownObjectFromComProxy<NetOffice.MSProjectApi.Window>(EventClass, deactivatedWindow, NetOffice.MSProjectApi.Window.LateBindingApiWrapperType);
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newdeactivatedWindow;
-			_eventBinding.RaiseCustomEvent("WindowDeactivate", ref paramsArray);
+			EventBinding.RaiseCustomEvent("WindowDeactivate", ref paramsArray);
 		}
 
 		public void WindowSidepaneDisplayChange([In, MarshalAs(UnmanagedType.IDispatch)] object window, [In] object close)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("WindowSidepaneDisplayChange");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(window, close);
-				return;
-			}
+            if (!Validate("WindowSidepaneDisplayChange"))
+            {
+                Invoker.ReleaseParamsArray(window, close);
+                return;
+            }
 
-			NetOffice.MSProjectApi.Window newWindow = Factory.CreateObjectFromComProxy(_eventClass, window) as NetOffice.MSProjectApi.Window;
-			bool newClose = Convert.ToBoolean(close);
+            NetOffice.MSProjectApi.Window newWindow = Factory.CreateKnownObjectFromComProxy<NetOffice.MSProjectApi.Window>(EventClass, window, NetOffice.MSProjectApi.Window.LateBindingApiWrapperType);
+            bool newClose = Convert.ToBoolean(close);
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newWindow;
 			paramsArray[1] = newClose;
-			_eventBinding.RaiseCustomEvent("WindowSidepaneDisplayChange", ref paramsArray);
+			EventBinding.RaiseCustomEvent("WindowSidepaneDisplayChange", ref paramsArray);
 		}
 
 		public void WindowSidepaneTaskChange([In, MarshalAs(UnmanagedType.IDispatch)] object window, [In] object iD, [In] object isGoalArea)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("WindowSidepaneTaskChange");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(window, iD, isGoalArea);
-				return;
-			}
+        {
+            if (!Validate("WindowSidepaneTaskChange"))
+            {
+                Invoker.ReleaseParamsArray(window, iD, isGoalArea);
+                return;
+            }
 
-			NetOffice.MSProjectApi.Window newWindow = Factory.CreateObjectFromComProxy(_eventClass, window) as NetOffice.MSProjectApi.Window;
-			Int32 newID = Convert.ToInt32(iD);
+            NetOffice.MSProjectApi.Window newWindow = Factory.CreateKnownObjectFromComProxy<NetOffice.MSProjectApi.Window>(EventClass, window, NetOffice.MSProjectApi.Window.LateBindingApiWrapperType);
+            Int32 newID = Convert.ToInt32(iD);
 			bool newIsGoalArea = Convert.ToBoolean(isGoalArea);
 			object[] paramsArray = new object[3];
 			paramsArray[0] = newWindow;
 			paramsArray[1] = newID;
 			paramsArray[2] = newIsGoalArea;
-			_eventBinding.RaiseCustomEvent("WindowSidepaneTaskChange", ref paramsArray);
+			EventBinding.RaiseCustomEvent("WindowSidepaneTaskChange", ref paramsArray);
 		}
 
 		public void WorkpaneDisplayChange([In] object displayState)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("WorkpaneDisplayChange");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(displayState);
-				return;
-			}
+            if (!Validate("WorkpaneDisplayChange"))
+            {
+                Invoker.ReleaseParamsArray(displayState);
+                return;
+            }
 
 			bool newDisplayState = Convert.ToBoolean(displayState);
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newDisplayState;
-			_eventBinding.RaiseCustomEvent("WorkpaneDisplayChange", ref paramsArray);
+			EventBinding.RaiseCustomEvent("WorkpaneDisplayChange", ref paramsArray);
 		}
 
 		public void LoadWebPage([In, MarshalAs(UnmanagedType.IDispatch)] object window, [In] [Out] ref object targetPage)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("LoadWebPage");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(window, targetPage);
-				return;
-			}
+            if (!Validate("LoadWebPage"))
+            {
+                Invoker.ReleaseParamsArray(window, targetPage);
+                return;
+            }
 
-			NetOffice.MSProjectApi.Window newWindow = Factory.CreateObjectFromComProxy(_eventClass, window) as NetOffice.MSProjectApi.Window;
-			object[] paramsArray = new object[2];
+            NetOffice.MSProjectApi.Window newWindow = Factory.CreateKnownObjectFromComProxy<NetOffice.MSProjectApi.Window>(EventClass, window, NetOffice.MSProjectApi.Window.LateBindingApiWrapperType);
+            object[] paramsArray = new object[2];
 			paramsArray[0] = newWindow;
 			paramsArray.SetValue(targetPage, 1);
-			_eventBinding.RaiseCustomEvent("LoadWebPage", ref paramsArray);
+			EventBinding.RaiseCustomEvent("LoadWebPage", ref paramsArray);
 
-			targetPage = (string)paramsArray[1];
+			targetPage = Convert.ToString(paramsArray[1]);
 		}
 
 		public void ProjectAfterSave()
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("ProjectAfterSave");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray();
-				return;
-			}
+            if (!Validate("ProjectAfterSave"))
+            {
+                return;
+            }
 
 			object[] paramsArray = new object[0];
-			_eventBinding.RaiseCustomEvent("ProjectAfterSave", ref paramsArray);
+			EventBinding.RaiseCustomEvent("ProjectAfterSave", ref paramsArray);
 		}
 
 		public void ProjectTaskNew([In, MarshalAs(UnmanagedType.IDispatch)] object pj, [In] object iD)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("ProjectTaskNew");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(pj, iD);
-				return;
-			}
+            if (!Validate("ProjectTaskNew"))
+            {
+                Invoker.ReleaseParamsArray(pj, iD);
+                return;
+            }
 
-			NetOffice.MSProjectApi.Project newpj = Factory.CreateObjectFromComProxy(_eventClass, pj) as NetOffice.MSProjectApi.Project;
+			NetOffice.MSProjectApi.Project newpj = Factory.CreateKnownObjectFromComProxy<NetOffice.MSProjectApi.Project>(EventClass, pj, NetOffice.MSProjectApi.Project.LateBindingApiWrapperType);
 			Int32 newID = Convert.ToInt32(iD);
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newpj;
 			paramsArray[1] = newID;
-			_eventBinding.RaiseCustomEvent("ProjectTaskNew", ref paramsArray);
+			EventBinding.RaiseCustomEvent("ProjectTaskNew", ref paramsArray);
 		}
 
 		public void ProjectResourceNew([In, MarshalAs(UnmanagedType.IDispatch)] object pj, [In] object iD)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("ProjectResourceNew");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(pj, iD);
-				return;
-			}
+        {
+            if (!Validate("ProjectResourceNew"))
+            {
+                Invoker.ReleaseParamsArray(pj, iD);
+                return;
+            }
 
-			NetOffice.MSProjectApi.Project newpj = Factory.CreateObjectFromComProxy(_eventClass, pj) as NetOffice.MSProjectApi.Project;
-			Int32 newID = Convert.ToInt32(iD);
+            NetOffice.MSProjectApi.Project newpj = Factory.CreateKnownObjectFromComProxy<NetOffice.MSProjectApi.Project>(EventClass, pj, NetOffice.MSProjectApi.Project.LateBindingApiWrapperType);
+            Int32 newID = Convert.ToInt32(iD);
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newpj;
 			paramsArray[1] = newID;
-			_eventBinding.RaiseCustomEvent("ProjectResourceNew", ref paramsArray);
+			EventBinding.RaiseCustomEvent("ProjectResourceNew", ref paramsArray);
 		}
 
 		public void ProjectAssignmentNew([In, MarshalAs(UnmanagedType.IDispatch)] object pj, [In] object iD)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("ProjectAssignmentNew");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(pj, iD);
-				return;
-			}
+            if (!Validate("ProjectResourceNew"))
+            {
+                Invoker.ReleaseParamsArray(pj, iD);
+                return;
+            }
 
-			NetOffice.MSProjectApi.Project newpj = Factory.CreateObjectFromComProxy(_eventClass, pj) as NetOffice.MSProjectApi.Project;
-			Int32 newID = Convert.ToInt32(iD);
+            NetOffice.MSProjectApi.Project newpj = Factory.CreateKnownObjectFromComProxy<NetOffice.MSProjectApi.Project>(EventClass, pj, NetOffice.MSProjectApi.Project.LateBindingApiWrapperType);
+            Int32 newID = Convert.ToInt32(iD);
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newpj;
 			paramsArray[1] = newID;
-			_eventBinding.RaiseCustomEvent("ProjectAssignmentNew", ref paramsArray);
+			EventBinding.RaiseCustomEvent("ProjectAssignmentNew", ref paramsArray);
 		}
 
 		public void ProjectBeforeSaveBaseline([In, MarshalAs(UnmanagedType.IDispatch)] object pj, [In] object interim, [In] object bl, [In] object interimCopy, [In] object interimInto, [In] object allTasks, [In] object rollupToSummaryTasks, [In] object rollupFromSubtasks, [In, MarshalAs(UnmanagedType.IDispatch)] object info)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("ProjectBeforeSaveBaseline");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(pj, interim, bl, interimCopy, interimInto, allTasks, rollupToSummaryTasks, rollupFromSubtasks, info);
-				return;
-			}
+            if (!Validate("ProjectBeforeSaveBaseline"))
+            {
+                Invoker.ReleaseParamsArray(pj, interim, bl, interimCopy, interimInto, allTasks, rollupToSummaryTasks, rollupFromSubtasks, info);
+                return;
+            }
 
-			NetOffice.MSProjectApi.Project newpj = Factory.CreateObjectFromComProxy(_eventClass, pj) as NetOffice.MSProjectApi.Project;
-			bool newInterim = Convert.ToBoolean(interim);
+            NetOffice.MSProjectApi.Project newpj = Factory.CreateKnownObjectFromComProxy<NetOffice.MSProjectApi.Project>(EventClass, pj, NetOffice.MSProjectApi.Project.LateBindingApiWrapperType);
+            bool newInterim = Convert.ToBoolean(interim);
 			NetOffice.MSProjectApi.Enums.PjBaselines newbl = (NetOffice.MSProjectApi.Enums.PjBaselines)bl;
 			NetOffice.MSProjectApi.Enums.PjSaveBaselineFrom newInterimCopy = (NetOffice.MSProjectApi.Enums.PjSaveBaselineFrom)interimCopy;
 			NetOffice.MSProjectApi.Enums.PjSaveBaselineTo newInterimInto = (NetOffice.MSProjectApi.Enums.PjSaveBaselineTo)interimInto;
 			bool newAllTasks = Convert.ToBoolean(allTasks);
 			bool newRollupToSummaryTasks = Convert.ToBoolean(rollupToSummaryTasks);
 			bool newRollupFromSubtasks = Convert.ToBoolean(rollupFromSubtasks);
-			NetOffice.MSProjectApi.EventInfo newInfo = Factory.CreateObjectFromComProxy(_eventClass, info) as NetOffice.MSProjectApi.EventInfo;
+			NetOffice.MSProjectApi.EventInfo newInfo = Factory.CreateKnownObjectFromComProxy<NetOffice.MSProjectApi.EventInfo>(EventClass, info, NetOffice.MSProjectApi.EventInfo.LateBindingApiWrapperType);
 			object[] paramsArray = new object[9];
 			paramsArray[0] = newpj;
 			paramsArray[1] = newInterim;
@@ -817,275 +763,260 @@ namespace NetOffice.MSProjectApi.Events
 			paramsArray[6] = newRollupToSummaryTasks;
 			paramsArray[7] = newRollupFromSubtasks;
 			paramsArray[8] = newInfo;
-			_eventBinding.RaiseCustomEvent("ProjectBeforeSaveBaseline", ref paramsArray);
+			EventBinding.RaiseCustomEvent("ProjectBeforeSaveBaseline", ref paramsArray);
 		}
 
 		public void ProjectBeforeClearBaseline([In, MarshalAs(UnmanagedType.IDispatch)] object pj, [In] object interim, [In] object bl, [In] object interimFrom, [In] object allTasks, [In, MarshalAs(UnmanagedType.IDispatch)] object info)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("ProjectBeforeClearBaseline");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(pj, interim, bl, interimFrom, allTasks, info);
-				return;
-			}
+            if (!Validate("ProjectBeforeClearBaseline"))
+            {
+                Invoker.ReleaseParamsArray(pj, interim, bl, interimFrom, allTasks, info);
+                return;
+            }
 
-			NetOffice.MSProjectApi.Project newpj = Factory.CreateObjectFromComProxy(_eventClass, pj) as NetOffice.MSProjectApi.Project;
-			bool newInterim = Convert.ToBoolean(interim);
+            NetOffice.MSProjectApi.Project newpj = Factory.CreateKnownObjectFromComProxy<NetOffice.MSProjectApi.Project>(EventClass, pj, NetOffice.MSProjectApi.Project.LateBindingApiWrapperType);
+            bool newInterim = Convert.ToBoolean(interim);
 			NetOffice.MSProjectApi.Enums.PjBaselines newbl = (NetOffice.MSProjectApi.Enums.PjBaselines)bl;
 			NetOffice.MSProjectApi.Enums.PjSaveBaselineTo newInterimFrom = (NetOffice.MSProjectApi.Enums.PjSaveBaselineTo)interimFrom;
 			bool newAllTasks = Convert.ToBoolean(allTasks);
-			NetOffice.MSProjectApi.EventInfo newInfo = Factory.CreateObjectFromComProxy(_eventClass, info) as NetOffice.MSProjectApi.EventInfo;
-			object[] paramsArray = new object[6];
+            NetOffice.MSProjectApi.EventInfo newInfo = Factory.CreateKnownObjectFromComProxy<NetOffice.MSProjectApi.EventInfo>(EventClass, info, NetOffice.MSProjectApi.EventInfo.LateBindingApiWrapperType);
+            object[] paramsArray = new object[6];
 			paramsArray[0] = newpj;
 			paramsArray[1] = newInterim;
 			paramsArray[2] = newbl;
 			paramsArray[3] = newInterimFrom;
 			paramsArray[4] = newAllTasks;
 			paramsArray[5] = newInfo;
-			_eventBinding.RaiseCustomEvent("ProjectBeforeClearBaseline", ref paramsArray);
+			EventBinding.RaiseCustomEvent("ProjectBeforeClearBaseline", ref paramsArray);
 		}
 
 		public void ProjectBeforeClose2([In, MarshalAs(UnmanagedType.IDispatch)] object pj, [In, MarshalAs(UnmanagedType.IDispatch)] object info)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("ProjectBeforeClose2");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(pj, info);
-				return;
-			}
+        {
+            if (!Validate("ProjectBeforeClose2"))
+            {
+                Invoker.ReleaseParamsArray(pj, info);
+                return;
+            }
 
-			NetOffice.MSProjectApi.Project newpj = Factory.CreateObjectFromComProxy(_eventClass, pj) as NetOffice.MSProjectApi.Project;
-			NetOffice.MSProjectApi.EventInfo newInfo = Factory.CreateObjectFromComProxy(_eventClass, info) as NetOffice.MSProjectApi.EventInfo;
-			object[] paramsArray = new object[2];
+            NetOffice.MSProjectApi.Project newpj = Factory.CreateKnownObjectFromComProxy<NetOffice.MSProjectApi.Project>(EventClass, pj, NetOffice.MSProjectApi.Project.LateBindingApiWrapperType);
+            NetOffice.MSProjectApi.EventInfo newInfo = Factory.CreateKnownObjectFromComProxy<NetOffice.MSProjectApi.EventInfo>(EventClass, info, NetOffice.MSProjectApi.EventInfo.LateBindingApiWrapperType);
+            object[] paramsArray = new object[2];
 			paramsArray[0] = newpj;
 			paramsArray[1] = newInfo;
-			_eventBinding.RaiseCustomEvent("ProjectBeforeClose2", ref paramsArray);
+			EventBinding.RaiseCustomEvent("ProjectBeforeClose2", ref paramsArray);
 		}
 
 		public void ProjectBeforePrint2([In, MarshalAs(UnmanagedType.IDispatch)] object pj, [In, MarshalAs(UnmanagedType.IDispatch)] object info)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("ProjectBeforePrint2");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(pj, info);
-				return;
-			}
+        {
+            if (!Validate("ProjectBeforePrint2"))
+            {
+                Invoker.ReleaseParamsArray(pj, info);
+                return;
+            }
 
-			NetOffice.MSProjectApi.Project newpj = Factory.CreateObjectFromComProxy(_eventClass, pj) as NetOffice.MSProjectApi.Project;
-			NetOffice.MSProjectApi.EventInfo newInfo = Factory.CreateObjectFromComProxy(_eventClass, info) as NetOffice.MSProjectApi.EventInfo;
-			object[] paramsArray = new object[2];
+            NetOffice.MSProjectApi.Project newpj = Factory.CreateKnownObjectFromComProxy<NetOffice.MSProjectApi.Project>(EventClass, pj, NetOffice.MSProjectApi.Project.LateBindingApiWrapperType);
+            NetOffice.MSProjectApi.EventInfo newInfo = Factory.CreateKnownObjectFromComProxy<NetOffice.MSProjectApi.EventInfo>(EventClass, info, NetOffice.MSProjectApi.EventInfo.LateBindingApiWrapperType);
+            object[] paramsArray = new object[2];
 			paramsArray[0] = newpj;
 			paramsArray[1] = newInfo;
-			_eventBinding.RaiseCustomEvent("ProjectBeforePrint2", ref paramsArray);
+			EventBinding.RaiseCustomEvent("ProjectBeforePrint2", ref paramsArray);
 		}
 
 		public void ProjectBeforeSave2([In, MarshalAs(UnmanagedType.IDispatch)] object pj, [In] object saveAsUi, [In, MarshalAs(UnmanagedType.IDispatch)] object info)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("ProjectBeforeSave2");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(pj, saveAsUi, info);
-				return;
-			}
+            if (!Validate("ProjectBeforeSave2"))
+            {
+                Invoker.ReleaseParamsArray(pj, info);
+                return;
+            }
 
-			NetOffice.MSProjectApi.Project newpj = Factory.CreateObjectFromComProxy(_eventClass, pj) as NetOffice.MSProjectApi.Project;
-			bool newSaveAsUi = Convert.ToBoolean(saveAsUi);
-			NetOffice.MSProjectApi.EventInfo newInfo = Factory.CreateObjectFromComProxy(_eventClass, info) as NetOffice.MSProjectApi.EventInfo;
-			object[] paramsArray = new object[3];
+            NetOffice.MSProjectApi.Project newpj = Factory.CreateKnownObjectFromComProxy<NetOffice.MSProjectApi.Project>(EventClass, pj, NetOffice.MSProjectApi.Project.LateBindingApiWrapperType);
+            bool newSaveAsUi = Convert.ToBoolean(saveAsUi);
+            NetOffice.MSProjectApi.EventInfo newInfo = Factory.CreateKnownObjectFromComProxy<NetOffice.MSProjectApi.EventInfo>(EventClass, info, NetOffice.MSProjectApi.EventInfo.LateBindingApiWrapperType);
+            object[] paramsArray = new object[3];
 			paramsArray[0] = newpj;
 			paramsArray[1] = newSaveAsUi;
 			paramsArray[2] = newInfo;
-			_eventBinding.RaiseCustomEvent("ProjectBeforeSave2", ref paramsArray);
+			EventBinding.RaiseCustomEvent("ProjectBeforeSave2", ref paramsArray);
 		}
 
 		public void ProjectBeforeTaskDelete2([In, MarshalAs(UnmanagedType.IDispatch)] object tsk, [In, MarshalAs(UnmanagedType.IDispatch)] object info)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("ProjectBeforeTaskDelete2");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(tsk, info);
-				return;
-			}
+            if (!Validate("ProjectBeforeTaskDelete2"))
+            {
+                Invoker.ReleaseParamsArray(tsk, info);
+                return;
+            }
 
-			NetOffice.MSProjectApi.Task newtsk = Factory.CreateObjectFromComProxy(_eventClass, tsk) as NetOffice.MSProjectApi.Task;
-			NetOffice.MSProjectApi.EventInfo newInfo = Factory.CreateObjectFromComProxy(_eventClass, info) as NetOffice.MSProjectApi.EventInfo;
-			object[] paramsArray = new object[2];
+			NetOffice.MSProjectApi.Task newtsk = Factory.CreateKnownObjectFromComProxy<NetOffice.MSProjectApi.Task>(EventClass, tsk, NetOffice.MSProjectApi.Task.LateBindingApiWrapperType);
+            NetOffice.MSProjectApi.EventInfo newInfo = Factory.CreateKnownObjectFromComProxy<NetOffice.MSProjectApi.EventInfo>(EventClass, info, NetOffice.MSProjectApi.EventInfo.LateBindingApiWrapperType);
+            object[] paramsArray = new object[2];
 			paramsArray[0] = newtsk;
 			paramsArray[1] = newInfo;
-			_eventBinding.RaiseCustomEvent("ProjectBeforeTaskDelete2", ref paramsArray);
+			EventBinding.RaiseCustomEvent("ProjectBeforeTaskDelete2", ref paramsArray);
 		}
 
 		public void ProjectBeforeResourceDelete2([In, MarshalAs(UnmanagedType.IDispatch)] object res, [In, MarshalAs(UnmanagedType.IDispatch)] object info)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("ProjectBeforeResourceDelete2");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(res, info);
-				return;
-			}
+            if (!Validate("ProjectBeforeResourceDelete2"))
+            {
+                Invoker.ReleaseParamsArray(res, info);
+                return;
+            }
 
-			NetOffice.MSProjectApi.Resource newres = Factory.CreateObjectFromComProxy(_eventClass, res) as NetOffice.MSProjectApi.Resource;
-			NetOffice.MSProjectApi.EventInfo newInfo = Factory.CreateObjectFromComProxy(_eventClass, info) as NetOffice.MSProjectApi.EventInfo;
-			object[] paramsArray = new object[2];
+			NetOffice.MSProjectApi.Resource newres = Factory.CreateKnownObjectFromComProxy<NetOffice.MSProjectApi.Resource>(EventClass, res, NetOffice.MSProjectApi.Resource.LateBindingApiWrapperType);
+            NetOffice.MSProjectApi.EventInfo newInfo = Factory.CreateKnownObjectFromComProxy<NetOffice.MSProjectApi.EventInfo>(EventClass, info, NetOffice.MSProjectApi.EventInfo.LateBindingApiWrapperType);
+            object[] paramsArray = new object[2];
 			paramsArray[0] = newres;
 			paramsArray[1] = newInfo;
-			_eventBinding.RaiseCustomEvent("ProjectBeforeResourceDelete2", ref paramsArray);
+			EventBinding.RaiseCustomEvent("ProjectBeforeResourceDelete2", ref paramsArray);
 		}
 
 		public void ProjectBeforeAssignmentDelete2([In, MarshalAs(UnmanagedType.IDispatch)] object asg, [In, MarshalAs(UnmanagedType.IDispatch)] object info)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("ProjectBeforeAssignmentDelete2");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(asg, info);
-				return;
-			}
+        {
+            if (!Validate("ProjectBeforeAssignmentDelete2"))
+            {
+                Invoker.ReleaseParamsArray(asg, info);
+                return;
+            }
 
-			NetOffice.MSProjectApi.Assignment newasg = Factory.CreateObjectFromComProxy(_eventClass, asg) as NetOffice.MSProjectApi.Assignment;
-			NetOffice.MSProjectApi.EventInfo newInfo = Factory.CreateObjectFromComProxy(_eventClass, info) as NetOffice.MSProjectApi.EventInfo;
-			object[] paramsArray = new object[2];
+			NetOffice.MSProjectApi.Assignment newasg = Factory.CreateKnownObjectFromComProxy<NetOffice.MSProjectApi.Assignment>(EventClass, asg, NetOffice.MSProjectApi.Assignment.LateBindingApiWrapperType);
+            NetOffice.MSProjectApi.EventInfo newInfo = Factory.CreateKnownObjectFromComProxy<NetOffice.MSProjectApi.EventInfo>(EventClass, info, NetOffice.MSProjectApi.EventInfo.LateBindingApiWrapperType);
+            object[] paramsArray = new object[2];
 			paramsArray[0] = newasg;
 			paramsArray[1] = newInfo;
-			_eventBinding.RaiseCustomEvent("ProjectBeforeAssignmentDelete2", ref paramsArray);
+			EventBinding.RaiseCustomEvent("ProjectBeforeAssignmentDelete2", ref paramsArray);
 		}
 
 		public void ProjectBeforeTaskChange2([In, MarshalAs(UnmanagedType.IDispatch)] object tsk, [In] object field, [In] object newVal, [In, MarshalAs(UnmanagedType.IDispatch)] object info)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("ProjectBeforeTaskChange2");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(tsk, field, newVal, info);
-				return;
-			}
+        {
+            if (!Validate("ProjectBeforeAssignmentDelete2"))
+            {
+                Invoker.ReleaseParamsArray(tsk, field, newVal, info);
+                return;
+            }
 
-			NetOffice.MSProjectApi.Task newtsk = Factory.CreateObjectFromComProxy(_eventClass, tsk) as NetOffice.MSProjectApi.Task;
+			NetOffice.MSProjectApi.Task newtsk = Factory.CreateKnownObjectFromComProxy<NetOffice.MSProjectApi.Task>(EventClass, tsk, NetOffice.MSProjectApi.Task.LateBindingApiWrapperType);
 			NetOffice.MSProjectApi.Enums.PjField newField = (NetOffice.MSProjectApi.Enums.PjField)field;
 			object newNewVal = (object)newVal;
-			NetOffice.MSProjectApi.EventInfo newInfo = Factory.CreateObjectFromComProxy(_eventClass, info) as NetOffice.MSProjectApi.EventInfo;
-			object[] paramsArray = new object[4];
+            NetOffice.MSProjectApi.EventInfo newInfo = Factory.CreateKnownObjectFromComProxy<NetOffice.MSProjectApi.EventInfo>(EventClass, info, NetOffice.MSProjectApi.EventInfo.LateBindingApiWrapperType);
+            object[] paramsArray = new object[4];
 			paramsArray[0] = newtsk;
 			paramsArray[1] = newField;
 			paramsArray[2] = newNewVal;
 			paramsArray[3] = newInfo;
-			_eventBinding.RaiseCustomEvent("ProjectBeforeTaskChange2", ref paramsArray);
+			EventBinding.RaiseCustomEvent("ProjectBeforeTaskChange2", ref paramsArray);
 		}
 
 		public void ProjectBeforeResourceChange2([In, MarshalAs(UnmanagedType.IDispatch)] object res, [In] object field, [In] object newVal, [In, MarshalAs(UnmanagedType.IDispatch)] object info)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("ProjectBeforeResourceChange2");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(res, field, newVal, info);
-				return;
-			}
+            if (!Validate("ProjectBeforeResourceChange2"))
+            {
+                Invoker.ReleaseParamsArray(res, field, newVal, info);
+                return;
+            }
 
-			NetOffice.MSProjectApi.Resource newres = Factory.CreateObjectFromComProxy(_eventClass, res) as NetOffice.MSProjectApi.Resource;
+			NetOffice.MSProjectApi.Resource newres = Factory.CreateKnownObjectFromComProxy<NetOffice.MSProjectApi.Resource>(EventClass, res, NetOffice.MSProjectApi.Resource.LateBindingApiWrapperType);
 			NetOffice.MSProjectApi.Enums.PjField newField = (NetOffice.MSProjectApi.Enums.PjField)field;
 			object newNewVal = (object)newVal;
-			NetOffice.MSProjectApi.EventInfo newInfo = Factory.CreateObjectFromComProxy(_eventClass, info) as NetOffice.MSProjectApi.EventInfo;
-			object[] paramsArray = new object[4];
+            NetOffice.MSProjectApi.EventInfo newInfo = Factory.CreateKnownObjectFromComProxy<NetOffice.MSProjectApi.EventInfo>(EventClass, info, NetOffice.MSProjectApi.EventInfo.LateBindingApiWrapperType);
+            object[] paramsArray = new object[4];
 			paramsArray[0] = newres;
 			paramsArray[1] = newField;
 			paramsArray[2] = newNewVal;
 			paramsArray[3] = newInfo;
-			_eventBinding.RaiseCustomEvent("ProjectBeforeResourceChange2", ref paramsArray);
+			EventBinding.RaiseCustomEvent("ProjectBeforeResourceChange2", ref paramsArray);
 		}
 
 		public void ProjectBeforeAssignmentChange2([In, MarshalAs(UnmanagedType.IDispatch)] object asg, [In] object field, [In] object newVal, [In, MarshalAs(UnmanagedType.IDispatch)] object info)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("ProjectBeforeAssignmentChange2");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(asg, field, newVal, info);
-				return;
-			}
+            if (!Validate("ProjectBeforeAssignmentChange2"))
+            {
+                Invoker.ReleaseParamsArray(asg, field, newVal, info);
+                return;
+            }
 
-			NetOffice.MSProjectApi.Assignment newasg = Factory.CreateObjectFromComProxy(_eventClass, asg) as NetOffice.MSProjectApi.Assignment;
+			NetOffice.MSProjectApi.Assignment newasg = Factory.CreateKnownObjectFromComProxy<NetOffice.MSProjectApi.Assignment>(EventClass, asg, NetOffice.MSProjectApi.Assignment.LateBindingApiWrapperType);
 			NetOffice.MSProjectApi.Enums.PjAssignmentField newField = (NetOffice.MSProjectApi.Enums.PjAssignmentField)field;
 			object newNewVal = (object)newVal;
-			NetOffice.MSProjectApi.EventInfo newInfo = Factory.CreateObjectFromComProxy(_eventClass, info) as NetOffice.MSProjectApi.EventInfo;
-			object[] paramsArray = new object[4];
+            NetOffice.MSProjectApi.EventInfo newInfo = Factory.CreateKnownObjectFromComProxy<NetOffice.MSProjectApi.EventInfo>(EventClass, info, NetOffice.MSProjectApi.EventInfo.LateBindingApiWrapperType);
+            object[] paramsArray = new object[4];
 			paramsArray[0] = newasg;
 			paramsArray[1] = newField;
 			paramsArray[2] = newNewVal;
 			paramsArray[3] = newInfo;
-			_eventBinding.RaiseCustomEvent("ProjectBeforeAssignmentChange2", ref paramsArray);
+			EventBinding.RaiseCustomEvent("ProjectBeforeAssignmentChange2", ref paramsArray);
 		}
 
 		public void ProjectBeforeTaskNew2([In, MarshalAs(UnmanagedType.IDispatch)] object pj, [In, MarshalAs(UnmanagedType.IDispatch)] object info)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("ProjectBeforeTaskNew2");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(pj, info);
-				return;
-			}
+        {
+            if (!Validate("ProjectBeforeTaskNew2"))
+            {
+                Invoker.ReleaseParamsArray(pj, info);
+                return;
+            }
 
-			NetOffice.MSProjectApi.Project newpj = Factory.CreateObjectFromComProxy(_eventClass, pj) as NetOffice.MSProjectApi.Project;
-			NetOffice.MSProjectApi.EventInfo newInfo = Factory.CreateObjectFromComProxy(_eventClass, info) as NetOffice.MSProjectApi.EventInfo;
-			object[] paramsArray = new object[2];
+			NetOffice.MSProjectApi.Project newpj = Factory.CreateKnownObjectFromComProxy<NetOffice.MSProjectApi.Project>(EventClass, pj, NetOffice.MSProjectApi.Project.LateBindingApiWrapperType);
+            NetOffice.MSProjectApi.EventInfo newInfo = Factory.CreateKnownObjectFromComProxy<NetOffice.MSProjectApi.EventInfo>(EventClass, info, NetOffice.MSProjectApi.EventInfo.LateBindingApiWrapperType);
+            object[] paramsArray = new object[2];
 			paramsArray[0] = newpj;
 			paramsArray[1] = newInfo;
-			_eventBinding.RaiseCustomEvent("ProjectBeforeTaskNew2", ref paramsArray);
+			EventBinding.RaiseCustomEvent("ProjectBeforeTaskNew2", ref paramsArray);
 		}
 
 		public void ProjectBeforeResourceNew2([In, MarshalAs(UnmanagedType.IDispatch)] object pj, [In, MarshalAs(UnmanagedType.IDispatch)] object info)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("ProjectBeforeResourceNew2");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(pj, info);
-				return;
-			}
+        {
+            if (!Validate("ProjectBeforeResourceNew2"))
+            {
+                Invoker.ReleaseParamsArray(pj, info);
+                return;
+            }
 
-			NetOffice.MSProjectApi.Project newpj = Factory.CreateObjectFromComProxy(_eventClass, pj) as NetOffice.MSProjectApi.Project;
-			NetOffice.MSProjectApi.EventInfo newInfo = Factory.CreateObjectFromComProxy(_eventClass, info) as NetOffice.MSProjectApi.EventInfo;
-			object[] paramsArray = new object[2];
+            NetOffice.MSProjectApi.Project newpj = Factory.CreateKnownObjectFromComProxy<NetOffice.MSProjectApi.Project>(EventClass, pj, NetOffice.MSProjectApi.Project.LateBindingApiWrapperType);
+            NetOffice.MSProjectApi.EventInfo newInfo = Factory.CreateKnownObjectFromComProxy<NetOffice.MSProjectApi.EventInfo>(EventClass, info, NetOffice.MSProjectApi.EventInfo.LateBindingApiWrapperType);
+            object[] paramsArray = new object[2];
 			paramsArray[0] = newpj;
 			paramsArray[1] = newInfo;
-			_eventBinding.RaiseCustomEvent("ProjectBeforeResourceNew2", ref paramsArray);
+			EventBinding.RaiseCustomEvent("ProjectBeforeResourceNew2", ref paramsArray);
 		}
 
 		public void ProjectBeforeAssignmentNew2([In, MarshalAs(UnmanagedType.IDispatch)] object pj, [In, MarshalAs(UnmanagedType.IDispatch)] object info)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("ProjectBeforeAssignmentNew2");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(pj, info);
-				return;
-			}
+            if (!Validate("ProjectBeforeResourceNew2"))
+            {
+                Invoker.ReleaseParamsArray(pj, info);
+                return;
+            }
 
-			NetOffice.MSProjectApi.Project newpj = Factory.CreateObjectFromComProxy(_eventClass, pj) as NetOffice.MSProjectApi.Project;
-			NetOffice.MSProjectApi.EventInfo newInfo = Factory.CreateObjectFromComProxy(_eventClass, info) as NetOffice.MSProjectApi.EventInfo;
-			object[] paramsArray = new object[2];
+            NetOffice.MSProjectApi.Project newpj = Factory.CreateKnownObjectFromComProxy<NetOffice.MSProjectApi.Project>(EventClass, pj, NetOffice.MSProjectApi.Project.LateBindingApiWrapperType);
+            NetOffice.MSProjectApi.EventInfo newInfo = Factory.CreateKnownObjectFromComProxy<NetOffice.MSProjectApi.EventInfo>(EventClass, info, NetOffice.MSProjectApi.EventInfo.LateBindingApiWrapperType);
+            object[] paramsArray = new object[2];
 			paramsArray[0] = newpj;
 			paramsArray[1] = newInfo;
-			_eventBinding.RaiseCustomEvent("ProjectBeforeAssignmentNew2", ref paramsArray);
+			EventBinding.RaiseCustomEvent("ProjectBeforeAssignmentNew2", ref paramsArray);
 		}
 
 		public void ApplicationBeforeClose([In, MarshalAs(UnmanagedType.IDispatch)] object info)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("ApplicationBeforeClose");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(info);
-				return;
-			}
+            if (!Validate("ApplicationBeforeClose"))
+            {
+                Invoker.ReleaseParamsArray(info);
+                return;
+            }
 
-			NetOffice.MSProjectApi.EventInfo newInfo = Factory.CreateObjectFromComProxy(_eventClass, info) as NetOffice.MSProjectApi.EventInfo;
-			object[] paramsArray = new object[1];
+            NetOffice.MSProjectApi.EventInfo newInfo = Factory.CreateKnownObjectFromComProxy<NetOffice.MSProjectApi.EventInfo>(EventClass, info, NetOffice.MSProjectApi.EventInfo.LateBindingApiWrapperType);
+            object[] paramsArray = new object[1];
 			paramsArray[0] = newInfo;
-			_eventBinding.RaiseCustomEvent("ApplicationBeforeClose", ref paramsArray);
+			EventBinding.RaiseCustomEvent("ApplicationBeforeClose", ref paramsArray);
 		}
 
 		public void OnUndoOrRedo([In] object bstrLabel, [In] object bstrGUID, [In] object fUndo)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("OnUndoOrRedo");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(bstrLabel, bstrGUID, fUndo);
-				return;
-			}
+        {
+            if (!Validate("OnUndoOrRedo"))
+            {
+                Invoker.ReleaseParamsArray(bstrLabel, bstrGUID, fUndo);
+                return;
+            }
 
 			string newbstrLabel = Convert.ToString(bstrLabel);
 			string newbstrGUID = Convert.ToString(bstrGUID);
@@ -1094,51 +1025,48 @@ namespace NetOffice.MSProjectApi.Events
 			paramsArray[0] = newbstrLabel;
 			paramsArray[1] = newbstrGUID;
 			paramsArray[2] = newfUndo;
-			_eventBinding.RaiseCustomEvent("OnUndoOrRedo", ref paramsArray);
+			EventBinding.RaiseCustomEvent("OnUndoOrRedo", ref paramsArray);
 		}
 
 		public void AfterCubeBuilt([In] [Out] ref object cubeFileName)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("AfterCubeBuilt");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(cubeFileName);
-				return;
-			}
+        {
+            if (!Validate("AfterCubeBuilt"))
+            {
+                Invoker.ReleaseParamsArray(cubeFileName);
+                return;
+            }
 
 			object[] paramsArray = new object[1];
 			paramsArray.SetValue(cubeFileName, 0);
-			_eventBinding.RaiseCustomEvent("AfterCubeBuilt", ref paramsArray);
+			EventBinding.RaiseCustomEvent("AfterCubeBuilt", ref paramsArray);
 
-			cubeFileName = (string)paramsArray[0];
+			cubeFileName = Convert.ToString(paramsArray[0]);
 		}
 
 		public void LoadWebPane([In, MarshalAs(UnmanagedType.IDispatch)] object window, [In] [Out] ref object targetPage)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("LoadWebPane");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(window, targetPage);
-				return;
-			}
+            if(!Validate("LoadWebPane"))
+            {
+                Invoker.ReleaseParamsArray(window, targetPage);
+                return;
+            }
 
-			NetOffice.MSProjectApi.Window newWindow = Factory.CreateObjectFromComProxy(_eventClass, window) as NetOffice.MSProjectApi.Window;
+			NetOffice.MSProjectApi.Window newWindow = Factory.CreateKnownObjectFromComProxy<NetOffice.MSProjectApi.Window>(EventClass, window, NetOffice.MSProjectApi.Window.LateBindingApiWrapperType);
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newWindow;
 			paramsArray.SetValue(targetPage, 1);
-			_eventBinding.RaiseCustomEvent("LoadWebPane", ref paramsArray);
+			EventBinding.RaiseCustomEvent("LoadWebPane", ref paramsArray);
 
-			targetPage = (string)paramsArray[1];
-		}
+			targetPage = Convert.ToString(paramsArray[1]);
+        }
 
 		public void JobStart([In] object bstrName, [In] object bstrprojGuid, [In] object bstrjobGuid, [In] object jobType, [In] object lResult)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("JobStart");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(bstrName, bstrprojGuid, bstrjobGuid, jobType, lResult);
-				return;
-			}
+            if (!Validate("JobStart"))
+            {
+                Invoker.ReleaseParamsArray(bstrName, bstrprojGuid, bstrjobGuid, jobType, lResult);
+                return;
+            }
 
 			string newbstrName = Convert.ToString(bstrName);
 			string newbstrprojGuid = Convert.ToString(bstrprojGuid);
@@ -1151,17 +1079,16 @@ namespace NetOffice.MSProjectApi.Events
 			paramsArray[2] = newbstrjobGuid;
 			paramsArray[3] = newjobType;
 			paramsArray[4] = newlResult;
-			_eventBinding.RaiseCustomEvent("JobStart", ref paramsArray);
+			EventBinding.RaiseCustomEvent("JobStart", ref paramsArray);
 		}
 
 		public void JobCompleted([In] object bstrName, [In] object bstrprojGuid, [In] object bstrjobGuid, [In] object jobType, [In] object lResult)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("JobCompleted");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(bstrName, bstrprojGuid, bstrjobGuid, jobType, lResult);
-				return;
-			}
+            if (!Validate("JobCompleted"))
+            {
+                Invoker.ReleaseParamsArray(bstrName, bstrprojGuid, bstrjobGuid, jobType, lResult);
+                return;
+            }
 
 			string newbstrName = Convert.ToString(bstrName);
 			string newbstrprojGuid = Convert.ToString(bstrprojGuid);
@@ -1174,125 +1101,117 @@ namespace NetOffice.MSProjectApi.Events
 			paramsArray[2] = newbstrjobGuid;
 			paramsArray[3] = newjobType;
 			paramsArray[4] = newlResult;
-			_eventBinding.RaiseCustomEvent("JobCompleted", ref paramsArray);
+			EventBinding.RaiseCustomEvent("JobCompleted", ref paramsArray);
 		}
 
 		public void SaveStartingToServer([In] object bstrName, [In] object bstrprojGuid)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("SaveStartingToServer");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(bstrName, bstrprojGuid);
-				return;
-			}
+            if (!Validate("SaveStartingToServer"))
+            {
+                Invoker.ReleaseParamsArray(bstrName, bstrprojGuid);
+                return;
+            }
 
 			string newbstrName = Convert.ToString(bstrName);
 			string newbstrprojGuid = Convert.ToString(bstrprojGuid);
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newbstrName;
 			paramsArray[1] = newbstrprojGuid;
-			_eventBinding.RaiseCustomEvent("SaveStartingToServer", ref paramsArray);
+			EventBinding.RaiseCustomEvent("SaveStartingToServer", ref paramsArray);
 		}
 
 		public void SaveCompletedToServer([In] object bstrName, [In] object bstrprojGuid)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("SaveCompletedToServer");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(bstrName, bstrprojGuid);
-				return;
-			}
+            if (!Validate("SaveCompletedToServer"))
+            {
+                Invoker.ReleaseParamsArray(bstrName, bstrprojGuid);
+                return;
+            }
 
 			string newbstrName = Convert.ToString(bstrName);
 			string newbstrprojGuid = Convert.ToString(bstrprojGuid);
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newbstrName;
 			paramsArray[1] = newbstrprojGuid;
-			_eventBinding.RaiseCustomEvent("SaveCompletedToServer", ref paramsArray);
+			EventBinding.RaiseCustomEvent("SaveCompletedToServer", ref paramsArray);
 		}
 
 		public void ProjectBeforePublish([In, MarshalAs(UnmanagedType.IDispatch)] object pj, [In] [Out] ref object cancel)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("ProjectBeforePublish");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(pj, cancel);
-				return;
-			}
+        {
+            if (!Validate("ProjectBeforePublish"))
+            {
+                Invoker.ReleaseParamsArray(pj, cancel);
+                return;
+            }
 
-			NetOffice.MSProjectApi.Project newpj = Factory.CreateObjectFromComProxy(_eventClass, pj) as NetOffice.MSProjectApi.Project;
+			NetOffice.MSProjectApi.Project newpj = Factory.CreateKnownObjectFromComProxy<NetOffice.MSProjectApi.Project>(EventClass, pj, NetOffice.MSProjectApi.Project.LateBindingApiWrapperType);
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newpj;
 			paramsArray.SetValue(cancel, 1);
-			_eventBinding.RaiseCustomEvent("ProjectBeforePublish", ref paramsArray);
+			EventBinding.RaiseCustomEvent("ProjectBeforePublish", ref paramsArray);
 
-			cancel = (bool)paramsArray[1];
+			cancel = ToBoolean(paramsArray[1]);
 		}
 
 		public void PaneActivate()
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("PaneActivate");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray();
-				return;
-			}
+            if (!Validate("PaneActivate"))
+            {
+                return;
+            }
 
 			object[] paramsArray = new object[0];
-			_eventBinding.RaiseCustomEvent("PaneActivate", ref paramsArray);
+			EventBinding.RaiseCustomEvent("PaneActivate", ref paramsArray);
 		}
 
 		public void SecondaryViewChange([In, MarshalAs(UnmanagedType.IDispatch)] object window, [In, MarshalAs(UnmanagedType.IDispatch)] object prevView, [In, MarshalAs(UnmanagedType.IDispatch)] object newView, [In] object success)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("SecondaryViewChange");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(window, prevView, newView, success);
-				return;
-			}
+            if (!Validate("SecondaryViewChange"))
+            {
+                Invoker.ReleaseParamsArray(window, prevView, newView, success);
+                return;
+            }
 
-			NetOffice.MSProjectApi.Window newWindow = Factory.CreateObjectFromComProxy(_eventClass, window) as NetOffice.MSProjectApi.Window;
-			NetOffice.MSProjectApi.View newprevView = Factory.CreateObjectFromComProxy(_eventClass, prevView) as NetOffice.MSProjectApi.View;
-			NetOffice.MSProjectApi.View newnewView = Factory.CreateObjectFromComProxy(_eventClass, newView) as NetOffice.MSProjectApi.View;
+			NetOffice.MSProjectApi.Window newWindow = Factory.CreateKnownObjectFromComProxy<NetOffice.MSProjectApi.Window>(EventClass, window, NetOffice.MSProjectApi.Window.LateBindingApiWrapperType);
+			NetOffice.MSProjectApi.View newprevView = Factory.CreateKnownObjectFromComProxy<NetOffice.MSProjectApi.View>(EventClass, prevView, NetOffice.MSProjectApi.View.LateBindingApiWrapperType);
+            NetOffice.MSProjectApi.View newnewView = Factory.CreateKnownObjectFromComProxy<NetOffice.MSProjectApi.View> (EventClass, newView, NetOffice.MSProjectApi.View.LateBindingApiWrapperType);
 			bool newsuccess = Convert.ToBoolean(success);
 			object[] paramsArray = new object[4];
 			paramsArray[0] = newWindow;
 			paramsArray[1] = newprevView;
 			paramsArray[2] = newnewView;
 			paramsArray[3] = newsuccess;
-			_eventBinding.RaiseCustomEvent("SecondaryViewChange", ref paramsArray);
+			EventBinding.RaiseCustomEvent("SecondaryViewChange", ref paramsArray);
 		}
 
 		public void IsFunctionalitySupported([In] object bstrFunctionality, [In, MarshalAs(UnmanagedType.IDispatch)] object info)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("IsFunctionalitySupported");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(bstrFunctionality, info);
-				return;
-			}
+        {
+            if (!Validate("IsFunctionalitySupported"))
+            {
+                Invoker.ReleaseParamsArray(bstrFunctionality, info);
+                return;
+            }
 
 			string newbstrFunctionality = Convert.ToString(bstrFunctionality);
-			NetOffice.MSProjectApi.EventInfo newInfo = Factory.CreateObjectFromComProxy(_eventClass, info) as NetOffice.MSProjectApi.EventInfo;
+			NetOffice.MSProjectApi.EventInfo newInfo = Factory.CreateKnownObjectFromComProxy<NetOffice.MSProjectApi.EventInfo>(EventClass, info, NetOffice.MSProjectApi.EventInfo.LateBindingApiWrapperType);
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newbstrFunctionality;
 			paramsArray[1] = newInfo;
-			_eventBinding.RaiseCustomEvent("IsFunctionalitySupported", ref paramsArray);
+			EventBinding.RaiseCustomEvent("IsFunctionalitySupported", ref paramsArray);
 		}
 
 		public void ConnectionStatusChanged([In] object online)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("ConnectionStatusChanged");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(online);
-				return;
-			}
+        {
+            if (!Validate("IsFunctionalitySupported"))
+            {
+                Invoker.ReleaseParamsArray(online);
+                return;
+            }
 
 			bool newonline = Convert.ToBoolean(online);
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newonline;
-			_eventBinding.RaiseCustomEvent("ConnectionStatusChanged", ref paramsArray);
+			EventBinding.RaiseCustomEvent("ConnectionStatusChanged", ref paramsArray);
 		}
 
 		#endregion

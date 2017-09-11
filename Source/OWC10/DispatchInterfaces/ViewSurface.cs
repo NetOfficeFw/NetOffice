@@ -213,13 +213,12 @@ namespace NetOffice.OWC10Api
 		/// <param name="picture">stdole.Picture picture</param>
 		/// <param name="mask">stdole.Picture mask</param>
 		[SupportByVersion("OWC10", 1)]
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false), NativeResult]
 		public stdole.Picture get_PictureAlphaBlended(stdole.Picture picture, stdole.Picture mask)
 		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(picture, mask);
 			object returnItem = Invoker.PropertyGet(this, "PictureAlphaBlended", paramsArray);
-			stdole.Picture newObject = Factory.CreateObjectFromComProxy(this,returnItem) as stdole.Picture;
-			return newObject;
+            return returnItem as stdole.Picture;
 		}
 
 		/// <summary>

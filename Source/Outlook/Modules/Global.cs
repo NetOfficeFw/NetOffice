@@ -56,607 +56,512 @@ namespace NetOffice.OutlookApi.GlobalHelperModules
 			}
 		}
 
-		#endregion
+        #endregion
 
-		#region Properties
+        #region Properties
 
-		/// <summary>
-		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
-		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff868973.aspx
-		/// </summary>
-		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
-		public static NetOffice.OutlookApi._Application Application
-		{
-			get
-			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(_instance, "Application", paramsArray);
-				NetOffice.OutlookApi._Application newObject = Factory.CreateObjectFromComProxy(_instance,returnItem) as NetOffice.OutlookApi._Application;
-				return newObject;
-			}
-		}
+        /// <summary>
+        /// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
+        /// Get
+        /// </summary>
+        /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff868973.aspx </remarks>
+        [SupportByVersion("Outlook", 9, 10, 11, 12, 14, 15, 16)]
+        [BaseResult]
+        public static NetOffice.OutlookApi._Application Application
+        {
+            get
+            {
+                return Factory.ExecuteBaseReferencePropertyGet<NetOffice.OutlookApi._Application>(_instance, "Application");
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
-		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff865581.aspx
-		/// </summary>
-		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
-		public static NetOffice.OutlookApi.Enums.OlObjectClass Class
-		{
-			get
-			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(_instance, "Class", paramsArray);
-				int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-				return (NetOffice.OutlookApi.Enums.OlObjectClass)intReturnItem;
-			}
-		}
+        /// <summary>
+        /// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
+        /// Get
+        /// </summary>
+        /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff865581.aspx </remarks>
+        [SupportByVersion("Outlook", 9, 10, 11, 12, 14, 15, 16)]
+        public static NetOffice.OutlookApi.Enums.OlObjectClass Class
+        {
+            get
+            {
+                return Factory.ExecuteEnumPropertyGet<NetOffice.OutlookApi.Enums.OlObjectClass>(_instance, "Class");
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
-		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff866436.aspx
-		/// </summary>
-		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
-		public static NetOffice.OutlookApi._NameSpace Session
-		{
-			get
-			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(_instance, "Session", paramsArray);
-				NetOffice.OutlookApi._NameSpace newObject = Factory.CreateObjectFromComProxy(_instance,returnItem) as NetOffice.OutlookApi._NameSpace;
-				return newObject;
-			}
-		}
+        /// <summary>
+        /// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
+        /// Get
+        /// </summary>
+        /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff866436.aspx </remarks>
+        [SupportByVersion("Outlook", 9, 10, 11, 12, 14, 15, 16)]
+        [BaseResult]
+        public static NetOffice.OutlookApi._NameSpace Session
+        {
+            get
+            {
+                return Factory.ExecuteBaseReferencePropertyGet<NetOffice.OutlookApi._NameSpace>(_instance, "Session");
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
-		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff869381.aspx
-		/// Unknown COM Proxy
-		/// </summary>
-		[SupportByVersion("Outlook", 9,10,11,12,14,15,16), ProxyResult]
-		public static object Parent
-		{
-			get
-			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(_instance, "Parent", paramsArray);
-				ICOMObject newObject = Factory.CreateObjectFromComProxy(_instance,returnItem);
-				return newObject;
-			}
-		}
+        /// <summary>
+        /// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
+        /// Get
+        /// Unknown COM Proxy
+        /// </summary>
+        /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff869381.aspx </remarks>
+        [SupportByVersion("Outlook", 9, 10, 11, 12, 14, 15, 16), ProxyResult]
+        public static object Parent
+        {
+            get
+            {
+                return Factory.ExecuteReferencePropertyGet(_instance, "Parent");
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
-		/// Get
-		/// </summary>
-		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
-		public static NetOffice.OfficeApi.Assistant Assistant
-		{
-			get
-			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(_instance, "Assistant", paramsArray);
-				NetOffice.OfficeApi.Assistant newObject = Factory.CreateKnownObjectFromComProxy(_instance,returnItem,NetOffice.OfficeApi.Assistant.LateBindingApiWrapperType) as NetOffice.OfficeApi.Assistant;
-				return newObject;
-			}
-		}
+        /// <summary>
+        /// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
+        /// Get
+        /// </summary>
+        [SupportByVersion("Outlook", 9, 10, 11, 12, 14, 15, 16)]
+        public static NetOffice.OfficeApi.Assistant Assistant
+        {
+            get
+            {
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.Assistant>(_instance, "Assistant", NetOffice.OfficeApi.Assistant.LateBindingApiWrapperType);
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
-		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff868248.aspx
-		/// </summary>
-		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
-		public static string Name
-		{
-			get
-			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(_instance, "Name", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
-			}
-		}
+        /// <summary>
+        /// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
+        /// Get
+        /// </summary>
+        /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff868248.aspx </remarks>
+        [SupportByVersion("Outlook", 9, 10, 11, 12, 14, 15, 16)]
+        public static string Name
+        {
+            get
+            {
+                return Factory.ExecuteStringPropertyGet(_instance, "Name");
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
-		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff860684.aspx
-		/// </summary>
-		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
-		public static string Version
-		{
-			get
-			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(_instance, "Version", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
-			}
-		}
+        /// <summary>
+        /// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
+        /// Get
+        /// </summary>
+        /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860684.aspx </remarks>
+        [SupportByVersion("Outlook", 9, 10, 11, 12, 14, 15, 16)]
+        public static string Version
+        {
+            get
+            {
+                return Factory.ExecuteStringPropertyGet(_instance, "Version");
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
-		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff870066.aspx
-		/// </summary>
-		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
-		public static NetOffice.OfficeApi.COMAddIns COMAddIns
-		{
-			get
-			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(_instance, "COMAddIns", paramsArray);
-				NetOffice.OfficeApi.COMAddIns newObject = Factory.CreateKnownObjectFromComProxy(_instance,returnItem,NetOffice.OfficeApi.COMAddIns.LateBindingApiWrapperType) as NetOffice.OfficeApi.COMAddIns;
-				return newObject;
-			}
-		}
+        /// <summary>
+        /// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
+        /// Get
+        /// </summary>
+        /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff870066.aspx </remarks>
+        [SupportByVersion("Outlook", 9, 10, 11, 12, 14, 15, 16)]
+        public static NetOffice.OfficeApi.COMAddIns COMAddIns
+        {
+            get
+            {
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.COMAddIns>(_instance, "COMAddIns", NetOffice.OfficeApi.COMAddIns.LateBindingApiWrapperType);
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
-		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff868795.aspx
-		/// </summary>
-		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
-		public static NetOffice.OutlookApi._Explorers Explorers
-		{
-			get
-			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(_instance, "Explorers", paramsArray);
-				NetOffice.OutlookApi._Explorers newObject = Factory.CreateObjectFromComProxy(_instance,returnItem) as NetOffice.OutlookApi._Explorers;
-				return newObject;
-			}
-		}
+        /// <summary>
+        /// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
+        /// Get
+        /// </summary>
+        /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff868795.aspx </remarks>
+        [SupportByVersion("Outlook", 9, 10, 11, 12, 14, 15, 16)]
+        [BaseResult]
+        public static NetOffice.OutlookApi._Explorers Explorers
+        {
+            get
+            {
+                return Factory.ExecuteBaseReferencePropertyGet<NetOffice.OutlookApi._Explorers>(_instance, "Explorers");
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
-		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff868935.aspx
-		/// </summary>
-		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
-		public static NetOffice.OutlookApi._Inspectors Inspectors
-		{
-			get
-			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(_instance, "Inspectors", paramsArray);
-				NetOffice.OutlookApi._Inspectors newObject = Factory.CreateObjectFromComProxy(_instance,returnItem) as NetOffice.OutlookApi._Inspectors;
-				return newObject;
-			}
-		}
+        /// <summary>
+        /// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
+        /// Get
+        /// </summary>
+        /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff868935.aspx </remarks>
+        [SupportByVersion("Outlook", 9, 10, 11, 12, 14, 15, 16)]
+        [BaseResult]
+        public static NetOffice.OutlookApi._Inspectors Inspectors
+        {
+            get
+            {
+                return Factory.ExecuteBaseReferencePropertyGet<NetOffice.OutlookApi._Inspectors>(_instance, "Inspectors");
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
-		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff867217.aspx
-		/// </summary>
-		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
-		public static NetOffice.OfficeApi.LanguageSettings LanguageSettings
-		{
-			get
-			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(_instance, "LanguageSettings", paramsArray);
-				NetOffice.OfficeApi.LanguageSettings newObject = Factory.CreateKnownObjectFromComProxy(_instance,returnItem,NetOffice.OfficeApi.LanguageSettings.LateBindingApiWrapperType) as NetOffice.OfficeApi.LanguageSettings;
-				return newObject;
-			}
-		}
+        /// <summary>
+        /// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
+        /// Get
+        /// </summary>
+        /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff867217.aspx </remarks>
+        [SupportByVersion("Outlook", 9, 10, 11, 12, 14, 15, 16)]
+        public static NetOffice.OfficeApi.LanguageSettings LanguageSettings
+        {
+            get
+            {
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.LanguageSettings>(_instance, "LanguageSettings", NetOffice.OfficeApi.LanguageSettings.LateBindingApiWrapperType);
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
-		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff869152.aspx
-		/// </summary>
-		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
-		public static string ProductCode
-		{
-			get
-			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(_instance, "ProductCode", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
-			}
-		}
+        /// <summary>
+        /// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
+        /// Get
+        /// </summary>
+        /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff869152.aspx </remarks>
+        [SupportByVersion("Outlook", 9, 10, 11, 12, 14, 15, 16)]
+        public static string ProductCode
+        {
+            get
+            {
+                return Factory.ExecuteStringPropertyGet(_instance, "ProductCode");
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
-		/// Get
-		/// </summary>
-		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
-		public static NetOffice.OfficeApi.AnswerWizard AnswerWizard
-		{
-			get
-			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(_instance, "AnswerWizard", paramsArray);
-				NetOffice.OfficeApi.AnswerWizard newObject = Factory.CreateKnownObjectFromComProxy(_instance,returnItem,NetOffice.OfficeApi.AnswerWizard.LateBindingApiWrapperType) as NetOffice.OfficeApi.AnswerWizard;
-				return newObject;
-			}
-		}
+        /// <summary>
+        /// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
+        /// Get
+        /// </summary>
+        [SupportByVersion("Outlook", 9, 10, 11, 12, 14, 15, 16)]
+        public static NetOffice.OfficeApi.AnswerWizard AnswerWizard
+        {
+            get
+            {
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.AnswerWizard>(_instance, "AnswerWizard", NetOffice.OfficeApi.AnswerWizard.LateBindingApiWrapperType);
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
-		/// Get/Set
-		/// </summary>
-		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public static NetOffice.OfficeApi.Enums.MsoFeatureInstall FeatureInstall
-		{
-			get
-			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(_instance, "FeatureInstall", paramsArray);
-				int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
-				return (NetOffice.OfficeApi.Enums.MsoFeatureInstall)intReturnItem;
-			}
-			set
-			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(_instance, "FeatureInstall", paramsArray);
-			}
-		}
+        /// <summary>
+        /// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
+        /// Get/Set
+        /// </summary>
+        [SupportByVersion("Outlook", 9, 10, 11, 12, 14, 15, 16)]
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public static NetOffice.OfficeApi.Enums.MsoFeatureInstall FeatureInstall
+        {
+            get
+            {
+                return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoFeatureInstall>(_instance, "FeatureInstall");
+            }
+            set
+            {
+                Factory.ExecuteEnumPropertySet(_instance, "FeatureInstall", value);
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion Outlook 10, 11, 12, 14, 15, 16
-		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff862144.aspx
-		/// </summary>
-		[SupportByVersion("Outlook", 10,11,12,14,15,16)]
-		public static NetOffice.OutlookApi._Reminders Reminders
-		{
-			get
-			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(_instance, "Reminders", paramsArray);
-				NetOffice.OutlookApi._Reminders newObject = Factory.CreateObjectFromComProxy(_instance,returnItem) as NetOffice.OutlookApi._Reminders;
-				return newObject;
-			}
-		}
+        /// <summary>
+        /// SupportByVersion Outlook 10, 11, 12, 14, 15, 16
+        /// Get
+        /// </summary>
+        /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff862144.aspx </remarks>
+        [SupportByVersion("Outlook", 10, 11, 12, 14, 15, 16)]
+        [BaseResult]
+        public static NetOffice.OutlookApi._Reminders Reminders
+        {
+            get
+            {
+                return Factory.ExecuteBaseReferencePropertyGet<NetOffice.OutlookApi._Reminders>(_instance, "Reminders");
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion Outlook 12, 14, 15, 16
-		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff865059.aspx
-		/// </summary>
-		[SupportByVersion("Outlook", 12,14,15,16)]
-		public static string DefaultProfileName
-		{
-			get
-			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(_instance, "DefaultProfileName", paramsArray);
-				return NetRuntimeSystem.Convert.ToString(returnItem);
-			}
-		}
+        /// <summary>
+        /// SupportByVersion Outlook 12, 14, 15, 16
+        /// Get
+        /// </summary>
+        /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff865059.aspx </remarks>
+        [SupportByVersion("Outlook", 12, 14, 15, 16)]
+        public static string DefaultProfileName
+        {
+            get
+            {
+                return Factory.ExecuteStringPropertyGet(_instance, "DefaultProfileName");
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion Outlook 12, 14, 15, 16
-		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff864729.aspx
-		/// </summary>
-		[SupportByVersion("Outlook", 12,14,15,16)]
-		public static bool IsTrusted
-		{
-			get
-			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(_instance, "IsTrusted", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
-			}
-		}
+        /// <summary>
+        /// SupportByVersion Outlook 12, 14, 15, 16
+        /// Get
+        /// </summary>
+        /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff864729.aspx </remarks>
+        [SupportByVersion("Outlook", 12, 14, 15, 16)]
+        public static bool IsTrusted
+        {
+            get
+            {
+                return Factory.ExecuteBoolPropertyGet(_instance, "IsTrusted");
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion Outlook 12, 14, 15, 16
-		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff861554.aspx
-		/// </summary>
-		[SupportByVersion("Outlook", 12,14,15,16)]
-		public static NetOffice.OfficeApi.IAssistance Assistance
-		{
-			get
-			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(_instance, "Assistance", paramsArray);
-				NetOffice.OfficeApi.IAssistance newObject = Factory.CreateKnownObjectFromComProxy(_instance,returnItem,NetOffice.OfficeApi.IAssistance.LateBindingApiWrapperType) as NetOffice.OfficeApi.IAssistance;
-				return newObject;
-			}
-		}
+        /// <summary>
+        /// SupportByVersion Outlook 12, 14, 15, 16
+        /// Get
+        /// </summary>
+        /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff861554.aspx </remarks>
+        [SupportByVersion("Outlook", 12, 14, 15, 16)]
+        public static NetOffice.OfficeApi.IAssistance Assistance
+        {
+            get
+            {
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.IAssistance>(_instance, "Assistance", NetOffice.OfficeApi.IAssistance.LateBindingApiWrapperType);
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion Outlook 12, 14, 15, 16
-		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff867696.aspx
-		/// </summary>
-		[SupportByVersion("Outlook", 12,14,15,16)]
-		public static NetOffice.OutlookApi.TimeZones TimeZones
-		{
-			get
-			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(_instance, "TimeZones", paramsArray);
-				NetOffice.OutlookApi.TimeZones newObject = Factory.CreateKnownObjectFromComProxy(_instance,returnItem,NetOffice.OutlookApi.TimeZones.LateBindingApiWrapperType) as NetOffice.OutlookApi.TimeZones;
-				return newObject;
-			}
-		}
+        /// <summary>
+        /// SupportByVersion Outlook 12, 14, 15, 16
+        /// Get
+        /// </summary>
+        /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff867696.aspx </remarks>
+        [SupportByVersion("Outlook", 12, 14, 15, 16)]
+        public static NetOffice.OutlookApi.TimeZones TimeZones
+        {
+            get
+            {
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OutlookApi.TimeZones>(_instance, "TimeZones", NetOffice.OutlookApi.TimeZones.LateBindingApiWrapperType);
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion Outlook 14, 15, 16
-		/// Get
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff861549.aspx
-		/// </summary>
-		[SupportByVersion("Outlook", 14,15,16)]
-		public static NetOffice.OfficeApi.PickerDialog PickerDialog
-		{
-			get
-			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(_instance, "PickerDialog", paramsArray);
-				NetOffice.OfficeApi.PickerDialog newObject = Factory.CreateKnownObjectFromComProxy(_instance,returnItem,NetOffice.OfficeApi.PickerDialog.LateBindingApiWrapperType) as NetOffice.OfficeApi.PickerDialog;
-				return newObject;
-			}
-		}
+        /// <summary>
+        /// SupportByVersion Outlook 14, 15, 16
+        /// Get
+        /// </summary>
+        /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff861549.aspx </remarks>
+        [SupportByVersion("Outlook", 14, 15, 16)]
+        public static NetOffice.OfficeApi.PickerDialog PickerDialog
+        {
+            get
+            {
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.PickerDialog>(_instance, "PickerDialog", NetOffice.OfficeApi.PickerDialog.LateBindingApiWrapperType);
+            }
+        }
 
-		#endregion
+        #endregion
 
-		#region Methods
+        #region Methods
 
-		/// <summary>
-		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff870017.aspx
-		/// </summary>
-		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
-		public static NetOffice.OutlookApi._Explorer ActiveExplorer()
-		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(_instance, "ActiveExplorer", paramsArray);
-			NetOffice.OutlookApi._Explorer newObject = Factory.CreateObjectFromComProxy(_instance,returnItem) as NetOffice.OutlookApi._Explorer;
-			return newObject;
-		}
+        /// <summary>
+        /// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
+        /// </summary>
+        /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff870017.aspx </remarks>
+        [SupportByVersion("Outlook", 9, 10, 11, 12, 14, 15, 16)]
+        [BaseResult]
+        public static NetOffice.OutlookApi._Explorer ActiveExplorer()
+        {
+            return Factory.ExecuteBaseReferenceMethodGet<NetOffice.OutlookApi._Explorer>(_instance, "ActiveExplorer");
+        }
 
-		/// <summary>
-		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff863939.aspx
-		/// </summary>
-		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
-		public static NetOffice.OutlookApi._Inspector ActiveInspector()
-		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(_instance, "ActiveInspector", paramsArray);
-			NetOffice.OutlookApi._Inspector newObject = Factory.CreateObjectFromComProxy(_instance,returnItem) as NetOffice.OutlookApi._Inspector;
-			return newObject;
-		}
+        /// <summary>
+        /// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
+        /// </summary>
+        /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff863939.aspx </remarks>
+        [SupportByVersion("Outlook", 9, 10, 11, 12, 14, 15, 16)]
+        [BaseResult]
+        public static NetOffice.OutlookApi._Inspector ActiveInspector()
+        {
+            return Factory.ExecuteBaseReferenceMethodGet<NetOffice.OutlookApi._Inspector>(_instance, "ActiveInspector");
+        }
 
-		/// <summary>
-		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff869635.aspx
-		/// </summary>
-		/// <param name="itemType">NetOffice.OutlookApi.Enums.OlItemType itemType</param>
-		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
-		public static object CreateItem(NetOffice.OutlookApi.Enums.OlItemType itemType)
-		{
-			object[] paramsArray = Invoker.ValidateParamsArray(itemType);
-			object returnItem = Invoker.MethodReturn(_instance, "CreateItem", paramsArray);
-			object newObject = Factory.CreateObjectFromComProxy(_instance,returnItem);
-			return newObject;
-		}
+        /// <summary>
+        /// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
+        /// </summary>
+        /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff869635.aspx </remarks>
+        /// <param name="itemType">NetOffice.OutlookApi.Enums.OlItemType itemType</param>
+        [SupportByVersion("Outlook", 9, 10, 11, 12, 14, 15, 16)]
+        public static object CreateItem(NetOffice.OutlookApi.Enums.OlItemType itemType)
+        {
+            return Factory.ExecuteVariantMethodGet(_instance, "CreateItem", itemType);
+        }
 
-		/// <summary>
-		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff865637.aspx
-		/// </summary>
-		/// <param name="templatePath">string templatePath</param>
-		/// <param name="inFolder">optional object inFolder</param>
-		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
-		public static object CreateItemFromTemplate(string templatePath, object inFolder)
-		{
-			object[] paramsArray = Invoker.ValidateParamsArray(templatePath, inFolder);
-			object returnItem = Invoker.MethodReturn(_instance, "CreateItemFromTemplate", paramsArray);
-			object newObject = Factory.CreateObjectFromComProxy(_instance,returnItem);
-			return newObject;
-		}
+        /// <summary>
+        /// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
+        /// </summary>
+        /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff865637.aspx </remarks>
+        /// <param name="templatePath">string templatePath</param>
+        /// <param name="inFolder">optional object inFolder</param>
+        [SupportByVersion("Outlook", 9, 10, 11, 12, 14, 15, 16)]
+        public static object CreateItemFromTemplate(string templatePath, object inFolder)
+        {
+            return Factory.ExecuteVariantMethodGet(_instance, "CreateItemFromTemplate", templatePath, inFolder);
+        }
 
-		/// <summary>
-		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff865637.aspx
-		/// </summary>
-		/// <param name="templatePath">string templatePath</param>
-		[CustomMethod]
-		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
-		public static object CreateItemFromTemplate(string templatePath)
-		{
-			object[] paramsArray = Invoker.ValidateParamsArray(templatePath);
-			object returnItem = Invoker.MethodReturn(_instance, "CreateItemFromTemplate", paramsArray);
-			object newObject = Factory.CreateObjectFromComProxy(_instance,returnItem);
-			return newObject;
-		}
+        /// <summary>
+        /// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
+        /// </summary>
+        /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff865637.aspx </remarks>
+        /// <param name="templatePath">string templatePath</param>
+        [CustomMethod]
+        [SupportByVersion("Outlook", 9, 10, 11, 12, 14, 15, 16)]
+        public static object CreateItemFromTemplate(string templatePath)
+        {
+            return Factory.ExecuteVariantMethodGet(_instance, "CreateItemFromTemplate", templatePath);
+        }
 
-		/// <summary>
-		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff860724.aspx
-		/// </summary>
-		/// <param name="objectName">string objectName</param>
-		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
-		public static object CreateObject(string objectName)
-		{
-			object[] paramsArray = Invoker.ValidateParamsArray(objectName);
-			object returnItem = Invoker.MethodReturn(_instance, "CreateObject", paramsArray);
-			object newObject = Factory.CreateObjectFromComProxy(_instance,returnItem);
-			return newObject;
-		}
+        /// <summary>
+        /// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
+        /// </summary>
+        /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff860724.aspx </remarks>
+        /// <param name="objectName">string objectName</param>
+        [SupportByVersion("Outlook", 9, 10, 11, 12, 14, 15, 16)]
+        public static object CreateObject(string objectName)
+        {
+            return Factory.ExecuteVariantMethodGet(_instance, "CreateObject", objectName);
+        }
 
-		/// <summary>
-		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff865800.aspx
-		/// </summary>
-		/// <param name="type">string type</param>
-		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
-		public static NetOffice.OutlookApi._NameSpace GetNamespace(string type)
-		{
-			object[] paramsArray = Invoker.ValidateParamsArray(type);
-			object returnItem = Invoker.MethodReturn(_instance, "GetNamespace", paramsArray);
-			NetOffice.OutlookApi._NameSpace newObject = Factory.CreateObjectFromComProxy(_instance,returnItem) as NetOffice.OutlookApi._NameSpace;
-			return newObject;
-		}
+        /// <summary>
+        /// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
+        /// </summary>
+        /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff865800.aspx </remarks>
+        /// <param name="type">string type</param>
+        [SupportByVersion("Outlook", 9, 10, 11, 12, 14, 15, 16)]
+        [BaseResult]
+        public static NetOffice.OutlookApi._NameSpace GetNamespace(string type)
+        {
+            return Factory.ExecuteBaseReferenceMethodGet<NetOffice.OutlookApi._NameSpace>(_instance, "GetNamespace", type);
+        }
 
-		/// <summary>
-		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff866010.aspx
-		/// </summary>
-		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
-		public static void Quit()
-		{
-			object[] paramsArray = null;
-			Invoker.Method(_instance, "Quit", paramsArray);
-		}
+        /// <summary>
+        /// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
+        /// </summary>
+        /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff866010.aspx </remarks>
+        [SupportByVersion("Outlook", 9, 10, 11, 12, 14, 15, 16)]
+        public static void Quit()
+        {
+            Factory.ExecuteMethod(_instance, "Quit");
+        }
 
-		/// <summary>
-		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff865654.aspx
-		/// </summary>
-		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
-		public static object ActiveWindow()
-		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(_instance, "ActiveWindow", paramsArray);
-			object newObject = Factory.CreateObjectFromComProxy(_instance,returnItem);
-			return newObject;
-		}
+        /// <summary>
+        /// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
+        /// </summary>
+        /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff865654.aspx </remarks>
+        [SupportByVersion("Outlook", 9, 10, 11, 12, 14, 15, 16)]
+        public static object ActiveWindow()
+        {
+            return Factory.ExecuteVariantMethodGet(_instance, "ActiveWindow");
+        }
 
-		/// <summary>
-		/// SupportByVersion Outlook 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff869462.aspx
-		/// </summary>
-		/// <param name="filePath">string filePath</param>
-		/// <param name="destFolderPath">string destFolderPath</param>
-		[SupportByVersion("Outlook", 10,11,12,14,15,16)]
-		public static object CopyFile(string filePath, string destFolderPath)
-		{
-			object[] paramsArray = Invoker.ValidateParamsArray(filePath, destFolderPath);
-			object returnItem = Invoker.MethodReturn(_instance, "CopyFile", paramsArray);
-			object newObject = Factory.CreateObjectFromComProxy(_instance,returnItem);
-			return newObject;
-		}
+        /// <summary>
+        /// SupportByVersion Outlook 10, 11, 12, 14, 15, 16
+        /// </summary>
+        /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff869462.aspx </remarks>
+        /// <param name="filePath">string filePath</param>
+        /// <param name="destFolderPath">string destFolderPath</param>
+        [SupportByVersion("Outlook", 10, 11, 12, 14, 15, 16)]
+        public static object CopyFile(string filePath, string destFolderPath)
+        {
+            return Factory.ExecuteVariantMethodGet(_instance, "CopyFile", filePath, destFolderPath);
+        }
 
-		/// <summary>
-		/// SupportByVersion Outlook 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff866933.aspx
-		/// </summary>
-		/// <param name="scope">string scope</param>
-		/// <param name="filter">optional object filter</param>
-		/// <param name="searchSubFolders">optional object searchSubFolders</param>
-		/// <param name="tag">optional object tag</param>
-		[SupportByVersion("Outlook", 10,11,12,14,15,16)]
-		public static NetOffice.OutlookApi.Search AdvancedSearch(string scope, object filter, object searchSubFolders, object tag)
-		{
-			object[] paramsArray = Invoker.ValidateParamsArray(scope, filter, searchSubFolders, tag);
-			object returnItem = Invoker.MethodReturn(_instance, "AdvancedSearch", paramsArray);
-			NetOffice.OutlookApi.Search newObject = Factory.CreateKnownObjectFromComProxy(_instance, returnItem,NetOffice.OutlookApi.Search.LateBindingApiWrapperType) as NetOffice.OutlookApi.Search;
-			return newObject;
-		}
+        /// <summary>
+        /// SupportByVersion Outlook 10, 11, 12, 14, 15, 16
+        /// </summary>
+        /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff866933.aspx </remarks>
+        /// <param name="scope">string scope</param>
+        /// <param name="filter">optional object filter</param>
+        /// <param name="searchSubFolders">optional object searchSubFolders</param>
+        /// <param name="tag">optional object tag</param>
+        [SupportByVersion("Outlook", 10, 11, 12, 14, 15, 16)]
+        public static NetOffice.OutlookApi.Search AdvancedSearch(string scope, object filter, object searchSubFolders, object tag)
+        {
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OutlookApi.Search>(_instance, "AdvancedSearch", NetOffice.OutlookApi.Search.LateBindingApiWrapperType, scope, filter, searchSubFolders, tag);
+        }
 
-		/// <summary>
-		/// SupportByVersion Outlook 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff866933.aspx
-		/// </summary>
-		/// <param name="scope">string scope</param>
-		[CustomMethod]
-		[SupportByVersion("Outlook", 10,11,12,14,15,16)]
-		public static NetOffice.OutlookApi.Search AdvancedSearch(string scope)
-		{
-			object[] paramsArray = Invoker.ValidateParamsArray(scope);
-			object returnItem = Invoker.MethodReturn(_instance, "AdvancedSearch", paramsArray);
-			NetOffice.OutlookApi.Search newObject = Factory.CreateKnownObjectFromComProxy(_instance, returnItem,NetOffice.OutlookApi.Search.LateBindingApiWrapperType) as NetOffice.OutlookApi.Search;
-			return newObject;
-		}
+        /// <summary>
+        /// SupportByVersion Outlook 10, 11, 12, 14, 15, 16
+        /// </summary>
+        /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff866933.aspx </remarks>
+        /// <param name="scope">string scope</param>
+        [CustomMethod]
+        [SupportByVersion("Outlook", 10, 11, 12, 14, 15, 16)]
+        public static NetOffice.OutlookApi.Search AdvancedSearch(string scope)
+        {
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OutlookApi.Search>(_instance, "AdvancedSearch", NetOffice.OutlookApi.Search.LateBindingApiWrapperType, scope);
+        }
 
-		/// <summary>
-		/// SupportByVersion Outlook 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff866933.aspx
-		/// </summary>
-		/// <param name="scope">string scope</param>
-		/// <param name="filter">optional object filter</param>
-		[CustomMethod]
-		[SupportByVersion("Outlook", 10,11,12,14,15,16)]
-		public static NetOffice.OutlookApi.Search AdvancedSearch(string scope, object filter)
-		{
-			object[] paramsArray = Invoker.ValidateParamsArray(scope, filter);
-			object returnItem = Invoker.MethodReturn(_instance, "AdvancedSearch", paramsArray);
-			NetOffice.OutlookApi.Search newObject = Factory.CreateKnownObjectFromComProxy(_instance, returnItem,NetOffice.OutlookApi.Search.LateBindingApiWrapperType) as NetOffice.OutlookApi.Search;
-			return newObject;
-		}
+        /// <summary>
+        /// SupportByVersion Outlook 10, 11, 12, 14, 15, 16
+        /// </summary>
+        /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff866933.aspx </remarks>
+        /// <param name="scope">string scope</param>
+        /// <param name="filter">optional object filter</param>
+        [CustomMethod]
+        [SupportByVersion("Outlook", 10, 11, 12, 14, 15, 16)]
+        public static NetOffice.OutlookApi.Search AdvancedSearch(string scope, object filter)
+        {
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OutlookApi.Search>(_instance, "AdvancedSearch", NetOffice.OutlookApi.Search.LateBindingApiWrapperType, scope, filter);
+        }
 
-		/// <summary>
-		/// SupportByVersion Outlook 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff866933.aspx
-		/// </summary>
-		/// <param name="scope">string scope</param>
-		/// <param name="filter">optional object filter</param>
-		/// <param name="searchSubFolders">optional object searchSubFolders</param>
-		[CustomMethod]
-		[SupportByVersion("Outlook", 10,11,12,14,15,16)]
-		public static NetOffice.OutlookApi.Search AdvancedSearch(string scope, object filter, object searchSubFolders)
-		{
-			object[] paramsArray = Invoker.ValidateParamsArray(scope, filter, searchSubFolders);
-			object returnItem = Invoker.MethodReturn(_instance, "AdvancedSearch", paramsArray);
-			NetOffice.OutlookApi.Search newObject = Factory.CreateKnownObjectFromComProxy(_instance, returnItem,NetOffice.OutlookApi.Search.LateBindingApiWrapperType) as NetOffice.OutlookApi.Search;
-			return newObject;
-		}
+        /// <summary>
+        /// SupportByVersion Outlook 10, 11, 12, 14, 15, 16
+        /// </summary>
+        /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff866933.aspx </remarks>
+        /// <param name="scope">string scope</param>
+        /// <param name="filter">optional object filter</param>
+        /// <param name="searchSubFolders">optional object searchSubFolders</param>
+        [CustomMethod]
+        [SupportByVersion("Outlook", 10, 11, 12, 14, 15, 16)]
+        public static NetOffice.OutlookApi.Search AdvancedSearch(string scope, object filter, object searchSubFolders)
+        {
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OutlookApi.Search>(_instance, "AdvancedSearch", NetOffice.OutlookApi.Search.LateBindingApiWrapperType, scope, filter, searchSubFolders);
+        }
 
-		/// <summary>
-		/// SupportByVersion Outlook 10, 11, 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff869145.aspx
-		/// </summary>
-		/// <param name="lookInFolders">string lookInFolders</param>
-		[SupportByVersion("Outlook", 10,11,12,14,15,16)]
-		public static bool IsSearchSynchronous(string lookInFolders)
-		{
-			object[] paramsArray = Invoker.ValidateParamsArray(lookInFolders);
-			object returnItem = Invoker.MethodReturn(_instance, "IsSearchSynchronous", paramsArray);
-			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
-		}
+        /// <summary>
+        /// SupportByVersion Outlook 10, 11, 12, 14, 15, 16
+        /// </summary>
+        /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff869145.aspx </remarks>
+        /// <param name="lookInFolders">string lookInFolders</param>
+        [SupportByVersion("Outlook", 10, 11, 12, 14, 15, 16)]
+        public static bool IsSearchSynchronous(string lookInFolders)
+        {
+            return Factory.ExecuteBoolMethodGet(_instance, "IsSearchSynchronous", lookInFolders);
+        }
 
-		/// <summary>
-		/// SupportByVersion Outlook 10, 11, 12, 14, 15, 16
-		/// </summary>
-		/// <param name="pvar">object pvar</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersion("Outlook", 10,11,12,14,15,16)]
-		public static void GetNewNickNames(object pvar)
-		{
-			object[] paramsArray = Invoker.ValidateParamsArray(pvar);
-			Invoker.Method(_instance, "GetNewNickNames", paramsArray);
-		}
+        /// <summary>
+        /// SupportByVersion Outlook 10, 11, 12, 14, 15, 16
+        /// </summary>
+        /// <param name="pvar">object pvar</param>
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        [SupportByVersion("Outlook", 10, 11, 12, 14, 15, 16)]
+        public static void GetNewNickNames(object pvar)
+        {
+            Factory.ExecuteMethod(_instance, "GetNewNickNames", pvar);
+        }
 
-		/// <summary>
-		/// SupportByVersion Outlook 12, 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff864203.aspx
-		/// </summary>
-		/// <param name="item">object item</param>
-		/// <param name="referenceType">NetOffice.OutlookApi.Enums.OlReferenceType referenceType</param>
-		[SupportByVersion("Outlook", 12,14,15,16)]
-		public static object GetObjectReference(object item, NetOffice.OutlookApi.Enums.OlReferenceType referenceType)
-		{
-			object[] paramsArray = Invoker.ValidateParamsArray(item, referenceType);
-			object returnItem = Invoker.MethodReturn(_instance, "GetObjectReference", paramsArray);
-			object newObject = Factory.CreateObjectFromComProxy(_instance,returnItem);
-			return newObject;
-		}
+        /// <summary>
+        /// SupportByVersion Outlook 12, 14, 15, 16
+        /// </summary>
+        /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff864203.aspx </remarks>
+        /// <param name="item">object item</param>
+        /// <param name="referenceType">NetOffice.OutlookApi.Enums.OlReferenceType referenceType</param>
+        [SupportByVersion("Outlook", 12, 14, 15, 16)]
+        public static object GetObjectReference(object item, NetOffice.OutlookApi.Enums.OlReferenceType referenceType)
+        {
+            return Factory.ExecuteVariantMethodGet(_instance, "GetObjectReference", item, referenceType);
+        }
 
-		/// <summary>
-		/// SupportByVersion Outlook 14, 15, 16
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff863374.aspx
-		/// </summary>
-		/// <param name="regionName">string regionName</param>
-		[SupportByVersion("Outlook", 14,15,16)]
-		public static void RefreshFormRegionDefinition(string regionName)
-		{
-			object[] paramsArray = Invoker.ValidateParamsArray(regionName);
-			Invoker.Method(_instance, "RefreshFormRegionDefinition", paramsArray);
-		}
+        /// <summary>
+        /// SupportByVersion Outlook 14, 15, 16
+        /// </summary>
+        /// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff863374.aspx </remarks>
+        /// <param name="regionName">string regionName</param>
+        [SupportByVersion("Outlook", 14, 15, 16)]
+        public static void RefreshFormRegionDefinition(string regionName)
+        {
+            Factory.ExecuteMethod(_instance, "RefreshFormRegionDefinition", regionName);
+        }
 
-		#endregion
-	}
+        #endregion
+    }
 }

@@ -10,7 +10,7 @@ namespace NetOffice.VBIDEApi
 	/// SupportByVersion VBIDE, 12,14,5.3
 	/// </summary>
 	[SupportByVersion("VBIDE", 12,14,5.3)]
-	[EntityType(EntityType.IsDispatchInterface)]
+	[EntityType(EntityType.IsDispatchInterface), BaseType]
  	public class _VBProject : _VBProject_Old
 	{
 		#pragma warning disable
@@ -106,36 +106,6 @@ namespace NetOffice.VBIDEApi
 		#endregion
 		
 		#region Properties
-
-		/// <summary>
-		/// SupportByVersion VBIDE 12, 14, 5.3
-		/// Get
-		/// </summary>
-		[SupportByVersion("VBIDE", 12,14,5.3)]
-		[BaseResult]
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public NetOffice.VBIDEApi.Application Application
-		{
-			get
-			{
-				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.VBIDEApi.Application>(this, "Application");
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion VBIDE 12, 14, 5.3
-		/// Get
-		/// </summary>
-		[SupportByVersion("VBIDE", 12,14,5.3)]
-		[BaseResult]
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public NetOffice.VBIDEApi.Application Parent
-		{
-			get
-			{
-				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.VBIDEApi.Application>(this, "Parent");
-			}
-		}
 
 		/// <summary>
 		/// SupportByVersion VBIDE 12, 14, 5.3

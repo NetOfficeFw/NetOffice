@@ -10,7 +10,7 @@ namespace NetOffice.MSProjectApi
 	/// SupportByVersion MSProject, 11,12,14
 	/// </summary>
 	[SupportByVersion("MSProject", 11,12,14)]
-	[EntityType(EntityType.IsDispatchInterface)]
+	[EntityType(EntityType.IsDispatchInterface), BaseType]
  	public class _IProjectDoc : COMObject
 	{
 		#pragma warning disable

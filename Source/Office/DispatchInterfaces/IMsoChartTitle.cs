@@ -138,7 +138,7 @@ namespace NetOffice.OfficeApi
 	/// SupportByVersion Office, 12,14,15,16
 	/// </summary>
 	[SupportByVersion("Office", 12,14,15,16)]
-	[EntityType(EntityType.IsDispatchInterface)]
+	[EntityType(EntityType.IsDispatchInterface), BaseType]
  	public class IMsoChartTitle : IMsoChartTitle_
 	{
 		#pragma warning disable

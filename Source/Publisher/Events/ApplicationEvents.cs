@@ -123,405 +123,355 @@ namespace NetOffice.PublisherApi.Events
 		
 		#endregion
 	
-		#region Fields
-
-		private IEventBinding	_eventBinding;
-        private ICOMObject		_eventClass;
-        
-		#endregion
-		
-		#region Construction
+		#region Ctor
 
 		public ApplicationEvents_SinkHelper(ICOMObject eventClass, IConnectionPoint connectPoint): base(eventClass)
 		{
-			_eventClass = eventClass;
-			_eventBinding = (IEventBinding)eventClass;
 			SetupEventBinding(connectPoint);
 		}
 		
 		#endregion
-		
-		#region Properties
 
-        internal Core Factory
-        {
-            get
-            {
-                if (null != _eventClass)
-                    return _eventClass.Factory;
-                else
-                    return Core.Default;
-            }
-        }
-
-        #endregion
-
-		#region ApplicationEvents Members
+		#region ApplicationEvents
 		
 		public void WindowActivate([In, MarshalAs(UnmanagedType.IDispatch)] object wn)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("WindowActivate");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(wn);
-				return;
-			}
+            if (!Validate("WindowActivate"))
+            {
+                Invoker.ReleaseParamsArray(wn);
+                return;
+            }
 
-			NetOffice.PublisherApi.Window newWn = Factory.CreateObjectFromComProxy(_eventClass, wn) as NetOffice.PublisherApi.Window;
+			NetOffice.PublisherApi.Window newWn = Factory.CreateKnownObjectFromComProxy<NetOffice.PublisherApi.Window>(EventClass, wn, NetOffice.PublisherApi.Window.LateBindingApiWrapperType);
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newWn;
-			_eventBinding.RaiseCustomEvent("WindowActivate", ref paramsArray);
+			EventBinding.RaiseCustomEvent("WindowActivate", ref paramsArray);
 		}
 
 		public void WindowDeactivate([In, MarshalAs(UnmanagedType.IDispatch)] object wn)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("WindowDeactivate");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(wn);
-				return;
-			}
+            if (!Validate("WindowDeactivate"))
+            {
+                Invoker.ReleaseParamsArray(wn);
+                return;
+            }
 
-			NetOffice.PublisherApi.Window newWn = Factory.CreateObjectFromComProxy(_eventClass, wn) as NetOffice.PublisherApi.Window;
-			object[] paramsArray = new object[1];
+            NetOffice.PublisherApi.Window newWn = Factory.CreateKnownObjectFromComProxy<NetOffice.PublisherApi.Window>(EventClass, wn, NetOffice.PublisherApi.Window.LateBindingApiWrapperType);
+            object[] paramsArray = new object[1];
 			paramsArray[0] = newWn;
-			_eventBinding.RaiseCustomEvent("WindowDeactivate", ref paramsArray);
+			EventBinding.RaiseCustomEvent("WindowDeactivate", ref paramsArray);
 		}
 
 		public void WindowPageChange([In, MarshalAs(UnmanagedType.IDispatch)] object vw)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("WindowPageChange");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(vw);
-				return;
-			}
+        {
+            if (!Validate("WindowPageChange"))
+            {
+                Invoker.ReleaseParamsArray(vw);
+                return;
+            }
 
-			NetOffice.PublisherApi.View newVw = Factory.CreateObjectFromComProxy(_eventClass, vw) as NetOffice.PublisherApi.View;
+			NetOffice.PublisherApi.View newVw = Factory.CreateKnownObjectFromComProxy<NetOffice.PublisherApi.View>(EventClass, vw, NetOffice.PublisherApi.View.LateBindingApiWrapperType);
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newVw;
-			_eventBinding.RaiseCustomEvent("WindowPageChange", ref paramsArray);
+			EventBinding.RaiseCustomEvent("WindowPageChange", ref paramsArray);
 		}
 
 		public void Quit()
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("Quit");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray();
-				return;
-			}
+            if (!Validate("Quit"))
+            {
+                return;
+            }
 
-			object[] paramsArray = new object[0];
-			_eventBinding.RaiseCustomEvent("Quit", ref paramsArray);
+            object[] paramsArray = new object[0];
+			EventBinding.RaiseCustomEvent("Quit", ref paramsArray);
 		}
 
 		public void NewDocument([In, MarshalAs(UnmanagedType.IDispatch)] object doc)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("NewDocument");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(doc);
-				return;
-			}
+        {
+            if (!Validate("NewDocument"))
+            {
+                Invoker.ReleaseParamsArray(doc);
+                return;
+            }
 
-			NetOffice.PublisherApi._Document newDoc = Factory.CreateObjectFromComProxy(_eventClass, doc) as NetOffice.PublisherApi._Document;
+			NetOffice.PublisherApi._Document newDoc = Factory.CreateKnownObjectFromComProxy<NetOffice.PublisherApi._Document>(EventClass, doc, NetOffice.PublisherApi._Document.LateBindingApiWrapperType);
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newDoc;
-			_eventBinding.RaiseCustomEvent("NewDocument", ref paramsArray);
+			EventBinding.RaiseCustomEvent("NewDocument", ref paramsArray);
 		}
 
 		public void DocumentOpen([In, MarshalAs(UnmanagedType.IDispatch)] object doc)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("DocumentOpen");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(doc);
-				return;
-			}
+            if (!Validate("DocumentOpen"))
+            {
+                Invoker.ReleaseParamsArray(doc);
+                return;
+            }
 
-			NetOffice.PublisherApi._Document newDoc = Factory.CreateObjectFromComProxy(_eventClass, doc) as NetOffice.PublisherApi._Document;
-			object[] paramsArray = new object[1];
+            NetOffice.PublisherApi._Document newDoc = Factory.CreateKnownObjectFromComProxy<NetOffice.PublisherApi._Document>(EventClass, doc, NetOffice.PublisherApi._Document.LateBindingApiWrapperType);
+            object[] paramsArray = new object[1];
 			paramsArray[0] = newDoc;
-			_eventBinding.RaiseCustomEvent("DocumentOpen", ref paramsArray);
+			EventBinding.RaiseCustomEvent("DocumentOpen", ref paramsArray);
 		}
 
 		public void DocumentBeforeClose([In, MarshalAs(UnmanagedType.IDispatch)] object doc, [In] [Out] ref object cancel)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("DocumentBeforeClose");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(doc, cancel);
-				return;
-			}
+        {
+            if (!Validate("DocumentBeforeClose"))
+            {
+                Invoker.ReleaseParamsArray(doc, cancel);
+                return;
+            }
 
-			NetOffice.PublisherApi._Document newDoc = Factory.CreateObjectFromComProxy(_eventClass, doc) as NetOffice.PublisherApi._Document;
+			NetOffice.PublisherApi._Document newDoc = Factory.CreateKnownObjectFromComProxy<NetOffice.PublisherApi._Document>(EventClass, doc, NetOffice.PublisherApi._Document.LateBindingApiWrapperType);
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newDoc;
 			paramsArray.SetValue(cancel, 1);
-			_eventBinding.RaiseCustomEvent("DocumentBeforeClose", ref paramsArray);
+			EventBinding.RaiseCustomEvent("DocumentBeforeClose", ref paramsArray);
 
-			cancel = (bool)paramsArray[1];
+			cancel = ToBoolean(paramsArray[1]);
 		}
 
 		public void MailMergeAfterMerge([In, MarshalAs(UnmanagedType.IDispatch)] object doc)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("MailMergeAfterMerge");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(doc);
-				return;
-			}
+            if (!Validate("MailMergeAfterMerge"))
+            {
+                Invoker.ReleaseParamsArray(doc);
+                return;
+            }
 
-			NetOffice.PublisherApi._Document newDoc = Factory.CreateObjectFromComProxy(_eventClass, doc) as NetOffice.PublisherApi._Document;
-			object[] paramsArray = new object[1];
+            NetOffice.PublisherApi._Document newDoc = Factory.CreateKnownObjectFromComProxy<NetOffice.PublisherApi._Document>(EventClass, doc, NetOffice.PublisherApi._Document.LateBindingApiWrapperType);
+            object[] paramsArray = new object[1];
 			paramsArray[0] = newDoc;
-			_eventBinding.RaiseCustomEvent("MailMergeAfterMerge", ref paramsArray);
+			EventBinding.RaiseCustomEvent("MailMergeAfterMerge", ref paramsArray);
 		}
 
 		public void MailMergeAfterRecordMerge([In, MarshalAs(UnmanagedType.IDispatch)] object doc)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("MailMergeAfterRecordMerge");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(doc);
-				return;
-			}
+            if (!Validate("MailMergeAfterRecordMerge"))
+            {
+                Invoker.ReleaseParamsArray(doc);
+                return;
+            }
 
-			NetOffice.PublisherApi._Document newDoc = Factory.CreateObjectFromComProxy(_eventClass, doc) as NetOffice.PublisherApi._Document;
-			object[] paramsArray = new object[1];
+            NetOffice.PublisherApi._Document newDoc = Factory.CreateKnownObjectFromComProxy<NetOffice.PublisherApi._Document>(EventClass, doc, NetOffice.PublisherApi._Document.LateBindingApiWrapperType);
+            object[] paramsArray = new object[1];
 			paramsArray[0] = newDoc;
-			_eventBinding.RaiseCustomEvent("MailMergeAfterRecordMerge", ref paramsArray);
+			EventBinding.RaiseCustomEvent("MailMergeAfterRecordMerge", ref paramsArray);
 		}
 
 		public void MailMergeBeforeMerge([In, MarshalAs(UnmanagedType.IDispatch)] object doc, [In] object startRecord, [In] object endRecord, [In] [Out] ref object cancel)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("MailMergeBeforeMerge");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(doc, startRecord, endRecord, cancel);
-				return;
-			}
+            if (!Validate("MailMergeBeforeMerge"))
+            {
+                Invoker.ReleaseParamsArray(doc, startRecord, endRecord, cancel);
+                return;
+            }
 
-			NetOffice.PublisherApi._Document newDoc = Factory.CreateObjectFromComProxy(_eventClass, doc) as NetOffice.PublisherApi._Document;
-			Int32 newStartRecord = Convert.ToInt32(startRecord);
+            NetOffice.PublisherApi._Document newDoc = Factory.CreateKnownObjectFromComProxy<NetOffice.PublisherApi._Document>(EventClass, doc, NetOffice.PublisherApi._Document.LateBindingApiWrapperType);
+            Int32 newStartRecord = Convert.ToInt32(startRecord);
 			Int32 newEndRecord = Convert.ToInt32(endRecord);
 			object[] paramsArray = new object[4];
 			paramsArray[0] = newDoc;
 			paramsArray[1] = newStartRecord;
 			paramsArray[2] = newEndRecord;
 			paramsArray.SetValue(cancel, 3);
-			_eventBinding.RaiseCustomEvent("MailMergeBeforeMerge", ref paramsArray);
+			EventBinding.RaiseCustomEvent("MailMergeBeforeMerge", ref paramsArray);
 
-			cancel = (bool)paramsArray[3];
+			cancel = ToBoolean(paramsArray[3]);
 		}
 
 		public void MailMergeBeforeRecordMerge([In, MarshalAs(UnmanagedType.IDispatch)] object doc, [In] [Out] ref object cancel)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("MailMergeBeforeRecordMerge");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(doc, cancel);
-				return;
-			}
+            if (!Validate("MailMergeBeforeRecordMerge"))
+            {
+                Invoker.ReleaseParamsArray(doc, cancel);
+                return;
+            }
 
-			NetOffice.PublisherApi._Document newDoc = Factory.CreateObjectFromComProxy(_eventClass, doc) as NetOffice.PublisherApi._Document;
-			object[] paramsArray = new object[2];
+            NetOffice.PublisherApi._Document newDoc = Factory.CreateKnownObjectFromComProxy<NetOffice.PublisherApi._Document>(EventClass, doc, NetOffice.PublisherApi._Document.LateBindingApiWrapperType);
+            object[] paramsArray = new object[2];
 			paramsArray[0] = newDoc;
 			paramsArray.SetValue(cancel, 1);
-			_eventBinding.RaiseCustomEvent("MailMergeBeforeRecordMerge", ref paramsArray);
+			EventBinding.RaiseCustomEvent("MailMergeBeforeRecordMerge", ref paramsArray);
 
-			cancel = (bool)paramsArray[1];
-		}
+			cancel = ToBoolean(paramsArray[1]);
+        }
 
 		public void MailMergeDataSourceLoad([In, MarshalAs(UnmanagedType.IDispatch)] object doc)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("MailMergeDataSourceLoad");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(doc);
-				return;
-			}
+        {
+            if (!Validate("MailMergeDataSourceLoad"))
+            {
+                Invoker.ReleaseParamsArray(doc);
+                return;
+            }
 
-			NetOffice.PublisherApi._Document newDoc = Factory.CreateObjectFromComProxy(_eventClass, doc) as NetOffice.PublisherApi._Document;
-			object[] paramsArray = new object[1];
+            NetOffice.PublisherApi._Document newDoc = Factory.CreateKnownObjectFromComProxy<NetOffice.PublisherApi._Document>(EventClass, doc, NetOffice.PublisherApi._Document.LateBindingApiWrapperType);
+            object[] paramsArray = new object[1];
 			paramsArray[0] = newDoc;
-			_eventBinding.RaiseCustomEvent("MailMergeDataSourceLoad", ref paramsArray);
+			EventBinding.RaiseCustomEvent("MailMergeDataSourceLoad", ref paramsArray);
 		}
 
 		public void MailMergeWizardSendToCustom([In, MarshalAs(UnmanagedType.IDispatch)] object doc)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("MailMergeWizardSendToCustom");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(doc);
-				return;
-			}
+        {
+            if (!Validate("MailMergeWizardSendToCustom"))
+            {
+                Invoker.ReleaseParamsArray(doc);
+                return;
+            }
 
-			NetOffice.PublisherApi._Document newDoc = Factory.CreateObjectFromComProxy(_eventClass, doc) as NetOffice.PublisherApi._Document;
-			object[] paramsArray = new object[1];
+            NetOffice.PublisherApi._Document newDoc = Factory.CreateKnownObjectFromComProxy<NetOffice.PublisherApi._Document>(EventClass, doc, NetOffice.PublisherApi._Document.LateBindingApiWrapperType);
+            object[] paramsArray = new object[1];
 			paramsArray[0] = newDoc;
-			_eventBinding.RaiseCustomEvent("MailMergeWizardSendToCustom", ref paramsArray);
+			EventBinding.RaiseCustomEvent("MailMergeWizardSendToCustom", ref paramsArray);
 		}
 
 		public void MailMergeWizardStateChange([In, MarshalAs(UnmanagedType.IDispatch)] object doc, [In] object fromState)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("MailMergeWizardStateChange");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(doc, fromState);
-				return;
-			}
+        {
+            if (!Validate("MailMergeWizardStateChange"))
+            {
+                Invoker.ReleaseParamsArray(doc, fromState);
+                return;
+            }
 
-			NetOffice.PublisherApi._Document newDoc = Factory.CreateObjectFromComProxy(_eventClass, doc) as NetOffice.PublisherApi._Document;
-			Int32 newFromState = Convert.ToInt32(fromState);
+            NetOffice.PublisherApi._Document newDoc = Factory.CreateKnownObjectFromComProxy<NetOffice.PublisherApi._Document>(EventClass, doc, NetOffice.PublisherApi._Document.LateBindingApiWrapperType);
+            Int32 newFromState = Convert.ToInt32(fromState);
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newDoc;
 			paramsArray[1] = newFromState;
-			_eventBinding.RaiseCustomEvent("MailMergeWizardStateChange", ref paramsArray);
+			EventBinding.RaiseCustomEvent("MailMergeWizardStateChange", ref paramsArray);
 		}
 
 		public void MailMergeDataSourceValidate([In, MarshalAs(UnmanagedType.IDispatch)] object doc, [In] [Out] ref object handled)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("MailMergeDataSourceValidate");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(doc, handled);
-				return;
-			}
+        {
+            if (!Validate("MailMergeDataSourceValidate"))
+            {
+                Invoker.ReleaseParamsArray(doc, handled);
+                return;
+            }
 
-			NetOffice.PublisherApi._Document newDoc = Factory.CreateObjectFromComProxy(_eventClass, doc) as NetOffice.PublisherApi._Document;
-			object[] paramsArray = new object[2];
+            NetOffice.PublisherApi._Document newDoc = Factory.CreateKnownObjectFromComProxy<NetOffice.PublisherApi._Document>(EventClass, doc, NetOffice.PublisherApi._Document.LateBindingApiWrapperType);
+            object[] paramsArray = new object[2];
 			paramsArray[0] = newDoc;
 			paramsArray.SetValue(handled, 1);
-			_eventBinding.RaiseCustomEvent("MailMergeDataSourceValidate", ref paramsArray);
+			EventBinding.RaiseCustomEvent("MailMergeDataSourceValidate", ref paramsArray);
 
-			handled = (bool)paramsArray[1];
+			handled = ToBoolean(paramsArray[1]);
 		}
 
 		public void MailMergeInsertBarcode([In, MarshalAs(UnmanagedType.IDispatch)] object doc, [In] [Out] ref object okToInsert)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("MailMergeInsertBarcode");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(doc, okToInsert);
-				return;
-			}
+        {
+            if (!Validate("MailMergeInsertBarcode"))
+            {
+                Invoker.ReleaseParamsArray(doc, okToInsert);
+                return;
+            }
 
-			NetOffice.PublisherApi._Document newDoc = Factory.CreateObjectFromComProxy(_eventClass, doc) as NetOffice.PublisherApi._Document;
-			object[] paramsArray = new object[2];
+            NetOffice.PublisherApi._Document newDoc = Factory.CreateKnownObjectFromComProxy<NetOffice.PublisherApi._Document>(EventClass, doc, NetOffice.PublisherApi._Document.LateBindingApiWrapperType);
+            object[] paramsArray = new object[2];
 			paramsArray[0] = newDoc;
 			paramsArray.SetValue(okToInsert, 1);
-			_eventBinding.RaiseCustomEvent("MailMergeInsertBarcode", ref paramsArray);
+			EventBinding.RaiseCustomEvent("MailMergeInsertBarcode", ref paramsArray);
 
-			okToInsert = (bool)paramsArray[1];
-		}
+			okToInsert = ToBoolean(paramsArray[1]);
+        }
 
 		public void MailMergeRecipientListClose([In, MarshalAs(UnmanagedType.IDispatch)] object doc)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("MailMergeRecipientListClose");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(doc);
-				return;
-			}
+        {
+            if (!Validate("MailMergeRecipientListClose"))
+            {
+                Invoker.ReleaseParamsArray(doc);
+                return;
+            }
 
-			NetOffice.PublisherApi._Document newDoc = Factory.CreateObjectFromComProxy(_eventClass, doc) as NetOffice.PublisherApi._Document;
-			object[] paramsArray = new object[1];
+            NetOffice.PublisherApi._Document newDoc = Factory.CreateKnownObjectFromComProxy<NetOffice.PublisherApi._Document>(EventClass, doc, NetOffice.PublisherApi._Document.LateBindingApiWrapperType);
+            object[] paramsArray = new object[1];
 			paramsArray[0] = newDoc;
-			_eventBinding.RaiseCustomEvent("MailMergeRecipientListClose", ref paramsArray);
+			EventBinding.RaiseCustomEvent("MailMergeRecipientListClose", ref paramsArray);
 		}
 
 		public void MailMergeGenerateBarcode([In, MarshalAs(UnmanagedType.IDispatch)] object doc, [In] [Out] ref object bstrString)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("MailMergeGenerateBarcode");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(doc, bstrString);
-				return;
-			}
+        {
+            if (!Validate("MailMergeGenerateBarcode"))
+            {
+                Invoker.ReleaseParamsArray(doc, bstrString);
+                return;
+            }
 
-			NetOffice.PublisherApi._Document newDoc = Factory.CreateObjectFromComProxy(_eventClass, doc) as NetOffice.PublisherApi._Document;
-			object[] paramsArray = new object[2];
+            NetOffice.PublisherApi._Document newDoc = Factory.CreateKnownObjectFromComProxy<NetOffice.PublisherApi._Document>(EventClass, doc, NetOffice.PublisherApi._Document.LateBindingApiWrapperType);
+            object[] paramsArray = new object[2];
 			paramsArray[0] = newDoc;
 			paramsArray.SetValue(bstrString, 1);
-			_eventBinding.RaiseCustomEvent("MailMergeGenerateBarcode", ref paramsArray);
+			EventBinding.RaiseCustomEvent("MailMergeGenerateBarcode", ref paramsArray);
 
-			bstrString = (string)paramsArray[1];
+			bstrString = Convert.ToString(paramsArray[1]);
 		}
 
 		public void MailMergeWizardFollowUpCustom([In, MarshalAs(UnmanagedType.IDispatch)] object doc)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("MailMergeWizardFollowUpCustom");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(doc);
-				return;
-			}
+        {
+            if (!Validate("MailMergeWizardFollowUpCustom"))
+            {
+                Invoker.ReleaseParamsArray(doc);
+                return;
+            }
 
-			NetOffice.PublisherApi._Document newDoc = Factory.CreateObjectFromComProxy(_eventClass, doc) as NetOffice.PublisherApi._Document;
-			object[] paramsArray = new object[1];
+            NetOffice.PublisherApi._Document newDoc = Factory.CreateKnownObjectFromComProxy<NetOffice.PublisherApi._Document>(EventClass, doc, NetOffice.PublisherApi._Document.LateBindingApiWrapperType);
+            object[] paramsArray = new object[1];
 			paramsArray[0] = newDoc;
-			_eventBinding.RaiseCustomEvent("MailMergeWizardFollowUpCustom", ref paramsArray);
+			EventBinding.RaiseCustomEvent("MailMergeWizardFollowUpCustom", ref paramsArray);
 		}
 
 		public void BeforePrint([In, MarshalAs(UnmanagedType.IDispatch)] object doc, [In] [Out] ref object cancel)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("BeforePrint");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(doc, cancel);
-				return;
-			}
+        {
+            if (!Validate("BeforePrint"))
+            {
+                Invoker.ReleaseParamsArray(doc, cancel);
+                return;
+            }
 
-			NetOffice.PublisherApi._Document newDoc = Factory.CreateObjectFromComProxy(_eventClass, doc) as NetOffice.PublisherApi._Document;
-			object[] paramsArray = new object[2];
+            NetOffice.PublisherApi._Document newDoc = Factory.CreateKnownObjectFromComProxy<NetOffice.PublisherApi._Document>(EventClass, doc, NetOffice.PublisherApi._Document.LateBindingApiWrapperType);
+            object[] paramsArray = new object[2];
 			paramsArray[0] = newDoc;
 			paramsArray.SetValue(cancel, 1);
-			_eventBinding.RaiseCustomEvent("BeforePrint", ref paramsArray);
+			EventBinding.RaiseCustomEvent("BeforePrint", ref paramsArray);
 
-			cancel = (bool)paramsArray[1];
+			cancel = ToBoolean(paramsArray[1]);
 		}
 
 		public void AfterPrint([In, MarshalAs(UnmanagedType.IDispatch)] object doc)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("AfterPrint");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(doc);
-				return;
-			}
+        {
+            if (!Validate("AfterPrint"))
+            {
+                Invoker.ReleaseParamsArray(doc);
+                return;
+            }
 
-			NetOffice.PublisherApi._Document newDoc = Factory.CreateObjectFromComProxy(_eventClass, doc) as NetOffice.PublisherApi._Document;
-			object[] paramsArray = new object[1];
+            NetOffice.PublisherApi._Document newDoc = Factory.CreateKnownObjectFromComProxy<NetOffice.PublisherApi._Document>(EventClass, doc, NetOffice.PublisherApi._Document.LateBindingApiWrapperType);
+            object[] paramsArray = new object[1];
 			paramsArray[0] = newDoc;
-			_eventBinding.RaiseCustomEvent("AfterPrint", ref paramsArray);
+			EventBinding.RaiseCustomEvent("AfterPrint", ref paramsArray);
 		}
 
 		public void ShowCatalogUI()
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("ShowCatalogUI");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray();
-				return;
-			}
+            if (!Validate("ShowCatalogUI"))
+            {
+                return;
+            }
 
 			object[] paramsArray = new object[0];
-			_eventBinding.RaiseCustomEvent("ShowCatalogUI", ref paramsArray);
+			EventBinding.RaiseCustomEvent("ShowCatalogUI", ref paramsArray);
 		}
 
 		public void HideCatalogUI()
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("HideCatalogUI");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray();
-				return;
-			}
+            if (!Validate("HideCatalogUI"))
+            {
+                return;
+            }
 
-			object[] paramsArray = new object[0];
-			_eventBinding.RaiseCustomEvent("HideCatalogUI", ref paramsArray);
+            object[] paramsArray = new object[0];
+			EventBinding.RaiseCustomEvent("HideCatalogUI", ref paramsArray);
 		}
 
 		#endregion

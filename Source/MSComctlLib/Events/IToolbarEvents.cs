@@ -90,311 +90,289 @@ namespace NetOffice.MSComctlLibApi.Events
 		public static readonly string Id = "66833FE5-8583-11D1-B16A-00C0F0283628";
 		
 		#endregion
-	
-		#region Fields
 
-		private IEventBinding	_eventBinding;
-        private ICOMObject _eventClass;
-        
-		#endregion
-		
-		#region Construction
+		#region Ctor
 
 		public IToolbarEvents_SinkHelper(ICOMObject eventClass, IConnectionPoint connectPoint): base(eventClass)
 		{
-			_eventClass = eventClass;
-			_eventBinding = (IEventBinding)eventClass;
 			SetupEventBinding(connectPoint);
 		}
 		
 		#endregion
-		
-		#region Properties
 
-        internal Core Factory
-        {
-            get
-            {
-                if (null != _eventClass)
-                    return _eventClass.Factory;
-                else
-                    return Core.Default;
-            }
-        }
-
-        #endregion
-
-		#region IToolbarEvents Members
+		#region IToolbarEvents
 		
 		public void ButtonClick([In, MarshalAs(UnmanagedType.IDispatch)] object button)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("ButtonClick");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(button);
-				return;
-			}
+        {
+            if (!Validate("ButtonClick"))
+            {
+                Invoker.ReleaseParamsArray(button);
+                return;
+            }
 
-			NetOffice.MSComctlLibApi.Button newButton = Factory.CreateObjectFromComProxy(_eventClass, button) as NetOffice.MSComctlLibApi.Button;
+			NetOffice.MSComctlLibApi.Button newButton = Factory.CreateKnownObjectFromComProxy<NetOffice.MSComctlLibApi.Button>(EventClass, button, NetOffice.MSComctlLibApi.Button.LateBindingApiWrapperType);
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newButton;
-			_eventBinding.RaiseCustomEvent("ButtonClick", ref paramsArray);
+			EventBinding.RaiseCustomEvent("ButtonClick", ref paramsArray);
 		}
 
 		public void Change()
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("Change");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray();
-				return;
-			}
+            if (!Validate("Change"))
+            {
+                return;
+            }
 
-			object[] paramsArray = new object[0];
-			_eventBinding.RaiseCustomEvent("Change", ref paramsArray);
+            object[] paramsArray = new object[0];
+			EventBinding.RaiseCustomEvent("Change", ref paramsArray);
 		}
 
-		public void Click()
+        public void Click()
+        {
+            if (!Validate("Click"))
+            {
+                return;
+            }
+
+            object[] paramsArray = new object[0];
+            EventBinding.RaiseCustomEvent("Click", ref paramsArray);
+        }
+
+        public void MouseDown([In] object button, [In] object shift, [In] object x, [In] object y)
+        {
+            if (!Validate("MouseDown"))
+            {
+                Invoker.ReleaseParamsArray(button, shift, x, y);
+                return;
+            }
+
+            Int16 newButton = Convert.ToInt16(button);
+            Int16 newShift = Convert.ToInt16(shift);
+            Int32 newx = Convert.ToInt32(x);
+            Int32 newy = Convert.ToInt32(y);
+            object[] paramsArray = new object[4];
+            paramsArray[0] = newButton;
+            paramsArray[1] = newShift;
+            paramsArray[2] = newx;
+            paramsArray[3] = newy;
+            EventBinding.RaiseCustomEvent("MouseDown", ref paramsArray);
+        }
+
+        public void MouseMove([In] object button, [In] object shift, [In] object x, [In] object y)
+        {
+            if (!Validate("MouseDown"))
+            {
+                Invoker.ReleaseParamsArray(button, shift, x, y);
+                return;
+            }
+
+            Int16 newButton = Convert.ToInt16(button);
+            Int16 newShift = Convert.ToInt16(shift);
+            Int32 newx = Convert.ToInt32(x);
+            Int32 newy = Convert.ToInt32(y);
+            object[] paramsArray = new object[4];
+            paramsArray[0] = newButton;
+            paramsArray[1] = newShift;
+            paramsArray[2] = newx;
+            paramsArray[3] = newy;
+            EventBinding.RaiseCustomEvent("MouseMove", ref paramsArray);
+        }
+
+        public void MouseUp([In] object button, [In] object shift, [In] object x, [In] object y)
+        {
+            if (!Validate("MouseUp"))
+            {
+                Invoker.ReleaseParamsArray(button, shift, x, y);
+                return;
+            }
+
+            Int16 newButton = Convert.ToInt16(button);
+            Int16 newShift = Convert.ToInt16(shift);
+            Int32 newx = Convert.ToInt32(x);
+            Int32 newy = Convert.ToInt32(y);
+            object[] paramsArray = new object[4];
+            paramsArray[0] = newButton;
+            paramsArray[1] = newShift;
+            paramsArray[2] = newx;
+            paramsArray[3] = newy;
+            EventBinding.RaiseCustomEvent("MouseUp", ref paramsArray);
+        }
+
+        public void DblClick()
+        {
+            if (!Validate("DblClick"))
+            {
+                return;
+            }
+
+            object[] paramsArray = new object[0];
+            EventBinding.RaiseCustomEvent("DblClick", ref paramsArray);
+        }
+
+        public void OLEStartDrag([In] [Out, MarshalAs(UnmanagedType.IDispatch)] object data, [In] [Out] ref object allowedEffects)
+        {
+            if (!Validate("OLEStartDrag"))
+            {
+                Invoker.ReleaseParamsArray(data, allowedEffects);
+                return;
+            }
+
+            NetOffice.MSComctlLibApi.DataObject newData = new NetOffice.MSComctlLibApi.DataObject(EventClass, data);
+            (newData as ICOMProxyShareProvider).GetProxyShare().Acquire();
+
+            object[] paramsArray = new object[2];
+            paramsArray.SetValue(newData, 0);
+            paramsArray.SetValue(allowedEffects, 1);
+            EventBinding.RaiseCustomEvent("OLEStartDrag", ref paramsArray);
+
+            data = newData.UnderlyingObject;
+            allowedEffects = ToInt32(paramsArray[1]);
+
+            (newData as ICOMProxyShareProvider).GetProxyShare().Release();
+        }
+
+        public void OLEGiveFeedback([In] [Out] ref object effect, [In] [Out] ref object defaultCursors)
+        {
+            if (!Validate("OLEGiveFeedback"))
+            {
+                Invoker.ReleaseParamsArray(effect, defaultCursors);
+                return;
+            }
+
+            object[] paramsArray = new object[2];
+            paramsArray.SetValue(effect, 0);
+            paramsArray.SetValue(defaultCursors, 1);
+            EventBinding.RaiseCustomEvent("OLEGiveFeedback", ref paramsArray);
+
+            effect = ToInt32(paramsArray[0]);
+            defaultCursors = ToBoolean(paramsArray[1]);
+        }
+
+        public void OLESetData([In] [Out, MarshalAs(UnmanagedType.IDispatch)] object data, [In] [Out] ref object dataFormat)
+        {
+            if (!Validate("OLEGiveFeedback"))
+            {
+                Invoker.ReleaseParamsArray(data, dataFormat);
+                return;
+            }
+
+            NetOffice.MSComctlLibApi.DataObject newData = new NetOffice.MSComctlLibApi.DataObject(EventClass, data);
+            (newData as ICOMProxyShareProvider).GetProxyShare().Acquire();
+
+            object[] paramsArray = new object[2];
+            paramsArray.SetValue(newData, 0);
+            paramsArray.SetValue(dataFormat, 1);
+            EventBinding.RaiseCustomEvent("OLESetData", ref paramsArray);
+
+            data = newData.UnderlyingObject;
+            dataFormat = ToInt32(paramsArray[1]);
+
+            (newData as ICOMProxyShareProvider).GetProxyShare().Release();
+        }
+
+        public void OLECompleteDrag([In] [Out] ref object effect)
+        {
+            if (!Validate("OLECompleteDrag"))
+            {
+                Invoker.ReleaseParamsArray(effect);
+                return;
+            }
+
+            object[] paramsArray = new object[1];
+            paramsArray.SetValue(effect, 0);
+            EventBinding.RaiseCustomEvent("OLECompleteDrag", ref paramsArray);
+
+            effect = ToInt32(paramsArray[0]);
+        }
+
+        public void OLEDragOver([In] [Out, MarshalAs(UnmanagedType.IDispatch)] object data, [In] [Out] ref object effect, [In] [Out] ref object button, [In] [Out] ref object shift, [In] [Out] ref object x, [In] [Out] ref object y, [In] [Out] ref object state)
+        {
+            if (!Validate("OLEDragOver"))
+            {
+                Invoker.ReleaseParamsArray(data, effect, button, shift, x, y, state);
+                return;
+            }
+
+            NetOffice.MSComctlLibApi.DataObject newData = new NetOffice.MSComctlLibApi.DataObject(EventClass, data);
+            (newData as ICOMProxyShareProvider).GetProxyShare().Acquire();
+
+            object[] paramsArray = new object[7];
+            paramsArray.SetValue(newData, 0);
+            paramsArray.SetValue(effect, 1);
+            paramsArray.SetValue(button, 2);
+            paramsArray.SetValue(shift, 3);
+            paramsArray.SetValue(x, 4);
+            paramsArray.SetValue(y, 5);
+            paramsArray.SetValue(state, 6);
+            EventBinding.RaiseCustomEvent("OLEDragOver", ref paramsArray);
+
+            data = newData.UnderlyingObject;
+            effect = ToInt16(paramsArray[1]);
+            button = ToInt16(paramsArray[2]);
+            shift = ToInt16(paramsArray[3]);
+            x = ToSingle(paramsArray[4]);
+            y = ToSingle(paramsArray[5]);
+            state = ToInt16(paramsArray[6]);
+
+            (newData as ICOMProxyShareProvider).GetProxyShare().Release();
+        }
+
+        public void OLEDragDrop([In] [Out, MarshalAs(UnmanagedType.IDispatch)] object data, [In] [Out] ref object effect, [In] [Out] ref object button, [In] [Out] ref object shift, [In] [Out] ref object x, [In] [Out] ref object y)
+        {
+            if (!Validate("OLEDragDrop"))
+            {
+                Invoker.ReleaseParamsArray(data, effect, button, shift, x, y);
+                return;
+            }
+
+            NetOffice.MSComctlLibApi.DataObject newData = new NetOffice.MSComctlLibApi.DataObject(EventClass, data);
+            (newData as ICOMProxyShareProvider).GetProxyShare().Acquire();
+
+            object[] paramsArray = new object[6];
+            paramsArray.SetValue(newData, 0);
+            paramsArray.SetValue(effect, 1);
+            paramsArray.SetValue(button, 2);
+            paramsArray.SetValue(shift, 3);
+            paramsArray.SetValue(x, 4);
+            paramsArray.SetValue(y, 5);
+            EventBinding.RaiseCustomEvent("OLEDragDrop", ref paramsArray);
+
+            data = newData.UnderlyingObject;
+            effect = ToInt16(paramsArray[1]);
+            button = ToInt16(paramsArray[2]);
+            shift = ToInt16(paramsArray[3]);
+            x = ToSingle(paramsArray[4]);
+            y = ToSingle(paramsArray[5]);
+
+            (newData as ICOMProxyShareProvider).GetProxyShare().Release();
+        }
+
+        public void ButtonMenuClick([In, MarshalAs(UnmanagedType.IDispatch)] object buttonMenu)
 		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("Click");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray();
-				return;
-			}
+            if (!Validate("DblClick"))
+            {
+                Invoker.ReleaseParamsArray(buttonMenu);
+                return;
+            }
 
-			object[] paramsArray = new object[0];
-			_eventBinding.RaiseCustomEvent("Click", ref paramsArray);
-		}
-
-		public void MouseDown([In] object button, [In] object shift, [In] object x, [In] object y)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("MouseDown");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(button, shift, x, y);
-				return;
-			}
-
-			Int16 newButton = Convert.ToInt16(button);
-			Int16 newShift = Convert.ToInt16(shift);
-			Int32 newx = Convert.ToInt32(x);
-			Int32 newy = Convert.ToInt32(y);
-			object[] paramsArray = new object[4];
-			paramsArray[0] = newButton;
-			paramsArray[1] = newShift;
-			paramsArray[2] = newx;
-			paramsArray[3] = newy;
-			_eventBinding.RaiseCustomEvent("MouseDown", ref paramsArray);
-		}
-
-		public void MouseMove([In] object button, [In] object shift, [In] object x, [In] object y)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("MouseMove");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(button, shift, x, y);
-				return;
-			}
-
-			Int16 newButton = Convert.ToInt16(button);
-			Int16 newShift = Convert.ToInt16(shift);
-			Int32 newx = Convert.ToInt32(x);
-			Int32 newy = Convert.ToInt32(y);
-			object[] paramsArray = new object[4];
-			paramsArray[0] = newButton;
-			paramsArray[1] = newShift;
-			paramsArray[2] = newx;
-			paramsArray[3] = newy;
-			_eventBinding.RaiseCustomEvent("MouseMove", ref paramsArray);
-		}
-
-		public void MouseUp([In] object button, [In] object shift, [In] object x, [In] object y)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("MouseUp");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(button, shift, x, y);
-				return;
-			}
-
-			Int16 newButton = Convert.ToInt16(button);
-			Int16 newShift = Convert.ToInt16(shift);
-			Int32 newx = Convert.ToInt32(x);
-			Int32 newy = Convert.ToInt32(y);
-			object[] paramsArray = new object[4];
-			paramsArray[0] = newButton;
-			paramsArray[1] = newShift;
-			paramsArray[2] = newx;
-			paramsArray[3] = newy;
-			_eventBinding.RaiseCustomEvent("MouseUp", ref paramsArray);
-		}
-
-		public void DblClick()
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("DblClick");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray();
-				return;
-			}
-
-			object[] paramsArray = new object[0];
-			_eventBinding.RaiseCustomEvent("DblClick", ref paramsArray);
-		}
-
-		public void OLEStartDrag([In] [Out, MarshalAs(UnmanagedType.IDispatch)] object data, [In] [Out] ref object allowedEffects)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("OLEStartDrag");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(data, allowedEffects);
-				return;
-			}
-
-			object[] paramsArray = new object[2];
-			paramsArray.SetValue(data, 0);
-			paramsArray.SetValue(allowedEffects, 1);
-			_eventBinding.RaiseCustomEvent("OLEStartDrag", ref paramsArray);
-
-			data = (NetOffice.MSComctlLibApi.DataObject)paramsArray[0];
-			allowedEffects = (Int32)paramsArray[1];
-		}
-
-		public void OLEGiveFeedback([In] [Out] ref object effect, [In] [Out] ref object defaultCursors)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("OLEGiveFeedback");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(effect, defaultCursors);
-				return;
-			}
-
-			object[] paramsArray = new object[2];
-			paramsArray.SetValue(effect, 0);
-			paramsArray.SetValue(defaultCursors, 1);
-			_eventBinding.RaiseCustomEvent("OLEGiveFeedback", ref paramsArray);
-
-			effect = (Int32)paramsArray[0];
-			defaultCursors = (bool)paramsArray[1];
-		}
-
-		public void OLESetData([In] [Out, MarshalAs(UnmanagedType.IDispatch)] object data, [In] [Out] ref object dataFormat)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("OLESetData");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(data, dataFormat);
-				return;
-			}
-
-			object[] paramsArray = new object[2];
-			paramsArray.SetValue(data, 0);
-			paramsArray.SetValue(dataFormat, 1);
-			_eventBinding.RaiseCustomEvent("OLESetData", ref paramsArray);
-
-			data = (NetOffice.MSComctlLibApi.DataObject)paramsArray[0];
-			dataFormat = (Int16)paramsArray[1];
-		}
-
-		public void OLECompleteDrag([In] [Out] ref object effect)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("OLECompleteDrag");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(effect);
-				return;
-			}
-
-			object[] paramsArray = new object[1];
-			paramsArray.SetValue(effect, 0);
-			_eventBinding.RaiseCustomEvent("OLECompleteDrag", ref paramsArray);
-
-			effect = (Int32)paramsArray[0];
-		}
-
-		public void OLEDragOver([In] [Out, MarshalAs(UnmanagedType.IDispatch)] object data, [In] [Out] ref object effect, [In] [Out] ref object button, [In] [Out] ref object shift, [In] [Out] ref object x, [In] [Out] ref object y, [In] [Out] ref object state)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("OLEDragOver");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(data, effect, button, shift, x, y, state);
-				return;
-			}
-
-			object[] paramsArray = new object[7];
-			paramsArray.SetValue(data, 0);
-			paramsArray.SetValue(effect, 1);
-			paramsArray.SetValue(button, 2);
-			paramsArray.SetValue(shift, 3);
-			paramsArray.SetValue(x, 4);
-			paramsArray.SetValue(y, 5);
-			paramsArray.SetValue(state, 6);
-			_eventBinding.RaiseCustomEvent("OLEDragOver", ref paramsArray);
-
-			data = (NetOffice.MSComctlLibApi.DataObject)paramsArray[0];
-			effect = (Int32)paramsArray[1];
-			button = (Int16)paramsArray[2];
-			shift = (Int16)paramsArray[3];
-			x = (Single)paramsArray[4];
-			y = (Single)paramsArray[5];
-			state = (Int16)paramsArray[6];
-		}
-
-		public void OLEDragDrop([In] [Out, MarshalAs(UnmanagedType.IDispatch)] object data, [In] [Out] ref object effect, [In] [Out] ref object button, [In] [Out] ref object shift, [In] [Out] ref object x, [In] [Out] ref object y)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("OLEDragDrop");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(data, effect, button, shift, x, y);
-				return;
-			}
-
-			object[] paramsArray = new object[6];
-			paramsArray.SetValue(data, 0);
-			paramsArray.SetValue(effect, 1);
-			paramsArray.SetValue(button, 2);
-			paramsArray.SetValue(shift, 3);
-			paramsArray.SetValue(x, 4);
-			paramsArray.SetValue(y, 5);
-			_eventBinding.RaiseCustomEvent("OLEDragDrop", ref paramsArray);
-
-			data = (NetOffice.MSComctlLibApi.DataObject)paramsArray[0];
-			effect = (Int32)paramsArray[1];
-			button = (Int16)paramsArray[2];
-			shift = (Int16)paramsArray[3];
-			x = (Single)paramsArray[4];
-			y = (Single)paramsArray[5];
-		}
-
-		public void ButtonMenuClick([In, MarshalAs(UnmanagedType.IDispatch)] object buttonMenu)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("ButtonMenuClick");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(buttonMenu);
-				return;
-			}
-
-			NetOffice.MSComctlLibApi.ButtonMenu newButtonMenu = Factory.CreateObjectFromComProxy(_eventClass, buttonMenu) as NetOffice.MSComctlLibApi.ButtonMenu;
+			NetOffice.MSComctlLibApi.ButtonMenu newButtonMenu = Factory.CreateKnownObjectFromComProxy<NetOffice.MSComctlLibApi.ButtonMenu>(EventClass, buttonMenu, NetOffice.MSComctlLibApi.ButtonMenu.LateBindingApiWrapperType);
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newButtonMenu;
-			_eventBinding.RaiseCustomEvent("ButtonMenuClick", ref paramsArray);
+			EventBinding.RaiseCustomEvent("ButtonMenuClick", ref paramsArray);
 		}
 
 		public void ButtonDropDown([In, MarshalAs(UnmanagedType.IDispatch)] object button)
-		{
-			Delegate[] recipients = _eventBinding.GetEventRecipients("ButtonDropDown");
-			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
-			{
-				Invoker.ReleaseParamsArray(button);
-				return;
-			}
+        {
+            if (!Validate("ButtonDropDown"))
+            {
+                Invoker.ReleaseParamsArray(button);
+                return;
+            }
 
-			NetOffice.MSComctlLibApi.Button newButton = Factory.CreateObjectFromComProxy(_eventClass, button) as NetOffice.MSComctlLibApi.Button;
+			NetOffice.MSComctlLibApi.Button newButton = Factory.CreateKnownObjectFromComProxy<NetOffice.MSComctlLibApi.Button>(EventClass, button, NetOffice.MSComctlLibApi.Button.LateBindingApiWrapperType);
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newButton;
-			_eventBinding.RaiseCustomEvent("ButtonDropDown", ref paramsArray);
+			EventBinding.RaiseCustomEvent("ButtonDropDown", ref paramsArray);
 		}
 
 		#endregion

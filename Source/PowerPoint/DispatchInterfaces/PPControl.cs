@@ -10,7 +10,7 @@ namespace NetOffice.PowerPointApi
 	/// SupportByVersion PowerPoint, 9
 	/// </summary>
 	[SupportByVersion("PowerPoint", 9)]
-	[EntityType(EntityType.IsDispatchInterface)]
+	[EntityType(EntityType.IsDispatchInterface), BaseType]
  	public class PPControl : COMObject
 	{
 		#pragma warning disable
