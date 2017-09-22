@@ -19,7 +19,7 @@ namespace NetOffice
         This is designed to use as dynamic in C# or as object in visual basic.
         Allows to use dynamic late-binding with proxy managed service from Netoffice.(best of both worlds)
 
-        NetOffice.Settings.EnableDynamicObjects(currently true by default - Netoffice 1.7.4.1 beta) want enable
+        NetOffice.Settings.EnableDynamicObjects(currently true by default - Netoffice 1.7.4.1) want enable
         the behavior that Netoffice returns a COMDynamicObject instance if its
         failed to resolve a wrapper class for a com proxy.
     */
@@ -217,6 +217,11 @@ namespace NetOffice
         /// </summary>
         private static string[] _selfDynamicMemberNames;
 
+        /// <summary>
+        /// Invalid proxy error message
+        /// </summary>
+        private static string _invalidComProxy = "Given argument isn't a com proxy.";
+
         #endregion
 
         #region Ctor
@@ -229,7 +234,8 @@ namespace NetOffice
         {
             if (null == comProxy)
                 throw new ArgumentNullException("comProxy");
-            
+            if (!(comProxy is MarshalByRefObject))
+                throw new ArgumentException(_invalidComProxy);
             Factory = Core.Default;          
             ParentObject = null;
             _proxyShare = Factory.CreateNewProxyShare(this, comProxy);
@@ -248,7 +254,9 @@ namespace NetOffice
         {
             if (null == comProxy)
                 throw new ArgumentNullException("comProxy");
-            
+            if (!(comProxy is MarshalByRefObject))
+                throw new ArgumentException(_invalidComProxy);
+
             if (null != parentObject)
                 Factory = parentObject.Factory;
             else
@@ -272,7 +280,7 @@ namespace NetOffice
         public COMDynamicObject(ICOMObject comObject)
         {
             if (null == comObject)
-                throw new ArgumentNullException("comObject");           
+                throw new ArgumentNullException("comObject");
 
             Factory = comObject.Factory;
 
@@ -297,6 +305,11 @@ namespace NetOffice
         /// <param name="comProxy">the now wrapped comProxy instance</param>       
         public COMDynamicObject(Core factory, ICOMObject parentObject, object comProxy)
         {
+            if (null == comProxy)
+                throw new ArgumentNullException("comProxy");
+            if (!(comProxy is MarshalByRefObject))
+                throw new ArgumentException(_invalidComProxy);
+
             if (null == factory)
                 factory = Core.Default;
             Factory = factory;
@@ -313,21 +326,24 @@ namespace NetOffice
             _listChildObjects = new List<ICOMObject>();
             Factory.CheckInitialize();
         }
-        
+
         /// <summary>
         /// Creates new instance with given proxy and parent info
         /// </summary>
         /// <param name="factory">current factory instance or null for defauslt</param>
         /// <param name="parentObject">the parent instance where you have these instance from</param>
-        /// <param name="proxy">proxy share instead of proxy</param>       
-        public COMDynamicObject(Core factory, ICOMObject parentObject, COMProxyShare proxy)
+        /// <param name="comProxy">proxy share instead of proxy</param>       
+        public COMDynamicObject(Core factory, ICOMObject parentObject, COMProxyShare comProxy)
         {
+            if (null == comProxy)
+                throw new ArgumentNullException("comProxy");
+            
             if (null == factory)
                 factory = Core.Default;
             Factory = factory;
 
             ParentObject = parentObject;
-            _proxyShare = proxy;
+            _proxyShare = comProxy;
 
             UnderlyingType = _proxyShare.Proxy.GetType();
 
@@ -371,11 +387,12 @@ namespace NetOffice
             if (String.IsNullOrEmpty(progId))
                 throw new ArgumentNullException("progId");
 
+            Factory = Core.Default;
+
             UnderlyingType = System.Type.GetTypeFromProgID(progId, true);
             object underlyingObject = Activator.CreateInstance(UnderlyingType);
             _proxyShare = Factory.CreateNewProxyShare(this, underlyingObject);
-
-            Factory = Core.Default;     
+            
             Factory.AddObjectToList(this);
             _listChildObjects = new List<ICOMObject>();
 
@@ -414,7 +431,7 @@ namespace NetOffice
                 return _selfDynamicMemberNames;
             }
         }
-        
+
         #endregion
 
         #region Methods
@@ -1052,10 +1069,10 @@ namespace NetOffice
                         return;
 
                     // in case object export events and 
-                    // disposeEventBinding == true we dont remove the object from parents child list
+                    // disposeEventBinding == false we dont remove the object from parents child list
                     bool removeFromParent = true;
 
-                    // set disposed flag
+                    // set disposing flag
                     _isCurrentlyDisposing = true;
 
                     // in case of object implements also event binding we dispose them
@@ -1086,21 +1103,24 @@ namespace NetOffice
                         ParentObject.RemoveChildObject(this);
                         ParentObject = null;
                     }
+                    
+                    if (true == removeFromParent)
+                    {
+                        // call quit automatically if wanted
+                        if (Settings.EnableAutomaticQuit && HasQuitMethod())
+                            new Callers.QuitCaller().TryCall(Settings, Invoker, this);
 
-                    // call quit automatically if wanted
-                    //CheckEntities();
-                    if (Settings.EnableAutomaticQuit && HasQuitMethod())
-                        new Callers.QuitCaller().TryCall(Settings, Invoker, this);
+                        // release proxy
+                        ReleaseCOMProxy(ownerPath);
 
+                        // clear supportList reference
+                        _listSupportedEntities = null;
 
-                    // release proxy
-                    ReleaseCOMProxy(ownerPath);
-
-                    // clear supportList reference
-                    _listSupportedEntities = null;
-
-                    _isDisposed = true;
-                    _isCurrentlyDisposing = false;
+                        _isDisposed = true;
+                        _isCurrentlyDisposing = false;
+                    }
+                    else
+                        _isCurrentlyDisposing = false;
                 }
             }
             catch (Exception exception)
@@ -1207,8 +1227,7 @@ namespace NetOffice
                 lock (_disposeChildLock)
                 {
                     foreach (ICOMObject itemObject in _listChildObjects.ToArray())
-                    {
-                        COMObjectFaults.RemoveParent(itemObject);
+                    {                      
                         itemObject.Dispose(disposeEventBinding);
                     }
                     _listChildObjects.Clear();
@@ -1312,11 +1331,6 @@ namespace NetOffice
         {
             if (null == share)
                 throw new ArgumentNullException("share");
-            if (null != _proxyShare)
-            {
-                _proxyShare.Release();
-                _proxyShare = null;
-            }
             _proxyShare = share;
             _proxyShare.Acquire();
         }
@@ -1330,11 +1344,14 @@ namespace NetOffice
         /// </summary>
         /// <returns>a new object that is a copy of this instance</returns>
         /// <exception cref="CloneException">An unexpected error occured. See inner exception(s) for details.</exception>
-        public object Clone()
+        public virtual object Clone()
         {
             try
             {
-                return Activator.CreateInstance(InstanceType, new object[] { Factory, ParentObject, _proxyShare });
+                ICOMObject clone = Activator.CreateInstance(InstanceType, new object[] { Factory, ParentObject, UnderlyingObject }) as ICOMObject;
+                ICOMProxyShareProvider shareProvider = clone as ICOMProxyShareProvider;
+                shareProvider.SetProxyShare(_proxyShare);
+                return clone;
             }
             catch (Exception exception)
             {
@@ -1443,7 +1460,7 @@ namespace NetOffice
             else
             {
                 string className = TypeDescriptor.GetClassName(UnderlyingObject);
-                IFactoryInfo factoryInfo = Factory.GetInstanceFactoryInfo(UnderlyingObject, false);
+                IFactoryInfo factoryInfo = Factory.GetInstanceFactoryInfo(this, UnderlyingObject, false);
                 if (null != factoryInfo && factoryInfo.Contains(binder.ReturnType))
                 {
                     string fullClassName = factoryInfo.AssemblyNamespace + "." + className;
@@ -1559,6 +1576,7 @@ namespace NetOffice
         /// <returns> true if the operation is successful; otherwise, false.</returns>
         public override bool TrySetMember(SetMemberBinder binder, object value)
         {
+
             InvokePropertySet(binder.Name, new object[] { value });
             return true;
         }

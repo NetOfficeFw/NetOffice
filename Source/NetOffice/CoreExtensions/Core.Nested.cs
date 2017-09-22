@@ -139,15 +139,62 @@ namespace NetOffice
             }
 
             /// <summary>
-            /// DisposeChildInstance is called for the instance after event triger
+            /// The instance candidate to replace.
+            /// DisposeChildInstances is called for the instance after event triger
             /// </summary>
             public ICOMObject Instance { get; private set; }
 
             /// <summary>
-            /// Type muste inherit from originInstance class type and make COMObject public .ctors available
+            /// Type muste inherit from origin instance class type and make COMObject public .ctors available
             /// </summary>
             public Type Replace { get; set; }
         }
+
+        /// <summary>
+        /// Arguments in Resolve Event
+        /// </summary>
+        public class ResolveEventArgs
+        {
+            /// <summary>
+            /// Creates an instance of the class
+            /// </summary>
+            /// <param name="caller">calling instance</param>
+            /// <param name="fullClassName">target NetOffice class</param>
+            /// <param name="comProxy">native proxy type</param>
+            public ResolveEventArgs(ICOMObject caller, string fullClassName, Type comProxy)
+            {
+                Caller = caller;
+                FullClassName = fullClassName;
+                ComProxy = ComProxy;
+            }
+
+            /// <summary>
+            /// Calling instance or null(Nothing in Visual Basic)
+            /// </summary>
+            public ICOMObject Caller { get; private set; }
+
+            /// <summary>
+            /// Target NetOffice class as full qualified name
+            /// </summary>
+            public string FullClassName { get; private set; }
+
+            /// <summary>
+            /// Native Proxy Type
+            /// </summary>
+            public Type ComProxy { get; private set; }
+
+            /// <summary>
+            /// Wrapper class to create an instance from 
+            /// </summary>
+            public Type Result { get; set; }
+        }
+
+        /// <summary>
+        /// Resolve event handler
+        /// </summary>
+        /// <param name="sender">Core sender instance</param>
+        /// <param name="args">args as provided</param>
+        public delegate void ResolveEventHandler(Core sender, ResolveEventArgs args);
 
         /// <summary>
         /// OnCreateCOMDynamic event handler
@@ -203,7 +250,7 @@ namespace NetOffice
         /// </summary>
         /// <param name="sender">sender instance</param>
         public delegate void ProxyClearHandler(Core sender);
-
+        
         #endregion
     }
 }

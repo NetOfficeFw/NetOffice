@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel;
 using System.Runtime.InteropServices;
 
 namespace NetOffice.Filtering
@@ -7,6 +8,7 @@ namespace NetOffice.Filtering
     /// An IMessageFilter Implementation
     /// Learn more about: http://netoffice.codeplex.com/wikipage?title=Settings.MessageFilter_EN
     /// </summary>
+    [TypeConverter(typeof(ExpandableObjectConverter))]
     public class RetryMessageFilter : IMessageFilter
     {
         #region Fields / Imports
@@ -23,6 +25,7 @@ namespace NetOffice.Filtering
         /// <summary>
         /// Get or set the message filter is enabled
         /// </summary>
+        [Description("Get or set the message filter is enabled"), DefaultValue(false), Category("RetryMessageFilter")]
         public bool Enabled
         {
             get
@@ -41,11 +44,13 @@ namespace NetOffice.Filtering
         /// <summary>
         /// Get or set retry options
         /// </summary>
+        [Description("Get or set retry options"), DefaultValue(typeof(RetryMessageFilterMode), "Immediately"), Category("RetryMessageFilter")]
         public RetryMessageFilterMode RetryMode { get; set; }
 
         /// <summary>
         /// Get or set log options
         /// </summary>
+        [Description("Get or set log options"), DefaultValue(typeof(RetryMessageFilterLogMode), "None"), Category("RetryMessageFilter")]
         public RetryMessageFilterLogMode LogMode { get; set; }
 
         #endregion

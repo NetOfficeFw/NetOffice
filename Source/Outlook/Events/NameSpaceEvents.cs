@@ -17,7 +17,9 @@ namespace NetOffice.OutlookApi.Events
 	public interface NameSpaceEvents
 	{
 		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(61445)]
+        [SinkArgument("pages", typeof(OutlookApi.PropertyPages))]
+        [SinkArgument("newFolder", typeof(OutlookApi.MAPIFolder))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(61445)]
 		void OptionsPagesAdd([In, MarshalAs(UnmanagedType.IDispatch)] object pages, [In, MarshalAs(UnmanagedType.IDispatch)] object folder);
 
 		[SupportByVersion("Outlook", 12,14,15,16)]
@@ -49,8 +51,8 @@ namespace NetOffice.OutlookApi.Events
 		#endregion
 
 		#region NameSpaceEvents
-		
-		public void OptionsPagesAdd([In, MarshalAs(UnmanagedType.IDispatch)] object pages, [In, MarshalAs(UnmanagedType.IDispatch)] object folder)
+
+        public void OptionsPagesAdd([In, MarshalAs(UnmanagedType.IDispatch)] object pages, [In, MarshalAs(UnmanagedType.IDispatch)] object folder)
 		{
             if (!Validate("OptionsPagesAdd"))
             {
@@ -59,8 +61,9 @@ namespace NetOffice.OutlookApi.Events
             }
 
 			NetOffice.OutlookApi.PropertyPages newPages = Factory.CreateKnownObjectFromComProxy<NetOffice.OutlookApi.PropertyPages>(EventClass, pages, NetOffice.OutlookApi.PropertyPages.LateBindingApiWrapperType);
-			NetOffice.OutlookApi.MAPIFolder newFolder = Factory.CreateKnownObjectFromComProxy<NetOffice.OutlookApi.MAPIFolder>(EventClass, folder, NetOffice.OutlookApi.MAPIFolder.LateBindingApiWrapperType);
-			object[] paramsArray = new object[2];
+            NetOffice.OutlookApi.MAPIFolder newFolder = Factory.CreateEventArgumentObjectFromComProxy(EventClass, folder) as NetOffice.OutlookApi.MAPIFolder;
+
+            object[] paramsArray = new object[2];
 			paramsArray[0] = newPages;
 			paramsArray[1] = newFolder;
 			EventBinding.RaiseCustomEvent("OptionsPagesAdd", ref paramsArray);

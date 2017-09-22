@@ -538,6 +538,8 @@ namespace NetOffice.OfficeApi.Tools.Contribution
                         TreeNode targetNode = null;
                         foreach (TreeNode item in node.Nodes)
                         {
+                            if (null == item.Tag)
+                                continue;
                             int itemHashCode = (int)item.Tag;
                             if (itemHashCode == objectHashCode)
                             {

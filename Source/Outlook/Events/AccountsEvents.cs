@@ -17,7 +17,8 @@ namespace NetOffice.OutlookApi.Events
 	public interface AccountsEvents
 	{
 		[SupportByVersion("Outlook", 14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(64620)]
+        [SinkArgument("account", typeof(OutlookApi.Account))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(64620)]
 		void AutoDiscoverComplete([In, MarshalAs(UnmanagedType.IDispatch)] object account);
 	}
 

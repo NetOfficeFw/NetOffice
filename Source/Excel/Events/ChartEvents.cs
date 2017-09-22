@@ -29,19 +29,32 @@ namespace NetOffice.ExcelApi.Events
 		void Resize();
 
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1531)]
+        [SinkArgument("button", SinkArgumentType.Int32)]
+        [SinkArgument("shift", SinkArgumentType.Int32)]
+        [SinkArgument("x", SinkArgumentType.Int32)]
+        [SinkArgument("y", SinkArgumentType.Int32)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1531)]
 		void MouseDown([In] object button, [In] object shift, [In] object x, [In] object y);
 
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1532)]
+        [SinkArgument("button", SinkArgumentType.Int32)]
+        [SinkArgument("shift", SinkArgumentType.Int32)]
+        [SinkArgument("x", SinkArgumentType.Int32)]
+        [SinkArgument("y", SinkArgumentType.Int32)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1532)]
 		void MouseUp([In] object button, [In] object shift, [In] object x, [In] object y);
 
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1533)]
+        [SinkArgument("button", SinkArgumentType.Int32)]
+        [SinkArgument("shift", SinkArgumentType.Int32)]
+        [SinkArgument("x", SinkArgumentType.Int32)]
+        [SinkArgument("y", SinkArgumentType.Int32)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1533)]
 		void MouseMove([In] object button, [In] object shift, [In] object x, [In] object y);
 
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1534)]
+        [SinkArgument("cancel", SinkArgumentType.Bool)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1534)]
 		void BeforeRightClick([In] [Out] ref object cancel);
 
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
@@ -53,15 +66,24 @@ namespace NetOffice.ExcelApi.Events
 		void DragOver();
 
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1537)]
+        [SinkArgument("elementID", SinkArgumentType.Int32)]
+        [SinkArgument("arg1", SinkArgumentType.Int32)]
+        [SinkArgument("arg2", SinkArgumentType.Int32)]
+        [SinkArgument("cancel", SinkArgumentType.Bool)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1537)]
 		void BeforeDoubleClick([In] object elementID, [In] object arg1, [In] object arg2, [In] [Out] ref object cancel);
 
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(235)]
+        [SinkArgument("elementID", SinkArgumentType.Int32)]
+        [SinkArgument("arg1", SinkArgumentType.Int32)]
+        [SinkArgument("arg2", SinkArgumentType.Int32)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(235)]
 		void Select([In] object elementID, [In] object arg1, [In] object arg2);
 
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1538)]
+        [SinkArgument("seriesIndex", SinkArgumentType.Int32)]
+        [SinkArgument("pointIndex", SinkArgumentType.Int32)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1538)]
 		void SeriesChange([In] object seriesIndex, [In] object pointIndex);
 
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
@@ -135,10 +157,10 @@ namespace NetOffice.ExcelApi.Events
                 return;
             }
             
-			Int32 newButton = Convert.ToInt32(button);
-			Int32 newShift = Convert.ToInt32(shift);
-			Int32 newx = Convert.ToInt32(x);
-			Int32 newy = Convert.ToInt32(y);
+			Int32 newButton = ToInt32(button);
+			Int32 newShift = ToInt32(shift);
+			Int32 newx = ToInt32(x);
+			Int32 newy = ToInt32(y);
 			object[] paramsArray = new object[4];
 			paramsArray[0] = newButton;
 			paramsArray[1] = newShift;
@@ -155,10 +177,10 @@ namespace NetOffice.ExcelApi.Events
                 return;
             }
 
-			Int32 newButton = Convert.ToInt32(button);
-			Int32 newShift = Convert.ToInt32(shift);
-			Int32 newx = Convert.ToInt32(x);
-			Int32 newy = Convert.ToInt32(y);
+			Int32 newButton = ToInt32(button);
+			Int32 newShift = ToInt32(shift);
+			Int32 newx = ToInt32(x);
+			Int32 newy = ToInt32(y);
 			object[] paramsArray = new object[4];
 			paramsArray[0] = newButton;
 			paramsArray[1] = newShift;
@@ -175,10 +197,10 @@ namespace NetOffice.ExcelApi.Events
                 return;
             }
 
-			Int32 newButton = Convert.ToInt32(button);
-			Int32 newShift = Convert.ToInt32(shift);
-			Int32 newx = Convert.ToInt32(x);
-			Int32 newy = Convert.ToInt32(y);
+			Int32 newButton = ToInt32(button);
+			Int32 newShift = ToInt32(shift);
+			Int32 newx = ToInt32(x);
+			Int32 newy = ToInt32(y);
 			object[] paramsArray = new object[4];
 			paramsArray[0] = newButton;
 			paramsArray[1] = newShift;
@@ -232,9 +254,9 @@ namespace NetOffice.ExcelApi.Events
                 return;
             }
 
-			Int32 newElementID = Convert.ToInt32(elementID);
-			Int32 newArg1 = Convert.ToInt32(arg1);
-			Int32 newArg2 = Convert.ToInt32(arg2);
+			Int32 newElementID = ToInt32(elementID);
+			Int32 newArg1 = ToInt32(arg1);
+			Int32 newArg2 = ToInt32(arg2);
 			object[] paramsArray = new object[4];
 			paramsArray[0] = newElementID;
 			paramsArray[1] = newArg1;
@@ -253,9 +275,9 @@ namespace NetOffice.ExcelApi.Events
                 return;
             }
 
-			Int32 newElementID = Convert.ToInt32(elementID);
-			Int32 newArg1 = Convert.ToInt32(arg1);
-			Int32 newArg2 = Convert.ToInt32(arg2);
+			Int32 newElementID = ToInt32(elementID);
+			Int32 newArg1 = ToInt32(arg1);
+			Int32 newArg2 = ToInt32(arg2);
 			object[] paramsArray = new object[3];
 			paramsArray[0] = newElementID;
 			paramsArray[1] = newArg1;
@@ -271,8 +293,8 @@ namespace NetOffice.ExcelApi.Events
                 return;
             }
 
-			Int32 newSeriesIndex = Convert.ToInt32(seriesIndex);
-			Int32 newPointIndex = Convert.ToInt32(pointIndex);
+			Int32 newSeriesIndex = ToInt32(seriesIndex);
+			Int32 newPointIndex = ToInt32(pointIndex);
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newSeriesIndex;
 			paramsArray[1] = newPointIndex;

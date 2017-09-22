@@ -2835,7 +2835,7 @@ namespace NetOffice.VisioApi
         /// </summary>
         /// <returns>A new Application that is a copy of this instance</returns>
         /// <exception cref="CloneException">An unexpected error occured. See inner exception(s) for details.</exception>
-        public new Application Clone()
+        public new virtual Application Clone()
         {
             return base.Clone() as Application;
         }
@@ -2845,4 +2845,3 @@ namespace NetOffice.VisioApi
         #pragma warning restore
     }
 }
-

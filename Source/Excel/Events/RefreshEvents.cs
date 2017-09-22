@@ -17,11 +17,13 @@ namespace NetOffice.ExcelApi.Events
 	public interface RefreshEvents
 	{
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1596)]
+        [SinkArgument("cancel", SinkArgumentType.Bool)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1596)]
 		void BeforeRefresh([In] [Out] ref object cancel);
 
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1597)]
+        [SinkArgument("success", SinkArgumentType.Bool)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1597)]
 		void AfterRefresh([In] object success);
 	}
 
@@ -73,7 +75,7 @@ namespace NetOffice.ExcelApi.Events
                 return;
             }
 
-			bool newSuccess = Convert.ToBoolean(success);
+			bool newSuccess = ToBoolean(success);
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newSuccess;
 			EventBinding.RaiseCustomEvent("AfterRefresh", ref paramsArray);

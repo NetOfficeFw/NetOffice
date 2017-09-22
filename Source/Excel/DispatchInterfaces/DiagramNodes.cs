@@ -13,7 +13,8 @@ namespace NetOffice.ExcelApi
 	/// </summary>
 	[SupportByVersion("Excel", 10,11,12,14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Method, "Item")]
-	public class DiagramNodes : NetOffice.OfficeApi._IMsoDispObj, IEnumerable<NetOffice.ExcelApi.DiagramNode>
+    [Duplicate("NetOffice.OfficeApi.DiagramNodes")]
+    public class DiagramNodes : NetOffice.OfficeApi._IMsoDispObj, IEnumerable<NetOffice.ExcelApi.DiagramNode>
 	{
 		#pragma warning disable
 

@@ -17,11 +17,16 @@ namespace NetOffice.OutlookApi.Events
 	public interface MAPIFolderEvents_12
 	{
 		[SupportByVersion("Outlook", 12,14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(64424)]
+        [SinkArgument("moveTo", typeof(OutlookApi.MAPIFolder))]
+        [SinkArgument("cancel", SinkArgumentType.Bool)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(64424)]
 		void BeforeFolderMove([In, MarshalAs(UnmanagedType.IDispatch)] object moveTo, [In] [Out] ref object cancel);
 
 		[SupportByVersion("Outlook", 12,14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(64425)]
+        [SinkArgument("item", SinkArgumentType.UnknownProxy)]
+        [SinkArgument("moveTo", typeof(OutlookApi.MAPIFolder))]
+        [SinkArgument("cancel", SinkArgumentType.Bool)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(64425)]
 		void BeforeItemMove([In, MarshalAs(UnmanagedType.IDispatch)] object item, [In, MarshalAs(UnmanagedType.IDispatch)] object moveTo, [In] [Out] ref object cancel);
 	}
 
@@ -58,8 +63,8 @@ namespace NetOffice.OutlookApi.Events
                 return;
             }
 
-			NetOffice.OutlookApi.MAPIFolder newMoveTo = Factory.CreateKnownObjectFromComProxy<NetOffice.OutlookApi.MAPIFolder>(EventClass, moveTo, NetOffice.OutlookApi.MAPIFolder.LateBindingApiWrapperType);
-			object[] paramsArray = new object[2];
+            NetOffice.OutlookApi.MAPIFolder newMoveTo = Factory.CreateEventArgumentObjectFromComProxy(EventClass, moveTo) as NetOffice.OutlookApi.MAPIFolder;
+            object[] paramsArray = new object[2];
 			paramsArray[0] = newMoveTo;
 			paramsArray.SetValue(cancel, 1);
 			EventBinding.RaiseCustomEvent("BeforeFolderMove", ref paramsArray);
@@ -76,7 +81,7 @@ namespace NetOffice.OutlookApi.Events
             }
 
 			object newItem = Factory.CreateEventArgumentObjectFromComProxy(EventClass, item) as object;
-            NetOffice.OutlookApi.MAPIFolder newMoveTo = Factory.CreateKnownObjectFromComProxy<NetOffice.OutlookApi.MAPIFolder>(EventClass, moveTo, NetOffice.OutlookApi.MAPIFolder.LateBindingApiWrapperType);
+            NetOffice.OutlookApi.MAPIFolder newMoveTo = Factory.CreateEventArgumentObjectFromComProxy(EventClass, moveTo) as NetOffice.OutlookApi.MAPIFolder;
             object[] paramsArray = new object[3];
 			paramsArray[0] = newItem;
 			paramsArray[1] = newMoveTo;

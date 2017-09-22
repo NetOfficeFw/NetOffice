@@ -17,11 +17,13 @@ namespace NetOffice.OutlookApi.Events
 	public interface _ViewsEvents
 	{
 		[SupportByVersion("Outlook", 10,11,12,14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(400)]
+        [SinkArgument("view", typeof(OutlookApi.View))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(400)]
 		void ViewAdd([In, MarshalAs(UnmanagedType.IDispatch)] object view);
 
 		[SupportByVersion("Outlook", 10,11,12,14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(64071)]
+        [SinkArgument("view", typeof(OutlookApi.View))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(64071)]
 		void ViewRemove([In, MarshalAs(UnmanagedType.IDispatch)] object view);
 	}
 

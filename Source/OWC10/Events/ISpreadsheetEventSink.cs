@@ -17,19 +17,31 @@ namespace NetOffice.OWC10Api.Events
 	public interface ISpreadsheetEventSink
 	{
 		[SupportByVersion("OWC10", 1)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1011)]
+        [SinkArgument("x", SinkArgumentType.Int32)]
+        [SinkArgument("y", SinkArgumentType.Int32)]
+        [SinkArgument("menu", typeof(OWC10Api.ByRef))]
+        [SinkArgument("cancel", typeof(OWC10Api.ByRef))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1011)]
 		void BeforeContextMenu([In] object x, [In] object y, [In, MarshalAs(UnmanagedType.IDispatch)] object menu, [In, MarshalAs(UnmanagedType.IDispatch)] object cancel);
 
 		[SupportByVersion("OWC10", 1)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1006)]
+        [SinkArgument("keyCode", SinkArgumentType.Int32)]
+        [SinkArgument("shift", SinkArgumentType.Int32)]
+        [SinkArgument("cancel", typeof(OWC10Api.ByRef))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1006)]
 		void BeforeKeyDown([In] object keyCode, [In] object shift, [In, MarshalAs(UnmanagedType.IDispatch)] object cancel);
 
 		[SupportByVersion("OWC10", 1)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1007)]
+        [SinkArgument("keyAscii", SinkArgumentType.Int32)]
+        [SinkArgument("cancel", typeof(OWC10Api.ByRef))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1007)]
 		void BeforeKeyPress([In] object keyAscii, [In, MarshalAs(UnmanagedType.IDispatch)] object cancel);
 
 		[SupportByVersion("OWC10", 1)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1005)]
+        [SinkArgument("keyCode", SinkArgumentType.Int32)]
+        [SinkArgument("shift", SinkArgumentType.Int32)]
+        [SinkArgument("cancel", typeof(OWC10Api.ByRef))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1005)]
 		void BeforeKeyUp([In] object keyCode, [In] object shift, [In, MarshalAs(UnmanagedType.IDispatch)] object cancel);
 
 		[SupportByVersion("OWC10", 1)]
@@ -37,23 +49,28 @@ namespace NetOffice.OWC10Api.Events
 		void Click();
 
 		[SupportByVersion("OWC10", 1)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1000)]
+        [SinkArgument("enabled", typeof(OWC10Api.ByRef))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1000)]
 		void CommandEnabled([In] object command, [In, MarshalAs(UnmanagedType.IDispatch)] object enabled);
 
 		[SupportByVersion("OWC10", 1)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1001)]
+        [SinkArgument("_checked", typeof(OWC10Api.ByRef))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1001)]
 		void CommandChecked([In] object command, [In, MarshalAs(UnmanagedType.IDispatch)] object _checked);
 
 		[SupportByVersion("OWC10", 1)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1002)]
+        [SinkArgument("caption", typeof(OWC10Api.ByRef))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1002)]
 		void CommandTipText([In] object command, [In, MarshalAs(UnmanagedType.IDispatch)] object caption);
 
 		[SupportByVersion("OWC10", 1)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1003)]
+        [SinkArgument("cancel", typeof(OWC10Api.ByRef))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1003)]
 		void CommandBeforeExecute([In] object command, [In, MarshalAs(UnmanagedType.IDispatch)] object cancel);
 
 		[SupportByVersion("OWC10", 1)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1004)]
+        [SinkArgument("succeeded", typeof(OWC10Api.ByRef))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1004)]
 		void CommandExecute([In] object command, [In] object succeeded);
 
 		[SupportByVersion("OWC10", 1)]
@@ -61,7 +78,11 @@ namespace NetOffice.OWC10Api.Events
 		void DblClick();
 
 		[SupportByVersion("OWC10", 1)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1504)]
+        [SinkArgument("accept", SinkArgumentType.Bool)]
+        [SinkArgument("finalValue", typeof(OWC10Api.ByRef))]
+        [SinkArgument("cancel", typeof(OWC10Api.ByRef))]
+        [SinkArgument("errorDescription", typeof(OWC10Api.ByRef))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1504)]
 		void EndEdit([In] object accept, [In, MarshalAs(UnmanagedType.IDispatch)] object finalValue, [In, MarshalAs(UnmanagedType.IDispatch)] object cancel, [In, MarshalAs(UnmanagedType.IDispatch)] object errorDescription);
 
 		[SupportByVersion("OWC10", 1)]
@@ -69,15 +90,20 @@ namespace NetOffice.OWC10Api.Events
 		void Initialize();
 
 		[SupportByVersion("OWC10", 1)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1009)]
+        [SinkArgument("keyCode", SinkArgumentType.Int32)]
+        [SinkArgument("shift", SinkArgumentType.Int32)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1009)]
 		void KeyDown([In] object keyCode, [In] object shift);
 
-		[SupportByVersion("OWC10", 1)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1010)]
+		[SupportByVersion("OWC10", 1)]  
+        [SinkArgument("keyAscii", SinkArgumentType.Int32)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1010)]
 		void KeyPress([In] object keyAscii);
 
 		[SupportByVersion("OWC10", 1)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1008)]
+        [SinkArgument("keyCode", SinkArgumentType.Int32)]
+        [SinkArgument("shift", SinkArgumentType.Int32)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1008)]
 		void KeyUp([In] object keyCode, [In] object shift);
 
 		[SupportByVersion("OWC10", 1)]
@@ -85,59 +111,89 @@ namespace NetOffice.OWC10Api.Events
 		void LoadCompleted();
 
 		[SupportByVersion("OWC10", 1)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1505)]
+        [SinkArgument("button", SinkArgumentType.Int32)]
+        [SinkArgument("shift", SinkArgumentType.Int32)]
+        [SinkArgument("x", SinkArgumentType.Int32)]
+        [SinkArgument("y", SinkArgumentType.Int32)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1505)]
 		void MouseDown([In] object button, [In] object shift, [In] object x, [In] object y);
 
 		[SupportByVersion("OWC10", 1)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1506)]
+        [SinkArgument("button", SinkArgumentType.Int32)]
+        [SinkArgument("shift", SinkArgumentType.Int32)]
+        [SinkArgument("target", typeof(OWC10Api._Range))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1506)]
 		void MouseOut([In] object button, [In] object shift, [In, MarshalAs(UnmanagedType.IDispatch)] object target);
 
 		[SupportByVersion("OWC10", 1)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1507)]
+        [SinkArgument("button", SinkArgumentType.Int32)]
+        [SinkArgument("shift", SinkArgumentType.Int32)]
+        [SinkArgument("target", typeof(OWC10Api._Range))] 
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1507)]
 		void MouseOver([In] object button, [In] object shift, [In, MarshalAs(UnmanagedType.IDispatch)] object target);
 
 		[SupportByVersion("OWC10", 1)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1508)]
+        [SinkArgument("button", SinkArgumentType.Int32)]
+        [SinkArgument("shift", SinkArgumentType.Int32)]
+        [SinkArgument("x", SinkArgumentType.Int32)]
+        [SinkArgument("y", SinkArgumentType.Int32)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1508)]
 		void MouseUp([In] object button, [In] object shift, [In] object x, [In] object y);
 
 		[SupportByVersion("OWC10", 1)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1509)]
+        [SinkArgument("page", SinkArgumentType.Int32)]
+        [SinkArgument("count", SinkArgumentType.Bool)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1509)]
 		void MouseWheel([In] object page, [In] object count);
 
-		[SupportByVersion("OWC10", 1)]
+        [SinkArgument("target", typeof(OWC10Api._Range))]
+        [SupportByVersion("OWC10", 1)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1511)]
 		void SelectionChange();
 
 		[SupportByVersion("OWC10", 1)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1512)]
+        [SinkArgument("range", typeof(OWC10Api._Range))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1512)]
 		void SelectionChanging([In, MarshalAs(UnmanagedType.IDispatch)] object range);
 
 		[SupportByVersion("OWC10", 1)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1513)]
+        [SinkArgument("sh", typeof(OWC10Api.Worksheet))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1513)]
 		void SheetActivate([In, MarshalAs(UnmanagedType.IDispatch)] object sh);
 
 		[SupportByVersion("OWC10", 1)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1516)]
+        [SinkArgument("sh", typeof(OWC10Api.Worksheet))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1516)]
 		void SheetCalculate([In, MarshalAs(UnmanagedType.IDispatch)] object sh);
 
 		[SupportByVersion("OWC10", 1)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1517)]
+        [SinkArgument("sh", typeof(OWC10Api.Worksheet))]
+        [SinkArgument("target", typeof(OWC10Api._Range))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1517)]
 		void SheetChange([In, MarshalAs(UnmanagedType.IDispatch)] object sh, [In, MarshalAs(UnmanagedType.IDispatch)] object target);
 
 		[SupportByVersion("OWC10", 1)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1518)]
+        [SinkArgument("sh", typeof(OWC10Api.Worksheet))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1518)]
 		void SheetDeactivate([In, MarshalAs(UnmanagedType.IDispatch)] object sh);
 
 		[SupportByVersion("OWC10", 1)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1519)]
+        [SinkArgument("sh", typeof(OWC10Api.Worksheet))]
+        [SinkArgument("target", typeof(OWC10Api._Range))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1519)]
 		void SheetFollowHyperlink([In, MarshalAs(UnmanagedType.IDispatch)] object sh, [In, MarshalAs(UnmanagedType.IDispatch)] object target);
 
 		[SupportByVersion("OWC10", 1)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1520)]
+        [SinkArgument("selection", SinkArgumentType.UnknownProxy)]
+        [SinkArgument("initialValue", typeof(OWC10Api.ByRef))]
+        [SinkArgument("cancel", typeof(OWC10Api.ByRef))]
+        [SinkArgument("errorDescription", typeof(OWC10Api.ByRef))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1520)]
 		void StartEdit([In, MarshalAs(UnmanagedType.IDispatch)] object selection, [In, MarshalAs(UnmanagedType.IDispatch)] object initialValue, [In, MarshalAs(UnmanagedType.IDispatch)] object cancel, [In, MarshalAs(UnmanagedType.IDispatch)] object errorDescription);
 
 		[SupportByVersion("OWC10", 1)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1521)]
+        [SinkArgument("target", typeof(OWC10Api._Range))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1521)]
 		void ViewChange([In, MarshalAs(UnmanagedType.IDispatch)] object target);
 	}
 
@@ -174,8 +230,8 @@ namespace NetOffice.OWC10Api.Events
                 return;
             }
 
-            Int32 newx = Convert.ToInt32(x);
-            Int32 newy = Convert.ToInt32(y);
+            Int32 newx = ToInt32(x);
+            Int32 newy = ToInt32(y);
             NetOffice.OWC10Api.ByRef newMenu = Factory.CreateKnownObjectFromComProxy<NetOffice.OWC10Api.ByRef>(EventClass, menu, NetOffice.OWC10Api.ByRef.LateBindingApiWrapperType);
             NetOffice.OWC10Api.ByRef newCancel = Factory.CreateKnownObjectFromComProxy<NetOffice.OWC10Api.ByRef>(EventClass, cancel, NetOffice.OWC10Api.ByRef.LateBindingApiWrapperType);
             object[] paramsArray = new object[4];
@@ -194,8 +250,8 @@ namespace NetOffice.OWC10Api.Events
                 return;
             }
 
-            Int32 newKeyCode = Convert.ToInt32(keyCode);
-            Int32 newShift = Convert.ToInt32(shift);
+            Int32 newKeyCode = ToInt32(keyCode);
+            Int32 newShift = ToInt32(shift);
             NetOffice.OWC10Api.ByRef newCancel = Factory.CreateKnownObjectFromComProxy<NetOffice.OWC10Api.ByRef>(EventClass, cancel, NetOffice.OWC10Api.ByRef.LateBindingApiWrapperType);
             object[] paramsArray = new object[3];
             paramsArray[0] = newKeyCode;
@@ -212,8 +268,8 @@ namespace NetOffice.OWC10Api.Events
                 return;
             }
 
-            Int32 newKeyCode = Convert.ToInt32(keyCode);
-            Int32 newShift = Convert.ToInt32(shift);
+            Int32 newKeyCode = ToInt32(keyCode);
+            Int32 newShift = ToInt32(shift);
             NetOffice.OWC10Api.ByRef newCancel = Factory.CreateKnownObjectFromComProxy<NetOffice.OWC10Api.ByRef>(EventClass, cancel, NetOffice.OWC10Api.ByRef.LateBindingApiWrapperType);
             object[] paramsArray = new object[3];
             paramsArray[0] = newKeyCode;
@@ -230,7 +286,7 @@ namespace NetOffice.OWC10Api.Events
                 return;
             }
 
-            Int32 newKeyAscii = Convert.ToInt32(keyAscii);
+            Int32 newKeyAscii = ToInt32(keyAscii);
             NetOffice.OWC10Api.ByRef newCancel = Factory.CreateKnownObjectFromComProxy<NetOffice.OWC10Api.ByRef>(EventClass, cancel, NetOffice.OWC10Api.ByRef.LateBindingApiWrapperType);
             object[] paramsArray = new object[2];
             paramsArray[0] = newKeyAscii;
@@ -348,7 +404,7 @@ namespace NetOffice.OWC10Api.Events
                 return;
             }
 
-            bool newAccept = Convert.ToBoolean(accept);
+            bool newAccept = ToBoolean(accept);
             NetOffice.OWC10Api.ByRef newFinalValue = Factory.CreateKnownObjectFromComProxy<NetOffice.OWC10Api.ByRef>(EventClass, finalValue, NetOffice.OWC10Api.ByRef.LateBindingApiWrapperType);
             NetOffice.OWC10Api.ByRef newCancel = Factory.CreateKnownObjectFromComProxy<NetOffice.OWC10Api.ByRef>(EventClass, cancel, NetOffice.OWC10Api.ByRef.LateBindingApiWrapperType);
             NetOffice.OWC10Api.ByRef newErrorDescription = Factory.CreateKnownObjectFromComProxy<NetOffice.OWC10Api.ByRef>(EventClass, errorDescription, NetOffice.OWC10Api.ByRef.LateBindingApiWrapperType);
@@ -436,10 +492,10 @@ namespace NetOffice.OWC10Api.Events
                 return;
             }
 
-            Int32 newButton = Convert.ToInt32(button);
-            Int32 newShift = Convert.ToInt32(shift);
-            Int32 newx = Convert.ToInt32(x);
-            Int32 newy = Convert.ToInt32(y);
+            Int32 newButton = ToInt32(button);
+            Int32 newShift = ToInt32(shift);
+            Int32 newx = ToInt32(x);
+            Int32 newy = ToInt32(y);
             object[] paramsArray = new object[4];
             paramsArray[0] = newButton;
             paramsArray[1] = newShift;
@@ -456,10 +512,10 @@ namespace NetOffice.OWC10Api.Events
                 return;
             }
 
-            Int32 newButton = Convert.ToInt32(button);
-            Int32 newShift = Convert.ToInt32(shift);
-            Int32 newx = Convert.ToInt32(x);
-            Int32 newy = Convert.ToInt32(y);
+            Int32 newButton = ToInt32(button);
+            Int32 newShift = ToInt32(shift);
+            Int32 newx = ToInt32(x);
+            Int32 newy = ToInt32(y);
             object[] paramsArray = new object[4];
             paramsArray[0] = newButton;
             paramsArray[1] = newShift;
@@ -476,10 +532,10 @@ namespace NetOffice.OWC10Api.Events
                 return;
             }
 
-            Int32 newButton = Convert.ToInt32(button);
-            Int32 newShift = Convert.ToInt32(shift);
-            Int32 newx = Convert.ToInt32(x);
-            Int32 newy = Convert.ToInt32(y);
+            Int32 newButton = ToInt32(button);
+            Int32 newShift = ToInt32(shift);
+            Int32 newx = ToInt32(x);
+            Int32 newy = ToInt32(y);
             object[] paramsArray = new object[4];
             paramsArray[0] = newButton;
             paramsArray[1] = newShift;
@@ -496,9 +552,9 @@ namespace NetOffice.OWC10Api.Events
                 return;
             }
 
-            Int32 newButton = Convert.ToInt32(button);
-            Int32 newShift = Convert.ToInt32(shift);
-            NetOffice.OWC10Api._Range newTarget = Factory.CreateKnownObjectFromComProxy<NetOffice.OWC10Api._Range>(EventClass, target, NetOffice.OWC10Api._Range.LateBindingApiWrapperType);
+            Int32 newButton = ToInt32(button);
+            Int32 newShift = ToInt32(shift);
+            NetOffice.OWC10Api._Range newTarget = Factory.CreateEventArgumentObjectFromComProxy(EventClass, target) as NetOffice.OWC10Api._Range;
             object[] paramsArray = new object[3];
             paramsArray[0] = newButton;
             paramsArray[1] = newShift;
@@ -516,13 +572,14 @@ namespace NetOffice.OWC10Api.Events
 
             Int32 newButton = Convert.ToInt32(button);
             Int32 newShift = Convert.ToInt32(shift);
-            NetOffice.OWC10Api._Range newTarget = Factory.CreateKnownObjectFromComProxy<NetOffice.OWC10Api._Range>(EventClass, target, NetOffice.OWC10Api._Range.LateBindingApiWrapperType);
+            NetOffice.OWC10Api._Range newTarget = Factory.CreateEventArgumentObjectFromComProxy(EventClass, target) as NetOffice.OWC10Api._Range;
             object[] paramsArray = new object[3];
             paramsArray[0] = newButton;
             paramsArray[1] = newShift;
             paramsArray[2] = newTarget;
             EventBinding.RaiseCustomEvent("MouseOver", ref paramsArray);
         }
+
         public void MouseWheel([In] object page, [In] object count)
         {
             if (!Validate("MouseWheel"))
@@ -531,8 +588,8 @@ namespace NetOffice.OWC10Api.Events
                 return;
             }
 
-            bool newPage = Convert.ToBoolean(page);
-            Int32 newCount = Convert.ToInt32(count);
+            bool newPage = ToBoolean(page);
+            Int32 newCount = ToInt32(count);
             object[] paramsArray = new object[2];
             paramsArray[0] = newPage;
             paramsArray[1] = newCount;
@@ -550,7 +607,7 @@ namespace NetOffice.OWC10Api.Events
 			EventBinding.RaiseCustomEvent("SelectionChange", ref paramsArray);
 		}
 
-		public void SelectionChanging([In, MarshalAs(UnmanagedType.IDispatch)] object range)
+        public void SelectionChanging([In, MarshalAs(UnmanagedType.IDispatch)] object range)
         {
             if (!Validate("SelectionChanging"))
             {
@@ -558,13 +615,13 @@ namespace NetOffice.OWC10Api.Events
                 return;
             }
 
-			NetOffice.OWC10Api._Range newRange = Factory.CreateKnownObjectFromComProxy<NetOffice.OWC10Api._Range>(EventClass, range, NetOffice.OWC10Api._Range.LateBindingApiWrapperType);
-			object[] paramsArray = new object[1];
+            NetOffice.OWC10Api._Range newRange = Factory.CreateEventArgumentObjectFromComProxy(EventClass, range) as NetOffice.OWC10Api._Range;
+            object[] paramsArray = new object[1];
 			paramsArray[0] = newRange;
 			EventBinding.RaiseCustomEvent("SelectionChanging", ref paramsArray);
 		}
 
-		public void SheetActivate([In, MarshalAs(UnmanagedType.IDispatch)] object sh)
+        public void SheetActivate([In, MarshalAs(UnmanagedType.IDispatch)] object sh)
 		{
             if (!Validate("SheetActivate"))
             {
@@ -578,7 +635,7 @@ namespace NetOffice.OWC10Api.Events
 			EventBinding.RaiseCustomEvent("SheetActivate", ref paramsArray);
 		}
 
-		public void SheetCalculate([In, MarshalAs(UnmanagedType.IDispatch)] object sh)
+        public void SheetCalculate([In, MarshalAs(UnmanagedType.IDispatch)] object sh)
         {
             if (!Validate("SheetCalculate"))
             {
@@ -592,7 +649,7 @@ namespace NetOffice.OWC10Api.Events
 			EventBinding.RaiseCustomEvent("SheetCalculate", ref paramsArray);
 		}
 
-		public void SheetChange([In, MarshalAs(UnmanagedType.IDispatch)] object sh, [In, MarshalAs(UnmanagedType.IDispatch)] object target)
+        public void SheetChange([In, MarshalAs(UnmanagedType.IDispatch)] object sh, [In, MarshalAs(UnmanagedType.IDispatch)] object target)
         {
             if (!Validate("SheetChange"))
             {
@@ -601,14 +658,14 @@ namespace NetOffice.OWC10Api.Events
             }
 
             NetOffice.OWC10Api.Worksheet newSh = Factory.CreateKnownObjectFromComProxy<NetOffice.OWC10Api.Worksheet>(EventClass, sh, NetOffice.OWC10Api.Worksheet.LateBindingApiWrapperType);
-            NetOffice.OWC10Api._Range newTarget = Factory.CreateKnownObjectFromComProxy<NetOffice.OWC10Api._Range>(EventClass, target, NetOffice.OWC10Api._Range.LateBindingApiWrapperType);
+            NetOffice.OWC10Api._Range newTarget = Factory.CreateEventArgumentObjectFromComProxy(EventClass, target) as NetOffice.OWC10Api._Range;
             object[] paramsArray = new object[2];
 			paramsArray[0] = newSh;
 			paramsArray[1] = newTarget;
 			EventBinding.RaiseCustomEvent("SheetChange", ref paramsArray);
 		}
 
-		public void SheetDeactivate([In, MarshalAs(UnmanagedType.IDispatch)] object sh)
+        public void SheetDeactivate([In, MarshalAs(UnmanagedType.IDispatch)] object sh)
         {
             if (!Validate("SheetDeactivate"))
             {
@@ -622,7 +679,7 @@ namespace NetOffice.OWC10Api.Events
 			EventBinding.RaiseCustomEvent("SheetDeactivate", ref paramsArray);
 		}
 
-		public void SheetFollowHyperlink([In, MarshalAs(UnmanagedType.IDispatch)] object sh, [In, MarshalAs(UnmanagedType.IDispatch)] object target)
+        public void SheetFollowHyperlink([In, MarshalAs(UnmanagedType.IDispatch)] object sh, [In, MarshalAs(UnmanagedType.IDispatch)] object target)
         {
             if (!Validate("SheetFollowHyperlink"))
             {
@@ -631,14 +688,14 @@ namespace NetOffice.OWC10Api.Events
             }
 
             NetOffice.OWC10Api.Worksheet newSh = Factory.CreateKnownObjectFromComProxy<NetOffice.OWC10Api.Worksheet>(EventClass, sh, NetOffice.OWC10Api.Worksheet.LateBindingApiWrapperType);
-            NetOffice.OWC10Api._Range newTarget = Factory.CreateKnownObjectFromComProxy<NetOffice.OWC10Api._Range>(EventClass, target, NetOffice.OWC10Api._Range.LateBindingApiWrapperType);
+            NetOffice.OWC10Api._Range newTarget = Factory.CreateEventArgumentObjectFromComProxy(EventClass, target) as NetOffice.OWC10Api._Range;
             object[] paramsArray = new object[2];
 			paramsArray[0] = newSh;
 			paramsArray[1] = newTarget;
 			EventBinding.RaiseCustomEvent("SheetFollowHyperlink", ref paramsArray);
 		}
 
-		public void StartEdit([In, MarshalAs(UnmanagedType.IDispatch)] object selection, [In, MarshalAs(UnmanagedType.IDispatch)] object initialValue, [In, MarshalAs(UnmanagedType.IDispatch)] object cancel, [In, MarshalAs(UnmanagedType.IDispatch)] object errorDescription)
+        public void StartEdit([In, MarshalAs(UnmanagedType.IDispatch)] object selection, [In, MarshalAs(UnmanagedType.IDispatch)] object initialValue, [In, MarshalAs(UnmanagedType.IDispatch)] object cancel, [In, MarshalAs(UnmanagedType.IDispatch)] object errorDescription)
 		{
             if (!Validate("StartEdit"))
             {
@@ -658,7 +715,7 @@ namespace NetOffice.OWC10Api.Events
 			EventBinding.RaiseCustomEvent("StartEdit", ref paramsArray);
 		}
 
-		public void ViewChange([In, MarshalAs(UnmanagedType.IDispatch)] object target)
+        public void ViewChange([In, MarshalAs(UnmanagedType.IDispatch)] object target)
         {
             if (!Validate("ViewChange"))
             {
@@ -666,8 +723,8 @@ namespace NetOffice.OWC10Api.Events
                 return;
             }
 
-			NetOffice.OWC10Api._Range newTarget = Factory.CreateKnownObjectFromComProxy<NetOffice.OWC10Api._Range>(EventClass, target, NetOffice.OWC10Api._Range.LateBindingApiWrapperType);
-			object[] paramsArray = new object[1];
+			NetOffice.OWC10Api._Range newTarget = Factory.CreateEventArgumentObjectFromComProxy(EventClass, target) as NetOffice.OWC10Api._Range;
+            object[] paramsArray = new object[1];
 			paramsArray[0] = newTarget;
 			EventBinding.RaiseCustomEvent("ViewChange", ref paramsArray);
 		}

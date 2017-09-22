@@ -13,7 +13,8 @@ namespace NetOffice.OfficeApi
 	/// </summary>
 	[SupportByVersion("Office", 9,10,11,12,14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Method, "Item")]
-	public class ShapeNodes : _IMsoDispObj, IEnumerable<NetOffice.OfficeApi.ShapeNode>
+    [Duplicate("NetOffice.ExcelApi.ShapeNodes")]
+    public class ShapeNodes : _IMsoDispObj, IEnumerable<NetOffice.OfficeApi.ShapeNode>
 	{
 		#pragma warning disable
 

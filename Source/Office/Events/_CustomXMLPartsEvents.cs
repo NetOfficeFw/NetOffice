@@ -17,15 +17,18 @@ namespace NetOffice.OfficeApi.Events
 	public interface _CustomXMLPartsEvents
 	{
 		[SupportByVersion("Office", 12,14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1)]
+        [SinkArgument("newPart", typeof(OfficeApi.CustomXMLPart))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1)]
 		void PartAfterAdd([In, MarshalAs(UnmanagedType.IDispatch)] object newPart);
 
 		[SupportByVersion("Office", 12,14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2)]
+        [SinkArgument("oldPart", typeof(OfficeApi.CustomXMLPart))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2)]
 		void PartBeforeDelete([In, MarshalAs(UnmanagedType.IDispatch)] object oldPart);
 
 		[SupportByVersion("Office", 12,14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(3)]
+        [SinkArgument("part", typeof(OfficeApi.CustomXMLPart))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(3)]
 		void PartAfterLoad([In, MarshalAs(UnmanagedType.IDispatch)] object part);
 	}
 
@@ -53,8 +56,8 @@ namespace NetOffice.OfficeApi.Events
 		#endregion
 		
 		#region _CustomXMLPartsEvents
-		
-		public void PartAfterAdd([In, MarshalAs(UnmanagedType.IDispatch)] object newPart)
+
+        public void PartAfterAdd([In, MarshalAs(UnmanagedType.IDispatch)] object newPart)
         {
             if (!Validate("PartAfterAdd"))
             {
@@ -68,7 +71,7 @@ namespace NetOffice.OfficeApi.Events
 			EventBinding.RaiseCustomEvent("PartAfterAdd", ref paramsArray);
 		}
 
-		public void PartBeforeDelete([In, MarshalAs(UnmanagedType.IDispatch)] object oldPart)
+        public void PartBeforeDelete([In, MarshalAs(UnmanagedType.IDispatch)] object oldPart)
         {
             if (!Validate("PartBeforeDelete"))
             {
@@ -81,8 +84,8 @@ namespace NetOffice.OfficeApi.Events
 			paramsArray[0] = newOldPart;
 			EventBinding.RaiseCustomEvent("PartBeforeDelete", ref paramsArray);
 		}
-
-		public void PartAfterLoad([In, MarshalAs(UnmanagedType.IDispatch)] object part)
+        
+        public void PartAfterLoad([In, MarshalAs(UnmanagedType.IDispatch)] object part)
 		{
             if (!Validate("PartAfterLoad"))
             {

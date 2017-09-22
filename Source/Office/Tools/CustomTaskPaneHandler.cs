@@ -115,7 +115,8 @@ namespace NetOffice.OfficeApi.Tools
                         try
                         {
                             OfficeApi.Tools.ITaskPaneConnection<N> foo = pane as OfficeApi.Tools.ITaskPaneConnection<N>;
-                            foo.OnConnection(application as N, taskPane, argumentArray);
+                            if(null != foo)
+                                foo.OnConnection(application as N, taskPane, argumentArray);
                         }
                         catch (Exception exception)
                         {

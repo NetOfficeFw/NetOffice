@@ -17,7 +17,9 @@ namespace NetOffice.OutlookApi.Events
 	public interface ApplicationEvents
 	{
 		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(61442)]
+        [SinkArgument("item", SinkArgumentType.UnknownProxy)]
+        [SinkArgument("cancel", SinkArgumentType.Bool)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(61442)]
 		void ItemSend([In, MarshalAs(UnmanagedType.IDispatch)] object item, [In] [Out] ref object cancel);
 
 		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
@@ -25,11 +27,13 @@ namespace NetOffice.OutlookApi.Events
 		void NewMail();
 
 		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(61444)]
+        [SinkArgument("item", SinkArgumentType.UnknownProxy)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(61444)]
 		void Reminder([In, MarshalAs(UnmanagedType.IDispatch)] object item);
 
 		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(61445)]
+        [SinkArgument("pages", typeof(OutlookApi.PropertyPages))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(61445)]
 		void OptionsPagesAdd([In, MarshalAs(UnmanagedType.IDispatch)] object pages);
 
 		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]

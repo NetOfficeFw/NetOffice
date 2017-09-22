@@ -11,7 +11,8 @@ namespace NetOffice.OfficeApi
 	/// </summary>
 	[SupportByVersion("Office", 9,10,11,12,14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface)]
- 	public class LineFormat : _IMsoDispObj
+    [Duplicate("NetOffice.ExcelApi.LineFormat")]
+    public class LineFormat : _IMsoDispObj
 	{
 		#pragma warning disable
 

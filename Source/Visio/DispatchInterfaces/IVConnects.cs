@@ -13,7 +13,7 @@ namespace NetOffice.VisioApi
 	/// </summary>
 	[SupportByVersion("Visio", 11,12,14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface), BaseType, Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "Item")]
-	public class IVConnects : COMObject , IEnumerable<NetOffice.VisioApi.IVConnect>
+	public class IVConnects : COMObject, IEnumerable<NetOffice.VisioApi.IVConnect>
 	{
 		#pragma warning disable
 

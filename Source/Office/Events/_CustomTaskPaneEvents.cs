@@ -17,11 +17,13 @@ namespace NetOffice.OfficeApi.Events
 	public interface _CustomTaskPaneEvents
 	{
 		[SupportByVersion("Office", 12,14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1)]
+        [SinkArgument("customTaskPaneInst", typeof(NetOffice.OfficeApi._CustomTaskPane))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1)]
 		void VisibleStateChange([In, MarshalAs(UnmanagedType.IDispatch)] object customTaskPaneInst);
 
 		[SupportByVersion("Office", 12,14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2)]
+        [SinkArgument("customTaskPaneInst", typeof(NetOffice.OfficeApi._CustomTaskPane))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2)]
 		void DockPositionStateChange([In, MarshalAs(UnmanagedType.IDispatch)] object customTaskPaneInst);
 	}
 
@@ -58,7 +60,7 @@ namespace NetOffice.OfficeApi.Events
                 return;
             }
 
-			NetOffice.OfficeApi._CustomTaskPane newCustomTaskPaneInst = Factory.CreateKnownObjectFromComProxy<NetOffice.OfficeApi._CustomTaskPane>(EventClass, customTaskPaneInst, NetOffice.OfficeApi._CustomTaskPane.LateBindingApiWrapperType);
+            NetOffice.OfficeApi._CustomTaskPane newCustomTaskPaneInst = Factory.CreateEventArgumentObjectFromComProxy(EventClass, customTaskPaneInst) as NetOffice.OfficeApi._CustomTaskPane;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newCustomTaskPaneInst;
 			EventBinding.RaiseCustomEvent("VisibleStateChange", ref paramsArray);
@@ -72,7 +74,7 @@ namespace NetOffice.OfficeApi.Events
                 return;
             }
 
-            NetOffice.OfficeApi._CustomTaskPane newCustomTaskPaneInst = Factory.CreateKnownObjectFromComProxy<NetOffice.OfficeApi._CustomTaskPane>(EventClass, customTaskPaneInst, NetOffice.OfficeApi._CustomTaskPane.LateBindingApiWrapperType);
+            NetOffice.OfficeApi._CustomTaskPane newCustomTaskPaneInst = Factory.CreateEventArgumentObjectFromComProxy(EventClass, customTaskPaneInst) as NetOffice.OfficeApi._CustomTaskPane;
             object[] paramsArray = new object[1];
 			paramsArray[0] = newCustomTaskPaneInst;
             EventBinding.RaiseCustomEvent("DockPositionStateChange", ref paramsArray);

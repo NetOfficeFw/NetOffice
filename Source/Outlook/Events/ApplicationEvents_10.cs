@@ -17,7 +17,9 @@ namespace NetOffice.OutlookApi.Events
 	public interface ApplicationEvents_10
 	{
 		[SupportByVersion("Outlook", 10,11,12,14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(61442)]
+        [SinkArgument("item", SinkArgumentType.UnknownProxy)]
+        [SinkArgument("cancel", SinkArgumentType.Bool)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(61442)]
 		void ItemSend([In, MarshalAs(UnmanagedType.IDispatch)] object item, [In] [Out] ref object cancel);
 
 		[SupportByVersion("Outlook", 10,11,12,14,15,16)]
@@ -25,11 +27,13 @@ namespace NetOffice.OutlookApi.Events
 		void NewMail();
 
 		[SupportByVersion("Outlook", 10,11,12,14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(61444)]
+        [SinkArgument("item", SinkArgumentType.UnknownProxy)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(61444)]
 		void Reminder([In, MarshalAs(UnmanagedType.IDispatch)] object item);
 
 		[SupportByVersion("Outlook", 10,11,12,14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(61445)]
+        [SinkArgument("pages", typeof(OutlookApi.PropertyPages))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(61445)]
 		void OptionsPagesAdd([In, MarshalAs(UnmanagedType.IDispatch)] object pages);
 
 		[SupportByVersion("Outlook", 10,11,12,14,15,16)]
@@ -41,11 +45,13 @@ namespace NetOffice.OutlookApi.Events
 		void Quit();
 
 		[SupportByVersion("Outlook", 10,11,12,14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(64106)]
+        [SinkArgument("searchObject", typeof(OutlookApi.Search))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(64106)]
 		void AdvancedSearchComplete([In, MarshalAs(UnmanagedType.IDispatch)] object searchObject);
 
 		[SupportByVersion("Outlook", 10,11,12,14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(64107)]
+        [SinkArgument("searchObject", typeof(OutlookApi.Search))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(64107)]
 		void AdvancedSearchStopped([In, MarshalAs(UnmanagedType.IDispatch)] object searchObject);
 
 		[SupportByVersion("Outlook", 10,11,12,14,15,16)]

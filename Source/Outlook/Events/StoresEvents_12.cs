@@ -17,11 +17,14 @@ namespace NetOffice.OutlookApi.Events
 	public interface StoresEvents_12
 	{
 		[SupportByVersion("Outlook", 12,14,15,16)]
+        [SinkArgument("store", typeof(NetOffice.OutlookApi._Store))]
+        [SinkArgument("cancel", SinkArgumentType.Bool)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(64433)]
 		void BeforeStoreRemove([In, MarshalAs(UnmanagedType.IDispatch)] object store, [In] [Out] ref object cancel);
 
 		[SupportByVersion("Outlook", 12,14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(61441)]
+        [SinkArgument("store", typeof(NetOffice.OutlookApi._Store))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(61441)]
 		void StoreAdd([In, MarshalAs(UnmanagedType.IDispatch)] object store);
 	}
 
@@ -58,8 +61,8 @@ namespace NetOffice.OutlookApi.Events
                 return;
             }
 
-			NetOffice.OutlookApi._Store newStore = Factory.CreateKnownObjectFromComProxy<NetOffice.OutlookApi._Store>(EventClass, store, NetOffice.OutlookApi._Store.LateBindingApiWrapperType);
-			object[] paramsArray = new object[2];
+            NetOffice.OutlookApi._Store newStore = Factory.CreateEventArgumentObjectFromComProxy(EventClass, store) as NetOffice.OutlookApi._Store;
+            object[] paramsArray = new object[2];
 			paramsArray[0] = newStore;
 			paramsArray.SetValue(cancel, 1);
 			EventBinding.RaiseCustomEvent("BeforeStoreRemove", ref paramsArray);
@@ -75,7 +78,7 @@ namespace NetOffice.OutlookApi.Events
                 return;
             }
 
-            NetOffice.OutlookApi._Store newStore = Factory.CreateKnownObjectFromComProxy<NetOffice.OutlookApi._Store>(EventClass, store, NetOffice.OutlookApi._Store.LateBindingApiWrapperType);
+            NetOffice.OutlookApi._Store newStore = Factory.CreateEventArgumentObjectFromComProxy(EventClass, store) as NetOffice.OutlookApi._Store;
             object[] paramsArray = new object[1];
 			paramsArray[0] = newStore;
 			EventBinding.RaiseCustomEvent("StoreAdd", ref paramsArray);

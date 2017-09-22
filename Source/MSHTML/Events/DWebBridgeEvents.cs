@@ -17,7 +17,8 @@ namespace NetOffice.MSHTMLApi.Events
 	public interface DWebBridgeEvents
 	{
 		[SupportByVersion("MSHTML", 4)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1)]
+        [SinkArgument("name", SinkArgumentType.String)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1)]
 		void onscriptletevent([In] object name, [In] object eventData);
 
 		[SupportByVersion("MSHTML", 4)]
@@ -81,7 +82,7 @@ namespace NetOffice.MSHTMLApi.Events
 		#endregion
 
 		#region DWebBridgeEvents Members
-		
+		       
 		public void onscriptletevent([In] object name, [In] object eventData)
 		{
             if (!Validate("onscriptletevent"))
@@ -90,7 +91,7 @@ namespace NetOffice.MSHTMLApi.Events
                 return;
             }
 
-			string newname = Convert.ToString(name);
+			string newname = ToString(name);
 			object neweventData = (object)eventData;
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newname;

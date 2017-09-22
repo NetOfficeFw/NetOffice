@@ -160,7 +160,7 @@ namespace NetOffice
 
         private static DebugConsole _default;
 
-        private static object _thisLock = new object();
+        private object _thisLock = new object();
 
         private static object _sharedLock = new object();
         
@@ -421,12 +421,11 @@ namespace NetOffice
                         // do nothing
                         break;
                     default:
-                        throw new ArgumentOutOfRangeException("Unkown Log Mode.");
+                        throw new ArgumentOutOfRangeException("Unknown Log Mode.");
                 }
 
                 TryWritePipe(output);
-            }
-    
+            }    
         }
 
         /// <summary>
@@ -450,7 +449,7 @@ namespace NetOffice
         private void AppendToLogFile(string message)
         {
             if (null == FileName)
-                throw new NetOfficeException("FileName not set.");
+                throw new NetOfficeException("Filename not set.");
 
             System.IO.File.AppendAllText(FileName, message + Environment.NewLine, Encoding.UTF8);
         }

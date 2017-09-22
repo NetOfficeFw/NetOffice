@@ -25,6 +25,8 @@ namespace NetOffice.OutlookApi.Events
 		void FolderSwitch();
 
 		[SupportByVersion("Outlook", 10,11,12,14,15,16)]
+        [SinkArgument("newFolder", SinkArgumentType.UnknownProxy)]
+        [SinkArgument("cancel", SinkArgumentType.Bool)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(61443)]
 		void BeforeFolderSwitch([In, MarshalAs(UnmanagedType.IDispatch)] object newFolder, [In] [Out] ref object cancel);
 
@@ -33,7 +35,8 @@ namespace NetOffice.OutlookApi.Events
 		void ViewSwitch();
 
 		[SupportByVersion("Outlook", 10,11,12,14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(61445)]
+        [SinkArgument("cancel", SinkArgumentType.Bool)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(61445)]
 		void BeforeViewSwitch([In] object newView, [In] [Out] ref object cancel);
 
 		[SupportByVersion("Outlook", 10,11,12,14,15,16)]
@@ -49,31 +52,39 @@ namespace NetOffice.OutlookApi.Events
 		void Close();
 
 		[SupportByVersion("Outlook", 10,11,12,14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(64017)]
+        [SinkArgument("cancel", SinkArgumentType.Bool)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(64017)]
 		void BeforeMaximize([In] [Out] ref object cancel);
 
 		[SupportByVersion("Outlook", 10,11,12,14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(64018)]
+        [SinkArgument("cancel", SinkArgumentType.Bool)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(64018)]
 		void BeforeMinimize([In] [Out] ref object cancel);
 
 		[SupportByVersion("Outlook", 10,11,12,14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(64019)]
+        [SinkArgument("cancel", SinkArgumentType.Bool)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(64019)]
 		void BeforeMove([In] [Out] ref object cancel);
 
 		[SupportByVersion("Outlook", 10,11,12,14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(64020)]
+        [SinkArgument("cancel", SinkArgumentType.Bool)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(64020)]
 		void BeforeSize([In] [Out] ref object cancel);
 
 		[SupportByVersion("Outlook", 10,11,12,14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(64014)]
+        [SinkArgument("cancel", SinkArgumentType.Bool)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(64014)]
 		void BeforeItemCopy([In] [Out] ref object cancel);
 
 		[SupportByVersion("Outlook", 10,11,12,14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(64015)]
+        [SinkArgument("cancel", SinkArgumentType.Bool)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(64015)]
 		void BeforeItemCut([In] [Out] ref object cancel);
 
 		[SupportByVersion("Outlook", 10,11,12,14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(64016)]
+        [SinkArgument("target", typeof(OutlookApi.MAPIFolder))]
+        [SinkArgument("cancel", SinkArgumentType.Bool)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(64016)]
 		void BeforeItemPaste([In] [Out] ref object clipboardContent, [In, MarshalAs(UnmanagedType.IDispatch)] object target, [In] [Out] ref object cancel);
 
 		[SupportByVersion("Outlook", 14,15,16)]
@@ -81,7 +92,8 @@ namespace NetOffice.OutlookApi.Events
 		void AttachmentSelectionChange();
 
 		[SupportByVersion("Outlook", 15, 16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(64658)]
+        [SinkArgument("item", SinkArgumentType.UnknownProxy)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(64658)]
 		void InlineResponse([In, MarshalAs(UnmanagedType.IDispatch)] object item);
 
         [SupportByVersion("Outlook", 15, 16)]
@@ -150,7 +162,7 @@ namespace NetOffice.OutlookApi.Events
 			paramsArray.SetValue(cancel, 1);
 			EventBinding.RaiseCustomEvent("BeforeFolderSwitch", ref paramsArray);
 
-			cancel = (bool)paramsArray[1];
+			cancel = ToBoolean(paramsArray[1]);
 		}
 
 		public void ViewSwitch()
@@ -304,15 +316,16 @@ namespace NetOffice.OutlookApi.Events
             cancel = ToBoolean(paramsArray[0]);
         }
 
-		public void BeforeItemPaste([In] [Out] ref object clipboardContent, [In, MarshalAs(UnmanagedType.IDispatch)] object target, [In] [Out] ref object cancel)
+        public void BeforeItemPaste([In] [Out] ref object clipboardContent, [In, MarshalAs(UnmanagedType.IDispatch)] object target, [In] [Out] ref object cancel)
         {
             if (!Validate("BeforeItemPaste"))
             {
                 Invoker.ReleaseParamsArray(clipboardContent, target, cancel);
                 return;
             }
+            
 
-			NetOffice.OutlookApi.MAPIFolder newTarget = Factory.CreateKnownObjectFromComProxy<NetOffice.OutlookApi.MAPIFolder>(EventClass, target, NetOffice.OutlookApi.MAPIFolder.LateBindingApiWrapperType);
+            NetOffice.OutlookApi.MAPIFolder newTarget = Factory.CreateEventArgumentObjectFromComProxy(EventClass, target) as NetOffice.OutlookApi.MAPIFolder;
 			object[] paramsArray = new object[3];
 			paramsArray.SetValue(clipboardContent, 0);
 			paramsArray[1] = newTarget;

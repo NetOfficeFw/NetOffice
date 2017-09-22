@@ -12,7 +12,8 @@ namespace NetOffice.ExcelApi
 	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff822136.aspx </remarks>
 	[SupportByVersion("Excel", 12,14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface)]
- 	public class TextFrame2 : NetOffice.OfficeApi._IMsoDispObj
+    [Duplicate("NetOffice.OfficeApi.TextFrame2")]
+    public class TextFrame2 : NetOffice.OfficeApi._IMsoDispObj
 	{
 		#pragma warning disable
 

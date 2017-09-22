@@ -17,7 +17,8 @@ namespace NetOffice.AccessApi.Events
 	public interface _ReportEvents
 	{
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2066)]
+        [SinkArgument("cancel", SinkArgumentType.Int16)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2066)]
 		void Open([In] [Out] ref object cancel);
 
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
@@ -33,11 +34,14 @@ namespace NetOffice.AccessApi.Events
 		void Deactivate();
 
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2083)]
+        [SinkArgument("dataErr", SinkArgumentType.Int16)]
+        [SinkArgument("response", SinkArgumentType.Int16)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2083)]
 		void Error([In] [Out] ref object dataErr, [In] [Out] ref object response);
 
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2161)]
+        [SinkArgument("cancel", SinkArgumentType.Int16)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2161)]
 		void NoData([In] [Out] ref object cancel);
 
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]

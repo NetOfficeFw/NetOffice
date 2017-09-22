@@ -17,11 +17,13 @@ namespace NetOffice.AccessApi.Events
 	public interface DispWebBrowserControlEvents
 	{
 		[SupportByVersion("Access", 14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2076)]
+        [SinkArgument("code", SinkArgumentType.Int16)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2076)]
 		void Updated([In] [Out] ref object code);
 
 		[SupportByVersion("Access", 14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2061)]
+        [SinkArgument("code", SinkArgumentType.Int16)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2061)]
 		void BeforeUpdate([In] [Out] ref object cancel);
 
 		[SupportByVersion("Access", 14,15,16)]
@@ -33,11 +35,13 @@ namespace NetOffice.AccessApi.Events
 		void Enter();
 
 		[SupportByVersion("Access", 14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2075)]
+        [SinkArgument("code", SinkArgumentType.Int16)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2075)]
 		void Exit([In] [Out] ref object cancel);
 
 		[SupportByVersion("Access", 14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2205)]
+        [SinkArgument("code", SinkArgumentType.Int16)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2205)]
 		void Dirty([In] [Out] ref object cancel);
 
 		[SupportByVersion("Access", 14,15,16)]
@@ -57,47 +61,72 @@ namespace NetOffice.AccessApi.Events
 		void Click();
 
 		[SupportByVersion("Access", 14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(-601)]
+        [SinkArgument("code", SinkArgumentType.Int16)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(-601)]
 		void DblClick([In] [Out] ref object cancel);
 
 		[SupportByVersion("Access", 14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(-605)]
+        [SinkArgument("button", SinkArgumentType.Int16)]
+        [SinkArgument("shift", SinkArgumentType.Int16)]
+        [SinkArgument("x", SinkArgumentType.Single)]
+        [SinkArgument("y", SinkArgumentType.Single)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(-605)]
 		void MouseDown([In] [Out] ref object button, [In] [Out] ref object shift, [In] [Out] ref object x, [In] [Out] ref object y);
 
 		[SupportByVersion("Access", 14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(-606)]
+        [SinkArgument("button", SinkArgumentType.Int16)]
+        [SinkArgument("shift", SinkArgumentType.Int16)]
+        [SinkArgument("x", SinkArgumentType.Single)]
+        [SinkArgument("y", SinkArgumentType.Single)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(-606)]
 		void MouseMove([In] [Out] ref object button, [In] [Out] ref object shift, [In] [Out] ref object x, [In] [Out] ref object y);
 
-		[SupportByVersion("Access", 14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(-607)]
+        [SupportByVersion("Access", 14,15,16)]
+        [SinkArgument("button", SinkArgumentType.Int16)]
+        [SinkArgument("shift", SinkArgumentType.Int16)]
+        [SinkArgument("x", SinkArgumentType.Single)]
+        [SinkArgument("y", SinkArgumentType.Single)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(-607)]
 		void MouseUp([In] [Out] ref object button, [In] [Out] ref object shift, [In] [Out] ref object x, [In] [Out] ref object y);
 
 		[SupportByVersion("Access", 14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(-602)]
+        [SinkArgument("keyCode", SinkArgumentType.Int16)]
+        [SinkArgument("shift", SinkArgumentType.Int16)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(-602)]
 		void KeyDown([In] [Out] ref object keyCode, [In] [Out] ref object shift);
 
 		[SupportByVersion("Access", 14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(-603)]
+        [SinkArgument("keyAscii", SinkArgumentType.Int16)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(-603)]
 		void KeyPress([In] [Out] ref object keyAscii);
 
 		[SupportByVersion("Access", 14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(-604)]
+        [SinkArgument("keyCode", SinkArgumentType.Int16)]
+        [SinkArgument("shift", SinkArgumentType.Int16)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(-604)]
 		void KeyUp([In] [Out] ref object keyCode, [In] [Out] ref object shift);
 
 		[SupportByVersion("Access", 14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2524)]
+        [SinkArgument("pDisp", SinkArgumentType.UnknownProxy)]
+        [SinkArgument("cancel", SinkArgumentType.Bool)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2524)]
 		void BeforeNavigate2([In, MarshalAs(UnmanagedType.IDispatch)] object pDisp, [In] [Out] ref object uRL, [In] [Out] ref object flags, [In] [Out] ref object targetFrameName, [In] [Out] ref object postData, [In] [Out] ref object headers, [In] [Out] ref object cancel);
 
 		[SupportByVersion("Access", 14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2528)]
+        [SinkArgument("pDisp", SinkArgumentType.UnknownProxy)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2528)]
 		void DocumentComplete([In, MarshalAs(UnmanagedType.IDispatch)] object pDisp, [In] [Out] ref object uRL);
 
 		[SupportByVersion("Access", 14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2515)]
+        [SinkArgument("progress", SinkArgumentType.Int32)]
+        [SinkArgument("progressMax", SinkArgumentType.Int32)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2515)]
 		void ProgressChange([In] object progress, [In] object progressMax);
 
 		[SupportByVersion("Access", 14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2510)]
+        [SinkArgument("pDisp", SinkArgumentType.UnknownProxy)]
+        [SinkArgument("cancel", SinkArgumentType.Bool)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2510)]
 		void NavigateError([In, MarshalAs(UnmanagedType.IDispatch)] object pDisp, [In] [Out] ref object uRL, [In] [Out] ref object targetFrameName, [In] [Out] ref object statusCode, [In] [Out] ref object cancel);
 	}
 
@@ -432,8 +461,8 @@ namespace NetOffice.AccessApi.Events
                 return;
             }
 
-			Int32 newProgress = Convert.ToInt32(progress);
-			Int32 newProgressMax = Convert.ToInt32(progressMax);
+			Int32 newProgress = ToInt32(progress);
+			Int32 newProgressMax = ToInt32(progressMax);
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newProgress;
 			paramsArray[1] = newProgressMax;

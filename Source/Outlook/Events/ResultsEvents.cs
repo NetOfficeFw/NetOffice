@@ -17,11 +17,13 @@ namespace NetOffice.OutlookApi.Events
 	public interface ResultsEvents
 	{
 		[SupportByVersion("Outlook", 10,11,12,14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(61441)]
+        [SinkArgument("item", SinkArgumentType.UnknownProxy)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(61441)]
 		void ItemAdd([In, MarshalAs(UnmanagedType.IDispatch)] object item);
 
 		[SupportByVersion("Outlook", 10,11,12,14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(61442)]
+        [SinkArgument("item", SinkArgumentType.UnknownProxy)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(61442)]
 		void ItemChange([In, MarshalAs(UnmanagedType.IDispatch)] object item);
 
 		[SupportByVersion("Outlook", 10,11,12,14,15,16)]

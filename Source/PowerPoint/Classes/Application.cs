@@ -152,15 +152,6 @@ namespace NetOffice.PowerPointApi
 		}
 		
 		/// <summary>
-        /// Creates a new instance of Application 
-        /// </summary>		
-		public Application():base("PowerPoint.Application")
-		{
-			_callQuitInDispose = true;
-			GlobalHelperModules.GlobalModule.Instance = this;
-		}
-		
-		/// <summary>
         /// Creates a new instance of Application
         /// </summary>
         ///<param name="progId">registered ProgID</param>
@@ -169,7 +160,46 @@ namespace NetOffice.PowerPointApi
 			_callQuitInDispose = true;
 			GlobalHelperModules.GlobalModule.Instance = this;
 		}
-		
+
+        /// <summary>
+        /// Creates a new instance of Application 
+        /// </summary>		
+        public Application() : this(false)
+        {
+            _callQuitInDispose = true;
+            GlobalHelperModules.GlobalModule.Instance = this;
+        }
+
+        /// <summary>
+        /// Creates a new instance of Application 
+        /// <param name="enableProxyService">try to get a running application first before create a new application</param>
+        /// </summary>		
+        public Application(bool enableProxyService = false) : base()
+        {
+            if (enableProxyService)
+            {
+                Factory = Core.Default;
+                object proxy = Running.ProxyService.GetActiveInstance("PowerPoint", "Application", false);
+                if (null != proxy)
+                {
+                    CreateFromProxy(proxy, true);
+                    FromProxyService = true;
+                }
+                else
+                {
+                    CreateFromProgId("PowerPoint.Application", true);
+                }
+            }
+            else
+            {
+                CreateFromProgId("PowerPoint.Application", true);
+            }
+
+            OnCreate();
+            _callQuitInDispose = true;
+            GlobalHelperModules.GlobalModule.Instance = this;
+        }
+
         /// <summary>
 		/// NetOffice method: dispose instance and all child instances
 		/// </summary>
@@ -192,6 +222,16 @@ namespace NetOffice.PowerPointApi
 				 GlobalHelperModules.GlobalModule.Instance = null;
 			base.Dispose();
 		}
+
+        #endregion
+
+        #region Properties
+
+        /// <summary>
+        /// Instance is created from an already running application
+        /// </summary>
+        [EditorBrowsable(EditorBrowsableState.Advanced)]
+        public bool FromProxyService { get; private set; }
 
         #endregion
 
@@ -1091,7 +1131,7 @@ namespace NetOffice.PowerPointApi
         /// </summary>
         /// <returns>A new Application that is a copy of this instance</returns>
         /// <exception cref="CloneException">An unexpected error occured. See inner exception(s) for details.</exception>
-        public new Application Clone()
+        public new virtual Application Clone()
         {
             return base.Clone() as Application;
         }
@@ -1101,4 +1141,3 @@ namespace NetOffice.PowerPointApi
         #pragma warning restore
     }
 }
-

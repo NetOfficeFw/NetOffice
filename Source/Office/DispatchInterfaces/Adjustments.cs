@@ -13,7 +13,8 @@ namespace NetOffice.OfficeApi
 	/// </summary>
 	[SupportByVersion("Office", 9,10,11,12,14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Value, EnumeratorInvoke.Custom), HasIndexProperty(IndexInvoke.Property, "Item")]
-	public class Adjustments : _IMsoDispObj, IEnumerable<Single>
+    [Duplicate("NetOffice.ExcelApi.Adjustments")]
+    public class Adjustments : _IMsoDispObj, IEnumerable<Single>
 	{
 		#pragma warning disable
 

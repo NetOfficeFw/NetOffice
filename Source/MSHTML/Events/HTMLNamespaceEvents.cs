@@ -17,7 +17,8 @@ namespace NetOffice.MSHTMLApi.Events
 	public interface HTMLNamespaceEvents
 	{
 		[SupportByVersion("MSHTML", 4)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(-609)]
+        [SinkArgument("pEvtObj", typeof(MSHTMLApi.IHTMLEventObj))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(-609)]
 		void onreadystatechange([In, MarshalAs(UnmanagedType.IDispatch)] object pEvtObj);
 	}
 
@@ -52,7 +53,7 @@ namespace NetOffice.MSHTMLApi.Events
 		#endregion
 
 		#region HTMLNamespaceEvents
-		
+ 
 		public void onreadystatechange([In, MarshalAs(UnmanagedType.IDispatch)] object pEvtObj)
 		{
             if (!Validate("onreadystatechange"))

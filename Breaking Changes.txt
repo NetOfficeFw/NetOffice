@@ -1,0 +1,9 @@
+  --- Breaking Changes ---
+  (for the records: i dislike breaking changes, but sometimes it is necessary.) 
+
+1) COMObject has been replaced by ICOMObject.
+   You may have to change some event trigger code
+   from COMObject to ICOMObject.
+
+
+

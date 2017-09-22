@@ -17,7 +17,8 @@ namespace NetOffice.OWC10Api.Events
 	public interface _NavigationEvent
 	{
 		[SupportByVersion("OWC10", 1)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(740)]
+        [SinkArgument("navButton", typeof(OWC10Api.Enums.NavButtonEnum))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(740)]
 		void ButtonClick([In] object navButton);
 	}
 

@@ -17,15 +17,19 @@ namespace NetOffice.OutlookApi.Events
 	public interface OutlookBarGroupsEvents
 	{
 		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(61441)]
+        [SinkArgument("newGroup", typeof(OutlookApi.OutlookBarGroup))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(61441)]
 		void GroupAdd([In, MarshalAs(UnmanagedType.IDispatch)] object newGroup);
 
 		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(61442)]
+        [SinkArgument("cancel", SinkArgumentType.Bool)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(61442)]
 		void BeforeGroupAdd([In] [Out] ref object cancel);
 
 		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(61443)]
+        [SinkArgument("newGroup", typeof(OutlookApi.OutlookBarGroup))]
+        [SinkArgument("cancel", SinkArgumentType.Bool)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(61443)]
 		void BeforeGroupRemove([In, MarshalAs(UnmanagedType.IDispatch)] object group, [In] [Out] ref object cancel);
 	}
 

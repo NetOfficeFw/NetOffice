@@ -321,6 +321,23 @@ namespace NetOffice
         }
 
         /// <summary>
+        /// Perform cast to System.String and suspress any exception(s)
+        /// </summary>
+        /// <param name="value">value to cast</param>
+        /// <returns>cast value or false if exception occurs</returns>
+        protected static string ToString(object value)
+        {
+            try
+            {
+                return Convert.ToString(value);
+            }
+            catch
+            {
+                return String.Empty;
+            }
+        }
+
+        /// <summary>
         /// Perform cast to System.Boolean and suspress any exception(s)
         /// </summary>
         /// <param name="value">value to cast</param>
@@ -372,6 +389,23 @@ namespace NetOffice
         }
 
         /// <summary>
+        /// Perform cast to System.Double and suspress any exception(s)
+        /// </summary>
+        /// <param name="value">value to cast</param>
+        /// <returns>cast value or 0 if exception occurs</returns>
+        protected static double ToDouble(object value)
+        {
+            try
+            {
+                return (double)value;
+            }
+            catch
+            {
+                return 0;
+            }
+        }
+
+        /// <summary>
         /// Perform cast to System.Single and suspress any exception(s)
         /// </summary>
         /// <param name="value">value to cast</param>
@@ -385,6 +419,24 @@ namespace NetOffice
             catch
             {
                 return 0;
+            }
+        }
+
+        /// <summary>
+        /// Perform cast to System.Enum and suspress any exception(s)
+        /// </summary>
+        /// <typeparam name="T">type of System.Enum</typeparam>
+        /// <param name="value">value to cast</param>
+        /// <returns>ast value or default(T) if exception occurs</returns>
+        protected static T ToEnum<T>(object value) where T:struct
+        {
+            try
+            {
+                return (T)value;
+            }
+            catch
+            {
+                return default(T);
             }
         }
 

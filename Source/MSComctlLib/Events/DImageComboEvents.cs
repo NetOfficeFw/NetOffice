@@ -29,39 +29,64 @@ namespace NetOffice.MSComctlLibApi.Events
 		void Click();
 
 		[SupportByVersion("MSComctlLib", 6)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(-602)]
+        [SinkArgument("keyCode", SinkArgumentType.Int16)]
+        [SinkArgument("shift", SinkArgumentType.Int16)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(-602)]
 		void KeyDown([In] object keyCode, [In] object shift);
 
 		[SupportByVersion("MSComctlLib", 6)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(-604)]
+        [SinkArgument("keyCode", SinkArgumentType.Int16)]
+        [SinkArgument("shift", SinkArgumentType.Int16)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(-604)]
 		void KeyUp([In] object keyCode, [In] object shift);
 
 		[SupportByVersion("MSComctlLib", 6)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(-603)]
+        [SinkArgument("keyAscii", SinkArgumentType.Int16)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(-603)]
 		void KeyPress([In] [Out] ref object keyAscii);
 
 		[SupportByVersion("MSComctlLib", 6)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1550)]
+        [SinkArgument("data", typeof(MSComctlLibApi.DataObject))]
+        [SinkArgument("allowedEffects", SinkArgumentType.Int32)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1550)]
 		void OLEStartDrag([In] [Out, MarshalAs(UnmanagedType.IDispatch)] object data, [In] [Out] ref object allowedEffects);
 
 		[SupportByVersion("MSComctlLib", 6)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1551)]
+        [SinkArgument("effect", SinkArgumentType.Int32)]
+        [SinkArgument("defaultCursors", SinkArgumentType.Bool)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1551)]
 		void OLEGiveFeedback([In] [Out] ref object effect, [In] [Out] ref object defaultCursors);
 
 		[SupportByVersion("MSComctlLib", 6)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1552)]
+        [SinkArgument("data", typeof(MSComctlLibApi.DataObject))]
+        [SinkArgument("dataFormat", SinkArgumentType.Int16)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1552)]
 		void OLESetData([In] [Out, MarshalAs(UnmanagedType.IDispatch)] object data, [In] [Out] ref object dataFormat);
 
 		[SupportByVersion("MSComctlLib", 6)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1553)]
+        [SinkArgument("effect", SinkArgumentType.Int32)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1553)]
 		void OLECompleteDrag([In] [Out] ref object effect);
 
 		[SupportByVersion("MSComctlLib", 6)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1554)]
+        [SinkArgument("data", typeof(MSComctlLibApi.DataObject))]
+        [SinkArgument("effect", SinkArgumentType.Int32)]
+        [SinkArgument("button", SinkArgumentType.Int16)]
+        [SinkArgument("shift", SinkArgumentType.Int16)]
+        [SinkArgument("x", SinkArgumentType.Single)]
+        [SinkArgument("y", SinkArgumentType.Single)]
+        [SinkArgument("state", SinkArgumentType.Int16)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1554)]
 		void OLEDragOver([In] [Out, MarshalAs(UnmanagedType.IDispatch)] object data, [In] [Out] ref object effect, [In] [Out] ref object button, [In] [Out] ref object shift, [In] [Out] ref object x, [In] [Out] ref object y, [In] [Out] ref object state);
 
 		[SupportByVersion("MSComctlLib", 6)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1555)]
+        [SinkArgument("data", typeof(MSComctlLibApi.DataObject))]
+        [SinkArgument("effect", SinkArgumentType.Int32)]
+        [SinkArgument("button", SinkArgumentType.Int16)]
+        [SinkArgument("shift", SinkArgumentType.Int16)]
+        [SinkArgument("x", SinkArgumentType.Single)]
+        [SinkArgument("y", SinkArgumentType.Single)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1555)]
 		void OLEDragDrop([In] [Out, MarshalAs(UnmanagedType.IDispatch)] object data, [In] [Out] ref object effect, [In] [Out] ref object button, [In] [Out] ref object shift, [In] [Out] ref object x, [In] [Out] ref object y);
 	}
 	
@@ -123,7 +148,7 @@ namespace NetOffice.MSComctlLibApi.Events
 			EventBinding.RaiseCustomEvent("Click", ref paramsArray);
 		}
 
-		public void KeyDown([In] object keyCode, [In] object shift)
+        public void KeyDown([In] object keyCode, [In] object shift)
 		{
             if (!Validate("KeyDown"))
             {
@@ -131,15 +156,15 @@ namespace NetOffice.MSComctlLibApi.Events
                 return;
             }
 
-			Int16 newKeyCode = Convert.ToInt16(keyCode);
-			Int16 newShift = Convert.ToInt16(shift);
+			Int16 newKeyCode = ToInt16(keyCode);
+			Int16 newShift = ToInt16(shift);
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newKeyCode;
 			paramsArray[1] = newShift;
 			EventBinding.RaiseCustomEvent("KeyDown", ref paramsArray);
 		}
 
-		public void KeyUp([In] object keyCode, [In] object shift)
+        public void KeyUp([In] object keyCode, [In] object shift)
         {
             if (!Validate("KeyUp"))
             {
@@ -147,15 +172,15 @@ namespace NetOffice.MSComctlLibApi.Events
                 return;
             }
 
-			Int16 newKeyCode = Convert.ToInt16(keyCode);
-			Int16 newShift = Convert.ToInt16(shift);
+			Int16 newKeyCode = ToInt16(keyCode);
+			Int16 newShift = ToInt16(shift);
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newKeyCode;
 			paramsArray[1] = newShift;
 			EventBinding.RaiseCustomEvent("KeyUp", ref paramsArray);
 		}
 
-		public void KeyPress([In] [Out] ref object keyAscii)
+        public void KeyPress([In] [Out] ref object keyAscii)
         {
             if (!Validate("KeyPress"))
             {
@@ -170,7 +195,7 @@ namespace NetOffice.MSComctlLibApi.Events
             keyAscii = ToInt16(paramsArray[0]);
 		}
 
-		public void OLEStartDrag([In] [Out, MarshalAs(UnmanagedType.IDispatch)] object data, [In] [Out] ref object allowedEffects)
+        public void OLEStartDrag([In] [Out, MarshalAs(UnmanagedType.IDispatch)] object data, [In] [Out] ref object allowedEffects)
         {
             if (!Validate("OLEStartDrag"))
             {
@@ -187,7 +212,7 @@ namespace NetOffice.MSComctlLibApi.Events
 			EventBinding.RaiseCustomEvent("OLEStartDrag", ref paramsArray);
 
             data = newData.UnderlyingObject;
-            allowedEffects = (Int32)paramsArray[1];
+            allowedEffects = ToInt32(paramsArray[1]);
 
             (newData as ICOMProxyShareProvider).GetProxyShare().Release();
         }
@@ -205,11 +230,11 @@ namespace NetOffice.MSComctlLibApi.Events
 			paramsArray.SetValue(defaultCursors, 1);
 			EventBinding.RaiseCustomEvent("OLEGiveFeedback", ref paramsArray);
 
-			effect = (Int32)paramsArray[0];
-			defaultCursors = (bool)paramsArray[1];
+			effect = ToInt32(paramsArray[0]);
+			defaultCursors = ToBoolean(paramsArray[1]);
 		}
 
-		public void OLESetData([In] [Out, MarshalAs(UnmanagedType.IDispatch)] object data, [In] [Out] ref object dataFormat)
+        public void OLESetData([In] [Out, MarshalAs(UnmanagedType.IDispatch)] object data, [In] [Out] ref object dataFormat)
 		{
             if (!Validate("OLESetData"))
             {
@@ -226,12 +251,12 @@ namespace NetOffice.MSComctlLibApi.Events
 			EventBinding.RaiseCustomEvent("OLESetData", ref paramsArray);
 
             data = newData.UnderlyingObject;
-            dataFormat = (Int16)paramsArray[1];
+            dataFormat = ToInt16(paramsArray[1]);
 
             (newData as ICOMProxyShareProvider).GetProxyShare().Release();
         }
 
-		public void OLECompleteDrag([In] [Out] ref object effect)
+        public void OLECompleteDrag([In] [Out] ref object effect)
         {
             if (!Validate("OLECompleteDrag"))
             {
@@ -246,7 +271,7 @@ namespace NetOffice.MSComctlLibApi.Events
 			effect = ToInt32(paramsArray[0]);
 		}
 
-		public void OLEDragOver([In] [Out, MarshalAs(UnmanagedType.IDispatch)] object data, [In] [Out] ref object effect, [In] [Out] ref object button, [In] [Out] ref object shift, [In] [Out] ref object x, [In] [Out] ref object y, [In] [Out] ref object state)
+        public void OLEDragOver([In] [Out, MarshalAs(UnmanagedType.IDispatch)] object data, [In] [Out] ref object effect, [In] [Out] ref object button, [In] [Out] ref object shift, [In] [Out] ref object x, [In] [Out] ref object y, [In] [Out] ref object state)
         {
             if (!Validate("OLEDragOver"))
             {
@@ -254,8 +279,11 @@ namespace NetOffice.MSComctlLibApi.Events
                 return;
             }
 
-			object[] paramsArray = new object[7];
-			paramsArray.SetValue(data, 0);
+            NetOffice.MSComctlLibApi.DataObject newData = new NetOffice.MSComctlLibApi.DataObject(EventClass, data);
+            (newData as ICOMProxyShareProvider).GetProxyShare().Acquire();
+
+            object[] paramsArray = new object[7];
+			paramsArray.SetValue(newData, 0);
 			paramsArray.SetValue(effect, 1);
 			paramsArray.SetValue(button, 2);
 			paramsArray.SetValue(shift, 3);
@@ -263,17 +291,19 @@ namespace NetOffice.MSComctlLibApi.Events
 			paramsArray.SetValue(y, 5);
 			paramsArray.SetValue(state, 6);
 			EventBinding.RaiseCustomEvent("OLEDragOver", ref paramsArray);
-
-			data = (NetOffice.MSComctlLibApi.DataObject)paramsArray[0];
-			effect = ToInt32(paramsArray[1]);
+            
+            data = newData.UnderlyingObject;
+            effect = ToInt32(paramsArray[1]);
 			button = ToInt16(paramsArray[2]);
 			shift = ToInt16(paramsArray[3]);
 			x = ToSingle(paramsArray[4]);
 			y = ToSingle(paramsArray[5]);
 			state = ToInt16(paramsArray[6]);
-		}
 
-		public void OLEDragDrop([In] [Out, MarshalAs(UnmanagedType.IDispatch)] object data, [In] [Out] ref object effect, [In] [Out] ref object button, [In] [Out] ref object shift, [In] [Out] ref object x, [In] [Out] ref object y)
+            (newData as ICOMProxyShareProvider).GetProxyShare().Release();
+        }
+
+        public void OLEDragDrop([In] [Out, MarshalAs(UnmanagedType.IDispatch)] object data, [In] [Out] ref object effect, [In] [Out] ref object button, [In] [Out] ref object shift, [In] [Out] ref object x, [In] [Out] ref object y)
 		{
             if (!Validate("OLEDragDrop"))
             {
@@ -281,8 +311,11 @@ namespace NetOffice.MSComctlLibApi.Events
                 return;
             }
 
-			object[] paramsArray = new object[6];
-			paramsArray.SetValue(data, 0);
+            NetOffice.MSComctlLibApi.DataObject newData = new NetOffice.MSComctlLibApi.DataObject(EventClass, data);
+            (newData as ICOMProxyShareProvider).GetProxyShare().Acquire();
+
+            object[] paramsArray = new object[6];
+			paramsArray.SetValue(newData, 0);
 			paramsArray.SetValue(effect, 1);
 			paramsArray.SetValue(button, 2);
 			paramsArray.SetValue(shift, 3);
@@ -290,13 +323,15 @@ namespace NetOffice.MSComctlLibApi.Events
 			paramsArray.SetValue(y, 5);
 			EventBinding.RaiseCustomEvent("OLEDragDrop", ref paramsArray);
 
-			data = (NetOffice.MSComctlLibApi.DataObject)paramsArray[0];
-			effect = ToInt32(paramsArray[1]);
+            data = newData.UnderlyingObject;
+            effect = ToInt32(paramsArray[1]);
             button = ToInt16(paramsArray[2]);
 			shift = ToInt16(paramsArray[3]);
 			x = ToSingle(paramsArray[4]);
 			y = ToSingle(paramsArray[5]);
-		}
+
+            (newData as ICOMProxyShareProvider).GetProxyShare().Release();
+        }
 
 		#endregion
 	}

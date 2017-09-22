@@ -17,7 +17,8 @@ namespace NetOffice.OutlookApi.Events
 	public interface AccountSelectorEvents
 	{
 		[SupportByVersion("Outlook", 14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(64627)]
+        [SinkArgument("selectedAccount", typeof(OutlookApi.Account))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(64627)]
 		void SelectedAccountChange([In, MarshalAs(UnmanagedType.IDispatch)] object selectedAccount);
 	}
 

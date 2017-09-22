@@ -17,15 +17,19 @@ namespace NetOffice.OutlookApi.Events
 	public interface OutlookBarShortcutsEvents
 	{
 		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(61441)]
+        [SinkArgument("newShortcut", typeof(OutlookApi.OutlookBarShortcut))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(61441)]
 		void ShortcutAdd([In, MarshalAs(UnmanagedType.IDispatch)] object newShortcut);
 
 		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(61442)]
+        [SinkArgument("cancel", SinkArgumentType.Bool)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(61442)]
 		void BeforeShortcutAdd([In] [Out] ref object cancel);
 
 		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(61443)]
+        [SinkArgument("shortcut", typeof(OutlookApi.OutlookBarShortcut))]
+        [SinkArgument("cancel", SinkArgumentType.Bool)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(61443)]
 		void BeforeShortcutRemove([In, MarshalAs(UnmanagedType.IDispatch)] object shortcut, [In] [Out] ref object cancel);
 	}
 

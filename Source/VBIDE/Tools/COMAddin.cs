@@ -387,7 +387,7 @@ namespace NetOffice.VBIDEApi.Tools
             ForceInitializeAttribute attribute = AttributeReflector.GetForceInitializeAttribute(Type);
             if (null != attribute)
             {
-                core.Settings.EnableDebugOutput = attribute.EnableDebugOutput;
+                core.Settings.EnableMoreDebugOutput = attribute.EnableMoreDebugOutput;
                 core.CheckInitialize();
             }
             return core;

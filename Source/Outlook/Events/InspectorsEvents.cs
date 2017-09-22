@@ -54,8 +54,8 @@ namespace NetOffice.OutlookApi.Events
                 return;
             }
 
-			NetOffice.OutlookApi._Inspector newInspector = Factory.CreateKnownObjectFromComProxy<NetOffice.OutlookApi._Inspector>(EventClass, inspector, NetOffice.OutlookApi._Inspector.LateBindingApiWrapperType);
-			object[] paramsArray = new object[1];
+            NetOffice.OutlookApi._Inspector newInspector = Factory.CreateEventArgumentObjectFromComProxy(EventClass, inspector) as NetOffice.OutlookApi._Inspector;
+            object[] paramsArray = new object[1];
 			paramsArray[0] = newInspector;
 			EventBinding.RaiseCustomEvent("NewInspector", ref paramsArray);
 		}

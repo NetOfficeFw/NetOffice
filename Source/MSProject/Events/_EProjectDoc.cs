@@ -17,35 +17,43 @@ namespace NetOffice.MSProjectApi.Events
 	public interface _EProjectDoc
 	{
 		[SupportByVersion("MSProject", 11,12,14)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1)]
+        [SinkArgument("pj", typeof(MSProjectApi.Project))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1)]
 		void Open([In, MarshalAs(UnmanagedType.IDispatch)] object pj);
 
 		[SupportByVersion("MSProject", 11,12,14)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2)]
+        [SinkArgument("pj", typeof(MSProjectApi.Project))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2)]
 		void BeforeClose([In, MarshalAs(UnmanagedType.IDispatch)] object pj);
 
 		[SupportByVersion("MSProject", 11,12,14)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(3)]
+        [SinkArgument("pj", typeof(MSProjectApi.Project))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(3)]
 		void BeforeSave([In, MarshalAs(UnmanagedType.IDispatch)] object pj);
 
 		[SupportByVersion("MSProject", 11,12,14)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(4)]
+        [SinkArgument("pj", typeof(MSProjectApi.Project))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(4)]
 		void BeforePrint([In, MarshalAs(UnmanagedType.IDispatch)] object pj);
 
 		[SupportByVersion("MSProject", 11,12,14)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(5)]
+        [SinkArgument("pj", typeof(MSProjectApi.Project))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(5)]
 		void Calculate([In, MarshalAs(UnmanagedType.IDispatch)] object pj);
 
 		[SupportByVersion("MSProject", 11,12,14)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(6)]
+        [SinkArgument("pj", typeof(MSProjectApi.Project))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(6)]
 		void Change([In, MarshalAs(UnmanagedType.IDispatch)] object pj);
 
 		[SupportByVersion("MSProject", 11,12,14)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(7)]
+        [SinkArgument("pj", typeof(MSProjectApi.Project))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(7)]
 		void Activate([In, MarshalAs(UnmanagedType.IDispatch)] object pj);
 
 		[SupportByVersion("MSProject", 11,12,14)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(8)]
+        [SinkArgument("pj", typeof(MSProjectApi.Project))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(8)]
 		void Deactivate([In, MarshalAs(UnmanagedType.IDispatch)] object pj);
 	}
 
@@ -88,7 +96,7 @@ namespace NetOffice.MSProjectApi.Events
 			EventBinding.RaiseCustomEvent("Open", ref paramsArray);
 		}
 
-		public void BeforeClose([In, MarshalAs(UnmanagedType.IDispatch)] object pj)
+        public void BeforeClose([In, MarshalAs(UnmanagedType.IDispatch)] object pj)
         {
             if (!Validate("BeforeClose"))
             {
@@ -102,7 +110,7 @@ namespace NetOffice.MSProjectApi.Events
 			EventBinding.RaiseCustomEvent("BeforeClose", ref paramsArray);
 		}
 
-		public void BeforeSave([In, MarshalAs(UnmanagedType.IDispatch)] object pj)
+        public void BeforeSave([In, MarshalAs(UnmanagedType.IDispatch)] object pj)
 		{
             if (!Validate("BeforeSave"))
             {
@@ -116,7 +124,7 @@ namespace NetOffice.MSProjectApi.Events
 			EventBinding.RaiseCustomEvent("BeforeSave", ref paramsArray);
 		}
 
-		public void BeforePrint([In, MarshalAs(UnmanagedType.IDispatch)] object pj)
+        public void BeforePrint([In, MarshalAs(UnmanagedType.IDispatch)] object pj)
 		{
             if (!Validate("BeforePrint"))
             {
@@ -130,7 +138,7 @@ namespace NetOffice.MSProjectApi.Events
 			EventBinding.RaiseCustomEvent("BeforePrint", ref paramsArray);
 		}
 
-		public void Calculate([In, MarshalAs(UnmanagedType.IDispatch)] object pj)
+        public void Calculate([In, MarshalAs(UnmanagedType.IDispatch)] object pj)
 		{
             if (!Validate("Calculate"))
             {
@@ -144,7 +152,7 @@ namespace NetOffice.MSProjectApi.Events
 			EventBinding.RaiseCustomEvent("Calculate", ref paramsArray);
 		}
 
-		public void Change([In, MarshalAs(UnmanagedType.IDispatch)] object pj)
+        public void Change([In, MarshalAs(UnmanagedType.IDispatch)] object pj)
 		{
             if (!Validate("Change"))
             {
@@ -158,7 +166,7 @@ namespace NetOffice.MSProjectApi.Events
 			EventBinding.RaiseCustomEvent("Change", ref paramsArray);
 		}
 
-		public void Activate([In, MarshalAs(UnmanagedType.IDispatch)] object pj)
+        public void Activate([In, MarshalAs(UnmanagedType.IDispatch)] object pj)
         {
             if (!Validate("Activate"))
             {
@@ -172,7 +180,7 @@ namespace NetOffice.MSProjectApi.Events
 			EventBinding.RaiseCustomEvent("Activate", ref paramsArray);
 		}
 
-		public void Deactivate([In, MarshalAs(UnmanagedType.IDispatch)] object pj)
+        public void Deactivate([In, MarshalAs(UnmanagedType.IDispatch)] object pj)
 		{
             if (!Validate("Deactivate"))
             {

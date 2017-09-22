@@ -150,8 +150,33 @@ namespace NetOffice
         }
 
         #endregion
-        
+
         #region Events
+
+        /// <summary>
+        /// Occurs when its failed to resolve a wrapper type for a given com proxy
+        /// </summary>
+        public event ResolveEventHandler Resolve;
+
+        /// <summary>
+        /// Raise Resolve event
+        /// </summary>
+        /// <param name="caller">calling instance</param>
+        /// <param name="fullClassName">target NetOffice class</param>
+        /// <param name="comProxy">native proxy type</param>
+        /// <returns>type to use or null</returns>
+        private Type RaiseResolve(ICOMObject caller, string fullClassName, Type comProxy)
+        {
+            if (null != Resolve)
+            {
+                ResolveEventArgs args = new ResolveEventArgs(caller, fullClassName, comProxy);
+                Resolve(this, args);
+                return args.Result;
+            }
+            else
+                return null;
+        }
+
         /// <summary>
         /// Occurs when a new COMDynamicObject instance should be created
         /// </summary>
@@ -393,7 +418,7 @@ namespace NetOffice
         /// <summary>
         /// Cached instance type
         /// </summary>
-        [Category("Core"), Description("Cached instance type")]
+        [Browsable(false)]
         public Type ThisType
         {
             get
@@ -407,6 +432,7 @@ namespace NetOffice
         /// <summary>
         /// Contains a list of all known netoffice assembly key tokens
         /// </summary>
+        [Browsable(false)]
         public KnownKeyTokens KnownNetOfficeKeyTokens
         {
             get
@@ -519,7 +545,7 @@ namespace NetOffice
                          ThisAssembly.GetName().Version, Settings.EnableDeepLoading,
                          Settings.LoadAssembliesUnsafe, AppDomain.CurrentDomain.Id.ToString() + "-" + AppDomain.CurrentDomain.FriendlyName);
 
-                    if (Settings.EnableDebugOutput)
+                    if (Settings.EnableMoreDebugOutput)
                     {
                         string localPath = Resolver.UriResolver.ResolveLocalPath(ThisAssembly.CodeBase);
                         Console.WriteLine("Local Bind Path:{0}", localPath);
@@ -533,7 +559,7 @@ namespace NetOffice
 
                     InitializedTime = DateTime.Now - startTime;
 
-                    if (Settings.EnableDebugOutput)
+                    if (Settings.EnableMoreDebugOutput)
                     {
                         Console.WriteLine("NetOffice Core contains {0} assemblies", Assemblies.Count);
                         Console.WriteLine("NetOffice Core.Initialize() passed in {0} milliseconds", InitializedTime.TotalMilliseconds);
@@ -582,28 +608,31 @@ namespace NetOffice
                 DependentAssemblies.Clear();
             }
         }
-        
+
         /// <summary>
         /// Get wrapper class factory info as non duck
         /// </summary>
+        /// <param name="caller">calling instance</param>
         /// <param name="comProxy">new created proxy</param>
         /// <param name="throwException">throw exception if no info found or return null</param>
         /// <returns>factory info from corresponding assembly</returns>
-        internal IFactoryInfo GetInstanceFactoryInfo(object comProxy, bool throwException = true)
+        internal IFactoryInfo GetInstanceFactoryInfo(ICOMObject caller, object comProxy, bool throwException = true)
         {
-            return this.GetFactoryInfo(HostCache, comProxy, false, throwException);
+            return this.GetFactoryInfo(HostCache, caller, comProxy, false, throwException);
         }
 
         /// <summary>
         ///  Get wrapper class factory info as duck
         /// </summary>
+        /// <param name="caller">calling instance</param>
         /// <param name="comProxy">new created proxy</param>
         /// <param name="throwException">throw exception if no info found or return null</param>
         /// <returns>factory info from corresponding assembly</returns>
-        internal IFactoryInfo GetDuckFactoryInfo(object comProxy, bool throwException = true)
+        internal IFactoryInfo GetDuckFactoryInfo(ICOMObject caller, object comProxy, bool throwException = true)
         {
-            return this.GetFactoryInfo(HostCache, comProxy, true, throwException);
+            return this.GetFactoryInfo(HostCache, caller, comProxy, true, throwException);
         }
+
         /// <summary>
         /// Analyze assemblies in current appdomain and connect all NetOffice API factories to the core runtime.
         /// </summary>
@@ -857,7 +886,7 @@ namespace NetOffice
 
             CheckInitialize();
 
-            IFactoryInfo factoryInfo = GetDuckFactoryInfo(comProxy, true);
+            IFactoryInfo factoryInfo = GetDuckFactoryInfo(caller, comProxy, true);
             string className = TypeDescriptor.GetClassName(comProxy);
             string fullClassName = factoryInfo.AssemblyNamespace + ".I" + className;
 
@@ -1052,7 +1081,7 @@ namespace NetOffice
 
                 lock (_comObjectLock)
                 {
-                    IFactoryInfo factoryInfo = GetInstanceFactoryInfo(comProxy, false);
+                    IFactoryInfo factoryInfo = GetInstanceFactoryInfo(caller, comProxy, false);
                     if (null == factoryInfo)
                     {
                         Type comProxyType2 = null;
@@ -1104,7 +1133,7 @@ namespace NetOffice
 
                 lock (_comObjectLock)
                 {
-                    IFactoryInfo factoryInfo = GetInstanceFactoryInfo(comProxy);
+                    IFactoryInfo factoryInfo = GetInstanceFactoryInfo(caller, comProxy);
                     if (null == factoryInfo)
                     {
                         Type comProxyType2 = null;
@@ -1174,6 +1203,9 @@ namespace NetOffice
                         // create new classType
                         classType = null != factoryInfo ? factoryInfo.Assembly.GetType(fullClassName, false, true) : null;
                         if (null == classType)
+                            classType = RaiseResolve(caller, fullClassName, comProxyType);
+
+                        if (null == classType)
                         {
                             if (allowDynamicObject && Settings.EnableDynamicObjects)
                             {
@@ -1234,7 +1266,7 @@ namespace NetOffice
                     for (int i = 0; i < comProxyArray.Length; i++)
                     {
                         comVariantType = comProxyArray[i].GetType();
-                        IFactoryInfo factoryInfo = GetInstanceFactoryInfo(comProxyArray[i]);
+                        IFactoryInfo factoryInfo = GetInstanceFactoryInfo(caller, comProxyArray[i]);
                         string className = TypeDescriptor.GetClassName(comProxyArray[i]);
                         string fullClassName = factoryInfo.AssemblyNamespace + "." + className;
                         newVariantArray[i] = CreateObjectFromComProxy(factoryInfo, caller, comProxyArray[i], comVariantType, className, fullClassName, allowDynamicObject);
@@ -1443,7 +1475,7 @@ namespace NetOffice
                 return null;
             else
             {
-                IFactoryInfo factoryInfo = GetInstanceFactoryInfo(comProxy);
+                IFactoryInfo factoryInfo = GetInstanceFactoryInfo(null, comProxy);
                 string className = TypeDescriptor.GetClassName(comProxy);
                 string fullClassName = String.Format("{0}.{1}", factoryInfo.AssemblyNamespace, className);
                 Type proxyType = null;

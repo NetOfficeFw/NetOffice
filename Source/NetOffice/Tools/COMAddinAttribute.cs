@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace NetOffice.Tools
 {
@@ -17,7 +15,17 @@ namespace NetOffice.Tools
         /// <summary>
         /// Load addin while startup
         /// </summary>
-        LoadAtStartup = 3
+        LoadAtStartup = 3,
+
+        /// <summary>
+        /// Load on demand
+        /// </summary>
+        LoadOnDemand = 9,
+
+        /// <summary>
+        /// Load 1x times on startup and change to OnDemand 
+        /// </summary>
+        LoadOnce = 16
     }
 
     /// <summary>

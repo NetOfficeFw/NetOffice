@@ -17,7 +17,8 @@ namespace NetOffice.VisioApi.Events
 	public interface ECharacters
 	{
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(8320)]
+        [SinkArgument("shape", typeof(VisioApi.IVShape))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(8320)]
 		void TextChanged([In, MarshalAs(UnmanagedType.IDispatch)] object shape);
 	}
 
@@ -54,8 +55,8 @@ namespace NetOffice.VisioApi.Events
                 return;
             }
 
-			NetOffice.VisioApi.IVShape newShape = Factory.CreateKnownObjectFromComProxy<NetOffice.VisioApi.IVShape>(EventClass, shape, NetOffice.VisioApi.IVShape.LateBindingApiWrapperType);
-			object[] paramsArray = new object[1];
+            NetOffice.VisioApi.IVShape newShape = Factory.CreateEventArgumentObjectFromComProxy(EventClass, shape) as NetOffice.VisioApi.IVShape;
+            object[] paramsArray = new object[1];
 			paramsArray[0] = newShape;
 			EventBinding.RaiseCustomEvent("TextChanged", ref paramsArray);
 		}

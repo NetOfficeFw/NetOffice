@@ -36,7 +36,7 @@ namespace NetOffice
         /// <param name="name">property name</param>
         public static object ExecuteObjectPropertyGet(this Core value, ICOMObject caller, string name)
         {
-            return ExecuteObjectPropertyGet(value, caller, name, _emptyParams);
+            return ExecuteObjectPropertyGetInternal(value, caller, name, _emptyParams);
         }
 
         /// <summary>
@@ -49,7 +49,7 @@ namespace NetOffice
         public static object ExecuteObjectPropertyGet(this Core value, ICOMObject caller, string name, object argument)
         {
             object[] args = Invoker.ValidateParamsArray(argument);
-            return ExecuteObjectPropertyGet(value, caller, name, args);
+            return ExecuteObjectPropertyGetInternal(value, caller, name, args);
         }
 
         /// <summary>
@@ -63,7 +63,7 @@ namespace NetOffice
         public static object ExecuteObjectPropertyGet(this Core value, ICOMObject caller, string name, object argument1, object argument2)
         {
             object[] args = Invoker.ValidateParamsArray(argument1, argument2);
-            return ExecuteObjectPropertyGet(value, caller, name, args);
+            return ExecuteObjectPropertyGetInternal(value, caller, name, args);
         }
 
         /// <summary>
@@ -78,7 +78,7 @@ namespace NetOffice
         public static object ExecuteObjectPropertyGet(this Core value, ICOMObject caller, string name, object argument1, object argument2, object argument3)
         {
             object[] args = Invoker.ValidateParamsArray(argument1, argument2, argument3);
-            return ExecuteObjectPropertyGet(value, caller, name, args);
+            return ExecuteObjectPropertyGetInternal(value, caller, name, args);
         }
 
         /// <summary>
@@ -94,7 +94,7 @@ namespace NetOffice
         public static object ExecuteObjectPropertyGet(this Core value, ICOMObject caller, string name, object argument1, object argument2, object argument3, object argument4)
         {
             object[] args = Invoker.ValidateParamsArray(argument1, argument2, argument3, argument4);
-            return ExecuteObjectPropertyGet(value, caller, name, args);
+            return ExecuteObjectPropertyGetInternal(value, caller, name, args);
         }
 
         /// <summary>
@@ -107,7 +107,19 @@ namespace NetOffice
         public static object ExecuteObjectPropertyGet(this Core value, ICOMObject caller, string name, object[] paramsArray)
         {
             object[] args = Invoker.ValidateParamsArray(paramsArray);
-            return value.Invoker.PropertyGet(caller, name, args);
+            return ExecuteObjectPropertyGetInternal(value, caller, name, args);
+        }
+
+        /// <summary>
+        /// Execute a property get with object return value
+        /// </summary>
+        /// <param name="value">core invoker</param>
+        /// <param name="caller">calling instance</param>
+        /// <param name="name">property name</param>
+        /// <param name="validatedArgs">validated arguments as any</param>
+        internal static object ExecuteObjectPropertyGetInternal(this Core value, ICOMObject caller, string name, object[] validatedArgs)
+        {
+            return value.Invoker.PropertyGet(caller, name, validatedArgs);
         }
 
         #endregion
@@ -122,7 +134,7 @@ namespace NetOffice
         /// <param name="name">property name</param>
         public static Int16 ExecuteInt16PropertyGet(this Core value, ICOMObject caller, string name)
         {
-            return ExecuteInt16PropertyGet(value, caller, name, _emptyParams);
+            return ExecuteInt16PropertyGetInternal(value, caller, name, _emptyParams);
         }
 
         /// <summary>
@@ -135,7 +147,7 @@ namespace NetOffice
         public static Int16 ExecuteInt16PropertyGet(this Core value, ICOMObject caller, string name, object argument)
         {
             object[] args = Invoker.ValidateParamsArray(argument);
-            return ExecuteInt16PropertyGet(value, caller, name, args);
+            return ExecuteInt16PropertyGetInternal(value, caller, name, args);
         }
 
         /// <summary>
@@ -149,7 +161,7 @@ namespace NetOffice
         public static Int16 ExecuteInt16PropertyGet(this Core value, ICOMObject caller, string name, object argument1, object argument2)
         {
             object[] args = Invoker.ValidateParamsArray(argument1, argument2);
-            return ExecuteInt16PropertyGet(value, caller, name, args);
+            return ExecuteInt16PropertyGetInternal(value, caller, name, args);
         }
 
         /// <summary>
@@ -164,7 +176,7 @@ namespace NetOffice
         public static Int16 ExecuteInt16PropertyGet(this Core value, ICOMObject caller, string name, object argument1, object argument2, object argument3)
         {
             object[] args = Invoker.ValidateParamsArray(argument1, argument2, argument3);
-            return ExecuteInt16PropertyGet(value, caller, name, args);
+            return ExecuteInt16PropertyGetInternal(value, caller, name, args);
         }
 
         /// <summary>
@@ -180,7 +192,7 @@ namespace NetOffice
         public static Int16 ExecuteInt16PropertyGet(this Core value, ICOMObject caller, string name, object argument1, object argument2, object argument3, object argument4)
         {
             object[] args = Invoker.ValidateParamsArray(argument1, argument2, argument3, argument4);
-            return ExecuteInt16PropertyGet(value, caller, name, args);
+            return ExecuteInt16PropertyGetInternal(value, caller, name, args);
         }
 
         /// <summary>
@@ -193,7 +205,19 @@ namespace NetOffice
         public static Int16 ExecuteInt16PropertyGet(this Core value, ICOMObject caller, string name, object[] paramsArray)
         {
             object[] args = Invoker.ValidateParamsArray(paramsArray);
-            object returnItem = value.Invoker.PropertyGet(caller, name, args);
+            return ExecuteInt16PropertyGetInternal(value, caller, name, args);
+        }
+
+        /// <summary>
+        /// Execute a property get with Int16 return value
+        /// </summary>
+        /// <param name="value">core invoker</param>
+        /// <param name="caller">calling instance</param>
+        /// <param name="name">property name</param>
+        /// <param name="validatedArgs">validated arguments as any</param>
+        internal static Int16 ExecuteInt16PropertyGetInternal(this Core value, ICOMObject caller, string name, object[] validatedArgs)
+        {
+            object returnItem = value.Invoker.PropertyGet(caller, name, validatedArgs);
             return null != returnItem ? Convert.ToInt16(returnItem) : (short)0;
         }
 
@@ -209,7 +233,7 @@ namespace NetOffice
         /// <param name="name">property name</param>
         public static int ExecuteInt32PropertyGet(this Core value, ICOMObject caller, string name)
         {
-            return ExecuteInt32PropertyGet(value, caller, name, _emptyParams);
+            return ExecuteInt32PropertyGetInternal(value, caller, name, _emptyParams);
         }
 
         /// <summary>
@@ -222,7 +246,7 @@ namespace NetOffice
         public static int ExecuteInt32PropertyGet(this Core value, ICOMObject caller, string name, object argument)
         {
             object[] args = Invoker.ValidateParamsArray(argument);
-            return ExecuteInt32PropertyGet(value, caller, name, args);
+            return ExecuteInt32PropertyGetInternal(value, caller, name, args);
         }
 
         /// <summary>
@@ -236,7 +260,7 @@ namespace NetOffice
         public static int ExecuteInt32PropertyGet(this Core value, ICOMObject caller, string name, object argument1, object argument2)
         {
             object[] args = Invoker.ValidateParamsArray(argument1, argument2);
-            return ExecuteInt32PropertyGet(value, caller, name, args);
+            return ExecuteInt32PropertyGetInternal(value, caller, name, args);
         }
 
         /// <summary>
@@ -251,7 +275,7 @@ namespace NetOffice
         public static int ExecuteInt32PropertyGet(this Core value, ICOMObject caller, string name, object argument1, object argument2, object argument3)
         {
             object[] args = Invoker.ValidateParamsArray(argument1, argument2, argument3);
-            return ExecuteInt32PropertyGet(value, caller, name, args);
+            return ExecuteInt32PropertyGetInternal(value, caller, name, args);
         }
 
         /// <summary>
@@ -267,7 +291,7 @@ namespace NetOffice
         public static int ExecuteInt32PropertyGet(this Core value, ICOMObject caller, string name, object argument1, object argument2, object argument3, object argument4)
         {
             object[] args = Invoker.ValidateParamsArray(argument1, argument2, argument3, argument4);
-            return ExecuteInt32PropertyGet(value, caller, name, args);
+            return ExecuteInt32PropertyGetInternal(value, caller, name, args);
         }
 
         /// <summary>
@@ -280,7 +304,19 @@ namespace NetOffice
         public static int ExecuteInt32PropertyGet(this Core value, ICOMObject caller, string name, object[] paramsArray)
         {
             object[] args = Invoker.ValidateParamsArray(paramsArray);
-            object returnItem = value.Invoker.PropertyGet(caller, name, args);
+            return ExecuteInt32PropertyGetInternal(value, caller, name, args);
+        }
+
+        /// <summary>
+        /// Execute a property get with int return value
+        /// </summary>
+        /// <param name="value">core invoker</param>
+        /// <param name="caller">calling instance</param>
+        /// <param name="name">property name</param>
+        /// <param name="validatedArgs">validated arguments as any</param>
+        internal static int ExecuteInt32PropertyGetInternal(this Core value, ICOMObject caller, string name, object[] validatedArgs)
+        {
+            object returnItem = value.Invoker.PropertyGet(caller, name, validatedArgs);
             return null != returnItem ? Convert.ToInt32(returnItem) : 0;
         }
 
@@ -296,7 +332,7 @@ namespace NetOffice
         /// <param name="name">property name</param>
         public static Int64 ExecuteInt64PropertyGet(this Core value, ICOMObject caller, string name)
         {
-            return ExecuteInt64PropertyGet(value, caller, name, _emptyParams);
+            return ExecuteInt64PropertyGetInternal(value, caller, name, _emptyParams);
         }
 
         /// <summary>
@@ -309,7 +345,7 @@ namespace NetOffice
         public static Int64 ExecuteInt64PropertyGet(this Core value, ICOMObject caller, string name, object argument)
         {
             object[] args = Invoker.ValidateParamsArray(argument);
-            return ExecuteInt64PropertyGet(value, caller, name, args);
+            return ExecuteInt64PropertyGetInternal(value, caller, name, args);
         }
 
         /// <summary>
@@ -323,7 +359,7 @@ namespace NetOffice
         public static Int64 ExecuteInt64PropertyGet(this Core value, ICOMObject caller, string name, object argument1, object argument2)
         {
             object[] args = Invoker.ValidateParamsArray(argument1, argument2);
-            return ExecuteInt64PropertyGet(value, caller, name, args);
+            return ExecuteInt64PropertyGetInternal(value, caller, name, args);
         }
 
         /// <summary>
@@ -338,7 +374,7 @@ namespace NetOffice
         public static Int64 ExecuteInt64PropertyGet(this Core value, ICOMObject caller, string name, object argument1, object argument2, object argument3)
         {
             object[] args = Invoker.ValidateParamsArray(argument1, argument2, argument3);
-            return ExecuteInt64PropertyGet(value, caller, name, args);
+            return ExecuteInt64PropertyGetInternal(value, caller, name, args);
         }
 
         /// <summary>
@@ -354,7 +390,7 @@ namespace NetOffice
         public static Int64 ExecuteInt64PropertyGet(this Core value, ICOMObject caller, string name, object argument1, object argument2, object argument3, object argument4)
         {
             object[] args = Invoker.ValidateParamsArray(argument1, argument2, argument3, argument4);
-            return ExecuteInt64PropertyGet(value, caller, name, args);
+            return ExecuteInt64PropertyGetInternal(value, caller, name, args);
         }
 
         /// <summary>
@@ -367,7 +403,19 @@ namespace NetOffice
         public static Int64 ExecuteInt64PropertyGet(this Core value, ICOMObject caller, string name, object[] paramsArray)
         {
             object[] args = Invoker.ValidateParamsArray(paramsArray);
-            object returnItem = value.Invoker.PropertyGet(caller, name, args);
+            return ExecuteInt64PropertyGetInternal(value, caller, name, args);
+        }
+
+        /// <summary>
+        /// Execute a property get with Int64 return value
+        /// </summary>
+        /// <param name="value">core invoker</param>
+        /// <param name="caller">calling instance</param>
+        /// <param name="name">property name</param>
+        /// <param name="validatedArgs">validated arguments</param>
+        internal static Int64 ExecuteInt64PropertyGetInternal(this Core value, ICOMObject caller, string name, object[] validatedArgs)
+        {
+            object returnItem = value.Invoker.PropertyGet(caller, name, validatedArgs);
             return null != returnItem ? Convert.ToInt64(returnItem) : 0;
         }
 
@@ -383,7 +431,7 @@ namespace NetOffice
         /// <param name="name">property name</param>
         public static UIntPtr ExecuteUIntPtrPropertyGet(this Core value, ICOMObject caller, string name)
         {
-            return ExecuteUIntPtrPropertyGet(value, caller, name, _emptyParams);
+            return ExecuteUIntPtrPropertyGetInternal(value, caller, name, _emptyParams);
         }
 
         /// <summary>
@@ -396,7 +444,7 @@ namespace NetOffice
         public static UIntPtr ExecuteUIntPtrPropertyGet(this Core value, ICOMObject caller, string name, object argument)
         {
             object[] args = Invoker.ValidateParamsArray(argument);
-            return ExecuteUIntPtrPropertyGet(value, caller, name, args);
+            return ExecuteUIntPtrPropertyGetInternal(value, caller, name, args);
         }
 
         /// <summary>
@@ -410,7 +458,7 @@ namespace NetOffice
         public static UIntPtr ExecuteUIntPtrPropertyGet(this Core value, ICOMObject caller, string name, object argument1, object argument2)
         {
             object[] args = Invoker.ValidateParamsArray(argument1, argument2);
-            return ExecuteUIntPtrPropertyGet(value, caller, name, args);
+            return ExecuteUIntPtrPropertyGetInternal(value, caller, name, args);
         }
 
         /// <summary>
@@ -425,7 +473,7 @@ namespace NetOffice
         public static UIntPtr ExecuteUIntPtrPropertyGet(this Core value, ICOMObject caller, string name, object argument1, object argument2, object argument3)
         {
             object[] args = Invoker.ValidateParamsArray(argument1, argument2, argument3);
-            return ExecuteUIntPtrPropertyGet(value, caller, name, args);
+            return ExecuteUIntPtrPropertyGetInternal(value, caller, name, args);
         }
 
         /// <summary>
@@ -441,7 +489,7 @@ namespace NetOffice
         public static UIntPtr ExecuteUIntPtrPropertyGet(this Core value, ICOMObject caller, string name, object argument1, object argument2, object argument3, object argument4)
         {
             object[] args = Invoker.ValidateParamsArray(argument1, argument2, argument3, argument4);
-            return ExecuteUIntPtrPropertyGet(value, caller, name, args);
+            return ExecuteUIntPtrPropertyGetInternal(value, caller, name, args);
         }
 
         /// <summary>
@@ -454,8 +502,20 @@ namespace NetOffice
         public static UIntPtr ExecuteUIntPtrPropertyGet(this Core value, ICOMObject caller, string name, object[] paramsArray)
         {
             object[] args = Invoker.ValidateParamsArray(paramsArray);
-            object returnItem = value.Invoker.PropertyGet(caller, name, args);
-            return null != returnItem ? (UIntPtr)returnItem : UIntPtr.Zero;            
+            return ExecuteUIntPtrPropertyGetInternal(value, caller, name, args);     
+        }
+
+        /// <summary>
+        /// Execute a property get with int return value
+        /// </summary>
+        /// <param name="value">core invoker</param>
+        /// <param name="caller">calling instance</param>
+        /// <param name="name">property name</param>
+        /// <param name="validatedArgs">validated arguments as any</param>
+        internal static UIntPtr ExecuteUIntPtrPropertyGetInternal(this Core value, ICOMObject caller, string name, object[] validatedArgs)
+        {
+            object returnItem = value.Invoker.PropertyGet(caller, name, validatedArgs);
+            return null != returnItem ? (UIntPtr)returnItem : UIntPtr.Zero;
         }
 
         #endregion
@@ -470,7 +530,7 @@ namespace NetOffice
         /// <param name="name">property name</param>
         public static float ExecuteFloatPropertyGet(this Core value, ICOMObject caller, string name)
         {
-            return ExecuteFloatPropertyGet(value, caller, name, _emptyParams);
+            return ExecuteFloatPropertyGetInternal(value, caller, name, _emptyParams);
         }
 
         /// <summary>
@@ -483,7 +543,7 @@ namespace NetOffice
         public static float ExecuteFloatPropertyGet(this Core value, ICOMObject caller, string name, object argument)
         {
             object[] args = Invoker.ValidateParamsArray(argument);
-            return ExecuteFloatPropertyGet(value, caller, name, args);
+            return ExecuteFloatPropertyGetInternal(value, caller, name, args);
         }
 
         /// <summary>
@@ -497,7 +557,7 @@ namespace NetOffice
         public static float ExecuteFloatPropertyGet(this Core value, ICOMObject caller, string name, object argument1, object argument2)
         {
             object[] args = Invoker.ValidateParamsArray(argument1, argument2);
-            return ExecuteFloatPropertyGet(value, caller, name, args);
+            return ExecuteFloatPropertyGetInternal(value, caller, name, args);
         }
 
         /// <summary>
@@ -512,7 +572,7 @@ namespace NetOffice
         public static float ExecuteFloatPropertyGet(this Core value, ICOMObject caller, string name, object argument1, object argument2, object argument3)
         {
             object[] args = Invoker.ValidateParamsArray(argument1, argument2, argument3);
-            return ExecuteFloatPropertyGet(value, caller, name, args);
+            return ExecuteFloatPropertyGetInternal(value, caller, name, args);
         }
 
         /// <summary>
@@ -528,7 +588,7 @@ namespace NetOffice
         public static float ExecuteFloatPropertyGet(this Core value, ICOMObject caller, string name, object argument1, object argument2, object argument3, object argument4)
         {
             object[] args = Invoker.ValidateParamsArray(argument1, argument2, argument3, argument4);
-            return ExecuteFloatPropertyGet(value, caller, name, args);
+            return ExecuteFloatPropertyGetInternal(value, caller, name, args);
         }
 
         /// <summary>
@@ -541,7 +601,19 @@ namespace NetOffice
         public static Single ExecuteFloatPropertyGet(this Core value, ICOMObject caller, string name, object[] paramsArray)
         {
             object[] args = Invoker.ValidateParamsArray(paramsArray);
-            object returnItem = value.Invoker.PropertyGet(caller, name, args);
+            return ExecuteFloatPropertyGetInternal(value, caller, name, args);
+        }
+
+        /// <summary>
+        /// Execute a property get with float return value
+        /// </summary>
+        /// <param name="value">core invoker</param>
+        /// <param name="caller">calling instance</param>
+        /// <param name="name">property name</param>
+        /// <param name="validatedArgs">validated arguments as any</param>
+        internal static Single ExecuteFloatPropertyGetInternal(this Core value, ICOMObject caller, string name, object[] validatedArgs)
+        {
+            object returnItem = value.Invoker.PropertyGet(caller, name, validatedArgs);
             return null != returnItem ? Convert.ToSingle(returnItem) : 0;
         }
 
@@ -557,7 +629,7 @@ namespace NetOffice
         /// <param name="name">property name</param>
         public static double ExecuteDoublePropertyGet(this Core value, ICOMObject caller, string name)
         {
-            return ExecuteDoublePropertyGet(value, caller, name, _emptyParams);
+            return ExecuteDoublePropertyGetInternal(value, caller, name, _emptyParams);
         }
 
         /// <summary>
@@ -570,7 +642,7 @@ namespace NetOffice
         public static double ExecuteDoublePropertyGet(this Core value, ICOMObject caller, string name, object argument)
         {
             object[] args = Invoker.ValidateParamsArray(argument);
-            return ExecuteDoublePropertyGet(value, caller, name, args);
+            return ExecuteDoublePropertyGetInternal(value, caller, name, args);
         }
 
         /// <summary>
@@ -584,7 +656,7 @@ namespace NetOffice
         public static double ExecuteDoublePropertyGet(this Core value, ICOMObject caller, string name, object argument1, object argument2)
         {
             object[] args = Invoker.ValidateParamsArray(argument1, argument2);
-            return ExecuteDoublePropertyGet(value, caller, name, args);
+            return ExecuteDoublePropertyGetInternal(value, caller, name, args);
         }
 
         /// <summary>
@@ -599,7 +671,7 @@ namespace NetOffice
         public static double ExecuteDoublePropertyGet(this Core value, ICOMObject caller, string name, object argument1, object argument2, object argument3)
         {
             object[] args = Invoker.ValidateParamsArray(argument1, argument2, argument3);
-            return ExecuteDoublePropertyGet(value, caller, name, args);
+            return ExecuteDoublePropertyGetInternal(value, caller, name, args);
         }
 
         /// <summary>
@@ -615,7 +687,7 @@ namespace NetOffice
         public static double ExecuteDoublePropertyGet(this Core value, ICOMObject caller, string name, object argument1, object argument2, object argument3, object argument4)
         {
             object[] args = Invoker.ValidateParamsArray(argument1, argument2, argument3, argument4);
-            return ExecuteDoublePropertyGet(value, caller, name, args);
+            return ExecuteDoublePropertyGetInternal(value, caller, name, args);
         }
 
         /// <summary>
@@ -628,7 +700,19 @@ namespace NetOffice
         public static double ExecuteDoublePropertyGet(this Core value, ICOMObject caller, string name, object[] paramsArray)
         {
             object[] args = Invoker.ValidateParamsArray(paramsArray);
-            object returnItem = value.Invoker.PropertyGet(caller, name, args);
+            return ExecuteDoublePropertyGetInternal(value, caller, name, args);
+        }
+
+        /// <summary>
+        /// Execute a property get with double return value
+        /// </summary>
+        /// <param name="value">core invoker</param>
+        /// <param name="caller">calling instance</param>
+        /// <param name="name">property name</param>
+        /// <param name="validatedArgs">validated arguments as any</param>
+        internal static double ExecuteDoublePropertyGetInternal(this Core value, ICOMObject caller, string name, object[] validatedArgs)
+        {
+            object returnItem = value.Invoker.PropertyGet(caller, name, validatedArgs);
             return null != returnItem ? Convert.ToDouble(returnItem) : 0;
         }
 
@@ -644,7 +728,7 @@ namespace NetOffice
         /// <param name="name">property name</param>
         public static Single ExecuteSinglePropertyGet(this Core value, ICOMObject caller, string name)
         {
-            return ExecuteSinglePropertyGet(value, caller, name, _emptyParams);
+            return ExecuteSinglePropertyGetInternal(value, caller, name, _emptyParams);
         }
 
         /// <summary>
@@ -657,7 +741,7 @@ namespace NetOffice
         public static Single ExecuteSinglePropertyGet(this Core value, ICOMObject caller, string name, object argument)
         {
             object[] args = Invoker.ValidateParamsArray(argument);
-            return ExecuteSinglePropertyGet(value, caller, name, args);
+            return ExecuteSinglePropertyGetInternal(value, caller, name, args);
         }
 
         /// <summary>
@@ -671,7 +755,7 @@ namespace NetOffice
         public static Single ExecuteSinglePropertyGet(this Core value, ICOMObject caller, string name, object argument1, object argument2)
         {
             object[] args = Invoker.ValidateParamsArray(argument1, argument2);
-            return ExecuteSinglePropertyGet(value, caller, name, args);
+            return ExecuteSinglePropertyGetInternal(value, caller, name, args);
         }
 
         /// <summary>
@@ -686,7 +770,7 @@ namespace NetOffice
         public static Single ExecuteSinglePropertyGet(this Core value, ICOMObject caller, string name, object argument1, object argument2, object argument3)
         {
             object[] args = Invoker.ValidateParamsArray(argument1, argument2, argument3);
-            return ExecuteSinglePropertyGet(value, caller, name, args);
+            return ExecuteSinglePropertyGetInternal(value, caller, name, args);
         }
 
         /// <summary>
@@ -702,7 +786,7 @@ namespace NetOffice
         public static Single ExecuteSinglePropertyGet(this Core value, ICOMObject caller, string name, object argument1, object argument2, object argument3, object argument4)
         {
             object[] args = Invoker.ValidateParamsArray(argument1, argument2, argument3, argument4);
-            return ExecuteSinglePropertyGet(value, caller, name, args);
+            return ExecuteSinglePropertyGetInternal(value, caller, name, args);
         }
 
         /// <summary>
@@ -715,7 +799,19 @@ namespace NetOffice
         public static Single ExecuteSinglePropertyGet(this Core value, ICOMObject caller, string name, object[] paramsArray)
         {
             object[] args = Invoker.ValidateParamsArray(paramsArray);
-            object returnItem = value.Invoker.PropertyGet(caller, name, args);
+            return ExecuteSinglePropertyGetInternal(value, caller, name, args);
+        }
+
+        /// <summary>
+        /// Execute a property get with single return value
+        /// </summary>
+        /// <param name="value">core invoker</param>
+        /// <param name="caller">calling instance</param>
+        /// <param name="name">property name</param>
+        /// <param name="validatedArgs">validated arguments as any</param>
+        internal static Single ExecuteSinglePropertyGetInternal(this Core value, ICOMObject caller, string name, object[] validatedArgs)
+        {
+            object returnItem = value.Invoker.PropertyGet(caller, name, validatedArgs);
             return null != returnItem ? Convert.ToSingle(returnItem) : 0;
         }
 
@@ -731,7 +827,7 @@ namespace NetOffice
         /// <param name="name">property name</param>
         public static DateTime ExecuteDateTimePropertyGet(this Core value, ICOMObject caller, string name)
         {
-            return ExecuteDateTimePropertyGet(value, caller, name, _emptyParams);
+            return ExecuteDateTimePropertyGetInternal(value, caller, name, _emptyParams);
         }
 
         /// <summary>
@@ -744,7 +840,7 @@ namespace NetOffice
         public static DateTime ExecuteDateTimePropertyGet(this Core value, ICOMObject caller, string name, object argument)
         {
             object[] args = Invoker.ValidateParamsArray(argument);
-            return ExecuteDateTimePropertyGet(value, caller, name, args);
+            return ExecuteDateTimePropertyGetInternal(value, caller, name, args);
         }
 
         /// <summary>
@@ -758,7 +854,7 @@ namespace NetOffice
         public static DateTime ExecuteDateTimePropertyGet(this Core value, ICOMObject caller, string name, object argument1, object argument2)
         {
             object[] args = Invoker.ValidateParamsArray(argument1, argument2);
-            return ExecuteDateTimePropertyGet(value, caller, name, args);
+            return ExecuteDateTimePropertyGetInternal(value, caller, name, args);
         }
 
         /// <summary>
@@ -773,7 +869,7 @@ namespace NetOffice
         public static DateTime ExecuteDateTimePropertyGet(this Core value, ICOMObject caller, string name, object argument1, object argument2, object argument3)
         {
             object[] args = Invoker.ValidateParamsArray(argument1, argument2, argument3);
-            return ExecuteDateTimePropertyGet(value, caller, name, args);
+            return ExecuteDateTimePropertyGetInternal(value, caller, name, args);
         }
 
         /// <summary>
@@ -789,7 +885,7 @@ namespace NetOffice
         public static DateTime ExecuteDateTimePropertyGet(this Core value, ICOMObject caller, string name, object argument1, object argument2, object argument3, object argument4)
         {
             object[] args = Invoker.ValidateParamsArray(argument1, argument2, argument3, argument4);
-            return ExecuteDateTimePropertyGet(value, caller, name, args);
+            return ExecuteDateTimePropertyGetInternal(value, caller, name, args);
         }
 
         /// <summary>
@@ -802,12 +898,24 @@ namespace NetOffice
         public static DateTime ExecuteDateTimePropertyGet(this Core value, ICOMObject caller, string name, object[] paramsArray)
         {
             object[] args = Invoker.ValidateParamsArray(paramsArray);
-            object returnItem = value.Invoker.PropertyGet(caller, name, args);
+            return ExecuteDateTimePropertyGetInternal(value, caller, name, args);
+        }
+
+        /// <summary>
+        /// Execute a property get with DateTime return value
+        /// </summary>
+        /// <param name="value">core invoker</param>
+        /// <param name="caller">calling instance</param>
+        /// <param name="name">property name</param>
+        /// <param name="validatedArgs">validated arguments as any</param>
+        internal static DateTime ExecuteDateTimePropertyGetInternal(this Core value, ICOMObject caller, string name, object[] validatedArgs)
+        {
+            object returnItem = value.Invoker.PropertyGet(caller, name, validatedArgs);
             return null != returnItem ? Convert.ToDateTime(returnItem) : default(DateTime);
         }
 
         #endregion
-        
+
         #region ExecuteBytePropertyGet
 
         /// <summary>
@@ -893,8 +1001,21 @@ namespace NetOffice
             return null != returnItem ? Convert.ToByte(returnItem) : default(byte);
         }
 
+        /// <summary>
+        /// Execute a property get with byte return value
+        /// </summary>
+        /// <param name="value">core invoker</param>
+        /// <param name="caller">calling instance</param>
+        /// <param name="name">property name</param>
+        /// <param name="validatedArgs">validated arguments as any</param>
+        internal static byte ExecuteBytePropertyGetInternal(this Core value, ICOMObject caller, string name, object[] validatedArgs)
+        {
+            object returnItem = value.Invoker.PropertyGet(caller, name, validatedArgs);
+            return null != returnItem ? Convert.ToByte(returnItem) : default(byte);
+        }
+
         #endregion
-        
+
         #region ExecuteBoolPropertyGet
 
         /// <summary>
@@ -905,7 +1026,7 @@ namespace NetOffice
         /// <param name="name">property name</param>
         public static bool ExecuteBoolPropertyGet(this Core value, ICOMObject caller, string name)
         {
-            return ExecuteBoolPropertyGet(value, caller, name, _emptyParams);
+            return ExecuteBoolPropertyGetInternal(value, caller, name, _emptyParams);
         }
 
         /// <summary>
@@ -918,7 +1039,7 @@ namespace NetOffice
         public static bool ExecuteBoolPropertyGet(this Core value, ICOMObject caller, string name, object argument)
         {
             object[] args = Invoker.ValidateParamsArray(argument);
-            return ExecuteBoolPropertyGet(value, caller, name, args);
+            return ExecuteBoolPropertyGetInternal(value, caller, name, args);
         }
 
         /// <summary>
@@ -932,7 +1053,7 @@ namespace NetOffice
         public static bool ExecuteBoolPropertyGet(this Core value, ICOMObject caller, string name, object argument1, object argument2)
         {
             object[] args = Invoker.ValidateParamsArray(argument1, argument2);
-            return ExecuteBoolPropertyGet(value, caller, name, args);
+            return ExecuteBoolPropertyGetInternal(value, caller, name, args);
         }
 
         /// <summary>
@@ -947,7 +1068,7 @@ namespace NetOffice
         public static bool ExecuteBoolPropertyGet(this Core value, ICOMObject caller, string name, object argument1, object argument2, object argument3)
         {
             object[] args = Invoker.ValidateParamsArray(argument1, argument2, argument3);
-            return ExecuteBoolPropertyGet(value, caller, name, args);
+            return ExecuteBoolPropertyGetInternal(value, caller, name, args);
         }
 
         /// <summary>
@@ -963,7 +1084,7 @@ namespace NetOffice
         public static bool ExecuteBoolPropertyGet(this Core value, ICOMObject caller, string name, object argument1, object argument2, object argument3, object argument4)
         {
             object[] args = Invoker.ValidateParamsArray(argument1, argument2, argument3, argument4);
-            return ExecuteBoolPropertyGet(value, caller, name, args);
+            return ExecuteBoolPropertyGetInternal(value, caller, name, args);
         }
 
         /// <summary>
@@ -972,11 +1093,23 @@ namespace NetOffice
         /// <param name="value">core invoker</param>
         /// <param name="caller">calling instance</param>
         /// <param name="name">property name</param>
-        /// <param name="paramsArray">arguments as any</param>
+        /// <param name="paramsArray"> arguments as any</param>
         public static bool ExecuteBoolPropertyGet(this Core value, ICOMObject caller, string name, object[] paramsArray)
         {
             object[] args = Invoker.ValidateParamsArray(paramsArray);
-            object returnItem = value.Invoker.PropertyGet(caller, name, args);
+            return ExecuteBoolPropertyGetInternal(value, caller, name, args);
+        }
+
+        /// <summary>
+        /// Execute a property get with bool return value
+        /// </summary>
+        /// <param name="value">core invoker</param>
+        /// <param name="caller">calling instance</param>
+        /// <param name="name">property name</param>
+        /// <param name="validatedArgs">validated arguments as any</param>
+        internal static bool ExecuteBoolPropertyGetInternal(this Core value, ICOMObject caller, string name, object[] validatedArgs)
+        {
+            object returnItem = value.Invoker.PropertyGet(caller, name, validatedArgs);
             return null != returnItem ? Convert.ToBoolean(returnItem) : false;
         }
 
@@ -992,7 +1125,7 @@ namespace NetOffice
         /// <param name="name">property name</param>
         public static string ExecuteStringPropertyGet(this Core value, ICOMObject caller, string name)
         {
-            return ExecuteStringPropertyGet(value, caller, name, _emptyParams);
+            return ExecuteStringPropertyGetInternal(value, caller, name, _emptyParams);
         }
 
         /// <summary>
@@ -1005,7 +1138,7 @@ namespace NetOffice
         public static string ExecuteStringPropertyGet(this Core value, ICOMObject caller, string name, object argument)
         {
             object[] args = Invoker.ValidateParamsArray(argument);
-            return ExecuteStringPropertyGet(value, caller, name, args);
+            return ExecuteStringPropertyGetInternal(value, caller, name, args);
         }
 
         /// <summary>
@@ -1019,7 +1152,7 @@ namespace NetOffice
         public static string ExecuteStringPropertyGet(this Core value, ICOMObject caller, string name, object argument1, object argument2)
         {
             object[] args = Invoker.ValidateParamsArray(argument1, argument2);
-            return ExecuteStringPropertyGet(value, caller, name, args);
+            return ExecuteStringPropertyGetInternal(value, caller, name, args);
         }
 
         /// <summary>
@@ -1034,7 +1167,7 @@ namespace NetOffice
         public static string ExecuteStringPropertyGet(this Core value, ICOMObject caller, string name, object argument1, object argument2, object argument3)
         {
             object[] args = Invoker.ValidateParamsArray(argument1, argument2, argument3);
-            return ExecuteStringPropertyGet(value, caller, name, args);
+            return ExecuteStringPropertyGetInternal(value, caller, name, args);
         }
 
         /// <summary>
@@ -1050,7 +1183,7 @@ namespace NetOffice
         public static string ExecuteStringPropertyGet(this Core value, ICOMObject caller, string name, object argument1, object argument2, object argument3, object argument4)
         {
             object[] args = Invoker.ValidateParamsArray(argument1, argument2, argument3, argument4);
-            return ExecuteStringPropertyGet(value, caller, name, args);
+            return ExecuteStringPropertyGetInternal(value, caller, name, args);
         }
 
         /// <summary>
@@ -1063,9 +1196,22 @@ namespace NetOffice
         public static string ExecuteStringPropertyGet(this Core value, ICOMObject caller, string name, object[] paramsArray)
         {
             object[] args = Invoker.ValidateParamsArray(paramsArray);
-            object returnItem = value.Invoker.PropertyGet(caller, name, args);
+            return ExecuteStringPropertyGetInternal(value, caller, name, args);
+        }
+
+        /// <summary>
+        /// Execute a property get with string return value
+        /// </summary>
+        /// <param name="value">core invoker</param>
+        /// <param name="caller">calling instance</param>
+        /// <param name="name">property name</param>
+        /// <param name="validatedArgs">validated arguments as any</param>
+        internal static string ExecuteStringPropertyGetInternal(this Core value, ICOMObject caller, string name, object[] validatedArgs)
+        {
+            object returnItem = value.Invoker.PropertyGet(caller, name, validatedArgs);
             return null != returnItem ? Convert.ToString(returnItem) : null;
         }
+
 
         #endregion
 
@@ -1079,7 +1225,7 @@ namespace NetOffice
         /// <param name="name">property name</param>
         public static T ExecuteEnumPropertyGet<T>(this Core value, ICOMObject caller, string name) where T : struct, IConvertible
         {
-            return ExecuteEnumPropertyGet<T>(value, caller, name, _emptyParams);
+            return ExecuteEnumPropertyGetInternal<T>(value, caller, name, _emptyParams);
         }
 
         /// <summary>
@@ -1092,7 +1238,7 @@ namespace NetOffice
         public static T ExecuteEnumPropertyGet<T>(this Core value, ICOMObject caller, string name, object argument) where T : struct, IConvertible
         {
             object[] args = Invoker.ValidateParamsArray(argument);
-            return ExecuteEnumPropertyGet<T>(value, caller, name, args);
+            return ExecuteEnumPropertyGetInternal<T>(value, caller, name, args);
         }
 
         /// <summary>
@@ -1106,7 +1252,7 @@ namespace NetOffice
         public static T ExecuteEnumPropertyGet<T>(this Core value, ICOMObject caller, string name, object argument1, object argument2) where T : struct, IConvertible
         {
             object[] args = Invoker.ValidateParamsArray(argument1, argument2);
-            return ExecuteEnumPropertyGet<T>(value, caller, name, args);
+            return ExecuteEnumPropertyGetInternal<T>(value, caller, name, args);
         }
 
         /// <summary>
@@ -1121,7 +1267,7 @@ namespace NetOffice
         public static T ExecuteEnumPropertyGet<T>(this Core value, ICOMObject caller, string name, object argument1, object argument2, object argument3) where T : struct, IConvertible
         {
             object[] args = Invoker.ValidateParamsArray(argument1, argument2, argument3);
-            return ExecuteEnumPropertyGet<T>(value, caller, name, args);
+            return ExecuteEnumPropertyGetInternal<T>(value, caller, name, args);
         }
 
         /// <summary>
@@ -1137,7 +1283,7 @@ namespace NetOffice
         public static T ExecuteEnumPropertyGet<T>(this Core value, ICOMObject caller, string name, object argument1, object argument2, object argument3, object argument4) where T : struct, IConvertible
         {
             object[] args = Invoker.ValidateParamsArray(argument1, argument2, argument3, argument4);
-            return ExecuteEnumPropertyGet<T>(value, caller, name, args);
+            return ExecuteEnumPropertyGetInternal<T>(value, caller, name, args);
         }
 
         /// <summary>
@@ -1150,14 +1296,26 @@ namespace NetOffice
         public static T ExecuteEnumPropertyGet<T>(this Core value, ICOMObject caller, string name, object[] paramsArray) where T : struct, IConvertible
         {
             object[] args = Invoker.ValidateParamsArray(paramsArray);
-            object returnItem = value.Invoker.PropertyGet(caller, name, args);
+            return ExecuteEnumPropertyGetInternal<T>(value, caller, name, args);
+        }
+
+        /// <summary>
+        /// Execute a property get with enum return value
+        /// </summary>
+        /// <param name="value">core invoker</param>
+        /// <param name="caller">calling instance</param>
+        /// <param name="name">property name</param>
+        /// <param name="validatedArgs">validated arguments as any</param>
+        internal static T ExecuteEnumPropertyGetInternal<T>(this Core value, ICOMObject caller, string name, object[] validatedArgs) where T : struct, IConvertible
+        {
+            object returnItem = value.Invoker.PropertyGet(caller, name, validatedArgs);
             object intReturnItem = Convert.ToInt32(returnItem);
             T newObject = (T)intReturnItem;
             return newObject;
         }
 
         #endregion
-        
+
         #region ExecuteStructPropertyGet<T>
 
         /// <summary>
@@ -1168,7 +1326,7 @@ namespace NetOffice
         /// <param name="name">property name</param>
         public static T ExecuteStructPropertyGet<T>(this Core value, ICOMObject caller, string name) where T : struct
         {
-            return ExecuteStructPropertyGet<T>(value, caller, name, _emptyParams);
+            return ExecuteStructPropertyGetInternal<T>(value, caller, name, _emptyParams);
         }
 
         /// <summary>
@@ -1181,7 +1339,7 @@ namespace NetOffice
         public static T ExecuteStructPropertyGet<T>(this Core value, ICOMObject caller, string name, object argument) where T : struct
         {
             object[] args = Invoker.ValidateParamsArray(argument);
-            return ExecuteStructPropertyGet<T>(value, caller, name, args);
+            return ExecuteStructPropertyGetInternal<T>(value, caller, name, args);
         }
 
         /// <summary>
@@ -1195,7 +1353,7 @@ namespace NetOffice
         public static T ExecuteStructPropertyGet<T>(this Core value, ICOMObject caller, string name, object argument1, object argument2) where T : struct
         {
             object[] args = Invoker.ValidateParamsArray(argument1, argument2);
-            return ExecuteStructPropertyGet<T>(value, caller, name, args);
+            return ExecuteStructPropertyGetInternal<T>(value, caller, name, args);
         }
 
         /// <summary>
@@ -1210,7 +1368,7 @@ namespace NetOffice
         public static T ExecuteStructPropertyGet<T>(this Core value, ICOMObject caller, string name, object argument1, object argument2, object argument3) where T : struct
         {
             object[] args = Invoker.ValidateParamsArray(argument1, argument2, argument3);
-            return ExecuteStructPropertyGet<T>(value, caller, name, args);
+            return ExecuteStructPropertyGetInternal<T>(value, caller, name, args);
         }
 
         /// <summary>
@@ -1226,7 +1384,7 @@ namespace NetOffice
         public static T ExecuteStructPropertyGet<T>(this Core value, ICOMObject caller, string name, object argument1, object argument2, object argument3, object argument4) where T : struct
         {
             object[] args = Invoker.ValidateParamsArray(argument1, argument2, argument3, argument4);
-            return ExecuteStructPropertyGet<T>(value, caller, name, args);
+            return ExecuteStructPropertyGetInternal<T>(value, caller, name, args);
         }
 
         /// <summary>
@@ -1239,14 +1397,26 @@ namespace NetOffice
         public static T ExecuteStructPropertyGet<T>(this Core value, ICOMObject caller, string name, object[] paramsArray) where T : struct
         {
             object[] args = Invoker.ValidateParamsArray(paramsArray);
-            object returnItem = value.Invoker.PropertyGet(caller, name, args);
+            return ExecuteStructPropertyGetInternal<T>(value, caller, name, args);
+        }
+
+        /// <summary>
+        /// Execute a property get with struct return value
+        /// </summary>
+        /// <param name="value">core invoker</param>
+        /// <param name="caller">calling instance</param>
+        /// <param name="name">property name</param>
+        /// <param name="validatedArgs">validated arguments as any</param>
+        internal static T ExecuteStructPropertyGetInternal<T>(this Core value, ICOMObject caller, string name, object[] validatedArgs) where T : struct
+        {
+            object returnItem = value.Invoker.PropertyGet(caller, name, validatedArgs);
             object intReturnItem = Convert.ToInt32(returnItem);
             T newObject = (T)intReturnItem;
             return newObject;
         }
 
         #endregion
-        
+
         #region ExecuteReferencePropertyGet
 
         /// <summary>
@@ -1257,7 +1427,7 @@ namespace NetOffice
         /// <param name="name">property name</param>
         public static ICOMObject ExecuteReferencePropertyGet(this Core value, ICOMObject caller, string name) 
         {
-            return ExecuteReferencePropertyGet(value, caller, name, _emptyParams);
+            return ExecuteReferencePropertyGetInternal(value, caller, name, _emptyParams);
         }
 
         /// <summary>
@@ -1270,7 +1440,7 @@ namespace NetOffice
         public static ICOMObject ExecuteReferencePropertyGet(this Core value, ICOMObject caller, string name, object argument)
         {
             object[] args = Invoker.ValidateParamsArray(argument);
-            return ExecuteReferencePropertyGet(value, caller, name, args);
+            return ExecuteReferencePropertyGetInternal(value, caller, name, args);
         }
 
         /// <summary>
@@ -1284,7 +1454,7 @@ namespace NetOffice
         public static ICOMObject ExecuteReferencePropertyGet(this Core value, ICOMObject caller, string name, object argument1, object argument2)
         {
             object[] args = Invoker.ValidateParamsArray(argument1, argument2);
-            return ExecuteReferencePropertyGet(value, caller, name, args);
+            return ExecuteReferencePropertyGetInternal(value, caller, name, args);
         }
 
         /// <summary>
@@ -1299,7 +1469,7 @@ namespace NetOffice
         public static ICOMObject ExecuteReferencePropertyGet(this Core value, ICOMObject caller, string name, object argument1, object argument2, object argument3)
         {
             object[] args = Invoker.ValidateParamsArray(argument1, argument2, argument3);
-            return ExecuteReferencePropertyGet(value, caller, name, args);
+            return ExecuteReferencePropertyGetInternal(value, caller, name, args);
         }
 
         /// <summary>
@@ -1315,7 +1485,7 @@ namespace NetOffice
         public static ICOMObject ExecuteReferencePropertyGet(this Core value, ICOMObject caller, string name, object argument1, object argument2, object argument3, object argument4)
         {
             object[] args = Invoker.ValidateParamsArray(argument1, argument2, argument3);
-            return ExecuteReferencePropertyGet(value, caller, name, args);
+            return ExecuteReferencePropertyGetInternal(value, caller, name, args);
         }
 
         /// <summary>
@@ -1328,7 +1498,19 @@ namespace NetOffice
         public static ICOMObject ExecuteReferencePropertyGet(this Core value, ICOMObject caller, string name, object[] paramsArray)
         {
             object[] args = Invoker.ValidateParamsArray(paramsArray);
-            object returnItem = value.Invoker.PropertyGet(caller, name, args);
+            return ExecuteReferencePropertyGetInternal(value, caller, name, args);
+        }
+
+        /// <summary>
+        /// Execute a property get with COM reference type return value
+        /// </summary>
+        /// <param name="value">core invoker</param>
+        /// <param name="caller">calling instance</param>
+        /// <param name="name">property name</param>
+        /// <param name="validatedArgs">validated arguments as any</param>
+        internal static ICOMObject ExecuteReferencePropertyGetInternal(this Core value, ICOMObject caller, string name, object[] validatedArgs)
+        {
+            object returnItem = value.Invoker.PropertyGet(caller, name, validatedArgs);
             ICOMObject newObject = value.CreateObjectFromComProxy(caller, returnItem, true);
             return newObject;
         }
@@ -1345,7 +1527,7 @@ namespace NetOffice
         /// <param name="name">property name</param>
         public static T ExecuteReferencePropertyGet<T>(this Core value, ICOMObject caller, string name) where T : class, ICOMObject
         {
-            return ExecuteReferencePropertyGet<T>(value, caller, name, _emptyParams);
+            return ExecuteReferencePropertyGetInternal<T>(value, caller, name, _emptyParams);
         }
 
         /// <summary>
@@ -1358,7 +1540,7 @@ namespace NetOffice
         public static T ExecuteReferencePropertyGet<T>(this Core value, ICOMObject caller, string name, object argument) where T : class, ICOMObject
         {
             object[] args = Invoker.ValidateParamsArray(argument);
-            return ExecuteReferencePropertyGet<T>(value, caller, name, args);
+            return ExecuteReferencePropertyGetInternal<T>(value, caller, name, args);
         }
 
         /// <summary>
@@ -1372,7 +1554,7 @@ namespace NetOffice
         public static T ExecuteReferencePropertyGet<T>(this Core value, ICOMObject caller, string name, object argument1, object argument2) where T : class, ICOMObject
         {
             object[] args = Invoker.ValidateParamsArray(argument1, argument2);
-            return ExecuteReferencePropertyGet<T>(value, caller, name, args);
+            return ExecuteReferencePropertyGetInternal<T>(value, caller, name, args);
         }
 
         /// <summary>
@@ -1387,7 +1569,7 @@ namespace NetOffice
         public static T ExecuteReferencePropertyGet<T>(this Core value, ICOMObject caller, string name, object argument1, object argument2, object argument3) where T : class, ICOMObject
         {
             object[] args = Invoker.ValidateParamsArray(argument1, argument2, argument3);
-            return ExecuteReferencePropertyGet<T>(value, caller, name, args);
+            return ExecuteReferencePropertyGetInternal<T>(value, caller, name, args);
         }
 
         /// <summary>
@@ -1403,7 +1585,7 @@ namespace NetOffice
         public static T ExecuteReferencePropertyGet<T>(this Core value, ICOMObject caller, string name, object argument1, object argument2, object argument3, object argument4) where T : class, ICOMObject
         {
             object[] args = Invoker.ValidateParamsArray(argument1, argument2, argument3, argument4);
-            return ExecuteReferencePropertyGet<T>(value, caller, name, args);
+            return ExecuteReferencePropertyGetInternal<T>(value, caller, name, args);
         }
 
         /// <summary>
@@ -1416,7 +1598,19 @@ namespace NetOffice
         public static T ExecuteReferencePropertyGet<T>(this Core value, ICOMObject caller, string name, object[] paramsArray) where T : class, ICOMObject
         {
             object[] args = Invoker.ValidateParamsArray(paramsArray);
-            object returnItem = value.Invoker.PropertyGet(caller, name, args);
+            return ExecuteReferencePropertyGetInternal<T>(value, caller, name, args);
+        }
+
+        /// <summary>
+        /// Execute a property get with COM reference type return value
+        /// </summary>
+        /// <param name="value">core invoker</param>
+        /// <param name="caller">calling instance</param>
+        /// <param name="name">property name</param>
+        /// <param name="validatedArgs">validated arguments as any</param>
+        internal static T ExecuteReferencePropertyGetInternal<T>(this Core value, ICOMObject caller, string name, object[] validatedArgs) where T : class, ICOMObject
+        {
+            object returnItem = value.Invoker.PropertyGet(caller, name, validatedArgs);
             T newObject = value.CreateObjectFromComProxy(caller, returnItem, true) as T;
             return newObject;
         }
@@ -1433,7 +1627,7 @@ namespace NetOffice
         /// <param name="name">property name</param>
         public static T ExecuteBaseReferencePropertyGet<T>(this Core value, ICOMObject caller, string name) where T : class, ICOMObject
         {
-            return ExecuteBaseReferencePropertyGet<T>(value, caller, name, _emptyParams);
+            return ExecuteBaseReferencePropertyGetInternal<T>(value, caller, name, _emptyParams);
         }
 
         /// <summary>
@@ -1446,7 +1640,7 @@ namespace NetOffice
         public static T ExecuteBaseReferencePropertyGet<T>(this Core value, ICOMObject caller, string name, object argument) where T : class, ICOMObject
         {
             object[] args = Invoker.ValidateParamsArray(argument);
-            return ExecuteBaseReferencePropertyGet<T>(value, caller, name, args);
+            return ExecuteBaseReferencePropertyGetInternal<T>(value, caller, name, args);
         }
 
         /// <summary>
@@ -1460,7 +1654,7 @@ namespace NetOffice
         public static T ExecuteBaseReferencePropertyGet<T>(this Core value, ICOMObject caller, string name, object argument1, object argument2) where T : class, ICOMObject
         {
             object[] args = Invoker.ValidateParamsArray(argument1, argument2);
-            return ExecuteBaseReferencePropertyGet<T>(value, caller, name, args);
+            return ExecuteBaseReferencePropertyGetInternal<T>(value, caller, name, args);
         }
 
         /// <summary>
@@ -1475,7 +1669,7 @@ namespace NetOffice
         public static T ExecuteBaseReferencePropertyGet<T>(this Core value, ICOMObject caller, string name, object argument1, object argument2, object argument3) where T : class, ICOMObject
         {
             object[] args = Invoker.ValidateParamsArray(argument1, argument2, argument3);
-            return ExecuteBaseReferencePropertyGet<T>(value, caller, name, args);
+            return ExecuteBaseReferencePropertyGetInternal<T>(value, caller, name, args);
         }
 
         /// <summary>
@@ -1491,7 +1685,7 @@ namespace NetOffice
         public static T ExecuteBaseReferencePropertyGet<T>(this Core value, ICOMObject caller, string name, object argument1, object argument2, object argument3, object argument4) where T : class, ICOMObject
         {
             object[] args = Invoker.ValidateParamsArray(argument1, argument2, argument3, argument4);
-            return ExecuteBaseReferencePropertyGet<T>(value, caller, name, args);
+            return ExecuteBaseReferencePropertyGetInternal<T>(value, caller, name, args);
         }
 
         /// <summary>
@@ -1504,13 +1698,25 @@ namespace NetOffice
         public static T ExecuteBaseReferencePropertyGet<T>(this Core value, ICOMObject caller, string name, object[] paramsArray) where T : class, ICOMObject
         {
             object[] args = Invoker.ValidateParamsArray(paramsArray);
-            object returnItem = value.Invoker.PropertyGet(caller, name, args);
+            return ExecuteBaseReferencePropertyGetInternal<T>(value, caller, name, args);
+        }
+
+        /// <summary>
+        /// Execute a property get with COM reference type return value
+        /// </summary>
+        /// <param name="value">core invoker</param>
+        /// <param name="caller">calling instance</param>
+        /// <param name="name">property name</param>
+        /// <param name="validatedArgs">validated arguments as any</param>
+        internal static T ExecuteBaseReferencePropertyGetInternal<T>(this Core value, ICOMObject caller, string name, object[] validatedArgs) where T : class, ICOMObject
+        {
+            object returnItem = value.Invoker.PropertyGet(caller, name, validatedArgs);
             T newObject = value.CreateObjectFromComProxy(caller, returnItem, true) as T;
             return newObject;
         }
 
         #endregion
-        
+
         #region ExecuteKnownReferencePropertyGet<T>
 
         /// <summary>
@@ -1522,7 +1728,7 @@ namespace NetOffice
         /// <param name="knownType">type of T - given to increase performance</param>
         public static T ExecuteKnownReferencePropertyGet<T>(this Core value, ICOMObject caller, string name, Type knownType) where T : class, ICOMObject
         {
-            return ExecuteKnownReferencePropertyGet<T>(value, caller, name, knownType, _emptyParams);
+            return ExecuteKnownReferencePropertyGetInternal<T>(value, caller, name, knownType, _emptyParams);
         }
 
         /// <summary>
@@ -1536,7 +1742,7 @@ namespace NetOffice
         public static T ExecuteKnownReferencePropertyGet<T>(this Core value, ICOMObject caller, string name, Type knownType, object argument) where T : class, ICOMObject
         {
             object[] args = Invoker.ValidateParamsArray(argument);
-            return ExecuteKnownReferencePropertyGet<T>(value, caller, name, knownType, args);
+            return ExecuteKnownReferencePropertyGetInternal<T>(value, caller, name, knownType, args);
         }
 
         /// <summary>
@@ -1551,7 +1757,7 @@ namespace NetOffice
         public static T ExecuteKnownReferencePropertyGet<T>(this Core value, ICOMObject caller, string name, Type knownType, object argument1, object argument2) where T : class, ICOMObject
         {
             object[] args = Invoker.ValidateParamsArray(argument1, argument2);
-            return ExecuteKnownReferencePropertyGet<T>(value, caller, name, knownType, args);
+            return ExecuteKnownReferencePropertyGetInternal<T>(value, caller, name, knownType, args);
         }
 
         /// <summary>
@@ -1567,7 +1773,7 @@ namespace NetOffice
         public static T ExecuteKnownReferencePropertyGet<T>(this Core value, ICOMObject caller, string name, Type knownType, object argument1, object argument2, object argument3) where T : class, ICOMObject
         {
             object[] args = Invoker.ValidateParamsArray(argument1, argument2, argument3);
-            return ExecuteKnownReferencePropertyGet<T>(value, caller, name, knownType, args);
+            return ExecuteKnownReferencePropertyGetInternal<T>(value, caller, name, knownType, args);
         }
 
         /// <summary>
@@ -1584,7 +1790,7 @@ namespace NetOffice
         public static T ExecuteKnownReferencePropertyGet<T>(this Core value, ICOMObject caller, string name, Type knownType, object argument1, object argument2, object argument3, object argument4) where T : class, ICOMObject
         {
             object[] args = Invoker.ValidateParamsArray(argument1, argument2, argument3, argument4);
-            return ExecuteKnownReferencePropertyGet<T>(value, caller, name, knownType, args);
+            return ExecuteKnownReferencePropertyGetInternal<T>(value, caller, name, knownType, args);
         }
 
         /// <summary>
@@ -1598,7 +1804,20 @@ namespace NetOffice
         public static T ExecuteKnownReferencePropertyGet<T>(this Core value, ICOMObject caller, string name, Type knownType, object[] paramsArray) where T : class, ICOMObject
         {
             object[] args = Invoker.ValidateParamsArray(paramsArray);
-            object returnItem = value.Invoker.PropertyGet(caller, name, args);
+            return ExecuteKnownReferencePropertyGetInternal<T>(value, caller, name, knownType, args);
+        }
+
+        /// <summary>
+        /// Execute a property get with known COM reference type return value
+        /// </summary>
+        /// <param name="value">core invoker</param>
+        /// <param name="caller">calling instance</param>
+        /// <param name="name">property name</param>
+        /// <param name="knownType">type of T - given to increase performance</param>
+        /// <param name="validatedArgs">validated arguments as any</param>
+        internal static T ExecuteKnownReferencePropertyGetInternal<T>(this Core value, ICOMObject caller, string name, Type knownType, object[] validatedArgs) where T : class, ICOMObject
+        {
+            object returnItem = value.Invoker.PropertyGet(caller, name, validatedArgs);
             return value.CreateKnownObjectFromComProxy(caller, returnItem, knownType) as T;
         }
 
@@ -1614,7 +1833,7 @@ namespace NetOffice
         /// <param name="name">property name</param>
         public static object ExecuteVariantPropertyGet(this Core value, ICOMObject caller, string name)
         {
-            return ExecuteVariantPropertyGet(value, caller, name, _emptyParams);
+            return ExecuteVariantPropertyGetInternal(value, caller, name, _emptyParams);
         }
 
         /// <summary>
@@ -1627,7 +1846,7 @@ namespace NetOffice
         public static object ExecuteVariantPropertyGet(this Core value, ICOMObject caller, string name, object argument)
         {
             object[] args = Invoker.ValidateParamsArray(argument);
-            return ExecuteVariantPropertyGet(value, caller, name, args);
+            return ExecuteVariantPropertyGetInternal(value, caller, name, args);
         }
 
         /// <summary>
@@ -1641,7 +1860,7 @@ namespace NetOffice
         public static object ExecuteVariantPropertyGet(this Core value, ICOMObject caller, string name, object argument1, object argument2)
         {
             object[] args = Invoker.ValidateParamsArray(argument1, argument2);
-            return ExecuteVariantPropertyGet(value, caller, name, args);
+            return ExecuteVariantPropertyGetInternal(value, caller, name, args);
         }
 
         /// <summary>
@@ -1656,7 +1875,7 @@ namespace NetOffice
         public static object ExecuteVariantPropertyGet(this Core value, ICOMObject caller, string name, object argument1, object argument2, object argument3)
         {
             object[] args = Invoker.ValidateParamsArray(argument1, argument2, argument3);
-            return ExecuteVariantPropertyGet(value, caller, name, args);
+            return ExecuteVariantPropertyGetInternal(value, caller, name, args);
         }
 
         /// <summary>
@@ -1672,7 +1891,7 @@ namespace NetOffice
         public static object ExecuteVariantPropertyGet(this Core value, ICOMObject caller, string name, object argument1, object argument2, object argument3, object argument4)
         {
             object[] args = Invoker.ValidateParamsArray(argument1, argument2, argument3, argument4);
-            return ExecuteVariantPropertyGet(value, caller, name, args);
+            return ExecuteVariantPropertyGetInternal(value, caller, name, args);
         }
 
         /// <summary>
@@ -1685,7 +1904,19 @@ namespace NetOffice
         public static object ExecuteVariantPropertyGet(this Core value, ICOMObject caller, string name, object[] paramsArray)
         {
             object[] args = Invoker.ValidateParamsArray(paramsArray);
-            object returnItem = value.Invoker.PropertyGet(caller, name, args);
+            return ExecuteVariantPropertyGetInternal(value, caller, name, args);
+        }
+
+        /// <summary>
+        /// Execute a property get with unknown return value
+        /// </summary>
+        /// <param name="value">core invoker</param>
+        /// <param name="caller">calling instance</param>
+        /// <param name="name">property name</param>
+        /// <param name="validatedArgs">validated arguments as any</param>
+        internal static object ExecuteVariantPropertyGetInternal(this Core value, ICOMObject caller, string name, object[] validatedArgs)
+        {
+            object returnItem = value.Invoker.PropertyGet(caller, name, validatedArgs);
             if ((null != returnItem) && (returnItem is MarshalByRefObject))
             {
                 ICOMObject newObject = value.CreateObjectFromComProxy(caller, returnItem, false);
@@ -1696,7 +1927,7 @@ namespace NetOffice
                 return returnItem;
             }
         }
-        
+
         #endregion
     }
 }

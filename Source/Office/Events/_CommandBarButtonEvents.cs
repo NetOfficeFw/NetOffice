@@ -17,7 +17,9 @@ namespace NetOffice.OfficeApi.Events
 	public interface _CommandBarButtonEvents
 	{
 		[SupportByVersion("Office", 9,10,11,12,14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1)]
+        [SinkArgument("ctrl", typeof(CommandBarButton))]
+        [SinkArgument("cancelDefault", SinkArgumentType.Bool)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1)]
 		void Click([In, MarshalAs(UnmanagedType.IDispatch)] object ctrl, [In] [Out] ref object cancelDefault);
 	}
 	

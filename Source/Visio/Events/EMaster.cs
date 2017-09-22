@@ -17,107 +17,133 @@ namespace NetOffice.VisioApi.Events
 	public interface EMaster
 	{
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(8200)]
+        [SinkArgument("master", typeof(VisioApi.IVMaster))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(8200)]
 		void MasterChanged([In, MarshalAs(UnmanagedType.IDispatch)] object master);
 
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(16392)]
+        [SinkArgument("master", typeof(VisioApi.IVMaster))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(16392)]
 		void BeforeMasterDelete([In, MarshalAs(UnmanagedType.IDispatch)] object master);
 
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(32832)]
+        [SinkArgument("shape", typeof(VisioApi.IVShape))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(32832)]
 		void ShapeAdded([In, MarshalAs(UnmanagedType.IDispatch)] object shape);
 
-		[SupportByVersion("Visio", 11,12,14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(901)]
+        [SupportByVersion("Visio", 11,12,14,15,16)]
+        [SinkArgument("selection", typeof(VisioApi.IVSelection))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(901)]
 		void BeforeSelectionDelete([In, MarshalAs(UnmanagedType.IDispatch)] object selection);
 
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(8256)]
+        [SinkArgument("shape", typeof(VisioApi.IVShape))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(8256)]
 		void ShapeChanged([In, MarshalAs(UnmanagedType.IDispatch)] object shape);
 
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(902)]
+        [SinkArgument("selection", typeof(VisioApi.IVSelection))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(902)]
 		void SelectionAdded([In, MarshalAs(UnmanagedType.IDispatch)] object selection);
 
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(16448)]
+        [SinkArgument("shape", typeof(VisioApi.IVShape))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(16448)]
 		void BeforeShapeDelete([In, MarshalAs(UnmanagedType.IDispatch)] object shape);
 
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(8320)]
+        [SinkArgument("shape", typeof(VisioApi.IVShape))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(8320)]
 		void TextChanged([In, MarshalAs(UnmanagedType.IDispatch)] object shape);
 
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(10240)]
+        [SinkArgument("cell", typeof(VisioApi.IVCell))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(10240)]
 		void CellChanged([In, MarshalAs(UnmanagedType.IDispatch)] object cell);
 
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(12288)]
+        [SinkArgument("cell", typeof(VisioApi.IVCell))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(12288)]
 		void FormulaChanged([In, MarshalAs(UnmanagedType.IDispatch)] object cell);
 
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(33024)]
+        [SinkArgument("connects", typeof(VisioApi.IVConnects))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(33024)]
 		void ConnectionsAdded([In, MarshalAs(UnmanagedType.IDispatch)] object connects);
 
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(16640)]
+        [SinkArgument("connects", typeof(VisioApi.IVConnects))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(16640)]
 		void ConnectionsDeleted([In, MarshalAs(UnmanagedType.IDispatch)] object connects);
 
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(400)]
+        [SinkArgument("master", typeof(VisioApi.IVMaster))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(400)]
 		void QueryCancelMasterDelete([In, MarshalAs(UnmanagedType.IDispatch)] object master);
 
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(401)]
+        [SinkArgument("master", typeof(VisioApi.IVMaster))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(401)]
 		void MasterDeleteCanceled([In, MarshalAs(UnmanagedType.IDispatch)] object master);
 
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(802)]
+        [SinkArgument("shape", typeof(VisioApi.IVShape))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(802)]
 		void ShapeParentChanged([In, MarshalAs(UnmanagedType.IDispatch)] object shape);
 
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(803)]
+        [SinkArgument("shape", typeof(VisioApi.IVShape))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(803)]
 		void BeforeShapeTextEdit([In, MarshalAs(UnmanagedType.IDispatch)] object shape);
 
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(804)]
+        [SinkArgument("shape", typeof(VisioApi.IVShape))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(804)]
 		void ShapeExitedTextEdit([In, MarshalAs(UnmanagedType.IDispatch)] object shape);
 
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(903)]
+        [SinkArgument("selection", typeof(VisioApi.IVSelection))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(903)]
 		void QueryCancelSelectionDelete([In, MarshalAs(UnmanagedType.IDispatch)] object selection);
 
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(904)]
+        [SinkArgument("selection", typeof(VisioApi.IVSelection))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(904)]
 		void SelectionDeleteCanceled([In, MarshalAs(UnmanagedType.IDispatch)] object selection);
 
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(905)]
+        [SinkArgument("selection", typeof(VisioApi.IVSelection))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(905)]
 		void QueryCancelUngroup([In, MarshalAs(UnmanagedType.IDispatch)] object selection);
 
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(906)]
+        [SinkArgument("selection", typeof(VisioApi.IVSelection))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(906)]
 		void UngroupCanceled([In, MarshalAs(UnmanagedType.IDispatch)] object selection);
 
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(907)]
+        [SinkArgument("selection", typeof(VisioApi.IVSelection))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(907)]
 		void QueryCancelConvertToGroup([In, MarshalAs(UnmanagedType.IDispatch)] object selection);
 
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(908)]
+        [SinkArgument("selection", typeof(VisioApi.IVSelection))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(908)]
 		void ConvertToGroupCanceled([In, MarshalAs(UnmanagedType.IDispatch)] object selection);
 
 		[SupportByVersion("Visio", 12,14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(909)]
+        [SinkArgument("selection", typeof(VisioApi.IVSelection))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(909)]
 		void QueryCancelGroup([In, MarshalAs(UnmanagedType.IDispatch)] object selection);
 
 		[SupportByVersion("Visio", 12,14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(910)]
+        [SinkArgument("selection", typeof(VisioApi.IVSelection))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(910)]
 		void GroupCanceled([In, MarshalAs(UnmanagedType.IDispatch)] object selection);
 
 		[SupportByVersion("Visio", 12,14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(807)]
+        [SinkArgument("shape", typeof(VisioApi.IVShape))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(807)]
 		void ShapeDataGraphicChanged([In, MarshalAs(UnmanagedType.IDispatch)] object shape);
 	}
 
@@ -146,7 +172,7 @@ namespace NetOffice.VisioApi.Events
 
 		#region EMaster
 		
-		public void MasterChanged([In, MarshalAs(UnmanagedType.IDispatch)] object master)
+        public void MasterChanged([In, MarshalAs(UnmanagedType.IDispatch)] object master)
 		{
             if (!Validate("MasterChanged"))
             {
@@ -154,13 +180,13 @@ namespace NetOffice.VisioApi.Events
                 return;
             }
 
-			NetOffice.VisioApi.IVMaster newMaster = Factory.CreateKnownObjectFromComProxy<NetOffice.VisioApi.IVMaster>(EventClass, master, NetOffice.VisioApi.IVMaster.LateBindingApiWrapperType);
-			object[] paramsArray = new object[1];
+            NetOffice.VisioApi.IVMaster newMaster = Factory.CreateEventArgumentObjectFromComProxy(EventClass, master) as NetOffice.VisioApi.IVMaster;
+            object[] paramsArray = new object[1];
 			paramsArray[0] = newMaster;
 			EventBinding.RaiseCustomEvent("MasterChanged", ref paramsArray);
 		}
 
-		public void BeforeMasterDelete([In, MarshalAs(UnmanagedType.IDispatch)] object master)
+        public void BeforeMasterDelete([In, MarshalAs(UnmanagedType.IDispatch)] object master)
 		{
             if (!Validate("BeforeMasterDelete"))
             {
@@ -168,13 +194,13 @@ namespace NetOffice.VisioApi.Events
                 return;
             }
 
-            NetOffice.VisioApi.IVMaster newMaster = Factory.CreateKnownObjectFromComProxy<NetOffice.VisioApi.IVMaster>(EventClass, master, NetOffice.VisioApi.IVMaster.LateBindingApiWrapperType);
+            NetOffice.VisioApi.IVMaster newMaster = Factory.CreateEventArgumentObjectFromComProxy(EventClass, master) as NetOffice.VisioApi.IVMaster;
             object[] paramsArray = new object[1];
 			paramsArray[0] = newMaster;
 			EventBinding.RaiseCustomEvent("BeforeMasterDelete", ref paramsArray);
 		}
 
-		public void ShapeAdded([In, MarshalAs(UnmanagedType.IDispatch)] object shape)
+        public void ShapeAdded([In, MarshalAs(UnmanagedType.IDispatch)] object shape)
 		{
             if (!Validate("ShapeAdded"))
             {
@@ -182,13 +208,13 @@ namespace NetOffice.VisioApi.Events
                 return;
             }
 
-            NetOffice.VisioApi.IVShape newShape = Factory.CreateKnownObjectFromComProxy<NetOffice.VisioApi.IVShape>(EventClass, shape, NetOffice.VisioApi.IVShape.LateBindingApiWrapperType);
-			object[] paramsArray = new object[1];
+            NetOffice.VisioApi.IVShape newShape = Factory.CreateEventArgumentObjectFromComProxy(EventClass, shape) as NetOffice.VisioApi.IVShape;
+            object[] paramsArray = new object[1];
 			paramsArray[0] = newShape;
 			EventBinding.RaiseCustomEvent("ShapeAdded", ref paramsArray);
 		}
 
-		public void BeforeSelectionDelete([In, MarshalAs(UnmanagedType.IDispatch)] object selection)
+        public void BeforeSelectionDelete([In, MarshalAs(UnmanagedType.IDispatch)] object selection)
 		{
             if (!Validate("BeforeSelectionDelete"))
             {
@@ -196,13 +222,13 @@ namespace NetOffice.VisioApi.Events
                 return;
             }
 
-			NetOffice.VisioApi.IVSelection newSelection = Factory.CreateKnownObjectFromComProxy<NetOffice.VisioApi.IVSelection>(EventClass, selection, NetOffice.VisioApi.IVSelection.LateBindingApiWrapperType);
-			object[] paramsArray = new object[1];
+            NetOffice.VisioApi.IVSelection newSelection = Factory.CreateEventArgumentObjectFromComProxy(EventClass, selection) as NetOffice.VisioApi.IVSelection;
+            object[] paramsArray = new object[1];
 			paramsArray[0] = newSelection;
 			EventBinding.RaiseCustomEvent("BeforeSelectionDelete", ref paramsArray);
 		}
 
-		public void ShapeChanged([In, MarshalAs(UnmanagedType.IDispatch)] object shape)
+        public void ShapeChanged([In, MarshalAs(UnmanagedType.IDispatch)] object shape)
 		{
             if (!Validate("ShapeChanged"))
             {
@@ -210,13 +236,13 @@ namespace NetOffice.VisioApi.Events
                 return;
             }
 
-            NetOffice.VisioApi.IVShape newShape = Factory.CreateKnownObjectFromComProxy<NetOffice.VisioApi.IVShape>(EventClass, shape, NetOffice.VisioApi.IVShape.LateBindingApiWrapperType);
-			object[] paramsArray = new object[1];
+            NetOffice.VisioApi.IVShape newShape = Factory.CreateEventArgumentObjectFromComProxy(EventClass, shape) as NetOffice.VisioApi.IVShape;
+            object[] paramsArray = new object[1];
 			paramsArray[0] = newShape;
 			EventBinding.RaiseCustomEvent("ShapeChanged", ref paramsArray);
 		}
 
-		public void SelectionAdded([In, MarshalAs(UnmanagedType.IDispatch)] object selection)
+        public void SelectionAdded([In, MarshalAs(UnmanagedType.IDispatch)] object selection)
 		{
             if (!Validate("SelectionAdded"))
             {
@@ -224,13 +250,13 @@ namespace NetOffice.VisioApi.Events
                 return;
             }
 
-            NetOffice.VisioApi.IVSelection newSelection = Factory.CreateKnownObjectFromComProxy<NetOffice.VisioApi.IVSelection>(EventClass, selection, NetOffice.VisioApi.IVSelection.LateBindingApiWrapperType);
-			object[] paramsArray = new object[1];
+            NetOffice.VisioApi.IVSelection newSelection = Factory.CreateEventArgumentObjectFromComProxy(EventClass, selection) as NetOffice.VisioApi.IVSelection;
+            object[] paramsArray = new object[1];
 			paramsArray[0] = newSelection;
 			EventBinding.RaiseCustomEvent("SelectionAdded", ref paramsArray);
 		}
 
-		public void BeforeShapeDelete([In, MarshalAs(UnmanagedType.IDispatch)] object shape)
+        public void BeforeShapeDelete([In, MarshalAs(UnmanagedType.IDispatch)] object shape)
 		{
             if (!Validate("BeforeShapeDelete"))
             {
@@ -238,13 +264,13 @@ namespace NetOffice.VisioApi.Events
                 return;
             }
 
-            NetOffice.VisioApi.IVShape newShape = Factory.CreateKnownObjectFromComProxy<NetOffice.VisioApi.IVShape>(EventClass, shape, NetOffice.VisioApi.IVShape.LateBindingApiWrapperType);
-			object[] paramsArray = new object[1];
+            NetOffice.VisioApi.IVShape newShape = Factory.CreateEventArgumentObjectFromComProxy(EventClass, shape) as NetOffice.VisioApi.IVShape;
+            object[] paramsArray = new object[1];
 			paramsArray[0] = newShape;
 			EventBinding.RaiseCustomEvent("BeforeShapeDelete", ref paramsArray);
 		}
 
-		public void TextChanged([In, MarshalAs(UnmanagedType.IDispatch)] object shape)
+        public void TextChanged([In, MarshalAs(UnmanagedType.IDispatch)] object shape)
 		{
             if (!Validate("TextChanged"))
             {
@@ -252,13 +278,13 @@ namespace NetOffice.VisioApi.Events
                 return;
             }
 
-            NetOffice.VisioApi.IVShape newShape = Factory.CreateKnownObjectFromComProxy<NetOffice.VisioApi.IVShape>(EventClass, shape, NetOffice.VisioApi.IVShape.LateBindingApiWrapperType);
+            NetOffice.VisioApi.IVShape newShape = Factory.CreateEventArgumentObjectFromComProxy(EventClass, shape) as NetOffice.VisioApi.IVShape;
             object[] paramsArray = new object[1];
 			paramsArray[0] = newShape;
 			EventBinding.RaiseCustomEvent("TextChanged", ref paramsArray);
 		}
 
-		public void CellChanged([In, MarshalAs(UnmanagedType.IDispatch)] object cell)
+        public void CellChanged([In, MarshalAs(UnmanagedType.IDispatch)] object cell)
 		{
             if (!Validate("CellChanged"))
             {
@@ -266,13 +292,13 @@ namespace NetOffice.VisioApi.Events
                 return;
             }
 
-            NetOffice.VisioApi.IVCell newCell = Factory.CreateKnownObjectFromComProxy<NetOffice.VisioApi.IVCell>(EventClass, cell, NetOffice.VisioApi.IVCell.LateBindingApiWrapperType);
-			object[] paramsArray = new object[1];
+            NetOffice.VisioApi.IVCell newCell = Factory.CreateEventArgumentObjectFromComProxy(EventClass, cell) as NetOffice.VisioApi.IVCell;
+            object[] paramsArray = new object[1];
 			paramsArray[0] = newCell;
 			EventBinding.RaiseCustomEvent("CellChanged", ref paramsArray);
 		}
 
-		public void FormulaChanged([In, MarshalAs(UnmanagedType.IDispatch)] object cell)
+        public void FormulaChanged([In, MarshalAs(UnmanagedType.IDispatch)] object cell)
 		{
             if (!Validate("FormulaChanged"))
             {
@@ -280,13 +306,13 @@ namespace NetOffice.VisioApi.Events
                 return;
             }
 
-            NetOffice.VisioApi.IVCell newCell = Factory.CreateKnownObjectFromComProxy<NetOffice.VisioApi.IVCell>(EventClass, cell, NetOffice.VisioApi.IVCell.LateBindingApiWrapperType);
+            NetOffice.VisioApi.IVCell newCell = Factory.CreateEventArgumentObjectFromComProxy(EventClass, cell) as NetOffice.VisioApi.IVCell;
             object[] paramsArray = new object[1];
 			paramsArray[0] = newCell;
 			EventBinding.RaiseCustomEvent("FormulaChanged", ref paramsArray);
 		}
 
-		public void ConnectionsAdded([In, MarshalAs(UnmanagedType.IDispatch)] object connects)
+        public void ConnectionsAdded([In, MarshalAs(UnmanagedType.IDispatch)] object connects)
 		{
             if (!Validate("ConnectionsAdded"))
             {
@@ -294,13 +320,13 @@ namespace NetOffice.VisioApi.Events
                 return;
             }
 
-            NetOffice.VisioApi.IVConnects newConnects = Factory.CreateKnownObjectFromComProxy<NetOffice.VisioApi.IVConnects>(EventClass, connects, NetOffice.VisioApi.IVConnects.LateBindingApiWrapperType);
-			object[] paramsArray = new object[1];
+            NetOffice.VisioApi.IVConnects newConnects = Factory.CreateEventArgumentObjectFromComProxy(EventClass, connects) as NetOffice.VisioApi.IVConnects;
+            object[] paramsArray = new object[1];
 			paramsArray[0] = newConnects;
 			EventBinding.RaiseCustomEvent("ConnectionsAdded", ref paramsArray);
 		}
 
-		public void ConnectionsDeleted([In, MarshalAs(UnmanagedType.IDispatch)] object connects)
+        public void ConnectionsDeleted([In, MarshalAs(UnmanagedType.IDispatch)] object connects)
 		{
             if (!Validate("ConnectionsDeleted"))
             {
@@ -308,13 +334,13 @@ namespace NetOffice.VisioApi.Events
                 return;
             }
 
-            NetOffice.VisioApi.IVConnects newConnects = Factory.CreateKnownObjectFromComProxy<NetOffice.VisioApi.IVConnects>(EventClass, connects, NetOffice.VisioApi.IVConnects.LateBindingApiWrapperType);
+            NetOffice.VisioApi.IVConnects newConnects = Factory.CreateEventArgumentObjectFromComProxy(EventClass, connects) as NetOffice.VisioApi.IVConnects;
             object[] paramsArray = new object[1];
 			paramsArray[0] = newConnects;
 			EventBinding.RaiseCustomEvent("ConnectionsDeleted", ref paramsArray);
 		}
 
-		public void QueryCancelMasterDelete([In, MarshalAs(UnmanagedType.IDispatch)] object master)
+        public void QueryCancelMasterDelete([In, MarshalAs(UnmanagedType.IDispatch)] object master)
 		{
             if (!Validate("QueryCancelMasterDelete"))
             {
@@ -322,13 +348,13 @@ namespace NetOffice.VisioApi.Events
                 return;
             }
 
-            NetOffice.VisioApi.IVMaster newMaster = Factory.CreateKnownObjectFromComProxy<NetOffice.VisioApi.IVMaster>(EventClass, master, NetOffice.VisioApi.IVMaster.LateBindingApiWrapperType);
-			object[] paramsArray = new object[1];
+            NetOffice.VisioApi.IVMaster newMaster = Factory.CreateEventArgumentObjectFromComProxy(EventClass, master) as NetOffice.VisioApi.IVMaster;
+            object[] paramsArray = new object[1];
 			paramsArray[0] = newMaster;
 			EventBinding.RaiseCustomEvent("QueryCancelMasterDelete", ref paramsArray);
 		}
 
-		public void MasterDeleteCanceled([In, MarshalAs(UnmanagedType.IDispatch)] object master)
+        public void MasterDeleteCanceled([In, MarshalAs(UnmanagedType.IDispatch)] object master)
 		{
             if (!Validate("MasterDeleteCanceled"))
             {
@@ -336,13 +362,13 @@ namespace NetOffice.VisioApi.Events
                 return;
             }
 
-            NetOffice.VisioApi.IVMaster newMaster = Factory.CreateKnownObjectFromComProxy<NetOffice.VisioApi.IVMaster>(EventClass, master, NetOffice.VisioApi.IVMaster.LateBindingApiWrapperType);
+            NetOffice.VisioApi.IVMaster newMaster = Factory.CreateEventArgumentObjectFromComProxy(EventClass, master) as NetOffice.VisioApi.IVMaster;
             object[] paramsArray = new object[1];
 			paramsArray[0] = newMaster;
 			EventBinding.RaiseCustomEvent("MasterDeleteCanceled", ref paramsArray);
 		}
 
-		public void ShapeParentChanged([In, MarshalAs(UnmanagedType.IDispatch)] object shape)
+        public void ShapeParentChanged([In, MarshalAs(UnmanagedType.IDispatch)] object shape)
 		{
             if (!Validate("ShapeParentChanged"))
             {
@@ -350,13 +376,13 @@ namespace NetOffice.VisioApi.Events
                 return;
             }
 
-            NetOffice.VisioApi.IVShape newShape = Factory.CreateKnownObjectFromComProxy<NetOffice.VisioApi.IVShape>(EventClass, shape, NetOffice.VisioApi.IVShape.LateBindingApiWrapperType);
-			object[] paramsArray = new object[1];
+            NetOffice.VisioApi.IVShape newShape = Factory.CreateEventArgumentObjectFromComProxy(EventClass, shape) as NetOffice.VisioApi.IVShape;
+            object[] paramsArray = new object[1];
 			paramsArray[0] = newShape;
 			EventBinding.RaiseCustomEvent("ShapeParentChanged", ref paramsArray);
 		}
 
-		public void BeforeShapeTextEdit([In, MarshalAs(UnmanagedType.IDispatch)] object shape)
+        public void BeforeShapeTextEdit([In, MarshalAs(UnmanagedType.IDispatch)] object shape)
 		{
             if (!Validate("BeforeShapeTextEdit"))
             {
@@ -364,13 +390,13 @@ namespace NetOffice.VisioApi.Events
                 return;
             }
 
-            NetOffice.VisioApi.IVShape newShape = Factory.CreateKnownObjectFromComProxy<NetOffice.VisioApi.IVShape>(EventClass, shape, NetOffice.VisioApi.IVShape.LateBindingApiWrapperType);
+            NetOffice.VisioApi.IVShape newShape = Factory.CreateEventArgumentObjectFromComProxy(EventClass, shape) as NetOffice.VisioApi.IVShape;
             object[] paramsArray = new object[1];
 			paramsArray[0] = newShape;
 			EventBinding.RaiseCustomEvent("BeforeShapeTextEdit", ref paramsArray);
 		}
 
-		public void ShapeExitedTextEdit([In, MarshalAs(UnmanagedType.IDispatch)] object shape)
+        public void ShapeExitedTextEdit([In, MarshalAs(UnmanagedType.IDispatch)] object shape)
 		{
             if (!Validate("ShapeExitedTextEdit"))
             {
@@ -378,13 +404,13 @@ namespace NetOffice.VisioApi.Events
                 return;
             }
 
-            NetOffice.VisioApi.IVShape newShape = Factory.CreateKnownObjectFromComProxy<NetOffice.VisioApi.IVShape>(EventClass, shape, NetOffice.VisioApi.IVShape.LateBindingApiWrapperType);
+            NetOffice.VisioApi.IVShape newShape = Factory.CreateEventArgumentObjectFromComProxy(EventClass, shape) as NetOffice.VisioApi.IVShape;
             object[] paramsArray = new object[1];
 			paramsArray[0] = newShape;
 			EventBinding.RaiseCustomEvent("ShapeExitedTextEdit", ref paramsArray);
 		}
 
-		public void QueryCancelSelectionDelete([In, MarshalAs(UnmanagedType.IDispatch)] object selection)
+        public void QueryCancelSelectionDelete([In, MarshalAs(UnmanagedType.IDispatch)] object selection)
 		{
             if (!Validate("QueryCancelSelectionDelete"))
             {
@@ -392,13 +418,13 @@ namespace NetOffice.VisioApi.Events
                 return;
             }
 
-			NetOffice.VisioApi.IVSelection newSelection = Factory.CreateKnownObjectFromComProxy<NetOffice.VisioApi.IVSelection>(EventClass, selection, NetOffice.VisioApi.IVSelection.LateBindingApiWrapperType);
-			object[] paramsArray = new object[1];
+            NetOffice.VisioApi.IVSelection newSelection = Factory.CreateEventArgumentObjectFromComProxy(EventClass, selection) as NetOffice.VisioApi.IVSelection;
+            object[] paramsArray = new object[1];
 			paramsArray[0] = newSelection;
 			EventBinding.RaiseCustomEvent("QueryCancelSelectionDelete", ref paramsArray);
 		}
 
-		public void SelectionDeleteCanceled([In, MarshalAs(UnmanagedType.IDispatch)] object selection)
+        public void SelectionDeleteCanceled([In, MarshalAs(UnmanagedType.IDispatch)] object selection)
 		{
             if (!Validate("SelectionDeleteCanceled"))
             {
@@ -406,13 +432,13 @@ namespace NetOffice.VisioApi.Events
                 return;
             }
 
-            NetOffice.VisioApi.IVSelection newSelection = Factory.CreateKnownObjectFromComProxy<NetOffice.VisioApi.IVSelection>(EventClass, selection, NetOffice.VisioApi.IVSelection.LateBindingApiWrapperType);
+            NetOffice.VisioApi.IVSelection newSelection = Factory.CreateEventArgumentObjectFromComProxy(EventClass, selection) as NetOffice.VisioApi.IVSelection;
             object[] paramsArray = new object[1];
 			paramsArray[0] = newSelection;
 			EventBinding.RaiseCustomEvent("SelectionDeleteCanceled", ref paramsArray);
 		}
 
-		public void QueryCancelUngroup([In, MarshalAs(UnmanagedType.IDispatch)] object selection)
+        public void QueryCancelUngroup([In, MarshalAs(UnmanagedType.IDispatch)] object selection)
 		{
             if (!Validate("QueryCancelUngroup"))
             {
@@ -420,13 +446,13 @@ namespace NetOffice.VisioApi.Events
                 return;
             }
 
-            NetOffice.VisioApi.IVSelection newSelection = Factory.CreateKnownObjectFromComProxy<NetOffice.VisioApi.IVSelection>(EventClass, selection, NetOffice.VisioApi.IVSelection.LateBindingApiWrapperType);
+            NetOffice.VisioApi.IVSelection newSelection = Factory.CreateEventArgumentObjectFromComProxy(EventClass, selection) as NetOffice.VisioApi.IVSelection;
             object[] paramsArray = new object[1];
 			paramsArray[0] = newSelection;
 			EventBinding.RaiseCustomEvent("QueryCancelUngroup", ref paramsArray);
 		}
 
-		public void UngroupCanceled([In, MarshalAs(UnmanagedType.IDispatch)] object selection)
+        public void UngroupCanceled([In, MarshalAs(UnmanagedType.IDispatch)] object selection)
 		{
             if (!Validate("QueryCancelUngroup"))
             {
@@ -434,13 +460,13 @@ namespace NetOffice.VisioApi.Events
                 return;
             }
 
-            NetOffice.VisioApi.IVSelection newSelection = Factory.CreateKnownObjectFromComProxy<NetOffice.VisioApi.IVSelection>(EventClass, selection, NetOffice.VisioApi.IVSelection.LateBindingApiWrapperType);
+            NetOffice.VisioApi.IVSelection newSelection = Factory.CreateEventArgumentObjectFromComProxy(EventClass, selection) as NetOffice.VisioApi.IVSelection;
             object[] paramsArray = new object[1];
 			paramsArray[0] = newSelection;
 			EventBinding.RaiseCustomEvent("UngroupCanceled", ref paramsArray);
 		}
 
-		public void QueryCancelConvertToGroup([In, MarshalAs(UnmanagedType.IDispatch)] object selection)
+        public void QueryCancelConvertToGroup([In, MarshalAs(UnmanagedType.IDispatch)] object selection)
 		{
             if (!Validate("QueryCancelConvertToGroup"))
             {
@@ -448,13 +474,13 @@ namespace NetOffice.VisioApi.Events
                 return;
             }
 
-            NetOffice.VisioApi.IVSelection newSelection = Factory.CreateKnownObjectFromComProxy<NetOffice.VisioApi.IVSelection>(EventClass, selection, NetOffice.VisioApi.IVSelection.LateBindingApiWrapperType);
+            NetOffice.VisioApi.IVSelection newSelection = Factory.CreateEventArgumentObjectFromComProxy(EventClass, selection) as NetOffice.VisioApi.IVSelection;
             object[] paramsArray = new object[1];
 			paramsArray[0] = newSelection;
 			EventBinding.RaiseCustomEvent("QueryCancelConvertToGroup", ref paramsArray);
 		}
 
-		public void ConvertToGroupCanceled([In, MarshalAs(UnmanagedType.IDispatch)] object selection)
+        public void ConvertToGroupCanceled([In, MarshalAs(UnmanagedType.IDispatch)] object selection)
 		{
             if (!Validate("ConvertToGroupCanceled"))
             {
@@ -462,13 +488,13 @@ namespace NetOffice.VisioApi.Events
                 return;
             }
 
-            NetOffice.VisioApi.IVSelection newSelection = Factory.CreateKnownObjectFromComProxy<NetOffice.VisioApi.IVSelection>(EventClass, selection, NetOffice.VisioApi.IVSelection.LateBindingApiWrapperType);
+            NetOffice.VisioApi.IVSelection newSelection = Factory.CreateEventArgumentObjectFromComProxy(EventClass, selection) as NetOffice.VisioApi.IVSelection;
             object[] paramsArray = new object[1];
 			paramsArray[0] = newSelection;
 			EventBinding.RaiseCustomEvent("ConvertToGroupCanceled", ref paramsArray);
 		}
 
-		public void QueryCancelGroup([In, MarshalAs(UnmanagedType.IDispatch)] object selection)
+        public void QueryCancelGroup([In, MarshalAs(UnmanagedType.IDispatch)] object selection)
 		{
             if (!Validate("QueryCancelGroup"))
             {
@@ -476,13 +502,13 @@ namespace NetOffice.VisioApi.Events
                 return;
             }
 
-            NetOffice.VisioApi.IVSelection newSelection = Factory.CreateKnownObjectFromComProxy<NetOffice.VisioApi.IVSelection>(EventClass, selection, NetOffice.VisioApi.IVSelection.LateBindingApiWrapperType);
+            NetOffice.VisioApi.IVSelection newSelection = Factory.CreateEventArgumentObjectFromComProxy(EventClass, selection) as NetOffice.VisioApi.IVSelection;
             object[] paramsArray = new object[1];
 			paramsArray[0] = newSelection;
 			EventBinding.RaiseCustomEvent("QueryCancelGroup", ref paramsArray);
 		}
-
-		public void GroupCanceled([In, MarshalAs(UnmanagedType.IDispatch)] object selection)
+        
+        public void GroupCanceled([In, MarshalAs(UnmanagedType.IDispatch)] object selection)
 		{
             if (!Validate("GroupCanceled"))
             {
@@ -490,13 +516,13 @@ namespace NetOffice.VisioApi.Events
                 return;
             }
 
-            NetOffice.VisioApi.IVSelection newSelection = Factory.CreateKnownObjectFromComProxy<NetOffice.VisioApi.IVSelection>(EventClass, selection, NetOffice.VisioApi.IVSelection.LateBindingApiWrapperType);
+            NetOffice.VisioApi.IVSelection newSelection = Factory.CreateEventArgumentObjectFromComProxy(EventClass, selection) as NetOffice.VisioApi.IVSelection;
             object[] paramsArray = new object[1];
 			paramsArray[0] = newSelection;
 			EventBinding.RaiseCustomEvent("GroupCanceled", ref paramsArray);
 		}
-
-		public void ShapeDataGraphicChanged([In, MarshalAs(UnmanagedType.IDispatch)] object shape)
+        
+        public void ShapeDataGraphicChanged([In, MarshalAs(UnmanagedType.IDispatch)] object shape)
 		{
             if (!Validate("ShapeDataGraphicChanged"))
             {
@@ -504,8 +530,8 @@ namespace NetOffice.VisioApi.Events
                 return;
             }
 
-            NetOffice.VisioApi.IVShape newShape = Factory.CreateKnownObjectFromComProxy<NetOffice.VisioApi.IVShape>(EventClass, shape, NetOffice.VisioApi.IVShape.LateBindingApiWrapperType);
-			object[] paramsArray = new object[1];
+            NetOffice.VisioApi.IVShape newShape = Factory.CreateEventArgumentObjectFromComProxy(EventClass, shape) as NetOffice.VisioApi.IVShape;
+            object[] paramsArray = new object[1];
 			paramsArray[0] = newShape;
 			EventBinding.RaiseCustomEvent("ShapeDataGraphicChanged", ref paramsArray);
 		}

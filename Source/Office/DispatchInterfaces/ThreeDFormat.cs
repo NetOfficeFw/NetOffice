@@ -11,7 +11,8 @@ namespace NetOffice.OfficeApi
 	/// </summary>
 	[SupportByVersion("Office", 9,10,11,12,14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface)]
- 	public class ThreeDFormat : _IMsoDispObj
+    [Duplicate("NetOffice.ExcelApi.ThreeDFormat")]
+    public class ThreeDFormat : _IMsoDispObj
 	{
 		#pragma warning disable
 

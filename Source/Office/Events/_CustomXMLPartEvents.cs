@@ -17,15 +17,25 @@ namespace NetOffice.OfficeApi.Events
 	public interface _CustomXMLPartEvents
 	{
 		[SupportByVersion("Office", 12,14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1)]
+        [SinkArgument("newNode", typeof(OfficeApi.CustomXMLNode))]
+        [SinkArgument("inUndoRedo", SinkArgumentType.Bool)]       
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1)]
 		void NodeAfterInsert([In, MarshalAs(UnmanagedType.IDispatch)] object newNode, [In] object inUndoRedo);
 
 		[SupportByVersion("Office", 12,14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2)]
+        [SinkArgument("oldNode", typeof(OfficeApi.CustomXMLNode))]
+        [SinkArgument("oldParentNode", typeof(OfficeApi.CustomXMLNode))]
+        [SinkArgument("oldNextSibling", typeof(OfficeApi.CustomXMLNode))]
+        [SinkArgument("inUndoRedo", SinkArgumentType.Bool)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2)]
 		void NodeAfterDelete([In, MarshalAs(UnmanagedType.IDispatch)] object oldNode, [In, MarshalAs(UnmanagedType.IDispatch)] object oldParentNode, [In, MarshalAs(UnmanagedType.IDispatch)] object oldNextSibling, [In] object inUndoRedo);
 
 		[SupportByVersion("Office", 12,14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(3)]
+
+        [SinkArgument("oldNode", typeof(OfficeApi.CustomXMLNode))]
+        [SinkArgument("newNode", typeof(OfficeApi.CustomXMLNode))]
+        [SinkArgument("inUndoRedo", SinkArgumentType.Bool)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(3)]
 		void NodeAfterReplace([In, MarshalAs(UnmanagedType.IDispatch)] object oldNode, [In, MarshalAs(UnmanagedType.IDispatch)] object newNode, [In] object inUndoRedo);
 	}
 
@@ -53,8 +63,8 @@ namespace NetOffice.OfficeApi.Events
 		#endregion
 	
 		#region _CustomXMLPartEvents
-		
-		public void NodeAfterInsert([In, MarshalAs(UnmanagedType.IDispatch)] object newNode, [In] object inUndoRedo)
+ 
+        public void NodeAfterInsert([In, MarshalAs(UnmanagedType.IDispatch)] object newNode, [In] object inUndoRedo)
         {
             if (!Validate("NodeAfterInsert"))
             {
@@ -63,14 +73,14 @@ namespace NetOffice.OfficeApi.Events
             }
 
 			NetOffice.OfficeApi.CustomXMLNode newNewNode = Factory.CreateKnownObjectFromComProxy<NetOffice.OfficeApi.CustomXMLNode>(EventClass, newNode, NetOffice.OfficeApi.CustomXMLNode.LateBindingApiWrapperType);
-			bool newInUndoRedo = Convert.ToBoolean(inUndoRedo);
+			bool newInUndoRedo = ToBoolean(inUndoRedo);
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newNewNode;
 			paramsArray[1] = newInUndoRedo;
 			EventBinding.RaiseCustomEvent("NodeAfterInsert", ref paramsArray);
 		}
-
-		public void NodeAfterDelete([In, MarshalAs(UnmanagedType.IDispatch)] object oldNode, [In, MarshalAs(UnmanagedType.IDispatch)] object oldParentNode, [In, MarshalAs(UnmanagedType.IDispatch)] object oldNextSibling, [In] object inUndoRedo)
+        
+        public void NodeAfterDelete([In, MarshalAs(UnmanagedType.IDispatch)] object oldNode, [In, MarshalAs(UnmanagedType.IDispatch)] object oldParentNode, [In, MarshalAs(UnmanagedType.IDispatch)] object oldNextSibling, [In] object inUndoRedo)
         {
             if (!Validate("NodeAfterDelete"))
             {
@@ -81,7 +91,7 @@ namespace NetOffice.OfficeApi.Events
             NetOffice.OfficeApi.CustomXMLNode newOldNode = Factory.CreateKnownObjectFromComProxy<NetOffice.OfficeApi.CustomXMLNode>(EventClass, oldNode, NetOffice.OfficeApi.CustomXMLNode.LateBindingApiWrapperType);
             NetOffice.OfficeApi.CustomXMLNode newOldParentNode = Factory.CreateKnownObjectFromComProxy<NetOffice.OfficeApi.CustomXMLNode>(EventClass, oldParentNode, NetOffice.OfficeApi.CustomXMLNode.LateBindingApiWrapperType);
             NetOffice.OfficeApi.CustomXMLNode newOldNextSibling = Factory.CreateKnownObjectFromComProxy<NetOffice.OfficeApi.CustomXMLNode>(EventClass, oldNextSibling, NetOffice.OfficeApi.CustomXMLNode.LateBindingApiWrapperType);
- 			bool newInUndoRedo = Convert.ToBoolean(inUndoRedo);
+ 			bool newInUndoRedo = ToBoolean(inUndoRedo);
 			object[] paramsArray = new object[4];
 			paramsArray[0] = newOldNode;
 			paramsArray[1] = newOldParentNode;
@@ -90,7 +100,7 @@ namespace NetOffice.OfficeApi.Events
 			EventBinding.RaiseCustomEvent("NodeAfterDelete", ref paramsArray);
 		}
 
-		public void NodeAfterReplace([In, MarshalAs(UnmanagedType.IDispatch)] object oldNode, [In, MarshalAs(UnmanagedType.IDispatch)] object newNode, [In] object inUndoRedo)
+        public void NodeAfterReplace([In, MarshalAs(UnmanagedType.IDispatch)] object oldNode, [In, MarshalAs(UnmanagedType.IDispatch)] object newNode, [In] object inUndoRedo)
         {
             if (!Validate("NodeAfterReplace"))
             {
@@ -99,7 +109,7 @@ namespace NetOffice.OfficeApi.Events
 
             NetOffice.OfficeApi.CustomXMLNode newOldNode = Factory.CreateKnownObjectFromComProxy<NetOffice.OfficeApi.CustomXMLNode>(EventClass, oldNode, NetOffice.OfficeApi.CustomXMLNode.LateBindingApiWrapperType);
             NetOffice.OfficeApi.CustomXMLNode newNewNode = Factory.CreateKnownObjectFromComProxy<NetOffice.OfficeApi.CustomXMLNode>(EventClass, newNode, NetOffice.OfficeApi.CustomXMLNode.LateBindingApiWrapperType);
-            bool newInUndoRedo = Convert.ToBoolean(inUndoRedo);
+            bool newInUndoRedo = ToBoolean(inUndoRedo);
 			object[] paramsArray = new object[3];
 			paramsArray[0] = newOldNode;
 			paramsArray[1] = newNewNode;

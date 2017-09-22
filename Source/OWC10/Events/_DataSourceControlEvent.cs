@@ -17,91 +17,113 @@ namespace NetOffice.OWC10Api.Events
 	public interface _DataSourceControlEvent
 	{
 		[SupportByVersion("OWC10", 1)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(624)]
+        [SinkArgument("dSCEventInfo", typeof(OWC10Api.DSCEventInfo))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(624)]
 		void Current([In, MarshalAs(UnmanagedType.IDispatch)] object dSCEventInfo);
 
 		[SupportByVersion("OWC10", 1)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(626)]
+        [SinkArgument("dSCEventInfo", typeof(OWC10Api.DSCEventInfo))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(626)]
 		void BeforeExpand([In, MarshalAs(UnmanagedType.IDispatch)] object dSCEventInfo);
 
 		[SupportByVersion("OWC10", 1)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(627)]
+        [SinkArgument("dSCEventInfo", typeof(OWC10Api.DSCEventInfo))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(627)]
 		void BeforeCollapse([In, MarshalAs(UnmanagedType.IDispatch)] object dSCEventInfo);
 
 		[SupportByVersion("OWC10", 1)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(628)]
+        [SinkArgument("dSCEventInfo", typeof(OWC10Api.DSCEventInfo))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(628)]
 		void BeforeFirstPage([In, MarshalAs(UnmanagedType.IDispatch)] object dSCEventInfo);
 
 		[SupportByVersion("OWC10", 1)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(629)]
+        [SinkArgument("dSCEventInfo", typeof(OWC10Api.DSCEventInfo))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(629)]
 		void BeforePreviousPage([In, MarshalAs(UnmanagedType.IDispatch)] object dSCEventInfo);
 
 		[SupportByVersion("OWC10", 1)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(630)]
+        [SinkArgument("dSCEventInfo", typeof(OWC10Api.DSCEventInfo))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(630)]
 		void BeforeNextPage([In, MarshalAs(UnmanagedType.IDispatch)] object dSCEventInfo);
 
 		[SupportByVersion("OWC10", 1)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(631)]
+        [SinkArgument("dSCEventInfo", typeof(OWC10Api.DSCEventInfo))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(631)]
 		void BeforeLastPage([In, MarshalAs(UnmanagedType.IDispatch)] object dSCEventInfo);
 
 		[SupportByVersion("OWC10", 1)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(632)]
+        [SinkArgument("dSCEventInfo", typeof(OWC10Api.DSCEventInfo))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(632)]
 		void DataError([In, MarshalAs(UnmanagedType.IDispatch)] object dSCEventInfo);
 
 		[SupportByVersion("OWC10", 1)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(633)]
+        [SinkArgument("dSCEventInfo", typeof(OWC10Api.DSCEventInfo))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(633)]
 		void DataPageComplete([In, MarshalAs(UnmanagedType.IDispatch)] object dSCEventInfo);
 
 		[SupportByVersion("OWC10", 1)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(634)]
+        [SinkArgument("dSCEventInfo", typeof(OWC10Api.DSCEventInfo))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(634)]
 		void BeforeInitialBind([In, MarshalAs(UnmanagedType.IDispatch)] object dSCEventInfo);
 
 		[SupportByVersion("OWC10", 1)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(635)]
+        [SinkArgument("dSCEventInfo", typeof(OWC10Api.DSCEventInfo))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(635)]
 		void RecordsetSaveProgress([In, MarshalAs(UnmanagedType.IDispatch)] object dSCEventInfo);
 
 		[SupportByVersion("OWC10", 1)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(636)]
+        [SinkArgument("dSCEventInfo", typeof(OWC10Api.DSCEventInfo))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(636)]
 		void AfterDelete([In, MarshalAs(UnmanagedType.IDispatch)] object dSCEventInfo);
 
 		[SupportByVersion("OWC10", 1)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(637)]
+        [SinkArgument("dSCEventInfo", typeof(OWC10Api.DSCEventInfo))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(637)]
 		void AfterInsert([In, MarshalAs(UnmanagedType.IDispatch)] object dSCEventInfo);
 
 		[SupportByVersion("OWC10", 1)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(638)]
+        [SinkArgument("dSCEventInfo", typeof(OWC10Api.DSCEventInfo))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(638)]
 		void AfterUpdate([In, MarshalAs(UnmanagedType.IDispatch)] object dSCEventInfo);
 
 		[SupportByVersion("OWC10", 1)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(639)]
+        [SinkArgument("dSCEventInfo", typeof(OWC10Api.DSCEventInfo))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(639)]
 		void BeforeDelete([In, MarshalAs(UnmanagedType.IDispatch)] object dSCEventInfo);
 
 		[SupportByVersion("OWC10", 1)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(640)]
+        [SinkArgument("dSCEventInfo", typeof(OWC10Api.DSCEventInfo))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(640)]
 		void BeforeInsert([In, MarshalAs(UnmanagedType.IDispatch)] object dSCEventInfo);
 
 		[SupportByVersion("OWC10", 1)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(641)]
+        [SinkArgument("dSCEventInfo", typeof(OWC10Api.DSCEventInfo))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(641)]
 		void BeforeOverwrite([In, MarshalAs(UnmanagedType.IDispatch)] object dSCEventInfo);
 
 		[SupportByVersion("OWC10", 1)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(642)]
+        [SinkArgument("dSCEventInfo", typeof(OWC10Api.DSCEventInfo))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(642)]
 		void BeforeUpdate([In, MarshalAs(UnmanagedType.IDispatch)] object dSCEventInfo);
 
 		[SupportByVersion("OWC10", 1)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(643)]
+        [SinkArgument("dSCEventInfo", typeof(OWC10Api.DSCEventInfo))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(643)]
 		void Dirty([In, MarshalAs(UnmanagedType.IDispatch)] object dSCEventInfo);
 
 		[SupportByVersion("OWC10", 1)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(644)]
+        [SinkArgument("dSCEventInfo", typeof(OWC10Api.DSCEventInfo))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(644)]
 		void RecordExit([In, MarshalAs(UnmanagedType.IDispatch)] object dSCEventInfo);
 
 		[SupportByVersion("OWC10", 1)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(647)]
+        [SinkArgument("dSCEventInfo", typeof(OWC10Api.DSCEventInfo))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(647)]
 		void Undo([In, MarshalAs(UnmanagedType.IDispatch)] object dSCEventInfo);
 
 		[SupportByVersion("OWC10", 1)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(648)]
+        [SinkArgument("dSCEventInfo", typeof(OWC10Api.DSCEventInfo))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(648)]
 		void Focus([In, MarshalAs(UnmanagedType.IDispatch)] object dSCEventInfo);
 	}
 	

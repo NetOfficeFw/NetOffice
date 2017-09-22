@@ -25,7 +25,8 @@ namespace NetOffice.MSFormsApi.Events
 		void Exit([In, MarshalAs(UnmanagedType.IDispatch)] object cancel);
 
 		[SupportByVersion("MSForms", 2)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(-2147384831)]
+        [SinkArgument("cancel", typeof(NetOffice.MSFormsApi.ReturnBoolean))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(-2147384831)]
 		void BeforeUpdate([In, MarshalAs(UnmanagedType.IDispatch)] object cancel);
 
 		[SupportByVersion("MSForms", 2)]

@@ -17,15 +17,32 @@ namespace NetOffice.MSFormsApi.Events
 	public interface OptionFrameEvents
 	{
 		[SupportByVersion("MSForms", 2)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(768)]
+        [SinkArgument("control", typeof(MSFormsApi.Control))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(768)]
 		void AddControl([In, MarshalAs(UnmanagedType.IDispatch)] object control);
 
 		[SupportByVersion("MSForms", 2)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(3)]
+        [SinkArgument("cancel", typeof(MSFormsApi.ReturnBoolean))]
+        [SinkArgument("control", typeof(MSFormsApi.Control))]
+        [SinkArgument("data", typeof(MSFormsApi.DataObject))]
+        [SinkArgument("x", SinkArgumentType.Single)]
+        [SinkArgument("y", SinkArgumentType.Single)]
+        [SinkArgument("state", SinkArgumentType.Enum, typeof(MSFormsApi.Enums.fmDragState))]
+        [SinkArgument("effect", typeof(MSFormsApi.ReturnEffect))]
+        [SinkArgument("shift", SinkArgumentType.Int16)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(3)]
 		void BeforeDragOver([In, MarshalAs(UnmanagedType.IDispatch)] object cancel, [In, MarshalAs(UnmanagedType.IDispatch)] object control, [In, MarshalAs(UnmanagedType.IDispatch)] object data, [In] object x, [In] object y, [In] object state, [In, MarshalAs(UnmanagedType.IDispatch)] object effect, [In] object shift);
 
 		[SupportByVersion("MSForms", 2)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(4)]
+        [SinkArgument("cancel", typeof(MSFormsApi.ReturnBoolean))]
+        [SinkArgument("control", typeof(MSFormsApi.Control))]
+        [SinkArgument("action", SinkArgumentType.Enum, typeof(MSFormsApi.Enums.fmAction))]
+        [SinkArgument("data", typeof(MSFormsApi.DataObject))]
+        [SinkArgument("x", SinkArgumentType.Single)]
+        [SinkArgument("y", SinkArgumentType.Single)]
+        [SinkArgument("effect", typeof(MSFormsApi.ReturnEffect))]
+        [SinkArgument("shift", SinkArgumentType.Int16)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(4)]
 		void BeforeDropOrPaste([In, MarshalAs(UnmanagedType.IDispatch)] object cancel, [In, MarshalAs(UnmanagedType.IDispatch)] object control, [In] object action, [In, MarshalAs(UnmanagedType.IDispatch)] object data, [In] object x, [In] object y, [In, MarshalAs(UnmanagedType.IDispatch)] object effect, [In] object shift);
 
 		[SupportByVersion("MSForms", 2)]
@@ -33,23 +50,36 @@ namespace NetOffice.MSFormsApi.Events
 		void Click();
 
 		[SupportByVersion("MSForms", 2)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(-601)]
+        [SinkArgument("cancel", typeof(MSFormsApi.ReturnBoolean))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(-601)]
 		void DblClick([In, MarshalAs(UnmanagedType.IDispatch)] object cancel);
 
 		[SupportByVersion("MSForms", 2)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(-608)]
+        [SinkArgument("number", SinkArgumentType.Int32)]
+        [SinkArgument("description", typeof(MSFormsApi.ReturnString))]
+        [SinkArgument("sCode", SinkArgumentType.Int32)]
+        [SinkArgument("source", SinkArgumentType.String)]
+        [SinkArgument("helpFile", SinkArgumentType.String)]
+        [SinkArgument("helpContext", SinkArgumentType.Int32)]
+        [SinkArgument("cancelDisplay", typeof(MSFormsApi.ReturnBoolean))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(-608)]
 		void Error([In] object number, [In, MarshalAs(UnmanagedType.IDispatch)] object description, [In] object sCode, [In] object source, [In] object helpFile, [In] object helpContext, [In, MarshalAs(UnmanagedType.IDispatch)] object cancelDisplay);
 
 		[SupportByVersion("MSForms", 2)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(-602)]
+        [SinkArgument("keyCode", typeof(MSFormsApi.ReturnInteger))]
+        [SinkArgument("shift", SinkArgumentType.Int16)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(-602)]
 		void KeyDown([In, MarshalAs(UnmanagedType.IDispatch)] object keyCode, [In] object shift);
 
 		[SupportByVersion("MSForms", 2)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(-603)]
+        [SinkArgument("keyAscii", typeof(MSFormsApi.ReturnInteger))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(-603)]
 		void KeyPress([In, MarshalAs(UnmanagedType.IDispatch)] object keyAscii);
 
 		[SupportByVersion("MSForms", 2)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(-604)]
+        [SinkArgument("keyCode", typeof(MSFormsApi.ReturnInteger))]
+        [SinkArgument("shift", SinkArgumentType.Int16)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(-604)]
 		void KeyUp([In, MarshalAs(UnmanagedType.IDispatch)] object keyCode, [In] object shift);
 
 		[SupportByVersion("MSForms", 2)]
@@ -57,27 +87,47 @@ namespace NetOffice.MSFormsApi.Events
 		void Layout();
 
 		[SupportByVersion("MSForms", 2)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(-605)]
+        [SinkArgument("button", SinkArgumentType.Int16)]
+        [SinkArgument("shift", SinkArgumentType.Int16)]
+        [SinkArgument("x", SinkArgumentType.Single)]
+        [SinkArgument("y", SinkArgumentType.Single)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(-605)]
 		void MouseDown([In] object button, [In] object shift, [In] object x, [In] object y);
 
 		[SupportByVersion("MSForms", 2)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(-606)]
+        [SinkArgument("button", SinkArgumentType.Int16)]
+        [SinkArgument("shift", SinkArgumentType.Int16)]
+        [SinkArgument("x", SinkArgumentType.Single)]
+        [SinkArgument("y", SinkArgumentType.Single)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(-606)]
 		void MouseMove([In] object button, [In] object shift, [In] object x, [In] object y);
 
 		[SupportByVersion("MSForms", 2)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(-607)]
+        [SinkArgument("button", SinkArgumentType.Int16)]
+        [SinkArgument("shift", SinkArgumentType.Int16)]
+        [SinkArgument("x", SinkArgumentType.Single)]
+        [SinkArgument("y", SinkArgumentType.Single)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(-607)]
 		void MouseUp([In] object button, [In] object shift, [In] object x, [In] object y);
 
 		[SupportByVersion("MSForms", 2)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(771)]
+        [SinkArgument("control", typeof(MSFormsApi.Control))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(771)]
 		void RemoveControl([In, MarshalAs(UnmanagedType.IDispatch)] object control);
 
 		[SupportByVersion("MSForms", 2)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(772)]
+        [SinkArgument("actionX", SinkArgumentType.Enum, typeof(MSFormsApi.Enums.fmScrollAction))]
+        [SinkArgument("actionY", SinkArgumentType.Enum, typeof(MSFormsApi.Enums.fmScrollAction))]
+        [SinkArgument("requestDx", SinkArgumentType.Single)]
+        [SinkArgument("requestDy", SinkArgumentType.Single)]
+        [SinkArgument("actualDx", typeof(MSFormsApi.ReturnSingle))]
+        [SinkArgument("actualDy", typeof(MSFormsApi.ReturnSingle))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(772)]
 		void Scroll([In] object actionX, [In] object actionY, [In] object requestDx, [In] object requestDy, [In, MarshalAs(UnmanagedType.IDispatch)] object actualDx, [In, MarshalAs(UnmanagedType.IDispatch)] object actualDy);
 
 		[SupportByVersion("MSForms", 2)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(773)]
+        [SinkArgument("percent", SinkArgumentType.Int16)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(773)]
 		void Zoom([In] [Out] ref object percent);
 	}
 
@@ -106,7 +156,7 @@ namespace NetOffice.MSFormsApi.Events
 		
 		#region OptionFrameEvents
 		
-		public void AddControl([In, MarshalAs(UnmanagedType.IDispatch)] object control)
+        public void AddControl([In, MarshalAs(UnmanagedType.IDispatch)] object control)
 		{
             if (!Validate("AddControl"))
             {
@@ -120,7 +170,7 @@ namespace NetOffice.MSFormsApi.Events
 			EventBinding.RaiseCustomEvent("AddControl", ref paramsArray);
 		}
 
-		public void BeforeDragOver([In, MarshalAs(UnmanagedType.IDispatch)] object cancel, [In, MarshalAs(UnmanagedType.IDispatch)] object control, [In, MarshalAs(UnmanagedType.IDispatch)] object data, [In] object x, [In] object y, [In] object state, [In, MarshalAs(UnmanagedType.IDispatch)] object effect, [In] object shift)
+        public void BeforeDragOver([In, MarshalAs(UnmanagedType.IDispatch)] object cancel, [In, MarshalAs(UnmanagedType.IDispatch)] object control, [In, MarshalAs(UnmanagedType.IDispatch)] object data, [In] object x, [In] object y, [In] object state, [In, MarshalAs(UnmanagedType.IDispatch)] object effect, [In] object shift)
 		{
             if (!Validate("BeforeDragOver"))
             {
@@ -135,7 +185,7 @@ namespace NetOffice.MSFormsApi.Events
 			Single newY = Convert.ToSingle(y);
 			NetOffice.MSFormsApi.Enums.fmDragState newState = (NetOffice.MSFormsApi.Enums.fmDragState)state;
 			NetOffice.MSFormsApi.ReturnEffect newEffect = Factory.CreateKnownObjectFromComProxy<NetOffice.MSFormsApi.ReturnEffect>(EventClass, effect, NetOffice.MSFormsApi.ReturnEffect.LateBindingApiWrapperType);
-			Int16 newShift = Convert.ToInt16(shift);
+			Int16 newShift = ToInt16(shift);
 			object[] paramsArray = new object[8];
 			paramsArray[0] = newCancel;
 			paramsArray[1] = newControl;
@@ -148,7 +198,7 @@ namespace NetOffice.MSFormsApi.Events
 			EventBinding.RaiseCustomEvent("BeforeDragOver", ref paramsArray);
 		}
 
-		public void BeforeDropOrPaste([In, MarshalAs(UnmanagedType.IDispatch)] object cancel, [In, MarshalAs(UnmanagedType.IDispatch)] object control, [In] object action, [In, MarshalAs(UnmanagedType.IDispatch)] object data, [In] object x, [In] object y, [In, MarshalAs(UnmanagedType.IDispatch)] object effect, [In] object shift)
+        public void BeforeDropOrPaste([In, MarshalAs(UnmanagedType.IDispatch)] object cancel, [In, MarshalAs(UnmanagedType.IDispatch)] object control, [In] object action, [In, MarshalAs(UnmanagedType.IDispatch)] object data, [In] object x, [In] object y, [In, MarshalAs(UnmanagedType.IDispatch)] object effect, [In] object shift)
 		{
             if (!Validate("BeforeDropOrPaste"))
             {
@@ -160,10 +210,10 @@ namespace NetOffice.MSFormsApi.Events
 			NetOffice.MSFormsApi.Control newControl = Factory.CreateKnownObjectFromComProxy<NetOffice.MSFormsApi.Control>(EventClass, control, NetOffice.MSFormsApi.Control.LateBindingApiWrapperType);
 			NetOffice.MSFormsApi.Enums.fmAction newAction = (NetOffice.MSFormsApi.Enums.fmAction)action;
 			NetOffice.MSFormsApi.DataObject newData = Factory.CreateKnownObjectFromComProxy<NetOffice.MSFormsApi.DataObject>(EventClass, data, NetOffice.MSFormsApi.DataObject.LateBindingApiWrapperType);
-			Single newX = Convert.ToSingle(x);
-			Single newY = Convert.ToSingle(y);
+			Single newX = ToSingle(x);
+			Single newY = ToSingle(y);
 			NetOffice.MSFormsApi.ReturnEffect newEffect = Factory.CreateKnownObjectFromComProxy<NetOffice.MSFormsApi.ReturnEffect>(EventClass, effect, NetOffice.MSFormsApi.ReturnEffect.LateBindingApiWrapperType);
-			Int16 newShift = Convert.ToInt16(shift);
+			Int16 newShift = ToInt16(shift);
 			object[] paramsArray = new object[8];
 			paramsArray[0] = newCancel;
 			paramsArray[1] = newControl;
@@ -187,7 +237,7 @@ namespace NetOffice.MSFormsApi.Events
 			EventBinding.RaiseCustomEvent("Click", ref paramsArray);
 		}
 
-		public void DblClick([In, MarshalAs(UnmanagedType.IDispatch)] object cancel)
+        public void DblClick([In, MarshalAs(UnmanagedType.IDispatch)] object cancel)
         {
             if (!Validate("DblClick"))
             {
@@ -201,7 +251,7 @@ namespace NetOffice.MSFormsApi.Events
 			EventBinding.RaiseCustomEvent("DblClick", ref paramsArray);
 		}
 
-		public void Error([In] object number, [In, MarshalAs(UnmanagedType.IDispatch)] object description, [In] object sCode, [In] object source, [In] object helpFile, [In] object helpContext, [In, MarshalAs(UnmanagedType.IDispatch)] object cancelDisplay)
+        public void Error([In] object number, [In, MarshalAs(UnmanagedType.IDispatch)] object description, [In] object sCode, [In] object source, [In] object helpFile, [In] object helpContext, [In, MarshalAs(UnmanagedType.IDispatch)] object cancelDisplay)
         {
             if (!Validate("Error"))
             {
@@ -209,12 +259,12 @@ namespace NetOffice.MSFormsApi.Events
                 return;
             }
 
-			Int16 newNumber = Convert.ToInt16(number);
+			Int16 newNumber = ToInt16(number);
 			NetOffice.MSFormsApi.ReturnString newDescription = Factory.CreateKnownObjectFromComProxy<NetOffice.MSFormsApi.ReturnString>(EventClass, description, NetOffice.MSFormsApi.ReturnString.LateBindingApiWrapperType);
-			Int32 newSCode = Convert.ToInt32(sCode);
-			string newSource = Convert.ToString(source);
-			string newHelpFile = Convert.ToString(helpFile);
-			Int32 newHelpContext = Convert.ToInt32(helpContext);
+			Int32 newSCode = ToInt32(sCode);
+			string newSource = ToString(source);
+			string newHelpFile = ToString(helpFile);
+			Int32 newHelpContext = ToInt32(helpContext);
 			NetOffice.MSFormsApi.ReturnBoolean newCancelDisplay = Factory.CreateKnownObjectFromComProxy<NetOffice.MSFormsApi.ReturnBoolean>(EventClass, cancelDisplay, NetOffice.MSFormsApi.ReturnBoolean.LateBindingApiWrapperType);
 			object[] paramsArray = new object[7];
 			paramsArray[0] = newNumber;
@@ -227,7 +277,7 @@ namespace NetOffice.MSFormsApi.Events
 			EventBinding.RaiseCustomEvent("Error", ref paramsArray);
 		}
 
-		public void KeyDown([In, MarshalAs(UnmanagedType.IDispatch)] object keyCode, [In] object shift)
+        public void KeyDown([In, MarshalAs(UnmanagedType.IDispatch)] object keyCode, [In] object shift)
 		{
             if (!Validate("KeyDown"))
             {
@@ -236,14 +286,14 @@ namespace NetOffice.MSFormsApi.Events
             }
 
 			NetOffice.MSFormsApi.ReturnInteger newKeyCode = Factory.CreateKnownObjectFromComProxy<NetOffice.MSFormsApi.ReturnInteger>(EventClass, keyCode, NetOffice.MSFormsApi.ReturnInteger.LateBindingApiWrapperType);
-			Int16 newShift = Convert.ToInt16(shift);
+			Int16 newShift = ToInt16(shift);
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newKeyCode;
 			paramsArray[1] = newShift;
 			EventBinding.RaiseCustomEvent("KeyDown", ref paramsArray);
 		}
 
-		public void KeyPress([In, MarshalAs(UnmanagedType.IDispatch)] object keyAscii)
+        public void KeyPress([In, MarshalAs(UnmanagedType.IDispatch)] object keyAscii)
         {
             if (!Validate("KeyPress"))
             {
@@ -257,7 +307,7 @@ namespace NetOffice.MSFormsApi.Events
 			EventBinding.RaiseCustomEvent("KeyPress", ref paramsArray);
 		}
 
-		public void KeyUp([In, MarshalAs(UnmanagedType.IDispatch)] object keyCode, [In] object shift)
+        public void KeyUp([In, MarshalAs(UnmanagedType.IDispatch)] object keyCode, [In] object shift)
 		{
             if (!Validate("KeyUp"))
             {
@@ -266,7 +316,7 @@ namespace NetOffice.MSFormsApi.Events
             }
 
 			NetOffice.MSFormsApi.ReturnInteger newKeyCode = Factory.CreateKnownObjectFromComProxy<NetOffice.MSFormsApi.ReturnInteger>(EventClass, keyCode, NetOffice.MSFormsApi.ReturnInteger.LateBindingApiWrapperType);
-			Int16 newShift = Convert.ToInt16(shift);
+			Int16 newShift = ToInt16(shift);
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newKeyCode;
 			paramsArray[1] = newShift;
@@ -284,7 +334,7 @@ namespace NetOffice.MSFormsApi.Events
 			EventBinding.RaiseCustomEvent("Layout", ref paramsArray);
 		}
 
-		public void MouseDown([In] object button, [In] object shift, [In] object x, [In] object y)
+        public void MouseDown([In] object button, [In] object shift, [In] object x, [In] object y)
         {
             if (!Validate("MouseDown"))
             {
@@ -292,10 +342,10 @@ namespace NetOffice.MSFormsApi.Events
                 return;
             }
 
-			Int16 newButton = Convert.ToInt16(button);
-			Int16 newShift = Convert.ToInt16(shift);
-			Single newX = Convert.ToSingle(x);
-			Single newY = Convert.ToSingle(y);
+			Int16 newButton = ToInt16(button);
+			Int16 newShift = ToInt16(shift);
+			Single newX = ToSingle(x);
+			Single newY = ToSingle(y);
 			object[] paramsArray = new object[4];
 			paramsArray[0] = newButton;
 			paramsArray[1] = newShift;
@@ -304,7 +354,7 @@ namespace NetOffice.MSFormsApi.Events
 			EventBinding.RaiseCustomEvent("MouseDown", ref paramsArray);
 		}
 
-		public void MouseMove([In] object button, [In] object shift, [In] object x, [In] object y)
+        public void MouseMove([In] object button, [In] object shift, [In] object x, [In] object y)
 		{
             if (!Validate("MouseMove"))
             {
@@ -312,10 +362,10 @@ namespace NetOffice.MSFormsApi.Events
                 return;
             }
 
-            Int16 newButton = Convert.ToInt16(button);
-			Int16 newShift = Convert.ToInt16(shift);
-			Single newX = Convert.ToSingle(x);
-			Single newY = Convert.ToSingle(y);
+            Int16 newButton = ToInt16(button);
+			Int16 newShift = ToInt16(shift);
+			Single newX = ToSingle(x);
+			Single newY = ToSingle(y);
 			object[] paramsArray = new object[4];
 			paramsArray[0] = newButton;
 			paramsArray[1] = newShift;
@@ -324,7 +374,7 @@ namespace NetOffice.MSFormsApi.Events
 			EventBinding.RaiseCustomEvent("MouseMove", ref paramsArray);
 		}
 
-		public void MouseUp([In] object button, [In] object shift, [In] object x, [In] object y)
+        public void MouseUp([In] object button, [In] object shift, [In] object x, [In] object y)
 		{
             if (!Validate("MouseUp"))
             {
@@ -332,10 +382,10 @@ namespace NetOffice.MSFormsApi.Events
                 return;
             }
 
-            Int16 newButton = Convert.ToInt16(button);
-			Int16 newShift = Convert.ToInt16(shift);
-			Single newX = Convert.ToSingle(x);
-			Single newY = Convert.ToSingle(y);
+            Int16 newButton = ToInt16(button);
+			Int16 newShift = ToInt16(shift);
+			Single newX = ToSingle(x);
+			Single newY = ToSingle(y);
 			object[] paramsArray = new object[4];
 			paramsArray[0] = newButton;
 			paramsArray[1] = newShift;
@@ -344,7 +394,7 @@ namespace NetOffice.MSFormsApi.Events
 			EventBinding.RaiseCustomEvent("MouseUp", ref paramsArray);
 		}
 
-		public void RemoveControl([In, MarshalAs(UnmanagedType.IDispatch)] object control)
+        public void RemoveControl([In, MarshalAs(UnmanagedType.IDispatch)] object control)
         {
             if (!Validate("RemoveControl"))
             {
@@ -358,7 +408,7 @@ namespace NetOffice.MSFormsApi.Events
 			EventBinding.RaiseCustomEvent("RemoveControl", ref paramsArray);
 		}
 
-		public void Scroll([In] object actionX, [In] object actionY, [In] object requestDx, [In] object requestDy, [In, MarshalAs(UnmanagedType.IDispatch)] object actualDx, [In, MarshalAs(UnmanagedType.IDispatch)] object actualDy)
+        public void Scroll([In] object actionX, [In] object actionY, [In] object requestDx, [In] object requestDy, [In, MarshalAs(UnmanagedType.IDispatch)] object actualDx, [In, MarshalAs(UnmanagedType.IDispatch)] object actualDy)
         {
             if (!Validate("Scroll"))
             {
@@ -368,8 +418,8 @@ namespace NetOffice.MSFormsApi.Events
 
 			NetOffice.MSFormsApi.Enums.fmScrollAction newActionX = (NetOffice.MSFormsApi.Enums.fmScrollAction)actionX;
 			NetOffice.MSFormsApi.Enums.fmScrollAction newActionY = (NetOffice.MSFormsApi.Enums.fmScrollAction)actionY;
-			Single newRequestDx = Convert.ToSingle(requestDx);
-			Single newRequestDy = Convert.ToSingle(requestDy);
+			Single newRequestDx = ToSingle(requestDx);
+			Single newRequestDy = ToSingle(requestDy);
 			NetOffice.MSFormsApi.ReturnSingle newActualDx = Factory.CreateKnownObjectFromComProxy<NetOffice.MSFormsApi.ReturnSingle>(EventClass, actualDx, NetOffice.MSFormsApi.ReturnSingle.LateBindingApiWrapperType);
             NetOffice.MSFormsApi.ReturnSingle newActualDy = Factory.CreateKnownObjectFromComProxy<NetOffice.MSFormsApi.ReturnSingle> (EventClass, actualDy, NetOffice.MSFormsApi.ReturnSingle.LateBindingApiWrapperType);
 			object[] paramsArray = new object[6];

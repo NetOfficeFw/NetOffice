@@ -17,6 +17,7 @@ namespace NetOffice.OfficeApi.Events
 	public interface _CommandBarComboBoxEvents
 	{
 		[SupportByVersion("Office", 9,10,11,12,14,15,16)]
+        [SinkArgument("ctrl", typeof(OfficeApi.CommandBarComboBox))]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1)]
 		void Change([In, MarshalAs(UnmanagedType.IDispatch)] object ctrl);
 	}

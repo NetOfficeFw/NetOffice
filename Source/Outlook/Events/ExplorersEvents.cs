@@ -17,7 +17,8 @@ namespace NetOffice.OutlookApi.Events
 	public interface ExplorersEvents
 	{
 		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(61441)]
+        [SinkArgument("explorer", typeof(NetOffice.OutlookApi._Explorer))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(61441)]
 		void NewExplorer([In, MarshalAs(UnmanagedType.IDispatch)] object explorer);
 	}
 
@@ -54,7 +55,7 @@ namespace NetOffice.OutlookApi.Events
                 return;
             }
 
-			NetOffice.OutlookApi._Explorer newExplorer = Factory.CreateKnownObjectFromComProxy<NetOffice.OutlookApi._Explorer>(EventClass, explorer, NetOffice.OutlookApi._Explorer.LateBindingApiWrapperType);
+			NetOffice.OutlookApi._Explorer newExplorer = Factory.CreateEventArgumentObjectFromComProxy(EventClass, explorer) as NetOffice.OutlookApi._Explorer;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newExplorer;
 			EventBinding.RaiseCustomEvent("NewExplorer", ref paramsArray);

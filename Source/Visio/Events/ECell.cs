@@ -17,11 +17,13 @@ namespace NetOffice.VisioApi.Events
 	public interface ECell
 	{
 		[SupportByVersion("Visio", 11,12,14,15,16)]
+        [SinkArgument("cell", typeof(VisioApi.IVCell))]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(10240)]
 		void CellChanged([In, MarshalAs(UnmanagedType.IDispatch)] object cell);
 
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(12288)]
+        [SinkArgument("cell", typeof(VisioApi.IVCell))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(12288)]
 		void FormulaChanged([In, MarshalAs(UnmanagedType.IDispatch)] object cell);
 	}
 
@@ -58,8 +60,8 @@ namespace NetOffice.VisioApi.Events
                 return;
             }
 
-			NetOffice.VisioApi.IVCell newCell = Factory.CreateKnownObjectFromComProxy<NetOffice.VisioApi.IVCell>(EventClass, cell, NetOffice.VisioApi.IVCell.LateBindingApiWrapperType);
-			object[] paramsArray = new object[1];
+            NetOffice.VisioApi.IVCell newCell = Factory.CreateEventArgumentObjectFromComProxy(EventClass, cell) as NetOffice.VisioApi.IVCell;
+            object[] paramsArray = new object[1];
 			paramsArray[0] = newCell;
 			EventBinding.RaiseCustomEvent("CellChanged", ref paramsArray);
 		}
@@ -72,7 +74,7 @@ namespace NetOffice.VisioApi.Events
                 return;
             }
 
-            NetOffice.VisioApi.IVCell newCell = Factory.CreateKnownObjectFromComProxy<NetOffice.VisioApi.IVCell>(EventClass, cell, NetOffice.VisioApi.IVCell.LateBindingApiWrapperType);
+            NetOffice.VisioApi.IVCell newCell = Factory.CreateEventArgumentObjectFromComProxy(EventClass, cell) as NetOffice.VisioApi.IVCell;
             object[] paramsArray = new object[1];
 			paramsArray[0] = newCell;
 			EventBinding.RaiseCustomEvent("FormulaChanged", ref paramsArray);

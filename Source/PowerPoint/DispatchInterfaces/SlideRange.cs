@@ -14,7 +14,7 @@ namespace NetOffice.PowerPointApi
 	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff744720.aspx </remarks>
 	[SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Method, "Item")]
-	public class SlideRange : COMObject , IEnumerable<NetOffice.PowerPointApi.Slide>
+	public class SlideRange : COMObject, IEnumerable<NetOffice.PowerPointApi.Slide>
 	{
 		#pragma warning disable
 
@@ -800,29 +800,29 @@ namespace NetOffice.PowerPointApi
 			 Factory.ExecuteMethod(this, "ApplyTemplate2", fileName, variant);
 		}
 
-		#endregion
+        #endregion
 
-       #region IEnumerable<NetOffice.PowerPointApi.Slide> Member
-        
+        #region IEnumerable<NetOffice.PowerPointApi.Slide> Member
+
         /// <summary>
-		/// SupportByVersion PowerPoint, 9,10,11,12,14,15,16
-		/// </summary>
-		[SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
-       public IEnumerator<NetOffice.PowerPointApi.Slide> GetEnumerator()  
-       {
-           NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
-           foreach (NetOffice.PowerPointApi.Slide item in innerEnumerator)
-               yield return item;
-       }
+        /// SupportByVersion PowerPoint, 9,10,11,12,14,15,16
+        /// </summary>
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
+        public IEnumerator<NetOffice.PowerPointApi.Slide> GetEnumerator()
+        {
+            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
+            foreach (NetOffice.PowerPointApi.Slide item in innerEnumerator)
+                yield return item;
+        }
 
-       #endregion
-          
-		#region IEnumerable Members
-       
-		/// <summary>
-		/// SupportByVersion PowerPoint, 9,10,11,12,14,15,16
-		/// </summary>
-		[SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        #endregion
+
+        #region IEnumerable Members
+
+        /// <summary>
+        /// SupportByVersion PowerPoint, 9,10,11,12,14,15,16
+        /// </summary>
+        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
 			return NetOffice.Utils.GetProxyEnumeratorAsProperty(this);

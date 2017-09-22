@@ -17,43 +17,65 @@ namespace NetOffice.MSComctlLibApi.Events
 	public interface ListViewEvents
 	{
 		[SupportByVersion("MSComctlLib", 6)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1)]
+        [SinkArgument("cancel", SinkArgumentType.Int16)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1)]
 		void BeforeLabelEdit([In] [Out] ref object cancel);
 
 		[SupportByVersion("MSComctlLib", 6)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2)]
+        [SinkArgument("cancel", SinkArgumentType.Int16)]
+        [SinkArgument("newString", SinkArgumentType.String)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2)]
 		void AfterLabelEdit([In] [Out] ref object cancel, [In] [Out] ref object newString);
 
 		[SupportByVersion("MSComctlLib", 6)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(3)]
+        [SinkArgument("columnHeader", typeof(MSComctlLibApi.ColumnHeader))]        
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(3)]
 		void ColumnClick([In, MarshalAs(UnmanagedType.IDispatch)] object columnHeader);
 
 		[SupportByVersion("MSComctlLib", 6)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(4)]
+        [SinkArgument("columnHeader", typeof(MSComctlLibApi.ListItem))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(4)]
 		void ItemClick([In, MarshalAs(UnmanagedType.IDispatch)] object item);
 
 		[SupportByVersion("MSComctlLib", 6)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(-602)]
+        [SinkArgument("keyCode", SinkArgumentType.Int16)]
+        [SinkArgument("shift", SinkArgumentType.Int16)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(-602)]
 		void KeyDown([In] [Out] ref object keyCode, [In] object shift);
 
 		[SupportByVersion("MSComctlLib", 6)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(-604)]
+        [SinkArgument("keyCode", SinkArgumentType.Int16)]
+        [SinkArgument("shift", SinkArgumentType.Int16)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(-604)]
 		void KeyUp([In] [Out] ref object keyCode, [In] object shift);
 
 		[SupportByVersion("MSComctlLib", 6)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(-603)]
+        [SinkArgument("keyAscii", SinkArgumentType.Int16)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(-603)]
 		void KeyPress([In] [Out] ref object keyAscii);
 
 		[SupportByVersion("MSComctlLib", 6)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(-605)]
+        [SinkArgument("button", SinkArgumentType.Int32)]
+        [SinkArgument("shift", SinkArgumentType.Int32)]
+        [SinkArgument("x", SinkArgumentType.Int32)]
+        [SinkArgument("y", SinkArgumentType.Int32)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(-605)]
 		void MouseDown([In] object button, [In] object shift, [In] object x, [In] object y);
 
 		[SupportByVersion("MSComctlLib", 6)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(-606)]
+        [SinkArgument("button", SinkArgumentType.Int32)]
+        [SinkArgument("shift", SinkArgumentType.Int32)]
+        [SinkArgument("x", SinkArgumentType.Int32)]
+        [SinkArgument("y", SinkArgumentType.Int32)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(-606)]
 		void MouseMove([In] object button, [In] object shift, [In] object x, [In] object y);
 
 		[SupportByVersion("MSComctlLib", 6)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(-607)]
+        [SinkArgument("button", SinkArgumentType.Int32)]
+        [SinkArgument("shift", SinkArgumentType.Int32)]
+        [SinkArgument("x", SinkArgumentType.Int32)]
+        [SinkArgument("y", SinkArgumentType.Int32)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(-607)]
 		void MouseUp([In] object button, [In] object shift, [In] object x, [In] object y);
 
 		[SupportByVersion("MSComctlLib", 6)]
@@ -65,31 +87,52 @@ namespace NetOffice.MSComctlLibApi.Events
 		void DblClick();
 
 		[SupportByVersion("MSComctlLib", 6)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1550)]
+        [SinkArgument("data", typeof(MSComctlLibApi.DataObject))]
+        [SinkArgument("allowedEffects", SinkArgumentType.Int32)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1550)]
 		void OLEStartDrag([In] [Out, MarshalAs(UnmanagedType.IDispatch)] object data, [In] [Out] ref object allowedEffects);
 
 		[SupportByVersion("MSComctlLib", 6)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1551)]
+        [SinkArgument("effect", SinkArgumentType.Int32)]
+        [SinkArgument("defaultCursors", SinkArgumentType.Bool)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1551)]
 		void OLEGiveFeedback([In] [Out] ref object effect, [In] [Out] ref object defaultCursors);
 
 		[SupportByVersion("MSComctlLib", 6)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1552)]
+        [SinkArgument("data", typeof(MSComctlLibApi.DataObject))]
+        [SinkArgument("dataFormat", SinkArgumentType.Int16)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1552)]
 		void OLESetData([In] [Out, MarshalAs(UnmanagedType.IDispatch)] object data, [In] [Out] ref object dataFormat);
 
 		[SupportByVersion("MSComctlLib", 6)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1553)]
+        [SinkArgument("effect", SinkArgumentType.Int32)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1553)]
 		void OLECompleteDrag([In] [Out] ref object effect);
 
 		[SupportByVersion("MSComctlLib", 6)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1554)]
+        [SinkArgument("data", typeof(MSComctlLibApi.DataObject))]
+        [SinkArgument("effect", SinkArgumentType.Int32)]
+        [SinkArgument("button", SinkArgumentType.Int16)]
+        [SinkArgument("shift", SinkArgumentType.Int16)]
+        [SinkArgument("x", SinkArgumentType.Single)]
+        [SinkArgument("y", SinkArgumentType.Single)]
+        [SinkArgument("state", SinkArgumentType.Int16)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1554)]
 		void OLEDragOver([In] [Out, MarshalAs(UnmanagedType.IDispatch)] object data, [In] [Out] ref object effect, [In] [Out] ref object button, [In] [Out] ref object shift, [In] [Out] ref object x, [In] [Out] ref object y, [In] [Out] ref object state);
 
 		[SupportByVersion("MSComctlLib", 6)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1555)]
+        [SinkArgument("data", typeof(MSComctlLibApi.DataObject))]
+        [SinkArgument("effect", SinkArgumentType.Int32)]
+        [SinkArgument("button", SinkArgumentType.Int16)]
+        [SinkArgument("shift", SinkArgumentType.Int16)]
+        [SinkArgument("x", SinkArgumentType.Single)]
+        [SinkArgument("y", SinkArgumentType.Single)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1555)]
 		void OLEDragDrop([In] [Out, MarshalAs(UnmanagedType.IDispatch)] object data, [In] [Out] ref object effect, [In] [Out] ref object button, [In] [Out] ref object shift, [In] [Out] ref object x, [In] [Out] ref object y);
 
 		[SupportByVersion("MSComctlLib", 6)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(5)]
+        [SinkArgument("columnHeader", typeof(MSComctlLibApi.ListItem))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(5)]
 		void ItemCheck([In, MarshalAs(UnmanagedType.IDispatch)] object item);
 	}
 
@@ -147,10 +190,10 @@ namespace NetOffice.MSComctlLibApi.Events
 			EventBinding.RaiseCustomEvent("AfterLabelEdit", ref paramsArray);
 
 			cancel = ToInt16(paramsArray[0]);
-            newString = Convert.ToString(paramsArray[1]);
+            newString = ToString(paramsArray[1]);
 		}
-
-		public void ColumnClick([In, MarshalAs(UnmanagedType.IDispatch)] object columnHeader)
+       
+        public void ColumnClick([In, MarshalAs(UnmanagedType.IDispatch)] object columnHeader)
         {
             if (!Validate("ColumnClick"))
             {
@@ -163,8 +206,8 @@ namespace NetOffice.MSComctlLibApi.Events
 			paramsArray[0] = newColumnHeader;
 			EventBinding.RaiseCustomEvent("ColumnClick", ref paramsArray);
 		}
-
-		public void ItemClick([In, MarshalAs(UnmanagedType.IDispatch)] object item)
+        
+        public void ItemClick([In, MarshalAs(UnmanagedType.IDispatch)] object item)
         {
             if (!Validate("ItemClick"))
             {
@@ -186,7 +229,7 @@ namespace NetOffice.MSComctlLibApi.Events
                 return;
             }
 
-			Int16 newShift = Convert.ToInt16(shift);
+			Int16 newShift = ToInt16(shift);
 			object[] paramsArray = new object[2];
 			paramsArray.SetValue(keyCode, 0);
 			paramsArray[1] = newShift;
@@ -203,7 +246,7 @@ namespace NetOffice.MSComctlLibApi.Events
                 return;
             }
 
-			Int16 newShift = Convert.ToInt16(shift);
+			Int16 newShift = ToInt16(shift);
 			object[] paramsArray = new object[2];
 			paramsArray.SetValue(keyCode, 0);
 			paramsArray[1] = newShift;
@@ -235,10 +278,10 @@ namespace NetOffice.MSComctlLibApi.Events
                 return;
             }
 
-			Int16 newButton = Convert.ToInt16(button);
-			Int16 newShift = Convert.ToInt16(shift);
-			Int32 newx = Convert.ToInt32(x);
-			Int32 newy = Convert.ToInt32(y);
+			Int16 newButton = ToInt16(button);
+			Int16 newShift = ToInt16(shift);
+			Int32 newx = ToInt32(x);
+			Int32 newy = ToInt32(y);
 			object[] paramsArray = new object[4];
 			paramsArray[0] = newButton;
 			paramsArray[1] = newShift;
@@ -255,10 +298,10 @@ namespace NetOffice.MSComctlLibApi.Events
                 return;
             }
 
-			Int16 newButton = Convert.ToInt16(button);
-			Int16 newShift = Convert.ToInt16(shift);
-			Int32 newx = Convert.ToInt32(x);
-			Int32 newy = Convert.ToInt32(y);
+			Int16 newButton = ToInt16(button);
+			Int16 newShift = ToInt16(shift);
+			Int32 newx = ToInt32(x);
+			Int32 newy = ToInt32(y);
 			object[] paramsArray = new object[4];
 			paramsArray[0] = newButton;
 			paramsArray[1] = newShift;
@@ -275,10 +318,10 @@ namespace NetOffice.MSComctlLibApi.Events
                 return;
             }
 
-            Int16 newButton = Convert.ToInt16(button);
-			Int16 newShift = Convert.ToInt16(shift);
-			Int32 newx = Convert.ToInt32(x);
-			Int32 newy = Convert.ToInt32(y);
+            Int16 newButton = ToInt16(button);
+			Int16 newShift = ToInt16(shift);
+			Int32 newx = ToInt32(x);
+			Int32 newy = ToInt32(y);
 			object[] paramsArray = new object[4];
 			paramsArray[0] = newButton;
 			paramsArray[1] = newShift;

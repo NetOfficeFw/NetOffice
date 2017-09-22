@@ -17,11 +17,13 @@ namespace NetOffice.VBIDEApi.EventInterfaces
 	public interface _dispReferences_Events
 	{
 		[SupportByVersion("VBIDE", 12,14,5.3)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(0)]
+        [SinkArgument("reference", typeof(NetOffice.VBIDEApi.Reference))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(0)]
 		void ItemAdded([In, MarshalAs(UnmanagedType.IDispatch)] object reference);
 
 		[SupportByVersion("VBIDE", 12,14,5.3)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1)]
+        [SinkArgument("reference", typeof(NetOffice.VBIDEApi.Reference))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1)]
 		void ItemRemoved([In, MarshalAs(UnmanagedType.IDispatch)] object reference);
 	}
 

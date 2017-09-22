@@ -29,19 +29,24 @@ namespace NetOffice.ExcelApi.Events
 		void Deactivate();
 
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1546)]
+        [SinkArgument("cancel", SinkArgumentType.Bool)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1546)]
 		void BeforeClose([In] [Out] ref object cancel);
 
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1547)]
+        [SinkArgument("saveAsUI", SinkArgumentType.Bool)]
+        [SinkArgument("cancel", SinkArgumentType.Bool)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1547)]
 		void BeforeSave([In] object saveAsUI, [In] [Out] ref object cancel);
 
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1549)]
+        [SinkArgument("cancel", SinkArgumentType.Bool)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1549)]
 		void BeforePrint([In] [Out] ref object cancel);
 
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1550)]
+        [SinkArgument("sh", SinkArgumentType.UnknownProxy)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1550)]
 		void NewSheet([In, MarshalAs(UnmanagedType.IDispatch)] object sh);
 
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
@@ -53,127 +58,192 @@ namespace NetOffice.ExcelApi.Events
 		void AddinUninstall();
 
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1554)]
+        [SinkArgument("wn", typeof(ExcelApi.Window))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1554)]
 		void WindowResize([In, MarshalAs(UnmanagedType.IDispatch)] object wn);
 
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1556)]
+        [SinkArgument("wn", typeof(ExcelApi.Window))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1556)]
 		void WindowActivate([In, MarshalAs(UnmanagedType.IDispatch)] object wn);
 
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1557)]
+        [SinkArgument("wn", typeof(ExcelApi.Window))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1557)]
 		void WindowDeactivate([In, MarshalAs(UnmanagedType.IDispatch)] object wn);
 
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1558)]
+        [SinkArgument("sh", SinkArgumentType.UnknownProxy)]
+        [SinkArgument("target", typeof(ExcelApi.Range))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1558)]
 		void SheetSelectionChange([In, MarshalAs(UnmanagedType.IDispatch)] object sh, [In, MarshalAs(UnmanagedType.IDispatch)] object target);
 
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1559)]
+        [SinkArgument("sh", SinkArgumentType.UnknownProxy)]
+        [SinkArgument("target", typeof(ExcelApi.Range))]
+        [SinkArgument("cancel", SinkArgumentType.Bool)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1559)]
 		void SheetBeforeDoubleClick([In, MarshalAs(UnmanagedType.IDispatch)] object sh, [In, MarshalAs(UnmanagedType.IDispatch)] object target, [In] [Out] ref object cancel);
 
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1560)]
+        [SinkArgument("sh", SinkArgumentType.UnknownProxy)]
+        [SinkArgument("target", typeof(ExcelApi.Range))]
+        [SinkArgument("cancel", SinkArgumentType.Bool)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1560)]
 		void SheetBeforeRightClick([In, MarshalAs(UnmanagedType.IDispatch)] object sh, [In, MarshalAs(UnmanagedType.IDispatch)] object target, [In] [Out] ref object cancel);
 
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1561)]
+        [SinkArgument("sh", SinkArgumentType.UnknownProxy)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1561)]
 		void SheetActivate([In, MarshalAs(UnmanagedType.IDispatch)] object sh);
 
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1562)]
+        [SinkArgument("sh", SinkArgumentType.UnknownProxy)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1562)]
 		void SheetDeactivate([In, MarshalAs(UnmanagedType.IDispatch)] object sh);
 
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1563)]
+        [SinkArgument("sh", SinkArgumentType.UnknownProxy)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1563)]
 		void SheetCalculate([In, MarshalAs(UnmanagedType.IDispatch)] object sh);
 
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1564)]
+        [SinkArgument("sh", SinkArgumentType.UnknownProxy)]
+        [SinkArgument("target", typeof(ExcelApi.Range))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1564)]
 		void SheetChange([In, MarshalAs(UnmanagedType.IDispatch)] object sh, [In, MarshalAs(UnmanagedType.IDispatch)] object target);
 
 		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1854)]
+        [SinkArgument("sh", SinkArgumentType.UnknownProxy)]
+        [SinkArgument("target", typeof(ExcelApi.Hyperlink))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1854)]
 		void SheetFollowHyperlink([In, MarshalAs(UnmanagedType.IDispatch)] object sh, [In, MarshalAs(UnmanagedType.IDispatch)] object target);
 
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2157)]
+        [SinkArgument("sh", SinkArgumentType.UnknownProxy)]
+        [SinkArgument("target", typeof(ExcelApi.PivotTable))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2157)]
 		void SheetPivotTableUpdate([In, MarshalAs(UnmanagedType.IDispatch)] object sh, [In, MarshalAs(UnmanagedType.IDispatch)] object target);
 
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2158)]
+        [SinkArgument("target", typeof(ExcelApi.PivotTable))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2158)]
 		void PivotTableCloseConnection([In, MarshalAs(UnmanagedType.IDispatch)] object target);
 
 		[SupportByVersion("Excel", 10,11,12,14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2159)]
+        [SinkArgument("target", typeof(ExcelApi.PivotTable))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2159)]
 		void PivotTableOpenConnection([In, MarshalAs(UnmanagedType.IDispatch)] object target);
 
-		[SupportByVersion("Excel", 11,12,14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2266)]
+        [SupportByVersion("Excel", 11,12,14,15,16)]
+        [SinkArgument("syncEventType", SinkArgumentType.Enum, typeof(OfficeApi.Enums.MsoSyncEventType))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2266)]
 		void Sync([In] object syncEventType);
-
-		[SupportByVersion("Excel", 11,12,14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2283)]
+        
+        [SupportByVersion("Excel", 11,12,14,15,16)]
+        [SinkArgument("map", typeof(ExcelApi.XmlMap))]
+        [SinkArgument("url", SinkArgumentType.String)]
+        [SinkArgument("isRefresh", SinkArgumentType.Bool)]
+        [SinkArgument("cancel", SinkArgumentType.Bool)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2283)]
 		void BeforeXmlImport([In, MarshalAs(UnmanagedType.IDispatch)] object map, [In] object url, [In] object isRefresh, [In] [Out] ref object cancel);
 
 		[SupportByVersion("Excel", 11,12,14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2285)]
+        [SinkArgument("map", typeof(ExcelApi.XmlMap))]
+        [SinkArgument("isRefresh", SinkArgumentType.Bool)]
+        [SinkArgument("result", SinkArgumentType.Enum, typeof(ExcelApi.Enums.XlXmlImportResult))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2285)]
 		void AfterXmlImport([In, MarshalAs(UnmanagedType.IDispatch)] object map, [In] object isRefresh, [In] object result);
 
 		[SupportByVersion("Excel", 11,12,14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2287)]
+        [SinkArgument("map", typeof(ExcelApi.XmlMap))]
+        [SinkArgument("url", SinkArgumentType.String)]
+        [SinkArgument("cancel", SinkArgumentType.Bool)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2287)]
 		void BeforeXmlExport([In, MarshalAs(UnmanagedType.IDispatch)] object map, [In] object url, [In] [Out] ref object cancel);
 
 		[SupportByVersion("Excel", 11,12,14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2288)]
+        [SinkArgument("map", typeof(ExcelApi.XmlMap))]
+        [SinkArgument("url", SinkArgumentType.String)]
+        [SinkArgument("cancel", SinkArgumentType.Bool)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2288)]
 		void AfterXmlExport([In, MarshalAs(UnmanagedType.IDispatch)] object map, [In] object url, [In] object result);
 
 		[SupportByVersion("Excel", 12,14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2610)]
+        [SinkArgument("description", SinkArgumentType.String)]
+        [SinkArgument("sheet", SinkArgumentType.String)]
+        [SinkArgument("success", SinkArgumentType.Bool)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2610)]
 		void RowsetComplete([In] object description, [In] object sheet, [In] object success);
 
 		[SupportByVersion("Excel", 14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2895)]
+        [SinkArgument("sh", SinkArgumentType.UnknownProxy)]
+        [SinkArgument("targetPivotTable", typeof(ExcelApi.PivotTable))]
+        [SinkArgument("targetRange", typeof(ExcelApi.Range))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2895)]
 		void SheetPivotTableAfterValueChange([In, MarshalAs(UnmanagedType.IDispatch)] object sh, [In, MarshalAs(UnmanagedType.IDispatch)] object targetPivotTable, [In, MarshalAs(UnmanagedType.IDispatch)] object targetRange);
 
 		[SupportByVersion("Excel", 14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2896)]
+        [SinkArgument("sh", SinkArgumentType.UnknownProxy)]
+        [SinkArgument("targetPivotTable", typeof(ExcelApi.Range))]
+        [SinkArgument("valueChangeStart", SinkArgumentType.Int32)]
+        [SinkArgument("valueChangeEnd", SinkArgumentType.Int32)]
+        [SinkArgument("cancel", SinkArgumentType.Bool)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2896)]
 		void SheetPivotTableBeforeAllocateChanges([In, MarshalAs(UnmanagedType.IDispatch)] object sh, [In, MarshalAs(UnmanagedType.IDispatch)] object targetPivotTable, [In] object valueChangeStart, [In] object valueChangeEnd, [In] [Out] ref object cancel);
 
 		[SupportByVersion("Excel", 14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2897)]
+        [SinkArgument("sh", SinkArgumentType.UnknownProxy)]
+        [SinkArgument("targetPivotTable", typeof(ExcelApi.Range))]
+        [SinkArgument("valueChangeStart", SinkArgumentType.Int32)]
+        [SinkArgument("valueChangeEnd", SinkArgumentType.Int32)]
+        [SinkArgument("cancel", SinkArgumentType.Bool)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2897)]
 		void SheetPivotTableBeforeCommitChanges([In, MarshalAs(UnmanagedType.IDispatch)] object sh, [In, MarshalAs(UnmanagedType.IDispatch)] object targetPivotTable, [In] object valueChangeStart, [In] object valueChangeEnd, [In] [Out] ref object cancel);
 
 		[SupportByVersion("Excel", 14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2898)]
+        [SinkArgument("sh", SinkArgumentType.UnknownProxy)]
+        [SinkArgument("targetPivotTable", typeof(ExcelApi.Range))]
+        [SinkArgument("valueChangeStart", SinkArgumentType.Int32)]
+        [SinkArgument("valueChangeEnd", SinkArgumentType.Int32)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2898)]
 		void SheetPivotTableBeforeDiscardChanges([In, MarshalAs(UnmanagedType.IDispatch)] object sh, [In, MarshalAs(UnmanagedType.IDispatch)] object targetPivotTable, [In] object valueChangeStart, [In] object valueChangeEnd);
 
 		[SupportByVersion("Excel", 14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2899)]
+        [SinkArgument("sh", SinkArgumentType.UnknownProxy)]
+        [SinkArgument("target", typeof(ExcelApi.PivotTable))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2899)]
 		void SheetPivotTableChangeSync([In, MarshalAs(UnmanagedType.IDispatch)] object sh, [In, MarshalAs(UnmanagedType.IDispatch)] object target);
 
 		[SupportByVersion("Excel", 14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2900)]
+        [SinkArgument("success", SinkArgumentType.Bool)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2900)]
 		void AfterSave([In] object success);
 
 		[SupportByVersion("Excel", 14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2901)]
+        [SinkArgument("ch", typeof(ExcelApi.Chart))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2901)]
 		void NewChart([In, MarshalAs(UnmanagedType.IDispatch)] object ch);
 
 		[SupportByVersion("Excel", 15, 16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(3073)]
+        [SinkArgument("sh", SinkArgumentType.UnknownProxy)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(3073)]
 		void SheetLensGalleryRenderComplete([In, MarshalAs(UnmanagedType.IDispatch)] object sh);
 
 		[SupportByVersion("Excel", 15, 16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(3074)]
+        [SinkArgument("sh", SinkArgumentType.UnknownProxy)]
+        [SinkArgument("target", typeof(ExcelApi.TableObject))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(3074)]
 		void SheetTableUpdate([In, MarshalAs(UnmanagedType.IDispatch)] object sh, [In, MarshalAs(UnmanagedType.IDispatch)] object target);
 
 		[SupportByVersion("Excel", 15, 16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(3075)]
+        [SinkArgument("changes", typeof(ExcelApi.ModelChanges))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(3075)]
 		void ModelChange([In, MarshalAs(UnmanagedType.IDispatch)] object changes);
 
 		[SupportByVersion("Excel", 15, 16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(3077)]
+        [SinkArgument("sh", SinkArgumentType.UnknownProxy)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(3077)]
 		void SheetBeforeDelete([In, MarshalAs(UnmanagedType.IDispatch)] object sh);
 	}
 
@@ -258,7 +328,7 @@ namespace NetOffice.ExcelApi.Events
                 return;
             }
 
-			bool newSaveAsUI = Convert.ToBoolean(saveAsUI);
+			bool newSaveAsUI = ToBoolean(saveAsUI);
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newSaveAsUI;
 			paramsArray.SetValue(cancel, 1);
@@ -545,8 +615,8 @@ namespace NetOffice.ExcelApi.Events
 			paramsArray[0] = newSyncEventType;
             EventBinding.RaiseCustomEvent("Sync", ref paramsArray);
 		}
-
-		public void BeforeXmlImport([In, MarshalAs(UnmanagedType.IDispatch)] object map, [In] object url, [In] object isRefresh, [In] [Out] ref object cancel)
+        
+        public void BeforeXmlImport([In, MarshalAs(UnmanagedType.IDispatch)] object map, [In] object url, [In] object isRefresh, [In] [Out] ref object cancel)
 		{
             if (!Validate("BeforeXmlImports"))
             {
@@ -555,8 +625,8 @@ namespace NetOffice.ExcelApi.Events
             }
 
 			NetOffice.ExcelApi.XmlMap newMap = Factory.CreateKnownObjectFromComProxy<NetOffice.ExcelApi.XmlMap>(EventClass, map, NetOffice.ExcelApi.XmlMap.LateBindingApiWrapperType);
-			string newUrl = Convert.ToString(url);
-			bool newIsRefresh = Convert.ToBoolean(isRefresh);
+			string newUrl = ToString(url);
+			bool newIsRefresh = ToBoolean(isRefresh);
 			object[] paramsArray = new object[4];
 			paramsArray[0] = newMap;
 			paramsArray[1] = newUrl;
@@ -566,8 +636,8 @@ namespace NetOffice.ExcelApi.Events
 
             cancel = ToBoolean(paramsArray[3]);
 		}
-
-		public void AfterXmlImport([In, MarshalAs(UnmanagedType.IDispatch)] object map, [In] object isRefresh, [In] object result)
+        
+        public void AfterXmlImport([In, MarshalAs(UnmanagedType.IDispatch)] object map, [In] object isRefresh, [In] object result)
 		{
             if (!Validate("AfterXmlImport"))
             {
@@ -576,7 +646,7 @@ namespace NetOffice.ExcelApi.Events
             }
 
             NetOffice.ExcelApi.XmlMap newMap = Factory.CreateKnownObjectFromComProxy<NetOffice.ExcelApi.XmlMap>(EventClass, map, NetOffice.ExcelApi.XmlMap.LateBindingApiWrapperType);
-            bool newIsRefresh = Convert.ToBoolean(isRefresh);
+            bool newIsRefresh = ToBoolean(isRefresh);
 			NetOffice.ExcelApi.Enums.XlXmlImportResult newResult = (NetOffice.ExcelApi.Enums.XlXmlImportResult)result;
 			object[] paramsArray = new object[3];
 			paramsArray[0] = newMap;
@@ -585,7 +655,7 @@ namespace NetOffice.ExcelApi.Events
 			EventBinding.RaiseCustomEvent("AfterXmlImport", ref paramsArray);
 		}
 
-		public void BeforeXmlExport([In, MarshalAs(UnmanagedType.IDispatch)] object map, [In] object url, [In] [Out] ref object cancel)
+        public void BeforeXmlExport([In, MarshalAs(UnmanagedType.IDispatch)] object map, [In] object url, [In] [Out] ref object cancel)
 		{
             if (!Validate("BeforeXmlExport"))
             {
@@ -594,7 +664,7 @@ namespace NetOffice.ExcelApi.Events
             }
 
             NetOffice.ExcelApi.XmlMap newMap = Factory.CreateKnownObjectFromComProxy<NetOffice.ExcelApi.XmlMap>(EventClass, map, NetOffice.ExcelApi.XmlMap.LateBindingApiWrapperType);
-            string newUrl = Convert.ToString(url);
+            string newUrl = ToString(url);
 			object[] paramsArray = new object[3];
 			paramsArray[0] = newMap;
 			paramsArray[1] = newUrl;
@@ -613,7 +683,7 @@ namespace NetOffice.ExcelApi.Events
             }
 
             NetOffice.ExcelApi.XmlMap newMap = Factory.CreateKnownObjectFromComProxy<NetOffice.ExcelApi.XmlMap>(EventClass, map, NetOffice.ExcelApi.XmlMap.LateBindingApiWrapperType);
-            string newUrl = Convert.ToString(url);
+            string newUrl = ToString(url);
 			NetOffice.ExcelApi.Enums.XlXmlExportResult newResult = (NetOffice.ExcelApi.Enums.XlXmlExportResult)result;
 			object[] paramsArray = new object[3];
 			paramsArray[0] = newMap;
@@ -622,7 +692,7 @@ namespace NetOffice.ExcelApi.Events
 			EventBinding.RaiseCustomEvent("AfterXmlExport", ref paramsArray);
 		}
 
-		public void RowsetComplete([In] object description, [In] object sheet, [In] object success)
+        public void RowsetComplete([In] object description, [In] object sheet, [In] object success)
 		{
             if (!Validate("RowsetComplete"))
             {
@@ -630,17 +700,17 @@ namespace NetOffice.ExcelApi.Events
                 return;
             }
 
-			string newDescription = Convert.ToString(description);
-			string newSheet = Convert.ToString(sheet);
-			bool newSuccess = Convert.ToBoolean(success);
+			string newDescription = ToString(description);
+			string newSheet = ToString(sheet);
+			bool newSuccess = ToBoolean(success);
 			object[] paramsArray = new object[3];
 			paramsArray[0] = newDescription;
 			paramsArray[1] = newSheet;
 			paramsArray[2] = newSuccess;
 			EventBinding.RaiseCustomEvent("RowsetComplete", ref paramsArray);
 		}
-
-		public void SheetPivotTableAfterValueChange([In, MarshalAs(UnmanagedType.IDispatch)] object sh, [In, MarshalAs(UnmanagedType.IDispatch)] object targetPivotTable, [In, MarshalAs(UnmanagedType.IDispatch)] object targetRange)
+        
+        public void SheetPivotTableAfterValueChange([In, MarshalAs(UnmanagedType.IDispatch)] object sh, [In, MarshalAs(UnmanagedType.IDispatch)] object targetPivotTable, [In, MarshalAs(UnmanagedType.IDispatch)] object targetRange)
 		{
             if (!Validate("SheetPivotTableAfterValueChange"))
             {
@@ -658,7 +728,7 @@ namespace NetOffice.ExcelApi.Events
 			EventBinding.RaiseCustomEvent("SheetPivotTableAfterValueChange", ref paramsArray);
 		}
 
-		public void SheetPivotTableBeforeAllocateChanges([In, MarshalAs(UnmanagedType.IDispatch)] object sh, [In, MarshalAs(UnmanagedType.IDispatch)] object targetPivotTable, [In] object valueChangeStart, [In] object valueChangeEnd, [In] [Out] ref object cancel)
+        public void SheetPivotTableBeforeAllocateChanges([In, MarshalAs(UnmanagedType.IDispatch)] object sh, [In, MarshalAs(UnmanagedType.IDispatch)] object targetPivotTable, [In] object valueChangeStart, [In] object valueChangeEnd, [In] [Out] ref object cancel)
         {
             if (!Validate("SheetPivotTableBeforeAllocateChanges"))
             {
@@ -668,8 +738,8 @@ namespace NetOffice.ExcelApi.Events
 
 			object newSh = Factory.CreateEventArgumentObjectFromComProxy(EventClass, sh) as object;
 			NetOffice.ExcelApi.PivotTable newTargetPivotTable = Factory.CreateKnownObjectFromComProxy<NetOffice.ExcelApi.PivotTable>(EventClass, targetPivotTable, NetOffice.ExcelApi.PivotTable.LateBindingApiWrapperType);
-			Int32 newValueChangeStart = Convert.ToInt32(valueChangeStart);
-			Int32 newValueChangeEnd = Convert.ToInt32(valueChangeEnd);
+			Int32 newValueChangeStart = ToInt32(valueChangeStart);
+			Int32 newValueChangeEnd = ToInt32(valueChangeEnd);
 			object[] paramsArray = new object[5];
 			paramsArray[0] = newSh;
 			paramsArray[1] = newTargetPivotTable;
@@ -681,7 +751,7 @@ namespace NetOffice.ExcelApi.Events
             cancel = ToBoolean(paramsArray[4]);
 		}
 
-		public void SheetPivotTableBeforeCommitChanges([In, MarshalAs(UnmanagedType.IDispatch)] object sh, [In, MarshalAs(UnmanagedType.IDispatch)] object targetPivotTable, [In] object valueChangeStart, [In] object valueChangeEnd, [In] [Out] ref object cancel)
+        public void SheetPivotTableBeforeCommitChanges([In, MarshalAs(UnmanagedType.IDispatch)] object sh, [In, MarshalAs(UnmanagedType.IDispatch)] object targetPivotTable, [In] object valueChangeStart, [In] object valueChangeEnd, [In] [Out] ref object cancel)
 		{
             if (!Validate("SheetPivotTableBeforeAllocateChanges"))
             {
@@ -691,8 +761,8 @@ namespace NetOffice.ExcelApi.Events
 
             object newSh = Factory.CreateEventArgumentObjectFromComProxy(EventClass, sh) as object;
             NetOffice.ExcelApi.PivotTable newTargetPivotTable = Factory.CreateKnownObjectFromComProxy<NetOffice.ExcelApi.PivotTable>(EventClass, targetPivotTable, NetOffice.ExcelApi.PivotTable.LateBindingApiWrapperType);
-            Int32 newValueChangeStart = Convert.ToInt32(valueChangeStart);
-			Int32 newValueChangeEnd = Convert.ToInt32(valueChangeEnd);
+            Int32 newValueChangeStart = ToInt32(valueChangeStart);
+			Int32 newValueChangeEnd = ToInt32(valueChangeEnd);
 			object[] paramsArray = new object[5];
 			paramsArray[0] = newSh;
 			paramsArray[1] = newTargetPivotTable;
@@ -704,7 +774,7 @@ namespace NetOffice.ExcelApi.Events
             cancel = ToBoolean(paramsArray[4]);
         }
 
-		public void SheetPivotTableBeforeDiscardChanges([In, MarshalAs(UnmanagedType.IDispatch)] object sh, [In, MarshalAs(UnmanagedType.IDispatch)] object targetPivotTable, [In] object valueChangeStart, [In] object valueChangeEnd)
+        public void SheetPivotTableBeforeDiscardChanges([In, MarshalAs(UnmanagedType.IDispatch)] object sh, [In, MarshalAs(UnmanagedType.IDispatch)] object targetPivotTable, [In] object valueChangeStart, [In] object valueChangeEnd)
         {
             if (!Validate("SheetPivotTableBeforeAllocateChanges"))
             {
@@ -714,8 +784,8 @@ namespace NetOffice.ExcelApi.Events
 
             object newSh = Factory.CreateEventArgumentObjectFromComProxy(EventClass, sh) as object;
             NetOffice.ExcelApi.PivotTable newTargetPivotTable = Factory.CreateKnownObjectFromComProxy<NetOffice.ExcelApi.PivotTable>(EventClass, targetPivotTable, NetOffice.ExcelApi.PivotTable.LateBindingApiWrapperType);
-            Int32 newValueChangeStart = Convert.ToInt32(valueChangeStart);
-			Int32 newValueChangeEnd = Convert.ToInt32(valueChangeEnd);
+            Int32 newValueChangeStart = ToInt32(valueChangeStart);
+			Int32 newValueChangeEnd = ToInt32(valueChangeEnd);
 			object[] paramsArray = new object[4];
 			paramsArray[0] = newSh;
 			paramsArray[1] = newTargetPivotTable;
@@ -723,8 +793,8 @@ namespace NetOffice.ExcelApi.Events
 			paramsArray[3] = newValueChangeEnd;
 			EventBinding.RaiseCustomEvent("SheetPivotTableBeforeDiscardChanges", ref paramsArray);
 		}
-
-		public void SheetPivotTableChangeSync([In, MarshalAs(UnmanagedType.IDispatch)] object sh, [In, MarshalAs(UnmanagedType.IDispatch)] object target)
+        
+        public void SheetPivotTableChangeSync([In, MarshalAs(UnmanagedType.IDispatch)] object sh, [In, MarshalAs(UnmanagedType.IDispatch)] object target)
 		{
             if (!Validate("SheetPivotTableBeforeAllocateChanges"))
             {
@@ -740,7 +810,7 @@ namespace NetOffice.ExcelApi.Events
 			EventBinding.RaiseCustomEvent("SheetPivotTableChangeSync", ref paramsArray);
 		}
 
-		public void AfterSave([In] object success)
+        public void AfterSave([In] object success)
         {
             if (!Validate("AfterSave"))
             {
@@ -748,13 +818,13 @@ namespace NetOffice.ExcelApi.Events
                 return;
             }
 
-			bool newSuccess = Convert.ToBoolean(success);
+			bool newSuccess = ToBoolean(success);
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newSuccess;
             EventBinding.RaiseCustomEvent("AfterSave", ref paramsArray);
 		}
 
-		public void NewChart([In, MarshalAs(UnmanagedType.IDispatch)] object ch)
+        public void NewChart([In, MarshalAs(UnmanagedType.IDispatch)] object ch)
         {
             if (!Validate("NewChart"))
             {
@@ -768,7 +838,7 @@ namespace NetOffice.ExcelApi.Events
             EventBinding.RaiseCustomEvent("NewChart", ref paramsArray);
 		}
 
-		public void SheetLensGalleryRenderComplete([In, MarshalAs(UnmanagedType.IDispatch)] object sh)
+        public void SheetLensGalleryRenderComplete([In, MarshalAs(UnmanagedType.IDispatch)] object sh)
         {
             if (!Validate("SheetLensGalleryRenderComplete"))
             {
@@ -781,8 +851,8 @@ namespace NetOffice.ExcelApi.Events
 			paramsArray[0] = newSh;
             EventBinding.RaiseCustomEvent("SheetLensGalleryRenderComplete", ref paramsArray);
 		}
-
-		public void SheetTableUpdate([In, MarshalAs(UnmanagedType.IDispatch)] object sh, [In, MarshalAs(UnmanagedType.IDispatch)] object target)
+        
+        public void SheetTableUpdate([In, MarshalAs(UnmanagedType.IDispatch)] object sh, [In, MarshalAs(UnmanagedType.IDispatch)] object target)
         {
             if (!Validate("SheetTableUpdate"))
             {
@@ -798,7 +868,7 @@ namespace NetOffice.ExcelApi.Events
 			EventBinding.RaiseCustomEvent("SheetTableUpdate", ref paramsArray);
 		}
 
-		public void ModelChange([In, MarshalAs(UnmanagedType.IDispatch)] object changes)
+        public void ModelChange([In, MarshalAs(UnmanagedType.IDispatch)] object changes)
         {
             if (!Validate("ModelChange"))
             {
@@ -812,7 +882,7 @@ namespace NetOffice.ExcelApi.Events
 			EventBinding.RaiseCustomEvent("ModelChange", ref paramsArray);
 		}
 
-		public void SheetBeforeDelete([In, MarshalAs(UnmanagedType.IDispatch)] object sh)
+        public void SheetBeforeDelete([In, MarshalAs(UnmanagedType.IDispatch)] object sh)
         {
             if (!Validate("SheetBeforeDelete"))
             {

@@ -17,7 +17,8 @@ namespace NetOffice.OutlookApi.Events
 	public interface FormRegionEvents
 	{
 		[SupportByVersion("Outlook", 12,14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(64312)]
+        [SinkArgument("expand", SinkArgumentType.Bool)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(64312)]
 		void Expanded([In] object expand);
 
 		[SupportByVersion("Outlook", 12,14,15,16)]
@@ -58,7 +59,7 @@ namespace NetOffice.OutlookApi.Events
                 return;
             }
 
-			bool newExpand = Convert.ToBoolean(expand);
+			bool newExpand = ToBoolean(expand);
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newExpand;
 			EventBinding.RaiseCustomEvent("Expanded", ref paramsArray);

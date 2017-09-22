@@ -8,7 +8,7 @@ namespace NetOffice
     /// <summary>
     /// Collect a sequence of performance trace settings
     /// </summary>
-    internal class PerformanceTraceSettingCollection : List<PerformanceTraceSetting>
+    public class PerformanceTraceSettingCollection : List<PerformanceTraceSetting>
     {
         /// <summary>
         /// Creates an instance of the class

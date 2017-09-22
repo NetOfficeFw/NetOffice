@@ -17,19 +17,23 @@ namespace NetOffice.VisioApi.Events
 	public interface EStyle
 	{
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(8196)]
+        [SinkArgument("style", typeof(NetOffice.VisioApi.IVStyle))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(8196)]
 		void StyleChanged([In, MarshalAs(UnmanagedType.IDispatch)] object style);
 
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(16388)]
+        [SinkArgument("style", typeof(NetOffice.VisioApi.IVStyle))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(16388)]
 		void BeforeStyleDelete([In, MarshalAs(UnmanagedType.IDispatch)] object style);
 
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(300)]
+        [SinkArgument("style", typeof(NetOffice.VisioApi.IVStyle))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(300)]
 		void QueryCancelStyleDelete([In, MarshalAs(UnmanagedType.IDispatch)] object style);
 
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(301)]
+        [SinkArgument("style", typeof(NetOffice.VisioApi.IVStyle))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(301)]
 		void StyleDeleteCanceled([In, MarshalAs(UnmanagedType.IDispatch)] object style);
 	}
 
@@ -66,8 +70,8 @@ namespace NetOffice.VisioApi.Events
                 return;
             }
 
-			NetOffice.VisioApi.IVStyle newStyle = Factory.CreateKnownObjectFromComProxy<NetOffice.VisioApi.IVStyle>(EventClass, style, NetOffice.VisioApi.IVStyle.LateBindingApiWrapperType);
-			object[] paramsArray = new object[1];
+            NetOffice.VisioApi.IVStyle newStyle = Factory.CreateEventArgumentObjectFromComProxy(EventClass, style) as NetOffice.VisioApi.IVStyle;
+            object[] paramsArray = new object[1];
 			paramsArray[0] = newStyle;
 			EventBinding.RaiseCustomEvent("StyleChanged", ref paramsArray);
 		}
@@ -80,7 +84,7 @@ namespace NetOffice.VisioApi.Events
                 return;
             }
 
-            NetOffice.VisioApi.IVStyle newStyle = Factory.CreateKnownObjectFromComProxy<NetOffice.VisioApi.IVStyle>(EventClass, style, NetOffice.VisioApi.IVStyle.LateBindingApiWrapperType);
+            NetOffice.VisioApi.IVStyle newStyle = Factory.CreateEventArgumentObjectFromComProxy(EventClass, style) as NetOffice.VisioApi.IVStyle;
             object[] paramsArray = new object[1];
 			paramsArray[0] = newStyle;
 			EventBinding.RaiseCustomEvent("BeforeStyleDelete", ref paramsArray);
@@ -94,7 +98,7 @@ namespace NetOffice.VisioApi.Events
                 return;
             }
 
-            NetOffice.VisioApi.IVStyle newStyle = Factory.CreateKnownObjectFromComProxy<NetOffice.VisioApi.IVStyle>(EventClass, style, NetOffice.VisioApi.IVStyle.LateBindingApiWrapperType);
+            NetOffice.VisioApi.IVStyle newStyle = Factory.CreateEventArgumentObjectFromComProxy(EventClass, style) as NetOffice.VisioApi.IVStyle;
             object[] paramsArray = new object[1];
 			paramsArray[0] = newStyle;
 			EventBinding.RaiseCustomEvent("QueryCancelStyleDelete", ref paramsArray);
@@ -108,7 +112,7 @@ namespace NetOffice.VisioApi.Events
                 return;
             }
 
-            NetOffice.VisioApi.IVStyle newStyle = Factory.CreateKnownObjectFromComProxy<NetOffice.VisioApi.IVStyle>(EventClass, style, NetOffice.VisioApi.IVStyle.LateBindingApiWrapperType);
+            NetOffice.VisioApi.IVStyle newStyle = Factory.CreateEventArgumentObjectFromComProxy(EventClass, style) as NetOffice.VisioApi.IVStyle;
             object[] paramsArray = new object[1];
 			paramsArray[0] = newStyle;
 			EventBinding.RaiseCustomEvent("StyleDeleteCanceled", ref paramsArray);

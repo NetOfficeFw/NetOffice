@@ -25,15 +25,27 @@ namespace NetOffice.OutlookApi.Events
 		void DoubleClick();
 
 		[SupportByVersion("Outlook", 12,14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(-605)]
+        [SinkArgument("button", SinkArgumentType.Enum, typeof(OutlookApi.Enums.OlMouseButton))]
+        [SinkArgument("shift", SinkArgumentType.Enum, typeof(OutlookApi.Enums.OlShiftState))]
+        [SinkArgument("x", SinkArgumentType.Single)]
+        [SinkArgument("y", SinkArgumentType.Single)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(-605)]
 		void MouseDown([In] object button, [In] object shift, [In] object x, [In] object y);
 
 		[SupportByVersion("Outlook", 12,14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(-606)]
+        [SinkArgument("button", SinkArgumentType.Enum, typeof(OutlookApi.Enums.OlMouseButton))]
+        [SinkArgument("shift", SinkArgumentType.Enum, typeof(OutlookApi.Enums.OlShiftState))]
+        [SinkArgument("x", SinkArgumentType.Single)]
+        [SinkArgument("y", SinkArgumentType.Single)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(-606)]
 		void MouseMove([In] object button, [In] object shift, [In] object x, [In] object y);
 
 		[SupportByVersion("Outlook", 12,14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(-607)]
+        [SinkArgument("button", SinkArgumentType.Enum, typeof(OutlookApi.Enums.OlMouseButton))]
+        [SinkArgument("shift", SinkArgumentType.Enum, typeof(OutlookApi.Enums.OlShiftState))]
+        [SinkArgument("x", SinkArgumentType.Single)]
+        [SinkArgument("y", SinkArgumentType.Single)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(-607)]
 		void MouseUp([In] object button, [In] object shift, [In] object x, [In] object y);
 
 		[SupportByVersion("Outlook", 12,14,15,16)]
@@ -41,19 +53,25 @@ namespace NetOffice.OutlookApi.Events
 		void Enter();
 
 		[SupportByVersion("Outlook", 12,14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(-2147384829)]
+        [SinkArgument("cancel", SinkArgumentType.Bool)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(-2147384829)]
 		void Exit([In] [Out] ref object cancel);
 
 		[SupportByVersion("Outlook", 12,14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(-602)]
+        [SinkArgument("keyCode", SinkArgumentType.Int32)]
+        [SinkArgument("shift", SinkArgumentType.Enum, typeof(OutlookApi.Enums.OlShiftState))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(-602)]
 		void KeyDown([In] [Out] ref object keyCode, [In] object shift);
 
 		[SupportByVersion("Outlook", 12,14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(-603)]
+        [SinkArgument("keyAscii", SinkArgumentType.Int32)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(-603)]
 		void KeyPress([In] [Out] ref object keyAscii);
 
 		[SupportByVersion("Outlook", 12,14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(-604)]
+        [SinkArgument("keyCode", SinkArgumentType.Int32)]
+        [SinkArgument("shift", SinkArgumentType.Enum, typeof(OutlookApi.Enums.OlShiftState))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(-604)]
 		void KeyUp([In] [Out] ref object keyCode, [In] object shift);
 
 		[SupportByVersion("Outlook", 12,14,15,16)]
@@ -118,8 +136,8 @@ namespace NetOffice.OutlookApi.Events
 
 			NetOffice.OutlookApi.Enums.OlMouseButton newButton = (NetOffice.OutlookApi.Enums.OlMouseButton)button;
 			NetOffice.OutlookApi.Enums.OlShiftState newShift = (NetOffice.OutlookApi.Enums.OlShiftState)shift;
-			Single newX = Convert.ToSingle(x);
-			Single newY = Convert.ToSingle(y);
+			Single newX = ToSingle(x);
+			Single newY = ToSingle(y);
 			object[] paramsArray = new object[4];
 			paramsArray[0] = newButton;
 			paramsArray[1] = newShift;
@@ -138,8 +156,8 @@ namespace NetOffice.OutlookApi.Events
 
             NetOffice.OutlookApi.Enums.OlMouseButton newButton = (NetOffice.OutlookApi.Enums.OlMouseButton)button;
 			NetOffice.OutlookApi.Enums.OlShiftState newShift = (NetOffice.OutlookApi.Enums.OlShiftState)shift;
-			Single newX = Convert.ToSingle(x);
-			Single newY = Convert.ToSingle(y);
+			Single newX = ToSingle(x);
+			Single newY = ToSingle(y);
 			object[] paramsArray = new object[4];
 			paramsArray[0] = newButton;
 			paramsArray[1] = newShift;
@@ -158,8 +176,8 @@ namespace NetOffice.OutlookApi.Events
 
 			NetOffice.OutlookApi.Enums.OlMouseButton newButton = (NetOffice.OutlookApi.Enums.OlMouseButton)button;
 			NetOffice.OutlookApi.Enums.OlShiftState newShift = (NetOffice.OutlookApi.Enums.OlShiftState)shift;
-			Single newX = Convert.ToSingle(x);
-			Single newY = Convert.ToSingle(y);
+			Single newX = ToSingle(x);
+			Single newY = ToSingle(y);
 			object[] paramsArray = new object[4];
 			paramsArray[0] = newButton;
 			paramsArray[1] = newShift;

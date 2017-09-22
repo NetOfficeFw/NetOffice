@@ -17,15 +17,18 @@ namespace NetOffice.PublisherApi.Events
 	public interface ApplicationEvents
 	{
 		[SupportByVersion("Publisher", 14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1)]
+        [SinkArgument("wn", typeof(PublisherApi.Window))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1)]
 		void WindowActivate([In, MarshalAs(UnmanagedType.IDispatch)] object wn);
 
 		[SupportByVersion("Publisher", 14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2)]
+        [SinkArgument("wn", typeof(PublisherApi.Window))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2)]
 		void WindowDeactivate([In, MarshalAs(UnmanagedType.IDispatch)] object wn);
 
 		[SupportByVersion("Publisher", 14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(4)]
+        [SinkArgument("vw", typeof(PublisherApi.View))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(4)]
 		void WindowPageChange([In, MarshalAs(UnmanagedType.IDispatch)] object vw);
 
 		[SupportByVersion("Publisher", 14,15,16)]
@@ -33,71 +36,98 @@ namespace NetOffice.PublisherApi.Events
 		void Quit();
 
 		[SupportByVersion("Publisher", 14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(6)]
+        [SinkArgument("doc", typeof(PublisherApi._Document))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(6)]
 		void NewDocument([In, MarshalAs(UnmanagedType.IDispatch)] object doc);
 
 		[SupportByVersion("Publisher", 14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(7)]
+        [SinkArgument("doc", typeof(PublisherApi._Document))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(7)]
 		void DocumentOpen([In, MarshalAs(UnmanagedType.IDispatch)] object doc);
 
 		[SupportByVersion("Publisher", 14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(8)]
+        [SinkArgument("doc", typeof(PublisherApi._Document))]
+        [SinkArgument("cancel", SinkArgumentType.Bool)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(8)]
 		void DocumentBeforeClose([In, MarshalAs(UnmanagedType.IDispatch)] object doc, [In] [Out] ref object cancel);
 
 		[SupportByVersion("Publisher", 14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(9)]
+        [SinkArgument("doc", typeof(PublisherApi._Document))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(9)]
 		void MailMergeAfterMerge([In, MarshalAs(UnmanagedType.IDispatch)] object doc);
 
 		[SupportByVersion("Publisher", 14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(10)]
+        [SinkArgument("doc", typeof(PublisherApi._Document))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(10)]
 		void MailMergeAfterRecordMerge([In, MarshalAs(UnmanagedType.IDispatch)] object doc);
 
 		[SupportByVersion("Publisher", 14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(11)]
+        [SinkArgument("doc", typeof(PublisherApi._Document))]
+        [SinkArgument("startRecord", SinkArgumentType.Int32)]
+        [SinkArgument("endRecord", SinkArgumentType.Int32)]
+        [SinkArgument("cancel", SinkArgumentType.Bool)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(11)]
 		void MailMergeBeforeMerge([In, MarshalAs(UnmanagedType.IDispatch)] object doc, [In] object startRecord, [In] object endRecord, [In] [Out] ref object cancel);
 
 		[SupportByVersion("Publisher", 14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(12)]
+        [SinkArgument("doc", typeof(PublisherApi._Document))]
+        [SinkArgument("cancel", SinkArgumentType.Bool)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(12)]
 		void MailMergeBeforeRecordMerge([In, MarshalAs(UnmanagedType.IDispatch)] object doc, [In] [Out] ref object cancel);
 
 		[SupportByVersion("Publisher", 14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(13)]
+        [SinkArgument("doc", typeof(PublisherApi._Document))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(13)]
 		void MailMergeDataSourceLoad([In, MarshalAs(UnmanagedType.IDispatch)] object doc);
 
 		[SupportByVersion("Publisher", 14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(16)]
+        [SinkArgument("doc", typeof(PublisherApi._Document))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(16)]
 		void MailMergeWizardSendToCustom([In, MarshalAs(UnmanagedType.IDispatch)] object doc);
 
 		[SupportByVersion("Publisher", 14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(17)]
+        [SinkArgument("doc", typeof(PublisherApi._Document))]
+        [SinkArgument("fromState", SinkArgumentType.Int32)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(17)]
 		void MailMergeWizardStateChange([In, MarshalAs(UnmanagedType.IDispatch)] object doc, [In] object fromState);
 
 		[SupportByVersion("Publisher", 14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(18)]
+        [SinkArgument("doc", typeof(PublisherApi._Document))]
+        [SinkArgument("handled", SinkArgumentType.Bool)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(18)]
 		void MailMergeDataSourceValidate([In, MarshalAs(UnmanagedType.IDispatch)] object doc, [In] [Out] ref object handled);
 
 		[SupportByVersion("Publisher", 14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(19)]
+        [SinkArgument("doc", typeof(PublisherApi._Document))]
+        [SinkArgument("okToInsert", SinkArgumentType.Bool)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(19)]
 		void MailMergeInsertBarcode([In, MarshalAs(UnmanagedType.IDispatch)] object doc, [In] [Out] ref object okToInsert);
 
 		[SupportByVersion("Publisher", 14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(20)]
+        [SinkArgument("doc", typeof(PublisherApi._Document))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(20)]
 		void MailMergeRecipientListClose([In, MarshalAs(UnmanagedType.IDispatch)] object doc);
 
 		[SupportByVersion("Publisher", 14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(21)]
+        [SinkArgument("doc", typeof(PublisherApi._Document))]
+        [SinkArgument("bstrString", SinkArgumentType.String)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(21)]
 		void MailMergeGenerateBarcode([In, MarshalAs(UnmanagedType.IDispatch)] object doc, [In] [Out] ref object bstrString);
 
 		[SupportByVersion("Publisher", 14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(22)]
+        [SinkArgument("doc", typeof(PublisherApi._Document))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(22)]
 		void MailMergeWizardFollowUpCustom([In, MarshalAs(UnmanagedType.IDispatch)] object doc);
 
 		[SupportByVersion("Publisher", 14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(23)]
+        [SinkArgument("doc", typeof(PublisherApi._Document))]
+        [SinkArgument("cancel", SinkArgumentType.Bool)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(23)]
 		void BeforePrint([In, MarshalAs(UnmanagedType.IDispatch)] object doc, [In] [Out] ref object cancel);
 
 		[SupportByVersion("Publisher", 14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(24)]
+        [SinkArgument("doc", typeof(PublisherApi._Document))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(24)]
 		void AfterPrint([In, MarshalAs(UnmanagedType.IDispatch)] object doc);
 
 		[SupportByVersion("Publisher", 14,15,16)]
@@ -134,7 +164,7 @@ namespace NetOffice.PublisherApi.Events
 
 		#region ApplicationEvents
 		
-		public void WindowActivate([In, MarshalAs(UnmanagedType.IDispatch)] object wn)
+        public void WindowActivate([In, MarshalAs(UnmanagedType.IDispatch)] object wn)
 		{
             if (!Validate("WindowActivate"))
             {
@@ -148,7 +178,7 @@ namespace NetOffice.PublisherApi.Events
 			EventBinding.RaiseCustomEvent("WindowActivate", ref paramsArray);
 		}
 
-		public void WindowDeactivate([In, MarshalAs(UnmanagedType.IDispatch)] object wn)
+        public void WindowDeactivate([In, MarshalAs(UnmanagedType.IDispatch)] object wn)
 		{
             if (!Validate("WindowDeactivate"))
             {
@@ -162,7 +192,7 @@ namespace NetOffice.PublisherApi.Events
 			EventBinding.RaiseCustomEvent("WindowDeactivate", ref paramsArray);
 		}
 
-		public void WindowPageChange([In, MarshalAs(UnmanagedType.IDispatch)] object vw)
+        public void WindowPageChange([In, MarshalAs(UnmanagedType.IDispatch)] object vw)
         {
             if (!Validate("WindowPageChange"))
             {
@@ -187,7 +217,7 @@ namespace NetOffice.PublisherApi.Events
 			EventBinding.RaiseCustomEvent("Quit", ref paramsArray);
 		}
 
-		public void NewDocument([In, MarshalAs(UnmanagedType.IDispatch)] object doc)
+        public void NewDocument([In, MarshalAs(UnmanagedType.IDispatch)] object doc)
         {
             if (!Validate("NewDocument"))
             {
@@ -195,13 +225,13 @@ namespace NetOffice.PublisherApi.Events
                 return;
             }
 
-			NetOffice.PublisherApi._Document newDoc = Factory.CreateKnownObjectFromComProxy<NetOffice.PublisherApi._Document>(EventClass, doc, NetOffice.PublisherApi._Document.LateBindingApiWrapperType);
-			object[] paramsArray = new object[1];
+            NetOffice.PublisherApi._Document newDoc = Factory.CreateEventArgumentObjectFromComProxy(EventClass, doc) as NetOffice.PublisherApi._Document;
+            object[] paramsArray = new object[1];
 			paramsArray[0] = newDoc;
 			EventBinding.RaiseCustomEvent("NewDocument", ref paramsArray);
 		}
 
-		public void DocumentOpen([In, MarshalAs(UnmanagedType.IDispatch)] object doc)
+        public void DocumentOpen([In, MarshalAs(UnmanagedType.IDispatch)] object doc)
 		{
             if (!Validate("DocumentOpen"))
             {
@@ -209,13 +239,13 @@ namespace NetOffice.PublisherApi.Events
                 return;
             }
 
-            NetOffice.PublisherApi._Document newDoc = Factory.CreateKnownObjectFromComProxy<NetOffice.PublisherApi._Document>(EventClass, doc, NetOffice.PublisherApi._Document.LateBindingApiWrapperType);
+            NetOffice.PublisherApi._Document newDoc = Factory.CreateEventArgumentObjectFromComProxy(EventClass, doc) as NetOffice.PublisherApi._Document;
             object[] paramsArray = new object[1];
 			paramsArray[0] = newDoc;
 			EventBinding.RaiseCustomEvent("DocumentOpen", ref paramsArray);
 		}
 
-		public void DocumentBeforeClose([In, MarshalAs(UnmanagedType.IDispatch)] object doc, [In] [Out] ref object cancel)
+        public void DocumentBeforeClose([In, MarshalAs(UnmanagedType.IDispatch)] object doc, [In] [Out] ref object cancel)
         {
             if (!Validate("DocumentBeforeClose"))
             {
@@ -223,8 +253,8 @@ namespace NetOffice.PublisherApi.Events
                 return;
             }
 
-			NetOffice.PublisherApi._Document newDoc = Factory.CreateKnownObjectFromComProxy<NetOffice.PublisherApi._Document>(EventClass, doc, NetOffice.PublisherApi._Document.LateBindingApiWrapperType);
-			object[] paramsArray = new object[2];
+            NetOffice.PublisherApi._Document newDoc = Factory.CreateEventArgumentObjectFromComProxy(EventClass, doc) as NetOffice.PublisherApi._Document;
+            object[] paramsArray = new object[2];
 			paramsArray[0] = newDoc;
 			paramsArray.SetValue(cancel, 1);
 			EventBinding.RaiseCustomEvent("DocumentBeforeClose", ref paramsArray);
@@ -232,7 +262,7 @@ namespace NetOffice.PublisherApi.Events
 			cancel = ToBoolean(paramsArray[1]);
 		}
 
-		public void MailMergeAfterMerge([In, MarshalAs(UnmanagedType.IDispatch)] object doc)
+        public void MailMergeAfterMerge([In, MarshalAs(UnmanagedType.IDispatch)] object doc)
 		{
             if (!Validate("MailMergeAfterMerge"))
             {
@@ -240,13 +270,13 @@ namespace NetOffice.PublisherApi.Events
                 return;
             }
 
-            NetOffice.PublisherApi._Document newDoc = Factory.CreateKnownObjectFromComProxy<NetOffice.PublisherApi._Document>(EventClass, doc, NetOffice.PublisherApi._Document.LateBindingApiWrapperType);
+            NetOffice.PublisherApi._Document newDoc = Factory.CreateEventArgumentObjectFromComProxy(EventClass, doc) as NetOffice.PublisherApi._Document;
             object[] paramsArray = new object[1];
 			paramsArray[0] = newDoc;
 			EventBinding.RaiseCustomEvent("MailMergeAfterMerge", ref paramsArray);
 		}
 
-		public void MailMergeAfterRecordMerge([In, MarshalAs(UnmanagedType.IDispatch)] object doc)
+        public void MailMergeAfterRecordMerge([In, MarshalAs(UnmanagedType.IDispatch)] object doc)
 		{
             if (!Validate("MailMergeAfterRecordMerge"))
             {
@@ -254,13 +284,13 @@ namespace NetOffice.PublisherApi.Events
                 return;
             }
 
-            NetOffice.PublisherApi._Document newDoc = Factory.CreateKnownObjectFromComProxy<NetOffice.PublisherApi._Document>(EventClass, doc, NetOffice.PublisherApi._Document.LateBindingApiWrapperType);
+            NetOffice.PublisherApi._Document newDoc = Factory.CreateEventArgumentObjectFromComProxy(EventClass, doc) as NetOffice.PublisherApi._Document;
             object[] paramsArray = new object[1];
 			paramsArray[0] = newDoc;
 			EventBinding.RaiseCustomEvent("MailMergeAfterRecordMerge", ref paramsArray);
 		}
 
-		public void MailMergeBeforeMerge([In, MarshalAs(UnmanagedType.IDispatch)] object doc, [In] object startRecord, [In] object endRecord, [In] [Out] ref object cancel)
+        public void MailMergeBeforeMerge([In, MarshalAs(UnmanagedType.IDispatch)] object doc, [In] object startRecord, [In] object endRecord, [In] [Out] ref object cancel)
 		{
             if (!Validate("MailMergeBeforeMerge"))
             {
@@ -268,9 +298,9 @@ namespace NetOffice.PublisherApi.Events
                 return;
             }
 
-            NetOffice.PublisherApi._Document newDoc = Factory.CreateKnownObjectFromComProxy<NetOffice.PublisherApi._Document>(EventClass, doc, NetOffice.PublisherApi._Document.LateBindingApiWrapperType);
-            Int32 newStartRecord = Convert.ToInt32(startRecord);
-			Int32 newEndRecord = Convert.ToInt32(endRecord);
+            NetOffice.PublisherApi._Document newDoc = Factory.CreateEventArgumentObjectFromComProxy(EventClass, doc) as NetOffice.PublisherApi._Document;
+            Int32 newStartRecord = ToInt32(startRecord);
+			Int32 newEndRecord = ToInt32(endRecord);
 			object[] paramsArray = new object[4];
 			paramsArray[0] = newDoc;
 			paramsArray[1] = newStartRecord;
@@ -281,7 +311,7 @@ namespace NetOffice.PublisherApi.Events
 			cancel = ToBoolean(paramsArray[3]);
 		}
 
-		public void MailMergeBeforeRecordMerge([In, MarshalAs(UnmanagedType.IDispatch)] object doc, [In] [Out] ref object cancel)
+        public void MailMergeBeforeRecordMerge([In, MarshalAs(UnmanagedType.IDispatch)] object doc, [In] [Out] ref object cancel)
 		{
             if (!Validate("MailMergeBeforeRecordMerge"))
             {
@@ -289,7 +319,7 @@ namespace NetOffice.PublisherApi.Events
                 return;
             }
 
-            NetOffice.PublisherApi._Document newDoc = Factory.CreateKnownObjectFromComProxy<NetOffice.PublisherApi._Document>(EventClass, doc, NetOffice.PublisherApi._Document.LateBindingApiWrapperType);
+            NetOffice.PublisherApi._Document newDoc = Factory.CreateEventArgumentObjectFromComProxy(EventClass, doc) as NetOffice.PublisherApi._Document;
             object[] paramsArray = new object[2];
 			paramsArray[0] = newDoc;
 			paramsArray.SetValue(cancel, 1);
@@ -298,7 +328,7 @@ namespace NetOffice.PublisherApi.Events
 			cancel = ToBoolean(paramsArray[1]);
         }
 
-		public void MailMergeDataSourceLoad([In, MarshalAs(UnmanagedType.IDispatch)] object doc)
+        public void MailMergeDataSourceLoad([In, MarshalAs(UnmanagedType.IDispatch)] object doc)
         {
             if (!Validate("MailMergeDataSourceLoad"))
             {
@@ -306,13 +336,13 @@ namespace NetOffice.PublisherApi.Events
                 return;
             }
 
-            NetOffice.PublisherApi._Document newDoc = Factory.CreateKnownObjectFromComProxy<NetOffice.PublisherApi._Document>(EventClass, doc, NetOffice.PublisherApi._Document.LateBindingApiWrapperType);
+            NetOffice.PublisherApi._Document newDoc = Factory.CreateEventArgumentObjectFromComProxy(EventClass, doc) as NetOffice.PublisherApi._Document;
             object[] paramsArray = new object[1];
 			paramsArray[0] = newDoc;
 			EventBinding.RaiseCustomEvent("MailMergeDataSourceLoad", ref paramsArray);
 		}
 
-		public void MailMergeWizardSendToCustom([In, MarshalAs(UnmanagedType.IDispatch)] object doc)
+        public void MailMergeWizardSendToCustom([In, MarshalAs(UnmanagedType.IDispatch)] object doc)
         {
             if (!Validate("MailMergeWizardSendToCustom"))
             {
@@ -320,13 +350,13 @@ namespace NetOffice.PublisherApi.Events
                 return;
             }
 
-            NetOffice.PublisherApi._Document newDoc = Factory.CreateKnownObjectFromComProxy<NetOffice.PublisherApi._Document>(EventClass, doc, NetOffice.PublisherApi._Document.LateBindingApiWrapperType);
+            NetOffice.PublisherApi._Document newDoc = Factory.CreateEventArgumentObjectFromComProxy(EventClass, doc) as NetOffice.PublisherApi._Document;
             object[] paramsArray = new object[1];
 			paramsArray[0] = newDoc;
 			EventBinding.RaiseCustomEvent("MailMergeWizardSendToCustom", ref paramsArray);
 		}
 
-		public void MailMergeWizardStateChange([In, MarshalAs(UnmanagedType.IDispatch)] object doc, [In] object fromState)
+        public void MailMergeWizardStateChange([In, MarshalAs(UnmanagedType.IDispatch)] object doc, [In] object fromState)
         {
             if (!Validate("MailMergeWizardStateChange"))
             {
@@ -334,15 +364,15 @@ namespace NetOffice.PublisherApi.Events
                 return;
             }
 
-            NetOffice.PublisherApi._Document newDoc = Factory.CreateKnownObjectFromComProxy<NetOffice.PublisherApi._Document>(EventClass, doc, NetOffice.PublisherApi._Document.LateBindingApiWrapperType);
-            Int32 newFromState = Convert.ToInt32(fromState);
+            NetOffice.PublisherApi._Document newDoc = Factory.CreateEventArgumentObjectFromComProxy(EventClass, doc) as NetOffice.PublisherApi._Document;
+            Int32 newFromState = ToInt32(fromState);
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newDoc;
 			paramsArray[1] = newFromState;
 			EventBinding.RaiseCustomEvent("MailMergeWizardStateChange", ref paramsArray);
 		}
 
-		public void MailMergeDataSourceValidate([In, MarshalAs(UnmanagedType.IDispatch)] object doc, [In] [Out] ref object handled)
+        public void MailMergeDataSourceValidate([In, MarshalAs(UnmanagedType.IDispatch)] object doc, [In] [Out] ref object handled)
         {
             if (!Validate("MailMergeDataSourceValidate"))
             {
@@ -350,7 +380,7 @@ namespace NetOffice.PublisherApi.Events
                 return;
             }
 
-            NetOffice.PublisherApi._Document newDoc = Factory.CreateKnownObjectFromComProxy<NetOffice.PublisherApi._Document>(EventClass, doc, NetOffice.PublisherApi._Document.LateBindingApiWrapperType);
+            NetOffice.PublisherApi._Document newDoc = Factory.CreateEventArgumentObjectFromComProxy(EventClass, doc) as NetOffice.PublisherApi._Document;
             object[] paramsArray = new object[2];
 			paramsArray[0] = newDoc;
 			paramsArray.SetValue(handled, 1);
@@ -359,7 +389,7 @@ namespace NetOffice.PublisherApi.Events
 			handled = ToBoolean(paramsArray[1]);
 		}
 
-		public void MailMergeInsertBarcode([In, MarshalAs(UnmanagedType.IDispatch)] object doc, [In] [Out] ref object okToInsert)
+        public void MailMergeInsertBarcode([In, MarshalAs(UnmanagedType.IDispatch)] object doc, [In] [Out] ref object okToInsert)
         {
             if (!Validate("MailMergeInsertBarcode"))
             {
@@ -367,7 +397,7 @@ namespace NetOffice.PublisherApi.Events
                 return;
             }
 
-            NetOffice.PublisherApi._Document newDoc = Factory.CreateKnownObjectFromComProxy<NetOffice.PublisherApi._Document>(EventClass, doc, NetOffice.PublisherApi._Document.LateBindingApiWrapperType);
+            NetOffice.PublisherApi._Document newDoc = Factory.CreateEventArgumentObjectFromComProxy(EventClass, doc) as NetOffice.PublisherApi._Document;
             object[] paramsArray = new object[2];
 			paramsArray[0] = newDoc;
 			paramsArray.SetValue(okToInsert, 1);
@@ -376,7 +406,7 @@ namespace NetOffice.PublisherApi.Events
 			okToInsert = ToBoolean(paramsArray[1]);
         }
 
-		public void MailMergeRecipientListClose([In, MarshalAs(UnmanagedType.IDispatch)] object doc)
+        public void MailMergeRecipientListClose([In, MarshalAs(UnmanagedType.IDispatch)] object doc)
         {
             if (!Validate("MailMergeRecipientListClose"))
             {
@@ -384,13 +414,13 @@ namespace NetOffice.PublisherApi.Events
                 return;
             }
 
-            NetOffice.PublisherApi._Document newDoc = Factory.CreateKnownObjectFromComProxy<NetOffice.PublisherApi._Document>(EventClass, doc, NetOffice.PublisherApi._Document.LateBindingApiWrapperType);
+            NetOffice.PublisherApi._Document newDoc = Factory.CreateEventArgumentObjectFromComProxy(EventClass, doc) as NetOffice.PublisherApi._Document;
             object[] paramsArray = new object[1];
 			paramsArray[0] = newDoc;
 			EventBinding.RaiseCustomEvent("MailMergeRecipientListClose", ref paramsArray);
 		}
 
-		public void MailMergeGenerateBarcode([In, MarshalAs(UnmanagedType.IDispatch)] object doc, [In] [Out] ref object bstrString)
+        public void MailMergeGenerateBarcode([In, MarshalAs(UnmanagedType.IDispatch)] object doc, [In] [Out] ref object bstrString)
         {
             if (!Validate("MailMergeGenerateBarcode"))
             {
@@ -398,16 +428,16 @@ namespace NetOffice.PublisherApi.Events
                 return;
             }
 
-            NetOffice.PublisherApi._Document newDoc = Factory.CreateKnownObjectFromComProxy<NetOffice.PublisherApi._Document>(EventClass, doc, NetOffice.PublisherApi._Document.LateBindingApiWrapperType);
+            NetOffice.PublisherApi._Document newDoc = Factory.CreateEventArgumentObjectFromComProxy(EventClass, doc) as NetOffice.PublisherApi._Document;
             object[] paramsArray = new object[2];
 			paramsArray[0] = newDoc;
 			paramsArray.SetValue(bstrString, 1);
 			EventBinding.RaiseCustomEvent("MailMergeGenerateBarcode", ref paramsArray);
 
-			bstrString = Convert.ToString(paramsArray[1]);
+			bstrString = ToString(paramsArray[1]);
 		}
 
-		public void MailMergeWizardFollowUpCustom([In, MarshalAs(UnmanagedType.IDispatch)] object doc)
+        public void MailMergeWizardFollowUpCustom([In, MarshalAs(UnmanagedType.IDispatch)] object doc)
         {
             if (!Validate("MailMergeWizardFollowUpCustom"))
             {
@@ -415,13 +445,13 @@ namespace NetOffice.PublisherApi.Events
                 return;
             }
 
-            NetOffice.PublisherApi._Document newDoc = Factory.CreateKnownObjectFromComProxy<NetOffice.PublisherApi._Document>(EventClass, doc, NetOffice.PublisherApi._Document.LateBindingApiWrapperType);
+            NetOffice.PublisherApi._Document newDoc = Factory.CreateEventArgumentObjectFromComProxy(EventClass, doc) as NetOffice.PublisherApi._Document;
             object[] paramsArray = new object[1];
 			paramsArray[0] = newDoc;
 			EventBinding.RaiseCustomEvent("MailMergeWizardFollowUpCustom", ref paramsArray);
 		}
 
-		public void BeforePrint([In, MarshalAs(UnmanagedType.IDispatch)] object doc, [In] [Out] ref object cancel)
+        public void BeforePrint([In, MarshalAs(UnmanagedType.IDispatch)] object doc, [In] [Out] ref object cancel)
         {
             if (!Validate("BeforePrint"))
             {
@@ -429,7 +459,7 @@ namespace NetOffice.PublisherApi.Events
                 return;
             }
 
-            NetOffice.PublisherApi._Document newDoc = Factory.CreateKnownObjectFromComProxy<NetOffice.PublisherApi._Document>(EventClass, doc, NetOffice.PublisherApi._Document.LateBindingApiWrapperType);
+            NetOffice.PublisherApi._Document newDoc = Factory.CreateEventArgumentObjectFromComProxy(EventClass, doc) as NetOffice.PublisherApi._Document;
             object[] paramsArray = new object[2];
 			paramsArray[0] = newDoc;
 			paramsArray.SetValue(cancel, 1);
@@ -438,7 +468,7 @@ namespace NetOffice.PublisherApi.Events
 			cancel = ToBoolean(paramsArray[1]);
 		}
 
-		public void AfterPrint([In, MarshalAs(UnmanagedType.IDispatch)] object doc)
+        public void AfterPrint([In, MarshalAs(UnmanagedType.IDispatch)] object doc)
         {
             if (!Validate("AfterPrint"))
             {

@@ -413,17 +413,17 @@ namespace NetOffice.OfficeApi.Tools.Contribution
         public int CurrentLanguage { get; set; }
 
         /// <summary>
-        /// Dont show dialogs if office application is started programmatically for automation 
+        /// Dont show dialogs if office application is started programmatically for automation , true by default
         /// </summary>
         public bool SuppressOnAutomation { get; set; }
 
         /// <summary>
-        /// Dont show dialogs if office application is currently not visible
+        /// Dont show dialogs if office application is currently not visible, true by default
         /// </summary>
         public bool SuppressOnHide { get; set; }
 
         /// <summary>
-        /// Dont show dialogs at all
+        /// Dont show dialogs at all, false by default
         /// </summary>
         public bool SupressGeneraly { get; set; }
 
@@ -892,20 +892,8 @@ namespace NetOffice.OfficeApi.Tools.Contribution
         public virtual Result ShowText(string caption, string text, int timeoutSeconds, bool skipOnUserAction, Result defaultResult)
         {
             return ShowText(null, caption, text, null, true, Size.Empty, timeoutSeconds, skipOnUserAction, defaultResult);
-        }
+        }  
         
-        /// <summary>
-        /// Show modal Windows.Forms message box to the user
-        /// </summary>
-        /// <param name="text">text to display</param>
-        /// <param name="arguments">given arguments as any to use like String.Format in text</param>
-        /// <returns>Result.OK</returns>
-        public Result ShowMessageBox(string text, params object[] arguments)
-        {
-            string validatedText = String.Format(text, arguments);
-            return ShowMessageBox(null, validatedText, null, MessageBoxButtons.OK, MessageBoxIcon.None, DialogResult.OK);
-        }
-
         /// <summary>
         /// Show modal Windows.Forms message box to the user
         /// </summary>
@@ -976,7 +964,7 @@ namespace NetOffice.OfficeApi.Tools.Contribution
         /// <returns>user selection</returns>
         public Result ShowMessageBox(string text, MessageIcon icon, Result defaultResult)
         {
-            return ShowMessageBox(null, text, _owner.Infos.Assembly.AssemblyTitle, MessageBoxButtons.OK, icon, defaultResult);
+            return ShowMessageBoxInternal(null, text, _owner.Infos.Assembly.AssemblyTitle, Buttons.OK, icon, defaultResult);
         }
 
         /// <summary>
@@ -989,7 +977,7 @@ namespace NetOffice.OfficeApi.Tools.Contribution
         /// <returns>user selection</returns>
         public Result ShowMessageBox(string text, string caption, MessageIcon icon, Result defaultResult)
         {
-            return ShowMessageBox(null, text, caption, MessageBoxButtons.OK, icon, defaultResult);   
+            return ShowMessageBoxInternal(null, text, caption, Buttons.OK, icon, defaultResult);   
         }
 
         /// <summary>
@@ -1002,7 +990,7 @@ namespace NetOffice.OfficeApi.Tools.Contribution
         /// <returns>user selection</returns>
         public Result ShowMessageBox(string text, string caption, Buttons buttons, Result defaultResult)
         {
-            return ShowMessageBox(null, text, caption, buttons, MessageBoxIcon.None, defaultResult);
+            return ShowMessageBoxInternal(null, text, caption, buttons, MessageIcon.None, defaultResult);
         }
 
         /// <summary>
@@ -1014,7 +1002,7 @@ namespace NetOffice.OfficeApi.Tools.Contribution
         /// <returns>user selection</returns>
         public Result ShowMessageBox(string text, string caption, Result defaultResult)
         {
-            return ShowMessageBox(null, text, caption, MessageBoxButtons.OK, MessageBoxIcon.None, defaultResult);
+            return ShowMessageBoxInternal(null, text, caption, Buttons.OK, MessageIcon.None, defaultResult);
         }
 
         /// <summary>
@@ -1025,7 +1013,7 @@ namespace NetOffice.OfficeApi.Tools.Contribution
         /// <returns>user selection</returns>
         public Result ShowMessageBox(string text, Result defaultResult)
         {
-            return ShowMessageBox(null, text, _owner.Infos.Assembly.AssemblyTitle, MessageBoxButtons.OK, MessageBoxIcon.None, defaultResult);
+            return ShowMessageBoxInternal(null, text, _owner.Infos.Assembly.AssemblyTitle, Buttons.OK, MessageIcon.None, defaultResult);
         }
 
         /// <summary>
@@ -1118,6 +1106,38 @@ namespace NetOffice.OfficeApi.Tools.Contribution
         public Result ShowDialog(object dialog, bool modal, Result defaultResult)
         {
             return ShowDialog(null, (Form)dialog, modal, null, defaultResult);
+        }
+
+        /// <summary>
+        /// Show modal Windows.Forms message box to the user
+        /// </summary>
+        /// <param name="modalOwner">owner window. can be null(Nothing in Visual Basic)</param>
+        /// <param name="text">text to display</param>
+        /// <param name="caption">dialog title</param>
+        /// <param name="buttons">user selection buttons</param>
+        /// <param name="icon">default icon</param>
+        /// <param name="defaultResult">result if its not shown</param>
+        /// <returns>user selection</returns>
+        internal Result ShowMessageBoxInternal(object modalOwner, string text, string caption, Buttons buttons, MessageIcon icon, Result defaultResult)
+        {
+            IWin32Window owner = Running.Win32Window.Create(modalOwner);
+
+            bool isCurrentlySuspended = IsCurrentlySuspended();
+
+            List<KeyValuePair<string, object>> arguments = new List<KeyValuePair<string, object>>();
+            arguments.Add(new KeyValuePair<string, object>("Caption", caption));
+            arguments.Add(new KeyValuePair<string, object>("Text", text));
+
+            RaiseDialogShow(DialogType.MessageBox, isCurrentlySuspended, true, arguments);
+            if (isCurrentlySuspended)
+            {
+                RaiseDialogShown(DialogType.MessageBox, true, true, defaultResult, arguments);
+                return defaultResult;
+            }
+
+            DialogResult dlgResult = MessageBox.Show(owner, text, caption, (MessageBoxButtons)buttons, (MessageBoxIcon)icon);
+            RaiseDialogShown(DialogType.MessageBox, false, true, (Result)dlgResult, arguments);
+            return (Result)dlgResult;
         }
 
         /// <summary>

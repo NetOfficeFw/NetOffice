@@ -1,10 +1,12 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Dynamic;
 
 namespace NetOffice.Dynamics
 {
+    /*
+        RuntimeBinder may throws some trial/error exceptions while bind to instance.
+    */
+
     /// <summary>
     /// Wrapper arround underylying DynamicMetaObject for debugging purpose
     /// </summary>

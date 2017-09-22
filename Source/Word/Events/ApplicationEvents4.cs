@@ -29,131 +29,199 @@ namespace NetOffice.WordApi.Events
 		void DocumentChange();
 
 		[SupportByVersion("Word", 11,12,14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(4)]
+        [SinkArgument("doc", typeof(WordApi.Document))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(4)]
 		void DocumentOpen([In, MarshalAs(UnmanagedType.IDispatch)] object doc);
 
 		[SupportByVersion("Word", 11,12,14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(6)]
+        [SinkArgument("doc", typeof(WordApi.Document))]
+        [SinkArgument("cancel", SinkArgumentType.Bool)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(6)]
 		void DocumentBeforeClose([In, MarshalAs(UnmanagedType.IDispatch)] object doc, [In] [Out] ref object cancel);
 
 		[SupportByVersion("Word", 11,12,14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(7)]
+        [SinkArgument("doc", typeof(WordApi.Document))]
+        [SinkArgument("cancel", SinkArgumentType.Bool)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(7)]
 		void DocumentBeforePrint([In, MarshalAs(UnmanagedType.IDispatch)] object doc, [In] [Out] ref object cancel);
 
 		[SupportByVersion("Word", 11,12,14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(8)]
+        [SinkArgument("doc", typeof(WordApi.Document))]
+        [SinkArgument("saveAsUI", SinkArgumentType.Bool)]
+        [SinkArgument("cancel", SinkArgumentType.Bool)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(8)]
 		void DocumentBeforeSave([In, MarshalAs(UnmanagedType.IDispatch)] object doc, [In] [Out] ref object saveAsUI, [In] [Out] ref object cancel);
 
 		[SupportByVersion("Word", 11,12,14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(9)]
+        [SinkArgument("doc", typeof(WordApi.Document))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(9)]
 		void NewDocument([In, MarshalAs(UnmanagedType.IDispatch)] object doc);
 
 		[SupportByVersion("Word", 11,12,14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(10)]
+        [SinkArgument("doc", typeof(WordApi.Document))]
+        [SinkArgument("wn", typeof(WordApi.Window))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(10)]
 		void WindowActivate([In, MarshalAs(UnmanagedType.IDispatch)] object doc, [In, MarshalAs(UnmanagedType.IDispatch)] object wn);
 
 		[SupportByVersion("Word", 11,12,14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(11)]
+        [SinkArgument("doc", typeof(WordApi.Document))]
+        [SinkArgument("wn", typeof(WordApi.Window))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(11)]
 		void WindowDeactivate([In, MarshalAs(UnmanagedType.IDispatch)] object doc, [In, MarshalAs(UnmanagedType.IDispatch)] object wn);
 
 		[SupportByVersion("Word", 11,12,14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(12)]
+        [SinkArgument("sel", typeof(WordApi.Selection))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(12)]
 		void WindowSelectionChange([In, MarshalAs(UnmanagedType.IDispatch)] object sel);
 
 		[SupportByVersion("Word", 11,12,14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(13)]
+        [SinkArgument("sel", typeof(WordApi.Selection))]
+        [SinkArgument("cancel", SinkArgumentType.Bool)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(13)]
 		void WindowBeforeRightClick([In, MarshalAs(UnmanagedType.IDispatch)] object sel, [In] [Out] ref object cancel);
 
 		[SupportByVersion("Word", 11,12,14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(14)]
+        [SinkArgument("sel", typeof(WordApi.Selection))]
+        [SinkArgument("cancel", SinkArgumentType.Bool)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(14)]
 		void WindowBeforeDoubleClick([In, MarshalAs(UnmanagedType.IDispatch)] object sel, [In] [Out] ref object cancel);
 
 		[SupportByVersion("Word", 11,12,14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(15)]
+        [SinkArgument("doc", typeof(WordApi.Document))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(15)]
 		void EPostagePropertyDialog([In, MarshalAs(UnmanagedType.IDispatch)] object doc);
 
 		[SupportByVersion("Word", 11,12,14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(16)]
+        [SinkArgument("doc", typeof(WordApi.Document))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(16)]
 		void EPostageInsert([In, MarshalAs(UnmanagedType.IDispatch)] object doc);
 
 		[SupportByVersion("Word", 11,12,14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(17)]
+        [SinkArgument("doc", typeof(WordApi.Document))]
+        [SinkArgument("docResult", typeof(WordApi.Document))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(17)]
 		void MailMergeAfterMerge([In, MarshalAs(UnmanagedType.IDispatch)] object doc, [In, MarshalAs(UnmanagedType.IDispatch)] object docResult);
 
 		[SupportByVersion("Word", 11,12,14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(18)]
+        [SinkArgument("doc", typeof(WordApi.Document))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(18)]
 		void MailMergeAfterRecordMerge([In, MarshalAs(UnmanagedType.IDispatch)] object doc);
 
 		[SupportByVersion("Word", 11,12,14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(19)]
+        [SinkArgument("doc", typeof(WordApi.Document))]
+        [SinkArgument("startRecord", SinkArgumentType.Int32)]
+        [SinkArgument("endRecord", SinkArgumentType.Int32)]
+        [SinkArgument("cancel", SinkArgumentType.Bool)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(19)]
 		void MailMergeBeforeMerge([In, MarshalAs(UnmanagedType.IDispatch)] object doc, [In] object startRecord, [In] object endRecord, [In] [Out] ref object cancel);
 
 		[SupportByVersion("Word", 11,12,14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(20)]
+        [SinkArgument("doc", typeof(WordApi.Document))]
+        [SinkArgument("cancel", SinkArgumentType.Bool)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(20)]
 		void MailMergeBeforeRecordMerge([In, MarshalAs(UnmanagedType.IDispatch)] object doc, [In] [Out] ref object cancel);
 
 		[SupportByVersion("Word", 11,12,14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(21)]
+        [SinkArgument("doc", typeof(WordApi.Document))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(21)]
 		void MailMergeDataSourceLoad([In, MarshalAs(UnmanagedType.IDispatch)] object doc);
 
 		[SupportByVersion("Word", 11,12,14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(22)]
+        [SinkArgument("doc", typeof(WordApi.Document))]
+        [SinkArgument("handled", SinkArgumentType.Bool)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(22)]
 		void MailMergeDataSourceValidate([In, MarshalAs(UnmanagedType.IDispatch)] object doc, [In] [Out] ref object handled);
 
 		[SupportByVersion("Word", 11,12,14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(23)]
+        [SinkArgument("doc", typeof(WordApi.Document))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(23)]
 		void MailMergeWizardSendToCustom([In, MarshalAs(UnmanagedType.IDispatch)] object doc);
 
 		[SupportByVersion("Word", 11,12,14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(24)]
+        [SinkArgument("doc", typeof(WordApi.Document))]
+        [SinkArgument("fromState", SinkArgumentType.Int32)]
+        [SinkArgument("toState", SinkArgumentType.Int32)]
+        [SinkArgument("handled", SinkArgumentType.Bool)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(24)]
 		void MailMergeWizardStateChange([In, MarshalAs(UnmanagedType.IDispatch)] object doc, [In] [Out] ref object fromState, [In] [Out] ref object toState, [In] [Out] ref object handled);
 
 		[SupportByVersion("Word", 11,12,14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(25)]
+        [SinkArgument("doc", typeof(WordApi.Document))]
+        [SinkArgument("wn", typeof(WordApi.Window))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(25)]
 		void WindowSize([In, MarshalAs(UnmanagedType.IDispatch)] object doc, [In, MarshalAs(UnmanagedType.IDispatch)] object wn);
 
 		[SupportByVersion("Word", 11,12,14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(26)]
+        [SinkArgument("sel", typeof(WordApi.Selection))]
+        [SinkArgument("oldXMLNode", typeof(WordApi.XMLNode))]
+        [SinkArgument("newXMLNode", typeof(WordApi.XMLNode))]
+        [SinkArgument("reason", SinkArgumentType.Int32)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(26)]
 		void XMLSelectionChange([In, MarshalAs(UnmanagedType.IDispatch)] object sel, [In, MarshalAs(UnmanagedType.IDispatch)] object oldXMLNode, [In, MarshalAs(UnmanagedType.IDispatch)] object newXMLNode, [In] [Out] ref object reason);
 
 		[SupportByVersion("Word", 11,12,14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(27)]
+        [SinkArgument("xMLNode", typeof(WordApi.XMLNode))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(27)]
 		void XMLValidationError([In, MarshalAs(UnmanagedType.IDispatch)] object xMLNode);
 
-		[SupportByVersion("Word", 11,12,14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(28)]
+        [SupportByVersion("Word", 11,12,14,15,16)]
+        [SinkArgument("doc", typeof(WordApi.Document))]
+        [SinkArgument("syncEventType", SinkArgumentType.Enum, typeof(OfficeApi.Enums.MsoSyncEventType))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(28)]
 		void DocumentSync([In, MarshalAs(UnmanagedType.IDispatch)] object doc, [In] object syncEventType);
 
 		[SupportByVersion("Word", 11,12,14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(29)]
+        [SinkArgument("doc", typeof(WordApi.Document))]
+        [SinkArgument("cpDeliveryAddrStart", SinkArgumentType.Int32)]
+        [SinkArgument("cpDeliveryAddrEnd", SinkArgumentType.Int32)]
+        [SinkArgument("cpReturnAddrStart", SinkArgumentType.Int32)]
+        [SinkArgument("cpReturnAddrEnd", SinkArgumentType.Int32)]
+        [SinkArgument("xaWidth", SinkArgumentType.Int32)]
+        [SinkArgument("yaHeight", SinkArgumentType.Int32)]
+        [SinkArgument("bstrPrinterName", SinkArgumentType.String)]
+        [SinkArgument("bstrPaperFeed", SinkArgumentType.String)]
+        [SinkArgument("fPrint", SinkArgumentType.Bool)]
+        [SinkArgument("fCancel", SinkArgumentType.Bool)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(29)]
 		void EPostageInsertEx([In, MarshalAs(UnmanagedType.IDispatch)] object doc, [In] object cpDeliveryAddrStart, [In] object cpDeliveryAddrEnd, [In] object cpReturnAddrStart, [In] object cpReturnAddrEnd, [In] object xaWidth, [In] object yaHeight, [In] object bstrPrinterName, [In] object bstrPaperFeed, [In] object fPrint, [In] [Out] ref object fCancel);
 
 		[SupportByVersion("Word", 12,14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(30)]
+        [SinkArgument("doc", typeof(WordApi.Document))]
+        [SinkArgument("handled", SinkArgumentType.Bool)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(30)]
 		void MailMergeDataSourceValidate2([In, MarshalAs(UnmanagedType.IDispatch)] object doc, [In] [Out] ref object handled);
 
 		[SupportByVersion("Word", 14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(31)]
+        [SinkArgument("pvWindow", typeof(WordApi.ProtectedViewWindow))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(31)]
 		void ProtectedViewWindowOpen([In, MarshalAs(UnmanagedType.IDispatch)] object pvWindow);
 
 		[SupportByVersion("Word", 14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(32)]
+        [SinkArgument("pvWindow", typeof(WordApi.ProtectedViewWindow))]
+        [SinkArgument("cancel", SinkArgumentType.Bool)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(32)]
 		void ProtectedViewWindowBeforeEdit([In, MarshalAs(UnmanagedType.IDispatch)] object pvWindow, [In] [Out] ref object cancel);
 
 		[SupportByVersion("Word", 14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(33)]
+        [SinkArgument("pvWindow", typeof(WordApi.ProtectedViewWindow))]
+        [SinkArgument("newCloseReason", SinkArgumentType.Int32)]
+        [SinkArgument("cancel", SinkArgumentType.Bool)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(33)]
 		void ProtectedViewWindowBeforeClose([In, MarshalAs(UnmanagedType.IDispatch)] object pvWindow, [In] object closeReason, [In] [Out] ref object cancel);
 
 		[SupportByVersion("Word", 14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(34)]
+        [SinkArgument("pvWindow", typeof(WordApi.ProtectedViewWindow))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(34)]
 		void ProtectedViewWindowSize([In, MarshalAs(UnmanagedType.IDispatch)] object pvWindow);
 
 		[SupportByVersion("Word", 14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(35)]
+        [SinkArgument("pvWindow", typeof(WordApi.ProtectedViewWindow))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(35)]
 		void ProtectedViewWindowActivate([In, MarshalAs(UnmanagedType.IDispatch)] object pvWindow);
 
 		[SupportByVersion("Word", 14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(36)]
+        [SinkArgument("pvWindow", typeof(WordApi.ProtectedViewWindow))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(36)]
 		void ProtectedViewWindowDeactivate([In, MarshalAs(UnmanagedType.IDispatch)] object pvWindow);
 	}
 
@@ -442,8 +510,8 @@ namespace NetOffice.WordApi.Events
             }
 
             NetOffice.WordApi.Document newDoc = Factory.CreateKnownObjectFromComProxy<NetOffice.WordApi.Document>(EventClass, doc, NetOffice.WordApi.Document.LateBindingApiWrapperType);
-            Int32 newStartRecord = Convert.ToInt32(startRecord);
-            Int32 newEndRecord = Convert.ToInt32(endRecord);
+            Int32 newStartRecord = ToInt32(startRecord);
+            Int32 newEndRecord = ToInt32(endRecord);
             object[] paramsArray = new object[4];
             paramsArray[0] = newDoc;
             paramsArray[1] = newStartRecord;
@@ -603,8 +671,8 @@ namespace NetOffice.WordApi.Events
 			paramsArray[1] = newSyncEventType;
 			EventBinding.RaiseCustomEvent("DocumentSync", ref paramsArray);
 		}
-
-		public void EPostageInsertEx([In, MarshalAs(UnmanagedType.IDispatch)] object doc, [In] object cpDeliveryAddrStart, [In] object cpDeliveryAddrEnd, [In] object cpReturnAddrStart, [In] object cpReturnAddrEnd, [In] object xaWidth, [In] object yaHeight, [In] object bstrPrinterName, [In] object bstrPaperFeed, [In] object fPrint, [In] [Out] ref object fCancel)
+        
+        public void EPostageInsertEx([In, MarshalAs(UnmanagedType.IDispatch)] object doc, [In] object cpDeliveryAddrStart, [In] object cpDeliveryAddrEnd, [In] object cpReturnAddrStart, [In] object cpReturnAddrEnd, [In] object xaWidth, [In] object yaHeight, [In] object bstrPrinterName, [In] object bstrPaperFeed, [In] object fPrint, [In] [Out] ref object fCancel)
 		{
             if (!Validate("EPostageInsertEx"))
             {
@@ -613,15 +681,15 @@ namespace NetOffice.WordApi.Events
             }
 
             NetOffice.WordApi.Document newDoc = Factory.CreateKnownObjectFromComProxy<NetOffice.WordApi.Document>(EventClass, doc, NetOffice.WordApi.Document.LateBindingApiWrapperType);
-            Int32 newcpDeliveryAddrStart = Convert.ToInt32(cpDeliveryAddrStart);
-			Int32 newcpDeliveryAddrEnd = Convert.ToInt32(cpDeliveryAddrEnd);
-			Int32 newcpReturnAddrStart = Convert.ToInt32(cpReturnAddrStart);
-			Int32 newcpReturnAddrEnd = Convert.ToInt32(cpReturnAddrEnd);
-			Int32 newxaWidth = Convert.ToInt32(xaWidth);
-			Int32 newyaHeight = Convert.ToInt32(yaHeight);
-			string newbstrPrinterName = Convert.ToString(bstrPrinterName);
-			string newbstrPaperFeed = Convert.ToString(bstrPaperFeed);
-			bool newfPrint = Convert.ToBoolean(fPrint);
+            Int32 newcpDeliveryAddrStart = ToInt32(cpDeliveryAddrStart);
+			Int32 newcpDeliveryAddrEnd = ToInt32(cpDeliveryAddrEnd);
+			Int32 newcpReturnAddrStart = ToInt32(cpReturnAddrStart);
+			Int32 newcpReturnAddrEnd = ToInt32(cpReturnAddrEnd);
+			Int32 newxaWidth = ToInt32(xaWidth);
+			Int32 newyaHeight = ToInt32(yaHeight);
+			string newbstrPrinterName = ToString(bstrPrinterName);
+			string newbstrPaperFeed = ToString(bstrPaperFeed);
+			bool newfPrint = ToBoolean(fPrint);
 			object[] paramsArray = new object[11];
 			paramsArray[0] = newDoc;
 			paramsArray[1] = newcpDeliveryAddrStart;
@@ -687,7 +755,7 @@ namespace NetOffice.WordApi.Events
 			cancel = ToBoolean(paramsArray[1]);
 		}
 
-		public void ProtectedViewWindowBeforeClose([In, MarshalAs(UnmanagedType.IDispatch)] object pvWindow, [In] object closeReason, [In] [Out] ref object cancel)
+        public void ProtectedViewWindowBeforeClose([In, MarshalAs(UnmanagedType.IDispatch)] object pvWindow, [In] object closeReason, [In] [Out] ref object cancel)
 		{
             if (!Validate("ProtectedViewWindowBeforeClose"))
             {
@@ -696,7 +764,7 @@ namespace NetOffice.WordApi.Events
             }
 
             NetOffice.WordApi.ProtectedViewWindow newPvWindow = Factory.CreateKnownObjectFromComProxy<NetOffice.WordApi.ProtectedViewWindow>(EventClass, pvWindow, NetOffice.WordApi.ProtectedViewWindow.LateBindingApiWrapperType);
-            Int32 newCloseReason = Convert.ToInt32(closeReason);
+            Int32 newCloseReason = ToInt32(closeReason);
 			object[] paramsArray = new object[3];
 			paramsArray[0] = newPvWindow;
 			paramsArray[1] = newCloseReason;

@@ -1,0 +1,16 @@
+1.) The tutorials demonstrate most of the new core features.
+
+2.) Skip support for old .Net Runtime versions - minimum is .Net 4.0(Client Profile)
+    Want to support .Net 4 as long as possible because it is the last WindowsXP compatible Runtime.
+    (NetOffice 1.7.3 with .Net 2/3 support is still available in the download section)
+
+3.) Microsoft Publisher is now into play.
+
+4.) Total size of the assemblies is 25% smaller
+
+5.) New base class for Excel RTD Server
+
+6.) Actual Developer Toolbox is currently not available
+    because need to publish this release before codeplex goes into read-only mode
+
+7.) Official repository on github is "netofficefw" - NOT "netoffice"

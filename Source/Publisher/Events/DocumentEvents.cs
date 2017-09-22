@@ -21,7 +21,8 @@ namespace NetOffice.PublisherApi.Events
 		void Open();
 
 		[SupportByVersion("Publisher", 14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2)]
+        [SinkArgument("cancel", SinkArgumentType.Bool)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2)]
 		void BeforeClose([In] [Out] ref object cancel);
 
 		[SupportByVersion("Publisher", 14,15,16)]

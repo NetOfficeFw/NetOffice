@@ -29,43 +29,65 @@ namespace NetOffice.WordApi.Events
 		void Close();
 
 		[SupportByVersion("Word", 11,12,14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(7)]
+        [SinkArgument("syncEventType", SinkArgumentType.Enum, typeof(OfficeApi.Enums.MsoSyncEventType))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(7)]
 		void Sync([In] object syncEventType);
 
 		[SupportByVersion("Word", 11,12,14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(8)]
+        [SinkArgument("newXMLNode", typeof(WordApi.XMLNode))]
+        [SinkArgument("inUndoRedo", SinkArgumentType.Bool)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(8)]
 		void XMLAfterInsert([In, MarshalAs(UnmanagedType.IDispatch)] object newXMLNode, [In] object inUndoRedo);
 
 		[SupportByVersion("Word", 11,12,14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(9)]
+        [SinkArgument("deletedRange", typeof(WordApi.Range))]
+        [SinkArgument("oldXMLNode", typeof(WordApi.XMLNode))]
+        [SinkArgument("inUndoRedo", SinkArgumentType.Bool)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(9)]
 		void XMLBeforeDelete([In, MarshalAs(UnmanagedType.IDispatch)] object deletedRange, [In, MarshalAs(UnmanagedType.IDispatch)] object oldXMLNode, [In] object inUndoRedo);
 
 		[SupportByVersion("Word", 12,14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(12)]
+        [SinkArgument("newContentControl", typeof(WordApi.ContentControl))]
+        [SinkArgument("inUndoRedo", SinkArgumentType.Bool)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(12)]
 		void ContentControlAfterAdd([In, MarshalAs(UnmanagedType.IDispatch)] object newContentControl, [In] object inUndoRedo);
 
 		[SupportByVersion("Word", 12,14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(13)]
+        [SinkArgument("oldContentControl", typeof(WordApi.ContentControl))]
+        [SinkArgument("inUndoRedo", SinkArgumentType.Bool)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(13)]
 		void ContentControlBeforeDelete([In, MarshalAs(UnmanagedType.IDispatch)] object oldContentControl, [In] object inUndoRedo);
 
 		[SupportByVersion("Word", 12,14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(14)]
+        [SinkArgument("contentControl", typeof(WordApi.ContentControl))]
+        [SinkArgument("cancel", SinkArgumentType.Bool)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(14)]
 		void ContentControlOnExit([In, MarshalAs(UnmanagedType.IDispatch)] object contentControl, [In] [Out] ref object cancel);
 
 		[SupportByVersion("Word", 12,14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(15)]
+        [SinkArgument("contentControl", typeof(WordApi.ContentControl))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(15)]
 		void ContentControlOnEnter([In, MarshalAs(UnmanagedType.IDispatch)] object contentControl);
 
 		[SupportByVersion("Word", 12,14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(16)]
+        [SinkArgument("contentControl", typeof(WordApi.ContentControl))]
+        [SinkArgument("content", SinkArgumentType.String)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(16)]
 		void ContentControlBeforeStoreUpdate([In, MarshalAs(UnmanagedType.IDispatch)] object contentControl, [In] [Out] ref object content);
 
 		[SupportByVersion("Word", 12,14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(17)]
+        [SinkArgument("contentControl", typeof(WordApi.ContentControl))]
+        [SinkArgument("content", SinkArgumentType.String)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(17)]
 		void ContentControlBeforeContentUpdate([In, MarshalAs(UnmanagedType.IDispatch)] object contentControl, [In] [Out] ref object content);
 
 		[SupportByVersion("Word", 12,14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(18)]
+        [SinkArgument("range", typeof(WordApi.Range))]
+        [SinkArgument("name", SinkArgumentType.String)]
+        [SinkArgument("category", SinkArgumentType.String)]
+        [SinkArgument("blockType", SinkArgumentType.String)]
+        [SinkArgument("template", SinkArgumentType.String)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(18)]
 		void BuildingBlockInsert([In, MarshalAs(UnmanagedType.IDispatch)] object range, [In] object name, [In] object category, [In] object blockType, [In] object template);
 	}
 
@@ -140,8 +162,8 @@ namespace NetOffice.WordApi.Events
 			paramsArray[0] = newSyncEventType;
 			EventBinding.RaiseCustomEvent("Sync", ref paramsArray);
 		}
-
-		public void XMLAfterInsert([In, MarshalAs(UnmanagedType.IDispatch)] object newXMLNode, [In] object inUndoRedo)
+ 
+        public void XMLAfterInsert([In, MarshalAs(UnmanagedType.IDispatch)] object newXMLNode, [In] object inUndoRedo)
         {
             if (!Validate("XMLAfterInsert"))
             {
@@ -150,14 +172,14 @@ namespace NetOffice.WordApi.Events
             }
 
 			NetOffice.WordApi.XMLNode newNewXMLNode = Factory.CreateKnownObjectFromComProxy<NetOffice.WordApi.XMLNode>(EventClass, newXMLNode, NetOffice.WordApi.XMLNode.LateBindingApiWrapperType);
-			bool newInUndoRedo = Convert.ToBoolean(inUndoRedo);
+			bool newInUndoRedo = ToBoolean(inUndoRedo);
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newNewXMLNode;
 			paramsArray[1] = newInUndoRedo;
 			EventBinding.RaiseCustomEvent("XMLAfterInsert", ref paramsArray);
 		}
 
-		public void XMLBeforeDelete([In, MarshalAs(UnmanagedType.IDispatch)] object deletedRange, [In, MarshalAs(UnmanagedType.IDispatch)] object oldXMLNode, [In] object inUndoRedo)
+        public void XMLBeforeDelete([In, MarshalAs(UnmanagedType.IDispatch)] object deletedRange, [In, MarshalAs(UnmanagedType.IDispatch)] object oldXMLNode, [In] object inUndoRedo)
         {
             if (!Validate("XMLBeforeDelete"))
             {
@@ -175,7 +197,7 @@ namespace NetOffice.WordApi.Events
 			EventBinding.RaiseCustomEvent("XMLBeforeDelete", ref paramsArray);
 		}
 
-		public void ContentControlAfterAdd([In, MarshalAs(UnmanagedType.IDispatch)] object newContentControl, [In] object inUndoRedo)
+        public void ContentControlAfterAdd([In, MarshalAs(UnmanagedType.IDispatch)] object newContentControl, [In] object inUndoRedo)
         {
             if (!Validate("ContentControlAfterAdd"))
             {
@@ -184,14 +206,14 @@ namespace NetOffice.WordApi.Events
             }
 
 			NetOffice.WordApi.ContentControl newNewContentControl = Factory.CreateKnownObjectFromComProxy<NetOffice.WordApi.ContentControl>(EventClass, newContentControl, NetOffice.WordApi.ContentControl.LateBindingApiWrapperType);
-			bool newInUndoRedo = Convert.ToBoolean(inUndoRedo);
+			bool newInUndoRedo = ToBoolean(inUndoRedo);
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newNewContentControl;
 			paramsArray[1] = newInUndoRedo;
 			EventBinding.RaiseCustomEvent("ContentControlAfterAdd", ref paramsArray);
 		}
 
-		public void ContentControlBeforeDelete([In, MarshalAs(UnmanagedType.IDispatch)] object oldContentControl, [In] object inUndoRedo)
+        public void ContentControlBeforeDelete([In, MarshalAs(UnmanagedType.IDispatch)] object oldContentControl, [In] object inUndoRedo)
 		{
             if (!Validate("ContentControlBeforeDelete"))
             {
@@ -207,7 +229,7 @@ namespace NetOffice.WordApi.Events
 			EventBinding.RaiseCustomEvent("ContentControlBeforeDelete", ref paramsArray);
 		}
 
-		public void ContentControlOnExit([In, MarshalAs(UnmanagedType.IDispatch)] object contentControl, [In] [Out] ref object cancel)
+        public void ContentControlOnExit([In, MarshalAs(UnmanagedType.IDispatch)] object contentControl, [In] [Out] ref object cancel)
 		{
             if (!Validate("ContentControlOnExit"))
             {
@@ -224,7 +246,7 @@ namespace NetOffice.WordApi.Events
 			cancel = ToBoolean(paramsArray[1]);
 		}
 
-		public void ContentControlOnEnter([In, MarshalAs(UnmanagedType.IDispatch)] object contentControl)
+        public void ContentControlOnEnter([In, MarshalAs(UnmanagedType.IDispatch)] object contentControl)
         {
             if (!Validate("ContentControlOnEnter"))
             {
@@ -238,7 +260,7 @@ namespace NetOffice.WordApi.Events
 			EventBinding.RaiseCustomEvent("ContentControlOnEnter", ref paramsArray);
 		}
 
-		public void ContentControlBeforeStoreUpdate([In, MarshalAs(UnmanagedType.IDispatch)] object contentControl, [In] [Out] ref object content)
+        public void ContentControlBeforeStoreUpdate([In, MarshalAs(UnmanagedType.IDispatch)] object contentControl, [In] [Out] ref object content)
         {
             if (!Validate("ContentControlBeforeStoreUpdate"))
             {
@@ -252,10 +274,10 @@ namespace NetOffice.WordApi.Events
 			paramsArray.SetValue(content, 1);
 			EventBinding.RaiseCustomEvent("ContentControlBeforeStoreUpdate", ref paramsArray);
 
-			content = Convert.ToString(paramsArray[1]);
+			content = ToString(paramsArray[1]);
 		}
 
-		public void ContentControlBeforeContentUpdate([In, MarshalAs(UnmanagedType.IDispatch)] object contentControl, [In] [Out] ref object content)
+        public void ContentControlBeforeContentUpdate([In, MarshalAs(UnmanagedType.IDispatch)] object contentControl, [In] [Out] ref object content)
         {
             if (!Validate("ContentControlBeforeStoreUpdate"))
             {
@@ -269,10 +291,10 @@ namespace NetOffice.WordApi.Events
 			paramsArray.SetValue(content, 1);
 			EventBinding.RaiseCustomEvent("ContentControlBeforeContentUpdate", ref paramsArray);
 
-            content = Convert.ToString(paramsArray[1]);
+            content = ToString(paramsArray[1]);
         }
 
-		public void BuildingBlockInsert([In, MarshalAs(UnmanagedType.IDispatch)] object range, [In] object name, [In] object category, [In] object blockType, [In] object template)
+        public void BuildingBlockInsert([In, MarshalAs(UnmanagedType.IDispatch)] object range, [In] object name, [In] object category, [In] object blockType, [In] object template)
         {
             if (!Validate("BuildingBlockInsert"))
             {
@@ -281,10 +303,10 @@ namespace NetOffice.WordApi.Events
             }
 
 			NetOffice.WordApi.Range newRange = Factory.CreateKnownObjectFromComProxy<NetOffice.WordApi.Range>(EventClass, range, NetOffice.WordApi.Range.LateBindingApiWrapperType);
-			string newName = Convert.ToString(name);
-			string newCategory = Convert.ToString(category);
-			string newBlockType = Convert.ToString(blockType);
-			string newTemplate = Convert.ToString(template);
+			string newName = ToString(name);
+			string newCategory = ToString(category);
+			string newBlockType = ToString(blockType);
+			string newTemplate = ToString(template);
 			object[] paramsArray = new object[5];
 			paramsArray[0] = newRange;
 			paramsArray[1] = newName;

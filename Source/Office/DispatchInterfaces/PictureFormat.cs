@@ -11,7 +11,8 @@ namespace NetOffice.OfficeApi
 	/// </summary>
 	[SupportByVersion("Office", 9,10,11,12,14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface)]
- 	public class PictureFormat : _IMsoDispObj
+    [Duplicate("NetOffice.ExcelApi.PictureFormat")]
+    public class PictureFormat : _IMsoDispObj
 	{
 		#pragma warning disable
 

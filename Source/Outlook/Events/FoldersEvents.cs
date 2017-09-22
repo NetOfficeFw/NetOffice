@@ -17,11 +17,13 @@ namespace NetOffice.OutlookApi.Events
 	public interface FoldersEvents
 	{
 		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(61441)]
+        [SinkArgument("folder", typeof(NetOffice.OutlookApi.MAPIFolder))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(61441)]
 		void FolderAdd([In, MarshalAs(UnmanagedType.IDispatch)] object folder);
 
 		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(61442)]
+        [SinkArgument("folder", typeof(NetOffice.OutlookApi.MAPIFolder))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(61442)]
 		void FolderChange([In, MarshalAs(UnmanagedType.IDispatch)] object folder);
 
 		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
@@ -62,8 +64,8 @@ namespace NetOffice.OutlookApi.Events
                 return;
             }
 
-			NetOffice.OutlookApi.MAPIFolder newFolder = Factory.CreateKnownObjectFromComProxy<NetOffice.OutlookApi.MAPIFolder>(EventClass, folder, NetOffice.OutlookApi.MAPIFolder.LateBindingApiWrapperType);
-			object[] paramsArray = new object[1];
+            NetOffice.OutlookApi.MAPIFolder newFolder = Factory.CreateEventArgumentObjectFromComProxy(EventClass, folder) as NetOffice.OutlookApi.MAPIFolder;
+            object[] paramsArray = new object[1];
 			paramsArray[0] = newFolder;
 			EventBinding.RaiseCustomEvent("FolderAdd", ref paramsArray);
 		}
@@ -76,7 +78,7 @@ namespace NetOffice.OutlookApi.Events
                 return;
             }
 
-            NetOffice.OutlookApi.MAPIFolder newFolder = Factory.CreateKnownObjectFromComProxy<NetOffice.OutlookApi.MAPIFolder>(EventClass, folder, NetOffice.OutlookApi.MAPIFolder.LateBindingApiWrapperType);
+            NetOffice.OutlookApi.MAPIFolder newFolder = Factory.CreateEventArgumentObjectFromComProxy(EventClass, folder) as NetOffice.OutlookApi.MAPIFolder;
             object[] paramsArray = new object[1];
 			paramsArray[0] = newFolder;
 			EventBinding.RaiseCustomEvent("FolderChange", ref paramsArray);

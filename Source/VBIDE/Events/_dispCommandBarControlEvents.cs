@@ -16,7 +16,10 @@ namespace NetOffice.VBIDEApi.EventInterfaces
     [ComImport, Guid("0002E131-0000-0000-C000-000000000046"), InterfaceType(ComInterfaceType.InterfaceIsIDispatch), TypeLibType((short)0x1010)]
 	public interface _dispCommandBarControlEvents
 	{
-		[SupportByVersion("VBIDE", 12,14,5.3)]
+        [SinkArgument("commandBarControl", SinkArgumentType.UnknownProxy)]
+        [SinkArgument("handled", SinkArgumentType.Bool)]
+        [SinkArgument("cancelDefault", SinkArgumentType.Bool)]
+        [SupportByVersion("VBIDE", 12,14,5.3)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1)]
 		void Click([In, MarshalAs(UnmanagedType.IDispatch)] object commandBarControl, [In] [Out] ref object handled, [In] [Out] ref object cancelDefault);
 	}
@@ -45,8 +48,8 @@ namespace NetOffice.VBIDEApi.EventInterfaces
 		#endregion
 
 		#region _dispCommandBarControlEvents
-		
-		public void Click([In, MarshalAs(UnmanagedType.IDispatch)] object commandBarControl, [In] [Out] ref object handled, [In] [Out] ref object cancelDefault)
+ 
+        public void Click([In, MarshalAs(UnmanagedType.IDispatch)] object commandBarControl, [In] [Out] ref object handled, [In] [Out] ref object cancelDefault)
 		{
             if (!Validate("Click"))
             {

@@ -17,7 +17,8 @@ namespace NetOffice.OutlookApi.Events
 	public interface NavigationPaneEvents_12
 	{
 		[SupportByVersion("Outlook", 12,14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(64457)]
+        [SinkArgument("currentModule", typeof(OutlookApi.NavigationModule))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(64457)]
 		void ModuleSwitch([In, MarshalAs(UnmanagedType.IDispatch)] object currentModule);
 	}
 

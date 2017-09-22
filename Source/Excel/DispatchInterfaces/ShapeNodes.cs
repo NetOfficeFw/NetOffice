@@ -14,7 +14,8 @@ namespace NetOffice.ExcelApi
 	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff822109.aspx </remarks>
 	[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Method, "Item")]
-	public class ShapeNodes : NetOffice.OfficeApi._IMsoDispObj, IEnumerable<NetOffice.ExcelApi.ShapeNode>
+    [Duplicate("NetOffice.OfficeApi.ShapeNodes")]
+    public class ShapeNodes : NetOffice.OfficeApi._IMsoDispObj, IEnumerable<NetOffice.ExcelApi.ShapeNode>
 	{
 		#pragma warning disable
 

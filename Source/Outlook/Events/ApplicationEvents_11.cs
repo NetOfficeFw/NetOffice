@@ -17,7 +17,9 @@ namespace NetOffice.OutlookApi.Events
 	public interface ApplicationEvents_11
 	{
 		[SupportByVersion("Outlook", 11,12,14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(61442)]
+        [SinkArgument("item", SinkArgumentType.UnknownProxy)]
+        [SinkArgument("cancel", SinkArgumentType.Bool)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(61442)]
 		void ItemSend([In, MarshalAs(UnmanagedType.IDispatch)] object item, [In] [Out] ref object cancel);
 
 		[SupportByVersion("Outlook", 11,12,14,15,16)]
@@ -25,11 +27,13 @@ namespace NetOffice.OutlookApi.Events
 		void NewMail();
 
 		[SupportByVersion("Outlook", 11,12,14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(61444)]
+        [SinkArgument("item", SinkArgumentType.UnknownProxy)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(61444)]
 		void Reminder([In, MarshalAs(UnmanagedType.IDispatch)] object item);
 
 		[SupportByVersion("Outlook", 11,12,14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(61445)]
+        [SinkArgument("pages", typeof(OutlookApi.PropertyPages))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(61445)]
 		void OptionsPagesAdd([In, MarshalAs(UnmanagedType.IDispatch)] object pages);
 
 		[SupportByVersion("Outlook", 11,12,14,15,16)]
@@ -41,11 +45,13 @@ namespace NetOffice.OutlookApi.Events
 		void Quit();
 
 		[SupportByVersion("Outlook", 11,12,14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(64106)]
+        [SinkArgument("searchObject", typeof(OutlookApi.Search))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(64106)]
 		void AdvancedSearchComplete([In, MarshalAs(UnmanagedType.IDispatch)] object searchObject);
 
 		[SupportByVersion("Outlook", 11,12,14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(64107)]
+        [SinkArgument("searchObject", typeof(OutlookApi.Search))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(64107)]
 		void AdvancedSearchStopped([In, MarshalAs(UnmanagedType.IDispatch)] object searchObject);
 
 		[SupportByVersion("Outlook", 11,12,14,15,16)]
@@ -53,43 +59,60 @@ namespace NetOffice.OutlookApi.Events
 		void MAPILogonComplete();
 
 		[SupportByVersion("Outlook", 11,12,14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(64181)]
+        [SinkArgument("entryIDCollection", SinkArgumentType.String)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(64181)]
 		void NewMailEx([In] object entryIDCollection);
 
 		[SupportByVersion("Outlook", 12,14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(64318)]
+        [SinkArgument("commandBar", typeof(OfficeApi.CommandBar))]
+        [SinkArgument("attachments", typeof(OutlookApi.AttachmentSelection))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(64318)]
 		void AttachmentContextMenuDisplay([In, MarshalAs(UnmanagedType.IDispatch)] object commandBar, [In, MarshalAs(UnmanagedType.IDispatch)] object attachments);
 
 		[SupportByVersion("Outlook", 12,14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(64322)]
+        [SinkArgument("commandBar", typeof(OfficeApi.CommandBar))]
+        [SinkArgument("folder", typeof(OutlookApi.Folder))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(64322)]
 		void FolderContextMenuDisplay([In, MarshalAs(UnmanagedType.IDispatch)] object commandBar, [In, MarshalAs(UnmanagedType.IDispatch)] object folder);
 
 		[SupportByVersion("Outlook", 12,14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(64323)]
+        [SinkArgument("commandBar", typeof(OfficeApi.CommandBar))]
+        [SinkArgument("store", typeof(OutlookApi.Store))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(64323)]
 		void StoreContextMenuDisplay([In, MarshalAs(UnmanagedType.IDispatch)] object commandBar, [In, MarshalAs(UnmanagedType.IDispatch)] object store);
 
 		[SupportByVersion("Outlook", 12,14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(64324)]
+        [SinkArgument("commandBar", typeof(OfficeApi.CommandBar))]
+        [SinkArgument("shortcut", typeof(OutlookApi.OutlookBarShortcut))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(64324)]
 		void ShortcutContextMenuDisplay([In, MarshalAs(UnmanagedType.IDispatch)] object commandBar, [In, MarshalAs(UnmanagedType.IDispatch)] object shortcut);
 
 		[SupportByVersion("Outlook", 12,14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(64320)]
+        [SinkArgument("commandBar", typeof(OfficeApi.CommandBar))]
+        [SinkArgument("view", typeof(OutlookApi.View))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(64320)]
 		void ViewContextMenuDisplay([In, MarshalAs(UnmanagedType.IDispatch)] object commandBar, [In, MarshalAs(UnmanagedType.IDispatch)] object view);
 
 		[SupportByVersion("Outlook", 12,14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(64321)]
+        [SinkArgument("commandBar", typeof(OfficeApi.CommandBar))]
+        [SinkArgument("selection", typeof(OutlookApi.Selection))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(64321)]
 		void ItemContextMenuDisplay([In, MarshalAs(UnmanagedType.IDispatch)] object commandBar, [In, MarshalAs(UnmanagedType.IDispatch)] object selection);
 
 		[SupportByVersion("Outlook", 12,14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(64422)]
+        [SinkArgument("contextMenu", SinkArgumentType.Enum, typeof(OutlookApi.Enums.OlContextMenu))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(64422)]
 		void ContextMenuClose([In] object contextMenu);
 
 		[SupportByVersion("Outlook", 12,14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(64423)]
+        [SinkArgument("item", SinkArgumentType.UnknownProxy)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(64423)]
 		void ItemLoad([In, MarshalAs(UnmanagedType.IDispatch)] object item);
 
 		[SupportByVersion("Outlook", 12,14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(64513)]
+        [SinkArgument("folderToShare", typeof(OutlookApi.MAPIFolder))]
+        [SinkArgument("cancel", SinkArgumentType.Bool)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(64513)]
 		void BeforeFolderSharingDialog([In, MarshalAs(UnmanagedType.IDispatch)] object folderToShare, [In] [Out] ref object cancel);
 	}
 
@@ -242,13 +265,13 @@ namespace NetOffice.OutlookApi.Events
                 return;
             }
 
-			string newEntryIDCollection = Convert.ToString(entryIDCollection);
+			string newEntryIDCollection = ToString(entryIDCollection);
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newEntryIDCollection;
 			EventBinding.RaiseCustomEvent("NewMailEx", ref paramsArray);
 		}
 
-		public void AttachmentContextMenuDisplay([In, MarshalAs(UnmanagedType.IDispatch)] object commandBar, [In, MarshalAs(UnmanagedType.IDispatch)] object attachments)
+        public void AttachmentContextMenuDisplay([In, MarshalAs(UnmanagedType.IDispatch)] object commandBar, [In, MarshalAs(UnmanagedType.IDispatch)] object attachments)
 		{
             if (!Validate("AttachmentContextMenuDisplay"))
             {
@@ -264,7 +287,7 @@ namespace NetOffice.OutlookApi.Events
 			EventBinding.RaiseCustomEvent("AttachmentContextMenuDisplay", ref paramsArray);
 		}
 
-		public void FolderContextMenuDisplay([In, MarshalAs(UnmanagedType.IDispatch)] object commandBar, [In, MarshalAs(UnmanagedType.IDispatch)] object folder)
+        public void FolderContextMenuDisplay([In, MarshalAs(UnmanagedType.IDispatch)] object commandBar, [In, MarshalAs(UnmanagedType.IDispatch)] object folder)
 		{
             if (!Validate("FolderContextMenuDisplay"))
             {
@@ -280,7 +303,7 @@ namespace NetOffice.OutlookApi.Events
 			EventBinding.RaiseCustomEvent("FolderContextMenuDisplay", ref paramsArray);
 		}
 
-		public void StoreContextMenuDisplay([In, MarshalAs(UnmanagedType.IDispatch)] object commandBar, [In, MarshalAs(UnmanagedType.IDispatch)] object store)
+        public void StoreContextMenuDisplay([In, MarshalAs(UnmanagedType.IDispatch)] object commandBar, [In, MarshalAs(UnmanagedType.IDispatch)] object store)
 		{
             if (!Validate("StoreContextMenuDisplay"))
             {
@@ -296,7 +319,7 @@ namespace NetOffice.OutlookApi.Events
 			EventBinding.RaiseCustomEvent("StoreContextMenuDisplay", ref paramsArray);
 		}
 
-		public void ShortcutContextMenuDisplay([In, MarshalAs(UnmanagedType.IDispatch)] object commandBar, [In, MarshalAs(UnmanagedType.IDispatch)] object shortcut)
+        public void ShortcutContextMenuDisplay([In, MarshalAs(UnmanagedType.IDispatch)] object commandBar, [In, MarshalAs(UnmanagedType.IDispatch)] object shortcut)
 		{
             if (!Validate("ShortcutContextMenuDisplay"))
             {
@@ -312,7 +335,7 @@ namespace NetOffice.OutlookApi.Events
 			EventBinding.RaiseCustomEvent("ShortcutContextMenuDisplay", ref paramsArray);
 		}
 
-		public void ViewContextMenuDisplay([In, MarshalAs(UnmanagedType.IDispatch)] object commandBar, [In, MarshalAs(UnmanagedType.IDispatch)] object view)
+        public void ViewContextMenuDisplay([In, MarshalAs(UnmanagedType.IDispatch)] object commandBar, [In, MarshalAs(UnmanagedType.IDispatch)] object view)
         {
             if (!Validate("ViewContextMenuDisplay"))
             {
@@ -328,7 +351,7 @@ namespace NetOffice.OutlookApi.Events
 			EventBinding.RaiseCustomEvent("ViewContextMenuDisplay", ref paramsArray);
 		}
 
-		public void ItemContextMenuDisplay([In, MarshalAs(UnmanagedType.IDispatch)] object commandBar, [In, MarshalAs(UnmanagedType.IDispatch)] object selection)
+        public void ItemContextMenuDisplay([In, MarshalAs(UnmanagedType.IDispatch)] object commandBar, [In, MarshalAs(UnmanagedType.IDispatch)] object selection)
 		{
             if (!Validate("ItemContextMenuDisplay"))
             {
@@ -344,7 +367,7 @@ namespace NetOffice.OutlookApi.Events
 			EventBinding.RaiseCustomEvent("ItemContextMenuDisplay", ref paramsArray);
 		}
 
-		public void ContextMenuClose([In] object contextMenu)
+        public void ContextMenuClose([In] object contextMenu)
 		{
             if (!Validate("ContextMenuClose"))
             {
@@ -358,7 +381,7 @@ namespace NetOffice.OutlookApi.Events
 			EventBinding.RaiseCustomEvent("ContextMenuClose", ref paramsArray);
 		}
 
-		public void ItemLoad([In, MarshalAs(UnmanagedType.IDispatch)] object item)
+        public void ItemLoad([In, MarshalAs(UnmanagedType.IDispatch)] object item)
         {
             if (!Validate("ItemLoad"))
             {
@@ -372,7 +395,7 @@ namespace NetOffice.OutlookApi.Events
 			EventBinding.RaiseCustomEvent("ItemLoad", ref paramsArray);
 		}
 
-		public void BeforeFolderSharingDialog([In, MarshalAs(UnmanagedType.IDispatch)] object folderToShare, [In] [Out] ref object cancel)
+        public void BeforeFolderSharingDialog([In, MarshalAs(UnmanagedType.IDispatch)] object folderToShare, [In] [Out] ref object cancel)
 		{
             if (!Validate("BeforeFolderSharingDialog"))
             {
@@ -380,13 +403,13 @@ namespace NetOffice.OutlookApi.Events
                 return;
             }
 
-			NetOffice.OutlookApi.MAPIFolder newFolderToShare = Factory.CreateKnownObjectFromComProxy<NetOffice.OutlookApi.MAPIFolder>(EventClass, folderToShare, NetOffice.OutlookApi.MAPIFolder.LateBindingApiWrapperType);
-			object[] paramsArray = new object[2];
+            NetOffice.OutlookApi.MAPIFolder newFolderToShare = Factory.CreateEventArgumentObjectFromComProxy(EventClass, folderToShare) as NetOffice.OutlookApi.MAPIFolder;
+            object[] paramsArray = new object[2];
 			paramsArray[0] = newFolderToShare;
 			paramsArray.SetValue(cancel, 1);
 			EventBinding.RaiseCustomEvent("BeforeFolderSharingDialog", ref paramsArray);
 
-			cancel = (bool)paramsArray[1];
+			cancel = ToBoolean(paramsArray[1]);
 		}
 
 		#endregion

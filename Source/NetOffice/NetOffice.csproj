@@ -78,12 +78,20 @@
     <Compile Include="Attributes\ComUnregisterCallAttribute.cs.cs" />
     <Compile Include="Attributes\CoreOverriddenAttribute.cs" />
     <Compile Include="Attributes\CustomIndexerAttribute.cs" />
+    <Compile Include="Attributes\DuplicateAttribute.cs" />
     <Compile Include="Attributes\InternalEntityAttribute.cs" />
     <Compile Include="Attributes\ModuleBaseTypeAttribute.cs" />
     <Compile Include="Attributes\ModuleProviderAttribute.cs" />
     <Compile Include="Attributes\NativeResultAttribute.cs" />
     <Compile Include="Attributes\ProxyResultAttribute.cs" />
+    <Compile Include="Attributes\SinkArgumentAttribute.cs" />
     <Compile Include="ComTypes\ITypeInfoExtensions.cs" />
+    <Compile Include="Contribution\Controls\InstanceMonitor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Contribution\Controls\InstanceMonitor.designer.cs">
+      <DependentUpon>InstanceMonitor.cs</DependentUpon>
+    </Compile>
     <Compile Include="Converter\ExpandableSettingsConverter.cs" />
     <Compile Include="CoreExtensions\Core.Nested.cs" />
     <Compile Include="CoreExtensions\CoreFactoryExtensions.cs" />
@@ -107,7 +115,6 @@
     <Compile Include="Converter\COMDynamicObjectExpandableObjectConverter.cs" />
     <Compile Include="Dynamics\COMDynamicMetaObject.cs" />
     <Compile Include="Converter\COMObjectExpandableObjectConverter.cs" />
-    <Compile Include="COMObjectFaults.cs" />
     <Compile Include="COMProxyShare.cs" />
     <Compile Include="DuckTales\DuckInterface.cs" />
     <Compile Include="DuckTales\DuckTypeGenerator.cs" />
@@ -254,6 +261,9 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Contribution\Controls\InstanceMonitor.resx">
+      <DependentUpon>InstanceMonitor.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="KeyTokens.txt" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -266,5 +276,6 @@
   <ItemGroup>
     <EmbeddedResource Include="DuckTales\EventBinding.txt" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

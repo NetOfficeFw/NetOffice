@@ -453,9 +453,9 @@ namespace NetOffice.Tools
                     return;
                 value = value.ToLower().Trim();
                 if (value == "enabled")
-                    factory.Settings.EnableDebugOutput = true;
+                    factory.Settings.EnableMoreDebugOutput = true;
                 else
-                    factory.Settings.EnableDebugOutput = false;
+                    factory.Settings.EnableMoreDebugOutput = false;
             }
         }
 

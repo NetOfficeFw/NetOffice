@@ -17,7 +17,8 @@ namespace NetOffice.AccessApi.Events
 	public interface _CustomControlEvents
 	{
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2076)]
+        [SinkArgument("code", SinkArgumentType.Int16)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2076)]
 		void Updated([In] [Out] ref object code);
 
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]

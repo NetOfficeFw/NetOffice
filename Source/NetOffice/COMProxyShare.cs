@@ -62,6 +62,11 @@ namespace NetOffice
         /// Instance is marked as enumerator provider
         /// </summary>
         private bool _isEnumerator;
+        
+        /// <summary>
+        /// Invalid proxy error message
+        /// </summary>
+        private static string _invalidComProxy = "Given argument isn't a com proxy.";
 
         #endregion
 
@@ -76,6 +81,8 @@ namespace NetOffice
         {    
             if (null == proxy)
                 throw new ArgumentNullException("proxy");
+            if (!(proxy is MarshalByRefObject))
+                throw new ArgumentException(_invalidComProxy);
             _isEnumerator = proxy is ICustomAdapter;
             _proxy = proxy;
             Acquire();
@@ -91,6 +98,8 @@ namespace NetOffice
         {
             if (null == proxy)
                 throw new ArgumentNullException("proxy");
+            if (false == isEnumerator && false == (proxy is MarshalByRefObject))
+                throw new ArgumentException(_invalidComProxy);
             _isEnumerator = isEnumerator;
             _proxy = proxy;
             Acquire();
@@ -107,6 +116,8 @@ namespace NetOffice
         {
             if (null == proxy)
                 throw new ArgumentNullException("proxy");
+            if (false == isEnumerator && false == (proxy is MarshalByRefObject))
+                throw new ArgumentException(_invalidComProxy);
             _isEnumerator = isEnumerator;
             _proxy = proxy;
             SuppressReleaseExceptions = suppressReleaseExceptions;
@@ -312,7 +323,7 @@ namespace NetOffice
             if(_isEnumerator)
                 return String.Format("COMProxyShare:{0} (Enumerator)", _count);
             else
-                return String.Format("COMProxyShare:{0} (Enumerator)");
+                return String.Format("COMProxyShare:{0}", _count);
         }
 
         #endregion

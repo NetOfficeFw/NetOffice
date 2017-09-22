@@ -88,10 +88,15 @@ namespace NetOffice.OutlookApi.Tools
         /// </summary>
 		protected List<ITaskPane> TaskPaneInstances { get; set; }
 
-		/// <summary>
+        /// <summary>
+        /// Ribbon instance to manipulate ui at runtime 
+        /// </summary>
+        protected Office.IRibbonUI RibbonUI { get; private set; }
+
+        /// <summary>
         /// Cached Error Method Delegate
         /// </summary>
-		private MethodInfo ErrorMethod { get; set; }
+        private MethodInfo ErrorMethod { get; set; }
 
 		/// <summary>
         /// Cached Register Error Method Delegate
@@ -217,6 +222,19 @@ namespace NetOffice.OutlookApi.Tools
 				NetOffice.DebugConsole.Default.WriteException(exception);
                 OnError(ErrorMethodKind.OnBeginShutdown, exception);
             }
+        }
+
+        #endregion
+       
+        #region Ribbon Support
+
+        /// <summary>
+        /// Pre-defined Ribbon Loader
+        /// </summary>
+        /// <param name="ribbonUI"></param>
+        public virtual void CustomUI_OnLoad(Office.IRibbonUI ribbonUI)
+        {
+            RibbonUI = ribbonUI;
         }
 
         #endregion
@@ -681,7 +699,7 @@ namespace NetOffice.OutlookApi.Tools
             ForceInitializeAttribute attribute = AttributeReflector.GetForceInitializeAttribute(Type);
             if (null != attribute)
             {
-                core.Settings.EnableDebugOutput = attribute.EnableDebugOutput;
+                core.Settings.EnableMoreDebugOutput = attribute.EnableMoreDebugOutput;
                 core.CheckInitialize();
             }
             return core;

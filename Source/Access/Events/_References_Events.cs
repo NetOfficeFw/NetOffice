@@ -17,11 +17,13 @@ namespace NetOffice.AccessApi.Events
 	public interface _References_Events
 	{
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(0)]
+        [SinkArgument("reference", typeof(NetOffice.AccessApi.Reference))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(0)]
 		void ItemAdded([In, MarshalAs(UnmanagedType.IDispatch)] object reference);
 
 		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1)]
+        [SinkArgument("reference", typeof(NetOffice.AccessApi.Reference))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1)]
 		void ItemRemoved([In, MarshalAs(UnmanagedType.IDispatch)] object reference);
 	}
 

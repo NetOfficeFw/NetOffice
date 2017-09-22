@@ -17,11 +17,13 @@ namespace NetOffice.OutlookApi.Events
 	public interface NavigationGroupsEvents_12
 	{
 		[SupportByVersion("Outlook", 12,14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(64458)]
+        [SinkArgument("navigationFolder", typeof(OutlookApi.NavigationFolder))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(64458)]
 		void SelectedChange([In, MarshalAs(UnmanagedType.IDispatch)] object navigationFolder);
 
 		[SupportByVersion("Outlook", 12,14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(64459)]
+        [SinkArgument("navigationFolder", typeof(OutlookApi.NavigationFolder))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(64459)]
 		void NavigationFolderAdd([In, MarshalAs(UnmanagedType.IDispatch)] object navigationFolder);
 
 		[SupportByVersion("Outlook", 12,14,15,16)]

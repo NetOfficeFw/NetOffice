@@ -142,14 +142,14 @@ namespace NetOffice
                 ValidateComObjectIsAlive(comObject);
 
                 if ((Settings.EnableSafeMode) && (!comObject.EntityIsAvailable(name, SupportedEntityType.Method)))
-                    throw new EntityNotSupportedException(string.Format("Method {0} is not available.", name));
+                    throw new EntityNotSupportedException(name);
               
-                bool measureStarted = Settings.PerformanceTrace.StartMeasureTime(comObject.InstanceComponentName, comObject.InstanceName, name, PerformanceTrace.CallType.Method);
+                bool measureStarted = Settings.PerformanceTrace.StartMeasureTime(comObject.InstanceType.Namespace, comObject.InstanceType.Name, name, PerformanceTrace.CallType.Method);
 
                 comObject.UnderlyingType.InvokeMember(name, BindingFlags.InvokeMethod, null, comObject.UnderlyingObject, paramsArray, Settings.Default.ThreadCulture);
 
                 if (measureStarted)
-                    Settings.PerformanceTrace.StopMeasureTime(comObject.InstanceComponentName, comObject.InstanceName, name);
+                    Settings.PerformanceTrace.StopMeasureTime(comObject.InstanceType.Namespace, comObject.InstanceType.Name, name);
             }
             catch (Exception throwedException)
             {             
@@ -174,19 +174,19 @@ namespace NetOffice
                 ValidateComObjectIsAlive(comObject);
 
                 if ((Settings.EnableSafeMode) && (!comObject.EntityIsAvailable(name, SupportedEntityType.Property)))
-                    throw new EntityNotSupportedException(string.Format("Property {0} is not available.", name));
+                    throw new EntityNotSupportedException(name);
 
                 object[] newParamsArray = new object[paramsArray.Length + 1];
                 for (int i = 0; i < paramsArray.Length; i++)
                     newParamsArray[i] = paramsArray[i];
                 newParamsArray[newParamsArray.Length - 1] = ValidateParam(value);
 
-                bool measureStarted = Settings.PerformanceTrace.StartMeasureTime(comObject.InstanceComponentName, comObject.InstanceName, name, PerformanceTrace.CallType.PropertySet);
+                bool measureStarted = Settings.PerformanceTrace.StartMeasureTime(comObject.InstanceType.Namespace, comObject.InstanceType.Name, name, PerformanceTrace.CallType.PropertySet);
 
                 comObject.UnderlyingType.InvokeMember(name, BindingFlags.InvokeMethod, null, comObject.UnderlyingObject, newParamsArray, Settings.Default.ThreadCulture);
 
                 if (measureStarted)
-                    Settings.PerformanceTrace.StopMeasureTime(comObject.InstanceComponentName, comObject.InstanceName, name, value);
+                    Settings.PerformanceTrace.StopMeasureTime(comObject.InstanceType.Namespace, comObject.InstanceType.Name, name, value);
             }
             catch (Exception throwedException)
             {
@@ -210,12 +210,12 @@ namespace NetOffice
             {
                 ValidateComObjectIsAlive(comObject);
 
-                bool measureStarted = Settings.PerformanceTrace.StartMeasureTime(comObject.InstanceComponentName, comObject.InstanceName, name, PerformanceTrace.CallType.Method);
+                bool measureStarted = Settings.PerformanceTrace.StartMeasureTime(comObject.InstanceType.Namespace, comObject.InstanceType.Name, name, PerformanceTrace.CallType.Method);
 
                 comObject.UnderlyingType.InvokeMember(name, BindingFlags.InvokeMethod, null, comObject.UnderlyingObject, paramsArray, Settings.Default.ThreadCulture);
 
                 if (measureStarted)
-                    Settings.PerformanceTrace.StopMeasureTime(comObject.InstanceComponentName, comObject.InstanceName, name);
+                    Settings.PerformanceTrace.StopMeasureTime(comObject.InstanceType.Namespace, comObject.InstanceType.Name, name);
             }
             catch (Exception throwedException)
             {
@@ -256,12 +256,12 @@ namespace NetOffice
 
                 bool measureStarted = false;
                 if(null != wrapperInstance)
-                    measureStarted = Settings.PerformanceTrace.StartMeasureTime(wrapperInstance.InstanceComponentName, wrapperInstance.InstanceName, name, PerformanceTrace.CallType.Method);
+                    measureStarted = Settings.PerformanceTrace.StartMeasureTime(wrapperInstance.InstanceType.Namespace, wrapperInstance.InstanceType.Name, name, PerformanceTrace.CallType.Method);
 
                 type.InvokeMember(name, BindingFlags.InvokeMethod, null, target, paramsArray, Settings.Default.ThreadCulture);
 
                 if (measureStarted)
-                    Settings.PerformanceTrace.StopMeasureTime(wrapperInstance.InstanceComponentName, wrapperInstance.InstanceName, name);
+                    Settings.PerformanceTrace.StopMeasureTime(wrapperInstance.InstanceType.Namespace, wrapperInstance.InstanceType.Name, name);
             }
             catch (Exception throwedException)
             {
@@ -286,14 +286,14 @@ namespace NetOffice
                 ValidateComObjectIsAlive(comObject);
 
                 if ((Settings.EnableSafeMode) && (!comObject.EntityIsAvailable(name, SupportedEntityType.Method)))
-                    throw new EntityNotSupportedException(string.Format("Method {0} is not available.", name));
+                    throw new EntityNotSupportedException(name);
 
-                bool measureStarted = Settings.PerformanceTrace.StartMeasureTime(comObject.InstanceComponentName, comObject.InstanceName, name, PerformanceTrace.CallType.Method);
+                bool measureStarted = Settings.PerformanceTrace.StartMeasureTime(comObject.InstanceType.Namespace, comObject.InstanceType.Name, name, PerformanceTrace.CallType.Method);
 
                 comObject.UnderlyingType.InvokeMember(name, BindingFlags.InvokeMethod, null, comObject.UnderlyingObject, paramsArray, paramModifiers, Settings.Default.ThreadCulture, null);
 
                 if (measureStarted)
-                    Settings.PerformanceTrace.StopMeasureTime(comObject.InstanceComponentName, comObject.InstanceName, name);
+                    Settings.PerformanceTrace.StopMeasureTime(comObject.InstanceType.Namespace, comObject.InstanceType.Name, name);
             }
             catch (Exception throwedException)
             {
@@ -317,14 +317,14 @@ namespace NetOffice
                 ValidateComObjectIsAlive(comObject);
 
                 if ((Settings.EnableSafeMode) && (!comObject.EntityIsAvailable(name, SupportedEntityType.Method)))
-                    throw new EntityNotSupportedException(string.Format("Method {0} is not available.", name));
+                    throw new EntityNotSupportedException(name);
 
-                bool measureStarted = Settings.PerformanceTrace.StartMeasureTime(comObject.InstanceComponentName, comObject.InstanceName, name, PerformanceTrace.CallType.Function);
+                bool measureStarted = Settings.PerformanceTrace.StartMeasureTime(comObject.InstanceType.Namespace, comObject.InstanceType.Name, name, PerformanceTrace.CallType.Function);
 
                 object returnValue = comObject.UnderlyingType.InvokeMember(name, BindingFlags.InvokeMethod | BindingFlags.GetProperty, null, comObject.UnderlyingObject, null, Settings.Default.ThreadCulture);
 
                 if (measureStarted)
-                    Settings.PerformanceTrace.StopMeasureTime(comObject.InstanceComponentName, comObject.InstanceName, name);
+                    Settings.PerformanceTrace.StopMeasureTime(comObject.InstanceType.Namespace, comObject.InstanceType.Name, name);
 
                 return returnValue;
             }
@@ -351,14 +351,14 @@ namespace NetOffice
                 ValidateComObjectIsAlive(comObject);
 
                 if ((Settings.EnableSafeMode) && (!comObject.EntityIsAvailable(name, SupportedEntityType.Method)))
-                    throw new EntityNotSupportedException(string.Format("Method {0} is not available.", name));
+                    throw new EntityNotSupportedException(name);
 
-                bool measureStarted = Settings.PerformanceTrace.StartMeasureTime(comObject.InstanceComponentName, comObject.InstanceName, name, PerformanceTrace.CallType.Function);
+                bool measureStarted = Settings.PerformanceTrace.StartMeasureTime(comObject.InstanceType.Namespace, comObject.InstanceType.Name, name, PerformanceTrace.CallType.Function);
 
                 object returnValue = comObject.UnderlyingType.InvokeMember(name, BindingFlags.InvokeMethod | BindingFlags.GetProperty, null, comObject.UnderlyingObject, paramsArray, Settings.Default.ThreadCulture);
 
                 if (measureStarted)
-                    Settings.PerformanceTrace.StopMeasureTime(comObject.InstanceComponentName, comObject.InstanceName, name);
+                    Settings.PerformanceTrace.StopMeasureTime(comObject.InstanceType.Namespace, comObject.InstanceType.Name, name);
 
                 return returnValue;
             }
@@ -385,12 +385,12 @@ namespace NetOffice
             {
                 ValidateComObjectIsAlive(comObject);
 
-                bool measureStarted = Settings.PerformanceTrace.StartMeasureTime(comObject.InstanceComponentName, comObject.InstanceName, name, PerformanceTrace.CallType.Function);
+                bool measureStarted = Settings.PerformanceTrace.StartMeasureTime(comObject.InstanceType.Namespace, comObject.InstanceType.Name, name, PerformanceTrace.CallType.Function);
 
                 object returnValue = comObject.UnderlyingType.InvokeMember(name, BindingFlags.InvokeMethod | BindingFlags.GetProperty, null, comObject.UnderlyingObject, paramsArray, Settings.Default.ThreadCulture);
                
                 if (measureStarted)
-                    Settings.PerformanceTrace.StopMeasureTime(comObject.InstanceComponentName, comObject.InstanceName, name);
+                    Settings.PerformanceTrace.StopMeasureTime(comObject.InstanceType.Name, comObject.InstanceType.Name, name);
                 
                 return returnValue;
             }
@@ -418,14 +418,14 @@ namespace NetOffice
                 ValidateComObjectIsAlive(comObject);
 
                 if ((Settings.EnableSafeMode) && (!comObject.EntityIsAvailable(name, SupportedEntityType.Method)))
-                    throw new EntityNotSupportedException(string.Format("Method {0} is not available.", name));
+                    throw new EntityNotSupportedException(name);
 
-                bool measureStarted = Settings.PerformanceTrace.StartMeasureTime(comObject.InstanceComponentName, comObject.InstanceName, name, PerformanceTrace.CallType.Function);
+                bool measureStarted = Settings.PerformanceTrace.StartMeasureTime(comObject.InstanceType.Namespace, comObject.InstanceType.Name, name, PerformanceTrace.CallType.Function);
 
                 object returnValue = comObject.UnderlyingType.InvokeMember(name, BindingFlags.InvokeMethod | BindingFlags.GetProperty, null, comObject.UnderlyingObject, paramsArray, paramModifiers, Settings.Default.ThreadCulture, null);
 
                 if (measureStarted)
-                    Settings.PerformanceTrace.StopMeasureTime(comObject.InstanceComponentName, comObject.InstanceName, name);
+                    Settings.PerformanceTrace.StopMeasureTime(comObject.InstanceType.Namespace, comObject.InstanceType.Name, name);
                 
                 return returnValue;
             }
@@ -475,14 +475,14 @@ namespace NetOffice
                 ValidateComObjectIsAlive(comObject);
 
                 if ((Settings.EnableSafeMode) && (!comObject.EntityIsAvailable(name, SupportedEntityType.Method)))
-                    throw new EntityNotSupportedException(string.Format("Method {0} is not available.", name));
+                    throw new EntityNotSupportedException(name);
                 
-                bool measureStarted = Settings.PerformanceTrace.StartMeasureTime(comObject.InstanceComponentName, comObject.InstanceName, name, PerformanceTrace.CallType.Method);
+                bool measureStarted = Settings.PerformanceTrace.StartMeasureTime(comObject.InstanceType.Namespace, comObject.InstanceType.Name, name, PerformanceTrace.CallType.Method);
 
                 comObject.UnderlyingType.InvokeMember(name, BindingFlags.InvokeMethod | BindingFlags.GetProperty, null, comObject.UnderlyingObject, paramsArray, Settings.Default.ThreadCulture);
 
                 if (measureStarted)
-                    Settings.PerformanceTrace.StopMeasureTime(comObject.InstanceComponentName, comObject.InstanceName, name);
+                    Settings.PerformanceTrace.StopMeasureTime(comObject.InstanceType.Namespace, comObject.InstanceType.Name, name);
             }
             catch (Exception throwedException)
             {
@@ -506,12 +506,12 @@ namespace NetOffice
             {
                 ValidateComObjectIsAlive(comObject);
 
-                bool measureStarted = Settings.PerformanceTrace.StartMeasureTime(comObject.InstanceComponentName, comObject.InstanceName, name, PerformanceTrace.CallType.Method);
+                bool measureStarted = Settings.PerformanceTrace.StartMeasureTime(comObject.InstanceType.Namespace, comObject.InstanceType.Name, name, PerformanceTrace.CallType.Method);
 
                 comObject.UnderlyingType.InvokeMember(name, BindingFlags.InvokeMethod | BindingFlags.GetProperty, null, comObject.UnderlyingObject, paramsArray, Settings.Default.ThreadCulture);
 
                 if (measureStarted)
-                    Settings.PerformanceTrace.StopMeasureTime(comObject.InstanceComponentName, comObject.InstanceName, name);
+                    Settings.PerformanceTrace.StopMeasureTime(comObject.InstanceType.Namespace, comObject.InstanceType.Name, name);
             }
             catch (Exception throwedException)
             {
@@ -552,12 +552,12 @@ namespace NetOffice
 
                 bool measureStarted = false;
                 if (null != wrapperInstance)
-                    measureStarted = Settings.PerformanceTrace.StartMeasureTime(wrapperInstance.InstanceComponentName, wrapperInstance.InstanceName, name, PerformanceTrace.CallType.Method);
+                    measureStarted = Settings.PerformanceTrace.StartMeasureTime(wrapperInstance.InstanceType.Namespace, wrapperInstance.InstanceType.Name, name, PerformanceTrace.CallType.Method);
 
                 type.InvokeMember(name, BindingFlags.InvokeMethod | BindingFlags.GetProperty, null, target, paramsArray, Settings.Default.ThreadCulture);
 
                 if (measureStarted)
-                    Settings.PerformanceTrace.StopMeasureTime(wrapperInstance.InstanceComponentName, wrapperInstance.InstanceName, name);
+                    Settings.PerformanceTrace.StopMeasureTime(wrapperInstance.InstanceType.Namespace, wrapperInstance.InstanceType.Name, name);
             }
             catch (Exception throwedException)
             {
@@ -582,14 +582,14 @@ namespace NetOffice
                 ValidateComObjectIsAlive(comObject);
 
                 if ((Settings.Default.EnableSafeMode) && (!comObject.EntityIsAvailable(name, SupportedEntityType.Method)))
-                    throw new EntityNotSupportedException(string.Format("Method {0} is not available.", name));
+                    throw new EntityNotSupportedException(name);
 
-                bool measureStarted = Settings.PerformanceTrace.StartMeasureTime(comObject.InstanceComponentName, comObject.InstanceName, name, PerformanceTrace.CallType.Method);
+                bool measureStarted = Settings.PerformanceTrace.StartMeasureTime(comObject.InstanceType.Namespace, comObject.InstanceType.Name, name, PerformanceTrace.CallType.Method);
 
                 comObject.UnderlyingType.InvokeMember(name, BindingFlags.InvokeMethod | BindingFlags.GetProperty, null, comObject.UnderlyingObject, paramsArray, paramModifiers, Settings.Default.ThreadCulture, null);
 
                 if (measureStarted)
-                    Settings.PerformanceTrace.StopMeasureTime(comObject.InstanceComponentName, comObject.InstanceName, name);
+                    Settings.PerformanceTrace.StopMeasureTime(comObject.InstanceType.Namespace, comObject.InstanceType.Name, name);
             }
             catch (Exception throwedException)
             {
@@ -613,14 +613,14 @@ namespace NetOffice
                 ValidateComObjectIsAlive(comObject);
 
                 if ((Settings.EnableSafeMode) && (!comObject.EntityIsAvailable(name, SupportedEntityType.Method)))
-                    throw new EntityNotSupportedException(string.Format("Method {0} is not available.", name));
+                    throw new EntityNotSupportedException(name);
 
-                bool measureStarted = Settings.PerformanceTrace.StartMeasureTime(comObject.InstanceComponentName, comObject.InstanceName, name, PerformanceTrace.CallType.Function);
+                bool measureStarted = Settings.PerformanceTrace.StartMeasureTime(comObject.InstanceType.Namespace, comObject.InstanceType.Name, name, PerformanceTrace.CallType.Function);
 
                 object returnValue = comObject.UnderlyingType.InvokeMember(name, BindingFlags.InvokeMethod | BindingFlags.GetProperty, null, comObject.UnderlyingObject, null, Settings.Default.ThreadCulture);
 
                 if (measureStarted)
-                    Settings.PerformanceTrace.StopMeasureTime(comObject.InstanceComponentName, comObject.InstanceName, name);
+                    Settings.PerformanceTrace.StopMeasureTime(comObject.InstanceType.Namespace, comObject.InstanceType.Name, name);
 
                 return returnValue;
             }
@@ -647,14 +647,14 @@ namespace NetOffice
                 ValidateComObjectIsAlive(comObject);
 
                 if ((Settings.EnableSafeMode) && (!comObject.EntityIsAvailable(name, SupportedEntityType.Method)))
-                    throw new EntityNotSupportedException(string.Format("Method {0} is not available.", name));
+                    throw new EntityNotSupportedException(name);
                 
-                bool measureStarted = Settings.PerformanceTrace.StartMeasureTime(comObject.InstanceComponentName, comObject.InstanceName, name, PerformanceTrace.CallType.Function);
+                bool measureStarted = Settings.PerformanceTrace.StartMeasureTime(comObject.InstanceType.Namespace, comObject.InstanceType.Name, name, PerformanceTrace.CallType.Function);
 
                 object returnValue = comObject.UnderlyingType.InvokeMember(name, BindingFlags.InvokeMethod | BindingFlags.GetProperty, null, comObject.UnderlyingObject, paramsArray, Settings.Default.ThreadCulture);
 
                 if (measureStarted)
-                    Settings.PerformanceTrace.StopMeasureTime(comObject.InstanceComponentName, comObject.InstanceName, name);
+                    Settings.PerformanceTrace.StopMeasureTime(comObject.InstanceType.Namespace, comObject.InstanceType.Name, name);
 
                 return returnValue;
             }
@@ -681,12 +681,12 @@ namespace NetOffice
             {
                 ValidateComObjectIsAlive(comObject);
 
-                bool measureStarted = Settings.PerformanceTrace.StartMeasureTime(comObject.InstanceComponentName, comObject.InstanceName, name, PerformanceTrace.CallType.Function);
+                bool measureStarted = Settings.PerformanceTrace.StartMeasureTime(comObject.InstanceType.Namespace, comObject.InstanceType.Name, name, PerformanceTrace.CallType.Function);
 
                 object returnValue = comObject.UnderlyingType.InvokeMember(name, BindingFlags.InvokeMethod | BindingFlags.GetProperty, null, comObject.UnderlyingObject, paramsArray, Settings.Default.ThreadCulture);
 
                 if (measureStarted)
-                    Settings.PerformanceTrace.StopMeasureTime(comObject.InstanceComponentName, comObject.InstanceName, name);
+                    Settings.PerformanceTrace.StopMeasureTime(comObject.InstanceType.Namespace, comObject.InstanceType.Name, name);
 
                 return returnValue;
             }
@@ -714,14 +714,14 @@ namespace NetOffice
                 ValidateComObjectIsAlive(comObject);
 
                 if ((Settings.EnableSafeMode) && (!comObject.EntityIsAvailable(name, SupportedEntityType.Method)))
-                    throw new EntityNotSupportedException(string.Format("Method {0} is not available.", name));
+                    throw new EntityNotSupportedException(name);
 
-                bool measureStarted = Settings.PerformanceTrace.StartMeasureTime(comObject.InstanceComponentName, comObject.InstanceName, name, PerformanceTrace.CallType.Function);
+                bool measureStarted = Settings.PerformanceTrace.StartMeasureTime(comObject.InstanceType.Namespace, comObject.InstanceType.Name, name, PerformanceTrace.CallType.Function);
 
                 object returnValue = comObject.UnderlyingType.InvokeMember(name, BindingFlags.InvokeMethod | BindingFlags.GetProperty, null, comObject.UnderlyingObject, paramsArray, paramModifiers, Settings.Default.ThreadCulture, null);
 
                 if (measureStarted)
-                    Settings.PerformanceTrace.StopMeasureTime(comObject.InstanceComponentName, comObject.InstanceName, name);
+                    Settings.PerformanceTrace.StopMeasureTime(comObject.InstanceType.Namespace, comObject.InstanceType.Name, name);
                 
                 return returnValue;
             }
@@ -768,12 +768,12 @@ namespace NetOffice
 
                 bool measureStarted = false;
                 if (null != wrapperInstance)
-                    measureStarted = Settings.PerformanceTrace.StartMeasureTime(wrapperInstance.InstanceComponentName, wrapperInstance.InstanceName, name, PerformanceTrace.CallType.PropertyGet);
+                    measureStarted = Settings.PerformanceTrace.StartMeasureTime(wrapperInstance.InstanceType.Namespace, wrapperInstance.InstanceType.Name, name, PerformanceTrace.CallType.PropertyGet);
 
                 object returnValue = type.InvokeMember(name, BindingFlags.GetProperty, null, target, null, Settings.Default.ThreadCulture);
 
                 if (measureStarted)
-                    Settings.PerformanceTrace.StopMeasureTime(wrapperInstance.InstanceComponentName, wrapperInstance.InstanceName, name);
+                    Settings.PerformanceTrace.StopMeasureTime(wrapperInstance.InstanceType.Namespace, wrapperInstance.InstanceType.Name, name);
 
                 return returnValue;
             }
@@ -799,14 +799,14 @@ namespace NetOffice
                 ValidateComObjectIsAlive(comObject);
 
                 if ((Settings.EnableSafeMode) && (!comObject.EntityIsAvailable(name, SupportedEntityType.Property)))
-                    throw new EntityNotSupportedException(string.Format("Property {0} is not available.", name));
+                    throw new EntityNotSupportedException(name);
              
-                bool measureStarted = Settings.PerformanceTrace.StartMeasureTime(comObject.InstanceComponentName, comObject.InstanceName, name, PerformanceTrace.CallType.PropertyGet);
+                bool measureStarted = Settings.PerformanceTrace.StartMeasureTime(comObject.InstanceType.Namespace, comObject.InstanceType.Name, name, PerformanceTrace.CallType.PropertyGet);
 
                 object returnValue = comObject.UnderlyingType.InvokeMember(name, BindingFlags.GetProperty, null, comObject.UnderlyingObject, null, Settings.Default.ThreadCulture);
 
                 if (measureStarted)
-                    Settings.PerformanceTrace.StopMeasureTime(comObject.InstanceComponentName, comObject.InstanceName, name);
+                    Settings.PerformanceTrace.StopMeasureTime(comObject.InstanceType.Namespace, comObject.InstanceType.Name, name);
 
                 return returnValue;
             }
@@ -850,12 +850,12 @@ namespace NetOffice
 
                 bool measureStarted = false;
                 if(null != wrapperInstance)
-                    measureStarted = Settings.PerformanceTrace.StartMeasureTime(wrapperInstance.InstanceComponentName, wrapperInstance.InstanceName, name, PerformanceTrace.CallType.PropertyGet);
+                    measureStarted = Settings.PerformanceTrace.StartMeasureTime(wrapperInstance.InstanceType.Namespace, wrapperInstance.InstanceType.Name, name, PerformanceTrace.CallType.PropertyGet);
 
                 object returnValue = type.InvokeMember(name, BindingFlags.GetProperty, null, target, paramsArray, Settings.Default.ThreadCulture);
              
                 if (measureStarted)
-                    Settings.PerformanceTrace.StopMeasureTime(wrapperInstance.InstanceComponentName, wrapperInstance.InstanceName, name);
+                    Settings.PerformanceTrace.StopMeasureTime(wrapperInstance.InstanceType.Namespace, wrapperInstance.InstanceType.Name, name);
 
                 return returnValue;
             }
@@ -882,14 +882,14 @@ namespace NetOffice
                 ValidateComObjectIsAlive(comObject);
 
                 if ((Settings.EnableSafeMode) && (!comObject.EntityIsAvailable(name, SupportedEntityType.Property)))
-                    throw new EntityNotSupportedException(string.Format("Property {0} is not available.", name));
+                    throw new EntityNotSupportedException(name);
 
-                bool measureStarted = Settings.PerformanceTrace.StartMeasureTime(comObject.InstanceComponentName, comObject.InstanceName, name, PerformanceTrace.CallType.PropertyGet);
+                bool measureStarted = Settings.PerformanceTrace.StartMeasureTime(comObject.InstanceType.Namespace, comObject.InstanceType.Name, name, PerformanceTrace.CallType.PropertyGet);
 
                 object returnValue = comObject.UnderlyingType.InvokeMember(name, BindingFlags.GetProperty, null, comObject.UnderlyingObject, paramsArray, Settings.Default.ThreadCulture);
 
                 if (measureStarted)
-                    Settings.PerformanceTrace.StopMeasureTime(comObject.InstanceComponentName, comObject.InstanceName, name);
+                    Settings.PerformanceTrace.StopMeasureTime(comObject.InstanceType.Namespace, comObject.InstanceType.Name, name);
 
                 return returnValue;
             }
@@ -916,12 +916,12 @@ namespace NetOffice
             {
                 ValidateComObjectIsAlive(comObject);
 
-                bool measureStarted = Settings.PerformanceTrace.StartMeasureTime(comObject.InstanceComponentName, comObject.InstanceName, name, PerformanceTrace.CallType.PropertyGet);
+                bool measureStarted = Settings.PerformanceTrace.StartMeasureTime(comObject.InstanceType.Namespace, comObject.InstanceType.Name, name, PerformanceTrace.CallType.PropertyGet);
 
                 object returnValue = comObject.UnderlyingType.InvokeMember(name, BindingFlags.GetProperty, null, comObject.UnderlyingObject, paramsArray, Settings.Default.ThreadCulture);
                 
                 if (measureStarted)
-                    Settings.PerformanceTrace.StopMeasureTime(comObject.InstanceComponentName, comObject.InstanceName, name);
+                    Settings.PerformanceTrace.StopMeasureTime(comObject.InstanceType.Namespace, comObject.InstanceType.Name, name);
 
                 return returnValue;
             }
@@ -949,14 +949,14 @@ namespace NetOffice
                 ValidateComObjectIsAlive(comObject);
 
                 if ((Settings.EnableSafeMode) && (!comObject.EntityIsAvailable(name, SupportedEntityType.Property)))
-                    throw new EntityNotSupportedException(string.Format("Property {0} is not available.", name));
+                    throw new EntityNotSupportedException(name);
 
-                bool measureStarted = Settings.PerformanceTrace.StartMeasureTime(comObject.InstanceComponentName, comObject.InstanceName, name, PerformanceTrace.CallType.PropertyGet);
+                bool measureStarted = Settings.PerformanceTrace.StartMeasureTime(comObject.InstanceType.Namespace, comObject.InstanceType.Name, name, PerformanceTrace.CallType.PropertyGet);
 
                 object returnValue = comObject.UnderlyingType.InvokeMember(name, BindingFlags.GetProperty, null, comObject.UnderlyingObject, paramsArray, paramModifiers, Settings.Default.ThreadCulture, null);
               
                 if (measureStarted)
-                    Settings.PerformanceTrace.StopMeasureTime(comObject.InstanceComponentName, comObject.InstanceName, name);
+                    Settings.PerformanceTrace.StopMeasureTime(comObject.InstanceType.Namespace, comObject.InstanceType.Name, name);
 
                 return returnValue;
             }
@@ -983,19 +983,19 @@ namespace NetOffice
                 ValidateComObjectIsAlive(comObject);
 
                 if ((Settings.EnableSafeMode) && (!comObject.EntityIsAvailable(name, SupportedEntityType.Property)))
-                    throw new EntityNotSupportedException(string.Format("Property {0} is not available.", name));
+                    throw new EntityNotSupportedException(name);
 
                 object[] newParamsArray = new object[paramsArray.Length + 1];
                 for (int i = 0; i < paramsArray.Length; i++)
                     newParamsArray[i] = paramsArray[i];
                 newParamsArray[newParamsArray.Length - 1] = ValidateParam(value);
               
-                bool measureStarted = Settings.PerformanceTrace.StartMeasureTime(comObject.InstanceComponentName, comObject.InstanceName, name, PerformanceTrace.CallType.PropertySet);
+                bool measureStarted = Settings.PerformanceTrace.StartMeasureTime(comObject.InstanceType.Namespace, comObject.InstanceType.Name, name, PerformanceTrace.CallType.PropertySet);
 
                 comObject.UnderlyingType.InvokeMember(name, BindingFlags.SetProperty, null, comObject.UnderlyingObject, newParamsArray, Settings.Default.ThreadCulture);
 
                 if (measureStarted)
-                    Settings.PerformanceTrace.StopMeasureTime(comObject.InstanceComponentName, comObject.InstanceName, name, value);
+                    Settings.PerformanceTrace.StopMeasureTime(comObject.InstanceType.Namespace, comObject.InstanceType.Name, name, value);
             }
             catch (Exception throwedException)
             {
@@ -1021,19 +1021,19 @@ namespace NetOffice
                 ValidateComObjectIsAlive(comObject);
 
                 if ((Settings.EnableSafeMode) && (!comObject.EntityIsAvailable(name, SupportedEntityType.Property)))
-                    throw new EntityNotSupportedException(string.Format("Property {0} is not available.", name));
+                    throw new EntityNotSupportedException(name);
 
                 object[] newParamsArray = new object[paramsArray.Length + 1];
                 for (int i = 0; i < paramsArray.Length; i++)
                     newParamsArray[i] = paramsArray[i];
                 newParamsArray[newParamsArray.Length - 1] = value;
               
-                bool measureStarted = Settings.PerformanceTrace.StartMeasureTime(comObject.InstanceComponentName, comObject.InstanceName, name, PerformanceTrace.CallType.PropertySet);
+                bool measureStarted = Settings.PerformanceTrace.StartMeasureTime(comObject.InstanceType.Namespace, comObject.InstanceType.Name, name, PerformanceTrace.CallType.PropertySet);
 
                 comObject.UnderlyingType.InvokeMember(name, BindingFlags.SetProperty, null, comObject.UnderlyingObject, newParamsArray, paramModifiers, Settings.Default.ThreadCulture, null);
 
                 if (measureStarted)
-                    Settings.PerformanceTrace.StopMeasureTime(comObject.InstanceComponentName, comObject.InstanceName, name, value);
+                    Settings.PerformanceTrace.StopMeasureTime(comObject.InstanceType.Namespace, comObject.InstanceType.Name, name, value);
             }
             catch (Exception throwedException)
             {
@@ -1057,14 +1057,14 @@ namespace NetOffice
                 ValidateComObjectIsAlive(comObject);
 
                 if ((Settings.EnableSafeMode) && (!comObject.EntityIsAvailable(name, SupportedEntityType.Property)))
-                    throw new EntityNotSupportedException(string.Format("Property {0} is not available.", name));
+                    throw new EntityNotSupportedException(name);
              
-                bool measureStarted = Settings.PerformanceTrace.StartMeasureTime(comObject.InstanceComponentName, comObject.InstanceName, name, PerformanceTrace.CallType.PropertySet);
+                bool measureStarted = Settings.PerformanceTrace.StartMeasureTime(comObject.InstanceType.Namespace, comObject.InstanceType.Name, name, PerformanceTrace.CallType.PropertySet);
 
                 comObject.UnderlyingType.InvokeMember(name, BindingFlags.SetProperty, null, comObject.UnderlyingObject, new object[] { value }, Settings.Default.ThreadCulture);
 
                 if (measureStarted)
-                    Settings.PerformanceTrace.StopMeasureTime(comObject.InstanceComponentName, comObject.InstanceName, name, value);
+                    Settings.PerformanceTrace.StopMeasureTime(comObject.InstanceType.Namespace, comObject.InstanceType.Name, name, value);
             }
             catch (Exception throwedException)
             {
@@ -1089,14 +1089,14 @@ namespace NetOffice
                 ValidateComObjectIsAlive(comObject);
 
                 if ((Settings.EnableSafeMode) && (!comObject.EntityIsAvailable(name, SupportedEntityType.Property)))
-                    throw new EntityNotSupportedException(string.Format("Property {0} is not available.", name));
+                    throw new EntityNotSupportedException(name);
               
-                bool measureStarted = Settings.PerformanceTrace.StartMeasureTime(comObject.InstanceComponentName, comObject.InstanceName, name, PerformanceTrace.CallType.PropertySet);
+                bool measureStarted = Settings.PerformanceTrace.StartMeasureTime(comObject.InstanceType.Namespace, comObject.InstanceType.Name, name, PerformanceTrace.CallType.PropertySet);
 
                 comObject.UnderlyingType.InvokeMember(name, BindingFlags.SetProperty, null, comObject.UnderlyingObject, new object[] { value }, paramModifiers, Settings.Default.ThreadCulture, null);
 
                 if (measureStarted)
-                    Settings.PerformanceTrace.StopMeasureTime(comObject.InstanceComponentName, comObject.InstanceName, name, value);
+                    Settings.PerformanceTrace.StopMeasureTime(comObject.InstanceType.Namespace, comObject.InstanceType.Name, name, value);
             }
             catch (Exception throwedException)
             {
@@ -1121,14 +1121,14 @@ namespace NetOffice
                 ValidateComObjectIsAlive(comObject);
 
                 if ((Settings.EnableSafeMode) && (!comObject.EntityIsAvailable(name, SupportedEntityType.Property)))
-                    throw new EntityNotSupportedException(string.Format("Property {0} is not available.", name));
+                    throw new EntityNotSupportedException(name);
                 
-                bool measureStarted = Settings.PerformanceTrace.StartMeasureTime(comObject.InstanceComponentName, comObject.InstanceName, name, PerformanceTrace.CallType.PropertySet);
+                bool measureStarted = Settings.PerformanceTrace.StartMeasureTime(comObject.InstanceType.Namespace, comObject.InstanceType.Name, name, PerformanceTrace.CallType.PropertySet);
 
                 comObject.UnderlyingType.InvokeMember(name, BindingFlags.SetProperty, null, comObject.UnderlyingObject, value, paramModifiers, Settings.Default.ThreadCulture, null);
 
                 if (measureStarted)
-                    Settings.PerformanceTrace.StopMeasureTime(comObject.InstanceComponentName, comObject.InstanceName, name, value);
+                    Settings.PerformanceTrace.StopMeasureTime(comObject.InstanceType.Namespace, comObject.InstanceType.Name, name, value);
             }
             catch (Exception throwedException)
             {
@@ -1152,14 +1152,14 @@ namespace NetOffice
                 ValidateComObjectIsAlive(comObject);
 
                 if ((Settings.EnableSafeMode) && (!comObject.EntityIsAvailable(name, SupportedEntityType.Property)))
-                    throw new EntityNotSupportedException(string.Format("Property {0} is not available.", name));
+                    throw new EntityNotSupportedException(name);
 
-                bool measureStarted = Settings.PerformanceTrace.StartMeasureTime(comObject.InstanceComponentName, comObject.InstanceName, name, PerformanceTrace.CallType.PropertySet);
-
+                bool measureStarted = Settings.PerformanceTrace.StartMeasureTime(comObject.InstanceType.Namespace, comObject.InstanceType.Name, name, PerformanceTrace.CallType.PropertySet);
+                
                 comObject.UnderlyingType.InvokeMember(name, BindingFlags.SetProperty, null, comObject.UnderlyingObject, value, Settings.Default.ThreadCulture);
 
                 if(measureStarted)
-                    Settings.PerformanceTrace.StopMeasureTime(comObject.InstanceComponentName, comObject.InstanceName, name, value);
+                    Settings.PerformanceTrace.StopMeasureTime(comObject.InstanceType.Namespace, comObject.InstanceType.Name, name, value);
             }
             catch (Exception throwedException)
             {

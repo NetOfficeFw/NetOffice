@@ -37,7 +37,10 @@ namespace NetOffice.MSHTMLApi.Events
 		void onblur();
 
 		[SupportByVersion("MSHTML", 4)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1002)]
+        [SinkArgument("description", SinkArgumentType.String)]
+        [SinkArgument("url", SinkArgumentType.String)]
+        [SinkArgument("line", SinkArgumentType.Int32)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1002)]
 		void onerror([In] object description, [In] object url, [In] object line);
 
 		[SupportByVersion("MSHTML", 4)]
@@ -141,7 +144,7 @@ namespace NetOffice.MSHTMLApi.Events
 			EventBinding.RaiseCustomEvent("onblur", ref paramsArray);
 		}
 
-		public void onerror([In] object description, [In] object url, [In] object line)
+        public void onerror([In] object description, [In] object url, [In] object line)
 		{
             if (!Validate("onerror"))
             {
@@ -149,9 +152,9 @@ namespace NetOffice.MSHTMLApi.Events
                 return;
             }
 
-			string newdescription = Convert.ToString(description);
-			string newurl = Convert.ToString(url);
-			Int32 newline = Convert.ToInt32(line);
+			string newdescription = ToString(description);
+			string newurl = ToString(url);
+			Int32 newline = ToInt32(line);
 			object[] paramsArray = new object[3];
 			paramsArray[0] = newdescription;
 			paramsArray[1] = newurl;

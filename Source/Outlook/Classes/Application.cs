@@ -133,6 +133,14 @@ namespace NetOffice.OutlookApi
 
         /// <summary>
         /// Creates a new instance of Application 
+        /// </summary>
+        public Application() : this(false)
+        {
+
+        }
+
+        /// <summary>
+        /// Creates a new instance of Application 
         /// <param name="enableProxyService">try to get a running application first before create a new application</param>
         /// </summary>		
         public Application(bool enableProxyService = false) : base()
@@ -149,10 +157,14 @@ namespace NetOffice.OutlookApi
                 else
                 {
                     CreateFromProgId("Outlook.Application", true);
-                }
-                OnCreate();
+                }               
             }
-            
+            else
+            {
+                CreateFromProgId("Outlook.Application", true);
+            }
+
+            OnCreate();
             _callQuitInDispose = true;
 			GlobalHelperModules.GlobalModule.Instance = this;
 		}
@@ -791,7 +803,7 @@ namespace NetOffice.OutlookApi
         /// </summary>
         /// <returns>A new Application that is a copy of this instance</returns>
         /// <exception cref="CloneException">An unexpected error occured. See inner exception(s) for details.</exception>
-        public new Application Clone()
+        public new virtual Application Clone()
         {
             return base.Clone() as Application;
         }

@@ -12,7 +12,8 @@ namespace NetOffice.ExcelApi
 	/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff836764.aspx </remarks>
 	[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 	[EntityType(EntityType.IsDispatchInterface)]
- 	public class ColorFormat : NetOffice.OfficeApi._IMsoDispObj
+    [Duplicate("NetOffice.OfficeApi.ColorFormat")]
+    public class ColorFormat : NetOffice.OfficeApi._IMsoDispObj
 	{
 		#pragma warning disable
 

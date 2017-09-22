@@ -27,7 +27,7 @@ namespace NetOffice
         private bool _enableAutomaticQuit = false;
         private bool _enableAdHocLoading = true;
         private bool _enableDeepLoading = true;
-        private bool _enableDebugOutput = false;
+        private bool _enableMoreDebugOutput = false;
         private bool _enableEventDebugOutput = false;
         private bool _enableSafeMode = false;
         private bool _enableDynamicObjects = true;
@@ -82,7 +82,7 @@ namespace NetOffice
         /// <summary>
         /// Performance tracer to see how long its need to call and return all or specific actions
         /// </summary>
-        [Category("Settings"), Description("Trace system to measure performance.")]
+        [Category("Settings"), Description("Trace system to measure performance.")]    
         public PerformanceTrace PerformanceTrace
         {
             get
@@ -110,7 +110,7 @@ namespace NetOffice
         /// <summary>
         /// Wrap proxy into COMDynamicObject if proxy has no wrapper class in current app domain. true by default
         /// </summary>
-        [Category("Settings"), Description("Convert unknown proxies in dynamic objects incl. proxy management."), DefaultValue(true)]
+        [Category("Settings"), Description("Convert unknown proxies in dynamic objects if no wrapper is available."), DefaultValue(true)]
         public bool EnableDynamicObjects
         {
             get
@@ -126,7 +126,7 @@ namespace NetOffice
         /// <summary>
         /// Analyze also known reference proxies to see proxy is may inherited type, false by default
         /// </summary>
-        [Category("Settings"), Description("Analyze also known reference proxies to see proxy is may inherited type, false by default."), DefaultValue(true)]
+        [Category("Settings"), Description("Analyze also known reference proxies to see proxy is may inherited type."), DefaultValue(false)]
         public bool EnableKnownReferenceInspection
         {
             get
@@ -142,7 +142,7 @@ namespace NetOffice
         /// <summary>
         /// Dispose event arguments automatically, false by default
         /// </summary>
-        [Category("Settings"), Description("Dispose event arguments automatically, false by default."), DefaultValue(true)]
+        [Category("Settings"), Description("Dispose event arguments automatically."), DefaultValue(false)]
         public bool EnableAutoDisposeEventArguments
         {
             get
@@ -175,7 +175,7 @@ namespace NetOffice
         /// NetOffice wrap all thrown exceptions from Office applications in a COMException.
         /// This option can be used to set the top level exception message or copy the innerst message to top.
         /// </summary>
-        [Category("Settings"), Description("Copy inner exception message to outer top exception."), DefaultValue(typeof(ExceptionMessageHandling), "Diagnostics")]
+        [Category("Settings"), Description("Determine exception message behavior."), DefaultValue(typeof(ExceptionMessageHandling), "Diagnostics")]
         public ExceptionMessageHandling ExceptionMessageBehavior
         {
             get
@@ -317,7 +317,7 @@ namespace NetOffice
         }
 
         /// <summary>
-        /// Get or set Core.Initialize() try to load non loaded dependend assemblies to fetch type informations. true by default
+        /// Get or set Core.Initialize() try to load unloaded dependent assemblies to fetch type informations. true by default
         /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [Category("Settings"), Description("Load assemblies from file system while initialize."), DefaultValue(true)]
@@ -351,18 +351,18 @@ namespace NetOffice
         }
 
         /// <summary>
-        /// Get or set a flag to signalize write extended debug output
+        /// Write extended diagnostics to console
         /// </summary>
-        [Category("Settings"), Description("Debug messages want be shown in console."), DefaultValue(false)]
-        public bool EnableDebugOutput
+        [Category("Settings"), Description("Write extended diagnostics to console."), DefaultValue(false)]
+        public bool EnableMoreDebugOutput
         {
             get
             {
-                return _enableDebugOutput;
+                return _enableMoreDebugOutput;
             }
             set
             {
-                _enableDebugOutput = value;
+                _enableMoreDebugOutput = value;
             }
         }
 
@@ -400,8 +400,7 @@ namespace NetOffice
 
         /// <summary>
         /// Get or set NetOffice spend custom overloads for the "==" and "!=" operators for semanticly comparsion. true by default
-        /// </summary>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        /// </summary>      
         [Category("Settings"), Description("Redirect equal operations like '==' or '!=' for proxy wrapping objects to the com server to determine 2 instances are equal."), DefaultValue(true)]
         public bool EnableOperatorOverlads
         {
@@ -418,7 +417,6 @@ namespace NetOffice
         /// <summary>
         /// Get or set NetOffice try load dependent assemblies unsafe(System.Reflection.Assembly.UnsafeLoadFrom). true by default
         /// </summary>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [Category("Settings"), Description("Load assemblies unsafe and bypass some security checks."), DefaultValue(true)]
         public bool LoadAssembliesUnsafe
         {

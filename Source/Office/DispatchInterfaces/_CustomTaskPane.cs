@@ -172,16 +172,16 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15, 16
 		/// Get
-		/// Unknown COM Proxy
+		/// Native COM Proxy
 		/// </summary>
 		/// <remarks> MSDN Online: http://msdn.microsoft.com/en-us/en-us/library/office/ff861783.aspx </remarks>
-		[SupportByVersion("Office", 12,14,15,16), ProxyResult]
+		[SupportByVersion("Office", 12,14,15,16), NativeResult]
 		public object ContentControl
 		{
 			get
 			{
-				return Factory.ExecuteReferencePropertyGet(this, "ContentControl");
-			}
+				return Invoker.PropertyGet(this, "ContentControl");
+            }
 		}
 
 		/// <summary>

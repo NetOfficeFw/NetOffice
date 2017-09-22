@@ -17,99 +17,152 @@ namespace NetOffice.MSProjectApi.Events
 	public interface _EProjectApp2
 	{
 		[SupportByVersion("MSProject", 11,12,14)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1)]
+        [SinkArgument("pj", typeof(MSProjectApi.Project))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1)]
 		void NewProject([In, MarshalAs(UnmanagedType.IDispatch)] object pj);
 
 		[SupportByVersion("MSProject", 11,12,14)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(6)]
+        [SinkArgument("tsk", typeof(MSProjectApi.Task))]
+        [SinkArgument("cancel", SinkArgumentType.Bool)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(6)]
 		void ProjectBeforeTaskDelete([In, MarshalAs(UnmanagedType.IDispatch)] object tsk, [In] [Out] ref object cancel);
 
 		[SupportByVersion("MSProject", 11,12,14)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(7)]
+        [SinkArgument("res", typeof(MSProjectApi.Resource))]
+        [SinkArgument("cancel", SinkArgumentType.Bool)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(7)]
 		void ProjectBeforeResourceDelete([In, MarshalAs(UnmanagedType.IDispatch)] object res, [In] [Out] ref object cancel);
 
 		[SupportByVersion("MSProject", 11,12,14)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(8)]
+        [SinkArgument("asg", typeof(MSProjectApi.Assignment))]
+        [SinkArgument("cancel", SinkArgumentType.Bool)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(8)]
 		void ProjectBeforeAssignmentDelete([In, MarshalAs(UnmanagedType.IDispatch)] object asg, [In] [Out] ref object cancel);
 
 		[SupportByVersion("MSProject", 11,12,14)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(9)]
+        [SinkArgument("tsk", typeof(MSProjectApi.Task))]
+        [SinkArgument("field", SinkArgumentType.Enum, typeof(MSProjectApi.Enums.PjField))]
+        [SinkArgument("cancel", SinkArgumentType.Bool)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(9)]
 		void ProjectBeforeTaskChange([In, MarshalAs(UnmanagedType.IDispatch)] object tsk, [In] object field, [In] object newVal, [In] [Out] ref object cancel);
 
 		[SupportByVersion("MSProject", 11,12,14)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(10)]
+        [SinkArgument("res", typeof(MSProjectApi.Resource))]
+        [SinkArgument("field", SinkArgumentType.Enum, typeof(MSProjectApi.Enums.PjField))]
+        [SinkArgument("cancel", SinkArgumentType.Bool)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(10)]
 		void ProjectBeforeResourceChange([In, MarshalAs(UnmanagedType.IDispatch)] object res, [In] object field, [In] object newVal, [In] [Out] ref object cancel);
 
 		[SupportByVersion("MSProject", 11,12,14)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(11)]
+        [SinkArgument("asg", typeof(MSProjectApi.Assignment))]
+        [SinkArgument("field", SinkArgumentType.Enum, typeof(MSProjectApi.Enums.PjField))]
+        [SinkArgument("cancel", SinkArgumentType.Bool)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(11)]
 		void ProjectBeforeAssignmentChange([In, MarshalAs(UnmanagedType.IDispatch)] object asg, [In] object field, [In] object newVal, [In] [Out] ref object cancel);
 
 		[SupportByVersion("MSProject", 11,12,14)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(12)]
+        [SinkArgument("pj", typeof(MSProjectApi.Project))]
+        [SinkArgument("cancel", SinkArgumentType.Bool)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(12)]
 		void ProjectBeforeTaskNew([In, MarshalAs(UnmanagedType.IDispatch)] object pj, [In] [Out] ref object cancel);
 
 		[SupportByVersion("MSProject", 11,12,14)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(13)]
+        [SinkArgument("pj", typeof(MSProjectApi.Project))]
+        [SinkArgument("cancel", SinkArgumentType.Bool)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(13)]
 		void ProjectBeforeResourceNew([In, MarshalAs(UnmanagedType.IDispatch)] object pj, [In] [Out] ref object cancel);
 
 		[SupportByVersion("MSProject", 11,12,14)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(14)]
+        [SinkArgument("pj", typeof(MSProjectApi.Project))]
+        [SinkArgument("cancel", SinkArgumentType.Bool)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(14)]
 		void ProjectBeforeAssignmentNew([In, MarshalAs(UnmanagedType.IDispatch)] object pj, [In] [Out] ref object cancel);
 
 		[SupportByVersion("MSProject", 11,12,14)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2)]
+        [SinkArgument("pj", typeof(MSProjectApi.Project))]
+        [SinkArgument("cancel", SinkArgumentType.Bool)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2)]
 		void ProjectBeforeClose([In, MarshalAs(UnmanagedType.IDispatch)] object pj, [In] [Out] ref object cancel);
 
 		[SupportByVersion("MSProject", 11,12,14)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(4)]
+        [SinkArgument("pj", typeof(MSProjectApi.Project))]
+        [SinkArgument("cancel", SinkArgumentType.Bool)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(4)]
 		void ProjectBeforePrint([In, MarshalAs(UnmanagedType.IDispatch)] object pj, [In] [Out] ref object cancel);
 
 		[SupportByVersion("MSProject", 11,12,14)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(3)]
+        [SinkArgument("pj", typeof(MSProjectApi.Project))]
+        [SinkArgument("saveAsUi", SinkArgumentType.Bool)]
+        [SinkArgument("cancel", SinkArgumentType.Bool)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(3)]
 		void ProjectBeforeSave([In, MarshalAs(UnmanagedType.IDispatch)] object pj, [In] object saveAsUi, [In] [Out] ref object cancel);
 
 		[SupportByVersion("MSProject", 11,12,14)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(5)]
+        [SinkArgument("pj", typeof(MSProjectApi.Project))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(5)]
 		void ProjectCalculate([In, MarshalAs(UnmanagedType.IDispatch)] object pj);
 
 		[SupportByVersion("MSProject", 11,12,14)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(15)]
+        [SinkArgument("window", typeof(MSProjectApi.Window))]
+        [SinkArgument("goalArea", SinkArgumentType.Int32)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(15)]
 		void WindowGoalAreaChange([In, MarshalAs(UnmanagedType.IDispatch)] object window, [In] object goalArea);
 
 		[SupportByVersion("MSProject", 11,12,14)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(16)]
+        [SinkArgument("window", typeof(MSProjectApi.Window))]
+        [SinkArgument("sel", typeof(MSProjectApi.Selection))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(16)]
 		void WindowSelectionChange([In, MarshalAs(UnmanagedType.IDispatch)] object window, [In, MarshalAs(UnmanagedType.IDispatch)] object sel, [In] object selType);
 
 		[SupportByVersion("MSProject", 11,12,14)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(17)]
+        [SinkArgument("window", typeof(MSProjectApi.Window))]
+        [SinkArgument("prevView", typeof(MSProjectApi.View))]
+        [SinkArgument("newView", typeof(MSProjectApi.View))]
+        [SinkArgument("projectHasViewWindow", SinkArgumentType.Bool)]
+        [SinkArgument("info", typeof(MSProjectApi.EventInfo))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(17)]
 		void WindowBeforeViewChange([In, MarshalAs(UnmanagedType.IDispatch)] object window, [In, MarshalAs(UnmanagedType.IDispatch)] object prevView, [In, MarshalAs(UnmanagedType.IDispatch)] object newView, [In] object projectHasViewWindow, [In, MarshalAs(UnmanagedType.IDispatch)] object info);
 
 		[SupportByVersion("MSProject", 11,12,14)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(18)]
+        [SinkArgument("window", typeof(MSProjectApi.Window))]
+        [SinkArgument("prevView", typeof(MSProjectApi.View))]
+        [SinkArgument("newView", typeof(MSProjectApi.View))]
+        [SinkArgument("success", SinkArgumentType.Bool)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(18)]
 		void WindowViewChange([In, MarshalAs(UnmanagedType.IDispatch)] object window, [In, MarshalAs(UnmanagedType.IDispatch)] object prevView, [In, MarshalAs(UnmanagedType.IDispatch)] object newView, [In] object success);
 
 		[SupportByVersion("MSProject", 11,12,14)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(19)]
+        [SinkArgument("activatedWindow", typeof(MSProjectApi.Window))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(19)]
 		void WindowActivate([In, MarshalAs(UnmanagedType.IDispatch)] object activatedWindow);
 
 		[SupportByVersion("MSProject", 11,12,14)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(20)]
+        [SinkArgument("deactivatedWindow", typeof(MSProjectApi.Window))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(20)]
 		void WindowDeactivate([In, MarshalAs(UnmanagedType.IDispatch)] object deactivatedWindow);
 
 		[SupportByVersion("MSProject", 11,12,14)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(21)]
+        [SinkArgument("window", typeof(MSProjectApi.Window))]
+        [SinkArgument("close", SinkArgumentType.Bool)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(21)]
 		void WindowSidepaneDisplayChange([In, MarshalAs(UnmanagedType.IDispatch)] object window, [In] object close);
 
 		[SupportByVersion("MSProject", 11,12,14)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(22)]
+        [SinkArgument("window", typeof(MSProjectApi.Window))]
+        [SinkArgument("iD", SinkArgumentType.Int32)]
+        [SinkArgument("isGoalArea", SinkArgumentType.Bool)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(22)]
 		void WindowSidepaneTaskChange([In, MarshalAs(UnmanagedType.IDispatch)] object window, [In] object iD, [In] object isGoalArea);
 
 		[SupportByVersion("MSProject", 11,12,14)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(23)]
+        [SinkArgument("displayState", SinkArgumentType.Bool)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(23)]
 		void WorkpaneDisplayChange([In] object displayState);
 
 		[SupportByVersion("MSProject", 11,12,14)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(24)]
+        [SinkArgument("window", typeof(MSProjectApi.Window))]
+        [SinkArgument("targetPage", SinkArgumentType.String)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(24)]
 		void LoadWebPage([In, MarshalAs(UnmanagedType.IDispatch)] object window, [In] [Out] ref object targetPage);
 
 		[SupportByVersion("MSProject", 11,12,14)]
@@ -117,107 +170,179 @@ namespace NetOffice.MSProjectApi.Events
 		void ProjectAfterSave();
 
 		[SupportByVersion("MSProject", 11,12,14)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(26)]
+        [SinkArgument("pj", typeof(MSProjectApi.Project))]
+        [SinkArgument("iD", SinkArgumentType.Int32)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(26)]
 		void ProjectTaskNew([In, MarshalAs(UnmanagedType.IDispatch)] object pj, [In] object iD);
 
 		[SupportByVersion("MSProject", 11,12,14)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(27)]
+        [SinkArgument("pj", typeof(MSProjectApi.Project))]
+        [SinkArgument("iD", SinkArgumentType.Int32)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(27)]
 		void ProjectResourceNew([In, MarshalAs(UnmanagedType.IDispatch)] object pj, [In] object iD);
 
 		[SupportByVersion("MSProject", 11,12,14)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(28)]
+        [SinkArgument("pj", typeof(MSProjectApi.Project))]
+        [SinkArgument("iD", SinkArgumentType.Int32)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(28)]
 		void ProjectAssignmentNew([In, MarshalAs(UnmanagedType.IDispatch)] object pj, [In] object iD);
 
 		[SupportByVersion("MSProject", 11,12,14)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(29)]
+        [SinkArgument("pj", typeof(MSProjectApi.Project))]
+        [SinkArgument("interim", SinkArgumentType.Bool)]
+        [SinkArgument("bl", SinkArgumentType.Enum, typeof(MSProjectApi.Enums.PjBaselines))]
+        [SinkArgument("interimCopy", SinkArgumentType.Enum, typeof(MSProjectApi.Enums.PjSaveBaselineFrom))]
+        [SinkArgument("newInterimInto", SinkArgumentType.Enum, typeof(MSProjectApi.Enums.PjSaveBaselineTo))]
+        [SinkArgument("allTasks", SinkArgumentType.Bool)]
+        [SinkArgument("rollupToSummaryTasks", SinkArgumentType.Bool)]
+        [SinkArgument("rollupFromSubtasks", SinkArgumentType.Bool)]
+        [SinkArgument("info", typeof(MSProjectApi.EventInfo))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(29)]
 		void ProjectBeforeSaveBaseline([In, MarshalAs(UnmanagedType.IDispatch)] object pj, [In] object interim, [In] object bl, [In] object interimCopy, [In] object interimInto, [In] object allTasks, [In] object rollupToSummaryTasks, [In] object rollupFromSubtasks, [In, MarshalAs(UnmanagedType.IDispatch)] object info);
 
 		[SupportByVersion("MSProject", 11,12,14)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(30)]
+        [SinkArgument("pj", typeof(MSProjectApi.Project))]
+        [SinkArgument("interim", SinkArgumentType.Bool)]
+        [SinkArgument("bl", SinkArgumentType.Enum, typeof(MSProjectApi.Enums.PjBaselines))]
+        [SinkArgument("interimFrom", SinkArgumentType.Enum, typeof(MSProjectApi.Enums.PjSaveBaselineTo))]
+        [SinkArgument("allTasks", SinkArgumentType.Bool)]
+        [SinkArgument("info", typeof(MSProjectApi.EventInfo))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(30)]
 		void ProjectBeforeClearBaseline([In, MarshalAs(UnmanagedType.IDispatch)] object pj, [In] object interim, [In] object bl, [In] object interimFrom, [In] object allTasks, [In, MarshalAs(UnmanagedType.IDispatch)] object info);
 
 		[SupportByVersion("MSProject", 11,12,14)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1073741826)]
+        [SinkArgument("pj", typeof(MSProjectApi.Project))]
+        [SinkArgument("info", typeof(MSProjectApi.EventInfo))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1073741826)]
 		void ProjectBeforeClose2([In, MarshalAs(UnmanagedType.IDispatch)] object pj, [In, MarshalAs(UnmanagedType.IDispatch)] object info);
 
 		[SupportByVersion("MSProject", 11,12,14)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1073741828)]
+        [SinkArgument("pj", typeof(MSProjectApi.Project))]
+        [SinkArgument("info", typeof(MSProjectApi.EventInfo))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1073741828)]
 		void ProjectBeforePrint2([In, MarshalAs(UnmanagedType.IDispatch)] object pj, [In, MarshalAs(UnmanagedType.IDispatch)] object info);
 
 		[SupportByVersion("MSProject", 11,12,14)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1073741827)]
+        [SinkArgument("pj", typeof(MSProjectApi.Project))]
+        [SinkArgument("saveAsUi", SinkArgumentType.Bool)]
+        [SinkArgument("info", typeof(MSProjectApi.EventInfo))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1073741827)]
 		void ProjectBeforeSave2([In, MarshalAs(UnmanagedType.IDispatch)] object pj, [In] object saveAsUi, [In, MarshalAs(UnmanagedType.IDispatch)] object info);
 
 		[SupportByVersion("MSProject", 11,12,14)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1073741830)]
+        [SinkArgument("tsk", typeof(MSProjectApi.Task))]
+        [SinkArgument("info", typeof(MSProjectApi.EventInfo))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1073741830)]
 		void ProjectBeforeTaskDelete2([In, MarshalAs(UnmanagedType.IDispatch)] object tsk, [In, MarshalAs(UnmanagedType.IDispatch)] object info);
 
 		[SupportByVersion("MSProject", 11,12,14)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1073741831)]
+        [SinkArgument("res", typeof(MSProjectApi.Resource))]
+        [SinkArgument("info", typeof(MSProjectApi.EventInfo))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1073741831)]
 		void ProjectBeforeResourceDelete2([In, MarshalAs(UnmanagedType.IDispatch)] object res, [In, MarshalAs(UnmanagedType.IDispatch)] object info);
 
 		[SupportByVersion("MSProject", 11,12,14)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1073741832)]
+        [SinkArgument("asg", typeof(MSProjectApi.Assignment))]
+        [SinkArgument("info", typeof(MSProjectApi.EventInfo))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1073741832)]
 		void ProjectBeforeAssignmentDelete2([In, MarshalAs(UnmanagedType.IDispatch)] object asg, [In, MarshalAs(UnmanagedType.IDispatch)] object info);
 
 		[SupportByVersion("MSProject", 11,12,14)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1073741833)]
+        [SinkArgument("tsk", typeof(MSProjectApi.Task))]
+        [SinkArgument("field", SinkArgumentType.Enum, typeof(MSProjectApi.Enums.PjField))]
+        [SinkArgument("info", typeof(MSProjectApi.EventInfo))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1073741833)]
 		void ProjectBeforeTaskChange2([In, MarshalAs(UnmanagedType.IDispatch)] object tsk, [In] object field, [In] object newVal, [In, MarshalAs(UnmanagedType.IDispatch)] object info);
 
 		[SupportByVersion("MSProject", 11,12,14)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1073741834)]
+        [SinkArgument("res", typeof(MSProjectApi.Resource))]
+        [SinkArgument("field", SinkArgumentType.Enum, typeof(MSProjectApi.Enums.PjField))]
+        [SinkArgument("info", typeof(MSProjectApi.EventInfo))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1073741834)]
 		void ProjectBeforeResourceChange2([In, MarshalAs(UnmanagedType.IDispatch)] object res, [In] object field, [In] object newVal, [In, MarshalAs(UnmanagedType.IDispatch)] object info);
 
 		[SupportByVersion("MSProject", 11,12,14)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1073741835)]
+        [SinkArgument("asg", typeof(MSProjectApi.Assignment))]
+        [SinkArgument("field", SinkArgumentType.Enum, typeof(MSProjectApi.Enums.PjField))]
+        [SinkArgument("info", typeof(MSProjectApi.EventInfo))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1073741835)]
 		void ProjectBeforeAssignmentChange2([In, MarshalAs(UnmanagedType.IDispatch)] object asg, [In] object field, [In] object newVal, [In, MarshalAs(UnmanagedType.IDispatch)] object info);
 
 		[SupportByVersion("MSProject", 11,12,14)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1073741836)]
+
+        [SinkArgument("pj", typeof(MSProjectApi.Project))]
+        [SinkArgument("info", typeof(MSProjectApi.EventInfo))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1073741836)]
 		void ProjectBeforeTaskNew2([In, MarshalAs(UnmanagedType.IDispatch)] object pj, [In, MarshalAs(UnmanagedType.IDispatch)] object info);
 
 		[SupportByVersion("MSProject", 11,12,14)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1073741837)]
+        [SinkArgument("pj", typeof(MSProjectApi.Project))]
+        [SinkArgument("info", typeof(MSProjectApi.EventInfo))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1073741837)]
 		void ProjectBeforeResourceNew2([In, MarshalAs(UnmanagedType.IDispatch)] object pj, [In, MarshalAs(UnmanagedType.IDispatch)] object info);
 
 		[SupportByVersion("MSProject", 11,12,14)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1073741838)]
+        [SinkArgument("pj", typeof(MSProjectApi.Project))]
+        [SinkArgument("info", typeof(MSProjectApi.EventInfo))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1073741838)]
 		void ProjectBeforeAssignmentNew2([In, MarshalAs(UnmanagedType.IDispatch)] object pj, [In, MarshalAs(UnmanagedType.IDispatch)] object info);
 
 		[SupportByVersion("MSProject", 11,12,14)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(31)]
+        [SinkArgument("info", typeof(MSProjectApi.EventInfo))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(31)]
 		void ApplicationBeforeClose([In, MarshalAs(UnmanagedType.IDispatch)] object info);
 
 		[SupportByVersion("MSProject", 11,12,14)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(32)]
+        [SinkArgument("bstrLabel", SinkArgumentType.String)]
+        [SinkArgument("bstrGUID", SinkArgumentType.String)]
+        [SinkArgument("fUndo", SinkArgumentType.Bool)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(32)]
 		void OnUndoOrRedo([In] object bstrLabel, [In] object bstrGUID, [In] object fUndo);
 
 		[SupportByVersion("MSProject", 11,12,14)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(33)]
+        [SinkArgument("cubeFileName", SinkArgumentType.String)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(33)]
 		void AfterCubeBuilt([In] [Out] ref object cubeFileName);
 
 		[SupportByVersion("MSProject", 11,12,14)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(34)]
+        [SinkArgument("window", typeof(MSProjectApi.Window))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(34)]
 		void LoadWebPane([In, MarshalAs(UnmanagedType.IDispatch)] object window, [In] [Out] ref object targetPage);
 
 		[SupportByVersion("MSProject", 11,12,14)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(35)]
+        [SinkArgument("bstrName", SinkArgumentType.String)]
+        [SinkArgument("bstrprojGuid", SinkArgumentType.String)]
+        [SinkArgument("bstrjobGuid", SinkArgumentType.String)]
+        [SinkArgument("jobType", SinkArgumentType.Int32)]
+        [SinkArgument("lResult", SinkArgumentType.Int32)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(35)]
 		void JobStart([In] object bstrName, [In] object bstrprojGuid, [In] object bstrjobGuid, [In] object jobType, [In] object lResult);
 
 		[SupportByVersion("MSProject", 11,12,14)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(36)]
+        [SinkArgument("bstrName", SinkArgumentType.String)]
+        [SinkArgument("bstrprojGuid", SinkArgumentType.String)]
+        [SinkArgument("bstrjobGuid", SinkArgumentType.String)]
+        [SinkArgument("jobType", SinkArgumentType.Int32)]
+        [SinkArgument("lResult", SinkArgumentType.Int32)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(36)]
 		void JobCompleted([In] object bstrName, [In] object bstrprojGuid, [In] object bstrjobGuid, [In] object jobType, [In] object lResult);
 
 		[SupportByVersion("MSProject", 11,12,14)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(37)]
+        [SinkArgument("bstrName", SinkArgumentType.String)]
+        [SinkArgument("bstrprojGuid", SinkArgumentType.String)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(37)]
 		void SaveStartingToServer([In] object bstrName, [In] object bstrprojGuid);
 
 		[SupportByVersion("MSProject", 11,12,14)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(38)]
+        [SinkArgument("bstrName", SinkArgumentType.String)]
+        [SinkArgument("bstrprojGuid", SinkArgumentType.String)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(38)]
 		void SaveCompletedToServer([In] object bstrName, [In] object bstrprojGuid);
 
 		[SupportByVersion("MSProject", 11,12,14)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(39)]
+        [SinkArgument("pj", typeof(MSProjectApi.Project))]
+        [SinkArgument("cancel", SinkArgumentType.Bool)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(39)]
 		void ProjectBeforePublish([In, MarshalAs(UnmanagedType.IDispatch)] object pj, [In] [Out] ref object cancel);
 
 		[SupportByVersion("MSProject", 11,12,14)]
@@ -225,15 +350,22 @@ namespace NetOffice.MSProjectApi.Events
 		void PaneActivate();
 
 		[SupportByVersion("MSProject", 11,12,14)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(41)]
+        [SinkArgument("window", typeof(MSProjectApi.Window))]
+        [SinkArgument("prevView", typeof(MSProjectApi.View))]
+        [SinkArgument("newView", typeof(MSProjectApi.View))]
+        [SinkArgument("success", SinkArgumentType.Bool)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(41)]
 		void SecondaryViewChange([In, MarshalAs(UnmanagedType.IDispatch)] object window, [In, MarshalAs(UnmanagedType.IDispatch)] object prevView, [In, MarshalAs(UnmanagedType.IDispatch)] object newView, [In] object success);
 
 		[SupportByVersion("MSProject", 11,12,14)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(42)]
+        [SinkArgument("bstrFunctionality", SinkArgumentType.String)]
+        [SinkArgument("info", typeof(MSProjectApi.EventInfo))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(42)]
 		void IsFunctionalitySupported([In] object bstrFunctionality, [In, MarshalAs(UnmanagedType.IDispatch)] object info);
 
 		[SupportByVersion("MSProject", 11,12,14)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(43)]
+        [SinkArgument("online", SinkArgumentType.Bool)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(43)]
 		void ConnectionStatusChanged([In] object online);
 	}
 	
@@ -262,7 +394,7 @@ namespace NetOffice.MSProjectApi.Events
 
 		#region _EProjectApp2 Members
 		
-		public void NewProject([In, MarshalAs(UnmanagedType.IDispatch)] object pj)
+        public void NewProject([In, MarshalAs(UnmanagedType.IDispatch)] object pj)
 		{
             if (!Validate("NewProject"))
             {
@@ -276,7 +408,7 @@ namespace NetOffice.MSProjectApi.Events
 			EventBinding.RaiseCustomEvent("NewProject", ref paramsArray);
 		}
 
-		public void ProjectBeforeTaskDelete([In, MarshalAs(UnmanagedType.IDispatch)] object tsk, [In] [Out] ref object cancel)
+        public void ProjectBeforeTaskDelete([In, MarshalAs(UnmanagedType.IDispatch)] object tsk, [In] [Out] ref object cancel)
 		{
             if (!Validate("ProjectBeforeTaskDelete"))
             {
@@ -293,7 +425,7 @@ namespace NetOffice.MSProjectApi.Events
 			cancel = ToBoolean(paramsArray[1]);
 		}
 
-		public void ProjectBeforeResourceDelete([In, MarshalAs(UnmanagedType.IDispatch)] object res, [In] [Out] ref object cancel)
+        public void ProjectBeforeResourceDelete([In, MarshalAs(UnmanagedType.IDispatch)] object res, [In] [Out] ref object cancel)
 		{
             if (!Validate("ProjectBeforeResourceDelete"))
             {
@@ -310,7 +442,7 @@ namespace NetOffice.MSProjectApi.Events
 			cancel = ToBoolean(paramsArray[1]);
         }
 
-		public void ProjectBeforeAssignmentDelete([In, MarshalAs(UnmanagedType.IDispatch)] object asg, [In] [Out] ref object cancel)
+        public void ProjectBeforeAssignmentDelete([In, MarshalAs(UnmanagedType.IDispatch)] object asg, [In] [Out] ref object cancel)
         {
             if (!Validate("ProjectBeforeResourceDelete"))
             {
@@ -327,7 +459,7 @@ namespace NetOffice.MSProjectApi.Events
 			cancel = ToBoolean(paramsArray[1]);
         }
 
-		public void ProjectBeforeTaskChange([In, MarshalAs(UnmanagedType.IDispatch)] object tsk, [In] object field, [In] object newVal, [In] [Out] ref object cancel)
+        public void ProjectBeforeTaskChange([In, MarshalAs(UnmanagedType.IDispatch)] object tsk, [In] object field, [In] object newVal, [In] [Out] ref object cancel)
 		{
             if (!Validate("ProjectBeforeResourceDelete"))
             {
@@ -348,7 +480,7 @@ namespace NetOffice.MSProjectApi.Events
 			cancel = ToBoolean(paramsArray[3]);
         }
 
-		public void ProjectBeforeResourceChange([In, MarshalAs(UnmanagedType.IDispatch)] object res, [In] object field, [In] object newVal, [In] [Out] ref object cancel)
+        public void ProjectBeforeResourceChange([In, MarshalAs(UnmanagedType.IDispatch)] object res, [In] object field, [In] object newVal, [In] [Out] ref object cancel)
         {
             if (!Validate("ProjectBeforeResourceChange"))
             {
@@ -369,7 +501,7 @@ namespace NetOffice.MSProjectApi.Events
 			cancel = ToBoolean(paramsArray[3]);
         }
 
-		public void ProjectBeforeAssignmentChange([In, MarshalAs(UnmanagedType.IDispatch)] object asg, [In] object field, [In] object newVal, [In] [Out] ref object cancel)
+        public void ProjectBeforeAssignmentChange([In, MarshalAs(UnmanagedType.IDispatch)] object asg, [In] object field, [In] object newVal, [In] [Out] ref object cancel)
 		{
             if (!Validate("ProjectBeforeAssignmentChange"))
             {
@@ -390,7 +522,7 @@ namespace NetOffice.MSProjectApi.Events
 			cancel = ToBoolean(paramsArray[3]);
         }
 
-		public void ProjectBeforeTaskNew([In, MarshalAs(UnmanagedType.IDispatch)] object pj, [In] [Out] ref object cancel)
+        public void ProjectBeforeTaskNew([In, MarshalAs(UnmanagedType.IDispatch)] object pj, [In] [Out] ref object cancel)
 		{
             if (!Validate("ProjectBeforeTaskNew"))
             {
@@ -407,7 +539,7 @@ namespace NetOffice.MSProjectApi.Events
             cancel = ToBoolean(paramsArray[1]);
         }
 
-		public void ProjectBeforeResourceNew([In, MarshalAs(UnmanagedType.IDispatch)] object pj, [In] [Out] ref object cancel)
+        public void ProjectBeforeResourceNew([In, MarshalAs(UnmanagedType.IDispatch)] object pj, [In] [Out] ref object cancel)
 		{
             if (!Validate("ProjectBeforeResourceNew"))
             {
@@ -424,7 +556,7 @@ namespace NetOffice.MSProjectApi.Events
 			cancel = ToBoolean(paramsArray[1]);
         }
 
-		public void ProjectBeforeAssignmentNew([In, MarshalAs(UnmanagedType.IDispatch)] object pj, [In] [Out] ref object cancel)
+        public void ProjectBeforeAssignmentNew([In, MarshalAs(UnmanagedType.IDispatch)] object pj, [In] [Out] ref object cancel)
         {
             if (!Validate("ProjectBeforeAssignmentNew"))
             {
@@ -441,7 +573,7 @@ namespace NetOffice.MSProjectApi.Events
 			cancel = ToBoolean(paramsArray[1]);
         }
 
-		public void ProjectBeforeClose([In, MarshalAs(UnmanagedType.IDispatch)] object pj, [In] [Out] ref object cancel)
+        public void ProjectBeforeClose([In, MarshalAs(UnmanagedType.IDispatch)] object pj, [In] [Out] ref object cancel)
         {
             if (!Validate("ProjectBeforeClose"))
             {
@@ -458,7 +590,7 @@ namespace NetOffice.MSProjectApi.Events
             cancel = ToBoolean(paramsArray[1]);
         }
 
-		public void ProjectBeforePrint([In, MarshalAs(UnmanagedType.IDispatch)] object pj, [In] [Out] ref object cancel)
+        public void ProjectBeforePrint([In, MarshalAs(UnmanagedType.IDispatch)] object pj, [In] [Out] ref object cancel)
 		{
             if (!Validate("ProjectBeforePrint"))
             {
@@ -475,7 +607,7 @@ namespace NetOffice.MSProjectApi.Events
             cancel = ToBoolean(paramsArray[1]);
         }
 
-		public void ProjectBeforeSave([In, MarshalAs(UnmanagedType.IDispatch)] object pj, [In] object saveAsUi, [In] [Out] ref object cancel)
+        public void ProjectBeforeSave([In, MarshalAs(UnmanagedType.IDispatch)] object pj, [In] object saveAsUi, [In] [Out] ref object cancel)
 		{
             if (!Validate("ProjectBeforeSave"))
             {
@@ -494,7 +626,7 @@ namespace NetOffice.MSProjectApi.Events
             cancel = ToBoolean(paramsArray[2]);
         }
 
-		public void ProjectCalculate([In, MarshalAs(UnmanagedType.IDispatch)] object pj)
+        public void ProjectCalculate([In, MarshalAs(UnmanagedType.IDispatch)] object pj)
 		{
             if (!Validate("ProjectCalculate"))
             {
@@ -508,7 +640,7 @@ namespace NetOffice.MSProjectApi.Events
 			EventBinding.RaiseCustomEvent("ProjectCalculate", ref paramsArray);
 		}
 
-		public void WindowGoalAreaChange([In, MarshalAs(UnmanagedType.IDispatch)] object window, [In] object goalArea)
+        public void WindowGoalAreaChange([In, MarshalAs(UnmanagedType.IDispatch)] object window, [In] object goalArea)
 		{
             if (!Validate("WindowGoalAreaChange"))
             {
@@ -517,14 +649,14 @@ namespace NetOffice.MSProjectApi.Events
             }
 
 			NetOffice.MSProjectApi.Window newWindow = Factory.CreateKnownObjectFromComProxy<NetOffice.MSProjectApi.Window>(EventClass, window, NetOffice.MSProjectApi.Window.LateBindingApiWrapperType);
-			Int32 newgoalArea = Convert.ToInt32(goalArea);
+			Int32 newgoalArea = ToInt32(goalArea);
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newWindow;
 			paramsArray[1] = newgoalArea;
 			EventBinding.RaiseCustomEvent("WindowGoalAreaChange", ref paramsArray);
 		}
 
-		public void WindowSelectionChange([In, MarshalAs(UnmanagedType.IDispatch)] object window, [In, MarshalAs(UnmanagedType.IDispatch)] object sel, [In] object selType)
+        public void WindowSelectionChange([In, MarshalAs(UnmanagedType.IDispatch)] object window, [In, MarshalAs(UnmanagedType.IDispatch)] object sel, [In] object selType)
         {
             if (!Validate("WindowSelectionChange"))
             {
@@ -542,7 +674,7 @@ namespace NetOffice.MSProjectApi.Events
 			EventBinding.RaiseCustomEvent("WindowSelectionChange", ref paramsArray);
 		}
 
-		public void WindowBeforeViewChange([In, MarshalAs(UnmanagedType.IDispatch)] object window, [In, MarshalAs(UnmanagedType.IDispatch)] object prevView, [In, MarshalAs(UnmanagedType.IDispatch)] object newView, [In] object projectHasViewWindow, [In, MarshalAs(UnmanagedType.IDispatch)] object info)
+        public void WindowBeforeViewChange([In, MarshalAs(UnmanagedType.IDispatch)] object window, [In, MarshalAs(UnmanagedType.IDispatch)] object prevView, [In, MarshalAs(UnmanagedType.IDispatch)] object newView, [In] object projectHasViewWindow, [In, MarshalAs(UnmanagedType.IDispatch)] object info)
         {
             if (!Validate("WindowBeforeViewChange"))
             {
@@ -553,7 +685,7 @@ namespace NetOffice.MSProjectApi.Events
 			NetOffice.MSProjectApi.Window newWindow = Factory.CreateKnownObjectFromComProxy<NetOffice.MSProjectApi.Window>(EventClass, window, NetOffice.MSProjectApi.Window.LateBindingApiWrapperType);
 			NetOffice.MSProjectApi.View newprevView = Factory.CreateKnownObjectFromComProxy<NetOffice.MSProjectApi.View>(EventClass, prevView, NetOffice.MSProjectApi.View.LateBindingApiWrapperType);
 			NetOffice.MSProjectApi.View newnewView = Factory.CreateKnownObjectFromComProxy<NetOffice.MSProjectApi.View>(EventClass, newView, NetOffice.MSProjectApi.View.LateBindingApiWrapperType);
-			bool newprojectHasViewWindow = Convert.ToBoolean(projectHasViewWindow);
+			bool newprojectHasViewWindow = ToBoolean(projectHasViewWindow);
 			NetOffice.MSProjectApi.EventInfo newInfo = Factory.CreateKnownObjectFromComProxy<NetOffice.MSProjectApi.EventInfo>(EventClass, info, NetOffice.MSProjectApi.EventInfo.LateBindingApiWrapperType);
 			object[] paramsArray = new object[5];
 			paramsArray[0] = newWindow;
@@ -564,7 +696,7 @@ namespace NetOffice.MSProjectApi.Events
 			EventBinding.RaiseCustomEvent("WindowBeforeViewChange", ref paramsArray);
 		}
 
-		public void WindowViewChange([In, MarshalAs(UnmanagedType.IDispatch)] object window, [In, MarshalAs(UnmanagedType.IDispatch)] object prevView, [In, MarshalAs(UnmanagedType.IDispatch)] object newView, [In] object success)
+        public void WindowViewChange([In, MarshalAs(UnmanagedType.IDispatch)] object window, [In, MarshalAs(UnmanagedType.IDispatch)] object prevView, [In, MarshalAs(UnmanagedType.IDispatch)] object newView, [In] object success)
 		{
             if (!Validate("WindowViewChange"))
             {
@@ -584,7 +716,7 @@ namespace NetOffice.MSProjectApi.Events
 			EventBinding.RaiseCustomEvent("WindowViewChange", ref paramsArray);
 		}
 
-		public void WindowActivate([In, MarshalAs(UnmanagedType.IDispatch)] object activatedWindow)
+        public void WindowActivate([In, MarshalAs(UnmanagedType.IDispatch)] object activatedWindow)
 		{
             if (!Validate("WindowActivate"))
             {
@@ -598,7 +730,7 @@ namespace NetOffice.MSProjectApi.Events
 			EventBinding.RaiseCustomEvent("WindowActivate", ref paramsArray);
 		}
 
-		public void WindowDeactivate([In, MarshalAs(UnmanagedType.IDispatch)] object deactivatedWindow)
+        public void WindowDeactivate([In, MarshalAs(UnmanagedType.IDispatch)] object deactivatedWindow)
         {
             if (!Validate("WindowDeactivate"))
             {
@@ -612,7 +744,7 @@ namespace NetOffice.MSProjectApi.Events
 			EventBinding.RaiseCustomEvent("WindowDeactivate", ref paramsArray);
 		}
 
-		public void WindowSidepaneDisplayChange([In, MarshalAs(UnmanagedType.IDispatch)] object window, [In] object close)
+        public void WindowSidepaneDisplayChange([In, MarshalAs(UnmanagedType.IDispatch)] object window, [In] object close)
 		{
             if (!Validate("WindowSidepaneDisplayChange"))
             {
@@ -628,7 +760,7 @@ namespace NetOffice.MSProjectApi.Events
 			EventBinding.RaiseCustomEvent("WindowSidepaneDisplayChange", ref paramsArray);
 		}
 
-		public void WindowSidepaneTaskChange([In, MarshalAs(UnmanagedType.IDispatch)] object window, [In] object iD, [In] object isGoalArea)
+        public void WindowSidepaneTaskChange([In, MarshalAs(UnmanagedType.IDispatch)] object window, [In] object iD, [In] object isGoalArea)
         {
             if (!Validate("WindowSidepaneTaskChange"))
             {
@@ -637,8 +769,8 @@ namespace NetOffice.MSProjectApi.Events
             }
 
             NetOffice.MSProjectApi.Window newWindow = Factory.CreateKnownObjectFromComProxy<NetOffice.MSProjectApi.Window>(EventClass, window, NetOffice.MSProjectApi.Window.LateBindingApiWrapperType);
-            Int32 newID = Convert.ToInt32(iD);
-			bool newIsGoalArea = Convert.ToBoolean(isGoalArea);
+            Int32 newID = ToInt32(iD);
+			bool newIsGoalArea = ToBoolean(isGoalArea);
 			object[] paramsArray = new object[3];
 			paramsArray[0] = newWindow;
 			paramsArray[1] = newID;
@@ -646,7 +778,7 @@ namespace NetOffice.MSProjectApi.Events
 			EventBinding.RaiseCustomEvent("WindowSidepaneTaskChange", ref paramsArray);
 		}
 
-		public void WorkpaneDisplayChange([In] object displayState)
+        public void WorkpaneDisplayChange([In] object displayState)
 		{
             if (!Validate("WorkpaneDisplayChange"))
             {
@@ -654,13 +786,13 @@ namespace NetOffice.MSProjectApi.Events
                 return;
             }
 
-			bool newDisplayState = Convert.ToBoolean(displayState);
+			bool newDisplayState = ToBoolean(displayState);
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newDisplayState;
 			EventBinding.RaiseCustomEvent("WorkpaneDisplayChange", ref paramsArray);
 		}
 
-		public void LoadWebPage([In, MarshalAs(UnmanagedType.IDispatch)] object window, [In] [Out] ref object targetPage)
+        public void LoadWebPage([In, MarshalAs(UnmanagedType.IDispatch)] object window, [In] [Out] ref object targetPage)
 		{
             if (!Validate("LoadWebPage"))
             {
@@ -674,7 +806,7 @@ namespace NetOffice.MSProjectApi.Events
 			paramsArray.SetValue(targetPage, 1);
 			EventBinding.RaiseCustomEvent("LoadWebPage", ref paramsArray);
 
-			targetPage = Convert.ToString(paramsArray[1]);
+			targetPage = ToString(paramsArray[1]);
 		}
 
 		public void ProjectAfterSave()
@@ -688,7 +820,7 @@ namespace NetOffice.MSProjectApi.Events
 			EventBinding.RaiseCustomEvent("ProjectAfterSave", ref paramsArray);
 		}
 
-		public void ProjectTaskNew([In, MarshalAs(UnmanagedType.IDispatch)] object pj, [In] object iD)
+        public void ProjectTaskNew([In, MarshalAs(UnmanagedType.IDispatch)] object pj, [In] object iD)
 		{
             if (!Validate("ProjectTaskNew"))
             {
@@ -697,14 +829,14 @@ namespace NetOffice.MSProjectApi.Events
             }
 
 			NetOffice.MSProjectApi.Project newpj = Factory.CreateKnownObjectFromComProxy<NetOffice.MSProjectApi.Project>(EventClass, pj, NetOffice.MSProjectApi.Project.LateBindingApiWrapperType);
-			Int32 newID = Convert.ToInt32(iD);
+			Int32 newID = ToInt32(iD);
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newpj;
 			paramsArray[1] = newID;
 			EventBinding.RaiseCustomEvent("ProjectTaskNew", ref paramsArray);
 		}
 
-		public void ProjectResourceNew([In, MarshalAs(UnmanagedType.IDispatch)] object pj, [In] object iD)
+        public void ProjectResourceNew([In, MarshalAs(UnmanagedType.IDispatch)] object pj, [In] object iD)
         {
             if (!Validate("ProjectResourceNew"))
             {
@@ -713,14 +845,14 @@ namespace NetOffice.MSProjectApi.Events
             }
 
             NetOffice.MSProjectApi.Project newpj = Factory.CreateKnownObjectFromComProxy<NetOffice.MSProjectApi.Project>(EventClass, pj, NetOffice.MSProjectApi.Project.LateBindingApiWrapperType);
-            Int32 newID = Convert.ToInt32(iD);
+            Int32 newID = ToInt32(iD);
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newpj;
 			paramsArray[1] = newID;
 			EventBinding.RaiseCustomEvent("ProjectResourceNew", ref paramsArray);
 		}
 
-		public void ProjectAssignmentNew([In, MarshalAs(UnmanagedType.IDispatch)] object pj, [In] object iD)
+        public void ProjectAssignmentNew([In, MarshalAs(UnmanagedType.IDispatch)] object pj, [In] object iD)
 		{
             if (!Validate("ProjectResourceNew"))
             {
@@ -729,14 +861,14 @@ namespace NetOffice.MSProjectApi.Events
             }
 
             NetOffice.MSProjectApi.Project newpj = Factory.CreateKnownObjectFromComProxy<NetOffice.MSProjectApi.Project>(EventClass, pj, NetOffice.MSProjectApi.Project.LateBindingApiWrapperType);
-            Int32 newID = Convert.ToInt32(iD);
+            Int32 newID = ToInt32(iD);
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newpj;
 			paramsArray[1] = newID;
 			EventBinding.RaiseCustomEvent("ProjectAssignmentNew", ref paramsArray);
 		}
 
-		public void ProjectBeforeSaveBaseline([In, MarshalAs(UnmanagedType.IDispatch)] object pj, [In] object interim, [In] object bl, [In] object interimCopy, [In] object interimInto, [In] object allTasks, [In] object rollupToSummaryTasks, [In] object rollupFromSubtasks, [In, MarshalAs(UnmanagedType.IDispatch)] object info)
+        public void ProjectBeforeSaveBaseline([In, MarshalAs(UnmanagedType.IDispatch)] object pj, [In] object interim, [In] object bl, [In] object interimCopy, [In] object interimInto, [In] object allTasks, [In] object rollupToSummaryTasks, [In] object rollupFromSubtasks, [In, MarshalAs(UnmanagedType.IDispatch)] object info)
 		{
             if (!Validate("ProjectBeforeSaveBaseline"))
             {
@@ -749,9 +881,9 @@ namespace NetOffice.MSProjectApi.Events
 			NetOffice.MSProjectApi.Enums.PjBaselines newbl = (NetOffice.MSProjectApi.Enums.PjBaselines)bl;
 			NetOffice.MSProjectApi.Enums.PjSaveBaselineFrom newInterimCopy = (NetOffice.MSProjectApi.Enums.PjSaveBaselineFrom)interimCopy;
 			NetOffice.MSProjectApi.Enums.PjSaveBaselineTo newInterimInto = (NetOffice.MSProjectApi.Enums.PjSaveBaselineTo)interimInto;
-			bool newAllTasks = Convert.ToBoolean(allTasks);
-			bool newRollupToSummaryTasks = Convert.ToBoolean(rollupToSummaryTasks);
-			bool newRollupFromSubtasks = Convert.ToBoolean(rollupFromSubtasks);
+			bool newAllTasks = ToBoolean(allTasks);
+			bool newRollupToSummaryTasks = ToBoolean(rollupToSummaryTasks);
+			bool newRollupFromSubtasks = ToBoolean(rollupFromSubtasks);
 			NetOffice.MSProjectApi.EventInfo newInfo = Factory.CreateKnownObjectFromComProxy<NetOffice.MSProjectApi.EventInfo>(EventClass, info, NetOffice.MSProjectApi.EventInfo.LateBindingApiWrapperType);
 			object[] paramsArray = new object[9];
 			paramsArray[0] = newpj;
@@ -766,7 +898,7 @@ namespace NetOffice.MSProjectApi.Events
 			EventBinding.RaiseCustomEvent("ProjectBeforeSaveBaseline", ref paramsArray);
 		}
 
-		public void ProjectBeforeClearBaseline([In, MarshalAs(UnmanagedType.IDispatch)] object pj, [In] object interim, [In] object bl, [In] object interimFrom, [In] object allTasks, [In, MarshalAs(UnmanagedType.IDispatch)] object info)
+        public void ProjectBeforeClearBaseline([In, MarshalAs(UnmanagedType.IDispatch)] object pj, [In] object interim, [In] object bl, [In] object interimFrom, [In] object allTasks, [In, MarshalAs(UnmanagedType.IDispatch)] object info)
 		{
             if (!Validate("ProjectBeforeClearBaseline"))
             {
@@ -775,10 +907,10 @@ namespace NetOffice.MSProjectApi.Events
             }
 
             NetOffice.MSProjectApi.Project newpj = Factory.CreateKnownObjectFromComProxy<NetOffice.MSProjectApi.Project>(EventClass, pj, NetOffice.MSProjectApi.Project.LateBindingApiWrapperType);
-            bool newInterim = Convert.ToBoolean(interim);
+            bool newInterim = ToBoolean(interim);
 			NetOffice.MSProjectApi.Enums.PjBaselines newbl = (NetOffice.MSProjectApi.Enums.PjBaselines)bl;
 			NetOffice.MSProjectApi.Enums.PjSaveBaselineTo newInterimFrom = (NetOffice.MSProjectApi.Enums.PjSaveBaselineTo)interimFrom;
-			bool newAllTasks = Convert.ToBoolean(allTasks);
+			bool newAllTasks = ToBoolean(allTasks);
             NetOffice.MSProjectApi.EventInfo newInfo = Factory.CreateKnownObjectFromComProxy<NetOffice.MSProjectApi.EventInfo>(EventClass, info, NetOffice.MSProjectApi.EventInfo.LateBindingApiWrapperType);
             object[] paramsArray = new object[6];
 			paramsArray[0] = newpj;
@@ -790,7 +922,7 @@ namespace NetOffice.MSProjectApi.Events
 			EventBinding.RaiseCustomEvent("ProjectBeforeClearBaseline", ref paramsArray);
 		}
 
-		public void ProjectBeforeClose2([In, MarshalAs(UnmanagedType.IDispatch)] object pj, [In, MarshalAs(UnmanagedType.IDispatch)] object info)
+        public void ProjectBeforeClose2([In, MarshalAs(UnmanagedType.IDispatch)] object pj, [In, MarshalAs(UnmanagedType.IDispatch)] object info)
         {
             if (!Validate("ProjectBeforeClose2"))
             {
@@ -806,7 +938,7 @@ namespace NetOffice.MSProjectApi.Events
 			EventBinding.RaiseCustomEvent("ProjectBeforeClose2", ref paramsArray);
 		}
 
-		public void ProjectBeforePrint2([In, MarshalAs(UnmanagedType.IDispatch)] object pj, [In, MarshalAs(UnmanagedType.IDispatch)] object info)
+        public void ProjectBeforePrint2([In, MarshalAs(UnmanagedType.IDispatch)] object pj, [In, MarshalAs(UnmanagedType.IDispatch)] object info)
         {
             if (!Validate("ProjectBeforePrint2"))
             {
@@ -822,7 +954,7 @@ namespace NetOffice.MSProjectApi.Events
 			EventBinding.RaiseCustomEvent("ProjectBeforePrint2", ref paramsArray);
 		}
 
-		public void ProjectBeforeSave2([In, MarshalAs(UnmanagedType.IDispatch)] object pj, [In] object saveAsUi, [In, MarshalAs(UnmanagedType.IDispatch)] object info)
+        public void ProjectBeforeSave2([In, MarshalAs(UnmanagedType.IDispatch)] object pj, [In] object saveAsUi, [In, MarshalAs(UnmanagedType.IDispatch)] object info)
 		{
             if (!Validate("ProjectBeforeSave2"))
             {
@@ -831,7 +963,7 @@ namespace NetOffice.MSProjectApi.Events
             }
 
             NetOffice.MSProjectApi.Project newpj = Factory.CreateKnownObjectFromComProxy<NetOffice.MSProjectApi.Project>(EventClass, pj, NetOffice.MSProjectApi.Project.LateBindingApiWrapperType);
-            bool newSaveAsUi = Convert.ToBoolean(saveAsUi);
+            bool newSaveAsUi = ToBoolean(saveAsUi);
             NetOffice.MSProjectApi.EventInfo newInfo = Factory.CreateKnownObjectFromComProxy<NetOffice.MSProjectApi.EventInfo>(EventClass, info, NetOffice.MSProjectApi.EventInfo.LateBindingApiWrapperType);
             object[] paramsArray = new object[3];
 			paramsArray[0] = newpj;
@@ -840,7 +972,7 @@ namespace NetOffice.MSProjectApi.Events
 			EventBinding.RaiseCustomEvent("ProjectBeforeSave2", ref paramsArray);
 		}
 
-		public void ProjectBeforeTaskDelete2([In, MarshalAs(UnmanagedType.IDispatch)] object tsk, [In, MarshalAs(UnmanagedType.IDispatch)] object info)
+        public void ProjectBeforeTaskDelete2([In, MarshalAs(UnmanagedType.IDispatch)] object tsk, [In, MarshalAs(UnmanagedType.IDispatch)] object info)
 		{
             if (!Validate("ProjectBeforeTaskDelete2"))
             {
@@ -856,7 +988,7 @@ namespace NetOffice.MSProjectApi.Events
 			EventBinding.RaiseCustomEvent("ProjectBeforeTaskDelete2", ref paramsArray);
 		}
 
-		public void ProjectBeforeResourceDelete2([In, MarshalAs(UnmanagedType.IDispatch)] object res, [In, MarshalAs(UnmanagedType.IDispatch)] object info)
+        public void ProjectBeforeResourceDelete2([In, MarshalAs(UnmanagedType.IDispatch)] object res, [In, MarshalAs(UnmanagedType.IDispatch)] object info)
 		{
             if (!Validate("ProjectBeforeResourceDelete2"))
             {
@@ -872,7 +1004,7 @@ namespace NetOffice.MSProjectApi.Events
 			EventBinding.RaiseCustomEvent("ProjectBeforeResourceDelete2", ref paramsArray);
 		}
 
-		public void ProjectBeforeAssignmentDelete2([In, MarshalAs(UnmanagedType.IDispatch)] object asg, [In, MarshalAs(UnmanagedType.IDispatch)] object info)
+        public void ProjectBeforeAssignmentDelete2([In, MarshalAs(UnmanagedType.IDispatch)] object asg, [In, MarshalAs(UnmanagedType.IDispatch)] object info)
         {
             if (!Validate("ProjectBeforeAssignmentDelete2"))
             {
@@ -888,7 +1020,7 @@ namespace NetOffice.MSProjectApi.Events
 			EventBinding.RaiseCustomEvent("ProjectBeforeAssignmentDelete2", ref paramsArray);
 		}
 
-		public void ProjectBeforeTaskChange2([In, MarshalAs(UnmanagedType.IDispatch)] object tsk, [In] object field, [In] object newVal, [In, MarshalAs(UnmanagedType.IDispatch)] object info)
+        public void ProjectBeforeTaskChange2([In, MarshalAs(UnmanagedType.IDispatch)] object tsk, [In] object field, [In] object newVal, [In, MarshalAs(UnmanagedType.IDispatch)] object info)
         {
             if (!Validate("ProjectBeforeAssignmentDelete2"))
             {
@@ -908,7 +1040,7 @@ namespace NetOffice.MSProjectApi.Events
 			EventBinding.RaiseCustomEvent("ProjectBeforeTaskChange2", ref paramsArray);
 		}
 
-		public void ProjectBeforeResourceChange2([In, MarshalAs(UnmanagedType.IDispatch)] object res, [In] object field, [In] object newVal, [In, MarshalAs(UnmanagedType.IDispatch)] object info)
+        public void ProjectBeforeResourceChange2([In, MarshalAs(UnmanagedType.IDispatch)] object res, [In] object field, [In] object newVal, [In, MarshalAs(UnmanagedType.IDispatch)] object info)
 		{
             if (!Validate("ProjectBeforeResourceChange2"))
             {
@@ -928,7 +1060,7 @@ namespace NetOffice.MSProjectApi.Events
 			EventBinding.RaiseCustomEvent("ProjectBeforeResourceChange2", ref paramsArray);
 		}
 
-		public void ProjectBeforeAssignmentChange2([In, MarshalAs(UnmanagedType.IDispatch)] object asg, [In] object field, [In] object newVal, [In, MarshalAs(UnmanagedType.IDispatch)] object info)
+        public void ProjectBeforeAssignmentChange2([In, MarshalAs(UnmanagedType.IDispatch)] object asg, [In] object field, [In] object newVal, [In, MarshalAs(UnmanagedType.IDispatch)] object info)
 		{
             if (!Validate("ProjectBeforeAssignmentChange2"))
             {
@@ -948,7 +1080,7 @@ namespace NetOffice.MSProjectApi.Events
 			EventBinding.RaiseCustomEvent("ProjectBeforeAssignmentChange2", ref paramsArray);
 		}
 
-		public void ProjectBeforeTaskNew2([In, MarshalAs(UnmanagedType.IDispatch)] object pj, [In, MarshalAs(UnmanagedType.IDispatch)] object info)
+        public void ProjectBeforeTaskNew2([In, MarshalAs(UnmanagedType.IDispatch)] object pj, [In, MarshalAs(UnmanagedType.IDispatch)] object info)
         {
             if (!Validate("ProjectBeforeTaskNew2"))
             {
@@ -964,7 +1096,7 @@ namespace NetOffice.MSProjectApi.Events
 			EventBinding.RaiseCustomEvent("ProjectBeforeTaskNew2", ref paramsArray);
 		}
 
-		public void ProjectBeforeResourceNew2([In, MarshalAs(UnmanagedType.IDispatch)] object pj, [In, MarshalAs(UnmanagedType.IDispatch)] object info)
+        public void ProjectBeforeResourceNew2([In, MarshalAs(UnmanagedType.IDispatch)] object pj, [In, MarshalAs(UnmanagedType.IDispatch)] object info)
         {
             if (!Validate("ProjectBeforeResourceNew2"))
             {
@@ -980,7 +1112,7 @@ namespace NetOffice.MSProjectApi.Events
 			EventBinding.RaiseCustomEvent("ProjectBeforeResourceNew2", ref paramsArray);
 		}
 
-		public void ProjectBeforeAssignmentNew2([In, MarshalAs(UnmanagedType.IDispatch)] object pj, [In, MarshalAs(UnmanagedType.IDispatch)] object info)
+        public void ProjectBeforeAssignmentNew2([In, MarshalAs(UnmanagedType.IDispatch)] object pj, [In, MarshalAs(UnmanagedType.IDispatch)] object info)
 		{
             if (!Validate("ProjectBeforeResourceNew2"))
             {
@@ -996,7 +1128,7 @@ namespace NetOffice.MSProjectApi.Events
 			EventBinding.RaiseCustomEvent("ProjectBeforeAssignmentNew2", ref paramsArray);
 		}
 
-		public void ApplicationBeforeClose([In, MarshalAs(UnmanagedType.IDispatch)] object info)
+        public void ApplicationBeforeClose([In, MarshalAs(UnmanagedType.IDispatch)] object info)
 		{
             if (!Validate("ApplicationBeforeClose"))
             {
@@ -1010,7 +1142,7 @@ namespace NetOffice.MSProjectApi.Events
 			EventBinding.RaiseCustomEvent("ApplicationBeforeClose", ref paramsArray);
 		}
 
-		public void OnUndoOrRedo([In] object bstrLabel, [In] object bstrGUID, [In] object fUndo)
+        public void OnUndoOrRedo([In] object bstrLabel, [In] object bstrGUID, [In] object fUndo)
         {
             if (!Validate("OnUndoOrRedo"))
             {
@@ -1018,9 +1150,9 @@ namespace NetOffice.MSProjectApi.Events
                 return;
             }
 
-			string newbstrLabel = Convert.ToString(bstrLabel);
-			string newbstrGUID = Convert.ToString(bstrGUID);
-			bool newfUndo = Convert.ToBoolean(fUndo);
+			string newbstrLabel = ToString(bstrLabel);
+			string newbstrGUID = ToString(bstrGUID);
+			bool newfUndo = ToBoolean(fUndo);
 			object[] paramsArray = new object[3];
 			paramsArray[0] = newbstrLabel;
 			paramsArray[1] = newbstrGUID;
@@ -1028,7 +1160,7 @@ namespace NetOffice.MSProjectApi.Events
 			EventBinding.RaiseCustomEvent("OnUndoOrRedo", ref paramsArray);
 		}
 
-		public void AfterCubeBuilt([In] [Out] ref object cubeFileName)
+        public void AfterCubeBuilt([In] [Out] ref object cubeFileName)
         {
             if (!Validate("AfterCubeBuilt"))
             {
@@ -1040,10 +1172,10 @@ namespace NetOffice.MSProjectApi.Events
 			paramsArray.SetValue(cubeFileName, 0);
 			EventBinding.RaiseCustomEvent("AfterCubeBuilt", ref paramsArray);
 
-			cubeFileName = Convert.ToString(paramsArray[0]);
+			cubeFileName = ToString(paramsArray[0]);
 		}
 
-		public void LoadWebPane([In, MarshalAs(UnmanagedType.IDispatch)] object window, [In] [Out] ref object targetPage)
+        public void LoadWebPane([In, MarshalAs(UnmanagedType.IDispatch)] object window, [In] [Out] ref object targetPage)
 		{
             if(!Validate("LoadWebPane"))
             {
@@ -1057,10 +1189,10 @@ namespace NetOffice.MSProjectApi.Events
 			paramsArray.SetValue(targetPage, 1);
 			EventBinding.RaiseCustomEvent("LoadWebPane", ref paramsArray);
 
-			targetPage = Convert.ToString(paramsArray[1]);
+			targetPage = ToString(paramsArray[1]);
         }
 
-		public void JobStart([In] object bstrName, [In] object bstrprojGuid, [In] object bstrjobGuid, [In] object jobType, [In] object lResult)
+        public void JobStart([In] object bstrName, [In] object bstrprojGuid, [In] object bstrjobGuid, [In] object jobType, [In] object lResult)
 		{
             if (!Validate("JobStart"))
             {
@@ -1068,11 +1200,11 @@ namespace NetOffice.MSProjectApi.Events
                 return;
             }
 
-			string newbstrName = Convert.ToString(bstrName);
-			string newbstrprojGuid = Convert.ToString(bstrprojGuid);
-			string newbstrjobGuid = Convert.ToString(bstrjobGuid);
-			Int32 newjobType = Convert.ToInt32(jobType);
-			Int32 newlResult = Convert.ToInt32(lResult);
+			string newbstrName = ToString(bstrName);
+			string newbstrprojGuid = ToString(bstrprojGuid);
+			string newbstrjobGuid = ToString(bstrjobGuid);
+			Int32 newjobType = ToInt32(jobType);
+			Int32 newlResult = ToInt32(lResult);
 			object[] paramsArray = new object[5];
 			paramsArray[0] = newbstrName;
 			paramsArray[1] = newbstrprojGuid;
@@ -1082,7 +1214,7 @@ namespace NetOffice.MSProjectApi.Events
 			EventBinding.RaiseCustomEvent("JobStart", ref paramsArray);
 		}
 
-		public void JobCompleted([In] object bstrName, [In] object bstrprojGuid, [In] object bstrjobGuid, [In] object jobType, [In] object lResult)
+        public void JobCompleted([In] object bstrName, [In] object bstrprojGuid, [In] object bstrjobGuid, [In] object jobType, [In] object lResult)
 		{
             if (!Validate("JobCompleted"))
             {
@@ -1090,11 +1222,11 @@ namespace NetOffice.MSProjectApi.Events
                 return;
             }
 
-			string newbstrName = Convert.ToString(bstrName);
-			string newbstrprojGuid = Convert.ToString(bstrprojGuid);
-			string newbstrjobGuid = Convert.ToString(bstrjobGuid);
-			Int32 newjobType = Convert.ToInt32(jobType);
-			Int32 newlResult = Convert.ToInt32(lResult);
+			string newbstrName = ToString(bstrName);
+			string newbstrprojGuid = ToString(bstrprojGuid);
+			string newbstrjobGuid = ToString(bstrjobGuid);
+			Int32 newjobType = ToInt32(jobType);
+			Int32 newlResult = ToInt32(lResult);
 			object[] paramsArray = new object[5];
 			paramsArray[0] = newbstrName;
 			paramsArray[1] = newbstrprojGuid;
@@ -1104,7 +1236,7 @@ namespace NetOffice.MSProjectApi.Events
 			EventBinding.RaiseCustomEvent("JobCompleted", ref paramsArray);
 		}
 
-		public void SaveStartingToServer([In] object bstrName, [In] object bstrprojGuid)
+        public void SaveStartingToServer([In] object bstrName, [In] object bstrprojGuid)
 		{
             if (!Validate("SaveStartingToServer"))
             {
@@ -1112,15 +1244,15 @@ namespace NetOffice.MSProjectApi.Events
                 return;
             }
 
-			string newbstrName = Convert.ToString(bstrName);
-			string newbstrprojGuid = Convert.ToString(bstrprojGuid);
+			string newbstrName = ToString(bstrName);
+			string newbstrprojGuid = ToString(bstrprojGuid);
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newbstrName;
 			paramsArray[1] = newbstrprojGuid;
 			EventBinding.RaiseCustomEvent("SaveStartingToServer", ref paramsArray);
 		}
 
-		public void SaveCompletedToServer([In] object bstrName, [In] object bstrprojGuid)
+        public void SaveCompletedToServer([In] object bstrName, [In] object bstrprojGuid)
 		{
             if (!Validate("SaveCompletedToServer"))
             {
@@ -1128,15 +1260,15 @@ namespace NetOffice.MSProjectApi.Events
                 return;
             }
 
-			string newbstrName = Convert.ToString(bstrName);
-			string newbstrprojGuid = Convert.ToString(bstrprojGuid);
+			string newbstrName = ToString(bstrName);
+			string newbstrprojGuid = ToString(bstrprojGuid);
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newbstrName;
 			paramsArray[1] = newbstrprojGuid;
 			EventBinding.RaiseCustomEvent("SaveCompletedToServer", ref paramsArray);
 		}
 
-		public void ProjectBeforePublish([In, MarshalAs(UnmanagedType.IDispatch)] object pj, [In] [Out] ref object cancel)
+        public void ProjectBeforePublish([In, MarshalAs(UnmanagedType.IDispatch)] object pj, [In] [Out] ref object cancel)
         {
             if (!Validate("ProjectBeforePublish"))
             {
@@ -1164,7 +1296,7 @@ namespace NetOffice.MSProjectApi.Events
 			EventBinding.RaiseCustomEvent("PaneActivate", ref paramsArray);
 		}
 
-		public void SecondaryViewChange([In, MarshalAs(UnmanagedType.IDispatch)] object window, [In, MarshalAs(UnmanagedType.IDispatch)] object prevView, [In, MarshalAs(UnmanagedType.IDispatch)] object newView, [In] object success)
+        public void SecondaryViewChange([In, MarshalAs(UnmanagedType.IDispatch)] object window, [In, MarshalAs(UnmanagedType.IDispatch)] object prevView, [In, MarshalAs(UnmanagedType.IDispatch)] object newView, [In] object success)
 		{
             if (!Validate("SecondaryViewChange"))
             {
@@ -1175,7 +1307,7 @@ namespace NetOffice.MSProjectApi.Events
 			NetOffice.MSProjectApi.Window newWindow = Factory.CreateKnownObjectFromComProxy<NetOffice.MSProjectApi.Window>(EventClass, window, NetOffice.MSProjectApi.Window.LateBindingApiWrapperType);
 			NetOffice.MSProjectApi.View newprevView = Factory.CreateKnownObjectFromComProxy<NetOffice.MSProjectApi.View>(EventClass, prevView, NetOffice.MSProjectApi.View.LateBindingApiWrapperType);
             NetOffice.MSProjectApi.View newnewView = Factory.CreateKnownObjectFromComProxy<NetOffice.MSProjectApi.View> (EventClass, newView, NetOffice.MSProjectApi.View.LateBindingApiWrapperType);
-			bool newsuccess = Convert.ToBoolean(success);
+			bool newsuccess = ToBoolean(success);
 			object[] paramsArray = new object[4];
 			paramsArray[0] = newWindow;
 			paramsArray[1] = newprevView;
@@ -1184,7 +1316,7 @@ namespace NetOffice.MSProjectApi.Events
 			EventBinding.RaiseCustomEvent("SecondaryViewChange", ref paramsArray);
 		}
 
-		public void IsFunctionalitySupported([In] object bstrFunctionality, [In, MarshalAs(UnmanagedType.IDispatch)] object info)
+        public void IsFunctionalitySupported([In] object bstrFunctionality, [In, MarshalAs(UnmanagedType.IDispatch)] object info)
         {
             if (!Validate("IsFunctionalitySupported"))
             {
@@ -1192,7 +1324,7 @@ namespace NetOffice.MSProjectApi.Events
                 return;
             }
 
-			string newbstrFunctionality = Convert.ToString(bstrFunctionality);
+			string newbstrFunctionality = ToString(bstrFunctionality);
 			NetOffice.MSProjectApi.EventInfo newInfo = Factory.CreateKnownObjectFromComProxy<NetOffice.MSProjectApi.EventInfo>(EventClass, info, NetOffice.MSProjectApi.EventInfo.LateBindingApiWrapperType);
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newbstrFunctionality;
@@ -1200,7 +1332,7 @@ namespace NetOffice.MSProjectApi.Events
 			EventBinding.RaiseCustomEvent("IsFunctionalitySupported", ref paramsArray);
 		}
 
-		public void ConnectionStatusChanged([In] object online)
+        public void ConnectionStatusChanged([In] object online)
         {
             if (!Validate("IsFunctionalitySupported"))
             {
@@ -1208,7 +1340,7 @@ namespace NetOffice.MSProjectApi.Events
                 return;
             }
 
-			bool newonline = Convert.ToBoolean(online);
+			bool newonline = ToBoolean(online);
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newonline;
 			EventBinding.RaiseCustomEvent("ConnectionStatusChanged", ref paramsArray);

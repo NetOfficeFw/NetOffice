@@ -1,12 +1,16 @@
 ﻿using System;
+using System.Linq;
+using System.ComponentModel;
 using System.Collections.Generic;
+using System.Collections;
 
 namespace NetOffice
 {
     /// <summary>
     /// Call Level Performance Tracer
     /// </summary>
-    public class PerformanceTrace
+    [TypeConverter(typeof(ExpandableObjectConverter))]
+    public class PerformanceTrace : IEnumerable<KeyValuePair<string, PerformanceTraceSettingCollection>>
     {
         #region Nested
 
@@ -141,6 +145,12 @@ namespace NetOffice
         #region Properties
 
         /// <summary>
+        /// Enable or disable the performance trace system
+        /// </summary>
+        [Description("Enable or disable the performance trace system"), DefaultValue(false), Category("PerformanceTrace")]
+        public bool Enabled { get; set; }
+
+        /// <summary>
         /// Returns performances settings instance for a NetOffice component
         /// </summary>
         /// <param name="componentName">name of the component. for example:ExcelApi</param>
@@ -244,9 +254,16 @@ namespace NetOffice
 
         internal bool StartMeasureTime(string componentName, string entityName, string methodName, CallType callType)
         {
+            if (!Enabled)
+                return false;
+
             PerformanceTraceSettingCollection list = null;
             if (_repository.TryGetValue(componentName, out list))
-                return list.TryStartMeasureTime(entityName, methodName, callType);
+            {
+               
+                bool result = list.TryStartMeasureTime(entityName, methodName, callType);
+                return result;
+            }
             else
                 return false;
         }
@@ -271,6 +288,28 @@ namespace NetOffice
                     }
                 }
             }
+        }
+
+        #endregion
+
+        #region IEnumerable
+
+        /// <summary>
+        /// Sequence of all traces
+        /// </summary>
+        /// <returns>sequence</returns>
+        public IEnumerator<KeyValuePair<string, PerformanceTraceSettingCollection>> GetEnumerator()
+        {
+            return _repository.GetEnumerator();
+        }
+
+        /// <summary>
+        /// Sequence of all traces
+        /// </summary>
+        /// <returns>sequence</returns>
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return _repository.GetEnumerator();
         }
 
         #endregion

@@ -21,7 +21,8 @@ namespace NetOffice.AccessApi.Events
 		void Enter();
 
 		[SupportByVersion("Access", 12,14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2075)]
+        [SinkArgument("cancel", SinkArgumentType.Int16)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2075)]
 		void Exit([In] [Out] ref object cancel);
 	}
 

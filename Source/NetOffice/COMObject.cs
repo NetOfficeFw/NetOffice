@@ -537,6 +537,57 @@ namespace NetOffice
         #region Methods
 
         /// <summary>
+        /// Creates instance from proxy
+        /// </summary>
+        /// <typeparam name="T">result type</typeparam>
+        /// <param name="comProxy">given proxy as any</param>
+        /// <returns>new instance of T</returns>
+        /// <exception cref="ArgumentNullException">argument is null(Nothing in Visual Basic)</exception>
+        /// <exception cref="ArgumentException">given argument is not a proxy</exception>
+        /// <exception cref="CreateInstanceException">unexpected error</exception>
+        public static T Create<T>(object comProxy) where T : class, ICOMObject
+        {
+            if (null == comProxy)
+                throw new ArgumentNullException("comProxy");
+            if (!(comProxy is MarshalByRefObject))
+                throw new ArgumentException("Given argument is not a proxy.");
+            try
+            {
+                return Activator.CreateInstance(typeof(T), new object[] { null, comProxy }) as T;
+            }
+            catch (Exception exception)
+            {
+                throw new CreateInstanceException(exception);
+            }
+        }
+
+        /// <summary>
+        /// Creates instance from proxy
+        /// </summary>
+        /// <typeparam name="T">result type</typeparam>
+        /// <param name="factory"></param>
+        /// <param name="comProxy">given proxy as any</param>
+        /// <returns>new instance of T</returns>
+        /// <exception cref="ArgumentNullException">argument is null(Nothing in Visual Basic)</exception>
+        /// <exception cref="ArgumentException">given argument is not a proxy</exception>
+        /// <exception cref="CreateInstanceException">unexpected error</exception>
+        public static T Create<T>(Core factory, object comProxy) where T : class, ICOMObject
+        {
+            if (null == comProxy)
+                throw new ArgumentNullException("comProxy");
+            if (!(comProxy is MarshalByRefObject))
+                throw new ArgumentException("Given argument is not a proxy.");
+            try
+            {
+                return Activator.CreateInstance(typeof(T), new object[] { factory, null, comProxy }) as T;
+            }
+            catch (Exception exception)
+            {
+                throw new CreateInstanceException(exception);
+            }   
+        }
+
+        /// <summary>
         /// NetOffice method: create object from proxy
         /// </summary>
         /// <param name="underlyingObject">given proxy as any</param>
@@ -852,10 +903,10 @@ namespace NetOffice
                         return;
 
                     // in case object export events and 
-                    // disposeEventBinding == true we dont remove the object from parents child list
+                    // disposeEventBinding == false we dont remove the object from parents child list
                     bool removeFromParent = true;
 
-                    // set disposed flag
+                    // set disposing flag
                     _isCurrentlyDisposing = true;
 
                     // in case of object implements also event binding we dispose them
@@ -886,19 +937,25 @@ namespace NetOffice
                         _parentObject.RemoveChildObject(this);
                         _parentObject = null;
                     }
+                    
+                    if (true == removeFromParent)
+                    {        
+                        // call quit automatically if wanted
+                        if (_callQuitInDispose && Settings.EnableAutomaticQuit)
+                            new Callers.QuitCaller().TryCall(Settings, Invoker, this);
 
-                    // call quit automatically if wanted
-                    if (_callQuitInDispose && Settings.EnableAutomaticQuit)
-                        new Callers.QuitCaller().TryCall(Settings, Invoker, this);
+                        // release proxy
+                        ReleaseCOMProxy(ownerPath);
 
-                    // release proxy
-                    ReleaseCOMProxy(ownerPath);
+                        // clear supportList reference
+                        _listSupportedEntities = null;
 
-                    // clear supportList reference
-                    _listSupportedEntities = null;
+                        _isDisposed = true;
+                        _isCurrentlyDisposing = false;
+                    }
+                    else
+                        _isCurrentlyDisposing = false;
 
-                    _isDisposed = true;
-                    _isCurrentlyDisposing = false;
                 }
             }
             catch (Exception exception)
@@ -1037,8 +1094,7 @@ namespace NetOffice
                 lock (_disposeChildLock)
                 {
                     foreach (ICOMObject itemObject in _listChildObjects.ToArray())
-                    {
-                        COMObjectFaults.RemoveParent(itemObject);
+                    {                       
                         itemObject.Dispose(disposeEventBinding);
                     }
                     _listChildObjects.Clear();
@@ -1152,11 +1208,6 @@ namespace NetOffice
         {
             if (null == share)
                 throw new ArgumentNullException("share");
-            if (null != _proxyShare)
-            {
-                _proxyShare.Release();
-                _proxyShare = null;
-            }
             _proxyShare = share;
             _proxyShare.Acquire();
         }
@@ -1170,11 +1221,14 @@ namespace NetOffice
         /// </summary>
         /// <returns>a new object that is a copy of this instance</returns>
         /// <exception cref="CloneException">An unexpected error occured. See inner exception(s) for details.</exception>
-        public object Clone()
+        public virtual object Clone()
         {
             try
             {
-                return Activator.CreateInstance(InstanceType, new object[] { Factory, ParentObject, _proxyShare });
+                ICOMObject clone = Activator.CreateInstance(InstanceType, new object[] { Factory, ParentObject, UnderlyingObject }) as ICOMObject;
+                ICOMProxyShareProvider shareProvider = clone as ICOMProxyShareProvider;
+                shareProvider.SetProxyShare(_proxyShare);
+                return clone;
             }
             catch (Exception exception)
             {
@@ -1278,45 +1332,46 @@ namespace NetOffice
                     Marshal.Release(outValueB);
             }
         }
-       
-        /// <summary>
-        /// Determines whether two COMObject instances are equal.
-        /// </summary>
-        /// <param name="objectA"></param>
-        /// <param name="objectB"></param>
-        /// <returns></returns>
-        public static bool operator ==(COMObject objectA, COMDynamicObject objectB)
-        {
-            if (!Settings.Default.EnableOperatorOverlads)
-                return Object.ReferenceEquals(objectA, objectB);
 
-            if (Object.ReferenceEquals(objectA, null) && Object.ReferenceEquals(objectB, null))
-                return true;
-            else if (!Object.ReferenceEquals(objectA, null))
-                return objectA.EqualsOnServer(objectB);
-            else
-                return false;
-        }
+        ///// <summary>
+        ///// Determines whether two COMObject instances are equal.
+        ///// </summary>
+        ///// <param name="objectA"></param>
+        ///// <param name="objectB"></param>
+        ///// <returns></returns>
+        //public static bool operator ==(COMObject objectA, COMDynamicObject objectB)
+        //{
+        //    if (!Settings.Default.EnableOperatorOverlads)
+        //        return Object.ReferenceEquals(objectA, objectB);
 
-        /// <summary>
-        /// Determines whether two COMObject instances are not equal.
-        /// </summary>
-        /// <param name="objectA">first instance</param>
-        /// <param name="objectB">second instance</param>
-        /// <returns>true if equal, otherwise false</returns>
-        public static bool operator !=(COMObject objectA, COMDynamicObject objectB)
-        {
-            if (!Settings.Default.EnableOperatorOverlads)
-                return Object.ReferenceEquals(objectA, objectB);
+        //    if (Object.ReferenceEquals(objectA, null) && Object.ReferenceEquals(objectB, null))
+        //        return true;
+        //    else if (!Object.ReferenceEquals(objectA, null))
+        //        return objectA.EqualsOnServer(objectB);
+        //    else
+        //        return false;
+        //}
 
-            if (Object.ReferenceEquals(objectA, null) && Object.ReferenceEquals(objectB, null))
-                return false;
-            else if (!Object.ReferenceEquals(objectA, null))
-                return !objectA.EqualsOnServer(objectB);
-            else
-                return true;
-        }
-        
+        ///// <summary>
+        ///// Determines whether two COMObject instances are not equal.
+        ///// </summary>
+        ///// <param name="objectA">first instance</param>
+        ///// <param name="objectB">second instance</param>
+        ///// <returns>true if equal, otherwise false</returns>
+        //public static bool operator !=(COMObject objectA, COMDynamicObject objectB)
+        //{
+        //    if (!Settings.Default.EnableOperatorOverlads)
+        //        return Object.ReferenceEquals(objectA, objectB);
+
+        //    if (Object.ReferenceEquals(objectA, null) && Object.ReferenceEquals(objectB, null))
+        //        return false;
+        //    else if (!Object.ReferenceEquals(objectA, null))
+        //        return !objectA.EqualsOnServer(objectB);
+        //    else
+        //        return true;
+        //}
+
+
         /// <summary>
         /// Determines whether two COMObject instances are equal.
         /// </summary>
@@ -1442,6 +1497,7 @@ namespace NetOffice
             else
                 return true;
         }
+
 
         #endregion
     }

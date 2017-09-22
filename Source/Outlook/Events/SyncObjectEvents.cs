@@ -21,11 +21,17 @@ namespace NetOffice.OutlookApi.Events
 		void SyncStart();
 
 		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(61442)]
+        [SinkArgument("state", SinkArgumentType.Enum, typeof(OutlookApi.Enums.OlSyncState))]
+        [SinkArgument("description", SinkArgumentType.String)]
+        [SinkArgument("value", SinkArgumentType.Int32)]
+        [SinkArgument("max", SinkArgumentType.Int32)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(61442)]
 		void Progress([In] object state, [In] object description, [In] object value, [In] object max);
 
 		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(61443)]
+        [SinkArgument("code", SinkArgumentType.Int32)]
+        [SinkArgument("description", SinkArgumentType.String)]       
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(61443)]
 		void OnError([In] object code, [In] object description);
 
 		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
@@ -69,7 +75,7 @@ namespace NetOffice.OutlookApi.Events
 			EventBinding.RaiseCustomEvent("SyncStart", ref paramsArray);
 		}
 
-		public void Progress([In] object state, [In] object description, [In] object value, [In] object max)
+        public void Progress([In] object state, [In] object description, [In] object value, [In] object max)
         {
             if (!Validate("Progress"))
             {
@@ -78,9 +84,9 @@ namespace NetOffice.OutlookApi.Events
             }
 
 			NetOffice.OutlookApi.Enums.OlSyncState newState = (NetOffice.OutlookApi.Enums.OlSyncState)state;
-			string newDescription = Convert.ToString(description);
-			Int32 newValue = Convert.ToInt32(value);
-			Int32 newMax = Convert.ToInt32(max);
+			string newDescription = ToString(description);
+			Int32 newValue = ToInt32(value);
+			Int32 newMax = ToInt32(max);
 			object[] paramsArray = new object[4];
 			paramsArray[0] = newState;
 			paramsArray[1] = newDescription;
@@ -97,8 +103,8 @@ namespace NetOffice.OutlookApi.Events
                 return;
             }
 
-			Int32 newCode = Convert.ToInt32(code);
-			string newDescription = Convert.ToString(description);
+			Int32 newCode = ToInt32(code);
+			string newDescription = ToString(description);
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newCode;
 			paramsArray[1] = newDescription;

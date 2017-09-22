@@ -14,7 +14,7 @@ namespace NetOffice.Tools
         /// <summary>
         /// Enable Settings.EnableDebugOutput before initialize
         /// </summary>
-        public readonly bool EnableDebugOutput;
+        public readonly bool EnableMoreDebugOutput;
 
         /// <summary>
         /// Creates an instance of the class
@@ -27,10 +27,10 @@ namespace NetOffice.Tools
         /// <summary>
         /// Creates an instance of the class
         /// </summary>
-        /// <param name="enableDebugOutput">enable Settings.EnableDebugOutput before initialize</param>
-        public ForceInitializeAttribute(bool enableDebugOutput)
+        /// <param name="enableMoreDebugOutput">enable Settings.EnableDebugOutput before initialize</param>
+        public ForceInitializeAttribute(bool enableMoreDebugOutput)
         {
-            EnableDebugOutput = enableDebugOutput;
+            EnableMoreDebugOutput = enableMoreDebugOutput;
         }
     }
 }

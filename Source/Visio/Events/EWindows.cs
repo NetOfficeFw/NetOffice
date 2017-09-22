@@ -17,75 +17,110 @@ namespace NetOffice.VisioApi.Events
 	public interface EWindows
 	{
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(32769)]
+        [SinkArgument("window", typeof(VisioApi.IVWindow))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(32769)]
 		void WindowOpened([In, MarshalAs(UnmanagedType.IDispatch)] object window);
 
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(701)]
+        [SinkArgument("window", typeof(VisioApi.IVWindow))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(701)]
 		void SelectionChanged([In, MarshalAs(UnmanagedType.IDispatch)] object window);
 
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(16385)]
+        [SinkArgument("window", typeof(VisioApi.IVWindow))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(16385)]
 		void BeforeWindowClosed([In, MarshalAs(UnmanagedType.IDispatch)] object window);
 
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(4224)]
+        [SinkArgument("window", typeof(VisioApi.IVWindow))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(4224)]
 		void WindowActivated([In, MarshalAs(UnmanagedType.IDispatch)] object window);
 
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(702)]
+        [SinkArgument("window", typeof(VisioApi.IVWindow))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(702)]
 		void BeforeWindowSelDelete([In, MarshalAs(UnmanagedType.IDispatch)] object window);
 
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(703)]
+        [SinkArgument("window", typeof(VisioApi.IVWindow))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(703)]
 		void BeforeWindowPageTurn([In, MarshalAs(UnmanagedType.IDispatch)] object window);
 
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(704)]
+        [SinkArgument("window", typeof(VisioApi.IVWindow))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(704)]
 		void WindowTurnedToPage([In, MarshalAs(UnmanagedType.IDispatch)] object window);
 
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(8193)]
+        [SinkArgument("window", typeof(VisioApi.IVWindow))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(8193)]
 		void WindowChanged([In, MarshalAs(UnmanagedType.IDispatch)] object window);
 
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(705)]
+        [SinkArgument("window", typeof(VisioApi.IVWindow))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(705)]
 		void ViewChanged([In, MarshalAs(UnmanagedType.IDispatch)] object window);
 
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(706)]
+        [SinkArgument("window", typeof(VisioApi.IVWindow))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(706)]
 		void QueryCancelWindowClose([In, MarshalAs(UnmanagedType.IDispatch)] object window);
 
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(707)]
+        [SinkArgument("window", typeof(VisioApi.IVWindow))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(707)]
 		void WindowCloseCanceled([In, MarshalAs(UnmanagedType.IDispatch)] object window);
 
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(708)]
+        [SinkArgument("mSG", typeof(VisioApi.IVMSGWrap))]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(708)]
 		void OnKeystrokeMessageForAddon([In, MarshalAs(UnmanagedType.IDispatch)] object mSG);
 
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(709)]
+        [SinkArgument("button", SinkArgumentType.Int32)]
+        [SinkArgument("keyButtonState", SinkArgumentType.Int32)]
+        [SinkArgument("x", SinkArgumentType.Double)]
+        [SinkArgument("y", SinkArgumentType.Double)]
+        [SinkArgument("cancelDefault", SinkArgumentType.Bool)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(709)]
 		void MouseDown([In] object button, [In] object keyButtonState, [In] object x, [In] object y, [In] [Out] ref object cancelDefault);
 
-		[SupportByVersion("Visio", 11,12,14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(710)]
+        [SupportByVersion("Visio", 11,12,14,15,16)]
+        [SinkArgument("button", SinkArgumentType.Int32)]
+        [SinkArgument("keyButtonState", SinkArgumentType.Int32)]
+        [SinkArgument("x", SinkArgumentType.Double)]
+        [SinkArgument("y", SinkArgumentType.Double)]
+        [SinkArgument("cancelDefault", SinkArgumentType.Bool)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(710)]
 		void MouseMove([In] object button, [In] object keyButtonState, [In] object x, [In] object y, [In] [Out] ref object cancelDefault);
 
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(711)]
+        [SinkArgument("button", SinkArgumentType.Int32)]
+        [SinkArgument("keyButtonState", SinkArgumentType.Int32)]
+        [SinkArgument("x", SinkArgumentType.Double)]
+        [SinkArgument("y", SinkArgumentType.Double)]
+        [SinkArgument("cancelDefault", SinkArgumentType.Bool)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(711)]
 		void MouseUp([In] object button, [In] object keyButtonState, [In] object x, [In] object y, [In] [Out] ref object cancelDefault);
 
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(712)]
+        [SinkArgument("keyCode", SinkArgumentType.Int32)]
+        [SinkArgument("keyButtonState", SinkArgumentType.Int32)]
+        [SinkArgument("cancelDefault", SinkArgumentType.Bool)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(712)]
 		void KeyDown([In] object keyCode, [In] object keyButtonState, [In] [Out] ref object cancelDefault);
 
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(713)]
+        [SinkArgument("keyAscii", SinkArgumentType.Int32)]
+        [SinkArgument("cancelDefault", SinkArgumentType.Bool)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(713)]
 		void KeyPress([In] object keyAscii, [In] [Out] ref object cancelDefault);
 
 		[SupportByVersion("Visio", 11,12,14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(714)]
+        [SinkArgument("keyCode", SinkArgumentType.Int32)]
+        [SinkArgument("keyButtonState", SinkArgumentType.Int32)]
+        [SinkArgument("cancelDefault", SinkArgumentType.Bool)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(714)]
 		void KeyUp([In] object keyCode, [In] object keyButtonState, [In] [Out] ref object cancelDefault);
 	}
 
@@ -114,7 +149,7 @@ namespace NetOffice.VisioApi.Events
 
 		#region EWindows
 		
-		public void WindowOpened([In, MarshalAs(UnmanagedType.IDispatch)] object window)
+        public void WindowOpened([In, MarshalAs(UnmanagedType.IDispatch)] object window)
 		{
             if (!Validate("WindowOpened"))
             {
@@ -122,7 +157,7 @@ namespace NetOffice.VisioApi.Events
                 return;
             }
 
-            NetOffice.VisioApi.IVWindow newWindow = Factory.CreateKnownObjectFromComProxy<NetOffice.VisioApi.IVWindow>(EventClass, window, NetOffice.VisioApi.IVWindow.LateBindingApiWrapperType);
+            NetOffice.VisioApi.IVWindow newWindow = Factory.CreateEventArgumentObjectFromComProxy(EventClass, window) as NetOffice.VisioApi.IVWindow;
             object[] paramsArray = new object[1];
 			paramsArray[0] = newWindow;
 			EventBinding.RaiseCustomEvent("WindowOpened", ref paramsArray);
@@ -136,7 +171,7 @@ namespace NetOffice.VisioApi.Events
                 return;
             }
 
-            NetOffice.VisioApi.IVWindow newWindow = Factory.CreateKnownObjectFromComProxy<NetOffice.VisioApi.IVWindow>(EventClass, window, NetOffice.VisioApi.IVWindow.LateBindingApiWrapperType);
+            NetOffice.VisioApi.IVWindow newWindow = Factory.CreateEventArgumentObjectFromComProxy(EventClass, window) as NetOffice.VisioApi.IVWindow;
             object[] paramsArray = new object[1];
             paramsArray[0] = newWindow;
             EventBinding.RaiseCustomEvent("SelectionChanged", ref paramsArray);
@@ -150,7 +185,7 @@ namespace NetOffice.VisioApi.Events
                 return;
             }
 
-            NetOffice.VisioApi.IVWindow newWindow = Factory.CreateKnownObjectFromComProxy<NetOffice.VisioApi.IVWindow>(EventClass, window, NetOffice.VisioApi.IVWindow.LateBindingApiWrapperType);
+            NetOffice.VisioApi.IVWindow newWindow = Factory.CreateEventArgumentObjectFromComProxy(EventClass, window) as NetOffice.VisioApi.IVWindow;
             object[] paramsArray = new object[1];
             paramsArray[0] = newWindow;
             EventBinding.RaiseCustomEvent("BeforeWindowClosed", ref paramsArray);
@@ -164,7 +199,7 @@ namespace NetOffice.VisioApi.Events
                 return;
             }
 
-            NetOffice.VisioApi.IVWindow newWindow = Factory.CreateKnownObjectFromComProxy<NetOffice.VisioApi.IVWindow>(EventClass, window, NetOffice.VisioApi.IVWindow.LateBindingApiWrapperType);
+            NetOffice.VisioApi.IVWindow newWindow = Factory.CreateEventArgumentObjectFromComProxy(EventClass, window) as NetOffice.VisioApi.IVWindow;
             object[] paramsArray = new object[1];
             paramsArray[0] = newWindow;
             EventBinding.RaiseCustomEvent("WindowActivated", ref paramsArray);
@@ -178,7 +213,7 @@ namespace NetOffice.VisioApi.Events
                 return;
             }
 
-            NetOffice.VisioApi.IVWindow newWindow = Factory.CreateKnownObjectFromComProxy<NetOffice.VisioApi.IVWindow>(EventClass, window, NetOffice.VisioApi.IVWindow.LateBindingApiWrapperType);
+            NetOffice.VisioApi.IVWindow newWindow = Factory.CreateEventArgumentObjectFromComProxy(EventClass, window) as NetOffice.VisioApi.IVWindow;
             object[] paramsArray = new object[1];
             paramsArray[0] = newWindow;
             EventBinding.RaiseCustomEvent("BeforeWindowSelDelete", ref paramsArray);
@@ -192,7 +227,7 @@ namespace NetOffice.VisioApi.Events
                 return;
             }
 
-            NetOffice.VisioApi.IVWindow newWindow = Factory.CreateKnownObjectFromComProxy<NetOffice.VisioApi.IVWindow>(EventClass, window, NetOffice.VisioApi.IVWindow.LateBindingApiWrapperType);
+            NetOffice.VisioApi.IVWindow newWindow = Factory.CreateEventArgumentObjectFromComProxy(EventClass, window) as NetOffice.VisioApi.IVWindow;
             object[] paramsArray = new object[1];
             paramsArray[0] = newWindow;
             EventBinding.RaiseCustomEvent("BeforeWindowPageTurn", ref paramsArray);
@@ -206,7 +241,7 @@ namespace NetOffice.VisioApi.Events
                 return;
             }
 
-            NetOffice.VisioApi.IVWindow newWindow = Factory.CreateKnownObjectFromComProxy<NetOffice.VisioApi.IVWindow>(EventClass, window, NetOffice.VisioApi.IVWindow.LateBindingApiWrapperType);
+            NetOffice.VisioApi.IVWindow newWindow = Factory.CreateEventArgumentObjectFromComProxy(EventClass, window) as NetOffice.VisioApi.IVWindow;
             object[] paramsArray = new object[1];
             paramsArray[0] = newWindow;
             EventBinding.RaiseCustomEvent("WindowTurnedToPage", ref paramsArray);
@@ -220,7 +255,7 @@ namespace NetOffice.VisioApi.Events
                 return;
             }
 
-            NetOffice.VisioApi.IVWindow newWindow = Factory.CreateKnownObjectFromComProxy<NetOffice.VisioApi.IVWindow>(EventClass, window, NetOffice.VisioApi.IVWindow.LateBindingApiWrapperType);
+            NetOffice.VisioApi.IVWindow newWindow = Factory.CreateEventArgumentObjectFromComProxy(EventClass, window) as NetOffice.VisioApi.IVWindow;
             object[] paramsArray = new object[1];
             paramsArray[0] = newWindow;
             EventBinding.RaiseCustomEvent("WindowChanged", ref paramsArray);
@@ -234,7 +269,7 @@ namespace NetOffice.VisioApi.Events
                 return;
             }
 
-            NetOffice.VisioApi.IVWindow newWindow = Factory.CreateKnownObjectFromComProxy<NetOffice.VisioApi.IVWindow>(EventClass, window, NetOffice.VisioApi.IVWindow.LateBindingApiWrapperType);
+            NetOffice.VisioApi.IVWindow newWindow = Factory.CreateEventArgumentObjectFromComProxy(EventClass, window) as NetOffice.VisioApi.IVWindow;
             object[] paramsArray = new object[1];
             paramsArray[0] = newWindow;
             EventBinding.RaiseCustomEvent("ViewChanged", ref paramsArray);
@@ -248,7 +283,7 @@ namespace NetOffice.VisioApi.Events
                 return;
             }
 
-            NetOffice.VisioApi.IVWindow newWindow = Factory.CreateKnownObjectFromComProxy<NetOffice.VisioApi.IVWindow>(EventClass, window, NetOffice.VisioApi.IVWindow.LateBindingApiWrapperType);
+            NetOffice.VisioApi.IVWindow newWindow = Factory.CreateEventArgumentObjectFromComProxy(EventClass, window) as NetOffice.VisioApi.IVWindow;
             object[] paramsArray = new object[1];
             paramsArray[0] = newWindow;
             EventBinding.RaiseCustomEvent("QueryCancelWindowClose", ref paramsArray);
@@ -262,7 +297,7 @@ namespace NetOffice.VisioApi.Events
                 return;
             }
 
-            NetOffice.VisioApi.IVWindow newWindow = Factory.CreateKnownObjectFromComProxy<NetOffice.VisioApi.IVWindow>(EventClass, window, NetOffice.VisioApi.IVWindow.LateBindingApiWrapperType);
+            NetOffice.VisioApi.IVWindow newWindow = Factory.CreateEventArgumentObjectFromComProxy(EventClass, window) as NetOffice.VisioApi.IVWindow;
             object[] paramsArray = new object[1];
             paramsArray[0] = newWindow;
             EventBinding.RaiseCustomEvent("WindowCloseCanceled", ref paramsArray);
@@ -276,7 +311,7 @@ namespace NetOffice.VisioApi.Events
                 return;
             }
 
-            NetOffice.VisioApi.IVMSGWrap newMSG = Factory.CreateKnownObjectFromComProxy<NetOffice.VisioApi.IVMSGWrap>(EventClass, mSG, NetOffice.VisioApi.IVMSGWrap.LateBindingApiWrapperType);
+            NetOffice.VisioApi.IVMSGWrap newMSG = Factory.CreateEventArgumentObjectFromComProxy(EventClass, mSG) as NetOffice.VisioApi.IVMSGWrap;
             object[] paramsArray = new object[1];
             paramsArray[0] = newMSG;
             EventBinding.RaiseCustomEvent("OnKeystrokeMessageForAddon", ref paramsArray);
@@ -290,10 +325,10 @@ namespace NetOffice.VisioApi.Events
                 return;
             }
 
-            Int32 newButton = Convert.ToInt32(button);
-            Int32 newKeyButtonState = Convert.ToInt32(keyButtonState);
-            Double newx = Convert.ToDouble(x);
-            Double newy = Convert.ToDouble(y);
+            Int32 newButton = ToInt32(button);
+            Int32 newKeyButtonState = ToInt32(keyButtonState);
+            Double newx = ToDouble(x);
+            Double newy = ToDouble(y);
             object[] paramsArray = new object[5];
             paramsArray[0] = newButton;
             paramsArray[1] = newKeyButtonState;
@@ -313,10 +348,10 @@ namespace NetOffice.VisioApi.Events
                 return;
             }
 
-            Int32 newButton = Convert.ToInt32(button);
-            Int32 newKeyButtonState = Convert.ToInt32(keyButtonState);
-            Double newx = Convert.ToDouble(x);
-            Double newy = Convert.ToDouble(y);
+            Int32 newButton = ToInt32(button);
+            Int32 newKeyButtonState = ToInt32(keyButtonState);
+            Double newx = ToDouble(x);
+            Double newy = ToDouble(y);
             object[] paramsArray = new object[5];
             paramsArray[0] = newButton;
             paramsArray[1] = newKeyButtonState;
@@ -336,10 +371,10 @@ namespace NetOffice.VisioApi.Events
                 return;
             }
 
-            Int32 newButton = Convert.ToInt32(button);
-            Int32 newKeyButtonState = Convert.ToInt32(keyButtonState);
-            Double newx = Convert.ToDouble(x);
-            Double newy = Convert.ToDouble(y);
+            Int32 newButton = ToInt32(button);
+            Int32 newKeyButtonState = ToInt32(keyButtonState);
+            Double newx = ToDouble(x);
+            Double newy = ToDouble(y);
             object[] paramsArray = new object[5];
             paramsArray[0] = newButton;
             paramsArray[1] = newKeyButtonState;
@@ -359,8 +394,8 @@ namespace NetOffice.VisioApi.Events
                 return;
             }
 
-            Int32 newKeyCode = Convert.ToInt32(keyCode);
-            Int32 newKeyButtonState = Convert.ToInt32(keyButtonState);
+            Int32 newKeyCode = ToInt32(keyCode);
+            Int32 newKeyButtonState = ToInt32(keyButtonState);
             object[] paramsArray = new object[3];
             paramsArray[0] = newKeyCode;
             paramsArray[1] = newKeyButtonState;
@@ -378,7 +413,7 @@ namespace NetOffice.VisioApi.Events
                 return;
             }
 
-            Int32 newKeyAscii = Convert.ToInt32(keyAscii);
+            Int32 newKeyAscii = ToInt32(keyAscii);
             object[] paramsArray = new object[2];
             paramsArray[0] = newKeyAscii;
             paramsArray.SetValue(cancelDefault, 1);
@@ -395,8 +430,8 @@ namespace NetOffice.VisioApi.Events
                 return;
             }
 
-            Int32 newKeyCode = Convert.ToInt32(keyCode);
-            Int32 newKeyButtonState = Convert.ToInt32(keyButtonState);
+            Int32 newKeyCode = ToInt32(keyCode);
+            Int32 newKeyButtonState = ToInt32(keyButtonState);
             object[] paramsArray = new object[3];
             paramsArray[0] = newKeyCode;
             paramsArray[1] = newKeyButtonState;

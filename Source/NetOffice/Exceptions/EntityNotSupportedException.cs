@@ -10,10 +10,10 @@ namespace NetOffice.Exceptions
     public class EntityNotSupportedException : NetOfficeException 
     {        
         /// <summary>
-        /// creates instance
+        /// Creates an instance of the exception
         /// </summary>
-        /// <param name="message"></param>
-        public EntityNotSupportedException(string message): base(message)
+        /// <param name="entityName">name of missing entity</param>
+        public EntityNotSupportedException(string entityName) : base(String.Format("Not available:{0}.", entityName))
         {
 
         }
