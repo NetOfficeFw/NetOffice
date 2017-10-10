@@ -5,7 +5,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("Netoffice")]
 [assembly: AssemblyDescription("Netoffice Core Api")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("http://netoffice.codeplex.com")]
+[assembly: AssemblyCompany("https://osdn.net/projects/netoffice")]
 [assembly: AssemblyProduct("Netoffice")]
 [assembly: AssemblyCopyright("Copyright 2012 Sebastian Lange")]
 [assembly: AssemblyTrademark("")]

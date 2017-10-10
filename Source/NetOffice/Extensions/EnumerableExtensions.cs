@@ -9,7 +9,7 @@ namespace NetOffice.Extensions
 {
     /// <summary>
     /// Provides a set of static (Shared in Visual Basic) methods for querying objects
-    /// that implement System.Collections.Generic.IEnumerable`1.
+    /// that implement NetOffice.CollectionsGeneric.IEnumerableProvider`1.
     /// </summary>
     public static class EnumerableExtensions
     {   

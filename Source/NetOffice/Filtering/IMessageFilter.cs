@@ -24,7 +24,7 @@ namespace NetOffice.Filtering
         /// SERVERCALL_RETRYLATER - The application cannot handle the call at this time. An application might return this value when it is in a user-controlled modal state
         /// </returns>
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
-        int HandleInComingCall([In] uint dwCallType, [In] IntPtr htaskCaller, [In] uint dwTickCount, [In, MarshalAs(UnmanagedType.LPArray)] INTERFACEINFO[] lpInterfaceInfo);
+        int HandleInComingCall([In] uint dwCallType, [In] IntPtr htaskCaller, [In] uint dwTickCount, [In, MarshalAs(UnmanagedType.LPArray)] InterfaceInfo[] lpInterfaceInfo);
 
         /// <summary>
         /// Provides applications with an opportunity to display a dialog box offering retry, cancel, or task-switching options.

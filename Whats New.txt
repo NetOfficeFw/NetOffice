@@ -22,6 +22,6 @@
 
 11.) Spend Contribution utils as optional service for common tasks
 
-12.) Developer Toolbox source is available on https://osdn.net/projects/netoffice or SVN: https://svn.osdn.net/svnroot/netoffice
+12.) Developer Toolbox source is available on https://osdn.net/projects/netoffice or SVN: https://svn.osdn.net/svnroot/netoffice or https://github.com/NetOfficeFw/NetOfficeToolbox
 
 13.) Official mirror on github is "netofficefw" - NOT "netoffice"

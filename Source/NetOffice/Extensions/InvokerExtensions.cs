@@ -1,6 +1,5 @@
 ﻿using NetOffice.Exceptions;
 using System;
-using System.Linq;
 
 namespace NetOffice.Extensions.Invoker
 {
@@ -17,7 +16,7 @@ namespace NetOffice.Extensions.Invoker
         /// <param name="propertyName">name of property</param>
         /// <returns>result of invoked property or default(T) if instance doesnt implement ICOMObject</returns>
         public static T Property<T>(this object value, string propertyName)
-        {          
+        {
             ICOMObject comObject = value as ICOMObject;
             if (null != comObject)
             {

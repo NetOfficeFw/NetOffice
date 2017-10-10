@@ -146,11 +146,12 @@
     <Compile Include="Exceptions\PropertySetCOMException.cs" />
     <Compile Include="Exceptions\RegisterException.cs" />
     <Compile Include="Exceptions\UnregisterException.cs" />
+    <Compile Include="Extensions\CallExtensions.cs" />
     <Compile Include="Extensions\ConversionExtensions.cs" />
     <Compile Include="Extensions\InvokerExtensions.cs" />
     <Compile Include="Extensions\EnumerableExtensions.cs" />
     <Compile Include="Filtering\IMessageFilter.cs" />
-    <Compile Include="Filtering\INTERFACEINFO.cs" />
+    <Compile Include="Filtering\InterfaceInfo.cs" />
     <Compile Include="Filtering\RetryMessageFilterLogMode.cs" />
     <Compile Include="Filtering\RetryMessageFilterMode.cs" />
     <Compile Include="Interfaces\ICloneable.cs" />

@@ -7,7 +7,7 @@ namespace NetOffice.Filtering
     /// http://msdn.microsoft.com/en-us/library/windows/desktop/ms683793%28v=vs.85%29.aspx
     /// </summary>
     [StructLayout(LayoutKind.Sequential, Pack = 4)]
-    public struct INTERFACEINFO
+    public struct InterfaceInfo
     {
         /// <summary>
         /// A pointer to the IUnknown interface on the object

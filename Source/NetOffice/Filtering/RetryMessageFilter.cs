@@ -133,7 +133,7 @@ namespace NetOffice.Filtering
 
         #region IMessageFilter Member
 
-        int IMessageFilter.HandleInComingCall(uint dwCallType, IntPtr htaskCaller, uint dwTickCount, INTERFACEINFO[] lpInterfaceInfo)
+        int IMessageFilter.HandleInComingCall(uint dwCallType, IntPtr htaskCaller, uint dwTickCount, InterfaceInfo[] lpInterfaceInfo)
         {
             return 1;  // SERVERCALL_REJECTED - We're the client, so we won't get HandleInComingCall calls.
         }

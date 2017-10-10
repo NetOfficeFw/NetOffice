@@ -123,4 +123,3 @@ namespace NetOffice.Tools
         ext_dm_SolutionClosed
     }
 }
-
